@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f9f7f2">
-  <meta name="description" content="A magical, interactive, kid-friendly trigonometry playground. Move a triangle, spin a circle, make waves and collect stars.">
+  <meta name="application-name" content="Triggle">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <meta name="description" content="A colorful, interactive trigonometry playground for children. Explore triangles, circles, waves, a kite adventure, maths quests and a Tamil Nadu State Board Class 9 chapter.">
   <meta name="author" content="VIGNESWARAN E R">
   <meta name="copyright" content="© 2026 VIGNESWARAN E R. All rights reserved.">
   <title>Triggle! — The Trigonometry Playground</title>
@@ -23,6 +26,91 @@
     @media(max-width:800px){.mainlayout,.challenge-wrap{grid-template-columns:1fr}.control-panel{gap:15px}.scene-panel{padding:18px}.hero{padding:26px 28px}.hero-art{flex-basis:145px}.hero-mascot{left:32px;top:24px}.mini-star{left:2px;top:5px}.glossary{grid-template-columns:repeat(3,minmax(0,1fr))}} 
     @media(max-width:540px){.app{padding:0 12px 32px}.topbar{height:67px}.brand{font-size:24px}.brandmark{height:35px;width:35px;border-radius:12px}.starscore{padding:8px 10px;font-size:13px}.soundbtn{height:39px;width:39px;font-size:17px}.hero{border-radius:23px;padding:19px 19px;min-height:160px}.hero h1{font-size:32px;letter-spacing:-1px}.hero p{font-size:12px;line-height:1.5;max-width:290px}.eyebrow{font-size:9px;letter-spacing:1.3px}.hero-art{flex:0 0 84px;height:100px}.hero-mascot{left:2px;top:23px;transform:scale(.62) rotate(8deg);transform-origin:top left}.mini-star{font-size:19px;top:2px;left:54px} .tabs{gap:6px;margin:13px 0}.tab{border-radius:13px;padding:9px 3px;flex-direction:column;gap:2px;font-size:10px;min-height:65px;line-height:1.1}.tab small{display:none}.tab .em{font-size:21px}.mainlayout{gap:11px}.panel{border-radius:21px}.scene-panel{padding:14px 13px 11px}.control-panel{padding:20px 18px}.panelhead h2{font-size:18px}.svgstage{margin-top:10px;min-height:190px}.sidebox strong{font-size:21px}.sidebox span{font-size:10px}.glossary{grid-template-columns:1fr;gap:7px;margin-top:11px}.gloss{padding:12px 14px}.gloss strong{display:inline;font-size:14px;margin-right:6px}.gloss p{display:inline;font-size:11px}.quizvisual{min-height:195px;padding:13px}.quizvisual .gigantic{font-size:54px}.quizvisual .quiz-visual-title{font-size:24px;margin:8px 0 0}.quizvisual p{font-size:12px}.quizbox{padding:19px}.quizbox h2{font-size:22px;min-height:0}.foot{font-size:10px;flex-wrap:wrap}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+    /* 1.1: story adventure, touch targets, bilingual controls */
+    .tabs{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .kite-stage{background:#eef5ff}.kite-stage svg{max-height:430px}
+    .language-bar{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+    .lang-switch{border-radius:15px;background:#f3f1fa;padding:4px;display:flex;gap:3px;flex-shrink:0}
+    .lang-button{border:0;background:transparent;border-radius:11px;padding:9px 10px;color:#807b9d;font-size:12px;font-weight:800;min-height:38px}
+    .lang-button.active{background:white;color:#624fb1;box-shadow:0 2px 10px #6e63a41d}
+    .kite-feedback{min-height:55px;border-radius:16px;background:#fff6e1;padding:14px 16px;color:#91631e;font-size:13px;font-weight:700;line-height:1.5}
+    .kite-feedback.success{background:#e5f9ef;color:#167b58}
+    .kite-levels{display:flex;justify-content:center;gap:12px}.kite-levels span{font-size:24px;color:#bcb6d5}.kite-levels .earned{color:#edaa43}
+    .privacyline{font-size:11px;line-height:1.5;color:#8c8ea4;margin:0}
+    #kiteNext[hidden]{display:none}
+    @media(max-width:540px){.tabs{gap:4px}.tab{font-size:9px;min-height:65px;padding:10px 1px}.tab .em{font-size:20px}.language-bar .lesson-title{font-size:22px}.kite-stage{min-height:180px}.lang-button{padding:8px 7px}}
+  
+/* State Board chapter lab — self-contained styles */
+.tabs{grid-template-columns:repeat(6,minmax(0,1fr))}
+.sb-head{border-radius:25px;padding:21px 24px;background:linear-gradient(120deg,#ece9ff,#eafafa 75%,#fff7e3);display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:14px;border:1px solid #e7e4f3}
+.sb-head h2{font:600 clamp(24px,3.2vw,32px)/1.15 Fredoka,system-ui,sans-serif;margin:5px 0 8px;color:#25244b}
+.sb-head p{color:#5f6685;font-size:13px;line-height:1.6;margin:0;max-width:680px}
+.sb-tag{display:inline-block;border-radius:100px;background:white;padding:8px 12px;color:#5746a4;font-size:11px;font-weight:800;letter-spacing:.3px}
+.sb-source{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.sb-source a{display:inline-flex;align-items:center;justify-content:center;padding:10px 13px;color:#604bb8;background:#fff;border:1px solid #ded9f1;border-radius:13px;text-decoration:none;font-size:12px;font-weight:800;min-height:44px}
+.sb-source a:hover{background:#f8f4ff}
+.sb-note{background:#fffef0;border:1px solid #f3e7aa;border-radius:16px;padding:12px 15px;margin:10px 0 16px;font-size:12px;color:#796733;line-height:1.55}
+.sb-nav{display:flex;gap:8px;overflow:auto;scrollbar-width:thin;padding:2px 1px 10px;margin-bottom:5px}
+.sb-unit{border:1px solid #e9e7f4;border-radius:14px;background:#fff;color:#666c89;padding:10px 14px;white-space:nowrap;font-size:12px;font-weight:800;min-height:43px}
+.sb-unit[aria-pressed=true]{background:#343057;color:white;border-color:#343057}
+.sb-view{display:none}.sb-view.active{display:block;animation:appear .26s ease both}
+.sb-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr);gap:14px}
+.sb-card{background:white;border:1px solid #ececf3;border-radius:24px;padding:21px;box-shadow:var(--shadow);min-width:0}
+.sb-card h3{font:600 23px/1.2 Fredoka,system-ui,sans-serif;margin:0 0 7px;letter-spacing:-.4px}
+.sb-card p{font-size:13px;line-height:1.65;color:#666c86;margin:7px 0 12px}
+.sb-sub{font-size:11px;letter-spacing:1.15px;color:#9874c9;text-transform:uppercase;font-weight:800;margin-bottom:8px}
+.sb-svg{display:block;width:100%;border-radius:18px;background:linear-gradient(160deg,#faf9ff,#fffdf7);max-height:340px}
+.sb-svg text{font-family:Fredoka,system-ui,sans-serif}
+.sb-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.sb-stat{padding:11px 12px;background:#f8f7fc;border-radius:13px;font-size:11px;color:#6e7390}
+.sb-stat strong{display:block;font:600 19px/1.55 Fredoka,system-ui,sans-serif;color:#34325b}
+.sb-formulas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:9px}
+.sb-formula{background:#faf9ff;border-radius:12px;padding:10px 12px;font-size:12px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.sb-formula b{font:600 18px Fredoka,system-ui,sans-serif;color:#5644a4}
+.sb-presets{display:flex;flex-wrap:wrap;gap:7px;margin:13px 0}
+.sb-chip{border:1px solid #dfd8f5;background:#fff;color:#66549c;border-radius:12px;padding:9px 12px;font-size:12px;font-weight:800;min-height:42px}
+.sb-chip.selected,.sb-chip[aria-pressed=true]{background:#ebe5ff;border-color:#a995e7;color:#4d329f}
+.sb-explain{border-radius:16px;background:#ecf9f6;padding:13px 15px;color:#386960;font-size:13px;line-height:1.65}
+.sb-explain small{display:block;font-size:12px;opacity:.86;margin-top:5px}
+.sb-boardtable{display:grid;grid-template-columns:70px repeat(5,minmax(0,1fr));overflow:hidden;border:1px solid #e5e1ef;border-radius:14px;margin:14px 0}
+.sb-boardtable div{padding:10px 4px;font-size:12px;font-weight:700;text-align:center;border-bottom:1px solid #f1eef8;background:#fff}
+.sb-boardtable .sb-th{background:#eeeaff;color:#5d51a9}
+.sb-boardtable .sb-activeangle{background:#fcdfed;color:#a1376d}
+.sb-boardtable .sb-rowname{background:#f7f5fe;color:#686299;text-align:left;padding-left:10px}
+.sb-boardtable div:nth-last-child(-n+6){border-bottom:0}
+.sb-range{width:100%;accent-color:#8066df;margin:11px 0}
+.sb-eq{font:600 clamp(17px,2.4vw,24px)/1.3 Fredoka,system-ui,sans-serif;color:#4c429b;padding:14px;border-radius:16px;background:#f6f4ff;text-align:center;margin:12px 0}
+.sb-inputs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.sb-inputs label{font-size:11px;font-weight:800;color:#74798c}
+.sb-inputs input,.sb-inputs select{display:block;margin-top:5px;width:100%;min-height:44px;border:1px solid #e1ddef;border-radius:12px;background:#fff;padding:8px 10px;font-size:15px;color:#242344}
+.sb-answer{border-radius:19px;padding:20px;background:linear-gradient(135deg,#f2f0ff,#e9fbf8);text-align:center;margin:13px 0}
+.sb-answer strong{display:block;font:600 36px Fredoka,system-ui,sans-serif;color:#5c47bd}
+.sb-answer span{font-size:12px;color:#77718c}
+.sb-filters{display:flex;gap:7px;overflow-x:auto;padding:6px 0 14px}
+.sb-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sb-problem{border:1px solid #e9e8f1;background:white;border-radius:19px;padding:18px;min-width:0}
+.sb-problem .sb-topic{color:#9475c9;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.sb-problem h4{font-size:16px;margin:6px 0;color:#252844;line-height:1.4}
+.sb-problem p{font-size:12px;line-height:1.6;color:#6f748e;margin:6px 0 13px}
+.sb-actions{display:flex;gap:8px;flex-wrap:wrap}
+.sb-actions button{background:#35315a;color:#fff;border:0;border-radius:11px;padding:9px 12px;font-size:12px;font-weight:800;min-height:42px}
+.sb-actions button.sb-mark{background:#eaf8f0;color:#21695b}
+.sb-steps{list-style:none;margin:13px 0 0;padding:0;border-top:1px solid #edeaf7}
+.sb-steps li{font-size:13px;line-height:1.55;padding:9px 0;color:#484d72;border-bottom:1px solid #f4f1f7;display:flex;gap:9px}
+.sb-steps li::before{content:counter(stepnum);counter-increment:stepnum;flex:none;background:#eae5fe;color:#5e48a4;border-radius:9px;font-size:11px;font-weight:800;width:21px;height:21px;display:grid;place-items:center}
+.sb-steps{counter-reset:stepnum}
+.sb-finished{border-color:#a8ddc6;background:#fbfffd}
+.sb-progress{margin:12px 0 16px;display:flex;align-items:center;gap:10px;font-size:12px;color:#656b85;font-weight:700}
+.sb-progress .track{background:#edeaf6;border-radius:80px;height:11px;flex:1;overflow:hidden}
+.sb-progress .fill{height:100%;width:0;background:linear-gradient(90deg,#64b5f4,#37cda5);border-radius:80px;transition:width .2s}
+.sb-credits{margin:17px 0 0;color:#89849a;font-size:11px;line-height:1.6}
+.sb-examples-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sb-lesson-tip{background:#fffbeb;border-radius:15px;padding:13px;font-size:12px;color:#80672f;line-height:1.6;margin-top:15px}
+@media(max-width:800px){.sb-layout{grid-template-columns:1fr}.sb-head{align-items:flex-start;flex-direction:column}.sb-source{justify-content:flex-start}}
+@media(max-width:600px){.tabs{grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}.tab{font-size:9px;line-height:1.12;padding:8px 0}.tab .em{font-size:19px}.sb-card{padding:15px;border-radius:19px}.sb-list{grid-template-columns:1fr}.sb-boardtable{grid-template-columns:52px repeat(5,minmax(0,1fr))}.sb-boardtable div{padding:10px 0;font-size:10px}.sb-head{padding:17px;border-radius:21px}.sb-head h2{font-size:26px}.sb-inputs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:390px){.tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.tab{flex-direction:row;min-height:46px;gap:4px;font-size:10px}.tab .em{font-size:16px}}
+
   </style>
 </head>
 <body>
@@ -33,14 +121,16 @@
       <div class="topright"><div class="starscore" title="Stars earned while playing"><span aria-hidden="true">⭐</span> <strong id="score">0</strong> <span style="color:#a8a9bb;font-weight:600;font-size:11px">stars</span></div><button class="soundbtn" type="button" id="soundBtn" aria-pressed="false" aria-label="Turn celebration sounds on" title="Sound on / off">🔇</button></div>
     </header>
     <section class="hero" aria-label="Welcome to the playground">
-      <div class="hero-text"><p class="eyebrow">THE LITTLE MATHS ADVENTURE</p><h1>Angles are <em>awesome.</em></h1><p>Move it. Spin it. Make waves. Discover how triangles hide amazing secrets—one playful tap at a time!</p></div>
+      <div class="hero-text"><p class="eyebrow">THE LITTLE MATHS ADVENTURE</p><h1>Angles are <em>awesome.</em></h1><p>Move it. Spin it. Fly a kite. Discover how triangles hide amazing secrets—one playful tap at a time!</p></div>
       <div class="hero-art" aria-hidden="true"><div id="sparkStage"></div><div class="mini-star">✦</div><div class="hero-mascot"><span class="mascot-cap">✏️</span><span class="eye"></span><span class="eye"></span><span class="smile"></span></div></div>
     </section>
-    <nav class="tabs" aria-label="Explore the four activities" role="tablist">
+    <nav class="tabs" aria-label="Explore the six activities" role="tablist">
       <button id="tab-triangle" class="tab" type="button" role="tab" aria-controls="scene-triangle" aria-selected="true" data-scene="triangle"><span class="em" aria-hidden="true">🛝</span><span><small>01</small> Triangle Lab</span></button>
       <button id="tab-circle" class="tab" type="button" role="tab" aria-controls="scene-circle" aria-selected="false" data-scene="circle" tabindex="-1"><span class="em" aria-hidden="true">🎡</span><span><small>02</small> Circle Magic</span></button>
       <button id="tab-wave" class="tab" type="button" role="tab" aria-controls="scene-wave" aria-selected="false" data-scene="wave" tabindex="-1"><span class="em" aria-hidden="true">🌊</span><span><small>03</small> Wave Party</span></button>
-      <button id="tab-game" class="tab" type="button" role="tab" aria-controls="scene-game" aria-selected="false" data-scene="game" tabindex="-1"><span class="em" aria-hidden="true">🏆</span><span><small>04</small> Star Quest</span></button>
+      <button id="tab-adventure" class="tab" type="button" role="tab" aria-controls="scene-adventure" aria-selected="false" data-scene="adventure" tabindex="-1"><span class="em" aria-hidden="true">🪁</span><span><small>04</small> Kite Rescue</span></button>
+      <button id="tab-game" class="tab" type="button" role="tab" aria-controls="scene-game" aria-selected="false" data-scene="game" tabindex="-1"><span class="em" aria-hidden="true">🏆</span><span><small>05</small> Star Quest</span></button>
+      <button id="tab-board" class="tab" type="button" role="tab" aria-controls="scene-board" aria-selected="false" data-scene="board" tabindex="-1"><span class="em" aria-hidden="true">📚</span><span><small>06</small> State Board</span></button>
     </nav>
 
     <main>
@@ -152,12 +242,133 @@
         </div>
       </section>
 
+
+      <section id="scene-adventure" class="scene" role="tabpanel" aria-labelledby="tab-adventure" hidden>
+        <div class="mainlayout">
+          <div class="panel scene-panel">
+            <div class="panelhead"><h2 id="adventureSceneTitle">Help the kite reach the star!</h2><span class="pill" id="adventureCount">🪁 Mission 1 / 3</span></div>
+            <div class="svgstage kite-stage">
+              <svg id="kiteSvg" viewBox="0 0 640 390" role="img" aria-label="A kite on a ten metre string moving to match a star at a target height">
+                <defs><linearGradient id="kiteSky" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e6edff"/><stop offset="1" stop-color="#fef6e6"/></linearGradient></defs>
+                <rect width="640" height="390" fill="url(#kiteSky)"/>
+                <g fill="#fff" opacity=".78"><ellipse cx="102" cy="85" rx="62" ry="23"/><ellipse cx="149" cy="90" rx="51" ry="21"/><ellipse cx="515" cy="72" rx="67" ry="26"/><ellipse cx="557" cy="77" rx="47" ry="21"/></g>
+                <path d="M0 333 Q110 309 250 331 T510 323 T640 330 L640 390 L0 390Z" fill="#d5f4e8"/><path d="M0 350 Q220 330 380 350 T640 341 L640 390 L0 390Z" fill="#b2e8d5"/>
+                <line id="kiteTargetLine" x1="72" x2="570" y1="185" y2="185" stroke="#ae79db" stroke-width="3" stroke-dasharray="8 8" opacity=".65"/>
+                <circle id="kiteTargetHalo" cx="350" cy="185" r="31" fill="#ffd86d" opacity=".3"/>
+                <text id="kiteTargetStar" x="350" y="201" text-anchor="middle" font-size="45">⭐</text>
+                <text id="kiteTargetLabel" x="76" y="170" fill="#7653a8" font-size="19" font-weight="700">Target: 5.0 m</text>
+                <line id="kiteGroundDistance" x1="122" y1="331" x2="340" y2="331" stroke="#639fe6" stroke-width="7" stroke-linecap="round"/>
+                <line id="kiteHeightLine" x1="340" y1="331" x2="340" y2="205" stroke="#fa78a4" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 8"/>
+                <line id="kiteRope" x1="122" y1="331" x2="340" y2="205" stroke="#f2a13d" stroke-width="6" stroke-linecap="round"/>
+                <path id="kiteAngleArc" stroke="#7d65c8" stroke-width="4" fill="none"/>
+                <text id="kiteAngleText" x="189" y="305" fill="#7d65c8" font-size="23">25°</text>
+                <g transform="translate(122 327)"><circle cx="0" cy="-29" r="16" fill="#f4bb84"/><path d="M-14 -44 Q0 -66 14 -44" fill="none" stroke="#4a3950" stroke-width="9" stroke-linecap="round"/><path d="M-13 -10 Q0 -25 13 -10 L20 22 L-18 22Z" fill="#746fe7"/><path d="M-12 22 l-9 18 M12 22 l9 18" stroke="#564580" stroke-width="7" stroke-linecap="round"/></g>
+                <g id="kiteArt" transform="translate(340 205)"><path d="M0 -29 L27 0 L0 28 L-27 0Z" fill="#fb81ae" stroke="#c65191" stroke-width="3"/><path d="M0 -29V28 M-27 0H27" stroke="#fff6dd" stroke-width="3"/><path d="M0 28 Q20 42 4 53 T8 80" fill="none" stroke="#9b7ccf" stroke-width="4"/><circle cx="-7" cy="-3" r="3" fill="#4a3950"/><circle cx="8" cy="-3" r="3" fill="#4a3950"/><path d="M-5 9 Q0 15 6 9" stroke="#4a3950" stroke-width="2" fill="none"/></g>
+                <circle id="kiteHandle" cx="340" cy="205" r="42" fill="transparent" tabindex="0" role="slider" aria-label="Kite angle" aria-valuemin="15" aria-valuemax="75" aria-valuenow="25" style="cursor:grab;touch-action:none"/>
+                <text x="472" y="365" fill="#668b84" font-size="17" font-weight="700">Rope = 10 m</text>
+              </svg>
+            </div>
+            <p class="captionline" id="kiteStageCaption">Slide the angle, or drag the kite, until it reaches the shining star.</p>
+          </div>
+          <div class="panel control-panel">
+            <div class="language-bar"><div class="mode-title"><span class="intro-tag" id="adventureLessonTag">STORY ADVENTURE · LEVEL 1</span><h2 class="lesson-title" id="adventureTitle">A kite in the clouds!</h2></div><div class="lang-switch" aria-label="Adventure language"><button id="langEnglish" type="button" class="lang-button active" aria-pressed="true">EN</button><button id="langTamil" type="button" class="lang-button" aria-pressed="false">தமிழ்</button></div></div>
+            <p class="lesson-copy" id="adventureStory">Help Miko fly a kite exactly 5 metres high. The rope is always 10 metres long.</p>
+            <div><div class="rangehead"><label for="kiteSlider" id="kiteSliderLabel">Tilt the kite rope</label><span class="bigangle" id="kiteAngle">25°</span></div><input id="kiteSlider" class="ranger" type="range" min="15" max="75" step="1" value="25"><div class="presets" id="kitePresets"><button class="preset" data-kite="30" type="button">30°</button><button class="preset" data-kite="45" type="button">45°</button><button class="preset" data-kite="60" type="button">60°</button></div></div>
+            <div class="statpair"><div class="stat pink"><span id="kiteHeightCaption">💗 Your kite's height</span><strong id="kiteCurrentHeight">4.2 m</strong></div><div class="stat blue"><span id="kiteTargetCaption">⭐ Star's height</span><strong id="kiteGoalHeight">5.0 m</strong></div></div>
+            <div class="ratio-note" id="kiteFormula">💡 Height = 10 × sin(angle). Try finding the height by changing only the angle!</div>
+            <div class="kite-feedback" id="kiteFeedback" role="status" aria-live="polite">Almost there! Aim a little higher.</div>
+            <div class="actionsrow"><button class="action" type="button" id="kiteCheck">✨ Check my kite</button><button class="action secondary" type="button" id="kiteNext" hidden>Next adventure →</button></div>
+            <div class="kite-levels" id="kiteBadges" aria-label="Mission progress"><span>○</span><span>○</span><span>○</span></div>
+            <p class="privacyline" id="kiteSaveInfo">Progress is saved only on this device. No sign-in or personal details needed.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="scene-game" class="scene" role="tabpanel" aria-labelledby="tab-game" hidden>
         <div class="challenge-wrap">
           <div class="panel quizvisual"><div id="quizEmoji" class="gigantic" aria-hidden="true">🚀</div><div class="quiz-visual-title" id="quizMotif">Ready, space cadet?</div><p id="quizHint">Five little missions. Every correct answer earns a shiny star!</p><div class="reward">⭐ <span id="questStars">0</span> mission stars earned</div></div>
           <div class="panel quizbox"><div class="quiznumber" id="quizCounter">MISSION 1 OF 5</div><div class="progress"><div id="quizProgress"></div></div><h2 id="quizQuestion">Which side of the slide is the height?</h2><div class="answers" id="quizAnswers"></div><div class="feedback" id="quizFeedback" role="status" aria-live="polite">Choose an answer to begin!</div><button class="action quiznext" id="quizNext" type="button" hidden>Next mission →</button><button class="action secondary quizrestart" id="quizRestart" type="button">↺ Play from the start</button></div>
         </div>
       </section>
+
+      <!-- Original interactive lessons, independently authored and mapped to TN SCERT Class 9 Ch.6 -->
+      <section id="scene-board" class="scene" role="tabpanel" aria-labelledby="tab-board" hidden>
+        <div class="sb-head">
+          <div><span class="sb-tag">📚 TAMIL NADU STATE BOARD · CLASS 09</span>
+            <h2>Chapter 6: Trigonometry ✨</h2>
+            <p>Follow the syllabus, then explore each mathematical idea with your hands. English explanations + தமிழ் உதவி, interactive diagrams, and carefully worked solutions.</p>
+          </div>
+          <div class="sb-source"><a href="https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf" target="_blank" rel="noopener noreferrer">📖 View reference chapter ↗</a><a href="https://textbookcorp.in/" target="_blank" rel="noopener noreferrer">🏛️ Textbook publisher ↗</a></div>
+        </div>
+        <div class="sb-note">📌 <b>Source edition:</b> older Tamil Nadu SCERT textbook chapter (2019-era mirror), not yet verified as the 2026–27 edition. Content is original, aligned to Chapter 6. Textbook artwork/pages are not republished here. The full exercise set is <b>not yet complete</b>.</div>
+        <nav class="sb-nav" aria-label="Class 9 chapter topics">
+          <button type="button" class="sb-unit" data-unit="ratios" aria-pressed="true">6.1 · Ratios</button>
+          <button type="button" class="sb-unit" data-unit="special" aria-pressed="false">6.2 · Special angles</button>
+          <button type="button" class="sb-unit" data-unit="complement" aria-pressed="false">6.3 · Complements</button>
+          <button type="button" class="sb-unit" data-unit="tables" aria-pressed="false">6.4 · Trig table</button>
+          <button type="button" class="sb-unit" data-unit="solutions" aria-pressed="false">✍️ Worked solutions</button>
+        </nav>
+        <div class="sb-view active" id="sb-unit-ratios">
+          <div class="sb-layout">
+            <article class="sb-card"><div class="sb-sub">6.1 · Right-triangle ratios</div><h3>Meet the 3 sides 📐</h3><p>Pick a triangle and compare its sides. The angle controls which side is opposite and which is adjacent.</p>
+              <svg class="sb-svg" id="sbTriangle" viewBox="0 0 520 300" role="img" aria-label="Interactive right triangle with adjustable example side lengths">
+                <defs><pattern id="sbGrid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" stroke="#eeeaf8" stroke-width="1" fill="none"/></pattern></defs>
+                <rect x="0" y="0" width="520" height="300" fill="url(#sbGrid)"/>
+                <path id="sbTriangleFill" fill="#ffe8c0" fill-opacity=".7"/>
+                <path id="sbTriangleBase" stroke="#4c8bf5" stroke-width="8" stroke-linecap="round"/>
+                <path id="sbTriangleVert" stroke="#f57bad" stroke-width="8" stroke-linecap="round"/>
+                <path id="sbTriangleSlope" stroke="#f7ad51" stroke-width="10" stroke-linecap="round"/>
+                <path id="sbTriangleSquare" stroke="#6e6993" stroke-width="2.5" fill="none"/>
+                <path id="sbTriangleArc" stroke="#8065db" stroke-width="3" fill="none"/>
+                <text id="sbTriangleBaseText" x="255" y="279" text-anchor="middle" font-size="16" fill="#3779e4"></text>
+                <text id="sbTriangleVertText" x="460" y="170" text-anchor="start" font-size="16" fill="#db508e"></text>
+                <text id="sbTriangleHypText" x="230" y="85" text-anchor="middle" font-size="16" fill="#a76d1e"></text>
+                <text id="sbTriangleAngle" x="130" y="231" font-size="15" fill="#6247b8"></text>
+                <circle id="sbTriangleDot" cx="400" cy="90" r="9" fill="#f4b456" stroke="#fff" stroke-width="3"/>
+              </svg>
+              <div class="sb-presets" id="sbTrianglePresets"><button type="button" class="sb-chip selected" data-pair="9,40">9–40–41</button><button type="button" class="sb-chip" data-pair="3,4">3–4–5</button><button type="button" class="sb-chip" data-pair="5,12">5–12–13</button><button type="button" class="sb-chip" data-pair="2,3">2–3–√13</button></div>
+              <div class="sb-explain">💡 <b>Remember:</b> Sine = opposite ÷ hypotenuse, cosine = adjacent ÷ hypotenuse, tangent = opposite ÷ adjacent.<small>தமிழ்: எதிர்ப்பக்கம் ÷ கர்ணம் = sin; அடுத்துள்ள பக்கம் ÷ கர்ணம் = cos.</small></div>
+            </article>
+            <aside class="sb-card"><div class="sb-sub">LIVE MATHS</div><h3>Every ratio, revealed</h3><div class="sb-pair"><div class="sb-stat">Pink · Opposite<strong id="sbOpp">9</strong></div><div class="sb-stat">Blue · Adjacent<strong id="sbAdj">40</strong></div><div class="sb-stat">Gold · Hypotenuse<strong id="sbHyp">41</strong></div><div class="sb-stat">Angle<strong id="sbAngle">12.68°</strong></div></div><div class="sb-formulas"><div class="sb-formula">sin θ<b id="sbSin">9/41</b></div><div class="sb-formula">cos θ<b id="sbCos">40/41</b></div><div class="sb-formula">tan θ<b id="sbTan">9/40</b></div><div class="sb-formula">cosec θ<b id="sbCsc">41/9</b></div><div class="sb-formula">sec θ<b id="sbSec">41/40</b></div><div class="sb-formula">cot θ<b id="sbCot">40/9</b></div></div><div class="sb-lesson-tip"><b>Why this matters:</b> Change the triangle's size, and the ratios depend on its shape—not its overall scale. Use the 9–40–41 preset to explore the geometry behind Exercise 6.1, Question 1.</div></aside>
+          </div>
+        </div>
+        <div class="sb-view" id="sb-unit-special">
+          <div class="sb-layout">
+            <article class="sb-card"><div class="sb-sub">6.2 · Special angles</div><h3>Spin to a magic angle 🎡</h3><p>The point goes around a circle of radius 1. Its height is sine, and its horizontal position is cosine.</p>
+              <svg class="sb-svg" id="sbCircle" viewBox="0 0 520 340" role="img" aria-label="Unit circle showing sine and cosine for standard angles">
+                <line x1="55" y1="179" x2="455" y2="179" stroke="#bbb5d4" stroke-width="2"/><line x1="205" y1="26" x2="205" y2="318" stroke="#bbb5d4" stroke-width="2"/>
+                <circle cx="205" cy="179" r="130" stroke="#cbc3f1" stroke-width="3" fill="#faf9ff"/>
+                <path id="sbCircleArc" fill="#fff3d7" opacity=".7"/>
+                <path id="sbCircleRad" stroke="#ebaa45" stroke-width="6" stroke-linecap="round"/>
+                <path id="sbCircleCos" stroke="#5f90f6" stroke-width="8" stroke-linecap="round"/>
+                <path id="sbCircleSin" stroke="#ec6fa6" stroke-width="8" stroke-linecap="round"/>
+                <circle id="sbCircleP" cx="335" cy="179" r="11" fill="#7457ce" stroke="white" stroke-width="3"/>
+                <text x="346" y="169" id="sbCircleLabel" fill="#6554af" font-size="15">0°</text><text x="347" y="207" fill="#4776ca" font-size="15">cos</text><text x="347" y="227" fill="#d85e98" font-size="15">sin</text>
+              </svg>
+              <div class="sb-presets" id="sbAnglePresets"><button type="button" class="sb-chip" data-deg="0">0°</button><button type="button" class="sb-chip selected" data-deg="30">30°</button><button type="button" class="sb-chip" data-deg="45">45°</button><button type="button" class="sb-chip" data-deg="60">60°</button><button type="button" class="sb-chip" data-deg="90">90°</button></div>
+            </article>
+            <aside class="sb-card"><div class="sb-sub">EXACT VALUES</div><h3>Numbers without guessing</h3><div class="sb-pair"><div class="sb-stat">sin <span id="sbSpecAngle1">30°</span><strong id="sbSpecSin">1/2</strong></div><div class="sb-stat">cos <span id="sbSpecAngle2">30°</span><strong id="sbSpecCos">√3/2</strong></div><div class="sb-stat">tan <span id="sbSpecAngle3">30°</span><strong id="sbSpecTan">1/√3</strong></div><div class="sb-stat">cosec / sec / cot<strong id="sbSpecReci">2 · 2/√3 · √3</strong></div></div><div class="sb-boardtable" id="sbSpecialTable" aria-label="Special angle sine cosine values"></div><div class="sb-explain">🌟 <b>45° comes from half a square; 30° and 60° come from half an equilateral triangle.</b><small>தமிழ்: ஒரு சதுரத்தைப் பாதியாக வெட்டினால் 45°; சமபக்க முக்கோணத்தைப் பாதியாக வெட்டினால் 30° மற்றும் 60°.</small></div></aside>
+          </div>
+        </div>
+        <div class="sb-view" id="sb-unit-complement">
+          <div class="sb-layout"><article class="sb-card"><div class="sb-sub">6.3 · Complementary angles</div><h3>Two angles make a right angle 🤝</h3><p>Move θ. The other acute angle changes so their total is always 90°.</p>
+              <svg class="sb-svg" id="sbCompSvg" viewBox="0 0 520 290" role="img" aria-label="Right triangle showing complementary angles that add to ninety degrees"><path d="M75 240 L430 240 L430 45 Z" fill="#f0edff" stroke="#796add" stroke-width="5" stroke-linejoin="round"/><path d="M408 240V218H430" fill="none" stroke="#706b8d" stroke-width="3"/><text x="118" y="221" font-size="26" fill="#7356ba" id="sbCompA">29°</text><text x="374" y="77" font-size="24" fill="#d75994" id="sbCompB">61°</text><text x="208" y="268" font-size="17" fill="#5878b2">adjacent to θ</text><text x="448" y="150" font-size="15" fill="#cc5994" transform="rotate(90 448 150)">opposite to θ</text></svg>
+              <label for="sbCompSlider" style="font-size:13px;font-weight:800;display:block;margin-top:11px">Slide the first angle: <strong id="sbCompVal">29°</strong></label><input class="sb-range" id="sbCompSlider" type="range" min="5" max="85" value="29" aria-label="First acute angle"><div class="sb-eq"><span id="sbCompAngA">29</span>° + <span id="sbCompAngB">61</span>° = 90°</div></article>
+          <aside class="sb-card"><div class="sb-sub">A BEAUTIFUL PAIR</div><h3>Sin becomes Cos</h3><div class="sb-pair"><div class="sb-stat">sin θ<strong id="sbCompSin">0.485</strong></div><div class="sb-stat">cos (90° − θ)<strong id="sbCompCos">0.485</strong></div><div class="sb-stat">tan θ<strong id="sbCompTan">0.554</strong></div><div class="sb-stat">cot (90° − θ)<strong id="sbCompCot">0.554</strong></div></div><div class="sb-explain" style="margin-top:15px">💗 Both pairs are equal. Different names, same numerical value!<small>தமிழ்: இரண்டு கோணங்களின் கூட்டுத்தொகை 90° என்றால் அவை நிரப்புக் கோணங்கள்.</small></div><div class="sb-lesson-tip">Try θ = 34°. Compare the pairs. This is the idea used in textbook Example 6.10.</div></aside></div>
+        </div>
+        <div class="sb-view" id="sb-unit-tables">
+          <div class="sb-layout"><article class="sb-card"><div class="sb-sub">6.4 · Trigonometric tables</div><h3>Your tiny trig calculator 🧮</h3><p>Older trigonometric tables help approximate angles between 0° and 90°. Explore a function at any angle, including degrees and minutes.</p>
+            <div class="sb-inputs"><label>Function<select id="sbTableFun" aria-label="Trigonometric function"><option value="sin">sin</option><option value="cos">cos</option><option value="tan">tan</option></select></label><label>Degrees<input id="sbTableDeg" type="number" min="0" max="90" step="1" value="49" inputmode="numeric"></label><label>Minutes<input id="sbTableMin" type="number" min="0" max="59" step="1" value="0" inputmode="numeric"></label></div>
+            <div class="sb-answer"><span id="sbTableExpression">sin 49°0′ ≈</span><strong id="sbTableAnswer">0.7547</strong><span>rounded to 4 decimal places</span></div><div class="sb-presets"><button type="button" class="sb-chip" data-tbl="sin,49,0">sin 49°</button><button type="button" class="sb-chip" data-tbl="cos,74,39">cos 74°39′</button><button type="button" class="sb-chip" data-tbl="tan,54,26">tan 54°26′</button><button type="button" class="sb-chip" data-tbl="sin,64,34">sin 64°34′</button></div>
+          </article><aside class="sb-card"><div class="sb-sub">THE SECRET OF MINUTES</div><h3>1° = 60′</h3><div class="sb-eq" id="sbDegreesDecimal">49°0′ = 49.0000°</div><div class="sb-explain">📏 Type the degrees and minutes shown in a textbook problem. Triggle computes the function directly and rounds it, letting you check a printed table value.<small>தமிழ்: 1 பாகை = 60 கலைகள். கோணத்தை மாற்றி மதிப்பைப் பாருங்கள்.</small></div><div class="sb-lesson-tip">⚠️ This is a <b>modern numerical check</b>, not a reproduction of the book's printed tables or mean-difference interpolation method. Real printed-table rounding may differ slightly.</div></aside></div>
+        </div>
+        <div class="sb-view" id="sb-unit-solutions">
+          <div class="sb-card" style="margin-bottom:14px"><div class="sb-examples-nav"><div><div class="sb-sub">CLASS 9 · CHAPTER 6</div><h3>Worked solutions, step by step ✍️</h3><p>Start with a few textbook-referenced problems. Reveal the reasoning, then mark each one explored. Original wording and explanations.</p></div><span class="sb-tag">STARTER SET · NOT ALL QUESTIONS</span></div><div class="sb-progress"><span id="sbCount">0 of 12 explored</span><span class="track"><span class="fill" id="sbFill" style="display:block"></span></span></div><div class="sb-filters" id="sbFilters" aria-label="Filter solutions"><button class="sb-chip selected" type="button" data-filter="all">All</button><button class="sb-chip" type="button" data-filter="Example">Examples</button><button class="sb-chip" type="button" data-filter="6.1">Ex 6.1</button><button class="sb-chip" type="button" data-filter="6.2">Ex 6.2</button><button class="sb-chip" type="button" data-filter="6.3">Ex 6.3</button><button class="sb-chip" type="button" data-filter="6.4">Ex 6.4</button><button class="sb-chip" type="button" data-filter="6.5">Ex 6.5</button></div></div>
+          <div class="sb-list" id="sbProblems"></div>
+          <p class="sb-credits">Reference mapping: TN SCERT Standard Nine Mathematics, Chapter 6, older edition (public chapter mirror). These are original learning explanations, not copies of the textbook pages. The source is attributed to the State Council of Educational Research and Training; it is not authored, endorsed or published by Triggle. © 2026 VIGNESWARAN E R applies to Triggle's original content and code only.</p>
+        </div>
+      </section>
+
     </main>
 
     <aside class="glossary" aria-label="Tiny maths dictionary">
@@ -165,6 +376,7 @@
       <div class="gloss"><strong>🧩 Right angle</strong><p>A perfect square corner: 90°, like the corner of a book.</p></div>
       <div class="gloss"><strong>✨ Trigonometry</strong><p>A clever way to connect angles and lengths.</p></div>
     </aside>
+    <aside class="glossary" aria-label="Note for parents and teachers" style="grid-template-columns:1fr;margin-top:12px"><div class="gloss"><strong>👨‍👩‍👧 For parents &amp; teachers</strong><p>All six activities are free to play, including the Class 9 chapter starter module. Optional extra adventures may be offered later; there is no payment or account today. Stars, chapter exploration and completed kite missions are stored on this device only.</p></div></aside>
     <footer class="foot"><span><strong>Triggle! ✦</strong> A little playground for big discoveries</span><span>© <span id="copyrightYear">2026</span> <strong>VIGNESWARAN E R</strong> · All rights reserved.</span></footer>
   </div>
   <!-- Optional visual polish: when offline, the lessons and game still work. -->
@@ -181,7 +393,17 @@
       const path = (id, value) => $(id).setAttribute('d',value);
       const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       let angle=45, scene='triangle', spinMode=null, raf=0, lastFrame=0, sound=false, audioContext;
-      let showSine=true, showCos=true, totalStars=0, missionStars=0, questionIndex=0, answered=false;
+      let showSine=true, showCos=true, missionStars=0, questionIndex=0, answered=false;
+      const SAVE_KEY='triggle.progress.v1';
+      function loadProgress(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'{}');return {stars:Number.isFinite(d.stars)?Math.max(0,Math.min(9999,Math.floor(d.stars))):0,missions:Array.isArray(d.missions)?[0,1,2].map(i=>d.missions[i]===true):[false,false,false],quiz:Array.isArray(d.quiz)?d.quiz.filter(i=>Number.isInteger(i)&&i>=0&&i<5):[]};}catch(e){return {stars:0,missions:[false,false,false],quiz:[]};}}
+      const progress=loadProgress();let totalStars=progress.stars;
+      function saveProgress(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(progress));}catch(e){/* storage may be blocked */}}
+      function awardStars(count){totalStars+=count;progress.stars=totalStars;$('score').textContent=totalStars;saveProgress();}
+      $('score').textContent=totalStars;
+      const kiteMissions=[{deg:30,m:5,titleEn:'Catch the first star!',titleTa:'முதல் நட்சத்திரத்தைப் பிடி!',storyEn:'Miko has a 10-metre kite rope. Can you guide the kite exactly 5 metres above the ground?',storyTa:'மிகோவிடம் 10 மீட்டர் நீளமுள்ள பட்டம் கயிறு உள்ளது. பட்டத்தை நிலத்திலிருந்து 5 மீட்டர் உயரத்துக்குக் கொண்டு செல்ல முடியுமா?'},{deg:45,m:7.1,titleEn:'Reach the rainbow!',titleTa:'வானவில்லைத் தொடு!',storyEn:'The next star is 7.1 metres high. What angle will take the kite there?',storyTa:'அடுத்த நட்சத்திரம் 7.1 மீட்டர் உயரத்தில் உள்ளது. எந்தக் கோணத்தில் பட்டம் அங்கு செல்லும்?'},{deg:60,m:8.7,titleEn:'The highest star!',titleTa:'உயர்ந்த நட்சத்திரம்!',storyEn:'One last challenge! The golden star waits 8.7 metres above the ground.',storyTa:'கடைசிச் சவால்! தங்க நட்சத்திரம் தரையிலிருந்து 8.7 மீட்டர் உயரத்தில் உள்ளது.'}];
+      let kiteLevel=progress.missions.findIndex(x=>!x);if(kiteLevel<0)kiteLevel=0;
+      let kiteAngle=25,kiteLang='en',kiteSolved=false,kiteAttempts=0;
+
 
       const tabs=[...document.querySelectorAll('.tab')];
       function activate(name){
@@ -303,6 +525,50 @@
       // Tiny, optional celebration sound. No sound until the child opts in.
       $('soundBtn').addEventListener('click',()=>{sound=!sound;$('soundBtn').setAttribute('aria-pressed',String(sound));$('soundBtn').textContent=sound?'🔊':'🔇';$('soundBtn').setAttribute('aria-label',sound?'Turn celebration sounds off':'Turn celebration sounds on');});
       function ping(){if(!sound)return;try{audioContext=audioContext||new(window.AudioContext||window.webkitAudioContext)();const t=audioContext.currentTime;[523.25,659.25,783.99].forEach((freq,i)=>{const osc=audioContext.createOscillator(),gain=audioContext.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(0.0001,t+i*.09);gain.gain.exponentialRampToValueAtTime(.07,t+i*.09+.012);gain.gain.exponentialRampToValueAtTime(.0001,t+i*.09+.24);osc.connect(gain);gain.connect(audioContext.destination);osc.start(t+i*.09);osc.stop(t+i*.09+.26);});}catch(e){/* audio unavailable */}}
+
+      const textKite={en:{scene:'Help the kite reach the star!',lesson:'STORY ADVENTURE · LEVEL ',storySuffix:'',control:'Tilt the kite rope',height:'💗 Your kite’s height',goal:'⭐ Star’s height',formula:'💡 Height = 10 × sin(angle). The rope stays 10 metres long.',initial:'Try changing the angle, then check your kite!',low:'A little too low! Make the angle bigger.',high:'Too high! Try a smaller angle.',win:'Amazing! 10 × sin({angle}°) ≈ {height} metres. You found the height using trigonometry!',again:'You have already earned this star. Great practice!',check:'✨ Check my kite',next:'Next adventure →',replay:'Play again ↺',level:'🪁 Mission ',caption:'Move the slider or drag the kite to the shining star.',save:'Your progress stays on this device. No account or personal details.',complete:'All 3 missions complete! You can replay the adventures.'},ta:{scene:'பட்டத்தை நட்சத்திரத்திடம் கொண்டு செல்!',lesson:'கதைச் சாகசம் · நிலை ',control:'பட்டத்தின் கோணத்தை மாற்று',height:'💗 பட்டத்தின் உயரம்',goal:'⭐ நட்சத்திர உயரம்',formula:'💡 உயரம் = 10 × sin(கோணம்). கயிறு எப்போதும் 10 மீட்டர்.',initial:'கோணத்தை மாற்றி, பட்டத்தைச் சரிபாருங்கள்!',low:'இன்னும் சற்றுக் கீழே! கோணத்தை உயர்த்துங்கள்.',high:'மிகவும் உயரம்! கோணத்தைக் குறையுங்கள்.',win:'அருமை! 10 × sin({angle}°) ≈ {height} மீட்டர். முக்கோணவியல் மூலம் உயரத்தைக் கண்டுபிடித்தாய்!',again:'இந்த நட்சத்திரத்தை ஏற்கெனவே வென்றுள்ளீர்கள். மீண்டும் விளையாடலாம்!',check:'✨ சரிபார்',next:'அடுத்த சாகசம் →',replay:'மீண்டும் விளையாடு ↺',level:'🪁 நிலை ',caption:'பட்டத்தை இழுத்தோ ஸ்லைடரை நகர்த்தியோ நட்சத்திரத்தை அடையுங்கள்.',save:'முன்னேற்றம் இந்தச் சாதனத்தில் மட்டுமே சேமிக்கப்படும். கணக்கு தேவையில்லை.',complete:'மூன்று சாகசங்களும் முடிந்தன! மீண்டும் விளையாடலாம்.'}};
+      function renderKite(){
+        const m=kiteMissions[kiteLevel], t=textKite[kiteLang], a=rad(kiteAngle),goal=rad(m.deg),ox=122,oy=331,rope=265;
+        const x=ox+rope*Math.cos(a),y=oy-rope*Math.sin(a),sx=ox+rope*Math.cos(goal),sy=oy-rope*Math.sin(goal),height=10*Math.sin(a);
+        attr('kiteRope',{x1:ox,y1:oy,x2:x,y2:y});attr('kiteHeightLine',{x1:x,x2:x,y1:oy,y2:y});attr('kiteGroundDistance',{x1:ox,x2:x,y1:oy,y2:oy});
+        attr('kiteTargetLine',{y1:sy,y2:sy});attr('kiteTargetHalo',{cx:sx,cy:sy});attr('kiteTargetStar',{x:sx,y:sy+13});
+        attr('kiteTargetLabel',{y:Math.max(28,sy-19)});$('kiteTargetLabel').textContent=(kiteLang==='en'?'Target: ':'இலக்கு: ')+m.m.toFixed(1)+' m';
+        path('kiteAngleArc',`M ${ox+58} ${oy} A 58 58 0 0 0 ${ox+58*Math.cos(a)} ${oy-58*Math.sin(a)}`);
+        attr('kiteAngleText',{x:ox+80*Math.cos(a/2),y:oy-80*Math.sin(a/2)-8});$('kiteAngleText').textContent=kiteAngle+'°';
+        $('kiteArt').setAttribute('transform',`translate(${x} ${y})`);
+        attr('kiteHandle',{cx:x,cy:y,'aria-valuenow':kiteAngle,'aria-valuetext':kiteAngle+' degrees'});
+        $('kiteSlider').value=kiteAngle;$('kiteAngle').textContent=kiteAngle+'°';$('kiteCurrentHeight').textContent=height.toFixed(1)+' m';$('kiteGoalHeight').textContent=m.m.toFixed(1)+' m';
+        $('adventureTitle').textContent=m[kiteLang==='en'?'titleEn':'titleTa'];$('adventureStory').textContent=m[kiteLang==='en'?'storyEn':'storyTa'];
+        $('adventureSceneTitle').textContent=t.scene;$('adventureLessonTag').textContent=t.lesson+(kiteLevel+1);$('adventureCount').textContent=t.level+(kiteLevel+1)+' / 3';
+        $('kiteSliderLabel').textContent=t.control;$('kiteHeightCaption').textContent=t.height;$('kiteTargetCaption').textContent=t.goal;$('kiteFormula').textContent=t.formula;$('kiteStageCaption').textContent=t.caption;$('kiteSaveInfo').textContent=t.save;
+        $('kiteCheck').textContent=t.check;$('kiteNext').textContent=kiteLevel===2?t.replay:t.next;
+        $('langEnglish').classList.toggle('active',kiteLang==='en');$('langTamil').classList.toggle('active',kiteLang==='ta');
+        $('langEnglish').setAttribute('aria-pressed',String(kiteLang==='en'));$('langTamil').setAttribute('aria-pressed',String(kiteLang==='ta'));
+        $('kiteBadges').replaceChildren();progress.missions.forEach(done=>{const el=document.createElement('span');el.textContent=done?'★':'○';if(done)el.className='earned';$('kiteBadges').append(el);});
+        $('kiteNext').hidden=!kiteSolved;
+        $('kiteFeedback').classList.toggle('success',kiteSolved);
+        if(!kiteSolved && !kiteAttempts)$('kiteFeedback').textContent=t.initial;
+        else if(kiteSolved)$('kiteFeedback').textContent=progress.missions[kiteLevel]&&kiteAttempts===0?t.again:t.win.replace('{angle}',kiteAngle).replace('{height}',height.toFixed(1));
+      }
+      function setKiteAngle(a){kiteAngle=clamp(Math.round(a),15,75);kiteSolved=false;kiteAttempts=0;renderKite();}
+      $('kiteSlider').addEventListener('input',e=>setKiteAngle(Number(e.target.value)));
+      document.querySelectorAll('[data-kite]').forEach(btn=>btn.addEventListener('click',()=>setKiteAngle(Number(btn.dataset.kite))));
+      $('langEnglish').addEventListener('click',()=>{kiteLang='en';renderKite();});$('langTamil').addEventListener('click',()=>{kiteLang='ta';renderKite();});
+      registerDragKite();
+      function registerDragKite(){const el=$('kiteHandle'), svg=$('kiteSvg');let dragging=false;
+        el.addEventListener('pointerdown',e=>{dragging=true;el.setPointerCapture(e.pointerId);e.preventDefault();});
+        el.addEventListener('pointermove',e=>{if(!dragging)return;const p=pointerSVG(svg,e);if(p)setKiteAngle(Math.atan2(331-p.y,p.x-122)*180/Math.PI);});
+        el.addEventListener('pointerup',()=>dragging=false);el.addEventListener('pointercancel',()=>dragging=false);
+        el.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();setKiteAngle(kiteAngle+(e.key==='ArrowLeft'||e.key==='ArrowDown'?-1:1));});
+      }
+      $('kiteCheck').addEventListener('click',()=>{const m=kiteMissions[kiteLevel],t=textKite[kiteLang],height=10*Math.sin(rad(kiteAngle));kiteAttempts++;
+        if(Math.abs(height-10*Math.sin(rad(m.deg)))<=.27){kiteSolved=true;
+          if(!progress.missions[kiteLevel]){progress.missions[kiteLevel]=true;awardStars(2);ping();burst();}
+          $('kiteFeedback').textContent=t.win.replace('{angle}',kiteAngle).replace('{height}',height.toFixed(1));$('kiteFeedback').classList.add('success');$('kiteNext').hidden=false;renderKite();
+        }else {$('kiteFeedback').textContent=height<10*Math.sin(rad(m.deg))?t.low:t.high;$('kiteFeedback').classList.remove('success');}
+      });
+      $('kiteNext').addEventListener('click',()=>{kiteLevel=(kiteLevel+1)%kiteMissions.length;kiteAngle=25;kiteSolved=false;kiteAttempts=0;renderKite();});
+
       // Children always get a kind explanation after an answer.
       const questions=[
         {q:'Which colour shows the HEIGHT of our slide?',opts:['💗 Pink','💙 Blue','🧡 Orange'],right:0,why:'Pink is the height. It goes straight up and down!',emoji:'🛝',motif:'Spot the secret side'},
@@ -322,7 +588,7 @@
         q.opts.forEach((option,i)=>{const b=document.createElement('button');b.className='answer';b.type='button';b.textContent=option;b.addEventListener('click',()=>answerQuiz(i));holder.appendChild(b);});
       }
       function answerQuiz(i){if(answered||questionIndex>=questions.length)return;answered=true;const q=questions[questionIndex],correct=i===q.right;const buttons=[...$('quizAnswers').children];buttons.forEach((b,j)=>{b.disabled=true;if(j===q.right)b.classList.add('correct');if(i===j&&!correct)b.classList.add('wrong');});
-        if(correct){missionStars++;totalStars++;$('score').textContent=totalStars;$('questStars').textContent=missionStars;$('quizFeedback').textContent='🌟 Brilliant! '+q.why;ping();burst();}else{$('quizFeedback').textContent='💜 Good try! '+q.why;}
+        if(correct){missionStars++;if(!progress.quiz.includes(questionIndex)){progress.quiz.push(questionIndex);awardStars(1);} $('questStars').textContent=missionStars;$('quizFeedback').textContent='🌟 Brilliant! '+q.why;ping();burst();}else{$('quizFeedback').textContent='💜 Good try! '+q.why;}
         $('quizNext').textContent=questionIndex===questions.length-1?'See your trophy 🏆':'Next mission →';$('quizNext').hidden=false;$('quizProgress').style.width=((questionIndex+1)/questions.length*100)+'%';
         if(window.gsap&&!prefersReduced)window.gsap.fromTo('#quizFeedback',{scale:.93},{scale:1,duration:.3,ease:'back.out(2)'});
       }
@@ -338,8 +604,130 @@
       function initP5(){if(!window.p5||prefersReduced)return;try{new window.p5(p=>{let dots=[];p.setup=()=>{const host=$('sparkStage');p.createCanvas(host.clientWidth||265,host.clientHeight||160).parent(host);p.noStroke();dots=Array.from({length:22},()=>({x:p.random(p.width),y:p.random(p.height),r:p.random(2,5),phase:p.random(6.28),speed:p.random(.008,.019)}));};p.draw=()=>{p.clear();dots.forEach(d=>{const v=.5+.5*Math.sin(p.millis()*d.speed+d.phase);p.fill(164,130,226,60+140*v);p.circle(d.x,d.y,d.r*(.8+v));});};p.windowResized=()=>{const host=$('sparkStage');p.resizeCanvas(host.clientWidth||265,host.clientHeight||160);};},'sparkStage');}catch(e){/* progressive enhancement */}}
       window.addEventListener('load',initP5,{once:true});
       $('copyrightYear').textContent=String(new Date().getFullYear());
-      render();renderQuiz();
+      if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost')){
+        window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}),{once:true});
+      }
+      render();renderQuiz();renderKite();
     })();
   </script>
+
+  <script>
+  // State Board module. Deliberately independent of the existing playground logic.
+  (()=>{
+    'use strict';
+    const $=id=>document.getElementById(id);
+    const deg=d=>d*Math.PI/180;
+    const fmt=n=>Number(n.toFixed(4)).toString();
+    const p=(n,d=3)=>Number(n).toFixed(d);
+    const path=(id,d)=>$(id).setAttribute('d',d);
+    const attr=(id,k,v)=>$(id).setAttribute(k,v);
+    let opp=9,adj=40,currentSpecial=30,currentFilter='all';
+    document.querySelectorAll('.sb-unit').forEach(btn=>btn.addEventListener('click',()=>{
+      document.querySelectorAll('.sb-unit').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
+      document.querySelectorAll('.sb-view').forEach(v=>v.classList.toggle('active',v.id==='sb-unit-'+btn.dataset.unit));
+    }));
+    function ratioText(n,d){
+      if(Number.isInteger(n)&&Number.isInteger(d)){
+        const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);let g=gcd(n,d);return d/g===1?String(n/g):(n/g)+'/'+(d/g);
+      }
+      return fmt(n/d);
+    }
+    function renderTriangle(){
+      const hyp=Math.sqrt(opp*opp+adj*adj),scale=Math.min(335/adj,165/opp),x=75+adj*scale,y=245-opp*scale,ang=Math.atan2(opp,adj)*180/Math.PI;
+      path('sbTriangleFill',`M75 245 L${x} 245 L${x} ${y} Z`);
+      path('sbTriangleBase',`M75 245 L${x} 245`);path('sbTriangleVert',`M${x} 245 L${x} ${y}`);path('sbTriangleSlope',`M75 245 L${x} ${y}`);
+      path('sbTriangleSquare',`M${x-18} 245 V227 H${x}`);
+      let arcx=75+44*Math.cos(deg(ang)),arcy=245-44*Math.sin(deg(ang));
+      path('sbTriangleArc',`M119 245 A44 44 0 0 0 ${arcx} ${arcy}`);
+      attr('sbTriangleDot','cx',x);attr('sbTriangleDot','cy',y);
+      attr('sbTriangleBaseText','x',(75+x)/2);$('sbTriangleBaseText').textContent=`Adjacent ${adj}`;
+      attr('sbTriangleVertText','x',Math.min(435,x+10));attr('sbTriangleVertText','y',(245+y)/2);$('sbTriangleVertText').textContent=`Opp. ${opp}`;
+      attr('sbTriangleHypText','x',(75+x)/2);attr('sbTriangleHypText','y',Math.max(35,(245+y)/2-17));$('sbTriangleHypText').textContent=`Hyp. ${Number.isInteger(hyp)?hyp:'√13'}`;
+      $('sbTriangleAngle').textContent=`θ ≈ ${p(ang,1)}°`; $('sbOpp').textContent=opp;$('sbAdj').textContent=adj;
+      $('sbHyp').textContent=Number.isInteger(hyp)?hyp:'√13';$('sbAngle').textContent=p(ang,2)+'°';
+      for(const [id,v] of [['sbSin',ratioText(opp,hyp)],['sbCos',ratioText(adj,hyp)],['sbTan',ratioText(opp,adj)],['sbCsc',ratioText(hyp,opp)],['sbSec',ratioText(hyp,adj)],['sbCot',ratioText(adj,opp)]]) $(id).textContent=v;
+      if(!Number.isInteger(hyp)){
+        $('sbSin').textContent='2/√13';$('sbCos').textContent='3/√13';$('sbCsc').textContent='√13/2';$('sbSec').textContent='√13/3';
+      }
+    }
+    document.querySelectorAll('[data-pair]').forEach(btn=>btn.addEventListener('click',()=>{
+      [opp,adj]=btn.dataset.pair.split(',').map(Number);document.querySelectorAll('[data-pair]').forEach(b=>b.classList.toggle('selected',b===btn));renderTriangle();
+    }));
+    const EXACT={0:['0','1','0','undefined','1','undefined'],30:['1/2','√3/2','1/√3','2','2/√3','√3'],45:['1/√2','1/√2','1','√2','√2','1'],60:['√3/2','1/2','√3','2/√3','2','1/√3'],90:['1','0','undefined','1','undefined','0']};
+    function renderSpecial(){
+      const a=deg(currentSpecial),cx=205,cy=179,r=130,x=cx+r*Math.cos(a),y=cy-r*Math.sin(a);
+      path('sbCircleRad',`M${cx} ${cy} L${x} ${y}`);path('sbCircleCos',`M${cx} ${cy} L${x} ${cy}`);path('sbCircleSin',`M${x} ${cy} L${x} ${y}`);
+      attr('sbCircleP','cx',x);attr('sbCircleP','cy',y);
+      path('sbCircleArc',`M${cx} ${cy} L${cx+50} ${cy} A50 50 0 0 0 ${cx+50*Math.cos(a)} ${cy-50*Math.sin(a)} Z`);
+      attr('sbCircleLabel','x',Math.min(x+12,435));attr('sbCircleLabel','y',Math.max(y-11,30));$('sbCircleLabel').textContent=currentSpecial+'°';
+      $('sbSpecAngle1').textContent=$('sbSpecAngle2').textContent=$('sbSpecAngle3').textContent=currentSpecial+'°';
+      const t=EXACT[currentSpecial];$('sbSpecSin').textContent=t[0];$('sbSpecCos').textContent=t[1];$('sbSpecTan').textContent=t[2];$('sbSpecReci').textContent=`${t[3]} · ${t[4]} · ${t[5]}`;
+      $('sbSpecialTable').innerHTML='';let top=['θ','0°','30°','45°','60°','90°'];
+      for(const [ri,row] of [top,['sin',...Object.keys(EXACT).map(k=>EXACT[k][0])],['cos',...Object.keys(EXACT).map(k=>EXACT[k][1])],['tan',...Object.keys(EXACT).map(k=>EXACT[k][2])]].entries()){
+        row.forEach((value,j)=>{const d=document.createElement('div');d.textContent=value;d.className=(ri===0?'sb-th ':'')+(j===0?'sb-rowname ':'')+(j===top.indexOf(currentSpecial+'°')?'sb-activeangle':'');$('sbSpecialTable').appendChild(d);});
+      }
+      document.querySelectorAll('[data-deg]').forEach(b=>b.classList.toggle('selected',Number(b.dataset.deg)===currentSpecial));
+    }
+    document.querySelectorAll('[data-deg]').forEach(b=>b.addEventListener('click',()=>{currentSpecial=Number(b.dataset.deg);renderSpecial();}));
+    function renderComp(){
+      const a=Number($('sbCompSlider').value),b=90-a;
+      $('sbCompVal').textContent=a+'°';$('sbCompA').textContent=a+'°';$('sbCompB').textContent=b+'°';$('sbCompAngA').textContent=a;$('sbCompAngB').textContent=b;
+      $('sbCompSin').textContent=p(Math.sin(deg(a)));$('sbCompCos').textContent=p(Math.cos(deg(b)));$('sbCompTan').textContent=p(Math.tan(deg(a)));$('sbCompCot').textContent=p(1/Math.tan(deg(b)));
+    }
+    $('sbCompSlider').addEventListener('input',renderComp);
+    function renderTable(){
+      let d=Number($('sbTableDeg').value),m=Number($('sbTableMin').value);
+      if(!Number.isFinite(d))d=0;if(!Number.isFinite(m))m=0;
+      d=Math.min(90,Math.max(0,Math.floor(d)));m=Math.min(59,Math.max(0,Math.floor(m)));
+      if(d===90)m=0;
+      const fun=$('sbTableFun').value,a=d+m/60,r=deg(a),v=fun==='sin'?Math.sin(r):fun==='cos'?Math.cos(r):Math.tan(r);
+      $('sbTableExpression').textContent=`${fun} ${d}°${m}′ ≈`;$('sbDegreesDecimal').textContent=`${d}°${m}′ = ${a.toFixed(4)}°`;
+      $('sbTableAnswer').textContent=fun==='tan'&&d===90?'Undefined':v.toFixed(4);
+    }
+    ['sbTableFun','sbTableDeg','sbTableMin'].forEach(id=>$(id).addEventListener('input',renderTable));
+    document.querySelectorAll('[data-tbl]').forEach(b=>b.addEventListener('click',()=>{
+      const [f,d,m]=b.dataset.tbl.split(',');$('sbTableFun').value=f;$('sbTableDeg').value=d;$('sbTableMin').value=m;renderTable();
+    }));
+    const SOLUTIONS=[
+      {id:'example-6-3',ref:'Example 6.3',type:'Example',title:'From tangent to the other five ratios',prompt:'Suppose tan A = 2/3. Construct its right triangle and derive every remaining ratio.',steps:['Tangent means opposite ÷ adjacent, so use sides 2 and 3.','Pythagoras gives the hypotenuse: √(2² + 3²) = √13.','sin A = 2/√13; cos A = 3/√13.','cosec A = √13/2; sec A = √13/3; cot A = 3/2.']},
+      {id:'example-6-10',ref:'Example 6.10 (i)',type:'Example',title:'Find the complementary angle',prompt:'The cosecant of A matches secant of 34°. Determine acute angle A.',steps:['For acute A, cosec A = sec(90° − A).','So sec(90° − A) = sec 34°.','90° − A = 34°, hence A = 56°.']},
+      {id:'6-1-1',ref:'Exercise 6.1 · Q1',type:'6.1',title:'All six ratios of a 9–40–41 triangle',prompt:'At angle B, the opposite, adjacent and hypotenuse have lengths 9, 40 and 41.',steps:['The hypotenuse is 41, adjacent side is 40, and opposite side is 9.','sin B = 9/41; cos B = 40/41; tan B = 9/40.','Reverse these fractions: cosec B = 41/9; sec B = 41/40; cot B = 40/9.','Explore this exact 9–40–41 triangle in Lesson 6.1 above.']},
+      {id:'6-1-3',ref:'Exercise 6.1 · Q3',type:'6.1',title:'Recover six ratios from cosine',prompt:'For an acute angle, 2 cos θ = √3. Work out the six trigonometric ratios.',steps:['Divide by 2: cos θ = √3/2. This is the cosine of 30°.','sin θ = 1/2 and tan θ = (1/2)/(√3/2) = 1/√3.','The reciprocals are cosec θ = 2, sec θ = 2/√3, cot θ = √3.']},
+      {id:'6-1-4',ref:'Exercise 6.1 · Q4',type:'6.1',title:'Simplify an expression when cos A = 3/5',prompt:'Use the given cosine ratio to evaluate (sin A − cos A)/(2 tan A).',steps:['For an acute angle with cos A = 3/5, the opposite side is 4 by Pythagoras.','sin A = 4/5 and tan A = 4/3.','Numerator = 4/5 − 3/5 = 1/5; denominator = 2 × 4/3 = 8/3.','(1/5) ÷ (8/3) = 3/40.']},
+      {id:'6-2-1',ref:'Exercise 6.2 · Q1(i)',type:'6.2',title:'Prove the basic sine–cosine identity',prompt:'Check that squared sine plus squared cosine equals 1 at 60°.',steps:['sin 60° = √3/2 and cos 60° = 1/2.','Square them: (√3/2)² = 3/4 and (1/2)² = 1/4.','Add: 3/4 + 1/4 = 1. Verified!']},
+      {id:'6-2-2',ref:'Exercise 6.2 · Q2(iii)',type:'6.2',title:'Evaluate a special-angle expression',prompt:'Evaluate sin²30° − 2cos³60° + 3tan⁴45°.',steps:['sin 30° = 1/2, cos 60° = 1/2 and tan 45° = 1.','Substitute: (1/2)² − 2(1/2)³ + 3(1)⁴.','= 1/4 − 2/8 + 3 = 1/4 − 1/4 + 3 = 3.']},
+      {id:'6-3-1',ref:'Exercise 6.3 · Q(i)',type:'6.3',title:'Complementary fractions make 1',prompt:'Evaluate (cos47°/sin43°)² + (sin72°/cos18°)² − 2cos²45°.',steps:['47° + 43° = 90°, so cos47° = sin43°; their ratio is 1.','72° + 18° = 90°, so sin72° = cos18°; their ratio is also 1.','cos²45° = 1/2. Therefore 1² + 1² − 2(1/2) = 1.']},
+      {id:'6-4-1',ref:'Exercise 6.4 · Q1(i)',type:'6.4',title:'Read or check sin 49°',prompt:'Find sine of an angle measuring 49° to four decimal places.',steps:['Write the angle as 49°0′, since there are 60 minutes in 1°.','Look up sine at 49° in a trig table or compute sin(49 × π/180).','sin 49° ≈ 0.75470958, which rounds to 0.7547.']},
+      {id:'6-4-6',ref:'Exercise 6.4 · Q6',type:'6.4',title:'Find the height of a tree',prompt:'A tree is viewed from 60 m away at an elevation angle of 42°. Find its height.',steps:['In a right triangle, tangent = opposite/adjacent.','tan 42° = tree height/60.','Tree height = 60 × tan42° ≈ 60 × 0.900404 = 54.0242 m.','Answer: about 54.02 m.']},
+      {id:'6-5-2',ref:'Exercise 6.5 · Q2',type:'6.5',title:'When tan equals cot',prompt:'For an acute angle, tan θ = cot 37°. What is θ?',steps:['cot 37° = tan(90° − 37°) = tan 53°.','Thus tan θ = tan 53°. For an acute angle, θ = 53°.']},
+      {id:'6-5-7',ref:'Exercise 6.5 · Q7',type:'6.5',title:'Simplify an expression at 45°',prompt:'Evaluate (1 − tan²45°)/(1 + tan²45°).',steps:['The exact value tan45° is 1.','Substitute: (1 − 1²)/(1 + 1²) = 0/2.','Answer: 0.']}
+    ];
+    const DONE_KEY='triggle.board.class9.v1';
+    let saved=[];try{const a=JSON.parse(localStorage.getItem(DONE_KEY)||'[]');if(Array.isArray(a))saved=a.filter(x=>typeof x==='string');}catch(e){}
+    const solved=new Set(saved);
+    function markSolved(id){solved.add(id);try{localStorage.setItem(DONE_KEY,JSON.stringify([...solved]));}catch(e){}renderSolutions();}
+    function renderSolutions(){
+      const host=$('sbProblems');host.replaceChildren();
+      for(const s of SOLUTIONS.filter(s=>currentFilter==='all'||(currentFilter==='Example'?s.type==='Example':s.type===currentFilter))){
+        const item=document.createElement('article');item.className='sb-problem'+(solved.has(s.id)?' sb-finished':'');
+        const tag=document.createElement('div');tag.className='sb-topic';tag.textContent=s.ref;
+        const title=document.createElement('h4');title.textContent=s.title;
+        const intro=document.createElement('p');intro.textContent=s.prompt;
+        const actions=document.createElement('div');actions.className='sb-actions';
+        const reveal=document.createElement('button');reveal.type='button';reveal.textContent='👀 Show steps';reveal.setAttribute('aria-expanded','false');
+        const done=document.createElement('button');done.type='button';done.className='sb-mark';done.textContent=solved.has(s.id)?'✓ Explored':'☆ Mark explored';
+        const steps=document.createElement('ol');steps.className='sb-steps';steps.hidden=true;
+        for(const line of s.steps){const li=document.createElement('li');li.textContent=line;steps.appendChild(li);}
+        reveal.addEventListener('click',()=>{steps.hidden=!steps.hidden;reveal.textContent=steps.hidden?'👀 Show steps':'🙈 Hide steps';reveal.setAttribute('aria-expanded',String(!steps.hidden));});
+        done.addEventListener('click',()=>markSolved(s.id));
+        actions.append(reveal,done);item.append(tag,title,intro,actions,steps);host.appendChild(item);
+      }
+      $('sbCount').textContent=`${solved.size} of ${SOLUTIONS.length} explored`;$('sbFill').style.width=(solved.size/SOLUTIONS.length*100)+'%';
+    }
+    document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{currentFilter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('selected',x===b));renderSolutions();}));
+    renderTriangle();renderSpecial();renderComp();renderTable();renderSolutions();
+  })();
+  </script>
+
 </body>
 </html>
