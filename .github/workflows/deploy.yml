@@ -1,0 +1,48 @@
+
+name: Publish Triggle from ZIP
+
+on:
+  push:
+    paths:
+      - 'Triggle_v1_11_Original_Basics.zip'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: triggle-pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Get project
+        uses: actions/checkout@v4
+
+      - name: Unzip Triggle website
+        run: |
+          mkdir -p site
+          unzip -q Triggle_v1_11_Original_Basics.zip -d site
+          test -f site/index.html
+          test -f site/playground.html
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4
+        
