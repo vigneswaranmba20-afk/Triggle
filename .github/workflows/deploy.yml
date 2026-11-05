@@ -30,7 +30,7 @@ jobs:
       - name: Unzip Triggle website
         run: |
           mkdir -p site
-          unzip -q Triggle_v1_11_Original_Basics.zip -d site
+          unzip -q Triggle_v124_Complete_Website.zip -d site
           test -f site/index.html
           test -f site/playground.html
 
