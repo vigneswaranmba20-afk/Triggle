@@ -82,7 +82,7 @@
     function setDemo(state,options,paint){
       const controls=panel.querySelector('[data-demo-controls]');
       controls.innerHTML=options.map(([name,key])=>btn(name,key)).join('');
-      controls.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>paint(button.dataset.demoMode)));
+      controls.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>paint(button.dataset.demoMode,update)));
       function update(key,value){
         controls.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.demoMode===key)));
         panel.querySelector('[data-demo-output]').innerHTML=htmlMath(value);
