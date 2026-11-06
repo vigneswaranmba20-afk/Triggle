@@ -1,22 +1,11 @@
 {
   "title": "2025 Tamil Nadu mathematics books uploaded to Triggle conversation",
   "observedDate": "2026-11-06",
-  "verifiedBy": "PDF page 2 imprints and printed contents pages",
+  "verifiedBy": "PDF page 2 imprints and printed contents pages, with visual checks on the two final Tamil books",
   "redistribution": "Metadata only. Uploaded copyrighted PDFs are not copied into GitHub.",
   "expectedBooks": 12,
-  "availableBooks": 10,
-  "missingBooks": [
-    {
-      "grade": 9,
-      "medium": "ta",
-      "volume": null
-    },
-    {
-      "grade": 12,
-      "medium": "ta",
-      "volume": 1
-    }
-  ],
+  "availableBooks": 12,
+  "missingBooks": [],
   "books": [
     {
       "grade": 9,
@@ -51,6 +40,46 @@
         248,
         266,
         291
+      ],
+      "editionClaim": {
+        "first": 2018,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 9,
+      "medium": "ta",
+      "volume": null,
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "pdfPages": 344,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "printedStartPages": [
+        1,
+        43,
+        84,
+        149,
+        197,
+        236,
+        262,
+        281,
+        307
       ],
       "editionClaim": {
         "first": 2018,
@@ -341,6 +370,40 @@
     {
       "grade": 12,
       "medium": "ta",
+      "volume": 1,
+      "fileName": "Class_12_Mathematics_Tamil_Volume_1_2025_Edition-www.tntextbooks.in (1).pdf",
+      "sha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+      "pdfPages": 336,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        4,
+        5
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "printedStartPages": [
+        1,
+        58,
+        103,
+        142,
+        189,
+        241
+      ],
+      "editionClaim": {
+        "first": 2019,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 12,
+      "medium": "ta",
       "volume": 2,
       "fileName": "Class_12_Mathematics_Tamil_Volume_2_2025_Edition-www.tntextbooks.in.pdf",
       "sha256": "3b5769235e90e3176719d15110a9eabbccbcbd3ec23d66cd12068a4115f4ebea",
@@ -372,5 +435,17 @@
       },
       "access": "uploaded PDF available in conversation, not stored in GitHub"
     }
-  ]
+  ],
+  "coverage": {
+    "englishChapters": 41,
+    "tamilChapters": 41,
+    "pairedChapters": 41,
+    "gradeCoverage": {
+      "9": 9,
+      "10": 8,
+      "11": 12,
+      "12": 12
+    },
+    "scope": "2025 edition imprint + chapter navigation/source coverage only; not all mathematical terms, questions, exercises, lesson explanations or 2026–27 printing equality"
+  }
 }
