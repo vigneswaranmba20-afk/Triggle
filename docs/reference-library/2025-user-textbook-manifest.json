@@ -1,0 +1,376 @@
+{
+  "title": "2025 Tamil Nadu mathematics books uploaded to Triggle conversation",
+  "observedDate": "2026-11-06",
+  "verifiedBy": "PDF page 2 imprints and printed contents pages",
+  "redistribution": "Metadata only. Uploaded copyrighted PDFs are not copied into GitHub.",
+  "expectedBooks": 12,
+  "availableBooks": 10,
+  "missingBooks": [
+    {
+      "grade": 9,
+      "medium": "ta",
+      "volume": null
+    },
+    {
+      "grade": 12,
+      "medium": "ta",
+      "volume": 1
+    }
+  ],
+  "books": [
+    {
+      "grade": 9,
+      "medium": "en",
+      "volume": null,
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "pdfPages": 328,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "printedStartPages": [
+        1,
+        41,
+        78,
+        138,
+        185,
+        222,
+        248,
+        266,
+        291
+      ],
+      "editionClaim": {
+        "first": 2018,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 10,
+      "medium": "en",
+      "volume": null,
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "pdfPages": 352,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        5,
+        6
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "printedStartPages": [
+        1,
+        36,
+        85,
+        161,
+        203,
+        239,
+        269,
+        301
+      ],
+      "editionClaim": {
+        "first": 2019,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 10,
+      "medium": "ta",
+      "volume": null,
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "pdfPages": 368,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        5,
+        6
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "printedStartPages": [
+        1,
+        37,
+        86,
+        165,
+        210,
+        247,
+        277,
+        309
+      ],
+      "editionClaim": {
+        "first": 2019,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 11,
+      "medium": "en",
+      "volume": 1,
+      "fileName": "Class_11_Mathematics_English_Volume_1_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "970f0930d74074c8c45247a4587797bb3d11ca6dcd9e4a9c834b691910f940f0",
+      "pdfPages": 320,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        4,
+        5
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "printedStartPages": [
+        1,
+        52,
+        87,
+        155,
+        202,
+        237
+      ],
+      "editionClaim": {
+        "first": 2018,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 11,
+      "medium": "en",
+      "volume": 2,
+      "fileName": "Class_11_Mathematics_English_Volume_2_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "565edc0c56e711ce86d7da8fe922c473dafa6725a0bc171c88aec5ae2e22a5dc",
+      "pdfPages": 288,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "printedStartPages": [
+        1,
+        47,
+        86,
+        135,
+        182,
+        232
+      ],
+      "editionClaim": {
+        "first": 2018,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 11,
+      "medium": "ta",
+      "volume": 1,
+      "fileName": "Class_11_Mathematics_Tamil_Volume_1_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "0a7b7987216b911f16e7232eec609d56aff67cb540484d93a879cd834ad22e24",
+      "pdfPages": 368,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        4,
+        5
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "printedStartPages": [
+        1,
+        67,
+        110,
+        192,
+        247,
+        286
+      ],
+      "editionClaim": {
+        "first": 2018,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 11,
+      "medium": "ta",
+      "volume": 2,
+      "fileName": "Class_11_Mathematics_Tamil_Volume_2_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "4965766db057e0ca7edc95c306c88abbb7a2dee94ad4a98e8958d91582c94c49",
+      "pdfPages": 304,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "printedStartPages": [
+        1,
+        51,
+        93,
+        145,
+        194,
+        244
+      ],
+      "editionClaim": {
+        "first": 2018,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 12,
+      "medium": "en",
+      "volume": 1,
+      "fileName": "Class_12_Mathematics_English_Volume_1_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+      "pdfPages": 304,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        4,
+        5
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "printedStartPages": [
+        1,
+        52,
+        97,
+        129,
+        172,
+        221
+      ],
+      "editionClaim": {
+        "first": 2019,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 12,
+      "medium": "en",
+      "volume": 2,
+      "fileName": "Class_12_Mathematics_English_Volume_2_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "379e496ea7d093fe5cf8a9a3801128a5645344b1c431d6ed9665886751c48c75",
+      "pdfPages": 272,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "printedStartPages": [
+        1,
+        58,
+        90,
+        144,
+        179,
+        224
+      ],
+      "editionClaim": {
+        "first": 2019,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 12,
+      "medium": "ta",
+      "volume": 2,
+      "fileName": "Class_12_Mathematics_Tamil_Volume_2_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "3b5769235e90e3176719d15110a9eabbccbcbd3ec23d66cd12068a4115f4ebea",
+      "pdfPages": 288,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "printedStartPages": [
+        1,
+        61,
+        94,
+        151,
+        190,
+        237
+      ],
+      "editionClaim": {
+        "first": 2019,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    }
+  ]
+}
