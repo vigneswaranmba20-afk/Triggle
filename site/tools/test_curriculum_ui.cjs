@@ -67,6 +67,76 @@ async function main() {
     await page.locator('#chapterOverview').waitFor({ state: 'visible' });
   }
   try {
+    for(const width of [320,390]){
+      await check('Immersive question controls hide together and return on screen tap at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&question=c9-example-6-1');
+        await page.locator('#focusNavToggle').waitFor({state:'visible'});
+        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('question-focus')),true);
+        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),true);
+        const dimensions=await page.evaluate(()=>({
+          app:document.querySelector('.app-shell').getBoundingClientRect().height,
+          content:document.querySelector('.lesson-container').getBoundingClientRect().height,
+          screen:window.innerHeight,
+          position:getComputedStyle(document.querySelector('.page-controls')).position,
+          above:document.querySelector('.page-controls').getBoundingClientRect().bottom<
+            document.querySelector('.class-dock').getBoundingClientRect().top+5
+        }));
+        assert.equal(dimensions.position,'fixed','Previous/Next should float over the question');
+        assert.ok(dimensions.app>=dimensions.screen-2,'Exercise view should fill the whole phone viewport');
+        assert.ok(dimensions.above,'Floating question controls should not cover the class dock');
+        await page.evaluate(()=>window.TriggleFocusNavigation.hide());
+        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),false);
+        for(const selector of ['.appbar','.page-controls','.class-dock']){
+          assert.equal(await page.locator(selector).evaluate(el=>el.inert),true,'Hidden '+selector+' cannot retain keyboard focus');
+        }
+        assert.match(await page.locator('#focusNavToggle').getAttribute('aria-label'),/Show navigation/);
+        // Tapping the problem itself reveals controls without changing answers.
+        await page.locator('#questionText').click({position:{x:12,y:10}});
+        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),true);
+        await page.locator('#next').click();
+        assert.equal(new URL(page.url()).searchParams.has('question'),true);
+        assert.equal(await page.locator('.page-controls').isVisible(),true);
+        await page.evaluate(()=>window.TriggleFocusNavigation.hide());
+        await page.locator('#focusNavToggle').click();
+        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),true);
+        await page.locator('#langTa').click();
+        assert.match(await page.locator('#focusNavToggle').getAttribute('aria-label'),/வழிசெலுத்தலை/);
+        await page.locator('#homeBtn').click();
+        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('question-focus')),false);
+        assert.equal(await page.locator('#focusNavToggle').isVisible(),false,'Home does not inherit question focus UI');
+        for(const selector of ['.appbar','.page-controls','.class-dock']){
+          assert.equal(await page.locator(selector).evaluate(el=>el.inert),false,'Navigation must reset outside questions');
+        }
+        await noOverflow(page,'full-height mobile immersive reader at '+width+'px');
+      });
+    }
+    await check('Touch reading mode auto-hides, keyboard Tab recovers and modal remains accessible',async()=>{
+      const page=await visit(await context(390),'/index.html?class=9&question=c9-example-6-1');
+      await page.waitForFunction(()=>document.body.classList.contains('question-focus')&&!document.body.classList.contains('focus-controls-visible'),{timeout:12000});
+      assert.equal(await page.locator('.appbar').isVisible(),false);
+      await page.keyboard.press('Tab');
+      assert.equal(await page.locator('.appbar').isVisible(),true,'Keyboard Tab reveals the navigation');
+      assert.equal(await page.locator('.page-controls').evaluate(el=>el.inert),false);
+      await page.locator('#focusNavToggle').click();
+      assert.equal(await page.locator('#focusNavToggle').getAttribute('aria-expanded'),'false');
+      await page.locator('#focusNavToggle').click();
+      assert.equal(await page.locator('#focusNavToggle').getAttribute('aria-expanded'),'true');
+      await page.locator('#tabGuided').click();
+      await page.locator('#guidedDialog').waitFor({state:'visible'});
+      await page.evaluate(()=>window.TriggleFocusNavigation.hide());
+      assert.equal(await page.locator('.appbar').evaluate(el=>el.inert),false,'No hiding during an open teaching dialog');
+      await page.locator('#closeGuided').click();
+      await noOverflow(page,'immersive dialog and keyboard');
+    });
+    await check('Immersive controls do not affect chapter menus or desktop',async()=>{
+      const mobilePage=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
+      assert.equal(await mobilePage.locator('#focusNavToggle').isVisible(),false);
+      assert.equal(await mobilePage.locator('body').evaluate(el=>el.classList.contains('question-focus')),false);
+      const desktop=await visit(await context(1280),'/index.html?class=9&question=c9-example-6-1');
+      assert.equal(await desktop.locator('#focusNavToggle').isVisible(),false);
+      assert.equal(await desktop.locator('body').evaluate(el=>el.classList.contains('question-focus')),false);
+      assert.notEqual(await desktop.locator('.page-controls').evaluate(el=>getComputedStyle(el).position),'fixed');
+    });
     for(const width of [320,390,1280]){
       await check('Home, class directory, chapter jump, browser Back and Tamil at '+width+'px', async()=>{
         const page=await visit(await context(width),'/index.html');
@@ -508,6 +578,8 @@ async function main() {
       assert.ok(cacheUrls.some(u => new URL(u).pathname.endsWith('/data/curriculum.js')), 'Curriculum data included in offline cache');
       assert.ok(cacheUrls.some(u => new URL(u).pathname.endsWith('/assets/chapter-hub.js')), 'Chapter selection logic must be cached');
       assert.ok(cacheUrls.some(u => new URL(u).pathname.endsWith('/assets/chapter-hub.css')), 'Chapter selection layout must be cached');
+      assert.ok(cacheUrls.some(u => new URL(u).pathname.endsWith('/assets/focus-navigation.js')), 'Immersive navigation JS must be cached');
+      assert.ok(cacheUrls.some(u => new URL(u).pathname.endsWith('/assets/focus-navigation.css')), 'Immersive navigation CSS must be cached');
       await ctx.setOffline(true);
       await page.reload();
       await page.locator('#chapterOverview').waitFor({ state:'visible' });
