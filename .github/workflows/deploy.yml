@@ -4,7 +4,7 @@ name: Publish Triggle from ZIP
 on:
   push:
     paths:
-      - 'Triggle_v1_11_Original_Basics.zip'
+      - 'Triggle_v124_Complete_Website.zip'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
@@ -34,6 +34,30 @@ jobs:
           test -f site/index.html
           test -f site/playground.html
 
+
+      - name: Fix stretched math brackets
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          js=Path('site/assets/app.js')
+          t=js.read_text()
+          start=t.index('   let s=esc(str).replace(/')
+          end=t.index('\n   s=s.replace(/([²³⁴])',start)
+          patch=r'''   let s=esc(str);
+             s=s.replace(/\(\s*\[\[([^\]|]+)\|([^\]]+)\]\]\s*\)([²³⁴])/g,
+               (_m,n,d,p)=>stash('<math xmlns="http://www.w3.org/1998/Math/MathML" class="mathml-brackets"><mstyle displaystyle="true"><msup><mrow><mo stretchy="true">(</mo><mfrac><mtext>'+n+'</mtext><mtext>'+d+'</mtext></mfrac><mo stretchy="true">)</mo></mrow><mn>'+({'²':2,'³':3,'⁴':4}[p])+'</mn></msup></mstyle></math>'));
+             s=s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g,(_m,n,d)=>stash('<span class="frac"><span>'+esc(n)+'</span><span>'+esc(d)+'</span></span>'));'''
+          t=t[:start]+patch+t[end:]
+          js.write_text(t)
+          css=Path('site/assets/app.css')
+          css.write_text(css.read_text()+'\n.mathml-brackets{display:inline-block;vertical-align:middle;font-size:1.4em;white-space:nowrap;margin:0 .07em}\n')
+          html=Path('site/index.html')
+          html.write_text(html.read_text().replace('?v=127','?v=128').replace('v1.27','v1.28'))
+          sw=Path('site/service-worker.js')
+          sw.write_text(sw.read_text().replace('triggle-shell-v1.27','triggle-shell-v1.28'))
+          PY
+          node --check site/assets/app.js
+          
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
