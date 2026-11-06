@@ -105,6 +105,26 @@ window.TRIGGLE_CURRICULUM = {
       "evidence": "Government textbook PDF chapter extract hosted by third-party mirror. PDF pages 1–4 include title, copyright and full volume contents (printed pp I–IV), confirming chapters 7–12. Contents uses Application of Differential Calculus while chapter 7 opener on printed p1 uses Applications of Differential Calculus; plural opener used here. Accessed 2026-11-06."
     },
     {
+      "id": "tn-g12-ta-v1-2020",
+      "publisher": "Government of Tamil Nadu; SCERT; Tamil Nadu Textbook and Educational Services Corporation",
+      "title": "மேல்நிலை இரண்டாமாண்டு கணிதவியல் தொகுதி 1",
+      "medium": "ta",
+      "edition": "First edition 2019; revised edition 2020 (archived copy, not identified as 2026–27 printing)",
+      "url": "https://winmeen.com/wp-content/uploads/2020/09/12th_Std_Mathematics_Vol_1_TM_optimised.pdf",
+      "verification": "verified",
+      "evidence": "SCERT Tamil-medium Volume I reproduced by a non-government archive. Copyright/imprint p II states first edition 2019, revised 2020; contents pp IV–V list chapters 1–6 and printed starts 1, 58, 103, 142, 189, 241. Extracted Tamil PDF text corroborated; PDF screenshot access was blocked by tool file-size limit. Neither visual proof of every glossary entry nor 2026–27 prescribed-edition equivalence has been established. Accessed 2026-11-06."
+    },
+    {
+      "id": "tn-g12-ta-v2-2022",
+      "publisher": "Government of Tamil Nadu; SCERT; Tamil Nadu Textbook and Educational Services Corporation",
+      "title": "மேல்நிலை இரண்டாமாண்டு கணிதவியல் தொகுதி 2",
+      "medium": "ta",
+      "edition": "First edition 2019; revised editions 2020 and 2022 (archived copy, not identified as 2026–27 printing)",
+      "url": "https://fliphtml5.com/lniiy/xlka/12th_Mathematics_Vol-2_TM_-_www.tntextbooks.in_%281%29/3/",
+      "verification": "verified",
+      "evidence": "SCERT Tamil-medium Volume II reproduced as a third-party flipbook. Copyright/imprint p II explicitly says revised 2020 and 2022; contents pp III–IV list chapters 7–12 and printed starts 1, 61, 94, 151, 190, 237. Select glossary labels printed p281 corroborate terminology for chapters 7–10. The flipbook publisher is not a government source, and 2026–27 identity and a complete lesson vocabulary review are pending. Accessed 2026-11-06."
+    },
+    {
       "id": "tn-g12-ta-index",
       "publisher": "BrainKart (secondary index; not the textbook publisher)",
       "title": "Grade 12 Mathematics Tamil chapter index",
@@ -1288,8 +1308,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp IV–V; chapter 1, printed p1"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 1 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v1-2020",
+              "locator": "SCERT Tamil Volume I archived edition: contents pp IV–V; chapter 1, printed p1; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1302,8 +1322,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1323,8 +1343,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp IV–V; chapter 2, printed p52"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 2 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v1-2020",
+              "locator": "SCERT Tamil Volume I archived edition: contents pp IV–V; chapter 2, printed p58; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1337,8 +1357,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1358,8 +1378,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp IV–V; chapter 3, printed p97"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 3 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v1-2020",
+              "locator": "SCERT Tamil Volume I archived edition: contents pp IV–V; chapter 3, printed p103; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1372,8 +1392,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1393,8 +1413,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp IV–V; chapter 4, printed p129"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 4 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v1-2020",
+              "locator": "SCERT Tamil Volume I archived edition: contents pp IV–V; chapter 4, printed p142; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1424,8 +1444,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1445,8 +1465,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp IV–V; chapter 5, printed p172"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 5 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v1-2020",
+              "locator": "SCERT Tamil Volume I archived edition: contents pp IV–V; chapter 5, printed p189; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1459,8 +1479,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1480,8 +1500,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp IV–V; chapter 6, printed p221"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 6 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v1-2020",
+              "locator": "SCERT Tamil Volume I archived edition: contents pp IV–V; chapter 6, printed p241; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1494,8 +1514,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1515,8 +1535,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp III–IV; chapter 7, printed p1"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 7 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v2-2022",
+              "locator": "SCERT Tamil Volume II archived edition: contents pp III–IV; chapter 7, printed p1; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1529,8 +1549,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1550,8 +1570,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp III–IV; chapter 8, printed p58"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 8 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v2-2022",
+              "locator": "SCERT Tamil Volume II archived edition: contents pp III–IV; chapter 8, printed p61; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1564,8 +1584,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1585,8 +1605,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp III–IV; chapter 9, printed p90"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 9 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v2-2022",
+              "locator": "SCERT Tamil Volume II archived edition: contents pp III–IV; chapter 9, printed p94; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1599,8 +1619,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1620,8 +1640,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp III–IV; chapter 10, printed p144"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 10 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v2-2022",
+              "locator": "SCERT Tamil Volume II archived edition: contents pp III–IV; chapter 10, printed p151; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1634,8 +1654,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1655,8 +1675,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp III–IV; chapter 11, printed p179"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 11 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v2-2022",
+              "locator": "SCERT Tamil Volume II archived edition: contents pp III–IV; chapter 11, printed p190; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1669,8 +1689,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         },
@@ -1690,8 +1710,8 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "Contents pp III–IV; chapter 12, printed p224"
             },
             {
-              "sourceId": "tn-g12-ta-index",
-              "locator": "Chapter 12 heading; textbook edition and locator pending"
+              "sourceId": "tn-g12-ta-v2-2022",
+              "locator": "SCERT Tamil Volume II archived edition: contents pp III–IV; chapter 12, printed p237; current 2026–27 imprint match still pending"
             }
           ],
           "status": "planned",
@@ -1704,8 +1724,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "Archived SCERT Tamil chapter title and page locator now corroborated (Vol I revised 2020 / Vol II revised 2022). The 2026–27 prescribed printing, full mathematical terminology and new chapter content still need editorial review.",
+              "ta": "காப்பக SCERT தமிழ்வழிப் பாடநூலின் அத்தியாயத் தலைப்பும் பக்க எண்ணும் ஒப்பிட்டுச் சரிபார்க்கப்பட்டன (தொகுதி I: 2020; தொகுதி II: 2022). 2026–27 நடப்பாண்டுப் பதிப்பு, முழுமையான கணிதக் கலைச்சொற்கள் மற்றும் புதிய பாட உள்ளடக்கம் ஆகியவற்றின் மீளாய்வு இன்னும் தேவை."
             }
           }
         }
