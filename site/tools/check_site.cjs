@@ -41,7 +41,7 @@ for (const [language,entries] of Object.entries(dictionary)) {
 }
 // Seasonal celebration markup/scripts must not return to the production learning app.
 const liveHtml=fs.readFileSync(path.join(root,'index.html'),'utf8');
-assert(!/diwaliGreeting|diwaliEffects|assets\\/diwali\\.js|fireworks-js|canvas-confetti/i.test(liveHtml), 'Removed Diwali celebration reappeared in live HTML');
+assert(!['diwaliGreeting','diwaliEffects','assets/diwali.js','fireworks-js','canvas-confetti'].some(marker => liveHtml.includes(marker)), 'Removed Diwali celebration reappeared in live HTML');
 // The offline shell must contain every script/style used by the live app.
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 const core=/const CORE=(\[[^;]+\]);/.exec(sw);
