@@ -1,4 +1,4 @@
-const CACHE='triggle-shell-chapter-hub-v4';
+const CACHE='triggle-shell-direct-sections-v5';
 const CORE=['./index.html','./class9-classic.html','./grades.html','./playground.html','./assets/app.css','./assets/discovery.css','./assets/discovery.js','./assets/chapter-hub.js','./assets/chapter-hub.css','./assets/app.js','./assets/math-notation.js','./assets/phase2-lab.js','./data/set-language-path.js','./assets/set-language-journey.js','./assets/visual-lessons.js','./data/video-lessons.json','./data/video-production-plan.json','./assets/guided-lessons.js','./assets/deep-lessons.js','./assets/deep-experience.js','./assets/diagrams.js','./assets/concept-figures.js','./data/class-9.js','./data/class-10.js','./data/class-11.js','./data/class-12.js','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 CORE.push('./data/curriculum.js');
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
