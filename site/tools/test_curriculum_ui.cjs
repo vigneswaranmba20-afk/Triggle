@@ -89,8 +89,10 @@ async function main() {
         await page.locator('#discover-jump').selectOption('g10-ch3');
         assert.equal(new URL(page.url()).searchParams.get('chapter'),'g10-ch3');
         assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Algebra');
-        await page.locator('#chapterJumpSelect').selectOption('references');
-        assert.equal(await page.locator('#chapterReferences').isVisible(),true);
+        assert.equal(await page.locator('.hub-section-card').count(),4);
+        await page.locator('.hub-resource-link').click();
+        assert.equal(new URL(page.url()).searchParams.get('section'),'sources');
+        assert.equal(await page.locator('.hub-source').count()>0,true);
         await page.locator('#homeBtn').click();
         assert.equal(new URL(page.url()).searchParams.has('class'),false);
         assert.equal(await page.locator('#discoveryView').isVisible(),true);
@@ -104,23 +106,65 @@ async function main() {
         await noOverflow(page,'Tamil Home '+width+'px');
       });
     }
-    await check('Native chapter jump goes to concept or exact question and keeps direct URLs', async()=>{
+    await check('Chapter selection first offers four choices, not a long unorganized lesson',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
-      await page.locator('#chapterJumpSelect').selectOption('concept:5');
+      assert.equal(await page.locator('.hub-section-card').count(),4);
+      assert.equal(await page.locator('.sp2-journey').count(),0,'Concepts should wait for a deliberate choice');
+      await page.locator('.hub-section-card[data-hub-section="quizzes"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'quizzes');
+      assert.equal(await page.locator('.hub-quiz-question').count(),7);
+      await page.locator('.hub-quiz-question').first().locator('button').nth(1).click();
+      assert.ok((await page.locator('.hub-quiz-progress').innerText()).includes('1 / 7'));
+      await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
+      await page.locator('.sp2-journey').waitFor({state:'visible'});
+      await page.locator('.sp2-journey [data-nav] [data-index="5"]').click();
       assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
-      assert.ok((await page.locator('#chapterJumpSelect option[value^="question:"]').count())>0);
-      const questionValue=await page.locator('#chapterJumpSelect option[value^="question:"]').first().getAttribute('value');
-      await page.locator('#chapterJumpSelect').selectOption(questionValue);
-      assert.ok(new URL(page.url()).searchParams.has('question'));
+      await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+      assert.equal(await page.locator('.hub-question').count(),1,'Set Language original practice is accessible');
+      const questionId=await page.locator('.hub-question').first().getAttribute('data-question-id');
+      await page.locator('.hub-question').first().click();
+      assert.equal(new URL(page.url()).searchParams.has('question'),true);
       assert.equal(await page.locator('#lessonCard').isVisible(),true);
       await page.goBack();
-      assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
+      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+      await page.locator('.hub-back-menu').click();
+      assert.equal(new URL(page.url()).searchParams.has('section'),false);
       await page.locator('#homeBtn').click();
       await page.locator('#discover-search').fill('கண மொழி');
       assert.ok(await page.locator('.discover-results [data-chapter="g9-ch1"]').count()>0);
       await page.locator('.discover-results [data-chapter="g9-ch1"]').click();
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
-      await noOverflow(page,'Direct chapter search and jump at 390px');
+      await noOverflow(page,'chapter hub at 390px');
+    });
+    await check('Worked examples are not mislabeled exercises, and both are one tap away',async()=>{
+      const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch6');
+      assert.equal(await page.locator('.hub-section-card').count(),4);
+      await page.locator('.hub-section-card[data-hub-section="examples"]').click();
+      assert.equal(await page.locator('.hub-question').count(),4,'Only four explicitly labelled Example items');
+      assert.ok((await page.locator('.hub-question').first().innerText()).includes('Example 6.1'));
+      await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+      assert.equal(await page.locator('.hub-question').count(),40,'40 exercise questions remain under Exercises');
+      await page.locator('.hub-question').first().click();
+      assert.equal(await page.locator('#lessonCard').isVisible(),true);
+      assert.ok((await page.locator('#stepsList li').count())>0,'Existing worked solution remains accessible');
+    });
+    await check('Find a Topic opens chapter navigation, with search below chapter list',async()=>{
+      const page=await visit(await context(320),'/index.html?class=9&chapter=g9-ch1');
+      await page.locator('#browseBtn').click();
+      await page.locator('#sidebar').waitFor({state:'visible'});
+      assert.equal(await page.locator('#exerciseList [data-chapter-id]').count(),9);
+      assert.equal(await page.locator('#exerciseList [data-section]').count(),4);
+      const order=await page.evaluate(()=>{
+        const list=document.querySelector('#exerciseList');
+        const search=document.querySelector('.sidebar-search-bottom');
+        return !!(list.compareDocumentPosition(search)&Node.DOCUMENT_POSITION_FOLLOWING);
+      });
+      assert.ok(order,'Optional search belongs BELOW the navigation');
+      await page.locator('#exerciseList [data-section="examples"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'examples');
+      assert.equal(await page.locator('.hub-question').count(),0);
+      assert.match(await page.locator('.hub-info').first().innerText(),/No questions/);
+      await noOverflow(page,'mobile chapter-first drawer');
     });
     await check('Offline initial Home reload and class directory work without remote scripts', async()=>{
       const ctx=await context(390,'allow');
@@ -164,7 +208,7 @@ async function main() {
         assert.equal(await page.locator('#classicLink').isVisible(), false, 'Class 9 classic interface stays hidden on Grade 11 overview');
         assert.equal(await page.locator('#visualLessonAction').isVisible(), false);
         assert.equal(await page.locator('#markDone').isVisible(), false);
-        assert.match(await page.locator('#chapterOverview').innerText(), /Planned/);
+        assert.match(await page.locator('#chapterOverview').innerText(), /under development/);
         await noOverflow(page, `${width}px English overview`);
         await page.keyboard.press('ArrowRight');
         assert.equal(new URL(page.url()).searchParams.get('chapter'), 'g11-ch1', 'Question shortcuts do not navigate a planned chapter');
@@ -206,6 +250,7 @@ async function main() {
         await page.locator('#lessonCard').waitFor({ state: 'visible' });
         await noOverflow(page, `${width}px legacy Tamil question`);
         await selectChapter(page, 'g9-ch6');
+        await page.locator('.hub-section-card[data-hub-section="examples"]').click();
         await page.locator('#chapterOverview [data-question-id="c9-example-6-1"]').click();
         assert.equal(new URL(page.url()).searchParams.get('question'), 'c9-example-6-1');
         assert.equal(await page.locator('#lessonCard').isVisible(), true);
@@ -267,6 +312,7 @@ async function main() {
     });
     await check('Phase 2 bilingual Set Language micro-lab works without leaving the chapter', async () => {
       const page = await visit(await context(320), '/index.html?class=9&chapter=g9-ch1');
+      await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
       const lab = page.locator('#chapterOverview .p2-lab');
       await lab.waitFor({ state:'visible' });
       assert.equal(await lab.locator('[data-result-set]').innerText(), '{1, 2, 3, 4, 5, 6}');
@@ -313,6 +359,7 @@ async function main() {
     });
     await check('2025-book Grade 9 learning journey supports seven ideas and live demonstrations at 320px', async () => {
       const page=await visit(await context(320),'/index.html?class=9&chapter=g9-ch1');
+      await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
       const journey=page.locator('.sp2-journey');
       await journey.waitFor({state:'visible'});
       assert.equal(await journey.locator('[data-nav] button').count(),7);
@@ -367,6 +414,7 @@ async function main() {
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
       await ctx.setOffline(true);
       await page.reload();
+      await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
       const lab=page.locator('.p2-lab');
       await lab.waitFor({state:'visible'});
       await page.locator('.sp2-journey').waitFor({state:'visible'});
@@ -384,6 +432,8 @@ async function main() {
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
       const cacheUrls = await page.evaluate(async () => (await Promise.all((await caches.keys()).map(async key => (await (await caches.open(key)).keys()).map(r => r.url)))).flat());
       assert.ok(cacheUrls.some(u => new URL(u).pathname.endsWith('/data/curriculum.js')), 'Curriculum data included in offline cache');
+      assert.ok(cacheUrls.some(u => new URL(u).pathname.endsWith('/assets/chapter-hub.js')), 'Chapter selection logic must be cached');
+      assert.ok(cacheUrls.some(u => new URL(u).pathname.endsWith('/assets/chapter-hub.css')), 'Chapter selection layout must be cached');
       await ctx.setOffline(true);
       await page.reload();
       await page.locator('#chapterOverview').waitFor({ state:'visible' });
