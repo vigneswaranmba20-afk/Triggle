@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#faf9f6"><meta name="description" content="Triggle · Visual mathematics for Classes 9–12. Quick solutions, optional immersive Understand Deeply lessons, interactive mathematics and searchable exercises.">
+<meta name="theme-color" content="#faf9f6"><meta name="description" content="Learn mathematics clearly in English and Tamil. Free interactive lessons, chapters, exercises and guided reasoning for Classes 9–12.">
 <meta name="copyright" content="© 2026 VIGNESWARAN E R"><link rel="manifest" href="./manifest.webmanifest">
-<title>Triggle — Mathematics for Classes 9–12 v1.28</title>
-<link rel="stylesheet" href="./assets/app.css?v=p2-journey">
+<title>Triggle — Mathematics Made Clear | Classes 9–12</title>
+<link rel="stylesheet" href="./assets/app.css?v=p2-journey"><link rel="stylesheet" href="./assets/discovery.css?v=home-v1">
 </head>
 <body>
 <div class="app-shell">
@@ -20,20 +20,21 @@
     <div class="side-browse"><span data-i18n="exploreExercise">Find an exercise</span><span class="side-count" id="sideCount">0 lessons</span></div>
     <label class="search-field"><span aria-hidden="true">⌕</span><input type="search" id="search" autocomplete="off" placeholder="Search exercise, question..." aria-label="Search lessons"><kbd>/</kbd></label>
     <nav id="exerciseList" class="exercise-list" aria-label="Exercises and questions"></nav>
-    <div class="sidebar-foot"><p><span aria-hidden="true">✦</span> <span data-i18n="saveNote">Your progress stays on this device</span></p><a href="./playground.html">🎡 <span data-i18n="openBasics">Interactive basics</span> <span aria-hidden="true">↗</span></a></div>
+    <div class="sidebar-foot"><p><span aria-hidden="true">✦</span> <span data-i18n="saveNote">Your progress stays on this device</span></p><a href="./index.html">⌂ <span data-i18n="home">Home</span> <span aria-hidden="true">↗</span></a></div>
   </aside>
   <div class="backdrop" id="backdrop" aria-hidden="true"></div>
   <div class="workspace">
     <header class="appbar">
       <div class="brand-mobile"><span class="logo" aria-hidden="true">✳</span><b>Triggle<span class="gold">.</span></b></div>
       <button type="button" id="browseBtn" class="browse-button" aria-expanded="false" aria-controls="sidebar"><span class="browse-symbol" aria-hidden="true">☰</span><span data-i18n="browse">Exercises</span><span id="browseChevron" aria-hidden="true">⌄</span></button>
-      <div class="appbar-actions"><a href="./playground.html" class="basics-link">🎡 <span data-i18n="basics">Trigonometry Basics</span></a><div class="lang-switch" role="group" aria-label="Language"><button type="button" id="langEn" class="active" aria-pressed="true">EN</button><button type="button" id="langTa" aria-pressed="false">தமிழ்</button></div></div>
+      <div class="appbar-actions"><a href="./index.html" id="homeBtn" class="basics-link home-link"><span class="home-icon" aria-hidden="true">⌂</span> <span data-i18n="home">Home</span></a><div class="lang-switch" role="group" aria-label="Language"><button type="button" id="langEn" class="active" aria-pressed="true">EN</button><button type="button" id="langTa" aria-pressed="false">தமிழ்</button></div></div>
     </header>
     <div class="lesson-container">
       <div class="welcome"><div><div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="studyMode">YOUR LEARNING SPACE</span></div><h1><span id="classHeading">Class 9</span><span class="heading-star"> ✦</span></h1><p id="classSubtitle">Choose a topic, understand every step, go at your own pace.</p></div><div class="class-emblem" id="classEmblem" aria-hidden="true"><span>9</span><svg viewBox="0 0 85 85"><circle cx="42.5" cy="42.5" r="35" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 5"/><circle cx="42.5" cy="42.5" r="22" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div></div>
       <div class="status-row"><nav class="crumb" id="crumb" aria-label="Navigate class, chapter, and exercise"></nav><div class="small-total" id="gradeTotal">53 lessons</div></div>
+      <main id="discoveryView" class="discovery-view" aria-label="Triggle home and chapters" tabindex="-1" hidden></main>
       <main id="chapterOverview" class="chapter-overview" aria-labelledby="chapterOverviewTitle" tabindex="-1" hidden></main>
-      <main class="lesson-card" id="lessonCard">
+      <main class="lesson-card" id="lessonCard" tabindex="-1">
         <div class="question-top"><span class="lesson-tag" id="questionLabel">EXERCISE 6.1</span><span class="lesson-progress" id="itemPosition">01 / 53</span></div>
         <div class="lesson-title-row"><div><div id="questionTitle" class="mini-topic">Trigonometry</div><h2 id="questionHead">Loading lesson...</h2></div><button type="button" id="figureBtn" class="figure-button" title="Open a relevant mathematics diagram"><span data-i18n="diagram">Figure</span> <span aria-hidden="true">↗</span></button></div>
         <div id="questionText" class="question-text">Loading a step-by-step explanation.</div>
@@ -97,6 +98,6 @@
   </div>
 </dialog>
 <dialog id="figureDialog" class="figure-dialog" aria-label="Mathematics diagram"><div class="dialog-header"><div><span data-i18n="visualGuide">VISUAL EXPLANATION</span><h3 id="visualTitle">Diagram</h3></div><button type="button" id="closeDiagram" class="dialog-close">✕ <span data-i18n="close">Close</span></button></div><div class="diagram-content" id="diagramContent"></div><p class="diagram-caption" id="diagramCaption">Illustration, not necessarily drawn to scale.</p></dialog>
-<script src="./data/class-9.js?v=128"></script><script src="./data/class-10.js?v=128"></script><script src="./data/class-11.js?v=128"></script><script src="./data/class-12.js?v=128"></script><script src="./assets/diagrams.js?v=128"></script><script src="./assets/concept-figures.js?v=128"></script><script src="./assets/guided-lessons.js?v=128"></script><script src="./assets/deep-lessons.js?v=128"></script><script src="./assets/deep-experience.js?v=128"></script><script src="./data/curriculum.js?v=phase0"></script><script src="./assets/math-notation.js?v=p2"></script><script src="./assets/phase2-lab.js?v=p2"></script><script src="./data/set-language-path.js?v=p2-journey"></script><script src="./assets/set-language-journey.js?v=p2-journey"></script><script src="./assets/app.js?v=p2-journey"></script><script defer src="./assets/visual-lessons.js?v=128"></script>
+<script src="./data/class-9.js?v=128"></script><script src="./data/class-10.js?v=128"></script><script src="./data/class-11.js?v=128"></script><script src="./data/class-12.js?v=128"></script><script src="./assets/diagrams.js?v=128"></script><script src="./assets/concept-figures.js?v=128"></script><script src="./assets/guided-lessons.js?v=128"></script><script src="./assets/deep-lessons.js?v=128"></script><script src="./assets/deep-experience.js?v=128"></script><script src="./data/curriculum.js?v=phase0"></script><script src="./assets/math-notation.js?v=p2"></script><script src="./assets/phase2-lab.js?v=p2"></script><script src="./data/set-language-path.js?v=p2-journey"></script><script src="./assets/set-language-journey.js?v=p2-journey"></script><script src="./assets/discovery.js?v=home-v1"></script><script src="./assets/app.js?v=home-v1"></script><script defer src="./assets/visual-lessons.js?v=128"></script>
 <script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));</script>
 </body></html>
