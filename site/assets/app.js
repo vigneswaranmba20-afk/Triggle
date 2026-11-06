@@ -29,6 +29,7 @@
  const validSections=new Set(['concepts','examples','exercises','quizzes','sources']);
  let chapterSection=chapterOverview&&validSections.has(url.searchParams.get('section'))?url.searchParams.get('section'):null;
  let conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(url.searchParams.get('concept')||'')?Number(url.searchParams.get('concept')):null;
+ let questionOrigin=null;
  let drawerOpen=false;
  const reduced=matchMedia('(prefers-reduced-motion:reduce)');
  const mobile=matchMedia('(max-width:800px)');
@@ -67,9 +68,12 @@
    lastByGrade[grade]=current.id;store('triggle.lastByGrade.v119',lastByGrade);
  }
  function resetScroll(){
-   const workspace=document.querySelector('.workspace');
-   if(mobile.matches)workspace.scrollTop=0;
-   else window.scrollTo({top:0,behavior:reduced.matches?'auto':'instant'});
+  // Both the workspace and the mobile lesson container can scroll.
+  const workspace=document.querySelector('.workspace');
+  const content=document.querySelector('.lesson-container');
+  if(workspace)workspace.scrollTop=0;
+  if(content)content.scrollTop=0;
+  window.scrollTo({top:0,behavior:'instant'});
  }
  function goHome(){
    homeView=true;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;
@@ -78,7 +82,7 @@
  }
  function changeGrade(g){
    g=Number(g);if(!classes[g])return;
-   grade=g;homeView=false;classIndex=true;chapterOverview=null;chapterSection=null;conceptIndex=null;
+   grade=g;homeView=false;classIndex=true;chapterOverview=null;chapterSection=null;conceptIndex=null;questionOrigin=null;
    current=classes[g].items.find(x=>x.id===lastByGrade[g])||classes[g].items[0];
    $('search').value='';updateUrl();render();closeDrawer();resetScroll();
    $('discoveryView').focus({preventScroll:true});
@@ -86,6 +90,8 @@
  function selectLesson(item){
    const wasQuestion=!homeView&&!classIndex&&!chapterOverview;
    if(wasQuestion&&item.id===current.id){closeDrawer();return;}
+   if(chapterOverview)questionOrigin={grade,chapterId:chapterOverview.id,section:chapterSection};
+   else if(!wasQuestion)questionOrigin=null;
    homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;current=item;
    updateUrl();remember();render();closeDrawer();resetScroll();
    $('lessonCard').focus({preventScroll:true});
@@ -109,7 +115,7 @@
  }
  function openQuestionFor(g,item){
    if(!classes[g])return;
-   grade=g;homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;current=item;
+   grade=g;homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;questionOrigin=null;current=item;
    updateUrl();remember();render();closeDrawer();resetScroll();
    $('lessonCard').focus({preventScroll:true});
  }
@@ -410,6 +416,7 @@
    });
  }
  function render(){renderText();renderGrades();$('classicLink').hidden=grade!==9;
+   $('questionReturn').hidden=true;
    const discovering=homeView||classIndex;
    document.body.classList.toggle('discovery-active',discovering);
    document.body.classList.toggle('home-active',homeView);
@@ -426,6 +433,16 @@
   document.body.classList.toggle('chapter-overview-active',!!chapterOverview);$('chapterOverview').hidden=!chapterOverview;$('lessonCard').hidden=!!chapterOverview;
   if(chapterOverview){$('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;renderBreadcrumb(chapterOverview.title);$('gradeTotal').textContent=chapterList().length+' '+ui('chapters');renderOverview(chapterOverview);renderList();window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:null,lang,grade,chapter:chapterOverview}}));return}
   const list=activeList();const n=currentIndex(),position=n+1,chapter=chapterForItem(current)?.title||classes[grade].chapters[current.chapter]||current.topic;
+   const questionChapter=chapterForItem(current);
+   if(questionChapter){
+     const cameFrom=questionOrigin?.grade===grade&&questionOrigin?.chapterId===questionChapter.id;
+     const returnTo=cameFrom?questionOrigin.section:null;
+     const label=returnTo==='examples'?(lang==='ta'?'எடுத்துக்காட்டுகளுக்குத் திரும்பு':'Back to Worked Examples'):
+       returnTo==='exercises'?(lang==='ta'?'பயிற்சிகளுக்குத் திரும்பு':'Back to Exercises'):
+       (lang==='ta'?'அத்தியாயத் தேர்வுகளுக்குத் திரும்பு':'Back to Chapter choices');
+     $('questionReturnBtn').textContent='← '+label;
+     $('questionReturn').hidden=false;
+   }
   $('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;
   renderBreadcrumb(chapter);
   $('gradeTotal').textContent=list.length+' '+ui('lessons');$('questionLabel').textContent=labelForGroup(current.exercise).toUpperCase();$('itemPosition').textContent=num(position)+' / '+num(list.length);
@@ -460,6 +477,12 @@
  $('previous').onclick=()=>navMove(-1);$('next').onclick=()=>navMove(1);
  $('markDone').onclick=()=>{if(completed.has(current.id))completed.delete(current.id);else completed.add(current.id);store('triggle.learned.v119',[...completed]);render()};
  $('homeBtn').onclick=e=>{e.preventDefault();goHome()};
+ $('questionReturnBtn').onclick=()=>{
+   const chapter=chapterForItem(current);
+   if(!chapter)return;
+   const section=questionOrigin?.grade===grade&&questionOrigin?.chapterId===chapter.id?questionOrigin.section:null;
+   openChapterSection(section,chapter);
+ };
  $('browseBtn').onclick=()=>drawerOpen?closeDrawer():openDrawer();$('closeSidebar').onclick=closeDrawer;$('backdrop').onclick=closeDrawer;
  $('search').oninput=renderList;
  $('pathClose').onclick=()=>$('pathDialog').close();$('pathDialog').addEventListener('click',e=>{if(e.target===$('pathDialog'))$('pathDialog').close()});
