@@ -583,3 +583,7 @@
 .sp2-journey button:focus-visible,.sp2-journey summary:focus-visible,.sp2-journey input:focus-visible{outline:3px solid #9470de;outline-offset:2px}
 @media(max-width:420px){.sp2-journey{padding:13px;border-radius:15px}.sp2-nav-button{flex-basis:138px}.sp2-demo{padding:10px}.sp2-demo-controls button{font-size:12px;flex:1 1 auto}.sp2-answers button{flex-basis:100%}}
 @media(prefers-reduced-motion:reduce){.sp2-journey *{animation:none!important;transition:none!important}}
+
+/* Small honest completion marker: the 41-chapter curriculum itself remains planned. */
+.sp2-pilot-note{display:inline-flex;margin:4px 0 9px 8px;padding:6px 10px;border-radius:99px;font:750 11px/1.4 system-ui,sans-serif;background:#eaf5ef;border:1px solid #cbe5d5;color:#28694c}
+@media(max-width:420px){.sp2-pilot-note{margin-left:0}}
