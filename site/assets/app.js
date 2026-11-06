@@ -4,8 +4,8 @@
  const dictionary={
  en:{yourClass:'YOUR CLASS',exploreExercise:'Find an exercise',saveNote:'Your progress stays on this device',openBasics:'Interactive basics',browse:'Exercises',basics:'Trigonometry Basics',studyMode:'YOUR LEARNING SPACE',diagram:'Figure',stepByStep:'HOW IT WORKS',quickSolution:'Quick solution',explainSlowly:'Understand deeply',learnStepByStep:'LEARN THE REASONING',backToQuestion:'Back to question',expandFigure:'Tap to enlarge diagram ↗',inlineFigureNote:'Reconstructed from the measurements in this question, not copied from the textbook.',finalAnswer:'Final answer',markDone:'Mark learned',learned:'Learned',previous:'Previous',nextQuestion:'Next question',source:'Reference ↗',classic:'Original Class 9 interface',visualGuide:'VISUAL EXPLANATION',close:'Close',typeBook:'Book-referenced · edition check',typePractice:'Original Triggle practice',class:'Class',search:'Search exercise, question...',subtitle:'Choose a topic, understand every step, go at your own pace.',nextStep:'Next step',showAll:'Show full solution',answer:'Show final answer',complete:'Solution complete',empty:'No lessons match your search.',noteBook:'Textbook question references were cross-checked against public listings. Editions can differ; compare with your prescribed book.',noteOld:'Class 9 exercises reference an earlier textbook edition. Verify numbering against your school copy.',notePractice:'Original Triggle practice — not a numbered textbook question.',lessons:'lessons',question:'Question',practice:'Practice',reference:'Reference',step:'Step',of:'of'},
  ta:{yourClass:'உங்கள் வகுப்பு',exploreExercise:'பயிற்சியைத் தேடுங்கள்',saveNote:'உங்கள் முன்னேற்றம் இந்த சாதனத்தில் மட்டும் சேமிக்கப்படும்',openBasics:'காட்சி அடிப்படைகள்',browse:'பயிற்சிகள்',basics:'முக்கோணவியல் அடிப்படைகள்',studyMode:'கற்றல் பகுதி',diagram:'படம்',stepByStep:'தீர்வு விளக்கம்',quickSolution:'சுருக்கமான தீர்வு',explainSlowly:'ஆழமாகப் புரிந்துகொள்',learnStepByStep:'ஒவ்வொரு படியின் காரணம்',backToQuestion:'கேள்விக்குத் திரும்பு',expandFigure:'படத்தைப் பெரிதாக்க ↗',inlineFigureNote:'கேள்வியின் அளவுகளிலிருந்து மீண்டும் வரையப்பட்டது; பாடநூலிலிருந்து நகலெடுக்கவில்லை.',finalAnswer:'இறுதி விடை',markDone:'கற்றதாகக் குறி',learned:'கற்றுவிட்டேன்',previous:'முந்தையது',nextQuestion:'அடுத்த கேள்வி',source:'குறிப்பு ↗',classic:'வகுப்பு 9 பழைய தோற்றம்',visualGuide:'காட்சி விளக்கம்',close:'மூடு',typeBook:'பாடநூல் குறிப்பு · பதிப்பு சரிபார்க்கவும்',typePractice:'டிரிகிள் உருவாக்கிய பயிற்சி',class:'வகுப்பு',search:'பயிற்சி, கேள்வியைத் தேட...',subtitle:'ஒரு தலைப்பைத் தேர்ந்தெடுத்து படிப்படியாக எளிதில் கற்றுக்கொள்ளுங்கள்.',nextStep:'அடுத்த படி',showAll:'முழுத் தீர்வைக் காட்டு',answer:'இறுதி விடையைக் காட்டு',complete:'தீர்வு முடிந்தது',empty:'இந்தத் தேடலுக்கான பாடங்கள் இல்லை.',noteBook:'பொது பட்டியலில் பாடநூல் வினா விவரங்கள் சரிபார்க்கப்பட்டன. உங்கள் பள்ளிப் புத்தகப் பதிப்புடன் ஒப்பிடுங்கள்.',noteOld:'வகுப்பு 9 பயிற்சிகள் முந்தைய பாடநூல் பதிப்பைச் சார்ந்தவை. உங்கள் புத்தக எண்ணிடலைச் சரிபார்க்கவும்.',notePractice:'இது டிரிகிள் உருவாக்கிய பயிற்சி; பாடநூல் வினா எண் அல்ல.',lessons:'பாடங்கள்',question:'வினா',practice:'பயிற்சி',reference:'குறிப்பு',step:'படி',of:'இல்'} };
- Object.assign(dictionary.en,{browse:'Chapters',exploreExercise:'Chapters and exercises',search:'Search chapters, exercises, questions…',chapter:'Chapter',chapters:'chapters',overview:'Chapter overview',planned:'Planned',drafting:'Drafting',review:'In review',published:'Published',existingQuestions:'Existing questions',chapterNotComplete:'Existing questions are available for practice. Their presence does not mean this chapter is complete or reviewed.',contentPlanned:'Full chapter content is planned. Learning sections will appear after writing and review.',noQuestions:'Questions for this chapter are planned.',terminologyPending:'Tamil textbook terminology needs verification.',terminologyVerified:'Tamil textbook terminology verified.',concepts:'Concepts',prerequisites:'Prerequisites',workedExamples:'Worked examples',exercises:'Exercises',quizzes:'Quizzes',unitExercise:'Unit Exercise',chooseLanguage:'Language',closeNavigation:'Close navigation',navigationLabel:'Class, chapter and exercise navigation',searchLabel:'Search chapters and questions',visualMathematics:'VISUAL MATHEMATICS',questionContext:'Show the question',previousStage:'Previous',nextConcept:'Next concept',textbookReferences:'Textbook references',edition:'Edition',locator:'Location in textbook',englishMedium:'English medium',tamilMedium:'Tamil medium',archivedReference:'Archived textbook references; compare with the edition prescribed by your school.',figureLabel:'Open a relevant mathematics diagram',chooseExplanation:'Choose how much explanation to see',completeSolution:'Complete quick solution',workedSolution:'Worked solution',navigateQuestions:'Navigate questions',switchClass:'Switch school class',currentConcept:'Current learning concept',learningStages:'Understand deeply stages',chooseStage:'Go to a learning stage',diagramDialog:'Mathematics diagram',reviewState:'Review state',unreviewed:'Not reviewed',in_review:'In review',approved:'Approved',home:'Home',browse:'Find a topic'});
- Object.assign(dictionary.ta,{browse:'அத்தியாயங்கள்',exploreExercise:'அத்தியாயங்களும் பயிற்சிகளும்',search:'அத்தியாயம், பயிற்சி, வினாவைத் தேட…',chapter:'அத்தியாயம்',chapters:'அத்தியாயங்கள்',overview:'அத்தியாயக் கண்ணோட்டம்',planned:'திட்டமிடப்பட்டுள்ளது',drafting:'எழுதப்படுகிறது',review:'மீளாய்வில் உள்ளது',published:'வெளியிடப்பட்டது',existingQuestions:'ஏற்கெனவே உள்ள வினாக்கள்',chapterNotComplete:'ஏற்கெனவே உள்ள வினாக்களைப் பயிற்சி செய்யலாம். வினாக்கள் இருப்பதால் மட்டும் இந்த அத்தியாயம் முழுமையானது அல்லது மீளாய்வு செய்யப்பட்டது என்று பொருளல்ல.',contentPlanned:'முழு அத்தியாய உள்ளடக்கம் திட்டமிடப்பட்டுள்ளது. கற்றல் பகுதிகள் எழுதப்பட்டு மீளாய்வு செய்யப்பட்டதும் இங்கே இடம்பெறும்.',noQuestions:'இந்த அத்தியாயத்திற்கான வினாக்கள் திட்டமிடப்பட்டுள்ளன.',terminologyPending:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட வேண்டும்.',terminologyVerified:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட்டுள்ளன.',concepts:'கருத்துகள்',prerequisites:'முன்தேவைகள்',workedExamples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'குறுவினாத் தேர்வுகள்',unitExercise:'தொகுப்புப் பயிற்சி',chooseLanguage:'மொழி',closeNavigation:'வழிசெலுத்தலை மூடு',navigationLabel:'வகுப்பு, அத்தியாயம் மற்றும் பயிற்சி வழிசெலுத்தல்',searchLabel:'அத்தியாயங்களையும் வினாக்களையும் தேடுக',visualMathematics:'காட்சி வழிக் கணிதம்',questionContext:'வினாவைக் காட்டு',previousStage:'முந்தையது',nextConcept:'அடுத்த கருத்து',textbookReferences:'பாடநூல் குறிப்புகள்',edition:'பதிப்பு',locator:'பாடநூலில் உள்ள இடம்',englishMedium:'ஆங்கிலவழி',tamilMedium:'தமிழ்வழி',archivedReference:'காப்பகப் பாடநூல் குறிப்புகள்; உங்கள் பள்ளி பரிந்துரைக்கும் பதிப்புடன் ஒப்பிடுங்கள்.',figureLabel:'பொருத்தமான கணிதப் படத்தைத் திற',chooseExplanation:'விளக்கத்தின் அளவைத் தேர்வு செய்க',completeSolution:'முழுமையான சுருக்கத் தீர்வு',workedSolution:'தீர்வு விளக்கம்',navigateQuestions:'வினாக்களுக்குச் செல்லவும்',switchClass:'வகுப்பை மாற்றவும்',currentConcept:'தற்போதைய கற்றல் கருத்து',learningStages:'ஆழமாகப் புரிந்துகொள்ளும் நிலைகள்',chooseStage:'கற்றல் நிலைக்குச் செல்லவும்',diagramDialog:'கணிதப் படம்',reviewState:'மீளாய்வு நிலை',unreviewed:'மீளாய்வு செய்யப்படவில்லை',in_review:'மீளாய்வில் உள்ளது',approved:'ஏற்கப்பட்டது',home:'முகப்பு',browse:'தலைப்பைத் தேடுக'});
+ Object.assign(dictionary.en,{searchOptional:'Search (optional)',browse:'Chapters',exploreExercise:'Chapters and sections',search:'Search chapters, exercises, questions…',chapter:'Chapter',chapters:'chapters',overview:'Chapter overview',planned:'Planned',drafting:'Drafting',review:'In review',published:'Published',existingQuestions:'Existing questions',chapterNotComplete:'Existing questions are available for practice. Their presence does not mean this chapter is complete or reviewed.',contentPlanned:'Full chapter content is planned. Learning sections will appear after writing and review.',noQuestions:'Questions for this chapter are planned.',terminologyPending:'Tamil textbook terminology needs verification.',terminologyVerified:'Tamil textbook terminology verified.',concepts:'Concepts',prerequisites:'Prerequisites',workedExamples:'Worked examples',exercises:'Exercises',quizzes:'Quizzes',unitExercise:'Unit Exercise',chooseLanguage:'Language',closeNavigation:'Close navigation',navigationLabel:'Class, chapter and exercise navigation',searchLabel:'Search chapters and questions',visualMathematics:'VISUAL MATHEMATICS',questionContext:'Show the question',previousStage:'Previous',nextConcept:'Next concept',textbookReferences:'Textbook references',edition:'Edition',locator:'Location in textbook',englishMedium:'English medium',tamilMedium:'Tamil medium',archivedReference:'Archived textbook references; compare with the edition prescribed by your school.',figureLabel:'Open a relevant mathematics diagram',chooseExplanation:'Choose how much explanation to see',completeSolution:'Complete quick solution',workedSolution:'Worked solution',navigateQuestions:'Navigate questions',switchClass:'Switch school class',currentConcept:'Current learning concept',learningStages:'Understand deeply stages',chooseStage:'Go to a learning stage',diagramDialog:'Mathematics diagram',reviewState:'Review state',unreviewed:'Not reviewed',in_review:'In review',approved:'Approved',home:'Home',browse:'Find a topic'});
+ Object.assign(dictionary.ta,{searchOptional:'தேடல் (விருப்பப்படி)',browse:'அத்தியாயங்கள்',exploreExercise:'அத்தியாயங்களும் பகுதிகளும்',search:'அத்தியாயம், பயிற்சி, வினாவைத் தேட…',chapter:'அத்தியாயம்',chapters:'அத்தியாயங்கள்',overview:'அத்தியாயக் கண்ணோட்டம்',planned:'திட்டமிடப்பட்டுள்ளது',drafting:'எழுதப்படுகிறது',review:'மீளாய்வில் உள்ளது',published:'வெளியிடப்பட்டது',existingQuestions:'ஏற்கெனவே உள்ள வினாக்கள்',chapterNotComplete:'ஏற்கெனவே உள்ள வினாக்களைப் பயிற்சி செய்யலாம். வினாக்கள் இருப்பதால் மட்டும் இந்த அத்தியாயம் முழுமையானது அல்லது மீளாய்வு செய்யப்பட்டது என்று பொருளல்ல.',contentPlanned:'முழு அத்தியாய உள்ளடக்கம் திட்டமிடப்பட்டுள்ளது. கற்றல் பகுதிகள் எழுதப்பட்டு மீளாய்வு செய்யப்பட்டதும் இங்கே இடம்பெறும்.',noQuestions:'இந்த அத்தியாயத்திற்கான வினாக்கள் திட்டமிடப்பட்டுள்ளன.',terminologyPending:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட வேண்டும்.',terminologyVerified:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட்டுள்ளன.',concepts:'கருத்துகள்',prerequisites:'முன்தேவைகள்',workedExamples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'குறுவினாத் தேர்வுகள்',unitExercise:'தொகுப்புப் பயிற்சி',chooseLanguage:'மொழி',closeNavigation:'வழிசெலுத்தலை மூடு',navigationLabel:'வகுப்பு, அத்தியாயம் மற்றும் பயிற்சி வழிசெலுத்தல்',searchLabel:'அத்தியாயங்களையும் வினாக்களையும் தேடுக',visualMathematics:'காட்சி வழிக் கணிதம்',questionContext:'வினாவைக் காட்டு',previousStage:'முந்தையது',nextConcept:'அடுத்த கருத்து',textbookReferences:'பாடநூல் குறிப்புகள்',edition:'பதிப்பு',locator:'பாடநூலில் உள்ள இடம்',englishMedium:'ஆங்கிலவழி',tamilMedium:'தமிழ்வழி',archivedReference:'காப்பகப் பாடநூல் குறிப்புகள்; உங்கள் பள்ளி பரிந்துரைக்கும் பதிப்புடன் ஒப்பிடுங்கள்.',figureLabel:'பொருத்தமான கணிதப் படத்தைத் திற',chooseExplanation:'விளக்கத்தின் அளவைத் தேர்வு செய்க',completeSolution:'முழுமையான சுருக்கத் தீர்வு',workedSolution:'தீர்வு விளக்கம்',navigateQuestions:'வினாக்களுக்குச் செல்லவும்',switchClass:'வகுப்பை மாற்றவும்',currentConcept:'தற்போதைய கற்றல் கருத்து',learningStages:'ஆழமாகப் புரிந்துகொள்ளும் நிலைகள்',chooseStage:'கற்றல் நிலைக்குச் செல்லவும்',diagramDialog:'கணிதப் படம்',reviewState:'மீளாய்வு நிலை',unreviewed:'மீளாய்வு செய்யப்படவில்லை',in_review:'மீளாய்வில் உள்ளது',approved:'ஏற்கப்பட்டது',home:'முகப்பு',browse:'தலைப்பைத் தேடுக'});
  const ui=k=>dictionary[lang][k]||dictionary.en[k]||k;
  const classes=window.TRIGGLE_CLASSES||{};
  for(const key of [9,10,11,12]){if(!classes[key]||!Array.isArray(classes[key].items))throw Error('Missing data for class '+key);}
@@ -26,6 +26,9 @@
  let chapterOverview=url.searchParams.has('question')?null:chapterList().find(c=>c.id===url.searchParams.get('chapter'))||null;
  let homeView=!url.searchParams.has('class')&&!url.searchParams.has('question')&&!url.searchParams.has('chapter');
  let classIndex=!homeView&&!url.searchParams.has('question')&&!url.searchParams.has('chapter');
+ const validSections=new Set(['concepts','examples','exercises','quizzes','sources']);
+ let chapterSection=chapterOverview&&validSections.has(url.searchParams.get('section'))?url.searchParams.get('section'):null;
+ let conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(url.searchParams.get('concept')||'')?Number(url.searchParams.get('concept')):null;
  let drawerOpen=false;
  const reduced=matchMedia('(prefers-reduced-motion:reduce)');
  const mobile=matchMedia('(max-width:800px)');
@@ -41,11 +44,16 @@
  const labelForGroup=(e)=>e==='6.examples'?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?ui('unitExercise')+' '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
  function updateUrl(replace=false){
   const u=new URL(location.href);
-  ['class','chapter','question','browse'].forEach(k=>u.searchParams.delete(k));
+  ['class','chapter','question','browse','section','concept'].forEach(k=>u.searchParams.delete(k));
   if(!homeView){
     u.searchParams.set('class',String(grade));
     if(classIndex)u.searchParams.set('browse','chapters');
-    else if(chapterOverview)u.searchParams.set('chapter',chapterOverview.id);
+    else if(chapterOverview){
+      u.searchParams.set('chapter',chapterOverview.id);
+      if(chapterSection){u.searchParams.set('section',chapterSection);
+        if(chapterSection==='concepts'&&Number.isInteger(conceptIndex))u.searchParams.set('concept',String(conceptIndex));
+      }
+    }
     else u.searchParams.set('question',current.id);
   }
   try{history[replace?'replaceState':'pushState']({
@@ -64,13 +72,13 @@
    else window.scrollTo({top:0,behavior:reduced.matches?'auto':'instant'});
  }
  function goHome(){
-   homeView=true;classIndex=false;chapterOverview=null;
+   homeView=true;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;
    updateUrl();render();closeDrawer();resetScroll();
    $('discoveryView').focus({preventScroll:true});
  }
  function changeGrade(g){
    g=Number(g);if(!classes[g])return;
-   grade=g;homeView=false;classIndex=true;chapterOverview=null;
+   grade=g;homeView=false;classIndex=true;chapterOverview=null;chapterSection=null;conceptIndex=null;
    current=classes[g].items.find(x=>x.id===lastByGrade[g])||classes[g].items[0];
    $('search').value='';updateUrl();render();closeDrawer();resetScroll();
    $('discoveryView').focus({preventScroll:true});
@@ -78,12 +86,19 @@
  function selectLesson(item){
    const wasQuestion=!homeView&&!classIndex&&!chapterOverview;
    if(wasQuestion&&item.id===current.id){closeDrawer();return;}
-   homeView=false;classIndex=false;chapterOverview=null;current=item;
+   homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;current=item;
    updateUrl();remember();render();closeDrawer();resetScroll();
    $('lessonCard').focus({preventScroll:true});
  }
  function selectChapter(chapter){
+   homeView=false;classIndex=false;chapterOverview=chapter;chapterSection=null;conceptIndex=null;
+   updateUrl();render();closeDrawer();resetScroll();
+   $('chapterOverview').focus({preventScroll:true});
+ }
+ function openChapterSection(section,chapter=chapterOverview,concept=null){
+   if(!chapter||!validSections.has(section)&&section!==null)return;
    homeView=false;classIndex=false;chapterOverview=chapter;
+   chapterSection=section;conceptIndex=Number.isInteger(concept)?concept:null;
    updateUrl();render();closeDrawer();resetScroll();
    $('chapterOverview').focus({preventScroll:true});
  }
@@ -94,7 +109,7 @@
  }
  function openQuestionFor(g,item){
    if(!classes[g])return;
-   grade=g;homeView=false;classIndex=false;chapterOverview=null;current=item;
+   grade=g;homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;current=item;
    updateUrl();remember();render();closeDrawer();resetScroll();
    $('lessonCard').focus({preventScroll:true});
  }
@@ -138,33 +153,67 @@
  }
  const expanded=new Set();
  function renderList(){
-  const q=$('search').value.trim().toLowerCase(),container=$('exerciseList');container.replaceChildren();
-  const matches=item=>[item.label.en,item.label.ta,item.title?.en,item.title?.ta,item.q.en,item.q.ta,item.topic.en,item.topic.ta,item.exercise].join(' ').toLowerCase().includes(q);
-  let shown=0;
-  for(const chapter of chapterList()){
-   const all=chapterItems(chapter),titleMatch=[chapter.title.en,chapter.title.ta,String(chapter.number)].join(' ').toLowerCase().includes(q),items=q&&!titleMatch?all.filter(matches):all;
-   if(q&&!titleMatch&&!items.length)continue;
-   shown++;
-   const section=document.createElement('section');section.className='curriculum-chapter';
-   const button=document.createElement('button');button.type='button';button.className='chapter-link';button.dataset.chapterId=chapter.id;button.classList.toggle('active',selectedChapter()?.id===chapter.id);button.setAttribute('aria-current',selectedChapter()?.id===chapter.id?'true':'false');
-   const title=document.createElement('strong');title.textContent=ui('chapter')+' '+chapter.number+' · '+tr(chapter.title);
-   const meta=document.createElement('small');meta.textContent=ui(chapter.status)+' · '+all.length+' '+ui('existingQuestions');button.append(title,meta);button.onclick=()=>selectChapter(chapter);section.append(button);
-   if(q||selectedChapter()?.id===chapter.id){
-    const groups=new Map();for(const item of items){if(!groups.has(item.exercise))groups.set(item.exercise,[]);groups.get(item.exercise).push(item)}
-    for(const [exercise,group] of groups){
-     const key=chapter.id+':'+exercise,details=document.createElement('details');details.className='exercise-group';details.open=q!==''||expanded.has(key)||(!chapterOverview&&current.exercise===exercise);
-     const summary=document.createElement('summary'),head=document.createElement('span'),count=document.createElement('span');head.textContent=labelForGroup(exercise);count.className='exercise-number';count.textContent=group.length;summary.append(head,count);details.append(summary);
-     details.addEventListener('toggle',()=>{if(details.open)expanded.add(key);else expanded.delete(key)});
-     for(const item of group){const b=document.createElement('button');b.type='button';b.className='exercise-question';b.classList.toggle('active',!chapterOverview&&current.id===item.id);b.setAttribute('aria-current',!chapterOverview&&current.id===item.id?'true':'false');const icon=document.createElement('span');icon.className='question-bullet '+(completed.has(item.id)?'question-done':'');icon.textContent=completed.has(item.id)?'✓':'○';const txt=document.createElement('span');txt.textContent=tr(item.label)+' · '+tr(item.title);b.append(icon,txt);b.title=tr(item.q);b.onclick=()=>selectLesson(item);details.append(b)}section.append(details);
-    }
+   const query=$('search').value.trim().toLocaleLowerCase();
+   const container=$('exerciseList');container.replaceChildren();
+   const menuNames=lang==='ta'
+     ?{concepts:'கருத்துகள்',examples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'சிறு தேர்வுகள்'}
+     :{concepts:'Concepts',examples:'Worked Examples',exercises:'Exercises',quizzes:'Quizzes'};
+   const matches=item=>[item.label?.en,item.label?.ta,item.title?.en,item.title?.ta,item.q?.en,item.q?.ta,item.topic?.en,item.topic?.ta,item.exercise].join(' ').toLocaleLowerCase().includes(query);
+   let visible=0;
+   for(const chapter of chapterList()){
+     const all=chapterItems(chapter);
+     const hit=!!query&&[chapter.title.en,chapter.title.ta,String(chapter.number)].join(' ').toLocaleLowerCase().includes(query);
+     const found=query&&!hit?all.filter(matches):all;
+     if(query&&!hit&&!found.length)continue;
+     visible++;
+     const section=document.createElement('section');section.className='curriculum-chapter';
+     const selected=selectedChapter()?.id===chapter.id;
+     const button=document.createElement('button');button.type='button';button.className='chapter-link';
+     button.dataset.chapterId=chapter.id;button.classList.toggle('active',selected);
+     button.setAttribute('aria-current',selected?'true':'false');
+     const title=document.createElement('strong');title.textContent=ui('chapter')+' '+chapter.number+' · '+tr(chapter.title);
+     const meta=document.createElement('small');
+     meta.textContent=(chapter.id==='g9-ch1'?(lang==='ta'?'7 செயல்வழிக் கருத்துகள்':'7 interactive concepts')+' · ':'')+
+       all.length+' '+ui('existingQuestions');
+     button.append(title,meta);button.onclick=()=>selectChapter(chapter);section.append(button);
+     if(selected&&!query){
+       const quick=document.createElement('div');quick.className='sidebar-chapter-sections';
+       for(const key of ['concepts','examples','exercises','quizzes']){
+         const direct=document.createElement('button');direct.type='button';direct.dataset.section=key;
+         direct.textContent=menuNames[key]+' '+(key==='exercises'&&all.length?'('+all.length+')':'');
+         direct.classList.toggle('active',chapterOverview?.id===chapter.id&&chapterSection===key);
+         direct.addEventListener('click',()=>openChapterSection(key,chapter));
+         quick.append(direct);
+       }
+       section.append(quick);
+     }
+     if(query){
+       const result=hit?all:found;
+       const wrap=document.createElement('div');wrap.className='sidebar-search-results';
+       for(const item of result.slice(0,40)){
+         const b=document.createElement('button');b.type='button';b.className='exercise-question';
+         b.dataset.questionId=item.id;b.textContent=tr(item.label)+' · '+tr(item.title);
+         b.addEventListener('click',()=>selectLesson(item));wrap.append(b);
+       }
+       section.append(wrap);
+     }
+     container.append(section);
    }
-   container.append(section);
-  }
-  $('sideCount').textContent=shown+' '+ui('chapters');
-  if(!shown){const no=document.createElement('div');no.className='empty-search';no.textContent=ui('empty');container.append(no)}
+   $('sideCount').textContent=visible+' '+ui('chapters');
+   if(!visible){const msg=document.createElement('p');msg.className='empty-search';msg.textContent=ui('empty');container.append(msg);}
  }
+
  function renderOverview(chapter){
   const container=$('chapterOverview');container.replaceChildren();
+  if(window.TriggleChapterHub){
+    window.TriggleChapterHub.mount(container,{
+      chapter,grade,lang,section:chapterSection,questions:chapterItems(chapter),
+      sources:curriculum.sources||[],initialConcept:conceptIndex,
+      onSection:(key)=>openChapterSection(key,chapter),
+      onQuestion:selectLesson,onClass:()=>changeGrade(grade),onHome:goHome
+    });
+    return;
+  }
   const top=document.createElement('div');top.className='chapter-overview-top';
   const eyebrow=document.createElement('p');eyebrow.className='eyebrow';eyebrow.textContent=ui('overview')+' · '+ui('chapter')+' '+chapter.number;
   const heading=document.createElement('h2');heading.id='chapterOverviewTitle';heading.textContent=tr(chapter.title);
@@ -394,7 +443,7 @@
   renderSteps();renderMode();renderList();
   window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:current,lang,grade}}));
  }
- function openDrawer(){if(!mobile.matches){$('search').focus();return}drawerOpen=true;document.body.classList.add('drawer-open');$('browseBtn').setAttribute('aria-expanded','true');$('sidebar').inert=false;$('sidebar').setAttribute('role','dialog');$('sidebar').setAttribute('aria-modal','true');setTimeout(()=>$('search').focus({preventScroll:true}),180)}
+ function openDrawer(){if(!mobile.matches){$('exerciseList').scrollTop=0;$('browseDirectory').focus();return}drawerOpen=true;document.body.classList.add('drawer-open');$('browseBtn').setAttribute('aria-expanded','true');$('sidebar').inert=false;$('sidebar').setAttribute('role','dialog');$('sidebar').setAttribute('aria-modal','true');setTimeout(()=>$('browseDirectory').focus({preventScroll:true}),180)}
  function closeDrawer(){if(!drawerOpen)return;drawerOpen=false;document.body.classList.remove('drawer-open');$('browseBtn').setAttribute('aria-expanded','false');$('sidebar').inert=true;$('sidebar').removeAttribute('role');$('sidebar').removeAttribute('aria-modal');$('browseBtn').focus({preventScroll:true})}
  function onBreakpoint(){if(mobile.matches){if(!drawerOpen)$('sidebar').inert=true}else{drawerOpen=false;document.body.classList.remove('drawer-open');$('sidebar').inert=false;$('sidebar').removeAttribute('role');$('sidebar').removeAttribute('aria-modal');$('browseBtn').setAttribute('aria-expanded','false')}}
  function showDiagram(){
@@ -435,6 +484,6 @@
   if(e.target.matches('input,textarea,select,button')||$('figureDialog').open||$('guidedDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
   if(e.key==='ArrowRight'){e.preventDefault();navMove(1)}else if(e.key==='ArrowLeft'){e.preventDefault();navMove(-1)}
  });
- window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams,g=Number(p.get('class'));grade=classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;$('search').value='';render();closeDrawer();resetScroll()});
+ window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams,g=Number(p.get('class'));grade=classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});
  mobile.addEventListener('change',onBreakpoint);onBreakpoint();remember();updateUrl(true);render();
 })();
