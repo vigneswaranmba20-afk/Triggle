@@ -19,6 +19,8 @@ The curriculum browser suite uses Playwright 1.56.1 and system Chromium at `/usr
 
 The browser checks serve the same static `site/` directory used by GitHub Pages. There is no separate compile step. The deployment workflow's source checks run locally and are added to the existing publish job. The new PR workflow validates without publishing; an actual new production deployment is intentionally not performed before review.
 
+The first GitHub run passed all source tests, then exposed an Ubuntu runner compatibility issue: `ubuntu-latest` had advanced to 26.04, unsupported by pinned Playwright 1.56.1. The PR browser job now pins supported `ubuntu-24.04` so runner upgrades cannot silently change its browser platform.
+
 Screenshots are review artifacts in the execution workspace, not changes to the repository. No ZIP files were created.
 
 Textbook verification limitations are tracked in the [audit](phase-0-audit.md): current prescribed-edition equivalence, visual Tamil terminology review, direct Grade 12 Tamil textbook evidence, and legacy question fidelity remain unverified. Passing code checks does not certify those editorial claims.
