@@ -85,7 +85,7 @@ The chapter review notes for Grade 12 were updated in both languages to reflect 
 
 ## E. Next required evidence to close the 2026–27 and Tamil approvals
 
-For **each** of the eight medium/volume combinations (Grade 9 EN+TA, Grade 10 EN+TA, Grade 11 Vol I/II EN+TA, Grade 12 Vol I/II EN+TA = **12 individual books**), obtain an identifiable 2026–27 prescribed physical/PDF copy, or written confirmation from Tamil Nadu SCERT/TNTBESC of the unchanged prescribed imprint/contents. Record:
+For **each** of the 12 Grade–medium–volume combinations (Grade 9 EN+TA, Grade 10 EN+TA, Grade 11 Vol I/II EN+TA, Grade 12 Vol I/II EN+TA = **12 individual books**), obtain an identifiable 2026–27 prescribed physical/PDF copy, or written confirmation from Tamil Nadu SCERT/TNTBESC of the unchanged prescribed imprint/contents. Record:
 
 - Title/copyright/imprint (first/revised/reprint year), medium, volume, ISBN/stock code if printed.
 - Contents pages, chapter numbering and printed opening pages.
