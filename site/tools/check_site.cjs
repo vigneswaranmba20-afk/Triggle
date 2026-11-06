@@ -39,6 +39,9 @@ assert.deepEqual(Object.keys(dictionary.en).sort(),Object.keys(dictionary.ta).so
 for (const [language,entries] of Object.entries(dictionary)) {
   for (const [key,value] of Object.entries(entries)) assert(typeof value==='string'&&value.trim(),`Missing ${language} UI translation: ${key}`);
 }
+// Seasonal celebration markup/scripts must not return to the production learning app.
+const liveHtml=fs.readFileSync(path.join(root,'index.html'),'utf8');
+assert(!['diwaliGreeting','diwaliEffects','assets/diwali.js','fireworks-js','canvas-confetti'].some(marker => liveHtml.includes(marker)), 'Removed Diwali celebration reappeared in live HTML');
 // The offline shell must contain every script/style used by the live app.
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 const core=/const CORE=(\[[^;]+\]);/.exec(sw);
@@ -46,4 +49,5 @@ assert(core,'Service worker CORE manifest missing');
 const assets=vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+'\nCORE;');
 for (const asset of assets) assert(fs.existsSync(path.join(root,asset)),`Missing cached asset: ${asset}`);
 assert(assets.includes('./data/curriculum.js'),'Curriculum must remain available offline');
+assert(!assets.some(asset=>/diwali/i.test(asset)), 'Diwali assets must not be precached');
 console.log(`PASS: static Pages source, ${scripts} JavaScript files, ${links} local HTML links, bilingual UI, JSON and offline assets`);

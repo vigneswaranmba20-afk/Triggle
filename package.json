@@ -6,8 +6,7 @@
   "scripts": {
     "validate": "node site/tools/validate_curriculum.cjs && node site/tools/check_site.cjs",
     "test": "npm run validate && node site/tools/test_curriculum_validation.cjs && node site/tools/test_video_coming_soon.cjs && python3 site/tools/verify_video_assets.py",
-    "test:browser": "node site/tools/test_curriculum_ui.cjs",
-    "test:diwali": "node site/tools/test_diwali.cjs"
+    "test:browser": "node site/tools/test_curriculum_ui.cjs"
   },
   "devDependencies": {
     "playwright": "1.56.1"

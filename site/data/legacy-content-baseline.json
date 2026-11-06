@@ -144,9 +144,6 @@
     "assets/visual-lessons.js": {
       "sha256": "08ba0df7511744c25df3bc993f4c166b5d366a450bc03ccd551e8450cee9aacc"
     },
-    "assets/diwali.js": {
-      "sha256": "6b0d3f123ab13b670757ccb74af5d176e310401576cd1daa2b8aede146cf651d"
-    },
     "data/video-lessons.json": {
       "sha256": "edb7d3489f8c5e19457b7052e55052b504b181e2a0b52d044c73732e66089308"
     },
