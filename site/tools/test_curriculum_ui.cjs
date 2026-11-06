@@ -67,6 +67,77 @@ async function main() {
     await page.locator('#chapterOverview').waitFor({ state: 'visible' });
   }
   try {
+    for(const width of [320,390,1280]){
+      await check('Home, class directory, chapter jump, browser Back and Tamil at '+width+'px', async()=>{
+        const page=await visit(await context(width),'/index.html');
+        await page.locator('#discoveryView').waitFor({state:'visible'});
+        assert.equal(await page.locator('#lessonCard').isVisible(),false,'Home must not open an unrelated question');
+        assert.match(await page.locator('#homeBtn').innerText(), /Home/);
+        assert.equal(await page.locator('.discover-grade-grid [data-grade]').count(),4);
+        assert.equal(await page.locator('a[href="./playground.html"]').count(),0,'Retire all Trigonometry Basics shortcuts');
+        assert.ok((await page.locator('.discover-hero h1').innerText()).includes('Maths should make sense'));
+        await noOverflow(page,'Home '+width+'px');
+
+        // Class buttons should open a CHAPTER DIRECTORY, not a random saved question.
+        await page.locator('.discover-grade-grid [data-grade="10"]').click();
+        assert.equal(new URL(page.url()).searchParams.get('class'),'10');
+        assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
+        assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),8);
+        assert.equal(await page.locator('#lessonCard').isVisible(),false);
+        await page.locator('#discover-search').fill('Algebra');
+        assert.equal(await page.locator('.discover-chapter-grid [data-chapter]:visible').count(),1);
+        await page.locator('#discover-jump').selectOption('g10-ch3');
+        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g10-ch3');
+        assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Algebra');
+        await page.locator('#chapterJumpSelect').selectOption('references');
+        assert.equal(await page.locator('#chapterReferences').isVisible(),true);
+        await page.locator('#homeBtn').click();
+        assert.equal(new URL(page.url()).searchParams.has('class'),false);
+        assert.equal(await page.locator('#discoveryView').isVisible(),true);
+        await page.goBack();
+        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g10-ch3');
+        await page.locator('#homeBtn').click();
+        await page.locator('#langTa').click();
+        assert.equal(await page.locator('html').getAttribute('lang'),'ta');
+        assert.match(await page.locator('.discover-hero h1').innerText(),/கணிதம்/);
+        assert.match(await page.locator('.discover-section h2').first().innerText(),/வகுப்/);
+        await noOverflow(page,'Tamil Home '+width+'px');
+      });
+    }
+    await check('Native chapter jump goes to concept or exact question and keeps direct URLs', async()=>{
+      const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
+      await page.locator('#chapterJumpSelect').selectOption('concept:5');
+      assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
+      assert.ok((await page.locator('#chapterJumpSelect option[value^="question:"]').count())>0);
+      const questionValue=await page.locator('#chapterJumpSelect option[value^="question:"]').first().getAttribute('value');
+      await page.locator('#chapterJumpSelect').selectOption(questionValue);
+      assert.ok(new URL(page.url()).searchParams.has('question'));
+      assert.equal(await page.locator('#lessonCard').isVisible(),true);
+      await page.goBack();
+      assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
+      await page.locator('#homeBtn').click();
+      await page.locator('#discover-search').fill('கண மொழி');
+      assert.ok(await page.locator('.discover-results [data-chapter="g9-ch1"]').count()>0);
+      await page.locator('.discover-results [data-chapter="g9-ch1"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
+      await noOverflow(page,'Direct chapter search and jump at 390px');
+    });
+    await check('Offline initial Home reload and class directory work without remote scripts', async()=>{
+      const ctx=await context(390,'allow');
+      const page=await visit(ctx,'/index.html');
+      await page.evaluate(async()=>{await navigator.serviceWorker.ready;});
+      await page.reload();
+      await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
+      const cached=await page.evaluate(async()=>{const keys=await caches.keys();const all=await Promise.all(keys.map(async k=>(await (await caches.open(k)).keys()).map(r=>r.url)));return all.flat();});
+      assert(cached.some(u=>u.endsWith('/assets/discovery.js')),'New Home logic must be precached');
+      assert(cached.some(u=>u.endsWith('/assets/discovery.css')),'New Home styles must be precached');
+      await ctx.setOffline(true);
+      await page.reload();
+      await page.locator('.discover-hero').waitFor({state:'visible'});
+      await page.locator('.discover-grade-grid [data-grade="9"]').click();
+      assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
+      await ctx.setOffline(false);
+    });
     await check('41 chapters appear across grades without publishing legacy question coverage', async () => {
       const page = await visit(await context(1280));
       const expected = {9:9, 10:8, 11:12, 12:12};
