@@ -72,7 +72,7 @@ async function main() {
         const page=await visit(await context(width),'/index.html');
         await page.locator('#discoveryView').waitFor({state:'visible'});
         assert.equal(await page.locator('#lessonCard').isVisible(),false,'Home must not open an unrelated question');
-        assert.equal(await page.locator('.basics-link').innerText(), '⌂ Home');
+        assert.match(await page.locator('#homeBtn').innerText(), /Home/);
         assert.equal(await page.locator('.discover-grade-grid [data-grade]').count(),4);
         assert.equal(await page.locator('a[href="./playground.html"]').count(),0,'Retire all Trigonometry Basics shortcuts');
         assert.ok((await page.locator('.discover-hero h1').innerText()).includes('Maths should make sense'));
