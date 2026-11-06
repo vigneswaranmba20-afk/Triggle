@@ -3,6 +3,8 @@
 **Project:** Triggle, Tamil Nadu State Board Mathematics, Grades 9–12  
 **Status:** **archived textbook evidence improved**; **2026–27 edition equivalence and full terminology approval are not yet certified**.
 
+**NEWER INPUT NOW AVAILABLE:** The user subsequently attached **10 PDFs whose imprint pages explicitly state revised edition 2025**. For the present access status and 41-chapter pagination, consult [the newer 2025 uploaded-book audit](2025-upload-audit.md) and [manifest](2025-user-textbook-manifest.json). The historic access statements below describe the **earlier research snapshot** only. The two 2025 Tamil files still absent from this conversation are Grade 9 Mathematics and Grade 12 Volume I. The 2026–27 prescribed-printing comparison remains unverified.
+
 This is a factual research ledger, not a declaration that all editions are verified. It supplements the historical [Phase 0 audit](../phase-0-audit.md) and the [source register](README.md). The academic-year books reportedly uploaded elsewhere in the project were **not available in this conversation's readable files**. The accessible local upload was a historical `Triggle-main.zip`, which contains website source files but no textbook PDFs. Consequently no supplied 2026–27 textbook imprint could be compared directly.
 
 ## A. Current-year government evidence, and its limitations
