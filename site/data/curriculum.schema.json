@@ -1,0 +1,528 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vigneswaranmba20-afk.github.io/Triggle/data/curriculum.schema.json",
+  "title": "Triggle bilingual chapter curriculum",
+  "description": "Phase 0 chapter architecture. Empty content arrays are intentional plans, never proof of publication. Semantic ID, coverage and reference checks run in validate_curriculum.cjs.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "subject",
+    "board",
+    "sources",
+    "grades"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "subject": {
+      "const": "mathematics"
+    },
+    "board": {
+      "const": "Tamil Nadu State Board"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      },
+      "minItems": 1
+    },
+    "grades": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/grade"
+      },
+      "minItems": 4,
+      "maxItems": 4
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "bilingual": {
+      "type": "object",
+      "required": [
+        "en",
+        "ta"
+      ],
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ta": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "sourceRef": {
+      "type": "object",
+      "required": [
+        "sourceId",
+        "locator"
+      ],
+      "properties": {
+        "sourceId": {
+          "$ref": "#/$defs/id"
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sourceRef"
+      },
+      "minItems": 1
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "state",
+        "notes"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "unreviewed",
+            "in_review",
+            "approved"
+          ]
+        },
+        "notes": {
+          "$ref": "#/$defs/bilingual"
+        }
+      },
+      "additionalProperties": false
+    },
+    "step": {
+      "type": "object",
+      "required": [
+        "explanation"
+      ],
+      "properties": {
+        "explanation": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "equation": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "concept": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "body",
+        "prerequisites",
+        "sourceRefs",
+        "review"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "title": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "body": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "sourceRefs": {
+          "$ref": "#/$defs/sourceRefs"
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      },
+      "additionalProperties": false
+    },
+    "workedExample": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "conceptIds",
+        "problem",
+        "steps",
+        "answer",
+        "sourceRefs",
+        "review"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "title": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "conceptIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "problem": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/step"
+          },
+          "minItems": 1
+        },
+        "answer": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "sourceRefs": {
+          "$ref": "#/$defs/sourceRefs"
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      },
+      "additionalProperties": false
+    },
+    "exercise": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "conceptIds",
+        "instructions",
+        "questionIds",
+        "sourceRefs",
+        "review"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "title": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "conceptIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "instructions": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "questionIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "sourceRefs": {
+          "$ref": "#/$defs/sourceRefs"
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      },
+      "additionalProperties": false
+    },
+    "quiz": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "conceptIds",
+        "questions",
+        "sourceRefs",
+        "review"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "title": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "conceptIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/quizQuestion"
+          },
+          "minItems": 1
+        },
+        "sourceRefs": {
+          "$ref": "#/$defs/sourceRefs"
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      },
+      "additionalProperties": false
+    },
+    "quizQuestion": {
+      "type": "object",
+      "required": [
+        "id",
+        "prompt",
+        "choices",
+        "correctChoiceId",
+        "explanation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "prompt": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/choice"
+          },
+          "minItems": 2
+        },
+        "correctChoiceId": {
+          "$ref": "#/$defs/id"
+        },
+        "explanation": {
+          "$ref": "#/$defs/bilingual"
+        }
+      },
+      "additionalProperties": false
+    },
+    "choice": {
+      "type": "object",
+      "required": [
+        "id",
+        "text"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "text": {
+          "$ref": "#/$defs/bilingual"
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "id",
+        "publisher",
+        "title",
+        "medium",
+        "edition",
+        "url",
+        "verification",
+        "evidence"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "medium": {
+          "enum": [
+            "en",
+            "ta"
+          ]
+        },
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "verification": {
+          "enum": [
+            "verified",
+            "pending"
+          ]
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "chapter": {
+      "type": "object",
+      "required": [
+        "id",
+        "number",
+        "title",
+        "status",
+        "terminology",
+        "legacyQuestionIds",
+        "concepts",
+        "prerequisites",
+        "workedExamples",
+        "exercises",
+        "quizzes",
+        "sourceRefs",
+        "review"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "number": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "title": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "drafting",
+            "review",
+            "published"
+          ]
+        },
+        "terminology": {
+          "type": "object",
+          "required": [
+            "ta"
+          ],
+          "properties": {
+            "ta": {
+              "enum": [
+                "pending",
+                "verified"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "legacyQuestionIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "concepts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/concept"
+          }
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "workedExamples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/workedExample"
+          }
+        },
+        "exercises": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/exercise"
+          }
+        },
+        "quizzes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/quiz"
+          }
+        },
+        "sourceRefs": {
+          "$ref": "#/$defs/sourceRefs"
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      },
+      "additionalProperties": false
+    },
+    "grade": {
+      "type": "object",
+      "required": [
+        "grade",
+        "chapters"
+      ],
+      "properties": {
+        "grade": {
+          "enum": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "chapters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/chapter"
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

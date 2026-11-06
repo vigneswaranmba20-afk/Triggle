@@ -68,8 +68,7 @@ jobs:
           test -s site/index.html
           test -s site/grades.html
           test -s site/playground.html
-          node --check site/assets/app.js
-          python3 -m json.tool site/data/video-lessons.json > /dev/null
+          npm test
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
