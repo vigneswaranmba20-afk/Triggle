@@ -2,6 +2,16 @@
 
 This file tells coding agents (including Codex) where to find **maintained educational reference notes** before adding or revising mathematics content.
 
+## Phase 2 education-first implementation
+
+Read [the Phase 2 learning lab research and quality gates](docs/phase2-learning-lab-strategy.md) before adding new libraries, hosted AI, animations or curricular modules.
+
+- Keep Triggle's existing design and the legacy question IDs. The first interactive pilot lives in `site/assets/phase2-lab.js` and is intentionally **not** full chapter completion.
+- Default to original, self-hosted, offline-capable, mobile-accessible code; do not expose hosted AI keys in public GitHub Pages. Free and accessible means no mandatory subscriptions, videos or account creation.
+- For medium/hard mathematics, use authored reasoning, graphical/abstract connections, a checked worked solution, a verification step and an off-screen transfer problem.
+- Distinguish textbook-evidenced terminology from professionally reviewed whole-lesson bilingual content. No premature `published` or `verified` flags.
+- For superscripts, fractions and bracket grouping test `site/assets/math-notation.js`, including powers that must sit outside and above the **closing** square bracket.
+
 ## Before editing Grades 9–12 mathematics content
 
 1. Read `docs/reference-library/README.md` (source register, verified links, limitations, permissions).
