@@ -123,6 +123,7 @@
    }else{
      const group=new Map();activeList().filter(i=>i.chapter===current.chapter).forEach(i=>{const k=i.exercise;if(!group.has(k))group.set(k,{key:k,count:0,first:i});group.get(k).count++});
      [...group.values()].forEach(g=>options.push({title:labelForGroup(g.key),meta:g.count+' '+ui('lessons'),active:g.key===current.exercise,choose:()=>selectLesson(g.first)}));
+     activeList().filter(i=>i.chapter===current.chapter).forEach(item=>options.push({title:tr(item.label)+' · '+tr(item.title),meta:labelForGroup(item.exercise),active:item.id===current.id,choose:()=>selectLesson(item)}));
    }
    options.forEach(option=>{const button=document.createElement('button');button.type='button';button.className='path-option'+(option.active?' selected':'');button.innerHTML='<span><strong>'+esc(option.title)+'</strong><small>'+esc(option.meta)+'</small></span><span aria-hidden="true">'+(option.active?'✓':'›')+'</span>';
      button.onclick=()=>{dialog.close();option.choose()};list.append(button)
@@ -174,6 +175,60 @@
     top.append(pilot);
   }
   container.append(top);
+  const fast=document.createElement('nav');
+  fast.className='chapter-fastnav';
+  fast.setAttribute('aria-label',lang==='ta'?'அத்தியாயத்திற்குள் நேராகச் செல்ல':'Jump within this chapter');
+  const jumpLabel=document.createElement('label');
+  jumpLabel.htmlFor='chapterJumpSelect';
+  jumpLabel.textContent=lang==='ta'?'கருத்து, பயிற்சி அல்லது வினாவிற்குச் செல்ல':'Go directly to a concept, exercise or question';
+  const jump=document.createElement('select');
+  jump.id='chapterJumpSelect';jump.setAttribute('aria-label',jumpLabel.textContent);
+  const addJump=(parent,value,title)=>{
+    const opt=document.createElement('option');opt.value=value;opt.textContent=title;parent.append(opt);
+  };
+  addJump(jump,'',lang==='ta'?'செல்ல வேண்டிய பகுதியைத் தேர்ந்தெடுக்கவும்…':'Choose where to go…');
+  if(chapter.id==='g9-ch1'){
+    const group=document.createElement('optgroup');group.label=lang==='ta'?'சிறு பாடங்கள்':'Learning concepts';
+    (window.TRIGGLE_SET_PATH?.stages||[]).forEach((stage,i)=>addJump(group,'concept:'+i,(i+1)+'. '+tr(stage.title)));
+    addJump(group,'lab',lang==='ta'?'வென் பட ஆய்வகம்':'Interactive Venn lab');
+    jump.append(group);
+  }
+  const questions=chapterItems(chapter);
+  if(questions.length){
+    const group=document.createElement('optgroup');group.label=lang==='ta'?'பயிற்சி வினாக்கள்':'Exercise questions';
+    questions.forEach(item=>addJump(group,'question:'+item.id,tr(item.label)+' · '+tr(item.title)));
+    jump.append(group);
+  }
+  const more=document.createElement('optgroup');
+  more.label=lang==='ta'?'மேலும் பகுதிகள்':'Other sections';
+  addJump(more,'sections',lang==='ta'?'அத்தியாயப் பகுதிகளின் நிலை':'Chapter learning sections');
+  addJump(more,'references',lang==='ta'?'பாடநூல் குறிப்புகள்':'Textbook references');
+  jump.append(more);
+  jump.addEventListener('change',()=>{
+    const key=jump.value;jump.value='';
+    if(!key)return;
+    if(key.startsWith('question:')){
+      const item=questions.find(x=>x.id===key.slice(9));
+      if(item)selectLesson(item);
+      return;
+    }
+    let target=null;
+    if(key.startsWith('concept:')){
+      const idx=Number(key.slice(8));
+      const button=container.querySelector('.sp2-nav [data-index="'+idx+'"]');
+      if(button){button.click();target=container.querySelector('.sp2-journey');}
+    }else if(key==='lab')target=container.querySelector('.p2-lab');
+    else if(key==='sections')target=container.querySelector('#chapterSections');
+    else if(key==='references')target=container.querySelector('#chapterReferences');
+    if(target){
+      target.setAttribute('tabindex','-1');
+      target.scrollIntoView({block:'start',behavior:'instant'});
+      target.focus({preventScroll:true});
+    }
+  });
+  const help=document.createElement('small');
+  help.textContent=lang==='ta'?'நீண்ட நேரம் தேட வேண்டாம் — தேர்ந்தெடுத்த பகுதிக்குச் செல்லுங்கள்.':'Skip long scrolling. Choose a destination.';
+  fast.append(jumpLabel,jump,help);container.append(fast);
   const note=document.createElement('p');note.textContent=ui('contentPlanned');container.append(note);
   if(chapter.id==='g9-ch1' && window.TriggleSetJourney){
     window.TriggleSetJourney.mount(container,chapter,lang);
@@ -185,19 +240,19 @@
     window.TriggleLab.mount(container,chapter,lang);
   }
   if(chapter.terminology?.ta!=='verified'){const terminology=document.createElement('p');terminology.className='terminology-note';terminology.textContent=ui('terminologyPending');container.append(terminology)}
-  const sections=document.createElement('ul');sections.className='chapter-sections';
+  const sections=document.createElement('ul');sections.className='chapter-sections';sections.id='chapterSections';
   for(const key of ['concepts','prerequisites','workedExamples','exercises','quizzes']){const row=document.createElement('li');const label=document.createElement('span');label.textContent=ui(key);const state=document.createElement('small');state.textContent=ui('planned');
     if(chapter.id==='g9-ch1'&&(key==='concepts'||key==='quizzes')){
       state.textContent=lang==='ta'?'முன்னோட்டம் உள்ளது':'Pilot available';
     }
     row.append(label,state);sections.append(row)}container.append(sections);
   const review=document.createElement('p');review.className='chapter-review';review.textContent=ui('reviewState')+': '+ui(chapter.review?.state||'unreviewed');if(chapter.review?.notes)review.textContent+=' · '+tr(chapter.review.notes);container.append(review);
-  const title=document.createElement('h3');title.textContent=ui('existingQuestions');container.append(title);
+  const title=document.createElement('h3');title.textContent=ui('existingQuestions');title.id='chapterQuestions';container.append(title);
   const explanation=document.createElement('p');explanation.className='chapter-coverage-note';explanation.textContent=ui('chapterNotComplete');container.append(explanation);
   const questions=chapterItems(chapter);
   if(questions.length){const list=document.createElement('div');list.className='chapter-question-links';for(const item of questions){const button=document.createElement('button');button.type='button';button.dataset.questionId=item.id;button.textContent=tr(item.label)+' · '+tr(item.title);button.onclick=()=>selectLesson(item);list.append(button)}container.append(list)}
   else{const empty=document.createElement('p');empty.textContent=ui('noQuestions');container.append(empty)}
-  const references=document.createElement('section');references.className='chapter-references';
+  const references=document.createElement('section');references.className='chapter-references';references.id='chapterReferences';
   const sourceHeading=document.createElement('h3');sourceHeading.textContent=ui('textbookReferences');references.append(sourceHeading);
   const archiveNote=document.createElement('p');archiveNote.textContent=ui('archivedReference');references.append(archiveNote);
   for(const ref of chapter.sourceRefs||[]){const source=curriculum.sources?.find(s=>s.id===ref.sourceId);if(!source)continue;const entry=document.createElement('div');entry.className='chapter-reference';
