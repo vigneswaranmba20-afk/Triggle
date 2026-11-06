@@ -50,4 +50,7 @@ const assets=vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+
 for (const asset of assets) assert(fs.existsSync(path.join(root,asset)),`Missing cached asset: ${asset}`);
 assert(assets.includes('./data/curriculum.js'),'Curriculum must remain available offline');
 assert(!assets.some(asset=>/diwali/i.test(asset)), 'Diwali assets must not be precached');
+// The repository root is a second GitHub Pages entry point when Pages uses main /.
+const rootHomepage=fs.readFileSync(path.resolve(root,'..','index.html'),'utf8');
+assert(rootHomepage.includes('./site/index.html'), 'Repository homepage must redirect to maintained bilingual site');
 console.log(`PASS: static Pages source, ${scripts} JavaScript files, ${links} local HTML links, bilingual UI, JSON and offline assets`);
