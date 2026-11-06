@@ -26,7 +26,7 @@ This is a maintained **reference workspace for Triggle's authors, reviewers, and
 
 ## 2025 user-uploaded textbooks (latest in this workspace)
 
-**New evidence (6 November 2026):** Ten directly uploaded, readable SCERT Mathematics PDFs have an explicit **revised edition 2025** imprint. These cover **all 41 English chapter headings** and **26 of 41 matched English/Tamil chapter pairs**. The 2025 **Class 9 Tamil** book and **Class 12 Tamil Volume I** are not among the files attached to this conversation. See [the 2025 upload audit](2025-upload-audit.md) and [SHA-256 manifest](2025-user-textbook-manifest.json). These documents update our book-access position without falsely claiming the 2026–27 printing has been compared. The full PDFs are **not stored in GitHub** and cannot be assumed readable by Codex directly.
+**New evidence (6 November 2026):** Twelve directly uploaded, readable SCERT Mathematics PDFs have an explicit **revised edition 2025** imprint. These cover **all 41 chapters in both English and Tamil** (41 paired chapter-level references). **All 12 expected 2025 books are now present.** See [the 2025 upload audit](2025-upload-audit.md) and [SHA-256 manifest](2025-user-textbook-manifest.json). These documents update our book-access position without falsely claiming the 2026–27 printing has been compared. The full PDFs are **not stored in GitHub** and cannot be assumed readable by Codex directly.
 
 ## Created internal reference files
 
@@ -52,7 +52,7 @@ For exercise fidelity, compare against **the user's prescribed TN volume** and c
 3. An **official** TN SCERT mathematics teacher handbook / local EN–TA term list, if such a file is accessible.
 4. Recent official TN SSLC/HSC mathematics sample papers with their years and mediums, for later exam-mode work.
 
-If materials have been uploaded elsewhere in the project, locate or attach them to the workspace used by the coding agent. This repository has **not imported** uploaded textbook PDFs. The current conversation does include ten **2025 revision** textbook PDFs, directly inspected and indexed in the new audit; Codex must receive access separately to read full pages. The Grade 12 Tamil Volume I research still relies on a publicly available older SCERT reproduction until its 2025 PDF is attached.
+If materials have been uploaded elsewhere in the project, locate or attach them to the workspace used by the coding agent. This repository has **not imported** uploaded textbook PDFs. The current conversation does include twelve **2025 revision** textbook PDFs, directly inspected and indexed in the new audit; Codex must receive access separately to read full pages. The newly attached Grade 12 Tamil Volume I 2025 revision is also directly inspected; older public reproductions remain historical provenance only.
 
 ## Phase 2 handoff for coding agents
 
