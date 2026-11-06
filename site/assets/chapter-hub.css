@@ -83,3 +83,25 @@
  .sidebar-chapter-sections{grid-template-columns:1fr 1fr}
 }
 @media(prefers-reduced-motion:reduce){.hub-section-card{transition:none!important}}
+
+
+/* Direct section navigation: hide the four large cards once a section opens. */
+.chapter-hub .hub-top-actions{margin:0 0 11px}
+.chapter-hub .hub-back-menu,.chapter-hub .hub-back-class{display:inline-flex;align-items:center;min-height:44px;padding:8px 3px;margin:0;text-decoration:none}
+.chapter-hub .hub-header{margin-bottom:10px}
+.chapter-hub .hub-header h2{margin:5px 0 5px}
+.chapter-hub .hub-panel{margin:0;padding:6px 0 0;border-top:0;min-width:0}
+.chapter-hub .hub-panel>.hub-info:first-child{margin-top:2px}
+.chapter-hub .hub-panel .hub-question-group:first-of-type{margin-top:7px}
+.chapter-hub .hub-panel .hub-quiz-progress{margin:8px 0 12px}
+.chapter-hub .hub-panel .sp2-journey{margin-top:6px}
+.question-return{margin:0 0 12px;display:flex;align-items:center}
+.question-return[hidden]{display:none!important}
+.question-return button{display:inline-flex;align-items:center;min-height:44px;padding:8px 6px;border:0;background:transparent;color:#62518d;font-size:12px;font-weight:820;font-family:inherit;line-height:1.45;cursor:pointer}
+.question-return button:hover{text-decoration:underline;color:#473577}
+.question-return button:focus-visible{outline:3px solid #917be4;outline-offset:2px;border-radius:7px}
+@media(max-width:800px){
+ .chapter-hub .hub-panel{padding:4px 0 0}
+ .chapter-hub .hub-top-actions{margin:0 0 5px}
+ .question-return{margin:2px 0 9px}
+}
