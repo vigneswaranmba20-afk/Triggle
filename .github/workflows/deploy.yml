@@ -1,15 +1,15 @@
 
-name: Publish Triggle from ZIP
+name: Publish Triggle from source
 
 on:
   push:
     paths:
-      - 'Triggle_v124_Complete_Website.zip'
+      - 'site/**'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -24,23 +24,19 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Get project
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Unzip Triggle website
+      - name: Import the current website once
+        shell: bash
         run: |
-          mkdir -p site
-          unzip -q Triggle_v124_Complete_Website.zip -d site
-          test -f site/index.html
-          test -f site/playground.html
-
-
-      - name: Fix stretched math brackets
-        run: |
-          python3 - <<'PY'
+          if [ ! -f site/index.html ]; then
+            mkdir -p site
+            unzip -q Triggle_v124_Complete_Website.zip -d site
+            python3 - <<'PY'
           from pathlib import Path
-          js=Path('site/assets/app.js')
-          t=js.read_text()
+          p=Path('site/assets/app.js')
+          t=p.read_text(encoding='utf-8')
           start=t.index('   let s=esc(str).replace(/')
           end=t.index('\n   s=s.replace(/([²³⁴])',start)
           patch=r'''   let s=esc(str);
@@ -48,16 +44,31 @@ jobs:
                (_m,n,d,p)=>stash('<math xmlns="http://www.w3.org/1998/Math/MathML" class="mathml-brackets"><mstyle displaystyle="true"><msup><mrow><mo stretchy="true">(</mo><mfrac><mtext>'+n+'</mtext><mtext>'+d+'</mtext></mfrac><mo stretchy="true">)</mo></mrow><mn>'+({'²':2,'³':3,'⁴':4}[p])+'</mn></msup></mstyle></math>'));
              s=s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g,(_m,n,d)=>stash('<span class="frac"><span>'+esc(n)+'</span><span>'+esc(d)+'</span></span>'));'''
           t=t[:start]+patch+t[end:]
-          js.write_text(t)
+          p.write_text(t,encoding='utf-8')
           css=Path('site/assets/app.css')
-          css.write_text(css.read_text()+'\n.mathml-brackets{display:inline-block;vertical-align:middle;font-size:1.4em;white-space:nowrap;margin:0 .07em}\n')
+          css.write_text(css.read_text(encoding='utf-8')+'\n.mathml-brackets{display:inline-block;vertical-align:middle;font-size:1.4em;white-space:nowrap;margin:0 .07em}\n',encoding='utf-8')
           html=Path('site/index.html')
-          html.write_text(html.read_text().replace('?v=127','?v=128').replace('v1.27','v1.28'))
+          html.write_text(html.read_text(encoding='utf-8').replace('?v=127','?v=128').replace('v1.27','v1.28'),encoding='utf-8')
           sw=Path('site/service-worker.js')
-          sw.write_text(sw.read_text().replace('triggle-shell-v1.27','triggle-shell-v1.28'))
+          sw.write_text(sw.read_text(encoding='utf-8').replace('triggle-shell-v1.27','triggle-shell-v1.28'),encoding='utf-8')
           PY
+            node --check site/assets/app.js
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -f site/
+            git commit -m "Store Triggle v1.28 as editable source"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+      - name: Validate website files
+        shell: bash
+        run: |
+          test -s site/index.html
+          test -s site/grades.html
+          test -s site/playground.html
           node --check site/assets/app.js
-          
+          python3 -m json.tool site/data/video-lessons.json > /dev/null
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
@@ -69,4 +80,3 @@ jobs:
       - name: Publish website
         id: deployment
         uses: actions/deploy-pages@v4
-        
