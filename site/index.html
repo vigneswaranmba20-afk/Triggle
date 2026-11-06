@@ -6,33 +6,6 @@
 <meta name="copyright" content="© 2026 VIGNESWARAN E R"><link rel="manifest" href="./manifest.webmanifest">
 <title>Triggle — Mathematics for Classes 9–12 v1.28</title>
 <link rel="stylesheet" href="./assets/app.css?v=phase0">
-<!-- Diwali greeting: styles are scoped to keep the learning interface unchanged. -->
-<style id="diwaliGreetingStyles">
-#diwaliGreeting[hidden]{display:none!important}
-#diwaliGreeting{position:relative;isolation:isolate;display:flex;align-items:center;gap:22px;overflow:hidden;margin:0 0 20px;padding:25px 28px;border:1px solid #e5bf7b;border-radius:22px;background:radial-gradient(ellipse at 0 100%,#9b4e362e,transparent 65%),linear-gradient(115deg,#46213c,#69273e 65%,#773748);color:#fff5de;box-shadow:0 8px 24px #60253c16}
-#diwaliGreeting::after{content:"";position:absolute;z-index:-1;width:180px;height:180px;right:-75px;top:-95px;border:1px solid #efc87b33;border-radius:50%;box-shadow:0 0 0 16px #efc87b0d,0 0 0 32px #efc87b0a;pointer-events:none}
-#diwaliGreeting .diwali-art{width:84px;height:84px;flex:none;color:#f5d391}
-#diwaliGreeting .diwali-copy{min-width:0}
-#diwaliGreeting .diwali-kicker{margin:0 0 7px;color:#f5d391;font-size:9px;font-weight:750;letter-spacing:2px;line-height:1.5}
-#diwaliGreeting h2{margin:0;font-size:clamp(24px,3vw,33px);font-weight:800;letter-spacing:-.6px;line-height:1.3;text-wrap:balance}
-#diwaliGreeting .diwali-wish{max-width:44ch;margin:8px 0 0;color:#f8e5ce;font-size:13px;line-height:1.65}
-#diwaliGreeting .diwali-dismiss{flex:none;align-self:flex-start;margin-left:auto;min-height:44px;padding:10px 12px;border:1px solid #efc87b66;border-radius:12px;background:#fff5de12;color:#fff5de;font-size:12px;font-weight:700}
-#diwaliGreeting .diwali-dismiss:hover{background:#fff5de25}
-#diwaliGreeting .diwali-dismiss:focus-visible{outline:3px solid #f5d391;outline-offset:3px}
-#diwaliEffects[hidden]{display:none!important}
-#diwaliEffects{position:fixed;inset:0;z-index:40;overflow:hidden;pointer-events:none;contain:strict}
-#diwaliEffects .diwali-fireworks,#diwaliEffects canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-@media(prefers-reduced-motion:reduce){#diwaliEffects{display:none}}
-@media(max-width:600px){
- #diwaliGreeting{gap:12px;flex-wrap:wrap;margin:10px 0 14px;padding:19px 15px;border-radius:18px}
- #diwaliGreeting .diwali-art{width:48px;height:62px}
- #diwaliGreeting .diwali-copy{flex:1;min-width:180px}
- #diwaliGreeting .diwali-kicker{font-size:8px;letter-spacing:1.3px}
- #diwaliGreeting h2{font-size:clamp(20px,5.3vw,27px);letter-spacing:-.4px}
- #diwaliGreeting .diwali-wish{font-size:12px;line-height:1.5}
- #diwaliGreeting .diwali-dismiss{margin-left:60px}
-}
-</style>
 </head>
 <body>
 <div class="app-shell">
@@ -57,25 +30,6 @@
       <div class="appbar-actions"><a href="./playground.html" class="basics-link">🎡 <span data-i18n="basics">Trigonometry Basics</span></a><div class="lang-switch" role="group" aria-label="Language"><button type="button" id="langEn" class="active" aria-pressed="true">EN</button><button type="button" id="langTa" aria-pressed="false">தமிழ்</button></div></div>
     </header>
     <div class="lesson-container">
-      <aside id="diwaliGreeting" aria-labelledby="diwaliGreetingTitle" hidden>
-        <svg class="diwali-art" viewBox="0 0 100 100" fill="none" aria-hidden="true" focusable="false">
-          <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-opacity=".25" stroke-dasharray="2 6"/>
-          <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-opacity=".18"/>
-          <path d="M50 17c-3 10-13 16-10 25 2 9 18 9 20 0 3-9-7-15-10-25Z" fill="#ffd783"/>
-          <path d="M50 33c-1 5-6 8-5 12 1 4 9 4 10 0 1-4-4-7-5-12Z" fill="#fff6d7"/>
-          <path d="M24 57h52c-3 17-13 25-26 25S27 74 24 57Z" fill="#c9774d" stroke="currentColor" stroke-width="1.5"/>
-          <ellipse cx="50" cy="57" rx="26" ry="6" fill="#8b3d3e" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M50 54v-7M34 68c9 6 23 6 32 0M19 33v8m-4-4h8m55 3v8m-4-4h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <div class="diwali-copy">
-          <p class="diwali-kicker">THE FESTIVAL OF LIGHTS</p>
-          <h2 id="diwaliGreetingTitle">🪔 Happy Diwali! ✨</h2>
-          <p class="diwali-wish">May your days shine with joy and your learning glow with possibility.</p>
-        </div>
-        <button id="diwaliDismiss" class="diwali-dismiss" type="button" aria-label="Dismiss Diwali celebration">Dismiss ✕</button>
-      </aside>
-      <div id="diwaliEffects" aria-hidden="true" hidden><div class="diwali-fireworks" id="diwaliFireworks"></div><canvas id="diwaliConfetti"></canvas></div>
-      <script defer src="./assets/diwali.js?v=1"></script>
       <div class="welcome"><div><div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="studyMode">YOUR LEARNING SPACE</span></div><h1><span id="classHeading">Class 9</span><span class="heading-star"> ✦</span></h1><p id="classSubtitle">Choose a topic, understand every step, go at your own pace.</p></div><div class="class-emblem" id="classEmblem" aria-hidden="true"><span>9</span><svg viewBox="0 0 85 85"><circle cx="42.5" cy="42.5" r="35" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 5"/><circle cx="42.5" cy="42.5" r="22" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div></div>
       <div class="status-row"><nav class="crumb" id="crumb" aria-label="Navigate class, chapter, and exercise"></nav><div class="small-total" id="gradeTotal">53 lessons</div></div>
       <main id="chapterOverview" class="chapter-overview" aria-labelledby="chapterOverviewTitle" tabindex="-1" hidden></main>
