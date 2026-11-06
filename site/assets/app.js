@@ -193,10 +193,10 @@
     addJump(group,'lab',lang==='ta'?'வென் பட ஆய்வகம்':'Interactive Venn lab');
     jump.append(group);
   }
-  const questions=chapterItems(chapter);
-  if(questions.length){
+  const jumpQuestions=chapterItems(chapter);
+  if(jumpQuestions.length){
     const group=document.createElement('optgroup');group.label=lang==='ta'?'பயிற்சி வினாக்கள்':'Exercise questions';
-    questions.forEach(item=>addJump(group,'question:'+item.id,tr(item.label)+' · '+tr(item.title)));
+    jumpQuestions.forEach(item=>addJump(group,'question:'+item.id,tr(item.label)+' · '+tr(item.title)));
     jump.append(group);
   }
   const more=document.createElement('optgroup');
@@ -208,7 +208,7 @@
     const key=jump.value;jump.value='';
     if(!key)return;
     if(key.startsWith('question:')){
-      const item=questions.find(x=>x.id===key.slice(9));
+      const item=jumpQuestions.find(x=>x.id===key.slice(9));
       if(item)selectLesson(item);
       return;
     }
