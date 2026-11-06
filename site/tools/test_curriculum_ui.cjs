@@ -111,7 +111,7 @@ async function main() {
       });
     }
     await check('Touch reading mode auto-hides, keyboard Tab recovers and modal remains accessible',async()=>{
-      const page=await visit(await context(390),'/index.html?class=9&question=c9-example-6-1');
+      const page=await visit(await context(390),'/index.html?class=9&question=c9-example-6-2');
       await page.waitForFunction(()=>document.body.classList.contains('question-focus')&&!document.body.classList.contains('focus-controls-visible'),{timeout:12000});
       assert.equal(await page.locator('.appbar').isVisible(),false);
       await page.keyboard.press('Tab');
