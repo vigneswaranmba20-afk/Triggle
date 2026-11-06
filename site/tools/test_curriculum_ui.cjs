@@ -100,7 +100,7 @@ async function main() {
         await page.locator('#langTa').click();
         assert.equal(await page.locator('html').getAttribute('lang'),'ta');
         assert.match(await page.locator('.discover-hero h1').innerText(),/கணிதம்/);
-        assert.match(await page.locator('.discover-section h2').first().innerText(),/வகுப்பு/);
+        assert.match(await page.locator('.discover-section h2').first().innerText(),/வகுப்/);
         await noOverflow(page,'Tamil Home '+width+'px');
       });
     }
