@@ -1,7 +1,7 @@
 {
-  "name": "Triggle — Visual Maths & Interactive Trigonometry",
+  "name": "Triggle — Free Mathematics Learning Lab",
   "short_name": "Triggle",
-  "description": "Visual mathematics for Classes 9–12; bilingual worked exercises, searchable navigation, and free interactive basics.",
+  "description": "Free bilingual Mathematics for Classes 9–12. Discover chapters, explore visual lessons and practise offline after first visit.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
