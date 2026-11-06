@@ -112,6 +112,9 @@
   const heading=document.createElement('h2');heading.id='chapterOverviewTitle';heading.textContent=tr(chapter.title);
   const status=document.createElement('span');status.className='chapter-status';status.dataset.status=chapter.status;status.textContent=ui(chapter.status);top.append(eyebrow,heading,status);container.append(top);
   const note=document.createElement('p');note.textContent=ui('contentPlanned');container.append(note);
+  if(chapter.id==='g9-ch1' && window.TriggleSetJourney){
+    window.TriggleSetJourney.mount(container,chapter,lang);
+  }
   if(chapter.id==='g9-ch1' && window.TriggleLab){
     note.textContent=lang==='ta'
       ? 'முழு அத்தியாயம் இன்னும் உருவாக்கப்படுகிறது. முதல் கற்றல் ஆய்வகம் கீழே உள்ளது.'
