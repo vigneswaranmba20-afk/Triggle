@@ -488,3 +488,44 @@
  #browseChevron{display:none}
  .chapter-sections li{flex-wrap:wrap;row-gap:3px}.chapter-sections small{white-space:normal;text-align:left;overflow-wrap:normal}
 }
+
+
+/* Phase 2 pilot: scoped additions preserve all existing Triggle themes/layout. */
+.math-group-power{display:inline-flex;vertical-align:middle;align-items:center;white-space:nowrap;gap:0;line-height:1.18;margin:0 .08em}
+.math-group{display:inline-flex;align-items:center;gap:0;vertical-align:middle}
+.math-group-inner{display:inline-block;line-height:1.45}
+.math-bracket{font-family:inherit;font-size:1.52em;font-weight:450;line-height:1.1;display:inline-block}
+.math-group-power>sup{align-self:flex-start;position:relative;top:-.25em;margin:0 .03em;font-size:.72em!important;line-height:1.15;min-width:.48em;text-align:left}
+.step-equation .math-group-power,.deep-stage-math .math-group-power,.math-answer .math-group-power{white-space:nowrap}
+.p2-lab{margin:18px 0 26px;border:1px solid #d9d3e6;border-radius:18px;background:linear-gradient(175deg,#fcfbff,#fff);padding:clamp(14px,3vw,24px);color:#363b59;box-shadow:0 8px 24px #3d2e7310}
+.chapter-overview .p2-lab h3{font-size:clamp(19px,3.5vw,23px);line-height:1.3;color:#3e345c;margin:4px 0 9px}
+.chapter-overview .p2-lab h4{font-size:16px;line-height:1.3;color:#3e345c;margin:4px 0 8px}
+.p2-kicker{color:#7362a8;font-weight:850;letter-spacing:.8px;font-size:10px}
+.chapter-overview .p2-lab p{font-size:clamp(13px,2.4vw,15px);line-height:1.65}
+.p2-intro{color:#575775}.p2-objective{margin-top:12px}
+.p2-given{padding:10px 14px;background:#f4f1fa;border-radius:11px;color:#383653;line-height:1.95!important}
+.p2-controls{margin:18px 0 7px}.p2-controls>p{margin:0 0 7px;font-weight:750}
+.p2-modes,.p2-choices{display:flex;gap:8px;flex-wrap:wrap}
+.p2-modes button,.p2-choices button,.p2-hint,.p2-deeper button{min-height:44px;line-height:1.25;padding:10px 13px;border-radius:11px;border:1px solid #d7d1e4;background:white;color:#534779;font-size:14px;font-family:inherit;font-weight:760;cursor:pointer}
+.p2-modes button[aria-pressed=true],.p2-choices button[aria-pressed=true]{background:#eee9fa;color:#392565;border-color:#8b77bc;box-shadow:inset 0 0 0 1px #8b77bc}
+.p2-modes button:focus-visible,.p2-choices button:focus-visible,.p2-hint:focus-visible,.p2-deeper button:focus-visible,.p2-lab summary:focus-visible{outline:3px solid #9074dc;outline-offset:2px}
+.p2-canvas{max-width:520px;margin:12px auto;padding:8px;background:#fff;border-radius:13px;border:1px solid #ebe8f0}
+.p2-canvas svg{display:block;width:100%;height:auto;max-height:250px}
+.p2-result{border-radius:12px;border:1px solid #cae7dd;background:#f0faf6;padding:11px 13px;color:#276e56;font-size:clamp(15px,3vw,20px)!important;overflow-wrap:anywhere}
+.p2-explain{color:#54566f;min-height:1.7em}
+.p2-regions,.p2-deeper{border:1px solid #e6e2ee;border-radius:12px;background:#fff;padding:12px 14px;margin:12px 0;font-size:14px}
+.p2-regions summary,.p2-deeper summary{color:#5a4687;font-weight:780;cursor:pointer;min-height:26px}
+.p2-regions div{margin-top:9px;line-height:1.6;overflow-wrap:anywhere}
+.p2-check{border-top:1px solid #ebe7f2;margin-top:18px;padding-top:13px}
+.p2-check h4{margin-top:3px}.p2-choices button{min-width:75px}
+.p2-hint{background:#f8f5ff;margin-top:12px}
+.p2-feedback{font-weight:700;color:#534779;min-height:22px}
+.p2-deeper ol{padding-left:24px;margin:13px 0;display:grid;gap:12px;line-height:1.65}
+.p2-deeper button{background:#62508d;color:#fff;border-color:#62508d}
+.p2-deeper button[hidden]{display:none}
+.p2-paper{background:#fff9ed;border:1px solid #f0dfbd;border-radius:13px;padding:10px 14px;display:flex;align-items:flex-start;gap:12px;margin-top:16px;color:#65502c}
+.p2-paper>span{font-size:24px}
+.p2-paper p{margin:0}
+.chapter-overview .p2-free{font-size:11px!important;color:#86819a;text-align:center;margin:16px 0 0}
+@media(max-width:420px){.p2-lab{padding:13px}.p2-modes button{flex:1 1 calc(50% - 8px);font-size:13px;padding:9px 6px}.p2-choices button{flex:1 1 auto}.p2-given{font-size:13px!important;padding:8px 10px}}
+@media(prefers-reduced-motion:reduce){.p2-lab *{animation:none!important;transition:none!important}}
