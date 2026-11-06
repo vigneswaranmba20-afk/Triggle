@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f9f7f2">
+  <meta name="application-name" content="Triggle">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <meta name="description" content="A colorful, interactive trigonometry playground for children. Explore triangles, circles, waves, a kite adventure, and maths quests.">
+  <meta name="author" content="VIGNESWARAN E R">
+  <meta name="copyright" content="© 2026 VIGNESWARAN E R. All rights reserved.">
+  <title>Triggle! — Interactive Basics v1.19</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#20233d;--muted:#70758f;--paper:#fffefa;--cream:#faf8f1;--blue:#4b83f6;--pink:#f66ca4;--orange:#ffae49;--mint:#28bca9;--purple:#8667e8;--line:#e8e8ee;--shadow:0 16px 42px rgba(50,50,100,.08);--rad:26px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,-apple-system,sans-serif;min-height:100vh} button,input{font:inherit} button{cursor:pointer;-webkit-tap-highlight-color:transparent} button:focus-visible,input:focus-visible,.tab:focus-visible{outline:3px solid #8364ed;outline-offset:3px} button:disabled{cursor:default} .app{max-width:1170px;padding:0 22px 42px;margin:auto}
+    .topbar{height:86px;display:flex;align-items:center;justify-content:space-between;gap:12px} .brand{font-family:Fredoka,system-ui,sans-serif;font-size:29px;font-weight:600;letter-spacing:-1.6px;display:flex;align-items:center;gap:11px} .brandmark{display:grid;place-items:center;background:#ffe5bb;width:41px;height:41px;border:2px solid #f7ce8d;border-radius:15px;font-size:22px;transform:rotate(-8deg)} .brand span:last-child{color:var(--purple)} .topright{display:flex;align-items:center;gap:10px} .starscore{display:flex;align-items:center;gap:8px;background:white;border:1px solid #f0e4cd;padding:9px 15px;border-radius:50px;font-weight:800;box-shadow:0 3px 10px #c3a35413} .starscore strong{font-variant-numeric:tabular-nums} .soundbtn{border:1px solid var(--line);background:#fff;width:44px;height:44px;border-radius:14px;font-size:21px} .soundbtn[aria-pressed=true]{background:#f0ebff;border-color:#c3b0ff}
+    .hero{background:linear-gradient(107deg,#fff 6%,#fff8e6 69%,#f7eaff);border:1px solid #eeebea;border-radius:35px;min-height:198px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:28px 42px;position:relative;overflow:hidden;box-shadow:var(--shadow)} .hero:after{content:'';position:absolute;width:270px;height:270px;right:-130px;top:-100px;background:#f5d5ef;border-radius:50%;opacity:.4}.hero-text{z-index:1}.eyebrow{color:#8165b5;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:2.2px;margin:0 0 8px}.hero h1{font-family:Fredoka,system-ui,sans-serif;font-size:clamp(32px,5vw,51px);font-weight:600;line-height:1.04;letter-spacing:-1.6px;margin:0 0 12px}.hero h1 em{font-style:normal;color:#ee7a91}.hero p{color:var(--muted);max-width:520px;font-size:15px;line-height:1.65;margin:0}.hero-art{flex:0 0 265px;position:relative;height:160px;z-index:1}.hero-mascot{position:absolute;top:18px;left:100px;transform:rotate(8deg);width:108px;height:108px;border:5px solid #322b5b;border-radius:38% 48% 43% 42%;background:#f9cc68;box-shadow:inset -10px -8px #f2af4b, 12px 14px 0 #c9b4f38c;display:flex;align-items:center;justify-content:center;gap:19px}.eye{width:10px;height:18px;border-radius:50%;background:#29253b}.smile{position:absolute;top:65px;left:43px;width:22px;height:12px;border:3px solid #29253b;border-top:0;border-radius:0 0 40px 40px}.mascot-cap{position:absolute;top:-33px;left:13px;font-size:35px;transform:rotate(-21deg)}#sparkStage{position:absolute;inset:0;pointer-events:none}.mini-star{position:absolute;color:#ffb34a;font-size:30px;top:20px;left:34px;transform:rotate(-20deg)}
+    .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:24px 0 16px}.tab{min-width:0;border:1px solid #ececf1;background:#fff;border-radius:18px;padding:15px 9px;font-weight:800;color:#636984;display:flex;align-items:center;justify-content:center;gap:10px;transition:transform .18s,background .2s,border-color .2s;box-shadow:0 3px 14px #67628208}.tab:hover{transform:translateY(-2px)} .tab[aria-selected=true]{background:#302e55;color:white;border-color:#302e55;box-shadow:0 8px 22px #37365f27}.tab .em{font-size:23px} .tab small{font-weight:800;font-size:12px;opacity:.55;margin-right:2px}
+    .scene{display:none}.scene.active{display:block;animation:appear .36s ease both}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.mainlayout{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(310px,.84fr);gap:16px;align-items:stretch}.panel{border:1px solid #ececf1;border-radius:var(--rad);background:white;box-shadow:var(--shadow);overflow:hidden}.scene-panel{padding:22px 22px 14px;min-width:0}.control-panel{padding:27px 26px;display:flex;flex-direction:column;gap:17px}.panelhead{display:flex;align-items:center;justify-content:space-between;gap:8px}.panelhead h2{font-size:20px;letter-spacing:-.6px;font-family:Fredoka,system-ui,sans-serif;font-weight:600;margin:0}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#9395a9;font-weight:800}.pill{display:inline-flex;align-items:center;gap:5px;border-radius:25px;padding:7px 11px;font-size:11px;background:#f5f2ff;color:#7153c5;font-weight:800;white-space:nowrap}.lesson-title{font:600 26px/1.17 Fredoka,system-ui,sans-serif;letter-spacing:-.6px;margin:0}.lesson-copy{font-size:14px;line-height:1.65;color:#696f89;margin:0}.rangehead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px;font-size:13px;font-weight:800}.bigangle{font:600 35px/1 Fredoka,system-ui,sans-serif;color:var(--purple);font-variant-numeric:tabular-nums}.ranger{width:100%;height:12px;appearance:none;-webkit-appearance:none;background:linear-gradient(90deg,#ffd780,#fb8db6,#9d86ec);border-radius:20px;outline:0;margin:10px 0 14px}.ranger::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:29px;height:29px;background:white;border:7px solid #725de2;box-shadow:0 2px 10px #6658b14a;border-radius:50%;cursor:grab}.ranger::-moz-range-thumb{width:16px;height:16px;background:white;border:7px solid #725de2;border-radius:50%;box-shadow:0 2px 10px #6658b14a}.presets{display:flex;flex-wrap:wrap;gap:7px}.preset{border:1px solid #e8e8f1;background:#fff;color:#555b7c;padding:8px 12px;border-radius:12px;font-weight:800;font-size:12px}.preset.active,.preset:hover{background:#ede9ff;color:#6c4bc2;border-color:#c9bfff}.svgstage{background:linear-gradient(180deg,#fcfbff,#fffdfa);border-radius:21px;margin-top:14px;position:relative;overflow:hidden;min-height:250px}.svgstage svg{display:block;width:100%;height:auto;max-height:410px;touch-action:pan-y}.svgstage svg text{font-family:Fredoka,system-ui,sans-serif}.captionline{text-align:center;color:#969bad;font-size:12px;margin:7px 0 0}.handlehint{color:#8c93aa;font-size:12px;display:flex;align-items:center;gap:7px;margin:0}.sidevals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.sidebox{border-radius:16px;padding:12px 7px;text-align:center;min-width:0}.sidebox strong{font-family:Fredoka,system-ui,sans-serif;display:block;font-size:24px;line-height:1.35;font-weight:600;font-variant-numeric:tabular-nums}.sidebox span{font-size:11px;font-weight:800}.sidebox.blue{background:#eaf2ff;color:#266ce2}.sidebox.pink{background:#fff0f6;color:#d84785}.sidebox.orange{background:#fff4db;color:#b87810}.ratio-note{padding:15px 16px;border-radius:16px;background:#f7f5ff;color:#615c86;font-size:13px;line-height:1.65}.ratio-note b{color:#382d71}.formula-grid{display:grid;gap:8px}.formula{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fafafb;border:1px solid #eeeeF3;border-radius:14px;padding:12px 13px;font-size:13px}.formula strong{font-family:Fredoka,system-ui,sans-serif;font-size:19px;font-variant-numeric:tabular-nums}.formula .sine{color:#e34a85}.formula .cosine{color:#3379e5}.formula .tangent{color:#8b65d7}.tip{display:flex;gap:12px;align-items:flex-start;padding:15px 16px;background:#eaf9f4;border-radius:18px;font-size:13px;color:#35675f;line-height:1.6}.tip-icon{font-size:24px;flex:0 0 auto}.tip b{color:#177967}.mode-title{padding:0 0 5px}.intro-tag{display:inline-flex;background:#fff5de;color:#a26d0e;font-size:11px;font-weight:800;letter-spacing:.7px;padding:7px 10px;border-radius:10px;margin-bottom:7px}.statpair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{background:#f8f7fc;padding:16px;border-radius:15px}.stat span{font-size:12px;display:block;color:#777a91}.stat strong{font:600 26px/1.4 Fredoka,system-ui,sans-serif;font-variant-numeric:tabular-nums}.stat.pink strong{color:#e65088}.stat.blue strong{color:#4a75df}.action{border:0;border-radius:15px;background:#302e55;color:white;min-height:48px;padding:11px 16px;font-weight:800;box-shadow:0 6px 15px #25234e1b}.action:hover{background:#403e71}.action.secondary{color:#6256a4;background:#eeeaff;box-shadow:none}.action.outline{border:1px solid #e1ddf7;background:white;color:#6757b2;box-shadow:none}.actionsrow{display:flex;gap:8px;flex-wrap:wrap}.actionsrow .action{flex:1 1 125px}.toggleline{display:flex;gap:10px;flex-wrap:wrap}.toggle{display:flex;align-items:center;gap:8px;border:1px solid #e9e7f3;padding:10px 14px;border-radius:14px;background:#fff;color:#787991;font-size:13px;font-weight:800}.toggle .dot{width:10px;height:10px;border-radius:50%;background:currentColor}.toggle[aria-pressed=true]{background:#f7f4ff;border-color:#cfc4f5;color:#6452bc}.toggle.pink[aria-pressed=true]{background:#fff0f6;border-color:#f8c5d8;color:#d9588e}.wave-fact{background:#fff9eb;padding:15px;border-radius:14px;color:#916c31;font-size:13px;line-height:1.65}.wave-fact b{color:#95601d}
+    .challenge-wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(290px,.85fr);gap:16px}.quizvisual{padding:24px;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(145deg,#fff5db,#f4eafd);min-height:390px;text-align:center}.quizvisual .gigantic{font-size:90px;line-height:1.1;filter:drop-shadow(0 12px 12px #d3a84d48);animation:float 3.5s ease-in-out infinite alternate}.quizvisual .quiz-visual-title{font:600 32px/1.2 Fredoka,sans-serif;margin:18px 0 5px}.quizvisual p{color:#857c92;font-size:14px;line-height:1.6;max-width:280px;margin:7px 0}.quizbox{padding:27px}.quiznumber{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#8c87a6;font-weight:800}.progress{height:9px;background:#f0edfb;border-radius:40px;overflow:hidden;margin:13px 0 24px}.progress>div{height:100%;background:linear-gradient(90deg,#f4b45c,#e779b4,#8c74f5);width:0;transition:width .3s}.quizbox h2{font:600 26px/1.25 Fredoka,sans-serif;letter-spacing:-.4px;min-height:74px;margin:0 0 17px}.answers{display:grid;gap:10px}.answer{border:1.5px solid #e7e6f2;border-radius:14px;min-height:54px;text-align:left;background:white;font-weight:800;color:#505372;padding:12px 15px;transition:background .2s,border-color .2s,transform .2s}.answer:not(:disabled):hover{transform:translateX(3px);border-color:#9784eb}.answer.correct{background:#e8faf1;border-color:#64cfa1;color:#19885c}.answer.wrong{background:#fff0f1;border-color:#f5a2ab;color:#bf4b59}.feedback{font-size:13px;min-height:49px;line-height:1.55;margin:13px 0;color:#6a6684}.quiznext{width:100%;margin-top:3px}.quiznext[hidden]{display:none}.quizrestart{margin-top:12px;width:100%}.reward{font:600 17px/1.3 Fredoka,sans-serif;margin-top:9px;color:#a87929}.glossary{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:16px 0 0}.gloss{border:1px solid #eeeef1;border-radius:19px;background:#fff;padding:15px 17px}.gloss strong{display:block;font-family:Fredoka,sans-serif;font-size:17px;margin-bottom:5px}.gloss p{font-size:12px;line-height:1.6;color:#747993;margin:0}.foot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:22px 2px 5px;color:#9294a8;font-size:12px}.foot strong{color:#52506e}.confetti{position:fixed;inset:0;z-index:50;pointer-events:none}.wavebg{fill:none;stroke:#eeeaf7;stroke-width:1}.waveaxis{stroke:#9ca1ba;stroke-width:1.8}.microlabel{fill:#9ca1b3;font-size:14px}.pointlabel{paint-order:stroke;stroke:#fff;stroke-width:5;stroke-linejoin:round}
+    @keyframes float{from{transform:translateY(0) rotate(-5deg)}to{transform:translateY(-12px) rotate(5deg)}}
+    @media(max-width:800px){.mainlayout,.challenge-wrap{grid-template-columns:1fr}.control-panel{gap:15px}.scene-panel{padding:18px}.hero{padding:26px 28px}.hero-art{flex-basis:145px}.hero-mascot{left:32px;top:24px}.mini-star{left:2px;top:5px}.glossary{grid-template-columns:repeat(3,minmax(0,1fr))}} 
+    @media(max-width:540px){.app{padding:0 12px 32px}.topbar{height:67px}.brand{font-size:24px}.brandmark{height:35px;width:35px;border-radius:12px}.starscore{padding:8px 10px;font-size:13px}.soundbtn{height:39px;width:39px;font-size:17px}.hero{border-radius:23px;padding:19px 19px;min-height:160px}.hero h1{font-size:32px;letter-spacing:-1px}.hero p{font-size:12px;line-height:1.5;max-width:290px}.eyebrow{font-size:9px;letter-spacing:1.3px}.hero-art{flex:0 0 84px;height:100px}.hero-mascot{left:2px;top:23px;transform:scale(.62) rotate(8deg);transform-origin:top left}.mini-star{font-size:19px;top:2px;left:54px} .tabs{gap:6px;margin:13px 0}.tab{border-radius:13px;padding:9px 3px;flex-direction:column;gap:2px;font-size:10px;min-height:65px;line-height:1.1}.tab small{display:none}.tab .em{font-size:21px}.mainlayout{gap:11px}.panel{border-radius:21px}.scene-panel{padding:14px 13px 11px}.control-panel{padding:20px 18px}.panelhead h2{font-size:18px}.svgstage{margin-top:10px;min-height:190px}.sidebox strong{font-size:21px}.sidebox span{font-size:10px}.glossary{grid-template-columns:1fr;gap:7px;margin-top:11px}.gloss{padding:12px 14px}.gloss strong{display:inline;font-size:14px;margin-right:6px}.gloss p{display:inline;font-size:11px}.quizvisual{min-height:195px;padding:13px}.quizvisual .gigantic{font-size:54px}.quizvisual .quiz-visual-title{font-size:24px;margin:8px 0 0}.quizvisual p{font-size:12px}.quizbox{padding:19px}.quizbox h2{font-size:22px;min-height:0}.foot{font-size:10px;flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+    /* 1.1: story adventure, touch targets, bilingual controls */
+    .tabs{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .kite-stage{background:#eef5ff}.kite-stage svg{max-height:430px}
+    .language-bar{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+    .lang-switch{border-radius:15px;background:#f3f1fa;padding:4px;display:flex;gap:3px;flex-shrink:0}
+    .lang-button{border:0;background:transparent;border-radius:11px;padding:9px 10px;color:#807b9d;font-size:12px;font-weight:800;min-height:38px}
+    .lang-button.active{background:white;color:#624fb1;box-shadow:0 2px 10px #6e63a41d}
+    .kite-feedback{min-height:55px;border-radius:16px;background:#fff6e1;padding:14px 16px;color:#91631e;font-size:13px;font-weight:700;line-height:1.5}
+    .kite-feedback.success{background:#e5f9ef;color:#167b58}
+    .kite-levels{display:flex;justify-content:center;gap:12px}.kite-levels span{font-size:24px;color:#bcb6d5}.kite-levels .earned{color:#edaa43}
+    .privacyline{font-size:11px;line-height:1.5;color:#8c8ea4;margin:0}
+    #kiteNext[hidden]{display:none}
+    @media(max-width:540px){.tabs{gap:4px}.tab{font-size:9px;min-height:65px;padding:10px 1px}.tab .em{font-size:20px}.language-bar .lesson-title{font-size:22px}.kite-stage{min-height:180px}.lang-button{padding:8px 7px}}
+  
+.back-solutions{display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;color:#433981;background:#f0ebff;border:1px solid #dcd3ff;padding:11px 14px;border-radius:15px;font-size:13px;white-space:nowrap;font-weight:800;min-height:42px;box-shadow:0 2px 8px #d6cdf633}.back-solutions:hover{background:#e5dffc}.back-solutions:focus-visible{outline:3px solid #7561df;outline-offset:3px}.back-short{display:none}@media(max-width:650px){.back-full{display:none}.back-short{display:inline}.back-solutions{font-size:12px;padding:9px 10px}.topright{gap:6px}.starscore{padding:7px 8px}}@media(max-width:370px){.back-short{display:none}.back-solutions{min-width:42px;padding:8px}}
+
+.basic-langbar{display:flex;align-items:center;justify-content:flex-end;gap:7px;margin:0 2px 12px;font-size:13px;font-weight:700;color:#5c5b7e}
+.basic-langbar button{border:1px solid #e3def1;color:#5e528a;background:#fff;padding:7px 11px;border-radius:10px;font-size:13px;font-weight:800;min-height:36px}
+.basic-langbar button.active{background:#4e478f;color:#fff;border-color:#4e478f}
+html[lang="ta"] .hero-text p,html[lang="ta"] .lesson-copy{line-height:1.75}
+html[lang="ta"] .tab{font-size:12px}
+
+/* v1.13 ONE-VIEW MOBILE STUDIO ------------------------------------------------
+   The illustration, controls and live values always share the visible viewport.
+   On unusually short displays, overflow belongs to the small control panel;
+   never make learners scroll away from the live drawing to adjust an angle.
+*/
+@media (max-width: 620px) {
+  html { height:100%; scroll-behavior:auto; }
+  body { height:100dvh; min-height:0; overflow:hidden; overscroll-behavior:none; }
+  .app { height:100dvh; max-width:620px; min-height:0; display:flex; flex-direction:column; padding:0 9px max(6px,env(safe-area-inset-bottom)); overflow:hidden; }
+  .topbar { height:46px; flex:0 0 46px; gap:7px; }
+  .brand { font-size:20px; gap:6px; letter-spacing:-.6px; }
+  .brandmark { height:32px; width:32px; font-size:17px; }
+  .topright { gap:5px; }
+  .back-solutions { min-height:34px; border-radius:11px; padding:5px 9px; font-size:12px; }
+  .soundbtn { width:34px; height:34px; border-radius:10px; font-size:15px; }
+  .starscore { border-radius:12px; padding:5px 6px; gap:4px; font-size:12px; }
+  .starscore span:last-child { display:none; }
+  .hero,.glossary,.foot { display:none!important; }
+  .basic-langbar { height:30px; flex:0 0 30px; margin:0; padding:0 1px; gap:5px; font-size:11px; }
+  .basic-langbar button { padding:3px 8px; min-height:28px; font-size:12px; }
+  .tabs { flex:0 0 56px; min-height:0; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:4px; margin:3px 0 7px; padding:0; }
+  .tab { min-height:0; height:56px; padding:4px 1px; gap:3px; border-radius:12px; flex-direction:column; font-size:9px; line-height:1.08; }
+  .tab .em { font-size:19px; }
+  .tab small { display:none; }
+  .tab span:last-child { display:block; text-align:center; min-width:0; }
+  html[lang="ta"] .tab { font-size:9px; }
+  main { flex:1; min-height:0; display:flex; overflow:hidden; }
+  .scene.active { flex:1; min-width:0; min-height:0; overflow:hidden; animation:none; }
+  .mainlayout { height:100%; min-height:0; display:grid; grid-template-columns:minmax(0,1fr); grid-template-rows:minmax(158px,41%) minmax(0,1fr); gap:6px; }
+  .panel { border-radius:17px; }
+  .scene-panel { min-height:0; padding:6px 8px 4px; display:flex; flex-direction:column; }
+  .panelhead { flex:0 0 auto; min-height:20px; }
+  .panelhead h2 { font-size:15px; letter-spacing:0; }
+  .panelhead .pill { display:none; }
+  .svgstage { margin:2px 0 0; flex:1; min-height:0; height:100%; overflow:hidden; border-radius:12px; }
+  .svgstage svg { display:block; height:100%; width:100%; max-height:none; object-fit:contain; }
+  .captionline { display:none; }
+  .control-panel { min-height:0; height:100%; overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch; padding:7px 10px 8px; gap:6px; }
+  .mode-title { padding:0; }
+  .mode-title .intro-tag { display:none; }
+  .lesson-title { font-size:18px; line-height:1.1; letter-spacing:0; }
+  .lesson-copy { margin:1px 0 0; color:#74788f; font-size:11px; line-height:1.3; max-height:2.6em; overflow:hidden; }
+  html[lang="ta"] .lesson-copy { line-height:1.36; max-height:2.72em; }
+  .rangehead { margin-bottom:0; font-size:12px; }
+  .bigangle { font-size:28px; }
+  .ranger { height:11px; margin:5px 0 8px; touch-action:pan-x; }
+  .ranger::-webkit-slider-thumb { width:30px; height:30px; }
+  .presets { gap:5px; }
+  .preset { min-height:31px; padding:4px 11px; border-radius:10px; font-size:12px; }
+  .sidevals { gap:6px; }
+  .sidebox { padding:5px 3px; border-radius:12px; }
+  .sidebox strong { font-size:21px; line-height:1.1; }
+  .sidebox span { display:block; font-size:10px; line-height:1.2; }
+  .ratio-note { padding:6px 8px; border-radius:11px; font-size:11px; line-height:1.25; }
+  .formula-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px; }
+  .formula { min-width:0; flex-direction:column; padding:6px 2px; border-radius:11px; gap:3px; text-align:center; font-size:10px; line-height:1.17; }
+  .formula span { display:block; }
+  .formula strong { font-size:18px; line-height:1.05; }
+  .statpair { gap:5px; }
+  .stat { padding:7px 9px; border-radius:11px; }
+  .stat span { font-size:11px; }
+  .stat strong { font-size:22px; line-height:1.2; }
+  .tip,.wave-fact { padding:7px 9px; border-radius:11px; font-size:11px; line-height:1.25; }
+  .tip { gap:6px; }
+  .tip-icon { font-size:16px; }
+  .toggleline { gap:5px; }
+  .toggle { padding:6px 9px; min-height:31px; font-size:11px; border-radius:10px; }
+  .action { min-height:37px; border-radius:11px; padding:7px 12px; font-size:12px; }
+  .actionsrow { gap:6px; }
+  .actionsrow .action { flex:1 1 100px; }
+  .kite-stage { min-height:0; }
+  .language-bar .lesson-title { font-size:18px; }
+  #scene-adventure .lesson-copy { max-height:none; }
+  .lang-button { min-height:29px; padding:3px 7px; }
+  .kite-feedback { min-height:0; padding:7px 9px; border-radius:10px; font-size:11px; line-height:1.3; }
+  .kite-levels { line-height:1; }
+  .kite-levels span { font-size:16px; }
+  .privacyline { display:none; }
+  #scene-adventure .control-panel { padding-bottom:12px; }
+  #scene-adventure .ratio-note { margin-top:1px; font-size:10.5px; line-height:1.28; }
+  #scene-adventure .kite-feedback { margin-top:1px; font-size:10.5px; line-height:1.28; padding:6px 8px; }
+  #scene-adventure .actionsrow { margin-top:1px; }
+  #scene-adventure .kite-levels { padding-bottom:8px; }
+  #scene-game .challenge-wrap { display:block; height:100%; }
+  #scene-game .quizvisual { display:none; }
+  #scene-game .quizbox { height:100%; display:flex; flex-direction:column; gap:5px; overflow-y:auto; padding:15px; }
+  #scene-game .progress { margin:4px 0 8px; }
+  #scene-game .quizbox h2 { font-size:20px; min-height:0; margin:2px 0 6px; }
+  #scene-game .answers { gap:7px; }
+  #scene-game .answer { min-height:42px; padding:9px 12px; }
+  #scene-game .feedback { min-height:36px; margin:4px 0; }
+  #scene-game .quizrestart { margin-top:4px; }
+}
+@media (max-width: 620px) and (max-height: 700px) {
+  .topbar { height:42px; flex-basis:42px; }
+  .basic-langbar { height:27px; flex-basis:27px; }
+  .tabs { height:51px; flex-basis:51px; margin:2px 0 5px; }
+  .tab { height:51px; font-size:9px; }
+  .tab .em { font-size:18px; }
+  .mainlayout { grid-template-rows:minmax(145px,38%) minmax(0,1fr); gap:5px; }
+  .panelhead h2 { font-size:14px; }
+  .lesson-title { font-size:16px; }
+  .lesson-copy { font-size:10px; }
+  .control-panel { gap:4px; padding:6px 8px; }
+  .ratio-note { padding:5px 7px; }
+}
+@media (max-width:620px) and (orientation:landscape) and (max-height:480px) {
+  .topbar{height:36px;flex-basis:36px}
+  .basic-langbar{height:25px;flex-basis:25px}
+  .tabs{height:45px;flex-basis:45px}
+  .tab{height:45px}
+  .mainlayout{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);grid-template-rows:minmax(0,1fr)}
+}
+
+  
+/* v1.16: the textbook link must be words, not a tiny icon, on every phone. */
+.mobile-answers-link{display:none;align-items:center;gap:6px;text-decoration:none;background:#37316f;color:#fff;border:1px solid #37316f;border-radius:11px;padding:7px 10px;font-size:13px;font-weight:850;line-height:1.18;min-width:0;white-space:nowrap;box-shadow:0 1px 4px #8478c42e}
+.mobile-answers-link:focus-visible{outline:3px solid #7963e8;outline-offset:2px}
+.mobile-answer-label{white-space:nowrap}
+@media(max-width:650px){
+  .topright>.back-solutions{display:none!important}
+  .basic-langbar{display:flex;justify-content:space-between;align-items:center;gap:5px}
+  .mobile-answers-link{display:inline-flex;flex:0 1 auto;min-height:34px;padding:6px 9px;font-size:12px;margin-right:auto}
+  .basic-langbar>.language-label{display:none}
+  .basic-langbar>button{flex:0 0 auto}
+}
+@media(max-width:620px){
+  .basic-langbar{height:39px;flex-basis:39px;min-height:39px;gap:5px;padding:0 2px}
+  .mobile-answers-link{min-height:33px;font-size:12px}
+}
+@media(max-width:370px){.mobile-answers-link{font-size:11px;padding:6px 7px;gap:4px}.basic-langbar button{padding:4px 5px}}
+.circle-stage{min-height:280px}
+.circle-stage svg text{paint-order:stroke;stroke:#ffffffd8;stroke-width:1.2px;stroke-linejoin:round}
+#scene-circle .scene-panel .pill{display:none}
+#adventureStory{overflow-wrap:anywhere;word-break:normal}
+#scene-adventure .lang-switch{display:none !important}
+#scene-adventure .language-bar{display:block}
+#scene-adventure .language-bar .mode-title{padding-bottom:0}
+#scene-adventure .lesson-title{margin-top:0}
+#scene-adventure .lesson-copy{font-size:14px;line-height:1.55;margin-top:2px}
+#scene-adventure .ratio-note,#scene-adventure .kite-feedback{overflow-wrap:anywhere}
+#scene-adventure .actionsrow .action{flex:1 1 100%}
+@media(max-width:540px){
+  .circle-stage{min-height:230px}
+  #scene-circle .scene-panel{padding-bottom:12px}
+  #scene-circle .control-panel{padding-top:18px}
+  #scene-circle .formula{padding:10px 11px;font-size:12px}
+  #scene-circle .formula strong{font-size:18px}
+  #scene-adventure .scene-panel{padding-bottom:10px}
+  #scene-adventure .control-panel{padding-top:16px}
+  #scene-adventure .lesson-title{font-size:20px;line-height:1.18}
+  #scene-adventure .lesson-copy{font-size:13px;line-height:1.45}
+  #scene-adventure .ratio-note{font-size:11.5px;line-height:1.35;padding:8px 10px}
+  #scene-adventure .kite-feedback{font-size:11px;line-height:1.32;padding:8px 10px}
+  #scene-adventure .stat span{font-size:11px;line-height:1.25}
+  #scene-adventure .stat strong{font-size:22px}
+  #scene-adventure .actionsrow{margin-top:2px}
+  #scene-adventure .kite-levels{padding-bottom:6px}
+}
+
+
+/* v1.18 - Always fit the entire circle on compact Android viewports */
+@media (max-width:620px){
+  #scene-circle .mainlayout{grid-template-rows:minmax(0,42%) minmax(0,1fr)}
+  #scene-circle .circle-stage{min-height:0!important; height:auto!important; flex:1 1 0!important; overflow:visible!important}
+  #scene-circle .circle-stage svg{width:100%!important;height:100%!important;max-height:100%!important;display:block;overflow:visible!important}
+  #scene-circle .circle-side-legend{display:none!important}
+  #scene-circle .scene-panel{min-height:0;overflow:hidden}
+  #scene-circle .control-panel{min-height:0;overflow-y:auto}
+}
+@media (max-width:620px) and (max-height:700px){
+  #scene-circle .mainlayout{grid-template-rows:minmax(0,42%) minmax(0,1fr)}
+  #scene-circle .circle-stage{min-height:0!important;}
+}
+</style>
+</head>
+<body>
+  <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand" aria-label="Triggle! Trigonometry Playground"><span class="brandmark" aria-hidden="true">△</span> Triggle<span>!</span></div>
+      <div class="topright"><a class="back-solutions" href="./index.html" aria-label="Explore Classes 9 to 12">📚 <span class="back-full">Classes 9–12</span><span class="back-short">Classes</span></a><div class="starscore" title="Stars earned while playing"><span aria-hidden="true">⭐</span> <strong id="score">0</strong> <span style="color:#a8a9bb;font-weight:600;font-size:11px">stars</span></div><button class="soundbtn" type="button" id="soundBtn" aria-pressed="false" aria-label="Turn celebration sounds on" title="Sound on / off">🔇</button></div>
+    </header>
+    <section class="hero" aria-label="Welcome to the playground">
+      <div class="hero-text"><p class="eyebrow">THE LITTLE MATHS ADVENTURE</p><h1>Angles are <em>awesome.</em></h1><p>Move it. Spin it. Fly a kite. Discover how triangles hide amazing secrets—one playful tap at a time!</p></div>
+      <div class="hero-art" aria-hidden="true"><div id="sparkStage"></div><div class="mini-star">✦</div><div class="hero-mascot"><span class="mascot-cap">✏️</span><span class="eye"></span><span class="eye"></span><span class="smile"></span></div></div>
+    </section>
+    <div class="basic-langbar" aria-label="Quick navigation and language"><a href="./index.html" class="mobile-answers-link" ><span aria-hidden="true">← 📚</span><span class="mobile-answer-label">Classes 9–12</span></a><span class="language-label">Language / மொழி</span><button id="basicLangEn" type="button" aria-pressed="true" class="active">EN</button><button id="basicLangTa" type="button" aria-pressed="false">தமிழ்</button></div>
+<nav class="tabs" aria-label="Explore the five activities" role="tablist">
+      <button id="tab-triangle" class="tab" type="button" role="tab" aria-controls="scene-triangle" aria-selected="true" data-scene="triangle"><span class="em" aria-hidden="true">🛝</span><span><small>01</small> Triangle Lab</span></button>
+      <button id="tab-circle" class="tab" type="button" role="tab" aria-controls="scene-circle" aria-selected="false" data-scene="circle" tabindex="-1"><span class="em" aria-hidden="true">🎡</span><span><small>02</small> Circle Magic</span></button>
+      <button id="tab-wave" class="tab" type="button" role="tab" aria-controls="scene-wave" aria-selected="false" data-scene="wave" tabindex="-1"><span class="em" aria-hidden="true">🌊</span><span><small>03</small> Wave Party</span></button>
+      <button id="tab-adventure" class="tab" type="button" role="tab" aria-controls="scene-adventure" aria-selected="false" data-scene="adventure" tabindex="-1"><span class="em" aria-hidden="true">🪁</span><span><small>04</small> Kite Rescue</span></button>
+      <button id="tab-game" class="tab" type="button" role="tab" aria-controls="scene-game" aria-selected="false" data-scene="game" tabindex="-1"><span class="em" aria-hidden="true">🏆</span><span><small>05</small> Star Quest</span></button>
+    </nav>
+
+    <main>
+      <section id="scene-triangle" class="scene active" role="tabpanel" aria-labelledby="tab-triangle">
+        <div class="mainlayout">
+          <div class="panel scene-panel">
+            <div class="panelhead"><h2>Meet the magic triangle</h2><span class="pill">👆 Drag the orange dot</span></div>
+            <div class="svgstage">
+              <svg id="triSvg" viewBox="0 0 650 430" role="img" aria-label="A live right triangle whose angle, height and base change together">
+                <defs><pattern id="gridTri" width="29" height="29" patternUnits="userSpaceOnUse"><path d="M29 0 H0 V29" stroke="#f0edf7" stroke-width="1" fill="none"/></pattern></defs>
+                <rect x="0" y="0" width="650" height="430" fill="url(#gridTri)"/>
+                <text x="28" y="37" fill="#a3a2b8" font-size="15">OUR TRIANGLE IS ALWAYS A RIGHT TRIANGLE</text>
+                <path id="triFill" fill="#fff2bf" fill-opacity=".48" stroke="none"/>
+                <path id="triBase" stroke="#5189ef" stroke-width="10" stroke-linecap="round"/>
+                <path id="triHeight" stroke="#fa78a4" stroke-width="10" stroke-linecap="round"/>
+                <path id="triSlope" stroke="#ffb344" stroke-width="12" stroke-linecap="round"/>
+                <path id="triRight" fill="none" stroke="#676e9c" stroke-width="3"/>
+                <path id="triArc" fill="none" stroke="#7b65df" stroke-width="4"/>
+                <text id="triAngleText" font-size="21" fill="#7655c9" text-anchor="middle">45°</text>
+                <text id="triBaseText" font-size="18" fill="#3475df" text-anchor="middle">base</text>
+                <text id="triHeightText" font-size="18" fill="#e45088" text-anchor="start">height</text>
+                <text id="triSlopeText" font-size="18" fill="#a46b1b" text-anchor="middle">10 units</text>
+                <circle id="triDot" cx="0" cy="0" r="18" fill="#ffc96c" stroke="#fff" stroke-width="5"/>
+                <circle id="triDrag" cx="0" cy="0" r="38" fill="transparent" stroke="none" style="cursor:grab;touch-action:none" tabindex="0" role="slider" aria-label="Triangle angle" aria-valuemin="15" aria-valuemax="75" aria-valuenow="45"/>
+              </svg>
+            </div>
+            <p class="captionline">Orange = slide · Blue = base · Pink = height</p>
+          </div>
+          <div class="panel control-panel">
+            <div class="mode-title"><span class="intro-tag">LESSON 1 · START HERE</span><h2 class="lesson-title">Make the slide taller!</h2><p class="lesson-copy">The orange slide stays <b>10 units long</b>. Change its angle. What happens to the blue ground and pink height?</p></div>
+            <div><div class="rangehead"><label for="triSlider">Slide angle</label><span id="triAngle" class="bigangle">45°</span></div><input id="triSlider" class="ranger" type="range" min="15" max="75" step="1" value="45"><div class="presets" data-presets="triangle"><button class="preset" data-angle="30" type="button">30°</button><button class="preset" data-angle="45" type="button">45°</button><button class="preset" data-angle="60" type="button">60°</button></div></div>
+            <div class="sidevals"><div class="sidebox pink"><strong id="triOpp">7.07</strong><span>Pink height</span></div><div class="sidebox blue"><strong id="triAdj">7.07</strong><span>Blue base</span></div><div class="sidebox orange"><strong>10</strong><span>Orange slide</span></div></div>
+            <div class="ratio-note" id="triInsight" aria-live="polite"><b>Wow!</b> At 45°, height and base are equal.</div>
+            <div class="formula-grid" aria-label="Three easy trigonometry relationships">
+              <div class="formula"><span>💗 <b>Sine</b> = height / slide</span><strong class="sine" id="triSin">0.707</strong></div>
+              <div class="formula"><span>💙 <b>Cosine</b> = base / slide</span><strong class="cosine" id="triCos">0.707</strong></div>
+              <div class="formula"><span>💜 <b>Tangent</b> = height / base</span><strong class="tangent" id="triTan">1.000</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-circle" class="scene" role="tabpanel" aria-labelledby="tab-circle" hidden>
+        <div class="mainlayout">
+          <div class="panel scene-panel">
+            <div class="panelhead"><h2>A tiny dot goes on an adventure</h2><span class="pill">🔄 Drag around</span></div>
+            <div class="svgstage circle-stage">
+              <svg id="circleSvg" viewBox="0 0 650 430" preserveAspectRatio="xMidYMid meet" role="img" aria-label="A movable point on a unit circle showing sine as vertical height and cosine as horizontal position">
+                <defs><pattern id="gridCircle" width="29" height="29" patternUnits="userSpaceOnUse"><path d="M29 0 H0 V29" stroke="#f0edf7" stroke-width="1" fill="none"/></pattern></defs>
+                <rect x="0" y="0" width="650" height="430" fill="url(#gridCircle)"/>
+                <circle cx="257" cy="218" r="155" fill="#f9f6ff" stroke="#aaa1eb" stroke-width="5"/>
+                <line x1="65" y1="218" x2="455" y2="218" stroke="#afb4cd" stroke-width="3.5"/>
+                <line x1="257" y1="24" x2="257" y2="413" stroke="#afb4cd" stroke-width="3.5"/>
+                <text x="448" y="203" font-size="24" font-weight="700" fill="#7f86a0">x</text><text x="268" y="42" font-size="24" font-weight="700" fill="#7f86a0">y</text>
+                <text x="420" y="242" font-size="20" font-weight="700" fill="#9b95b2">+1</text><text x="70" y="242" font-size="20" font-weight="700" fill="#9b95b2">−1</text>
+                <text x="270" y="78" font-size="20" font-weight="700" fill="#9b95b2">+1</text><text x="272" y="383" font-size="20" font-weight="700" fill="#9b95b2">−1</text>
+                <path id="orbitArc" fill="none" stroke="#b89cf5" stroke-width="5" stroke-linecap="round"/>
+                <path id="orbitRadius" stroke="#ffb44c" stroke-width="7" stroke-linecap="round"/>
+                <path id="orbitCos" stroke="#4d83f4" stroke-width="10" stroke-linecap="round"/>
+                <path id="orbitSin" stroke="#f96fa4" stroke-width="10" stroke-linecap="round"/>
+                <circle id="orbitPoint" r="15" fill="#ffc762" stroke="white" stroke-width="5"/>
+                <circle id="orbitDrag" r="39" fill="transparent" style="cursor:grab;touch-action:none" tabindex="0" role="slider" aria-label="Angle around the circle" aria-valuemin="0" aria-valuemax="360" aria-valuenow="45"/>
+                <text class="circle-side-legend" x="482" y="118" fill="#ee608f" font-size="26" font-weight="700">PINK</text><text class="circle-side-legend" x="482" y="148" fill="#737a96" font-size="21" font-weight="600">up / down</text><text class="circle-side-legend" x="482" y="190" fill="#4182eb" font-size="26" font-weight="700">BLUE</text><text class="circle-side-legend" x="482" y="220" fill="#737a96" font-size="21" font-weight="600">left / right</text>
+                <text class="circle-side-legend" x="482" y="284" fill="#9891ac" font-size="21" font-weight="600">One lap =</text><text class="circle-side-legend" x="482" y="326" fill="#7162b9" font-size="40" font-weight="700">360°</text>
+              </svg>
+            </div>
+            <p class="captionline">The circle has radius 1. Blue = cosine; Pink = sine.</p>
+          </div>
+          <div class="panel control-panel">
+            <div class="mode-title"><span class="intro-tag">LESSON 2 · SPIN TO LEARN</span><h2 class="lesson-title">Sine & cosine live on a circle!</h2><p class="lesson-copy">The dot travels around a circle. Its <b>left–right</b> place is cosine. Its <b>up–down</b> place is sine.</p></div>
+            <div><div class="rangehead"><label for="orbitSlider">Where is the dot?</label><span class="bigangle" id="orbitAngle">45°</span></div><input id="orbitSlider" class="ranger" type="range" min="0" max="360" value="45" step="1"><div class="presets" data-presets="circle"><button class="preset" data-angle="0" type="button">0°</button><button class="preset" data-angle="30" type="button">30°</button><button class="preset" data-angle="90" type="button">90°</button><button class="preset" data-angle="180" type="button">180°</button><button class="preset" data-angle="270" type="button">270°</button></div></div>
+            <div class="statpair"><div class="stat blue"><span>💙 Cosine (sideways)</span><strong id="orbitCosVal">0.707</strong></div><div class="stat pink"><span>💗 Sine (up & down)</span><strong id="orbitSinVal">0.707</strong></div></div>
+            <div class="actionsrow"><button type="button" class="action" id="spinBtn">▶ Spin the dot</button><button type="button" class="action secondary" id="spinReset">↺ Start at 0°</button></div>
+            <div class="tip"><span class="tip-icon">💡</span><span id="orbitInsight"><b>Magic secret:</b> Cosine tells you x; sine tells you y. At 0°, you are all the way to the right!</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-wave" class="scene" role="tabpanel" aria-labelledby="tab-wave" hidden>
+        <div class="mainlayout">
+          <div class="panel scene-panel">
+            <div class="panelhead"><h2>Watch maths draw an ocean</h2><span class="pill">🌊 Move to trace the waves</span></div>
+            <div class="svgstage">
+              <svg id="waveSvg" viewBox="0 0 700 355" role="img" aria-label="Sine and cosine waves from zero to 360 degrees, with a movable angle cursor">
+                <defs><pattern id="gridWave" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0 H0 V30" stroke="#f0edf7" fill="none" stroke-width="1"/></pattern></defs>
+                <rect x="0" y="0" width="700" height="355" fill="url(#gridWave)"/>
+                <line x1="60" y1="170" x2="650" y2="170" class="waveaxis"/>
+                <line x1="60" y1="51" x2="60" y2="290" class="waveaxis"/>
+                <g stroke="#e7e7f3" stroke-width="1.5" stroke-dasharray="5 7"><line x1="60" y1="65" x2="650" y2="65"/><line x1="60" y1="275" x2="650" y2="275"/><line x1="207.5" y1="53" x2="207.5" y2="290"/><line x1="355" y1="53" x2="355" y2="290"/><line x1="502.5" y1="53" x2="502.5" y2="290"/></g>
+                <g class="microlabel"><text x="27" y="70">+1</text><text x="35" y="174">0</text><text x="26" y="280">−1</text><text x="52" y="321">0°</text><text x="195" y="321">90°</text><text x="339" y="321">180°</text><text x="484" y="321">270°</text><text x="628" y="321">360°</text></g>
+                <path id="sinePath" stroke="#f56b9c" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <path id="cosPath" stroke="#5389f0" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <line id="waveCursor" x1="0" y1="56" x2="0" y2="287" stroke="#7c6bcc" stroke-width="3" stroke-dasharray="7 5"/>
+                <circle id="sinePoint" r="10" fill="#f56b9c" stroke="white" stroke-width="4"/>
+                <circle id="cosPoint" r="10" fill="#5389f0" stroke="white" stroke-width="4"/>
+                <text id="waveTopLabel" y="38" fill="#7055b8" font-size="17" text-anchor="middle" class="pointlabel">45°</text>
+              </svg>
+            </div>
+            <p class="captionline">Every dot on a wave matches an angle on the circle!</p>
+          </div>
+          <div class="panel control-panel">
+            <div class="mode-title"><span class="intro-tag">LESSON 3 · MAKE A WAVE</span><h2 class="lesson-title">Hello, wiggly waves!</h2><p class="lesson-copy">Imagine a dot spinning on the circle. Write down how high it goes at every angle. Ta-da—you get a <b>sine wave</b>!</p></div>
+            <div><div class="rangehead"><label for="waveSlider">Travel through one full turn</label><span id="waveAngle" class="bigangle">45°</span></div><input id="waveSlider" class="ranger" type="range" min="0" max="360" value="45" step="1"><div class="presets" data-presets="wave"><button class="preset" data-angle="0" type="button">0°</button><button class="preset" data-angle="90" type="button">90°</button><button class="preset" data-angle="180" type="button">180°</button><button class="preset" data-angle="270" type="button">270°</button><button class="preset" data-angle="360" type="button">360°</button></div></div>
+            <div class="toggleline"><button class="toggle pink" aria-pressed="true" type="button" id="sineToggle"><span class="dot"></span>Show sine</button><button class="toggle" aria-pressed="true" type="button" id="cosToggle"><span class="dot"></span>Show cosine</button></div>
+            <div class="statpair"><div class="stat pink"><span>💗 Sine (pink)</span><strong id="waveSinVal">0.707</strong></div><div class="stat blue"><span>💙 Cosine (blue)</span><strong id="waveCosVal">0.707</strong></div></div>
+            <div class="actionsrow"><button class="action" id="wavePlay" type="button">▶ Watch the wave</button><button class="action secondary" id="waveReset" type="button">↺ Restart</button></div>
+            <div class="wave-fact" id="waveInsight"><b>Try 90°:</b> The pink sine wave reaches its tallest peak!</div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="scene-adventure" class="scene" role="tabpanel" aria-labelledby="tab-adventure" hidden>
+        <div class="mainlayout">
+          <div class="panel scene-panel">
+            <div class="panelhead"><h2 id="adventureSceneTitle">Help the kite reach the star!</h2><span class="pill" id="adventureCount">🪁 Mission 1 / 3</span></div>
+            <div class="svgstage kite-stage">
+              <svg id="kiteSvg" viewBox="0 0 640 390" role="img" aria-label="A kite on a ten metre string moving to match a star at a target height">
+                <defs><linearGradient id="kiteSky" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e6edff"/><stop offset="1" stop-color="#fef6e6"/></linearGradient></defs>
+                <rect width="640" height="390" fill="url(#kiteSky)"/>
+                <g fill="#fff" opacity=".78"><ellipse cx="102" cy="85" rx="62" ry="23"/><ellipse cx="149" cy="90" rx="51" ry="21"/><ellipse cx="515" cy="72" rx="67" ry="26"/><ellipse cx="557" cy="77" rx="47" ry="21"/></g>
+                <path d="M0 333 Q110 309 250 331 T510 323 T640 330 L640 390 L0 390Z" fill="#d5f4e8"/><path d="M0 350 Q220 330 380 350 T640 341 L640 390 L0 390Z" fill="#b2e8d5"/>
+                <line id="kiteTargetLine" x1="72" x2="570" y1="185" y2="185" stroke="#ae79db" stroke-width="3" stroke-dasharray="8 8" opacity=".65"/>
+                <circle id="kiteTargetHalo" cx="350" cy="185" r="31" fill="#ffd86d" opacity=".3"/>
+                <text id="kiteTargetStar" x="350" y="201" text-anchor="middle" font-size="45">⭐</text>
+                <text id="kiteTargetLabel" x="76" y="170" fill="#7653a8" font-size="19" font-weight="700">Target: 5.0 m</text>
+                <line id="kiteGroundDistance" x1="122" y1="331" x2="340" y2="331" stroke="#639fe6" stroke-width="7" stroke-linecap="round"/>
+                <line id="kiteHeightLine" x1="340" y1="331" x2="340" y2="205" stroke="#fa78a4" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 8"/>
+                <line id="kiteRope" x1="122" y1="331" x2="340" y2="205" stroke="#f2a13d" stroke-width="6" stroke-linecap="round"/>
+                <path id="kiteAngleArc" stroke="#7d65c8" stroke-width="4" fill="none"/>
+                <text id="kiteAngleText" x="189" y="305" fill="#7d65c8" font-size="23">25°</text>
+                <g transform="translate(122 327)"><circle cx="0" cy="-29" r="16" fill="#f4bb84"/><path d="M-14 -44 Q0 -66 14 -44" fill="none" stroke="#4a3950" stroke-width="9" stroke-linecap="round"/><path d="M-13 -10 Q0 -25 13 -10 L20 22 L-18 22Z" fill="#746fe7"/><path d="M-12 22 l-9 18 M12 22 l9 18" stroke="#564580" stroke-width="7" stroke-linecap="round"/></g>
+                <g id="kiteArt" transform="translate(340 205)"><path d="M0 -29 L27 0 L0 28 L-27 0Z" fill="#fb81ae" stroke="#c65191" stroke-width="3"/><path d="M0 -29V28 M-27 0H27" stroke="#fff6dd" stroke-width="3"/><path d="M0 28 Q20 42 4 53 T8 80" fill="none" stroke="#9b7ccf" stroke-width="4"/><circle cx="-7" cy="-3" r="3" fill="#4a3950"/><circle cx="8" cy="-3" r="3" fill="#4a3950"/><path d="M-5 9 Q0 15 6 9" stroke="#4a3950" stroke-width="2" fill="none"/></g>
+                <circle id="kiteHandle" cx="340" cy="205" r="42" fill="transparent" tabindex="0" role="slider" aria-label="Kite angle" aria-valuemin="15" aria-valuemax="75" aria-valuenow="25" style="cursor:grab;touch-action:none"/>
+                <text x="472" y="365" fill="#668b84" font-size="17" font-weight="700">Rope = 10 m</text>
+              </svg>
+            </div>
+            <p class="captionline" id="kiteStageCaption">Slide the angle, or drag the kite, until it reaches the shining star.</p>
+          </div>
+          <div class="panel control-panel adventure-panel">
+            <div class="language-bar"><div class="mode-title"><span class="intro-tag" id="adventureLessonTag">STORY ADVENTURE · LEVEL 1</span><h2 class="lesson-title" id="adventureTitle">A kite in the clouds!</h2></div><div class="lang-switch" aria-label="Adventure language"><button id="langEnglish" type="button" class="lang-button active" aria-pressed="true">EN</button><button id="langTamil" type="button" class="lang-button" aria-pressed="false">தமிழ்</button></div></div>
+            <p class="lesson-copy" id="adventureStory">Help Miko fly a kite exactly 5 metres high. The rope is always 10 metres long.</p>
+            <div><div class="rangehead"><label for="kiteSlider" id="kiteSliderLabel">Tilt the kite rope</label><span class="bigangle" id="kiteAngle">25°</span></div><input id="kiteSlider" class="ranger" type="range" min="15" max="75" step="1" value="25"><div class="presets" id="kitePresets"><button class="preset" data-kite="30" type="button">30°</button><button class="preset" data-kite="45" type="button">45°</button><button class="preset" data-kite="60" type="button">60°</button></div></div>
+            <div class="statpair"><div class="stat pink"><span id="kiteHeightCaption">💗 Your kite's height</span><strong id="kiteCurrentHeight">4.2 m</strong></div><div class="stat blue"><span id="kiteTargetCaption">⭐ Star's height</span><strong id="kiteGoalHeight">5.0 m</strong></div></div>
+            <div class="ratio-note" id="kiteFormula">💡 Height = 10 × sin(angle). Try finding the height by changing only the angle!</div>
+            <div class="kite-feedback" id="kiteFeedback" role="status" aria-live="polite">Almost there! Aim a little higher.</div>
+            <div class="actionsrow"><button class="action" type="button" id="kiteCheck">✨ Check my kite</button><button class="action secondary" type="button" id="kiteNext" hidden>Next adventure →</button></div>
+            <div class="kite-levels" id="kiteBadges" aria-label="Mission progress"><span>○</span><span>○</span><span>○</span></div>
+            <p class="privacyline" id="kiteSaveInfo">Progress is saved only on this device. No sign-in or personal details needed.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-game" class="scene" role="tabpanel" aria-labelledby="tab-game" hidden>
+        <div class="challenge-wrap">
+          <div class="panel quizvisual"><div id="quizEmoji" class="gigantic" aria-hidden="true">🚀</div><div class="quiz-visual-title" id="quizMotif">Ready, space cadet?</div><p id="quizHint">Five little missions. Every correct answer earns a shiny star!</p><div class="reward">⭐ <span id="questStars">0</span> mission stars earned</div></div>
+          <div class="panel quizbox"><div class="quiznumber" id="quizCounter">MISSION 1 OF 5</div><div class="progress"><div id="quizProgress"></div></div><h2 id="quizQuestion">Which side of the slide is the height?</h2><div class="answers" id="quizAnswers"></div><div class="feedback" id="quizFeedback" role="status" aria-live="polite">Choose an answer to begin!</div><button class="action quiznext" id="quizNext" type="button" hidden>Next mission →</button><button class="action secondary quizrestart" id="quizRestart" type="button">↺ Play from the start</button></div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="glossary" aria-label="Tiny maths dictionary">
+      <div class="gloss"><strong>📐 Angle</strong><p>How far something has turned. We measure it in degrees (°).</p></div>
+      <div class="gloss"><strong>🧩 Right angle</strong><p>A perfect square corner: 90°, like the corner of a book.</p></div>
+      <div class="gloss"><strong>✨ Trigonometry</strong><p>A clever way to connect angles and lengths.</p></div>
+    </aside>
+    <aside class="glossary" aria-label="Note for parents and teachers" style="grid-template-columns:1fr;margin-top:12px"><div class="gloss"><strong>👨‍👩‍👧 For parents &amp; teachers</strong><p>All five activities are free to play. Optional extra adventures may be offered later; there is no payment or account today. Stars and completed kite missions are stored on this device only.</p></div></aside>
+    <footer class="foot"><span><strong>Triggle! ✦</strong> A little playground for big discoveries</span><span>© <span id="copyrightYear">2026</span> <strong>VIGNESWARAN E R</strong> · All rights reserved.</span></footer>
+  </div>
+  <!-- Optional visual polish: when offline, the lessons and game still work. -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/p5@2.3.3/lib/p5.min.js"></script>
+  <script>
+    (() => {
+      'use strict';
+      const $ = id => document.getElementById(id);
+      const rad = deg => deg * Math.PI / 180;
+      const clamp = (n,a,b) => Math.min(b,Math.max(a,n));
+      const fmt = (n,d=3) => (Math.abs(n)<.0005 ? 0 : n).toFixed(d);
+      const attr = (id, obj) => { const el=$(id); for(const [k,v] of Object.entries(obj)) el.setAttribute(k,v); };
+      const path = (id, value) => $(id).setAttribute('d',value);
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let angle=45, scene='triangle', spinMode=null, raf=0, lastFrame=0, sound=false, audioContext;
+      let showSine=true, showCos=true, missionStars=0, questionIndex=0, answered=false;
+      const SAVE_KEY='triggle.progress.v1';
+      function loadProgress(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'{}');return {stars:Number.isFinite(d.stars)?Math.max(0,Math.min(9999,Math.floor(d.stars))):0,missions:Array.isArray(d.missions)?[0,1,2].map(i=>d.missions[i]===true):[false,false,false],quiz:Array.isArray(d.quiz)?d.quiz.filter(i=>Number.isInteger(i)&&i>=0&&i<5):[]};}catch(e){return {stars:0,missions:[false,false,false],quiz:[]};}}
+      const progress=loadProgress();let totalStars=progress.stars;
+      function saveProgress(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(progress));}catch(e){/* storage may be blocked */}}
+      function awardStars(count){totalStars+=count;progress.stars=totalStars;$('score').textContent=totalStars;saveProgress();}
+      $('score').textContent=totalStars;
+      const kiteMissions=[{deg:30,m:5,titleEn:'Catch the first star!',titleTa:'முதல் நட்சத்திரத்தைப் பிடி!',storyEn:'Miko has a 10-metre kite rope. Can you guide the kite exactly 5 metres above the ground?',storyTa:'மிகோவிடம் 10 மீட்டர் நீளமுள்ள பட்டம் கயிறு உள்ளது. பட்டத்தை நிலத்திலிருந்து 5 மீட்டர் உயரத்துக்குக் கொண்டு செல்ல முடியுமா?'},{deg:45,m:7.1,titleEn:'Reach the rainbow!',titleTa:'வானவில்லைத் தொடு!',storyEn:'The next star is 7.1 metres high. What angle will take the kite there?',storyTa:'அடுத்த நட்சத்திரம் 7.1 மீட்டர் உயரத்தில் உள்ளது. எந்தக் கோணத்தில் பட்டம் அங்கு செல்லும்?'},{deg:60,m:8.7,titleEn:'The highest star!',titleTa:'உயர்ந்த நட்சத்திரம்!',storyEn:'One last challenge! The golden star waits 8.7 metres above the ground.',storyTa:'கடைசிச் சவால்! தங்க நட்சத்திரம் தரையிலிருந்து 8.7 மீட்டர் உயரத்தில் உள்ளது.'}];
+      let kiteLevel=progress.missions.findIndex(x=>!x);if(kiteLevel<0)kiteLevel=0;
+      let kiteAngle=25,kiteLang='en',kiteSolved=false,kiteAttempts=0;
+
+
+      const tabs=[...document.querySelectorAll('.tab')];
+      function activate(name){
+        if(name===scene) return;
+        stopSpin(); scene=name;
+        if(name==='triangle') angle=clamp(angle,15,75);
+        document.querySelectorAll('.scene').forEach(el=> {const active=el.id==='scene-'+name;el.classList.toggle('active',active);el.hidden=!active;});
+        tabs.forEach(t=>{const active=t.dataset.scene===name;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;});
+        render();
+        if(window.gsap && !prefersReduced) {window.gsap.fromTo('#scene-'+name+' .panel',{y:12,opacity:.4},{y:0,opacity:1,duration:.38,stagger:.06,ease:'power2.out',clearProps:'all'});}
+      }
+      tabs.forEach((t,i)=>{
+        t.addEventListener('click',()=>activate(t.dataset.scene));
+        t.addEventListener('keydown',ev=>{
+          if(!['ArrowRight','ArrowLeft','Home','End'].includes(ev.key))return;
+          ev.preventDefault();
+          const next=ev.key==='Home'?0:ev.key==='End'?tabs.length-1:(i+(ev.key==='ArrowRight'?1:tabs.length-1))%tabs.length;
+          tabs[next].focus(); activate(tabs[next].dataset.scene);
+        });
+      });
+      function setAngle(value,manual=true){
+        angle=clamp(Number(value)||0,scene==='triangle'?15:0,scene==='triangle'?75:360);
+        if(manual)stopSpin();render();
+      }
+      function setPresetButtons(){
+        document.querySelectorAll('[data-presets]').forEach(group=>{
+          group.querySelectorAll('[data-angle]').forEach(btn=>btn.classList.toggle('active',Number(btn.dataset.angle)===Math.round(angle)));
+        });
+      }
+      document.querySelectorAll('.preset').forEach(btn=>btn.addEventListener('click',()=>setAngle(btn.dataset.angle)));
+      ['triSlider','orbitSlider','waveSlider'].forEach(id=>$(id).addEventListener('input',ev=>setAngle(ev.target.value)));
+
+      function renderTriangle(){
+        const a=rad(angle), left=98, baseline=351, L=310;
+        const px=left+L*Math.cos(a),py=baseline-L*Math.sin(a);
+        path('triFill',`M ${left} ${baseline} L ${px} ${baseline} L ${px} ${py} Z`);
+        path('triBase',`M ${left} ${baseline} L ${px} ${baseline}`);
+        path('triHeight',`M ${px} ${baseline} L ${px} ${py}`);
+        path('triSlope',`M ${left} ${baseline} L ${px} ${py}`);
+        path('triRight',`M ${px-21} ${baseline} L ${px-21} ${baseline-21} L ${px} ${baseline-21}`);
+        path('triArc',`M ${left+62} ${baseline} A 62 62 0 0 0 ${left+62*Math.cos(a)} ${baseline-62*Math.sin(a)}`);
+        attr('triDot',{cx:px,cy:py});attr('triDrag',{cx:px,cy:py,'aria-valuenow':String(Math.round(angle)),'aria-valuetext':Math.round(angle)+' degrees'});
+        attr('triAngleText',{x:left+83*Math.cos(a/2),y:baseline-83*Math.sin(a/2)-3});
+        attr('triBaseText',{x:(left+px)/2,y:baseline+32});
+        attr('triHeightText',{x:px+20,y:(py+baseline)/2});
+        let midx=(left+px)/2,midy=(py+baseline)/2;
+        attr('triSlopeText',{x:midx-17*Math.sin(a),y:midy-17*Math.cos(a)-10});
+        $('triSlopeText').textContent='slide = 10'; $('triAngleText').textContent=Math.round(angle)+'°';
+        $('triSlider').value=Math.round(angle);$('triAngle').textContent=Math.round(angle)+'°';
+        $('triOpp').textContent=(10*Math.sin(a)).toFixed(2);$('triAdj').textContent=(10*Math.cos(a)).toFixed(2);
+        $('triSin').textContent=fmt(Math.sin(a)); $('triCos').textContent=fmt(Math.cos(a));$('triTan').textContent=fmt(Math.tan(a));
+        $('triInsight').innerHTML= Math.abs(angle-45)<2 ? '<b>Wow!</b> At 45°, height and base are equal.' : angle>45 ? '<b>Look!</b> A bigger angle makes the pink height taller and blue base shorter.' : '<b>Look!</b> A smaller angle makes the blue base longer and pink height shorter.';
+      }
+      function renderOrbit(){
+        const cx=257,cy=218,r=155,a=rad(angle),x=cx+r*Math.cos(a),y=cy-r*Math.sin(a);
+        path('orbitRadius',`M ${cx} ${cy} L ${x} ${y}`);
+        path('orbitCos',`M ${cx} ${cy} L ${x} ${cy}`);
+        path('orbitSin',`M ${x} ${cy} L ${x} ${y}`);
+        const arcR=42;
+        if(angle===0 || angle===360){path('orbitArc','');}
+        else { const endX=cx+arcR*Math.cos(a),endY=cy-arcR*Math.sin(a);path('orbitArc',`M ${cx+arcR} ${cy} A ${arcR} ${arcR} 0 ${angle>180?1:0} 0 ${endX} ${endY}`); }
+        attr('orbitPoint',{cx:x,cy:y});attr('orbitDrag',{cx:x,cy:y,'aria-valuenow':String(Math.round(angle)),'aria-valuetext':Math.round(angle)+' degrees'});
+        $('orbitSlider').value=Math.round(angle);$('orbitAngle').textContent=Math.round(angle)+'°';$('orbitSinVal').textContent=fmt(Math.sin(a));$('orbitCosVal').textContent=fmt(Math.cos(a));
+        let text;
+        if(angle===0 || angle===360)text='At the far right, cosine is 1 and sine is 0.';
+        else if(angle===90)text='At the very top, sine is 1 and cosine is 0.';
+        else if(angle===180)text='At the far left, cosine is −1. Negative means left!';
+        else if(angle===270)text='At the bottom, sine is −1. Negative means down!';
+        else if(angle<90)text='Both sine and cosine are positive: up AND right!';
+        else if(angle<180)text='Sine is positive (up), cosine is negative (left).';
+        else if(angle<270)text='Both are negative: down AND left!';
+        else text='Cosine is positive (right), sine is negative (down).';
+        $('orbitInsight').innerHTML='<b>Magic secret:</b> '+text;
+      }
+      const waveX=deg=>60+590*deg/360;
+      const waveY=(deg,type)=>170-105*(type==='sin'?Math.sin(rad(deg)):Math.cos(rad(deg)));
+      function makeWave(type){let d='';for(let i=0;i<=360;i+=2)d+=(i?'L':'M')+' '+waveX(i).toFixed(2)+' '+waveY(i,type).toFixed(2)+' ';return d;}
+      path('sinePath',makeWave('sin'));path('cosPath',makeWave('cos'));
+      function renderWave(){
+        let x=waveX(angle),a=rad(angle);
+        attr('waveCursor',{x1:x,x2:x});attr('sinePoint',{cx:x,cy:waveY(angle,'sin')});attr('cosPoint',{cx:x,cy:waveY(angle,'cos')});
+        attr('waveTopLabel',{x:clamp(x,83,622)});$('waveTopLabel').textContent=Math.round(angle)+'°';
+        $('waveSlider').value=Math.round(angle);$('waveAngle').textContent=Math.round(angle)+'°';
+        $('waveSinVal').textContent=fmt(Math.sin(a));$('waveCosVal').textContent=fmt(Math.cos(a));
+        $('sinePath').style.display=showSine?'':'none';$('sinePoint').style.display=showSine?'':'none';
+        $('cosPath').style.display=showCos?'':'none';$('cosPoint').style.display=showCos?'':'none';
+        $('waveInsight').innerHTML=angle===90?'<b>At 90°:</b> The sine wave is at its highest point (+1).':angle===270?'<b>At 270°:</b> The sine wave reaches its lowest point (−1).':angle===0||angle===360?'<b>At the start and finish:</b> Sine is 0; cosine is 1. The pattern repeats!':'<b>A wave is a circle unrolled:</b> Pink shows up-and-down position; blue shows sideways position.';
+      }
+      function render(){renderTriangle();renderOrbit();renderWave();setPresetButtons();}
+      // Pointer math uses the SVG's native coordinates: accurate on every phone size.
+      function pointerSVG(svg,event){let p=svg.createSVGPoint();p.x=event.clientX;p.y=event.clientY;let m=svg.getScreenCTM();return m?p.matrixTransform(m.inverse()):null;}
+      function registerDrag(handle,svgId,convert){
+        const el=$(handle),svg=$(svgId); let dragging=false;
+        el.addEventListener('pointerdown',e=>{dragging=true;el.setPointerCapture(e.pointerId);e.preventDefault();});
+        el.addEventListener('pointermove',e=>{if(!dragging)return;let p=pointerSVG(svg,e);if(p)setAngle(convert(p));});
+        el.addEventListener('pointerup',()=>dragging=false);el.addEventListener('pointercancel',()=>dragging=false);
+        el.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();let step=(e.key==='ArrowLeft'||e.key==='ArrowDown')?-1:1;setAngle(Math.round(angle)+step);});
+      }
+      registerDrag('triDrag','triSvg',p=>clamp(Math.atan2(351-p.y,p.x-98)*180/Math.PI,15,75));
+      registerDrag('orbitDrag','circleSvg',p=>(Math.atan2(218-p.y,p.x-257)*180/Math.PI+360)%360);
+      function stopSpin(){spinMode=null;cancelAnimationFrame(raf);raf=0;$('spinBtn').textContent='▶ Spin the dot';$('wavePlay').textContent='▶ Watch the wave';}
+      function spinFrame(now){
+        if(!spinMode)return;
+        if(lastFrame){const elapsed=Math.min(60,now-lastFrame);angle+=elapsed*.035;if(angle>=360)angle-=360;render();}
+        lastFrame=now;raf=requestAnimationFrame(spinFrame);
+      }
+      function toggleSpin(mode){
+        if(spinMode===mode){stopSpin();return;}
+        stopSpin();spinMode=mode;lastFrame=0;
+        if(mode==='circle')$('spinBtn').textContent='❚❚ Pause spinning';else $('wavePlay').textContent='❚❚ Pause the wave';
+        raf=requestAnimationFrame(spinFrame);
+      }
+      $('spinBtn').addEventListener('click',()=>toggleSpin('circle'));
+      $('wavePlay').addEventListener('click',()=>toggleSpin('wave'));
+      $('spinReset').addEventListener('click',()=>setAngle(0));$('waveReset').addEventListener('click',()=>setAngle(0));
+      $('sineToggle').addEventListener('click',()=>{if(showSine&&!showCos)return;showSine=!showSine;$('sineToggle').setAttribute('aria-pressed',String(showSine));renderWave();});
+      $('cosToggle').addEventListener('click',()=>{if(showCos&&!showSine)return;showCos=!showCos;$('cosToggle').setAttribute('aria-pressed',String(showCos));renderWave();});
+      document.addEventListener('visibilitychange',()=>{if(document.hidden)stopSpin();});
+      // More space for the whole unit circle on narrow screens; restore full desktop legend.
+      const circleSVG=$('circleSvg');
+      const syncCircleView=()=>circleSVG.setAttribute('viewBox',window.matchMedia('(max-width:620px)').matches?'55 20 410 385':'0 0 650 430');
+      syncCircleView();window.addEventListener('resize',syncCircleView,{passive:true});
+      // Tiny, optional celebration sound. No sound until the child opts in.
+      $('soundBtn').addEventListener('click',()=>{sound=!sound;$('soundBtn').setAttribute('aria-pressed',String(sound));$('soundBtn').textContent=sound?'🔊':'🔇';$('soundBtn').setAttribute('aria-label',sound?'Turn celebration sounds off':'Turn celebration sounds on');});
+      function ping(){if(!sound)return;try{audioContext=audioContext||new(window.AudioContext||window.webkitAudioContext)();const t=audioContext.currentTime;[523.25,659.25,783.99].forEach((freq,i)=>{const osc=audioContext.createOscillator(),gain=audioContext.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(0.0001,t+i*.09);gain.gain.exponentialRampToValueAtTime(.07,t+i*.09+.012);gain.gain.exponentialRampToValueAtTime(.0001,t+i*.09+.24);osc.connect(gain);gain.connect(audioContext.destination);osc.start(t+i*.09);osc.stop(t+i*.09+.26);});}catch(e){/* audio unavailable */}}
+
+      const textKite={en:{scene:'Help the kite reach the star!',lesson:'STORY ADVENTURE · LEVEL ',storySuffix:'',control:'Tilt the kite rope',height:'💗 Your kite’s height',goal:'⭐ Star’s height',formula:'💡 Height = 10 × sin(angle). The rope stays 10 metres long.',initial:'Try changing the angle, then check your kite!',low:'A little too low! Make the angle bigger.',high:'Too high! Try a smaller angle.',win:'Amazing! 10 × sin({angle}°) ≈ {height} metres. You found the height using trigonometry!',again:'You have already earned this star. Great practice!',check:'✨ Check my kite',next:'Next adventure →',replay:'Play again ↺',level:'🪁 Mission ',caption:'Move the slider or drag the kite to the shining star.',save:'Your progress stays on this device. No account or personal details.',complete:'All 3 missions complete! You can replay the adventures.'},ta:{scene:'பட்டத்தை நட்சத்திரத்திடம் கொண்டு செல்!',lesson:'கதைச் சாகசம் · நிலை ',control:'பட்டத்தின் கோணத்தை மாற்று',height:'💗 பட்டத்தின் உயரம்',goal:'⭐ நட்சத்திர உயரம்',formula:'💡 உயரம் = 10 × sin(கோணம்). கயிறு எப்போதும் 10 மீட்டர்.',initial:'கோணத்தை மாற்றி, பட்டத்தைச் சரிபாருங்கள்!',low:'இன்னும் சற்றுக் கீழே! கோணத்தை உயர்த்துங்கள்.',high:'மிகவும் உயரம்! கோணத்தைக் குறையுங்கள்.',win:'அருமை! 10 × sin({angle}°) ≈ {height} மீட்டர். முக்கோணவியல் மூலம் உயரத்தைக் கண்டுபிடித்தாய்!',again:'இந்த நட்சத்திரத்தை ஏற்கெனவே வென்றுள்ளீர்கள். மீண்டும் விளையாடலாம்!',check:'✨ சரிபார்',next:'அடுத்த சாகசம் →',replay:'மீண்டும் விளையாடு ↺',level:'🪁 நிலை ',caption:'பட்டத்தை இழுத்தோ ஸ்லைடரை நகர்த்தியோ நட்சத்திரத்தை அடையுங்கள்.',save:'முன்னேற்றம் இந்தச் சாதனத்தில் மட்டுமே சேமிக்கப்படும். கணக்கு தேவையில்லை.',complete:'மூன்று சாகசங்களும் முடிந்தன! மீண்டும் விளையாடலாம்.'}};
+      function renderKite(){
+        const m=kiteMissions[kiteLevel], t=textKite[kiteLang], a=rad(kiteAngle),goal=rad(m.deg),ox=122,oy=331,rope=265;
+        const x=ox+rope*Math.cos(a),y=oy-rope*Math.sin(a),sx=ox+rope*Math.cos(goal),sy=oy-rope*Math.sin(goal),height=10*Math.sin(a);
+        attr('kiteRope',{x1:ox,y1:oy,x2:x,y2:y});attr('kiteHeightLine',{x1:x,x2:x,y1:oy,y2:y});attr('kiteGroundDistance',{x1:ox,x2:x,y1:oy,y2:oy});
+        attr('kiteTargetLine',{y1:sy,y2:sy});attr('kiteTargetHalo',{cx:sx,cy:sy});attr('kiteTargetStar',{x:sx,y:sy+13});
+        attr('kiteTargetLabel',{y:Math.max(28,sy-19)});$('kiteTargetLabel').textContent=(kiteLang==='en'?'Target: ':'இலக்கு: ')+m.m.toFixed(1)+' m';
+        path('kiteAngleArc',`M ${ox+58} ${oy} A 58 58 0 0 0 ${ox+58*Math.cos(a)} ${oy-58*Math.sin(a)}`);
+        attr('kiteAngleText',{x:ox+80*Math.cos(a/2),y:oy-80*Math.sin(a/2)-8});$('kiteAngleText').textContent=kiteAngle+'°';
+        $('kiteArt').setAttribute('transform',`translate(${x} ${y})`);
+        attr('kiteHandle',{cx:x,cy:y,'aria-valuenow':kiteAngle,'aria-valuetext':kiteAngle+' degrees'});
+        $('kiteSlider').value=kiteAngle;$('kiteAngle').textContent=kiteAngle+'°';$('kiteCurrentHeight').textContent=height.toFixed(1)+' m';$('kiteGoalHeight').textContent=m.m.toFixed(1)+' m';
+        $('adventureTitle').textContent=m[kiteLang==='en'?'titleEn':'titleTa'];$('adventureStory').textContent=m[kiteLang==='en'?'storyEn':'storyTa'];
+        $('adventureSceneTitle').textContent=t.scene;$('adventureLessonTag').textContent=t.lesson+(kiteLevel+1);$('adventureCount').textContent=t.level+(kiteLevel+1)+' / 3';
+        $('kiteSliderLabel').textContent=t.control;$('kiteHeightCaption').textContent=t.height;$('kiteTargetCaption').textContent=t.goal;$('kiteFormula').textContent=t.formula;$('kiteStageCaption').textContent=t.caption;$('kiteSaveInfo').textContent=t.save;
+        $('kiteCheck').textContent=t.check;$('kiteNext').textContent=kiteLevel===2?t.replay:t.next;
+        $('langEnglish').classList.toggle('active',kiteLang==='en');$('langTamil').classList.toggle('active',kiteLang==='ta');
+        $('langEnglish').setAttribute('aria-pressed',String(kiteLang==='en'));$('langTamil').setAttribute('aria-pressed',String(kiteLang==='ta'));
+        $('kiteBadges').replaceChildren();progress.missions.forEach(done=>{const el=document.createElement('span');el.textContent=done?'★':'○';if(done)el.className='earned';$('kiteBadges').append(el);});
+        $('kiteNext').hidden=!kiteSolved;
+        $('kiteFeedback').classList.toggle('success',kiteSolved);
+        if(!kiteSolved && !kiteAttempts)$('kiteFeedback').textContent=t.initial;
+        else if(kiteSolved)$('kiteFeedback').textContent=progress.missions[kiteLevel]&&kiteAttempts===0?t.again:t.win.replace('{angle}',kiteAngle).replace('{height}',height.toFixed(1));
+      }
+      function setKiteAngle(a){kiteAngle=clamp(Math.round(a),15,75);kiteSolved=false;kiteAttempts=0;renderKite();}
+      $('kiteSlider').addEventListener('input',e=>setKiteAngle(Number(e.target.value)));
+      document.querySelectorAll('[data-kite]').forEach(btn=>btn.addEventListener('click',()=>setKiteAngle(Number(btn.dataset.kite))));
+      $('langEnglish').addEventListener('click',()=>{kiteLang='en';renderKite();});$('langTamil').addEventListener('click',()=>{kiteLang='ta';renderKite();});
+      registerDragKite();
+      function registerDragKite(){const el=$('kiteHandle'), svg=$('kiteSvg');let dragging=false;
+        el.addEventListener('pointerdown',e=>{dragging=true;el.setPointerCapture(e.pointerId);e.preventDefault();});
+        el.addEventListener('pointermove',e=>{if(!dragging)return;const p=pointerSVG(svg,e);if(p)setKiteAngle(Math.atan2(331-p.y,p.x-122)*180/Math.PI);});
+        el.addEventListener('pointerup',()=>dragging=false);el.addEventListener('pointercancel',()=>dragging=false);
+        el.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();setKiteAngle(kiteAngle+(e.key==='ArrowLeft'||e.key==='ArrowDown'?-1:1));});
+      }
+      $('kiteCheck').addEventListener('click',()=>{const m=kiteMissions[kiteLevel],t=textKite[kiteLang],height=10*Math.sin(rad(kiteAngle));kiteAttempts++;
+        if(Math.abs(height-10*Math.sin(rad(m.deg)))<=.27){kiteSolved=true;
+          if(!progress.missions[kiteLevel]){progress.missions[kiteLevel]=true;awardStars(2);} ping();burst();
+          $('kiteFeedback').textContent=t.win.replace('{angle}',kiteAngle).replace('{height}',height.toFixed(1));$('kiteFeedback').classList.add('success');$('kiteNext').hidden=false;renderKite();
+        }else {$('kiteFeedback').textContent=height<10*Math.sin(rad(m.deg))?t.low:t.high;$('kiteFeedback').classList.remove('success');}
+      });
+      $('kiteNext').addEventListener('click',()=>{kiteLevel=(kiteLevel+1)%kiteMissions.length;kiteAngle=25;kiteSolved=false;kiteAttempts=0;renderKite();});
+
+      // Children always get a kind explanation after an answer.
+      const questions=[
+        {q:'Which colour shows the HEIGHT of our slide?',opts:['💗 Pink','💙 Blue','🧡 Orange'],right:0,why:'Pink is the height. It goes straight up and down!',emoji:'🛝',motif:'Spot the secret side'},
+        {q:'A perfect square corner measures…',opts:['45°','90°','180°'],right:1,why:'90° is a right angle, like the corner of a book!',emoji:'📐',motif:'Corner detective'},
+        {q:'Sine is a simple secret formula. Which one?',opts:['Height / slide','Base / slide','Height + base'],right:0,why:'Yes! Sine = the opposite (height) divided by the hypotenuse (slide).',emoji:'💗',motif:'Sine superstar'},
+        {q:'At the very TOP of the circle (90°), sine is…',opts:['0','1','−1'],right:1,why:'Sine is the up-and-down position, so at the top it reaches +1!',emoji:'🎡',motif:'Go to the top'},
+        {q:'When a dot spins, its up-and-down movement draws a…',opts:['Square','Triangle','Wave'],right:2,why:'Exactly! Plot its height over a full turn and you get a sine wave!',emoji:'🌊',motif:'Master of the waves'}
+      ];
+      function renderQuiz(){
+        if(questionIndex>=questions.length){$('quizCounter').textContent='QUEST COMPLETE!';$('quizProgress').style.width='100%';$('quizQuestion').textContent='You did it, maths explorer! 🎉';$('quizAnswers').replaceChildren();$('quizFeedback').textContent=`You earned ${missionStars} of 5 mission stars. Every try helps your brain grow!`;$('quizNext').hidden=true;$('quizEmoji').textContent='🏆';$('quizMotif').textContent='Super star explorer!';$('quizHint').textContent='You can always come back for another round.';return;}
+        const q=questions[questionIndex];answered=false;
+        $('quizCounter').textContent=`MISSION ${questionIndex+1} OF ${questions.length}`;
+        $('quizProgress').style.width=(questionIndex/questions.length*100)+'%';
+        $('quizQuestion').textContent=q.q;$('quizEmoji').textContent=q.emoji;$('quizMotif').textContent=q.motif;$('quizHint').textContent='Choose what you think. Mistakes are part of learning!';
+        $('quizFeedback').textContent='Tap an answer to find out.';$('quizNext').hidden=true;
+        const holder=$('quizAnswers');holder.replaceChildren();
+        q.opts.forEach((option,i)=>{const b=document.createElement('button');b.className='answer';b.type='button';b.textContent=option;b.addEventListener('click',()=>answerQuiz(i));holder.appendChild(b);});
+      }
+      function answerQuiz(i){if(answered||questionIndex>=questions.length)return;answered=true;const q=questions[questionIndex],correct=i===q.right;const buttons=[...$('quizAnswers').children];buttons.forEach((b,j)=>{b.disabled=true;if(j===q.right)b.classList.add('correct');if(i===j&&!correct)b.classList.add('wrong');});
+        if(correct){missionStars++;if(!progress.quiz.includes(questionIndex)){progress.quiz.push(questionIndex);awardStars(1);} $('questStars').textContent=missionStars;$('quizFeedback').textContent='🌟 Correct! '+q.why;ping();burst();}else{$('quizFeedback').textContent='💜 Good try! '+q.why;}
+        $('quizNext').textContent=questionIndex===questions.length-1?'See your trophy 🏆':'Next mission →';$('quizNext').hidden=false;$('quizProgress').style.width=((questionIndex+1)/questions.length*100)+'%';
+        if(window.gsap&&!prefersReduced)window.gsap.fromTo('#quizFeedback',{scale:.93},{scale:1,duration:.3,ease:'back.out(2)'});
+      }
+      $('quizNext').addEventListener('click',()=>{if(!answered)return;questionIndex++;renderQuiz();});
+      $('quizRestart').addEventListener('click',()=>{questionIndex=0;missionStars=0;$('questStars').textContent='0';renderQuiz();});
+      // Lightweight canvas confetti: rewards happen only on a correct answer.
+      const confetti=$('confetti'),ctx=confetti.getContext('2d');let particles=[],confettiRAF=0;
+      function sizeConfetti(){let dpr=Math.min(window.devicePixelRatio||1,2);confetti.width=Math.round(innerWidth*dpr);confetti.height=Math.round(innerHeight*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);}
+      window.addEventListener('resize',sizeConfetti,{passive:true});sizeConfetti();
+      function burst(){
+        if(prefersReduced)return;
+        sizeConfetti();particles=[];
+        const w=innerWidth,h=innerHeight,colors=['#ffb345','#f168a0','#5d81f4','#3bc6ae','#9872ed','#f6d759'];
+        const centers=[[.25,.30],[.75,.30],[.50,.45]];
+        centers.forEach(([cx,cy],group)=>{for(let i=0;i<65;i++){
+          const ang=2*Math.PI*i/65+(Math.random()-.5)*.18,vel=2.2+Math.random()*4.6;
+          particles.push({x:cx*w,y:cy*h,vx:Math.cos(ang)*vel,vy:Math.sin(ang)*vel-1.3,size:4+Math.random()*5,rot:Math.random()*6,vr:(Math.random()-.5)*.2,color:colors[(i+group)%colors.length],life:58+Math.random()*37});
+        }});
+        cancelAnimationFrame(confettiRAF);animateConfetti();
+      }
+      function animateConfetti(){ctx.clearRect(0,0,innerWidth,innerHeight);particles=particles.filter(p=>p.life>0);particles.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.16;p.vx*=.994;p.rot+=p.vr;p.life--;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.fillStyle=p.color;ctx.globalAlpha=Math.min(1,p.life/20);ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*.57);ctx.restore();});if(particles.length)confettiRAF=requestAnimationFrame(animateConfetti);else ctx.clearRect(0,0,innerWidth,innerHeight);}
+      // p5.js creates an optional twinkling, interactive-feeling mascot backdrop.
+      function initP5(){if(!window.p5||prefersReduced)return;try{new window.p5(p=>{let dots=[];p.setup=()=>{const host=$('sparkStage');p.createCanvas(host.clientWidth||265,host.clientHeight||160).parent(host);p.noStroke();dots=Array.from({length:22},()=>({x:p.random(p.width),y:p.random(p.height),r:p.random(2,5),phase:p.random(6.28),speed:p.random(.008,.019)}));};p.draw=()=>{p.clear();dots.forEach(d=>{const v=.5+.5*Math.sin(p.millis()*d.speed+d.phase);p.fill(164,130,226,60+140*v);p.circle(d.x,d.y,d.r*(.8+v));});};p.windowResized=()=>{const host=$('sparkStage');p.resizeCanvas(host.clientWidth||265,host.clientHeight||160);};},'sparkStage');}catch(e){/* progressive enhancement */}}
+      window.addEventListener('load',initP5,{once:true});
+      $('copyrightYear').textContent=String(new Date().getFullYear());
+      if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost')){
+        window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}),{once:true});
+      }
+      // v1.12 language support. Interactive geometry, wave and quiz logic are unchanged.
+      let basicLang='en';
+      const bLoc=[
+        ['.hero-text .eyebrow','குட்டி கணிதச் சாகசம்'],
+        ['.hero-text h1','கோணங்கள் <em>அற்புதமானவை!</em>'],
+        ['.hero-text p:last-child','இழுத்துப் பாருங்கள், சுழற்றுங்கள், பட்டம் விடுங்கள்! முக்கோணங்களின் ரகசியங்களை விளையாடிக்கொண்டே அறியுங்கள்.'],
+        ['.tab[data-scene="triangle"] span:last-child','<small>01</small> முக்கோண ஆய்வகம்'],
+        ['.tab[data-scene="circle"] span:last-child','<small>02</small> வட்ட மாயம்'],
+        ['.tab[data-scene="wave"] span:last-child','<small>03</small> அலை விளையாட்டு'],
+        ['.tab[data-scene="adventure"] span:last-child','<small>04</small> பட்டம் மீட்பு'],
+        ['.tab[data-scene="game"] span:last-child','<small>05</small> நட்சத்திர வினாடிவினா'],
+        ['.back-full','9–12 வகுப்புகள்'],
+        ['.back-short','வகுப்புகள்'],
+        ['.mobile-answer-label','9–12 வகுப்புகள்'],
+        ['#scene-triangle .panelhead h2','மாய முக்கோணத்தைப் பார்ப்போம்'],
+        ['#scene-triangle .panelhead .pill','👆 ஆரஞ்சுப் புள்ளியை இழுக்கவும்'],
+        ['#scene-triangle .captionline','ஆரஞ்சு = சாய்வு · நீலம் = அடிப்பக்கம் · இளஞ்சிவப்பு = உயரம்'],
+        ['#scene-triangle .mode-title .intro-tag','பாடம் 1 · இங்கே தொடங்குங்கள்'],
+        ['#scene-triangle .mode-title .lesson-title','சாய்வின் உயரத்தை மாற்றுங்கள்!'],
+        ['#scene-triangle .mode-title .lesson-copy','ஆரஞ்சு சாய்வின் நீளம் எப்போதும் <b>10 அலகுகள்</b>. கோணத்தை மாற்றும்போது நீல அடிப்பக்கமும் இளஞ்சிவப்பு உயரமும் எப்படி மாறுகின்றன?'],
+        ['#scene-triangle .rangehead label','சாய்வின் கோணம்'],
+        ['#scene-triangle .stat.pink span','💗 உயரம்'],
+        ['#scene-triangle .stat.blue span','💙 அடிப்பக்கம்'],
+        ['#scene-triangle .stat.orange span','🧡 சாய்வு'],
+        ['#scene-circle .panelhead h2','ஒரு சிறிய புள்ளியின் பயணம்'],
+        ['#scene-circle .panelhead .pill','🔄 சுற்றி இழுத்துப் பாருங்கள்'],
+        ['#scene-circle .captionline','இந்த வட்டத்தின் ஆரம் 1. நீலம் = கோசைன்; இளஞ்சிவப்பு = சைன்.'],
+        ['#scene-circle .mode-title .intro-tag','பாடம் 2 · சுழற்றிக் கற்போம்'],
+        ['#scene-circle .mode-title .lesson-title','சைனும் கோசைனும் வட்டத்தில் வாழ்கின்றன!'],
+        ['#scene-circle .mode-title .lesson-copy','வட்டத்தைச் சுற்றும் புள்ளியின் <b>இடம்–வலம்</b> இடம் கோசைன்; <b>மேல்–கீழ்</b> இடம் சைன்.'],
+        ['#scene-circle .rangehead label','புள்ளி எங்கே உள்ளது?'],
+        ['#scene-circle .stat.blue span','💙 கோசைன் (கிடைமட்டம்)'],
+        ['#scene-circle .stat.pink span','💗 சைன் (செங்குத்து)'],
+        ['#scene-circle #spinBtn','▶ புள்ளியைச் சுழற்று'],
+        ['#scene-circle #spinReset','↺ 0°-க்கு மீள்க'],
+        ['#scene-wave .panelhead h2','அலைகளை வரையும் கணிதம்'],
+        ['#scene-wave .panelhead .pill','🌊 இழுத்து அலைகளைப் பாருங்கள்'],
+        ['#scene-wave .captionline','அலையின் ஒவ்வொரு புள்ளியும் வட்டத்தில் ஒரு கோணத்தைக் குறிக்கிறது!'],
+        ['#scene-wave .mode-title .intro-tag','பாடம் 3 · அலைகளை உருவாக்கு'],
+        ['#scene-wave .mode-title .lesson-title','அசையும் அலைகளுக்கு வணக்கம்!'],
+        ['#scene-wave .mode-title .lesson-copy','ஒரு புள்ளி வட்டத்தைச் சுற்றுவதாகக் கருதுங்கள். ஒவ்வொரு கோணத்திலும் அதன் உயரத்தை வரைந்தால் சைன் அலை கிடைக்கும்!'],
+        ['#scene-wave .rangehead label','முழு ஒரு சுற்று'],
+        ['#scene-wave #sineToggle','சைனைக் காட்டு'],
+        ['#scene-wave #cosToggle','கோசைனைக் காட்டு'],
+        ['#scene-wave #wavePlay','▶ அலையைப் பார்'],
+        ['#scene-wave #waveReset','↺ மீண்டும் தொடங்கு'],
+        ['#scene-wave .stat.pink span','💗 சைன் (இளஞ்சிவப்பு)'],
+        ['#scene-wave .stat.blue span','💙 கோசைன் (நீலம்)'],
+        ['#scene-game #quizRestart','↺ முதல் கேள்வியிலிருந்து'],
+        ['.glossary:first-of-type .gloss:nth-child(1) p','ஒரு பொருள் எவ்வளவு திரும்புகிறது என்பதை டிகிரிகளில் (°) அளக்கிறோம்.'],
+        ['.glossary:first-of-type .gloss:nth-child(2) p','புத்தகத்தின் மூலைபோன்ற 90° கோணம்.'],
+        ['.glossary:first-of-type .gloss:nth-child(3) p','கோணங்களையும் நீளங்களையும் இணைக்கும் கணிதம்.']
+      ];
+      const bOriginals=bLoc.map(([q,_])=>document.querySelector(q)?.innerHTML);
+      const qTa=[
+        ['சாய்வின் உயரத்தைக் காட்டுவது எந்த நிறம்?',['💗 இளஞ்சிவப்பு','💙 நீலம்','🧡 ஆரஞ்சு'],'இளஞ்சிவப்பு உயரத்தைக் காட்டுகிறது; அது நேராக மேலே செல்கிறது!','சரியான பக்கத்தைத் தேர்ந்தெடு'],
+        ['செங்கோணத்தின் அளவு என்ன?',['45°','90°','180°'],'90° என்பது புத்தகத்தின் மூலை போன்ற செங்கோணம்!','கோணத் துப்பறிவாளர்'],
+        ['சைன் விகிதம் எது?',['உயரம் / சாய்வு','அடிப்பக்கம் / சாய்வு','உயரம் + அடிப்பக்கம்'],'சைன் = எதிர்ப்பக்கம் (உயரம்) / கர்ணம் (சாய்வு).','சைன் நட்சத்திரம்'],
+        ['வட்டத்தின் உச்சியில் (90°) சைன் மதிப்பு என்ன?',['0','1','−1'],'சைன் செங்குத்து இடத்தைக் குறிக்கிறது; உச்சியில் அதன் மதிப்பு +1!','உச்சியை அடை'],
+        ['ஒரு புள்ளியின் மேல்–கீழ் இயக்கம் எந்த வடிவை வரைகிறது?',['சதுரம்','முக்கோணம்','அலை'],'முழுச் சுற்றுக்கான உயரத்தை வரைந்தால் சைன் அலை கிடைக்கும்!','அலை மாயம்']
+      ];
+      questions.forEach((q,i)=>{q.orig={q:q.q,opts:q.opts,why:q.why,motif:q.motif};});
+      const prevRender=render;
+      render=function(){prevRender();if(basicLang==='ta'){
+        $('triInsight').innerHTML='<b>கவனிக்கவும்!</b> கோணம் அதிகரித்தால் உயரம் அதிகமாகும்; அடிப்பக்கம் குறையும்.';
+        $('orbitInsight').innerHTML='<b>ரகசியம்:</b> கோசைன் x இடத்தையும் சைன் y இடத்தையும் குறிக்கும்.';
+        $('waveInsight').innerHTML='<b>90° முயற்சி:</b> சைன் அலை அதிக உயரத்தை அடையும்!';
+      }};
+      function localizeQuiz(){
+        if(basicLang!=='ta')return;
+        $('quizCounter').textContent=questionIndex>=questions.length?'சவால் முடிந்தது!':'சவால் '+(questionIndex+1)+' / '+questions.length;
+        $('quizHint').textContent=questionIndex>=questions.length?'மீண்டும் விளையாடலாம்!':'ஒரு விடையைத் தேர்ந்தெடுக்கவும். தவறுகளும் கற்றலின் ஒரு பகுதி!';
+        if(questionIndex<questions.length&&!answered)$('quizFeedback').textContent='விடையைத் தேர்ந்தெடுக்கவும்.';
+        $('quizNext').textContent=questionIndex===questions.length-1?'வெற்றியைக் காண் 🏆':'அடுத்த சவால் →';
+      }
+      const oldQuizRender=renderQuiz;
+      renderQuiz=function(){oldQuizRender();localizeQuiz();};
+      const oldAnswer=answerQuiz;
+      answerQuiz=function(i){oldAnswer(i);if(basicLang==='ta'&&questionIndex<questions.length){
+        const q=questions[questionIndex];$('quizFeedback').textContent=(i===q.right?'🌟 அருமை! ':'💜 நல்ல முயற்சி! ')+q.why;
+      }};
+      function setBasicsLanguage(v){
+        basicLang=v;document.documentElement.lang=v;
+        $('basicLangEn').classList.toggle('active',v==='en');$('basicLangEn').setAttribute('aria-pressed',String(v==='en'));
+        $('basicLangTa').classList.toggle('active',v==='ta');$('basicLangTa').setAttribute('aria-pressed',String(v==='ta'));
+        bLoc.forEach(([sel,ta],i)=>{const el=document.querySelector(sel);if(el&&bOriginals[i]!=null)el.innerHTML=v==='ta'?ta:bOriginals[i];});
+        questions.forEach((q,i)=>{const t=qTa[i];q.q=v==='ta'?t[0]:q.orig.q;q.opts=v==='ta'?t[1]:q.orig.opts;q.why=v==='ta'?t[2]:q.orig.why;q.motif=v==='ta'?t[3]:q.orig.motif;});
+        kiteLang=v;
+        try{localStorage.setItem('triggle-language',v);}catch(e){}
+        render();renderQuiz();renderKite();
+      }
+      $('basicLangEn').addEventListener('click',()=>setBasicsLanguage('en'));
+      $('basicLangTa').addEventListener('click',()=>setBasicsLanguage('ta'));
+      let initialBasicLanguage='en';try{initialBasicLanguage=localStorage.getItem('triggle-language')==='ta'?'ta':'en';}catch(e){}
+      setBasicsLanguage(initialBasicLanguage);
+    })();
+  </script>
+</body>
+</html>

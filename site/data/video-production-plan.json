@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "policy": "Video buttons are enabled only when a verified MP4 is present. Planned records do NOT appear in the student UI.",
+  "plans": [
+    {
+      "questionId": "c12-4-4-1-2",
+      "class": 12,
+      "chapter": "4",
+      "exercise": "4.1",
+      "question": "Exercise 4.1 · Q1(ii)",
+      "questionText": "Find x in −3π ≤ x ≤ 3π for which sin x = −1.",
+      "title": {
+        "en": "Full rotations and the meaning of 2kπ",
+        "ta": "Periodic solutions"
+      },
+      "priority": "P1",
+      "whyVideo": "Full rotations and the meaning of 2kπ",
+      "visualStoryboard": "Turn a point clockwise to −π/2, then add/subtract full rotations, filter integer k with the interval, mark all answers on a sine graph.",
+      "language": "en",
+      "video": "./videos/triggle-class12-ex4-1-q1-ii.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c9-exercise-6-1-q9",
+      "class": 9,
+      "chapter": "6",
+      "exercise": "6.1",
+      "question": "Exercise 6.1 · Q9",
+      "questionText": "The diagram has AD=9, DB=16, CD=12, AC=15 and BC=20. Prove θ+φ=90°, show ∠ACB=90°, and find sinα, cosβ and tanφ.",
+      "title": {
+        "en": "Two linked triangles and complementary angles",
+        "ta": "A larger triangle formed by two smaller ones"
+      },
+      "priority": "P1",
+      "whyVideo": "Two linked triangles and complementary angles",
+      "visualStoryboard": "Build the labelled triangles from the stated lengths; connect common sides and mark why the two acute angles sum to 90°.",
+      "language": "en",
+      "video": "./videos/triggle-class9-ex6-1-q9.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c10-6-6-3-9",
+      "class": 10,
+      "chapter": "6",
+      "exercise": "6.3",
+      "question": "Exercise 6.3 · Q4",
+      "questionText": "A plane 1800 m high sees two boats ahead at depression angles 60° and 30°. Find the distance between the boats.",
+      "title": {
+        "en": "Angle of depression from a plane to two boats",
+        "ta": "Two boats"
+      },
+      "priority": "P1",
+      "whyVideo": "Angle of depression from a plane to two boats",
+      "visualStoryboard": "Draw the horizontal sightline and two downward rays at 30° and 60°; use two right triangles to derive horizontal positions and boat separation.",
+      "language": "en",
+      "video": "./videos/triggle-class10-ex6-3-q4.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c10-6-6-4-11",
+      "class": 10,
+      "chapter": "6",
+      "exercise": "6.4",
+      "question": "Exercise 6.4 · Q2",
+      "questionText": "A ship’s deck is 40 m above sea level. A hilltop appears at 60° elevation and its base at 30° depression. Find hill distance and height.",
+      "title": {
+        "en": "Elevation and depression in a ship-to-hill problem",
+        "ta": "Hill from a ship"
+      },
+      "priority": "P1",
+      "whyVideo": "Elevation and depression in a ship-to-hill problem",
+      "visualStoryboard": "Construct the sea horizon and 40 m eye level; show two sightlines and how their tangent ratios produce distance and total hill height.",
+      "language": "en",
+      "video": "./videos/triggle-class10-ex6-4-q2.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c11-3-3-8-14",
+      "class": 11,
+      "chapter": "3",
+      "exercise": "3.8",
+      "question": "Exercise 3.8 · Q2(i)",
+      "questionText": "Solve sin⁴x = sin²x for 0° ≤ x < 360°.",
+      "title": {
+        "en": "Solving a trigonometric equation without losing roots",
+        "ta": "Trigonometric equations"
+      },
+      "priority": "P1",
+      "whyVideo": "Solving a trigonometric equation without losing roots",
+      "visualStoryboard": "Factor sin²x(sin²x−1)=0, map values 0 and ±1 to angles on the unit circle, and enforce 0° ≤ x < 360°.",
+      "language": "en",
+      "video": "./videos/triggle-class11-ex3-8-q2-i.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c12-4-4-3-7",
+      "class": 12,
+      "chapter": "4",
+      "exercise": "4.3",
+      "question": "Exercise 4.3 · Q2(i)",
+      "questionText": "Evaluate tan⁻¹(tan(5π/4)).",
+      "title": {
+        "en": "Why inverse tangent returns the principal angle",
+        "ta": "Principal branch"
+      },
+      "priority": "P1",
+      "whyVideo": "Why inverse tangent returns the principal angle",
+      "visualStoryboard": "Trace the tangent of 5π/4, then map the result into the inverse tangent principal interval (−π/2,π/2).",
+      "language": "en",
+      "video": "./videos/triggle-class12-ex4-3-q2-i.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c12-4-4-1-3",
+      "class": 12,
+      "chapter": "4",
+      "exercise": "4.1",
+      "question": "Exercise 4.1 · Q2(i)",
+      "questionText": "Find the amplitude and period of y = sin 7x.",
+      "title": {
+        "en": "Deriving the period of sin(7x)",
+        "ta": "Amplitude and period"
+      },
+      "priority": "P1",
+      "whyVideo": "Deriving the period of sin(7x)",
+      "visualStoryboard": "Animate a unit-circle point and a graph together; increase x until input 7x completes a 2π rotation and derive P=2π/7.",
+      "language": "en",
+      "video": "./videos/triggle-class12-ex4-1-q2-i.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c9-exercise-6-1-q10",
+      "class": 9,
+      "chapter": "6",
+      "exercise": "6.1",
+      "question": "Exercise 6.1 · Q10",
+      "questionText": "A kite string initially measures 25 m and reaches a height of 5 m. The same straight line is extended another 10 m. Find the final vertical height.",
+      "title": {
+        "en": "Extended kite string and height",
+        "ta": "Kite height after extending the string"
+      },
+      "priority": "P2",
+      "whyVideo": "Extended kite string and height",
+      "visualStoryboard": "Show the initial triangle with 25 m string and 5 m height, then extend the same straight line by 10 m while preserving the angle to find the new height.",
+      "language": "en",
+      "video": "./videos/triggle-class9-ex6-1-q10.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c9-example-6-2",
+      "class": 9,
+      "chapter": "6",
+      "exercise": "6.2",
+      "question": "Example 6.2",
+      "questionText": "In a right triangle, the side opposite θ is 7 and the hypotenuse is 25. Find all six ratios at θ.",
+      "title": {
+        "en": "Where all six trigonometric ratios come from",
+        "ta": "Use Pythagoras before finding six ratios"
+      },
+      "priority": "P2",
+      "whyVideo": "Where all six trigonometric ratios come from",
+      "visualStoryboard": "Reveal the 7–24–25 triangle, derive the missing side using Pythagoras, label opposite/adjacent/hypotenuse and compare reciprocal ratios.",
+      "language": "en",
+      "video": "./videos/triggle-class9-example6-2.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c10-6-6-2-6",
+      "class": 10,
+      "chapter": "6",
+      "exercise": "6.2",
+      "question": "Exercise 6.2 · Q3",
+      "questionText": "A 1.8 m tall observer is 5 m from a wall. The bottom and top of a window appear at 45° and 60° elevation. Find window height.",
+      "title": {
+        "en": "Window height from two angles of elevation",
+        "ta": "Window heights"
+      },
+      "priority": "P2",
+      "whyVideo": "Window height from two angles of elevation",
+      "visualStoryboard": "Use the eye level and 5 m horizontal distance to build two triangles with 45° and 60° and subtract their vertical heights.",
+      "language": "en",
+      "video": "./videos/triggle-class10-ex6-2-q3.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c11-3-3-1-2",
+      "class": 11,
+      "chapter": "3",
+      "exercise": "3.1",
+      "question": "Exercise 3.1 · Q1(ii)",
+      "questionText": "Find the quadrant of 825°.",
+      "title": {
+        "en": "How 825° lands in a quadrant",
+        "ta": "Large angles"
+      },
+      "priority": "P2",
+      "whyVideo": "How 825° lands in a quadrant",
+      "visualStoryboard": "Rotate 825° in complete loops, subtract 720°, and show the remaining 105° direction and its quadrant.",
+      "language": "en",
+      "video": "./videos/triggle-class11-ex3-1-q1-ii.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c12-4-4-3-5",
+      "class": 12,
+      "chapter": "4",
+      "exercise": "4.3",
+      "question": "Exercise 4.3 · Q1(i)",
+      "questionText": "Find the domain of f(x)=tan⁻¹(√(9−x²)).",
+      "title": {
+        "en": "Domain of inverse tangent of a square root",
+        "ta": "Square root domain"
+      },
+      "priority": "P2",
+      "whyVideo": "Domain of inverse tangent of a square root",
+      "visualStoryboard": "Slide x across a number line, animate 9−x² crossing zero, then show why the valid domain is [−3,3].",
+      "language": "en",
+      "video": "./videos/triggle-class12-ex4-3-q1-i.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c12-4-4-1-1",
+      "class": 12,
+      "chapter": "4",
+      "exercise": "4.1",
+      "question": "Exercise 4.1 · Q1(i)",
+      "questionText": "Find every x in −10π ≤ x ≤ 10π satisfying sin x = 0.",
+      "title": {
+        "en": "All zeros of sine in a bounded interval",
+        "ta": "Zeros of sine"
+      },
+      "priority": "P2",
+      "whyVideo": "All zeros of sine in a bounded interval",
+      "visualStoryboard": "Follow sine through successive π multiples and select the 21 integer angles from −10π to 10π.",
+      "language": "en",
+      "video": "./videos/triggle-class12-ex4-1-q1-i.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c9-exercise-6-5-q9",
+      "class": 9,
+      "chapter": "6",
+      "exercise": "6.5",
+      "question": "Exercise 6.5 · Q9",
+      "questionText": "Evaluate tan1° × tan2° × ... × tan89°.",
+      "title": {
+        "en": "The paired tangent product 1° through 89°",
+        "ta": "Pairing tangent values from 1° to 89°"
+      },
+      "priority": "P2",
+      "whyVideo": "The paired tangent product 1° through 89°",
+      "visualStoryboard": "Pair tangent values of complementary angles so every pair multiplies to 1, with tan45° at the center.",
+      "language": "en",
+      "video": "./videos/triggle-class9-ex6-5-q9.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    },
+    {
+      "questionId": "c12-4-4-1-4",
+      "class": 12,
+      "chapter": "4",
+      "exercise": "4.1",
+      "question": "Exercise 4.1 · Q2(ii)",
+      "questionText": "Find the amplitude and period of y = −sin(x/3).",
+      "title": {
+        "en": "Reflection and horizontal stretching of sine",
+        "ta": "Negative sine wave"
+      },
+      "priority": "P2",
+      "whyVideo": "Reflection and horizontal stretching of sine",
+      "visualStoryboard": "Show why the minus sign reflects the curve while dividing x by 3 stretches the period to 6π without changing amplitude.",
+      "language": "en",
+      "video": "./videos/triggle-class12-ex4-1-q2-ii.mp4",
+      "downloadAllowed": true,
+      "status": "planned",
+      "showButtonWhenMissing": false
+    }
+  ]
+}

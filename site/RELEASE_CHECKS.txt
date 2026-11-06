@@ -1,0 +1,28 @@
+TRIGGLE v1.23 — RELEASE VALIDATION SUMMARY
+
+Validated in headless Chromium using the same JS/CSS source files injected into a local test document (local navigation URLs are blocked by this browser environment).
+
+Viewport sizes: 360x690, 390x844, 412x915, 768x850, 1280x800.
+Lesson data: 53 Class 9 + 20 Class 10 + 16 Class 11 + 16 Class 12 = 105 entries.
+Language coverage: all 105 entries generated staged walkthroughs in both English and Tamil; nonempty titles, objectives, and explanations confirmed.
+Hand-authored full concept lessons: 9 entries. Remaining 96 have preserved, question-specific worked steps but are not claimed to be complete foundational explanations.
+
+Observed interaction checks:
+- Understand Deeply modal opens and closes; Close returns to question.
+- A Why? control on Quick Solution jumps to a related learning stage.
+- Multiple stages with progress and previous/next navigation.
+- k increase/decrease and interval feedback: x=−π/2 + 2(1)π = 3π/2 correctly shown.
+- Optional checkpoint: k=2 means 2 complete rotations, with explanatory feedback.
+- Live degree slider updates the unit-circle sine/cosine values.
+- Triangle uses actual diagram measurements (7,24,25; 12,35,37; etc.), not placeholder values.
+- Number-line square-root domain interactive, wave-period slider interactive.
+- Both mobile and desktop builds rendered without runtime JS page errors in these checks.
+
+Mathematical spot checks for authored examples:
+- 7²+24²=25² and 35²+12²=37².
+- sin(-π/2 + 2kπ)=-1 for integer k; restriction -3π≤x≤3π implies k∈{-1,0,1}, giving x∈{-5π/2, -π/2, 3π/2}.
+- sin x=0 in -10π≤x≤10π gives x=nπ, n=-10,...,10 (21 values).
+- cotθ+tanθ = 1/(sinθ cosθ) = secθ cosecθ where sinθ cosθ ≠ 0.
+- 30°=π/6 rad; domain of tan^-1(sqrt(9−x²)) is [-3,3]; sin(7x) has amplitude 1 and period 2π/7.
+
+Not yet done: individually independently validating every existing textbook reference/figure for the 2026-27 edition, independently reviewing every one of the remaining 96 foundations-first explanations, or an actual on-device Android hardware smoke test. Existing original figures are reconstructions unless source verification states otherwise.
