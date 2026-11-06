@@ -3,6 +3,8 @@ name: Publish Triggle from source
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'site/**'
       - '.github/workflows/deploy.yml'
