@@ -364,6 +364,8 @@
    const discovering=homeView||classIndex;
    document.body.classList.toggle('discovery-active',discovering);
    document.body.classList.toggle('home-active',homeView);
+   if(homeView)$('homeBtn').setAttribute('aria-current','page');else $('homeBtn').removeAttribute('aria-current');
+   $('discoveryView').setAttribute('aria-label',lang==='ta'?'டிரிகிள் முகப்பு மற்றும் அத்தியாயங்கள்':'Triggle Home and Chapters');
    $('discoveryView').hidden=!discovering;
    if(discovering){
      $('chapterOverview').hidden=true;$('lessonCard').hidden=true;
