@@ -24,8 +24,14 @@ This is a maintained **reference workspace for Triggle's authors, reviewers, and
 
 **Access status distinctions:** "Index located" means a legitimate public collection can be found. It does **not** mean each document is already downloaded, transcribed, checked or approved for reuse. Publisher PDF access, legal reuse, exact chapter mapping and edition match must be logged separately.
 
+## 2025 user-uploaded textbooks (latest in this workspace)
+
+**New evidence (6 November 2026):** Ten directly uploaded, readable SCERT Mathematics PDFs have an explicit **revised edition 2025** imprint. These cover **all 41 English chapter headings** and **26 of 41 matched English/Tamil chapter pairs**. The 2025 **Class 9 Tamil** book and **Class 12 Tamil Volume I** are not among the files attached to this conversation. See [the 2025 upload audit](2025-upload-audit.md) and [SHA-256 manifest](2025-user-textbook-manifest.json). These documents update our book-access position without falsely claiming the 2026–27 printing has been compared. The full PDFs are **not stored in GitHub** and cannot be assumed readable by Codex directly.
+
 ## Created internal reference files
 
+- [2025 uploaded-textbook verification](2025-upload-audit.md): direct 2025 imprints, chapter start-page matrix and selected Tamil terminology.
+- [Machine-readable book manifest](2025-user-textbook-manifest.json): SHA-256 fingerprints, file names and 2025 source locators.
 - [Teaching handbook v0.1](./teaching-handbook.md): original model lessons, worked examples, visual ideas, common mistakes, formative checks and bilingual terminology candidates.
 - [41-chapter cross-reference](./chapter-crosswalk.md): source-of-truth current chapter names/IDs plus supplementary teaching lenses.
 - [Phase 0 audit](../phase-0-audit.md): prior evidence of textbook source editions, incomplete verification, and 105 preserved questions.
@@ -46,7 +52,7 @@ For exercise fidelity, compare against **the user's prescribed TN volume** and c
 3. An **official** TN SCERT mathematics teacher handbook / local EN–TA term list, if such a file is accessible.
 4. Recent official TN SSLC/HSC mathematics sample papers with their years and mediums, for later exam-mode work.
 
-If materials have been uploaded elsewhere in the project, locate or attach them to the workspace used by the coding agent. This repository does **not** claim to have imported or inspected user-uploaded textbooks in this workspace; the accessible local upload was a Triggle project ZIP, not textbook PDFs. The Grade 12 Tamil research uses publicly available reproductions of Government/SCERT books.
+If materials have been uploaded elsewhere in the project, locate or attach them to the workspace used by the coding agent. This repository has **not imported** uploaded textbook PDFs. The current conversation does include ten **2025 revision** textbook PDFs, directly inspected and indexed in the new audit; Codex must receive access separately to read full pages. The Grade 12 Tamil Volume I research still relies on a publicly available older SCERT reproduction until its 2025 PDF is attached.
 
 ## Phase 2 handoff for coding agents
 
