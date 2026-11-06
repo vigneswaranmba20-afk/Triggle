@@ -464,3 +464,27 @@
 .vl-coming-icon{color:#9781bd;font-size:18px;line-height:1}
 
 .mathml-brackets{display:inline-block;vertical-align:middle;font-size:1.4em;white-space:nowrap;margin:0 .07em}
+
+/* Chapter-first curriculum navigation; legacy lesson presentation is retained. */
+.curriculum-chapter{margin:0 0 7px;min-width:0}
+.chapter-link{display:block;width:100%;text-align:left;min-height:52px;padding:11px 10px;border:1px solid #ebe7f1;border-radius:12px;background:#fff;color:#595472;line-height:1.45;overflow-wrap:anywhere}
+.chapter-link strong{display:block;font-size:12px;line-height:1.5}.chapter-link small{display:block;font-size:10px;margin-top:4px;color:#817c91}.chapter-link:hover{background:#f8f5ff}.chapter-link.active{border-color:#c9bce8;background:#f3efff;color:#4b3a82}
+.chapter-link:focus-visible,.chapter-question-links button:focus-visible{outline:3px solid #917be4;outline-offset:2px}
+.chapter-status{display:inline-block;border:1px solid #dbd4e9;background:#f4effa;color:#6a5688;border-radius:99px;font-weight:750;font-size:12px;padding:5px 10px;line-height:1.5}
+.chapter-status[data-status=published]{background:#ecf8f0;color:#216f4d;border-color:#c8e7d3}
+.chapter-overview{padding:25px;border:1px solid #e5dfed;background:#fff;border-radius:20px;min-width:0;line-height:1.65;color:#5a5c72;overflow-wrap:anywhere}
+.chapter-overview h2{font-size:clamp(21px,3vw,29px);color:#34304e;line-height:1.4;margin:8px 0 13px}.chapter-overview h3{font-size:17px;color:#49425e;margin:24px 0 6px}.chapter-overview p{font-size:13px}.chapter-overview .eyebrow{font-size:10px;letter-spacing:.6px}
+.chapter-sections{list-style:none;margin:18px 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.chapter-sections li{border:1px solid #eae6ef;background:#faf8fc;border-radius:10px;padding:10px 12px;font-size:12px;display:flex;justify-content:space-between;gap:8px;align-items:center}.chapter-sections small{color:#857394;font-size:10px;text-align:right}
+.terminology-note{border-left:3px solid #d7b276;background:#fffaf1;border-radius:6px;padding:9px 11px;color:#85653d}.chapter-coverage-note{color:#777082}.chapter-question-links{display:grid;gap:7px}.chapter-question-links button{display:block;width:100%;min-height:44px;border:1px solid #e5ddef;border-radius:10px;background:#faf8ff;color:#5a4584;text-align:left;font-size:12px;line-height:1.5;padding:10px 12px;overflow-wrap:anywhere}
+#chapterOverview[hidden],#lessonCard[hidden]{display:none!important}.chapter-overview-active .page-controls,.chapter-overview-active .reference-line{display:none!important}
+@media(max-width:800px){.chapter-overview-active .lesson-container{overflow-y:auto;display:block}.chapter-overview-active .status-row{margin-bottom:9px}.chapter-overview{padding:17px;border-radius:17px}.chapter-overview h2{font-size:22px}.chapter-overview p{font-size:12px}.chapter-sections{grid-template-columns:1fr}.chapter-link{min-height:50px}}
+
+.chapter-review{font-size:11px!important;color:#81768d}.chapter-references{margin-top:24px;padding-top:2px;border-top:1px solid #eee9f2}.chapter-reference{padding:11px 0;border-bottom:1px solid #f0edf4}.chapter-reference a{color:#645090;font-weight:750;font-size:12px}.chapter-reference p{font-size:11px;margin:5px 0;color:#82788f}
+/* Keep both mobile learning routes readable at narrow widths. */
+@media(max-width:430px){
+ .appbar{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:36px 52px;height:102px;min-height:102px;column-gap:8px}
+ .browse-button,.basics-link{width:100%;min-width:0;min-height:50px;justify-content:center;line-height:1.45;padding:6px;gap:4px}
+ .browse-button [data-i18n=browse],.basics-link span{min-width:0;white-space:normal;overflow-wrap:anywhere}
+ #browseChevron{display:none}
+ .chapter-sections li{flex-wrap:wrap;row-gap:3px}.chapter-sections small{white-space:normal;text-align:left;overflow-wrap:normal}
+}

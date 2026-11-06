@@ -4,9 +4,17 @@
  const dictionary={
  en:{yourClass:'YOUR CLASS',exploreExercise:'Find an exercise',saveNote:'Your progress stays on this device',openBasics:'Interactive basics',browse:'Exercises',basics:'Trigonometry Basics',studyMode:'YOUR LEARNING SPACE',diagram:'Figure',stepByStep:'HOW IT WORKS',quickSolution:'Quick solution',explainSlowly:'Understand deeply',learnStepByStep:'LEARN THE REASONING',backToQuestion:'Back to question',expandFigure:'Tap to enlarge diagram ↗',inlineFigureNote:'Reconstructed from the measurements in this question, not copied from the textbook.',finalAnswer:'Final answer',markDone:'Mark learned',learned:'Learned',previous:'Previous',nextQuestion:'Next question',source:'Reference ↗',classic:'Original Class 9 interface',visualGuide:'VISUAL EXPLANATION',close:'Close',typeBook:'Book-referenced · edition check',typePractice:'Original Triggle practice',class:'Class',search:'Search exercise, question...',subtitle:'Choose a topic, understand every step, go at your own pace.',nextStep:'Next step',showAll:'Show full solution',answer:'Show final answer',complete:'Solution complete',empty:'No lessons match your search.',noteBook:'Textbook question references were cross-checked against public listings. Editions can differ; compare with your prescribed book.',noteOld:'Class 9 exercises reference an earlier textbook edition. Verify numbering against your school copy.',notePractice:'Original Triggle practice — not a numbered textbook question.',lessons:'lessons',question:'Question',practice:'Practice',reference:'Reference',step:'Step',of:'of'},
  ta:{yourClass:'உங்கள் வகுப்பு',exploreExercise:'பயிற்சியைத் தேடுங்கள்',saveNote:'உங்கள் முன்னேற்றம் இந்த சாதனத்தில் மட்டும் சேமிக்கப்படும்',openBasics:'காட்சி அடிப்படைகள்',browse:'பயிற்சிகள்',basics:'முக்கோணவியல் அடிப்படைகள்',studyMode:'கற்றல் பகுதி',diagram:'படம்',stepByStep:'தீர்வு விளக்கம்',quickSolution:'சுருக்கமான தீர்வு',explainSlowly:'ஆழமாகப் புரிந்துகொள்',learnStepByStep:'ஒவ்வொரு படியின் காரணம்',backToQuestion:'கேள்விக்குத் திரும்பு',expandFigure:'படத்தைப் பெரிதாக்க ↗',inlineFigureNote:'கேள்வியின் அளவுகளிலிருந்து மீண்டும் வரையப்பட்டது; பாடநூலிலிருந்து நகலெடுக்கவில்லை.',finalAnswer:'இறுதி விடை',markDone:'கற்றதாகக் குறி',learned:'கற்றுவிட்டேன்',previous:'முந்தையது',nextQuestion:'அடுத்த கேள்வி',source:'குறிப்பு ↗',classic:'வகுப்பு 9 பழைய தோற்றம்',visualGuide:'காட்சி விளக்கம்',close:'மூடு',typeBook:'பாடநூல் குறிப்பு · பதிப்பு சரிபார்க்கவும்',typePractice:'டிரிகிள் உருவாக்கிய பயிற்சி',class:'வகுப்பு',search:'பயிற்சி, கேள்வியைத் தேட...',subtitle:'ஒரு தலைப்பைத் தேர்ந்தெடுத்து படிப்படியாக எளிதில் கற்றுக்கொள்ளுங்கள்.',nextStep:'அடுத்த படி',showAll:'முழுத் தீர்வைக் காட்டு',answer:'இறுதி விடையைக் காட்டு',complete:'தீர்வு முடிந்தது',empty:'இந்தத் தேடலுக்கான பாடங்கள் இல்லை.',noteBook:'பொது பட்டியலில் பாடநூல் வினா விவரங்கள் சரிபார்க்கப்பட்டன. உங்கள் பள்ளிப் புத்தகப் பதிப்புடன் ஒப்பிடுங்கள்.',noteOld:'வகுப்பு 9 பயிற்சிகள் முந்தைய பாடநூல் பதிப்பைச் சார்ந்தவை. உங்கள் புத்தக எண்ணிடலைச் சரிபார்க்கவும்.',notePractice:'இது டிரிகிள் உருவாக்கிய பயிற்சி; பாடநூல் வினா எண் அல்ல.',lessons:'பாடங்கள்',question:'வினா',practice:'பயிற்சி',reference:'குறிப்பு',step:'படி',of:'இல்'} };
+ Object.assign(dictionary.en,{browse:'Chapters',exploreExercise:'Chapters and exercises',search:'Search chapters, exercises, questions…',chapter:'Chapter',chapters:'chapters',overview:'Chapter overview',planned:'Planned',drafting:'Drafting',review:'In review',published:'Published',existingQuestions:'Existing questions',chapterNotComplete:'Existing questions are available for practice. Their presence does not mean this chapter is complete or reviewed.',contentPlanned:'Full chapter content is planned. Learning sections will appear after writing and review.',noQuestions:'Questions for this chapter are planned.',terminologyPending:'Tamil textbook terminology needs verification.',terminologyVerified:'Tamil textbook terminology verified.',concepts:'Concepts',prerequisites:'Prerequisites',workedExamples:'Worked examples',exercises:'Exercises',quizzes:'Quizzes',unitExercise:'Unit Exercise',chooseLanguage:'Language',closeNavigation:'Close navigation',navigationLabel:'Class, chapter and exercise navigation',searchLabel:'Search chapters and questions',visualMathematics:'VISUAL MATHEMATICS',questionContext:'Show the question',previousStage:'Previous',nextConcept:'Next concept',textbookReferences:'Textbook references',edition:'Edition',locator:'Location in textbook',englishMedium:'English medium',tamilMedium:'Tamil medium',archivedReference:'Archived textbook references; compare with the edition prescribed by your school.',figureLabel:'Open a relevant mathematics diagram',chooseExplanation:'Choose how much explanation to see',completeSolution:'Complete quick solution',workedSolution:'Worked solution',navigateQuestions:'Navigate questions',switchClass:'Switch school class',currentConcept:'Current learning concept',learningStages:'Understand deeply stages',chooseStage:'Go to a learning stage',diagramDialog:'Mathematics diagram',reviewState:'Review state',unreviewed:'Not reviewed',in_review:'In review',approved:'Approved'});
+ Object.assign(dictionary.ta,{browse:'அத்தியாயங்கள்',exploreExercise:'அத்தியாயங்களும் பயிற்சிகளும்',search:'அத்தியாயம், பயிற்சி, வினாவைத் தேட…',chapter:'அத்தியாயம்',chapters:'அத்தியாயங்கள்',overview:'அத்தியாயக் கண்ணோட்டம்',planned:'திட்டமிடப்பட்டுள்ளது',drafting:'எழுதப்படுகிறது',review:'மீளாய்வில் உள்ளது',published:'வெளியிடப்பட்டது',existingQuestions:'ஏற்கெனவே உள்ள வினாக்கள்',chapterNotComplete:'ஏற்கெனவே உள்ள வினாக்களைப் பயிற்சி செய்யலாம். வினாக்கள் இருப்பதால் மட்டும் இந்த அத்தியாயம் முழுமையானது அல்லது மீளாய்வு செய்யப்பட்டது என்று பொருளல்ல.',contentPlanned:'முழு அத்தியாய உள்ளடக்கம் திட்டமிடப்பட்டுள்ளது. கற்றல் பகுதிகள் எழுதப்பட்டு மீளாய்வு செய்யப்பட்டதும் இங்கே இடம்பெறும்.',noQuestions:'இந்த அத்தியாயத்திற்கான வினாக்கள் திட்டமிடப்பட்டுள்ளன.',terminologyPending:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட வேண்டும்.',terminologyVerified:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட்டுள்ளன.',concepts:'கருத்துகள்',prerequisites:'முன்தேவைகள்',workedExamples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'குறுவினாத் தேர்வுகள்',unitExercise:'தொகுப்புப் பயிற்சி',chooseLanguage:'மொழி',closeNavigation:'வழிசெலுத்தலை மூடு',navigationLabel:'வகுப்பு, அத்தியாயம் மற்றும் பயிற்சி வழிசெலுத்தல்',searchLabel:'அத்தியாயங்களையும் வினாக்களையும் தேடுக',visualMathematics:'காட்சி வழிக் கணிதம்',questionContext:'வினாவைக் காட்டு',previousStage:'முந்தையது',nextConcept:'அடுத்த கருத்து',textbookReferences:'பாடநூல் குறிப்புகள்',edition:'பதிப்பு',locator:'பாடநூலில் உள்ள இடம்',englishMedium:'ஆங்கிலவழி',tamilMedium:'தமிழ்வழி',archivedReference:'காப்பகப் பாடநூல் குறிப்புகள்; உங்கள் பள்ளி பரிந்துரைக்கும் பதிப்புடன் ஒப்பிடுங்கள்.',figureLabel:'பொருத்தமான கணிதப் படத்தைத் திற',chooseExplanation:'விளக்கத்தின் அளவைத் தேர்வு செய்க',completeSolution:'முழுமையான சுருக்கத் தீர்வு',workedSolution:'தீர்வு விளக்கம்',navigateQuestions:'வினாக்களுக்குச் செல்லவும்',switchClass:'வகுப்பை மாற்றவும்',currentConcept:'தற்போதைய கற்றல் கருத்து',learningStages:'ஆழமாகப் புரிந்துகொள்ளும் நிலைகள்',chooseStage:'கற்றல் நிலைக்குச் செல்லவும்',diagramDialog:'கணிதப் படம்',reviewState:'மீளாய்வு நிலை',unreviewed:'மீளாய்வு செய்யப்படவில்லை',in_review:'மீளாய்வில் உள்ளது',approved:'ஏற்கப்பட்டது'});
  const ui=k=>dictionary[lang][k]||dictionary.en[k]||k;
  const classes=window.TRIGGLE_CLASSES||{};
  for(const key of [9,10,11,12]){if(!classes[key]||!Array.isArray(classes[key].items))throw Error('Missing data for class '+key);}
+ const curriculum=window.TRIGGLE_CURRICULUM;
+ if(!curriculum?.grades)throw Error('Missing curriculum metadata');
+ const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];
+ const chapterForItem=item=>chapterList().find(c=>c.legacyQuestionIds.includes(item.id))||chapterList().find(c=>String(c.number)===String(item.chapter));
+ const chapterItems=chapter=>classes[grade].items.filter(item=>chapter.legacyQuestionIds.includes(item.id));
+ const selectedChapter=()=>chapterOverview||chapterForItem(current);
  const load=(key,other)=>{try{const v=JSON.parse(localStorage.getItem(key));return v===null?other:v}catch{return other}};
  const store=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch{}};
  const completed=new Set(load('triggle.learned.v119',[]));
@@ -15,6 +23,7 @@
  const url=new URL(location.href), requested=Number(url.searchParams.get('class'));
  let grade=classes[requested]?requested:9;
  let current=classes[grade].items.find(x=>x.id===url.searchParams.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];
+ let chapterOverview=url.searchParams.has('question')?null:chapterList().find(c=>c.id===url.searchParams.get('chapter'))||null;
  let drawerOpen=false;
  const reduced=matchMedia('(prefers-reduced-motion:reduce)');
  const mobile=matchMedia('(max-width:800px)');
@@ -33,16 +42,17 @@
  const activeList=()=>classes[grade].items;
  const currentIndex=()=>activeList().findIndex(i=>i.id===current.id);
  const num=n=>String(n).padStart(2,'0');
- const labelForGroup=(e)=>e==='6.examples'?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?'Unit Exercise '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
- function updateUrl(replace=false){const u=new URL(location.href);u.searchParams.set('class',grade);u.searchParams.set('question',current.id);try{history[replace?'replaceState':'pushState']({grade,question:current.id},'',u.pathname+u.search+u.hash)}catch{}}
- function remember(){lastByGrade[grade]=current.id;store('triggle.lastByGrade.v119',lastByGrade)}
- function changeGrade(g){g=Number(g);if(!classes[g])return;grade=g;current=classes[g].items.find(x=>x.id===lastByGrade[g])||classes[g].items[0];$('search').value='';updateUrl();remember();render();closeDrawer();if(mobile.matches)document.querySelector('.lesson-container').scrollTop=0;else window.scrollTo({top:0,behavior:reduced.matches?'auto':'smooth'});}
- function selectLesson(item){if(item.id===current.id){closeDrawer();return;}current=item;updateUrl();remember();render();closeDrawer();$('lessonCard').scrollIntoView({block:'start',behavior:'instant'});if(mobile.matches){document.querySelector('.lesson-container').scrollTop=0;}else window.scrollTo({top:0,behavior:'instant'});}
- function navMove(delta){const list=activeList(),i=currentIndex()+delta;if(i<0||i>=list.length)return;selectLesson(list[i])}
+ const labelForGroup=(e)=>e==='6.examples'?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?ui('unitExercise')+' '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
+ function updateUrl(replace=false){const u=new URL(location.href);u.searchParams.set('class',grade);if(chapterOverview){u.searchParams.delete('question');u.searchParams.set('chapter',chapterOverview.id)}else{u.searchParams.set('question',current.id);u.searchParams.delete('chapter')}try{history[replace?'replaceState':'pushState']({grade,question:chapterOverview?null:current.id,chapter:chapterOverview?.id},'',u.pathname+u.search+u.hash)}catch{}}
+ function remember(){if(chapterOverview)return;lastByGrade[grade]=current.id;store('triggle.lastByGrade.v119',lastByGrade)}
+ function changeGrade(g){g=Number(g);if(!classes[g])return;grade=g;chapterOverview=null;current=classes[g].items.find(x=>x.id===lastByGrade[g])||classes[g].items[0];$('search').value='';updateUrl();remember();render();closeDrawer();if(mobile.matches)document.querySelector('.lesson-container').scrollTop=0;else window.scrollTo({top:0,behavior:reduced.matches?'auto':'smooth'});}
+ function selectLesson(item){if(!chapterOverview&&item.id===current.id){closeDrawer();return;}chapterOverview=null;current=item;updateUrl();remember();render();closeDrawer();$('lessonCard').scrollIntoView({block:'start',behavior:'instant'});if(mobile.matches){document.querySelector('.lesson-container').scrollTop=0;}else window.scrollTo({top:0,behavior:'instant'});}
+ function selectChapter(chapter){chapterOverview=chapter;updateUrl();render();closeDrawer();$('chapterOverview').focus({preventScroll:true});if(mobile.matches)document.querySelector('.lesson-container').scrollTop=0;else window.scrollTo({top:0,behavior:reduced.matches?'auto':'smooth'});}
+ function navMove(delta){if(chapterOverview)return;const list=activeList(),i=currentIndex()+delta;if(i<0||i>=list.length)return;selectLesson(list[i])}
 
  function renderBreadcrumb(chapter){
    const nav=$('crumb');nav.replaceChildren();
-   const choices=[{text:ui('class')+' '+grade,type:'class'},{text:tr(chapter),type:'chapter'},{text:labelForGroup(current.exercise),type:'exercise'}];
+   const choices=[{text:ui('class')+' '+grade,type:'class'},{text:tr(chapter),type:'chapter'}];if(!chapterOverview)choices.push({text:labelForGroup(current.exercise),type:'exercise'});
    choices.forEach((c,i)=>{
      if(i){const sep=document.createElement('span');sep.className='crumb-sep';sep.textContent='›';sep.setAttribute('aria-hidden','true');nav.append(sep)}
      const b=document.createElement('button');b.type='button';b.className='crumb-link';b.innerHTML=esc(c.text)+' <span aria-hidden="true">⌄</span>';
@@ -58,8 +68,7 @@
    if(type==='class'){
      [9,10,11,12].forEach(g=>options.push({title:ui('class')+' '+g,meta:classes[g].items.length+' '+ui('lessons'),active:g===grade,choose:()=>changeGrade(g)}));
    }else if(type==='chapter'){
-     const group=new Map();activeList().forEach(i=>{if(!group.has(i.chapter))group.set(i.chapter,{num:i.chapter,chapter:classes[grade].chapters[i.chapter]||i.topic,first:i,count:0});group.get(i.chapter).count++});
-     [...group.values()].forEach(g=>options.push({title:(lang==='ta'?'அத்தியாயம் ':'Chapter ')+g.num+' · '+tr(g.chapter),meta:g.count+' '+ui('lessons'),active:g.num===current.chapter,choose:()=>selectLesson(g.first)}));
+     chapterList().forEach(c=>options.push({title:ui('chapter')+' '+c.number+' · '+tr(c.title),meta:ui(c.status)+' · '+chapterItems(c).length+' '+ui('existingQuestions'),active:c.id===selectedChapter()?.id,choose:()=>selectChapter(c)}));
    }else{
      const group=new Map();activeList().filter(i=>i.chapter===current.chapter).forEach(i=>{const k=i.exercise;if(!group.has(k))group.set(k,{key:k,count:0,first:i});group.get(k).count++});
      [...group.values()].forEach(g=>options.push({title:labelForGroup(g.key),meta:g.count+' '+ui('lessons'),active:g.key===current.exercise,choose:()=>selectLesson(g.first)}));
@@ -76,17 +85,55 @@
   }
  }
  const expanded=new Set();
- function renderList(){const q=$('search').value.trim().toLowerCase(),list=activeList(),filtered=list.filter(item=>{if(!q)return true;return [item.label.en,item.label.ta,item.title?.en,item.q.en,item.q.ta,item.topic.en,item.topic.ta,item.exercise].join(' ').toLowerCase().includes(q)});
-  $('sideCount').textContent=filtered.length+' '+ui('lessons');const container=$('exerciseList');container.replaceChildren();
-  const groups=new Map();for(const item of filtered){const key=item.chapter+':'+item.exercise;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(item)}
-  const currentGroup=current.chapter+':'+current.exercise;
-  for(const [key,group] of groups){const e=group[0].exercise,c=group[0].chapter;
-    const details=document.createElement('details');details.className='exercise-group';details.open=q!==''||expanded.has(key)||key===currentGroup;
-    const summary=document.createElement('summary');const head=document.createElement('span');head.textContent='Ch '+c+' · '+labelForGroup(e);const count=document.createElement('span');count.className='exercise-number';count.textContent=group.length;summary.append(head,count);details.append(summary);
-    details.addEventListener('toggle',()=>{if(details.open)expanded.add(key);else expanded.delete(key)});
-    for(const item of group){const b=document.createElement('button');b.type='button';b.className='exercise-question';b.classList.toggle('active',current.id===item.id);b.setAttribute('aria-current',current.id===item.id?'true':'false');const icon=document.createElement('span');icon.className='question-bullet '+(completed.has(item.id)?'question-done':'');icon.textContent=completed.has(item.id)?'✓':'○';const txt=document.createElement('span');txt.textContent=tr(item.label)+' · '+tr(item.title);b.append(icon,txt);b.title=tr(item.q);b.addEventListener('click',()=>selectLesson(item));details.append(b)}container.append(details);
+ function renderList(){
+  const q=$('search').value.trim().toLowerCase(),container=$('exerciseList');container.replaceChildren();
+  const matches=item=>[item.label.en,item.label.ta,item.title?.en,item.title?.ta,item.q.en,item.q.ta,item.topic.en,item.topic.ta,item.exercise].join(' ').toLowerCase().includes(q);
+  let shown=0;
+  for(const chapter of chapterList()){
+   const all=chapterItems(chapter),titleMatch=[chapter.title.en,chapter.title.ta,String(chapter.number)].join(' ').toLowerCase().includes(q),items=q&&!titleMatch?all.filter(matches):all;
+   if(q&&!titleMatch&&!items.length)continue;
+   shown++;
+   const section=document.createElement('section');section.className='curriculum-chapter';
+   const button=document.createElement('button');button.type='button';button.className='chapter-link';button.dataset.chapterId=chapter.id;button.classList.toggle('active',selectedChapter()?.id===chapter.id);button.setAttribute('aria-current',selectedChapter()?.id===chapter.id?'true':'false');
+   const title=document.createElement('strong');title.textContent=ui('chapter')+' '+chapter.number+' · '+tr(chapter.title);
+   const meta=document.createElement('small');meta.textContent=ui(chapter.status)+' · '+all.length+' '+ui('existingQuestions');button.append(title,meta);button.onclick=()=>selectChapter(chapter);section.append(button);
+   if(q||selectedChapter()?.id===chapter.id){
+    const groups=new Map();for(const item of items){if(!groups.has(item.exercise))groups.set(item.exercise,[]);groups.get(item.exercise).push(item)}
+    for(const [exercise,group] of groups){
+     const key=chapter.id+':'+exercise,details=document.createElement('details');details.className='exercise-group';details.open=q!==''||expanded.has(key)||(!chapterOverview&&current.exercise===exercise);
+     const summary=document.createElement('summary'),head=document.createElement('span'),count=document.createElement('span');head.textContent=labelForGroup(exercise);count.className='exercise-number';count.textContent=group.length;summary.append(head,count);details.append(summary);
+     details.addEventListener('toggle',()=>{if(details.open)expanded.add(key);else expanded.delete(key)});
+     for(const item of group){const b=document.createElement('button');b.type='button';b.className='exercise-question';b.classList.toggle('active',!chapterOverview&&current.id===item.id);b.setAttribute('aria-current',!chapterOverview&&current.id===item.id?'true':'false');const icon=document.createElement('span');icon.className='question-bullet '+(completed.has(item.id)?'question-done':'');icon.textContent=completed.has(item.id)?'✓':'○';const txt=document.createElement('span');txt.textContent=tr(item.label)+' · '+tr(item.title);b.append(icon,txt);b.title=tr(item.q);b.onclick=()=>selectLesson(item);details.append(b)}section.append(details);
+    }
+   }
+   container.append(section);
   }
-  if(!groups.size){const no=document.createElement('div');no.className='empty-search';no.textContent=ui('empty');container.append(no)}
+  $('sideCount').textContent=shown+' '+ui('chapters');
+  if(!shown){const no=document.createElement('div');no.className='empty-search';no.textContent=ui('empty');container.append(no)}
+ }
+ function renderOverview(chapter){
+  const container=$('chapterOverview');container.replaceChildren();
+  const top=document.createElement('div');top.className='chapter-overview-top';
+  const eyebrow=document.createElement('p');eyebrow.className='eyebrow';eyebrow.textContent=ui('overview')+' · '+ui('chapter')+' '+chapter.number;
+  const heading=document.createElement('h2');heading.id='chapterOverviewTitle';heading.textContent=tr(chapter.title);
+  const status=document.createElement('span');status.className='chapter-status';status.dataset.status=chapter.status;status.textContent=ui(chapter.status);top.append(eyebrow,heading,status);container.append(top);
+  const note=document.createElement('p');note.textContent=ui('contentPlanned');container.append(note);
+  if(chapter.terminology?.ta!=='verified'){const terminology=document.createElement('p');terminology.className='terminology-note';terminology.textContent=ui('terminologyPending');container.append(terminology)}
+  const sections=document.createElement('ul');sections.className='chapter-sections';
+  for(const key of ['concepts','prerequisites','workedExamples','exercises','quizzes']){const row=document.createElement('li');const label=document.createElement('span');label.textContent=ui(key);const state=document.createElement('small');state.textContent=ui('planned');row.append(label,state);sections.append(row)}container.append(sections);
+  const review=document.createElement('p');review.className='chapter-review';review.textContent=ui('reviewState')+': '+ui(chapter.review?.state||'unreviewed');if(chapter.review?.notes)review.textContent+=' · '+tr(chapter.review.notes);container.append(review);
+  const title=document.createElement('h3');title.textContent=ui('existingQuestions');container.append(title);
+  const explanation=document.createElement('p');explanation.className='chapter-coverage-note';explanation.textContent=ui('chapterNotComplete');container.append(explanation);
+  const questions=chapterItems(chapter);
+  if(questions.length){const list=document.createElement('div');list.className='chapter-question-links';for(const item of questions){const button=document.createElement('button');button.type='button';button.dataset.questionId=item.id;button.textContent=tr(item.label)+' · '+tr(item.title);button.onclick=()=>selectLesson(item);list.append(button)}container.append(list)}
+  else{const empty=document.createElement('p');empty.textContent=ui('noQuestions');container.append(empty)}
+  const references=document.createElement('section');references.className='chapter-references';
+  const sourceHeading=document.createElement('h3');sourceHeading.textContent=ui('textbookReferences');references.append(sourceHeading);
+  const archiveNote=document.createElement('p');archiveNote.textContent=ui('archivedReference');references.append(archiveNote);
+  for(const ref of chapter.sourceRefs||[]){const source=curriculum.sources?.find(s=>s.id===ref.sourceId);if(!source)continue;const entry=document.createElement('div');entry.className='chapter-reference';
+   const name=document.createElement('a'),bookTitle=document.createElement('span');bookTitle.lang=/[\u0B80-\u0BFF]/.test(source.title)?'ta':'en';bookTitle.textContent=source.title;name.append(bookTitle,document.createTextNode(' · '+ui(source.medium==='ta'?'tamilMedium':'englishMedium')));if(/^https?:\/\//.test(source.url)){name.href=source.url;name.target='_blank';name.rel='noopener noreferrer'}entry.append(name);
+   const detail=document.createElement('p'),edition=document.createElement('span'),locator=document.createElement('span');edition.lang='en';edition.textContent=source.edition;locator.lang='en';locator.textContent=ref.locator;detail.append(document.createTextNode(ui('edition')+': '),edition,document.createTextNode(' · '+ui('locator')+': '),locator);entry.append(detail);references.append(entry)
+  }container.append(references);
  }
  function buildStep(s,index){
   const li=document.createElement('li');li.className='worked-step';
@@ -177,8 +224,15 @@
   $('tabQuick').setAttribute('aria-pressed','true');
   $('quickSteps').hidden=false;
  }
- function renderText(){document.documentElement.lang=lang;document.body.classList.toggle('lang-ta',lang==='ta');document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=ui(el.dataset.i18n));$('search').placeholder=ui('search');$('classSubtitle').textContent=ui('subtitle');$('langEn').classList.toggle('active',lang==='en');$('langTa').classList.toggle('active',lang==='ta');$('langEn').setAttribute('aria-pressed',String(lang==='en'));$('langTa').setAttribute('aria-pressed',String(lang==='ta'))}
- function render(){renderText();renderGrades();const list=activeList();const n=currentIndex(),position=n+1,chapter=classes[grade].chapters[current.chapter]||current.topic;
+ function renderText(){
+  $('sidebar').setAttribute('aria-label',ui('navigationLabel'));$('exerciseList').setAttribute('aria-label',ui('navigationLabel'));$('search').setAttribute('aria-label',ui('searchLabel'));$('pathClose').setAttribute('aria-label',ui('closeNavigation'));$('closeSidebar').setAttribute('aria-label',ui('closeNavigation'));document.querySelector('.lang-switch').setAttribute('aria-label',ui('chooseLanguage'));document.querySelector('.side-brand small').textContent=ui('visualMathematics');$('deepQuestionContext').querySelector('summary').textContent=ui('questionContext');$('deepPrevious').querySelector('span').textContent=ui('previousStage');
+  for(const [id,key] of [['crumb','navigationLabel'],['inlineFigureOpen','expandFigure'],['solutionModeRow','chooseExplanation'],['stepsRegion','completeSolution'],['quickSteps','quickSolution'],['stepsList','workedSolution'],['classDock','switchClass'],['closeGuided','backToQuestion'],['guidedSteps','currentConcept'],['deepStageDots','chooseStage'],['figureDialog','diagramDialog']])$(id).setAttribute('aria-label',ui(key));
+  document.querySelector('.page-controls').setAttribute('aria-label',ui('navigateQuestions'));document.querySelector('.deep-nav').setAttribute('aria-label',ui('learningStages'));$('figureBtn').title=ui('figureLabel');
+  document.documentElement.lang=lang;document.body.classList.toggle('lang-ta',lang==='ta');document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=ui(el.dataset.i18n));$('search').placeholder=ui('search');$('classSubtitle').textContent=ui('subtitle');$('langEn').classList.toggle('active',lang==='en');$('langTa').classList.toggle('active',lang==='ta');$('langEn').setAttribute('aria-pressed',String(lang==='en'));$('langTa').setAttribute('aria-pressed',String(lang==='ta'))}
+ function render(){renderText();renderGrades();$('classicLink').hidden=grade!==9;
+  document.body.classList.toggle('chapter-overview-active',!!chapterOverview);$('chapterOverview').hidden=!chapterOverview;$('lessonCard').hidden=!!chapterOverview;
+  if(chapterOverview){$('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;renderBreadcrumb(chapterOverview.title);$('gradeTotal').textContent=chapterList().length+' '+ui('chapters');renderOverview(chapterOverview);renderList();window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:null,lang,grade,chapter:chapterOverview}}));return}
+  const list=activeList();const n=currentIndex(),position=n+1,chapter=chapterForItem(current)?.title||classes[grade].chapters[current.chapter]||current.topic;
   $('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;
   renderBreadcrumb(chapter);
   $('gradeTotal').textContent=list.length+' '+ui('lessons');$('questionLabel').textContent=labelForGroup(current.exercise).toUpperCase();$('itemPosition').textContent=num(position)+' / '+num(list.length);
@@ -192,7 +246,6 @@
   $('pageStatus').textContent=position+' '+ui('of')+' '+list.length;$('pageFill').style.width=(position/list.length*100)+'%';
   $('previous').disabled=n===0;$('next').disabled=n===list.length-1;
   $('previous').innerHTML='← '+esc(ui('previous'));$('next').innerHTML=esc(ui('nextQuestion'))+' →';
-  $('classicLink').hidden=grade!==9;
   $('solutionModeRow').hidden=!hasDeepLesson(current);
   renderSteps();renderMode();renderList();
   window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:current,lang,grade}}));
@@ -234,9 +287,9 @@
   if(e.key==='Escape'&&drawerOpen){closeDrawer();return}
   if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&e.target.tagName!=='INPUT'&&e.target.tagName!=='TEXTAREA'){e.preventDefault();openDrawer();$('search').focus();return}
   if(drawerOpen&&e.key==='Tab'){const focusable=[...$('sidebar').querySelectorAll('button:not([disabled]),input:not([disabled]),a[href],summary')].filter(el=>el.getClientRects().length);if(focusable.length){const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
-  if(e.target.matches('input,textarea,select,button')||$('figureDialog').open||$('guidedDialog').open||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
+  if(e.target.matches('input,textarea,select,button')||$('figureDialog').open||$('guidedDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
   if(e.key==='ArrowRight'){e.preventDefault();navMove(1)}else if(e.key==='ArrowLeft'){e.preventDefault();navMove(-1)}
  });
- window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams,g=Number(p.get('class'));grade=classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items[0];$('search').value='';render();closeDrawer()});
+ window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams,g=Number(p.get('class'));grade=classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items[0];chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;$('search').value='';render();closeDrawer()});
  mobile.addEventListener('change',onBreakpoint);onBreakpoint();remember();updateUrl(true);render();
 })();
