@@ -17,3 +17,7 @@ python3 -m http.server 8000 --directory site
 Open `http://localhost:8000/`. Use `CHROMIUM_PATH=/usr/bin/chromium` to test with a system Chromium. Production is a static site; Node/Playwright are development checks only.
 
 Pull requests run `.github/workflows/validate.yml` without deploying. The existing Pages workflow publishes `site/` after review and a merge to `main`, or an explicit manual dispatch.
+
+## Editorial reference library
+
+For Phase 2, start with the [source register](docs/reference-library/README.md), [original teaching handbook](docs/reference-library/teaching-handbook.md), and [41-chapter crosswalk](docs/reference-library/chapter-crosswalk.md). These are living internal notes, not imported copies of reference books. Coding agents should follow [AGENTS.md](AGENTS.md) when authoring new bilingual mathematics content.
