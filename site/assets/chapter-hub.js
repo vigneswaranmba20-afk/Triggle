@@ -15,7 +15,7 @@
       available:'available',soon:'More coming',checks:'quick checks',questions:'questions',worked:'examples',
       back:'All chapter options',classBack:'All chapters',home:'Home',
       resources:'Textbook references and chapter information',navigate:'Jump to a section',choosePrompt:'Choose a section…',
-      learning:'Explore the concepts',noneConcept:'Interactive concepts for this chapter are being developed.',
+      learning:'Explore the concepts',noneConcept:'Concept lessons for this chapter are coming soon. There is no concept activity here yet.',
       practiceInstead:'You can still explore questions with complete step-by-step solutions in Exercises.',
       noneWorked:'No questions in this chapter are explicitly labelled worked examples yet.',
       whyWorked:'Textbook exercises with worked solutions remain under Exercises so they are easy to find without misleading labels.',
@@ -24,7 +24,7 @@
       official:'Book-referenced exercises',original:'Original Triggle practice',all:'All questions',
       sourceCaution:'These references include archived editions. Confirm question numbering against your prescribed textbook.',
       quizIntro:'Short concept checks for practice, not an official textbook chapter exam. Try answering before asking for a hint.',
-      noQuiz:'A full chapter quiz has not been created yet. You can use the available questions to practise now.',
+      noQuiz:'Quizzes for this chapter are coming soon. There are no quiz questions here yet.',
       correct:'Correct! You can try explaining why on paper.',incorrect:'Not quite. Try the clue and answer again.',
       hint:'Show a hint',reveal:'Why?',progress:'Checks answered correctly',tryPaper:'Try the full concept lesson',
       navigation:'Chapter sections',review:'Editorial review',sources:'Source books',
@@ -44,7 +44,7 @@
       available:'கிடைக்கிறது',soon:'மேலும் உருவாகின்றன',checks:'சிறு வினாக்கள்',questions:'வினாக்கள்',worked:'எடுத்துக்காட்டுகள்',
       back:'அத்தியாயத் தேர்வுகள்',classBack:'அனைத்து அத்தியாயங்களும்',home:'முகப்பு',
       resources:'பாடநூல் குறிப்புகள் மற்றும் அத்தியாய விவரம்',navigate:'பகுதிக்குச் செல்லுங்கள்',choosePrompt:'ஒரு பகுதியைத் தேர்ந்தெடுக்கவும்…',
-      learning:'கருத்துகளை ஆராயுங்கள்',noneConcept:'இந்த அத்தியாயத்திற்கான செயல்வழிக் கருத்துகள் உருவாக்கப்படுகின்றன.',
+      learning:'கருத்துகளை ஆராயுங்கள்',noneConcept:'இந்த அத்தியாயத்திற்கான கருத்துப் பாடங்கள் உருவாக்கப்படுகின்றன. இங்கு இன்னும் செயல்வழிப் பாடங்கள் இல்லை.',
       practiceInstead:'பயிற்சிகள் பகுதியில் உள்ள வினாக்களின் படிப்படியான தீர்வுகளைப் பயன்படுத்தலாம்.',
       noneWorked:'இந்த அத்தியாயத்தில் எடுத்துக்காட்டு எனத் தனியாகக் குறிக்கப்பட்ட வினாக்கள் இன்னும் இல்லை.',
       whyWorked:'தீர்வுள்ள பாடநூல் பயிற்சிகள் «பயிற்சிகள்» பகுதியில் சரியான பெயருடன் இடம்பெறுகின்றன.',
@@ -53,7 +53,7 @@
       official:'பாடநூல் சார்ந்த பயிற்சிகள்',original:'டிரிகிள் உருவாக்கிய பயிற்சிகள்',all:'எல்லா வினாக்களும்',
       sourceCaution:'சில குறிப்புகள் பழைய பதிப்புகளைச் சேர்ந்தவை. உங்கள் பாடநூலுடன் வினா எண்களை ஒப்பிடுங்கள்.',
       quizIntro:'பயிற்சிக்கான சிறு வினாக்கள்; அதிகாரப்பூர்வ அத்தியாயத் தேர்வு அல்ல. குறிப்பைப் பார்ப்பதற்கு முன் முயலுங்கள்.',
-      noQuiz:'முழு அத்தியாயத் தேர்வு இன்னும் உருவாக்கப்படவில்லை. இதற்கிடையில் பயிற்சி வினாக்களை முயலலாம்.',
+      noQuiz:'இந்த அத்தியாயத்திற்கான சிறு தேர்வுகள் இன்னும் உருவாக்கப்படுகின்றன. இங்கு வினாக்கள் இன்னும் இல்லை.',
       correct:'சரி! அதன் காரணத்தைத் தாளில் விளக்க முயலுங்கள்.',incorrect:'இன்னும் சரியாகவில்லை. குறிப்பைப் பார்த்து மீண்டும் முயலுங்கள்.',
       hint:'ஒரு குறிப்பு',reveal:'ஏன்?',progress:'சரியாக விடையளித்த வினாக்கள்',tryPaper:'முழுக் கருத்துப் பாடத்திற்குச் செல்லுங்கள்',
       navigation:'அத்தியாயப் பகுதிகள்',review:'மீளாய்வு நிலை',sources:'பாடநூல் ஆதாரங்கள்',
@@ -84,53 +84,56 @@
       counts[kind]+' '+(kind==='concepts'?t.available:kind==='examples'?t.worked:kind==='quizzes'?t.checks:t.questions):t.soon;
     root.replaceChildren();
     root.classList.add('chapter-hub');
-    const heading=document.createElement('header');
-    heading.className='hub-header';
-    heading.innerHTML='<p class="hub-eyebrow">'+e(t.eyebrow)+' · '+e(t.navigation)+' · '+grade+'</p>'+
-      '<h2 id="chapterOverviewTitle">'+e(text(chapter.title))+'</h2>'+
-      '<p class="hub-intro">'+e(section?t.returnHelp:t.intro)+'</p>';
-    const nav=document.createElement('div');nav.className='hub-top-actions';
     const mk=(label,fn,cls)=>{
       const b=document.createElement('button');b.type='button';b.className=cls;
       b.textContent=label;b.addEventListener('click',fn);return b;
     };
-    nav.append(mk('← '+t.classBack,onClass,'hub-back-class'),mk('⌂ '+t.home,onHome,'hub-back-home'));
-    root.append(nav,heading);
-    const metadata=document.createElement('p');metadata.className='hub-stage-note';
-    metadata.textContent=t.sectionStatus;root.append(metadata);
-    const menu=document.createElement('nav');menu.className='hub-section-menu';
-    menu.setAttribute('aria-label',t.navigation);
-    menu.innerHTML='<h3>'+e(section?labelFor(section):t.choose)+'</h3>';
-    const grid=document.createElement('div');grid.className='hub-section-grid';
-    grid.setAttribute('role','group');grid.setAttribute('aria-label',t.navigation);
-    kinds.forEach(kind=>{
-      const b=document.createElement('button');b.type='button';b.dataset.hubSection=kind;
-      b.className='hub-section-card'+(section===kind?' is-current':'')+(available[kind]?'':' is-upcoming');
-      if(section===kind)b.setAttribute('aria-current','page');
-      b.innerHTML='<span class="hub-section-icon" aria-hidden="true">'+symbols[kind]+'</span>'+
-        '<strong>'+e(labelFor(kind))+'</strong>'+
-        '<span class="hub-section-description">'+e(noteFor(kind))+'</span>'+
-        '<span class="hub-section-count">'+e(countFor(kind))+'</span>'+
-        '<span class="hub-section-arrow" aria-hidden="true">↗</span>';
-      b.addEventListener('click',()=>{if(section!==kind)onSection(kind);});
-      grid.append(b);
-    });
-    menu.append(grid);root.append(menu);
+    // One clear hierarchy: section → chapter choices → all chapters.
+    // Home is provided once, globally, in the app header.
+    const nav=document.createElement('nav');nav.className='hub-top-actions';
+    nav.setAttribute('aria-label',t.navigation);
+    nav.append(section
+      ? mk('← '+t.back,()=>onSection(null),'hub-back-menu')
+      : mk('← '+t.classBack,onClass,'hub-back-class'));
+    root.append(nav);
+    const heading=document.createElement('header');heading.className='hub-header';
+    const sectionTitle=section==='sources'?t.resources:labelFor(section);
+    const pageTitle=section?sectionTitle:text(chapter.title);
+    heading.innerHTML='<p class="hub-eyebrow">'+
+      e(section?text(chapter.title):t.eyebrow+' · '+t.navigation+' · '+grade)+'</p>'+
+      '<h2 id="chapterOverviewTitle">'+e(pageTitle)+'</h2>'+
+      (section?'':'<p class="hub-intro">'+e(t.intro)+'</p>');
+    root.append(heading);
     if(!section){
+      const metadata=document.createElement('p');metadata.className='hub-stage-note';
+      metadata.textContent=t.sectionStatus;root.append(metadata);
+      const menu=document.createElement('nav');menu.className='hub-section-menu';
+      menu.setAttribute('aria-label',t.navigation);
+      menu.innerHTML='<h3>'+e(t.choose)+'</h3>';
+      const grid=document.createElement('div');grid.className='hub-section-grid';
+      grid.setAttribute('role','group');grid.setAttribute('aria-label',t.navigation);
+      kinds.forEach(kind=>{
+        const b=document.createElement('button');b.type='button';b.dataset.hubSection=kind;
+        b.className='hub-section-card'+(available[kind]?'':' is-upcoming');
+        b.innerHTML='<span class="hub-section-icon" aria-hidden="true">'+symbols[kind]+'</span>'+
+          '<strong>'+e(labelFor(kind))+'</strong>'+
+          '<span class="hub-section-description">'+e(noteFor(kind))+'</span>'+
+          '<span class="hub-section-count">'+e(countFor(kind))+'</span>'+
+          '<span class="hub-section-arrow" aria-hidden="true">↗</span>';
+        b.addEventListener('click',()=>onSection(kind));
+        grid.append(b);
+      });
+      menu.append(grid);root.append(menu);
       const footer=document.createElement('div');footer.className='hub-footer';
       footer.append(mk('ⓘ '+t.resources,()=>onSection('sources'),'hub-resource-link'));
-      root.append(footer);return;
+      root.append(footer);
+      return;
     }
-    const back=mk('← '+t.back,()=>onSection(null),'hub-back-menu');
-    root.insertBefore(back,menu);
     const panel=document.createElement('section');panel.className='hub-panel';panel.id='chapterSectionContent';
     panel.setAttribute('aria-label',labelFor(section)||t.resources);
     root.append(panel);
     function info(copy){
       const p=document.createElement('p');p.className='hub-info';p.textContent=copy;panel.append(p);
-    }
-    function swapTo(kind){
-      const b=mk(t.seeExercises,()=>onSection(kind),'hub-next-section');panel.append(b);
     }
     const cardFor=item=>{
       const b=document.createElement('button');b.type='button';b.className='hub-question';
@@ -149,14 +152,14 @@
           const target=panel.querySelector('.sp2-nav [data-index="'+initialConcept+'"]');
           if(target)target.click();
         }
-      }else{info(t.noneConcept);info(t.practiceInstead);if(sets.exercises.length)swapTo('exercises');}
+      }else{info(t.noneConcept);}
     }
     if(section==='examples'||section==='exercises'){
       const selected=sets[section];
       if(!selected.length){
         info(section==='examples'?t.noneWorked:t.noneExercises);
         if(section==='examples'){
-          info(t.whyWorked);if(sets.exercises.length)swapTo('exercises');
+          info(t.whyWorked);
         }
       }else{
         if(section==='exercises')info(t.practiceNote);
@@ -197,7 +200,6 @@
     if(section==='quizzes'){
       if(!stages.length){
         info(t.noQuiz);
-        if(sets.exercises.length)swapTo('exercises');
       }else{
         info(t.quizIntro);
         const status=document.createElement('p');status.className='hub-quiz-progress';

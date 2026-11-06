@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#faf9f6"><meta name="description" content="Learn mathematics clearly in English and Tamil. Free interactive lessons, chapters, exercises and guided reasoning for Classes 9–12.">
 <meta name="copyright" content="© 2026 VIGNESWARAN E R"><link rel="manifest" href="./manifest.webmanifest">
 <title>Triggle — Mathematics Made Clear | Classes 9–12</title>
-<link rel="stylesheet" href="./assets/app.css?v=p2-journey"><link rel="stylesheet" href="./assets/discovery.css?v=home-v1"><link rel="stylesheet" href="./assets/chapter-hub.css?v=hub-v1">
+<link rel="stylesheet" href="./assets/app.css?v=p2-journey"><link rel="stylesheet" href="./assets/discovery.css?v=home-v1"><link rel="stylesheet" href="./assets/chapter-hub.css?v=hub-v2">
 </head>
 <body>
 <div class="app-shell">
@@ -21,7 +21,7 @@
     
     <nav id="exerciseList" class="exercise-list" aria-label="Classes, chapters and sections"></nav>
     <div class="sidebar-search-bottom"><p data-i18n="searchOptional">Search (optional)</p><label class="search-field"><span aria-hidden="true">⌕</span><input type="search" id="search" autocomplete="off" placeholder="Search exercise, question..." aria-label="Search lessons"><kbd>/</kbd></label></div>
-    <div class="sidebar-foot"><p><span aria-hidden="true">✦</span> <span data-i18n="saveNote">Your progress stays on this device</span></p><a href="./index.html">⌂ <span data-i18n="home">Home</span> <span aria-hidden="true">↗</span></a></div>
+    <div class="sidebar-foot"><p><span aria-hidden="true">✦</span> <span data-i18n="saveNote">Your progress stays on this device</span></p></div>
   </aside>
   <div class="backdrop" id="backdrop" aria-hidden="true"></div>
   <div class="workspace">
@@ -35,6 +35,7 @@
       <div class="status-row"><nav class="crumb" id="crumb" aria-label="Navigate class, chapter, and exercise"></nav><div class="small-total" id="gradeTotal">53 lessons</div></div>
       <main id="discoveryView" class="discovery-view" aria-label="Triggle home and chapters" tabindex="-1" hidden></main>
       <main id="chapterOverview" class="chapter-overview" aria-labelledby="chapterOverviewTitle" tabindex="-1" hidden></main>
+      <div class="question-return" id="questionReturn" hidden><button type="button" id="questionReturnBtn">← Back to chapter</button></div>
       <main class="lesson-card" id="lessonCard" tabindex="-1">
         <div class="question-top"><span class="lesson-tag" id="questionLabel">EXERCISE 6.1</span><span class="lesson-progress" id="itemPosition">01 / 53</span></div>
         <div class="lesson-title-row"><div><div id="questionTitle" class="mini-topic">Trigonometry</div><h2 id="questionHead">Loading lesson...</h2></div><button type="button" id="figureBtn" class="figure-button" title="Open a relevant mathematics diagram"><span data-i18n="diagram">Figure</span> <span aria-hidden="true">↗</span></button></div>
@@ -99,6 +100,6 @@
   </div>
 </dialog>
 <dialog id="figureDialog" class="figure-dialog" aria-label="Mathematics diagram"><div class="dialog-header"><div><span data-i18n="visualGuide">VISUAL EXPLANATION</span><h3 id="visualTitle">Diagram</h3></div><button type="button" id="closeDiagram" class="dialog-close">✕ <span data-i18n="close">Close</span></button></div><div class="diagram-content" id="diagramContent"></div><p class="diagram-caption" id="diagramCaption">Illustration, not necessarily drawn to scale.</p></dialog>
-<script src="./data/class-9.js?v=128"></script><script src="./data/class-10.js?v=128"></script><script src="./data/class-11.js?v=128"></script><script src="./data/class-12.js?v=128"></script><script src="./assets/diagrams.js?v=128"></script><script src="./assets/concept-figures.js?v=128"></script><script src="./assets/guided-lessons.js?v=128"></script><script src="./assets/deep-lessons.js?v=128"></script><script src="./assets/deep-experience.js?v=128"></script><script src="./data/curriculum.js?v=phase0"></script><script src="./assets/math-notation.js?v=p2"></script><script src="./assets/phase2-lab.js?v=p2"></script><script src="./data/set-language-path.js?v=p2-journey"></script><script src="./assets/set-language-journey.js?v=p2-journey"></script><script src="./assets/discovery.js?v=home-v1"></script><script src="./assets/chapter-hub.js?v=hub-v1"></script><script src="./assets/app.js?v=hub-v1"></script><script defer src="./assets/visual-lessons.js?v=128"></script>
+<script src="./data/class-9.js?v=128"></script><script src="./data/class-10.js?v=128"></script><script src="./data/class-11.js?v=128"></script><script src="./data/class-12.js?v=128"></script><script src="./assets/diagrams.js?v=128"></script><script src="./assets/concept-figures.js?v=128"></script><script src="./assets/guided-lessons.js?v=128"></script><script src="./assets/deep-lessons.js?v=128"></script><script src="./assets/deep-experience.js?v=128"></script><script src="./data/curriculum.js?v=phase0"></script><script src="./assets/math-notation.js?v=p2"></script><script src="./assets/phase2-lab.js?v=p2"></script><script src="./data/set-language-path.js?v=p2-journey"></script><script src="./assets/set-language-journey.js?v=p2-journey"></script><script src="./assets/discovery.js?v=hub-v2"></script><script src="./assets/chapter-hub.js?v=hub-v2"></script><script src="./assets/app.js?v=hub-v2"></script><script defer src="./assets/visual-lessons.js?v=128"></script>
 <script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));</script>
 </body></html>
