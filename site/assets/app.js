@@ -110,17 +110,30 @@
   const top=document.createElement('div');top.className='chapter-overview-top';
   const eyebrow=document.createElement('p');eyebrow.className='eyebrow';eyebrow.textContent=ui('overview')+' · '+ui('chapter')+' '+chapter.number;
   const heading=document.createElement('h2');heading.id='chapterOverviewTitle';heading.textContent=tr(chapter.title);
-  const status=document.createElement('span');status.className='chapter-status';status.dataset.status=chapter.status;status.textContent=ui(chapter.status);top.append(eyebrow,heading,status);container.append(top);
+  const status=document.createElement('span');status.className='chapter-status';status.dataset.status=chapter.status;status.textContent=ui(chapter.status);top.append(eyebrow,heading,status);
+  if(chapter.id==='g9-ch1'){
+    const pilot=document.createElement('span');pilot.className='sp2-pilot-note';
+    pilot.textContent=lang==='ta'?'7 சிறு பாடங்கள் செயல்பாட்டில்':'7 interactive mini-lessons live';
+    top.append(pilot);
+  }
+  container.append(top);
   const note=document.createElement('p');note.textContent=ui('contentPlanned');container.append(note);
+  if(chapter.id==='g9-ch1' && window.TriggleSetJourney){
+    window.TriggleSetJourney.mount(container,chapter,lang);
+  }
   if(chapter.id==='g9-ch1' && window.TriggleLab){
     note.textContent=lang==='ta'
-      ? 'முழு அத்தியாயம் இன்னும் உருவாக்கப்படுகிறது. முதல் கற்றல் ஆய்வகம் கீழே உள்ளது.'
-      : 'Full chapter coverage is still in development. Try the first original learning lab below.';
+      ? 'ஏழு சிறு பாடங்களும் வென் ஆய்வகமும் கீழே உள்ளன. முழு அத்தியாயப் பயிற்சிகள் இன்னும் உருவாக்கப்படுகின்றன.'
+      : 'Seven interactive mini-lessons and a Venn lab are now available below. Complete chapter exercises are still being developed.';
     window.TriggleLab.mount(container,chapter,lang);
   }
   if(chapter.terminology?.ta!=='verified'){const terminology=document.createElement('p');terminology.className='terminology-note';terminology.textContent=ui('terminologyPending');container.append(terminology)}
   const sections=document.createElement('ul');sections.className='chapter-sections';
-  for(const key of ['concepts','prerequisites','workedExamples','exercises','quizzes']){const row=document.createElement('li');const label=document.createElement('span');label.textContent=ui(key);const state=document.createElement('small');state.textContent=ui('planned');row.append(label,state);sections.append(row)}container.append(sections);
+  for(const key of ['concepts','prerequisites','workedExamples','exercises','quizzes']){const row=document.createElement('li');const label=document.createElement('span');label.textContent=ui(key);const state=document.createElement('small');state.textContent=ui('planned');
+    if(chapter.id==='g9-ch1'&&(key==='concepts'||key==='quizzes')){
+      state.textContent=lang==='ta'?'முன்னோட்டம் உள்ளது':'Pilot available';
+    }
+    row.append(label,state);sections.append(row)}container.append(sections);
   const review=document.createElement('p');review.className='chapter-review';review.textContent=ui('reviewState')+': '+ui(chapter.review?.state||'unreviewed');if(chapter.review?.notes)review.textContent+=' · '+tr(chapter.review.notes);container.append(review);
   const title=document.createElement('h3');title.textContent=ui('existingQuestions');container.append(title);
   const explanation=document.createElement('p');explanation.className='chapter-coverage-note';explanation.textContent=ui('chapterNotComplete');container.append(explanation);

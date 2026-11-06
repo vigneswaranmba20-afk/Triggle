@@ -240,6 +240,54 @@ async function main() {
         assert.ok(item.text.includes('2'),'The exponent must not disappear');
       }
     });
+    await check('2025-book Grade 9 learning journey supports seven ideas and live demonstrations at 320px', async () => {
+      const page=await visit(await context(320),'/index.html?class=9&chapter=g9-ch1');
+      const journey=page.locator('.sp2-journey');
+      await journey.waitFor({state:'visible'});
+      assert.equal(await journey.locator('[data-nav] button').count(),7);
+      assert.ok((await journey.locator('[data-progress]').innerText()).includes('0 / 7'));
+      // Membership: choose a number not belonging to the set.
+      await journey.locator('[data-demo-mode="3"]').click();
+      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('∉ A'));
+      // Correct independent check persists only in localStorage.
+      await journey.locator('[data-answers] [data-choice="0"]').click();
+      assert.ok((await journey.locator('[data-feedback]').innerText()).includes('Not yet'));
+      await journey.locator('[data-hint]').click();
+      assert.ok((await journey.locator('[data-feedback]').innerText()).includes('same rule'));
+      await journey.locator('[data-answers] [data-choice="1"]').click();
+      assert.ok((await journey.locator('[data-progress]').innerText()).includes('1 / 7'));
+      await journey.locator('[data-nav] [data-index="1"]').click();
+      await journey.locator('[data-demo-mode="builder"]').click();
+      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('x < 10'));
+      await journey.locator('[data-nav] [data-index="2"]').click();
+      await journey.locator('[data-demo-mode="subset"]').click();
+      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('⊂'));
+      await journey.locator('[data-nav] [data-index="4"]').click();
+      await journey.locator('[data-demo-mode="distributive"]').click();
+      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('{2}'));
+      await journey.locator('[data-nav] [data-index="5"]').click();
+      await journey.locator('[data-demo-mode="intersection"]').click();
+      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('{1, 2, 4, 5, 6}'));
+      await journey.locator('[data-nav] [data-index="6"]').click();
+      await journey.locator('input[type="range"]').evaluate(el=>{
+        el.value='9';el.dispatchEvent(new Event('input',{bubbles:true}));
+      });
+      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('16'));
+      await journey.locator('.sp2-hard summary').click();
+      for(let i=0;i<6;i++)await journey.locator('[data-hard-next]').click();
+      assert.equal(await journey.locator('[data-hard-steps] li').count(),6);
+      assert.ok((await journey.locator('[data-hard-steps]').innerText()).includes('21 people'));
+      await page.locator('#langTa').click();
+      assert.ok((await journey.locator('h3').first().innerText()).includes('கண மொழி'));
+      await journey.locator('[data-nav] [data-index="5"]').click();
+      assert.ok((await journey.locator('.sp2-stage-reference').innerText()).includes('தமிழ் பக்கம் 26'));
+      await journey.locator('[data-answers] [data-choice="1"]').click();
+      assert.ok((await journey.locator('[data-progress]').innerText()).includes('2 / 7'));
+      await noOverflow(page,'Tamil learning path at 320px');
+      await page.reload();
+      await journey.waitFor({state:'visible'});
+      assert.ok((await journey.locator('[data-progress]').innerText()).includes('2 / 7'));
+    });
     await check('Phase 2 lesson is available during an offline mobile reload', async () => {
       const ctx = await context(390,'allow');
       const page = await visit(ctx,'/index.html?class=9&chapter=g9-ch1');
@@ -250,6 +298,9 @@ async function main() {
       await page.reload();
       const lab=page.locator('.p2-lab');
       await lab.waitFor({state:'visible'});
+      await page.locator('.sp2-journey').waitFor({state:'visible'});
+      await page.locator('.sp2-journey [data-nav] [data-index="6"]').click();
+      assert.ok((await page.locator('.sp2-journey .sp2-formula').innerText()).includes('n(A ∪ B)'));
       await lab.locator('[data-op="neither"]').click();
       assert.equal(await lab.locator('[data-result-set]').innerText(),'{7, 8}');
       await ctx.setOffline(false);
