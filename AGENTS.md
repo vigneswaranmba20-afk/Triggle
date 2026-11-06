@@ -5,7 +5,7 @@ This file tells coding agents (including Codex) where to find **maintained educa
 ## Before editing Grades 9–12 mathematics content
 
 1. Read `docs/reference-library/README.md` (source register, verified links, limitations, permissions).
-2. Read `docs/reference-library/2025-upload-audit.md` and `docs/reference-library/2025-user-textbook-manifest.json` for verified **2025 revisions** in the user's ten uploaded books. Two 2025 Tamil books are not visible here (Grade 9 and Grade 12 Volume I). The PDFs themselves are not committed to GitHub; do not pretend a repository clone can read them.
+2. Read `docs/reference-library/2025-upload-audit.md` and `docs/reference-library/2025-user-textbook-manifest.json` for verified **2025 revisions** in the user's twelve uploaded books, covering every one of the 41 English/Tamil chapter pairs. The PDFs themselves are not committed to GitHub; do not pretend a repository clone can read them.
 3. Read `docs/reference-library/edition-and-tamil-audit-2026-11-06.md` for verified historic Grade 12 Tamil source volumes, printed-page locators and unresolved 2026–27 prescribed-edition comparison.
 4. Read `docs/reference-library/teaching-handbook.md` (original examples, bilingual glossary candidates, misconception/visual-learning patterns).
 5. Read `docs/reference-library/chapter-crosswalk.md` and `docs/phase-0-audit.md` (all 41 authoritative current IDs, chapter status and unresolved TN textbook evidence).
@@ -25,6 +25,6 @@ This file tells coding agents (including Codex) where to find **maintained educa
 
 The handbook is a *living internal working book*, not certification that Grade 9–12 lessons are complete.
 
-**Current archive evidence does not close the editorial gate:** Grade 12 Tamil chapter names are now anchored in archived SCERT books (Volume I rev. 2020; Volume II rev. 2022). Never mark any `terminology.ta` as `verified` or claim 2026–27 edition parity without comparing the prescribed textbook and reviewing complete lesson wording. Two-language source links alone are not full translation review.
+**All 2025 textbooks are now represented by direct user-uploaded edition-imprint and contents evidence.** Older Grade 12 Tamil archives remain supplementary historical provenance. Never mark any `terminology.ta` as `verified` or claim 2026–27 edition parity without comparing the prescribed textbook and reviewing complete lesson wording. Two-language source links alone are not full translation review.
 
-**2025 upload update (2026-11-06):** The new 2025 PDF audit supersedes older "only ZIP accessible" statements. The 2025 revision is confirmed from imprints, but equivalence to 2026–27 prescribed printings and full bilingual lesson accuracy are **not** certified. Avoid changing sourceRefs to an older-edition PDF while claiming the destination is a 2025 file.
+**2025 upload update (2026-11-06):** The complete 12-book 2025 PDF audit supersedes older "only ZIP accessible" and "two Tamil books missing" statements. The 2025 revision is confirmed from imprints, but equivalence to 2026–27 prescribed printings and full bilingual lesson accuracy are **not** certified. Avoid changing sourceRefs to an older-edition PDF while claiming the destination is a 2025 file.
