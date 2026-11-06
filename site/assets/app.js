@@ -29,16 +29,10 @@
  const mobile=matchMedia('(max-width:800px)');
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  function math(str){
-   // A small, self-contained typesetter; mathematical source strings remain text, never executable HTML.
-   const tokens=[];
-   const stash=tag=>{tokens.push(tag);return '\uE000M'+(tokens.length-1)+'\uE001'};
-   let s=esc(str);
-   s=s.replace(/\(\s*\[\[([^\]|]+)\|([^\]]+)\]\]\s*\)([²³⁴])/g,
-     (_m,n,d,p)=>stash('<math xmlns="http://www.w3.org/1998/Math/MathML" class="mathml-brackets"><mstyle displaystyle="true"><msup><mrow><mo stretchy="true">(</mo><mfrac><mtext>'+n+'</mtext><mtext>'+d+'</mtext></mfrac><mo stretchy="true">)</mo></mrow><mn>'+({'²':2,'³':3,'⁴':4}[p])+'</mn></msup></mstyle></math>'));
-   s=s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g,(_m,n,d)=>stash('<span class="frac"><span>'+esc(n)+'</span><span>'+esc(d)+'</span></span>'));
-   s=s.replace(/([²³⁴])/g,c=>'<sup>'+({'²':'2','³':'3','⁴':'4'}[c])+'</sup>').replace(/\^([0-9]+)/g,'<sup>$1</sup>');
-   tokens.forEach((tag,i)=>s=s.replace('\uE000M'+i+'\uE001',tag));return s;
+  // Local typesetting: accessible group exponents and no cloud requests.
+  return window.TriggleNotation ? window.TriggleNotation.render(str) : esc(str);
  }
+
  const activeList=()=>classes[grade].items;
  const currentIndex=()=>activeList().findIndex(i=>i.id===current.id);
  const num=n=>String(n).padStart(2,'0');
@@ -118,6 +112,12 @@
   const heading=document.createElement('h2');heading.id='chapterOverviewTitle';heading.textContent=tr(chapter.title);
   const status=document.createElement('span');status.className='chapter-status';status.dataset.status=chapter.status;status.textContent=ui(chapter.status);top.append(eyebrow,heading,status);container.append(top);
   const note=document.createElement('p');note.textContent=ui('contentPlanned');container.append(note);
+  if(chapter.id==='g9-ch1' && window.TriggleLab){
+    note.textContent=lang==='ta'
+      ? 'முழு அத்தியாயம் இன்னும் உருவாக்கப்படுகிறது. முதல் கற்றல் ஆய்வகம் கீழே உள்ளது.'
+      : 'Full chapter coverage is still in development. Try the first original learning lab below.';
+    window.TriggleLab.mount(container,chapter,lang);
+  }
   if(chapter.terminology?.ta!=='verified'){const terminology=document.createElement('p');terminology.className='terminology-note';terminology.textContent=ui('terminologyPending');container.append(terminology)}
   const sections=document.createElement('ul');sections.className='chapter-sections';
   for(const key of ['concepts','prerequisites','workedExamples','exercises','quizzes']){const row=document.createElement('li');const label=document.createElement('span');label.textContent=ui(key);const state=document.createElement('small');state.textContent=ui('planned');row.append(label,state);sections.append(row)}container.append(sections);

@@ -194,6 +194,66 @@ async function main() {
       await page.locator('#search').fill('');
       assert.equal(await page.locator('#exerciseList [data-chapter-id]').count(), 9);
     });
+    await check('Phase 2 bilingual Set Language micro-lab works without leaving the chapter', async () => {
+      const page = await visit(await context(320), '/index.html?class=9&chapter=g9-ch1');
+      const lab = page.locator('#chapterOverview .p2-lab');
+      await lab.waitFor({ state:'visible' });
+      assert.equal(await lab.locator('[data-result-set]').innerText(), '{1, 2, 3, 4, 5, 6}');
+      await lab.locator('[data-op="intersection"]').click();
+      assert.equal(await lab.locator('[data-result-set]').innerText(), '{3, 5}');
+      assert.equal(await lab.locator('[data-op="intersection"]').getAttribute('aria-pressed'), 'true');
+      await lab.locator('[data-choice="0"]').click();
+      assert.ok((await lab.locator('[data-feedback]').innerText()).includes('Try again'));
+      await lab.locator('[data-hint]').click();
+      assert.ok((await lab.locator('[data-feedback]').innerText()).includes('middle'));
+      await lab.locator('[data-choice="1"]').click();
+      assert.ok((await lab.locator('[data-feedback]').innerText()).includes('Correct'));
+      await lab.locator('.p2-deeper summary').click();
+      for(let i=0;i<4;i++) await lab.locator('[data-next-reason]').click();
+      assert.equal(await lab.locator('[data-reasoning] li').count(), 4);
+      assert.ok((await lab.locator('[data-reasoning]').innerText()).includes('20 − 16 = 4'));
+      assert.equal(await lab.locator('[data-next-reason]').isVisible(), false);
+      await page.locator('#langTa').click();
+      assert.ok((await lab.locator('h3').first().innerText()).includes('கண மொழி'));
+      await lab.locator('[data-op="difference"]').click();
+      assert.equal(await lab.locator('[data-result-set]').innerText(), '{1, 2}');
+      await noOverflow(page,'Tamil micro-lab at 320px');
+    });
+    await check('Grouped square-bracket exponents are visibly attached to their closing bracket', async () => {
+      const page = await visit(await context(390), '/index.html?class=9&chapter=g9-ch1');
+      const geometry = await page.evaluate(() => {
+        const probe=document.createElement('div');
+        probe.style.cssText='position:fixed;left:0;top:0;background:white;z-index:10000;font-size:24px';
+        probe.innerHTML=window.TriggleNotation.render('[x+1]²')+' '+window.TriggleNotation.render('( [[1|2]] )²');
+        document.body.append(probe);
+        const powers=Array.from(probe.querySelectorAll('.math-group-power')).map(group => ({
+          bracket:group.querySelectorAll('.math-bracket')[1].getBoundingClientRect().top,
+          exponent:group.querySelector(':scope > sup').getBoundingClientRect().top,
+          text:group.textContent
+        }));
+        probe.remove();
+        return powers;
+      });
+      assert.equal(geometry.length,2);
+      for(const item of geometry) {
+        assert.ok(item.exponent < item.bracket + 3,'Exponent must sit above the closing bracket '+JSON.stringify(item));
+        assert.ok(item.text.includes('2'),'The exponent must not disappear');
+      }
+    });
+    await check('Phase 2 lesson is available during an offline mobile reload', async () => {
+      const ctx = await context(390,'allow');
+      const page = await visit(ctx,'/index.html?class=9&chapter=g9-ch1');
+      await page.evaluate(async () => {await navigator.serviceWorker.ready;});
+      await page.reload();
+      await page.waitForFunction(() => !!navigator.serviceWorker.controller);
+      await ctx.setOffline(true);
+      await page.reload();
+      const lab=page.locator('.p2-lab');
+      await lab.waitFor({state:'visible'});
+      await lab.locator('[data-op="neither"]').click();
+      assert.equal(await lab.locator('[data-result-set]').innerText(),'{7, 8}');
+      await ctx.setOffline(false);
+    });
     await check('service worker caches curriculum and supports an offline chapter reload', async () => {
       const ctx = await context(390, 'allow');
       const page = await visit(ctx, '/index.html?class=12&chapter=g12-ch12');
