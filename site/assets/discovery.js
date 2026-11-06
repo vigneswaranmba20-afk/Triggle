@@ -22,7 +22,7 @@
       featuredDesc:'Seven short ideas, a Venn-diagram lab, and step-by-step reasoning.',
       view:'Open chapter',empty:'No matching chapters. Try another word.',
       yourClass:'Your class',pick:'Pick a chapter and start with what is available today.',
-      back:'Back to Home',chooseClass:'Change class',allChapters:'All chapters in this class',
+      back:'All classes',chooseClass:'Change class',allChapters:'All chapters in this class',
       tip:'You can always use the Chapters menu or the class numbers below.',
       status:'Curriculum mapped, full lessons being developed',
       continueLabel:'Your last opened question (saved on this device)',
@@ -46,7 +46,7 @@
       featuredDesc:'ஏழு சிறு கருத்துகள், வென் பட ஆய்வகம், படிப்படியான காரண விளக்கம்.',
       view:'அத்தியாயத்தைத் திறக்கவும்',empty:'பொருந்தும் அத்தியாயம் இல்லை. வேறு சொல்லை முயலுங்கள்.',
       yourClass:'உங்கள் வகுப்பு',pick:'இப்போது கிடைக்கும் பாடங்களிலிருந்து கற்க ஒரு அத்தியாயத்தைத் தேர்ந்தெடுக்கவும்.',
-      back:'முகப்புக்குத் திரும்பு',chooseClass:'வகுப்பை மாற்றுக',allChapters:'இந்த வகுப்பின் எல்லா அத்தியாயங்களும்',
+      back:'அனைத்து வகுப்புகள்',chooseClass:'வகுப்பை மாற்றுக',allChapters:'இந்த வகுப்பின் எல்லா அத்தியாயங்களும்',
       tip:'மேலுள்ள அத்தியாயப் பட்டியலையோ கீழுள்ள வகுப்பு எண்களையோ எப்போதும் பயன்படுத்தலாம்.',
       status:'அத்தியாயப் பட்டியல் தயார்; முழுப் பாடங்கள் உருவாக்கப்படுகின்றன',
       continueLabel:'இந்தச் சாதனத்தில் கடைசியாகத் திறந்த வினா',
@@ -127,7 +127,7 @@
         '<h1>'+escapeHtml(t.class)+' '+g.grade+'</h1><p>'+escapeHtml(t.pick)+'</p>'+
         '<div class="discover-directory-summary"><span>'+g.chapters.length+' '+escapeHtml(t.mapped)+'</span><span>'+escapeHtml(t.status)+'</span></div></section>'+
         '<section class="discover-section"><div class="discover-section-heading"><h2>'+escapeHtml(t.allChapters)+'</h2>'+
-        '<button class="discover-change" type="button" data-home>'+escapeHtml(t.chooseClass)+' →</button></div>'+
+        '</div>'+
         '<div class="discover-chapter-grid" data-chapter-grid>'+g.chapters.map(c=>chapterCard({grade:g.grade,chapter:c})).join('')+'</div></section>'+
         '<section class="discover-section discover-find"><label for="discover-search">'+escapeHtml(t.find)+'</label>'+
         '<input id="discover-search" data-search type="search" autocomplete="off" enterkeyhint="search" placeholder="'+escapeHtml(t.findPlaceholder)+'">'+
