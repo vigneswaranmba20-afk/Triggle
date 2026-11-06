@@ -123,6 +123,13 @@ function validateCurriculum(curriculum, classes) {
   const prerequisites = new Map([...chapters, ...concepts]);
   for (const grade of curriculum.grades) for (const chapter of grade.chapters) {
     checkSourceRefs(chapter, chapter.id);
+    // Every State Board chapter needs both English- and Tamil-medium textbook anchors.
+    // A bilingual marketing catalogue does not substitute for chapter-specific evidence.
+    for (const medium of ['en', 'ta']) {
+      if (!chapter.sourceRefs.some(ref => sources.get(ref.sourceId)?.medium === medium)) {
+        errors.push(chapter.id + ': missing ' + medium + ' textbook chapter source');
+      }
+    }
     checkRefs(chapter.prerequisites, prerequisites, chapter.id, 'prerequisite');
     if (chapter.prerequisites.includes(chapter.id)) errors.push(chapter.id + ': chapter cannot require itself');
     for (const id of chapter.legacyQuestionIds) {
