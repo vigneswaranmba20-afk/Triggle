@@ -3,7 +3,7 @@
 **Project:** Triggle, Tamil Nadu State Board Mathematics, Grades 9–12  
 **Status:** **archived textbook evidence improved**; **2026–27 edition equivalence and full terminology approval are not yet certified**.
 
-**NEWER INPUT NOW AVAILABLE:** The user subsequently attached **10 PDFs whose imprint pages explicitly state revised edition 2025**. For the present access status and 41-chapter pagination, consult [the newer 2025 uploaded-book audit](2025-upload-audit.md) and [manifest](2025-user-textbook-manifest.json). The historic access statements below describe the **earlier research snapshot** only. The two 2025 Tamil files still absent from this conversation are Grade 9 Mathematics and Grade 12 Volume I. The 2026–27 prescribed-printing comparison remains unverified.
+**NEWER INPUT NOW AVAILABLE:** The user subsequently attached **all 12 required PDFs whose imprint pages explicitly state revised edition 2025**. For the present access status and 41-chapter pagination, consult [the newer 2025 uploaded-book audit](2025-upload-audit.md) and [manifest](2025-user-textbook-manifest.json). The historic access statements below describe the **earlier research snapshot** only. **No 2025 textbook file is missing**; Class 9 Tamil and Class 12 Tamil Volume I arrived in the follow-up upload. The 2026–27 prescribed-printing comparison remains unverified.
 
 This is a factual research ledger, not a declaration that all editions are verified. It supplements the historical [Phase 0 audit](../phase-0-audit.md) and the [source register](README.md). The academic-year books reportedly uploaded elsewhere in the project were **not available in this conversation's readable files**. The accessible local upload was a historical `Triggle-main.zip`, which contains website source files but no textbook PDFs. Consequently no supplied 2026–27 textbook imprint could be compared directly.
 
@@ -94,7 +94,7 @@ For **each** of the 12 Grade–medium–volume combinations (Grade 9 EN+TA, Grad
 - Comparison of exercise numbering, worked examples and diagrams before claiming exact question fidelity.
 - Tamil glossary and mathematical statements checked page-by-page by a competent Tamil-medium mathematics reviewer.
 
-**What the user can supply:** If their project has these books already, attach the PDFs to this conversation or to an environment readable by Codex. A link to a private upload is not an accessible file here. The remaining verification is blocked by inaccessible current-year books, *not* by a missing chapter roadmap.
+**Updated next step:** All 12 2025 PDF revisions were uploaded in this conversation and their imprints/contents inspected. The 2026–27 prescribed-printing equivalence check still needs an authoritative current-year reference; complete chapter exercise and Tamil lesson reviews are also pending. Codex cannot access the chat-local PDFs from a GitHub clone without separately provided access.
 
 ### Safety gates retained
 
