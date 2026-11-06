@@ -126,14 +126,14 @@
         '<span class="discover-eyebrow">'+escapeHtml(t.yourClass)+'</span>'+
         '<h1>'+escapeHtml(t.class)+' '+g.grade+'</h1><p>'+escapeHtml(t.pick)+'</p>'+
         '<div class="discover-directory-summary"><span>'+g.chapters.length+' '+escapeHtml(t.mapped)+'</span><span>'+escapeHtml(t.status)+'</span></div></section>'+
+        '<section class="discover-section"><div class="discover-section-heading"><h2>'+escapeHtml(t.allChapters)+'</h2>'+
+        '<button class="discover-change" type="button" data-home>'+escapeHtml(t.chooseClass)+' →</button></div>'+
+        '<div class="discover-chapter-grid" data-chapter-grid>'+g.chapters.map(c=>chapterCard({grade:g.grade,chapter:c})).join('')+'</div></section>'+
         '<section class="discover-section discover-find"><label for="discover-search">'+escapeHtml(t.find)+'</label>'+
         '<input id="discover-search" data-search type="search" autocomplete="off" enterkeyhint="search" placeholder="'+escapeHtml(t.findPlaceholder)+'">'+
         '<p class="discover-filter-status" data-filter-status role="status"></p>'+
         '<label for="discover-jump">'+escapeHtml(t.quick)+'</label>'+
         '<select id="discover-jump" data-jump>'+jumpOptions(g.grade)+'</select></section>'+
-        '<section class="discover-section"><div class="discover-section-heading"><h2>'+escapeHtml(t.allChapters)+'</h2>'+
-        '<button class="discover-change" type="button" data-home>'+escapeHtml(t.chooseClass)+' →</button></div>'+
-        '<div class="discover-chapter-grid" data-chapter-grid>'+g.chapters.map(c=>chapterCard({grade:g.grade,chapter:c})).join('')+'</div></section>'+
         '<p class="discover-tip">'+escapeHtml(t.tip)+'</p>';
     }
     root.innerHTML=body;
