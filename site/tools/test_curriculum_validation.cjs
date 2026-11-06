@@ -8,12 +8,13 @@ const crypto = require('node:crypto');
 const { validateCurriculum, validatePreservation, validateSiteLinks } = require('./validate_curriculum.cjs');
 const bi = (en = 'Test content', ta = 'சோதனை உள்ளடக்கம்') => ({ en, ta });
 const review = () => ({ state: 'unreviewed', notes: bi('Not reviewed', 'மதிப்பாய்வு செய்யப்படவில்லை') });
-const sourceRefs = () => [{ sourceId: 'textbook-en', locator: 'Contents page' }];
+const sourceRefs = () => [{ sourceId: 'textbook-en', locator: 'Contents page' }, { sourceId: 'textbook-ta', locator: 'பொருளடக்கம்' }];
 function fixture() {
   const classes = {};
   const curriculum = {
     schemaVersion: 1, subject: 'mathematics', board: 'Tamil Nadu State Board',
-    sources: [{ id: 'textbook-en', publisher: 'Government of Tamil Nadu', title: 'Mathematics', medium: 'en', edition: 'Fixture edition', url: 'https://example.org/textbook.pdf', verification: 'pending', evidence: 'Test fixture only' }],
+    sources: [{ id: 'textbook-en', publisher: 'Government of Tamil Nadu', title: 'Mathematics', medium: 'en', edition: 'Fixture edition', url: 'https://example.org/textbook.pdf', verification: 'pending', evidence: 'Test fixture only' },
+      { id: 'textbook-ta', publisher: 'Government of Tamil Nadu', title: 'கணிதவியல்', medium: 'ta', edition: 'Fixture edition', url: 'https://example.org/textbook-ta.pdf', verification: 'pending', evidence: 'Test fixture only' }],
     grades: Object.entries({ 9: 9, 10: 8, 11: 12, 12: 12 }).map(([g, count]) => {
       const grade = Number(g), question = { id: `c${g}-1-example`, classNum: grade, chapter: '1', source: 'https://example.org/exercise' };
       classes[g] = { items: [question] };
@@ -40,6 +41,8 @@ rejects('Whitespace translation', c => { c.grades[0].chapters[0].title.ta = '  '
 rejects('Duplicate chapter ID', c => { c.grades[0].chapters[1].id = c.grades[0].chapters[0].id; }, /duplicate ID/);
 rejects('Duplicate legacy ID', (_c, classes) => { classes[10].items[0].id = classes[9].items[0].id; }, /duplicate ID/);
 rejects('Broken source', c => { c.grades[0].chapters[0].sourceRefs[0].sourceId = 'missing'; }, /broken source reference/);
+rejects('Missing Tamil book', c => { c.grades[3].chapters[0].sourceRefs = c.grades[3].chapters[0].sourceRefs.filter(ref => ref.sourceId !== 'textbook-ta'); }, /missing ta textbook chapter source/);
+rejects('Missing English book', c => { c.grades[3].chapters[0].sourceRefs = c.grades[3].chapters[0].sourceRefs.filter(ref => ref.sourceId !== 'textbook-en'); }, /missing en textbook chapter source/);
 rejects('Invalid external source URL', c => { c.sources[0].url = 'javascript:alert(1)'; }, /HTTP\(S\)/);
 rejects('Broken prerequisite', c => { c.grades[0].chapters[0].prerequisites.push('missing-concept'); }, /broken prerequisite/);
 rejects('Prerequisite cycle', c => { c.grades[0].chapters[0].prerequisites.push('g9-ch2'); c.grades[0].chapters[1].prerequisites.push('g9-ch1'); }, /Cyclic prerequisite/);

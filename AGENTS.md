@@ -5,14 +5,15 @@ This file tells coding agents (including Codex) where to find **maintained educa
 ## Before editing Grades 9–12 mathematics content
 
 1. Read `docs/reference-library/README.md` (source register, verified links, limitations, permissions).
-2. Read `docs/reference-library/teaching-handbook.md` (original examples, bilingual glossary candidates, misconception/visual-learning patterns).
-3. Read `docs/reference-library/chapter-crosswalk.md` and `docs/phase-0-audit.md` (all 41 authoritative current IDs, chapter status and unresolved TN textbook evidence).
-4. Read `site/data/curriculum.js`, schema and relevant `site/data/class-*.js` before altering the app.
-5. Treat the **user's prescribed Tamil Nadu State Board textbook edition** as the final authority for scope/exercise numbering; NCERT and other references are supplementary, not an alternative syllabus.
-6. Never claim the stored reference *links* mean those PDFs were downloaded or reviewed. For unavailable source material, mark exercise/page/medium verification pending.
-7. Write original explanatory text, original examples and original diagrams; do not ingest or republish copyrighted pages/exercises/answer keys from third-party texts.
-8. Keep Tamil translations `pending` until reviewed against prescribed Tamil medium books. Keep the preserved legacy questions and progress/storage keys untouched.
-9. Run `npm test` and `npm run test:browser` and review English/Tamil UI before requesting a merge or publication. Do not mark chapters complete just because the chapter name appears in the register.
+2. Read `docs/reference-library/edition-and-tamil-audit-2026-11-06.md` for verified historic Grade 12 Tamil source volumes, printed-page locators and unresolved 2026–27 prescribed-edition comparison.
+3. Read `docs/reference-library/teaching-handbook.md` (original examples, bilingual glossary candidates, misconception/visual-learning patterns).
+4. Read `docs/reference-library/chapter-crosswalk.md` and `docs/phase-0-audit.md` (all 41 authoritative current IDs, chapter status and unresolved TN textbook evidence).
+5. Read `site/data/curriculum.js`, schema and relevant `site/data/class-*.js` before altering the app.
+6. Treat the **user's prescribed Tamil Nadu State Board textbook edition** as the final authority for scope/exercise numbering; NCERT and other references are supplementary, not an alternative syllabus.
+7. Never claim the stored reference *links* mean those PDFs were downloaded or reviewed. For unavailable source material, mark exercise/page/medium verification pending.
+8. Write original explanatory text, original examples and original diagrams; do not ingest or republish copyrighted pages/exercises/answer keys from third-party texts.
+9. Keep Tamil translations `pending` until reviewed against prescribed Tamil medium books. Keep the preserved legacy questions and progress/storage keys untouched.
+10. Run `npm test` and `npm run test:browser` and review English/Tamil UI before requesting a merge or publication. Do not mark chapters complete just because the chapter name appears in the register.
 
 ## Deployment and file hygiene
 
@@ -22,3 +23,5 @@ This file tells coding agents (including Codex) where to find **maintained educa
 - New public content requires precise source provenance, accessible visual fallback, mathematical checks, and Tamil review.
 
 The handbook is a *living internal working book*, not certification that Grade 9–12 lessons are complete.
+
+**Current archive evidence does not close the editorial gate:** Grade 12 Tamil chapter names are now anchored in archived SCERT books (Volume I rev. 2020; Volume II rev. 2022). Never mark any `terminology.ta` as `verified` or claim 2026–27 edition parity without comparing the prescribed textbook and reviewing complete lesson wording. Two-language source links alone are not full translation review.

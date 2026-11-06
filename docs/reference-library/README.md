@@ -14,7 +14,7 @@ This is a maintained **reference workspace for Triggle's authors, reviewers, and
 
 | ID | Resource | Official landing page | Scope | Status as of 2026-11-06 | Intended use |
 |---|---|---|---|---|---|
-| TN-CURRIC | Tamil Nadu State Board mathematics textbooks | https://www.textbookcorp.in/files/PRICELIST.pdf (catalogue **only**; see existing source register for edition-specific locators) | G9–G12, EN/TA | Publisher catalogue and existing historical chapter audit identified; current edition match remains open | Curriculum alignment |
+| TN-CURRIC | Tamil Nadu State Board mathematics textbooks | https://www.textbookcorp.in/files/PRICELIST.pdf (catalogue **only**; see existing source register for edition-specific locators) | G9–G12, EN/TA | Historic chapter sources now include Grade 12 Tamil SCERT Vol I revised 2020 + Vol II revised 2022; 2026–27 prescribed edition match remains open | Curriculum alignment |
 | NCERT-EXEMPLAR | NCERT Exemplar Problems — Mathematics | https://ncert.nic.in/exemplar-problems.php?ln=en | G9–G12 | Official index located; individual units **not yet exhaustively read or crosswalked** | Problem varieties, reasoning |
 | NCERT-MATH-LAB | NCERT Laboratory Manuals — Mathematics | https://ncert.nic.in/science-laboratory-manual.php?ln=en | Mathematics activities IX, X, XI, XII | Official index located; no bulk material copied | Visual and activity-based pedagogy |
 | NCERT-MATH-KIT | NCERT secondary mathematics-kit manual | https://ncert.nic.in/division/dek/kit-manuals.php?ln=en | IX–X | Official kit/manual index located | Original interactive manipulatives |
@@ -29,6 +29,7 @@ This is a maintained **reference workspace for Triggle's authors, reviewers, and
 - [Teaching handbook v0.1](./teaching-handbook.md): original model lessons, worked examples, visual ideas, common mistakes, formative checks and bilingual terminology candidates.
 - [41-chapter cross-reference](./chapter-crosswalk.md): source-of-truth current chapter names/IDs plus supplementary teaching lenses.
 - [Phase 0 audit](../phase-0-audit.md): prior evidence of textbook source editions, incomplete verification, and 105 preserved questions.
+- [Edition and Tamil terminology evidence audit (2026-11-06)](edition-and-tamil-audit-2026-11-06.md): newly verified archived Grade 12 Tamil volumes and precise outstanding 2026–27 approval checks.
 
 ## Policy for reading and using sources
 
@@ -45,7 +46,7 @@ For exercise fidelity, compare against **the user's prescribed TN volume** and c
 3. An **official** TN SCERT mathematics teacher handbook / local EN–TA term list, if such a file is accessible.
 4. Recent official TN SSLC/HSC mathematics sample papers with their years and mediums, for later exam-mode work.
 
-If materials have been uploaded elsewhere in the project, locate or attach them to the workspace used by the coding agent. This repository does **not** claim to have imported or inspected user-uploaded PDFs in this change; the available local attachment inspected at creation time was a Triggle project ZIP, not textbook files.
+If materials have been uploaded elsewhere in the project, locate or attach them to the workspace used by the coding agent. This repository does **not** claim to have imported or inspected user-uploaded textbooks in this workspace; the accessible local upload was a Triggle project ZIP, not textbook PDFs. The Grade 12 Tamil research uses publicly available reproductions of Government/SCERT books.
 
 ## Phase 2 handoff for coding agents
 
