@@ -1,6 +1,6 @@
-const CACHE='triggle-shell-v1.28-phase0';
+const CACHE='triggle-shell-v1.28-phase0-no-diwali';
 const CORE=['./index.html','./class9-classic.html','./grades.html','./playground.html','./assets/app.css','./assets/app.js','./assets/visual-lessons.js','./data/video-lessons.json','./data/video-production-plan.json','./assets/guided-lessons.js','./assets/deep-lessons.js','./assets/deep-experience.js','./assets/diagrams.js','./assets/concept-figures.js','./data/class-9.js','./data/class-10.js','./data/class-11.js','./data/class-12.js','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
-CORE.push('./assets/diwali.js','./data/curriculum.js');
+CORE.push('./data/curriculum.js');
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('triggle-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==self.location.origin)return;
