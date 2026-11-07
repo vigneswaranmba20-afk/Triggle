@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "about": "Reviewed lesson videos available for their matching Triggle questions. Google Drive videos play from the verified public-sharing source; no private recordings or API keys are included.",
+  "about": "Verified visual lessons are hosted as native MP4 files on GitHub Pages. Students can watch inline and download the lesson; other chapters remain Coming Soon until their videos are published.",
   "lessons": [
     {
       "id": "triggle-c12-ex4-1-q1-ii-gemini-en",
@@ -15,11 +15,12 @@
       },
       "language": "en",
       "status": "ready",
-      "provider": "google-drive",
-      "fileId": "1zBG7dqiwPnwaIe6EqcZKutlqniGiq78i",
+      "provider": "github-pages",
       "durationSeconds": 170.17,
       "notes": "Gemini English voice, unit-circle and sine graph, no spoken welcome/outro and no Tamil subtitles.",
-      "downloadAllowed": false
+      "downloadAllowed": true,
+      "video": "./videos/triggle-class12-ex4-1-q1-ii.mp4",
+      "poster": "./videos/posters/triggle-class12-sine.svg"
     }
   ]
 }
