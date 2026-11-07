@@ -375,9 +375,9 @@ async function main() {
       assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-      assert.equal(await page.locator('.hub-question').count(),1,'Set Language original practice is accessible');
-      const questionId=await page.locator('.hub-question').first().getAttribute('data-question-id');
-      await page.locator('.hub-question').first().click();
+      assert.equal(await page.locator('.hub-question').count(),9,'Eight textbook subparts and the original practice should be accessible');
+      assert.equal(await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').count(),1,'Preserve original practice ID');
+      await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').click();
       assert.equal(new URL(page.url()).searchParams.has('question'),true);
       assert.equal(await page.locator('#lessonCard').isVisible(),true);
       await page.goBack();
