@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#123e39"><title>Triggle · Grade 11 · Exercise 1.1 preview</title>
+<style>
+:root{font-family:system-ui,-apple-system,sans-serif;color:#183b36;background:#f5f8f5}*{box-sizing:border-box}body{margin:0}main{max-width:850px;margin:auto;padding:clamp(16px,4vw,38px)}header{background:#123e39;color:white;padding:20px;border-radius:18px}h1{font-size:clamp(1.5rem,4vw,2.3rem)}button{font:inherit;cursor:pointer;border:2px solid #246b5b;background:white;color:#123e39;padding:10px 15px;border-radius:12px}button:focus-visible,summary:focus-visible{outline:3px solid #b56b09;outline-offset:3px}button[aria-pressed=true]{background:#d8efe5}nav{display:flex;gap:10px;margin:18px 0}.card{background:white;border:1px solid #d1ded7;border-radius:16px;padding:20px;margin:16px 0;overflow-wrap:anywhere}summary{cursor:pointer;font-weight:700;padding:12px 0}li{margin:12px 0;line-height:1.6}.answer{font-weight:750;background:#e9f4ed;padding:12px;border-radius:10px}.status{font-size:.9rem}#error{color:#9a2727}footer{padding:20px 0}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head><body><main><header><h1 id="title">Grade 11 · Sets, Relations and Functions</h1><p id="subtitle">Exercise 1.1 · Question 1 · Testing preview</p></header>
+<nav aria-label="Lesson language"><button type="button" id="en" aria-pressed="true" lang="en">English</button><button type="button" id="ta" aria-pressed="false" lang="ta">தமிழ்</button></nav>
+<p id="review" role="status">Tamil human editorial review pending. Preview is not a published textbook solution.</p><p id="error" role="alert"></p><section id="lessons" aria-label="Worked solutions"></section>
+<footer><p>2025 revised textbook references: English Volume I printed p. 7 (PDF p. 15); Tamil Volume I printed p. 9 (PDF p. 17). Original teaching restatements. © Triggle.</p></footer></main>
+<script>
+'use strict';
+const source='../data/textbook-exercises/g11-ch1-ex1-1-q1.json';
+let lang='en',lesson=null;
+const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
+function render(){
+ if(!lesson)return;
+ document.documentElement.lang=lang;
+ document.getElementById('en').setAttribute('aria-pressed',String(lang==='en'));
+ document.getElementById('ta').setAttribute('aria-pressed',String(lang==='ta'));
+ document.getElementById('title').textContent=lang==='ta'?'வகுப்பு 11 · கணங்கள், தொடர்புகள் மற்றும் சார்புகள்':'Grade 11 · Sets, Relations and Functions';
+ document.getElementById('subtitle').textContent=lang==='ta'?'பயிற்சி 1.1 · வினா 1 · சோதனை முன்னோட்டம்':'Exercise 1.1 · Question 1 · Testing preview';
+ document.getElementById('review').textContent=lang==='ta'?'தமிழ் மனித ஆசிரியர் மதிப்பாய்வு நிலுவையில் உள்ளது. இது சோதனை முன்னோட்டம்.':'Tamil human editorial review pending. This is a testing preview.';
+ const target=document.getElementById('lessons');target.replaceChildren();
+ for(const q of lesson.questions){
+  const card=el('article',undefined,'card');card.id=q.id;
+  card.append(el('h2',(lang==='ta'?'வினா ':'Question ')+q.question+' ('+q.subpart+')'),el('p',q.prompt[lang]));
+  const details=el('details');details.append(el('summary',lang==='ta'?'படிப்படியான தீர்வைக் காண்க':'Show step-by-step solution'));
+  const steps=el('ol');for(const s of q.steps[lang])steps.append(el('li',s));
+  details.append(steps,el('p',(lang==='ta'?'விடை: ':'Answer: ')+q.answer[lang],'answer'));
+  card.append(details,el('p',(lang==='ta'?'கணிதம் சரிபார்க்கப்பட்டது · ஆசிரியர் மதிப்பாய்வு நிலுவை':'Mathematics checked · editorial review pending'),'status'));
+  target.append(card);
+ }
+}
+document.getElementById('en').addEventListener('click',()=>{lang='en';render();});
+document.getElementById('ta').addEventListener('click',()=>{lang='ta';render();});
+fetch(source).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(data=>{
+ if(data.grade!==11||data.exercise!=='1.1'||!Array.isArray(data.questions)||data.questions.length!==4)throw Error('Invalid Grade 11 lesson');
+ lesson=data;render();
+}).catch(()=>{document.getElementById('error').textContent='Lesson data could not be loaded. Reopen this preview while online, then retry.';});
+</script></body></html>
