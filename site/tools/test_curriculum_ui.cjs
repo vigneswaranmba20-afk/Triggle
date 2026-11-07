@@ -776,6 +776,38 @@ async function main() {
       await noOverflow(page, 'offline mobile chapter');
       await ctx.setOffline(false);
     });
+    for(const width of [320,390]){
+      await check('Grade 9 Exercise 1.1 bilingual textbook questions work at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch1&section=exercises');
+        const cards=page.locator('#chapterOverview [data-question-id^="g9-ch1-ex1.1-"]');
+        assert.equal(await cards.count(),8,'All eight new textbook subparts must appear in Exercises');
+        await page.locator('#chapterOverview [data-question-id="g9-ch1-ex1.1-q1-i"]').click();
+        assert.match(await page.locator('#questionText').innerText(),/Prime numbers/);
+        assert.equal(await page.locator('#stepsList li').count(),3);
+        assert.match(await page.locator('#answerText').innerText(),/set/i);
+        await page.locator('#langTa').click();
+        assert.match(await page.locator('#questionText').innerText(),/பகா எண்கள்/);
+        assert.match(await page.locator('#answerText').innerText(),/கணம்/);
+        await noOverflow(page,'Grade 9 Q1 Tamil at '+width+'px');
+        await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-iv');
+        await page.locator('#stepsList li').first().waitFor({state:'visible'});
+        assert.match(await page.locator('#answerText').innerText(),/C, Z, E, H, O, S, L, V, A, K, I/);
+        assert.equal(await page.locator('#stepsList li').count(),3);
+        await noOverflow(page,'Grade 9 Q2 mobile at '+width+'px');
+      });
+    }
+    await check('Grade 9 textbook exercises load offline in the chapter reader',async()=>{
+      const ctx=await context(390,'allow');
+      const page=await visit(ctx,'/index.html?class=9&chapter=g9-ch1&section=exercises');
+      await page.evaluate(async()=>{await navigator.serviceWorker.ready;});
+      await page.reload();
+      await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
+      await ctx.setOffline(true);
+      await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-i');
+      await page.locator('#answerText').waitFor({state:'visible'});
+      assert.match(await page.locator('#answerText').innerText(),/I, N, D, A/);
+      await ctx.setOffline(false);
+    });
     assert.deepEqual(errors, [], 'No uncaught browser errors');
     assert.deepEqual(failedRequests, [], 'No broken local page assets');
     console.log(`PASS: ${count} curriculum browser scenarios; no uncaught errors or broken assets.`);
