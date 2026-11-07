@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "g9-ch1",
+  "batch": "2026-11-07-ex1.1-q2",
+  "purpose": "Draft bilingual solutions; not integrated into student UI or editorially approved.",
+  "sourceAuthority": "User-uploaded 2025 revised English and Tamil Grade 9 textbooks, printed page 5.",
+  "coverage": {
+    "verifiedExerciseSubparts": 4,
+    "chapterTotal": "not yet inventoried"
+  },
+  "questions": [
+    {
+      "id": "g9-ch1-ex1.1-q2-i",
+      "exercise": "1.1",
+      "question": 2,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
+        ]
+      },
+      "word": "INDIA",
+      "prompt": {
+        "en": "Write the set of letters in INDIA in roster form.",
+        "ta": "INDIA என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+      },
+      "answer": {
+        "en": "{I, N, D, A}",
+        "ta": "{I, N, D, A}"
+      },
+      "steps": {
+        "en": [
+          "Read the word INDIA and identify its letters.",
+          "A set contains each distinct element only once, so remove any repeated letters.",
+          "Write the remaining letters inside curly brackets: {I, N, D, A}."
+        ],
+        "ta": [
+          "INDIA என்ற சொல்லின் எழுத்துகளை அடையாளம் காண்க.",
+          "கணத்தில் ஒரே உறுப்பு மீண்டும் இடம்பெறாது; எனவே மீண்டும் வரும் எழுத்துகளை நீக்குக.",
+          "வெவ்வேறு எழுத்துகளை நெளி அடைப்புக்குறிகளுக்குள் எழுதினால் {I, N, D, A} கிடைக்கும்."
+        ]
+      },
+      "verification": {
+        "method": "Independent distinct-letter enumeration and exact membership check",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-ii",
+      "exercise": "1.1",
+      "question": 2,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
+        ]
+      },
+      "word": "PARALLELOGRAM",
+      "prompt": {
+        "en": "Write the set of letters in PARALLELOGRAM in roster form.",
+        "ta": "PARALLELOGRAM என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+      },
+      "answer": {
+        "en": "{P, A, R, L, E, O, G, M}",
+        "ta": "{P, A, R, L, E, O, G, M}"
+      },
+      "steps": {
+        "en": [
+          "Read the word PARALLELOGRAM and identify its letters.",
+          "A set contains each distinct element only once, so remove any repeated letters.",
+          "Write the remaining letters inside curly brackets: {P, A, R, L, E, O, G, M}."
+        ],
+        "ta": [
+          "PARALLELOGRAM என்ற சொல்லின் எழுத்துகளை அடையாளம் காண்க.",
+          "கணத்தில் ஒரே உறுப்பு மீண்டும் இடம்பெறாது; எனவே மீண்டும் வரும் எழுத்துகளை நீக்குக.",
+          "வெவ்வேறு எழுத்துகளை நெளி அடைப்புக்குறிகளுக்குள் எழுதினால் {P, A, R, L, E, O, G, M} கிடைக்கும்."
+        ]
+      },
+      "verification": {
+        "method": "Independent distinct-letter enumeration and exact membership check",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-iii",
+      "exercise": "1.1",
+      "question": 2,
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
+        ]
+      },
+      "word": "MISSISSIPPI",
+      "prompt": {
+        "en": "Write the set of letters in MISSISSIPPI in roster form.",
+        "ta": "MISSISSIPPI என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+      },
+      "answer": {
+        "en": "{M, I, S, P}",
+        "ta": "{M, I, S, P}"
+      },
+      "steps": {
+        "en": [
+          "Read the word MISSISSIPPI and identify its letters.",
+          "A set contains each distinct element only once, so remove any repeated letters.",
+          "Write the remaining letters inside curly brackets: {M, I, S, P}."
+        ],
+        "ta": [
+          "MISSISSIPPI என்ற சொல்லின் எழுத்துகளை அடையாளம் காண்க.",
+          "கணத்தில் ஒரே உறுப்பு மீண்டும் இடம்பெறாது; எனவே மீண்டும் வரும் எழுத்துகளை நீக்குக.",
+          "வெவ்வேறு எழுத்துகளை நெளி அடைப்புக்குறிகளுக்குள் எழுதினால் {M, I, S, P} கிடைக்கும்."
+        ]
+      },
+      "verification": {
+        "method": "Independent distinct-letter enumeration and exact membership check",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-iv",
+      "exercise": "1.1",
+      "question": 2,
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
+        ]
+      },
+      "word": "CZECHOSLOVAKIA",
+      "prompt": {
+        "en": "Write the set of letters in CZECHOSLOVAKIA in roster form.",
+        "ta": "CZECHOSLOVAKIA என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+      },
+      "answer": {
+        "en": "{C, Z, E, H, O, S, L, V, A, K, I}",
+        "ta": "{C, Z, E, H, O, S, L, V, A, K, I}"
+      },
+      "steps": {
+        "en": [
+          "Read the word CZECHOSLOVAKIA and identify its letters.",
+          "A set contains each distinct element only once, so remove any repeated letters.",
+          "Write the remaining letters inside curly brackets: {C, Z, E, H, O, S, L, V, A, K, I}."
+        ],
+        "ta": [
+          "CZECHOSLOVAKIA என்ற சொல்லின் எழுத்துகளை அடையாளம் காண்க.",
+          "கணத்தில் ஒரே உறுப்பு மீண்டும் இடம்பெறாது; எனவே மீண்டும் வரும் எழுத்துகளை நீக்குக.",
+          "வெவ்வேறு எழுத்துகளை நெளி அடைப்புக்குறிகளுக்குள் எழுதினால் {C, Z, E, H, O, S, L, V, A, K, I} கிடைக்கும்."
+        ]
+      },
+      "verification": {
+        "method": "Independent distinct-letter enumeration and exact membership check",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    }
+  ]
+}
