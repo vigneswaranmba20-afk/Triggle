@@ -1,9 +1,9 @@
 /* Triggle visual lessons — native MP4/WebM playback from GitHub Pages or Cloudflare R2, legacy Drive fallback. */
 (()=>{'use strict';
  const $=id=>document.getElementById(id);
- const modal=$('visualLessonDialog'),launcher=$('visualLessonAction'),video=$('vlVideo'),driveFrame=$('vlDriveFrame'),inlineVideo=$('vlInlineVideo'),inlinePanel=$('vlInlinePanel');
- if(!modal||!launcher||!video||!driveFrame||!inlineVideo||!inlinePanel)return;
- let catalog=[],plannedIds=new Set(),selected=null,item=null,lang='en',launcherFocus=null,scrollAtOpen=0,openedEntry=false,inlineSource='',inlineExpanded=false;
+ const modal=$('visualLessonDialog'),launcher=$('visualLessonAction'),video=$('vlVideo'),driveFrame=$('vlDriveFrame');
+ if(!modal||!launcher||!video||!driveFrame)return;
+ let catalog=[],plannedIds=new Set(),selected=null,item=null,lang='en',launcherFocus=null,openedEntry=false;
  const copy={
   en:{watch:'Check out the video explanation',hide:'Hide video explanation',comingSoon:'Visual lessons · Coming soon · Human narration on the way',title:'Watch Visual Lesson',back:'Back to question',question:'View original question',speed:'Playback speed',full:'Fullscreen',download:'Download Lesson',openDrive:'Open in Google Drive',driveNotice:'This lesson is hosted on Google Drive. If playback is blocked on this device, open it directly in Google Drive.',error:'Video could not load',errorText:'Please check your connection and try again. The written solution is still available.',preparing:'Preparing your lesson…',help:'On Android Chrome, if the MP4 opens instead of saving, long-press “Download Lesson” and choose Download link.'},
   ta:{watch:'காணொளி விளக்கத்தைப் பாருங்கள்',hide:'காணொளியை மறைக்கவும்',comingSoon:'காட்சிப் பாடங்கள் · விரைவில் · மனிதக் குரல் விளக்கத்துடன்',title:'காட்சி வழிப் பாடம்',back:'கேள்விக்குத் திரும்பு',question:'அசல் கேள்வியைக் காண்க',speed:'வேகம்',full:'முழுத்திரை',download:'பாடத்தைப் பதிவிறக்கு',openDrive:'Google Drive-ல் திறக்கவும்',driveNotice:'இந்தக் காணொளி Google Drive-ல் உள்ளது. இங்கு இயக்க முடியாவிட்டால் Google Drive-ல் திறக்கவும்.',error:'காணொளியை ஏற்ற முடியவில்லை',errorText:'இணையத்தைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும். எழுத்துத் தீர்வு தொடர்ந்து கிடைக்கும்.',preparing:'Preparing your lesson…',help:'Android Chrome-ல் காணொளி திறந்தால், பதிவிறக்க இணைப்பை நீண்ட நேரம் அழுத்தி Download link தேர்வு செய்க.'}
@@ -51,68 +51,19 @@
    else webm.removeAttribute('src');
    el.load();
  }
- // Both local and public R2 files use the same HTML5 player within the question.
- function isNativeLesson(r){return validLocal(r)||validR2(r);}
- function updateInline(){
-   const local=isNativeLesson(selected);
-   inlinePanel.hidden=!local||!inlineExpanded;
-   if(!local||!inlineExpanded){
-     if(inlineSource){clearSources(inlineVideo,$('vlInlineMp4'),$('vlInlineWebm'));inlineSource='';}
-     return;
-   }
-   const src=new URL(selected.video,document.baseURI).href;
-   const key=src+'|'+(selected.webm||'');
-   if(key!==inlineSource){
-     if(selected.poster&&mediaUrl(selected.poster))inlineVideo.poster=new URL(selected.poster,document.baseURI).href;
-     else inlineVideo.removeAttribute('poster');
-     setSources(inlineVideo,$('vlInlineMp4'),$('vlInlineWebm'),selected);
-     inlineSource=key; // preload=none: poster only, never autoplay.
-   }
-   $('vlInlineTitle').textContent=selected.title?.[lang]||selected.title?.en||ui('title');
-   $('vlInlineNote').textContent=selected.language==='ta'
-     ?(lang==='ta'?'தமிழ் குரல் விளக்கம் · வசன வரிகள் இல்லை':'Tamil narration · No subtitles')
-     :(lang==='ta'?'ஆங்கில குரல் விளக்கம் · வசன வரிகள் இல்லை':'English narration · No subtitles');
-   $('vlInlineFullLabel').textContent=ui('full');
-   $('vlInlineDownloadLabel').textContent=ui('download');
-   const download=$('vlInlineDownload');
-   download.href=src;
-   // Browsers ignore the HTML download attribute for cross-origin media unless the CDN opts in.
-   // For a future Android offline feature, download to app-controlled storage instead.
-   if(new URL(src).origin===location.origin){
-     download.download=new URL(src).pathname.split('/').at(-1);
-     download.removeAttribute('target');
-   }else{
-     download.removeAttribute('download');
-     download.target='_blank';
-     download.rel='noopener noreferrer';
-   }
-   download.hidden=!selected.downloadAllowed;
-   $('vlInlineError').hidden=true;
- }
  function refresh(){
-   selected=catalog.find(r=>r.questionId===item?.id&&validRec(r)&&(r.language===lang||r.language==='visual'))||catalog.find(r=>r.questionId===item?.id&&validRec(r)&&r.language==='en')||null;
+   selected=catalog.find(r=>r.questionId===item?.id&&validRec(r)&&(r.language===lang||r.language==='visual'))
+     ||catalog.find(r=>r.questionId===item?.id&&validRec(r)&&r.language==='en')||null;
    const isPlanned=!!item&&plannedIds.has(item.id);
    launcher.hidden=!selected&&!isPlanned;
    $('visualLessonBtn').hidden=!selected;
    $('visualLessonAvailability').hidden=!selected;
    $('visualLessonComingSoon').hidden=!!selected||!isPlanned;
    $('visualLessonComingSoonText').textContent=ui('comingSoon');
-   updateInline();
-   if(!selected)return;
-   const native=isNativeLesson(selected);
-   $('visualLessonBtn').setAttribute('aria-expanded',String(native&&inlineExpanded));
-   $('visualLessonBtn').setAttribute('aria-controls',native?'vlInlinePanel':'visualLessonDialog');
-   if(native)$('visualLessonBtn').removeAttribute('aria-haspopup');
-   else $('visualLessonBtn').setAttribute('aria-haspopup','dialog');
-   $('visualLessonBtnLabel').textContent=ui(native&&inlineExpanded?'hide':'watch');
-   $('visualLessonAvailability').textContent=lang==='ta'&&selected.language==='en'?'ஆங்கிலக் குரல் விளக்கம்':'';
+   $('visualLessonBtnLabel').textContent=ui('watch');
+   if(selected)$('visualLessonAvailability').textContent=lang==='ta'&&selected.language==='en'?'ஆங்கிலக் குரல் விளக்கம்':'';
  }
- function sync(d){
-   if(item?.id!==d?.item?.id)inlineExpanded=false;
-   item=d?.item||null;
-   lang=d?.lang==='ta'?'ta':'en';
-   refresh();
- }
+ function sync(d){item=d?.item||null;lang=d?.lang==='ta'?'ta':'en';refresh();}
  window.addEventListener('triggle:lessonchange',e=>sync(e.detail));
  function hideError(){ $('vlError').hidden=true; $('vlVideoWrap').hidden=false; }
  function showError(){ $('vlLoading').hidden=true; $('vlError').hidden=false;$('vlVideoWrap').hidden=true;$('vlErrorTitle').textContent=ui('error');$('vlErrorText').textContent=ui('errorText'); }
@@ -122,13 +73,12 @@
    $('vlCloseLabel').textContent=ui('back');
    $('vlQuestionSummary').textContent=ui('question');
    $('vlQuestion').textContent=item.q?.[lang]||item.q?.en||'';
-   $('vlSpeedLabel').textContent=ui('speed');$('vlFullscreenLabel').textContent=ui('full');
+   $('vlSpeedLabel').textContent=ui('speed');
    $('vlDownloadLabel').textContent=validDriveId(selected)?ui('openDrive'):ui('download');$('vlErrorTitle').textContent=ui('error');$('vlErrorText').textContent=ui('errorText');
    $('vlLoading').textContent=ui('preparing');$('vlDownloadHelp').textContent=ui('help');
    const isDrive=validDriveId(selected);
    $('vlNotice').textContent=isDrive?ui('driveNotice'):'';
    $('vlSpeed').closest('label').hidden=isDrive;
-   $('vlFullscreen').hidden=isDrive;
    $('vlDownloadHelp').hidden=isDrive;
    $('vlDownload').hidden=!isDrive&&!selected.downloadAllowed;
    const u=isDrive?new URL(driveLink(selected,'view')):new URL(selected.downloadUrl&&mediaUrl(selected.downloadUrl)?selected.downloadUrl:selected.video,document.baseURI);
@@ -158,9 +108,7 @@
  }
  function open(){
    if(!selected||!item)return;
-   launcherFocus=document.activeElement instanceof HTMLElement?document.activeElement:(isNativeLesson(selected)?$('vlInlineFull'):$('visualLessonBtn'));
-   if(isNativeLesson(selected))inlineVideo.pause();
-   scrollAtOpen=window.scrollY;
+   launcherFocus=$('visualLessonBtn');
    configure();
    $('vlQuestionDetails').open=false;
    if(!modal.open)modal.showModal();
@@ -173,23 +121,15 @@
    driveFrame.removeAttribute('src');driveFrame.hidden=true;video.hidden=false;
    $('vlLoading').hidden=true;hideError();
    if(modal.open)modal.close();
-   requestAnimationFrame(()=>{window.scrollTo(0,scrollAtOpen);(launcherFocus?.isConnected?launcherFocus:$('visualLessonBtn')).focus({preventScroll:true});});
+   $('visualLessonBtnLabel').textContent=ui('watch');
+   requestAnimationFrame(()=>(launcherFocus?.isConnected?launcherFocus:$('visualLessonBtn')).focus({preventScroll:true}));
  }
  function close(){
    if(!modal.open)return;
    if(openedEntry&&history.state?.triggleVisual){history.back();return;}
    openedEntry=false;cleanup();
  }
- $('visualLessonBtn').addEventListener('click',()=>{
-   if(!selected)return;
-   if(!isNativeLesson(selected)){open();return;}
-   inlineExpanded=!inlineExpanded;
-   updateInline();
-   $('visualLessonBtn').setAttribute('aria-expanded',String(inlineExpanded));
-   $('visualLessonBtnLabel').textContent=ui(inlineExpanded?'hide':'watch');
- });
- $('vlInlineFull').addEventListener('click',open);
- inlineVideo.addEventListener('error',()=>{if(inlineSource)$('vlInlineError').hidden=false;});
+ $('visualLessonBtn').addEventListener('click',open);
  $('vlClose').addEventListener('click',close);
  modal.addEventListener('cancel',e=>{e.preventDefault();close();});
  modal.addEventListener('click',e=>{if(e.target===modal)close();});
@@ -200,7 +140,6 @@
  },true);
  $('vlRetry').addEventListener('click',beginLoad);
  $('vlSpeed').addEventListener('change',()=>{video.playbackRate=Number($('vlSpeed').value)||1;});
- $('vlFullscreen').addEventListener('click',async()=>{try{if(video.webkitEnterFullscreen)video.webkitEnterFullscreen();else if(video.requestFullscreen)await video.requestFullscreen();}catch{}});
  video.addEventListener('loadedmetadata',()=>{$('vlLoading').hidden=true;});
  video.addEventListener('canplay',()=>{$('vlLoading').hidden=true;});
  video.addEventListener('error',()=>{if($('vlMp4Source').getAttribute('src')||$('vlWebmSource').getAttribute('src'))showError();});
