@@ -390,6 +390,218 @@ window.TRIGGLE_SET_PATH = {
       }
     }
   ],
+  "extraPractice": [
+    {
+      "stageId": "set",
+      "question": {
+        "en": "Let S={0,2,4,6}. Which membership statement is true?",
+        "ta": "S={0,2,4,6} எனில், எந்த உறுப்பு தொடர்பான கூற்று சரி?"
+      },
+      "choices": [
+        {
+          "en": "3 ∈ S",
+          "ta": "3 ∈ S"
+        },
+        {
+          "en": "0 ∈ S",
+          "ta": "0 ∈ S"
+        },
+        {
+          "en": "6 ∉ S",
+          "ta": "6 ∉ S"
+        }
+      ],
+      "correct": 1,
+      "hint": {
+        "en": "Compare each claimed member with the four numbers listed in S.",
+        "ta": "S கணத்தில் பட்டியலிடப்பட்டுள்ள நான்கு எண்களுடன் ஒப்பிடுக."
+      },
+      "why": {
+        "en": "0 is explicitly in S, so 0 ∈ S. Neither 3 ∈ S nor 6 ∉ S is true.",
+        "ta": "0 என்பது S கணத்தில் உள்ளது. எனவே 0 ∈ S. ஆனால் 3 ∈ S மற்றும் 6 ∉ S ஆகியவை தவறான கூற்றுகள்."
+      }
+    },
+    {
+      "stageId": "forms",
+      "question": {
+        "en": "Which set-builder rule describes E={2,4,6,8} exactly?",
+        "ta": "E={2,4,6,8} என்ற கணத்தைச் சரியாகக் குறிப்பிடும் கணக்கட்டமைப்பு விதி எது?"
+      },
+      "choices": [
+        {
+          "en": "Positive even natural numbers less than 10",
+          "ta": "10-ஐ விடச் சிறிய நேர்ம இரட்டைப்படை இயல் எண்கள்"
+        },
+        {
+          "en": "Odd natural numbers less than 10",
+          "ta": "10-ஐ விடச் சிறிய ஒற்றைப்படை இயல் எண்கள்"
+        },
+        {
+          "en": "Even natural numbers up to and including 10",
+          "ta": "10 உட்பட 10 வரை உள்ள இரட்டைப்படை இயல் எண்கள்"
+        }
+      ],
+      "correct": 0,
+      "hint": {
+        "en": "The rule must include 2, 4, 6, 8 but exclude 10.",
+        "ta": "2, 4, 6, 8 இருக்க வேண்டும்; 10 இருக்கக் கூடாது."
+      },
+      "why": {
+        "en": "The positive even natural numbers strictly below 10 are precisely 2, 4, 6 and 8.",
+        "ta": "10-ஐ விடச் சிறிய நேர்ம இரட்டைப்படை இயல் எண்கள் 2, 4, 6, 8 மட்டுமே."
+      }
+    },
+    {
+      "stageId": "types",
+      "question": {
+        "en": "For A={1,2}, which statement about proper subsets is correct?",
+        "ta": "A={1,2} எனில் தகு உட்கணம் பற்றிய எந்தக் கூற்று சரி?"
+      },
+      "choices": [
+        {
+          "en": "A is a proper subset of itself.",
+          "ta": "A ஆனது தனக்கே தகு உட்கணமாகும்."
+        },
+        {
+          "en": "The empty set is a proper subset of A.",
+          "ta": "வெற்றுக் கணம் A-இன் தகு உட்கணமாகும்."
+        },
+        {
+          "en": "{1,3} is a subset of A.",
+          "ta": "{1,3} என்பது A-இன் உட்கணமாகும்."
+        }
+      ],
+      "correct": 1,
+      "hint": {
+        "en": "A proper subset has all its elements in A but is not equal to A.",
+        "ta": "தகு உட்கணம் என்பது A-இன் உறுப்புகளை மட்டுமே கொண்டிருக்க வேண்டும்; A-க்கு சமமாக இருக்கக்கூடாது."
+      },
+      "why": {
+        "en": "The empty set is a subset of every set and differs from nonempty A. A cannot be a proper subset of itself, and 3 is not in A.",
+        "ta": "வெற்றுக் கணம் எல்லாக் கணங்களுக்கும் உட்கணமாகும். A வெற்றுக் கணமல்ல என்பதால் இது தகு உட்கணம். A தனக்கே தகு உட்கணமல்ல; 3 என்பது A-இல் இல்லை."
+      }
+    },
+    {
+      "stageId": "operations",
+      "question": {
+        "en": "Let A={1,2,4} and B={2,3}. What is A − B?",
+        "ta": "A={1,2,4}, B={2,3} எனில் A − B என்ன?"
+      },
+      "choices": [
+        {
+          "en": "{1,4}",
+          "ta": "{1,4}"
+        },
+        {
+          "en": "{2}",
+          "ta": "{2}"
+        },
+        {
+          "en": "{3}",
+          "ta": "{3}"
+        }
+      ],
+      "correct": 0,
+      "hint": {
+        "en": "Keep elements in A that are not in B.",
+        "ta": "A-இல் இருந்து B-இல் இல்லாத உறுப்புகளை மட்டும் எடுத்துக்கொள்க."
+      },
+      "why": {
+        "en": "2 belongs to both sets, so remove it from A; 1 and 4 remain.",
+        "ta": "2 இரு கணங்களிலும் உள்ளது; எனவே A-இலிருந்து அதை நீக்கினால் 1 மற்றும் 4 மீதமிருக்கும்."
+      }
+    },
+    {
+      "stageId": "properties",
+      "question": {
+        "en": "Which distributive identity is true for all sets A, B and C?",
+        "ta": "A, B, C ஆகிய எல்லாக் கணங்களுக்கும் பொருந்தும் பகிர்வுப் பண்பு எது?"
+      },
+      "choices": [
+        {
+          "en": "A ∩ (B ∪ C) = (A ∩ B) ∩ (A ∩ C)",
+          "ta": "A ∩ (B ∪ C) = (A ∩ B) ∩ (A ∩ C)"
+        },
+        {
+          "en": "A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)",
+          "ta": "A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)"
+        },
+        {
+          "en": "A ∩ (B ∪ C) = (A ∩ B) ∪ C",
+          "ta": "A ∩ (B ∪ C) = (A ∩ B) ∪ C"
+        }
+      ],
+      "correct": 1,
+      "hint": {
+        "en": "Intersection distributes over union: keep A on both parts.",
+        "ta": "வெட்டுச் செயல் சேர்ப்பின் மீது பகிரப்படும்; இரு பகுதிகளிலும் A இருக்க வேண்டும்."
+      },
+      "why": {
+        "en": "An element is in A and in B or C exactly when it is in (A ∩ B) or (A ∩ C).",
+        "ta": "ஒரு உறுப்பு A-இலும் B அல்லது C-இலும் இருப்பது, (A ∩ B) அல்லது (A ∩ C)-இல் இருப்பதற்குச் சமம்."
+      }
+    },
+    {
+      "stageId": "demorgan",
+      "question": {
+        "en": "With complements taken relative to one universal set, what equals (A ∩ B)′?",
+        "ta": "ஒரே அனைத்துக் கணத்தைப் பொறுத்து (A ∩ B)′ எதற்குச் சமம்?"
+      },
+      "choices": [
+        {
+          "en": "A′ ∩ B′",
+          "ta": "A′ ∩ B′"
+        },
+        {
+          "en": "A′ ∪ B′",
+          "ta": "A′ ∪ B′"
+        },
+        {
+          "en": "A ∪ B",
+          "ta": "A ∪ B"
+        }
+      ],
+      "correct": 1,
+      "hint": {
+        "en": "The complement of an intersection becomes a union of complements.",
+        "ta": "வெட்டின் நிரப்புக் கணம் என்பது நிரப்புக் கணங்களின் சேர்ப்பாக மாறும்."
+      },
+      "why": {
+        "en": "De Morgan's second law says (A ∩ B)′ = A′ ∪ B′. An element is not in both precisely when it is outside at least one.",
+        "ta": "டி மார்கன் இரண்டாம் விதிப்படி (A ∩ B)′ = A′ ∪ B′. இரண்டிலும் இல்லாத உறுப்பு குறைந்தது ஒரு கணத்திலாவது இல்லாமல் இருக்கும்."
+      }
+    },
+    {
+      "stageId": "cardinality",
+      "question": {
+        "en": "In a class of 50, n(A)=21, n(B)=18, n(C)=17; pairwise intersections are 7, 6, 5 and the triple intersection is 2. How many are in none of A, B or C?",
+        "ta": "50 பேர் உள்ள வகுப்பில் n(A)=21, n(B)=18, n(C)=17; இரண்டிரண்டு பொதுவான எண்ணிக்கைகள் 7, 6, 5; மூன்றிலும் உள்ளோர் 2. எந்தக் கணத்திலும் இல்லாதவர்கள் எத்தனை?"
+      },
+      "choices": [
+        {
+          "en": "8",
+          "ta": "8"
+        },
+        {
+          "en": "10",
+          "ta": "10"
+        },
+        {
+          "en": "12",
+          "ta": "12"
+        }
+      ],
+      "correct": 1,
+      "hint": {
+        "en": "Find the union with inclusion–exclusion, then subtract it from 50.",
+        "ta": "சேர்த்தல்–விலக்கல் முறையில் சேர்ப்பின் ஆதி எண்ணைக் கண்டுபிடித்து 50-இலிருந்து கழிக்கவும்."
+      },
+      "why": {
+        "en": "At least one = 21+18+17−7−6−5+2=40; none = 50−40=10.",
+        "ta": "குறைந்தது ஒன்று = 21+18+17−7−6−5+2=40; எதிலும் இல்லாதவர்கள் = 50−40=10."
+      }
+    }
+  ],
   "hard": {
     "prompt": {
       "en": "Three-set challenge: In a group of 30, |A|=12, |B|=10, |C|=9; |A∩B|=4, |A∩C|=3, |B∩C|=5, |A∩B∩C|=2. How many are in at least one, in none, and in exactly two?",
