@@ -1,6 +1,6 @@
 /* Source-verified draft textbook exercises for review before publication.
- * Generated from g9-ch1-ex1-1-q1.json and g9-ch1-ex1-1-q2.json.
- * Do not merge/publish before Tamil editorial and browser QA approvals. */
+ * Generated from Grade 9 Exercise 1.1 Q1, Q2, Q3(a), and Q3(b) bilingual draft data.
+ * Testing-phase preview only; independent Tamil editorial approval remains pending. */
 (()=>{
  'use strict';
  const entries=[
@@ -393,6 +393,496 @@
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "not-integrated",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q3-a-i",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 3(a) (i)",
+      "ta": "பயிற்சி 1.1 · வினா 3(a) (i)"
+    },
+    "title": {
+      "en": "Set membership: true or false",
+      "ta": "கண உறுப்பு: சரியா தவறா"
+    },
+    "q": {
+      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 18 ∈ C.",
+      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 18 ∈ C என்பது சரியா தவறா?"
+    },
+    "steps": [
+      {
+        "en": "List the elements of C: {12, 14, 18, 20}.",
+        "ta": "C கணத்தின் உறுப்புகள் {12, 14, 18, 20}."
+      },
+      {
+        "en": "18 belongs to C.",
+        "ta": "18 என்பது C கணத்தில் உள்ளது."
+      },
+      {
+        "en": "Because ∈ means belongs to, the statement is true.",
+        "ta": "'∈' என்பது 'உறுப்பாகும்' என்பதைக் குறிக்கும். எனவே கூற்று சரி."
+      }
+    ],
+    "answer": {
+      "en": "True",
+      "ta": "சரி"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (i), printed p. 5 EN / 5 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q3-a-ii",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 3(a) (ii)",
+      "ta": "பயிற்சி 1.1 · வினா 3(a) (ii)"
+    },
+    "title": {
+      "en": "Set membership: true or false",
+      "ta": "கண உறுப்பு: சரியா தவறா"
+    },
+    "q": {
+      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 6 ∉ A.",
+      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 6 ∉ A என்பது சரியா தவறா?"
+    },
+    "steps": [
+      {
+        "en": "List the elements of A: {0, 3, 5, 8}.",
+        "ta": "A கணத்தின் உறுப்புகள் {0, 3, 5, 8}."
+      },
+      {
+        "en": "6 does not belong to A.",
+        "ta": "6 என்பது A கணத்தில் இல்லை."
+      },
+      {
+        "en": "Because ∉ means does not belong to, the statement is true.",
+        "ta": "'∉' என்பது 'உறுப்பல்ல' என்பதைக் குறிக்கும். எனவே கூற்று சரி."
+      }
+    ],
+    "answer": {
+      "en": "True",
+      "ta": "சரி"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (ii), printed p. 5 EN / 5 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q3-a-iii",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 3(a) (iii)",
+      "ta": "பயிற்சி 1.1 · வினா 3(a) (iii)"
+    },
+    "title": {
+      "en": "Set membership: true or false",
+      "ta": "கண உறுப்பு: சரியா தவறா"
+    },
+    "q": {
+      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 14 ∉ C.",
+      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 14 ∉ C என்பது சரியா தவறா?"
+    },
+    "steps": [
+      {
+        "en": "List the elements of C: {12, 14, 18, 20}.",
+        "ta": "C கணத்தின் உறுப்புகள் {12, 14, 18, 20}."
+      },
+      {
+        "en": "14 belongs to C.",
+        "ta": "14 என்பது C கணத்தில் உள்ளது."
+      },
+      {
+        "en": "Because ∉ means does not belong to, the statement is false.",
+        "ta": "'∉' என்பது 'உறுப்பல்ல' என்பதைக் குறிக்கும். எனவே கூற்று தவறு."
+      }
+    ],
+    "answer": {
+      "en": "False",
+      "ta": "தவறு"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (iii), printed p. 5 EN / 5 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q3-a-iv",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 3(a) (iv)",
+      "ta": "பயிற்சி 1.1 · வினா 3(a) (iv)"
+    },
+    "title": {
+      "en": "Set membership: true or false",
+      "ta": "கண உறுப்பு: சரியா தவறா"
+    },
+    "q": {
+      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 10 ∈ B.",
+      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 10 ∈ B என்பது சரியா தவறா?"
+    },
+    "steps": [
+      {
+        "en": "List the elements of B: {2, 4, 6, 10}.",
+        "ta": "B கணத்தின் உறுப்புகள் {2, 4, 6, 10}."
+      },
+      {
+        "en": "10 belongs to B.",
+        "ta": "10 என்பது B கணத்தில் உள்ளது."
+      },
+      {
+        "en": "Because ∈ means belongs to, the statement is true.",
+        "ta": "'∈' என்பது 'உறுப்பாகும்' என்பதைக் குறிக்கும். எனவே கூற்று சரி."
+      }
+    ],
+    "answer": {
+      "en": "True",
+      "ta": "சரி"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (iv), printed p. 5 EN / 5 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q3-a-v",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 3(a) (v)",
+      "ta": "பயிற்சி 1.1 · வினா 3(a) (v)"
+    },
+    "title": {
+      "en": "Set membership: true or false",
+      "ta": "கண உறுப்பு: சரியா தவறா"
+    },
+    "q": {
+      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 5 ∈ B.",
+      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 5 ∈ B என்பது சரியா தவறா?"
+    },
+    "steps": [
+      {
+        "en": "List the elements of B: {2, 4, 6, 10}.",
+        "ta": "B கணத்தின் உறுப்புகள் {2, 4, 6, 10}."
+      },
+      {
+        "en": "5 does not belong to B.",
+        "ta": "5 என்பது B கணத்தில் இல்லை."
+      },
+      {
+        "en": "Because ∈ means belongs to, the statement is false.",
+        "ta": "'∈' என்பது 'உறுப்பாகும்' என்பதைக் குறிக்கும். எனவே கூற்று தவறு."
+      }
+    ],
+    "answer": {
+      "en": "False",
+      "ta": "தவறு"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (v), printed p. 5 EN / 5 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q3-a-vi",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 3(a) (vi)",
+      "ta": "பயிற்சி 1.1 · வினா 3(a) (vi)"
+    },
+    "title": {
+      "en": "Set membership: true or false",
+      "ta": "கண உறுப்பு: சரியா தவறா"
+    },
+    "q": {
+      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 0 ∈ B.",
+      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 0 ∈ B என்பது சரியா தவறா?"
+    },
+    "steps": [
+      {
+        "en": "List the elements of B: {2, 4, 6, 10}.",
+        "ta": "B கணத்தின் உறுப்புகள் {2, 4, 6, 10}."
+      },
+      {
+        "en": "0 does not belong to B.",
+        "ta": "0 என்பது B கணத்தில் இல்லை."
+      },
+      {
+        "en": "Because ∈ means belongs to, the statement is false.",
+        "ta": "'∈' என்பது 'உறுப்பாகும்' என்பதைக் குறிக்கும். எனவே கூற்று தவறு."
+      }
+    ],
+    "answer": {
+      "en": "False",
+      "ta": "தவறு"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (vi), printed p. 5 EN / 5 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q3-b-i",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 3(b) (i)",
+      "ta": "பயிற்சி 1.1 · வினா 3(b) (i)"
+    },
+    "title": {
+      "en": "Set membership: fill the blank",
+      "ta": "கண உறுப்பு: கோடிட்ட இடத்தை நிரப்புக"
+    },
+    "q": {
+      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 3 ∈ ___",
+      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 3 ∈ ___"
+    },
+    "steps": [
+      {
+        "en": "Inspect the given set A = {0, 3, 5, 8}.",
+        "ta": "கொடுக்கப்பட்ட A கணத்தின் உறுப்புகள் {0, 3, 5, 8}."
+      },
+      {
+        "en": "3 is an element of A.",
+        "ta": "3 என்பது A கணத்தில் உறுப்பாகும்."
+      },
+      {
+        "en": "Fill the blank with A; the completed statement 3 ∈ A is true.",
+        "ta": "எனவே கோடிட்ட இடத்தில் A என்று எழுதுக; 3 ∈ A என்பது சரியான கூற்று."
+      }
+    ],
+    "answer": {
+      "en": "A",
+      "ta": "A"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(b) (i), printed p. 5 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q3-b-ii",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 3(b) (ii)",
+      "ta": "பயிற்சி 1.1 · வினா 3(b) (ii)"
+    },
+    "title": {
+      "en": "Set membership: fill the blank",
+      "ta": "கண உறுப்பு: கோடிட்ட இடத்தை நிரப்புக"
+    },
+    "q": {
+      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 14 ∈ ___",
+      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 14 ∈ ___"
+    },
+    "steps": [
+      {
+        "en": "Inspect the given set C = {12, 14, 18, 20}.",
+        "ta": "கொடுக்கப்பட்ட C கணத்தின் உறுப்புகள் {12, 14, 18, 20}."
+      },
+      {
+        "en": "14 is an element of C.",
+        "ta": "14 என்பது C கணத்தில் உறுப்பாகும்."
+      },
+      {
+        "en": "Fill the blank with C; the completed statement 14 ∈ C is true.",
+        "ta": "எனவே கோடிட்ட இடத்தில் C என்று எழுதுக; 14 ∈ C என்பது சரியான கூற்று."
+      }
+    ],
+    "answer": {
+      "en": "C",
+      "ta": "C"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(b) (ii), printed p. 5 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q3-b-iii",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 3(b) (iii)",
+      "ta": "பயிற்சி 1.1 · வினா 3(b) (iii)"
+    },
+    "title": {
+      "en": "Set membership: fill the blank",
+      "ta": "கண உறுப்பு: கோடிட்ட இடத்தை நிரப்புக"
+    },
+    "q": {
+      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 18 ___ B",
+      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 18 ___ B"
+    },
+    "steps": [
+      {
+        "en": "Inspect the given set B = {2, 4, 6, 10}.",
+        "ta": "கொடுக்கப்பட்ட B கணத்தின் உறுப்புகள் {2, 4, 6, 10}."
+      },
+      {
+        "en": "18 is not an element of B.",
+        "ta": "18 என்பது B கணத்தில் உறுப்பல்ல."
+      },
+      {
+        "en": "Fill the blank with ∉; the completed statement 18 ∉ B is true.",
+        "ta": "எனவே கோடிட்ட இடத்தில் ∉ என்று எழுதுக; 18 ∉ B என்பது சரியான கூற்று."
+      }
+    ],
+    "answer": {
+      "en": "∉",
+      "ta": "∉"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(b) (iii), printed p. 5 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q3-b-iv",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 3(b) (iv)",
+      "ta": "பயிற்சி 1.1 · வினா 3(b) (iv)"
+    },
+    "title": {
+      "en": "Set membership: fill the blank",
+      "ta": "கண உறுப்பு: கோடிட்ட இடத்தை நிரப்புக"
+    },
+    "q": {
+      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 4 ___ B.",
+      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 4 ___ B."
+    },
+    "steps": [
+      {
+        "en": "Inspect the given set B = {2, 4, 6, 10}.",
+        "ta": "கொடுக்கப்பட்ட B கணத்தின் உறுப்புகள் {2, 4, 6, 10}."
+      },
+      {
+        "en": "4 is an element of B.",
+        "ta": "4 என்பது B கணத்தில் உறுப்பாகும்."
+      },
+      {
+        "en": "Fill the blank with ∈; the completed statement 4 ∈ B is true.",
+        "ta": "எனவே கோடிட்ட இடத்தில் ∈ என்று எழுதுக; 4 ∈ B என்பது சரியான கூற்று."
+      }
+    ],
+    "answer": {
+      "en": "∈",
+      "ta": "∈"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(b) (iv), printed p. 5 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
       "publication": "draft"
     }
   }
