@@ -67,6 +67,57 @@ async function main() {
     await page.locator('#chapterOverview').waitFor({ state: 'visible' });
   }
   try {
+    await check('Google Drive lesson preview is safe, mobile friendly and question-specific',async()=>{
+      const ctx=await context(390);
+      const fileId='1A2bC3dE4fG5hI6jK7lM8nO9pQ';
+      await ctx.route('**/data/video-lessons.json',route=>route.fulfill({
+        status:200,contentType:'application/json',body:JSON.stringify({schemaVersion:1,lessons:[
+          {questionId:'c12-4-4-1-2',status:'ready',provider:'google-drive',fileId,
+           language:'en',class:12,exercise:'4.1',question:'Q1(ii)',
+           title:{en:'Solving sine x equals negative one',ta:'சைன் கோணத் தீர்வுகள்'}}
+        ]})
+      }));
+      await ctx.route('https://drive.google.com/**',route=>route.fulfill({
+        status:200,contentType:'text/html',body:'<!doctype html><title>Drive preview fixture</title>'
+      }));
+      const page=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-2');
+      await page.locator('#visualLessonBtn').waitFor({state:'visible'});
+      assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),null,
+        'Drive must not load in background without a click');
+      await page.locator('#visualLessonBtn').click();
+      await page.locator('#visualLessonDialog').waitFor({state:'visible'});
+      assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),
+        'https://drive.google.com/file/d/'+fileId+'/preview');
+      assert.equal(await page.locator('#vlDriveFrame').isVisible(),true);
+      assert.equal(await page.locator('#vlVideo').isVisible(),false);
+      assert.equal(await page.locator('#vlSpeed').isVisible(),false,
+        'Drive embeds have their own controls');
+      assert.equal(await page.locator('#vlFullscreen').isVisible(),false);
+      assert.equal(await page.locator('#vlDownload').getAttribute('href'),
+        'https://drive.google.com/file/d/'+fileId+'/view');
+      assert.match(await page.locator('#vlDownload').innerText(),/Open in Google Drive/);
+      await noOverflow(page,'Drive preview on Android phone');
+      await page.locator('#vlClose').click();
+      await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
+      assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),null,
+        'Drive playback must stop when leaving lesson dialog');
+      const unrelated=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-1');
+      await unrelated.waitForTimeout(250);
+      assert.equal(await unrelated.locator('#visualLessonBtn').isVisible(),false,
+        'A video for Q1(ii) must not appear on Q1(i)');
+    });
+    await check('Unverified Google Drive file IDs never enable visual playback',async()=>{
+      const ctx=await context(390);
+      await ctx.route('**/data/video-lessons.json',route=>route.fulfill({
+        status:200,contentType:'application/json',body:JSON.stringify({lessons:[
+          {questionId:'c12-4-4-1-2',status:'ready',provider:'google-drive',fileId:'../../invalid',language:'en'}
+        ]})
+      }));
+      const page=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-2');
+      await page.waitForTimeout(300);
+      assert.equal(await page.locator('#visualLessonBtn').isVisible(),false);
+      assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),null);
+    });
     for(const width of [320,390]){
       await check('Immersive question controls hide together and return on screen tap at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=9&question=c9-example-6-1');
