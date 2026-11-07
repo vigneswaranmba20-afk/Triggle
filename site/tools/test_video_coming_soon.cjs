@@ -7,6 +7,7 @@ assert.equal(manifest.lessons.length,1,'Exactly one reviewed Gemini lesson shoul
 assert.equal(manifest.lessons[0].questionId,'c12-4-4-1-2');
 assert.equal(manifest.lessons[0].provider,'github-pages');
 assert.equal(manifest.lessons[0].video,'./videos/triggle-class12-ex4-1-q1-ii.mp4');
+assert.equal(manifest.lessons[0].webm,'./videos/triggle-class12-ex4-1-q1-ii.webm');
 assert.equal(manifest.lessons[0].language,'en');
 assert.equal(plan.plans.length,15,'Keep the selected future video shortlist');
 function run(catalog, label){
@@ -47,7 +48,9 @@ function run(catalog, label){
      assert.match($('visualLessonComingSoonText').textContent,/விரைவில்/,'Tamil placeholder');
     }else{
      if(label!=='drive'){
-       assert.match($('vlInlineVideo').src,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       assert.equal($('vlInlineVideo').src,'','Video uses source elements, not hardcoded src');
+       assert.match($('vlInlineMp4').src,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       if(label==='published')assert.match($('vlInlineWebm').src,/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
        assert.match($('vlInlineDownload').href,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
        assert.equal($('vlInlineVideo').paused,true,'inline video does not autoplay');
        assert.equal($('vlInlineVideo').loaded>0,true,'inline video is initialized');
@@ -64,7 +67,8 @@ function run(catalog, label){
        assert.equal($('vlFullscreen').hidden,true,'Drive player owns fullscreen');
        assert.equal($('vlDownloadHelp').hidden,true,'Native MP4 download tip must be hidden');
      }else{
-       assert.match($('vlVideo').src,/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       assert.match($('vlMp4Source').src,/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       if(label==='published')assert.match($('vlWebmSource').src,/triggle-class12-ex4-1-q1-ii\.webm$/);
        assert.match($('vlDownload').href,/triggle-class12-ex4-1-q1-ii\.mp4$/);
      }
      $('vlClose').dispatch('click');
@@ -84,5 +88,5 @@ function run(catalog, label){
  await run({lessons:[ready]},'native');
  await run(manifest,'published');
  await run({lessons:[{...manifest.lessons[0],provider:'google-drive',fileId:'1zBG7dqiwPnwaIe6EqcZKutlqniGiq78i',video:undefined}]},'drive');
- console.log('PASS: missing-video fallback, native inline MP4, bigger viewer, download link, legacy Drive support, no autoplay and route gating');
+ console.log('PASS: missing-video fallback, native MP4 and VP9 WebM sources, larger viewer, downloads, legacy Drive support, no autoplay, route gating');
 })().catch(e=>{console.error(e);process.exitCode=1});
