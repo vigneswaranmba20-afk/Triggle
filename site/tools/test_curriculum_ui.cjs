@@ -375,9 +375,9 @@ async function main() {
       assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-      assert.equal(await page.locator('.hub-question').count(),1,'Set Language original practice is accessible');
-      const questionId=await page.locator('.hub-question').first().getAttribute('data-question-id');
-      await page.locator('.hub-question').first().click();
+      assert.equal(await page.locator('.hub-question').count(),9,'Eight textbook subparts and the original practice should be accessible');
+      assert.equal(await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').count(),1,'Preserve original practice ID');
+      await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').click();
       assert.equal(new URL(page.url()).searchParams.has('question'),true);
       assert.equal(await page.locator('#lessonCard').isVisible(),true);
       await page.goBack();
@@ -586,7 +586,7 @@ async function main() {
     await check('all 105 legacy deep links retain questions and working solutions', async () => {
       const ctx = await context(1280);
       const page = await visit(ctx);
-      const links = await page.evaluate(() => Object.entries(window.TRIGGLE_CLASSES).flatMap(([grade,data]) => data.items.map(item => ({ grade, id:item.id }))));
+      const links = await page.evaluate(() => Object.entries(window.TRIGGLE_CLASSES).flatMap(([grade,data]) => data.items.filter(item => !item.id.startsWith('g9-ch1-ex1.1-')).map(item => ({ grade, id:item.id }))));
       assert.equal(links.length, 105);
       for (const {grade,id} of links) {
         await page.goto(url + `/index.html?class=${grade}&question=${id}`);
@@ -774,6 +774,38 @@ async function main() {
       await page.locator('#chapterOverview').waitFor({ state:'visible' });
       assert.equal(new URL(page.url()).searchParams.get('chapter'), 'g12-ch12');
       await noOverflow(page, 'offline mobile chapter');
+      await ctx.setOffline(false);
+    });
+    for(const width of [320,390]){
+      await check('Grade 9 Exercise 1.1 bilingual textbook questions work at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch1&section=exercises');
+        const cards=page.locator('#chapterOverview [data-question-id^="g9-ch1-ex1.1-"]');
+        assert.equal(await cards.count(),8,'All eight new textbook subparts must appear in Exercises');
+        await page.locator('#chapterOverview [data-question-id="g9-ch1-ex1.1-q1-i"]').click();
+        assert.match(await page.locator('#questionText').innerText(),/Prime numbers/);
+        assert.equal(await page.locator('#stepsList li').count(),3);
+        assert.match(await page.locator('#answerText').innerText(),/set/i);
+        await page.locator('#langTa').click();
+        assert.match(await page.locator('#questionText').innerText(),/பகா எண்கள்/);
+        assert.match(await page.locator('#answerText').innerText(),/கணம்/);
+        await noOverflow(page,'Grade 9 Q1 Tamil at '+width+'px');
+        await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-iv');
+        await page.locator('#stepsList li').first().waitFor({state:'visible'});
+        assert.match(await page.locator('#answerText').innerText(),/C, Z, E, H, O, S, L, V, A, K, I/);
+        assert.equal(await page.locator('#stepsList li').count(),3);
+        await noOverflow(page,'Grade 9 Q2 mobile at '+width+'px');
+      });
+    }
+    await check('Grade 9 textbook exercises load offline in the chapter reader',async()=>{
+      const ctx=await context(390,'allow');
+      const page=await visit(ctx,'/index.html?class=9&chapter=g9-ch1&section=exercises');
+      await page.evaluate(async()=>{await navigator.serviceWorker.ready;});
+      await page.reload();
+      await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
+      await ctx.setOffline(true);
+      await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-i');
+      await page.locator('#answerText').waitFor({state:'visible'});
+      assert.match(await page.locator('#answerText').innerText(),/I, N, D, A/);
       await ctx.setOffline(false);
     });
     assert.deepEqual(errors, [], 'No uncaught browser errors');
