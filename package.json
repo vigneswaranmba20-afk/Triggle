@@ -5,7 +5,7 @@
   "description": "Checks for the existing static GitHub Pages mathematics site",
   "scripts": {
     "validate": "node site/tools/validate_curriculum.cjs && node site/tools/check_site.cjs",
-    "test": "npm run validate && node site/tools/test_curriculum_validation.cjs && node site/tools/test_video_coming_soon.cjs && node site/tools/test_phase2_pilot.cjs && node site/tools/test_set_language_journey.cjs && node site/tools/test_textbook_ex1_1_q1.cjs && node site/tools/test_textbook_ex1_1_q2.cjs && node site/tools/test_textbook_ex1_1_integration.cjs && python3 site/tools/verify_video_assets.py",
+    "test": "npm run validate && node site/tools/test_curriculum_validation.cjs && node site/tools/test_video_coming_soon.cjs && node site/tools/test_phase2_pilot.cjs && node site/tools/test_set_language_journey.cjs && node site/tools/test_textbook_ex1_1_q1.cjs && node site/tools/test_textbook_ex1_1_q2.cjs && node site/tools/test_textbook_ex1_1_integration.cjs && node site/tools/test_textbook_ex1_1_q3a.cjs && node site/tools/test_textbook_ex1_1_q3b.cjs && python3 site/tools/verify_video_assets.py",
     "test:browser": "node site/tools/test_curriculum_ui.cjs"
   },
   "devDependencies": {
