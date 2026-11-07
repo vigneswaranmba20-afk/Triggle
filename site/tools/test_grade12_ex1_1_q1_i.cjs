@@ -1,0 +1,17 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const ledger = JSON.parse(fs.readFileSync(path.join(__dirname,'../../docs/grade-12/coverage-2025.json'),'utf8'));
+const A=[[-3,4],[6,2]], adj=[[2,-4],[-6,-3]];
+const det=A[0][0]*A[1][1]-A[0][1]*A[1][0];
+const mul=(x,y)=>x.map(row=>y[0].map((_,j)=>row.reduce((s,v,k)=>s+v*y[k][j],0)));
+assert.equal(det,-30);
+assert.deepEqual(adj,[[A[1][1],-A[0][1]],[-A[1][0],A[0][0]]]);
+assert.deepEqual(mul(A,adj),[[det,0],[0,det]]);
+assert.deepEqual(mul(adj,A),[[det,0],[0,det]]);
+assert.equal(ledger.chapterStatus.length,12);
+assert.equal(ledger.items[0].id,'g12-ch1-ex1.1-q1-i');
+assert.equal(ledger.items[0].tamilEditorialReview,'pending');
+assert.equal(ledger.items[0].liveVerified,false);
+console.log('Grade 12 Exercise 1.1 Q1(i): adjugate and both matrix identities verified');
