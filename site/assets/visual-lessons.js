@@ -24,8 +24,15 @@
    }catch{return false;}
  }
  function validR2(r){
-   return r?.provider==='cloudflare-r2'&&httpsVideoFile(r.video,'mp4')
-     &&(!r.webm||(httpsVideoFile(r.webm,'webm')&&new URL(r.webm).origin===new URL(r.video).origin));
+   if(r?.provider!=='cloudflare-r2'||!httpsVideoFile(r.video,'mp4'))return false;
+   if(!r.webm)return true;
+   // Transitional codec backup: retain the already reviewed GitHub Pages WebM
+   // until this lesson's WebM is also published on the Cloudflare R2 domain.
+   const localBackup=typeof r.webm==='string'&&r.webm.startsWith('./videos/')
+     &&mediaUrl(r.webm)&&/\.webm$/i.test(r.webm);
+   const sameR2Origin=httpsVideoFile(r.webm,'webm')
+     &&new URL(r.webm).origin===new URL(r.video).origin;
+   return localBackup||sameR2Origin;
  }
  const validLocal=r=>!!r&&(!r.provider||r.provider==='github-pages')&&typeof r.video==='string'
    &&r.video.startsWith('./videos/')&&mediaUrl(r.video)&&/\.mp4$/i.test(r.video)
