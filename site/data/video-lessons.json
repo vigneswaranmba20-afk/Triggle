@@ -1,5 +1,25 @@
 {
   "schemaVersion": 1,
-  "about": "Only reviewed, uploaded MP4s appear here. Until the first human-narrated video arrives, the player remains inactive and selected video-worthy questions say Coming Soon.",
-  "lessons": []
+  "about": "Reviewed lesson videos available for their matching Triggle questions. Google Drive videos play from the verified public-sharing source; no private recordings or API keys are included.",
+  "lessons": [
+    {
+      "id": "triggle-c12-ex4-1-q1-ii-gemini-en",
+      "questionId": "c12-4-4-1-2",
+      "class": 12,
+      "chapter": "4",
+      "exercise": "4.1",
+      "question": "Q1(ii)",
+      "title": {
+        "en": "All angles where sin x = −1",
+        "ta": "sin x = −1 ஆகும் கோணங்கள்"
+      },
+      "language": "en",
+      "status": "ready",
+      "provider": "google-drive",
+      "fileId": "1zBG7dqiwPnwaIe6EqcZKutlqniGiq78i",
+      "durationSeconds": 170.17,
+      "notes": "Gemini English voice, unit-circle and sine graph, no spoken welcome/outro and no Tamil subtitles.",
+      "downloadAllowed": false
+    }
+  ]
 }
