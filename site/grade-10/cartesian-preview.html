@@ -6,7 +6,7 @@
 body{max-width:850px;margin:auto;padding:1rem}header,article{background:white;border-radius:1rem;padding:1.2rem;margin:1rem 0;box-shadow:0 2px 12px #1232}
 h1{font-size:clamp(1.5rem,5vw,2.2rem)}nav{display:flex;gap:.6rem;flex-wrap:wrap}
 button{font:inherit;padding:.6rem 1rem;border:2px solid #176a75;border-radius:.5rem;background:white;color:#07505c;cursor:pointer}
-button[aria-pressed="true"]{background:#07505c;color:white}button:focus-visible,summary:focus-visible{outline:3px solid #dd891c;outline-offset:3px}
+button[hidden]{display:none}button[aria-pressed="true"]{background:#07505c;color:white}button:focus-visible,summary:focus-visible{outline:3px solid #dd891c;outline-offset:3px}
 .math{overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:1rem/1.65 ui-monospace,monospace;background:#edf6f8;padding:.7rem;border-radius:.5rem}
 li{margin:.6rem 0;line-height:1.65}details{border-top:1px solid #ccd;margin-top:1rem;padding-top:.7rem}summary{cursor:pointer;font-weight:700}
 .notice,small{color:#40545e}#status[role="alert"]{color:#9b1c1c}
@@ -15,16 +15,24 @@ li{margin:.6rem 0;line-height:1.65}details{border-top:1px solid #ccd;margin-top:
 <h1 id="title">Cartesian products / கார்டீசியன் பெருக்கல்</h1>
 <p class="notice" id="notice">Only Q1(i–ii) are drafted. Tamil human editorial review pending. Not a certification of complete curriculum coverage or live deployment.</p>
 <nav aria-label="Lesson language"><button type="button" id="en" aria-pressed="true">English</button><button type="button" id="ta" aria-pressed="false" lang="ta">தமிழ்</button></nav>
-</header><main id="lessons" aria-live="polite"><p id="status" role="status">Loading lessons…</p></main>
+</header><button type="button" id="retry" hidden>Retry loading lessons</button><main id="lessons" aria-live="polite"><p id="status" role="status">Loading lessons…</p></main>
 <script>
 'use strict';
 const base='../data/textbook-exercises/';
 const ids=['g10-ch1-ex1-1-q1i','g10-ch1-ex1-1-q1ii'];
 let lessons=[],lang='en';
+const retry=document.getElementById('retry');
+const errorText={en:'Unable to load verified lessons. Please check your connection and retry.',ta:'சரிபார்க்கப்பட்ட பாடங்களை ஏற்ற முடியவில்லை. இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்.'};
 const main=document.getElementById('lessons');
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
+function validLesson(q,id){
+ return q && q.id===id && q.grade===10 && q.review?.sourceVerified===true &&
+ ['en','ta'].every(k=>typeof q.title?.[k]==='string' && q.title[k].trim() && typeof q.questionParaphrase?.[k]==='string' && q.questionParaphrase[k].trim() && typeof q.misconception?.[k]==='string' && q.misconception[k].trim()) &&
+ Array.isArray(q.steps) && q.steps.length>0 && q.steps.every(step=>typeof step.equation==='string' && ['en','ta'].every(k=>typeof step[k]==='string' && step[k].trim())) &&
+ q.source?.english?.printedPage && q.source?.tamil?.printedPage;
+}
 function draw(){
- main.replaceChildren();
+ main.replaceChildren();retry.hidden=true;
  for(const q of lessons){
   const article=el('article');article.dataset.questionId=q.id;
   article.append(el('h2','Exercise '+q.exercise+' · Q'+q.question+'('+q.subpart+')'));
@@ -36,15 +44,18 @@ function draw(){
   details.append(el('p',q.misconception[lang]));article.append(details);main.append(article);
  }
  document.documentElement.lang=lang;
+ retry.textContent=lang==='en'?'Retry loading lessons':'பாடங்களை மீண்டும் ஏற்றுக';
  for(const key of ['en','ta'])document.getElementById(key).setAttribute('aria-pressed',String(key===lang));
  document.getElementById('notice').textContent=lang==='en'?'Only Q1(i–ii) are drafted. Tamil human editorial review pending. This is a testing preview, not full curriculum coverage.':'Q1(i–ii) மட்டுமே வரைவு நிலையில் உள்ளன. தமிழ் மனிதத் தொகுப்பாசிரியர் மதிப்பாய்வு நிலுவையில் உள்ளது. இது சோதனை முன்னோட்டம் மட்டுமே.';
 }
-for(const key of ['en','ta'])document.getElementById(key).addEventListener('click',()=>{lang=key;if(lessons.length)draw();});
-(async()=>{try{
+for(const key of ['en','ta'])document.getElementById(key).addEventListener('click',()=>{lang=key;document.documentElement.lang=lang;retry.textContent=lang==='en'?'Retry loading lessons':'பாடங்களை மீண்டும் ஏற்றுக';if(lessons.length)draw();else if(!retry.hidden)main.replaceChildren(el('p',errorText[lang]));});
+async function loadLessons(){retry.hidden=true;main.replaceChildren(el('p',lang==='en'?'Loading lessons…':'பாடங்கள் ஏற்றப்படுகின்றன…'));try{
  const responses=await Promise.all(ids.map(id=>fetch(base+id+'.json')));
  if(responses.some(r=>!r.ok))throw Error('lesson file unavailable');
  lessons=await Promise.all(responses.map(r=>r.json()));
- for(let i=0;i<lessons.length;i++){if(lessons[i].id!==ids[i]||lessons[i].grade!==10||lessons[i].review.sourceVerified!==true)throw Error('lesson metadata mismatch');}
+ for(let i=0;i<lessons.length;i++){if(!validLesson(lessons[i],ids[i]))throw Error('lesson metadata mismatch');}
  draw();
-}catch(e){main.replaceChildren(el('p','Unable to load verified lessons. Please retry when online or after the files have been cached.'));main.firstChild.id='status';main.firstChild.setAttribute('role','alert');}})();
+}catch(e){lessons=[];main.replaceChildren(el('p',errorText[lang]));main.firstChild.id='status';main.firstChild.setAttribute('role','alert');retry.hidden=false;}}
+retry.addEventListener('click',loadLessons);
+loadLessons();
 </script></body></html>
