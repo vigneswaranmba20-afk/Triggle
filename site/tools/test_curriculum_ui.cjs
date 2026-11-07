@@ -91,6 +91,26 @@ async function main() {
         await button.click();
         const viewer=page.locator('#visualLessonDialog');
         await viewer.waitFor({state:'visible'});
+        const original='Find x in −3π ≤ x ≤ 3π for which sin x = −1.';
+        assert.equal((await page.locator('#vlQuestion').innerText()).trim(),original,
+          'Full, exact textbook question appears above the video');
+        assert.equal((await page.locator('#vlQuestionSummary').innerText()).trim(),'Full question');
+        assert.equal(await page.locator('#vlQuestionDetails').isVisible(),true,
+          'Question is always visible, not collapsed behind a disclosure');
+        const layout=await page.evaluate(()=>{
+          const q=document.querySelector('#vlQuestionDetails').getBoundingClientRect();
+          const player=document.querySelector('#vlVideoWrap').getBoundingClientRect();
+          return {qTop:q.top,qBottom:q.bottom,qRight:q.right,
+            playerTop:player.top,playerHeight:player.height,
+            viewportWidth:innerWidth,viewportHeight:innerHeight};
+        });
+        assert.ok(layout.qBottom<=layout.playerTop+1,
+          'The full question must appear directly before the video');
+        assert.ok(layout.qTop>=0&&layout.qBottom<layout.viewportHeight&&layout.qRight<=layout.viewportWidth+1,
+          'Question must be visible without scrolling or horizontal clipping');
+        assert.ok(layout.playerHeight>140,'Video should retain useful height below the question');
+        assert.equal(await page.locator('#vlDownloadHelp').isVisible(),false,
+          'Do not show download instructions when R2 downloads are disabled');
         const bounds=await viewer.evaluate(el=>({left:el.getBoundingClientRect().left,top:el.getBoundingClientRect().top,width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height,vw:innerWidth,vh:innerHeight}));
         assert.ok(bounds.left>=-1&&bounds.left<=1 && bounds.top>=-1&&bounds.top<=1,'Dialog starts at viewport origin');
         assert.ok(bounds.width>=bounds.vw-2 && bounds.height>=bounds.vh-2,'Dialog fills viewport without a second fullscreen tap');
@@ -166,6 +186,10 @@ async function main() {
       await page.locator('#visualLessonBtn').click();
       await page.locator('#visualLessonDialog').waitFor({state:'visible'});
       assert.match(await page.locator('#vlCloseLabel').innerText(),/கேள்விக்குத் திரும்பு/);
+      assert.equal((await page.locator('#vlQuestionSummary').innerText()).trim(),'முழுக் கேள்வி');
+      assert.equal((await page.locator('#vlQuestion').innerText()).trim(),
+        '−3π ≤ x ≤ 3π வரம்பில் sin x = −1 ஆகும் x மதிப்புகளைக் காண்க.',
+        'Tamil interface shows the exact Tamil version of the textbook question');
       await page.locator('#vlClose').click();
       await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
       assert.match(await page.locator('#visualLessonBtn').innerText(),/காணொளி/);
@@ -192,6 +216,9 @@ async function main() {
       assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),
         'https://drive.google.com/file/d/'+fileId+'/preview');
       assert.equal(await page.locator('#vlDriveFrame').isVisible(),true);
+      assert.equal((await page.locator('#vlQuestion').innerText()).trim(),
+        'Find x in −3π ≤ x ≤ 3π for which sin x = −1.',
+        'Legacy Drive lessons also show the exact question above the video');
       assert.equal(await page.locator('#vlVideo').isVisible(),false);
       assert.equal(await page.locator('#vlSpeed').isVisible(),false,
         'Drive embeds have their own controls');
