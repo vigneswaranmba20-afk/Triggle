@@ -439,6 +439,9 @@
 .vl-question-details p{font-size:clamp(14px,2.9vw,17px);line-height:1.55;margin:9px 0 3px}
 .vl-video-wrap{position:relative;display:flex;justify-content:center;align-items:center;min-height:180px;border-radius:16px;background:#22213b;overflow:hidden}
 .vl-video-wrap video{display:block;width:100%;max-height:min(65dvh,730px);aspect-ratio:2/3;object-fit:contain;background:#201d37;outline:none}
+.vl-video-wrap video[hidden],.vl-drive-frame[hidden],.vl-player-toolbar [hidden],.vl-help[hidden]{display:none!important}
+.vl-drive-frame{display:block;width:min(100%,420px);height:min(66dvh,747px);min-height:320px;aspect-ratio:9/16;border:0;background:#201d37;margin:0 auto}
+@media(max-width:430px){.vl-drive-frame{height:min(60dvh,620px);min-height:260px}}
 .vl-loading{position:absolute;top:14px;left:14px;z-index:1;padding:9px 12px;border-radius:10px;background:#faf9f5ed;color:#3c365b;font-size:12px;font-weight:750;pointer-events:none}
 .vl-error{border:1px solid #edcece;border-radius:13px;background:#fff1f1;padding:12px 14px;color:#8a2626;line-height:1.55;font-size:13px}
 .vl-error p{margin:5px 0 9px}.vl-error button{padding:8px 12px;border-radius:10px;border:1px solid #c9a3a3;background:white;font-weight:800;color:#8a2626}
