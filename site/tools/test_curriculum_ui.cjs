@@ -69,7 +69,11 @@ async function main() {
   try {
     for(const width of [320,390,1280]){
       await check('Published Class 12 video is truly embedded on the question at '+width+'px',async()=>{
-        const page=await visit(await context(width),'/index.html?class=12&question=c12-4-4-1-2');
+        const ctx=await context(width);
+        // CI must be deterministic: force the published, same-site WebM fallback.
+        // Real R2 availability is checked separately before switching the manifest.
+        await ctx.route('https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/**',route=>route.abort());
+        const page=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-2');
         await page.locator('#visualLessonBtn').waitFor({state:'visible'});
         assert.equal(await page.locator('#vlInlinePanel').isVisible(),false,'Video must stay collapsed until student requests it');
         assert.equal(await page.locator('#quickSteps').isVisible(),true,'Written solution is the default');
@@ -98,7 +102,7 @@ async function main() {
           vw:innerWidth,
           readyState:el.readyState
         }));
-        assert.match(video.mp4,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+        assert.equal(video.mp4,'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle-class12-ex4-1-q1-ii%20(1).mp4',"R2 public MP4 must be the primary video");
         assert.match(video.webm,/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
         assert.ok(video.webmSupported,'Chromium test browser must recognize VP9+Opus');
         assert.equal(video.paused,true,'No automatic voice playback');
@@ -108,8 +112,8 @@ async function main() {
         assert.ok(video.dims.right<=video.vw+1 && video.dims.left>=-1,'Player must fit phone width');
         assert.ok(video.dims.height>150,'Player needs meaningful room for lessons');
         assert.match(await page.locator('#vlInlineTitle').innerText(),/All angles where sin x/);
-        assert.match(await page.locator('#vlInlineDownload').getAttribute('href'),/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
-        assert.equal(await page.locator('#vlInlineDownload').getAttribute('download'),'triggle-class12-ex4-1-q1-ii.mp4');
+        assert.equal(await page.locator('#vlInlineDownload').getAttribute('href'),'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle-class12-ex4-1-q1-ii%20(1).mp4');
+        assert.equal(await page.locator('#vlInlineDownload').isVisible(),false,'Cross-origin R2 download stays disabled until an offline feature is built');
         const mp4=await page.request.get(url+'/videos/triggle-class12-ex4-1-q1-ii.mp4');
         assert.equal(mp4.status(),200);
         assert.match(mp4.headers()['content-type'],/video\/mp4/);
@@ -135,7 +139,7 @@ async function main() {
         await page.locator('#visualLessonDialog').waitFor({state:'visible'});
         assert.equal(await page.locator('#vlVideo').isVisible(),true,'Larger-view video uses native HTML5 player');
         assert.equal(await page.locator('#vlDriveFrame').isVisible(),false,'Google Drive frame must not be visible');
-        assert.match(await page.locator('#vlMp4Source').getAttribute('src'),/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+        assert.equal(await page.locator('#vlMp4Source').getAttribute('src'),'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle-class12-ex4-1-q1-ii%20(1).mp4');
         assert.match(await page.locator('#vlWebmSource').getAttribute('src'),/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
         await page.locator('#vlClose').click();
         await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
