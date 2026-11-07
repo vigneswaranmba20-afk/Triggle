@@ -419,10 +419,11 @@
       "status": {
         "drafted": true,
         "mathChecked": true,
-        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "automatedTest": "npm test passed in GitHub Actions run 42411085133; browser suite failed at existing 320px exercise viewport assertion (830px vs 900px), not passed",
         "previewMerged": false,
         "liveVerified": false,
-        "tamilEditorial": "pending"
+        "tamilEditorial": "pending",
+        "browserTest": "failed: 320px exercise viewport assertion; see GitHub Actions 42411085133"
       }
     },
     {
@@ -441,10 +442,11 @@
       "status": {
         "drafted": true,
         "mathChecked": true,
-        "automatedTest": "dedicated test added; execution pending",
+        "automatedTest": "npm test passed in GitHub Actions run 42411085133; browser suite failed at existing 320px exercise viewport assertion (830px vs 900px), not passed",
         "previewMerged": false,
         "liveVerified": false,
-        "tamilEditorial": "pending"
+        "tamilEditorial": "pending",
+        "browserTest": "failed: 320px exercise viewport assertion; see GitHub Actions 42411085133"
       }
     },
     {
@@ -668,5 +670,14 @@
       }
     }
   ],
-  "draftedUnmergedQ4Subparts": 2
+  "draftedUnmergedQ4Subparts": 2,
+  "lastValidationEvidence": {
+    "runId": 42411085133,
+    "commit": "01f4e0a0bf7d9341120bd192f7503f18e8ec75a4",
+    "npmTest": "passed",
+    "browserTest": "failed",
+    "browserFailure": "Exercise viewport 830px while screen 900px at 320px; site/tools/test_curriculum_ui.cjs:266",
+    "next": "Fix viewport regression and integrate Q4(i–ii) into student Exercises UI; rerun full CI before merge",
+    "humanTamilEditorial": "pending"
+  }
 }
