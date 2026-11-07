@@ -62,6 +62,29 @@ jobs:
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
 
+      # One-time migration to GitHub Pages: commit the reviewed, 4.8 MB video
+      # into the repository. Future deployments use that checked-in asset and
+      # no longer depend on Google Drive being available.
+      - name: Import verified Class 12 lesson into the GitHub repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          video='site/videos/triggle-class12-ex4-1-q1-ii.mp4'
+          expected='bf0965d5657838b83fb9926a8ac0358517f90aa1a4e4e8e3f99aaae80e4430fe'
+          if [ ! -f "$video" ]; then
+            mkdir -p site/videos
+            python3 -m pip install --disable-pip-version-check --quiet 'gdown==5.2.0'
+            python3 -m gdown 'https://drive.google.com/uc?id=1zBG7dqiwPnwaIe6EqcZKutlqniGiq78i' -O "$video.tmp"
+            echo "$expected  $video.tmp" | sha256sum --check
+            mv "$video.tmp" "$video"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add "$video"
+            git commit -m "Host verified Class 12 English lesson MP4 in Triggle Pages"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+          echo "$expected  $video" | sha256sum --check
+
       - name: Validate website files
         shell: bash
         run: |
