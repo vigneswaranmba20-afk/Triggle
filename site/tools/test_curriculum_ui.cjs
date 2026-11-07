@@ -68,93 +68,75 @@ async function main() {
   }
   try {
     for(const width of [320,390,1280]){
-      await check('Published Class 12 video is truly embedded on the question at '+width+'px',async()=>{
+      await check('Class 12 visual lesson opens full-screen on one tap and resets after close at '+width+'px',async()=>{
         const ctx=await context(width);
-        // CI must be deterministic: force the published, same-site WebM fallback.
-        // Real R2 availability is checked separately before switching the manifest.
+        // Deterministic browser test: local reviewed WebM is the backup if R2 cannot be reached.
         await ctx.route('https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/**',route=>route.abort());
         const page=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-2');
-        await page.locator('#visualLessonBtn').waitFor({state:'visible'});
-        assert.equal(await page.locator('#vlInlinePanel').isVisible(),false,'Video must stay collapsed until student requests it');
-        assert.equal(await page.locator('#quickSteps').isVisible(),true,'Written solution is the default');
-        assert.equal(await page.locator('#answerBox').isVisible(),true,'Final answer remains part of quick solution');
+        const button=page.locator('#visualLessonBtn');
+        await button.waitFor({state:'visible'});
+        assert.equal(await page.locator('#quickSteps').isVisible(),true,'Written quick solution first');
+        assert.equal(await page.locator('#answerBox').isVisible(),true,'Final answer remains first');
+        assert.equal(await page.locator('#vlInlinePanel').count(),0,'No inline player should require scrolling');
+        assert.equal(await page.locator('#vlFullscreen').count(),0,'No redundant fullscreen button');
         assert.equal(await page.locator('#tabQuick').getAttribute('aria-pressed'),'true');
         assert.equal(await page.locator('#tabGuided').getAttribute('aria-pressed'),'false');
-        const modeColors=await page.evaluate(()=>{
-          const q=getComputedStyle(document.querySelector('#tabQuick'));
-          const d=getComputedStyle(document.querySelector('#tabGuided'));
-          return {active:q.backgroundColor,inactive:d.backgroundColor,activeText:q.color};
-        });
-        assert.notEqual(modeColors.active,modeColors.inactive,'Only the active mode receives a dark fill');
-        assert.equal(modeColors.activeText,'rgb(255, 255, 255)','Selected button has high-contrast white text');
-        assert.equal(await page.locator('#visualLessonBtn').getAttribute('aria-expanded'),'false');
-        await page.locator('#visualLessonBtn').click();
-        await page.locator('#vlInlinePanel').waitFor({state:'visible'});
-        assert.equal(await page.locator('#visualLessonBtn').getAttribute('aria-expanded'),'true');
-        assert.equal(await page.locator('#vlInlineVideo').isVisible(),true);
-        const video=await page.locator('#vlInlineVideo').evaluate(el=>({
+        assert.match(await button.innerText(),/Check out the video explanation/);
+        assert.equal(await button.getAttribute('aria-haspopup'),'dialog');
+        if(width<=390){
+          await page.locator('#focusNavToggle').waitFor({state:'visible'});
+          const color=await page.locator('#focusNavToggle').evaluate(el=>getComputedStyle(el).color);
+          assert.equal(color,'rgb(188, 24, 74)','The right-side navigation close X should be cherry-red');
+        }
+        await button.click();
+        const viewer=page.locator('#visualLessonDialog');
+        await viewer.waitFor({state:'visible'});
+        const bounds=await viewer.evaluate(el=>({left:el.getBoundingClientRect().left,top:el.getBoundingClientRect().top,width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height,vw:innerWidth,vh:innerHeight}));
+        assert.ok(bounds.left>=-1&&bounds.left<=1 && bounds.top>=-1&&bounds.top<=1,'Dialog starts at viewport origin');
+        assert.ok(bounds.width>=bounds.vw-2 && bounds.height>=bounds.vh-2,'Dialog fills viewport without a second fullscreen tap');
+        assert.equal(await page.locator('#vlVideo').isVisible(),true,'Viewer shows native video');
+        assert.equal(await page.locator('#vlDriveFrame').isVisible(),false,'Drive is not used for the R2 lesson');
+        const sources=await page.locator('#vlVideo').evaluate(el=>({
           mp4:el.querySelector('source[type^="video/mp4"]')?.src,
           webm:el.querySelector('source[type^="video/webm"]')?.src,
-          paused:el.paused,autoplay:el.autoplay,preload:el.preload,
-          webmSupported:el.canPlayType('video/webm; codecs="vp9, opus"'),
-          poster:el.poster,
-          dims:el.getBoundingClientRect().toJSON(),
-          vw:innerWidth,
-          readyState:el.readyState
+          paused:el.paused,autoplay:el.autoplay,preload:el.preload
         }));
-        assert.equal(video.mp4,'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle-class12-ex4-1-q1-ii%20(1).mp4',"R2 public MP4 must be the primary video");
-        assert.match(video.webm,/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
-        assert.ok(video.webmSupported,'Chromium test browser must recognize VP9+Opus');
-        assert.equal(video.paused,true,'No automatic voice playback');
-        assert.equal(video.autoplay,false);
-        assert.equal(video.preload,'none','Do not stream video before student chooses to watch');
-        assert.match(video.poster,/\/videos\/posters\/triggle-class12-sine\.svg$/);
-        assert.ok(video.dims.right<=video.vw+1 && video.dims.left>=-1,'Player must fit phone width');
-        assert.ok(video.dims.height>150,'Player needs meaningful room for lessons');
-        assert.match(await page.locator('#vlInlineTitle').innerText(),/All angles where sin x/);
-        assert.equal(await page.locator('#vlInlineDownload').getAttribute('href'),'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle-class12-ex4-1-q1-ii%20(1).mp4');
-        assert.equal(await page.locator('#vlInlineDownload').isVisible(),false,'Cross-origin R2 download stays disabled until an offline feature is built');
-        const mp4=await page.request.get(url+'/videos/triggle-class12-ex4-1-q1-ii.mp4');
-        assert.equal(mp4.status(),200);
-        assert.match(mp4.headers()['content-type'],/video\/mp4/);
+        assert.equal(sources.mp4,'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle-class12-ex4-1-q1-ii%20(1).mp4');
+        assert.match(sources.webm,/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
+        assert.equal(sources.autoplay,false,'Do not autoplay with sound');
+        assert.equal(sources.preload,'none');
+        const closeColor=await page.locator('#vlClose').evaluate(el=>getComputedStyle(el).color);
+        assert.equal(closeColor,'rgb(171, 23, 61)','Close action must be cherry-red');
         if(width===390){
-          const fallback=await page.request.get(url+'/videos/triggle-class12-ex4-1-q1-ii.webm');
-          assert.equal(fallback.status(),200);
-          assert.match(fallback.headers()['content-type'],/video\/webm/);
-          // Real decoded playback on open-source Chromium, not just a valid source URL.
           await page.evaluate(async()=>{
-            const el=document.getElementById('vlInlineVideo');
+            const el=document.getElementById('vlVideo');
             el.muted=true;
             await el.play();
           });
-          await page.waitForFunction(()=>document.getElementById('vlInlineVideo').currentTime>0.25,null,{timeout:15000});
-          const source=await page.locator('#vlInlineVideo').evaluate(el=>el.currentSrc);
-          assert.match(source,/triggle-class12-ex4-1-q1-ii\.(mp4|webm)$/);
-          await page.locator('#vlInlineVideo').evaluate(el=>el.pause());
+          await page.waitForFunction(()=>document.getElementById('vlVideo').currentTime>0.25,null,{timeout:15000});
+          assert.match(await page.locator('#vlVideo').evaluate(el=>el.currentSrc),/\.webm$/,'R2 network failure should play local WebM backup');
         }
-        const svg=await page.request.get(url+'/videos/posters/triggle-class12-sine.svg');
-        assert.equal(svg.status(),200);
-        await noOverflow(page,'published native video at '+width+'px');
-        await page.locator('#vlInlineFull').click();
-        await page.locator('#visualLessonDialog').waitFor({state:'visible'});
-        assert.equal(await page.locator('#vlVideo').isVisible(),true,'Larger-view video uses native HTML5 player');
-        assert.equal(await page.locator('#vlDriveFrame').isVisible(),false,'Google Drive frame must not be visible');
-        assert.equal(await page.locator('#vlMp4Source').getAttribute('src'),'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle-class12-ex4-1-q1-ii%20(1).mp4');
-        assert.match(await page.locator('#vlWebmSource').getAttribute('src'),/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
         await page.locator('#vlClose').click();
         await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
-        assert.equal(await page.locator('#vlInlineVideo').isVisible(),true,'Inline lesson stays available after larger-view close');
+        assert.equal(await button.isVisible(),true,'Return to the original question CTA');
+        assert.match(await button.innerText(),/Check out the video explanation/);
+        assert.equal(await page.locator('#vlMp4Source').getAttribute('src'),null,'Close unloads media');
+        await button.click();
+        await viewer.waitFor({state:'visible'});
+        await page.locator('#vlClose').click();
+        await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
+        await noOverflow(page,'full-screen lesson after close at '+width+'px');
         await page.goto(url+'/index.html?class=12&question=c12-4-4-1-1');
         await page.waitForFunction(()=>window.TriggleVisualPlayer?.status.questionId===null);
-        assert.equal(await page.locator('#vlInlinePanel').isVisible(),false,'Video does not leak into another question');
+        assert.equal(await page.locator('#visualLessonBtn').isVisible(),false,'Video does not leak to other questions');
       });
     }
-    await check('Cloudflare R2 lesson streams through optional native player on mobile',async()=>{
+    await check('R2 videos use the same instant full-viewport player on mobile',async()=>{
       const ctx=await context(390);
       const origin='https://videos.triggle.example';
       await ctx.route('**/data/video-lessons.json',route=>route.fulfill({
         status:200,contentType:'application/json',body:JSON.stringify({lessons:[{
-          ...JSON.parse(JSON.stringify(require('../data/video-lessons.json').lessons[0])),
+          ...require('../data/video-lessons.json').lessons[0],
           provider:'cloudflare-r2',video:origin+'/grade-12/chapter-4/q1-ii/en.mp4',
           webm:origin+'/grade-12/chapter-4/q1-ii/en.webm',downloadAllowed:false
         }]})
@@ -162,29 +144,31 @@ async function main() {
       await ctx.route(origin+'/**',route=>route.abort());
       const page=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-2');
       await page.locator('#visualLessonBtn').waitFor({state:'visible'});
-      assert.equal(await page.locator('#vlInlinePanel').isVisible(),false,'R2 video stays opt-in');
-      assert.equal(await page.locator('#quickSteps').isVisible(),true,'Written maths solution remains primary');
+      assert.equal(await page.locator('#quickSteps').isVisible(),true);
       await page.locator('#visualLessonBtn').click();
-      await page.locator('#vlInlinePanel').waitFor({state:'visible'});
-      const src=await page.locator('#vlInlineVideo').evaluate(el=>({mp4:el.querySelector('source[type^="video/mp4"]').src,webm:el.querySelector('source[type^="video/webm"]').src}));
+      await page.locator('#visualLessonDialog').waitFor({state:'visible'});
+      const src=await page.locator('#vlVideo').evaluate(el=>({
+        mp4:el.querySelector('source[type^="video/mp4"]')?.src,
+        webm:el.querySelector('source[type^="video/webm"]')?.src
+      }));
       assert.equal(src.mp4,origin+'/grade-12/chapter-4/q1-ii/en.mp4');
       assert.equal(src.webm,origin+'/grade-12/chapter-4/q1-ii/en.webm');
-      assert.equal(await page.locator('#vlInlineDownload').isVisible(),false,'No false cross-origin download promise');
-      await noOverflow(page,'R2 native video lesson on mobile');
-      await page.locator('#visualLessonBtn').click();
-      assert.equal(await page.locator('#vlInlinePanel').isVisible(),false,'Collapse should hide R2 player');
-      assert.equal(await page.locator('#vlInlineMp4').getAttribute('src'),null,'Collapsed player unloads remote media');
+      assert.equal(await page.locator('#vlDownload').isVisible(),false,'No cross-origin download promise');
+      await page.locator('#vlClose').click();
+      await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
+      assert.match(await page.locator('#visualLessonBtn').innerText(),/Check out the video explanation/);
     });
-    await check('Tamil question interface still presents the correct English narrated visual lesson',async()=>{
+    await check('Tamil lesson action opens full-screen and returns to Tamil label',async()=>{
       const page=await visit(await context(390),'/index.html?class=12&question=c12-4-4-1-2');
       await page.locator('#visualLessonBtn').waitFor({state:'visible'});
       await page.locator('#langTa').click();
       assert.match(await page.locator('#visualLessonBtn').innerText(),/காணொளி/);
       await page.locator('#visualLessonBtn').click();
-      await page.locator('#vlInlinePanel').waitFor({state:'visible'});
-      assert.match(await page.locator('#vlInlineNote').innerText(),/ஆங்கில/);
-      assert.equal(await page.locator('#vlInlineVideo').isVisible(),true);
-      assert.match(await page.locator('#vlInlineDownload').getAttribute('href'),/\.mp4$/);
+      await page.locator('#visualLessonDialog').waitFor({state:'visible'});
+      assert.match(await page.locator('#vlCloseLabel').innerText(),/கேள்விக்குத் திரும்பு/);
+      await page.locator('#vlClose').click();
+      await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
+      assert.match(await page.locator('#visualLessonBtn').innerText(),/காணொளி/);
     });
     await check('Google Drive lesson preview is safe, mobile friendly and question-specific',async()=>{
       const ctx=await context(390);
