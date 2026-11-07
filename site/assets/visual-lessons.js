@@ -27,7 +27,7 @@
    return r?.provider==='cloudflare-r2'&&httpsVideoFile(r.video,'mp4')
      &&(!r.webm||(httpsVideoFile(r.webm,'webm')&&new URL(r.webm).origin===new URL(r.video).origin));
  }
- const validLocal=r=>r?.provider==='github-pages'&&typeof r.video==='string'
+ const validLocal=r=>(!r?.provider||r.provider==='github-pages')&&typeof r.video==='string'
    &&r.video.startsWith('./videos/')&&mediaUrl(r.video)&&/\.mp4$/i.test(r.video)
    &&(!r.webm||(r.webm.startsWith('./videos/')&&mediaUrl(r.webm)&&/\.webm$/i.test(r.webm)));
  const validRec=r=>r&&r.questionId&&r.status==='ready'&&(validDriveId(r)||validLocal(r)||validR2(r));
