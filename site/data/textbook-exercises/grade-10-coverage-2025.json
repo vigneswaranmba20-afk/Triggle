@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "edition": "2025 revised",
+  "lastVerified": "2026-11-08",
+  "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
+  "notes": "Only chapter starts and Exercise 1.1 complete question listing have been directly checked against the uploaded bilingual PDFs. Do not infer full-grade question totals from legacy samples. CI/browser and human Tamil editorial review remain pending.",
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "Relations and Functions",
+      "englishPrintedStart": 1,
+      "tamilPrintedStart": 1,
+      "exerciseInventory": {
+        "1.1": {
+          "questionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "verifiedSourcePages": {
+            "english": 6,
+            "tamil": 6
+          },
+          "knownSubparts": {
+            "1": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "6": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "7": [
+              "i",
+              "ii"
+            ]
+          },
+          "questionSubpartInventoryComplete": true
+        }
+      },
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [
+        "1(i)"
+      ],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 2,
+      "title": "Numbers and Sequences",
+      "englishPrintedStart": 36,
+      "tamilPrintedStart": 37,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 3,
+      "title": "Algebra",
+      "englishPrintedStart": 85,
+      "tamilPrintedStart": 86,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 4,
+      "title": "Geometry",
+      "englishPrintedStart": 161,
+      "tamilPrintedStart": 165,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 5,
+      "title": "Coordinate Geometry",
+      "englishPrintedStart": 203,
+      "tamilPrintedStart": 210,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 6,
+      "title": "Trigonometry",
+      "englishPrintedStart": 239,
+      "tamilPrintedStart": 247,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 7,
+      "title": "Mensuration",
+      "englishPrintedStart": 269,
+      "tamilPrintedStart": 277,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 8,
+      "title": "Statistics and Probability",
+      "englishPrintedStart": 301,
+      "tamilPrintedStart": 309,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    }
+  ],
+  "nextAction": "Develop Chapter 1 Exercise 1.1 Question 1(ii): A=B={p,q}, find A×B, A×A and B×A. Source: 2025 English/Tamil printed p.6 (PDF p.12). Implement bilingual derivation, independent test, then Q1(iii).",
+  "testStatus": {
+    "localMathEnumeration": "passed 2026-11-08 for Q1(i)",
+    "npmTest": "not run: runtime cannot resolve github.com for git clone",
+    "playwright": "not run",
+    "githubCI": "not yet verified",
+    "merged": false,
+    "liveVerified": false
+  }
+}
