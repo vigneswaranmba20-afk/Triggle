@@ -31,6 +31,22 @@ book.stages.forEach((stage,i)=>{
 });
 assert.deepEqual(Array.from(book.stages.map(x=>x.visual)),['membership','forms','types','venn','properties','demorgan','count']);
 assert.equal(new Set(book.stages.map(x=>x.id)).size,7);
+const extra=book.extraPractice;
+assert.equal(extra.length,7,'One independent follow-up question per section');
+assert.deepEqual(Array.from(extra.map(x=>x.stageId)),ids);
+for(const item of extra){
+  assert.equal(item.choices.length,3,'Three answer choices '+item.stageId);
+  assert(item.correct>=0&&item.correct<item.choices.length,'Valid extra answer '+item.stageId);
+  for(const lang of ['en','ta']){
+    assert(item.question[lang]&&item.hint[lang]&&item.why[lang],'Bilingual follow-up '+item.stageId+' '+lang);
+    assert(item.choices.every(x=>x[lang]),'Bilingual choices '+item.stageId+' '+lang);
+  }
+}
+assert.equal(extra.find(x=>x.stageId==='types').correct,1,'Empty set is proper subset of nonempty set');
+assert.equal(extra.find(x=>x.stageId==='demorgan').correct,1,'De Morgan second law');
+assert.equal(21+18+17-7-6-5+2,40,'Three-set union checked independently');
+assert.equal(50-40,10,'Complement in the universe of 50');
+assert.equal(extra.find(x=>x.stageId==='cardinality').correct,1,'Correct three-set answer index');
 // Independent arithmetic reference checks for both two-set and three-set examples.
 const nA=14,nB=11,overlap=6,U=30;
 assert.equal(nA+nB-overlap,19);
@@ -47,5 +63,6 @@ assert(book.hard.steps.every(step=>step.en&&step.ta),'Hard reasoning must be bil
 const engine=fs.readFileSync(path.join(root,'assets/set-language-journey.js'),'utf8');
 new vm.Script(engine,{filename:'set-language-journey.js'});
 assert(!/\bfetch\s*\(|XMLHttpRequest|https?:\/\//.test(engine),'All learning must work without remote APIs');
+assert(engine.includes('data-extra-practice')&&engine.includes('data-extra-answers'),'Extra practice is rendered and answered locally');
 assert(engine.includes('localStorage')&&engine.includes('sp2-paper')&&engine.includes('data-hard-next'),'Offline progress, paper tasks and staged explanation included');
 console.log('PASS: seven bilingual Grade 9 sections, page crosswalk, arithmetic, offline delivery and staged advanced reasoning');
