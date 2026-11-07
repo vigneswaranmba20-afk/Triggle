@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "g9-ch1",
+  "batch": "2026-11-07-ex1.1-q1",
+  "purpose": "Draft bilingual textbook-aligned worked solutions; NOT yet integrated into the student UI or editorially approved.",
+  "sourceAuthority": "User-uploaded 2025 revised Grade 9 EN and TA textbooks; printed page 5 in both.",
+  "coverage": {
+    "verifiedExerciseSubparts": 4,
+    "chapterTotal": "not yet inventoried",
+    "otherSubparts": "not yet counted"
+  },
+  "questions": [
+    {
+      "id": "g9-ch1-ex1.1-q1-i",
+      "exercise": "1.1",
+      "question": 1,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
+        ]
+      },
+      "prompt": {
+        "en": "Determine whether the collection is a well-defined set: Prime numbers from 1 through 100.",
+        "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: 1 முதல் 100 வரையுள்ள பகா எண்கள்."
+      },
+      "answer": {
+        "en": "set",
+        "ta": "கணம்"
+      },
+      "steps": {
+        "en": [
+          "A prime number is an integer greater than 1 with exactly two positive divisors.",
+          "The condition is objective: for each integer from 1 to 100, divisibility decides membership.",
+          "Therefore the collection is well-defined and is a set."
+        ],
+        "ta": [
+          "பகா எண் என்பது 1 ஐ விடப் பெரியதும், 1 மற்றும் தன்னால் மட்டுமே வகுபடுவதுமான முழு எண்.",
+          "1 முதல் 100 வரை உள்ள ஒவ்வொரு எண்ணும் இந்த நிபந்தனையை நிறைவேற்றுகிறதா என்பதைத் தீர்மானிக்க முடியும்.",
+          "எனவே இது தெளிவாக வரையறுக்கப்பட்ட கணம்."
+        ]
+      },
+      "verification": {
+        "method": "well-defined membership criterion; cross-checked against both textbook answer keys",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-ii",
+      "exercise": "1.1",
+      "question": 1,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
+        ]
+      },
+      "prompt": {
+        "en": "Determine whether the collection is a well-defined set: Rich people in India.",
+        "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: இந்தியாவில் உள்ள செல்வந்தர்கள்."
+      },
+      "answer": {
+        "en": "not a set",
+        "ta": "கணமல்ல"
+      },
+      "steps": {
+        "en": [
+          "The description gives no fixed wealth threshold for the word 'rich'.",
+          "Different people can classify the same person differently; membership is not unambiguous.",
+          "Therefore this description is not a well-defined set."
+        ],
+        "ta": [
+          "'செல்வந்தர்' என்பதற்கான குறிப்பிட்ட சொத்து மதிப்பு வரம்பு தரப்படவில்லை.",
+          "ஒரே நபரைப் பற்றிப் பலர் வெவ்வேறு முடிவுகளை எடுக்கலாம்; உறுப்பினர் தன்மை தெளிவாக இல்லை.",
+          "எனவே இவ்விளக்கம் தெளிவாக வரையறுக்கப்பட்ட கணம் அல்ல."
+        ]
+      },
+      "verification": {
+        "method": "well-defined membership criterion; cross-checked against both textbook answer keys",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-iii",
+      "exercise": "1.1",
+      "question": 1,
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
+        ]
+      },
+      "prompt": {
+        "en": "Determine whether the collection is a well-defined set: Rivers in India.",
+        "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: இந்தியாவில் உள்ள ஆறுகள்."
+      },
+      "answer": {
+        "en": "set",
+        "ta": "கணம்"
+      },
+      "steps": {
+        "en": [
+          "The description uses a geographical criterion: a river is included when it is in India.",
+          "For a given river, its location can be checked against that criterion.",
+          "Hence the collection is treated as a well-defined set in this textbook context."
+        ],
+        "ta": [
+          "இது புவியியல் நிபந்தனையைக் கொண்டுள்ளது: இந்தியாவில் உள்ள ஆறு உறுப்பாகும்.",
+          "கொடுக்கப்பட்ட ஆற்றின் இருப்பிடத்தைச் சரிபார்த்து அது உறுப்பா எனத் தீர்மானிக்கலாம்.",
+          "எனவே பாடநூல் சூழலில் இது தெளிவாக வரையறுக்கப்பட்ட கணம்."
+        ]
+      },
+      "verification": {
+        "method": "well-defined membership criterion; cross-checked against both textbook answer keys",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-iv",
+      "exercise": "1.1",
+      "question": 1,
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
+        ]
+      },
+      "prompt": {
+        "en": "Determine whether the collection is a well-defined set: Good hockey players.",
+        "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: வளைகோல் பந்தாட்டத்தை நன்றாக விளையாடும் வீரர்கள்."
+      },
+      "answer": {
+        "en": "not a set",
+        "ta": "கணமல்ல"
+      },
+      "steps": {
+        "en": [
+          "The word 'good' has no stated objective performance standard.",
+          "Different observers may disagree about whether a player qualifies.",
+          "Thus membership is subjective, so this is not a well-defined set."
+        ],
+        "ta": [
+          "'நன்றாக விளையாடும்' என்பதற்கான அளவிடத்தக்க தகுதி தரப்படவில்லை.",
+          "ஒரு வீரரைப் பற்றிப் பார்வையாளர்கள் வேறுபட்ட கருத்துகளைக் கொள்ளலாம்.",
+          "எனவே உறுப்பினர் தன்மை கருத்து சார்ந்தது; இது தெளிவாக வரையறுக்கப்பட்ட கணம் அல்ல."
+        ]
+      },
+      "verification": {
+        "method": "well-defined membership criterion; cross-checked against both textbook answer keys",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    }
+  ]
+}
