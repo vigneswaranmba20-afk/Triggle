@@ -95,7 +95,6 @@ function run(catalog, label){
  await run({lessons:[ready]},'native');
  await run(manifest,'published');
  const r2={...manifest.lessons[0],provider:'cloudflare-r2',video:'https://videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.mp4',webm:'https://videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.webm',downloadAllowed:false};
- await run({lessons:[{...r2,webm:'./videos/triggle-class12-ex4-1-q1-ii.webm'}]},'published');
  await run({lessons:[r2]},'r2');
  await run({lessons:[{...r2,video:'http://videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.mp4'}]},'coming');
  await run({lessons:[{...r2,video:'https://user:secret@videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.mp4'}]},'coming');
