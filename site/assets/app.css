@@ -616,3 +616,24 @@
 .vl-launch-note:empty{display:none}
 .vl-inline-panel{margin:0 auto 2px}
 @media(max-width:430px){.solution-tab{min-height:44px;font-size:12px;padding:8px 5px}.vl-launch{padding:10px}}
+
+/* Full-viewport visual lesson: no inline expansion or second fullscreen step. */
+.vl-dialog{position:fixed;inset:0;box-sizing:border-box;width:100%;max-width:none;height:100%;max-height:none;margin:0;padding:0;border-radius:0;overflow:hidden;background:#f8f6fc;box-shadow:none}
+.vl-dialog[open]{display:block}
+.vl-dialog .vl-shell{height:100%;min-height:0;overflow:hidden}
+.vl-dialog .vl-header{position:relative;flex:0 0 auto;box-sizing:border-box;padding:calc(10px + env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) 10px max(12px,env(safe-area-inset-left));background:#fff}
+.vl-dialog .vl-body{box-sizing:border-box;flex:1 1 auto;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:7px;padding:8px 0 calc(7px + env(safe-area-inset-bottom))}
+.vl-dialog .vl-question-details{display:none}
+.vl-dialog .vl-video-wrap{flex:1 1 auto;min-height:0;border-radius:0;background:#211e42}
+.vl-dialog .vl-video-wrap video{width:100%;height:100%;max-width:100%;max-height:100%;aspect-ratio:auto;object-fit:contain;background:#211e42}
+.vl-dialog .vl-drive-frame{width:100%;max-width:500px;height:100%;max-height:100%;min-height:0}
+.vl-dialog .vl-player-toolbar{flex:0 0 auto;justify-content:center;min-height:46px;padding:0 12px}
+.vl-dialog .vl-player-toolbar:has(> :only-child[hidden]){display:none}
+.vl-dialog .vl-notice:empty,.vl-dialog .vl-help[hidden]{display:none!important}
+.vl-dialog .vl-notice,.vl-dialog .vl-help{padding-inline:15px}
+.vl-dialog .vl-close{min-width:44px;min-height:44px;border-radius:12px;background:#ffe3e9;border:2px solid #e64b68;color:#ab173d;font-size:17px;font-weight:900;box-shadow:0 2px 8px #b71e4217}
+.vl-dialog .vl-close:hover{background:#ffced9}
+.vl-dialog .vl-close:focus-visible{outline:3px solid #b51c48;outline-offset:2px}
+.vl-dialog .vl-close span{font-size:12px;font-weight:800;color:#ab173d}
+@media(min-width:740px){.vl-dialog{width:100%;max-width:none}.vl-dialog .vl-video-wrap{background:#211e42}.vl-dialog .vl-video-wrap video{max-width:100%}}
+@media(max-width:410px){.vl-dialog .vl-close{min-height:44px;padding:8px 10px}.vl-dialog .vl-close span{font-size:11px}}

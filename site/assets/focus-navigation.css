@@ -171,3 +171,12 @@
  body.question-focus .class-dock,
  .focus-nav-toggle{transition:none!important;will-change:auto}
 }
+
+/* Cherry-red X on the mobile navigation hide control; hamburger stays violet. */
+@media(max-width:800px){
+ body.question-focus.focus-controls-visible .focus-nav-toggle{
+   background:#ffe4e9;border-color:#e65374;color:#bc184a;opacity:1;
+   box-shadow:-4px 6px 18px #a8204226;font-size:27px;
+ }
+ body.question-focus.focus-controls-visible .focus-nav-toggle:focus-visible{outline:3px solid #bf1946}
+}
