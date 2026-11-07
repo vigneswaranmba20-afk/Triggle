@@ -603,3 +603,16 @@
 /* Small honest completion marker: the 41-chapter curriculum itself remains planned. */
 .sp2-pilot-note{display:inline-flex;margin:4px 0 9px 8px;padding:6px 10px;border-radius:99px;font:750 11px/1.4 system-ui,sans-serif;background:#eaf5ef;border:1px solid #cbe5d5;color:#28694c}
 @media(max-width:420px){.sp2-pilot-note{margin-left:0}}
+
+/* Active learning mode + optional video call-to-action (2026-11). */
+.solution-tabs{gap:7px;background:#f4f1fa;border:1px solid #ece6f5}
+.solution-tab,.solution-tab.detailed-launch:not(.is-selected){background:#fff;border:1px solid #e5deef;color:#645b80;box-shadow:none}
+.solution-tab.is-selected,.solution-tab.detailed-launch.is-selected{background:#352a67;border:1px solid #352a67;color:#fff;box-shadow:0 3px 11px #352a6730}
+.solution-tab.is-selected .tab-glimmer,.solution-tab.is-selected .launch-arrow{color:#fff}
+.solution-tab:not(.is-selected):hover{background:#f0ebfb}
+.vl-launch{display:flex;flex-direction:column;align-items:stretch;gap:8px;margin:14px 0 10px;padding:13px;border:1px solid #e4dcf3;background:#faf8ff;border-radius:14px}
+.vl-launch-button{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:44px;background:#fff;border:1px solid #b9a9dd;border-radius:12px;color:#4a397b;box-shadow:none;text-align:center}
+.vl-launch-button[aria-expanded="true"]{background:#eae3fa;border-color:#9f86d4;color:#342867}
+.vl-launch-note:empty{display:none}
+.vl-inline-panel{margin:0 auto 2px}
+@media(max-width:430px){.solution-tab{min-height:44px;font-size:12px;padding:8px 5px}.vl-launch{padding:10px}}
