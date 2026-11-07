@@ -716,6 +716,14 @@ async function main() {
         el.value='9';el.dispatchEvent(new Event('input',{bubbles:true}));
       });
       assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('16'));
+      await journey.locator('.sp2-extra summary').click();
+      assert.ok((await journey.locator('.sp2-extra').innerText()).includes('In a class of 50'));
+      await journey.locator('[data-extra-answers] [data-extra-choice="0"]').click();
+      assert.ok((await journey.locator('[data-extra-feedback]').innerText()).includes('Not yet'));
+      await journey.locator('[data-extra-hint]').click();
+      assert.ok((await journey.locator('[data-extra-feedback]').innerText()).includes('inclusion'));
+      await journey.locator('[data-extra-answers] [data-extra-choice="1"]').click();
+      assert.ok((await journey.locator('[data-extra-feedback]').innerText()).includes('You got it'));
       await journey.locator('.sp2-hard summary').click();
       for(let i=0;i<6;i++)await journey.locator('[data-hard-next]').click();
       assert.equal(await journey.locator('[data-hard-steps] li').count(),6);
