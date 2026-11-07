@@ -48,7 +48,8 @@
       "fullChapterExerciseInventoryComplete": false,
       "coverageStatus": "incomplete",
       "verifiedQuestionSubparts": [
-        "1(i)"
+        "1(i)",
+        "1(ii)"
       ],
       "mergedQuestionSubparts": [],
       "liveVerifiedQuestionSubparts": [],
@@ -146,12 +147,12 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "Develop Chapter 1 Exercise 1.1 Question 1(ii): A=B={p,q}, find A×B, A×A and B×A. Source: 2025 English/Tamil printed p.6 (PDF p.12). Implement bilingual derivation, independent test, then Q1(iii).",
+  "nextAction": "Integrate Grade 10 Exercise 1.1 Q1(i–ii) into the actual student-facing interface without editing Grade 9 data; run npm test and Playwright. Then source-check and implement Q1(iii) (2025 English/Tamil printed p.6, PDF p.12).",
   "testStatus": {
-    "localMathEnumeration": "passed 2026-11-08 for Q1(i)",
-    "npmTest": "not run: runtime cannot resolve github.com for git clone",
-    "playwright": "not run",
-    "githubCI": "not yet verified",
+    "localMathEnumeration": "Q1(i) independently enumerated in previous run; Q1(ii) independently derived and standalone test committed, execution pending",
+    "npmTest": "not executed in this run",
+    "playwright": "not executed in this run",
+    "githubCI": "pending; no verified successful check",
     "merged": false,
     "liveVerified": false
   }
