@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-1-q1ii",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.1",
+  "question": "1",
+  "subpart": "ii",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "tamil": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "manifest": "docs/reference-library/2025-user-textbook-manifest.json",
+    "verificationNote": "Problem sets and requested products identified in previous source-verified Grade 10 coverage checkpoint; wording is a faithful restatement."
+  },
+  "review": {
+    "sourceVerified": true,
+    "mathVerified": true,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  },
+  "title": {
+    "en": "Cartesian products when both sets are equal",
+    "ta": "இரு கணங்களும் சமமாக உள்ளபோது கார்டீசியன் பெருக்கல்"
+  },
+  "questionParaphrase": {
+    "en": "Let A = B = {p, q}. Determine A × B, A × A and B × A.",
+    "ta": "A = B = {p, q} எனில் A × B, A × A மற்றும் B × A ஆகியவற்றைக் காண்க."
+  },
+  "steps": [
+    {
+      "en": "Because A and B both equal {p, q}, each ordered pair is formed by choosing its first and second entries independently from {p, q}.",
+      "ta": "A மற்றும் B இரண்டும் {p, q} என்பதால், வரிசைச் சோடியின் முதல் மற்றும் இரண்டாம் உறுப்புகளை {p, q} இலிருந்து தனித்தனியாகத் தேர்ந்தெடுக்க வேண்டும்.",
+      "equation": "A = B = {p, q}; n(A) = n(B) = 2"
+    },
+    {
+      "en": "For A × B, begin with p as the first entry and pair it with p and q; repeat with q as the first entry.",
+      "ta": "A × B இல் முதல் உறுப்பாக p ஐ எடுத்துக் கொண்டு p, q உடன் இணைக்கவும்; பிறகு முதல் உறுப்பாக q ஐ எடுத்தும் அவ்வாறே இணைக்கவும்.",
+      "equation": "A × B = {(p,p), (p,q), (q,p), (q,q)}"
+    },
+    {
+      "en": "Since A and B contain exactly the same elements, the same four ordered pairs occur in A × A and B × A.",
+      "ta": "A மற்றும் B இல் ஒரே உறுப்புகள் இருப்பதால், A × A மற்றும் B × A இலும் இதே நான்கு வரிசைச் சோடிகள் கிடைக்கும்.",
+      "equation": "A × A = B × A = {(p,p), (p,q), (q,p), (q,q)}"
+    },
+    {
+      "en": "Check that each product contains 2 × 2 = 4 distinct ordered pairs. Note that (p,q) and (q,p) are different whenever p and q are distinct.",
+      "ta": "ஒவ்வொரு பெருக்கலிலும் 2 × 2 = 4 வெவ்வேறு வரிசைச் சோடிகள் உள்ளனவா எனச் சரிபார்க்கவும். p மற்றும் q வெவ்வேறு எனில் (p,q), (q,p) இரண்டும் வேறுபடும்.",
+      "equation": "n(A × B) = n(A × A) = n(B × A) = 4"
+    }
+  ],
+  "answers": {
+    "AxB": [
+      [
+        "p",
+        "p"
+      ],
+      [
+        "p",
+        "q"
+      ],
+      [
+        "q",
+        "p"
+      ],
+      [
+        "q",
+        "q"
+      ]
+    ],
+    "AxA": [
+      [
+        "p",
+        "p"
+      ],
+      [
+        "p",
+        "q"
+      ],
+      [
+        "q",
+        "p"
+      ],
+      [
+        "q",
+        "q"
+      ]
+    ],
+    "BxA": [
+      [
+        "p",
+        "p"
+      ],
+      [
+        "p",
+        "q"
+      ],
+      [
+        "q",
+        "p"
+      ],
+      [
+        "q",
+        "q"
+      ]
+    ]
+  },
+  "misconception": {
+    "en": "Even when A = B, Cartesian products contain ordered pairs, not unordered two-element sets.",
+    "ta": "A = B என்றாலும் கார்டீசியன் பெருக்கலில் வரிசைச் சோடிகளே உள்ளன; வரிசையற்ற கணங்கள் அல்ல."
+  }
+}
