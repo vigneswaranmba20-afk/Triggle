@@ -70,8 +70,23 @@ async function main() {
     for(const width of [320,390,1280]){
       await check('Published Class 12 video is truly embedded on the question at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=12&question=c12-4-4-1-2');
+        await page.locator('#visualLessonBtn').waitFor({state:'visible'});
+        assert.equal(await page.locator('#vlInlinePanel').isVisible(),false,'Video must stay collapsed until student requests it');
+        assert.equal(await page.locator('#quickSteps').isVisible(),true,'Written solution is the default');
+        assert.equal(await page.locator('#answerBox').isVisible(),true,'Final answer remains part of quick solution');
+        assert.equal(await page.locator('#tabQuick').getAttribute('aria-pressed'),'true');
+        assert.equal(await page.locator('#tabGuided').getAttribute('aria-pressed'),'false');
+        const modeColors=await page.evaluate(()=>{
+          const q=getComputedStyle(document.querySelector('#tabQuick'));
+          const d=getComputedStyle(document.querySelector('#tabGuided'));
+          return {active:q.backgroundColor,inactive:d.backgroundColor,activeText:q.color};
+        });
+        assert.notEqual(modeColors.active,modeColors.inactive,'Only the active mode receives a dark fill');
+        assert.equal(modeColors.activeText,'rgb(255, 255, 255)','Selected button has high-contrast white text');
+        assert.equal(await page.locator('#visualLessonBtn').getAttribute('aria-expanded'),'false');
+        await page.locator('#visualLessonBtn').click();
         await page.locator('#vlInlinePanel').waitFor({state:'visible'});
-        assert.equal(await page.locator('#visualLessonBtn').isVisible(),false,'Native local lesson does not need an external modal button');
+        assert.equal(await page.locator('#visualLessonBtn').getAttribute('aria-expanded'),'true');
         assert.equal(await page.locator('#vlInlineVideo').isVisible(),true);
         const video=await page.locator('#vlInlineVideo').evaluate(el=>({
           mp4:el.querySelector('source[type^="video/mp4"]')?.src,
@@ -132,8 +147,11 @@ async function main() {
     }
     await check('Tamil question interface still presents the correct English narrated visual lesson',async()=>{
       const page=await visit(await context(390),'/index.html?class=12&question=c12-4-4-1-2');
-      await page.locator('#vlInlinePanel').waitFor({state:'visible'});
+      await page.locator('#visualLessonBtn').waitFor({state:'visible'});
       await page.locator('#langTa').click();
+      assert.match(await page.locator('#visualLessonBtn').innerText(),/காணொளி/);
+      await page.locator('#visualLessonBtn').click();
+      await page.locator('#vlInlinePanel').waitFor({state:'visible'});
       assert.match(await page.locator('#vlInlineNote').innerText(),/ஆங்கில/);
       assert.equal(await page.locator('#vlInlineVideo').isVisible(),true);
       assert.match(await page.locator('#vlInlineDownload').getAttribute('href'),/\.mp4$/);
