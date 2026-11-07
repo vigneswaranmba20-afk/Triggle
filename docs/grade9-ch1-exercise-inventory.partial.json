@@ -4,8 +4,7 @@
   "scope": "Exercise 1.1 Q1–Q6 ONLY. Chapter-wide total UNKNOWN; do not infer completion from this partial list.",
   "sourceVerifiedSubpartsInExercise1_1": 30,
   "previouslyLiveVerified": 18,
-  "newDraftedQ4i": 1,
-  "missingInExercise1_1": 11,
+  "missingInExercise1_1": 10,
   "chapterTotal": "UNKNOWN",
   "entries": [
     {
@@ -440,9 +439,9 @@
         }
       },
       "status": {
-        "drafted": false,
-        "mathChecked": false,
-        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "dedicated test added; execution pending",
         "previewMerged": false,
         "liveVerified": false,
         "tamilEditorial": "pending"
@@ -668,5 +667,6 @@
         "tamilEditorial": "pending"
       }
     }
-  ]
+  ],
+  "draftedUnmergedQ4Subparts": 2
 }
