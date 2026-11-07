@@ -1,4 +1,4 @@
-/* Triggle visual lessons — native inline MP4 on Pages with modal full viewer; Drive fallback remains available. */
+/* Triggle visual lessons — codec-aware native inline MP4/WebM players, modal viewer, Drive fallback. */
 (()=>{'use strict';
  const $=id=>document.getElementById(id);
  const modal=$('visualLessonDialog'),launcher=$('visualLessonAction'),video=$('vlVideo'),driveFrame=$('vlDriveFrame'),inlineVideo=$('vlInlineVideo'),inlinePanel=$('vlInlinePanel');
@@ -13,24 +13,36 @@
  // Google Drive share URLs are web pages, not MP4 streams; render them only in a sandboxed Drive preview frame.
  const validDriveId=r=>r?.provider==='google-drive'&&typeof r.fileId==='string'&&/^[a-zA-Z0-9_-]{15,160}$/.test(r.fileId);
  const driveLink=(r,mode)=>`https://drive.google.com/file/d/${encodeURIComponent(r.fileId)}/${mode}`;
- const validRec=r=>r&&r.questionId&&r.status==='ready'&&(validDriveId(r)||(mediaUrl(r.video)&&/\.mp4(?:[?#].*)?$/i.test(r.video)));
+ const validRec=r=>r&&r.questionId&&r.status==='ready'&&(validDriveId(r)||(mediaUrl(r.video)&&/\.mp4(?:[?#].*)?$/i.test(r.video)&&(!r.webm||(mediaUrl(r.webm)&&/\.webm(?:[?#].*)?$/i.test(r.webm)))));
+ // Native MP4 and WebM sources use browser codec negotiation, not guessed browser detection.
+ function clearSources(el,mp4,webm){
+   el.pause();el.removeAttribute('src');
+   mp4.removeAttribute('src');webm.removeAttribute('src');
+   el.load();
+ }
+ function setSources(el,mp4,webm,r){
+   el.pause();el.removeAttribute('src');
+   mp4.src=new URL(r.video,document.baseURI).href;
+   if(r.webm&&mediaUrl(r.webm))webm.src=new URL(r.webm,document.baseURI).href;
+   else webm.removeAttribute('src');
+   el.load();
+ }
  // Only verified same-origin MP4s are embedded directly in question content.
  function isNativeLesson(r){return !!r&&!validDriveId(r)&&typeof r.video==='string'&&r.video.startsWith('./videos/')&&mediaUrl(r.video);}
  function updateInline(){
    const local=isNativeLesson(selected);
    inlinePanel.hidden=!local;
    if(!local){
-     if(inlineSource){inlineVideo.pause();inlineVideo.removeAttribute('src');inlineVideo.load();inlineSource='';}
+     if(inlineSource){clearSources(inlineVideo,$('vlInlineMp4'),$('vlInlineWebm'));inlineSource='';}
      return;
    }
    const src=new URL(selected.video,document.baseURI).href;
-   if(src!==inlineSource){
-     inlineVideo.pause();inlineVideo.removeAttribute('src');
+   const key=src+'|'+(selected.webm||'');
+   if(key!==inlineSource){
      if(selected.poster&&mediaUrl(selected.poster))inlineVideo.poster=new URL(selected.poster,document.baseURI).href;
      else inlineVideo.removeAttribute('poster');
-     inlineVideo.src=src;
-     inlineSource=src;
-     inlineVideo.load(); // preload=none: poster only, never autoplay.
+     setSources(inlineVideo,$('vlInlineMp4'),$('vlInlineWebm'),selected);
+     inlineSource=key; // preload=none: poster only, never autoplay.
    }
    $('vlInlineTitle').textContent=selected.title?.[lang]||selected.title?.en||ui('title');
    $('vlInlineNote').textContent=lang==='ta'?'ஆங்கில குரல் விளக்கம் · வசன வரிகள் இல்லை':'English narration · No subtitles';
@@ -82,7 +94,7 @@
  function beginLoad(){
    if(!selected)return;
    hideError();$('vlLoading').hidden=false;
-   video.pause();video.removeAttribute('src');video.load();
+   clearSources(video,$('vlMp4Source'),$('vlWebmSource'));
    driveFrame.removeAttribute('src');
    const isDrive=validDriveId(selected);
    video.hidden=isDrive;
@@ -95,9 +107,8 @@
    }
    if(selected.poster&&mediaUrl(selected.poster))video.poster=new URL(selected.poster,document.baseURI).href;
    else video.removeAttribute('poster');
-   video.src=new URL(selected.video,document.baseURI).href;
+   setSources(video,$('vlMp4Source'),$('vlWebmSource'),selected);
    video.playbackRate=Number($('vlSpeed').value)||1;
-   video.load();
  }
  function open(){
    if(!selected||!item)return;
@@ -112,7 +123,7 @@
    beginLoad();$('vlClose').focus({preventScroll:true});
  }
  function cleanup(){
-   video.pause();video.removeAttribute('src');video.removeAttribute('poster');video.load();
+   clearSources(video,$('vlMp4Source'),$('vlWebmSource'));video.removeAttribute('poster');
    driveFrame.removeAttribute('src');driveFrame.hidden=true;video.hidden=false;
    $('vlLoading').hidden=true;hideError();
    if(modal.open)modal.close();
@@ -139,7 +150,7 @@
  $('vlFullscreen').addEventListener('click',async()=>{try{if(video.webkitEnterFullscreen)video.webkitEnterFullscreen();else if(video.requestFullscreen)await video.requestFullscreen();}catch{}});
  video.addEventListener('loadedmetadata',()=>{$('vlLoading').hidden=true;});
  video.addEventListener('canplay',()=>{$('vlLoading').hidden=true;});
- video.addEventListener('error',()=>{if(video.src)showError();});
+ video.addEventListener('error',()=>{if($('vlMp4Source').getAttribute('src')||$('vlWebmSource').getAttribute('src'))showError();});
  video.addEventListener('waiting',()=>{$('vlLoading').hidden=false;});
  video.addEventListener('playing',()=>{$('vlLoading').hidden=true;});
  // Use the production shortlist for a quiet Coming Soon indicator. It is NOT a playable video.
