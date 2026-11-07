@@ -20,6 +20,7 @@ function run(catalog, label){
    load(){this.loaded=(this.loaded||0)+1}
    focus(){this.focused=true}
    querySelector(){return this}
+   closest(){return this}
   }
   const $=id=>{if(!els.has(id))els.set(id,new FakeEl(id));return els.get(id)};
   const location=new URL('https://example.test/Triggle/index.html?class=12&question=c12-4-4-1-2');
