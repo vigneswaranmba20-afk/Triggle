@@ -179,7 +179,7 @@
       const holder=panel.querySelector('[data-extra-practice]');
       if(!holder||!item)return;
       const q=pick(item.question,lang);
-      holder.innerHTML='<details class="sp2-hard sp2-extra"><summary>'+esc(t.extra)+'</summary>'+
+      holder.innerHTML='<details class="sp2-paper sp2-extra"><summary>'+esc(t.extra)+'</summary>'+
         '<div class="sp2-recall"><p>'+esc(q)+'</p>'+
         '<div class="sp2-answers" role="group" aria-label="'+esc(q)+'" data-extra-answers></div>'+
         '<div class="sp2-recall-actions"><button type="button" data-extra-hint>'+esc(t.hint)+'</button>'+
