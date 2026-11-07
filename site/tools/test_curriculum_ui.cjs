@@ -14,7 +14,7 @@ async function serve() {
       const file = path.resolve(root, '.' + (pathname.endsWith('/') ? pathname + 'index.html' : pathname));
       if (!file.startsWith(root + path.sep)) throw Error('Outside site');
       const body = await fs.readFile(file);
-      const types = { '.js': 'application/javascript', '.html': 'text/html', '.css': 'text/css', '.json': 'application/json', '.webmanifest': 'application/manifest+json', '.png': 'image/png', '.svg': 'image/svg+xml', '.mp4': 'video/mp4' };
+      const types = { '.js': 'application/javascript', '.html': 'text/html', '.css': 'text/css', '.json': 'application/json', '.webmanifest': 'application/manifest+json', '.png': 'image/png', '.svg': 'image/svg+xml', '.mp4': 'video/mp4', '.webm': 'video/webm' };
       res.writeHead(200, { 'content-type': types[path.extname(file)] || 'application/octet-stream', 'cache-control': 'no-store' });
       res.end(body);
     } catch { res.writeHead(404); res.end(); }
@@ -74,14 +74,18 @@ async function main() {
         assert.equal(await page.locator('#visualLessonBtn').isVisible(),false,'Native local lesson does not need an external modal button');
         assert.equal(await page.locator('#vlInlineVideo').isVisible(),true);
         const video=await page.locator('#vlInlineVideo').evaluate(el=>({
-          source:el.currentSrc||el.src,
+          mp4:el.querySelector('source[type^="video/mp4"]')?.src,
+          webm:el.querySelector('source[type^="video/webm"]')?.src,
           paused:el.paused,autoplay:el.autoplay,preload:el.preload,
+          webmSupported:el.canPlayType('video/webm; codecs="vp9, opus"'),
           poster:el.poster,
           dims:el.getBoundingClientRect().toJSON(),
           vw:innerWidth,
           readyState:el.readyState
         }));
-        assert.match(video.source,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+        assert.match(video.mp4,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+        assert.match(video.webm,/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
+        assert.ok(video.webmSupported,'Chromium test browser must recognize VP9+Opus');
         assert.equal(video.paused,true,'No automatic voice playback');
         assert.equal(video.autoplay,false);
         assert.equal(video.preload,'none','Do not stream video before student chooses to watch');
@@ -94,6 +98,21 @@ async function main() {
         const mp4=await page.request.get(url+'/videos/triggle-class12-ex4-1-q1-ii.mp4');
         assert.equal(mp4.status(),200);
         assert.match(mp4.headers()['content-type'],/video\/mp4/);
+        if(width===390){
+          const fallback=await page.request.get(url+'/videos/triggle-class12-ex4-1-q1-ii.webm');
+          assert.equal(fallback.status(),200);
+          assert.match(fallback.headers()['content-type'],/video\/webm/);
+          // Real decoded playback on open-source Chromium, not just a valid source URL.
+          await page.evaluate(async()=>{
+            const el=document.getElementById('vlInlineVideo');
+            el.muted=true;
+            await el.play();
+          });
+          await page.waitForFunction(()=>document.getElementById('vlInlineVideo').currentTime>0.25,null,{timeout:15000});
+          const source=await page.locator('#vlInlineVideo').evaluate(el=>el.currentSrc);
+          assert.match(source,/triggle-class12-ex4-1-q1-ii\.(mp4|webm)$/);
+          await page.locator('#vlInlineVideo').evaluate(el=>el.pause());
+        }
         const svg=await page.request.get(url+'/videos/posters/triggle-class12-sine.svg');
         assert.equal(svg.status(),200);
         await noOverflow(page,'published native video at '+width+'px');
@@ -101,7 +120,8 @@ async function main() {
         await page.locator('#visualLessonDialog').waitFor({state:'visible'});
         assert.equal(await page.locator('#vlVideo').isVisible(),true,'Larger-view video uses native HTML5 player');
         assert.equal(await page.locator('#vlDriveFrame').isVisible(),false,'Google Drive frame must not be visible');
-        assert.match(await page.locator('#vlVideo').getAttribute('src'),/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+        assert.match(await page.locator('#vlMp4Source').getAttribute('src'),/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+        assert.match(await page.locator('#vlWebmSource').getAttribute('src'),/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
         await page.locator('#vlClose').click();
         await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
         assert.equal(await page.locator('#vlInlineVideo').isVisible(),true,'Inline lesson stays available after larger-view close');
