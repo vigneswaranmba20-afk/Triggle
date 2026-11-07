@@ -53,9 +53,10 @@ function run(catalog, label){
        assert.equal($('vlInlinePanel').hidden,false,'Requested inline video is revealed');
        assert.equal($('visualLessonBtn')['aria-expanded'],'true','CTA exposes expanded state');
        assert.equal($('vlInlineVideo').src,'','Video uses source elements, not hardcoded src');
-       assert.match($('vlInlineMp4').src,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
-       if(label==='published')assert.match($('vlInlineWebm').src,/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
-       assert.match($('vlInlineDownload').href,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       assert.match($('vlInlineMp4').src,label==='r2'?/^https:\/\/videos\.triggle\.example\//:/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       if(label==='published'||label==='r2')assert.match($('vlInlineWebm').src,/\.webm$/);
+       assert.match($('vlInlineDownload').href,/\.mp4$/);
+       if(label==='r2')assert.equal($('vlInlineDownload').hidden,true,'R2 streaming does not silently promise cross-origin downloads');
        assert.equal($('vlInlineVideo').paused,true,'inline video does not autoplay');
        assert.equal($('vlInlineVideo').loaded>0,true,'inline video is initialized');
        $('vlInlineFull').dispatch('click');
@@ -71,9 +72,9 @@ function run(catalog, label){
        assert.equal($('vlFullscreen').hidden,true,'Drive player owns fullscreen');
        assert.equal($('vlDownloadHelp').hidden,true,'Native MP4 download tip must be hidden');
      }else{
-       assert.match($('vlMp4Source').src,/triggle-class12-ex4-1-q1-ii\.mp4$/);
-       if(label==='published')assert.match($('vlWebmSource').src,/triggle-class12-ex4-1-q1-ii\.webm$/);
-       assert.match($('vlDownload').href,/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       assert.match($('vlMp4Source').src,/\.mp4$/);
+       if(label==='published'||label==='r2')assert.match($('vlWebmSource').src,/\.webm$/);
+       assert.match($('vlDownload').href,/\.mp4$/);
      }
      $('vlClose').dispatch('click');
      assert.equal($('visualLessonDialog').open,false);
@@ -91,6 +92,11 @@ function run(catalog, label){
  const ready={...plan.plans[0],status:'ready'};
  await run({lessons:[ready]},'native');
  await run(manifest,'published');
+ const r2={...manifest.lessons[0],provider:'cloudflare-r2',video:'https://videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.mp4',webm:'https://videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.webm',downloadAllowed:false};
+ await run({lessons:[r2]},'r2');
+ await run({lessons:[{...r2,video:'http://videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.mp4'}]},'coming');
+ await run({lessons:[{...r2,video:'https://user:secret@videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.mp4'}]},'coming');
+ await run({lessons:[{...r2,webm:'https://other.invalid/grade-12/chapter-4/ex4-1/q1-ii/en.webm'}]},'coming');
  await run({lessons:[{...manifest.lessons[0],provider:'google-drive',fileId:'1zBG7dqiwPnwaIe6EqcZKutlqniGiq78i',video:undefined}]},'drive');
- console.log('PASS: missing-video fallback, native MP4 and VP9 WebM sources, larger viewer, downloads, legacy Drive support, no autoplay, route gating');
+ console.log('PASS: missing-video fallback, GitHub and Cloudflare R2 native MP4/WebM sources, larger viewer, safe downloads, legacy Drive support, no autoplay, route gating');
 })().catch(e=>{console.error(e);process.exitCode=1});

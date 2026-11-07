@@ -145,6 +145,32 @@ async function main() {
         assert.equal(await page.locator('#vlInlinePanel').isVisible(),false,'Video does not leak into another question');
       });
     }
+    await check('Cloudflare R2 lesson streams through optional native player on mobile',async()=>{
+      const ctx=await context(390);
+      const origin='https://videos.triggle.example';
+      await ctx.route('**/data/video-lessons.json',route=>route.fulfill({
+        status:200,contentType:'application/json',body:JSON.stringify({lessons:[{
+          ...JSON.parse(JSON.stringify(require('../data/video-lessons.json').lessons[0])),
+          provider:'cloudflare-r2',video:origin+'/grade-12/chapter-4/q1-ii/en.mp4',
+          webm:origin+'/grade-12/chapter-4/q1-ii/en.webm',downloadAllowed:false
+        }]})
+      }));
+      await ctx.route(origin+'/**',route=>route.abort());
+      const page=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-2');
+      await page.locator('#visualLessonBtn').waitFor({state:'visible'});
+      assert.equal(await page.locator('#vlInlinePanel').isVisible(),false,'R2 video stays opt-in');
+      assert.equal(await page.locator('#quickSteps').isVisible(),true,'Written maths solution remains primary');
+      await page.locator('#visualLessonBtn').click();
+      await page.locator('#vlInlinePanel').waitFor({state:'visible'});
+      const src=await page.locator('#vlInlineVideo').evaluate(el=>({mp4:el.querySelector('source[type^="video/mp4"]').src,webm:el.querySelector('source[type^="video/webm"]').src}));
+      assert.equal(src.mp4,origin+'/grade-12/chapter-4/q1-ii/en.mp4');
+      assert.equal(src.webm,origin+'/grade-12/chapter-4/q1-ii/en.webm');
+      assert.equal(await page.locator('#vlInlineDownload').isVisible(),false,'No false cross-origin download promise');
+      await noOverflow(page,'R2 native video lesson on mobile');
+      await page.locator('#visualLessonBtn').click();
+      assert.equal(await page.locator('#vlInlinePanel').isVisible(),false,'Collapse should hide R2 player');
+      assert.equal(await page.locator('#vlInlineMp4').getAttribute('src'),null,'Collapsed player unloads remote media');
+    });
     await check('Tamil question interface still presents the correct English narrated visual lesson',async()=>{
       const page=await visit(await context(390),'/index.html?class=12&question=c12-4-4-1-2');
       await page.locator('#visualLessonBtn').waitFor({state:'visible'});
