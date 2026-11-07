@@ -91,10 +91,10 @@ async function main() {
         assert.match(await page.locator('#vlInlineTitle').innerText(),/All angles where sin x/);
         assert.match(await page.locator('#vlInlineDownload').getAttribute('href'),/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
         assert.equal(await page.locator('#vlInlineDownload').getAttribute('download'),'triggle-class12-ex4-1-q1-ii.mp4');
-        const mp4=await page.request.get('/videos/triggle-class12-ex4-1-q1-ii.mp4');
+        const mp4=await page.request.get(url+'/videos/triggle-class12-ex4-1-q1-ii.mp4');
         assert.equal(mp4.status(),200);
         assert.match(mp4.headers()['content-type'],/video\/mp4/);
-        const svg=await page.request.get('/videos/posters/triggle-class12-sine.svg');
+        const svg=await page.request.get(url+'/videos/posters/triggle-class12-sine.svg');
         assert.equal(svg.status(),200);
         await noOverflow(page,'published native video at '+width+'px');
         await page.locator('#vlInlineFull').click();
