@@ -236,7 +236,7 @@ async function main() {
             document.querySelector('.class-dock').getBoundingClientRect().top+5
         }));
         assert.equal(dimensions.position,'fixed','Previous/Next should float over the question');
-        assert.ok(dimensions.app>=dimensions.screen-2,'Exercise view should fill the whole phone viewport');
+        assert.ok(dimensions.app>=dimensions.screen-2,`Exercise view should fill the whole phone viewport: ${JSON.stringify(dimensions)}`);
         assert.ok(dimensions.above,'Floating question controls should not cover the class dock');
         await page.evaluate(()=>window.TriggleFocusNavigation.hide());
         assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),false);
