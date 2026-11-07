@@ -3,7 +3,10 @@ const fs=require('fs'),vm=require('vm'),path=require('path'),assert=require('nod
 const root=path.resolve(__dirname,'..');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'data/video-lessons.json'),'utf8'));
 const plan=JSON.parse(fs.readFileSync(path.join(root,'data/video-production-plan.json'),'utf8'));
-assert.equal(manifest.lessons.length,0,'Must not ship silent pilot or prerecorded videos');
+assert.equal(manifest.lessons.length,1,'Exactly the reviewed Gemini Drive video should be published');
+assert.equal(manifest.lessons[0].questionId,'c12-4-4-1-2');
+assert.equal(manifest.lessons[0].provider,'google-drive');
+assert.equal(manifest.lessons[0].language,'en');
 assert.equal(plan.plans.length,15,'Keep the selected future video shortlist');
 function run(catalog, label){
  return new Promise((resolve,reject)=>{
@@ -44,10 +47,21 @@ function run(catalog, label){
      $('visualLessonBtn').dispatch('click');
      assert.equal($('visualLessonDialog').open,true);
      assert.equal($('vlVideo').paused,true,'no autoplay');
-     assert.match($('vlVideo').src,/triggle-class12-ex4-1-q1-ii\.mp4$/);
-     assert.match($('vlDownload').href,/triggle-class12-ex4-1-q1-ii\.mp4$/);
+     if(label==='drive'){
+       const fileId='1zBG7dqiwPnwaIe6EqcZKutlqniGiq78i';
+       assert.equal($('vlVideo').src,'','Drive is never interpreted as native MP4');
+       assert.equal($('vlDriveFrame').src,'https://drive.google.com/file/d/'+fileId+'/preview');
+       assert.equal($('vlDownload').href,'https://drive.google.com/file/d/'+fileId+'/view');
+       assert.equal($('vlSpeed').hidden,true,'Drive player owns playback-speed controls');
+       assert.equal($('vlFullscreen').hidden,true,'Drive player owns fullscreen');
+       assert.equal($('vlDownloadHelp').hidden,true,'Native MP4 download tip must be hidden');
+     }else{
+       assert.match($('vlVideo').src,/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       assert.match($('vlDownload').href,/triggle-class12-ex4-1-q1-ii\.mp4$/);
+     }
      $('vlClose').dispatch('click');
      assert.equal($('visualLessonDialog').open,false);
+     if(label==='drive')assert.equal($('vlDriveFrame').src,'','Close must stop Drive playback');
     }
     win.dispatchEvent({type:'triggle:lessonchange',detail:{lang:'en',item:{id:'unplanned',q:{en:'other'}}}});
     assert.equal($('visualLessonAction').hidden,true,'Other questions remain uncluttered');
@@ -57,8 +71,9 @@ function run(catalog, label){
  })
 }
 (async()=>{
- await run(manifest,'coming');
+ await run({lessons:[]},'coming');
  const ready={...plan.plans[0],status:'ready'};
  await run({lessons:[ready]},'ready');
- console.log('PASS: empty library, 15 coming-soon questions, Tamil, no MP4, ready-upload opens video, download, nonplanned hidden');
+ await run(manifest,'drive');
+ console.log('PASS: empty library fallback, 15 planned lessons, native MP4 and published Drive playback, question gating, no autoplay, mobile Drive controls');
 })().catch(e=>{console.error(e);process.exitCode=1});

@@ -12,10 +12,23 @@ for grade in (9,10,11,12):
  data=json.loads(m.group(1))
  ids.update(item['id'] for item in data['items'])
 assert len(ids)==105, f'expected 105 existing question IDs; got {len(ids)}'
+seen=set()
 for r in manifest['lessons']:
  assert r['questionId'] in ids,r['questionId']
+ assert r['questionId'] not in seen,'duplicate lesson for question '+r['questionId']
+ seen.add(r['questionId'])
  assert r['status'] in ['ready','preview','planned','unavailable']
- if r['status'] in ('ready','preview'):
+ if r.get('provider') == 'google-drive':
+  # Sharing/preview access was verified with Google Drive's own metadata before publishing.
+  # CI must never attempt to download owner-owned assets or publish unverified private links.
+  assert r['status']=='ready',r
+  assert re.fullmatch(r'[A-Za-z0-9_-]{15,160}',r.get('fileId','')),r
+  assert r['language']=='en',r
+  assert r['questionId']=='c12-4-4-1-2',r
+  assert 169 < float(r['durationSeconds']) < 172,r
+  assert 'video' not in r or not r['video'], 'Drive page must not be used as native MP4'
+  print('Published reviewed Google Drive video:',r['id'],r['questionId'],r['fileId'])
+ elif r['status'] in ('ready','preview'):
   assert r['video'].startswith('./videos/')
   v=root/r['video'][2:];assert v.is_file() and v.stat().st_size>1000,v
   assert (root/r['poster'][2:]).is_file()
