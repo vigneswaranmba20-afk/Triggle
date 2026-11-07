@@ -22,7 +22,7 @@
       types:'Explore a set type',properties:'Choose a property',law:'Switch the law',
       count:'Move the common-member count',atleast:'At least one',none:'Neither',
       onlyA:'Only A',onlyB:'Only B',overlap:'Both',lawResult:'Both sides give',
-      top:'Back to learning path'},
+      extra:'Try a second practice question',reason:'Show the reasoning',top:'Back to learning path'},
     ta:{label:'சிறிய கற்றல் பாதை',title:'கண மொழியை ஒவ்வொரு கருத்தாகக் கற்போம்',
       intro:'2025 பாடநூலை அடிப்படையாகக் கொண்ட ஏழு சிறு ஆராய்ச்சிகள். ஒன்றைத் தேர்ந்து முயலுங்கள்; பிறகு தாளில் பயிற்சி செய்யுங்கள்.',
       state:'இந்த சாதனத்தில் சரிபார்த்த கருத்துகள்',source:'பாடநூல் பகுதி',enPage:'ஆங்கிலம் பக்கம்',taPage:'தமிழ் பக்கம்',
@@ -36,7 +36,7 @@
       types:'கண வகையை ஆராயுங்கள்',properties:'ஒரு பண்பைத் தேர்ந்தெடுக்கவும்',law:'விதியை மாற்றுங்கள்',
       count:'பொதுவான உறுப்புகளின் எண்ணிக்கையை மாற்றுங்கள்',atleast:'குறைந்தது ஒன்று',none:'எதுவுமில்லை',
       onlyA:'A மட்டும்',onlyB:'B மட்டும்',overlap:'இரண்டும்',lawResult:'இருபுறங்களிலும் கிடைப்பது',
-      top:'கற்றல் பாதைக்குத் திரும்புக'}
+      extra:'இன்னொரு பயிற்சி வினா',reason:'காரணத்தைப் பார்க்க',top:'கற்றல் பாதைக்குத் திரும்புக'}
   };
   function load(){
     try{
@@ -174,6 +174,35 @@
         input.addEventListener('input',update);update();
       }
     }
+    function extraPractice(stage){
+      const item=book.extraPractice?.find(entry=>entry.stageId===stage.id);
+      const holder=panel.querySelector('[data-extra-practice]');
+      if(!holder||!item)return;
+      const q=pick(item.question,lang);
+      holder.innerHTML='<details class="sp2-hard sp2-extra"><summary>'+esc(t.extra)+'</summary>'+
+        '<div class="sp2-recall"><p>'+esc(q)+'</p>'+
+        '<div class="sp2-answers" role="group" aria-label="'+esc(q)+'" data-extra-answers></div>'+
+        '<div class="sp2-recall-actions"><button type="button" data-extra-hint>'+esc(t.hint)+'</button>'+
+        '<button type="button" data-extra-why-button>'+esc(t.reason)+'</button></div>'+
+        '<p data-extra-feedback role="status" aria-live="polite"></p>'+
+        '<div class="sp2-why" data-extra-why hidden>'+esc(pick(item.why,lang))+'</div></div></details>';
+      const choices=holder.querySelector('[data-extra-answers]');
+      item.choices.forEach((choice,i)=>{
+        const button=document.createElement('button');
+        button.type='button';button.dataset.extraChoice=String(i);button.textContent=pick(choice,lang);
+        button.addEventListener('click',()=>{
+          choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+          holder.querySelector('[data-extra-feedback]').textContent=i===item.correct?t.correct:t.retry;
+        });
+        choices.append(button);
+      });
+      holder.querySelector('[data-extra-hint]').addEventListener('click',()=>{
+        holder.querySelector('[data-extra-feedback]').textContent=pick(item.hint,lang);
+      });
+      holder.querySelector('[data-extra-why-button]').addEventListener('click',()=>{
+        const target=holder.querySelector('[data-extra-why]');target.hidden=!target.hidden;
+      });
+    }
     function hard(){
       const data=book.hard,holder=panel.querySelector('[data-hard]');
       if(!holder)return;
@@ -219,7 +248,7 @@
         '<div class="sp2-why" data-why hidden>'+esc(pick(stage.why,lang))+'</div></div>'+
         '<details class="sp2-paper"><summary>✎ '+esc(t.paper)+'</summary>'+
         '<p>'+esc(pick(stage.paper,lang))+'</p></details>'+
-        (stage.id==='cardinality'?'<div data-hard></div>':'');
+        '<div data-extra-practice></div>'+ (stage.id==='cardinality'?'<div data-hard></div>':'');
       const answers=panel.querySelector('[data-answers]');
       stage.choices.forEach((choice,i)=>{
         const button=document.createElement('button');
@@ -239,6 +268,7 @@
         const target=panel.querySelector('[data-why]');target.hidden=!target.hidden;
       });
       demo(stage);
+      extraPractice(stage);
       if(stage.id==='cardinality')hard();
       updateProgress();
     }
