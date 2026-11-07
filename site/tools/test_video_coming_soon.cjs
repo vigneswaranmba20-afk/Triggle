@@ -15,6 +15,8 @@ assert.equal(plan.plans.length,15);
 assert.match(html,/id="visualLessonBtn"[^>]+aria-haspopup="dialog"/);
 assert.doesNotMatch(html,/id="vlInlinePanel"/,'Video must not expand inside the scrolled lesson');
 assert.doesNotMatch(html,/id="vlFullscreen"/,'There must be no redundant fullscreen button');
+assert.match(html,/<section class="vl-question-details" id="vlQuestionDetails" aria-labelledby="vlQuestionSummary">/,
+  'Full question must be in a permanently displayed semantic section');
 function run(catalog,label){
  return new Promise((resolve,reject)=>{
   const listeners=new Map(),els=new Map();
@@ -33,7 +35,10 @@ function run(catalog,label){
   }
   const $=id=>{if(!els.has(id))els.set(id,new FakeEl(id));return els.get(id)};
   const location=new URL('https://example.test/Triggle/index.html?class=12&question=c12-4-4-1-2');
-  const item={id:'c12-4-4-1-2',q:{en:'Find x if sin x = -1.',ta:'சைன் -1'}};
+  const item={id:'c12-4-4-1-2',q:{
+    en:'Find x in −3π ≤ x ≤ 3π for which sin x = −1.',
+    ta:'−3π ≤ x ≤ 3π வரம்பில் sin x = −1 ஆகும் x மதிப்புகளைக் காண்க.'
+  }};
   const win={TRIGGLE_CLASSES:{12:{items:[item]}},addEventListener:(k,cb)=>{const a=listeners.get(k)||[];a.push(cb);listeners.set(k,a);},dispatchEvent(e){for(const cb of listeners.get(e.type)||[])cb(e)}};
   const history={state:{},pushState(s){this.state=s},back(){this.state={};for(const cb of listeners.get('popstate')||[])cb({stopImmediatePropagation(){}})}};
   const document={baseURI:location.href,getElementById:$};
@@ -55,6 +60,11 @@ function run(catalog,label){
       assert.match($('visualLessonBtnLabel').textContent,/video explanation/);
       $('visualLessonBtn').dispatch('click');
       assert.equal($('visualLessonDialog').open,true,'Click opens the lesson dialog directly');
+      assert.equal($('vlQuestion').textContent,item.q.en,'The original question is displayed in full');
+      assert.equal($('vlQuestionSummary').textContent,'Full question','Question is visibly labelled');
+      assert.equal($('vlDownloadHelp').hidden,
+        label==='drive'||label==='published'||label==='r2',
+        'No misleading download instructions for non-downloadable lessons');
       assert.equal($('vlVideo').paused,true,'Never autoplay');
       if(label==='drive'){
         const id='1zBG7dqiwPnwaIe6EqcZKutlqniGiq78i';
