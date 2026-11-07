@@ -5,9 +5,10 @@ const manifest=JSON.parse(fs.readFileSync(path.join(root,'data/video-lessons.jso
 const plan=JSON.parse(fs.readFileSync(path.join(root,'data/video-production-plan.json'),'utf8'));
 assert.equal(manifest.lessons.length,1,'Exactly one reviewed Gemini lesson should be published');
 assert.equal(manifest.lessons[0].questionId,'c12-4-4-1-2');
-assert.equal(manifest.lessons[0].provider,'github-pages');
-assert.equal(manifest.lessons[0].video,'./videos/triggle-class12-ex4-1-q1-ii.mp4');
+assert.equal(manifest.lessons[0].provider,'cloudflare-r2');
+assert.equal(manifest.lessons[0].video,'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle-class12-ex4-1-q1-ii%20(1).mp4');
 assert.equal(manifest.lessons[0].webm,'./videos/triggle-class12-ex4-1-q1-ii.webm');
+assert.equal(manifest.lessons[0].downloadAllowed,false,'Cross-origin browser download is not promised');
 assert.equal(manifest.lessons[0].language,'en');
 assert.equal(plan.plans.length,15,'Keep the selected future video shortlist');
 function run(catalog, label){
@@ -53,10 +54,11 @@ function run(catalog, label){
        assert.equal($('vlInlinePanel').hidden,false,'Requested inline video is revealed');
        assert.equal($('visualLessonBtn')['aria-expanded'],'true','CTA exposes expanded state');
        assert.equal($('vlInlineVideo').src,'','Video uses source elements, not hardcoded src');
-       assert.match($('vlInlineMp4').src,label==='r2'?/^https:\/\/videos\.triggle\.example\//:/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       if(label==='published')assert.equal($('vlInlineMp4').src,'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle-class12-ex4-1-q1-ii%20(1).mp4');
+       else assert.match($('vlInlineMp4').src,label==='r2'?/^https:\/\/videos\.triggle\.example\//:/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
        if(label==='published'||label==='r2')assert.match($('vlInlineWebm').src,/\.webm$/);
        assert.match($('vlInlineDownload').href,/\.mp4$/);
-       if(label==='r2')assert.equal($('vlInlineDownload').hidden,true,'R2 streaming does not silently promise cross-origin downloads');
+       if(label==='r2'||label==='published')assert.equal($('vlInlineDownload').hidden,true,'R2 streaming does not silently promise cross-origin downloads');
        assert.equal($('vlInlineVideo').paused,true,'inline video does not autoplay');
        assert.equal($('vlInlineVideo').loaded>0,true,'inline video is initialized');
        $('vlInlineFull').dispatch('click');
@@ -93,6 +95,7 @@ function run(catalog, label){
  await run({lessons:[ready]},'native');
  await run(manifest,'published');
  const r2={...manifest.lessons[0],provider:'cloudflare-r2',video:'https://videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.mp4',webm:'https://videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.webm',downloadAllowed:false};
+ await run({lessons:[{...r2,webm:'./videos/triggle-class12-ex4-1-q1-ii.webm'}]},'published');
  await run({lessons:[r2]},'r2');
  await run({lessons:[{...r2,video:'http://videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.mp4'}]},'coming');
  await run({lessons:[{...r2,video:'https://user:secret@videos.triggle.example/grade-12/chapter-4/ex4-1/q1-ii/en.mp4'}]},'coming');
