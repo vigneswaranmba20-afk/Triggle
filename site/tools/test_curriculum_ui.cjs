@@ -375,7 +375,7 @@ async function main() {
       assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-      assert.equal(await page.locator('.hub-question').count(),9,'Eight textbook subparts and the original practice should be accessible');
+      assert.equal(await page.locator('.hub-question').count(),19,'All 18 textbook subparts and the original practice should be accessible');
       assert.equal(await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').count(),1,'Preserve original practice ID');
       await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').click();
       assert.equal(new URL(page.url()).searchParams.has('question'),true);
@@ -780,7 +780,7 @@ async function main() {
       await check('Grade 9 Exercise 1.1 bilingual textbook questions work at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch1&section=exercises');
         const cards=page.locator('#chapterOverview [data-question-id^="g9-ch1-ex1.1-"]');
-        assert.equal(await cards.count(),8,'All eight new textbook subparts must appear in Exercises');
+        assert.equal(await cards.count(),18,'All 18 textbook subparts must appear in Exercises');
         await page.locator('#chapterOverview [data-question-id="g9-ch1-ex1.1-q1-i"]').click();
         assert.match(await page.locator('#questionText').innerText(),/Prime numbers/);
         assert.equal(await page.locator('#stepsList li').count(),3);
@@ -794,6 +794,19 @@ async function main() {
         assert.match(await page.locator('#answerText').innerText(),/C, Z, E, H, O, S, L, V, A, K, I/);
         assert.equal(await page.locator('#stepsList li').count(),3);
         await noOverflow(page,'Grade 9 Q2 mobile at '+width+'px');
+        await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-a-i');
+        await page.locator('#answerText').waitFor({state:'visible'});
+        assert.match(await page.locator('#questionText').innerText(),/18 ∈ C/);
+        assert.match(await page.locator('#answerText').innerText(),/True/);
+        assert.ok((await page.locator('#stepsList li').count())>0,'Q3(a) must include explanation steps');
+        await page.locator('#langTa').click();
+        assert.match(await page.locator('#questionText').innerText(),/சரியா தவறா/);
+        await noOverflow(page,'Grade 9 Q3(a) Tamil at '+width+'px');
+        await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-b-i');
+        await page.locator('#answerText').waitFor({state:'visible'});
+        assert.match(await page.locator('#questionText').innerText(),/3 ∈/);
+        assert.equal((await page.locator('#answerText').innerText()).trim(),'A');
+        await noOverflow(page,'Grade 9 Q3(b) mobile at '+width+'px');
       });
     }
     await check('Grade 9 textbook exercises load offline in the chapter reader',async()=>{
