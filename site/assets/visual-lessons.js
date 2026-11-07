@@ -1,4 +1,4 @@
-/* Triggle visual lessons — codec-aware native inline MP4/WebM players, modal viewer, Drive fallback. */
+/* Triggle visual lessons — native MP4/WebM playback from GitHub Pages or Cloudflare R2, legacy Drive fallback. */
 (()=>{'use strict';
  const $=id=>document.getElementById(id);
  const modal=$('visualLessonDialog'),launcher=$('visualLessonAction'),video=$('vlVideo'),driveFrame=$('vlDriveFrame'),inlineVideo=$('vlInlineVideo'),inlinePanel=$('vlInlinePanel');
@@ -13,7 +13,24 @@
  // Google Drive share URLs are web pages, not MP4 streams; render them only in a sandboxed Drive preview frame.
  const validDriveId=r=>r?.provider==='google-drive'&&typeof r.fileId==='string'&&/^[a-zA-Z0-9_-]{15,160}$/.test(r.fileId);
  const driveLink=(r,mode)=>`https://drive.google.com/file/d/${encodeURIComponent(r.fileId)}/${mode}`;
- const validRec=r=>r&&r.questionId&&r.status==='ready'&&(validDriveId(r)||(mediaUrl(r.video)&&/\.mp4(?:[?#].*)?$/i.test(r.video)&&(!r.webm||(mediaUrl(r.webm)&&/\.webm(?:[?#].*)?$/i.test(r.webm)))));
+ // R2 buckets publish through a public HTTPS custom domain (production) or r2.dev (testing).
+ // Only reviewed, direct file URLs belong in the manifest; never put signed upload URLs, credentials or API tokens here.
+ function httpsVideoFile(value,ext){
+   if(typeof value!=='string'||value.length>2048)return false;
+   try{
+     const u=new URL(value);
+     return u.protocol==='https:'&&!u.username&&!u.password&&!u.port&&!u.search&&!u.hash&&!!u.hostname
+       &&u.hostname!=='localhost'&&u.pathname.toLowerCase().endsWith('.'+ext);
+   }catch{return false;}
+ }
+ function validR2(r){
+   return r?.provider==='cloudflare-r2'&&httpsVideoFile(r.video,'mp4')
+     &&(!r.webm||(httpsVideoFile(r.webm,'webm')&&new URL(r.webm).origin===new URL(r.video).origin));
+ }
+ const validLocal=r=>r?.provider==='github-pages'&&typeof r.video==='string'
+   &&r.video.startsWith('./videos/')&&mediaUrl(r.video)&&/\.mp4$/i.test(r.video)
+   &&(!r.webm||(r.webm.startsWith('./videos/')&&mediaUrl(r.webm)&&/\.webm$/i.test(r.webm)));
+ const validRec=r=>r&&r.questionId&&r.status==='ready'&&(validDriveId(r)||validLocal(r)||validR2(r));
  // Native MP4 and WebM sources use browser codec negotiation, not guessed browser detection.
  function clearSources(el,mp4,webm){
    el.pause();el.removeAttribute('src');
@@ -27,8 +44,8 @@
    else webm.removeAttribute('src');
    el.load();
  }
- // Only verified same-origin MP4s are embedded directly in question content.
- function isNativeLesson(r){return !!r&&!validDriveId(r)&&typeof r.video==='string'&&r.video.startsWith('./videos/')&&mediaUrl(r.video);}
+ // Both local and public R2 files use the same HTML5 player within the question.
+ function isNativeLesson(r){return validLocal(r)||validR2(r);}
  function updateInline(){
    const local=isNativeLesson(selected);
    inlinePanel.hidden=!local||!inlineExpanded;
@@ -45,12 +62,24 @@
      inlineSource=key; // preload=none: poster only, never autoplay.
    }
    $('vlInlineTitle').textContent=selected.title?.[lang]||selected.title?.en||ui('title');
-   $('vlInlineNote').textContent=lang==='ta'?'ஆங்கில குரல் விளக்கம் · வசன வரிகள் இல்லை':'English narration · No subtitles';
+   $('vlInlineNote').textContent=selected.language==='ta'
+     ?(lang==='ta'?'தமிழ் குரல் விளக்கம் · வசன வரிகள் இல்லை':'Tamil narration · No subtitles')
+     :(lang==='ta'?'ஆங்கில குரல் விளக்கம் · வசன வரிகள் இல்லை':'English narration · No subtitles');
    $('vlInlineFullLabel').textContent=ui('full');
    $('vlInlineDownloadLabel').textContent=ui('download');
-   $('vlInlineDownload').href=src;
-   $('vlInlineDownload').download=selected.video.split('/').at(-1);
-   $('vlInlineDownload').hidden=!selected.downloadAllowed;
+   const download=$('vlInlineDownload');
+   download.href=src;
+   // Browsers ignore the HTML download attribute for cross-origin media unless the CDN opts in.
+   // For a future Android offline feature, download to app-controlled storage instead.
+   if(new URL(src).origin===location.origin){
+     download.download=new URL(src).pathname.split('/').at(-1);
+     download.removeAttribute('target');
+   }else{
+     download.removeAttribute('download');
+     download.target='_blank';
+     download.rel='noopener noreferrer';
+   }
+   download.hidden=!selected.downloadAllowed;
    $('vlInlineError').hidden=true;
  }
  function refresh(){
