@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "g9-ch1",
+  "batch": "2026-11-07-ex1.1-q3b",
+  "sourceAuthority": "2025 revised Grade 9 Mathematics English printed page 5 and Tamil printed page 6; textbook answer key Q3(b)",
+  "coverage": {
+    "verifiedExerciseSubparts": 4,
+    "chapterTotal": "not yet inventoried"
+  },
+  "questions": [
+    {
+      "id": "g9-ch1-ex1.1-q3-b-i",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "b",
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        }
+      },
+      "prompt": {
+        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 3 ∈ ___",
+        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 3 ∈ ___"
+      },
+      "answer": {
+        "en": "A",
+        "ta": "A"
+      },
+      "steps": {
+        "en": [
+          "Inspect the given set A = {0, 3, 5, 8}.",
+          "3 is an element of A.",
+          "Fill the blank with A; the completed statement 3 ∈ A is true."
+        ],
+        "ta": [
+          "கொடுக்கப்பட்ட A கணத்தின் உறுப்புகள் {0, 3, 5, 8}.",
+          "3 என்பது A கணத்தில் உறுப்பாகும்.",
+          "எனவே கோடிட்ட இடத்தில் A என்று எழுதுக; 3 ∈ A என்பது சரியான கூற்று."
+        ]
+      },
+      "verification": {
+        "method": "Independently evaluated set membership against explicit sets and textbook answer key",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-ii",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "b",
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        }
+      },
+      "prompt": {
+        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 14 ∈ ___",
+        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 14 ∈ ___"
+      },
+      "answer": {
+        "en": "C",
+        "ta": "C"
+      },
+      "steps": {
+        "en": [
+          "Inspect the given set C = {12, 14, 18, 20}.",
+          "14 is an element of C.",
+          "Fill the blank with C; the completed statement 14 ∈ C is true."
+        ],
+        "ta": [
+          "கொடுக்கப்பட்ட C கணத்தின் உறுப்புகள் {12, 14, 18, 20}.",
+          "14 என்பது C கணத்தில் உறுப்பாகும்.",
+          "எனவே கோடிட்ட இடத்தில் C என்று எழுதுக; 14 ∈ C என்பது சரியான கூற்று."
+        ]
+      },
+      "verification": {
+        "method": "Independently evaluated set membership against explicit sets and textbook answer key",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-iii",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "b",
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        }
+      },
+      "prompt": {
+        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 18 ___ B",
+        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 18 ___ B"
+      },
+      "answer": {
+        "en": "∉",
+        "ta": "∉"
+      },
+      "steps": {
+        "en": [
+          "Inspect the given set B = {2, 4, 6, 10}.",
+          "18 is not an element of B.",
+          "Fill the blank with ∉; the completed statement 18 ∉ B is true."
+        ],
+        "ta": [
+          "கொடுக்கப்பட்ட B கணத்தின் உறுப்புகள் {2, 4, 6, 10}.",
+          "18 என்பது B கணத்தில் உறுப்பல்ல.",
+          "எனவே கோடிட்ட இடத்தில் ∉ என்று எழுதுக; 18 ∉ B என்பது சரியான கூற்று."
+        ]
+      },
+      "verification": {
+        "method": "Independently evaluated set membership against explicit sets and textbook answer key",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-iv",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "b",
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        }
+      },
+      "prompt": {
+        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 4 ___ B.",
+        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 4 ___ B."
+      },
+      "answer": {
+        "en": "∈",
+        "ta": "∈"
+      },
+      "steps": {
+        "en": [
+          "Inspect the given set B = {2, 4, 6, 10}.",
+          "4 is an element of B.",
+          "Fill the blank with ∈; the completed statement 4 ∈ B is true."
+        ],
+        "ta": [
+          "கொடுக்கப்பட்ட B கணத்தின் உறுப்புகள் {2, 4, 6, 10}.",
+          "4 என்பது B கணத்தில் உறுப்பாகும்.",
+          "எனவே கோடிட்ட இடத்தில் ∈ என்று எழுதுக; 4 ∈ B என்பது சரியான கூற்று."
+        ]
+      },
+      "verification": {
+        "method": "Independently evaluated set membership against explicit sets and textbook answer key",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    }
+  ]
+}
