@@ -3,10 +3,10 @@
  const $=id=>document.getElementById(id);
  const modal=$('visualLessonDialog'),launcher=$('visualLessonAction'),video=$('vlVideo'),driveFrame=$('vlDriveFrame'),inlineVideo=$('vlInlineVideo'),inlinePanel=$('vlInlinePanel');
  if(!modal||!launcher||!video||!driveFrame||!inlineVideo||!inlinePanel)return;
- let catalog=[],plannedIds=new Set(),selected=null,item=null,lang='en',launcherFocus=null,scrollAtOpen=0,openedEntry=false,inlineSource='';
+ let catalog=[],plannedIds=new Set(),selected=null,item=null,lang='en',launcherFocus=null,scrollAtOpen=0,openedEntry=false,inlineSource='',inlineExpanded=false;
  const copy={
-  en:{watch:'Watch Visual Lesson',comingSoon:'Visual lessons · Coming soon · Human narration on the way',title:'Watch Visual Lesson',back:'Back to question',question:'View original question',speed:'Playback speed',full:'Fullscreen',download:'Download Lesson',openDrive:'Open in Google Drive',driveNotice:'This lesson is hosted on Google Drive. If playback is blocked on this device, open it directly in Google Drive.',error:'Video could not load',errorText:'Please check your connection and try again. The written solution is still available.',preparing:'Preparing your lesson…',help:'On Android Chrome, if the MP4 opens instead of saving, long-press “Download Lesson” and choose Download link.'},
-  ta:{watch:'காட்சி வழிப் பாடம்',comingSoon:'காட்சிப் பாடங்கள் · விரைவில் · மனிதக் குரல் விளக்கத்துடன்',title:'காட்சி வழிப் பாடம்',back:'கேள்விக்குத் திரும்பு',question:'அசல் கேள்வியைக் காண்க',speed:'வேகம்',full:'முழுத்திரை',download:'பாடத்தைப் பதிவிறக்கு',openDrive:'Google Drive-ல் திறக்கவும்',driveNotice:'இந்தக் காணொளி Google Drive-ல் உள்ளது. இங்கு இயக்க முடியாவிட்டால் Google Drive-ல் திறக்கவும்.',error:'காணொளியை ஏற்ற முடியவில்லை',errorText:'இணையத்தைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும். எழுத்துத் தீர்வு தொடர்ந்து கிடைக்கும்.',preparing:'Preparing your lesson…',help:'Android Chrome-ல் காணொளி திறந்தால், பதிவிறக்க இணைப்பை நீண்ட நேரம் அழுத்தி Download link தேர்வு செய்க.'}
+  en:{watch:'Check out the video explanation',hide:'Hide video explanation',comingSoon:'Visual lessons · Coming soon · Human narration on the way',title:'Watch Visual Lesson',back:'Back to question',question:'View original question',speed:'Playback speed',full:'Fullscreen',download:'Download Lesson',openDrive:'Open in Google Drive',driveNotice:'This lesson is hosted on Google Drive. If playback is blocked on this device, open it directly in Google Drive.',error:'Video could not load',errorText:'Please check your connection and try again. The written solution is still available.',preparing:'Preparing your lesson…',help:'On Android Chrome, if the MP4 opens instead of saving, long-press “Download Lesson” and choose Download link.'},
+  ta:{watch:'காணொளி விளக்கத்தைப் பாருங்கள்',hide:'காணொளியை மறைக்கவும்',comingSoon:'காட்சிப் பாடங்கள் · விரைவில் · மனிதக் குரல் விளக்கத்துடன்',title:'காட்சி வழிப் பாடம்',back:'கேள்விக்குத் திரும்பு',question:'அசல் கேள்வியைக் காண்க',speed:'வேகம்',full:'முழுத்திரை',download:'பாடத்தைப் பதிவிறக்கு',openDrive:'Google Drive-ல் திறக்கவும்',driveNotice:'இந்தக் காணொளி Google Drive-ல் உள்ளது. இங்கு இயக்க முடியாவிட்டால் Google Drive-ல் திறக்கவும்.',error:'காணொளியை ஏற்ற முடியவில்லை',errorText:'இணையத்தைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும். எழுத்துத் தீர்வு தொடர்ந்து கிடைக்கும்.',preparing:'Preparing your lesson…',help:'Android Chrome-ல் காணொளி திறந்தால், பதிவிறக்க இணைப்பை நீண்ட நேரம் அழுத்தி Download link தேர்வு செய்க.'}
  };
  const ui=k=>copy[lang]?.[k]||copy.en[k];
  const mediaUrl=p=>typeof p==='string'&&((p.startsWith('./videos/')&&!p.includes('..')&&!p.includes('\\'))||/^https:\/\/[^\s]+$/.test(p));
@@ -31,8 +31,8 @@
  function isNativeLesson(r){return !!r&&!validDriveId(r)&&typeof r.video==='string'&&r.video.startsWith('./videos/')&&mediaUrl(r.video);}
  function updateInline(){
    const local=isNativeLesson(selected);
-   inlinePanel.hidden=!local;
-   if(!local){
+   inlinePanel.hidden=!local||!inlineExpanded;
+   if(!local||!inlineExpanded){
      if(inlineSource){clearSources(inlineVideo,$('vlInlineMp4'),$('vlInlineWebm'));inlineSource='';}
      return;
    }
@@ -57,16 +57,26 @@
    selected=catalog.find(r=>r.questionId===item?.id&&validRec(r)&&(r.language===lang||r.language==='visual'))||catalog.find(r=>r.questionId===item?.id&&validRec(r)&&r.language==='en')||null;
    const isPlanned=!!item&&plannedIds.has(item.id);
    launcher.hidden=!selected&&!isPlanned;
-   $('visualLessonBtn').hidden=!selected||isNativeLesson(selected);
+   $('visualLessonBtn').hidden=!selected;
    $('visualLessonAvailability').hidden=!selected;
    $('visualLessonComingSoon').hidden=!!selected||!isPlanned;
    $('visualLessonComingSoonText').textContent=ui('comingSoon');
    updateInline();
    if(!selected)return;
-   $('visualLessonBtnLabel').textContent=ui('watch');
+   const native=isNativeLesson(selected);
+   $('visualLessonBtn').setAttribute('aria-expanded',String(native&&inlineExpanded));
+   $('visualLessonBtn').setAttribute('aria-controls',native?'vlInlinePanel':'visualLessonDialog');
+   if(native)$('visualLessonBtn').removeAttribute('aria-haspopup');
+   else $('visualLessonBtn').setAttribute('aria-haspopup','dialog');
+   $('visualLessonBtnLabel').textContent=ui(native&&inlineExpanded?'hide':'watch');
    $('visualLessonAvailability').textContent=lang==='ta'&&selected.language==='en'?'ஆங்கிலக் குரல் விளக்கம்':'';
  }
- function sync(d){item=d?.item||null;lang=d?.lang==='ta'?'ta':'en';refresh();}
+ function sync(d){
+   if(item?.id!==d?.item?.id)inlineExpanded=false;
+   item=d?.item||null;
+   lang=d?.lang==='ta'?'ta':'en';
+   refresh();
+ }
  window.addEventListener('triggle:lessonchange',e=>sync(e.detail));
  function hideError(){ $('vlError').hidden=true; $('vlVideoWrap').hidden=false; }
  function showError(){ $('vlLoading').hidden=true; $('vlError').hidden=false;$('vlVideoWrap').hidden=true;$('vlErrorTitle').textContent=ui('error');$('vlErrorText').textContent=ui('errorText'); }
@@ -134,7 +144,14 @@
    if(openedEntry&&history.state?.triggleVisual){history.back();return;}
    openedEntry=false;cleanup();
  }
- $('visualLessonBtn').addEventListener('click',open);
+ $('visualLessonBtn').addEventListener('click',()=>{
+   if(!selected)return;
+   if(!isNativeLesson(selected)){open();return;}
+   inlineExpanded=!inlineExpanded;
+   updateInline();
+   $('visualLessonBtn').setAttribute('aria-expanded',String(inlineExpanded));
+   $('visualLessonBtnLabel').textContent=ui(inlineExpanded?'hide':'watch');
+ });
  $('vlInlineFull').addEventListener('click',open);
  inlineVideo.addEventListener('error',()=>{if(inlineSource)$('vlInlineError').hidden=false;});
  $('vlClose').addEventListener('click',close);

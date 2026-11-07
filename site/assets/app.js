@@ -395,13 +395,17 @@
   const start=Number.isInteger(stageNumber)?stageNumber:(deepResume[current.id]||0);
   if(!dlg.open)dlg.showModal();
   $('tabGuided').setAttribute('aria-expanded','true');
+  renderMode();
   deepNavTo(start);
   $('closeGuided').focus({preventScroll:true});
  }
  function closeGuided(){if($('guidedDialog').open)$('guidedDialog').close();}
  function renderMode(){
-  $('tabQuick').classList.add('is-selected');
-  $('tabQuick').setAttribute('aria-pressed','true');
+  const deepActive=$('guidedDialog').open;
+  $('tabQuick').classList.toggle('is-selected',!deepActive);
+  $('tabGuided').classList.toggle('is-selected',deepActive);
+  $('tabQuick').setAttribute('aria-pressed',String(!deepActive));
+  $('tabGuided').setAttribute('aria-pressed',String(deepActive));
   $('quickSteps').hidden=false;
  }
  function renderText(){
@@ -494,7 +498,7 @@
  $('deepStageDots').addEventListener('click',e=>{const b=e.target.closest('[data-jump]');if(b)deepNavTo(Number(b.dataset.jump));});
  $('guidedDialog').addEventListener('keydown',e=>{if(e.target.matches('input,button')||e.altKey||e.ctrlKey||e.metaKey)return;if(e.key==='ArrowRight'){e.preventDefault();deepNavTo(Math.min(deepStageIndex+1,deepStageData.stages.length-1));}if(e.key==='ArrowLeft'){e.preventDefault();deepNavTo(Math.max(0,deepStageIndex-1));}});
  $('closeGuided').onclick=closeGuided;
- $('guidedDialog').addEventListener('close',()=>{$('tabGuided').setAttribute('aria-expanded','false');(deepLauncher?.isConnected?deepLauncher:$('tabGuided')).focus({preventScroll:true})});
+ $('guidedDialog').addEventListener('close',()=>{renderMode();$('tabGuided').setAttribute('aria-expanded','false');(deepLauncher?.isConnected?deepLauncher:$('tabGuided')).focus({preventScroll:true})});
  $('guidedDialog').addEventListener('click',e=>{if(e.target===$('guidedDialog'))closeGuided()});
  $('figureBtn').onclick=showDiagram;$('closeDiagram').onclick=()=>$('figureDialog').close();
  $('figureDialog').addEventListener('click',ev=>{if(ev.target===$('figureDialog'))$('figureDialog').close()});

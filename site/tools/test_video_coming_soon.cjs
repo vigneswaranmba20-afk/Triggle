@@ -38,8 +38,8 @@ function run(catalog, label){
   setTimeout(()=>{
    try{
     assert.equal($('visualLessonAction').hidden,false,label+': planned question displays status');
-    assert.equal($('visualLessonBtn').hidden,label!=='drive',label+': native player displays inline rather than requiring modal');
-    assert.equal($('vlInlinePanel').hidden,label==='coming'||label==='drive',label+': inline panel gating');
+    assert.equal($('visualLessonBtn').hidden,label==='coming',label+': published video has a voluntary watch button');
+    assert.equal($('vlInlinePanel').hidden,true,label+': inline video remains collapsed initially');
     assert.equal($('visualLessonComingSoon').hidden,label!=='coming',label+': coming soon gating');
     if(label==='coming'){
      assert.match($('visualLessonComingSoonText').textContent,/Coming soon/);
@@ -48,6 +48,10 @@ function run(catalog, label){
      assert.match($('visualLessonComingSoonText').textContent,/விரைவில்/,'Tamil placeholder');
     }else{
      if(label!=='drive'){
+       assert.equal($('vlInlineMp4').src,'','Collapsed video should not set media source');
+       $('visualLessonBtn').dispatch('click');
+       assert.equal($('vlInlinePanel').hidden,false,'Requested inline video is revealed');
+       assert.equal($('visualLessonBtn')['aria-expanded'],'true','CTA exposes expanded state');
        assert.equal($('vlInlineVideo').src,'','Video uses source elements, not hardcoded src');
        assert.match($('vlInlineMp4').src,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
        if(label==='published')assert.match($('vlInlineWebm').src,/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
