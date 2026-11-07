@@ -94,7 +94,7 @@ async function main() {
         const original='Find x in −3π ≤ x ≤ 3π for which sin x = −1.';
         assert.equal((await page.locator('#vlQuestion').innerText()).trim(),original,
           'Full, exact textbook question appears above the video');
-        assert.equal((await page.locator('#vlQuestionSummary').innerText()).trim(),'Full question');
+        assert.equal((await page.locator('#vlQuestionSummary').textContent()).trim(),'Full question');
         assert.equal(await page.locator('#vlQuestionDetails').isVisible(),true,
           'Question is always visible, not collapsed behind a disclosure');
         const layout=await page.evaluate(()=>{
@@ -186,7 +186,7 @@ async function main() {
       await page.locator('#visualLessonBtn').click();
       await page.locator('#visualLessonDialog').waitFor({state:'visible'});
       assert.match(await page.locator('#vlCloseLabel').innerText(),/கேள்விக்குத் திரும்பு/);
-      assert.equal((await page.locator('#vlQuestionSummary').innerText()).trim(),'முழுக் கேள்வி');
+      assert.equal((await page.locator('#vlQuestionSummary').textContent()).trim(),'முழுக் கேள்வி');
       assert.equal((await page.locator('#vlQuestion').innerText()).trim(),
         '−3π ≤ x ≤ 3π வரம்பில் sin x = −1 ஆகும் x மதிப்புகளைக் காண்க.',
         'Tamil interface shows the exact Tamil version of the textbook question');
