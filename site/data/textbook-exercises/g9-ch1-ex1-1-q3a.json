@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "g9-ch1",
+  "batch": "2026-11-07-ex1.1-q3a",
+  "sourceAuthority": "2025 revised English and Tamil Grade 9 mathematics textbooks, printed page 5",
+  "coverage": {
+    "verifiedExerciseSubparts": 6,
+    "chapterTotal": "not yet inventoried"
+  },
+  "questions": [
+    {
+      "id": "g9-ch1-ex1.1-q3-a-i",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "prompt": {
+        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 18 ∈ C.",
+        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 18 ∈ C என்பது சரியா தவறா?"
+      },
+      "answer": {
+        "en": "True",
+        "ta": "சரி"
+      },
+      "steps": {
+        "en": [
+          "List the elements of C: {12, 14, 18, 20}.",
+          "18 belongs to C.",
+          "Because ∈ means belongs to, the statement is true."
+        ],
+        "ta": [
+          "C கணத்தின் உறுப்புகள் {12, 14, 18, 20}.",
+          "18 என்பது C கணத்தில் உள்ளது.",
+          "'∈' என்பது 'உறுப்பாகும்' என்பதைக் குறிக்கும். எனவே கூற்று சரி."
+        ]
+      },
+      "verification": {
+        "method": "Literal membership evaluated independently; matches English and Tamil textbook answer keys",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-ii",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "prompt": {
+        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 6 ∉ A.",
+        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 6 ∉ A என்பது சரியா தவறா?"
+      },
+      "answer": {
+        "en": "True",
+        "ta": "சரி"
+      },
+      "steps": {
+        "en": [
+          "List the elements of A: {0, 3, 5, 8}.",
+          "6 does not belong to A.",
+          "Because ∉ means does not belong to, the statement is true."
+        ],
+        "ta": [
+          "A கணத்தின் உறுப்புகள் {0, 3, 5, 8}.",
+          "6 என்பது A கணத்தில் இல்லை.",
+          "'∉' என்பது 'உறுப்பல்ல' என்பதைக் குறிக்கும். எனவே கூற்று சரி."
+        ]
+      },
+      "verification": {
+        "method": "Literal membership evaluated independently; matches English and Tamil textbook answer keys",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-iii",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "prompt": {
+        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 14 ∉ C.",
+        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 14 ∉ C என்பது சரியா தவறா?"
+      },
+      "answer": {
+        "en": "False",
+        "ta": "தவறு"
+      },
+      "steps": {
+        "en": [
+          "List the elements of C: {12, 14, 18, 20}.",
+          "14 belongs to C.",
+          "Because ∉ means does not belong to, the statement is false."
+        ],
+        "ta": [
+          "C கணத்தின் உறுப்புகள் {12, 14, 18, 20}.",
+          "14 என்பது C கணத்தில் உள்ளது.",
+          "'∉' என்பது 'உறுப்பல்ல' என்பதைக் குறிக்கும். எனவே கூற்று தவறு."
+        ]
+      },
+      "verification": {
+        "method": "Literal membership evaluated independently; matches English and Tamil textbook answer keys",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-iv",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "prompt": {
+        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 10 ∈ B.",
+        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 10 ∈ B என்பது சரியா தவறா?"
+      },
+      "answer": {
+        "en": "True",
+        "ta": "சரி"
+      },
+      "steps": {
+        "en": [
+          "List the elements of B: {2, 4, 6, 10}.",
+          "10 belongs to B.",
+          "Because ∈ means belongs to, the statement is true."
+        ],
+        "ta": [
+          "B கணத்தின் உறுப்புகள் {2, 4, 6, 10}.",
+          "10 என்பது B கணத்தில் உள்ளது.",
+          "'∈' என்பது 'உறுப்பாகும்' என்பதைக் குறிக்கும். எனவே கூற்று சரி."
+        ]
+      },
+      "verification": {
+        "method": "Literal membership evaluated independently; matches English and Tamil textbook answer keys",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-v",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "v",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "prompt": {
+        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 5 ∈ B.",
+        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 5 ∈ B என்பது சரியா தவறா?"
+      },
+      "answer": {
+        "en": "False",
+        "ta": "தவறு"
+      },
+      "steps": {
+        "en": [
+          "List the elements of B: {2, 4, 6, 10}.",
+          "5 does not belong to B.",
+          "Because ∈ means belongs to, the statement is false."
+        ],
+        "ta": [
+          "B கணத்தின் உறுப்புகள் {2, 4, 6, 10}.",
+          "5 என்பது B கணத்தில் இல்லை.",
+          "'∈' என்பது 'உறுப்பாகும்' என்பதைக் குறிக்கும். எனவே கூற்று தவறு."
+        ]
+      },
+      "verification": {
+        "method": "Literal membership evaluated independently; matches English and Tamil textbook answer keys",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-vi",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "vi",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "prompt": {
+        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 0 ∈ B.",
+        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 0 ∈ B என்பது சரியா தவறா?"
+      },
+      "answer": {
+        "en": "False",
+        "ta": "தவறு"
+      },
+      "steps": {
+        "en": [
+          "List the elements of B: {2, 4, 6, 10}.",
+          "0 does not belong to B.",
+          "Because ∈ means belongs to, the statement is false."
+        ],
+        "ta": [
+          "B கணத்தின் உறுப்புகள் {2, 4, 6, 10}.",
+          "0 என்பது B கணத்தில் இல்லை.",
+          "'∈' என்பது 'உறுப்பாகும்' என்பதைக் குறிக்கும். எனவே கூற்று தவறு."
+        ]
+      },
+      "verification": {
+        "method": "Literal membership evaluated independently; matches English and Tamil textbook answer keys",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    }
+  ]
+}
