@@ -3,9 +3,10 @@ const fs=require('fs'),vm=require('vm'),path=require('path'),assert=require('nod
 const root=path.resolve(__dirname,'..');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'data/video-lessons.json'),'utf8'));
 const plan=JSON.parse(fs.readFileSync(path.join(root,'data/video-production-plan.json'),'utf8'));
-assert.equal(manifest.lessons.length,1,'Exactly the reviewed Gemini Drive video should be published');
+assert.equal(manifest.lessons.length,1,'Exactly one reviewed Gemini lesson should be published');
 assert.equal(manifest.lessons[0].questionId,'c12-4-4-1-2');
-assert.equal(manifest.lessons[0].provider,'google-drive');
+assert.equal(manifest.lessons[0].provider,'github-pages');
+assert.equal(manifest.lessons[0].video,'./videos/triggle-class12-ex4-1-q1-ii.mp4');
 assert.equal(manifest.lessons[0].language,'en');
 assert.equal(plan.plans.length,15,'Keep the selected future video shortlist');
 function run(catalog, label){
@@ -36,7 +37,8 @@ function run(catalog, label){
   setTimeout(()=>{
    try{
     assert.equal($('visualLessonAction').hidden,false,label+': planned question displays status');
-    assert.equal($('visualLessonBtn').hidden,label==='coming',label+': actionable button gating');
+    assert.equal($('visualLessonBtn').hidden,label!=='drive',label+': native player displays inline rather than requiring modal');
+    assert.equal($('vlInlinePanel').hidden,label==='coming'||label==='drive',label+': inline panel gating');
     assert.equal($('visualLessonComingSoon').hidden,label!=='coming',label+': coming soon gating');
     if(label==='coming'){
      assert.match($('visualLessonComingSoonText').textContent,/Coming soon/);
@@ -44,7 +46,13 @@ function run(catalog, label){
      win.dispatchEvent({type:'triggle:lessonchange',detail:{lang:'ta',item}});
      assert.match($('visualLessonComingSoonText').textContent,/விரைவில்/,'Tamil placeholder');
     }else{
-     $('visualLessonBtn').dispatch('click');
+     if(label!=='drive'){
+       assert.match($('vlInlineVideo').src,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       assert.match($('vlInlineDownload').href,/\/videos\/triggle-class12-ex4-1-q1-ii\.mp4$/);
+       assert.equal($('vlInlineVideo').paused,true,'inline video does not autoplay');
+       assert.equal($('vlInlineVideo').loaded>0,true,'inline video is initialized');
+       $('vlInlineFull').dispatch('click');
+     }else $('visualLessonBtn').dispatch('click');
      assert.equal($('visualLessonDialog').open,true);
      assert.equal($('vlVideo').paused,true,'no autoplay');
      if(label==='drive'){
@@ -73,7 +81,8 @@ function run(catalog, label){
 (async()=>{
  await run({lessons:[]},'coming');
  const ready={...plan.plans[0],status:'ready'};
- await run({lessons:[ready]},'ready');
- await run(manifest,'drive');
- console.log('PASS: empty library fallback, 15 planned lessons, native MP4 and published Drive playback, question gating, no autoplay, mobile Drive controls');
+ await run({lessons:[ready]},'native');
+ await run(manifest,'published');
+ await run({lessons:[{...manifest.lessons[0],provider:'google-drive',fileId:'1zBG7dqiwPnwaIe6EqcZKutlqniGiq78i',video:undefined}]},'drive');
+ console.log('PASS: missing-video fallback, native inline MP4, bigger viewer, download link, legacy Drive support, no autoplay and route gating');
 })().catch(e=>{console.error(e);process.exitCode=1});

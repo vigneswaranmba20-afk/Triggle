@@ -1,9 +1,9 @@
-/* Triggle Visual Lessons — hosted MP4 or Google Drive previews; no placeholder playback */
+/* Triggle visual lessons — native inline MP4 on Pages with modal full viewer; Drive fallback remains available. */
 (()=>{'use strict';
  const $=id=>document.getElementById(id);
- const modal=$('visualLessonDialog'),launcher=$('visualLessonAction'),video=$('vlVideo'),driveFrame=$('vlDriveFrame');
- if(!modal||!launcher||!video||!driveFrame)return;
- let catalog=[],plannedIds=new Set(),selected=null,item=null,lang='en',launcherFocus=null,scrollAtOpen=0,openedEntry=false;
+ const modal=$('visualLessonDialog'),launcher=$('visualLessonAction'),video=$('vlVideo'),driveFrame=$('vlDriveFrame'),inlineVideo=$('vlInlineVideo'),inlinePanel=$('vlInlinePanel');
+ if(!modal||!launcher||!video||!driveFrame||!inlineVideo||!inlinePanel)return;
+ let catalog=[],plannedIds=new Set(),selected=null,item=null,lang='en',launcherFocus=null,scrollAtOpen=0,openedEntry=false,inlineSource='';
  const copy={
   en:{watch:'Watch Visual Lesson',comingSoon:'Visual lessons · Coming soon · Human narration on the way',title:'Watch Visual Lesson',back:'Back to question',question:'View original question',speed:'Playback speed',full:'Fullscreen',download:'Download Lesson',openDrive:'Open in Google Drive',driveNotice:'This lesson is hosted on Google Drive. If playback is blocked on this device, open it directly in Google Drive.',error:'Video could not load',errorText:'Please check your connection and try again. The written solution is still available.',preparing:'Preparing your lesson…',help:'On Android Chrome, if the MP4 opens instead of saving, long-press “Download Lesson” and choose Download link.'},
   ta:{watch:'காட்சி வழிப் பாடம்',comingSoon:'காட்சிப் பாடங்கள் · விரைவில் · மனிதக் குரல் விளக்கத்துடன்',title:'காட்சி வழிப் பாடம்',back:'கேள்விக்குத் திரும்பு',question:'அசல் கேள்வியைக் காண்க',speed:'வேகம்',full:'முழுத்திரை',download:'பாடத்தைப் பதிவிறக்கு',openDrive:'Google Drive-ல் திறக்கவும்',driveNotice:'இந்தக் காணொளி Google Drive-ல் உள்ளது. இங்கு இயக்க முடியாவிட்டால் Google Drive-ல் திறக்கவும்.',error:'காணொளியை ஏற்ற முடியவில்லை',errorText:'இணையத்தைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும். எழுத்துத் தீர்வு தொடர்ந்து கிடைக்கும்.',preparing:'Preparing your lesson…',help:'Android Chrome-ல் காணொளி திறந்தால், பதிவிறக்க இணைப்பை நீண்ட நேரம் அழுத்தி Download link தேர்வு செய்க.'}
@@ -14,14 +14,42 @@
  const validDriveId=r=>r?.provider==='google-drive'&&typeof r.fileId==='string'&&/^[a-zA-Z0-9_-]{15,160}$/.test(r.fileId);
  const driveLink=(r,mode)=>`https://drive.google.com/file/d/${encodeURIComponent(r.fileId)}/${mode}`;
  const validRec=r=>r&&r.questionId&&r.status==='ready'&&(validDriveId(r)||(mediaUrl(r.video)&&/\.mp4(?:[?#].*)?$/i.test(r.video)));
+ // Only verified same-origin MP4s are embedded directly in question content.
+ function isNativeLesson(r){return !!r&&!validDriveId(r)&&typeof r.video==='string'&&r.video.startsWith('./videos/')&&mediaUrl(r.video);}
+ function updateInline(){
+   const local=isNativeLesson(selected);
+   inlinePanel.hidden=!local;
+   if(!local){
+     if(inlineSource){inlineVideo.pause();inlineVideo.removeAttribute('src');inlineVideo.load();inlineSource='';}
+     return;
+   }
+   const src=new URL(selected.video,document.baseURI).href;
+   if(src!==inlineSource){
+     inlineVideo.pause();inlineVideo.removeAttribute('src');
+     if(selected.poster&&mediaUrl(selected.poster))inlineVideo.poster=new URL(selected.poster,document.baseURI).href;
+     else inlineVideo.removeAttribute('poster');
+     inlineVideo.src=src;
+     inlineSource=src;
+     inlineVideo.load(); // preload=none: poster only, never autoplay.
+   }
+   $('vlInlineTitle').textContent=selected.title?.[lang]||selected.title?.en||ui('title');
+   $('vlInlineNote').textContent=lang==='ta'?'ஆங்கில குரல் விளக்கம் · வசன வரிகள் இல்லை':'English narration · No subtitles';
+   $('vlInlineFullLabel').textContent=ui('full');
+   $('vlInlineDownloadLabel').textContent=ui('download');
+   $('vlInlineDownload').href=src;
+   $('vlInlineDownload').download=selected.video.split('/').at(-1);
+   $('vlInlineDownload').hidden=!selected.downloadAllowed;
+   $('vlInlineError').hidden=true;
+ }
  function refresh(){
    selected=catalog.find(r=>r.questionId===item?.id&&validRec(r)&&(r.language===lang||r.language==='visual'))||catalog.find(r=>r.questionId===item?.id&&validRec(r)&&r.language==='en')||null;
    const isPlanned=!!item&&plannedIds.has(item.id);
    launcher.hidden=!selected&&!isPlanned;
-   $('visualLessonBtn').hidden=!selected;
+   $('visualLessonBtn').hidden=!selected||isNativeLesson(selected);
    $('visualLessonAvailability').hidden=!selected;
    $('visualLessonComingSoon').hidden=!!selected||!isPlanned;
    $('visualLessonComingSoonText').textContent=ui('comingSoon');
+   updateInline();
    if(!selected)return;
    $('visualLessonBtnLabel').textContent=ui('watch');
    $('visualLessonAvailability').textContent=lang==='ta'&&selected.language==='en'?'ஆங்கிலக் குரல் விளக்கம்':'';
@@ -73,7 +101,8 @@
  }
  function open(){
    if(!selected||!item)return;
-   launcherFocus=document.activeElement instanceof HTMLElement?document.activeElement:$('visualLessonBtn');
+   launcherFocus=document.activeElement instanceof HTMLElement?document.activeElement:(isNativeLesson(selected)?$('vlInlineFull'):$('visualLessonBtn'));
+   if(isNativeLesson(selected))inlineVideo.pause();
    scrollAtOpen=window.scrollY;
    configure();
    $('vlQuestionDetails').open=false;
@@ -95,6 +124,8 @@
    openedEntry=false;cleanup();
  }
  $('visualLessonBtn').addEventListener('click',open);
+ $('vlInlineFull').addEventListener('click',open);
+ inlineVideo.addEventListener('error',()=>{if(inlineSource)$('vlInlineError').hidden=false;});
  $('vlClose').addEventListener('click',close);
  modal.addEventListener('cancel',e=>{e.preventDefault();close();});
  modal.addEventListener('click',e=>{if(e.target===modal)close();});

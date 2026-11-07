@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280" role="img" aria-label="Class 12 sine equals minus one, unit circle, watch lesson">
+ <defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#1d1b3f"/><stop offset="1" stop-color="#51418b"/></linearGradient>
+  <radialGradient id="a"><stop stop-color="#9a88d9" stop-opacity=".28"/><stop offset="1" stop-color="#9a88d9" stop-opacity="0"/></radialGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="17" flood-opacity=".25"/></filter>
+ </defs>
+ <rect width="720" height="1280" fill="url(#g)"/>
+ <circle cx="360" cy="558" r="320" fill="url(#a)"/>
+ <rect x="64" y="80" width="200" height="46" rx="23" fill="#e9defd" opacity=".14"/>
+ <text x="164" y="110" text-anchor="middle" font-family="Arial,system-ui,sans-serif" font-weight="700" font-size="21" letter-spacing="2" fill="#e9ddff">CLASS 12</text>
+ <text x="70" y="206" font-family="Arial,system-ui,sans-serif" font-weight="800" font-size="49" fill="#ffffff">Trigonometry</text>
+ <text x="70" y="263" font-family="Arial,system-ui,sans-serif" font-weight="500" font-size="29" fill="#dbd3f7">Exercise 4.1 · Question 1(ii)</text>
+ <text x="360" y="398" text-anchor="middle" font-family="Arial,system-ui,sans-serif" font-weight="750" font-size="56" fill="#fff">sin x = −1</text>
+ <g transform="translate(360 670)" stroke-linecap="round">
+  <circle r="208" fill="#211e47" stroke="#af9bee" stroke-width="5"/>
+  <path d="M-260 0H260 M0 -255V255" stroke="#6c6299" stroke-width="3"/>
+  <path d="M0 0V208" stroke="#f6c178" stroke-width="7"/>
+  <circle cx="0" cy="208" r="14" fill="#67e2bc" stroke="white" stroke-width="3"/>
+  <text x="24" y="202" font-family="Arial,system-ui,sans-serif" font-weight="700" font-size="27" fill="#ffffff">(0, −1)</text>
+  <text x="0" y="-222" text-anchor="middle" font-family="Arial,system-ui,sans-serif" font-size="23" fill="#d4caff">+1</text>
+  <text x="-230" y="8" text-anchor="middle" font-family="Arial,system-ui,sans-serif" font-size="23" fill="#d4caff">−1</text>
+ </g>
+ <g filter="url(#shadow)">
+  <circle cx="360" cy="680" r="62" fill="#f7f1ff"/>
+  <path d="M342 645L397 679L342 715Z" fill="#544394"/>
+ </g>
+ <text x="360" y="1020" text-anchor="middle" font-family="Arial,system-ui,sans-serif" font-size="32" font-weight="750" fill="#fff">Watch Visual Lesson</text>
+ <text x="360" y="1064" text-anchor="middle" font-family="Arial,system-ui,sans-serif" font-size="25" fill="#d6cfee">English narration · 2:50</text>
+ <path d="M70 1125H650" stroke="#8a7fbb" stroke-width="2"/>
+ <text x="360" y="1193" text-anchor="middle" font-family="Arial,system-ui,sans-serif" font-size="25" letter-spacing="3" font-weight="750" fill="#eee9ff">TRIGGLE</text>
+</svg>

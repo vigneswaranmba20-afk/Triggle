@@ -1,6 +1,6 @@
 """Verify Triggle's local video manifest and exact pilot mathematical answer."""
 from pathlib import Path
-import json, math, re, subprocess, sys
+import hashlib, json, math, re, shutil, subprocess, sys
 root=Path(__file__).resolve().parent.parent
 manifest=json.loads((root/'data/video-lessons.json').read_text(encoding='utf-8'))
 assert manifest['schemaVersion']==1
@@ -32,10 +32,19 @@ for r in manifest['lessons']:
   assert r['video'].startswith('./videos/')
   v=root/r['video'][2:];assert v.is_file() and v.stat().st_size>1000,v
   assert (root/r['poster'][2:]).is_file()
-  p=subprocess.run(['ffprobe','-v','error','-show_entries','stream=codec_name,width,height,pix_fmt,codec_type','-show_entries','format=duration,size','-of','json',str(v)],capture_output=True,text=True,check=True)
-  j=json.loads(p.stdout);assert abs(float(j['format']['duration'])-r['durationSeconds'])<.6,j
-  assert any(x['codec_name']=='h264' and x['pix_fmt']=='yuv420p' for x in j['streams']),j
-  print(r['id'],len(j['streams']),'stream(s)',j['format']['duration'],'seconds',j['format']['size'],'bytes')
+  # Exact, owner-reviewed reference checksum survives environments without ffprobe.
+  if r['questionId']=='c12-4-4-1-2':
+   assert v.stat().st_size==4932846,('Unexpected Class 12 video size',v.stat().st_size)
+   fingerprint=hashlib.sha256(v.read_bytes()).hexdigest()
+   assert fingerprint=='bf0965d5657838b83fb9926a8ac0358517f90aa1a4e4e8e3f99aaae80e4430fe','Class 12 video differs from reviewed MP4'
+  if shutil.which('ffprobe'):
+   p=subprocess.run(['ffprobe','-v','error','-show_entries','stream=codec_name,width,height,pix_fmt,codec_type','-show_entries','format=duration,size','-of','json',str(v)],capture_output=True,text=True,check=True)
+   j=json.loads(p.stdout);assert abs(float(j['format']['duration'])-r['durationSeconds'])<.6,j
+   assert any(x['codec_name']=='h264' and x['pix_fmt']=='yuv420p' for x in j['streams']),j
+   print(r['id'],len(j['streams']),'stream(s)',j['format']['duration'],'seconds',j['format']['size'],'bytes')
+  else:
+   assert r['questionId']=='c12-4-4-1-2','ffprobe required to verify any future unreviewed video'
+   print('Verified exact reviewed MP4 by SHA-256 and file size (ffprobe not installed):',r['id'])
 solutions=[]
 for k in range(-7,8):
  x=-math.pi/2+2*math.pi*k
