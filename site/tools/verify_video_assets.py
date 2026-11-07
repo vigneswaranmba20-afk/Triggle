@@ -32,6 +32,21 @@ for r in manifest['lessons']:
   assert r['video'].startswith('./videos/')
   v=root/r['video'][2:];assert v.is_file() and v.stat().st_size>1000,v
   assert (root/r['poster'][2:]).is_file()
+  if r.get('webm'):
+   assert r['webm'].startswith('./videos/') and r['webm'].endswith('.webm'),r
+   fallback=root/r['webm'][2:]
+   assert fallback.is_file() and fallback.stat().st_size>1000000,fallback
+   # EBML header and unambiguous VP9/Opus codec IDs: works without ffprobe.
+   header=fallback.open('rb').read(8192)
+   assert header.startswith(bytes.fromhex('1a45dfa3')),'WebM missing EBML header'
+   assert b'V_VP9' in header and b'A_OPUS' in header,'Expected video VP9 and audio Opus tracks'
+   if shutil.which('ffprobe'):
+    probe=subprocess.run(['ffprobe','-v','error','-show_entries','stream=codec_name','-show_entries','format=duration','-of','json',str(fallback)],capture_output=True,text=True,check=True)
+    details=json.loads(probe.stdout)
+    codecs={track['codec_name'] for track in details['streams']}
+    assert {'vp9','opus'}<=codecs,details
+    assert abs(float(details['format']['duration'])-r['durationSeconds'])<.6,details
+   print('Verified WebM VP9/Opus fallback:',fallback,fallback.stat().st_size,'bytes')
   # Exact, owner-reviewed reference checksum survives environments without ffprobe.
   if r['questionId']=='c12-4-4-1-2':
    assert v.stat().st_size==4932846,('Unexpected Class 12 video size',v.stat().st_size)
