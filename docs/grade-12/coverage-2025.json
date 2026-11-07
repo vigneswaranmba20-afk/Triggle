@@ -1,0 +1,133 @@
+{
+  "grade": 12,
+  "edition": "2025 revised",
+  "inventoryComplete": false,
+  "chapterCount": 12,
+  "chapterStatus": [
+    {
+      "chapter": 1,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 1,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 2,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 3,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 4,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 5,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 6,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 7,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 8,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 9,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 10,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 11,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 12,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    }
+  ],
+  "verifiedSources": {
+    "english": {
+      "volume": 1,
+      "pdfPage": 23,
+      "printedPage": 15
+    },
+    "tamil": {
+      "volume": 1,
+      "pdfPage": 24,
+      "printedPage": 16
+    }
+  },
+  "items": [
+    {
+      "id": "g12-ch1-ex1.1-q1-i",
+      "chapter": 1,
+      "exercise": "1.1",
+      "question": "1",
+      "subpart": "i",
+      "status": "mathematically_verified",
+      "sourceVerified": true,
+      "bilingualTextCheckedAgainstSource": true,
+      "tamilEditorialReview": "pending",
+      "ci": "not_run",
+      "browser": "not_run",
+      "merged": false,
+      "liveVerified": false
+    }
+  ]
+}
