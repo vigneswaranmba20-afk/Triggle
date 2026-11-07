@@ -28,6 +28,27 @@ for r in manifest['lessons']:
   assert 169 < float(r['durationSeconds']) < 172,r
   assert 'video' not in r or not r['video'], 'Drive page must not be used as native MP4'
   print('Published reviewed Google Drive video:',r['id'],r['questionId'],r['fileId'])
+ elif r.get('provider') == 'cloudflare-r2':
+  # R2 is fetched only by browsers, not GitHub Actions. Never publish credentials here.
+  from urllib.parse import urlsplit
+  u=urlsplit(r['video'])
+  assert r['status']=='ready' and u.scheme=='https' and u.hostname and u.path.endswith('.mp4'),r
+  assert not (u.username or u.password or u.query or u.fragment or u.port),r
+  assert r['downloadAllowed'] is False,'R2 browser downloads must not be promised'
+  assert (root/r['poster'][2:]).is_file(),r
+  if r.get('webm'):
+   # Retain the exact original same-site WebM until a reviewed R2 WebM is uploaded.
+   assert r['webm'].startswith('./videos/') and r['webm'].endswith('.webm'),r
+   backup=root/r['webm'][2:]
+   assert backup.is_file() and backup.stat().st_size>1000000,backup
+   header=backup.open('rb').read(8192)
+   assert header.startswith(bytes.fromhex('1a45dfa3')),'WebM missing EBML header'
+   assert b'V_VP9' in header and b'A_OPUS' in header,'Expected VP9/Opus fallback'
+  # Keep the exact owner-reviewed original MP4 in GitHub during the R2 pilot.
+  source=root/'videos/triggle-class12-ex4-1-q1-ii.mp4'
+  assert source.stat().st_size==4932846,source
+  assert hashlib.sha256(source.read_bytes()).hexdigest()=='bf0965d5657838b83fb9926a8ac0358517f90aa1a4e4e8e3f99aaae80e4430fe'
+  print('Validated R2 manifest URL and retained reviewed local MP4/WebM fallback for:',r['questionId'])
  elif r['status'] in ('ready','preview'):
   assert r['video'].startswith('./videos/')
   v=root/r['video'][2:];assert v.is_file() and v.stat().st_size>1000,v
