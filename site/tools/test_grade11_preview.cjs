@@ -1,0 +1,41 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const html=fs.readFileSync(path.join(root,'grade-11/sets-preview.html'),'utf8');
+const lesson=JSON.parse(fs.readFileSync(path.join(root,'data/textbook-exercises/g11-ch1-ex1-1-q1.json'),'utf8'));
+const ledger=JSON.parse(fs.readFileSync(path.join(root,'../docs/coverage/grade-11-2025.json'),'utf8'));
+assert.equal(lesson.grade,11);
+assert.equal(lesson.questions.length,4);
+assert.equal(ledger.chapters.length,12);
+assert.equal(ledger.inventoryComplete,false);
+assert.match(html,/lang="en"/);
+assert.match(html,/id="ta"[^>]*lang="ta"/);
+assert.match(html,/aria-pressed/);
+assert.match(html,/prefers-reduced-motion/);
+assert.match(html,/focus-visible/);
+assert.match(html,/document\.createElement/);
+assert.match(html,/\.textContent=/);
+assert.match(html,/replaceChildren\(\)/);
+assert.doesNotMatch(html,/innerHTML|document\.write\(/);
+assert.match(html,/fetch\(source\)/);
+assert.match(html,/Tamil human editorial review pending/);
+assert.match(html,/printed p\. 7/);
+assert.match(html,/printed p\. 9/);
+assert.match(html,/PDF p\. 15/);
+assert.match(html,/PDF p\. 17/);
+for(const q of lesson.questions){
+ assert.equal(q.review.publication,'draft');
+ assert.equal(q.review.tamilEditorial,'pending');
+ assert.equal(q.review.mathematics,'independently checked');
+ assert.equal(q.source.edition,'2025 revised');
+ for(const lang of ['en','ta']){
+  assert.ok(q.prompt[lang].length>15);
+  assert.ok(q.steps[lang].length>=3);
+  assert.ok(q.steps[lang].every(s=>s.length>15));
+  assert.ok(q.answer[lang].length>0);
+ }
+}
+assert.ok(ledger.items.every(x=>!x.merged&&!x.liveVerified&&!x.ciPassed));
+console.log('PASS Grade 11 preview static accessibility, source linkage, bilingual coverage and publication guards');
