@@ -18,5 +18,5 @@ for(const item of inventory.items){
  assert.equal(item.liveVerified,false);
  assert.equal(item.tamilEditorialReview,'pending');
 }
-assert.equal(inventory.items.find(x=>x.id==='g12-ch1-ex1.1-q1-iii').matrixSourceImageChecked,false,'do not infer matrix entries from garbled PDF extraction');
-console.log('PASS Grade 12 2025 bilingual Exercise 1.1 source ID inventory: 19 subparts, 2 verified, 17 missing');
+assert.equal(inventory.items.find(x=>x.id==='g12-ch1-ex1.1-q1-iii').matrixSourceImageChecked,true,'Q1(iii) source page images were checked in both languages');
+console.log('PASS Grade 12 2025 bilingual Exercise 1.1 source ID inventory: 19 subparts, 3 verified, 16 missing');
