@@ -323,7 +323,13 @@ async function main() {
         assert.match(await page.locator('#homeBtn').innerText(), /Home/);
         assert.equal(await page.locator('.discover-grade-grid [data-grade]').count(),4);
         assert.equal(await page.locator('a[href="./playground.html"]').count(),0,'Retire all Trigonometry Basics shortcuts');
-        assert.ok((await page.locator('.discover-hero h1').innerText()).includes('Maths should make sense'));
+        assert.equal(await page.locator('.discover-home-minimal > section').count(),2,
+          'Student home must contain only recent question and class chooser');
+        assert.match(await page.locator('#discover-recent-title').innerText(),/Your last opened question/);
+        assert.match(await page.locator('#discover-classes-title').innerText(),/Choose your class/);
+        assert.equal(await page.locator('.discover-grade-grid [data-grade]').count(),4);
+        assert.equal(await page.locator('.discover-hero,.discover-access,.discover-feature,.discover-method,.discover-find,.discover-actions').count(),0,
+          'Remove marketing, large welcome, search and extra blocks from home');
         await noOverflow(page,'Home '+width+'px');
 
         // Class buttons should open a CHAPTER DIRECTORY, not a random saved question.
@@ -349,9 +355,43 @@ async function main() {
         await page.locator('#homeBtn').click();
         await page.locator('#langTa').click();
         assert.equal(await page.locator('html').getAttribute('lang'),'ta');
-        assert.match(await page.locator('.discover-hero h1').innerText(),/கணிதம்/);
-        assert.match(await page.locator('.discover-section h2').first().innerText(),/வகுப்/);
+        assert.match(await page.locator('#discover-recent-title').innerText(),/கடைசியாக/);
+        assert.match(await page.locator('#discover-classes-title').innerText(),/வகுப்பை/);
+        assert.equal(await page.locator('.discover-home-minimal > section').count(),2);
         await noOverflow(page,'Tamil Home '+width+'px');
+      });
+    }
+    for(const width of [320,390,1280]){
+      await check('Minimal home remembers last question across classes at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html');
+        assert.equal(await page.locator('.discover-home-minimal > section').count(),2);
+        assert.equal(await page.locator('.discover-resume-card').count(),0,
+          'Never invent a previously opened question for a new visitor');
+        assert.match(await page.locator('.discover-no-recent').innerText(),/No question opened yet/);
+        // Use real bundled IDs so the test does not depend on textbook counts.
+        const ids=await page.evaluate(()=>({
+          g10:window.TRIGGLE_CLASSES[10].items[0].id,
+          g9:window.TRIGGLE_CLASSES[9].items[0].id
+        }));
+        await page.goto(url+'/index.html?class=10&question='+encodeURIComponent(ids.g10));
+        await page.locator('#lessonCard').waitFor({state:'visible'});
+        await page.locator('#homeBtn').click();
+        assert.match(await page.locator('.discover-resume-card').innerText(),/Class 10/);
+        assert.equal(await page.locator('.discover-home-minimal > section').count(),2);
+        await page.locator('.discover-resume-card').click();
+        assert.equal(new URL(page.url()).searchParams.get('question'),ids.g10);
+        await page.goto(url+'/index.html?class=9&question='+encodeURIComponent(ids.g9));
+        await page.locator('#homeBtn').click();
+        assert.match(await page.locator('.discover-resume-card').innerText(),/Class 9/,
+          'Most recently opened question must beat a saved Class 10 question');
+        assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('triggle.lastOpened.v1')).questionId),ids.g9);
+        await page.reload();
+        assert.match(await page.locator('.discover-resume-card').innerText(),/Class 9/,
+          'Resume must survive a page reload');
+        await page.locator('#langTa').click();
+        assert.match(await page.locator('#discover-recent-title').innerText(),/கடைசியாக/);
+        assert.match(await page.locator('.discover-resume-card').innerText(),/வகுப்பு 9/);
+        await noOverflow(page,'minimal Tamil home '+width+'px');
       });
     }
     for(const width of [320,390,768,1280]){
@@ -555,9 +595,12 @@ async function main() {
       await page.locator('.hub-back-menu').click();
       assert.equal(new URL(page.url()).searchParams.has('section'),false);
       await page.locator('#homeBtn').click();
+      assert.equal(await page.locator('#discover-search').count(),0,'Home must not have an extra search panel');
+      await page.locator('.discover-grade-grid [data-grade="9"]').click();
       await page.locator('#discover-search').fill('கண மொழி');
-      assert.ok(await page.locator('.discover-results [data-chapter="g9-ch1"]').count()>0);
-      await page.locator('.discover-results [data-chapter="g9-ch1"]').click();
+      assert.equal(await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]:visible').count(),1,
+        'Chapter search remains accessible inside the Class 9 directory');
+      await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
       assert.equal(await page.locator('.hub-section-card').count(),5);
       await noOverflow(page,'chapter-first menu at 390px');
@@ -1027,7 +1070,8 @@ async function main() {
       assert(cached.some(u=>u.endsWith('/assets/discovery.css')),'New Home styles must be precached');
       await ctx.setOffline(true);
       await page.reload();
-      await page.locator('.discover-hero').waitFor({state:'visible'});
+      await page.locator('.discover-home-minimal').waitFor({state:'visible'});
+       assert.equal(await page.locator('.discover-home-minimal > section').count(),2,'Offline home remains minimal');
       await page.locator('.discover-grade-grid [data-grade="9"]').click();
       assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
       await ctx.setOffline(false);

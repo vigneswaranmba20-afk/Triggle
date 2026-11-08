@@ -19,6 +19,8 @@
  const store=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch{}};
  const completed=new Set(load('triggle.learned.v119',[]));
  const lastByGrade=load('triggle.lastByGrade.v119',{});
+ // Resume across grades uses the most recently opened lesson, not grade order.
+ let lastOpened=load('triggle.lastOpened.v1',null);
  let lang='en';try{const saved=localStorage.getItem('triggle-language');if(saved==='ta'||saved==='"ta"')lang='ta'}catch{}
  const url=new URL(location.href), requested=Number(url.searchParams.get('class'));
  let grade=classes[requested]?requested:9;
@@ -67,6 +69,7 @@
  function remember(){
    if(homeView||classIndex||chapterOverview)return;
    lastByGrade[grade]=current.id;store('triggle.lastByGrade.v119',lastByGrade);
+   lastOpened={grade,questionId:current.id};store('triggle.lastOpened.v1',lastOpened);
  }
  function resetScroll(){
   // Both the workspace and the mobile lesson container can scroll.
@@ -470,7 +473,7 @@
   document.documentElement.lang=lang;document.body.classList.toggle('lang-ta',lang==='ta');document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=ui(el.dataset.i18n));$('search').placeholder=ui('search');$('classSubtitle').textContent=ui('subtitle');$('langEn').classList.toggle('active',lang==='en');$('langTa').classList.toggle('active',lang==='ta');$('langEn').setAttribute('aria-pressed',String(lang==='en'));$('langTa').setAttribute('aria-pressed',String(lang==='ta'))}
  function renderDiscovery(){
    window.TriggleDiscovery?.mount($('discoveryView'),{
-     mode:homeView?'home':'class',grade,lang,curriculum,classes,lastByGrade,
+     mode:homeView?'home':'class',grade,lang,curriculum,classes,lastByGrade,lastOpened,
      openGrade:changeGrade,openChapter:openChapterFor,openQuestion:openQuestionFor,goHome
    });
  }
