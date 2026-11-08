@@ -12,7 +12,7 @@ Source: user-connected `Class_9_Mathematics_English_2025_Edition-www.tntextbooks
 | 6. Trigonometry | 6.1–6.5 (5) | Legacy earlier-edition book-referenced examples/exercises exist; all need 2025 question-by-question comparison. |
 | 7. Mensuration | 7.1–7.4 (4) | Only legacy practice; complete textbook coverage pending. |
 | 8. Statistics | 8.1–8.4 (4) | Only legacy practice; tables/graphs and every exercise pending. |
-| 9. Probability | 9.1–9.3 (3) | **This batch:** 9.1 Q1–Q8 from English printed p298 / PDF p304. Q9–10 require original spinner image; 9.2, 9.3, worked examples, thinking corner, activities and concepts still pending. |
+| 9. Probability | 9.1–9.3 (3) | **This batch:** 9.1 Q1–Q8 from English printed p298 / PDF p304. Q9–10 require original spinner image; **Exercise 9.2 Q1–Q4** added as 2025 PDF-text checked English drafts (page-image review pending); Q5 with table, 9.3, worked examples, thinking corner, activities and concepts remain pending. |
 | **Total** | **60 exercise groups** | **Not completed.** No chapter is declared fully reviewed solely by these entries. |
 
 ## Batch G9-EN-001, 9 November 2026
@@ -23,3 +23,11 @@ Source: user-connected `Class_9_Mathematics_English_2025_Edition-www.tntextbooks
 - Spinner-figure questions Q9 and Q10 intentionally excluded; do not invent diagrams or mark 9.1 complete.
 - Neither separate hard-problem detail tabs nor diagrams are needed for these eight basic and intermediate probability problems.
 - Release only after `npm test`, `npm run test:browser`, source-to-UI evidence, mobile/offline checks, and GitHub Pages smoke testing succeed.
+
+## Batch G9-EN-002, 9 November 2026 — source-text checked draft
+
+- 2025 English Drive PDF `1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J`, printed pp. 301–302 / PDF pp. 307–308. Read the actual exercise wording and question numbers from the connected PDF's text layer.
+- 2025 Tamil Drive PDF `1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj`, printed pp. 318–319 / PDF pp. 334–335. Consulted for matching question numbering and values; student-facing Tamil is **not** authored or reviewed.
+- Added English Exercise 9.2 Q1–Q4 with original wording, including the textbook's spelling `loosing` in Q4, and original worked steps. Independent answers: Q1 0.9975; Q2 209/400; Q3 x=15/8; Q4 0.28.
+- **Not a verified release:** Source page *images* were not inspected in this run. Both source manifest and app metadata say visual review pending. Q5 remains pending because its table and three-part prompt need independent fidelity review. Do not assert that Exercise 9.2 or Chapter 9 is complete.
+- Code-level source-mapping/arithmetic regression and three-viewport browser assertions have been added; GitHub CI and full browser/Pages smoke tests must pass before publication.

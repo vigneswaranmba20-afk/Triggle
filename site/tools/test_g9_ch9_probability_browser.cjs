@@ -38,10 +38,18 @@ async function main(){
    await page.locator('#questionText').waitFor({state:'visible'});
    assert.match(await page.locator('#questionText').innerText(),/less than 13/);
    assert.match(await page.locator('#stepsList').innerText(),/sum of 4/);
+   // 2025 textbook Exercise 9.2 is independent of the previously published 9.1 batch.
+   await page.goto(base+'/index.html?class=9&question=g9-ch9-ex9.2-q3');
+   await page.locator('#questionText').waitFor({state:'visible'});
+   assert.match(await page.locator('#questionText').innerText(),/guessing the correct answer/);
+   assert.match(await page.locator('#stepsList').innerText(),/common denominator of 15/);
+   assert.equal(await page.locator('#answerBox').isVisible(),true);
+   const secondMetrics=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
+   assert.ok(secondMetrics.document<=secondMetrics.viewport+1,'Exercise 9.2 overflow at '+width);
    assert.deepEqual(errors,[],'Browser JS errors at '+width);
    await ctx.close();
   }
-  console.log('PASS: Grade 9 2025 Probability Exercise 9.1 chapter navigation, Q4/Q6 and 320/390/1280 responsive browser scenarios.');
+  console.log('PASS: Grade 9 2025 Probability Exercise 9.1/9.2 chapter navigation, Q4/Q6/Q3 and 320/390/1280 responsive browser scenarios.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
