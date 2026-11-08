@@ -87,6 +87,14 @@ assert.ok(index.includes('assets/real-numbers-deep.js'));
 assert.ok(index.includes('assets/real-number-line.js'));
 const sw=read('service-worker.js');
 assert.ok(sw.includes('assets/real-number-line.js'));
+assert.ok(index.includes('assets/real-numbers-journey.js'),'Real Numbers interactive script must load');
+assert.ok(sw.includes('assets/real-numbers-journey.js'),'Real Numbers interactive module must work offline');
+const originalArrow=items.find(x=>x.id==='g9-ch2-ex1-q1');
+assert.equal(originalArrow?.diagram?.kind,'real-number-arrows','A–D choice figure restored');
+const fourArrows=sandbox.window.TriggleDraw.drawClassic({demo:originalArrow.diagram,ref:'Exercise 2.1 Q1',title:'Which arrow?'});
+assert.match(fourArrows,/<svg/);
+for(const label of ['A','B','C','D'])assert.match(fourArrows,new RegExp('>'+label+'<'));
+
 
 for(const p of scripts.slice(2))assert.ok(sw.includes(p),'missing offline cache entry: '+p);
 vm.runInNewContext(read('data/real-numbers/g9-ch2-examples-a.js'),sandbox);
