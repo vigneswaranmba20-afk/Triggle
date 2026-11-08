@@ -568,14 +568,31 @@ async function main() {
       assert.equal(await lab.locator('[data-demo-output] math msqrt').count(),3,'√32, √(4²×2) and √2 must use real radical notation');
       assert.equal((await lab.locator('[data-demo-output] math msqrt').last().textContent()).trim(),'2');
       await lab.locator('[data-nav] [data-index="5"]').click();
+      assert.equal(await lab.locator('[data-demo-controls] math mfrac').count(),2,
+        'Both rationalisation choices must use real stacked fraction bars');
+      assert.equal(await lab.locator('.rnlab-rational-step').count(),4,
+        'The full rationalisation must be shown as four readable steps without expansion');
+      assert.match(await lab.locator('.rnlab-rational-goal').innerText(),/remove the square root from the denominator/i);
+      assert.equal((await lab.locator('.rnlab-rational-result math msqrt').textContent()).trim(),'5',
+        'For 1/(√5+2), the result must be √5−2');
       await lab.locator('[data-demo-mode="seven"]').click();
-      assert.ok(await lab.locator('[data-demo-output] math msqrt').count()>=1,'Rationalizing must preserve typeset radicals');
-      assert.equal((await lab.locator('[data-demo-output] math msqrt').last().textContent()).trim(),'7');
+      assert.equal((await lab.locator('.rnlab-rational-result math msqrt').textContent()).trim(),'7',
+        'For 3/(√7+2), the result must be √7−2');
+      assert.equal((await lab.locator('.rnlab-rational-step').nth(2).locator('math mfrac').count()),1,
+        'The cancellation step must contain a genuine MathML fraction');
+      assert.match(await lab.locator('.rnlab-rational-step').nth(2).innerText(),/7.*4.*3/s,
+        'The second example denominator simplifies from 7−4 to 3');
+      await noOverflow(page,'Rationalisation four steps at 390px');
       await lab.locator('[data-nav] [data-index="6"]').click();
       await lab.locator('input[type="range"]').evaluate(input=>{input.value='-3';input.dispatchEvent(new Event('input',{bubbles:true}));});
       assert.match(await lab.locator('[data-demo-output]').innerText(),/0\.0032/);
       await page.locator('#langTa').click();
       assert.match(await page.locator('.rnlab h3').innerText(),/எண்களை/);
+      await lab.locator('[data-nav] [data-index="5"]').click();
+      assert.equal(await lab.locator('.rnlab-rational-step').count(),4);
+      assert.match(await lab.locator('.rnlab-rational-step').first().innerText(),/தொடக்க/);
+      assert.equal(await lab.locator('[data-demo-controls] math mfrac').count(),2,
+        'Tamil fraction choices must also have proper fraction bars');
       await noOverflow(page,'Tamil Real Numbers interactive lab at 390px');
       
       await page.locator('.hub-back-menu').click();

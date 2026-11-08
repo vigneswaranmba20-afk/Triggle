@@ -744,3 +744,46 @@
 .rnlab .rnlab-choice .triggle-math{font-size:1.18em}
 .rnlab .sp2-example .triggle-math,.rnlab .sp2-recall .triggle-math{font-size:1.08em}
 @media(max-width:420px){.rnlab .sp2-formula{padding:10px;font-size:clamp(15px,4.1vw,19px)}.rnlab .rnlab-choice{font-size:12px;padding:10px 7px}}
+
+
+/* Grade 9 rationalisation: readable, vertically separated textbook steps. */
+.rnlab .rnlab-rational-goal{
+ margin:4px auto 8px;padding:11px 13px;width:100%;box-sizing:border-box;
+ border-radius:10px;background:#f3f0fb;color:#46396d;
+ font-size:clamp(13px,2.6vw,15px);line-height:1.6;font-weight:750;text-align:left;
+}
+.rnlab .sp2-demo-output:has(.rnlab-rational-steps){overflow:visible;white-space:normal;margin-top:8px!important}
+.rnlab .rnlab-choices:has(.rnlab-rational-math) .rnlab-choice{min-height:70px;padding:12px 7px;overflow:visible}
+.rnlab .rnlab-choice .rnlab-rational-math{font-size:clamp(17px,3.4vw,22px);white-space:nowrap}
+.rnlab-rational-steps{list-style:none;margin:6px 0 14px;padding:0;display:grid;gap:10px;min-width:0}
+.rnlab-rational-step{
+ display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start;
+ margin:0;padding:12px 11px;background:white;border:1px solid #e4dfed;border-radius:12px;
+}
+.rnlab-rational-step .rnlab-step-number{
+ display:grid;place-items:center;min-width:28px;height:28px;border-radius:50%;
+ color:#5b4785;background:#ede7f8;font-weight:850;font-size:13px;
+}
+.rnlab-step-content{min-width:0}
+.rnlab-step-content strong{display:block;color:#413260;font-size:13px;font-weight:800;line-height:1.45}
+.rnlab .rnlab-step-content p{font-size:12.5px!important;line-height:1.55!important;color:#676178;margin:6px 0 0!important;overflow-wrap:break-word}
+.rnlab .rnlab-step-equation{
+ display:block;max-width:100%;box-sizing:border-box;overflow-x:auto;overflow-y:hidden;
+ padding:10px 3px 7px;color:#302748;line-height:1.6;text-align:left;
+ scrollbar-width:thin;overscroll-behavior-x:contain;
+}
+.rnlab .rnlab-step-equation .rnlab-rational-math{
+ margin:0;font-size:clamp(18px,3.6vw,25px);vertical-align:middle;
+}
+.rnlab-rational-result{
+ display:flex;align-items:center;justify-content:space-between;gap:10px;
+ flex-wrap:wrap;padding:15px;border:1px solid #cfe4d7;border-radius:12px;
+ background:#f2fbf6;color:#226950;
+}
+.rnlab-rational-result strong{font-size:14px}
+.rnlab-rational-result .rnlab-rational-math{font-size:clamp(22px,4.5vw,30px);color:#226950}
+@media(max-width:420px){
+ .rnlab-rational-step{gap:8px;padding:11px 9px}
+ .rnlab .rnlab-step-equation .rnlab-rational-math{font-size:19px}
+ .rnlab .rnlab-choices:has(.rnlab-rational-math) .rnlab-choice{min-height:72px}
+}

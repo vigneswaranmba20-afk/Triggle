@@ -43,8 +43,8 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
     ],
     "correct": 0,
     "hint": {
-      "en": "Use the chapter rule, then test a counterexample if helpful.",
-      "ta": "அத்தியாய விதியைப் பயன்படுத்தி, தேவைப்பட்டால் எதிர் எடுத்துக்காட்டைச் சரிபார்க்கவும்."
+      "en": "Multiply the top and bottom by √5. Remember that √5 × √5 = 5.",
+      "ta": "மேலேயும் கீழேயும் √5-ஆல் பெருக்குக. √5 × √5 = 5 என்பதை நினைவில் கொள்க."
     },
     "why": {
       "en": "1/2=6/12 and 2/3=8/12, so 7/12 is in between.",
@@ -267,25 +267,25 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
       "ta": "விகிதப்படுத்துதலும் இணை முறுடுகளும்"
     },
     "idea": {
-      "en": "Multiply numerator and denominator by a suitable factor to remove radicals from the denominator.",
-      "ta": "பகுதியில் உள்ள முறுடை நீக்கத் தகுந்த காரணியால் தொகுதி, பகுதியை பெருக்குக."
+      "en": "Rationalising means removing the square root from the bottom of a fraction. Multiply the top and bottom by the same nonzero factor.",
+      "ta": "விகிதப்படுத்துதல் என்பது பின்னத்தின் கீழ்ப்பகுதியில் உள்ள வர்க்கமூலத்தை நீக்குதல். தொகுதியையும் பகுதியையும் ஒரே பூச்சியமற்ற காரணியால் பெருக்க வேண்டும்."
     },
     "example": {
-      "en": "1/√2=√2/2; (3+√2)(3−√2)=7.",
-      "ta": "1/√2=√2/2; (3+√2)(3−√2)=7."
+      "en": "Example: [[1|√2]] = [[√2|2]]. For √5+2, the conjugate is √5−2.",
+      "ta": "எடுத்துக்காட்டு: [[1|√2]] = [[√2|2]]. √5+2 இன் இணை முறுடு √5−2 ஆகும்."
     },
     "rule": {
       "en": "(a+b)(a−b)=a²−b².",
       "ta": "(a+b)(a−b)=a²−b²."
     },
     "question": {
-      "en": "What is 1/√5 after rationalising?",
-      "ta": "1/√5 இன் பகுதியை விகிதப்படுத்தியபின் விடை என்ன?"
+      "en": "After rationalising, what is [[1|√5]]?",
+      "ta": "[[1|√5]] இன் பகுதியை விகிதப்படுத்தினால் கிடைப்பது என்ன?"
     },
     "choices": [
       {
-        "en": "√5/5",
-        "ta": "√5/5"
+        "en": "[[√5|5]]",
+        "ta": "[[√5|5]]"
       },
       {
         "en": "5√5",
@@ -302,8 +302,8 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
       "ta": "அத்தியாய விதியைப் பயன்படுத்தி, தேவைப்பட்டால் எதிர் எடுத்துக்காட்டைச் சரிபார்க்கவும்."
     },
     "why": {
-      "en": "Multiply numerator and denominator by √5; the denominator becomes 5.",
-      "ta": "தொகுதியையும் பகுதியையும் √5-ஆல் பெருக்குக; பகுதி 5 ஆகும்."
+      "en": "[[1|√5]] × [[√5|√5]] = [[√5|5]]. The denominator is now rational.",
+      "ta": "[[1|√5]] × [[√5|√5]] = [[√5|5]]. இப்போது பகுதி விகிதமுறு எண்ணாக உள்ளது."
     }
   },
   {
