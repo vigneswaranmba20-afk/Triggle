@@ -54,6 +54,26 @@ const server=http.createServer((req,res)=>{
    await context.close();
    console.log('PASS Grade 11 bilingual keyboard/mobile/offline-loaded lesson '+width);
   }
+  // Exercise 1.1 Question 2 must be visible and usable on mobile in both languages.
+  for(const width of [320,390,1280]){
+   const ctx=await browser.newContext({viewport:{width,height:800}});
+   const p=await ctx.newPage();
+   await p.goto('http://127.0.0.1:'+server.address().port+'/grade-11/sets-q2-preview.html');
+   await p.locator('#lesson article').waitFor();
+   assert.match(await p.locator('#lesson').innerText(),/−1, 1/);
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
+   await p.locator('#ta').click();
+   assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   assert.match(await p.locator('#lesson').innerText(),/கணக் கட்டமைப்பு/);
+   assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+   await ctx.setOffline(true);
+   await p.locator('#en').click();
+   await p.locator('#lesson summary').click();
+   assert.match(await p.locator('#lesson').innerText(),/x² = 1/);
+   await ctx.close();
+   console.log('PASS Grade 11 Q2 bilingual offline mobile '+width);
+  }
   const context=await browser.newContext({viewport:{width:320,height:800}});
   const page=await context.newPage();
   await page.route('**/g11-ch1-ex1-1-q1.json',route=>route.abort());
