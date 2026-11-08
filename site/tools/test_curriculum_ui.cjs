@@ -940,6 +940,7 @@ async function main() {
         assert.match(await page.locator('#itemTitle').innerText(),/Exercise 2\.1/);
         await page.locator('#batchSelect').selectOption('10');
         await page.locator('#reviewFilter').selectOption('all');
+        await page.locator('#nextBtn').click(); // Final batch starts with the last textbook exercise.
         assert.match(await page.locator('#itemType').innerText(),/Interactive lesson/);
         assert.equal(await page.locator('#visualLink').isVisible(),true);
         await noOverflow(page,'Tamil teacher review concept at '+width+'px');
