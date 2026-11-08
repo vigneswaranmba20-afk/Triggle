@@ -735,8 +735,8 @@
 
 /* Textbook-quality math notation; native browser MathML avoids a network dependency. */
 .triggle-math{display:inline-block;vertical-align:middle;font-size:1em;font-weight:normal;line-height:1.25;white-space:nowrap}
-.triggle-frac{vertical-align:middle}
-.triggle-frac>span{display:block;max-width:100%}
+.frac{vertical-align:middle}
+.frac>span{display:block;max-width:100%}
 .rnlab .sp2-formula{line-height:2.05;overflow-x:auto;overflow-y:visible}
 .rnlab .sp2-demo-output{display:block;line-height:2.1!important;overflow-x:auto;overflow-y:visible;overflow-wrap:normal}
 .rnlab .sp2-demo-output .triggle-math,.rnlab .sp2-formula .triggle-math{margin-inline:.04em}
