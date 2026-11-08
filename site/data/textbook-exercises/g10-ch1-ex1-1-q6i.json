@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-1-q6i",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.1",
+  "question": "6",
+  "subpart": "i",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "tamil": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "manifest": "docs/reference-library/2025-user-textbook-manifest.json",
+    "verificationNote": "English and Tamil 2025 revised PDF text on printed page 6 agrees on A={x∈W:x<2}, B={x∈N:1<x≤4}, C={3,5} and distributive identity. PDF mathematical glyph rendering requires independent visual editorial confirmation."
+  },
+  "review": {
+    "sourceVerified": false,
+    "mathVerified": true,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  },
+  "title": {
+    "en": "Verify Cartesian product distributes over union",
+    "ta": "சேர்ப்புக் கணத்தின் மீது கார்டீசியன் பெருக்கலின் பங்கீட்டுப் பண்பைச் சரிபார்த்தல்"
+  },
+  "questionParaphrase": {
+    "en": "For A={x∈W:x<2}, B={x∈N:1<x≤4}, C={3,5}, verify A×(B∪C)=(A×B)∪(A×C).",
+    "ta": "A={x∈W:x<2}, B={x∈N:1<x≤4}, C={3,5} எனில் A×(B∪C)=(A×B)∪(A×C) என்பதைச் சரிபார்க்கவும்."
+  },
+  "steps": [
+    {
+      "en": "List the members of the sets. W includes zero; N begins at one.",
+      "ta": "கணங்களின் உறுப்புகளை எழுதுக. முழு எண்கள் W-இல் பூச்சியம் உண்டு; இயல் எண்கள் N ஒன்று முதல் தொடங்குகின்றன.",
+      "equation": "A={0,1}; B={2,3,4}; C={3,5}"
+    },
+    {
+      "en": "Take the union of B and C, listing each element only once.",
+      "ta": "B மற்றும் C-இன் சேர்ப்புக் கணத்தைக் காண்க; ஒவ்வொரு உறுப்பையும் ஒருமுறை மட்டும் எழுதுக.",
+      "equation": "B∪C={2,3,4,5}"
+    },
+    {
+      "en": "Form the left-hand Cartesian product using both elements of A.",
+      "ta": "A-இன் இரு உறுப்புகளையும் கொண்டு இடப்பக்க கார்டீசியன் பெருக்கலைக் காண்க.",
+      "equation": "A×(B∪C)={(0,2),(0,3),(0,4),(0,5),(1,2),(1,3),(1,4),(1,5)}"
+    },
+    {
+      "en": "Form the two Cartesian products on the right separately.",
+      "ta": "வலப்பக்கத்தின் இரு கார்டீசியன் பெருக்கல்களையும் தனித்தனியாகக் காண்க.",
+      "equation": "A×B={(0,2),(0,3),(0,4),(1,2),(1,3),(1,4)}; A×C={(0,3),(0,5),(1,3),(1,5)}"
+    },
+    {
+      "en": "Their union contains eight distinct ordered pairs, exactly those on the left.",
+      "ta": "இவ்விரண்டின் சேர்ப்புக் கணத்தில் எட்டு வெவ்வேறு வரிசைச் சோடிகள் உள்ளன; அவை இடப்பக்கத்துடன் பொருந்துகின்றன.",
+      "equation": "(A×B)∪(A×C)={(0,2),(0,3),(0,4),(0,5),(1,2),(1,3),(1,4),(1,5)}"
+    },
+    {
+      "en": "In general, (a,y) lies in A×(B∪C) precisely when a∈A and (y∈B or y∈C), which is equivalent to membership in the union on the right.",
+      "ta": "பொதுவாக (a,y) என்பது A×(B∪C)-இல் இருக்க வேண்டுமெனில் a∈A மற்றும் y∈B அல்லது y∈C ஆக வேண்டும். இதுவே வலப்பக்கச் சேர்ப்புக் கணத்தில் உறுப்பாக இருப்பதற்குச் சமம்.",
+      "equation": "A×(B∪C)=(A×B)∪(A×C)"
+    }
+  ],
+  "answers": {
+    "A": [
+      0,
+      1
+    ],
+    "B": [
+      2,
+      3,
+      4
+    ],
+    "C": [
+      3,
+      5
+    ],
+    "BunionC": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "AxB": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    "AxC": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ]
+    ],
+    "left": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ]
+    ],
+    "right": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ]
+    ]
+  },
+  "misconception": {
+    "en": "Union does not repeat pairs: (0,3) and (1,3) each appear only once.",
+    "ta": "சேர்ப்புக் கணத்தில் ஒரே வரிசைச் சோடியை மீண்டும் எழுதக்கூடாது: (0,3), (1,3) ஆகியவை ஒவ்வொன்றும் ஒருமுறை மட்டுமே வரும்."
+  }
+}
