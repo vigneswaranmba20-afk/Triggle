@@ -4,14 +4,17 @@ const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '../..');
 const ledger = JSON.parse(fs.readFileSync(path.join(root, 'docs/coverage/grade-11-2025.json'), 'utf8'));
-const lessons = ['q1','q2','q3-i','q3-ii','q3-iii','q3-iv','q3-v','q4-i','q4-ii'].flatMap(suffix => JSON.parse(fs.readFileSync(path.join(root, 'site/data/textbook-exercises/g11-ch1-ex1-1-'+suffix+'.json'), 'utf8')).questions);
+const lessonDir = path.join(root, 'site/data/textbook-exercises');
+const lessonFiles = fs.readdirSync(lessonDir).filter(name => /^g11-ch1-ex1-1-q(?:1|2|3-[ivx]+|4-[ivx]+)\.json$/.test(name)).sort();
+assert.ok(lessonFiles.length > 0, 'no Grade 11 lesson files found');
+const lessons = lessonFiles.flatMap(name => JSON.parse(fs.readFileSync(path.join(lessonDir, name), 'utf8')).questions);
 assert.equal(ledger.grade, 11);
 assert.equal(ledger.edition, '2025 revised');
 assert.equal(ledger.inventoryComplete, false);
 assert.equal(ledger.exerciseQuestionSubpartTotal, null);
 assert.equal(ledger.chapters.length, 12);
 assert.deepEqual(ledger.chapters.map(c=>c.chapterId), Array.from({length:12},(_,i)=>'g11-ch'+(i+1)));
-assert.equal(lessons.length, 12);
+assert.equal(lessons.length, ledger.chapters[0].draftedSubparts, 'draft count must follow real lesson inventory');
 const ids = new Set();
 for (const item of ledger.items) {
  assert.ok(!ids.has(item.id), 'duplicate ledger ID: '+item.id);
@@ -24,14 +27,14 @@ for (const item of ledger.items) {
 }
 const drafted = ledger.items.filter(i=>i.status==='draft');
 assert.deepEqual(drafted.map(i=>i.id).sort(), lessons.map(q=>q.id).sort(), 'draft ledger and lesson IDs diverge');
-const blocked = ledger.items.find(i=>i.id==='g11-ch1-ex1.1-q4-iii');
-assert.ok(blocked, 'missing Q4(iii) inventory checkpoint');
+const blocked = ledger.items.find(i=>i.id==='g11-ch1-ex1.1-q4-v');
+assert.ok(blocked, 'missing Q4(v) inventory checkpoint');
 assert.equal(blocked.status,'missing-source-image-verification');
 assert.equal(blocked.mathChecked,false);
 assert.equal(blocked.ciPassed,false);
 assert.equal(blocked.merged,false);
 assert.equal(blocked.liveVerified,false);
-assert.equal(blocked.sourceCheckpoint,'docs/coverage/grade-11-ex1-1-q4-iii-source-checkpoint.json');
+assert.ok(!blocked.sourceCheckpoint, 'unverified Q4(v) must not claim a completed source checkpoint');
 for (const q of lessons) {
  const item=ledger.items.find(i=>i.id===q.id);
  assert.equal(q.source.page.en,item.englishPrintedPage);
