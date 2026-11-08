@@ -1,0 +1,683 @@
+{
+  "title": "Grade 9 Chapter 1 partial 2025 exercise inventory",
+  "source": "2025 revised English PDF pp.11–12 and Tamil PDF p.12; Q1–Q2 Tamil p.5 from earlier verified batches",
+  "scope": "Exercise 1.1 Q1–Q6 ONLY. Chapter-wide total UNKNOWN; do not infer completion from this partial list.",
+  "sourceVerifiedSubpartsInExercise1_1": 30,
+  "previouslyLiveVerified": 18,
+  "missingInExercise1_1": 10,
+  "chapterTotal": "UNKNOWN",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1.1-q1-i",
+      "exercise": "1.1",
+      "question": 1,
+      "section": null,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-ii",
+      "exercise": "1.1",
+      "question": 1,
+      "section": null,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-iii",
+      "exercise": "1.1",
+      "question": 1,
+      "section": null,
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-iv",
+      "exercise": "1.1",
+      "question": 1,
+      "section": null,
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-i",
+      "exercise": "1.1",
+      "question": 2,
+      "section": null,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-ii",
+      "exercise": "1.1",
+      "question": 2,
+      "section": null,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-iii",
+      "exercise": "1.1",
+      "question": 2,
+      "section": null,
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-iv",
+      "exercise": "1.1",
+      "question": 2,
+      "section": null,
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 5
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-i",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-ii",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-iii",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-iv",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-v",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "v",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-vi",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "a",
+      "part": "vi",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-i",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "b",
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-ii",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "b",
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-iii",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "b",
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-iv",
+      "exercise": "1.1",
+      "question": 3,
+      "section": "b",
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "previous CI passed on PR #36 for Q3; Q1-Q2 prior published",
+        "previewMerged": true,
+        "liveVerified": true,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-i",
+      "exercise": "1.1",
+      "question": 4,
+      "section": null,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "npm test passed in GitHub Actions run 42411085133; browser suite failed at existing 320px exercise viewport assertion (830px vs 900px), not passed",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending",
+        "browserTest": "failed: 320px exercise viewport assertion; see GitHub Actions 42411085133"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-ii",
+      "exercise": "1.1",
+      "question": 4,
+      "section": null,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": true,
+        "mathChecked": true,
+        "automatedTest": "npm test passed in GitHub Actions run 42411085133; browser suite failed at existing 320px exercise viewport assertion (830px vs 900px), not passed",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending",
+        "browserTest": "failed: 320px exercise viewport assertion; see GitHub Actions 42411085133"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-iii",
+      "exercise": "1.1",
+      "question": 4,
+      "section": null,
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": false,
+        "mathChecked": false,
+        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-iv",
+      "exercise": "1.1",
+      "question": 4,
+      "section": null,
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": false,
+        "mathChecked": false,
+        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-i",
+      "exercise": "1.1",
+      "question": 5,
+      "section": null,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": false,
+        "mathChecked": false,
+        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-ii",
+      "exercise": "1.1",
+      "question": 5,
+      "section": null,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": false,
+        "mathChecked": false,
+        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-iii",
+      "exercise": "1.1",
+      "question": 5,
+      "section": null,
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": false,
+        "mathChecked": false,
+        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-iv",
+      "exercise": "1.1",
+      "question": 5,
+      "section": null,
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 5,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": false,
+        "mathChecked": false,
+        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-i",
+      "exercise": "1.1",
+      "question": 6,
+      "section": null,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 6,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": false,
+        "mathChecked": false,
+        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-ii",
+      "exercise": "1.1",
+      "question": 6,
+      "section": null,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 6,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": false,
+        "mathChecked": false,
+        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-iii",
+      "exercise": "1.1",
+      "question": 6,
+      "section": null,
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 6,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": false,
+        "mathChecked": false,
+        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-iv",
+      "exercise": "1.1",
+      "question": 6,
+      "section": null,
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "printedPage": {
+          "en": 6,
+          "ta": 6
+        }
+      },
+      "status": {
+        "drafted": false,
+        "mathChecked": false,
+        "automatedTest": "not executed for Q4(i); missing otherwise",
+        "previewMerged": false,
+        "liveVerified": false,
+        "tamilEditorial": "pending"
+      }
+    }
+  ],
+  "draftedUnmergedQ4Subparts": 2,
+  "lastValidationEvidence": {
+    "runId": 42411085133,
+    "commit": "01f4e0a0bf7d9341120bd192f7503f18e8ec75a4",
+    "npmTest": "passed",
+    "browserTest": "failed",
+    "browserFailure": "Exercise viewport 830px while screen 900px at 320px; site/tools/test_curriculum_ui.cjs:266",
+    "next": "Fix viewport regression and integrate Q4(i–ii) into student Exercises UI; rerun full CI before merge",
+    "humanTamilEditorial": "pending"
+  }
+}

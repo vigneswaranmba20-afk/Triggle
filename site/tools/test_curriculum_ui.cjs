@@ -256,6 +256,11 @@ async function main() {
         assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),true);
         const dimensions=await page.evaluate(()=>({
           app:document.querySelector('.app-shell').getBoundingClientRect().height,
+          appCssHeight:getComputedStyle(document.querySelector('.app-shell')).height,
+          dynamicViewport:window.visualViewport?.height ?? null,
+          cssViewport:window.innerHeight,
+          focusStyleLoaded:[...document.styleSheets].some(sheet=>sheet.href?.includes('focus-navigation.css')),
+          focusRuleMatched:matchMedia('(max-width:800px)').matches,
           content:document.querySelector('.lesson-container').getBoundingClientRect().height,
           screen:window.innerHeight,
           position:getComputedStyle(document.querySelector('.page-controls')).position,
