@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "chapterId": "g9-ch1",
   "batch": "2026-11-07-ex1.1-q2",
-  "purpose": "Draft bilingual solutions; not integrated into student UI or editorially approved.",
+  "purpose": "Visually checked exact bilingual 2025 textbook prompts, original worked solutions; Tamil teacher editorial review pending.",
   "sourceAuthority": "User-uploaded 2025 revised English and Tamil Grade 9 textbooks, printed page 5.",
   "coverage": {
     "verifiedExerciseSubparts": 4,
@@ -22,13 +22,21 @@
         },
         "books": [
           "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
-          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
-        ]
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ],
+        "pdfPage": {
+          "en": 11,
+          "ta": 11
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        }
       },
       "word": "INDIA",
       "prompt": {
-        "en": "Write the set of letters in INDIA in roster form.",
-        "ta": "INDIA என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+        "en": "2. List the set of letters of the following words in Roster form.\n(i) INDIA",
+        "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(i) INDIA"
       },
       "answer": {
         "en": "{I, N, D, A}",
@@ -54,6 +62,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json"
       }
     },
     {
@@ -69,13 +81,21 @@
         },
         "books": [
           "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
-          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
-        ]
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ],
+        "pdfPage": {
+          "en": 11,
+          "ta": 11
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        }
       },
       "word": "PARALLELOGRAM",
       "prompt": {
-        "en": "Write the set of letters in PARALLELOGRAM in roster form.",
-        "ta": "PARALLELOGRAM என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+        "en": "2. List the set of letters of the following words in Roster form.\n(ii) PARALLELOGRAM",
+        "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(ii) PARALLELOGRAM"
       },
       "answer": {
         "en": "{P, A, R, L, E, O, G, M}",
@@ -101,6 +121,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json"
       }
     },
     {
@@ -116,13 +140,21 @@
         },
         "books": [
           "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
-          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
-        ]
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ],
+        "pdfPage": {
+          "en": 11,
+          "ta": 11
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        }
       },
       "word": "MISSISSIPPI",
       "prompt": {
-        "en": "Write the set of letters in MISSISSIPPI in roster form.",
-        "ta": "MISSISSIPPI என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+        "en": "2. List the set of letters of the following words in Roster form.\n(iii) MISSISSIPPI",
+        "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(iii) MISSISSIPPI"
       },
       "answer": {
         "en": "{M, I, S, P}",
@@ -148,6 +180,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json"
       }
     },
     {
@@ -163,13 +199,21 @@
         },
         "books": [
           "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
-          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
-        ]
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ],
+        "pdfPage": {
+          "en": 11,
+          "ta": 11
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        }
       },
       "word": "CZECHOSLOVAKIA",
       "prompt": {
-        "en": "Write the set of letters in CZECHOSLOVAKIA in roster form.",
-        "ta": "CZECHOSLOVAKIA என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+        "en": "2. List the set of letters of the following words in Roster form.\n(iv) CZECHOSLOVAKIA",
+        "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(iv) CZECHOSLOVAKIA"
       },
       "answer": {
         "en": "{C, Z, E, H, O, S, L, V, A, K, I}",
@@ -195,6 +239,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json"
       }
     }
   ]

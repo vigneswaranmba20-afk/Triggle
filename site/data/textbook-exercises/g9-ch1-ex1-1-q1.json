@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "chapterId": "g9-ch1",
   "batch": "2026-11-07-ex1.1-q1",
-  "purpose": "Draft bilingual textbook-aligned worked solutions; NOT yet integrated into the student UI or editorially approved.",
+  "purpose": "Visually checked exact bilingual 2025 textbook prompts, original worked solutions; Tamil teacher editorial review pending.",
   "sourceAuthority": "User-uploaded 2025 revised Grade 9 EN and TA textbooks; printed page 5 in both.",
   "coverage": {
     "verifiedExerciseSubparts": 4,
@@ -23,12 +23,20 @@
         },
         "books": [
           "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
-          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
-        ]
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ],
+        "pdfPage": {
+          "en": 11,
+          "ta": 11
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        }
       },
       "prompt": {
-        "en": "Determine whether the collection is a well-defined set: Prime numbers from 1 through 100.",
-        "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: 1 முதல் 100 வரையுள்ள பகா எண்கள்."
+        "en": "1. Which of the following are sets?\n(i) The collection of prime numbers upto 100.",
+        "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(i) ஒன்று முதல் 100 வரையுள்ள பகா எண்களின் தொகுப்பு."
       },
       "answer": {
         "en": "set",
@@ -54,6 +62,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json"
       }
     },
     {
@@ -69,12 +81,20 @@
         },
         "books": [
           "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
-          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
-        ]
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ],
+        "pdfPage": {
+          "en": 11,
+          "ta": 11
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        }
       },
       "prompt": {
-        "en": "Determine whether the collection is a well-defined set: Rich people in India.",
-        "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: இந்தியாவில் உள்ள செல்வந்தர்கள்."
+        "en": "1. Which of the following are sets?\n(ii) The collection of rich people in India.",
+        "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(ii) இந்தியாவில் உள்ள செல்வந்தர்களின் தொகுப்பு."
       },
       "answer": {
         "en": "not a set",
@@ -100,6 +120,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json"
       }
     },
     {
@@ -115,12 +139,20 @@
         },
         "books": [
           "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
-          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
-        ]
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ],
+        "pdfPage": {
+          "en": 11,
+          "ta": 11
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        }
       },
       "prompt": {
-        "en": "Determine whether the collection is a well-defined set: Rivers in India.",
-        "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: இந்தியாவில் உள்ள ஆறுகள்."
+        "en": "1. Which of the following are sets?\n(iii) The collection of all rivers in India.",
+        "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(iii) இந்தியாவில் உள்ள ஆறுகளின் தொகுப்பு."
       },
       "answer": {
         "en": "set",
@@ -146,6 +178,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json"
       }
     },
     {
@@ -161,12 +197,20 @@
         },
         "books": [
           "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
-          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf"
-        ]
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ],
+        "pdfPage": {
+          "en": 11,
+          "ta": 11
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        }
       },
       "prompt": {
-        "en": "Determine whether the collection is a well-defined set: Good hockey players.",
-        "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: வளைகோல் பந்தாட்டத்தை நன்றாக விளையாடும் வீரர்கள்."
+        "en": "1. Which of the following are sets?\n(iv) The collection of good Hockey players.",
+        "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(iv) வளைகோல் பந்தாட்டத்தை நன்றாக விளையாடும் வீரர்களின் தொகுப்பு."
       },
       "answer": {
         "en": "not a set",
@@ -192,6 +236,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json"
       }
     }
   ]

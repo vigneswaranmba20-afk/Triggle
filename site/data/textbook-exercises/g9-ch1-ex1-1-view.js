@@ -22,8 +22,8 @@
       "ta": "தெளிவாக வரையறுக்கப்பட்ட தொகுப்புகள்"
     },
     "q": {
-      "en": "Determine whether the collection is a well-defined set: Prime numbers from 1 through 100.",
-      "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: 1 முதல் 100 வரையுள்ள பகா எண்கள்."
+      "en": "1. Which of the following are sets?\n(i) The collection of prime numbers upto 100.",
+      "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(i) ஒன்று முதல் 100 வரையுள்ள பகா எண்களின் தொகுப்பு."
     },
     "steps": [
       {
@@ -45,12 +45,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, printed p. 5",
+    "reference": "2025 revised Grade 9 EN/TA, Exercise 1.1, printed p. 5; source wording visually checked",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "not-integrated",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 11
+      }
     }
   },
   {
@@ -71,8 +79,8 @@
       "ta": "தெளிவாக வரையறுக்கப்பட்ட தொகுப்புகள்"
     },
     "q": {
-      "en": "Determine whether the collection is a well-defined set: Rich people in India.",
-      "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: இந்தியாவில் உள்ள செல்வந்தர்கள்."
+      "en": "1. Which of the following are sets?\n(ii) The collection of rich people in India.",
+      "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(ii) இந்தியாவில் உள்ள செல்வந்தர்களின் தொகுப்பு."
     },
     "steps": [
       {
@@ -94,12 +102,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, printed p. 5",
+    "reference": "2025 revised Grade 9 EN/TA, Exercise 1.1, printed p. 5; source wording visually checked",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "not-integrated",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 11
+      }
     }
   },
   {
@@ -120,8 +136,8 @@
       "ta": "தெளிவாக வரையறுக்கப்பட்ட தொகுப்புகள்"
     },
     "q": {
-      "en": "Determine whether the collection is a well-defined set: Rivers in India.",
-      "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: இந்தியாவில் உள்ள ஆறுகள்."
+      "en": "1. Which of the following are sets?\n(iii) The collection of all rivers in India.",
+      "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(iii) இந்தியாவில் உள்ள ஆறுகளின் தொகுப்பு."
     },
     "steps": [
       {
@@ -143,12 +159,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, printed p. 5",
+    "reference": "2025 revised Grade 9 EN/TA, Exercise 1.1, printed p. 5; source wording visually checked",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "not-integrated",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 11
+      }
     }
   },
   {
@@ -169,8 +193,8 @@
       "ta": "தெளிவாக வரையறுக்கப்பட்ட தொகுப்புகள்"
     },
     "q": {
-      "en": "Determine whether the collection is a well-defined set: Good hockey players.",
-      "ta": "பின்வரும் தொகுப்பு தெளிவாக வரையறுக்கப்பட்ட கணமா எனத் தீர்மானிக்கவும்: வளைகோல் பந்தாட்டத்தை நன்றாக விளையாடும் வீரர்கள்."
+      "en": "1. Which of the following are sets?\n(iv) The collection of good Hockey players.",
+      "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(iv) வளைகோல் பந்தாட்டத்தை நன்றாக விளையாடும் வீரர்களின் தொகுப்பு."
     },
     "steps": [
       {
@@ -192,12 +216,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, printed p. 5",
+    "reference": "2025 revised Grade 9 EN/TA, Exercise 1.1, printed p. 5; source wording visually checked",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "not-integrated",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 11
+      }
     }
   },
   {
@@ -218,8 +250,8 @@
       "ta": "எழுத்துகளின் பட்டியல் முறை"
     },
     "q": {
-      "en": "Write the set of letters in INDIA in roster form.",
-      "ta": "INDIA என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+      "en": "2. List the set of letters of the following words in Roster form.\n(i) INDIA",
+      "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(i) INDIA"
     },
     "steps": [
       {
@@ -241,12 +273,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, printed p. 5",
+    "reference": "2025 revised Grade 9 EN/TA, Exercise 1.1, printed p. 5; source wording visually checked",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "not-integrated",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 11
+      }
     }
   },
   {
@@ -267,8 +307,8 @@
       "ta": "எழுத்துகளின் பட்டியல் முறை"
     },
     "q": {
-      "en": "Write the set of letters in PARALLELOGRAM in roster form.",
-      "ta": "PARALLELOGRAM என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+      "en": "2. List the set of letters of the following words in Roster form.\n(ii) PARALLELOGRAM",
+      "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(ii) PARALLELOGRAM"
     },
     "steps": [
       {
@@ -290,12 +330,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, printed p. 5",
+    "reference": "2025 revised Grade 9 EN/TA, Exercise 1.1, printed p. 5; source wording visually checked",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "not-integrated",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 11
+      }
     }
   },
   {
@@ -316,8 +364,8 @@
       "ta": "எழுத்துகளின் பட்டியல் முறை"
     },
     "q": {
-      "en": "Write the set of letters in MISSISSIPPI in roster form.",
-      "ta": "MISSISSIPPI என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+      "en": "2. List the set of letters of the following words in Roster form.\n(iii) MISSISSIPPI",
+      "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(iii) MISSISSIPPI"
     },
     "steps": [
       {
@@ -339,12 +387,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, printed p. 5",
+    "reference": "2025 revised Grade 9 EN/TA, Exercise 1.1, printed p. 5; source wording visually checked",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "not-integrated",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 11
+      }
     }
   },
   {
@@ -365,8 +421,8 @@
       "ta": "எழுத்துகளின் பட்டியல் முறை"
     },
     "q": {
-      "en": "Write the set of letters in CZECHOSLOVAKIA in roster form.",
-      "ta": "CZECHOSLOVAKIA என்ற ஆங்கிலச் சொல்லில் உள்ள எழுத்துகளின் கணத்தைப் பட்டியல் முறையில் எழுதுக."
+      "en": "2. List the set of letters of the following words in Roster form.\n(iv) CZECHOSLOVAKIA",
+      "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(iv) CZECHOSLOVAKIA"
     },
     "steps": [
       {
@@ -388,12 +444,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, printed p. 5",
+    "reference": "2025 revised Grade 9 EN/TA, Exercise 1.1, printed p. 5; source wording visually checked",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "not-integrated",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q1-q2.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 11
+      }
     }
   },
   {

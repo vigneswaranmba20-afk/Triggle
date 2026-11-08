@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "scope": "Grade 9, Set Language, Exercise 1.1 Questions 1–2",
+  "edition": "2025 revised",
+  "reviewedOn": "2026-11-08",
+  "verification": "Original PDF page images were visually inspected in English and Tamil (not OCR or copy/paste alone).",
+  "source": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 5,
+      "pdfPage": 11
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 5,
+      "pdfPage": 11
+    }
+  },
+  "note": "Textbook question stems and subparts are transcribed; solutions are Triggle-authored. Independent Tamil editorial certification remains pending.",
+  "items": [
+    {
+      "id": "g9-ch1-ex1.1-q1-i",
+      "questionNumber": 1,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "1. Which of the following are sets?\n(i) The collection of prime numbers upto 100.",
+        "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(i) ஒன்று முதல் 100 வரையுள்ள பகா எண்களின் தொகுப்பு."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 5,
+          "pdf": 11
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-ii",
+      "questionNumber": 1,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "1. Which of the following are sets?\n(ii) The collection of rich people in India.",
+        "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(ii) இந்தியாவில் உள்ள செல்வந்தர்களின் தொகுப்பு."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 5,
+          "pdf": 11
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-iii",
+      "questionNumber": 1,
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "1. Which of the following are sets?\n(iii) The collection of all rivers in India.",
+        "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(iii) இந்தியாவில் உள்ள ஆறுகளின் தொகுப்பு."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 5,
+          "pdf": 11
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-iv",
+      "questionNumber": 1,
+      "part": "iv",
+      "textbookPrompt": {
+        "en": "1. Which of the following are sets?\n(iv) The collection of good Hockey players.",
+        "ta": "1. பின்வருவனவற்றில் எவை கணங்களாகும்?\n(iv) வளைகோல் பந்தாட்டத்தை நன்றாக விளையாடும் வீரர்களின் தொகுப்பு."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 5,
+          "pdf": 11
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-i",
+      "questionNumber": 2,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "2. List the set of letters of the following words in Roster form.\n(i) INDIA",
+        "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(i) INDIA"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 5,
+          "pdf": 11
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-ii",
+      "questionNumber": 2,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "2. List the set of letters of the following words in Roster form.\n(ii) PARALLELOGRAM",
+        "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(ii) PARALLELOGRAM"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 5,
+          "pdf": 11
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-iii",
+      "questionNumber": 2,
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "2. List the set of letters of the following words in Roster form.\n(iii) MISSISSIPPI",
+        "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(iii) MISSISSIPPI"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 5,
+          "pdf": 11
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-iv",
+      "questionNumber": 2,
+      "part": "iv",
+      "textbookPrompt": {
+        "en": "2. List the set of letters of the following words in Roster form.\n(iv) CZECHOSLOVAKIA",
+        "ta": "2. பின்வரும் ஆங்கிலச் சொற்களிலுள்ள எழுத்துகளைப் பட்டியல் முறையில் எழுதுக.\n(iv) CZECHOSLOVAKIA"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 5,
+          "pdf": 11
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    }
+  ]
+}
