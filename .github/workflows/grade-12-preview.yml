@@ -30,5 +30,7 @@ jobs:
             node "$test"
           done
       - run: npx playwright install --with-deps chromium
+      - name: Grade 12 mobile bilingual keyboard and offline browser tests
+        run: node site/tools/test_grade12_browser.cjs
       - name: Shared mobile keyboard and offline browser regressions
         run: npm run test:browser
