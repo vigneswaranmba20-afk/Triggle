@@ -14,16 +14,29 @@ const item={id:'g9-ch2-example-12'};
 for(const lang of ['en','ta']){
  const v=get(item,lang);
  assert.ok(v,lang+' view missing');
- assert.equal((v.question.match(/class="twd-question-part"/g)||[]).length,4,lang+' four separate question parts');
+ assert.equal((v.question.match(/class="twd-question-part"/g)||[]).length,0,lang+' introduction must not bury four questions before their answers');
+ assert.equal((v.pinnedQuestion.match(/class="twd-question-part"/g)||[]).length,4,lang+' detailed view keeps all four questions');
+ assert.equal((v.steps.match(/class="twd-question-part"/g)||[]).length,4,lang+' each question appears beside its solution');
  assert.equal((v.steps.match(/class="worked-step twd-worked-step"/g)||[]).length,4,lang+' four authored parts with reasoning');
  assert.equal((v.answer.match(/class="twd-final-row"/g)||[]).length,4,lang+' four scan-friendly answers');
  assert.equal((v.steps.match(/data-variable="x"/g)||[]).length,4,lang+' x solved separately');
  assert.equal((v.steps.match(/data-variable="y"/g)||[]).length,4,lang+' y solved separately');
  assert.equal((v.answer.match(/class="twd-final-value"/g)||[]).length,8,lang+' eight final values');
- assert.ok(v.question.includes('display="block"'),lang+' correct display-style MathML for given values');
+ assert.ok(v.steps.includes('display="block"'),lang+' correct display-style MathML for given values');
  assert.ok(v.steps.includes('<msqrt>')&&v.steps.includes('<mfrac>'),lang+' roots and stacked fractions are genuine MathML');
  assert.ok(!v.question.includes('src=')&&!v.answer.includes('onclick='),lang+' presentation uses controlled markup only');
- assert.ok(v.question.indexOf('data-worked-part="i"')<v.question.indexOf('data-worked-part="iv"'),'textbook order preserved');
+ assert.ok(v.steps.indexOf('data-worked-part="i"')<v.steps.indexOf('data-worked-part="iv"'),'textbook order preserved');
+ const markers=['i','ii','iii','iv'];
+ for(let i=0;i<markers.length;i++){
+  const marker=markers[i],start=v.steps.indexOf('data-worked-question="'+marker+'"'),
+     solution=v.steps.indexOf((lang==='ta'?'விடை (':'Answer (')+marker+')');
+  assert.ok(start>=0 && solution>start,lang+' question '+marker+' must precede its answer');
+  if(i<markers.length-1){
+    const next=v.steps.indexOf('data-worked-question="'+markers[i+1]+'"');
+    assert.ok(next>solution,lang+' answer '+marker+' must be before question '+markers[i+1]);
+  }
+ }
+ assert.equal((v.steps.match(/class="twd-question-answer-pair"/g)||[]).length,4,lang+' four explicit question-answer pairs');
  assert.ok(v.steps.includes('twd-rational')&&v.steps.includes('twd-irrational'),lang+' classify both rational and irrational values');
  if(lang==='ta'){
   assert.match(v.question,/விகிதமுறு/);
@@ -56,4 +69,7 @@ assert.ok(sw.includes('./assets/worked-example-display.js'),'Display module avai
 assert.ok(app.includes("window.TriggleWorkedDisplay?.get(current,lang)"),'Main app invokes authored display via shared hook');
 assert.ok(app.includes("if(authored){")&&app.includes("'twd-lesson'"),'Authored layout only when supported');
 assert.ok(css.includes('.twd-question-parts')&&css.includes('.twd-derivations')&&css.includes('.twd-final-values'),'Spacing classes exist');
-console.log('PASS: rich bilingual Worked Example 2.12, 4 parts, 8 conclusions, offline hook and independent identities');
+assert.ok(app.includes("'answerBox').hidden=true"),'The repeated summary must be hidden after paired solutions');
+assert.ok(app.includes("?.pinnedQuestion||math(tr(current.q))"),'Detailed view keeps the original complete question');
+assert.ok(css.includes('.twd-question-answer-pair'),'Paired question-answer styles must exist');
+console.log('PASS: rich bilingual Worked Example 2.12, 4 question-answer pairs, 8 conclusions, offline hook and independent identities');

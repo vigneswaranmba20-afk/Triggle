@@ -332,11 +332,13 @@
   $('questionText').classList.toggle('twd-question',!!authored);
   $('answerText').classList.toggle('twd-answer',!!authored);
   if(authored){
+   // Each subquestion and its final answer are now paired in reading order.
+   // Don't repeat all answers at the bottom of the page.
    $('stepsList').innerHTML=authored.steps;
-   $('answerBox').hidden=false;
+   $('answerBox').hidden=true;
    $('stepCount').textContent=lang==='ta'?current.steps.length+' பகுதிகள்':current.steps.length+' parts';
    $('answerText').classList.remove('answer-grid','answer-grid-many');
-   $('answerText').innerHTML=authored.answer;
+   $('answerText').replaceChildren();
    $('lessonCard').classList.toggle('many-steps',true);
    return;
   }
@@ -403,7 +405,7 @@
   if(!deepStageData?.stages?.length)return;
   $('guidedClass').textContent=ui('class')+' '+grade;
   $('guidedQuestionLabel').textContent=tr(current.label);
-  $('guidedQuestion').innerHTML=window.TriggleWorkedDisplay?.get(current,lang)?.question||math(tr(current.q));
+  $('guidedQuestion').innerHTML=window.TriggleWorkedDisplay?.get(current,lang)?.pinnedQuestion||math(tr(current.q));
   $('deepQuestionDock').scrollTop=0;
   $('deepSourceStatus').textContent=deepStageData.reviewed?(lang==='ta'?'விரிவான பாடம்':'CONCEPT LESSON'):(lang==='ta'?'தீர்வு வழிமுறை':'WORKED-PATH GUIDE');
   const start=Number.isInteger(stageNumber)?stageNumber:(deepResume[current.id]||0);

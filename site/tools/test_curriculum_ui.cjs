@@ -539,13 +539,18 @@ async function main() {
         await page.locator('.hub-question').nth(11).click();
         assert.match(await page.locator('#questionHead').innerText(),/Example 2\.12/);
         assert.equal(await page.locator('#lessonCard.twd-lesson').count(),1,'Authored example layout enabled');
-        assert.equal(await page.locator('#questionText .twd-question-part').count(),4,'Four question subparts shown');
+        assert.equal(await page.locator('#questionText .twd-question-part').count(),0,'Do not show all questions before their answers');
+        assert.equal(await page.locator('#stepsList .twd-question-part').count(),4,'Four question subparts each paired with an answer');
         assert.equal(await page.locator('#stepsList > li.twd-worked-step').count(),4,'Four worked subparts visible without expansion');
         assert.equal(await page.locator('#stepsList [data-variable="x"]').count(),4);
         assert.equal(await page.locator('#stepsList [data-variable="y"]').count(),4);
-        assert.equal(await page.locator('#answerText .twd-final-row').count(),4);
-        assert.equal(await page.locator('#answerText .twd-kind').count(),8);
-        assert.equal(await page.locator('#stepsList math[display="block"]').count(),16,'Each variable has a calculation and simplified result');
+        assert.equal(await page.locator('#answerText .twd-final-row').count(),0,'No duplicate final answer summary');
+        assert.equal(await page.locator('#answerBox').isVisible(),false,'Answers stay directly beneath the corresponding questions');
+        assert.equal(await page.locator('#stepsList .twd-kind').count(),8,'All eight rationality classifications stay beside their calculations');
+        assert.equal(await page.locator('#stepsList math[display="block"]').count(),32,'Each of four questions has four question expressions and four answer expressions');
+        const paired=await page.locator('#stepsList > li.twd-worked-step').evaluateAll(items=>items.map(li=>({question:li.querySelector('.twd-question-part')?.getAttribute('data-worked-question'),answer:li.querySelector('.twd-part-solution')?.getAttribute('aria-label'),order:!!(li.querySelector('.twd-question-part')?.compareDocumentPosition(li.querySelector('.twd-part-solution'))&Node.DOCUMENT_POSITION_FOLLOWING)})));
+        assert.deepEqual(paired.map(x=>x.question),['i','ii','iii','iv']);
+        assert.ok(paired.every(x=>x.order&&x.answer?.startsWith('Answer')),'Each question must come immediately before its own answer: '+JSON.stringify(paired));
         assert.ok(await page.locator('#stepsList math mfrac').count()>=2,'Quotients use real stacked fractions');
         const equation=await page.locator('#stepsList .twd-calculation .twd-math').first().evaluate(el=>{
           const eq=el.getBoundingClientRect(),parent=el.closest('.twd-display-equation').getBoundingClientRect();
@@ -560,9 +565,11 @@ async function main() {
           assert.equal(await page.locator('#guidedQuestion .twd-question-part').count(),4,'Pinned question remains readable in Detailed explanation');
           await page.locator('#closeGuided').click();
           await page.locator('#langTa').click();
-          assert.equal(await page.locator('#questionText .twd-question-part').count(),4);
+          assert.equal(await page.locator('#questionText .twd-question-part').count(),0);
+          assert.equal(await page.locator('#stepsList .twd-question-part').count(),4);
           assert.match(await page.locator('#stepsList').innerText(),/விகிதமுறு/);
-          assert.equal(await page.locator('#answerText .twd-final-row').count(),4);
+          assert.equal(await page.locator('#answerText .twd-final-row').count(),0);
+          assert.equal(await page.locator('#stepsList .twd-part-solution').count(),4);
           await noOverflow(page,'Example 2.12 Tamil worked example at 390px');
           await page.locator('#questionReturnBtn').click();
           await page.locator('.hub-question').nth(10).click();
