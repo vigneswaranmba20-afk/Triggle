@@ -187,7 +187,7 @@
     "grade12Run": 42446360731,
     "sharedRun": 42446360750,
     "nextSourceItem": "Chapter 1 Exercise 1.1 Q1(iii), exact English/Tamil matrix not yet source checked",
-    "branchBehindMainAtCheckpoint": 56,
+    "branchBehindMainAtCheckpoint": 58,
     "latestBrowserRegression": {
       "run": 42450109801,
       "commit": "ac25e7ca99fcb60c2865c0634558cf78bd2ef214",
@@ -195,7 +195,11 @@
       "failedStep": "Grade 12 mobile bilingual keyboard and offline browser tests",
       "observed": "Expected C12 = -1 × 3 = -3, received C11 = 1 × 1 = 1 after selecting column 2; npm test, math contracts and Chromium installation passed.",
       "diagnosticCommit": "473a3271f111d348dc90e92bfe751ce9ba3c7ae6",
-      "nextAction": "Inspect next workflow log for selected-column inputValue assertion. If selection is correct but result remains C11, repair cofactor UI handler and rerun full CI; do not merge."
+      "nextAction": "Commit 9573c72 refreshes cofactor output immediately on row/column changes; commit 609e42f adds mobile browser assertions for C12 and C31 immediate updates. Await latest CI; inspect failure logs, repair, rerun; no merge until all gates pass.",
+      "remediationCommits": [
+        "9573c721187059ae20d7f102fd7c98391f580f31",
+        "609e42f9aff19155069e7e193edd3a526ba0633d"
+      ]
     }
   }
 }
