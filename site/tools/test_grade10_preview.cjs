@@ -23,6 +23,14 @@ assert.match(html,/q\.review\?\.sourceVerified===true/);
 assert.match(html,/q\.review\?\.mathVerified===true/);
 assert.doesNotMatch(html,/q\.review\?\.merged===false/);
 assert.match(html,/Array\.isArray\(q\.steps\)/);
+assert.match(html,/q\.chapter===1/);
+assert.match(html,/q\.exercise==='1\.1'/);
+assert.match(html,/q\.source\?\.edition==='2025 revised'/);
+assert.match(html,/Number\.isInteger\(q\.source\?\.english\?\.pdfPage\)/);
+assert.match(html,/\['AxB','AxA','BxA'\]\.every/);
+assert.match(html,/className='pair-grid'/);
+assert.match(html,/setAttribute\('role','list'\)/);
+assert.match(html,/setAttribute\('role','listitem'\)/);
 assert.match(html,/errorText\[lang\]/);
 assert.match(html,/பாடங்களை மீண்டும் ஏற்றுக/);
 assert.match(html,/textContent=text/);
@@ -40,6 +48,13 @@ for(const id of ids){
  assert.equal(q.review.merged,false);assert.equal(q.review.liveVerified,false);
  assert.ok(ledger.chapters[0].verifiedQuestionSubparts.includes('1('+q.subpart+')'));
  assert.equal(q.steps.length,4);
+ const A=q.subpart==='i'?[2,-2,3]:['p','q'];
+ const B=q.subpart==='i'?[1,-4]:['p','q'];
+ const cart=(left,right)=>left.flatMap(a=>right.map(b=>[a,b]));
+ for(const [key,expected] of Object.entries({AxB:cart(A,B),AxA:cart(A,A),BxA:cart(B,A)})){
+  assert.deepEqual(q.answers[key],expected,`${id} ${key} must enumerate every ordered pair exactly once`);
+  assert.equal(new Set(q.answers[key].map(pair=>JSON.stringify(pair))).size,expected.length);
+ }
  for(const s of q.steps){assert.ok(s.en&&s.ta&&s.equation);}
  for(const lang of ['english','tamil']){assert.equal(q.source[lang].printedPage,6);assert.equal(q.source[lang].pdfPage,12);}
 }
