@@ -697,3 +697,38 @@
  .deep-question-copy small{font-size:11.5px}
 }
 @media(prefers-reduced-motion:reduce){.deep-question-chevron{transition:none}}
+
+/* Persistent question reference: always visible; only the learning stage scrolls. */
+.deep-question-dock{
+ box-sizing:border-box;flex:0 0 auto;min-height:0;
+ width:min(calc(100% - 36px),795px);max-height:min(27dvh,230px);
+ margin:9px auto 0;padding:10px 15px 12px;
+ border:2px solid #cbb9ef;border-radius:16px;background:#f4eefe;
+ box-shadow:0 3px 13px #65459b10;
+ overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;
+ scrollbar-width:thin;scrollbar-color:#bda9e5 transparent;
+}
+.deep-question-dock-label{
+ position:sticky;top:-10px;z-index:1;display:flex;gap:9px;
+ align-items:center;padding:0 0 8px;background:#f4eefe;
+ color:#392565;font-weight:900;font-size:13px;
+}
+.deep-question-dock-label .deep-question-icon{width:28px;height:28px;border-radius:9px;font-size:16px}
+.deep-question-dock .guided-question{
+ margin:0;padding:9px 12px;border:0;border-left:4px solid #a589dd;
+ border-radius:10px;background:#fff;font-size:clamp(14px,2.5vw,17px);
+ font-weight:650;line-height:1.46;color:#363052;overflow-wrap:anywhere;
+}
+.deep-question-dock:focus-visible{outline:3px solid #a989ed;outline-offset:-3px}
+.deep-shell .guided-scroll{flex:1 1 auto;min-height:0;overflow-y:auto}
+@media(max-width:540px){
+ .deep-question-dock{width:auto;align-self:stretch;margin:7px 11px 0;padding:8px 10px 10px;max-height:min(27dvh,205px)}
+ .deep-question-dock-label{top:-8px;font-size:12px;padding-bottom:6px}
+ .deep-question-dock-label .deep-question-icon{width:24px;height:24px;font-size:14px}
+ .deep-question-dock .guided-question{font-size:14px;line-height:1.43;padding:8px 10px}
+ .deep-inner{padding-top:12px}
+}
+@media(max-height:560px){
+ .deep-question-dock{max-height:23dvh}
+ .deep-inner{padding-top:9px}
+}
