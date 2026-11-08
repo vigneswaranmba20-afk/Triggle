@@ -36,7 +36,7 @@
       selectQuestion:'Choose an exercise',group:'Exercise group',jumpConcept:'Open a concept',lab:'Venn diagram lab',
       existingExamples:'Some worked examples are available',noPublished:'Complete chapter review is still pending',
        exampleWordingNote:'Textbook wording audit: Chapter 1 worked examples are currently restated, not verified word-for-word 2025 textbook questions. Solutions are authored separately.',
-       exerciseCoverageNote:(count)=>`Exercise 1.1 · ${count} of 30 textbook subparts available. Questions 5–6 (8 subparts) and Exercises 1.2–1.7 are pending. Exercise 1.1 Questions 1–4 follow the source-checked 2025 book; independent Tamil editorial review remains pending.`
+       exerciseCoverageNote:(count)=>`Exercise 1.1 · ${count} of 30 textbook subparts available. All 30 Exercise 1.1 subparts follow the source-checked 2025 EN/Tamil textbook pages. Exercises 1.2–1.7 still require textbook comparison. Independent Tamil editorial review remains pending.`
     },
     ta:{
       eyebrow:'உங்கள் அத்தியாயம்',choose:'நீங்கள் எதைக் கற்க விரும்புகிறீர்கள்?',
@@ -69,7 +69,7 @@
       selectQuestion:'ஒரு வினாவைத் தேர்ந்தெடுக்கவும்',group:'பயிற்சித் தொகுதி',jumpConcept:'கருத்தைப் படிக்கவும்',lab:'வென் பட ஆய்வகம்',
       existingExamples:'சில தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் உள்ளன',noPublished:'முழு அத்தியாய மீளாய்வு இன்னும் முடியவில்லை',
        exampleWordingNote:'பாடநூல் ஒப்பீடு நிலுவையில் உள்ளது: முதல் அத்தியாய எடுத்துக்காட்டு வினாக்கள் சில மாற்றிச் சொல்லப்பட்டுள்ளன. 2025 பாடநூலின் சொற்சொல்லான பதிப்பாகச் சான்றளிக்கப்படவில்லை.',
-       exerciseCoverageNote:(count)=>`பயிற்சி 1.1 · மொத்தம் 30 துணை வினாக்களில் ${count} மட்டுமே உள்ளன. வினாக்கள் 5–6 (8 துணை வினாக்கள்) மற்றும் பயிற்சிகள் 1.2–1.7 இன்னும் சேர்க்கப்படவில்லை. பயிற்சி 1.1 வினாக்கள் 1–4 பாடநூலுடன் சரிபார்க்கப்பட்டன; தமிழ் ஆசிரியரின் மீளாய்வு நிலுவையில் உள்ளது.`
+       exerciseCoverageNote:(count)=>`பயிற்சி 1.1 · மொத்தம் 30 துணை வினாக்களில் ${count} மட்டுமே உள்ளன. பயிற்சி 1.1-இன் 30 துணை வினாக்களும் 2025 ஆங்கிலம் மற்றும் தமிழ் பாடநூலுடன் ஒப்பிடப்பட்டுள்ளன. பயிற்சிகள் 1.2–1.7 சரிபார்க்கப்பட வேண்டும். தமிழ் ஆசிரியரின் மீளாய்வு இன்னும் நிலுவையில் உள்ளது.`
     }
   };
   const baseKinds=['concepts','examples','exercises','quizzes'];
