@@ -153,6 +153,26 @@ window.TRIGGLE_CURRICULUM = {
       "url": "https://www.textbookcorp.in/files/PRICELIST.pdf",
       "verification": "verified",
       "evidence": "Official Corporation catalogue inspected. Confirms Mathematics Tamil-medium availability in Grades9–12; does not verify Tamil terminology or chapter lists. Publisher homepage https://www.textbookcorp.in/ identifies Government of Tamil Nadu ownership. Accessed 2026-11-06."
+    },
+    {
+      "id": "tn-g9-en-2025-drive",
+      "publisher": "Tamil Nadu Textbook and Educational Services Corporation",
+      "title": "Standard Nine Mathematics (2025 Revised Edition)",
+      "medium": "en",
+      "edition": "Revised 2025",
+      "url": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+      "verification": "verified",
+      "evidence": "2025 edition imprint and 31 Chapter 2 examples and Exercises 2.1–2.9 directly checked from connected Google Drive, 2026-11-08; full question-by-question independent editorial review pending."
+    },
+    {
+      "id": "tn-g9-ta-2025-drive",
+      "publisher": "Tamil Nadu Textbook and Educational Services Corporation",
+      "title": "ஒன்பதாம் வகுப்பு கணிதம் (2025 திருத்திய பதிப்பு)",
+      "medium": "ta",
+      "edition": "Revised 2025",
+      "url": "https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view",
+      "verification": "verified",
+      "evidence": "2025 edition imprint, section/exercise numbering and matching Tamil terminology directly checked in connected Google Drive, 2026-11-08; independent complete Tamil editorial review remains pending."
     }
   ],
   "grades": [
@@ -208,15 +228,15 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g9-en-2019",
-              "locator": "Contents pp iii–iv; chapter 2, printed p41"
+              "sourceId": "tn-g9-en-2025-drive",
+              "locator": "Chapter 2 Real Numbers, printed pages 41–76; Examples 2.1–2.31, Exercises 2.1–2.9"
             },
             {
-              "sourceId": "tn-g9-ta-2019",
-              "locator": "Contents pp iii–iv; chapter 2, printed p43"
+              "sourceId": "tn-g9-ta-2025-drive",
+              "locator": "அத்தியாயம் 2 மெய்யெண்கள், அச்சுப் பக்கங்கள் 43–82; எடுத்துக்காட்டுகள் மற்றும் பயிற்சிகள் 2.1–2.9"
             }
           ],
-          "status": "planned",
+          "status": "in_progress",
           "legacyQuestionIds": [
             "c9-2-2-practice-2"
           ],
@@ -228,8 +248,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "2025 Drive PDFs consulted; 31 examples, nine exercises and 8 original concept stages authored. Full item-level mathematical and Tamil editorial verification pending release gate.",
+              "ta": "2025 கூகுள் டிரைவ் நூல்கள் ஒப்பிடப்பட்டன; 31 எடுத்துக்காட்டுகள், ஒன்பது பயிற்சிகள், 8 கருத்து நிலைகள் உருவாக்கப்பட்டுள்ளன. முழுமையான கணித/தமிழ் தணிக்கை தொடர்ந்து நிலுவையில் உள்ளது."
             }
           }
         },
