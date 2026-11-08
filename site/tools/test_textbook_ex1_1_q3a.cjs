@@ -10,9 +10,9 @@ const seen=new Set();
 for(const [i,q] of data.questions.entries()){
  assert.ok(!seen.has(q.id));seen.add(q.id);
  assert.equal(q.exercise,'1.1');assert.equal(q.question,3);assert.equal(q.section,'a');
- assert.equal(q.source.page.en,5);assert.equal(q.source.page.ta,5);
+ assert.equal(q.source.page.en,5);assert.equal(q.source.page.ta,6); // Tamil Question 3 begins on printed page 6.
  for(const lang of ['en','ta']){assert.ok(q.prompt[lang]);assert.ok(q.answer[lang]);assert.ok(q.steps[lang].length>=3);for(const s of q.steps[lang])assert.ok(s.trim());}
- const m=q.prompt.en.match(/(\d+)\s*(∈|∉)\s*([ABC])\.$/);assert.ok(m,'Statement missing: '+q.id);
+ const m=q.prompt.en.match(/\n\([ivx]+\)\s*(\d+)\s*(∈|∉)\s*([ABC])$/);assert.ok(m,'Statement missing: '+q.id);
  const [,raw,op,set]=m;const found=sets[set].includes(Number(raw));const truth=op==='∈'?found:!found;
  assert.equal(truth,expected[i]);assert.equal(q.answer.en,truth?'True':'False');assert.equal(q.answer.ta,truth?'சரி':'தவறு');
  assert.equal(q.verification.status,'mathematically-checked');
