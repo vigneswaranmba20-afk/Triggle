@@ -45,6 +45,27 @@ const {chromium}=require('playwright');
    assert.match(await page.locator('#cofactor-result').innerText(),/C31 = 1 × -1 = -1/,'selection changes immediately refresh C31');
    await page.locator('#show-cofactor').click();
    assert.match(await page.locator('#cofactor-result').innerText(),/C31 = 1 × -1 = -1/);
+   // Exhaustively exercise every cofactor coordinate against independently derived values.
+   const expected=[[1,-3,9],[1,1,-5],[-1,1,-1]];
+   for(let r=0;r<3;r++)for(let col=0;col<3;col++){
+    await page.evaluate(({r,col})=>{
+     const row=document.getElementById('cofactor-row'),column=document.getElementById('cofactor-column');
+     row.value=String(r);column.value=String(col);column.dispatchEvent(new Event('change',{bubbles:true}));
+    },{r,col});
+    const output=await page.locator('#cofactor-result').innerText();
+    assert.match(output,new RegExp('C'+(r+1)+(col+1)+' = [-0-9]+ × [-0-9]+ = '+expected[r][col]+'
+   assert.equal(await page.locator('article[data-q="i"] .english').isVisible(),true);
+   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'horizontal overflow at '+width);
+   await context.setOffline(true);
+   await page.locator('#verify-matrix').click();
+   assert.match(await page.locator('#matrix-result').innerText(),/Both identities verified/);
+   await context.close();
+  }
+  console.log('PASS Grade 12 browser: mobile/desktop, Tamil, keyboard, both matrices and offline interaction');
+ } finally {await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});
+),'cofactor C'+(r+1)+(col+1)+' at '+width+'px');
+   }
    await page.locator('#en').click();
    assert.equal(await page.locator('article[data-q="i"] .english').isVisible(),true);
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'horizontal overflow at '+width);
