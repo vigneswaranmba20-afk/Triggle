@@ -4,7 +4,7 @@
   "edition": "2025 revised",
   "lastVerified": "2026-11-08",
   "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
-  "notes": "2026-11-08 13:30 IST: inspected failed Grade 10 CI #42457199913; npm test and mathematics passed, browser failed stale expected count 3 vs 4 after Q2 addition. Fixed retry count, added restored-Q2/offline assertions and corrected Q2 heading (no null subpart). Await new full CI; no new textbook content, merge or live verification; Tamil editorial pending.",
+  "notes": "2026-11-08 14:30 IST: Q3 bilingual source checked (both 2025 revised printed p.6/PDF p.12), independently reconstructed A={−3,4}, B={−2,0,3} from six B×A pairs. New preview and tests require CI; Tamil editorial pending. Earlier commit 51c7440 Grade 10 CI #42461042059 succeeded. No merge/live verification.",
   "chapters": [
     {
       "chapter": 1,
@@ -51,7 +51,8 @@
         "1(i)",
         "1(ii)",
         "1(iii)",
-        "2"
+        "2",
+        "3"
       ],
       "mergedQuestionSubparts": [],
       "liveVerifiedQuestionSubparts": [],
@@ -149,12 +150,12 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "Confirm GitHub Actions on commit 06c656f8642810ef0c22f6caf552d89a8c5c7efe; if browser and cross-grade tests pass, reconcile with latest main before preview merge. Next source-verified textbook question: Chapter 1 Exercise 1.1 Q3; inspect both 2025 revised PDFs before drafting.",
+  "nextAction": "Run Grade 10 CI on Q3 commit and confirm browser/mobile/offline, then reconcile latest main and cross-grade tests before preview merge. Next item Chapter 1 Exercise 1.1 Q4 (2025 revised English/Tamil printed p.6).",
   "testStatus": {
     "localMathEnumeration": "Q1(iii) independent enumeration checked: A×B=∅, A×A has four ordered pairs, B×A=∅; full repository tests pending",
     "npmTest": "Passed in failed CI run #42457199913 (before current fixes); current commit pending.",
     "playwright": "Run #42457199913 failed at stale retry assertion 4 !== 3 after Q2 was added; corrected assertion plus Q2/offline checks committed, new run pending.",
-    "githubCI": "Run #42457199913 failed Grade 10 browser step; npm test and independent math passed; new commit CI pending.",
+    "githubCI": "Previous commit 51c7440 CI #42461042059 passed; Q3 CI pending",
     "merged": false,
     "liveVerified": false,
     "latestGrade10PreviewCommit": "06c656f8642810ef0c22f6caf552d89a8c5c7efe",
