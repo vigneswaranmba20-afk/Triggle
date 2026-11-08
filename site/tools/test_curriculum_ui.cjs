@@ -586,8 +586,28 @@ async function main() {
       await lab.locator('[data-nav] [data-index="6"]').click();
       await lab.locator('input[type="range"]').evaluate(input=>{input.value='-3';input.dispatchEvent(new Event('input',{bubbles:true}));});
       assert.match(await lab.locator('[data-demo-output]').innerText(),/0\.0032/);
+      await lab.locator('[data-nav] [data-index="7"]').click();
+      const squaredButton=lab.locator('[data-demo-mode="equation"]');
+      assert.equal(await squaredButton.locator('math msup').count(),1,
+        'The x²=25 button must render a true raised exponent');
+      const vertical=await squaredButton.locator('math msup').evaluate(node=>{
+        const [base,power]=node.children;
+        return {base:base.getBoundingClientRect().bottom,power:power.getBoundingClientRect().bottom,
+          mathNamespace:node.namespaceURI,container:squaredButton?.className||''};
+      });
+      assert.equal(vertical.mathNamespace,'http://www.w3.org/1998/Math/MathML');
+      assert.ok(vertical.power<=vertical.base-1,
+        'The 2 in x²=25 must sit above the x, not beside it: '+JSON.stringify(vertical));
+      assert.equal(await squaredButton.locator('.rnlab-math-choice').count(),1,
+        'The complete equation must be an atomic expression inside its flex-based button');
+      await squaredButton.click();
+      assert.match(await lab.locator('[data-demo-output]').innerText(),/25/);
+      await noOverflow(page,'Exponent button and root comparison at 390px');
       await page.locator('#langTa').click();
       assert.match(await page.locator('.rnlab h3').innerText(),/எண்களை/);
+      await lab.locator('[data-nav] [data-index="7"]').click();
+      assert.equal(await lab.locator('[data-demo-mode="equation"] math msup').count(),1,
+        'Tamil lesson must preserve the exact same squared-x typography');
       await lab.locator('[data-nav] [data-index="5"]').click();
       assert.equal(await lab.locator('.rnlab-rational-step').count(),4);
       assert.match(await lab.locator('.rnlab-rational-step').first().innerText(),/தொடக்க/);
