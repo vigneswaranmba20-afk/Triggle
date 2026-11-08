@@ -60,6 +60,6 @@ assert.match(discover,/class="discover-class-options"/,'Class switcher expands i
 assert.ok(!discover.includes("body='<section class=\"discover-directory-head\">'"),'Oversized introductory class panel must be removed');
 assert.match(discoverCss,/\.discover-class-options\[hidden\]\{display:none!important\}/,'Collapsed class options must not take space');
 assert.match(css,/body\.discovery-active \.class-dock\{display:none!important\}/,'Home and directory cannot show a floating class bar');
-assert.match(html,/discovery\.css\?v=chapter-first-1/,'Published HTML must refresh directory CSS');
-assert.match(html,/discovery\.js\?v=chapter-first-1/,'Published HTML must refresh directory JS');
+assert.match(html,/discovery\.css\?v=minimal-home-1/,'Published HTML must refresh directory CSS');
+assert.match(html,/discovery\.js\?v=minimal-home-1/,'Published HTML must refresh directory JS');
 console.log('PASS: chapter-first directory and reader navigation share non-overlapping bilingual routes and accessible class switching.');
