@@ -1029,6 +1029,234 @@
         "ta": 12
       }
     }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q4-i",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 4 (i)",
+      "ta": "பயிற்சி 1.1 · வினா 4 (i)"
+    },
+    "title": {
+      "en": "Roster form",
+      "ta": "பட்டியல் முறை"
+    },
+    "q": {
+      "en": "4. Represent the following sets in Roster form.\n(i) A = The set of all even natural numbers less than 20.",
+      "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(i) A = 20 - க்கும் குறைவான இரட்டைப்படை இயல் எண்களின் கணம்."
+    },
+    "steps": [
+      {
+        "en": "Even natural numbers are the positive whole numbers divisible by 2.",
+        "ta": "இரட்டைப்படை இயல் எண்கள் 2-ஆல் வகுபடும் நேர்ம எண்களாகும்."
+      },
+      {
+        "en": "List the even natural numbers less than 20: 2, 4, 6, 8, 10, 12, 14, 16 and 18.",
+        "ta": "20-க்கும் குறைவான இரட்டைப்படை இயல் எண்கள் 2, 4, 6, 8, 10, 12, 14, 16, 18 ஆகும்."
+      },
+      {
+        "en": "Write the roster as A = {2, 4, 6, 8, 10, 12, 14, 16, 18}.",
+        "ta": "எனவே A = {2, 4, 6, 8, 10, 12, 14, 16, 18} எனப் பட்டியல் முறையில் எழுதலாம்."
+      }
+    ],
+    "answer": {
+      "en": "A = {2, 4, 6, 8, 10, 12, 14, 16, 18}",
+      "ta": "A = {2, 4, 6, 8, 10, 12, 14, 16, 18}"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9, Exercise 1.1, printed EN p.5 / TA p.6; source-checked bilingual wording",
+    "sourceEdition": "2025 revised",
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q4.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
+    },
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "testing",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q4-ii",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 4 (ii)",
+      "ta": "பயிற்சி 1.1 · வினா 4 (ii)"
+    },
+    "title": {
+      "en": "Roster form",
+      "ta": "பட்டியல் முறை"
+    },
+    "q": {
+      "en": "4. Represent the following sets in Roster form.\n(ii) B = {y : y = [[1|2n]], n ∈ ℕ, n ≤ 5}",
+      "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(ii) B = {y : y = [[1|2n]], n ∈ ℕ, n ≤ 5}"
+    },
+    "steps": [
+      {
+        "en": "Here n is a natural number not greater than 5, so n = 1, 2, 3, 4, 5.",
+        "ta": "n என்பது 5-க்கு மிகாத இயல் எண் என்பதால் n = 1, 2, 3, 4, 5."
+      },
+      {
+        "en": "Substitute each value of n into y = 1/(2n), giving 1/2, 1/4, 1/6, 1/8 and 1/10.",
+        "ta": "y = 1/(2n) என்பதில் ஒவ்வொரு n மதிப்பையும் பதிலிட்டால் 1/2, 1/4, 1/6, 1/8, 1/10 கிடைக்கும்."
+      },
+      {
+        "en": "Write B = {[[1|2]], [[1|4]], [[1|6]], [[1|8]], [[1|10]]}.",
+        "ta": "எனவே B = {[[1|2]], [[1|4]], [[1|6]], [[1|8]], [[1|10]]}."
+      }
+    ],
+    "answer": {
+      "en": "B = {[[1|2]], [[1|4]], [[1|6]], [[1|8]], [[1|10]]}",
+      "ta": "B = {[[1|2]], [[1|4]], [[1|6]], [[1|8]], [[1|10]]}"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9, Exercise 1.1, printed EN p.5 / TA p.6; source-checked bilingual wording",
+    "sourceEdition": "2025 revised",
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q4.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
+    },
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "testing",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q4-iii",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 4 (iii)",
+      "ta": "பயிற்சி 1.1 · வினா 4 (iii)"
+    },
+    "title": {
+      "en": "Roster form",
+      "ta": "பட்டியல் முறை"
+    },
+    "q": {
+      "en": "4. Represent the following sets in Roster form.\n(iii) C = {x : x is perfect cube, 27 < x < 216}",
+      "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(iii) C = {x : x என்பது ஒரு முழுக் கன எண் மற்றும் 27 < x < 216}"
+    },
+    "steps": [
+      {
+        "en": "Perfect cubes near the interval are 3³ = 27, 4³ = 64, 5³ = 125 and 6³ = 216.",
+        "ta": "இந்த எல்லைக்கு அருகிலுள்ள முழுக் கன எண்கள் 3³ = 27, 4³ = 64, 5³ = 125, 6³ = 216."
+      },
+      {
+        "en": "Because both inequalities are strict, exclude 27 and 216.",
+        "ta": "27 < x < 216 என்பதால் 27 மற்றும் 216 ஆகியவற்றைச் சேர்க்கக் கூடாது."
+      },
+      {
+        "en": "Only 64 and 125 remain, so C = {64, 125}.",
+        "ta": "எனவே C = {64, 125}."
+      }
+    ],
+    "answer": {
+      "en": "C = {64, 125}",
+      "ta": "C = {64, 125}"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9, Exercise 1.1, printed EN p.5 / TA p.6; source-checked bilingual wording",
+    "sourceEdition": "2025 revised",
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q4.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
+    },
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "testing",
+      "publication": "draft"
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q4-iv",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 4 (iv)",
+      "ta": "பயிற்சி 1.1 · வினா 4 (iv)"
+    },
+    "title": {
+      "en": "Roster form",
+      "ta": "பட்டியல் முறை"
+    },
+    "q": {
+      "en": "4. Represent the following sets in Roster form.\n(iv) D = {x : x ∈ ℤ, –5 < x ≤ 2}",
+      "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(iv) D = {x : x ∈ ℤ, –5 < x ≤ 2}"
+    },
+    "steps": [
+      {
+        "en": "The symbol ℤ means integers, including negative numbers and zero.",
+        "ta": "ℤ என்பது முழு எண்களின் கணத்தைக் குறிக்கும்."
+      },
+      {
+        "en": "List all integers greater than –5 and at most 2: –4, –3, –2, –1, 0, 1, 2.",
+        "ta": "–5-ஐ விடப் பெரியதும் 2-க்கு மிகாததுமான முழு எண்கள் –4, –3, –2, –1, 0, 1, 2."
+      },
+      {
+        "en": "The roster is D = {–4, –3, –2, –1, 0, 1, 2}.",
+        "ta": "எனவே D = {–4, –3, –2, –1, 0, 1, 2}."
+      }
+    ],
+    "answer": {
+      "en": "D = {–4, –3, –2, –1, 0, 1, 2}",
+      "ta": "D = {–4, –3, –2, –1, 0, 1, 2}"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9, Exercise 1.1, printed EN p.5 / TA p.6; source-checked bilingual wording",
+    "sourceEdition": "2025 revised",
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q4.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
+    },
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "testing",
+      "publication": "draft"
+    }
   }
 ];
  const grade=window.TRIGGLE_CLASSES?.[9];

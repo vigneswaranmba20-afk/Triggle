@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "g9-ch1",
+  "batch": "2026-11-08-ex1.1-q4",
+  "purpose": "Four visually checked exact 2025 bilingual textbook prompts; Triggle-original explained solutions; Tamil teacher editorial approval pending.",
+  "sourceAuthority": "Original Grade 9 2025 printed English page 5 and Tamil page 6 images.",
+  "coverage": {
+    "verifiedExerciseSubparts": 4,
+    "exercise1_1Total": 30
+  },
+  "questions": [
+    {
+      "id": "g9-ch1-ex1.1-q4-i",
+      "exercise": "1.1",
+      "question": 4,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "4. Represent the following sets in Roster form.\n(i) A = The set of all even natural numbers less than 20.",
+        "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(i) A = 20 - க்கும் குறைவான இரட்டைப்படை இயல் எண்களின் கணம்."
+      },
+      "answer": {
+        "en": "A = {2, 4, 6, 8, 10, 12, 14, 16, 18}",
+        "ta": "A = {2, 4, 6, 8, 10, 12, 14, 16, 18}"
+      },
+      "steps": {
+        "en": [
+          "Even natural numbers are the positive whole numbers divisible by 2.",
+          "List the even natural numbers less than 20: 2, 4, 6, 8, 10, 12, 14, 16 and 18.",
+          "Write the roster as A = {2, 4, 6, 8, 10, 12, 14, 16, 18}."
+        ],
+        "ta": [
+          "இரட்டைப்படை இயல் எண்கள் 2-ஆல் வகுபடும் நேர்ம எண்களாகும்.",
+          "20-க்கும் குறைவான இரட்டைப்படை இயல் எண்கள் 2, 4, 6, 8, 10, 12, 14, 16, 18 ஆகும்.",
+          "எனவே A = {2, 4, 6, 8, 10, 12, 14, 16, 18} எனப் பட்டியல் முறையில் எழுதலாம்."
+        ]
+      },
+      "verification": {
+        "method": "Source-glyph and substitution/number-theory cross-check",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q4.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "testing",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-ii",
+      "exercise": "1.1",
+      "question": 4,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "4. Represent the following sets in Roster form.\n(ii) B = {y : y = [[1|2n]], n ∈ ℕ, n ≤ 5}",
+        "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(ii) B = {y : y = [[1|2n]], n ∈ ℕ, n ≤ 5}"
+      },
+      "answer": {
+        "en": "B = {[[1|2]], [[1|4]], [[1|6]], [[1|8]], [[1|10]]}",
+        "ta": "B = {[[1|2]], [[1|4]], [[1|6]], [[1|8]], [[1|10]]}"
+      },
+      "steps": {
+        "en": [
+          "Here n is a natural number not greater than 5, so n = 1, 2, 3, 4, 5.",
+          "Substitute each value of n into y = 1/(2n), giving 1/2, 1/4, 1/6, 1/8 and 1/10.",
+          "Write B = {[[1|2]], [[1|4]], [[1|6]], [[1|8]], [[1|10]]}."
+        ],
+        "ta": [
+          "n என்பது 5-க்கு மிகாத இயல் எண் என்பதால் n = 1, 2, 3, 4, 5.",
+          "y = 1/(2n) என்பதில் ஒவ்வொரு n மதிப்பையும் பதிலிட்டால் 1/2, 1/4, 1/6, 1/8, 1/10 கிடைக்கும்.",
+          "எனவே B = {[[1|2]], [[1|4]], [[1|6]], [[1|8]], [[1|10]]}."
+        ]
+      },
+      "verification": {
+        "method": "Source-glyph and substitution/number-theory cross-check",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q4.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "testing",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-iii",
+      "exercise": "1.1",
+      "question": 4,
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "4. Represent the following sets in Roster form.\n(iii) C = {x : x is perfect cube, 27 < x < 216}",
+        "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(iii) C = {x : x என்பது ஒரு முழுக் கன எண் மற்றும் 27 < x < 216}"
+      },
+      "answer": {
+        "en": "C = {64, 125}",
+        "ta": "C = {64, 125}"
+      },
+      "steps": {
+        "en": [
+          "Perfect cubes near the interval are 3³ = 27, 4³ = 64, 5³ = 125 and 6³ = 216.",
+          "Because both inequalities are strict, exclude 27 and 216.",
+          "Only 64 and 125 remain, so C = {64, 125}."
+        ],
+        "ta": [
+          "இந்த எல்லைக்கு அருகிலுள்ள முழுக் கன எண்கள் 3³ = 27, 4³ = 64, 5³ = 125, 6³ = 216.",
+          "27 < x < 216 என்பதால் 27 மற்றும் 216 ஆகியவற்றைச் சேர்க்கக் கூடாது.",
+          "எனவே C = {64, 125}."
+        ]
+      },
+      "verification": {
+        "method": "Source-glyph and substitution/number-theory cross-check",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q4.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "testing",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-iv",
+      "exercise": "1.1",
+      "question": 4,
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "4. Represent the following sets in Roster form.\n(iv) D = {x : x ∈ ℤ, –5 < x ≤ 2}",
+        "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(iv) D = {x : x ∈ ℤ, –5 < x ≤ 2}"
+      },
+      "answer": {
+        "en": "D = {–4, –3, –2, –1, 0, 1, 2}",
+        "ta": "D = {–4, –3, –2, –1, 0, 1, 2}"
+      },
+      "steps": {
+        "en": [
+          "The symbol ℤ means integers, including negative numbers and zero.",
+          "List all integers greater than –5 and at most 2: –4, –3, –2, –1, 0, 1, 2.",
+          "The roster is D = {–4, –3, –2, –1, 0, 1, 2}."
+        ],
+        "ta": [
+          "ℤ என்பது முழு எண்களின் கணத்தைக் குறிக்கும்.",
+          "–5-ஐ விடப் பெரியதும் 2-க்கு மிகாததுமான முழு எண்கள் –4, –3, –2, –1, 0, 1, 2.",
+          "எனவே D = {–4, –3, –2, –1, 0, 1, 2}."
+        ]
+      },
+      "verification": {
+        "method": "Source-glyph and substitution/number-theory cross-check",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q4.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "testing",
+        "publication": "draft"
+      }
+    }
+  ]
+}

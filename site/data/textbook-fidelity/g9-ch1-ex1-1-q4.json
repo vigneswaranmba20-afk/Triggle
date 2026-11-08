@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "scope": "Grade 9 Set Language Exercise 1.1 Question 4",
+  "edition": "2025 revised",
+  "reviewedOn": "2026-11-08",
+  "verification": "Original printed EN p.5 and TA p.6 images visually checked, including 1/(2n) numerator/denominator and integer domain glyphs.",
+  "source": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 5,
+      "pdfPage": 11
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 6,
+      "pdfPage": 12
+    }
+  },
+  "items": [
+    {
+      "id": "g9-ch1-ex1.1-q4-i",
+      "questionNumber": 4,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "4. Represent the following sets in Roster form.\n(i) A = The set of all even natural numbers less than 20.",
+        "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(i) A = 20 - க்கும் குறைவான இரட்டைப்படை இயல் எண்களின் கணம்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "mathRendering": "Fraction markup [[numerator|denominator]] renders the same stacked fraction structure seen on the printed page."
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-ii",
+      "questionNumber": 4,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "4. Represent the following sets in Roster form.\n(ii) B = {y : y = [[1|2n]], n ∈ ℕ, n ≤ 5}",
+        "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(ii) B = {y : y = [[1|2n]], n ∈ ℕ, n ≤ 5}"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "mathRendering": "Fraction markup [[numerator|denominator]] renders the same stacked fraction structure seen on the printed page."
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-iii",
+      "questionNumber": 4,
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "4. Represent the following sets in Roster form.\n(iii) C = {x : x is perfect cube, 27 < x < 216}",
+        "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(iii) C = {x : x என்பது ஒரு முழுக் கன எண் மற்றும் 27 < x < 216}"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "mathRendering": "Fraction markup [[numerator|denominator]] renders the same stacked fraction structure seen on the printed page."
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-iv",
+      "questionNumber": 4,
+      "part": "iv",
+      "textbookPrompt": {
+        "en": "4. Represent the following sets in Roster form.\n(iv) D = {x : x ∈ ℤ, –5 < x ≤ 2}",
+        "ta": "4. பின்வரும் கணங்களைப் பட்டியல் முறையில் எழுதுக.\n(iv) D = {x : x ∈ ℤ, –5 < x ≤ 2}"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "mathRendering": "Fraction markup [[numerator|denominator]] renders the same stacked fraction structure seen on the printed page."
+    }
+  ]
+}
