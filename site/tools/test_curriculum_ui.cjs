@@ -860,9 +860,17 @@ async function main() {
         await noOverflow(page, `${width}px English overview`);
         await page.keyboard.press('ArrowRight');
         assert.equal(new URL(page.url()).searchParams.get('chapter'), 'g11-ch1', 'Question shortcuts do not navigate a planned chapter');
-        await page.locator('#crumb button').nth(1).click();
+        // The chapter title is intentionally NOT duplicated as a second breadcrumb.
+        // Students return to all chapters with one prominent Back action.
+        assert.equal(await page.locator('#crumb button').count(),1,'Class switcher is the only chapter-menu crumb');
+        await page.locator('.hub-back-class').click();
+        assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters','Back opens the same-grade chapter directory');
+        assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),12);
+        await page.goBack();
+        await page.locator('#chapterOverview').waitFor({state:'visible'});
+        await page.locator('#crumb button').first().click();
         assert.equal(await page.locator('#pathDialog').evaluate(el => el.open), true);
-        assert.equal(await page.locator('#pathOptions .path-option').count(), 12);
+        assert.equal(await page.locator('#pathOptions .path-option').count(),4,'Class switcher shows four grades');
         await page.keyboard.press('Escape');
         assert.equal(await page.locator('#pathDialog').evaluate(el => el.open), false);
         await page.locator('#langTa').click();
