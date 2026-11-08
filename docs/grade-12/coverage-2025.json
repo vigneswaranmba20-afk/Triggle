@@ -222,13 +222,17 @@
   ],
   "lastVerifiedCheckpoint": {
     "date": "2026-11-08",
-    "result": "All four workflows succeeded on b0353f5; 3 verified bilingual drafts remain unmerged and not live verified. Source PDFs re-fetched; Q2(i) matrix cannot be declared exact from extracted text.",
+    "result": "Previous commit 99e574b: shared, Grade 9 and Pages workflows passed; Grade 12 workflow failed ONLY at shared browser assertion site/tools/test_curriculum_ui.cjs:1117 at 1280px ('Dock stays at screen bottom'; navPosition relative). Grade 12 dedicated browser test passed. New Grade-12-only inverse prerequisite test committed da2e2fc, locally checked 2112 invertible + 289 singular integer 2x2 matrices; not yet CI confirmed.",
     "grade12Run": 42489365500,
     "sharedRun": 42489365527,
     "grade9Run": 42489365422,
     "pagesValidationRun": 42489365498,
-    "nextSourceItem": "Chapter 1 Exercise 1.1 Q2(i): visually inspect English Vol I printed p15/PDF23 and Tamil Vol I printed p16/PDF24; transcribe exact matrix and stem, then independent inverse proof and browser tests.",
+    "nextSourceItem": "Chapter 1 Exercise 1.1 Q2(i): English 2025 Vol I printed p15/PDF23; Tamil 2025 Vol I printed p16/PDF24. Extracted matrix glyphs unreliable; visually inspect original page images before exact transcription.",
     "branchBehindMainAtCheckpoint": 99,
-    "nextAction": "Obtain page-image verification; implement source-exact Q2(i), then reconcile main and run all cross-grade regressions before PR merge."
+    "nextAction": "Verify page-image matrix entries and exact bilingual stem; add independently checked inverse solution. Await new CI and coordinate Grade 9 shared 1280px dock regression correction from latest main; rerun all workflows before merge.",
+    "failedGrade12Run": 42493846976,
+    "passingSharedRun": 42493847131,
+    "passingGrade9Run": 42493847151,
+    "passingPagesRun": 42493847061
   }
 }
