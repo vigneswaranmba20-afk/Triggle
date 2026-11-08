@@ -1264,3 +1264,16 @@ body.textbook-reader .all-chapters-button{
   }
   body.chapter-overview-active .crumb-link{min-height:44px;font-size:14px;padding:8px 11px}
 }
+
+/* Home already has four class cards; directories have a class selector in the title.
+   The floating Class 9–12 dock is redundant and must never hide chapter cards. */
+@media(max-width:800px){
+  body.discovery-active .class-dock{display:none!important}
+  body.discovery-active .app-shell{height:100dvh!important;min-height:0!important}
+  body.discovery-active .workspace{height:100%!important;min-height:0!important}
+  body.discovery-active .lesson-container{
+    overflow-y:auto!important;overflow-x:hidden!important;
+    padding-bottom:calc(25px + env(safe-area-inset-bottom))!important;
+    scroll-padding-bottom:20px;
+  }
+}
