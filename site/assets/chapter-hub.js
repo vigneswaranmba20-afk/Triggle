@@ -6,7 +6,7 @@
   const typeset=s=>window.TriggleNotation?.render(s)||e(s);
   const texts={
     en:{
-      eyebrow:'YOUR CHAPTER',choose:'What would you like to do?',
+      eyebrow:'YOUR CHAPTER',choose:'Choose a section',
       intro:'Choose one section. You can come back here whenever you want.',
       concepts:'Concepts',examples:'Worked Examples',exercises:'Exercises',quizzes:'Quizzes',activities:'Thinking Corner & Activities',
       conceptsHint:'Learn ideas with short, interactive explanations',
@@ -29,9 +29,9 @@
       correct:'Correct! You can try explaining why on paper.',incorrect:'Not quite. Try the clue and answer again.',
       hint:'Show a hint',reveal:'Why?',progress:'Checks answered correctly',tryPaper:'Try the full concept lesson',
       navigation:'Chapter sections',review:'Editorial review',sources:'Source books',
-      sectionStatus:'Chapter under development · content shown below is available now.',
-      learningStatus:'Start with a concept, then explore worked examples or exercises. Textbook checks are still in progress.',
-      questionBreakdown:(total,examples,exercises,quizzes)=>`${total} question pages here: ${examples} worked examples + ${exercises} exercise/practice questions. ${quizzes} quick concept checks are separate.`,
+      sectionStatus:'More lessons are being developed.',
+      learningStatus:'Textbook verification is in progress.',
+      questionBreakdown:(total,examples,exercises,quizzes)=>`${examples} worked examples · ${exercises} exercises & practice · ${quizzes} quick checks`,
       returnHelp:'Use the chapter menu to switch between Concepts, Worked Examples, Exercises and Quizzes.',
       selectQuestion:'Choose an exercise',group:'Exercise group',jumpConcept:'Open a concept',lab:'Venn diagram lab',
       existingExamples:'Some worked examples are available',noPublished:'Complete chapter review is still pending',
@@ -39,7 +39,7 @@
        exerciseCoverageNote:(count)=>`Exercise 1.1 · ${count} of 30 textbook subparts available. All 30 Exercise 1.1 subparts follow the source-checked 2025 EN/Tamil textbook pages. Exercises 1.2–1.7 still require textbook comparison. Independent Tamil editorial review remains pending.`
     },
     ta:{
-      eyebrow:'உங்கள் அத்தியாயம்',choose:'நீங்கள் எதைக் கற்க விரும்புகிறீர்கள்?',
+      eyebrow:'உங்கள் அத்தியாயம்',choose:'ஒரு பகுதியைத் தேர்ந்தெடுக்கவும்',
       intro:'ஒரு பகுதியைத் தேர்ந்தெடுக்கவும். எப்போது வேண்டுமானாலும் இங்கு திரும்பலாம்.',
       concepts:'கருத்துகள்',examples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'சிறு தேர்வுகள்',activities:'சிந்தனை மூலை & செயல்பாடுகள்',
       conceptsHint:'சிறு விளக்கங்களுடன் செயல்வழியாகக் கற்றுக்கொள்ளுங்கள்',
@@ -62,9 +62,9 @@
       correct:'சரி! அதன் காரணத்தைத் தாளில் விளக்க முயலுங்கள்.',incorrect:'இன்னும் சரியாகவில்லை. குறிப்பைப் பார்த்து மீண்டும் முயலுங்கள்.',
       hint:'ஒரு குறிப்பு',reveal:'ஏன்?',progress:'சரியாக விடையளித்த வினாக்கள்',tryPaper:'முழுக் கருத்துப் பாடத்திற்குச் செல்லுங்கள்',
       navigation:'அத்தியாயப் பகுதிகள்',review:'மீளாய்வு நிலை',sources:'பாடநூல் ஆதாரங்கள்',
-      sectionStatus:'இந்த அத்தியாயம் உருவாக்கத்தில் உள்ளது. கிடைக்கும் பகுதிகள் கீழே உள்ளன.',
-      learningStatus:'முதலில் ஒரு கருத்தைக் கற்கவும். பிறகு தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் அல்லது பயிற்சிகளை முயலவும். பாடநூல் சரிபார்ப்பு தொடர்கிறது.',
-      questionBreakdown:(total,examples,exercises,quizzes)=>`இங்கு ${total} வினாப் பக்கங்கள்: ${examples} தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் + ${exercises} பயிற்சி வினாக்கள். ${quizzes} சிறு கருத்துச் சரிபார்ப்புகள் தனியாக உள்ளன.`,
+      sectionStatus:'மேலும் பாடங்கள் உருவாக்கப்படுகின்றன.',
+      learningStatus:'பாடநூல் ஒப்பீடு இன்னும் நடைபெறுகிறது.',
+      questionBreakdown:(total,examples,exercises,quizzes)=>`${examples} எடுத்துக்காட்டுகள் · ${exercises} பயிற்சி வினாக்கள் · ${quizzes} சிறு சோதனைகள்`,
       returnHelp:'கருத்துகள், எடுத்துக்காட்டுகள், பயிற்சிகள் மற்றும் சிறு தேர்வுகளுக்குச் செல்ல அத்தியாயத் தேர்வைப் பயன்படுத்துங்கள்.',
       selectQuestion:'ஒரு வினாவைத் தேர்ந்தெடுக்கவும்',group:'பயிற்சித் தொகுதி',jumpConcept:'கருத்தைப் படிக்கவும்',lab:'வென் பட ஆய்வகம்',
       existingExamples:'சில தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் உள்ளன',noPublished:'முழு அத்தியாய மீளாய்வு இன்னும் முடியவில்லை',
@@ -110,16 +110,20 @@
     const heading=document.createElement('header');heading.className='hub-header';
     const sectionTitle=section==='sources'?t.resources:labelFor(section);
     const pageTitle=section?sectionTitle:text(chapter.title);
-    heading.innerHTML='<p class="hub-eyebrow">'+
-      e(section?text(chapter.title):t.eyebrow+' · '+t.navigation+' · '+grade)+'</p>'+
-      '<h2 id="chapterOverviewTitle">'+e(pageTitle)+'</h2>'+
-      (section?'':'<p class="hub-intro">'+e(t.intro)+'</p>');
+    // The Class switcher appears in the breadcrumb. Do not repeat Class
+    // and the chapter name in multiple stacked headings on the hub.
+    const chapterNumber=(lang==='ta'?'அத்தியாயம் ':'Chapter ')+chapter.number;
+    heading.innerHTML='<p class="hub-eyebrow">'+e(chapterNumber+(section?' · '+text(chapter.title):''))+'</p>'+
+      '<h2 id="chapterOverviewTitle">'+e(pageTitle)+'</h2>';
     root.append(heading);
     if(!section){
-      const metadata=document.createElement('p');metadata.className='hub-stage-note';
       const grade9Pilot=chapter.id==='g9-ch1'||chapter.id==='g9-ch2';
-      metadata.textContent=grade9Pilot?t.learningStatus:t.sectionStatus;root.append(metadata);
-      if(grade9Pilot){const breakdown=document.createElement('p');breakdown.className='hub-question-breakdown';breakdown.textContent=t.questionBreakdown(questions.length,counts.examples,counts.exercises,counts.quizzes);root.append(breakdown);}
+      if(grade9Pilot){
+        const breakdown=document.createElement('p');
+        breakdown.className='hub-question-breakdown';
+        breakdown.textContent=t.questionBreakdown(questions.length,counts.examples,counts.exercises,counts.quizzes);
+        root.append(breakdown);
+      }
       const menu=document.createElement('nav');menu.className='hub-section-menu';
       menu.setAttribute('aria-label',t.navigation);
       menu.innerHTML='<h3>'+e(t.choose)+'</h3>';
@@ -137,6 +141,11 @@
         grid.append(b);
       });
       menu.append(grid);root.append(menu);
+      // Keep honest editorial status visible, without pushing the section cards
+      // below a second introduction and a large callout.
+      const metadata=document.createElement('p');metadata.className='hub-stage-note';
+      metadata.textContent=grade9Pilot?t.learningStatus:t.sectionStatus;
+      root.append(metadata);
       const footer=document.createElement('div');footer.className='hub-footer';
       footer.append(mk('ⓘ '+t.resources,()=>onSection('sources'),'hub-resource-link'));
       root.append(footer);
