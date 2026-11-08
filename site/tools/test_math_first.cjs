@@ -43,7 +43,8 @@ assert(html.includes('textbook-activities.js?v=math-first-1'),'New activities re
 assert(html.includes('chapter-hub.js?v=math-first-1'),'New chapter route not versioned');
 assert(html.includes('app.js?v=minimal-home-1'),'Chapter menu reader code must load');
 assert(sw.includes("'./assets/math-first.css'"),'Offline shell must include new CSS');
-assert(/v53-minimal-home/.test(sw),'Offline chapter navigation cache not invalidated');
+assert(/v54-g9-probability/.test(sw),'Offline shell must invalidate the previous v53 minimal-home cache');
+assert(sw.includes("'./data/textbook-exercises/g9-ch9-ex9-1-en.js'"),'New Grade 9 textbook exercise must be cached for offline access');
 assert(css.includes('body.textbook-reader .question-return button{'),'Single quiet return control must be styled');
 assert(!css.includes('body.textbook-reader #chapterMenuBtn{'),'No leftover chapter-section visual clutter');
 assert(html.includes('id="pathHint"'),'Chapter dialog should show class-specific chapter count');
