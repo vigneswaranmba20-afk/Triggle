@@ -199,8 +199,8 @@ window.TRIGGLE_SET_PATH = {
       "rule": "A ∩ B = {3, 5}",
       "visual": "venn",
       "question": {
-        "en": "What is A ∩ B for the sets above?",
-        "ta": "மேற்கண்ட கணங்களுக்கு A ∩ B என்ன?"
+        "en": "Given A={1,2,3,5} and B={3,4,5,6}, what is A ∩ B?",
+        "ta": "A={1,2,3,5}, B={3,4,5,6} எனில் A ∩ B என்ன?"
       },
       "choices": [
         {
@@ -305,8 +305,8 @@ window.TRIGGLE_SET_PATH = {
       "rule": "(A ∪ B)′ = A′ ∩ B′",
       "visual": "demorgan",
       "question": {
-        "en": "For these sets, which elements are outside A ∪ B?",
-        "ta": "இந்தக் கணங்களில் A ∪ B-க்கு வெளியே உள்ள உறுப்புகள் எவை?"
+        "en": "Let U={1,2,3,4,5,6}, A={1,2,3} and B={3,4}. Which elements are outside A ∪ B?",
+        "ta": "U={1,2,3,4,5,6}, A={1,2,3}, B={3,4} எனில் A ∪ B-க்கு வெளியே உள்ள உறுப்புகள் எவை?"
       },
       "choices": [
         {
