@@ -1058,11 +1058,11 @@ async function main() {
         await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-a-i');
         await page.locator('#answerText').waitFor({state:'visible'});
         await page.locator('#langEn').click(); // Language persists from the preceding Tamil navigation test.
-        assert.match(await page.locator('#questionText').innerText(),/18 ∈ C/);
+        assert.match(await page.locator('#questionText').innerText(),/State whether True or False:\s*\(i\) 18 ∈ C/,'Keep Q3 original source wording and membership glyph');
         assert.match(await page.locator('#answerText').innerText(),/True/);
         assert.ok((await page.locator('#stepsList li').count())>0,'Q3(a) must include explanation steps');
         await page.locator('#langTa').click();
-        assert.match(await page.locator('#questionText').innerText(),/சரியா தவறா/);
+        assert.match(await page.locator('#questionText').innerText(),/சரியா,\s*தவறா/,'Keep original Tamil textbook punctuation');
         await noOverflow(page,'Grade 9 Q3(a) Tamil at '+width+'px');
         await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-b-i');
         await page.locator('#answerText').waitFor({state:'visible'});
