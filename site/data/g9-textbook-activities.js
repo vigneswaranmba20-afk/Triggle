@@ -85,8 +85,8 @@ const BOOKS=Object.freeze({
  T('activity',30,'Activity 4 · Cardinality table','செயல்பாடு 4 · உறுப்பெண்ணிக்கை அட்டவணை',
    'Complete the cardinality table using two-set formulas.',
    'இரண்டு கணங்களின் உறுப்பெண்ணிக்கை சூத்திரத்தால் அட்டவணையை நிரப்புக.',
-   'For every row let a=n(A), b=n(B), u=n(A∪B), i=n(A∩B). Use i=a+b−u, n(A−B)=a−i, n(B−A)=b−i. Example row with a=30, b=45, u=65: i=10, A−B=20, B−A=35. Another row with a=30, b=43, u=70: i=3, A−B=27, B−A=40. Apply the same three equations to the remaining rows.',
-   'ஒவ்வொரு வரியிலும் a=n(A), b=n(B), u=n(A∪B), i=n(A∩B) என்க. i=a+b−u, n(A−B)=a−i, n(B−A)=b−i. a=30,b=45,u=65 எனில் i=10,A−B=20,B−A=35. a=30,b=43,u=70 எனில் i=3,A−B=27,B−A=40. மற்ற வரிகளிலும் இதையே பயன்படுத்துக.','partially-checked')
+   'For every row, n(A∩B)=n(A)+n(B)−n(A∪B), n(A−B)=n(A)−n(A∩B), n(B−A)=n(B)−n(A∩B). Completed table [n(A), n(B), n(A∪B), n(A∩B), n(A−B), n(B−A)]: Row 1 [30,45,65,10,20,35]; row 2 [20,45,55,10,10,35] (45=55−20+10); row 3 [50,65,90,25,25,40] (90=50+65−25); row 4 [30,43,70,3,27,40] (3=30+43−70). Verify each row by adding only-A, intersection, and only-B to obtain the union.',
+   'ஒவ்வொரு வரியிலும் n(A∩B)=n(A)+n(B)−n(A∪B), n(A−B)=n(A)−n(A∩B), n(B−A)=n(B)−n(A∩B). முழு அட்டவணை [n(A),n(B),n(A∪B),n(A∩B),n(A−B),n(B−A)]: வரி 1 [30,45,65,10,20,35]; வரி 2 [20,45,55,10,10,35] (45=55−20+10); வரி 3 [50,65,90,25,25,40] (90=50+65−25); வரி 4 [30,43,70,3,27,40] (3=30+43−70). A மட்டும் + பொதுவானவை + B மட்டும் = சேர்ப்புக் கண உறுப்பெண்ணிக்கை எனச் சரிபார்க்கவும்.')
  ],
  'g9-ch2':[
  T('thinking',58,'Thinking Corner · Principal square root','சிந்தனை மூலை · முதன்மை வர்க்கமூலம்',
