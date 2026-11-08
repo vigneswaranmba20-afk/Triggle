@@ -1,0 +1,34 @@
+name: Grade 12 bilingual curriculum preview
+on:
+  push:
+    branches:
+      - curriculum/grade-12-workstream
+  pull_request:
+    paths:
+      - 'docs/grade-12/**'
+      - 'site/grade-12/**'
+      - 'site/tools/test_grade12_*'
+      - '.github/workflows/grade-12-preview.yml'
+jobs:
+  grade12:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Shared curriculum and legacy regressions
+        run: npm test
+      - name: Grade 12 mathematical and bilingual coverage contracts
+        run: |
+          set -eu
+          for test in site/tools/test_grade12_*.cjs; do
+            echo "Running $test"
+            node "$test"
+          done
+      - run: npx playwright install --with-deps chromium
+      - name: Shared mobile keyboard and offline browser regressions
+        run: npm run test:browser
