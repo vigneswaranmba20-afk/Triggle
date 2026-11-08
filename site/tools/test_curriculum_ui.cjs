@@ -1045,17 +1045,20 @@ async function main() {
         await page.locator('#chapterOverview [data-question-id="g9-ch1-ex1.1-q4-i"]').click();
         await page.locator('#answerText').waitFor({state:'visible'});
         assert.match(await page.locator('#answerText').innerText(),/2, 4, 6, 8, 10, 12, 14, 16, 18/);
+        await page.evaluate(()=>window.TriggleFocusNavigation?.show());
         await page.locator('#langTa').click();
         assert.match(await page.locator('#questionText').innerText(),/இரட்டைப்படை/);
         await noOverflow(page,'Grade 9 Q4 Tamil at '+width+'px');
         await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q4-ii');
         await page.locator('#answerText').waitFor({state:'visible'});
         assert.match(await page.locator('#answerText').innerText(),/1\/2, 1\/4, 1\/6, 1\/8, 1\/10/);
+        await page.evaluate(()=>window.TriggleFocusNavigation?.show());
         await page.locator('#langEn').click();
         await page.locator('#chapterOverview [data-question-id="g9-ch1-ex1.1-q1-i"]').click();
         assert.match(await page.locator('#questionText').innerText(),/Prime numbers/);
         assert.equal(await page.locator('#stepsList li').count(),3);
         assert.match(await page.locator('#answerText').innerText(),/set/i);
+        await page.evaluate(()=>window.TriggleFocusNavigation?.show());
         await page.locator('#langTa').click();
         assert.match(await page.locator('#questionText').innerText(),/பகா எண்கள்/);
         assert.match(await page.locator('#answerText').innerText(),/கணம்/);
@@ -1067,10 +1070,12 @@ async function main() {
         await noOverflow(page,'Grade 9 Q2 mobile at '+width+'px');
         await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-a-i');
         await page.locator('#answerText').waitFor({state:'visible'});
+        await page.evaluate(()=>window.TriggleFocusNavigation?.show());
         await page.locator('#langEn').click(); // Language persists from the preceding Tamil navigation test.
         assert.match(await page.locator('#questionText').innerText(),/18 ∈ C/);
         assert.match(await page.locator('#answerText').innerText(),/True/);
         assert.ok((await page.locator('#stepsList li').count())>0,'Q3(a) must include explanation steps');
+        await page.evaluate(()=>window.TriggleFocusNavigation?.show());
         await page.locator('#langTa').click();
         assert.match(await page.locator('#questionText').innerText(),/சரியா தவறா/);
         await noOverflow(page,'Grade 9 Q3(a) Tamil at '+width+'px');
