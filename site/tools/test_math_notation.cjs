@@ -26,7 +26,15 @@ const cases=[
  ['( [[2|3]] )²','math-group-power'],
  ['3.2 × 10^-3','<msup>'],
  ['aᵏ','<sup>k</sup>'],
- ['வேர்க்குறி: ³√108','<mroot>']
+ ['வேர்க்குறி: ³√108','<mroot>'],
+ ['5√3','<mspace width="0.18em"/>'],
+ ['6√3','<mspace width="0.18em"/>'],
+ ['a√b','<mspace width="0.18em"/>'],
+ ['−2∛5','<mspace width="0.18em"/>'],
+ ['2⁴√3','<mspace width="0.18em"/>'],
+ ['4√(x+1)','<mspace width="0.18em"/>'],
+ ['⁵√3','<mroot>'],
+ ['⁶√64','<mroot>']
 ];
 for(const [source,expected] of cases){
  const result=render(source);
@@ -34,6 +42,21 @@ for(const [source,expected] of cases){
  assert.ok(!result.includes('\uE000N'),source+' left a notation placeholder');
  assert.ok(!result.includes('undefined'),source+' inserted undefined');
 }
+
+// Baseline coefficients must not look like a tiny index on the radical.
+for(const [input,coefficient] of [['5√3','5'],['6√3','6'],['a√b','a'],['2∛5','2'],['4√(x+1)','4']]){
+ const output=render(input);
+ const expected='<mrow><'+(coefficient==='a'?'mi':'mn')+'>'+coefficient+'</'+(coefficient==='a'?'mi':'mn')+'><mspace width="0.18em"/>';
+ assert.ok(output.includes(expected),input+': coefficient must precede the radical at baseline, with a visible thin space');
+ assert.ok(output.includes('<msqrt>')||output.includes('<mroot>'),input+': radical must stay attached to radicand');
+}
+const fifthRoot=render('⁵√3');
+assert.ok(fifthRoot.includes('<mroot>'),'The fifth root must have a true raised root index');
+assert.ok(fifthRoot.includes('<mn>5</mn></mroot>'),'The 5 in the fifth root is the index, not a coefficient');
+assert.ok(!fifthRoot.includes('<mspace width="0.18em"/>'),'A fifth-root index must not be treated as a coefficient');
+const sameAnswer=render('√12+√27=2√3+3√3=5√3');
+assert.equal((sameAnswer.match(/<mspace width="0.18em"\/>/g)||[]).length,3,'All three coefficients get consistent spacing');
+
 const dangerous=render('<img src=x onerror=alert(1)> a^(1/2)');
 assert.ok(!dangerous.includes('<img'),'Never trust authored notation source as HTML');
 assert.ok(dangerous.includes('&lt;img'),'Escaped source text must remain visible');
