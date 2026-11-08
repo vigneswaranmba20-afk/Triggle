@@ -34,7 +34,9 @@
       questionBreakdown:(total,examples,exercises,quizzes)=>`${total} question pages here: ${examples} worked examples + ${exercises} exercise/practice questions. ${quizzes} quick concept checks are separate.`,
       returnHelp:'Use the chapter menu to switch between Concepts, Worked Examples, Exercises and Quizzes.',
       selectQuestion:'Choose an exercise',group:'Exercise group',jumpConcept:'Open a concept',lab:'Venn diagram lab',
-      existingExamples:'Some worked examples are available',noPublished:'Complete chapter review is still pending'
+      existingExamples:'Some worked examples are available',noPublished:'Complete chapter review is still pending',
+       exampleWordingNote:'Textbook wording audit: Chapter 1 worked examples are currently restated, not verified word-for-word 2025 textbook questions. Solutions are authored separately.',
+       exerciseCoverageNote:(count)=>`Exercise 1.1 · ${count} of 30 textbook subparts available. Questions 4–6 (12 subparts) and Exercises 1.2–1.7 are pending. Some visible prompts are restated; consult the 2025 book for exact wording.`
     },
     ta:{
       eyebrow:'உங்கள் அத்தியாயம்',choose:'நீங்கள் எதைக் கற்க விரும்புகிறீர்கள்?',
@@ -65,7 +67,9 @@
       questionBreakdown:(total,examples,exercises,quizzes)=>`இங்கு ${total} வினாப் பக்கங்கள்: ${examples} தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் + ${exercises} பயிற்சி வினாக்கள். ${quizzes} சிறு கருத்துச் சரிபார்ப்புகள் தனியாக உள்ளன.`,
       returnHelp:'கருத்துகள், எடுத்துக்காட்டுகள், பயிற்சிகள் மற்றும் சிறு தேர்வுகளுக்குச் செல்ல அத்தியாயத் தேர்வைப் பயன்படுத்துங்கள்.',
       selectQuestion:'ஒரு வினாவைத் தேர்ந்தெடுக்கவும்',group:'பயிற்சித் தொகுதி',jumpConcept:'கருத்தைப் படிக்கவும்',lab:'வென் பட ஆய்வகம்',
-      existingExamples:'சில தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் உள்ளன',noPublished:'முழு அத்தியாய மீளாய்வு இன்னும் முடியவில்லை'
+      existingExamples:'சில தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் உள்ளன',noPublished:'முழு அத்தியாய மீளாய்வு இன்னும் முடியவில்லை',
+       exampleWordingNote:'பாடநூல் ஒப்பீடு நிலுவையில் உள்ளது: முதல் அத்தியாய எடுத்துக்காட்டு வினாக்கள் சில மாற்றிச் சொல்லப்பட்டுள்ளன. 2025 பாடநூலின் சொற்சொல்லான பதிப்பாகச் சான்றளிக்கப்படவில்லை.',
+       exerciseCoverageNote:(count)=>`பயிற்சி 1.1 · மொத்தம் 30 துணை வினாக்களில் ${count} மட்டுமே உள்ளன. வினாக்கள் 4–6 (12 துணை வினாக்கள்) மற்றும் பயிற்சிகள் 1.2–1.7 இன்னும் சேர்க்கப்படவில்லை. அசல் வினா உரைக்கு 2025 பாடநூலைப் பார்க்கவும்.`
     }
   };
   const baseKinds=['concepts','examples','exercises','quizzes'];
@@ -191,6 +195,10 @@
       }else{
         if(section==='exercises')info(t.practiceNote);
         if(section==='examples')info(t.existingExamples);
+        if(chapter.id==='g9-ch1'){
+          const availableEx11=selected.filter(q=>q.exercise==='1.1'&&q.kind!=='practice').length;
+          info(section==='examples'?t.exampleWordingNote:t.exerciseCoverageNote(availableEx11));
+        }
         if(section==='exercises'&&selected.some(q=>q.kind==='practice')&&selected.some(q=>q.kind!=='practice')){
           const filters=document.createElement('div');filters.className='hub-question-filters';
           const filterOptions=[['all',t.all],['textbook',t.official],['practice',t.original]];
