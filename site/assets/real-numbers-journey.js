@@ -137,7 +137,7 @@ function mount(container,chapter,language){
    });choices.append(b);
   });
   panel.querySelector('[data-hint]').addEventListener('click',()=>{feedback.textContent=pick(stage.hint,lang);});
-  panel.querySelector('[data-why]').addEventListener('click',()=>{explanation.textContent=pick(stage.why,lang);explanation.hidden=!explanation.hidden;});
+  panel.querySelector('[data-why]').addEventListener('click',()=>{explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=!explanation.hidden;});
   panel.querySelector('[data-next]')?.addEventListener('click',()=>{show(i+1);root.querySelector('[data-panel]').scrollIntoView({block:'nearest'});});
   renderDemo(i);update();
  }
