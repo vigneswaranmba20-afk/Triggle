@@ -4,7 +4,7 @@
   "edition": "2025 revised",
   "lastVerified": "2026-11-08",
   "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
-  "notes": "2026-11-08 15:31 IST: Q3 commit 27ccdbef3231177b29796cdf08d95a2be4928eab passed four GitHub Actions workflows including Grade 10 bilingual curriculum preview (#42465417651), shared tests (#42465417691), Grade 9 usability (#42465417672), curriculum/Pages validation (#42465417799). These are branch CI results only, NOT merge or live verification. Source-verified draft coverage remains five; Tamil human editorial pending.",
+  "notes": "2026-11-08 15:31 IST: Q4 English/Tamil 2025 revised printed p.6/PDF p.12 source matched; A={5,6}, B={4,5,6}, C={5,6,7}; identity independently checked via (B×B)∩(C×C)=(B∩C)×(B∩C)=A×A. New Q4 preview, math and browser tests pending CI. Prior Q3 commit 27ccdbef passed four workflows, including Grade 10 #42465417651. Tamil human editorial pending; no merge/live verification.",
   "chapters": [
     {
       "chapter": 1,
@@ -52,7 +52,8 @@
         "1(ii)",
         "1(iii)",
         "2",
-        "3"
+        "3",
+        "4"
       ],
       "mergedQuestionSubparts": [],
       "liveVerifiedQuestionSubparts": [],
@@ -150,12 +151,12 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "Verify exact bilingual text of Chapter 1 Exercise 1.1 Q4 against 2025 revised PDFs before drafting. Reconcile Grade 10 branch with latest main (was 54 ahead/62 behind on 2026-11-08 15:31 IST), rerun cross-grade tests, then merge only with clean required gates; verify Pages/mobile visibility.",
+  "nextAction": "Confirm Q4 commit GitHub CI; fix any failures. Next Chapter 1 Ex 1.1 Q5 (2025 revised English/Tamil printed p.6): verify full formula/glyph layout before drafting. Reconcile Grade 10 branch with latest main and run cross-grade regressions before preview merge.",
   "testStatus": {
     "localMathEnumeration": "Q1(iii) independent enumeration checked: A×B=∅, A×A has four ordered pairs, B×A=∅; full repository tests pending",
     "npmTest": "Passed in shared Test Triggle changes workflow #42465417691 for Q3 commit 27ccdbef; local npm test not run in this cycle.",
-    "playwright": "Grade 10 bilingual curriculum preview workflow #42465417651 succeeded for Q3 commit 27ccdbef; new ledger commit pending CI.",
-    "githubCI": "Q3 commit 27ccdbef: four workflows passed on 2026-11-08, including Grade 10 preview run #42465417651. New ledger-only commit requires its own CI confirmation.",
+    "playwright": "Q3 browser CI #42465417651 passed; Q4 assertions committed, pending execution",
+    "githubCI": "Q3 commit 27ccdbef passed all four workflows; new Q4 changes pending CI",
     "merged": false,
     "liveVerified": false,
     "latestGrade10PreviewCommit": "27ccdbef3231177b29796cdf08d95a2be4928eab",
