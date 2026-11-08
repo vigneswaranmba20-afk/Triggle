@@ -145,19 +145,16 @@ async function main(){
     }
 
     if(config.chapter==='g9-ch1'){
-      await check(c,'Sticky question visible during explanations','orientation',async()=>{
+      await check(c,'Question scrolls normally with its answer choices','orientation',async()=>{
        await lab.locator('[data-nav] button').first().click();
-       await lab.locator('.sp2-formula').scrollIntoViewIfNeeded();
-       const m=await lab.locator('.sp2-sticky-context').evaluate(el=>{
-        const r=el.getBoundingClientRect();
-        return {position:getComputedStyle(el).position,top:r.top,bottom:r.bottom,height:r.height,viewport:innerHeight,
-          heading:el.querySelector('h4')?.innerText,question:el.querySelector('.sp2-pinned-question')?.innerText};
-       });
-       assert.equal(m.position,'sticky',JSON.stringify(m));
+       const m=await lab.locator('.sp2-concept-heading').evaluate(el=>({position:getComputedStyle(el).position,heading:el.querySelector('h4')?.innerText}));
+       const q=await lab.locator('.sp2-concept-question').evaluate(el=>({position:getComputedStyle(el).position,question:el.innerText,after:!!el.nextElementSibling?.matches('[data-answers]')}));
+       assert.notEqual(m.position,'sticky','Concept heading must not float');
+       assert.notEqual(q.position,'sticky','Concept question must not float');
        assert.ok(m.heading?.startsWith('1.'),'Numbered heading missing');
-       assert.ok(m.question?.length>12,'Pinned question blank');
-       assert.ok(m.top>=-2&&m.bottom<m.viewport-75,'Question scrolls offscreen '+JSON.stringify(m));
-       assert.ok(m.height<m.viewport*.40,'Question uses too much screen space '+JSON.stringify(m));
+       assert.ok(q.question?.length>12,'Question is missing');
+       assert.ok(q.after,'Question should appear immediately before answer choices');
+       assert.equal(await lab.locator('.sp2-sticky-context').count(),0);
       });
       await check(c,'Textbook set-form names are visible','terminology',async()=>{
        await lab.locator('[data-nav] button').nth(1).click();
@@ -191,11 +188,14 @@ async function main(){
        await lab.locator('[data-nav] button').nth(6).click();
        assert.ok((await button.innerText()).includes(lang==='ta'?'அத்தியாயம் 1':'Chapter 1'));
        await button.click();
-       assert.equal(await page.locator('.hub-section-card').count(),4);
+       assert.equal(await page.locator('.hub-section-card').count(),5);
       });
     }
     await check(c,'Chapter activities and thinking corners open with answers','textbook',async()=>{
-      if(config.chapter==='g9-ch1')await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
+      assert.equal(await page.locator('.hub-panel .textbook-extra').count(),0,'Concepts should not append textbook activities');
+      if(await page.locator('.hub-back-menu').count())await page.locator('.hub-back-menu').click();
+      assert.equal(await page.locator('.hub-section-card[data-hub-section="activities"]').count(),1);
+      await page.locator('.hub-section-card[data-hub-section="activities"]').click();
       const cards=page.locator('.textbook-extra');
       assert.equal(await cards.count(),config.chapter==='g9-ch1'?18:6);
       const first=cards.first();
