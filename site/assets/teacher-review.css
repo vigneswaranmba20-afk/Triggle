@@ -1,0 +1,54 @@
+/* Triggle phone-first teacher review · original standalone UI, independent of student flow. */
+:root{font-family:system-ui,-apple-system,"Noto Sans Tamil",sans-serif;color:#302c45;background:#f8f6fc;font-synthesis:none}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:290px;padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+button,input,textarea,select{font:inherit}button,a,select{touch-action:manipulation}button{cursor:pointer}a{color:#57358d}button:disabled{opacity:.4;cursor:not-allowed}
+:focus-visible{outline:3px solid #9675d5;outline-offset:3px}
+.tr-top{background:#fff;border-bottom:1px solid #e8e2f0;padding:12px max(14px,env(safe-area-inset-left));display:flex;align-items:center;justify-content:space-between;gap:12px}
+.tr-brand{display:flex;align-items:center;gap:9px;min-width:0}.tr-brand strong{font-size:22px;letter-spacing:-.6px}.tr-brand small{display:block;font-size:9px;font-weight:800;color:#83758e;letter-spacing:.7px}.tr-mark{font-size:24px;background:#ede8fb;color:#654991;width:40px;height:40px;display:grid;place-items:center;border-radius:11px;flex:none}.tr-gold{color:#c29243}
+.tr-home{white-space:nowrap;font-size:12px;font-weight:750;color:#574481;text-decoration:none;padding:10px;border:1px solid #ddd5ed;border-radius:11px}
+.tr-main{max-width:920px;margin:0 auto;padding:15px clamp(11px,3vw,25px) 40px}
+.tr-intro{margin:3px 0 17px}.tr-kicker{font-size:10px;letter-spacing:1.1px;color:#8165ac;font-weight:850}
+.tr-intro h1{font-size:clamp(22px,4vw,32px);line-height:1.4;color:#35295f;margin:7px 0}.tr-intro h1 span{font-size:.68em;white-space:nowrap;color:#685b82}
+.tr-intro>p{font-size:13px;line-height:1.75;color:#554e67}.tr-intro>p span{color:#5a536f}
+.tr-caution{background:#fff9ea;border:1px solid #ecdba8;border-radius:10px;padding:10px 12px}
+.tr-setup,.tr-question,.tr-export{border:1px solid #e7e0ed;border-radius:17px;background:white;box-shadow:0 7px 26px #44336108;padding:clamp(13px,3vw,21px);margin-bottom:14px;min-width:0}
+.tr-name-label,.tr-review label,.tr-import-label{font-size:13px;font-weight:750;color:#52436c;display:block;margin:0 0 7px}.tr-name-label span{font-weight:500;color:#7f728d}
+#reviewerName,.tr-toolbar select,.tr-review textarea{width:100%;min-height:44px;border:1px solid #cac1df;border-radius:10px;padding:10px 12px;background:#fff;color:#332e49}
+.tr-review textarea{min-height:98px;line-height:1.5;resize:vertical;font-size:14px}
+.tr-progress-head{display:flex;justify-content:space-between;gap:12px;font-size:13px;margin:14px 0 6px;color:#514071}
+.tr-progress-head span{font-size:12px;color:#776b85}.tr-meter{height:9px;border-radius:99px;background:#ece6f5;overflow:hidden}.tr-meter span{display:block;width:0;height:100%;background:#7560a9;transition:width .2s}
+.tr-toolbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.tr-toolbar label{font-size:12px;font-weight:750;color:#574d71}.tr-toolbar select{margin-top:6px;font-size:13px;padding:7px;max-width:100%}
+.tr-card-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.tr-type{display:inline-flex;border-radius:99px;padding:5px 10px;font-size:11px;font-weight:750;background:#f0ecfa;color:#5a438e}.tr-count{font-size:12px;color:#81778e;font-weight:750}
+.tr-question h2{font-size:clamp(18px,3.4vw,24px);line-height:1.45;margin:11px 0 4px;color:#392e59;overflow-wrap:anywhere}
+.tr-source{color:#746b82;font-size:11px;line-height:1.5;margin:0 0 14px}
+.tr-bilingual{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tr-language{min-width:0;background:#faf8ff;border:1px solid #e9e2f4;border-radius:12px;padding:12px}
+.tr-language[lang=ta]{background:#f7fbf8;border-color:#dcebe2}
+.tr-lang-label{color:#73608b;font-weight:800;font-size:10px;letter-spacing:.7px;margin:0 0 8px}
+.tr-language p{font-size:clamp(14px,2.7vw,17px);line-height:1.8;font-weight:600;color:#2f2949;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.tr-figure{border:1px solid #e6e0ec;border-radius:12px;margin-top:13px;padding:7px;overflow-x:auto;text-align:center}
+.tr-figure .diagram-wrap{max-width:100%;margin:auto}.tr-figure svg{display:block;width:100%;height:auto;max-height:210px}
+.tr-solution{margin-top:14px;border:1px solid #e9e1f2;border-radius:12px;overflow:hidden}
+.tr-solution summary{font-size:13px;font-weight:780;padding:13px;line-height:1.6;background:#f3effa;cursor:pointer;min-height:48px}
+.tr-answer{padding:13px 14px;border-bottom:1px solid #eee8f5;display:grid;gap:6px}.tr-answer span{color:#716683;font-size:12px;font-weight:750}.tr-answer strong{line-height:1.7;overflow-wrap:anywhere;font-size:17px;color:#35285d;white-space:pre-wrap}
+.tr-steps{list-style-position:outside;margin:0;padding:12px 15px 15px 33px}.tr-steps li{padding:7px 0;line-height:1.6;font-size:13px;border-bottom:1px dashed #ede7f3;overflow-wrap:anywhere}.tr-steps li:last-child{border:0}
+.tr-steps li p{margin:3px 0;color:#4a405f}.tr-steps li p[lang=ta]{color:#355e4b}.tr-steps li code{display:block;font-family:inherit;font-weight:770;background:#f7f5fc;border-radius:7px;padding:7px;margin-top:5px;white-space:pre-wrap;overflow-wrap:anywhere;color:#55417d}
+.tr-source-links{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 4px}.tr-source-links a{font-size:12px;padding:8px 9px;border:1px solid #e5dded;border-radius:8px;text-decoration:none;font-weight:750}
+.tr-review{margin-top:16px;padding-top:15px;border-top:1px solid #e6e0ed}.tr-review h3{font-size:16px;margin:0 0 10px;color:#3b3059}
+.tr-decisions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 16px}
+.tr-decisions button{display:flex;justify-content:center;align-items:center;gap:7px;min-height:72px;padding:9px 7px;border-radius:11px;border:1px solid #dcd3e7;font-weight:850;font-size:19px;line-height:1.3;min-width:0}
+.tr-decisions button span{text-align:left;font-size:13px}.tr-decisions button small{display:block;font-weight:550;font-size:10px;margin-top:5px}
+.tr-decisions .tr-approve{background:#effaf4;color:#236c4f;border-color:#b5e2c8}.tr-decisions .tr-revise{background:#fff9ea;color:#8a6036;border-color:#ead6a4}.tr-decisions .tr-error{background:#fff0f0;color:#a43743;border-color:#f0bdc1}
+.tr-decisions button[aria-pressed=true]{box-shadow:inset 0 0 0 3px currentColor}
+.tr-saved{font-size:12px;color:#467157;font-weight:740;min-height:20px;margin:9px 0 0}
+.tr-export h3{font-size:17px;margin:0 0 8px;color:#443360}.tr-export p{font-size:13px;line-height:1.65;color:#635a75}
+.tr-export-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:13px 0}
+.tr-export-buttons button{min-height:52px;border:1px solid #c9bee0;border-radius:10px;background:#f3effc;color:#524182;font-size:12px;font-weight:760;padding:9px}
+.tr-import-label{margin-top:15px}#importFile{width:100%;max-width:100%;font-size:12px}#exportMessage{font-weight:700;color:#574480;overflow-wrap:anywhere}.tr-export small{display:block;color:#80768a;font-size:11px;line-height:1.6}
+.tr-nav{position:fixed;bottom:0;left:0;right:0;z-index:20;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;background:#ffffffee;backdrop-filter:blur(14px);border-top:1px solid #e5ddef;padding:11px max(12px,env(safe-area-inset-left)) calc(11px + env(safe-area-inset-bottom))}
+.tr-nav button{min-height:50px;background:#5f478e;color:#fff;border:0;border-radius:12px;font-weight:800;font-size:13px;padding:9px 14px}.tr-nav button span{display:block;font-size:10px;font-weight:550;margin-top:2px}.tr-nav strong{font-size:12px;min-width:54px;text-align:center;color:#5a5072}
+.tr-empty{border:1px dashed #c5b8d6;border-radius:13px;padding:18px;margin-bottom:14px;background:white;font-size:13px}.tr-empty button{min-height:44px;border:1px solid #baa9d6;border-radius:8px;background:#f0ebfa;color:#4e367c;font-weight:700;padding:8px 14px}
+[hidden]{display:none!important}
+@media(max-width:650px){.tr-bilingual{grid-template-columns:1fr}.tr-language p{font-size:15px}.tr-decisions{grid-template-columns:1fr}.tr-decisions button{min-height:53px;justify-content:flex-start;padding:8px 14px}.tr-decisions button span{font-size:14px}.tr-decisions button small{display:inline;font-size:11px;margin-left:8px}.tr-export-buttons{grid-template-columns:1fr 1fr}.tr-export-buttons button:first-child{grid-column:1/-1}.tr-intro h1{font-size:24px}}
+@media(max-width:370px){.tr-top{align-items:flex-start}.tr-home{font-size:10px}.tr-brand small{font-size:8px}.tr-toolbar{grid-template-columns:1fr}.tr-nav{gap:6px}.tr-nav button{font-size:11px;padding:7px 8px}.tr-nav strong{min-width:43px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
