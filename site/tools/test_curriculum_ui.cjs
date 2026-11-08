@@ -1047,7 +1047,7 @@ async function main() {
         assert.equal(await page.locator('#stepsList li').count(),3);
         assert.match(await page.locator('#answerText').innerText(),/set/i);
         await page.locator('#langTa').click();
-        assert.match(await page.locator('#questionText').innerText(),/பகா எண்கள்/);
+        assert.match(await page.locator('#questionText').innerText(),/1\. பின்வருவனவற்றில் எவை கணங்களாகும்\?\s*\(i\) ஒன்று முதல் 100 வரையுள்ள பகா எண்களின் தொகுப்பு\./,'Preserve textbook-exact Tamil source wording');
         assert.match(await page.locator('#answerText').innerText(),/கணம்/);
         await noOverflow(page,'Grade 9 Q1 Tamil at '+width+'px');
         await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-iv');
