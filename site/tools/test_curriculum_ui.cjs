@@ -1072,6 +1072,7 @@ async function main() {
         await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q5-ii');
         await page.locator('#answerText').waitFor({state:'visible'});
         await page.locator('#langEn').click(); // The preceding Q3(b) check leaves the language in Tamil.
+        await page.locator('#langTa').click();
         assert.match(await page.locator('#questionText').innerText(),/பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக/,'Q5 Tamil textbook wording');
         await page.locator('#langEn').click();
         assert.match(await page.locator('#questionText').innerText(),/Represent the following sets in set builder form/,'Q5 English textbook wording');
