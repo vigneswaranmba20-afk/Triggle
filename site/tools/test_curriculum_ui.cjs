@@ -1164,7 +1164,7 @@ async function main() {
     await check('all 105 legacy deep links retain questions and working solutions', async () => {
       const ctx = await context(1280);
       const page = await visit(ctx);
-      const links = await page.evaluate(() => Object.entries(window.TRIGGLE_CLASSES).flatMap(([grade,data]) => data.items.filter(item => !item.id.startsWith('g9-ch1-ex1.1-') && !item.id.startsWith('c9-textbook-example-') && !item.id.startsWith('g9-ch2-') && !item.id.startsWith('g9-ch9-ex9.1-')).map(item => ({ grade, id:item.id }))));
+      const links = await page.evaluate(() => Object.entries(window.TRIGGLE_CLASSES).flatMap(([grade,data]) => data.items.filter(item => !item.id.startsWith('g9-ch1-ex1.1-') && !item.id.startsWith('c9-textbook-example-') && !item.id.startsWith('g9-ch2-') && !item.id.startsWith('g9-ch9-ex9.1-') && !item.id.startsWith('g9-ch9-ex9.2-')).map(item => ({ grade, id:item.id }))));
       assert.equal(links.length, 105);
       for (const {grade,id} of links) {
         await page.goto(url + `/index.html?class=${grade}&question=${id}`);
