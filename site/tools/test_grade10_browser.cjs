@@ -38,7 +38,7 @@ async function main(){
    assert.equal(await q4.count(),1);
    await q4.locator('summary').click();
    assert.equal(await q4.locator('.pair-cell').count(),8,'Q4 must show four A×A and four intersection pairs');
-   assert.match(await q4.innerText(),/\\(B × B\\) ∩ \\(C × C\\)/);
+   assert.ok((await q4.innerText()).includes('(B × B) ∩ (C × C)'), 'Q4 must display the Cartesian-product intersection heading');
    const q2=page.locator('[data-question-id="g10-ch1-ex1-1-q2"]');
    assert.equal(await q2.locator('h2').innerText(),'Exercise 1.1 · Q2','unsplit textbook Q2 must not show null subpart');
    await q2.locator('summary').click();
