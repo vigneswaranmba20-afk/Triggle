@@ -43,6 +43,15 @@ async function main(){
    await page.keyboard.press('Enter');
    assert.equal(await page.locator('html').getAttribute('lang'),'en');
    assert.deepEqual(errors,[]);
+   // Already-loaded exercises remain interactive without network access.
+   await context.setOffline(true);
+   await page.locator('#ta').click();
+   assert.equal(await page.locator('html').getAttribute('lang'),'ta');
+   assert.equal(await page.locator('[data-question-id]').count(),3);
+   await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"] summary').click();
+   assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"] .pair-cell').count(),4);
+   await context.setOffline(false);
+   assert.deepEqual(errors,[]);
    await context.close();
    console.log('PASS Grade 10 bilingual Cartesian preview '+width+'px, keyboard, math grids');
   }
