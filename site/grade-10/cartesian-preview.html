@@ -35,7 +35,7 @@ function draw(){
  main.replaceChildren();retry.hidden=true;
  for(const q of lessons){
   const article=el('article');article.dataset.questionId=q.id;
-  article.append(el('h2','Exercise '+q.exercise+' · Q'+q.question+'('+q.subpart+')'));
+  article.append(el('h2','Exercise '+q.exercise+' · Q'+q.question+(q.subpart==null?'':'('+q.subpart+')')));
   article.append(el('p',q.title[lang]));
   article.append(el('p',q.questionParaphrase[lang]));
   article.append(el('small','2025 revised · English printed p.'+q.source.english.printedPage+' (PDF '+q.source.english.pdfPage+'); Tamil printed p.'+q.source.tamil.printedPage+' (PDF '+q.source.tamil.pdfPage+').'));
