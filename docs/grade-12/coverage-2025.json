@@ -124,8 +124,8 @@
       "sourceVerified": true,
       "bilingualTextCheckedAgainstSource": true,
       "tamilEditorialReview": "pending",
-      "ci": "not_run",
-      "browser": "not_run",
+      "ci": "passed",
+      "browser": "passed",
       "merged": false,
       "liveVerified": false,
       "sourcePages": {
@@ -139,6 +139,12 @@
           "pdfPage": 24,
           "printedPage": 16
         }
+      },
+      "ciEvidence": {
+        "commit": "9cd1c69b6503916f9c9e8f1d52a91cd0c6c6b2b6",
+        "grade12Run": 42446360731,
+        "sharedRun": 42446360750,
+        "validatedAt": "2026-11-08"
       }
     },
     {
@@ -163,10 +169,24 @@
         }
       },
       "tamilEditorialReview": "pending",
-      "ci": "not_run",
-      "browser": "not_run",
+      "ci": "passed",
+      "browser": "passed",
       "merged": false,
-      "liveVerified": false
+      "liveVerified": false,
+      "ciEvidence": {
+        "commit": "9cd1c69b6503916f9c9e8f1d52a91cd0c6c6b2b6",
+        "grade12Run": 42446360731,
+        "sharedRun": 42446360750,
+        "validatedAt": "2026-11-08"
+      }
     }
-  ]
+  ],
+  "lastVerifiedCheckpoint": {
+    "date": "2026-11-08",
+    "result": "Grade 12 workflow, npm test, mathematical contracts, Playwright mobile/keyboard/offline, and shared browser regressions passed on commit 9cd1c69; merge and live verification remain blocked by diverged main and draft PR.",
+    "grade12Run": 42446360731,
+    "sharedRun": 42446360750,
+    "nextSourceItem": "Chapter 1 Exercise 1.1 Q1(iii), exact English/Tamil matrix not yet source checked",
+    "branchBehindMainAtCheckpoint": 52
+  }
 }
