@@ -73,12 +73,14 @@ function identityTimes(n,d){return Array.from({length:n},(_,i)=>Array.from({leng
 function verifyMatrix(m){const d=determinant(m),adj=adjugate(m),target=identityTimes(m.length,d);return {det:d,adj,left:multiply(m,adj),right:multiply(adj,m),valid:JSON.stringify(multiply(m,adj))===JSON.stringify(target)&&JSON.stringify(multiply(adj,m))===JSON.stringify(target)};}
 document.getElementById('verify-matrix').addEventListener('click',()=>{const key=document.getElementById('matrix-choice').value;const result=verifyMatrix(matrices[key]);const tamil=document.documentElement.lang==='ta';document.getElementById('matrix-result').textContent=(tamil?'அணிக்கோவை':'Determinant')+': '+result.det+'\\n'+(tamil?'சேர்ப்பு அணி':'Adjugate')+': '+JSON.stringify(result.adj)+'\\nA × adj(A): '+JSON.stringify(result.left)+'\\nadj(A) × A: '+JSON.stringify(result.right)+'\\n'+(result.valid?(tamil?'இரு முற்றொருமைகளும் சரிபார்க்கப்பட்டன':'Both identities verified'):(tamil?'சரிபார்ப்பு தோல்வி':'Verification failed'));});
 
-document.getElementById('show-cofactor').addEventListener('click',()=>{
+function showCofactor(){
  const i=Number(document.getElementById('cofactor-row').value),j=Number(document.getElementById('cofactor-column').value);
  const minor=matrices.ii.filter((_,r)=>r!==i).map(row=>row.filter((_,c)=>c!==j));
  const minorValue=determinant(minor),sign=(i+j)%2?-1:1,cofactor=sign*minorValue;
  const ta=document.documentElement.lang==='ta';
  document.getElementById('cofactor-result').textContent=(ta?'இடம்':'Position')+' C'+(i+1)+(j+1)+'\n'+(ta?'சிற்றணி':'Minor matrix')+': '+JSON.stringify(minor)+'\n'+(ta?'சிற்றணிக்கோவை':'Minor determinant')+': '+minorValue+'\n'+(ta?'குறி':'Sign')+': '+sign+'\nC'+(i+1)+(j+1)+' = '+sign+' × '+minorValue+' = '+cofactor;
-});
+}
+document.getElementById('show-cofactor').addEventListener('click',showCofactor);
+for(const id of ['cofactor-row','cofactor-column'])document.getElementById(id).addEventListener('change',showCofactor);
 buttons.en.addEventListener('click',()=>language('en'));buttons.ta.addEventListener('click',()=>language('ta'));
 </script></body></html>
