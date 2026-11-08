@@ -22,7 +22,16 @@ for (const item of ledger.items) {
  if(item.merged) assert.ok(item.ciPassed, 'merged without CI: '+item.id);
  if(item.liveVerified) assert.ok(item.deployed && item.merged, 'live without deployment: '+item.id);
 }
-assert.deepEqual([...ids].sort(), lessons.map(q=>q.id).sort(), 'ledger and lesson IDs diverge');
+const drafted = ledger.items.filter(i=>i.status==='draft');
+assert.deepEqual(drafted.map(i=>i.id).sort(), lessons.map(q=>q.id).sort(), 'draft ledger and lesson IDs diverge');
+const blocked = ledger.items.find(i=>i.id==='g11-ch1-ex1.1-q4-iii');
+assert.ok(blocked, 'missing Q4(iii) inventory checkpoint');
+assert.equal(blocked.status,'missing-source-image-verification');
+assert.equal(blocked.mathChecked,false);
+assert.equal(blocked.ciPassed,false);
+assert.equal(blocked.merged,false);
+assert.equal(blocked.liveVerified,false);
+assert.equal(blocked.sourceCheckpoint,'docs/coverage/grade-11-ex1-1-q4-iii-source-checkpoint.json');
 for (const q of lessons) {
  const item=ledger.items.find(i=>i.id===q.id);
  assert.equal(q.source.page.en,item.englishPrintedPage);
@@ -35,7 +44,7 @@ for (const q of lessons) {
 }
 for (const chapter of ledger.chapters) {
  const items=ledger.items.filter(i=>i.id.startsWith(chapter.chapterId+'-'));
- assert.equal(chapter.draftedSubparts,items.length);
+ assert.equal(chapter.draftedSubparts,items.filter(i=>i.status==='draft').length);
  assert.equal(chapter.mathematicallyCheckedSubparts,items.filter(i=>i.mathChecked).length);
  assert.equal(chapter.merged,items.filter(i=>i.merged).length);
  assert.equal(chapter.liveVerified,items.filter(i=>i.liveVerified).length);
