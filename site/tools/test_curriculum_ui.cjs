@@ -1091,6 +1091,9 @@ async function main() {
       await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-i');
       await page.locator('#answerText').waitFor({state:'visible'});
       assert.match(await page.locator('#answerText').innerText(),/I, N, D, A/);
+      await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q4-i');
+      await page.locator('#answerText').waitFor({state:'visible'});
+      assert.match(await page.locator('#answerText').innerText(),/2, 4, 6, 8, 10, 12, 14, 16, 18/,'Q4 cached offline');
       await ctx.setOffline(false);
     });
     assert.deepEqual(errors, [], 'No uncaught browser errors');
