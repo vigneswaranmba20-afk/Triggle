@@ -595,9 +595,12 @@ async function main() {
       await page.locator('.hub-back-menu').click();
       assert.equal(new URL(page.url()).searchParams.has('section'),false);
       await page.locator('#homeBtn').click();
+      assert.equal(await page.locator('#discover-search').count(),0,'Home must not have an extra search panel');
+      await page.locator('.discover-grade-grid [data-grade="9"]').click();
       await page.locator('#discover-search').fill('கண மொழி');
-      assert.ok(await page.locator('.discover-results [data-chapter="g9-ch1"]').count()>0);
-      await page.locator('.discover-results [data-chapter="g9-ch1"]').click();
+      assert.equal(await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]:visible').count(),1,
+        'Chapter search remains accessible inside the Class 9 directory');
+      await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
       assert.equal(await page.locator('.hub-section-card').count(),5);
       await noOverflow(page,'chapter-first menu at 390px');
