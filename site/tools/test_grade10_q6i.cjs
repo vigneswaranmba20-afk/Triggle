@@ -17,6 +17,15 @@ assert.deepEqual(sorted(q.answers.right),unique([...q.answers.AxB,...q.answers.A
 assert.deepEqual(sorted(q.answers.left),sorted(q.answers.right));
 assert.equal(q.answers.left.length,8);
 for(const step of q.steps){assert.ok(step.en.length>10 && step.ta.length>10 && step.equation.length>5);}
+assert.equal(q.source.english.driveFileId,'13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of');
+assert.equal(q.source.tamil.driveFileId,'1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC');
+for(const medium of ['english','tamil']){
+  assert.equal(q.source[medium].printedPage,6);
+  assert.equal(q.source[medium].pdfPage,12);
+  assert.equal(q.source.fidelity[medium+'ExactQuestionVerified'],false,'Do not claim textbook-exact source before page-image review');
+  assert.equal(q.source.fidelity[medium+'PageImageVerified'],false);
+}
+assert.ok(q.questionParaphrase && !q.questionExact,'Draft paraphrase must not masquerade as exact textbook question');
 assert.equal(q.review.sourceVerified,false,'PDF glyph review must not be falsely marked complete');
 assert.equal(q.review.tamilEditorial,'pending');
 assert.equal(q.review.merged,false);
