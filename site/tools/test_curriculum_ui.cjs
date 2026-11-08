@@ -403,7 +403,7 @@ async function main() {
       assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-      assert.equal(await page.locator('.hub-question').count(),19,'All 18 textbook subparts and the original practice should be accessible');
+      assert.equal(await page.locator('.hub-question').count(),21,'All 20 textbook subparts and the original practice should be accessible');
       assert.equal(await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').count(),1,'Preserve original practice ID');
       await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').click();
       assert.equal(new URL(page.url()).searchParams.has('question'),true);
