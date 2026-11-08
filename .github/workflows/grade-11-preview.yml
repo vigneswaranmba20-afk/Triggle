@@ -24,6 +24,7 @@ jobs:
         run: |
           node site/tools/test_grade11_ex1_1_q1.cjs
           node site/tools/test_grade11_ex1_1_q1_independent.cjs
+          node site/tools/test_grade11_ex1_1_q2.cjs
           node site/tools/test_grade11_q1_boundary_cases.cjs
           node site/tools/test_grade11_preview.cjs
           node site/tools/test_grade11_coverage_integrity.cjs
