@@ -27,7 +27,7 @@ async function main(){
    const errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(origin+'/grade-10/cartesian-preview.html');
    await page.locator('[data-question-id]').first().waitFor();
-   assert.equal(await page.locator('[data-question-id]').count(),7);
+   assert.equal(await page.locator('[data-question-id]').count(),8);
    assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"]').count(),1);
    assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q2"]').count(),1);
    const q3=page.locator('[data-question-id="g10-ch1-ex1-1-q3"]');
@@ -45,6 +45,12 @@ async function main(){
    assert.equal(await q5.locator('.pair-cell').count(),4,'Q5 must show two pairs on each side');
    assert.ok((await q5.innerText()).includes('(A ∩ C) × (B ∩ D)'));
    assert.ok((await q5.innerText()).includes('(A × B) ∩ (C × D)'));
+   const q6=page.locator('[data-question-id="g10-ch1-ex1-1-q6i"]');
+   assert.equal(await q6.count(),1);
+   assert.match(await q6.innerText(),/Source notation pending visual verification/);
+   await q6.locator('summary').click();
+   assert.equal(await q6.locator('.pair-cell').count(),16,'Q6(i) must show eight ordered pairs on each side');
+   assert.ok((await q6.innerText()).includes('A × (B ∪ C)'));
    const q2=page.locator('[data-question-id="g10-ch1-ex1-1-q2"]');
    assert.equal(await q2.locator('h2').innerText(),'Exercise 1.1 · Q2','unsplit textbook Q2 must not show null subpart');
    await q2.locator('summary').click();
@@ -58,7 +64,7 @@ async function main(){
    await page.locator('#ta').click();
    assert.equal(await page.locator('html').getAttribute('lang'),'ta');
    assert.equal(await page.locator('#ta').getAttribute('aria-pressed'),'true');
-   assert.equal(await page.locator('[data-question-id]').count(),7);
+   assert.equal(await page.locator('[data-question-id]').count(),8);
    await page.locator('#en').focus();
    await page.keyboard.press('Enter');
    assert.equal(await page.locator('html').getAttribute('lang'),'en');
@@ -67,7 +73,7 @@ async function main(){
    await context.setOffline(true);
    await page.locator('#ta').click();
    assert.equal(await page.locator('html').getAttribute('lang'),'ta');
-   assert.equal(await page.locator('[data-question-id]').count(),7);
+   assert.equal(await page.locator('[data-question-id]').count(),8);
    await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"] summary').click();
    assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"] .pair-cell').count(),4);
    await context.setOffline(false);
@@ -90,14 +96,14 @@ async function main(){
   assert.equal(failedOnce,true,'first request must exercise the simulated 503');
   await page.locator('#retry').click();
   await page.locator('[data-question-id]').first().waitFor({timeout:10000}).catch(async error=>{throw Error('Retry failed: '+await page.locator('#lessons').innerText()+'; '+error.message);});
-  assert.equal(await page.locator('[data-question-id]').count(),7,'retry must restore all seven source-verified lessons, including Q4');
+  assert.equal(await page.locator('[data-question-id]').count(),8,'retry must restore all eight preview lessons, including source-pending Q6(i)');
   assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q2"]').count(),1,'retry must restore Q2');
   assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q4"]').count(),1,'retry must restore Q4');
   assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q5"]').count(),1,'retry must restore Q5');
   assert.equal(await page.locator('#retry').isVisible(),false,'retry control must hide after success');
   await context.setOffline(true);
   await page.locator('#en').click();
-  assert.equal(await page.locator('[data-question-id]').count(),7,'recovered lessons remain usable offline');
+  assert.equal(await page.locator('[data-question-id]').count(),8,'recovered lessons remain usable offline');
   await context.setOffline(false);
   await context.close();
   console.log('PASS Grade 10 failed-fetch Tamil recovery and retry');
