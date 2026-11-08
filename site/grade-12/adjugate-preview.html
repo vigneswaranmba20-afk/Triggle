@@ -41,7 +41,7 @@ li{margin:.65rem 0;line-height:1.65}small,.notice{color:#475763}details{margin-t
 <p class="english">Choose a textbook matrix and verify both multiplication orders. This calculation runs entirely on your device.</p>
 <p class="tamil" lang="ta" hidden>பாடநூல் அணியைத் தேர்ந்தெடுத்து இரு பெருக்கல் வரிசைகளையும் சரிபார்க்கலாம். கணக்கீடு உங்கள் சாதனத்திலேயே நடைபெறும்.</p>
 <label for="matrix-choice"><span class="english">Exercise 1.1 question</span><span class="tamil" lang="ta" hidden>பயிற்சி 1.1 வினா</span></label>
-<select id="matrix-choice" style="font:inherit;padding:.6rem;margin:.5rem"><option value="i">Q1(i) · 2×2</option><option value="ii">Q1(ii) · 3×3</option><option value="iii">Q1(iii) · 3×3</option></select>
+<select id="matrix-choice" style="font:inherit;padding:.6rem;margin:.5rem"><option value="i">Q1(i) · 2×2</option><option value="ii">Q1(ii) · 3×3</option></select>
 <button id="verify-matrix" type="button"><span class="english">Verify matrix identity</span><span class="tamil" lang="ta" hidden>அணி முற்றொருமையைச் சரிபார்க்க</span></button>
 <output id="matrix-result" aria-live="polite" style="display:block;white-space:pre-wrap;overflow-wrap:anywhere;margin-top:1rem"></output>
 </section>
@@ -60,7 +60,7 @@ li{margin:.65rem 0;line-height:1.65}small,.notice{color:#475763}details{margin-t
 'use strict';const buttons={en:document.getElementById('en'),ta:document.getElementById('ta')};
 function language(lang){document.documentElement.lang=lang;for(const key of Object.keys(buttons))buttons[key].setAttribute('aria-pressed',String(key===lang));document.querySelectorAll('.english').forEach(x=>x.hidden=lang!=='en');document.querySelectorAll('.tamil').forEach(x=>x.hidden=lang!=='ta');document.querySelectorAll('summary[data-en]').forEach(x=>x.textContent=x.dataset[lang]);}
 // Independent, integer-only matrix computation; never trust a stored answer as its own proof.
-const matrices={i:[[-3,4],[6,2]],ii:[[2,3,1],[3,4,1],[3,7,2]],iii:[[2/3,2/3,1/3],[-2/3,1/3,2/3],[1/3,-2/3,2/3]]};
+const matrices={i:[[-3,4],[6,2]],ii:[[2,3,1],[3,4,1],[3,7,2]]};
 function determinant(m){if(m.length===1)return m[0][0];return m[0].reduce((sum,v,j)=>sum+((j%2)?-1:1)*v*determinant(m.slice(1).map(row=>row.filter((_,k)=>k!==j))),0);}
 function transpose(m){return m[0].map((_,j)=>m.map(row=>row[j]));}
 function adjugate(m){
