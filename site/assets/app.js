@@ -179,7 +179,10 @@
      button.setAttribute('aria-current',selected?'true':'false');
      const title=document.createElement('strong');title.textContent=ui('chapter')+' '+chapter.number+' · '+tr(chapter.title);
      const meta=document.createElement('small');
-     meta.textContent=(chapter.id==='g9-ch1'?(lang==='ta'?'7 செயல்வழிக் கருத்துகள்':'7 interactive concepts')+' · ':'')+
+     const interactiveStages=chapter.id==='g9-ch1'?window.TRIGGLE_SET_PATH?.stages:
+       chapter.id==='g9-ch2'?window.TRIGGLE_REAL_PATH?.stages:null;
+     const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
+     meta.textContent=(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+
        all.length+' '+ui('existingQuestions');
      button.append(title,meta);button.onclick=()=>selectChapter(chapter);section.append(button);
      if(selected&&!query){
