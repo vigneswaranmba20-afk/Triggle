@@ -1054,7 +1054,10 @@ async function main() {
         assert.match(await page.locator('#answerText').innerText(),/1\/2, 1\/4, 1\/6, 1\/8, 1\/10/);
         await page.evaluate(()=>window.TriggleFocusNavigation?.reveal());
         await page.locator('#langEn').click();
-        await page.locator('#chapterOverview [data-question-id="g9-ch1-ex1.1-q1-i"]').click();
+        // A direct question deep link opens the reader, not the chapter overview.
+        // Navigate directly to Q1 rather than clicking a card hidden outside this view.
+        await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q1-i');
+        await page.locator('#answerText').waitFor({state:'visible'});
         assert.match(await page.locator('#questionText').innerText(),/Prime numbers/);
         assert.equal(await page.locator('#stepsList li').count(),3);
         assert.match(await page.locator('#answerText').innerText(),/set/i);
