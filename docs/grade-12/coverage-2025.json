@@ -7,8 +7,8 @@
     {
       "chapter": 1,
       "exerciseInventory": "Exercise 1.1 inventoried: 19 question/subpart IDs; remaining chapter exercises UNKNOWN",
-      "missingSubparts": "17 known missing in Exercise 1.1; other chapter exercises UNKNOWN",
-      "verifiedSubparts": 2,
+      "missingSubparts": "16 known missing in Exercise 1.1; other chapter exercises UNKNOWN",
+      "verifiedSubparts": 3,
       "mergedSubparts": 0,
       "liveVerifiedSubparts": 0
     },
@@ -179,6 +179,35 @@
         "sharedRun": 42446360750,
         "validatedAt": "2026-11-08"
       }
+    },
+    {
+      "id": "g12-ch1-ex1.1-q1-iii",
+      "chapter": 1,
+      "exercise": "1.1",
+      "question": "1",
+      "subpart": "iii",
+      "status": "mathematically_verified",
+      "sourceVerified": true,
+      "bilingualTextCheckedAgainstSource": true,
+      "tamilEditorialReview": "pending",
+      "ci": "pending",
+      "browser": "pending",
+      "merged": false,
+      "liveVerified": false,
+      "sourcePages": {
+        "english": {
+          "volume": 1,
+          "printedPage": 15,
+          "pdfPage": 23
+        },
+        "tamil": {
+          "volume": 1,
+          "printedPage": 16,
+          "pdfPage": 24
+        }
+      },
+      "sourceImageCheckedAt": "2026-11-08",
+      "mathEvidence": "Nine cofactors; det(A)=1; exact integer products M·N=N·M=9I for A=M/3, adj(A)=N/3."
     }
   ],
   "lastVerifiedCheckpoint": {
@@ -186,7 +215,7 @@
     "result": "Grade 12 workflow, npm test, mathematical contracts, Playwright mobile/keyboard/offline, and shared browser regressions passed on commit 9cd1c69; merge and live verification remain blocked by diverged main and draft PR.",
     "grade12Run": 42446360731,
     "sharedRun": 42446360750,
-    "nextSourceItem": "Chapter 1 Exercise 1.1 Q1(iii), numbering confirmed in 2025 English/Tamil; matrix entries need visual page-image validation",
+    "nextSourceItem": "Chapter 1 Exercise 1.1 Q2(i), inverse of 2x2 matrix; visually check English p15/PDF23 and Tamil p16/PDF24 before transcribing.",
     "branchBehindMainAtCheckpoint": 58,
     "latestBrowserRegression": {
       "run": 42470569147,
@@ -202,6 +231,7 @@
       ],
       "latestRepairCommit": "494c06a86b8adaeaca0e4ec448fd98f64c817446",
       "latestRepair": "All four GitHub Actions workflows passed on 494c06a, including Grade 12 Playwright and shared browser regressions."
-    }
+    },
+    "nextAction": "Run new Q1(iii) math, bilingual and browser CI; reconcile PR #38 with latest main after all shared regressions pass."
   }
 }
