@@ -44,5 +44,5 @@ for (const chapter of ledger.chapters) {
   assert.ok(chapter.liveVerifiedQuestionSubparts.every(id => chapter.verifiedQuestionSubparts.includes(id)));
   assert.ok(chapter.mergedQuestionSubparts.every(id => chapter.verifiedQuestionSubparts.includes(id)));
 }
-assert.equal(checked, 6, 'Update verified-count contract when a new sourced lesson is added');
+assert.equal(checked, 7, 'Update verified-count contract when a new sourced lesson is added');
 console.log('PASS: Grade 10 eight-chapter ledger and '+checked+' bilingual source/math lesson contracts');
