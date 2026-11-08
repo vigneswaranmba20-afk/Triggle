@@ -12,7 +12,7 @@ const cofactor = (a,i,j) => {
 };
 const adj = a => Array.from({length:3},(_,i)=>Array.from({length:3},(_,j)=>cofactor(a,j,i)));
 const mul = (a,b) => a.map(row=>[0,1,2].map(j=>row.reduce((sum,v,k)=>sum+v*b[k][j],0)));
-const identity = d => [[d,0,0],[0,d,0],[0,0,d]];
+const identity = d => { const n = d===0 ? 0 : d; return [[n,0,0],[0,n,0],[0,0,n]]; };
 const check = a => {
  const d=det3(a), b=adj(a), target=identity(d);
  assert.deepEqual(mul(a,b),target,'A adj(A) = det(A) I');
