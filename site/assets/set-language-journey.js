@@ -25,7 +25,7 @@
       extra:'Try a second practice question',reason:'Show the reasoning',top:'Back to learning path',
       previousIdea:'Previous idea',nextIdea:'Next idea',position:(n,total)=>'Idea '+n+' of '+total,
       navTip:'Choose one of the seven numbered ideas. The question stays visible as you work.',
-       questionLabel:'CURRENT QUESTION',nextPage:'Next page',backChapter:'Back to Chapter 1',sliderTip:'Drag left or right (or use arrow keys) to change how many students are in BOTH groups. Watch the numbers and equation update.',sliderFormula:(both,union,neither)=>`A or B = 14 + 11 − ${both} = ${union}. Neither = 30 − ${union} = ${neither}. The overlap was counted twice, so subtract it once.`},
+       questionLabel:'CURRENT QUESTION',nextPage:'Next page',backChapter:'Back to Chapter 1',sliderTip:'Drag left or right (or use arrow keys) to change how many students are in BOTH groups. Tap − or + to change one student at a time. Watch the numbers and equation update.',sliderFormula:(both,union,neither)=>`A or B = 14 + 11 − ${both} = ${union}. Neither = 30 − ${union} = ${neither}. The overlap was counted twice, so subtract it once.`},
     ta:{label:'சிறிய கற்றல் பாதை',title:'கண மொழியை ஒவ்வொரு கருத்தாகக் கற்போம்',
       intro:'2025 பாடநூலை அடிப்படையாகக் கொண்ட ஏழு சிறு ஆராய்ச்சிகள். ஒன்றைத் தேர்ந்து முயலுங்கள்; பிறகு தாளில் பயிற்சி செய்யுங்கள்.',
       state:'இந்த சாதனத்தில் சரிபார்த்த கருத்துகள்',source:'பாடநூல் பகுதி',enPage:'ஆங்கிலம் பக்கம்',taPage:'தமிழ் பக்கம்',
@@ -42,7 +42,7 @@
       extra:'இன்னொரு பயிற்சி வினா',reason:'காரணத்தைப் பார்க்க',top:'கற்றல் பாதைக்குத் திரும்புக',
       previousIdea:'முந்தைய கருத்து',nextIdea:'அடுத்த கருத்து',position:(n,total)=>total+' இல் கருத்து '+n,
       navTip:'எண்ணிடப்பட்ட ஏழு கருத்துகளில் ஒன்றைத் தேர்ந்தெடுக்கவும். விடையைப் படிக்கும்போதும் வினா கண்ணில் இருக்கும்.',
-       questionLabel:'தற்போதைய வினா',nextPage:'அடுத்த பக்கம்',backChapter:'அத்தியாயம் 1-க்குத் திரும்பு',sliderTip:'இரு குழுக்களிலும் உள்ள மாணவர்களின் எண்ணிக்கையை மாற்ற ஸ்லைடரை இடம் அல்லது வலமாக நகர்த்துங்கள் (அல்லது அம்பு விசைகளைப் பயன்படுத்துங்கள்). எண்ணிக்கையும் கணக்கும் மாறுவதைக் கவனியுங்கள்.',sliderFormula:(both,union,neither)=>`A அல்லது B = 14 + 11 − ${both} = ${union}. எதுவுமில்லை = 30 − ${union} = ${neither}. பொதுவானவர்கள் இரு குழுக்களிலும் எண்ணப்படுவதால் ஒருமுறை கழிக்க வேண்டும்.`}
+       questionLabel:'தற்போதைய வினா',nextPage:'அடுத்த பக்கம்',backChapter:'அத்தியாயம் 1-க்குத் திரும்பு',sliderTip:'இரு குழுக்களிலும் உள்ள மாணவர்களின் எண்ணிக்கையை மாற்ற ஸ்லைடரை இடம் அல்லது வலமாக நகர்த்துங்கள் (அல்லது அம்பு விசைகளைப் பயன்படுத்துங்கள்). − அல்லது + பொத்தானைத் தொட்டு ஒரு மாணவராக மாற்றலாம். எண்ணிக்கையும் கணக்கும் மாறுவதைக் கவனியுங்கள்.',sliderFormula:(both,union,neither)=>`A அல்லது B = 14 + 11 − ${both} = ${union}. எதுவுமில்லை = 30 − ${union} = ${neither}. பொதுவானவர்கள் இரு குழுக்களிலும் எண்ணப்படுவதால் ஒருமுறை கழிக்க வேண்டும்.`}
   };
   function load(){
     try{
@@ -190,14 +190,21 @@
         controls.innerHTML='<label class="sp2-range-label" for="'+id+'">'+esc(t.overlap)+
           ' <output data-overlap-count>6</output></label>'+
           '<p class="sp2-slider-guide">'+esc(t.sliderTip)+'</p>'+
+           '<div class="sp2-slider-touch" role="group" aria-label="'+esc(t.count)+'">'+
+           '<button type="button" data-overlap-decrease aria-label="'+esc(lang==='ta'?'பொதுவான எண்ணிக்கையை ஒன்று குறைக்கவும்':'Decrease common members by one')+'">−</button>'+
            '<input type="range" id="'+id+'" min="0" max="11" step="1" value="6" aria-label="'+esc(t.count)+'">'+
+           '<button type="button" data-overlap-increase aria-label="'+esc(lang==='ta'?'பொதுவான எண்ணிக்கையை ஒன்று அதிகரிக்கவும்':'Increase common members by one')+'">+</button></div>'+
            '<p class="sp2-slider-formula" data-slider-formula aria-live="polite"></p>';
         const input=controls.querySelector('input');
+        const decrease=controls.querySelector('[data-overlap-decrease]');
+        const increase=controls.querySelector('[data-overlap-increase]');
         const update=()=>{
           const both=Number(input.value),union=25-both;
           controls.querySelector('[data-overlap-count]').textContent=String(both);
            controls.querySelector('[data-slider-formula]').textContent=t.sliderFormula(both,union,30-union);
            input.setAttribute('aria-valuetext',String(both)+' · '+t.overlap);
+           decrease.disabled=both===0;
+           increase.disabled=both===11;
           panel.querySelector('[data-demo-output]').innerHTML=
             '<span>'+esc(t.onlyA)+': <b>'+(14-both)+'</b></span>'+
             '<span>'+esc(t.overlap)+': <b>'+both+'</b></span>'+
@@ -205,7 +212,10 @@
             '<span>'+esc(t.atleast)+': <b>'+union+'</b></span>'+
             '<span>'+esc(t.none)+': <b>'+(30-union)+'</b></span>';
         };
-        input.addEventListener('input',update);update();
+        input.addEventListener('input',update);
+        decrease.addEventListener('click',()=>{input.value=String(Math.max(0,Number(input.value)-1));update();});
+        increase.addEventListener('click',()=>{input.value=String(Math.min(11,Number(input.value)+1));update();});
+        update();
       }
     }
     function extraPractice(stage){
