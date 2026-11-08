@@ -6,7 +6,7 @@ const path=require('node:path');
 const site=path.resolve(__dirname,'..');
 const html=fs.readFileSync(path.join(site,'grade-10/cartesian-preview.html'),'utf8');
 const root=path.join(site,'data/textbook-exercises');
-const ids=['g10-ch1-ex1-1-q1i','g10-ch1-ex1-1-q1ii'];
+const ids=['g10-ch1-ex1-1-q1i','g10-ch1-ex1-1-q1ii','g10-ch1-ex1-1-q1iii'];
 const ledger=JSON.parse(fs.readFileSync(path.join(root,'grade-10-coverage-2025.json'),'utf8'));
 assert.match(html,/<meta name="viewport"/);
 assert.match(html,/<html lang="en">/);
@@ -29,6 +29,7 @@ assert.match(html,/q\.source\?\.edition==='2025 revised'/);
 assert.match(html,/Number\.isInteger\(q\.source\?\.english\?\.pdfPage\)/);
 assert.match(html,/\['AxB','AxA','BxA'\]\.every/);
 assert.match(html,/className='pair-grid'/);
+assert.match(html,/∅ — no ordered pairs/);
 assert.match(html,/setAttribute\('role','list'\)/);
 assert.match(html,/setAttribute\('role','listitem'\)/);
 assert.match(html,/errorText\[lang\]/);
@@ -48,8 +49,8 @@ for(const id of ids){
  assert.equal(q.review.merged,false);assert.equal(q.review.liveVerified,false);
  assert.ok(ledger.chapters[0].verifiedQuestionSubparts.includes('1('+q.subpart+')'));
  assert.equal(q.steps.length,4);
- const A=q.subpart==='i'?[2,-2,3]:['p','q'];
- const B=q.subpart==='i'?[1,-4]:['p','q'];
+ const A=q.subpart==='i'?[2,-2,3]:q.subpart==='ii'?['p','q']:['m','n'];
+ const B=q.subpart==='i'?[1,-4]:q.subpart==='ii'?['p','q']:[];
  const cart=(left,right)=>left.flatMap(a=>right.map(b=>[a,b]));
  for(const [key,expected] of Object.entries({AxB:cart(A,B),AxA:cart(A,A),BxA:cart(B,A)})){
   assert.deepEqual(q.answers[key],expected,`${id} ${key} must enumerate every ordered pair exactly once`);
