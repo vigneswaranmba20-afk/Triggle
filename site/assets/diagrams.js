@@ -5,7 +5,25 @@ function drawClassic(s){
       const line=(x1,y1,x2,y2,color,width=5)=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}" stroke-linecap="round"/>`;
       const label=(x,y,value,color='#494872',size=17)=>`<text x="${x}" y="${y}" font-size="${size}" text-anchor="middle" fill="${color}" font-family="Arial, sans-serif" font-weight="700">${sbEscapeMath(value)}</text>`;
       let t='';
-      if(d.kind==='complement-pairs'){
+      if(d.kind==='real-number-line'){
+        const min=Number(d.min),max=Number(d.max),target=Number(d.target);
+        if(![min,max,target].every(Number.isFinite)||max<=min||target<min||target>max)return '';
+        const left=48,right=352,y=156,range=max-min;
+        const x=value=>left+(value-min)/range*(right-left);
+        const precision=range<0.015?3:range<0.15?2:range<1.5?1:0;
+        t='<rect x="20" y="35" width="360" height="192" rx="14" fill="#f8f7ff"/>'+
+          line(left,y,right,y,'#7181a9',3)+
+          '<path d="M346 150 L354 156 L346 162" fill="none" stroke="#7181a9" stroke-width="2"/>';
+        for(let i=0;i<=5;i++){
+          const value=min+range*i/5,at=x(value);
+          t+=line(at,y-7,at,y+7,'#7181a9',2)+label(at,y+27,value.toFixed(precision),'#4c5980',12);
+        }
+        const tx=x(target);
+        t+=line(tx,y-59,tx,y+2,'#d3588e',3)+
+           '<circle cx="'+tx+'" cy="'+y+'" r="6" fill="#d3588e" stroke="#ffffff" stroke-width="2"/>'+
+           label(Math.max(50,Math.min(350,tx)),y-70,d.label||String(target),'#9b2e66',17)+
+           label(200,45,'Number line · அளவுகோடு','#515687',14);
+      }else if(d.kind==='complement-pairs'){
         const pairs=d.pairs||[];
         t=`<text x="200" y="35" text-anchor="middle" font-size="17" font-weight="700" fill="#4b5d89">Complementary angles add to 90°</text>`;
         pairs.forEach(([a,b],i)=>{
