@@ -21,6 +21,7 @@
       featured:'Try the interactive Set Language lesson',
       featuredDesc:'Seven short ideas, a Venn-diagram lab, and step-by-step reasoning.',
       view:'Open chapter',empty:'No matching chapters. Try another word.',
+      mathematics:'Mathematics',chapterCount:'chapters',
       yourClass:'Your class',pick:'Pick a chapter and start with what is available today.',
       back:'All classes',chooseClass:'Change class',allChapters:'All chapters in this class',
       tip:'You can always use the Chapters menu or the class numbers below.',
@@ -45,6 +46,7 @@
       featured:'செயல்வழிக் கண மொழிப் பாடத்தை முயலுங்கள்',
       featuredDesc:'ஏழு சிறு கருத்துகள், வென் பட ஆய்வகம், படிப்படியான காரண விளக்கம்.',
       view:'அத்தியாயத்தைத் திறக்கவும்',empty:'பொருந்தும் அத்தியாயம் இல்லை. வேறு சொல்லை முயலுங்கள்.',
+      mathematics:'கணிதம்',chapterCount:'அத்தியாயங்கள்',
       yourClass:'உங்கள் வகுப்பு',pick:'இப்போது கிடைக்கும் பாடங்களிலிருந்து கற்க ஒரு அத்தியாயத்தைத் தேர்ந்தெடுக்கவும்.',
       back:'அனைத்து வகுப்புகள்',chooseClass:'வகுப்பை மாற்றுக',allChapters:'இந்த வகுப்பின் எல்லா அத்தியாயங்களும்',
       tip:'மேலுள்ள அத்தியாயப் பட்டியலையோ கீழுள்ள வகுப்பு எண்களையோ எப்போதும் பயன்படுத்தலாம்.',
@@ -126,22 +128,42 @@
           '<div><span>'+n+'</span><h3>'+escapeHtml(title)+'</h3><p>'+escapeHtml(desc)+'</p></div>').join('')+'</div></section>';
     }else{
       const g=grades.find(x=>x.grade===grade)||grades[0];
-      body='<section class="discover-directory-head">'+
-        '<button type="button" class="discover-back" data-home>← '+escapeHtml(t.back)+'</button>'+
-        '<span class="discover-eyebrow">'+escapeHtml(t.yourClass)+'</span>'+
-        '<h1>'+escapeHtml(t.class)+' '+g.grade+'</h1><p>'+escapeHtml(t.pick)+'</p>'+
-        '<div class="discover-directory-summary"><span>'+g.chapters.length+' '+escapeHtml(t.mapped)+'</span><span>'+escapeHtml(t.status)+'</span></div></section>'+
-        '<section class="discover-section"><div class="discover-section-heading"><h2>'+escapeHtml(t.allChapters)+'</h2>'+
-        '</div>'+
+      // Chapter-first directory: a single compact, interactive heading followed
+      // immediately by Chapter 1. Class switching expands in document flow.
+      body='<header class="discover-class-header">'+
+        '<h1><button type="button" class="discover-class-switch" data-switch-class aria-controls="discover-class-options" aria-expanded="false" aria-label="'+escapeHtml(t.chooseClass)+'">'+
+        escapeHtml(t.class)+' '+g.grade+' '+escapeHtml(t.mathematics)+' <span aria-hidden="true">⌄</span></button></h1>'+
+        '<span class="discover-class-count">'+g.chapters.length+' '+escapeHtml(t.chapterCount)+'</span></header>'+
+        '<div id="discover-class-options" class="discover-class-options" role="group" aria-label="'+escapeHtml(t.chooseClass)+'" hidden>'+
+        grades.map(option=>'<button type="button" class="discover-class-option'+(option.grade===g.grade?' is-current':'')+'" data-grade="'+option.grade+'" aria-pressed="'+(option.grade===g.grade)+'">'+escapeHtml(t.class)+' '+option.grade+'</button>').join('')+'</div>'+
+        '<section class="discover-directory-list" aria-label="'+escapeHtml(t.allChapters)+'">'+
         '<div class="discover-chapter-grid" data-chapter-grid>'+g.chapters.map(c=>chapterCard({grade:g.grade,chapter:c})).join('')+'</div></section>'+
         '<section class="discover-section discover-find"><label for="discover-search">'+escapeHtml(t.find)+'</label>'+
         '<input id="discover-search" data-search type="search" autocomplete="off" enterkeyhint="search" placeholder="'+escapeHtml(t.findPlaceholder)+'">'+
         '<p class="discover-filter-status" data-filter-status role="status"></p>'+
         '<label for="discover-jump">'+escapeHtml(t.quick)+'</label>'+
-        '<select id="discover-jump" data-jump>'+jumpOptions(g.grade)+'</select></section>'+
-        '<p class="discover-tip">'+escapeHtml(t.tip)+'</p>';
+        '<select id="discover-jump" data-jump>'+jumpOptions(g.grade)+'</select></section>';
     }
     root.innerHTML=body;
+    const switchClass=root.querySelector('[data-switch-class]');
+    const classOptions=root.querySelector('#discover-class-options');
+    if(switchClass&&classOptions){
+      const closeClassOptions=()=>{
+        classOptions.hidden=true;
+        switchClass.setAttribute('aria-expanded','false');
+      };
+      switchClass.addEventListener('click',()=>{
+        const open=classOptions.hidden;
+        classOptions.hidden=!open;
+        switchClass.setAttribute('aria-expanded',String(open));
+      });
+      classOptions.addEventListener('keydown',event=>{
+        if(event.key==='Escape'){event.preventDefault();closeClassOptions();switchClass.focus();}
+      });
+      switchClass.addEventListener('keydown',event=>{
+        if(event.key==='Escape'&&!classOptions.hidden){event.preventDefault();closeClassOptions();}
+      });
+    }
     root.querySelectorAll('[data-grade]').forEach(btn=>btn.addEventListener('click',()=>openGrade(Number(btn.dataset.grade))));
     root.querySelectorAll('[data-home]').forEach(btn=>btn.addEventListener('click',goHome));
     root.querySelectorAll('[data-chapter]').forEach(btn=>btn.addEventListener('click',()=>{

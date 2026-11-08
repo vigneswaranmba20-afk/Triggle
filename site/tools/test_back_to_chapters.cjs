@@ -52,4 +52,14 @@ assert.ok(hub.indexOf('menu.append(grid);root.append(menu);')<hub.indexOf('metad
 assert.match(css,/body\.chapter-overview-active \.class-dock\{display:none!important\}/,'Floating class dock must not obscure hub cards');
 assert.match(css,/body\.chapter-overview-active \.app-shell\{height:100dvh!important/,'Chapter content fills viewport once grade dock is removed');
 assert.match(hubCss,/\.chapter-hub \.hub-question-breakdown\{[\s\S]*?border:0/,'Replace large statistics callout with quiet compact text');
-console.log('PASS: chapter and reader navigation share non-overlapping bilingual routes, with one title and immediate section choices.');
+const discover=read('site/assets/discovery.js'),discoverCss=read('site/assets/discovery.css');
+assert.match(discover,/class="discover-class-header"/,'Directory has one compact class heading');
+assert.match(discover,/class="discover-class-switch" data-switch-class/,'Class heading is an accessible class selector');
+assert.match(discover,/class="discover-directory-list"/,'Chapter list starts directly after compact header');
+assert.match(discover,/class="discover-class-options"/,'Class switcher expands inline, not over chapter cards');
+assert.ok(!discover.includes("body='<section class=\"discover-directory-head\">'"),'Oversized introductory class panel must be removed');
+assert.match(discoverCss,/\.discover-class-options\[hidden\]\{display:none!important\}/,'Collapsed class options must not take space');
+assert.match(css,/body\.discovery-active \.class-dock\{display:none!important\}/,'Home and directory cannot show a floating class bar');
+assert.match(html,/discovery\.css\?v=chapter-first-1/,'Published HTML must refresh directory CSS');
+assert.match(html,/discovery\.js\?v=chapter-first-1/,'Published HTML must refresh directory JS');
+console.log('PASS: chapter-first directory and reader navigation share non-overlapping bilingual routes and accessible class switching.');
