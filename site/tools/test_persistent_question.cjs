@@ -21,7 +21,7 @@ assert(!html.includes('id="deepQuestionContext"'),
   'The question must not be hidden inside an expandable disclosure');
 assert(!js.includes("$('deepQuestionContext')"),
   'Stage changes must not collapse or hide the question');
-assert.match(js, /\$\('guidedQuestion'\)\.innerHTML=window\.TriggleWorkedDisplay\?\.get\(current,lang\)\?\.question\|\|math\(tr\(current\.q\)\)/,
+assert.match(js, /\$\('guidedQuestion'\)\.innerHTML=window\.TriggleWorkedDisplay\?\.get\(current,lang\)\?\.pinnedQuestion\|\|math\(tr\(current\.q\)\)/,
   'The pinned question must show the complete authored question or the unchanged textbook question');
 assert.match(js, /\$\('guidedScroll'\)\.scrollTop=0/,
   'Each learning stage must start at its own top');
