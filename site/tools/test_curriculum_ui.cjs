@@ -1043,7 +1043,7 @@ async function main() {
         const cards=page.locator('#chapterOverview [data-question-id^="g9-ch1-ex1.1-"]');
         assert.equal(await cards.count(),18,'All 18 textbook subparts must appear in Exercises');
         await page.locator('#chapterOverview [data-question-id="g9-ch1-ex1.1-q1-i"]').click();
-        assert.match(await page.locator('#questionText').innerText(),/Prime numbers/);
+        assert.match(await page.locator('#questionText').innerText(),/1\. Which of the following are sets\?\s*\(i\) The collection of prime numbers upto 100\./,'Display the original 2025 English textbook question, including its unmodified spelling');
         assert.equal(await page.locator('#stepsList li').count(),3);
         assert.match(await page.locator('#answerText').innerText(),/set/i);
         await page.locator('#langTa').click();
