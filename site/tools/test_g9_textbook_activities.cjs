@@ -35,9 +35,12 @@ assert(file.includes("data-footer-next")&&file.includes("t.nextPage"),'End of co
 assert(file.includes("t.backChapter")&&file.includes("typeof onBack==='function'"),'Final page provides working chapter return callback');
 for(const label of ['Descriptive Form','Roster Form','Set-Builder Form'])assert(file.includes(label),'Textbook representation: '+label);
 assert(file.includes('data-slider-formula')&&file.includes('aria-valuetext'),'Overlap slider explains its result accessibly');
+assert(file.includes('data-overlap-decrease')&&file.includes('data-overlap-increase'),'Slider has precise accessible step buttons');
+assert(file.includes('both===0')&&file.includes('both===11'),'Slider buttons respect the valid 0–11 overlap bounds');
 assert(file.includes('window.TriggleLab?.mount(target,chapter,lang)'),'Venn lab is shown when requested');
 const hub=read('assets/chapter-hub.js');new vm.Script(hub);
 assert(hub.includes('window.TriggleTextbookActivities.mount(panel,chapter,lang)'));
+assert(hub.includes('window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]?.length'),'Future chapter activity registries mount without hard-coded grade 9 IDs');
 assert(!hub.includes('window.TriggleLab?.mount(panel,chapter,lang)'),'Do not repeat Phase 2 by mounting a second lab');
 const renderer=read('assets/textbook-activities.js');new vm.Script(renderer);
 assert(renderer.includes('textContent=pick(item.answer,lang)'),'Answers must render as safely escaped text');
@@ -49,6 +52,7 @@ for(const pathName of ['data/g9-textbook-activities.js','assets/textbook-activit
 const css=read('assets/app.css');
 assert(css.includes('.sp2-sticky-context')&&css.includes('position:sticky'),'Question sticks within scroll area');
 assert(css.includes('.sp2-journey-footer')&&css.includes('.sp2-slider-formula'),'Footer and slider styled');
+assert(catalog['g9-ch1'].find(item=>item.title.en.includes('Three forms')).answer.en.includes('Days of the week:'),'Seven-day roster is not called weekdays');
 assert.equal(14+11-6,19);
 assert.equal(30-(14+11-6),11);
 assert.equal(30+45-65,10);
