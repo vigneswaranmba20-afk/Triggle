@@ -335,7 +335,8 @@ async function main() {
         await page.locator('#discover-search').fill('Algebra');
         assert.equal(await page.locator('.discover-chapter-grid [data-chapter]:visible').count(),1);
         await page.locator('#discover-jump').selectOption('g10-ch3');
-        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g10-ch3');
+        assert.equal(new URL(page.url()).searchParams.has('question'),true,'Grade 10 chapter jump starts with a question');
+        await page.goto(url+'/index.html?class=10&chapter=g10-ch3');
         assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Algebra');
         assert.equal(await page.locator('.hub-section-card').count(),4);
         await page.locator('.hub-resource-link').click();
