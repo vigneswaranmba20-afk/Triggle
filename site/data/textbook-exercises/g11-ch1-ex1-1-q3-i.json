@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapterId": "g11-ch1",
+  "chapterTitle": "Sets, Relations and Functions",
+  "exercise": "1.1",
+  "sourceAccess": "2025 revised English and Tamil Volume I PDFs directly inspected",
+  "questions": [
+    {
+      "id": "g11-ch1-ex1.1-q3-i",
+      "exercise": "1.1",
+      "question": 3,
+      "subpart": "i",
+      "prompt": {
+        "en": "Decide whether the set of natural numbers that are even primes is finite or infinite.",
+        "ta": "இரட்டைப்படை பகா எண்களாக உள்ள இயல் எண்களின் கணம் முடிவுள்ளதா அல்லது முடிவில்லாததா எனக் கண்டறிக."
+      },
+      "steps": {
+        "en": [
+          "An even number is divisible by 2. A prime has exactly two positive divisors: 1 and itself.",
+          "The number 2 is prime and even, so it belongs to the set.",
+          "Every even natural number greater than 2 is divisible by 1, 2 and itself, so it is not prime.",
+          "Therefore the set is exactly {2}; it has one element and is finite."
+        ],
+        "ta": [
+          "இரட்டைப்படை எண் 2-ஆல் வகுபடும். பகா எண்ணிற்கு 1 மற்றும் அதே எண் ஆகிய இரு நேர்ம வகுத்திகள் மட்டுமே உண்டு.",
+          "2 என்பது இரட்டைப்படை பகா எண்; எனவே அது கணத்தில் உள்ளது.",
+          "2-ஐ விடப் பெரிய எந்த இரட்டைப்படை இயல் எண்ணும் 1, 2 மற்றும் அதே எண்ணால் வகுபடும்; எனவே அது பகா எண் அல்ல.",
+          "ஆகவே கணம் {2} மட்டுமே; இதில் ஓர் உறுப்பு இருப்பதால் இது முடிவுள்ள கணம்."
+        ]
+      },
+      "answer": {
+        "en": "Finite: {2} (one element).",
+        "ta": "முடிவுள்ள கணம்: {2} (ஓர் உறுப்பு)."
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 9
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 17
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I",
+          "2025 Tamil Volume I"
+        ]
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    }
+  ]
+}
