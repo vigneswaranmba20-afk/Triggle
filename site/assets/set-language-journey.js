@@ -24,7 +24,7 @@
       onlyA:'Only A',onlyB:'Only B',overlap:'Both',lawResult:'Both sides give',
       extra:'Try a second practice question',reason:'Show the reasoning',top:'Back to learning path',
       previousIdea:'Previous idea',nextIdea:'Next idea',position:(n,total)=>'Idea '+n+' of '+total,
-      navTip:'Choose one of the seven numbered ideas. The question stays visible as you work.',
+      navTip:'Choose one of seven numbered ideas. The question appears directly above its answers and scrolls naturally.',
        questionLabel:'CURRENT QUESTION',nextPage:'Next page',backChapter:'Back to Chapter 1',sliderTip:'Drag left or right (or use arrow keys) to change how many students are in BOTH groups. Tap − or + to change one student at a time. Watch the numbers and equation update.',sliderFormula:(both,union,neither)=>`A or B = 14 + 11 − ${both} = ${union}. Neither = 30 − ${union} = ${neither}. The overlap was counted twice, so subtract it once.`},
     ta:{label:'சிறிய கற்றல் பாதை',title:'கண மொழியை ஒவ்வொரு கருத்தாகக் கற்போம்',
       intro:'2025 பாடநூலை அடிப்படையாகக் கொண்ட ஏழு சிறு ஆராய்ச்சிகள். ஒன்றைத் தேர்ந்து முயலுங்கள்; பிறகு தாளில் பயிற்சி செய்யுங்கள்.',
@@ -41,7 +41,7 @@
       onlyA:'A மட்டும்',onlyB:'B மட்டும்',overlap:'இரண்டும்',lawResult:'இருபுறங்களிலும் கிடைப்பது',
       extra:'இன்னொரு பயிற்சி வினா',reason:'காரணத்தைப் பார்க்க',top:'கற்றல் பாதைக்குத் திரும்புக',
       previousIdea:'முந்தைய கருத்து',nextIdea:'அடுத்த கருத்து',position:(n,total)=>total+' இல் கருத்து '+n,
-      navTip:'எண்ணிடப்பட்ட ஏழு கருத்துகளில் ஒன்றைத் தேர்ந்தெடுக்கவும். விடையைப் படிக்கும்போதும் வினா கண்ணில் இருக்கும்.',
+      navTip:'எண்ணிடப்பட்ட ஏழு கருத்துகளில் ஒன்றைத் தேர்ந்தெடுக்கவும். ஒவ்வொரு வினாவும் விடைத்தேர்வுகளுக்கு மேலே தோன்றும்; பக்கத்துடன் இயல்பாக நகரும்.',
        questionLabel:'தற்போதைய வினா',nextPage:'அடுத்த பக்கம்',backChapter:'அத்தியாயம் 1-க்குத் திரும்பு',sliderTip:'இரு குழுக்களிலும் உள்ள மாணவர்களின் எண்ணிக்கையை மாற்ற ஸ்லைடரை இடம் அல்லது வலமாக நகர்த்துங்கள் (அல்லது அம்பு விசைகளைப் பயன்படுத்துங்கள்). − அல்லது + பொத்தானைத் தொட்டு ஒரு மாணவராக மாற்றலாம். எண்ணிக்கையும் கணக்கும் மாறுவதைக் கவனியுங்கள்.',sliderFormula:(both,union,neither)=>`A அல்லது B = 14 + 11 − ${both} = ${union}. எதுவுமில்லை = 30 − ${union} = ${neither}. பொதுவானவர்கள் இரு குழுக்களிலும் எண்ணப்படுவதால் ஒருமுறை கழிக்க வேண்டும்.`}
   };
   function load(){
@@ -279,14 +279,14 @@
       panel.innerHTML=
         '<div class="sp2-stage-reference">'+esc(t.source)+' '+esc(stage.section)+
         ' · '+esc(t.enPage)+' '+stage.page.en+' · '+esc(t.taPage)+' '+stage.page.ta+'</div>'+
-        '<div class="sp2-sticky-context" tabindex="-1">'+
-         '<h4>'+esc((index+1)+'. '+pick(stage.title,lang))+'</h4>'+
-         '<p class="sp2-pinned-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p></div>'+
+        '<div class="sp2-concept-heading" tabindex="-1">'+
+         '<h4>'+esc((index+1)+'. '+pick(stage.title,lang))+'</h4></div>'+
         '<p class="sp2-idea">'+htmlMath(pick(stage.idea,lang))+'</p>'+
         '<p class="sp2-example">'+htmlMath(pick(stage.example,lang))+'</p>'+
         '<div class="sp2-formula" aria-label="Mathematics expression">'+htmlMath(stage.rule)+'</div>'+
         demoShell(demoTitle)+
         '<div class="sp2-recall"><h5>'+esc(t.try)+'</h5>'+
+        '<p class="sp2-concept-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p>'+
         '<div class="sp2-answers" data-answers role="group" aria-label="'+esc(pick(stage.question,lang))+'"></div>'+
         '<div class="sp2-recall-actions"><button type="button" data-hint>'+esc(t.hint)+
         '</button><button type="button" data-why-button>'+esc(t.why)+'</button></div>'+
@@ -319,7 +319,7 @@
       extraPractice(stage);
       if(stage.id==='cardinality')hard();
       updateProgress();
-      if(focus){const selected=panel.querySelector('.sp2-sticky-context');selected?.scrollIntoView({behavior:'auto',block:'start'});selected?.focus({preventScroll:true});}
+      if(focus){const selected=panel.querySelector('.sp2-concept-heading');selected?.scrollIntoView({behavior:'auto',block:'start'});selected?.focus({preventScroll:true});}
     }
     show(0);
     return true;
