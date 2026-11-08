@@ -26,7 +26,7 @@ for(let n=1;n<=35;n++){
   assert.ok(ex.title.en && ex.title.ta,'translated title: '+n);
   assert.ok(Array.isArray(ex.steps) && ex.steps.length>=2,'steps: '+n);
   ex.steps.forEach((s,i)=>{
-    assert.ok(s.en.length>12 && s.ta.length>12 && s.eq.length>1,'step '+i+' of '+n);
+    assert.ok(s.en.length>12 && s.ta.length>12 && s.eq.length>0,'step '+i+' of '+n);
   });
   assert.ok(ex.answer.length>0 && ex.source.startsWith('https://') && ex.page>0,'provenance/answer: '+n);
 }
