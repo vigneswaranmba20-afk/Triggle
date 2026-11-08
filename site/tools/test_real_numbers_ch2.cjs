@@ -41,6 +41,11 @@ const counts={'2.1':5,'2.2':16,'2.3':7,'2.4':3,'2.5':19,'2.6':21,'2.7':11,'2.8':
 for(const [exercise,n] of Object.entries(counts)){
   assert.equal(exercises.filter(x=>x.exercise===exercise).length,n,'exercise '+exercise);
 }
+const tamilPageByEnglish={45:47,51:55,52:56,55:59,57:61,59:64,60:65,68:72,70:75,73:79,74:80,75:81,76:82};
+for(const x of exercises){
+  assert.equal(x.tamilPrintedPage,tamilPageByEnglish[x.printedPage],
+    'Tamil 2025 printed page mismatch: '+x.id);
+}
 for(const x of published){
   assert.ok(x.q.en.length>18 && x.q.ta.length>10,'bilingual full question: '+x.id);
   assert.ok(x.title.en && x.title.ta && x.label.en && x.label.ta,'bilingual title/label: '+x.id);
