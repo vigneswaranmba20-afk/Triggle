@@ -899,6 +899,75 @@ async function main() {
       assert.match(await page.locator('#answerText').innerText(),/I, N, D, A/);
       await ctx.setOffline(false);
     });
+    for(const width of [320,390]){
+      await check('Grade 9 mobile Teacher Review covers 159 items, bilingual evidence and local draft at '+width+'px',async()=>{
+        const ctx=await context(width);
+        const page=await ctx.newPage();
+        await page.goto(url+'/reviewer.html');
+        await page.waitForFunction(()=>window.TriggleTeacherReview?.totalItems===159);
+        assert.match(await page.locator('#questionEn').innerText(),/rational numbers/);
+        assert.match(await page.locator('#questionTa').innerText(),/விகிதமுறு/);
+        assert.equal(await page.locator('#batchSelect option').count(),11,'15-item review batches');
+        assert.match(await page.locator('#reviewProgress').innerText(),/0 \/ 159/);
+        assert.ok(await page.locator('#enPdf').getAttribute('href'));
+        assert.ok(await page.locator('#taPdf').getAttribute('href'));
+        await noOverflow(page,'Teacher review at '+width+'px');
+        await page.locator('#reviewerName').fill('Demo Teacher');
+        await page.locator('#reviewComment').fill('தமிழில்: கணித விளக்கம் சரியாக உள்ளது.');
+        assert.equal(await page.locator('#reviewComment').inputValue(),'தமிழில்: கணித விளக்கம் சரியாக உள்ளது.');
+        await page.locator('#approveBtn').click();
+        assert.match(await page.locator('#reviewProgress').innerText(),/1 \/ 159/);
+        assert.match(await page.locator('#itemTitle').innerText(),/Example 2\.2/,'approve and advance to next question');
+        await page.reload();
+        await page.waitForFunction(()=>window.TriggleTeacherReview?.totalItems===159);
+        assert.equal(await page.locator('#reviewerName').inputValue(),'Demo Teacher');
+        await page.locator('#reviewFilter').selectOption('pending');
+        assert.match(await page.locator('#itemTitle').innerText(),/Example 2\.2/,'approved example no longer pending');
+        await page.locator('#reviewFilter').selectOption('all');
+        assert.equal(await page.locator('#reviewProgress').innerText().then(s=>s.includes('1 / 159')),true);
+        assert.equal(await page.locator('#reviewComment').inputValue(),'தமிழில்: கணித விளக்கம் சரியாக உள்ளது.');
+        await page.locator('#batchSelect').selectOption('2');
+        assert.match(await page.locator('#itemTitle').innerText(),/Example 2\.31/);
+        await page.locator('#nextBtn').click();
+        assert.match(await page.locator('#itemTitle').innerText(),/Exercise 2\.1/);
+        assert.equal(await page.locator('#figureBox svg').count(),1,'the corrected A–D diagram appears for Dad to inspect');
+        for(const letter of ['A','B','C','D'])assert.equal(await page.locator('#figureBox svg text').filter({hasText:new RegExp('^'+letter+'
+    assert.deepEqual(failedRequests, [], 'No broken local page assets');
+    console.log(`PASS: ${count} curriculum browser scenarios; no uncaught errors or broken assets.`);
+  } finally {
+    for (const ctx of contexts) await ctx.close();
+    await browser.close();
+    await new Promise(resolve => server.close(resolve));
+  }
+}
+main().catch(error => { console.error(error); process.exitCode = 1; });
+)}).count(),1);
+        await page.locator('#reviseBtn').click();
+        await page.locator('#reviewComment').fill('படத்தின் அம்புகளைப் பாடநூலுடன் ஒப்பிடவும்.');
+        assert.match(await page.locator('#reviewProgress').innerText(),/2 \/ 159/);
+        await page.locator('#reviewFilter').selectOption('flagged');
+        assert.match(await page.locator('#itemTitle').innerText(),/Exercise 2\.1/);
+        await page.locator('#batchSelect').selectOption('10');
+        await page.locator('#reviewFilter').selectOption('all');
+        assert.match(await page.locator('#itemType').innerText(),/Interactive lesson/);
+        assert.equal(await page.locator('#visualLink').isVisible(),true);
+        await noOverflow(page,'Tamil teacher review concept at '+width+'px');
+        const dlPromise=page.waitForEvent('download');
+        await page.locator('#downloadBtn').click();
+        const dl=await dlPromise;
+        assert.match(dl.suggestedFilename(),/triggle-g9-real-teacher-review/);
+        const json=JSON.parse(await fs.readFile(await dl.path(),'utf8'));
+        assert.equal(json.totalItems,159);
+        assert.equal(json.reviewerName,'Demo Teacher');
+        assert.equal(json.reviews.length,2);
+        assert.equal(json.summary.flagged,1);
+        assert.equal(json.summary.approved,1);
+        await page.locator('#reviewFilter').selectOption('flagged');
+        assert.equal(await page.locator('#emptyState').isVisible(),true);
+        await page.locator('#showAllBtn').click();
+        assert.equal(await page.locator('#questionCard').isVisible(),true);
+      });
+    }
     assert.deepEqual(errors, [], 'No uncaught browser errors');
     assert.deepEqual(failedRequests, [], 'No broken local page assets');
     console.log(`PASS: ${count} curriculum browser scenarios; no uncaught errors or broken assets.`);
