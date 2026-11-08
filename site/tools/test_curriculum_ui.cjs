@@ -449,7 +449,7 @@ async function main() {
         assert.ok((await page.locator('.textbook-extra').first().locator('.task-answer').innerText()).length>35);
         await page.locator('.hub-back-menu').click();
         await page.locator('.hub-section-card[data-hub-section="examples"]').click();
-        assert.match(await page.locator('#questionHead').innerText(),/Example 1\\.1/);
+        assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
         await page.locator('#chapterMenuBtn').click();
         assert.equal(await page.locator('.hub-section-card').count(),5);
         await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
