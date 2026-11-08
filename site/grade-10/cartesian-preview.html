@@ -37,6 +37,7 @@ function draw(){
   const article=el('article');article.dataset.questionId=q.id;
   article.append(el('h2','Exercise '+q.exercise+' · Q'+q.question+(q.subpart==null?'':'('+q.subpart+')')));
   article.append(el('p',q.title[lang]));
+  article.append(el('p',lang==='en'?'Learning restatement — not a verified verbatim textbook transcription:':'கற்றலுக்கான மறுவடிவாக்கம் — பாடநூலின் சொற்சொல்லான சரிபார்க்கப்பட்ட பதிவு அல்ல:','notice'));
   article.append(el('p',q.questionParaphrase[lang]));
   if(q.review.sourceVerified===false)article.append(el('p',lang==='en'?'Source notation pending visual verification — mathematical draft only.':'மூலக் குறியீடுகள் படத்தின் மூலம் சரிபார்க்கப்பட வேண்டும் — கணித வரைவு மட்டும்.','notice'));
   article.append(el('small','2025 revised · English printed p.'+q.source.english.printedPage+' (PDF '+q.source.english.pdfPage+'); Tamil printed p.'+q.source.tamil.printedPage+' (PDF '+q.source.tamil.pdfPage+').'));
