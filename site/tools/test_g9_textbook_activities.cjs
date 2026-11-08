@@ -29,7 +29,8 @@ for(const [chapter,items] of Object.entries(catalog)){
 }
 const file=read('assets/set-language-journey.js');
 new vm.Script(file);
-assert(file.includes('sp2-sticky-context'),'Pinned question container exists');
+assert(!file.includes('sp2-sticky-context'),'Concept questions must not use floating/sticky context containers');
+assert(file.includes('sp2-concept-question'),'Concept questions are placed next to their answer choices');
 assert(file.includes("esc((index+1)+'. '+pick(stage.title,lang))"),'Concept title is visibly numbered');
 assert(file.includes("data-footer-next")&&file.includes("t.nextPage"),'End of concept contains a next page action');
 assert(file.includes("t.backChapter")&&file.includes("typeof onBack==='function'"),'Final page provides working chapter return callback');
@@ -40,6 +41,9 @@ assert(file.includes('both===0')&&file.includes('both===11'),'Slider buttons res
 assert(file.includes('window.TriggleLab?.mount(target,chapter,lang)'),'Venn lab is shown when requested');
 const hub=read('assets/chapter-hub.js');new vm.Script(hub);
 assert(hub.includes('window.TriggleTextbookActivities.mount(panel,chapter,lang)'));
+assert(hub.includes("section==='activities'"),'Thinking Corners are a dedicated chapter section');
+assert(hub.includes("[...baseKinds,'activities']"),'Activity menu is present only when chapter has tasks');
+assert(!hub.includes('window.TriggleTextbookActivities.mount(panel,chapter,lang);\n        }'),'Thinking Corners are not appended to Concepts');
 assert(hub.includes('window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]?.length'),'Future chapter activity registries mount without hard-coded grade 9 IDs');
 assert(!hub.includes('window.TriggleLab?.mount(panel,chapter,lang)'),'Do not repeat Phase 2 by mounting a second lab');
 const renderer=read('assets/textbook-activities.js');new vm.Script(renderer);
@@ -50,7 +54,8 @@ for(const pathName of ['data/g9-textbook-activities.js','assets/textbook-activit
 const worker=read('service-worker.js');
 for(const pathName of ['data/g9-textbook-activities.js','assets/textbook-activities.js'])assert(worker.includes(pathName),'Offline cache includes '+pathName);
 const css=read('assets/app.css');
-assert(css.includes('.sp2-sticky-context')&&css.includes('position:sticky'),'Question sticks within scroll area');
+assert(!css.includes('.sp2-sticky-context'),'Floating/sticky concept styling removed');
+assert(css.includes('.sp2-concept-question')&&css.includes('position:static'),'Question flows with the page');
 assert(css.includes('.sp2-journey-footer')&&css.includes('.sp2-slider-formula'),'Footer and slider styled');
 assert(catalog['g9-ch1'].find(item=>item.title.en.includes('Three forms')).answer.en.includes('Days of the week:'),'Seven-day roster is not called weekdays');
 assert.equal(14+11-6,19);
@@ -58,4 +63,4 @@ assert.equal(30-(14+11-6),11);
 assert.equal(30+45-65,10);
 assert(Math.abs(3*Math.sqrt(2)-Math.sqrt(18))<1e-12);
 assert.equal((2e2)*(1.4e2),2.8e4);
-console.log('PASS: 24 bilingual textbook prompts, truthfully labelled reviews, sticky question, 7-page navigation, slider and offline regression');
+console.log('PASS: 24 bilingual textbook prompts, truthfully labelled reviews, nonfloating question, single activity section, 7-page navigation, slider and offline regression');
