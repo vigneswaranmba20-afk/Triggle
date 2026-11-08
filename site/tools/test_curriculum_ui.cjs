@@ -550,6 +550,20 @@ async function main() {
       await lab.locator('[data-demo-mode="repeat"]').click();
       assert.match(await lab.locator('[data-demo-output]').innerText(),/Repeating/);
       await lab.locator('[data-nav] [data-index="4"]').click();
+      // Grade 9 surd options: a baseline coefficient must be visibly separated
+      // from the radical; a fifth-root index uses <mroot> instead.
+      const rootOption=lab.locator('[data-answers] button').first();
+      assert.equal(await rootOption.locator('math > mrow > mn').first().textContent(),'5');
+      assert.equal(await rootOption.locator('math > mrow > msqrt').count(),1,'5√3 is a coefficient times a square root');
+      const gap=await rootOption.locator('math > mrow > mspace').evaluate(el=>({
+        width:el.getBoundingClientRect().width,
+        namespace:el.namespaceURI
+      }));
+      assert.equal(gap.namespace,'http://www.w3.org/1998/Math/MathML','Coefficient is represented by native MathML');
+      assert.ok(gap.width>=1.5,'Coefficient and radical need a visible gap on a 390px mobile screen');
+      assert.equal(await lab.locator('[data-answers] button').nth(1).locator('math msqrt').count(),1,
+        'A standalone √39 remains a standalone square root');
+
       await lab.locator('input[type="range"]').evaluate(input=>{input.value='4';input.dispatchEvent(new Event('input',{bubbles:true}));});
       assert.equal(await lab.locator('[data-demo-output] math msqrt').count(),3,'√32, √(4²×2) and √2 must use real radical notation');
       assert.equal((await lab.locator('[data-demo-output] math msqrt').last().textContent()).trim(),'2');
