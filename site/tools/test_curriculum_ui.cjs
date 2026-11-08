@@ -1100,12 +1100,15 @@ async function main() {
           const crumb=document.querySelector('.crumb-link'),nav=document.getElementById('questionNavDock'),
             main=document.querySelector('.lesson-container'),all=document.getElementById('allChaptersButton');
           const a=nav.getBoundingClientRect(),b=main.getBoundingClientRect();
-          return {font:parseFloat(getComputedStyle(crumb).fontSize),navPosition:getComputedStyle(nav).position,
+          return {font:parseFloat(getComputedStyle(crumb).fontSize),headingSizes:Array.from(document.querySelectorAll('.crumb-link')).map(x=>parseFloat(getComputedStyle(x).fontSize)),navPosition:getComputedStyle(nav).position,
             navTop:a.top,navBottom:a.bottom,readerBottom:b.bottom,screen:innerHeight,
             navHeight:a.height,tapHeight:all.getBoundingClientRect().height,navScrollParent:nav.parentElement.className,
             toggleVisible:!!document.querySelector('#focusNavToggle')?.getClientRects().length};
         });
+        assert.equal(layout.headingSizes.length,3,'Class, chapter and exercise must all be visible');
+        assert.ok(layout.headingSizes.every(x=>x>=16),'All three breadcrumb labels must be at least 16px: '+JSON.stringify(layout));
         assert.ok(layout.font>=16,'Breadcrumb text must be large enough to read: '+JSON.stringify(layout));
+        assert.match(await page.locator('#next').innerText(),/Next page/,'Textbook reader moves to the next page');
         assert.ok(layout.tapHeight>=48,'Chapter return needs a generous mobile tap target');
         assert.ok(layout.navScrollParent.includes('workspace'),'Dock must not sit inside scrolling question content');
         if(width<=800){
