@@ -29,7 +29,7 @@ for(const lang of ['en','ta']){
  const markers=['i','ii','iii','iv'];
  for(let i=0;i<markers.length;i++){
   const marker=markers[i],start=v.steps.indexOf('data-worked-question="'+marker+'"'),
-     solution=v.steps.indexOf('Answer ('+marker+')');
+     solution=v.steps.indexOf((lang==='ta'?'விடை (':'Answer (')+marker+')');
   assert.ok(start>=0 && solution>start,lang+' question '+marker+' must precede its answer');
   if(i<markers.length-1){
     const next=v.steps.indexOf('data-worked-question="'+markers[i+1]+'"');
