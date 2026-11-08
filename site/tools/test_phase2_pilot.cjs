@@ -13,7 +13,7 @@ for(const [source,expected] of [
  ['{a+b}³','<span class="math-bracket">}</span></span><sup>3</sup>'],
  ['([x+1])²','<span class="math-bracket">)</span></span><sup>2</sup>'],
  ['( [[1|2]] )²','<span class="math-bracket">)</span></span><sup>2</sup>'],
- ['x²','x<sup>2</sup>'],
+ ['x²','<msup><mi>x</mi><mn>2</mn></msup>'],
  ['[[3|4]]','<span class="frac">']
 ]) {
  const actual=render(source);
