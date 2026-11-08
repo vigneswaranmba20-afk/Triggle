@@ -505,6 +505,46 @@ async function main() {
       assert.equal(await page.locator('#stepsList li').count(),2,'Example 1.1 has two worked steps');
       assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
     });
+    for(const width of [320,390,1280]){
+      await check('Real Numbers 2025 sections, hard-only explanation and figure at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch2&section=examples');
+        assert.equal(await page.locator('.hub-question').count(),31,'31 textbook examples');
+        assert.match(await page.locator('.hub-question').first().innerText(),/Example 2\\.1/);
+        assert.match(await page.locator('.hub-question').last().innerText(),/Example 2\\.31/);
+        await noOverflow(page,'Real Numbers example list at '+width+'px');
+        await page.locator('.hub-question').nth(4).click();
+        assert.match(await page.locator('#questionHead').innerText(),/Example 2\\.5/);
+        assert.equal(await page.locator('#solutionModeRow').isVisible(),true,'hard-only Detailed explanation');
+        await page.locator('#tabGuided').click();
+        assert.equal(await page.locator('#guidedDialog').evaluate(el=>el.open),true);
+        await page.locator('#closeGuided').click();
+        await page.locator('#questionReturnBtn').click();
+        await page.locator('.hub-question').nth(3).click();
+        assert.equal(await page.locator('#solutionModeRow').isVisible(),false,'easy problem has no detailed tab');
+        await page.locator('#questionReturnBtn').click();
+        await page.locator('.hub-question').nth(12).click();
+        assert.equal(await page.locator('#figureBtn').isVisible(),true,'number line has figure icon');
+        await page.locator('#figureBtn').click();
+        assert.equal(await page.locator('#figureDialog').evaluate(el=>el.open),true);
+        assert.equal(await page.locator('#diagramContent svg').count(),1);
+        await page.locator('#closeDiagram').click();
+        await page.locator('#langTa').click();
+        assert.match(await page.locator('#questionText').innerText(),/எண்கோட்டில்|கட்டமைத்துக்|குறிக்கவும்/);
+        await noOverflow(page,'Tamil Real Numbers question at '+width+'px');
+      });
+    }
+    await check('Real Numbers full exercises, concepts and quizzes show correct counts',async()=>{
+      const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch2&section=exercises');
+      assert.equal(await page.locator('.hub-question').count(),121,'120 textbook units plus existing practice');
+      await page.locator('.hub-back-menu').click();
+      await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
+      assert.equal(await page.locator('.hub-panel .hub-question-group').count(),8,'eight concept cards');
+      await page.locator('.hub-back-menu').click();
+      await page.locator('.hub-section-card[data-hub-section="quizzes"]').click();
+      assert.equal(await page.locator('.hub-quiz-question').count(),8,'eight concept quizzes');
+      await page.locator('#langTa').click();
+      assert.match(await page.locator('#chapterOverviewTitle').innerText(),/சிறு தேர்வுகள்/);
+    });
     await check('Offline initial Home reload and class directory work without remote scripts', async()=>{
       const ctx=await context(390,'allow');
       const page=await visit(ctx,'/index.html');
