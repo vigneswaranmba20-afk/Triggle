@@ -1,7 +1,7 @@
 /* Source-checked: 2025 SCERT Grade 9 Mathematics, Real Numbers, Examples 2.1–2.17. */
 (()=>{'use strict';const A=window.TriggleRealCh2.addExample;
 const e=(n,page,q,ta,answer,steps,hard=false,diagram=null)=>A(n,{page,q,ta,answer,steps,hard,diagram,title:'Real Numbers · Worked Example 2.'+n,titleTa:'மெய்யெண்கள் · எடுத்துக்காட்டு 2.'+n});
-e(1,43,'Find two rational numbers strictly between 1/2 and 2/3.','1/2 மற்றும் 2/3 இடையே இரு விகிதமுறு எண்களைக் காண்க.','7/12, 13/24',[
+e(1,44,'Find two rational numbers strictly between 1/2 and 2/3.','1/2 மற்றும் 2/3 இடையே இரு விகிதமுறு எண்களைக் காண்க.','7/12, 13/24',[
  ['Use the average of the two fractions.','இரு பின்னங்களின் சராசரியைக் காண்க.','(1/2 + 2/3)/2 = 7/12'],
  ['Average 1/2 and the first answer again.','1/2 மற்றும் முதல் விடையின் சராசரியைக் காண்க.','(1/2 + 7/12)/2 = 13/24'],
  ['Both lie strictly between the endpoints.','இரண்டு எண்களும் எல்லைகளுக்கு இடையே உள்ளன.','1/2 < 13/24 < 7/12 < 2/3']
