@@ -1,0 +1,30 @@
+name: Grade 10 bilingual curriculum preview
+on:
+  push:
+    branches:
+      - curriculum/grade-10-workstream
+  pull_request:
+    paths:
+      - 'site/grade-10/**'
+      - 'site/data/textbook-exercises/g10-*'
+      - 'site/data/textbook-exercises/grade-10-*'
+      - 'site/tools/test_grade10_*'
+      - '.github/workflows/grade-10-preview.yml'
+jobs:
+  grade10:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Grade 10 independent mathematics and preview contracts
+        run: |
+          for test in site/tools/test_grade10_*.cjs; do node "$test"; done
+      - run: npx playwright install --with-deps chromium
+      - name: Shared browser/mobile/keyboard/offline regressions
+        run: npm run test:browser
