@@ -224,13 +224,13 @@
   min-height:0!important
  }
  body.textbook-reader .page-controls .all-chapters-button{
-  min-height:32px!important;padding:2px 5px!important;font-size:16px!important;
+  min-height:48px!important;padding:5px!important;font-size:16px!important;
   border:0!important;box-shadow:none!important;background:transparent!important;
   color:#5b447c!important
  }
  body.textbook-reader .page-controls .all-chapters-button .nav-arrow{font-size:16px!important}
  body.textbook-reader .page-controls .page-button{
-  min-height:44px!important;padding:8px!important;font-size:16px!important;
+  min-height:48px!important;padding:8px!important;font-size:16px!important;
   line-height:1.25!important;border-radius:10px!important
  }
  body.textbook-reader .page-controls #allChaptersReturn{margin:0!important}
