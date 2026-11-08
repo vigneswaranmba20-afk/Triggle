@@ -62,8 +62,10 @@ async function main() {
     if ((await page.viewportSize()).width <= 800 && !await page.locator('body').evaluate(el => el.classList.contains('drawer-open'))) await page.locator('#browseBtn').click();
   }
   async function selectChapter(page, id) {
-    await openSidebar(page);
-    await page.locator(`#exerciseList [data-chapter-id="${id}"]`).click();
+    // Direct chapter taps now intentionally begin Exercise N.1.
+    // This helper tests the explicit chapter-management deep link instead.
+    const grade = Number(id.slice(1, id.indexOf('-')));
+    await page.goto(url + '/index.html?class=' + grade + '&chapter=' + id);
     await page.locator('#chapterOverview').waitFor({ state: 'visible' });
   }
   try {
@@ -403,7 +405,8 @@ async function main() {
         assert.equal(new URL(page.url()).searchParams.get('class'),'9');
         assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
         await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
-        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1','Chapter 1 card opens its lesson hub');
+        assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i','Chapter 1 opens its first textbook question');
+        assert.equal(await page.locator('#answerBox').isVisible(),true,'Answer must open alongside first exercise');
       });
     }
     await check('Chapter-first class directory translates and offers accessible keyboard navigation',async()=>{
@@ -440,6 +443,8 @@ async function main() {
       assert.match(await chapter2.innerText(),/8 சிறு செயல்வழிப் பாடங்கள் உள்ளன/);
       assert.match(await page.locator('#exerciseList [data-chapter-id="g9-ch2"] small').textContent(),/8 செயல்வழிக் கருத்துகள்/);
       await page.locator('.discover-chapter-grid [data-chapter="g9-ch2"]').click();
+      assert.equal(await page.locator('#lessonCard').isVisible(),true,'Real Numbers chapter starts at an available exercise');
+      await page.goto(url+'/index.html?class=9&chapter=g9-ch2');
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
       assert.equal(await page.locator('.rnlab [data-nav] button').count(),8);
       await noOverflow(page,'Tamil Real Numbers concepts from chapter directory');
@@ -478,8 +483,11 @@ async function main() {
       assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-      assert.equal(await page.locator('.hub-question').count(),31,'All 30 textbook subparts and the original practice should be accessible');
-       assert.match(await page.locator('.hub-info').last().innerText(),/30 of 30 textbook subparts/,'Exercise 1.1 is fully represented');
+      assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i','Exercise card starts with Question 1(i)');
+      await page.locator('#questionReturnBtn').click();
+      assert.equal(await page.locator('.hub-question').count(),31,'All 30 textbook subparts and the original practice should remain browsable');
+      await page.locator('.hub-content-status summary').click();
+      assert.match(await page.locator('.hub-content-status').innerText(),/30 of 30 textbook subparts/,'Coverage notes must remain available after the questions');
       assert.equal(await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').count(),1,'Preserve original practice ID');
       await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').click();
       assert.equal(new URL(page.url()).searchParams.has('question'),true);
@@ -492,8 +500,8 @@ async function main() {
       await page.locator('#discover-search').fill('கண மொழி');
       assert.ok(await page.locator('.discover-results [data-chapter="g9-ch1"]').count()>0);
       await page.locator('.discover-results [data-chapter="g9-ch1"]').click();
-      assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
-      await noOverflow(page,'chapter hub at 390px');
+      assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i');
+      await noOverflow(page,'chapter-first question at 390px');
     });
     // Chapter hub: remove duplicate chapter headings and avoid a floating class bar
     // covering the first learning cards, while keeping a visible class switcher.
@@ -598,10 +606,14 @@ async function main() {
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch6');
       assert.equal(await page.locator('.hub-section-card').count(),4);
       await page.locator('.hub-section-card[data-hub-section="examples"]').click();
+      assert.match(await page.locator('#questionHead').innerText(),/Example 6\.1/,'Worked Examples opens first example');
+      await page.locator('#questionReturnBtn').click();
       assert.equal(await page.locator('.hub-question').count(),4,'Only four explicitly labelled Example items');
       assert.ok((await page.locator('.hub-question').first().innerText()).includes('Example 6.1'));
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+      assert.equal(await page.locator('#lessonCard').isVisible(),true,'Exercises opens a question without extra list');
+      await page.locator('#questionReturnBtn').click();
       assert.equal(await page.locator('.hub-question').count(),40,'40 exercise questions remain under Exercises');
       await page.locator('.hub-question').first().click();
       assert.equal(await page.locator('#lessonCard').isVisible(),true);
@@ -643,6 +655,8 @@ async function main() {
         assert.equal(await page.locator('.hub-next-section').count(),0);
         await page.locator('.hub-back-menu').click();
         await page.locator('.hub-section-card[data-hub-section="examples"]').click();
+        assert.equal(await page.locator('#lessonCard').isVisible(),true,'Example card must start at its first question');
+        await page.locator('#questionReturnBtn').click();
         assert.equal(await page.locator('.hub-question').count(),4);
         assert.equal(await page.locator('.hub-section-card').count(),0);
         await page.locator('.hub-back-menu').click();
@@ -655,6 +669,8 @@ async function main() {
         assert.equal(await page.locator('.discover-class-switch').getAttribute('aria-expanded'),'true');
         await page.locator('.discover-class-options [data-grade="9"]').click();
         await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
+        assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i');
+        await page.goto(url+'/index.html?class=9&chapter=g9-ch1');
         await page.locator('#langTa').click();
         await page.locator('.hub-section-card[data-hub-section="quizzes"]').click();
         assert.match(await page.locator('#chapterOverviewTitle').innerText(),/சிறு தேர்வுகள்/);
@@ -690,8 +706,10 @@ async function main() {
       });
       assert.ok(order,'Optional search belongs BELOW the navigation');
       await page.locator('#exerciseList [data-section="examples"]').click();
+      assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/,'Worked Examples begins at Example 1.1');
+      await page.locator('#questionReturnBtn').click();
       assert.equal(new URL(page.url()).searchParams.get('section'),'examples');
-      assert.equal(await page.locator('.hub-question').count(),35,'All 35 textbook examples appear in Chapter 1');
+      assert.equal(await page.locator('.hub-question').count(),35,'All 35 textbook examples remain browsable');
       assert.match(await page.locator('.hub-question').first().innerText(),/Example 1\.1/);
       assert.match(await page.locator('.hub-question').last().innerText(),/Example 1\.35/);
       await noOverflow(page,'mobile chapter-first drawer');
@@ -982,7 +1000,6 @@ async function main() {
         await noOverflow(page, `${width}px legacy Tamil question`);
         await selectChapter(page, 'g9-ch6');
         await page.locator('.hub-section-card[data-hub-section="examples"]').click();
-        await page.locator('#chapterOverview [data-question-id="c9-example-6-1"]').click();
         assert.equal(new URL(page.url()).searchParams.get('question'), 'c9-example-6-1');
         assert.equal(await page.locator('#lessonCard').isVisible(), true);
         await noOverflow(page, `${width}px legacy question from chapter`);
@@ -1260,7 +1277,9 @@ async function main() {
             navHeight:a.height,tapHeight:all.getBoundingClientRect().height,navScrollParent:nav.parentElement.className,
             toggleVisible:!!document.querySelector('#focusNavToggle')?.getClientRects().length};
         });
-        assert.equal(layout.headingSizes.length,3,'Class, chapter and exercise must all be visible');
+        assert.equal(layout.headingSizes.length,3,'All three breadcrumb destinations remain in the DOM');
+        assert.equal(await page.locator('#crumb .crumb-link:visible').count(),width<=800?2:3,
+          'A compact mobile breadcrumb hides only the duplicated exercise pill');
         assert.ok(layout.headingSizes.every(x=>x>=16),'All three breadcrumb labels must be at least 16px: '+JSON.stringify(layout));
         assert.ok(layout.font>=16,'Breadcrumb text must be large enough to read: '+JSON.stringify(layout));
         const actionGrid=await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>({font:parseFloat(getComputedStyle(el).fontSize),top:el.getBoundingClientRect().top,width:el.getBoundingClientRect().width})));
