@@ -32,6 +32,7 @@ jobs:
           node site/tools/test_grade11_ex1_1_q4_i.cjs
           node site/tools/test_grade11_ex1_1_q4_ii.cjs
           node site/tools/test_grade11_ex1_1_q4_iii_independent.cjs
+          node site/tools/test_grade11_ex1_1_q4_iii_source_exact.cjs
           node site/tools/test_grade11_q1_boundary_cases.cjs
           node site/tools/test_grade11_preview.cjs
           node site/tools/test_grade11_coverage_integrity.cjs
