@@ -42,7 +42,7 @@ async function main(){
    assert.ok(dimensions.scroll<=dimensions.viewport+1,'horizontal overflow at '+width);
    const third=page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"]');
    await third.locator('summary').click();
-   assert.equal(await third.locator('.pair-cell').count(),5,'empty-set exercise has exactly four A×A pairs');
+   assert.equal(await third.locator('.pair-cell').count(),4,'empty-set exercise has exactly four A×A pairs');
    assert.equal(await third.getByText('∅ — no ordered pairs').count(),2);
    await page.locator('#ta').click();
    assert.equal(await page.locator('html').getAttribute('lang'),'ta');
@@ -58,7 +58,7 @@ async function main(){
    assert.equal(await page.locator('html').getAttribute('lang'),'ta');
    assert.equal(await page.locator('[data-question-id]').count(),5);
    await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"] summary').click();
-   assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"] .pair-cell').count(),5);
+   assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"] .pair-cell').count(),4);
    await context.setOffline(false);
    assert.deepEqual(errors,[]);
    await context.close();
