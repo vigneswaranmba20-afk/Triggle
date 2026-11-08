@@ -26,6 +26,13 @@ const server=http.createServer((req,res)=>{
    assert.equal(await page.locator('article.card').count(),4);
    assert.equal(await page.locator('#retry').isVisible(),false);
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'horizontal overflow at '+width);
+   // Independently check the strict boundary 11² = 121 is excluded.
+   const practice=page.locator('article.card').first().locator('.practice');
+   assert.equal(await practice.locator('button').count(),2);
+   await practice.locator('button').first().click();
+   assert.match(await practice.locator('[role=status]').innerText(),/121/);
+   await practice.locator('button').nth(1).click();
+   assert.match(await practice.locator('[role=status]').innerText(),/Correct!/);
    await page.locator('article.card summary').first().focus();
    await page.keyboard.press('Enter');
    assert.equal(await page.locator('article.card details').first().getAttribute('open'),'');
@@ -33,6 +40,8 @@ const server=http.createServer((req,res)=>{
    assert.equal(await page.locator('html').getAttribute('lang'),'ta');
    assert.equal(await page.locator('#ta').getAttribute('aria-pressed'),'true');
    assert.match(await page.locator('article.card').first().innerText(),/வினா/);
+   await page.locator('article.card').first().locator('.practice button').nth(1).click();
+   assert.match(await page.locator('article.card').first().locator('.practice [role=status]').innerText(),/121/);
    await context.setOffline(true);
    await page.locator('#en').click();
    assert.equal(await page.locator('article.card').count(),4);
