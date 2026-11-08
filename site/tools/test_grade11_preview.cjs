@@ -32,6 +32,14 @@ assert.match(html,/if\(!lesson&&!document\.getElementById\('retry'\)\.hidden\)/)
 assert.match(html,/setLanguage\('en'\)/);
 assert.match(html,/setLanguage\('ta'\)/);
 assert.match(html,/Incomplete bilingual lesson/);
+assert.match(html,/Lesson identity mismatch/);
+assert.match(html,/Unverified lesson source or mathematics/);
+assert.match(html,/q\.review\?\.mathematics/);
+assert.match(html,/q\.source\?\.edition/);
+assert.match(html,/q\.source\?\.pdfPage\?\.ta!==17/);
+assert.match(html,/q\.steps\.en\.some/);
+assert.match(html,/q\.steps\.ta\.some/);
+assert.match(html,/q\.id!==expectedIds\[i\]/);
 assert.match(html,/பாடத்தை ஏற்ற முடியவில்லை/);
 assert.match(html,/printed p\. 7/);
 assert.match(html,/printed p\. 9/);
