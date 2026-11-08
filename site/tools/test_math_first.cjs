@@ -58,7 +58,7 @@ assert(html.includes('assets/app.css?v=venn-tall-2'),'Updated app CSS must be lo
 const venn=read('assets/set-venn-figures.js');
 assert(venn.includes('viewBox="0 0 560 420"'),'Taller Venn viewBox must match CSS proportions');
 new vm.Script(venn,{filename:'set-venn-figures.js'});
-assert(venn.includes('ax=192,bx=368,cy=166,rx=160,ry=180'),'Venn must expand to use drawing area');
+assert(venn.includes('ax=190,bx=370,cy=210,rx=160,ry=180'),'Venn must expand to use drawing area');
 assert(venn.includes('<ellipse cx='),'Venn masks must use matching ellipse geometry');
 assert(!venn.includes('<circle cx='),'Old circle clipping must not mismatch ellipse shading');
 assert(!venn.includes('g9-venn-text-alternative'),'No redundant visual region commentary');
