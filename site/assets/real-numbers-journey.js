@@ -44,7 +44,8 @@ function mount(container,chapter,language){
     b.setAttribute('aria-pressed',String(i===active));b.querySelector('.sp2-done-mark').textContent=done.has(path.stages[i].id)?'✓':'';});}
  function controls(label,items,value,onChange){const host=panel.querySelector('[data-demo-controls]');
   const group=document.createElement('div');group.className='rnlab-choices';group.setAttribute('role','group');group.setAttribute('aria-label',label);
-  items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);b.innerHTML=notation(caption);
+  items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);b.innerHTML=typeof caption==='object'?caption.html:notation(caption);
+   if(typeof caption==='object')b.setAttribute('aria-label',caption.label);
    b.setAttribute('aria-pressed',String(val===value));b.addEventListener('click',()=>{
     group.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
     onChange(val);});group.append(b);});host.append(group);onChange(value);
@@ -56,6 +57,59 @@ function mount(container,chapter,language){
    '<input id="'+id+'" type="range" min="'+min+'" max="'+max+'" step="'+step+'" value="'+initial+'"/>';
   host.append(wrap);const input=wrap.querySelector('input'),output=wrap.querySelector('output');
   const change=()=>{output.textContent=input.value;onChange(Number(input.value));};input.addEventListener('input',change);change();
+ }
+
+ // The textbook method shown as short, explicit equations rather than a
+ // slash-filled paragraph. Native MathML keeps entire denominators under
+ // their fraction bars on Android and desktop.
+ const tag=(name,content)=>'<'+name+'>'+content+'</'+name+'>';
+ const mn=value=>tag('mn',esc(value));
+ const mo=value=>tag('mo',esc(value));
+ const mrow=body=>tag('mrow',body);
+ const math=(body,label)=>'<math xmlns="http://www.w3.org/1998/Math/MathML" class="triggle-math rnlab-rational-math" aria-label="'+esc(label)+'">'+body+'</math>';
+ const sqrt=value=>tag('msqrt',mn(value));
+ const pair=(rad,sign)=>mrow(sqrt(rad)+mo(sign)+mn('2'));
+ const bracket=body=>mrow(mo('(')+body+mo(')'));
+ const fraction=(top,bottom)=>tag('mfrac',top+bottom);
+ const product=(num,rad)=>num===1?pair(rad,'−'):mrow(mn(num)+'<mspace width="0.16em"/>'+bracket(pair(rad,'−')));
+ function rationalDemo(mode){
+   const rad=mode==='seven'?7:5,num=rad-4;
+   const label=ta?'இறுதி விடை':'Final answer';
+   const start=fraction(mn(num),pair(rad,'+'));
+   const conjugate=pair(rad,'−');
+   const multiply=fraction(mn(num),pair(rad,'+'))+mo('×')+
+     fraction(bracket(conjugate),bracket(conjugate));
+   const denominator=mrow(mn(rad)+mo('−')+mn(4));
+   const simplify=fraction(product(num,rad),denominator);
+   const finalAnswer=pair(rad,'−');
+   const steps=[
+     [ta?'தொடக்கப் பின்னம்':'Start with the fraction',start,
+       ta?'வர்க்கமூலம் கீழே உள்ள பகுதியில் உள்ளது.':'The denominator contains a square root.'],
+     [ta?'இணை முறுடால் பெருக்குக':'Multiply by the conjugate',multiply,
+       ta?'கூட்டல் குறியை கழித்தல் குறியாக மாற்றவும். அதே காரணியால் மேலேயும் கீழேயும் பெருக்குவதால் மதிப்பு மாறாது.':
+          'Change + to −. Multiplying top and bottom by the same nonzero expression keeps the value unchanged.'],
+     [ta?'கீழ்ப்பகுதியை எளிமைப்படுத்துக':'Simplify the denominator',simplify,
+       ta?'(√'+rad+')² − 2² = '+rad+' − 4 = '+num+'. வர்க்கமூலம் கீழே நீங்கிவிட்டது.':
+          '(√'+rad+')² − 2² = '+rad+' − 4 = '+num+'. The square root disappears from the bottom.'],
+     [ta?'ஒரே காரணியை நீக்குக':'Cancel the common factor',
+       fraction(product(num,rad),mn(num))+mo('=')+finalAnswer,
+       ta?'மேலேயும் கீழேயும் உள்ள '+num+'-ஐ நீக்கினால் இறுதி விடை கிடைக்கும்.':
+          'Divide numerator and denominator by '+num+' to get the final answer.']
+   ];
+   const visual=panel.querySelector('[data-demo-visual]');
+   const output=panel.querySelector('[data-demo-output]');
+   visual.innerHTML='<p class="rnlab-rational-goal">'+esc(ta?
+     'இலக்கு: பகுதியிலுள்ள வர்க்கமூலத்தை நீக்குதல்.':'Goal: remove the square root from the denominator.')+'</p>';
+   output.innerHTML='<ol class="rnlab-rational-steps">'+steps.map(([title,equation,why],i)=>
+     '<li class="rnlab-rational-step"><span class="rnlab-step-number">'+(i+1)+'</span>'+
+     '<div class="rnlab-step-content"><strong>'+esc(title)+'</strong>'+
+     '<div class="rnlab-step-equation">'+math(equation,title)+'</div>'+
+     '<p>'+esc(why)+'</p></div></li>').join('')+'</ol>'+
+     '<div class="rnlab-rational-result"><strong>'+esc(label)+'</strong>'+
+     math(finalAnswer,'square root of '+rad+' minus 2')+'</div>';
+   panel.querySelector('.rnlab-source-note').textContent=ta?
+     'இந்த விளக்கம் பாடநூலின் விகிதப்படுத்துதல் முறையை அடிப்படையாகக் கொண்டது.':
+     'A step-by-step explanation of the textbook rationalisation method.';
  }
  function renderDemo(index){
   const visual=panel.querySelector('[data-demo-visual]'),output=panel.querySelector('[data-demo-output]');
@@ -92,11 +146,13 @@ function mount(container,chapter,language){
       '√'+rad+' = √('+k+'²×2) = '+k+'√2');
     });
   }else if(index===5){
-    controls(t.category,[['five','1/(√5+2)'],['seven','3/(√7+2)']],'five',key=>{
-      const a=key==='five'?'5':'7',num=key==='five'?'1':'3',den=key==='five'?'1':'3';
-      set('<div class="rnlab-big">'+notation('√'+a+' − 2')+'</div>',
-      num+'/(√'+a+'+2) × (√'+a+'−2)/(√'+a+'−2) = '+num+'(√'+a+'−2)/('+a+'−4) = √'+a+'−2');
-    });
+    const labelFor=rad=>ta?
+      (rad===5?'1-ஐ (√5+2)-ஆல் வகுத்தல்':'3-ஐ (√7+2)-ஆல் வகுத்தல்'):
+      (rad===5?'1 divided by square root of 5 plus 2':'3 divided by square root of 7 plus 2');
+    controls(t.category,[
+      ['five',{html:math(fraction(mn(1),pair(5,'+')),labelFor(5)),label:labelFor(5)}],
+      ['seven',{html:math(fraction(mn(3),pair(7,'+')),labelFor(7)),label:labelFor(7)}]
+    ],'five',rationalDemo);
   }else if(index===6){
     slider(t.magnitude,-6,6,1,2,n=>{
       const value=3.2*Math.pow(10,n);
