@@ -52,6 +52,6 @@ assert(css.includes('.sp2-journey-footer')&&css.includes('.sp2-slider-formula'),
 assert.equal(14+11-6,19);
 assert.equal(30-(14+11-6),11);
 assert.equal(30+45-65,10);
-assert.equal(3*Math.sqrt(2),Math.sqrt(18));
+assert(Math.abs(3*Math.sqrt(2)-Math.sqrt(18))<1e-12);
 assert.equal((2e2)*(1.4e2),2.8e4);
 console.log('PASS: 24 bilingual textbook prompts, truthfully labelled reviews, sticky question, 7-page navigation, slider and offline regression');
