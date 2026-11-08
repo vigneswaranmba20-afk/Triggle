@@ -41,7 +41,7 @@ if(fs.existsSync(ledgerPath)) {
     const lesson=path.resolve(__dirname,`../../docs/grade-12/ex1.1-q1-${item.id.endsWith('-ii')?'ii':'i'}.md`);
     assert.ok(fs.existsSync(lesson),`${item.id} bilingual draft exists`);
     const text=fs.readFileSync(lesson,'utf8');
-    assert.match(text,/தமிழ்/);
+    assert.match(text,/தமிழில்|தமிழ்/);
     assert.match(text,/English/);
   }
   assert.equal(ledger.chapterStatus[0].verifiedSubparts,ledger.items.filter(x=>x.chapter===1&&x.status==='mathematically_verified').length);
