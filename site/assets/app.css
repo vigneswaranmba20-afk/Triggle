@@ -1108,3 +1108,11 @@
  .sp2-journey .sp2-journey-footer button{padding:9px 10px}
 }
 @media(prefers-reduced-motion:reduce){.sp2-journey .sp2-sticky-context{scroll-behavior:auto}}
+
+/* Touch and keyboard alternatives for the common-member slider; scoped to lesson 7. */
+.sp2-journey .sp2-slider-touch{display:grid;grid-template-columns:46px minmax(0,1fr) 46px;gap:8px;align-items:center;min-width:0}
+.sp2-journey .sp2-slider-touch button{min-width:46px;min-height:48px;padding:6px;font-size:23px;font-weight:800;border-color:#8170b3;background:#f8f5ff}
+.sp2-journey .sp2-slider-touch button:disabled{opacity:.48;cursor:not-allowed}
+.sp2-journey .sp2-slider-touch input[type=range]{width:100%;min-width:0;min-height:48px}
+@media(max-width:380px){.sp2-journey .sp2-slider-touch{grid-template-columns:43px minmax(0,1fr) 43px;gap:5px}
+.sp2-journey .sp2-slider-touch button{min-width:43px}}

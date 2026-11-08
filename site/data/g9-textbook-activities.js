@@ -16,7 +16,7 @@ const BOOKS=Object.freeze({
  T('activity',4,'Activity 2 · Three forms','செயல்பாடு 2 · மூன்று வடிவங்கள்',
    'Complete the descriptive, roster and set-builder forms of five sets.',
    'ஐந்து கணங்களின் விளக்க, பட்டியல், கண அமைப்பு வடிவங்களை நிரப்புக.',
-   '1. Natural numbers below 10: {1,2,3,4,5,6,7,8,9}; {x ∈ N | x < 10}. 2. Natural multiples of 3: {3,6,9,12,…}; {x ∈ N | 3 divides x}. 3. {2,4,6,8,10}: positive even numbers up to 10; {2n | n ∈ N, 1 ≤ n ≤ 5}. 4. Weekdays: {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday}; {x | x is a day of the week}. 5. Integers: {…,-2,-1,0,1,2,…}; {x | x ∈ Z}.',
+   '1. Natural numbers below 10: {1,2,3,4,5,6,7,8,9}; {x ∈ N | x < 10}. 2. Natural multiples of 3: {3,6,9,12,…}; {x ∈ N | 3 divides x}. 3. {2,4,6,8,10}: positive even numbers up to 10; {2n | n ∈ N, 1 ≤ n ≤ 5}. 4. Days of the week: {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday}; {x | x is a day of the week}. 5. Integers: {…,-2,-1,0,1,2,…}; {x | x ∈ Z}.',
    '1. 10-க்குக் குறைந்த இயல் எண்கள்: {1,2,3,4,5,6,7,8,9}; {x ∈ N | x < 10}. 2. 3-ன் இயல் எண் மடங்குகள்: {3,6,9,12,…}; {x ∈ N | x 3-ஆல் வகுபடும்}. 3. {2,4,6,8,10}: 10 வரை உள்ள நேர்ம இரட்டை எண்கள்; {2n | n ∈ N, 1 ≤ n ≤ 5}. 4. வார நாட்கள்: {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday}; {x | x ஒரு வார நாள்}. 5. முழு எண்கள்: {…,-2,-1,0,1,2,…}; {x | x ∈ Z}.'),
  T('thinking',6,'Thinking Corner · Two singleton sets','சிந்தனை மூலை · ஓருறுப்புக் கணங்கள்',
    'Are {0} and {∅} empty sets?','{0} மற்றும் {∅} ஆகியவை வெற்றுக் கணங்களா?',

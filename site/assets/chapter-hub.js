@@ -168,7 +168,7 @@
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null));
         }
-        if((chapter.id==='g9-ch1'||chapter.id==='g9-ch2')&&window.TriggleTextbookActivities){
+        if(window.TriggleTextbookActivities&&window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]?.length){
           window.TriggleTextbookActivities.mount(panel,chapter,lang);
         }
         if(Number.isInteger(initialConcept)&&initialConcept>=0){
