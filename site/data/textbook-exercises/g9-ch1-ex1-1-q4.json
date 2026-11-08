@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "g9-ch1",
+  "batch": "2026-11-08-ex1.1-q4-i-ii",
+  "sourceAuthority": "User-provided 2025 revised Grade 9 English printed p.5 (PDF p.11), Tamil printed p.6 (PDF p.12)",
+  "coverage": {
+    "verifiedExerciseSubparts": 2,
+    "chapterTotal": "unknown; remaining exercises not fully inventoried"
+  },
+  "questions": [
+    {
+      "id": "g9-ch1-ex1.1-q4-i",
+      "exercise": "1.1",
+      "question": 4,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        }
+      },
+      "prompt": {
+        "en": "Write in roster form the set A of all even natural numbers less than 20.",
+        "ta": "20-ஐ விடக் குறைவான இரட்டைப்படை இயல் எண்களின் கணம் A-ஐப் பட்டியல் முறையில் எழுதுக."
+      },
+      "answer": {
+        "en": "A = {2, 4, 6, 8, 10, 12, 14, 16, 18}",
+        "ta": "A = {2, 4, 6, 8, 10, 12, 14, 16, 18}"
+      },
+      "steps": {
+        "en": [
+          "Natural numbers begin at 1; even natural numbers are positive multiples of 2.",
+          "List 2 × n for positive integers n while 2 × n < 20: n = 1, 2, ..., 9.",
+          "Thus A = {2, 4, 6, 8, 10, 12, 14, 16, 18}. Neither 0 nor 20 belongs to A."
+        ],
+        "ta": [
+          "இயல் எண்கள் 1-இலிருந்து தொடங்குகின்றன; இரட்டைப்படை இயல் எண்கள் 2-இன் நேர்மறை மடங்குகள்.",
+          "2 × n < 20 என்ற நிபந்தனையை நிறைவேற்றும் இயல் எண்கள் n = 1, 2, ..., 9 ஆகும்.",
+          "எனவே A = {2, 4, 6, 8, 10, 12, 14, 16, 18}. 0 மற்றும் 20 இக்கணத்தில் உறுப்புகள் அல்ல."
+        ]
+      },
+      "verification": {
+        "method": "Independent enumeration of even positive integers with strict upper bound, checked against both source prompts",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-ii",
+      "exercise": "1.1",
+      "question": 4,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        }
+      },
+      "prompt": {
+        "en": "Convert B = {y : y = 1/(2n), n ∈ N and n ≤ 5} into roster form.",
+        "ta": "B = {y : y = 1/(2n), n ∈ N, n ≤ 5} என்ற கணத்தைப் பட்டியல் முறையில் எழுதுக."
+      },
+      "answer": {
+        "en": "B = {1/2, 1/4, 1/6, 1/8, 1/10}",
+        "ta": "B = {1/2, 1/4, 1/6, 1/8, 1/10}"
+      },
+      "steps": {
+        "en": [
+          "Because n is a natural number and n ≤ 5, the permitted values are n = 1, 2, 3, 4, 5.",
+          "Substitute each value into y = 1/(2n): 1/2, 1/4, 1/6, 1/8 and 1/10.",
+          "Write each distinct value once: B = {1/2, 1/4, 1/6, 1/8, 1/10}. n = 0 is excluded because it is not natural and would make the denominator zero."
+        ],
+        "ta": [
+          "n ஓர் இயல் எண்; n ≤ 5 என்பதால் n = 1, 2, 3, 4, 5 ஆகிய மதிப்புகளை எடுத்துக்கொள்கிறோம்.",
+          "ஒவ்வொரு n மதிப்பையும் y = 1/(2n) இல் பிரதியிடும்போது 1/2, 1/4, 1/6, 1/8, 1/10 கிடைக்கும்.",
+          "ஒவ்வொரு தனித்த மதிப்பையும் ஒருமுறை எழுதி B = {1/2, 1/4, 1/6, 1/8, 1/10} எனப் பெறுகிறோம். n = 0 அனுமதிக்கப்படாது; அது பகுதியை வரையறுக்க முடியாததாக்கும்."
+        ]
+      },
+      "verification": {
+        "method": "Independently substitute n=1..5 and verify 2n×1/(2n)=1; exclude n=0 and n>5",
+        "status": "mathematically-checked"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "not-integrated",
+        "publication": "draft"
+      }
+    }
+  ]
+}
