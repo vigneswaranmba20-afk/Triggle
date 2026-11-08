@@ -69,6 +69,7 @@ jobs:
           test -s site/grades.html
           test -s site/playground.html
           npm test
+          node site/tools/test_back_to_chapters.cjs
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
