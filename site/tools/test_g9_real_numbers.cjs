@@ -68,7 +68,7 @@ function near(actual,expected,name,tol=1e-9){assert.ok(Math.abs(actual-expected)
 near((Math.sqrt(48)+Math.sqrt(32))/(Math.sqrt(27)-Math.sqrt(18)),(20+8*Math.sqrt(6))/3,'Ex2.7 Q2(i)');
 near((2*Math.sqrt(6)-Math.sqrt(5))/(3*Math.sqrt(5)-2*Math.sqrt(6)),(9+4*Math.sqrt(30))/21,'Ex2.7 Q2(iii)');
 near(Math.sqrt(5)/(Math.sqrt(6)+2)-Math.sqrt(5)/(Math.sqrt(6)-2),-2*Math.sqrt(5),'Ex2.7 Q2(iv)');
-near(10*Math.sqrt(3)+3*Math.sqrt(10)-2*Math.sqrt(2),23.978,'Ex2.6 Q3(ii)',0.0008);
+near(10*1.732+3*3.162-2*1.414,23.978,'Ex2.6 Q3(ii)',1e-10);
 near((Math.pow(0.00003,6)*Math.pow(0.00005,4))/(Math.pow(0.009,3)*Math.pow(0.05,2)),2.5e-36,'Ex2.8 Q3(iii)',1e-45);
 near(Math.pow(0.000001,11)/Math.pow(0.005,3),8e-60,'Ex2.8 Q3(ii)',1e-68);
 near(Math.pow(300000,2)*Math.pow(20000,4),1.44e28,'Ex2.8 Q3(i)',1e17);
