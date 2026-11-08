@@ -385,7 +385,8 @@
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
  }
  function isQuestionFigure(item){
-  if(window.TriggleSetVenn?.needsInline(item))return true;
+  // The Figure button already opens a full Venn: no duplicate mini preview.
+  if(window.TriggleSetVenn?.supports(item))return false;
   return !!(item.diagram && typeof item.diagram==='object' && /\b(diagram|figure|labelled|labeled)\b/i.test(item.q?.en||''));
  }
  function hasUsefulFigure(item){
@@ -534,7 +535,6 @@
   if(!graphic){let svg='';if(current.diagram&&typeof current.diagram==='object')svg=window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});else svg=window.TriggleDraw.drawSimple(current.diagram||'identity');graphic={html:svg,caption:lang==='ta'?'படம் விளக்கத்திற்காக மட்டுமே; அளவுப்படி இல்லாமல் இருக்கலாம்.':'Original conceptual illustration; not necessarily drawn to scale.'}}
   $('diagramContent').innerHTML=graphic.html;
   $('visualTitle').textContent=tr(current.title);
-  $('diagramCaption').textContent=graphic.caption;
   // Same final answer inside glass viewer lets students compare regions to result.
   $('diagramCompareAnswer').innerHTML=$('answerText').innerHTML;
   $('diagramCompareLabel').textContent=ui('finalAnswer');
