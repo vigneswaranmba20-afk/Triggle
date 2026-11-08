@@ -12,7 +12,6 @@ const source='../data/textbook-exercises/g11-ch1-ex1-1-q1.json';
 let lang='en',lesson=null;
 const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
 function render(){
- if(!lesson)return;
  document.documentElement.lang=lang;
  document.getElementById('en').setAttribute('aria-pressed',String(lang==='en'));
  document.getElementById('ta').setAttribute('aria-pressed',String(lang==='ta'));
@@ -21,6 +20,7 @@ function render(){
  document.getElementById('retry').textContent=lang==='ta'?'பாடத்தை மீண்டும் ஏற்றுக':'Retry loading lesson';
  document.getElementById('review').textContent=lang==='ta'?'தமிழ் மனித ஆசிரியர் மதிப்பாய்வு நிலுவையில் உள்ளது. இது சோதனை முன்னோட்டம்.':'Tamil human editorial review pending. This is a testing preview.';
  const target=document.getElementById('lessons');target.replaceChildren();
+ if(!lesson)return;
  for(const q of lesson.questions){
   const card=el('article',undefined,'card');card.id=q.id;
   card.append(el('h2',(lang==='ta'?'வினா ':'Question ')+q.question+' ('+q.subpart+')'),el('p',q.prompt[lang]));
@@ -31,8 +31,9 @@ function render(){
   target.append(card);
  }
 }
-document.getElementById('en').addEventListener('click',()=>{lang='en';render();});
-document.getElementById('ta').addEventListener('click',()=>{lang='ta';render();});
+function setLanguage(next){lang=next;render();if(!lesson&&!document.getElementById('retry').hidden){document.getElementById('error').textContent=lang==='ta'?'பாடத்தை ஏற்ற முடியவில்லை. இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயல்க.':'Lesson could not be loaded. Check your connection and retry.';}}
+document.getElementById('en').addEventListener('click',()=>setLanguage('en'));
+document.getElementById('ta').addEventListener('click',()=>setLanguage('ta'));
 async function loadLesson(){
  const retry=document.getElementById('retry'),error=document.getElementById('error');
  retry.hidden=true;error.textContent='';
