@@ -1070,7 +1070,8 @@ async function main() {
       assert(cached.some(u=>u.endsWith('/assets/discovery.css')),'New Home styles must be precached');
       await ctx.setOffline(true);
       await page.reload();
-      await page.locator('.discover-hero').waitFor({state:'visible'});
+      await page.locator('.discover-home-minimal').waitFor({state:'visible'});
+       assert.equal(await page.locator('.discover-home-minimal > section').count(),2,'Offline home remains minimal');
       await page.locator('.discover-grade-grid [data-grade="9"]').click();
       assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
       await ctx.setOffline(false);
