@@ -4,7 +4,7 @@
 
 **Read and follow [the reusable Triggle master development prompt](docs/TRIGGLE_MASTER_PROMPT.md) before editing, testing, or deploying.** Its Google Drive 2025 textbook-first verification, hard-only Detailed Explanation, useful question-specific figure icons, batch testing, and live deployment gates are mandatory. A repository clone does not contain the user's PDFs: use the connected Drive app to open them, and report an access blocker instead of pretending to have read them.
 
-**For the Grade 9 Set Language exact-question and navigation repair**, also follow [the dedicated reusable master prompt](docs/G9_TEXTBOOK_FIDELITY_REPAIR_MASTER_PROMPT.md) and [the source gap register](docs/G9_CH1_2025_SOURCE_GAP_REGISTER.md). Preserve exact textbook questions where reproduction is authorized; do not mislabel reworded questions as exact. Independently authored explanations and original Venn diagrams are permitted.
+**For the Grade 9 Set Language exact-question and navigation repair**, also follow [the dedicated reusable master prompt](docs/G9_TEXTBOOK_FIDELITY_REPAIR_MASTER_PROMPT.md) and [the source gap register](docs/G9_CH1_2025_SOURCE_GAP_REGISTER.md). Preserve exact textbook questions from the user's connected PDFs. Do not mislabel reworded questions as exact. New official questions require a verified English/Tamil page-image evidence record, preserved IDs and a passing source-to-browser comparison test. Independently authored explanations and original Venn diagrams are permitted.
 
 This file tells coding agents (including Codex) where to find **maintained educational reference notes** before adding or revising mathematics content.
 
