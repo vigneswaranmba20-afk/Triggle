@@ -9,8 +9,8 @@
       "chapterId": "g11-ch1",
       "title": "Sets, Relations and Functions",
       "fullExerciseInventory": "UNKNOWN",
-      "draftedSubparts": 6,
-      "mathematicallyCheckedSubparts": 6,
+      "draftedSubparts": 7,
+      "mathematicallyCheckedSubparts": 7,
       "ciPassed": 0,
       "merged": 0,
       "liveVerified": 0,
@@ -226,10 +226,24 @@
       "deployed": false,
       "liveVerified": false,
       "tamilEditorial": "pending"
+    },
+    {
+      "id": "g11-ch1-ex1.1-q3-ii",
+      "englishPrintedPage": 7,
+      "tamilPrintedPage": 9,
+      "englishPdfPage": 15,
+      "tamilPdfPage": 17,
+      "status": "draft",
+      "mathChecked": true,
+      "ciPassed": false,
+      "merged": false,
+      "deployed": false,
+      "liveVerified": false,
+      "tamilEditorial": "pending"
     }
   ],
-  "next": "Grade 11 Chapter 1 Exercise 1.1 Question 3(ii), English printed p.7 and Tamil printed p.9: odd prime natural numbers form an infinite set; verify exact source and draft bilingual proof. Confirm Q3(i) CI/browser, reconcile main and cross-grade regressions before preview merge.",
-  "notes": "2025 revised English/Tamil Volume I Exercise 1.1 Question 3(i) directly inspected; even prime naturals form exactly {2}. Q3(i) independent regression added; full CI/browser pending. Full exercise totals remain UNKNOWN.",
+  "next": "Confirm Q3(ii) GitHub Actions math/browser results and repair failures; next source-verified textbook item is Chapter 1 Exercise 1.1 Question 3(iii), even integers less than 10. Reconcile main and cross-grade checks before testing-preview merge.",
+  "notes": "Q3(ii) 2025 English p7 and Tamil p9 directly checked in connected PDFs. Euclid construction N=2∏p+1 independently tested for several finite odd-prime lists; browser and CI pending. All 12 chapter inventory totals UNKNOWN.",
   "ciEvidence": {
     "baselineCommit": "7f66ab886f4d961774288d36d644ce8ed7ffe5eb",
     "runId": 42451732756,
