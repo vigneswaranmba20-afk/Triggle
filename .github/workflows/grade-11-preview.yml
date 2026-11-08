@@ -1,0 +1,33 @@
+name: Grade 11 bilingual curriculum preview checks
+
+on:
+  push:
+    branches: [curriculum/grade-11-workstream]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  grade-11:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Full curriculum unit and integrity suite
+        run: npm test
+      - name: Grade 11 content and mathematical regressions
+        run: |
+          node site/tools/test_grade11_ex1_1_q1.cjs
+          node site/tools/test_grade11_ex1_1_q1_independent.cjs
+          node site/tools/test_grade11_q1_boundary_cases.cjs
+          node site/tools/test_grade11_preview.cjs
+      - run: npx playwright install --with-deps chromium
+      - name: Grade 11 mobile keyboard bilingual and recovery browser checks
+        run: node site/tools/test_grade11_browser.cjs
+      - name: Shared cross-grade browser regression
+        run: npm run test:browser
