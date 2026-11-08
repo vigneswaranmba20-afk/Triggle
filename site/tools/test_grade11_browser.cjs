@@ -74,6 +74,27 @@ const server=http.createServer((req,res)=>{
    await ctx.close();
    console.log('PASS Grade 11 Q2 bilingual offline mobile '+width);
   }
+  // Source-verified Exercise 1.1 Q3(i): even prime natural numbers form {2}.
+  for(const width of [320,390,1280]){
+   const ctx=await browser.newContext({viewport:{width,height:800}});
+   const p=await ctx.newPage();
+   await p.goto('http://127.0.0.1:'+server.address().port+'/grade-11/sets-q3-i-preview.html');
+   await p.locator('#lesson article').waitFor();
+   assert.match(await p.locator('#lesson').innerText(),/even primes/);
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
+   assert.match(await p.locator('#lesson').innerText(),/Finite: \\{2\\}/);
+   await p.locator('#ta').click();
+   assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   assert.match(await p.locator('#lesson').innerText(),/முடிவுள்ள கணம்/);
+   assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+   await ctx.setOffline(true);
+   await p.locator('#en').click();
+   await p.locator('#lesson summary').click();
+   assert.match(await p.locator('#lesson').innerText(),/Finite: \\{2\\}/);
+   await ctx.close();
+   console.log('PASS Grade 11 Q3(i) bilingual keyboard/offline mobile '+width);
+  }
   const context=await browser.newContext({viewport:{width:320,height:800}});
   const page=await context.newPage();
   await page.route('**/g11-ch1-ex1-1-q1.json',route=>route.abort());
