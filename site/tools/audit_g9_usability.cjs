@@ -137,11 +137,11 @@ async function main(){
      assert.ok(r.document<=r.window+1,JSON.stringify(r));
     },'advisory');
     if(AxeBuilder&&width===390){
-     await check(c,'Axe WCAG 2.2 A/AA (advisory)','accessibility',async()=>{
+     await check(c,'Axe WCAG 2.2 A/AA release gate','accessibility',async()=>{
       const a=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
       const violations=a.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.length,details:v.nodes.slice(0,9).map(n=>({target:n.target,html:n.html.slice(0,180),why:(n.failureSummary||'').slice(0,240)}))}));
       assert.equal(violations.length,0,JSON.stringify(violations));
-     },'advisory');
+     },'high');
     }
     if(width<500)await page.screenshot({path:path.join(out,config.chapter+'-'+lang+'-'+width+'.png'),fullPage:true,animations:'disabled'});
    }finally{await context.close();}
