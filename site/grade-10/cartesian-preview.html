@@ -13,23 +13,23 @@ li{margin:.6rem 0;line-height:1.65}.pair-grid{display:grid;grid-template-columns
 </style></head><body><header>
 <small>Triggle · Grade 10 · Chapter 1 · Exercise 1.1 · testing preview</small>
 <h1 id="title">Cartesian products / கார்டீசியன் பெருக்கல்</h1>
-<p class="notice" id="notice">Q1(i–iii), Q2 and Q3 are drafted. Tamil human editorial review pending. Not a certification of complete curriculum coverage or live deployment.</p>
+<p class="notice" id="notice">Q1(i–iii), Q2, Q3 and Q4 are drafted. Tamil human editorial review pending. Not a certification of complete curriculum coverage or live deployment.</p>
 <nav aria-label="Lesson language"><button type="button" id="en" aria-pressed="true">English</button><button type="button" id="ta" aria-pressed="false" lang="ta">தமிழ்</button></nav>
 </header><button type="button" id="retry" hidden>Retry loading lessons</button><main id="lessons" aria-live="polite"><p id="status" role="status">Loading lessons…</p></main>
 <script>
 'use strict';
 const base='../data/textbook-exercises/';
-const ids=['g10-ch1-ex1-1-q1i','g10-ch1-ex1-1-q1ii','g10-ch1-ex1-1-q1iii','g10-ch1-ex1-1-q2','g10-ch1-ex1-1-q3'];
+const ids=['g10-ch1-ex1-1-q1i','g10-ch1-ex1-1-q1ii','g10-ch1-ex1-1-q1iii','g10-ch1-ex1-1-q2','g10-ch1-ex1-1-q3','g10-ch1-ex1-1-q4'];
 let lessons=[],lang='en';
 const retry=document.getElementById('retry');
 const errorText={en:'Unable to load verified lessons. Please check your connection and retry.',ta:'சரிபார்க்கப்பட்ட பாடங்களை ஏற்ற முடியவில்லை. இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்.'};
 const main=document.getElementById('lessons');
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 function validLesson(q,id){
- return q && q.id===id && q.grade===10 && q.chapter===1 && q.exercise==='1.1' && ((q.question==='1' && id==='g10-ch1-ex1-1-q1'+q.subpart)||(['2','3'].includes(q.question) && q.subpart===null && id==='g10-ch1-ex1-1-q'+q.question)) && q.source?.edition==='2025 revised' && q.review?.sourceVerified===true && q.review?.mathVerified===true &&
+ return q && q.id===id && q.grade===10 && q.chapter===1 && q.exercise==='1.1' && ((q.question==='1' && id==='g10-ch1-ex1-1-q1'+q.subpart)||(['2','3','4'].includes(q.question) && q.subpart===null && id==='g10-ch1-ex1-1-q'+q.question)) && q.source?.edition==='2025 revised' && q.review?.sourceVerified===true && q.review?.mathVerified===true &&
  ['en','ta'].every(k=>typeof q.title?.[k]==='string' && q.title[k].trim() && typeof q.questionParaphrase?.[k]==='string' && q.questionParaphrase[k].trim() && typeof q.misconception?.[k]==='string' && q.misconception[k].trim()) &&
  Array.isArray(q.steps) && q.steps.length>0 && q.steps.every(step=>typeof step.equation==='string' && ['en','ta'].every(k=>typeof step[k]==='string' && step[k].trim())) &&
- Number.isInteger(q.source?.english?.printedPage) && Number.isInteger(q.source?.tamil?.printedPage) && Number.isInteger(q.source?.english?.pdfPage) && Number.isInteger(q.source?.tamil?.pdfPage) && q.source.english.printedPage>0 && q.source.tamil.printedPage>0 && (q.question==='3' ? (Array.isArray(q.answers?.A) && Array.isArray(q.answers?.B) && Array.isArray(q.answers?.BxA)) : ['AxB','AxA','BxA'].every(k=>Array.isArray(q.answers?.[k]) && q.answers[k].every(pair=>Array.isArray(pair)&&pair.length===2)));
+ Number.isInteger(q.source?.english?.printedPage) && Number.isInteger(q.source?.tamil?.printedPage) && Number.isInteger(q.source?.english?.pdfPage) && Number.isInteger(q.source?.tamil?.pdfPage) && q.source.english.printedPage>0 && q.source.tamil.printedPage>0 && (q.question==='4' ? (['A','B','C','AxA','BxB','CxC','intersection'].every(k=>Array.isArray(q.answers?.[k]))) : q.question==='3' ? (Array.isArray(q.answers?.A) && Array.isArray(q.answers?.B) && Array.isArray(q.answers?.BxA)) : ['AxB','AxA','BxA'].every(k=>Array.isArray(q.answers?.[k]) && q.answers[k].every(pair=>Array.isArray(pair)&&pair.length===2)));
 }
 function draw(){
  main.replaceChildren();retry.hidden=true;
@@ -43,13 +43,13 @@ function draw(){
   const steps=el('ol');for(const step of q.steps){const li=el('li',step[lang]);li.append(el('div',step.equation,'math'));steps.append(li);}details.append(steps);
   const gridTitle=el('h3',lang==='en'?'Explore ordered pairs':'வரிசைச் சோடிகளை ஆராய்க');details.append(gridTitle);
   const hint=el('p',lang==='en'?'Each tile shows one ordered pair. Notice how reversing coordinates changes the product.':'ஒவ்வொரு கட்டத்திலும் ஒரு வரிசைச் சோடி உள்ளது. உறுப்புகளின் வரிசை மாறும்போது பெருக்கல் எவ்வாறு மாறுகிறது எனக் கவனிக்கவும்.');details.append(hint);
-  for(const key of (q.question==='3'?['BxA']:(q.question==='2'?['AxB','BxA']:['AxB','AxA','BxA']))){const section=el('section');section.append(el('h4',key.replace('x',' × ')));const grid=el('div');grid.className='pair-grid';grid.setAttribute('role','list');if(!q.answers[key].length){grid.append(el('p',lang==='en'?'∅ — no ordered pairs':'∅ — வரிசைச் சோடிகள் இல்லை'));}for(const pair of q.answers[key]){const tile=el('div','('+pair.join(', ')+')','pair-cell');tile.setAttribute('role','listitem');grid.append(tile);}section.append(grid);details.append(section);}
+  for(const key of (q.question==='4'?['AxA','intersection']:(q.question==='3'?['BxA']:(q.question==='2'?['AxB','BxA']:['AxB','AxA','BxA'])))){const section=el('section');section.append(el('h4',(key==='intersection'?'(B × B) ∩ (C × C)':key.replace('x',' × '))));const grid=el('div');grid.className='pair-grid';grid.setAttribute('role','list');if(!q.answers[key].length){grid.append(el('p',lang==='en'?'∅ — no ordered pairs':'∅ — வரிசைச் சோடிகள் இல்லை'));}for(const pair of q.answers[key]){const tile=el('div','('+pair.join(', ')+')','pair-cell');tile.setAttribute('role','listitem');grid.append(tile);}section.append(grid);details.append(section);}
   details.append(el('p',q.misconception[lang]));article.append(details);main.append(article);
  }
  document.documentElement.lang=lang;
  retry.textContent=lang==='en'?'Retry loading lessons':'பாடங்களை மீண்டும் ஏற்றுக';
  for(const key of ['en','ta'])document.getElementById(key).setAttribute('aria-pressed',String(key===lang));
- document.getElementById('notice').textContent=lang==='en'?'Q1(i–iii), Q2 and Q3 are drafted. Tamil human editorial review pending. This is a testing preview, not full curriculum coverage.':'Q1(i–iii), Q2 மற்றும் Q3 வரைவு நிலையில் உள்ளன. தமிழ் மனிதத் தொகுப்பாசிரியர் மதிப்பாய்வு நிலுவையில் உள்ளது. இது சோதனை முன்னோட்டம் மட்டுமே.';
+ document.getElementById('notice').textContent=lang==='en'?'Q1(i–iii), Q2, Q3 and Q4 are drafted. Tamil human editorial review pending. This is a testing preview, not full curriculum coverage.':'Q1(i–iii), Q2, Q3 மற்றும் Q4 வரைவு நிலையில் உள்ளன. தமிழ் மனிதத் தொகுப்பாசிரியர் மதிப்பாய்வு நிலுவையில் உள்ளது. இது சோதனை முன்னோட்டம் மட்டுமே.';
 }
 for(const key of ['en','ta'])document.getElementById(key).addEventListener('click',()=>{lang=key;document.documentElement.lang=lang;retry.textContent=lang==='en'?'Retry loading lessons':'பாடங்களை மீண்டும் ஏற்றுக';if(lessons.length)draw();else if(!retry.hidden){const message=el('p',errorText[lang]);message.id='status';message.setAttribute('role','alert');main.replaceChildren(message);}});
 async function loadLessons(){retry.hidden=true;main.replaceChildren(el('p',lang==='en'?'Loading lessons…':'பாடங்கள் ஏற்றப்படுகின்றன…'));try{
