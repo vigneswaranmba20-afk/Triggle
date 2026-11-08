@@ -275,3 +275,43 @@ body.textbook-reader .question-return button{
 }
 body.textbook-reader .question-return button:hover{background:#f3eefb!important}
 body.textbook-reader .question-return button:focus-visible{outline:3px solid #7458c6!important;outline-offset:2px!important}
+
+
+/* Chapter picker is a visibly scrollable list, not a two-item trap.
+   Only applies to the chapter dropdown, not exercise or class choosers. */
+.path-dialog.is-chapter-picker[open]{
+ display:flex;flex-direction:column;
+ width:min(96vw,520px)!important;
+ max-height:min(92dvh,820px)!important;
+ overflow:hidden
+}
+.path-dialog.is-chapter-picker .dialog-header{
+ flex:0 0 auto;padding:13px 15px!important
+}
+.path-dialog.is-chapter-picker .path-hint{
+ flex:0 0 auto;margin:0;padding:10px 15px 6px;
+ color:#5f5577;font-size:13px;line-height:1.4;font-weight:720;
+ background:#f8f5fe;border-bottom:1px solid #e8e0f2
+}
+.path-dialog.is-chapter-picker .path-hint[hidden]{display:none!important}
+.path-dialog.is-chapter-picker .path-options{
+ flex:1 1 auto;min-height:0;
+ max-height:min(77dvh,690px)!important;
+ overflow-y:auto!important;
+ overscroll-behavior:contain;
+ scrollbar-width:thin;
+ padding:9px 10px max(12px,env(safe-area-inset-bottom))!important;
+ gap:6px!important;
+ align-content:start
+}
+.path-dialog.is-chapter-picker .path-option{
+ min-height:50px!important;padding:8px 12px!important;
+ border-radius:12px!important;gap:10px!important
+}
+.path-dialog.is-chapter-picker .path-option strong{font-size:15px!important;line-height:1.4!important}
+.path-dialog.is-chapter-picker .path-option small{font-size:11px!important;margin-top:2px!important;line-height:1.35}
+.path-dialog.is-chapter-picker .path-option:focus-visible{outline:3px solid #7351b9;outline-offset:-1px}
+@media(max-height:630px){
+ .path-dialog.is-chapter-picker[open]{max-height:94dvh!important}
+ .path-dialog.is-chapter-picker .path-options{max-height:calc(94dvh - 108px)!important}
+}

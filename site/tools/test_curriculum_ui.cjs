@@ -433,6 +433,17 @@ async function main() {
         assert.equal(await page.locator('#pathDialog').evaluate(el=>el.open),true);
         assert.match(await page.locator('#pathTitle').innerText(),/Choose a chapter/);
         assert.equal(await page.locator('#pathOptions .path-option').count(),9,'All Class 9 chapters in dropdown');
+        assert.match(await page.locator('#pathHint').innerText(),/9 chapters.*Scroll/,'Students need a clear chapter count and scroll cue');
+        assert.equal(await page.locator('#pathDialog').evaluate(el=>getComputedStyle(el).display),'flex','Chapter picker must use tall flex layout');
+        const ninth=page.locator('#pathOptions .path-option').last();
+        assert.match(await ninth.innerText(),/Chapter 9/);
+        await ninth.scrollIntoViewIfNeeded();
+        const lastVisible=await page.locator('#pathOptions').evaluate(el=>{
+          const box=el.getBoundingClientRect(),end=el.lastElementChild.getBoundingClientRect();
+          return {top:box.top,bottom:box.bottom,lastTop:end.top,lastBottom:end.bottom,overflow:el.scrollHeight>el.clientHeight+1};
+        });
+        assert.ok(lastVisible.lastTop>=lastVisible.top-3&&lastVisible.lastBottom<=lastVisible.bottom+3,
+          'Chapter 9 must be scroll-reachable within the chapter picker: '+JSON.stringify(lastVisible));
         await page.locator('#pathOptions .path-option').filter({hasText:'Chapter 2 · Real Numbers'}).click();
         assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch2');
         assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Real Numbers');
@@ -453,6 +464,7 @@ async function main() {
         await page.locator('#crumb .crumb-link').nth(1).click();
         assert.match(await page.locator('#pathTitle').innerText(),/அத்தியாயத்தைத் தேர்வு செய்க/);
         assert.equal(await page.locator('#pathOptions .path-option').count(),9);
+        assert.match(await page.locator('#pathHint').innerText(),/9 அத்தியாயங்கள்/,'Tamil chapter count and scroll cue');
         await page.locator('#pathClose').click();
         await noOverflow(page,'Student navigation at '+width+'px');
       });
