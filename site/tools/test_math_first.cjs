@@ -41,9 +41,9 @@ const glass=/\.figure-dialog\{[\s\S]*?background:rgba\(239,232,250,\.68\)!import
 assert(glass,'Venn dialog must be visibly translucent, not nearly opaque');
 assert(html.includes('textbook-activities.js?v=math-first-1'),'New activities renderer not versioned');
 assert(html.includes('chapter-hub.js?v=math-first-1'),'New chapter route not versioned');
-assert(html.includes('app.js?v=venn-clear-1'),'Chapter menu reader code must load');
+assert(html.includes('app.js?v=minimal-home-1'),'Chapter menu reader code must load');
 assert(sw.includes("'./assets/math-first.css'"),'Offline shell must include new CSS');
-assert(/v52-venn-tall/.test(sw),'Offline chapter navigation cache not invalidated');
+assert(/v53-minimal-home/.test(sw),'Offline chapter navigation cache not invalidated');
 assert(css.includes('body.textbook-reader .question-return button{'),'Single quiet return control must be styled');
 assert(!css.includes('body.textbook-reader #chapterMenuBtn{'),'No leftover chapter-section visual clutter');
 assert(html.includes('id="pathHint"'),'Chapter dialog should show class-specific chapter count');
@@ -63,4 +63,15 @@ assert(venn.includes('<ellipse cx='),'Venn masks must use matching ellipse geome
 assert(!venn.includes('<circle cx='),'Old circle clipping must not mismatch ellipse shading');
 assert(!venn.includes('g9-venn-text-alternative'),'No redundant visual region commentary');
 assert(css.includes('.figure-dialog .diagram-content .g9-venn-svg{'),'Figure viewer must use full available width');
+const home=read('assets/discovery.js'),homeCss=read('assets/discovery.css');
+new vm.Script(home,{filename:'discovery.js'});
+assert(html.includes('assets/discovery.js?v=minimal-home-1'),'Load new minimal home renderer');
+assert(html.includes('assets/discovery.css?v=minimal-home-1'),'Load minimal home styling');
+assert(home.includes('discover-home-minimal'),'Home must have only two compact study sections');
+assert(!home.includes('const heroSvg='),'Remove obsolete promotional hero SVG');
+assert(!home.includes('discover-method-grid'),'No extra home marketing section');
+assert(!home.includes('discover-feature'),'No featured promo on home');
+assert(app.includes("lastOpened={grade,questionId:current.id}"),'Track actual most recent question across all grades');
+assert(home.includes("lastOpened.questionId"),'Resume must select most recently opened item');
+assert(homeCss.includes('.discover-resume-card'),'Resume row should be styled as an accessible action');
 console.log('PASS: chapter → section → list → question navigation, truthful fallbacks, quiz/activity first content, accessible figure comparison, mobile layout and offline cache');
