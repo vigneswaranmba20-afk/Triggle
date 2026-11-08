@@ -39,7 +39,7 @@
       '</span></span><span class="math-bracket">)</span></span><sup>'+esc(exponents[p]||p.slice(1))+'</sup></span>'));
     // Legacy authored [[numerator|denominator]] markup: stacked fraction.
     s=s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g,(_full,n,d)=>stash(
-      '<span class="frac" role="math" aria-label="'+esc(n)+' over '+esc(d)+'"><span>'+render(n)+'</span><span>'+render(d)+'</span></span>'));
+      '<span class="frac"><span>'+render(n)+'</span><span>'+render(d)+'</span></span>'));
     // Keep group powers attached, even when the group contains a radical.
     s=s.replace(/(\[[^\[\]\n]{1,100}\]|\([^()\n]{1,100}\)|\{[^{}\n]{1,100}\})([⁰¹²³⁴]|\^[a-zA-Z0-9−-]+)/g,
       (_full,group,p)=>stash('<span class="math-group-power" role="math"><span class="math-group">'+
