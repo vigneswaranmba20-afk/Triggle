@@ -41,9 +41,12 @@ async function loadLesson(){
   const response=await fetch(source,{cache:'default'});
   if(!response.ok)throw Error('HTTP '+response.status);
   const data=await response.json();
-  if(data.grade!==11||data.exercise!=='1.1'||!Array.isArray(data.questions)||data.questions.length!==4)throw Error('Invalid Grade 11 lesson');
+  if(data.grade!==11||data.chapterId!=='g11-ch1'||data.exercise!=='1.1'||!Array.isArray(data.questions)||data.questions.length!==4)throw Error('Invalid Grade 11 lesson');
+  const expectedIds=['i','ii','iii','iv'].map(part=>'g11-ch1-ex1.1-q1-'+part);
+  if(data.questions.some((q,i)=>q.id!==expectedIds[i]||q.question!==1||q.exercise!=='1.1'||q.subpart!==['i','ii','iii','iv'][i]))throw Error('Lesson identity mismatch');
   for(const q of data.questions){
-   if(!q.id||!q.prompt?.en||!q.prompt?.ta||!Array.isArray(q.steps?.en)||!Array.isArray(q.steps?.ta)||!q.answer?.en||!q.answer?.ta)throw Error('Incomplete bilingual lesson');
+   if(!q.id||!q.prompt?.en||!q.prompt?.ta||!Array.isArray(q.steps?.en)||!Array.isArray(q.steps?.ta)||!q.answer?.en||!q.answer?.ta||q.steps.en.length<3||q.steps.ta.length<3||q.steps.en.some(s=>typeof s!=='string'||!s.trim())||q.steps.ta.some(s=>typeof s!=='string'||!s.trim()))throw Error('Incomplete bilingual lesson');
+   if(q.review?.mathematics!=='independently checked'||q.review?.publication!=='draft'||q.source?.edition!=='2025 revised'||q.source?.page?.en!==7||q.source?.page?.ta!==9||q.source?.pdfPage?.en!==15||q.source?.pdfPage?.ta!==17)throw Error('Unverified lesson source or mathematics');
   }
   lesson=data;render();
  }catch(err){
