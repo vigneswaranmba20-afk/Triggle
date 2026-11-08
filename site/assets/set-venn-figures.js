@@ -42,19 +42,19 @@
   return rows.map((r,i)=>'<text x="'+x+'" y="'+(y+(i-(rows.length-1)/2)*22)+'" text-anchor="middle" font-size="'+(r.length>12?13:16)+'" font-family="system-ui,sans-serif" font-weight="700" fill="#263049">'+esc(r)+'</text>').join('');
  }
  function one(spec,mode,index,lang,n){
-  const txt=titles[lang],id='g9venn-'+n+'-'+index,ax=192,bx=368,cy=166,rx=150,ry=128;
+  const txt=titles[lang],id='g9venn-'+n+'-'+index,ax=190,bx=370,cy=210,rx=160,ry=180;
   const A='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'"/>',B='<ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'"/>';
   const masks='<defs>'+
    '<clipPath id="'+id+'-bclip">'+B+'</clipPath>'+
    '<clipPath id="'+id+'-aclip">'+A+'</clipPath>'+
-   '<mask id="'+id+'-a"><rect width="560" height="330" fill="black"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-b"><rect width="560" height="330" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-notA"><rect width="560" height="330" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-notUnion"><rect width="560" height="330" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-notOnlyA"><rect width="560" height="330" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white" clip-path="url(#'+id+'-aclip)"/></mask>'+
+   '<mask id="'+id+'-a"><rect width="560" height="420" fill="black"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-b"><rect width="560" height="420" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-notA"><rect width="560" height="420" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-notUnion"><rect width="560" height="420" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-notOnlyA"><rect width="560" height="420" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white" clip-path="url(#'+id+'-aclip)"/></mask>'+
    '</defs>';
-  const rect='<rect x="14" y="12" width="532" height="306" rx="13" fill="#fff" stroke="#b6accd" stroke-width="2"/>';
-  const shadeRect=(mask,color)=>'<rect x="16" y="14" width="528" height="302" fill="'+color+'" mask="url(#'+id+'-'+mask+')"/>';
+  const rect='<rect x="10" y="10" width="540" height="400" rx="13" fill="#fff" stroke="#b6accd" stroke-width="2"/>';
+  const shadeRect=(mask,color)=>'<rect x="12" y="12" width="536" height="396" fill="'+color+'" mask="url(#'+id+'-'+mask+')"/>';
   const clipIntersection='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#7fcabb" clip-path="url(#'+id+'-bclip)"/>';
   let shade='';
   if(mode==='union')shade='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#b7a9eb"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#b7a9eb"/>'+clipIntersection;
@@ -67,16 +67,16 @@
   if(mode==='outsideUnion')shade=shadeRect('notUnion','#b7a9eb');
   const outline='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="none" stroke="#5542a0" stroke-width="3"/>'+
    '<ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="none" stroke="#2a8479" stroke-width="3"/>';
-  const header='<text x="121" y="43" font-size="21" fill="#5542a0" font-weight="850">'+esc(spec.a)+'</text>'+
-   '<text x="427" y="43" font-size="21" fill="#2a8479" font-weight="850">'+esc(spec.b)+'</text>'+
-   (spec.universe?'<text x="25" y="38" font-size="18" fill="#635872" font-weight="800">U</text>':'');
+  const header='<text x="106" y="45" font-size="21" fill="#5542a0" font-weight="850">'+esc(spec.a)+'</text>'+
+   '<text x="429" y="45" font-size="21" fill="#2a8479" font-weight="850">'+esc(spec.b)+'</text>'+
+   (spec.universe?'<text x="22" y="37" font-size="18" fill="#635872" font-weight="800">U</text>':'');
   const left=spec.symbolic?[spec.a+' only']:spec.left;
   const both=spec.symbolic?[spec.a+'∩'+spec.b]:spec.both;
   const right=spec.symbolic?[spec.b+' only']:spec.right;
-  const lab=linesAt(128,178,left,'∅')+linesAt(280,178,both,'∅')+linesAt(432,178,right,'∅')+
-   (spec.outside?linesAt(504,280,spec.outside,''):spec.symbolic&&spec.universe?linesAt(503,278,['outside'],''):'');
+  const lab=linesAt(115,224,left,'∅')+linesAt(280,224,both,'∅')+linesAt(445,224,right,'∅')+
+   (spec.outside?linesAt(515,353,spec.outside,''):spec.symbolic&&spec.universe?linesAt(513,352,['outside'],''):'');
   const desc=(spec.count?'Counts: ':'Members: ')+spec.a+' only '+left.join(',')+'; '+spec.a+'∩'+spec.b+' '+both.join(',')+'; '+spec.b+' only '+right.join(',')+(spec.outside?'; outside '+spec.outside.join(','):'')+'. '+txt.shading+': '+mode+'.';
-  return '<svg class="g9-venn-svg" viewBox="0 0 560 330" role="img" aria-labelledby="'+id+'-title '+id+'-desc" xmlns="http://www.w3.org/2000/svg">'+
+  return '<svg class="g9-venn-svg" viewBox="0 0 560 420" role="img" aria-labelledby="'+id+'-title '+id+'-desc" xmlns="http://www.w3.org/2000/svg">'+
    '<title id="'+id+'-title">'+esc(txt.figure+' 1.'+n+(mode==='none'?'':' · '+mode))+'</title>'+
    '<desc id="'+id+'-desc">'+esc(desc)+'</desc>'+
    masks+rect+shade+outline+header+lab+'</svg>';

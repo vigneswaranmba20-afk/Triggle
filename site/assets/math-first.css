@@ -338,7 +338,7 @@ body.textbook-reader .inline-figure:has(.g9-venn-svg){display:none!important}
 .figure-dialog .diagram-content .g9-venn-svg{
  display:block!important;width:100%!important;max-width:none!important;
  height:auto!important;max-height:none!important;margin:0!important;
- aspect-ratio:560 / 330!important;object-fit:fill!important
+ aspect-ratio:560 / 420!important;object-fit:fill!important
 }
 .figure-dialog .g9-venn-figure figcaption{
  padding:5px 0 3px!important;margin:0!important;
