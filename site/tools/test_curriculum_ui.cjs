@@ -541,7 +541,7 @@ async function main() {
       assert.equal(await page.locator('.rnlab [data-nav] button').count(),8,'eight interactive Real Numbers concepts');
       const lab=page.locator('.rnlab');
       assert.equal(await lab.locator('input[type="range"]').count(),1,'movable rational number line');
-      await lab.locator('input[type="range"]').fill('10');
+      await lab.locator('input[type="range"]').evaluate(input=>{input.value='10';input.dispatchEvent(new Event('input',{bubbles:true}));});
       assert.match(await lab.locator('[data-demo-output]').innerText(),/7\/12/);
       await lab.locator('[data-answers] button').nth(0).click();
       await lab.locator('[data-answers] button').nth(1).click();
@@ -550,13 +550,13 @@ async function main() {
       await lab.locator('[data-demo-mode="repeat"]').click();
       assert.match(await lab.locator('[data-demo-output]').innerText(),/Repeating/);
       await lab.locator('[data-nav] [data-index="4"]').click();
-      await lab.locator('input[type="range"]').fill('4');
+      await lab.locator('input[type="range"]').evaluate(input=>{input.value='4';input.dispatchEvent(new Event('input',{bubbles:true}));});
       assert.match(await lab.locator('[data-demo-output]').innerText(),/4√2/);
       await lab.locator('[data-nav] [data-index="5"]').click();
       await lab.locator('[data-demo-mode="seven"]').click();
       assert.match(await lab.locator('[data-demo-output]').innerText(),/√7−2/);
       await lab.locator('[data-nav] [data-index="6"]').click();
-      await lab.locator('input[type="range"]').fill('-3');
+      await lab.locator('input[type="range"]').evaluate(input=>{input.value='-3';input.dispatchEvent(new Event('input',{bubbles:true}));});
       assert.match(await lab.locator('[data-demo-output]').innerText(),/0\.0032/);
       await page.locator('#langTa').click();
       assert.match(await page.locator('.rnlab h3').innerText(),/எண்களை/);
