@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-1-q6ii-supplement",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.1",
+  "associatedQuestion": "6(ii)",
+  "classification": "supplementary mathematical preparation; NOT textbook-exact transcription",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "printedPage": 6,
+      "pdfPage": 12,
+      "pageImageVerified": false
+    },
+    "tamil": {
+      "driveFileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "printedPage": 6,
+      "pdfPage": 12,
+      "pageImageVerified": false
+    },
+    "exactQuestionVerified": false,
+    "warning": "PDF extraction scrambles the Cartesian product symbols. Do not promote to textbook-exact until both page images are inspected."
+  },
+  "review": {
+    "sourceVerified": false,
+    "mathVerified": true,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  },
+  "title": {
+    "en": "Practice: intersection of two Cartesian products",
+    "ta": "பயிற்சி: இரு கார்டீசியன் பெருக்கல்களின் வெட்டுக்கணம்"
+  },
+  "sets": {
+    "A": [
+      0,
+      1
+    ],
+    "B": [
+      2,
+      3,
+      4
+    ],
+    "C": [
+      3,
+      5
+    ]
+  },
+  "steps": [
+    {
+      "en": "List the given sets A, B and C.",
+      "ta": "கொடுக்கப்பட்ட A, B, C கணங்களின் உறுப்புகளை எழுதுக.",
+      "equation": "A={0,1}, B={2,3,4}, C={3,5}"
+    },
+    {
+      "en": "Form A×B and C×A separately.",
+      "ta": "A×B மற்றும் C×A ஆகியவற்றைத் தனித்தனியாகக் காண்க.",
+      "equation": "A×B={(0,2),(0,3),(0,4),(1,2),(1,3),(1,4)}; C×A={(3,0),(3,1),(5,0),(5,1)}"
+    },
+    {
+      "en": "The first coordinates of A×B lie in A, whereas those of C×A lie in C. Since A∩C is empty, no ordered pair can occur in both products.",
+      "ta": "A×B-இன் முதல் ஆயத்தொலைவுகள் A-இலும் C×A-இன் முதல் ஆயத்தொலைவுகள் C-இலும் உள்ளன. A∩C வெற்றுக்கணம் என்பதால் இரண்டிலும் பொதுவான வரிசைச் சோடி இல்லை.",
+      "equation": "(A×B)∩(C×A)=∅"
+    },
+    {
+      "en": "Check with the general intersection law for Cartesian products.",
+      "ta": "கார்டீசியன் பெருக்கலின் பொதுவான வெட்டுக்கண விதியால் சரிபார்க்கவும்.",
+      "equation": "(A×B)∩(C×A)=(A∩C)×(B∩A)=∅×∅=∅"
+    }
+  ],
+  "note": "This is a separately labelled learning example, not an assertion that the source question asks this particular equality."
+}
