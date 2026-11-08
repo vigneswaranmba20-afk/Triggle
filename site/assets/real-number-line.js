@@ -4,8 +4,33 @@
  if(!drawing||typeof drawing.drawClassic!=='function')throw Error('TriggleDraw base missing');
  const base=drawing.drawClassic;
  const esc=s=>String(s??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+ function drawArrows(arg){
+  // An original, labelled reconstruction of the four alternatives in SCERT Ex.2.1 Q1.
+  // Locations are schematic; the mathematically correct D is near 11/3, between 3 and 4.
+  const left=42,right=616,y=130,at=v=>left+(v+5)/10*(right-left);
+  const arrows=[['A',-3.5],['B',2.45],['C',3.18],['D',11/3]];
+  let body='<rect x="12" y="16" width="634" height="198" rx="13" fill="#f8f7ff"/>'+
+    '<line x1="35" y1="'+y+'" x2="626" y2="'+y+'" stroke="#65739b" stroke-width="2.5"/>'+
+    '<path d="M620 124L629 130L620 136" fill="none" stroke="#65739b" stroke-width="2"/>';
+  for(let n=-5;n<=5;n++){
+    const x=at(n);
+    body+='<line x1="'+x+'" y1="'+(y-6)+'" x2="'+x+'" y2="'+(y+6)+'" stroke="#65739b" stroke-width="2"/>'+
+      '<text x="'+x+'" y="'+(y+26)+'" text-anchor="middle" font-size="14" fill="#4c5980">'+n+'</text>';
+  }
+  arrows.forEach(([label,value])=>{
+    const x=at(value);
+    body+='<text x="'+x+'" y="47" font-size="17" font-weight="800" fill="#5b387c" text-anchor="middle">'+label+'</text>'+
+       '<path d="M'+x+' 53 V104" stroke="#9254aa" stroke-width="2.8" fill="none"/>'+
+       '<path d="M'+(x-5)+' 98L'+x+' 109L'+(x+5)+' 98" fill="#9254aa"/>';
+  });
+  body+='<text x="329" y="193" text-anchor="middle" font-size="12" fill="#686283">A–D: labelled number-line alternatives · பெயரிடப்பட்ட எண்கோடு</text>';
+  const title=esc((arg?.ref||'Exercise 2.1 Q1')+' — choose the arrow for 11/3');
+  return '<div class="diagram-wrap"><svg viewBox="0 0 658 226" role="img" aria-label="'+title+'">'+
+    '<title>'+title+'</title>'+body+'</svg></div>';
+ }
  function drawClassic(arg){
   const d=arg?.demo;
+  if(d?.kind==='real-number-arrows')return drawArrows(arg);
   if(d?.kind!=='real-number-line')return base(arg);
   const min=Number(d.min),max=Number(d.max),target=Number(d.target);
   if(![min,max,target].every(Number.isFinite)||max<=min||target<min||target>max)return '';
