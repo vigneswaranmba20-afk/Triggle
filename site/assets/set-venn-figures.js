@@ -47,17 +47,17 @@
   const masks='<defs>'+
    '<clipPath id="'+id+'-bclip">'+B+'</clipPath>'+
    '<clipPath id="'+id+'-aclip">'+A+'</clipPath>'+
-   '<mask id="'+id+'-a"><rect width="560" height="330" fill="black"/><circle cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white"/><circle cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-b"><rect width="560" height="330" fill="black"/><circle cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white"/><circle cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-notA"><rect width="560" height="330" fill="white"/><circle cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-notUnion"><rect width="560" height="330" fill="white"/><circle cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/><circle cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-notOnlyA"><rect width="560" height="330" fill="white"/><circle cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/><circle cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white" clip-path="url(#'+id+'-aclip)"/></mask>'+
+   '<mask id="'+id+'-a"><rect width="560" height="330" fill="black"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-b"><rect width="560" height="330" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-notA"><rect width="560" height="330" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-notUnion"><rect width="560" height="330" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-notOnlyA"><rect width="560" height="330" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white" clip-path="url(#'+id+'-aclip)"/></mask>'+
    '</defs>';
   const rect='<rect x="14" y="12" width="532" height="306" rx="13" fill="#fff" stroke="#b6accd" stroke-width="2"/>';
   const shadeRect=(mask,color)=>'<rect x="16" y="14" width="528" height="302" fill="'+color+'" mask="url(#'+id+'-'+mask+')"/>';
   const clipIntersection='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#7fcabb" clip-path="url(#'+id+'-bclip)"/>';
   let shade='';
-  if(mode==='union')shade='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#b7a9eb"/><circle cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#b7a9eb"/>'+clipIntersection;
+  if(mode==='union')shade='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#b7a9eb"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#b7a9eb"/>'+clipIntersection;
   if(mode==='intersection')shade=clipIntersection;
   if(mode==='onlyA')shade=shadeRect('a','#b7a9eb');
   if(mode==='onlyB')shade=shadeRect('b','#b7a9eb');
