@@ -143,6 +143,66 @@ async function main(){
       assert.equal(violations.length,0,JSON.stringify(violations));
      },'high');
     }
+
+    if(config.chapter==='g9-ch1'){
+      await check(c,'Sticky question visible during explanations','orientation',async()=>{
+       await lab.locator('[data-nav] button').first().click();
+       await lab.locator('.sp2-formula').scrollIntoViewIfNeeded();
+       const m=await lab.locator('.sp2-sticky-context').evaluate(el=>{
+        const r=el.getBoundingClientRect();
+        return {position:getComputedStyle(el).position,top:r.top,bottom:r.bottom,height:r.height,viewport:innerHeight,
+          heading:el.querySelector('h4')?.innerText,question:el.querySelector('.sp2-pinned-question')?.innerText};
+       });
+       assert.equal(m.position,'sticky',JSON.stringify(m));
+       assert.ok(m.heading?.startsWith('1.'),'Numbered heading missing');
+       assert.ok(m.question?.length>12,'Pinned question blank');
+       assert.ok(m.top>=-2&&m.bottom<m.viewport-75,'Question scrolls offscreen '+JSON.stringify(m));
+       assert.ok(m.height<m.viewport*.40,'Question uses too much screen space '+JSON.stringify(m));
+      });
+      await check(c,'Textbook set-form names are visible','terminology',async()=>{
+       await lab.locator('[data-nav] button').nth(1).click();
+       const labels=await lab.locator('[data-demo-mode]').allInnerTexts();
+       assert.equal(labels.length,3);
+       if(lang==='en')assert.deepEqual(labels,['Descriptive Form','Roster Form','Set-Builder Form']);
+       else assert(labels.every(x=>/[\u0B80-\u0BFF]/.test(x)),JSON.stringify(labels));
+      });
+      await check(c,'Venn lab opens once without repeating Phase 2','learning',async()=>{
+       await lab.locator('[data-nav] button').nth(3).click();
+       assert.equal(await lab.locator('.p2-lab').count(),0);
+       await lab.locator('[data-demo-mode="go"]').click();
+       assert.equal(await lab.locator('.p2-lab').count(),1);
+       assert.ok(!(await lab.locator('.p2-kicker').innerText()).includes('PHASE 2'));
+       await lab.locator('[data-demo-mode="go"]').click();
+       assert.equal(await lab.locator('.p2-lab').count(),1);
+      });
+      await check(c,'Common-member slider recalculates visibly','interactivity',async()=>{
+       await lab.locator('[data-nav] button').nth(6).click();
+       await lab.locator('#sp2-overlap-control').evaluate(el=>{el.value='8';el.dispatchEvent(new Event('input',{bubbles:true}));});
+       const explanation=await lab.locator('[data-slider-formula]').innerText();
+       assert.ok(explanation.includes('14 + 11 − 8 = 17'),explanation);
+       assert.ok((await lab.locator('[data-demo-output]').innerText()).includes('17'));
+      });
+      await check(c,'Bottom Next Page and final chapter return work','navigation',async()=>{
+       await lab.locator('[data-nav] button').first().click();
+       const button=lab.locator('[data-footer-next]');
+       assert.ok(await button.isVisible());
+       await button.click();
+       assert.ok((await lab.locator('[data-journey-index]').innerText()).includes('2'));
+       await lab.locator('[data-nav] button').nth(6).click();
+       assert.ok((await button.innerText()).includes(lang==='ta'?'அத்தியாயம் 1':'Chapter 1'));
+       await button.click();
+       assert.equal(await page.locator('.hub-section-card').count(),4);
+      });
+    }
+    await check(c,'Chapter activities and thinking corners open with answers','textbook',async()=>{
+      if(config.chapter==='g9-ch1')await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
+      const cards=page.locator('.textbook-extra');
+      assert.equal(await cards.count(),config.chapter==='g9-ch1'?18:6);
+      const first=cards.first();
+      await first.locator('summary').first().click();
+      await first.locator('details summary').first().click();
+      assert.ok((await first.locator('.task-answer').innerText()).length>35);
+    });
     if(width<500)await page.screenshot({path:path.join(out,config.chapter+'-'+lang+'-'+width+'.png'),fullPage:true,animations:'disabled'});
    }finally{await context.close();}
   }
