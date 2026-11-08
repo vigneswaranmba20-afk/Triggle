@@ -700,7 +700,12 @@ async function main() {
         });
         assert.ok(bounds.svgWidth>=bounds.parentWidth*.92,
           'Venn should fill at least 92% of the viewing width: '+JSON.stringify(bounds));
-        assert.ok(bounds.diagram?.rx>=145&&bounds.diagram?.ry>=120,
+        const proportions=await dialog.locator('.g9-venn-svg').evaluate(svg=>{
+          const r=svg.getBoundingClientRect();return {width:r.width,height:r.height};
+        });
+        assert.ok(proportions.height>=proportions.width*.72,
+          'Diagram should fill more of the vertical region without clipping: '+JSON.stringify(proportions));
+        assert.ok(bounds.diagram?.rx>=155&&bounds.diagram?.ry>=175,
           'Venn geometry must use enlarged labelsafe shapes: '+JSON.stringify(bounds));
         const accessible=await dialog.locator('.g9-venn-svg desc').textContent();
         assert.match(accessible,/P only n/,'Screen readers should still get correct P-only members');
