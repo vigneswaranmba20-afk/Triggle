@@ -659,8 +659,8 @@ async function main() {
       assert.equal(await dialog.locator('.g9-venn-text-alternative,.diagram-caption').count(),0,
         'Students should see the Venn and answer, not redundant region/source captions');
       const desc=await dialog.locator('.g9-venn-svg desc').textContent();
-      assert.match(desc,/−3, −2/,'A-only difference must match printed Example 1.14');
-      assert.match(desc,/0, 2/,'B-only difference must match printed Example 1.14');
+      assert.match(desc,/−3,\s*−2/,'A-only difference must match printed Example 1.14');
+      assert.match(desc,/0,\s*2/,'B-only difference must match printed Example 1.14');
       await page.locator('#closeDiagram').click();
       assert.equal(await dialog.isVisible(),false,'Figure dialog must close accessibly');
       await page.goto(url+'/index.html?class=9&question=c9-textbook-example-1-17');
