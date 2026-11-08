@@ -546,8 +546,9 @@ async function main() {
       await page.locator('#discover-search').fill('கண மொழி');
       assert.ok(await page.locator('.discover-results [data-chapter="g9-ch1"]').count()>0);
       await page.locator('.discover-results [data-chapter="g9-ch1"]').click();
-      assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i');
-      await noOverflow(page,'chapter-first question at 390px');
+      assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
+      assert.equal(await page.locator('.hub-section-card').count(),5);
+      await noOverflow(page,'chapter-first menu at 390px');
     });
     // Chapter hub: remove duplicate chapter headings and avoid a floating class bar
     // covering the first learning cards, while keeping a visible class switcher.
