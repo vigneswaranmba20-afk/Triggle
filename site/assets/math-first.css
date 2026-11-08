@@ -170,7 +170,7 @@
  body.textbook-reader .crumb::-webkit-scrollbar{display:none}
  body.textbook-reader .crumb-link{
   flex:none;max-width:min(41vw,170px);min-height:34px!important;padding:5px 8px!important;
-  font-size:13px!important;line-height:1.2!important;overflow:hidden;text-overflow:ellipsis;
+  font-size:16px!important;line-height:1.2!important;overflow:hidden;text-overflow:ellipsis;
   border-radius:9px!important
  }
  body.textbook-reader .crumb-link:last-child,
@@ -248,7 +248,7 @@
  body.textbook-reader .appbar{grid-template-columns:minmax(0,1fr) 38px 38px auto!important;gap:3px!important;padding:4px 6px!important}
  body.textbook-reader .browse-button,body.textbook-reader .home-link{width:38px!important;min-width:38px!important}
  body.textbook-reader .lang-switch button{font-size:11px!important;padding:5px!important}
- body.textbook-reader .crumb-link{font-size:12px!important}
+ body.textbook-reader .crumb-link{font-size:16px!important}
  .chapter-hub .textbook-extra>.task-question{font-size:15px!important}
 }
 @media(prefers-reduced-transparency:reduce){
