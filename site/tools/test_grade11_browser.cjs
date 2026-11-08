@@ -115,7 +115,7 @@ const server=http.createServer((req,res)=>{
    await ctx.setOffline(true);
    await p.locator('#en').click();
    await p.locator('#lesson summary').click();
-   await p.locator('#lesson summary').click();
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
    assert.match(await p.locator('#lesson').innerText(),/Infinite set/);
    await ctx.close();
    console.log('PASS Grade 11 Q3(ii) bilingual keyboard/offline mobile '+width);
