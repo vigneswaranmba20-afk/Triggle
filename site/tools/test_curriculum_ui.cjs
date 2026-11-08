@@ -352,6 +352,80 @@ async function main() {
         await noOverflow(page,'Tamil Home '+width+'px');
       });
     }
+    for(const width of [320,390,768,1280]){
+      await check('Chapter-first directory has no welcome panel or obscuring dock at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&browse=chapters');
+        const title=page.locator('.discover-class-header h1');
+        await title.waitFor({state:'visible'});
+        assert.match(await title.innerText(),/Class 9 Mathematics/,'One concise heading');
+        assert.match(await page.locator('.discover-class-count').innerText(),/^9 chapters$/);
+        for(const selector of ['.discover-directory-head','.discover-directory-summary','.discover-directory-list h2','.discover-tip']){
+          assert.equal(await page.locator(selector).count(),0,'Remove duplicate introduction: '+selector);
+        }
+        assert.doesNotMatch(await page.locator('#discoveryView').innerText(),/Pick a chapter and start with what is available today|Curriculum mapped, full lessons being developed|All chapters in this class/);
+        assert.equal(await page.locator('.discover-class-options').isVisible(),false,'Class choices start collapsed');
+        assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
+        assert.match(await page.locator('.discover-chapter-grid [data-chapter]').first().innerText(),/Chapter 1[\\s\\S]*Set Language/);
+        const geom=await page.evaluate(()=>{
+          const header=document.querySelector('.discover-class-header').getBoundingClientRect();
+          const first=document.querySelector('.discover-chapter-grid [data-chapter]').getBoundingClientRect();
+          const dock=document.querySelector('.class-dock');
+          return {headBottom:header.bottom,firstTop:first.top,firstLeft:first.left,firstRight:first.right,
+            screen:innerHeight,width:innerWidth,dockDisplay:getComputedStyle(dock).display};
+        });
+        assert.ok(geom.firstTop<geom.screen*.55,'Chapter 1 must be on-screen immediately: '+JSON.stringify(geom));
+        assert.ok(geom.firstTop-geom.headBottom<=36,'No wasted hero/banner space before Chapter 1');
+        assert.ok(geom.firstLeft>=-1&&geom.firstRight<=geom.width+1,'Chapter cards fit available width');
+        if(width<=800){
+          assert.equal(geom.dockDisplay,'none','Floating class bar must not obscure chapters');
+          const first=page.locator('.discover-chapter-grid [data-chapter]').first();
+          const reachable=await first.evaluate(el=>{
+            const r=el.getBoundingClientRect(),at=document.elementFromPoint(r.left+r.width/2,r.top+r.height/2);
+            return at===el||el.contains(at);
+          });
+          assert.ok(reachable,'Chapter 1 card must be tappable, without an overlay');
+          const last=page.locator('.discover-chapter-grid [data-chapter]').last();
+          await last.scrollIntoViewIfNeeded();
+          assert.equal(await last.isVisible(),true,'All chapters remain scroll-reachable');
+        }
+        await noOverflow(page,'chapter-first directory at '+width+'px');
+        await page.locator('.discover-class-switch').click();
+        assert.equal(await page.locator('.discover-class-switch').getAttribute('aria-expanded'),'true');
+        assert.equal(await page.locator('.discover-class-options [data-grade]').count(),4);
+        assert.equal(await page.locator('.discover-class-options [data-grade="9"]').getAttribute('aria-pressed'),'true');
+        await page.locator('.discover-class-options [data-grade="10"]').click();
+        assert.equal(new URL(page.url()).searchParams.get('class'),'10');
+        assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
+        assert.match(await page.locator('.discover-class-header h1').innerText(),/Class 10 Mathematics/);
+        assert.match(await page.locator('.discover-chapter-grid [data-chapter]').first().innerText(),/Chapter 1/);
+        await page.locator('.discover-class-switch').click();
+        await page.locator('.discover-class-options [data-grade="9"]').click();
+        assert.equal(new URL(page.url()).searchParams.get('class'),'9');
+        assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
+        await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
+        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1','Chapter 1 card opens its lesson hub');
+      });
+    }
+    await check('Chapter-first class directory translates and offers accessible keyboard navigation',async()=>{
+      const page=await visit(await context(390),'/index.html?class=11&browse=chapters');
+      assert.match(await page.locator('.discover-class-header h1').innerText(),/Class 11 Mathematics/);
+      assert.match(await page.locator('.discover-class-count').innerText(),/12 chapters/);
+      await page.locator('#langTa').click();
+      assert.match(await page.locator('.discover-class-header h1').innerText(),/வகுப்பு 11 கணிதம்/);
+      assert.match(await page.locator('.discover-class-count').innerText(),/12 அத்தியாயங்கள்/);
+      assert.equal(await page.locator('.discover-directory-summary').count(),0);
+      await page.locator('.discover-class-switch').focus();
+      await page.keyboard.press('Enter');
+      assert.equal(await page.locator('.discover-class-switch').getAttribute('aria-expanded'),'true');
+      assert.equal(await page.locator('.discover-class-options').isVisible(),true);
+      await page.keyboard.press('Escape');
+      assert.equal(await page.locator('.discover-class-options').isVisible(),false);
+      assert.equal(await page.locator('.discover-class-switch').getAttribute('aria-expanded'),'false');
+      await page.locator('.discover-class-switch').click();
+      await page.locator('.discover-class-options [data-grade="12"]').click();
+      assert.match(await page.locator('.discover-class-header h1').innerText(),/வகுப்பு 12 கணிதம்/);
+      await noOverflow(page,'Tamil class directory and switcher');
+    });
     await check('Grade 9 chapter directory accurately advertises interactive lessons in both languages',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&browse=chapters');
       const chapter1=page.locator('.discover-chapter-grid [data-chapter="g9-ch1"] .discover-chapter-meta');
@@ -575,10 +649,11 @@ async function main() {
         await page.locator('.hub-back-class').click();
         assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
         assert.equal(await page.locator('.discover-change').count(),0,'No duplicate Change class navigation');
-        assert.match(await page.locator('.discover-back').innerText(),/All classes/);
-        await page.locator('.discover-back').click();
-        assert.equal(await page.locator('.discover-grade-grid [data-grade]').count(),4);
-        await page.locator('.discover-grade-grid [data-grade="9"]').click();
+        assert.equal(await page.locator('.discover-directory-head').count(),0,'No oversized class introduction card');
+        await page.locator('.discover-class-switch').click();
+        assert.equal(await page.locator('.discover-class-options [data-grade]').count(),4,'One-tap compact class switcher');
+        assert.equal(await page.locator('.discover-class-switch').getAttribute('aria-expanded'),'true');
+        await page.locator('.discover-class-options [data-grade="9"]').click();
         await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
         await page.locator('#langTa').click();
         await page.locator('.hub-section-card[data-hub-section="quizzes"]').click();
