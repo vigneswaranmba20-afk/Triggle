@@ -31,5 +31,5 @@ assert.match(lesson,/தமிழ்: படிப்படியான வி�
 assert.match(lesson,/printed p\.15\/PDF p\.23/);
 const preview=fs.readFileSync(path.join(root,'site/grade-12/adjugate-preview.html'),'utf8');
 assert.match(preview,/data-q="iii"/);
-assert.match(preview,/2 -2 1/);
+assert.match(preview,/2 −2 1/);
 console.log('PASS Q1(iii): 9 source-image-verified cofactors, det=1, both adjugate identities, bilingual lesson and preview');
