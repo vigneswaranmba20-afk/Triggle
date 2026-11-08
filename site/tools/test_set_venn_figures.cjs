@@ -17,15 +17,17 @@ for(const n of cases){
  for(const lang of ['en','ta']){
   const graphic=V.render(item(n),lang);
   assert(graphic?.html.includes('role="img"'),'Accessible SVG for example 1.'+n);
-  assert(graphic.html.includes('g9-venn-text-alternative'),'Non-colour region text for '+n);
-  assert(graphic.caption.includes('2025')||graphic.caption.includes('2025'),'Textbook source for '+n);
+  assert(!graphic.html.includes('g9-venn-text-alternative'),
+   'Non-colour text is kept in SVG <desc>, not visible as a duplicated paragraph for '+n);
+  assert.equal(graphic.caption,'','Source metadata remains in data, not a distracting modal caption for '+n);
   assert(!graphic.html.includes('undefined')&&!graphic.html.includes('NaN'),'No missing values for '+n);
   assert(graphic.html.includes('<desc'),'Accessible region description for '+n);
  }
 }
 assert(!V.supports(item(22))&&!V.supports(item(23)),'Never substitute a two-set diagram for an unverified three-set law');
 assert(!V.supports({id:'c10-example',classNum:10}),'Grade-specific renderer');
-assert(V.needsInline(item(17))&&V.needsInline(item(18)),'Diagram-dependent examples have inline figures');
+assert(V.needsInline(item(17))&&V.needsInline(item(18)),
+ 'Diagram-dependent data stay identified; UI now uses the single Figure button instead of a mini preview');
 assert.equal((V.render(item(18),'en').html.match(/class="g9-venn-svg"/g)||[]).length,3,
  'Example 1.18 must show three distinct complement regions');
 for(const [n,fragments] of [
@@ -53,10 +55,13 @@ assert.equal(190+110+140,440);
 assert.equal(35+30-60,5);
 assert(!/XMLHttpRequest|\bfetch\s*\(|\bimportScripts\s*\(|new\s+WebSocket\s*\(/.test(source),'Diagrams work offline without outbound network requests');
 assert(source.includes('xmlns="http://www.w3.org/2000/svg"'),'SVG namespace is a document identifier, not a network request');
+assert(source.includes('rx=150,ry=128'),'More of the figure region should be filled by Venn ellipses');
+assert(source.includes('<ellipse cx=')&&!source.includes('<circle cx='),
+ 'Clips, masks and shading must all use the same ellipse geometry');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 const app=fs.readFileSync(path.join(root,'assets/app.js'),'utf8');
 for(const s of [html,sw])assert(s.includes('set-venn-figures.js'),'Bundled and cached for offline use');
 assert(app.includes('window.TriggleSetVenn?.supports(item)'),'Figure icon only appears for a supported set example');
 assert(app.includes('window.TriggleSetVenn?.render(current,lang)'),'Rendered question-specific diagrams in figure viewer');
-console.log('PASS: 14 original bilingual Venn diagrams, inline figure links, region values, accessibility and offline delivery');
+console.log('PASS: 14 original bilingual Venn diagrams, uncluttered enlarged figures, region values, accessibility and offline delivery');
