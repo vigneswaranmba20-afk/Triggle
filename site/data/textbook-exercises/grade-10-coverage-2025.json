@@ -4,7 +4,7 @@
   "edition": "2025 revised",
   "lastVerified": "2026-11-08",
   "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
-  "notes": "Only chapter starts and Exercise 1.1 complete question listing have been directly checked against the uploaded bilingual PDFs. Do not infer full-grade question totals from legacy samples. CI/browser and human Tamil editorial review remain pending.",
+  "notes": "Only chapter starts and Exercise 1.1 complete question listing have been directly checked against the uploaded bilingual PDFs. Do not infer full-grade question totals from legacy samples. CI/browser and human Tamil editorial review remain pending. 2026-11-08 07:30 run: Grade 10 visual pair-grid and independent mathematical enumeration assertions committed; no newly verified textbook subparts; no CI/browser execution or merge.",
   "chapters": [
     {
       "chapter": 1,
@@ -147,13 +147,15 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "Integrate Grade 10 Exercise 1.1 Q1(i–ii) into the actual student-facing interface without editing Grade 9 data; run npm test and Playwright. Then source-check and implement Q1(iii) (2025 English/Tamil printed p.6, PDF p.12).",
+  "nextAction": "Execute Grade 10 preview regression and npm/Playwright/mobile/keyboard/offline checks against full repository; reconcile Grade 10 branch with latest main (31 commits behind at start of 07:30 run). Source-verify 2025 English/Tamil Ex 1.1 Q1(iii) printed p.6/PDF p.12 before drafting. Do not merge without green checks.",
   "testStatus": {
     "localMathEnumeration": "Q1(i) independently enumerated in previous run; Q1(ii) independently derived and standalone test committed, execution pending",
-    "npmTest": "not executed in this run",
-    "playwright": "not executed in this run",
-    "githubCI": "pending; no verified successful check",
+    "npmTest": "not executed; full checkout unavailable in this connector execution",
+    "playwright": "not executed",
+    "githubCI": "no PR-triggered workflow runs returned for latest commit",
     "merged": false,
-    "liveVerified": false
+    "liveVerified": false,
+    "latestGrade10PreviewCommit": "64ec0e40cbcd5bdae27b0bac72757e679c296098",
+    "newPreviewFeatures": "Source/math/edition/exercise/schema gates; bilingual ordered-pair grid for existing Q1(i–ii); independent Cartesian enumeration regression added"
   }
 }
