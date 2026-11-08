@@ -41,6 +41,7 @@
 
  const activeList=()=>classes[grade].items;
  const currentIndex=()=>activeList().findIndex(i=>i.id===current.id);
+ const sectionForQuestion=item=>/^\s*Example\b/i.test(item?.label?.en||'')?'examples':'exercises';
  const num=n=>String(n).padStart(2,'0');
  const labelForGroup=(e)=>e.endsWith('.examples')?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?ui('unitExercise')+' '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
  function updateUrl(replace=false){
@@ -487,7 +488,8 @@
    const questionChapter=chapterForItem(current);
    if(questionChapter){
      const cameFrom=questionOrigin?.grade===grade&&questionOrigin?.chapterId===questionChapter.id;
-     const returnTo=cameFrom?questionOrigin.section:null;
+     const returnTo=cameFrom&&['examples','exercises'].includes(questionOrigin.section)
+       ?questionOrigin.section:sectionForQuestion(current);
      const label=returnTo==='examples'?(lang==='ta'?'தீர்க்கப்பட்ட எடுத்துக்காட்டுகளுக்குத் திரும்பு':'Back to worked examples'):
        returnTo==='exercises'?(lang==='ta'?'அனைத்துப் பயிற்சிகளுக்கும் திரும்பு':'Back to all exercises'):
        (lang==='ta'?'அத்தியாயத்திற்குத் திரும்பு':'Back to chapter');
@@ -537,7 +539,9 @@
  $('questionReturnBtn').onclick=()=>{
    const chapter=chapterForItem(current);
    if(!chapter)return;
-   const section=questionOrigin?.grade===grade&&questionOrigin?.chapterId===chapter.id?questionOrigin.section:null;
+   const section=questionOrigin?.grade===grade&&questionOrigin?.chapterId===chapter.id&&
+     ['examples','exercises'].includes(questionOrigin.section)
+       ?questionOrigin.section:sectionForQuestion(current);
    openChapterSection(section,chapter);
  };
  $('browseBtn').onclick=()=>drawerOpen?closeDrawer():openDrawer();$('closeSidebar').onclick=closeDrawer;$('backdrop').onclick=closeDrawer;
