@@ -21,6 +21,9 @@
    for(const [i,s] of x.steps.entries())if(!s.en||!s.ta||!s.eq)throw Error('Incomplete real-number step '+x.id+' #'+i);
    grade.items.push(x);known.add(x.id);chapter.legacyQuestionIds.push(x.id);return true;
  };
+ // Printed-page alignment verified against both 2025 revised Grade 9 PDFs.
+ // This maps *exercise question pages*; example-page alignment is reviewed separately.
+ const exerciseTamilByEnglishPage={45:47,51:55,52:56,55:59,57:61,59:64,60:65,68:72,70:75,73:79,74:80,75:81,76:82};
  const row=(type,key,opts)=>{
    const q=opts.q,ta=opts.ta,ans=opts.answer,st=opts.steps;
    const label=type==='example'?{en:'Example 2.'+key,ta:'எடுத்துக்காட்டு 2.'+key}:
@@ -32,7 +35,7 @@
       kind:type==='example'?'textbook-example':'textbook-exercise',
       label,title:{en:opts.title||'Real Numbers · '+label.en,ta:opts.titleTa||'மெய்யெண்கள் · '+label.ta},
       q:{en:q,ta:ta},steps:st.map(s=>Array.isArray(s)?{en:s[0],ta:s[1],eq:s[2]}:s),
-      answer:ans,printedPage:opts.page,tamilPrintedPage:opts.tamilPage||null,
+      answer:ans,printedPage:opts.page,tamilPrintedPage:type==='exercise'?(exerciseTamilByEnglishPage[opts.page]??opts.tamilPage??null):(opts.tamilPage??null),
       reference:'Tamil Nadu SCERT Mathematics, 2025 revised, Grade 9, Chapter 2, '+label.en+', printed page '+opts.page,
       difficulty:opts.hard?'hard':'standard',detailed:opts.hard?opts.detailed||null:null,
       ...(opts.diagram?{diagram:opts.diagram}:{})
