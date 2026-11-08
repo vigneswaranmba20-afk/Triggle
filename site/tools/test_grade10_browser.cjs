@@ -27,8 +27,12 @@ async function main(){
    const errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(origin+'/grade-10/cartesian-preview.html');
    await page.locator('[data-question-id]').first().waitFor();
-   assert.equal(await page.locator('[data-question-id]').count(),3);
+   assert.equal(await page.locator('[data-question-id]').count(),4);
    assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"]').count(),1);
+   assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q2"]').count(),1);
+   const q2=page.locator('[data-question-id="g10-ch1-ex1-1-q2"]');
+   await q2.locator('summary').click();
+   assert.equal(await q2.locator('.pair-cell').count(),24,'Q2 requires 12 A×B and 12 B×A pairs');
    const dimensions=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:innerWidth}));
    assert.ok(dimensions.scroll<=dimensions.viewport+1,'horizontal overflow at '+width);
    const third=page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"]');
@@ -38,7 +42,7 @@ async function main(){
    await page.locator('#ta').click();
    assert.equal(await page.locator('html').getAttribute('lang'),'ta');
    assert.equal(await page.locator('#ta').getAttribute('aria-pressed'),'true');
-   assert.equal(await page.locator('[data-question-id]').count(),3);
+   assert.equal(await page.locator('[data-question-id]').count(),4);
    await page.locator('#en').focus();
    await page.keyboard.press('Enter');
    assert.equal(await page.locator('html').getAttribute('lang'),'en');
@@ -47,7 +51,7 @@ async function main(){
    await context.setOffline(true);
    await page.locator('#ta').click();
    assert.equal(await page.locator('html').getAttribute('lang'),'ta');
-   assert.equal(await page.locator('[data-question-id]').count(),3);
+   assert.equal(await page.locator('[data-question-id]').count(),4);
    await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"] summary').click();
    assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q1iii"] .pair-cell').count(),4);
    await context.setOffline(false);
