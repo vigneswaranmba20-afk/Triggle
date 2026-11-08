@@ -144,3 +144,59 @@
  .discover-hero .discover-eyebrow{font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){.discover-grade{transition:none!important;transform:none!important}}
+
+/* Chapter-first class directory v1: one compact header and immediate Chapter 1.
+   No oversized welcome panel, duplicate "all chapters" heading or intro badges. */
+.discover-class-header{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  gap:7px 13px;margin:0 0 14px;padding:1px 0 0;
+}
+.discover-class-header h1{
+  margin:0;min-width:0;
+  font-size:clamp(22px,3.3vw,29px);font-weight:850;
+  line-height:1.25;letter-spacing:-.7px;
+}
+.discover-class-switch{
+  display:inline-flex;align-items:center;gap:7px;
+  min-height:48px;max-width:100%;
+  padding:6px 6px 6px 0;border:0;border-radius:9px;
+  background:transparent;color:#382d5d;font:inherit;line-height:inherit;
+  text-align:left;cursor:pointer;
+}
+.discover-class-switch span{font-size:17px;color:#766394;font-weight:800}
+.discover-class-switch:hover{color:#65509b}
+.discover-class-switch:focus-visible,.discover-class-option:focus-visible{
+  outline:3px solid #8467c3;outline-offset:2px;
+}
+.discover-class-count{
+  flex:0 0 auto;color:#625776;background:#f4effb;
+  border-radius:99px;padding:6px 10px;font-size:12px;font-weight:750;
+}
+.discover-class-options[hidden]{display:none!important}
+.discover-class-options{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;
+  padding:10px;margin:0 0 14px;background:#f8f5fd;
+  border:1px solid #dfd5ed;border-radius:13px;
+}
+.discover-class-option{
+  min-height:48px;padding:8px 5px;
+  border:1px solid #ddd3eb;border-radius:10px;
+  background:#fff;color:#514170;font-size:13px;font-weight:770;
+  cursor:pointer;
+}
+.discover-class-option.is-current{
+  background:#4c427e;color:#fff;border-color:#4c427e;
+}
+.discover-directory-list{margin:0}
+.discover-directory-list .discover-chapter-grid{margin:0}
+@media(max-width:800px){
+  .discover-class-header{margin-bottom:11px}
+  .discover-class-header h1{font-size:clamp(21px,5.5vw,26px)}
+  .discover-class-count{font-size:11px}
+}
+@media(max-width:355px){
+  .discover-class-header{gap:3px 9px}
+  .discover-class-header h1{font-size:21px}
+  .discover-class-switch{min-height:46px}
+  .discover-class-count{font-size:10.5px;padding:5px 9px}
+}
