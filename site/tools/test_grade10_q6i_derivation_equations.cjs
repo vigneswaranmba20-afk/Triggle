@@ -21,12 +21,12 @@ const expected = [
 ];
 assert.equal(q.steps.length,expected.length);
 for(let i=0;i<expected.length;i++) {
-  assert.equal(q.steps[i].equation.replace(/\\s+/g,''),expected[i].replace(/\\s+/g,''),`Displayed derivation step ${i+1} differs from independently enumerated result`);
+  assert.equal(q.steps[i].equation.replace(/\s+/g,''),expected[i].replace(/\s+/g,''),`Displayed derivation step ${i+1} differs from independently enumerated result`);
   assert.ok(q.steps[i].en?.trim() && q.steps[i].ta?.trim(),`Missing bilingual reasoning step ${i+1}`);
 }
-assert.equal(new Set(lhs.map(JSON.stringify)).size,lhs.length);
-assert.equal(new Set(rhs.map(JSON.stringify)).size,rhs.length);
-assert.deepEqual(new Set(lhs.map(JSON.stringify)),new Set(rhs.map(JSON.stringify)));
+assert.equal(new Set(lhs.map(p=>JSON.stringify(p))).size,lhs.length);
+assert.equal(new Set(rhs.map(p=>JSON.stringify(p))).size,rhs.length);
+assert.deepEqual(new Set(lhs.map(p=>JSON.stringify(p))),new Set(rhs.map(p=>JSON.stringify(p))));
 assert.equal(q.review.mathVerified,true);
 assert.equal(q.review.sourceVerified,false);
 for(const lang of ['english','tamil']) {
