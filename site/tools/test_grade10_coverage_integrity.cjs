@@ -16,7 +16,7 @@ for (const chapter of ledger.chapters) {
   for (const id of chapter.verifiedQuestionSubparts) {
     assert.ok(!seen.has(chapter.chapter + ':' + id), 'Duplicate verified item');
     seen.add(chapter.chapter + ':' + id);
-    const m = /^(\\d+)\\(([ivx]+)\\)$/.exec(id);
+    const m = /^(\d+)\(([ivx]+)\)$/.exec(id);
     assert.ok(m, 'Unsupported item ID: ' + id);
     const file = path.join(root, 'g10-ch'+chapter.chapter+'-ex1-1-q'+m[1]+m[2]+'.json');
     const q = JSON.parse(fs.readFileSync(file, 'utf8'));
