@@ -10,7 +10,9 @@ const cart = (a,b) => a.flatMap(x => b.map(y => [x,y]));
 const pairs = x => '{'+x.map(([a,b])=>`(${a},${b})`).join(',')+'}';
 const set = x => '{'+x.join(',')+'}';
 const bc = union(B,C), ab = cart(A,B), ac = cart(A,C);
-const lhs = cart(A,bc), rhs = [...new Map([...ab,...ac].map(p=>[JSON.stringify(p),p])).values()];
+const lhs = cart(A,bc);
+const unionPairs = new Set([...ab,...ac].map(p=>JSON.stringify(p)));
+const rhs = cart(A,bc).filter(p=>unionPairs.has(JSON.stringify(p)));
 const expected = [
   `A=${set(A)}; B=${set(B)}; C=${set(C)}`,
   `B∪C=${set(bc)}`,
