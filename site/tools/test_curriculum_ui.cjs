@@ -514,7 +514,7 @@ async function main() {
       await page.locator('#browseBtn').click();
       await page.locator('#sidebar').waitFor({state:'visible'});
       assert.equal(await page.locator('#exerciseList [data-chapter-id]').count(),9);
-      assert.equal(await page.locator('#exerciseList [data-section]').count(),4);
+      assert.equal(await page.locator('#exerciseList [data-section]').count(),5,'Active Grade 9 chapter sidebar includes Thinking Corner & Activities');
       const order=await page.evaluate(()=>{
         const list=document.querySelector('#exerciseList');
         const search=document.querySelector('.sidebar-search-bottom');
