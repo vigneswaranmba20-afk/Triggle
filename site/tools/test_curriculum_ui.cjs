@@ -365,7 +365,7 @@ async function main() {
         assert.doesNotMatch(await page.locator('#discoveryView').innerText(),/Pick a chapter and start with what is available today|Curriculum mapped, full lessons being developed|All chapters in this class/);
         assert.equal(await page.locator('.discover-class-options').isVisible(),false,'Class choices start collapsed');
         assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
-        assert.match(await page.locator('.discover-chapter-grid [data-chapter]').first().innerText(),/Chapter 1[\\s\\S]*Set Language/);
+        assert.match(await page.locator('.discover-chapter-grid [data-chapter]').first().innerText(),/Chapter 1.*Set Language/s);
         const geom=await page.evaluate(()=>{
           const header=document.querySelector('.discover-class-header').getBoundingClientRect();
           const first=document.querySelector('.discover-chapter-grid [data-chapter]').getBoundingClientRect();
