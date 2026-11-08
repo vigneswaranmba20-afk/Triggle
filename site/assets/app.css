@@ -1064,18 +1064,12 @@
 }
 
 
-/* Grade 9: keep the current concept's question in view without hiding the answer.
-   Sticky within the chapter's actual scrollport; cap height on small phones. */
-.sp2-journey .sp2-sticky-context{
- position:sticky;top:76px;z-index:8;scroll-margin-top:76px;
- border:1px solid #b9acd5;border-left:4px solid #6750a2;border-radius:13px;
- margin:10px 0 14px;padding:10px 12px;
- background:#fff;box-shadow:0 6px 18px #30235519;
- max-height:min(35dvh,250px);overflow-y:auto;overscroll-behavior-y:contain;
-}
-.chapter-overview .sp2-sticky-context h4{margin:0 0 7px;font-size:clamp(16px,2.8vw,19px);line-height:1.4;color:#302654}
-.chapter-overview .sp2-pinned-question{font-size:clamp(13px,2.4vw,15px);line-height:1.6;font-weight:650;color:#343048;margin:0}
-.sp2-question-label{display:block;margin:0 0 4px;font:800 10px/1.3 system-ui,sans-serif;letter-spacing:.8px;color:#615087}
+/* Grade 9: normal-flow concept question above its answer choices.
+   No floating/sticky overlay or clipped question on smaller phones. */
+.sp2-journey .sp2-concept-heading{margin:10px 0 14px;scroll-margin-top:14px}
+.chapter-overview .sp2-concept-heading h4{margin:0 0 7px;font-size:clamp(17px,2.8vw,20px);line-height:1.45;color:#302654}
+.chapter-overview .sp2-concept-question{font-size:clamp(14px,2.6vw,16px)!important;line-height:1.65!important;font-weight:650;color:#343048;margin:10px 0 14px!important;max-height:none;overflow:visible;position:static;box-shadow:none}
+.sp2-question-label{display:block;margin:0 0 5px;font:800 10px/1.3 system-ui,sans-serif;letter-spacing:.8px;color:#615087}
 .sp2-journey .sp2-journey-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin:20px 0 9px;padding-top:17px;border-top:1px solid #e4daee}
 .sp2-journey .sp2-journey-footer button{min-height:49px;padding:10px 15px;border:1px solid #beb1d6;border-radius:12px;background:#fff;color:#45346f;font:800 13px/1.45 system-ui,sans-serif;max-width:100%;overflow-wrap:anywhere}
 .sp2-journey .sp2-journey-footer button.sp2-footer-next{background:#403171;border-color:#403171;color:#fff;margin-left:auto}
@@ -1099,15 +1093,12 @@
 .textbook-extra .task-answer{line-height:1.75;font-size:13px;overflow-wrap:anywhere;color:#343148}
 .textbook-extra .task-answer p{margin:6px 0}
 @media(max-width:800px){
- .sp2-journey .sp2-sticky-context{top:100px;scroll-margin-top:100px;max-height:min(27dvh,220px);padding:9px 10px;box-shadow:0 4px 12px #30235514}
  .sp2-journey .sp2-journey-footer button{font-size:12px}
 }
 @media(max-width:400px){
- .sp2-journey .sp2-sticky-context{top:98px;max-height:min(25dvh,185px)}
  .sp2-journey .sp2-journey-footer{gap:6px}
  .sp2-journey .sp2-journey-footer button{padding:9px 10px}
 }
-@media(prefers-reduced-motion:reduce){.sp2-journey .sp2-sticky-context{scroll-behavior:auto}}
 
 /* Touch and keyboard alternatives for the common-member slider; scoped to lesson 7. */
 .sp2-journey .sp2-slider-touch{display:grid;grid-template-columns:46px minmax(0,1fr) 46px;gap:8px;align-items:center;min-width:0}

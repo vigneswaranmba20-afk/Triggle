@@ -8,11 +8,11 @@
     en:{
       eyebrow:'YOUR CHAPTER',choose:'What would you like to do?',
       intro:'Choose one section. You can come back here whenever you want.',
-      concepts:'Concepts',examples:'Worked Examples',exercises:'Exercises',quizzes:'Quizzes',
+      concepts:'Concepts',examples:'Worked Examples',exercises:'Exercises',quizzes:'Quizzes',activities:'Thinking Corner & Activities',
       conceptsHint:'Learn ideas with short, interactive explanations',
       examplesHint:'Study questions solved step by step',
       exercisesHint:'Go straight to available questions and solutions',
-      quizzesHint:'Check what you remember',
+      quizzesHint:'Check what you remember',activitiesHint:'Open textbook thinking questions and activities with worked answers',
       available:'available',soon:'More coming',checks:'quick checks',questions:'questions',worked:'examples',
       back:'All chapter options',classBack:'All chapters',home:'Home',
       resources:'Textbook references and chapter information',navigate:'Jump to a section',choosePrompt:'Choose a section…',
@@ -39,11 +39,11 @@
     ta:{
       eyebrow:'உங்கள் அத்தியாயம்',choose:'நீங்கள் எதைக் கற்க விரும்புகிறீர்கள்?',
       intro:'ஒரு பகுதியைத் தேர்ந்தெடுக்கவும். எப்போது வேண்டுமானாலும் இங்கு திரும்பலாம்.',
-      concepts:'கருத்துகள்',examples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'சிறு தேர்வுகள்',
+      concepts:'கருத்துகள்',examples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'சிறு தேர்வுகள்',activities:'சிந்தனை மூலை & செயல்பாடுகள்',
       conceptsHint:'சிறு விளக்கங்களுடன் செயல்வழியாகக் கற்றுக்கொள்ளுங்கள்',
       examplesHint:'படிப்படியாகத் தீர்க்கப்பட்ட வினாக்களைப் பாருங்கள்',
       exercisesHint:'வினாக்களையும் தீர்வுகளையும் நேராக அணுகுங்கள்',
-      quizzesHint:'நினைவில் உள்ளதைச் சரிபாருங்கள்',
+      quizzesHint:'நினைவில் உள்ளதைச் சரிபாருங்கள்',activitiesHint:'பாடநூல் சிந்தனை வினாக்களும் செயல்பாடுகளும், விளக்க விடைகளுடன்',
       available:'கிடைக்கிறது',soon:'மேலும் உருவாகின்றன',checks:'சிறு வினாக்கள்',questions:'வினாக்கள்',worked:'எடுத்துக்காட்டுகள்',
       back:'அத்தியாயத் தேர்வுகள்',classBack:'அனைத்து அத்தியாயங்களும்',home:'முகப்பு',
       resources:'பாடநூல் குறிப்புகள் மற்றும் அத்தியாய விவரம்',navigate:'பகுதிக்குச் செல்லுங்கள்',choosePrompt:'ஒரு பகுதியைத் தேர்ந்தெடுக்கவும்…',
@@ -68,7 +68,7 @@
       existingExamples:'சில தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் உள்ளன',noPublished:'முழு அத்தியாய மீளாய்வு இன்னும் முடியவில்லை'
     }
   };
-  const kinds=['concepts','examples','exercises','quizzes'];
+  const baseKinds=['concepts','examples','exercises','quizzes'];
   const categorized=questions=>({
     examples:questions.filter(q=>/^\s*Example\b/i.test(q.label?.en||'')),
     exercises:questions.filter(q=>!/^\s*Example\b/i.test(q.label?.en||''))
@@ -80,11 +80,13 @@
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
     const sets=categorized(questions);
     const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):[];
-    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:stages.length};
-    const symbols={concepts:'◇',examples:'∑',exercises:'✎',quizzes:'✓'};
-    const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0};
-    const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes})[kind];
-    const noteFor=kind=>({concepts:t.conceptsHint,examples:t.examplesHint,exercises:t.exercisesHint,quizzes:t.quizzesHint})[kind];
+    const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
+    const kinds=activityEntries.length?[...baseKinds,'activities']:baseKinds;
+    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:stages.length,activities:activityEntries.length};
+    const symbols={concepts:'◇',examples:'∑',exercises:'✎',quizzes:'✓',activities:'💡'};
+    const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0,activities:counts.activities>0};
+    const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes,activities:t.activities})[kind];
+    const noteFor=kind=>({concepts:t.conceptsHint,examples:t.examplesHint,exercises:t.exercisesHint,quizzes:t.quizzesHint,activities:t.activitiesHint})[kind];
     const countFor=kind=>available[kind]?
       counts[kind]+' '+(kind==='concepts'?t.available:kind==='examples'?t.worked:kind==='quizzes'?t.checks:t.questions):t.soon;
     root.replaceChildren();
@@ -168,14 +170,16 @@
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null));
         }
-        if(window.TriggleTextbookActivities&&window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]?.length){
-          window.TriggleTextbookActivities.mount(panel,chapter,lang);
-        }
+        // Textbook Thinking Corners and Activities are a separate chapter destination,
+        // not a repeated appendix on the Concepts page.
         if(Number.isInteger(initialConcept)&&initialConcept>=0){
           const target=panel.querySelector('.sp2-nav [data-index="'+initialConcept+'"]');
           if(target)target.click();
         }
       }else{info(t.noneConcept);}
+    }
+    if(section==='activities'&&activityEntries.length&&window.TriggleTextbookActivities){
+      window.TriggleTextbookActivities.mount(panel,chapter,lang);
     }
     if(section==='examples'||section==='exercises'){
       const selected=sets[section];
