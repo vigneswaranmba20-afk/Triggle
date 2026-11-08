@@ -29,7 +29,7 @@
       correct:'Correct! You can try explaining why on paper.',incorrect:'Not quite. Try the clue and answer again.',
       hint:'Show a hint',reveal:'Why?',progress:'Checks answered correctly',tryPaper:'Try the full concept lesson',
       navigation:'Chapter sections',review:'Editorial review',sources:'Source books',
-      sectionStatus:'More lessons are being developed.',
+      sectionStatus:'Chapter under development · more lessons coming.',
       learningStatus:'Textbook verification is in progress.',
       questionBreakdown:(total,examples,exercises,quizzes)=>`${examples} worked examples · ${exercises} exercises & practice · ${quizzes} quick checks`,
       returnHelp:'Use the chapter menu to switch between Concepts, Worked Examples, Exercises and Quizzes.',
