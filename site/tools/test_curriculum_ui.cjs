@@ -256,6 +256,11 @@ async function main() {
         assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),true);
         const dimensions=await page.evaluate(()=>({
           app:document.querySelector('.app-shell').getBoundingClientRect().height,
+          appTop:document.querySelector('.app-shell').getBoundingClientRect().top,
+          appInlineHeight:document.querySelector('.app-shell').style.height,
+          appComputedMinHeight:getComputedStyle(document.querySelector('.app-shell')).minHeight,
+          bodyHeight:document.body.getBoundingClientRect().height,
+          docHeight:document.documentElement.getBoundingClientRect().height,
           appCssHeight:getComputedStyle(document.querySelector('.app-shell')).height,
           dynamicViewport:window.visualViewport?.height ?? null,
           cssViewport:window.innerHeight,
