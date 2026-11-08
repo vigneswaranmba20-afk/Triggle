@@ -24,7 +24,8 @@
       onlyA:'Only A',onlyB:'Only B',overlap:'Both',lawResult:'Both sides give',
       extra:'Try a second practice question',reason:'Show the reasoning',top:'Back to learning path',
       previousIdea:'Previous idea',nextIdea:'Next idea',position:(n,total)=>'Idea '+n+' of '+total,
-      navTip:'All seven ideas are below. Use the arrows to reach any idea.'},
+      navTip:'Choose one of the seven numbered ideas. The question stays visible as you work.',
+       questionLabel:'CURRENT QUESTION',nextPage:'Next page',backChapter:'Back to Chapter 1',sliderTip:'Drag left or right (or use arrow keys) to change how many students are in BOTH groups. Watch the numbers and equation update.',sliderFormula:(both,union,neither)=>`A or B = 14 + 11 − ${both} = ${union}. Neither = 30 − ${union} = ${neither}. The overlap was counted twice, so subtract it once.`},
     ta:{label:'சிறிய கற்றல் பாதை',title:'கண மொழியை ஒவ்வொரு கருத்தாகக் கற்போம்',
       intro:'2025 பாடநூலை அடிப்படையாகக் கொண்ட ஏழு சிறு ஆராய்ச்சிகள். ஒன்றைத் தேர்ந்து முயலுங்கள்; பிறகு தாளில் பயிற்சி செய்யுங்கள்.',
       state:'இந்த சாதனத்தில் சரிபார்த்த கருத்துகள்',source:'பாடநூல் பகுதி',enPage:'ஆங்கிலம் பக்கம்',taPage:'தமிழ் பக்கம்',
@@ -40,7 +41,8 @@
       onlyA:'A மட்டும்',onlyB:'B மட்டும்',overlap:'இரண்டும்',lawResult:'இருபுறங்களிலும் கிடைப்பது',
       extra:'இன்னொரு பயிற்சி வினா',reason:'காரணத்தைப் பார்க்க',top:'கற்றல் பாதைக்குத் திரும்புக',
       previousIdea:'முந்தைய கருத்து',nextIdea:'அடுத்த கருத்து',position:(n,total)=>total+' இல் கருத்து '+n,
-      navTip:'ஏழு கருத்துகளும் கீழே உள்ளன. மற்ற கருத்துகளுக்குச் செல்ல அம்புக்குறிகளைத் தொடவும்.'}
+      navTip:'எண்ணிடப்பட்ட ஏழு கருத்துகளில் ஒன்றைத் தேர்ந்தெடுக்கவும். விடையைப் படிக்கும்போதும் வினா கண்ணில் இருக்கும்.',
+       questionLabel:'தற்போதைய வினா',nextPage:'அடுத்த பக்கம்',backChapter:'அத்தியாயம் 1-க்குத் திரும்பு',sliderTip:'இரு குழுக்களிலும் உள்ள மாணவர்களின் எண்ணிக்கையை மாற்ற ஸ்லைடரை இடம் அல்லது வலமாக நகர்த்துங்கள் (அல்லது அம்பு விசைகளைப் பயன்படுத்துங்கள்). எண்ணிக்கையும் கணக்கும் மாறுவதைக் கவனியுங்கள்.',sliderFormula:(both,union,neither)=>`A அல்லது B = 14 + 11 − ${both} = ${union}. எதுவுமில்லை = 30 − ${union} = ${neither}. பொதுவானவர்கள் இரு குழுக்களிலும் எண்ணப்படுவதால் ஒருமுறை கழிக்க வேண்டும்.`}
   };
   function load(){
     try{
@@ -49,7 +51,7 @@
     }catch{return new Set();}
   }
   function save(done){try{localStorage.setItem(STORAGE,JSON.stringify([...done]))}catch{}}
-  function mount(container,chapter,language){
+  function mount(container,chapter,language,onBack){
     if(!container||chapter?.id!=='g9-ch1')return false;
     const lang=language==='ta'?'ta':'en',t=words[lang],done=load();
     let active=0;
@@ -65,7 +67,10 @@
       '<button type="button" data-journey-next>'+esc(t.nextIdea+' →')+'</button></div>'+
       '<p class="sp2-navigation-tip">'+esc(t.navTip)+'</p>'+
       '<div class="sp2-nav" role="group" aria-label="'+esc(t.select)+'" data-nav></div>'+
-      '<div class="sp2-panel" data-panel></div>'+
+      '<div class="sp2-panel" data-panel></div>'+ 
+       '<nav class="sp2-journey-footer" aria-label="'+esc(t.select)+'">'+
+       '<button type="button" class="sp2-footer-prev" data-footer-prev>'+esc('← '+t.previousIdea)+'</button>'+
+       '<button type="button" class="sp2-footer-next" data-footer-next></button></nav>'+
       '<p class="sp2-private">'+esc(t.saved)+'</p>';
     container.append(root);
     const nav=root.querySelector('[data-nav]'),panel=root.querySelector('[data-panel]');
@@ -82,6 +87,9 @@
       root.querySelector('[data-journey-index]').textContent=t.position(active+1,book.stages.length);
       root.querySelector('[data-journey-prev]').disabled=active===0;
       root.querySelector('[data-journey-next]').disabled=active===book.stages.length-1;
+       root.querySelector('[data-footer-prev]').disabled=active===0;
+       root.querySelector('[data-footer-next]').textContent=active===book.stages.length-1?t.backChapter+' →':t.nextPage+' →';
+       root.querySelector('[data-footer-next]').classList.toggle('is-return',active===book.stages.length-1);
       const selected=nav.querySelector('.sp2-current');
       if(selected)nav.scrollLeft=Math.max(0,selected.offsetLeft-nav.offsetLeft-8);
     }
@@ -89,11 +97,16 @@
       const button=document.createElement('button');
       button.type='button';button.dataset.index=String(i);button.className='sp2-nav-button';
       button.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+esc(pick(stage.title,lang))+'</span><span class="sp2-done-mark" aria-hidden="true"></span>';
-      button.addEventListener('click',()=>show(i));
+      button.addEventListener('click',()=>show(i,true));
       nav.append(button);
     });
-    root.querySelector('[data-journey-prev]').addEventListener('click',()=>show(active-1));
-    root.querySelector('[data-journey-next]').addEventListener('click',()=>show(active+1));
+    root.querySelector('[data-journey-prev]').addEventListener('click',()=>show(active-1,true));
+    root.querySelector('[data-journey-next]').addEventListener('click',()=>show(active+1,true));
+     root.querySelector('[data-footer-prev]').addEventListener('click',()=>show(active-1,true));
+     root.querySelector('[data-footer-next]').addEventListener('click',()=>{
+       if(active===book.stages.length-1){if(typeof onBack==='function')onBack();return;}
+       show(active+1,true);
+     });
     function demoShell(title){return '<div class="sp2-demo" data-demo><p class="sp2-demo-title">'+esc(title)+'</p><div class="sp2-demo-controls" data-demo-controls></div><p class="sp2-demo-output" data-demo-output role="status" aria-live="polite"></p></div>';}
     function btn(name,key){return '<button type="button" data-demo-mode="'+esc(key)+'">'+esc(name)+'</button>';}
     function setDemo(state,options,paint){
@@ -118,8 +131,8 @@
         });
       }else if(stage.visual==='forms'){
         const options=lang==='ta'
-          ?[['விவரித்தல்','description'],['பட்டியல்','roster'],['விதி','builder']]
-          :[['Words','description'],['Listing','roster'],['Rule','builder']];
+          ?[['விவரிப்பு வடிவம்','description'],['பட்டியல் வடிவம்','roster'],['கண அமைப்பு வடிவம்','builder']]
+          :[['Descriptive Form','description'],['Roster Form','roster'],['Set-Builder Form','builder']];
         const forms={
           description:lang==='ta'?'10-ஐ விடச் சிறிய நேர்ம இரட்டைப்படை முழு எண்களின் கணம்':'Positive even whole numbers less than 10',
           roster:'E = {2, 4, 6, 8}',
@@ -145,9 +158,9 @@
         const controls=panel.querySelector('[data-demo-controls]');
         controls.innerHTML=btn(t.tryVenn,'go');
         controls.querySelector('button').addEventListener('click',()=>{
-          const target=document.querySelector('.p2-lab');
-          if(!target)return;
-          target.scrollIntoView({behavior:'instant',block:'start'});
+          let target=out.querySelector('[data-venn-lab]');
+          if(!target){target=document.createElement('div');target.dataset.vennLab='';out.append(target);window.TriggleLab?.mount(target,chapter,lang);}
+          target.scrollIntoView({behavior:'auto',block:'nearest'});
           target.setAttribute('tabindex','-1');
           target.focus({preventScroll:true});
         });
@@ -176,11 +189,15 @@
         const id='sp2-overlap-control';
         controls.innerHTML='<label class="sp2-range-label" for="'+id+'">'+esc(t.overlap)+
           ' <output data-overlap-count>6</output></label>'+
-          '<input type="range" id="'+id+'" min="0" max="11" step="1" value="6" aria-label="'+esc(t.count)+'">';
+          '<p class="sp2-slider-guide">'+esc(t.sliderTip)+'</p>'+
+           '<input type="range" id="'+id+'" min="0" max="11" step="1" value="6" aria-label="'+esc(t.count)+'">'+
+           '<p class="sp2-slider-formula" data-slider-formula aria-live="polite"></p>';
         const input=controls.querySelector('input');
         const update=()=>{
           const both=Number(input.value),union=25-both;
           controls.querySelector('[data-overlap-count]').textContent=String(both);
+           controls.querySelector('[data-slider-formula]').textContent=t.sliderFormula(both,union,30-union);
+           input.setAttribute('aria-valuetext',String(both)+' · '+t.overlap);
           panel.querySelector('[data-demo-output]').innerHTML=
             '<span>'+esc(t.onlyA)+': <b>'+(14-both)+'</b></span>'+
             '<span>'+esc(t.overlap)+': <b>'+both+'</b></span>'+
@@ -243,7 +260,7 @@
       });
       holder.append(details);
     }
-    function show(index){
+    function show(index,focus=false){
       if(index<0||index>=book.stages.length)return;
       active=index;
       const stage=book.stages[index];
@@ -252,12 +269,14 @@
       panel.innerHTML=
         '<div class="sp2-stage-reference">'+esc(t.source)+' '+esc(stage.section)+
         ' · '+esc(t.enPage)+' '+stage.page.en+' · '+esc(t.taPage)+' '+stage.page.ta+'</div>'+
-        '<h4>'+esc(pick(stage.title,lang))+'</h4>'+
+        '<div class="sp2-sticky-context" tabindex="-1">'+
+         '<h4>'+esc((index+1)+'. '+pick(stage.title,lang))+'</h4>'+
+         '<p class="sp2-pinned-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p></div>'+
         '<p class="sp2-idea">'+htmlMath(pick(stage.idea,lang))+'</p>'+
         '<p class="sp2-example">'+htmlMath(pick(stage.example,lang))+'</p>'+
         '<div class="sp2-formula" aria-label="Mathematics expression">'+htmlMath(stage.rule)+'</div>'+
         demoShell(demoTitle)+
-        '<div class="sp2-recall"><h5>'+esc(t.try)+'</h5><p>'+htmlMath(pick(stage.question,lang))+'</p>'+
+        '<div class="sp2-recall"><h5>'+esc(t.try)+'</h5>'+
         '<div class="sp2-answers" data-answers role="group" aria-label="'+esc(pick(stage.question,lang))+'"></div>'+
         '<div class="sp2-recall-actions"><button type="button" data-hint>'+esc(t.hint)+
         '</button><button type="button" data-why-button>'+esc(t.why)+'</button></div>'+
@@ -290,6 +309,7 @@
       extraPractice(stage);
       if(stage.id==='cardinality')hard();
       updateProgress();
+      if(focus){const selected=panel.querySelector('.sp2-sticky-context');selected?.scrollIntoView({behavior:'auto',block:'start'});selected?.focus({preventScroll:true});}
     }
     show(0);
     return true;
