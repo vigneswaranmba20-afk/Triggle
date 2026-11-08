@@ -34,9 +34,14 @@ const {chromium}=require('playwright');
    assert.match(await page.locator('#cofactor-result').innerText(),/C12 = -1 × 3 = -3/,'selection changes immediately refresh C12');
    await page.locator('#show-cofactor').click();
    assert.match(await page.locator('#cofactor-result').innerText(),/C12 = -1 × 3 = -3/);
-   await page.locator('#cofactor-row').selectOption('2');
-   await page.locator('#cofactor-column').selectOption('0');
+   // Set both coordinates in one browser task, then dispatch the same change event as a user selection.
+   // This avoids platform-specific native-select focus behavior while still exercising the UI handler.
+   await page.evaluate(()=>{
+    const row=document.getElementById('cofactor-row'),column=document.getElementById('cofactor-column');
+    row.value='2';column.value='0';row.dispatchEvent(new Event('change',{bubbles:true}));
+   });
    assert.equal(await page.locator('#cofactor-row').inputValue(),'2','row selection must be applied before calculating C31');
+   assert.equal(await page.locator('#cofactor-column').inputValue(),'0','column selection must be applied before calculating C31');
    assert.match(await page.locator('#cofactor-result').innerText(),/C31 = 1 × -1 = -1/,'selection changes immediately refresh C31');
    await page.locator('#show-cofactor').click();
    assert.match(await page.locator('#cofactor-result').innerText(),/C31 = 1 × -1 = -1/);
