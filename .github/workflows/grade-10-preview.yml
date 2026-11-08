@@ -24,7 +24,10 @@ jobs:
       - run: npm test
       - name: Grade 10 independent mathematics and preview contracts
         run: |
-          for test in site/tools/test_grade10_*.cjs; do\n            case "$test" in *browser.cjs) continue ;; esac\n            node "$test"\n          done
+          for test in site/tools/test_grade10_*.cjs; do
+            case "$test" in *browser.cjs) continue ;; esac
+            node "$test"
+          done
       - run: npx playwright install --with-deps chromium
       - name: Grade 10 mobile, keyboard, bilingual and recovery browser regressions
         run: node site/tools/test_grade10_browser.cjs
