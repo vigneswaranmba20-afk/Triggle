@@ -14,14 +14,14 @@ As checked 2026-11-08. **This is an audit, not a chapter-completion certificate.
 | Q2: roster form of letters | 4 | 4 | 0 | Q2 (i–iv) now transcribed from visually inspected 2025 EN/TA PDFs, printed p. 5 / PDF p. 11; independent Tamil editorial review pending |
 | Q3(a): membership true/false | 6 | 6 | 0 | Exact 2025 EN/Tamil Q3(a) stem, membership glyphs and subparts visually checked; independent Tamil editorial review pending |
 | Q3(b): fill the blanks | 4 | 4 | 0 | Exact 2025 EN/Tamil Q3(b) stem, blanks and subparts visually checked; independent Tamil editorial review pending |
-| Q4: roster-form conversions | 4 | **0** | **4** | Q4(ii) fractional expression is garbled in extracted PDF text: require page-image inspection |
-| Q5: set-builder conversions | 4 | **0** | **4** | Q5(ii) rational-number sequence is garbled in extracted PDF text: require page-image inspection |
-| Q6: descriptive-form conversions | 4 | **0** | **4** | Source text visible in both editions; independent Tamil editorial review pending |
-| **Total** | **30** | **18** | **12** | **Do not label Exercise 1.1 complete** |
+| Q4: roster-form conversions | 4 | 4 | 0 | Page-image verified in EN/TA, including printed stacked fractions; independent Tamil editorial certification pending |
+| Q5: set-builder conversions | 4 | 4 | 0 | Page-image verified in EN/TA, including fractional sequence; independent Tamil editorial certification pending |
+| Q6: descriptive-form conversions | 4 | 4 | 0 | English/Tamil printed-page wording checked; independent Tamil editorial certification pending |
+| **Total** | **30** | **30** | **0** | **All textbook subparts now source-checked in EN/TA; external Tamil editorial certification remains pending** |
 
-**Verbatim transcription progress:** 18 of 30 Exercise 1.1 subparts have page-image checked EN/TA prompts in the student UI; 12 subparts remain unimplemented. Mathematical and Tamil editorial certification are separate from this source-fidelity check.
+**Verbatim transcription progress:** 30 of 30 Exercise 1.1 subparts have page-image checked EN/TA prompts in the student UI. Exercises 1.2–1.7 and the rest of the Grade 9 curriculum still require complete source-by-source verification. Mathematical and Tamil editorial certification are separate from this source-fidelity check.
 
-Missing IDs to create once source and publication gates are satisfied: `g9-ch1-ex1.1-q4-i` through `-iv`, `g9-ch1-ex1.1-q5-i` through `-iv`, `g9-ch1-ex1.1-q6-i` through `-iv`. Preserve all 18 existing question IDs and localStorage progress.
+All 30 Exercise 1.1 subpart IDs now exist; the original 18 IDs and local student progress were preserved.
 
 ## Other Chapter 1 exercises
 The English 2025 textbook contains **Exercises 1.1–1.7**. The current dedicated textbook-exercise module covers only Exercise 1.1 Questions 1–3; Exercises **1.2–1.7** have not been reconciled as complete against the prescribed text. Some original Triggle practice exists separately; do not count that as official textbook coverage. These later exercises include diagrams and multi-part questions; inventory each individually before publication.
@@ -35,6 +35,6 @@ The app currently has 35 numbered Chapter 1 worked-example entries sourced/rephr
 ## Release and sign-off
 - UI navigation and nonfloating questions: implemented and live; browser validated.
 - 14 diagram improvements: code and CI implemented, publication status tracked by GitHub workflow.
-- Exercise 1.1 missing 12: **NOT IMPLEMENTED** as of this audit; image verification of two formula subparts, source-text and bilingual editorial checks must be resolved first.
+- Exercise 1.1: **30/30 question subparts implemented**, math solutions checked and question text compared with the 2025 EN/TA PDF page images. Independent Tamil editorial certification is still pending.
 - Student output may use original worked solutions, hints and original diagrams. A question must never be reworded silently while marked `textbook-exact`.
 - Independent Tamil teacher editorial certification: **pending**. 2026–27 edition parity: **pending**.
