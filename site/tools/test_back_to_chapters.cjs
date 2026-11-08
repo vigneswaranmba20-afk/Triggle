@@ -43,4 +43,13 @@ assert.match(css,/grid-area:next/,'Next has a stable grid cell');
 assert.match(hub,/back:'Back to chapter',classBack:'Back to all chapters'/,'Chapter-level wording matches the question reader');
 assert.match(js,/'Back to all exercises'/,'Exercise return wording is consistent');
 assert.match(hubCss,/font-size:var\(--triggle-nav-font-size,16px\)/,'Chapter navigation uses the shared font size');
-console.log('PASS: all questions use one non-overlay bilingual navigation system, equal font sizes, two mobile rows and stable Back destinations.');
+assert.match(js,/if\(!chapterOverview\)\{choices\.push\(/,'Chapter overview breadcrumb must keep class-only navigation');
+assert.match(hub,/chapterNumber\+\(section\?/,'Chapter number is a compact identifier rather than a repeated heading');
+assert.ok(!hub.includes("t.eyebrow+' · '+t.navigation+' · '+grade"),'Remove redundant chapter header metadata');
+assert.match(hub,/breakdown\.className='hub-question-breakdown'/,'Compact bilingual section counts remain available');
+assert.ok(hub.indexOf('menu.append(grid);root.append(menu);')<hub.indexOf('metadata.textContent=grade9Pilot'),
+  'Show section choices before small textbook review note');
+assert.match(css,/body\.chapter-overview-active \.class-dock\{display:none!important\}/,'Floating class dock must not obscure hub cards');
+assert.match(css,/body\.chapter-overview-active \.app-shell\{height:100dvh!important/,'Chapter content fills viewport once grade dock is removed');
+assert.match(hubCss,/\.chapter-hub \.hub-question-breakdown\{[\s\S]*?border:0/,'Replace large statistics callout with quiet compact text');
+console.log('PASS: chapter and reader navigation share non-overlapping bilingual routes, with one title and immediate section choices.');
