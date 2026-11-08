@@ -357,6 +357,24 @@ async function main() {
         await noOverflow(page,'Tamil Home '+width+'px');
       });
     }
+    await check('Grade 9 chapter directory accurately advertises interactive lessons in both languages',async()=>{
+      const page=await visit(await context(390),'/index.html?class=9&browse=chapters');
+      const chapter1=page.locator('.discover-chapter-grid [data-chapter="g9-ch1"] .discover-chapter-meta');
+      const chapter2=page.locator('.discover-chapter-grid [data-chapter="g9-ch2"] .discover-chapter-meta');
+      const chapter3=page.locator('.discover-chapter-grid [data-chapter="g9-ch3"] .discover-chapter-meta');
+      assert.match(await chapter1.innerText(),/7 Interactive mini-lessons available/i);
+      assert.match(await chapter2.innerText(),/8 Interactive mini-lessons available/i);
+      assert.doesNotMatch(await chapter2.innerText(),/More lessons coming/i);
+      assert.match(await chapter3.innerText(),/More lessons coming/i);
+      assert.match(await page.locator('#exerciseList [data-chapter-id="g9-ch2"] small').textContent(),/8 interactive concepts/);
+      await page.locator('#langTa').click();
+      assert.match(await chapter2.innerText(),/8 சிறு செயல்வழிப் பாடங்கள் உள்ளன/);
+      assert.match(await page.locator('#exerciseList [data-chapter-id="g9-ch2"] small').textContent(),/8 செயல்வழிக் கருத்துகள்/);
+      await page.locator('.discover-chapter-grid [data-chapter="g9-ch2"]').click();
+      await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
+      assert.equal(await page.locator('.rnlab [data-nav] button').count(),8);
+      await noOverflow(page,'Tamil Real Numbers concepts from chapter directory');
+    });
     await check('Chapter selection first offers four choices, not a long unorganized lesson',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
       assert.equal(await page.locator('.hub-section-card').count(),4);
