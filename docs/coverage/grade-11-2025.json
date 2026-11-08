@@ -200,6 +200,20 @@
       "tamilEditorial": "pending"
     }
   ],
-  "next": "Grade 11 Volume I Chapter 1 Exercise 1.1 Question 2 (source-verify English and Tamil page 7/9 before drafting)",
-  "notes": "Chapter-level source evidence does not establish full exercise totals; Grade 11 pre-existing legacy chapter 3 content is not counted as 2025 verified."
+  "next": "Confirm CI for e76ea439; inspect original English and Tamil 2025 Volume I printed pages for Exercise 1.1 Question 2, then add independently checked bilingual lesson; reconcile latest main before merge.",
+  "notes": "Chapter-level source evidence does not establish full exercise totals; Grade 11 pre-existing legacy chapter 3 content is not counted as 2025 verified.",
+  "ciEvidence": {
+    "baselineCommit": "7f66ab886f4d961774288d36d644ce8ed7ffe5eb",
+    "runId": 42451732756,
+    "conclusion": "success",
+    "passed": [
+      "npm ci",
+      "npm test",
+      "Grade 11 mathematical and bilingual content regressions",
+      "Chromium browser/mobile/keyboard/recovery",
+      "shared cross-grade browser regression"
+    ],
+    "newOfflineRegressionCommit": "e76ea439038345ae34934b9a4e7822bfbbc68dfd",
+    "newOfflineRegressionStatus": "CI pending; baseline success does not validate new commit"
+  }
 }
