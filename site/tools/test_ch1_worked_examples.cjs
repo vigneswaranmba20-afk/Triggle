@@ -12,7 +12,7 @@ for(const f of ['data/class-9.js','data/curriculum.js','data/textbook-examples/g
 }
 const grade=sandbox.window.TRIGGLE_CLASSES[9];
 const chapter=sandbox.window.TRIGGLE_CURRICULUM.grades.find(g=>g.grade===9).chapters.find(c=>c.id==='g9-ch1');
-const examples=grade.items.filter(x=>/^Example 1\\.\\d+$/.test(x.label?.en||''));
+const examples=grade.items.filter(x=>/^Example 1\.\d+$/.test(x.label?.en||''));
 assert.equal(examples.length,35,'all 35 numbered textbook examples must load');
 assert.equal(new Set(examples.map(x=>x.id)).size,35,'unique example identifiers');
 assert.equal(examples.filter(x=>chapter.legacyQuestionIds.includes(x.id)).length,35,'all examples linked from chapter');
@@ -53,5 +53,5 @@ assert.ok(index.indexOf('data/curriculum.js')<index.indexOf(tag),'curriculum loa
 assert.ok(index.indexOf(tag)<index.indexOf('assets/app.js'),'examples load before app boot');
 assert.ok(index.indexOf(tag)<index.indexOf('assets/chapter-hub.js'),'examples load before hub');
 vm.runInNewContext(read('data/textbook-examples/g9-ch1.js'),sandbox,{timeout:4000});
-assert.equal(grade.items.filter(x=>/^Example 1\\.\\d+$/.test(x.label?.en||'')).length,35,'reloading must not duplicate');
+assert.equal(grade.items.filter(x=>/^Example 1\.\d+$/.test(x.label?.en||'')).length,35,'reloading must not duplicate');
 console.log('PASS: 35/35 Grade 9 Set Language worked examples, bilingual data, curriculum wiring, math and script order');
