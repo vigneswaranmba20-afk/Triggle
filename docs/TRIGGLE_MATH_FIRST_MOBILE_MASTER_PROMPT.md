@@ -1,5 +1,5 @@
 # Triggle — Math-First Student Reader: reusable master prompt
-Version: 2026-11-08. Scope: every grade 9–12 chapter, both Tamil and English, current and future content.
+Version: 2026-11-08 (user-confirmed navigation revision). Scope: every grade 9–12 chapter, both Tamil and English, current and future content.
 
 ## ROLE / NON-NEGOTIABLE TARGET
 Act as a principal mobile learning UX engineer, mathematics editor and accessibility reviewer.
@@ -21,11 +21,11 @@ The following are design hypotheses, not empirical test outcomes:
 | # | Candidate | Decision / rationale |
 |---|---|---|
 | 1 | Chapter → five-option menu | Reject: additional tap before learning |
-| 2 | Chapter → first available Exercise N.1 | **Select:** immediate verified textbook item |
+| 2 | Chapter → first available Exercise N.1 | **Reject:** unintuitive auto-jump hides section choices |
 | 3 | Chapter → last visited question | Reject default: unpredictable for new users |
 | 4 | Chapter → first interactive concept | Reject as default: students seeking exercises delayed |
-| 5 | Worked Examples → list of all examples | Keep as secondary Browse all |
-| 6 | Worked Examples → Example N.1 | **Select:** first worked example now |
+| 5 | Worked Examples → list of all examples | **Select:** question-list is an essential navigation level |
+| 6 | Worked Examples → Example N.1 | **Reject:** student must select the example to open |
 | 7 | Thinking Corner → introductory landing panel | Reject: duplicated headings |
 | 8 | Thinking Corner → first open activity card | **Select:** question/answer immediately visible |
 | 9 | All 18 activities expanded at once | Reject: excessive scroll/noise |
@@ -41,17 +41,24 @@ The following are design hypotheses, not empirical test outcomes:
 | 19 | External JavaScript UI/modal libraries | Reject: unnecessary bytes and offline complexity |
 | 20 | Native dialog + CSS glass + reduced-transparency fallback | **Select:** keyboard-safe, light, offline |
 
-Winning system: (A) content-first deep navigation; (B) question immediately followed by
+Winning system: (A) predictable Class → Chapter sections → question list → selected question navigation; (B) question immediately followed by
 final answer and then detailed steps, with no clipping of long solutions; (C) small,
 non-overlapping reader navigation plus accessible comparison diagrams.
 
 ## BEHAVIOR / ROUTING
-1. Clicking a class directory chapter card, sidebar chapter link, or chapter chooser opens
-   its earliest *available textbook* exercise, preferring Exercise N.1, not another menu.
-   When absent, show the honest section menu rather than inventing an exercise.
-2. Clicking **Worked Examples** opens first available Example N.1; **Exercises** opens
-   first eligible textbook exercise; keep original practice clearly labelled and not
-   substituted for textbook coverage.
+1. Clicking a class directory chapter card, sidebar chapter link or chapter chooser
+   ALWAYS opens its section menu (Concepts, Worked Examples, Exercises, Quizzes;
+   plus Thinking Corner & Activities wherever available). Set Language has exactly
+   these five section cards. Never auto-open Exercise 1.1 or hide section choices.
+2. Clicking **Worked Examples** displays the COMPLETE example list (Example 1.1,
+   1.2, 1.3...) and clicking **Exercises** displays its full question list.
+   Only tapping a particular list item opens that lesson or worked solution.
+   The question page has a single **Back to worked examples** / **Back to all
+   exercises** link, never a redundant **Chapter sections** button.
+   The visible Set Language breadcrumb dropdown opens the current class's chapter
+   picker (9 chapters for Class 9), not the current chapter's section page.
+   Choosing a chapter opens that chapter's section cards; both English and Tamil
+   labels and browser Back behavior must work.
 3. **Thinking Corner & Activities** opens the first question with worked answer visible.
    No repeated Thinking Corner heading or intro; other activity cards remain easy to
    expand. Present source/review notes in a small optional disclosure.
@@ -100,8 +107,11 @@ non-overlapping reader navigation plus accessible comparison diagrams.
 8. Never claim independent Tamil editorial certification without a qualified human review.
 
 ## MINIMAL ACCEPTANCE MATRIX
-- [ ] Class 9 Chapter 1 tap lands on Exercise 1.1 Q1(i), and direct URL menu still works.
-- [ ] Worked Examples tap lands on Example 1.1 (similarly across available chapters).
+- [ ] Class 9 Chapter 1 tap opens precisely the five section cards, not Exercise 1.1.
+- [ ] Worked Examples opens the ordered 35-example list; only tapping Example 1.1 opens it.
+- [ ] Example 1.1 shows a single Back to worked examples link and no Chapter sections button.
+- [ ] Set Language breadcrumb opens nine Class 9 chapter options, including Real Numbers; choosing one opens its section menu.
+- [ ] Browser Back, bilingual selection and direct deep links preserve the correct example or exercise list.
 - [ ] Grade 9 Thinking Corner opens 1st card and displays answer; 18 catalog entries kept.
 - [ ] Cardinality-table answer shows real columns/rows, source text unchanged in data.
 - [ ] Quizzes begin at first question; correct-answer scoring and hints still work.
