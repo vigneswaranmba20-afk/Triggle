@@ -19,11 +19,19 @@
         "page": {
           "en": 5,
           "ta": 5
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
         }
       },
       "prompt": {
-        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 18 ∈ C.",
-        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 18 ∈ C என்பது சரியா தவறா?"
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(i) 18 ∈ C",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(i) 18 ∈ C"
       },
       "answer": {
         "en": "True",
@@ -49,6 +57,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json"
       }
     },
     {
@@ -62,11 +74,19 @@
         "page": {
           "en": 5,
           "ta": 5
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
         }
       },
       "prompt": {
-        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 6 ∉ A.",
-        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 6 ∉ A என்பது சரியா தவறா?"
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(ii) 6 ∉ A",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(ii) 6 ∉ A"
       },
       "answer": {
         "en": "True",
@@ -92,6 +112,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json"
       }
     },
     {
@@ -105,11 +129,19 @@
         "page": {
           "en": 5,
           "ta": 5
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
         }
       },
       "prompt": {
-        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 14 ∉ C.",
-        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 14 ∉ C என்பது சரியா தவறா?"
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(iii) 14 ∉ C",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(iii) 14 ∉ C"
       },
       "answer": {
         "en": "False",
@@ -135,6 +167,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json"
       }
     },
     {
@@ -148,11 +184,19 @@
         "page": {
           "en": 5,
           "ta": 5
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
         }
       },
       "prompt": {
-        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 10 ∈ B.",
-        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 10 ∈ B என்பது சரியா தவறா?"
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(iv) 10 ∈ B",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(iv) 10 ∈ B"
       },
       "answer": {
         "en": "True",
@@ -178,6 +222,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json"
       }
     },
     {
@@ -191,11 +239,19 @@
         "page": {
           "en": 5,
           "ta": 5
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
         }
       },
       "prompt": {
-        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 5 ∈ B.",
-        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 5 ∈ B என்பது சரியா தவறா?"
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(v) 5 ∈ B",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(v) 5 ∈ B"
       },
       "answer": {
         "en": "False",
@@ -221,6 +277,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json"
       }
     },
     {
@@ -234,11 +294,19 @@
         "page": {
           "en": 5,
           "ta": 5
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
         }
       },
       "prompt": {
-        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 0 ∈ B.",
-        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 0 ∈ B என்பது சரியா தவறா?"
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(vi) 0 ∈ B",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(vi) 0 ∈ B"
       },
       "answer": {
         "en": "False",
@@ -264,7 +332,12 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json"
       }
     }
-  ]
+  ],
+  "purpose": "Visually checked exact 2025 English/Tamil textbook stem, notation and subpart; worked solutions are original Triggle teaching."
 }

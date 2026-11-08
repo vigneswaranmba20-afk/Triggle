@@ -478,8 +478,8 @@
       "ta": "கண உறுப்பு: சரியா தவறா"
     },
     "q": {
-      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 18 ∈ C.",
-      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 18 ∈ C என்பது சரியா தவறா?"
+      "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(i) 18 ∈ C",
+      "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(i) 18 ∈ C"
     },
     "steps": [
       {
@@ -501,12 +501,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (i), printed p. 5 EN / 5 TA",
+    "reference": "2025 revised Grade 9, Exercise 1.1, source-checked EN p.5 and TA p.6",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "pending",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
     }
   },
   {
@@ -527,8 +535,8 @@
       "ta": "கண உறுப்பு: சரியா தவறா"
     },
     "q": {
-      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 6 ∉ A.",
-      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 6 ∉ A என்பது சரியா தவறா?"
+      "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(ii) 6 ∉ A",
+      "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(ii) 6 ∉ A"
     },
     "steps": [
       {
@@ -550,12 +558,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (ii), printed p. 5 EN / 5 TA",
+    "reference": "2025 revised Grade 9, Exercise 1.1, source-checked EN p.5 and TA p.6",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "pending",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
     }
   },
   {
@@ -576,8 +592,8 @@
       "ta": "கண உறுப்பு: சரியா தவறா"
     },
     "q": {
-      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 14 ∉ C.",
-      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 14 ∉ C என்பது சரியா தவறா?"
+      "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(iii) 14 ∉ C",
+      "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(iii) 14 ∉ C"
     },
     "steps": [
       {
@@ -599,12 +615,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (iii), printed p. 5 EN / 5 TA",
+    "reference": "2025 revised Grade 9, Exercise 1.1, source-checked EN p.5 and TA p.6",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "pending",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
     }
   },
   {
@@ -625,8 +649,8 @@
       "ta": "கண உறுப்பு: சரியா தவறா"
     },
     "q": {
-      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 10 ∈ B.",
-      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 10 ∈ B என்பது சரியா தவறா?"
+      "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(iv) 10 ∈ B",
+      "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(iv) 10 ∈ B"
     },
     "steps": [
       {
@@ -648,12 +672,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (iv), printed p. 5 EN / 5 TA",
+    "reference": "2025 revised Grade 9, Exercise 1.1, source-checked EN p.5 and TA p.6",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "pending",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
     }
   },
   {
@@ -674,8 +706,8 @@
       "ta": "கண உறுப்பு: சரியா தவறா"
     },
     "q": {
-      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 5 ∈ B.",
-      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 5 ∈ B என்பது சரியா தவறா?"
+      "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(v) 5 ∈ B",
+      "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(v) 5 ∈ B"
     },
     "steps": [
       {
@@ -697,12 +729,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (v), printed p. 5 EN / 5 TA",
+    "reference": "2025 revised Grade 9, Exercise 1.1, source-checked EN p.5 and TA p.6",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "pending",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
     }
   },
   {
@@ -723,8 +763,8 @@
       "ta": "கண உறுப்பு: சரியா தவறா"
     },
     "q": {
-      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, state True or False: 0 ∈ B.",
-      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் 0 ∈ B என்பது சரியா தவறா?"
+      "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(vi) 0 ∈ B",
+      "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(vi) 0 ∈ B"
     },
     "steps": [
       {
@@ -746,12 +786,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(a) (vi), printed p. 5 EN / 5 TA",
+    "reference": "2025 revised Grade 9, Exercise 1.1, source-checked EN p.5 and TA p.6",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "pending",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
     }
   },
   {
@@ -772,8 +820,8 @@
       "ta": "கண உறுப்பு: கோடிட்ட இடத்தை நிரப்புக"
     },
     "q": {
-      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 3 ∈ ___",
-      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 3 ∈ ___"
+      "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(i) 3 ∈ ____",
+      "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(i) 3 ∈ ____"
     },
     "steps": [
       {
@@ -795,12 +843,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(b) (i), printed p. 5 EN / 6 TA",
+    "reference": "2025 revised Grade 9, Exercise 1.1, source-checked EN p.5 and TA p.6",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "pending",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
     }
   },
   {
@@ -821,8 +877,8 @@
       "ta": "கண உறுப்பு: கோடிட்ட இடத்தை நிரப்புக"
     },
     "q": {
-      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 14 ∈ ___",
-      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 14 ∈ ___"
+      "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(ii) 14 ∈ _____",
+      "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(ii) 14 ∈ _____"
     },
     "steps": [
       {
@@ -844,12 +900,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(b) (ii), printed p. 5 EN / 6 TA",
+    "reference": "2025 revised Grade 9, Exercise 1.1, source-checked EN p.5 and TA p.6",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "pending",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
     }
   },
   {
@@ -870,8 +934,8 @@
       "ta": "கண உறுப்பு: கோடிட்ட இடத்தை நிரப்புக"
     },
     "q": {
-      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 18 ___ B",
-      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 18 ___ B"
+      "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(iii) 18 ____ B",
+      "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(iii) 18 ____ B"
     },
     "steps": [
       {
@@ -893,12 +957,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(b) (iii), printed p. 5 EN / 6 TA",
+    "reference": "2025 revised Grade 9, Exercise 1.1, source-checked EN p.5 and TA p.6",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "pending",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
     }
   },
   {
@@ -919,8 +991,8 @@
       "ta": "கண உறுப்பு: கோடிட்ட இடத்தை நிரப்புக"
     },
     "q": {
-      "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 4 ___ B.",
-      "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 4 ___ B."
+      "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(iv) 4 _____ B",
+      "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(iv) 4 _____ B"
     },
     "steps": [
       {
@@ -942,12 +1014,20 @@
     },
     "kind": "reference",
     "source": "",
-    "reference": "2025 revised, Grade 9, Exercise 1.1, Q3(b) (iv), printed p. 5 EN / 6 TA",
+    "reference": "2025 revised Grade 9, Exercise 1.1, source-checked EN p.5 and TA p.6",
     "sourceEdition": "2025 revised",
     "review": {
       "tamilEditorial": "pending",
       "studentBrowser": "pending",
       "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
     }
   }
 ];

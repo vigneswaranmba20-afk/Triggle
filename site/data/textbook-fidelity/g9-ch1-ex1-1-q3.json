@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "scope": "Grade 9, Set Language, Exercise 1.1 Question 3(a)–3(b)",
+  "edition": "2025 revised",
+  "reviewedOn": "2026-11-08",
+  "verification": "Both printed page images checked visually, including ∈, ∉ and blank-line symbols; not inferred from PDF extraction.",
+  "source": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 5,
+      "pdfPage": 11
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 6,
+      "pdfPage": 12
+    }
+  },
+  "note": "Source questions preserved; Triggle explanations authored independently. Independent Tamil editorial certification pending.",
+  "items": [
+    {
+      "id": "g9-ch1-ex1.1-q3-a-i",
+      "questionNumber": 3,
+      "section": "a",
+      "part": "i",
+      "textbookPrompt": {
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(i) 18 ∈ C",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(i) 18 ∈ C"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-ii",
+      "questionNumber": 3,
+      "section": "a",
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(ii) 6 ∉ A",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(ii) 6 ∉ A"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-iii",
+      "questionNumber": 3,
+      "section": "a",
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(iii) 14 ∉ C",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(iii) 14 ∉ C"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-iv",
+      "questionNumber": 3,
+      "section": "a",
+      "part": "iv",
+      "textbookPrompt": {
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(iv) 10 ∈ B",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(iv) 10 ∈ B"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-v",
+      "questionNumber": 3,
+      "section": "a",
+      "part": "v",
+      "textbookPrompt": {
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(v) 5 ∈ B",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(v) 5 ∈ B"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-vi",
+      "questionNumber": 3,
+      "section": "a",
+      "part": "vi",
+      "textbookPrompt": {
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(a) State whether True or False:\n(vi) 0 ∈ B",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(அ) சரியா, தவறா எனக் கூறுக:\n(vi) 0 ∈ B"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-i",
+      "questionNumber": 3,
+      "section": "b",
+      "part": "i",
+      "textbookPrompt": {
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(i) 3 ∈ ____",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(i) 3 ∈ ____"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-ii",
+      "questionNumber": 3,
+      "section": "b",
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(ii) 14 ∈ _____",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(ii) 14 ∈ _____"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-iii",
+      "questionNumber": 3,
+      "section": "b",
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(iii) 18 ____ B",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(iii) 18 ____ B"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-iv",
+      "questionNumber": 3,
+      "section": "b",
+      "part": "iv",
+      "textbookPrompt": {
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(iv) 4 _____ B",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(iv) 4 _____ B"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    }
+  ]
+}

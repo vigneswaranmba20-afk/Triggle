@@ -23,11 +23,15 @@
         "pdfPage": {
           "en": 11,
           "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
         }
       },
       "prompt": {
-        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 3 ∈ ___",
-        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 3 ∈ ___"
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(i) 3 ∈ ____",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(i) 3 ∈ ____"
       },
       "answer": {
         "en": "A",
@@ -53,6 +57,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json"
       }
     },
     {
@@ -70,11 +78,15 @@
         "pdfPage": {
           "en": 11,
           "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
         }
       },
       "prompt": {
-        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 14 ∈ ___",
-        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 14 ∈ ___"
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(ii) 14 ∈ _____",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(ii) 14 ∈ _____"
       },
       "answer": {
         "en": "C",
@@ -100,6 +112,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json"
       }
     },
     {
@@ -117,11 +133,15 @@
         "pdfPage": {
           "en": 11,
           "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
         }
       },
       "prompt": {
-        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 18 ___ B",
-        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 18 ___ B"
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(iii) 18 ____ B",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(iii) 18 ____ B"
       },
       "answer": {
         "en": "∉",
@@ -147,6 +167,10 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json"
       }
     },
     {
@@ -164,11 +188,15 @@
         "pdfPage": {
           "en": 11,
           "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
         }
       },
       "prompt": {
-        "en": "Given A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20}, fill in the blank: 4 ___ B.",
-        "ta": "A={0,3,5,8}, B={2,4,6,10}, C={12,14,18,20} எனில் கோடிட்ட இடத்தை நிரப்புக: 4 ___ B."
+        "en": "3. Consider the following sets A = {0, 3, 5, 8}, B = {2, 4, 6, 10} and C = {12, 14,18, 20}.\n(b) Fill in the blanks:\n(iv) 4 _____ B",
+        "ta": "3. A = {0, 3, 5, 8}, B = {2, 4, 6, 10} மற்றும் C = {12, 14,18, 20} என்ற கணங்களைக் கொண்டு.\n(ஆ) கோடிட்ட இடங்களை நிரப்புக:\n(iv) 4 _____ B"
       },
       "answer": {
         "en": "∈",
@@ -194,7 +222,12 @@
         "tamilEditorial": "pending",
         "studentBrowser": "not-integrated",
         "publication": "draft"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q3.json"
       }
     }
-  ]
+  ],
+  "purpose": "Visually checked exact 2025 English/Tamil textbook stem, notation and subpart; worked solutions are original Triggle teaching."
 }
