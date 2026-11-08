@@ -1,0 +1,38 @@
+/* Distraction-free mobile question view.
+   The full question and final answer are the ONLY content in the resting view.
+   All existing study/navigation content remains accessible on first touch. */
+@media(max-width:800px){
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .appbar,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .status-row,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) #questionReturn,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>.question-top,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>.lesson-title-row,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>#inlineFigure,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>#solutionModeRow,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>#stepsRegion,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>#visualLessonAction,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>.lesson-bottom,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .reference-line,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .bottom-extras,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) #questionNavDock{
+    display:none!important;
+  }
+  body.textbook-reader.reader-peek .focus-nav-toggle{display:none!important}
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-container{
+    padding:12px 10px 12px!important;
+  }
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card{
+    padding:12px!important;
+  }
+  body.textbook-reader.reader-peek:not(.reader-options-visible) #questionText{
+    margin-top:0!important;
+  }
+  body.textbook-reader.reader-peek #questionText,
+  body.textbook-reader.reader-peek #answerBox{
+    visibility:visible!important;opacity:1!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.reader-peek .appbar,
+  body.reader-peek #questionNavDock{transition:none!important;animation:none!important}
+}

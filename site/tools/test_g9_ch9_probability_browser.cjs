@@ -5,6 +5,16 @@ const http=require('node:http');
 const path=require('node:path');
 const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..');
+// Older interaction tests exercise the expanded state deliberately.
+// A separate quiet-reader test verifies that real students start with Q+A only.
+async function gotoWithControls(page,...args){
+  const navigate=page.goto.bind(page);
+  const response=await navigate(...args);
+  if(await page.evaluate(()=>Boolean(window.TriggleQuietReader?.isActive())))
+    await page.keyboard.press('Tab'); // accessible first-gesture reveal
+  return response;
+}
+
 async function main(){
  const server=http.createServer(async(req,res)=>{
   try{
@@ -23,10 +33,10 @@ async function main(){
   for(const width of [320,390,1280]){
    const ctx=await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
    const page=await ctx.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
-   await page.goto(base+'/index.html?class=9&chapter=g9-ch9&section=exercises');
+   await gotoWithControls(page,base+'/index.html?class=9&chapter=g9-ch9&section=exercises');
    await page.locator('#chapterOverview').waitFor({state:'visible'});
    assert.match(await page.locator('#chapterOverview').innerText(),/Exercise 9\.1/,'Exercises list missing 9.1 at '+width);
-   await page.goto(base+'/index.html?class=9&question=g9-ch9-ex9.1-q4');
+   await gotoWithControls(page,base+'/index.html?class=9&question=g9-ch9-ex9.1-q4');
    await page.locator('#questionText').waitFor({state:'visible'});
    assert.match(await page.locator('#questionText').innerText(),/There are 24 balls in a pot/);
    assert.match(await page.locator('#questionText').innerText(),/Green ball/);
@@ -34,7 +44,7 @@ async function main(){
    assert.equal(await page.locator('#answerBox').isVisible(),true,'Final answer accessible');
    const metrics=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
    assert.ok(metrics.document<=metrics.viewport+1,'Horizontal scroll on '+width+'px');
-   await page.goto(base+'/index.html?class=9&question=g9-ch9-ex9.1-q6');
+   await gotoWithControls(page,base+'/index.html?class=9&question=g9-ch9-ex9.1-q6');
    await page.locator('#questionText').waitFor({state:'visible'});
    assert.match(await page.locator('#questionText').innerText(),/less than 13/);
    assert.match(await page.locator('#stepsList').innerText(),/sum of 4/);
