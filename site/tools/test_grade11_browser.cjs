@@ -45,6 +45,12 @@ const server=http.createServer((req,res)=>{
    await context.setOffline(true);
    await page.locator('#en').click();
    assert.equal(await page.locator('article.card').count(),4);
+   // Loaded lesson remains usable without a network: practice and derivations are local.
+   const offlinePractice=page.locator('article.card').first().locator('.practice');
+   await offlinePractice.locator('button').nth(1).click();
+   assert.match(await offlinePractice.locator('[role=status]').innerText(),/Correct!/);
+   await page.locator('article.card summary').first().click();
+   assert.equal(await page.locator('article.card details').first().getAttribute('open'),'');
    await context.close();
    console.log('PASS Grade 11 bilingual keyboard/mobile/offline-loaded lesson '+width);
   }
