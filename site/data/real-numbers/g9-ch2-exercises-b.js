@@ -35,7 +35,7 @@ const vals=[
  ['iii','9^(−3/2)','1/27','9^(−3/2)=1/(√9)³=1/27','√9=3'],
  ['iv','(64/125)^(−2/3)','25/16','(64/125)^(−2/3)=[(4/5)³]^(−2/3)=(5/4)²=25/16','64/125=(4/5)³']
 ];
-for(const [part,q,answer,eq,factor] of vals)e(5,3,part,59,'Evaluate '+q+'.',''+q+' இன் மதிப்பைக் காண்க.',answer,[
+for(const [part,q,answer,eq,factor] of vals)e(5,3,part,59,'Find the exact value of '+q+'.',''+q+' இன் சரியான மதிப்பைக் காண்க.',answer,[
  ['Express the base using a perfect power.','அடிப்படையை நிறை அடுக்காக மாற்றுக.',factor],
  ['Apply fractional and negative exponent rules carefully.','பின்ன மற்றும் எதிர்மறை அடுக்கு விதிகளை கவனமாகப் பயன்படுத்துக.',eq]
  ],part==='iv');
