@@ -421,6 +421,85 @@ async function main() {
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
       await noOverflow(page,'chapter hub at 390px');
     });
+    // Chapter hub: remove duplicate chapter headings and avoid a floating class bar
+    // covering the first learning cards, while keeping a visible class switcher.
+    for(const width of [320,390,768,1280]){
+      await check('Clean chapter navigation without overlapping study cards at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch1');
+        await page.locator('.hub-section-card').first().waitFor({state:'visible'});
+        assert.equal((await page.locator('#chapterOverviewTitle').innerText()).trim(),'Set Language');
+        assert.equal((await page.locator('.hub-eyebrow').innerText()).trim(),'Chapter 1');
+        assert.equal(await page.locator('.hub-intro').count(),0,'No repeated introduction before the options');
+        assert.equal(await page.locator('.crumb-link').count(),1,'Only Class 9 should be in the breadcrumb');
+        assert.match(await page.locator('.crumb-link').innerText(),/Class 9/);
+        assert.doesNotMatch(await page.locator('.crumb-link').innerText(),/Set Language/);
+        assert.equal(await page.locator('.hub-section-menu h3').innerText(),'Choose a section');
+        assert.equal(await page.locator('.hub-section-card').count(),5);
+        assert.match(await page.locator('.hub-question-breakdown').innerText(),/35 worked examples/);
+        const layout=await page.evaluate(()=>{
+          const card=document.querySelector('.hub-section-card').getBoundingClientRect();
+          const nav=document.querySelector('.class-dock');
+          const intro=document.querySelector('.hub-header').getBoundingClientRect();
+          const counts=document.querySelector('.hub-question-breakdown');
+          const countBox=counts.getBoundingClientRect();
+          return {cardTop:card.top,cardLeft:card.left,cardRight:card.right,
+            cardWidth:card.width,headerBottom:intro.bottom,countsTop:countBox.top,
+            countBorder:getComputedStyle(counts).borderTopWidth,
+            dock:getComputedStyle(nav).display,screen:innerHeight,viewport:innerWidth};
+        });
+        assert.ok(layout.cardTop<layout.screen-90,'Learning choices must be visible above the fold: '+JSON.stringify(layout));
+        assert.ok(layout.cardLeft>=-1&&layout.cardRight<=layout.viewport+1,'Cards must fit narrow phones');
+        assert.equal(layout.countBorder,'0px','Counts should not be a large boxed callout');
+        if(width<=800){
+          assert.equal(layout.dock,'none','Floating Class 9–12 bar must not cover chapter content');
+          const first=page.locator('.hub-section-card').first();
+          await first.scrollIntoViewIfNeeded();
+          const clear=await first.evaluate(el=>{
+            const r=el.getBoundingClientRect();
+            const x=r.left+r.width/2,y=r.top+r.height/2;
+            return el===document.elementFromPoint(x,y)||el.contains(document.elementFromPoint(x,y));
+          });
+          assert.equal(clear,true,'Student must be able to tap a card with no overlay');
+          await page.evaluate(()=>{document.querySelector('.lesson-container').scrollTop=100000;});
+          const finalCard=page.locator('.hub-section-card').last();
+          await finalCard.scrollIntoViewIfNeeded();
+          assert.equal(await finalCard.isVisible(),true,'Last learning option remains reachable by scrolling');
+        }
+        await page.locator('.crumb-link').click();
+        assert.equal(await page.locator('#pathDialog').isVisible(),true,'Class switcher must remain discoverable');
+        assert.equal(await page.locator('#pathOptions .path-option').count(),4);
+        await page.locator('#pathClose').click();
+        await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
+        assert.equal(new URL(page.url()).searchParams.get('section'),'concepts');
+        assert.match(await page.locator('.hub-eyebrow').innerText(),/Chapter 1/);
+        assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Concepts');
+        await page.locator('.hub-back-menu').click();
+        assert.equal(new URL(page.url()).searchParams.has('section'),false);
+        await page.locator('.hub-back-class').click();
+        assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
+        await noOverflow(page,'Chapter screen at '+width+'px');
+      });
+    }
+    await check('Concise Tamil hub and clean Real Numbers chapter navigation',async()=>{
+      const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
+      await page.locator('#langTa').click();
+      assert.match(await page.locator('#chapterOverviewTitle').innerText(),/கண மொழி/);
+      assert.match(await page.locator('.hub-eyebrow').innerText(),/அத்தியாயம் 1/);
+      assert.match(await page.locator('.crumb-link').innerText(),/வகுப்பு 9/);
+      assert.equal(await page.locator('.crumb-link').count(),1);
+      assert.equal(await page.locator('.hub-intro').count(),0);
+      assert.match(await page.locator('.hub-section-menu h3').innerText(),/ஒரு பகுதியைத்/);
+      assert.equal(await page.locator('.class-dock').isVisible(),false);
+      await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+      await page.locator('.hub-back-menu').click();
+      await page.goto(url+'/index.html?class=9&chapter=g9-ch2');
+      await page.locator('#chapterOverviewTitle').waitFor({state:'visible'});
+      assert.equal((await page.locator('.hub-eyebrow').innerText()).trim(),'அத்தியாயம் 2');
+      assert.equal(await page.locator('.crumb-link').count(),1);
+      assert.equal(await page.locator('.class-dock').isVisible(),false);
+      await noOverflow(page,'Tamil Real Numbers chapter menu');
+    });
     await check('Grade 9 Set Language textbook Venn figures are question-specific and usable at 320px',async()=>{
       const page=await visit(await context(320),'/index.html?class=9&question=c9-textbook-example-1-14');
       assert.equal(await page.locator('#figureBtn').isVisible(),true,'Worked Example 1.14 should have a Figure button');
