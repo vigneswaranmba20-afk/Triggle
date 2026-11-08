@@ -308,10 +308,26 @@
       "deployed": false,
       "liveVerified": false,
       "tamilEditorial": "pending"
+    },
+    {
+      "id": "g11-ch1-ex1.1-q4-iii",
+      "englishPrintedPage": 7,
+      "tamilPrintedPage": 10,
+      "englishPdfPage": 15,
+      "tamilPdfPage": 18,
+      "status": "missing-source-image-verification",
+      "mathChecked": false,
+      "mathematicalIdentityIndependentlyTested": true,
+      "ciPassed": false,
+      "merged": false,
+      "deployed": false,
+      "liveVerified": false,
+      "tamilEditorial": "pending",
+      "sourceCheckpoint": "docs/coverage/grade-11-ex1-1-q4-iii-source-checkpoint.json"
     }
   ],
-  "next": "Verify Q4(ii) CI/browser, visually confirm Tamil source glyphs; then verify Exercise 1.1 Q4(iii) source and implement. Reconcile current main and cross-grade regressions before any preview merge.",
-  "notes": "Q4(ii) English source checked on 2025 revised English Volume I printed p7/PDF p15; Tamil Volume I page checkpoint printed p10/PDF p18, but Tamil PDF glyph extraction is degraded and visual confirmation is pending. 64 independent set-enumeration cases plus membership proof. Tamil editorial pending.",
+  "next": "Q4(iii): visually inspect original English PDF page 15 and Tamil PDF page 18, transcribe exact source glyphs, then implement bilingual lesson and source-to-UI checks. Reconcile latest main and rerun all regressions before merge.",
+  "notes": "Q4(ii) English source checked on 2025 revised English Volume I printed p7/PDF p15; Tamil Volume I page checkpoint printed p10/PDF p18, but Tamil PDF glyph extraction is degraded and visual confirmation is pending. 64 independent set-enumeration cases plus membership proof. Tamil editorial pending. Q4(iii) explicitly inventoried as missing; exhaustive identity regression does not certify textbook transcription or student-facing solution.",
   "ciEvidence": {
     "baselineCommit": "7f66ab886f4d961774288d36d644ce8ed7ffe5eb",
     "runId": 42451732756,
