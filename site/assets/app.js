@@ -182,14 +182,19 @@
      const interactiveStages=chapter.id==='g9-ch1'?window.TRIGGLE_SET_PATH?.stages:
        chapter.id==='g9-ch2'?window.TRIGGLE_REAL_PATH?.stages:null;
      const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
-     meta.textContent=(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+
-       all.length+' '+ui('existingQuestions');
+     const workedCount=all.filter(item=>/^\s*Example\b/i.test(item.label?.en||'')).length;
+     const practiceCount=all.length-workedCount;
+     const grade9Journey=chapter.id==='g9-ch1'||chapter.id==='g9-ch2';
+     meta.textContent=grade9Journey
+       ?(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+
+         (lang==='ta'?workedCount+' எடுத்துக்காட்டுகள் · '+practiceCount+' பயிற்சி வினாக்கள்':workedCount+' worked examples · '+practiceCount+' exercise/practice questions')
+       :(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+all.length+' '+ui('existingQuestions');
      button.append(title,meta);button.onclick=()=>selectChapter(chapter);section.append(button);
      if(selected&&!query){
        const quick=document.createElement('div');quick.className='sidebar-chapter-sections';
        for(const key of ['concepts','examples','exercises','quizzes']){
          const direct=document.createElement('button');direct.type='button';direct.dataset.section=key;
-         direct.textContent=menuNames[key]+' '+(key==='exercises'&&all.length?'('+all.length+')':'');
+         direct.textContent=menuNames[key]+(grade9Journey&&(key==='exercises'||key==='examples')?' ('+(key==='examples'?workedCount:practiceCount)+')':'');
          direct.classList.toggle('active',chapterOverview?.id===chapter.id&&chapterSection===key);
          direct.addEventListener('click',()=>openChapterSection(key,chapter));
          quick.append(direct);
