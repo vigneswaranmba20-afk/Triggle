@@ -96,13 +96,33 @@
    updateUrl();remember();render();closeDrawer();resetScroll();
    $('lessonCard').focus({preventScroll:true});
  }
+ // Math-first navigation. Deep-linked section menus remain stable for Back.
+ const questionKind=item=>/^\s*Example\b/i.test(item.label?.en||'')?'examples':'exercises';
+ const firstSectionItem=(chapter,section)=>{
+   const items=chapterItems(chapter).filter(item=>questionKind(item)===section);
+   if(section==='exercises'){
+     const book=items.filter(item=>item.kind!=='practice');
+     return book.find(item=>item.exercise===chapter.number+'.1')||book[0]||items[0]||null;
+   }
+   return items[0]||null;
+ };
+ function openSectionFirst(chapter,section){
+   const item=firstSectionItem(chapter,section);
+   if(!item)return false;
+   questionOrigin={grade,chapterId:chapter.id,section};
+   selectLesson(item);
+   return true;
+ }
  function selectChapter(chapter){
+   // Directly open Exercise N.1 when it is present; keep unfinished chapters honest.
+   if(openSectionFirst(chapter,'exercises'))return;
    homeView=false;classIndex=false;chapterOverview=chapter;chapterSection=null;conceptIndex=null;
    updateUrl();render();closeDrawer();resetScroll();
    $('chapterOverview').focus({preventScroll:true});
  }
- function openChapterSection(section,chapter=chapterOverview,concept=null){
+ function openChapterSection(section,chapter=chapterOverview,concept=null,browseAll=false){
    if(!chapter||!validSections.has(section)&&section!==null)return;
+   if(!browseAll&&(section==='examples'||section==='exercises')&&openSectionFirst(chapter,section))return;
    homeView=false;classIndex=false;chapterOverview=chapter;
    chapterSection=section;conceptIndex=Number.isInteger(concept)?concept:null;
    updateUrl();render();closeDrawer();resetScroll();
@@ -510,7 +530,11 @@
   $('diagramContent').innerHTML=graphic.html;
   $('visualTitle').textContent=tr(current.title);
   $('diagramCaption').textContent=graphic.caption;
+  // Same final answer inside glass viewer lets students compare regions to result.
+  $('diagramCompareAnswer').innerHTML=$('answerText').innerHTML;
+  $('diagramCompareLabel').textContent=ui('finalAnswer');
   $('figureDialog').showModal();
+  $('closeDiagram').focus({preventScroll:true});
   window.TriggleConcept?.attach(context,$('diagramContent'));
  }
  $('previous').onclick=()=>navMove(-1);$('next').onclick=()=>navMove(1);
@@ -521,7 +545,7 @@
    const chapter=chapterForItem(current);
    if(!chapter)return;
    const section=questionOrigin?.grade===grade&&questionOrigin?.chapterId===chapter.id?questionOrigin.section:null;
-   openChapterSection(section,chapter);
+   openChapterSection(section,chapter,null,true);
  };
  $('browseBtn').onclick=()=>drawerOpen?closeDrawer():openDrawer();$('closeSidebar').onclick=closeDrawer;$('backdrop').onclick=closeDrawer;
  $('search').oninput=renderList;
