@@ -658,7 +658,7 @@ async function main() {
       // No visual prose beneath the Venn diagram; retain SVG accessibility.
       assert.equal(await dialog.locator('.g9-venn-text-alternative,.diagram-caption').count(),0,
         'Students should see the Venn and answer, not redundant region/source captions');
-      const desc=await dialog.locator('.g9-venn-svg desc').innerText();
+      const desc=await dialog.locator('.g9-venn-svg desc').textContent();
       assert.match(desc,/−3, −2/,'A-only difference must match printed Example 1.14');
       assert.match(desc,/0, 2/,'B-only difference must match printed Example 1.14');
       await page.locator('#closeDiagram').click();
@@ -702,7 +702,7 @@ async function main() {
           'Venn should fill at least 92% of the viewing width: '+JSON.stringify(bounds));
         assert.ok(bounds.diagram?.rx>=145&&bounds.diagram?.ry>=120,
           'Venn geometry must use enlarged labelsafe shapes: '+JSON.stringify(bounds));
-        const accessible=await dialog.locator('.g9-venn-svg desc').innerText();
+        const accessible=await dialog.locator('.g9-venn-svg desc').textContent();
         assert.match(accessible,/P only n/,'Screen readers should still get correct P-only members');
         assert.match(accessible,/P∩Q m/,'Screen readers should still get overlap member');
         assert.match(accessible,/Q only i,j/,'Screen readers should still get Q-only members');
