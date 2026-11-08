@@ -48,6 +48,16 @@ async function main() {
     const ctx = await browser.newContext({ viewport: { width, height: 900 }, serviceWorkers, reducedMotion: 'reduce' });
     contexts.push(ctx);
     await ctx.addInitScript(() => {
+      // Existing interaction suites intentionally check the expanded view.
+      // On every question rerender (including language changes), emulate the
+      // keyboard gesture which reveals controls. The quiet default is checked
+      // independently in test_quiet_reader_browser.cjs.
+      const revealForLegacyChecks=()=>setTimeout(()=>{
+        if(window.TriggleQuietReader?.isActive())
+          document.dispatchEvent(new KeyboardEvent('keydown',{key:'Tab',bubbles:true}));
+      },0);
+      window.addEventListener('triggle:lessonchange',revealForLegacyChecks);
+      window.addEventListener('load',revealForLegacyChecks);
       // Keep an optional seasonal greeting from changing test focus or layout.
       try { localStorage.setItem('triggle:diwali:last-shown', new Date(Date.now() + 19800000).toISOString().slice(0, 10)); } catch {}
     });
