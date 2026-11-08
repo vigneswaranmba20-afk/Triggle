@@ -1,0 +1,259 @@
+/* Triggle Math-First v1
+   Mobile-first low-distraction reader shared by all grades, both languages.
+   No JavaScript dependencies, no fullscreen figure takeover. */
+:root{--math-first-target:44px}
+.chapter-hub .hub-heading-a11y{
+ position:absolute!important;width:1px!important;height:1px!important;
+ padding:0!important;margin:-1px!important;overflow:hidden!important;
+ clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important
+}
+.chapter-hub .hub-top-actions{margin:0 0 5px!important}
+.chapter-hub .hub-top-actions .hub-back-menu,
+.chapter-hub .hub-top-actions .hub-back-class{
+ border:0!important;background:transparent!important;box-shadow:none!important;
+ min-height:44px!important;padding:7px 2px!important;border-radius:6px!important;
+ color:#4a3577!important;font-weight:750!important;text-decoration:none!important
+}
+.chapter-hub .hub-top-actions button:hover{text-decoration:underline!important}
+.chapter-hub .hub-panel{padding-top:0!important}
+.chapter-hub .hub-quiz-progress{
+ display:inline-flex;align-items:center;background:transparent!important;
+ padding:4px 0!important;margin:0 0 7px!important;
+ color:#5e526e!important;font-size:13px!important
+}
+.chapter-hub .hub-quiz-question:first-of-type{margin-top:3px}
+.chapter-hub .hub-quiz-question{padding:12px!important}
+.chapter-hub .hub-quiz-question h4{font-size:16px!important;line-height:1.5!important}
+.chapter-hub .hub-quiz-answers button{font-size:15px!important}
+.chapter-hub .hub-content-status{border-top:1px solid #ebe8f0;padding:8px 0;margin:12px 0 0}
+.chapter-hub .hub-content-status summary{min-height:44px;font-size:13px;font-weight:720;cursor:pointer;color:#65567d;display:flex;align-items:center}
+.chapter-hub .hub-content-status p{font-size:13px!important;color:#5f576c;line-height:1.55}
+
+/* Textbook thinking activities: single card, question, answer. No nested
+   'Show worked answer' disclosure and no duplicate section introduction. */
+.chapter-hub .textbook-extras{
+ margin:0!important;padding:0!important;border-top:0!important
+}
+.chapter-hub .textbook-extra{
+ margin:0 0 9px!important;border:1px solid #e4dfeb!important;
+ background:#fff!important;border-radius:14px!important;
+ padding:0!important;box-shadow:0 1px 5px #2d22450b
+}
+.chapter-hub .textbook-extra>summary{
+ min-height:48px!important;padding:12px 14px!important;margin:0!important;
+ font-size:15px!important;line-height:1.38!important;
+ font-weight:760!important;color:#362d53!important;cursor:pointer;
+ display:list-item;list-style-position:inside
+}
+.chapter-hub .textbook-extra[open]>summary{
+ border-bottom:1px solid #ece8f2;background:#fbfafe;
+ border-radius:14px 14px 0 0
+}
+.chapter-hub .textbook-extra>.task-question{
+ margin:11px 14px 8px!important;font-size:16px!important;
+ line-height:1.55!important;font-weight:690;color:#302d44!important;
+ white-space:pre-line;overflow-wrap:anywhere
+}
+.chapter-hub .textbook-extra .task-solution{
+ border-left:3px solid #6c59a6;margin:10px 14px 12px;
+ background:#f8f6fd;border-radius:0 10px 10px 0;padding:10px 13px
+}
+.chapter-hub .textbook-extra .task-solution-label{
+ font-size:13px;line-height:1.3;color:#58417f;margin:0 0 7px;font-weight:800
+}
+.chapter-hub .textbook-extra .task-answer{
+ color:#343148;font-size:15px;line-height:1.65;overflow-wrap:anywhere
+}
+.chapter-hub .textbook-extra .task-answer p{
+ font-size:15px!important;line-height:1.65!important;
+ margin:5px 0 8px!important;white-space:pre-wrap
+}
+.chapter-hub .task-source-details{
+ margin:0 14px 10px!important;padding:0!important;
+ border:0!important;border-left:0!important;background:transparent
+}
+.chapter-hub .task-source-details summary{
+ min-height:32px!important;font-size:12px!important;font-weight:700!important;
+ color:#645a71!important;list-style-position:inside;cursor:pointer
+}
+.chapter-hub .task-source-details p{
+ color:#625773!important;font-size:12px!important;line-height:1.5!important;margin:5px 0!important
+}
+.activity-table-scroll{max-width:100%;overflow-x:auto;scrollbar-width:thin;outline-offset:3px}
+.activity-cardinality-table{
+ width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums;
+ min-width:360px;text-align:center;background:#fff;border-radius:8px;overflow:hidden
+}
+.activity-cardinality-table caption{font-size:12px;font-weight:800;color:#564574;text-align:left;padding:4px 0 8px}
+.activity-cardinality-table th,.activity-cardinality-table td{
+ border:1px solid #ddd4ea;padding:7px 5px;white-space:nowrap
+}
+.activity-cardinality-table th{background:#eee9f9;color:#45335f;font-weight:800}
+.activity-cardinality-table tbody tr:nth-child(even){background:#faf8fe}
+
+/* The figure is a compact, translucent comparison sheet. The underlying
+   worked answer stays visible, and a duplicate readable answer is inside. */
+.figure-dialog{
+ position:fixed!important;inset:auto auto max(12px,env(safe-area-inset-bottom)) 50%!important;
+ transform:translateX(-50%);margin:0!important;
+ width:min(96vw,660px)!important;max-width:660px;
+ max-height:min(76dvh,650px)!important;overflow-y:auto!important;
+ border:1px solid rgba(168,149,206,.70)!important;border-radius:20px!important;
+ background:rgba(253,251,255,.91)!important;color:#2e2847;
+ -webkit-backdrop-filter:blur(14px) saturate(1.15);
+ backdrop-filter:blur(14px) saturate(1.15);
+ box-shadow:0 14px 45px rgba(42,29,84,.22)!important
+}
+.figure-dialog::backdrop{
+ background:rgba(28,21,51,.12)!important;
+ -webkit-backdrop-filter:none!important;backdrop-filter:none!important
+}
+.figure-dialog .dialog-header{
+ position:sticky;top:0;z-index:2;padding:9px 14px!important;
+ background:rgba(250,247,255,.91);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)
+}
+.figure-dialog .dialog-header h3{font-size:16px!important;margin:2px 0!important}
+.figure-dialog .dialog-close{
+ color:#b61949!important;background:#fff0f4!important;
+ border:1px solid #df8da5!important;font-size:14px!important;
+ min-height:44px!important;min-width:72px!important
+}
+.figure-dialog .diagram-content{padding:8px 12px 0!important;overflow-x:auto}
+.figure-dialog .diagram-content svg{max-height:280px;width:100%;height:auto}
+.figure-dialog .diagram-caption{
+ font-size:12px!important;line-height:1.5!important;margin:5px 12px!important;color:#685e7b!important
+}
+.figure-dialog .diagram-compare{
+ margin:8px 12px 12px;padding:10px 12px;border:1px solid #cfdfd6;
+ border-radius:12px;background:rgba(244,252,248,.94)
+}
+.figure-dialog .diagram-compare strong{display:block;font-size:12px;color:#327d61;margin-bottom:5px}
+.figure-dialog .diagram-compare .math-answer{font-size:16px;line-height:1.5;color:#203b31}
+.figure-dialog button:focus-visible,.activity-table-scroll:focus-visible{outline:3px solid #7351b9;outline-offset:2px}
+
+@media(max-width:800px){
+ /* A single 54px row replaces the two large navigation rows on question pages. */
+ body.textbook-reader .appbar{
+  display:grid!important;grid-template-columns:minmax(0,1fr) 40px 40px auto!important;
+  grid-template-rows:1fr!important;gap:5px!important;align-items:center!important;
+  height:54px!important;min-height:54px!important;padding:4px 8px!important
+ }
+ body.textbook-reader .brand-mobile{grid-column:1!important;grid-row:1!important;min-width:0}
+ body.textbook-reader .brand-mobile b{font-size:17px!important;white-space:nowrap}
+ body.textbook-reader .brand-mobile .logo{width:29px!important;height:29px!important}
+ body.textbook-reader .appbar-actions{display:contents!important}
+ body.textbook-reader .browse-button{
+  grid-column:2!important;grid-row:1!important;justify-self:center!important;
+  width:40px!important;min-width:40px!important;height:40px!important;
+  min-height:40px!important;padding:0!important;justify-content:center!important;
+  margin:0!important;border-radius:11px!important
+ }
+ body.textbook-reader .browse-button [data-i18n],
+ body.textbook-reader .browse-button #browseChevron{display:none!important}
+ body.textbook-reader .browse-button .browse-symbol{font-size:22px!important}
+ body.textbook-reader .home-link{
+  grid-column:3!important;grid-row:1!important;width:40px!important;
+  min-width:40px!important;height:40px!important;justify-self:center!important;
+  min-height:40px!important;margin:0!important;padding:0!important;justify-content:center!important
+ }
+ body.textbook-reader .home-link [data-i18n]{display:none!important}
+ body.textbook-reader .home-link .home-icon{font-size:23px!important;line-height:1!important}
+ body.textbook-reader .lang-switch{
+  grid-column:4!important;grid-row:1!important;justify-self:end!important;
+  margin:0!important;min-width:0!important
+ }
+ body.textbook-reader .lang-switch button{min-height:36px!important;padding:5px 7px!important;font-size:12px!important}
+ /* Breadcrumb is one scrollable line; the last group is duplicated by the
+    exercise badge and the Find topic drawer, so do not stack a third pill. */
+ body.textbook-reader .status-row{margin:4px 0 6px!important;min-height:0!important;overflow:hidden}
+ body.textbook-reader .crumb{flex-wrap:nowrap!important;overflow-x:auto!important;gap:4px!important;scrollbar-width:none;white-space:nowrap!important}
+ body.textbook-reader .crumb::-webkit-scrollbar{display:none}
+ body.textbook-reader .crumb-link{
+  flex:none;max-width:min(41vw,170px);min-height:34px!important;padding:5px 8px!important;
+  font-size:13px!important;line-height:1.2!important;overflow:hidden;text-overflow:ellipsis;
+  border-radius:9px!important
+ }
+ body.textbook-reader .crumb-link:last-child,
+ body.textbook-reader .crumb-sep:last-of-type{display:none!important}
+ body.textbook-reader .crumb-sep{font-size:15px!important}
+ body.textbook-reader .lesson-container{padding:7px 10px 10px!important}
+ body.textbook-reader .lesson-card{
+  display:flex!important;flex-direction:column!important;gap:0!important;
+  padding:12px 12px 15px!important;border-radius:18px!important
+ }
+ body.textbook-reader .lesson-card>.question-top{order:1;min-height:0!important}
+ body.textbook-reader .lesson-card>.lesson-title-row{order:2;margin-top:5px!important}
+ body.textbook-reader .lesson-card>#questionText{order:3}
+ body.textbook-reader .lesson-card>#answerBox{order:4}
+ body.textbook-reader .lesson-card>#inlineFigure{order:5}
+ body.textbook-reader .lesson-card>#solutionModeRow{order:6}
+ body.textbook-reader .lesson-card>#stepsRegion{order:7}
+ body.textbook-reader .lesson-card>#visualLessonAction{order:8}
+ body.textbook-reader .lesson-card>.lesson-bottom{order:9}
+ body.textbook-reader .lesson-progress{font-size:11px!important}
+ body.textbook-reader .mini-topic{display:none!important}
+ body.textbook-reader .lesson-title-row h2{font-size:19px!important;line-height:1.3!important}
+ body.textbook-reader .question-text{
+  max-height:none!important;min-height:0!important;overflow:visible!important;
+  margin:8px 0 0!important;padding:11px 13px!important;
+  font-size:clamp(15px,3.9vw,17px)!important;line-height:1.5!important
+ }
+ body.textbook-reader .answer-box{
+  margin:9px 0 0!important;padding:10px 12px!important;border-radius:12px!important;
+  min-height:0!important
+ }
+ body.textbook-reader .answer-box>div:first-child{font-size:12px!important}
+ body.textbook-reader .answer-box .math-answer{font-size:clamp(16px,4vw,19px)!important;line-height:1.4!important}
+ body.textbook-reader .steps-region{
+  margin:11px 0 0!important;padding:0!important;max-height:none!important;
+  min-height:0!important;overflow:visible!important
+ }
+ body.textbook-reader .steps{overflow:visible!important;max-height:none!important}
+ body.textbook-reader .inline-figure{
+  margin:8px 0 0!important;padding:8px!important;min-height:0!important
+ }
+ body.textbook-reader .inline-figure-visual svg{max-height:118px!important;height:auto!important}
+ body.textbook-reader .inline-figure figcaption{font-size:11px!important;line-height:1.4!important}
+ body.textbook-reader .page-controls{
+  grid-template-areas:"chapters chapters" "previous next"!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  row-gap:2px!important;column-gap:8px!important;
+  padding:3px 9px calc(5px + env(safe-area-inset-bottom))!important;
+  border-top:1px solid #e2d9ec!important;
+  box-shadow:none!important;border-radius:0!important;background:#fff!important;
+  min-height:0!important
+ }
+ body.textbook-reader .page-controls .all-chapters-button{
+  min-height:32px!important;padding:2px 5px!important;font-size:16px!important;
+  border:0!important;box-shadow:none!important;background:transparent!important;
+  color:#5b447c!important
+ }
+ body.textbook-reader .page-controls .all-chapters-button .nav-arrow{font-size:16px!important}
+ body.textbook-reader .page-controls .page-button{
+  min-height:44px!important;padding:8px!important;font-size:16px!important;
+  line-height:1.25!important;border-radius:10px!important
+ }
+ body.textbook-reader .page-controls #allChaptersReturn{margin:0!important}
+ body.textbook-reader .lesson-container{scroll-padding-bottom:8px!important}
+ .figure-dialog{
+  bottom:calc(9px + env(safe-area-inset-bottom))!important;
+  max-height:min(64dvh,550px)!important
+ }
+ .figure-dialog .diagram-content svg{max-height:185px!important}
+ .figure-dialog .diagram-caption{font-size:11px!important}
+ .figure-dialog .diagram-compare .math-answer{font-size:15px!important}
+}
+@media(max-width:355px){
+ body.textbook-reader .brand-mobile b{font-size:15px!important}
+ body.textbook-reader .appbar{grid-template-columns:minmax(0,1fr) 38px 38px auto!important;gap:3px!important;padding:4px 6px!important}
+ body.textbook-reader .browse-button,body.textbook-reader .home-link{width:38px!important;min-width:38px!important}
+ body.textbook-reader .lang-switch button{font-size:11px!important;padding:5px!important}
+ body.textbook-reader .crumb-link{font-size:12px!important}
+ .chapter-hub .textbook-extra>.task-question{font-size:15px!important}
+}
+@media(prefers-reduced-transparency:reduce){
+ .figure-dialog{background:#fdfbff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .figure-dialog,.chapter-hub .textbook-extra{animation:none!important;transition:none!important}
+}
