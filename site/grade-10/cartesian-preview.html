@@ -51,7 +51,7 @@ function draw(){
  for(const key of ['en','ta'])document.getElementById(key).setAttribute('aria-pressed',String(key===lang));
  document.getElementById('notice').textContent=lang==='en'?'Only Q1(i–iii) are drafted. Tamil human editorial review pending. This is a testing preview, not full curriculum coverage.':'Q1(i–iii) மட்டுமே வரைவு நிலையில் உள்ளன. தமிழ் மனிதத் தொகுப்பாசிரியர் மதிப்பாய்வு நிலுவையில் உள்ளது. இது சோதனை முன்னோட்டம் மட்டுமே.';
 }
-for(const key of ['en','ta'])document.getElementById(key).addEventListener('click',()=>{lang=key;document.documentElement.lang=lang;retry.textContent=lang==='en'?'Retry loading lessons':'பாடங்களை மீண்டும் ஏற்றுக';if(lessons.length)draw();else if(!retry.hidden)main.replaceChildren(el('p',errorText[lang]));});
+for(const key of ['en','ta'])document.getElementById(key).addEventListener('click',()=>{lang=key;document.documentElement.lang=lang;retry.textContent=lang==='en'?'Retry loading lessons':'பாடங்களை மீண்டும் ஏற்றுக';if(lessons.length)draw();else if(!retry.hidden){const message=el('p',errorText[lang]);message.id='status';message.setAttribute('role','alert');main.replaceChildren(message);}});
 async function loadLessons(){retry.hidden=true;main.replaceChildren(el('p',lang==='en'?'Loading lessons…':'பாடங்கள் ஏற்றப்படுகின்றன…'));try{
  const responses=await Promise.all(ids.map(id=>fetch(base+id+'.json')));
  if(responses.some(r=>!r.ok))throw Error('lesson file unavailable');
