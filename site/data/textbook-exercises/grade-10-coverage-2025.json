@@ -4,7 +4,7 @@
   "edition": "2025 revised",
   "lastVerified": "2026-11-08",
   "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
-  "notes": "2026-11-08 12:30 IST: 2025 revised English/Tamil Exercise 1.1 Q2 independently source-verified on printed p.6/PDF p.12; bilingual 12+12 ordered-pair derivation added. Browser transient 503 retry test made deterministic; CI must rerun. No merge or live verification; Tamil human editorial pending.",
+  "notes": "2026-11-08 13:30 IST: inspected failed Grade 10 CI #42457199913; npm test and mathematics passed, browser failed stale expected count 3 vs 4 after Q2 addition. Fixed retry count, added restored-Q2/offline assertions and corrected Q2 heading (no null subpart). Await new full CI; no new textbook content, merge or live verification; Tamil editorial pending.",
   "chapters": [
     {
       "chapter": 1,
@@ -149,15 +149,15 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "Confirm Q2 mathematics, bilingual and browser CI, repair any failures; shared viewport regression requires main coordination. Verify Exercise 1.1 Q3 exact ordered pairs from both 2025 textbooks. Reconcile latest main and run cross-grade regressions before merge.",
+  "nextAction": "Confirm GitHub Actions on commit 06c656f8642810ef0c22f6caf552d89a8c5c7efe; if browser and cross-grade tests pass, reconcile with latest main before preview merge. Next source-verified textbook question: Chapter 1 Exercise 1.1 Q3; inspect both 2025 revised PDFs before drafting.",
   "testStatus": {
     "localMathEnumeration": "Q1(iii) independent enumeration checked: A×B=∅, A×A has four ordered pairs, B×A=∅; full repository tests pending",
-    "npmTest": "Passed in prior GitHub workflow for previous commit; latest commit pending.",
-    "playwright": "Grade 10 browser tests scheduled after Chromium installation; latest CI pending.",
-    "githubCI": "New Q2 commit CI pending; previous Grade 10 workflow failed transient 503 recovery test; shared tests previously passed.",
+    "npmTest": "Passed in failed CI run #42457199913 (before current fixes); current commit pending.",
+    "playwright": "Run #42457199913 failed at stale retry assertion 4 !== 3 after Q2 was added; corrected assertion plus Q2/offline checks committed, new run pending.",
+    "githubCI": "Run #42457199913 failed Grade 10 browser step; npm test and independent math passed; new commit CI pending.",
     "merged": false,
     "liveVerified": false,
-    "latestGrade10PreviewCommit": "c767d7b4f5ba00c34a1f0a44b002e546debc39ae",
+    "latestGrade10PreviewCommit": "06c656f8642810ef0c22f6caf552d89a8c5c7efe",
     "newPreviewFeatures": "Q1(i–iii) bilingual solutions, empty-set grid support, source/math gates; Tamil editorial pending"
   }
 }
