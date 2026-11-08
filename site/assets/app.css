@@ -988,3 +988,37 @@
  .twd-calculation .twd-math{font-size:19px}
  .twd-question .twd-display-equation .twd-math{font-size:17px}
 }
+
+
+/* Example 2.12: textbook question immediately followed by its own solution.
+   No intermediate page-length list of unanswered questions. */
+.twd-lesson .twd-question-inner{gap:0}
+.twd-lesson .worked-step.twd-worked-step{
+  padding:20px 0 28px;border-bottom:1px solid var(--twd-line);
+}
+.twd-question-answer-pair{display:grid;gap:0;min-width:0}
+.twd-question-answer-pair>.twd-question-part{
+  background:#faf9ff;border:1px solid #e7e1f0;border-radius:16px 16px 0 0;
+  padding:16px 15px;min-width:0;
+}
+.twd-question-answer-pair>.twd-part-solution{
+  min-width:0;padding:17px 15px 19px;border:1px solid #e7e1f0;
+  border-top:0;border-radius:0 0 16px 16px;background:#fff;
+}
+.twd-question-answer-pair .twd-part-label{
+  font-size:17px;line-height:1.4;font-weight:850;color:#604a92;
+}
+.twd-question-answer-pair .twd-step-heading h3{
+  font-size:clamp(17px,3.2vw,20px);color:#342953;
+}
+.twd-question-answer-pair .twd-step-reason{
+  margin:10px 0 13px;line-height:1.7;
+}
+.twd-question-answer-pair .twd-derivations{margin-top:8px}
+.twd-lesson .answer-box[hidden]{display:none!important}
+.twd-lesson .twd-question .twd-prompt{margin-bottom:3px}
+@media(max-width:680px){
+  .twd-question-answer-pair>.twd-question-part{padding:13px 11px}
+  .twd-question-answer-pair>.twd-part-solution{padding:14px 11px 18px}
+  .twd-lesson .worked-step.twd-worked-step{padding:13px 0 19px}
+}
