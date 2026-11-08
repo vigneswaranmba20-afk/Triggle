@@ -95,7 +95,7 @@ async function main(){
     },'medium');
     await check(c,'Controls have accessible text','accessibility',async()=>{
      const unnamed=await page.evaluate(()=>[...document.querySelectorAll('#chapterOverview button')].filter(el=>{
-      const r=el.getBoundingClientRect();return r.width&&r.height&&!(el.innerText.trim()||el.ariaLabel||el.title);
+      const r=el.getBoundingClientRect();return r.width&&r.height&&!(el.textContent.trim()||el.ariaLabel||el.title);
      }).map(el=>el.outerHTML.slice(0,120)));
      assert.equal(unnamed.length,0,JSON.stringify(unnamed.slice(0,8)));
     },'medium');
