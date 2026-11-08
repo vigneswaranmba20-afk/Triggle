@@ -860,6 +860,9 @@ async function main() {
     await check('Phase 2 bilingual Set Language micro-lab works without leaving the chapter', async () => {
       const page = await visit(await context(320), '/index.html?class=9&chapter=g9-ch1');
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
+      await page.locator('.sp2-journey [data-nav] button').nth(3).click();
+      assert.equal(await page.locator('#chapterOverview .p2-lab').count(),0,'Venn lab must open only when requested');
+      await page.locator('.sp2-journey [data-demo-mode="go"]').click();
       const lab = page.locator('#chapterOverview .p2-lab');
       await lab.waitFor({ state:'visible' });
       assert.equal(await lab.locator('[data-result-set]').innerText(), '{1, 2, 3, 4, 5, 6}');
@@ -878,6 +881,9 @@ async function main() {
       assert.ok((await lab.locator('[data-reasoning]').innerText()).includes('20 − 16 = 4'));
       assert.equal(await lab.locator('[data-next-reason]').isVisible(), false);
       await page.locator('#langTa').click();
+      await page.locator('.sp2-journey [data-nav] button').nth(3).click();
+      await page.locator('.sp2-journey [data-demo-mode="go"]').click();
+      await lab.waitFor({state:'visible'});
       assert.ok((await lab.locator('h3').first().innerText()).includes('கண மொழி'));
       await lab.locator('[data-op="difference"]').click();
       assert.equal(await lab.locator('[data-result-set]').innerText(), '{1, 2}');
