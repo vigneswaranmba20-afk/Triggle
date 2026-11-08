@@ -166,8 +166,10 @@
             article.append(heading,idea,example,rule,source);panel.append(article);
           }
         }else{
-          window.TriggleSetJourney?.mount(panel,chapter,lang);
-          window.TriggleLab?.mount(panel,chapter,lang);
+          window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null));
+        }
+        if((chapter.id==='g9-ch1'||chapter.id==='g9-ch2')&&window.TriggleTextbookActivities){
+          window.TriggleTextbookActivities.mount(panel,chapter,lang);
         }
         if(Number.isInteger(initialConcept)&&initialConcept>=0){
           const target=panel.querySelector('.sp2-nav [data-index="'+initialConcept+'"]');
