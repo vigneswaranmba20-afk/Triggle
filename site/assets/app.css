@@ -740,7 +740,7 @@
 .rnlab .sp2-formula{line-height:2.05;overflow-x:auto;overflow-y:visible}
 .rnlab .sp2-demo-output{display:block;line-height:2.1!important;overflow-x:auto;overflow-y:visible;overflow-wrap:normal}
 .rnlab .sp2-demo-output .triggle-math,.rnlab .sp2-formula .triggle-math{margin-inline:.04em}
-.rnlab .rnlab-choice{display:inline-flex;justify-content:center;align-items:center;gap:4px;min-width:0;overflow-x:auto;white-space:nowrap}
+.rnlab .rnlab-choice{display:inline-flex;justify-content:center;align-items:center;gap:0;min-width:0;overflow-x:auto;white-space:nowrap}
 .rnlab .rnlab-choice .triggle-math{font-size:1.18em}
 .rnlab .sp2-example .triggle-math,.rnlab .sp2-recall .triggle-math{font-size:1.08em}
 @media(max-width:420px){.rnlab .sp2-formula{padding:10px;font-size:clamp(15px,4.1vw,19px)}.rnlab .rnlab-choice{font-size:12px;padding:10px 7px}}
@@ -787,3 +787,7 @@
  .rnlab .rnlab-step-equation .rnlab-rational-math{font-size:19px}
  .rnlab .rnlab-choices:has(.rnlab-rational-math) .rnlab-choice{min-height:72px}
 }
+
+/* Powers, signs and operands stay in one inline formula inside every button. */
+.rnlab .rnlab-math-choice{display:inline-block;white-space:nowrap;line-height:1.45;max-width:100%}
+.rnlab .rnlab-math-choice .triggle-math{vertical-align:baseline}

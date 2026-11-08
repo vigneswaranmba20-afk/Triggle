@@ -25,7 +25,16 @@ const cases=[
  ['[[1|16]]','class="frac"'],
  ['( [[2|3]] )²','math-group-power'],
  ['3.2 × 10^-3','<msup>'],
- ['aᵏ','<sup>k</sup>'],
+ ['aᵏ','<msup><mi>a</mi><mi>k</mi></msup>'],
+ ['x²=25','<msup><mi>x</mi><mn>2</mn></msup>'],
+ ['x^2=25','<msup><mi>x</mi><mn>2</mn></msup>'],
+ ['x³=27','<msup><mi>x</mi><mn>3</mn></msup>'],
+ ['x⁻²','<mrow><mo>−</mo><mn>2</mn></mrow>'],
+ ['x¹²','<msup><mi>x</mi><mn>12</mn></msup>'],
+ ['sin²θ+cos²θ=1','<msup><mi>sin</mi><mn>2</mn></msup>'],
+ ['a²+b²=c²','<msup><mi>b</mi><mn>2</mn></msup>'],
+ ['9 cm²','<msup><mi>cm</mi><mn>2</mn></msup>'],
+ ['3ⁿ','<msup><mn>3</mn><mi>n</mi></msup>'],
  ['வேர்க்குறி: ³√108','<mroot>'],
  ['5√3','<mspace width="0.18em"/>'],
  ['6√3','<mspace width="0.18em"/>'],
@@ -57,6 +66,25 @@ assert.ok(!fifthRoot.includes('<mspace width="0.18em"/>'),'A fifth-root index mu
 const sameAnswer=render('√12+√27=2√3+3√3=5√3');
 assert.equal((sameAnswer.match(/<mspace width="0.18em"\/>/g)||[]).length,3,'All three coefficients get consistent spacing');
 
+
+for(const source of ['x²=25','x^2=25','x³=27','a²+b²=c²','sin²θ+cos²θ=1','3ⁿ']){
+  const html=render(source);
+  assert.ok(html.includes('<msup>'),source+' must contain a true raised superscript');
+  assert.ok(!html.includes('<sup>'),source+' must not split off the power into a flex item');
+}
+const project=[
+  ['assets/app.js', 'window.TriggleNotation.render'],
+  ['assets/chapter-hub.js','const typeset=s=>window.TriggleNotation?.render(s)'],
+  ['assets/set-language-journey.js','const htmlMath=s=>window.TriggleNotation?.render(s)'],
+  ['assets/real-numbers-journey.js','const notation=value=>window.TriggleNotation?window.TriggleNotation.render(value)']
+];
+for(const [file,needle] of project){
+  const source=fs.readFileSync(path.join(root,file),'utf8');
+  assert.ok(source.includes(needle),file+' must use the same shared math renderer');
+}
+const concept=fs.readFileSync(path.join(root,'data/real-numbers/g9-ch2-concepts.js'),'utf8');
+assert.ok(concept.includes('x²=25 has solutions x=±5'),'Do not alter the textbook mathematical meaning');
+
 const dangerous=render('<img src=x onerror=alert(1)> a^(1/2)');
 assert.ok(!dangerous.includes('<img'),'Never trust authored notation source as HTML');
 assert.ok(dangerous.includes('&lt;img'),'Escaped source text must remain visible');
@@ -64,7 +92,7 @@ const journey=fs.readFileSync(path.join(root,'assets/real-numbers-journey.js'),'
 const stages=fs.readFileSync(path.join(root,'data/real-numbers/g9-ch2-concepts.js'),'utf8');
 const css=fs.readFileSync(path.join(root,'assets/app.css'),'utf8');
 assert.ok(journey.includes('output.innerHTML=notation(answer)'),'Interactive results must typeset math');
-assert.ok(journey.includes('b.innerHTML=notation(caption)'),'Interactive powers must typeset math');
+assert.ok(journey.includes('rnlab-math-choice') && journey.includes('notation(caption)'), 'All maths options must keep their exponents attached');
 assert.ok(journey.includes("['half','4^(1/2)']"),'A power must never look like the mixed number 4½');
 assert.ok(!journey.includes('4½'),'Mixed-number ambiguity must not return');
 assert.ok(stages.includes('a^(m/n)=(ⁿ√a)^m'),'Radical rule must retain its correct mathematical meaning');

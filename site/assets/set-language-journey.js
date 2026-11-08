@@ -180,16 +180,16 @@
       if(!holder||!item)return;
       const q=pick(item.question,lang);
       holder.innerHTML='<details class="sp2-paper sp2-extra"><summary>'+esc(t.extra)+'</summary>'+
-        '<div class="sp2-recall"><p>'+esc(q)+'</p>'+
+        '<div class="sp2-recall"><p>'+htmlMath(q)+'</p>'+
         '<div class="sp2-answers" role="group" aria-label="'+esc(q)+'" data-extra-answers></div>'+
         '<div class="sp2-recall-actions"><button type="button" data-extra-hint>'+esc(t.hint)+'</button>'+
         '<button type="button" data-extra-why-button>'+esc(t.reason)+'</button></div>'+
         '<p data-extra-feedback role="status" aria-live="polite"></p>'+
-        '<div class="sp2-why" data-extra-why hidden>'+esc(pick(item.why,lang))+'</div></div></details>';
+        '<div class="sp2-why" data-extra-why hidden>'+htmlMath(pick(item.why,lang))+'</div></div></details>';
       const choices=holder.querySelector('[data-extra-answers]');
       item.choices.forEach((choice,i)=>{
         const button=document.createElement('button');
-        button.type='button';button.dataset.extraChoice=String(i);button.textContent=pick(choice,lang);
+        button.type='button';button.dataset.extraChoice=String(i);button.innerHTML=htmlMath(pick(choice,lang));
         button.addEventListener('click',()=>{
           choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
           holder.querySelector('[data-extra-feedback]').textContent=i===item.correct?t.correct:t.retry;
@@ -209,7 +209,7 @@
       const details=document.createElement('details');
       details.className='sp2-hard';
       details.innerHTML='<summary>'+esc(t.deeper)+'</summary>'+
-        '<p>'+esc(pick(data.prompt,lang))+'</p>'+
+        '<p>'+htmlMath(pick(data.prompt,lang))+'</p>'+
         '<ol data-hard-steps></ol>'+
         '<button class="sp2-reveal" type="button" data-hard-next>'+esc(t.next)+'</button>'+
         '<p class="sp2-hard-done" aria-live="polite" data-hard-done></p>';
@@ -217,7 +217,7 @@
       details.querySelector('[data-hard-next]').addEventListener('click',()=>{
         if(revealed>=data.steps.length)return;
         const li=document.createElement('li');
-        li.textContent=pick(data.steps[revealed++],lang);
+        li.innerHTML=htmlMath(pick(data.steps[revealed++],lang));
         details.querySelector('[data-hard-steps]').append(li);
         if(revealed===data.steps.length){
           details.querySelector('[data-hard-next]').hidden=true;
@@ -236,23 +236,23 @@
         '<div class="sp2-stage-reference">'+esc(t.source)+' '+esc(stage.section)+
         ' · '+esc(t.enPage)+' '+stage.page.en+' · '+esc(t.taPage)+' '+stage.page.ta+'</div>'+
         '<h4>'+esc(pick(stage.title,lang))+'</h4>'+
-        '<p class="sp2-idea">'+esc(pick(stage.idea,lang))+'</p>'+
-        '<p class="sp2-example">'+esc(pick(stage.example,lang))+'</p>'+
+        '<p class="sp2-idea">'+htmlMath(pick(stage.idea,lang))+'</p>'+
+        '<p class="sp2-example">'+htmlMath(pick(stage.example,lang))+'</p>'+
         '<div class="sp2-formula" aria-label="Mathematics expression">'+htmlMath(stage.rule)+'</div>'+
         demoShell(demoTitle)+
-        '<div class="sp2-recall"><h5>'+esc(t.try)+'</h5><p>'+esc(pick(stage.question,lang))+'</p>'+
+        '<div class="sp2-recall"><h5>'+esc(t.try)+'</h5><p>'+htmlMath(pick(stage.question,lang))+'</p>'+
         '<div class="sp2-answers" data-answers role="group" aria-label="'+esc(pick(stage.question,lang))+'"></div>'+
         '<div class="sp2-recall-actions"><button type="button" data-hint>'+esc(t.hint)+
         '</button><button type="button" data-why-button>'+esc(t.why)+'</button></div>'+
         '<p data-feedback role="status" aria-live="polite"></p>'+
-        '<div class="sp2-why" data-why hidden>'+esc(pick(stage.why,lang))+'</div></div>'+
+        '<div class="sp2-why" data-why hidden>'+htmlMath(pick(stage.why,lang))+'</div></div>'+
         '<details class="sp2-paper"><summary>✎ '+esc(t.paper)+'</summary>'+
-        '<p>'+esc(pick(stage.paper,lang))+'</p></details>'+
+        '<p>'+htmlMath(pick(stage.paper,lang))+'</p></details>'+
         '<div data-extra-practice></div>'+ (stage.id==='cardinality'?'<div data-hard></div>':'');
       const answers=panel.querySelector('[data-answers]');
       stage.choices.forEach((choice,i)=>{
         const button=document.createElement('button');
-        button.type='button';button.dataset.choice=String(i);button.textContent=pick(choice,lang);
+        button.type='button';button.dataset.choice=String(i);button.innerHTML=htmlMath(pick(choice,lang));
         button.addEventListener('click',()=>{
           answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
           const good=i===stage.correct;

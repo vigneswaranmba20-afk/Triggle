@@ -72,8 +72,20 @@
       (whole,root,raw)=>stash(typeset(whole,'<mroot>'+simpleMath(raw[0]==='('?raw.slice(1,-1):raw)+symbol(root==='∛'?'3':'4')+'</mroot>')));
     s=s.replace(/√(\([^()\n]{1,100}\)|[a-zA-Z]+|\d+(?:\.\d+)?)/gu,
       (whole,raw)=>stash(typeset(whole,'<msqrt>'+simpleMath(raw[0]==='('?raw.slice(1,-1):raw)+'</msqrt>')));
-    // Existing ordinary powers and Unicode superscripts continue to work.
-    s=s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹ᵏ]/gu,c=>'<sup>'+exponents[c]+'</sup>');
+    // Pair a base and its superscript into one semantic MathML expression.
+    // Standalone <sup> nodes become separate flex items in maths buttons and
+    // may appear as baseline text (e.g. "x 2 = 25" instead of x² = 25).
+    // Support integers, letters, trig names, multi-digit powers and negatives.
+    s=s.replace(/([A-Za-z]+|\d+(?:\.\d+)?)(⁻?[⁰¹²³⁴⁵⁶⁷⁸⁹ᵏⁿ]+)/gu,
+      (whole,base,raw)=>{
+        const exponent=[...raw].map(ch=>ch==='⁻'?'−':ch==='ⁿ'?'n':exponents[ch]).join('');
+        const power=exponent.startsWith('−')?
+          '<mrow><mo>−</mo>'+symbol(exponent.slice(1))+'</mrow>':
+          symbol(exponent);
+        return stash(typeset(whole,'<msup>'+symbol(base)+power+'</msup>'));
+      });
+    // Retain standalone raised symbols when there is no identifiable base.
+    s=s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹ᵏⁿ]/gu,c=>'<sup>'+(c==='ⁿ'?'n':exponents[c])+'</sup>');
     for(let i=tokens.length-1;i>=0;i--) s=s.replace('\uE000N'+i+'\uE001',tokens[i]);
     return s;
   }
