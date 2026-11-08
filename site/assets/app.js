@@ -162,6 +162,16 @@
    options.forEach(option=>{const button=document.createElement('button');button.type='button';button.className='path-option'+(option.active?' selected':'');button.innerHTML='<span><strong>'+esc(option.title)+'</strong><small>'+esc(option.meta)+'</small></span><span aria-hidden="true">'+(option.active?'✓':'›')+'</span>';
      button.onclick=()=>{dialog.close();option.choose()};list.append(button)
    });
+   const chapterPicker=type==='chapter';
+   dialog.classList.toggle('is-chapter-picker',chapterPicker);
+   const hint=$('pathHint');
+   hint.hidden=!chapterPicker;
+   if(chapterPicker){
+     hint.textContent=lang==='ta'
+       ?grade+' ஆம் வகுப்பு · '+options.length+' அத்தியாயங்கள் · கீழே நகர்த்திப் பார்க்கவும்'
+       :'Class '+grade+' · '+options.length+' chapters · Scroll to see all';
+   }
+   list.scrollTop=0;
    dialog.showModal();
  }
  function renderGrades(){const data=[{num:9,icon:'◈'},{num:10,icon:'◈'},{num:11,icon:'◈'},{num:12,icon:'◈'}];
