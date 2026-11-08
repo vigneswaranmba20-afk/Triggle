@@ -96,45 +96,20 @@
    updateUrl();remember();render();closeDrawer();resetScroll();
    $('lessonCard').focus({preventScroll:true});
  }
- // Math-first navigation. Deep-linked section menus remain stable for Back.
- const questionKind=item=>/^\s*Example\b/i.test(item.label?.en||'')?'examples':'exercises';
- const firstSectionItem=(chapter,section)=>{
-   const items=chapterItems(chapter).filter(item=>questionKind(item)===section);
-   if(section==='exercises'){
-     const book=items.filter(item=>item.kind!=='practice');
-     return book.find(item=>item.exercise===chapter.number+'.1')||book[0]||items[0]||null;
-   }
-   return items[0]||null;
- };
- function openSectionFirst(chapter,section){
-   const item=firstSectionItem(chapter,section);
-   if(!item)return false;
-   // Preserve the origin for Back to all exercises / examples even
-   // when the tap came from Home or the class directory.
-   chapterOverview=chapter;chapterSection=section;
-   questionOrigin={grade,chapterId:chapter.id,section};
-   selectLesson(item);
-   return true;
- }
+ // Predictable hierarchy: Class → Chapter sections → Question list → Question.
+ // Preserve every available lesson without silently bypassing its section menu.
  function selectChapter(chapter){
-   // Directly open Exercise N.1 when it is present; keep unfinished chapters honest.
-   if(openSectionFirst(chapter,'exercises'))return;
    homeView=false;classIndex=false;chapterOverview=chapter;chapterSection=null;conceptIndex=null;
+   questionOrigin=null;
    updateUrl();render();closeDrawer();resetScroll();
    $('chapterOverview').focus({preventScroll:true});
  }
- function openChapterSection(section,chapter=chapterOverview,concept=null,browseAll=false){
-   if(!chapter||!validSections.has(section)&&section!==null)return;
-   if(!browseAll&&(section==='examples'||section==='exercises')&&openSectionFirst(chapter,section))return;
+ function openChapterSection(section,chapter=chapterOverview,concept=null){
+   if(!chapter||(!validSections.has(section)&&section!==null))return;
    homeView=false;classIndex=false;chapterOverview=chapter;
    chapterSection=section;conceptIndex=Number.isInteger(concept)?concept:null;
    updateUrl();render();closeDrawer();resetScroll();
    $('chapterOverview').focus({preventScroll:true});
- }
- // Direct-to-exercise landing and full chapter menu are equally easy to reach.
- function openChapterMenu(chapter=chapterForItem(current)){
-   if(!chapter)return;
-   openChapterSection(null,chapter,null,true);
  }
  function openChapterFor(g,chapter){
    if(!classes[g])return;
@@ -160,10 +135,12 @@
      if(i){const sep=document.createElement('span');sep.className='crumb-sep';sep.textContent='›';sep.setAttribute('aria-hidden','true');nav.append(sep)}
      const b=document.createElement('button');b.type='button';b.className='crumb-link';b.innerHTML=esc(c.text)+' <span aria-hidden="true">⌄</span>';
      b.title=c.type==='chapter'
-       ?(lang==='ta'?'அத்தியாயப் பகுதிகளைத் திறக்கவும்':'Open chapter sections')
+       ?(lang==='ta'?'வகுப்பு '+grade+' அத்தியாயங்களைத் தேர்ந்தெடுக்கவும்':'Choose a Class '+grade+' chapter')
        :(lang==='ta'?'தேர்வு':'Choose')+' '+c.text;
      b.setAttribute('aria-label',b.title);
-     b.onclick=()=>c.type==='chapter'?openChapterMenu():openPath(c.type);
+     // The chapter chevron always opens the chapter list, never the
+     // current chapter menu. Choosing a chapter then opens its 4–5 sections.
+     b.onclick=()=>openPath(c.type);
      nav.append(b)
    });
  }
@@ -474,8 +451,6 @@
   // Icon-only controls on narrow readers still have full bilingual names.
   $('browseBtn').setAttribute('aria-label',ui('browse'));
   $('homeBtn').setAttribute('aria-label',ui('home'));
-  $('chapterMenuBtn').textContent=lang==='ta'?'☷ அத்தியாயப் பகுதிகள்':'☷ Chapter sections';
-  $('chapterMenuBtn').setAttribute('aria-label',lang==='ta'?'இந்த அத்தியாயத்தின் அனைத்துப் பகுதிகளையும் காண்க':'Show all sections of this chapter');
   $('questionReturn').setAttribute('aria-label',lang==='ta'?'அத்தியாய வழிசெலுத்தல்':'Chapter navigation');
   $('sidebar').setAttribute('aria-label',ui('navigationLabel'));$('exerciseList').setAttribute('aria-label',ui('navigationLabel'));$('search').setAttribute('aria-label',ui('searchLabel'));$('pathClose').setAttribute('aria-label',ui('closeNavigation'));$('closeSidebar').setAttribute('aria-label',ui('closeNavigation'));document.querySelector('.lang-switch').setAttribute('aria-label',ui('chooseLanguage'));document.querySelector('.side-brand small').textContent=ui('visualMathematics');$('deepPrevious').querySelector('span').textContent=ui('previousStage');
   for(const [id,key] of [['crumb','navigationLabel'],['inlineFigureOpen','expandFigure'],['solutionModeRow','chooseExplanation'],['stepsRegion','completeSolution'],['quickSteps','quickSolution'],['stepsList','workedSolution'],['classDock','switchClass'],['closeGuided','backToQuestion'],['guidedSteps','currentConcept'],['deepStageDots','chooseStage'],['figureDialog','diagramDialog']])$(id).setAttribute('aria-label',ui(key));
@@ -489,7 +464,6 @@
  }
  function render(){renderText();renderGrades();$('classicLink').hidden=grade!==9;
    $('questionReturn').hidden=true;
-   $('chapterMenuBtn').hidden=true;
    const showingQuestion=!homeView&&!classIndex&&!chapterOverview;
    $('allChaptersReturn').hidden=!showingQuestion;
    $('questionNavDock').hidden=!showingQuestion;
@@ -518,7 +492,6 @@
        returnTo==='exercises'?(lang==='ta'?'அனைத்துப் பயிற்சிகளுக்கும் திரும்பு':'Back to all exercises'):
        (lang==='ta'?'அத்தியாயத்திற்குத் திரும்பு':'Back to chapter');
      $('questionReturnBtn').textContent='← '+label;
-     $('chapterMenuBtn').hidden=false;
      $('questionReturn').hidden=false;
    }
   $('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;
@@ -565,9 +538,8 @@
    const chapter=chapterForItem(current);
    if(!chapter)return;
    const section=questionOrigin?.grade===grade&&questionOrigin?.chapterId===chapter.id?questionOrigin.section:null;
-   openChapterSection(section,chapter,null,true);
+   openChapterSection(section,chapter);
  };
- $('chapterMenuBtn').onclick=()=>openChapterMenu();
  $('browseBtn').onclick=()=>drawerOpen?closeDrawer():openDrawer();$('closeSidebar').onclick=closeDrawer;$('backdrop').onclick=closeDrawer;
  $('search').oninput=renderList;
  $('pathClose').onclick=()=>$('pathDialog').close();$('pathDialog').addEventListener('click',e=>{if(e.target===$('pathDialog'))$('pathDialog').close()});
