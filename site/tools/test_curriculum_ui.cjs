@@ -377,9 +377,10 @@ async function main() {
       assert.equal(await page.locator('.rnlab [data-nav] button').count(),8);
       await noOverflow(page,'Tamil Real Numbers concepts from chapter directory');
     });
-    await check('Chapter selection first offers four choices, not a long unorganized lesson',async()=>{
+    await check('Chapter selection offers five choices including Thinking Corner & Activities',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
-      assert.equal(await page.locator('.hub-section-card').count(),4);
+      assert.equal(await page.locator('.hub-section-card').count(),5);
+      assert.equal(await page.locator('.hub-section-card[data-hub-section="activities"]').count(),1);
       assert.equal(await page.locator('.sp2-journey').count(),0,'Concepts should wait for a deliberate choice');
       await page.locator('.hub-section-card[data-hub-section="quizzes"]').click();
       assert.equal(new URL(page.url()).searchParams.get('section'),'quizzes');
@@ -399,7 +400,12 @@ async function main() {
       await page.locator('.hub-quiz-question').first().locator('button').nth(1).click();
       assert.ok((await page.locator('.hub-quiz-progress').innerText()).includes('1 / 7'));
       await page.locator('.hub-back-menu').click();
+      await page.locator('.hub-section-card[data-hub-section="activities"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'activities');
+      assert.equal(await page.locator('.textbook-extra').count(),18,'One complete chapter activity list');
+      await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
+      assert.equal(await page.locator('.textbook-extra').count(),0,'No repeated activity list beneath concepts');
       await page.locator('.sp2-journey').waitFor({state:'visible'});
       await page.locator('.sp2-journey [data-nav] [data-index="5"]').click();
       assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
@@ -486,7 +492,7 @@ async function main() {
         assert.match(await page.locator('#chapterOverviewTitle').innerText(),/சிறு தேர்வுகள்/);
         assert.equal(await page.locator('.hub-section-card').count(),0);
         await page.locator('.hub-back-menu').click();
-        assert.equal(await page.locator('.hub-section-card').count(),4);
+        assert.equal(await page.locator('.hub-section-card').count(),5);
         await noOverflow(page,'Tamil direct sections at '+width+'px');
       });
     }
@@ -495,7 +501,7 @@ async function main() {
       assert.equal(await page.locator('.hub-quiz-question').count(),7);
       assert.equal(await page.locator('.hub-section-card').count(),0);
       await page.locator('.hub-back-menu').click();
-      assert.equal(await page.locator('.hub-section-card').count(),4);
+      assert.equal(await page.locator('.hub-section-card').count(),5);
       await page.goBack();
       assert.equal(new URL(page.url()).searchParams.get('section'),'quizzes');
       assert.equal(await page.locator('.hub-section-card').count(),0);
