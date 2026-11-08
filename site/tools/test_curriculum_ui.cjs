@@ -593,7 +593,7 @@ async function main() {
       const vertical=await squaredButton.locator('math msup').evaluate(node=>{
         const [base,power]=node.children;
         return {base:base.getBoundingClientRect().bottom,power:power.getBoundingClientRect().bottom,
-          mathNamespace:node.namespaceURI,container:squaredButton?.className||''};
+          mathNamespace:node.namespaceURI};
       });
       assert.equal(vertical.mathNamespace,'http://www.w3.org/1998/Math/MathML');
       assert.ok(vertical.power<=vertical.base-1,
