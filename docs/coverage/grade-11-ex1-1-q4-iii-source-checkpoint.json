@@ -15,7 +15,7 @@
       "stemExact": "4. By taking suitable sets A, B, C, verify the following results:",
       "subpartExact": "(iii) (A × B) ∩ (B × A) = (A ∩ B) × (B ∩ A).",
       "textExtractChecked": true,
-      "pageImageChecked": false
+      "pageImageChecked": true
     },
     "ta": {
       "driveFileId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
@@ -25,11 +25,13 @@
       "pdfPage": 18,
       "stemExtracted": "4. பின்்வருவனவற்்றறை, தகுந்்த A, B, C கணங்்களைக் கொொண்டு சரிபார்்க்்கவும்.",
       "subpartExtractionCorrupt": true,
-      "pageImageChecked": false
+      "pageImageChecked": true,
+      "stemExact": "4. பின்வருவனவற்றை, தகுந்த A, B, C கணங்களைக் கொண்டு சரிபார்க்கவும்.",
+      "subpartExact": "(iii) (A × B) ∩ (B × A) = (A ∩ B) × (B ∩ A)."
     }
   },
-  "status": "blocked-source-image-and-exact-Tamil-math-transcription",
+  "status": "source-image-verified-bilingual-math-draft",
   "studentFacingPublished": false,
   "editorial": "pending",
-  "next": "Inspect PDF page 18 image for Tamil Q4(iii), compare exact typography and stem; inspect English PDF page 15 image; then add bilingual student-facing question and independently verified proof with source-to-UI exact-match tests."
+  "next": "Execute CI and browser/mobile/offline checks; reconcile latest main before merge. Then inspect Q4(iv) source images."
 }
