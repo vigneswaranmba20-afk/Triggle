@@ -109,6 +109,9 @@
  function openSectionFirst(chapter,section){
    const item=firstSectionItem(chapter,section);
    if(!item)return false;
+   // Preserve the origin for Back to all exercises / examples even
+   // when the tap came from Home or the class directory.
+   chapterOverview=chapter;chapterSection=section;
    questionOrigin={grade,chapterId:chapter.id,section};
    selectLesson(item);
    return true;
