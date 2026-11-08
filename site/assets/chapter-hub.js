@@ -3,6 +3,7 @@
 (() => {
   'use strict';
   const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const typeset=s=>window.TriggleNotation?.render(s)||e(s);
   const texts={
     en:{
       eyebrow:'YOUR CHAPTER',choose:'What would you like to do?',
@@ -152,9 +153,9 @@
           for(const stage of stages){
             const article=document.createElement('article');article.className='hub-question-group';
             const heading=document.createElement('h4');heading.textContent=text(stage.title);
-            const idea=document.createElement('p');idea.textContent=text(stage.idea);
-            const example=document.createElement('p');example.textContent=text(stage.example);
-            const rule=document.createElement('p');rule.textContent=text(stage.rule);
+            const idea=document.createElement('p');idea.innerHTML=typeset(text(stage.idea));
+            const example=document.createElement('p');example.innerHTML=typeset(text(stage.example));
+            const rule=document.createElement('p');rule.innerHTML=typeset(text(stage.rule));
             const source=document.createElement('small');source.textContent='SCERT 2025 · §'+stage.section;
             article.append(heading,idea,example,rule,source);panel.append(article);
           }
@@ -223,12 +224,12 @@
         const update=()=>{status.textContent=t.progress+': '+correct.size+' / '+stages.length;};
         stages.forEach((stage,index)=>{
           const article=document.createElement('article');article.className='hub-quiz-question';
-          const h=document.createElement('h4');h.textContent=(index+1)+'. '+text(stage.question);article.append(h);
+          const h=document.createElement('h4');h.innerHTML=e((index+1)+'. ')+typeset(text(stage.question));article.append(h);
           const answers=document.createElement('div');answers.className='hub-quiz-answers';answers.setAttribute('role','group');
           answers.setAttribute('aria-label',text(stage.question));
           const feedback=document.createElement('p');feedback.setAttribute('aria-live','polite');feedback.className='hub-quiz-feedback';
           stage.choices.forEach((choice,i)=>{
-            const button=document.createElement('button');button.type='button';button.textContent=text(choice);
+            const button=document.createElement('button');button.type='button';button.innerHTML=typeset(text(choice));
             button.addEventListener('click',()=>{
               answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
               const right=i===stage.correct;
@@ -238,7 +239,7 @@
             answers.append(button);
           });
           const details=document.createElement('details');details.className='hub-quiz-help';
-          details.innerHTML='<summary>'+e(t.hint)+'</summary><p>'+e(text(stage.hint))+'</p><p>'+e(text(stage.why))+'</p>';
+          details.innerHTML='<summary>'+e(t.hint)+'</summary><p>'+typeset(text(stage.hint))+'</p><p>'+typeset(text(stage.why))+'</p>';
           article.append(answers,details,feedback);panel.append(article);
         });
         update();
