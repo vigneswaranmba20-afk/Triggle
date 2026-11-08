@@ -1,0 +1,98 @@
+{
+  "grade": 9,
+  "chapter": 9,
+  "exercise": "9.1",
+  "medium": "en",
+  "edition": "2025 revised",
+  "sourceTitle": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+  "sourceId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+  "sourceUrl": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+  "englishPage": {
+    "printed": 298,
+    "pdf": 304,
+    "visualChecked": true
+  },
+  "tamilReference": {
+    "sourceId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+    "printed": 315,
+    "pdf": 331,
+    "studentFacingTranslation": "pending",
+    "humanEditorial": "pending"
+  },
+  "scope": "Textbook Exercise 9.1 Q1–Q8; Questions 9 and 10 depend on spinner figures and are excluded until figure verification",
+  "review": "AI source comparison and independent mathematics verification, not independent human editorial certification",
+  "items": [
+    {
+      "id": "g9-ch9-ex9.1-q1",
+      "question": "What is the probability of a person’s birthday will fall on a Sunday?",
+      "subparts": [],
+      "finalAnswer": "[[1|7]]",
+      "visualSourceCheck": "completed",
+      "studentFacingEnglish": "authored"
+    },
+    {
+      "id": "g9-ch9-ex9.1-q2",
+      "question": "What is the probability of getting a perfect square number from natural numbers 1 to 13?",
+      "subparts": [],
+      "finalAnswer": "[[3|13]]",
+      "visualSourceCheck": "completed",
+      "studentFacingEnglish": "authored"
+    },
+    {
+      "id": "g9-ch9-ex9.1-q3",
+      "question": "What is the probability of throwing an even number with a single standard dice of six faces?",
+      "subparts": [],
+      "finalAnswer": "[[1|2]]",
+      "visualSourceCheck": "completed",
+      "studentFacingEnglish": "authored"
+    },
+    {
+      "id": "g9-ch9-ex9.1-q4",
+      "question": "There are 24 balls in a pot. If 3 of them are Red, 5 of them are Blue and the remaining are Green then, what is the probability of picking out (i) a Blue ball, (ii) a Red ball and (iii) a Green ball?",
+      "subparts": [
+        "(i)",
+        "(ii)",
+        "(iii)"
+      ],
+      "finalAnswer": "(i) [[5|24]] ; (ii) [[1|8]] ; (iii) [[2|3]]",
+      "visualSourceCheck": "completed",
+      "studentFacingEnglish": "authored"
+    },
+    {
+      "id": "g9-ch9-ex9.1-q5",
+      "question": "When two coins are tossed, what is the probability that two heads are obtained?",
+      "subparts": [],
+      "finalAnswer": "[[1|4]]",
+      "visualSourceCheck": "completed",
+      "studentFacingEnglish": "authored"
+    },
+    {
+      "id": "g9-ch9-ex9.1-q6",
+      "question": "Two dice are rolled, find the probability that the sum is i) equal to 1 ii) equal to 4 iii) less than 13",
+      "subparts": [
+        "i)",
+        "ii)",
+        "iii)"
+      ],
+      "finalAnswer": "(i) 0 ; (ii) [[1|12]] ; (iii) 1",
+      "visualSourceCheck": "completed",
+      "studentFacingEnglish": "authored"
+    },
+    {
+      "id": "g9-ch9-ex9.1-q7",
+      "question": "A manufacturer tested 7000 LED lights at random and found that 25 of them were defective. If a LED light is selected at random, what is the probability that the selected LED light is a defective one.",
+      "subparts": [],
+      "finalAnswer": "[[1|280]]",
+      "visualSourceCheck": "completed",
+      "studentFacingEnglish": "authored"
+    },
+    {
+      "id": "g9-ch9-ex9.1-q8",
+      "question": "In a football match, a goalkeeper of a team can stop the goal, 32 times out of 40 attempts tried by a team. Find the probability that the opponent team can convert the attempt into a goal.",
+      "subparts": [],
+      "finalAnswer": "[[1|5]]",
+      "visualSourceCheck": "completed",
+      "studentFacingEnglish": "authored"
+    }
+  ]
+}
