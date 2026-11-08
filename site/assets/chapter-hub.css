@@ -154,3 +154,33 @@
     min-height:48px;
   }
 }
+
+/* Chapter hub v4: one heading, immediately accessible learning choices,
+   compact honest counts, and no duplicate introductory panels. */
+.chapter-hub .hub-top-actions{margin:0 0 12px}
+.chapter-hub .hub-header{margin:0 0 7px;padding:0}
+.chapter-hub .hub-eyebrow{font-size:11px;letter-spacing:1px;line-height:1.4}
+.chapter-hub .hub-header h2{margin:5px 0 8px;line-height:1.22}
+.chapter-hub .hub-question-breakdown{
+  display:block;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:#655978;
+  font-size:12px!important;
+  font-weight:650;
+  line-height:1.55;
+  margin:0 0 12px;
+}
+.chapter-hub .hub-section-menu{margin-top:7px}
+.chapter-hub .hub-section-menu h3{font-size:16px;margin:0 0 11px}
+.chapter-hub .hub-stage-note{font-size:12px!important;line-height:1.5;margin:14px 0 5px;color:#665b76}
+.chapter-hub .hub-footer{margin-top:11px;padding-top:9px}
+@media(max-width:800px){
+  .chapter-hub .hub-top-actions{margin-bottom:10px}
+  .chapter-hub .hub-header h2{font-size:clamp(24px,5.5vw,29px)}
+  .chapter-hub .hub-question-breakdown{margin-bottom:9px}
+  .chapter-hub .hub-section-grid{gap:10px}
+  .chapter-hub .hub-section-card{min-height:145px}
+}
