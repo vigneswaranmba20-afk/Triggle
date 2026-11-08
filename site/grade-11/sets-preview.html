@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#123e39"><title>Triggle · Grade 11 · Exercise 1.1 preview</title>
 <style>
-:root{font-family:system-ui,-apple-system,sans-serif;color:#183b36;background:#f5f8f5}*{box-sizing:border-box}body{margin:0}main{max-width:850px;margin:auto;padding:clamp(16px,4vw,38px)}header{background:#123e39;color:white;padding:20px;border-radius:18px}h1{font-size:clamp(1.5rem,4vw,2.3rem)}button{font:inherit;cursor:pointer;border:2px solid #246b5b;background:white;color:#123e39;padding:10px 15px;border-radius:12px}button:focus-visible,summary:focus-visible{outline:3px solid #b56b09;outline-offset:3px}button[aria-pressed=true]{background:#d8efe5}nav{display:flex;gap:10px;margin:18px 0}.card{background:white;border:1px solid #d1ded7;border-radius:16px;padding:20px;margin:16px 0;overflow-wrap:anywhere}summary{cursor:pointer;font-weight:700;padding:12px 0}li{margin:12px 0;line-height:1.6}.answer{font-weight:750;background:#e9f4ed;padding:12px;border-radius:10px}.status{font-size:.9rem}#error{color:#9a2727}footer{padding:20px 0}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+:root{font-family:system-ui,-apple-system,sans-serif;color:#183b36;background:#f5f8f5}*{box-sizing:border-box}body{margin:0}main{max-width:850px;margin:auto;padding:clamp(16px,4vw,38px)}header{background:#123e39;color:white;padding:20px;border-radius:18px}h1{font-size:clamp(1.5rem,4vw,2.3rem)}button{font:inherit;cursor:pointer;border:2px solid #246b5b;background:white;color:#123e39;padding:10px 15px;border-radius:12px}button:focus-visible,summary:focus-visible{outline:3px solid #b56b09;outline-offset:3px}button[aria-pressed=true]{background:#d8efe5}nav{display:flex;gap:10px;margin:18px 0}.card{background:white;border:1px solid #d1ded7;border-radius:16px;padding:20px;margin:16px 0;overflow-wrap:anywhere}summary{cursor:pointer;font-weight:700;padding:12px 0}li{margin:12px 0;line-height:1.6}.answer{font-weight:750;background:#e9f4ed;padding:12px;border-radius:10px}.status{font-size:.9rem}.practice{background:#edf5f1;border-radius:12px;padding:12px;margin-top:12px}.practice button{margin:0 8px 8px 0}#error{color:#9a2727}footer{padding:20px 0}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style></head><body><main><header><h1 id="title">Grade 11 · Sets, Relations and Functions</h1><p id="subtitle">Exercise 1.1 · Question 1 · Testing preview</p></header>
 <nav aria-label="Lesson language"><button type="button" id="en" aria-pressed="true" lang="en">English</button><button type="button" id="ta" aria-pressed="false" lang="ta">தமிழ்</button></nav>
 <p id="review" role="status">Tamil human editorial review pending. Preview is not a published textbook solution.</p><p id="error" role="alert"></p><button type="button" id="retry" hidden>Retry loading lesson</button><section id="lessons" aria-label="Worked solutions"></section>
@@ -27,6 +27,17 @@ function render(){
   const details=el('details');details.append(el('summary',lang==='ta'?'படிப்படியான தீர்வைக் காண்க':'Show step-by-step solution'));
   const steps=el('ol');for(const s of q.steps[lang])steps.append(el('li',s));
   details.append(steps,el('p',(lang==='ta'?'விடை: ':'Answer: ')+q.answer[lang],'answer'));
+  if(q.subpart==='i'){
+   const practice=el('div',undefined,'practice');
+   practice.append(el('p',lang==='ta'?'சுயசோதனை: 11 இந்தக் கணத்தில் உள்ளதா?':'Quick check: Does 11 belong to this set?'));
+   const feedback=el('p');feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');
+   for(const yes of [true,false]){
+    const button=el('button',lang==='ta'?(yes?'ஆம்':'இல்லை'):(yes?'Yes':'No'));
+    button.type='button';button.addEventListener('click',()=>{feedback.textContent=lang==='ta'?(yes?'மீண்டும் முயல்க: 11² = 121; இது 121-ஐ விடக் குறைவானது அல்ல.':'சரி! 11² = 121; கடுமையான சமமின்மை நிறைவேறவில்லை.'):(yes?'Try again: 11² = 121, which is not below 121.':'Correct! 11² = 121, so the strict inequality fails.');});
+    practice.append(button);
+   }
+   practice.append(feedback);card.append(practice);
+  }
   card.append(details,el('p',(lang==='ta'?'கணிதம் சரிபார்க்கப்பட்டது · ஆசிரியர் மதிப்பாய்வு நிலுவை':'Mathematics checked · editorial review pending'),'status'));
   target.append(card);
  }
