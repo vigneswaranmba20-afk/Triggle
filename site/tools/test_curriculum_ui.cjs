@@ -976,13 +976,17 @@ async function main() {
       await ctx.setOffline(true);
       await page.reload();
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
-      const lab=page.locator('.p2-lab');
+      const journey=page.locator('.sp2-journey');
+      await journey.waitFor({state:'visible'});
+      assert.equal(await journey.locator('.p2-lab').count(),0,'Lab must stay optional even offline');
+      await journey.locator('[data-nav] [data-index="3"]').click();
+      await journey.locator('[data-demo-mode="go"]').click();
+      const lab=journey.locator('.p2-lab');
       await lab.waitFor({state:'visible'});
-      await page.locator('.sp2-journey').waitFor({state:'visible'});
-      await page.locator('.sp2-journey [data-nav] [data-index="6"]').click();
-      assert.ok((await page.locator('.sp2-journey .sp2-formula').innerText()).includes('n(A ∪ B)'));
       await lab.locator('[data-op="neither"]').click();
       assert.equal(await lab.locator('[data-result-set]').innerText(),'{7, 8}');
+      await journey.locator('[data-nav] [data-index="6"]').click();
+      assert.ok((await journey.locator('.sp2-formula').innerText()).includes('n(A ∪ B)'));
       await ctx.setOffline(false);
     });
     await check('service worker caches curriculum and supports an offline chapter reload', async () => {
