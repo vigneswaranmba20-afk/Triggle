@@ -29,6 +29,7 @@ assert(!js.includes("updateQuestionContextLabel"), 'No automatic question collap
 has(js, "question:'Question'", 'English question heading');
 has(js, "question:'வினா'", 'Tamil question heading');
 has(js, "deepResume[current.id]=deepStageIndex", 'resume behavior preserved');
-has(sw, 'triggle-shell-real-2025-v28', 'new notation cache version');
+const cacheVersion=Number(sw.match(/const CACHE='triggle-shell-real-2025-v([0-9]+)'/)?.[1]);
+assert.ok(Number.isInteger(cacheVersion)&&cacheVersion>=28, 'Expected a versioned offline cache at least as new as the notation release');
 new Function(js);
 console.log('Question navigation UI checks passed (visible question, language, state and exit touch targets).');

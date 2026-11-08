@@ -60,14 +60,19 @@
     const tr=x=>typeof x==='string'?x:(x?.[lang]||x?.en||'');
     const grades=curriculum.grades;
     const chapters=grades.flatMap(g=>g.chapters.map(c=>({grade:g.grade,chapter:c})));
-    const ready=id=>id==='g9-ch1';
+    // Only advertise a lab when both its lesson data and interactive viewer are loaded.
+    const interactiveCount=id=>{
+      const stages=id==='g9-ch1'&&window.TriggleSetJourney?window.TRIGGLE_SET_PATH?.stages:
+        id==='g9-ch2'&&window.TriggleRealJourney?window.TRIGGLE_REAL_PATH?.stages:null;
+      return Array.isArray(stages)?stages.length:0;
+    };
     function chapterCard(entry){
-      const c=entry.chapter,available=ready(c.id);
+      const c=entry.chapter,count=interactiveCount(c.id),available=count>0;
       return '<button type="button" class="discover-chapter" data-chapter="'+escapeHtml(c.id)+'">'+
         '<span class="discover-chapter-number">'+escapeHtml(t.chapter)+' '+c.number+'</span>'+
         '<strong>'+escapeHtml(tr(c.title))+'</strong>'+
         '<span class="discover-chapter-meta'+(available?' is-ready':'')+'">'+
-        (available?'✦ '+escapeHtml(t.readytag):escapeHtml(t.planned))+'</span>'+
+        (available?'✦ '+count+' '+escapeHtml(t.readytag):escapeHtml(t.planned))+'</span>'+
         '<span class="discover-card-arrow" aria-hidden="true">↗</span></button>';
     }
     function jumpOptions(selectedGrade){
