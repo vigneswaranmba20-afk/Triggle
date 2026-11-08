@@ -8,7 +8,7 @@ assert.equal(q.id,'g11-ch1-ex1.1-q4-iv');
 assert.equal(q.source.sourceExactMath,'C − (B − A) = (C ∩ A) ∪ (C ∩ B′).');
 assert.deepEqual(q.source.page,{en:7,ta:10});assert.deepEqual(q.source.pdfPage,{en:15,ta:18});
 for(const lang of ['en','ta']){
- assert.equal(q.prompt[lang],checkpoint.source[lang].stemExact+'\\n'+checkpoint.source[lang].subpartExact);
+ assert.equal(q.prompt[lang],checkpoint.source[lang].stemExact+'\n'+checkpoint.source[lang].subpartExact);
  assert.equal(checkpoint.source[lang].pageImageChecked,true);
  assert.equal(q.source.pageImagesVisuallyChecked[lang],true);
  assert.equal(q.steps[lang].length,6);assert.ok(q.steps[lang].every(s=>s.length>25));
