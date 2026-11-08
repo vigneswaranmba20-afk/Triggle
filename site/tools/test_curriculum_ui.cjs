@@ -52,12 +52,16 @@ async function main() {
       // On every question rerender (including language changes), emulate the
       // keyboard gesture which reveals controls. The quiet default is checked
       // independently in test_quiet_reader_browser.cjs.
-      const revealForLegacyChecks=()=>setTimeout(()=>{
-        if(window.TriggleQuietReader?.isActive())
-          document.dispatchEvent(new KeyboardEvent('keydown',{key:'Tab',bubbles:true}));
-      },0);
-      window.addEventListener('triggle:lessonchange',revealForLegacyChecks);
-      window.addEventListener('load',revealForLegacyChecks);
+      // Attach AFTER the app and quiet-reader handlers so each route change
+      // reveals controls synchronously before the next assertion runs.
+      window.addEventListener('load',()=>{
+        const revealForLegacyChecks=()=>{
+          if(window.TriggleQuietReader?.isActive())
+            document.dispatchEvent(new KeyboardEvent('keydown',{key:'Tab',bubbles:true}));
+        };
+        window.addEventListener('triggle:lessonchange',revealForLegacyChecks);
+        revealForLegacyChecks();
+      });
       // Keep an optional seasonal greeting from changing test focus or layout.
       try { localStorage.setItem('triggle:diwali:last-shown', new Date(Date.now() + 19800000).toISOString().slice(0, 10)); } catch {}
     });
