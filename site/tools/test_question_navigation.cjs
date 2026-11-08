@@ -29,6 +29,6 @@ assert(!js.includes("updateQuestionContextLabel"), 'No automatic question collap
 has(js, "question:'Question'", 'English question heading');
 has(js, "question:'வினா'", 'Tamil question heading');
 has(js, "deepResume[current.id]=deepStageIndex", 'resume behavior preserved');
-has(sw, 'triggle-shell-real-2025-v22', 'new notation cache version');
+has(sw, 'triggle-shell-real-2025-v23', 'new notation cache version');
 new Function(js);
 console.log('Question navigation UI checks passed (visible question, language, state and exit touch targets).');
