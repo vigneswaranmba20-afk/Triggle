@@ -57,7 +57,7 @@ async function main() {
       window.addEventListener('load',()=>{
         const revealForLegacyChecks=()=>{
           if(window.TriggleQuietReader?.isActive())
-            document.dispatchEvent(new KeyboardEvent('keydown',{key:'Tab',bubbles:true}));
+            document.body.dispatchEvent(new KeyboardEvent('keydown',{key:'Tab',bubbles:true}));
         };
         window.addEventListener('triggle:lessonchange',revealForLegacyChecks);
         revealForLegacyChecks();
