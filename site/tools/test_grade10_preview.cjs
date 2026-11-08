@@ -20,6 +20,8 @@ assert.match(html,/async function loadLessons\(/);
 assert.match(html,/retry\.hidden=false/);
 assert.match(html,/function validLesson\(q,id\)/);
 assert.match(html,/q\.review\?\.sourceVerified===true/);
+assert.match(html,/q\.review\?\.mathVerified===true/);
+assert.doesNotMatch(html,/q\.review\?\.merged===false/);
 assert.match(html,/Array\.isArray\(q\.steps\)/);
 assert.match(html,/errorText\[lang\]/);
 assert.match(html,/பாடங்களை மீண்டும் ஏற்றுக/);
