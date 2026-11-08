@@ -66,6 +66,7 @@ const stages=sandbox.window.TRIGGLE_REAL_PATH.stages;
 assert.equal(stages.length,8,'eight concept and quiz stages');
 stages.forEach(s=>assert.ok(s.title.en&&s.title.ta&&s.idea.en&&s.idea.ta&&s.choices.length===3&&s.correct>=0&&s.correct<3));
 vm.runInNewContext(read('assets/diagrams.js'),sandbox,{filename:'assets/diagrams.js',timeout:5000});
+vm.runInNewContext(read('assets/real-number-line.js'),sandbox,{filename:'assets/real-number-line.js',timeout:5000});
 const graphic=sandbox.window.TriggleDraw.drawClassic({demo:{kind:'real-number-line',target:Math.sqrt(3),min:1,max:2,label:'√3'},ref:'Example 2.8',title:'Number line'});
 assert.match(graphic,/<svg/);
 assert.match(graphic,/√3/);
@@ -83,6 +84,8 @@ for(const p of scripts.slice(2)){
  assert.ok(index.indexOf(p)<index.indexOf('assets/app.js'),'script after app: '+p);
 }
 assert.ok(index.includes('assets/real-numbers-deep.js'));
+assert.ok(index.includes('assets/real-number-line.js'));
+assert.ok(sw.includes('assets/real-number-line.js'));
 const sw=read('service-worker.js');
 for(const p of scripts.slice(2))assert.ok(sw.includes(p),'missing offline cache entry: '+p);
 vm.runInNewContext(read('data/real-numbers/g9-ch2-examples-a.js'),sandbox);
