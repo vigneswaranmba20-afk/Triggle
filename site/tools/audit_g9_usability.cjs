@@ -199,8 +199,8 @@ async function main(){
       const cards=page.locator('.textbook-extra');
       assert.equal(await cards.count(),config.chapter==='g9-ch1'?18:6);
       const first=cards.first();
-      await first.locator('summary').first().click();
-      await first.locator('details summary').first().click();
+      assert.equal(await first.evaluate(el=>el.open),true,'First task opens on arrival');
+      assert.equal(await first.locator('.task-solution').isVisible(),true,'Worked answer is readable immediately');
       assert.ok((await first.locator('.task-answer').innerText()).length>35);
     });
     if(width<500)await page.screenshot({path:path.join(out,config.chapter+'-'+lang+'-'+width+'.png'),fullPage:true,animations:'disabled'});

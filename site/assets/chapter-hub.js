@@ -110,6 +110,10 @@
     const heading=document.createElement('header');heading.className='hub-header';
     const sectionTitle=section==='sources'?t.resources:labelFor(section);
     const pageTitle=section?sectionTitle:text(chapter.title);
+    // Activities and quizzes open straight into the first question.
+    // Keep the heading available to assistive tech without a redundant
+    // multi-line visible introduction above the actual learning activity.
+    if(section==='activities'||section==='quizzes')heading.classList.add('hub-heading-a11y');
     // The Class switcher appears in the breadcrumb. Do not repeat Class
     // and the chapter name in multiple stacked headings on the hub.
     const chapterNumber=(lang==='ta'?'அத்தியாயம் ':'Chapter ')+chapter.number;
@@ -202,11 +206,11 @@
           info(t.whyWorked);
         }
       }else{
-        if(section==='exercises')info(t.practiceNote);
-        if(section==='examples')info(t.existingExamples);
+        // Coverage details stay available but do not block Question 1.
+        const notes=[];
         if(chapter.id==='g9-ch1'){
           const availableEx11=selected.filter(q=>q.exercise==='1.1'&&q.kind!=='practice').length;
-          info(section==='examples'?t.exampleWordingNote:t.exerciseCoverageNote(availableEx11));
+          notes.push(section==='examples'?t.exampleWordingNote:t.exerciseCoverageNote(availableEx11));
         }
         if(section==='exercises'&&selected.some(q=>q.kind==='practice')&&selected.some(q=>q.kind!=='practice')){
           const filters=document.createElement('div');filters.className='hub-question-filters';
@@ -239,13 +243,18 @@
           items.forEach(item=>box.append(cardFor(item)));
           panel.append(box);
         }
+        if(notes.length){
+          const review=document.createElement('details');review.className='hub-content-status';
+          const toggle=document.createElement('summary');toggle.textContent=t.review;
+          review.append(toggle);notes.forEach(copy=>{const p=document.createElement('p');p.textContent=copy;review.append(p);});
+          panel.append(review);
+        }
       }
     }
     if(section==='quizzes'){
       if(!stages.length){
         info(t.noQuiz);
       }else{
-        info(t.quizIntro);
         const status=document.createElement('p');status.className='hub-quiz-progress';
         status.setAttribute('role','status');status.setAttribute('aria-live','polite');
         panel.append(status);
