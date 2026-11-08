@@ -5,7 +5,7 @@ const e=(ex,n,part,page,q,ta,answer,steps,hard=false,diagram=null)=>A(ex,n,part,
 e(1,1,'',45,'Which marked arrow A, B, C or D on the textbook number line is closest to 11/3?','பாடநூலின் எண்கோட்டில் 11/3 ஐச் சரியாகக் குறிக்கும் A, B, C, D அம்புகளில் எது?','Arrow D (11/3 = 3⅔ ≈ 3.667)',[
  ['Convert 11/3 into a mixed number.','11/3 ஐ கலப்பெண்ணாக மாற்றுக.','11/3=3+2/3=3.6666…'],
  ['The point lies between 3 and 4, nearer to 4; the matching arrow is D.','இப்புள்ளி 3,4 இடையே 4-க்கு அருகில் உள்ளது; பொருத்தமான அம்பு D.','D: approximately 3.67']
- ],false,{kind:'real-number-line',target:11/3,label:'11/3',min:3,max:4});
+ ],false,{kind:'real-number-arrows',target:11/3,arrows:['A','B','C','D'],min:-5,max:5});
 e(1,2,'',45,'Write any three rational numbers strictly between −7/11 and 2/11.','−7/11 மற்றும் 2/11 இடையே ஏதேனும் மூன்று விகிதமுறு எண்களைக் காண்க.','−6/11, −5/11, −4/11',[
  ['The fractions already have a common positive denominator.','கொடுக்கப்பட்ட பின்னங்களின் பகுதி ஒரே நேர்மறை எண்.','−7/11 < −6/11 < −5/11 < −4/11 < 2/11'],
  ['Choose any three interior numerators.','உள்ளடங்கிய மூன்று தொகுதிகளைத் தேர்ந்தெடுக்கவும்.','−6/11, −5/11, −4/11']
