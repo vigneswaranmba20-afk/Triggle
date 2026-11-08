@@ -42,7 +42,7 @@
  const activeList=()=>classes[grade].items;
  const currentIndex=()=>activeList().findIndex(i=>i.id===current.id);
  const num=n=>String(n).padStart(2,'0');
- const labelForGroup=(e)=>e==='6.examples'?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?ui('unitExercise')+' '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
+ const labelForGroup=(e)=>e.endsWith('.examples')?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?ui('unitExercise')+' '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
  function updateUrl(replace=false){
   const u=new URL(location.href);
   ['class','chapter','question','browse','section','concept'].forEach(k=>u.searchParams.delete(k));
