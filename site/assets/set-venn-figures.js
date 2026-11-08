@@ -6,7 +6,7 @@
  const S=Object.freeze({
   11:{a:'P',b:'Q',left:['n'],both:['m'],right:['i','j'],mode:'union',page:14},
   12:{a:'A',b:'B',left:['2','4','8','10'],both:['6','12'],right:['3','9'],mode:'intersection',page:15},
-  13:{a:'A',b:'C',left:['2','3'],both:[],right:[],mode:'intersection',page:15},
+  13:{a:'A',b:'C',left:['2','3'],both:[],right:[],mode:'none',page:15},
   14:{a:'A',b:'B',left:['−3','−2'],both:['1','4'],right:['0','2'],mode:'onlyA',page:16},
   15:{a:'A',b:'B',left:['6','7','9'],both:['8'],right:['10','12'],mode:'symmetric',page:16},
   16:{a:'A',b:'B',left:[],both:[],right:[],mode:'symmetric',page:17,symbolic:true},
@@ -74,7 +74,7 @@
   const both=spec.symbolic?[spec.a+'∩'+spec.b]:spec.both;
   const right=spec.symbolic?[spec.b+' only']:spec.right;
   const lab=linesAt(165,166,left,'∅')+linesAt(269,166,both,'∅')+linesAt(374,166,right,'∅')+
-   (spec.outside?linesAt(465,260,spec.outside,''):spec.symbolic?linesAt(470,258,['outside'],''):'');
+   (spec.outside?linesAt(465,260,spec.outside,''):spec.symbolic&&spec.universe?linesAt(470,258,['outside'],''):'');
   const desc=(spec.count?'Counts: ':'Members: ')+spec.a+' only '+left.join(',')+'; '+spec.a+'∩'+spec.b+' '+both.join(',')+'; '+spec.b+' only '+right.join(',')+(spec.outside?'; outside '+spec.outside.join(','):'')+'. '+txt.shading+': '+mode+'.';
   return '<svg class="g9-venn-svg" viewBox="0 0 560 330" role="img" aria-labelledby="'+id+'-title '+id+'-desc" xmlns="http://www.w3.org/2000/svg">'+
    '<title id="'+id+'-title">'+esc(txt.figure+' 1.'+n+(mode==='none'?'':' · '+mode))+'</title>'+
