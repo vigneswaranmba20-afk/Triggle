@@ -1071,6 +1071,7 @@ async function main() {
         await noOverflow(page,'Grade 9 Q3(b) mobile at '+width+'px');
         await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q5-ii');
         await page.locator('#answerText').waitFor({state:'visible'});
+        await page.locator('#langEn').click(); // The preceding Q3(b) check leaves the language in Tamil.
         assert.match(await page.locator('#questionText').innerText(),/Represent the following sets in set builder form/);
         assert.ok((await page.locator('#stepsList li').count())>=3,'Q5 requires three reasoning steps');
         await noOverflow(page,'Grade 9 Q5 fraction problem at '+width+'px');
