@@ -497,9 +497,13 @@ async function main() {
       assert.ok(order,'Optional search belongs BELOW the navigation');
       await page.locator('#exerciseList [data-section="examples"]').click();
       assert.equal(new URL(page.url()).searchParams.get('section'),'examples');
-      assert.equal(await page.locator('.hub-question').count(),0);
-      assert.match(await page.locator('.hub-info').first().innerText(),/No questions/);
+      assert.equal(await page.locator('.hub-question').count(),35,'All 35 textbook examples appear in Chapter 1');
+      assert.match(await page.locator('.hub-question').first().innerText(),/Example 1\.1/);
+      assert.match(await page.locator('.hub-question').last().innerText(),/Example 1\.35/);
       await noOverflow(page,'mobile chapter-first drawer');
+      await page.locator('.hub-question').first().click();
+      assert.equal(await page.locator('#stepsList li').count(),2,'Example 1.1 has two worked steps');
+      assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
     });
     await check('Offline initial Home reload and class directory work without remote scripts', async()=>{
       const ctx=await context(390,'allow');
@@ -596,7 +600,7 @@ async function main() {
     await check('all 105 legacy deep links retain questions and working solutions', async () => {
       const ctx = await context(1280);
       const page = await visit(ctx);
-      const links = await page.evaluate(() => Object.entries(window.TRIGGLE_CLASSES).flatMap(([grade,data]) => data.items.filter(item => !item.id.startsWith('g9-ch1-ex1.1-')).map(item => ({ grade, id:item.id }))));
+      const links = await page.evaluate(() => Object.entries(window.TRIGGLE_CLASSES).flatMap(([grade,data]) => data.items.filter(item => !item.id.startsWith('g9-ch1-ex1.1-') && !item.id.startsWith('c9-textbook-example-')).map(item => ({ grade, id:item.id }))));
       assert.equal(links.length, 105);
       for (const {grade,id} of links) {
         await page.goto(url + `/index.html?class=${grade}&question=${id}`);
