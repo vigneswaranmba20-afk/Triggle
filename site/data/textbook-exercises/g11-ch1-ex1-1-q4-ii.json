@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapterId": "g11-ch1",
+  "chapterTitle": "Sets, Relations and Functions",
+  "exercise": "1.1",
+  "sourceAccess": "2025 revised English Volume I Exercise 1.1 Q4(ii) verified against connected PDF text; Tamil Volume I edition retrieved, mathematical glyphs in text extraction degraded; Tamil page placement follows adjacent verified Q4(i)",
+  "questions": [
+    {
+      "id": "g11-ch1-ex1.1-q4-ii",
+      "exercise": "1.1",
+      "question": 4,
+      "subpart": "ii",
+      "prompt": {
+        "en": "Choose suitable sets A, B and C and verify A × (B ∪ C) = (A × B) ∪ (A × C).",
+        "ta": "தகுந்த A, B, C கணங்களை எடுத்துக்கொண்டு A × (B ∪ C) = (A × B) ∪ (A × C) என்பதைச் சரிபார்க்கவும்."
+      },
+      "steps": {
+        "en": [
+          "Choose A = {1, 2}, B = {a, b} and C = {b, c}; the overlap at b lets us see how duplicate ordered pairs behave.",
+          "The union B ∪ C is {a, b, c}; duplicates are included only once.",
+          "Thus A × (B ∪ C) = {(1,a), (1,b), (1,c), (2,a), (2,b), (2,c)}.",
+          "Separately, A × B = {(1,a), (1,b), (2,a), (2,b)} and A × C = {(1,b), (1,c), (2,b), (2,c)}.",
+          "Their union is {(1,a), (1,b), (1,c), (2,a), (2,b), (2,c)}, exactly the left-hand side.",
+          "For arbitrary sets, (x,y) ∈ A × (B ∪ C) means x ∈ A and (y ∈ B or y ∈ C), equivalent to (x,y) ∈ (A × B) ∪ (A × C)."
+        ],
+        "ta": [
+          "A = {1, 2}, B = {a, b}, C = {b, c} என எடுத்துக்கொள்வோம். B, C இரண்டிலும் b உள்ளது.",
+          "B ∪ C = {a, b, c}. கணத்தின் ஒன்றிப்பில் ஒரே உறுப்பு இருமுறை எண்ணப்படாது.",
+          "எனவே A × (B ∪ C) = {(1,a), (1,b), (1,c), (2,a), (2,b), (2,c)}.",
+          "தனித்தனியாக A × B = {(1,a), (1,b), (2,a), (2,b)}; A × C = {(1,b), (1,c), (2,b), (2,c)}.",
+          "இவ்விரு கணங்களின் ஒன்றிப்பு {(1,a), (1,b), (1,c), (2,a), (2,b), (2,c)} ஆகும். ஆகவே இருபுறமும் சமம்.",
+          "பொதுவாக (x,y) ∈ A × (B ∪ C) எனில் x ∈ A மற்றும் y ∈ B அல்லது y ∈ C. இதுவே (x,y) ∈ (A × B) ∪ (A × C) என்பதற்குச் சமம்."
+        ]
+      },
+      "answer": {
+        "en": "Verified: both sides equal {(1,a), (1,b), (1,c), (2,a), (2,b), (2,c)}; the identity holds for arbitrary sets.",
+        "ta": "சரிபார்க்கப்பட்டது: இருபுறமும் {(1,a), (1,b), (1,c), (2,a), (2,b), (2,c)}; இந்த முற்றொருமை எல்லாக் கணங்களுக்கும் பொருந்தும்."
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 10
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 18
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I text",
+          "2025 Tamil Volume I file and adjacent Q4(i) page checkpoint"
+        ],
+        "tamilGlyphsVisuallyConfirmed": false
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    }
+  ]
+}
