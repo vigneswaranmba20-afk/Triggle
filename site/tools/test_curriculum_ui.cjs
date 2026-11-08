@@ -427,6 +427,26 @@ async function main() {
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
       await noOverflow(page,'chapter hub at 390px');
     });
+    await check('Grade 9 Set Language textbook Venn figures are question-specific and usable at 320px',async()=>{
+      const page=await visit(await context(320),'/index.html?class=9&question=c9-textbook-example-1-14');
+      assert.equal(await page.locator('#figureBtn').isVisible(),true,'Worked Example 1.14 should have a Figure button');
+      await page.locator('#figureBtn').click();
+      const dialog=page.locator('#figureDialog');
+      await dialog.waitFor({state:'visible'});
+      assert.equal(await dialog.locator('.g9-venn-svg').count(),1);
+      const desc=await dialog.locator('.g9-venn-text-alternative').innerText();
+      assert.match(desc,/−3, −2/,'A-only difference must match printed Example 1.14');
+      assert.match(desc,/0, 2/,'B-only difference must match printed Example 1.14');
+      await page.locator('#closeDiagram').click();
+      assert.equal(await dialog.isVisible(),false,'Figure dialog must close accessibly');
+      await page.goto(url+'/index.html?class=9&question=c9-textbook-example-1-17');
+      await page.locator('#lessonCard').waitFor({state:'visible'});
+      assert.equal(await page.locator('#inlineFigure .g9-venn-svg').count(),1,'Given Venn diagram must be shown inline');
+      await page.goto(url+'/index.html?class=9&question=c9-textbook-example-1-18');
+      await page.locator('#figureBtn').click();
+      assert.equal(await page.locator('#figureDialog .g9-venn-svg').count(),3,'Three complement shading diagrams for Example 1.18');
+      await noOverflow(page,'source-aligned mobile Venn illustrations');
+    });
     await check('Worked examples are not mislabeled exercises, and both are one tap away',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch6');
       assert.equal(await page.locator('.hub-section-card').count(),4);

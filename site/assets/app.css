@@ -1107,3 +1107,14 @@
 .sp2-journey .sp2-slider-touch input[type=range]{width:100%;min-width:0;min-height:48px}
 @media(max-width:380px){.sp2-journey .sp2-slider-touch{grid-template-columns:43px minmax(0,1fr) 43px;gap:5px}
 .sp2-journey .sp2-slider-touch button{min-width:43px}}
+
+/* Source-checked original Set Language Venn diagrams. Numbers and labels remain
+   legible at 320px; captions and textual regions do not rely on color alone. */
+.g9-venn-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:13px;align-items:start;width:100%}
+.g9-venn-figure{margin:0;min-width:0;border:1px solid #e4ddeb;border-radius:13px;padding:10px;background:#fff}
+.g9-venn-figure figcaption{font-size:16px;font-weight:800;color:#413469;text-align:center;margin:2px 0 6px}
+.g9-venn-svg{display:block;width:100%;height:auto;max-width:610px;margin:0 auto;aspect-ratio:560/330}
+.g9-venn-text-alternative{font-size:13px;line-height:1.65;color:#463d62;border-left:3px solid #9885c3;padding:9px 11px;margin:12px 0;overflow-wrap:anywhere}
+.inline-figure .g9-venn-gallery{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.figure-dialog .g9-venn-gallery{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+@media(max-width:400px){.g9-venn-figure{padding:5px}.g9-venn-text-alternative{font-size:12px}}

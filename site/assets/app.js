@@ -362,9 +362,11 @@
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
  }
  function isQuestionFigure(item){
+  if(window.TriggleSetVenn?.needsInline(item))return true;
   return !!(item.diagram && typeof item.diagram==='object' && /\b(diagram|figure|labelled|labeled)\b/i.test(item.q?.en||''));
  }
  function hasUsefulFigure(item){
+  if(window.TriggleSetVenn?.supports(item))return true;
   const d=item.diagram;if(!d)return false;
   if(isQuestionFigure(item))return true;
   const kind=typeof d==='object'?d.kind:d;
@@ -376,11 +378,12 @@
  function renderInlineFigure(){
    const figure=$('inlineFigure');const yes=isQuestionFigure(current);
    figure.hidden=!yes; if(!yes)return;
-   const svg=window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});
+   const aligned=window.TriggleSetVenn?.render(current,lang);
+   const svg=aligned?.html||window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});
    $('inlineFigureVisual').innerHTML=svg;
    const d=current.diagram;
    const measures=d?.kind==='triangle'?((lang==='ta'?'எதிர்ப்பக்கம் ':'Opposite ')+d.opp+' · '+(lang==='ta'?'அடுத்துள்ள பக்கம் ':'Adjacent ')+d.adj+' · '+(lang==='ta'?'கர்ணம் ':'Hypotenuse ')+d.hyp+'. '):'';
-   $('inlineFigureCaption').textContent=measures+ui('inlineFigureNote');
+   $('inlineFigureCaption').textContent=aligned?.caption||(measures+ui('inlineFigureNote'));
  }
  let deepStageData=null,deepStageIndex=0,deepLauncher=null;
  const deepResume=load('triggle.deep.positions.v123',{});
@@ -495,7 +498,7 @@
  function showDiagram(){
   if(!hasUsefulFigure(current))return;
   const context={item:current,lang,renderText:tr};
-  let graphic=window.TriggleConcept?.render(context);
+  let graphic=window.TriggleSetVenn?.render(current,lang)||window.TriggleConcept?.render(context);
   if(!graphic){let svg='';if(current.diagram&&typeof current.diagram==='object')svg=window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});else svg=window.TriggleDraw.drawSimple(current.diagram||'identity');graphic={html:svg,caption:lang==='ta'?'படம் விளக்கத்திற்காக மட்டுமே; அளவுப்படி இல்லாமல் இருக்கலாம்.':'Original conceptual illustration; not necessarily drawn to scale.'}}
   $('diagramContent').innerHTML=graphic.html;
   $('visualTitle').textContent=tr(current.title);
