@@ -1022,3 +1022,43 @@
   .twd-question-answer-pair>.twd-part-solution{padding:14px 11px 18px}
   .twd-lesson .worked-step.twd-worked-step{padding:13px 0 19px}
 }
+
+
+/* Grade 9 inclusive learning: discoverable concept navigation for shared Android phones.
+ * Horizontal topic chips remain scrollable but no longer hide the only way forward. */
+.sp2-journey .sp2-journey-controls{
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(62px,auto) minmax(0,1fr);
+ gap:7px;align-items:center;min-width:0;margin:14px 0 5px;padding:8px;
+ border:1px solid #dcd2ea;border-radius:13px;background:#f8f5fd
+}
+.sp2-journey .sp2-journey-controls button{
+ display:flex;align-items:center;justify-content:center;min-width:0;min-height:46px;
+ border:1px solid #b8a8d2;border-radius:10px;padding:8px 9px;
+ background:#fff;color:#392952;font-size:12px;font-weight:800;
+ line-height:1.4;text-align:center;overflow-wrap:anywhere;white-space:normal
+}
+.sp2-journey .sp2-journey-controls button:disabled{
+ opacity:1;color:#686273;background:#eeeaf3;border-color:#ded7e8;cursor:default
+}
+.sp2-journey .sp2-journey-controls [data-journey-index]{
+ font-size:12px;font-weight:850;color:#3e3056;line-height:1.4;text-align:center;white-space:normal
+}
+.chapter-overview .sp2-navigation-tip{
+ color:#524861;font-size:12px!important;line-height:1.45!important;margin:6px 0 1px
+}
+.sp2-journey .sp2-nav{margin:6px 0 15px;scrollbar-width:auto;scrollbar-color:#8c78b4 #ece6f5}
+.sp2-journey .sp2-nav-button{min-height:66px}
+.chapter-overview .sp2-private{color:#554b68}
+@media(max-width:380px){
+ .sp2-journey .sp2-journey-controls{gap:4px;padding:6px;grid-template-columns:minmax(0,1fr) 65px minmax(0,1fr)}
+ .sp2-journey .sp2-journey-controls button{padding:7px 5px;font-size:11px}
+ .sp2-journey .sp2-journey-controls [data-journey-index]{font-size:11px}
+}
+
+/* WCAG 2.2 AA contrast: inactive bilingual switch and mobile class dock.
+ * Prior audit showed #73728c on #efedf5 and #8c8ca4 on white below 4.5:1. */
+.lang-switch button:not(.active){color:#514a67}
+@media(max-width:800px){
+ .dock-grade:not(.active){color:#4d465d}
+ .dock-grade:not(.active) strong,.dock-grade:not(.active) span{color:inherit}
+}

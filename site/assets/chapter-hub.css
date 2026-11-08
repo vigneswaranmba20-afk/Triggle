@@ -105,3 +105,17 @@
  .chapter-hub .hub-top-actions{margin:0 0 5px}
  .question-return{margin:2px 0 9px}
 }
+
+
+/* Grade 9 chapter readiness: say exactly what is ready without implying editorial sign-off. */
+.chapter-hub .hub-question-breakdown{
+ font-size:12px!important;line-height:1.65;color:#453957;
+ padding:10px 12px;margin:0 0 15px;border:1px solid #ded4ed;
+ border-radius:11px;background:#f7f4fc
+}
+.chapter-hub .hub-stage-note{color:#50445f;font-size:12px!important;line-height:1.5}
+.chapter-hub .hub-eyebrow{color:#604a7e}
+.chapter-hub .hub-section-description{color:#53485e}
+.chapter-hub .hub-question-title{color:#51475f}
+.chapter-hub .hub-question-arrow{color:#655080}
+.chapter-hub .hub-info{color:#51465e}

@@ -30,6 +30,8 @@
       hint:'Show a hint',reveal:'Why?',progress:'Checks answered correctly',tryPaper:'Try the full concept lesson',
       navigation:'Chapter sections',review:'Editorial review',sources:'Source books',
       sectionStatus:'Chapter under development · content shown below is available now.',
+      learningStatus:'Start with a concept, then explore worked examples or exercises. Textbook checks are still in progress.',
+      questionBreakdown:(total,examples,exercises,quizzes)=>`${total} question pages here: ${examples} worked examples + ${exercises} exercise/practice questions. ${quizzes} quick concept checks are separate.`,
       returnHelp:'Use the chapter menu to switch between Concepts, Worked Examples, Exercises and Quizzes.',
       selectQuestion:'Choose an exercise',group:'Exercise group',jumpConcept:'Open a concept',lab:'Venn diagram lab',
       existingExamples:'Some worked examples are available',noPublished:'Complete chapter review is still pending'
@@ -59,6 +61,8 @@
       hint:'ஒரு குறிப்பு',reveal:'ஏன்?',progress:'சரியாக விடையளித்த வினாக்கள்',tryPaper:'முழுக் கருத்துப் பாடத்திற்குச் செல்லுங்கள்',
       navigation:'அத்தியாயப் பகுதிகள்',review:'மீளாய்வு நிலை',sources:'பாடநூல் ஆதாரங்கள்',
       sectionStatus:'இந்த அத்தியாயம் உருவாக்கத்தில் உள்ளது. கிடைக்கும் பகுதிகள் கீழே உள்ளன.',
+      learningStatus:'முதலில் ஒரு கருத்தைக் கற்கவும். பிறகு தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் அல்லது பயிற்சிகளை முயலவும். பாடநூல் சரிபார்ப்பு தொடர்கிறது.',
+      questionBreakdown:(total,examples,exercises,quizzes)=>`இங்கு ${total} வினாப் பக்கங்கள்: ${examples} தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் + ${exercises} பயிற்சி வினாக்கள். ${quizzes} சிறு கருத்துச் சரிபார்ப்புகள் தனியாக உள்ளன.`,
       returnHelp:'கருத்துகள், எடுத்துக்காட்டுகள், பயிற்சிகள் மற்றும் சிறு தேர்வுகளுக்குச் செல்ல அத்தியாயத் தேர்வைப் பயன்படுத்துங்கள்.',
       selectQuestion:'ஒரு வினாவைத் தேர்ந்தெடுக்கவும்',group:'பயிற்சித் தொகுதி',jumpConcept:'கருத்தைப் படிக்கவும்',lab:'வென் பட ஆய்வகம்',
       existingExamples:'சில தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் உள்ளன',noPublished:'முழு அத்தியாய மீளாய்வு இன்னும் முடியவில்லை'
@@ -107,7 +111,9 @@
     root.append(heading);
     if(!section){
       const metadata=document.createElement('p');metadata.className='hub-stage-note';
-      metadata.textContent=t.sectionStatus;root.append(metadata);
+      const grade9Pilot=chapter.id==='g9-ch1'||chapter.id==='g9-ch2';
+      metadata.textContent=grade9Pilot?t.learningStatus:t.sectionStatus;root.append(metadata);
+      if(grade9Pilot){const breakdown=document.createElement('p');breakdown.className='hub-question-breakdown';breakdown.textContent=t.questionBreakdown(questions.length,counts.examples,counts.exercises,counts.quizzes);root.append(breakdown);}
       const menu=document.createElement('nav');menu.className='hub-section-menu';
       menu.setAttribute('aria-label',t.navigation);
       menu.innerHTML='<h3>'+e(t.choose)+'</h3>';
@@ -228,13 +234,14 @@
           const answers=document.createElement('div');answers.className='hub-quiz-answers';answers.setAttribute('role','group');
           answers.setAttribute('aria-label',text(stage.question));
           const feedback=document.createElement('p');feedback.setAttribute('aria-live','polite');feedback.className='hub-quiz-feedback';
+          let wrongAttempts=0;
           stage.choices.forEach((choice,i)=>{
             const button=document.createElement('button');button.type='button';button.innerHTML=typeset(text(choice));
             button.addEventListener('click',()=>{
               answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
               const right=i===stage.correct;
-              feedback.textContent=right?t.correct:t.incorrect;
-              if(right){correct.add(stage.id);update();}
+              if(right){feedback.textContent=t.correct;correct.add(stage.id);update();}
+              else{wrongAttempts++;const clue=wrongAttempts===2?' '+text(stage.hint):wrongAttempts>=3?' '+text(stage.why):'';feedback.innerHTML=typeset(t.incorrect+clue);}
             });
             answers.append(button);
           });

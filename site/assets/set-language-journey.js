@@ -22,7 +22,9 @@
       types:'Explore a set type',properties:'Choose a property',law:'Switch the law',
       count:'Move the common-member count',atleast:'At least one',none:'Neither',
       onlyA:'Only A',onlyB:'Only B',overlap:'Both',lawResult:'Both sides give',
-      extra:'Try a second practice question',reason:'Show the reasoning',top:'Back to learning path'},
+      extra:'Try a second practice question',reason:'Show the reasoning',top:'Back to learning path',
+      previousIdea:'Previous idea',nextIdea:'Next idea',position:(n,total)=>'Idea '+n+' of '+total,
+      navTip:'All seven ideas are below. Use the arrows to reach any idea.'},
     ta:{label:'சிறிய கற்றல் பாதை',title:'கண மொழியை ஒவ்வொரு கருத்தாகக் கற்போம்',
       intro:'2025 பாடநூலை அடிப்படையாகக் கொண்ட ஏழு சிறு ஆராய்ச்சிகள். ஒன்றைத் தேர்ந்து முயலுங்கள்; பிறகு தாளில் பயிற்சி செய்யுங்கள்.',
       state:'இந்த சாதனத்தில் சரிபார்த்த கருத்துகள்',source:'பாடநூல் பகுதி',enPage:'ஆங்கிலம் பக்கம்',taPage:'தமிழ் பக்கம்',
@@ -36,7 +38,9 @@
       types:'கண வகையை ஆராயுங்கள்',properties:'ஒரு பண்பைத் தேர்ந்தெடுக்கவும்',law:'விதியை மாற்றுங்கள்',
       count:'பொதுவான உறுப்புகளின் எண்ணிக்கையை மாற்றுங்கள்',atleast:'குறைந்தது ஒன்று',none:'எதுவுமில்லை',
       onlyA:'A மட்டும்',onlyB:'B மட்டும்',overlap:'இரண்டும்',lawResult:'இருபுறங்களிலும் கிடைப்பது',
-      extra:'இன்னொரு பயிற்சி வினா',reason:'காரணத்தைப் பார்க்க',top:'கற்றல் பாதைக்குத் திரும்புக'}
+      extra:'இன்னொரு பயிற்சி வினா',reason:'காரணத்தைப் பார்க்க',top:'கற்றல் பாதைக்குத் திரும்புக',
+      previousIdea:'முந்தைய கருத்து',nextIdea:'அடுத்த கருத்து',position:(n,total)=>total+' இல் கருத்து '+n,
+      navTip:'ஏழு கருத்துகளும் கீழே உள்ளன. மற்ற கருத்துகளுக்குச் செல்ல அம்புக்குறிகளைத் தொடவும்.'}
   };
   function load(){
     try{
@@ -55,6 +59,11 @@
     root.innerHTML='<div class="sp2-kicker">'+esc(t.label)+'</div>'+
       '<h3>'+esc(t.title)+'</h3><p class="sp2-intro">'+esc(t.intro)+'</p>'+
       '<p class="sp2-progress" role="status" aria-live="polite" data-progress></p>'+
+      '<div class="sp2-journey-controls" role="group" aria-label="'+esc(t.select)+'">'+
+      '<button type="button" data-journey-prev>'+esc('← '+t.previousIdea)+'</button>'+
+      '<span data-journey-index role="status" aria-live="polite"></span>'+
+      '<button type="button" data-journey-next>'+esc(t.nextIdea+' →')+'</button></div>'+
+      '<p class="sp2-navigation-tip">'+esc(t.navTip)+'</p>'+
       '<div class="sp2-nav" role="group" aria-label="'+esc(t.select)+'" data-nav></div>'+
       '<div class="sp2-panel" data-panel></div>'+
       '<p class="sp2-private">'+esc(t.saved)+'</p>';
@@ -67,8 +76,14 @@
         button.classList.toggle('sp2-done',done.has(stage.id));
         button.classList.toggle('sp2-current',Number(button.dataset.index)===active);
         button.setAttribute('aria-pressed',String(Number(button.dataset.index)===active));
+        button.setAttribute('aria-current',Number(button.dataset.index)===active?'step':'false');
         button.querySelector('.sp2-done-mark').textContent=done.has(stage.id)?'✓':'';
       });
+      root.querySelector('[data-journey-index]').textContent=t.position(active+1,book.stages.length);
+      root.querySelector('[data-journey-prev]').disabled=active===0;
+      root.querySelector('[data-journey-next]').disabled=active===book.stages.length-1;
+      const selected=nav.querySelector('.sp2-current');
+      if(selected)nav.scrollLeft=Math.max(0,selected.offsetLeft-nav.offsetLeft-8);
     }
     book.stages.forEach((stage,i)=>{
       const button=document.createElement('button');
@@ -77,6 +92,8 @@
       button.addEventListener('click',()=>show(i));
       nav.append(button);
     });
+    root.querySelector('[data-journey-prev]').addEventListener('click',()=>show(active-1));
+    root.querySelector('[data-journey-next]').addEventListener('click',()=>show(active+1));
     function demoShell(title){return '<div class="sp2-demo" data-demo><p class="sp2-demo-title">'+esc(title)+'</p><div class="sp2-demo-controls" data-demo-controls></div><p class="sp2-demo-output" data-demo-output role="status" aria-live="polite"></p></div>';}
     function btn(name,key){return '<button type="button" data-demo-mode="'+esc(key)+'">'+esc(name)+'</button>';}
     function setDemo(state,options,paint){
@@ -250,14 +267,16 @@
         '<p>'+htmlMath(pick(stage.paper,lang))+'</p></details>'+
         '<div data-extra-practice></div>'+ (stage.id==='cardinality'?'<div data-hard></div>':'');
       const answers=panel.querySelector('[data-answers]');
+      let wrongAttempts=0;
       stage.choices.forEach((choice,i)=>{
         const button=document.createElement('button');
         button.type='button';button.dataset.choice=String(i);button.innerHTML=htmlMath(pick(choice,lang));
         button.addEventListener('click',()=>{
           answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
           const good=i===stage.correct;
-          panel.querySelector('[data-feedback]').textContent=good?t.correct:t.retry;
-          if(good){done.add(stage.id);save(done);updateProgress();}
+          if(good){panel.querySelector('[data-feedback]').textContent=t.correct;done.add(stage.id);save(done);updateProgress();}
+          else{wrongAttempts++;const guidance=wrongAttempts===2?' '+pick(stage.hint,lang):wrongAttempts>=3?' '+pick(stage.why,lang):'';
+            panel.querySelector('[data-feedback]').innerHTML=htmlMath(t.retry+guidance);}
         });
         answers.append(button);
       });

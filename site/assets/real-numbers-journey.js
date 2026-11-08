@@ -9,8 +9,8 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const notation=value=>window.TriggleNotation?window.TriggleNotation.render(value):esc(value);
 const pick=(obj,lang)=>typeof obj==='string'?obj:obj?.[lang]||obj?.en||'';
 const words={
- en:{kicker:'REAL NUMBERS · INTERACTIVE LAB',title:'See every number come alive',intro:'Move the controls, predict what changes, and test your understanding. Eight small explorations follow Chapter 2 of your 2025 SCERT textbook.',progress:'Concepts checked',source:'Textbook section',explore:'Explore this idea',check:'Now check yourself',hint:'Show a hint',why:'Why this works',right:'Correct! Explain it aloud or on paper.',wrong:'Not yet. Use the hint and try again.',paper:'Try this on paper',saved:'Progress is kept only on this device.',numberLine:'Number-line explorer',category:'Tap a number',move:'Move the point',factor:'Choose the factor',power:'Choose the power',magnitude:'Move the power of ten',next:'Next concept',detailed:'The picture is a mathematical model, not a copied textbook illustration.'},
- ta:{kicker:'மெய்யெண்கள் · செயல்பாட்டு ஆய்வகம்',title:'எண்களை இயக்கிப் புரிந்துகொள்வோம்',intro:'கட்டுப்பாடுகளை மாற்றி, விளைவைக் கணித்து, புரிதலைச் சோதிக்கவும். 2025 பாடநூலின் இரண்டாம் அத்தியாயத்திற்கான எட்டு சிறு செயல்பாடுகள்.',progress:'சரியாக முடித்த கருத்துகள்',source:'பாடநூல் பகுதி',explore:'இக்கருத்தை ஆராய்க',check:'இப்போது சரிபார்க்கவும்',hint:'குறிப்பைக் காட்டு',why:'இது ஏன் சரி?',right:'சரி! காரணத்தைச் சொல்லிப் பாருங்கள்.',wrong:'இன்னும் சரியில்லை. குறிப்பைப் பார்த்து மீண்டும் முயல்க.',paper:'தாளில் முயற்சி செய்க',saved:'முன்னேற்றம் இந்தச் சாதனத்தில் மட்டுமே சேமிக்கப்படும்.',numberLine:'எண்கோடு ஆய்வகம்',category:'ஓர் எண்ணைத் தேர்ந்தெடுக்கவும்',move:'புள்ளியை நகர்த்துக',factor:'காரணியைத் தேர்ந்தெடுக்கவும்',power:'அடுக்கைத் தேர்ந்தெடுக்கவும்',magnitude:'பத்தின் அடுக்கை மாற்றுக',next:'அடுத்த கருத்து',detailed:'இது பாடநூல் படத்தின் நகல் அல்ல; கணித விளக்கப்படம்.'}
+ en:{kicker:'REAL NUMBERS · INTERACTIVE LAB',title:'See every number come alive',intro:'Move the controls, predict what changes, and test your understanding. Eight small explorations follow Chapter 2 of your 2025 SCERT textbook.',progress:'Concepts checked',source:'Textbook section',explore:'Explore this idea',check:'Now check yourself',hint:'Show a hint',why:'Why this works',right:'Correct! Explain it aloud or on paper.',wrong:'Not yet. Use the hint and try again.',paper:'Try this on paper',saved:'Progress is kept only on this device.',numberLine:'Number-line explorer',category:'Tap a number',move:'Move the point',factor:'Choose the factor',power:'Choose the power',magnitude:'Move the power of ten',next:'Next concept',previousIdea:'Previous idea',nextIdea:'Next idea',position:(n,total)=>'Idea '+n+' of '+total,navTip:'Use the arrows to move through all eight concepts.',detailed:'The picture is a mathematical model, not a copied textbook illustration.'},
+ ta:{kicker:'மெய்யெண்கள் · செயல்பாட்டு ஆய்வகம்',title:'எண்களை இயக்கிப் புரிந்துகொள்வோம்',intro:'கட்டுப்பாடுகளை மாற்றி, விளைவைக் கணித்து, புரிதலைச் சோதிக்கவும். 2025 பாடநூலின் இரண்டாம் அத்தியாயத்திற்கான எட்டு சிறு செயல்பாடுகள்.',progress:'சரியாக முடித்த கருத்துகள்',source:'பாடநூல் பகுதி',explore:'இக்கருத்தை ஆராய்க',check:'இப்போது சரிபார்க்கவும்',hint:'குறிப்பைக் காட்டு',why:'இது ஏன் சரி?',right:'சரி! காரணத்தைச் சொல்லிப் பாருங்கள்.',wrong:'இன்னும் சரியில்லை. குறிப்பைப் பார்த்து மீண்டும் முயல்க.',paper:'தாளில் முயற்சி செய்க',saved:'முன்னேற்றம் இந்தச் சாதனத்தில் மட்டுமே சேமிக்கப்படும்.',numberLine:'எண்கோடு ஆய்வகம்',category:'ஓர் எண்ணைத் தேர்ந்தெடுக்கவும்',move:'புள்ளியை நகர்த்துக',factor:'காரணியைத் தேர்ந்தெடுக்கவும்',power:'அடுக்கைத் தேர்ந்தெடுக்கவும்',magnitude:'பத்தின் அடுக்கை மாற்றுக',next:'அடுத்த கருத்து',previousIdea:'முந்தைய கருத்து',nextIdea:'அடுத்த கருத்து',position:(n,total)=>total+' இல் கருத்து '+n,navTip:'எட்டு கருத்துகளையும் கற்க அம்புக்குறிகளைப் பயன்படுத்தவும்.',detailed:'இது பாடநூல் படத்தின் நகல் அல்ல; கணித விளக்கப்படம்.'}
 };
 const load=()=>{try{const a=JSON.parse(localStorage.getItem(KEY)||'[]');return new Set(Array.isArray(a)?a.filter(id=>path.stages.some(s=>s.id===id)):[])}catch{return new Set()}};
 const save=done=>{try{localStorage.setItem(KEY,JSON.stringify([...done]))}catch{}};
@@ -31,6 +31,11 @@ function mount(container,chapter,language){
  root.className='sp2-journey rnlab';root.setAttribute('aria-label',t.title);
  root.innerHTML='<p class="sp2-kicker">'+esc(t.kicker)+'</p><h3>'+esc(t.title)+'</h3>'+
  '<p class="sp2-intro">'+esc(t.intro)+'</p><p class="sp2-progress" data-progress role="status" aria-live="polite"></p>'+
+ '<div class="sp2-journey-controls" role="group" aria-label="'+esc(t.title)+'">'+
+ '<button type="button" data-journey-prev>'+esc('← '+t.previousIdea)+'</button>'+
+ '<span data-journey-index role="status" aria-live="polite"></span>'+
+ '<button type="button" data-journey-next>'+esc(t.nextIdea+' →')+'</button></div>'+
+ '<p class="sp2-navigation-tip">'+esc(t.navTip)+'</p>'+
  '<nav class="sp2-nav" data-nav aria-label="'+esc(t.title)+'"></nav><div class="sp2-panel" data-panel></div>'+
  '<p class="sp2-private">'+esc(t.saved)+'</p>';
  container.append(root);
@@ -39,9 +44,16 @@ function mount(container,chapter,language){
   b.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+esc(pick(stage.title,lang))+'</span><span class="sp2-done-mark" aria-hidden="true"></span>';
   b.addEventListener('click',()=>show(i));nav.append(b);
  });
+ root.querySelector('[data-journey-prev]').addEventListener('click',()=>show(active-1));
+ root.querySelector('[data-journey-next]').addEventListener('click',()=>show(active+1));
  function update(){root.querySelector('[data-progress]').textContent=t.progress+': '+done.size+' / '+path.stages.length;
    nav.querySelectorAll('button').forEach((b,i)=>{b.classList.toggle('sp2-current',i===active);b.classList.toggle('sp2-done',done.has(path.stages[i].id));
-    b.setAttribute('aria-pressed',String(i===active));b.querySelector('.sp2-done-mark').textContent=done.has(path.stages[i].id)?'✓':'';});}
+    b.setAttribute('aria-pressed',String(i===active));b.setAttribute('aria-current',i===active?'step':'false');b.querySelector('.sp2-done-mark').textContent=done.has(path.stages[i].id)?'✓':'';});
+   root.querySelector('[data-journey-index]').textContent=t.position(active+1,path.stages.length);
+   root.querySelector('[data-journey-prev]').disabled=active===0;
+   root.querySelector('[data-journey-next]').disabled=active===path.stages.length-1;
+   const selected=nav.querySelector('.sp2-current');if(selected)nav.scrollLeft=Math.max(0,selected.offsetLeft-nav.offsetLeft-8);
+ }
  function controls(label,items,value,onChange){const host=panel.querySelector('[data-demo-controls]');
   const group=document.createElement('div');group.className='rnlab-choices';group.setAttribute('role','group');group.setAttribute('aria-label',label);
   items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);if(typeof caption==='object'){b.innerHTML=caption.html;b.setAttribute('aria-label',caption.label);}
@@ -201,11 +213,13 @@ function mount(container,chapter,language){
    '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-explanation hidden></div></div>'+
    (i+1<path.stages.length?'<button type="button" class="rnlab-next" data-next>'+esc(t.next)+' →</button>':'');
   const choices=panel.querySelector('[data-answers]'),feedback=panel.querySelector('[data-feedback]'),explanation=panel.querySelector('[data-explanation]');
+  let wrongAttempts=0;
   stage.choices.forEach((opt,j)=>{const b=document.createElement('button');b.type='button';b.dataset.choice=String(j);b.innerHTML=notation(pick(opt,lang));
    b.addEventListener('click',()=>{const correct=j===stage.correct;
     choices.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
-    feedback.textContent=correct?t.right:t.wrong;
-    if(correct){done.add(stage.id);save(done);update();explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=false;}
+    if(correct){feedback.textContent=t.right;done.add(stage.id);save(done);update();explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=false;}
+    else{wrongAttempts++;const clue=wrongAttempts===2?' '+pick(stage.hint,lang):wrongAttempts>=3?' '+pick(stage.why,lang):'';
+      feedback.innerHTML=notation(t.wrong+clue);}
    });choices.append(b);
   });
   panel.querySelector('[data-hint]').addEventListener('click',()=>{feedback.textContent=pick(stage.hint,lang);});

@@ -61,6 +61,11 @@ async function main(){
      for(const key of ['concepts','examples','exercises','quizzes'])
       assert.equal(await page.locator('.hub-section-card[data-hub-section="'+key+'"]').count(),1,key);
     });
+    await check(c,'Readiness and question categories are clear','orientation',async()=>{
+     const note=(await page.locator('.hub-question-breakdown').innerText()).trim();
+     assert.ok(note.length>30,'Missing clear count explanation');
+     assert.match(note,/\d+/,'Counts unavailable');
+    });
     await check(c,'Interactive lesson stages available','interactivity',async()=>{
      await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
      await page.locator('#chapterOverview .sp2-journey [data-nav] button').first().waitFor({state:'visible'});
@@ -69,6 +74,17 @@ async function main(){
     });
     const lab=page.locator('#chapterOverview .sp2-journey');
     if(!await lab.isVisible())continue;
+    await check(c,'Discoverable previous/next controls reach all concepts','navigation',async()=>{
+     const prev=lab.locator('[data-journey-prev]'),next=lab.locator('[data-journey-next]'),index=lab.locator('[data-journey-index]');
+     assert.equal(await prev.isDisabled(),true);
+     assert.ok((await index.innerText()).includes('1'));
+     await next.click();assert.ok((await index.innerText()).includes('2'));
+     await prev.click();assert.ok((await index.innerText()).includes('1'));
+     for(let n=1;n<config.expected;n++)await next.click();
+     assert.equal(await next.isDisabled(),true);
+     assert.equal(await lab.locator('[data-nav] button[aria-current="step"]').count(),1);
+     await lab.locator('[data-nav] button').first().click();
+    });
     await check(c,'Demo and self-check are usable','learning',async()=>{
      assert.ok(await lab.locator('[data-demo-controls] button,input[type=range]').count()>0,'No demo control');
      assert.ok(await lab.locator('[data-answers] button').count()>1,'No answer choices');
@@ -87,6 +103,17 @@ async function main(){
      const before=await lab.locator('[data-panel] h4').innerText();
      await lab.locator('[data-nav] button').nth(1).click();
      assert.notEqual(await lab.locator('[data-panel] h4').innerText(),before);
+    });
+    await check(c,'Second wrong answer gives a concept-specific clue','feedback',async()=>{
+     await lab.locator('[data-nav] button').first().click();
+     const idx=await page.evaluate(chapter=>{
+       const p=chapter==='g9-ch1'?window.TRIGGLE_SET_PATH:window.TRIGGLE_REAL_PATH;
+       return p.stages[0].correct===0?1:0;
+     },config.chapter);
+     const option=lab.locator('[data-answers] button').nth(idx);
+     await option.click();const first=(await lab.locator('[data-feedback]').innerText()).trim();
+     await option.click();const second=(await lab.locator('[data-feedback]').innerText()).trim();
+     assert.ok(second.length>first.length,JSON.stringify({first,second}));
     });
     await check(c,'No browser JavaScript exceptions','stability',async()=>assert.deepEqual(errors,[]));
     await check(c,'No document-width overflow','reflow',async()=>{
@@ -110,11 +137,11 @@ async function main(){
      assert.ok(r.document<=r.window+1,JSON.stringify(r));
     },'advisory');
     if(AxeBuilder&&width===390){
-     await check(c,'Axe WCAG 2.2 A/AA (advisory)','accessibility',async()=>{
+     await check(c,'Axe WCAG 2.2 A/AA release gate','accessibility',async()=>{
       const a=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
-      const violations=a.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.length}));
+      const violations=a.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.length,details:v.nodes.slice(0,9).map(n=>({target:n.target,html:n.html.slice(0,180),why:(n.failureSummary||'').slice(0,240)}))}));
       assert.equal(violations.length,0,JSON.stringify(violations));
-     },'advisory');
+     },'high');
     }
     if(width<500)await page.screenshot({path:path.join(out,config.chapter+'-'+lang+'-'+width+'.png'),fullPage:true,animations:'disabled'});
    }finally{await context.close();}
