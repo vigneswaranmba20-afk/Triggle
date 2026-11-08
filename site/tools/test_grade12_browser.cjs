@@ -53,18 +53,9 @@ const {chromium}=require('playwright');
      row.value=String(r);column.value=String(col);column.dispatchEvent(new Event('change',{bubbles:true}));
     },{r,col});
     const output=await page.locator('#cofactor-result').innerText();
-    assert.match(output,new RegExp('C'+(r+1)+(col+1)+' = [-0-9]+ × [-0-9]+ = '+expected[r][col]+'
-   assert.equal(await page.locator('article[data-q="i"] .english').isVisible(),true);
-   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'horizontal overflow at '+width);
-   await context.setOffline(true);
-   await page.locator('#verify-matrix').click();
-   assert.match(await page.locator('#matrix-result').innerText(),/Both identities verified/);
-   await context.close();
-  }
-  console.log('PASS Grade 12 browser: mobile/desktop, Tamil, keyboard, both matrices and offline interaction');
- } finally {await browser.close();}
-})().catch(e=>{console.error(e);process.exitCode=1;});
-),'cofactor C'+(r+1)+(col+1)+' at '+width+'px');
+    const expectedLine='C'+(r+1)+(col+1)+' = '+( ((r+col)%2) ? '-1' : '1')+' × ';
+    assert.ok(output.includes(expectedLine),'cofactor sign and coordinate at '+width+'px: '+output);
+    assert.ok(output.endsWith(' = '+expected[r][col]),'cofactor value at '+width+'px: '+output);
    }
    await page.locator('#en').click();
    assert.equal(await page.locator('article[data-q="i"] .english').isVisible(),true);
