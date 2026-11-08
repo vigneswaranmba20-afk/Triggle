@@ -4,7 +4,7 @@
   "edition": "2025 revised",
   "lastVerified": "2026-11-08",
   "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
-  "notes": "Only chapter starts and Exercise 1.1 complete question listing have been directly checked against the uploaded bilingual PDFs. Do not infer full-grade question totals from legacy samples. CI/browser and human Tamil editorial review remain pending. 2026-11-08 07:30 run: Grade 10 visual pair-grid and independent mathematical enumeration assertions committed; no newly verified textbook subparts; no CI/browser execution or merge.",
+  "notes": "2026-11-08 08:30: 2025 revised English and Tamil PDF page 12 visually checked for Q1(iii) A={m,n}, B=empty set. Source-verified bilingual solution and preview committed; independent Cartesian enumeration 0/4/0 checked. Tamil human editorial, full npm/Playwright, GitHub CI and merge/live verification remain pending. Full chapter inventory unknown.",
   "chapters": [
     {
       "chapter": 1,
@@ -49,7 +49,8 @@
       "coverageStatus": "incomplete",
       "verifiedQuestionSubparts": [
         "1(i)",
-        "1(ii)"
+        "1(ii)",
+        "1(iii)"
       ],
       "mergedQuestionSubparts": [],
       "liveVerifiedQuestionSubparts": [],
@@ -147,15 +148,15 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "Execute Grade 10 preview regression and npm/Playwright/mobile/keyboard/offline checks against full repository; reconcile Grade 10 branch with latest main (31 commits behind at start of 07:30 run). Source-verify 2025 English/Tamil Ex 1.1 Q1(iii) printed p.6/PDF p.12 before drafting. Do not merge without green checks.",
+  "nextAction": "Run Grade 10 Q1(iii) Node test, all Grade 10 regression tests, npm test, browser/mobile/keyboard/offline suite and GitHub CI; reconcile against latest main before merge. Next source-verified item: Exercise 1.1 Q2, printed p.6/PDF p.12, A={1,2,3}, B={primes less than 10}.",
   "testStatus": {
-    "localMathEnumeration": "Q1(i) independently enumerated in previous run; Q1(ii) independently derived and standalone test committed, execution pending",
+    "localMathEnumeration": "Q1(iii) independent enumeration checked: A×B=∅, A×A has four ordered pairs, B×A=∅; full repository tests pending",
     "npmTest": "not executed; full checkout unavailable in this connector execution",
     "playwright": "not executed",
-    "githubCI": "no PR-triggered workflow runs returned for latest commit",
+    "githubCI": "not yet confirmed for latest Grade 10 branch",
     "merged": false,
     "liveVerified": false,
     "latestGrade10PreviewCommit": "64ec0e40cbcd5bdae27b0bac72757e679c296098",
-    "newPreviewFeatures": "Source/math/edition/exercise/schema gates; bilingual ordered-pair grid for existing Q1(i–ii); independent Cartesian enumeration regression added"
+    "newPreviewFeatures": "Q1(i–iii) bilingual solutions, empty-set grid support, source/math gates; Tamil editorial pending"
   }
 }
