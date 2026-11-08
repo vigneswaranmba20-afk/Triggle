@@ -362,11 +362,6 @@
  const deepResume=load('triggle.deep.positions.v123',{});
  const hasDeepLesson=item=>!!window.TriggleDeep?.hasLesson?.(item?.id);
 
- function updateQuestionContextLabel(){
-  const open=$('deepQuestionContext').open;
-  $('deepQuestionTitle').textContent=ui(open?'questionContextClose':'questionContext');
-  $('deepQuestionHint').textContent=ui(open?'questionContextHideHint':'questionContextHint');
- }
  function deepNavTo(index,focusNav=false){
   if(!deepStageData)return;
   const list=deepStageData.stages;
@@ -384,8 +379,6 @@
   $('deepNext').querySelector('span').textContent=(deepStageIndex===list.length-1?(lang==='ta'?'கேள்விக்குத் திரும்பு':'Finish & return'):(lang==='ta'?'அடுத்த கருத்து':'Next concept'));
   $('deepStageDots').innerHTML=list.map((_s,i)=>'<button type="button" class="deep-dot '+(i===deepStageIndex?'active':'')+'" data-jump="'+i+'" aria-label="'+esc(label+(i+1))+'" '+(i===deepStageIndex?'aria-current="step"':'')+'></button>').join('');
   $('guidedScroll').scrollTop=0;
-  $('deepQuestionContext').open=deepStageIndex===0;
-  updateQuestionContextLabel();
   if(focusNav)$('deepNext').focus({preventScroll:true});
  }
  function openGuided(stageNumber,launcher){
@@ -397,6 +390,7 @@
   $('guidedClass').textContent=ui('class')+' '+grade;
   $('guidedQuestionLabel').textContent=tr(current.label);
   $('guidedQuestion').innerHTML=math(tr(current.q));
+  $('deepQuestionDock').scrollTop=0;
   $('deepSourceStatus').textContent=deepStageData.reviewed?(lang==='ta'?'விரிவான பாடம்':'CONCEPT LESSON'):(lang==='ta'?'தீர்வு வழிமுறை':'WORKED-PATH GUIDE');
   const start=Number.isInteger(stageNumber)?stageNumber:(deepResume[current.id]||0);
   if(!dlg.open)dlg.showModal();
@@ -504,7 +498,6 @@
  $('deepStageDots').addEventListener('click',e=>{const b=e.target.closest('[data-jump]');if(b)deepNavTo(Number(b.dataset.jump));});
  $('guidedDialog').addEventListener('keydown',e=>{if(e.target.matches('input,button')||e.altKey||e.ctrlKey||e.metaKey)return;if(e.key==='ArrowRight'){e.preventDefault();deepNavTo(Math.min(deepStageIndex+1,deepStageData.stages.length-1));}if(e.key==='ArrowLeft'){e.preventDefault();deepNavTo(Math.max(0,deepStageIndex-1));}});
  $('closeGuided').onclick=closeGuided;
- $('deepQuestionContext').addEventListener('toggle',updateQuestionContextLabel);
  $('guidedDialog').addEventListener('close',()=>{renderMode();$('tabGuided').setAttribute('aria-expanded','false');(deepLauncher?.isConnected?deepLauncher:$('tabGuided')).focus({preventScroll:true})});
  $('guidedDialog').addEventListener('click',e=>{if(e.target===$('guidedDialog'))closeGuided()});
  $('figureBtn').onclick=showDiagram;$('closeDiagram').onclick=()=>$('figureDialog').close();
