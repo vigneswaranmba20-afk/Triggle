@@ -95,6 +95,49 @@ const server=http.createServer((req,res)=>{
    await ctx.close();
    console.log('PASS Grade 11 Q3(i) bilingual keyboard/offline mobile '+width);
   }
+  // Exercise 1.1 Q3(ii): odd primes are infinite (Euclid-style proof).
+  for(const width of [320,390,1280]){
+   const ctx=await browser.newContext({viewport:{width,height:800}});
+   const p=await ctx.newPage();
+   await p.goto('http://127.0.0.1:'+server.address().port+'/grade-11/sets-q3-ii-preview.html');
+   await p.locator('#lesson article').waitFor();
+   assert.match(await p.locator('#lesson').innerText(),/odd prime/);
+   await p.locator('#lesson summary').focus();
+   await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
+   assert.match(await p.locator('#lesson').innerText(),/2p₁p₂/);
+   assert.match(await p.locator('#lesson').innerText(),/Infinite set/);
+   await p.locator('#ta').click();
+   assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   assert.equal(await p.locator('#ta').getAttribute('aria-pressed'),'true');
+   assert.match(await p.locator('#lesson').innerText(),/முடிவில்லாத கணம்/);
+   assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Q3(ii) horizontal overflow '+width);
+   await ctx.setOffline(true);
+   await p.locator('#en').click();
+   await p.locator('#lesson summary').click();
+   await p.locator('#lesson summary').click();
+   assert.match(await p.locator('#lesson').innerText(),/Infinite set/);
+   await ctx.close();
+   console.log('PASS Grade 11 Q3(ii) bilingual keyboard/offline mobile '+width);
+  }
+  // Network failure and retry must preserve the selected Tamil language.
+  {
+   const ctx=await browser.newContext({viewport:{width:390,height:800}});
+   const p=await ctx.newPage();
+   await p.route('**/g11-ch1-ex1-1-q3-ii.json',route=>route.abort());
+   await p.goto('http://127.0.0.1:'+server.address().port+'/grade-11/sets-q3-ii-preview.html');
+   await p.locator('#retry:visible').waitFor();
+   await p.locator('#ta').click();
+   assert.match(await p.locator('#error').innerText(),/பாடம் கிடைக்கவில்லை/);
+   await p.unroute('**/g11-ch1-ex1-1-q3-ii.json');
+   await p.locator('#retry').click();
+   await p.locator('#lesson article').waitFor();
+   assert.equal(await p.locator('#retry').isVisible(),false);
+   assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   assert.match(await p.locator('#lesson').innerText(),/முடிவில்லாத கணம்/);
+   await ctx.close();
+   console.log('PASS Grade 11 Q3(ii) Tamil network recovery');
+  }
   const context=await browser.newContext({viewport:{width:320,height:800}});
   const page=await context.newPage();
   await page.route('**/g11-ch1-ex1-1-q1.json',route=>route.abort());
