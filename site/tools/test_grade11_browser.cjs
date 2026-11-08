@@ -181,6 +181,27 @@ const server=http.createServer((req,res)=>{
    await ctx.close();
    console.log('PASS Grade 11 Q4(i) mobile bilingual keyboard/offline '+width);
   }
+  // Grade 11 Q4(ii): Cartesian-product union across responsive sizes and offline interaction.
+  for(const width of [320,390,1280]){
+   const ctx=await browser.newContext({viewport:{width,height:800}});
+   const p=await ctx.newPage();
+   await p.goto('http://127.0.0.1:'+server.address().port+'/grade-11/sets-q4-ii-preview.html');
+   await p.locator('#lesson article').waitFor();
+   assert.ok((await p.locator('#lesson').innerText()).includes('A × (B ∪ C)'));
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
+   assert.ok((await p.locator('#lesson').innerText()).includes('(2,c)'));
+   await p.locator('#ta').click();
+   assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   assert.match(await p.locator('#lesson').innerText(),/சரிபார்க்கப்பட்டது/);
+   assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+   await ctx.setOffline(true);
+   await p.locator('#en').click();
+   await p.locator('#lesson summary').click();
+   assert.match(await p.locator('#lesson').innerText(),/identity holds for arbitrary sets/);
+   await ctx.close();
+   console.log('PASS Grade 11 Q4(ii) bilingual keyboard/mobile/offline '+width);
+  }
   // Network failure and retry must preserve the selected Tamil language.
   {
    const ctx=await browser.newContext({viewport:{width:390,height:800}});
