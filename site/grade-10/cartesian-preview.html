@@ -26,7 +26,7 @@ const errorText={en:'Unable to load verified lessons. Please check your connecti
 const main=document.getElementById('lessons');
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 function validLesson(q,id){
- return q && q.id===id && q.grade===10 && q.review?.sourceVerified===true &&
+ return q && q.id===id && q.grade===10 && q.review?.sourceVerified===true && q.review?.mathVerified===true && q.review?.merged===false && q.review?.liveVerified===false &&
  ['en','ta'].every(k=>typeof q.title?.[k]==='string' && q.title[k].trim() && typeof q.questionParaphrase?.[k]==='string' && q.questionParaphrase[k].trim() && typeof q.misconception?.[k]==='string' && q.misconception[k].trim()) &&
  Array.isArray(q.steps) && q.steps.length>0 && q.steps.every(step=>typeof step.equation==='string' && ['en','ta'].every(k=>typeof step[k]==='string' && step[k].trim())) &&
  q.source?.english?.printedPage && q.source?.tamil?.printedPage;
