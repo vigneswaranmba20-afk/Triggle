@@ -4,7 +4,7 @@
   "edition": "2025 revised",
   "lastVerified": "2026-11-08",
   "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
-  "notes": "2026-11-08 15:31 IST: Q4 English/Tamil 2025 revised printed p.6/PDF p.12 source matched; A={5,6}, B={4,5,6}, C={5,6,7}; identity independently checked via (B×B)∩(C×C)=(B∩C)×(B∩C)=A×A. New Q4 preview, math and browser tests pending CI. Prior Q3 commit 27ccdbef passed four workflows, including Grade 10 #42465417651. Tamil human editorial pending; no merge/live verification.",
+  "notes": "2026-11-08 17:32 IST: Ex 1.1 Q5 English/Tamil revised printed p.6/PDF p.12 source confirmed; A={1,2,3}, B={2,3,5}, C={3,4}, D={1,3,5}. Both (A∩C)×(B∩D) and (A×B)∩(C×D) independently enumerate {(3,3),(3,5)}. Q5 bilingual preview and math tests added; Tamil human editorial pending. Previous Q4 fix f9c2a42 passed four workflows.",
   "chapters": [
     {
       "chapter": 1,
@@ -53,7 +53,8 @@
         "1(iii)",
         "2",
         "3",
-        "4"
+        "4",
+        "5"
       ],
       "mergedQuestionSubparts": [],
       "liveVerifiedQuestionSubparts": [],
@@ -151,12 +152,12 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "Confirm Q4 commit GitHub CI; fix any failures. Next Chapter 1 Ex 1.1 Q5 (2025 revised English/Tamil printed p.6): verify full formula/glyph layout before drafting. Reconcile Grade 10 branch with latest main and run cross-grade regressions before preview merge.",
+  "nextAction": "Check CI for Q5; if successful reconcile with latest main, run cross-grade regressions and merge testing preview. Next Ex 1.1 Q6(i): visually verify symbols in 2025 English/Tamil p.6 before solution.",
   "testStatus": {
     "localMathEnumeration": "Q1(iii) independent enumeration checked: A×B=∅, A×A has four ordered pairs, B×A=∅; full repository tests pending",
     "npmTest": "Passed in shared Test Triggle changes workflow #42465417691 for Q3 commit 27ccdbef; local npm test not run in this cycle.",
     "playwright": "Q3 browser CI #42465417651 passed; Q4 assertions committed, pending execution",
-    "githubCI": "Q3 commit 27ccdbef passed all four workflows; new Q4 changes pending CI",
+    "githubCI": "Q4 correction f9c2a42 passed all four workflows including Grade 10 browser #42473631051; Q5 pending.",
     "merged": false,
     "liveVerified": false,
     "latestGrade10PreviewCommit": "27ccdbef3231177b29796cdf08d95a2be4928eab",
