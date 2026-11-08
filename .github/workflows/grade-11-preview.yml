@@ -36,6 +36,7 @@ jobs:
           node site/tools/test_grade11_preview.cjs
           node site/tools/test_grade11_coverage_integrity.cjs
           node site/tools/test_grade11_ex1_1_remaining_inventory.cjs
+          node site/tools/test_grade11_ledger_state_machine.cjs
           node site/tools/test_grade11_cartesian_intersection_lab.cjs
       - run: npx playwright install --with-deps chromium
       - name: Grade 11 mobile keyboard bilingual and recovery browser checks
