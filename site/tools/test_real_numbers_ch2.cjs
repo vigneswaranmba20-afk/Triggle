@@ -85,8 +85,9 @@ for(const p of scripts.slice(2)){
 }
 assert.ok(index.includes('assets/real-numbers-deep.js'));
 assert.ok(index.includes('assets/real-number-line.js'));
-assert.ok(sw.includes('assets/real-number-line.js'));
 const sw=read('service-worker.js');
+assert.ok(sw.includes('assets/real-number-line.js'));
+
 for(const p of scripts.slice(2))assert.ok(sw.includes(p),'missing offline cache entry: '+p);
 vm.runInNewContext(read('data/real-numbers/g9-ch2-examples-a.js'),sandbox);
 vm.runInNewContext(read('data/real-numbers/g9-ch2-exercises-f.js'),sandbox);
