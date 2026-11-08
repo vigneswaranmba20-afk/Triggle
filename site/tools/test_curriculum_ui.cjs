@@ -254,6 +254,8 @@ async function main() {
         await page.locator('#focusNavToggle').waitFor({state:'visible'});
         assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('question-focus')),true);
         assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),true);
+        // Allow the immersive layout to settle after activating question-focus.
+        await page.waitForFunction(()=>document.querySelector('.app-shell').getBoundingClientRect().height>=window.innerHeight-2,null,{timeout:5000});
         const dimensions=await page.evaluate(()=>({
           app:document.querySelector('.app-shell').getBoundingClientRect().height,
           content:document.querySelector('.lesson-container').getBoundingClientRect().height,
