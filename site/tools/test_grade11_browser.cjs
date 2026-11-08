@@ -120,6 +120,27 @@ const server=http.createServer((req,res)=>{
    await ctx.close();
    console.log('PASS Grade 11 Q3(ii) bilingual keyboard/offline mobile '+width);
   }
+  // Grade 11 Q3(iii): even integers below 10 are infinite because negatives are unbounded.
+  for(const width of [320,390,1280]){
+   const ctx=await browser.newContext({viewport:{width,height:800}});
+   const p=await ctx.newPage();
+   await p.goto('http://127.0.0.1:'+server.address().port+'/grade-11/sets-q3-iii-preview.html');
+   await p.locator('#lesson article').waitFor();
+   assert.match(await p.locator('#lesson').innerText(),/even integers less than 10/);
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
+   assert.match(await p.locator('#lesson').innerText(),/Infinite set/);
+   await p.locator('#ta').click();
+   assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   assert.match(await p.locator('#lesson').innerText(),/முடிவில்லாத கணம்/);
+   assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+   await ctx.setOffline(true);
+   await p.locator('#en').click();
+   await p.locator('#lesson summary').click();
+   assert.match(await p.locator('#lesson').innerText(),/Infinite set/);
+   await ctx.close();
+   console.log('PASS Grade 11 Q3(iii) bilingual keyboard/offline mobile '+width);
+  }
   // Network failure and retry must preserve the selected Tamil language.
   {
    const ctx=await browser.newContext({viewport:{width:390,height:800}});
