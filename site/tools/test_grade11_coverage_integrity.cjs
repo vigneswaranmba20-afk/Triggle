@@ -4,14 +4,14 @@ const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '../..');
 const ledger = JSON.parse(fs.readFileSync(path.join(root, 'docs/coverage/grade-11-2025.json'), 'utf8'));
-const lessons = ['q1','q2','q3-i','q3-ii','q3-iii','q3-iv','q3-v','q4-i'].flatMap(suffix => JSON.parse(fs.readFileSync(path.join(root, 'site/data/textbook-exercises/g11-ch1-ex1-1-'+suffix+'.json'), 'utf8')).questions);
+const lessons = ['q1','q2','q3-i','q3-ii','q3-iii','q3-iv','q3-v','q4-i','q4-ii'].flatMap(suffix => JSON.parse(fs.readFileSync(path.join(root, 'site/data/textbook-exercises/g11-ch1-ex1-1-'+suffix+'.json'), 'utf8')).questions);
 assert.equal(ledger.grade, 11);
 assert.equal(ledger.edition, '2025 revised');
 assert.equal(ledger.inventoryComplete, false);
 assert.equal(ledger.exerciseQuestionSubpartTotal, null);
 assert.equal(ledger.chapters.length, 12);
 assert.deepEqual(ledger.chapters.map(c=>c.chapterId), Array.from({length:12},(_,i)=>'g11-ch'+(i+1)));
-assert.equal(lessons.length, 11);
+assert.equal(lessons.length, 12);
 const ids = new Set();
 for (const item of ledger.items) {
  assert.ok(!ids.has(item.id), 'duplicate ledger ID: '+item.id);
