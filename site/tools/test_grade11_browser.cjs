@@ -166,10 +166,10 @@ const server=http.createServer((req,res)=>{
    const p=await ctx.newPage();
    await p.goto('http://127.0.0.1:'+server.address().port+'/grade-11/sets-q4-i-preview.html');
    await p.locator('#lesson article').waitFor();
-   assert.match(await p.locator('#lesson').innerText(),/A × \\(B ∩ C\\)/);
+   assert.ok((await p.locator('#lesson').innerText()).includes('A × (B ∩ C)'));
    await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
    assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
-   assert.match(await p.locator('#lesson').innerText(),/\\(1,b\\)/);
+   assert.ok((await p.locator('#lesson').innerText()).includes('(1,b)'));
    await p.locator('#ta').click();
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
    assert.match(await p.locator('#lesson').innerText(),/சரிபார்க்கப்பட்டது/);
