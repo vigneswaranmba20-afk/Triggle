@@ -19,9 +19,11 @@ function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){const r=a%b;a=b;b=r;}retu
 function fraction(n,d){if(d<0){n=-n;d=-d;}const g=gcd(n,d);return d/g===1?String(n/g):n/g+'/'+d/g;}
 function inverseSteps(a,b,c,d){
  if(![a,b,c,d].every(Number.isSafeInteger))return 'Enter safe integers / முழு எண்களை உள்ளிடுக';
- const det=a*d-b*c;
- if(!Number.isSafeInteger(det))return 'Integer overflow: use smaller entries.';
- const prefix='A = ['+a+' '+b+'; '+c+' '+d+']\ndet(A) = ('+a+' × '+d+') − ('+b+' × '+c+') = '+det+'\n';
+ const ad=a*d, bc=b*c;
+ if(!Number.isSafeInteger(ad)||!Number.isSafeInteger(bc))return 'Integer overflow: use smaller entries. / சிறிய முழு எண்களை உள்ளிடுக.';
+ const det=ad-bc;
+ if(!Number.isSafeInteger(det))return 'Integer overflow: use smaller entries. / சிறிய முழு எண்களை உள்ளிடுக.';
+ const prefix='A = ['+a+' '+b+'; '+c+' '+d+']\ndet(A) = ('+a+' × '+d+') − ('+b+' × '+c+') = '+det+'\nஅணிக்கோவை det(A) = '+det+'\n';
  if(det===0)return prefix+'det(A)=0, so A is singular and has no inverse.\n|A|=0; நேர்மாறு அணி இல்லை.';
  const adj=[d,-b,-c,a];
  return prefix+'adj(A) = ['+adj[0]+' '+adj[1]+'; '+adj[2]+' '+adj[3]+']\nA⁻¹ = adj(A)/det(A) = ['+adj.map(v=>fraction(v,det)).join(' ').replace(/^([^ ]+) ([^ ]+) ([^ ]+) ([^ ]+)$/,'$1 $2; $3 $4')+']\nCheck: A × adj(A) = ['+det+' 0; 0 '+det+'] = det(A)I₂.\nசரிபார்ப்பு: A × adj(A) = det(A)I₂.';
