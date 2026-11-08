@@ -47,7 +47,9 @@ assert(!hub.includes('window.TriggleTextbookActivities.mount(panel,chapter,lang)
 assert(hub.includes('const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];')&&hub.includes("if(section==='activities'&&activityEntries.length"),'Future chapter activity registries mount dynamically, without hard-coded chapter IDs');
 assert(!hub.includes('window.TriggleLab?.mount(panel,chapter,lang)'),'Do not repeat Phase 2 by mounting a second lab');
 const renderer=read('assets/textbook-activities.js');new vm.Script(renderer);
-assert(renderer.includes('textContent=pick(item.answer,lang)'),'Answers must render as safely escaped text');
+assert(renderer.includes('const raw=pick(item.answer,lang)')&&renderer.includes('p.textContent=text.trim()'),'Answers must render from the source as safely escaped text');
+assert(renderer.includes('card.open=index===0'),'First activity question and answer must be visible on entry');
+assert(!renderer.includes('answer.append(answerSummary'),'Do not nest answer behind a second toggle');
 assert(renderer.includes('data-textbook')===false,'No unreviewed tracking or network');
 const html=read('index.html');
 for(const pathName of ['data/g9-textbook-activities.js','assets/textbook-activities.js'])assert(html.includes(pathName),'Page loads '+pathName);
