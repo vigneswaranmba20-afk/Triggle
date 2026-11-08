@@ -651,3 +651,20 @@
 .vl-dialog .vl-close span{font-size:12px;font-weight:800;color:#ab173d}
 @media(min-width:740px){.vl-dialog{width:100%;max-width:none}.vl-dialog .vl-video-wrap{background:#211e42}.vl-dialog .vl-video-wrap video{max-width:100%}}
 @media(max-width:410px){.vl-dialog .vl-close{min-height:44px;padding:8px 10px}.vl-dialog .vl-close span{font-size:11px}}
+
+
+/* Grade 9 Real Numbers: interactive number-line and calculation mini-labs. */
+.rnlab{margin:14px auto 24px;max-width:980px}
+.rnlab .rnlab-visual{display:grid;place-items:center;min-height:95px;max-width:100%;overflow:hidden;margin-top:12px}
+.rnlab-line{display:block;width:100%;height:auto;max-height:180px;overflow:visible}
+.rnlab-choices{display:flex;flex-wrap:wrap;gap:8px}
+.rnlab .rnlab-choice{flex:1 1 auto;min-height:44px;overflow-wrap:anywhere}
+.rnlab-range{display:grid;gap:8px;width:100%;min-width:0}
+.rnlab-range label{display:flex;justify-content:space-between;gap:12px;font-weight:750;color:#58497c;font-size:13px}
+.rnlab-range output{font-variant-numeric:tabular-nums}
+.rnlab-range input{width:100%;accent-color:#7951aa;min-height:34px;touch-action:pan-y}
+.rnlab-big{font-size:clamp(22px,5vw,36px);font-weight:800;color:#5b347c;text-align:center;overflow-wrap:anywhere}
+.rnlab-source-note{display:block;margin-top:9px;color:#777086;font-size:11px;line-height:1.5}
+.rnlab-next{min-height:44px;padding:10px 16px;border:1px solid #6c54a1;border-radius:10px;background:#61518f;color:white;font-weight:700;cursor:pointer;margin-top:10px}
+.rnlab [data-answers] button[aria-pressed=true]{border-color:#7457aa;background:#efeaff}
+@media(max-width:420px){.rnlab .rnlab-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}.rnlab .rnlab-choice{font-size:12px;padding:8px 6px}}

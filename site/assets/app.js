@@ -347,7 +347,7 @@
   // Symbolic identity proofs have no physical drawing to reproduce; do not show a token figure.
   if(['identity','symbolic','symbolic-x'].includes(kind))return item.classNum===11&&item.exercise==='3.4';
   if(['stats','area','sets'].includes(kind))return item.kind==='practice';
-  return ['triangle','two-triangles','two-right','kite','tree','unitcircle','complement-pairs','tower','circle','wave','inverse','real-number-line'].includes(kind);
+  return ['triangle','two-triangles','two-right','kite','tree','unitcircle','complement-pairs','tower','circle','wave','inverse','real-number-line','real-number-arrows'].includes(kind);
  }
  function renderInlineFigure(){
    const figure=$('inlineFigure');const yes=isQuestionFigure(current);
