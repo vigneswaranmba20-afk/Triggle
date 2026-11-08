@@ -22,6 +22,16 @@ async function serve() {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   return { server, url: `http://127.0.0.1:${server.address().port}` };
 }
+// Older interaction tests exercise the expanded state deliberately.
+// A separate quiet-reader test verifies that real students start with Q+A only.
+async function gotoWithControls(page,...args){
+  const navigate=page.goto.bind(page);
+  const response=await navigate(...args);
+  if(await page.evaluate(()=>Boolean(window.TriggleQuietReader?.isActive())))
+    await page.keyboard.press('Tab'); // accessible first-gesture reveal
+  return response;
+}
+
 async function main() {
   const { server, url } = await serve();
   let browser;
@@ -49,7 +59,7 @@ async function main() {
   }
   async function visit(ctx, suffix = '/index.html') {
     const page = await ctx.newPage();
-    await page.goto(url + suffix);
+    await gotoWithControls(page,url + suffix);
     await page.waitForFunction(() => window.TRIGGLE_CURRICULUM && document.getElementById('exerciseList').children.length > 0);
     return page;
   }
@@ -65,7 +75,7 @@ async function main() {
     // Direct chapter taps now intentionally begin Exercise N.1.
     // This helper tests the explicit chapter-management deep link instead.
     const grade = Number(id.slice(1, id.indexOf('-')));
-    await page.goto(url + '/index.html?class=' + grade + '&chapter=' + id);
+    await gotoWithControls(page,url + '/index.html?class=' + grade + '&chapter=' + id);
     await page.locator('#chapterOverview').waitFor({ state: 'visible' });
   }
   try {
@@ -149,7 +159,7 @@ async function main() {
         await page.locator('#vlClose').click();
         await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
         await noOverflow(page,'full-screen lesson after close at '+width+'px');
-        await page.goto(url+'/index.html?class=12&question=c12-4-4-1-1');
+        await gotoWithControls(page,url+'/index.html?class=12&question=c12-4-4-1-1');
         await page.waitForFunction(()=>window.TriggleVisualPlayer?.status.questionId===null);
         assert.equal(await page.locator('#visualLessonBtn').isVisible(),false,'Video does not leak to other questions');
       });
@@ -373,14 +383,14 @@ async function main() {
           g10:window.TRIGGLE_CLASSES[10].items[0].id,
           g9:window.TRIGGLE_CLASSES[9].items[0].id
         }));
-        await page.goto(url+'/index.html?class=10&question='+encodeURIComponent(ids.g10));
+        await gotoWithControls(page,url+'/index.html?class=10&question='+encodeURIComponent(ids.g10));
         await page.locator('#lessonCard').waitFor({state:'visible'});
         await page.locator('#homeBtn').click();
         assert.match(await page.locator('.discover-resume-card').innerText(),/Class 10/);
         assert.equal(await page.locator('.discover-home-minimal > section').count(),2);
         await page.locator('.discover-resume-card').click();
         assert.equal(new URL(page.url()).searchParams.get('question'),ids.g10);
-        await page.goto(url+'/index.html?class=9&question='+encodeURIComponent(ids.g9));
+        await gotoWithControls(page,url+'/index.html?class=9&question='+encodeURIComponent(ids.g9));
         await page.locator('#homeBtn').click();
         assert.match(await page.locator('.discover-resume-card').innerText(),/Class 9/,
           'Most recently opened question must beat a saved Class 10 question');
@@ -678,7 +688,7 @@ async function main() {
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises','Tamil exercise card opens question list');
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises','Back opens the browsable exercise list');
       await page.locator('.hub-back-menu').click();
-      await page.goto(url+'/index.html?class=9&chapter=g9-ch2');
+      await gotoWithControls(page,url+'/index.html?class=9&chapter=g9-ch2');
       await page.locator('#chapterOverviewTitle').waitFor({state:'visible'});
       assert.equal((await page.locator('.hub-eyebrow').innerText()).trim(),'அத்தியாயம் 2');
       assert.equal(await page.locator('.crumb-link').count(),1);
@@ -706,13 +716,13 @@ async function main() {
       assert.match(desc,/0,\s*2/,'B-only difference must match printed Example 1.14');
       await page.locator('#closeDiagram').click();
       assert.equal(await dialog.isVisible(),false,'Figure dialog must close accessibly');
-      await page.goto(url+'/index.html?class=9&question=c9-textbook-example-1-17');
+      await gotoWithControls(page,url+'/index.html?class=9&question=c9-textbook-example-1-17');
       await page.locator('#lessonCard').waitFor({state:'visible'});
       assert.equal(await page.locator('#inlineFigure').isVisible(),false,
         'Redundant mini Venn card should never crowd the lesson');
       assert.equal(await page.locator('#figureBtn').isVisible(),true,
         'Full Figure button remains available for source-required diagrams');
-      await page.goto(url+'/index.html?class=9&question=c9-textbook-example-1-18');
+      await gotoWithControls(page,url+'/index.html?class=9&question=c9-textbook-example-1-18');
       await page.locator('#figureBtn').click();
       assert.equal(await page.locator('#figureDialog .g9-venn-svg').count(),3,'Three complement shading diagrams for Example 1.18');
       await noOverflow(page,'source-aligned mobile Venn illustrations');
@@ -1148,7 +1158,7 @@ async function main() {
         assert.equal(await page.locator('#chapterOverview').isVisible(), true);
         assert.equal(await page.locator('html').getAttribute('lang'), 'ta');
         await noOverflow(page, `${width}px restored overview`);
-        await page.goto(url + '/index.html?class=9&question=c9-example-6-1');
+        await gotoWithControls(page,url + '/index.html?class=9&question=c9-example-6-1');
         await page.locator('#lessonCard').waitFor({ state: 'visible' });
         await noOverflow(page, `${width}px legacy Tamil question`);
         await selectChapter(page, 'g9-ch6');
@@ -1167,7 +1177,7 @@ async function main() {
       const links = await page.evaluate(() => Object.entries(window.TRIGGLE_CLASSES).flatMap(([grade,data]) => data.items.filter(item => !item.id.startsWith('g9-ch1-ex1.1-') && !item.id.startsWith('c9-textbook-example-') && !item.id.startsWith('g9-ch2-') && !item.id.startsWith('g9-ch9-ex9.1-')).map(item => ({ grade, id:item.id }))));
       assert.equal(links.length, 105);
       for (const {grade,id} of links) {
-        await page.goto(url + `/index.html?class=${grade}&question=${id}`);
+        await gotoWithControls(page,url + `/index.html?class=${grade}&question=${id}`);
         await page.waitForFunction(id => new URL(location.href).searchParams.get('question') === id && document.querySelector('#stepsList li'), id);
         assert.equal(new URL(page.url()).searchParams.get('question'), id);
         assert.equal(await page.locator('#lessonCard').isVisible(), true, id);
@@ -1377,12 +1387,12 @@ async function main() {
         assert.match(await page.locator('#questionText').innerText(),/1\. பின்வருவனவற்றில் எவை கணங்களாகும்\?\s*\(i\) ஒன்று முதல் 100 வரையுள்ள பகா எண்களின் தொகுப்பு\./,'Preserve textbook-exact Tamil source wording');
         assert.match(await page.locator('#answerText').innerText(),/கணம்/);
         await noOverflow(page,'Grade 9 Q1 Tamil at '+width+'px');
-        await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-iv');
+        await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-iv');
         await page.locator('#stepsList li').first().waitFor({state:'visible'});
         assert.match(await page.locator('#answerText').innerText(),/C, Z, E, H, O, S, L, V, A, K, I/);
         assert.equal(await page.locator('#stepsList li').count(),3);
         await noOverflow(page,'Grade 9 Q2 mobile at '+width+'px');
-        await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-a-i');
+        await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-a-i');
         await page.locator('#answerText').waitFor({state:'visible'});
         await page.locator('#langEn').click(); // Language persists from the preceding Tamil navigation test.
         assert.match(await page.locator('#questionText').innerText(),/State whether True or False:\s*\(i\) 18 ∈ C/,'Keep Q3 original source wording and membership glyph');
@@ -1391,12 +1401,12 @@ async function main() {
         await page.locator('#langTa').click();
         assert.match(await page.locator('#questionText').innerText(),/சரியா,\s*தவறா/,'Keep original Tamil textbook punctuation');
         await noOverflow(page,'Grade 9 Q3(a) Tamil at '+width+'px');
-        await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-b-i');
+        await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-b-i');
         await page.locator('#answerText').waitFor({state:'visible'});
         assert.match(await page.locator('#questionText').innerText(),/3 ∈/);
         assert.equal((await page.locator('#answerText').innerText()).trim(),'A');
         await noOverflow(page,'Grade 9 Q3(b) mobile at '+width+'px');
-        await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q5-ii');
+        await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q5-ii');
         await page.locator('#answerText').waitFor({state:'visible'});
         await page.locator('#langEn').click(); // The preceding Q3(b) check leaves the language in Tamil.
         await page.locator('#langTa').click();
@@ -1405,7 +1415,7 @@ async function main() {
         assert.match(await page.locator('#questionText').innerText(),/Represent the following sets in set builder form/,'Q5 English textbook wording');
         assert.ok((await page.locator('#stepsList li').count())>=3,'Q5 requires three reasoning steps');
         await noOverflow(page,'Grade 9 Q5 fraction problem at '+width+'px');
-        await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q6-iv');
+        await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q6-iv');
         await page.locator('#answerText').waitFor({state:'visible'});
         assert.match(await page.locator('#questionText').innerText(),/consonant in English alphabet/);
         assert.match(await page.locator('#answerText').innerText(),/English consonants/);
@@ -1473,7 +1483,7 @@ async function main() {
       await page.reload();
       await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
       await ctx.setOffline(true);
-      await page.goto(url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-i');
+      await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-i');
       await page.locator('#answerText').waitFor({state:'visible'});
       assert.match(await page.locator('#answerText').innerText(),/I, N, D, A/);
       await ctx.setOffline(false);
