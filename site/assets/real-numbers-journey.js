@@ -44,8 +44,8 @@ function mount(container,chapter,language){
     b.setAttribute('aria-pressed',String(i===active));b.querySelector('.sp2-done-mark').textContent=done.has(path.stages[i].id)?'✓':'';});}
  function controls(label,items,value,onChange){const host=panel.querySelector('[data-demo-controls]');
   const group=document.createElement('div');group.className='rnlab-choices';group.setAttribute('role','group');group.setAttribute('aria-label',label);
-  items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);b.innerHTML=typeof caption==='object'?caption.html:notation(caption);
-   if(typeof caption==='object')b.setAttribute('aria-label',caption.label);
+  items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);if(typeof caption==='object'){b.innerHTML=caption.html;b.setAttribute('aria-label',caption.label);}
+   else b.innerHTML=notation(caption);
    b.setAttribute('aria-pressed',String(val===value));b.addEventListener('click',()=>{
     group.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
     onChange(val);});group.append(b);});host.append(group);onChange(value);
