@@ -4,14 +4,14 @@ const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '../..');
 const ledger = JSON.parse(fs.readFileSync(path.join(root, 'docs/coverage/grade-11-2025.json'), 'utf8'));
-const lesson = JSON.parse(fs.readFileSync(path.join(root, 'site/data/textbook-exercises/g11-ch1-ex1-1-q1.json'), 'utf8'));
+const lessons = ['q1','q2','q3-i','q3-ii','q3-iii'].flatMap(suffix => JSON.parse(fs.readFileSync(path.join(root, 'site/data/textbook-exercises/g11-ch1-ex1-1-'+suffix+'.json'), 'utf8')).questions);
 assert.equal(ledger.grade, 11);
 assert.equal(ledger.edition, '2025 revised');
 assert.equal(ledger.inventoryComplete, false);
 assert.equal(ledger.exerciseQuestionSubpartTotal, null);
 assert.equal(ledger.chapters.length, 12);
 assert.deepEqual(ledger.chapters.map(c=>c.chapterId), Array.from({length:12},(_,i)=>'g11-ch'+(i+1)));
-assert.equal(lesson.grade, 11);
+assert.equal(lessons.length, 8);
 const ids = new Set();
 for (const item of ledger.items) {
  assert.ok(!ids.has(item.id), 'duplicate ledger ID: '+item.id);
@@ -22,8 +22,8 @@ for (const item of ledger.items) {
  if(item.merged) assert.ok(item.ciPassed, 'merged without CI: '+item.id);
  if(item.liveVerified) assert.ok(item.deployed && item.merged, 'live without deployment: '+item.id);
 }
-assert.deepEqual([...ids].sort(), lesson.questions.map(q=>q.id).sort(), 'ledger and lesson IDs diverge');
-for (const q of lesson.questions) {
+assert.deepEqual([...ids].sort(), lessons.map(q=>q.id).sort(), 'ledger and lesson IDs diverge');
+for (const q of lessons) {
  const item=ledger.items.find(i=>i.id===q.id);
  assert.equal(q.source.page.en,item.englishPrintedPage);
  assert.equal(q.source.page.ta,item.tamilPrintedPage);
