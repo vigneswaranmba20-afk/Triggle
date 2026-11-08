@@ -6,8 +6,8 @@
   "chapterStatus": [
     {
       "chapter": 1,
-      "exerciseInventory": "UNKNOWN",
-      "missingSubparts": "UNKNOWN",
+      "exerciseInventory": "Exercise 1.1 inventoried: 19 question/subpart IDs; remaining chapter exercises UNKNOWN",
+      "missingSubparts": "17 known missing in Exercise 1.1; other chapter exercises UNKNOWN",
       "verifiedSubparts": 2,
       "mergedSubparts": 0,
       "liveVerifiedSubparts": 0
@@ -186,22 +186,22 @@
     "result": "Grade 12 workflow, npm test, mathematical contracts, Playwright mobile/keyboard/offline, and shared browser regressions passed on commit 9cd1c69; merge and live verification remain blocked by diverged main and draft PR.",
     "grade12Run": 42446360731,
     "sharedRun": 42446360750,
-    "nextSourceItem": "Chapter 1 Exercise 1.1 Q1(iii), exact English/Tamil matrix not yet source checked",
+    "nextSourceItem": "Chapter 1 Exercise 1.1 Q1(iii), numbering confirmed in 2025 English/Tamil; matrix entries need visual page-image validation",
     "branchBehindMainAtCheckpoint": 58,
     "latestBrowserRegression": {
-      "run": 42450109801,
+      "run": 42470569147,
       "commit": "ac25e7ca99fcb60c2865c0634558cf78bd2ef214",
-      "status": "failed",
+      "status": "passed",
       "failedStep": "Grade 12 mobile bilingual keyboard and offline browser tests",
       "observed": "Expected C12 = -1 × 3 = -3, received C11 = 1 × 1 = 1 after selecting column 2; npm test, math contracts and Chromium installation passed.",
       "diagnosticCommit": "473a3271f111d348dc90e92bfe751ce9ba3c7ae6",
-      "nextAction": "Verify new Grade 12 GitHub Actions run on f33e3fc, repair failures and rerun; then retrieve 2025 English/Tamil Q1(iii) directly before adding curriculum content. No merge before cross-grade CI and main reconciliation.",
+      "nextAction": "Validate newly added 19-ID Exercise 1.1 inventory test on e746d0b; inspect actual page image for Q1(iii) matrix before drafting. PR #38 still diverged from main; do not merge without reconciliation.",
       "remediationCommits": [
         "9573c721187059ae20d7f102fd7c98391f580f31",
         "609e42f9aff19155069e7e193edd3a526ba0633d"
       ],
-      "latestRepairCommit": "f33e3fcffd1c440138b8aa90746dee1596a6d693",
-      "latestRepair": "Repaired malformed test_grade12_browser.cjs: incomplete assert.match expression and duplicated trailing browser-test block introduced in previous commit. Exhaustive nine-coordinate assertions now check sign, coordinate and independently expected value; latest CI not yet confirmed."
+      "latestRepairCommit": "494c06a86b8adaeaca0e4ec448fd98f64c817446",
+      "latestRepair": "All four GitHub Actions workflows passed on 494c06a, including Grade 12 Playwright and shared browser regressions."
     }
   }
 }
