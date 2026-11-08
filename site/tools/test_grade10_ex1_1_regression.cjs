@@ -1,4 +1,4 @@
-/* Grade 10 2025 exercise 1.1 Q1(i–ii): independent exhaustive pair enumeration and bilingual schema checks. */
+/* Grade 10 2025 exercise 1.1 Q1(i–iii): independent exhaustive pair enumeration and bilingual schema checks. */
 'use strict';
 const assert = require('node:assert/strict');
 const path = require('node:path');
@@ -8,7 +8,8 @@ const cross = (a,b) => a.flatMap(x => b.map(y => [x,y]));
 const norm = pairs => pairs.map(p => JSON.stringify(p)).sort();
 const cases = [
   {part:'i', A:[2,-2,3], B:[1,-4]},
-  {part:'ii', A:['p','q'], B:['p','q']}
+  {part:'ii', A:['p','q'], B:['p','q']},
+  {part:'iii', A:['m','n'], B:[]}
 ];
 for (const {part,A,B} of cases) {
   const id = 'g10-ch1-ex1-1-q1'+part;
@@ -54,4 +55,4 @@ assert.equal(coverage.chapters.length,8);
 const ch1=coverage.chapters.find(c=>c.chapter===1);
 for(const {part} of cases) assert.ok(ch1.verifiedQuestionSubparts.includes('1('+part+')'));
 assert.equal(ch1.fullChapterExerciseInventoryComplete,false);
-console.log('PASS Grade 10 coverage ledger: eight chapters and both verified draft subparts');
+console.log('PASS Grade 10 coverage ledger: eight chapters and three verified draft subparts');
