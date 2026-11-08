@@ -7,6 +7,7 @@ const site=path.resolve(__dirname,'..');
 const html=fs.readFileSync(path.join(site,'grade-10/cartesian-preview.html'),'utf8');
 const root=path.join(site,'data/textbook-exercises');
 const ids=['g10-ch1-ex1-1-q1i','g10-ch1-ex1-1-q1ii','g10-ch1-ex1-1-q1iii'];
+const q2id='g10-ch1-ex1-1-q2';
 const ledger=JSON.parse(fs.readFileSync(path.join(root,'grade-10-coverage-2025.json'),'utf8'));
 assert.match(html,/<meta name="viewport"/);
 assert.match(html,/<html lang="en">/);
@@ -59,4 +60,18 @@ for(const id of ids){
  for(const s of q.steps){assert.ok(s.en&&s.ta&&s.equation);}
  for(const lang of ['english','tamil']){assert.equal(q.source[lang].printedPage,6);assert.equal(q.source[lang].pdfPage,12);}
 }
+assert.ok(html.includes(q2id),'Q2 must be loaded by preview');
+const q2=JSON.parse(fs.readFileSync(path.join(root,q2id+'.json'),'utf8'));
+assert.equal(q2.question,'2');assert.equal(q2.subpart,null);
+assert.equal(q2.review.mathVerified,true);assert.equal(q2.review.tamilEditorial,'pending');
+assert.ok(ledger.chapters[0].verifiedQuestionSubparts.includes('2'));
+const q2A=[1,2,3],q2B=[2,3,5,7];
+const q2cross=(left,right)=>left.flatMap(a=>right.map(b=>[a,b]));
+assert.deepEqual(q2.answers.AxB,q2cross(q2A,q2B));
+assert.deepEqual(q2.answers.BxA,q2cross(q2B,q2A));
+assert.equal(q2.answers.AxB.length,12);assert.equal(q2.answers.BxA.length,12);
+assert.equal(new Set(q2.answers.AxB.map(JSON.stringify)).size,12);
+assert.equal(new Set(q2.answers.BxA.map(JSON.stringify)).size,12);
+for(const step of q2.steps)assert.ok(step.en&&step.ta&&step.equation);
+for(const language of ['english','tamil']){assert.equal(q2.source[language].printedPage,6);assert.equal(q2.source[language].pdfPage,12);}
 console.log('PASS Grade 10 bilingual preview content, accessibility markup, and coverage contract');
