@@ -31,6 +31,40 @@ book.stages.forEach((stage,i)=>{
 });
 assert.deepEqual(Array.from(book.stages.map(x=>x.visual)),['membership','forms','types','venn','properties','demorgan','count']);
 assert.equal(new Set(book.stages.map(x=>x.id)).size,7);
+
+// Regression: a quiz card must contain the sets it needs, even when the lesson
+// explanation is off-screen on a mobile device.
+const questionById=Object.fromEntries(book.stages.map(stage=>[stage.id,stage]));
+for(const id of ['operations','demorgan']){
+  const stage=questionById[id];
+  for(const lang of ['en','ta']){
+    const question=stage.question[lang];
+    for(const name of (id==='demorgan'?['U','A','B']:['A','B']))
+      assert(question.includes(name+'={'),id+' '+lang+' must define '+name+' within the question');
+    assert(!/sets above|for these sets|மேற்கண்ட கணங்களுக்கு|இந்தக் கணங்களில்/i.test(question),
+      id+' '+lang+' must not rely on context above the card');
+  }
+}
+const givenSet=(question,name)=>{
+  const match=question.match(new RegExp('\\b'+name+'=\\{([^}]+)\\}'));
+  assert(match,'Explicit '+name+' set');
+  return new Set(match[1].split(',').map(Number));
+};
+const operations=questionById.operations;
+const OA=givenSet(operations.question.en,'A');
+const OB=givenSet(operations.question.en,'B');
+const intersection=[...OA].filter(value=>OB.has(value)).sort((a,b)=>a-b);
+assert.equal(operations.choices[operations.correct].en,'{'+intersection.join(', ')+'}',
+  'Operation answer must match the sets printed on the question');
+const demorgan=questionById.demorgan;
+const universe=givenSet(demorgan.question.en,'U');
+const DA=givenSet(demorgan.question.en,'A');
+const DB=givenSet(demorgan.question.en,'B');
+const outside=[...universe].filter(value=>!DA.has(value)&&!DB.has(value)).sort((a,b)=>a-b);
+for(const lang of ['en','ta'])
+  assert.equal(demorgan.choices[demorgan.correct][lang],'{'+outside.join(', ')+'}',
+    'De Morgan answer must match the sets printed in '+lang);
+
 const extra=book.extraPractice;
 assert.equal(extra.length,7,'One independent follow-up question per section');
 assert.deepEqual(Array.from(extra.map(x=>x.stageId)),ids);
