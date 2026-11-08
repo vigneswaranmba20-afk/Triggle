@@ -36,8 +36,8 @@
    part:'iii',a:root(75),b:root(3),operation:'product',
    x:row(root(75),times,root(3)),
    y:frac(root(75),root(3)),
-   xEnd:row(root(225),mo('='),mn(15)),
-   yEnd:row(root(25),mo('='),mn(5)),xr:true,yr:true,
+   xEnd:row(root(225),mo('='),mn(15)),xFinal:mn(15),
+   yEnd:row(root(25),mo('='),mn(5)),yFinal:mn(5),xr:true,yr:true,
    why:{en:'Multiply the radicands for x; divide the radicands for y. Both results are perfect squares.',
      ta:'x க்கு மூலத்தின் உள்ளே உள்ள எண்களைப் பெருக்கவும்; y க்கு வகுக்கவும். இரண்டும் நிறைவர்க்கங்கள்.'}
   },
@@ -45,7 +45,7 @@
    part:'iv',a:root(18),b:root(3),operation:'product',
    x:row(root(18),times,root(3)),
    y:frac(root(18),root(3)),
-   xEnd:row(root(54),mo('='),mn(3),'<mspace width="0.15em"/>',root(6)),
+   xEnd:row(root(54),mo('='),mn(3),'<mspace width="0.15em"/>',root(6)),xFinal:row(mn(3),'<mspace width="0.15em"/>',root(6)),
    yEnd:root(6),xr:false,yr:false,
    why:{en:'The product simplifies to 3√6 and the quotient to √6. Since 6 is not a perfect square, both are irrational.',
      ta:'பெருக்கலில் 3√6, வகுத்தலில் √6 கிடைக்கின்றன. 6 நிறைவர்க்கம் அல்ல; எனவே இரண்டும் விகிதமுறா எண்கள்.'}
@@ -106,9 +106,9 @@
    '<div class="twd-final-row" data-worked-part="'+part.part+'">'+
      '<strong class="twd-final-part">('+part.part+')</strong>'+
      '<div class="twd-final-values">'+
-      '<div class="twd-final-value">'+math(eq('x',part.xEnd), 'x result part '+part.part)+
+      '<div class="twd-final-value">'+math(eq('x',part.xFinal||part.xEnd), 'x result part '+part.part)+
        '<span class="twd-kind '+(part.xr?'twd-rational':'twd-irrational')+'">'+esc(classification(part.xr,lang))+'</span></div>'+
-      '<div class="twd-final-value">'+math(eq('y',part.yEnd), 'y result part '+part.part)+
+      '<div class="twd-final-value">'+math(eq('y',part.yFinal||part.yEnd), 'y result part '+part.part)+
        '<span class="twd-kind '+(part.yr?'twd-rational':'twd-irrational')+'">'+esc(classification(part.yr,lang))+'</span></div>'+
      '</div></div>').join('')+'</div>';
  }
