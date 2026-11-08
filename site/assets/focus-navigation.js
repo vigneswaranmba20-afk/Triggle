@@ -59,7 +59,7 @@
     // The app emits a lessonchange event for every route and language change.
     // This mode is strictly limited to a rendered question on narrow screens.
     const exists=detail&&detail.item&&detail.item.id;
-    const want=Boolean(small.matches&&exists&&!lesson.hidden);
+    const want=Boolean(small.matches&&exists&&!lesson.hidden&&!document.body.classList.contains('textbook-reader'));
     lastLang=detail?.lang==='ta'?'ta':document.documentElement.lang==='ta'?'ta':'en';
     if(!want){
       stopTimer();active=false;visible=true;keyboardMode=false;

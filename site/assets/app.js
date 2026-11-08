@@ -448,7 +448,10 @@
  }
  function render(){renderText();renderGrades();$('classicLink').hidden=grade!==9;
    $('questionReturn').hidden=true;
-   $('allChaptersReturn').hidden=homeView||classIndex||!!chapterOverview;
+   const showingQuestion=!homeView&&!classIndex&&!chapterOverview;
+   $('allChaptersReturn').hidden=!showingQuestion;
+   $('questionNavDock').hidden=!showingQuestion;
+   document.body.classList.toggle('textbook-reader',showingQuestion&&current?.sourceEdition==='2025 revised');
    const discovering=homeView||classIndex;
    document.body.classList.toggle('discovery-active',discovering);
    document.body.classList.toggle('home-active',homeView);
