@@ -74,7 +74,7 @@
     const t=texts[lang==='ta'?'ta':'en'];
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
     const sets=categorized(questions);
-    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):[];
+    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):[];
     const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:stages.length};
     const symbols={concepts:'◇',examples:'∑',exercises:'✎',quizzes:'✓'};
     const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0};
@@ -146,8 +146,20 @@
     if(section==='concepts'){
       if(stages.length){
         info(t.learning);
-        window.TriggleSetJourney?.mount(panel,chapter,lang);
-        window.TriggleLab?.mount(panel,chapter,lang);
+        if(chapter.id==='g9-ch2'){
+          for(const stage of stages){
+            const article=document.createElement('article');article.className='hub-question-group';
+            const heading=document.createElement('h4');heading.textContent=text(stage.title);
+            const idea=document.createElement('p');idea.textContent=text(stage.idea);
+            const example=document.createElement('p');example.textContent=text(stage.example);
+            const rule=document.createElement('p');rule.textContent=text(stage.rule);
+            const source=document.createElement('small');source.textContent='SCERT 2025 · §'+stage.section;
+            article.append(heading,idea,example,rule,source);panel.append(article);
+          }
+        }else{
+          window.TriggleSetJourney?.mount(panel,chapter,lang);
+          window.TriggleLab?.mount(panel,chapter,lang);
+        }
         if(Number.isInteger(initialConcept)&&initialConcept>=0){
           const target=panel.querySelector('.sp2-nav [data-index="'+initialConcept+'"]');
           if(target)target.click();
