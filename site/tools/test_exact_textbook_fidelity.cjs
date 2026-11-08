@@ -5,7 +5,9 @@ const read=p=>fs.readFileSync(path.join(site,p),'utf8');
 const manifest=JSON.parse(read('data/textbook-fidelity/g9-ch1-ex1-1-q1-q2.json'));
 const manifestQ3=JSON.parse(read('data/textbook-fidelity/g9-ch1-ex1-1-q3.json'));
 const manifestQ4=JSON.parse(read('data/textbook-fidelity/g9-ch1-ex1-1-q4.json'));
-const sourceRows=['q1','q2','q3a','q3b','q4'].flatMap(q=>JSON.parse(read('data/textbook-exercises/g9-ch1-ex1-1-'+q+'.json')).questions);
+const manifestQ5=JSON.parse(read('data/textbook-fidelity/g9-ch1-ex1-1-q5.json'));
+const manifestQ6=JSON.parse(read('data/textbook-fidelity/g9-ch1-ex1-1-q6.json'));
+const sourceRows=['q1','q2','q3a','q3b','q4','q5','q6'].flatMap(q=>JSON.parse(read('data/textbook-exercises/g9-ch1-ex1-1-'+q+'.json')).questions);
 const rows=new Map(sourceRows.map(q=>[q.id,q]));
 const ctx={window:{}};
 for(const p of ['data/class-9.js','data/curriculum.js','data/textbook-exercises/g9-ch1-ex1-1-view.js'])vm.runInNewContext(read(p),ctx,{filename:p});
@@ -22,7 +24,9 @@ for(const lang of ['en','ta']){
 const checked=new Set();
 assert.equal(manifestQ3.items.length,10,'Ten membership/blank parts must be transcribed');
 assert.equal(manifestQ4.items.length,4,'All four roster conversion parts require source evidence');
-for(const e of [...manifest.items,...manifestQ3.items,...manifestQ4.items]){
+assert.equal(manifestQ5.items.length,4,'All four set-builder conversion parts require source evidence');
+assert.equal(manifestQ6.items.length,4,'All four descriptive conversion parts require source evidence');
+for(const e of [...manifest.items,...manifestQ3.items,...manifestQ4.items,...manifestQ5.items,...manifestQ6.items]){
  const q=rows.get(e.id),v=shown.get(e.id);
  assert.ok(q&&v,'Missing student question or authoring record: '+e.id);
  for(const lang of ['en','ta']){
@@ -51,10 +55,10 @@ for(const file of fs.readdirSync(path.join(site,'data/textbook-exercises')).filt
   assert.notEqual(q.sourceFidelity?.status,'page-visual-checked','Unreviewed question cannot falsely claim exactness');
  }
 }
-assert.equal(checked.size,22);
+assert.equal(checked.size,30);
 const original=manifest.items[0].textbookPrompt.en;
 assert.notEqual(original.replace('upto','up to'),original,'Negative test must detect changed textbook wording');
 assert.notEqual(original.slice(3),original,'Dropping original numbering must fail');
-assert.match(read('index.html'),/g9-ch1-ex1-1-view\.js\?v=ex1-1-exact-q1to4-1/,'Source update must refresh browser assets');
-assert.match(read('service-worker.js'),/triggle-shell-real-2025-v40/,'Source update must refresh offline cache');
-console.log('PASS: 22 Grade 9 Exercise 1.1 bilingual Q1–Q4 subparts now source-evidenced and student-facing exact; new questions require evidence.');
+assert.match(read('index.html'),/g9-ch1-ex1-1-view\.js\?v=ex1-1-exact-q1to6-1/,'Source update must refresh browser assets');
+assert.match(read('service-worker.js'),/triggle-shell-real-2025-v41/,'Source update must refresh offline cache');
+console.log('PASS: 30 Grade 9 Exercise 1.1 bilingual Q1–Q6 subparts now source-evidenced and student-facing exact; new questions require evidence.');
