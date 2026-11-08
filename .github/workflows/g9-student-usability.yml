@@ -1,0 +1,42 @@
+name: Grade 9 student usability audit
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'package*.json'
+      - '.github/workflows/g9-student-usability.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'package*.json'
+      - '.github/workflows/g9-student-usability.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Install axe-core accessibility checking
+        run: npm install --no-save @axe-core/playwright@4.11.1
+      - name: Run Grade 9 Chapter 1 and 2 usability audit
+        run: node site/tools/audit_g9_usability.cjs
+      - name: Upload machine-readable results and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grade9-usability-audit
+          path: audit-output/g9/
+          if-no-files-found: warn
