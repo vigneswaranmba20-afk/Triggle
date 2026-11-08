@@ -10,8 +10,8 @@ assert.match(page,/id="ta"[^>]*lang="ta"/);
 assert.match(page,/aria-pressed="true"/);
 assert.match(page,/function language\(lang\)/);
 assert.match(page,/\.tamil'\)\.forEach\(x=>x.hidden=lang!=='ta'\)/);
-assert.equal((page.match(/<article data-q=/g)||[]).length,2);
-for(const part of ['i','ii']){
+assert.equal((page.match(/<article data-q=/g)||[]).length,3);
+for(const part of ['i','ii','iii']){
  assert.match(page,new RegExp('data-q="'+part+'"'));
  const item=ledger.items.find(x=>x.id==='g12-ch1-ex1.1-q1-'+part);
  assert.ok(item&&item.sourceVerified&&item.status==='mathematically_verified');
