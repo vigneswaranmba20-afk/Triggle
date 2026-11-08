@@ -10,14 +10,23 @@
     "edition": "2025 revised",
     "english": {
       "printedPage": 6,
-      "pdfPage": 12
+      "pdfPage": 12,
+      "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of"
     },
     "tamil": {
       "printedPage": 6,
-      "pdfPage": 12
+      "pdfPage": 12,
+      "driveFileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC"
     },
     "manifest": "docs/reference-library/2025-user-textbook-manifest.json",
-    "verificationNote": "English and Tamil 2025 revised PDF text on printed page 6 agrees on A={x∈W:x<2}, B={x∈N:1<x≤4}, C={3,5} and distributive identity. PDF mathematical glyph rendering requires independent visual editorial confirmation."
+    "verificationNote": "English and Tamil 2025 revised PDF text on printed page 6 agrees on A={x∈W:x<2}, B={x∈N:1<x≤4}, C={3,5} and distributive identity. PDF mathematical glyph rendering requires independent visual editorial confirmation.",
+    "fidelity": {
+      "englishExactQuestionVerified": false,
+      "tamilExactQuestionVerified": false,
+      "englishPageImageVerified": false,
+      "tamilPageImageVerified": false,
+      "reason": "Both 2025 revised original Drive PDFs located; extracted text alone is insufficient to establish exact printed wording, symbols and layout. Do not publish questionParaphrase as textbook-exact."
+    }
   },
   "review": {
     "sourceVerified": false,
