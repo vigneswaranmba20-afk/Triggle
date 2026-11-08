@@ -19,7 +19,7 @@ const q2=d.questions.find(x=>x.id==='g9-ch1-ex1.1-q4-ii');
 assert(q2);assert.equal(q2.part,'ii');assert.deepEqual(q2.source.page,{en:5,ta:6});
 const fractions=[...q2.answer.en.matchAll(/(\d+)\/(\d+)/g)].map(m=>[+m[1],+m[2]]);
 assert.deepEqual(fractions,Array.from({length:5},(_,i)=>[1,2*(i+1)]));
-for(let n=1;n<=5;n++){const y=1/(2*n);assert.equal(y*2*n,1);assert(y>0);}
+for(let n=1;n<=5;n++){const y=1/(2*n);assert.equal(y*(2*n),1);assert(y>0);}
 assert.equal(q2.answer.ta,q2.answer.en);
 for(const lang of ['en','ta']){assert(q2.prompt[lang].length>25);assert.equal(q2.steps[lang].length,3);assert(q2.steps[lang].every(s=>s.length>30));}
 assert.equal(q2.review.tamilEditorial,'pending');assert.equal(q2.review.publication,'draft');
