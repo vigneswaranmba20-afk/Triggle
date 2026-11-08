@@ -56,16 +56,20 @@ async function main(){
    console.log('PASS Grade 10 bilingual Cartesian preview '+width+'px, keyboard, math grids');
   }
   const context=await browser.newContext({viewport:{width:390,height:900}});
-  await context.route('**/g10-ch1-ex1-1-q1ii.json',route=>route.fulfill({status:503,body:'unavailable'}));
+  let failedOnce=false;
+  await context.route('**/g10-ch1-ex1-1-q1ii.json',route=>{
+   if(!failedOnce){failedOnce=true;return route.fulfill({status:503,body:'unavailable'});}
+   return route.continue();
+  });
   const page=await context.newPage();
   await page.goto(origin+'/grade-10/cartesian-preview.html');
   await page.locator('#retry').waitFor({state:'visible'});
   assert.equal(await page.locator('[data-question-id]').count(),0,'do not display incomplete lesson batch');
   await page.locator('#ta').click();
   assert.match(await page.locator('#status').innerText(),/ஏற்ற முடியவில்லை/);
-  await page.unroute('**/g10-ch1-ex1-1-q1ii.json');
+  assert.equal(failedOnce,true,'first request must exercise the simulated 503');
   await page.locator('#retry').click();
-  await page.locator('[data-question-id]').first().waitFor();
+  await page.locator('[data-question-id]').first().waitFor({timeout:10000}).catch(async error=>{throw Error('Retry failed: '+await page.locator('#lessons').innerText()+'; '+error.message);});
   assert.equal(await page.locator('[data-question-id]').count(),3);
   await context.close();
   console.log('PASS Grade 10 failed-fetch Tamil recovery and retry');
