@@ -83,7 +83,7 @@ const server=http.createServer((req,res)=>{
    assert.match(await p.locator('#lesson').innerText(),/even primes/);
    await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
    assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
-   assert.match(await p.locator('#lesson').innerText(),/Finite: \\{2\\}/);
+   assert.match(await p.locator('#lesson').innerText(),/Finite: \{2\}/);
    await p.locator('#ta').click();
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
    assert.match(await p.locator('#lesson').innerText(),/முடிவுள்ள கணம்/);
@@ -91,7 +91,7 @@ const server=http.createServer((req,res)=>{
    await ctx.setOffline(true);
    await p.locator('#en').click();
    await p.locator('#lesson summary').click();
-   assert.match(await p.locator('#lesson').innerText(),/Finite: \\{2\\}/);
+   assert.match(await p.locator('#lesson').innerText(),/Finite: \{2\}/);
    await ctx.close();
    console.log('PASS Grade 11 Q3(i) bilingual keyboard/offline mobile '+width);
   }
@@ -208,10 +208,10 @@ const server=http.createServer((req,res)=>{
    const p=await ctx.newPage();
    await p.goto('http://127.0.0.1:'+server.address().port+'/grade-11/sets-q4-iv-preview.html');
    await p.locator('#lesson article').waitFor();
-   assert.match(await p.locator('#lesson').innerText(),/C − \\(B − A\\)/);
+   assert.match(await p.locator('#lesson').innerText(),/C − \(B − A\)/);
    await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
    assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
-   assert.match(await p.locator('#lesson').innerText(),/\\{1, 2\\}/);
+   assert.match(await p.locator('#lesson').innerText(),/\{1, 2\}/);
    await p.locator('#ta').click();
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
    assert.match(await p.locator('#review').innerText(),/மதிப்பாய்வு நிலுவையில்/);
