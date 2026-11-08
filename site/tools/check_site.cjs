@@ -50,6 +50,13 @@ const assets=vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+
 for (const asset of assets) assert(fs.existsSync(path.join(root,asset)),`Missing cached asset: ${asset}`);
 assert(assets.includes('./data/curriculum.js'),'Curriculum must remain available offline');
 assert(!assets.some(asset=>/diwali/i.test(asset)), 'Diwali assets must not be precached');
+// The removed review-only workflow must not be republished or included in offline caches.
+for (const p of ['reviewer.html','assets/teacher-review.js','assets/teacher-review.css']) {
+  assert(!fs.existsSync(path.join(root,p)), 'Removed review-only asset returned: '+p);
+  assert(!sw.includes('./'+p), 'Removed review-only asset returned to offline cache: '+p);
+}
+assert(!fs.existsSync(path.join(root,'tools/test_teacher_review.cjs')), 'Retired review-only test returned');
+assert(!liveHtml.includes('teacher-review')&&!liveHtml.includes('reviewer.html'), 'Removed workflow linked from student UI');
 // The repository root is a second GitHub Pages entry point when Pages uses main /.
 const rootHomepage=fs.readFileSync(path.resolve(root,'..','index.html'),'utf8');
 assert(rootHomepage.includes('./site/index.html'), 'Repository homepage must redirect to maintained bilingual site');
