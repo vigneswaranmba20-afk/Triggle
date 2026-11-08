@@ -16,5 +16,6 @@ assert.match(js,/if\(classIndex\)u\.searchParams\.set\('browse','chapters'\)/,'C
 assert.match(js,/\$\('allChaptersReturn'\)\.hidden=homeView\|\|classIndex\|\|!!chapterOverview/,'Do not show button outside question mode');
 assert.match(css,/\.all-chapters-button\{[^}]*min-height:50px/,'Mobile-friendly touch target');
 assert.match(css,/\.all-chapters-button:focus-visible/,'Visible keyboard focus');
-assert.match(sw,/triggle-shell-real-2025-v37/,'Refresh offline cache');
+const cacheVersion=Number(sw.match(/triggle-shell-real-2025-v(\d+)/)?.[1]);
+assert.ok(Number.isInteger(cacheVersion)&&cacheVersion>=37,'Keep a versioned offline cache without pinning a stale release');
 console.log('PASS: Back to all chapter options navigation (EN/TA, visibility, routing, accessibility and cache).');
