@@ -84,9 +84,10 @@ async function main() {
         assert.match(await button.innerText(),/Check out the video explanation/);
         assert.equal(await button.getAttribute('aria-haspopup'),'dialog');
         if(width<=390){
-          await page.locator('#focusNavToggle').waitFor({state:'visible'});
-          const color=await page.locator('#focusNavToggle').evaluate(el=>getComputedStyle(el).color);
-          assert.equal(color,'rgb(188, 24, 74)','The right-side navigation close X should be cherry-red');
+          assert.equal(await page.locator('#focusNavToggle').isVisible(),false,
+            'The reader no longer needs a floating navigation close X');
+          assert.equal(await page.locator('#questionNavDock').isVisible(),true,
+            'Question navigation remains visible while the video action is available');
         }
         await button.click();
         const viewer=page.locator('#visualLessonDialog');
