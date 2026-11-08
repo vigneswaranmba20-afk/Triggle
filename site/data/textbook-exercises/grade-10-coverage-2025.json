@@ -42,7 +42,30 @@
               "ii"
             ]
           },
-          "questionSubpartInventoryComplete": true
+          "questionSubpartInventoryComplete": true,
+          "enumeratedQuestionSubparts": [
+            "1(i)",
+            "1(ii)",
+            "1(iii)",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6(i)",
+            "6(ii)",
+            "6(iii)",
+            "7(i)",
+            "7(ii)"
+          ],
+          "verifiedCount": 7,
+          "missingSourceVerified": [
+            "6(i)",
+            "6(ii)",
+            "6(iii)",
+            "7(i)",
+            "7(ii)"
+          ],
+          "inventoryNote": "12 question/subpart slots enumerated from both original 2025 revised Grade 10 PDF text, printed page 6 / PDF page 12; Q6(i–iii) and Q7(i–ii) mathematical glyphs require page-image confirmation. Enumerated is not completed."
         }
       },
       "fullChapterExerciseInventoryComplete": false,
@@ -152,7 +175,7 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "Inspect 2025 revised English and Tamil page 6 images for Q6(i) glyph fidelity; confirm CI for commit 09a4073; then source-verify and promote Q6(i), reconcile branch with latest main, rerun cross-grade regressions before merge. Next Q6(ii) requires source-image verification.",
+  "nextAction": "2026-11-08 21:25 IST: Original 2025 English/Tamil Exercise 1.1 page 6 text re-read from connected Google Drive. Exactly 12 subpart slots enumerated, seven prior source-verified mathematical drafts; five remain without source-verified solutions: 6(i), 6(ii), 6(iii), 7(i), 7(ii). Next visually inspect both PDF page 12 images to confirm mathematical glyphs, then implement exact-source Q6(i) and Q6(ii). Do not publish paraphrases as textbook-exact; run all CI and cross-grade checks before merge.",
   "testStatus": {
     "localMathEnumeration": "Q6(i): A={0,1}, B={2,3,4}, C={3,5}, both sides enumerate eight ordered pairs; verified by independent code assertion; local npm test not run.",
     "npmTest": "Prior commit 9bc0b38 shared test workflow passed; new Q6(i) commit pending.",
