@@ -10,7 +10,8 @@ const product=(a,b)=>a.flatMap(x=>b.map(y=>[x,y]));
 const canonical=x=>x.map(p=>JSON.stringify(p)).sort();
 const inputs=[
  {part:'i',a:[2,-2,3],b:[1,-4]},
- {part:'ii',a:['p','q'],b:['p','q']}
+ {part:'ii',a:['p','q'],b:['p','q']},
+ {part:'iii',a:['m','n'],b:[]}
 ];
 const ledger=JSON.parse(fs.readFileSync(path.join(root,'grade-10-coverage-2025.json'),'utf8'));
 assert.equal(ledger.grade,10);
