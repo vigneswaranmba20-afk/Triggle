@@ -214,7 +214,7 @@
       "tamilEditorial": "pending"
     }
   ],
-  "next": "Grade 11 Chapter 1 Exercise 1.1 Question 3(i), English printed p.7 and Tamil printed p.10; verify exact source before drafting. Verify latest Q2 CI/browser, reconcile latest main and preserve Grade 9/10/12 regressions before preview merge.",
+  "next": "Grade 11 Chapter 1 Exercise 1.1 Question 3(i), English printed p.7 and Tamil printed p.9; verify exact source before drafting. Verify latest Q2 CI/browser, reconcile latest main and preserve Grade 9/10/12 regressions before preview merge.",
   "notes": "Chapter-level source evidence does not establish full exercise totals; Grade 11 pre-existing legacy chapter 3 content is not counted as 2025 verified. Exercise 1.1 Q2 directly checked in both 2025 Volume I PDFs; the new preview and mathematical regression are committed but latest CI/browser execution is pending.",
   "ciEvidence": {
     "baselineCommit": "7f66ab886f4d961774288d36d644ce8ed7ffe5eb",
