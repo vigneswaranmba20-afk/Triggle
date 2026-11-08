@@ -12,12 +12,14 @@ As checked 2026-11-08. **This is an audit, not a chapter-completion certificate.
 |---|---:|---:|---:|---|
 | Q1: identifying sets | 4 | 4 | 0 | Q1 (i–iv) now transcribed from visually inspected 2025 EN/TA PDFs, printed p. 5 / PDF p. 11; independent Tamil editorial review pending |
 | Q2: roster form of letters | 4 | 4 | 0 | Q2 (i–iv) now transcribed from visually inspected 2025 EN/TA PDFs, printed p. 5 / PDF p. 11; independent Tamil editorial review pending |
-| Q3(a): membership true/false | 6 | 6 | 0 | Check membership symbols against printed figure/glyphs |
-| Q3(b): fill the blanks | 4 | 4 | 0 | Check membership symbols against printed figure/glyphs |
+| Q3(a): membership true/false | 6 | 6 | 0 | Exact 2025 EN/Tamil Q3(a) stem, membership glyphs and subparts visually checked; independent Tamil editorial review pending |
+| Q3(b): fill the blanks | 4 | 4 | 0 | Exact 2025 EN/Tamil Q3(b) stem, blanks and subparts visually checked; independent Tamil editorial review pending |
 | Q4: roster-form conversions | 4 | **0** | **4** | Q4(ii) fractional expression is garbled in extracted PDF text: require page-image inspection |
 | Q5: set-builder conversions | 4 | **0** | **4** | Q5(ii) rational-number sequence is garbled in extracted PDF text: require page-image inspection |
 | Q6: descriptive-form conversions | 4 | **0** | **4** | Source text visible in both editions; independent Tamil editorial review pending |
 | **Total** | **30** | **18** | **12** | **Do not label Exercise 1.1 complete** |
+
+**Verbatim transcription progress:** 18 of 30 Exercise 1.1 subparts have page-image checked EN/TA prompts in the student UI; 12 subparts remain unimplemented. Mathematical and Tamil editorial certification are separate from this source-fidelity check.
 
 Missing IDs to create once source and publication gates are satisfied: `g9-ch1-ex1.1-q4-i` through `-iv`, `g9-ch1-ex1.1-q5-i` through `-iv`, `g9-ch1-ex1.1-q6-i` through `-iv`. Preserve all 18 existing question IDs and localStorage progress.
 
