@@ -1054,3 +1054,11 @@
  .sp2-journey .sp2-journey-controls button{padding:7px 5px;font-size:11px}
  .sp2-journey .sp2-journey-controls [data-journey-index]{font-size:11px}
 }
+
+/* WCAG 2.2 AA contrast: inactive bilingual switch and mobile class dock.
+ * Prior audit showed #73728c on #efedf5 and #8c8ca4 on white below 4.5:1. */
+.lang-switch button:not(.active){color:#514a67}
+@media(max-width:800px){
+ .dock-grade:not(.active){color:#4d465d}
+ .dock-grade:not(.active) strong,.dock-grade:not(.active) span{color:inherit}
+}
