@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "scope": "Grade 9 Set Language Exercise 1.1 Question 5",
+  "edition": "2025 revised",
+  "reviewedOn": "2026-11-08",
+  "verification": "English and Tamil textbook PDF page images inspected; printed questions, subparts and mathematical symbols retained.",
+  "source": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 5,
+      "pdfPage": 11
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 6,
+      "pdfPage": 12
+    }
+  },
+  "note": "[[a|b]] is the Triggle stacked-fraction rendering equivalent of the textbook's vertical typesetting. Tamil editorial certification remains pending.",
+  "items": [
+    {
+      "id": "g9-ch1-ex1.1-q5-i",
+      "questionNumber": 5,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "5. Represent the following sets in set builder form.\n(i) B = The set of all Cricket players in India who scored double centuries in One day Internationals.",
+        "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(i) B = ஒரு நாள் ஆட்டங்களில் இரட்டைச் சதமடித்த இந்திய மட்டைப் பந்து வீரர்களின் தொகுப்பு."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-ii",
+      "questionNumber": 5,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "5. Represent the following sets in set builder form.\n(ii) C = {[[1|2]], [[2|3]], [[3|4]], ...}",
+        "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(ii) C = {[[1|2]], [[2|3]], [[3|4]], ...}"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-iii",
+      "questionNumber": 5,
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "5. Represent the following sets in set builder form.\n(iii) D = The set of all tamil months in a year.",
+        "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(iii) D = ஓர் ஆண்டில் உள்ள தமிழ் மாதங்களின் தொகுப்பு."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-iv",
+      "questionNumber": 5,
+      "part": "iv",
+      "textbookPrompt": {
+        "en": "5. Represent the following sets in set builder form.\n(iv) E = The set of odd Whole numbers less than 9.",
+        "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(iv) E = 9 - க்கும் குறைவான ஒற்றை முழு எண்களின் கணம்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 5,
+          "pdf": 11
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    }
+  ]
+}

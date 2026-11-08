@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "g9-ch1",
+  "batch": "2026-11-08-ex1.1-q6",
+  "purpose": "Exact 2025 EN/TA textbook source prompts; Triggle-original worked solutions, Tamil editorial review pending",
+  "sourceAuthority": "2025 revised Grade 9 English/Tamil Mathematics PDF page-image source",
+  "coverage": {
+    "verifiedExerciseSubparts": 4,
+    "exercise1_1Total": 30
+  },
+  "questions": [
+    {
+      "id": "g9-ch1-ex1.1-q6-i",
+      "exercise": "1.1",
+      "question": 6,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 6,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 12,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "6. Represent the following sets in descriptive form.\n(i) P = { January, June, July}",
+        "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(i) P = { சனவரி, சூன், சூலை}"
+      },
+      "answer": {
+        "en": "P = The set of English months starting with the letter J.",
+        "ta": "P = ‘J’ என்ற எழுத்தில் துவங்கும் ஆங்கில மாதங்களின் கணம்"
+      },
+      "steps": {
+        "en": [
+          "Read the three members: January, June, and July.",
+          "Each is the English name of a month beginning with the letter J.",
+          "Describe the common property in words without listing the individual months."
+        ],
+        "ta": [
+          "சனவரி, சூன், சூலை ஆகியவற்றைக் கவனிக்கவும்.",
+          "இவை அனைத்தும் ஆங்கிலத்தில் J என்னும் எழுத்தில் தொடங்கும் மாதங்கள்.",
+          "அந்த பொதுப் பண்பை விவரித்தல் முறையில் எழுதுக."
+        ]
+      },
+      "verification": {
+        "method": "Visually checked 2025 bilingual PDF question; verified set definition and membership independently",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q6.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "pending",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-ii",
+      "exercise": "1.1",
+      "question": 6,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 6,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 12,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "6. Represent the following sets in descriptive form.\n(ii) Q = {7,11,13,17,19,23,29}",
+        "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(ii) Q = {7,11,13,17,19,23,29}"
+      },
+      "answer": {
+        "en": "Q = The set of prime numbers between 5 and 31.",
+        "ta": "Q = 5 மற்றும் 31 இக்கு இடைப்பட்ட பகா எண்களின் கணம்"
+      },
+      "steps": {
+        "en": [
+          "Check that every listed number is prime and larger than 5.",
+          "The next prime after 29 is 31, so all displayed members lie strictly between 5 and 31.",
+          "Describe Q using that common numerical property."
+        ],
+        "ta": [
+          "கொடுக்கப்பட்ட எண்கள் அனைத்தும் பகா எண்கள்.",
+          "அவை 5 மற்றும் 31 ஆகியவற்றுக்கு இடையே அமைந்துள்ளன.",
+          "எனவே Q இன் பொதுப் பண்பை விவரித்தல் முறையில் குறிப்பிடுக."
+        ]
+      },
+      "verification": {
+        "method": "Visually checked 2025 bilingual PDF question; verified set definition and membership independently",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q6.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "pending",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-iii",
+      "exercise": "1.1",
+      "question": 6,
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 6,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 12,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "6. Represent the following sets in descriptive form.\n(iii) R = {x : x ∈ ℕ, x < 5}",
+        "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(iii) R = {x : x ∈ ℕ, x < 5}"
+      },
+      "answer": {
+        "en": "R = The set of natural numbers less than 5.",
+        "ta": "R = 5 ஐ விடச் சிறிய இயல் எண்களின் கணம்"
+      },
+      "steps": {
+        "en": [
+          "The symbol ℕ represents natural numbers.",
+          "The restriction x < 5 allows 1, 2, 3, and 4.",
+          "Write the common property of these numbers in words."
+        ],
+        "ta": [
+          "ℕ என்பது இயல் எண்களின் கணத்தைக் குறிக்கும்.",
+          "x < 5 என்பதால் 1, 2, 3, 4 மட்டுமே இங்கு அடங்கும்.",
+          "இயல் எண் 5 ஐ விடச் சிறியது என்ற பண்பை எழுதுக."
+        ]
+      },
+      "verification": {
+        "method": "Visually checked 2025 bilingual PDF question; verified set definition and membership independently",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q6.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "pending",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-iv",
+      "exercise": "1.1",
+      "question": 6,
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 6,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 12,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "6. Represent the following sets in descriptive form.\n(iv) S = {x : x is a consonant in English alphabet}",
+        "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(iv) S = {x : x ஓர் ஆங்கில மெய்யெழுத்து}"
+      },
+      "answer": {
+        "en": "S = The set of English consonants.",
+        "ta": "S = ஆங்கில மெய்யெழுத்துகளின் கணம்"
+      },
+      "steps": {
+        "en": [
+          "The rule describes letters of the English alphabet.",
+          "The elements are the consonants, not the vowels.",
+          "Express this set in words as the set of English consonants."
+        ],
+        "ta": [
+          "இங்கு ஆங்கில எழுத்துகளைக் குறிக்கிறது.",
+          "உயிரெழுத்துகள் அல்லாத மெய்யெழுத்துகள் மட்டுமே கணத்தில் அடங்கும்.",
+          "அதனை ஆங்கில மெய்யெழுத்துகளின் கணம் என்று விவரிக்கவும்."
+        ]
+      },
+      "verification": {
+        "method": "Visually checked 2025 bilingual PDF question; verified set definition and membership independently",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q6.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "pending",
+        "publication": "draft"
+      }
+    }
+  ]
+}

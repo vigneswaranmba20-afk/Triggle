@@ -1257,6 +1257,462 @@
       "studentBrowser": "testing",
       "publication": "draft"
     }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q5-i",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 5 (i)",
+      "ta": "பயிற்சி 1.1 · வினா 5 (i)"
+    },
+    "title": {
+      "en": "Write in set-builder form",
+      "ta": "கணக் கட்டமைப்பு முறை"
+    },
+    "q": {
+      "en": "5. Represent the following sets in set builder form.\n(i) B = The set of all Cricket players in India who scored double centuries in One day Internationals.",
+      "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(i) B = ஒரு நாள் ஆட்டங்களில் இரட்டைச் சதமடித்த இந்திய மட்டைப் பந்து வீரர்களின் தொகுப்பு."
+    },
+    "steps": [
+      {
+        "en": "Identify the common condition: the person is an Indian cricket player.",
+        "ta": "இந்திய மட்டைப் பந்து வீரர்களை மட்டும் எடுத்துக்கொள்க."
+      },
+      {
+        "en": "Only include players with a double century in a One Day International, not other cricket formats.",
+        "ta": "ஒரு நாள் சர்வதேச ஆட்டத்தில் இரட்டைச் சதம் அடித்திருக்க வேண்டும்."
+      },
+      {
+        "en": "Use x for a qualifying player and state the membership rule inside braces.",
+        "ta": "இந்த நிபந்தனையைப் பூர்த்தி செய்யும் x உறுப்புகளைக் கணக் கட்டமைப்பு முறையில் குறிக்கவும்."
+      }
+    ],
+    "answer": {
+      "en": "B = {x : x is an Indian cricket player who scored a double century in a One Day International}",
+      "ta": "B = {x : x என்பது ஒரு நாள் சர்வதேசப் போட்டியில் இரட்டைச் சதமடித்த இந்திய மட்டைப் பந்து வீரர்}"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9 EN/Tamil Exercise 1.1, printed p. 5 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q5.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q5-ii",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 5 (ii)",
+      "ta": "பயிற்சி 1.1 · வினா 5 (ii)"
+    },
+    "title": {
+      "en": "Write in set-builder form",
+      "ta": "கணக் கட்டமைப்பு முறை"
+    },
+    "q": {
+      "en": "5. Represent the following sets in set builder form.\n(ii) C = {[[1|2]], [[2|3]], [[3|4]], ...}",
+      "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(ii) C = {[[1|2]], [[2|3]], [[3|4]], ...}"
+    },
+    "steps": [
+      {
+        "en": "Observe the pattern: numerators are 1, 2, 3 and denominators are one greater.",
+        "ta": "தொகுதிகள் 1, 2, 3, ...; பகுதிகள் அவற்றைவிட ஒன்று பெரியவை."
+      },
+      {
+        "en": "For each natural number n, the fraction is n/(n+1).",
+        "ta": "ஒவ்வோர் இயல் எண் n-க்கும் பின்னம் n/(n+1) ஆகும்."
+      },
+      {
+        "en": "The set-builder rule includes every such fraction as n runs through the natural numbers.",
+        "ta": "எனவே n ∈ ℕ என்ற நிபந்தனையுடன் கணக் கட்டமைப்பு வடிவில் எழுதுக."
+      }
+    ],
+    "answer": {
+      "en": "C = {x : x = [[n|n + 1]], n ∈ ℕ}",
+      "ta": "C = {x : x = [[n|n + 1]], n ∈ ℕ}"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9 EN/Tamil Exercise 1.1, printed p. 5 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q5.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q5-iii",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 5 (iii)",
+      "ta": "பயிற்சி 1.1 · வினா 5 (iii)"
+    },
+    "title": {
+      "en": "Write in set-builder form",
+      "ta": "கணக் கட்டமைப்பு முறை"
+    },
+    "q": {
+      "en": "5. Represent the following sets in set builder form.\n(iii) D = The set of all tamil months in a year.",
+      "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(iii) D = ஓர் ஆண்டில் உள்ள தமிழ் மாதங்களின் தொகுப்பு."
+    },
+    "steps": [
+      {
+        "en": "The members are the named Tamil months of a year.",
+        "ta": "உறுப்புகள் ஓர் ஆண்டின் தமிழ் மாதங்களாகும்."
+      },
+      {
+        "en": "Describe the property shared by every member instead of listing their names.",
+        "ta": "மாதங்களின் பெயர்களைப் பட்டியலிடாமல் பொதுப் பண்பைக் கூறுக."
+      },
+      {
+        "en": "Use x to stand for a Tamil month and put that condition inside braces.",
+        "ta": "x ஒரு தமிழ் மாதம் என்ற நிபந்தனையை கணக் கட்டமைப்பு முறையில் எழுதுக."
+      }
+    ],
+    "answer": {
+      "en": "D = {x : x is a Tamil month in a year}",
+      "ta": "D = {x : x என்பது ஓர் ஆண்டிலுள்ள தமிழ் மாதம்}"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9 EN/Tamil Exercise 1.1, printed p. 5 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q5.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q5-iv",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 5 (iv)",
+      "ta": "பயிற்சி 1.1 · வினா 5 (iv)"
+    },
+    "title": {
+      "en": "Write in set-builder form",
+      "ta": "கணக் கட்டமைப்பு முறை"
+    },
+    "q": {
+      "en": "5. Represent the following sets in set builder form.\n(iv) E = The set of odd Whole numbers less than 9.",
+      "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(iv) E = 9 - க்கும் குறைவான ஒற்றை முழு எண்களின் கணம்."
+    },
+    "steps": [
+      {
+        "en": "Whole numbers are 0, 1, 2 and so on; odd whole numbers below 9 are 1, 3, 5, 7.",
+        "ta": "9-க்குக் குறைவான ஒற்றை முழு எண்கள் 1, 3, 5, 7 ஆகும்."
+      },
+      {
+        "en": "State both conditions: x is a whole number and x is odd, with x < 9.",
+        "ta": "x ஒரு ஒற்றை முழு எண்ணாகவும் x < 9 ஆகவும் இருத்தல் வேண்டும்."
+      },
+      {
+        "en": "Use the full rule to define E, retaining the strict upper bound.",
+        "ta": "இந்த இரண்டு நிபந்தனைகளையும் கணக் கட்டமைப்பு வடிவில் குறிக்கவும்."
+      }
+    ],
+    "answer": {
+      "en": "E = {x : x is an odd whole number less than 9}",
+      "ta": "E = {x : x என்பது 9 ஐ விடக் குறைவான ஒற்றை முழு எண்}"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9 EN/Tamil Exercise 1.1, printed p. 5 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q5.json",
+      "sourcePdfPage": {
+        "en": 11,
+        "ta": 12
+      }
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q6-i",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 6 (i)",
+      "ta": "பயிற்சி 1.1 · வினா 6 (i)"
+    },
+    "title": {
+      "en": "Write in descriptive form",
+      "ta": "விவரித்தல் முறை"
+    },
+    "q": {
+      "en": "6. Represent the following sets in descriptive form.\n(i) P = { January, June, July}",
+      "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(i) P = { சனவரி, சூன், சூலை}"
+    },
+    "steps": [
+      {
+        "en": "Read the three members: January, June, and July.",
+        "ta": "சனவரி, சூன், சூலை ஆகியவற்றைக் கவனிக்கவும்."
+      },
+      {
+        "en": "Each is the English name of a month beginning with the letter J.",
+        "ta": "இவை அனைத்தும் ஆங்கிலத்தில் J என்னும் எழுத்தில் தொடங்கும் மாதங்கள்."
+      },
+      {
+        "en": "Describe the common property in words without listing the individual months.",
+        "ta": "அந்த பொதுப் பண்பை விவரித்தல் முறையில் எழுதுக."
+      }
+    ],
+    "answer": {
+      "en": "P = The set of English months starting with the letter J.",
+      "ta": "P = ‘J’ என்ற எழுத்தில் துவங்கும் ஆங்கில மாதங்களின் கணம்"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9 EN/Tamil Exercise 1.1, printed p. 6 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q6.json",
+      "sourcePdfPage": {
+        "en": 12,
+        "ta": 12
+      }
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q6-ii",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 6 (ii)",
+      "ta": "பயிற்சி 1.1 · வினா 6 (ii)"
+    },
+    "title": {
+      "en": "Write in descriptive form",
+      "ta": "விவரித்தல் முறை"
+    },
+    "q": {
+      "en": "6. Represent the following sets in descriptive form.\n(ii) Q = {7,11,13,17,19,23,29}",
+      "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(ii) Q = {7,11,13,17,19,23,29}"
+    },
+    "steps": [
+      {
+        "en": "Check that every listed number is prime and larger than 5.",
+        "ta": "கொடுக்கப்பட்ட எண்கள் அனைத்தும் பகா எண்கள்."
+      },
+      {
+        "en": "The next prime after 29 is 31, so all displayed members lie strictly between 5 and 31.",
+        "ta": "அவை 5 மற்றும் 31 ஆகியவற்றுக்கு இடையே அமைந்துள்ளன."
+      },
+      {
+        "en": "Describe Q using that common numerical property.",
+        "ta": "எனவே Q இன் பொதுப் பண்பை விவரித்தல் முறையில் குறிப்பிடுக."
+      }
+    ],
+    "answer": {
+      "en": "Q = The set of prime numbers between 5 and 31.",
+      "ta": "Q = 5 மற்றும் 31 இக்கு இடைப்பட்ட பகா எண்களின் கணம்"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9 EN/Tamil Exercise 1.1, printed p. 6 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q6.json",
+      "sourcePdfPage": {
+        "en": 12,
+        "ta": 12
+      }
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q6-iii",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 6 (iii)",
+      "ta": "பயிற்சி 1.1 · வினா 6 (iii)"
+    },
+    "title": {
+      "en": "Write in descriptive form",
+      "ta": "விவரித்தல் முறை"
+    },
+    "q": {
+      "en": "6. Represent the following sets in descriptive form.\n(iii) R = {x : x ∈ ℕ, x < 5}",
+      "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(iii) R = {x : x ∈ ℕ, x < 5}"
+    },
+    "steps": [
+      {
+        "en": "The symbol ℕ represents natural numbers.",
+        "ta": "ℕ என்பது இயல் எண்களின் கணத்தைக் குறிக்கும்."
+      },
+      {
+        "en": "The restriction x < 5 allows 1, 2, 3, and 4.",
+        "ta": "x < 5 என்பதால் 1, 2, 3, 4 மட்டுமே இங்கு அடங்கும்."
+      },
+      {
+        "en": "Write the common property of these numbers in words.",
+        "ta": "இயல் எண் 5 ஐ விடச் சிறியது என்ற பண்பை எழுதுக."
+      }
+    ],
+    "answer": {
+      "en": "R = The set of natural numbers less than 5.",
+      "ta": "R = 5 ஐ விடச் சிறிய இயல் எண்களின் கணம்"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9 EN/Tamil Exercise 1.1, printed p. 6 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q6.json",
+      "sourcePdfPage": {
+        "en": 12,
+        "ta": 12
+      }
+    }
+  },
+  {
+    "id": "g9-ch1-ex1.1-q6-iv",
+    "classNum": 9,
+    "chapter": "1",
+    "exercise": "1.1",
+    "topic": {
+      "en": "Set Language",
+      "ta": "கண மொழி"
+    },
+    "label": {
+      "en": "Exercise 1.1 · Question 6 (iv)",
+      "ta": "பயிற்சி 1.1 · வினா 6 (iv)"
+    },
+    "title": {
+      "en": "Write in descriptive form",
+      "ta": "விவரித்தல் முறை"
+    },
+    "q": {
+      "en": "6. Represent the following sets in descriptive form.\n(iv) S = {x : x is a consonant in English alphabet}",
+      "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(iv) S = {x : x ஓர் ஆங்கில மெய்யெழுத்து}"
+    },
+    "steps": [
+      {
+        "en": "The rule describes letters of the English alphabet.",
+        "ta": "இங்கு ஆங்கில எழுத்துகளைக் குறிக்கிறது."
+      },
+      {
+        "en": "The elements are the consonants, not the vowels.",
+        "ta": "உயிரெழுத்துகள் அல்லாத மெய்யெழுத்துகள் மட்டுமே கணத்தில் அடங்கும்."
+      },
+      {
+        "en": "Express this set in words as the set of English consonants.",
+        "ta": "அதனை ஆங்கில மெய்யெழுத்துகளின் கணம் என்று விவரிக்கவும்."
+      }
+    ],
+    "answer": {
+      "en": "S = The set of English consonants.",
+      "ta": "S = ஆங்கில மெய்யெழுத்துகளின் கணம்"
+    },
+    "kind": "reference",
+    "source": "",
+    "reference": "2025 revised Grade 9 EN/Tamil Exercise 1.1, printed p. 6 EN / 6 TA",
+    "sourceEdition": "2025 revised",
+    "review": {
+      "tamilEditorial": "pending",
+      "studentBrowser": "pending",
+      "publication": "draft"
+    },
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q6.json",
+      "sourcePdfPage": {
+        "en": 12,
+        "ta": 12
+      }
+    }
   }
 ];
  const grade=window.TRIGGLE_CLASSES?.[9];

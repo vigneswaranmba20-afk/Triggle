@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "scope": "Grade 9 Set Language Exercise 1.1 Question 6",
+  "edition": "2025 revised",
+  "reviewedOn": "2026-11-08",
+  "verification": "English and Tamil textbook PDF page images inspected; printed questions, subparts and mathematical symbols retained.",
+  "source": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 6,
+      "pdfPage": 12
+    }
+  },
+  "note": "[[a|b]] is the Triggle stacked-fraction rendering equivalent of the textbook's vertical typesetting. Tamil editorial certification remains pending.",
+  "items": [
+    {
+      "id": "g9-ch1-ex1.1-q6-i",
+      "questionNumber": 6,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "6. Represent the following sets in descriptive form.\n(i) P = { January, June, July}",
+        "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(i) P = { சனவரி, சூன், சூலை}"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 6,
+          "pdf": 12
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-ii",
+      "questionNumber": 6,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "6. Represent the following sets in descriptive form.\n(ii) Q = {7,11,13,17,19,23,29}",
+        "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(ii) Q = {7,11,13,17,19,23,29}"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 6,
+          "pdf": 12
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-iii",
+      "questionNumber": 6,
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "6. Represent the following sets in descriptive form.\n(iii) R = {x : x ∈ ℕ, x < 5}",
+        "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(iii) R = {x : x ∈ ℕ, x < 5}"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 6,
+          "pdf": 12
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-iv",
+      "questionNumber": 6,
+      "part": "iv",
+      "textbookPrompt": {
+        "en": "6. Represent the following sets in descriptive form.\n(iv) S = {x : x is a consonant in English alphabet}",
+        "ta": "6. பின்வரும் கணங்களை விவரித்தல் முறையில் எழுதுக\n(iv) S = {x : x ஓர் ஆங்கில மெய்யெழுத்து}"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 6,
+          "pdf": 12
+        },
+        "ta": {
+          "printed": 6,
+          "pdf": 12
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    }
+  ]
+}

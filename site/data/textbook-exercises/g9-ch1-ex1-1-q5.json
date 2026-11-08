@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "g9-ch1",
+  "batch": "2026-11-08-ex1.1-q5",
+  "purpose": "Exact 2025 EN/TA textbook source prompts; Triggle-original worked solutions, Tamil editorial review pending",
+  "sourceAuthority": "2025 revised Grade 9 English/Tamil Mathematics PDF page-image source",
+  "coverage": {
+    "verifiedExerciseSubparts": 4,
+    "exercise1_1Total": 30
+  },
+  "questions": [
+    {
+      "id": "g9-ch1-ex1.1-q5-i",
+      "exercise": "1.1",
+      "question": 5,
+      "part": "i",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "5. Represent the following sets in set builder form.\n(i) B = The set of all Cricket players in India who scored double centuries in One day Internationals.",
+        "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(i) B = ஒரு நாள் ஆட்டங்களில் இரட்டைச் சதமடித்த இந்திய மட்டைப் பந்து வீரர்களின் தொகுப்பு."
+      },
+      "answer": {
+        "en": "B = {x : x is an Indian cricket player who scored a double century in a One Day International}",
+        "ta": "B = {x : x என்பது ஒரு நாள் சர்வதேசப் போட்டியில் இரட்டைச் சதமடித்த இந்திய மட்டைப் பந்து வீரர்}"
+      },
+      "steps": {
+        "en": [
+          "Identify the common condition: the person is an Indian cricket player.",
+          "Only include players with a double century in a One Day International, not other cricket formats.",
+          "Use x for a qualifying player and state the membership rule inside braces."
+        ],
+        "ta": [
+          "இந்திய மட்டைப் பந்து வீரர்களை மட்டும் எடுத்துக்கொள்க.",
+          "ஒரு நாள் சர்வதேச ஆட்டத்தில் இரட்டைச் சதம் அடித்திருக்க வேண்டும்.",
+          "இந்த நிபந்தனையைப் பூர்த்தி செய்யும் x உறுப்புகளைக் கணக் கட்டமைப்பு முறையில் குறிக்கவும்."
+        ]
+      },
+      "verification": {
+        "method": "Visually checked 2025 bilingual PDF question; verified set definition and membership independently",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q5.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "pending",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-ii",
+      "exercise": "1.1",
+      "question": 5,
+      "part": "ii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "5. Represent the following sets in set builder form.\n(ii) C = {[[1|2]], [[2|3]], [[3|4]], ...}",
+        "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(ii) C = {[[1|2]], [[2|3]], [[3|4]], ...}"
+      },
+      "answer": {
+        "en": "C = {x : x = [[n|n + 1]], n ∈ ℕ}",
+        "ta": "C = {x : x = [[n|n + 1]], n ∈ ℕ}"
+      },
+      "steps": {
+        "en": [
+          "Observe the pattern: numerators are 1, 2, 3 and denominators are one greater.",
+          "For each natural number n, the fraction is n/(n+1).",
+          "The set-builder rule includes every such fraction as n runs through the natural numbers."
+        ],
+        "ta": [
+          "தொகுதிகள் 1, 2, 3, ...; பகுதிகள் அவற்றைவிட ஒன்று பெரியவை.",
+          "ஒவ்வோர் இயல் எண் n-க்கும் பின்னம் n/(n+1) ஆகும்.",
+          "எனவே n ∈ ℕ என்ற நிபந்தனையுடன் கணக் கட்டமைப்பு வடிவில் எழுதுக."
+        ]
+      },
+      "verification": {
+        "method": "Visually checked 2025 bilingual PDF question; verified set definition and membership independently",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q5.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "pending",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-iii",
+      "exercise": "1.1",
+      "question": 5,
+      "part": "iii",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "5. Represent the following sets in set builder form.\n(iii) D = The set of all tamil months in a year.",
+        "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(iii) D = ஓர் ஆண்டில் உள்ள தமிழ் மாதங்களின் தொகுப்பு."
+      },
+      "answer": {
+        "en": "D = {x : x is a Tamil month in a year}",
+        "ta": "D = {x : x என்பது ஓர் ஆண்டிலுள்ள தமிழ் மாதம்}"
+      },
+      "steps": {
+        "en": [
+          "The members are the named Tamil months of a year.",
+          "Describe the property shared by every member instead of listing their names.",
+          "Use x to stand for a Tamil month and put that condition inside braces."
+        ],
+        "ta": [
+          "உறுப்புகள் ஓர் ஆண்டின் தமிழ் மாதங்களாகும்.",
+          "மாதங்களின் பெயர்களைப் பட்டியலிடாமல் பொதுப் பண்பைக் கூறுக.",
+          "x ஒரு தமிழ் மாதம் என்ற நிபந்தனையை கணக் கட்டமைப்பு முறையில் எழுதுக."
+        ]
+      },
+      "verification": {
+        "method": "Visually checked 2025 bilingual PDF question; verified set definition and membership independently",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q5.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "pending",
+        "publication": "draft"
+      }
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-iv",
+      "exercise": "1.1",
+      "question": 5,
+      "part": "iv",
+      "source": {
+        "edition": "2025 revised",
+        "page": {
+          "en": 5,
+          "ta": 6
+        },
+        "pdfPage": {
+          "en": 11,
+          "ta": 12
+        },
+        "driveIds": {
+          "en": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "ta": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+        },
+        "books": [
+          "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+          "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+        ]
+      },
+      "prompt": {
+        "en": "5. Represent the following sets in set builder form.\n(iv) E = The set of odd Whole numbers less than 9.",
+        "ta": "5. பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக.\n(iv) E = 9 - க்கும் குறைவான ஒற்றை முழு எண்களின் கணம்."
+      },
+      "answer": {
+        "en": "E = {x : x is an odd whole number less than 9}",
+        "ta": "E = {x : x என்பது 9 ஐ விடக் குறைவான ஒற்றை முழு எண்}"
+      },
+      "steps": {
+        "en": [
+          "Whole numbers are 0, 1, 2 and so on; odd whole numbers below 9 are 1, 3, 5, 7.",
+          "State both conditions: x is a whole number and x is odd, with x < 9.",
+          "Use the full rule to define E, retaining the strict upper bound."
+        ],
+        "ta": [
+          "9-க்குக் குறைவான ஒற்றை முழு எண்கள் 1, 3, 5, 7 ஆகும்.",
+          "x ஒரு ஒற்றை முழு எண்ணாகவும் x < 9 ஆகவும் இருத்தல் வேண்டும்.",
+          "இந்த இரண்டு நிபந்தனைகளையும் கணக் கட்டமைப்பு வடிவில் குறிக்கவும்."
+        ]
+      },
+      "verification": {
+        "method": "Visually checked 2025 bilingual PDF question; verified set definition and membership independently",
+        "status": "mathematically-checked"
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "evidenceFile": "textbook-fidelity/g9-ch1-ex1-1-q5.json"
+      },
+      "review": {
+        "tamilEditorial": "pending",
+        "studentBrowser": "pending",
+        "publication": "draft"
+      }
+    }
+  ]
+}
