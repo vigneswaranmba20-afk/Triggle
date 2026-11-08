@@ -4,7 +4,7 @@
   "edition": "2025 revised",
   "lastVerified": "2026-11-08",
   "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
-  "notes": "2026-11-08 10:31 IST: No additional textbook item source-verified. Existing Q1(i–iii) remain math-verified drafts. Fixed Grade 10 CI wildcard so Playwright test runs only after Chromium installation; added eight-chapter ledger/bilingual-source integrity test. Prior GitHub shared browser suite fails exercise viewport height (830px of 900px). Latest CI pending; no merge/live verification. Tamil human editorial pending.",
+  "notes": "2026-11-08 12:30 IST: 2025 revised English/Tamil Exercise 1.1 Q2 independently source-verified on printed p.6/PDF p.12; bilingual 12+12 ordered-pair derivation added. Browser transient 503 retry test made deterministic; CI must rerun. No merge or live verification; Tamil human editorial pending.",
   "chapters": [
     {
       "chapter": 1,
@@ -50,7 +50,8 @@
       "verifiedQuestionSubparts": [
         "1(i)",
         "1(ii)",
-        "1(iii)"
+        "1(iii)",
+        "2"
       ],
       "mergedQuestionSubparts": [],
       "liveVerifiedQuestionSubparts": [],
@@ -148,12 +149,12 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "Inspect GitHub Actions for commit c767d7b; if Grade 10 browser tests fail, repair and rerun. Shared curriculum viewport 830/900 regression requires coordinated main-owned fix, not unilateral Grade 10 edit. Verify exact 2025 English/Tamil Exercise 1.1 Q2 statement before drafting, then implement full bilingual steps and independent Cartesian enumeration. Reconcile with latest main and rerun cross-grade tests before merge.",
+  "nextAction": "Confirm Q2 mathematics, bilingual and browser CI, repair any failures; shared viewport regression requires main coordination. Verify Exercise 1.1 Q3 exact ordered pairs from both 2025 textbooks. Reconcile latest main and run cross-grade regressions before merge.",
   "testStatus": {
     "localMathEnumeration": "Q1(iii) independent enumeration checked: A×B=∅, A×A has four ordered pairs, B×A=∅; full repository tests pending",
     "npmTest": "Passed in prior GitHub workflow for previous commit; latest commit pending.",
     "playwright": "Grade 10 browser tests scheduled after Chromium installation; latest CI pending.",
-    "githubCI": "Prior shared browser failed exercise viewport height (830/900); latest branch CI pending.",
+    "githubCI": "New Q2 commit CI pending; previous Grade 10 workflow failed transient 503 recovery test; shared tests previously passed.",
     "merged": false,
     "liveVerified": false,
     "latestGrade10PreviewCommit": "c767d7b4f5ba00c34a1f0a44b002e546debc39ae",
