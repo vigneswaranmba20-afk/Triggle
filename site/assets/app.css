@@ -871,3 +871,120 @@
  .rnlab .triggle-display-equation .rnlab-rational-math{font-size:23px}
  .rnlab .rnlab-equation-flow{gap:8px 10px}
 }
+
+
+/* ChatGPT-inspired textbook worked example: calm prose, independent parts,
+ * centered display maths, and scan-friendly rationality conclusions.
+ * This is intentionally scoped to authored examples (first: Grade 9 Ex. 2.12).
+ */
+.lesson-card.twd-lesson{--twd-ink:#2f2a40;--twd-sub:#655f73;--twd-line:#e7e3ef}
+.twd-lesson .question-text.twd-question{
+ background:#fff;border:0;padding:0;margin-top:16px;
+ font-size:inherit;line-height:1.6;font-weight:400;white-space:normal;
+ overflow:visible;max-height:none;color:var(--twd-ink);
+}
+.twd-question-inner{display:grid;gap:16px}
+.twd-question .twd-prompt{
+ font-size:clamp(16px,3.3vw,19px);font-weight:650;line-height:1.65;
+ margin:0 0 2px;color:var(--twd-ink);
+}
+.twd-question-parts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.twd-question-part{
+ display:grid;align-content:start;gap:11px;padding:15px 13px;
+ background:#fbfaff;border:1px solid #e8e4f1;border-radius:14px;min-width:0;
+}
+.twd-part-label{
+ color:#62518f;font-size:14px;font-weight:850;letter-spacing:.01em;
+}
+.twd-given-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;min-width:0}
+.twd-display-equation{
+ display:flex;justify-content:center;align-items:center;max-width:100%;
+ min-width:0;box-sizing:border-box;overflow-x:auto;overflow-y:hidden;
+ text-align:center;scrollbar-width:thin;overscroll-behavior-x:contain;
+}
+.twd-display-equation .twd-math,.twd-relations .twd-math,
+.twd-final-value .twd-math{
+ display:block;max-width:100%;margin:0 auto;
+ color:var(--twd-ink,#2f2a40);
+ font-family:math,"Cambria Math","STIX Two Math",serif;
+ font-weight:450;font-size:clamp(16px,2.9vw,21px);
+ line-height:1.55;white-space:nowrap;math-style:normal;
+}
+.twd-relations{
+ display:flex;flex-wrap:wrap;gap:6px 15px;justify-content:center;align-items:center;
+ padding-top:10px;border-top:1px solid #ede9f4;min-width:0;
+}
+.twd-relations .twd-math{font-size:clamp(15px,2.7vw,18px);margin:0;line-height:1.4}
+.twd-lesson .lesson-divider{margin-top:18px;padding-top:12px}
+.twd-lesson .worked-step.twd-worked-step{
+ display:block;margin:0;padding:22px 1px 25px;
+ border-bottom:1px solid var(--twd-line);min-width:0;
+}
+.twd-step-heading{display:flex;align-items:center;gap:11px;min-width:0}
+.twd-step-index{
+ display:grid;place-items:center;min-width:38px;min-height:38px;border-radius:12px;
+ color:#654ca0;background:#f0ebfa;font-weight:850;font-size:17px;
+}
+.twd-step-heading h3{margin:0;color:var(--twd-ink);font-size:clamp(16px,3.2vw,19px);font-weight:800;line-height:1.45}
+.twd-step-reason{
+ margin:12px 0 12px;color:#565166;font-size:clamp(14px,2.7vw,16px);
+ font-weight:420;line-height:1.7;
+}
+.twd-derivations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;min-width:0}
+.twd-derivation{min-width:0;padding:14px 9px 9px;border-radius:13px;background:#fbfaff}
+.twd-variable-title{display:flex;gap:8px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.twd-variable-title strong{font-size:19px;color:#45366f}
+.twd-kind{
+ display:inline-flex;align-items:center;flex:none;line-height:1.25;font-weight:750;
+ font-size:clamp(11px,2.6vw,13px);padding:5px 9px;border-radius:9px;letter-spacing:.01em;
+}
+.twd-kind.twd-rational{background:#e5f4ec;color:#247253}
+.twd-kind.twd-irrational{background:#f0ebfa;color:#5b4790}
+.twd-calculation{
+ display:grid;justify-content:stretch;gap:8px;min-width:0;margin-top:13px;
+}
+.twd-calculation .twd-display-equation{
+ padding:8px 0;min-height:49px;
+}
+.twd-calculation .twd-math{font-size:clamp(18px,3.4vw,23px)}
+.twd-calculation .twd-calculation-result{
+ border-top:1px solid #e8e4f1;padding-top:13px;
+}
+.twd-calculation-result .twd-math{color:#4c387d;font-weight:550;font-size:clamp(19px,3.7vw,25px)}
+.twd-lesson .answer-box{background:#f5faf7!important;border:1px solid #d8e9df;margin-top:18px;padding:17px 15px}
+.twd-lesson .math-answer.twd-answer{
+ display:block;margin:11px 0 0;max-height:none;overflow:visible;
+ font-size:inherit;line-height:1.5;overflow-wrap:normal;
+}
+.twd-final-list{display:grid;gap:0}
+.twd-final-row{display:grid;grid-template-columns:35px minmax(0,1fr);gap:10px;padding:12px 0;border-top:1px solid #dcece3}
+.twd-final-row:first-child{border-top:0;padding-top:2px}
+.twd-final-part{font-size:14px;color:#337357;align-self:center}
+.twd-final-values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;min-width:0}
+.twd-final-value{display:grid;justify-items:center;align-content:center;gap:7px;min-width:0}
+.twd-final-value .twd-math{font-size:clamp(19px,3.4vw,24px);font-weight:600;color:#226c4e}
+.twd-final-value .twd-kind{font-size:11px;padding:5px 8px;white-space:normal;text-align:center}
+.guided-question .twd-question-inner{gap:8px}
+.guided-question .twd-question-parts{gap:8px}
+.guided-question .twd-question-part{padding:9px;gap:6px}
+.guided-question .twd-prompt{font-size:13px}
+.guided-question .twd-display-equation .twd-math,
+.guided-question .twd-relations .twd-math{font-size:14px}
+@media(max-width:680px){
+ .twd-question-parts{grid-template-columns:minmax(0,1fr)}
+ .twd-question .twd-prompt{font-size:16px}
+ .twd-question-part{padding:12px;gap:8px}
+ .twd-derivations{grid-template-columns:minmax(0,1fr);gap:12px}
+ .twd-derivation{padding:13px 10px}
+ .twd-calculation .twd-math{font-size:clamp(19px,5vw,23px)}
+ .twd-final-value .twd-math{font-size:clamp(18px,4.5vw,23px)}
+ .twd-lesson .worked-step.twd-worked-step{padding:18px 0 22px}
+ .guided-question .twd-question-parts{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:360px){
+ .twd-given-grid{gap:3px}
+ .twd-final-values{gap:4px}
+ .twd-final-row{grid-template-columns:27px minmax(0,1fr);gap:6px}
+ .twd-calculation .twd-math{font-size:19px}
+ .twd-question .twd-display-equation .twd-math{font-size:17px}
+}

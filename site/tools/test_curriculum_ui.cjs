@@ -533,6 +533,44 @@ async function main() {
         await noOverflow(page,'Tamil Real Numbers question at '+width+'px');
       });
     }
+    for(const width of [320,390,1280]){
+      await check('Example 2.12 readable ChatGPT-style worked solution at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch2&section=examples');
+        await page.locator('.hub-question').nth(11).click();
+        assert.match(await page.locator('#questionHead').innerText(),/Example 2\.12/);
+        assert.equal(await page.locator('#lessonCard.twd-lesson').count(),1,'Authored example layout enabled');
+        assert.equal(await page.locator('#questionText .twd-question-part').count(),4,'Four question subparts shown');
+        assert.equal(await page.locator('#stepsList > li.twd-worked-step').count(),4,'Four worked subparts visible without expansion');
+        assert.equal(await page.locator('#stepsList [data-variable="x"]').count(),4);
+        assert.equal(await page.locator('#stepsList [data-variable="y"]').count(),4);
+        assert.equal(await page.locator('#answerText .twd-final-row').count(),4);
+        assert.equal(await page.locator('#answerText .twd-kind').count(),8);
+        assert.equal(await page.locator('#stepsList math[display="block"]').count(),16,'Each variable has a calculation and simplified result');
+        assert.ok(await page.locator('#stepsList math mfrac').count()>=2,'Quotients use real stacked fractions');
+        const equation=await page.locator('#stepsList .twd-calculation .twd-math').first().evaluate(el=>{
+          const eq=el.getBoundingClientRect(),parent=el.closest('.twd-display-equation').getBoundingClientRect();
+          return {fontSize:parseFloat(getComputedStyle(el).fontSize),centre:Math.abs((eq.left+eq.right)/2-(parent.left+parent.right)/2),
+            overflows:el.scrollWidth>el.clientWidth+2};
+        });
+        assert.ok(equation.fontSize>=18,'Readable math font, not a squashed inline equation: '+JSON.stringify(equation));
+        assert.ok(equation.centre<=3,'Display equation must remain centered: '+JSON.stringify(equation));
+        await noOverflow(page,'Example 2.12 English worked example at '+width+'px');
+        if(width===390){
+          await page.locator('#tabGuided').click();
+          assert.equal(await page.locator('#guidedQuestion .twd-question-part').count(),4,'Pinned question remains readable in Detailed explanation');
+          await page.locator('#closeGuided').click();
+          await page.locator('#langTa').click();
+          assert.equal(await page.locator('#questionText .twd-question-part').count(),4);
+          assert.match(await page.locator('#stepsList').innerText(),/விகிதமுறு/);
+          assert.equal(await page.locator('#answerText .twd-final-row').count(),4);
+          await noOverflow(page,'Example 2.12 Tamil worked example at 390px');
+          await page.locator('#questionReturnBtn').click();
+          await page.locator('.hub-question').nth(10).click();
+          assert.equal(await page.locator('#lessonCard.twd-lesson').count(),0,'Other worked examples remain unchanged');
+          assert.equal(await page.locator('#stepsList li').count(),2,'Other example steps still work');
+        }
+      });
+    }
     await check('Real Numbers full exercises, concepts and quizzes show correct counts',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch2&section=exercises');
       assert.equal(await page.locator('.hub-question').count(),121,'120 textbook units plus existing practice');
