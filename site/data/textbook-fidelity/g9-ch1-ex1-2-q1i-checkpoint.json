@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": 1,
+  "exercise": "1.2",
+  "question": "1",
+  "subpart": "i",
+  "id": "g9-ch1-ex1-2-q1-i",
+  "edition": "2025 revised",
+  "sources": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "printedPage": 11,
+      "questionStem": "1. Find the cardinal number of the following sets.",
+      "subpartText": "(i) M = {p, q, r, s, t, u}"
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "printedPage": 13,
+      "questionStem": "1. பின்வரும் கணங்களின் ஆதி எண்ணைக் காண்க.",
+      "subpartText": "(i) M = {p, q, r, s, t, u}",
+      "note": "Tamil extracted text has glyph duplication; normalized rendering requires PDF page-image verification."
+    }
+  },
+  "solution": {
+    "en": {
+      "steps": [
+        "M contains the six distinct elements p, q, r, s, t and u.",
+        "The cardinal number is the count of distinct elements.",
+        "Therefore n(M) = 6."
+      ],
+      "answer": "n(M) = 6"
+    },
+    "ta": {
+      "steps": [
+        "M கணத்தில் p, q, r, s, t, u என்ற ஆறு வெவ்வேறு உறுப்புகள் உள்ளன.",
+        "ஒரு கணத்தின் ஆதி எண் என்பது அதிலுள்ள வெவ்வேறு உறுப்புகளின் எண்ணிக்கையாகும்.",
+        "எனவே n(M) = 6."
+      ],
+      "answer": "n(M) = 6"
+    }
+  },
+  "independentMathCheck": {
+    "method": "enumerate distinct elements and compare against textbook answer key",
+    "result": "6",
+    "passed": true
+  },
+  "status": {
+    "drafted": true,
+    "mathVerified": true,
+    "bilingualDrafted": true,
+    "sourcePageImageVerified": false,
+    "sourceExactMatchVerified": false,
+    "unitTestsPassed": false,
+    "browserTested": false,
+    "editorialApproved": false,
+    "merged": false,
+    "deployed": false,
+    "productionVerified": false
+  },
+  "next": "Inspect both source PDF page images for Tamil glyph and English punctuation fidelity; add schema/math/source-exact test and student-facing integration before any merge."
+}
