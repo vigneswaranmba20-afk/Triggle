@@ -16,7 +16,7 @@ assert.match(context.inverseSteps(100000000,0,0,100000000), /Integer overflow/);
 // Previously 1e16 - 1e16 could cancel to a safe determinant even though
 // the intermediate products were rounded; reject that unsafe computation.
 assert.match(context.inverseSteps(100000000,100000000,100000000,100000000), /Integer overflow/);
-assert.match(context.inverseSteps(Number.MAX_SAFE_INTEGER,1,1,1), /Integer overflow/);
+assert.match(context.inverseSteps(Number.MAX_SAFE_INTEGER,1,1,2), /Integer overflow/);
 assert.match(context.inverseSteps(1.5,0,0,1), /safe integers/);
 assert.match(context.inverseSteps(1,0,0,1), /அணிக்கோவை/);
 console.log('Grade 12 inverse lab safe-integer intermediate-product regressions passed');
