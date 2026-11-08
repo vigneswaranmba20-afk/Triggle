@@ -1,5 +1,9 @@
 # AI coding-agent guidance for Triggle
 
+## Mandatory execution workflow for every Triggle content or UI task
+
+**Read and follow [the reusable Triggle master development prompt](docs/TRIGGLE_MASTER_PROMPT.md) before editing, testing, or deploying.** Its Google Drive 2025 textbook-first verification, hard-only Detailed Explanation, useful question-specific figure icons, batch testing, and live deployment gates are mandatory. A repository clone does not contain the user's PDFs: use the connected Drive app to open them, and report an access blocker instead of pretending to have read them.
+
 This file tells coding agents (including Codex) where to find **maintained educational reference notes** before adding or revising mathematics content.
 
 ## Phase 2 education-first implementation
