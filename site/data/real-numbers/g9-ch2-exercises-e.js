@@ -1,8 +1,8 @@
 /* Grade 9 Real Numbers · SCERT 2025 Exercise 2.8 (scientific notation).
- * Original teaching steps. Printed English pp73–74, Tamil pp78–79.
+ * Original teaching steps. Printed English pp73–74, Tamil p79.
  */
 (()=>{'use strict';const A=window.TriggleRealCh2.addExercise;
-const e=(n,p,page,q,ta,answer,steps,hard=false)=>A(8,n,p,{page,tamilPage:page+5,q,ta,answer,steps,hard,
+const e=(n,p,page,q,ta,answer,steps,hard=false)=>A(8,n,p,{page,tamilPage:79,q,ta,answer,steps,hard,
  title:'Scientific Notation · Exercise 2.8 · Q'+n+' ('+p+')',
  titleTa:'அறிவியல் குறியீடு · பயிற்சி 2.8 · வினா '+n+' ('+p+')'});
 const sci=[

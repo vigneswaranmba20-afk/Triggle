@@ -15,6 +15,8 @@
    source:'https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view',
    tamilSource:'https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view'
  };
+ // Printed Tamil pages checked against the 2025 revised bilingual PDF, per Example 2.n.
+ const tamilExamplePages=[null,46,50,51,52,53,54,54,56,56,56,57,57,58,60,61,63,64,66,67,68,69,70,70,71,71,71,74,76,77,77,78];
  const ensure=(x)=>{
    if(known.has(x.id))return false;
    if(!x.q?.en||!x.q?.ta||!x.answer||!Array.isArray(x.steps)||x.steps.length<2)throw Error('Incomplete real-number question '+x.id);
@@ -32,7 +34,7 @@
       kind:type==='example'?'textbook-example':'textbook-exercise',
       label,title:{en:opts.title||'Real Numbers · '+label.en,ta:opts.titleTa||'மெய்யெண்கள் · '+label.ta},
       q:{en:q,ta:ta},steps:st.map(s=>Array.isArray(s)?{en:s[0],ta:s[1],eq:s[2]}:s),
-      answer:ans,printedPage:opts.page,tamilPrintedPage:opts.tamilPage||null,
+      answer:ans,printedPage:opts.page,tamilPrintedPage:opts.tamilPage??(type==='example'?tamilExamplePages[key]??null:null),
       reference:'Tamil Nadu SCERT Mathematics, 2025 revised, Grade 9, Chapter 2, '+label.en+', printed page '+opts.page,
       difficulty:opts.hard?'hard':'standard',detailed:opts.hard?opts.detailed||null:null,
       ...(opts.diagram?{diagram:opts.diagram}:{})

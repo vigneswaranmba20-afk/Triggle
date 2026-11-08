@@ -1,9 +1,9 @@
-/* Grade 9 Real Numbers: exercise 2.6, printed page 68 EN, page 73 Tamil.
+/* Grade 9 Real Numbers: exercise 2.6, printed page 68 EN, page 72 Tamil.
    Fractions and nested surds verified using the two 2025 PDFs and independent arithmetic.
  */
 (()=>{'use strict';
 const A=window.TriggleRealCh2.addExercise;
-const e=(n,p,q,ta,answer,steps,hard=false)=>A(6,n,p,{page:68,tamilPage:73,q,ta,answer,steps,hard,
+const e=(n,p,q,ta,answer,steps,hard=false)=>A(6,n,p,{page:68,tamilPage:72,q,ta,answer,steps,hard,
   title:'Surds · Exercise 2.6 · Q'+n+' ('+p+')',
   titleTa:'முறுடுகள் · பயிற்சி 2.6 · வினா '+n+' ('+p+')'});
 const addition=[
