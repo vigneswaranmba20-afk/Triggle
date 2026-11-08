@@ -931,17 +931,8 @@ async function main() {
         await page.locator('#nextBtn').click();
         assert.match(await page.locator('#itemTitle').innerText(),/Exercise 2\.1/);
         assert.equal(await page.locator('#figureBox svg').count(),1,'the corrected A–D diagram appears for Dad to inspect');
-        for(const letter of ['A','B','C','D'])assert.equal(await page.locator('#figureBox svg text').filter({hasText:new RegExp('^'+letter+'
-    assert.deepEqual(failedRequests, [], 'No broken local page assets');
-    console.log(`PASS: ${count} curriculum browser scenarios; no uncaught errors or broken assets.`);
-  } finally {
-    for (const ctx of contexts) await ctx.close();
-    await browser.close();
-    await new Promise(resolve => server.close(resolve));
-  }
-}
-main().catch(error => { console.error(error); process.exitCode = 1; });
-)}).count(),1);
+        const figureLabels=await page.locator('#figureBox svg text').allTextContents();
+        for(const letter of ['A','B','C','D'])assert.ok(figureLabels.includes(letter),'missing arrow '+letter);
         await page.locator('#reviseBtn').click();
         await page.locator('#reviewComment').fill('படத்தின் அம்புகளைப் பாடநூலுடன் ஒப்பிடவும்.');
         assert.match(await page.locator('#reviewProgress').innerText(),/2 \/ 159/);
