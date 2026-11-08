@@ -44,7 +44,18 @@ function language(lang){document.documentElement.lang=lang;for(const key of Obje
 const matrices={i:[[-3,4],[6,2]],ii:[[2,3,1],[3,4,1],[3,7,2]]};
 function determinant(m){if(m.length===1)return m[0][0];return m[0].reduce((sum,v,j)=>sum+((j%2)?-1:1)*v*determinant(m.slice(1).map(row=>row.filter((_,k)=>k!==j))),0);}
 function transpose(m){return m[0].map((_,j)=>m.map(row=>row[j]));}
-function adjugate(m){return transpose(m.map((row,i)=>row.map((_,j)=>((i+j)%2?-1:1)*determinant(m.filter((_,k)=>k!==i).map(r=>r.filter((_,k)=>k!==j)))));}
+function adjugate(m){
+ const cofactors=[];
+ for(let i=0;i<m.length;i++){
+  const row=[];
+  for(let j=0;j<m.length;j++){
+   const minor=m.filter((_,r)=>r!==i).map(r=>r.filter((_,c)=>c!==j));
+   row.push(((i+j)%2?-1:1)*determinant(minor));
+  }
+  cofactors.push(row);
+ }
+ return transpose(cofactors);
+}
 function multiply(a,b){return a.map(row=>b[0].map((_,j)=>row.reduce((sum,v,k)=>sum+v*b[k][j],0)));}
 function identityTimes(n,d){return Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>i===j?d:0));}
 function verifyMatrix(m){const d=determinant(m),adj=adjugate(m),target=identityTimes(m.length,d);return {det:d,adj,left:multiply(m,adj),right:multiply(adj,m),valid:JSON.stringify(multiply(m,adj))===JSON.stringify(target)&&JSON.stringify(multiply(adj,m))===JSON.stringify(target)};}
