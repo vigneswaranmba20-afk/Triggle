@@ -1064,8 +1064,8 @@
 }
 
 
-/* Grade 9: keep the current concept's question in view without hiding the answer.
-   Sticky within the chapter's actual scrollport; cap height on small phones. */
+/* Grade 9: normal-flow concept question above its answer choices.
+   No floating/sticky overlay or clipped question on smaller phones. */
 .sp2-journey .sp2-concept-heading{margin:10px 0 14px;scroll-margin-top:14px}
 .chapter-overview .sp2-concept-heading h4{margin:0 0 7px;font-size:clamp(17px,2.8vw,20px);line-height:1.45;color:#302654}
 .chapter-overview .sp2-concept-question{font-size:clamp(14px,2.6vw,16px)!important;line-height:1.65!important;font-weight:650;color:#343048;margin:10px 0 14px!important;max-height:none;overflow:visible;position:static;box-shadow:none}
