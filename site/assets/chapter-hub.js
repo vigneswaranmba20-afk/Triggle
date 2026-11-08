@@ -146,7 +146,9 @@
     if(section==='concepts'){
       if(stages.length){
         info(t.learning);
-        if(chapter.id==='g9-ch2'){
+        if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
+          window.TriggleRealJourney.mount(panel,chapter,lang);
+        }else if(chapter.id==='g9-ch2'){
           for(const stage of stages){
             const article=document.createElement('article');article.className='hub-question-group';
             const heading=document.createElement('h4');heading.textContent=text(stage.title);
