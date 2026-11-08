@@ -6,6 +6,7 @@ const path=window.TRIGGLE_REAL_PATH;
 if(!path||path.chapterId!=='g9-ch2')return;
 const KEY='triggle.g9.real-journey.v1';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const notation=value=>window.TriggleNotation?window.TriggleNotation.render(value):esc(value);
 const pick=(obj,lang)=>typeof obj==='string'?obj:obj?.[lang]||obj?.en||'';
 const words={
  en:{kicker:'REAL NUMBERS · INTERACTIVE LAB',title:'See every number come alive',intro:'Move the controls, predict what changes, and test your understanding. Eight small explorations follow Chapter 2 of your 2025 SCERT textbook.',progress:'Concepts checked',source:'Textbook section',explore:'Explore this idea',check:'Now check yourself',hint:'Show a hint',why:'Why this works',right:'Correct! Explain it aloud or on paper.',wrong:'Not yet. Use the hint and try again.',paper:'Try this on paper',saved:'Progress is kept only on this device.',numberLine:'Number-line explorer',category:'Tap a number',move:'Move the point',factor:'Choose the factor',power:'Choose the power',magnitude:'Move the power of ten',next:'Next concept',detailed:'The picture is a mathematical model, not a copied textbook illustration.'},
@@ -43,7 +44,7 @@ function mount(container,chapter,language){
     b.setAttribute('aria-pressed',String(i===active));b.querySelector('.sp2-done-mark').textContent=done.has(path.stages[i].id)?'✓':'';});}
  function controls(label,items,value,onChange){const host=panel.querySelector('[data-demo-controls]');
   const group=document.createElement('div');group.className='rnlab-choices';group.setAttribute('role','group');group.setAttribute('aria-label',label);
-  items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);b.textContent=caption;
+  items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);b.innerHTML=notation(caption);
    b.setAttribute('aria-pressed',String(val===value));b.addEventListener('click',()=>{
     group.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
     onChange(val);});group.append(b);});host.append(group);onChange(value);
@@ -58,7 +59,7 @@ function mount(container,chapter,language){
  }
  function renderDemo(index){
   const visual=panel.querySelector('[data-demo-visual]'),output=panel.querySelector('[data-demo-output]');
-  const set=(html,answer)=>{visual.innerHTML=html;output.textContent=answer;};
+  const set=(html,answer)=>{visual.innerHTML=html;output.innerHTML=notation(answer);};
   if(index===0){
     slider(t.move,1,19,1,10,n=>{const numerator=60+n,value=numerator/120;
       set(numberLine(.5,2/3,[{value,label:numerator+'/120'},{value:.5,label:'1/2'},{value:2/3,label:'2/3'}],ta),
@@ -80,8 +81,8 @@ function mount(container,chapter,language){
        value.toFixed(2)+(ta?' என்ற இடத்தில் புள்ளி உள்ளது.':' is the point on the number line.'));
     });
   }else if(index===3){
-    const choices=[['0','4⁰'],['half','4½'],['1','4¹'],['threehalf','4³⁄²']];
-    controls(t.power,choices,'half',key=>{const map={'0':['1','4⁰=1'],half:['2','4½=√4=2'],'1':['4','4¹=4'],threehalf:['8','4³⁄²=(√4)³=8']};
+    const choices=[['0','4^0'],['half','4^(1/2)'],['1','4^1'],['threehalf','4^(3/2)']];
+    controls(t.power,choices,'half',key=>{const map={'0':['1','4^0=1'],half:['2','4^(1/2)=√4=2'],'1':['4','4^1=4'],threehalf:['8','4^(3/2)=(√4)^3=8']};
       set('<div class="rnlab-big">'+map[key][0]+'</div>',map[key][1]);});
   }else if(index===4){
     slider(t.factor,1,6,1,3,k=>{
@@ -93,7 +94,7 @@ function mount(container,chapter,language){
   }else if(index===5){
     controls(t.category,[['five','1/(√5+2)'],['seven','3/(√7+2)']],'five',key=>{
       const a=key==='five'?'5':'7',num=key==='five'?'1':'3',den=key==='five'?'1':'3';
-      set('<div class="rnlab-big">'+esc('√'+a+' − 2')+'</div>',
+      set('<div class="rnlab-big">'+notation('√'+a+' − 2')+'</div>',
       num+'/(√'+a+'+2) × (√'+a+'−2)/(√'+a+'−2) = '+num+'(√'+a+'−2)/('+a+'−4) = √'+a+'−2');
     });
   }else if(index===6){
@@ -101,12 +102,12 @@ function mount(container,chapter,language){
       const value=3.2*Math.pow(10,n);
       const expanded=n>=0?Number(value.toPrecision(10)).toLocaleString('en-US',{useGrouping:false,maximumFractionDigits:7}):
          Number(value.toPrecision(10)).toFixed(Math.max(0,-n+1));
-      set('<div class="rnlab-big">'+esc('3.2 × 10'+(n<0?'⁻':'')+String(Math.abs(n)))+'</div>',
+      set('<div class="rnlab-big">'+notation('3.2 × 10^'+n)+'</div>',
        '3.2 × 10^'+n+' = '+expanded);
     });
   }else{
     controls(t.category,[['root','√25'],['equation','x²=25']],'root',key=>{
-      set('<div class="rnlab-big">'+esc(key==='root'?'√25 = 5':'x = −5 or x = 5')+'</div>',
+      set('<div class="rnlab-big">'+notation(key==='root'?'√25 = 5':'x = −5 or x = 5')+'</div>',
       key==='root'?(ta?'√25 என்பது எதிர்மறையற்ற வர்க்கமூலம்.':'√25 means the principal nonnegative square root.'):
       (ta?'(−5)² = 25; 5² = 25.':'Both (−5)² and 5² equal 25.'));
     });
@@ -116,27 +117,27 @@ function mount(container,chapter,language){
   if(i<0||i>=path.stages.length)return;
   active=i;const stage=path.stages[i];
   panel.innerHTML='<small class="sp2-stage-reference">'+esc(t.source)+' '+esc(stage.section)+(stage.page?.en?' · EN p.'+stage.page.en:'')+'</small>'+
-   '<h4>'+esc(pick(stage.title,lang))+'</h4><p class="sp2-idea">'+esc(pick(stage.idea,lang))+'</p>'+
-   '<p class="sp2-example">'+esc(pick(stage.example,lang))+'</p><div class="sp2-formula">'+esc(pick(stage.rule,lang))+'</div>'+
+   '<h4>'+esc(pick(stage.title,lang))+'</h4><p class="sp2-idea">'+notation(pick(stage.idea,lang))+'</p>'+
+   '<p class="sp2-example">'+notation(pick(stage.example,lang))+'</p><div class="sp2-formula">'+notation(pick(stage.rule,lang))+'</div>'+
    '<div class="sp2-demo"><h5 class="sp2-demo-title">'+esc(t.explore)+'</h5>'+
    '<div class="sp2-demo-controls" data-demo-controls></div>'+
    '<div class="rnlab-visual" data-demo-visual></div><p class="sp2-demo-output" data-demo-output aria-live="polite"></p>'+
    '<small class="rnlab-source-note">'+esc(t.detailed)+'</small></div>'+
-   '<div class="sp2-recall"><h5>'+esc(t.check)+'</h5><p>'+esc(pick(stage.question,lang))+'</p>'+
+   '<div class="sp2-recall"><h5>'+esc(t.check)+'</h5><p>'+notation(pick(stage.question,lang))+'</p>'+
    '<div class="sp2-answers" data-answers></div><div class="sp2-recall-actions">'+
    '<button type="button" data-hint>'+esc(t.hint)+'</button><button type="button" data-why>'+esc(t.why)+'</button></div>'+
    '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-explanation hidden></div></div>'+
    (i+1<path.stages.length?'<button type="button" class="rnlab-next" data-next>'+esc(t.next)+' →</button>':'');
   const choices=panel.querySelector('[data-answers]'),feedback=panel.querySelector('[data-feedback]'),explanation=panel.querySelector('[data-explanation]');
-  stage.choices.forEach((opt,j)=>{const b=document.createElement('button');b.type='button';b.dataset.choice=String(j);b.textContent=pick(opt,lang);
+  stage.choices.forEach((opt,j)=>{const b=document.createElement('button');b.type='button';b.dataset.choice=String(j);b.innerHTML=notation(pick(opt,lang));
    b.addEventListener('click',()=>{const correct=j===stage.correct;
     choices.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
     feedback.textContent=correct?t.right:t.wrong;
-    if(correct){done.add(stage.id);save(done);update();explanation.textContent=pick(stage.why,lang);explanation.hidden=false;}
+    if(correct){done.add(stage.id);save(done);update();explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=false;}
    });choices.append(b);
   });
   panel.querySelector('[data-hint]').addEventListener('click',()=>{feedback.textContent=pick(stage.hint,lang);});
-  panel.querySelector('[data-why]').addEventListener('click',()=>{explanation.textContent=pick(stage.why,lang);explanation.hidden=!explanation.hidden;});
+  panel.querySelector('[data-why]').addEventListener('click',()=>{explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=!explanation.hidden;});
   panel.querySelector('[data-next]')?.addEventListener('click',()=>{show(i+1);root.querySelector('[data-panel]').scrollIntoView({block:'nearest'});});
   renderDemo(i);update();
  }

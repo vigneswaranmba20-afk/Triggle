@@ -165,16 +165,16 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
       "ta": "மூலக்குறியீடுகளும் பின்ன அடுக்குகளும்"
     },
     "idea": {
-      "en": "Taking an nth root corresponds to exponent 1/n, and reciprocal powers use negative exponents.",
-      "ta": "n-ஆம் மூலத்தை எடுப்பது 1/n அடுக்கிற்கு சமம்; தலைகீழ் எண்களுக்கு எதிர்மறை அடுக்குகள் பயன்படும்."
+      "en": "Taking an nth root corresponds to exponent [[1|n]], and reciprocal powers use negative exponents.",
+      "ta": "n-ஆம் மூலத்தை எடுப்பது [[1|n]] அடுக்கிற்கு சமம்; தலைகீழ் எண்களுக்கு எதிர்மறை அடுக்குகள் பயன்படும்."
     },
     "example": {
-      "en": "64^(−2/3)=1/(∛64)²=1/16.",
-      "ta": "64^(−2/3)=1/(∛64)²=1/16."
+      "en": "64^(−2/3)=[[1|(∛64)²]]=[[1|16]].",
+      "ta": "64^(−2/3)=[[1|(∛64)²]]=[[1|16]]."
     },
     "rule": {
-      "en": "a^(m/n)=(ⁿ√a)^m; a^(−k)=1/aᵏ for a≠0.",
-      "ta": "a^(m/n)=(ⁿ√a)^m; a≠0 எனில் a^(−k)=1/aᵏ."
+      "en": "a^(m/n)=(ⁿ√a)^m; a^(−k)=[[1|aᵏ]] for a≠0.",
+      "ta": "a^(m/n)=(ⁿ√a)^m; a≠0 எனில் a^(−k)=[[1|aᵏ]]."
     },
     "question": {
       "en": "What is 81^(1/4)?",

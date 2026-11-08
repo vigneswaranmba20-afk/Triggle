@@ -551,10 +551,12 @@ async function main() {
       assert.match(await lab.locator('[data-demo-output]').innerText(),/Repeating/);
       await lab.locator('[data-nav] [data-index="4"]').click();
       await lab.locator('input[type="range"]').evaluate(input=>{input.value='4';input.dispatchEvent(new Event('input',{bubbles:true}));});
-      assert.match(await lab.locator('[data-demo-output]').innerText(),/4√2/);
+      assert.equal(await lab.locator('[data-demo-output] math msqrt').count(),3,'√32, √(4²×2) and √2 must use real radical notation');
+      assert.equal((await lab.locator('[data-demo-output] math msqrt').last().textContent()).trim(),'2');
       await lab.locator('[data-nav] [data-index="5"]').click();
       await lab.locator('[data-demo-mode="seven"]').click();
-      assert.match(await lab.locator('[data-demo-output]').innerText(),/√7−2/);
+      assert.ok(await lab.locator('[data-demo-output] math msqrt').count()>=1,'Rationalizing must preserve typeset radicals');
+      assert.equal((await lab.locator('[data-demo-output] math msqrt').last().textContent()).trim(),'7');
       await lab.locator('[data-nav] [data-index="6"]').click();
       await lab.locator('input[type="range"]').evaluate(input=>{input.value='-3';input.dispatchEvent(new Event('input',{bubbles:true}));});
       assert.match(await lab.locator('[data-demo-output]').innerText(),/0\.0032/);
