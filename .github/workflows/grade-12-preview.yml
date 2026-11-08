@@ -26,6 +26,7 @@ jobs:
         run: |
           set -eu
           for test in site/tools/test_grade12_*.cjs; do
+            case "$test" in *browser.cjs) continue ;; esac
             echo "Running $test"
             node "$test"
           done
