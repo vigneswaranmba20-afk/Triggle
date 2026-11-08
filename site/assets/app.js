@@ -491,7 +491,7 @@
   renderInlineFigure();
   $('pageStatus').textContent=position+' '+ui('of')+' '+list.length;$('pageFill').style.width=(position/list.length*100)+'%';
   $('previous').disabled=n===0;$('next').disabled=n===list.length-1;
-  $('previous').innerHTML='← '+esc(ui('previous'));$('next').innerHTML=esc(ui('nextQuestion'))+' →';
+  $('previous').innerHTML='← '+esc(ui('previous'));$('next').innerHTML=esc(document.body.classList.contains('textbook-reader')?(lang==='ta'?'அடுத்த பக்கம்':'Next page'):ui('nextQuestion'))+' →';
   $('solutionModeRow').hidden=!hasDeepLesson(current);
   renderSteps();renderMode();renderList();
   window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:current,lang,grade}}));
