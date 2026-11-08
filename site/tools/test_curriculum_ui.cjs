@@ -591,6 +591,12 @@ async function main() {
       await page.locator('#figureBtn').click();
       const dialog=page.locator('#figureDialog');
       await dialog.waitFor({state:'visible'});
+      const glass=await dialog.evaluate(el=>({background:getComputedStyle(el).backgroundColor,blur:getComputedStyle(el).backdropFilter}));
+      assert.match(glass.background,/^rgba\(/,'The Venn viewer must actually use translucent glass');
+      assert.ok(Number(glass.background.match(/,\s*([0-9.]+)\)$/)?.[1])<=.75,'Glass must show the lesson through its background');
+      assert.match(glass.blur,/blur/,'Glassy sheet needs a frosted backdrop filter');
+      assert.equal((await dialog.locator('#diagramCompareAnswer').innerText()).trim(),(await page.locator('#answerText').innerText()).trim(),
+        'The exact existing final answer must be readable next to the enlarged diagram');
       assert.equal(await dialog.locator('.g9-venn-svg').count(),1);
       const desc=await dialog.locator('.g9-venn-text-alternative').innerText();
       assert.match(desc,/−3, −2/,'A-only difference must match printed Example 1.14');
