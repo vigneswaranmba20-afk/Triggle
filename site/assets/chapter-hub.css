@@ -119,3 +119,38 @@
 .chapter-hub .hub-question-title{color:#51475f}
 .chapter-hub .hub-question-arrow{color:#655080}
 .chapter-hub .hub-info{color:#51465e}
+
+/* Unified navigation v3: identical Back typography in chapter menus and questions. */
+.chapter-hub .hub-top-actions button,
+.question-return button{
+  display:inline-flex;
+  align-items:center;
+  box-sizing:border-box;
+  max-width:100%;
+  min-height:48px;
+  padding:10px 12px;
+  border:1px solid #d5c9e9;
+  border-radius:12px;
+  background:#f7f3ff;
+  color:#3d3067;
+  font-family:inherit;
+  font-size:var(--triggle-nav-font-size,16px);
+  font-weight:var(--triggle-nav-weight,700);
+  line-height:1.35;
+  text-align:left;
+  white-space:normal;
+  word-break:normal;
+  cursor:pointer;
+}
+.chapter-hub .hub-top-actions button:focus-visible,
+.question-return button:focus-visible{
+  outline:3px solid #7252bc;
+  outline-offset:2px;
+}
+@media(max-width:800px){
+  .chapter-hub .hub-top-actions button,
+  .question-return button{
+    font-size:var(--triggle-nav-font-size,16px);
+    min-height:48px;
+  }
+}

@@ -1171,3 +1171,71 @@ body.textbook-reader .page-controls button:disabled{opacity:.47;cursor:not-allow
 @media(prefers-reduced-motion:reduce){
  body.textbook-reader .page-controls,body.textbook-reader .crumb-link{transition:none!important;animation:none!important}
 }
+
+/* Unified navigation v3: shared text scale and one non-overlapping reader layout.
+   Navigation occupies its own flex row; answer content always scrolls above it. */
+:root{--triggle-nav-font-size:16px;--triggle-nav-weight:700}
+.page-controls .page-button,
+.page-controls .all-chapters-button{
+  box-sizing:border-box;
+  font-family:inherit;
+  font-size:var(--triggle-nav-font-size);
+  font-weight:var(--triggle-nav-weight);
+  line-height:1.35;
+  min-height:52px;
+  white-space:normal;
+  word-break:normal;
+  hyphens:none;
+}
+.page-controls .all-chapters-button .nav-arrow{
+  flex:0 0 auto;
+  font-size:var(--triggle-nav-font-size);
+  font-weight:var(--triggle-nav-weight);
+  line-height:1;
+}
+body.textbook-reader .page-controls .page-button,
+body.textbook-reader .page-controls .all-chapters-button{
+  font-size:var(--triggle-nav-font-size);
+  font-weight:var(--triggle-nav-weight);
+  min-height:52px;
+  padding:11px 12px;
+  line-height:1.35;
+}
+body.textbook-reader .all-chapters-button{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+}
+@media(max-width:800px){
+  body.textbook-reader .page-controls{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    grid-template-areas:"chapters chapters" "previous next";
+    column-gap:10px;
+    row-gap:8px;
+    padding:11px max(14px,env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))!important;
+  }
+  body.textbook-reader .page-controls #previous{grid-area:previous}
+  body.textbook-reader .page-controls #allChaptersReturn{
+    grid-area:chapters;
+    width:100%;
+    margin:0;
+  }
+  body.textbook-reader .page-controls #next{grid-area:next}
+  body.textbook-reader .page-controls .page-button,
+  body.textbook-reader .page-controls .all-chapters-button{
+    font-size:var(--triggle-nav-font-size);
+    min-height:52px;
+    padding:11px 9px;
+  }
+  body.textbook-reader .page-controls .all-chapters-button{min-height:50px}
+  body.textbook-reader .lesson-container{scroll-padding-bottom:20px}
+}
+@media(max-width:350px){
+  body.textbook-reader .page-controls{column-gap:8px}
+  body.textbook-reader .page-controls .page-button,
+  body.textbook-reader .page-controls .all-chapters-button{
+    font-size:var(--triggle-nav-font-size);
+    padding:10px 7px;
+  }
+}
