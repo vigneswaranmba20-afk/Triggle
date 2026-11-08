@@ -81,7 +81,7 @@
      '</div></section>';
  }
  function question(lang){
-  return prompt(lang).replace('</div></div>','<div class="twd-question-parts">'+four.map(part=>
+  return prompt(lang).replace(/<\/div>$/,'<div class="twd-question-parts">'+four.map(part=>
    partQuestion(part,lang)).join('')+'</div></div>');
  }
  function derivation(part,variable,lang){
