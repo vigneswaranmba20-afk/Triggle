@@ -574,7 +574,9 @@ async function main() {
       assert.match(await page.locator('.hub-section-menu h3').innerText(),/ஒரு பகுதியைத்/);
       assert.equal(await page.locator('.class-dock').isVisible(),false);
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+      assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i','Tamil exercises begin at Q1(i)');
+      await page.locator('#questionReturnBtn').click();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises','Back opens the browsable exercise list');
       await page.locator('.hub-back-menu').click();
       await page.goto(url+'/index.html?class=9&chapter=g9-ch2');
       await page.locator('#chapterOverviewTitle').waitFor({state:'visible'});
