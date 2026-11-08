@@ -63,13 +63,14 @@
  function quantity(name,body,label,css=''){
   return '<div class="twd-display-equation '+css+'">'+math(eq(name,body),label)+'</div>';
  }
- function question(lang){
-  const intro=lang==='ta'
+ function prompt(lang){
+  return '<div class="twd-question-inner"><p class="twd-prompt">'+esc(lang==='ta'
    ?'ஒவ்வொரு பகுதியிலும் x, y என்பவை விகிதமுறு எண்களா அல்லது விகிதமுறா எண்களா எனக் கண்டறிக.'
-   :'For each part, decide whether x and y are rational or irrational.';
-  return '<div class="twd-question-inner"><p class="twd-prompt">'+esc(intro)+'</p>'+
-   '<div class="twd-question-parts">'+four.map(part=>{
-    return '<section class="twd-question-part" data-worked-part="'+part.part+'">'+
+   :'For each part, decide whether x and y are rational or irrational.')+'</p></div>';
+ }
+ function partQuestion(part,lang){
+  return '<section class="twd-question-part" data-worked-question="'+part.part+'" aria-label="'+
+     esc(lang==='ta'?'கேள்வி ('+part.part+')':'Question ('+part.part+')')+'">'+
      '<div class="twd-part-label">('+part.part+')</div>'+
      '<div class="twd-given-grid">'+
        quantity('a',part.a,'a given in part '+part.part,'twd-given')+
@@ -78,7 +79,10 @@
        math(eq('x',operationFor(part,true)),'definition of x')+
        math(eq('y',operationFor(part,false)),'definition of y')+
      '</div></section>';
-   }).join('')+'</div></div>';
+ }
+ function question(lang){
+  return prompt(lang).replace('</div></div>','<div class="twd-question-parts">'+four.map(part=>
+   partQuestion(part,lang)).join('')+'</div></div>');
  }
  function derivation(part,variable,lang){
   const isX=variable==='x',isRational=isX?part.xr:part.yr;
@@ -94,12 +98,15 @@
     '</div></div>';
  }
  function steps(lang){
+  // The student should see the question immediately followed by its solution:
+  // (i) question -> (i) answer -> (ii) question -> (ii) answer, and so on.
   return four.map(part=>'<li class="worked-step twd-worked-step" data-worked-part="'+part.part+'">'+
-    '<div class="twd-step-heading"><span class="twd-step-index">('+part.part+')</span>'+
-      '<h3>'+esc(lang==='ta'?'பகுதி ('+part.part+') இன் தீர்வு':'Solution to part ('+part.part+')')+'</h3></div>'+
-    '<p class="twd-step-reason">'+esc(part.why[lang]||part.why.en)+'</p>'+
-    '<div class="twd-derivations">'+derivation(part,'x',lang)+derivation(part,'y',lang)+'</div>'+
-    '</li>').join('');
+    '<div class="twd-question-answer-pair">'+partQuestion(part,lang)+
+     '<section class="twd-part-solution" aria-label="'+esc(lang==='ta'?'விடை ('+part.part+')':'Answer ('+part.part+')')+'">'+
+      '<div class="twd-step-heading"><h3>'+esc(lang==='ta'?'பகுதி ('+part.part+') இன் விடை':'Answer to part ('+part.part+')')+'</h3></div>'+
+      '<p class="twd-step-reason">'+esc(part.why[lang]||part.why.en)+'</p>'+
+      '<div class="twd-derivations">'+derivation(part,'x',lang)+derivation(part,'y',lang)+'</div>'+
+     '</section></div></li>').join('');
  }
  function answer(lang){
   return '<div class="twd-final-list">'+four.map(part=>
@@ -115,7 +122,7 @@
  function get(item,language){
   if(item?.id!==ID)return null;
   const lang=language==='ta'?'ta':'en';
-  return {question:question(lang),steps:steps(lang),answer:answer(lang)};
+  return {question:prompt(lang),pinnedQuestion:question(lang),steps:steps(lang),answer:answer(lang)};
  }
  window.TriggleWorkedDisplay=Object.freeze({get});
 })();
