@@ -42,22 +42,22 @@
   return rows.map((r,i)=>'<text x="'+x+'" y="'+(y+(i-(rows.length-1)/2)*22)+'" text-anchor="middle" font-size="'+(r.length>12?13:16)+'" font-family="system-ui,sans-serif" font-weight="700" fill="#263049">'+esc(r)+'</text>').join('');
  }
  function one(spec,mode,index,lang,n){
-  const txt=titles[lang],id='g9venn-'+n+'-'+index,ax=208,bx=328,cy=151,r=102;
-  const A='<circle cx="'+ax+'" cy="'+cy+'" r="'+r+'"/>',B='<circle cx="'+bx+'" cy="'+cy+'" r="'+r+'"/>';
+  const txt=titles[lang],id='g9venn-'+n+'-'+index,ax=192,bx=368,cy=166,rx=150,ry=128;
+  const A='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'"/>',B='<ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'"/>';
   const masks='<defs>'+
    '<clipPath id="'+id+'-bclip">'+B+'</clipPath>'+
    '<clipPath id="'+id+'-aclip">'+A+'</clipPath>'+
-   '<mask id="'+id+'-a"><rect width="560" height="330" fill="black"/><circle cx="'+ax+'" cy="'+cy+'" r="'+r+'" fill="white"/><circle cx="'+bx+'" cy="'+cy+'" r="'+r+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-b"><rect width="560" height="330" fill="black"/><circle cx="'+bx+'" cy="'+cy+'" r="'+r+'" fill="white"/><circle cx="'+ax+'" cy="'+cy+'" r="'+r+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-notA"><rect width="560" height="330" fill="white"/><circle cx="'+ax+'" cy="'+cy+'" r="'+r+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-notUnion"><rect width="560" height="330" fill="white"/><circle cx="'+ax+'" cy="'+cy+'" r="'+r+'" fill="black"/><circle cx="'+bx+'" cy="'+cy+'" r="'+r+'" fill="black"/></mask>'+
-   '<mask id="'+id+'-notOnlyA"><rect width="560" height="330" fill="white"/><circle cx="'+ax+'" cy="'+cy+'" r="'+r+'" fill="black"/><circle cx="'+bx+'" cy="'+cy+'" r="'+r+'" fill="white" clip-path="url(#'+id+'-aclip)"/></mask>'+
+   '<mask id="'+id+'-a"><rect width="560" height="330" fill="black"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-b"><rect width="560" height="330" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-notA"><rect width="560" height="330" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-notUnion"><rect width="560" height="330" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/></mask>'+
+   '<mask id="'+id+'-notOnlyA"><rect width="560" height="330" fill="white"/><ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="black"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="white" clip-path="url(#'+id+'-aclip)"/></mask>'+
    '</defs>';
-  const rect='<rect x="24" y="26" width="512" height="272" rx="13" fill="#fff" stroke="#b6accd" stroke-width="2"/>';
-  const shadeRect=(mask,color)=>'<rect x="26" y="28" width="508" height="268" fill="'+color+'" mask="url(#'+id+'-'+mask+')"/>';
-  const clipIntersection='<circle cx="'+ax+'" cy="'+cy+'" r="'+r+'" fill="#7fcabb" clip-path="url(#'+id+'-bclip)"/>';
+  const rect='<rect x="14" y="12" width="532" height="306" rx="13" fill="#fff" stroke="#b6accd" stroke-width="2"/>';
+  const shadeRect=(mask,color)=>'<rect x="16" y="14" width="528" height="302" fill="'+color+'" mask="url(#'+id+'-'+mask+')"/>';
+  const clipIntersection='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#7fcabb" clip-path="url(#'+id+'-bclip)"/>';
   let shade='';
-  if(mode==='union')shade='<circle cx="'+ax+'" cy="'+cy+'" r="'+r+'" fill="#b7a9eb"/><circle cx="'+bx+'" cy="'+cy+'" r="'+r+'" fill="#b7a9eb"/>'+clipIntersection;
+  if(mode==='union')shade='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#b7a9eb"/><ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#b7a9eb"/>'+clipIntersection;
   if(mode==='intersection')shade=clipIntersection;
   if(mode==='onlyA')shade=shadeRect('a','#b7a9eb');
   if(mode==='onlyB')shade=shadeRect('b','#b7a9eb');
@@ -65,16 +65,16 @@
   if(mode==='outsideA')shade=shadeRect('notA','#b7a9eb');
   if(mode==='notOnlyA')shade=shadeRect('notOnlyA','#b7a9eb');
   if(mode==='outsideUnion')shade=shadeRect('notUnion','#b7a9eb');
-  const outline='<circle cx="'+ax+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="#5542a0" stroke-width="3"/>'+
-   '<circle cx="'+bx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="#2a8479" stroke-width="3"/>';
-  const header='<text x="147" y="63" font-size="21" fill="#5542a0" font-weight="850">'+esc(spec.a)+'</text>'+
-   '<text x="393" y="63" font-size="21" fill="#2a8479" font-weight="850">'+esc(spec.b)+'</text>'+
-   (spec.universe?'<text x="39" y="53" font-size="18" fill="#635872" font-weight="800">U</text>':'');
+  const outline='<ellipse cx="'+ax+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="none" stroke="#5542a0" stroke-width="3"/>'+
+   '<ellipse cx="'+bx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="none" stroke="#2a8479" stroke-width="3"/>';
+  const header='<text x="121" y="43" font-size="21" fill="#5542a0" font-weight="850">'+esc(spec.a)+'</text>'+
+   '<text x="427" y="43" font-size="21" fill="#2a8479" font-weight="850">'+esc(spec.b)+'</text>'+
+   (spec.universe?'<text x="25" y="38" font-size="18" fill="#635872" font-weight="800">U</text>':'');
   const left=spec.symbolic?[spec.a+' only']:spec.left;
   const both=spec.symbolic?[spec.a+'∩'+spec.b]:spec.both;
   const right=spec.symbolic?[spec.b+' only']:spec.right;
-  const lab=linesAt(165,166,left,'∅')+linesAt(269,166,both,'∅')+linesAt(374,166,right,'∅')+
-   (spec.outside?linesAt(465,260,spec.outside,''):spec.symbolic&&spec.universe?linesAt(470,258,['outside'],''):'');
+  const lab=linesAt(128,178,left,'∅')+linesAt(280,178,both,'∅')+linesAt(432,178,right,'∅')+
+   (spec.outside?linesAt(504,280,spec.outside,''):spec.symbolic&&spec.universe?linesAt(503,278,['outside'],''):'');
   const desc=(spec.count?'Counts: ':'Members: ')+spec.a+' only '+left.join(',')+'; '+spec.a+'∩'+spec.b+' '+both.join(',')+'; '+spec.b+' only '+right.join(',')+(spec.outside?'; outside '+spec.outside.join(','):'')+'. '+txt.shading+': '+mode+'.';
   return '<svg class="g9-venn-svg" viewBox="0 0 560 330" role="img" aria-labelledby="'+id+'-title '+id+'-desc" xmlns="http://www.w3.org/2000/svg">'+
    '<title id="'+id+'-title">'+esc(txt.figure+' 1.'+n+(mode==='none'?'':' · '+mode))+'</title>'+
@@ -88,10 +88,9 @@
   const bodies=modes.map((mode,i)=>'<figure class="g9-venn-figure">'+
    (modes.length>1?'<figcaption>'+esc(txt.modes[i])+'</figcaption>':'')+
    one(spec,mode,i,lang,n)+'</figure>').join('');
-  const alt=[txt.label,spec.a+' only: '+(spec.left.join(', ')||'∅'),spec.a+'∩'+spec.b+': '+(spec.both.join(', ')||'∅'),spec.b+' only: '+(spec.right.join(', ')||'∅')];
-  if(spec.outside)alt.push(txt.outside+': '+spec.outside.join(', '));
-  return {html:'<div class="g9-venn-gallery">'+bodies+'</div><p class="g9-venn-text-alternative">'+esc(alt.join(' · '))+'</p>',
-   caption:txt.description+' · '+txt.source+' '+spec.page+'.'};
+  // Exact membership information is retained in the SVG's accessible <desc>.
+  // Do not repeat it as visual prose under the student's Venn diagram.
+  return {html:'<div class="g9-venn-gallery">'+bodies+'</div>',caption:''};
  }
  window.TriggleSetVenn=Object.freeze({supports,needsInline,render,exampleNumber});
 })();

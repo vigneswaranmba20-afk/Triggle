@@ -655,19 +655,62 @@ async function main() {
       assert.equal((await dialog.locator('#diagramCompareAnswer').innerText()).trim(),(await page.locator('#answerText').innerText()).trim(),
         'The exact existing final answer must be readable next to the enlarged diagram');
       assert.equal(await dialog.locator('.g9-venn-svg').count(),1);
-      const desc=await dialog.locator('.g9-venn-text-alternative').innerText();
-      assert.match(desc,/−3, −2/,'A-only difference must match printed Example 1.14');
-      assert.match(desc,/0, 2/,'B-only difference must match printed Example 1.14');
+      // No visual prose beneath the Venn diagram; retain SVG accessibility.
+      assert.equal(await dialog.locator('.g9-venn-text-alternative,.diagram-caption').count(),0,
+        'Students should see the Venn and answer, not redundant region/source captions');
+      const desc=await dialog.locator('.g9-venn-svg desc').textContent();
+      assert.match(desc,/−3,\s*−2/,'A-only difference must match printed Example 1.14');
+      assert.match(desc,/0,\s*2/,'B-only difference must match printed Example 1.14');
       await page.locator('#closeDiagram').click();
       assert.equal(await dialog.isVisible(),false,'Figure dialog must close accessibly');
       await page.goto(url+'/index.html?class=9&question=c9-textbook-example-1-17');
       await page.locator('#lessonCard').waitFor({state:'visible'});
-      assert.equal(await page.locator('#inlineFigure .g9-venn-svg').count(),1,'Given Venn diagram must be shown inline');
+      assert.equal(await page.locator('#inlineFigure').isVisible(),false,
+        'Redundant mini Venn card should never crowd the lesson');
+      assert.equal(await page.locator('#figureBtn').isVisible(),true,
+        'Full Figure button remains available for source-required diagrams');
       await page.goto(url+'/index.html?class=9&question=c9-textbook-example-1-18');
       await page.locator('#figureBtn').click();
       assert.equal(await page.locator('#figureDialog .g9-venn-svg').count(),3,'Three complement shading diagrams for Example 1.18');
       await noOverflow(page,'source-aligned mobile Venn illustrations');
     });
+    for(const width of [320,390,768]){
+      await check('Venn fills mobile diagram region without text clutter at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&question=c9-textbook-example-1-11');
+        assert.equal(await page.locator('#inlineFigure').isVisible(),false,
+          'Example 1.11 must not show the tiny screenshot-like Venn preview');
+        assert.equal(await page.locator('#figureBtn').isVisible(),true);
+        await page.locator('#figureBtn').click();
+        const dialog=page.locator('#figureDialog');
+        assert.equal(await dialog.isVisible(),true);
+        assert.equal(await dialog.locator('#diagramCaption,.g9-venn-text-alternative').count(),0,
+          'Neither the metadata disclaimer nor repeated region description should appear');
+        assert.equal((await dialog.locator('#diagramCompareAnswer').innerText()).trim(),
+          (await page.locator('#answerText').innerText()).trim(),'Mathematical answer must match lesson');
+        assert.equal(await dialog.locator('.g9-venn-svg').count(),1);
+        const bounds=await dialog.locator('.g9-venn-svg').evaluate(svg=>{
+          const parent=svg.closest('.diagram-content');
+          const sv=svg.getBoundingClientRect(),pr=parent.getBoundingClientRect();
+          const visible=[...svg.querySelectorAll(':scope > ellipse')];
+          const shape=visible.find(el=>el.getAttribute('stroke')==='#5542a0');
+          const diagram=shape?{
+            rx:Number(shape.getAttribute('rx')),ry:Number(shape.getAttribute('ry'))
+          }:null;
+          return {svgWidth:sv.width,parentWidth:pr.width,diagram};
+        });
+        assert.ok(bounds.svgWidth>=bounds.parentWidth*.92,
+          'Venn should fill at least 92% of the viewing width: '+JSON.stringify(bounds));
+        assert.ok(bounds.diagram?.rx>=145&&bounds.diagram?.ry>=120,
+          'Venn geometry must use enlarged labelsafe shapes: '+JSON.stringify(bounds));
+        const accessible=await dialog.locator('.g9-venn-svg desc').textContent();
+        assert.match(accessible,/P only n/,'Screen readers should still get correct P-only members');
+        assert.match(accessible,/P∩Q m/,'Screen readers should still get overlap member');
+        assert.match(accessible,/Q only i,j/,'Screen readers should still get Q-only members');
+        await page.locator('#closeDiagram').click();
+        assert.equal(await dialog.isVisible(),false);
+        await noOverflow(page,'Venn fill '+width+'px');
+      });
+    }
     await check('Worked examples are not mislabeled exercises, and both are one tap away',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch6');
       assert.equal(await page.locator('.hub-section-card').count(),4);

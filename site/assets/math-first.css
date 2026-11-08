@@ -315,3 +315,40 @@ body.textbook-reader .question-return button:focus-visible{outline:3px solid #74
  .path-dialog.is-chapter-picker[open]{max-height:94dvh!important}
  .path-dialog.is-chapter-picker .path-options{max-height:calc(94dvh - 108px)!important}
 }
+
+
+/* Venn-only viewing polish: the Figure button is the single entry point.
+   Remove any visual duplicate preview; preserve other source-required drawings.
+   SVG retains aria-labelledby <title>/<desc> for non-visual access. */
+body.textbook-reader .inline-figure:has(.g9-venn-svg){display:none!important}
+.figure-dialog .g9-venn-gallery{
+ display:grid!important;grid-template-columns:1fr!important;
+ width:100%!important;gap:8px!important;align-items:stretch!important
+}
+.figure-dialog .diagram-content:has(.g9-venn-gallery){
+ display:block!important;width:100%!important;box-sizing:border-box!important;
+ padding:0 6px 2px!important;overflow-x:hidden!important;
+ max-height:min(52dvh,520px)!important;scrollbar-width:thin
+}
+.figure-dialog .g9-venn-figure{
+ width:100%!important;max-width:none!important;min-width:0!important;
+ padding:0!important;margin:0!important;border:0!important;
+ border-radius:0!important;box-shadow:none!important;background:transparent!important
+}
+.figure-dialog .diagram-content .g9-venn-svg{
+ display:block!important;width:100%!important;max-width:none!important;
+ height:auto!important;max-height:none!important;margin:0!important;
+ aspect-ratio:560 / 330!important;object-fit:fill!important
+}
+.figure-dialog .g9-venn-figure figcaption{
+ padding:5px 0 3px!important;margin:0!important;
+ font-weight:800!important;line-height:1.25!important
+}
+@media(max-width:800px){
+ .figure-dialog:has(.g9-venn-gallery){
+  max-height:min(72dvh,660px)!important
+ }
+ .figure-dialog .diagram-content:has(.g9-venn-gallery){
+  max-height:min(46dvh,470px)!important
+ }
+}
