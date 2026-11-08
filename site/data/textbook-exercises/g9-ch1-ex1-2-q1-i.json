@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "g9-ch1",
+  "exercise": "1.2",
+  "source": {
+    "edition": "2025 revised",
+    "englishDriveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPageEnglish": 11,
+    "pdfPageEnglish": null,
+    "visualChecked": false
+  },
+  "coverage": {
+    "drafted": 1,
+    "mathChecked": 1,
+    "uiIntegrated": 0,
+    "chapterTotal": "unknown"
+  },
+  "questions": [
+    {
+      "id": "g9-ch1-ex1.2-q1-i",
+      "question": 1,
+      "part": "i",
+      "stemEnglish": "Find the cardinal number of the following sets.",
+      "promptEnglish": "(i) M = {p, q, r, s, t, u}",
+      "answerEnglish": "n(M) = 6",
+      "stepsEnglish": [
+        "The cardinal number of a finite set is the number of distinct elements in it.",
+        "The elements of M are p, q, r, s, t and u; each is different.",
+        "Counting these six elements gives n(M) = 6."
+      ],
+      "verification": {
+        "method": "Independent distinct-element enumeration and Set cardinality check",
+        "status": "math-checked"
+      },
+      "translation": {
+        "tamil": "pending",
+        "fallback": "English-only testing draft"
+      },
+      "review": {
+        "sourceVisual": "pending",
+        "tamilEditorial": "pending",
+        "browser": "not-run",
+        "publication": "draft"
+      }
+    }
+  ]
+}
