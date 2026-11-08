@@ -74,7 +74,13 @@ async function main(){
   assert.equal(failedOnce,true,'first request must exercise the simulated 503');
   await page.locator('#retry').click();
   await page.locator('[data-question-id]').first().waitFor({timeout:10000}).catch(async error=>{throw Error('Retry failed: '+await page.locator('#lessons').innerText()+'; '+error.message);});
-  assert.equal(await page.locator('[data-question-id]').count(),3);
+  assert.equal(await page.locator('[data-question-id]').count(),4,'retry must restore all four source-verified lessons, including Q2');
+  assert.equal(await page.locator('[data-question-id="g10-ch1-ex1-1-q2"]').count(),1,'retry must restore Q2');
+  assert.equal(await page.locator('#retry').isVisible(),false,'retry control must hide after success');
+  await context.setOffline(true);
+  await page.locator('#en').click();
+  assert.equal(await page.locator('[data-question-id]').count(),4,'recovered lessons remain usable offline');
+  await context.setOffline(false);
   await context.close();
   console.log('PASS Grade 10 failed-fetch Tamil recovery and retry');
  }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
