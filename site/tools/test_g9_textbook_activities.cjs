@@ -54,7 +54,7 @@ for(const pathName of ['data/g9-textbook-activities.js','assets/textbook-activit
 const worker=read('service-worker.js');
 for(const pathName of ['data/g9-textbook-activities.js','assets/textbook-activities.js'])assert(worker.includes(pathName),'Offline cache includes '+pathName);
 const coverageDoc=fs.readFileSync(path.join(site,'../docs/G9_CH1_2025_SOURCE_GAP_REGISTER.md'),'utf8');
-assert(coverageDoc.includes('**30**')&&coverageDoc.includes('**18**')&&coverageDoc.includes('**12**'),'Exercise 1.1 has an explicit 30 / 18 / 12 bilingual source audit');
+assert(coverageDoc.includes('| **Total** | **30** | **30** | **0** |'),'Exercise 1.1 must show all 30 source-checked subparts and zero remaining');
 assert(hub.includes('exerciseCoverageNote')&&hub.includes('exampleWordingNote'),'Exercise and example pages must not imply false textbook-exact completeness');
 const currentExercise=read('data/textbook-exercises/g9-ch1-ex1-1-view.js');
 assert.equal((currentExercise.match(/"id": "g9-ch1-ex1[.]1-q/g)||[]).length,30,'All 30 original Grade 9 Exercise 1.1 textbook subparts checked');
