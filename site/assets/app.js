@@ -131,6 +131,11 @@
    updateUrl();render();closeDrawer();resetScroll();
    $('chapterOverview').focus({preventScroll:true});
  }
+ // Direct-to-exercise landing and full chapter menu are equally easy to reach.
+ function openChapterMenu(chapter=chapterForItem(current)){
+   if(!chapter)return;
+   openChapterSection(null,chapter,null,true);
+ }
  function openChapterFor(g,chapter){
    if(!classes[g])return;
    grade=g;current=classes[g].items.find(x=>x.id===lastByGrade[g])||classes[g].items[0];
@@ -154,8 +159,12 @@
    choices.forEach((c,i)=>{
      if(i){const sep=document.createElement('span');sep.className='crumb-sep';sep.textContent='›';sep.setAttribute('aria-hidden','true');nav.append(sep)}
      const b=document.createElement('button');b.type='button';b.className='crumb-link';b.innerHTML=esc(c.text)+' <span aria-hidden="true">⌄</span>';
-     b.title=(lang==='ta'?'தேர்வு':'Choose')+' '+c.text;b.setAttribute('aria-label',b.title);
-     b.onclick=()=>openPath(c.type);nav.append(b)
+     b.title=c.type==='chapter'
+       ?(lang==='ta'?'அத்தியாயப் பகுதிகளைத் திறக்கவும்':'Open chapter sections')
+       :(lang==='ta'?'தேர்வு':'Choose')+' '+c.text;
+     b.setAttribute('aria-label',b.title);
+     b.onclick=()=>c.type==='chapter'?openChapterMenu():openPath(c.type);
+     nav.append(b)
    });
  }
  function openPath(type){
@@ -465,6 +474,9 @@
   // Icon-only controls on narrow readers still have full bilingual names.
   $('browseBtn').setAttribute('aria-label',ui('browse'));
   $('homeBtn').setAttribute('aria-label',ui('home'));
+  $('chapterMenuBtn').textContent=lang==='ta'?'☷ அத்தியாயப் பகுதிகள்':'☷ Chapter sections';
+  $('chapterMenuBtn').setAttribute('aria-label',lang==='ta'?'இந்த அத்தியாயத்தின் அனைத்துப் பகுதிகளையும் காண்க':'Show all sections of this chapter');
+  $('questionReturn').setAttribute('aria-label',lang==='ta'?'அத்தியாய வழிசெலுத்தல்':'Chapter navigation');
   $('sidebar').setAttribute('aria-label',ui('navigationLabel'));$('exerciseList').setAttribute('aria-label',ui('navigationLabel'));$('search').setAttribute('aria-label',ui('searchLabel'));$('pathClose').setAttribute('aria-label',ui('closeNavigation'));$('closeSidebar').setAttribute('aria-label',ui('closeNavigation'));document.querySelector('.lang-switch').setAttribute('aria-label',ui('chooseLanguage'));document.querySelector('.side-brand small').textContent=ui('visualMathematics');$('deepPrevious').querySelector('span').textContent=ui('previousStage');
   for(const [id,key] of [['crumb','navigationLabel'],['inlineFigureOpen','expandFigure'],['solutionModeRow','chooseExplanation'],['stepsRegion','completeSolution'],['quickSteps','quickSolution'],['stepsList','workedSolution'],['classDock','switchClass'],['closeGuided','backToQuestion'],['guidedSteps','currentConcept'],['deepStageDots','chooseStage'],['figureDialog','diagramDialog']])$(id).setAttribute('aria-label',ui(key));
   document.querySelector('.page-controls').setAttribute('aria-label',ui('navigateQuestions'));document.querySelector('.deep-nav').setAttribute('aria-label',ui('learningStages'));$('figureBtn').title=ui('figureLabel');
@@ -477,6 +489,7 @@
  }
  function render(){renderText();renderGrades();$('classicLink').hidden=grade!==9;
    $('questionReturn').hidden=true;
+   $('chapterMenuBtn').hidden=true;
    const showingQuestion=!homeView&&!classIndex&&!chapterOverview;
    $('allChaptersReturn').hidden=!showingQuestion;
    $('questionNavDock').hidden=!showingQuestion;
@@ -505,6 +518,7 @@
        returnTo==='exercises'?(lang==='ta'?'அனைத்துப் பயிற்சிகளுக்கும் திரும்பு':'Back to all exercises'):
        (lang==='ta'?'அத்தியாயத்திற்குத் திரும்பு':'Back to chapter');
      $('questionReturnBtn').textContent='← '+label;
+     $('chapterMenuBtn').hidden=false;
      $('questionReturn').hidden=false;
    }
   $('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;
@@ -553,6 +567,7 @@
    const section=questionOrigin?.grade===grade&&questionOrigin?.chapterId===chapter.id?questionOrigin.section:null;
    openChapterSection(section,chapter,null,true);
  };
+ $('chapterMenuBtn').onclick=()=>openChapterMenu();
  $('browseBtn').onclick=()=>drawerOpen?closeDrawer():openDrawer();$('closeSidebar').onclick=closeDrawer;$('backdrop').onclick=closeDrawer;
  $('search').oninput=renderList;
  $('pathClose').onclick=()=>$('pathDialog').close();$('pathDialog').addEventListener('click',e=>{if(e.target===$('pathDialog'))$('pathDialog').close()});

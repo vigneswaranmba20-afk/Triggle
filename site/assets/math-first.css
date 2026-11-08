@@ -257,3 +257,38 @@
 @media(prefers-reduced-motion:reduce){
  .figure-dialog,.chapter-hub .textbook-extra{animation:none!important;transition:none!important}
 }
+
+
+/* Chapter access repair: the math-first Exercise N.1 shortcut must never
+   strand students away from the four/five section cards of that chapter.
+   A quiet return plus a clearly named menu button share reserved space. */
+body.textbook-reader .question-return{
+ display:grid!important;
+ grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+ gap:8px!important;align-items:stretch!important;
+ margin:0 0 9px!important;padding:0!important
+}
+body.textbook-reader .question-return button{
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ box-sizing:border-box!important;width:100%;min-width:0!important;
+ min-height:48px!important;padding:7px 9px!important;
+ font-size:16px!important;line-height:1.25!important;font-weight:750!important;
+ text-align:center!important;white-space:normal!important;border-radius:10px!important;
+ text-decoration:none!important
+}
+body.textbook-reader #questionReturnBtn{
+ background:#fff!important;border:1px solid #ded8e9!important;color:#4c4068!important
+}
+body.textbook-reader #chapterMenuBtn{
+ background:#eee8fb!important;border:1px solid #cdbfeb!important;color:#412e73!important
+}
+body.textbook-reader #chapterMenuBtn:hover,
+body.textbook-reader #chapterMenuBtn:focus-visible{background:#e5dbfa!important}
+body.textbook-reader .question-return button:focus-visible{
+ outline:3px solid #7458c6!important;outline-offset:2px!important
+}
+body.textbook-reader .question-return button[hidden]{display:none!important}
+@media(max-width:355px){
+ body.textbook-reader .question-return{gap:6px!important}
+ body.textbook-reader .question-return button{padding:6px 5px!important}
+}

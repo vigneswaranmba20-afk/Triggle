@@ -410,6 +410,58 @@ async function main() {
         assert.equal(await page.locator('#answerBox').isVisible(),true,'Answer must open alongside first exercise');
       });
     }
+    // Chapter card may start at Exercise N.1 but must never hide the five
+    // Set Language section choices the student needs to reach next.
+    for(const width of [320,390,1280]){
+      await check('Set Language chapter sections remain one tap away at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&browse=chapters');
+        await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
+        assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i',
+          'Chapter entry keeps direct Exercise 1.1');
+        const shortcut=page.locator('#chapterMenuBtn');
+        assert.equal(await shortcut.isVisible(),true,'Chapter sections shortcut must be visible on the reader');
+        assert.match(await shortcut.innerText(),/Chapter sections/);
+        const rects=await page.evaluate(()=>{
+          const nav=document.getElementById('questionReturn').getBoundingClientRect(),
+            lesson=document.getElementById('lessonCard').getBoundingClientRect(),
+            buttons=[...document.querySelectorAll('#questionReturn button:not([hidden])')].map(b=>{
+              const r=b.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,height:r.height};
+            });
+          return {navBottom:nav.bottom,lessonTop:lesson.top,buttons,width:innerWidth};
+        });
+        assert.equal(rects.buttons.length,2,'Keep both Back to exercises and Chapter sections');
+        assert.ok(rects.buttons.every(b=>b.height>=48&&b.left>=0&&b.right<=rects.width),
+          'Chapter actions must fit and meet 48px touch minimum: '+JSON.stringify(rects));
+        assert.ok(rects.navBottom<=rects.lessonTop+2,'Chapter menu must not overlap the question card');
+        await page.locator('#crumb .crumb-link').nth(1).click();
+        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1',
+          'Set Language breadcrumb should open its own chapter menu');
+        assert.equal(await page.locator('.hub-section-card').count(),5);
+        await page.goBack();
+        assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i');
+        await page.locator('#chapterMenuBtn').click();
+        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
+        assert.equal(await page.locator('.hub-section-card').count(),5,'Restore Concepts, Worked Examples, Exercises, Quizzes, Activities');
+        assert.equal(await page.locator('.hub-section-card[data-hub-section="activities"]').count(),1);
+        await page.locator('.hub-section-card[data-hub-section="activities"]').click();
+        assert.equal(await page.locator('.textbook-extra').count(),18);
+        assert.equal(await page.locator('.textbook-extra').first().evaluate(el=>el.open),true);
+        assert.ok((await page.locator('.textbook-extra').first().locator('.task-answer').innerText()).length>35);
+        await page.locator('.hub-back-menu').click();
+        await page.locator('.hub-section-card[data-hub-section="examples"]').click();
+        assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
+        await page.locator('#chapterMenuBtn').click();
+        assert.equal(await page.locator('.hub-section-card').count(),5);
+        await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+        await page.locator('#langTa').click();
+        assert.match(await page.locator('#chapterMenuBtn').innerText(),/அத்தியாயப் பகுதிகள்/);
+        assert.match(await page.locator('#chapterMenuBtn').getAttribute('aria-label'),/இந்த அத்தியாயத்தின்/);
+        await page.locator('#chapterMenuBtn').click();
+        assert.equal(await page.locator('.hub-section-card').count(),5,
+          'Tamil Set Language still exposes all five sections');
+        await noOverflow(page,'chapter sections restored at '+width+'px');
+      });
+    }
     await check('Chapter-first class directory translates and offers accessible keyboard navigation',async()=>{
       const page=await visit(await context(390),'/index.html?class=11&browse=chapters');
       assert.match(await page.locator('.discover-class-header h1').innerText(),/Class 11 Mathematics/);
