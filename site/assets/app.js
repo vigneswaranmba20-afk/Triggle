@@ -124,7 +124,10 @@
 
  function renderBreadcrumb(chapter){
    const nav=$('crumb');nav.replaceChildren();
-   const choices=[{text:ui('class')+' '+grade,type:'class'},{text:tr(chapter),type:'chapter'}];if(!chapterOverview)choices.push({text:labelForGroup(current.exercise),type:'exercise'});
+   const choices=[{text:ui('class')+' '+grade,type:'class'}];
+   // On chapter menus, the main heading already names the chapter.
+   // Keep Class as a visible, usable switcher without repeating that title.
+   if(!chapterOverview){choices.push({text:tr(chapter),type:'chapter'});choices.push({text:labelForGroup(current.exercise),type:'exercise'});}
    choices.forEach((c,i)=>{
      if(i){const sep=document.createElement('span');sep.className='crumb-sep';sep.textContent='›';sep.setAttribute('aria-hidden','true');nav.append(sep)}
      const b=document.createElement('button');b.type='button';b.className='crumb-link';b.innerHTML=esc(c.text)+' <span aria-hidden="true">⌄</span>';
