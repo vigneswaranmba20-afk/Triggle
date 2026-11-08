@@ -572,7 +572,22 @@ async function main() {
         'Both rationalisation choices must use real stacked fraction bars');
       assert.equal(await lab.locator('.rnlab-rational-step').count(),4,
         'The full rationalisation must be shown as four readable steps without expansion');
-      assert.match(await lab.locator('.rnlab-rational-goal').innerText(),/remove the square root from the denominator/i);
+      assert.equal(await lab.locator('.rnlab-chatgpt-math').count(),1,
+        'The clean display-math lesson should be enabled for rationalisation only');
+      assert.equal(await lab.locator('.rnlab-step-equation math[display="block"]').count(),6,
+        'All four steps should use large display maths, including two responsive split equations');
+      assert.equal(await lab.locator('.rnlab-equation-flow').count(),2,
+        'Multiplication and cancellation should wrap without compressing whole fractions');
+      const equationGeometry=await lab.locator('.rnlab-step-equation').first().evaluate(el=>{
+        const eq=el.querySelector('math'), container=el.getBoundingClientRect(), rect=eq.getBoundingClientRect();
+        return {fontSize:parseFloat(getComputedStyle(eq).fontSize), height:rect.height,
+          centreGap:Math.abs((container.left+container.right)/2-(rect.left+rect.right)/2)};
+      });
+      assert.ok(equationGeometry.fontSize>=22 && equationGeometry.height>=38,
+        'The equation must be comfortably sized on a phone: '+JSON.stringify(equationGeometry));
+      assert.ok(equationGeometry.centreGap<=2,
+        'Display mathematics must be visually centred, like the example: '+JSON.stringify(equationGeometry));
+      assert.match(await lab.locator('.rnlab-rational-goal').innerText(),/remove the square root from (?:the denominator|the bottom of the fraction)/i);
       assert.equal((await lab.locator('.rnlab-rational-result math msqrt').textContent()).trim(),'5',
         'For 1/(√5+2), the result must be √5−2');
       await lab.locator('[data-demo-mode="seven"]').click();
@@ -620,6 +635,20 @@ async function main() {
       assert.equal(await page.locator('.hub-quiz-question').count(),8,'eight concept quizzes');
       await page.locator('#langTa').click();
       assert.match(await page.locator('#chapterOverviewTitle').innerText(),/சிறு தேர்வுகள்/);
+    });
+    await check('Rationalisation equations remain fully visible on a 320px phone',async()=>{
+      const page=await visit(await context(320),'/index.html?class=9&chapter=g9-ch2&section=concepts&concept=5');
+      const lab=page.locator('.rnlab');
+      await lab.locator('[data-demo-mode="seven"]').click();
+      assert.equal(await lab.locator('.rnlab-rational-step').count(),4);
+      const bounds=await lab.locator('.rnlab-equation-flow').first().evaluate(el=>{
+        const box=el.getBoundingClientRect();
+        return {parentWidth:box.width,maxItemWidth:Math.max(...Array.from(el.children,child=>child.getBoundingClientRect().width)),
+          exceeds:el.scrollWidth>el.clientWidth+2};
+      });
+      assert.ok(!bounds.exceeds && bounds.maxItemWidth<=bounds.parentWidth+2,
+        'Both fractions must fit the small screen, wrapping if needed: '+JSON.stringify(bounds));
+      await noOverflow(page,'Large rationalisation equations at 320px');
     });
     await check('Offline initial Home reload and class directory work without remote scripts', async()=>{
       const ctx=await context(390,'allow');

@@ -791,3 +791,83 @@
 /* Powers, signs and operands stay in one inline formula inside every button. */
 .rnlab .rnlab-math-choice{display:inline-block;white-space:nowrap;line-height:1.45;max-width:100%}
 .rnlab .rnlab-math-choice .triggle-math{vertical-align:baseline}
+
+
+/* Calm, readable ChatGPT-style display maths for Triggle's guided solutions.
+   The reusable .triggle-display-equation hook can be adopted by other lessons.
+   Keep all effects scoped to the rationalisation lab for a safe rollout. */
+.rnlab .sp2-demo.rnlab-chatgpt-math{
+  background:#fff;border:1px solid #e8e4ee;padding:clamp(14px,3.3vw,24px);
+}
+.rnlab .rnlab-rational-goal{
+  width:100%;margin:14px 0 0;padding:4px 1px;border-radius:0;
+  background:transparent;color:#383346;text-align:left;
+  font-size:clamp(15px,3.1vw,17px);font-weight:650;line-height:1.75;
+}
+.rnlab .sp2-demo-output:has(.rnlab-rational-steps){
+  margin:0!important;overflow:visible;white-space:normal;
+  line-height:1.6!important;
+}
+.rnlab .rnlab-rational-steps{
+  display:grid;gap:0;margin:12px 0 0;padding:0;
+}
+.rnlab .rnlab-rational-step{
+  display:block;margin:0;padding:20px 0 24px;
+  border:0;border-bottom:1px solid #eae7ef;border-radius:0;
+  background:transparent;min-width:0;
+}
+.rnlab .rnlab-step-heading{
+  display:flex;align-items:center;gap:11px;
+}
+.rnlab .rnlab-step-heading strong{
+  color:#322c40;font-size:clamp(15px,3vw,17px);font-weight:770;
+  line-height:1.45;
+}
+.rnlab .rnlab-step-number{flex:none}
+.rnlab .rnlab-step-content p{
+  margin:12px 0 4px!important;
+  color:#4d4758;font-size:clamp(14px,2.9vw,16px)!important;
+  font-weight:430;line-height:1.75!important;overflow-wrap:break-word;
+}
+.rnlab .rnlab-step-equation.triggle-display-equation,
+.rnlab .rnlab-rational-result .triggle-display-equation{
+  display:flex;justify-content:center;align-items:center;
+  width:100%;max-width:100%;min-width:0;margin:16px auto 6px;
+  padding:12px 0;box-sizing:border-box;overflow:visible;
+  text-align:center;background:transparent;
+}
+.rnlab .triggle-display-equation .rnlab-rational-math{
+  display:block;max-width:100%;margin:0;
+  color:#252330;font-family:math, "Cambria Math", "STIX Two Math", serif;
+  font-size:clamp(23px,4.8vw,33px);font-weight:450;
+  line-height:1.4;white-space:nowrap;math-style:normal;
+}
+.rnlab .rnlab-equation-flow{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:10px 12px;min-width:0;max-width:100%;
+}
+.rnlab .rnlab-equation-flow .rnlab-equation-operator{
+  display:inline-block;line-height:1.4;font-family:math,serif;
+  font-size:clamp(24px,5vw,32px);font-weight:450;color:#2b2639;
+}
+.rnlab .rnlab-rational-result{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:0;margin:14px 0 4px;padding:20px 0 8px;border:0;border-radius:0;
+  background:transparent;color:#343045;text-align:center;
+}
+.rnlab .rnlab-rational-result strong{
+  color:#57516b;font-size:clamp(14px,3vw,16px);font-weight:750;
+}
+.rnlab .rnlab-rational-result .triggle-display-equation{
+  margin:8px auto 0;padding:8px 0;
+}
+.rnlab .rnlab-rational-result .triggle-display-equation .rnlab-rational-math{
+  color:#332450;font-size:clamp(27px,5.5vw,37px);
+}
+@media(max-width:420px){
+ .rnlab .sp2-demo.rnlab-chatgpt-math{padding:13px 12px}
+ .rnlab .rnlab-rational-step{padding:18px 0 21px}
+ .rnlab .rnlab-step-equation.triggle-display-equation{margin:13px auto 5px;padding:11px 0}
+ .rnlab .triggle-display-equation .rnlab-rational-math{font-size:23px}
+ .rnlab .rnlab-equation-flow{gap:8px 10px}
+}

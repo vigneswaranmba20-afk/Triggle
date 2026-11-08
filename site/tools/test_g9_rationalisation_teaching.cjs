@@ -35,4 +35,14 @@ assert.ok(script.includes("'<mfrac>'")||script.includes("tag('mfrac'"),'True Mat
 assert.ok(script.includes("['seven',{html:math(fraction(mn(3),pair(7,'+'))"),'The second example must use 3/(√7+2)');
 assert.ok(!script.includes("num+'/(√'+a"),'Old cramped inline expression must be removed');
 assert.ok(css.includes('.rnlab-rational-step{'),'Scoped mobile teaching card styling required');
+assert.ok(script.includes('displayMath=(body,label)=>math(body,label,true)'),'True display-style MathML must be available');
+assert.ok(script.includes('rnlab-equation-flow'),'Long equations must wrap into centred mobile-friendly parts');
+assert.ok(script.includes('rnlab-chatgpt-math'),'The editorial layout must be scoped to the rationalisation activity');
+assert.ok(script.includes('triggle-display-equation'),'The common display-equation layout must be reusable');
+assert.ok(script.includes('const displayed=i===1?equationFlow'),'Conjugate multiplication must use readable maths layout');
+assert.ok(script.includes("i===3?equationFlow("),'The last equality must also be readable on narrow phones');
+assert.ok(css.includes('.rnlab .triggle-display-equation .rnlab-rational-math'),'Large display maths styles must exist');
+assert.ok(css.includes('math-style:normal'),'Fractions must use natural display-style numerator and denominator');
+assert.ok(css.includes('flex-wrap:wrap'),'Long formula sequences must wrap instead of shrinking');
+
 console.log('PASS: textbook-style rationalisation, four-stage teaching, Tamil/English content and both exact identities');

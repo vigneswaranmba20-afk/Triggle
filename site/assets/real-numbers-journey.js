@@ -66,7 +66,16 @@ function mount(container,chapter,language){
  const mn=value=>tag('mn',esc(value));
  const mo=value=>tag('mo',esc(value));
  const mrow=body=>tag('mrow',body);
- const math=(body,label)=>'<math xmlns="http://www.w3.org/1998/Math/MathML" class="triggle-math rnlab-rational-math" aria-label="'+esc(label)+'">'+body+'</math>';
+ const math=(body,label,display=false)=>'<math xmlns="http://www.w3.org/1998/Math/MathML" class="triggle-math rnlab-rational-math"'+
+    (display?' display="block"':'')+' aria-label="'+esc(label)+'">'+body+'</math>';
+ const displayMath=(body,label)=>math(body,label,true);
+ // Break naturally into two centred pieces on narrow screens; never shrink
+ // an entire fraction chain until its numerators become unreadable.
+ const equationFlow=(left,operator,right,label)=>
+   '<div class="rnlab-equation-flow" role="group" aria-label="'+esc(label)+'">'+
+   displayMath(left,label+' first expression')+
+   '<span class="rnlab-equation-operator" aria-hidden="true">'+esc(operator)+'</span>'+
+   displayMath(right,label+' second expression')+'</div>';
  const sqrt=value=>tag('msqrt',mn(value));
  const pair=(rad,sign)=>mrow(sqrt(rad)+mo(sign)+mn('2'));
  const bracket=body=>mrow(mo('(')+body+mo(')'));
@@ -77,8 +86,8 @@ function mount(container,chapter,language){
    const label=ta?'இறுதி விடை':'Final answer';
    const start=fraction(mn(num),pair(rad,'+'));
    const conjugate=pair(rad,'−');
-   const multiply=fraction(mn(num),pair(rad,'+'))+mo('×')+
-     fraction(bracket(conjugate),bracket(conjugate));
+   const conjugateFraction=fraction(bracket(conjugate),bracket(conjugate));
+   const multiply=start+mo('×')+conjugateFraction;
    const denominator=mrow(mn(rad)+mo('−')+mn(4));
    const simplify=fraction(product(num,rad),denominator);
    const finalAnswer=pair(rad,'−');
@@ -98,15 +107,22 @@ function mount(container,chapter,language){
    ];
    const visual=panel.querySelector('[data-demo-visual]');
    const output=panel.querySelector('[data-demo-output]');
+   panel.querySelector('.sp2-demo').classList.add('rnlab-chatgpt-math');
    visual.innerHTML='<p class="rnlab-rational-goal">'+esc(ta?
-     'இலக்கு: பகுதியிலுள்ள வர்க்கமூலத்தை நீக்குதல்.':'Goal: remove the square root from the denominator.')+'</p>';
-   output.innerHTML='<ol class="rnlab-rational-steps">'+steps.map(([title,equation,why],i)=>
-     '<li class="rnlab-rational-step"><span class="rnlab-step-number">'+(i+1)+'</span>'+
-     '<div class="rnlab-step-content"><strong>'+esc(title)+'</strong>'+
-     '<div class="rnlab-step-equation">'+math(equation,title)+'</div>'+
-     '<p>'+esc(why)+'</p></div></li>').join('')+'</ol>'+
+     'நோக்கம்: பின்னத்தின் கீழ்ப்பகுதியில் உள்ள வர்க்கமூலத்தை நீக்குவோம்.':
+     'Our goal is to remove the square root from the bottom of the fraction.')+'</p>';
+   output.innerHTML='<ol class="rnlab-rational-steps">'+steps.map(([title,equation,why],i)=>{
+     const displayed=i===1?equationFlow(start,'×',conjugateFraction,title):
+       i===3?equationFlow(fraction(product(num,rad),mn(num)),'=',finalAnswer,title):
+       displayMath(equation,title);
+     return '<li class="rnlab-rational-step">'+
+       '<div class="rnlab-step-heading"><span class="rnlab-step-number">'+(i+1)+'</span>'+
+       '<strong>'+esc(title)+'</strong></div>'+
+       '<div class="rnlab-step-content"><p>'+esc(why)+'</p>'+
+       '<div class="rnlab-step-equation triggle-display-equation">'+displayed+'</div></div></li>';
+   }).join('')+'</ol>'+
      '<div class="rnlab-rational-result"><strong>'+esc(label)+'</strong>'+
-     math(finalAnswer,'square root of '+rad+' minus 2')+'</div>';
+     '<div class="triggle-display-equation">'+displayMath(finalAnswer,'square root of '+rad+' minus 2')+'</div></div>';
    panel.querySelector('.rnlab-source-note').textContent=ta?
      'இந்த விளக்கம் பாடநூலின் விகிதப்படுத்துதல் முறையை அடிப்படையாகக் கொண்டது.':
      'A step-by-step explanation of the textbook rationalisation method.';
