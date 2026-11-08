@@ -587,7 +587,7 @@ async function main() {
         'The equation must be comfortably sized on a phone: '+JSON.stringify(equationGeometry));
       assert.ok(equationGeometry.centreGap<=2,
         'Display mathematics must be visually centred, like the example: '+JSON.stringify(equationGeometry));
-      assert.match(await lab.locator('.rnlab-rational-goal').innerText(),/remove the square root from the denominator/i);
+      assert.match(await lab.locator('.rnlab-rational-goal').innerText(),/remove the square root from (?:the denominator|the bottom of the fraction)/i);
       assert.equal((await lab.locator('.rnlab-rational-result math msqrt').textContent()).trim(),'5',
         'For 1/(√5+2), the result must be √5−2');
       await lab.locator('[data-demo-mode="seven"]').click();
