@@ -9,8 +9,8 @@
       "chapterId": "g11-ch1",
       "title": "Sets, Relations and Functions",
       "fullExerciseInventory": "UNKNOWN",
-      "draftedSubparts": 12,
-      "mathematicallyCheckedSubparts": 12,
+      "draftedSubparts": 13,
+      "mathematicallyCheckedSubparts": 13,
       "ciPassed": 0,
       "merged": 0,
       "liveVerified": 0,
@@ -315,15 +315,20 @@
       "tamilPrintedPage": 10,
       "englishPdfPage": 15,
       "tamilPdfPage": 18,
-      "status": "missing-source-image-verification",
-      "mathChecked": false,
+      "status": "draft",
+      "mathChecked": true,
       "mathematicalIdentityIndependentlyTested": true,
       "ciPassed": false,
       "merged": false,
       "deployed": false,
       "liveVerified": false,
       "tamilEditorial": "pending",
-      "sourceCheckpoint": "docs/coverage/grade-11-ex1-1-q4-iii-source-checkpoint.json"
+      "sourceCheckpoint": "docs/coverage/grade-11-ex1-1-q4-iii-source-checkpoint.json",
+      "englishPageImageChecked": true,
+      "tamilPageImageChecked": true,
+      "sourceExact": true,
+      "lessonPath": "site/data/textbook-exercises/g11-ch1-ex1-1-q4-iii.json",
+      "previewPath": "site/grade-11/sets-q4-iii-preview.html"
     },
     {
       "id": "g11-ch1-ex1.1-q4-iv",
@@ -488,8 +493,8 @@
       "tamilEditorial": "pending"
     }
   ],
-  "next": "Q4(iii) remains first missing: visually inspect English PDF p15 and Tamil PDF p18, transcribe source-exact question, implement independently verified bilingual lesson. Q4(iv)-(vi), Q5-Q10 now inventoried as missing; inspect both page images before drafting.",
-  "notes": "Q4(ii) English source checked on 2025 revised English Volume I printed p7/PDF p15; Tamil Volume I page checkpoint printed p10/PDF p18, but Tamil PDF glyph extraction is degraded and visual confirmation is pending. 64 independent set-enumeration cases plus membership proof. Tamil editorial pending. Q4(iii) explicitly inventoried as missing; exhaustive identity regression does not certify textbook transcription or student-facing solution. 2026-11-09: English and Tamil 2025 revised Vol I connected PDFs re-read; inventoried Q4(iv)-(vi), Q5-Q10 as missing with printed/PDF page locations. Tamil mathematical extraction corrupt, so no exact Tamil transcription or mathematical verification claimed.",
+  "next": "Q4(iv): visually verify original English PDF p15 and Tamil PDF p18; then transcribe exact question and implement independently verified bilingual steps. Q4(iii) draft is not yet CI/browser passed, merged, or live.",
+  "notes": "Q4(ii) English source checked on 2025 revised English Volume I printed p7/PDF p15; Tamil Volume I page checkpoint printed p10/PDF p18, but Tamil PDF glyph extraction is degraded and visual confirmation is pending. 64 independent set-enumeration cases plus membership proof. Tamil editorial pending. Q4(iii) explicitly inventoried as missing; exhaustive identity regression does not certify textbook transcription or student-facing solution. 2026-11-09: English and Tamil 2025 revised Vol I connected PDFs re-read; inventoried Q4(iv)-(vi), Q5-Q10 as missing with printed/PDF page locations. Tamil mathematical extraction corrupt, so no exact Tamil transcription or mathematical verification claimed. 2026-11-09: English p15 and Tamil p18 rendered and visually inspected for Q4(iii); exact math and Tamil stem checked; new bilingual lesson drafted, Tamil human editorial pending.",
   "ciEvidence": {
     "baselineCommit": "7f66ab886f4d961774288d36d644ce8ed7ffe5eb",
     "runId": 42451732756,
