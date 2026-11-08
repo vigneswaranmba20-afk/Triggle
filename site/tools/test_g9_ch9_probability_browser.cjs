@@ -25,7 +25,7 @@ async function main(){
    const page=await ctx.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(base+'/index.html?class=9&chapter=g9-ch9&section=exercises');
    await page.locator('#chapterOverview').waitFor({state:'visible'});
-   assert.match(await page.locator('#chapterOverview').innerText(),/Exercise 9\\.1/,'Exercises list missing 9.1 at '+width);
+   assert.match(await page.locator('#chapterOverview').innerText(),/Exercise 9\.1/,'Exercises list missing 9.1 at '+width);
    await page.goto(base+'/index.html?class=9&question=g9-ch9-ex9.1-q4');
    await page.locator('#questionText').waitFor({state:'visible'});
    assert.match(await page.locator('#questionText').innerText(),/There are 24 balls in a pot/);
