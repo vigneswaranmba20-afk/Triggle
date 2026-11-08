@@ -26,7 +26,7 @@ function inverseSteps(a,b,c,d){
  const prefix='A = ['+a+' '+b+'; '+c+' '+d+']\ndet(A) = ('+a+' × '+d+') − ('+b+' × '+c+') = '+det+'\nஅணிக்கோவை det(A) = '+det+'\n';
  if(det===0)return prefix+'det(A)=0, so A is singular and has no inverse.\n|A|=0; நேர்மாறு அணி இல்லை.';
  const adj=[d,-b,-c,a];
- return prefix+'adj(A) = ['+adj[0]+' '+adj[1]+'; '+adj[2]+' '+adj[3]+']\nA⁻¹ = adj(A)/det(A) = ['+adj.map(v=>fraction(v,det)).join(' ').replace(/^([^ ]+) ([^ ]+) ([^ ]+) ([^ ]+)$/,'$1 $2; $3 $4')+']\nCheck: A × adj(A) = ['+det+' 0; 0 '+det+'] = det(A)I₂.\nசரிபார்ப்பு: A × adj(A) = det(A)I₂.';
+ return prefix+'adj(A) = ['+adj[0]+' '+adj[1]+'; '+adj[2]+' '+adj[3]+']\nA⁻¹ = adj(A)/det(A) = ['+adj.map(v=>fraction(v,det)).join(' ').replace(/^([^ ]+) ([^ ]+) ([^ ]+) ([^ ]+)$/,'$1 $2; $3 $4')+']\nCheck: A × adj(A) = ['+det+' 0; 0 '+det+'] = det(A)I₂.\nCheck: adj(A) × A = ['+det+' 0; 0 '+det+'] = det(A)I₂.\nTherefore A × A⁻¹ = A⁻¹ × A = I₂.\nசரிபார்ப்பு: A × adj(A) = adj(A) × A = det(A)I₂.\nஎனவே A × A⁻¹ = A⁻¹ × A = I₂.';
 }
 document.getElementById('matrix-form').addEventListener('submit',e=>{e.preventDefault();const raw=['a','b','c','d'].map(id=>document.getElementById(id).value.trim());if(raw.some(value=>value===''||!/^[+-]?\d+$/.test(value))){document.getElementById('result').textContent='Enter four whole-number entries / நான்கு முழு எண்களை உள்ளிடுக.';return;}const values=raw.map(Number);document.getElementById('result').textContent=inverseSteps(...values);});
 </script></body></html>
