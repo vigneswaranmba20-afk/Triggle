@@ -248,77 +248,69 @@ async function main() {
       assert.equal(await page.locator('#visualLessonBtn').isVisible(),false);
       assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),null);
     });
+    // The unified reader keeps all three navigation actions visible and away from answers.
     for(const width of [320,390]){
-      await check('Immersive question controls hide together and return on screen tap at '+width+'px',async()=>{
+      await check('Nonfloating bilingual question navigation at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=9&question=c9-example-6-1');
-        await page.locator('#focusNavToggle').waitFor({state:'visible'});
-        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('question-focus')),true);
-        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),true);
-        // Allow the immersive layout to settle after activating question-focus.
-        await page.waitForFunction(()=>document.querySelector('.app-shell').getBoundingClientRect().height>=window.innerHeight-2,null,{timeout:5000});
-        const dimensions=await page.evaluate(()=>({
-          app:document.querySelector('.app-shell').getBoundingClientRect().height,
-          content:document.querySelector('.lesson-container').getBoundingClientRect().height,
-          screen:window.innerHeight,
-          position:getComputedStyle(document.querySelector('.page-controls')).position,
-          above:document.querySelector('.page-controls').getBoundingClientRect().bottom<
-            document.querySelector('.class-dock').getBoundingClientRect().top+5
-        }));
-        assert.equal(dimensions.position,'fixed','Previous/Next should float over the question');
-        assert.ok(dimensions.app>=dimensions.screen-2,`Exercise view should fill the whole phone viewport: ${JSON.stringify(dimensions)}`);
-        assert.ok(dimensions.above,'Floating question controls should not cover the class dock');
-        await page.evaluate(()=>window.TriggleFocusNavigation.hide());
-        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),false);
-        for(const selector of ['.appbar','.page-controls','.class-dock']){
-          assert.equal(await page.locator(selector).evaluate(el=>el.inert),true,'Hidden '+selector+' cannot retain keyboard focus');
-        }
-        assert.match(await page.locator('#focusNavToggle').getAttribute('aria-label'),/Show navigation/);
-        // Tapping the problem itself reveals controls without changing answers.
-        await page.locator('#questionText').click({position:{x:12,y:10}});
-        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),true);
+        const nav=page.locator('#questionNavDock');
+        await nav.waitFor({state:'visible'});
+        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('textbook-reader')),true);
+        assert.equal(await page.locator('#focusNavToggle').isVisible(),false,'No auto-hiding floating navigation');
+        assert.equal(await page.locator('.class-dock').isVisible(),false,'No second overlay dock');
+        const geo=await page.evaluate(()=>{
+          const nav=document.querySelector('#questionNavDock'),reader=document.querySelector('.lesson-container');
+          const n=nav.getBoundingClientRect(),r=reader.getBoundingClientRect();
+          return {position:getComputedStyle(nav).position,rows:getComputedStyle(nav).gridTemplateAreas,
+            top:n.top,bottom:n.bottom,readerBottom:r.bottom,screen:innerHeight,
+            buttons:[...nav.querySelectorAll('button')].map(el=>{
+              const b=el.getBoundingClientRect();return {font:parseFloat(getComputedStyle(el).fontSize),top:b.top,width:b.width,height:b.height};
+            })};
+        });
+        assert.equal(geo.position,'relative','Dock must reserve layout space');
+        assert.match(geo.rows,/chapters chapters/,'Chapter return owns the first row');
+        assert.ok(geo.buttons.every(b=>Math.abs(b.font-16)<.25&&b.height>=48),'All 3 actions use 16px readable touch targets');
+        const [prev,all,next]=geo.buttons;
+        assert.ok(all.top<prev.top&&Math.abs(prev.top-next.top)<2,'Previous and Next share the second row');
+        assert.ok(Math.abs(prev.width-next.width)<3,'Previous and Next share equal space');
+        assert.ok(Math.abs(geo.readerBottom-geo.top)<3,'No overlap with scrollable solutions');
+        assert.ok(geo.bottom<=geo.screen+3,'Reader dock remains inside the viewport');
+        await page.evaluate(()=>{document.querySelector('.lesson-container').scrollTop=10000;});
+        assert.ok(Math.abs((await nav.boundingBox()).y-geo.top)<3,'Reading scroll must not move navigation');
         await page.locator('#next').click();
-        assert.equal(new URL(page.url()).searchParams.has('question'),true);
-        assert.equal(await page.locator('.page-controls').isVisible(),true);
-        await page.evaluate(()=>window.TriggleFocusNavigation.hide());
-        await page.locator('#focusNavToggle').click();
-        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),true);
+        assert.notEqual(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
+        await page.locator('#previous').click();
+        assert.equal(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
         await page.locator('#langTa').click();
-        assert.match(await page.locator('#focusNavToggle').getAttribute('aria-label'),/வழிசெலுத்தலை/);
-        await page.locator('#homeBtn').click();
-        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('question-focus')),false);
-        assert.equal(await page.locator('#focusNavToggle').isVisible(),false,'Home does not inherit question focus UI');
-        for(const selector of ['.appbar','.page-controls','.class-dock']){
-          assert.equal(await page.locator(selector).evaluate(el=>el.inert),false,'Navigation must reset outside questions');
-        }
-        await noOverflow(page,'full-height mobile immersive reader at '+width+'px');
+        assert.match(await page.locator('#allChaptersButton').innerText(),/அனைத்து அத்தியாயங்களுக்கும்/);
+        assert.ok((await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>parseFloat(getComputedStyle(el).fontSize)))).every(n=>Math.abs(n-16)<.25));
+        await noOverflow(page,'nonfloating navigation at '+width+'px');
+        await page.locator('#allChaptersButton').click();
+        assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
+        assert.equal(await nav.isVisible(),false);
       });
     }
-    await check('Touch reading mode auto-hides, keyboard Tab recovers and modal remains accessible',async()=>{
+    await check('Navigation remains keyboard and teaching-dialog accessible',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&question=c9-example-6-2');
-      await page.waitForFunction(()=>document.body.classList.contains('question-focus')&&!document.body.classList.contains('focus-controls-visible'),{timeout:12000});
-      assert.equal(await page.locator('.appbar').isVisible(),false);
-      await page.keyboard.press('Tab');
-      assert.equal(await page.locator('.appbar').isVisible(),true,'Keyboard Tab reveals the navigation');
-      assert.equal(await page.locator('.page-controls').evaluate(el=>el.inert),false);
-      await page.locator('#focusNavToggle').click();
-      assert.equal(await page.locator('#focusNavToggle').getAttribute('aria-expanded'),'false');
-      await page.locator('#focusNavToggle').click();
-      assert.equal(await page.locator('#focusNavToggle').getAttribute('aria-expanded'),'true');
+      const nav=page.locator('#questionNavDock');
+      await nav.waitFor({state:'visible'});
+      await page.locator('#next').focus();
+      assert.equal(await page.evaluate(()=>document.activeElement?.id),'next');
+      assert.equal(await nav.evaluate(el=>el.inert),false);
       await page.locator('#tabGuided').click();
       await page.locator('#guidedDialog').waitFor({state:'visible'});
-      await page.evaluate(()=>window.TriggleFocusNavigation.hide());
-      assert.equal(await page.locator('.appbar').evaluate(el=>el.inert),false,'No hiding during an open teaching dialog');
       await page.locator('#closeGuided').click();
-      await noOverflow(page,'immersive dialog and keyboard');
+      assert.equal(await nav.isVisible(),true);
+      await noOverflow(page,'lesson dialog with stable navigation');
     });
-    await check('Immersive controls do not affect chapter menus or desktop',async()=>{
-      const mobilePage=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
-      assert.equal(await mobilePage.locator('#focusNavToggle').isVisible(),false);
-      assert.equal(await mobilePage.locator('body').evaluate(el=>el.classList.contains('question-focus')),false);
+    await check('Reader controls do not appear on chapter menus or float on desktop',async()=>{
+      const mobile=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
+      assert.equal(await mobile.locator('#questionNavDock').isVisible(),false);
+      assert.equal(await mobile.locator('#focusNavToggle').isVisible(),false);
       const desktop=await visit(await context(1280),'/index.html?class=9&question=c9-example-6-1');
+      assert.equal(await desktop.locator('body').evaluate(el=>el.classList.contains('textbook-reader')),true);
       assert.equal(await desktop.locator('#focusNavToggle').isVisible(),false);
-      assert.equal(await desktop.locator('body').evaluate(el=>el.classList.contains('question-focus')),false);
-      assert.notEqual(await desktop.locator('.page-controls').evaluate(el=>getComputedStyle(el).position),'fixed');
+      assert.notEqual(await desktop.locator('#questionNavDock').evaluate(el=>getComputedStyle(el).position),'fixed');
+      assert.ok((await desktop.locator('#questionNavDock button').evaluateAll(nodes=>nodes.map(x=>parseFloat(getComputedStyle(x).fontSize)))).every(x=>Math.abs(x-16)<.25));
     });
     for(const width of [320,390,1280]){
       await check('Home, class directory, chapter jump, browser Back and Tamil at '+width+'px', async()=>{
@@ -460,7 +452,7 @@ async function main() {
       await page.locator('.hub-question').first().click();
       assert.equal(await page.locator('#lessonCard').isVisible(),true);
       assert.ok((await page.locator('#stepsList li').count())>0,'Existing worked solution remains accessible');
-      assert.match(await page.locator('#questionReturnBtn').innerText(),/Back to Exercises/);
+      assert.match(await page.locator('#questionReturnBtn').innerText(),/Back to all exercises/);
       await page.locator('#questionReturnBtn').click();
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
       assert.equal(await page.locator('.hub-question').count(),40);
@@ -1108,6 +1100,13 @@ async function main() {
         assert.equal(layout.headingSizes.length,3,'Class, chapter and exercise must all be visible');
         assert.ok(layout.headingSizes.every(x=>x>=16),'All three breadcrumb labels must be at least 16px: '+JSON.stringify(layout));
         assert.ok(layout.font>=16,'Breadcrumb text must be large enough to read: '+JSON.stringify(layout));
+        const actionGrid=await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>({font:parseFloat(getComputedStyle(el).fontSize),top:el.getBoundingClientRect().top,width:el.getBoundingClientRect().width})));
+        assert.ok(actionGrid.every(v=>Math.abs(v.font-16)<.25),'All 3 reader buttons share a 16px font');
+        if(width<=800){
+          const [previous,all,next]=actionGrid;
+          assert.ok(all.top<previous.top&&Math.abs(previous.top-next.top)<2,'Back first row, two equal navigation actions below');
+          assert.ok(Math.abs(previous.width-next.width)<3,'Previous and Next have equal widths');
+        }
         assert.match(await page.locator('#next').innerText(),/Next page/,'Textbook reader moves to the next page');
         assert.ok(layout.tapHeight>=48,'Chapter return needs a generous mobile tap target');
         assert.ok(layout.navScrollParent.includes('workspace'),'Dock must not sit inside scrolling question content');
