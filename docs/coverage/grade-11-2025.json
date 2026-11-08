@@ -9,8 +9,8 @@
       "chapterId": "g11-ch1",
       "title": "Sets, Relations and Functions",
       "fullExerciseInventory": "UNKNOWN",
-      "draftedSubparts": 10,
-      "mathematicallyCheckedSubparts": 10,
+      "draftedSubparts": 11,
+      "mathematicallyCheckedSubparts": 11,
       "ciPassed": 0,
       "merged": 0,
       "liveVerified": 0,
@@ -280,10 +280,24 @@
       "deployed": false,
       "liveVerified": false,
       "tamilEditorial": "pending"
+    },
+    {
+      "id": "g11-ch1-ex1.1-q4-i",
+      "englishPrintedPage": 7,
+      "tamilPrintedPage": 10,
+      "englishPdfPage": 15,
+      "tamilPdfPage": 18,
+      "status": "draft",
+      "mathChecked": true,
+      "ciPassed": false,
+      "merged": false,
+      "deployed": false,
+      "liveVerified": false,
+      "tamilEditorial": "pending"
     }
   ],
-  "next": "Run Grade 11 CI and browser suite for Q3(iv–v); next textbook item is Exercise 1.1 Q4(i), Cartesian-product intersection identity. Reconcile latest main before any preview merge.",
-  "notes": "Q3(iv–v) directly checked against 2025 revised English Volume I printed p7/PDF p15 and Tamil Volume I printed p10/PDF p18. Independent infinite-set witnesses n/1 for all positive integers. Tamil human editorial pending. Full inventory unknown.",
+  "next": "Confirm CI and browser/mobile tests for Q4(i), then source-verify Exercise 1.1 Q4(ii) against both 2025 revised textbooks. Reconcile current main and run cross-grade regressions before any preview merge.",
+  "notes": "Q4(i) verified against English Vol I printed p7/PDF p15 and Tamil Vol I printed p10/PDF p18. Independent finite Cartesian-product enumeration and general membership argument. Tamil human editorial pending; CI pending. Full inventory UNKNOWN.",
   "ciEvidence": {
     "baselineCommit": "7f66ab886f4d961774288d36d644ce8ed7ffe5eb",
     "runId": 42451732756,
