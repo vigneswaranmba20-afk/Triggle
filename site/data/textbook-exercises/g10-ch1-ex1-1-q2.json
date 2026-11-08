@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-1-q2",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.1",
+  "question": "2",
+  "subpart": null,
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "tamil": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "manifest": "docs/reference-library/2025-user-textbook-manifest.json",
+    "verificationNote": "English and Tamil 2025 PDFs directly checked at Exercise 1.1 Q2; faithful restatement."
+  },
+  "review": {
+    "sourceVerified": true,
+    "mathVerified": true,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  },
+  "title": {
+    "en": "Cartesian products with primes below 10",
+    "ta": "10-ஐ விடச் சிறிய பகா எண்களுடன் கார்டீசியன் பெருக்கல்"
+  },
+  "questionParaphrase": {
+    "en": "Let A = {1, 2, 3} and B be the prime numbers less than 10. Find A × B and B × A.",
+    "ta": "A = {1, 2, 3}; B என்பது 10-ஐ விடச் சிறிய பகா எண்களின் கணம் எனில், A × B மற்றும் B × A ஆகியவற்றைக் காண்க."
+  },
+  "steps": [
+    {
+      "en": "List the prime numbers below 10. A prime has exactly two positive divisors; 1 is not prime.",
+      "ta": "10-ஐ விடச் சிறிய பகா எண்களைப் பட்டியலிடுக. பகா எண்ணிற்கு இரண்டு நேர்ம வகுத்திகள் மட்டுமே உண்டு; 1 பகா எண் அல்ல.",
+      "equation": "A = {1, 2, 3}; B = {2, 3, 5, 7}"
+    },
+    {
+      "en": "In A × B choose the first coordinate from A and the second from B; enumerate all four choices for each of 1, 2 and 3.",
+      "ta": "A × B-இல் முதல் உறுப்பை A-இலிருந்தும் இரண்டாம் உறுப்பை B-இலிருந்தும் எடுக்கவும். 1, 2, 3 ஒவ்வொன்றுக்கும் B-இன் நான்கு உறுப்புகளுடன் சோடிகளை அமைக்கவும்.",
+      "equation": "A × B = {(1, 2), (1, 3), (1, 5), (1, 7), (2, 2), (2, 3), (2, 5), (2, 7), (3, 2), (3, 3), (3, 5), (3, 7)}"
+    },
+    {
+      "en": "In B × A reverse the coordinate sources: first choose from B, then from A.",
+      "ta": "B × A-இல் வரிசையை மாற்றுக: முதல் உறுப்பை B-இலிருந்தும் இரண்டாம் உறுப்பை A-இலிருந்தும் எடுக்கவும்.",
+      "equation": "B × A = {(2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), (5, 1), (5, 2), (5, 3), (7, 1), (7, 2), (7, 3)}"
+    },
+    {
+      "en": "Check both products contain 3 × 4 = 12 distinct ordered pairs. The products are not equal because the order of coordinates matters.",
+      "ta": "இரண்டு பெருக்கல்களிலும் 3 × 4 = 12 வெவ்வேறு வரிசைச் சோடிகள் உள்ளனவா எனச் சரிபார்க்கவும். உறுப்புகளின் வரிசை முக்கியம் என்பதால் இவ்விரு கணங்களும் சமமல்ல.",
+      "equation": "n(A × B) = n(B × A) = 12; A × B ≠ B × A"
+    }
+  ],
+  "answers": {
+    "AxB": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "AxA": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "BxA": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        7,
+        3
+      ]
+    ]
+  },
+  "misconception": {
+    "en": "1 is not prime; (1,2) belongs to A × B, whereas (2,1) belongs to B × A.",
+    "ta": "1 பகா எண் அல்ல. (1,2) என்பது A × B-இலும் (2,1) என்பது B × A-இலும் உள்ளன."
+  }
+}
