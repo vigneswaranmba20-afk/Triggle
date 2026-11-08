@@ -33,7 +33,7 @@ async function main(){
    const q3=page.locator('[data-question-id="g10-ch1-ex1-1-q3"]');
    assert.equal(await q3.count(),1);
    await q3.locator('summary').click();
-   assert.equal(await q3.locator('.pair-cell').count(),7,'Q3 must display all seven B×A ordered pairs');
+   assert.equal(await q3.locator('.pair-cell').count(),6,'Q3 must display all six B×A ordered pairs (3 × 2)');
    const q4=page.locator('[data-question-id="g10-ch1-ex1-1-q4"]');
    assert.equal(await q4.count(),1);
    await q4.locator('summary').click();
