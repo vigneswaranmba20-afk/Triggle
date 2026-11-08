@@ -668,3 +668,32 @@
 .rnlab-next{min-height:44px;padding:10px 16px;border:1px solid #6c54a1;border-radius:10px;background:#61518f;color:white;font-weight:700;cursor:pointer;margin-top:10px}
 .rnlab [data-answers] button[aria-pressed=true]{border-color:#7457aa;background:#efeaff}
 @media(max-width:420px){.rnlab .rnlab-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}.rnlab .rnlab-choice{font-size:12px;padding:8px 6px}}
+
+/* Question navigation clarity, 2026-11-08: two distinct, unmistakable actions. */
+#closeGuided{background:#453276;color:#fff;border:2px solid #453276;box-shadow:0 5px 14px #35235d27;font-size:14px;font-weight:850;min-height:48px;padding:10px 14px;border-radius:13px;gap:10px}
+#closeGuided:hover{background:#35245f;border-color:#35245f}
+#closeGuided:active{transform:translateY(1px)}
+#closeGuided .deep-back-icon{flex:none;display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:#ffffff2b;color:#fff;font-size:21px;line-height:1}
+#closeGuided span:last-child{max-width:none;line-height:1.2}
+#closeGuided:focus-visible,.deep-question-context summary:focus-visible{outline:3px solid #a989ed;outline-offset:3px}
+.deep-question-context{border:2px solid #cbb9ef;background:#f4eefe;border-radius:16px;box-shadow:0 3px 13px #65459b10;overflow:hidden}
+.deep-question-context summary{display:flex;align-items:center;gap:12px;list-style:none;min-height:70px;padding:11px 13px;cursor:pointer;color:#382564;touch-action:manipulation}
+.deep-question-context summary::-webkit-details-marker{display:none}
+.deep-question-context summary::marker{content:""}
+.deep-question-icon{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:12px;background:#dfd2fa;font-size:21px}
+.deep-question-copy{display:flex;flex:1;flex-direction:column;gap:3px;min-width:0}
+.deep-question-copy strong{font-size:15px;line-height:1.28;font-weight:900;color:#382564}
+.deep-question-copy small{font-size:12px;line-height:1.3;font-weight:620;color:#6b5689}
+.deep-question-chevron{flex:none;margin-left:auto;font-size:24px;line-height:1;color:#6449a0;transition:transform .2s ease}
+.deep-question-context[open] .deep-question-chevron{transform:rotate(180deg)}
+.deep-question-context[open] summary{background:#eee6fd}
+.deep-question-context .guided-question{font-size:15px;line-height:1.65;margin:0 12px 12px;padding:13px 14px;border-left:4px solid #a589dd}
+@media(max-width:540px){
+ .deep-header{flex-direction:column;align-items:stretch;gap:10px;padding:13px 14px 11px}
+ #closeGuided{width:100%;justify-content:center;min-height:50px;padding:10px 12px;font-size:15px}
+ #closeGuided span:last-child{max-width:none;white-space:normal;line-height:1.2;text-align:center}
+ .deep-question-context summary{min-height:74px}
+ .deep-question-copy strong{font-size:15.5px}
+ .deep-question-copy small{font-size:11.5px}
+}
+@media(prefers-reduced-motion:reduce){.deep-question-chevron{transition:none}}
