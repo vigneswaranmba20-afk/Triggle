@@ -9,8 +9,8 @@
       "chapterId": "g11-ch1",
       "title": "Sets, Relations and Functions",
       "fullExerciseInventory": "UNKNOWN",
-      "draftedSubparts": 11,
-      "mathematicallyCheckedSubparts": 11,
+      "draftedSubparts": 12,
+      "mathematicallyCheckedSubparts": 12,
       "ciPassed": 0,
       "merged": 0,
       "liveVerified": 0,
@@ -294,10 +294,24 @@
       "deployed": false,
       "liveVerified": false,
       "tamilEditorial": "pending"
+    },
+    {
+      "id": "g11-ch1-ex1.1-q4-ii",
+      "englishPrintedPage": 7,
+      "tamilPrintedPage": 10,
+      "englishPdfPage": 15,
+      "tamilPdfPage": 18,
+      "status": "draft",
+      "mathChecked": true,
+      "ciPassed": false,
+      "merged": false,
+      "deployed": false,
+      "liveVerified": false,
+      "tamilEditorial": "pending"
     }
   ],
-  "next": "Confirm CI and browser/mobile tests for Q4(i), then source-verify Exercise 1.1 Q4(ii) against both 2025 revised textbooks. Reconcile current main and run cross-grade regressions before any preview merge.",
-  "notes": "Q4(i) verified against English Vol I printed p7/PDF p15 and Tamil Vol I printed p10/PDF p18. Independent finite Cartesian-product enumeration and general membership argument. Tamil human editorial pending; CI pending. Full inventory UNKNOWN.",
+  "next": "Verify Q4(ii) CI/browser, visually confirm Tamil source glyphs; then verify Exercise 1.1 Q4(iii) source and implement. Reconcile current main and cross-grade regressions before any preview merge.",
+  "notes": "Q4(ii) English source checked on 2025 revised English Volume I printed p7/PDF p15; Tamil Volume I page checkpoint printed p10/PDF p18, but Tamil PDF glyph extraction is degraded and visual confirmation is pending. 64 independent set-enumeration cases plus membership proof. Tamil editorial pending.",
   "ciEvidence": {
     "baselineCommit": "7f66ab886f4d961774288d36d644ce8ed7ffe5eb",
     "runId": 42451732756,
