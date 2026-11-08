@@ -236,7 +236,7 @@ window.TRIGGLE_CURRICULUM = {
               "locator": "அத்தியாயம் 2 மெய்யெண்கள், அச்சுப் பக்கங்கள் 43–82; எடுத்துக்காட்டுகள் மற்றும் பயிற்சிகள் 2.1–2.9"
             }
           ],
-          "status": "in_progress",
+          "status": "drafting",
           "legacyQuestionIds": [
             "c9-2-2-practice-2"
           ],
