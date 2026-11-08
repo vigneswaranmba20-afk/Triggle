@@ -1239,3 +1239,28 @@ body.textbook-reader .all-chapters-button{
     padding:10px 7px;
   }
 }
+
+/* Chapter hub v4: the class breadcrumb is the only context switcher.
+   No floating grade-switcher may cover chapter section cards. */
+.chapter-overview-active .crumb-link{
+  min-height:44px;
+  padding:8px 11px;
+  border:1px solid #e3ddef;
+  border-radius:11px;
+  background:#f8f6fc;
+  color:#4a3c6e;
+  font-size:14px;
+}
+.chapter-overview-active .status-row{margin:7px 0 10px;min-height:0}
+@media(max-width:800px){
+  body.chapter-overview-active .class-dock{display:none!important}
+  body.chapter-overview-active .app-shell{height:100dvh!important;min-height:0!important}
+  body.chapter-overview-active .workspace{height:100%!important;min-height:0}
+  body.chapter-overview-active .lesson-container{
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    padding-bottom:calc(30px + env(safe-area-inset-bottom))!important;
+    scroll-padding-bottom:22px;
+  }
+  body.chapter-overview-active .crumb-link{min-height:44px;font-size:14px;padding:8px 11px}
+}
