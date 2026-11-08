@@ -364,6 +364,16 @@ async function main() {
       await page.locator('.hub-section-card[data-hub-section="quizzes"]').click();
       assert.equal(new URL(page.url()).searchParams.get('section'),'quizzes');
       assert.equal(await page.locator('.hub-quiz-question').count(),7);
+      // The mobile quiz view has no lesson context above it: both questions
+      // must print every set needed to solve them.
+      for(const [index,definitions] of [
+        [3,['A={1,2,3,5}','B={3,4,5,6}']],
+        [5,['U={1,2,3,4,5,6}','A={1,2,3}','B={3,4}']]
+      ]){
+        const heading=await page.locator('.hub-quiz-question h4').nth(index).innerText();
+        for(const definition of definitions)
+          assert(heading.includes(definition),'Quiz question '+(index+1)+' must display '+definition+' on mobile');
+      }
       assert.equal(await page.locator('.hub-section-card').count(),0,'Quiz screen should not show large menu cards');
       assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Quizzes');
       await page.locator('.hub-quiz-question').first().locator('button').nth(1).click();
