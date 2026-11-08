@@ -4,7 +4,7 @@
   'use strict';
   const copy = {
     en: {
-      kicker: 'PHASE 2 · LEARN BY EXPLORING',
+      kicker: 'INTERACTIVE VENN DIAGRAM',
       title: 'Set Language · See it, then remember it',
       intro: 'Take a minute to explore. Then put the phone down and solve a similar problem on paper.',
       objective: 'Two groups can share members. A Venn diagram makes the shared region visible.',
@@ -37,7 +37,7 @@
       ]
     },
     ta: {
-      kicker: 'இரண்டாம் கட்டம் · ஆராய்ந்து கற்போம்',
+      kicker: 'வென் பட ஆய்வகம்',
       title: 'கண மொழி · பார்த்துப் புரிந்து நினைவில் கொள்வோம்',
       intro: 'சிறிது நேரம் ஆராயுங்கள். பிறகு கைப்பேசியை வைத்துவிட்டு இதே போன்ற ஒரு கணக்கைத் தாளில் செய்யுங்கள்.',
       objective: 'இரு கணங்களிலும் பொதுவான உறுப்புகள் இருக்கலாம். அவற்றை வென் படம் தெளிவாகக் காட்டுகிறது.',

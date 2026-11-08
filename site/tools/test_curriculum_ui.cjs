@@ -254,6 +254,8 @@ async function main() {
         await page.locator('#focusNavToggle').waitFor({state:'visible'});
         assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('question-focus')),true);
         assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('focus-controls-visible')),true);
+        // Allow the immersive layout to settle after activating question-focus.
+        await page.waitForFunction(()=>document.querySelector('.app-shell').getBoundingClientRect().height>=window.innerHeight-2,null,{timeout:5000});
         const dimensions=await page.evaluate(()=>({
           app:document.querySelector('.app-shell').getBoundingClientRect().height,
           content:document.querySelector('.lesson-container').getBoundingClientRect().height,
@@ -860,6 +862,9 @@ async function main() {
     await check('Phase 2 bilingual Set Language micro-lab works without leaving the chapter', async () => {
       const page = await visit(await context(320), '/index.html?class=9&chapter=g9-ch1');
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
+      await page.locator('.sp2-journey [data-nav] button').nth(3).click();
+      assert.equal(await page.locator('#chapterOverview .p2-lab').count(),0,'Venn lab must open only when requested');
+      await page.locator('.sp2-journey [data-demo-mode="go"]').click();
       const lab = page.locator('#chapterOverview .p2-lab');
       await lab.waitFor({ state:'visible' });
       assert.equal(await lab.locator('[data-result-set]').innerText(), '{1, 2, 3, 4, 5, 6}');
@@ -878,6 +883,9 @@ async function main() {
       assert.ok((await lab.locator('[data-reasoning]').innerText()).includes('20 − 16 = 4'));
       assert.equal(await lab.locator('[data-next-reason]').isVisible(), false);
       await page.locator('#langTa').click();
+      await page.locator('.sp2-journey [data-nav] button').nth(3).click();
+      await page.locator('.sp2-journey [data-demo-mode="go"]').click();
+      await lab.waitFor({state:'visible'});
       assert.ok((await lab.locator('h3').first().innerText()).includes('கண மொழி'));
       await lab.locator('[data-op="difference"]').click();
       assert.equal(await lab.locator('[data-result-set]').innerText(), '{1, 2}');
@@ -970,13 +978,17 @@ async function main() {
       await ctx.setOffline(true);
       await page.reload();
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
-      const lab=page.locator('.p2-lab');
+      const journey=page.locator('.sp2-journey');
+      await journey.waitFor({state:'visible'});
+      assert.equal(await journey.locator('.p2-lab').count(),0,'Lab must stay optional even offline');
+      await journey.locator('[data-nav] [data-index="3"]').click();
+      await journey.locator('[data-demo-mode="go"]').click();
+      const lab=journey.locator('.p2-lab');
       await lab.waitFor({state:'visible'});
-      await page.locator('.sp2-journey').waitFor({state:'visible'});
-      await page.locator('.sp2-journey [data-nav] [data-index="6"]').click();
-      assert.ok((await page.locator('.sp2-journey .sp2-formula').innerText()).includes('n(A ∪ B)'));
       await lab.locator('[data-op="neither"]').click();
       assert.equal(await lab.locator('[data-result-set]').innerText(),'{7, 8}');
+      await journey.locator('[data-nav] [data-index="6"]').click();
+      assert.ok((await journey.locator('.sp2-formula').innerText()).includes('n(A ∪ B)'));
       await ctx.setOffline(false);
     });
     await check('service worker caches curriculum and supports an offline chapter reload', async () => {
