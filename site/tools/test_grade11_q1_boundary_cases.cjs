@@ -22,8 +22,8 @@ assert.equal(primes(1), false);
 assert.equal(11*11 < 121, false);
 
 const polynomial = x => (x-1)*(x+1)*(x*x-1);
-assert.equal(polynomial(1), 0);
-assert.equal(polynomial(-1), 0);
+assert.ok(polynomial(1) === 0, 'x=1 is a root (signed zero is mathematically zero)');
+assert.ok(polynomial(-1) === 0, 'x=-1 is a root (signed zero is mathematically zero)');
 assert.notEqual(polynomial(0), 0);
 assert.deepEqual([-1,1].filter(x => x > 0), [1]);
 
