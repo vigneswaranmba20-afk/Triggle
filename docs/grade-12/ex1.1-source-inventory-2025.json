@@ -28,7 +28,7 @@
       ]
     }
   },
-  "sourceNote": "Exercise 1.1 numbering cross-checked against both 2025 revised volumes. PDF text extraction distorts matrix glyphs; do not transcribe Q1(iii) matrix until page image is checked.",
+  "sourceNote": "Exercise 1.1 numbering cross-checked against both 2025 revised volumes. Q1(i-iii) matrix glyphs independently checked on page images; remaining unverified matrices must not be transcribed from distorted PDF text extraction.",
   "items": [
     {
       "id": "g12-ch1-ex1.1-q1-i",
@@ -54,11 +54,12 @@
       "id": "g12-ch1-ex1.1-q1-iii",
       "question": 1,
       "subpart": "iii",
-      "status": "missing",
-      "matrixSourceImageChecked": false,
+      "status": "mathematically_verified",
+      "matrixSourceImageChecked": true,
       "tamilEditorialReview": "pending",
       "merged": false,
-      "liveVerified": false
+      "liveVerified": false,
+      "sourceImageEvidence": "English Vol I printed p15 PDF p23; Tamil Vol I printed p16 PDF p24; both page images visually checked 2026-11-08"
     },
     {
       "id": "g12-ch1-ex1.1-q2-i",
