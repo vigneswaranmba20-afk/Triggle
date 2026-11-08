@@ -1085,6 +1085,48 @@ async function main() {
         await noOverflow(page,'Grade 9 Q6 descriptive problem at '+width+'px');
       });
     }
+    // Source-verified textbook questions now use a reserved bottom dock, not floating controls.
+    for(const width of [320,390,768,1280]){
+      await check('Textbook breadcrumb and non-overlapping three-action reader dock at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&question=g9-ch1-ex1.1-q5-ii');
+        await page.locator('#answerText').waitFor({state:'visible'});
+        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('textbook-reader')),true);
+        const nav=page.locator('#questionNavDock');
+        assert.equal(await nav.isVisible(),true);
+        assert.equal(await page.locator('.page-controls button').count(),3,'Exactly three reader actions');
+        const ids=await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>el.id));
+        assert.deepEqual(ids,['previous','allChaptersButton','next'],'Previous, all chapters, next order');
+        const layout=await page.evaluate(()=>{
+          const crumb=document.querySelector('.crumb-link'),nav=document.getElementById('questionNavDock'),
+            main=document.querySelector('.lesson-container'),all=document.getElementById('allChaptersButton');
+          const a=nav.getBoundingClientRect(),b=main.getBoundingClientRect();
+          return {font:parseFloat(getComputedStyle(crumb).fontSize),navPosition:getComputedStyle(nav).position,
+            navTop:a.top,navBottom:a.bottom,readerBottom:b.bottom,screen:innerHeight,
+            navHeight:a.height,tapHeight:all.getBoundingClientRect().height,navScrollParent:nav.parentElement.className,
+            toggleVisible:!!document.querySelector('#focusNavToggle')?.getClientRects().length};
+        });
+        assert.ok(layout.font>=16,'Breadcrumb text must be large enough to read: '+JSON.stringify(layout));
+        assert.ok(layout.tapHeight>=48,'Chapter return needs a generous mobile tap target');
+        assert.ok(layout.navScrollParent.includes('workspace'),'Dock must not sit inside scrolling question content');
+        if(width<=800){
+          assert.equal(layout.navPosition,'relative','Navigation must reserve its own space, not float');
+          assert.ok(Math.abs(layout.readerBottom-layout.navTop)<=3,'The reading area ends exactly above the navigation: '+JSON.stringify(layout));
+          assert.ok(layout.navBottom<=layout.screen+3&&layout.navBottom>=layout.screen-4,'Dock stays at screen bottom: '+JSON.stringify(layout));
+          assert.equal(layout.toggleVisible,false,'No floating hamburger should cover textbook content');
+          await page.evaluate(()=>{const el=document.querySelector('.lesson-container');el.scrollTop=el.scrollHeight;});
+          const after=await nav.boundingBox();
+          assert.ok(Math.abs(after.y-layout.navTop)<=3,'Scrolling the worked solution cannot move the dock');
+        }
+        await noOverflow(page,'Textbook reader with large headings and dock at '+width+'px');
+        await page.locator('#next').click();
+        assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q5-iii','Next retains original exercise order');
+        await page.locator('#previous').click();
+        assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q5-ii','Previous restores question');
+        await page.locator('#allChaptersButton').click();
+        assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters','All chapters returns to current grade chapter list');
+        assert.equal(await nav.isVisible(),false,'Question dock disappears on chapter directory');
+      });
+    }
     await check('Grade 9 textbook exercises load offline in the chapter reader',async()=>{
       const ctx=await context(390,'allow');
       const page=await visit(ctx,'/index.html?class=9&chapter=g9-ch1&section=exercises');
