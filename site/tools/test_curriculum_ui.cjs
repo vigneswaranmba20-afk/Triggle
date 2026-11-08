@@ -509,11 +509,11 @@ async function main() {
       await check('Real Numbers 2025 sections, hard-only explanation and figure at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch2&section=examples');
         assert.equal(await page.locator('.hub-question').count(),31,'31 textbook examples');
-        assert.match(await page.locator('.hub-question').first().innerText(),/Example 2\\.1/);
-        assert.match(await page.locator('.hub-question').last().innerText(),/Example 2\\.31/);
+        assert.match(await page.locator('.hub-question').first().innerText(),/Example 2\.1/);
+        assert.match(await page.locator('.hub-question').last().innerText(),/Example 2\.31/);
         await noOverflow(page,'Real Numbers example list at '+width+'px');
         await page.locator('.hub-question').nth(4).click();
-        assert.match(await page.locator('#questionHead').innerText(),/Example 2\\.5/);
+        assert.match(await page.locator('#questionHead').innerText(),/Example 2\.5/);
         assert.equal(await page.locator('#solutionModeRow').isVisible(),true,'hard-only Detailed explanation');
         await page.locator('#tabGuided').click();
         assert.equal(await page.locator('#guidedDialog').evaluate(el=>el.open),true);
