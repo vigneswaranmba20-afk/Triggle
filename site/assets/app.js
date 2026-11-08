@@ -26,7 +26,7 @@
  let chapterOverview=url.searchParams.has('question')?null:chapterList().find(c=>c.id===url.searchParams.get('chapter'))||null;
  let homeView=!url.searchParams.has('class')&&!url.searchParams.has('question')&&!url.searchParams.has('chapter');
  let classIndex=!homeView&&!url.searchParams.has('question')&&!url.searchParams.has('chapter');
- const validSections=new Set(['concepts','examples','exercises','quizzes','sources']);
+ const validSections=new Set(['concepts','examples','exercises','quizzes','activities','sources']);
  let chapterSection=chapterOverview&&validSections.has(url.searchParams.get('section'))?url.searchParams.get('section'):null;
  let conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(url.searchParams.get('concept')||'')?Number(url.searchParams.get('concept')):null;
  let questionOrigin=null;
@@ -162,8 +162,8 @@
    const query=$('search').value.trim().toLocaleLowerCase();
    const container=$('exerciseList');container.replaceChildren();
    const menuNames=lang==='ta'
-     ?{concepts:'கருத்துகள்',examples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'சிறு தேர்வுகள்'}
-     :{concepts:'Concepts',examples:'Worked Examples',exercises:'Exercises',quizzes:'Quizzes'};
+     ?{concepts:'கருத்துகள்',examples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'சிறு தேர்வுகள்',activities:'சிந்தனை மூலை & செயல்பாடுகள்'}
+     :{concepts:'Concepts',examples:'Worked Examples',exercises:'Exercises',quizzes:'Quizzes',activities:'Thinking Corner & Activities'};
    const matches=item=>[item.label?.en,item.label?.ta,item.title?.en,item.title?.ta,item.q?.en,item.q?.ta,item.topic?.en,item.topic?.ta,item.exercise].join(' ').toLocaleLowerCase().includes(query);
    let visible=0;
    for(const chapter of chapterList()){
@@ -192,7 +192,7 @@
      button.append(title,meta);button.onclick=()=>selectChapter(chapter);section.append(button);
      if(selected&&!query){
        const quick=document.createElement('div');quick.className='sidebar-chapter-sections';
-       for(const key of ['concepts','examples','exercises','quizzes']){
+       for(const key of (window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]?.length?['concepts','examples','exercises','quizzes','activities']:['concepts','examples','exercises','quizzes'])){
          const direct=document.createElement('button');direct.type='button';direct.dataset.section=key;
          direct.textContent=menuNames[key]+(grade9Journey&&(key==='exercises'||key==='examples')?' ('+(key==='examples'?workedCount:practiceCount)+')':'');
          direct.classList.toggle('active',chapterOverview?.id===chapter.id&&chapterSection===key);
