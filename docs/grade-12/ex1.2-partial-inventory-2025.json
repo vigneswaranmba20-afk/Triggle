@@ -1,0 +1,149 @@
+{
+  "grade": 12,
+  "edition": "2025 revised",
+  "chapter": 1,
+  "exercise": "1.2",
+  "inventoryScope": "partial-text-layer",
+  "source": {
+    "english": {
+      "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+      "volume": 1,
+      "printedPage": 27,
+      "pdfPage": "UNKNOWN - verify",
+      "pageImageVerified": false
+    },
+    "tamil": {
+      "driveFileId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+      "printedPage": "UNKNOWN",
+      "pdfPage": "UNKNOWN",
+      "pageImageVerified": false
+    }
+  },
+  "evidence": "English original PDF extracted text: EXERCISE 1.2, Q1 rank by minor method (i)-(v); Q2 rank by row reduction method (i)-(iii); Q3 subparts (i)-(iii) supported by answers appendix ONLY; Q3 original question-page inventory requires verification. These are inventory placeholders, NOT textbook transcriptions or solutions.",
+  "inventoryComplete": false,
+  "knownMissingSubparts": 11,
+  "items": [
+    {
+      "id": "g12-ch1-ex1.2-q1-i",
+      "question": 1,
+      "subpart": "i",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.2-q1-ii",
+      "question": 1,
+      "subpart": "ii",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.2-q1-iii",
+      "question": 1,
+      "subpart": "iii",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.2-q1-iv",
+      "question": 1,
+      "subpart": "iv",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.2-q1-v",
+      "question": 1,
+      "subpart": "v",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.2-q2-i",
+      "question": 2,
+      "subpart": "i",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.2-q2-ii",
+      "question": 2,
+      "subpart": "ii",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.2-q2-iii",
+      "question": 2,
+      "subpart": "iii",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.2-q3-i",
+      "question": 3,
+      "subpart": "i",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.2-q3-ii",
+      "question": 3,
+      "subpart": "ii",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.2-q3-iii",
+      "question": 3,
+      "subpart": "iii",
+      "status": "missing",
+      "sourceExact": false,
+      "mathVerified": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    }
+  ],
+  "next": "Verify original English/Tamil page images for Exercise 1.2 Q1(i-v), then solve and test. Prioritize Exercise 1.1 Q2(i) for sequential release."
+}
