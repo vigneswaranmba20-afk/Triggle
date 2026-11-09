@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "edition": "2025 revised",
+  "auditDate": "2026-11-10",
+  "source": {
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "volume": 1,
+    "printedPages": [
+      42,
+      47
+    ],
+    "textLayerInspected": true,
+    "pageImagesInspected": false
+  },
+  "scope": [
+    "1.6",
+    "1.7"
+  ],
+  "exercises": [
+    {
+      "id": "1.6",
+      "questionStemsObserved": 3,
+      "provisionalSlots": 10,
+      "questions": [
+        {
+          "id": "g12-ex1.6-q1",
+          "subparts": [
+            "i",
+            "ii",
+            "iii",
+            "iv"
+          ],
+          "topic": "Rank method: consistency and solution",
+          "sourceFidelity": "equations corrupted"
+        },
+        {
+          "id": "g12-ex1.6-q2",
+          "subparts": [
+            "i",
+            "ii",
+            "iii"
+          ],
+          "topic": "Values of k for no, unique, infinitely many solutions",
+          "sourceFidelity": "equations corrupted"
+        },
+        {
+          "id": "g12-ex1.6-q3",
+          "subparts": [
+            "i",
+            "ii",
+            "iii"
+          ],
+          "topic": "Parameter classification for linear systems",
+          "sourceFidelity": "equations and parameter glyphs corrupted"
+        }
+      ]
+    },
+    {
+      "id": "1.7",
+      "questionStemsObserved": 3,
+      "provisionalSlots": 5,
+      "questions": [
+        {
+          "id": "g12-ex1.7-q1",
+          "subparts": [
+            "i",
+            "ii"
+          ],
+          "topic": "Homogeneous systems",
+          "sourceFidelity": "equations corrupted"
+        },
+        {
+          "id": "g12-ex1.7-q2",
+          "subparts": [
+            "i",
+            "ii"
+          ],
+          "topic": "Parameter values for unique/nontrivial solutions",
+          "sourceFidelity": "equations corrupted"
+        },
+        {
+          "id": "g12-ex1.7-q3",
+          "subparts": [],
+          "topic": "Balance chemical reaction by Gaussian elimination",
+          "sourceFidelity": "chemical formula subscripts corrupted"
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "questionIdsUnique": true,
+    "slotIdsUnique": true,
+    "provisionalTotalQuestions": 6,
+    "provisionalTotalSlots": 15,
+    "sourceCertified": 0,
+    "newSolutions": 0,
+    "mathChecks": "not applicable: no guessed equations or answers",
+    "mandatoryCI": "not run"
+  },
+  "denominatorCertified": false,
+  "wholeTextbookQuestionDenominator": null,
+  "wholeTextbookSubpartDenominator": null,
+  "publicationAllowed": false,
+  "tamilEditorialReview": "not started",
+  "unresolved": [
+    "Inspect original printed pages 42 and 47 as PDF page images to certify coefficients, symbols and chemistry subscripts.",
+    "Do not treat outcome labels as confirmed independent answer slots until image check.",
+    "No student-facing registration or cache changes without source fidelity and mandatory CI."
+  ],
+  "nextBatch": "Page-image verify Exercise 1.6 Q1(i-iv), Q2(i-iii), Q3(i-iii) and Exercise 1.7 Q1(i-ii), Q2(i-ii), Q3; then solve in verified batches."
+}
