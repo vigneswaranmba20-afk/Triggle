@@ -1,0 +1,74 @@
+{
+  "grade": 9,
+  "chapter": 9,
+  "exercise": "9.2",
+  "medium": "en",
+  "edition": "2025 revised",
+  "sourceId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+  "sourceUrl": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+  "sourceTitle": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+  "englishPages": [
+    {
+      "printed": 301,
+      "pdf": 307
+    },
+    {
+      "printed": 302,
+      "pdf": 308
+    }
+  ],
+  "visualChecked": false,
+  "tamilReference": {
+    "sourceId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+    "printedPages": [
+      318,
+      319
+    ],
+    "pdfPages": [
+      334,
+      335
+    ],
+    "studentFacingTranslation": "pending",
+    "humanEditorial": "pending"
+  },
+  "scope": "Exercise 9.2 Questions 1–4 only. Q5 (including three subparts and source table) still pending.",
+  "review": "Source text compared to connected English and Tamil PDFs; original page images and final release testing pending.",
+  "items": [
+    {
+      "id": "g9-ch9-ex9.2-q1",
+      "question": "A company manufactures 10000 Laptops in 6 months. Out of which 25 of them are found to be defective. When you choose one Laptop from the manufactured, what is the probability that selected Laptop is a good one.",
+      "printedPage": 301,
+      "pdfPage": 307,
+      "finalAnswer": "[[399|400]] = 0.9975",
+      "visualSourceCheck": "pending",
+      "studentFacingEnglish": "draft"
+    },
+    {
+      "id": "g9-ch9-ex9.2-q2",
+      "question": "In a survey of 400 youngsters aged 16-20 years, it was found that 191 have their voter ID card. If a youngster is selected at random, find the probability that the youngster does not have their voter ID card.",
+      "printedPage": 301,
+      "pdfPage": 307,
+      "finalAnswer": "[[209|400]]",
+      "visualSourceCheck": "pending",
+      "studentFacingEnglish": "draft"
+    },
+    {
+      "id": "g9-ch9-ex9.2-q3",
+      "question": "The probability of guessing the correct answer to a certain question is [[x|3]]. If the probability of not guessing the correct answer is [[x|5]], then find the value of x .",
+      "printedPage": 301,
+      "pdfPage": 307,
+      "finalAnswer": "x = [[15|8]]",
+      "visualSourceCheck": "pending",
+      "studentFacingEnglish": "draft"
+    },
+    {
+      "id": "g9-ch9-ex9.2-q4",
+      "question": "If a probability of a player winning a particular tennis match is 0.72. What is the probability of the player loosing the match?",
+      "printedPage": 302,
+      "pdfPage": 308,
+      "finalAnswer": "0.28",
+      "visualSourceCheck": "pending",
+      "studentFacingEnglish": "draft"
+    }
+  ]
+}
