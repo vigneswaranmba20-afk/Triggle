@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const doc=require('../data/g9-ex1-3-q3-content-only.json');
+const U=new Set(['a','b','c','d','e','f','g','h']);
+const A=new Set(['b','d','f','h']);
+const B=new Set(['a','d','e','h']);
+const diff=(x,y)=>new Set([...x].filter(v=>!y.has(v)));
+const union=(x,y)=>new Set([...x,...y]);
+const intersection=(x,y)=>new Set([...x].filter(v=>y.has(v)));
+const Ap=diff(U,A),Bp=diff(U,B);
+const results=[Ap,Bp,union(Ap,Bp),intersection(Ap,Bp),diff(U,union(A,B)),diff(U,intersection(A,B)),diff(U,Ap),diff(U,Bp)];
+assert.equal(doc.entries.length,8);
+assert.equal(new Set(doc.entries.map(e=>e.id)).size,8);
+doc.entries.forEach((entry,i)=>{assert.deepEqual(new Set(entry.expected),results[i]);assert(entry.steps.length>=3);assert(entry.answer.startsWith('{'));assert(entry.sourceVisualReview.includes('pending'));});
+assert.deepEqual(results[2],results[5]);assert.deepEqual(results[3],results[4]);
+console.log('PASS 8 set complement subparts, De Morgan identities, schema and unique IDs');
