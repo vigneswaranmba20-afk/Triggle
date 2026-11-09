@@ -478,12 +478,10 @@
  }
  function closeGuided(){if($('guidedDialog').open)$('guidedDialog').close();}
  function renderMode(){
-  const deepActive=$('guidedDialog').open;
-  $('tabQuick').classList.toggle('is-selected',!deepActive);
-  $('tabGuided').classList.toggle('is-selected',deepActive);
-  $('tabQuick').setAttribute('aria-pressed',String(!deepActive));
-  $('tabGuided').setAttribute('aria-pressed',String(deepActive));
+  // Quick solution stays as visible worked content, never a separate tab.
+  // Detailed explanation is the optional hard-problem dialog launcher.
   $('quickSteps').hidden=false;
+  $('tabGuided').setAttribute('aria-expanded',String($('guidedDialog').open));
  }
  function renderText(){
   // Icon-only controls on narrow readers still have full bilingual names.
@@ -491,7 +489,7 @@
   $('homeBtn').setAttribute('aria-label',ui('home'));
   $('questionReturn').setAttribute('aria-label',lang==='ta'?'அத்தியாய வழிசெலுத்தல்':'Chapter navigation');
   $('sidebar').setAttribute('aria-label',ui('navigationLabel'));$('exerciseList').setAttribute('aria-label',ui('navigationLabel'));$('search').setAttribute('aria-label',ui('searchLabel'));$('pathClose').setAttribute('aria-label',ui('closeNavigation'));$('closeSidebar').setAttribute('aria-label',ui('closeNavigation'));document.querySelector('.lang-switch').setAttribute('aria-label',ui('chooseLanguage'));document.querySelector('.side-brand small').textContent=ui('visualMathematics');$('deepPrevious').querySelector('span').textContent=ui('previousStage');
-  for(const [id,key] of [['crumb','navigationLabel'],['inlineFigureOpen','expandFigure'],['solutionModeRow','chooseExplanation'],['stepsRegion','completeSolution'],['quickSteps','quickSolution'],['stepsList','workedSolution'],['classDock','switchClass'],['closeGuided','backToQuestion'],['guidedSteps','currentConcept'],['deepStageDots','chooseStage'],['figureDialog','diagramDialog']])$(id).setAttribute('aria-label',ui(key));
+  for(const [id,key] of [['crumb','navigationLabel'],['inlineFigureOpen','expandFigure'],['solutionModeRow','explainSlowly'],['stepsRegion','completeSolution'],['quickSteps','quickSolution'],['stepsList','workedSolution'],['classDock','switchClass'],['closeGuided','backToQuestion'],['guidedSteps','currentConcept'],['deepStageDots','chooseStage'],['figureDialog','diagramDialog']])$(id).setAttribute('aria-label',ui(key));
   document.querySelector('.page-controls').setAttribute('aria-label',ui('navigateQuestions'));document.querySelector('.deep-nav').setAttribute('aria-label',ui('learningStages'));$('figureBtn').title=ui('figureLabel');
   document.documentElement.lang=lang;document.body.classList.toggle('lang-ta',lang==='ta');document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=ui(el.dataset.i18n));$('search').placeholder=ui('search');$('classSubtitle').textContent=ui('subtitle');$('langEn').classList.toggle('active',lang==='en');$('langTa').classList.toggle('active',lang==='ta');$('langEn').setAttribute('aria-pressed',String(lang==='en'));$('langTa').setAttribute('aria-pressed',String(lang==='ta'))}
  function renderDiscovery(){
@@ -533,7 +531,7 @@
        returnTo==='exercises'?(lang==='ta'?'அனைத்துப் பயிற்சிகளுக்கும் திரும்பு':'Back to all exercises'):
        (lang==='ta'?'அத்தியாயத்திற்குத் திரும்பு':'Back to chapter');
      $('questionReturnBtn').textContent='← '+label;
-     $('questionReturn').hidden=false;
+     // Fixed breadcrumbs and bottom Back to all chapters replace this duplicate row.
    }
   $('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;
   renderBreadcrumb(chapter);
@@ -591,7 +589,6 @@
  $('search').oninput=renderList;
  $('pathClose').onclick=()=>$('pathDialog').close();$('pathDialog').addEventListener('click',e=>{if(e.target===$('pathDialog'))$('pathDialog').close()});
  $('inlineFigureOpen').onclick=showDiagram;
- $('tabQuick').onclick=()=>{if($('guidedDialog').open)closeGuided();};
  $('tabGuided').onclick=()=>openGuided(undefined,$('tabGuided'));
  $('deepPrevious').onclick=()=>deepNavTo(deepStageIndex-1,true);
  $('deepNext').onclick=()=>{if(deepStageIndex===deepStageData.stages.length-1)closeGuided();else deepNavTo(deepStageIndex+1,true);};
