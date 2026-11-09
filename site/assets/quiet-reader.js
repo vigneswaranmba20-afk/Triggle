@@ -1,120 +1,48 @@
-/* Triggle lesson-first mobile reader.
-   The exercise label, complete question, final answer, worked steps, Back to
-   all chapters, and Previous/Next are ALWAYS available without touching.
-   Useful Figure controls and inline question diagrams are always visible.
-   First touch reveals only supplemental tools. The header and breadcrumbs stay fixed. */
+/* Permanent question reader: no touch-to-show or release-to-hide behavior.
+   Keep actions visible; scroll only the explanation for normal questions. */
 (() => {
   'use strict';
   const mobile=window.matchMedia('(max-width:800px)');
+  const body=document.body;
   const card=document.getElementById('lessonCard');
   const viewport=document.querySelector('.lesson-container');
-  if(!card||!viewport)return;
-
-  // Never put #questionNavDock, #stepsRegion, .question-top,
-  // .lesson-title-row, #figureBtn or #inlineFigure in this list:
-  // they are essential lesson controls/content.
-  // Header, class/chapter breadcrumbs, worked steps, and Detailed explanation
-  // are permanent controls/content. Touch only reveals optional extras.
-  const surfaces=[
-    '#visualLessonAction',
-    '.lesson-bottom','.reference-line','.bottom-extras','.class-dock'
-  ].map(selector=>document.querySelector(selector)).filter(Boolean);
-  const body=document.body;
-  const RELEASE_GRACE_MS=4200;
-  let active=false,visible=false,pressed=false,keyboard=false,hideTimer=0;
-
-  const modalOpen=()=>Boolean(document.querySelector('dialog[open]'))||
-    body.classList.contains('drawer-open');
-  const stop=()=>{window.clearTimeout(hideTimer);hideTimer=0;};
-
-  function setVisible(next){
+  const question=document.getElementById('questionText');
+  const answer=document.getElementById('answerBox');
+  const steps=document.getElementById('stepsRegion');
+  if(!card||!viewport||!question||!answer||!steps)return;
+  let active=false;
+  function measure(){
+    body.classList.remove('reader-long-question');
     if(!active)return;
-    if(!next&&(modalOpen()||keyboard||pressed))return;
-    stop();
-    visible=Boolean(next);
-    body.classList.toggle('reader-options-visible',visible);
-    for(const element of surfaces){
-      element.inert=!visible;
+    const box=card.getBoundingClientRect();
+    if(answer.getBoundingClientRect().bottom>box.bottom-72 ||
+       box.bottom-steps.getBoundingClientRect().top<72){
+      // Exceptional long questions must remain complete, never clipped.
+      body.classList.add('reader-long-question');
     }
   }
-  function hideLater(delay=RELEASE_GRACE_MS){
-    stop();
-    if(!active||!visible||pressed||keyboard)return;
-    hideTimer=window.setTimeout(()=>{
-      if(modalOpen()){hideLater();return;}
-      const focused=document.activeElement;
-      // Tab explicitly enables keyboard mode; mouse/touch focus must not
-      // accidentally latch extra controls open indefinitely.
-      if(focused&&surfaces.some(el=>el.contains(focused)))focused.blur();
-      setVisible(false);
-    },delay);
-  }
+  const schedule=()=>window.requestAnimationFrame(measure);
   function sync(){
-    const shouldActivate=mobile.matches&&body.classList.contains('textbook-reader')&&!card.hidden;
-    stop();
-    active=shouldActivate;
-    pressed=false;
-    keyboard=false;
-    visible=false;
+    active=mobile.matches&&body.classList.contains('textbook-reader')&&!card.hidden;
     body.classList.toggle('reader-peek',active);
-    body.classList.remove('reader-options-visible');
-    for(const element of surfaces)element.inert=active;
-    if(active&&modalOpen()){setVisible(true);hideLater();}
+    body.classList.toggle('reader-options-visible',active);
+    body.classList.remove('reader-long-question');
+    for(const sel of ['#visualLessonAction','.lesson-bottom','.class-dock']){
+      const el=document.querySelector(sel);
+      if(el)el.inert=false;
+    }
+    if(active)schedule();
   }
-
-  // First contact reveals optional controls immediately. Essential lesson
-  // content and navigation do not change or become hidden after release.
-  document.addEventListener('pointerdown',event=>{
-    if(!active||modalOpen()||!['touch','pen','mouse'].includes(event.pointerType))return;
-    pressed=true;keyboard=false;
-    setVisible(true);
-  },{capture:true,passive:true});
-  document.addEventListener('pointerup',()=>{
-    if(!active)return;
-    pressed=false;
-    if(visible)hideLater();
-  },{capture:true,passive:true});
-  document.addEventListener('pointercancel',()=>{
-    pressed=false;
-    if(active&&visible)hideLater(900);
-  },{capture:true,passive:true});
-  viewport.addEventListener('scroll',()=>{
-    if(active&&visible&&!pressed&&!keyboard)hideLater(900);
-  },{passive:true});
-
-  // Keyboard and assistive-tech users must always be able to reach controls.
-  document.addEventListener('keydown',event=>{
-    if(!active||modalOpen())return;
-    if(event.key==='Tab'){
-      keyboard=true;
-      setVisible(true);
-    }else if(event.key==='Escape'){
-      keyboard=false;
-      pressed=false;
-      setVisible(false);
-    }
-  },true);
-  document.addEventListener('focusin',event=>{
-    if(!active||modalOpen())return;
-    if(surfaces.some(el=>el.contains(event.target))&&event.target.matches(':focus-visible')&&!pressed){
-      keyboard=true;
-      setVisible(true);
-    }
-  },true);
-  document.addEventListener('visibilitychange',()=>{
-    if(document.hidden)stop();
-    else if(active&&visible)hideLater();
-  });
-  document.querySelectorAll('dialog').forEach(dialog=>{
-    dialog.addEventListener('close',()=>{if(active){keyboard=false;pressed=false;hideLater();}});
-  });
   window.addEventListener('triggle:lessonchange',sync);
   mobile.addEventListener('change',sync);
+  window.addEventListener('resize',schedule,{passive:true});
+  if(typeof ResizeObserver==='function'){
+    const resize=new ResizeObserver(schedule);
+    for(const el of [viewport,question,answer])resize.observe(el);
+  }
+  if(document.fonts?.ready)document.fonts.ready.then(schedule);
   sync();
   window.TriggleQuietReader=Object.freeze({
-    isActive:()=>active,
-    isVisible:()=>active&&visible,
-    reveal:()=>{keyboard=false;pressed=false;setVisible(true);hideLater();},
-    conceal:()=>{keyboard=false;pressed=false;setVisible(false);}
+    isActive:()=>active,isVisible:()=>active,reveal:()=>{},conceal:()=>{}
   });
 })();
