@@ -1,0 +1,91 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 18,
+    "pdfPage": "pending PDF page-image confirmation",
+    "fidelity": "2025 English PDF text layer checked; visual fidelity pending"
+  },
+  "exercise": "1.3",
+  "stem": "2. Find A∪B, A∩B, A–B and B–A for the following sets.",
+  "tamilStatus": "pending",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-3-q2-i",
+      "part": "i",
+      "question": "A = {2, 6, 10, 14} and B={2, 5, 14, 16}",
+      "steps": [
+        "List distinct elements: A = {2, 6, 10, 14} and B = {2, 5, 14, 16}.",
+        "The union contains all distinct elements from either set, so A∪B = {2, 6, 10, 14, 5, 16}; the intersection contains elements common to both, so A∩B = {2, 14}.",
+        "Remove elements of B from A to obtain A−B = {6, 10}; remove elements of A from B to obtain B−A = {5, 16}."
+      ],
+      "answer": "A∪B = {2, 6, 10, 14, 5, 16}; A∩B = {2, 14}; A−B = {6, 10}; B−A = {5, 16}.",
+      "expected": {
+        "union": "{2, 6, 10, 14, 5, 16}",
+        "intersection": "{2, 14}",
+        "aMinusB": "{6, 10}",
+        "bMinusA": "{5, 16}"
+      },
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "mathCheck": "Computed from independent Set union/intersection/difference operations; distinct-letter sets deduplicated."
+    },
+    {
+      "id": "g9-ch1-ex1-3-q2-ii",
+      "part": "ii",
+      "question": "A = {a, b, c, e, u} and B={a, e, i, o, u}",
+      "steps": [
+        "List distinct elements: A = {a, b, c, e, u} and B = {a, e, i, o, u}.",
+        "The union contains all distinct elements from either set, so A∪B = {a, b, c, e, u, i, o}; the intersection contains elements common to both, so A∩B = {a, e, u}.",
+        "Remove elements of B from A to obtain A−B = {b, c}; remove elements of A from B to obtain B−A = {i, o}."
+      ],
+      "answer": "A∪B = {a, b, c, e, u, i, o}; A∩B = {a, e, u}; A−B = {b, c}; B−A = {i, o}.",
+      "expected": {
+        "union": "{a, b, c, e, u, i, o}",
+        "intersection": "{a, e, u}",
+        "aMinusB": "{b, c}",
+        "bMinusA": "{i, o}"
+      },
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "mathCheck": "Computed from independent Set union/intersection/difference operations; distinct-letter sets deduplicated."
+    },
+    {
+      "id": "g9-ch1-ex1-3-q2-iii",
+      "part": "iii",
+      "question": "A = {x : x ∈N, x ≤ 10} and B={x : x ∈W, x < 6}",
+      "steps": [
+        "List distinct elements: A = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and B = {0, 1, 2, 3, 4, 5}.",
+        "The union contains all distinct elements from either set, so A∪B = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0}; the intersection contains elements common to both, so A∩B = {1, 2, 3, 4, 5}.",
+        "Remove elements of B from A to obtain A−B = {6, 7, 8, 9, 10}; remove elements of A from B to obtain B−A = {0}."
+      ],
+      "answer": "A∪B = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0}; A∩B = {1, 2, 3, 4, 5}; A−B = {6, 7, 8, 9, 10}; B−A = {0}.",
+      "expected": {
+        "union": "{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0}",
+        "intersection": "{1, 2, 3, 4, 5}",
+        "aMinusB": "{6, 7, 8, 9, 10}",
+        "bMinusA": "{0}"
+      },
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "mathCheck": "Computed from independent Set union/intersection/difference operations; distinct-letter sets deduplicated."
+    },
+    {
+      "id": "g9-ch1-ex1-3-q2-iv",
+      "part": "iv",
+      "question": "A = Set of all letters in the word “mathematics” and B = Set of all letters in the word “geometry”",
+      "steps": [
+        "List distinct elements: A = {m, a, t, h, e, i, c, s} and B = {g, e, o, m, t, r, y}.",
+        "The union contains all distinct elements from either set, so A∪B = {m, a, t, h, e, i, c, s, g, o, r, y}; the intersection contains elements common to both, so A∩B = {m, t, e}.",
+        "Remove elements of B from A to obtain A−B = {a, h, i, c, s}; remove elements of A from B to obtain B−A = {g, o, r, y}."
+      ],
+      "answer": "A∪B = {m, a, t, h, e, i, c, s, g, o, r, y}; A∩B = {m, t, e}; A−B = {a, h, i, c, s}; B−A = {g, o, r, y}.",
+      "expected": {
+        "union": "{m, a, t, h, e, i, c, s, g, o, r, y}",
+        "intersection": "{m, t, e}",
+        "aMinusB": "{a, h, i, c, s}",
+        "bMinusA": "{g, o, r, y}"
+      },
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "mathCheck": "Computed from independent Set union/intersection/difference operations; distinct-letter sets deduplicated."
+    }
+  ]
+}
