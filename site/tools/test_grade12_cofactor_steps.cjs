@@ -24,7 +24,8 @@ if(fs.existsSync(file)){
  // Each cofactor field must be separated by a real newline, not the literal characters \\n.
  const cofactorOutput=html.match(/document\.getElementById\('cofactor-result'\)\.textContent=([\s\S]*?);\n}/);
  assert.ok(cofactorOutput,'cofactor output renderer exists');
- assert.equal(cofactorOutput[1].split(String.raw`'\\\\n'`).length-1,0,'no literal backslash-n in student output');
- assert.equal(cofactorOutput[1].split(String.raw`'\\n'`).length-1,3,'position, minor and sign fields appear on separate lines');
+ const slash=String.fromCharCode(92);
+ assert.equal(cofactorOutput[1].split("'"+slash+slash+"n'").length-1,0,'no literal backslash-n in student output');
+ assert.equal(cofactorOutput[1].split("'"+slash+"n'").length-1,3,'position, minor and sign fields appear on separate lines');
 }
 console.log('PASS Grade 12 Q1(ii) cofactor, adjugate, determinant, identity and preview checks');
