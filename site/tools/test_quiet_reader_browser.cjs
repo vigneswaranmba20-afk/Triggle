@@ -33,12 +33,19 @@ async function run(){
    assert.ok(await page.locator('#stepsList li').count()>=3,'Steps must remain in DOM');
    if(width<=800){
     assert.equal(await page.evaluate(()=>window.TriggleQuietReader?.isActive()),true,'Mobile reader active');
-    for(const selector of ['.appbar','#questionNavDock','.status-row','#questionReturn',
-      '.question-top','.lesson-title-row','#stepsRegion','.lesson-bottom']){
-     assert.equal(await page.locator(selector).first().isVisible(),false,selector+' must be concealed at '+width);
+    for(const selector of ['.appbar','.status-row','#questionReturn','.lesson-bottom']){
+     assert.equal(await page.locator(selector).first().isVisible(),false,selector+' is an optional control at '+width);
     }
-    assert.equal(await page.locator('#questionText').isVisible(),true);
-    assert.equal(await page.locator('#answerBox').isVisible(),true);
+    for(const selector of ['.question-top','.lesson-title-row','#questionText','#answerBox','#stepsRegion',
+      '#questionNavDock','#allChaptersButton','#previous','#next']){
+     assert.equal(await page.locator(selector).isVisible(),true,selector+' MUST be visible without touching at '+width);
+    }
+    assert.match(await page.locator('#questionLabel').innerText(),/EXERCISE 9\.1/);
+    assert.match(await page.locator('#questionHead').innerText(),/Exercise 9\.1/);
+    assert.match(await page.locator('#stepsRegion').innerText(),/HOW IT WORKS/);
+    assert.match(await page.locator('#allChaptersButton').innerText(),/Back to all chapters/);
+    assert.equal(await page.locator('#questionNavDock').getAttribute('hidden'),null,
+      'Essential controls must not be hidden by HTML state');
 
     // Press down, not click: controls appear while the finger is still touching.
     await page.mouse.move(160,240);
@@ -46,23 +53,30 @@ async function run(){
     assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),true,'Touch-down immediately reveals');
     assert.equal(await page.locator('.appbar').isVisible(),true);
     assert.equal(await page.locator('#questionNavDock').isVisible(),true);
-    assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Explanation appears when requested');
+    assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Explanation stays visible during touch');
+    assert.equal(await page.locator('.lesson-bottom').isVisible(),true,'Additional options are revealed by touch');
     await page.mouse.up();
     assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Give time to select an option after release');
     await page.waitForFunction(()=>!document.body.classList.contains('reader-options-visible'),null,{timeout:8000});
-    assert.equal(await page.locator('#questionNavDock').isVisible(),false,'Return to question/answer only');
+    assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Navigation must NEVER disappear');
+    assert.equal(await page.locator('#stepsRegion').isVisible(),true,'How it works must NEVER disappear');
+    assert.equal(await page.locator('.appbar').isVisible(),false,'Only extra chrome is concealed');
 
     await page.keyboard.press('Tab');
-    assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Keyboard reveals controls');
+    assert.equal(await page.locator('.appbar').isVisible(),true,'Keyboard reveals optional controls');
+    assert.equal(await page.locator('#questionNavDock').isVisible(),true);
     await page.keyboard.press('Escape');
-    assert.equal(await page.locator('#questionNavDock').isVisible(),false,'Escape conceals controls');
+    assert.equal(await page.locator('.appbar').isVisible(),false,'Escape conceals optional controls');
+    assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Escape does not conceal navigation');
 
     // Navigate from the now-available controls without losing the new question.
     await page.mouse.move(150,220);await page.mouse.down();await page.mouse.up();
     await page.locator('#next').click();
     await page.waitForFunction(()=>new URL(location.href).searchParams.get('question')==='g9-ch9-ex9.1-q5');
     assert.equal(await page.locator('#answerBox').isVisible(),true);
-    assert.equal(await page.locator('#questionNavDock').isVisible(),false,'New question starts quiet');
+    assert.equal(await page.locator('#questionNavDock').isVisible(),true,'New question retains navigation');
+    assert.equal(await page.locator('#stepsRegion').isVisible(),true,'New question retains how it works');
+    assert.match(await page.locator('#questionLabel').innerText(),/EXERCISE 9\.1/);
     assert.ok((await page.locator('#questionText').innerText()).includes('two coins'));
     const m=await page.evaluate(()=>({w:innerWidth,doc:document.documentElement.scrollWidth}));
     assert.ok(m.doc<=m.w+1,'No horizontal overflow at '+width);
@@ -74,7 +88,7 @@ async function run(){
    assert.deepEqual(errors,[],'JavaScript errors at width '+width);
    await context.close();
   }
-  console.log('PASS: question/answer-only mobile entry, first-contact options, release auto-hide, keyboard and next-question resets at 320/390px; desktop remains unchanged.');
+  console.log('PASS: essential-first mobile entry shows exercise, Q+A, worked steps, Back to all chapters and Previous/Next without touch; touch reveals extras, and next-question resets at 320/390px; desktop unchanged.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 run().catch(error=>{console.error(error);process.exitCode=1;});
