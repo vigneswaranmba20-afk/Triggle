@@ -43,6 +43,8 @@ async function main(){
      await page.mouse.move(145,230);await page.mouse.down();
      assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),true,'Touch-down opens all optional controls');
      assert.equal(await page.locator('.appbar').isVisible(),true,'Main header available after touch');
+     assert.equal(await page.locator('.lesson-bottom').isVisible(),true,
+       'Touch must show Mark learned and other optional controls even on narrow phones');
      assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Touch must not disrupt solution');
      assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Touch must not disrupt page navigation');
      await page.mouse.up();

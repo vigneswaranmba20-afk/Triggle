@@ -16,6 +16,15 @@
   body.textbook-reader.reader-peek:not(.reader-options-visible) .class-dock{
     display:none!important;
   }
+  /* Legacy mobile styles hide these extras with !important. Reveal them when
+     the student touches, without changing the always-visible lesson or dock. */
+  body.textbook-reader.reader-peek.reader-options-visible .lesson-card>.lesson-bottom{
+    display:flex!important;
+  }
+  body.textbook-reader.reader-peek.reader-options-visible .reference-line,
+  body.textbook-reader.reader-peek.reader-options-visible .bottom-extras{
+    display:flex!important;
+  }
   body.textbook-reader.reader-peek .focus-nav-toggle{display:none!important}
   /* Do not hide #questionNavDock, .question-top, .lesson-title-row,
      #questionText, #answerBox or #stepsRegion in any reader state. */
