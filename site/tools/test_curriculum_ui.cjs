@@ -303,7 +303,14 @@ async function main() {
         assert.ok(Math.abs(geo.readerBottom-geo.top)<3,'No overlap with scrollable solutions');
         assert.ok(geo.bottom<=geo.screen+3,'Reader dock remains inside the viewport');
         await page.evaluate(()=>{document.querySelector('.lesson-container').scrollTop=10000;});
-        assert.ok(Math.abs((await nav.boundingBox()).y-geo.top)<3,'Reading scroll must not move navigation');
+        const afterScroll=await nav.boundingBox();
+        const navState=await page.evaluate(()=>({
+          scroll:document.querySelector('.lesson-container').scrollTop,
+          fallback:document.body.classList.contains('reader-long-question'),
+          readerHeight:document.querySelector('.lesson-container').clientHeight,
+          navY:document.getElementById('questionNavDock').getBoundingClientRect().top
+        }));
+        assert.ok(Math.abs(afterScroll.y-geo.top)<3,'Reading scroll must not move navigation: '+JSON.stringify({before:geo.top,after:afterScroll.y,...navState}));
         await page.locator('#next').click();
         assert.notEqual(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
         await page.locator('#previous').click();
