@@ -49,7 +49,15 @@ async function main(){
      assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Touch must not disrupt solution');
      assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Touch must not disrupt page navigation');
      await page.mouse.up();
-     await page.waitForFunction(()=>!document.body.classList.contains('reader-options-visible'),null,{timeout:8000});
+     await page.waitForTimeout(5500);
+     console.log('READER AUTO-HIDE DIAGNOSTICS',width,id,await page.evaluate(()=>({
+       state:window.TriggleQuietReader.debugState(),
+       focus:document.activeElement?.id,
+       tag:document.activeElement?.tagName,
+       dialog:document.querySelector('dialog[open]')?.id,
+       body:document.body.className
+     })));
+     await page.waitForFunction(()=>!document.body.classList.contains('reader-options-visible'),null,{timeout:2500});
      assert.equal(await page.locator('.appbar').isVisible(),true,'Header stays fixed after extras retract');
      assert.equal(await page.locator('.status-row').isVisible(),true,'Breadcrumb stays visible after extras retract');
      assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Worked steps persist after release');
