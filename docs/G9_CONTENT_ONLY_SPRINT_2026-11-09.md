@@ -25,3 +25,10 @@ Fill mathematics content first. Do **not** spend time inspecting or redesigning 
 
 ## Content-only developer check
 `node site/tools/test_g9_ch9_content_only.cjs`
+
+## 14:08 IST Grade 9 bulk increment — Exercise 1.2 Q4–Q6
+- Added 11 new English source-text-layer entries: Q4(i–iv), Q5(i–iii), Q6(i–iv), printed p.12 (PDF-page and image verification pending). Original question stems and subpart text are recorded; no figure dependencies for these entries.
+- Content files: `site/data/g9-ex1-2-q4-content-only.json`, `...q5...`, `...q6...`. Each has three explanation steps, answer, math-check description, edition, source Drive ID, and pending Tamil and visual-review flags.
+- Added executable Node test `site/tools/test_g9_ex1_2_q4_q6_content_only.cjs`; test file committed but its Node execution and CI not confirmed this turn. Connector-side JavaScript assertions for basic cardinality and intersection passed; schema and 11-ID uniqueness checked before writing.
+- All new entries remain staged, unregistered in live UI, unmerged, undeployed; no claim of page-image fidelity or Tamil review.
+- Next: Exercise 1.2 Q7 (nested set; preserve distinction between a and {a,b}), then Q8(i–iv) power sets; check source and add tests. Also revisit Q1(iii) fraction visual ambiguity.
