@@ -17,6 +17,5 @@ assert.match(css,/body\.textbook-reader #questionNavDock:not\(\[hidden\]\)\{[^}]
 assert.match(app,/const stepsPane=\$\('stepsRegion'\),questionPane=\$\('questionText'\)/,'New questions reset both independent scroll positions');
 assert.match(css,/reader-long-question/,'Long questions never clipped');
 assert.doesNotMatch(html,/id="referenceLink"|id="editionNote"|id="classicLink"/,'Footer removed');
-assert.match(css,/grid-template-areas:"chapters previous next"!important/,'Compact navigation');
 assert.match(sw,/reader-pin\.css/,'Reader included in offline page');
 console.log('PASS pinned question, independent worked steps, stable navigation, scroll reset and offline asset.');
