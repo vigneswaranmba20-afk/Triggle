@@ -41,7 +41,15 @@
   return window.TriggleNotation ? window.TriggleNotation.render(str) : esc(str);
  }
 
- const activeList=()=>classes[grade].items;
+ // Within textbook exercises, Previous/Next follows only that chapter's
+ // exercise sequence (never original practice or an unrelated chapter).
+ const textbookExerciseList=chapter=>chapter
+   ?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[])
+   :[];
+ const activeList=()=>{
+   const chapter=chapterForItem(current),exercises=textbookExerciseList(chapter);
+   return exercises.some(item=>item.id===current.id)?exercises:classes[grade].items;
+ };
  const currentIndex=()=>activeList().findIndex(i=>i.id===current.id);
  const sectionForQuestion=item=>/^\s*Example\b/i.test(item?.label?.en||'')?'examples':'exercises';
  const num=n=>String(n).padStart(2,'0');
@@ -100,8 +108,8 @@
    updateUrl();remember();render();closeDrawer();resetScroll();
    $('lessonCard').focus({preventScroll:true});
  }
- // Predictable hierarchy: Class → Chapter sections → Question list → Question.
- // Preserve every available lesson without silently bypassing its section menu.
+ // Chapter menus remain explicit; Exercises intentionally opens the first
+ // available textbook problem directly, without intermediate practice lists.
  function selectChapter(chapter){
    homeView=false;classIndex=false;chapterOverview=chapter;chapterSection=null;conceptIndex=null;
    questionOrigin=null;
@@ -110,6 +118,21 @@
  }
  function openChapterSection(section,chapter=chapterOverview,concept=null){
    if(!chapter||(!validSections.has(section)&&section!==null))return;
+   if(section==='exercises'){
+     const exercises=textbookExerciseList(chapter);
+     if(exercises.length){
+       // Exercise N.1 Q1 is the first textbook entry in the chapter sequence.
+       // Retain legacy practice data, but do not present it as textbook content.
+       homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;
+       conceptIndex=null;current=exercises[0];
+       questionOrigin={grade,chapterId:chapter.id,section:'exercises',direct:true};
+       updateUrl();remember();render();closeDrawer();resetScroll();
+       $('lessonCard').focus({preventScroll:true});
+       return;
+     }
+     // No textbook question yet: keep an honest empty-state section instead
+     // of redirecting children into an unrelated Triggle practice problem.
+   }
    homeView=false;classIndex=false;chapterOverview=chapter;
    chapterSection=section;conceptIndex=Number.isInteger(concept)?concept:null;
    updateUrl();render();closeDrawer();resetScroll();
@@ -504,7 +527,9 @@
      const cameFrom=questionOrigin?.grade===grade&&questionOrigin?.chapterId===questionChapter.id;
      const returnTo=cameFrom&&['examples','exercises'].includes(questionOrigin.section)
        ?questionOrigin.section:sectionForQuestion(current);
-     const label=returnTo==='examples'?(lang==='ta'?'தீர்க்கப்பட்ட எடுத்துக்காட்டுகளுக்குத் திரும்பு':'Back to worked examples'):
+     const isTextbookExercise=textbookExerciseList(questionChapter).some(item=>item.id===current.id);
+     const label=isTextbookExercise?(lang==='ta'?'அத்தியாயத்திற்குத் திரும்பு':'Back to chapter'):
+       returnTo==='examples'?(lang==='ta'?'தீர்க்கப்பட்ட எடுத்துக்காட்டுகளுக்குத் திரும்பு':'Back to worked examples'):
        returnTo==='exercises'?(lang==='ta'?'அனைத்துப் பயிற்சிகளுக்கும் திரும்பு':'Back to all exercises'):
        (lang==='ta'?'அத்தியாயத்திற்குத் திரும்பு':'Back to chapter');
      $('questionReturnBtn').textContent='← '+label;
@@ -552,6 +577,11 @@
  $('questionReturnBtn').onclick=()=>{
    const chapter=chapterForItem(current);
    if(!chapter)return;
+   // The Exercises card no longer has a question-list landing page.
+   if(textbookExerciseList(chapter).some(item=>item.id===current.id)){
+     selectChapter(chapter);
+     return;
+   }
    const section=questionOrigin?.grade===grade&&questionOrigin?.chapterId===chapter.id&&
      ['examples','exercises'].includes(questionOrigin.section)
        ?questionOrigin.section:sectionForQuestion(current);
