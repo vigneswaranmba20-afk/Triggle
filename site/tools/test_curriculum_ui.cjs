@@ -105,8 +105,8 @@ async function main() {
         assert.equal(await page.locator('#answerBox').isVisible(),true,'Final answer remains first');
         assert.equal(await page.locator('#vlInlinePanel').count(),0,'No inline player should require scrolling');
         assert.equal(await page.locator('#vlFullscreen').count(),0,'No redundant fullscreen button');
-        assert.equal(await page.locator('#tabQuick').getAttribute('aria-pressed'),'true');
-        assert.equal(await page.locator('#tabGuided').getAttribute('aria-pressed'),'false');
+        assert.equal(await page.locator('#tabQuick').count(),0,'Redundant Quick solution button removed');
+        assert.equal(await page.locator('#quickSteps').isVisible(),true,'Complete Quick solution remains visible');
         assert.match(await button.innerText(),/Check out the video explanation/);
         assert.equal(await button.getAttribute('aria-haspopup'),'dialog');
         if(width<=390){
@@ -492,7 +492,7 @@ async function main() {
         assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
         assert.equal(await page.locator('#answerBox').isVisible(),true);
         assert.equal(await page.locator('#chapterMenuBtn').count(),0,'No extra Chapter sections button');
-        assert.match(await page.locator('#questionReturnBtn').innerText(),/Back to worked examples/);
+        assert.equal(await page.locator('#questionReturn').isVisible(),false,'No redundant worked-example return above the question');
         await page.locator('#crumb .crumb-link').nth(1).click();
         assert.equal(await page.locator('#pathDialog').evaluate(el=>el.open),true);
         assert.match(await page.locator('#pathTitle').innerText(),/Choose a chapter/);
@@ -513,7 +513,7 @@ async function main() {
         assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Real Numbers');
         await page.goBack();
         assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
-        await page.locator('#questionReturnBtn').click();
+        await page.goBack();
         assert.equal(new URL(page.url()).searchParams.get('section'),'examples');
         assert.equal(await page.locator('.hub-question').count(),35);
         await page.locator('.hub-back-menu').click();
@@ -613,8 +613,8 @@ async function main() {
         'No All questions filter or Original Triggle practice cards before Q1');
       assert.equal(await page.evaluate(()=>window.TRIGGLE_CLASSES[9].items.some(q=>q.id==='c9-1-1-practice-1')),true,
         'Previously stored practice must not be deleted from the data');
-      assert.match(await page.locator('#questionReturnBtn').innerText(),/Back to chapter/);
-      await page.locator('#questionReturnBtn').click();
+      assert.equal(await page.locator('#questionReturn').isVisible(),false,'No redundant question return row');
+      await page.goBack();
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
       assert.equal(new URL(page.url()).searchParams.has('section'),false);
       await page.locator('#homeBtn').click();
@@ -701,7 +701,7 @@ async function main() {
       assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i',
         'Tamil Exercises opens the actual first textbook question directly');
       assert.match(await page.locator('#questionText').innerText(),/1\. பின்வருவனவற்றில்/);
-      await page.locator('#questionReturnBtn').click();
+      await page.goBack();
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1',
         'Back from an exercise must return to the chapter choices');
       await gotoWithControls(page,url+'/index.html?class=9&chapter=g9-ch2');
@@ -800,8 +800,8 @@ async function main() {
       assert.equal(await page.locator('.hub-question').count(),0);
       assert.equal(await page.locator('#lessonCard').isVisible(),true);
       assert.ok((await page.locator('#stepsList li').count())>0,'Existing worked solution remains accessible');
-      assert.match(await page.locator('#questionReturnBtn').innerText(),/Back to chapter/);
-      await page.locator('#questionReturnBtn').click();
+      assert.equal(await page.locator('#questionReturn').isVisible(),false,'No redundant question return row');
+      await page.goBack();
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch6');
       assert.equal(new URL(page.url()).searchParams.has('section'),false);
       assert.equal(await page.locator('.hub-section-card').count(),4);
@@ -908,10 +908,10 @@ async function main() {
         await page.locator('#tabGuided').click();
         assert.equal(await page.locator('#guidedDialog').evaluate(el=>el.open),true);
         await page.locator('#closeGuided').click();
-        await page.locator('#questionReturnBtn').click();
+        await page.goBack();
         await page.locator('.hub-question').nth(3).click();
         assert.equal(await page.locator('#solutionModeRow').isVisible(),false,'easy problem has no detailed tab');
-        await page.locator('#questionReturnBtn').click();
+        await page.goBack();
         await page.locator('.hub-question').nth(12).click();
         assert.equal(await page.locator('#figureBtn').isVisible(),true,'number line has figure icon');
         await page.locator('#figureBtn').click();
@@ -961,7 +961,7 @@ async function main() {
           assert.equal(await page.locator('#answerText .twd-final-row').count(),0);
           assert.equal(await page.locator('#stepsList .twd-part-solution').count(),4);
           await noOverflow(page,'Example 2.12 Tamil worked example at 390px');
-          await page.locator('#questionReturnBtn').click();
+          await page.goBack();
           await page.locator('.hub-question').nth(10).click();
           assert.equal(await page.locator('#lessonCard.twd-lesson').count(),0,'Other worked examples remain unchanged');
           assert.equal(await page.locator('#stepsList li').count(),2,'Other example steps still work');
