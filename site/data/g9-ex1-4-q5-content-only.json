@@ -1,0 +1,30 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 22,
+    "pdfPage": "pending page-image confirmation",
+    "fidelity": "2025 English PDF text layer checked; exact symbols and C set must be checked against original printed page image before merge"
+  },
+  "exercise": "1.4",
+  "tamilStatus": "pending",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-4-q5",
+      "question": "5. If A = {x : x = n², n ∈ W and n < 4}, B = {x : x = n², n ∈ N and n ≤ 4} and C = {0, 1, 2, 5, 6}, then verify the associative property of intersection of sets.",
+      "sourceTranscriptionStatus": "provisional — C roster and squared-expression typesetting require page-image comparison",
+      "steps": [
+        "The whole numbers n less than 4 are 0, 1, 2, 3. Squaring gives A = {0, 1, 4, 9}.",
+        "The natural numbers n at most 4 are 1, 2, 3, 4. Squaring gives B = {1, 4, 9, 16}.",
+        "Compute A ∩ B = {1, 4, 9}. Then (A ∩ B) ∩ C = {1}, since only 1 also belongs to C.",
+        "Compute B ∩ C = {1}. Then A ∩ (B ∩ C) = {1}.",
+        "The two sides are identical: (A ∩ B) ∩ C = A ∩ (B ∩ C) = {1}. This verifies associativity of intersection for these sets."
+      ],
+      "answer": "(A ∩ B) ∩ C = A ∩ (B ∩ C) = {1}.",
+      "mathCheck": "independent finite-set enumeration passed",
+      "sourceVisualReview": "pending",
+      "tamilStatus": "pending"
+    }
+  ]
+}
