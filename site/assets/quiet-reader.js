@@ -12,12 +12,12 @@
   if(!card||!viewport||!question||!answer||!steps)return;
   let active=false;
   function measure(){
-    body.classList.remove('reader-long-question');
-    if(!active)return;
+    if(!active||body.classList.contains('reader-long-question'))return;
     const box=card.getBoundingClientRect();
-    if(answer.getBoundingClientRect().bottom>box.bottom-72 ||
+    // Do not repeatedly toggle the overflow mode when ResizeObserver runs:
+    // that would reset scroll positions and move the navigation dock.
+    if(question.getBoundingClientRect().bottom>box.bottom-72 ||
        box.bottom-steps.getBoundingClientRect().top<72){
-      // Exceptional long questions must remain complete, never clipped.
       body.classList.add('reader-long-question');
     }
   }
@@ -35,7 +35,10 @@
   }
   window.addEventListener('triggle:lessonchange',sync);
   mobile.addEventListener('change',sync);
-  window.addEventListener('resize',schedule,{passive:true});
+  window.addEventListener('resize',()=>{
+    body.classList.remove('reader-long-question');
+    schedule();
+  },{passive:true});
   if(typeof ResizeObserver==='function'){
     const resize=new ResizeObserver(schedule);
     for(const el of [viewport,question,answer])resize.observe(el);

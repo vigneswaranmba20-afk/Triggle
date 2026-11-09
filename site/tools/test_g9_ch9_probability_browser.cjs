@@ -41,7 +41,8 @@ async function main(){
    assert.match(await page.locator('#questionText').innerText(),/There are 24 balls in a pot/);
    assert.match(await page.locator('#questionText').innerText(),/Green ball/);
    assert.ok((await page.locator('#stepsList').innerText()).includes('24'),'Complete question and steps');
-   assert.equal(await page.locator('#answerBox').isVisible(),true,'Final answer accessible');
+   assert.equal(await page.locator('#answerBox').isVisible(),false,'No duplicate final answer card');
+    assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Answer highlighted at end of How it works');
    const metrics=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
    assert.ok(metrics.document<=metrics.viewport+1,'Horizontal scroll on '+width+'px');
    await gotoWithControls(page,base+'/index.html?class=9&question=g9-ch9-ex9.1-q6');

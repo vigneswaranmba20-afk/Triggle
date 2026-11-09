@@ -41,7 +41,8 @@ async function run(){
      assert.equal(actual.get('question'),snapshot.expected[0],id+' must open its first textbook item');
      assert.equal(actual.has('section'),false,'No list section route after Exercises click');
      assert.equal(await page.locator('#questionText').isVisible(),true,'Question shown at '+width);
-     assert.equal(await page.locator('#answerBox').isVisible(),true,'Answer shown at '+width);
+     assert.equal(await page.locator('#answerBox').isVisible(),false,'No duplicate final-answer box at '+width);
+     assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Final answer follows How it works at '+width);
      assert.equal(await page.locator('#chapterOverview').isVisible(),false,'No practice/filter screen');
      if(width<=800)assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Lesson starts with question, answer and all worked steps visible');
      if(snapshot.expected.length>1){

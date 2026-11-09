@@ -102,7 +102,8 @@ async function main() {
         const button=page.locator('#visualLessonBtn');
         await button.waitFor({state:'visible'});
         assert.equal(await page.locator('#quickSteps').isVisible(),true,'Written quick solution first');
-        assert.equal(await page.locator('#answerBox').isVisible(),true,'Final answer remains first');
+        assert.equal(await page.locator('#answerBox').isVisible(),false,'Separate answer card removed');
+        assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Answer highlighted at the end of How it works');
         assert.equal(await page.locator('#vlInlinePanel').count(),0,'No inline player should require scrolling');
         assert.equal(await page.locator('#vlFullscreen').count(),0,'No redundant fullscreen button');
         assert.equal(await page.locator('#tabQuick').count(),0,'Redundant Quick solution button removed');
@@ -295,21 +296,28 @@ async function main() {
         });
         assert.equal(geo.position,'relative','Dock must reserve layout space');
         assert.match(geo.rows,/chapters chapters/,'Chapter return owns the first row');
-        assert.ok(geo.buttons.every(b=>Math.abs(b.font-16)<.25&&b.height>=48),'All 3 actions use 16px readable touch targets');
+        assert.ok(geo.buttons.every(b=>Math.abs(b.font-14)<.25&&b.height>=44),'All 3 actions use slightly smaller text but retain 44px touch targets');
         const [prev,all,next]=geo.buttons;
         assert.ok(all.top<prev.top&&Math.abs(prev.top-next.top)<2,'Previous and Next share the second row');
         assert.ok(Math.abs(prev.width-next.width)<3,'Previous and Next share equal space');
         assert.ok(Math.abs(geo.readerBottom-geo.top)<3,'No overlap with scrollable solutions');
         assert.ok(geo.bottom<=geo.screen+3,'Reader dock remains inside the viewport');
         await page.evaluate(()=>{document.querySelector('.lesson-container').scrollTop=10000;});
-        assert.ok(Math.abs((await nav.boundingBox()).y-geo.top)<3,'Reading scroll must not move navigation');
+        const afterScroll=await nav.boundingBox();
+        const navState=await page.evaluate(()=>({
+          scroll:document.querySelector('.lesson-container').scrollTop,
+          fallback:document.body.classList.contains('reader-long-question'),
+          readerHeight:document.querySelector('.lesson-container').clientHeight,
+          navY:document.getElementById('questionNavDock').getBoundingClientRect().top
+        }));
+        assert.ok(Math.abs(afterScroll.y-geo.top)<3,'Reading scroll must not move navigation: '+JSON.stringify({before:geo.top,after:afterScroll.y,...navState}));
         await page.locator('#next').click();
         assert.notEqual(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
         await page.locator('#previous').click();
         assert.equal(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
         await page.locator('#langTa').click();
         assert.match(await page.locator('#allChaptersButton').innerText(),/அனைத்து அத்தியாயங்களுக்கும்/);
-        assert.ok((await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>parseFloat(getComputedStyle(el).fontSize)))).every(n=>Math.abs(n-16)<.25));
+        assert.ok((await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>parseFloat(getComputedStyle(el).fontSize)))).every(n=>Math.abs(n-14)<.25));
         await noOverflow(page,'nonfloating navigation at '+width+'px');
         await page.locator('#allChaptersButton').click();
         assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
@@ -490,7 +498,8 @@ async function main() {
         assert.equal(await page.locator('#lessonCard').isVisible(),false);
         await page.locator('.hub-question').first().click();
         assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
-        assert.equal(await page.locator('#answerBox').isVisible(),true);
+        assert.equal(await page.locator('#answerBox').isVisible(),false);
+        assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
         assert.equal(await page.locator('#chapterMenuBtn').count(),0,'No extra Chapter sections button');
         assert.equal(await page.locator('#questionReturn').isVisible(),false,'No redundant worked-example return above the question');
         await page.locator('#crumb .crumb-link').nth(1).click();
@@ -892,7 +901,8 @@ async function main() {
       assert.match(await page.locator('.hub-question').last().innerText(),/Example 1\.35/);
       await noOverflow(page,'mobile chapter-first drawer');
       await page.locator('.hub-question').first().click();
-      assert.equal(await page.locator('#stepsList li').count(),2,'Example 1.1 has two worked steps');
+      assert.equal(await page.locator('#stepsList .worked-step:not(.final-answer-step)').count(),2,'Example 1.1 retains two mathematical steps');
+      assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Its final answer follows both steps');
       assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
     });
     for(const width of [320,390,1280]){
@@ -964,7 +974,8 @@ async function main() {
           await page.goBack();
           await page.locator('.hub-question').nth(10).click();
           assert.equal(await page.locator('#lessonCard.twd-lesson').count(),0,'Other worked examples remain unchanged');
-          assert.equal(await page.locator('#stepsList li').count(),2,'Other example steps still work');
+          assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Other examples end with their answer');
+          assert.equal(await page.locator('#stepsList li').count(),3,'Original two worked steps plus a final answer');
         }
       });
     }
@@ -1208,7 +1219,8 @@ async function main() {
     await check('legacy progress, diagrams and immersive lessons survive chapter navigation', async () => {
       const page = await visit(await context(1280), '/index.html?class=9&question=c9-example-6-2');
       const question = await page.locator('#questionText').innerText();
-      await page.locator('#markDone').click();
+      assert.equal(await page.locator('#markDone').isVisible(),false,'Progress control removed from question view');
+      await page.locator('#markDone').evaluate(el=>el.click());
       assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'), 'true');
       await page.reload();
       assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'), 'true');
@@ -1399,7 +1411,7 @@ async function main() {
         assert.equal(await cards.count(),30,'All 30 source-matched textbook subparts must appear in Exercises');
         await page.locator('#chapterOverview [data-question-id="g9-ch1-ex1.1-q1-i"]').click();
         assert.match(await page.locator('#questionText').innerText(),/1\. Which of the following are sets\?\s*\(i\) The collection of prime numbers upto 100\./,'Display the original 2025 English textbook question, including its unmodified spelling');
-        assert.equal(await page.locator('#stepsList li').count(),3);
+        assert.equal(await page.locator('#stepsList li').count(),4);
         assert.match(await page.locator('#answerText').innerText(),/set/i);
         await page.locator('#langTa').click();
         assert.match(await page.locator('#questionText').innerText(),/1\. பின்வருவனவற்றில் எவை கணங்களாகும்\?\s*\(i\) ஒன்று முதல் 100 வரையுள்ள பகா எண்களின் தொகுப்பு\./,'Preserve textbook-exact Tamil source wording');
@@ -1408,10 +1420,10 @@ async function main() {
         await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-iv');
         await page.locator('#stepsList li').first().waitFor({state:'visible'});
         assert.match(await page.locator('#answerText').innerText(),/C, Z, E, H, O, S, L, V, A, K, I/);
-        assert.equal(await page.locator('#stepsList li').count(),3);
+        assert.equal(await page.locator('#stepsList li').count(),4);
         await noOverflow(page,'Grade 9 Q2 mobile at '+width+'px');
         await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-a-i');
-        await page.locator('#answerText').waitFor({state:'visible'});
+        await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
         await page.locator('#langEn').click(); // Language persists from the preceding Tamil navigation test.
         assert.match(await page.locator('#questionText').innerText(),/State whether True or False:\s*\(i\) 18 ∈ C/,'Keep Q3 original source wording and membership glyph');
         assert.match(await page.locator('#answerText').innerText(),/True/);
@@ -1420,12 +1432,12 @@ async function main() {
         assert.match(await page.locator('#questionText').innerText(),/சரியா,\s*தவறா/,'Keep original Tamil textbook punctuation');
         await noOverflow(page,'Grade 9 Q3(a) Tamil at '+width+'px');
         await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-b-i');
-        await page.locator('#answerText').waitFor({state:'visible'});
+        await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
         assert.match(await page.locator('#questionText').innerText(),/3 ∈/);
         assert.equal((await page.locator('#answerText').innerText()).trim(),'A');
         await noOverflow(page,'Grade 9 Q3(b) mobile at '+width+'px');
         await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q5-ii');
-        await page.locator('#answerText').waitFor({state:'visible'});
+        await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
         await page.locator('#langEn').click(); // The preceding Q3(b) check leaves the language in Tamil.
         await page.locator('#langTa').click();
         assert.match(await page.locator('#questionText').innerText(),/பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக/,'Q5 Tamil textbook wording');
@@ -1434,7 +1446,7 @@ async function main() {
         assert.ok((await page.locator('#stepsList li').count())>=3,'Q5 requires three reasoning steps');
         await noOverflow(page,'Grade 9 Q5 fraction problem at '+width+'px');
         await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q6-iv');
-        await page.locator('#answerText').waitFor({state:'visible'});
+        await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
         assert.match(await page.locator('#questionText').innerText(),/consonant in English alphabet/);
         assert.match(await page.locator('#answerText').innerText(),/English consonants/);
         await noOverflow(page,'Grade 9 Q6 descriptive problem at '+width+'px');
@@ -1444,7 +1456,7 @@ async function main() {
     for(const width of [320,390,768,1280]){
       await check('Textbook breadcrumb and non-overlapping three-action reader dock at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=9&question=g9-ch1-ex1.1-q5-ii');
-        await page.locator('#answerText').waitFor({state:'visible'});
+        await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
         assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('textbook-reader')),true);
         const nav=page.locator('#questionNavDock');
         assert.equal(await nav.isVisible(),true);
@@ -1466,14 +1478,14 @@ async function main() {
         assert.ok(layout.headingSizes.every(x=>x>=16),'All three breadcrumb labels must be at least 16px: '+JSON.stringify(layout));
         assert.ok(layout.font>=16,'Breadcrumb text must be large enough to read: '+JSON.stringify(layout));
         const actionGrid=await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>({font:parseFloat(getComputedStyle(el).fontSize),top:el.getBoundingClientRect().top,width:el.getBoundingClientRect().width})));
-        assert.ok(actionGrid.every(v=>Math.abs(v.font-16)<.25),'All 3 reader buttons share a 16px font');
+        assert.ok(actionGrid.every(v=>Math.abs(v.font-(width<=800?14:16))<.25),'Compact mobile font is 14px, desktop remains 16px');
         if(width<=800){
           const [previous,all,next]=actionGrid;
           assert.ok(all.top<previous.top&&Math.abs(previous.top-next.top)<2,'Back first row, two equal navigation actions below');
           assert.ok(Math.abs(previous.width-next.width)<3,'Previous and Next have equal widths');
         }
         assert.match(await page.locator('#next').innerText(),/Next page/,'Textbook reader moves to the next page');
-        assert.ok(layout.tapHeight>=48,'Chapter return needs a generous mobile tap target');
+        assert.ok(layout.tapHeight>=(width<=800?44:48),'Chapter return must preserve accessible tap target');
         assert.ok(layout.navScrollParent.includes('workspace'),'Dock must not sit inside scrolling question content');
         if(width<=800){
           assert.equal(layout.navPosition,'relative','Navigation must reserve its own space, not float');
@@ -1502,7 +1514,7 @@ async function main() {
       await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
       await ctx.setOffline(true);
       await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-i');
-      await page.locator('#answerText').waitFor({state:'visible'});
+      await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
       assert.match(await page.locator('#answerText').innerText(),/I, N, D, A/);
       await ctx.setOffline(false);
     });
