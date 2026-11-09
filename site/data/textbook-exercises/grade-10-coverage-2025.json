@@ -4,7 +4,7 @@
   "edition": "2025 revised",
   "lastVerified": "2026-11-08",
   "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
-  "notes": "2026-11-08 19:31 IST: Q6(i) English/Tamil revised printed p.6/PDF p.12 text confirms A={0,1}, B={2,3,4}, C={3,5}, Cartesian-product union identity. Independent 8-pair enumeration and bilingual mathematical draft committed. Source glyph visual verification and Tamil human editorial remain pending; Q6(i) NOT included in source-verified count. Prior commit 9bc0b38 passed all four workflows. 2026-11-09: Q7(i) provisional mathematical draft + focused content assertion added, not source-verified and not student-facing.",
+  "notes": "2026-11-08 19:31 IST: Q6(i) English/Tamil revised printed p.6/PDF p.12 text confirms A={0,1}, B={2,3,4}, C={3,5}, Cartesian-product union identity. Independent 8-pair enumeration and bilingual mathematical draft committed. Source glyph visual verification and Tamil human editorial remain pending; Q6(i) NOT included in source-verified count. Prior commit 9bc0b38 passed all four workflows. 2026-11-09: Q7(i) provisional mathematical draft + focused content assertion added, not source-verified and not student-facing. 2026-11-09: Exercise 1.2 Q5 salary-to-employee 14-pair English mathematical draft and deterministic regression committed; source page images not inspected, not source-certified or published.",
   "chapters": [
     {
       "chapter": 1,
@@ -66,6 +66,63 @@
             "7(ii)"
           ],
           "inventoryNote": "12 question/subpart slots enumerated from both original 2025 revised Grade 10 PDF text, printed page 6 / PDF page 12; Q6(i–iii) and Q7(i–ii) mathematical glyphs require page-image confirmation. Enumerated is not completed."
+        },
+        "1.2": {
+          "questionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "knownSubparts": {
+            "1": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "4": [
+              "i",
+              "ii"
+            ]
+          },
+          "enumeratedQuestionSubparts": [
+            "1(i)",
+            "1(ii)",
+            "1(iii)",
+            "1(iv)",
+            "2",
+            "3",
+            "4(i)",
+            "4(ii)",
+            "5"
+          ],
+          "questionSubpartInventoryComplete": true,
+          "sourceTextLayerChecked": true,
+          "sourceImageVerified": false,
+          "verifiedCount": 0,
+          "sourcePendingDrafts": [
+            "1(i)",
+            "1(ii)",
+            "1(iii)",
+            "1(iv)",
+            "4(i)",
+            "4(ii)",
+            "5"
+          ],
+          "pendingSourceImageReview": [
+            "1(i)",
+            "1(ii)",
+            "1(iii)",
+            "1(iv)",
+            "2",
+            "3",
+            "4(i)",
+            "4(ii)",
+            "5"
+          ],
+          "inventoryNote": "2025 revised English printed pp.9–10/PDF pp.15–16; 9 subpart slots. Q3 algebraic glyphs corrupted in extracted text. Q5 crosses a page boundary. All exact source transcription and diagram fidelity remain pending visual verification. No published or source-certified Exercise 1.2 content."
         }
       },
       "fullChapterExerciseInventoryComplete": false,
@@ -175,7 +232,7 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "2026-11-09: Q7(i) provisional English mathematical derivation independently enumerated on Grade 10 branch, but English/Tamil PDF mathematical glyphs and exact printed question require page-image verification. Source-pending draft is NOT in seven source-verified count, not released, Tamil not drafted. Next inspect PDF page 12 images in both original 2025 PDFs, confirm identity, then finalize source-exact bilingual content and run mandatory CI.",
+  "nextAction": "Inspect 2025 English original PDF pp.15–16 images for Exercise 1.2 Q5 and Q2/Q3 glyphs, then source-certify English content and run committed focused Node regressions. Grade 10 full chapter denominator remains unknown.",
   "testStatus": {
     "localMathEnumeration": "Q6(i): A={0,1}, B={2,3,4}, C={3,5}, both sides enumerate eight ordered pairs; verified by independent code assertion; local npm test not run.",
     "npmTest": "Prior commit 9bc0b38 shared test workflow passed; new Q6(i) commit pending.",
@@ -188,6 +245,11 @@
   },
   "pendingSourceReviewQuestionSubparts": [
     "1.1 Q6(i)",
-    "1.1 Q7(i)"
+    "1.1 Q7(i)",
+    "1.2 Q1(i–iv)",
+    "1.2 Q2",
+    "1.2 Q3",
+    "1.2 Q4(i–ii)",
+    "1.2 Q5"
   ]
 }
