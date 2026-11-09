@@ -1,0 +1,52 @@
+{
+  "batch": "g9-ex1-2-q1-i-ii-en-20261109",
+  "status": "draft-text-layer-checked-visual-pending",
+  "source": {
+    "edition": "Tamil Nadu Mathematics Standard Nine, revised 2025",
+    "language": "en",
+    "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 11,
+    "pdfPage": 17,
+    "pageImageReviewed": false
+  },
+  "exercise": "1.2",
+  "sharedStem": "1. Find the cardinal number of the following sets.",
+  "items": [
+    {
+      "id": "g9-ch1-ex1-2-q1-i",
+      "subpart": "(i)",
+      "sourceText": "(i) M = {p, q, r, s, t, u}",
+      "stepsEn": [
+        "The cardinal number of a set is the number of distinct elements it contains.",
+        "M contains p, q, r, s, t and u, all distinct.",
+        "Counting these elements gives 6."
+      ],
+      "answer": "n(M) = 6",
+      "tamilStatus": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q1-ii",
+      "subpart": "(ii)",
+      "sourceText": "(ii) P = {x : x = 3n+2, n∈W and x< 15}",
+      "stepsEn": [
+        "W is the set of whole numbers, so n = 0, 1, 2, ... .",
+        "The condition 3n + 2 < 15 gives 3n < 13, so n < 13/3.",
+        "Therefore n = 0, 1, 2, 3 or 4; the resulting x values are 2, 5, 8, 11 and 14.",
+        "All five values are distinct."
+      ],
+      "answer": "P = {2, 5, 8, 11, 14}; n(P) = 5",
+      "tamilStatus": "pending"
+    }
+  ],
+  "release": {
+    "integratedIntoStudentUI": false,
+    "unitTestsPassed": true,
+    "browserTestsPassed": false,
+    "ciPassed": false,
+    "merged": false,
+    "deployed": false,
+    "productionVerified": false,
+    "humanTamilReviewed": false
+  },
+  "next": "Exercise 1.2 Q1(iii): inspect fractional expression on original PDF page image before transcribing."
+}
