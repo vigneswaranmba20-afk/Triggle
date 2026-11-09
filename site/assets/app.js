@@ -85,6 +85,10 @@
   const content=document.querySelector('.lesson-container');
   if(workspace)workspace.scrollTop=0;
   if(content)content.scrollTop=0;
+  // A new question must begin at the first worked step, not the last scroll position.
+  const stepsPane=$('stepsRegion'),questionPane=$('questionText');
+  if(stepsPane)stepsPane.scrollTop=0;
+  if(questionPane)questionPane.scrollTop=0;
   window.scrollTo({top:0,behavior:'instant'});
  }
  function goHome(){
