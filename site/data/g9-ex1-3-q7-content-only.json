@@ -1,0 +1,158 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 19,
+    "pdfPage": "pending original page-image confirmation",
+    "fidelity": "English PDF text layer checked; original page-image comparison pending"
+  },
+  "exercise": "1.3",
+  "stem": "7. Let A and B be two overlapping sets and the universal set be U. Draw appropriate Venn diagram for each of the following,",
+  "tamilStatus": "pending",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-3-q7-i",
+      "part": "i",
+      "question": "(i) A∪B",
+      "steps": [
+        "Begin with a universal rectangle U containing two overlapping circles labelled A and B. The four distinct regions are A-only, A∩B, B-only and outside both.",
+        "Shade every point in A or B, including the overlap.",
+        "The selected region(s) are: A-only, A∩B, and B-only.",
+        "Check each of the four regions using whether its points belong to A and B. All of A and all of B."
+      ],
+      "answer": "All of A and all of B",
+      "expectedRegionIndices": [
+        0,
+        1,
+        2
+      ],
+      "mathCheck": "Independent four-region Boolean membership truth table",
+      "sourceVisualReview": "Original page-image and Venn drawing pending; text-layer wording checked",
+      "tamilStatus": "pending",
+      "diagramStatus": "student drawing required; not authored in content-only sprint"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q7-ii",
+      "part": "ii",
+      "question": "(ii) A∩B",
+      "steps": [
+        "Begin with a universal rectangle U containing two overlapping circles labelled A and B. The four distinct regions are A-only, A∩B, B-only and outside both.",
+        "Shade only points that belong to both A and B.",
+        "The selected region(s) are: A∩B.",
+        "Check each of the four regions using whether its points belong to A and B. Only the overlapping region."
+      ],
+      "answer": "Only the overlapping region",
+      "expectedRegionIndices": [
+        1
+      ],
+      "mathCheck": "Independent four-region Boolean membership truth table",
+      "sourceVisualReview": "Original page-image and Venn drawing pending; text-layer wording checked",
+      "tamilStatus": "pending",
+      "diagramStatus": "student drawing required; not authored in content-only sprint"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q7-iii",
+      "part": "iii",
+      "question": "(iii) (A∩B)′",
+      "steps": [
+        "Begin with a universal rectangle U containing two overlapping circles labelled A and B. The four distinct regions are A-only, A∩B, B-only and outside both.",
+        "First identify the overlap A∩B, then take its complement relative to U.",
+        "The selected region(s) are: A-only, B-only, outside both.",
+        "Check each of the four regions using whether its points belong to A and B. Everywhere in U except the overlap."
+      ],
+      "answer": "Everywhere in U except the overlap",
+      "expectedRegionIndices": [
+        0,
+        2,
+        3
+      ],
+      "mathCheck": "Independent four-region Boolean membership truth table",
+      "sourceVisualReview": "Original page-image and Venn drawing pending; text-layer wording checked",
+      "tamilStatus": "pending",
+      "diagramStatus": "student drawing required; not authored in content-only sprint"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q7-iv",
+      "part": "iv",
+      "question": "(iv) (B–A)′",
+      "steps": [
+        "Begin with a universal rectangle U containing two overlapping circles labelled A and B. The four distinct regions are A-only, A∩B, B-only and outside both.",
+        "First identify B–A: the part of B that is outside A. Shade its complement in U.",
+        "The selected region(s) are: A-only, A∩B, outside both.",
+        "Check each of the four regions using whether its points belong to A and B. Everywhere in U except the B-only region."
+      ],
+      "answer": "Everywhere in U except the B-only region",
+      "expectedRegionIndices": [
+        0,
+        1,
+        3
+      ],
+      "mathCheck": "Independent four-region Boolean membership truth table",
+      "sourceVisualReview": "Original page-image and Venn drawing pending; text-layer wording checked",
+      "tamilStatus": "pending",
+      "diagramStatus": "student drawing required; not authored in content-only sprint"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q7-v",
+      "part": "v",
+      "question": "(v) A′∪B′",
+      "steps": [
+        "Begin with a universal rectangle U containing two overlapping circles labelled A and B. The four distinct regions are A-only, A∩B, B-only and outside both.",
+        "Shade points outside A or outside B; the only excluded points lie in both.",
+        "The selected region(s) are: A-only, B-only, outside both.",
+        "Check each of the four regions using whether its points belong to A and B. Everywhere in U except the overlap."
+      ],
+      "answer": "Everywhere in U except the overlap",
+      "expectedRegionIndices": [
+        0,
+        2,
+        3
+      ],
+      "mathCheck": "Independent four-region Boolean membership truth table",
+      "sourceVisualReview": "Original page-image and Venn drawing pending; text-layer wording checked",
+      "tamilStatus": "pending",
+      "diagramStatus": "student drawing required; not authored in content-only sprint"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q7-vi",
+      "part": "vi",
+      "question": "(vi) A′∩B′",
+      "steps": [
+        "Begin with a universal rectangle U containing two overlapping circles labelled A and B. The four distinct regions are A-only, A∩B, B-only and outside both.",
+        "Shade points outside A and outside B simultaneously.",
+        "The selected region(s) are: outside both.",
+        "Check each of the four regions using whether its points belong to A and B. Only the region outside both sets."
+      ],
+      "answer": "Only the region outside both sets",
+      "expectedRegionIndices": [
+        3
+      ],
+      "mathCheck": "Independent four-region Boolean membership truth table",
+      "sourceVisualReview": "Original page-image and Venn drawing pending; text-layer wording checked",
+      "tamilStatus": "pending",
+      "diagramStatus": "student drawing required; not authored in content-only sprint"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q7-vii",
+      "part": "vii",
+      "question": "(vii) What do you observe from the Venn diagram (iii) and (v)?",
+      "steps": [
+        "Begin with a universal rectangle U containing two overlapping circles labelled A and B. The four distinct regions are A-only, A∩B, B-only and outside both.",
+        "Compare the region shaded for (A∩B)′ with the region shaded for A′∪B′.",
+        "The selected region(s) are: A-only, B-only, outside both.",
+        "Check each of the four regions using whether its points belong to A and B. The shaded regions are identical: (A∩B)′ = A′∪B′.."
+      ],
+      "answer": "The shaded regions are identical: (A∩B)′ = A′∪B′.",
+      "expectedRegionIndices": [
+        0,
+        2,
+        3
+      ],
+      "mathCheck": "Independent four-region Boolean membership truth table",
+      "sourceVisualReview": "Original page-image and Venn drawing pending; text-layer wording checked",
+      "tamilStatus": "pending",
+      "diagramStatus": "student drawing required; not authored in content-only sprint"
+    }
+  ]
+}
