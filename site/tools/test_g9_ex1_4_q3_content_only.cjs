@@ -1,0 +1,17 @@
+const assert = require('node:assert/strict');
+const data = require('../data/g9-ex1-4-q3-content-only.json');
+assert.equal(data.entries.length,1);
+assert.equal(data.entries[0].id,'g9-ch1-ex1-4-q3');
+assert.equal(data.source.printedPage,22);
+assert.equal(data.source.driveFileId,'1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J');
+assert.ok(data.entries[0].steps.length>=3);
+assert.equal(data.entries[0].tamilStatus,'pending');
+const A=new Set(['p','q','r','s']),B=new Set(['m','n','q','s','t']),C=new Set(['m','n','p','q','s']);
+const union=(x,y)=>new Set([...x,...y]);
+const sorted=x=>[...x].sort();
+const left=union(union(A,B),C),right=union(A,union(B,C));
+assert.deepEqual(sorted(left),sorted(right));
+assert.deepEqual(sorted(left),['m','n','p','q','r','s','t']);
+assert.equal(left.size,7);
+for(const s of [A,B,C])for(const x of s)assert.ok(left.has(x)&&right.has(x));
+console.log('Grade 9 Ex 1.4 Q3: source metadata, schema, associative union and membership assertions passed');
