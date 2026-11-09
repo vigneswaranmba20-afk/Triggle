@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-2-q4ii",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.2",
+  "question": "4",
+  "subpart": "ii",
+  "kind": "English mathematical draft; source page-image verification pending; not published",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "printedPage": 9,
+      "pdfPage": 15,
+      "pageImageVerified": false,
+      "exactQuestionVerified": false
+    },
+    "tamil": {
+      "driveFileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pageImageVerified": false,
+      "exactQuestionVerified": false
+    },
+    "extractedQuestion": "Represent each of the given relations by (a) an arrow diagram, (b) a graph and (c) a set in roster form, wherever possible.",
+    "extractedSubpart": "(ii) {(x,y)|y = x+3, x, y are natural numbers < 10}",
+    "note": "Direct extraction from 2025 English textbook; PDF page image not visually inspected."
+  },
+  "rule": "y = x + 3",
+  "domainCandidates": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "rangeCandidates": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "pairs": [
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      9
+    ]
+  ],
+  "stepsEnglish": [
+    "Natural numbers below 10 are 1, 2, 3, 4, 5, 6, 7, 8 and 9.",
+    "For each x, calculate y by adding 3.",
+    "x = 1 gives y = 4; x = 2 gives y = 5; continue in the same way.",
+    "x = 6 gives y = 9, the largest allowed y. If x is 7, 8 or 9, y is 10, 11 or 12 and is not below 10.",
+    "Roster form: {(1,4), (2,5), (3,6), (4,7), (5,8), (6,9)}.",
+    "Arrow diagram: connect 1 → 4, 2 → 5, 3 → 6, 4 → 7, 5 → 8 and 6 → 9; other x-values have no arrows.",
+    "Graph: plot exactly the six ordered pairs. They lie on y = x + 3, but the relation contains only these discrete points, so do not draw a continuous line."
+  ],
+  "review": {
+    "mathVerified": true,
+    "englishExactQuestionVerified": false,
+    "diagramImageVerified": false,
+    "tamilVerified": false,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  }
+}
