@@ -52,7 +52,8 @@ const entries=[
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
     "page": 305,
     "diagram": {
-      "kind": "probability-spinner",
+      "kind": "unitcircle",
+      "probabilitySpinner": true,
       "sectors": [
         1,
         2,
@@ -126,7 +127,8 @@ const entries=[
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
     "page": 305,
     "diagram": {
-      "kind": "probability-spinner",
+      "kind": "unitcircle",
+      "probabilitySpinner": true,
       "sectors": [
         1,
         2,
