@@ -1,0 +1,125 @@
+{
+  "status": "staged-content-only-not-published",
+  "grade": 9,
+  "chapter": 1,
+  "exercise": "1.5",
+  "edition": "Tamil Nadu SCERT revised 2025 English",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 28,
+    "pdfPage": "pending page-image confirmation",
+    "fidelity": "Original 2025 PDF text-layer questions normalized into Unicode set notation. Page-image comparison pending; do not count as source-verified."
+  },
+  "numberedQuestions": 2,
+  "questionSubparts": 5,
+  "mathValidation": "independent finite-set enumeration and committed Node test",
+  "integrationStatus": "staged only; offline registration pending",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-5-q2-i",
+      "number": 2,
+      "subpart": "i",
+      "question": "2. If K = {a, b, d, e, f}, L = {b, c, d, g} and M = {a, b, c, d, h}, then find the following: (i) K ∪ (L ∩ M) (ii) K ∩ (L ∪ M) (iii) (K ∪ L) ∩ (K ∪ M) (iv) (K ∩ L) ∪ (K ∩ M) and verify distributive laws. [Part (i): K ∪ (L ∩ M)]",
+      "steps": [
+        "Write K = {a, b, d, e, f}, L = {b, c, d, g}, and M = {a, b, c, d, h}.",
+        "First identify the members shared by L and M: L ∩ M = {b, c, d}.",
+        "Take the union with K, keeping every distinct member: K ∪ (L ∩ M) = {a, b, c, d, e, f}.",
+        "This is the left-hand side of the union-over-intersection distributive law.",
+        "Compare this set with the result in Part (iii)."
+      ],
+      "answer": "K ∪ (L ∩ M) = {a, b, c, d, e, f}.",
+      "chapter": 1,
+      "exercise": "1.5",
+      "sourcePage": 28,
+      "sourceTextStatus": "text-layer transcription; page-image verification pending for symbols and braces",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-5-q2-ii",
+      "number": 2,
+      "subpart": "ii",
+      "question": "2. If K = {a, b, d, e, f}, L = {b, c, d, g} and M = {a, b, c, d, h}, then find the following: (i) K ∪ (L ∩ M) (ii) K ∩ (L ∪ M) (iii) (K ∪ L) ∩ (K ∪ M) (iv) (K ∩ L) ∪ (K ∩ M) and verify distributive laws. [Part (ii): K ∩ (L ∪ M)]",
+      "steps": [
+        "Write the three given sets K, L, and M.",
+        "First find L ∪ M = {a, b, c, d, g, h}.",
+        "Select members common to K and this union: K ∩ (L ∪ M) = {a, b, d}.",
+        "This is the left-hand side of the intersection-over-union distributive law.",
+        "Compare with Part (iv) to verify equality."
+      ],
+      "answer": "K ∩ (L ∪ M) = {a, b, d}.",
+      "chapter": 1,
+      "exercise": "1.5",
+      "sourcePage": 28,
+      "sourceTextStatus": "text-layer transcription; page-image verification pending for symbols and braces",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-5-q2-iii",
+      "number": 2,
+      "subpart": "iii",
+      "question": "2. If K = {a, b, d, e, f}, L = {b, c, d, g} and M = {a, b, c, d, h}, then find the following: (i) K ∪ (L ∩ M) (ii) K ∩ (L ∪ M) (iii) (K ∪ L) ∩ (K ∪ M) (iv) (K ∩ L) ∪ (K ∩ M) and verify distributive laws. [Part (iii): (K ∪ L) ∩ (K ∪ M)]",
+      "steps": [
+        "Find K ∪ L = {a, b, c, d, e, f, g}.",
+        "Find K ∪ M = {a, b, c, d, e, f, h}.",
+        "Their common members form (K ∪ L) ∩ (K ∪ M) = {a, b, c, d, e, f}.",
+        "This matches K ∪ (L ∩ M) from Part (i).",
+        "Therefore K ∪ (L ∩ M) = (K ∪ L) ∩ (K ∪ M), as required."
+      ],
+      "answer": "(K ∪ L) ∩ (K ∪ M) = {a, b, c, d, e, f}.",
+      "chapter": 1,
+      "exercise": "1.5",
+      "sourcePage": 28,
+      "sourceTextStatus": "text-layer transcription; page-image verification pending for symbols and braces",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-5-q2-iv",
+      "number": 2,
+      "subpart": "iv",
+      "question": "2. If K = {a, b, d, e, f}, L = {b, c, d, g} and M = {a, b, c, d, h}, then find the following: (i) K ∪ (L ∩ M) (ii) K ∩ (L ∪ M) (iii) (K ∪ L) ∩ (K ∪ M) (iv) (K ∩ L) ∪ (K ∩ M) and verify distributive laws. [Part (iv): (K ∩ L) ∪ (K ∩ M)]",
+      "steps": [
+        "Find K ∩ L = {b, d}.",
+        "Find K ∩ M = {a, b, d}.",
+        "Combine the distinct members: (K ∩ L) ∪ (K ∩ M) = {a, b, d}.",
+        "This matches K ∩ (L ∪ M) from Part (ii).",
+        "Therefore K ∩ (L ∪ M) = (K ∩ L) ∪ (K ∩ M), verifying the second distributive law."
+      ],
+      "answer": "(K ∩ L) ∪ (K ∩ M) = {a, b, d}.",
+      "chapter": 1,
+      "exercise": "1.5",
+      "sourcePage": 28,
+      "sourceTextStatus": "text-layer transcription; page-image verification pending for symbols and braces",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-5-q6",
+      "number": 6,
+      "subpart": null,
+      "question": "6. If A = {x : x = 6n, n ∈ W and n < 6}, B = {x : x = 2n, n ∈ N and 2 < n ≤ 9} and C = {x : x = 3n, n ∈ N and 4 ≤ n < 10}, then show that A − (B ∩ C) = (A − B) ∪ (A − C).",
+      "steps": [
+        "Whole numbers n from 0 through 5 give A = {0, 6, 12, 18, 24, 30}.",
+        "Natural numbers n from 3 through 9 give B = {6, 8, 10, 12, 14, 16, 18}.",
+        "Natural numbers n from 4 through 9 give C = {12, 15, 18, 21, 24, 27}.",
+        "Find B ∩ C = {12, 18}. Therefore A − (B ∩ C) = {0, 6, 24, 30}.",
+        "Compute A − B = {0, 24, 30} and A − C = {0, 6, 30}.",
+        "The union (A − B) ∪ (A − C) = {0, 6, 24, 30}; both sides are equal."
+      ],
+      "answer": "A − (B ∩ C) = (A − B) ∪ (A − C) = {0, 6, 24, 30}.",
+      "chapter": 1,
+      "exercise": "1.5",
+      "sourcePage": 28,
+      "sourceTextStatus": "text-layer transcription; page-image verification pending for symbols and braces",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    }
+  ]
+}

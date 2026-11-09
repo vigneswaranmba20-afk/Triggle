@@ -1,0 +1,23 @@
+'use strict';
+const assert=require('node:assert/strict');
+const path=require('node:path');
+const doc=require(path.join(__dirname,'../data/g9-ex1-5-q2-q6-content-only.json'));
+const ids=['q2-i','q2-ii','q2-iii','q2-iv','q6'].map(x=>'g9-ch1-ex1-5-'+x);
+assert.equal(doc.grade,9);assert.equal(doc.chapter,1);assert.equal(doc.exercise,'1.5');
+assert.equal(doc.source.driveFileId,'1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J');
+assert.equal(doc.numberedQuestions,2);assert.equal(doc.questionSubparts,5);
+assert.deepEqual(doc.entries.map(x=>x.id),ids);
+for(const e of doc.entries){assert.equal(e.sourcePage,28);assert.equal(e.studentRegistration,'not registered');assert.equal(e.kind,'textbook');assert.ok(e.question.startsWith(e.number+'. '));assert.ok(e.steps.length>=5);assert.ok(e.answer);}
+const norm=x=>[...new Set(x)].sort((a,b)=>String(a).localeCompare(String(b),undefined,{numeric:true}));
+const eq=(a,b)=>assert.deepEqual(norm(a),norm(b));
+const union=(a,b)=>norm([...a,...b]),inter=(a,b)=>a.filter(x=>b.includes(x)),diff=(a,b)=>a.filter(x=>!b.includes(x));
+const K=['a','b','d','e','f'],L=['b','c','d','g'],M=['a','b','c','d','h'];
+const results=[union(K,inter(L,M)),inter(K,union(L,M)),inter(union(K,L),union(K,M)),union(inter(K,L),inter(K,M))];
+eq(results[0],results[2]);eq(results[1],results[3]);
+eq(results[0],['a','b','c','d','e','f']);eq(results[1],['a','b','d']);
+for(let i=0;i<4;i++)assert.ok(doc.entries[i].answer.includes('{'+results[i].join(', ')+'}'));
+const A=Array.from({length:6},(_,n)=>6*n),B=Array.from({length:7},(_,i)=>2*(i+3)),C=Array.from({length:6},(_,i)=>3*(i+4));
+eq(A,[0,6,12,18,24,30]);eq(B,[6,8,10,12,14,16,18]);eq(C,[12,15,18,21,24,27]);
+const lhs=diff(A,inter(B,C)),rhs=union(diff(A,B),diff(A,C));
+eq(lhs,rhs);eq(lhs,[0,6,24,30]);assert.ok(doc.entries[4].answer.includes('{0, 6, 24, 30}'));
+console.log('PASS Grade 9 Exercise 1.5 Q2(i–iv), Q6: 5 source-text draft entries; independent set operations match. Original page-image fidelity and student registration pending.');
