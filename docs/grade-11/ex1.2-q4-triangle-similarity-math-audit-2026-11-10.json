@@ -42,8 +42,9 @@
     "newPublishedQuestions": 0,
     "gradeDenominator": null,
     "exerciseQuestionStemsFromExtraction": 9,
-    "exerciseSubpartSlotsProvisional": 24,
-    "denominatorCertified": false
+    "exerciseSubpartSlotsProvisional": null,
+    "denominatorCertified": false,
+    "denominatorNote": "Exercise 1.2 has 9 numbered stems in extracted text; count of subparts and image fidelity require verification."
   },
   "publication": {
     "studentFacing": false,
