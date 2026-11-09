@@ -1,0 +1,77 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 19,
+    "pdfPage": "pending PDF page-image confirmation",
+    "fidelity": "2025 English PDF text layer checked; visual fidelity pending"
+  },
+  "exercise": "1.3",
+  "stem": "5. Find the symmetric difference between the following sets.",
+  "tamilStatus": "pending",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-3-q5-i",
+      "part": "i",
+      "question": "(i) P = {2, 3, 5, 7, 11} and Q={1, 3, 5, 11}",
+      "steps": [
+        "List the elements of P = {2, 3, 5, 7, 11} and Q = {1, 3, 5, 11}.",
+        "Find the common elements: P∩Q = {3, 5, 11}.",
+        "Keep elements that occur in exactly one set: (P−Q)∪(Q−P) = {1, 2, 7}.",
+        "Check each answer element occurs in one set, but not both; no common element is included."
+      ],
+      "answer": "{1, 2, 7}",
+      "expected": [
+        1,
+        2,
+        7
+      ],
+      "mathCheck": "independent finite-set symmetric-difference enumeration; intersection exclusion",
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q5-ii",
+      "part": "ii",
+      "question": "(ii) R = {l, m, n, o, p} and S={j, l, n, q}",
+      "steps": [
+        "List the elements of R = {l, m, n, o, p} and S = {j, l, n, q}.",
+        "Find the common elements: R∩S = {l, n}.",
+        "Keep elements that occur in exactly one set: (R−S)∪(S−R) = {j, m, o, p, q}.",
+        "Check each answer element occurs in one set, but not both; no common element is included."
+      ],
+      "answer": "{j, m, o, p, q}",
+      "expected": [
+        "j",
+        "m",
+        "o",
+        "p",
+        "q"
+      ],
+      "mathCheck": "independent finite-set symmetric-difference enumeration; intersection exclusion",
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q5-iii",
+      "part": "iii",
+      "question": "(iii) X = {5, 6, 7} and Y={5, 7, 9, 10}",
+      "steps": [
+        "List the elements of X = {5, 6, 7} and Y = {5, 7, 9, 10}.",
+        "Find the common elements: X∩Y = {5, 7}.",
+        "Keep elements that occur in exactly one set: (X−Y)∪(Y−X) = {6, 9, 10}.",
+        "Check each answer element occurs in one set, but not both; no common element is included."
+      ],
+      "answer": "{6, 9, 10}",
+      "expected": [
+        6,
+        9,
+        10
+      ],
+      "mathCheck": "independent finite-set symmetric-difference enumeration; intersection exclusion",
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending"
+    }
+  ]
+}
