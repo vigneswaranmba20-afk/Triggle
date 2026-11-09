@@ -34,7 +34,9 @@ for(const [key,m] of Object.entries(source)){
   const rows=[0,1,2].filter(x=>x!==i),cols=[0,1,2].filter(x=>x!==j);
   const minor=m[rows[0]][cols[0]]*m[rows[1]][cols[1]]-m[rows[0]][cols[1]]*m[rows[1]][cols[0]];
   const numerator=((i+j)%2?-1:1)*minor;
-  const expected=key==='iii'?numerator+'/9':String(numerator);
+  const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);
+  const divisor=gcd(numerator,9),den=9/divisor,num=numerator/divisor;
+  const expected=key==='iii'?numerator+'/9 = '+(den===1?String(num):num+'/'+den):String(numerator);
   assert.ok(controls['cofactor-result'].textContent.endsWith(' = '+expected),key+' C'+(i+1)+(j+1));
  }
 }
@@ -43,4 +45,11 @@ controls['cofactor-matrix'].value='iii';controls['cofactor-row'].value='1';contr
 vm.runInContext('showCofactor()',sandbox);
 assert.match(controls['cofactor-result'].textContent,/சிற்றணி/);
 assert.match(controls['cofactor-result'].textContent,/\/ 9/);
-console.log('PASS 18 source-verified Q1(ii)/(iii) cofactor positions, scaling, English/Tamil output and selectors');
+// Switching languages must refresh the already visible explanation, not leave stale English text.
+document.documentElement.lang='en';
+vm.runInContext('showCofactor()',sandbox);
+assert.match(controls['cofactor-result'].textContent,/Minor determinant/);
+vm.runInContext('language("ta")',sandbox);
+assert.match(controls['cofactor-result'].textContent,/சிற்றணிக்கோவை/);
+assert.doesNotMatch(controls['cofactor-result'].textContent,/Minor determinant/);
+console.log('PASS 18 source-verified Q1(ii)/(iii) cofactor positions, simplified rational scaling, live language switching, English/Tamil output and selectors');
