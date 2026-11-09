@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "chapter": 1,
+  "exercise": "1.4",
+  "medium": "en",
+  "source": {
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "edition": "2025 revised",
+    "printedPages": [
+      35
+    ],
+    "textLayerRead": true,
+    "pageImageVerified": false
+  },
+  "status": "mathematically_checked_drafts_source_image_pending",
+  "publishable": false,
+  "verifiedQuestionDenominator": null,
+  "verifiedSubpartDenominator": null,
+  "provisionalQuestionCount": 3,
+  "provisionalSubpartCount": 3,
+  "mathematicalChecks": "independent arithmetic and Cramer's determinant calculations in draft steps; source fidelity pending original page image",
+  "tamilStatus": "not_started_editorial_verification_required",
+  "questions": [
+    {
+      "id": "g12-c1-ex1.4-q2",
+      "question": 2,
+      "sourceExtract": "In a competitive examination, one mark is awarded for every correct answer while 1/4 mark is deducted for every wrong answer. A student answered 100 questions and got 80 marks. How many questions did he answer correctly? (Use Cramer's rule to solve the problem).",
+      "variables": [
+        "c = correct answers",
+        "w = wrong answers"
+      ],
+      "equations": [
+        "c+w=100",
+        "c-w/4=80"
+      ],
+      "steps": [
+        "Every answered question is either correct or wrong, so c+w=100.",
+        "The score is c-(1/4)w=80; multiply by four to obtain 4c-w=320.",
+        "Use Cramer's rule on [[1,1],[4,-1]] with right side [100,320].",
+        "D=-5; Dc=100(-1)-320(1)=-420; Dw=1(320)-4(100)=-80.",
+        "c=Dc/D=84 and w=Dw/D=16.",
+        "Check: 84+16=100 and 84-16/4=80."
+      ],
+      "answer": {
+        "correct": 84,
+        "wrong": 16
+      },
+      "check": {
+        "total": 100,
+        "score": 80
+      }
+    },
+    {
+      "id": "g12-c1-ex1.4-q3",
+      "question": 3,
+      "sourceExtract": "A chemist has one solution which is 50% acid and another solution which is 25% acid. How much each should be mixed to make 10 litres of a 40% acid solution? (Use Cramer's rule to solve the problem).",
+      "variables": [
+        "x = litres of 50% solution",
+        "y = litres of 25% solution"
+      ],
+      "equations": [
+        "x+y=10",
+        "0.50x+0.25y=4"
+      ],
+      "steps": [
+        "Let x and y be the two volumes in litres.",
+        "Total volume: x+y=10.",
+        "Required pure acid is 40% of 10 = 4 litres, so 0.5x+0.25y=4.",
+        "Multiply the acid equation by four: 2x+y=16.",
+        "Cramer's rule on [[1,1],[2,1]] with right side [10,16] gives D=-1, Dx=10-16=-6, Dy=16-20=-4.",
+        "Thus x=6 litres and y=4 litres.",
+        "Check: 0.5(6)+0.25(4)=3+1=4 litres acid."
+      ],
+      "answer": {
+        "litres50Percent": 6,
+        "litres25Percent": 4
+      },
+      "check": {
+        "volume": 10,
+        "acid": 4
+      }
+    },
+    {
+      "id": "g12-c1-ex1.4-q4",
+      "question": 4,
+      "sourceExtract": "A fish tank can be filled in 10 minutes using both pumps A and B simultaneously. However, pump B can pump water in or out at the same rate. If pump B is inadvertently run in reverse, then the tank will be filled in 30 minutes. How long would it take each pump to fill the tank by itself? (Use Cramer's rule to solve the problem).",
+      "variables": [
+        "a = tank fraction filled by A per minute",
+        "b = tank fraction filled by B per minute"
+      ],
+      "equations": [
+        "a+b=1/10",
+        "a-b=1/30"
+      ],
+      "steps": [
+        "Measure each pump's work as the fraction of one tank filled per minute.",
+        "Together the rates add: a+b=1/10.",
+        "When B runs backwards, it removes water: a-b=1/30.",
+        "Use Cramer's rule on [[1,1],[1,-1]] with right side [1/10,1/30].",
+        "D=-2; Da=-(1/10)-(1/30)=-2/15, so a=1/15.",
+        "Db=(1/30)-(1/10)=-1/15, so b=1/30.",
+        "Time is the reciprocal of rate: A alone takes 15 minutes and B alone takes 30 minutes.",
+        "Check: 1/15+1/30=1/10 and 1/15-1/30=1/30."
+      ],
+      "answer": {
+        "pumpAMinutes": 15,
+        "pumpBMinutes": 30
+      },
+      "check": {
+        "together": 0.1,
+        "reverse": 0.03333333333333333
+      }
+    }
+  ],
+  "releaseBlockers": [
+    "Compare all three question statements against original printed page 35 image",
+    "Verify chapter registry and offline cache references before any publication",
+    "Run required CI after eventual registration"
+  ],
+  "nextBatch": "Page-image verify Exercise 1.4 Q2-Q4; certify wording, then register English solutions and run required CI."
+}
