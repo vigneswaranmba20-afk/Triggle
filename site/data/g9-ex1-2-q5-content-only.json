@@ -1,0 +1,54 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 12,
+    "pdfPage": "pending independent PDF-page confirmation",
+    "fidelity": "English PDF text-layer checked; page-image review pending"
+  },
+  "exercise": "1.2",
+  "stem": "5. State which pairs of sets are disjoint or overlapping?",
+  "tamilStatus": "pending original Tamil source transcription and independent editorial review",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-2-q5-i",
+      "part": "i",
+      "question": "A = {f, i, a, s} and B={a, n, f, h, s}",
+      "steps": [
+        "A contains f, i, a and s.",
+        "B contains a, n, f, h and s.",
+        "Their common elements are {a, f, s}; the intersection is not empty."
+      ],
+      "answer": "Overlapping sets; A∩B={a,f,s}.",
+      "mathCheck": "Intersection of explicit lists is {a,f,s}.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q5-ii",
+      "part": "ii",
+      "question": "C = {x : x is a prime number, x >2} and D ={x:x is an even prime number}",
+      "steps": [
+        "Every prime greater than 2 is odd.",
+        "The only even prime is 2, so D={2}.",
+        "Since 2 is excluded from C, C∩D=∅."
+      ],
+      "answer": "Disjoint sets.",
+      "mathCheck": "Parity of primes: only even prime is 2.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q5-iii",
+      "part": "iii",
+      "question": "E = {x : x is a factor of 24} and F={x : x is a multiple of 3, x < 30}",
+      "steps": [
+        "The positive factors of 24 are E={1,2,3,4,6,8,12,24}.",
+        "Positive multiples of 3 below 30 include 3,6,9,12,15,18,21,24,27.",
+        "The intersection is {3,6,12,24}, so it is nonempty."
+      ],
+      "answer": "Overlapping sets; E∩F={3,6,12,24}.",
+      "mathCheck": "Each intersection member divides 24 and is divisible by 3.",
+      "sourceVisualReview": "pending"
+    }
+  ]
+}
