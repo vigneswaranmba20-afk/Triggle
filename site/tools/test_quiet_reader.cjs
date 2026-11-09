@@ -20,6 +20,8 @@ for(const selector of ['#questionNavDock','.lesson-card>.question-top',
  assert.ok(css.includes(selector),'Always-visible region missing from stylesheet: '+selector);
 }
 assert.match(css,/#questionNavDock\{[\s\S]*visibility:visible!important/,'Dock stays visible');
+assert.match(css,/reader-options-visible \.lesson-card>\.lesson-bottom\{\s*display:flex!important/,
+  'Touch must override older mobile CSS hiding optional Mark learned controls');
 assert.doesNotMatch(css,/not\(\.reader-options-visible\)[^\{]*#stepsRegion/,'Do not hide steps before first touch');
 assert.doesNotMatch(css,/not\(\.reader-options-visible\)[^\{]*#questionNavDock/,'Do not hide bottom navigation');
 assert.match(html,/quiet-reader\.css\?v=lesson-core-2/);
