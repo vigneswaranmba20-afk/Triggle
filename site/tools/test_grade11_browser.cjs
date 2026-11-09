@@ -113,6 +113,8 @@ const server=http.createServer((req,res)=>{
    await p.locator('#ta').click();
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
    assert.equal(await p.locator('#ta').getAttribute('aria-pressed'),'true');
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
    assert.match(await p.locator('#lesson').innerText(),/முடிவில்லாத கணம்/);
    assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Q3(ii) horizontal overflow '+width);
    await ctx.setOffline(true);
@@ -135,6 +137,8 @@ const server=http.createServer((req,res)=>{
    assert.match(await p.locator('#lesson').innerText(),/Infinite set/);
    await p.locator('#ta').click();
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
    assert.match(await p.locator('#lesson').innerText(),/முடிவில்லாத கணம்/);
    assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
    await ctx.setOffline(true);
@@ -155,6 +159,8 @@ const server=http.createServer((req,res)=>{
    assert.match(await p.locator('#lesson').innerText(),/Infinite set/);
    await p.locator('#ta').click();
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
    assert.match(await p.locator('#lesson').innerText(),/முடிவில்லாத கணம்/);
    assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
    await ctx.setOffline(true);await p.locator('#en').click();
@@ -239,6 +245,8 @@ const server=http.createServer((req,res)=>{
    await p.locator('#lesson article').waitFor();
    assert.equal(await p.locator('#retry').isVisible(),false);
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
    assert.match(await p.locator('#lesson').innerText(),/முடிவில்லாத கணம்/);
    await ctx.close();
    console.log('PASS Grade 11 Q3(ii) Tamil network recovery');
