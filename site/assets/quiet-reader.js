@@ -1,7 +1,7 @@
 /* Triggle lesson-first mobile reader.
    The exercise label, complete question, final answer, worked steps, Back to
    all chapters, and Previous/Next are ALWAYS available without touching.
-   First touch reveals only secondary app chrome and optional tools. */
+   First touch reveals only supplemental tools. The header and breadcrumbs stay fixed. */
 (() => {
   'use strict';
   const mobile=window.matchMedia('(max-width:800px)');
@@ -11,9 +11,10 @@
 
   // Never put #questionNavDock, #stepsRegion, .question-top or
   // .lesson-title-row in this list: they are essential lesson controls/content.
+  // Header, class/chapter breadcrumbs, worked steps, and Detailed explanation
+  // are permanent controls/content. Touch only reveals optional extras.
   const surfaces=[
-    '.appbar','.status-row','#questionReturn','#figureBtn',
-    '#inlineFigure','#solutionModeRow','#visualLessonAction',
+    '#figureBtn','#inlineFigure','#visualLessonAction',
     '.lesson-bottom','.reference-line','.bottom-extras','.class-dock'
   ].map(selector=>document.querySelector(selector)).filter(Boolean);
   const body=document.body;
@@ -40,9 +41,8 @@
     hideTimer=window.setTimeout(()=>{
       if(modalOpen()){hideLater();return;}
       const focused=document.activeElement;
-      if(focused&&surfaces.some(el=>el.contains(focused))&&focused.matches(':focus-visible')){
-        keyboard=true;return;
-      }
+      // Tab explicitly enables keyboard mode; mouse/touch focus must not
+      // accidentally latch extra controls open indefinitely.
       if(focused&&surfaces.some(el=>el.contains(focused)))focused.blur();
       setVisible(false);
     },delay);
@@ -94,7 +94,7 @@
   },true);
   document.addEventListener('focusin',event=>{
     if(!active||modalOpen())return;
-    if(surfaces.some(el=>el.contains(event.target))&&event.target.matches(':focus-visible')){
+    if(surfaces.some(el=>el.contains(event.target))&&event.target.matches(':focus-visible')&&!pressed){
       keyboard=true;
       setVisible(true);
     }

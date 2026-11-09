@@ -1,14 +1,10 @@
-/* Lesson-first mobile exercise reader.
-   Exercise number, question title and text, final answer, complete worked
-   steps, Back to all chapters and Previous/Next ALWAYS remain visible.
-   Only secondary app chrome and optional extras reveal on touch. */
+/* Lesson-first mobile reader, shared by Grades 9–12 and both languages.
+   Header and class/chapter breadcrumbs stay visible while scrolling.
+   Exercise title, question, answer, worked steps and navigation are permanent.
+   Only supplemental figures and tools are revealed on touch. */
 @media (max-width:800px){
-  body.textbook-reader.reader-peek:not(.reader-options-visible) .appbar,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) .status-row,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) #questionReturn,
   body.textbook-reader.reader-peek:not(.reader-options-visible) #figureBtn,
   body.textbook-reader.reader-peek:not(.reader-options-visible) #inlineFigure,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) #solutionModeRow,
   body.textbook-reader.reader-peek:not(.reader-options-visible) #visualLessonAction,
   body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-bottom,
   body.textbook-reader.reader-peek:not(.reader-options-visible) .reference-line,
@@ -53,4 +49,88 @@
 @media(prefers-reduced-motion:reduce){
   body.reader-peek .appbar,
   body.reader-peek .class-dock{transition:none!important;animation:none!important}
+}
+
+/* Fixed reading context without wasting a separate "Back to worked examples"
+   row. The breadcrumb remains an actual chapter picker; the bottom dock
+   retains Back to all chapters, Previous and Next page. */
+body.textbook-reader .question-return,
+body.textbook-reader #questionReturn{
+  display:none!important;
+}
+body.textbook-reader .status-row{
+  position:sticky!important;
+  top:70px;
+  z-index:20;
+  background:#faf9f6!important;
+  border-bottom:1px solid #e7e2ee;
+  padding:7px 2px!important;
+  margin:0 0 8px!important;
+  isolation:isolate;
+}
+@media(max-width:800px){
+  /* The appbar already sits above the independently scrolling lesson area.
+     Keep it permanently visible; pin breadcrumbs to the top of that area. */
+  body.textbook-reader .appbar{
+    visibility:visible!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+  }
+  body.textbook-reader .status-row{
+    position:sticky!important;
+    top:0!important;
+    z-index:20!important;
+    min-height:42px!important;
+    margin:0 0 8px!important;
+    padding:5px 2px 7px!important;
+    backdrop-filter:none!important;
+  }
+}
+/* One useful action, placed immediately beneath the example/question title.
+   Quick solution is always rendered in #quickSteps; there is no Quick button. */
+body.textbook-reader #solutionModeRow{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  align-self:flex-start;
+  max-width:100%;
+  width:auto;
+  border:0;
+  box-shadow:none;
+  background:transparent;
+  padding:0!important;
+  margin:9px 0 8px!important;
+}
+body.textbook-reader #solutionModeRow[hidden]{display:none!important}
+body.textbook-reader #tabGuided{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  max-width:100%;
+  min-height:44px!important;
+  padding:9px 15px!important;
+  border:1px solid #d9cbf1!important;
+  border-radius:12px!important;
+  background:#f0eafd!important;
+  color:#473875!important;
+  font-size:clamp(13px,3.6vw,15px)!important;
+  line-height:1.35!important;
+  font-weight:800!important;
+  cursor:pointer;
+  white-space:normal;
+  text-align:center;
+}
+body.textbook-reader #tabGuided:focus-visible{
+  outline:3px solid #8667c5;
+  outline-offset:3px;
+}
+@media(max-width:800px){
+  body.textbook-reader .lesson-card>#solutionModeRow{order:3!important}
+  body.textbook-reader .lesson-card>#questionText{order:4!important}
+  body.textbook-reader .lesson-card>#answerBox{order:5!important}
+  body.textbook-reader .lesson-card>#inlineFigure{order:6!important}
+  body.textbook-reader .lesson-card>#stepsRegion{order:7!important}
+  body.textbook-reader .lesson-card>#visualLessonAction{order:8!important}
+  body.textbook-reader .lesson-card>.lesson-bottom{order:9!important}
 }
