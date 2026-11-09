@@ -14,7 +14,7 @@ function drawClassic(s){
           const p=polar(r,a),q=polar(r,b),center=polar(r*.71,mid);
           const fill=i%2===0?'#eee6fb':'#d8ecf6';
           t+=`<path d="M${cx} ${cy} L${p[0].toFixed(2)} ${p[1].toFixed(2)} A${r} ${r} 0 0 1 ${q[0].toFixed(2)} ${q[1].toFixed(2)} Z" fill="${fill}" stroke="#756ca6" stroke-width="2"/>`+
-             label(center[0].toFixed(2),center[1].toFixed(2)+0, value, '#354365',22);
+             label(center[0].toFixed(2),Number(center[1].toFixed(2))+6, value, '#354365',22);
         });
         t+=`<circle cx="${cx}" cy="${cy}" r="9" fill="#6654a9"/>`+
            `<path d="M${cx} ${cy} L${cx+26} ${cy-32}" stroke="#df4778" stroke-width="6" stroke-linecap="round"/>`+
