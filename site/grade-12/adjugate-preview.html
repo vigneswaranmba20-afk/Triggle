@@ -60,7 +60,7 @@ li{margin:.65rem 0;line-height:1.65}small,.notice{color:#475763}details{margin-t
 </section>
 <script>
 'use strict';const buttons={en:document.getElementById('en'),ta:document.getElementById('ta')};
-function language(lang){document.documentElement.lang=lang;for(const key of Object.keys(buttons))buttons[key].setAttribute('aria-pressed',String(key===lang));document.querySelectorAll('.english').forEach(x=>x.hidden=lang!=='en');document.querySelectorAll('.tamil').forEach(x=>x.hidden=lang!=='ta');document.querySelectorAll('summary[data-en]').forEach(x=>x.textContent=x.dataset[lang]);}
+function language(lang){document.documentElement.lang=lang;for(const key of Object.keys(buttons))buttons[key].setAttribute('aria-pressed',String(key===lang));document.querySelectorAll('.english').forEach(x=>x.hidden=lang!=='en');document.querySelectorAll('.tamil').forEach(x=>x.hidden=lang!=='ta');document.querySelectorAll('summary[data-en]').forEach(x=>x.textContent=x.dataset[lang]);if(document.getElementById('cofactor-result').textContent)showCofactor();}
 // Independent, integer-only matrix computation; never trust a stored answer as its own proof.
 const matrices={i:[[-3,4],[6,2]],ii:[[2,3,1],[3,4,1],[3,7,2]],iii:[[2,2,1],[-2,1,2],[1,-2,2]]};
 function determinant(m){if(m.length===1)return m[0][0];return m[0].reduce((sum,v,j)=>sum+((j%2)?-1:1)*v*determinant(m.slice(1).map(row=>row.filter((_,k)=>k!==j))),0);}
@@ -89,7 +89,8 @@ function showCofactor(){
  const minor=m.filter((_,r)=>r!==i).map(row=>row.filter((_,col)=>col!==j));
  const minorValue=determinant(minor),sign=(i+j)%2?-1:1,numerator=sign*minorValue;
  const ta=document.documentElement.lang==='ta';
- const fraction=denominator===1?String(numerator):numerator+'/9';
+ const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);const divisor=gcd(numerator,denominator);const reducedDen=denominator/divisor;const reducedNum=numerator/divisor;
+ const fraction=denominator===1?String(numerator):numerator+'/9'+(reducedDen===1?' = '+reducedNum:' = '+reducedNum+'/'+reducedDen);
  document.getElementById('cofactor-result').textContent=(ta?'இடம்':'Position')+' Q1('+key+') C'+(i+1)+(j+1)+'\\n'+(ta?'சிற்றணி':'Minor matrix')+': '+JSON.stringify(minor)+'\\n'+(ta?'சிற்றணிக்கோவை':'Minor determinant')+': '+minorValue+(denominator===9?' / 9':'')+'\\n'+(ta?'குறி':'Sign')+': '+sign+'\\nC'+(i+1)+(j+1)+' = '+fraction;
 }
 document.getElementById('show-cofactor').addEventListener('click',showCofactor);
