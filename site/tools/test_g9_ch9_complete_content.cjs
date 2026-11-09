@@ -39,7 +39,7 @@ assert.equal(record.get('g9-ch9-example-9.4').answer,'[[9|100]] = 0.09');
 assert.equal(record.get('g9-ch9-ex9.2-q5').answer.includes('[[43|75]]'),true);
 for(const i of [9,10]){
  const d=record.get('g9-ch9-ex9.1-q'+i).diagram;
- assert.equal(d.kind,'probability-spinner');assert.deepEqual(Array.from(d.sectors),[1,2,3,4,5,6,7,8]);
+ assert.equal(d.kind,'unitcircle');assert.equal(d.probabilitySpinner,true);assert.deepEqual(Array.from(d.sectors),[1,2,3,4,5,6,7,8]);
 }
 assert.equal(ctx.window.TRIGGLE_PROB_PATH.stages.length,5,'All five numbered chapter concepts');
 assert.equal(ctx.window.TRIGGLE_TEXTBOOK_TASKS['g9-ch9'].length,7,'3 activities + 2 thinking corners + 2 progress checks');
