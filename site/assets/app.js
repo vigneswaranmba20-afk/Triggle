@@ -42,8 +42,31 @@
  }
 
  const activeList=()=>classes[grade].items;
- const currentIndex=()=>activeList().findIndex(i=>i.id===current.id);
  const sectionForQuestion=item=>/^\s*Example\b/i.test(item?.label?.en||'')?'examples':'exercises';
+ // A chapter's Exercises card is for actual book exercises, not Triggle
+ // practice cards. Prefer 2025-mapped textbook IDs when legacy entries coexist.
+ const bookExercisesFor=chapter=>{
+   if(!chapter)return [];
+   const items=chapterItems(chapter).filter(item=>item.kind!=='practice'&&sectionForQuestion(item)==='exercises');
+   const indexed=new Map(items.map((item,index)=>[item.id,index]));
+   const official=new Set(chapter.textbookQuestionIds||[]);
+   const exerciseIndex=item=>{
+     const match=String(item.exercise||'').match(/^\d+\.(\d+)(?:\D|$)/);
+     return match?Number(match[1]):Number.POSITIVE_INFINITY;
+   };
+   return items.sort((a,b)=>exerciseIndex(a)-exerciseIndex(b)||
+     Number(official.has(b.id))-Number(official.has(a.id))||
+     (indexed.get(a.id)-indexed.get(b.id)));
+ };
+ // The Next/Previous controls stay inside the selected chapter's exercises.
+ // Direct legacy question links continue to retain their existing navigation.
+ const readerList=()=>{
+   const chapter=questionOrigin?.grade===grade&&questionOrigin.section==='exercises'
+     ?chapterList().find(c=>c.id===questionOrigin.chapterId):null;
+   const questions=chapter?bookExercisesFor(chapter):[];
+   return questions.some(item=>item.id===current.id)?questions:activeList();
+ };
+ const currentIndex=()=>readerList().findIndex(i=>i.id===current.id);
  const num=n=>String(n).padStart(2,'0');
  const labelForGroup=(e)=>e.endsWith('.examples')?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?ui('unitExercise')+' '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
  function updateUrl(replace=false){
@@ -110,10 +133,29 @@
  }
  function openChapterSection(section,chapter=chapterOverview,concept=null){
    if(!chapter||(!validSections.has(section)&&section!==null))return;
+   if(section==='exercises'){
+     const first=bookExercisesFor(chapter)[0];
+     if(first){
+       // Go straight to Exercise N.1 Q1; never show an intermediate
+       // practice-set/group picker above the actual question.
+       chapterOverview=chapter;chapterSection='exercises';
+       selectLesson(first);
+       return;
+     }
+   }
+   // Chapters without book questions keep a truthful empty-state message.
    homeView=false;classIndex=false;chapterOverview=chapter;
    chapterSection=section;conceptIndex=Number.isInteger(concept)?concept:null;
    updateUrl();render();closeDrawer();resetScroll();
    $('chapterOverview').focus({preventScroll:true});
+ }
+ function resolveDirectExerciseRoute(){
+   if(!chapterOverview||chapterSection!=='exercises')return false;
+   const first=bookExercisesFor(chapterOverview)[0];
+   if(!first)return false;
+   questionOrigin={grade,chapterId:chapterOverview.id,section:'exercises'};
+   current=first;homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;
+   return true;
  }
  function openChapterFor(g,chapter){
    if(!classes[g])return;
@@ -127,7 +169,7 @@
    $('lessonCard').focus({preventScroll:true});
  }
 
- function navMove(delta){if(homeView||classIndex||chapterOverview)return;const list=activeList(),i=currentIndex()+delta;if(i<0||i>=list.length)return;selectLesson(list[i])}
+ function navMove(delta){if(homeView||classIndex||chapterOverview)return;const list=readerList(),i=currentIndex()+delta;if(i<0||i>=list.length)return;selectLesson(list[i])}
 
  function renderBreadcrumb(chapter){
    const nav=$('crumb');nav.replaceChildren();
@@ -498,14 +540,13 @@
    }
   document.body.classList.toggle('chapter-overview-active',!!chapterOverview);$('chapterOverview').hidden=!chapterOverview;$('lessonCard').hidden=!!chapterOverview;
   if(chapterOverview){$('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;renderBreadcrumb(chapterOverview.title);$('gradeTotal').textContent=chapterList().length+' '+ui('chapters');renderOverview(chapterOverview);renderList();window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:null,lang,grade,chapter:chapterOverview}}));return}
-  const list=activeList();const n=currentIndex(),position=n+1,chapter=chapterForItem(current)?.title||classes[grade].chapters[current.chapter]||current.topic;
+  const list=readerList();const n=currentIndex(),position=n+1,chapter=chapterForItem(current)?.title||classes[grade].chapters[current.chapter]||current.topic;
    const questionChapter=chapterForItem(current);
    if(questionChapter){
      const cameFrom=questionOrigin?.grade===grade&&questionOrigin?.chapterId===questionChapter.id;
      const returnTo=cameFrom&&['examples','exercises'].includes(questionOrigin.section)
        ?questionOrigin.section:sectionForQuestion(current);
      const label=returnTo==='examples'?(lang==='ta'?'தீர்க்கப்பட்ட எடுத்துக்காட்டுகளுக்குத் திரும்பு':'Back to worked examples'):
-       returnTo==='exercises'?(lang==='ta'?'அனைத்துப் பயிற்சிகளுக்கும் திரும்பு':'Back to all exercises'):
        (lang==='ta'?'அத்தியாயத்திற்குத் திரும்பு':'Back to chapter');
      $('questionReturnBtn').textContent='← '+label;
      $('questionReturn').hidden=false;
@@ -555,7 +596,8 @@
    const section=questionOrigin?.grade===grade&&questionOrigin?.chapterId===chapter.id&&
      ['examples','exercises'].includes(questionOrigin.section)
        ?questionOrigin.section:sectionForQuestion(current);
-   openChapterSection(section,chapter);
+   if(section==='examples')openChapterSection('examples',chapter);
+   else selectChapter(chapter);
  };
  $('browseBtn').onclick=()=>drawerOpen?closeDrawer():openDrawer();$('closeSidebar').onclick=closeDrawer;$('backdrop').onclick=closeDrawer;
  $('search').oninput=renderList;
@@ -581,6 +623,6 @@
   if(e.target.matches('input,textarea,select,button')||$('figureDialog').open||$('guidedDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
   if(e.key==='ArrowRight'){e.preventDefault();navMove(1)}else if(e.key==='ArrowLeft'){e.preventDefault();navMove(-1)}
  });
- window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams,g=Number(p.get('class'));grade=classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});
- mobile.addEventListener('change',onBreakpoint);onBreakpoint();remember();updateUrl(true);render();
+ window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams,g=Number(p.get('class'));grade=classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;questionOrigin=null;if(resolveDirectExerciseRoute()){remember();updateUrl(true);}$('search').value='';render();closeDrawer();resetScroll()});
+ mobile.addEventListener('change',onBreakpoint);onBreakpoint();resolveDirectExerciseRoute();remember();updateUrl(true);render();
 })();
