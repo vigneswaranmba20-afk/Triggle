@@ -102,7 +102,8 @@ async function main() {
         const button=page.locator('#visualLessonBtn');
         await button.waitFor({state:'visible'});
         assert.equal(await page.locator('#quickSteps').isVisible(),true,'Written quick solution first');
-        assert.equal(await page.locator('#answerBox').isVisible(),true,'Final answer remains first');
+        assert.equal(await page.locator('#answerBox').isVisible(),false,'Separate answer card removed');
+        assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Answer highlighted at the end of How it works');
         assert.equal(await page.locator('#vlInlinePanel').count(),0,'No inline player should require scrolling');
         assert.equal(await page.locator('#vlFullscreen').count(),0,'No redundant fullscreen button');
         assert.equal(await page.locator('#tabQuick').count(),0,'Redundant Quick solution button removed');
@@ -295,7 +296,7 @@ async function main() {
         });
         assert.equal(geo.position,'relative','Dock must reserve layout space');
         assert.match(geo.rows,/chapters chapters/,'Chapter return owns the first row');
-        assert.ok(geo.buttons.every(b=>Math.abs(b.font-16)<.25&&b.height>=48),'All 3 actions use 16px readable touch targets');
+        assert.ok(geo.buttons.every(b=>Math.abs(b.font-14)<.25&&b.height>=44),'All 3 actions use slightly smaller text but retain 44px touch targets');
         const [prev,all,next]=geo.buttons;
         assert.ok(all.top<prev.top&&Math.abs(prev.top-next.top)<2,'Previous and Next share the second row');
         assert.ok(Math.abs(prev.width-next.width)<3,'Previous and Next share equal space');
@@ -309,7 +310,7 @@ async function main() {
         assert.equal(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
         await page.locator('#langTa').click();
         assert.match(await page.locator('#allChaptersButton').innerText(),/அனைத்து அத்தியாயங்களுக்கும்/);
-        assert.ok((await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>parseFloat(getComputedStyle(el).fontSize)))).every(n=>Math.abs(n-16)<.25));
+        assert.ok((await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>parseFloat(getComputedStyle(el).fontSize)))).every(n=>Math.abs(n-14)<.25));
         await noOverflow(page,'nonfloating navigation at '+width+'px');
         await page.locator('#allChaptersButton').click();
         assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
@@ -490,7 +491,8 @@ async function main() {
         assert.equal(await page.locator('#lessonCard').isVisible(),false);
         await page.locator('.hub-question').first().click();
         assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
-        assert.equal(await page.locator('#answerBox').isVisible(),true);
+        assert.equal(await page.locator('#answerBox').isVisible(),false);
+        assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
         assert.equal(await page.locator('#chapterMenuBtn').count(),0,'No extra Chapter sections button');
         assert.equal(await page.locator('#questionReturn').isVisible(),false,'No redundant worked-example return above the question');
         await page.locator('#crumb .crumb-link').nth(1).click();
@@ -964,7 +966,8 @@ async function main() {
           await page.goBack();
           await page.locator('.hub-question').nth(10).click();
           assert.equal(await page.locator('#lessonCard.twd-lesson').count(),0,'Other worked examples remain unchanged');
-          assert.equal(await page.locator('#stepsList li').count(),2,'Other example steps still work');
+          assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Other examples end with their answer');
+          assert.equal(await page.locator('#stepsList li').count(),3,'Original two worked steps plus a final answer');
         }
       });
     }
@@ -1208,7 +1211,8 @@ async function main() {
     await check('legacy progress, diagrams and immersive lessons survive chapter navigation', async () => {
       const page = await visit(await context(1280), '/index.html?class=9&question=c9-example-6-2');
       const question = await page.locator('#questionText').innerText();
-      await page.locator('#markDone').click();
+      assert.equal(await page.locator('#markDone').isVisible(),false,'Progress control removed from question view');
+      await page.locator('#markDone').evaluate(el=>el.click());
       assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'), 'true');
       await page.reload();
       assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'), 'true');
