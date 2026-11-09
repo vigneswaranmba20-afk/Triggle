@@ -14,8 +14,8 @@ assert.equal(checkpoint.source.en.printedPage,7);
 assert.equal(checkpoint.source.ta.printedPage,10);
 assert.equal(checkpoint.source.en.pdfPage,15);
 assert.equal(checkpoint.source.ta.pdfPage,18);
-assert.equal(checkpoint.source.en.pageImageChecked,false);
-assert.equal(checkpoint.source.ta.pageImageChecked,false);
+assert.equal(checkpoint.source.en.pageImageChecked,true);
+assert.equal(checkpoint.source.ta.pageImageChecked,true);
 assert.equal(checkpoint.studentFacingPublished,false);
 assert.equal(checkpoint.editorial,'pending');
 // Exhaustively verify the Q4(iii) identity for all triples of subsets of a
@@ -35,4 +35,4 @@ for(const A of subsets) for(const B of subsets) for(const C of subsets){
   cases++;
 }
 assert.equal(cases,4096);
-console.log('PASS Grade 11 Q4(iii) identity: 4096 exhaustive cases; source-image and exact Tamil transcription remain blocked');
+console.log('PASS Grade 11 Q4(iii) identity: 4096 exhaustive cases; source images checked; Tamil human editorial remains pending');
