@@ -21,5 +21,10 @@ if(fs.existsSync(file)){
  for(const step of ['C₁₁=8−7=1','C₁₂=−(6−3)=−3','C₁₃=21−12=9','C₂₁=−(6−7)=1','C₂₂=4−3=1','C₂₃=−(14−9)=−5','C₃₁=3−4=−1','C₃₂=−(2−3)=1','C₃₃=8−9=−1','adj(A)=[1 1 −1; −3 1 1; 9 −5 −1]'])assert.ok(section[1].includes(step),'missing '+step);
  assert.match(section[1],/class="tamil" lang="ta" hidden/);
  assert.match(html,/Tamil human editorial review pending/);
+ // Each cofactor field must be separated by a real newline, not the literal characters \\n.
+ const cofactorOutput=html.match(/document\.getElementById\('cofactor-result'\)\.textContent=([\s\S]*?);\n}/);
+ assert.ok(cofactorOutput,'cofactor output renderer exists');
+ assert.equal(cofactorOutput[1].split(String.raw`'\\\\n'`).length-1,0,'no literal backslash-n in student output');
+ assert.equal(cofactorOutput[1].split(String.raw`'\\n'`).length-1,3,'position, minor and sign fields appear on separate lines');
 }
 console.log('PASS Grade 12 Q1(ii) cofactor, adjugate, determinant, identity and preview checks');
