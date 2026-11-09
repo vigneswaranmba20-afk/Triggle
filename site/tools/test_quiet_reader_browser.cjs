@@ -25,7 +25,9 @@ async function main(){
    for(const [grade,id] of [[9,'g9-ch9-ex9.1-q4'],[9,'g9-ch1-ex1.1-q1-i'],[10,'c10-6-6-1-1']]){
     await page.goto(url+'/index.html?class='+grade+'&question='+id);
     await page.locator('#questionText').waitFor({state:'visible'});
-    assert.equal(await page.locator('#answerBox').isVisible(),true,'Answer always visible');
+    assert.equal(await page.locator('#answerBox').isVisible(),false,'No separate answer card');
+    assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Green final answer must end the worked steps');
+    assert.equal(await page.locator('#stepsList li').last().getAttribute('class').then(x=>x.includes('final-answer-step')),true,'Answer belongs at the end');
     assert.equal(await page.locator('#questionLabel').isVisible(),true,'Exercise badge always visible');
     assert.match(await page.locator('#questionLabel').innerText(),/EXERCISE/);
     assert.equal(await page.locator('#questionHead').isVisible(),true,'Exercise question heading visible');
@@ -43,8 +45,8 @@ async function main(){
      assert.equal(await page.locator('.status-row').isVisible(),true,'Class and chapter always visible without touch');
      assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),true,
        'All optional actions must be visible without touch');
-     assert.equal(await page.locator('.lesson-bottom').isVisible(),true,
-       'Supplemental controls visible by default');
+     assert.equal(await page.locator('.lesson-bottom').isVisible(),false,
+       'The unnecessary progress and edition row is removed');
      const original=await page.evaluate(()=>({
        q:document.getElementById('questionText').getBoundingClientRect().top,
        nav:document.getElementById('questionNavDock').getBoundingClientRect().top
