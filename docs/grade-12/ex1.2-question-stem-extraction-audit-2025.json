@@ -1,0 +1,53 @@
+{
+  "grade": 12,
+  "edition": "2025 revised",
+  "chapter": 1,
+  "exercise": "1.2",
+  "status": "text_layer_stems_only_not_source_image_certified",
+  "source": {
+    "englishDriveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "printedPage": 27,
+    "pageImageVerified": false,
+    "tamilDriveFileId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+    "tamilPageImageVerified": false
+  },
+  "questions": [
+    {
+      "question": 1,
+      "stem": "Find the rank of the following matrices by minor method:",
+      "subparts": [
+        "i",
+        "ii",
+        "iii",
+        "iv",
+        "v"
+      ],
+      "matrixEntries": "UNVERIFIED — PDF extraction loses row layout and minus signs"
+    },
+    {
+      "question": 2,
+      "stem": "Find the rank of the following matrices by row reduction method:",
+      "subparts": [
+        "i",
+        "ii",
+        "iii"
+      ],
+      "matrixEntries": "UNVERIFIED — PDF extraction loses row layout and minus signs"
+    },
+    {
+      "question": 3,
+      "stem": "Find the inverse of each of the following by Gauss-Jordan method:",
+      "subparts": [
+        "i",
+        "ii",
+        "iii"
+      ],
+      "matrixEntries": "UNVERIFIED — PDF extraction loses row layout and minus signs"
+    }
+  ],
+  "verifiedQuestionStems": 0,
+  "verifiedSubparts": 0,
+  "missingSubparts": 11,
+  "figuresPending": "matrix page-image transcription for all 11 subparts",
+  "next": "Inspect English Volume I printed page 27 and Tamil corresponding page images, transcribe matrices, independently calculate ranks/inverses and add full solutions; do not promote sourceExact before visual verification."
+}
