@@ -93,6 +93,33 @@ async function main(){
     assert.equal(await page.locator('#questionReturn').isVisible(),false,'Redundant return hidden at Grade '+grade);
     assert.equal(await page.locator('.status-row').isVisible(),true,'Sticky header available at Grade '+grade);
    }
+   if(width<=800){
+    // Screenshot regression: Grade 9 Statistics Exercise 8.1 Q5.
+    await page.goto(base+'/index.html?class=9&question=g9-ch8-ex8.1-q5');
+    await page.locator('#questionText').waitFor({state:'visible'});
+    const m=await page.evaluate(()=>{
+      const q=document.getElementById('questionText'),a=document.getElementById('answerBox'),
+        s=document.getElementById('stepsRegion'),card=document.getElementById('lessonCard'),
+        nav=document.getElementById('questionNavDock');
+      const box=el=>el.getBoundingClientRect();
+      return {h:q.clientHeight,scrollHeight:q.scrollHeight,qBottom:box(q).bottom,
+        answerTop:box(a).top,answerBottom:box(a).bottom,stepsTop:box(s).top,
+        stepsHeight:s.clientHeight,cardBottom:box(card).bottom,navTop:box(nav).top,
+        fallback:document.body.classList.contains('reader-long-question')};
+    });
+    assert.ok(m.scrollHeight<=m.h+2,'Full Q5 must not be in a clipped question scroller');
+    assert.ok(m.qBottom<=m.answerTop+2,'Question is above the answer');
+    assert.ok(m.answerBottom<=m.stepsTop+3,'Answer is above How it works');
+    assert.ok(m.fallback||m.stepsHeight>=60,'Steps region has usable height');
+    assert.ok(m.fallback||m.cardBottom<=m.navTop+3,'No overlap with navigation');
+    assert.equal(await page.locator('.reference-line,.bottom-extras').count(),0,'Old footer removed');
+    if(!m.fallback){
+      const before=await page.locator('#questionText').boundingBox();
+      await page.evaluate(()=>document.getElementById('stepsRegion').scrollTop=210);
+      const after=await page.locator('#questionText').boundingBox();
+      assert.ok(Math.abs(before.y-after.y)<2,'Question stays fixed as explanation scrolls');
+    }
+   }
    assert.deepEqual(errors,[],'No browser errors at '+width);
    await ctx.close();
   }
