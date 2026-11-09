@@ -46,3 +46,29 @@ const pairs=Object.entries(groups).flatMap(([salary,employees])=>employees.map(e
 assert.equal(pairs.length,14);
 for (const [s,e] of pairs) assert.ok(data.items[8].answer.includes('('+s+','+e.replace(/(\d)/g,x=>'₁₂₃₄₅'[Number(x)-1]||x)+')') || data.items[8].answer.includes(String(s)));
 console.log('PASS Grade 10 Exercise 1.2: 9/9 source-checked entries, 5 question groups, 9 independent mathematics checks; 3 visual renderings and Tamil pending.');
+
+// Verify the student-facing module actually registers the authored questions.
+const vm=require('node:vm');
+const sandbox={window:{}};
+for(const name of ['class-10.js','class-10-ex1-1-2025.js','class-10-ex1-2-2025.js']){
+ const filename=path.join(__dirname,'../data',name);
+ vm.runInNewContext(fs.readFileSync(filename,'utf8'),sandbox,{filename,timeout:2000});
+}
+const loaded=sandbox.window.TRIGGLE_CLASSES[10].items;
+assert.equal(loaded.length,41,'20 preserved items + 12 Exercise 1.1 + 9 Exercise 1.2');
+assert.equal(new Set(loaded.map(x=>x.id)).size,loaded.length);
+for(const id of expected){
+ const q=loaded.find(x=>x.id===id);
+ assert.ok(q,'Student-facing question '+id+' missing');
+ assert.equal(q.classNum,10);
+ assert.equal(q.exercise,'1.2');
+ assert.ok(q.q.en&&q.q.ta);
+ assert.ok(q.steps.length>=4 && q.steps.every(s=>s.en&&s.ta&&s.eq));
+ assert.ok(q.reference.includes('2025'));
+ assert.equal(q.translationReview,'pending');
+}
+const page=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
+assert.ok(page.includes('data/class-10-ex1-2-2025.js'),'Exercise 1.2 script not loaded');
+const offline=fs.readFileSync(path.join(__dirname,'../service-worker.js'),'utf8');
+assert.ok(offline.includes("'./data/class-10-ex1-2-2025.js'"),'Exercise 1.2 missing from offline shell');
+console.log('PASS Grade 10 Exercise 1.2 student registration: 9/9 entries; 20 legacy IDs retained; script and offline cache registered.');
