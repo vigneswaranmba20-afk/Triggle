@@ -41,27 +41,27 @@ async function main(){
      assert.equal(await page.evaluate(()=>window.TriggleQuietReader?.isActive()),true);
      assert.equal(await page.locator('.appbar').isVisible(),true,'Top header always visible without touch');
      assert.equal(await page.locator('.status-row').isVisible(),true,'Class and chapter always visible without touch');
-     // Tap the actual question, not a fixed coordinate that could land on
-     // the newly repositioned Detailed explanation launcher.
-     await page.locator('#questionText').scrollIntoViewIfNeeded();
-     const qbox=await page.locator('#questionText').boundingBox();
-     assert.ok(qbox&&qbox.height>0,'Question touch target must exist');
-     await page.mouse.move(qbox.x+12,qbox.y+Math.min(qbox.height/2,16));
-     await page.mouse.down();
-     assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),true,'Touch-down opens all optional controls');
-     assert.equal(await page.locator('.appbar').isVisible(),true,'Main header available after touch');
+     assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),true,
+       'All optional actions must be visible without touch');
      assert.equal(await page.locator('.lesson-bottom').isVisible(),true,
-       'Touch must show Mark learned and other optional controls even on narrow phones');
-     assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Touch must not disrupt solution');
-     assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Touch must not disrupt page navigation');
-     await page.mouse.up();
-     assert.equal(await page.locator('#guidedDialog').evaluate(el=>el.open),false,'Tapping question should not open Detailed explanation');
-     await page.waitForFunction(()=>!document.body.classList.contains('reader-options-visible'),null,{timeout:8000});
-     assert.equal(await page.locator('.appbar').isVisible(),true,'Header stays fixed after extras retract');
-     assert.equal(await page.locator('.status-row').isVisible(),true,'Breadcrumb stays visible after extras retract');
-     assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Worked steps persist after release');
-     assert.equal(await page.locator('#allChaptersButton').isVisible(),true,'Chapter return persists after release');
-     assert.equal(await page.locator('#next').isVisible(),true,'Next persists after release');
+       'Supplemental controls visible by default');
+     const original=await page.evaluate(()=>({
+       q:document.getElementById('questionText').getBoundingClientRect().top,
+       nav:document.getElementById('questionNavDock').getBoundingClientRect().top
+     }));
+     await page.locator('#questionText').click();
+     await page.waitForTimeout(150);
+     assert.equal(await page.evaluate(()=>document.body.classList.contains('reader-options-visible')),true,
+       'Touch release never hides anything');
+     assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Steps persist');
+     assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Bottom navigation persists');
+     const later=await page.evaluate(()=>({
+       q:document.getElementById('questionText').getBoundingClientRect().top,
+       nav:document.getElementById('questionNavDock').getBoundingClientRect().top
+     }));
+     assert.ok(Math.abs(original.q-later.q)<2,'Question does not jump on touch');
+     assert.ok(Math.abs(original.nav-later.nav)<2,'Navigation does not jump on touch');
+
     }else{
      assert.equal(await page.evaluate(()=>window.TriggleQuietReader?.isActive()),false);
      assert.equal(await page.locator('.appbar').isVisible(),true,'Desktop remains unchanged');
@@ -79,8 +79,8 @@ async function main(){
     assert.equal(await page.locator('#figureBtn').evaluate(el=>el.inert),false,
       'Relevant Figure icon must not be inert');
     if(width<=800){
-     assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),false,
-       'Figure button must appear before optional controls are revealed');
+     assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),true,
+       'Figure and supplemental actions already visible');
     }
     await page.locator('#figureBtn').click();
     assert.equal(await page.locator('#figureDialog').evaluate(el=>el.open),true,
@@ -106,7 +106,7 @@ async function main(){
    assert.deepEqual(errors,[],'No JavaScript exceptions at '+width);
    await ctx.close();
   }
-  console.log('PASS: exercise+question+answer+How it works+chapter/previous/next visible by default at 320,390,1280; touch reveals supplemental actions only; Figure is visible without touch.');
+  console.log('PASS: exercise+question+answer+How it works+chapter/previous/next visible by default at 320,390,1280; no touch-hide effects; Figure is visible without touch.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
