@@ -1,0 +1,67 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 12,
+    "pdfPage": "pending independent PDF-page confirmation",
+    "fidelity": "English PDF text-layer checked; page-image review pending"
+  },
+  "exercise": "1.2",
+  "stem": "3. Which of the following sets are equivalent or unequal or equal sets?",
+  "tamilStatus": "pending original Tamil source transcription and independent editorial review",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-2-q3-i",
+      "part": "i",
+      "question": "A = The set of vowels in the English alphabets.\nB = The set of all letters in the word “VOWEL”",
+      "steps": [
+        "List the distinct vowels: A = {a, e, i, o, u}, so n(A) = 5.",
+        "The distinct letters of VOWEL give B = {V, O, W, E, L}, so n(B) = 5.",
+        "The sets have the same cardinal number but different elements, so they are equivalent, not equal."
+      ],
+      "answer": "Equivalent sets; unequal sets.",
+      "mathCheck": "distinct-element enumeration: 5=5; different membership",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q3-ii",
+      "part": "ii",
+      "question": "C = {2,3,4,5} D = { x : x ∈W, 1< x<5}",
+      "steps": [
+        "C contains 2, 3, 4, 5 and has cardinal number 4.",
+        "Whole numbers strictly between 1 and 5 are 2, 3, 4, so D = {2, 3, 4} and n(D) = 3.",
+        "The cardinal numbers differ and C contains 5 while D does not; therefore the sets are unequal and not equivalent."
+      ],
+      "answer": "Unequal sets; not equivalent.",
+      "mathCheck": "independent integer enumeration: 4≠3",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q3-iii",
+      "part": "iii",
+      "question": "X = { x : x is a letter in the word “LIFE”} Y = { F, I, L, E}",
+      "steps": [
+        "The distinct letters of LIFE are L, I, F, E.",
+        "Thus X = {L, I, F, E}, while Y = {F, I, L, E}.",
+        "Order does not matter in sets: both contain exactly the same four letters."
+      ],
+      "answer": "Equal sets (and hence equivalent).",
+      "mathCheck": "set equality after sorting unique letters",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q3-iv",
+      "part": "iv",
+      "question": "G = { x : x is a prime number and 3 < x < 23} H = { x : x is a divisor of 18}",
+      "steps": [
+        "Primes strictly between 3 and 23 are G = {5, 7, 11, 13, 17, 19}, giving n(G) = 6.",
+        "The positive divisors of 18 are H = {1, 2, 3, 6, 9, 18}, giving n(H) = 6.",
+        "Both sets have six elements but no matching membership lists, so they are equivalent but unequal."
+      ],
+      "answer": "Equivalent sets; unequal sets.",
+      "mathCheck": "trial division for primes; factor pairs (1,18),(2,9),(3,6)",
+      "sourceVisualReview": "pending"
+    }
+  ]
+}
