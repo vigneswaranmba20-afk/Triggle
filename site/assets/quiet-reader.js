@@ -41,9 +41,8 @@
     hideTimer=window.setTimeout(()=>{
       if(modalOpen()){hideLater();return;}
       const focused=document.activeElement;
-      if(focused&&surfaces.some(el=>el.contains(focused))&&focused.matches(':focus-visible')){
-        keyboard=true;return;
-      }
+      // Tab explicitly enables keyboard mode; mouse/touch focus must not
+      // accidentally latch extra controls open indefinitely.
       if(focused&&surfaces.some(el=>el.contains(focused)))focused.blur();
       setVisible(false);
     },delay);
@@ -95,7 +94,7 @@
   },true);
   document.addEventListener('focusin',event=>{
     if(!active||modalOpen())return;
-    if(surfaces.some(el=>el.contains(event.target))&&event.target.matches(':focus-visible')){
+    if(surfaces.some(el=>el.contains(event.target))&&event.target.matches(':focus-visible')&&!pressed){
       keyboard=true;
       setVisible(true);
     }
