@@ -9,8 +9,8 @@ const css=read('assets/math-first.css'),sw=read('service-worker.js');
 for(const [path,body] of [['app.js',app],['chapter-hub.js',hub],['textbook-activities.js',activities]]){
  new vm.Script(body,{filename:path});
 }
-// Release gate: chapter cards NEVER bypass section choices, and sections NEVER
-// bypass the complete worked-example/exercise list.
+// Release gate: chapter cards retain section choices; Exercises bypasses
+// unnecessary practice-set lists, while Worked Examples keeps its list.
 assert(app.includes('function selectChapter(chapter)'), 'Explicit chapter-menu route missing');
 assert(app.includes('homeView=false;classIndex=false;chapterOverview=chapter;chapterSection=null;conceptIndex=null;'), 'Chapter card must open its hub');
 assert(!app.includes('openSectionFirst('), 'Do not bypass section lists automatically');
@@ -18,7 +18,9 @@ assert(app.includes('function openChapterSection(section,chapter=chapterOverview
 assert(app.includes("b.onclick=()=>openPath(c.type)"), 'Chapter chevron must invoke chapter picker');
 assert(app.includes("chapterList().forEach(c=>options.push"), 'Chapter picker must list active-class chapters');
 assert(app.includes("choose:()=>selectChapter(c)"), 'Chapter selection must open the selected chapter menu');
-assert(app.includes("openChapterSection(section,chapter);"), 'Back to worked examples must open their full list');
+assert(app.includes("if(section==='examples')openChapterSection('examples',chapter);"), 'Back to worked examples must open their full list');
+assert(app.includes("const first=bookExercisesFor(chapter)[0]"),'Exercises must open the first book question directly');
+assert(app.includes("else selectChapter(chapter);"),'Exercises return directly to the chapter menu');
 assert(app.includes('if(chapterOverview)questionOrigin={grade,chapterId:chapterOverview.id,section:chapterSection}'), 'Return-to-list destination must be tracked');
 assert(!html.includes('id="chapterMenuBtn"'), 'Remove redundant question-page Chapter sections button');
 assert(!app.includes('openChapterMenu('), 'Chapter breadcrumbs must not secretly open section menus');
@@ -40,8 +42,8 @@ assert(html.includes('math-first.css?v=venn-tall-2'),'Updated chapter-navigation
 const glass=/\.figure-dialog\{[\s\S]*?background:rgba\(239,232,250,\.68\)!important/.test(css);
 assert(glass,'Venn dialog must be visibly translucent, not nearly opaque');
 assert(html.includes('textbook-activities.js?v=math-first-1'),'New activities renderer not versioned');
-assert(html.includes('chapter-hub.js?v=math-first-1'),'New chapter route not versioned');
-assert(html.includes('app.js?v=minimal-home-1'),'Chapter menu reader code must load');
+assert(html.includes('chapter-hub.js?v=exercise-direct-q1-1'),'Direct Exercises route must have a fresh asset version');
+assert(html.includes('app.js?v=exercise-direct-q1-1'),'Direct-question reader code must have a fresh asset version');
 assert(sw.includes("'./assets/math-first.css'"),'Offline shell must include new CSS');
 const cacheVersion=Number(sw.match(/triggle-shell-real-2025-v(\d+)/)?.[1]);
 assert.ok(Number.isInteger(cacheVersion)&&cacheVersion>=55,'Offline cache must invalidate all previous published versions');
@@ -76,4 +78,4 @@ assert(!home.includes('discover-feature'),'No featured promo on home');
 assert(app.includes("lastOpened={grade,questionId:current.id}"),'Track actual most recent question across all grades');
 assert(home.includes("lastOpened.questionId"),'Resume must select most recently opened item');
 assert(homeCss.includes('.discover-resume-card'),'Resume row should be styled as an accessible action');
-console.log('PASS: chapter → section → list → question navigation, truthful fallbacks, quiz/activity first content, accessible figure comparison, mobile layout and offline cache');
+console.log('PASS: chapter → Exercises → Q1 direct navigation, examples list retained, truthful fallbacks, accessible figures, mobile layout and offline cache');

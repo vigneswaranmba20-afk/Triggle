@@ -75,7 +75,9 @@
   const baseKinds=['concepts','examples','exercises','quizzes'];
   const categorized=questions=>({
     examples:questions.filter(q=>/^\s*Example\b/i.test(q.label?.en||'')),
-    exercises:questions.filter(q=>!/^\s*Example\b/i.test(q.label?.en||''))
+    // Practice sets remain searchable, but never masquerade as textbook
+    // exercises or appear above Exercise N.1 Question 1.
+    exercises:questions.filter(q=>q.kind!=='practice'&&!/^\s*Example\b/i.test(q.label?.en||''))
   });
   function mount(root,opts){
     if(!root||!opts?.chapter)return;
