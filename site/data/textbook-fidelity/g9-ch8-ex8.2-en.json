@@ -1,0 +1,97 @@
+{
+  "grade": 9,
+  "chapter": 8,
+  "exercise": "8.2",
+  "edition": "2025 revised",
+  "englishSourceId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+  "tamilSourceId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+  "sourceStatus": "text-layer checked, page-image pending",
+  "tamilVersion": "pending",
+  "answerKeyCompared": true,
+  "items": [
+    {
+      "id": "g9-ch8-ex8.2-q1",
+      "q": "Find the median of the given values : 47, 53, 62, 71, 83, 21, 43, 47, 41.",
+      "answer": "47",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 289,
+        "enPrintedPage": 283,
+        "taPdfPage": 316,
+        "taPrintedPage": 300,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.2-q2",
+      "q": "Find the Median of the given data: 36, 44, 86, 31, 37, 44, 86, 35, 60, 51",
+      "answer": "44",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 289,
+        "enPrintedPage": 283,
+        "taPdfPage": 316,
+        "taPrintedPage": 300,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.2-q3",
+      "q": "The median of observation 11, 12, 14, 18, x+2, x+4, 30, 32, 35, 41 arranged in ascending order is 24. Find the values of x.",
+      "answer": "x = 21",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 290,
+        "enPrintedPage": 284,
+        "taPdfPage": 316,
+        "taPrintedPage": 300,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.2-q4",
+      "q": "A researcher studying the behavior of mice has recorded the time (in seconds) taken by each mouse to locate its food by considering 13 different mice as 31, 33, 63, 33, 28, 29, 33, 27, 27, 34, 35, 28, 32. Find the median time that mice spent in searching its food.",
+      "answer": "32 seconds",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 290,
+        "enPrintedPage": 284,
+        "taPdfPage": 317,
+        "taPrintedPage": 301,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.2-q5",
+      "q": "The following are the marks scored by the students in the Summative Assessment exam\nClass 0-10 10-20 20-30 30-40 40-50 50-60\nNo. of Students 2 7 15 10 11 5\nCalculate the median.",
+      "answer": "31",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 290,
+        "enPrintedPage": 284,
+        "taPdfPage": 317,
+        "taPrintedPage": 301,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.2-q6",
+      "q": "The mean of five positive integers is twice their median. If four of the integers are 3, 4, 6, 9 and median is 6, then find the fifth integer.",
+      "answer": "38",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 290,
+        "enPrintedPage": 284,
+        "taPdfPage": 317,
+        "taPrintedPage": 301,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    }
+  ]
+}
