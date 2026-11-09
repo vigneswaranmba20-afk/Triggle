@@ -1,67 +1,31 @@
-/* Lesson-first mobile reader, shared by Grades 9–12 and both languages.
-   Header and class/chapter breadcrumbs stay visible while scrolling.
-   Exercise title, question, answer, worked steps and navigation are permanent.
-   Figure controls and question diagrams stay visible; optional tools reveal on touch. */
+/* Always-visible lesson and figures. No touch-triggered hidden states. */
 @media (max-width:800px){
-  /* A useful Figure action and its question-specific diagram need no first touch. */
-  body.textbook-reader.reader-peek #figureBtn:not([hidden]){
-    display:inline-flex!important;
-    visibility:visible!important;
-    opacity:1!important;
-    pointer-events:auto!important;
-  }
-  body.textbook-reader.reader-peek #inlineFigure:not([hidden]){
-    display:block!important;
-    visibility:visible!important;
-    opacity:1!important;
-    pointer-events:auto!important;
-  }
-  body.textbook-reader.reader-peek #figureBtn[hidden],
-  body.textbook-reader.reader-peek #inlineFigure[hidden]{display:none!important}
-  body.textbook-reader.reader-peek:not(.reader-options-visible) #visualLessonAction,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-bottom,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) .reference-line,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) .bottom-extras,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) .class-dock{
-    display:none!important;
-  }
-  /* Legacy mobile styles hide these extras with !important. Reveal them when
-     the student touches, without changing the always-visible lesson or dock. */
-  body.textbook-reader.reader-peek.reader-options-visible .lesson-card>.lesson-bottom{
-    display:flex!important;
-  }
-  body.textbook-reader.reader-peek.reader-options-visible .reference-line,
-  body.textbook-reader.reader-peek.reader-options-visible .bottom-extras{
-    display:flex!important;
-  }
-  body.textbook-reader.reader-peek .focus-nav-toggle{display:none!important}
-  /* Do not hide #questionNavDock, .question-top, .lesson-title-row,
-     #questionText, #answerBox or #stepsRegion in any reader state. */
-  body.textbook-reader.reader-peek .lesson-container{
-    padding:12px 10px 12px!important;
-  }
-  body.textbook-reader.reader-peek .lesson-card{
-    padding:12px!important;
-  }
-  body.textbook-reader.reader-peek .lesson-card>.question-top,
-  body.textbook-reader.reader-peek .lesson-card>.lesson-title-row,
-  body.textbook-reader.reader-peek .lesson-card>#questionText,
-  body.textbook-reader.reader-peek .lesson-card>#answerBox,
-  body.textbook-reader.reader-peek .lesson-card>#stepsRegion{
-    visibility:visible!important;
-    opacity:1!important;
-  }
-  /* Always restore the three-part reader dock independent of touch state. */
-  body.textbook-reader.reader-peek #questionNavDock{
-    visibility:visible!important;
-    opacity:1!important;
-    pointer-events:auto!important;
-    transform:none!important;
-  }
+ body.textbook-reader #figureBtn:not([hidden]){
+   display:inline-flex!important;opacity:1!important;visibility:visible!important;
+   pointer-events:auto!important;
+ }
+ body.textbook-reader #inlineFigure:not([hidden]){
+   display:block!important;opacity:1!important;visibility:visible!important;
+   pointer-events:auto!important;
+ }
+ body.textbook-reader #figureBtn[hidden],
+ body.textbook-reader #inlineFigure[hidden]{display:none!important}
+ body.textbook-reader .lesson-card>.question-top,
+ body.textbook-reader .lesson-card>.lesson-title-row,
+ body.textbook-reader .lesson-card>#questionText,
+ body.textbook-reader .lesson-card>#answerBox,
+ body.textbook-reader .lesson-card>#stepsRegion{
+   visibility:visible!important;opacity:1!important;
+ }
+ body.textbook-reader #questionNavDock{
+   visibility:visible!important;opacity:1!important;
+   pointer-events:auto!important;transform:none!important;
+ }
+ body.textbook-reader .lesson-card>.lesson-bottom{display:flex!important}
+ body.textbook-reader .focus-nav-toggle{display:none!important}
 }
 @media(prefers-reduced-motion:reduce){
-  body.reader-peek .appbar,
-  body.reader-peek .class-dock{transition:none!important;animation:none!important}
+ body.textbook-reader .appbar{transition:none!important;animation:none!important}
 }
 
 /* Fixed reading context without wasting a separate "Back to worked examples"
