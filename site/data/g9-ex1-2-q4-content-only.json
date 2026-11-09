@@ -1,0 +1,67 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 12,
+    "pdfPage": "pending independent PDF-page confirmation",
+    "fidelity": "English PDF text-layer checked; page-image review pending"
+  },
+  "exercise": "1.2",
+  "stem": "4. Identify the following sets as null set or singleton set.",
+  "tamilStatus": "pending original Tamil source transcription and independent editorial review",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-2-q4-i",
+      "part": "i",
+      "question": "A = {x : x ∈ N , 1 < x < 2}",
+      "steps": [
+        "A natural number must be an integer at least 1.",
+        "There is no integer strictly between 1 and 2.",
+        "Therefore A has no elements."
+      ],
+      "answer": "Null set (∅).",
+      "mathCheck": "No integer n satisfies 1<n<2.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q4-ii",
+      "part": "ii",
+      "question": "B = The set of all even natural numbers which are not divisible by 2",
+      "steps": [
+        "Every even natural number has the form 2k for some natural number k.",
+        "Hence every even natural number is divisible by 2.",
+        "No element satisfies both conditions."
+      ],
+      "answer": "Null set (∅).",
+      "mathCheck": "Even n implies n mod 2=0, contradicting condition.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q4-iii",
+      "part": "iii",
+      "question": "C = {0}.",
+      "steps": [
+        "The braces contain the number 0.",
+        "The number 0 is one element; {0} is not the empty set.",
+        "Therefore n(C)=1."
+      ],
+      "answer": "Singleton set.",
+      "mathCheck": "|{0}|=1.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q4-iv",
+      "part": "iv",
+      "question": "D = The set of all triangles having four sides.",
+      "steps": [
+        "By definition, a triangle has exactly three sides.",
+        "A four-sided polygon is not a triangle.",
+        "Therefore no figure satisfies the description."
+      ],
+      "answer": "Null set (∅).",
+      "mathCheck": "Triangle sides=3, cannot equal 4.",
+      "sourceVisualReview": "pending"
+    }
+  ]
+}
