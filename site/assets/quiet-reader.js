@@ -1,7 +1,7 @@
-/* Triggle quiet question reader, mobile only.
-   A question opens with just its prompt and final answer; touch-down reveals
-   navigation, figures and steps immediately. Controls stay available briefly
-   after finger release so children can tap a target without racing the UI. */
+/* Triggle essential-first mobile exercise reader.
+   Exercise number, question, final answer, worked steps, and three navigation
+   buttons always stay visible. A touch reveals only *additional* controls,
+   which may auto-hide after release. Essential reading/navigation is never inert. */
 (() => {
   'use strict';
   const mobile=window.matchMedia('(max-width:800px)');
@@ -9,11 +9,12 @@
   const viewport=document.querySelector('.lesson-container');
   if(!card||!viewport)return;
 
+  // Do NOT include the exercise label, question, answer, worked steps,
+  // or Back to all chapters / Previous / Next. Those are always available.
   const surfaces=[
-    '.appbar','.status-row','#questionReturn','.question-top',
-    '.lesson-title-row','#inlineFigure','#solutionModeRow','#stepsRegion',
-    '#visualLessonAction','.lesson-bottom','.reference-line','.bottom-extras',
-    '#questionNavDock'
+    '.appbar','.status-row','#questionReturn','#figureBtn',
+    '#inlineFigure','#solutionModeRow','#visualLessonAction',
+    '.lesson-bottom','.reference-line','.bottom-extras'
   ].map(selector=>document.querySelector(selector)).filter(Boolean);
   const body=document.body;
   const RELEASE_GRACE_MS=2200;
