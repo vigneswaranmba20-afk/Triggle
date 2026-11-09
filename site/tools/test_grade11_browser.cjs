@@ -181,6 +181,9 @@ const server=http.createServer((req,res)=>{
    assert.ok((await p.locator('#lesson').innerText()).includes('(1,b)'));
    await p.locator('#ta').click();
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   // Switching languages re-renders a closed details element; open it to inspect the Tamil derivation.
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
    assert.match(await p.locator('#lesson').innerText(),/சரிபார்க்கப்பட்டது/);
    assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
    await ctx.setOffline(true);
@@ -202,6 +205,9 @@ const server=http.createServer((req,res)=>{
    assert.ok((await p.locator('#lesson').innerText()).includes('(2,c)'));
    await p.locator('#ta').click();
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   // Switching languages re-renders a closed details element; open it to inspect the Tamil derivation.
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
    assert.match(await p.locator('#lesson').innerText(),/சரிபார்க்கப்பட்டது/);
    assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
    await ctx.setOffline(true);
