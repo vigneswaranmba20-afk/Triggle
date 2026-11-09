@@ -254,9 +254,14 @@ const server=http.createServer((req,res)=>{
    await p.locator('#ta').click();
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
    assert.match(await p.locator('#review').innerText(),/மதிப்பாய்வு நிலுவையில்/);
+   // Language switching rebuilds the disclosure closed: verify Tamil proof by keyboard.
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
+   assert.ok((await p.locator('#lesson').innerText()).trim().length>80,'Tamil derivation is missing');
    assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
    await ctx.setOffline(true);await p.locator('#en').click();
-   await p.locator('#lesson summary').click();
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
    assert.match(await p.locator('#lesson').innerText(),/De Morgan/);
    await ctx.close();
    console.log('PASS Grade 11 Q4(iv) bilingual keyboard/mobile/offline '+width);
