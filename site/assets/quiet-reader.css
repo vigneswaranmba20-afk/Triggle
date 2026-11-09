@@ -16,6 +16,16 @@
     display:none!important;
   }
 
+  /* Older mobile CSS globally conceals the Mark learned row; expose it
+     only on touch so "show everything" actually reveals the extra controls. */
+  body.textbook-reader.reader-peek.reader-options-visible .lesson-card>.lesson-bottom{
+    display:flex!important;
+  }
+  body.textbook-reader.reader-peek.reader-options-visible .reference-line,
+  body.textbook-reader.reader-peek.reader-options-visible .bottom-extras{
+    display:flex!important;
+  }
+
   /* All essential study content and the three bottom controls remain accessible
      on first render and after touch controls fade away. */
   body.textbook-reader.reader-peek .lesson-card>.question-top,
