@@ -98,7 +98,7 @@ async function main(){
     await page.goto(base+'/index.html?class=9&question=g9-ch8-ex8.1-q5');
     await page.locator('#questionText').waitFor({state:'visible'});
     const m=await page.evaluate(()=>{
-      const q=document.getElementById('questionText'),a=document.getElementById('answerBox'),
+      const q=document.getElementById('questionText'),a=document.querySelector('#stepsList .final-answer-step'),
         s=document.getElementById('stepsRegion'),card=document.getElementById('lessonCard'),
         nav=document.getElementById('questionNavDock');
       const box=el=>el.getBoundingClientRect();
@@ -108,8 +108,9 @@ async function main(){
         fallback:document.body.classList.contains('reader-long-question')};
     });
     assert.ok(m.scrollHeight<=m.h+2,'Full Q5 must not be in a clipped question scroller');
-    assert.ok(m.qBottom<=m.answerTop+2,'Question is above the answer');
-    assert.ok(m.answerBottom<=m.stepsTop+3,'Answer is above How it works');
+    assert.ok(m.qBottom<=m.stepsTop+2,'Question is above How it works');
+    assert.ok(m.answerTop>=m.stepsTop,'Final answer is inside How it works');
+    assert.ok(m.answerBottom>m.answerTop,'Green final answer is visible at the end of the solution');
     assert.ok(m.fallback||m.stepsHeight>=60,'Steps region has usable height');
     assert.ok(m.fallback||m.cardBottom<=m.navTop+3,'No overlap with navigation');
     assert.equal(await page.locator('.reference-line,.bottom-extras').count(),0,'Old footer removed');
