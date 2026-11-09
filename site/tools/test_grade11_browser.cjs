@@ -217,6 +217,30 @@ const server=http.createServer((req,res)=>{
    await ctx.close();
    console.log('PASS Grade 11 Q4(ii) bilingual keyboard/mobile/offline '+width);
   }
+  // Source-verified Q4(iii): test both Cartesian products, Tamil derivation, keyboard and offline.
+  for(const width of [320,390,1280]){
+   const ctx=await browser.newContext({viewport:{width,height:800}});
+   const p=await ctx.newPage();
+   await p.goto('http://127.0.0.1:'+server.address().port+'/grade-11/sets-q4-iii-preview.html');
+   await p.locator('#lesson article').waitFor();
+   assert.ok((await p.locator('#lesson').innerText()).includes('(A × B) ∩ (B × A)'));
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
+   assert.match(await p.locator('#lesson').innerText(),/\{\(2,2\)\}/);
+   await p.locator('#ta').click();
+   assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   assert.match(await p.locator('#review').innerText(),/மதிப்பாய்வு நிலுவையில்/);
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
+   assert.match(await p.locator('#lesson').innerText(),/இருபுறமும் சமம்/);
+   assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+   await ctx.setOffline(true);await p.locator('#en').click();
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
+   assert.match(await p.locator('#lesson').innerText(),/proving equality for all sets/);
+   await ctx.close();
+   console.log('PASS Grade 11 Q4(iii) bilingual keyboard/mobile/offline '+width);
+  }
   // Grade 11 Q4(iv): source-exact set-difference identity in both languages, mobile, keyboard, and offline.
   for(const width of [320,390,1280]){
    const ctx=await browser.newContext({viewport:{width,height:800}});
