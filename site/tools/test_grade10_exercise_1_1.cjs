@@ -11,6 +11,8 @@ const vm=require('node:vm');
 const file=path.resolve(__dirname,'../data/class-10.js');
 const sandbox={window:{}};
 vm.runInNewContext(fs.readFileSync(file,'utf8'),sandbox,{filename:file,timeout:2000});
+const extra=path.resolve(__dirname,'../data/class-10-ex1-1-2025.js');
+vm.runInNewContext(fs.readFileSync(extra,'utf8'),sandbox,{filename:extra,timeout:2000});
 const grade=sandbox.window.TRIGGLE_CLASSES?.[10];
 assert.ok(grade,'Grade 10 content must be registered');
 assert.equal(Object.keys(grade.chapters).length,8);
