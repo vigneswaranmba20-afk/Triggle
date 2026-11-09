@@ -5,7 +5,7 @@ const read=p=>fs.readFileSync('site/'+p,'utf8');
 const css=read('assets/reader-pin.css');
 const html=read('index.html'),app=read('assets/app.js'),sw=read('service-worker.js');
 const between=(from,to)=>{const a=css.indexOf(from);assert.ok(a>=0,'Missing: '+from);return css.slice(a,to?css.indexOf(to,a):undefined);};
-assert.match(html,/reader-pin\.css\?v=question-pinned-2/,'Read newest mobile reader CSS');
+assert.match(html,/reader-pin\.css\?v=compact-answer-1/,'Read newest mobile reader CSS');
 assert.match(html,/id="stepsRegion" role="region" tabindex="0"/,'Solution scroller must be keyboard accessible');
 assert.match(html,/id="questionText" class="question-text" tabindex="0"/,'Long question fallback must be keyboard accessible');
 assert.match(css,/@media \(max-width:800px\)/,'Mobile scoped only');
@@ -17,5 +17,7 @@ assert.match(css,/body\.textbook-reader #questionNavDock:not\(\[hidden\]\)\{[^}]
 assert.match(app,/const stepsPane=\$\('stepsRegion'\),questionPane=\$\('questionText'\)/,'New questions reset both independent scroll positions');
 assert.match(css,/reader-long-question/,'Long questions never clipped');
 assert.doesNotMatch(html,/id="referenceLink"|id="editionNote"|id="classicLink"/,'Footer removed');
+assert.match(css,/final-answer-step/,'Final result must be inside the worked steps');
+assert.match(css,/lesson-bottom/,'Remove progress and edition footer from student view');
 assert.match(sw,/reader-pin\.css/,'Reader included in offline page');
 console.log('PASS pinned question, independent worked steps, stable navigation, scroll reset and offline asset.');
