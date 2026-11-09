@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.4",
+  "question": 12,
+  "id": "g10-ch1-ex1-4-q12",
+  "kind": "unpublished_english_mathematical_draft",
+  "source": {
+    "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "edition": "2025 revised",
+    "printedPage": 25,
+    "answerAppendixPrintedPage": 335,
+    "extractedQuestion": "The function ‘t’ which maps temperature in Celsius (C) into temperature in Fahrenheit (F) is defined by t(C)=F where F=(9/5)C+32. Find (i) t(0) (ii) t(28) (iii) t(−10) (iv) the value of C when t(C)=212 (v) the temperature when the Celsius value is equal to the Fahrenheit value.",
+    "exactWordingCertified": false,
+    "originalPageImageVerified": false,
+    "notationRequiresPageImage": true
+  },
+  "subparts": [
+    {
+      "id": "g10-ch1-ex1-4-q12-i",
+      "part": "i",
+      "inputC": 0,
+      "answerF": 32,
+      "steps": [
+        "Use F=(9/5)C+32.",
+        "Substitute C=0: F=(9/5)×0+32=32.",
+        "Therefore t(0)=32°F."
+      ]
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12-ii",
+      "part": "ii",
+      "inputC": 28,
+      "answerF": 82.4,
+      "steps": [
+        "Use F=(9/5)C+32.",
+        "Substitute C=28: F=252/5+32=50.4+32.",
+        "Therefore t(28)=82.4°F."
+      ]
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12-iii",
+      "part": "iii",
+      "inputC": -10,
+      "answerF": 14,
+      "steps": [
+        "Use F=(9/5)C+32.",
+        "Substitute C=−10: F=−18+32.",
+        "Therefore t(−10)=14°F."
+      ]
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12-iv",
+      "part": "iv",
+      "inputF": 212,
+      "answerC": 100,
+      "steps": [
+        "Set F=212 in F=(9/5)C+32.",
+        "Subtract 32: 180=(9/5)C.",
+        "Multiply by 5/9: C=100°C."
+      ]
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12-v",
+      "part": "v",
+      "answerC": -40,
+      "answerF": -40,
+      "steps": [
+        "At the same numerical temperature, set F=C.",
+        "Solve C=(9/5)C+32; subtract C to obtain 0=(4/5)C+32.",
+        "Hence (4/5)C=−32, so C=−40 and F=−40."
+      ]
+    }
+  ],
+  "verification": {
+    "arithmeticPassed": true,
+    "independentAnswerAppendixMatch": true,
+    "duplicateIds": false,
+    "sourceFidelity": "pending_page_image",
+    "mandatoryCI": "not_run",
+    "published": false
+  },
+  "coverage": {
+    "questionStemsDrafted": 1,
+    "subpartsDrafted": 5,
+    "sourceCertifiedQuestionsAdded": 0,
+    "sourceCertifiedSubpartsAdded": 0,
+    "publishedSolutionsAdded": 0,
+    "exerciseQuestionDenominator": 12,
+    "exerciseSubpartDenominator": null,
+    "figuresPending": "Q1 four graph panels require page-image verification",
+    "tamil": "pending_source_and_editorial_review"
+  },
+  "next": "Verify printed p25 page image, especially fraction and minus signs, then certify exact wording; reconcile grade-specific branch and required CI before registration or merge."
+}
