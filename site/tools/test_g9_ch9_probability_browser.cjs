@@ -39,6 +39,7 @@ async function main(){
    assert.equal(await page.locator('#chapterOverview').isVisible(),false,'No Exercise 9.1 list before Q1 at '+width);
    assert.match(await page.locator('#questionText').innerText(),/birthday/i,'Original Q1 must be visible at '+width);
    assert.equal(await page.locator('#answerBox').isVisible(),true,'Q1 answer must be visible');
+   assert.equal(await page.locator('#previous').isDisabled(),true,'Q1 must not navigate back into Practice Set');
    await gotoWithControls(page,base+'/index.html?class=9&question=g9-ch9-ex9.1-q4');
    await page.locator('#questionText').waitFor({state:'visible'});
    assert.match(await page.locator('#questionText').innerText(),/There are 24 balls in a pot/);
