@@ -22,6 +22,9 @@ for (const item of ledger.items) {
  assert.ok(item.englishPrintedPage>0 && item.tamilPrintedPage>0);
  assert.equal(item.tamilEditorial, 'pending');
  assert.equal(item.liveVerified, false);
+ assert.equal(item.deployed, false, 'unmerged Grade 11 item cannot claim deployment: '+item.id);
+ assert.ok(['pending','approved'].includes(item.tamilEditorial), 'invalid Tamil editorial state: '+item.id);
+ if(item.ciPassed) assert.ok(item.mathChecked, 'CI cannot certify mathematically unchecked item: '+item.id);
  if(item.sourceExact === true) {
   assert.equal(item.englishPageImageChecked, true, 'English page image missing for source-exact '+item.id);
   assert.equal(item.tamilPageImageChecked, true, 'Tamil page image missing for source-exact '+item.id);
@@ -65,6 +68,7 @@ for (const chapter of ledger.chapters) {
  const items=ledger.items.filter(i=>i.id.startsWith(chapter.chapterId+'-'));
  assert.equal(chapter.draftedSubparts,items.filter(i=>i.status==='draft').length);
  assert.equal(chapter.mathematicallyCheckedSubparts,items.filter(i=>i.mathChecked).length);
+ assert.equal(chapter.ciPassed,items.filter(i=>i.ciPassed).length);
  assert.equal(chapter.merged,items.filter(i=>i.merged).length);
  assert.equal(chapter.liveVerified,items.filter(i=>i.liveVerified).length);
  assert.equal(chapter.tamilEditorialApproved,items.filter(i=>i.tamilEditorial==='approved').length);
