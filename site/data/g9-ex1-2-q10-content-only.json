@@ -1,0 +1,54 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 12,
+    "pdfPage": "pending PDF page-image confirmation",
+    "fidelity": "2025 English PDF text-layer checked; x² typography visually unconfirmed"
+  },
+  "exercise": "1.2",
+  "tamilStatus": "pending original Tamil source transcription and independent editorial review",
+  "stem": "10.",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-2-q10-i",
+      "part": "i",
+      "question": "If n(A) = 4, find n[P(A)].",
+      "steps": [
+        "A has four distinct elements.",
+        "The power set P(A) contains every subset of A.",
+        "By the power-set counting formula n[P(A)] = 2⁴ = 16."
+      ],
+      "answer": "n[P(A)] = 16.",
+      "mathCheck": "2^4=16.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q10-ii",
+      "part": "ii",
+      "question": "If n(A)=0, find n[P(A)].",
+      "steps": [
+        "A has no elements, hence A = ∅.",
+        "The only subset of ∅ is ∅ itself, so P(A) = {∅}.",
+        "Therefore n[P(A)] = 2⁰ = 1, not zero."
+      ],
+      "answer": "n[P(A)] = 1.",
+      "mathCheck": "2^0=1 and P(empty) has one member.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q10-iii",
+      "part": "iii",
+      "question": "If n[P(A)] = 256, find n(A).",
+      "steps": [
+        "Let n(A) = k; then the power set has 2ᵏ members.",
+        "The given condition becomes 2ᵏ = 256.",
+        "Since 256 = 2⁸, k = 8 and therefore n(A) = 8."
+      ],
+      "answer": "n(A) = 8.",
+      "mathCheck": "2^8=256; unique nonnegative integer solution.",
+      "sourceVisualReview": "pending"
+    }
+  ]
+}
