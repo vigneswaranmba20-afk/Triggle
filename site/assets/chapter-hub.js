@@ -73,9 +73,15 @@
     }
   };
   const baseKinds=['concepts','examples','exercises','quizzes'];
+  // "Exercises" is strictly for available textbook-labelled questions.
+  // Preserve Triggle practice in its underlying records, never insert it ahead
+  // of Exercise N.1 Question 1 or pretend it is an official textbook exercise.
+  const textbookExercises=questions=>questions.filter(q=>
+    q.kind!=='practice'&&/^(?:Exercise|Unit Exercise)\b/i.test(q.label?.en||'')
+  );
   const categorized=questions=>({
     examples:questions.filter(q=>/^\s*Example\b/i.test(q.label?.en||'')),
-    exercises:questions.filter(q=>!/^\s*Example\b/i.test(q.label?.en||''))
+    exercises:textbookExercises(questions)
   });
   function mount(root,opts){
     if(!root||!opts?.chapter)return;
@@ -298,5 +304,5 @@
       const status=document.createElement('p');status.className='hub-review';status.textContent=t.review+': '+(chapter.review?.state||'unreviewed')+'. '+t.noPublished;panel.append(status);
     }
   }
-  window.TriggleChapterHub=Object.freeze({mount,categorized});
+  window.TriggleChapterHub=Object.freeze({mount,categorized,textbookExercises});
 })();
