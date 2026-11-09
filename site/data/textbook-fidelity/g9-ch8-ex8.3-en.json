@@ -1,0 +1,99 @@
+{
+  "grade": 9,
+  "chapter": 8,
+  "exercise": "8.3",
+  "edition": "2025 revised",
+  "englishSourceId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+  "tamilSourceId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+  "sourceStatus": "text-layer checked, page-image pending",
+  "tamilVersion": "pending",
+  "answerKeyCompared": true,
+  "items": [
+    {
+      "id": "g9-ch8-ex8.3-q1",
+      "q": "The monthly salary of 10 employees in a factory are given below :\n`5000, `7000, `5000, `7000, `8000, `7000, `7000, `8000, `7000, `5000\nFind the mean, median and mode.",
+      "answer": "Mean ₹6,600; Median ₹7,000; Mode ₹7,000",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 293,
+        "enPrintedPage": 287,
+        "taPdfPage": 320,
+        "taPrintedPage": 304,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.3-q2",
+      "q": "Find the mode of the given data : 3.1, 3.2, 3.3, 2.1, 1.3, 3.3, 3.1",
+      "answer": "3.1 and 3.3",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 293,
+        "enPrintedPage": 287,
+        "taPdfPage": 320,
+        "taPrintedPage": 304,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.3-q3",
+      "q": "For the data 11, 15, 17, x+1, 19, x–2, 3 if the mean is 14 , find the value of x. Also find the mode of the data.",
+      "answer": "x = 17; mode = 15",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 293,
+        "enPrintedPage": 287,
+        "taPdfPage": 320,
+        "taPrintedPage": 304,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.3-q4",
+      "q": "The demand of track suit of different sizes as obtained by a survey is given below:\nSize 38 39 40 41 42 43 44 45\nNo. of Persons 36 15 37 13 26 8 6 2\nWhich size is in greater demanded?",
+      "answer": "Size 40",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 293,
+        "enPrintedPage": 287,
+        "taPdfPage": 320,
+        "taPrintedPage": 304,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.3-q5",
+      "q": "Find the mode of the following data:\nMarks 0-10 10-20 20-30 30-40 40-50\nNumber of students 22 38 46 34 20",
+      "answer": "24 marks",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 293,
+        "enPrintedPage": 287,
+        "taPdfPage": 320,
+        "taPrintedPage": 304,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.3-q6",
+      "q": "Find the mode of the following distribution:\nWeight(in kgs) 25-34 35-44 45-54 55-64 65-74 75-84\nNumber of students 4 8 10 14 8 6",
+      "answer": "58.5 kg",
+      "sourcePages": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 293,
+        "enPrintedPage": 287,
+        "taPdfPage": 321,
+        "taPrintedPage": 305,
+        "tamilEditorial": "pending",
+        "notes": [
+          "Tamil question 8.3 Q6 additionally asks for mean and median; bilingual scope must be handled separately."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "grade": 9,
+  "chapter": 7,
+  "exercise": "7.2",
+  "count": 7,
+  "edition": "2025 revised English",
+  "source_pdf": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+  "status": "text-layer-checked; mathematical unit checks included; diagrams/table image review may remain",
+  "tamil_status": "pending",
+  "records": [
+    {
+      "id": "g9-ch7-ex7.2-q1",
+      "question": "Find the Total Surface Area and the Lateral Surface Area of a cuboid whose dimensions are: length = 20 cm, breadth = 15 cm and height = 8 cm",
+      "answer": "TSA = 1160 cm²; LSA = 560 cm²",
+      "page": 263,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 263,
+        "enPrintedPage": 257,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.2-q2",
+      "question": "The dimensions of a cuboidal box are 6 m × 400 cm × 1.5 m. Find the cost of painting its entire outer surface at the rate of ₹22 per m².",
+      "answer": "₹1716",
+      "page": 263,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 263,
+        "enPrintedPage": 257,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.2-q3",
+      "question": "The dimensions of a hall is 10 m × 9 m × 8 m. Find the cost of white washing the walls and ceiling at the rate of ₹8.50 per m².",
+      "answer": "₹3349",
+      "page": 263,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 263,
+        "enPrintedPage": 257,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.2-q4",
+      "question": "Find the TSA and LSA of the cube whose side is (i) 8 m (ii) 21 cm  (iii) 7.5 cm",
+      "answer": "(i) 384 m², 256 m²; (ii) 2646 cm², 1764 cm²; (iii) 337.5 cm², 225 cm²",
+      "page": 263,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 263,
+        "enPrintedPage": 257,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.2-q5",
+      "question": "If the total surface area of a cube is 2400 cm² then, find its lateral surface area.",
+      "answer": "1600 cm²",
+      "page": 263,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 263,
+        "enPrintedPage": 257,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.2-q6",
+      "question": "A cubical container of side 6.5 m is to be painted on the entire outer surface. Find the area to be painted and the total cost of painting it at the rate of ₹24 per m².",
+      "answer": "Area = 253.5 m²; cost = ₹6084",
+      "page": 263,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 263,
+        "enPrintedPage": 257,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.2-q7",
+      "question": "Three identical cubes of side 4 cm are joined end to end. Find the total surface area and lateral surface area of the new resulting cuboid.",
+      "answer": "TSA = 224 cm²; LSA = 128 cm²",
+      "page": 263,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 263,
+        "enPrintedPage": 257,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    }
+  ]
+}

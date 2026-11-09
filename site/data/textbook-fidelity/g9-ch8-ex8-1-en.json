@@ -1,0 +1,143 @@
+{
+  "grade": 9,
+  "chapter": 8,
+  "exercise": "8.1",
+  "sourceEdition": "2025 revised",
+  "englishSourceId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+  "tamilSourceId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+  "enPrintedPages": [
+    277,
+    278
+  ],
+  "enPdfPages": [
+    283,
+    284
+  ],
+  "taPrintedPages": [
+    294,
+    295
+  ],
+  "taPdfPages": [
+    310,
+    311
+  ],
+  "visualReview": "pending",
+  "tamilStudentVersion": "pending",
+  "mathCheck": "independently checked; Q3 source answer key appears truncated",
+  "items": [
+    {
+      "id": "g9-ch8-ex8.1-q1",
+      "q": "In a week, temperature of a certain place is measured during winter are as follows 26oC, 24oC, 28oC, 31oC, 30oC, 26oC, 24oC. Find the mean temperature of the week.",
+      "answer": "27°C",
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 283,
+        "enPrintedPage": 277,
+        "taPdfPage": 310,
+        "taPrintedPage": 294,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.1-q2",
+      "q": "The mean weight of 4 members of a family is 60kg.Three of them have the weight 56kg, 68kg and 72kg respectively. Find the weight of the fourth member.",
+      "answer": "44 kg",
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 283,
+        "enPrintedPage": 277,
+        "taPdfPage": 310,
+        "taPrintedPage": 294,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.1-q3",
+      "q": "In a class test in mathematics, 10 students scored 75 marks, 12 students scored 60 marks, 8 students scored 40 marks and 3 students scored 30 marks. Find the mean of their score.",
+      "answer": "[[1880|33]] ≈ 56.97 marks (about 57)",
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 283,
+        "enPrintedPage": 277,
+        "taPdfPage": 310,
+        "taPrintedPage": 294,
+        "tamilEditorial": "pending",
+        "notes": [
+          "Original answer key prints 56.96 or 57 approx; exact 1880/33 rounds to 56.97."
+        ]
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.1-q4",
+      "q": "In a research laboratory scientists treated 6 mice with lung cancer using natural medicine. Ten days later, they measured the volume of the tumor in each mouse and given the results in the table.\nMouse marking 1 2 3 4 5 6\nTumor Volume(mm3) 145 148 142 141 139 140\nFind the mean.",
+      "answer": "142.5 mm³",
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 283,
+        "enPrintedPage": 277,
+        "taPdfPage": 310,
+        "taPrintedPage": 294,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.1-q5",
+      "q": "If the mean of the following data is 20.2, then find the value of p\nMarks 10 15 20 25 30\nNo. of students 6 8 p 10 6",
+      "answer": "p = 20",
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 284,
+        "enPrintedPage": 278,
+        "taPdfPage": 311,
+        "taPrintedPage": 295,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.1-q6",
+      "q": "In the class, weight of students is measured for the class records. Calculate mean weight of the class students using Direct method.\nWeight in kg 15-25 25-35 35-45 45-55 55-65 65-75\nNo. of students 4 11 19 14 0 2",
+      "answer": "40.2 kg",
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 284,
+        "enPrintedPage": 278,
+        "taPdfPage": 311,
+        "taPrintedPage": 295,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.1-q7",
+      "q": "Calculate the mean of the following distribution using Assumed Mean Method:\nClass Interval 0-10 10-20 20-30 30-40 40-50\nFrequency 5 7 15 28 8",
+      "answer": "[[205|7]] ≈ 29.29",
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 284,
+        "enPrintedPage": 278,
+        "taPdfPage": 311,
+        "taPrintedPage": 295,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.1-q8",
+      "q": "Find the Arithmetic Mean of the following data using Step Deviation Method:\nAge 15-19 20-24 25-29 30-34 35-39 40-44\nNo. of persons 4 20 38 24 10 9",
+      "answer": "[[610|21]] ≈ 29.05 years",
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 284,
+        "enPrintedPage": 278,
+        "taPdfPage": 311,
+        "taPrintedPage": 295,
+        "tamilEditorial": "pending",
+        "notes": []
+      }
+    }
+  ]
+}
