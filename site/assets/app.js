@@ -414,7 +414,7 @@
    // Each subquestion already has its worked answer in sequence. Do not duplicate it.
    $('stepsList').innerHTML=authored.steps;
    $('answerText').classList.remove('answer-grid','answer-grid-many');
-   $('answerText').innerHTML=authored.answer;
+   $('answerText').replaceChildren();
    $('stepCount').textContent=lang==='ta'?current.steps.length+' பகுதிகள்':current.steps.length+' parts';
    $('lessonCard').classList.toggle('many-steps',true);
    return;
