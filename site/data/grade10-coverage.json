@@ -1,0 +1,26 @@
+{
+  "grade": 10,
+  "curriculum": "Tamil Nadu Samacheer Kalvi",
+  "source_title": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+  "source_edition": "SCERT revised 2025",
+  "language": "en",
+  "overall_status": "in_progress",
+  "chapters_total": 8,
+  "latest_verified_batch": {
+    "chapter": 1,
+    "chapter_title": "Relations and Functions",
+    "exercise": "1.1",
+    "original_numbered_questions": 7,
+    "unique_question_part_entries": 12,
+    "coverage_status": "complete",
+    "translation_status": "Tamil translations drafted, human review pending",
+    "quality_checks": "15/15 in creation; repeatable Node mathematics and schema test available",
+    "source_page_in_textbook": 6
+  },
+  "counts_at_batch_commit": {
+    "existing_items": 20,
+    "new_items": 12,
+    "total_items": 32
+  },
+  "important_note": "Only Exercise 1.1 is marked complete. The remaining Grade 10 textbook exercises, worked examples, activities, thinking corners, and Tamil editorial checks remain pending."
+}
