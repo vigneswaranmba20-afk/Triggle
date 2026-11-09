@@ -1,7 +1,7 @@
-/* Triggle quiet question reader, mobile only.
-   A question opens with just its prompt and final answer; touch-down reveals
-   navigation, figures and steps immediately. Controls stay available briefly
-   after finger release so children can tap a target without racing the UI. */
+/* Triggle lesson-first mobile reader.
+   The exercise label, complete question, final answer, worked steps, Back to
+   all chapters, and Previous/Next are ALWAYS available without touching.
+   First touch reveals only secondary app chrome and optional tools. */
 (() => {
   'use strict';
   const mobile=window.matchMedia('(max-width:800px)');
@@ -9,14 +9,15 @@
   const viewport=document.querySelector('.lesson-container');
   if(!card||!viewport)return;
 
+  // Never put #questionNavDock, #stepsRegion, .question-top or
+  // .lesson-title-row in this list: they are essential lesson controls/content.
   const surfaces=[
-    '.appbar','.status-row','#questionReturn','.question-top',
-    '.lesson-title-row','#inlineFigure','#solutionModeRow','#stepsRegion',
-    '#visualLessonAction','.lesson-bottom','.reference-line','.bottom-extras',
-    '#questionNavDock'
+    '.appbar','.status-row','#questionReturn','#figureBtn',
+    '#inlineFigure','#solutionModeRow','#visualLessonAction',
+    '.lesson-bottom','.reference-line','.bottom-extras','.class-dock'
   ].map(selector=>document.querySelector(selector)).filter(Boolean);
   const body=document.body;
-  const RELEASE_GRACE_MS=2200;
+  const RELEASE_GRACE_MS=4200;
   let active=false,visible=false,pressed=false,keyboard=false,hideTimer=0;
 
   const modalOpen=()=>Boolean(document.querySelector('dialog[open]'))||
@@ -59,8 +60,8 @@
     if(active&&modalOpen()){setVisible(true);hideLater();}
   }
 
-  // Capture phase ensures the very first contact reveals options on touch-down,
-  // rather than requiring a complete tap or a second gesture.
+  // First contact reveals optional controls immediately. Essential lesson
+  // content and navigation do not change or become hidden after release.
   document.addEventListener('pointerdown',event=>{
     if(!active||modalOpen()||!['touch','pen','mouse'].includes(event.pointerType))return;
     pressed=true;keyboard=false;
