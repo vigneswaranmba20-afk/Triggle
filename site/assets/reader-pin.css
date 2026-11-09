@@ -71,18 +71,6 @@
     margin:0!important;opacity:1!important;visibility:visible!important;
     transform:none!important;pointer-events:auto!important;
     z-index:20!important;
-    grid-template-areas:"chapters previous next"!important;
-    grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr)!important;
-    column-gap:5px!important;row-gap:0!important;
-    padding:7px 8px calc(7px + env(safe-area-inset-bottom))!important;
-  }
-  body.textbook-reader #questionNavDock #allChaptersReturn{grid-area:chapters!important}
-  body.textbook-reader #questionNavDock #previous{grid-area:previous!important}
-  body.textbook-reader #questionNavDock #next{grid-area:next!important}
-  body.textbook-reader #questionNavDock .page-button,
-  body.textbook-reader #questionNavDock .all-chapters-button{
-    min-height:50px!important;font-size:clamp(11px,3vw,13px)!important;
-    padding:7px 5px!important;line-height:1.25!important;
   }
   /* Footer metadata is already optional on small readers. Keep its
      reveal/hide transitions from moving the pinned question or dock. */
