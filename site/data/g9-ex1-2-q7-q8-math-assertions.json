@@ -1,0 +1,26 @@
+{
+  "name": "Grade 9 Ex 1.2 Q7-Q8 content assertions",
+  "source": "2025 English textbook printed page 12",
+  "checks": [
+    {
+      "id": "g9-ch1-ex1-2-q7",
+      "expectedCardinality": 4
+    },
+    {
+      "id": "g9-ch1-ex1-2-q8-i",
+      "expectedCardinality": 4
+    },
+    {
+      "id": "g9-ch1-ex1-2-q8-ii",
+      "expectedCardinality": 8
+    },
+    {
+      "id": "g9-ch1-ex1-2-q8-iii",
+      "expectedCardinality": 16
+    },
+    {
+      "id": "g9-ch1-ex1-2-q8-iv",
+      "expectedCardinality": 1
+    }
+  ]
+}
