@@ -1,0 +1,74 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 11,
+    "pdfPage": "pending independent PDF-page confirmation",
+    "fidelity": "English text-layer checked; PDF page-image and math glyph review pending"
+  },
+  "exercise": "1.2",
+  "stem": "2. Identify the following sets as finite or infinite.",
+  "tamilStatus": "pending source transcription and independent Tamil editorial review",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-2-q2-i",
+      "part": "i",
+      "question": "X = The set of all districts in Tamilnadu.",
+      "steps": [
+        "The districts form an administratively enumerated list.",
+        "At a given time, the number of districts is a whole-number count, not infinitely many.",
+        "Therefore X is a finite set."
+      ],
+      "answer": "finite",
+      "sourceVisualReview": "pending",
+      "mathCheck": "independent mathematical argument"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q2-ii",
+      "part": "ii",
+      "question": "Y = The set of all straight lines passing through a point.",
+      "steps": [
+        "Fix a point P in the plane.",
+        "For every direction angle θ in [0°,180°), exactly one distinct straight line passes through P.",
+        "The interval contains infinitely many direction angles, so Y is infinite."
+      ],
+      "answer": "infinite",
+      "sourceVisualReview": "pending",
+      "mathCheck": "independent mathematical argument"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q2-iii",
+      "part": "iii",
+      "question": "A = { x : x ∈ Z and x <5}",
+      "steps": [
+        "The integer condition allows all negative integers.",
+        "For every integer k < 5, k − 1 is a different integer still less than 5.",
+        "There is no smallest integer, so A has infinitely many elements."
+      ],
+      "answer": "infinite",
+      "sourceVisualReview": "pending",
+      "mathCheck": "independent mathematical argument"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q2-iv",
+      "part": "iv",
+      "question": "B = { x : x2–5x+6 = 0, x ∈ N }",
+      "steps": [
+        "Interpret x2 as x² and factor x² − 5x + 6 = (x − 2)(x − 3).",
+        "The zero-product property gives x = 2 or x = 3, both natural numbers.",
+        "Thus B = {2, 3} has exactly two elements."
+      ],
+      "answer": "finite",
+      "sourceVisualReview": "pending",
+      "mathCheck": "substitution: 4−10+6=0; 9−15+6=0"
+    }
+  ],
+  "checks": {
+    "unique": true,
+    "steps": true,
+    "answers": true,
+    "quadratic": true,
+    "source": true
+  }
+}
