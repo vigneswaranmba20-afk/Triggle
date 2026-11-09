@@ -1,0 +1,35 @@
+name: Export source ZIP for content editing
+on:
+  push:
+    branches: [archive/source-zip-20261109]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest published source
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: project
+      - name: Checkout staged curriculum drafts
+        uses: actions/checkout@v4
+        with:
+          ref: content/grade9-content-only-20261109
+          path: content-drafts
+      - name: Assemble source archives
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          cd project
+          zip -q -r ../dist/Triggle-main-current.zip . -x ".git/*" -x ".git/"
+          cd ../content-drafts
+          zip -q -r ../dist/Triggle-g9-staged-drafts.zip site/data/textbook-exercises site/data/textbook-fidelity site/tools/test_g9* docs/G9_CONTENT_ONLY_SPRINT_2026-11-09.md docs/g9-content-only-staged-inventory-2026-11-09.json || true
+      - name: Upload source archives
+        uses: actions/upload-artifact@v4
+        with:
+          name: triggle-source-and-drafts-20261109
+          path: dist/*.zip
+          retention-days: 1
