@@ -22,6 +22,22 @@ for (const item of ledger.items) {
  assert.ok(item.englishPrintedPage>0 && item.tamilPrintedPage>0);
  assert.equal(item.tamilEditorial, 'pending');
  assert.equal(item.liveVerified, false);
+ if(item.sourceExact === true) {
+  assert.equal(item.englishPageImageChecked, true, 'English page image missing for source-exact '+item.id);
+  assert.equal(item.tamilPageImageChecked, true, 'Tamil page image missing for source-exact '+item.id);
+  assert.ok(item.sourceCheckpoint, 'source-exact item lacks checkpoint: '+item.id);
+  assert.ok(item.lessonPath && item.previewPath, 'source-exact item lacks lesson/preview paths: '+item.id);
+  assert.ok(fs.existsSync(path.join(root, item.sourceCheckpoint)), 'source checkpoint not found: '+item.id);
+  assert.ok(fs.existsSync(path.join(root, item.lessonPath)), 'lesson not found: '+item.id);
+  assert.ok(fs.existsSync(path.join(root, item.previewPath)), 'preview not found: '+item.id);
+ }
+ if(item.status.startsWith('missing')) {
+  assert.notEqual(item.sourceExact, true, 'missing item cannot claim source-exact: '+item.id);
+  assert.equal(item.mathChecked, false, 'missing item cannot claim math verification: '+item.id);
+  assert.equal(item.ciPassed, false, 'missing item cannot claim CI: '+item.id);
+  assert.equal(item.merged, false, 'missing item cannot claim merge: '+item.id);
+  assert.equal(item.liveVerified, false, 'missing item cannot claim live verification: '+item.id);
+ }
  if(item.merged) assert.ok(item.ciPassed, 'merged without CI: '+item.id);
  if(item.liveVerified) assert.ok(item.deployed && item.merged, 'live without deployment: '+item.id);
 }
