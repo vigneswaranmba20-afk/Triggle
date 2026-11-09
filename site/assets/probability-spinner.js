@@ -20,5 +20,5 @@ const spinner=s=>{
  const title=esc((s.ref||'Probability')+' — '+(s.title||'Eight-sector spinner'));
  return `<div class="diagram-wrap"><svg viewBox="0 0 400 270" role="img" aria-label="Spinner with eight equal sectors numbered one to eight" preserveAspectRatio="xMidYMid meet"><title>${title}</title>${paths}<circle cx="${cx}" cy="${cy}" r="7" fill="#6958a0"/><path d="M${cx} ${cy} L${cx+29} ${cy-27}" stroke="#d34876" stroke-width="6" stroke-linecap="round"/><text x="200" y="253" font-size="13" fill="#4c5f78" text-anchor="middle">All 8 outcomes equally likely</text></svg></div>`;
 };
-draw.drawClassic=s=>s?.demo?.kind==='probability-spinner'?spinner(s):old(s);
+draw.drawClassic=s=>s?.demo?.kind==='unitcircle'&&s?.demo?.probabilitySpinner===true?spinner(s):old(s);
 })();
