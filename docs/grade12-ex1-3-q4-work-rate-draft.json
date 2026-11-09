@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "chapter": 1,
+  "exercise": "1.3",
+  "question": "4",
+  "id": "g12-c1-ex1.3-q4",
+  "medium": "en",
+  "status": "draft_math_checked_source_image_pending",
+  "publishable": false,
+  "source": {
+    "title": "Tamil Nadu SCERT Mathematics Higher Secondary Second Year Volume I revised 2025",
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "exerciseHeading": "EXERCISE 1.3",
+    "extraction": "Connected Google Drive PDF text layer; page image not reviewed",
+    "fidelity": "pending"
+  },
+  "questionTextExtracted": "Four men and 4 women can finish a piece of work jointly in 3 days while 2 men and 5 women can finish the same work jointly in 4 days. Find the time taken by one man alone and that of one woman alone to finish the same work by using matrix inversion method.",
+  "questionTextExactCertified": false,
+  "steps": [
+    "Let m be the fraction of the work completed by one man in one day, and w the fraction completed by one woman in one day.",
+    "Four men and four women finish the work in three days, so 4m + 4w = 1/3.",
+    "Two men and five women finish the work in four days, so 2m + 5w = 1/4.",
+    "Write A × [m,w]ᵀ = [1/3,1/4]ᵀ, where A = [[4,4],[2,5]].",
+    "The determinant of A is 4×5 − 4×2 = 12, so A is invertible.",
+    "A⁻¹ = (1/12) × [[5,−4],[−2,4]]. Thus m = (5/3 − 1)/12 = 1/18 and w = (−2/3 + 1)/12 = 1/36.",
+    "One man alone needs 18 days, and one woman alone needs 36 days.",
+    "Check: 4/18 + 4/36 = 1/3, and 2/18 + 5/36 = 1/4."
+  ],
+  "answer": {
+    "oneManDays": 18,
+    "oneWomanDays": 36
+  },
+  "validation": {
+    "determinant": 12,
+    "firstEquation": "4/18+4/36=1/3",
+    "secondEquation": "2/18+5/36=1/4",
+    "method": "Exact rational algebra, independently checked"
+  },
+  "tamil": {
+    "status": "pending_source_and_editorial_review"
+  },
+  "figuresPending": 0,
+  "releaseBlockers": [
+    "Verify original question page image and exact wording",
+    "Execute focused committed regression and required CI",
+    "Check all grade 12 IDs before registration"
+  ]
+}
