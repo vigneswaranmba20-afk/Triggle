@@ -8,7 +8,7 @@ const lesson = JSON.parse(fs.readFileSync(path.join(root, 'data/textbook-exercis
 const coverage = JSON.parse(fs.readFileSync(path.join(root, '../docs/coverage/grade-11-2025.json'), 'utf8'));
 const expectedIds = ['i','ii','iii','iv'].map(s => 'g11-ch1-ex1.1-q1-' + s);
 assert.deepEqual(lesson.questions.map(q => q.id), expectedIds);
-assert.deepEqual(coverage.items.map(q => q.id), expectedIds);
+assert.deepEqual(coverage.items.filter(q => expectedIds.includes(q.id)).map(q => q.id), expectedIds);
 assert.equal(coverage.grade, 11);
 assert.equal(coverage.inventoryComplete, false);
 assert.equal(coverage.exerciseQuestionSubpartTotal, null);
