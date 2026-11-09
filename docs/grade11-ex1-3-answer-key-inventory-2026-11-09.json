@@ -1,0 +1,160 @@
+{
+  "schema": "triggle.grade11.answer-key-inventory.v1",
+  "grade": 11,
+  "chapter": 1,
+  "exercise": "1.3",
+  "source": {
+    "driveFileId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "edition": "2025 revised",
+    "volume": 1,
+    "section": "Answers appendix, printed pages 290-291",
+    "type": "answer-key-text-layer",
+    "originalQuestionPageImageVerified": false
+  },
+  "answerKeyEntries": [
+    {
+      "id": "g11-ch1-ex1.3-q1",
+      "question": 1,
+      "extractedAnswer": "Yes; inverse is not a function",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q2",
+      "question": 2,
+      "extractedAnswer": "f(-4)=8; f(1)=0; f(-2)=6; f(7)=0; f(0)=0",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q3",
+      "question": 3,
+      "extractedAnswer": "f(-3)=1; f(5)=38; f(2)=1; f(-1)=-5; f(0)=-3",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q4",
+      "question": 4,
+      "extractedAnswer": "(i) a function; not one-to-one and not onto; (ii) not a function",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q5",
+      "question": 5,
+      "extractedAnswer": "(i) {(1,a),(2,a),(3,a),(4,a)}; (ii) not possible; (iii) not possible; (iv) {(1,a),(2,b),(3,c),(4,d)}",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q6",
+      "question": 6,
+      "extractedAnswer": "Formula damaged in text extraction; requires page-image verification",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q7",
+      "question": 7,
+      "extractedAnswer": "empty set",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q8",
+      "question": 8,
+      "extractedAnswer": "(-infinity,-1/3] union [1,infinity)",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q9",
+      "question": 9,
+      "extractedAnswer": "R excluding {0}, R excluding {0}",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q10",
+      "question": 10,
+      "extractedAnswer": "Piecewise composition answer fragmented across page boundary; requires page image",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q12",
+      "question": 12,
+      "extractedAnswer": "Inverse function formula damaged in extraction",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q13",
+      "question": 13,
+      "extractedAnswer": "3",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q15",
+      "question": 15,
+      "extractedAnswer": "total cost=0.43m+50; airfare=Rs 738",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q16",
+      "question": 16,
+      "extractedAnswer": "(A+S)(x)=55000+0.09x; total family income=Rs 1405000",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q17",
+      "question": 17,
+      "extractedAnswer": "(g composed f)(x)=62.115x",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q18",
+      "question": 18,
+      "extractedAnswer": "revenue=(200-x)x; cost=100(200-x); profit=(200-x)x-100(200-x)",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q19",
+      "question": 19,
+      "extractedAnswer": "Inverse formula damaged in extraction",
+      "sourceCertified": false,
+      "studentFacing": false
+    },
+    {
+      "id": "g11-ch1-ex1.3-q20",
+      "question": 20,
+      "extractedAnswer": "Inverse formula damaged in extraction",
+      "sourceCertified": false,
+      "studentFacing": false
+    }
+  ],
+  "representedQuestionNumbers": 18,
+  "unresolvedQuestionNumbers": [
+    11,
+    14
+  ],
+  "subpartDenominator": null,
+  "completeQuestionDenominator": null,
+  "mathematicallyVerifiedSolutions": 0,
+  "englishQuestionWordingCertified": 0,
+  "tamilEditorialApproved": 0,
+  "publicationStatus": "inventory-only-unpublished",
+  "limitations": [
+    "Answer-key-only extraction is not proof of original question count or wording.",
+    "Question 11 and 14 lack clear answer-key entries; do not treat as absent textbook questions.",
+    "Question 6, 10, 12, 19, 20 have corrupted formula or page-break extraction.",
+    "Question page images must be inspected before transcribing or publishing."
+  ],
+  "next": "Inspect original Exercise 1.3 question pages, establish question/subpart denominator, verify Q11/Q14, then generate independently checked English solutions."
+}
