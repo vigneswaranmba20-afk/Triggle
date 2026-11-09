@@ -1,0 +1,146 @@
+{
+  "status": "staged-content-only-not-published",
+  "grade": 9,
+  "chapter": 1,
+  "exercise": "1.6",
+  "edition": "Tamil Nadu SCERT revised 2025 English",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPages": [
+      36
+    ],
+    "fidelity": "PDF text layer normalized for line wrapping; printed-page image verification pending"
+  },
+  "numberedQuestions": 2,
+  "questionSubparts": 6,
+  "mathValidation": "7 independent arithmetic checks passed in memory",
+  "integrationStatus": "staged only; offline registration pending",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-6-q9-i",
+      "number": 9,
+      "subpart": "i",
+      "question": "9. In a colony, 275 families buy Tamil newspaper, 150 families buy English newspaper, 45 families buy Hindi newspaper, 125 families buy Tamil and English newspapers, 17 families buy English and Hindi newspapers, 5 families buy Tamil and Hindi newspapers and 3 families buy all the three newspapers. If each family buy atleast one of these newspapers then find\n(i) Number of families buy only one newspaper\n(ii) Number of families buy atleast two newspapers\n(iii) Total number of families in the colony.",
+      "steps": [
+        "Let T, E and H denote the families buying Tamil, English and Hindi newspapers.",
+        "The number buying only Tamil = 275−125−5+3 = 148.",
+        "The number buying only English = 150−125−17+3 = 11.",
+        "The number buying only Hindi = 45−5−17+3 = 26.",
+        "Add the three disjoint only-one groups: 148+11+26 = 185."
+      ],
+      "answer": "185 families.",
+      "chapter": 1,
+      "exercise": "1.6",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text-layer; page-image check pending",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-6-q9-ii",
+      "number": 9,
+      "subpart": "ii",
+      "question": "9. In a colony, 275 families buy Tamil newspaper, 150 families buy English newspaper, 45 families buy Hindi newspaper, 125 families buy Tamil and English newspapers, 17 families buy English and Hindi newspapers, 5 families buy Tamil and Hindi newspapers and 3 families buy all the three newspapers. If each family buy atleast one of these newspapers then find\n(i) Number of families buy only one newspaper\n(ii) Number of families buy atleast two newspapers\n(iii) Total number of families in the colony.",
+      "steps": [
+        "The numbers buying Tamil and English, English and Hindi, Tamil and Hindi are 125, 17 and 5.",
+        "Each family buying all three is included in all three pairwise counts.",
+        "Subtract the 3 all-three families twice so they are counted only once.",
+        "At least two = 125+17+5−2×3 = 141.",
+        "Equivalently exactly two = 122+14+2 = 138, plus all three = 3."
+      ],
+      "answer": "141 families.",
+      "chapter": 1,
+      "exercise": "1.6",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text-layer; page-image check pending",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-6-q9-iii",
+      "number": 9,
+      "subpart": "iii",
+      "question": "9. In a colony, 275 families buy Tamil newspaper, 150 families buy English newspaper, 45 families buy Hindi newspaper, 125 families buy Tamil and English newspapers, 17 families buy English and Hindi newspapers, 5 families buy Tamil and Hindi newspapers and 3 families buy all the three newspapers. If each family buy atleast one of these newspapers then find\n(i) Number of families buy only one newspaper\n(ii) Number of families buy atleast two newspapers\n(iii) Total number of families in the colony.",
+      "steps": [
+        "Everyone buys at least one of the three newspapers, so total families = n(T∪E∪H).",
+        "Apply inclusion–exclusion for three sets.",
+        "n(T∪E∪H)=275+150+45−125−17−5+3.",
+        "The three individual totals sum to 470; subtract the 147 pairwise overlap counts and restore the triple overlap 3.",
+        "Thus n(T∪E∪H)=470−147+3=326."
+      ],
+      "answer": "326 families.",
+      "chapter": 1,
+      "exercise": "1.6",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text-layer; page-image check pending",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-6-q12-i",
+      "number": 12,
+      "subpart": "i",
+      "question": "12. Each student in a class of 35 plays atleast one game among chess, carrom and table tennis. 22 play chess, 21 play carrom, 15 play table tennis, 10 play chess and table tennis, 8 play carrom and table tennis and 6 play all the three games. Find the number of students who play (i) chess and carrom but not table tennis (ii) only chess (iii) only carrom\n(Hint: Use Venn diagram)",
+      "steps": [
+        "Let C, R and T be the sets playing chess, carrom and table tennis.",
+        "Let p=n(C∩R), including the six students playing all three.",
+        "Apply inclusion–exclusion: 35=22+21+15−p−10−8+6.",
+        "Rearrange: 35=46−p, so p=11.",
+        "Chess and carrom but not table tennis = 11−6=5."
+      ],
+      "answer": "5 students.",
+      "chapter": 1,
+      "exercise": "1.6",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text-layer; page-image check pending",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-6-q12-ii",
+      "number": 12,
+      "subpart": "ii",
+      "question": "12. Each student in a class of 35 plays atleast one game among chess, carrom and table tennis. 22 play chess, 21 play carrom, 15 play table tennis, 10 play chess and table tennis, 8 play carrom and table tennis and 6 play all the three games. Find the number of students who play (i) chess and carrom but not table tennis (ii) only chess (iii) only carrom\n(Hint: Use Venn diagram)",
+      "steps": [
+        "The total number playing chess is 22.",
+        "From part (i), 11 play chess and carrom (including all three).",
+        "10 play chess and table tennis, including the 6 who play all three.",
+        "Only chess = 22−11−10+6.",
+        "Therefore only chess = 7."
+      ],
+      "answer": "7 students.",
+      "chapter": 1,
+      "exercise": "1.6",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text-layer; page-image check pending",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-6-q12-iii",
+      "number": 12,
+      "subpart": "iii",
+      "question": "12. Each student in a class of 35 plays atleast one game among chess, carrom and table tennis. 22 play chess, 21 play carrom, 15 play table tennis, 10 play chess and table tennis, 8 play carrom and table tennis and 6 play all the three games. Find the number of students who play (i) chess and carrom but not table tennis (ii) only chess (iii) only carrom\n(Hint: Use Venn diagram)",
+      "steps": [
+        "The total number playing carrom is 21.",
+        "11 play chess and carrom, including the 6 who play all three.",
+        "8 play carrom and table tennis, including those 6.",
+        "Only carrom = 21−11−8+6.",
+        "Therefore only carrom = 8."
+      ],
+      "answer": "8 students.",
+      "chapter": 1,
+      "exercise": "1.6",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text-layer; page-image check pending",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    }
+  ]
+}
