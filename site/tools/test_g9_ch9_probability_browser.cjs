@@ -34,8 +34,11 @@ async function main(){
    const ctx=await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
    const page=await ctx.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
    await gotoWithControls(page,base+'/index.html?class=9&chapter=g9-ch9&section=exercises');
-   await page.locator('#chapterOverview').waitFor({state:'visible'});
-   assert.match(await page.locator('#chapterOverview').innerText(),/Exercise 9\.1/,'Exercises list missing 9.1 at '+width);
+   await page.locator('#questionText').waitFor({state:'visible'});
+   assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch9-ex9.1-q1','Exercise 9.1 Q1 must open directly at '+width);
+   assert.equal(await page.locator('#chapterOverview').isVisible(),false,'No Exercise 9.1 list before Q1 at '+width);
+   assert.match(await page.locator('#questionText').innerText(),/birthday/i,'Original Q1 must be visible at '+width);
+   assert.equal(await page.locator('#answerBox').isVisible(),true,'Q1 answer must be visible');
    await gotoWithControls(page,base+'/index.html?class=9&question=g9-ch9-ex9.1-q4');
    await page.locator('#questionText').waitFor({state:'visible'});
    assert.match(await page.locator('#questionText').innerText(),/There are 24 balls in a pot/);
@@ -51,7 +54,7 @@ async function main(){
    assert.deepEqual(errors,[],'Browser JS errors at '+width);
    await ctx.close();
   }
-  console.log('PASS: Grade 9 2025 Probability Exercise 9.1 chapter navigation, Q4/Q6 and 320/390/1280 responsive browser scenarios.');
+  console.log('PASS: Grade 9 2025 Probability Exercise 9.1 direct Q1 and Q4/Q6 and 320/390/1280 responsive browser scenarios.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
