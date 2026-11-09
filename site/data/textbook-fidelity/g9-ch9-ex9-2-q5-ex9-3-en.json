@@ -1,0 +1,144 @@
+{
+  "grade": 9,
+  "chapter": 9,
+  "edition": "2025 revised",
+  "englishSourceId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+  "tamilSourceId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+  "scope": "Exercise 9.2 Q5 and Exercise 9.3 Q1-Q10",
+  "verifiedSource": "English and Tamil PDF text layer; English textbook answer key",
+  "pageImagesVerified": false,
+  "studentFacingTamil": "pending",
+  "testing": {
+    "mathReasoning": "manually and arithmetically cross-checked",
+    "browser": "deferred by user for end-of-day",
+    "release": "not yet approved"
+  },
+  "items": [
+    {
+      "id": "g9-ch9-ex9.2-q5",
+      "q": "1500 families were surveyed and following data was recorded about their maids at homes\nType of maids           Only part time    Only full time    Both\nNumber of families      860               370               250\nA family is selected at random. Find the probability that the family selected has\n(i)Both types of maids (ii)Part time maids (iii)No maids",
+      "answer": "(i) [[1|6]] ; (ii) [[43|75]] (textbook 'only part time' interpretation) ; (iii) [[1|75]]",
+      "enPdfPage": 308,
+      "enPrintedPage": 302,
+      "taPdfPage": 335,
+      "taPrintedPage": 319,
+      "visualPending": true,
+      "notes": [
+        "Table layout must be checked against original page image",
+        "Printed part (ii) answer 43/75 counts only-part-time families; alternative broad interpretation 37/50 requires explicit clarification"
+      ]
+    },
+    {
+      "id": "g9-ch9-ex9.3-q1",
+      "q": "A number between 0 and 1 that is used to measure uncertainty is called\n(1) Random variable  (2) Trial  (3) Simple event  (4) Probability",
+      "answer": "(4) Probability",
+      "enPdfPage": 308,
+      "enPrintedPage": 302,
+      "taPdfPage": 335,
+      "taPrintedPage": 319,
+      "visualPending": true,
+      "notes": []
+    },
+    {
+      "id": "g9-ch9-ex9.3-q2",
+      "q": "Probability lies between\n(1) −1 and +1  (2) 0 and 1  (3) 0 and 2  (4) 0 and 0.5",
+      "answer": "(2) 0 and 1",
+      "enPdfPage": 308,
+      "enPrintedPage": 302,
+      "taPdfPage": 335,
+      "taPrintedPage": 319,
+      "visualPending": true,
+      "notes": []
+    },
+    {
+      "id": "g9-ch9-ex9.3-q3",
+      "q": "The probability based on the concept of relative frequency theory is called\n(1) Empirical probability  (2) Classical probability  (3) Both (1) and (2)  (4) Neither (1) nor (2)",
+      "answer": "(1) Empirical probability",
+      "enPdfPage": 308,
+      "enPrintedPage": 302,
+      "taPdfPage": 335,
+      "taPrintedPage": 319,
+      "visualPending": true,
+      "notes": []
+    },
+    {
+      "id": "g9-ch9-ex9.3-q4",
+      "q": "The probability of an event cannot be\n(1) Equal to zero  (2) Greater than zero  (3) Equal to one  (4) Less than zero",
+      "answer": "(4) Less than zero",
+      "enPdfPage": 308,
+      "enPrintedPage": 302,
+      "taPdfPage": 335,
+      "taPrintedPage": 319,
+      "visualPending": true,
+      "notes": []
+    },
+    {
+      "id": "g9-ch9-ex9.3-q5",
+      "q": "The probability of all possible outcomes of a random experiment is always equal to\n(1) One  (2) Zero  (3) Infinity  (4) Less than one",
+      "answer": "(1) One",
+      "enPdfPage": 308,
+      "enPrintedPage": 302,
+      "taPdfPage": 335,
+      "taPrintedPage": 319,
+      "visualPending": true,
+      "notes": []
+    },
+    {
+      "id": "g9-ch9-ex9.3-q6",
+      "q": "If A is any event in S and its complement is A’ then, P(A′) is equal to\n(1) 1  (2) 0  (3) 1−A  (4) 1−P(A)",
+      "answer": "(4) 1−P(A)",
+      "enPdfPage": 308,
+      "enPrintedPage": 302,
+      "taPdfPage": 335,
+      "taPrintedPage": 319,
+      "visualPending": true,
+      "notes": [
+        "Complement glyph P(A′) reconstructed from broken PDF text; visually confirm"
+      ]
+    },
+    {
+      "id": "g9-ch9-ex9.3-q7",
+      "q": "Which of the following cannot be taken as probability of an event?\n(1) 0  (2) 0.5  (3) 1  (4) −1",
+      "answer": "(4) −1",
+      "enPdfPage": 308,
+      "enPrintedPage": 302,
+      "taPdfPage": 335,
+      "taPrintedPage": 319,
+      "visualPending": true,
+      "notes": []
+    },
+    {
+      "id": "g9-ch9-ex9.3-q8",
+      "q": "A particular result of an experiment is called\n(1) Trial  (2) Simple event  (3) Compound event  (4) Outcome",
+      "answer": "(4) Outcome",
+      "enPdfPage": 309,
+      "enPrintedPage": 303,
+      "taPdfPage": 336,
+      "taPrintedPage": 320,
+      "visualPending": true,
+      "notes": []
+    },
+    {
+      "id": "g9-ch9-ex9.3-q9",
+      "q": "A collection of one or more outcomes of an experiment is called\n(1) Event  (2) Outcome  (3) Sample point  (4) None of the above",
+      "answer": "(1) Event",
+      "enPdfPage": 309,
+      "enPrintedPage": 303,
+      "taPdfPage": 336,
+      "taPrintedPage": 320,
+      "visualPending": true,
+      "notes": []
+    },
+    {
+      "id": "g9-ch9-ex9.3-q10",
+      "q": "The six faces of the dice are called equally likely if the dice is\n(1) Small  (2) Fair  (3) Six-faced  (4) Round",
+      "answer": "(2) Fair",
+      "enPdfPage": 309,
+      "enPrintedPage": 303,
+      "taPdfPage": 336,
+      "taPrintedPage": 320,
+      "visualPending": true,
+      "notes": []
+    }
+  ]
+}
