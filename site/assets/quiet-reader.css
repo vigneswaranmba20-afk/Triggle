@@ -1,23 +1,39 @@
-/* Distraction-free mobile question view.
-   The full question and final answer are the ONLY content in the resting view.
-   All existing study/navigation content remains accessible on first touch. */
+/* Essential-first textbook reader on small screens.
+   No touch is needed for Exercise N.1, Question, Final answer, How it works,
+   Back to all chapters, Previous or Next page. The finger-down gesture reveals
+   extra navigation and optional visual/deep-learning controls only. */
 @media(max-width:800px){
   body.textbook-reader.reader-peek:not(.reader-options-visible) .appbar,
   body.textbook-reader.reader-peek:not(.reader-options-visible) .status-row,
   body.textbook-reader.reader-peek:not(.reader-options-visible) #questionReturn,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>.question-top,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>.lesson-title-row,
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card #figureBtn,
   body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>#inlineFigure,
   body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>#solutionModeRow,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>#stepsRegion,
   body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>#visualLessonAction,
   body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-card>.lesson-bottom,
   body.textbook-reader.reader-peek:not(.reader-options-visible) .reference-line,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) .bottom-extras,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) #questionNavDock{
+  body.textbook-reader.reader-peek:not(.reader-options-visible) .bottom-extras{
     display:none!important;
   }
-  body.textbook-reader.reader-peek .focus-nav-toggle{display:none!important}
+
+  /* All essential study content and the three bottom controls remain accessible
+     on first render and after touch controls fade away. */
+  body.textbook-reader.reader-peek .lesson-card>.question-top,
+  body.textbook-reader.reader-peek .lesson-card>.lesson-title-row,
+  body.textbook-reader.reader-peek .lesson-card>#questionText,
+  body.textbook-reader.reader-peek .lesson-card>#answerBox,
+  body.textbook-reader.reader-peek .lesson-card>#stepsRegion,
+  body.textbook-reader.reader-peek #questionNavDock{
+    visibility:visible!important;
+    opacity:1!important;
+  }
+  body.textbook-reader.reader-peek #questionNavDock{
+    display:grid!important;
+    pointer-events:auto!important;
+  }
+  body.textbook-reader.reader-peek .focus-nav-toggle{
+    display:none!important;
+  }
   body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-container{
     padding:12px 10px 12px!important;
   }
@@ -25,14 +41,13 @@
     padding:12px!important;
   }
   body.textbook-reader.reader-peek:not(.reader-options-visible) #questionText{
-    margin-top:0!important;
-  }
-  body.textbook-reader.reader-peek #questionText,
-  body.textbook-reader.reader-peek #answerBox{
-    visibility:visible!important;opacity:1!important;
+    margin-top:8px!important;
   }
 }
 @media(prefers-reduced-motion:reduce){
   body.reader-peek .appbar,
-  body.reader-peek #questionNavDock{transition:none!important;animation:none!important}
+  body.reader-peek #questionNavDock{
+    transition:none!important;
+    animation:none!important;
+  }
 }
