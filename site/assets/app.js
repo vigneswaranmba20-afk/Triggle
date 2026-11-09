@@ -387,32 +387,48 @@
   body.append(reason,equation);li.append(number,body);return li;
  }
 
+ function appendFinalStep(steps){
+  // Show the answer once after all worked calculations, not in a separate card.
+  const answer=$('answerText');
+  if(!answer.textContent.trim())return;
+  const li=document.createElement('li');li.className='worked-step final-answer-step';
+  li.setAttribute('aria-label',ui('finalAnswer'));
+  const number=document.createElement('span');number.className='step-circle';
+  number.textContent='✓';number.setAttribute('aria-hidden','true');
+  const body=document.createElement('div');body.className='final-answer-content';
+  const title=document.createElement('strong');title.className='final-answer-label';
+  title.textContent=ui('finalAnswer');
+  const result=document.createElement('div');result.className='final-answer-value';
+  result.classList.toggle('answer-grid',answer.classList.contains('answer-grid'));
+  result.classList.toggle('answer-grid-many',answer.classList.contains('answer-grid-many'));
+  result.innerHTML=answer.innerHTML;
+  body.append(title,result);li.append(number,body);steps.append(li);
+ }
  function renderSteps(){
   const authored=window.TriggleWorkedDisplay?.get(current,lang);
   $('lessonCard').classList.toggle('twd-lesson',!!authored);
   $('questionText').classList.toggle('twd-question',!!authored);
   $('answerText').classList.toggle('twd-answer',!!authored);
+  $('answerBox').hidden=true;
   if(authored){
-   // Each subquestion and its final answer are now paired in reading order.
-   // Don't repeat all answers at the bottom of the page.
+   // Each subquestion already has its worked answer in sequence. Do not duplicate it.
    $('stepsList').innerHTML=authored.steps;
-   $('answerBox').hidden=true;
-   $('stepCount').textContent=lang==='ta'?current.steps.length+' பகுதிகள்':current.steps.length+' parts';
    $('answerText').classList.remove('answer-grid','answer-grid-many');
-   $('answerText').replaceChildren();
+   $('answerText').innerHTML=authored.answer;
+   $('stepCount').textContent=lang==='ta'?current.steps.length+' பகுதிகள்':current.steps.length+' parts';
    $('lessonCard').classList.toggle('many-steps',true);
    return;
   }
-  const all=current.steps||[];const stepCount=all.length;const ul=$('stepsList');ul.replaceChildren();all.forEach((s,i)=>ul.append(buildStep(s,i)));
-  $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
-  $('answerBox').hidden=false;
+  const all=current.steps||[];const ul=$('stepsList');ul.replaceChildren();
+  all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
   const canGrid=parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
   $('answerText').innerHTML=canGrid?parts.map(v=>'<span class="answer-part">'+math(v)+'</span>').join(''):math(localizedAnswer);
-  $('lessonCard').classList.toggle('many-steps',all.length>3);
+  appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
+  $('lessonCard').classList.toggle('many-steps',all.length>3);
  }
  function isQuestionFigure(item){
   // The Figure button already opens a full Venn: no duplicate mini preview.
