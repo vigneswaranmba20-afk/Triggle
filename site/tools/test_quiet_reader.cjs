@@ -1,21 +1,29 @@
 'use strict';
-// Invariant guard: the quiet state must leave the complete question and answer
-// visible, while navigation and worked steps remain reachable on a first touch.
+// Mandatory baseline on phone: the entire lesson and key navigation never
+// disappear, including immediately after a new question or language change.
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
-const read=f=>fs.readFileSync('site/'+f,'utf8');
+const read=p=>fs.readFileSync('site/'+p,'utf8');
 const js=read('assets/quiet-reader.js'),css=read('assets/quiet-reader.css'),html=read('index.html'),sw=read('service-worker.js');
 new vm.Script(js,{filename:'quiet-reader.js'});
-assert.match(js,/pointerdown/,'Touch-down must reveal controls');
-assert.match(js,/reader-options-visible/,'Reader must toggle options visibility');
-assert.match(js,/triggle:lessonchange/,'Every new question resets to quiet mode');
-assert.match(js,/event\.key==='Tab'/,'Keyboard must reveal options');
-assert.match(js,/dialog\[open\]/,'Dialog must not be obscured by hiding controls');
-assert.match(css,/\.lesson-card>#stepsRegion/,'Steps must be hidden at rest');
-assert.match(css,/\.lesson-card>\.lesson-title-row/,'Question chrome must be hidden at rest');
-assert.doesNotMatch(css,/display:none[^}]*#questionText/,'Do not hide textbook question');
-assert.doesNotMatch(css,/display:none[^}]*#answerBox/,'Do not hide answer');
-assert.match(html,/quiet-reader\.css\?v=quiet-1/,'Stylesheet must be linked');
-assert.match(html,/quiet-reader\.js\?v=quiet-1/,'Reader controller must be linked');
-assert.match(sw,/quiet-reader\.js/,'Controller must work offline');
-assert.match(sw,/quiet-reader\.css/,'Styles must work offline');
-console.log('PASS: reader opens with question/answer only and has touch, keyboard, dialog, route and offline guards.');
+assert.match(js,/pointerdown/,'First touch reveals supplemental actions');
+assert.match(js,/reader-options-visible/,'Reader toggles supplemental tools');
+assert.match(js,/triggle:lessonchange/,'New question reinitializes the reader');
+assert.match(js,/event\.key==='Tab'/,'Keyboard supports optional actions');
+assert.match(js,/dialog\[open\]/,'Dialogs must not vanish');
+assert.doesNotMatch(js,/['"]#questionNavDock['"]\s*,/,'Navigation dock must never be inert');
+assert.doesNotMatch(js,/['"]#stepsRegion['"]\s*,/,'Worked steps must never be inert');
+assert.doesNotMatch(js,/['"]\.question-top['"]\s*,/,'Exercise number must never be inert');
+assert.doesNotMatch(js,/['"]\.lesson-title-row['"]\s*,/,'Question heading must never be inert');
+for(const selector of ['#questionNavDock','.lesson-card>.question-top',
+  '.lesson-card>.lesson-title-row','.lesson-card>#questionText',
+  '.lesson-card>#answerBox','.lesson-card>#stepsRegion']){
+ assert.ok(css.includes(selector),'Always-visible region missing from stylesheet: '+selector);
+}
+assert.match(css,/#questionNavDock\{[\s\S]*visibility:visible!important/,'Dock stays visible');
+assert.doesNotMatch(css,/not\(\.reader-options-visible\)[^\{]*#stepsRegion/,'Do not hide steps before first touch');
+assert.doesNotMatch(css,/not\(\.reader-options-visible\)[^\{]*#questionNavDock/,'Do not hide bottom navigation');
+assert.match(html,/quiet-reader\.css\?v=lesson-core-2/);
+assert.match(html,/quiet-reader\.js\?v=lesson-core-2/);
+assert.match(sw,/quiet-reader\.js/);
+assert.match(sw,/quiet-reader\.css/);
+console.log('PASS: number, question, answer, worked steps, and chapter/previous/next never hide; optional chrome reveals on touch.');
