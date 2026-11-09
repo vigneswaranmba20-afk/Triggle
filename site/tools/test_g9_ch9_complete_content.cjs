@@ -14,8 +14,8 @@ const ctx={window:{}};
 for(const p of paths)vm.runInNewContext(fs.readFileSync(path.join(root,p),'utf8'),ctx,{filename:p});
 const items=ctx.window.TRIGGLE_CLASSES[9].items;
 const chapter=ctx.window.TRIGGLE_CURRICULUM.grades.find(g=>g.grade===9).chapters.find(c=>c.id==='g9-ch9');
-const exercises=items.filter(x=>/^g9-ch9-ex9\\.[123]-q\\d+$/.test(x.id));
-const examples=items.filter(x=>/^g9-ch9-example-9\\.[1-5]$/.test(x.id));
+const exercises=items.filter(x=>/^g9-ch9-ex9\.[123]-q\d+$/.test(x.id));
+const examples=items.filter(x=>/^g9-ch9-example-9\.[1-5]$/.test(x.id));
 assert.equal(exercises.length,25,'Exercise 9.1 has 10, 9.2 has 5, 9.3 has 10');
 assert.equal(examples.length,5,'Every source example 9.1–9.5 must be present');
 assert.equal(new Set([...exercises,...examples].map(x=>x.id)).size,30,'No duplicate IDs');
@@ -30,7 +30,7 @@ for(const [ex,total] of [['9.1',10],['9.2',5],['9.3',10]])for(let n=1;n<=total;n
 for(let n=1;n<=5;n++){
  const item=record.get('g9-ch9-example-9.'+n);
  assert.ok(item,'Missing original worked Example 9.'+n);
- assert.match(item.label.en,/^Example 9\\./);
+ assert.match(item.label.en,/^Example 9\./);
  assert.ok(item.steps.length>=3);
 }
 assert.equal(record.get('g9-ch9-ex9.1-q9').answer,'[[3|4]]');
@@ -44,7 +44,7 @@ for(const i of [9,10]){
 assert.equal(ctx.window.TRIGGLE_PROB_PATH.stages.length,5,'All five numbered chapter concepts');
 assert.equal(ctx.window.TRIGGLE_TEXTBOOK_TASKS['g9-ch9'].length,7,'3 activities + 2 thinking corners + 2 progress checks');
 assert.equal(6/8,3/4);assert.equal(250/1500,1/6);assert.equal(860/1500,43/75);assert.equal(20/1500,1/75);
-assert.equal(1-(91/100),9/100);assert.equal(10/20,0.5);assert.equal(233+106<=1184,true);
+assert.ok(Math.abs((1-91/100)-9/100)<1e-12);assert.equal(10/20,0.5);assert.equal(233+106<=1184,true);
 const key=[4,2,1,4,1,4,4,4,1,2];for(let n=1;n<=10;n++)assert.ok(record.get('g9-ch9-ex9.3-q'+n).answer.startsWith('('+key[n-1]+')'));
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 for(const p of paths.slice(2))assert.ok(html.includes('./'+p),'Missing module script registration '+p);
