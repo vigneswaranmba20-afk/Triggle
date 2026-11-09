@@ -39,7 +39,8 @@ async function main(){
     assert.equal(await page.locator('#next').isVisible(),true,'Next page always visible');
     if(width<=800){
      assert.equal(await page.evaluate(()=>window.TriggleQuietReader?.isActive()),true);
-     assert.equal(await page.locator('.appbar').isVisible(),false,'Optional global header hidden at rest');
+     assert.equal(await page.locator('.appbar').isVisible(),true,'Top header always visible without touch');
+     assert.equal(await page.locator('.status-row').isVisible(),true,'Class and chapter always visible without touch');
      await page.mouse.move(145,230);await page.mouse.down();
      assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),true,'Touch-down opens all optional controls');
      assert.equal(await page.locator('.appbar').isVisible(),true,'Main header available after touch');
@@ -49,7 +50,8 @@ async function main(){
      assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Touch must not disrupt page navigation');
      await page.mouse.up();
      await page.waitForFunction(()=>!document.body.classList.contains('reader-options-visible'),null,{timeout:8000});
-     assert.equal(await page.locator('.appbar').isVisible(),false,'Secondary header may retract');
+     assert.equal(await page.locator('.appbar').isVisible(),true,'Header stays fixed after extras retract');
+     assert.equal(await page.locator('.status-row').isVisible(),true,'Breadcrumb stays visible after extras retract');
      assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Worked steps persist after release');
      assert.equal(await page.locator('#allChaptersButton').isVisible(),true,'Chapter return persists after release');
      assert.equal(await page.locator('#next').isVisible(),true,'Next persists after release');
@@ -73,7 +75,7 @@ async function main(){
    assert.deepEqual(errors,[],'No JavaScript exceptions at '+width);
    await ctx.close();
   }
-  console.log('PASS: exercise+question+answer+How it works+chapter/previous/next visible by default at 320,390,1280; touch reveals secondary options only.');
+  console.log('PASS: exercise+question+answer+How it works+chapter/previous/next visible by default at 320,390,1280; touch reveals supplemental actions only.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
