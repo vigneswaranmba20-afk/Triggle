@@ -43,7 +43,14 @@ async function run(){
      assert.equal(await page.locator('#questionText').isVisible(),true,'Question shown at '+width);
      assert.equal(await page.locator('#answerBox').isVisible(),true,'Answer shown at '+width);
      assert.equal(await page.locator('#chapterOverview').isVisible(),false,'No practice/filter screen');
-     if(width<=800)assert.equal(await page.locator('#stepsRegion').isVisible(),false,'Quiet reader starts with Q+A only');
+     if(width<=800){
+       assert.equal(await page.locator('#stepsRegion').isVisible(),true,
+         'How it works is visible without touching');
+       assert.equal(await page.locator('#questionNavDock').isVisible(),true,
+         'Back to all chapters, Previous and Next are visible without touching');
+       assert.equal(await page.locator('.question-top').isVisible(),true,
+         'Exercise number is visible without touching');
+     }
      if(snapshot.expected.length>1){
        if(width<=800)await page.keyboard.press('Tab');
        await page.locator('#next').click();
