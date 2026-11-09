@@ -1,0 +1,32 @@
+{
+  "grade": 11,
+  "edition": "2025 revised",
+  "scope": "Chapter 1 Exercise 1.1 Q4(vi)–Q10",
+  "englishSource": {
+    "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "printedPage": 7,
+    "pdfPage": 15,
+    "extractedTextAccessible": true,
+    "pageImageVerified": false
+  },
+  "tamilSource": {
+    "driveId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
+    "printedPage": 10,
+    "pdfPage": 18,
+    "pageImageVerified": false
+  },
+  "pendingIds": [
+    "g11-ch1-ex1.1-q4-vi",
+    "g11-ch1-ex1.1-q5",
+    "g11-ch1-ex1.1-q6",
+    "g11-ch1-ex1.1-q7",
+    "g11-ch1-ex1.1-q8",
+    "g11-ch1-ex1.1-q9",
+    "g11-ch1-ex1.1-q10"
+  ],
+  "sourceExact": false,
+  "mathVerified": false,
+  "studentFacing": false,
+  "editorial": "pending",
+  "note": "Drive English Volume I 2025 revised extraction retrieved 2026-11-09. The first literal 'Exercise 1.1' occurrence in extracted text belongs to the answers appendix, not the exercise questions. Do not use answer-key entries as question stems. Original PDF page images must be inspected before publishing any pending item. Existing Grade 11 coverage ledger remains authoritative."
+}
