@@ -1,0 +1,81 @@
+{
+  "grade": 9,
+  "chapter": 9,
+  "edition": "2025 revised",
+  "englishSourceId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+  "tamilSourceId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+  "englishPdfTextLayerConsulted": true,
+  "englishPageImageChecked": false,
+  "spinnerImageCorroboration": "Older edition government textbook PDF (2019) depicts eight equal sectors 1-8; original 2025 figure still needs direct visual comparison.",
+  "tamilVersion": "pending",
+  "scope": "2025 English Exercise 9.1 Q9–Q10 and Examples 9.1–9.5",
+  "items": [
+    {
+      "id": "g9-ch9-ex9.1-q9",
+      "printed": 299,
+      "pdf": 305,
+      "question": "What is the probability that the spinner will not land on a multiple of 3?",
+      "answer": "[[3|4]]",
+      "notes": [
+        "Eight equal sectors 1–8 corroborated by older textbook spinner image; inspect 2025 original page image before marking exact visual fidelity."
+      ]
+    },
+    {
+      "id": "g9-ch9-ex9.1-q10",
+      "printed": 299,
+      "pdf": 305,
+      "question": "Frame two problems in calculating probability, based on the spinner shown here.",
+      "answer": "Example questions: (1) P(even) = [[1|2]]; (2) P(not prime) = [[1|2]]",
+      "notes": [
+        "An open-ended textbook task. These are original sample questions, not official fixed answer wording.",
+        "Eight equal sectors 1–8 corroborated by older textbook spinner image; source page image of 2025 pending."
+      ]
+    },
+    {
+      "id": "g9-ch9-example-9.1",
+      "printed": 297,
+      "pdf": 303,
+      "question": "When a dice is rolled, find the probability to get the number which is greater than 4?",
+      "answer": "[[1|3]]",
+      "notes": []
+    },
+    {
+      "id": "g9-ch9-example-9.2",
+      "printed": 297,
+      "pdf": 303,
+      "question": "In an office, where 42 staff members work, 7 staff members use cars, 20 staff members use two-wheelers and the remaining 15 staff members use cycles. Find the relative frequencies.",
+      "answer": "Car [[1|6]]; two-wheeler [[10|21]]; cycle [[5|14]]",
+      "notes": []
+    },
+    {
+      "id": "g9-ch9-example-9.3",
+      "printed": 297,
+      "pdf": 303,
+      "question": "Team I and Team II play 10 cricket matches each of 20 overs. Their total scores in each match are tabulated in the table as follows:\nMatch numbers 1 2 3 4 5 6 7 8 9 10\nTeam I 200 122 111 88 156 184 99 199 121 156\nTeam II 143 123 156 92 164 72 100 201 98 157\nWhat is the relative frequency of Team I winning?",
+      "answer": "[[3|10]] = 0.3",
+      "notes": [
+        "Original two-row score table requires final visual comparison; both arrays transcribed from 2025 PDF text layer."
+      ]
+    },
+    {
+      "id": "g9-ch9-example-9.4",
+      "printed": 300,
+      "pdf": 306,
+      "question": "The probability that it will rain tomorrow is 91/100. What is the probability that it will not rain tomorrow?",
+      "answer": "[[9|100]] = 0.09",
+      "notes": [
+        "Rendered source fraction 91/100 checked from 2025 PDF text-layer; image comparison pending."
+      ]
+    },
+    {
+      "id": "g9-ch9-example-9.5",
+      "printed": 301,
+      "pdf": 307,
+      "question": "In a recent year, of the 1184 centum scorers in various subjects in tenth standard public exams, 233 were in mathematics. 125 in social science and 106 in science. If one of the student is selected at random, find the probability of that selected student,\n(i) is a centum scorer in Mathematics (ii) is not a centum scorer in Science",
+      "answer": "(i) [[233|1184]]; (ii) [[1078|1184]]",
+      "notes": [
+        "Uses the source's mutually exclusive subject-count model; real students could score centum in multiple subjects, but textbook question treats 1184 as a fixed sample space."
+      ]
+    }
+  ]
+}

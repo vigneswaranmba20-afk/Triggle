@@ -89,7 +89,7 @@
     const t=texts[lang==='ta'?'ta':'en'];
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
     const sets=categorized(questions);
-    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):[];
+    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):[];
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const kinds=activityEntries.length?[...baseKinds,'activities']:baseKinds;
     const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:stages.length,activities:activityEntries.length};
@@ -180,7 +180,7 @@
         info(t.learning);
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang);
-        }else if(chapter.id==='g9-ch2'){
+        }else if(chapter.id==='g9-ch2'||chapter.id==='g9-ch9'){
           for(const stage of stages){
             const article=document.createElement('article');article.className='hub-question-group';
             const heading=document.createElement('h4');heading.textContent=text(stage.title);
