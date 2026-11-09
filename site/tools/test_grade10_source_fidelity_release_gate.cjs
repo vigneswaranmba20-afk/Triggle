@@ -18,10 +18,15 @@ for (const name of names) {
     assert.notEqual(q.review.liveVerified, true, name + ' is not source-verified');
     assert.notEqual(q.review.merged, true, name + ' must not claim a source-exact merge');
     assert.notEqual(q.review.deployed, true, name + ' must not claim deployed textbook fidelity');
-    assert(q.questionParaphrase && q.questionParaphrase.en && q.questionParaphrase.ta,
-      name + ' must retain clearly labelled supplementary bilingual text');
-    assert.equal(q.source.fidelity?.englishExactQuestionVerified, false, name);
-    assert.equal(q.source.fidelity?.tamilExactQuestionVerified, false, name);
+    assert(q.steps?.length >= 1 && q.steps.every(step => step.en && step.ta),
+      name + ' must retain bilingual supplementary learning steps');
+    if (q.source.fidelity) {
+      assert.equal(q.source.fidelity.englishExactQuestionVerified, false, name);
+      assert.equal(q.source.fidelity.tamilExactQuestionVerified, false, name);
+    } else {
+      assert.equal(q.source.exactQuestionVerified, false, name);
+      assert.match(q.classification, /NOT textbook-exact/, name);
+    }
   }
 }
 assert(sourcePending >= 2, 'Q6(i/ii) source-image reviews must not be silently promoted');
