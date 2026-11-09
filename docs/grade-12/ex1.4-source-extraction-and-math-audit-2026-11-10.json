@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "edition": "2025 revised",
+  "auditDate": "2026-11-10",
+  "exercise": "1.4",
+  "source": {
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "printedPages": [
+      35,
+      36
+    ],
+    "extractionReviewed": true,
+    "pageImagesReviewed": false
+  },
+  "inventory": {
+    "questionStemsObserved": 5,
+    "questionIds": [
+      "g12-ex1.4-q1",
+      "g12-ex1.4-q2",
+      "g12-ex1.4-q3",
+      "g12-ex1.4-q4",
+      "g12-ex1.4-q5"
+    ],
+    "subpartSlotsObserved": 8,
+    "subpartCountExplanation": "Q1 has four labelled subparts; Q2-Q5 each have one unlabelled answer slot. Provisional until original page-image check.",
+    "denominatorCertified": false
+  },
+  "entries": [
+    {
+      "id": "g12-ex1.4-q1",
+      "subparts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "sourceStatus": "glyphs-corrupt-image-review-required",
+      "verifiedWording": null
+    },
+    {
+      "id": "g12-ex1.4-q2",
+      "subparts": [],
+      "sourceStatus": "extracted-prose-image-unchecked",
+      "result": {
+        "correct": 84,
+        "wrong": 16
+      }
+    },
+    {
+      "id": "g12-ex1.4-q3",
+      "subparts": [],
+      "sourceStatus": "extracted-prose-image-unchecked",
+      "result": {
+        "solution50PercentLitres": 6,
+        "solution25PercentLitres": 4
+      }
+    },
+    {
+      "id": "g12-ex1.4-q4",
+      "subparts": [],
+      "sourceStatus": "extracted-prose-image-unchecked",
+      "result": {
+        "pumpAMinutes": 15,
+        "pumpBMinutes": 30
+      }
+    },
+    {
+      "id": "g12-ex1.4-q5",
+      "subparts": [],
+      "sourceStatus": "extracted-prose-image-unchecked",
+      "result": {
+        "billRupees": 330,
+        "balanceRupees": 20
+      }
+    }
+  ],
+  "independentArithmeticAudit": {
+    "q2": {
+      "correct": 84,
+      "wrong": 16,
+      "score": 80,
+      "total": 100
+    },
+    "q3": {
+      "high": 6,
+      "low": 4,
+      "litres": 10,
+      "acid": 4
+    },
+    "q4": {
+      "a": 15,
+      "b": 30,
+      "forward": 0.1,
+      "reverse": 0.03333333333333333
+    },
+    "q5": {
+      "dosai": 30,
+      "idli": 10,
+      "vadai": 30,
+      "equations": [
+        150,
+        200,
+        250
+      ],
+      "bill": 330,
+      "balance": 20
+    }
+  },
+  "checks": {
+    "uniqueIds": true,
+    "arithmeticPassed": true,
+    "sourceImageCertified": false,
+    "mandatoryCI": "not-run"
+  },
+  "certifiedNewEnglishQuestions": 0,
+  "certifiedNewEnglishSubparts": 0,
+  "certifiedNewTamilSubparts": 0,
+  "wholeTextbookDenominators": {
+    "questions": null,
+    "subparts": null
+  },
+  "unresolved": [
+    "Exercise 1.4 Q1(i-iv) equations unreadable in extracted text",
+    "Original PDF page images for printed pages 35-36 not inspected",
+    "All five question stems await exact-wording certification",
+    "No student-facing registration until mandatory CI and source fidelity pass"
+  ],
+  "nextBatch": "Visually verify PDF printed pages 35-36, transcribe Q1(i-iv) and certify Q2-Q5 wording; then register verified English content after required CI."
+}
