@@ -28,5 +28,5 @@ assert.doesNotMatch(reader,/['"]\.appbar['"]\s*,/,'Header must not be touch-hidd
 assert.doesNotMatch(reader,/['"]\.status-row['"]\s*,/,'Breadcrumb must not be touch-hidden');
 assert.doesNotMatch(reader,/['"]#solutionModeRow['"]\s*,/,'Details must be visible before touch');
 assert.match(html,/quiet-reader\.css\?v=static-reader-1/);
-assert.match(html,/quiet-reader\.js\?v=static-reader-1/);
+assert.match(html,/quiet-reader\.js\?v=compact-answer-1/);
 console.log('PASS: single Detailed explanation after title, quick solution preserved, fixed headers, redundant back removed.');
