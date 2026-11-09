@@ -85,7 +85,7 @@ for(const id of visualIds){
  assert.ok(markup.includes('<svg') && markup.includes('</svg>'),'Missing accessible SVG rendering: '+id);
  assert.ok(markup.includes('role="img"'),'Diagram accessible image role missing: '+id);
 }
-assert.deepEqual(loaded.find(x=>x.id==='c10-1-ex1-2-q4-i').diagram.pairs,[[2,1],[4,2]]);
-assert.deepEqual(loaded.find(x=>x.id==='c10-1-ex1-2-q4-ii').diagram.pairs,[[1,4],[2,5],[3,6],[4,7],[5,8],[6,9]]);
+assert.deepEqual(JSON.parse(JSON.stringify(loaded.find(x=>x.id==='c10-1-ex1-2-q4-i').diagram.pairs)),[[2,1],[4,2]]);
+assert.deepEqual(JSON.parse(JSON.stringify(loaded.find(x=>x.id==='c10-1-ex1-2-q4-ii').diagram.pairs)),[[1,4],[2,5],[3,6],[4,7],[5,8],[6,9]]);
 assert.equal(loaded.find(x=>x.id==='c10-1-ex1-2-q5').diagram.groups.reduce((n,g)=>n+g.employees.length,0),14);
 console.log('PASS Grade 10 Exercise 1.2: 3 SVG relation figures and 14 salary arrows verified.');
