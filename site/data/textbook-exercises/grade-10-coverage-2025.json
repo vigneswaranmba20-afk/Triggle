@@ -4,7 +4,7 @@
   "edition": "2025 revised",
   "lastVerified": "2026-11-08",
   "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
-  "notes": "2026-11-08 19:31 IST: Q6(i) English/Tamil revised printed p.6/PDF p.12 text confirms A={0,1}, B={2,3,4}, C={3,5}, Cartesian-product union identity. Independent 8-pair enumeration and bilingual mathematical draft committed. Source glyph visual verification and Tamil human editorial remain pending; Q6(i) NOT included in source-verified count. Prior commit 9bc0b38 passed all four workflows.",
+  "notes": "2026-11-08 19:31 IST: Q6(i) English/Tamil revised printed p.6/PDF p.12 text confirms A={0,1}, B={2,3,4}, C={3,5}, Cartesian-product union identity. Independent 8-pair enumeration and bilingual mathematical draft committed. Source glyph visual verification and Tamil human editorial remain pending; Q6(i) NOT included in source-verified count. Prior commit 9bc0b38 passed all four workflows. 2026-11-09: Q7(i) provisional mathematical draft + focused content assertion added, not source-verified and not student-facing.",
   "chapters": [
     {
       "chapter": 1,
@@ -175,7 +175,7 @@
       "tamilEditorial": "pending"
     }
   ],
-  "nextAction": "2026-11-08 21:25 IST: Original 2025 English/Tamil Exercise 1.1 page 6 text re-read from connected Google Drive. Exactly 12 subpart slots enumerated, seven prior source-verified mathematical drafts; five remain without source-verified solutions: 6(i), 6(ii), 6(iii), 7(i), 7(ii). Next visually inspect both PDF page 12 images to confirm mathematical glyphs, then implement exact-source Q6(i) and Q6(ii). Do not publish paraphrases as textbook-exact; run all CI and cross-grade checks before merge.",
+  "nextAction": "2026-11-09: Q7(i) provisional English mathematical derivation independently enumerated on Grade 10 branch, but English/Tamil PDF mathematical glyphs and exact printed question require page-image verification. Source-pending draft is NOT in seven source-verified count, not released, Tamil not drafted. Next inspect PDF page 12 images in both original 2025 PDFs, confirm identity, then finalize source-exact bilingual content and run mandatory CI.",
   "testStatus": {
     "localMathEnumeration": "Q6(i): A={0,1}, B={2,3,4}, C={3,5}, both sides enumerate eight ordered pairs; verified by independent code assertion; local npm test not run.",
     "npmTest": "Prior commit 9bc0b38 shared test workflow passed; new Q6(i) commit pending.",
@@ -187,6 +187,7 @@
     "newPreviewFeatures": "Q1(i–iii) bilingual solutions, empty-set grid support, source/math gates; Tamil editorial pending"
   },
   "pendingSourceReviewQuestionSubparts": [
-    "1.1 Q6(i)"
+    "1.1 Q6(i)",
+    "1.1 Q7(i)"
   ]
 }
