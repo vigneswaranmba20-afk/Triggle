@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const d=require('../data/g9-ex1-3-q4-content-only.json');
+const U=[0,1,2,3,4,5,6,7],A=[1,3,5,7],B=[0,2,3,5,7];
+const minus=(a,b)=>a.filter(x=>!b.includes(x));
+const union=(a,b)=>[...new Set([...a,...b])].sort((x,y)=>x-y);
+const intersection=(a,b)=>a.filter(x=>b.includes(x));
+const ac=minus(U,A),bc=minus(U,B);
+const expected=[ac,bc,union(ac,bc),intersection(ac,bc),minus(U,union(A,B)),minus(U,intersection(A,B)),minus(U,ac),minus(U,bc)];
+assert.equal(d.entries.length,8);
+assert.equal(new Set(d.entries.map(e=>e.id)).size,8);
+assert.equal(d.source.printedPage,19);
+assert.equal(d.source.driveFileId,'1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J');
+d.entries.forEach((e,i)=>{assert.deepEqual([...e.expected].sort((a,b)=>a-b),expected[i]);assert.ok(e.steps.length>=3);assert.equal(e.answer,'{'+e.expected.join(', ')+'}');assert.equal(e.tamilStatus,'pending');});
+assert.deepEqual(expected[2],expected[5]);assert.deepEqual(expected[3],expected[4]);assert.deepEqual(expected[6],A);assert.deepEqual(expected[7],B);
+console.log('PASS: 8 Grade 9 Exercise 1.3 Q4 subparts, provenance, set identities and schema');
