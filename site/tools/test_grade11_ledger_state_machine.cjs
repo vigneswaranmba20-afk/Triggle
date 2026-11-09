@@ -10,7 +10,7 @@ assert.equal(ledger.chapters.length,12);
 assert.equal(ledger.inventoryComplete,false);
 assert.equal(ledger.exerciseQuestionSubpartTotal,null);
 const ids = new Set();
-const expectedMissing = ['q4-iii','q4-iv','q4-v','q4-vi','q5','q6','q7','q8','q9','q10'].map(x=>'g11-ch1-ex1.1-'+x);
+const expectedMissing = ['q4-v','q4-vi','q5','q6','q7','q8','q9','q10'].map(x=>'g11-ch1-ex1.1-'+x);
 for(const item of ledger.items){
  assert.ok(!ids.has(item.id),'duplicate '+item.id); ids.add(item.id);
  assert.ok(/^g11-ch(?:[1-9]|1[0-2])-ex\d+\.\d+-q\d+(?:-[ivx]+)?$/.test(item.id),'invalid id '+item.id);
@@ -47,4 +47,4 @@ for(const ch of ledger.chapters){
  ]) assert.equal(ch[field],items.filter(fn).length,ch.chapterId+': '+field);
 }
 assert.ok(manifest && typeof manifest==='object','source manifest missing');
-console.log('PASS Grade 11 ledger state machine, 12 chapter aggregates, 10 source-image blockers, manifest presence');
+console.log('PASS Grade 11 ledger state machine, 12 chapter aggregates, 8 source-image blockers, manifest presence');
