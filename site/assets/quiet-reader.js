@@ -113,7 +113,6 @@
     isActive:()=>active,
     isVisible:()=>active&&visible,
     reveal:()=>{keyboard=false;pressed=false;setVisible(true);hideLater();},
-    conceal:()=>{keyboard=false;pressed=false;setVisible(false);},
-    debugState:()=>({active,visible,pressed,keyboard,hasTimer:!!hideTimer,dialog:modalOpen()})
+    conceal:()=>{keyboard=false;pressed=false;setVisible(false);}
   });
 })();
