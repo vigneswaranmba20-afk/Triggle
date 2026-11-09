@@ -41,7 +41,13 @@ async function main(){
      assert.equal(await page.evaluate(()=>window.TriggleQuietReader?.isActive()),true);
      assert.equal(await page.locator('.appbar').isVisible(),true,'Top header always visible without touch');
      assert.equal(await page.locator('.status-row').isVisible(),true,'Class and chapter always visible without touch');
-     await page.mouse.move(145,230);await page.mouse.down();
+     // Tap the actual question, not a fixed coordinate that could land on
+     // the newly repositioned Detailed explanation launcher.
+     await page.locator('#questionText').scrollIntoViewIfNeeded();
+     const qbox=await page.locator('#questionText').boundingBox();
+     assert.ok(qbox&&qbox.height>0,'Question touch target must exist');
+     await page.mouse.move(qbox.x+12,qbox.y+Math.min(qbox.height/2,16));
+     await page.mouse.down();
      assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),true,'Touch-down opens all optional controls');
      assert.equal(await page.locator('.appbar').isVisible(),true,'Main header available after touch');
      assert.equal(await page.locator('.lesson-bottom').isVisible(),true,
@@ -49,15 +55,8 @@ async function main(){
      assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Touch must not disrupt solution');
      assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Touch must not disrupt page navigation');
      await page.mouse.up();
-     await page.waitForTimeout(5500);
-     console.log('READER AUTO-HIDE DIAGNOSTICS',width,id,await page.evaluate(()=>({
-       state:window.TriggleQuietReader.debugState(),
-       focus:document.activeElement?.id,
-       tag:document.activeElement?.tagName,
-       dialog:document.querySelector('dialog[open]')?.id,
-       body:document.body.className
-     })));
-     await page.waitForFunction(()=>!document.body.classList.contains('reader-options-visible'),null,{timeout:2500});
+     assert.equal(await page.locator('#guidedDialog').evaluate(el=>el.open),false,'Tapping question should not open Detailed explanation');
+     await page.waitForFunction(()=>!document.body.classList.contains('reader-options-visible'),null,{timeout:8000});
      assert.equal(await page.locator('.appbar').isVisible(),true,'Header stays fixed after extras retract');
      assert.equal(await page.locator('.status-row').isVisible(),true,'Breadcrumb stays visible after extras retract');
      assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Worked steps persist after release');
