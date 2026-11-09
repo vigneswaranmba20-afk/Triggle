@@ -1,10 +1,23 @@
 /* Lesson-first mobile reader, shared by Grades 9–12 and both languages.
    Header and class/chapter breadcrumbs stay visible while scrolling.
    Exercise title, question, answer, worked steps and navigation are permanent.
-   Only supplemental figures and tools are revealed on touch. */
+   Figure controls and question diagrams stay visible; optional tools reveal on touch. */
 @media (max-width:800px){
-  body.textbook-reader.reader-peek:not(.reader-options-visible) #figureBtn,
-  body.textbook-reader.reader-peek:not(.reader-options-visible) #inlineFigure,
+  /* A useful Figure action and its question-specific diagram need no first touch. */
+  body.textbook-reader.reader-peek #figureBtn:not([hidden]){
+    display:inline-flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+  }
+  body.textbook-reader.reader-peek #inlineFigure:not([hidden]){
+    display:block!important;
+    visibility:visible!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+  }
+  body.textbook-reader.reader-peek #figureBtn[hidden],
+  body.textbook-reader.reader-peek #inlineFigure[hidden]{display:none!important}
   body.textbook-reader.reader-peek:not(.reader-options-visible) #visualLessonAction,
   body.textbook-reader.reader-peek:not(.reader-options-visible) .lesson-bottom,
   body.textbook-reader.reader-peek:not(.reader-options-visible) .reference-line,

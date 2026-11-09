@@ -69,6 +69,30 @@ async function main(){
     const dims=await page.evaluate(()=>({sw:document.documentElement.scrollWidth,vw:innerWidth}));
     assert.ok(dims.sw<=dims.vw+1,'No horizontal overflow at '+width+' for '+id);
    }
+   // Figure must be discoverable on the very first render without touching,
+   // in both 2025 Set Language Venn lessons and earlier triangle examples.
+   for(const qid of ['c9-textbook-example-1-11','c9-example-6-1']){
+    await page.goto(url+'/index.html?class=9&question='+qid);
+    await page.locator('#questionHead').waitFor({state:'visible'});
+    assert.equal(await page.locator('#figureBtn').isVisible(),true,
+      'Relevant Figure icon hidden before touch at '+width+' for '+qid);
+    assert.equal(await page.locator('#figureBtn').evaluate(el=>el.inert),false,
+      'Relevant Figure icon must not be inert');
+    if(width<=800){
+     assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),false,
+       'Figure button must appear before optional controls are revealed');
+    }
+    await page.locator('#figureBtn').click();
+    assert.equal(await page.locator('#figureDialog').evaluate(el=>el.open),true,
+      'Figure should open its question-specific diagram');
+    await page.locator('#closeDiagram').click();
+    assert.equal(await page.locator('#figureBtn').isVisible(),true,
+      'Figure must remain discoverable after closing its dialog');
+   }
+   await page.goto(url+'/index.html?class=9&question=g9-ch9-ex9.1-q4');
+   await page.locator('#questionHead').waitFor({state:'visible'});
+   assert.equal(await page.locator('#figureBtn').isVisible(),false,
+     'Do not show misleading Figure action for a question without a useful diagram');
    if(width<=800){
     await page.goto(url+'/index.html?class=9&question=g9-ch9-ex9.1-q4');
     await page.locator('#next').click();
@@ -82,7 +106,7 @@ async function main(){
    assert.deepEqual(errors,[],'No JavaScript exceptions at '+width);
    await ctx.close();
   }
-  console.log('PASS: exercise+question+answer+How it works+chapter/previous/next visible by default at 320,390,1280; touch reveals supplemental actions only.');
+  console.log('PASS: exercise+question+answer+How it works+chapter/previous/next visible by default at 320,390,1280; touch reveals supplemental actions only; Figure is visible without touch.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
