@@ -1,0 +1,212 @@
+{
+  "status": "staged-content-only-not-published",
+  "grade": 9,
+  "chapter": 1,
+  "exercise": "1.7",
+  "edition": "Tamil Nadu SCERT revised 2025 English",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPages": [
+      36,
+      37,
+      38
+    ],
+    "fidelity": "Text layer, punctuation normalized; page-image verification pending"
+  },
+  "numberedQuestions": 10,
+  "questionSubparts": 10,
+  "fullySourceImageVerified": 0,
+  "excluded": "Diagram-dependent Q9/Q19 and notation-ambiguous items are not counted.",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-7-q2",
+      "number": 2,
+      "question": "2. The set P = {x | x ∈ Z , –1< x < 1} is a\n(1) Singleton set (2) Power set (3) Null set (4) Subset",
+      "steps": [
+        "Integers strictly between −1 and 1 must be listed.",
+        "The only such integer is 0.",
+        "Therefore P={0}.",
+        "A singleton set contains exactly one element.",
+        "Choose option (1)."
+      ],
+      "answer": "Option (1) Singleton set.",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-7-q3",
+      "number": 3,
+      "question": "3. If U ={x | x ∈ N , x < 10} and A = {x | x ∈ N , 2 ≤ x < 6} then (A′)′ is\n(1) {1, 6, 7, 8, 9} (2) {1, 2, 3, 4} (3) {2, 3, 4, 5} (4) { }",
+      "steps": [
+        "The natural numbers in U are 1 through 9.",
+        "A={2,3,4,5}.",
+        "The complement A′ contains elements of U not in A.",
+        "Taking the complement a second time restores A.",
+        "Thus (A′)′={2,3,4,5}, option (3)."
+      ],
+      "answer": "Option (3) {2, 3, 4, 5}.",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-7-q4",
+      "number": 4,
+      "question": "4. If B⊆ A then n(A∩B) is\n(1) n(A–B) (2) n(B) (3) n(B – A) (4) n(A)",
+      "steps": [
+        "B⊆A means every element of B also belongs to A.",
+        "The intersection contains exactly the elements common to both sets.",
+        "Because B is entirely inside A, A∩B=B.",
+        "Equal sets have the same number of elements.",
+        "Therefore n(A∩B)=n(B), option (2)."
+      ],
+      "answer": "Option (2) n(B).",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-7-q5",
+      "number": 5,
+      "question": "5. If A = {x, y, z} then the number of non- empty subsets of A is\n(1) 8 (2) 5 (3) 6 (4) 7",
+      "steps": [
+        "A contains three distinct elements.",
+        "Each element can either be included or excluded from a subset.",
+        "Hence the total number of subsets is 2³=8.",
+        "Exactly one of those subsets is empty.",
+        "Non-empty subsets =8−1=7, option (4)."
+      ],
+      "answer": "Option (4) 7.",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-7-q6",
+      "number": 6,
+      "question": "6. Which of the following is correct?\n(1) ∅ ⊆ {a, b} (2) ∅ ∈ {a, b} (3) {a} ∈ {a, b} (4) a ⊆ {a, b}",
+      "steps": [
+        "The empty set is a subset of every set.",
+        "The elements of {a,b} are a and b, not the empty set.",
+        "The set {a} is a subset, but it is not listed as an element of {a,b}.",
+        "The symbol ⊆ compares sets, whereas a is an element here.",
+        "Only option (1), ∅⊆{a,b}, is correct."
+      ],
+      "answer": "Option (1) ∅ ⊆ {a, b}.",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-7-q7",
+      "number": 7,
+      "question": "7. If A∪B = A∩B, then\n(1) A≠B (2) A = B (3) A ⊂ B (4) B ⊂ A",
+      "steps": [
+        "Every element of A belongs to A∪B.",
+        "Since A∪B=A∩B, every element of A must also be in B.",
+        "Thus A⊆B; reversing the argument gives B⊆A.",
+        "Two sets contained in each other are equal.",
+        "Therefore A=B, option (2)."
+      ],
+      "answer": "Option (2) A = B.",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-7-q8",
+      "number": 8,
+      "question": "8. If B – A is B, then A∩B is\n(1) A (2) B (3) U (4) ∅",
+      "steps": [
+        "B−A consists of elements of B that do not belong to A.",
+        "The equality B−A=B means no element of B was removed.",
+        "So no element of B belongs to A.",
+        "The sets have no common elements.",
+        "Therefore A∩B=∅, option (4)."
+      ],
+      "answer": "Option (4) ∅.",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 36,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-7-q10",
+      "number": 10,
+      "question": "10. If n(A) = 10 and n(B) = 15, then the minimum and maximum number of elements in A ∩ B is\n(1) 10,15 (2) 15,10 (3) 10,0 (4) 0,10",
+      "steps": [
+        "The intersection cannot contain more elements than either set.",
+        "The smaller set A has 10 elements, so the maximum intersection size is 10.",
+        "That maximum occurs if A⊆B.",
+        "The minimum is 0 when A and B are disjoint.",
+        "Thus minimum 0 and maximum 10: option (4)."
+      ],
+      "answer": "Option (4) 0,10.",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 37,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-7-q11",
+      "number": 11,
+      "question": "11. Let A = {∅} and B = P(A), then A∩B is\n(1) { ∅, {∅} } (2) {∅} (3) ∅ (4) {0}",
+      "steps": [
+        "A={∅} has exactly one element: the empty set.",
+        "Its power set contains its two subsets: ∅ and {∅}.",
+        "Thus B=P(A)={∅,{∅}}.",
+        "The element ∅ belongs to both A and B.",
+        "Therefore A∩B={∅}, option (2)."
+      ],
+      "answer": "Option (2) {∅}.",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 37,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-7-q20",
+      "number": 20,
+      "question": "20. In a city, 40% people like only one fruit, 35% people like only two fruits, 20% people like all the three fruits. How many percentage of people do not like any one of the above three fruits?\n(1) 5 (2) 8 (3) 10 (4) 15",
+      "steps": [
+        "The groups liking exactly one, exactly two, and all three fruits are disjoint.",
+        "Their percentages are 40%, 35%, and 20%.",
+        "Together they account for 40+35+20=95%.",
+        "All people account for 100%.",
+        "The percentage liking none is 100−95=5%, option (1)."
+      ],
+      "answer": "Option (1) 5.",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 38,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    }
+  ]
+}
