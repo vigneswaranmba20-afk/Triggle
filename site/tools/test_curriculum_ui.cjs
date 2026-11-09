@@ -606,17 +606,16 @@ async function main() {
       assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises','Exercise card opens question list');
-      assert.equal(await page.locator('.hub-question').count(),31,'All 30 textbook subparts and the original practice should remain browsable');
-      await page.locator('.hub-content-status summary').click();
-      assert.match(await page.locator('.hub-content-status').innerText(),/30 of 30 textbook subparts/,'Coverage notes must remain available after the questions');
-      assert.equal(await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').count(),1,'Preserve original practice ID');
-      await page.locator('.hub-question[data-question-id="c9-1-1-practice-1"]').click();
-      assert.equal(new URL(page.url()).searchParams.has('question'),true);
+      assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i',
+        'Exercises must open Exercise 1.1 Q1(i) without a practice-list page');
       assert.equal(await page.locator('#lessonCard').isVisible(),true);
-      await page.goBack();
-      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
-      await page.locator('.hub-back-menu').click();
+      assert.equal(await page.locator('.hub-question').count(),0,
+        'No All questions filter or Original Triggle practice cards before Q1');
+      assert.equal(await page.evaluate(()=>window.TRIGGLE_CLASSES[9].items.some(q=>q.id==='c9-1-1-practice-1')),true,
+        'Previously stored practice must not be deleted from the data');
+      assert.match(await page.locator('#questionReturnBtn').innerText(),/Back to chapter/);
+      await page.locator('#questionReturnBtn').click();
+      assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
       assert.equal(new URL(page.url()).searchParams.has('section'),false);
       await page.locator('#homeBtn').click();
       assert.equal(await page.locator('#discover-search').count(),0,'Home must not have an extra search panel');
@@ -699,9 +698,12 @@ async function main() {
       assert.match(await page.locator('.hub-section-menu h3').innerText(),/ஒரு பகுதியைத்/);
       assert.equal(await page.locator('.class-dock').isVisible(),false);
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises','Tamil exercise card opens question list');
-      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises','Back opens the browsable exercise list');
-      await page.locator('.hub-back-menu').click();
+      assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i',
+        'Tamil Exercises opens the actual first textbook question directly');
+      assert.match(await page.locator('#questionText').innerText(),/1\. பின்வருவனவற்றில்/);
+      await page.locator('#questionReturnBtn').click();
+      assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1',
+        'Back from an exercise must return to the chapter choices');
       await gotoWithControls(page,url+'/index.html?class=9&chapter=g9-ch2');
       await page.locator('#chapterOverviewTitle').waitFor({state:'visible'});
       assert.equal((await page.locator('.hub-eyebrow').innerText()).trim(),'அத்தியாயம் 2');
@@ -792,16 +794,16 @@ async function main() {
       assert.ok((await page.locator('.hub-question').first().innerText()).includes('Example 6.1'));
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises','Exercises opens full list');
-      assert.equal(await page.locator('.hub-question').count(),40,'40 exercise questions remain under Exercises');
-      await page.locator('.hub-question').first().click();
+      assert.equal(new URL(page.url()).searchParams.has('question'),true,
+        'Exercises must open a question instead of a 40-question listing');
+      assert.match(await page.locator('#questionHead').innerText(),/Exercise 6\.1/);
+      assert.equal(await page.locator('.hub-question').count(),0);
       assert.equal(await page.locator('#lessonCard').isVisible(),true);
       assert.ok((await page.locator('#stepsList li').count())>0,'Existing worked solution remains accessible');
-      assert.match(await page.locator('#questionReturnBtn').innerText(),/Back to all exercises/);
+      assert.match(await page.locator('#questionReturnBtn').innerText(),/Back to chapter/);
       await page.locator('#questionReturnBtn').click();
-      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
-      assert.equal(await page.locator('.hub-question').count(),40);
-      await page.locator('.hub-back-menu').click();
+      assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch6');
+      assert.equal(new URL(page.url()).searchParams.has('section'),false);
       assert.equal(await page.locator('.hub-section-card').count(),4);
       await page.locator('.hub-back-class').click();
       assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
@@ -968,7 +970,9 @@ async function main() {
     }
     await check('Real Numbers full exercises, concepts and quizzes show correct counts',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch2&section=exercises');
-      assert.equal(await page.locator('.hub-question').count(),121,'120 textbook units plus existing practice');
+      assert.equal(await page.locator('.hub-question').count(),120,'Only the 120 authored textbook exercise units, no original practice');
+      assert.equal(await page.locator('.hub-question-group h4').filter({hasText:'Original Triggle practice'}).count(),0,
+        'Original Triggle practice is never mixed into textbook Exercises');
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
       assert.equal(await page.locator('.rnlab [data-nav] button').count(),8,'eight interactive Real Numbers concepts');
