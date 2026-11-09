@@ -24,7 +24,7 @@ assert.match(css,/reader-options-visible \.lesson-card>\.lesson-bottom\{\s*displ
   'Touch must override older mobile CSS hiding optional Mark learned controls');
 assert.doesNotMatch(css,/not\(\.reader-options-visible\)[^\{]*#stepsRegion/,'Do not hide steps before first touch');
 assert.doesNotMatch(css,/not\(\.reader-options-visible\)[^\{]*#questionNavDock/,'Do not hide bottom navigation');
-assert.match(html,/quiet-reader\.css\?v=lesson-core-2/);
+assert.match(html,/quiet-reader\.css\?v=lesson-core-3/);
 assert.match(html,/quiet-reader\.js\?v=lesson-core-2/);
 assert.match(sw,/quiet-reader\.js/);
 assert.match(sw,/quiet-reader\.css/);
