@@ -86,6 +86,9 @@ const server=http.createServer((req,res)=>{
    assert.match(await p.locator('#lesson').innerText(),/Finite: \{2\}/);
    await p.locator('#ta').click();
    assert.equal(await p.locator('html').getAttribute('lang'),'ta');
+   // Language switching re-renders a closed <details>; reveal the answer before asserting.
+   await p.locator('#lesson summary').focus();await p.keyboard.press('Enter');
+   assert.equal(await p.locator('#lesson details').getAttribute('open'),'');
    assert.match(await p.locator('#lesson').innerText(),/முடிவுள்ள கணம்/);
    assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
    await ctx.setOffline(true);
