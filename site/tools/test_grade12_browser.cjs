@@ -67,7 +67,9 @@ const {chromium}=require('playwright');
      row.value=String(r);column.value=String(col);column.dispatchEvent(new Event('change',{bubbles:true}));
     },{r,col});
     const output=await page.locator('#cofactor-result').innerText();
-    const expectedLine='C'+(r+1)+(col+1)+' = ';\n    const expectedSign=((r+col)%2)?'-1':'1';\n    assert.ok(output.includes('குறி: '+expectedSign),'cofactor sign at '+width+'px: '+output);
+    const expectedLine='C'+(r+1)+(col+1)+' = ';
+    const expectedSign=((r+col)%2)?'-1':'1';
+    assert.ok(output.includes('குறி: '+expectedSign),'cofactor sign at '+width+'px: '+output);
     assert.ok(output.includes(expectedLine),'cofactor sign and coordinate at '+width+'px: '+output);
     assert.ok(output.endsWith(' = '+expected[r][col]),'cofactor value at '+width+'px: '+output);
    }
