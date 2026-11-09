@@ -14,6 +14,7 @@ const controls={
  'cofactor-column':{value:'0',addEventListener(){}},
  'cofactor-result':{textContent:''},
  'show-cofactor':{addEventListener(){}},
+ 'verify-matrix':{addEventListener(){}},
  en:{setAttribute(){},addEventListener(){}},
  ta:{setAttribute(){},addEventListener(){}}
 };
