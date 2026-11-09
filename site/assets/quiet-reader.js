@@ -15,7 +15,7 @@
     body.classList.remove('reader-long-question');
     if(!active)return;
     const box=card.getBoundingClientRect();
-    if(answer.getBoundingClientRect().bottom>box.bottom-72 ||
+    if(question.getBoundingClientRect().bottom>box.bottom-72 ||
        box.bottom-steps.getBoundingClientRect().top<72){
       // Exceptional long questions must remain complete, never clipped.
       body.classList.add('reader-long-question');
