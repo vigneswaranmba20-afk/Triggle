@@ -1,0 +1,202 @@
+{
+  "grade": 9,
+  "chapter": 8,
+  "exercise": "8.4",
+  "count": 10,
+  "edition": "2025 revised English",
+  "source_pdf": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+  "status": "text-layer-checked; mathematical unit checks included; diagrams/table image review may remain",
+  "tamil_status": "pending",
+  "records": [
+    {
+      "id": "g9-ch8-ex8.4-q1",
+      "question": "Let m be the mid point and b be the upper limit of a class in a continuous frequency distribution. The lower limit of the class is\n(1) 2m − b   (2) 2m+b   (3) m-b   (4) m-2b",
+      "answer": "(1) 2m − b",
+      "page": 294,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 294,
+        "enPrintedPage": 288,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "2m − b",
+          "2m+b",
+          "m-b",
+          "m-2b"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.4-q2",
+      "question": "The mean of a set of seven numbers is 81. If one of the numbers is discarded , the mean of the remaining numbers is 78 . The value of discarded number is\n(1) 101   (2) 100   (3) 99   (4) 98",
+      "answer": "(3) 99",
+      "page": 294,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 294,
+        "enPrintedPage": 288,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "101",
+          "100",
+          "99",
+          "98"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.4-q3",
+      "question": "A particular observation which occurs maximum number of times in a given data is called its\n(1) Frequency   (2) range   (3) mode   (4) Median",
+      "answer": "(3) mode",
+      "page": 294,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 294,
+        "enPrintedPage": 288,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "Frequency",
+          "range",
+          "mode",
+          "Median"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.4-q4",
+      "question": "For which set of numbers do the mean, median and mode all have the same values?\n(1) 2,2,2,4   (2) 1,3,3,3,5   (3) 1,1,2,5,6   (4) 1,1,2,1,5",
+      "answer": "(2) 1,3,3,3,5",
+      "page": 294,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 294,
+        "enPrintedPage": 288,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "2,2,2,4",
+          "1,3,3,3,5",
+          "1,1,2,5,6",
+          "1,1,2,1,5"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.4-q5",
+      "question": "The algebraic sum of the deviations of a set of n values from their mean is\n(1) 0   (2) n-1   (3) n   (4) n+1",
+      "answer": "(1) 0",
+      "page": 294,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 294,
+        "enPrintedPage": 288,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "0",
+          "n-1",
+          "n",
+          "n+1"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.4-q6",
+      "question": "The mean of a,b,c,d and e is 28 . If the mean of a, c and e is 24 , then mean of b and d is\n(1) 24   (2) 36   (3) 26   (4) 34",
+      "answer": "(4) 34",
+      "page": 294,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 294,
+        "enPrintedPage": 288,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "24",
+          "36",
+          "26",
+          "34"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.4-q7",
+      "question": "If the mean of five observations x, x+2 , x+4 , x+6 , x+8, is 11, then the mean of first three observations is\n(1) 9   (2) 11   (3) 13   (4) 15",
+      "answer": "(1) 9",
+      "page": 294,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 294,
+        "enPrintedPage": 288,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "9",
+          "11",
+          "13",
+          "15"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.4-q8",
+      "question": "The mean of 5, 9, x, 17 and 21 is 13, then find the value of x\n(1) 9   (2) 13   (3) 17   (4) 21",
+      "answer": "(2) 13",
+      "page": 294,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 294,
+        "enPrintedPage": 288,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "9",
+          "13",
+          "17",
+          "21"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.4-q9",
+      "question": "The mean of the square of first 11 natural numbers is\n(1) 26   (2) 46   (3) 48   (4) 52",
+      "answer": "(2) 46",
+      "page": 294,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 294,
+        "enPrintedPage": 288,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "26",
+          "46",
+          "48",
+          "52"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch8-ex8.4-q10",
+      "question": "The mean of a set of numbers is X . If each number is multiplied by z, the mean is\n(1) X +z   (2) X - z   (3) z X   (4) X",
+      "answer": "(3) z X",
+      "page": 294,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 294,
+        "enPrintedPage": 288,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "X +z",
+          "X - z",
+          "z X",
+          "X"
+        ]
+      }
+    }
+  ]
+}

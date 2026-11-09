@@ -1,0 +1,202 @@
+{
+  "grade": 9,
+  "chapter": 7,
+  "exercise": "7.4",
+  "count": 10,
+  "edition": "2025 revised English",
+  "source_pdf": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+  "status": "text-layer-checked; mathematical unit checks included; diagrams/table image review may remain",
+  "tamil_status": "pending",
+  "records": [
+    {
+      "id": "g9-ch7-ex7.4-q1",
+      "question": "The semi-perimeter of a triangle having sides 15 cm, 20 cm and 25 cm is\n(1) 60 cm   (2) 45 cm   (3) 30 cm   (4) 15 cm",
+      "answer": "(3) 30 cm",
+      "page": 269,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 269,
+        "enPrintedPage": 263,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "60 cm",
+          "45 cm",
+          "30 cm",
+          "15 cm"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.4-q2",
+      "question": "If the sides of a triangle are 3 cm, 4 cm and 5 cm, then the area is\n(1) 3 cm²   (2) 6 cm²   (3) 9 cm²   (4) 12 cm²",
+      "answer": "(2) 6 cm²",
+      "page": 269,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 269,
+        "enPrintedPage": 263,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "3 cm²",
+          "6 cm²",
+          "9 cm²",
+          "12 cm²"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.4-q3",
+      "question": "The perimeter of an equilateral triangle is 30 cm. The area is\n(1) 10√3 cm²   (2) 12√3 cm²   (3) 15√3 cm²   (4) 25√3 cm²",
+      "answer": "(4) 25√3 cm²",
+      "page": 269,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 269,
+        "enPrintedPage": 263,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "10√3 cm²",
+          "12√3 cm²",
+          "15√3 cm²",
+          "25√3 cm²"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.4-q4",
+      "question": "The lateral surface area of a cube of side 12 cm is\n(1) 144 cm²   (2) 196 cm²   (3) 576 cm²   (4) 664 cm²",
+      "answer": "(3) 576 cm²",
+      "page": 269,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 269,
+        "enPrintedPage": 263,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "144 cm²",
+          "196 cm²",
+          "576 cm²",
+          "664 cm²"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.4-q5",
+      "question": "If the lateral surface area of a cube is 600 cm², then the total surface area is\n(1) 150 cm²   (2) 400 cm²   (3) 900 cm²   (4) 1350 cm²",
+      "answer": "(3) 900 cm²",
+      "page": 270,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 270,
+        "enPrintedPage": 264,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "150 cm²",
+          "400 cm²",
+          "900 cm²",
+          "1350 cm²"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.4-q6",
+      "question": "The total surface area of a cuboid with dimension 10 cm × 6 cm × 5 cm is\n(1) 280 cm²   (2) 300 cm²   (3) 360 cm²   (4) 600 cm²",
+      "answer": "(1) 280 cm²",
+      "page": 270,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 270,
+        "enPrintedPage": 264,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "280 cm²",
+          "300 cm²",
+          "360 cm²",
+          "600 cm²"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.4-q7",
+      "question": "If the ratio of the sides of two cubes are 2:3, then ratio of their surface areas will be\n(1) 4:6   (2) 4:9   (3) 6:9   (4) 16:36",
+      "answer": "(2) 4:9",
+      "page": 270,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 270,
+        "enPrintedPage": 264,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "4:6",
+          "4:9",
+          "6:9",
+          "16:36"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.4-q8",
+      "question": "The volume of a cuboid is 660 cm³ and the area of the base is 33 cm². Its height is\n(1) 10 cm   (2) 12 cm   (3) 20 cm   (4) 22 cm",
+      "answer": "(3) 20 cm",
+      "page": 270,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 270,
+        "enPrintedPage": 264,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "10 cm",
+          "12 cm",
+          "20 cm",
+          "22 cm"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.4-q9",
+      "question": "The capacity of a water tank of dimensions 10 m × 5 m × 1.5 m is\n(1) 75 litres   (2) 750 litres   (3) 7500 litres   (4) 75000 litres",
+      "answer": "(4) 75000 litres",
+      "page": 270,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 270,
+        "enPrintedPage": 264,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "75 litres",
+          "750 litres",
+          "7500 litres",
+          "75000 litres"
+        ]
+      }
+    },
+    {
+      "id": "g9-ch7-ex7.4-q10",
+      "question": "The number of bricks each measuring 50 cm × 30 cm × 20 cm that will be required to build a wall whose dimensions are 5 m × 3 m × 2 m is\n(1) 1000   (2) 2000   (3) 3000   (4) 5000",
+      "answer": "(1) 1000",
+      "page": 270,
+      "sourceFidelity": {
+        "status": "pdf-text-checked-en-visual-pending",
+        "enPdfPage": 270,
+        "enPrintedPage": 264,
+        "tamilEditorial": "pending",
+        "notes": [],
+        "answerOptions": [
+          "1000",
+          "2000",
+          "3000",
+          "5000"
+        ]
+      }
+    }
+  ]
+}
