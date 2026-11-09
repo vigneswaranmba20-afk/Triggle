@@ -8,7 +8,7 @@ assert.deepEqual(q.source.page,{en:7,ta:10});
 assert.deepEqual(q.source.pdfPage,{en:15,ta:18});
 for(const lang of ['en','ta']){assert.ok(q.prompt[lang].length>25);assert.ok(q.steps[lang].length>=4);assert.ok(q.answer[lang].length>15);}
 assert.equal(q.review.tamilEditorial,'pending');
-for(let n=1;n<=10000;n++){const x=-2*n;assert.equal(x%2,0);assert.ok(x<10);}
+for(let n=1;n<=10000;n++){const x=-2*n;assert.ok(x%2===0);assert.ok(x<10);}
 // A finite upper bound does not bound integers below: distinct witnesses -2n exist for every n.
 const witnesses=new Set(Array.from({length:10000},(_,i)=>-2*(i+1)));
 assert.equal(witnesses.size,10000);
