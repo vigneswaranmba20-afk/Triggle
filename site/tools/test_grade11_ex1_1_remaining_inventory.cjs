@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const ledger = require('../../docs/coverage/grade-11-2025.json');
 assert.equal(ledger.grade,11);
 assert.equal(ledger.chapters.length,12);
-const ids=['q4-iii','q4-iv','q4-v','q4-vi','q5','q6','q7','q8','q9','q10'];
+const ids=['q4-v','q4-vi','q5','q6','q7','q8','q9','q10'];
 for(const suffix of ids){
  const id='g11-ch1-ex1.1-'+suffix;
  const matches=ledger.items.filter(item=>item.id===id);
@@ -21,4 +21,4 @@ for(const suffix of ids){
  assert.match(item.status,/missing/,id);
 }
 for(const item of ledger.items) assert.equal(ledger.items.filter(x=>x.id===item.id).length,1,item.id);
-console.log('PASS Grade 11 Exercise 1.1 remaining source inventory: 10 distinct missing IDs; no premature verified/live claims');
+console.log('PASS Grade 11 Exercise 1.1 remaining source inventory: 8 distinct missing IDs; no premature verified/live claims');
