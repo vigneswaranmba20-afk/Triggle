@@ -1,6 +1,7 @@
 /* Triggle lesson-first mobile reader.
    The exercise label, complete question, final answer, worked steps, Back to
    all chapters, and Previous/Next are ALWAYS available without touching.
+   Useful Figure controls and inline question diagrams are always visible.
    First touch reveals only supplemental tools. The header and breadcrumbs stay fixed. */
 (() => {
   'use strict';
@@ -9,12 +10,13 @@
   const viewport=document.querySelector('.lesson-container');
   if(!card||!viewport)return;
 
-  // Never put #questionNavDock, #stepsRegion, .question-top or
-  // .lesson-title-row in this list: they are essential lesson controls/content.
+  // Never put #questionNavDock, #stepsRegion, .question-top,
+  // .lesson-title-row, #figureBtn or #inlineFigure in this list:
+  // they are essential lesson controls/content.
   // Header, class/chapter breadcrumbs, worked steps, and Detailed explanation
   // are permanent controls/content. Touch only reveals optional extras.
   const surfaces=[
-    '#figureBtn','#inlineFigure','#visualLessonAction',
+    '#visualLessonAction',
     '.lesson-bottom','.reference-line','.bottom-extras','.class-dock'
   ].map(selector=>document.querySelector(selector)).filter(Boolean);
   const body=document.body;
