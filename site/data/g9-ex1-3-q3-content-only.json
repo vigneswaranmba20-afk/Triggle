@@ -1,0 +1,183 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 19,
+    "pdfPage": "pending PDF page-image confirmation",
+    "fidelity": "2025 English PDF text layer checked; visual fidelity pending"
+  },
+  "exercise": "1.3",
+  "stem": "3. If U={a, b, c, d, e, f, g, h}, A={b, d, f, h} and B={a, d, e, h}, find the following sets.",
+  "tamilStatus": "pending",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-3-q3-i",
+      "part": "i",
+      "question": "(i) A′",
+      "steps": [
+        "Use U = {a, b, c, d, e, f, g, h}, A = {b, d, f, h} and B = {a, d, e, h} as printed in Question 3.",
+        "A′ = U−A = {a, c, e, g} and B′ = U−B = {b, c, f, g}.",
+        "Apply the set operation A′ to obtain {a, c, e, g}.",
+        "Check every result against membership in U and the definition of A′."
+      ],
+      "answer": "{a, c, e, g}",
+      "expected": [
+        "a",
+        "c",
+        "e",
+        "g"
+      ],
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending",
+      "mathCheck": "independent finite-set operations; De Morgan and involution identities"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q3-ii",
+      "part": "ii",
+      "question": "(ii) B′",
+      "steps": [
+        "Use U = {a, b, c, d, e, f, g, h}, A = {b, d, f, h} and B = {a, d, e, h} as printed in Question 3.",
+        "A′ = U−A = {a, c, e, g} and B′ = U−B = {b, c, f, g}.",
+        "Apply the set operation B′ to obtain {b, c, f, g}.",
+        "Check every result against membership in U and the definition of B′."
+      ],
+      "answer": "{b, c, f, g}",
+      "expected": [
+        "b",
+        "c",
+        "f",
+        "g"
+      ],
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending",
+      "mathCheck": "independent finite-set operations; De Morgan and involution identities"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q3-iii",
+      "part": "iii",
+      "question": "(iii) A′∪B′",
+      "steps": [
+        "Use U = {a, b, c, d, e, f, g, h}, A = {b, d, f, h} and B = {a, d, e, h} as printed in Question 3.",
+        "A′ = U−A = {a, c, e, g} and B′ = U−B = {b, c, f, g}.",
+        "Apply the set operation A′∪B′ to obtain {a, c, e, g, b, f}.",
+        "Check every result against membership in U and the definition of A′∪B′."
+      ],
+      "answer": "{a, c, e, g, b, f}",
+      "expected": [
+        "a",
+        "c",
+        "e",
+        "g",
+        "b",
+        "f"
+      ],
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending",
+      "mathCheck": "independent finite-set operations; De Morgan and involution identities"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q3-iv",
+      "part": "iv",
+      "question": "(iv) A′∩B′",
+      "steps": [
+        "Use U = {a, b, c, d, e, f, g, h}, A = {b, d, f, h} and B = {a, d, e, h} as printed in Question 3.",
+        "A′ = U−A = {a, c, e, g} and B′ = U−B = {b, c, f, g}.",
+        "Apply the set operation A′∩B′ to obtain {c, g}.",
+        "Check every result against membership in U and the definition of A′∩B′."
+      ],
+      "answer": "{c, g}",
+      "expected": [
+        "c",
+        "g"
+      ],
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending",
+      "mathCheck": "independent finite-set operations; De Morgan and involution identities"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q3-v",
+      "part": "v",
+      "question": "(v) (A∪B)′",
+      "steps": [
+        "Use U = {a, b, c, d, e, f, g, h}, A = {b, d, f, h} and B = {a, d, e, h} as printed in Question 3.",
+        "A′ = U−A = {a, c, e, g} and B′ = U−B = {b, c, f, g}.",
+        "Apply the set operation (A∪B)′ to obtain {c, g}.",
+        "Check every result against membership in U and the definition of (A∪B)′."
+      ],
+      "answer": "{c, g}",
+      "expected": [
+        "c",
+        "g"
+      ],
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending",
+      "mathCheck": "independent finite-set operations; De Morgan and involution identities"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q3-vi",
+      "part": "vi",
+      "question": "(vi) (A∩B)′",
+      "steps": [
+        "Use U = {a, b, c, d, e, f, g, h}, A = {b, d, f, h} and B = {a, d, e, h} as printed in Question 3.",
+        "A′ = U−A = {a, c, e, g} and B′ = U−B = {b, c, f, g}.",
+        "Apply the set operation (A∩B)′ to obtain {a, b, c, e, f, g}.",
+        "Check every result against membership in U and the definition of (A∩B)′."
+      ],
+      "answer": "{a, b, c, e, f, g}",
+      "expected": [
+        "a",
+        "b",
+        "c",
+        "e",
+        "f",
+        "g"
+      ],
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending",
+      "mathCheck": "independent finite-set operations; De Morgan and involution identities"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q3-vii",
+      "part": "vii",
+      "question": "(vii) (A′)′",
+      "steps": [
+        "Use U = {a, b, c, d, e, f, g, h}, A = {b, d, f, h} and B = {a, d, e, h} as printed in Question 3.",
+        "A′ = U−A = {a, c, e, g} and B′ = U−B = {b, c, f, g}.",
+        "Apply the set operation (A′)′ to obtain {b, d, f, h}.",
+        "Check every result against membership in U and the definition of (A′)′."
+      ],
+      "answer": "{b, d, f, h}",
+      "expected": [
+        "b",
+        "d",
+        "f",
+        "h"
+      ],
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending",
+      "mathCheck": "independent finite-set operations; De Morgan and involution identities"
+    },
+    {
+      "id": "g9-ch1-ex1-3-q3-viii",
+      "part": "viii",
+      "question": "(viii) (B′)′",
+      "steps": [
+        "Use U = {a, b, c, d, e, f, g, h}, A = {b, d, f, h} and B = {a, d, e, h} as printed in Question 3.",
+        "A′ = U−A = {a, c, e, g} and B′ = U−B = {b, c, f, g}.",
+        "Apply the set operation (B′)′ to obtain {a, d, e, h}.",
+        "Check every result against membership in U and the definition of (B′)′."
+      ],
+      "answer": "{a, d, e, h}",
+      "expected": [
+        "a",
+        "d",
+        "e",
+        "h"
+      ],
+      "sourceVisualReview": "pending original PDF page-image comparison",
+      "tamilStatus": "pending",
+      "mathCheck": "independent finite-set operations; De Morgan and involution identities"
+    }
+  ]
+}
