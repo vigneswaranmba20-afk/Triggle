@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "chapter": 1,
+  "exercise": "1.4",
+  "question": 5,
+  "medium": "en",
+  "source": {
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "edition": "2025 revised",
+    "printedPage": 36,
+    "textLayerRead": true,
+    "pageImageVerified": false,
+    "answerKeyPrintedPage": 282
+  },
+  "id": "g12-c1-ex1.4-q5",
+  "sourceExtract": "A family of 3 people went out for dinner in a restaurant. The cost of two dosai, three idlies and two vadais is ₹150. The cost of the two dosai, two idlies and four vadais is ₹200. The cost of five dosai, four idlies and two vadais is ₹250. The family has ₹350 in hand and they ate 3 dosai and six idlies and six vadais. Will they be able to manage to pay the bill within the amount they had?",
+  "sourceFidelityNote": "Transcribed from PDF text extraction; rupee symbol normalized from font-extracted `; verify original page image before certification.",
+  "status": "mathematically_verified_source_image_pending",
+  "publishable": false,
+  "variables": {
+    "d": "price of one dosai in rupees",
+    "i": "price of one idli in rupees",
+    "v": "price of one vadai in rupees"
+  },
+  "equations": [
+    "2d+3i+2v=150",
+    "2d+2i+4v=200",
+    "5d+4i+2v=250"
+  ],
+  "steps": [
+    "Let d, i and v be the prices of one dosai, idli and vadai.",
+    "Translate the three restaurant bills into the three equations shown.",
+    "Subtract the first equation from the second: -i+2v=50, so i=2v-50.",
+    "Subtract the first equation from the third: 3d+i=100, so d=(100-i)/3.",
+    "Substitute these expressions into the first equation: 2(100-i)/3+3i+2v=150.",
+    "Multiply by 3: 200+7i+6v=450; hence 7i+6v=250.",
+    "Use i=2v-50: 7(2v-50)+6v=250, giving 20v=600 and v=30.",
+    "Then i=2(30)-50=10, and d=(100-10)/3=30.",
+    "The family's bill is 3(30)+6(10)+6(30)=330 rupees.",
+    "Since ₹330≤₹350, the family can pay and has ₹20 remaining."
+  ],
+  "answer": {
+    "dosaiRupees": 30,
+    "idliRupees": 10,
+    "vadaiRupees": 30,
+    "totalBillRupees": 330,
+    "remainingRupees": 20,
+    "canPay": true
+  },
+  "independentChecks": {
+    "method": "SymPy exact integer linear solve and direct substitution",
+    "determinant": 20,
+    "substitutedBills": [
+      150,
+      200,
+      250
+    ],
+    "bill": 330,
+    "passed": true
+  },
+  "inventory": {
+    "newQuestionDrafts": 1,
+    "newSubpartDrafts": 1,
+    "newSourceCertifiedQuestions": 0,
+    "newSourceCertifiedSubparts": 0,
+    "wholeExerciseQuestionDenominator": 5,
+    "wholeExerciseSubpartDenominator": null,
+    "denominatorStatus": "Question stems Q1–Q5 visible in extracted text; Q1 has four numbered subparts; Q5 has no numbered subparts. Full exercise subpart denominator pending visual audit.",
+    "figuresPending": "not verified",
+    "tamilStatus": "not_editorially_verified"
+  },
+  "releaseBlockers": [
+    "Verify printed page 36 image against original wording and symbols.",
+    "Check registration, offline assets and mandatory CI before publication.",
+    "Grade 12 PR remains divergent from main; reconcile safely before merge."
+  ],
+  "nextBatch": "Visually certify Exercise 1.4 Q2–Q5; then verify and solve Q1(i–iv), with careful matrix notation checks."
+}
