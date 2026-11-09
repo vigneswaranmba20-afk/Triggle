@@ -72,3 +72,18 @@ assert.ok(page.includes('data/class-10-ex1-2-2025.js'),'Exercise 1.2 script not 
 const offline=fs.readFileSync(path.join(__dirname,'../service-worker.js'),'utf8');
 assert.ok(offline.includes("'./data/class-10-ex1-2-2025.js'"),'Exercise 1.2 missing from offline shell');
 console.log('PASS Grade 10 Exercise 1.2 student registration: 9/9 entries; 20 legacy IDs retained; script and offline cache registered.');
+
+const svgSource=fs.readFileSync(path.join(__dirname,'../assets/diagrams.js'),'utf8');
+vm.runInNewContext(svgSource,sandbox,{filename:'diagrams.js',timeout:2000});
+const visualIds=['c10-1-ex1-2-q4-i','c10-1-ex1-2-q4-ii','c10-1-ex1-2-q5'];
+for(const id of visualIds){
+ const item=loaded.find(q=>q.id===id);
+ assert.ok(item?.diagram && typeof item.diagram==='object','Missing rendered figure data: '+id);
+ const markup=sandbox.window.TriggleDraw.drawClassic({demo:item.diagram,ref:id,title:'Grade 10 relation'});
+ assert.ok(markup.includes('<svg') && markup.includes('</svg>'),'Missing accessible SVG rendering: '+id);
+ assert.ok(markup.includes('role="img"'),'Diagram accessible image role missing: '+id);
+}
+assert.deepEqual(loaded.find(x=>x.id==='c10-1-ex1-2-q4-i').diagram.pairs,[[2,1],[4,2]]);
+assert.deepEqual(loaded.find(x=>x.id==='c10-1-ex1-2-q4-ii').diagram.pairs,[[1,4],[2,5],[3,6],[4,7],[5,8],[6,9]]);
+assert.equal(loaded.find(x=>x.id==='c10-1-ex1-2-q5').diagram.groups.reduce((n,g)=>n+g.employees.length,0),14);
+console.log('PASS Grade 10 Exercise 1.2: 3 SVG relation figures and 14 salary arrows verified.');
