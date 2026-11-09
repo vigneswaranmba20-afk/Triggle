@@ -1,0 +1,505 @@
+{
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.2",
+  "source_edition": "TN SCERT revised 2025",
+  "source_file_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+  "source_title": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+  "source_print_pages": [
+    9,
+    10
+  ],
+  "source_pdf_pages": [
+    15,
+    16
+  ],
+  "source_verified_by": "Page-image comparison and textbook answer appendix",
+  "entry_count": 9,
+  "numbered_question_count": 5,
+  "question_subpart_ids": [
+    "c10-1-ex1-2-q1-i",
+    "c10-1-ex1-2-q1-ii",
+    "c10-1-ex1-2-q1-iii",
+    "c10-1-ex1-2-q1-iv",
+    "c10-1-ex1-2-q2",
+    "c10-1-ex1-2-q3",
+    "c10-1-ex1-2-q4-i",
+    "c10-1-ex1-2-q4-ii",
+    "c10-1-ex1-2-q5"
+  ],
+  "content_status": "english_math_checked_staged",
+  "tamil_status": "pending",
+  "student_registration": "pending",
+  "diagram_render_status": "pending Q4(i–ii), Q5",
+  "human_review": "pending",
+  "items": [
+    {
+      "id": "c10-1-ex1-2-q1-i",
+      "grade": 10,
+      "chapter": 1,
+      "exercise": "1.2",
+      "question_number": 1,
+      "subpart": "i",
+      "language": "en",
+      "source_edition": "TN SCERT revised 2025",
+      "source_drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "source_print_page": 9,
+      "source_pdf_page": 15,
+      "source_visual_status": "verified_against_original_page_image",
+      "original_question_stem": "1. Let A = {1,2,3,7} and B = {3,0,–1,7}, which of the following are relation from A to B ?",
+      "original_subpart_text": "(i) R₁ = {(2,1), (7,1)}",
+      "source_question_text": "1. Let A = {1,2,3,7} and B = {3,0,–1,7}, which of the following are relation from A to B ?\n(i) R₁ = {(2,1), (7,1)}",
+      "steps": [
+        {
+          "en": "For a relation from A to B, every first coordinate must be in A and every second coordinate must be in B.",
+          "eq": "R ⊆ A × B"
+        },
+        {
+          "en": "The first coordinates 2 and 7 both belong to A.",
+          "eq": "2,7 ∈ A"
+        },
+        {
+          "en": "But the second coordinate 1 is not a member of B.",
+          "eq": "1 ∉ {3,0,−1,7}"
+        },
+        {
+          "en": "Both ordered pairs violate the second-coordinate requirement, so this is not a relation from A to B.",
+          "eq": "R₁ ⊈ A × B"
+        }
+      ],
+      "answer": "Not a relation from A to B.",
+      "kind": "textbook",
+      "tamil_status": "pending_original_source_transcription",
+      "editorial_review": "pending",
+      "integration_status": "staged_not_student_loaded"
+    },
+    {
+      "id": "c10-1-ex1-2-q1-ii",
+      "grade": 10,
+      "chapter": 1,
+      "exercise": "1.2",
+      "question_number": 1,
+      "subpart": "ii",
+      "language": "en",
+      "source_edition": "TN SCERT revised 2025",
+      "source_drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "source_print_page": 9,
+      "source_pdf_page": 15,
+      "source_visual_status": "verified_against_original_page_image",
+      "original_question_stem": "1. Let A = {1,2,3,7} and B = {3,0,–1,7}, which of the following are relation from A to B ?",
+      "original_subpart_text": "(ii) R₂ = {(–1,1)}",
+      "source_question_text": "1. Let A = {1,2,3,7} and B = {3,0,–1,7}, which of the following are relation from A to B ?\n(ii) R₂ = {(–1,1)}",
+      "steps": [
+        {
+          "en": "A relation from A to B is a subset of the Cartesian product.",
+          "eq": "R ⊆ A × B"
+        },
+        {
+          "en": "For (−1,1), the first coordinate must belong to A.",
+          "eq": "−1 ∉ {1,2,3,7}"
+        },
+        {
+          "en": "The second coordinate must belong to B, but 1 is absent.",
+          "eq": "1 ∉ {3,0,−1,7}"
+        },
+        {
+          "en": "Therefore the only pair is not in A × B.",
+          "eq": "R₂ ⊈ A × B"
+        }
+      ],
+      "answer": "Not a relation from A to B.",
+      "kind": "textbook",
+      "tamil_status": "pending_original_source_transcription",
+      "editorial_review": "pending",
+      "integration_status": "staged_not_student_loaded"
+    },
+    {
+      "id": "c10-1-ex1-2-q1-iii",
+      "grade": 10,
+      "chapter": 1,
+      "exercise": "1.2",
+      "question_number": 1,
+      "subpart": "iii",
+      "language": "en",
+      "source_edition": "TN SCERT revised 2025",
+      "source_drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "source_print_page": 9,
+      "source_pdf_page": 15,
+      "source_visual_status": "verified_against_original_page_image",
+      "original_question_stem": "1. Let A = {1,2,3,7} and B = {3,0,–1,7}, which of the following are relation from A to B ?",
+      "original_subpart_text": "(iii) R₃ = {(2,–1), (7,7), (1,3)}",
+      "source_question_text": "1. Let A = {1,2,3,7} and B = {3,0,–1,7}, which of the following are relation from A to B ?\n(iii) R₃ = {(2,–1), (7,7), (1,3)}",
+      "steps": [
+        {
+          "en": "Check that each ordered pair has its first coordinate in A and second in B.",
+          "eq": "R₃ ⊆ A × B ?"
+        },
+        {
+          "en": "For (2,−1), both membership conditions hold.",
+          "eq": "2 ∈ A, −1 ∈ B"
+        },
+        {
+          "en": "For (7,7) and (1,3), both coordinates also belong to their respective sets.",
+          "eq": "7,1 ∈ A; 7,3 ∈ B"
+        },
+        {
+          "en": "Every pair belongs to A × B, hence R₃ is a relation from A to B.",
+          "eq": "R₃ ⊆ A × B"
+        }
+      ],
+      "answer": "Relation from A to B.",
+      "kind": "textbook",
+      "tamil_status": "pending_original_source_transcription",
+      "editorial_review": "pending",
+      "integration_status": "staged_not_student_loaded"
+    },
+    {
+      "id": "c10-1-ex1-2-q1-iv",
+      "grade": 10,
+      "chapter": 1,
+      "exercise": "1.2",
+      "question_number": 1,
+      "subpart": "iv",
+      "language": "en",
+      "source_edition": "TN SCERT revised 2025",
+      "source_drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "source_print_page": 9,
+      "source_pdf_page": 15,
+      "source_visual_status": "verified_against_original_page_image",
+      "original_question_stem": "1. Let A = {1,2,3,7} and B = {3,0,–1,7}, which of the following are relation from A to B ?",
+      "original_subpart_text": "(iv) R₄ = {(7,–1), (0,3), (3,3), (0,7)}",
+      "source_question_text": "1. Let A = {1,2,3,7} and B = {3,0,–1,7}, which of the following are relation from A to B ?\n(iv) R₄ = {(7,–1), (0,3), (3,3), (0,7)}",
+      "steps": [
+        {
+          "en": "A relation from A to B cannot contain a pair with a first coordinate outside A.",
+          "eq": "R ⊆ A × B"
+        },
+        {
+          "en": "The pair (7,−1) satisfies the requirement.",
+          "eq": "7 ∈ A, −1 ∈ B"
+        },
+        {
+          "en": "However, the pairs (0,3) and (0,7) have first coordinate 0, which is not in A.",
+          "eq": "0 ∉ A"
+        },
+        {
+          "en": "Since not all pairs are in A × B, R₄ is not a relation from A to B.",
+          "eq": "R₄ ⊈ A × B"
+        }
+      ],
+      "answer": "Not a relation from A to B.",
+      "kind": "textbook",
+      "tamil_status": "pending_original_source_transcription",
+      "editorial_review": "pending",
+      "integration_status": "staged_not_student_loaded"
+    },
+    {
+      "id": "c10-1-ex1-2-q2",
+      "grade": 10,
+      "chapter": 1,
+      "exercise": "1.2",
+      "question_number": 2,
+      "subpart": null,
+      "language": "en",
+      "source_edition": "TN SCERT revised 2025",
+      "source_drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "source_print_page": 9,
+      "source_pdf_page": 15,
+      "source_visual_status": "verified_against_original_page_image",
+      "original_question_stem": "2. Let A={1,2,3,4,...,45} and R be the relation defined as “square is of a number” on A. Write R as a subset of A × A . Also, find the domain and range of R.",
+      "original_subpart_text": null,
+      "source_question_text": "2. Let A={1,2,3,4,...,45} and R be the relation defined as “square is of a number” on A. Write R as a subset of A × A . Also, find the domain and range of R.",
+      "steps": [
+        {
+          "en": "The ordered pair (x,y) belongs to R when y is the square of x, with both numbers in A.",
+          "eq": "y = x², x,y ∈ A"
+        },
+        {
+          "en": "The squares not exceeding 45 occur for x = 1, 2, 3, 4, 5 and 6; 7² = 49 is too large.",
+          "eq": "1²=1, 2²=4, 3²=9, 4²=16, 5²=25, 6²=36"
+        },
+        {
+          "en": "Write the ordered pairs in roster form.",
+          "eq": "R = {(1,1), (2,4), (3,9), (4,16), (5,25), (6,36)}"
+        },
+        {
+          "en": "The domain is the set of first coordinates, and the range is the set of second coordinates.",
+          "eq": "Domain = {1,2,3,4,5,6}; Range = {1,4,9,16,25,36}"
+        }
+      ],
+      "answer": "R = {(1,1), (2,4), (3,9), (4,16), (5,25), (6,36)}; Domain = {1,2,3,4,5,6}; Range = {1,4,9,16,25,36}.",
+      "kind": "textbook",
+      "tamil_status": "pending_original_source_transcription",
+      "editorial_review": "pending",
+      "integration_status": "staged_not_student_loaded"
+    },
+    {
+      "id": "c10-1-ex1-2-q3",
+      "grade": 10,
+      "chapter": 1,
+      "exercise": "1.2",
+      "question_number": 3,
+      "subpart": null,
+      "language": "en",
+      "source_edition": "TN SCERT revised 2025",
+      "source_drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "source_print_page": 9,
+      "source_pdf_page": 15,
+      "source_visual_status": "verified_against_original_page_image",
+      "original_question_stem": "3. A Relation R is given by the set {(x,y) / y = x + 3, x ∈ {0,1,2,3,4,5}} . Determine its domain and range.",
+      "original_subpart_text": null,
+      "source_question_text": "3. A Relation R is given by the set {(x,y) / y = x + 3, x ∈ {0,1,2,3,4,5}} . Determine its domain and range.",
+      "steps": [
+        {
+          "en": "The allowed x-values are listed in the set given in the question.",
+          "eq": "x ∈ {0,1,2,3,4,5}"
+        },
+        {
+          "en": "Calculate y = x + 3 separately for each x.",
+          "eq": "0→3, 1→4, 2→5, 3→6, 4→7, 5→8"
+        },
+        {
+          "en": "List the corresponding ordered pairs of the relation.",
+          "eq": "R = {(0,3), (1,4), (2,5), (3,6), (4,7), (5,8)}"
+        },
+        {
+          "en": "Read the domain from the first coordinates and the range from the second coordinates.",
+          "eq": "Domain = {0,1,2,3,4,5}; Range = {3,4,5,6,7,8}"
+        }
+      ],
+      "answer": "Domain = {0,1,2,3,4,5}; Range = {3,4,5,6,7,8}.",
+      "kind": "textbook",
+      "tamil_status": "pending_original_source_transcription",
+      "editorial_review": "pending",
+      "integration_status": "staged_not_student_loaded"
+    },
+    {
+      "id": "c10-1-ex1-2-q4-i",
+      "grade": 10,
+      "chapter": 1,
+      "exercise": "1.2",
+      "question_number": 4,
+      "subpart": "i",
+      "language": "en",
+      "source_edition": "TN SCERT revised 2025",
+      "source_drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "source_print_page": 9,
+      "source_pdf_page": 15,
+      "source_visual_status": "verified_against_original_page_image",
+      "original_question_stem": "4. Represent each of the given relations by (a) an arrow diagram, (b) a graph and (c) a set in roster form, wherever possible.",
+      "original_subpart_text": "(i) {(x,y)|x = 2y, x ∈{2,3,4,5}, y ∈{1,2,3,4}}",
+      "source_question_text": "4. Represent each of the given relations by (a) an arrow diagram, (b) a graph and (c) a set in roster form, wherever possible.\n(i) {(x,y)|x = 2y, x ∈{2,3,4,5}, y ∈{1,2,3,4}}",
+      "steps": [
+        {
+          "en": "The relation requires x = 2y with x in {2,3,4,5} and y in {1,2,3,4}.",
+          "eq": "x = 2y"
+        },
+        {
+          "en": "Try the admissible y-values: y=1 gives x=2 and y=2 gives x=4.",
+          "eq": "(x,y) = (2,1), (4,2)"
+        },
+        {
+          "en": "y=3 or 4 gives x=6 or 8, neither in the specified x-set.",
+          "eq": "6,8 ∉ {2,3,4,5}"
+        },
+        {
+          "en": "The same two ordered pairs define the arrows and the plotted coordinates.",
+          "eq": "R = {(2,1), (4,2)}"
+        }
+      ],
+      "answer": "Roster: {(2,1), (4,2)}. Arrows: 2→1, 4→2. Graph: plot (2,1) and (4,2).",
+      "kind": "textbook",
+      "tamil_status": "pending_original_source_transcription",
+      "editorial_review": "pending",
+      "integration_status": "staged_not_student_loaded",
+      "diagram_spec": {
+        "type": "arrow_and_coordinate_graph",
+        "arrows": [
+          [
+            2,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "plot_points": [
+          [
+            2,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "diagram_render_status": "pending"
+    },
+    {
+      "id": "c10-1-ex1-2-q4-ii",
+      "grade": 10,
+      "chapter": 1,
+      "exercise": "1.2",
+      "question_number": 4,
+      "subpart": "ii",
+      "language": "en",
+      "source_edition": "TN SCERT revised 2025",
+      "source_drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "source_print_page": 9,
+      "source_pdf_page": 15,
+      "source_visual_status": "verified_against_original_page_image",
+      "original_question_stem": "4. Represent each of the given relations by (a) an arrow diagram, (b) a graph and (c) a set in roster form, wherever possible.",
+      "original_subpart_text": "(ii) {(x,y)|y = x+3, x, y are natural numbers < 10}",
+      "source_question_text": "4. Represent each of the given relations by (a) an arrow diagram, (b) a graph and (c) a set in roster form, wherever possible.\n(ii) {(x,y)|y = x+3, x, y are natural numbers < 10}",
+      "steps": [
+        {
+          "en": "Both x and y must be positive natural numbers below 10.",
+          "eq": "1 ≤ x ≤ 9; 1 ≤ y ≤ 9"
+        },
+        {
+          "en": "Substitute y=x+3 and require x+3<10, so x can only be 1 to 6.",
+          "eq": "x = 1,2,3,4,5,6"
+        },
+        {
+          "en": "Compute each y-value to form the six ordered pairs.",
+          "eq": "(1,4),(2,5),(3,6),(4,7),(5,8),(6,9)"
+        },
+        {
+          "en": "Use these same pairs for the arrow diagram and coordinate graph.",
+          "eq": "R = {(1,4), (2,5), (3,6), (4,7), (5,8), (6,9)}"
+        }
+      ],
+      "answer": "Roster: {(1,4), (2,5), (3,6), (4,7), (5,8), (6,9)}. Arrows: 1→4, 2→5, 3→6, 4→7, 5→8, 6→9. Graph: plot these six points.",
+      "kind": "textbook",
+      "tamil_status": "pending_original_source_transcription",
+      "editorial_review": "pending",
+      "integration_status": "staged_not_student_loaded",
+      "diagram_spec": {
+        "type": "arrow_and_coordinate_graph",
+        "arrows": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "plot_points": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      "diagram_render_status": "pending"
+    },
+    {
+      "id": "c10-1-ex1-2-q5",
+      "grade": 10,
+      "chapter": 1,
+      "exercise": "1.2",
+      "question_number": 5,
+      "subpart": null,
+      "language": "en",
+      "source_edition": "TN SCERT revised 2025",
+      "source_drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "source_print_page": 10,
+      "source_pdf_page": 16,
+      "source_visual_status": "verified_against_original_page_image",
+      "original_question_stem": "5. A company has four categories of employees given by Assistants (A), Clerks (C), Managers (M) and an Executive Officer (E). The company provide ₹10,000, ₹25,000, ₹50,000 and ₹1,00,000 as salaries to the people who work in the categories A, C, M and E respectively. If A₁, A₂, A₃, A₄ and A₅ were Assistants; C₁, C₂, C₃, C₄ were Clerks; M₁, M₂, M₃ were managers and E₁, E₂ were Executive officers and if the relation R is defined by xRy, where x is the salary given to person y, express the relation R through an ordered pair and an arrow diagram.",
+      "original_subpart_text": null,
+      "source_question_text": "5. A company has four categories of employees given by Assistants (A), Clerks (C), Managers (M) and an Executive Officer (E). The company provide ₹10,000, ₹25,000, ₹50,000 and ₹1,00,000 as salaries to the people who work in the categories A, C, M and E respectively. If A₁, A₂, A₃, A₄ and A₅ were Assistants; C₁, C₂, C₃, C₄ were Clerks; M₁, M₂, M₃ were managers and E₁, E₂ were Executive officers and if the relation R is defined by xRy, where x is the salary given to person y, express the relation R through an ordered pair and an arrow diagram.",
+      "steps": [
+        {
+          "en": "Because xRy means x is the salary given to person y, list each salary as the first coordinate and each employee as the second.",
+          "eq": "(salary, employee)"
+        },
+        {
+          "en": "Assistants A₁ to A₅ each receive ₹10,000; clerks C₁ to C₄ each receive ₹25,000.",
+          "eq": "(10000,A₁)…(10000,A₅); (25000,C₁)…(25000,C₄)"
+        },
+        {
+          "en": "Managers M₁ to M₃ each receive ₹50,000; executive officers E₁ and E₂ receive ₹1,00,000.",
+          "eq": "(50000,M₁)…(50000,M₃); (100000,E₁),(100000,E₂)"
+        },
+        {
+          "en": "The relation contains 5+4+3+2=14 ordered pairs. In an arrow diagram, draw arrows from each salary to all employees receiving it.",
+          "eq": "n(R)=14; 10000→{A₁,…,A₅}; 25000→{C₁,…,C₄}; 50000→{M₁,M₂,M₃}; 100000→{E₁,E₂}"
+        }
+      ],
+      "answer": "R = {(10000,A₁),(10000,A₂),(10000,A₃),(10000,A₄),(10000,A₅),(25000,C₁),(25000,C₂),(25000,C₃),(25000,C₄),(50000,M₁),(50000,M₂),(50000,M₃),(100000,E₁),(100000,E₂)}.",
+      "kind": "textbook",
+      "tamil_status": "pending_original_source_transcription",
+      "editorial_review": "pending",
+      "integration_status": "staged_not_student_loaded",
+      "diagram_spec": {
+        "type": "salary_employee_arrow",
+        "salary_groups": {
+          "10000": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
+          ],
+          "25000": [
+            "C1",
+            "C2",
+            "C3",
+            "C4"
+          ],
+          "50000": [
+            "M1",
+            "M2",
+            "M3"
+          ],
+          "100000": [
+            "E1",
+            "E2"
+          ]
+        }
+      },
+      "diagram_render_status": "pending"
+    }
+  ]
+}
