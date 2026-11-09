@@ -12,7 +12,7 @@ for(let n=1;n<=10000;n++){const x=-2*n;assert.ok(x%2===0);assert.ok(x<10);}
 // A finite upper bound does not bound integers below: distinct witnesses -2n exist for every n.
 const witnesses=new Set(Array.from({length:10000},(_,i)=>-2*(i+1)));
 assert.equal(witnesses.size,10000);
-assert.ok(!q.answer.en.toLowerCase().includes('finite set'));
+assert.match(q.answer.en, /\binfinite set\b/i, 'answer must explicitly identify an infinite set');
 const html=fs.readFileSync(path.resolve(__dirname,'../grade-11/sets-q3-iii-preview.html'),'utf8');
 assert.match(html,/g11-ch1-ex1-1-q3-iii.json/);
 assert.match(html,/q3-iii/);
