@@ -45,9 +45,9 @@ const {chromium}=require('playwright');
    const observed=await column.evaluate(el=>({value:el.value,options:Array.from(el.options,o=>({value:o.value,selected:o.selected}))}));
    assert.deepEqual(selected,['1'],'Playwright must select the second cofactor column');
    assert.equal(observed.value,'1','column selection must persist before calculating C12: '+JSON.stringify(observed));
-   assert.match(await page.locator('#cofactor-result').innerText(),/Sign: -1\nC12 = -3|குறி: -1\nC12 = -3/,'selection changes immediately refresh C12');
+   { const output=await page.locator('#cofactor-result').innerText(); assert.ok(output.includes('குறி: -1') && output.includes('C12 = -3'),'selection changes immediately refresh C12: '+output); }
    await page.locator('#show-cofactor').click();
-   assert.match(await page.locator('#cofactor-result').innerText(),/Sign: -1\nC12 = -3|குறி: -1\nC12 = -3/);
+   { const output=await page.locator('#cofactor-result').innerText(); assert.ok(output.includes('குறி: -1') && output.includes('C12 = -3'),'C12 calculation: '+output); }
    // Set both coordinates in one browser task, then dispatch the same change event as a user selection.
    // This avoids platform-specific native-select focus behavior while still exercising the UI handler.
    await page.evaluate(()=>{
@@ -56,9 +56,9 @@ const {chromium}=require('playwright');
    });
    assert.equal(await page.locator('#cofactor-row').inputValue(),'2','row selection must be applied before calculating C31');
    assert.equal(await page.locator('#cofactor-column').inputValue(),'0','column selection must be applied before calculating C31');
-   assert.match(await page.locator('#cofactor-result').innerText(),/Sign: 1\nC31 = -1|குறி: 1\nC31 = -1/,'selection changes immediately refresh C31');
+   { const output=await page.locator('#cofactor-result').innerText(); assert.ok(output.includes('குறி: 1') && output.includes('C31 = -1'),'selection changes immediately refresh C31: '+output); }
    await page.locator('#show-cofactor').click();
-   assert.match(await page.locator('#cofactor-result').innerText(),/Sign: 1\nC31 = -1|குறி: 1\nC31 = -1/);
+   { const output=await page.locator('#cofactor-result').innerText(); assert.ok(output.includes('குறி: 1') && output.includes('C31 = -1'),'C31 calculation: '+output); }
    // Exhaustively exercise every cofactor coordinate against independently derived values.
    const expected=[[1,-3,9],[1,1,-5],[-1,1,-1]];
    for(let r=0;r<3;r++)for(let col=0;col<3;col++){
