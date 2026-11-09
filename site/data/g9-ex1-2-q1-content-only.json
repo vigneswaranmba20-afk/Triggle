@@ -1,0 +1,77 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 11,
+    "pdfPage": "pending independent PDF-page confirmation",
+    "fidelity": "text-layer-checked; page-image review pending"
+  },
+  "exercise": "1.2",
+  "stem": "1. Find the cardinal number of the following sets.",
+  "tamilStatus": "pending original Tamil source transcription and human editorial review",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-2-q1-i",
+      "part": "i",
+      "question": "M = {p, q, r, s, t, u}",
+      "steps": [
+        "The elements are p, q, r, s, t and u.",
+        "All six symbols are distinct.",
+        "The cardinal number is the count of distinct elements."
+      ],
+      "answer": "n(M) = 6",
+      "expected": 6,
+      "mathCheck": "independent enumeration",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q1-ii",
+      "part": "ii",
+      "question": "P = {x : x = 3n+2, n∈W and x< 15}",
+      "steps": [
+        "Whole numbers begin at n = 0.",
+        "The condition 3n + 2 < 15 gives n < 13/3, so n = 0, 1, 2, 3, 4.",
+        "Substituting gives P = {2, 5, 8, 11, 14}."
+      ],
+      "answer": "n(P) = 5",
+      "expected": 5,
+      "mathCheck": "independent enumeration",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q1-iv",
+      "part": "iv",
+      "question": "R = {x : x is an integers, x∈ Z and –5 ≤ x <5}",
+      "steps": [
+        "The lower endpoint −5 is included.",
+        "The upper endpoint 5 is excluded, so R = {−5,−4,−3,−2,−1,0,1,2,3,4}.",
+        "There are five negative integers, zero, and four positive integers."
+      ],
+      "answer": "n(R) = 10",
+      "expected": 10,
+      "mathCheck": "independent enumeration",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q1-v",
+      "part": "v",
+      "question": "S = The set of all leap years between 1882 and 1906.",
+      "steps": [
+        "A leap year is divisible by 4, except century years not divisible by 400.",
+        "The qualifying years strictly between 1882 and 1906 are 1884, 1888, 1892, 1896 and 1904; 1900 is not a leap year.",
+        "Thus S = {1884, 1888, 1892, 1896, 1904}."
+      ],
+      "answer": "n(S) = 5",
+      "expected": 5,
+      "mathCheck": "independent enumeration",
+      "sourceVisualReview": "pending"
+    }
+  ],
+  "omitted": [
+    {
+      "id": "g9-ch1-ex1-2-q1-iii",
+      "reason": "fraction glyph needs original PDF page-image verification"
+    }
+  ]
+}
