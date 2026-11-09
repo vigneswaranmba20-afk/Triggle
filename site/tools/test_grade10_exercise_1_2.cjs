@@ -75,6 +75,8 @@ console.log('PASS Grade 10 Exercise 1.2 student registration: 9/9 entries; 20 le
 
 const svgSource=fs.readFileSync(path.join(__dirname,'../assets/diagrams.js'),'utf8');
 vm.runInNewContext(svgSource,sandbox,{filename:'diagrams.js',timeout:2000});
+const relationSource=fs.readFileSync(path.join(__dirname,'../assets/grade10-relation-figures.js'),'utf8');
+vm.runInNewContext(relationSource,sandbox,{filename:'grade10-relation-figures.js',timeout:2000});
 const visualIds=['c10-1-ex1-2-q4-i','c10-1-ex1-2-q4-ii','c10-1-ex1-2-q5'];
 for(const id of visualIds){
  const item=loaded.find(q=>q.id===id);
