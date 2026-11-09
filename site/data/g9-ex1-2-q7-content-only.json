@@ -1,0 +1,28 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 12,
+    "pdfPage": "pending PDF page-image confirmation",
+    "fidelity": "2025 English PDF text-layer checked; source page-image comparison pending"
+  },
+  "exercise": "1.2",
+  "tamilStatus": "pending original Tamil transcription and independent editorial review",
+  "stem": "7. If A = {a, {a, b}}, write all the subsets of A.",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-2-q7",
+      "part": null,
+      "question": "7. If A = {a, {a, b}}, write all the subsets of A.",
+      "steps": [
+        "Identify the two distinct elements of A: the letter a and the set {a, b}; the latter is one element, not two separate elements of A.",
+        "A set with two elements has 2² = 4 subsets: the empty set, each singleton, and the whole set.",
+        "The singleton containing the set {a, b} is {{a, b}}; distinguish it from {a, b}, which is itself an element of A."
+      ],
+      "answer": "P(A) = {∅, {a}, {{a, b}}, {a, {a, b}}}.",
+      "mathCheck": "Represent elements as distinct tokens α=a and β={a,b}; all 2^2 subsets enumerated.",
+      "sourceVisualReview": "pending"
+    }
+  ]
+}
