@@ -99,3 +99,46 @@
   body.textbook-reader #lessonCard,
   body.textbook-reader #stepsRegion{scroll-behavior:auto!important}
 }
+
+/* Student-first compact reader; consistent for Grades 9–12. */
+body.textbook-reader #lessonCard>.lesson-bottom,
+body.textbook-reader #lessonCard>#answerBox{display:none!important}
+body.textbook-reader .final-answer-step{
+ display:grid;grid-template-columns:25px minmax(0,1fr);
+ gap:9px;align-items:start;border:1px solid #cbe6d7;border-radius:13px;
+ background:#eefaf3;padding:11px 10px;margin:9px 0 5px;
+}
+body.textbook-reader .final-answer-step .step-circle{
+ width:25px;height:25px;background:#d5f0e3;color:#177753;font-size:14px;
+}
+body.textbook-reader .final-answer-label{
+ display:block;color:#236c51;font-size:12px;line-height:1.4;font-weight:800;margin-bottom:5px;
+}
+body.textbook-reader .final-answer-value{
+ color:#176d51;font-size:clamp(15px,3.8vw,19px);
+ font-weight:800;line-height:1.4;overflow-wrap:anywhere;min-width:0;
+}
+body.textbook-reader .final-answer-value.answer-grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));
+ gap:5px 9px;
+}
+body.textbook-reader .final-answer-value .answer-part{
+ min-width:0;overflow-wrap:anywhere;
+}
+body.textbook-reader .twd-worked-step:last-child .twd-part-solution{
+ border-color:#cbe6d7;background:#eefaf3;
+}
+@media(max-width:800px){
+ body.textbook-reader #lessonCard>#questionText{
+  font-size:clamp(13.5px,3.6vw,15px)!important;
+  line-height:1.44!important;padding:9px 11px!important;margin-top:6px!important;
+ }
+ body.textbook-reader #questionNavDock .page-button,
+ body.textbook-reader #questionNavDock .all-chapters-button{
+  font-size:14px!important;min-height:44px!important;
+  line-height:1.24!important;padding:7px 9px!important;
+ }
+ body.textbook-reader #questionNavDock{
+  row-gap:3px!important;padding:5px 10px calc(7px + env(safe-area-inset-bottom))!important;
+ }
+}
