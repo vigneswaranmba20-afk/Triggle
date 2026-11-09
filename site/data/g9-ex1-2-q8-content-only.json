@@ -1,0 +1,67 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 12,
+    "pdfPage": "pending PDF page-image confirmation",
+    "fidelity": "2025 English PDF text-layer checked; source page-image comparison pending"
+  },
+  "exercise": "1.2",
+  "tamilStatus": "pending original Tamil transcription and independent editorial review",
+  "stem": "8. Write down the power set of the following sets:",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-2-q8-i",
+      "part": "i",
+      "question": "A = {a, b}",
+      "steps": [
+        "Identify the two distinct elements a and b.",
+        "Enumerate the empty subset and each singleton subset.",
+        "Include the full set; there are 2² = 4 subsets."
+      ],
+      "answer": "P(A) = {∅, {a}, {b}, {a, b}}.",
+      "mathCheck": "Expected power-set cardinality 4, independently checked using 2^n.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q8-ii",
+      "part": "ii",
+      "question": "B = {1, 2, 3}",
+      "steps": [
+        "Identify three distinct elements 1, 2, and 3.",
+        "List the empty set, the three singleton subsets, and the three two-element subsets.",
+        "Include the full three-element set, giving 2³ = 8 subsets."
+      ],
+      "answer": "P(B) = {∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}.",
+      "mathCheck": "Expected power-set cardinality 8, independently checked using 2^n.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q8-iii",
+      "part": "iii",
+      "question": "D = {p, q, r, s}",
+      "steps": [
+        "Identify the four distinct elements p, q, r, and s.",
+        "Enumerate subsets by size: one empty, four singleton, six pairs, and four triples.",
+        "Include the entire set, giving 1 + 4 + 6 + 4 + 1 = 16 subsets."
+      ],
+      "answer": "P(D) = {∅, {p}, {q}, {r}, {s}, {p, q}, {p, r}, {p, s}, {q, r}, {q, s}, {r, s}, {p, q, r}, {p, q, s}, {p, r, s}, {q, r, s}, {p, q, r, s}}.",
+      "mathCheck": "Expected power-set cardinality 16, independently checked using 2^n.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q8-iv",
+      "part": "iv",
+      "question": "E = ∅",
+      "steps": [
+        "The empty set has zero elements.",
+        "Its only subset is the empty set itself.",
+        "Therefore the power set has 2⁰ = 1 member."
+      ],
+      "answer": "P(E) = {∅}.",
+      "mathCheck": "Expected power-set cardinality 1, independently checked using 2^n.",
+      "sourceVisualReview": "pending"
+    }
+  ]
+}
