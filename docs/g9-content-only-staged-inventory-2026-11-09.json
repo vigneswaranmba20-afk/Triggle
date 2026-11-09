@@ -1,0 +1,404 @@
+{
+  "checkpointDate": "2026-11-09",
+  "branch": "content/grade9-content-only-20261109",
+  "scope": "44 staged English question entries; not live or certified",
+  "checksThisRun": "44 unique IDs, source text and final answer field presence; source image and math checks not run",
+  "items": [
+    {
+      "id": "g9-ch7-ex7.3-q1",
+      "manifest": "g9-ch7-ex7-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch7-ex7.3-q2",
+      "manifest": "g9-ch7-ex7-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch7-ex7.3-q3",
+      "manifest": "g9-ch7-ex7-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch7-ex7.3-q4",
+      "manifest": "g9-ch7-ex7-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch7-ex7.3-q5",
+      "manifest": "g9-ch7-ex7-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch7-ex7.3-q6",
+      "manifest": "g9-ch7-ex7-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch7-ex7.3-q7",
+      "manifest": "g9-ch7-ex7-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch7-ex7.3-q8",
+      "manifest": "g9-ch7-ex7-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch7-ex7.3-q9",
+      "manifest": "g9-ch7-ex7-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.1-q1",
+      "manifest": "g9-ch8-ex8-1-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.1-q2",
+      "manifest": "g9-ch8-ex8-1-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.1-q3",
+      "manifest": "g9-ch8-ex8-1-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.1-q4",
+      "manifest": "g9-ch8-ex8-1-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.1-q5",
+      "manifest": "g9-ch8-ex8-1-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.1-q6",
+      "manifest": "g9-ch8-ex8-1-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.1-q7",
+      "manifest": "g9-ch8-ex8-1-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.1-q8",
+      "manifest": "g9-ch8-ex8-1-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.2-q1",
+      "manifest": "g9-ch8-ex8.2-en.json",
+      "enPdfPage": 289,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.2-q2",
+      "manifest": "g9-ch8-ex8.2-en.json",
+      "enPdfPage": 289,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.2-q3",
+      "manifest": "g9-ch8-ex8.2-en.json",
+      "enPdfPage": 290,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.2-q4",
+      "manifest": "g9-ch8-ex8.2-en.json",
+      "enPdfPage": 290,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.2-q5",
+      "manifest": "g9-ch8-ex8.2-en.json",
+      "enPdfPage": 290,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.2-q6",
+      "manifest": "g9-ch8-ex8.2-en.json",
+      "enPdfPage": 290,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.3-q1",
+      "manifest": "g9-ch8-ex8.3-en.json",
+      "enPdfPage": 293,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.3-q2",
+      "manifest": "g9-ch8-ex8.3-en.json",
+      "enPdfPage": 293,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.3-q3",
+      "manifest": "g9-ch8-ex8.3-en.json",
+      "enPdfPage": 293,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.3-q4",
+      "manifest": "g9-ch8-ex8.3-en.json",
+      "enPdfPage": 293,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.3-q5",
+      "manifest": "g9-ch8-ex8.3-en.json",
+      "enPdfPage": 293,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch8-ex8.3-q6",
+      "manifest": "g9-ch8-ex8.3-en.json",
+      "enPdfPage": 293,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.2-q1",
+      "manifest": "g9-ch9-ex9-2-en-q1-q4.json",
+      "enPdfPage": 307,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.2-q2",
+      "manifest": "g9-ch9-ex9-2-en-q1-q4.json",
+      "enPdfPage": 307,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.2-q3",
+      "manifest": "g9-ch9-ex9-2-en-q1-q4.json",
+      "enPdfPage": 307,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.2-q4",
+      "manifest": "g9-ch9-ex9-2-en-q1-q4.json",
+      "enPdfPage": 308,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.2-q5",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.3-q1",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.3-q2",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.3-q3",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.3-q4",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.3-q5",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.3-q6",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.3-q7",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.3-q8",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.3-q9",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    },
+    {
+      "id": "g9-ch9-ex9.3-q10",
+      "manifest": "g9-ch9-ex9-2-q5-ex9-3-en.json",
+      "enPdfPage": null,
+      "sourceTextStatus": "text-layer draft; visual fidelity pending",
+      "mathStatus": "previously authored; not independently rerun this turn",
+      "tamilStatus": "pending",
+      "deployed": false
+    }
+  ]
+}
