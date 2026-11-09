@@ -91,7 +91,7 @@ function showCofactor(){
  const ta=document.documentElement.lang==='ta';
  const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);const divisor=gcd(numerator,denominator);const reducedDen=denominator/divisor;const reducedNum=numerator/divisor;
  const fraction=denominator===1?String(numerator):numerator+'/9'+(reducedDen===1?' = '+reducedNum:' = '+reducedNum+'/'+reducedDen);
- document.getElementById('cofactor-result').textContent=(ta?'இடம்':'Position')+' Q1('+key+') C'+(i+1)+(j+1)+'\\n'+(ta?'சிற்றணி':'Minor matrix')+': '+JSON.stringify(minor)+'\\n'+(ta?'சிற்றணிக்கோவை':'Minor determinant')+': '+minorValue+(denominator===9?' / 9':'')+'\\n'+(ta?'குறி':'Sign')+': '+sign+'\\nC'+(i+1)+(j+1)+' = '+fraction;
+ document.getElementById('cofactor-result').textContent=(ta?'இடம்':'Position')+' Q1('+key+') C'+(i+1)+(j+1)+'\n'+(ta?'சிற்றணி':'Minor matrix')+': '+JSON.stringify(minor)+'\n'+(ta?'சிற்றணிக்கோவை':'Minor determinant')+': '+minorValue+(denominator===9?' / 9':'')+'\n'+(ta?'குறி':'Sign')+': '+sign+'\\nC'+(i+1)+(j+1)+' = '+fraction;
 }
 document.getElementById('show-cofactor').addEventListener('click',showCofactor);
 for(const id of ['cofactor-matrix','cofactor-row','cofactor-column'])document.getElementById(id).addEventListener('change',showCofactor);
