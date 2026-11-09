@@ -32,7 +32,8 @@ assert(activities.includes('cardinalityTable(raw,body,lang)'),'Cardinality activ
 assert(activities.includes('document.createElement(\'table\')'),'No fake paragraph-table');
 assert(html.includes('id="diagramCompareAnswer"'),'Glass viewer must contain compared answer');
 assert(app.includes("$('diagramCompareAnswer').innerHTML=$('answerText').innerHTML"),'Figure must display same final answer without modifying mathematics');
-assert(css.includes('body.textbook-reader .lesson-card>#answerBox{order:4}'),'Final answer must follow question on mobile');
+assert(css.includes('body.textbook-reader .lesson-card>#answerBox{order:4}'),'Legacy answer reference stays in reading order');
+assert(app.includes('appendFinalStep(ul)'),'All steps end with the styled answer');
 assert(css.includes('body.textbook-reader .lesson-card>#stepsRegion{order:7}'),'Reasoning follows answer on mobile');
 assert(css.includes('backdrop-filter:blur(14px)'),'Glass figure panel missing');
 assert(css.includes('@media(prefers-reduced-transparency:reduce)'),'Opaque fallback missing');
@@ -43,7 +44,7 @@ const glass=/\.figure-dialog\{[\s\S]*?background:rgba\(239,232,250,\.68\)!import
 assert(glass,'Venn dialog must be visibly translucent, not nearly opaque');
 assert(html.includes('textbook-activities.js?v=math-first-1'),'New activities renderer not versioned');
 assert(html.includes('chapter-hub.js?v=exercise-direct-1'),'New direct exercise chapter hub must load');
-assert(html.includes('app.js?v=permanent-reader-1'),'New direct exercise reader code must load');
+assert(html.includes('app.js?v=compact-answer-1'),'New direct exercise reader code must load');
 assert(sw.includes("'./assets/math-first.css'"),'Offline shell must include new CSS');
 const cacheVersion=Number(sw.match(/triggle-shell-real-2025-v(\d+)/)?.[1]);
 assert.ok(Number.isInteger(cacheVersion)&&cacheVersion>=55,'Offline cache must invalidate all previous published versions');
