@@ -10,7 +10,7 @@ for(const lang of ['en','ta']){assert.ok(q.prompt[lang].length>20);assert.equal(
 assert.equal(q.review.mathematics,'independently checked');assert.equal(q.review.tamilEditorial,'pending');
 const isPrime=n=>{if(n<2)return false;for(let d=2;d*d<=n;d++)if(n%d===0)return false;return true;};
 for(const primes of [[3],[3,5],[3,5,7],[3,5,7,11,13]]) {
-  const N=2*primes.reduce((a,b)=>a*BigInt(b),1n)+1n;
+  const N=2n*primes.reduce((a,b)=>a*BigInt(b),1n)+1n;
   assert.ok(N>1n && N%2n===1n);
   for(const p of primes)assert.equal(N%BigInt(p),1n);
   let factor=null;
