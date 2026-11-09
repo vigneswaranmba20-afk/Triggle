@@ -1,0 +1,28 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 22,
+    "pdfPage": "pending original page-image confirmation",
+    "fidelity": "2025 English PDF text layer checked; visual comparison pending"
+  },
+  "exercise": "1.4",
+  "tamilStatus": "pending",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-4-q3",
+      "question": "3. If A = {p,q,r,s}, B = {m,n,q,s,t} and C = {m,n,p,q,s}, then verify the associative property of union of sets.",
+      "steps": [
+        "Write A = {p, q, r, s}, B = {m, n, q, s, t}, and C = {m, n, p, q, s}. Union lists each distinct element once.",
+        "First A ∪ B = {m, n, p, q, r, s, t}. Therefore (A ∪ B) ∪ C = {m, n, p, q, r, s, t}, because every member of C is already present.",
+        "Independently, B ∪ C = {m, n, p, q, s, t}. Then A ∪ (B ∪ C) = {m, n, p, q, r, s, t}, adding r from A.",
+        "Both groupings produce exactly the same seven-element set. Thus (A ∪ B) ∪ C = A ∪ (B ∪ C), verifying associativity of union."
+      ],
+      "answer": "(A ∪ B) ∪ C = A ∪ (B ∪ C) = {m, n, p, q, r, s, t}.",
+      "mathCheck": "independent two-order finite-set enumeration and cardinality checks",
+      "sourceVisualReview": "pending",
+      "tamilStatus": "pending"
+    }
+  ]
+}
