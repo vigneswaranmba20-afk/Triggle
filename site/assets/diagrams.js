@@ -5,7 +5,21 @@ function drawClassic(s){
       const line=(x1,y1,x2,y2,color,width=5)=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}" stroke-linecap="round"/>`;
       const label=(x,y,value,color='#494872',size=17)=>`<text x="${x}" y="${y}" font-size="${size}" text-anchor="middle" fill="${color}" font-family="Arial, sans-serif" font-weight="700">${sbEscapeMath(value)}</text>`;
       let t='';
-      if(d.kind==='complement-pairs'){
+      if(d.kind==='probability-spinner'){
+        // Original SVG reconstruction of an eight-equal-sector textbook spinner.
+        const cx=200,cy=132,r=96,numbered=Array.isArray(d.sectors)&&d.sectors.length===8?d.sectors:[1,2,3,4,5,6,7,8];
+        const polar=(radius,a)=>[cx+Math.cos(a)*radius,cy+Math.sin(a)*radius];
+        numbered.forEach((value,i)=>{
+          const a=-Math.PI/2+i*Math.PI/4,b=a+Math.PI/4,mid=(a+b)/2;
+          const p=polar(r,a),q=polar(r,b),center=polar(r*.71,mid);
+          const fill=i%2===0?'#eee6fb':'#d8ecf6';
+          t+=`<path d="M${cx} ${cy} L${p[0].toFixed(2)} ${p[1].toFixed(2)} A${r} ${r} 0 0 1 ${q[0].toFixed(2)} ${q[1].toFixed(2)} Z" fill="${fill}" stroke="#756ca6" stroke-width="2"/>`+
+             label(center[0].toFixed(2),center[1].toFixed(2)+0, value, '#354365',22);
+        });
+        t+=`<circle cx="${cx}" cy="${cy}" r="9" fill="#6654a9"/>`+
+           `<path d="M${cx} ${cy} L${cx+26} ${cy-32}" stroke="#df4778" stroke-width="6" stroke-linecap="round"/>`+
+           `<text x="200" y="256" text-anchor="middle" font-size="13" fill="#465776">Eight equally likely outcomes: 1–8</text>`;
+      }else if(d.kind==='complement-pairs'){
         const pairs=d.pairs||[];
         t=`<text x="200" y="35" text-anchor="middle" font-size="17" font-weight="700" fill="#4b5d89">Complementary angles add to 90°</text>`;
         pairs.forEach(([a,b],i)=>{
