@@ -34,22 +34,23 @@
   body.textbook-reader #lessonCard>.question-top,
   body.textbook-reader #lessonCard>.lesson-title-row,
   body.textbook-reader #lessonCard>#solutionModeRow,
+  body.textbook-reader #lessonCard>#questionText,
   body.textbook-reader #lessonCard>#answerBox,
-  body.textbook-reader #lessonCard>#inlineFigure{
+  body.textbook-reader #lessonCard>#inlineFigure,
+  body.textbook-reader #lessonCard>.lesson-bottom,
+  body.textbook-reader #lessonCard>#visualLessonAction{
     flex:0 0 auto!important;
   }
   /* The complete question stays above the scrolling worked solution.
      On exceptional lengthy questions, allow question-only scrolling rather
      than overlapping the answer or hiding the last lines of textbook text. */
   body.textbook-reader #lessonCard>#questionText{
-    flex:0 1 auto!important;min-height:0!important;max-height:none!important;
-    overflow-x:auto!important;overflow-y:auto!important;
-    overscroll-behavior:contain;scrollbar-width:thin;
-    -webkit-overflow-scrolling:touch;
+    flex:0 0 auto!important;height:auto!important;min-height:0!important;max-height:none!important;
+    overflow:visible!important;overflow-wrap:anywhere;scrollbar-width:none;
   }
   body.textbook-reader #lessonCard>#stepsRegion{
     display:block!important;flex:1 1 0!important;
-    min-height:min(18dvh,145px)!important;max-height:none!important;
+    min-height:0!important;max-height:none!important;
     overflow-y:auto!important;overflow-x:auto!important;
     overscroll-behavior:contain;scrollbar-width:thin;
     -webkit-overflow-scrolling:touch;
@@ -75,6 +76,16 @@
      reveal/hide transitions from moving the pinned question or dock. */
   body.textbook-reader .reference-line,
   body.textbook-reader .bottom-extras{display:none!important}
+  body.textbook-reader.reader-long-question .lesson-container{
+    display:block!important;overflow-y:auto!important;overflow-x:hidden!important;
+  }
+  body.textbook-reader.reader-long-question #lessonCard{
+    height:auto!important;flex:0 0 auto!important;min-height:min-content!important;
+    overflow:visible!important;
+  }
+  body.textbook-reader.reader-long-question #lessonCard>#stepsRegion{
+    flex:0 0 auto!important;height:auto!important;overflow:visible!important;
+  }
   body.textbook-reader #stepsRegion:focus-visible,
   body.textbook-reader #questionText:focus-visible{
     outline:2px solid #8870c7;outline-offset:-2px;
@@ -82,7 +93,7 @@
 }
 @media (max-width:800px) and (max-height:600px){
   body.textbook-reader #lessonCard{padding:6px 9px!important}
-  body.textbook-reader #lessonCard>#stepsRegion{min-height:86px!important}
+  body.textbook-reader #lessonCard>#stepsRegion{min-height:0!important}
 }
 @media (prefers-reduced-motion:reduce){
   body.textbook-reader #lessonCard,
