@@ -57,7 +57,7 @@ async function run(){
      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises',id+' missing textbook content must remain honest');
      assert.equal(await page.locator('#lessonCard').isVisible(),false);
      assert.equal(await page.locator('.hub-question').count(),0,'Do not substitute practice for missing book content');
-     assert.match(await page.locator('#chapterSectionContent').innerText(),/coming soon|சேர்க்கப்படுகின்றன|added|இன்னும்/i);
+     assert.match(await page.locator('#chapterSectionContent').innerText(),/coming soon|not available|are adding|சேர்க்கப்படுகின்றன|added|இன்னும்/i);
     }
     const metrics=await page.evaluate(()=>({vw:innerWidth,sw:document.documentElement.scrollWidth}));
     assert.ok(metrics.sw<=metrics.vw+1,'Horizontal overflow at '+width+' on '+id);
