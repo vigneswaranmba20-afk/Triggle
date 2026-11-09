@@ -22,7 +22,9 @@ for(const [i,q] of data.questions.entries()){
  assert.equal(q.review.publication,'draft');assert.equal(q.review.tamilEditorial,'pending');
 }
 assert.equal(ledger.chapters.length,12);
-assert.equal(ledger.items.length,4);
+const q1Ids = new Set(data.questions.map(q => q.id));
+assert.equal(ledger.items.filter(item => q1Ids.has(item.id)).length, 4, 'all four Q1 subparts must remain inventoried');
+assert.ok(ledger.items.length >= 4, 'subsequent exercise items must not invalidate the Q1 regression');
 assert.equal(ledger.inventoryComplete,false);
 assert.equal(ledger.chapters[0].liveVerified,0);
 console.log('PASS Grade 11 Chapter 1 Exercise 1.1 Q1(i–iv) bilingual drafts, mathematics, provenance, and conservative publication gates');
