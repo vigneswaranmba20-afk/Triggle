@@ -1,0 +1,29 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 22,
+    "pdfPage": "pending original page-image confirmation",
+    "fidelity": "2025 English PDF text layer checked; visual comparison pending"
+  },
+  "exercise": "1.4",
+  "tamilStatus": "pending",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-4-q2",
+      "question": "2. Test for the commutative property of union and intersection of the sets P = { x : x is a real number between 2 and 7} and Q = { x : x is a rational number between 2 and 7}.",
+      "steps": [
+        "Write P = {x ∈ ℝ : 2 < x < 7} and Q = {x ∈ ℚ : 2 < x < 7}. Both inequalities are strict, so the endpoints are excluded.",
+        "Every rational number is real, hence Q ⊆ P. But not every real number in this interval is rational; for example √10 belongs to P but not Q.",
+        "Therefore P ∪ Q = P. Reversing the operands, Q ∪ P = P. Thus P ∪ Q = Q ∪ P.",
+        "Because Q ⊆ P, P ∩ Q = Q. Likewise Q ∩ P = Q. Hence P ∩ Q = Q ∩ P.",
+        "Both union and intersection satisfy the commutative property for the given sets. Check: 3 belongs to both sets, while √10 belongs only to P; neither 2 nor 7 belongs to either set."
+      ],
+      "answer": "P ∪ Q = Q ∪ P = P = (2, 7); P ∩ Q = Q ∩ P = Q = ℚ ∩ (2, 7). Both properties are verified.",
+      "mathCheck": "Q ⊆ P, with strict endpoint checks and rational/irrational witnesses; independent finite rational sample truth-table test",
+      "sourceVisualReview": "pending",
+      "tamilStatus": "pending"
+    }
+  ]
+}
