@@ -49,9 +49,11 @@ async function run(){
        await page.locator('#next').click();
        assert.equal(new URL(page.url()).searchParams.get('question'),snapshot.expected[1],id+' next must stay in chapter');
      }
-     if(width<=800)await page.keyboard.press('Tab');
-     await page.locator('#questionReturnBtn').click();
-     assert.equal(new URL(page.url()).searchParams.get('chapter'),id,id+' Back returns to chapter hub');
+     // Return through the next question when the test advanced.
+     // This preserves history without a second visible Back row.
+     if(snapshot.expected.length>1)await page.goBack();
+     await page.goBack();
+     assert.equal(new URL(page.url()).searchParams.get('chapter'),id,id+' Browser Back returns to chapter hub');
      assert.equal(new URL(page.url()).searchParams.has('section'),false,'Do not return to practice question list');
     }else{
      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises',id+' missing textbook content must remain honest');
