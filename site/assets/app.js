@@ -502,7 +502,7 @@
      openGrade:changeGrade,openChapter:openChapterFor,openQuestion:openQuestionFor,goHome
    });
  }
- function render(){renderText();renderGrades();$('classicLink').hidden=grade!==9;
+ function render(){renderText();renderGrades();
    $('questionReturn').hidden=true;
    const showingQuestion=!homeView&&!classIndex&&!chapterOverview;
    $('allChaptersReturn').hidden=!showingQuestion;
@@ -544,8 +544,7 @@
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
   $('questionText').innerHTML=workedDisplay?.question||math(tr(current.q));$('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
-  $('referenceLink').hidden=!current.source;if(current.source)$('referenceLink').href=current.source;
-  $('editionNote').textContent=current.sourceEdition==='2025 revised'?(lang==='ta'?'2025 திருத்தப்பட்ட பாடநூல் · மொழிநடை மீளாய்வு நிலுவையில் உள்ளது.':'2025 revised textbook · Tamil editorial review pending.'):ui(current.kind==='practice'?'notePractice':grade===9?'noteOld':'noteBook');
+
   $('figureBtn').hidden=!hasUsefulFigure(current);
   renderInlineFigure();
   $('pageStatus').textContent=position+' '+ui('of')+' '+list.length;$('pageFill').style.width=(position/list.length*100)+'%';
