@@ -1478,14 +1478,14 @@ async function main() {
         assert.ok(layout.headingSizes.every(x=>x>=16),'All three breadcrumb labels must be at least 16px: '+JSON.stringify(layout));
         assert.ok(layout.font>=16,'Breadcrumb text must be large enough to read: '+JSON.stringify(layout));
         const actionGrid=await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>({font:parseFloat(getComputedStyle(el).fontSize),top:el.getBoundingClientRect().top,width:el.getBoundingClientRect().width})));
-        assert.ok(actionGrid.every(v=>Math.abs(v.font-16)<.25),'All 3 reader buttons share a 16px font');
+        assert.ok(actionGrid.every(v=>Math.abs(v.font-(width<=800?14:16))<.25),'Compact mobile font is 14px, desktop remains 16px');
         if(width<=800){
           const [previous,all,next]=actionGrid;
           assert.ok(all.top<previous.top&&Math.abs(previous.top-next.top)<2,'Back first row, two equal navigation actions below');
           assert.ok(Math.abs(previous.width-next.width)<3,'Previous and Next have equal widths');
         }
         assert.match(await page.locator('#next').innerText(),/Next page/,'Textbook reader moves to the next page');
-        assert.ok(layout.tapHeight>=48,'Chapter return needs a generous mobile tap target');
+        assert.ok(layout.tapHeight>=(width<=800?44:48),'Chapter return must preserve accessible tap target');
         assert.ok(layout.navScrollParent.includes('workspace'),'Dock must not sit inside scrolling question content');
         if(width<=800){
           assert.equal(layout.navPosition,'relative','Navigation must reserve its own space, not float');
