@@ -9,18 +9,55 @@
   "latest_verified_batch": {
     "chapter": 1,
     "chapter_title": "Relations and Functions",
-    "exercise": "1.1",
-    "original_numbered_questions": 7,
-    "unique_question_part_entries": 12,
-    "coverage_status": "complete",
-    "translation_status": "Tamil translations drafted, human review pending",
-    "quality_checks": "15/15 in creation; repeatable Node mathematics and schema test available",
-    "source_page_in_textbook": 6
+    "exercise": "1.2",
+    "original_numbered_questions": 5,
+    "unique_question_part_entries": 9,
+    "coverage_status": "english_source_image_checked_staged_only",
+    "translation_status": "Tamil pending",
+    "quality_checks": "9 independent in-memory mathematical assertions passed; Node test registered and awaiting CI",
+    "source_page_in_textbook": "9–10"
   },
   "counts_at_batch_commit": {
     "existing_items": 20,
     "new_items": 12,
     "total_items": 32
   },
-  "important_note": "Only Exercise 1.1 is marked complete. The remaining Grade 10 textbook exercises, worked examples, activities, thinking corners, and Tamil editorial checks remain pending."
+  "important_note": "Exercise 1.1 is in separate draft PR #103; Exercise 1.2 is in a dependent draft branch, not registered in the student-facing UI or merged. Neither completes Chapter 1.",
+  "exercise_1_2": {
+    "chapter": 1,
+    "exercise": "1.2",
+    "numbered_questions": 5,
+    "question_subpart_entries": 9,
+    "source_pages_printed": [
+      9,
+      10
+    ],
+    "source_pages_pdf": [
+      15,
+      16
+    ],
+    "source_drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "source_edition": "TN SCERT revised 2025",
+    "question_identifiers": [
+      "c10-1-ex1-2-q1-i",
+      "c10-1-ex1-2-q1-ii",
+      "c10-1-ex1-2-q1-iii",
+      "c10-1-ex1-2-q1-iv",
+      "c10-1-ex1-2-q2",
+      "c10-1-ex1-2-q3",
+      "c10-1-ex1-2-q4-i",
+      "c10-1-ex1-2-q4-ii",
+      "c10-1-ex1-2-q5"
+    ],
+    "status": "source_page_image_checked_english_math_checked_staged",
+    "math_checks": "in_memory_assertions_passed; committed Node CI test registered in npm test",
+    "unfinished": [
+      "student-facing class-10.js integration",
+      "Tamil 2025 source transcription",
+      "Q4 arrow and graph diagrams",
+      "Q5 arrow diagram",
+      "chapter review and release CI"
+    ],
+    "source_fidelity_note": "Mathematical notation transcribed from original PDF pages 15–16. Text punctuation retained where possible; typographic whitespace normalized."
+  }
 }
