@@ -49,26 +49,31 @@ async function main(){
    assert.ok(positions.title.bottom<=positions.details.top+2,'Details must be immediately below Example 2.12');
    assert.ok(positions.details.bottom<=positions.question.top+3,'Details before example content');
    if(width<=800){
-    const before=await page.evaluate(()=>({
-      bar:document.querySelector('.appbar').getBoundingClientRect().top,
-      crumb:document.querySelector('.status-row').getBoundingClientRect().top,
-      barBottom:document.querySelector('.appbar').getBoundingClientRect().bottom
-    }));
-    const scrolled=await page.evaluate(()=>{
-      const container=document.querySelector('.lesson-container');
-      container.scrollTop=450;
-      return {scroll:container.scrollTop};
+    const before=await page.evaluate(()=>{
+      const box=selector=>document.querySelector(selector).getBoundingClientRect();
+      return {bar:box('.appbar').top,crumb:box('.status-row').top,
+        question:box('#questionText').top,nav:box('#questionNavDock').top};
     });
-    assert.ok(scrolled.scroll>100,'Long Example 2.12 should scroll to validate pinned headers');
-    const after=await page.evaluate(()=>({
-      bar:document.querySelector('.appbar').getBoundingClientRect().top,
-      crumb:document.querySelector('.status-row').getBoundingClientRect().top,
-      barBottom:document.querySelector('.appbar').getBoundingClientRect().bottom
-    }));
-    assert.ok(Math.abs(after.bar-before.bar)<2,'Top header moved while scrolling');
-    assert.ok(Math.abs(after.crumb-before.crumb)<3,'Class/chapter breadcrumbs moved while scrolling');
-    assert.ok(after.crumb>=after.barBottom-3,'Sticky breadcrumbs must not overlap header');
-    await page.evaluate(()=>document.querySelector('.lesson-container').scrollTop=0);
+    const scrolled=await page.evaluate(()=>{
+      const steps=document.getElementById('stepsRegion');
+      steps.scrollTop=450;
+      return {scroll:steps.scrollTop,
+        max:steps.scrollHeight-steps.clientHeight,
+        page:document.querySelector('.lesson-container').scrollTop};
+    });
+    assert.ok(scrolled.max>90&&scrolled.scroll>40,
+      'Long Example 2.12 worked steps must scroll inside their own pane');
+    assert.equal(scrolled.page,0,'Whole question page must stay in place');
+    const after=await page.evaluate(()=>{
+      const box=selector=>document.querySelector(selector).getBoundingClientRect();
+      return {bar:box('.appbar').top,crumb:box('.status-row').top,
+        question:box('#questionText').top,nav:box('#questionNavDock').top};
+    });
+    for(const part of ['bar','crumb','question','nav']){
+      assert.ok(Math.abs(after[part]-before[part])<3,
+        part+' moved while only How it works scrolled');
+    }
+    await page.evaluate(()=>document.getElementById('stepsRegion').scrollTop=0);
    }
    await page.locator('#tabGuided').click();
    assert.equal(await page.locator('#guidedDialog').evaluate(el=>el.open),true,'Detailed explanation dialog launches');
