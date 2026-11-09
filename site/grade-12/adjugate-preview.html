@@ -47,8 +47,10 @@ li{margin:.65rem 0;line-height:1.65}small,.notice{color:#475763}details{margin-t
 </section>
 <section id="cofactor-teacher" aria-labelledby="cofactor-heading" style="background:white;border-radius:1rem;padding:1.3rem;margin:1rem 0">
 <h2 id="cofactor-heading">Cofactor walkthrough / இணைக்காரணி விளக்கம்</h2>
-<p class="english">Choose a position in the source-verified 3×3 matrix to see the deleted row and column, the remaining minor, and the sign.</p>
-<p class="tamil" lang="ta" hidden>சரிபார்க்கப்பட்ட 3×3 அணியில் ஒரு இடத்தைத் தேர்ந்தெடுத்து நீக்கப்படும் வரிசை, நிரல், சிற்றணி மற்றும் குறியைக் காண்க.</p>
+<p class="english">Choose Q1(ii) or Q1(iii), then a cofactor position. For Q1(iii), each minor is divided by 9 because A=M/3.</p>
+<p class="tamil" lang="ta" hidden>Q1(ii) அல்லது Q1(iii) அணியைத் தேர்ந்தெடுக்கவும். Q1(iii)-இல் A=M/3 என்பதால் ஒவ்வொரு சிற்றணிக்கோவையும் 9-ஆல் வகுக்கப்படும்.</p>
+<label for="cofactor-matrix"><span class="english">Textbook matrix</span><span class="tamil" lang="ta" hidden>பாடநூல் அணி</span></label>
+<select id="cofactor-matrix"><option value="ii">Q1(ii) · 3×3</option><option value="iii">Q1(iii) · (1/3) × 3×3</option></select>
 <label for="cofactor-row"><span class="english">Row</span><span class="tamil" lang="ta" hidden>வரிசை</span></label>
 <select id="cofactor-row"><option value="0">1</option><option value="1">2</option><option value="2">3</option></select>
 <label for="cofactor-column"><span class="english">Column</span><span class="tamil" lang="ta" hidden>நிரல்</span></label>
@@ -82,12 +84,15 @@ document.getElementById('verify-matrix').addEventListener('click',()=>{const key
 
 function showCofactor(){
  const i=Number(document.getElementById('cofactor-row').value),j=Number(document.getElementById('cofactor-column').value);
- const minor=matrices.ii.filter((_,r)=>r!==i).map(row=>row.filter((_,c)=>c!==j));
- const minorValue=determinant(minor),sign=(i+j)%2?-1:1,cofactor=sign*minorValue;
+ const key=document.getElementById('cofactor-matrix').value;
+ const m=matrices[key],denominator=key==='iii'?9:1;
+ const minor=m.filter((_,r)=>r!==i).map(row=>row.filter((_,col)=>col!==j));
+ const minorValue=determinant(minor),sign=(i+j)%2?-1:1,numerator=sign*minorValue;
  const ta=document.documentElement.lang==='ta';
- document.getElementById('cofactor-result').textContent=(ta?'இடம்':'Position')+' C'+(i+1)+(j+1)+'\n'+(ta?'சிற்றணி':'Minor matrix')+': '+JSON.stringify(minor)+'\n'+(ta?'சிற்றணிக்கோவை':'Minor determinant')+': '+minorValue+'\n'+(ta?'குறி':'Sign')+': '+sign+'\nC'+(i+1)+(j+1)+' = '+sign+' × '+minorValue+' = '+cofactor;
+ const fraction=denominator===1?String(numerator):numerator+'/9';
+ document.getElementById('cofactor-result').textContent=(ta?'இடம்':'Position')+' Q1('+key+') C'+(i+1)+(j+1)+'\\n'+(ta?'சிற்றணி':'Minor matrix')+': '+JSON.stringify(minor)+'\\n'+(ta?'சிற்றணிக்கோவை':'Minor determinant')+': '+minorValue+(denominator===9?' / 9':'')+'\\n'+(ta?'குறி':'Sign')+': '+sign+'\\nC'+(i+1)+(j+1)+' = '+fraction;
 }
 document.getElementById('show-cofactor').addEventListener('click',showCofactor);
-for(const id of ['cofactor-row','cofactor-column'])document.getElementById(id).addEventListener('change',showCofactor);
+for(const id of ['cofactor-matrix','cofactor-row','cofactor-column'])document.getElementById(id).addEventListener('change',showCofactor);
 buttons.en.addEventListener('click',()=>language('en'));buttons.ta.addEventListener('click',()=>language('ta'));
 </script></body></html>
