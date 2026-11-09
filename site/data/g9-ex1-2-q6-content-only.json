@@ -1,0 +1,67 @@
+{
+  "status": "staged-content-only-not-published",
+  "edition": "Tamil Nadu Standard Nine Mathematics, revised 2025",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 12,
+    "pdfPage": "pending independent PDF-page confirmation",
+    "fidelity": "English PDF text-layer checked; page-image review pending"
+  },
+  "exercise": "1.2",
+  "stem": "6. If S = {square, rectangle, circle, rhombus, triangle}, list the elements of the following subset of S.",
+  "tamilStatus": "pending original Tamil source transcription and independent editorial review",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-2-q6-i",
+      "part": "i",
+      "question": "The set of shapes which have 4 equal sides.",
+      "steps": [
+        "Restrict attention to the five named shapes in S.",
+        "A square has four equal sides, and a rhombus has four equal sides.",
+        "A general rectangle does not require all sides equal; collect the qualifying shapes."
+      ],
+      "answer": "{square, rhombus}.",
+      "mathCheck": "Definition of square and rhombus.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q6-ii",
+      "part": "ii",
+      "question": "The set of shapes which have radius.",
+      "steps": [
+        "Look only at the shapes named in S.",
+        "A circle is described by its radius.",
+        "The remaining named polygons are not defined by a radius in this context."
+      ],
+      "answer": "{circle}.",
+      "mathCheck": "Circle has a radius.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q6-iii",
+      "part": "iii",
+      "question": "The set of shapes in which the sum of all interior angles is 180o.",
+      "steps": [
+        "A triangle's interior angles sum to 180°.",
+        "The listed quadrilaterals have interior-angle sum 360°.",
+        "A circle is not a polygon with interior angles."
+      ],
+      "answer": "{triangle}.",
+      "mathCheck": "Polygon angle sum (n−2)×180° for n=3 gives 180°.",
+      "sourceVisualReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1-2-q6-iv",
+      "part": "iv",
+      "question": "The set of shapes which have 5 sides.",
+      "steps": [
+        "List the shapes in S: square, rectangle, circle, rhombus, triangle.",
+        "The listed polygons have either three or four sides; a circle has no straight sides.",
+        "No member of S has five sides."
+      ],
+      "answer": "∅ (null set).",
+      "mathCheck": "No pentagon belongs to S.",
+      "sourceVisualReview": "pending"
+    }
+  ]
+}
