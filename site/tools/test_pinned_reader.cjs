@@ -1,0 +1,19 @@
+'use strict';
+/* Regression guard for the always-visible mobile question and independent steps pane. */
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const read=p=>fs.readFileSync('site/'+p,'utf8');
+const css=read('assets/reader-pin.css');
+const html=read('index.html'),app=read('assets/app.js'),sw=read('service-worker.js');
+const between=(from,to)=>{const a=css.indexOf(from);assert.ok(a>=0,'Missing: '+from);return css.slice(a,to?css.indexOf(to,a):undefined);};
+assert.match(html,/reader-pin\.css\?v=question-pinned-1/,'Read newest mobile reader CSS');
+assert.match(html,/id="stepsRegion" role="region" tabindex="0"/,'Solution scroller must be keyboard accessible');
+assert.match(html,/id="questionText" class="question-text" tabindex="0"/,'Long question fallback must be keyboard accessible');
+assert.match(css,/@media \(max-width:800px\)/,'Mobile scoped only');
+assert.match(css,/body\.textbook-reader \.lesson-container\{[^}]*display:flex!important;[^}]*overflow:hidden!important/,'Lesson container must not scroll the entire question away');
+assert.match(css,/body\.textbook-reader #lessonCard\{[^}]*display:flex!important;[^}]*overflow:hidden!important/,'Reader must keep the question in a stable layout');
+assert.match(css,/body\.textbook-reader #lessonCard>#questionText\{[^}]*flex:0 1 auto!important/,'Question stays above worked steps');
+assert.match(css,/body\.textbook-reader #lessonCard>#stepsRegion\{[^}]*overflow-y:auto!important/,'Worked steps scroll independently');
+assert.match(css,/body\.textbook-reader #questionNavDock:not\(\[hidden\]\)\{[^}]*visibility:visible!important/,'Bottom navigation is permanently visible');
+assert.match(app,/const stepsPane=\$\('stepsRegion'\),questionPane=\$\('questionText'\)/,'New questions reset both independent scroll positions');
+assert.match(sw,/reader-pin\.css/,'Reader included in offline page');
+console.log('PASS pinned question, independent worked steps, stable navigation, scroll reset and offline asset.');
