@@ -41,8 +41,8 @@
     "source_english_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
     "source_tamil_id": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
     "language_status": "English exact page checked; Tamil 2025 page checked but human review pending",
-    "figure_status": "Q4 arrow/coordinate graphs and Q5 arrow diagram need diagram production",
-    "quality_gates": "math/content authored; Node assertion CI pending; no production verification",
+    "figure_status": "All three required diagram groups now represented as dynamically rendered SVG: Q4(i), Q4(ii), Q5; visual QA still pending.",
+    "quality_gates": "Independent source/mathematics checks; focused Node tests include rendered SVG sanity; GitHub mandatory CI pending.",
     "id_prefix": "c10-1-ex1-2-"
   }
 }
