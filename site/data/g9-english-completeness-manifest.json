@@ -101,7 +101,8 @@
       ],
       "expectedExercises": 7,
       "chapterVerifiedInThisWorkstream": 0,
-      "chapterComplete": false
+      "chapterComplete": false,
+      "lastSuccessfulContentCommit": null
     },
     {
       "chapter": "2",
@@ -209,7 +210,8 @@
       ],
       "expectedExercises": 9,
       "chapterVerifiedInThisWorkstream": 0,
-      "chapterComplete": false
+      "chapterComplete": false,
+      "lastSuccessfulContentCommit": null
     },
     {
       "chapter": "3",
@@ -389,7 +391,8 @@
       ],
       "expectedExercises": 15,
       "chapterVerifiedInThisWorkstream": 4,
-      "chapterComplete": false
+      "chapterComplete": false,
+      "lastSuccessfulContentCommit": "c4e6d49b2b1ab265b9806608783a8477958964a7"
     },
     {
       "chapter": "4",
@@ -489,7 +492,8 @@
       ],
       "expectedExercises": 7,
       "chapterVerifiedInThisWorkstream": 11,
-      "chapterComplete": false
+      "chapterComplete": false,
+      "lastSuccessfulContentCommit": "c4e6d49b2b1ab265b9806608783a8477958964a7"
     },
     {
       "chapter": "5",
@@ -573,7 +577,8 @@
       ],
       "expectedExercises": 6,
       "chapterVerifiedInThisWorkstream": 8,
-      "chapterComplete": false
+      "chapterComplete": false,
+      "lastSuccessfulContentCommit": "c4e6d49b2b1ab265b9806608783a8477958964a7"
     },
     {
       "chapter": "6",
@@ -637,7 +642,8 @@
       ],
       "expectedExercises": 5,
       "chapterVerifiedInThisWorkstream": 0,
-      "chapterComplete": false
+      "chapterComplete": false,
+      "lastSuccessfulContentCommit": null
     },
     {
       "chapter": "7",
@@ -690,7 +696,8 @@
       ],
       "expectedExercises": 4,
       "chapterVerifiedInThisWorkstream": 0,
-      "chapterComplete": false
+      "chapterComplete": false,
+      "lastSuccessfulContentCommit": null
     },
     {
       "chapter": "8",
@@ -743,7 +750,8 @@
       ],
       "expectedExercises": 4,
       "chapterVerifiedInThisWorkstream": 0,
-      "chapterComplete": false
+      "chapterComplete": false,
+      "lastSuccessfulContentCommit": null
     },
     {
       "chapter": "9",
@@ -785,7 +793,8 @@
       ],
       "expectedExercises": 3,
       "chapterVerifiedInThisWorkstream": 0,
-      "chapterComplete": false
+      "chapterComplete": false,
+      "lastSuccessfulContentCommit": null
     }
   ],
   "issues": [
@@ -805,5 +814,13 @@
       "note": "Question and subquestion counts require source verification; counts are null rather than guessed."
     }
   ],
-  "lastVerifiedCommit": null
+  "lastVerifiedCommit": "c4e6d49b2b1ab265b9806608783a8477958964a7",
+  "verificationProof": {
+    "sourceTextChecked": true,
+    "textbookAppendixChecked": true,
+    "independentSympyChecks": 16,
+    "runtimeModuleRegistrationChecked": true,
+    "githubActionsFullTest": "pending",
+    "pageImageReviewed": false
+  }
 }
