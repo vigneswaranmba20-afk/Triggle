@@ -15,7 +15,7 @@ assert.match(css,/#inlineFigure:not\(\[hidden\]\)\{[\s\S]*display:block!importan
 assert.match(css,/#questionNavDock\{[\s\S]*visibility:visible!important/);
 assert.doesNotMatch(css,/reader-peek:not\(\.reader-options-visible\)/);
 assert.match(html,/quiet-reader\.css\?v=static-reader-1/);
-assert.match(html,/quiet-reader\.js\?v=static-reader-1/);
+assert.match(html,/quiet-reader\.js\?v=compact-answer-1/);
 assert.doesNotMatch(html,/focus-navigation\.js|id="focusNavToggle"/);
 assert.doesNotMatch(html,/class="reference-line"|class="bottom-extras"/);
 assert.match(sw,/quiet-reader\.js/);assert.match(sw,/quiet-reader\.css/);
