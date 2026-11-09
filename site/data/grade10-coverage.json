@@ -8,19 +8,41 @@
   "chapters_total": 8,
   "latest_verified_batch": {
     "chapter": 1,
-    "chapter_title": "Relations and Functions",
-    "exercise": "1.1",
-    "original_numbered_questions": 7,
-    "unique_question_part_entries": 12,
-    "coverage_status": "complete",
-    "translation_status": "Tamil translations drafted, human review pending",
-    "quality_checks": "15/15 in creation; repeatable Node mathematics and schema test available",
-    "source_page_in_textbook": 6
+    "exercise": "1.2",
+    "original_numbered_questions": 5,
+    "unique_question_part_entries": 9,
+    "coverage_status": "staged_bilingual_preview_not_published",
+    "translation_status": "2025 Tamil compared, human editorial review pending",
+    "source_page_in_textbook": "9–10"
   },
   "counts_at_batch_commit": {
     "existing_items": 20,
     "new_items": 12,
     "total_items": 32
   },
-  "important_note": "Only Exercise 1.1 is marked complete. The remaining Grade 10 textbook exercises, worked examples, activities, thinking corners, and Tamil editorial checks remain pending."
+  "important_note": "Exercise 1.1 and 1.2 source entries are loaded in the branch but remain unpublished until CI, figures, and release verification are complete; Chapter 1 has further Exercises 1.3–1.6 and Unit Exercise.",
+  "exercise_1_2": {
+    "chapter": 1,
+    "exercise": "1.2",
+    "numbered_questions": 5,
+    "source_subpart_entries": 9,
+    "registered_student_entries": 9,
+    "printed_pages": [
+      9,
+      10
+    ],
+    "english_pdf_pages": [
+      15,
+      16
+    ],
+    "tamil_pdf_pages": [
+      16
+    ],
+    "source_english_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "source_tamil_id": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+    "language_status": "English exact page checked; Tamil 2025 page checked but human review pending",
+    "figure_status": "Q4 arrow/coordinate graphs and Q5 arrow diagram need diagram production",
+    "quality_gates": "math/content authored; Node assertion CI pending; no production verification",
+    "id_prefix": "c10-1-ex1-2-"
+  }
 }
