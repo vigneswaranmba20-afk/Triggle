@@ -1,0 +1,80 @@
+{
+  "status": "staged-content-only-not-published",
+  "grade": 9,
+  "chapter": 1,
+  "exercise": "1.5",
+  "edition": "Tamil Nadu SCERT revised 2025 English",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 28,
+    "pdfPage": "pending page-image confirmation",
+    "fidelity": "Original exercise 1.5 Q5, Q7, Q10 from 2025 English PDF text; typographic math symbols normalized; source page image review pending."
+  },
+  "numberedQuestions": 3,
+  "questionSubparts": 3,
+  "mathValidation": "independent finite-set enumeration verified in authoring and committed Node test",
+  "integrationStatus": "staged only; offline registration pending",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-5-q5",
+      "number": 5,
+      "question": "5. If A = {b, c, e, g, h}, B = {a, c, d, g, i} and C = {a, d, e, g, h}, then show that A − (B ∩ C) = (A − B) ∪ (A − C).",
+      "steps": [
+        "Write the given sets: A = {b, c, e, g, h}, B = {a, c, d, g, i}, C = {a, d, e, g, h}.",
+        "Find the elements common to B and C: B ∩ C = {a, d, g}.",
+        "Remove {a, d, g} from A. The left-hand side is A − (B ∩ C) = {b, c, e, h}.",
+        "Compute A − B = {b, e, h} and A − C = {b, c}.",
+        "Their union is (A − B) ∪ (A − C) = {b, c, e, h}, which matches the left-hand side. Hence the identity is verified."
+      ],
+      "answer": "A − (B ∩ C) = (A − B) ∪ (A − C) = {b, c, e, h}.",
+      "chapter": 1,
+      "exercise": "1.5",
+      "sourcePage": 28,
+      "sourceTextStatus": "text-layer transcribed; page-image verification pending",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-5-q7",
+      "number": 7,
+      "question": "7. If A = {–2, 0, 1, 3, 5}, B = {–1, 0, 2, 5, 6} and C = {–1, 2, 5, 6, 7}, then show that A − (B ∪ C) = (A − B) ∩ (A − C).",
+      "steps": [
+        "Start with A = {−2, 0, 1, 3, 5}, B = {−1, 0, 2, 5, 6} and C = {−1, 2, 5, 6, 7}.",
+        "Combine the elements of B and C: B ∪ C = {−1, 0, 2, 5, 6, 7}.",
+        "Remove these elements from A to obtain A − (B ∪ C) = {−2, 1, 3}.",
+        "Compute A − B = {−2, 1, 3} and A − C = {−2, 0, 1, 3}.",
+        "The common elements are (A − B) ∩ (A − C) = {−2, 1, 3}. Both sides are equal."
+      ],
+      "answer": "A − (B ∪ C) = (A − B) ∩ (A − C) = {−2, 1, 3}.",
+      "chapter": 1,
+      "exercise": "1.5",
+      "sourcePage": 28,
+      "sourceTextStatus": "text-layer transcribed; page-image verification pending",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-5-q10",
+      "number": 10,
+      "question": "10. If U = {4,7,8,10,11,12,15,16}, A = {7,8,11,12} and B = {4,8,12,15} then verify De Morgan’s Laws for complementation.",
+      "steps": [
+        "The universal set is U = {4, 7, 8, 10, 11, 12, 15, 16}. The sets are A = {7, 8, 11, 12} and B = {4, 8, 12, 15}.",
+        "Compute A′ = U − A = {4, 10, 15, 16} and B′ = U − B = {7, 10, 11, 16}.",
+        "For the first law, A ∪ B = {4, 7, 8, 11, 12, 15}, so (A ∪ B)′ = {10, 16}.",
+        "The other side is A′ ∩ B′ = {10, 16}. Therefore (A ∪ B)′ = A′ ∩ B′.",
+        "For the second law, A ∩ B = {8, 12}, so (A ∩ B)′ = {4, 7, 10, 11, 15, 16}.",
+        "The other side is A′ ∪ B′ = {4, 7, 10, 11, 15, 16}. Therefore (A ∩ B)′ = A′ ∪ B′. Both De Morgan’s laws are verified."
+      ],
+      "answer": "(A ∪ B)′ = A′ ∩ B′ = {10, 16}; (A ∩ B)′ = A′ ∪ B′ = {4, 7, 10, 11, 15, 16}.",
+      "chapter": 1,
+      "exercise": "1.5",
+      "sourcePage": 28,
+      "sourceTextStatus": "text-layer transcribed; page-image verification pending",
+      "studentRegistration": "not registered",
+      "tamilStatus": "not authored",
+      "kind": "textbook"
+    }
+  ]
+}
