@@ -1,130 +1,101 @@
 'use strict';
-const assert=require('node:assert/strict'),fs=require('node:fs/promises'),http=require('node:http'),path=require('node:path');
+// Browser acceptance: adaptive mobile reading, grade coverage, and figures.
+const assert=require('node:assert/strict');
+const fs=require('node:fs/promises'),http=require('node:http'),path=require('node:path');
 const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..');
 async function main(){
  const server=http.createServer(async(req,res)=>{
   try{
-   const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
-   const file=path.resolve(root,'.'+(pathname.endsWith('/')?pathname+'index.html':pathname));
+   const urlPath=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+   const file=path.resolve(root,'.'+(urlPath.endsWith('/')?urlPath+'index.html':urlPath));
    if(!file.startsWith(root+path.sep))throw Error('Outside site');
-   const body=await fs.readFile(file);
-   const ext=path.extname(file),mime={'.js':'application/javascript','.css':'text/css','.html':'text/html','.json':'application/json'};
-   res.writeHead(200,{'content-type':mime[ext]||'application/octet-stream','cache-control':'no-store'});
-   res.end(body);
+   const b=await fs.readFile(file);
+   res.writeHead(200,{'content-type':({'.js':'application/javascript','.css':'text/css','.html':'text/html','.json':'application/json','.png':'image/png'})[path.extname(file)]||'application/octet-stream','cache-control':'no-store'});res.end(b);
   }catch{res.writeHead(404);res.end();}
  });
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
- let browser;
- const base='http://127.0.0.1:'+server.address().port;
+ let browser; const base='http://127.0.0.1:'+server.address().port;
  try{
   browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),args:['--no-sandbox']});
-  for(const width of [320,390,768,1280]){
-   const ctx=await browser.newContext({viewport:{width,height:840},serviceWorkers:'block'});
+  for(const width of [320,360,390,768,1280]){
+   const ctx=await browser.newContext({viewport:{width,height:width===320?568:840},serviceWorkers:'block',reducedMotion:'reduce'});
    const page=await ctx.newPage(),errors=[];
    page.on('pageerror',e=>errors.push(e.message));
-   await page.goto(base+'/index.html?class=9&chapter=g9-ch2&section=examples');
-   await page.locator('.hub-question').nth(11).click();
+   const grade10='c10-1-1-2-q5';
+   await page.goto(base+'/index.html?class=10&question='+grade10);
    await page.locator('#questionHead').waitFor({state:'visible'});
-   assert.match(await page.locator('#questionHead').innerText(),/Example 2\.12/);
-   assert.equal(await page.locator('.appbar').isVisible(),true,'Global header always visible');
-   assert.equal(await page.locator('.status-row').isVisible(),true,'Class and chapter always visible');
-   assert.equal(await page.locator('#crumb .crumb-link').count(),3,'Class/chapter/exercise breadcrumb exists');
-   assert.equal(await page.locator('#questionReturn').isVisible(),false,'No Back to worked examples row');
-   assert.equal(await page.locator('#tabQuick').count(),0,'Remove Quick solution button only');
-   assert.equal(await page.locator('#solutionModeRow').isVisible(),true,'Detailed explanation available immediately');
-   assert.equal(await page.locator('#tabGuided').isVisible(),true);
-   assert.match(await page.locator('#tabGuided').innerText(),/Detailed explanation/);
-   assert.equal(await page.locator('#quickSteps').isVisible(),true,'Quick solution remains');
-   assert.equal(await page.locator('#stepsList .twd-worked-step').count(),4,'All four worked answer parts preserved');
-   assert.equal(await page.locator('#allChaptersButton').isVisible(),true,'Back to all chapters persists');
+   assert.match(await page.locator('#questionText').innerText(),/four categories of employees/i,'Original long question preserved');
+   assert.ok((await page.locator('#stepsList li').count())>=4,'Worked steps preserved');
+   assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Final result highlighted at end');
+   assert.equal(await page.locator('#allChaptersButton').isVisible(),false,'Remove duplicated chapter footer action');
    assert.equal(await page.locator('#previous').isVisible(),true);
    assert.equal(await page.locator('#next').isVisible(),true);
-   const positions=await page.evaluate(()=>{
-    const box=id=>{const r=document.getElementById(id).getBoundingClientRect();return {top:r.top,bottom:r.bottom};};
-    const cssOrder=x=>Number(getComputedStyle(document.getElementById(x)).order||0);
-    return {title:box('questionHead'),details:box('solutionModeRow'),question:box('questionText'),
-      order:[cssOrder('solutionModeRow'),cssOrder('questionText')]};
+   const metrics=await page.evaluate(()=>{
+    const q=document.querySelector('#questionText'),s=document.querySelector('#stepsRegion'),nav=document.querySelector('#questionNavDock'),r=document.querySelector('#lessonCard');
+    return {viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,
+      qHeight:q.clientHeight,qScroll:q.scrollHeight,
+      solutionOverflowY:getComputedStyle(s).overflowY,
+      solutionScrollHeight:s.scrollHeight,solutionClientHeight:s.clientHeight,
+      docScroll:document.documentElement.scrollHeight,bodyScroll:document.body.scrollHeight,
+      viewHeight:innerHeight,navPosition:getComputedStyle(nav).position,
+      navCols:getComputedStyle(nav).gridTemplateColumns.split(' ').length,
+      cardOverflow:getComputedStyle(r).overflowY};
    });
-   assert.ok(positions.title.bottom<=positions.details.top+2,'Details must be immediately below Example 2.12');
-   assert.ok(positions.details.bottom<=positions.question.top+3,'Details before example content');
+   assert.ok(metrics.scrollWidth<=metrics.viewport+1,'No page horizontal overflow: '+width);
+   assert.ok(metrics.qHeight+2>=metrics.qScroll,'Full question not clipped: '+width);
+   assert.equal(metrics.navCols,2,'Exactly two navigation columns: '+width);
    if(width<=800){
-    const before=await page.evaluate(()=>{
-      const box=selector=>document.querySelector(selector).getBoundingClientRect();
-      return {bar:box('.appbar').top,crumb:box('.status-row').top,
-        question:box('#questionText').top,nav:box('#questionNavDock').top};
-    });
-    const scrolled=await page.evaluate(()=>{
-      const steps=document.getElementById('stepsRegion');
-      steps.scrollTop=450;
-      return {scroll:steps.scrollTop,
-        max:steps.scrollHeight-steps.clientHeight,
-        page:document.querySelector('.lesson-container').scrollTop};
-    });
-    assert.ok(scrolled.max>90&&scrolled.scroll>40,
-      'Long Example 2.12 worked steps must scroll inside their own pane');
-    assert.equal(scrolled.page,0,'Whole question page must stay in place');
-    const after=await page.evaluate(()=>{
-      const box=selector=>document.querySelector(selector).getBoundingClientRect();
-      return {bar:box('.appbar').top,crumb:box('.status-row').top,
-        question:box('#questionText').top,nav:box('#questionNavDock').top};
-    });
-    for(const part of ['bar','crumb','question','nav']){
-      assert.ok(Math.abs(after[part]-before[part])<3,
-        part+' moved while only How it works scrolled');
+    assert.equal(metrics.solutionOverflowY,'visible','No independently scrolling worked steps: '+width);
+    assert.equal(metrics.navPosition,'fixed','Single persistent compact question navigation');
+    assert.ok(metrics.docScroll>metrics.viewHeight+100||metrics.bodyScroll>metrics.viewHeight+100,'Long question must scroll naturally');
+    await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='1000px';window.scrollTo(0,950);});
+    await page.waitForTimeout(60);
+    const jumped=await page.locator('#questionJump').isVisible();
+    const past=await page.evaluate(()=>document.querySelector('#questionText').getBoundingClientRect().bottom<
+      document.querySelector('.status-row').getBoundingClientRect().bottom+8);
+    assert.equal(jumped,past,'Question return appears iff the full question has passed above the context: '+width);
+    const previousY=await page.evaluate(()=>window.scrollY);
+    assert.ok(previousY>60,'The document owns vertical scrolling');
+    if(jumped){
+      await page.locator('#questionJump').click();
+      await page.waitForTimeout(60);
+      assert.ok((await page.evaluate(()=>document.querySelector('#questionText').getBoundingClientRect().top))<175,
+        'Question jump returns to its source');
     }
-    await page.evaluate(()=>document.getElementById('stepsRegion').scrollTop=0);
+    await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='';});
+    assert.equal(await page.locator('.appbar').isVisible(),true);
+    assert.equal(await page.locator('.status-row').isVisible(),true);
+    const nav=await page.locator('#questionNavDock').boundingBox();
+    assert.ok(nav.y+nav.height<=840+2||width===320&&nav.y+nav.height<=568+2);
+    if(width===390){
+      await fs.mkdir(path.resolve(root,'..','screenshots'),{recursive:true});
+      await page.evaluate(()=>window.scrollTo(0,0));
+      await page.screenshot({path:path.resolve(root,'..','screenshots','adaptive-reader-grade10-q5-390.png'),fullPage:true});
+    }
+   }else{
+    assert.notEqual(metrics.navPosition,'fixed','Desktop navigation remains in normal flow');
    }
-   await page.locator('#tabGuided').click();
-   assert.equal(await page.locator('#guidedDialog').evaluate(el=>el.open),true,'Detailed explanation dialog launches');
-   await page.locator('#closeGuided').click();
-   assert.equal(await page.locator('#quickSteps').isVisible(),true,'Return retains quick worked solution');
-   await page.locator('#langTa').click();
-   assert.match(await page.locator('#tabGuided').innerText(),/விரிவான விளக்கம்/,'Tamil detail button');
-   assert.equal(await page.locator('#questionReturn').isVisible(),false);
-   assert.equal(await page.locator('.status-row').isVisible(),true);
-   const metrics=await page.evaluate(()=>({vw:innerWidth,sw:document.documentElement.scrollWidth}));
-   assert.ok(metrics.sw<=metrics.vw+1,'No horizontal overflow at '+width);
-   for(const [grade,id] of [[10,'c10-6-6-1-1'],[11,'c11-3-3-1-1'],[12,'c12-4-4-1-1']]){
+   await page.locator('#next').click();
+   assert.ok(new URL(page.url()).searchParams.get('question')!==grade10,'Next navigates');
+   await page.locator('#previous').click();
+   assert.equal(new URL(page.url()).searchParams.get('question'),grade10,'Previous restores');
+   await page.locator('#crumb .crumb-link').nth(1).click();
+   assert.equal(await page.locator('#pathDialog').evaluate(el=>el.open),true,'Chapter picker remains accessible');
+   await page.locator('#pathClose').click();
+   for(const [grade,id] of [[9,'g9-ch9-ex9.1-q4'],[11,'c11-3-3-1-1'],[12,'c12-4-4-1-1']]){
     await page.goto(base+'/index.html?class='+grade+'&question='+id);
-    await page.locator('#questionHead').waitFor({state:'visible'});
-    assert.equal(await page.locator('#tabQuick').count(),0,'Quick button removed at Grade '+grade);
-    assert.equal(await page.locator('#quickSteps').isVisible(),true,'Quick solution content retained at Grade '+grade);
-    assert.equal(await page.locator('#questionReturn').isVisible(),false,'Redundant return hidden at Grade '+grade);
-    assert.equal(await page.locator('.status-row').isVisible(),true,'Sticky header available at Grade '+grade);
+    await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
+    assert.equal(await page.locator('#allChaptersButton').isVisible(),false,'Simplified navigation, Grade '+grade);
+    assert.equal(await page.locator('#stepsRegion').isVisible(),true);
    }
-   if(width<=800){
-    // Screenshot regression: Grade 9 Statistics Exercise 8.1 Q5.
-    await page.goto(base+'/index.html?class=9&question=g9-ch8-ex8.1-q5');
-    await page.locator('#questionText').waitFor({state:'visible'});
-    const m=await page.evaluate(()=>{
-      const q=document.getElementById('questionText'),a=document.querySelector('#stepsList .final-answer-step'),
-        s=document.getElementById('stepsRegion'),card=document.getElementById('lessonCard'),
-        nav=document.getElementById('questionNavDock');
-      const box=el=>el.getBoundingClientRect();
-      return {h:q.clientHeight,scrollHeight:q.scrollHeight,qBottom:box(q).bottom,
-        answerTop:box(a).top,answerBottom:box(a).bottom,stepsTop:box(s).top,
-        stepsHeight:s.clientHeight,cardBottom:box(card).bottom,navTop:box(nav).top,
-        fallback:document.body.classList.contains('reader-long-question')};
-    });
-    assert.ok(m.scrollHeight<=m.h+2,'Full Q5 must not be in a clipped question scroller');
-    assert.ok(m.qBottom<=m.stepsTop+2,'Question is above How it works');
-    assert.ok(m.answerTop>=m.stepsTop,'Final answer is inside How it works');
-    assert.ok(m.answerBottom>m.answerTop,'Green final answer is visible at the end of the solution');
-    assert.ok(m.fallback||m.stepsHeight>=60,'Steps region has usable height');
-    assert.ok(m.fallback||m.cardBottom<=m.navTop+3,'No overlap with navigation');
-    assert.equal(await page.locator('.reference-line,.bottom-extras').count(),0,'Old footer removed');
-    if(!m.fallback){
-      const before=await page.locator('#questionText').boundingBox();
-      await page.evaluate(()=>document.getElementById('stepsRegion').scrollTop=210);
-      const after=await page.locator('#questionText').boundingBox();
-      assert.ok(Math.abs(before.y-after.y)<2,'Question stays fixed as explanation scrolls');
-    }
-   }
-   assert.deepEqual(errors,[],'No browser errors at '+width);
+   await page.locator('#langTa').click();
+   assert.equal(await page.locator('html').getAttribute('lang'),'ta');
+   assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Tamil explanation retained');
+   assert.deepEqual(errors,[],'No browser exceptions at '+width);
    await ctx.close();
   }
-  console.log('PASS: fixed Class/Chapter headers, single Detailed explanation below title, quick solution preserved, Back row removed across 9–12.');
+  console.log('PASS adaptive reader across Grades 9–12: long question, full steps, one scroll, compact dock, question jump, Tamil, screenshots.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

@@ -523,7 +523,7 @@
  function render(){renderText();renderGrades();
    $('questionReturn').hidden=true;
    const showingQuestion=!homeView&&!classIndex&&!chapterOverview;
-   $('allChaptersReturn').hidden=!showingQuestion;
+   $('allChaptersReturn').hidden=true; // Chapters remain accessible through the existing breadcrumb/menu.
    $('questionNavDock').hidden=!showingQuestion;
    document.body.classList.toggle('textbook-reader',showingQuestion);
    const discovering=homeView||classIndex;
