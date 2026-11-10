@@ -1,0 +1,18 @@
+{
+  "source": "Tamil Nadu Standard Ten Mathematics English 2025 edition",
+  "numberedQuestions": 69,
+  "sourceQuestionCounts": {
+    "1.1": 7,
+    "1.2": 5,
+    "1.3": 10,
+    "1.4": 12,
+    "1.5": 10,
+    "1.6": 15,
+    "1.unit": 10
+  },
+  "existingBilingualExercise1_1Subparts": 12,
+  "newItems": 62,
+  "chapterItemsAfterMerge": 74,
+  "figures": 3,
+  "note": "Existing translated Exercise 1.1 retained; new content is English-medium only."
+}
