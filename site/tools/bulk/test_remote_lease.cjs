@@ -41,5 +41,31 @@ try{
  // Explicit fixture teardown, with a lease for the changed synthetic owner; never used by production code.
  git(a,['push','--force-with-lease='+old.ref+':'+foreign,'origin',':'+old.ref]);fs.unlinkSync(old.stateFile);
  assert.equal(git(a,['rev-parse','HEAD']),original);assert.equal(git(remote,['rev-parse','main']),original);assert.equal(git(a,['status','--porcelain']),'');
- console.log('PASS remote curriculum leases: persistent ownership, two-clone exclusion, inherited nesting, failure cleanup and guarded release; main unchanged.');
+ // Connector-compatible persistent CAS mode: the free state is a real remote
+ // ref pointing to an immutable sentinel, never an absent branch.
+ const config={schemaVersion:1,mode:'persistent-cas',freeCommitSha:original};
+ for(const folder of [a,b]){
+  const dir=path.join(folder,'docs/curriculum');fs.mkdirSync(dir,{recursive:true});
+  fs.writeFileSync(path.join(dir,'remote-lease-sentinel.json'),JSON.stringify(config)+'\n');
+ }
+ for(const scope of ['grade-9','grade-10','integration']){
+  const ref=leases.refFor(scope);git(a,['push','origin',original+':'+ref]);
+  assert.equal(leases.remoteHead(a,'origin',ref),original);
+ }
+ assert.equal(leases.persistentFreeCommit(a),original);
+ const held=leases.acquireRemoteLease('grade-9',{root:a});
+ assert.equal(leases.remoteHead(a,'origin',leases.refFor('grade-9')),held.sha);
+ assert.throws(()=>leases.acquireRemoteLease('grade-9',{root:b}),/already held/);
+ assert.ok(leases.releaseRemoteLease('grade-9',{root:a,expectedSha:held.sha}).released);
+ assert.equal(leases.remoteHead(a,'origin',leases.refFor('grade-9')),original);
+ const shared=leases.acquireRemoteLease('integration',{root:b});
+ assert.equal(leases.remoteHead(a,'origin',leases.refFor('integration')),shared.sha);
+ assert.ok(leases.releaseRemoteLease('integration',{root:b,expectedSha:shared.sha}).released);
+ assert.equal(leases.remoteHead(a,'origin',leases.refFor('integration')),original);
+ // A blind no-expected-sha claim is forbidden: free sentinel is an occupied
+ // remote ref, so the original absent-ref push precondition must fail.
+ assert.throws(()=>git(a,['push','--force-with-lease='+leases.refFor('grade-10')+':','origin',foreign+':'+leases.refFor('grade-10')]));
+ assert.equal(leases.remoteHead(a,'origin',leases.refFor('grade-10')),original);
+ assert.equal(git(remote,['rev-parse','main']),original);
+ console.log('PASS remote curriculum leases: persistent ownership, two-clone exclusion, inherited nesting, failure cleanup and guarded release; legacy and persistent CAS refs guarded; main unchanged.');
 }finally{fs.rmSync(tmp,{recursive:true,force:true});}

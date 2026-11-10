@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "mode": "persistent-cas",
+  "freeCommitSha": "df3e3aad48b27f4238b8d3bd6a7959367ac635b5",
+  "refs": [
+    "triggle-locks/grade-9",
+    "triggle-locks/grade-10",
+    "triggle-locks/grade-11",
+    "triggle-locks/grade-12",
+    "triggle-locks/integration"
+  ],
+  "note": "Immutable free marker. A head matching this SHA is unowned; all other heads block. Do not change during production."
+}

@@ -14,23 +14,31 @@ function context(scope,{root,remote='origin'}={}){
  return {root,remote,scope,ref,remoteId,key:remoteId+':'+scope,stateFile:path.join(common,'triggle-remote-leases',remoteId.slice(0,16)+'-'+scope+'.json')};
 }
 function remoteHead(root,remote,ref){const text=git(root,['ls-remote','--refs',remote,ref]);if(!text)return null;const lines=text.split('\n');if(lines.length!==1||!new RegExp('^[a-f0-9]{40,64}\\s+'+ref.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'$').test(lines[0]))throw Error('Ambiguous remote lease response');return lines[0].split(/\s+/)[0];}
+function persistentFreeCommit(root){
+ const file=path.join(root,'docs/curriculum/remote-lease-sentinel.json');
+ if(!fs.existsSync(file))return null; // Legacy clone compatibility, e.g. the original lease unit fixtures.
+ const state=JSON.parse(fs.readFileSync(file,'utf8'));
+ if(state.schemaVersion!==1||state.mode!=='persistent-cas'||!shaPattern.test(state.freeCommitSha||''))throw Error('Invalid persistent remote lease configuration');
+ return state.freeCommitSha;
+}
 function inheritedLeases(){let leases;try{leases=JSON.parse(process.env[ENV]||'{}');}catch{throw Error('Invalid inherited remote lease context');}if(!leases||Array.isArray(leases)||typeof leases!=='object')throw Error('Invalid inherited remote lease context');return leases;}
 function savedOwner(ctx){try{return JSON.parse(fs.readFileSync(ctx.stateFile,'utf8'));}catch{throw Error('Saved remote lease ownership is unavailable; inspect '+ctx.ref+' before manual recovery');}}
 function acquireRemoteLease(scope,options={}){
  const ctx=context(scope,options);
  if(fs.existsSync(ctx.stateFile))throw Error('Saved '+scope+' lease ownership already exists; inspect its owner before manual recovery');
- if(remoteHead(ctx.root,ctx.remote,ctx.ref)!==null)throw Error('Remote '+scope+' lease is already held at '+ctx.ref+'; inspect its owner before manual recovery');
+ const free=persistentFreeCommit(ctx.root),current=remoteHead(ctx.root,ctx.remote,ctx.ref);
+ if((free&&current!==free)||(!free&&current!==null))throw Error('Remote '+scope+' lease is already held or its persistent free ref is missing at '+ctx.ref+'; inspect its owner before manual recovery');
  const token=crypto.randomBytes(24).toString('hex'),head=git(ctx.root,['rev-parse','HEAD']),tree=git(ctx.root,['rev-parse','HEAD^{tree}']);
  const owner={pid:process.pid,hostname:os.hostname(),startedAt:new Date().toISOString(),head};
  const metadata={schemaVersion:1,purpose:'Triggle curriculum execution lease; not a content change',scope,token,owner};
  const identity={...process.env,GIT_AUTHOR_NAME:'Triggle curriculum lease',GIT_AUTHOR_EMAIL:'triggle-lease@localhost',GIT_COMMITTER_NAME:'Triggle curriculum lease',GIT_COMMITTER_EMAIL:'triggle-lease@localhost'};
  const sha=git(ctx.root,['commit-tree',tree,'-p',head],{input:JSON.stringify(metadata)+'\n',env:identity});
- try{git(ctx.root,['push','--porcelain','--force-with-lease='+ctx.ref+':',ctx.remote,sha+':'+ctx.ref]);}
+ try{git(ctx.root,['push','--porcelain','--force-with-lease='+ctx.ref+':'+(free||''),ctx.remote,sha+':'+ctx.ref]);}
  catch{throw Error('Remote '+scope+' lease claim rejected: another run claimed '+ctx.ref+' or push access is unavailable');}
  const ownership={schemaVersion:1,scope,ref:ctx.ref,sha,token,owner,remoteId:ctx.remoteId,stateFile:ctx.stateFile};
  try{fs.mkdirSync(path.dirname(ctx.stateFile),{recursive:true});fs.writeFileSync(ctx.stateFile,JSON.stringify(ownership,null,2)+'\n',{flag:'wx',mode:0o600});}
  catch(error){
-  try{git(ctx.root,['push','--porcelain','--force-with-lease='+ctx.ref+':'+sha,ctx.remote,':'+ctx.ref]);}catch{const failure=new Error('Remote '+scope+' lease claimed but local ownership could not be saved; '+ctx.ref+' requires owner inspection');failure.ownership=ownership;throw failure;}
+  try{git(ctx.root,['push','--porcelain','--force-with-lease='+ctx.ref+':'+sha,ctx.remote,(free||'')+':'+ctx.ref]);}catch{const failure=new Error('Remote '+scope+' lease claimed but local ownership could not be saved; '+ctx.ref+' requires owner inspection');failure.ownership=ownership;throw failure;}
   throw Error('Remote lease ownership could not be saved; the claimed ref was released');
  }
  return ownership;
@@ -40,7 +48,8 @@ function releaseRemoteLease(scope,{root,remote='origin',expectedSha,token}={}){
  const ownership=savedOwner(ctx);
  if(ownership.scope!==scope||ownership.ref!==ctx.ref||ownership.remoteId!==ctx.remoteId||ownership.sha!==expectedSha||(token!==undefined&&ownership.token!==token))throw Error('Lease release does not match saved ownership; no ref was removed');
  if(remoteHead(root,remote,ctx.ref)!==expectedSha)throw Error('Remote '+scope+' lease owner changed or disappeared; no ref was removed');
- try{git(root,['push','--porcelain','--force-with-lease='+ctx.ref+':'+expectedSha,remote,':'+ctx.ref]);}
+ const free=persistentFreeCommit(root);
+ try{git(root,['push','--porcelain','--force-with-lease='+ctx.ref+':'+expectedSha,remote,(free||'')+':'+ctx.ref]);}
  catch{const failure=new Error('Remote '+scope+' lease release rejected; '+ctx.ref+' was not removed. Inspect the recorded owner before manual recovery');failure.ref=ctx.ref;failure.ownedSha=expectedSha;throw failure;}
  // Remove only the exact saved owner. A changed local state must also be inspected manually.
  const latest=savedOwner(ctx);if(latest.sha!==expectedSha||latest.token!==ownership.token)throw Error('Remote lease released, but local ownership changed; saved state was retained');
@@ -60,4 +69,4 @@ function withRemoteLease(scope,fn,options={}){
  catch(cleanup){if(error)cleanup.cause=error;throw cleanup;}
  if(error)throw error;return value;
 }
-module.exports={acquireRemoteLease,releaseRemoteLease,withRemoteLease,refFor,remoteHead,ENV};
+module.exports={acquireRemoteLease,releaseRemoteLease,withRemoteLease,refFor,remoteHead,persistentFreeCommit,ENV};
