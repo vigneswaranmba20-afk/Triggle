@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "baselineCommit": "85bd47be82451f356e0e5a64d9fb95bdbe50cd5d",
+  "sourceDiscovery": {
+    "date": "2026-11-10",
+    "bookIds": [
+      "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+    ],
+    "status": "Owner Drive metadata located; inspect actual imprint and pages before production."
+  },
+  "inheritedEvidence": {
+    "numberedQuestions": 14,
+    "appRecords": 38,
+    "mathematicalTasks": 42,
+    "basis": "Inherited Grade 9 committed page-image fidelity evidence and passing existing tests; not freshly reread by this audit."
+  },
+  "textbookGradeDenominator": null,
+  "tamilCoverage": {
+    "status": "pending",
+    "fullyReviewedChapters": 0,
+    "note": "Tamil string presence or source book availability does not certify textbook wording or whole-lesson review."
+  },
+  "blockers": [
+    "Full grade question/subpart denominator is not yet source reconciled.",
+    "Historical drafts need reconciliation; do not blindly merge divergent grade branches."
+  ],
+  "tests": {
+    "baselineNpmTest": "passed",
+    "baselineBrowser": "passed",
+    "implementation": "passed",
+    "implementationNpmTest": "passed",
+    "pilotBrowser": "passed; new Grade 10 Exercise 2.1 all records, 320/390/1280px, offline reload",
+    "broaderBrowser": "passed; complete npm run test:browser, including immutable 105 legacy routes and new pilot",
+    "remoteLeases": "passed; two isolated clones and actual production grade/integration acquisition"
+  },
+  "release": {
+    "commit": "c1aafea64c1b3fe70d00f1b7efba493beaa33f6f",
+    "pr": 119,
+    "deployment": {
+      "status": "pending required GitHub CI, merge and Pages verification",
+      "candidateBranch": "engine/universal-curriculum-bulk-20261110"
+    },
+    "branch": "engine/universal-curriculum-bulk-20261110",
+    "prUrl": "https://github.com/vigneswaranmba20-afk/Triggle/pull/119"
+  },
+  "nextActionableBatch": "Reconcile Chapter 1 Exercise 1.2 and overlapping open drafts against page images; reuse verified existing records.",
+  "inventory": {
+    "grade": 9,
+    "chapters": [
+      {
+        "chapter": "1",
+        "chapterId": "g9-ch1",
+        "title": {
+          "en": "Set Language",
+          "ta": "கண மொழி"
+        },
+        "appRecords": 30,
+        "exerciseAppRecords": 30,
+        "totalAppRecords": 66,
+        "registeredItems": 66,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "2",
+        "chapterId": "g9-ch2",
+        "title": {
+          "en": "Real Numbers",
+          "ta": "மெய்யெண்கள்"
+        },
+        "appRecords": 120,
+        "exerciseAppRecords": 120,
+        "totalAppRecords": 152,
+        "registeredItems": 152,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "3",
+        "chapterId": "g9-ch3",
+        "title": {
+          "en": "Algebra",
+          "ta": "இயற்கணிதம்"
+        },
+        "appRecords": 4,
+        "exerciseAppRecords": 4,
+        "totalAppRecords": 6,
+        "registeredItems": 6,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "4",
+        "chapterId": "g9-ch4",
+        "title": {
+          "en": "Geometry",
+          "ta": "வடிவியல்"
+        },
+        "appRecords": 11,
+        "exerciseAppRecords": 11,
+        "totalAppRecords": 12,
+        "registeredItems": 12,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "5",
+        "chapterId": "g9-ch5",
+        "title": {
+          "en": "Coordinate Geometry",
+          "ta": "ஆயத்தொலை வடிவியல்"
+        },
+        "appRecords": 8,
+        "exerciseAppRecords": 8,
+        "totalAppRecords": 9,
+        "registeredItems": 9,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "6",
+        "chapterId": "g9-ch6",
+        "title": {
+          "en": "Trigonometry",
+          "ta": "முக்கோணவியல்"
+        },
+        "appRecords": 40,
+        "exerciseAppRecords": 40,
+        "totalAppRecords": 44,
+        "registeredItems": 44,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "7",
+        "chapterId": "g9-ch7",
+        "title": {
+          "en": "Mensuration",
+          "ta": "அளவியல்"
+        },
+        "appRecords": 36,
+        "exerciseAppRecords": 36,
+        "totalAppRecords": 37,
+        "registeredItems": 37,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "8",
+        "chapterId": "g9-ch8",
+        "title": {
+          "en": "Statistics",
+          "ta": "புள்ளியியல்"
+        },
+        "appRecords": 30,
+        "exerciseAppRecords": 30,
+        "totalAppRecords": 31,
+        "registeredItems": 31,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "9",
+        "chapterId": "g9-ch9",
+        "title": {
+          "en": "Probability",
+          "ta": "நிகழ்தகவு"
+        },
+        "appRecords": 25,
+        "exerciseAppRecords": 25,
+        "totalAppRecords": 31,
+        "registeredItems": 31,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      }
+    ],
+    "appRecords": 388,
+    "totalAppRecords": 388,
+    "exerciseAppRecords": 304,
+    "newEngineVerifiedRecords": 0
+  },
+  "schedule": {
+    "status": "confirmed-prompt-only-update",
+    "evidence": "docs/curriculum/schedules/migration-evidence.json",
+    "timezone": "Asia/Kolkata",
+    "minute": 0
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g10-ch2-ex2-1",
+  "grade": 10,
+  "chapter": "2",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "issues": [],
+  "metrics": {
+    "numberedQuestions": 10,
+    "labelledSubparts": 4,
+    "sourceTasks": 13,
+    "appRecords": 10,
+    "newAppRecords": 10,
+    "verifiedNumberedQuestions": 10,
+    "mathematicallyVerifiedRecords": 10,
+    "solvedSubparts": 13,
+    "englishSourceVerifiedRecords": 10,
+    "tamilSourceVerifiedRecords": 0
+  },
+  "coverage": {
+    "inventoryCompleteChapter": false,
+    "exercises": [
+      {
+        "exercise": "2.1",
+        "inventoryVerified": true,
+        "numberedQuestions": 10,
+        "complete": true
+      }
+    ],
+    "missing": [],
+    "blocked": [],
+    "chapterComplete": false
+  },
+  "mathematics": {
+    "script": "site/tools/bulk/verify_g10_ch2_ex2_1.cjs",
+    "verifierSha256": "477015e5bc35ab1e356247466ef41d211f4728f24eef18b4bb5e4a0a0d8adfbc",
+    "checks": [
+      {
+        "recordId": "c10-2-ex2-1-q1",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Euclidean representation and converse; integer quotient domain checked",
+        "recordSha256": "6cec7520d9a9a2fe4d35efa95ffc12a58e9b4aed623c9340d6bb4e98eb561a6a"
+      },
+      {
+        "recordId": "c10-2-ex2-1-q2",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent integer division, multiplication, and valid remainder bound",
+        "recordSha256": "25448d7619fba6767e54f0f0b77c49edb45f94fb46c30b5bf96803478795b0b2"
+      },
+      {
+        "recordId": "c10-2-ex2-1-q3",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Exact polynomial coefficients for both exhaustive parity cases; integer factors",
+        "recordSha256": "da5fa339d491d66e9d46f9aafafafedcd2fcbea22d8f149e571b355e2b396ba6"
+      },
+      {
+        "recordId": "c10-2-ex2-1-q4",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Exact coefficients of independent integer quotients and remainder sum modulo 13",
+        "recordSha256": "b1397a2b1e6b7d642d5744fb1c352f4c6f3fa7a4dc5368e0c6bc0b24f4fb3c38"
+      },
+      {
+        "recordId": "c10-2-ex2-1-q5",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Exact polynomial identities for complete parity classes, including negative integers",
+        "recordSha256": "7ed224d00b716a55d79a7ba491b017435cd3fab51c1f2aa7875f748743fb5ec0"
+      },
+      {
+        "recordId": "c10-2-ex2-1-q6",
+        "parts": [
+          "i",
+          "ii",
+          "iii",
+          "iv"
+        ],
+        "passed": true,
+        "method": "Every rendered Euclidean equality and remainder checked; HCFs recalculated by trial divisors",
+        "recordSha256": "f90897c490705da5013d8c09e1caeaaf0ecf08b26621346433b58f9f7ecf13d1"
+      },
+      {
+        "recordId": "c10-2-ex2-1-q7",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "HCF of adjusted dividends, Euclid chain, maximality argument and original remainder substitutions",
+        "recordSha256": "99d9c20303a96d04f2a570ef8d30c70df87be846fa3b47ce066f2b5d82b525b7"
+      },
+      {
+        "recordId": "c10-2-ex2-1-q8",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "HCF by trial divisors; rendered Euclid chain and Bezout substitution verified",
+        "recordSha256": "e0b9fb6d1e056deb7cbf4f2f8d9548c849d303f3bc54851795f80615ff07772f"
+      },
+      {
+        "recordId": "c10-2-ex2-1-q9",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Algebraic decomposition with arbitrary quotient; divisor multiple and remainder bounds",
+        "recordSha256": "9eac04830caa515354c05eed0ffddf6e9af737903307d093cec49f814736a2bd"
+      },
+      {
+        "recordId": "c10-2-ex2-1-q10",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Exact polynomial difference plus common-divisor argument, covering n=1",
+        "recordSha256": "b911539c3efcc16a59f5fb01ce9abbf759f06c97ae9e5b6c6715fda59a35b7eb"
+      }
+    ]
+  },
+  "releaseFacts": {
+    "newRecordsInThisExecution": 10,
+    "baselineCommit": "85bd47be82451f356e0e5a64d9fb95bdbe50cd5d",
+    "sourcePagesInspected": {
+      "enPrinted": [
+        42,
+        43
+      ],
+      "enPdf": [
+        48,
+        49
+      ],
+      "taPrinted": [
+        43
+      ],
+      "taPdf": [
+        49
+      ],
+      "enAnswerKeyPrinted": [
+        336
+      ],
+      "enAnswerKeyPdf": [
+        342
+      ]
+    },
+    "browserAcceptance": "passed; 320,390,1280px; all questions/navigation, Tamil pending, no 404/overflow, offline reload",
+    "grade10Chapter1": "All five original reference-file SHA256 digests preserved; existing 74 records, 69 questions, seven groups, three figures unchanged."
+  }
+}

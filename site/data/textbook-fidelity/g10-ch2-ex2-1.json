@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": "2",
+  "exercise": "2.1",
+  "edition": "2025 revised",
+  "batchId": "g10-ch2-ex2-1",
+  "authoritativeEvidence": "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json",
+  "literalTextLocation": "mapping[].sourceText.en; matched exactly to records[].q.en by curriculum_bulk.cjs",
+  "note": "This index points to the single authoring/source evidence manifest. Exact questions are stored there once and its source snapshots are generated from those records; student modules are generated from that manifest.",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "printedPages": [42, 43],
+      "pdfPages": [48, 49],
+      "visualStatus": "page-checked",
+      "wording": "Exact English question wording; layout whitespace normalized, mathematical notation preserved."
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "printedPages": [43],
+      "pdfPages": [49],
+      "visualStatus": "page-checked-counterpart-only",
+      "wording": "pending",
+      "lessonEditorialReview": "pending"
+    }
+  },
+  "numberedQuestions": 10,
+  "labelledSubparts": 4,
+  "mathematicalTasks": 13,
+  "appRecords": 10,
+  "requiredFigures": [],
+  "tables": [],
+  "graphs": [],
+  "multipleChoiceQuestions": [],
+  "answerKey": {
+    "sourceLanguage": "en",
+    "printedPages": [336],
+    "pdfPages": [342],
+    "visualStatus": "page-checked",
+    "questionNumbers": [1, 2, 6, 7, 8, 9],
+    "proofQuestionsWithoutKey": [3, 4, 5, 10],
+    "discrepancies": []
+  },
+  "chapterComplete": false,
+  "tamilCoverage": "pending",
+  "reviewedAt": "2026-11-10"
+}

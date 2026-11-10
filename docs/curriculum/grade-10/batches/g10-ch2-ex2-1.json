@@ -1,0 +1,1019 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g10-ch2-ex2-1",
+  "grade": 10,
+  "chapter": "2",
+  "chapterTitle": "Numbers and Sequences",
+  "module": "data/textbook-exercises/g10-ch2-ex2-1-en.js",
+  "languageCoverage": {
+    "en": "source-image-verified",
+    "ta": "pending; matching source inspected, no Tamil question or solution transcribed"
+  },
+  "sources": [
+    {
+      "id": "tn-g10-en-2025-owner",
+      "grade": 10,
+      "language": "en",
+      "title": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "First edition 2019; revised edition 2025",
+      "url": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    },
+    {
+      "id": "tn-g10-ta-2025-owner",
+      "grade": 10,
+      "language": "ta",
+      "title": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "First edition 2019; revised edition 2025",
+      "url": "https://drive.google.com/file/d/1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC/view",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true,
+      "scope": "Source counterpart inspected only; Tamil publication and terminology review pending."
+    }
+  ],
+  "inventory": {
+    "completeChapter": false,
+    "exercises": [
+      {
+        "id": "2.1",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g10-en-2025-owner",
+            "printedPages": [
+              42
+            ],
+            "pdfPages": [
+              48
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "2, 5, 8, 11, …",
+              "sourceId": "tn-g10-en-2025-owner",
+              "printedPages": [
+                336
+              ],
+              "pdfPages": [
+                342
+              ],
+              "visualChecked": true
+            }
+          },
+          {
+            "number": "2",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g10-en-2025-owner",
+            "printedPages": [
+              42
+            ],
+            "pdfPages": [
+              48
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "25, 7",
+              "sourceId": "tn-g10-en-2025-owner",
+              "printedPages": [
+                336
+              ],
+              "pdfPages": [
+                342
+              ],
+              "visualChecked": true
+            }
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g10-en-2025-owner",
+            "printedPages": [
+              43
+            ],
+            "pdfPages": [
+              49
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "4",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g10-en-2025-owner",
+            "printedPages": [
+              43
+            ],
+            "pdfPages": [
+              49
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "5",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g10-en-2025-owner",
+            "printedPages": [
+              43
+            ],
+            "pdfPages": [
+              49
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "6",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "sourceId": "tn-g10-en-2025-owner",
+            "printedPages": [
+              43
+            ],
+            "pdfPages": [
+              49
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "(i) 4 (ii) 51 (iii) 144 (iv) 6",
+              "sourceId": "tn-g10-en-2025-owner",
+              "printedPages": [
+                336
+              ],
+              "pdfPages": [
+                342
+              ],
+              "visualChecked": true
+            }
+          },
+          {
+            "number": "7",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g10-en-2025-owner",
+            "printedPages": [
+              43
+            ],
+            "pdfPages": [
+              49
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "174",
+              "sourceId": "tn-g10-en-2025-owner",
+              "printedPages": [
+                336
+              ],
+              "pdfPages": [
+                342
+              ],
+              "visualChecked": true
+            }
+          },
+          {
+            "number": "8",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g10-en-2025-owner",
+            "printedPages": [
+              43
+            ],
+            "pdfPages": [
+              49
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "2, −1",
+              "sourceId": "tn-g10-en-2025-owner",
+              "printedPages": [
+                336
+              ],
+              "pdfPages": [
+                342
+              ],
+              "visualChecked": true
+            }
+          },
+          {
+            "number": "9",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g10-en-2025-owner",
+            "printedPages": [
+              43
+            ],
+            "pdfPages": [
+              49
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "6",
+              "sourceId": "tn-g10-en-2025-owner",
+              "printedPages": [
+                336
+              ],
+              "pdfPages": [
+                342
+              ],
+              "visualChecked": true
+            }
+          },
+          {
+            "number": "10",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g10-en-2025-owner",
+            "printedPages": [
+              43
+            ],
+            "pdfPages": [
+              49
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          }
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "c10-2-ex2-1-q1",
+      "classNum": 10,
+      "chapter": "2",
+      "exercise": "2.1",
+      "topic": {
+        "en": "Numbers and Sequences"
+      },
+      "label": {
+        "en": "Exercise 2.1 · Q1",
+        "ta": "Exercise 2.1 · Q1 (English only; Tamil pending)"
+      },
+      "title": {
+        "en": "Integers with remainder 2"
+      },
+      "q": {
+        "en": "Find all positive integers, when divided by 3 leaves remainder 2."
+      },
+      "steps": [
+        {
+          "en": "Use the division algorithm. A remainder of 2 on division by 3 means the integer is 3 times its quotient plus 2.",
+          "eq": "n = 3k + 2"
+        },
+        {
+          "en": "Because n is positive, the integer quotient k starts at 0. Use k = 0, 1, 2, 3 and continue.",
+          "eq": "k = 0, 1, 2, 3, … ⇒ n = 2, 5, 8, 11, …"
+        },
+        {
+          "en": "Conversely, every number of this form is positive and leaves remainder 2, which is smaller than the divisor 3.",
+          "eq": "n = 3k + 2, where k is an integer and k ≥ 0"
+        }
+      ],
+      "answer": "2, 5, 8, 11, …; all numbers n = 3k + 2, where k = 0, 1, 2, ….",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q1; printed p. 42, PDF p. 48.",
+      "edition": "2025",
+      "translationReview": "pending"
+    },
+    {
+      "id": "c10-2-ex2-1-q2",
+      "classNum": 10,
+      "chapter": "2",
+      "exercise": "2.1",
+      "topic": {
+        "en": "Numbers and Sequences"
+      },
+      "label": {
+        "en": "Exercise 2.1 · Q2",
+        "ta": "Exercise 2.1 · Q2 (English only; Tamil pending)"
+      },
+      "title": {
+        "en": "Rows of flower pots"
+      },
+      "q": {
+        "en": "A man has 532 flower pots. He wants to arrange them in rows such that each row contains 21 flower pots. Find the number of completed rows and how many flower pots are left over."
+      },
+      "steps": [
+        {
+          "en": "Divide the total number of flower pots by the number required in each row.",
+          "eq": "532 = 21 × 25 + 7"
+        },
+        {
+          "en": "The quotient counts complete rows, so 25 rows each contain 21 pots.",
+          "eq": "21 × 25 = 525"
+        },
+        {
+          "en": "Subtract the pots already arranged. Seven cannot fill another row of 21.",
+          "eq": "532 − 525 = 7; 0 ≤ 7 < 21"
+        }
+      ],
+      "answer": "25 completed rows; 7 flower pots are left over.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q2; printed p. 42, PDF p. 48.",
+      "edition": "2025",
+      "translationReview": "pending"
+    },
+    {
+      "id": "c10-2-ex2-1-q3",
+      "classNum": 10,
+      "chapter": "2",
+      "exercise": "2.1",
+      "topic": {
+        "en": "Numbers and Sequences"
+      },
+      "label": {
+        "en": "Exercise 2.1 · Q3",
+        "ta": "Exercise 2.1 · Q3 (English only; Tamil pending)"
+      },
+      "title": {
+        "en": "Product of consecutive integers"
+      },
+      "q": {
+        "en": "Prove that the product of two consecutive positive integers is divisible by 2."
+      },
+      "steps": [
+        {
+          "en": "Let the consecutive positive integers be n and n+1. Every integer is either even or odd.",
+          "eq": "n = 2k or n = 2k + 1"
+        },
+        {
+          "en": "If n is even, it already contributes a factor of 2 to the product.",
+          "eq": "n(n+1) = (2k)(2k+1) = 2[k(2k+1)]"
+        },
+        {
+          "en": "If n is odd, the next integer is even and contributes a factor of 2.",
+          "eq": "n(n+1) = (2k+1)(2k+2) = 2[(2k+1)(k+1)]"
+        },
+        {
+          "en": "In both cases the bracket is an integer. Thus the product is divisible by 2.",
+          "eq": "2 divides n(n+1)"
+        }
+      ],
+      "answer": "The product of any two consecutive positive integers is divisible by 2.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q3; printed p. 43, PDF p. 49.",
+      "edition": "2025",
+      "translationReview": "pending"
+    },
+    {
+      "id": "c10-2-ex2-1-q4",
+      "classNum": 10,
+      "chapter": "2",
+      "exercise": "2.1",
+      "topic": {
+        "en": "Numbers and Sequences"
+      },
+      "label": {
+        "en": "Exercise 2.1 · Q4",
+        "ta": "Exercise 2.1 · Q4 (English only; Tamil pending)"
+      },
+      "title": {
+        "en": "Sum of three remainders"
+      },
+      "q": {
+        "en": "When the positive integers a, b and c are divided by 13, the respective remainders are 9,7 and 10. Show that a+b+c is divisible by 13."
+      },
+      "steps": [
+        {
+          "en": "Write each positive integer using its quotient and the stated remainder. The quotients p, q and r are nonnegative integers.",
+          "eq": "a = 13p + 9; b = 13q + 7; c = 13r + 10"
+        },
+        {
+          "en": "Add the three expressions and combine their remainders.",
+          "eq": "a+b+c = 13(p+q+r) + (9+7+10)"
+        },
+        {
+          "en": "The remainders sum to 26, which is itself a multiple of 13.",
+          "eq": "a+b+c = 13(p+q+r) + 26 = 13(p+q+r+2)"
+        },
+        {
+          "en": "Since p+q+r+2 is an integer, the sum is divisible by 13.",
+          "eq": "13 divides a+b+c"
+        }
+      ],
+      "answer": "a+b+c = 13(p+q+r+2), so a+b+c is divisible by 13.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q4; printed p. 43, PDF p. 49.",
+      "edition": "2025",
+      "translationReview": "pending"
+    },
+    {
+      "id": "c10-2-ex2-1-q5",
+      "classNum": 10,
+      "chapter": "2",
+      "exercise": "2.1",
+      "topic": {
+        "en": "Numbers and Sequences"
+      },
+      "label": {
+        "en": "Exercise 2.1 · Q5",
+        "ta": "Exercise 2.1 · Q5 (English only; Tamil pending)"
+      },
+      "title": {
+        "en": "Remainder of an integer square"
+      },
+      "q": {
+        "en": "Prove that square of any integer leaves the remainder either 0 or 1 when divided by 4."
+      },
+      "steps": [
+        {
+          "en": "Every integer n, including a negative integer or zero, is even or odd. Write it in one of these two forms with integer k.",
+          "eq": "n = 2k or n = 2k + 1"
+        },
+        {
+          "en": "If n is even, square its expression. It is exactly a multiple of 4.",
+          "eq": "n² = (2k)² = 4k²"
+        },
+        {
+          "en": "If n is odd, expand its square and separate a multiple of 4.",
+          "eq": "n² = (2k+1)² = 4k²+4k+1 = 4(k²+k)+1"
+        },
+        {
+          "en": "Both cases cover every integer. The possible remainders 0 and 1 are each between 0 and 3.",
+          "eq": "n² has remainder 0 or 1 when divided by 4"
+        }
+      ],
+      "answer": "The remainder is 0 for an even integer and 1 for an odd integer.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q5; printed p. 43, PDF p. 49.",
+      "edition": "2025",
+      "translationReview": "pending"
+    },
+    {
+      "id": "c10-2-ex2-1-q6",
+      "classNum": 10,
+      "chapter": "2",
+      "exercise": "2.1",
+      "topic": {
+        "en": "Numbers and Sequences"
+      },
+      "label": {
+        "en": "Exercise 2.1 · Q6",
+        "ta": "Exercise 2.1 · Q6 (English only; Tamil pending)"
+      },
+      "title": {
+        "en": "HCF by Euclid’s Division Algorithm"
+      },
+      "q": {
+        "en": "Use Euclid’s Division Algorithm to find the Highest Common Factor (HCF) of (i) 340 and 412 (ii) 867 and 255 (iii)10224 and 9648 (iv) 84, 90 and 120"
+      },
+      "steps": [
+        {
+          "en": "In each pair, repeatedly divide the larger number by the smaller. Replace the pair by the divisor and remainder until the remainder is zero. The last nonzero remainder is the HCF.",
+          "eq": "HCF(a,b) = HCF(b,r), where a = bq+r and 0 ≤ r < b"
+        },
+        {
+          "en": "For (i), start with 412 and 340 and continue the divisions.",
+          "eq": "412 = 340 × 1 + 72; 340 = 72 × 4 + 52; 72 = 52 × 1 + 20"
+        },
+        {
+          "en": "Finish (i). The last nonzero remainder is 4.",
+          "eq": "52 = 20 × 2 + 12; 20 = 12 × 1 + 8; 12 = 8 × 1 + 4; 8 = 4 × 2 + 0"
+        },
+        {
+          "en": "For (ii), the last nonzero remainder is 51.",
+          "eq": "867 = 255 × 3 + 102; 255 = 102 × 2 + 51; 102 = 51 × 2 + 0"
+        },
+        {
+          "en": "For (iii), first divide 10224 by 9648, then repeat with the remainders.",
+          "eq": "10224 = 9648 × 1 + 576; 9648 = 576 × 16 + 432"
+        },
+        {
+          "en": "Finish (iii). The last nonzero remainder is 144.",
+          "eq": "576 = 432 × 1 + 144; 432 = 144 × 3 + 0"
+        },
+        {
+          "en": "For (iv), first find the HCF of 84 and 90.",
+          "eq": "90 = 84 × 1 + 6; 84 = 6 × 14 + 0"
+        },
+        {
+          "en": "Now find the HCF of this result and 120. Thus the HCF of all three numbers is 6.",
+          "eq": "120 = 6 × 20 + 0; HCF(84,90,120) = 6"
+        }
+      ],
+      "answer": "(i) 4; (ii) 51; (iii) 144; (iv) 6.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q6; printed p. 43, PDF p. 49.",
+      "edition": "2025",
+      "translationReview": "pending"
+    },
+    {
+      "id": "c10-2-ex2-1-q7",
+      "classNum": 10,
+      "chapter": "2",
+      "exercise": "2.1",
+      "topic": {
+        "en": "Numbers and Sequences"
+      },
+      "label": {
+        "en": "Exercise 2.1 · Q7",
+        "ta": "Exercise 2.1 · Q7 (English only; Tamil pending)"
+      },
+      "title": {
+        "en": "Largest divisor with a fixed remainder"
+      },
+      "q": {
+        "en": "Find the largest number which divides 1230 and 1926 leaving remainder 12 in each case."
+      },
+      "steps": [
+        {
+          "en": "If a number divides each original number leaving remainder 12, it divides each number after subtracting 12.",
+          "eq": "1230−12 = 1218; 1926−12 = 1914"
+        },
+        {
+          "en": "Find the HCF of these two differences by Euclid’s Division Algorithm.",
+          "eq": "1914 = 1218 × 1 + 696; 1218 = 696 × 1 + 522"
+        },
+        {
+          "en": "Continue until the remainder is zero. The HCF is 174.",
+          "eq": "696 = 522 × 1 + 174; 522 = 174 × 3 + 0"
+        },
+        {
+          "en": "Every valid divisor is a common divisor of the differences, so none exceeds their HCF. Check that 174 itself leaves remainder 12 in both original numbers.",
+          "eq": "1230 = 174 × 7 + 12; 1926 = 174 × 11 + 12; 12 < 174"
+        }
+      ],
+      "answer": "174.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q7; printed p. 43, PDF p. 49.",
+      "edition": "2025",
+      "translationReview": "pending"
+    },
+    {
+      "id": "c10-2-ex2-1-q8",
+      "classNum": 10,
+      "chapter": "2",
+      "exercise": "2.1",
+      "topic": {
+        "en": "Numbers and Sequences"
+      },
+      "label": {
+        "en": "Exercise 2.1 · Q8",
+        "ta": "Exercise 2.1 · Q8 (English only; Tamil pending)"
+      },
+      "title": {
+        "en": "Express the HCF as a linear combination"
+      },
+      "q": {
+        "en": "If d is the Highest Common Factor of 32 and 60, find x and y satisfying d = 32x + 60y."
+      },
+      "steps": [
+        {
+          "en": "Find d using Euclid’s Division Algorithm. The last nonzero remainder is 4.",
+          "eq": "60 = 32 × 1 + 28; 32 = 28 × 1 + 4; 28 = 4 × 7 + 0"
+        },
+        {
+          "en": "Work backwards to express the remainder 4 in terms of 32 and 28.",
+          "eq": "d = 4 = 32 − 28"
+        },
+        {
+          "en": "Replace 28 by 60−32 and collect multiples of the original numbers.",
+          "eq": "4 = 32 − (60−32) = 2 × 32 − 60"
+        },
+        {
+          "en": "Compare with d=32x+60y. This supplies one integer pair; substitute it to check.",
+          "eq": "x = 2, y = −1; 32 × 2 + 60 × (−1) = 64−60 = 4"
+        }
+      ],
+      "answer": "d = 4; one solution is x = 2, y = −1.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q8; printed p. 43, PDF p. 49.",
+      "edition": "2025",
+      "translationReview": "pending"
+    },
+    {
+      "id": "c10-2-ex2-1-q9",
+      "classNum": 10,
+      "chapter": "2",
+      "exercise": "2.1",
+      "topic": {
+        "en": "Numbers and Sequences"
+      },
+      "label": {
+        "en": "Exercise 2.1 · Q9",
+        "ta": "Exercise 2.1 · Q9 (English only; Tamil pending)"
+      },
+      "title": {
+        "en": "Find a smaller-division remainder"
+      },
+      "q": {
+        "en": "A positive integer when divided by 88 gives the remainder 61. What will be the remainder when the same number is divided by 11?"
+      },
+      "steps": [
+        {
+          "en": "Use the division algorithm for the original number n. Its quotient k is a nonnegative integer.",
+          "eq": "n = 88k + 61"
+        },
+        {
+          "en": "Both 88 and the largest multiple of 11 below 61 can be grouped as multiples of 11.",
+          "eq": "88 = 11 × 8; 61 = 11 × 5 + 6"
+        },
+        {
+          "en": "Rewrite n as a multiple of 11 plus a valid remainder.",
+          "eq": "n = 11(8k+5) + 6; 0 ≤ 6 < 11"
+        }
+      ],
+      "answer": "6.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q9; printed p. 43, PDF p. 49.",
+      "edition": "2025",
+      "translationReview": "pending"
+    },
+    {
+      "id": "c10-2-ex2-1-q10",
+      "classNum": 10,
+      "chapter": "2",
+      "exercise": "2.1",
+      "topic": {
+        "en": "Numbers and Sequences"
+      },
+      "label": {
+        "en": "Exercise 2.1 · Q10",
+        "ta": "Exercise 2.1 · Q10 (English only; Tamil pending)"
+      },
+      "title": {
+        "en": "Consecutive integers are coprime"
+      },
+      "q": {
+        "en": "Prove that two consecutive positive integers are always coprime."
+      },
+      "steps": [
+        {
+          "en": "Let the consecutive positive integers be n and n+1. Let d be their greatest positive common divisor.",
+          "eq": "d divides n and d divides n+1"
+        },
+        {
+          "en": "A common divisor divides the difference of the two numbers.",
+          "eq": "d divides (n+1)−n = 1"
+        },
+        {
+          "en": "The only positive divisor of 1 is 1. Thus the HCF is 1, including when n=1.",
+          "eq": "d = 1; HCF(n,n+1) = 1"
+        },
+        {
+          "en": "Positive integers whose HCF is 1 are coprime. Therefore every pair of consecutive positive integers is coprime.",
+          "eq": "n and n+1 are coprime"
+        }
+      ],
+      "answer": "Any two consecutive positive integers are coprime because their HCF is 1.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q10; printed p. 43, PDF p. 49.",
+      "edition": "2025",
+      "translationReview": "pending"
+    }
+  ],
+  "mapping": [
+    {
+      "recordId": "c10-2-ex2-1-q1",
+      "exercise": "2.1",
+      "question": "1",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g10-en-2025-owner",
+      "sourceText": {
+        "en": "Find all positive integers, when divided by 3 leaves remainder 2."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        42
+      ],
+      "pdfPages": [
+        48
+      ]
+    },
+    {
+      "recordId": "c10-2-ex2-1-q2",
+      "exercise": "2.1",
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g10-en-2025-owner",
+      "sourceText": {
+        "en": "A man has 532 flower pots. He wants to arrange them in rows such that each row contains 21 flower pots. Find the number of completed rows and how many flower pots are left over."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        42
+      ],
+      "pdfPages": [
+        48
+      ]
+    },
+    {
+      "recordId": "c10-2-ex2-1-q3",
+      "exercise": "2.1",
+      "question": "3",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g10-en-2025-owner",
+      "sourceText": {
+        "en": "Prove that the product of two consecutive positive integers is divisible by 2."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        43
+      ],
+      "pdfPages": [
+        49
+      ]
+    },
+    {
+      "recordId": "c10-2-ex2-1-q4",
+      "exercise": "2.1",
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g10-en-2025-owner",
+      "sourceText": {
+        "en": "When the positive integers a, b and c are divided by 13, the respective remainders are 9,7 and 10. Show that a+b+c is divisible by 13."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        43
+      ],
+      "pdfPages": [
+        49
+      ]
+    },
+    {
+      "recordId": "c10-2-ex2-1-q5",
+      "exercise": "2.1",
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g10-en-2025-owner",
+      "sourceText": {
+        "en": "Prove that square of any integer leaves the remainder either 0 or 1 when divided by 4."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        43
+      ],
+      "pdfPages": [
+        49
+      ]
+    },
+    {
+      "recordId": "c10-2-ex2-1-q6",
+      "exercise": "2.1",
+      "question": "6",
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "sourceId": "tn-g10-en-2025-owner",
+      "sourceText": {
+        "en": "Use Euclid’s Division Algorithm to find the Highest Common Factor (HCF) of (i) 340 and 412 (ii) 867 and 255 (iii)10224 and 9648 (iv) 84, 90 and 120"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        43
+      ],
+      "pdfPages": [
+        49
+      ]
+    },
+    {
+      "recordId": "c10-2-ex2-1-q7",
+      "exercise": "2.1",
+      "question": "7",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g10-en-2025-owner",
+      "sourceText": {
+        "en": "Find the largest number which divides 1230 and 1926 leaving remainder 12 in each case."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        43
+      ],
+      "pdfPages": [
+        49
+      ]
+    },
+    {
+      "recordId": "c10-2-ex2-1-q8",
+      "exercise": "2.1",
+      "question": "8",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g10-en-2025-owner",
+      "sourceText": {
+        "en": "If d is the Highest Common Factor of 32 and 60, find x and y satisfying d = 32x + 60y."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        43
+      ],
+      "pdfPages": [
+        49
+      ]
+    },
+    {
+      "recordId": "c10-2-ex2-1-q9",
+      "exercise": "2.1",
+      "question": "9",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g10-en-2025-owner",
+      "sourceText": {
+        "en": "A positive integer when divided by 88 gives the remainder 61. What will be the remainder when the same number is divided by 11?"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        43
+      ],
+      "pdfPages": [
+        49
+      ]
+    },
+    {
+      "recordId": "c10-2-ex2-1-q10",
+      "exercise": "2.1",
+      "question": "10",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g10-en-2025-owner",
+      "sourceText": {
+        "en": "Prove that two consecutive positive integers are always coprime."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        43
+      ],
+      "pdfPages": [
+        49
+      ]
+    }
+  ],
+  "verification": {
+    "script": "site/tools/bulk/verify_g10_ch2_ex2_1.cjs"
+  },
+  "sourceReview": {
+    "reviewedAt": "2026-11-10",
+    "method": "PDF page images directly inspected after pdftotext extraction; math symbols, wording and enumeration compared to images. Layout whitespace normalized; question wording and original punctuation retained.",
+    "english": {
+      "printedPages": [
+        42,
+        43
+      ],
+      "pdfPages": [
+        48,
+        49
+      ],
+      "visualChecked": true
+    },
+    "tamil": {
+      "printedPages": [
+        43
+      ],
+      "pdfPages": [
+        49
+      ],
+      "visualChecked": true,
+      "publication": "pending",
+      "note": "Q5 Tamil asks positive integers; English asks any integer. English solution proves the stronger English statement. No Tamil wording or lesson is manufactured."
+    },
+    "answerKey": {
+      "printedPages": [
+        336
+      ],
+      "pdfPages": [
+        342
+      ],
+      "visualChecked": true,
+      "coveredQuestions": [
+        "1",
+        "2",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "proofQuestionsWithoutKey": [
+        "3",
+        "4",
+        "5",
+        "10"
+      ]
+    },
+    "requiredFigures": 0,
+    "tables": 0,
+    "graphs": 0,
+    "mcqQuestions": 0
+  },
+  "progress": {
+    "chapterComplete": false,
+    "nextBatch": "Inventory and source-verify Chapter 2 Exercise 2.2; other Chapter 2 groups remain unverified.",
+    "blocked": [],
+    "tamilPending": true
+  },
+  "tamilStatus": "pending"
+}

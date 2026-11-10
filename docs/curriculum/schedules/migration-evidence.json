@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-11-10",
+  "interface": "mcp__codex_apps__automations_peek/update",
+  "status": "confirmed-prompt-only-updates",
+  "scheduleChanges": 0,
+  "duplicateTasksCreated": 0,
+  "tasks": [
+    {
+      "grade": 9,
+      "id": "6aeefa4b68c88191bb7ee58c88b0be10",
+      "title": "Triggle Grade 9 Bulk",
+      "promptFile": "docs/curriculum/schedules/grade-9.md",
+      "before": {
+        "promptSha256": "8fe11dc805d5eec1303f9840d6488e6d40c3ebcec60d4ed77446de0cecc60992",
+        "schedule": "BEGIN:VEVENT\nDTSTART:20261107T160000\nRRULE:FREQ=HOURLY\nEND:VEVENT",
+        "scheduleSha256": "9b010fcee4bb687a28940201f48c9903d44a3e22c57c53ae8b1a099961255aa9",
+        "timezone": "Asia/Kolkata",
+        "timingMode": "exact_schedule",
+        "enabled": true,
+        "isSelfOwnedAutomation": false,
+        "environmentSelection": "inherited",
+        "environments": null,
+        "updatedAt": "2026-11-10T01:30:40.368718+00:00",
+        "lastRecordedRun": {
+          "id": "66337743-5470-832c-b826-3d46c5cc7b06",
+          "recorded_status": "completed",
+          "scheduled_for": "2026-11-10T01:30:00Z",
+          "started_at": "2026-11-10T01:29:01.769385Z",
+          "completed_at": "2026-11-10T01:30:16.724448Z",
+          "chat_ref": {
+            "type": "chatgpt",
+            "id": "6af21292-f838-83ee-9be0-9a8e71fb65f6"
+          }
+        }
+      },
+      "preparedPromptSha256": "0f8ea9aae0a7118b835abf3870a14118ec871d7ede5fc3dc22f7e58a6750cb9e",
+      "updateStatus": "confirmed-by-update-and-readback",
+      "after": {
+        "promptSha256": "0f8ea9aae0a7118b835abf3870a14118ec871d7ede5fc3dc22f7e58a6750cb9e",
+        "promptMatchesFileExactly": true,
+        "schedule": "BEGIN:VEVENT\nDTSTART:20261107T160000\nRRULE:FREQ=HOURLY\nEND:VEVENT",
+        "scheduleSha256": "9b010fcee4bb687a28940201f48c9903d44a3e22c57c53ae8b1a099961255aa9",
+        "timezone": "Asia/Kolkata",
+        "timingMode": "exact_schedule",
+        "enabled": true,
+        "isSelfOwnedAutomation": false,
+        "environmentSelection": "inherited",
+        "environments": null,
+        "updatedAt": "2026-11-10T02:17:57.724503+00:00",
+        "unchangedFields": [
+          "id",
+          "title",
+          "is_enabled",
+          "default_timezone",
+          "timing_mode",
+          "schedule"
+        ],
+        "lastRecordedRun": {
+          "id": "66337743-5470-832c-b826-3d46c5cc7b06",
+          "recorded_status": "completed",
+          "scheduled_for": "2026-11-10T01:30:00Z",
+          "started_at": "2026-11-10T01:29:01.769385Z",
+          "completed_at": "2026-11-10T01:30:16.724448Z",
+          "chat_ref": {
+            "type": "chatgpt",
+            "id": "6af21292-f838-83ee-9be0-9a8e71fb65f6"
+          }
+        }
+      },
+      "updateResult": {
+        "success": true,
+        "message": "Automation updated."
+      },
+      "immediateBeforePromptSha256": "8fe11dc805d5eec1303f9840d6488e6d40c3ebcec60d4ed77446de0cecc60992"
+    },
+    {
+      "grade": 10,
+      "id": "6aef7114b3d48191bafbed5ab27f398d",
+      "title": "Triggle Grade 10 Bulk",
+      "promptFile": "docs/curriculum/schedules/grade-10.md",
+      "before": {
+        "promptSha256": "39ef2bef11d498c7e672cb9633b181b304b9b53fbe4a5c3b550ef5d82eff0d2b",
+        "schedule": "BEGIN:VEVENT\nDTSTART:20261108T003000\nRRULE:FREQ=HOURLY;BYMINUTE=30\nEND:VEVENT",
+        "scheduleSha256": "11fe5e83ffbd8bc77ef5beb5752877f230f87f6d22b9c6a85990afcf05e3f545",
+        "timezone": "Asia/Kolkata",
+        "timingMode": "exact_schedule",
+        "enabled": true,
+        "isSelfOwnedAutomation": false,
+        "environmentSelection": "inherited",
+        "environments": null,
+        "updatedAt": "2026-11-10T01:57:06.967663+00:00",
+        "lastRecordedRun": {
+          "id": "649f43bd-59b0-8332-9e06-9f7ab4723323",
+          "recorded_status": "completed",
+          "scheduled_for": "2026-11-10T02:00:00Z",
+          "started_at": "2026-11-10T01:55:38.815156Z",
+          "completed_at": "2026-11-10T01:56:39.986661Z",
+          "chat_ref": {
+            "type": "chatgpt",
+            "id": "6af279d9-2d68-83ec-991d-203dcecc752e"
+          }
+        }
+      },
+      "preparedPromptSha256": "22ed249f801468a32beea9f5499f97cd4d80f964b59f0a6fd672e73a982b8eee",
+      "updateStatus": "confirmed-by-update-and-readback",
+      "after": {
+        "promptSha256": "22ed249f801468a32beea9f5499f97cd4d80f964b59f0a6fd672e73a982b8eee",
+        "promptMatchesFileExactly": true,
+        "schedule": "BEGIN:VEVENT\nDTSTART:20261108T003000\nRRULE:FREQ=HOURLY;BYMINUTE=30\nEND:VEVENT",
+        "scheduleSha256": "11fe5e83ffbd8bc77ef5beb5752877f230f87f6d22b9c6a85990afcf05e3f545",
+        "timezone": "Asia/Kolkata",
+        "timingMode": "exact_schedule",
+        "enabled": true,
+        "isSelfOwnedAutomation": false,
+        "environmentSelection": "inherited",
+        "environments": null,
+        "updatedAt": "2026-11-10T02:18:30.642759+00:00",
+        "unchangedFields": [
+          "id",
+          "title",
+          "is_enabled",
+          "default_timezone",
+          "timing_mode",
+          "schedule"
+        ],
+        "lastRecordedRun": {
+          "id": "649f43bd-59b0-8332-9e06-9f7ab4723323",
+          "recorded_status": "completed",
+          "scheduled_for": "2026-11-10T02:00:00Z",
+          "started_at": "2026-11-10T01:55:38.815156Z",
+          "completed_at": "2026-11-10T01:56:39.986661Z",
+          "chat_ref": {
+            "type": "chatgpt",
+            "id": "6af279d9-2d68-83ec-991d-203dcecc752e"
+          }
+        }
+      },
+      "updateResult": {
+        "success": true,
+        "message": "Automation updated."
+      },
+      "immediateBeforePromptSha256": "39ef2bef11d498c7e672cb9633b181b304b9b53fbe4a5c3b550ef5d82eff0d2b"
+    },
+    {
+      "grade": 11,
+      "id": "6aef7206c7488191b0ea66731148eda5",
+      "title": "Triggle Grade 11 Bulk",
+      "promptFile": "docs/curriculum/schedules/grade-11.md",
+      "before": {
+        "promptSha256": "c3f8ae101c61e7cddf86c4f958700e800a4f9f742a718a403300f7cb8310cf1f",
+        "schedule": "BEGIN:VEVENT\nDTSTART:20261108T001500\nRRULE:FREQ=HOURLY;BYMINUTE=15\nEND:VEVENT",
+        "scheduleSha256": "52996af8dfbe7a76754ad7ca18f84e41492964c78a5d49ed035fa6cd06b521c5",
+        "timezone": "Asia/Kolkata",
+        "timingMode": "exact_schedule",
+        "enabled": true,
+        "isSelfOwnedAutomation": false,
+        "environmentSelection": "inherited",
+        "environments": null,
+        "updatedAt": "2026-11-10T01:48:15.492293+00:00",
+        "lastRecordedRun": {
+          "id": "a3625377-37b4-8324-b745-1d6f83b4b091",
+          "recorded_status": "completed",
+          "scheduled_for": "2026-11-10T01:45:00Z",
+          "started_at": "2026-11-10T01:47:05.792675Z",
+          "completed_at": "2026-11-10T01:47:50.642728Z",
+          "chat_ref": {
+            "type": "chatgpt",
+            "id": "6aef6bd9-00f8-83ec-b274-96ff1246469f"
+          }
+        }
+      },
+      "preparedPromptSha256": "597478d0bcb90f9f8a967c748c8108c3190766a5be367525d999362ffc703e76",
+      "updateStatus": "confirmed-by-update-and-readback",
+      "after": {
+        "promptSha256": "597478d0bcb90f9f8a967c748c8108c3190766a5be367525d999362ffc703e76",
+        "promptMatchesFileExactly": true,
+        "schedule": "BEGIN:VEVENT\nDTSTART:20261108T001500\nRRULE:FREQ=HOURLY;BYMINUTE=15\nEND:VEVENT",
+        "scheduleSha256": "52996af8dfbe7a76754ad7ca18f84e41492964c78a5d49ed035fa6cd06b521c5",
+        "timezone": "Asia/Kolkata",
+        "timingMode": "exact_schedule",
+        "enabled": true,
+        "isSelfOwnedAutomation": false,
+        "environmentSelection": "inherited",
+        "environments": null,
+        "updatedAt": "2026-11-10T02:18:13.960237+00:00",
+        "unchangedFields": [
+          "id",
+          "title",
+          "is_enabled",
+          "default_timezone",
+          "timing_mode",
+          "schedule"
+        ],
+        "lastRecordedRun": {
+          "id": "a3625377-37b4-8324-b745-1d6f83b4b091",
+          "recorded_status": "completed",
+          "scheduled_for": "2026-11-10T01:45:00Z",
+          "started_at": "2026-11-10T01:47:05.792675Z",
+          "completed_at": "2026-11-10T01:47:50.642728Z",
+          "chat_ref": {
+            "type": "chatgpt",
+            "id": "6aef6bd9-00f8-83ec-b274-96ff1246469f"
+          }
+        }
+      },
+      "updateResult": {
+        "success": true,
+        "message": "Automation updated."
+      },
+      "immediateBeforePromptSha256": "c3f8ae101c61e7cddf86c4f958700e800a4f9f742a718a403300f7cb8310cf1f"
+    },
+    {
+      "grade": 12,
+      "id": "6aef720b16888191b620978b5426ac91",
+      "title": "Triggle Grade 12 Bulk",
+      "promptFile": "docs/curriculum/schedules/grade-12.md",
+      "before": {
+        "promptSha256": "7d26af5d91bc4d17ea66b10c50b657f5bf6af24379ccafbb35ef868b0de37844",
+        "schedule": "BEGIN:VEVENT\nDTSTART:20261108T004500\nRRULE:FREQ=HOURLY;BYMINUTE=45\nEND:VEVENT",
+        "scheduleSha256": "82f248a7bbaa8772565f30313c20b111f0b0fedd6ee5a485d083270230f39d4f",
+        "timezone": "Asia/Kolkata",
+        "timingMode": "exact_schedule",
+        "enabled": true,
+        "isSelfOwnedAutomation": false,
+        "environmentSelection": "inherited",
+        "environments": null,
+        "updatedAt": "2026-11-10T01:18:37.927060+00:00",
+        "lastRecordedRun": {
+          "id": "50a8c4d4-da88-8324-b97e-a7dce2957a33",
+          "recorded_status": "completed",
+          "scheduled_for": "2026-11-10T01:15:00Z",
+          "started_at": "2026-11-10T01:17:23.027698Z",
+          "completed_at": "2026-11-10T01:18:10.128419Z",
+          "chat_ref": {
+            "type": "chatgpt",
+            "id": "6aef6bd9-00f8-83ec-b274-96ff1246469f"
+          }
+        }
+      },
+      "preparedPromptSha256": "de9cf0b14a393a3cd7d32a44092a1fd40b36b9b1466c589320a7c0aa3fdceee4",
+      "updateStatus": "confirmed-by-update-and-readback",
+      "after": {
+        "promptSha256": "de9cf0b14a393a3cd7d32a44092a1fd40b36b9b1466c589320a7c0aa3fdceee4",
+        "promptMatchesFileExactly": true,
+        "schedule": "BEGIN:VEVENT\nDTSTART:20261108T004500\nRRULE:FREQ=HOURLY;BYMINUTE=45\nEND:VEVENT",
+        "scheduleSha256": "82f248a7bbaa8772565f30313c20b111f0b0fedd6ee5a485d083270230f39d4f",
+        "timezone": "Asia/Kolkata",
+        "timingMode": "exact_schedule",
+        "enabled": true,
+        "isSelfOwnedAutomation": false,
+        "environmentSelection": "inherited",
+        "environments": null,
+        "updatedAt": "2026-11-10T02:18:18.204162+00:00",
+        "unchangedFields": [
+          "id",
+          "title",
+          "is_enabled",
+          "default_timezone",
+          "timing_mode",
+          "schedule"
+        ],
+        "lastRecordedRun": {
+          "id": "d8d80ba2-80f8-832f-b99d-680fa43a2244",
+          "recorded_status": "completed",
+          "scheduled_for": "2026-11-10T02:15:00Z",
+          "started_at": "2026-11-10T02:15:09.684102Z",
+          "completed_at": "2026-11-10T02:15:48.417057Z",
+          "chat_ref": {
+            "type": "chatgpt",
+            "id": "6af27e55-5014-83e8-8af4-1c8205a0b566"
+          }
+        }
+      },
+      "updateResult": {
+        "success": true,
+        "message": "Automation updated."
+      },
+      "immediateBeforePromptSha256": "7d26af5d91bc4d17ea66b10c50b657f5bf6af24379ccafbb35ef868b0de37844"
+    }
+  ],
+  "confirmedAt": "2026-11-10T02:18:55.274476+00:00",
+  "unrelatedAutomationsModified": 0,
+  "futureExecutionEnvironmentVerified": false,
+  "limitation": "All four existing ChatGPT task prompts were updated and read back. Inherited environments remain unspecified; no future run, source access, authenticated git push, or deployment is certified by this schedule update."
+}
