@@ -40,6 +40,15 @@ function options(id, entries, preferred) {
 function uniqueSorted(values) {
   return [...new Set(values.map(String))].sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 }
+// Triggle's Grade 9 textbook exercises are marked "reference" while edition
+// and language verification is pending. Do not exclude them from teacher QA.
+// Keep worked examples and original practice items out of exercise review.
+function isReviewableExercise(item) {
+  return !!(item && item.id && item.q?.en && (
+    item.kind === "textbook" ||
+    (item.kind === "reference" && /^Exercise\s+\d/i.test(item.label?.en || ""))
+  ));
+}
 function gradeItems() {
   return records.filter(item => String(item.classNum) === $("grade-select").value);
 }
@@ -111,7 +120,9 @@ async function showSelected() {
   }
   $("question-label").textContent = item.label?.en || item.id;
   $("question-text").textContent = item.q?.en || "Original English source text not available.";
-  $("source-note").textContent = item.reference || "";
+  $("source-note").textContent = item.kind === "reference"
+    ? "Source verification pending: compare this exercise with the prescribed textbook edition before approving.\n" + (item.reference || "")
+    : (item.reference || "");
   $("answer-text").textContent = String(item.answer || "No answer recorded");
   renderSteps(item);
   const url = questionUrl(item);
@@ -195,7 +206,7 @@ async function loadCurriculum() {
       });
     }
     records = Object.values(window.TRIGGLE_CLASSES || {}).flatMap(grade => grade.items || [])
-      .filter(item => item && item.id && item.kind === "textbook" && item.q?.en)
+      .filter(isReviewableExercise)
       .sort((a, b) => a.classNum - b.classNum || Number(a.chapter) - Number(b.chapter) ||
         String(a.exercise).localeCompare(String(b.exercise), undefined, { numeric: true }) ||
         String(a.label?.en).localeCompare(String(b.label?.en), undefined, { numeric: true }));
@@ -203,7 +214,7 @@ async function loadCurriculum() {
     options("grade-select", uniqueSorted(records.map(item => item.classNum)).map(grade => ({ value: grade, label: "Grade " + grade })), "10");
     selectors.forEach(id => { $(id).disabled = false; });
     updateGrade();
-    message("Teacher access verified. " + records.length + " published textbook questions are ready for review.");
+    message("Teacher access verified. " + records.length + " exercise records are available for review. Items marked reference still need textbook-source verification.");
   } catch (error) {
     message("Your teacher account is authorized, but the questions could not load: " +
       error.message + ". Refresh the page to retry.", true);
