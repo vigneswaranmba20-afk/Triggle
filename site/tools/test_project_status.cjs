@@ -16,5 +16,6 @@ assert.equal(model.deployment({status:'building',commit:'a'.repeat(40),updated_a
 assert.equal(model.deployment({status:'built',commit:'merged',updated_at:new Date().toISOString()}),null);
 const snapshot=require('../data/deployment-status.json');assert.match(snapshot.pages.commit,/^[a-f0-9]{40}$/);assert.equal(snapshot.liveVerification.commit,snapshot.pages.commit);
 for(const p of ['site/data/project-status.json','site/data/deployment-status.json']){const text=fs.readFileSync(path.join(__dirname,'../..',p),'utf8');assert(!/AIza|private_key|reviewerUid|recordSha256.*note|teacherReviewEvents|teacherAccess|@gmail\.com/.test(text),'Private config/teacher data leaked into '+p);}
-for(const p of ['dashboard.js','project-model.js']){const text=fs.readFileSync(path.join(__dirname,'../assets',p),'utf8');assert(!/firebase|firestore|teacherReviewEvents|teacherAccess|localStorage/i.test(text),'Public dashboard must have no private service access');}
+assert(!fs.existsSync(path.join(__dirname,'../assets/dashboard.js')),'Removed dashboard script must not return');
+for(const p of ['project-model.js']){const text=fs.readFileSync(path.join(__dirname,'../assets',p),'utf8');assert(!/firebase|firestore|teacherReviewEvents|teacherAccess|localStorage/i.test(text),'Public dashboard must have no private service access');}
 console.log('PASS project status: source-derived totals, unknown denominators, exact next task, prompt scope, deployment distinction, public/private separation.');

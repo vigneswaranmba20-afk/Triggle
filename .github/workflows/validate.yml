@@ -33,7 +33,7 @@ jobs:
       - run: npm run test:browser
         env:
           CHROMIUM_PATH: ''
-      - name: Verify dashboard and teacher flows in WebKit
+      - name: Verify retired dashboard redirect and teacher flows in WebKit
         run: npm run test:webkit
       - name: Keep a mobile screenshot of the revised Grade 10 question reader
         if: always()
