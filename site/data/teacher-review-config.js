@@ -1,6 +1,12 @@
-// Firebase web configuration is NOT an admin credential. Authentication and
-// authorization must be enforced by deployed Firestore security rules and
-// a server-issued custom claim; no Google account or password belongs here.
-// Replace null with your Firebase Console > Project settings > Web app config
-// only after following docs/teacher-review/SETUP.md.
-export const firebaseConfig = null;
+// Firebase public web app identifiers (not Admin SDK secrets).
+// SECURITY: Only publish/deploy Teacher Review after the Firestore rules are
+// deployed and tested, and the server-side teacher role is securely assigned.
+// Never store Gmail addresses, private keys, or authentication secrets here.
+export const firebaseConfig = {
+  apiKey: "AIzaSyDEM5mnL5nK6sdrCIpAYsIaM3bvsF8OIDg",
+  authDomain: "triggle-teacher-review.firebaseapp.com",
+  projectId: "triggle-teacher-review",
+  storageBucket: "triggle-teacher-review.firebasestorage.app",
+  messagingSenderId: "567100543718",
+  appId: "1:567100543718:web:c8449c309d92ae2fefe127"
+};
