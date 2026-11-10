@@ -1,0 +1,20 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {build}=require('./build_project_status.cjs'),model=require('../assets/project-model.js');
+const manifest=build();assert.deepEqual(manifest,require('../data/project-status.json'),'Regenerate project status from current validated sources');
+assert.deepEqual(manifest.grades.map(g=>g.totalChapters),[9,8,12,12]);
+for(const g of manifest.grades){assert.equal(g.completedEnglishChapters+g.partialChapters+g.pendingChapters,g.totalChapters);assert.equal(g.coveragePercent,null);assert.equal(g.wholeGradeTaskDenominator,null);}
+assert.equal(manifest.summary.verifiedDeployedTasks,55);assert.equal(manifest.summary.knownRemainingTasks,53);
+const twelve=manifest.grades.find(g=>g.grade===12).chapters[0];assert.equal(twelve.totalTasks,95);assert.equal(twelve.verifiedTasks,42);assert.equal(twelve.missingTasks,53);
+const task=manifest.actions[0];assert.equal(task.grade,12);assert.equal(task.exercise,'1.4');assert.equal(task.startingQuestion,'Q1(i)');assert.deepEqual(task.scope,['Q1(i)','Q1(ii)','Q1(iii)','Q1(iv)','Q2','Q3','Q4','Q5']);
+assert.equal(task.questionIds.length,0,'Do not invent stable IDs for unauthored questions');
+assert(!manifest.actions.some(t=>t.grade===10&&t.chapter==='1'),'Accepted reference must not be regenerated');
+assert.equal(model.filter(manifest.actions,{grade:12,exercise:'1.4'}).length,1);
+assert.equal(model.filter(manifest.actions,{search:'not-an-existing-task'}).length,0);
+const prompt=model.prompt(task);for(const token of ['vigneswaranmba20-afk/Triggle','Exercise 1.4','Q1(i)','Q1(iv)','exact textbook wording','English AND Tamil','Independently solve','green-highlighted final answer','npm test','npm run test:browser','GitHub Pages','checkpoint','No authored IDs','recurring automation'])assert(prompt.includes(token),'Prompt missing '+token);
+assert.equal(model.deployment({status:'building',commit:'a'.repeat(40),updated_at:new Date().toISOString()}),null);
+assert.equal(model.deployment({status:'built',commit:'merged',updated_at:new Date().toISOString()}),null);
+const snapshot=require('../data/deployment-status.json');assert.match(snapshot.pages.commit,/^[a-f0-9]{40}$/);assert.equal(snapshot.liveVerification.commit,snapshot.pages.commit);
+for(const p of ['site/data/project-status.json','site/data/deployment-status.json']){const text=fs.readFileSync(path.join(__dirname,'../..',p),'utf8');assert(!/AIza|private_key|reviewerUid|recordSha256.*note|teacherReviewEvents|teacherAccess|@gmail\.com/.test(text),'Private config/teacher data leaked into '+p);}
+for(const p of ['dashboard.js','project-model.js']){const text=fs.readFileSync(path.join(__dirname,'../assets',p),'utf8');assert(!/firebase|firestore|teacherReviewEvents|teacherAccess|localStorage/i.test(text),'Public dashboard must have no private service access');}
+console.log('PASS project status: source-derived totals, unknown denominators, exact next task, prompt scope, deployment distinction, public/private separation.');

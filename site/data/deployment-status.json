@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-10T12:45:58.148Z",
+  "pages": {
+    "commit": "e787ed51bc55fbca3e369feba12e03e54f8de2c1",
+    "status": "built",
+    "updatedAt": "2026-11-10T10:38:28Z",
+    "url": "https://api.github.com/repos/vigneswaranmba20-afk/Triggle/pages/builds/1356941771"
+  },
+  "commits": [
+    {
+      "title": "e787ed5 Record verified Grade 12 live release and exact next Chapter 1 task (#134)",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/commit/e787ed51bc55fbca3e369feba12e03e54f8de2c1",
+      "updatedAt": "2026-11-10T10:37:49Z"
+    },
+    {
+      "title": "5091d4e Grade 12 Exercise 1.3: complete matrix inversion solutions and applications (#133)",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/commit/5091d4ecdbbeaaa3417474b0a99f41ef429c472c",
+      "updatedAt": "2026-11-10T10:31:54Z"
+    },
+    {
+      "title": "453b870 Grade 12 Chapter 1: complete English exercises 1.1–1.2 (32 verified tasks) (#132)",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/commit/453b870a3b1f786930eb604980e3e337fee4b031",
+      "updatedAt": "2026-11-10T10:22:24Z"
+    },
+    {
+      "title": "65c0151 Merge pull request #131 from vigneswaranmba20-afk/infra/execution-preflight-pdf-20261110",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/commit/65c01516f67511b06b1955051e1ffd096b17ca56",
+      "updatedAt": "2026-11-10T07:49:34Z"
+    },
+    {
+      "title": "43dcf41 Harden scheduled execution preflight, lease readbacks and PDF inspection",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/commit/43dcf41a18e7c089b43197acbc9ee4f30b054a35",
+      "updatedAt": "2026-11-10T07:44:49Z"
+    }
+  ],
+  "pulls": [
+    {
+      "title": "#130 Grade 10 Exercise 2.2 — source-image verified 9-question inventory and math audit",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/130",
+      "status": "draft",
+      "updatedAt": "2026-11-10T08:58:38Z"
+    },
+    {
+      "title": "#129 Grade 9 Exercise 1.2: visually verified source inventory and Q1–Q2 solution audit",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/129",
+      "status": "draft",
+      "updatedAt": "2026-11-10T08:29:10Z"
+    },
+    {
+      "title": "#118 Grade 9 English Exercise 1.7: stage Q1 and Q16 (source image review pending)",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/118",
+      "status": "draft",
+      "updatedAt": "2026-11-10T01:30:07Z"
+    },
+    {
+      "title": "#116 Grade 9 Exercise 1.7 Q18 — staged isosceles right-triangle MCQ",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/116",
+      "status": "draft",
+      "updatedAt": "2026-11-10T00:28:16Z"
+    },
+    {
+      "title": "#115 Grade 9 Exercise 1.7: ten staged English MCQs with worked solutions",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/115",
+      "status": "draft",
+      "updatedAt": "2026-11-09T23:36:31Z"
+    },
+    {
+      "title": "#114 Grade 10 Exercise 1.2: 9 bilingual 2025 textbook subparts and checked relation diagrams",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/114",
+      "status": "draft",
+      "updatedAt": "2026-11-09T23:36:43Z"
+    },
+    {
+      "title": "#113 Grade 10 Chapter 1 Exercise 1.3 Q1–Q3 — six bilingual verified solutions",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/113",
+      "status": "draft",
+      "updatedAt": "2026-11-09T23:23:28Z"
+    },
+    {
+      "title": "#112 Grade 10 Chapter 1 Exercise 1.2 — bilingual 2025 source-checked, 9 questions/parts",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/112",
+      "status": "draft",
+      "updatedAt": "2026-11-09T23:32:28Z"
+    }
+  ],
+  "runs": [
+    {
+      "title": "Validate curriculum and Pages source · e787ed5",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42800779999",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:40:36Z"
+    },
+    {
+      "title": "pages build and deployment · e787ed5",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42800779038",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:38:33Z"
+    },
+    {
+      "title": "Validate curriculum and Pages source · 4ce25a6",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42800314862",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:37:11Z"
+    },
+    {
+      "title": "Validate curriculum and Pages source · 5091d4e",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42799934431",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:34:32Z"
+    },
+    {
+      "title": "Publish Triggle from source · 5091d4e",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42799934371",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:32:52Z"
+    },
+    {
+      "title": "Grade 9 student usability audit · 5091d4e",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42799934324",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:36:08Z"
+    },
+    {
+      "title": "pages build and deployment · 5091d4e",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42799933199",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:32:57Z"
+    },
+    {
+      "title": "Test Triggle changes · 133a62e",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42799486656",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:29:05Z"
+    },
+    {
+      "title": "Validate curriculum and Pages source · 133a62e",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42799486533",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:31:08Z"
+    },
+    {
+      "title": "Grade 9 student usability audit · 133a62e",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42799486119",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:29:44Z"
+    },
+    {
+      "title": "Grade 9 student usability audit · 259938a",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42799287326",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:28:24Z"
+    },
+    {
+      "title": "Validate curriculum and Pages source · 259938a",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42799287325",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-10T10:29:25Z"
+    }
+  ],
+  "issues": [
+    {
+      "title": "#121 Build invite-only Teacher Review login and verified correction queue",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/issues/121",
+      "status": "open",
+      "updatedAt": "2026-11-10T03:01:06Z"
+    }
+  ],
+  "liveVerification": {
+    "checkedAt": "2026-11-10T12:45:59.035Z",
+    "commit": "e787ed51bc55fbca3e369feba12e03e54f8de2c1",
+    "note": "Teacher HTML and application module bytes match the successful Pages build. Interactive login is not verified by this HTTP check."
+  }
+}
