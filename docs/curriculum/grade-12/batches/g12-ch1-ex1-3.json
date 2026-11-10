@@ -1,0 +1,973 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g12-ch1-ex1-3",
+  "grade": 12,
+  "chapter": "1",
+  "module": "data/textbook-exercises/g12-ch1-ex1-3-en.js",
+  "sources": [
+    {
+      "id": "tn-g12-en-v1-2025-owner",
+      "grade": 12,
+      "language": "en",
+      "title": "Class_12_Mathematics_English_Volume_1_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "First edition 2019; revised editions 2020, 2022, 2023, 2025",
+      "url": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+      "sha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    }
+  ],
+  "inventory": {
+    "completeChapter": false,
+    "exercises": [
+      {
+        "id": "1.3",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              33
+            ],
+            "pdfPages": [
+              41
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "x = -11, y = 4.; x = 2, y = -4.; x = 2, y = 3, z = 4.; x = 3, y = -2, z = 1.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Values compared against original appendix after independent derivation; notation normalized."
+            }
+          },
+          {
+            "number": "2",
+            "parts": [
+              "AB",
+              "BA",
+              "solve"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              33
+            ],
+            "pdfPages": [
+              41
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "AB = BA = 4I₃; x = 2, y = 1, z = −1.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Values compared against original appendix after independent derivation; notation normalized."
+            }
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              33
+            ],
+            "pdfPages": [
+              41
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "Starting salary = ₹18,000 per month; annual increment = ₹600.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Values compared against original appendix after independent derivation; notation normalized."
+            }
+          },
+          {
+            "number": "4",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              33
+            ],
+            "pdfPages": [
+              41
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "One man alone: 18 days; one woman alone: 36 days.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Values compared against original appendix after independent derivation; notation normalized."
+            }
+          },
+          {
+            "number": "5",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              33
+            ],
+            "pdfPages": [
+              41
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "A: ₹2,000 per unit; B: ₹1,000 per unit; C: ₹3,000 per unit.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Values compared against original appendix after independent derivation; notation normalized."
+            }
+          }
+        ],
+        "numberedQuestions": 5,
+        "mathematicalTasks": 10,
+        "sourceFigures": 0,
+        "existingMainRecords": 0,
+        "missingMainQuestions": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "g12-ch1-ex1.3-q1-i",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.3",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "label": {
+        "en": "Exercise 1.3 · Q1(i)",
+        "ta": "Exercise 1.3 · Q1 · English only; Tamil pending"
+      },
+      "title": {
+        "en": "Matrix inversion method"
+      },
+      "q": {
+        "en": "Solve the following system of linear equations by matrix inversion method: (i) 2x + 5y = −2, x + 2y = −3"
+      },
+      "steps": [
+        {
+          "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
+          "eq": "AX = B; A = [[2, 5; 1, 2]]; B = [[−2; −3]]"
+        },
+        {
+          "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
+          "eq": "|A| = -1; X = A⁻¹B"
+        },
+        {
+          "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C11 = (−1)^(1+1) × (2) = 2"
+        },
+        {
+          "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C12 = (−1)^(1+2) × (1) = -1"
+        },
+        {
+          "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C21 = (−1)^(2+1) × (5) = -5"
+        },
+        {
+          "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C22 = (−1)^(2+2) × (2) = 2"
+        },
+        {
+          "en": "Transpose the cofactors and divide by the determinant.",
+          "eq": "adj A = [[2, −5; −1, 2]]; A⁻¹ = [[−2, 5; 1, −2]]"
+        },
+        {
+          "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+          "eq": "(-2) × (-2) + (5) × (-3) = -11"
+        },
+        {
+          "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+          "eq": "(1) × (-2) + (-2) × (-3) = 4"
+        },
+        {
+          "en": "Substitution in every original row confirms the solution.",
+          "eq": "AX = [[−2; −3]] = B"
+        }
+      ],
+      "answer": "x = -11, y = 4.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    },
+    {
+      "id": "g12-ch1-ex1.3-q1-ii",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.3",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "label": {
+        "en": "Exercise 1.3 · Q1(ii)",
+        "ta": "Exercise 1.3 · Q1 · English only; Tamil pending"
+      },
+      "title": {
+        "en": "Matrix inversion method"
+      },
+      "q": {
+        "en": "Solve the following system of linear equations by matrix inversion method: (ii) 2x − y = 8, 3x + 2y = −2"
+      },
+      "steps": [
+        {
+          "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
+          "eq": "AX = B; A = [[2, −1; 3, 2]]; B = [[8; −2]]"
+        },
+        {
+          "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
+          "eq": "|A| = 7; X = A⁻¹B"
+        },
+        {
+          "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C11 = (−1)^(1+1) × (2) = 2"
+        },
+        {
+          "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C12 = (−1)^(1+2) × (3) = -3"
+        },
+        {
+          "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C21 = (−1)^(2+1) × (-1) = 1"
+        },
+        {
+          "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C22 = (−1)^(2+2) × (2) = 2"
+        },
+        {
+          "en": "Transpose the cofactors and divide by the determinant.",
+          "eq": "adj A = [[2, 1; −3, 2]]; A⁻¹ = [[2/7, 1/7; −3/7, 2/7]]"
+        },
+        {
+          "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+          "eq": "(2/7) × (8) + (1/7) × (-2) = 2"
+        },
+        {
+          "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+          "eq": "(-3/7) × (8) + (2/7) × (-2) = -4"
+        },
+        {
+          "en": "Substitution in every original row confirms the solution.",
+          "eq": "AX = [[8; −2]] = B"
+        }
+      ],
+      "answer": "x = 2, y = -4.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    },
+    {
+      "id": "g12-ch1-ex1.3-q1-iii",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.3",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "label": {
+        "en": "Exercise 1.3 · Q1(iii)",
+        "ta": "Exercise 1.3 · Q1 · English only; Tamil pending"
+      },
+      "title": {
+        "en": "Matrix inversion method"
+      },
+      "q": {
+        "en": "Solve the following system of linear equations by matrix inversion method: (iii) 2x + 3y − z = 9, x + y + z = 9, 3x − y − z = −1"
+      },
+      "steps": [
+        {
+          "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
+          "eq": "AX = B; A = [[2, 3, −1; 1, 1, 1; 3, −1, −1]]; B = [[9; 9; −1]]"
+        },
+        {
+          "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
+          "eq": "|A| = 16; X = A⁻¹B"
+        },
+        {
+          "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C11 = (−1)^(1+1) × (0) = 0"
+        },
+        {
+          "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C12 = (−1)^(1+2) × (-4) = 4"
+        },
+        {
+          "en": "Delete row 1 and column 3, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C13 = (−1)^(1+3) × (-4) = -4"
+        },
+        {
+          "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C21 = (−1)^(2+1) × (-4) = 4"
+        },
+        {
+          "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C22 = (−1)^(2+2) × (1) = 1"
+        },
+        {
+          "en": "Delete row 2 and column 3, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C23 = (−1)^(2+3) × (-11) = 11"
+        },
+        {
+          "en": "Delete row 3 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C31 = (−1)^(3+1) × (4) = 4"
+        },
+        {
+          "en": "Delete row 3 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C32 = (−1)^(3+2) × (3) = -3"
+        },
+        {
+          "en": "Delete row 3 and column 3, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C33 = (−1)^(3+3) × (-1) = -1"
+        },
+        {
+          "en": "Transpose the cofactors and divide by the determinant.",
+          "eq": "adj A = [[0, 4, 4; 4, 1, −3; −4, 11, −1]]; A⁻¹ = [[0, 1/4, 1/4; 1/4, 1/16, −3/16; −1/4, 11/16, −1/16]]"
+        },
+        {
+          "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+          "eq": "(0) × (9) + (1/4) × (9) + (1/4) × (-1) = 2"
+        },
+        {
+          "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+          "eq": "(1/4) × (9) + (1/16) × (9) + (-3/16) × (-1) = 3"
+        },
+        {
+          "en": "The 3th component of X is the dot product of row 3 of A⁻¹ with B.",
+          "eq": "(-1/4) × (9) + (11/16) × (9) + (-1/16) × (-1) = 4"
+        },
+        {
+          "en": "Substitution in every original row confirms the solution.",
+          "eq": "AX = [[9; 9; −1]] = B"
+        }
+      ],
+      "answer": "x = 2, y = 3, z = 4.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    },
+    {
+      "id": "g12-ch1-ex1.3-q1-iv",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.3",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "label": {
+        "en": "Exercise 1.3 · Q1(iv)",
+        "ta": "Exercise 1.3 · Q1 · English only; Tamil pending"
+      },
+      "title": {
+        "en": "Matrix inversion method"
+      },
+      "q": {
+        "en": "Solve the following system of linear equations by matrix inversion method: (iv) x + y + z − 2 = 0, 6x − 4y + 5z − 31 = 0, 5x + 2y + 2z = 13"
+      },
+      "steps": [
+        {
+          "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
+          "eq": "AX = B; A = [[1, 1, 1; 6, −4, 5; 5, 2, 2]]; B = [[2; 31; 13]]"
+        },
+        {
+          "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
+          "eq": "|A| = 27; X = A⁻¹B"
+        },
+        {
+          "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C11 = (−1)^(1+1) × (-18) = -18"
+        },
+        {
+          "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C12 = (−1)^(1+2) × (-13) = 13"
+        },
+        {
+          "en": "Delete row 1 and column 3, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C13 = (−1)^(1+3) × (32) = 32"
+        },
+        {
+          "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C21 = (−1)^(2+1) × (0) = 0"
+        },
+        {
+          "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C22 = (−1)^(2+2) × (-3) = -3"
+        },
+        {
+          "en": "Delete row 2 and column 3, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C23 = (−1)^(2+3) × (-3) = 3"
+        },
+        {
+          "en": "Delete row 3 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C31 = (−1)^(3+1) × (9) = 9"
+        },
+        {
+          "en": "Delete row 3 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C32 = (−1)^(3+2) × (-1) = 1"
+        },
+        {
+          "en": "Delete row 3 and column 3, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C33 = (−1)^(3+3) × (-10) = -10"
+        },
+        {
+          "en": "Transpose the cofactors and divide by the determinant.",
+          "eq": "adj A = [[−18, 0, 9; 13, −3, 1; 32, 3, −10]]; A⁻¹ = [[−2/3, 0, 1/3; 13/27, −1/9, 1/27; 32/27, 1/9, −10/27]]"
+        },
+        {
+          "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+          "eq": "(-2/3) × (2) + (0) × (31) + (1/3) × (13) = 3"
+        },
+        {
+          "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+          "eq": "(13/27) × (2) + (-1/9) × (31) + (1/27) × (13) = -2"
+        },
+        {
+          "en": "The 3th component of X is the dot product of row 3 of A⁻¹ with B.",
+          "eq": "(32/27) × (2) + (1/9) × (31) + (-10/27) × (13) = 1"
+        },
+        {
+          "en": "Substitution in every original row confirms the solution.",
+          "eq": "AX = [[2; 31; 13]] = B"
+        }
+      ],
+      "answer": "x = 3, y = -2, z = 1.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    },
+    {
+      "id": "g12-ch1-ex1.3-q2",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.3",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "label": {
+        "en": "Exercise 1.3 · Q2",
+        "ta": "Exercise 1.3 · Q2 · English only; Tamil pending"
+      },
+      "title": {
+        "en": "Matrix inversion method"
+      },
+      "q": {
+        "en": "If A = [[−5, 1, 3; 7, 1, −5; 1, −1, 1]] and B = [[1, 1, 2; 3, 2, 1; 2, 1, 3]], find the products AB and BA and hence solve the system of equations x + y + 2z = 1, 3x + 2y + z = 7, 2x + y + 3z = 2."
+      },
+      "steps": [
+        {
+          "en": "Compute each product by multiplying rows of the first matrix by columns of the second.",
+          "eq": "(AB)₁₁ = −5+3+6 = 4; (AB)₁₂ = −5+2+3 = 0; (AB)₁₃ = −10+1+9 = 0; (AB)₂₁ = 7+3−10 = 0; (AB)₂₂ = 7+2−5 = 4; (AB)₂₃ = 14+1−15 = 0; (AB)₃₁ = 1−3+2 = 0; (AB)₃₂ = 1−2+1 = 0; (AB)₃₃ = 2−1+3 = 4; AB = 4I₃"
+        },
+        {
+          "en": "Check the reverse order independently.",
+          "eq": "(BA)₁₁ = −5+7+2 = 4; (BA)₁₂ = 1+1−2 = 0; (BA)₁₃ = 3−5+2 = 0; (BA)₂₁ = −15+14+1 = 0; (BA)₂₂ = 3+2−1 = 4; (BA)₂₃ = 9−10+1 = 0; (BA)₃₁ = −10+7+3 = 0; (BA)₃₂ = 2+1−3 = 0; (BA)₃₃ = 6−5+3 = 4; BA = 4I₃"
+        },
+        {
+          "en": "The coefficient matrix of the given equations is B. Both products show that B⁻¹ = A/4.",
+          "eq": "X = B⁻¹[[1; 7; 2]] = (A/4)[[1; 7; 2]]"
+        },
+        {
+          "en": "Multiply the rows of A by the right-hand side, then divide by 4.",
+          "eq": "x = (−5+7+6)/4 = 2; y = (7+7−10)/4 = 1; z = (1−7+2)/4 = −1"
+        },
+        {
+          "en": "Substitution verifies all three original equations.",
+          "eq": "2+1−2 = 1; 6+2−1 = 7; 4+1−3 = 2"
+        }
+      ],
+      "answer": "AB = BA = 4I₃; x = 2, y = 1, z = −1.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    },
+    {
+      "id": "g12-ch1-ex1.3-q3",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.3",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "label": {
+        "en": "Exercise 1.3 · Q3",
+        "ta": "Exercise 1.3 · Q3 · English only; Tamil pending"
+      },
+      "title": {
+        "en": "Matrix inversion method"
+      },
+      "q": {
+        "en": "A man is appointed in a job with a monthly salary of certain amount and a fixed amount of annual increment. If his salary was ₹ 19,800 per month at the end of the first month after 3 years of service and ₹ 23,400 per month at the end of the first month after 9 years of service, find his starting salary and his annual increment. (Use matrix inversion method to solve the problem.)"
+      },
+      "steps": [
+        {
+          "en": "Let s be the starting monthly salary and d the fixed increase in monthly salary after each year, both in rupees.",
+          "eq": "s + 3d = 19800; s + 9d = 23400"
+        },
+        {
+          "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
+          "eq": "AX = B; A = [[1, 3; 1, 9]]; B = [[19800; 23400]]"
+        },
+        {
+          "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
+          "eq": "|A| = 6; X = A⁻¹B"
+        },
+        {
+          "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C11 = (−1)^(1+1) × (9) = 9"
+        },
+        {
+          "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C12 = (−1)^(1+2) × (1) = -1"
+        },
+        {
+          "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C21 = (−1)^(2+1) × (3) = -3"
+        },
+        {
+          "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C22 = (−1)^(2+2) × (1) = 1"
+        },
+        {
+          "en": "Transpose the cofactors and divide by the determinant.",
+          "eq": "adj A = [[9, −3; −1, 1]]; A⁻¹ = [[3/2, −1/2; −1/6, 1/6]]"
+        },
+        {
+          "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+          "eq": "(3/2) × (19800) + (-1/2) × (23400) = 18000"
+        },
+        {
+          "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+          "eq": "(-1/6) × (19800) + (1/6) × (23400) = 600"
+        },
+        {
+          "en": "Substitution in every original row confirms the solution.",
+          "eq": "AX = [[19800; 23400]] = B"
+        },
+        {
+          "en": "Interpret the two components in the salary model and verify both service-year amounts.",
+          "eq": "18000+3×600 = 19800; 18000+9×600 = 23400"
+        }
+      ],
+      "answer": "Starting salary = ₹18,000 per month; annual increment = ₹600.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    },
+    {
+      "id": "g12-ch1-ex1.3-q4",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.3",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "label": {
+        "en": "Exercise 1.3 · Q4",
+        "ta": "Exercise 1.3 · Q4 · English only; Tamil pending"
+      },
+      "title": {
+        "en": "Matrix inversion method"
+      },
+      "q": {
+        "en": "Four men and 4 women can finish a piece of work jointly in 3 days while 2 men and 5 women can finish the same work jointly in 4 days. Find the time taken by one man alone and that of one woman alone to finish the same work by using matrix inversion method."
+      },
+      "steps": [
+        {
+          "en": "Take the complete job as one unit. Let m and w be the fractions of the job completed per day by one man and one woman. Team rates add.",
+          "eq": "4m + 4w = 1/3; 2m + 5w = 1/4"
+        },
+        {
+          "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
+          "eq": "AX = B; A = [[4, 4; 2, 5]]; B = [[1/3; 1/4]]"
+        },
+        {
+          "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
+          "eq": "|A| = 12; X = A⁻¹B"
+        },
+        {
+          "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C11 = (−1)^(1+1) × (5) = 5"
+        },
+        {
+          "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C12 = (−1)^(1+2) × (2) = -2"
+        },
+        {
+          "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C21 = (−1)^(2+1) × (4) = -4"
+        },
+        {
+          "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C22 = (−1)^(2+2) × (4) = 4"
+        },
+        {
+          "en": "Transpose the cofactors and divide by the determinant.",
+          "eq": "adj A = [[5, −4; −2, 4]]; A⁻¹ = [[5/12, −1/3; −1/6, 1/3]]"
+        },
+        {
+          "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+          "eq": "(5/12) × (1/3) + (-1/3) × (1/4) = 1/18"
+        },
+        {
+          "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+          "eq": "(-1/6) × (1/3) + (1/3) × (1/4) = 1/36"
+        },
+        {
+          "en": "Substitution in every original row confirms the solution.",
+          "eq": "AX = [[1/3; 1/4]] = B"
+        },
+        {
+          "en": "Time for one complete job is the reciprocal of the daily rate.",
+          "eq": "m = 1/18; w = 1/36; one man: 1/m = 18 days; one woman: 1/w = 36 days"
+        }
+      ],
+      "answer": "One man alone: 18 days; one woman alone: 36 days.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    },
+    {
+      "id": "g12-ch1-ex1.3-q5",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.3",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "label": {
+        "en": "Exercise 1.3 · Q5",
+        "ta": "Exercise 1.3 · Q5 · English only; Tamil pending"
+      },
+      "title": {
+        "en": "Matrix inversion method"
+      },
+      "q": {
+        "en": "The prices of three commodities A, B and C are ₹ x, y and z per units respectively. A person P purchases 4 units of B and sells two units of A and 5 units of C. Person Q purchases 2 units of C and sells 3 units of A and one unit of B. Person R purchases one unit of A and sells 3 unit of B and one unit of C. In the process, P, Q and R earn ₹ 15,000, ₹ 1,000 and ₹ 4,000 respectively. Find the prices per unit of A, B and C. (Use matrix inversion method to solve the problem.)"
+      },
+      "steps": [
+        {
+          "en": "Earnings equal sales receipts minus purchase costs. Translate each person’s transactions with these signs.",
+          "eq": "P: 2x − 4y + 5z = 15000; Q: 3x + y − 2z = 1000; R: −x + 3y + z = 4000"
+        },
+        {
+          "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
+          "eq": "AX = B; A = [[2, −4, 5; 3, 1, −2; −1, 3, 1]]; B = [[15000; 1000; 4000]]"
+        },
+        {
+          "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
+          "eq": "|A| = 68; X = A⁻¹B"
+        },
+        {
+          "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C11 = (−1)^(1+1) × (7) = 7"
+        },
+        {
+          "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C12 = (−1)^(1+2) × (1) = -1"
+        },
+        {
+          "en": "Delete row 1 and column 3, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C13 = (−1)^(1+3) × (10) = 10"
+        },
+        {
+          "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C21 = (−1)^(2+1) × (-19) = 19"
+        },
+        {
+          "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C22 = (−1)^(2+2) × (7) = 7"
+        },
+        {
+          "en": "Delete row 2 and column 3, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C23 = (−1)^(2+3) × (2) = -2"
+        },
+        {
+          "en": "Delete row 3 and column 1, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C31 = (−1)^(3+1) × (3) = 3"
+        },
+        {
+          "en": "Delete row 3 and column 2, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C32 = (−1)^(3+2) × (-19) = 19"
+        },
+        {
+          "en": "Delete row 3 and column 3, then apply the alternating sign to obtain the cofactor.",
+          "eq": "C33 = (−1)^(3+3) × (14) = 14"
+        },
+        {
+          "en": "Transpose the cofactors and divide by the determinant.",
+          "eq": "adj A = [[7, 19, 3; −1, 7, 19; 10, −2, 14]]; A⁻¹ = [[7/68, 19/68, 3/68; −1/68, 7/68, 19/68; 5/34, −1/34, 7/34]]"
+        },
+        {
+          "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+          "eq": "(7/68) × (15000) + (19/68) × (1000) + (3/68) × (4000) = 2000"
+        },
+        {
+          "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+          "eq": "(-1/68) × (15000) + (7/68) × (1000) + (19/68) × (4000) = 1000"
+        },
+        {
+          "en": "The 3th component of X is the dot product of row 3 of A⁻¹ with B.",
+          "eq": "(5/34) × (15000) + (-1/34) × (1000) + (7/34) × (4000) = 3000"
+        },
+        {
+          "en": "Substitution in every original row confirms the solution.",
+          "eq": "AX = [[15000; 1000; 4000]] = B"
+        },
+        {
+          "en": "These positive values are prices per unit; substituting them reproduces the three net earnings.",
+          "eq": "4000−4000+15000 = 15000; 6000+1000−6000 = 1000; −2000+3000+3000 = 4000"
+        }
+      ],
+      "answer": "A: ₹2,000 per unit; B: ₹1,000 per unit; C: ₹3,000 per unit.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    }
+  ],
+  "mapping": [
+    {
+      "recordId": "g12-ch1-ex1.3-q1-i",
+      "exercise": "1.3",
+      "question": "1",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Solve the following system of linear equations by matrix inversion method: (i) 2x + 5y = −2, x + 2y = −3"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        33
+      ],
+      "pdfPages": [
+        41
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.3-q1-ii",
+      "exercise": "1.3",
+      "question": "1",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Solve the following system of linear equations by matrix inversion method: (ii) 2x − y = 8, 3x + 2y = −2"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        33
+      ],
+      "pdfPages": [
+        41
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.3-q1-iii",
+      "exercise": "1.3",
+      "question": "1",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Solve the following system of linear equations by matrix inversion method: (iii) 2x + 3y − z = 9, x + y + z = 9, 3x − y − z = −1"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        33
+      ],
+      "pdfPages": [
+        41
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.3-q1-iv",
+      "exercise": "1.3",
+      "question": "1",
+      "parts": [
+        "iv"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Solve the following system of linear equations by matrix inversion method: (iv) x + y + z − 2 = 0, 6x − 4y + 5z − 31 = 0, 5x + 2y + 2z = 13"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        33
+      ],
+      "pdfPages": [
+        41
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.3-q2",
+      "exercise": "1.3",
+      "question": "2",
+      "parts": [
+        "AB",
+        "BA",
+        "solve"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "If A = [[−5, 1, 3; 7, 1, −5; 1, −1, 1]] and B = [[1, 1, 2; 3, 2, 1; 2, 1, 3]], find the products AB and BA and hence solve the system of equations x + y + 2z = 1, 3x + 2y + z = 7, 2x + y + 3z = 2."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        33
+      ],
+      "pdfPages": [
+        41
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.3-q3",
+      "exercise": "1.3",
+      "question": "3",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "A man is appointed in a job with a monthly salary of certain amount and a fixed amount of annual increment. If his salary was ₹ 19,800 per month at the end of the first month after 3 years of service and ₹ 23,400 per month at the end of the first month after 9 years of service, find his starting salary and his annual increment. (Use matrix inversion method to solve the problem.)"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        33
+      ],
+      "pdfPages": [
+        41
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.3-q4",
+      "exercise": "1.3",
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Four men and 4 women can finish a piece of work jointly in 3 days while 2 men and 5 women can finish the same work jointly in 4 days. Find the time taken by one man alone and that of one woman alone to finish the same work by using matrix inversion method."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        33
+      ],
+      "pdfPages": [
+        41
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.3-q5",
+      "exercise": "1.3",
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "The prices of three commodities A, B and C are ₹ x, y and z per units respectively. A person P purchases 4 units of B and sells two units of A and 5 units of C. Person Q purchases 2 units of C and sells 3 units of A and one unit of B. Person R purchases one unit of A and sells 3 unit of B and one unit of C. In the process, P, Q and R earn ₹ 15,000, ₹ 1,000 and ₹ 4,000 respectively. Find the prices per unit of A, B and C. (Use matrix inversion method to solve the problem.)"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        33
+      ],
+      "pdfPages": [
+        41
+      ]
+    }
+  ],
+  "verification": {
+    "script": "site/tools/bulk/verify_g12_ch1_ex1_3.cjs"
+  },
+  "tamilStatus": "pending"
+}

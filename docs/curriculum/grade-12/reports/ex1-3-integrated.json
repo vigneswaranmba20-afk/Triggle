@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g12-ch1-ex1-3",
+  "grade": 12,
+  "chapter": "1",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "issues": [],
+  "metrics": {
+    "numberedQuestions": 5,
+    "labelledSubparts": 7,
+    "sourceTasks": 10,
+    "appRecords": 8,
+    "newAppRecords": 8,
+    "sourceVerifiedNumberedQuestions": 5,
+    "verifiedNumberedQuestions": 5,
+    "mathematicallyVerifiedRecords": 8,
+    "solvedSubparts": 10,
+    "englishSourceVerifiedRecords": 8,
+    "tamilSourceVerifiedRecords": 0
+  },
+  "coverage": {
+    "inventoryCompleteChapter": false,
+    "exercises": [
+      {
+        "exercise": "1.3",
+        "inventoryVerified": true,
+        "numberedQuestions": 5,
+        "complete": true
+      }
+    ],
+    "missing": [],
+    "blocked": [],
+    "chapterComplete": false
+  },
+  "mathematics": {
+    "script": "site/tools/bulk/verify_g12_ch1_ex1_3.cjs",
+    "verifierSha256": "aed0a3acc1eda30e45631e5b1cfbe24bd059912fe03ffc2aa2dc6ecaf4424536",
+    "checks": [
+      {
+        "recordId": "g12-ch1-ex1.3-q1-i",
+        "parts": [
+          "i"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inverse; determinant; both inverse products; substitution into every original equation; application rate/price/salary interpretation",
+        "recordSha256": "44dd40d3baa8eef96cbd7111300d47ded8d7a9c14999b69f3e8d85f262fd99dc"
+      },
+      {
+        "recordId": "g12-ch1-ex1.3-q1-ii",
+        "parts": [
+          "ii"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inverse; determinant; both inverse products; substitution into every original equation; application rate/price/salary interpretation",
+        "recordSha256": "ea815156578853d2e4369f5572e66fb3964e551a24c8c0b9c0838488fc7fcbbc"
+      },
+      {
+        "recordId": "g12-ch1-ex1.3-q1-iii",
+        "parts": [
+          "iii"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inverse; determinant; both inverse products; substitution into every original equation; application rate/price/salary interpretation",
+        "recordSha256": "72d5f546e88bea8ab2b32d4a64f189d3809fa603337a7293a6af64d6311fb104"
+      },
+      {
+        "recordId": "g12-ch1-ex1.3-q1-iv",
+        "parts": [
+          "iv"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inverse; determinant; both inverse products; substitution into every original equation; application rate/price/salary interpretation",
+        "recordSha256": "f6916f871388d3146d9bd86b1acd9c2f450603053f0064663744b5df47d3dedd"
+      },
+      {
+        "recordId": "g12-ch1-ex1.3-q2",
+        "parts": [
+          "AB",
+          "BA",
+          "solve"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inverse; determinant; both inverse products; substitution into every original equation; application rate/price/salary interpretation",
+        "recordSha256": "6dad9f7f4d981e40dcdae4407ba5f6ac68d138cea753b758a83d620d94bdba02"
+      },
+      {
+        "recordId": "g12-ch1-ex1.3-q3",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inverse; determinant; both inverse products; substitution into every original equation; application rate/price/salary interpretation",
+        "recordSha256": "0b44e0318ea62161f27d0add843d3218f3730f64b9d1e8b7e293b92d7fcdfa0a"
+      },
+      {
+        "recordId": "g12-ch1-ex1.3-q4",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inverse; determinant; both inverse products; substitution into every original equation; application rate/price/salary interpretation",
+        "recordSha256": "c3c5e604c26eba2183260de99d4e3b95d2bd1ecf9d41dea977b00a06729580d1"
+      },
+      {
+        "recordId": "g12-ch1-ex1.3-q5",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inverse; determinant; both inverse products; substitution into every original equation; application rate/price/salary interpretation",
+        "recordSha256": "eceb3321d30656394b0a9a54900631a6c6ef83d6dba556c966d440d93d00cd13"
+      }
+    ]
+  }
+}

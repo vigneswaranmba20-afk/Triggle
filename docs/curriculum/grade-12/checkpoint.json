@@ -55,38 +55,48 @@
     ]
   },
   "release": {
-    "commit": "da540bb5b384ea73d851ba1c9d33d14bf17d86d7",
-    "pr": 119,
+    "commit": "453b870a3b1f786930eb604980e3e337fee4b031",
+    "testedPrHead": "7d46278",
+    "pr": 132,
+    "prUrl": "https://github.com/vigneswaranmba20-afk/Triggle/pull/132",
+    "scope": "Grade 12 Chapter 1 English exercises 1.1–1.2 only",
     "deployment": {
-      "status": "published and live verified",
-      "commit": "da540bb5b384ea73d851ba1c9d33d14bf17d86d7",
-      "workflowRun": 42743022973,
-      "workflowUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42743022973",
-      "workflowConclusion": "success",
+      "status": "success and live verified",
+      "workflowRun": 42798587035,
+      "workflowUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42798587035",
       "live": {
+        "url": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=12&question=g12-ch1-ex1.1-q1-i",
         "passed": true,
-        "url": "https://vigneswaranmba20-afk.github.io/Triggle/index.html?class=10&question=c10-2-ex2-1-q1",
-        "questions": 10,
-        "tasks": 13,
-        "publishedModuleSha256": "a44e474ef9516aa795507e9046cc0e41bb208dd78ed8c9a97a7742be3b81bcd7",
+        "records": 30,
+        "tasks": 32,
         "checks": [
-          "all exact source questions and final answers",
-          "Previous navigation",
-          "Tamil pending notice",
-          "mobile overflow",
-          "preserved Chapter 1 figure",
-          "offline reload",
-          "module bytes match tested source"
+          "all exact questions",
+          "published module hashes",
+          "navigation",
+          "native matrices",
+          "green final-answer step",
+          "truthful Tamil pending",
+          "390px overflow",
+          "offline reload"
+        ],
+        "batches": [
+          {
+            "batch": "g12-ch1-ex1-1",
+            "records": 19,
+            "moduleSha256": "53b2d67625e1e33a136af151a53b23c4cf7185a93e4777cc288a78f0f459b435",
+            "live": true
+          },
+          {
+            "batch": "g12-ch1-ex1-2",
+            "records": 11,
+            "moduleSha256": "00b430dca7d5ccfc5a693e78ac62f716515c0ba81f662238dc15269551b16938",
+            "live": true
+          }
         ]
       }
-    },
-    "branch": "engine/universal-curriculum-bulk-20261110",
-    "prUrl": "https://github.com/vigneswaranmba20-afk/Triggle/pull/119",
-    "implementationCommit": "c1aafea64c1b3fe70d00f1b7efba493beaa33f6f",
-    "testedPrHead": "8950fe1ddd3549a247ff009e9b08a153f309fe1a",
-    "scope": "Shared engine setup; no Grade 12 content produced in this execution"
+    }
   },
-  "nextActionableBatch": "Exercise 1.3 Q1(i), English; preserve all prior IDs and revalidate source PDF 41 / printed 33.",
+  "nextActionableBatch": "Exercise 1.4 Q1(i), English; source PDF 43 / printed 35.",
   "inventory": {
     "grade": 12,
     "chapters": [
@@ -97,22 +107,22 @@
           "en": "Applications of Matrices and Determinants",
           "ta": "அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்"
         },
-        "appRecords": 30,
-        "exerciseAppRecords": 30,
-        "totalAppRecords": 30,
-        "registeredItems": 30,
-        "sourceVerifiedNumberedQuestions": 18,
-        "sourceVerifiedTasks": 32,
-        "mathematicallyVerifiedRecords": 30,
+        "appRecords": 38,
+        "exerciseAppRecords": 38,
+        "totalAppRecords": 38,
+        "registeredItems": 38,
+        "sourceVerifiedNumberedQuestions": 23,
+        "sourceVerifiedTasks": 42,
+        "mathematicallyVerifiedRecords": 38,
         "englishCoverage": {
-          "verifiedRecords": 30
+          "verifiedRecords": 38
         },
         "tamilCoverage": {
           "status": "pending",
           "sourceVerifiedRecords": 0
         },
         "verifiedTextbookDenominator": 63,
-        "completionPercent": 28.57,
+        "completionPercent": 36.51,
         "complete": false,
         "chapterReconciliation": {
           "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
@@ -600,18 +610,8 @@
               "part": "whole"
             }
           ],
-          "verifiedNumberedQuestions": 18,
+          "verifiedNumberedQuestions": 23,
           "missingSourceTasks": [
-            "1.3:1:i",
-            "1.3:1:ii",
-            "1.3:1:iii",
-            "1.3:1:iv",
-            "1.3:2:AB",
-            "1.3:2:BA",
-            "1.3:2:solve",
-            "1.3:3:whole",
-            "1.3:4:whole",
-            "1.3:5:whole",
             "1.4:1:i",
             "1.4:1:ii",
             "1.4:1:iii",
@@ -668,7 +668,7 @@
           ],
           "unexpectedSourceTasks": [],
           "complete": false,
-          "completionPercent": 28.57
+          "completionPercent": 36.51
         },
         "batches": [
           {
@@ -680,6 +680,12 @@
           {
             "file": "docs/curriculum/grade-12/batches/g12-ch1-ex1-2.json",
             "batchId": "g12-ch1-ex1-2",
+            "passed": true,
+            "errors": []
+          },
+          {
+            "file": "docs/curriculum/grade-12/batches/g12-ch1-ex1-3.json",
+            "batchId": "g12-ch1-ex1-3",
             "passed": true,
             "errors": []
           }
@@ -1007,10 +1013,10 @@
         "missingSourceTasks": []
       }
     ],
-    "appRecords": 46,
-    "totalAppRecords": 46,
-    "exerciseAppRecords": 43,
-    "newEngineVerifiedRecords": 30
+    "appRecords": 54,
+    "totalAppRecords": 54,
+    "exerciseAppRecords": 51,
+    "newEngineVerifiedRecords": 38
   },
   "schedule": {
     "status": "confirmed-prompt-only-update",
@@ -1027,27 +1033,32 @@
       "mathematicalTasks": 95,
       "exercises": 8
     },
-    "transcribedNumberedQuestions": 18,
-    "verifiedNumberedQuestions": 18,
-    "verifiedTasks": 32,
-    "integratedRecords": 30,
-    "deployedRecords": 0,
+    "transcribedNumberedQuestions": 23,
+    "verifiedNumberedQuestions": 23,
+    "verifiedTasks": 42,
+    "integratedRecords": 38,
+    "deployedRecords": 30,
     "completedEnglishExercises": [
       "1.1",
-      "1.2"
+      "1.2",
+      "1.3"
     ],
-    "nextQuestion": "Exercise 1.3 Q1(i)",
+    "nextQuestion": "Exercise 1.4 Q1(i)",
     "tamilStatus": "pending",
     "automations": "No automation read or mutation performed. Owner pause instruction preserved.",
-    "releaseStatus": "Local implementation; remote CI and deployment pending",
+    "releaseStatus": "Exercises 1.1–1.2 deployed and live verified; 1.3 locally verified, release tests running",
     "tests": {
-      "npmTest": "passed",
+      "npmTest": "passed including 1.3",
       "batchValidators": "passed; both exercises integrated, all source tasks covered",
-      "targetedBrowser": "passed; all 30 records at 320/390/1280px, offline reload, native matrices and exact source snapshots",
-      "fullBrowser": "passed; npm run test:browser including all new records and legacy routes",
-      "remoteCI": "pending"
+      "targetedBrowser": "Passed; all 38 records at 320/390/1280px, exact source snapshots, final answers and offline matrix solutions",
+      "fullBrowser": "Passed for 1.1–1.2; 1.3 release tests pending",
+      "remoteCI": "Passed all three checks at 7d46278 for 1.1–1.2"
     },
     "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/132",
-    "implementationCommit": "4682392c079fbcac9c2abdcc55cfb39b73d28147"
+    "implementationCommit": "4682392c079fbcac9c2abdcc55cfb39b73d28147",
+    "deployedEnglishExercises": [
+      "1.1",
+      "1.2"
+    ]
   }
 }

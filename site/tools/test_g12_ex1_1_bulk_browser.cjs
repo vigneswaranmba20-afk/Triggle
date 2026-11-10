@@ -4,7 +4,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs/promises'),http=require('node:http'),path=require('node:path');
 const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..');
-const batches=[require('../../docs/curriculum/grade-12/batches/g12-ch1-ex1-1.json'),require('../../docs/curriculum/grade-12/batches/g12-ch1-ex1-2.json')];
+const batches=[require('../../docs/curriculum/grade-12/batches/g12-ch1-ex1-1.json'),require('../../docs/curriculum/grade-12/batches/g12-ch1-ex1-2.json'),require('../../docs/curriculum/grade-12/batches/g12-ch1-ex1-3.json')];
 async function main(batch){
  const fidelity=require('../data/textbook-fidelity/'+batch.batchId+'-en-2025.json');
  assert.deepEqual(fidelity.questions,batch.mapping,'Authored questions match visually reviewed source snapshots');
@@ -68,7 +68,7 @@ async function main(batch){
   },batch.module);
   assert.equal(cached,true,'New module precached');
   await ctx.setOffline(true);await page.reload();
-  assert.ok(await page.locator('#questionText math mtable').count()>0,'Matrix structure available offline');
+  assert.ok(await page.locator('#stepsList math mtable').count()>0,'Matrix solution structure available offline');
   await page.locator('#next').click();
   assert.equal(new URL(page.url()).searchParams.get('question'),batch.records[1].id,'Offline navigation');
   await ctx.close();
