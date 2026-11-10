@@ -64,3 +64,63 @@ Steps: (1) Factor x²−5x+6=(x−2)(x−3). (2) Thus x=2 or x=3. (3) Both are n
 5. English only; Tamil textbook wording/editorial certification remains pending.
 
 **Evidence status:** 10 numbered questions inventoried visually; **9 source-image checked and independently reasoned tasks**; **0 new app records**, **0 engine-verified registered records**, **0 deployed**. This is a source-first staging artifact requiring full batch-schema conversion and CI before release.
+
+
+## Continuation audit — Q3–Q10 (2026-11-10, Grade 9 only)
+
+**Source re-read:** The actual owner Drive PDF was fetched in this execution (28,314,750 bytes; SHA-256 `e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037`). Original PDF page 18 / printed page 12 was rendered and visually inspected. The preceding page 17 / printed page 11 was also inspected. All 25 remaining labelled/unlabelled tasks were inventoried; no compulsory figure, table or graph occurs in this exercise. The original wording below follows the inspected printed page; the explanatory steps and answers are newly authored. **This remains a source/solution audit, not a registered app module.**
+
+### Q3. Which of the following sets are equivalent or unequal or equal sets?
+
+- **(i)** A = The set of vowels in the English alphabets. B = The set of all letters in the word “VOWEL”. **Equivalent sets.** A has five vowels {a,e,i,o,u}; B has five distinct letters {V,O,W,E,L}. They are not the same members, but both have cardinality five.
+- **(ii)** C = {2,3,4,5} D = {x : x ∈ W, 1 < x < 5}. **Unequal sets.** Enumerate D={2,3,4}. The element 5 is in C but not D, so the sets are unequal.
+- **(iii)** X = {x : x is a letter in the word “LIFE”} Y = {F, I, L, E}. **Equal sets.** Listing the distinct letters of LIFE gives {L,I,F,E}; order is irrelevant, so X=Y.
+- **(iv)** G = {x : x is a prime number and 3 < x < 23} H = {x : x is a divisor of 18}. **Equivalent sets.** G={5,7,11,13,17,19}; H={1,2,3,6,9,18}. Each contains six elements, although their elements differ.
+
+### Q4. Identify the following sets as null set or singleton set.
+
+- **(i)** A = {x : x ∈ N, 1 < x < 2}. **Null set.** There is no natural number strictly between 1 and 2, so A=∅.
+- **(ii)** B = The set of all even natural numbers which are not divisible by 2. **Null set.** Every even natural number is divisible by 2 by definition, so no element qualifies.
+- **(iii)** C = {0}. **Singleton set.** The set contains one element, zero. It is not empty.
+- **(iv)** D = The set of all triangles having four sides. **Null set.** Every triangle has exactly three sides, so D=∅.
+
+### Q5. State which pairs of sets are disjoint or overlapping.
+
+- **(i)** A = {f, i, a, s} and B={a, n, f, h, s}. **Overlapping.** Compare members; A∩B={a,f,s}, which is nonempty.
+- **(ii)** C = {x : x is a prime number, x > 2} and D = {x : x is an even prime number}. **Disjoint.** The only even prime is 2, but C requires x>2. Hence C∩D=∅.
+- **(iii)** E = {x : x is a factor of 24} and F={x : x is a multiple of 3, x < 30}. **Overlapping.** E={1,2,3,4,6,8,12,24}; F={3,6,9,12,15,18,21,24,27}. Their intersection is {3,6,12,24}.
+
+### Q6. If S = {square, rectangle, circle, rhombus, triangle}, list the elements of the following subset of S.
+
+- **(i)** The set of shapes which have 4 equal sides. **{square, rhombus}.** A square has four equal sides; a rhombus does too. A general rectangle need not.
+- **(ii)** The set of shapes which have radius. **{circle}.** A circle has a radius; the other listed plane shapes are not defined by one.
+- **(iii)** The set of shapes in which the sum of all interior angles is 180°. **{triangle}.** A triangle's interior angles total 180°; a square, rectangle or rhombus totals 360°.
+- **(iv)** The set of shapes which have 5 sides. **∅.** None of the five named shapes is a pentagon.
+
+### Q7. If A = {a, {a, b}}, write all the subsets of A.
+
+**Answer: ∅, {a}, {{a,b}}, {a,{a,b}}.** First identify the two elements of A: the symbol a and the *set* {a,b}. A two-element set has 2²=4 subsets. Do not confuse the inner set {a,b} with two separate elements of A.
+
+### Q8. Write down the power set of the following sets.
+
+- **(i)** A = {a, b}. **P(A)={∅,{a},{b},{a,b}}.** Choose neither element, either singleton, or both: 4 subsets.
+- **(ii)** B = {1, 2, 3}. **P(B)={∅,{1},{2},{3},{1,2},{1,3},{2,3},{1,2,3}}.** Group subsets by size 0,1,2,3; count 1+3+3+1=8.
+- **(iii)** D = {p, q, r, s}. **P(D)={∅,{p},{q},{r},{s},{p,q},{p,r},{p,s},{q,r},{q,s},{r,s},{p,q,r},{p,q,s},{p,r,s},{q,r,s},{p,q,r,s}}.** Group by subset size; counts 1+4+6+4+1=16.
+- **(iv)** E = ∅. **P(E)={∅}.** The empty set has exactly one subset, itself.
+
+### Q9. Find the number of subsets and the number of proper subsets of the following sets.
+
+- **(i)** W = {red, blue, yellow}. **8 subsets; 7 proper subsets.** Three distinct elements give 2³=8 subsets; remove W itself to obtain 7 proper subsets.
+- **(ii)** X = {x² : x ∈ N, x² ≤ 100}. **1024 subsets; 1023 proper subsets.** Natural numbers x=1,…,10 give ten distinct squares {1,4,9,16,25,36,49,64,81,100}. Thus 2¹⁰=1024; subtract one for proper subsets.
+
+### Q10.
+
+- **(i)** If n(A) = 4, find n[P(A)]. **16.** Each of four elements is either selected or omitted from a subset, so 2⁴=16.
+- **(ii)** If n(A)=0, find n[P(A)]. **1.** The empty set has only the empty subset, so 2⁰=1.
+- **(iii)** If n[P(A)] = 256, find n(A). **8.** Solve 2ⁿ=256=2⁸, giving n=8.
+
+### Independent verification for the continuation
+
+A fresh Python/SymPy check independently enumerated prime sets and divisors, compared intersections, tested the finite set identities and checked powers of two. **25/25 targeted assertions passed** (Q3:4, Q4:4, Q5:3, Q6:4, Q7:1, Q8:4, Q9:2, Q10:3). Q4(ii), Q4(iv), Q6(i–iv) and Q7 additionally require the general classification/nested-set arguments written above; numeric checks alone do not establish their meanings. The original printed page was visually inspected, including Q7's nested braces and Q9(ii)'s exponent and inequality.
+
+**Reconciled Exercise 1.2 source audit:** 10 numbered questions / 34 tasks on printed pp. 11–12; all **34** tasks now have source-image-reviewed English wording and independently reasoned solutions in this audit (9 earlier + 25 here). This does **not** imply 34 engine-validated app records, full chapter coverage, Tamil certification, or deployment. Existing Grade 9 draft PRs (including #118) must still be reconciled against main. Next: migrate this source audit into a documented batch manifest and synchronous per-record verifier, check existing IDs, validate and register under the integration lease, and run full required CI. Do not merge this audit PR as student-facing content.
