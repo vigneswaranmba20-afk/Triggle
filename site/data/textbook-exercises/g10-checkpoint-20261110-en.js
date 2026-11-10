@@ -259,5 +259,18 @@ const entries=[
 const ids=new Set(Object.values(window.TRIGGLE_CLASSES).flatMap(g=>(g.items||[]).map(item=>item.id)));
 const seen=new Set();
 for(const item of entries){if(ids.has(item.id)||seen.has(item.id))throw Error('Duplicate Grade 10 checkpoint ID '+item.id);seen.add(item.id);}
-for(const item of entries){grade.items.push(item);ids.add(item.id);}
+// Chapter navigation is ID-driven: publishing an item without this registry
+// makes the lesson reachable only by its direct URL, not via Exercises.
+const chapterRegistry=window.TRIGGLE_CURRICULUM?.grades?.find(g=>g.grade===10)?.chapters;
+if(!Array.isArray(chapterRegistry))throw Error('Grade 10 curriculum must be loaded before checkpoint questions');
+const assigned=entries.map(item=>{
+  const chapter=chapterRegistry.find(ch=>String(ch.number)===String(item.chapter));
+  if(!chapter)throw Error('Missing Grade 10 chapter for checkpoint '+item.id);
+  return {item,chapter};
+});
+for(const {item,chapter} of assigned){
+  grade.items.push(item);ids.add(item.id);
+  chapter.textbookQuestionIds=chapter.textbookQuestionIds||[];
+  if(!chapter.textbookQuestionIds.includes(item.id))chapter.textbookQuestionIds.push(item.id);
+}
 })();

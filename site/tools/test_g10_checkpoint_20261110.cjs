@@ -2,11 +2,24 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const ctx={window:{}};
-for(const f of ['data/class-10.js','data/class-10-ex1-1-2025.js','data/class-10-chapter-1.js','data/textbook-exercises/g10-checkpoint-20261110-en.js'])vm.runInNewContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f,timeout:10000});
+for(const f of ['data/class-10.js','data/class-10-ex1-1-2025.js','data/class-10-chapter-1.js','data/curriculum.js','data/textbook-exercises/g10-checkpoint-20261110-en.js'])vm.runInNewContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f,timeout:10000});
 const all=ctx.window.TRIGGLE_CLASSES[10].items;
 assert.equal(new Set(all.map(x=>x.id)).size,all.length,'No duplicate question IDs');
 const expected=["c10-3-ex3-1-q1-i","c10-4-ex4-1-q2","c10-4-ex4-1-q3","c10-8-ex8-1-q1-i","c10-8-ex8-1-q1-ii","c10-8-ex8-1-q2"];
 for(const id of expected){const matches=all.filter(x=>x.id===id);assert.equal(matches.length,1,'Expected exactly one '+id);const x=matches[0];assert.equal(x.translationReview,'pending');assert.match(x.reference,/English printed p\./);assert.ok(x.steps.length>=3);}
+// The student UI builds each chapter's Exercises menu exclusively from registered IDs.
+// Every checkpoint lesson must therefore appear in its source chapter's menu.
+const gradeChapters=ctx.window.TRIGGLE_CURRICULUM.grades.find(g=>g.grade===10).chapters;
+for(const chapterNum of [3,4,8]){
+  const chapter=gradeChapters.find(ch=>Number(ch.number)===chapterNum);
+  assert.ok(chapter,'Grade 10 chapter '+chapterNum+' must exist');
+  const ids=chapter.textbookQuestionIds||[];
+  const relevant=expected.filter(id=>all.find(item=>item.id===id).chapter===String(chapterNum));
+  for(const id of relevant)assert.equal(ids.filter(x=>x===id).length,1,'Chapter '+chapterNum+' Exercises must show '+id);
+  const actual=all.filter(item=>ids.includes(item.id)&&item.kind==='textbook');
+  assert.ok(actual.length>=relevant.length,'Chapter '+chapterNum+' has discoverable textbook exercises');
+}
+
 const existing=["c10-1-ex1-1-q6-i","c10-1-ex1-1-q6-ii","c10-1-ex1-1-q6-iii","c10-1-ex1-1-q7-i","c10-1-ex1-1-q7-ii","c10-6-6-1-1","c10-6-6-1-2"];
 for(const id of existing)assert.equal(all.filter(x=>x.id===id).length,1,'Existing item must not duplicate: '+id);
 const by=id=>all.find(x=>x.id===id);
