@@ -45,8 +45,9 @@ Run:
 npm test
 npm run test:browser
 npm run test:security
+npm run test:webkit
 ```
 
-The security suite launches a local **demo** Firestore emulator, never production, and tests real rules for grants, unauthorized/revoked denial, append-only reviews, atomic correction history, invalid transitions, blocked recovery, evidence and fresh hash-specific re-approval. CI runs this suite. Browser authentication tests use a labelled controlled SDK and do not establish live Google/Firebase authorization. Physical Android Chrome and iOS Safari plus production authorized/unapproved account checks remain owner-assisted acceptance gates.
+The security suite launches a local **demo** Firestore emulator, never production, and tests real rules for grants, unauthorized/revoked denial, append-only reviews, atomic correction history, invalid transitions, blocked recovery, evidence and fresh hash-specific re-approval. CI runs this suite. Browser authentication tests use a labelled controlled SDK and do not establish live Google/Firebase authorization. Playwright Chromium and WebKit cover both dashboards at 320/390/430px. Physical Android Chrome and iOS Safari plus production authorized/unapproved account checks remain owner-assisted acceptance gates.
 
 PR #122 and issue #121 are historical context. Their older recurring-automation proposals are superseded by the owner's manual-only instructions.

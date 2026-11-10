@@ -29,10 +29,12 @@ jobs:
           java-version: '21'
       - name: Verify private Firestore rules in the emulator
         run: npm run test:security
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:browser
         env:
           CHROMIUM_PATH: ''
+      - name: Verify dashboard and teacher flows in WebKit
+        run: npm run test:webkit
       - name: Keep a mobile screenshot of the revised Grade 10 question reader
         if: always()
         uses: actions/upload-artifact@v4

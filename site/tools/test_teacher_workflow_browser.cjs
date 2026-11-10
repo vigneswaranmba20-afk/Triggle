@@ -41,7 +41,7 @@ export async function signInWithPopup(){h.popups++;if(h.cancelPopup)throw Object
 export async function signOut(){h.signedIn=false;observer?.(null);}
 `;
 async function harness(browser,base,options={}){
- const ctx=await browser.newContext({viewport:{width:options.width||390,height:850},permissions:['clipboard-read','clipboard-write'],serviceWorkers:'block'});
+ const ctx=await browser.newContext({viewport:{width:options.width||390,height:850},...(options.webKit?{}:{permissions:['clipboard-read','clipboard-write']}),serviceWorkers:'block'});
  await ctx.addInitScript(opts=>{window.__reviewHarness={signedIn:false,authorized:true,hangAuth:false,hangGrant:false,grantError:false,cancelPopup:false,apps:0,popups:0,privateReads:0,grantReads:0,writes:0,reviews:[],cases:{},...opts};},options);
  const page=await ctx.newPage(),errors=[];
  if(options.shortTimeout)await page.route('**/teacher-review.html',async r=>{const response=await r.fetch();await r.fulfill({response,body:(await response.text()).replace('name="review-startup-timeout" content="12000"','name="review-startup-timeout" content="250"')});});
@@ -49,6 +49,8 @@ async function harness(browser,base,options={}){
  await page.route('https://www.gstatic.com/firebasejs/**',r=>r.fulfill({contentType:'application/javascript',body:r.request().url().includes('firebase-auth')?authSdk:r.request().url().includes('firebase-firestore')?firestore:appSdk}));
  await page.goto(base+'/teacher-review.html');return {ctx,page,errors};
 }
+module.exports={harness};
+if(require.main===module){
 (async()=>{const app=await server(),browser=await chromium.launch(launchOptions());try{
  for(const width of [320,390,430]){
   const {ctx,page,errors}=await harness(browser,app.base,{width});
@@ -85,3 +87,5 @@ async function harness(browser,base,options={}){
  const {ctx,page}=await harness(browser,app.base,{signedIn:true,grantError:true});await page.locator('#startup-error').waitFor({state:'visible'});assert.equal(await page.locator('#workspace').isVisible(),false);await ctx.close();
  console.log('PASS teacher UI (controlled SDK): auth observer, sign-in/cancellation, unauthorized denial, persisted-login reload, server-grant outage, MathML/Tamil, review hash/note/duplicate prevention, inbox filters, private handoff, correction history, sign-out clearing, 320/390/430px.');
 }finally{await browser.close();await app.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
+
+}

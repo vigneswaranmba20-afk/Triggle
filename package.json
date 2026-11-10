@@ -10,7 +10,8 @@
     "test:curriculum-bulk": "node site/tools/test_curriculum_bulk.cjs && node site/tools/bulk/test_remote_lease.cjs && node site/tools/bulk/test_execution_preflight.cjs && node site/tools/curriculum_bulk.cjs validate-all",
     "status:build": "node site/tools/build_project_status.cjs",
     "status:check": "node site/tools/build_project_status.cjs --check",
-    "test:security": "firebase emulators:exec --config teacher-review/firebase.json --project demo-triggle-review --only firestore \"node site/tools/test_teacher_security.cjs\""
+    "test:security": "firebase emulators:exec --config teacher-review/firebase.json --project demo-triggle-review --only firestore \"node site/tools/test_teacher_security.cjs\"",
+    "test:webkit": "node site/tools/test_dashboard_webkit.cjs"
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "6.0.0",

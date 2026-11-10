@@ -34,4 +34,4 @@ Every backlog item prepares a scoped prompt for the owner to copy manually. Ther
 
 ## Verification
 
-`npm test`, `npm run test:browser`, and `npm run test:security` cover source projection, unknown denominators, prompt contents, deployment metadata, public/private separation, mobile layouts, startup fault recovery, controlled authentication, inbox/handoff and actual emulator-enforced rules. Controlled SDK tests are explicitly labelled; they are not production Google login tests. Live authorized-account login, authorized submission and unapproved-account denial require owner-assisted account testing.
+`npm test`, `npm run test:browser`, and `npm run test:security`, and `npm run test:webkit` cover source projection, unknown denominators, prompt contents, deployment metadata, public/private separation, mobile layouts, startup fault recovery, controlled authentication, inbox/handoff and actual emulator-enforced rules. Controlled SDK tests are explicitly labelled; they are not production Google login tests. Live authorized-account login, authorized submission and unapproved-account denial require owner-assisted account testing.
