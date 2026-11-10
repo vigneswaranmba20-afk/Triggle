@@ -585,7 +585,18 @@
             "tables": [],
             "graphs": [],
             "mcq": false,
-            "answerKey": null
+            "answerKey": {
+              "text": "x = -11, y = 4.; x = 2, y = -4.; x = 2, y = 3, z = 4.; x = 3, y = -2, z = 1.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Values compared against original appendix after independent derivation; notation normalized."
+            }
           },
           {
             "number": "2",
@@ -606,7 +617,18 @@
             "tables": [],
             "graphs": [],
             "mcq": false,
-            "answerKey": null
+            "answerKey": {
+              "text": "AB = BA = 4I₃; x = 2, y = 1, z = −1.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Values compared against original appendix after independent derivation; notation normalized."
+            }
           },
           {
             "number": "3",
@@ -625,7 +647,18 @@
             "tables": [],
             "graphs": [],
             "mcq": false,
-            "answerKey": null
+            "answerKey": {
+              "text": "Starting salary = ₹18,000 per month; annual increment = ₹600.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Values compared against original appendix after independent derivation; notation normalized."
+            }
           },
           {
             "number": "4",
@@ -644,7 +677,18 @@
             "tables": [],
             "graphs": [],
             "mcq": false,
-            "answerKey": null
+            "answerKey": {
+              "text": "One man alone: 18 days; one woman alone: 36 days.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Values compared against original appendix after independent derivation; notation normalized."
+            }
           },
           {
             "number": "5",
@@ -663,7 +707,18 @@
             "tables": [],
             "graphs": [],
             "mcq": false,
-            "answerKey": null
+            "answerKey": {
+              "text": "A: ₹2,000 per unit; B: ₹1,000 per unit; C: ₹3,000 per unit.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Values compared against original appendix after independent derivation; notation normalized."
+            }
           }
         ],
         "numberedQuestions": 5,

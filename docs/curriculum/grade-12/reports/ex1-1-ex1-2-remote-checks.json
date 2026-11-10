@@ -1,0 +1,35 @@
+{
+  "head": "7d462787cc2e3466afa3e94c2ba23adb15ff9282",
+  "checks": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-10T10:20:21Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42798145200/job/129768487189",
+      "name": "audit",
+      "startedAt": "2026-11-10T10:19:24Z",
+      "status": "COMPLETED",
+      "workflowName": "Grade 9 student usability audit"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-10T10:19:33Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42798145391/job/129768490973",
+      "name": "Validate and test site",
+      "startedAt": "2026-11-10T10:19:24Z",
+      "status": "COMPLETED",
+      "workflowName": "Test Triggle changes"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-10T10:21:53Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42798145424/job/129768490335",
+      "name": "validate",
+      "startedAt": "2026-11-10T10:19:24Z",
+      "status": "COMPLETED",
+      "workflowName": "Validate curriculum and Pages source"
+    }
+  ]
+}
