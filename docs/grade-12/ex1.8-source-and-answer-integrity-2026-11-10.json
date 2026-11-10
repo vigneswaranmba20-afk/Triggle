@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "exercise": "1.8",
+  "runDate": "2026-11-10",
+  "scope": "Grade 12 only; unpublished source and inventory integrity",
+  "source": {
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "title": "Class_12_Mathematics_English_Volume_1_2025_Edition-www.tntextbooks.in.pdf",
+    "editionConfirmedByFrontMatter": "Revised Edition - 2020, 2022, 2023, 2025",
+    "volume": 1,
+    "questionPrintedPages": [
+      48,
+      49,
+      50
+    ],
+    "answerAppendixPrintedPage": 283,
+    "sourceTextFetched": true,
+    "sourcePageImagesChecked": false
+  },
+  "existingFiles": [
+    "docs/grade-12/ex1.8-mcq-inventory-2026-11-10.json",
+    "docs/grade-12/ex1.8-answer-appendix-25-options-provisional-2026-11-10.json"
+  ],
+  "reconciliation": {
+    "provisionalQuestionIds": 25,
+    "provisionalAnswerEntries": 25,
+    "matchingIds": 25,
+    "missingAnswerIds": [],
+    "duplicateQuestionIds": 0,
+    "duplicateAnswerIds": 0,
+    "allOptionNumbersInOneToFour": true,
+    "allQuestionNumbersOneTo25": true,
+    "sourceCertifiedQuestions": 0,
+    "newPublishedEnglishSolutions": 0,
+    "newPublishedTamilSolutions": 0,
+    "certifiedGradeQuestionDenominator": null,
+    "certifiedGradeSubpartDenominator": null
+  },
+  "publicationAllowed": false,
+  "mandatoryCI": "not established",
+  "pending": [
+    "Original page-image verification of exercise 1.8 printed pages 48-50 and answer appendix printed page 283",
+    "Exact mathematical notation and options for Q1-Q25",
+    "Independent solutions and grade-wide denominator",
+    "Draft PR mergeability and required CI"
+  ],
+  "nextBatch": "Visually verify Q1-Q10 and corresponding answer indices, then solve independently and register only certified solutions."
+}
