@@ -1,26 +1,29 @@
 'use strict';
-const assert=require('node:assert/strict'),fs=require('node:fs/promises');
+// The retired owner dashboard must send old bookmarks to the student site.
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {chromium}=require('playwright'),{server,launchOptions}=require('./dashboard_test_support.cjs');
-(async()=>{const app=await server(),browser=await chromium.launch(launchOptions());try{
- for(const width of [320,390,430,1280]){
-  const ctx=await browser.newContext({viewport:{width,height:900},permissions:['clipboard-read','clipboard-write'],serviceWorkers:'block'}),page=await ctx.newPage(),errors=[],requests=[];
-  page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
-  await page.goto(app.base+'/dashboard');await page.locator('#content').waitFor({state:'visible'});
-  assert.match(await page.locator('#recommendations').innerText(),/Exercise 1\.4/);
-  assert.equal(await page.locator('.grade-card').count(),4);
-  await page.locator('#recommendations button').first().click();
-  assert.match(await page.evaluate(()=>navigator.clipboard.readText()),/Q1\(iv\)/);
-  await page.locator('#close-prompt').click();
-  await page.locator('#filter-grade').selectOption('12');await page.locator('#filter-exercise').selectOption('1.4');assert.equal(await page.locator('#task-list .task').count(),1);
-  await page.goto(app.base+'/dashboard/#grade=12&chapter=1&exercise=1.4');await page.locator('#drilldown').waitFor({state:'visible'});assert.match(await page.locator('#drilldown').innerText(),/Q1\(i\).*Q1\(ii\)/);
-  await page.goto(app.base+'/dashboard/#grade=12&chapter=1&exercise=1.1&question=g12-ch1-ex1.1-q1-i');await page.locator('#drilldown').waitFor({state:'visible'});assert.match(await page.locator('#drilldown').innerText(),/g12-ch1-ex1\.1-q1-i/);
-  await page.locator('#drilldown a').first().click();await page.goBack();assert.match(page.url(),/question=g12/);
-  await page.route('https://api.github.com/**',r=>r.abort());await page.locator('#refresh-github').click();await page.waitForFunction(()=>document.getElementById('github-status').textContent.includes('Refresh unavailable'));
-  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No overflow '+width);
-  assert(!requests.some(u=>/firestore|firebase|identitytoolkit/i.test(u)),'Anonymous dashboard never calls private backend');assert.deepEqual(errors,[]);
-  if(width===390){await fs.mkdir('screenshots',{recursive:true});await page.screenshot({path:'screenshots/mission-control-390.png',fullPage:true});}
-  await ctx.close();
- }
- const ctx=await browser.newContext({serviceWorkers:'block'}),page=await ctx.newPage();await page.route('**/project-status.json',r=>r.abort());await page.goto(app.base+'/dashboard/');await page.locator('#load-error').waitFor({state:'visible'});assert.equal(await page.locator('#content').isVisible(),false);await ctx.close();
- console.log('PASS Owner Dashboard: bookmark route, accurate grade cards, prompt clipboard, search/filter, drill-down/history, API failure, data failure, public isolation and 320/390/430/1280px.');
-}finally{await browser.close();await app.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
+(async()=>{
+  const app=await server(),browser=await chromium.launch(launchOptions());
+  try{
+    const rootRedirect=fs.readFileSync(path.resolve(__dirname,'../../dashboard/index.html'),'utf8');
+    assert.match(rootRedirect,/\.\.\/site\/index\.html/,'Old root bookmark must go to student lessons');
+    assert(!fs.existsSync(path.resolve(__dirname,'../assets/dashboard.js')),'Retired owner dashboard JS must be removed');
+    assert(!fs.existsSync(path.resolve(__dirname,'../assets/dashboard.css')),'Retired owner dashboard CSS must be removed');
+    assert(fs.existsSync(path.resolve(__dirname,'../teacher-review.html')),'Teacher Review must remain separate');
+    for(const width of [320,390,430,1280]){
+      const ctx=await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'}),page=await ctx.newPage(),errors=[],requests=[];
+      page.on('pageerror',e=>errors.push(e.message));
+      page.on('request',r=>requests.push(r.url()));
+      await page.goto(app.base+'/dashboard/?class=9#legacy-dashboard');
+      await page.waitForURL(/\/index\.html(?:[?#]|$)/);
+      await page.locator('#browseBtn').waitFor({state:'visible'});
+      assert.match(await page.title(),/Triggle.*Mathematics/);
+      assert(!new URL(page.url()).pathname.includes('dashboard'),'Old dashboard must not display');
+      assert.equal(await page.locator('h1:has-text("Triggle Mission Control")').count(),0);
+      assert(!requests.some(u=>/firestore|firebase|identitytoolkit/i.test(u)),'Redirect must never access private teacher services');
+      assert.deepEqual(errors,[],'Student homepage should load without JavaScript errors');
+      await ctx.close();
+    }
+    console.log('PASS retired dashboard: old site/root bookmarks lead to lessons; owner assets absent; Teacher Review preserved; Chromium 320/390/430/1280px.');
+  }finally{await browser.close();await app.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});
