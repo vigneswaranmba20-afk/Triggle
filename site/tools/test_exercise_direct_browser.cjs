@@ -25,7 +25,7 @@ async function run(){
    const ctx=await browser.newContext({viewport:{width,height:850},serviceWorkers:'block'});
    const page=await ctx.newPage(),errors=[];
    page.on('pageerror',error=>errors.push(error.message));
-   for(const id of ['g9-ch9','g9-ch1','g9-ch2','g9-ch6','g9-ch3','g10-ch6','g11-ch3','g12-ch4']){
+   for(const id of ['g9-ch9','g9-ch1','g9-ch2','g9-ch6','g9-ch3','g10-ch3','g10-ch4','g10-ch6','g10-ch8','g11-ch3','g12-ch4']){
     const grade=Number(id.match(/^g(\d+)/)[1]);
     await page.goto(base+'/index.html?class='+grade+'&chapter='+id);
     await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
@@ -68,7 +68,7 @@ async function run(){
    assert.deepEqual(errors,[], 'No browser JS errors at '+width);
    await ctx.close();
   }
-  console.log('PASS: Exercises directly opens first textbook problem across 8 chapter routes at mobile 320/390 and desktop 1280, with no practice screen, correct next/back, and honest empty states.');
+  console.log('PASS: Exercises directly opens first textbook problem across 11 chapter routes at mobile 320/390 and desktop 1280, with no practice screen, correct next/back, and honest empty states.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 run().catch(err=>{console.error(err);process.exitCode=1;});
