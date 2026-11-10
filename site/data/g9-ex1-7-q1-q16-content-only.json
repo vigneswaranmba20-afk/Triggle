@@ -1,0 +1,54 @@
+{
+  "status": "staged-content-only-not-published",
+  "grade": 9,
+  "chapter": 1,
+  "exercise": "1.7",
+  "edition": "Tamil Nadu SCERT revised 2025 English",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPages": [
+      36,
+      37
+    ],
+    "fidelity": "PDF text-layer checked; printed-page images pending"
+  },
+  "numberedQuestions": 2,
+  "questionSubparts": 2,
+  "fullySourceImageVerified": 0,
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-7-q1",
+      "number": 1,
+      "question": "1. Which of the following is correct?\n(1) {7} ∈ {1,2,3,4,5,6,7,8,9,10} (2) 7 ∈ {1,2,3,4,5,6,7,8,9,10}\n(3) 7 ∉ {1,2,3,4,5,6,7,8,9,10} (4) {7} ⊂ {1,2,3,4,5,6,7,8,9,10}",
+      "answer": "Option (2)",
+      "steps": [
+        "The listed set contains the numbers 1 through 10.",
+        "The number 7 is one of those elements.",
+        "The symbol ∈ means 'is an element of', so 7 ∈ {1,2,3,4,5,6,7,8,9,10} is true.",
+        "The singleton {7} is a set rather than the number 7; it is not an element of the listed set.",
+        "Therefore option (2) is correct."
+      ],
+      "sourcePage": 36,
+      "sourceTextStatus": "Option (4) operator corrupted in extracted PDF; reconstructed as ⊂, requires printed-page verification",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    },
+    {
+      "id": "g9-ch1-ex1-7-q16",
+      "number": 16,
+      "question": "16. If n(A∪B∪C) = 100, n(A) = 4x, n(B) = 6x, n(C) = 5x, n(A∩B) = 20, n(B∩C) = 15, n(A∩C) = 25 and n(A∩B∩C) = 10, then the value of x is\n(1) 10 (2) 15 (3) 25 (4) 30",
+      "answer": "Option (1), x = 10",
+      "steps": [
+        "Apply inclusion-exclusion: n(A∪B∪C) = n(A)+n(B)+n(C)−n(A∩B)−n(B∩C)−n(A∩C)+n(A∩B∩C).",
+        "Substitute the given values: 100 = 4x+6x+5x−20−15−25+10.",
+        "Combine like terms: 100 = 15x−50.",
+        "Add 50 to both sides: 150 = 15x.",
+        "Divide by 15 to obtain x = 10, which is option (1)."
+      ],
+      "sourcePage": 37,
+      "sourceTextStatus": "Mathematical symbols normalized from PDF text layer; page-image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    }
+  ]
+}
