@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Triggle — Teacher Review</title>
+  <link rel="stylesheet" href="./assets/teacher-portal.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html">Triggle</a>
+    <span class="top-label">Teacher Review</span>
+    <button id="signout" class="quiet" type="button" hidden>Sign out</button>
+  </header>
+  <div class="shell">
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">PRIVATE EDUCATOR SPACE</p>
+      <h1 id="title">Review mathematics with confidence.</h1>
+      <p>Check each original question and worked solution. Your decisions are stored privately, separately from automated validation.</p>
+    </section>
+
+    <p id="message" class="message" aria-live="polite">Loading secure review access…</p>
+
+    <section id="unconfigured" class="panel" hidden>
+      <h2>Teacher access is not configured yet</h2>
+      <p>The site owner must first connect a Firebase project, deploy the security rules, and authorize the designated teacher account. Student lessons remain available normally.</p>
+      <a href="./index.html">Open Triggle for students</a>
+    </section>
+
+    <section id="login" class="panel login-panel" hidden>
+      <div class="lock-symbol" aria-hidden="true">🔐</div>
+      <h2>Sign in as an authorized teacher</h2>
+      <p>Use your approved Google account. Other Google accounts cannot access or submit reviews.</p>
+      <button id="google-login" class="primary" type="button">Sign in with Google</button>
+      <p class="muted">No password or one-time code is ever entered into Triggle.</p>
+    </section>
+
+    <section id="denied" class="panel" hidden>
+      <h2>Account not authorized</h2>
+      <p>This Google account does not have Teacher Review permission. Please contact the Triggle administrator.</p>
+      <button id="try-another" class="primary" type="button">Use another Google account</button>
+    </section>
+
+    <main id="workspace" hidden>
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <h2>Choose an exercise</h2>
+            <p class="muted">Select a question to inspect and review.</p>
+          </div>
+          <span class="private-chip">Teacher only</span>
+        </div>
+        <div class="selectors">
+          <label>Grade
+            <select id="grade-select" aria-label="Grade"></select>
+          </label>
+          <label>Chapter
+            <select id="chapter-select" aria-label="Chapter"></select>
+          </label>
+          <label>Exercise
+            <select id="exercise-select" aria-label="Exercise"></select>
+          </label>
+          <label>Question
+            <select id="question-select" aria-label="Question"></select>
+          </label>
+        </div>
+      </section>
+
+      <section class="panel" id="question-panel">
+        <div class="section-heading">
+          <h2 id="question-label">Question</h2>
+          <a id="app-link" href="./index.html" target="_blank" rel="noopener noreferrer">Open full question ↗</a>
+        </div>
+        <p class="muted">Question text</p>
+        <div id="question-text" class="question-text"></div>
+        <div id="source-note" class="source-note"></div>
+        <h3>How it works</h3>
+        <ol id="steps"></ol>
+        <div class="answer"><strong>Final answer</strong><p id="answer-text"></p></div>
+        <details>
+          <summary>See this question inside the student app</summary>
+          <iframe id="student-frame" title="Triggle student question preview" loading="lazy"></iframe>
+        </details>
+      </section>
+
+      <section class="panel">
+        <h2>Teacher's decision</h2>
+        <p class="muted">Approving means you checked the source and mathematical explanation yourself. It does not automatically certify Tamil where the source is still pending.</p>
+        <form id="review-form">
+          <fieldset class="decision-group">
+            <legend>Review outcome</legend>
+            <label><input type="radio" name="decision" value="approved" required> ✓ Approved</label>
+            <label><input type="radio" name="decision" value="needs-correction"> ✎ Needs correction</label>
+            <label><input type="radio" name="decision" value="pending"> ◷ Pending further review</label>
+          </fieldset>
+          <label class="remarks-label" for="remarks">Remarks or correction instructions (optional)</label>
+          <textarea id="remarks" maxlength="1500" rows="4" placeholder="e.g. In Question 3, explain why the remainder must be smaller than the divisor."></textarea>
+          <button id="save-review" class="primary" type="submit">Save private review</button>
+          <p class="muted">Reviews are kept as an append-only history. Automatic Codex correction is not active until the secure correction queue is connected.</p>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Review history for this question</h2>
+        <div id="history" aria-live="polite">No reviews loaded.</div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./assets/teacher-portal.js"></script>
+</body>
+</html>
