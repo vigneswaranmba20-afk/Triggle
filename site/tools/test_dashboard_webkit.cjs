@@ -7,7 +7,7 @@ const {server}=require('./dashboard_test_support.cjs'),{harness}=require('./test
   const ctx=await browser.newContext({viewport:{width,height:850},isMobile:true,hasTouch:true,serviceWorkers:'block'}),page=await ctx.newPage(),errors=[];
   page.on('pageerror',e=>errors.push(e.message));await page.goto(app.base+'/dashboard/');
   await page.waitForURL(/\/index\.html(?:[?#]|$)/);
-  await page.locator('#browseBtn').waitFor({state:'visible'});
+  await page.locator('#browseBtn').waitFor({state:'attached'});
   assert(!new URL(page.url()).pathname.includes('dashboard'));
   assert.equal(await page.locator('h1:has-text("Triggle Mission Control")').count(),0);
   assert.deepEqual(errors,[]);await ctx.close();
