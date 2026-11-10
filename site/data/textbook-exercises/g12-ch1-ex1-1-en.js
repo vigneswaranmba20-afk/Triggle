@@ -464,7 +464,7 @@ const entries=[
       "en": "Identity gives the inverse"
     },
     "q": {
-      "en": "If A = [[5, 3; −1, −2]], show that A² − 3A − 7I₂ = O₂. Hence find A⁻¹."
+      "en": "If A = [[5, 3; −1, −2]], show that A² − 3A − 7I₂ = O₂. hence find A⁻¹."
     },
     "steps": [
       {

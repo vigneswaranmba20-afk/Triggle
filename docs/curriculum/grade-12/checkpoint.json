@@ -1044,8 +1044,10 @@
       "npmTest": "passed",
       "batchValidators": "passed; both exercises integrated, all source tasks covered",
       "targetedBrowser": "passed; all 30 records at 320/390/1280px, offline reload, native matrices and exact source snapshots",
-      "fullBrowser": "running; required before merge",
+      "fullBrowser": "passed; npm run test:browser including all new records and legacy routes",
       "remoteCI": "pending"
-    }
+    },
+    "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/132",
+    "implementationCommit": "4682392c079fbcac9c2abdcc55cfb39b73d28147"
   }
 }

@@ -109,7 +109,7 @@
         ],
         "passed": true,
         "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
-        "recordSha256": "9c6e0554aba8bd8029397468fa86b70529f4709033acbc57f2ed7cab7ab402c0"
+        "recordSha256": "05dfc771ce0cd9ef4db4fa4458ca6979735e58c6664dd7ad00d9e11c7306f2f1"
       },
       {
         "recordId": "g12-ch1-ex1.1-q5",

@@ -186,7 +186,7 @@
       ],
       "sourceId": "tn-g12-en-v1-2025-owner",
       "sourceText": {
-        "en": "If A = [[5, 3; −1, −2]], show that A² − 3A − 7I₂ = O₂. Hence find A⁻¹."
+        "en": "If A = [[5, 3; −1, −2]], show that A² − 3A − 7I₂ = O₂. hence find A⁻¹."
       },
       "visualChecked": {
         "en": true

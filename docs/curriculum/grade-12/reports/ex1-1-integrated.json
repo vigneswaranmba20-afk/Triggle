@@ -109,7 +109,7 @@
         ],
         "passed": true,
         "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
-        "recordSha256": "9c6e0554aba8bd8029397468fa86b70529f4709033acbc57f2ed7cab7ab402c0"
+        "recordSha256": "05dfc771ce0cd9ef4db4fa4458ca6979735e58c6664dd7ad00d9e11c7306f2f1"
       },
       {
         "recordId": "g12-ch1-ex1.1-q5",
@@ -211,6 +211,12 @@
         "method": "Exact rational decryption and re-encryption of every row; alphabet mapping",
         "recordSha256": "01c49f015d6283a52081b3f5903243062e26dec7d83bf31cc552b4c8f1eb337b"
       }
+    ]
+  },
+  "correction": {
+    "previousModuleSha256": "d1bc9719d220de9abe1f17a8cc1efde49de3f2295e1b93cc13b50fe20817c9a2",
+    "affectedRecordIds": [
+      "g12-ch1-ex1.1-q4"
     ]
   }
 }
