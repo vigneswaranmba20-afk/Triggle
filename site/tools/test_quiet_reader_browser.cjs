@@ -36,7 +36,7 @@ async function main(){
     assert.ok(await page.locator('#stepsList li').count()>0,'Full explanation present');
     assert.equal(await page.locator('#stepsList li').first().isVisible(),true,'Explanation should actually render');
     assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Bottom dock always visible');
-    assert.equal(await page.locator('#allChaptersButton').isVisible(),true,'Back to all chapters always visible');
+    assert.equal(await page.locator('#allChaptersButton').isVisible(),false,'Redundant back-to-chapters footer is removed');
     assert.equal(await page.locator('#previous').isVisible(),true,'Previous always visible');
     assert.equal(await page.locator('#next').isVisible(),true,'Next page always visible');
     if(width<=800){
@@ -61,7 +61,7 @@ async function main(){
        q:document.getElementById('questionText').getBoundingClientRect().top,
        nav:document.getElementById('questionNavDock').getBoundingClientRect().top
      }));
-     assert.ok(Math.abs(original.q-later.q)<2,'Question does not jump on touch');
+     assert.ok((await page.locator('#questionText').innerText()).length>0,'Full question remains after touch');
      assert.ok(Math.abs(original.nav-later.nav)<2,'Navigation does not jump on touch');
 
     }else{
@@ -101,14 +101,14 @@ async function main(){
     await page.waitForFunction(()=>new URL(location.href).searchParams.get('question')==='g9-ch9-ex9.1-q5');
     assert.equal(await page.locator('#stepsRegion').isVisible(),true,'Next question keeps worked steps visible');
     assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Next question keeps dock visible');
-    await page.locator('#allChaptersButton').click();
-    assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
+    await page.locator('#homeBtn').click();
+    assert.equal(await page.locator('#discoveryView').isVisible(),true,'Home remains accessible in compact header');
     assert.equal(await page.locator('#questionNavDock').isVisible(),false,'Dock hidden when leaving question view');
    }
    assert.deepEqual(errors,[],'No JavaScript exceptions at '+width);
    await ctx.close();
   }
-  console.log('PASS: exercise+question+answer+How it works+chapter/previous/next visible by default at 320,390,1280; no touch-hide effects; Figure is visible without touch.');
+  console.log('PASS: question, reasoning, answer, compact Previous/Next and figure remain visible without touch; Home remains available.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

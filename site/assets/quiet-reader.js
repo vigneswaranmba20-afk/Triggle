@@ -1,47 +1,55 @@
-/* Permanent question reader: no touch-to-show or release-to-hide behavior.
-   Keep actions visible; scroll only the explanation for normal questions. */
-(() => {
+/* Adaptive continuous reader: no fixed question or nested solution scroll.
+   The compact question anchor appears only after the question leaves the viewport. */
+(()=>{
   'use strict';
   const mobile=window.matchMedia('(max-width:800px)');
   const body=document.body;
   const card=document.getElementById('lessonCard');
-  const viewport=document.querySelector('.lesson-container');
   const question=document.getElementById('questionText');
-  const answer=document.getElementById('answerBox');
-  const steps=document.getElementById('stepsRegion');
-  if(!card||!viewport||!question||!answer||!steps)return;
-  let active=false;
+  const jump=document.getElementById('questionJump');
+  const dock=document.getElementById('questionNavDock');
+  const context=document.querySelector('.status-row');
+  if(!card||!question||!jump||!dock||!context)return;
+  let active=false,queued=false;
   function measure(){
-    if(!active||body.classList.contains('reader-long-question'))return;
-    const box=card.getBoundingClientRect();
-    // Do not repeatedly toggle the overflow mode when ResizeObserver runs:
-    // that would reset scroll positions and move the navigation dock.
-    if(question.getBoundingClientRect().bottom>box.bottom-72 ||
-       box.bottom-steps.getBoundingClientRect().top<72){
-      body.classList.add('reader-long-question');
-    }
+    queued=false;
+    if(!active)return;
+    const past=question.getBoundingClientRect().bottom<context.getBoundingClientRect().bottom+8;
+    body.classList.toggle('reader-question-past',past);
+    jump.hidden=!past;
+    const tamil=document.documentElement.lang==='ta';
+    jump.textContent=tamil?'↑ வினா':'↑ Question';
+    jump.setAttribute('aria-label',tamil?'முழு வினாவுக்குத் திரும்பு':'Return to the complete question');
+    const h=Math.ceil(dock.getBoundingClientRect().height);
+    if(h>0)document.documentElement.style.setProperty('--triggle-reader-dock-height',h+'px');
   }
-  const schedule=()=>window.requestAnimationFrame(measure);
+  function schedule(){
+    if(!queued){queued=true;window.requestAnimationFrame(measure);}
+  }
   function sync(){
     active=mobile.matches&&body.classList.contains('textbook-reader')&&!card.hidden;
-    body.classList.toggle('reader-peek',active);
     body.classList.toggle('reader-options-visible',active);
-    body.classList.remove('reader-long-question');
+    body.classList.remove('reader-question-past','reader-long-question','reader-peek');
+    jump.hidden=true;
     for(const sel of ['#visualLessonAction','.lesson-bottom','.class-dock']){
       const el=document.querySelector(sel);
       if(el)el.inert=false;
     }
     if(active)schedule();
   }
+  jump.addEventListener('click',()=>{
+    const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    question.scrollIntoView({block:'start',behavior:reduced?'auto':'smooth'});
+    question.focus({preventScroll:true});
+  });
   window.addEventListener('triggle:lessonchange',sync);
+  window.addEventListener('scroll',schedule,{passive:true});
+  window.addEventListener('resize',()=>{sync();schedule()},{passive:true});
   mobile.addEventListener('change',sync);
-  window.addEventListener('resize',()=>{
-    body.classList.remove('reader-long-question');
-    schedule();
-  },{passive:true});
   if(typeof ResizeObserver==='function'){
-    const resize=new ResizeObserver(schedule);
-    for(const el of [viewport,question,answer])resize.observe(el);
+    const observer=new ResizeObserver(schedule);
+    observer.observe(dock);
+    observer.observe(question);
   }
   if(document.fonts?.ready)document.fonts.ready.then(schedule);
   sync();

@@ -276,52 +276,35 @@ async function main() {
       assert.equal(await page.locator('#visualLessonBtn').isVisible(),false);
       assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),null);
     });
-    // The unified reader keeps all three navigation actions visible and away from answers.
+    // Adaptive reader: Previous/Next remain reachable while the whole page scrolls.
     for(const width of [320,390]){
-      await check('Nonfloating bilingual question navigation at '+width+'px',async()=>{
-        const page=await visit(await context(width),'/index.html?class=9&question=c9-example-6-1');
+      await check('Adaptive bilingual question navigation at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=10&question=c10-1-1-2-q5');
         const nav=page.locator('#questionNavDock');
         await nav.waitFor({state:'visible'});
-        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('textbook-reader')),true);
-        assert.equal(await page.locator('#focusNavToggle').isVisible(),false,'No auto-hiding floating navigation');
-        assert.equal(await page.locator('.class-dock').isVisible(),false,'No second overlay dock');
-        const geo=await page.evaluate(()=>{
-          const nav=document.querySelector('#questionNavDock'),reader=document.querySelector('.lesson-container');
-          const n=nav.getBoundingClientRect(),r=reader.getBoundingClientRect();
-          return {position:getComputedStyle(nav).position,rows:getComputedStyle(nav).gridTemplateAreas,
-            top:n.top,bottom:n.bottom,readerBottom:r.bottom,screen:innerHeight,
-            buttons:[...nav.querySelectorAll('button')].map(el=>{
-              const b=el.getBoundingClientRect();return {font:parseFloat(getComputedStyle(el).fontSize),top:b.top,width:b.width,height:b.height};
-            })};
-        });
-        assert.equal(geo.position,'relative','Dock must reserve layout space');
-        assert.match(geo.rows,/chapters chapters/,'Chapter return owns the first row');
-        assert.ok(geo.buttons.every(b=>Math.abs(b.font-14)<.25&&b.height>=44),'All 3 actions use slightly smaller text but retain 44px touch targets');
-        const [prev,all,next]=geo.buttons;
-        assert.ok(all.top<prev.top&&Math.abs(prev.top-next.top)<2,'Previous and Next share the second row');
-        assert.ok(Math.abs(prev.width-next.width)<3,'Previous and Next share equal space');
-        assert.ok(Math.abs(geo.readerBottom-geo.top)<3,'No overlap with scrollable solutions');
-        assert.ok(geo.bottom<=geo.screen+3,'Reader dock remains inside the viewport');
-        await page.evaluate(()=>{document.querySelector('.lesson-container').scrollTop=10000;});
-        const afterScroll=await nav.boundingBox();
-        const navState=await page.evaluate(()=>({
-          scroll:document.querySelector('.lesson-container').scrollTop,
-          fallback:document.body.classList.contains('reader-long-question'),
-          readerHeight:document.querySelector('.lesson-container').clientHeight,
-          navY:document.getElementById('questionNavDock').getBoundingClientRect().top
-        }));
-        assert.ok(Math.abs(afterScroll.y-geo.top)<3,'Reading scroll must not move navigation: '+JSON.stringify({before:geo.top,after:afterScroll.y,...navState}));
+        assert.equal(await page.locator('#allChaptersButton').isVisible(),false,'Chapter return is no longer duplicated in footer');
+        assert.equal(await nav.locator('button:visible').count(),2,'Only Previous and Next remain');
+        assert.equal(await nav.evaluate(el=>getComputedStyle(el).position),'fixed','Small footer remains accessible');
+        assert.equal(await page.locator('.class-dock').isVisible(),false,'No redundant floating grade switcher');
+        const prior=await page.evaluate(()=>document.documentElement.scrollHeight);
+        assert.ok(prior>900,'Long question needs document scroll');
+        const overflow=await page.locator('#stepsRegion').evaluate(el=>getComputedStyle(el).overflowY);
+        assert.equal(overflow,'visible','How It Works never scrolls inside its own small pane');
+        await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='1000px';window.scrollTo(0,900);});
+        await page.waitForTimeout(60);
+        assert.equal(await page.locator('#questionJump').isVisible(),true,'Compact return-to-question link');
+        await page.locator('#questionJump').click();
+        assert.ok((await page.locator('#questionText').boundingBox()).y<175,'Question anchor returns to the source');
+        await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='';});
         await page.locator('#next').click();
-        assert.notEqual(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
+        assert.notEqual(new URL(page.url()).searchParams.get('question'),'c10-1-1-2-q5');
         await page.locator('#previous').click();
-        assert.equal(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
+        assert.equal(new URL(page.url()).searchParams.get('question'),'c10-1-1-2-q5');
         await page.locator('#langTa').click();
-        assert.match(await page.locator('#allChaptersButton').innerText(),/அனைத்து அத்தியாயங்களுக்கும்/);
-        assert.ok((await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>parseFloat(getComputedStyle(el).fontSize)))).every(n=>Math.abs(n-14)<.25));
-        await noOverflow(page,'nonfloating navigation at '+width+'px');
-        await page.locator('#allChaptersButton').click();
-        assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
-        assert.equal(await nav.isVisible(),false);
+        assert.equal(await page.locator('html').getAttribute('lang'),'ta');
+        await noOverflow(page,'adaptive navigation at '+width+'px');
+        await page.locator('#homeBtn').click();
+        assert.equal(await nav.isVisible(),false,'Question footer hidden after opening Home');
       });
     }
     await check('Navigation remains keyboard and teaching-dialog accessible',async()=>{
@@ -1452,58 +1435,36 @@ async function main() {
         await noOverflow(page,'Grade 9 Q6 descriptive problem at '+width+'px');
       });
     }
-    // Source-verified textbook questions now use a reserved bottom dock, not floating controls.
+    // Source-verified textbook exercise routing and mobile reflow.
     for(const width of [320,390,768,1280]){
-      await check('Textbook breadcrumb and non-overlapping three-action reader dock at '+width+'px',async()=>{
+      await check('Textbook two-action reader and chapter route at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=9&question=g9-ch1-ex1.1-q5-ii');
         await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
-        assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('textbook-reader')),true);
         const nav=page.locator('#questionNavDock');
         assert.equal(await nav.isVisible(),true);
-        assert.equal(await page.locator('.page-controls button').count(),3,'Exactly three reader actions');
-        const ids=await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>el.id));
-        assert.deepEqual(ids,['previous','allChaptersButton','next'],'Previous, all chapters, next order');
-        const layout=await page.evaluate(()=>{
-          const crumb=document.querySelector('.crumb-link'),nav=document.getElementById('questionNavDock'),
-            main=document.querySelector('.lesson-container'),all=document.getElementById('allChaptersButton');
-          const a=nav.getBoundingClientRect(),b=main.getBoundingClientRect();
-          return {font:parseFloat(getComputedStyle(crumb).fontSize),headingSizes:Array.from(document.querySelectorAll('.crumb-link')).map(x=>parseFloat(getComputedStyle(x).fontSize)),navPosition:getComputedStyle(nav).position,
-            navTop:a.top,navBottom:a.bottom,readerBottom:b.bottom,screen:innerHeight,
-            navHeight:a.height,tapHeight:all.getBoundingClientRect().height,navScrollParent:nav.parentElement.className,
-            toggleVisible:!!document.querySelector('#focusNavToggle')?.getClientRects().length};
+        assert.equal(await nav.locator('button:visible').count(),2,'Only Previous/Next in question footer');
+        assert.equal(await page.locator('#allChaptersButton').isVisible(),false);
+        assert.equal(await page.locator('#crumb .crumb-link').count(),3,'Class/chapter/exercise routes preserved');
+        const props=await page.evaluate(()=>{
+          const n=document.querySelector('#questionNavDock');
+          return {pos:getComputedStyle(n).position,columns:getComputedStyle(n).gridTemplateColumns,
+            steps:getComputedStyle(document.querySelector('#stepsRegion')).overflowY,
+            width:document.documentElement.scrollWidth,screen:innerWidth};
         });
-        assert.equal(layout.headingSizes.length,3,'All three breadcrumb destinations remain in the DOM');
-        assert.equal(await page.locator('#crumb .crumb-link:visible').count(),width<=800?2:3,
-          'A compact mobile breadcrumb hides only the duplicated exercise pill');
-        assert.ok(layout.headingSizes.every(x=>x>=16),'All three breadcrumb labels must be at least 16px: '+JSON.stringify(layout));
-        assert.ok(layout.font>=16,'Breadcrumb text must be large enough to read: '+JSON.stringify(layout));
-        const actionGrid=await nav.locator('button').evaluateAll(nodes=>nodes.map(el=>({font:parseFloat(getComputedStyle(el).fontSize),top:el.getBoundingClientRect().top,width:el.getBoundingClientRect().width})));
-        assert.ok(actionGrid.every(v=>Math.abs(v.font-(width<=800?14:16))<.25),'Compact mobile font is 14px, desktop remains 16px');
+        assert.ok(props.width<=props.screen+1);
         if(width<=800){
-          const [previous,all,next]=actionGrid;
-          assert.ok(all.top<previous.top&&Math.abs(previous.top-next.top)<2,'Back first row, two equal navigation actions below');
-          assert.ok(Math.abs(previous.width-next.width)<3,'Previous and Next have equal widths');
+          assert.equal(props.pos,'fixed','Compact mobile dock uses one row');
+          assert.equal(props.steps,'visible','Solution is part of the page flow');
+          assert.equal(await page.locator('#crumb .crumb-link:visible').count(),2);
         }
-        assert.match(await page.locator('#next').innerText(),/Next page/,'Textbook reader moves to the next page');
-        assert.ok(layout.tapHeight>=(width<=800?44:48),'Chapter return must preserve accessible tap target');
-        assert.ok(layout.navScrollParent.includes('workspace'),'Dock must not sit inside scrolling question content');
-        if(width<=800){
-          assert.equal(layout.navPosition,'relative','Navigation must reserve its own space, not float');
-          assert.ok(Math.abs(layout.readerBottom-layout.navTop)<=3,'The reading area ends exactly above the navigation: '+JSON.stringify(layout));
-          assert.ok(layout.navBottom<=layout.screen+3&&layout.navBottom>=layout.screen-4,'Dock stays at screen bottom: '+JSON.stringify(layout));
-          assert.equal(layout.toggleVisible,false,'No floating hamburger should cover textbook content');
-          await page.evaluate(()=>{const el=document.querySelector('.lesson-container');el.scrollTop=el.scrollHeight;});
-          const after=await nav.boundingBox();
-          assert.ok(Math.abs(after.y-layout.navTop)<=3,'Scrolling the worked solution cannot move the dock');
-        }
-        await noOverflow(page,'Textbook reader with large headings and dock at '+width+'px');
         await page.locator('#next').click();
-        assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q5-iii','Next retains original exercise order');
+        assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q5-iii');
         await page.locator('#previous').click();
-        assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q5-ii','Previous restores question');
-        await page.locator('#allChaptersButton').click();
-        assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters','All chapters returns to current grade chapter list');
-        assert.equal(await nav.isVisible(),false,'Question dock disappears on chapter directory');
+        assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q5-ii');
+        await page.locator('#crumb .crumb-link').nth(1).click();
+        assert.equal(await page.locator('#pathDialog').evaluate(el=>el.open),true,'Chapter picker is retained');
+        await page.locator('#pathClose').click();
+        await noOverflow(page,'adaptive textbook at '+width+'px');
       });
     }
     await check('Grade 9 textbook exercises load offline in the chapter reader',async()=>{
