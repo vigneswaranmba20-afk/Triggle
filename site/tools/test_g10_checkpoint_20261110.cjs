@@ -6,8 +6,8 @@ for(const f of ['data/class-10.js','data/class-10-ex1-1-2025.js','data/class-10-
 const all=ctx.window.TRIGGLE_CLASSES[10].items;
 assert.equal(new Set(all.map(x=>x.id)).size,all.length,'No duplicate question IDs');
 const expected=["c10-3-ex3-1-q1-i","c10-4-ex4-1-q2","c10-4-ex4-1-q3","c10-8-ex8-1-q1-i","c10-8-ex8-1-q1-ii","c10-8-ex8-1-q2"];
-for(const id of expected){const matches=all.filter(x=>x.id===id);assert.equal(matches.length,1,'Expected exactly one '+id);const x=matches[0];assert.equal(x.translationReview,'pending');assert.match(x.reference,/English printed p\\./);assert.ok(x.steps.length>=3);}
-const existing=7;
+for(const id of expected){const matches=all.filter(x=>x.id===id);assert.equal(matches.length,1,'Expected exactly one '+id);const x=matches[0];assert.equal(x.translationReview,'pending');assert.match(x.reference,/English printed p\./);assert.ok(x.steps.length>=3);}
+const existing=["c10-1-ex1-1-q6-i","c10-1-ex1-1-q6-ii","c10-1-ex1-1-q6-iii","c10-1-ex1-1-q7-i","c10-1-ex1-1-q7-ii","c10-6-6-1-1","c10-6-6-1-2"];
 for(const id of existing)assert.equal(all.filter(x=>x.id===id).length,1,'Existing item must not duplicate: '+id);
 const by=id=>all.find(x=>x.id===id);
 assert.match(by('c10-3-ex3-1-q1-i').answer,/2, −1, 4/);
