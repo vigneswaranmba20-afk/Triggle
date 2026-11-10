@@ -1,0 +1,70 @@
+{
+  "schema": "triggle.grade11.ex1.2-q1-answer-key-logic-audit.v1",
+  "grade": 11,
+  "chapter": 1,
+  "exercise": "1.2",
+  "question": 1,
+  "source": {
+    "driveFileId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "edition": "2025",
+    "volume": "English I",
+    "answerAppendixPrintedPage": 290,
+    "originalQuestionPageImageVerified": false
+  },
+  "parts": [
+    {
+      "id": "g11-ch1-ex1.2-q1-i",
+      "key": "reflexive; not symmetric; transitive",
+      "logic": "Reflexive requires every (x,x); asymmetric witness (a,b) without (b,a) disproves symmetry; transitivity requires closure of every two-link chain.",
+      "verifiedFromQuestion": false
+    },
+    {
+      "id": "g11-ch1-ex1.2-q1-ii",
+      "key": "not reflexive; symmetric; not transitive",
+      "logic": "A missing diagonal pair disproves reflexivity; every listed pair must have its reverse; one two-link chain with missing shortcut disproves transitivity.",
+      "verifiedFromQuestion": false
+    },
+    {
+      "id": "g11-ch1-ex1.2-q1-iii",
+      "key": "reflexive; not symmetric; not transitive",
+      "logic": "Check all diagonal pairs; find a missing reverse and a two-link chain missing its shortcut.",
+      "verifiedFromQuestion": false
+    },
+    {
+      "id": "g11-ch1-ex1.2-q1-iv",
+      "key": "reflexive; symmetric",
+      "logic": "The extracted key does not specify transitivity. Do not infer it or label this an equivalence relation.",
+      "verifiedFromQuestion": false
+    },
+    {
+      "id": "g11-ch1-ex1.2-q1-v",
+      "key": "empty relation; not reflexive; symmetric; transitive",
+      "logic": "The empty relation is vacuously symmetric and transitive. It is not reflexive on a nonempty underlying set, but IS reflexive on an empty underlying set; verify the textbook domain.",
+      "verifiedFromQuestion": false
+    }
+  ],
+  "independentChecks": {
+    "uniqueIds": true,
+    "answerKeyEntries": 5,
+    "logicRules": [
+      "For empty R, symmetry and transitivity hold vacuously.",
+      "For empty R on nonempty A, reflexivity fails.",
+      "For empty R on empty A, reflexivity holds."
+    ],
+    "verifiedByFiniteEnumeration": true
+  },
+  "coverage": {
+    "provisionalSubparts": 5,
+    "certifiedQuestionStemsAdded": 0,
+    "certifiedSubpartsAdded": 0,
+    "studentFacingSolutionsAdded": 0,
+    "tamilCertifiedAdded": 0,
+    "exerciseQuestionDenominator": null,
+    "exerciseSubpartDenominator": null
+  },
+  "publication": {
+    "allowed": false,
+    "reason": "Original question statements, underlying sets and relation diagrams not visually verified; appendix-only logical audit."
+  },
+  "next": "Inspect printed Exercise 1.2 Q1 page image, record exact five relations and underlying sets, then enumerate relation properties independently and write full English solutions."
+}
