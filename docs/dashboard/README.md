@@ -1,8 +1,16 @@
-# Triggle Mission Control
+# Triggle Mission Control (retired)
+
+The owner-facing Mission Control dashboard was removed at the owner's request on 2026-11-10. Both old URLs (`/Triggle/dashboard/` and `/Triggle/site/dashboard/`) now redirect to the public mathematics learning homepage. The independent Teacher Review page remains available at `/Triggle/site/teacher-review.html`.
+
+The notes below describe the previous dashboard implementation for historical context only; it is no longer published as a dashboard.
+
+---
+
+# Archived implementation notes
 
 Owner bookmark: **https://vigneswaranmba20-afk.github.io/Triggle/dashboard/**
 
-Current canonical dashboard: **https://vigneswaranmba20-afk.github.io/Triggle/site/dashboard/**
+Former canonical dashboard: **https://vigneswaranmba20-afk.github.io/Triggle/site/dashboard/** (redirects to lessons)
 
 Teacher Dashboard: **https://vigneswaranmba20-afk.github.io/Triggle/site/teacher-review.html**
 
