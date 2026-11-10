@@ -47,7 +47,7 @@ function chapterItems() {
   return gradeItems().filter(item => String(item.chapter) === $("chapter-select").value);
 }
 function exerciseItems() {
-  return chapterItems().filter(item => String(item.exercise || "") === $("exercise-select").value);
+  return chapterItems().filter(item => String(item.exercise || "Other") === $("exercise-select").value);
 }
 function updateGrade() {
   const chapters = uniqueSorted(gradeItems().map(item => item.chapter));
@@ -112,7 +112,7 @@ async function showSelected() {
   $("question-label").textContent = item.label?.en || item.id;
   $("question-text").textContent = item.q?.en || "Original English source text not available.";
   $("source-note").textContent = item.reference || "";
-  $("answer-text").textContent = String(item.answer || "No answer recorded");
+  $("answer-text").textContent = String(item.answer?.en || item.answer || "No answer recorded");
   renderSteps(item);
   const url = questionUrl(item);
   $("app-link").href = url;
@@ -194,11 +194,12 @@ async function loadCurriculum() {
         document.head.appendChild(script);
       });
     }
-    records = Object.values(window.TRIGGLE_CLASSES || {}).flatMap(grade => grade.items || [])
-      .filter(item => item && item.id && item.kind === "textbook" && item.q?.en)
-      .sort((a, b) => a.classNum - b.classNum || Number(a.chapter) - Number(b.chapter) ||
-        String(a.exercise).localeCompare(String(b.exercise), undefined, { numeric: true }) ||
-        String(a.label?.en).localeCompare(String(b.label?.en), undefined, { numeric: true }));
+    if (!window.TriggleTeacherQuestions?.collect) {
+      throw new Error("Teacher question selection module is missing");
+    }
+    records = window.TriggleTeacherQuestions.collect(
+      window.TRIGGLE_CLASSES, window.TRIGGLE_CURRICULUM
+    );
     if (!records.length) throw new Error("No textbook questions were available");
     options("grade-select", uniqueSorted(records.map(item => item.classNum)).map(grade => ({ value: grade, label: "Grade " + grade })), "10");
     selectors.forEach(id => { $(id).disabled = false; });
