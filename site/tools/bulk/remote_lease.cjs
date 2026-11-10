@@ -38,9 +38,12 @@ function acquireRemoteLease(scope,options={}){
  const ownership={schemaVersion:1,scope,ref:ctx.ref,sha,token,owner,remoteId:ctx.remoteId,stateFile:ctx.stateFile};
  try{fs.mkdirSync(path.dirname(ctx.stateFile),{recursive:true});fs.writeFileSync(ctx.stateFile,JSON.stringify(ownership,null,2)+'\n',{flag:'wx',mode:0o600});}
  catch(error){
-  try{git(ctx.root,['push','--porcelain','--force-with-lease='+ctx.ref+':'+sha,ctx.remote,(free||'')+':'+ctx.ref]);}catch{const failure=new Error('Remote '+scope+' lease claimed but local ownership could not be saved; '+ctx.ref+' requires owner inspection');failure.ownership=ownership;throw failure;}
+  try{git(ctx.root,['push','--porcelain','--force-with-lease='+ctx.ref+':'+sha,ctx.remote,(free||'')+':'+ctx.ref]);if(remoteHead(ctx.root,ctx.remote,ctx.ref)!==free)throw Error('Cleanup readback mismatch');}catch{const failure=new Error('Remote '+scope+' lease claimed but local ownership could not be saved; '+ctx.ref+' requires owner inspection');failure.ownership=ownership;throw failure;}
   throw Error('Remote lease ownership could not be saved; the claimed ref was released');
  }
+ // A successful push is not proof of continued ownership. Keep the saved
+ // receipt on an uncertain readback; never reset a ref now owned by another run.
+ if(remoteHead(ctx.root,ctx.remote,ctx.ref)!==sha)throw Error('Remote '+scope+' lease claim readback mismatch; saved ownership retained for inspection');
  return ownership;
 }
 function releaseRemoteLease(scope,{root,remote='origin',expectedSha,token}={}){
@@ -51,6 +54,7 @@ function releaseRemoteLease(scope,{root,remote='origin',expectedSha,token}={}){
  const free=persistentFreeCommit(root);
  try{git(root,['push','--porcelain','--force-with-lease='+ctx.ref+':'+expectedSha,remote,(free||'')+':'+ctx.ref]);}
  catch{const failure=new Error('Remote '+scope+' lease release rejected; '+ctx.ref+' was not removed. Inspect the recorded owner before manual recovery');failure.ref=ctx.ref;failure.ownedSha=expectedSha;throw failure;}
+ if(remoteHead(root,remote,ctx.ref)!==free)throw Error('Remote '+scope+' lease release readback mismatch; saved ownership retained for inspection');
  // Remove only the exact saved owner. A changed local state must also be inspected manually.
  const latest=savedOwner(ctx);if(latest.sha!==expectedSha||latest.token!==ownership.token)throw Error('Remote lease released, but local ownership changed; saved state was retained');
  fs.unlinkSync(ctx.stateFile);return {scope,ref:ctx.ref,sha:expectedSha,released:true};
