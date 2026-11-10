@@ -31,6 +31,12 @@ async function main(){
    assert.equal(await page.locator('#allChaptersButton').isVisible(),false,'Remove duplicated chapter footer action');
    assert.equal(await page.locator('#previous').isVisible(),true);
    assert.equal(await page.locator('#next').isVisible(),true);
+   // The reader measures its navigation dock on animation frames and after
+   // font readiness. Observe the completed layout rather than racing that work.
+   await page.evaluate(async()=>{
+    await document.fonts.ready;
+    await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+   });
    const metrics=await page.evaluate(()=>{
     const q=document.querySelector('#questionText'),s=document.querySelector('#stepsRegion'),nav=document.querySelector('#questionNavDock'),r=document.querySelector('#lessonCard');
     return {viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,
@@ -48,7 +54,7 @@ async function main(){
    if(width<=800){
     assert.equal(metrics.solutionOverflowY,'visible','No independently scrolling worked steps: '+width);
     assert.equal(metrics.navPosition,'fixed','Single persistent compact question navigation');
-    assert.ok(metrics.docScroll>metrics.viewHeight+100||metrics.bodyScroll>metrics.viewHeight+100,'Long question must scroll naturally');
+    assert.ok(metrics.docScroll>metrics.viewHeight+100||metrics.bodyScroll>metrics.viewHeight+100,'Long question must scroll naturally: '+width+' '+JSON.stringify(metrics));
     await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='1000px';window.scrollTo(0,950);});
     await page.waitForTimeout(60);
     const jumped=await page.locator('#questionJump').isVisible();
