@@ -166,28 +166,49 @@ async function loadHistory(questionId) {
   }
 }
 async function loadCurriculum() {
-  const response = await fetch("./index.html", { cache: "no-store" });
-  if (!response.ok) throw new Error("Could not read Triggle lesson list");
-  const doc = new DOMParser().parseFromString(await response.text(), "text/html");
-  const urls = [...doc.querySelectorAll("script[src]")].map(node => node.getAttribute("src"))
-    .filter(src => /^\.?\/?data\/(class-|textbook-exercises\/)/.test(src));
-  for (const src of urls) {
-    await new Promise((resolve, reject) => {
-      const script = document.createElement("script");
-      script.src = new URL(src, new URL("./index.html", location.href)).href;
-      script.onload = resolve;
-      script.onerror = () => reject(new Error("Missing lesson module: " + src));
-      document.head.appendChild(script);
-    });
+  const selectors = ["grade-select", "chapter-select", "exercise-select", "question-select"];
+  selectors.forEach(id => { $(id).disabled = true; });
+  options("grade-select", [{ value: "", label: "Loading questions…" }]);
+  options("chapter-select", [{ value: "", label: "Loading…" }]);
+  options("exercise-select", [{ value: "", label: "Loading…" }]);
+  options("question-select", [{ value: "", label: "Loading…" }]);
+  message("Teacher access verified. Loading current textbook questions…");
+  try {
+    const response = await fetch("./index.html", { cache: "no-store" });
+    if (!response.ok) throw new Error("Could not read the current Triggle question list");
+    const doc = new DOMParser().parseFromString(await response.text(), "text/html");
+    // Follow the same script order as the student app. Generated batches
+    // depend on data/curriculum.js, not just class-N.js.
+    const urls = [...doc.querySelectorAll("script[src]")].map(node => node.getAttribute("src"))
+      .filter(src => /^\.?\/?data\/(class-|curriculum\.js|textbook-exercises\/)/.test(src));
+    if (!urls.some(src => /data\/curriculum\.js(?:\?|$)/.test(src))) {
+      throw new Error("Student curriculum registry is missing");
+    }
+    for (const [i, src] of urls.entries()) {
+      message("Teacher access verified. Loading textbook modules " + (i + 1) + "/" + urls.length + "…");
+      await new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = new URL(src, new URL("./index.html", location.href)).href;
+        script.onload = resolve;
+        script.onerror = () => reject(new Error("Could not load: " + src));
+        document.head.appendChild(script);
+      });
+    }
+    records = Object.values(window.TRIGGLE_CLASSES || {}).flatMap(grade => grade.items || [])
+      .filter(item => item && item.id && item.kind === "textbook" && item.q?.en)
+      .sort((a, b) => a.classNum - b.classNum || Number(a.chapter) - Number(b.chapter) ||
+        String(a.exercise).localeCompare(String(b.exercise), undefined, { numeric: true }) ||
+        String(a.label?.en).localeCompare(String(b.label?.en), undefined, { numeric: true }));
+    if (!records.length) throw new Error("No textbook questions were available");
+    options("grade-select", uniqueSorted(records.map(item => item.classNum)).map(grade => ({ value: grade, label: "Grade " + grade })), "10");
+    selectors.forEach(id => { $(id).disabled = false; });
+    updateGrade();
+    message("Teacher access verified. " + records.length + " published textbook questions are ready for review.");
+  } catch (error) {
+    message("Your teacher account is authorized, but the questions could not load: " +
+      error.message + ". Refresh the page to retry.", true);
+    throw error;
   }
-  records = Object.values(window.TRIGGLE_CLASSES || {}).flatMap(grade => grade.items || [])
-    .filter(item => item && item.id && item.kind === "textbook" && item.q?.en)
-    .sort((a, b) => a.classNum - b.classNum || Number(a.chapter) - Number(b.chapter) ||
-      String(a.exercise).localeCompare(String(b.exercise), undefined, { numeric: true }) ||
-      String(a.label?.en).localeCompare(String(b.label?.en), undefined, { numeric: true }));
-  if (!records.length) throw new Error("No textbook questions were available");
-  options("grade-select", uniqueSorted(records.map(item => item.classNum)).map(grade => ({ value: grade, label: "Grade " + grade })), "10");
-  updateGrade();
 }
 async function beginGoogleLogin() {
   if (!auth) return;
@@ -230,8 +251,11 @@ async function authChanged(user) {
     }
     reviewer = user;
     view("workspace");
-    message("Authenticated teacher access. Your review history is private.");
-    if (!records.length) await loadCurriculum();
+    message("Authenticated teacher access. Loading questions…");
+    if (!records.length) {
+      try { await loadCurriculum(); }
+      catch (loadError) { console.error("Teacher question loading failed:", loadError); }
+    }
   } catch (error) {
     view("denied");
     message("Could not verify teacher permission: " + (error.code || error.message), true);
