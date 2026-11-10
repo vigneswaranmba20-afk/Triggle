@@ -52,11 +52,11 @@ const entries=[
         "eq": "adj A = [[2, −5; −1, 2]]; A⁻¹ = [[−2, 5; 1, −2]]"
       },
       {
-        "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+        "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
         "eq": "(-2) × (-2) + (5) × (-3) = -11"
       },
       {
-        "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+        "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
         "eq": "(1) × (-2) + (-2) × (-3) = 4"
       },
       {
@@ -117,11 +117,11 @@ const entries=[
         "eq": "adj A = [[2, 1; −3, 2]]; A⁻¹ = [[2/7, 1/7; −3/7, 2/7]]"
       },
       {
-        "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+        "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
         "eq": "(2/7) × (8) + (1/7) × (-2) = 2"
       },
       {
-        "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+        "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
         "eq": "(-3/7) × (8) + (2/7) × (-2) = -4"
       },
       {
@@ -202,15 +202,15 @@ const entries=[
         "eq": "adj A = [[0, 4, 4; 4, 1, −3; −4, 11, −1]]; A⁻¹ = [[0, 1/4, 1/4; 1/4, 1/16, −3/16; −1/4, 11/16, −1/16]]"
       },
       {
-        "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+        "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
         "eq": "(0) × (9) + (1/4) × (9) + (1/4) × (-1) = 2"
       },
       {
-        "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+        "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
         "eq": "(1/4) × (9) + (1/16) × (9) + (-3/16) × (-1) = 3"
       },
       {
-        "en": "The 3th component of X is the dot product of row 3 of A⁻¹ with B.",
+        "en": "The third component of X is the dot product of row 3 of A⁻¹ with B.",
         "eq": "(-1/4) × (9) + (11/16) × (9) + (-1/16) × (-1) = 4"
       },
       {
@@ -291,15 +291,15 @@ const entries=[
         "eq": "adj A = [[−18, 0, 9; 13, −3, 1; 32, 3, −10]]; A⁻¹ = [[−2/3, 0, 1/3; 13/27, −1/9, 1/27; 32/27, 1/9, −10/27]]"
       },
       {
-        "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+        "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
         "eq": "(-2/3) × (2) + (0) × (31) + (1/3) × (13) = 3"
       },
       {
-        "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+        "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
         "eq": "(13/27) × (2) + (-1/9) × (31) + (1/27) × (13) = -2"
       },
       {
-        "en": "The 3th component of X is the dot product of row 3 of A⁻¹ with B.",
+        "en": "The third component of X is the dot product of row 3 of A⁻¹ with B.",
         "eq": "(32/27) × (2) + (1/9) × (31) + (-10/27) × (13) = 1"
       },
       {
@@ -409,11 +409,11 @@ const entries=[
         "eq": "adj A = [[9, −3; −1, 1]]; A⁻¹ = [[3/2, −1/2; −1/6, 1/6]]"
       },
       {
-        "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+        "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
         "eq": "(3/2) × (19800) + (-1/2) × (23400) = 18000"
       },
       {
-        "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+        "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
         "eq": "(-1/6) × (19800) + (1/6) × (23400) = 600"
       },
       {
@@ -482,11 +482,11 @@ const entries=[
         "eq": "adj A = [[5, −4; −2, 4]]; A⁻¹ = [[5/12, −1/3; −1/6, 1/3]]"
       },
       {
-        "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+        "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
         "eq": "(5/12) × (1/3) + (-1/3) × (1/4) = 1/18"
       },
       {
-        "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+        "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
         "eq": "(-1/6) × (1/3) + (1/3) × (1/4) = 1/36"
       },
       {
@@ -575,15 +575,15 @@ const entries=[
         "eq": "adj A = [[7, 19, 3; −1, 7, 19; 10, −2, 14]]; A⁻¹ = [[7/68, 19/68, 3/68; −1/68, 7/68, 19/68; 5/34, −1/34, 7/34]]"
       },
       {
-        "en": "The 1th component of X is the dot product of row 1 of A⁻¹ with B.",
+        "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
         "eq": "(7/68) × (15000) + (19/68) × (1000) + (3/68) × (4000) = 2000"
       },
       {
-        "en": "The 2th component of X is the dot product of row 2 of A⁻¹ with B.",
+        "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
         "eq": "(-1/68) × (15000) + (7/68) × (1000) + (19/68) × (4000) = 1000"
       },
       {
-        "en": "The 3th component of X is the dot product of row 3 of A⁻¹ with B.",
+        "en": "The third component of X is the dot product of row 3 of A⁻¹ with B.",
         "eq": "(5/34) × (15000) + (-1/34) × (1000) + (7/34) × (4000) = 3000"
       },
       {
