@@ -33,17 +33,56 @@
     "implementationNpmTest": "passed",
     "pilotBrowser": "passed; new Grade 10 Exercise 2.1 all records, 320/390/1280px, offline reload",
     "broaderBrowser": "passed; complete npm run test:browser, including immutable 105 legacy routes and new pilot",
-    "remoteLeases": "passed; two isolated clones and actual production grade/integration acquisition"
+    "remoteLeases": "passed; two isolated clones and actual production grade/integration acquisition",
+    "remoteRequiredChecks": [
+      {
+        "name": "Validate and test site",
+        "status": "success",
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42742686158/job/129587349272"
+      },
+      {
+        "name": "Grade 9 usability audit",
+        "status": "success",
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42742685928/job/129587342525"
+      },
+      {
+        "name": "Full validation and browser suite",
+        "status": "success",
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42742685760/job/129587342147"
+      }
+    ]
   },
   "release": {
-    "commit": "c1aafea64c1b3fe70d00f1b7efba493beaa33f6f",
+    "commit": "da540bb5b384ea73d851ba1c9d33d14bf17d86d7",
     "pr": 119,
     "deployment": {
-      "status": "pending required GitHub CI, merge and Pages verification",
-      "candidateBranch": "engine/universal-curriculum-bulk-20261110"
+      "status": "published and live verified",
+      "commit": "da540bb5b384ea73d851ba1c9d33d14bf17d86d7",
+      "workflowRun": 42743022973,
+      "workflowUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42743022973",
+      "workflowConclusion": "success",
+      "live": {
+        "passed": true,
+        "url": "https://vigneswaranmba20-afk.github.io/Triggle/index.html?class=10&question=c10-2-ex2-1-q1",
+        "questions": 10,
+        "tasks": 13,
+        "publishedModuleSha256": "a44e474ef9516aa795507e9046cc0e41bb208dd78ed8c9a97a7742be3b81bcd7",
+        "checks": [
+          "all exact source questions and final answers",
+          "Previous navigation",
+          "Tamil pending notice",
+          "mobile overflow",
+          "preserved Chapter 1 figure",
+          "offline reload",
+          "module bytes match tested source"
+        ]
+      }
     },
     "branch": "engine/universal-curriculum-bulk-20261110",
-    "prUrl": "https://github.com/vigneswaranmba20-afk/Triggle/pull/119"
+    "prUrl": "https://github.com/vigneswaranmba20-afk/Triggle/pull/119",
+    "implementationCommit": "c1aafea64c1b3fe70d00f1b7efba493beaa33f6f",
+    "testedPrHead": "8950fe1ddd3549a247ff009e9b08a153f309fe1a",
+    "scope": "Shared engine setup and Grade 10 Exercise 2.1 content"
   },
   "nextActionableBatch": "After Exercise 2.1 pilot, inventory Chapter 2 Exercise 2.2 from matching source pages.",
   "inventory": {

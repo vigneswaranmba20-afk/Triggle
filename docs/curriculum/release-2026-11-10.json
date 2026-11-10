@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "baseline": "85bd47be82451f356e0e5a64d9fb95bdbe50cd5d",
+  "implementationCommit": "c1aafea64c1b3fe70d00f1b7efba493beaa33f6f",
+  "testedPrHead": "8950fe1ddd3549a247ff009e9b08a153f309fe1a",
+  "mergeCommit": "da540bb5b384ea73d851ba1c9d33d14bf17d86d7",
+  "pr": 119,
+  "prUrl": "https://github.com/vigneswaranmba20-afk/Triggle/pull/119",
+  "checks": [
+    {
+      "name": "Validate and test site",
+      "status": "success",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42742686158/job/129587349272"
+    },
+    {
+      "name": "Grade 9 usability audit",
+      "status": "success",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42742685928/job/129587342525"
+    },
+    {
+      "name": "Full validation and browser suite",
+      "status": "success",
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42742685760/job/129587342147"
+    }
+  ],
+  "localTests": {
+    "npm test": "passed",
+    "npm run test:browser": "passed",
+    "remoteLeaseContention": "passed; two clones and actual owned-ref acquisition"
+  },
+  "deployment": {
+    "status": "published and live verified",
+    "commit": "da540bb5b384ea73d851ba1c9d33d14bf17d86d7",
+    "workflowRun": 42743022973,
+    "workflowUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42743022973",
+    "workflowConclusion": "success",
+    "live": {
+      "passed": true,
+      "url": "https://vigneswaranmba20-afk.github.io/Triggle/index.html?class=10&question=c10-2-ex2-1-q1",
+      "questions": 10,
+      "tasks": 13,
+      "publishedModuleSha256": "a44e474ef9516aa795507e9046cc0e41bb208dd78ed8c9a97a7742be3b81bcd7",
+      "checks": [
+        "all exact source questions and final answers",
+        "Previous navigation",
+        "Tamil pending notice",
+        "mobile overflow",
+        "preserved Chapter 1 figure",
+        "offline reload",
+        "module bytes match tested source"
+      ]
+    }
+  },
+  "newBatch": {
+    "grade": 10,
+    "chapter": "2",
+    "exercise": "2.1",
+    "numberedQuestions": 10,
+    "appRecords": 10,
+    "solvedTasks": 13,
+    "tamil": "pending"
+  },
+  "schedules": {
+    "confirmedUpdates": 4,
+    "cadenceChanges": 0,
+    "duplicatesCreated": 0,
+    "evidence": "docs/curriculum/schedules/migration-evidence.json"
+  },
+  "remaining": "Full-grade source denominators and Tamil review pending; next work in per-grade checkpoints."
+}
