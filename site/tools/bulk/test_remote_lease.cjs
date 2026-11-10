@@ -64,7 +64,7 @@ try{
  assert.equal(leases.remoteHead(a,'origin',leases.refFor('integration')),original);
  // A blind no-expected-sha claim is forbidden: free sentinel is an occupied
  // remote ref, so the original absent-ref push precondition must fail.
- assert.throws(()=>git(a,['push','--force-with-lease='+leases.refFor('grade-10')+':','origin',original+':'+leases.refFor('grade-10')]));
+ assert.throws(()=>git(a,['push','--force-with-lease='+leases.refFor('grade-10')+':','origin',foreign+':'+leases.refFor('grade-10')]));
  assert.equal(leases.remoteHead(a,'origin',leases.refFor('grade-10')),original);
  assert.equal(git(remote,['rev-parse','main']),original);
  console.log('PASS remote curriculum leases: persistent ownership, two-clone exclusion, inherited nesting, failure cleanup and guarded release; legacy and persistent CAS refs guarded; main unchanged.');
