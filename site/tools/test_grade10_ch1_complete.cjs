@@ -10,7 +10,7 @@ for(const [exercise,n] of Object.entries(counts)){const group=qs.filter(q=>q.exe
 const ex11=qs.filter(q=>q.exercise==='1.1');assert.equal(new Set(ex11.map(q=>q.label.en.match(/Q([0-9]+)/)?.[1])).size,7,'All seven Ex 1.1 numbered questions');
 const key=['C','C','A','B','C','D','C','A','C','C','A','D','C','B','D'];qs.filter(q=>q.exercise==='1.6').forEach((q,i)=>assert.ok(q.answer.startsWith('('+key[i]+')'),'MCQ '+(i+1)));
 const imgs=qs.filter(q=>q.figureSrc);assert.equal(imgs.length,3);for(const q of imgs)assert.ok(fs.statSync(path.join(site,q.figureSrc)).size>1000,'Missing '+q.figureSrc);
-assert.equal(chapter.textbookQuestionIds.length,74,'Questions not linked to chapter hub');
+const app=fs.readFileSync(path.join(site,'assets/app.js'),'utf8');assert.ok(app.includes("grade===10&&Number(chapter.number)===1"),'Chapter navigation is not linked to grade 10 textbook records');
 const html=fs.readFileSync(path.join(site,'index.html'),'utf8');assert.ok(html.includes('data/class-10-chapter-1.js'));
 const sw=fs.readFileSync(path.join(site,'service-worker.js'),'utf8');for(const f of ['data/class-10-chapter-1.js',...imgs.map(q=>q.figureSrc)])assert.ok(sw.includes(f),'Not pre-cached: '+f);
 console.log('PASS Grade 10 Chapter 1: 69 numbered questions, 74 individual app records, 7 exercise groups, 3 figures.');

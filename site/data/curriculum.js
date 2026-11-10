@@ -1753,6 +1753,3 @@ window.TRIGGLE_CURRICULUM = {
     }
   ]
 };
-
-// Register Grade 10 Chapter 1 textbook questions already loaded into the existing grade data.
-(function(){'use strict';const c=window.TRIGGLE_CURRICULUM?.grades?.find(g=>g.grade===10)?.chapters?.find(ch=>ch.number===1);const g=window.TRIGGLE_CLASSES?.[10];if(c&&g)c.textbookQuestionIds=g.items.filter(q=>String(q.chapter)==='1'&&q.kind==='textbook').map(q=>q.id);})();

@@ -13,7 +13,7 @@
  if(!curriculum?.grades)throw Error('Missing curriculum metadata');
  const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];
  const chapterForItem=item=>chapterList().find(c=>c.legacyQuestionIds.includes(item.id))||chapterList().find(c=>String(c.number)===String(item.chapter));
- const chapterItems=chapter=>{const ids=new Set([...(chapter.legacyQuestionIds||[]),...(chapter.textbookQuestionIds||[])]);return classes[grade].items.filter(item=>ids.has(item.id));};
+ const chapterItems=chapter=>{const ids=new Set([...(chapter.legacyQuestionIds||[]),...(chapter.textbookQuestionIds||[])]);return classes[grade].items.filter(item=>ids.has(item.id)||(grade===10&&Number(chapter.number)===1&&String(item.chapter)==='1'&&item.kind==='textbook'));};
  const selectedChapter=()=>homeView||classIndex?null:(chapterOverview||chapterForItem(current));
  const load=(key,other)=>{try{const v=JSON.parse(localStorage.getItem(key));return v===null?other:v}catch{return other}};
  const store=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch{}};
