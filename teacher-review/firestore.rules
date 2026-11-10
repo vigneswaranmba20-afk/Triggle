@@ -52,6 +52,78 @@ service cloud.firestore {
       allow update, delete: if false;
     }
 
+    function validCase(data) {
+      return data.keys().hasOnly(['reviewEventId','questionId','grade','chapter','exercise',
+          'recordSha256','targetRecordSha256','status','revision','evidence','approvalReviewId','updatedByUid','updatedAt'])
+        && data.keys().hasAll(['reviewEventId','questionId','grade','chapter','exercise',
+          'recordSha256','targetRecordSha256','status','revision','evidence','approvalReviewId','updatedByUid','updatedAt'])
+        && data.reviewEventId is string && data.reviewEventId.size() > 0 && data.reviewEventId.size() <= 150
+        && data.questionId is string && data.questionId.size() > 0 && data.questionId.size() <= 150
+        && data.grade in [9,10,11,12]
+        && data.chapter is string && data.chapter.size() > 0 && data.chapter.size() <= 3
+        && data.exercise is string && data.exercise.size() <= 32
+        && data.recordSha256 is string && data.recordSha256.matches('^[0-9a-f]{64}$')
+        && data.targetRecordSha256 is string && data.targetRecordSha256.matches('^[0-9a-f]{64}$')
+        && data.revision is int && data.revision >= 0
+        && data.status in ['reported','in-progress','fixed','deployed','awaiting-rereview','approved','blocked']
+        && data.evidence is string && data.evidence.size() > 0 && data.evidence.size() <= 1500
+        && data.approvalReviewId is string && data.approvalReviewId.size() <= 150
+        && data.updatedByUid == request.auth.uid && data.updatedAt == request.time;
+    }
+    function initialCase(caseId, data) {
+      let review = get(/databases/$(database)/documents/teacherReviewEvents/$(caseId)).data;
+      return data.reviewEventId == caseId && data.status == 'reported' && data.revision == 0
+        && data.approvalReviewId == '' && data.targetRecordSha256 == data.recordSha256
+        && review.decision == 'needs-correction' && data.questionId == review.questionId
+        && data.grade == review.grade && data.chapter == review.chapter && data.exercise == review.exercise
+        && data.recordSha256 == review.recordSha256;
+    }
+    function allowedTransition(before, after) {
+      return (before.status == 'reported' && after.status in ['in-progress','blocked'])
+        || (before.status == 'in-progress' && after.status in ['fixed','blocked'])
+        || (before.status == 'fixed' && after.status in ['deployed','in-progress','blocked'])
+        || (before.status == 'deployed' && after.status in ['awaiting-rereview','blocked'])
+        || (before.status == 'awaiting-rereview' && after.status in ['approved','in-progress','blocked'])
+        || (before.status == 'blocked' && after.status == 'in-progress');
+    }
+    function freshApproval(before, after) {
+      let review = get(/databases/$(database)/documents/teacherReviewEvents/$(after.approvalReviewId)).data;
+      return review.decision == 'approved' && review.questionId == after.questionId
+        && review.grade == after.grade && review.chapter == after.chapter && review.exercise == after.exercise
+        && review.recordSha256 == after.targetRecordSha256 && review.reviewerUid == request.auth.uid
+        && review.createdAt >= before.updatedAt;
+    }
+    function updateCase(before, after) {
+      return after.diff(before).affectedKeys().hasOnly(['targetRecordSha256','status','revision','evidence','approvalReviewId','updatedByUid','updatedAt'])
+        && after.revision == before.revision + 1 && allowedTransition(before, after)
+        && (after.status == 'fixed' || after.targetRecordSha256 == before.targetRecordSha256)
+        && (after.status == 'approved' ? freshApproval(before, after) : after.approvalReviewId == '')
+        && (after.status != 'deployed' || after.evidence.matches('^https://(github.com/|[a-zA-Z0-9-]+[.]github[.]io/).*'));
+    }
+    function pairedHistory(caseId, data) {
+      let revisionId = string(data.revision);
+      return !exists(/databases/$(database)/documents/teacherCorrectionCases/$(caseId)/history/$(revisionId))
+        && getAfter(/databases/$(database)/documents/teacherCorrectionCases/$(caseId)/history/$(revisionId)).data == data;
+    }
+    match /teacherCorrectionCases/{caseId} {
+      allow get, list: if approvedTeacher();
+      allow create: if approvedTeacher() && validCase(request.resource.data)
+        && initialCase(caseId, request.resource.data) && pairedHistory(caseId, request.resource.data);
+      allow update: if approvedTeacher() && validCase(request.resource.data)
+        && updateCase(resource.data, request.resource.data) && pairedHistory(caseId, request.resource.data);
+      allow delete: if false;
+      match /history/{revisionId} {
+        allow get, list: if approvedTeacher();
+        // A history event must be created atomically with its validated case state.
+        allow create: if approvedTeacher() && validCase(request.resource.data)
+          && revisionId == string(request.resource.data.revision)
+          && getAfter(/databases/$(database)/documents/teacherCorrectionCases/$(caseId)).data == request.resource.data
+          && (!exists(/databases/$(database)/documents/teacherCorrectionCases/$(caseId))
+            || request.resource.data.revision == get(/databases/$(database)/documents/teacherCorrectionCases/$(caseId)).data.revision + 1);
+        allow update, delete: if false;
+      }
+    }
+
     // Use a dedicated Firestore project for reviews. This rule denies
     // every other collection, including anything a student might guess.
     match /{document=**} {

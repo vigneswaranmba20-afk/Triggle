@@ -5,7 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Triggle — Teacher Review</title>
-  <link rel="stylesheet" href="./assets/teacher-portal.css">
+  <meta name="review-startup-timeout" content="12000">
+  <!-- Critical fallback is independent of the stylesheet and Firebase CDN. -->
+  <style>
+    *{box-sizing:border-box}[hidden]{display:none!important}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;line-height:1.6;color:#1e293b;background:#f5f7fb;overflow-wrap:anywhere}
+    .shell{max-width:1000px;margin:auto;padding:20px 16px}.topbar{padding:14px 20px;background:#fff}
+    .panel,.message{padding:18px;margin:16px 0;border:1px solid #cbd5e1;border-radius:12px;background:#fff}
+    button,select,textarea{font:inherit;max-width:100%}button{min-height:44px;padding:10px 16px;cursor:pointer}
+    textarea,iframe,select{width:100%}a{color:#175caa}h1{line-height:1.2;font-size:clamp(1.7rem,5vw,2.6rem)}
+    #startup-error{border:2px solid #aa3429}#startup-error h2{font-size:1.25rem}
+  </style>
+  <link rel="stylesheet" href="./assets/teacher-portal.css?v=review-recovery-3">
 </head>
 <body>
   <header class="topbar">
@@ -21,6 +32,15 @@
     </section>
 
     <p id="message" class="message" aria-live="polite">Loading secure review access…</p>
+
+    <section id="startup-error" class="panel" role="alert" hidden>
+      <h2>Unable to connect to Teacher Review</h2>
+      <p>We couldn't load the review service. Check your internet connection and try again.</p>
+      <p lang="ta">மதிப்பாய்வுச் சேவையைத் திறக்க முடியவில்லை. இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்.</p>
+      <button id="retry-startup" type="button" class="primary">Retry</button>
+      <a href="./index.html">Open student lessons</a>
+    </section>
+    <noscript><p class="panel">Teacher Review needs JavaScript. Enable it and reload this page. Student lessons are available from the Triggle link.</p></noscript>
 
     <section id="unconfigured" class="panel" hidden>
       <h2>Teacher access is not configured yet</h2>
@@ -68,6 +88,9 @@
       </section>
 
       <section class="panel" id="question-panel">
+        <a id="review-question"></a>
+        <label>Question language <select id="review-language"><option value="en">English</option><option value="ta">தமிழ்</option></select></label>
+        <p id="language-status" class="muted"></p>
         <div class="section-heading">
           <h2 id="question-label">Question</h2>
           <a id="app-link" href="./index.html" target="_blank" rel="noopener noreferrer">Open full question ↗</a>
@@ -75,6 +98,7 @@
         <p class="muted">Question text</p>
         <div id="question-text" class="question-text"></div>
         <div id="source-note" class="source-note"></div>
+        <figure id="review-figure" hidden><img id="review-figure-image" alt=""><figcaption id="review-figure-caption"></figcaption></figure>
         <h3>How it works</h3>
         <ol id="steps"></ol>
         <div class="answer"><strong>Final answer</strong><p id="answer-text"></p></div>
@@ -94,10 +118,12 @@
             <label><input type="radio" name="decision" value="needs-correction"> ✎ Needs correction</label>
             <label><input type="radio" name="decision" value="pending"> ◷ Pending further review</label>
           </fieldset>
+          <label class="remarks-label" for="issue-type">Correction category (when needed)</label>
+          <select id="issue-type"><option value="">Select a category</option><option>Wrong answer</option><option>Incorrect calculation</option><option>Missing solution step</option><option>Wrong textbook question</option><option>Incorrect mathematical notation</option><option>Figure error</option><option>Translation issue</option><option>Poor explanation</option></select>
           <label class="remarks-label" for="remarks">Remarks or correction instructions (optional)</label>
-          <textarea id="remarks" maxlength="1500" rows="4" placeholder="e.g. In Question 3, explain why the remainder must be smaller than the divisor."></textarea>
+          <textarea id="remarks" maxlength="1400" rows="4" placeholder="e.g. In Question 3, explain why the remainder must be smaller than the divisor."></textarea>
           <button id="save-review" class="primary" type="submit">Save private review</button>
-          <p class="muted">Reviews are kept as an append-only history. Automatic Codex correction is not active until the secure correction queue is connected.</p>
+          <p class="muted">Reviews are kept as an append-only history. Use the private feedback inbox below for manual correction handoff; Codex never starts automatically.</p>
         </form>
       </section>
 
@@ -105,8 +131,82 @@
         <h2>Review history for this question</h2>
         <div id="history" aria-live="polite">No reviews loaded.</div>
       </section>
+      <section class="panel" id="feedback-inbox">
+        <div class="section-heading"><h2>Private teacher feedback inbox</h2><button id="inbox-refresh" type="button" class="quiet">Refresh inbox</button></div>
+        <p class="muted">Filters apply to loaded events. Load more to include earlier submissions. Approval always applies to the recorded content hash.</p>
+        <div class="selectors inbox-filters">
+          <label>Grade<select id="inbox-grade"><option value="">All grades</option><option>9</option><option>10</option><option>11</option><option>12</option></select></label>
+          <label>Chapter<input id="inbox-chapter" inputmode="numeric" placeholder="All"></label>
+          <label>Exercise<input id="inbox-exercise" placeholder="All"></label>
+          <label>Question ID<input id="inbox-question" type="search" placeholder="Search ID"></label>
+          <label>Decision<select id="inbox-decision"><option value="">All decisions</option><option value="approved">Approved</option><option value="needs-correction">Needs Correction</option><option value="pending">Pending Further Review</option></select></label>
+          <label>Correction status<select id="inbox-correction"><option value="">All statuses</option><option value="untracked">Not tracked</option><option value="reported">Reported</option><option value="in-progress">In Progress</option><option value="fixed">Fixed</option><option value="deployed">Deployed</option><option value="awaiting-rereview">Awaiting Teacher Re-review</option><option value="approved">Approved</option><option value="blocked">Blocked</option></select></label>
+          <label>Submitted on or after<input id="inbox-date" type="date"></label>
+          <label>Submission order<select id="inbox-sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></label>
+        </div>
+        <p id="inbox-status" aria-live="polite">Private inbox not loaded.</p>
+        <button id="prepare-handoff" type="button" class="primary">Prepare selected correction handoff</button>
+        <div id="inbox-items"></div><button id="inbox-more" type="button" class="quiet" hidden>Load more feedback</button>
+      </section>
+      <section id="correction-panel" class="panel" hidden>
+        <h2 id="correction-title">Correction history</h2><p id="correction-status" aria-live="polite"></p>
+        <form id="correction-form">
+          <label>Next correction state<select id="correction-next" required></select></label>
+          <label>Actual corrected content SHA-256<input id="correction-hash" required pattern="[a-f0-9]{64}" maxlength="64"></label>
+          <label>Evidence (source check, commit or live deployment URL)<textarea id="correction-evidence" required maxlength="1500" rows="3"></textarea></label>
+          <label>Fresh approval review event ID (required only for Approved)<input id="approval-review-id" maxlength="150"></label>
+          <p class="muted">Save a new Approve decision for the corrected question after Awaiting Teacher Re-review, refresh the inbox, then select that approval event. Server rules require its hash to match. Deployment states are manual attestations supported by evidence.</p>
+          <button id="correction-save" type="submit" class="primary">Save private correction transition</button>
+        </form><div id="correction-history"></div>
+      </section>
+      <section id="handoff-panel" class="panel" hidden><h2>Private manual Codex correction request</h2><p id="handoff-status" aria-live="polite"></p><label for="handoff-text">Selected feedback and verification criteria</label><textarea id="handoff-text" readonly rows="12"></textarea><button id="copy-handoff" type="button" class="primary">Copy private correction request</button> <button id="download-handoff" type="button" class="quiet">Export private text file</button></section>
     </main>
   </div>
-  <script type="module" src="./assets/teacher-portal.js?v=grade9-review-20261110"></script>
+  <script src="./assets/math-notation.js"></script>
+  <script src="./assets/teacher-workflow.js?v=1"></script>
+  <script>
+    // Keep this controller inline: it must run when the application or SDK cannot import.
+    (() => {
+      const body = document.body, errorPanel = document.getElementById('startup-error');
+      const status = document.getElementById('message');
+      const states = ['starting','loading-authentication','ready-to-sign-in','checking-authorization',
+        'authorized','unauthorized','network-unavailable','recoverable-error'];
+      const timeout = Number(document.querySelector('meta[name="review-startup-timeout"]').content) || 12000;
+      let timer, failed = false;
+      function fail(offline = !navigator.onLine) {
+        failed = true; clearTimeout(timer);
+        body.dataset.startupState = offline ? 'network-unavailable' : 'recoverable-error';
+        for (const id of ['login','denied','workspace','unconfigured','signout']) document.getElementById(id).hidden = true;
+        errorPanel.hidden = false;
+        status.textContent = offline ? 'Network unavailable. Reconnect and select Retry.' : 'Review service connection failed. Select Retry to reconnect.';
+        window.dispatchEvent(new Event('triggle-review-unavailable'));
+      }
+      function set(state) {
+        if (failed || !states.includes(state)) return false;
+        clearTimeout(timer); body.dataset.startupState = state;
+        errorPanel.hidden = true;
+        if (['starting','loading-authentication','checking-authorization'].includes(state)) timer = setTimeout(() => fail(), timeout);
+        return true;
+      }
+      window.TriggleReviewStartup = Object.freeze({set, fail, active: () => !failed, timeout});
+      document.getElementById('retry-startup').addEventListener('click', () => {
+        const url = new URL(location.href);
+        url.searchParams.set('review-retry', Date.now().toString());
+        location.replace(url.href);
+      });
+      window.addEventListener('offline', () => fail(true));
+      window.addEventListener('online', () => {
+        if (failed) status.textContent = 'Connection restored. Select Retry to verify access again.';
+      });
+      // Request an update for an existing student worker; never create a new cache for reviews.
+      if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistration().then(reg => reg && reg.update()).catch(() => {});
+      set('starting');
+      if (!navigator.onLine) { fail(true); return; }
+      // A changed document URL and module query avoid a cached failed module on Retry.
+      const url = new URL('./assets/teacher-portal.js?v=review-recovery-3', location.href);
+      if (new URL(location.href).searchParams.has('review-retry')) url.searchParams.set('retry', Date.now().toString());
+      import(url.href).catch(() => fail());
+    })();
+  </script>
 </body>
 </html>

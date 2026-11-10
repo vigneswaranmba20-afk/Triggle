@@ -17,7 +17,7 @@ for (const file of walk(root)) {
   const ext=path.extname(file);
   if (ext==='.js') {
     const source=fs.readFileSync(file,'utf8');
-    if (['teacher-portal.js','teacher-portal-config.js'].includes(path.basename(file))) {
+    if (['teacher-portal.js','teacher-portal-config.js','teacher-inbox.js'].includes(path.basename(file))) {
       // These standalone browser modules use ESM import/export. Node's classic
       // vm.Script cannot parse ESM: validate as a module rather than exempting.
       cp.execFileSync(process.execPath,['--input-type=module','--check'],{input:source,encoding:'utf8'});
