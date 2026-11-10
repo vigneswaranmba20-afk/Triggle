@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "exercise": "1.8",
+  "date": "2026-11-10",
+  "purpose": "Answer-appendix transcription audit; NOT verified exercise question content",
+  "source": {
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "edition": "2025 revised",
+    "volume": 1,
+    "section": "Answers / Exercise 1.8",
+    "printedPage": 283,
+    "textLayerInspected": true,
+    "pageImageInspected": false
+  },
+  "answerOptionIndices": [
+    {
+      "id": "g12-ex1.8-q1",
+      "optionNumber": 2,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q2",
+      "optionNumber": 3,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q3",
+      "optionNumber": 2,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q4",
+      "optionNumber": 3,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q5",
+      "optionNumber": 4,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q6",
+      "optionNumber": 2,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q7",
+      "optionNumber": 4,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q8",
+      "optionNumber": 4,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q9",
+      "optionNumber": 2,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q10",
+      "optionNumber": 1,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q11",
+      "optionNumber": 2,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q12",
+      "optionNumber": 4,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q13",
+      "optionNumber": 1,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q14",
+      "optionNumber": 2,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q15",
+      "optionNumber": 4,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q16",
+      "optionNumber": 3,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q17",
+      "optionNumber": 2,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q18",
+      "optionNumber": 1,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q19",
+      "optionNumber": 4,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q20",
+      "optionNumber": 4,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q21",
+      "optionNumber": 2,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q22",
+      "optionNumber": 4,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q23",
+      "optionNumber": 4,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q24",
+      "optionNumber": 4,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    },
+    {
+      "id": "g12-ex1.8-q25",
+      "optionNumber": 1,
+      "source": "extracted answer appendix",
+      "answerCertified": false,
+      "questionTextCertified": false,
+      "solutionCertified": false
+    }
+  ],
+  "checks": {
+    "observedQuestionCount": 25,
+    "optionIndicesInRange": true,
+    "uniqueQuestionIds": true,
+    "transcribedAnswerCount": 25,
+    "independentlyMathematicallyVerified": 0,
+    "sourceImageCertified": 0,
+    "studentFacingRegistered": 0,
+    "mandatoryCI": "not established"
+  },
+  "completeness": {
+    "verifiedWholeGradeQuestionDenominator": null,
+    "verifiedWholeGradeSubpartDenominator": null,
+    "verifiedNewQuestionSolutions": 0,
+    "verifiedNewSubpartSolutions": 0,
+    "tamilEditorialCertified": 0,
+    "figuresPending": "not inventoried across grade"
+  },
+  "publicationAllowed": false,
+  "blockers": [
+    "Exercise 1.8 question/option matrix notation requires PDF page-image fidelity checks on printed pages 48-50.",
+    "Answer appendix page image must be checked before treating indices as source-certified.",
+    "MCQ options are not solution subparts; no complete mathematical proofs in this record.",
+    "Draft Grade 12 PR has merge conflicts; required CI and deployment unverified."
+  ],
+  "nextBatch": "Visually certify Exercise 1.8 questions Q1-Q10 and their answer-key entries; then solve and independently validate before registration."
+}
