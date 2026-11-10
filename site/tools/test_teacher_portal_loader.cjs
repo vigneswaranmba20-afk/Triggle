@@ -53,4 +53,19 @@ assert(source.includes('item.answer?.en'), 'Bilingual Grade 9 answers must displ
 const teacherHtml=fs.readFileSync(path.join(root,'teacher-review.html'),'utf8');
 assert(teacherHtml.includes('teacher-portal.js?v=grade9-review-20261110'),'Grade 9 fix must bust cached mobile teacher script');
 
+
+// GitHub Pages sometimes serves the repository root and sometimes uploads
+// site/ as its artifact root. Historical /Triggle/site/ links must work.
+for (const [legacyPath, target] of [
+  ['site/teacher-review.html', '../teacher-review.html'],
+  ['site/index.html', '../index.html']
+]) {
+  const shim = fs.readFileSync(path.join(root, legacyPath), 'utf8');
+  assert(shim.includes('window.location.replace(destination.href)'), 'Legacy path must redirect: ' + legacyPath);
+  assert(shim.includes("new URL('"+target+"'"), 'Wrong destination for compatibility URL: ' + legacyPath);
+  assert(shim.includes('destination.search = window.location.search'), 'Compatibility path must preserve deep-link query');
+  assert(shim.includes('destination.hash = window.location.hash'), 'Compatibility path must preserve deep-link hash');
+  assert(fs.existsSync(path.resolve(root, 'site', target)), 'Compatibility target missing: ' + target);
+}
+
 console.log('PASS: Teacher portal Grade 9 exercise eligibility, data module dependency order, local asset paths, loading/error states and ES module syntax');
