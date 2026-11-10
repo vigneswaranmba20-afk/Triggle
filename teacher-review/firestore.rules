@@ -1,10 +1,15 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    function approvedTeacher() {
+    function signedGoogle() {
       return request.auth != null
-        && request.auth.token.triggleTeacher == true
         && request.auth.token.firebase.sign_in_provider == 'google.com';
+    }
+
+    function approvedTeacher() {
+      return signedGoogle()
+        && exists(/databases/$(database)/documents/teacherAccess/$(request.auth.uid))
+        && get(/databases/$(database)/documents/teacherAccess/$(request.auth.uid)).data.role == 'reviewer';
     }
     function validReview() {
       return request.resource.data.keys().hasOnly([
@@ -31,6 +36,14 @@ service cloud.firestore {
         && request.resource.data.recordSha256 is string
         && request.resource.data.recordSha256.matches('^[0-9a-f]{64}$')
         && request.resource.data.createdAt == request.time;
+    }
+
+    // The owner creates teacherAccess/{FirebaseAuthUID} through the
+    // Firebase Console. Clients can check only their own role record, and
+    // can never create, edit, list or delete access grants.
+    match /teacherAccess/{teacherUid} {
+      allow get: if signedGoogle() && request.auth.uid == teacherUid;
+      allow list, create, update, delete: if false;
     }
 
     match /teacherReviewEvents/{eventId} {
