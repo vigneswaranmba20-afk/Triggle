@@ -1,0 +1,412 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "baselineCommit": "85bd47be82451f356e0e5a64d9fb95bdbe50cd5d",
+  "sourceDiscovery": {
+    "date": "2026-11-10",
+    "bookIds": [
+      "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+      "1EpNZmRikhWY6zsYRMnAtC4N_K6S3iB34",
+      "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+      "1XdaQTr6BsERWUJNQr-yUsxr7bKnfMxtw"
+    ],
+    "status": "Owner Drive metadata located; inspect actual imprint and pages before production."
+  },
+  "inheritedEvidence": {
+    "numberedQuestions": null,
+    "appRecords": 0,
+    "mathematicalTasks": null,
+    "basis": "No complete source exercise inventory on main; historic book-reference entries not counted verified."
+  },
+  "textbookGradeDenominator": null,
+  "tamilCoverage": {
+    "status": "pending",
+    "fullyReviewedChapters": 0,
+    "note": "Tamil string presence or source book availability does not certify textbook wording or whole-lesson review."
+  },
+  "blockers": [
+    "Full grade question/subpart denominator is not yet source reconciled.",
+    "Historical drafts need reconciliation; do not blindly merge divergent grade branches."
+  ],
+  "tests": {
+    "baselineNpmTest": "passed",
+    "baselineBrowser": "passed",
+    "implementation": "passed",
+    "implementationNpmTest": "passed",
+    "pilotBrowser": "passed; new Grade 10 Exercise 2.1 all records, 320/390/1280px, offline reload",
+    "broaderBrowser": "passed; complete npm run test:browser, including immutable 105 legacy routes and new pilot",
+    "remoteLeases": "passed; two isolated clones and actual production grade/integration acquisition"
+  },
+  "release": {
+    "commit": null,
+    "pr": null,
+    "deployment": {
+      "status": "awaiting PR/CI/merge"
+    },
+    "branch": "engine/universal-curriculum-bulk-20261110"
+  },
+  "nextActionableBatch": "Reconcile Chapter 1 PR #38 with latest main; source-inventory the earliest missing exercise before producing a complete exercise.",
+  "inventory": {
+    "grade": 12,
+    "chapters": [
+      {
+        "chapter": "1",
+        "chapterId": "g12-ch1",
+        "title": {
+          "en": "Applications of Matrices and Determinants",
+          "ta": "அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "2",
+        "chapterId": "g12-ch2",
+        "title": {
+          "en": "Complex Numbers",
+          "ta": "கலப்பு எண்கள்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "3",
+        "chapterId": "g12-ch3",
+        "title": {
+          "en": "Theory of Equations",
+          "ta": "சமன்பாட்டியல்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "4",
+        "chapterId": "g12-ch4",
+        "title": {
+          "en": "Inverse Trigonometric Functions",
+          "ta": "நேர்மாறு முக்கோணவியல் சார்புகள்"
+        },
+        "appRecords": 13,
+        "exerciseAppRecords": 13,
+        "totalAppRecords": 16,
+        "registeredItems": 16,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "5",
+        "chapterId": "g12-ch5",
+        "title": {
+          "en": "Two Dimensional Analytical Geometry-II",
+          "ta": "இருபரிமாண பகுமுறை வடிவியல் II"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "6",
+        "chapterId": "g12-ch6",
+        "title": {
+          "en": "Applications of Vector Algebra",
+          "ta": "வெக்டர் இயற்கணிதத்தின் பயன்பாடுகள்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "7",
+        "chapterId": "g12-ch7",
+        "title": {
+          "en": "Applications of Differential Calculus",
+          "ta": "வகை நுண்கணிதத்தின் பயன்பாடுகள்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "8",
+        "chapterId": "g12-ch8",
+        "title": {
+          "en": "Differentials and Partial Derivatives",
+          "ta": "வகையீடுகள் மற்றும் பகுதி வகைக்கெழுக்கள்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "9",
+        "chapterId": "g12-ch9",
+        "title": {
+          "en": "Applications of Integration",
+          "ta": "தொகை நுண்கணிதத்தின் பயன்பாடுகள்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "10",
+        "chapterId": "g12-ch10",
+        "title": {
+          "en": "Ordinary Differential Equations",
+          "ta": "சாதாரண வகைக்கெழுச் சமன்பாடுகள்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "11",
+        "chapterId": "g12-ch11",
+        "title": {
+          "en": "Probability Distributions",
+          "ta": "நிகழ்தகவு பரவல்கள்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "12",
+        "chapterId": "g12-ch12",
+        "title": {
+          "en": "Discrete Mathematics",
+          "ta": "தனிநிலைக் கணிதம்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      }
+    ],
+    "appRecords": 16,
+    "totalAppRecords": 16,
+    "exerciseAppRecords": 13,
+    "newEngineVerifiedRecords": 0
+  },
+  "schedule": {
+    "status": "confirmed-prompt-only-update",
+    "evidence": "docs/curriculum/schedules/migration-evidence.json",
+    "timezone": "Asia/Kolkata",
+    "minute": 45
+  }
+}

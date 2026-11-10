@@ -1,0 +1,586 @@
+{
+  "schemaVersion": 1,
+  "asOfDate": "2026-11-10",
+  "repository": "vigneswaranmba20-afk/Triggle",
+  "baseCommit": "85bd47be82451f356e0e5a64d9fb95bdbe50cd5d",
+  "scope": "Initial main-branch runtime and committed-evidence audit, before the universal engine pilot.",
+  "metricPolicy": {
+    "cataloguedChapters": "Chapter metadata exists in curriculum.js; this is not source-question inventory completion.",
+    "sourceReconciledChapters": "Complete chapter-level textbook denominator recorded by the accepted reference. Source fidelity of legacy items is carried forward, not independently rechecked by this audit.",
+    "appRecords": "All individually navigable runtime records, including practice and examples.",
+    "exerciseRecords": "Non-practice runtime records whose English label begins Exercise or Unit Exercise, matching chapter-hub.js.",
+    "committedVisualEvidence": "Source page-image checks claimed by committed item evidence and consistency-tested against runtime; this audit does not claim to have re-inspected those PDF pages.",
+    "verifiedThisAudit": "No new source/math verification claimed solely from inspecting committed files.",
+    "percentages": "Null unless the complete textbook denominator is verified."
+  },
+  "provenance": {
+    "runtime": "Data scripts loaded in actual site/index.html order, followed by per-grade item counting.",
+    "textbookRegister": "docs/reference-library/2025-user-textbook-manifest.json",
+    "sourceRegisterScope": "12-book imprint and contents evidence only; full question/subpart verification is separate.",
+    "sourcePriority": "Connected owner Google Drive PDFs, then other owner official files, then official SCERT sources, then committed verified content.",
+    "sourceDiscovery": "Parent audit searched connected Google Drive for Mathematics and found all twelve English/Tamil grade-specific PDFs; filenames are not proof of edition parity.",
+    "editionLimit": "2025 revisions are recorded in the existing register. No 2026–27 prescribed-printing equivalence is claimed."
+  },
+  "grades": [
+    {
+      "grade": 9,
+      "cataloguedChapters": 9,
+      "sourceReconciledChapters": 0,
+      "sourceReconciledChapterNumbers": [],
+      "appRecords": 388,
+      "exerciseRecords": 304,
+      "recordsByChapter": {
+        "1": 66,
+        "2": 152,
+        "3": 6,
+        "4": 12,
+        "5": 9,
+        "6": 44,
+        "7": 37,
+        "8": 31,
+        "9": 31
+      },
+      "knownFullGradeNumberedQuestionDenominator": null,
+      "knownFullGradeSubpartDenominator": null,
+      "coveragePercent": null,
+      "committedVisualEvidence": {
+        "numberedQuestions": 14,
+        "appRecords": 38,
+        "solvedTasks": 42,
+        "exercises": [
+          {
+            "chapter": 1,
+            "exercise": "1.1",
+            "numberedQuestions": 6,
+            "appRecords": 30,
+            "solvedSubparts": 30,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "evidence": [
+              "site/data/textbook-fidelity/g9-ch1-ex1-1-q1-q2.json",
+              "site/data/textbook-fidelity/g9-ch1-ex1-1-q3.json",
+              "site/data/textbook-fidelity/g9-ch1-ex1-1-q4.json",
+              "site/data/textbook-fidelity/g9-ch1-ex1-1-q5.json",
+              "site/data/textbook-fidelity/g9-ch1-ex1-1-q6.json"
+            ]
+          },
+          {
+            "chapter": 9,
+            "exercise": "9.1",
+            "numberedQuestions": 8,
+            "appRecords": 8,
+            "solvedTasks": 12,
+            "languages": [
+              "en"
+            ],
+            "evidence": [
+              "site/data/textbook-fidelity/g9-ch9-ex9-1-en-q1-q8.json"
+            ]
+          }
+        ]
+      },
+      "newlyVerifiedSourceQuestionsThisAudit": 0,
+      "tamilCoverage": "Full chapter terminology and lesson editorial review pending; field presence and English fallback text are not verification.",
+      "blockers": [
+        "Full chapter question/subpart denominators remain unknown.",
+        "Many registered exercises explicitly await original page-image review.",
+        "Numerous Chapter 1 open drafts overlap and require reconciliation."
+      ],
+      "nextAction": "Reconcile existing Chapter 1 drafts against current main; resume source-verified Exercise 1.2 coverage without duplicating staged work."
+    },
+    {
+      "grade": 10,
+      "cataloguedChapters": 8,
+      "sourceReconciledChapters": 1,
+      "sourceReconciledChapterNumbers": [
+        1
+      ],
+      "appRecords": 94,
+      "exerciseRecords": 91,
+      "recordsByChapter": {
+        "1": 74,
+        "2": 1,
+        "3": 1,
+        "4": 0,
+        "5": 1,
+        "6": 17,
+        "7": 0,
+        "8": 0
+      },
+      "knownFullGradeNumberedQuestionDenominator": null,
+      "knownFullGradeSubpartDenominator": null,
+      "coveragePercent": null,
+      "committedVisualEvidence": null,
+      "newlyVerifiedSourceQuestionsThisAudit": 0,
+      "tamilCoverage": "Full chapter terminology and lesson editorial review pending; field presence and English fallback text are not verification.",
+      "blockers": [
+        "grade10-coverage.json predates full Chapter 1 integration and must not drive work selection alone.",
+        "Open Grade 10 Chapter 1 drafts overlap completed main content.",
+        "Tamil editorial review pending."
+      ],
+      "nextAction": "Chapter 2, Exercise 2.1; preserve completed Chapter 1."
+    },
+    {
+      "grade": 11,
+      "cataloguedChapters": 12,
+      "sourceReconciledChapters": 0,
+      "sourceReconciledChapterNumbers": [],
+      "appRecords": 16,
+      "exerciseRecords": 16,
+      "recordsByChapter": {
+        "1": 0,
+        "2": 0,
+        "3": 16,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0
+      },
+      "knownFullGradeNumberedQuestionDenominator": null,
+      "knownFullGradeSubpartDenominator": null,
+      "coveragePercent": null,
+      "committedVisualEvidence": null,
+      "newlyVerifiedSourceQuestionsThisAudit": 0,
+      "tamilCoverage": "Full chapter terminology and lesson editorial review pending; field presence and English fallback text are not verification.",
+      "blockers": [
+        "Main has only sparse legacy trigonometry content; existing Chapter 1 draft branch must be reconciled.",
+        "Full question/subpart inventory and original source-wording verification incomplete.",
+        "Tamil editorial review pending."
+      ],
+      "nextAction": "Reconcile PR #40 Chapter 1 Exercise 1.1 source inventory and unpublished records before new generation."
+    },
+    {
+      "grade": 12,
+      "cataloguedChapters": 12,
+      "sourceReconciledChapters": 0,
+      "sourceReconciledChapterNumbers": [],
+      "appRecords": 16,
+      "exerciseRecords": 13,
+      "recordsByChapter": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 16,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0
+      },
+      "knownFullGradeNumberedQuestionDenominator": null,
+      "knownFullGradeSubpartDenominator": null,
+      "coveragePercent": null,
+      "committedVisualEvidence": null,
+      "newlyVerifiedSourceQuestionsThisAudit": 0,
+      "tamilCoverage": "Full chapter terminology and lesson editorial review pending; field presence and English fallback text are not verification.",
+      "blockers": [
+        "Main has only sparse legacy trigonometry content; existing Chapter 1 draft branch must be reconciled.",
+        "Full question/subpart inventory and original source-wording verification incomplete.",
+        "Tamil editorial review pending."
+      ],
+      "nextAction": "Reconcile PR #38 Chapter 1 Exercise 1.1 source inventory and unpublished records before new generation."
+    }
+  ],
+  "grade10Chapter1Reference": {
+    "numberedQuestions": 69,
+    "appRecords": 74,
+    "exercises": 7,
+    "figures": 3,
+    "tamilDraftRecords": 12,
+    "englishOnlyRecords": 62,
+    "preservedFiles": {
+      "site/data/class-10.js": "458954d73988b14b987f0a3abbfba88b097ab6bbfae064c92237cfec56994b7b",
+      "site/data/class-10-ex1-1-2025.js": "eb28504809a557112251c883867b36eb996888b3dd56477f9b11144b33989f66",
+      "site/data/class-10-chapter-1.js": "b75b0003c00ef01bbf8036b24982f463e258ba1ba39af11cadb5eeab3e638f6c",
+      "site/data/class-10-chapter-1.audit.json": "8f259327e163338c9f7ca01425fff4c3b3e66013c9733ba868553d48a1fb9cac",
+      "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
+    },
+    "sourceQuestionCounts": {
+      "1.1": 7,
+      "1.2": 5,
+      "1.3": 10,
+      "1.4": 12,
+      "1.5": 10,
+      "1.6": 15,
+      "1.unit": 10
+    },
+    "status": "Accepted preserved reference implementation; not regenerated by this audit.",
+    "evidence": [
+      "site/data/class-10-chapter-1.audit.json",
+      "site/tools/test_grade10_ch1_complete.cjs",
+      "site/tools/test_grade10_exercise_1_1.cjs"
+    ],
+    "tamilStatus": "12 drafted bilingual records, human editorial pending; 62 English-only records."
+  },
+  "pilotConflictCheck": {
+    "candidate": "Grade 10 Chapter 2 Exercise 2.1",
+    "existingMainExerciseRecords": 0,
+    "existingMainPracticeRecords": 1,
+    "openGrade10Drafts": [
+      37,
+      106,
+      112,
+      113,
+      114
+    ],
+    "chapter2PathsInGrade10WorkstreamDiff": [],
+    "conclusion": "Inspected grade-10-workstream divergent paths and open Grade 10 titles concern Chapter 1; no Chapter 2 overlap found at audit time. Refresh remote state before integration."
+  },
+  "openPullRequests": [
+    {
+      "number": 118,
+      "title": "Grade 9 English Exercise 1.7: stage Q1 and Q16 (source image review pending)",
+      "head": "bulk/grade9-ex1-7-q1-q16-20261110-0700",
+      "head_sha": "6365eb76e435443b4eaeee8fcf4c35b255c28aa2",
+      "mergeable": true,
+      "updated_at": "2026-11-10T01:30:07Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/118"
+    },
+    {
+      "number": 116,
+      "title": "Grade 9 Exercise 1.7 Q18 — staged isosceles right-triangle MCQ",
+      "head": "bulk/grade9-ex1-7-q18-20261110-0557",
+      "head_sha": "8a8027003af8a9a85cf1d806180a9f00d562851f",
+      "mergeable": true,
+      "updated_at": "2026-11-10T00:28:16Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/116"
+    },
+    {
+      "number": 115,
+      "title": "Grade 9 Exercise 1.7: ten staged English MCQs with worked solutions",
+      "head": "bulk/grade9-ex1-7-mcq-20261110-0504",
+      "head_sha": "0069726aff85c075dae018d9c0e439fab08d6b82",
+      "mergeable": true,
+      "updated_at": "2026-11-09T23:36:31Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/115"
+    },
+    {
+      "number": 114,
+      "title": "Grade 10 Exercise 1.2: 9 bilingual 2025 textbook subparts and checked relation diagrams",
+      "head": "content/grade10-ch1-ex1-2-clean-20261110",
+      "head_sha": "2a0242eeda7a558578ba58a75b8f7c6363260582",
+      "mergeable": false,
+      "updated_at": "2026-11-09T23:36:43Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/114"
+    },
+    {
+      "number": 113,
+      "title": "Grade 10 Chapter 1 Exercise 1.3 Q1–Q3 — six bilingual verified solutions",
+      "head": "content/grade10-ch1-ex1-3-q1-q3-20261110",
+      "head_sha": "627dd8adf83ee7d531fa22e231d6612b71ec68d2",
+      "mergeable": false,
+      "updated_at": "2026-11-09T23:23:28Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/113"
+    },
+    {
+      "number": 112,
+      "title": "Grade 10 Chapter 1 Exercise 1.2 — bilingual 2025 source-checked, 9 questions/parts",
+      "head": "content/grade10-ch1-ex1-2-integrated-20261110",
+      "head_sha": "7a1320d7d70413c68f7cae437cb0c235080c395c",
+      "mergeable": false,
+      "updated_at": "2026-11-09T23:32:28Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/112"
+    },
+    {
+      "number": 111,
+      "title": "Grade 9 Exercise 1.6 Q9 and Q12: six worked English subparts",
+      "head": "bulk/grade9-ex1-6-q9-q12-20261110-0404",
+      "head_sha": "4d24ad53c005dd921bc70fe13ca0789a74ce92db",
+      "mergeable": true,
+      "updated_at": "2026-11-09T22:36:11Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/111"
+    },
+    {
+      "number": 110,
+      "title": "Grade 9 Exercise 1.6: 14 staged English cardinality solutions",
+      "head": "bulk/grade9-ex1-6-cardinality-20261110-0302",
+      "head_sha": "1161662f5e172c21eb9b15e2b0e5f6f91258fde5",
+      "mergeable": true,
+      "updated_at": "2026-11-09T21:35:04Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/110"
+    },
+    {
+      "number": 109,
+      "title": "Grade 9 English 2025 Ex 1.5 Q2(i–iv), Q6 — 5 worked entries",
+      "head": "bulk/grade9-ex1-5-q2-q6-20261110-0202",
+      "head_sha": "0275b6891581d45fb46661a8e4629efb4661b871",
+      "mergeable": true,
+      "updated_at": "2026-11-09T20:33:44Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/109"
+    },
+    {
+      "number": 108,
+      "title": "Grade 9 English 2025 Ex 1.5 Q5 Q7 Q10 — 3 worked set-law proofs",
+      "head": "bulk/grade9-ex1-5-q5-q7-q10-20261110-0055",
+      "head_sha": "b2b5c383892db5d0668f045e9ed2f86f59c5a191",
+      "mergeable": true,
+      "updated_at": "2026-11-09T19:27:00Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/108"
+    },
+    {
+      "number": 107,
+      "title": "Grade 9 English 2025 Exercise 1.4 Q5: associative intersection source draft",
+      "head": "bulk/grade9-ex1-4-q4-q5-20261110-0004",
+      "head_sha": "edb5231c91ce4c64161a2ee418463824f12b73c7",
+      "mergeable": true,
+      "updated_at": "2026-11-09T18:35:56Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/107"
+    },
+    {
+      "number": 106,
+      "title": "Grade 10 Chapter 1 Exercise 1.2: 9 source-image checked English solutions",
+      "head": "content/grade10-ch1-ex1-2-sourcechecked-20261109",
+      "head_sha": "2ada612891f16c8416a46932ade228f8d5295a9c",
+      "mergeable": false,
+      "updated_at": "2026-11-09T18:05:22Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/106"
+    },
+    {
+      "number": 105,
+      "title": "Grade 9 English Exercise 1.4 Q3 — associative union source draft",
+      "head": "bulk/grade9-ex1-4-q3-20261109-2258",
+      "head_sha": "641ec1cb5cc75bf0b0c58cf9e42ce228e45f69bd",
+      "mergeable": true,
+      "updated_at": "2026-11-09T17:29:01Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/105"
+    },
+    {
+      "number": 104,
+      "title": "Grade 9 English 2025 Exercise 1.4 Q2 — commutative properties (content-only)",
+      "head": "bulk/grade9-ex1-4-q2-20261109-2203",
+      "head_sha": "8998e5da81c57469025652e0d9969a49ce71eac1",
+      "mergeable": true,
+      "updated_at": "2026-11-09T16:34:47Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/104"
+    },
+    {
+      "number": 102,
+      "title": "Grade 9 Exercise 1.3 Q7(i–vii): Venn regions English content draft",
+      "head": "bulk/grade9-ex1-3-q7-20261109-2103",
+      "head_sha": "c516d58313ab28ce11e95279bb6701bca60a3c95",
+      "mergeable": true,
+      "updated_at": "2026-11-09T15:35:02Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/102"
+    },
+    {
+      "number": 101,
+      "title": "Grade 9 2025 Exercise 1.3 Q5(i–iii) English symmetric difference",
+      "head": "bulk/grade9-ex1-3-q5-20261109-2004",
+      "head_sha": "bbd057f7ff57c4c9f5588a30a6a31ebee066f4a4",
+      "mergeable": true,
+      "updated_at": "2026-11-09T14:36:16Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/101"
+    },
+    {
+      "number": 100,
+      "title": "Draft: Grade 9 Exercise 1.3 Q4(i–viii) English set complements",
+      "head": "bulk/grade9-ex1-3-q4-20261109-1900",
+      "head_sha": "da987129b84180f7247cc5b0332349e53af42c73",
+      "mergeable": true,
+      "updated_at": "2026-11-09T13:31:36Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/100"
+    },
+    {
+      "number": 99,
+      "title": "Draft: Grade 9 Exercise 1.3 Q3(i–viii) English content",
+      "head": "bulk/grade9-ex1-3-q3-20261109-1800",
+      "head_sha": "fd3b1eb5714d7f90a3d9e5e67dc66ec2ac28c3c9",
+      "mergeable": true,
+      "updated_at": "2026-11-09T12:30:34Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/99"
+    },
+    {
+      "number": 98,
+      "title": "Grade 9 content-only: Exercise 1.3 Q2(i–iv) set operations",
+      "head": "bulk/grade9-ex1-3-q2-20261109-1657",
+      "head_sha": "d370201c7686335c7c315a5368efe524825b6582",
+      "mergeable": true,
+      "updated_at": "2026-11-09T11:28:58Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/98"
+    },
+    {
+      "number": 97,
+      "title": "Grade 9 content-only: Exercise 1.2 Q9(i–ii), Q10(i–iii)",
+      "head": "bulk/grade9-ex1-2-q9-q10-20261109-1600",
+      "head_sha": "a68dbf6145dfdcb896e8205cb5ea57df30b8f332",
+      "mergeable": true,
+      "updated_at": "2026-11-09T10:31:43Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/97"
+    },
+    {
+      "number": 96,
+      "title": "Grade 9 content-only: Exercise 1.2 Q7 and Q8(i–iv)",
+      "head": "bulk/grade9-ex1-2-q7-q8-20261109-1504",
+      "head_sha": "21e5ccaedcd05848fb656c19f2e98359fcb4fa88",
+      "mergeable": true,
+      "updated_at": "2026-11-09T09:35:54Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/96"
+    },
+    {
+      "number": 84,
+      "title": "Open Exercises directly at chapter's first textbook question (Grades 9–12)",
+      "head": "ux/exercises-direct-to-first-book-question-20261109",
+      "head_sha": "3c59d1ced80ea95dd5489ce824583024ca9c3b5e",
+      "mergeable": false,
+      "updated_at": "2026-11-09T02:31:25Z",
+      "draft": false,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/84"
+    },
+    {
+      "number": 82,
+      "title": "Draft Grade 9 English 2025 Exercise 1.2 Q1(i–ii) cardinality solutions",
+      "head": "curriculum/g9-ex1-2-q1-i-ii-20261109",
+      "head_sha": "6b5f72843973f68a7b999cabf2feebc901b7edaa",
+      "mergeable": true,
+      "updated_at": "2026-11-09T00:30:10Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/82"
+    },
+    {
+      "number": 80,
+      "title": "Grade 9 English 2025: Probability Exercise 9.2 Q1–Q4 source-text draft + regression checks",
+      "head": "content/g9-english-2025-ch9-probability-ex9-2-q1-4-20261109",
+      "head_sha": "d49f7d6dfac4e9d3f76161586caec39e1229501e",
+      "mergeable": false,
+      "updated_at": "2026-11-08T20:16:44Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/80"
+    },
+    {
+      "number": 43,
+      "title": "Fix Grade 9 Real Numbers release-gate test initialization",
+      "head": "fix/grade9-real-numbers-test-gate",
+      "head_sha": "920a9308fd061128a50f3922460b2856e68e6ffa",
+      "mergeable": false,
+      "updated_at": "2026-11-08T02:12:43Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/43"
+    },
+    {
+      "number": 40,
+      "title": "Grade 11: 2025 bilingual Exercise 1.1 Q1(i–iv) draft + coverage ledger + math checks",
+      "head": "curriculum/grade-11-workstream",
+      "head_sha": "9eae4fa46124d4ec64283f672b7b7b2d95d2fdf0",
+      "mergeable": true,
+      "updated_at": "2026-11-10T01:47:42Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/40"
+    },
+    {
+      "number": 39,
+      "title": "Grade 9 Exercise 1.1 Q4(i): source-verified bilingual roster draft and automated assertions",
+      "head": "curriculum/grade-9-workstream",
+      "head_sha": "470c1da1e7751c09bacb5cc86797ff1656d3742c",
+      "mergeable": false,
+      "updated_at": "2026-11-09T03:29:56Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/39"
+    },
+    {
+      "number": 38,
+      "title": "Grade 12: verified 2025 Exercise 1.1 Q1(i) draft and coverage ledger",
+      "head": "curriculum/grade-12-workstream",
+      "head_sha": "fbbd754445bec6dbad8f17fb697e785ce09303b1",
+      "mergeable": true,
+      "updated_at": "2026-11-10T01:18:02Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/38"
+    },
+    {
+      "number": 37,
+      "title": "Grade 10: 2025 bilingual Exercise 1.1 Q1(i) and source coverage ledger",
+      "head": "curriculum/grade-10-workstream",
+      "head_sha": "0673879ecb96f5c83310ddaa5568a57241353a19",
+      "mergeable": true,
+      "updated_at": "2026-11-10T01:56:34Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/37"
+    },
+    {
+      "number": 35,
+      "title": "Draft: Grade 9 Exercise 1.1 Q3(a–b) bilingual textbook solutions and checks",
+      "head": "curriculum/g9-ex1-1-batch01-20261107",
+      "head_sha": "7cb452bd67011d89f6649f59ca48375de5bce454",
+      "mergeable": false,
+      "updated_at": "2026-11-07T18:26:30Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/35"
+    },
+    {
+      "number": 32,
+      "title": "Draft bilingual Grade 9 Set Language worked examples and gap checklist",
+      "head": "curriculum/g9-ch1-subskill-checkpoint-20261107",
+      "head_sha": "dec0c2334566d598ffdcbd4dd35db570aca4c290",
+      "mergeable": true,
+      "updated_at": "2026-11-07T10:27:50Z",
+      "draft": true,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/32"
+    },
+    {
+      "number": 1,
+      "title": "Delete index-35.html",
+      "head": "vigneswaranmba20-afk-patch-1",
+      "head_sha": "2dca35d619a3aecb07fda219403486190d0c959f",
+      "mergeable": true,
+      "updated_at": "2026-11-05T00:23:19Z",
+      "draft": false,
+      "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/1"
+    }
+  ],
+  "validation": {
+    "command": "npm test",
+    "result": "passed",
+    "exitCode": 0,
+    "logLocation": "/workspace/scratch/triggle-npm-baseline.log",
+    "notes": "Full pre-engine existing npm test chain passed. Browser and deployment checks are separate and must run for the implementation."
+  },
+  "integrationContract": {
+    "moduleOrder": "After curriculum.js and before app.js.",
+    "data": "Append compatible records to window.TRIGGLE_CLASSES[grade].items without changing existing IDs.",
+    "navigation": "Append new IDs to the target chapter textbookQuestionIds; automatic inclusion currently exists only for Grade 10 Chapter 1.",
+    "answer": "Retain existing renderer-compatible string or established language-keyed answer contract; do not invent a new shape.",
+    "ui": "Preserve Adaptive Continuous Reader and existing final answer at end of worked solution."
+  },
+  "deployment": {
+    "workflow": ".github/workflows/deploy.yml",
+    "trigger": "Push to main affecting site/** or explicit workflow_dispatch.",
+    "prChecks": [
+      "npm test",
+      "npm run test:browser",
+      "Grade 9 student usability audit when path-triggered"
+    ],
+    "contentGenerationCronPresent": false,
+    "status": "No merge or deployment performed by this audit."
+  }
+}

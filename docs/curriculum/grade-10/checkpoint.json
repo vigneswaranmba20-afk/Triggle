@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "baselineCommit": "85bd47be82451f356e0e5a64d9fb95bdbe50cd5d",
+  "sourceDiscovery": {
+    "date": "2026-11-10",
+    "bookIds": [
+      "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC"
+    ],
+    "status": "Owner Drive metadata located; inspect actual imprint and pages before production."
+  },
+  "inheritedEvidence": {
+    "numberedQuestions": 69,
+    "appRecords": 74,
+    "mathematicalTasks": null,
+    "basis": "Accepted completed Chapter 1 reference audit and preservation test; not freshly regenerated or overwritten."
+  },
+  "textbookGradeDenominator": null,
+  "tamilCoverage": {
+    "status": "pending",
+    "fullyReviewedChapters": 0,
+    "note": "Tamil string presence or source book availability does not certify textbook wording or whole-lesson review."
+  },
+  "blockers": [
+    "Full grade question/subpart denominator is not yet source reconciled.",
+    "Historical drafts need reconciliation; do not blindly merge divergent grade branches."
+  ],
+  "tests": {
+    "baselineNpmTest": "passed",
+    "baselineBrowser": "passed",
+    "implementation": "passed",
+    "implementationNpmTest": "passed",
+    "pilotBrowser": "passed; new Grade 10 Exercise 2.1 all records, 320/390/1280px, offline reload",
+    "broaderBrowser": "passed; complete npm run test:browser, including immutable 105 legacy routes and new pilot",
+    "remoteLeases": "passed; two isolated clones and actual production grade/integration acquisition"
+  },
+  "release": {
+    "commit": null,
+    "pr": null,
+    "deployment": {
+      "status": "awaiting PR/CI/merge"
+    },
+    "branch": "engine/universal-curriculum-bulk-20261110"
+  },
+  "nextActionableBatch": "After Exercise 2.1 pilot, inventory Chapter 2 Exercise 2.2 from matching source pages.",
+  "inventory": {
+    "grade": 10,
+    "chapters": [
+      {
+        "chapter": "1",
+        "chapterId": "g10-ch1",
+        "title": {
+          "en": "Relations and Functions",
+          "ta": "உறவுகளும் சார்புகளும்"
+        },
+        "appRecords": 74,
+        "exerciseAppRecords": 74,
+        "totalAppRecords": 74,
+        "registeredItems": 74,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "2",
+        "chapterId": "g10-ch2",
+        "title": {
+          "en": "Numbers and Sequences",
+          "ta": "எண்களும் தொடர்வரிசைகளும்"
+        },
+        "appRecords": 10,
+        "exerciseAppRecords": 10,
+        "totalAppRecords": 11,
+        "registeredItems": 11,
+        "sourceVerifiedNumberedQuestions": 10,
+        "sourceVerifiedTasks": 13,
+        "mathematicallyVerifiedRecords": 10,
+        "englishCoverage": {
+          "verifiedRecords": 10
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [
+          {
+            "file": "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json",
+            "batchId": "g10-ch2-ex2-1",
+            "passed": true,
+            "errors": []
+          }
+        ],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "3",
+        "chapterId": "g10-ch3",
+        "title": {
+          "en": "Algebra",
+          "ta": "இயற்கணிதம்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 1,
+        "registeredItems": 1,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "4",
+        "chapterId": "g10-ch4",
+        "title": {
+          "en": "Geometry",
+          "ta": "வடிவியல்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "5",
+        "chapterId": "g10-ch5",
+        "title": {
+          "en": "Coordinate Geometry",
+          "ta": "ஆயத்தொலை வடிவியல்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 1,
+        "registeredItems": 1,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "6",
+        "chapterId": "g10-ch6",
+        "title": {
+          "en": "Trigonometry",
+          "ta": "முக்கோணவியல்"
+        },
+        "appRecords": 17,
+        "exerciseAppRecords": 17,
+        "totalAppRecords": 17,
+        "registeredItems": 17,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "7",
+        "chapterId": "g10-ch7",
+        "title": {
+          "en": "Mensuration",
+          "ta": "அளவியல்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      },
+      {
+        "chapter": "8",
+        "chapterId": "g10-ch8",
+        "title": {
+          "en": "Statistics and Probability",
+          "ta": "புள்ளியியலும் நிகழ்தகவும்"
+        },
+        "appRecords": 0,
+        "exerciseAppRecords": 0,
+        "totalAppRecords": 0,
+        "registeredItems": 0,
+        "sourceVerifiedNumberedQuestions": 0,
+        "sourceVerifiedTasks": 0,
+        "mathematicallyVerifiedRecords": 0,
+        "englishCoverage": {
+          "verifiedRecords": 0
+        },
+        "tamilCoverage": {
+          "status": "pending",
+          "sourceVerifiedRecords": 0
+        },
+        "verifiedTextbookDenominator": null,
+        "completionPercent": null,
+        "complete": false,
+        "chapterReconciliation": null,
+        "batches": [],
+        "blockers": [],
+        "missingSourceTasks": []
+      }
+    ],
+    "appRecords": 104,
+    "totalAppRecords": 104,
+    "exerciseAppRecords": 101,
+    "newEngineVerifiedRecords": 10
+  },
+  "schedule": {
+    "status": "confirmed-prompt-only-update",
+    "evidence": "docs/curriculum/schedules/migration-evidence.json",
+    "timezone": "Asia/Kolkata",
+    "minute": 30
+  }
+}
