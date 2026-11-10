@@ -1,0 +1,36 @@
+{
+  "url": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=12&question=g12-ch1-ex1.1-q1-i",
+  "passed": true,
+  "records": 38,
+  "tasks": 42,
+  "checks": [
+    "all exact questions",
+    "published module hashes",
+    "navigation",
+    "native matrices",
+    "green final-answer step",
+    "truthful Tamil pending",
+    "390px overflow",
+    "offline reload"
+  ],
+  "batches": [
+    {
+      "batch": "g12-ch1-ex1-1",
+      "records": 19,
+      "moduleSha256": "53b2d67625e1e33a136af151a53b23c4cf7185a93e4777cc288a78f0f459b435",
+      "live": true
+    },
+    {
+      "batch": "g12-ch1-ex1-2",
+      "records": 11,
+      "moduleSha256": "00b430dca7d5ccfc5a693e78ac62f716515c0ba81f662238dc15269551b16938",
+      "live": true
+    },
+    {
+      "batch": "g12-ch1-ex1-3",
+      "records": 8,
+      "moduleSha256": "130aebd79177ba2a2748cc3faf0073fbf2496a8d440b5a55a74252cfb460dfdc",
+      "live": true
+    }
+  ]
+}

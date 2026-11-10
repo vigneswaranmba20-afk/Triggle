@@ -22,3 +22,5 @@ PR #38 remains an isolated, unmerged historical draft; its three Q1 adjugate sub
 The original answer appendix (printed 282 / PDF 290) was visually inspected after independent derivation. All supplied numerical answers for exercises 1.1–1.3 agree, including ± in 1.1 Q8/Q9. General trigonometric proofs use identities and explicit domains, not numerical samples. Every displayed Exercise 1.2 row operation is independently replayed using exact rational arithmetic.
 
 Release status is recorded in `checkpoint.json`; local verification does not establish deployment. Next unfinished task: **Exercise 1.4 Q1(i)**.
+
+Published and live verified: **38 records / 23 numbered questions / 42 tasks** in exercises 1.1–1.3. Content PRs #132 and #133 merged only after all exact-head checks passed. Pages workflow `42799934371` published commit `5091d4ecdbbeaaa3417474b0a99f41ef429c472c`; all three module hashes and all published question texts were checked, with navigation, Tamil-pending status and offline reload. Five exercises (40 numbered questions / 53 tasks) remain. No recurring automation was changed.
