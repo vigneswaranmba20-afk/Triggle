@@ -6,7 +6,7 @@ Current canonical dashboard: **https://vigneswaranmba20-afk.github.io/Triggle/si
 
 Teacher Dashboard: **https://vigneswaranmba20-afk.github.io/Triggle/site/teacher-review.html**
 
-The Pages API reported `build_type: legacy`, `main /` on 2026-11-10. The repository-root `/dashboard/` redirect supports that configuration; the same `/dashboard/` path serves the page directly when the existing workflow's `site/` artifact is used. No hosting configuration changes are required. Historical teacher and student URLs retain their existing redirects.
+The Pages API reported `build_type: legacy`, `main /` on 2026-11-10. The repository-root `/dashboard/` redirect supports that configuration. The Actions workflow now stages the same repository layout (maintained app under `/site/` plus root redirects), eliminating different asset URLs between publishers. No hosting configuration changes are required. Historical teacher and student URLs retain their existing redirects.
 
 ## Evidence and metrics
 

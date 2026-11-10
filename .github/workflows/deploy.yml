@@ -76,10 +76,21 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      # Legacy main-root Pages and the Actions artifact must expose identical URLs.
+      # Keep the maintained app at /site/ and publish only its public entry redirects.
+      - name: Stage the canonical Pages layout
+        run: |
+          mkdir -p _pages/site _pages/dashboard
+          cp -a site/. _pages/site/
+          cp index.html teacher-review.html _pages/
+          cp dashboard/index.html _pages/dashboard/
+          test -s _pages/site/dashboard/index.html
+          test -s _pages/site/teacher-review.html
+
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:
-          path: site
+          path: _pages
 
       - name: Publish website
         id: deployment

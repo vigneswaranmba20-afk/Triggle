@@ -37,3 +37,7 @@ Full `npm test` and `npm run test:browser` passed locally, including 105 preserv
 ## Safari engine hardening
 
 Playwright WebKit 26.0 was installed. Initial execution lacked runtime libraries; official Debian libraries were downloaded/extracted into temporary user-owned storage, and a temporary launcher exposed them to the unchanged browser binary. No system libraries or repository security checks were disabled. Real WebKit tests then passed for both dashboards at 320/390/430px: prompts/filters/drill-down, MathML, private reviews/inbox/handoff, sign-out clearing, unauthorized denial, failed module/CSS recovery. Added `npm run test:webkit` and a required WebKit step to the existing validation workflow. This is Safari-engine coverage, not a physical iOS device or production Google-account test.
+
+## Deployment layout hardening
+
+The live Pages API reports legacy main-root publishing, while the existing Actions workflow uploaded site/ as artifact root. These layouts have different relative asset paths. This mismatch is confirmed configuration evidence, not proof of the historical Android screenshot's cause. The Actions upload now stages the same canonical /site/ layout and root student/teacher/dashboard redirects as the live legacy publisher. A browser check of the staged artifact verifies the /dashboard bookmark, teacher login entry, student deep link and local CSS/module responses. Both publication paths now keep identical application URLs without changing Pages settings or student content.
