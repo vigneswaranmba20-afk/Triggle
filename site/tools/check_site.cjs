@@ -3,6 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
+const cp = require('node:child_process');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
 function walk(dir) {
@@ -14,7 +15,17 @@ function walk(dir) {
 let scripts=0, links=0;
 for (const file of walk(root)) {
   const ext=path.extname(file);
-  if (ext==='.js') { new vm.Script(fs.readFileSync(file,'utf8'),{filename:file}); scripts++; }
+  if (ext==='.js') {
+    const source=fs.readFileSync(file,'utf8');
+    if (['teacher-portal.js','teacher-portal-config.js'].includes(path.basename(file))) {
+      // These standalone browser modules use ESM import/export. Node's classic
+      // vm.Script cannot parse ESM: validate as a module rather than exempting.
+      cp.execFileSync(process.execPath,['--input-type=module','--check'],{input:source,encoding:'utf8'});
+    } else {
+      new vm.Script(source,{filename:file});
+    }
+    scripts++;
+  }
   if (ext==='.json'||ext==='.webmanifest') JSON.parse(fs.readFileSync(file,'utf8'));
   if (ext!=='.html') continue;
   const html=fs.readFileSync(file,'utf8');
