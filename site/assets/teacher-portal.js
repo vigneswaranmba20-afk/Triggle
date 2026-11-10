@@ -123,7 +123,7 @@ async function showSelected() {
   $("source-note").textContent = item.kind === "reference"
     ? "Source verification pending: compare this exercise with the prescribed textbook edition before approving.\n" + (item.reference || "")
     : (item.reference || "");
-  $("answer-text").textContent = String(item.answer || "No answer recorded");
+  $("answer-text").textContent = String(item.answer?.en || item.answer || "No answer recorded");
   renderSteps(item);
   const url = questionUrl(item);
   $("app-link").href = url;
@@ -211,7 +211,7 @@ async function loadCurriculum() {
         String(a.exercise).localeCompare(String(b.exercise), undefined, { numeric: true }) ||
         String(a.label?.en).localeCompare(String(b.label?.en), undefined, { numeric: true }));
     if (!records.length) throw new Error("No textbook questions were available");
-    options("grade-select", uniqueSorted(records.map(item => item.classNum)).map(grade => ({ value: grade, label: "Grade " + grade })), "10");
+    options("grade-select", uniqueSorted(records.map(item => item.classNum)).map(grade => ({ value: grade, label: "Grade " + grade })), "9");
     selectors.forEach(id => { $(id).disabled = false; });
     updateGrade();
     message("Teacher access verified. " + records.length + " exercise records are available for review. Items marked reference still need textbook-source verification.");
