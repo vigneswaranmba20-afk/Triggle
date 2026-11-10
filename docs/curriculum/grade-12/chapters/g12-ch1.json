@@ -1,0 +1,1625 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "chapter": "1",
+  "sources": [
+    {
+      "id": "tn-g12-en-v1-2025-owner",
+      "grade": 12,
+      "language": "en",
+      "title": "Class_12_Mathematics_English_Volume_1_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "First edition 2019; revised editions 2020, 2022, 2023, 2025",
+      "url": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+      "sha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    }
+  ],
+  "inventory": {
+    "completeChapter": true,
+    "headingScanVerified": true,
+    "chapterExerciseIds": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6",
+      "1.7",
+      "1.8"
+    ],
+    "exercises": [
+      {
+        "id": "1.1",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              15
+            ],
+            "pdfPages": [
+              23
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "adj A = [[2, −4; −6, −3]]; adj A = [[1, 1, −1; −3, 1, 1; 9, −5, −1]]; adj A = [[2/3, −2/3, 1/3; 2/3, 1/3, −2/3; 1/3, 2/3, 2/3]]",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          },
+          {
+            "number": "2",
+            "parts": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              15
+            ],
+            "pdfPages": [
+              23
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "A⁻¹ = [[−3/2, −2; −1/2, −1]]; A⁻¹ = [[3/14, −1/28, −1/28; −1/28, 3/14, −1/28; −1/28, −1/28, 3/14]]; A⁻¹ = [[1/2, 1/2, −1/2; −3/2, 1/2, 1/2; 9/2, −5/2, −1/2]]",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              15
+            ],
+            "pdfPages": [
+              23
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "4",
+            "parts": [
+              "identity",
+              "inverse"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              15
+            ],
+            "pdfPages": [
+              23
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "A² − 3A − 7I₂ = O₂; A⁻¹ = [[2/7, 3/7; −1/7, −5/7]]",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          },
+          {
+            "number": "5",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              15
+            ],
+            "pdfPages": [
+              23
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "6",
+            "parts": [
+              "left-product",
+              "right-product"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              16
+            ],
+            "pdfPages": [
+              24
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "7",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              16
+            ],
+            "pdfPages": [
+              24
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "8",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              16
+            ],
+            "pdfPages": [
+              24
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "A = ±[[6, 2, 1; 5, 2, 2; 6, 2, 3]] (both signs satisfy the given adjoint).",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          },
+          {
+            "number": "9",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              16
+            ],
+            "pdfPages": [
+              24
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "A⁻¹ = ±[[0, −1/3, 0; 1, 1/3, −1; −1/2, 0, 1]] (the determinant sign is not specified).",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          },
+          {
+            "number": "10",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              16
+            ],
+            "pdfPages": [
+              24
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "adj(adj(A)) = [[2, 0, −2; 0, 2, 0; 2, 0, 2]]",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          },
+          {
+            "number": "11",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              16
+            ],
+            "pdfPages": [
+              24
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "12",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              16
+            ],
+            "pdfPages": [
+              24
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "A = [[3, 1; 1, −2]]",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          },
+          {
+            "number": "13",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              16
+            ],
+            "pdfPages": [
+              24
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "X = [[0, 1; 0, 0]]",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          },
+          {
+            "number": "14",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              16
+            ],
+            "pdfPages": [
+              24
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "15",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              16
+            ],
+            "pdfPages": [
+              24
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "HELP",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          }
+        ],
+        "numberedQuestions": 15,
+        "mathematicalTasks": 21,
+        "sourceFigures": 0,
+        "existingMainRecords": 0,
+        "missingMainQuestions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "id": "1.2",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              27
+            ],
+            "pdfPages": [
+              35
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "rank A = 1.; rank A = 2.; rank A = 2.; rank A = 3.; rank A = 3.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          },
+          {
+            "number": "2",
+            "parts": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              27
+            ],
+            "pdfPages": [
+              35
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "rank A = 2.; rank A = 3.; rank A = 3.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          },
+          {
+            "number": "3",
+            "parts": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              27
+            ],
+            "pdfPages": [
+              35
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "A⁻¹ = [[−2, 1; −5, 2]]; A⁻¹ = [[−2, −3, 1; −3, −3, 1; −2, −4, 1]]; A⁻¹ = [[−40, 16, 9; 13, −5, −3; 5, −2, −1]]",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true,
+              "note": "Mathematical values normalized to the authored notation after visual comparison with the original appendix."
+            }
+          }
+        ],
+        "numberedQuestions": 3,
+        "mathematicalTasks": 11,
+        "sourceFigures": 0,
+        "existingMainRecords": 0,
+        "missingMainQuestions": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "id": "1.3",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              33
+            ],
+            "pdfPages": [
+              41
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "2",
+            "parts": [
+              "AB",
+              "BA",
+              "solve"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              33
+            ],
+            "pdfPages": [
+              41
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              33
+            ],
+            "pdfPages": [
+              41
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "4",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              33
+            ],
+            "pdfPages": [
+              41
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "5",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              33
+            ],
+            "pdfPages": [
+              41
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          }
+        ],
+        "numberedQuestions": 5,
+        "mathematicalTasks": 10,
+        "sourceFigures": 0,
+        "existingMainRecords": 0,
+        "missingMainQuestions": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "id": "1.4",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              35
+            ],
+            "pdfPages": [
+              43
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "2",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              35
+            ],
+            "pdfPages": [
+              43
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              35
+            ],
+            "pdfPages": [
+              43
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "4",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              35
+            ],
+            "pdfPages": [
+              43
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "5",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              36
+            ],
+            "pdfPages": [
+              44
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          }
+        ],
+        "numberedQuestions": 5,
+        "mathematicalTasks": 8,
+        "sourceFigures": 0,
+        "existingMainRecords": 0,
+        "missingMainQuestions": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "id": "1.5",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              37
+            ],
+            "pdfPages": [
+              45
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "2",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              37
+            ],
+            "pdfPages": [
+              45
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              37
+            ],
+            "pdfPages": [
+              45
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "4",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              37
+            ],
+            "pdfPages": [
+              45
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          }
+        ],
+        "numberedQuestions": 4,
+        "mathematicalTasks": 5,
+        "sourceFigures": 0,
+        "existingMainRecords": 0,
+        "missingMainQuestions": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "id": "1.6",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              42
+            ],
+            "pdfPages": [
+              50
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "2",
+            "parts": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              42
+            ],
+            "pdfPages": [
+              50
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "3",
+            "parts": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              42
+            ],
+            "pdfPages": [
+              50
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          }
+        ],
+        "numberedQuestions": 3,
+        "mathematicalTasks": 10,
+        "sourceFigures": 0,
+        "existingMainRecords": 0,
+        "missingMainQuestions": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "id": "1.7",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              47
+            ],
+            "pdfPages": [
+              55
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "2",
+            "parts": [
+              "i",
+              "ii"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              47
+            ],
+            "pdfPages": [
+              55
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              47
+            ],
+            "pdfPages": [
+              55
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          }
+        ],
+        "numberedQuestions": 3,
+        "mathematicalTasks": 5,
+        "sourceFigures": 0,
+        "existingMainRecords": 0,
+        "missingMainQuestions": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "id": "1.8",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              48
+            ],
+            "pdfPages": [
+              56
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "2",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              48
+            ],
+            "pdfPages": [
+              56
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              48
+            ],
+            "pdfPages": [
+              56
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "4",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              48
+            ],
+            "pdfPages": [
+              56
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "5",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              48
+            ],
+            "pdfPages": [
+              56
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "6",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              48
+            ],
+            "pdfPages": [
+              56
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "7",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              48
+            ],
+            "pdfPages": [
+              56
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "8",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              48
+            ],
+            "pdfPages": [
+              56
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "9",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              48
+            ],
+            "pdfPages": [
+              56
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "10",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              48
+            ],
+            "pdfPages": [
+              56
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "11",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              49
+            ],
+            "pdfPages": [
+              57
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "12",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              49
+            ],
+            "pdfPages": [
+              57
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "13",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              49
+            ],
+            "pdfPages": [
+              57
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "14",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              49
+            ],
+            "pdfPages": [
+              57
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "15",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              49
+            ],
+            "pdfPages": [
+              57
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "16",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              49
+            ],
+            "pdfPages": [
+              57
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "17",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              49
+            ],
+            "pdfPages": [
+              57
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "18",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              49
+            ],
+            "pdfPages": [
+              57
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "19",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              49
+            ],
+            "pdfPages": [
+              57
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "20",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              50
+            ],
+            "pdfPages": [
+              58
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "21",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              50
+            ],
+            "pdfPages": [
+              58
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "22",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              50
+            ],
+            "pdfPages": [
+              58
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "23",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              50
+            ],
+            "pdfPages": [
+              58
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "24",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              50
+            ],
+            "pdfPages": [
+              58
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          },
+          {
+            "number": "25",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              50
+            ],
+            "pdfPages": [
+              58
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": true,
+            "answerKey": null
+          }
+        ],
+        "numberedQuestions": 25,
+        "mathematicalTasks": 25,
+        "sourceFigures": 0,
+        "existingMainRecords": 0,
+        "missingMainQuestions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-11-10",
+    "headingScan": "PDF pages 9–59 searched for all exercise/miscellaneous headings; Chapter 2 begins PDF 60. All eight exercise pages visually inspected, including continuation PDF 44 and MCQs through PDF 58. No miscellaneous heading.",
+    "taskConvention": "Labelled subparts count individually. Unlabelled compound instructions Q4 and Q6 of 1.1 and Q2 of 1.3 are split into proof/calculation tasks; solving a system or application counts once, not once per unknown.",
+    "historicalPR38": "Draft, unmerged; preserves isolated adjugate previews and evidence. Three Q1 subparts have prior verification claims, rederived in new batch. No Chapter 1 runtime records on main.",
+    "tamilStatus": "pending; English-only scope explicitly requested",
+    "pageImages": [
+      {
+        "pdfPage": 35,
+        "printedPage": 27,
+        "sha256": "3364f9234dec9c1bcc8977ba21b17f0085ff3ce147245f304b65be943cef3d45",
+        "visualChecked": true
+      },
+      {
+        "pdfPage": 41,
+        "printedPage": 33,
+        "sha256": "757430daa3e135546a8fb70d41454dbcb62b852893382f71bcb9c7d783825b6e",
+        "visualChecked": true
+      },
+      {
+        "pdfPage": 43,
+        "printedPage": 35,
+        "sha256": "5d490e3549317d6062117038b505b48b711eb6ca059ed47ebb0ba034c5bc884f",
+        "visualChecked": true
+      },
+      {
+        "pdfPage": 44,
+        "printedPage": 36,
+        "sha256": "2191e3283eda12888c62d24e3755f241d84460f4e91336c10cd7db829ce503b0",
+        "visualChecked": true
+      },
+      {
+        "pdfPage": 45,
+        "printedPage": 37,
+        "sha256": "1d79bfdfff87d0e25b2a44dc2daf7cefe1a96b694192079ffdedd9db70668fca",
+        "visualChecked": true
+      },
+      {
+        "pdfPage": 50,
+        "printedPage": 42,
+        "sha256": "5e132dfd042fe4555c33b4fede49674f0a633bf7c6de8f809038edc3772e5882",
+        "visualChecked": true
+      },
+      {
+        "pdfPage": 55,
+        "printedPage": 47,
+        "sha256": "7fbb5d47baf5eb1460312f6337544783d115b454df104e058cf45465bcbf1ab4",
+        "visualChecked": true
+      },
+      {
+        "pdfPage": 56,
+        "printedPage": 48,
+        "sha256": "4b0877fe2dabfcfd7c9776108353abe38455d8a84ad1f080255211555c75502a",
+        "visualChecked": true
+      },
+      {
+        "pdfPage": 57,
+        "printedPage": 49,
+        "sha256": "ed20a456144adaa90c54769a4c5620de9b996a3d30ace5eec1462fc3c531c07f",
+        "visualChecked": true
+      },
+      {
+        "pdfPage": 58,
+        "printedPage": 50,
+        "sha256": "6b6881248d64903bd587d0b6dba4a26b8527e652a8f552eec5024d671e39d521",
+        "visualChecked": true
+      }
+    ]
+  }
+}

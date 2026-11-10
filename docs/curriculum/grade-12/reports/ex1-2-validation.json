@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g12-ch1-ex1-2",
+  "grade": 12,
+  "chapter": "1",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "issues": [],
+  "metrics": {
+    "numberedQuestions": 3,
+    "labelledSubparts": 11,
+    "sourceTasks": 11,
+    "appRecords": 11,
+    "newAppRecords": 0,
+    "sourceVerifiedNumberedQuestions": 3,
+    "verifiedNumberedQuestions": 3,
+    "mathematicallyVerifiedRecords": 11,
+    "solvedSubparts": 11,
+    "englishSourceVerifiedRecords": 11,
+    "tamilSourceVerifiedRecords": 0
+  },
+  "coverage": {
+    "inventoryCompleteChapter": false,
+    "exercises": [
+      {
+        "exercise": "1.2",
+        "inventoryVerified": true,
+        "numberedQuestions": 3,
+        "complete": true
+      }
+    ],
+    "missing": [],
+    "blocked": [],
+    "chapterComplete": false
+  },
+  "mathematics": {
+    "script": "site/tools/bulk/verify_g12_ch1_ex1_2.cjs",
+    "verifierSha256": "038b750162938f261cc0f24a43b3cf6314983102c83b6bad10f55520dda296da",
+    "checks": [
+      {
+        "recordId": "g12-ch1-ex1.2-q1-i",
+        "parts": [
+          "i"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "aed5c2d94ebf15fbb4a9fd7fbe7bafd8f917764da0ad3c4ea96ca25228d8af1a"
+      },
+      {
+        "recordId": "g12-ch1-ex1.2-q1-ii",
+        "parts": [
+          "ii"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "1f7017ef08a9e88ee6f9213c5c375a15c1c16a4c30b788ea505dc3ea46381f04"
+      },
+      {
+        "recordId": "g12-ch1-ex1.2-q1-iii",
+        "parts": [
+          "iii"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "dabd0ae0e68d6a8ec780e5c72692a2d5e754373f7be769de7ea3a0a4f416e715"
+      },
+      {
+        "recordId": "g12-ch1-ex1.2-q1-iv",
+        "parts": [
+          "iv"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "8311e9ff08ce418a5f5bee6389f009c7b67dfebc3b9c7feba902857801375b2a"
+      },
+      {
+        "recordId": "g12-ch1-ex1.2-q1-v",
+        "parts": [
+          "v"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "e9888643855623208ac235633c67612a51ede13ed79ca9e15678d67e76e4d8ae"
+      },
+      {
+        "recordId": "g12-ch1-ex1.2-q2-i",
+        "parts": [
+          "i"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "1ed0438ce577e833754a13a83b2b6a0b842e02ef145f045b1acc50c04fc1e385"
+      },
+      {
+        "recordId": "g12-ch1-ex1.2-q2-ii",
+        "parts": [
+          "ii"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "9a5d44a948ccbfdc0aebb5e742ca9c1f9ee0118011f8e580b21bb149d0f110a8"
+      },
+      {
+        "recordId": "g12-ch1-ex1.2-q2-iii",
+        "parts": [
+          "iii"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "9e8f4caada3716c7769dda33197e77dbb4fe8e42b53f202d6c7ee63ae03fb7a0"
+      },
+      {
+        "recordId": "g12-ch1-ex1.2-q3-i",
+        "parts": [
+          "i"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "c25148bfd15cfaa41c392a2b6315a53277ad743948becb0ed2e509d9fb85c5ca"
+      },
+      {
+        "recordId": "g12-ch1-ex1.2-q3-ii",
+        "parts": [
+          "ii"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "1902a1981f2baa41f29b451f7da323534e9c817b8048fd034afc001c94e8acc7"
+      },
+      {
+        "recordId": "g12-ch1-ex1.2-q3-iii",
+        "parts": [
+          "iii"
+        ],
+        "passed": true,
+        "method": "Independent exhaustive exact-rational minors, Gauss-Jordan inverse with both product orders, and every displayed row operation replayed",
+        "recordSha256": "d1b0d875b9e67f1aa199089591370995ab2fa3cad2e4f604419b77f6ac10d924"
+      }
+    ]
+  }
+}

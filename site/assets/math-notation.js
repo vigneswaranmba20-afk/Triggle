@@ -32,6 +32,20 @@
     const tokens=[];
     const stash=html=>{tokens.push(html);return '\uE000N'+(tokens.length-1)+'\uE001';};
     let s=esc(value);
+    // Authored matrices retain row/column structure offline through native MathML.
+    // Commas separate columns and semicolons separate rows; | remains the
+    // established scalar-fraction delimiter.
+    s=s.replace(/\[\[([^\[\]|]+)\]\]/g,(whole,body)=>{
+      const rows=body.split(';').map(row=>row.split(',').map(cell=>cell.trim()));
+      if(rows.some(row=>row.length!==rows[0].length))return whole;
+      const cell=value=>{
+        const fraction=value.match(/^([−-]?\d+)\/(\d+)$/);
+        return fraction?'<mfrac>'+signed(fraction[1])+symbol(fraction[2])+'</mfrac>':simpleMath(value);
+      };
+      return stash(typeset(whole,'<mrow><mo stretchy="true">[</mo><mtable>'+rows.map(row=>
+        '<mtr>'+row.map(value=>'<mtd>'+cell(value)+'</mtd>').join('')+'</mtr>').join('')+
+        '</mtable><mo stretchy="true">]</mo></mrow>'));
+    });
     // A parenthesized fraction raised to a power: include the parentheses.
     s=s.replace(/\(\s*\[\[([^\]|]+)\|([^\]]+)\]\]\s*\)([⁰¹²³⁴⁵⁶⁷⁸⁹]|\^[a-zA-Z0-9−-]+)/g,
       (_full,n,d,p)=>stash('<span class="math-group-power" role="math"><span class="math-group">'+

@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g12-ch1-ex1-1",
+  "grade": 12,
+  "chapter": "1",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "issues": [],
+  "metrics": {
+    "numberedQuestions": 15,
+    "labelledSubparts": 10,
+    "sourceTasks": 21,
+    "appRecords": 19,
+    "newAppRecords": 0,
+    "sourceVerifiedNumberedQuestions": 15,
+    "verifiedNumberedQuestions": 15,
+    "mathematicallyVerifiedRecords": 19,
+    "solvedSubparts": 21,
+    "englishSourceVerifiedRecords": 19,
+    "tamilSourceVerifiedRecords": 0
+  },
+  "coverage": {
+    "inventoryCompleteChapter": false,
+    "exercises": [
+      {
+        "exercise": "1.1",
+        "inventoryVerified": true,
+        "numberedQuestions": 15,
+        "complete": true
+      }
+    ],
+    "missing": [],
+    "blocked": [],
+    "chapterComplete": false
+  },
+  "mathematics": {
+    "script": "site/tools/bulk/verify_g12_ch1_ex1_1.cjs",
+    "verifierSha256": "3f4cee4dda399a22c30c3f9c73e9fd0de425e516a3df27e4438dc5e364319207",
+    "checks": [
+      {
+        "recordId": "g12-ch1-ex1.1-q1-i",
+        "parts": [
+          "i"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "982ed096c9d6fa08313c3ccce141c94df2948278793f3ebe3fc66735de011849"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q1-ii",
+        "parts": [
+          "ii"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "60409d6ede71ed0faa7d1dab9d98a117606c051143e32f06e8661ff257bb1add"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q1-iii",
+        "parts": [
+          "iii"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "f0eb40fb4ffcabd71100339f6d8adcfe3da1c584a48fc280fd6cc7434a3d6f29"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q2-i",
+        "parts": [
+          "i"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "2ceeadc87f523b0d77ad70edcdc12ed62d37edf793c9a2c9d050653dbb2e1d6e"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q2-ii",
+        "parts": [
+          "ii"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "5e30606e2879f5aeeef0ceafae6bf879e989c1af22f5e773f3540e7c493476ff"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q2-iii",
+        "parts": [
+          "iii"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "97522e020437bf8dd2e97e1ceb4bff6f9cef08f822015d1011212b5ac5c8a8d4"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q3",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Reviewed general trigonometric proof using parity and c²+s²=1; both product orders",
+        "recordSha256": "3f85b6fbc152e7cf320c26e42536c38e9650011ccbd5dbf34a1f384a0c478e4a"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q4",
+        "parts": [
+          "identity",
+          "inverse"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "9c6e0554aba8bd8029397468fa86b70529f4709033acbc57f2ed7cab7ab402c0"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q5",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "a51733c264793e1b3b44d234030f4b76756efa2b9453f75c7dda973e12c062c9"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q6",
+        "parts": [
+          "left-product",
+          "right-product"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "321b258fe70f01537cc59bd73f9a9514782c61f6142b8b94f1aa61b176786234"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q7",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "4aca6ddcdbf97aa468816a2aabf2f4e63a2ee7869db7303d604710b29967efc8"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q8",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Exact rational cofactors of both sign candidates; determinant identity and exhaustive ± branches",
+        "recordSha256": "5f4d47b75d84c0053fadcb091f4e84c5ebc85946c07696eaa2aee7c7a36b1677"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q9",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Exact rational two-sided products and adjoints for both inverse sign branches",
+        "recordSha256": "62b8bdf5d2aa7c1cf02f95d45f31c49161ec27e9de7021e9fdd947e19657189e"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q10",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "549b398b66a78743d5da746b9257616b0be72ecce8759c2f60f1d81ff0cd5722"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q11",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Reviewed general rational double-angle proof, with cos x nonzero domain restriction",
+        "recordSha256": "d3e16f1c9769940bc0114ff825852148e2d1fea9704e4cee8d32dbcf151ebf9f"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q12",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "a049d4f30e98dc095d19a0650764257d9bc943ac966b6f0cff1ea2a25826fa36"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q13",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "d19443e86b4b44f573123c9b4c6963a4e0be0a822bdf755f9f552587f70e9551"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q14",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent exact rational Gauss-Jordan inversion, Laplace determinant and two-sided identities; reviewed intermediate workings",
+        "recordSha256": "98bcdda9a390d50cedab2dbbaa688a208414f6751e480280d41e12636aff6404"
+      },
+      {
+        "recordId": "g12-ch1-ex1.1-q15",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Exact rational decryption and re-encryption of every row; alphabet mapping",
+        "recordSha256": "01c49f015d6283a52081b3f5903243062e26dec7d83bf31cc552b4c8f1eb337b"
+      }
+    ]
+  }
+}
