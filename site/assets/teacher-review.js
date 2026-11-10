@@ -1,11 +1,11 @@
 import { firebaseConfig } from "../data/teacher-review-config.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-app.js";
 import {
   getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut
-} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/13.2.0/firebase-auth.js";
 import {
   getFirestore, addDoc, collection, getDocs, limit, query, serverTimestamp, where
-} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/13.2.0/firebase-firestore.js";
 
 const $ = id => document.getElementById(id);
 const views = ["unconfigured", "login", "denied", "workspace"];
