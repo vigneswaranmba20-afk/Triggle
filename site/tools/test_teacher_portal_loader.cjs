@@ -48,5 +48,9 @@ assert(nine.some(i=>(i.label?.en||'').startsWith('Example')&&!isReviewableExerci
 assert(nine.some(i=>i.kind==='practice'&&!isReviewableExercise(i)), 'Non-textbook practice should not enter exercise review');
 assert(ten.some(i=>i.kind==='textbook'&&isReviewableExercise(i)), 'Grade 10 textbook exercises must remain available');
 assert(source.includes('Source verification pending:'),'Reference records must warn about textbook edition fidelity');
+assert(source.includes(')), "9");'), 'Teacher portal should open Grade 9 by default after teacher login');
+assert(source.includes('item.answer?.en'), 'Bilingual Grade 9 answers must display their English text');
+const teacherHtml=fs.readFileSync(path.join(root,'teacher-review.html'),'utf8');
+assert(teacherHtml.includes('teacher-portal.js?v=grade9-review-20261110'),'Grade 9 fix must bust cached mobile teacher script');
 
 console.log('PASS: Teacher portal Grade 9 exercise eligibility, data module dependency order, local asset paths, loading/error states and ES module syntax');
