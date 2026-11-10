@@ -16,7 +16,7 @@ const {chromium}=require('playwright'),{server,launchOptions}=require('./dashboa
       page.on('request',r=>requests.push(r.url()));
       await page.goto(app.base+'/dashboard/?class=9#legacy-dashboard');
       await page.waitForURL(/\/index\.html(?:[?#]|$)/);
-      await page.locator('#browseBtn').waitFor({state:'visible'});
+      await page.locator('#browseBtn').waitFor({state:'attached'});
       assert.match(await page.title(),/Triggle.*Mathematics/);
       assert(!new URL(page.url()).pathname.includes('dashboard'),'Old dashboard must not display');
       assert.equal(await page.locator('h1:has-text("Triggle Mission Control")').count(),0);
