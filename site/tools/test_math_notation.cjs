@@ -99,3 +99,10 @@ assert.ok(stages.includes('a^(m/n)=(ⁿ√a)^m'),'Radical rule must retain its c
 assert.ok(stages.includes('[[1|(∛64)²]]'),'Worked example must use stacked rational notation');
 assert.ok(css.includes('.frac > span:first-child') && css.includes('.frac > span:last-child'),'Nested fraction rules must not spread into nested math');
 console.log('PASS: '+cases.length+' math notation cases, safe escaping, bilingual lesson integration, nested fraction styling');
+const matrix=render('[[1, −2/3; 4, 5]]');
+assert.equal((matrix.match(/<mtr>/g)||[]).length,2,'Matrix retains two rows');
+assert.equal((matrix.match(/<mtd>/g)||[]).length,4,'Matrix retains four cells');
+assert.ok(matrix.includes('<mfrac>'),'Matrix rational entries use stacked fractions');
+assert.ok(matrix.includes('aria-label="[[1, −2/3; 4, 5]]"'),'Accessible exact matrix source');
+assert.ok(render('[[1|3]]').includes('class="frac"'),'Existing scalar fractions preserved');
+assert.ok(!render('[[1, 2; 3]]').includes('<mtable>'),'Ragged matrices are not silently typeset');

@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "chapter": "1",
+  "exercise": "1.2",
+  "englishDriveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+  "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+  "printedPage": 27,
+  "pdfPage": 35,
+  "visualChecked": true,
+  "imageSha256": "3364f9234dec9c1bcc8977ba21b17f0085ff3ce147245f304b65be943cef3d45",
+  "questions": [
+    {
+      "recordId": "g12-ch1-ex1.2-q1-i",
+      "exercise": "1.2",
+      "question": "1",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the rank of the following matrices by minor method: (i) [[2, −4; −1, 2]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.2-q1-ii",
+      "exercise": "1.2",
+      "question": "1",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the rank of the following matrices by minor method: (ii) [[−1, 3; 4, −7; 3, −4]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.2-q1-iii",
+      "exercise": "1.2",
+      "question": "1",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the rank of the following matrices by minor method: (iii) [[1, −2, −1, 0; 3, −6, −3, 1]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.2-q1-iv",
+      "exercise": "1.2",
+      "question": "1",
+      "parts": [
+        "iv"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the rank of the following matrices by minor method: (iv) [[1, −2, 3; 2, 4, −6; 5, 1, −1]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.2-q1-v",
+      "exercise": "1.2",
+      "question": "1",
+      "parts": [
+        "v"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the rank of the following matrices by minor method: (v) [[0, 1, 2, 1; 0, 2, 4, 3; 8, 1, 0, 2]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.2-q2-i",
+      "exercise": "1.2",
+      "question": "2",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the rank of the following matrices by row reduction method: (i) [[1, 1, 1, 3; 2, −1, 3, 4; 5, −1, 7, 11]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.2-q2-ii",
+      "exercise": "1.2",
+      "question": "2",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the rank of the following matrices by row reduction method: (ii) [[1, 2, −1; 3, −1, 2; 1, −2, 3; 1, −1, 1]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.2-q2-iii",
+      "exercise": "1.2",
+      "question": "2",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the rank of the following matrices by row reduction method: (iii) [[3, −8, 5, 2; 2, −5, 1, 4; −1, 2, 3, −2]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.2-q3-i",
+      "exercise": "1.2",
+      "question": "3",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the inverse of each of the following by Gauss-Jordan method: (i) [[2, −1; 5, −2]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.2-q3-ii",
+      "exercise": "1.2",
+      "question": "3",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the inverse of each of the following by Gauss-Jordan method: (ii) [[1, −1, 0; 1, 0, −1; 6, −2, −3]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "recordId": "g12-ch1-ex1.2-q3-iii",
+      "exercise": "1.2",
+      "question": "3",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Find the inverse of each of the following by Gauss-Jordan method: (iii) [[1, 2, 3; 2, 5, 3; 1, 0, 8]]"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        27
+      ],
+      "pdfPages": [
+        35
+      ]
+    }
+  ],
+  "tamilStatus": "pending",
+  "answerKey": {
+    "pdfPage": 290,
+    "printedPage": 282,
+    "visualChecked": true,
+    "review": "All eleven independently derived answers agree."
+  }
+}
