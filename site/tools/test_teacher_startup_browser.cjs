@@ -63,6 +63,32 @@ const baseline = process.argv.includes('--baseline');
    }
    await ctx.close();
   }
+  // A previously cached teacher module must not override the current online-only service.
+  {
+   const ctx=await browser.newContext({viewport:{width:390,height:850},serviceWorkers:'allow'}),page=await ctx.newPage();
+   await page.goto(base+'/teacher-review.html');
+   await page.evaluate(async()=>{
+    await navigator.serviceWorker.register('./service-worker.js');
+    await navigator.serviceWorker.ready;
+    if(!navigator.serviceWorker.controller)await new Promise(r=>navigator.serviceWorker.addEventListener('controllerchange',r,{once:true}));
+    const keys=await caches.keys(),cache=await caches.open(keys.find(k=>k.startsWith('triggle-')));
+    await cache.put(new Request(new URL('./assets/teacher-portal.js',location.href)),new Response('throw Error("STALE TEACHER MODULE")',{headers:{'content-type':'application/javascript'}}));
+   });
+   await ctx.setOffline(true);
+   for(const target of ['./assets/teacher-portal.js?stale-probe','./teacher-review.html?stale-probe']) {
+    const outcome=await page.evaluate(url=>fetch(url).then(r=>r.text()).catch(()=> 'NETWORK_FAILURE'),target);
+    assert.equal(outcome,'NETWORK_FAILURE','Private service bypasses old assets and student-shell fallback');
+   }
+   await ctx.setOffline(false);
+   // A cache miss must not fall back to the cached student HTML, even offline.
+   const result=await page.evaluate(async()=>{
+    const worker=await navigator.serviceWorker.getRegistration();await worker.update();
+    const cacheNames=await caches.keys();return cacheNames.length;
+   });assert.ok(result>0);
+   await page.route('**/assets/teacher-portal.js*',r=>r.abort());
+   await page.reload();await page.locator('#startup-error').waitFor({state:'visible'});
+   assert.equal(await page.locator('#workspace').isVisible(),false);await ctx.close();
+  }
   console.log('PASS teacher startup: SDK/module/CSS failures, auth/Firestore watchdog, offline/reconnect, Retry and 320/390/430px fallback.');
  } finally {await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

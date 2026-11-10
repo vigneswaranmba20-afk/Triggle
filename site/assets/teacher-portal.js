@@ -1,3 +1,4 @@
+import { installTeacherInbox } from "./teacher-inbox.js?v=1";
 import { firebaseConfig } from "../data/teacher-portal-config.js";
 import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-app.js";
 import {
@@ -27,9 +28,23 @@ function bounded(promise) {
 }
 window.addEventListener("triggle-review-unavailable", () => {
   authEpoch++; reviewer = null; selectedRecord = null; records = [];
+  $("history").replaceChildren(); $("review-form").reset();
   if (unsubscribeAuth) unsubscribeAuth();
 });
 const reviewEvents = "teacherReviewEvents";
+const inbox = installTeacherInbox(() => ({db, reviewer, bounded, active:startup.active, selectQuestion(entry) {
+  const item = records.find(r=>r.id===entry.questionId);
+  if (!item) { message("This reviewed record is not in the current curriculum. Preserve its history and inspect the source.", true); return; }
+  $("grade-select").value=String(entry.grade); updateGrade();
+  $("chapter-select").value=entry.chapter; updateChapter();
+  $("exercise-select").value=entry.exercise; updateExercise();
+  $("question-select").value=entry.questionId; void showSelected();
+}}));
+window.addEventListener("triggle-review-unavailable", () => inbox.clear());
+function mathText(node, value) {
+  if (window.TriggleNotation) node.innerHTML = window.TriggleNotation.render(value);
+  else node.textContent = value;
+}
 
 function message(text, isError = false) {
   $("message").textContent = text;
@@ -114,12 +129,12 @@ function renderSteps(item) {
   for (const step of item.steps || []) {
     const li = document.createElement("li");
     const detail = document.createElement("span");
-    detail.textContent = step.en || "";
+    detail.textContent = step[$("review-language").value] || step.en || "";
     li.appendChild(detail);
     if (step.eq) {
       const eq = document.createElement("span");
       eq.className = "step-eq";
-      eq.textContent = step.eq;
+      mathText(eq, step.eq);
       li.appendChild(eq);
     }
     list.appendChild(li);
@@ -134,11 +149,19 @@ async function showSelected() {
     return;
   }
   $("question-label").textContent = item.label?.en || item.id;
-  $("question-text").textContent = item.q?.en || "Original English source text not available.";
+  const language = $("review-language").value;
+  mathText($("question-text"), item.q?.[language] || item.q?.en || "Original source text not available.");
+  $("language-status").textContent = language === "ta" && !item.q?.ta ? "Tamil wording unavailable; English is shown. Tamil editorial review pending." : "Source and full-language review are separate from this decision.";
+  $("review-figure").hidden = !item.figureSrc;
+  if (item.figureSrc) {
+    $("review-figure-image").src = item.figureSrc;
+    $("review-figure-image").alt = item.figureAlt?.[language] || item.figureAlt?.en || "Question figure; verify labels against the original textbook.";
+    $("review-figure-caption").textContent = item.figureCaption?.[language] || item.figureCaption?.en || "Existing question figure";
+  } else $("review-figure-image").removeAttribute("src");
   $("source-note").textContent = item.kind === "reference"
     ? "Source verification pending: compare this exercise with the prescribed textbook edition before approving.\n" + (item.reference || "")
     : (item.reference || "");
-  $("answer-text").textContent = String(item.answer?.en || item.answer || "No answer recorded");
+  mathText($("answer-text"), String(item.answer?.[language] || item.answer?.en || item.answer || "No answer recorded"));
   renderSteps(item);
   const url = questionUrl(item);
   $("app-link").href = url;
@@ -146,9 +169,11 @@ async function showSelected() {
   $("student-frame").dataset.url = url;
   $("review-form").reset();
   $("history").textContent = "Loading private review history…";
+  $("save-review").disabled = true;
   const computedDigest = await digest(item);
   if (selectedRecord !== item) return;
   currentDigest = computedDigest;
+  $("save-review").disabled = false;
   await loadHistory(item.id);
 }
 async function loadHistory(questionId) {
@@ -253,6 +278,7 @@ async function beginGoogleLogin() {
 }
 async function signout() {
   authEpoch++; reviewer = null; selectedRecord = null; currentDigest = "";
+  inbox.clear();
   $("history").replaceChildren();
   view("login");
   try { if (auth) await bounded(signOut(auth)); }
@@ -260,7 +286,9 @@ async function signout() {
 }
 async function authChanged(user) {
   const epoch = ++authEpoch;
-  reviewer = null;
+  reviewer = null; selectedRecord = null; currentDigest = "";
+  $("history").replaceChildren(); $("review-form").reset();
+  inbox.clear(); view("checking");
   if (!startup.active()) return;
   if (!user) {
     startup.set("ready-to-sign-in");
@@ -295,6 +323,7 @@ async function authChanged(user) {
     if (epoch !== authEpoch || !startup.active()) return;
     startup.set("authorized");
     message("Authenticated teacher access. Your review history is private.");
+    void inbox.load();
   } catch (error) {
     if (epoch !== authEpoch) return;
     if (error.code === "permission-denied") {
@@ -312,7 +341,10 @@ async function saveReview(event) {
     return;
   }
   const item = selectedRecord;
-  const note = $("remarks").value.trim();
+  const category = $("issue-type").value;
+  const remarks = $("remarks").value.trim();
+  if (decision === "needs-correction" && !remarks) { message("Describe the correction in Tamil or English before saving.", true); return; }
+  const note = (category ? "[" + category + "] " : "") + remarks;
   saving = true;
   $("save-review").disabled = true;
   try {
@@ -327,7 +359,9 @@ async function saveReview(event) {
       recordSha256: await digest(item),
       createdAt: serverTimestamp()
     });
-    message("Private review saved. Automated correction is not connected yet.");
+    if (!reviewer || !startup.active()) return;
+    message("Private review saved. Select it in the inbox for manual correction handoff.");
+    void inbox.load();
     $("review-form").reset();
     await loadHistory(item.id);
   } catch (error) {
@@ -338,14 +372,13 @@ async function saveReview(event) {
   }
 }
 $("google-login").addEventListener("click", beginGoogleLogin);
-$("try-another").addEventListener("click", async () => {
-  await signout();
-  await beginGoogleLogin();
-});
+// Return to the login button so the popup opens on a fresh user gesture on mobile.
+$("try-another").addEventListener("click", () => { void signout(); });
 $("signout").addEventListener("click", signout);
 $("grade-select").addEventListener("change", updateGrade);
 $("chapter-select").addEventListener("change", updateChapter);
 $("exercise-select").addEventListener("change", updateExercise);
+$("review-language").addEventListener("change", () => { void showSelected(); });
 $("question-select").addEventListener("change", () => { void showSelected(); });
 $("review-form").addEventListener("submit", saveReview);
 document.querySelector("details").addEventListener("toggle", event => {
@@ -356,7 +389,9 @@ document.querySelector("details").addEventListener("toggle", event => {
   }
 });
 
-if (!firebaseConfig?.apiKey || !firebaseConfig?.projectId || !firebaseConfig?.authDomain) {
+if (!startup.active()) {
+  // A late import after the independent timeout cannot revive this session.
+} else if (!firebaseConfig?.apiKey || !firebaseConfig?.projectId || !firebaseConfig?.authDomain) {
   startup.set("recoverable-error");
   view("unconfigured");
   message("Teacher Review is awaiting secure Firebase configuration.");

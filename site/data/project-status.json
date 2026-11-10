@@ -94,7 +94,7 @@
         "evidence": "docs/curriculum/grade-12/checkpoint.json"
       }
     ],
-    "recommendedActions": 53
+    "recommendedActions": 79
   },
   "grades": [
     {
@@ -8884,6 +8884,46 @@
       ]
     },
     {
+      "id": "g12-ch2-inventory",
+      "grade": 12,
+      "chapter": "2",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 3,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-12/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g12-ch3-inventory",
+      "grade": 12,
+      "chapter": "3",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 3,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-12/checkpoint.json"
+      ]
+    },
+    {
       "id": "g12-ch4-ex4.1",
       "priority": 3,
       "grade": 12,
@@ -8963,6 +9003,166 @@
       ]
     },
     {
+      "id": "g12-ch5-inventory",
+      "grade": 12,
+      "chapter": "5",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 3,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-12/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g12-ch6-inventory",
+      "grade": 12,
+      "chapter": "6",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 3,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-12/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g12-ch7-inventory",
+      "grade": 12,
+      "chapter": "7",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 3,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-12/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g12-ch8-inventory",
+      "grade": 12,
+      "chapter": "8",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 3,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-12/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g12-ch9-inventory",
+      "grade": 12,
+      "chapter": "9",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 3,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-12/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g12-ch10-inventory",
+      "grade": 12,
+      "chapter": "10",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 3,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-12/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g12-ch11-inventory",
+      "grade": 12,
+      "chapter": "11",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 3,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-12/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g12-ch12-inventory",
+      "grade": 12,
+      "chapter": "12",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 3,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-12/checkpoint.json"
+      ]
+    },
+    {
       "id": "g9-ch1-ex1.1",
       "priority": 4,
       "grade": 9,
@@ -9012,6 +9212,26 @@
       "sourcePages": null,
       "evidence": [
         "docs/curriculum/grade-9/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g11-ch1-inventory",
+      "grade": 11,
+      "chapter": "1",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
       ]
     },
     {
@@ -9333,6 +9553,26 @@
       ]
     },
     {
+      "id": "g11-ch2-inventory",
+      "grade": 11,
+      "chapter": "2",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
+      ]
+    },
+    {
       "id": "g9-ch3-ex3.1",
       "priority": 4,
       "grade": 9,
@@ -9551,6 +9791,26 @@
       ]
     },
     {
+      "id": "g10-ch3-inventory",
+      "grade": 10,
+      "chapter": "3",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
       "id": "g9-ch4-ex4.1",
       "priority": 4,
       "grade": 9,
@@ -9628,6 +9888,46 @@
       ]
     },
     {
+      "id": "g10-ch4-inventory",
+      "grade": 10,
+      "chapter": "4",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g11-ch4-inventory",
+      "grade": 11,
+      "chapter": "4",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
+      ]
+    },
+    {
       "id": "g9-ch5-ex5.2",
       "priority": 4,
       "grade": 9,
@@ -9655,6 +9955,46 @@
       "sourcePages": null,
       "evidence": [
         "docs/curriculum/grade-9/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g10-ch5-inventory",
+      "grade": 10,
+      "chapter": "5",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g11-ch5-inventory",
+      "grade": 11,
+      "chapter": "5",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
       ]
     },
     {
@@ -9957,6 +10297,26 @@
       ]
     },
     {
+      "id": "g11-ch6-inventory",
+      "grade": 11,
+      "chapter": "6",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
+      ]
+    },
+    {
       "id": "g9-ch7-ex7.1",
       "priority": 4,
       "grade": 9,
@@ -10081,6 +10441,46 @@
       ]
     },
     {
+      "id": "g10-ch7-inventory",
+      "grade": 10,
+      "chapter": "7",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g11-ch7-inventory",
+      "grade": 11,
+      "chapter": "7",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
+      ]
+    },
+    {
       "id": "g9-ch8-ex8.1",
       "priority": 4,
       "grade": 9,
@@ -10199,6 +10599,46 @@
       ]
     },
     {
+      "id": "g10-ch8-inventory",
+      "grade": 10,
+      "chapter": "8",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g11-ch8-inventory",
+      "grade": 11,
+      "chapter": "8",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
+      ]
+    },
+    {
       "id": "g9-ch9-ex9.1",
       "priority": 4,
       "grade": 9,
@@ -10287,6 +10727,86 @@
       "sourcePages": null,
       "evidence": [
         "docs/curriculum/grade-9/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g11-ch9-inventory",
+      "grade": 11,
+      "chapter": "9",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g11-ch10-inventory",
+      "grade": 11,
+      "chapter": "10",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g11-ch11-inventory",
+      "grade": 11,
+      "chapter": "11",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g11-ch12-inventory",
+      "grade": 11,
+      "chapter": "12",
+      "exercise": "Unknown",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [],
+      "scope": [],
+      "priority": 4,
+      "type": "Source reconciliation",
+      "status": "Blocked",
+      "reason": "No exercise records or verified question/subpart inventory for this chapter.",
+      "dependencies": [
+        "Inspect matching English/Tamil source pages; reconcile existing drafts before authoring."
+      ],
+      "sources": [],
+      "evidence": [
+        "docs/curriculum/grade-11/checkpoint.json"
       ]
     }
   ]

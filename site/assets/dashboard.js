@@ -47,7 +47,7 @@
   if(chapter.totalTasks){const bar=el('progress');bar.max=chapter.totalTasks;bar.value=chapter.verifiedTasks;bar.setAttribute('aria-label',`${chapter.verifiedTasks} of ${chapter.totalTasks} inventoried tasks verified`);panel.append(bar);}
   const exercise=chapter.exercises.find(e=>e.id===params.get('exercise'));
   if(!exercise){
-   if(!chapter.exercises.length)panel.append(el('p','No complete exercise source inventory is available. Inspect the original textbook before choosing a question.'));
+   if(!chapter.exercises.length){panel.append(el('p','No complete exercise source inventory is available. Inspect the original textbook before choosing a question.'));const task=data.actions.find(t=>t.grade===grade.grade&&t.chapter===chapter.number&&t.type==='Source reconciliation');if(task)panel.append(taskCard(task));}
    const list=el('div',null,'chapter-list');chapter.exercises.forEach(e=>list.append(link(`Exercise ${e.id} · ${e.status} · ${e.verifiedTasks} / ${e.totalTasks??'?'} verified tasks`,base+'&exercise='+encodeURIComponent(e.id))));[...list.children].forEach(c=>c.className='chapter-link');panel.append(list);return;
   }
   const exBase=base+'&exercise='+encodeURIComponent(exercise.id);crumbs.append(link('Exercise '+exercise.id,exBase));panel.append(el('h3','Exercise '+exercise.id),el('p',`State: ${exercise.status}. Tamil: ${exercise.tamilReview}. Teacher approval: ${exercise.teacherApproval}.`));

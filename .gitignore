@@ -2,3 +2,8 @@ node_modules/
 test-results/
 playwright-report/
 __pycache__/
+
+# Local emulator diagnostics contain test fixture records and must not be published.
+*-debug.log
+.firebase/
+screenshots/
