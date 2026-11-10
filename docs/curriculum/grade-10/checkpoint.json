@@ -36,12 +36,14 @@
     "remoteLeases": "passed; two isolated clones and actual production grade/integration acquisition"
   },
   "release": {
-    "commit": null,
-    "pr": null,
+    "commit": "c1aafea64c1b3fe70d00f1b7efba493beaa33f6f",
+    "pr": 119,
     "deployment": {
-      "status": "awaiting PR/CI/merge"
+      "status": "pending required GitHub CI, merge and Pages verification",
+      "candidateBranch": "engine/universal-curriculum-bulk-20261110"
     },
-    "branch": "engine/universal-curriculum-bulk-20261110"
+    "branch": "engine/universal-curriculum-bulk-20261110",
+    "prUrl": "https://github.com/vigneswaranmba20-afk/Triggle/pull/119"
   },
   "nextActionableBatch": "After Exercise 2.1 pilot, inventory Chapter 2 Exercise 2.2 from matching source pages.",
   "inventory": {
