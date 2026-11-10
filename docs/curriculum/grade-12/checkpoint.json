@@ -55,20 +55,20 @@
     ]
   },
   "release": {
-    "commit": "453b870a3b1f786930eb604980e3e337fee4b031",
-    "testedPrHead": "7d46278",
-    "pr": 132,
-    "prUrl": "https://github.com/vigneswaranmba20-afk/Triggle/pull/132",
-    "scope": "Grade 12 Chapter 1 English exercises 1.1–1.2 only",
+    "commit": "5091d4ecdbbeaaa3417474b0a99f41ef429c472c",
+    "testedPrHead": "133a62e0632ff17ab4f987e7a144bfd1cb9d56ed",
+    "pr": 133,
+    "prUrl": "https://github.com/vigneswaranmba20-afk/Triggle/pull/133",
+    "scope": "Grade 12 Chapter 1 English exercises 1.1–1.3",
     "deployment": {
       "status": "success and live verified",
-      "workflowRun": 42798587035,
-      "workflowUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42798587035",
+      "workflowRun": 42799934371,
+      "workflowUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42799934371",
       "live": {
         "url": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=12&question=g12-ch1-ex1.1-q1-i",
         "passed": true,
-        "records": 30,
-        "tasks": 32,
+        "records": 38,
+        "tasks": 42,
         "checks": [
           "all exact questions",
           "published module hashes",
@@ -90,6 +90,12 @@
             "batch": "g12-ch1-ex1-2",
             "records": 11,
             "moduleSha256": "00b430dca7d5ccfc5a693e78ac62f716515c0ba81f662238dc15269551b16938",
+            "live": true
+          },
+          {
+            "batch": "g12-ch1-ex1-3",
+            "records": 8,
+            "moduleSha256": "130aebd79177ba2a2748cc3faf0073fbf2496a8d440b5a55a74252cfb460dfdc",
             "live": true
           }
         ]
@@ -1037,7 +1043,7 @@
     "verifiedNumberedQuestions": 23,
     "verifiedTasks": 42,
     "integratedRecords": 38,
-    "deployedRecords": 30,
+    "deployedRecords": 38,
     "completedEnglishExercises": [
       "1.1",
       "1.2",
@@ -1046,19 +1052,84 @@
     "nextQuestion": "Exercise 1.4 Q1(i)",
     "tamilStatus": "pending",
     "automations": "No automation read or mutation performed. Owner pause instruction preserved.",
-    "releaseStatus": "Exercises 1.1–1.2 deployed and live verified; 1.3 locally verified, release tests running",
+    "releaseStatus": "Exercises 1.1–1.3 deployed and live verified; Chapter 1 incomplete",
     "tests": {
-      "npmTest": "passed including 1.3",
+      "npmTest": "passed",
       "batchValidators": "passed; both exercises integrated, all source tasks covered",
       "targetedBrowser": "Passed; all 38 records at 320/390/1280px, exact source snapshots, final answers and offline matrix solutions",
-      "fullBrowser": "Passed for 1.1–1.2; 1.3 release tests pending",
-      "remoteCI": "Passed all three checks at 7d46278 for 1.1–1.2"
+      "fullBrowser": "passed; complete npm run test:browser including all 38 new records and legacy routes",
+      "remoteCI": "All three checks passed on exact PR heads 7d46278 (PR132) and 133a62e (PR133)",
+      "initialFailure": "Initial Grade 10 layout assertion raced queued font/frame measurements; readiness fix retained all assertions; subsequent exact-head CI passed."
     },
     "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/132",
     "implementationCommit": "4682392c079fbcac9c2abdcc55cfb39b73d28147",
     "deployedEnglishExercises": [
       "1.1",
-      "1.2"
-    ]
-  }
+      "1.2",
+      "1.3"
+    ],
+    "deployedNumberedQuestions": 23,
+    "deployedTasks": 42,
+    "pullRequests": [
+      "https://github.com/vigneswaranmba20-afk/Triggle/pull/132",
+      "https://github.com/vigneswaranmba20-afk/Triggle/pull/133"
+    ],
+    "outstandingWork": {
+      "englishExercises": [
+        "1.4",
+        "1.5",
+        "1.6",
+        "1.7",
+        "1.8"
+      ],
+      "numberedQuestions": 40,
+      "tasks": 53,
+      "tamilStatus": "pending",
+      "releaseBlockers": []
+    }
+  },
+  "releaseHistory": [
+    {
+      "commit": "453b870a3b1f786930eb604980e3e337fee4b031",
+      "testedPrHead": "7d46278",
+      "pr": 132,
+      "prUrl": "https://github.com/vigneswaranmba20-afk/Triggle/pull/132",
+      "scope": "Grade 12 Chapter 1 English exercises 1.1–1.2 only",
+      "deployment": {
+        "status": "success and live verified",
+        "workflowRun": 42798587035,
+        "workflowUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/42798587035",
+        "live": {
+          "url": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=12&question=g12-ch1-ex1.1-q1-i",
+          "passed": true,
+          "records": 30,
+          "tasks": 32,
+          "checks": [
+            "all exact questions",
+            "published module hashes",
+            "navigation",
+            "native matrices",
+            "green final-answer step",
+            "truthful Tamil pending",
+            "390px overflow",
+            "offline reload"
+          ],
+          "batches": [
+            {
+              "batch": "g12-ch1-ex1-1",
+              "records": 19,
+              "moduleSha256": "53b2d67625e1e33a136af151a53b23c4cf7185a93e4777cc288a78f0f459b435",
+              "live": true
+            },
+            {
+              "batch": "g12-ch1-ex1-2",
+              "records": 11,
+              "moduleSha256": "00b430dca7d5ccfc5a693e78ac62f716515c0ba81f662238dc15269551b16938",
+              "live": true
+            }
+          ]
+        }
+      }
+    }
+  ]
 }

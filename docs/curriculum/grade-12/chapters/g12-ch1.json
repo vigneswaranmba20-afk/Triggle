@@ -429,8 +429,8 @@
         "numberedQuestions": 15,
         "mathematicalTasks": 21,
         "sourceFigures": 0,
-        "existingMainRecords": 0,
-        "missingMainQuestions": [
+        "baselineMainRecords": 0,
+        "baselineMissingMainQuestions": [
           1,
           2,
           3,
@@ -554,8 +554,8 @@
         "numberedQuestions": 3,
         "mathematicalTasks": 11,
         "sourceFigures": 0,
-        "existingMainRecords": 0,
-        "missingMainQuestions": [
+        "baselineMainRecords": 0,
+        "baselineMissingMainQuestions": [
           1,
           2,
           3
@@ -724,8 +724,8 @@
         "numberedQuestions": 5,
         "mathematicalTasks": 10,
         "sourceFigures": 0,
-        "existingMainRecords": 0,
-        "missingMainQuestions": [
+        "baselineMainRecords": 0,
+        "baselineMissingMainQuestions": [
           1,
           2,
           3,
@@ -839,8 +839,8 @@
         "numberedQuestions": 5,
         "mathematicalTasks": 8,
         "sourceFigures": 0,
-        "existingMainRecords": 0,
-        "missingMainQuestions": [
+        "baselineMainRecords": 0,
+        "baselineMissingMainQuestions": [
           1,
           2,
           3,
@@ -933,8 +933,8 @@
         "numberedQuestions": 4,
         "mathematicalTasks": 5,
         "sourceFigures": 0,
-        "existingMainRecords": 0,
-        "missingMainQuestions": [
+        "baselineMainRecords": 0,
+        "baselineMissingMainQuestions": [
           1,
           2,
           3,
@@ -1013,8 +1013,8 @@
         "numberedQuestions": 3,
         "mathematicalTasks": 10,
         "sourceFigures": 0,
-        "existingMainRecords": 0,
-        "missingMainQuestions": [
+        "baselineMainRecords": 0,
+        "baselineMissingMainQuestions": [
           1,
           2,
           3
@@ -1087,8 +1087,8 @@
         "numberedQuestions": 3,
         "mathematicalTasks": 5,
         "sourceFigures": 0,
-        "existingMainRecords": 0,
-        "missingMainQuestions": [
+        "baselineMainRecords": 0,
+        "baselineMissingMainQuestions": [
           1,
           2,
           3
@@ -1577,8 +1577,8 @@
         "numberedQuestions": 25,
         "mathematicalTasks": 25,
         "sourceFigures": 0,
-        "existingMainRecords": 0,
-        "missingMainQuestions": [
+        "baselineMainRecords": 0,
+        "baselineMissingMainQuestions": [
           1,
           2,
           3,
@@ -1675,6 +1675,7 @@
         "sha256": "6b6881248d64903bd587d0b6dba4a26b8527e652a8f552eec5024d671e39d521",
         "visualChecked": true
       }
-    ]
+    ],
+    "inventoryBaselineCommit": "65c01516f67511b06b1955051e1ffd096b17ca56"
   }
 }
