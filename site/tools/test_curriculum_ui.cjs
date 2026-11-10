@@ -292,9 +292,14 @@ async function main() {
         assert.equal(overflow,'visible','How It Works never scrolls inside its own small pane');
         await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='1000px';window.scrollTo(0,900);});
         await page.waitForTimeout(60);
-        assert.equal(await page.locator('#questionJump').isVisible(),true,'Compact return-to-question link');
-        await page.locator('#questionJump').click();
-        assert.ok((await page.locator('#questionText').boundingBox()).y<175,'Question anchor returns to the source');
+        const past=await page.evaluate(()=>document.querySelector('#questionText').getBoundingClientRect().bottom<
+          document.querySelector('.status-row').getBoundingClientRect().bottom+8);
+        const showing=await page.locator('#questionJump').isVisible();
+        assert.equal(showing,past,'Question return link only appears once the question is above its context');
+        if(showing){
+          await page.locator('#questionJump').click();
+          assert.ok((await page.locator('#questionText').boundingBox()).y<175,'Question anchor returns to the source');
+        }
         await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='';});
         await page.locator('#next').click();
         assert.notEqual(new URL(page.url()).searchParams.get('question'),'c10-1-1-2-q5');
