@@ -51,7 +51,7 @@ assert(source.includes('Source verification pending:'),'Reference records must w
 assert(source.includes(')), "9");'), 'Teacher portal should open Grade 9 by default after teacher login');
 assert(source.includes('item.answer?.en'), 'Bilingual Grade 9 answers must display their English text');
 const teacherHtml=fs.readFileSync(path.join(root,'teacher-review.html'),'utf8');
-assert(teacherHtml.includes('teacher-portal.js?v=grade9-review-20261110'),'Grade 9 fix must bust cached mobile teacher script');
+assert(teacherHtml.includes('teacher-portal.js?v=review-recovery-2'),'Grade 9 fix must bust cached mobile teacher script');
 
 
 // GitHub Pages sometimes serves the repository root and sometimes uploads

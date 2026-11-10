@@ -5,7 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Triggle — Teacher Review</title>
-  <link rel="stylesheet" href="./assets/teacher-portal.css">
+  <meta name="review-startup-timeout" content="12000">
+  <!-- Critical fallback is independent of the stylesheet and Firebase CDN. -->
+  <style>
+    *{box-sizing:border-box}[hidden]{display:none!important}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;line-height:1.6;color:#1e293b;background:#f5f7fb;overflow-wrap:anywhere}
+    .shell{max-width:1000px;margin:auto;padding:20px 16px}.topbar{padding:14px 20px;background:#fff}
+    .panel,.message{padding:18px;margin:16px 0;border:1px solid #cbd5e1;border-radius:12px;background:#fff}
+    button,select,textarea{font:inherit;max-width:100%}button{min-height:44px;padding:10px 16px;cursor:pointer}
+    textarea,iframe,select{width:100%}a{color:#175caa}h1{line-height:1.2;font-size:clamp(1.7rem,5vw,2.6rem)}
+    #startup-error{border:2px solid #aa3429}#startup-error h2{font-size:1.25rem}
+  </style>
+  <link rel="stylesheet" href="./assets/teacher-portal.css?v=review-recovery-2">
 </head>
 <body>
   <header class="topbar">
@@ -21,6 +32,15 @@
     </section>
 
     <p id="message" class="message" aria-live="polite">Loading secure review access…</p>
+
+    <section id="startup-error" class="panel" role="alert" hidden>
+      <h2>Unable to connect to Teacher Review</h2>
+      <p>We couldn't load the review service. Check your internet connection and try again.</p>
+      <p lang="ta">மதிப்பாய்வுச் சேவையைத் திறக்க முடியவில்லை. இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்.</p>
+      <button id="retry-startup" type="button" class="primary">Retry</button>
+      <a href="./index.html">Open student lessons</a>
+    </section>
+    <noscript><p class="panel">Teacher Review needs JavaScript. Enable it and reload this page. Student lessons are available from the Triggle link.</p></noscript>
 
     <section id="unconfigured" class="panel" hidden>
       <h2>Teacher access is not configured yet</h2>
@@ -107,6 +127,47 @@
       </section>
     </main>
   </div>
-  <script type="module" src="./assets/teacher-portal.js?v=grade9-review-20261110"></script>
+  <script>
+    // Keep this controller inline: it must run when the application or SDK cannot import.
+    (() => {
+      const body = document.body, errorPanel = document.getElementById('startup-error');
+      const status = document.getElementById('message');
+      const states = ['starting','loading-authentication','ready-to-sign-in','checking-authorization',
+        'authorized','unauthorized','network-unavailable','recoverable-error'];
+      const timeout = Number(document.querySelector('meta[name="review-startup-timeout"]').content) || 12000;
+      let timer, failed = false;
+      function fail(offline = !navigator.onLine) {
+        failed = true; clearTimeout(timer);
+        body.dataset.startupState = offline ? 'network-unavailable' : 'recoverable-error';
+        for (const id of ['login','denied','workspace','unconfigured','signout']) document.getElementById(id).hidden = true;
+        errorPanel.hidden = false;
+        status.textContent = offline ? 'Network unavailable. Reconnect and select Retry.' : 'Review service connection failed. Select Retry to reconnect.';
+        window.dispatchEvent(new Event('triggle-review-unavailable'));
+      }
+      function set(state) {
+        if (failed || !states.includes(state)) return false;
+        clearTimeout(timer); body.dataset.startupState = state;
+        errorPanel.hidden = true;
+        if (['starting','loading-authentication','checking-authorization'].includes(state)) timer = setTimeout(() => fail(), timeout);
+        return true;
+      }
+      window.TriggleReviewStartup = Object.freeze({set, fail, active: () => !failed, timeout});
+      document.getElementById('retry-startup').addEventListener('click', () => {
+        const url = new URL(location.href);
+        url.searchParams.set('review-retry', Date.now().toString());
+        location.replace(url.href);
+      });
+      window.addEventListener('offline', () => fail(true));
+      window.addEventListener('online', () => {
+        if (failed) status.textContent = 'Connection restored. Select Retry to verify access again.';
+      });
+      set('starting');
+      if (!navigator.onLine) { fail(true); return; }
+      // A changed document URL and module query avoid a cached failed module on Retry.
+      const url = new URL('./assets/teacher-portal.js?v=review-recovery-2', location.href);
+      if (new URL(location.href).searchParams.has('review-retry')) url.searchParams.set('retry', Date.now().toString());
+      import(url.href).catch(() => fail());
+    })();
+  </script>
 </body>
 </html>
