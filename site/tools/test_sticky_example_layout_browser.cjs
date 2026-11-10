@@ -52,12 +52,17 @@ async function main(){
     await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='1000px';window.scrollTo(0,950);});
     await page.waitForTimeout(60);
     const jumped=await page.locator('#questionJump').isVisible();
-    assert.ok(jumped,'A compact question return link appears after leaving question: '+width);
+    const past=await page.evaluate(()=>document.querySelector('#questionText').getBoundingClientRect().bottom<
+      document.querySelector('.status-row').getBoundingClientRect().bottom+8);
+    assert.equal(jumped,past,'Question return appears iff the full question has passed above the context: '+width);
     const previousY=await page.evaluate(()=>window.scrollY);
     assert.ok(previousY>60,'The document owns vertical scrolling');
-    await page.locator('#questionJump').click();
-    await page.waitForTimeout(60);
-    assert.ok((await page.evaluate(()=>document.querySelector('#questionText').getBoundingClientRect().top))<175,'Question jump returns to its source');
+    if(jumped){
+      await page.locator('#questionJump').click();
+      await page.waitForTimeout(60);
+      assert.ok((await page.evaluate(()=>document.querySelector('#questionText').getBoundingClientRect().top))<175,
+        'Question jump returns to its source');
+    }
     await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='';});
     assert.equal(await page.locator('.appbar').isVisible(),true);
     assert.equal(await page.locator('.status-row').isVisible(),true);
