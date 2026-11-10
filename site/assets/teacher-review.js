@@ -4,7 +4,7 @@ import {
   getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut
 } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-auth.js";
 import {
-  getFirestore, addDoc, collection, getDocs, limit, query, serverTimestamp, where
+  getFirestore, addDoc, collection, doc, getDoc, getDocs, limit, query, serverTimestamp, where
 } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-firestore.js";
 
 const $ = id => document.getElementById(id);
@@ -217,9 +217,15 @@ async function authChanged(user) {
   }
   try {
     const token = await user.getIdTokenResult(true);
-    if (token.claims.triggleTeacher !== true || token.claims.firebase?.sign_in_provider !== "google.com") {
+    if (token.claims.firebase?.sign_in_provider !== "google.com") {
       view("denied");
-      message("Signed in, but this account is not authorized for teacher review.", true);
+      message("Sign in with the authorized Google account.", true);
+      return;
+    }
+    const grant = await getDoc(doc(db, "teacherAccess", user.uid));
+    if (!grant.exists() || grant.data().role !== "reviewer") {
+      view("denied");
+      message("Google sign-in succeeded, but this account has not been approved by the Triggle administrator. Ask the owner to authorize it in Firebase.", true);
       return;
     }
     reviewer = user;
