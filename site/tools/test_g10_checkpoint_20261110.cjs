@@ -15,7 +15,7 @@ const [x,y,z]=[2,-1,4];assert.equal(x+y+z,5);assert.equal(2*x-y+z,9);assert.equa
 assert.equal(6.6*1.25/2.5,3.3);assert.equal(28*6/(400/100),42);
 assert.equal(125-63,62);assert.equal((125-63)/(125+63),31/94);
 assert.ok(Math.abs((61.4-13.6)/(61.4+13.6)-239/375)<1e-12);
-assert.equal(36.8+13.4,50.2);
+assert.ok(Math.abs((36.8+13.4)-50.2)<1e-10,'Float rounding tolerance for range');
 const f=JSON.parse(fs.readFileSync(path.join(root,'data/textbook-fidelity/g10-checkpoint-20261110.json'),'utf8'));
 assert.equal(f.records.length,6);assert.equal(f.records.every(r=>r.source_image_compared&&r.tamil_editorial_review==='pending'),true);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
