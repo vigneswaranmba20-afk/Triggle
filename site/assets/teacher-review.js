@@ -120,7 +120,9 @@ async function showSelected() {
   $("student-frame").dataset.url = url;
   $("review-form").reset();
   $("history").textContent = "Loading private review history…";
-  currentDigest = await digest(item);
+  const computedDigest = await digest(item);
+  if (selectedRecord !== item) return;
+  currentDigest = computedDigest;
   await loadHistory(item.id);
 }
 async function loadHistory(questionId) {
@@ -249,7 +251,7 @@ async function saveReview(event) {
       decision,
       note,
       reviewerUid: reviewer.uid,
-      recordSha256: currentDigest,
+      recordSha256: await digest(item),
       createdAt: serverTimestamp()
     });
     message("Private review saved. Automated correction is not connected yet.");
