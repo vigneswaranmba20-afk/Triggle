@@ -1,29 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
- <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
- <meta name="description" content="Evidence-based progress and manually initiated development tasks for Triggle mathematics.">
- <title>Triggle Mission Control</title>
- <style>[hidden]{display:none!important}body{margin:0;font:16px/1.6 system-ui,sans-serif;color:#172d35;background:#f3f7f6}main,header,footer{max-width:1160px;margin:auto;padding:24px}button,input,select,textarea{font:inherit;max-width:100%}button{min-height:44px}a{color:#126754}*{box-sizing:border-box}</style>
- <link rel="stylesheet" href="../assets/dashboard.css?v=1">
- <script defer src="../assets/project-model.js?v=1"></script>
- <script defer src="../assets/dashboard.js?v=1"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>Opening Triggle Mathematics</title>
+  <meta http-equiv="refresh" content="0; url=../index.html">
+  <script>
+    (() => {
+      const destination = new URL('../index.html', window.location.href);
+      destination.search = window.location.search;
+      destination.hash = window.location.hash;
+      window.location.replace(destination.href);
+    })();
+  </script>
 </head>
-<body>
- <header><a class="brand" href="../index.html">Triggle <span>MISSION CONTROL</span></a><nav aria-label="Dashboard"><a href="#today">Today</a><a href="#grades">Grades</a><a href="#backlog">Pending work</a><a href="#deployment">Deployment</a><a href="../teacher-review.html">Teacher Review ↗</a></nav></header>
- <main>
-  <section class="welcome"><p class="eyebrow">A CLEAR VIEW. ONE MANUAL TASK AT A TIME.</p><h1>Triggle Mission Control</h1><p class="subtitle">Your entire mathematics project, in one place.</p><p id="snapshot" class="muted" role="status">Loading validated project evidence…</p></section>
-  <section id="load-error" class="panel" hidden><h2>Project evidence could not load</h2><p>Check your connection and reload. No progress figures are shown without evidence.</p><button id="retry">Retry</button></section>
-  <div id="content" hidden>
-   <section id="summary" class="summary-grid" aria-label="Project summary"></section>
-   <section class="today panel" id="today"><p class="eyebrow">WHAT SHOULD I UPDATE TODAY?</p><div class="section-heading"><h2>Your next manual development actions</h2><span class="pill">Grade 12 is the priority</span></div><p class="muted">Ordered from validated repository gaps. Private corrections must be checked in Teacher Review before choosing a curriculum task. Nothing starts automatically.</p><div id="recommendations"></div></section>
-   <section id="grades"><div class="section-heading"><h2>Grades 9–12</h2><span class="muted">Availability, verification and release are separate.</span></div><p>Whole-grade exercise denominators are still unknown. Bars show completed English chapters out of catalogued chapters; they do not certify Tamil or teacher approval.</p><div id="grade-cards" class="grade-grid"></div></section>
-   <section id="drilldown" class="panel" hidden aria-label="Curriculum detail" tabindex="-1"></section>
-   <section class="panel" id="backlog"><h2>Pending work centre</h2><p class="muted">Every task has repository evidence. Unknown missing subparts require source reconciliation first.</p><div id="filters" class="filters"><label>Search<input id="search" type="search" placeholder="Question, exercise or task…"></label></div><p id="task-count" role="status"></p><div id="task-list"></div></section>
-   <section class="panel" id="deployment"><div class="section-heading"><h2>GitHub deployment centre</h2><button id="refresh-github">Refresh public GitHub data</button></div><p id="github-status" role="status">Loading last checked deployment snapshot…</p><div id="github-data"></div></section>
-   <section class="panel"><h2>Teacher review</h2><p>Private teacher feedback is available through the Teacher Dashboard.</p><p class="muted">No approved public aggregate feed is configured. Review counts, identities and remarks are never retrieved by this public dashboard.</p><a class="button-link" href="../teacher-review.html">Open secure Teacher Dashboard ↗</a></section>
-  </div>
-  <section id="prompt-panel" class="panel" hidden tabindex="-1"><h2>Manual Codex prompt</h2><p id="copy-status" role="status">Copy and manually submit this prompt to Codex.</p><label for="prompt-text">Complete task instructions</label><textarea id="prompt-text" rows="15" readonly></textarea><button id="copy-prompt">Copy prompt text</button><button id="close-prompt" class="secondary">Close</button></section>
- </main>
- <footer>Public project evidence only · <a href="https://github.com/vigneswaranmba20-afk/Triggle">Repository ↗</a> · Student lessons stay open to everyone.</footer>
-</body></html>
+<body><p>Opening <a href="../index.html">Triggle Mathematics</a>…</p></body>
+</html>
