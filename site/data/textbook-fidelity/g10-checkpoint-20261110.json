@@ -1,0 +1,92 @@
+{
+  "checkpoint": "2026-11-10",
+  "status": "PARTIAL_WIP",
+  "source": {
+    "english": {
+      "drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "filename": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf"
+    },
+    "tamil": {
+      "drive_id": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "filename": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf"
+    }
+  },
+  "records": [
+    {
+      "id": "c10-3-ex3-1-q1-i",
+      "english_question": "1. Solve the following system of linear equations in three variables. (i) x + y + z = 5; 2x − y + z = 9; x − 2y + 3z = 16.",
+      "english_printed_page": 92,
+      "english_pdf_page": 98,
+      "tamil_printed_page": 94,
+      "tamil_pdf_page": 100,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    },
+    {
+      "id": "c10-4-ex4-1-q2",
+      "english_question": "2. A girl looks the reflection of the top of a lamp post on the mirror which is 6.6 m away from the foot of the lamp post. The girl whose height is 1.25 m is standing 2.5 m away from the mirror. Assuming the mirror is placed on the ground facing the sky and the girl, mirror and the lamppost are in a same line, find the height of the lamp post.",
+      "english_printed_page": 170,
+      "english_pdf_page": 176,
+      "tamil_printed_page": 175,
+      "tamil_pdf_page": 181,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    },
+    {
+      "id": "c10-4-ex4-1-q3",
+      "english_question": "3. A vertical stick of length 6 m casts a shadow 400 cm long on the ground and at the same time a tower casts a shadow 28 m long. Using similarity, find the height of the tower.",
+      "english_printed_page": 170,
+      "english_pdf_page": 176,
+      "tamil_printed_page": 175,
+      "tamil_pdf_page": 181,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    },
+    {
+      "id": "c10-8-ex8-1-q1-i",
+      "english_question": "1. Find the range and coefficient of range of the following data. (i) 63, 89, 98, 125, 79, 108, 117, 68.",
+      "english_printed_page": 313,
+      "english_pdf_page": 319,
+      "tamil_printed_page": 322,
+      "tamil_pdf_page": 328,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    },
+    {
+      "id": "c10-8-ex8-1-q1-ii",
+      "english_question": "1. Find the range and coefficient of range of the following data. (ii) 43.5, 13.6, 18.9, 38.4, 61.4, 29.8.",
+      "english_printed_page": 313,
+      "english_pdf_page": 319,
+      "tamil_printed_page": 322,
+      "tamil_pdf_page": 328,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    },
+    {
+      "id": "c10-8-ex8-1-q2",
+      "english_question": "2. If the range and the smallest value of a set of data are 36.8 and 13.4 respectively, then find the largest value.",
+      "english_printed_page": 313,
+      "english_pdf_page": 319,
+      "tamil_printed_page": 322,
+      "tamil_pdf_page": 328,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    }
+  ],
+  "already_present_in_app": [
+    "c10-1-ex1-1-q6-i",
+    "c10-1-ex1-1-q6-ii",
+    "c10-1-ex1-1-q6-iii",
+    "c10-1-ex1-1-q7-i",
+    "c10-1-ex1-1-q7-ii",
+    "c10-6-6-1-1",
+    "c10-6-6-1-2"
+  ],
+  "editorial_issue": "English chapter 8 ex8.1 Q5 says 9 workers, Tamil says 10 but both list 9 wages; no Q5 solution released."
+}
