@@ -2,6 +2,12 @@
 
 ## Why this exists
 
+See [EXECUTION_ENVIRONMENT.md](EXECUTION_ENVIRONMENT.md) first for the verified
+inherited-proxy route, read-only Git/API reference preflight, and original PDF
+download/render workflow. A sandbox proxy failure can be resolved by retrying
+the same read-only probe through the execution tool's approved outer route;
+local DNS failure alone is not proof that proxied GitHub access is unavailable.
+
 The ChatGPT automation cloud environment on 2026-11-10 repeatedly failed Git remote commands with `Could not resolve host: github.com`. The **connected GitHub API** remained accessible. The original engine's atomic remote leases are still mandatory; filesystem locks, branch naming, PR lists, or blind GitHub file updates are not adequate substitutes.
 
 The GitHub connector provides **create_commit**, **create_branch**, **update_ref(expected_sha)**, **fetch**, **fetch_file**, **create_file**, **update_file** and PR/CI operations. This protocol uses the same `refs/heads/triggle-locks/grade-N` and integration refs as the Git CLI. Its persistent free marker is defined in `remote-lease-sentinel.json`. Both the Git CLI lease engine and connector CAS claimant must treat that exact SHA as FREE; any other head means HELD or UNKNOWN. This is a real remote compare-and-swap, **not** a local memory lock. A failed or unavailable connector action means STOP, not permission to proceed.

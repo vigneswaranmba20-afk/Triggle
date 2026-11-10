@@ -66,6 +66,25 @@ try{
  // remote ref, so the original absent-ref push precondition must fail.
  assert.throws(()=>git(a,['push','--force-with-lease='+leases.refFor('grade-10')+':','origin',foreign+':'+leases.refFor('grade-10')]));
  assert.equal(leases.remoteHead(a,'origin',leases.refFor('grade-10')),original);
+ // A server-side ref change after a successful push must not be mistaken for
+ // ownership or successful release. Only synthetic fixture refs are touched.
+ const hook=path.join(remote,'hooks/post-receive');
+ function raceHook(ref,trigger){
+  fs.writeFileSync(hook,`#!/bin/sh\nwhile read before after ref; do\n if [ "$ref" = "${ref}" ] && ${trigger}; then\n  git update-ref "$ref" "${foreign}" "$after"\n fi\ndone\n`,{mode:0o755});
+ }
+ const raceRef=leases.refFor('grade-9');
+ raceHook(raceRef,`[ "$after" != "${original}" ]`);
+ assert.throws(()=>leases.acquireRemoteLease('grade-9',{root:a}),/claim readback mismatch/);
+ assert.equal(leases.remoteHead(a,'origin',raceRef),foreign);
+ const stateDir=path.join(a,'.git/triggle-remote-leases');
+ const stateFile=fs.readdirSync(stateDir).find(f=>f.endsWith('-grade-9.json'));
+ assert.ok(stateFile,'Uncertain claim retains ownership evidence');
+ fs.unlinkSync(hook);git(a,['push','--force-with-lease='+raceRef+':'+foreign,'origin',original+':'+raceRef]);fs.unlinkSync(path.join(stateDir,stateFile));
+ const releasing=leases.acquireRemoteLease('grade-9',{root:a});
+ raceHook(raceRef,`[ "$after" = "${original}" ]`);
+ assert.throws(()=>leases.releaseRemoteLease('grade-9',{root:a,expectedSha:releasing.sha}),/release readback mismatch/);
+ assert.equal(leases.remoteHead(a,'origin',raceRef),foreign);assert.ok(fs.existsSync(releasing.stateFile));
+ fs.unlinkSync(hook);git(a,['push','--force-with-lease='+raceRef+':'+foreign,'origin',original+':'+raceRef]);fs.unlinkSync(releasing.stateFile);
  assert.equal(git(remote,['rev-parse','main']),original);
  console.log('PASS remote curriculum leases: persistent ownership, two-clone exclusion, inherited nesting, failure cleanup and guarded release; legacy and persistent CAS refs guarded; main unchanged.');
 }finally{fs.rmSync(tmp,{recursive:true,force:true});}
