@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f9f7ff">
+<title>Triggle Matrix Lab · Grade 12 Q8</title>
+<meta name="description" content="Try three ways of understanding one Tamil Nadu Grade 12 matrices question.">
+<link rel="stylesheet" href="./assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="./assets/math-typesetting.css">
+<style>
+:root{color-scheme:light;--ink:#292443;--quiet:#635d79;--purple:#57458e;--soft:#f3effb;--stroke:#e2dded;--card:#fff;--accent:#765bc3;--ok:#1e764a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#faf9fd;font:16px/1.56 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#493584}
+button{font:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ffb54f;outline-offset:3px}
+.top{border-bottom:1px solid var(--stroke);background:#fff}
+.topin{max-width:900px;margin:auto;padding:14px 20px;display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.brand{font-size:22px;font-weight:850;letter-spacing:-.8px;text-decoration:none;color:var(--ink)}
+.brandmark{display:inline-grid;place-items:center;background:#ede8ff;color:var(--purple);border-radius:13px;width:36px;height:36px;margin-right:7px}
+.back{font-weight:650;text-decoration:none}
+main{max-width:850px;padding:26px 18px 75px;margin:0 auto}
+.eyebrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;text-transform:uppercase;letter-spacing:.085em;color:var(--purple);font-size:.72rem;font-weight:800}
+.pill{background:#eee9fa;border-radius:100px;padding:5px 12px}
+.pending{background:#f7f3e9;color:#765921}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.18;letter-spacing:-.045em;margin:16px 0 7px}
+.subtitle{color:var(--quiet);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--stroke);border-radius:23px;box-shadow:0 7px 20px rgba(45,33,94,.035)}
+.question{padding:22px 24px 20px;border-left:5px solid #9e88d3}
+.question .little{color:var(--quiet);font-weight:750;font-size:.76rem;letter-spacing:.09em;margin:0 0 10px}
+.question p{margin:0}
+.math-frame{width:100%;overflow-x:auto;overflow-y:hidden;max-width:100%;padding:3px 0}
+.equation{font-size:1.02rem;max-width:100%;overflow-x:auto;overflow-y:hidden;padding:3px 0}
+.equation .katex-display{margin:.45em 0;min-width:max-content}
+.question .equation{margin:5px 0 11px}
+.mode-intro{margin-top:26px}
+.mode-intro h2{font-size:1.25rem;margin:0 0 4px}
+.mode-intro p{margin:0 0 14px;color:var(--quiet)}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:7px;border:1px solid var(--stroke);border-radius:17px;background:#eeeaf7}
+.tab{padding:13px 6px;border:1px solid transparent;background:transparent;border-radius:12px;color:#544b71;cursor:pointer;font-weight:800;min-height:52px;line-height:1.2}
+.tab[aria-selected="true"]{background:#fff;color:var(--purple);border-color:#dfd7ee;box-shadow:0 2px 9px rgba(44,31,89,.09)}
+.panel{margin-top:14px;padding:23px}
+.panel[hidden],.teach-step[hidden]{display:none}
+.panel h2{margin:0 0 8px;font-size:1.38rem;letter-spacing:-.02em}
+.panel>p{margin:6px 0 15px;color:var(--quiet)}
+.step{padding:13px 0;border-bottom:1px solid #eeeaf5}
+.step:last-of-type{border-bottom:0}
+.step strong{color:#463677}
+.step p{margin:6px 0}
+.calc{border-radius:13px;background:#f7f4fc;padding:9px 10px;margin:9px 0}
+.calc .equation{margin:0}
+.tagline{font-weight:700;color:#584882}
+.step-top{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.bubble{flex:none;width:30px;height:30px;display:grid;place-items:center;background:#eae3fb;border-radius:50%;color:#58428d;font-weight:850}
+.tip{border-left:3px solid #bc9ce1;background:#f8f5fc;border-radius:0 12px 12px 0;padding:12px 14px;margin:12px 0;font-size:.96rem}
+.pager{border-top:1px solid var(--stroke);padding-top:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:space-between;margin-top:10px}
+.count{color:var(--quiet);font-size:.9rem}
+.controls{display:flex;flex-wrap:wrap;gap:8px}
+.primary,.secondary,.check-btn{border:0;border-radius:12px;cursor:pointer;min-height:45px;padding:10px 16px;font-weight:750}
+.primary,.check-btn{background:var(--purple);color:#fff}
+.secondary{background:#eee8fa;color:var(--purple)}
+.primary:disabled{opacity:.55;cursor:default}
+.answer{padding:15px 13px;border:1px solid #d6e6d9;background:#f0faf3;border-radius:15px;margin:15px 0;color:#194d35}
+.answer .equation{color:#194d35}
+.checks{margin-top:25px;padding:22px}
+.checks h2{margin:0;font-size:1.27rem}
+.checks>p{margin:4px 0 17px;color:var(--quiet)}
+fieldset{border:1px solid var(--stroke);border-radius:15px;margin:0 0 15px;padding:16px}
+legend{font-weight:800;padding:0 5px}
+.option{display:flex;align-items:flex-start;gap:10px;padding:8px 0;cursor:pointer}
+.option input{margin-top:6px;accent-color:var(--purple);width:18px;height:18px;flex:none}
+.feedback{min-height:22px;margin:10px 0 0;font-weight:650;font-size:.93rem}
+.feedback.correct{color:var(--ok)}
+.feedback.retry{color:#885327}
+.end{margin-top:25px;padding:20px 22px}
+.end h2{font-size:1.16rem;margin:0}
+.end p{margin:5px 0 12px;color:var(--quiet)}
+.vote-row{display:flex;gap:8px;flex-wrap:wrap}
+.vote{cursor:pointer;border:1px solid var(--stroke);border-radius:100px;background:#fff;padding:10px 14px;font-weight:750;color:var(--purple);min-height:44px}
+.vote[aria-pressed="true"]{background:#e7ddf7;border-color:#9775cd}
+.small{font-size:.83rem;color:var(--quiet)}
+.footer{font-size:.91rem;color:var(--quiet);margin-top:25px}
+.footer a{font-weight:700}
+@media(max-width:540px){
+ main{padding:18px 12px 55px}
+ .topin{padding:10px 14px}
+ .card{border-radius:18px}
+ .question,.panel,.checks{padding:18px 15px}
+ .tabs{gap:4px;padding:5px}
+ .tab{padding:12px 3px;font-size:.87rem}
+ .question .equation{font-size:.9rem}
+ .equation{font-size:.92rem}
+ .calc{padding:7px}
+ .pager{align-items:stretch}
+ .controls{width:100%}
+ .primary,.secondary{flex:1}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<script src="./assets/vendor/katex/katex.min.js" defer></script>
+<script src="./assets/math-notation.js" defer></script>
+<script src="./assets/matrix-pilot.js" defer></script>
+<script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));</script>
+</head>
+<body>
+<header class="top"><div class="topin"><a class="brand" href="./index.html"><span class="brandmark" aria-hidden="true">✳</span>Triggle<span style="color:#b99a4e">.</span></a><a class="back" href="./index.html?class=12&amp;question=g12-ch1-ex1.1-q8">← Original Q8 lesson</a></div></header>
+<main>
+<div class="eyebrow"><span class="pill">🧪 One-question pilot</span><span class="pill pending">English · Tamil pending</span></div>
+<h1>Same maths. Three ways to understand it. 😄</h1>
+<p class="subtitle">Class 12 · Applications of Matrices and Determinants · Exercise 1.1 · Q8</p>
+<section class="card question" aria-labelledby="original"><h2 id="original" class="little">THE ORIGINAL QUESTION</h2>
+<p>If <strong>adj(A)</strong> is the following matrix, find A.</p>
+<div class="equation" data-tex="\operatorname{adj}(A)=\begin{bmatrix}2&amp;-4&amp;2\\-3&amp;12&amp;-7\\-2&amp;0&amp;2\end{bmatrix}" data-fallback="adj(A) = [[2, -4, 2]; [-3, 12, -7]; [-2, 0, 2]]"></div>
+<p class="small">This pilot adds teaching layers only. The original textbook question and verified answer are unchanged.</p>
+</section>
+<div class="mode-intro"><h2>Choose your explanation ✨</h2><p>No ability labels, no pressure. Switch whenever you like.</p></div>
+<div class="tabs" role="tablist" aria-label="Explanation style">
+<button class="tab" type="button" role="tab" id="tab-exam" data-mode="exam" aria-controls="panel-exam" aria-selected="false" tabindex="-1">📝 Exam</button>
+<button class="tab" type="button" role="tab" id="tab-learn" data-mode="learn" aria-controls="panel-learn" aria-selected="true" tabindex="0">🧩 Detailed</button>
+<button class="tab" type="button" role="tab" id="tab-fun" data-mode="fun" aria-controls="panel-fun" aria-selected="false" tabindex="-1">😂 Fun</button>
+</div>
+<section class="card panel" id="panel-exam" role="tabpanel" aria-labelledby="tab-exam" hidden tabindex="0">
+<h2>Exam mode 📝</h2><p>For a learner who already knows the technique and wants a compact answer.</p>
+<div class="step"><strong>1. Set J = adj(A) and find its determinant.</strong>
+<div class="calc"><div class="equation" data-tex="|J|=2(24)+4(-20)+2(24)=16" data-fallback="det(J) = 48 - 80 + 48 = 16"></div></div></div>
+<div class="step"><strong>2. For a 3 × 3 matrix, use the identity.</strong>
+<div class="calc"><div class="equation" data-tex="|J|=|A|^2\implies |A|=\pm4" data-fallback="det(J) = det(A) squared = 16, so det(A) = plus or minus 4"></div></div></div>
+<div class="step"><strong>3. Find the adjoint of J.</strong>
+<div class="calc"><div class="equation" data-tex="\operatorname{adj}(J)=\begin{bmatrix}24&amp;8&amp;4\\20&amp;8&amp;8\\24&amp;8&amp;12\end{bmatrix}" data-fallback="adj(J) = [[24,8,4];[20,8,8];[24,8,12]]"></div></div></div>
+<div class="step"><strong>4. Use adj(J) = |A|A and divide by ±4.</strong>
+<div class="answer"><strong>Final answer</strong><div class="equation" data-tex="\boxed{A=\pm\begin{bmatrix}6&amp;2&amp;1\\5&amp;2&amp;2\\6&amp;2&amp;3\end{bmatrix}}" data-fallback="A = plus or minus [[6,2,1];[5,2,2];[6,2,3]]"></div></div></div>
+</section>
+<section class="card panel" id="panel-learn" role="tabpanel" aria-labelledby="tab-learn" tabindex="0">
+<h2>Detailed mode 🧩</h2><p>Let's unpack every important connection, one small step at a time.</p>
+<div class="reveal-set" data-reveal-set="learn">
+<article class="step teach-step" data-step="0"><div class="step-top"><span class="bubble">1</span><strong>What are we actually given?</strong></div><p>We do not know the original matrix A. We know its <em>adjoint</em> — another matrix made by finding cofactors and transposing them. Call the given matrix <strong>J</strong>.</p><div class="tip">Think: J is a clue about A, not A itself.</div></article>
+<article class="step teach-step" data-step="1"><div class="step-top"><span class="bubble">2</span><strong>Find the determinant of J.</strong></div><p>Expand along the first row. Cover the row and column of each chosen number to make a 2 × 2 determinant.</p>
+<div class="calc"><div class="equation" data-tex="|J|=2\begin{vmatrix}12&amp;-7\\0&amp;2\end{vmatrix}-(-4)\begin{vmatrix}-3&amp;-7\\-2&amp;2\end{vmatrix}+2\begin{vmatrix}-3&amp;12\\-2&amp;0\end{vmatrix}" data-fallback="2(24) + 4(-20) + 2(24)"></div></div>
+<p>The smaller determinants are 24, −20 and 24. Take care with the alternating +, −, + signs.</p>
+<div class="calc"><div class="equation" data-tex="|J|=48-80+48=\boxed{16}" data-fallback="det(J)=16"></div></div></article>
+<article class="step teach-step" data-step="2"><div class="step-top"><span class="bubble">3</span><strong>Why does ±4 appear?</strong></div><p>For any 3 × 3 matrix, the determinant of its adjoint equals the square of its determinant.</p>
+<div class="calc"><div class="equation" data-tex="|\operatorname{adj}(A)|=|A|^2=16" data-fallback="det(adj(A)) = det(A) squared = 16"></div></div><p>Both 4 × 4 and (−4) × (−4) equal 16.</p>
+<div class="calc"><div class="equation" data-tex="\boxed{|A|=+4\ \text{or}\ -4}" data-fallback="det(A) is +4 or -4"></div></div></article>
+<article class="step teach-step" data-step="3"><div class="step-top"><span class="bubble">4</span><strong>Find the adjoint of J.</strong></div><p>First calculate each cofactor of J (the signed 2 × 2 determinants). Arrange them into the cofactor matrix:</p>
+<div class="calc"><div class="equation" data-tex="C(J)=\begin{bmatrix}24&amp;20&amp;24\\8&amp;8&amp;8\\4&amp;8&amp;12\end{bmatrix}" data-fallback="cofactor(J) = [[24,20,24];[8,8,8];[4,8,12]]"></div></div><p>Transpose it: rows become columns. This is <strong>adj(J)</strong>.</p>
+<div class="calc"><div class="equation" data-tex="\operatorname{adj}(J)=C(J)^{T}=\begin{bmatrix}24&amp;8&amp;4\\20&amp;8&amp;8\\24&amp;8&amp;12\end{bmatrix}" data-fallback="adj(J) = [[24,8,4];[20,8,8];[24,8,12]]"></div></div></article>
+<article class="step teach-step" data-step="4"><div class="step-top"><span class="bubble">5</span><strong>Recover A using the second identity.</strong></div><p>For a 3 × 3 matrix, taking the adjoint twice gives its determinant multiplied by the original matrix.</p>
+<div class="calc"><div class="equation" data-tex="\operatorname{adj}(J)=\operatorname{adj}(\operatorname{adj}(A))=|A|A" data-fallback="adj(J) = det(A) times A"></div></div><p>Divide every entry by +4 or −4, not just one entry.</p>
+<div class="answer"><strong>We found A!</strong><div class="equation" data-tex="\boxed{A=\pm\begin{bmatrix}6&amp;2&amp;1\\5&amp;2&amp;2\\6&amp;2&amp;3\end{bmatrix}}" data-fallback="A = plus or minus [[6,2,1];[5,2,2];[6,2,3]]"></div></div></article>
+<article class="step teach-step" data-step="5"><div class="step-top"><span class="bubble">6</span><strong>Does the answer really work?</strong></div><p>The positive matrix has determinant +4; its negative has determinant −4. Both have the given adjoint. In a 3 × 3 matrix, cofactors use 2 × 2 products, so changing the sign of every entry leaves its adjoint unchanged.</p><div class="tip">✅ Always remember: ± applies to the <strong>whole matrix</strong>. You cannot choose signs separately for the nine entries.</div></article>
+</div>
+<div class="pager"><span class="count" data-progress="learn" aria-live="polite">Step 1 of 6</span><div class="controls"><button class="secondary" type="button" data-show-all="learn">Show all</button><button class="primary" type="button" data-next="learn">Next step →</button></div></div>
+</section>
+<section class="card panel" id="panel-fun" role="tabpanel" aria-labelledby="tab-fun" hidden tabindex="0">
+<h2>Matrix Detective Agency 😂🔎</h2><p>Same precise mathematics. A little storytelling to help the clues stick.</p>
+<div class="reveal-set" data-reveal-set="fun">
+<article class="step teach-step" data-step="0"><div class="step-top"><span class="bubble">🕵️</span><strong>Case #8: The Missing Matrix!</strong></div><p>Someone has hidden A and left behind its adjoint. Dramatic, right? 😱 The matrix on your screen is clue J. Your mission is to reconstruct A.</p></article>
+<article class="step teach-step" data-step="1"><div class="step-top"><span class="bubble">🔍</span><strong>First fingerprint: the determinant</strong></div><p>The determinant machine examines J's first row and its 2 × 2 minors. It prints:</p><div class="calc"><div class="equation" data-tex="2(24)+4(-20)+2(24)=16" data-fallback="48 - 80 + 48 = 16"></div></div><p>Fingerprint found: <strong>16</strong>. The detective isn't guessing — we calculated it!</p></article>
+<article class="step teach-step" data-step="2"><div class="step-top"><span class="bubble">😲</span><strong>Plot twist: TWO suspects</strong></div><p>Our 3 × 3 identity says the determinant of A was squared to get 16.</p><div class="calc"><div class="equation" data-tex="(+4)^2=(-4)^2=16" data-fallback="both plus four squared and minus four squared equal 16"></div></div><p>So the suspects are <strong>+4</strong> and <strong>−4</strong>. Neither can be arrested yet! 😂</p></article>
+<article class="step teach-step" data-step="3"><div class="step-top"><span class="bubble">🧩</span><strong>The secret decoder: adj(J)</strong></div><p>Find the cofactors of J, then transpose them. Your decoder produces:</p><div class="calc"><div class="equation" data-tex="\operatorname{adj}(J)=\begin{bmatrix}24&amp;8&amp;4\\20&amp;8&amp;8\\24&amp;8&amp;12\end{bmatrix}" data-fallback="adj(J) = [[24,8,4];[20,8,8];[24,8,12]]"></div></div><p>The golden rule is <strong>adj(J) = |A|A</strong>. So divide every entry by one of our suspects: +4 or −4.</p></article>
+<article class="step teach-step" data-step="4"><div class="step-top"><span class="bubble">🎉</span><strong>Case solved. Two answers!</strong></div><div class="answer"><div class="equation" data-tex="\boxed{A=\pm\begin{bmatrix}6&amp;2&amp;1\\5&amp;2&amp;2\\6&amp;2&amp;3\end{bmatrix}}" data-fallback="A = plus or minus [[6,2,1];[5,2,2];[6,2,3]]"></div></div><p>The ± sign belongs to the <strong>entire</strong> matrix. Nine separate sign choices would be nine confused detectives. 😜</p></article>
+</div>
+<div class="pager"><span class="count" data-progress="fun" aria-live="polite">Clue 1 of 5</span><div class="controls"><button class="secondary" type="button" data-show-all="fun">Show all</button><button class="primary" type="button" data-next="fun">Next clue →</button></div></div>
+</section>
+<section class="card checks" aria-labelledby="check-title"><h2 id="check-title">🧠 Tiny brain check</h2><p>Can you explain the key idea without copying the answer?</p>
+<fieldset data-question="sign"><legend>1. Why is |A| = ±4?</legend>
+<label class="option"><input type="radio" name="sign" value="wrong1">Because every matrix has two determinants</label>
+<label class="option"><input type="radio" name="sign" value="correct">Because both +4 and −4 square to 16</label>
+<label class="option"><input type="radio" name="sign" value="wrong2">Because the given matrix has three rows</label>
+<button type="button" class="check-btn" data-check="sign">Check answer</button><p class="feedback" data-result="sign" aria-live="polite"></p></fieldset>
+<fieldset data-question="scope"><legend>2. In the final answer, what does ± mean?</legend>
+<label class="option"><input type="radio" name="scope" value="wrong1">Choose + or − for each entry separately</label>
+<label class="option"><input type="radio" name="scope" value="correct">Either use the positive matrix, or negate every entry</label>
+<label class="option"><input type="radio" name="scope" value="wrong2">Only the top-left entry changes sign</label>
+<button type="button" class="check-btn" data-check="scope">Check answer</button><p class="feedback" data-result="scope" aria-live="polite"></p></fieldset>
+<p class="small">No marks, labels, logins, or analytics. Answers stay in this page.</p>
+</section>
+<section class="card end" aria-labelledby="vote-title"><h2 id="vote-title">Which explanation made it click?</h2><p>Tap one to note your preference. This stays on your device; it is not sent anywhere.</p>
+<div class="vote-row"><button class="vote" type="button" data-vote="Exam" aria-pressed="false">📝 Exam</button><button class="vote" type="button" data-vote="Detailed" aria-pressed="false">🧩 Detailed</button><button class="vote" type="button" data-vote="Fun" aria-pressed="false">😂 Fun</button></div>
+<p id="vote-result" class="feedback" aria-live="polite"></p>
+</section>
+<p class="footer">This is a <strong>one-question learning experiment</strong>, not an IQ test. <a href="./index.html?class=12&amp;question=g12-ch1-ex1.1-q8">Return to the standard Q8 lesson</a>.</p>
+</main>
+</body></html>
