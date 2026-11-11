@@ -145,8 +145,19 @@ def main():
     a.add_argument('--published', type=Path, help='Optional published snapshot JSON; labels are only possible matches')
     a.add_argument('--output', required=True, type=Path)
     args = a.parse_args()
-    paths = sorted(args.zip_dir.glob('G10_W*_WIP.zip'))
-    if not paths: raise SystemExit('No matching staging ZIPs; refusing empty report')
+    candidates = sorted(args.zip_dir.glob('G10_W*_WIP.zip'))
+    # Keep only the latest archive per workstream; older cumulative ZIPs
+    # should not artificially create duplicate IDs in future daily reports.
+    current = {}
+    for p in candidates:
+        m = re.match(r'^G10_(W[1-5])_(\d{4}-\d{2}-\d{2})_batch(\d+)_WIP\.zip$', p.name)
+        if not m: continue
+        wid, date, batch = m.group(1), m.group(2), int(m.group(3))
+        version = (date, batch)
+        if wid not in current or version > current[wid][0]:
+            current[wid] = (version, p)
+    paths = [current[w][1] for w in sorted(current)]
+    if not paths: raise SystemExit('No matching workstream checkpoints; refusing empty report')
     result = extract(paths, load_json(args.drafts), load_json(args.published))
     write_report(result, args.output)
     print(json.dumps(result['summary'], indent=2))
