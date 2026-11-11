@@ -34,6 +34,6 @@ assert.ok(tex.filter(x=>x.includes(final)).length===3,'All modes must share the 
 const det=J=>J[0][0]*(J[1][1]*J[2][2]-J[1][2]*J[2][1])-J[0][1]*(J[1][0]*J[2][2]-J[1][2]*J[2][0])+J[0][2]*(J[1][0]*J[2][1]-J[1][1]*J[2][0]);
 const J=[[2,-4,2],[-3,12,-7],[-2,0,2]],A=[[6,2,1],[5,2,2],[6,2,3]];
 assert.equal(det(J),16);assert.equal(det(A),4);assert.equal(det(A.map(row=>row.map(x=>-x))),-4);
-const adj=B=>B[0].map((_,row)=>B.map((_,col)=>{const m=B.filter((_,r)=>r!==col).map(r=>r.filter((_,c)=>c!==row));return ((row+col)%2?-1:1)*(m[0][0]*m[1][1]-m[0][1]*m[1][0]);}));
+const adj=B=>B[0].map((_,row)=>B.map((_,col)=>{const m=B.filter((_,r)=>r!==col).map(r=>r.filter((_,c)=>c!==row));const value=((row+col)%2?-1:1)*(m[0][0]*m[1][1]-m[0][1]*m[1][0]);return value===0?0:value;}));
 assert.deepEqual(adj(A),J);assert.deepEqual(adj(A.map(row=>row.map(x=>-x))),J);
 console.log('PASS Q8 pilot: 3 styles, 11 learning steps, 2 concept checks, offline, '+tex.length+' valid KaTeX formulae, and both verified ± matrices.');
