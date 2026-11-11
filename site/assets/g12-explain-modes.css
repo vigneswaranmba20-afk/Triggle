@@ -1,0 +1,45 @@
+/* Grade 12 Explain Your Way: no changes to other grades' question reader. */
+/* The existing mobile reader uses explicit flex order. Place choices directly after the question, not above the question header. */
+body.textbook-reader .lesson-card>#g12ModeChooser{order:5!important}
+.g12-mode-chooser[hidden],.g12-depth-panel[hidden],#quickSteps[hidden],
+.g12-expanded-step[hidden],.g12-check[hidden],.g12-exp-final[hidden],
+.g12-math-warning[hidden]{display:none!important}
+.g12-mode-chooser{max-width:100%;margin:16px 0 18px;padding:14px;border:1px solid #e0d9ee;border-radius:18px;background:#f8f5fe}
+.g12-mode-heading{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0 0 10px}
+.g12-depth-label{font-size:.9rem;font-weight:800;line-height:1.35;margin:0;color:#3a305d}
+.g12-difficulty{font-size:.72rem;font-weight:700;letter-spacing:.025em;border-radius:99px;background:#eee8f9;color:#564277;padding:4px 9px}
+.g12-tablist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;max-width:100%;padding:5px;border-radius:13px;background:#eae4f5}
+.g12-mode-tab{font:inherit;font-size:.93rem;font-weight:800;min-height:46px;line-height:1.25;padding:8px 4px;min-width:0;border-radius:11px;border:1px solid transparent;background:transparent;color:#50466a;cursor:pointer}
+.g12-mode-tab[aria-selected="true"]{background:#fff;border-color:#d1c5e9;box-shadow:0 2px 6px #29184b18;color:#3b2f6f}
+.g12-mode-tab:focus-visible,.g12-step-controls button:focus-visible,.g12-check button:focus-visible,.g12-check input:focus-visible{outline:3px solid #d99345;outline-offset:2px}
+.g12-modes-note{color:#655c78;font-size:.79rem;margin:9px 2px 0;line-height:1.4}
+.g12-depth-panel{padding:7px 3px 28px;max-width:100%;min-width:0}
+.g12-mode-title{font-size:1.1rem;margin:10px 0 4px;color:#322a52}
+.g12-mode-goal{color:#625975;margin:0 0 12px;font-size:.94rem;line-height:1.5}
+.g12-prerequisite{border-left:4px solid #9782d3;border-radius:0 10px 10px 0;padding:11px 13px;background:#f6f2fe;font-size:.92rem;margin:0 0 16px}
+.g12-analogy{font-size:.95rem;background:#fff8ec;border-radius:12px;padding:12px 13px;margin:8px 0 13px;color:#594420}
+.g12-exp-steps{padding:0;list-style:none;margin:12px 0}
+.g12-exp-steps .worked-step{max-width:100%;min-width:0;margin:0 0 10px}
+.g12-exp-steps .worked-step>div{min-width:0;max-width:100%}
+.g12-exp-steps .step-equation{overflow-x:auto;max-width:100%;overflow-y:hidden}
+.g12-exp-steps .triggle-tex{max-width:100%}
+.g12-clue-caption{display:block;font-size:.75rem;font-weight:800;letter-spacing:.08em;color:#6e4d9a;margin-bottom:3px;text-transform:uppercase}
+.g12-math-warning{background:#fcf8f0;padding:11px 13px;border:1px solid #eee1ca;border-radius:10px;line-height:1.5;font-size:.9rem;margin:13px 0}
+.g12-exp-final{background:#f1f9f5;border:1px solid #d4eadb;border-radius:14px;padding:15px 13px;margin:16px 0;color:#1c5a39;max-width:100%;overflow-x:auto}
+.g12-exp-final strong{font-size:.86rem}
+.g12-exp-answer{max-width:100%;overflow-x:auto;margin-top:7px}
+.g12-step-nav{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:10px 0 15px}
+.g12-count{font-weight:700;color:#675c7f;font-size:.83rem}
+.g12-step-controls{display:flex;gap:7px;flex-wrap:wrap}
+.g12-step-controls button,.g12-check button{min-height:43px;padding:9px 13px;border-radius:11px;border:1px solid #d3c7e8;font:inherit;font-weight:750;cursor:pointer}
+.g12-secondary{background:#f2edfb;color:#3e326b}
+.g12-primary{background:#493a79;color:#fff;border-color:#493a79!important}
+.g12-step-controls button:disabled{opacity:.65;cursor:default}
+.g12-check{border:1px solid #ddd5ed;border-radius:13px;padding:13px;margin:18px 0}
+.g12-check legend{font-weight:800;padding:0 5px;color:#3c305e}
+.g12-check-question{margin:0 0 9px}
+.g12-check-option{display:flex;gap:8px;align-items:start;padding:6px 0;cursor:pointer;font-size:.9rem}
+.g12-check-option input{width:17px;height:17px;margin:4px 0 0;accent-color:#5a428f;flex:none}
+.g12-check-feedback{font-size:.85rem;font-weight:700;margin:8px 0 0;color:#395b46}
+@media(max-width:460px){.g12-mode-chooser{padding:10px;border-radius:14px;margin:13px 0}.g12-mode-tab{font-size:.85rem;min-height:47px;padding:7px 2px}.g12-tablist{gap:3px;padding:4px}.g12-depth-label{font-size:.83rem}.g12-depth-panel{padding:5px 0 20px}.g12-step-controls{width:100%}.g12-step-controls button{flex:1}}
+@media(prefers-reduced-motion:reduce){.g12-mode-tab,.g12-secondary,.g12-primary{transition:none!important}}
