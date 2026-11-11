@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "00f3bb91ffb0c1161a883cec77aef649cea9c6ff",
-  "updatedAt": "2026-11-11T03:41:47Z",
+  "sourceCommit": "849f7dd9df6b6f4106b9abdde4374acb90e704c5",
+  "updatedAt": "2026-11-11T10:03:45+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -61,7 +61,7 @@
     "site/data/textbook-exercises/g9-ch9-ex9-1-q9-q10-and-examples-en.js": "6168d85551b403bdc7ca694a8c2dd82e2db2436f13ceb799997aeb4e06f6cde2",
     "site/data/textbook-exercises/g9-ch9-ex9-2-en.js": "56f5ccd3160a545a45523ee1f01a728b87dcf81eb407bdd35cb5cc864c1222d8",
     "site/data/textbook-exercises/g9-ch9-ex9-2-q5-ex9-3-en.js": "a2111946d5f04081223b3d79c5c40cc6196585729e0a3572978ac36c7ce0266a",
-    "site/index.html": "a24e8781aa1f53142c5ac0914183dbbf67f83a4cad13c8a13080dc2c90ece5c1",
+    "site/index.html": "b860648c6a2a58573f960178a22de23b27f55677646bc95f8ad8714886f1a492",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
