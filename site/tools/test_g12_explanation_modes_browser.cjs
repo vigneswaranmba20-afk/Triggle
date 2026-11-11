@@ -43,12 +43,14 @@ async function verify(browser,name,base,width,all){
    await page.locator('#g12-detailed-panel input[type="radio"][value="0"]').first().check();
    await page.locator('#g12-detailed-panel .g12-check button').click();
    assert.match(await page.locator('#g12-detailed-panel .g12-check-feedback').textContent(),/✅ Yes/);
-   await page.locator('#g12-tab-fun').click();
-   assert.equal(await page.locator('#g12-fun-panel .worked-step:visible').count(),1);
-   await page.locator('#g12-fun-panel .g12-secondary').first().click();
-   assert.equal(await page.locator('#g12-fun-panel .worked-step:visible').count(),n);
-   assert.equal(await page.locator('#g12-fun-panel .g12-exp-answer').innerHTML(),expected);
-   assert.ok(await page.locator('#g12-fun-panel .g12-analogy').count()>0);
+   assert.equal(await page.locator('#g12-tab-fun, #g12-fun-panel').count(),0,'Fun Mode is removed');
+   assert.equal(await page.locator('.g12-mode-tab').count(),2,'Only Exam and Detailed remain');
+   await page.locator('#g12-tab-detailed').focus();
+   await page.keyboard.press('ArrowRight');
+   assert.equal(await page.locator('#g12-tab-exam').getAttribute('aria-selected'),'true');
+   assert.equal(await page.locator('#quickSteps').isVisible(),true);
+   await page.keyboard.press('ArrowLeft');
+   assert.equal(await page.locator('#g12-tab-detailed').getAttribute('aria-selected'),'true');
    assert.equal(await page.locator('#lessonCard .math-fallback').count(),0,'No failed notation: '+id);
    await geometry(page,width);
   }
@@ -79,10 +81,11 @@ async function verify(browser,name,base,width,all){
     ]));
     await offline.close();await ctx.setOffline(true);
     await page.reload();
-    await page.locator('#g12-tab-fun').click();
-    assert.equal(await page.locator('#g12-fun-panel .worked-step:visible').count(),1);
-    await page.locator('#g12-fun-panel .g12-secondary').first().click();
-    assert.ok(await page.locator('#g12-fun-panel mtable').count()>0);
+    assert.equal(await page.locator('#g12-tab-fun, #g12-fun-panel').count(),0);
+    await page.locator('#g12-tab-detailed').click();
+    assert.equal(await page.locator('#g12-detailed-panel .worked-step:visible').count(),1);
+    await page.locator('#g12-detailed-panel .g12-secondary').first().click();
+    assert.ok(await page.locator('#g12-detailed-panel mtable').count()>0);
     assert.equal(await page.locator('.math-fallback').count(),0);
     console.log('PASS G12 depth modes offline Chromium at 390px');
    }finally{await ctx.close();}

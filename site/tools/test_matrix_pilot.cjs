@@ -9,12 +9,15 @@ const lesson=JSON.parse(fs.readFileSync(path.join(root,'../docs/curriculum/grade
 assert.ok(lesson,'Existing source-verified Q8 must remain present');
 assert.match(lesson.q.en,/find A/i);
 assert.match(lesson.answer,/\u00b1\[\[6, 2, 1; 5, 2, 2; 6, 2, 3\]\]/);
-for(const mode of ['exam','learn','fun']){
+for(const mode of ['exam','learn']){
  assert.ok(html.includes('id="tab-'+mode+'"'));
  assert.ok(html.includes('id="panel-'+mode+'"'));
  assert.ok(html.includes('data-mode="'+mode+'"'));
 }
-assert.equal((html.match(/data-step="/g)||[]).length,11,'Six detailed steps plus five funny clues');
+assert.equal((html.match(/data-step="/g)||[]).length,6,'Six detailed steps remain');
+assert.ok(!/id="tab-fun"|id="panel-fun"|data-vote="Fun"/.test(html));
+assert.ok(js.includes("const modes=['exam','learn']"));
+assert.ok(!/\bfun\b/i.test(js),'Pilot must not expose Fun Mode');
 assert.equal((html.match(/data-question="/g)||[]).length,2);
 assert.match(html,/data-check="sign"/);
 assert.match(html,/data-check="scope"/);
@@ -24,16 +27,16 @@ assert.match(html,/No marks, labels, logins, or analytics/);
 assert.ok(sw.includes("'./matrix-pilot.html'")&&sw.includes("'./assets/matrix-pilot.js'"));
 assert.ok(!/(?:fetch\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage)/.test(js),'Pilot must not collect or transmit child data');
 const tex=[...html.matchAll(/data-tex="([^"]+)"/g)].map(m=>m[1].replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>'));
-assert.ok(tex.length>=16,'Enough authored diagrams and equations');
+assert.equal(tex.length,13,'All 13 remaining Exam/Detailed math expressions must be present');
 for(const latex of tex){
  const math=katex.renderToString(latex,{displayMode:true,output:'htmlAndMathml',throwOnError:true,trust:false,strict:'error'});
  assert.ok(math.includes('<math')&&!math.includes('katex-error'),'MathML and valid KaTeX: '+latex);
 }
 const final='A=\\pm\\begin{bmatrix}6&2&1\\\\5&2&2\\\\6&2&3\\end{bmatrix}';
-assert.ok(tex.filter(x=>x.includes(final)).length===3,'All modes must share the same verified final matrix');
+assert.ok(tex.filter(x=>x.includes(final)).length===2,'Exam and Detailed share the same verified final matrix');
 const det=J=>J[0][0]*(J[1][1]*J[2][2]-J[1][2]*J[2][1])-J[0][1]*(J[1][0]*J[2][2]-J[1][2]*J[2][0])+J[0][2]*(J[1][0]*J[2][1]-J[1][1]*J[2][0]);
 const J=[[2,-4,2],[-3,12,-7],[-2,0,2]],A=[[6,2,1],[5,2,2],[6,2,3]];
 assert.equal(det(J),16);assert.equal(det(A),4);assert.equal(det(A.map(row=>row.map(x=>-x))),-4);
 const adj=B=>B[0].map((_,row)=>B.map((_,col)=>{const m=B.filter((_,r)=>r!==col).map(r=>r.filter((_,c)=>c!==row));const value=((row+col)%2?-1:1)*(m[0][0]*m[1][1]-m[0][1]*m[1][0]);return value===0?0:value;}));
 assert.deepEqual(adj(A),J);assert.deepEqual(adj(A.map(row=>row.map(x=>-x))),J);
-console.log('PASS Q8 pilot: 3 styles, 11 learning steps, 2 concept checks, offline, '+tex.length+' valid KaTeX formulae, and both verified ± matrices.');
+console.log('PASS Q8 pilot: 2 styles, 6 learning steps, 2 concept checks, offline, '+tex.length+' valid KaTeX formulae, and both verified ± matrices.');

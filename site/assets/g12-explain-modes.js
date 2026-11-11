@@ -1,10 +1,10 @@
 /* Deterministic, offline, opt-in explanation modes for reviewed medium/hard
  * Grade 12 items. Original curriculum records and math never modified.
- * All three views use the already verified step-equations and final answer.
+ * Both views use the already verified step-equations and final answer.
  */
 (()=>{'use strict';
- const modes=['exam','detailed','fun'],labels={
-  exam:'📝 Exam',detailed:'🧩 Detailed',fun:'😂 Fun'
+ const modes=['exam','detailed'],labels={
+  exam:'📝 Exam',detailed:'🧩 Detailed'
  };
  const $=(root,selector)=>root.querySelector(selector);
  function el(tag,className,text){
@@ -40,41 +40,33 @@
   host.append(list);
   const note=el('p','g12-modes-note',
    isTamil?'கணித விடை மாறாது. கூடுதல் கற்பித்தல் விளக்கம் ஆங்கிலத்தில் உள்ளது; தமிழாக்கச் சரிபார்ப்பு நிலுவையில் உள்ளது.':
-   'Same verified answer in all three modes. Extra explanation is optional.');
+   'Same verified answer in both modes. Extra explanation is optional.');
   host.append(note);
   quick.setAttribute('role','tabpanel');quick.setAttribute('aria-labelledby',tabs.exam.id);
   quick.setAttribute('tabindex','0');
-  const detailPanels={},expose={detailed:1,fun:1},stepCount=item.steps.length;
+  const detailPanels={},expose={detailed:1},stepCount=item.steps.length;
   function build(mode){
    const panel=el('section','g12-depth-panel');
    panel.id='g12-'+mode+'-panel';panel.setAttribute('role','tabpanel');
    panel.setAttribute('aria-labelledby',tabs[mode].id);
    panel.setAttribute('tabindex','0');panel.hidden=true;
-   const h=el('h3','g12-mode-title',mode==='fun'?'🔎 Let’s investigate this problem':'🧩 Understand every step');
+   const h=el('h3','g12-mode-title','🧩 Understand every step');
    panel.append(h);
    const goal=el('p','g12-mode-goal',cfg.goal);panel.append(goal);
    const reminder=el('aside','g12-prerequisite');
-   reminder.append(el('strong','',mode==='fun'?'🧠 Detective’s toolkit: ':'Before we start: '));
+   reminder.append(el('strong','','Before we start: '));
    reminder.append(document.createTextNode(cfg.prerequisite));
    panel.append(reminder);
-   if(mode==='fun'){
-    const analogy=el('p','g12-analogy',cfg.analogy);
-    panel.append(analogy);
-   }
    const steps=el('ol','g12-exp-steps');steps.setAttribute('aria-label','Source-verified mathematical steps');
    const stepNodes=[];
    item.steps.forEach((step,i)=>{
     const li=buildStep(step,i);
     li.classList.add('g12-expanded-step');
-    if(mode==='fun'){
-     const clue=el('span','g12-clue-caption','Clue '+(i+1)+' of '+stepCount);
-     li.querySelector('.step-reason')?.prepend(clue);
-    }
     steps.append(li);stepNodes.push(li);
    });
    panel.append(steps);
    const warning=el('p','g12-math-warning');
-   warning.append(el('strong','',mode==='fun'?'⚠️ Detective warning: ':'Watch out: '));
+   warning.append(el('strong','','Watch out: '));
    warning.append(document.createTextNode(cfg.watch));
    panel.append(warning);
    const final=el('div','g12-exp-final');
@@ -114,14 +106,14 @@
     const revealed=expose[mode],done=revealed===stepCount;
     stepNodes.forEach((step,i)=>step.hidden=i>=revealed);
     warning.hidden=!done;final.hidden=!done;checkArea.hidden=!done;
-    count.textContent=(mode==='fun'?'Clue ':'Step ')+revealed+' / '+stepCount;
-    next.disabled=done;next.textContent=done?'All steps revealed ✓':(mode==='fun'?'Next clue →':'Next step →');
+    count.textContent='Step '+revealed+' / '+stepCount;
+    next.disabled=done;next.textContent=done?'All steps revealed ✓':'Next step →';
    }
    next.addEventListener('click',()=>{expose[mode]=Math.min(stepCount,expose[mode]+1);update();prepare?.(panel);});
    show.addEventListener('click',()=>{expose[mode]=stepCount;update();prepare?.(panel);});
    update();detailPanels[mode]=panel;
   }
-  for(const mode of ['detailed','fun'])build(mode);
+  build('detailed');
   function choose(mode,focus){
    for(const m of modes){
     const selected=m===mode;
@@ -130,7 +122,7 @@
     if(selected&&focus)tabs[m].focus();
    }
    quick.hidden=mode!=='exam';
-   for(const m of ['detailed','fun'])detailPanels[m].hidden=m!==mode;
+   detailPanels.detailed.hidden=mode!=='detailed';
    if(mode!=='exam')prepare?.(detailPanels[mode]);
   }
   for(const mode of modes)tabs[mode].addEventListener('click',()=>choose(mode,false));
@@ -138,8 +130,8 @@
    if(!['ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;
    event.preventDefault();
    const active=modes.find(m=>tabs[m].getAttribute('aria-selected')==='true')||'exam';
-   const i=modes.indexOf(active),next=event.key==='Home'?0:event.key==='End'?2:
-    (i+(event.key==='ArrowRight'?1:2))%3;
+   const i=modes.indexOf(active),next=event.key==='Home'?0:event.key==='End'?modes.length-1:
+    (i+(event.key==='ArrowRight'?1:modes.length-1))%modes.length;
    choose(modes[next],true);
   });
   choose('exam',false);

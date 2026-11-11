@@ -11,21 +11,20 @@
     const fallback=el.getAttribute('data-fallback')||value;
     el.innerHTML=notation?.renderLatex?.(value,{displayMode:true,fallback})||fallback;
   }
-  const modes=['exam','learn','fun'];
+  const modes=['exam','learn'];
   const buttons=[...document.querySelectorAll('[role="tab"][data-mode]')];
-  const exposed={learn:1,fun:1};
-  const counts={learn:document.querySelectorAll('[data-reveal-set="learn"] .teach-step').length,
-                fun:document.querySelectorAll('[data-reveal-set="fun"] .teach-step').length};
+  const exposed={learn:1};
+  const counts={learn:document.querySelectorAll('[data-reveal-set="learn"] .teach-step').length};
   function paint(mode){
     if(mode==='exam')return;
     const stepNodes=[...document.querySelectorAll('[data-reveal-set="'+mode+'"] .teach-step')];
     stepNodes.forEach((node,i)=>node.hidden=i>=exposed[mode]);
-    const label=mode==='fun'?'Clue':'Step';
+    const label='Step';
     document.querySelector('[data-progress="'+mode+'"]').textContent=
       label+' '+exposed[mode]+' of '+counts[mode];
     const next=document.querySelector('[data-next="'+mode+'"]');
     next.disabled=exposed[mode]===counts[mode];
-    next.textContent=next.disabled?'All revealed ✓':(mode==='fun'?'Next clue →':'Next step →');
+    next.textContent=next.disabled?'All revealed ✓':'Next step →';
   }
   function selectMode(mode,{focus=false,updateUrl=false}={}){
     if(!modes.includes(mode))return;
@@ -56,7 +55,7 @@
       (current+(event.key==='ArrowRight'?1:-1)+modes.length)%modes.length;
     selectMode(modes[index],{focus:true,updateUrl:true});
   });
-  for(const mode of ['learn','fun']){
+  for(const mode of ['learn']){
     paint(mode);
     document.querySelector('[data-next="'+mode+'"]').addEventListener('click',()=>{
       exposed[mode]=Math.min(counts[mode],exposed[mode]+1);

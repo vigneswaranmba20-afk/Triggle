@@ -41,6 +41,12 @@ assert.equal(catalog.get(originalQ8).difficulty,'hard');
 assert.equal(catalog.get(authored.find(x=>x.id==='g12-ch1-ex1.1-q1-i')),null);
 const index=read('index.html'),app=read('assets/app.js'),script=read('assets/g12-explain-modes.js'),sw=read('service-worker.js');
 const before=(needle)=>index.indexOf(needle);
+assert.ok(script.includes("const modes=['exam','detailed']"));
+assert.ok(!/\bfun\b|😂|detective/i.test(script),'Fun Mode must not ship in the exercise reader');
+assert.ok(read('assets/g12-explain-modes.css').includes('grid-template-columns:repeat(2,minmax(0,1fr))'));
+assert.ok(index.includes('g12-explain-modes.js?v=g12-two-mode-20261111'));
+assert.ok(index.includes('g12-explain-modes.css?v=g12-two-mode-20261111'));
+
 assert.ok(before('data/g12-explanation-catalog.js')<before('assets/app.js'));
 assert.ok(before('assets/g12-explain-modes.js')<before('assets/app.js'));
 assert.ok(index.includes('id="g12ModeChooser"'));
@@ -60,4 +66,4 @@ for(const s of [
  'choose(\'exam\',false)'
 ])assert.ok(script.includes(s),'Missing important contract: '+s);
 assert.ok(!script.includes('Math.random')&&!script.includes('eval('));
-console.log('PASS 54 Grade 12 difficulties: 41 medium/hard modes and 13 easy unchanged; one canonical answer, accessible offline tabs, zero learner tracking.');
+console.log('PASS 54 Grade 12 difficulties: 41 medium/hard questions with Exam/Detailed and 13 easy unchanged; one canonical answer, accessible offline tabs, zero learner tracking.');

@@ -1,4 +1,6 @@
 # Grade 12 Explain Your Way — 40-approach simulated design audit
+
+> **Historical research note (2026-11-11):** The original simulation compared three-mode ideas, but the product decision has since changed. The currently supported student experience is **Exam + Detailed only**, without a Fun tab. See `docs/G12_EXPLAIN_YOUR_WAY_BUILD_PROMPT.md` v1.1 for the implementation contract. This original simulation is preserved for research provenance.
 **Date:** 2026-11-11. **Decision:** Use H2 (three opt-in explanation depths, clear visual hierarchy, optional relevant jokes, progressive detailed steps and small voluntary understanding checks).
 
 ## Method and scientific limits
