@@ -1,4 +1,6 @@
 /* Grade 12 Explain Your Way: no changes to other grades' question reader. */
+/* The existing mobile reader uses explicit flex order. Place choices directly after the question, not above the question header. */
+body.textbook-reader .lesson-card>#g12ModeChooser{order:5!important}
 .g12-mode-chooser[hidden],.g12-depth-panel[hidden],#quickSteps[hidden],
 .g12-expanded-step[hidden],.g12-check[hidden],.g12-exp-final[hidden],
 .g12-math-warning[hidden]{display:none!important}
