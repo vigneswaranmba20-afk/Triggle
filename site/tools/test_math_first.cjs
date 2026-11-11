@@ -20,7 +20,7 @@ assert(app.includes('function openChapterSection(section,chapter=chapterOverview
 assert(app.includes("b.onclick=()=>openPath(c.type)"), 'Chapter chevron must invoke chapter picker');
 assert(app.includes("chapterList().forEach(c=>options.push"), 'Chapter picker must list active-class chapters');
 assert(app.includes("choose:()=>selectChapter(c)"), 'Chapter selection must open the selected chapter menu');
-assert(app.includes("openChapterSection(section,chapter);"), 'Back to worked examples must open their full list');
+assert(app.includes("openChapterSection(section,chapter);"), 'Exercise section navigation must remain available');
 assert(app.includes('if(chapterOverview)questionOrigin={grade,chapterId:chapterOverview.id,section:chapterSection}'), 'Return-to-list destination must be tracked');
 assert(!html.includes('id="chapterMenuBtn"'), 'Remove redundant question-page Chapter sections button');
 assert(!app.includes('openChapterMenu('), 'Chapter breadcrumbs must not secretly open section menus');
@@ -43,8 +43,8 @@ assert(html.includes('math-first.css?v=standard-20261111'),'Updated chapter-navi
 const glass=/\.figure-dialog\{[\s\S]*?background:rgba\(239,232,250,\.68\)!important/.test(css);
 assert(glass,'Venn dialog must be visibly translucent, not nearly opaque');
 assert(html.includes('textbook-activities.js?v=math-first-1'),'New activities renderer not versioned');
-assert(html.includes('chapter-hub.js?v=standard-20261111'),'New direct exercise chapter hub must load');
-assert(html.includes('app.js?v=standard-20261111'),'Current single-solution reader must load');
+assert(html.includes('chapter-hub.js?v=hide-examples-20261111'),'New direct exercise chapter hub must load');
+assert(html.includes('app.js?v=hide-examples-20261111'),'Current single-solution reader must load');
 assert(sw.includes("'./assets/math-first.css'"),'Offline shell must include new CSS');
 const cacheVersion=Number(sw.match(/triggle-shell-real-2025-v(\d+)/)?.[1]);
 assert.ok(Number.isInteger(cacheVersion)&&cacheVersion>=55,'Offline cache must invalidate all previous published versions');

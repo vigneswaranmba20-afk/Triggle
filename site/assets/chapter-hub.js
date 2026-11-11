@@ -31,8 +31,8 @@
       navigation:'Chapter sections',review:'Editorial review',sources:'Source books',
       sectionStatus:'Chapter under development · more lessons coming.',
       learningStatus:'Textbook verification is in progress.',
-      questionBreakdown:(total,examples,exercises,quizzes)=>`${examples} worked examples · ${exercises} exercises & practice · ${quizzes} quick checks`,
-      returnHelp:'Use the chapter menu to switch between Concepts, Worked Examples, Exercises and Quizzes.',
+      questionBreakdown:(total,examples,exercises,quizzes)=>`${exercises} exercises & practice · ${quizzes} quick checks`,
+      returnHelp:'Use the chapter menu to switch between Concepts, Exercises and Quizzes.',
       selectQuestion:'Choose an exercise',group:'Exercise group',jumpConcept:'Open a concept',lab:'Venn diagram lab',
       existingExamples:'Some worked examples are available',noPublished:'Complete chapter review is still pending',
        exampleWordingNote:'Textbook wording audit: Chapter 1 worked examples are currently restated, not verified word-for-word 2025 textbook questions. Solutions are authored separately.',
@@ -64,7 +64,7 @@
       navigation:'அத்தியாயப் பகுதிகள்',review:'மீளாய்வு நிலை',sources:'பாடநூல் ஆதாரங்கள்',
       sectionStatus:'மேலும் பாடங்கள் உருவாக்கப்படுகின்றன.',
       learningStatus:'பாடநூல் ஒப்பீடு இன்னும் நடைபெறுகிறது.',
-      questionBreakdown:(total,examples,exercises,quizzes)=>`${examples} எடுத்துக்காட்டுகள் · ${exercises} பயிற்சி வினாக்கள் · ${quizzes} சிறு சோதனைகள்`,
+      questionBreakdown:(total,examples,exercises,quizzes)=>`${exercises} பயிற்சி வினாக்கள் · ${quizzes} சிறு சோதனைகள்`,
       returnHelp:'கருத்துகள், எடுத்துக்காட்டுகள், பயிற்சிகள் மற்றும் சிறு தேர்வுகளுக்குச் செல்ல அத்தியாயத் தேர்வைப் பயன்படுத்துங்கள்.',
       selectQuestion:'ஒரு வினாவைத் தேர்ந்தெடுக்கவும்',group:'பயிற்சித் தொகுதி',jumpConcept:'கருத்தைப் படிக்கவும்',lab:'வென் பட ஆய்வகம்',
       existingExamples:'சில தீர்க்கப்பட்ட எடுத்துக்காட்டுகள் உள்ளன',noPublished:'முழு அத்தியாய மீளாய்வு இன்னும் முடியவில்லை',
@@ -72,7 +72,7 @@
        exerciseCoverageNote:(count)=>`பயிற்சி 1.1 · மொத்தம் 30 துணை வினாக்களில் ${count} மட்டுமே உள்ளன. பயிற்சி 1.1-இன் 30 துணை வினாக்களும் 2025 ஆங்கிலம் மற்றும் தமிழ் பாடநூலுடன் ஒப்பிடப்பட்டுள்ளன. பயிற்சிகள் 1.2–1.7 சரிபார்க்கப்பட வேண்டும். தமிழ் ஆசிரியரின் மீளாய்வு இன்னும் நிலுவையில் உள்ளது.`
     }
   };
-  const baseKinds=['concepts','examples','exercises','quizzes'];
+  const baseKinds=['concepts','exercises','quizzes'];
   // "Exercises" is strictly for available textbook-labelled questions.
   // Preserve Triggle practice in its underlying records, never insert it ahead
   // of Exercise N.1 Question 1 or pretend it is an official textbook exercise.
@@ -88,7 +88,7 @@
     const {chapter,grade,lang,section,questions,sources,onSection,onQuestion,onClass,onHome,initialConcept}=opts;
     const t=texts[lang==='ta'?'ta':'en'];
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
-    const sets=categorized(questions);
+    const sets=categorized(questions); // Examples stay archived in source, outside student navigation.
     const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):[];
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const kinds=activityEntries.length?[...baseKinds,'activities']:baseKinds;
@@ -204,7 +204,7 @@
     if(section==='activities'&&activityEntries.length&&window.TriggleTextbookActivities){
       window.TriggleTextbookActivities.mount(panel,chapter,lang);
     }
-    if(section==='examples'||section==='exercises'){
+    if(section==='exercises'){
       const selected=sets[section];
       if(!selected.length){
         info(section==='examples'?t.noneWorked:t.noneExercises);

@@ -58,7 +58,7 @@ async function main(){
      assert.ok(lang==='ta'?/[\u0B80-\u0BFF]/.test(h):/[A-Za-z]/.test(h),h);return h;
     });
     await check(c,'Four section choices','orientation',async()=>{
-     for(const key of ['concepts','examples','exercises','quizzes'])
+     for(const key of ['concepts','exercises','quizzes','activities'])
       assert.equal(await page.locator('.hub-section-card[data-hub-section="'+key+'"]').count(),1,key);
     });
     await check(c,'Readiness and question categories are clear','orientation',async()=>{
@@ -188,7 +188,7 @@ async function main(){
        await lab.locator('[data-nav] button').nth(6).click();
        assert.ok((await button.innerText()).includes(lang==='ta'?'அத்தியாயம் 1':'Chapter 1'));
        await button.click();
-       assert.equal(await page.locator('.hub-section-card').count(),5);
+       assert.equal(await page.locator('.hub-section-card').count(),4);
       });
     }
     await check(c,'Chapter activities and thinking corners open with answers','textbook',async()=>{

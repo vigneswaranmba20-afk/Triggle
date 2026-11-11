@@ -72,8 +72,8 @@ async function main(){
     assert.ok(dims.sw<=dims.vw+1,'No horizontal overflow at '+width+' for '+id);
    }
    // Figure must be discoverable on the very first render without touching,
-   // in both 2025 Set Language Venn lessons and earlier triangle examples.
-   for(const qid of ['c9-textbook-example-1-11','c9-example-6-1']){
+   // for two distinct surviving textbook exercise diagrams.
+   for(const qid of ['c9-exercise-6-1-q1','c9-exercise-6-1-q2']){
     await page.goto(url+'/index.html?class=9&question='+qid);
     await page.locator('#questionHead').waitFor({state:'visible'});
     assert.equal(await page.locator('#figureBtn').isVisible(),true,

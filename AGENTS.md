@@ -6,7 +6,7 @@
 
 **For the Grade 9 Set Language exact-question and navigation repair**, also follow [the dedicated reusable master prompt](docs/G9_TEXTBOOK_FIDELITY_REPAIR_MASTER_PROMPT.md) and [the source gap register](docs/G9_CH1_2025_SOURCE_GAP_REGISTER.md). Preserve exact textbook questions from the user's connected PDFs. Do not mislabel reworded questions as exact. New official questions require a verified English/Tamil page-image evidence record, preserved IDs and a passing source-to-browser comparison test. Independently authored explanations and original Venn diagrams are permitted.
 
-**Current product direction (2026-11-11):** one canonical exam solution per question; no Exam/Detailed/Fun selector or optional Detailed dialog. Preserve all required working. See [the implementation audit](docs/STANDARD_SOLUTIONS_2026-11-11.md) and [difficulty metadata](site/data/problem-difficulty.js).
+**Current product direction (2026-11-11):** one canonical exam solution per question; no Exam/Detailed/Fun selector or optional Detailed dialog. **No student-facing Worked Examples sections or example questions in any grade (9–12).** Preserve the authored example records in source archives for provenance, but do not expose them through chapter menus, search, navigation or new content batches. Only Exercises and Unit Exercises should open textbook questions with full standard step-by-step working. Preserve all required working. See [the implementation audit](docs/STANDARD_SOLUTIONS_2026-11-11.md) and [difficulty metadata](site/data/problem-difficulty.js).
 
 This file tells coding agents (including Codex) where to find **maintained educational reference notes** before adding or revising mathematics content.
 
