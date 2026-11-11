@@ -74,6 +74,34 @@ async function verify(browser,name,base){
   console.log('PASS '+name+' all five requested widths, both interfaces, keyboard, Previous/Next and browser Back');
  }finally{await ctx.close();}
 }
+async function classic(browser,name,base){
+ const ctx=await browser.newContext({viewport:{width:390,height:844},serviceWorkers:'block'}),page=await ctx.newPage(),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ try{
+  await page.goto(base+'/class9-classic.html');
+  for(const lang of ['en','ta']){
+   await page.locator(lang==='ta'?'#langTa':'#langEn').click();
+   const failures=await page.evaluate(()=>{
+    const errors=[];
+    for(const q of SOLUTIONS){
+     filter=q.type;index=currentList().findIndex(x=>x.id===q.id);showQuestion();
+     const meta=window.TriggleDifficulty.get({id:'c9-'+q.id,classNum:9});
+     const label=document.querySelector('#classicDifficulty');
+     if(label.hidden||!label.textContent.includes({easy:'Easy',medium:'Medium',difficult:'Difficult'}[meta.level]))errors.push(q.id);
+    }
+    return errors;
+   });
+   assert.deepEqual(failures,[],'All 44 classic questions retain canonical difficulty');
+   for(const width of widths){
+    await page.setViewportSize({width,height:844});
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    assert.ok(await page.locator('#classicDifficulty').isVisible());
+   }
+  }
+  assert.deepEqual(errors,[]);
+  console.log('PASS '+name+' classic bookmark: all 44 original questions, canonical difficulty, both interfaces and five widths');
+ }finally{await ctx.close();}
+}
 async function offline(browser){
  const app=await server(),ctx=await browser.newContext({viewport:{width:390,height:844},serviceWorkers:'allow'}),page=await ctx.newPage();
  try{
@@ -100,6 +128,6 @@ async function offline(browser){
  }finally{await ctx.close();await app.close();}
 }
 (async()=>{const app=await server();try{
- const chrome=await chromium.launch(launchOptions());try{await verify(chrome,'Chromium',app.base);await offline(chrome);}finally{await chrome.close();}
- const wk=await webkit.launch({headless:true,...(process.env.WEBKIT_PATH?{executablePath:process.env.WEBKIT_PATH}:{})});try{await verify(wk,'WebKit',app.base);}finally{await wk.close();}
+ const chrome=await chromium.launch(launchOptions());try{await verify(chrome,'Chromium',app.base);await classic(chrome,'Chromium',app.base);await offline(chrome);}finally{await chrome.close();}
+ const wk=await webkit.launch({headless:true,...(process.env.WEBKIT_PATH?{executablePath:process.env.WEBKIT_PATH}:{})});try{await verify(wk,'WebKit',app.base);await classic(wk,'WebKit',app.base);}finally{await wk.close();}
 }finally{await app.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -186,7 +186,23 @@ function validatePreservation(root = siteRoot) {
     if (!archived && !file.startsWith(root + path.sep)) { errors.push('Preservation baseline: path escapes site: ' + relative); continue; }
     if (!fs.existsSync(file)) { errors.push('Preserved file missing: ' + relative); continue; }
     const content = fs.readFileSync(file);
-    if (crypto.createHash('sha256').update(content).digest('hex') !== entry.sha256) errors.push('Preserved content changed: ' + relative);
+    // Classic-reader additions are audited UI only. Removing these exact new
+    // fragments must recover every byte of the original preserved page.
+    let preservedContent=content;
+    if (entry.uiOnlyAdditions) {
+      if (relative!=='class9-classic.html'||!Array.isArray(entry.uiOnlyAdditions)||!entry.uiOnlyAdditions.length) {
+        errors.push('Invalid UI-only preservation additions: '+relative); continue;
+      }
+      let original=content.toString('utf8');
+      for(const addition of entry.uiOnlyAdditions){
+        if(typeof addition!=='string'||!addition||original.split(addition).length!==2){
+          errors.push('Missing or repeated audited UI addition: '+relative); continue;
+        }
+        original=original.replace(addition,'');
+      }
+      preservedContent=Buffer.from(original,'utf8');
+    }
+    if (crypto.createHash('sha256').update(preservedContent).digest('hex') !== entry.sha256) errors.push('Preserved content changed: ' + relative);
     if (entry.ids) {
       const sandbox = { window: {} };
       vm.runInNewContext(content.toString('utf8'), sandbox, { filename: relative, timeout: 1000 });

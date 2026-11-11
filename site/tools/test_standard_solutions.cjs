@@ -24,6 +24,16 @@ for(const [grade,data] of Object.entries(classes)){
   count++;
  }
 }
+const classic=read('class9-classic.html');
+const classicRecords=JSON.parse(classic.match(/const SOLUTIONS=(\[[^\n]+\]);/)[1]);
+assert.equal(classicRecords.length,44);
+for(const record of classicRecords){
+ const item=classes[9].items.find(i=>i.id==='c9-'+record.id);
+ assert.ok(item&&registry.get(item),'Legacy bookmark has the canonical difficulty '+record.id);
+ assert.equal(item.q.en,record.prompt,'Classic question matches canonical question');
+ assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
+}
+assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
 assert.equal(count,568);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);

@@ -154,7 +154,12 @@
       "sha256": "31a41a4c533e65774893831d99d9ae2f0fc5ff4cce5844164742a27cc26b3f51"
     },
     "class9-classic.html": {
-      "sha256": "b2d11b0865bae7edfa8d90063062d6ed0c9ccfeceb6a46358177fced1d8da576"
+      "sha256": "b2d11b0865bae7edfa8d90063062d6ed0c9ccfeceb6a46358177fced1d8da576",
+      "uiOnlyAdditions": [
+        "<script src=\"./data/problem-difficulty.js?v=standard-20261111\"></script>",
+        "<span id=\"classicDifficulty\" lang=\"en\" hidden style=\"margin:3px 0 5px;padding:2px 7px;border:1px solid #d8d3df;border-radius:6px;background:#f7f5fa;color:#3f3550;font:600 12px/1.5 system-ui,sans-serif\"></span>",
+        "    const difficulty=window.TriggleDifficulty?.get({id:'c9-'+q.id,classNum:9});\n    $('classicDifficulty').hidden=!difficulty;\n    $('classicDifficulty').textContent=difficulty?({easy:'🟢 Easy',medium:'🟡 Medium',difficult:'🔴 Difficult'}[difficulty.level]):'';\n"
+      ]
     },
     "playground.html": {
       "sha256": "6dad0c56861bea252e1feb4333015eee357bf7a626cbf6690ac1d2cd64e1635a"
