@@ -119,7 +119,6 @@ body.textbook-reader .twd-worked-step:last-child .twd-part-solution{
     scroll-margin-top:115px!important;
   }
   body.textbook-reader #lessonCard>#inlineFigure{order:4!important;flex:none!important}
-  body.textbook-reader #lessonCard>#solutionModeRow{order:5!important;flex:none!important}
   body.textbook-reader #lessonCard>#answerBox{order:6!important}
   body.textbook-reader #lessonCard>#stepsRegion{
     order:7!important;display:block!important;flex:none!important;

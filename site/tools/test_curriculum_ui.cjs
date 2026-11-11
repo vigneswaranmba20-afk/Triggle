@@ -312,16 +312,15 @@ async function main() {
         assert.equal(await nav.isVisible(),false,'Question footer hidden after opening Home');
       });
     }
-    await check('Navigation remains keyboard and teaching-dialog accessible',async()=>{
+    await check('Navigation remains keyboard accessible with one solution',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&question=c9-example-6-2');
       const nav=page.locator('#questionNavDock');
       await nav.waitFor({state:'visible'});
       await page.locator('#next').focus();
       assert.equal(await page.evaluate(()=>document.activeElement?.id),'next');
       assert.equal(await nav.evaluate(el=>el.inert),false);
-      await page.locator('#tabGuided').click();
-      await page.locator('#guidedDialog').waitFor({state:'visible'});
-      await page.locator('#closeGuided').click();
+      assert.equal(await page.locator('#tabGuided,#guidedDialog').count(),0);
+      assert.ok(await page.locator('#stepsList li:visible').count()>0);
       assert.equal(await nav.isVisible(),true);
       await noOverflow(page,'lesson dialog with stable navigation');
     });
@@ -894,7 +893,7 @@ async function main() {
       assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
     });
     for(const width of [320,390,1280]){
-      await check('Real Numbers 2025 sections, hard-only explanation and figure at '+width+'px',async()=>{
+      await check('Real Numbers 2025 sections, difficulty and figure at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch2&section=examples');
         assert.equal(await page.locator('.hub-question').count(),31,'31 textbook examples');
         assert.match(await page.locator('.hub-question').first().innerText(),/Example 2\.1/);
@@ -902,13 +901,11 @@ async function main() {
         await noOverflow(page,'Real Numbers example list at '+width+'px');
         await page.locator('.hub-question').nth(4).click();
         assert.match(await page.locator('#questionHead').innerText(),/Example 2\.5/);
-        assert.equal(await page.locator('#solutionModeRow').isVisible(),true,'hard-only Detailed explanation');
-        await page.locator('#tabGuided').click();
-        assert.equal(await page.locator('#guidedDialog').evaluate(el=>el.open),true);
-        await page.locator('#closeGuided').click();
+        assert.equal(await page.locator('#tabGuided,#guidedDialog,#solutionModeRow').count(),0);
+        assert.match(await page.locator('#difficultyIndicator').innerText(),/Difficult/);
         await page.goBack();
         await page.locator('.hub-question').nth(3).click();
-        assert.equal(await page.locator('#solutionModeRow').isVisible(),false,'easy problem has no detailed tab');
+        assert.match(await page.locator('#difficultyIndicator').innerText(),/Easy/);
         await page.goBack();
         await page.locator('.hub-question').nth(12).click();
         assert.equal(await page.locator('#figureBtn').isVisible(),true,'number line has figure icon');
@@ -949,9 +946,8 @@ async function main() {
         assert.ok(equation.centre<=3,'Display equation must remain centered: '+JSON.stringify(equation));
         await noOverflow(page,'Example 2.12 English worked example at '+width+'px');
         if(width===390){
-          await page.locator('#tabGuided').click();
-          assert.equal(await page.locator('#guidedQuestion .twd-question-part').count(),4,'Pinned question remains readable in Detailed explanation');
-          await page.locator('#closeGuided').click();
+          assert.equal(await page.locator('#stepsList .twd-question-part').count(),4,'All subquestions remain in standard solution');
+          assert.equal(await page.locator('#guidedDialog').count(),0);
           await page.locator('#langTa').click();
           assert.equal(await page.locator('#questionText .twd-question-part').count(),0);
           assert.equal(await page.locator('#stepsList .twd-question-part').count(),4);
@@ -1214,7 +1210,7 @@ async function main() {
       }
       await page.close();
     });
-    await check('legacy progress, diagrams and immersive lessons survive chapter navigation', async () => {
+    await check('legacy progress, diagrams and standard solutions survive chapter navigation', async () => {
       const page = await visit(await context(1280), '/index.html?class=9&question=c9-example-6-2');
       const question = await page.locator('#questionText').innerText();
       assert.equal(await page.locator('#markDone').isVisible(),false,'Progress control removed from question view');
@@ -1226,11 +1222,8 @@ async function main() {
       assert.equal(await page.locator('#figureDialog').evaluate(el => el.open), true);
       assert.ok(await page.locator('#diagramContent svg').count() > 0);
       await page.locator('#closeDiagram').click();
-      await page.locator('#tabGuided').click();
-      assert.equal(await page.locator('#guidedDialog').evaluate(el => el.open), true);
-      assert.ok((await page.locator('#guidedSteps').innerText()).trim());
-      await page.locator('#deepNext').click();
-      await page.locator('#closeGuided').click();
+      assert.equal(await page.locator('#tabGuided,#guidedDialog').count(),0);
+      assert.ok((await page.locator('#stepsList').innerText()).trim());
       assert.equal(await page.locator('#questionText').innerText(), question);
       const prior = page.url();
       await selectChapter(page, 'g9-ch1');

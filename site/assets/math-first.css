@@ -186,7 +186,6 @@
  body.textbook-reader .lesson-card>#questionText{order:3}
  body.textbook-reader .lesson-card>#answerBox{order:4}
  body.textbook-reader .lesson-card>#inlineFigure{order:5}
- body.textbook-reader .lesson-card>#solutionModeRow{order:6}
  body.textbook-reader .lesson-card>#stepsRegion{order:7}
  body.textbook-reader .lesson-card>#visualLessonAction{order:8}
  body.textbook-reader .lesson-card>.lesson-bottom{order:9}

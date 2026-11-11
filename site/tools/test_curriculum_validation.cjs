@@ -85,6 +85,32 @@ try {
   assert.deepEqual(validatePreservation(temporary), []); checks++;
   fs.appendFileSync(path.join(temporary, 'data/class-9.js'), '// accidental edit');
   assert(validatePreservation(temporary).some(error => /Preserved content changed/.test(error))); checks++;
+  // Moving retired teaching code out of the deployed site must retain its original hash gate.
+  const archiveProject=path.join(temporary,'archive-project'),archiveSite=path.join(archiveProject,'site');
+  const archiveDir=path.join(archiveProject,'docs/history/discontinued-explanation-modes');
+  fs.mkdirSync(path.join(archiveSite,'data'),{recursive:true});fs.mkdirSync(archiveDir,{recursive:true});
+  const archiveCode='// preserved historical teaching content\n',archiveFile=path.join(archiveDir,'deep-lessons.js');
+  fs.writeFileSync(archiveFile,archiveCode);
+  const archiveManifest={baseCommit:'a'.repeat(40),files:{'assets/deep-lessons.js':{
+    sha256:crypto.createHash('sha256').update(archiveCode).digest('hex'),archivedAs:'docs/history/discontinued-explanation-modes/deep-lessons.js'}}};
+  const manifestFile=path.join(archiveSite,'data/legacy-content-baseline.json');
+  fs.writeFileSync(manifestFile,JSON.stringify(archiveManifest));
+  assert.deepEqual(validatePreservation(archiveSite),[]);checks++;
+  fs.appendFileSync(archiveFile,'// accidental edit');
+  assert(validatePreservation(archiveSite).some(error=>/Preserved content changed/.test(error)));checks++;
+  archiveManifest.files['assets/deep-lessons.js'].archivedAs='../escape.js';
+  fs.writeFileSync(manifestFile,JSON.stringify(archiveManifest));
+  assert(validatePreservation(archiveSite).some(error=>/Invalid preservation archive path/.test(error)));checks++;
+  const originalClassic='<h1>Original question and working</h1>',uiAddition='<span>Easy</span>';
+  const classicManifest={baseCommit:'a'.repeat(40),files:{'class9-classic.html':{
+   sha256:crypto.createHash('sha256').update(originalClassic).digest('hex'),uiOnlyAdditions:[uiAddition]}}};
+  fs.writeFileSync(manifestFile,JSON.stringify(classicManifest));
+  fs.writeFileSync(path.join(archiveSite,'class9-classic.html'),originalClassic+uiAddition);
+  assert.deepEqual(validatePreservation(archiveSite),[]);checks++;
+  fs.writeFileSync(path.join(archiveSite,'class9-classic.html'),originalClassic.replace('working','changed answer')+uiAddition);
+  assert(validatePreservation(archiveSite).some(error=>/Preserved content changed/.test(error)));checks++;
+  fs.writeFileSync(path.join(archiveSite,'class9-classic.html'),originalClassic+uiAddition+uiAddition);
+  assert(validatePreservation(archiveSite).some(error=>/Missing or repeated audited UI addition/.test(error)));checks++;
   fs.writeFileSync(path.join(temporary, 'index.html'), '<a href="./missing.html">Broken</a><script src="./script.js"></script>');
   fs.writeFileSync(path.join(temporary, 'script.js'), '// fixture');
   fs.writeFileSync(path.join(temporary, 'manifest.webmanifest'), JSON.stringify({ start_url: './index.html', icons: [] }));

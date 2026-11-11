@@ -133,13 +133,16 @@
       "sha256": "f29d4c0e0d9f2f38b68779a3141bc211c18034b3c54357b60ab0d98c5f1aaacc"
     },
     "assets/deep-lessons.js": {
-      "sha256": "dafab61798e933211866ecd941271b1adae09129187aac48d6d8dd54cf4644c8"
+      "sha256": "dafab61798e933211866ecd941271b1adae09129187aac48d6d8dd54cf4644c8",
+      "archivedAs": "docs/history/discontinued-explanation-modes/deep-lessons.js"
     },
     "assets/deep-experience.js": {
-      "sha256": "cb731036c8cb7924df4ec64a78ecfa63a9ac50ed5967aaab0116e59a418534c4"
+      "sha256": "cb731036c8cb7924df4ec64a78ecfa63a9ac50ed5967aaab0116e59a418534c4",
+      "archivedAs": "docs/history/discontinued-explanation-modes/deep-experience.js"
     },
     "assets/guided-lessons.js": {
-      "sha256": "14768f974d0cabd5134735789c864b1331e4feef9f785a38c34b906d144d0c58"
+      "sha256": "14768f974d0cabd5134735789c864b1331e4feef9f785a38c34b906d144d0c58",
+      "archivedAs": "docs/history/discontinued-explanation-modes/guided-lessons.js"
     },
     "assets/visual-lessons.js": {
       "sha256": "ece6303557d19bf5dcd36c8a3d44f4dbe2bbeb25ad0842ecd204a1ffc366c31b"
@@ -151,7 +154,12 @@
       "sha256": "31a41a4c533e65774893831d99d9ae2f0fc5ff4cce5844164742a27cc26b3f51"
     },
     "class9-classic.html": {
-      "sha256": "b2d11b0865bae7edfa8d90063062d6ed0c9ccfeceb6a46358177fced1d8da576"
+      "sha256": "b2d11b0865bae7edfa8d90063062d6ed0c9ccfeceb6a46358177fced1d8da576",
+      "uiOnlyAdditions": [
+        "<script src=\"./data/problem-difficulty.js?v=standard-20261111\"></script>",
+        "<span id=\"classicDifficulty\" lang=\"en\" hidden style=\"margin:3px 0 5px;padding:2px 7px;border:1px solid #d8d3df;border-radius:6px;background:#f7f5fa;color:#3f3550;font:600 12px/1.5 system-ui,sans-serif\"></span>",
+        "    const difficulty=window.TriggleDifficulty?.get({id:'c9-'+q.id,classNum:9});\n    $('classicDifficulty').hidden=!difficulty;\n    $('classicDifficulty').textContent=difficulty?({easy:'🟢 Easy',medium:'🟡 Medium',difficult:'🔴 Difficult'}[difficulty.level]):'';\n"
+      ]
     },
     "playground.html": {
       "sha256": "6dad0c56861bea252e1feb4333015eee357bf7a626cbf6690ac1d2cd64e1635a"

@@ -1,6 +1,8 @@
 # Triggle
 
-Visual mathematics for Tamil Nadu State Board Grades 9–12, in English and Tamil.
+Triggle — Mathematics Made Clear. Tamil Nadu State Board Grades 9–12, in English and Tamil.
+
+Each available question has one standard worked solution and a compact Easy, Medium or Difficult indicator. Difficulty reflects mathematical demands and never hides required working. Explanation-mode switching is discontinued. See [the implementation audit and review notes](docs/STANDARD_SOLUTIONS_2026-11-11.md).
 
 The editable GitHub Pages source is in `site/`. Work directly on these files; the historical ZIPs and root `index.html` are not the active deployment source.
 

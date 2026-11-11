@@ -32,7 +32,7 @@ async function main(){
     assert.match(await page.locator('#questionLabel').innerText(),/EXERCISE/);
     assert.equal(await page.locator('#questionHead').isVisible(),true,'Exercise question heading visible');
     assert.equal(await page.locator('#stepsRegion').isVisible(),true,'How it works must be visible without touch');
-    assert.match(await page.locator('#quickSteps').innerText(),/HOW IT WORKS|எப்படி|தீர்வு|WORKS/);
+    assert.match(await page.locator('#quickSteps').innerText(),/Solution|எப்படி|தீர்வு|WORKS/);
     assert.ok(await page.locator('#stepsList li').count()>0,'Full explanation present');
     assert.equal(await page.locator('#stepsList li').first().isVisible(),true,'Explanation should actually render');
     assert.equal(await page.locator('#questionNavDock').isVisible(),true,'Bottom dock always visible');
