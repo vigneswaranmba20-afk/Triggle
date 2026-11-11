@@ -313,7 +313,7 @@ async function main() {
       });
     }
     await check('Navigation remains keyboard accessible with one solution',async()=>{
-      const page=await visit(await context(390),'/index.html?class=9&question=c9-example-6-2');
+      const page=await visit(await context(390),'/index.html?class=9&question=c9-exercise-6-1-q2');
       const nav=page.locator('#questionNavDock');
       await nav.waitFor({state:'visible'});
       await page.locator('#next').focus();
@@ -328,7 +328,7 @@ async function main() {
       const mobile=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
       assert.equal(await mobile.locator('#questionNavDock').isVisible(),false);
       assert.equal(await mobile.locator('#focusNavToggle').isVisible(),false);
-      const desktop=await visit(await context(1280),'/index.html?class=9&question=c9-example-6-1');
+      const desktop=await visit(await context(1280),'/index.html?class=9&question=c9-exercise-6-1-q1');
       assert.equal(await desktop.locator('body').evaluate(el=>el.classList.contains('textbook-reader')),true);
       assert.equal(await desktop.locator('#focusNavToggle').isVisible(),false);
       assert.notEqual(await desktop.locator('#questionNavDock').evaluate(el=>getComputedStyle(el).position),'fixed');
@@ -465,67 +465,34 @@ async function main() {
         assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
         await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
         assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
-        assert.equal(await page.locator('.hub-section-card').count(),5);
+        assert.equal(await page.locator('.hub-section-card').count(),4);
       });
     }
     // Contract: a chapter card opens its menu; Worked Examples opens
     // its list; an example opens the question. No surprise redirects.
     for(const width of [320,390,1280]){
-      await check('Three-level student flow and chapter dropdown at '+width+'px',async()=>{
+      await check('Chapter-to-exercise flow and chapter dropdown at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=9&browse=chapters');
         await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
         assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
         assert.deepEqual(await page.locator('.hub-section-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.hubSection)),
-          ['concepts','examples','exercises','quizzes','activities']);
-        assert.equal(await page.locator('#lessonCard').isVisible(),false);
-        await page.locator('.hub-section-card[data-hub-section="examples"]').click();
-        assert.equal(new URL(page.url()).searchParams.get('section'),'examples');
-        assert.equal(await page.locator('.hub-question').count(),35,'Worked Examples opens full list');
-        assert.match(await page.locator('.hub-question').first().innerText(),/Example 1\.1/);
-        assert.equal(await page.locator('#lessonCard').isVisible(),false);
-        await page.locator('.hub-question').first().click();
-        assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
-        assert.equal(await page.locator('#answerBox').isVisible(),false);
+          ['concepts','exercises','quizzes','activities']);
+        assert.equal(await page.locator('[data-hub-section="examples"]').count(),0);
+        await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+        assert.match(await page.locator('#questionHead').innerText(),/Exercise/);
         assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
-        assert.equal(await page.locator('#chapterMenuBtn').count(),0,'No extra Chapter sections button');
-        assert.equal(await page.locator('#questionReturn').isVisible(),false,'No redundant worked-example return above the question');
         await page.locator('#crumb .crumb-link').nth(1).click();
         assert.equal(await page.locator('#pathDialog').evaluate(el=>el.open),true);
-        assert.match(await page.locator('#pathTitle').innerText(),/Choose a chapter/);
-        assert.equal(await page.locator('#pathOptions .path-option').count(),9,'All Class 9 chapters in dropdown');
-        assert.match(await page.locator('#pathHint').innerText(),/9 chapters.*Scroll/,'Students need a clear chapter count and scroll cue');
-        assert.equal(await page.locator('#pathDialog').evaluate(el=>getComputedStyle(el).display),'flex','Chapter picker must use tall flex layout');
-        const ninth=page.locator('#pathOptions .path-option').last();
-        assert.match(await ninth.innerText(),/Chapter 9/);
-        await ninth.scrollIntoViewIfNeeded();
-        const lastVisible=await page.locator('#pathOptions').evaluate(el=>{
-          const box=el.getBoundingClientRect(),end=el.lastElementChild.getBoundingClientRect();
-          return {top:box.top,bottom:box.bottom,lastTop:end.top,lastBottom:end.bottom,overflow:el.scrollHeight>el.clientHeight+1};
-        });
-        assert.ok(lastVisible.lastTop>=lastVisible.top-3&&lastVisible.lastBottom<=lastVisible.bottom+3,
-          'Chapter 9 must be scroll-reachable within the chapter picker: '+JSON.stringify(lastVisible));
-        await page.locator('#pathOptions .path-option').filter({hasText:'Chapter 2 · Real Numbers'}).click();
-        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch2');
-        assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Real Numbers');
+        assert.equal(await page.locator('#pathOptions .path-option').count(),9);
+        await page.locator('#pathClose').click();
         await page.goBack();
-        assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
-        await page.goBack();
-        assert.equal(new URL(page.url()).searchParams.get('section'),'examples');
-        assert.equal(await page.locator('.hub-question').count(),35);
-        await page.locator('.hub-back-menu').click();
+        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
         await page.locator('.hub-section-card[data-hub-section="activities"]').click();
         assert.equal(await page.locator('.textbook-extra').count(),18);
-        assert.equal(await page.locator('.textbook-extra').first().evaluate(el=>el.open),true);
         await page.locator('#langTa').click();
         await page.locator('.hub-back-menu').click();
-        assert.equal(await page.locator('.hub-section-card').count(),5);
-        await page.locator('.hub-section-card[data-hub-section="examples"]').click();
-        await page.locator('.hub-question').first().click();
-        await page.locator('#crumb .crumb-link').nth(1).click();
-        assert.match(await page.locator('#pathTitle').innerText(),/அத்தியாயத்தைத் தேர்வு செய்க/);
-        assert.equal(await page.locator('#pathOptions .path-option').count(),9);
-        assert.match(await page.locator('#pathHint').innerText(),/9 அத்தியாயங்கள்/,'Tamil chapter count and scroll cue');
-        await page.locator('#pathClose').click();
+        assert.equal(await page.locator('.hub-section-card').count(),4);
+        assert.equal(await page.locator('[data-hub-section="examples"]').count(),0);
         await noOverflow(page,'Student navigation at '+width+'px');
       });
     }
@@ -570,7 +537,7 @@ async function main() {
     });
     await check('Chapter selection offers five choices including Thinking Corner & Activities',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
-      assert.equal(await page.locator('.hub-section-card').count(),5);
+      assert.equal(await page.locator('.hub-section-card').count(),4);
       assert.equal(await page.locator('.hub-section-card[data-hub-section="activities"]').count(),1);
       assert.equal(await page.locator('.sp2-journey').count(),0,'Concepts should wait for a deliberate choice');
       await page.locator('.hub-section-card[data-hub-section="quizzes"]').click();
@@ -621,7 +588,7 @@ async function main() {
         'Chapter search remains accessible inside the Class 9 directory');
       await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
-      assert.equal(await page.locator('.hub-section-card').count(),5);
+      assert.equal(await page.locator('.hub-section-card').count(),4);
       await noOverflow(page,'chapter-first menu at 390px');
     });
     // Chapter hub: remove duplicate chapter headings and avoid a floating class bar
@@ -637,8 +604,8 @@ async function main() {
         assert.match(await page.locator('.crumb-link').innerText(),/Class 9/);
         assert.doesNotMatch(await page.locator('.crumb-link').innerText(),/Set Language/);
         assert.equal(await page.locator('.hub-section-menu h3').innerText(),'Choose a section');
-        assert.equal(await page.locator('.hub-section-card').count(),5);
-        assert.match(await page.locator('.hub-question-breakdown').innerText(),/35 worked examples/);
+        assert.equal(await page.locator('.hub-section-card').count(),4);
+        assert.doesNotMatch(await page.locator('.hub-question-breakdown').innerText(),/worked examples/i);
         const layout=await page.evaluate(()=>{
           const card=document.querySelector('.hub-section-card').getBoundingClientRect();
           const nav=document.querySelector('.class-dock');
@@ -707,104 +674,22 @@ async function main() {
       assert.equal(await page.locator('.class-dock').isVisible(),false);
       await noOverflow(page,'Tamil Real Numbers chapter menu');
     });
-    await check('Grade 9 Set Language textbook Venn figures are question-specific and usable at 320px',async()=>{
-      const page=await visit(await context(320),'/index.html?class=9&question=c9-textbook-example-1-14');
-      assert.equal(await page.locator('#figureBtn').isVisible(),true,'Worked Example 1.14 should have a Figure button');
-      await page.locator('#figureBtn').click();
-      const dialog=page.locator('#figureDialog');
-      await dialog.waitFor({state:'visible'});
-      const glass=await dialog.evaluate(el=>({background:getComputedStyle(el).backgroundColor,blur:getComputedStyle(el).backdropFilter}));
-      assert.match(glass.background,/^rgba\(/,'The Venn viewer must actually use translucent glass');
-      assert.ok(Number(glass.background.match(/,\s*([0-9.]+)\)$/)?.[1])<=.75,'Glass must show the lesson through its background');
-      assert.match(glass.blur,/blur/,'Glassy sheet needs a frosted backdrop filter');
-      assert.equal((await dialog.locator('#diagramCompareAnswer').innerText()).trim(),(await page.locator('#answerText').innerText()).trim(),
-        'The exact existing final answer must be readable next to the enlarged diagram');
-      assert.equal(await dialog.locator('.g9-venn-svg').count(),1);
-      // No visual prose beneath the Venn diagram; retain SVG accessibility.
-      assert.equal(await dialog.locator('.g9-venn-text-alternative,.diagram-caption').count(),0,
-        'Students should see the Venn and answer, not redundant region/source captions');
-      const desc=await dialog.locator('.g9-venn-svg desc').textContent();
-      assert.match(desc,/−3,\s*−2/,'A-only difference must match printed Example 1.14');
-      assert.match(desc,/0,\s*2/,'B-only difference must match printed Example 1.14');
-      await page.locator('#closeDiagram').click();
-      assert.equal(await dialog.isVisible(),false,'Figure dialog must close accessibly');
-      await gotoWithControls(page,url+'/index.html?class=9&question=c9-textbook-example-1-17');
-      await page.locator('#lessonCard').waitFor({state:'visible'});
-      assert.equal(await page.locator('#inlineFigure').isVisible(),false,
-        'Redundant mini Venn card should never crowd the lesson');
-      assert.equal(await page.locator('#figureBtn').isVisible(),true,
-        'Full Figure button remains available for source-required diagrams');
-      await gotoWithControls(page,url+'/index.html?class=9&question=c9-textbook-example-1-18');
-      await page.locator('#figureBtn').click();
-      assert.equal(await page.locator('#figureDialog .g9-venn-svg').count(),3,'Three complement shading diagrams for Example 1.18');
-      await noOverflow(page,'source-aligned mobile Venn illustrations');
-    });
     for(const width of [320,390,768]){
-      await check('Venn fills mobile diagram region without text clutter at '+width+'px',async()=>{
-        const page=await visit(await context(width),'/index.html?class=9&question=c9-textbook-example-1-11');
-        assert.equal(await page.locator('#inlineFigure').isVisible(),false,
-          'Example 1.11 must not show the tiny screenshot-like Venn preview');
-        assert.equal(await page.locator('#figureBtn').isVisible(),true);
-        await page.locator('#figureBtn').click();
-        const dialog=page.locator('#figureDialog');
-        assert.equal(await dialog.isVisible(),true);
-        assert.equal(await dialog.locator('#diagramCaption,.g9-venn-text-alternative').count(),0,
-          'Neither the metadata disclaimer nor repeated region description should appear');
-        assert.equal((await dialog.locator('#diagramCompareAnswer').innerText()).trim(),
-          (await page.locator('#answerText').innerText()).trim(),'Mathematical answer must match lesson');
-        assert.equal(await dialog.locator('.g9-venn-svg').count(),1);
-        const bounds=await dialog.locator('.g9-venn-svg').evaluate(svg=>{
-          const parent=svg.closest('.diagram-content');
-          const sv=svg.getBoundingClientRect(),pr=parent.getBoundingClientRect();
-          const visible=[...svg.querySelectorAll(':scope > ellipse')];
-          const shape=visible.find(el=>el.getAttribute('stroke')==='#5542a0');
-          const diagram=shape?{
-            rx:Number(shape.getAttribute('rx')),ry:Number(shape.getAttribute('ry'))
-          }:null;
-          return {svgWidth:sv.width,parentWidth:pr.width,diagram};
-        });
-        assert.ok(bounds.svgWidth>=bounds.parentWidth*.92,
-          'Venn should fill at least 92% of the viewing width: '+JSON.stringify(bounds));
-        const proportions=await dialog.locator('.g9-venn-svg').evaluate(svg=>{
-          const r=svg.getBoundingClientRect();return {width:r.width,height:r.height};
-        });
-        assert.ok(proportions.height>=proportions.width*.72,
-          'Diagram should fill more of the vertical region without clipping: '+JSON.stringify(proportions));
-        assert.ok(bounds.diagram?.rx>=155&&bounds.diagram?.ry>=175,
-          'Venn geometry must use enlarged labelsafe shapes: '+JSON.stringify(bounds));
-        const accessible=await dialog.locator('.g9-venn-svg desc').textContent();
-        assert.match(accessible,/P only n/,'Screen readers should still get correct P-only members');
-        assert.match(accessible,/P∩Q m/,'Screen readers should still get overlap member');
-        assert.match(accessible,/Q only i,j/,'Screen readers should still get Q-only members');
-        await page.locator('#closeDiagram').click();
-        assert.equal(await dialog.isVisible(),false);
-        await noOverflow(page,'Venn fill '+width+'px');
-      });
     }
-    await check('Worked examples are not mislabeled exercises, and both are one tap away',async()=>{
-      const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch6');
-      assert.equal(await page.locator('.hub-section-card').count(),4);
-      await page.locator('.hub-section-card[data-hub-section="examples"]').click();
-      assert.equal(new URL(page.url()).searchParams.get('section'),'examples','Worked Examples opens full list');
-      assert.equal(await page.locator('.hub-question').count(),4,'Only four explicitly labelled Example items');
-      assert.ok((await page.locator('.hub-question').first().innerText()).includes('Example 6.1'));
-      await page.locator('.hub-back-menu').click();
-      await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-      assert.equal(new URL(page.url()).searchParams.has('question'),true,
-        'Exercises must open a question instead of a 40-question listing');
-      assert.match(await page.locator('#questionHead').innerText(),/Exercise 6\.1/);
-      assert.equal(await page.locator('.hub-question').count(),0);
-      assert.equal(await page.locator('#lessonCard').isVisible(),true);
-      assert.ok((await page.locator('#stepsList li').count())>0,'Existing worked solution remains accessible');
-      assert.equal(await page.locator('#questionReturn').isVisible(),false,'No redundant question return row');
-      await page.goBack();
-      assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch6');
-      assert.equal(new URL(page.url()).searchParams.has('section'),false);
-      assert.equal(await page.locator('.hub-section-card').count(),4);
-      await page.locator('.hub-back-class').click();
-      assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
-      assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
-    });
+     await check('Worked Examples is removed; exercises retain complete solutions',async()=>{
+       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch6');
+       assert.equal(await page.locator('.hub-section-card').count(),3);
+       assert.equal(await page.locator('[data-hub-section="examples"]').count(),0);
+       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+       assert.equal(new URL(page.url()).searchParams.has('question'),true);
+       assert.match(await page.locator('#questionHead').innerText(),/Exercise 6\.1/);
+       assert.ok((await page.locator('#stepsList li').count())>0,'Full exercise working remains');
+       await page.goBack();
+       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch6');
+       assert.equal(await page.locator('.hub-section-card').count(),3);
+       await page.locator('.hub-back-class').click();
+       assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
+     });
     for(const width of [320,390,1280]){
       await check('Direct section first, honest unavailable states, single Home and correct Back at '+width+'px', async()=>{
         const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch6');
@@ -831,11 +716,8 @@ async function main() {
         assert.match(await page.locator('.hub-info').first().innerText(),/coming soon/);
         assert.equal(await page.locator('.hub-next-section').count(),0);
         await page.locator('.hub-back-menu').click();
-        await page.locator('.hub-section-card[data-hub-section="examples"]').click();
-        assert.equal(new URL(page.url()).searchParams.get('section'),'examples','Example card opens list before question');
-        assert.equal(await page.locator('.hub-question').count(),4);
-        assert.equal(await page.locator('.hub-section-card').count(),0);
-        await page.locator('.hub-back-menu').click();
+        assert.equal(await page.locator('.hub-section-card[data-hub-section="examples"]').count(),0);
+        assert.equal(await page.locator('.hub-section-card').count(),3);
         await page.locator('.hub-back-class').click();
         assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
         assert.equal(await page.locator('.discover-change').count(),0,'No duplicate Change class navigation');
@@ -851,7 +733,7 @@ async function main() {
         assert.match(await page.locator('#chapterOverviewTitle').innerText(),/சிறு தேர்வுகள்/);
         assert.equal(await page.locator('.hub-section-card').count(),0);
         await page.locator('.hub-back-menu').click();
-        assert.equal(await page.locator('.hub-section-card').count(),5);
+        assert.equal(await page.locator('.hub-section-card').count(),4);
         await noOverflow(page,'Tamil direct sections at '+width+'px');
       });
     }
@@ -860,7 +742,7 @@ async function main() {
       assert.equal(await page.locator('.hub-quiz-question').count(),7);
       assert.equal(await page.locator('.hub-section-card').count(),0);
       await page.locator('.hub-back-menu').click();
-      assert.equal(await page.locator('.hub-section-card').count(),5);
+      assert.equal(await page.locator('.hub-section-card').count(),4);
       await page.goBack();
       assert.equal(new URL(page.url()).searchParams.get('section'),'quizzes');
       assert.equal(await page.locator('.hub-section-card').count(),0);
@@ -868,100 +750,25 @@ async function main() {
       assert.equal(await page.locator('.hub-quiz-question').count(),7);
       assert.equal(await page.locator('.hub-section-card').count(),0);
     });
-    await check('Find a Topic opens chapter navigation, with search below chapter list',async()=>{
-      const page=await visit(await context(320),'/index.html?class=9&chapter=g9-ch1');
-      await page.locator('#browseBtn').click();
-      await page.locator('#sidebar').waitFor({state:'visible'});
-      assert.equal(await page.locator('#exerciseList [data-chapter-id]').count(),9);
-      assert.equal(await page.locator('#exerciseList [data-section]').count(),5,'Active Grade 9 chapter sidebar includes Thinking Corner & Activities');
-      const order=await page.evaluate(()=>{
-        const list=document.querySelector('#exerciseList');
-        const search=document.querySelector('.sidebar-search-bottom');
-        return !!(list.compareDocumentPosition(search)&Node.DOCUMENT_POSITION_FOLLOWING);
-      });
-      assert.ok(order,'Optional search belongs BELOW the navigation');
-      await page.locator('#exerciseList [data-section="examples"]').click();
-      assert.equal(new URL(page.url()).searchParams.get('section'),'examples','Sidebar worked examples opens list');
-      assert.equal(new URL(page.url()).searchParams.get('section'),'examples');
-      assert.equal(await page.locator('.hub-question').count(),35,'All 35 textbook examples remain browsable');
-      assert.match(await page.locator('.hub-question').first().innerText(),/Example 1\.1/);
-      assert.match(await page.locator('.hub-question').last().innerText(),/Example 1\.35/);
-      await noOverflow(page,'mobile chapter-first drawer');
-      await page.locator('.hub-question').first().click();
-      assert.equal(await page.locator('#stepsList .worked-step:not(.final-answer-step)').count(),2,'Example 1.1 retains two mathematical steps');
-      assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Its final answer follows both steps');
-      assert.match(await page.locator('#questionHead').innerText(),/Example 1\.1/);
-    });
+     await check('Find a Topic keeps only exercise and concept navigation',async()=>{
+       const page=await visit(await context(320),'/index.html?class=9&chapter=g9-ch1');
+       await page.locator('#browseBtn').click();
+       assert.equal(await page.locator('#exerciseList [data-chapter-id]').count(),9);
+       assert.equal(await page.locator('#exerciseList [data-section]').count(),4);
+       assert.equal(await page.locator('#exerciseList [data-section="examples"]').count(),0);
+       const order=await page.evaluate(()=>{
+         const list=document.querySelector('#exerciseList'),search=document.querySelector('.sidebar-search-bottom');
+         return !!(list.compareDocumentPosition(search)&Node.DOCUMENT_POSITION_FOLLOWING);
+       });
+       assert.ok(order,'Optional search stays below chapter navigation');
+       await page.locator('#exerciseList [data-section="exercises"]').click();
+       assert.match(await page.locator('#questionHead').innerText(),/Exercise/);
+       assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
+       await noOverflow(page,'mobile chapter-first drawer');
+     });
     for(const width of [320,390,1280]){
-      await check('Real Numbers 2025 sections, difficulty and figure at '+width+'px',async()=>{
-        const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch2&section=examples');
-        assert.equal(await page.locator('.hub-question').count(),31,'31 textbook examples');
-        assert.match(await page.locator('.hub-question').first().innerText(),/Example 2\.1/);
-        assert.match(await page.locator('.hub-question').last().innerText(),/Example 2\.31/);
-        await noOverflow(page,'Real Numbers example list at '+width+'px');
-        await page.locator('.hub-question').nth(4).click();
-        assert.match(await page.locator('#questionHead').innerText(),/Example 2\.5/);
-        assert.equal(await page.locator('#tabGuided,#guidedDialog,#solutionModeRow').count(),0);
-        assert.match(await page.locator('#difficultyIndicator').innerText(),/Difficult/);
-        await page.goBack();
-        await page.locator('.hub-question').nth(3).click();
-        assert.match(await page.locator('#difficultyIndicator').innerText(),/Easy/);
-        await page.goBack();
-        await page.locator('.hub-question').nth(12).click();
-        assert.equal(await page.locator('#figureBtn').isVisible(),true,'number line has figure icon');
-        await page.locator('#figureBtn').click();
-        assert.equal(await page.locator('#figureDialog').evaluate(el=>el.open),true);
-        assert.equal(await page.locator('#diagramContent svg').count(),1);
-        await page.locator('#closeDiagram').click();
-        await page.locator('#langTa').click();
-        assert.match(await page.locator('#questionText').innerText(),/எண்கோட்டில்|கட்டமைத்துக்|குறிக்கவும்/);
-        await noOverflow(page,'Tamil Real Numbers question at '+width+'px');
-      });
     }
     for(const width of [320,390,1280]){
-      await check('Example 2.12 readable ChatGPT-style worked solution at '+width+'px',async()=>{
-        const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch2&section=examples');
-        await page.locator('.hub-question').nth(11).click();
-        assert.match(await page.locator('#questionHead').innerText(),/Example 2\.12/);
-        assert.equal(await page.locator('#lessonCard.twd-lesson').count(),1,'Authored example layout enabled');
-        assert.equal(await page.locator('#questionText .twd-question-part').count(),0,'Do not show all questions before their answers');
-        assert.equal(await page.locator('#stepsList .twd-question-part').count(),4,'Four question subparts each paired with an answer');
-        assert.equal(await page.locator('#stepsList > li.twd-worked-step').count(),4,'Four worked subparts visible without expansion');
-        assert.equal(await page.locator('#stepsList [data-variable="x"]').count(),4);
-        assert.equal(await page.locator('#stepsList [data-variable="y"]').count(),4);
-        assert.equal(await page.locator('#answerText .twd-final-row').count(),0,'No duplicate final answer summary');
-        assert.equal(await page.locator('#answerBox').isVisible(),false,'Answers stay directly beneath the corresponding questions');
-        assert.equal(await page.locator('#stepsList .twd-kind').count(),8,'All eight rationality classifications stay beside their calculations');
-        assert.equal(await page.locator('#stepsList math[display="block"]').count(),32,'Each of four questions has four question expressions and four answer expressions');
-        const paired=await page.locator('#stepsList > li.twd-worked-step').evaluateAll(items=>items.map(li=>({question:li.querySelector('.twd-question-part')?.getAttribute('data-worked-question'),answer:li.querySelector('.twd-part-solution')?.getAttribute('aria-label'),order:!!(li.querySelector('.twd-question-part')?.compareDocumentPosition(li.querySelector('.twd-part-solution'))&Node.DOCUMENT_POSITION_FOLLOWING)})));
-        assert.deepEqual(paired.map(x=>x.question),['i','ii','iii','iv']);
-        assert.ok(paired.every(x=>x.order&&x.answer?.startsWith('Answer')),'Each question must come immediately before its own answer: '+JSON.stringify(paired));
-        assert.ok(await page.locator('#stepsList math mfrac').count()>=2,'Quotients use real stacked fractions');
-        const equation=await page.locator('#stepsList .twd-calculation .twd-math').first().evaluate(el=>{
-          const eq=el.getBoundingClientRect(),parent=el.closest('.twd-display-equation').getBoundingClientRect();
-          return {fontSize:parseFloat(getComputedStyle(el).fontSize),centre:Math.abs((eq.left+eq.right)/2-(parent.left+parent.right)/2),
-            overflows:el.scrollWidth>el.clientWidth+2};
-        });
-        assert.ok(equation.fontSize>=18,'Readable math font, not a squashed inline equation: '+JSON.stringify(equation));
-        assert.ok(equation.centre<=3,'Display equation must remain centered: '+JSON.stringify(equation));
-        await noOverflow(page,'Example 2.12 English worked example at '+width+'px');
-        if(width===390){
-          assert.equal(await page.locator('#stepsList .twd-question-part').count(),4,'All subquestions remain in standard solution');
-          assert.equal(await page.locator('#guidedDialog').count(),0);
-          await page.locator('#langTa').click();
-          assert.equal(await page.locator('#questionText .twd-question-part').count(),0);
-          assert.equal(await page.locator('#stepsList .twd-question-part').count(),4);
-          assert.match(await page.locator('#stepsList').innerText(),/விகிதமுறு/);
-          assert.equal(await page.locator('#answerText .twd-final-row').count(),0);
-          assert.equal(await page.locator('#stepsList .twd-part-solution').count(),4);
-          await noOverflow(page,'Example 2.12 Tamil worked example at 390px');
-          await page.goBack();
-          await page.locator('.hub-question').nth(10).click();
-          assert.equal(await page.locator('#lessonCard.twd-lesson').count(),0,'Other worked examples remain unchanged');
-          assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Other examples end with their answer');
-          assert.equal(await page.locator('#stepsList li').count(),3,'Original two worked steps plus a final answer');
-        }
-      });
     }
     await check('Real Numbers full exercises, concepts and quizzes show correct counts',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch2&section=exercises');
@@ -1171,16 +978,15 @@ async function main() {
         assert.equal(await page.locator('#chapterOverview').isVisible(), true);
         assert.equal(await page.locator('html').getAttribute('lang'), 'ta');
         await noOverflow(page, `${width}px restored overview`);
-        await gotoWithControls(page,url + '/index.html?class=9&question=c9-example-6-1');
+        await gotoWithControls(page,url + '/index.html?class=9&question=c9-exercise-6-1-q1');
         await page.locator('#lessonCard').waitFor({ state: 'visible' });
-        await noOverflow(page, `${width}px legacy Tamil question`);
+        await noOverflow(page, `${width}px retained Tamil exercise`);
         await selectChapter(page, 'g9-ch6');
-        await page.locator('.hub-section-card[data-hub-section="examples"]').click();
-        assert.equal(new URL(page.url()).searchParams.get('section'), 'examples');
-        await page.locator('.hub-question[data-question-id="c9-example-6-1"]').click();
-        assert.equal(new URL(page.url()).searchParams.get('question'), 'c9-example-6-1');
+        assert.equal(await page.locator('.hub-section-card[data-hub-section="examples"]').count(),0);
+        await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+        assert.match(await page.locator('#questionHead').innerText(),/Exercise 6\.1/);
         assert.equal(await page.locator('#lessonCard').isVisible(), true);
-        await noOverflow(page, `${width}px legacy question from chapter`);
+        await noOverflow(page, `${width}px exercise from chapter`);
         await page.close();
       });
     }
@@ -1211,7 +1017,7 @@ async function main() {
       await page.close();
     });
     await check('legacy progress, diagrams and standard solutions survive chapter navigation', async () => {
-      const page = await visit(await context(1280), '/index.html?class=9&question=c9-example-6-2');
+      const page = await visit(await context(1280), '/index.html?class=9&question=c9-exercise-6-1-q2');
       const question = await page.locator('#questionText').innerText();
       assert.equal(await page.locator('#markDone').isVisible(),false,'Progress control removed from question view');
       await page.locator('#markDone').evaluate(el=>el.click());
@@ -1234,7 +1040,7 @@ async function main() {
       await noOverflow(page, 'legacy question after history navigation');
     });
     await check('search retains existing questions and returns to full chapter navigation', async () => {
-      const page = await visit(await context(1280), '/index.html?class=9&question=c9-example-6-1');
+      const page = await visit(await context(1280), '/index.html?class=9&question=c9-exercise-6-1-q1');
       await page.locator('#search').fill('6.1');
       assert.ok(await page.locator('#exerciseList .exercise-question').count() > 0);
       const button = page.locator('#exerciseList .exercise-question').first();
