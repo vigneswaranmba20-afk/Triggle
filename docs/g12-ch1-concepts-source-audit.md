@@ -27,7 +27,7 @@ The original lesson explicitly uses counterclockwise angles. Passive rotation us
 - Cofactor seed `[[2,1,0],[1,3,2],[0,1,1]]` has determinant 1. The 2×2 seed `[[2,1],[1,3]]` has determinant 5. Every selected minor, checkerboard sign and adjoint entry is computed.
 - Undo uses `[[2,1],[0,t]]` for `t = 0,1,2`. Determinant is `2t`. At `t=0`, `(1,1)` and `(2,−1)` both map to `(3,0)`. Inversion is disabled; an inverse is never fabricated.
 - Order uses a shear A and horizontal stretch B; `AB ≠ BA`. Column-vector application and reversed undo order are distinguished from row-vector cryptography.
-- Cipher uses two determinant ±1 keys and original short messages. Exact row-vector encode/decode round trips recover every demonstrated message. It is labelled a classroom model, not secure encryption.
+- Cipher uses two keys, each with determinant 1, and original short messages. Exact row-vector encode/decode round trips recover every demonstrated message. It is labelled a classroom model, not secure encryption.
 - Row Workshop starts with `[1,1|3]; [2,3|8]; [1,2|5]`. Every displayed step updates all columns. Row scaling by zero and same-row addition/swap selections are prevented. A 12-operation bound avoids unhelpful large-number sessions; reset is always available.
 - Independence toggles the third row between `R₁+R₂` and a third independent row. Gauss–Jordan starts with `[[1,2],[1,3]]`, yielding inverse `[[3,−2],[−1,1]]`; singular alternative `[[1,2],[2,4]]` cannot reach I.
 - Systems display `y=x+1` and `y=mx+b`, `m∈{−1,1}`, `b∈{1,3,5}`. Graphs, coefficient matrices, method calculations and exact solutions derive from the same inputs. Inverse/Cramer require nonzero determinant; Gaussian elimination diagnoses singular cases.
