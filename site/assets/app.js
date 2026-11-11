@@ -573,7 +573,16 @@
   $('previous').disabled=n===0;$('next').disabled=n===list.length-1;
   $('previous').innerHTML='← '+esc(ui('previous'));$('next').innerHTML=esc(document.body.classList.contains('textbook-reader')?(lang==='ta'?'அடுத்த பக்கம்':'Next page'):ui('nextQuestion'))+' →';
   $('solutionModeRow').hidden=!hasDeepLesson(current);
-  renderSteps();renderMode();renderList();
+  renderSteps();renderMode();
+  // The Grade 12 teaching layer only changes presentation, never canonical
+  // question records, math, progress storage or navigation.
+  const g12Modes=window.TriggleG12Explain?.mount({
+    item:current,lang,host:$('g12ModeChooser'),region:$('stepsRegion'),
+    quick:$('quickSteps'),buildStep,answerHTML:$('answerText').innerHTML,
+    prepare:node=>window.TriggleNotation?.prepare?.(node)
+  })||false;
+  if(g12Modes)$('solutionModeRow').hidden=true;
+  renderList();
   window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:current,lang,grade}}));
  }
  function openDrawer(){if(!mobile.matches){$('exerciseList').scrollTop=0;$('browseDirectory').focus();return}drawerOpen=true;document.body.classList.add('drawer-open');$('browseBtn').setAttribute('aria-expanded','true');$('sidebar').inert=false;$('sidebar').setAttribute('role','dialog');$('sidebar').setAttribute('aria-modal','true');setTimeout(()=>$('browseDirectory').focus({preventScroll:true}),180)}
