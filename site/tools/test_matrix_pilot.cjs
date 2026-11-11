@@ -27,7 +27,7 @@ assert.match(html,/No marks, labels, logins, or analytics/);
 assert.ok(sw.includes("'./matrix-pilot.html'")&&sw.includes("'./assets/matrix-pilot.js'"));
 assert.ok(!/(?:fetch\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage)/.test(js),'Pilot must not collect or transmit child data');
 const tex=[...html.matchAll(/data-tex="([^"]+)"/g)].map(m=>m[1].replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>'));
-assert.ok(tex.length>=16,'Enough authored diagrams and equations');
+assert.equal(tex.length,13,'All 13 remaining Exam/Detailed math expressions must be present');
 for(const latex of tex){
  const math=katex.renderToString(latex,{displayMode:true,output:'htmlAndMathml',throwOnError:true,trust:false,strict:'error'});
  assert.ok(math.includes('<math')&&!math.includes('katex-error'),'MathML and valid KaTeX: '+latex);
