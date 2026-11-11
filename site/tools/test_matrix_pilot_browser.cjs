@@ -10,7 +10,8 @@ async function smoke(browser,base,name,width){
  try{
   await page.goto(base+'/matrix-pilot.html',{waitUntil:'load'});
   assert.equal(await page.locator('#panel-learn').isVisible(),true);
-  assert.equal(await page.locator('#panel-fun').isVisible(),false);
+  assert.equal(await page.locator('#tab-fun, #panel-fun').count(),0,'Pilot Fun Mode removed');
+  assert.equal(await page.locator('[role="tab"]').count(),2,'Two accessible tabs');
   assert.equal(await page.locator('.math-fallback').count(),0,'All authored mathematics should render');
   assert.ok(await page.locator('.equation mtable').count()>=1,'The original matrix needs semantic MathML');
   assert.equal(await page.locator('#panel-learn .teach-step:visible').count(),1);
@@ -21,10 +22,11 @@ async function smoke(browser,base,name,width){
   await page.locator('#tab-exam').click();
   assert.equal(await page.locator('#panel-exam').isVisible(),true);
   assert.ok(await page.locator('#panel-exam .answer mtable').count()>0);
-  await page.locator('#tab-fun').click();
-  assert.equal(await page.locator('#panel-fun .teach-step:visible').count(),1);
-  await page.locator('[data-next="fun"]').click();
-  assert.equal(await page.locator('#panel-fun .teach-step:visible').count(),2);
+  await page.locator('#tab-exam').focus();
+  await page.keyboard.press('ArrowLeft');
+  assert.equal(await page.locator('#tab-learn').getAttribute('aria-selected'),'true');
+  await page.keyboard.press('ArrowRight');
+  assert.equal(await page.locator('#tab-exam').getAttribute('aria-selected'),'true');
   await page.locator('[name="sign"][value="correct"]').check();
   await page.locator('[data-check="sign"]').click();
   assert.match(await page.locator('[data-result="sign"]').textContent(),/Both signs/);
@@ -34,8 +36,8 @@ async function smoke(browser,base,name,width){
   await page.locator('[name="scope"][value="correct"]').check();
   await page.locator('[data-check="scope"]').click();
   assert.match(await page.locator('[data-result="scope"]').textContent(),/entire matrix/);
-  await page.locator('[data-vote="Fun"]').click();
-  assert.equal(await page.locator('[data-vote="Fun"]').getAttribute('aria-pressed'),'true');
+  await page.locator('[data-vote="Detailed"]').click();
+  assert.equal(await page.locator('[data-vote="Detailed"]').getAttribute('aria-pressed'),'true');
   const metrics=await page.evaluate(()=>({width:innerWidth,pageWidth:document.documentElement.scrollWidth}));
   assert.ok(metrics.pageWidth<=metrics.width+1,'Phone should not scroll horizontally: '+JSON.stringify(metrics));
   assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
