@@ -3,6 +3,12 @@ const assert=require('node:assert/strict'),fs=require('node:fs/promises');
 const {chromium,webkit}=require('playwright');
 const {server,launchOptions}=require('./dashboard_test_support.cjs');
 const batch=require('../../docs/curriculum/grade-12/batches/g12-ch1-ex1-1.json');
+const migrated=[
+ ...batch.records.slice(6),
+ ...require('../../docs/curriculum/grade-12/batches/g12-ch1-ex1-2.json').records,
+ ...require('../../docs/curriculum/grade-12/batches/g12-ch1-ex1-3.json').records
+];
+assert.equal(migrated.length,32);
 const widths=[320,360,390,412,1280];
 async function geometry(page){
  const metrics=await page.evaluate(()=>{
@@ -74,6 +80,23 @@ async function run(engine,name,base){
    assert.equal(await page.locator('#math-fixture .triggle-tex[tabindex="0"]').count(),1);
    const scrolling=page.locator('#math-fixture .triggle-tex[tabindex="0"]');await scrolling.focus();await page.keyboard.press('End');
    await geometry(page);
+   // Smoke-test every remaining question at phone width, plus representative
+   // 320px and desktop cases; catch real KaTeX fallback, layout and route issues.
+   if(width===390||width===320||width===1280){
+    const sample=width===390?migrated:[
+     migrated[0],migrated[3],migrated[8],migrated[12],
+     migrated[14],migrated[23],migrated[25],migrated[31]
+    ];
+    for(const question of sample){
+     await page.goto(base+'/index.html?class=12&question='+encodeURIComponent(question.id));
+     assert.equal(new URL(page.url()).searchParams.get('question'),question.id);
+     assert.equal(await page.locator('.math-fallback').count(),0,'No KaTeX fallback: '+question.id);
+     assert.ok(await page.locator('#stepsList .katex').count()>0,'Structured worked equations: '+question.id);
+     assert.ok(await page.locator('#stepsList mtable').count()>0,'Semantic matrices in steps: '+question.id);
+     if(question.q.en.includes('[['))assert.ok(await page.locator('#questionText mtable').count()>0,'Textbook question matrix: '+question.id);
+     await geometry(page);
+    }
+   }
    assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);await ctx.close();
    console.log('PASS '+name+' mathematical reader at '+width+'px');
   }
@@ -96,7 +119,15 @@ async function run(engine,name,base){
   assert.equal(await page.locator('.math-fallback').count(),0);
   await page.locator('#next').click();await page.locator('#next').click();
   assert.ok(await page.locator('#stepsList .katex mfrac').count()>0);
-  assert.equal(await page.locator('.math-fallback').count(),0);await geometry(page);await ctx.close();
+  assert.equal(await page.locator('.math-fallback').count(),0);await geometry(page);
+  for(const question of [migrated[15],migrated[27]]){
+   await page.goto(offlineApp.base+'/index.html?class=12&question='+encodeURIComponent(question.id));
+   assert.equal(new URL(page.url()).searchParams.get('question'),question.id);
+   assert.equal(await page.locator('.math-fallback').count(),0,'Offline notation: '+question.id);
+   assert.ok(await page.locator('#stepsList mtable').count()>0,'Offline matrices: '+question.id);
+   await geometry(page);
+  }
+  await ctx.close();
  }finally{await browser.close();}
  console.log('PASS '+name+': six migrated questions, 320/360/390/412/1280px, 3× density, semantic math, safe fallback, scrolling, language, history, saved progress, offline fonts/rendering.');
 }
