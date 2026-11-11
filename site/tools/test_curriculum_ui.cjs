@@ -468,8 +468,7 @@ async function main() {
         assert.equal(await page.locator('.hub-section-card').count(),4);
       });
     }
-    // Contract: a chapter card opens its menu; Worked Examples opens
-    // its list; an example opens the question. No surprise redirects.
+    // Contract: chapter choices lead to exercises directly, not worked examples.
     for(const width of [320,390,1280]){
       await check('Chapter-to-exercise flow and chapter dropdown at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=9&browse=chapters');
@@ -535,7 +534,7 @@ async function main() {
       assert.equal(await page.locator('.rnlab [data-nav] button').count(),8);
       await noOverflow(page,'Tamil Real Numbers concepts from chapter directory');
     });
-    await check('Chapter selection offers five choices including Thinking Corner & Activities',async()=>{
+    await check('Chapter selection offers four choices including Thinking Corner & Activities',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
       assert.equal(await page.locator('.hub-section-card').count(),4);
       assert.equal(await page.locator('.hub-section-card[data-hub-section="activities"]').count(),1);
@@ -693,12 +692,12 @@ async function main() {
     for(const width of [320,390,1280]){
       await check('Direct section first, honest unavailable states, single Home and correct Back at '+width+'px', async()=>{
         const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch6');
-        assert.equal(await page.locator('.hub-section-card').count(),4);
+        assert.equal(await page.locator('.hub-section-card').count(),3);
         assert.equal(await page.locator('#homeBtn').count(),1);
         assert.equal(await page.locator('.hub-back-home').count(),0,'No duplicate Home inside chapter');
         assert.equal(await page.locator('.sidebar-foot a[href]').count(),0,'No second Home in sidebar footer');
         await page.locator('.hub-section-card[data-hub-section="quizzes"]').click();
-        assert.equal(await page.locator('.hub-section-card').count(),0,'A selected section must hide all four menu cards');
+        assert.equal(await page.locator('.hub-section-card').count(),0,'A selected section must hide all three menu cards');
         assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Quizzes');
         assert.equal(await page.locator('.hub-panel').count(),1);
         assert.equal(await page.locator('.hub-quiz-question').count(),0);
@@ -708,7 +707,7 @@ async function main() {
         assert(box && box.y < 840,'The chosen section should appear without scrolling through cards');
         await noOverflow(page,'unavailable quiz at '+width+'px');
         await page.locator('.hub-back-menu').click();
-        assert.equal(await page.locator('.hub-section-card').count(),4);
+        assert.equal(await page.locator('.hub-section-card').count(),3);
         assert.equal(new URL(page.url()).searchParams.has('section'),false);
         await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
         assert.equal(await page.locator('.hub-section-card').count(),0);
@@ -1004,8 +1003,12 @@ async function main() {
         present: window.TRIGGLE_CLASSES[link.grade]?.items.some(item => item.id === link.id)
       })), expected);
       assert.equal(links.length, 105);
-      assert.ok(links.every(link => link.present),'Every immutable legacy ID remains registered');
-      for (const {grade,id} of links) {
+      const archivedExamples=links.filter(link=>/(?:^|[-_])examples?(?:[-_]|$)/i.test(link.id));
+      const available=links.filter(link=>!archivedExamples.includes(link));
+      assert.ok(archivedExamples.length>0&&archivedExamples.every(link=>!link.present),
+        'Archived worked-example IDs are absent from the student reader');
+      assert.ok(available.every(link=>link.present),'Legacy exercises remain in the reader');
+      for (const {grade,id} of available) {
         await gotoWithControls(page,url + `/index.html?class=${grade}&question=${id}`);
         await page.waitForFunction(id => new URL(location.href).searchParams.get('question') === id && document.querySelector('#stepsList li'), id);
         assert.equal(new URL(page.url()).searchParams.get('question'), id);
@@ -1015,6 +1018,27 @@ async function main() {
         assert.ok((await page.locator('#answerText').innerText()).trim(), id);
       }
       await page.close();
+    });
+    await check('No Worked Examples in Grades 9–12, English/Tamil or old links',async()=>{
+      const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
+      for(const [grade,chapter] of [[9,'g9-ch1'],[10,'g10-ch1'],[11,'g11-ch1'],[12,'g12-ch1']]){
+        await gotoWithControls(page,url+'/index.html?class='+grade+'&chapter='+chapter);
+        for(const language of ['en','ta']){
+          await page.locator(language==='en'?'#langEn':'#langTa').click();
+          assert.equal(await page.locator('[data-hub-section="examples"]').count(),0);
+          assert.equal(await page.locator('#exerciseList [data-section="examples"]').count(),0);
+        }
+        const residual=await page.evaluate(grade=>window.TRIGGLE_CLASSES[grade].items.filter(item=>
+          item.kind==='textbook-example'||/^\s*(?:Worked\s+)?Example\b/i.test(item.label?.en||'')||
+          /(?:^|[-_])examples?(?:[-_]|$)/i.test(item.id)).map(x=>x.id),grade);
+        assert.deepEqual(residual,[],'Worked examples excluded from Grade '+grade);
+      }
+      await gotoWithControls(page,url+'/index.html?class=9&chapter=g9-ch2&section=examples');
+      assert.equal(new URL(page.url()).searchParams.has('section'),false,'Old section links resolve to chapter');
+      await gotoWithControls(page,url+'/index.html?class=9&question=c9-example-6-1');
+      assert.notEqual(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
+      assert.match(await page.locator('#questionHead').innerText(),/Exercise/);
+      assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
     });
     await check('legacy progress, diagrams and standard solutions survive chapter navigation', async () => {
       const page = await visit(await context(1280), '/index.html?class=9&question=c9-exercise-6-1-q2');
