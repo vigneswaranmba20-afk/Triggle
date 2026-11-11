@@ -65,7 +65,8 @@
     // Only advertise a lab when both its lesson data and interactive viewer are loaded.
     const interactiveCount=id=>{
       const stages=id==='g9-ch1'&&window.TriggleSetJourney?window.TRIGGLE_SET_PATH?.stages:
-        id==='g9-ch2'&&window.TriggleRealJourney?window.TRIGGLE_REAL_PATH?.stages:null;
+        id==='g9-ch2'&&window.TriggleRealJourney?window.TRIGGLE_REAL_PATH?.stages:
+        id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:null;
       return Array.isArray(stages)?stages.length:0;
     };
     function chapterCard(entry){

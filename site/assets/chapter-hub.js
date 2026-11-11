@@ -89,10 +89,11 @@
     const t=texts[lang==='ta'?'ta':'en'];
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
     const sets=categorized(questions); // Examples stay archived in source, outside student navigation.
-    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):[];
+    const matrixConcepts=chapter.id==='g12-ch1'&&lang==='en'&&window.TriggleMatrixConcepts;
+    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const kinds=activityEntries.length?[...baseKinds,'activities']:baseKinds;
-    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:stages.length,activities:activityEntries.length};
+    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:matrixConcepts?0:stages.length,activities:activityEntries.length};
     const symbols={concepts:'◇',examples:'∑',exercises:'✎',quizzes:'✓',activities:'💡'};
     const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0,activities:counts.activities>0};
     const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes,activities:t.activities})[kind];
@@ -177,6 +178,14 @@
     };
     if(section==='concepts'){
       if(stages.length){
+        if(matrixConcepts){
+          heading.classList.add('hub-heading-a11y');
+          matrixConcepts.mount(panel,{initialConcept,onConcept:opts.onConcept,onExercises:()=>onSection('exercises'),
+            availableExercises:[...new Set(sets.exercises.map(q=>q.exercise))],
+            onExercise:exercise=>{const q=sets.exercises.find(item=>item.exercise===exercise);if(q)onQuestion(q);}
+          });
+          return;
+        }
         info(t.learning);
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang);

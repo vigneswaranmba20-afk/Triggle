@@ -51,5 +51,5 @@ assert.ok(!discover.includes("body='<section class=\"discover-directory-head\">'
 assert.match(discoverCss,/\.discover-class-options\[hidden\]\{display:none!important\}/,'Collapsed class options must not take space');
 assert.match(css,/body\.discovery-active \.class-dock\{display:none!important\}/,'Home and directory cannot show a floating class bar');
 assert.match(html,/discovery\.css\?v=minimal-home-1/,'Published HTML must refresh directory CSS');
-assert.match(html,/discovery\.js\?v=minimal-home-1/,'Published HTML must refresh directory JS');
+assert.match(html,/discovery\.js\?v=g12-concepts-1/,'Published HTML must refresh directory JS with matrix concept coverage');
 console.log('PASS: chapter-first directory and compact two-button adaptive reader retain accessible navigation.');

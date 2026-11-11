@@ -43,8 +43,8 @@ assert(html.includes('math-first.css?v=standard-20261111'),'Updated chapter-navi
 const glass=/\.figure-dialog\{[\s\S]*?background:rgba\(239,232,250,\.68\)!important/.test(css);
 assert(glass,'Venn dialog must be visibly translucent, not nearly opaque');
 assert(html.includes('textbook-activities.js?v=math-first-1'),'New activities renderer not versioned');
-assert(html.includes('chapter-hub.js?v=hide-examples-20261111'),'New direct exercise chapter hub must load');
-assert(html.includes('app.js?v=hide-examples-20261111'),'Current single-solution reader must load');
+assert(html.includes('chapter-hub.js?v=g12-concepts-1'),'Current chapter hub with matrix Concepts must load');
+assert(html.includes('app.js?v=g12-concepts-1'),'Current single-solution reader and concept routing must load');
 assert(sw.includes("'./assets/math-first.css'"),'Offline shell must include new CSS');
 const cacheVersion=Number(sw.match(/triggle-shell-real-2025-v(\d+)/)?.[1]);
 assert.ok(Number.isInteger(cacheVersion)&&cacheVersion>=55,'Offline cache must invalidate all previous published versions');
@@ -70,7 +70,7 @@ assert(!venn.includes('g9-venn-text-alternative'),'No redundant visual region co
 assert(css.includes('.figure-dialog .diagram-content .g9-venn-svg{'),'Figure viewer must use full available width');
 const home=read('assets/discovery.js'),homeCss=read('assets/discovery.css');
 new vm.Script(home,{filename:'discovery.js'});
-assert(html.includes('assets/discovery.js?v=minimal-home-1'),'Load new minimal home renderer');
+assert(html.includes('assets/discovery.js?v=g12-concepts-1'),'Load current minimal home renderer with matrix concept coverage');
 assert(html.includes('assets/discovery.css?v=minimal-home-1'),'Load minimal home styling');
 assert(home.includes('discover-home-minimal'),'Home must have only two compact study sections');
 assert(!home.includes('const heroSvg='),'Remove obsolete promotional hero SVG');
