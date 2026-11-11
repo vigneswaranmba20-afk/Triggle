@@ -4,7 +4,12 @@ const {build}=require('./build_project_status.cjs'),model=require('../assets/pro
 const manifest=build();assert.deepEqual(manifest,require('../data/project-status.json'),'Regenerate project status from current validated sources');
 assert.deepEqual(manifest.grades.map(g=>g.totalChapters),[9,8,12,12]);
 for(const g of manifest.grades){assert.equal(g.completedEnglishChapters+g.partialChapters+g.pendingChapters,g.totalChapters);assert.equal(g.coveragePercent,null);assert.equal(g.wholeGradeTaskDenominator,null);}
-assert.equal(manifest.summary.verifiedDeployedTasks,55);assert.equal(manifest.summary.knownRemainingTasks,53);
+const twelveExercises=manifest.grades.find(g=>g.grade===12).chapters[0].exercises;
+const ex11=twelveExercises.find(e=>e.id==='1.1');
+// A changed module awaits a new live hash verification; retain all 21 source-verified tasks.
+assert.equal(ex11.verifiedTasks,21);
+assert.equal(manifest.summary.verifiedDeployedTasks,ex11.stages.deployed?55:34);assert.equal(manifest.summary.knownRemainingTasks,53);
+if(!ex11.stages.deployed)assert.equal(ex11.status,'Awaiting verification');
 const twelve=manifest.grades.find(g=>g.grade===12).chapters[0];assert.equal(twelve.totalTasks,95);assert.equal(twelve.verifiedTasks,42);assert.equal(twelve.missingTasks,53);
 const task=manifest.actions[0];assert.equal(task.grade,12);assert.equal(task.exercise,'1.4');assert.equal(task.startingQuestion,'Q1(i)');assert.deepEqual(task.scope,['Q1(i)','Q1(ii)','Q1(iii)','Q1(iv)','Q2','Q3','Q4','Q5']);
 assert.equal(task.questionIds.length,0,'Do not invent stable IDs for unauthored questions');

@@ -1,5 +1,5 @@
-/* Offline, escaped mathematics typesetting for Triggle. Native MathML handles
- * radicals and fractional powers; older compact HTML fractions remain supported.
+/* Offline, escaped mathematics typesetting for Triggle. Explicit structured TeX
+ * uses local KaTeX; native MathML and compact fractions retain legacy compatibility.
  */
 (() => {
   'use strict';
@@ -28,7 +28,27 @@
     }
     return '<mrow>'+body+'</mrow>';
   }
+  // Explicit structured TeX only: never guess LaTeX from prose or variable names.
+  // A readable authored fallback is required; trust is disabled even for our data.
+  function renderLatex(value, {displayMode=false, fallback='Mathematical expression unavailable'}={}) {
+    const label=String(fallback);
+    try {
+      if(typeof value!=='string'||value.length>12000||!window.katex)throw Error('Unavailable renderer');
+      const html=window.katex.renderToString(value, {
+        displayMode, output:'htmlAndMathml', throwOnError:true, trust:false,
+        strict:'error', maxExpand:200, maxSize:20, macros:{}
+      });
+      // KaTeX represents denied trust commands as red source text, without
+      // throwing. Treat that result as a failure so commands never reach pupils.
+      if(html.includes('mathcolor="#cc0000"'))throw Error('Unsupported command');
+      return '<span class="triggle-tex'+(displayMode?' triggle-tex-display':'')+'" data-math-fallback="'+esc(label)+'">'+html+'</span>';
+    } catch {
+      return '<span class="math-fallback" data-math-error="true">'+esc(label)+'</span>';
+    }
+  }
   function render(value) {
+    if(Array.isArray(value))return value.map(render).join('');
+    if(value && typeof value==='object')return renderLatex(value.latex,{displayMode:value.display===true,fallback:value.fallback});
     const tokens=[];
     const stash=html=>{tokens.push(html);return '\uE000N'+(tokens.length-1)+'\uE001';};
     let s=esc(value);
@@ -103,5 +123,16 @@
     for(let i=tokens.length-1;i>=0;i--) s=s.replace('\uE000N'+i+'\uE001',tokens[i]);
     return s;
   }
-  window.TriggleNotation=Object.freeze({render});
+  function prepare(root=document) {
+    root.querySelectorAll('.triggle-tex').forEach(el=>{
+      if(el.scrollWidth>el.clientWidth+1){
+        el.tabIndex=0;
+        el.setAttribute('role','group');
+        el.setAttribute('aria-label','Scrollable mathematical expression');
+      }else{
+        el.removeAttribute('tabindex');el.removeAttribute('role');el.removeAttribute('aria-label');
+      }
+    });
+  }
+  window.TriggleNotation=Object.freeze({render,renderLatex,prepare});
 })();

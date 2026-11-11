@@ -17,6 +17,8 @@
     #startup-error{border:2px solid #aa3429}#startup-error h2{font-size:1.25rem}
   </style>
   <link rel="stylesheet" href="./assets/teacher-portal.css?v=review-recovery-3">
+  <link rel="stylesheet" href="./assets/vendor/katex/katex.min.css?v=0.16.22">
+  <link rel="stylesheet" href="./assets/math-typesetting.css?v=katex-1">
 </head>
 <body>
   <header class="topbar">
@@ -162,6 +164,7 @@
       <section id="handoff-panel" class="panel" hidden><h2>Private manual Codex correction request</h2><p id="handoff-status" aria-live="polite"></p><label for="handoff-text">Selected feedback and verification criteria</label><textarea id="handoff-text" readonly rows="12"></textarea><button id="copy-handoff" type="button" class="primary">Copy private correction request</button> <button id="download-handoff" type="button" class="quiet">Export private text file</button></section>
     </main>
   </div>
+  <script src="./assets/vendor/katex/katex.min.js?v=0.16.22"></script>
   <script src="./assets/math-notation.js"></script>
   <script src="./assets/teacher-workflow.js?v=1"></script>
   <script>

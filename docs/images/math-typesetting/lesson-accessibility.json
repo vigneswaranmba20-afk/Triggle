@@ -1,0 +1,50 @@
+[
+  {
+    "width": 320,
+    "language": "en",
+    "scope": "#lessonCard",
+    "violations": [],
+    "passes": 21,
+    "incomplete": 2
+  },
+  {
+    "width": 320,
+    "language": "ta",
+    "scope": "#lessonCard",
+    "violations": [],
+    "passes": 21,
+    "incomplete": 2
+  },
+  {
+    "width": 390,
+    "language": "en",
+    "scope": "#lessonCard",
+    "violations": [],
+    "passes": 21,
+    "incomplete": 2
+  },
+  {
+    "width": 390,
+    "language": "ta",
+    "scope": "#lessonCard",
+    "violations": [],
+    "passes": 21,
+    "incomplete": 2
+  },
+  {
+    "width": 1280,
+    "language": "en",
+    "scope": "#lessonCard",
+    "violations": [],
+    "passes": 20,
+    "incomplete": 2
+  },
+  {
+    "width": 1280,
+    "language": "ta",
+    "scope": "#lessonCard",
+    "violations": [],
+    "passes": 20,
+    "incomplete": 2
+  }
+]

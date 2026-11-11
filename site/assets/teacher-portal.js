@@ -129,12 +129,14 @@ function renderSteps(item) {
   for (const step of item.steps || []) {
     const li = document.createElement("li");
     const detail = document.createElement("span");
-    detail.textContent = step[$("review-language").value] || step.en || "";
+    const language = $("review-language").value;
+    if (step.reasonMath) mathText(detail, step.reasonMath[language] || step.reasonMath.en);
+    else detail.textContent = step[language] || step.en || "";
     li.appendChild(detail);
     if (step.eq) {
       const eq = document.createElement("span");
       eq.className = "step-eq";
-      mathText(eq, step.eq);
+      mathText(eq, step.math || step.eq);
       li.appendChild(eq);
     }
     list.appendChild(li);
@@ -150,7 +152,7 @@ async function showSelected() {
   }
   $("question-label").textContent = item.label?.en || item.id;
   const language = $("review-language").value;
-  mathText($("question-text"), item.q?.[language] || item.q?.en || "Original source text not available.");
+  mathText($("question-text"), item.questionMath?.[language] || item.questionMath?.en || item.q?.[language] || item.q?.en || "Original source text not available.");
   $("language-status").textContent = language === "ta" && !item.q?.ta ? "Tamil wording unavailable; English is shown. Tamil editorial review pending." : "Source and full-language review are separate from this decision.";
   $("review-figure").hidden = !item.figureSrc;
   if (item.figureSrc) {
@@ -161,7 +163,7 @@ async function showSelected() {
   $("source-note").textContent = item.kind === "reference"
     ? "Source verification pending: compare this exercise with the prescribed textbook edition before approving.\n" + (item.reference || "")
     : (item.reference || "");
-  mathText($("answer-text"), String(item.answer?.[language] || item.answer?.en || item.answer || "No answer recorded"));
+  mathText($("answer-text"), item.answerMath || String(item.answer?.[language] || item.answer?.en || item.answer || "No answer recorded"));
   renderSteps(item);
   const url = questionUrl(item);
   $("app-link").href = url;

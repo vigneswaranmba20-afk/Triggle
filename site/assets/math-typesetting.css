@@ -1,0 +1,17 @@
+/* KaTeX owns formula geometry. Keep all scroll/clipping outside its glyphs. */
+.triggle-tex{display:inline-block;max-width:100%;vertical-align:middle;font-weight:normal;line-height:1.5;overflow-x:auto;overflow-y:hidden;padding:.25em .12em;box-sizing:border-box;overscroll-behavior-x:contain}
+.triggle-tex-display{display:block;text-align:center;margin:.3em 0;padding:.5em .15em}
+.triggle-tex .katex-display{margin:0}
+.triggle-tex .katex{font-size:1.1em;text-align:initial;white-space:nowrap}
+.triggle-tex-display .katex{text-align:center}
+.triggle-tex:focus-visible{outline:2px solid #7163ad;outline-offset:2px}
+.structured-equation{min-width:0;font-size:clamp(16px,2vw,20px);line-height:1.6}
+.structured-equation .triggle-tex-display + .triggle-tex-display{margin-top:.65em}
+.worked-step>div,.final-answer-content,.final-answer-value{min-width:0;max-width:100%}
+.question-text .triggle-tex-display,.final-answer-value .triggle-tex-display{font-size:clamp(17px,2vw,21px)}
+.math-fallback{font-weight:normal;overflow-wrap:anywhere}
+/* Keep the longer derivation's small labels and two-digit step numbers readable. */
+#lessonCard:has(.triggle-tex) :is(#questionLabel,#itemPosition,#stepCount){color:#6b5a7d}
+#lessonCard:has(.triggle-tex) .worked-step:not(.final-answer-step) .step-circle{color:#65528f}
+#lessonCard:has(.triggle-tex) .step-reason{color:#555f73}
+#lessonCard:has(.triggle-tex) :is(#questionTitle,[data-i18n="stepByStep"]){color:#665778}
