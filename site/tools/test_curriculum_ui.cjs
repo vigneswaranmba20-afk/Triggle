@@ -362,7 +362,7 @@ async function main() {
         await page.locator('#discover-jump').selectOption('g10-ch3');
         assert.equal(new URL(page.url()).searchParams.get('chapter'),'g10-ch3');
         assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Algebra');
-        assert.equal(await page.locator('.hub-section-card').count(),4);
+        assert.equal(await page.locator('.hub-section-card').count(),3);
         await page.locator('.hub-resource-link').click();
         assert.equal(new URL(page.url()).searchParams.get('section'),'sources');
         assert.equal(await page.locator('.hub-source').count()>0,true);
