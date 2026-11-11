@@ -24,38 +24,194 @@ const entries=[
     },
     "steps": [
       {
-        "en": "The adjoint is the transpose of the cofactor matrix. Each cofactor uses the determinant left after deleting its row and column, with alternating signs.",
-        "eq": "Cᵢⱼ = (−1)^(i+j) Mᵢⱼ"
+        "en": "Understand the question: A is a 2 × 2 matrix. We need its adjoint, written adj(A). The adjoint is obtained by transposing the cofactor matrix.",
+        "eq": "A = [[−3, 4; 6, 2]]",
+        "math": [
+          {
+            "latex": "A = \\begin{bmatrix}-3 & 4 \\\\ 6 & 2\\end{bmatrix}",
+            "fallback": "A = [[−3, 4; 6, 2]]",
+            "display": true
+          }
+        ]
+      },
+      {
+        "en": "Easy method for a 2 × 2 matrix only: swap the two diagonal entries a and d, and change the signs of b and c. Keep each off-diagonal entry in its position.",
+        "eq": "A = [[a, b; c, d]]; adj A = [[d, −b; −c, a]]",
+        "math": [
+          {
+            "latex": "A = \\begin{bmatrix}a & b \\\\ c & d\\end{bmatrix}",
+            "fallback": "A = [[a, b; c, d]]",
+            "display": true
+          },
+          {
+            "latex": "\\operatorname{adj}(A) = \\begin{bmatrix}d & -b \\\\ -c & a\\end{bmatrix}",
+            "fallback": "adj A = [[d, −b; −c, a]]",
+            "display": true
+          }
+        ]
+      },
+      {
+        "en": "Swap −3 and 2; change 4 to −4 and 6 to −6. This gives the adjoint directly.",
+        "eq": "adj A = [[2, −4; −6, −3]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj}(A) = \\begin{bmatrix}2 & -4 \\\\ -6 & -3\\end{bmatrix}",
+            "fallback": "adj A = [[2, −4; −6, −3]]",
+            "display": true
+          }
+        ]
+      },
+      {
+        "en": "Understand the symbols: i is the row and j is the column. The minor Mᵢⱼ is the determinant left after deleting row i and column j. Cᵢⱼ is that minor with its cofactor sign. The sign pattern starts with + at the top left.",
+        "eq": "Cᵢⱼ = (−1)^(i+j) Mᵢⱼ",
+        "math": [
+          {
+            "latex": "C_{ij}=(-1)^{i+j}M_{ij}",
+            "fallback": "Cᵢⱼ = (−1)^(i+j) Mᵢⱼ",
+            "display": true
+          },
+          {
+            "latex": "\\begin{bmatrix}+ & - \\\\ - & +\\end{bmatrix}",
+            "fallback": "Cofactor signs: row 1 plus, minus; row 2 minus, plus",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Understand the symbols: ",
+            {
+              "latex": "i",
+              "fallback": "i"
+            },
+            " is the row and ",
+            {
+              "latex": "j",
+              "fallback": "j"
+            },
+            " is the column. The minor ",
+            {
+              "latex": "M_{ij}",
+              "fallback": "Mᵢⱼ"
+            },
+            " is the determinant left after deleting row ",
+            {
+              "latex": "i",
+              "fallback": "i"
+            },
+            " and column ",
+            {
+              "latex": "j",
+              "fallback": "j"
+            },
+            ". ",
+            {
+              "latex": "C_{ij}",
+              "fallback": "Cᵢⱼ"
+            },
+            " is that minor with its cofactor sign. The sign pattern starts with + at the top left."
+          ]
+        }
       },
       {
         "en": "Delete row 1 and column 1; apply the cofactor sign.",
-        "eq": "C11 = (−1)^(1+1) × (2) = 2"
+        "eq": "C11 = (−1)^(1+1) × (2) = 2",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^{1+1} \\times  (2) = 2",
+            "fallback": "C11 = (−1)^(1+1) × (2) = 2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 2; apply the cofactor sign.",
-        "eq": "C12 = (−1)^(1+2) × (6) = -6"
+        "eq": "C12 = (−1)^(1+2) × (6) = -6",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^{1+2} \\times  (6) = -6",
+            "fallback": "C12 = (−1)^(1+2) × (6) = -6",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 1; apply the cofactor sign.",
-        "eq": "C21 = (−1)^(2+1) × (4) = -4"
+        "eq": "C21 = (−1)^(2+1) × (4) = -4",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^{2+1} \\times  (4) = -4",
+            "fallback": "C21 = (−1)^(2+1) × (4) = -4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 2; apply the cofactor sign.",
-        "eq": "C22 = (−1)^(2+2) × (-3) = -3"
+        "eq": "C22 = (−1)^(2+2) × (-3) = -3",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^{2+2} \\times  (-3) = -3",
+            "fallback": "C22 = (−1)^(2+2) × (-3) = -3",
+            "display": true
+          }
+        ]
       },
       {
-        "en": "Transpose: row i of the cofactor matrix becomes column i of the adjoint.",
-        "eq": "C = [[2, −6; −4, −3]]; adj A = [[2, −4; −6, −3]]"
+        "en": "Place the cofactors in their original row and column positions to form C.",
+        "eq": "C = [[2, −6; −4, −3]]",
+        "math": [
+          {
+            "latex": "C = \\begin{bmatrix}2 & -6 \\\\ -4 & -3\\end{bmatrix}",
+            "fallback": "C = [[2, −6; −4, −3]]",
+            "display": true
+          }
+        ]
       },
       {
-        "en": "Independent check: multiplication in both orders gives the determinant times the identity.",
-        "eq": "|A| = -30; A(adj A) = (adj A)A = [[−30, 0; 0, −30]]"
+        "en": "The superscript T means transpose: rows become columns. Transpose C to obtain the adjoint. This agrees with the 2 × 2 shortcut.",
+        "eq": "adj A = Cᵀ = [[2, −4; −6, −3]]",
+        "math": {
+          "latex": "\\operatorname{adj}(A)=C^{T}=\\begin{bmatrix}2 & -4 \\\\ -6 & -3\\end{bmatrix}",
+          "fallback": "adj A = Cᵀ = [[2, −4; −6, −3]]",
+          "display": true
+        }
+      },
+      {
+        "en": "Verify the answer: the determinant is −30. Multiplying A by its adjoint in either order must give −30 times the identity matrix (ones on the diagonal, zeros elsewhere).",
+        "eq": "|A| = (−3) × 2 − 4 × 6 = −30; A(adj A) = (adj A)A = [[−30, 0; 0, −30]]",
+        "math": [
+          {
+            "latex": "|A| = (-3) \\times  2 - 4 \\times  6 = -30",
+            "fallback": "|A| = (−3) × 2 − 4 × 6 = −30",
+            "display": true
+          },
+          {
+            "latex": "A(\\operatorname{adj}(A)) = (\\operatorname{adj}(A))A = \\begin{bmatrix}-30 & 0 \\\\ 0 & -30\\end{bmatrix}",
+            "fallback": "A(adj A) = (adj A)A = [[−30, 0; 0, −30]]",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "adj A = [[2, −4; −6, −3]]",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p15; PDF p23"
+    "reference": "2025 revised English Volume I; printed p15; PDF p23",
+    "questionMath": {
+      "en": [
+        "Find the adjoint of the following: (i) ",
+        {
+          "latex": "\\begin{bmatrix}-3 & 4 \\\\ 6 & 2\\end{bmatrix}",
+          "fallback": "[[−3, 4; 6, 2]]",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\operatorname{adj}(A) = \\begin{bmatrix}2 & -4 \\\\ -6 & -3\\end{bmatrix}",
+      "fallback": "adj A = [[2, −4; −6, −3]]",
+      "display": true
+    }
   },
   {
     "id": "g12-ch1-ex1.1-q1-ii",
@@ -77,58 +233,167 @@ const entries=[
     },
     "steps": [
       {
-        "en": "The adjoint is the transpose of the cofactor matrix. Each cofactor uses the determinant left after deleting its row and column, with alternating signs.",
-        "eq": "Cᵢⱼ = (−1)^(i+j) Mᵢⱼ"
+        "en": "The adjoint is the transpose of the cofactor matrix: rows become columns. Here i is the row and j is the column. The minor is the determinant left after deleting that row and column; the cofactor is the minor multiplied by its alternating sign.",
+        "eq": "Cᵢⱼ = (−1)^(i+j) Mᵢⱼ",
+        "math": [
+          {
+            "latex": "C_{ij} = (-1)^{i+j} M_{ij}",
+            "fallback": "Cᵢⱼ = (−1)^(i+j) Mᵢⱼ",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 1; apply the cofactor sign.",
-        "eq": "C11 = (−1)^(1+1) × (4 × 2 − (1) × (7)) = 1"
+        "eq": "C11 = (−1)^(1+1) × (4 × 2 − (1) × (7)) = 1",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^{1+1} \\times  (4 \\times  2 - (1) \\times  (7)) = 1",
+            "fallback": "C11 = (−1)^(1+1) × (4 × 2 − (1) × (7)) = 1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 2; apply the cofactor sign.",
-        "eq": "C12 = (−1)^(1+2) × (3 × 2 − (1) × (3)) = -3"
+        "eq": "C12 = (−1)^(1+2) × (3 × 2 − (1) × (3)) = -3",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^{1+2} \\times  (3 \\times  2 - (1) \\times  (3)) = -3",
+            "fallback": "C12 = (−1)^(1+2) × (3 × 2 − (1) × (3)) = -3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 3; apply the cofactor sign.",
-        "eq": "C13 = (−1)^(1+3) × (3 × 7 − (4) × (3)) = 9"
+        "eq": "C13 = (−1)^(1+3) × (3 × 7 − (4) × (3)) = 9",
+        "math": [
+          {
+            "latex": "C_{13} = (-1)^{1+3} \\times  (3 \\times  7 - (4) \\times  (3)) = 9",
+            "fallback": "C13 = (−1)^(1+3) × (3 × 7 − (4) × (3)) = 9",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 1; apply the cofactor sign.",
-        "eq": "C21 = (−1)^(2+1) × (3 × 2 − (1) × (7)) = 1"
+        "eq": "C21 = (−1)^(2+1) × (3 × 2 − (1) × (7)) = 1",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^{2+1} \\times  (3 \\times  2 - (1) \\times  (7)) = 1",
+            "fallback": "C21 = (−1)^(2+1) × (3 × 2 − (1) × (7)) = 1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 2; apply the cofactor sign.",
-        "eq": "C22 = (−1)^(2+2) × (2 × 2 − (1) × (3)) = 1"
+        "eq": "C22 = (−1)^(2+2) × (2 × 2 − (1) × (3)) = 1",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^{2+2} \\times  (2 \\times  2 - (1) \\times  (3)) = 1",
+            "fallback": "C22 = (−1)^(2+2) × (2 × 2 − (1) × (3)) = 1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 3; apply the cofactor sign.",
-        "eq": "C23 = (−1)^(2+3) × (2 × 7 − (3) × (3)) = -5"
+        "eq": "C23 = (−1)^(2+3) × (2 × 7 − (3) × (3)) = -5",
+        "math": [
+          {
+            "latex": "C_{23} = (-1)^{2+3} \\times  (2 \\times  7 - (3) \\times  (3)) = -5",
+            "fallback": "C23 = (−1)^(2+3) × (2 × 7 − (3) × (3)) = -5",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 1; apply the cofactor sign.",
-        "eq": "C31 = (−1)^(3+1) × (3 × 1 − (1) × (4)) = -1"
+        "eq": "C31 = (−1)^(3+1) × (3 × 1 − (1) × (4)) = -1",
+        "math": [
+          {
+            "latex": "C_{31} = (-1)^{3+1} \\times  (3 \\times  1 - (1) \\times  (4)) = -1",
+            "fallback": "C31 = (−1)^(3+1) × (3 × 1 − (1) × (4)) = -1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 2; apply the cofactor sign.",
-        "eq": "C32 = (−1)^(3+2) × (2 × 1 − (1) × (3)) = 1"
+        "eq": "C32 = (−1)^(3+2) × (2 × 1 − (1) × (3)) = 1",
+        "math": [
+          {
+            "latex": "C_{32} = (-1)^{3+2} \\times  (2 \\times  1 - (1) \\times  (3)) = 1",
+            "fallback": "C32 = (−1)^(3+2) × (2 × 1 − (1) × (3)) = 1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 3; apply the cofactor sign.",
-        "eq": "C33 = (−1)^(3+3) × (2 × 4 − (3) × (3)) = -1"
+        "eq": "C33 = (−1)^(3+3) × (2 × 4 − (3) × (3)) = -1",
+        "math": [
+          {
+            "latex": "C_{33} = (-1)^{3+3} \\times  (2 \\times  4 - (3) \\times  (3)) = -1",
+            "fallback": "C33 = (−1)^(3+3) × (2 × 4 − (3) × (3)) = -1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Transpose: row i of the cofactor matrix becomes column i of the adjoint.",
-        "eq": "C = [[1, −3, 9; 1, 1, −5; −1, 1, −1]]; adj A = [[1, 1, −1; −3, 1, 1; 9, −5, −1]]"
+        "eq": "C = [[1, −3, 9; 1, 1, −5; −1, 1, −1]]; adj A = [[1, 1, −1; −3, 1, 1; 9, −5, −1]]",
+        "math": [
+          {
+            "latex": "C = \\begin{bmatrix}1 & -3 & 9 \\\\ 1 & 1 & -5 \\\\ -1 & 1 & -1\\end{bmatrix}",
+            "fallback": "C = [[1, −3, 9; 1, 1, −5; −1, 1, −1]]",
+            "display": true
+          },
+          {
+            "latex": "\\operatorname{adj}(A) = \\begin{bmatrix}1 & 1 & -1 \\\\ -3 & 1 & 1 \\\\ 9 & -5 & -1\\end{bmatrix}",
+            "fallback": "adj A = [[1, 1, −1; −3, 1, 1; 9, −5, −1]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Independent check: multiplication in both orders gives the determinant times the identity.",
-        "eq": "|A| = 2; A(adj A) = (adj A)A = [[2, 0, 0; 0, 2, 0; 0, 0, 2]]"
+        "eq": "|A| = 2; A(adj A) = (adj A)A = [[2, 0, 0; 0, 2, 0; 0, 0, 2]]",
+        "math": [
+          {
+            "latex": "|A| = 2",
+            "fallback": "|A| = 2",
+            "display": true
+          },
+          {
+            "latex": "A(\\operatorname{adj}(A)) = (\\operatorname{adj}(A))A = \\begin{bmatrix}2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 2\\end{bmatrix}",
+            "fallback": "A(adj A) = (adj A)A = [[2, 0, 0; 0, 2, 0; 0, 0, 2]]",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "adj A = [[1, 1, −1; −3, 1, 1; 9, −5, −1]]",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p15; PDF p23"
+    "reference": "2025 revised English Volume I; printed p15; PDF p23",
+    "questionMath": {
+      "en": [
+        "Find the adjoint of the following: (ii) ",
+        {
+          "latex": "\\begin{bmatrix}2 & 3 & 1 \\\\ 3 & 4 & 1 \\\\ 3 & 7 & 2\\end{bmatrix}",
+          "fallback": "[[2, 3, 1; 3, 4, 1; 3, 7, 2]]",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\operatorname{adj}(A) = \\begin{bmatrix}1 & 1 & -1 \\\\ -3 & 1 & 1 \\\\ 9 & -5 & -1\\end{bmatrix}",
+      "fallback": "adj A = [[1, 1, −1; −3, 1, 1; 9, −5, −1]]",
+      "display": true
+    }
   },
   {
     "id": "g12-ch1-ex1.1-q1-iii",
@@ -150,58 +415,167 @@ const entries=[
     },
     "steps": [
       {
-        "en": "The adjoint is the transpose of the cofactor matrix. Each cofactor uses the determinant left after deleting its row and column, with alternating signs.",
-        "eq": "Cᵢⱼ = (−1)^(i+j) Mᵢⱼ"
+        "en": "The adjoint is the transpose of the cofactor matrix: rows become columns. Here i is the row and j is the column. The minor is the determinant left after deleting that row and column; the cofactor is the minor multiplied by its alternating sign.",
+        "eq": "Cᵢⱼ = (−1)^(i+j) Mᵢⱼ",
+        "math": [
+          {
+            "latex": "C_{ij} = (-1)^{i+j} M_{ij}",
+            "fallback": "Cᵢⱼ = (−1)^(i+j) Mᵢⱼ",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 1; apply the cofactor sign.",
-        "eq": "C11 = (−1)^(1+1) × (1/3 × 2/3 − (2/3) × (-2/3)) = 2/3"
+        "eq": "C11 = (−1)^(1+1) × (1/3 × 2/3 − (2/3) × (-2/3)) = 2/3",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^{1+1} \\times  (\\frac{1}{3} \\times  \\frac{2}{3} - (\\frac{2}{3}) \\times  (\\frac{-2}{3})) = \\frac{2}{3}",
+            "fallback": "C11 = (−1)^(1+1) × (1/3 × 2/3 − (2/3) × (-2/3)) = 2/3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 2; apply the cofactor sign.",
-        "eq": "C12 = (−1)^(1+2) × (-2/3 × 2/3 − (2/3) × (1/3)) = 2/3"
+        "eq": "C12 = (−1)^(1+2) × (-2/3 × 2/3 − (2/3) × (1/3)) = 2/3",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^{1+2} \\times  (\\frac{-2}{3} \\times  \\frac{2}{3} - (\\frac{2}{3}) \\times  (\\frac{1}{3})) = \\frac{2}{3}",
+            "fallback": "C12 = (−1)^(1+2) × (-2/3 × 2/3 − (2/3) × (1/3)) = 2/3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 3; apply the cofactor sign.",
-        "eq": "C13 = (−1)^(1+3) × (-2/3 × -2/3 − (1/3) × (1/3)) = 1/3"
+        "eq": "C13 = (−1)^(1+3) × (-2/3 × -2/3 − (1/3) × (1/3)) = 1/3",
+        "math": [
+          {
+            "latex": "C_{13} = (-1)^{1+3} \\times  (\\frac{-2}{3} \\times  \\frac{-2}{3} - (\\frac{1}{3}) \\times  (\\frac{1}{3})) = \\frac{1}{3}",
+            "fallback": "C13 = (−1)^(1+3) × (-2/3 × -2/3 − (1/3) × (1/3)) = 1/3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 1; apply the cofactor sign.",
-        "eq": "C21 = (−1)^(2+1) × (2/3 × 2/3 − (1/3) × (-2/3)) = -2/3"
+        "eq": "C21 = (−1)^(2+1) × (2/3 × 2/3 − (1/3) × (-2/3)) = -2/3",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^{2+1} \\times  (\\frac{2}{3} \\times  \\frac{2}{3} - (\\frac{1}{3}) \\times  (\\frac{-2}{3})) = \\frac{-2}{3}",
+            "fallback": "C21 = (−1)^(2+1) × (2/3 × 2/3 − (1/3) × (-2/3)) = -2/3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 2; apply the cofactor sign.",
-        "eq": "C22 = (−1)^(2+2) × (2/3 × 2/3 − (1/3) × (1/3)) = 1/3"
+        "eq": "C22 = (−1)^(2+2) × (2/3 × 2/3 − (1/3) × (1/3)) = 1/3",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^{2+2} \\times  (\\frac{2}{3} \\times  \\frac{2}{3} - (\\frac{1}{3}) \\times  (\\frac{1}{3})) = \\frac{1}{3}",
+            "fallback": "C22 = (−1)^(2+2) × (2/3 × 2/3 − (1/3) × (1/3)) = 1/3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 3; apply the cofactor sign.",
-        "eq": "C23 = (−1)^(2+3) × (2/3 × -2/3 − (2/3) × (1/3)) = 2/3"
+        "eq": "C23 = (−1)^(2+3) × (2/3 × -2/3 − (2/3) × (1/3)) = 2/3",
+        "math": [
+          {
+            "latex": "C_{23} = (-1)^{2+3} \\times  (\\frac{2}{3} \\times  \\frac{-2}{3} - (\\frac{2}{3}) \\times  (\\frac{1}{3})) = \\frac{2}{3}",
+            "fallback": "C23 = (−1)^(2+3) × (2/3 × -2/3 − (2/3) × (1/3)) = 2/3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 1; apply the cofactor sign.",
-        "eq": "C31 = (−1)^(3+1) × (2/3 × 2/3 − (1/3) × (1/3)) = 1/3"
+        "eq": "C31 = (−1)^(3+1) × (2/3 × 2/3 − (1/3) × (1/3)) = 1/3",
+        "math": [
+          {
+            "latex": "C_{31} = (-1)^{3+1} \\times  (\\frac{2}{3} \\times  \\frac{2}{3} - (\\frac{1}{3}) \\times  (\\frac{1}{3})) = \\frac{1}{3}",
+            "fallback": "C31 = (−1)^(3+1) × (2/3 × 2/3 − (1/3) × (1/3)) = 1/3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 2; apply the cofactor sign.",
-        "eq": "C32 = (−1)^(3+2) × (2/3 × 2/3 − (1/3) × (-2/3)) = -2/3"
+        "eq": "C32 = (−1)^(3+2) × (2/3 × 2/3 − (1/3) × (-2/3)) = -2/3",
+        "math": [
+          {
+            "latex": "C_{32} = (-1)^{3+2} \\times  (\\frac{2}{3} \\times  \\frac{2}{3} - (\\frac{1}{3}) \\times  (\\frac{-2}{3})) = \\frac{-2}{3}",
+            "fallback": "C32 = (−1)^(3+2) × (2/3 × 2/3 − (1/3) × (-2/3)) = -2/3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 3; apply the cofactor sign.",
-        "eq": "C33 = (−1)^(3+3) × (2/3 × 1/3 − (2/3) × (-2/3)) = 2/3"
+        "eq": "C33 = (−1)^(3+3) × (2/3 × 1/3 − (2/3) × (-2/3)) = 2/3",
+        "math": [
+          {
+            "latex": "C_{33} = (-1)^{3+3} \\times  (\\frac{2}{3} \\times  \\frac{1}{3} - (\\frac{2}{3}) \\times  (\\frac{-2}{3})) = \\frac{2}{3}",
+            "fallback": "C33 = (−1)^(3+3) × (2/3 × 1/3 − (2/3) × (-2/3)) = 2/3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Transpose: row i of the cofactor matrix becomes column i of the adjoint.",
-        "eq": "C = [[2/3, 2/3, 1/3; −2/3, 1/3, 2/3; 1/3, −2/3, 2/3]]; adj A = [[2/3, −2/3, 1/3; 2/3, 1/3, −2/3; 1/3, 2/3, 2/3]]"
+        "eq": "C = [[2/3, 2/3, 1/3; −2/3, 1/3, 2/3; 1/3, −2/3, 2/3]]; adj A = [[2/3, −2/3, 1/3; 2/3, 1/3, −2/3; 1/3, 2/3, 2/3]]",
+        "math": [
+          {
+            "latex": "C = \\begin{bmatrix}\\frac{2}{3} & \\frac{2}{3} & \\frac{1}{3} \\\\ \\frac{-2}{3} & \\frac{1}{3} & \\frac{2}{3} \\\\ \\frac{1}{3} & \\frac{-2}{3} & \\frac{2}{3}\\end{bmatrix}",
+            "fallback": "C = [[2/3, 2/3, 1/3; −2/3, 1/3, 2/3; 1/3, −2/3, 2/3]]",
+            "display": true
+          },
+          {
+            "latex": "\\operatorname{adj}(A) = \\begin{bmatrix}\\frac{2}{3} & \\frac{-2}{3} & \\frac{1}{3} \\\\ \\frac{2}{3} & \\frac{1}{3} & \\frac{-2}{3} \\\\ \\frac{1}{3} & \\frac{2}{3} & \\frac{2}{3}\\end{bmatrix}",
+            "fallback": "adj A = [[2/3, −2/3, 1/3; 2/3, 1/3, −2/3; 1/3, 2/3, 2/3]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Independent check: multiplication in both orders gives the determinant times the identity.",
-        "eq": "|A| = 1; A(adj A) = (adj A)A = [[1, 0, 0; 0, 1, 0; 0, 0, 1]]"
+        "eq": "|A| = 1; A(adj A) = (adj A)A = [[1, 0, 0; 0, 1, 0; 0, 0, 1]]",
+        "math": [
+          {
+            "latex": "|A| = 1",
+            "fallback": "|A| = 1",
+            "display": true
+          },
+          {
+            "latex": "A(\\operatorname{adj}(A)) = (\\operatorname{adj}(A))A = \\begin{bmatrix}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{bmatrix}",
+            "fallback": "A(adj A) = (adj A)A = [[1, 0, 0; 0, 1, 0; 0, 0, 1]]",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "adj A = [[2/3, −2/3, 1/3; 2/3, 1/3, −2/3; 1/3, 2/3, 2/3]]",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p15; PDF p23"
+    "reference": "2025 revised English Volume I; printed p15; PDF p23",
+    "questionMath": {
+      "en": [
+        "Find the adjoint of the following: (iii) ",
+        {
+          "latex": "\\frac{1}{3} \\begin{bmatrix}2 & 2 & 1 \\\\ -2 & 1 & 2 \\\\ 1 & -2 & 2\\end{bmatrix}",
+          "fallback": "[[1|3]] [[2, 2, 1; −2, 1, 2; 1, −2, 2]]",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\operatorname{adj}(A) = \\begin{bmatrix}\\frac{2}{3} & \\frac{-2}{3} & \\frac{1}{3} \\\\ \\frac{2}{3} & \\frac{1}{3} & \\frac{-2}{3} \\\\ \\frac{1}{3} & \\frac{2}{3} & \\frac{2}{3}\\end{bmatrix}",
+      "fallback": "adj A = [[2/3, −2/3, 1/3; 2/3, 1/3, −2/3; 1/3, 2/3, 2/3]]",
+      "display": true
+    }
   },
   {
     "id": "g12-ch1-ex1.1-q2-i",
@@ -223,41 +597,156 @@ const entries=[
     },
     "steps": [
       {
-        "en": "An inverse exists exactly when the determinant is nonzero."
+        "en": "The determinant det(A) is a number computed from the square matrix A. An inverse exists exactly when this number is nonzero. The minor at row i, column j is the determinant left after deleting that row and column; its signed value is the cofactor. Transpose the cofactor matrix to get the adjoint, then divide by the determinant.",
+        "eq": "If determinant of A is nonzero, inverse A is its adjoint divided by its determinant",
+        "math": {
+          "latex": "A^{-1}=\\frac{1}{\\det A}\\operatorname{adj}(A),\\quad\\det A\\ne0",
+          "fallback": "If determinant of A is nonzero, inverse A is its adjoint divided by its determinant",
+          "display": true
+        }
       },
       {
         "en": "Expand along the first row, using signed cofactors.",
-        "eq": "|A| = (-2) × (-3) + (4) × (-1) = 2"
+        "eq": "|A| = (-2) × (-3) + (4) × (-1) = 2",
+        "math": [
+          {
+            "latex": "|A| = (-2) \\times  (-3) + (4) \\times  (-1) = 2",
+            "fallback": "|A| = (-2) × (-3) + (4) × (-1) = 2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Compute cofactor C11 by deleting row 1 and column 1.",
-        "eq": "C11 = (−1)^(1+1) × (-3) = -3"
+        "eq": "C11 = (−1)^(1+1) × (-3) = -3",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^{1+1} \\times  (-3) = -3",
+            "fallback": "C11 = (−1)^(1+1) × (-3) = -3",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{11}",
+              "fallback": "cofactor in row 1, column 1"
+            },
+            " by deleting row 1 and column 1."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C12 by deleting row 1 and column 2.",
-        "eq": "C12 = (−1)^(1+2) × (1) = -1"
+        "eq": "C12 = (−1)^(1+2) × (1) = -1",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^{1+2} \\times  (1) = -1",
+            "fallback": "C12 = (−1)^(1+2) × (1) = -1",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{12}",
+              "fallback": "cofactor in row 1, column 2"
+            },
+            " by deleting row 1 and column 2."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C21 by deleting row 2 and column 1.",
-        "eq": "C21 = (−1)^(2+1) × (4) = -4"
+        "eq": "C21 = (−1)^(2+1) × (4) = -4",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^{2+1} \\times  (4) = -4",
+            "fallback": "C21 = (−1)^(2+1) × (4) = -4",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{21}",
+              "fallback": "cofactor in row 2, column 1"
+            },
+            " by deleting row 2 and column 1."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C22 by deleting row 2 and column 2.",
-        "eq": "C22 = (−1)^(2+2) × (-2) = -2"
+        "eq": "C22 = (−1)^(2+2) × (-2) = -2",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^{2+2} \\times  (-2) = -2",
+            "fallback": "C22 = (−1)^(2+2) × (-2) = -2",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{22}",
+              "fallback": "cofactor in row 2, column 2"
+            },
+            " by deleting row 2 and column 2."
+          ]
+        }
       },
       {
         "en": "Transpose the cofactors and divide each entry by the determinant.",
-        "eq": "adj A = [[−3, −4; −1, −2]]; A⁻¹ = [[−3/2, −2; −1/2, −1]]"
+        "eq": "adj A = [[−3, −4; −1, −2]]; A⁻¹ = [[−3/2, −2; −1/2, −1]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj}(A) = \\begin{bmatrix}-3 & -4 \\\\ -1 & -2\\end{bmatrix}",
+            "fallback": "adj A = [[−3, −4; −1, −2]]",
+            "display": true
+          },
+          {
+            "latex": "A^{-1} = \\begin{bmatrix}\\frac{-3}{2} & -2 \\\\ \\frac{-1}{2} & -1\\end{bmatrix}",
+            "fallback": "A⁻¹ = [[−3/2, −2; −1/2, −1]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Verify by multiplying in both orders; this also checks every entry of the inverse.",
-        "eq": "AA⁻¹ = A⁻¹A = [[1, 0; 0, 1]]"
+        "eq": "AA⁻¹ = A⁻¹A = [[1, 0; 0, 1]]",
+        "math": [
+          {
+            "latex": "AA^{-1} = A^{-1}A = \\begin{bmatrix}1 & 0 \\\\ 0 & 1\\end{bmatrix}",
+            "fallback": "AA⁻¹ = A⁻¹A = [[1, 0; 0, 1]]",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "A⁻¹ = [[−3/2, −2; −1/2, −1]]",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p15; PDF p23"
+    "reference": "2025 revised English Volume I; printed p15; PDF p23",
+    "questionMath": {
+      "en": [
+        "Find the inverse (if it exists) of the following: (i) ",
+        {
+          "latex": "\\begin{bmatrix}-2 & 4 \\\\ 1 & -3\\end{bmatrix}",
+          "fallback": "[[−2, 4; 1, −3]]",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "A^{-1} = \\begin{bmatrix}\\frac{-3}{2} & -2 \\\\ \\frac{-1}{2} & -1\\end{bmatrix}",
+      "fallback": "A⁻¹ = [[−3/2, −2; −1/2, −1]]",
+      "display": true
+    }
   },
   {
     "id": "g12-ch1-ex1.1-q2-ii",
@@ -279,61 +768,261 @@ const entries=[
     },
     "steps": [
       {
-        "en": "An inverse exists exactly when the determinant is nonzero."
+        "en": "The determinant det(A) is a number computed from the square matrix A. An inverse exists exactly when this number is nonzero. The minor at row i, column j is the determinant left after deleting that row and column; its signed value is the cofactor. Transpose the cofactor matrix to get the adjoint, then divide by the determinant.",
+        "eq": "If determinant of A is nonzero, inverse A is its adjoint divided by its determinant",
+        "math": {
+          "latex": "A^{-1}=\\frac{1}{\\det A}\\operatorname{adj}(A),\\quad\\det A\\ne0",
+          "fallback": "If determinant of A is nonzero, inverse A is its adjoint divided by its determinant",
+          "display": true
+        }
       },
       {
         "en": "Expand along the first row, using signed cofactors.",
-        "eq": "|A| = (5) × (24) + (1) × (-4) + (1) × (-4) = 112"
+        "eq": "|A| = (5) × (24) + (1) × (-4) + (1) × (-4) = 112",
+        "math": [
+          {
+            "latex": "|A| = (5) \\times  (24) + (1) \\times  (-4) + (1) \\times  (-4) = 112",
+            "fallback": "|A| = (5) × (24) + (1) × (-4) + (1) × (-4) = 112",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Compute cofactor C11 by deleting row 1 and column 1.",
-        "eq": "C11 = (−1)^(1+1) × (24) = 24"
+        "eq": "C11 = (−1)^(1+1) × (24) = 24",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^{1+1} \\times  (24) = 24",
+            "fallback": "C11 = (−1)^(1+1) × (24) = 24",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{11}",
+              "fallback": "cofactor in row 1, column 1"
+            },
+            " by deleting row 1 and column 1."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C12 by deleting row 1 and column 2.",
-        "eq": "C12 = (−1)^(1+2) × (4) = -4"
+        "eq": "C12 = (−1)^(1+2) × (4) = -4",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^{1+2} \\times  (4) = -4",
+            "fallback": "C12 = (−1)^(1+2) × (4) = -4",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{12}",
+              "fallback": "cofactor in row 1, column 2"
+            },
+            " by deleting row 1 and column 2."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C13 by deleting row 1 and column 3.",
-        "eq": "C13 = (−1)^(1+3) × (-4) = -4"
+        "eq": "C13 = (−1)^(1+3) × (-4) = -4",
+        "math": [
+          {
+            "latex": "C_{13} = (-1)^{1+3} \\times  (-4) = -4",
+            "fallback": "C13 = (−1)^(1+3) × (-4) = -4",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{13}",
+              "fallback": "cofactor in row 1, column 3"
+            },
+            " by deleting row 1 and column 3."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C21 by deleting row 2 and column 1.",
-        "eq": "C21 = (−1)^(2+1) × (4) = -4"
+        "eq": "C21 = (−1)^(2+1) × (4) = -4",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^{2+1} \\times  (4) = -4",
+            "fallback": "C21 = (−1)^(2+1) × (4) = -4",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{21}",
+              "fallback": "cofactor in row 2, column 1"
+            },
+            " by deleting row 2 and column 1."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C22 by deleting row 2 and column 2.",
-        "eq": "C22 = (−1)^(2+2) × (24) = 24"
+        "eq": "C22 = (−1)^(2+2) × (24) = 24",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^{2+2} \\times  (24) = 24",
+            "fallback": "C22 = (−1)^(2+2) × (24) = 24",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{22}",
+              "fallback": "cofactor in row 2, column 2"
+            },
+            " by deleting row 2 and column 2."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C23 by deleting row 2 and column 3.",
-        "eq": "C23 = (−1)^(2+3) × (4) = -4"
+        "eq": "C23 = (−1)^(2+3) × (4) = -4",
+        "math": [
+          {
+            "latex": "C_{23} = (-1)^{2+3} \\times  (4) = -4",
+            "fallback": "C23 = (−1)^(2+3) × (4) = -4",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{23}",
+              "fallback": "cofactor in row 2, column 3"
+            },
+            " by deleting row 2 and column 3."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C31 by deleting row 3 and column 1.",
-        "eq": "C31 = (−1)^(3+1) × (-4) = -4"
+        "eq": "C31 = (−1)^(3+1) × (-4) = -4",
+        "math": [
+          {
+            "latex": "C_{31} = (-1)^{3+1} \\times  (-4) = -4",
+            "fallback": "C31 = (−1)^(3+1) × (-4) = -4",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{31}",
+              "fallback": "cofactor in row 3, column 1"
+            },
+            " by deleting row 3 and column 1."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C32 by deleting row 3 and column 2.",
-        "eq": "C32 = (−1)^(3+2) × (4) = -4"
+        "eq": "C32 = (−1)^(3+2) × (4) = -4",
+        "math": [
+          {
+            "latex": "C_{32} = (-1)^{3+2} \\times  (4) = -4",
+            "fallback": "C32 = (−1)^(3+2) × (4) = -4",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{32}",
+              "fallback": "cofactor in row 3, column 2"
+            },
+            " by deleting row 3 and column 2."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C33 by deleting row 3 and column 3.",
-        "eq": "C33 = (−1)^(3+3) × (24) = 24"
+        "eq": "C33 = (−1)^(3+3) × (24) = 24",
+        "math": [
+          {
+            "latex": "C_{33} = (-1)^{3+3} \\times  (24) = 24",
+            "fallback": "C33 = (−1)^(3+3) × (24) = 24",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{33}",
+              "fallback": "cofactor in row 3, column 3"
+            },
+            " by deleting row 3 and column 3."
+          ]
+        }
       },
       {
         "en": "Transpose the cofactors and divide each entry by the determinant.",
-        "eq": "adj A = [[24, −4, −4; −4, 24, −4; −4, −4, 24]]; A⁻¹ = [[3/14, −1/28, −1/28; −1/28, 3/14, −1/28; −1/28, −1/28, 3/14]]"
+        "eq": "adj A = [[24, −4, −4; −4, 24, −4; −4, −4, 24]]; A⁻¹ = [[3/14, −1/28, −1/28; −1/28, 3/14, −1/28; −1/28, −1/28, 3/14]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj}(A) = \\begin{bmatrix}24 & -4 & -4 \\\\ -4 & 24 & -4 \\\\ -4 & -4 & 24\\end{bmatrix}",
+            "fallback": "adj A = [[24, −4, −4; −4, 24, −4; −4, −4, 24]]",
+            "display": true
+          },
+          {
+            "latex": "A^{-1} = \\begin{bmatrix}\\frac{3}{14} & \\frac{-1}{28} & \\frac{-1}{28} \\\\ \\frac{-1}{28} & \\frac{3}{14} & \\frac{-1}{28} \\\\ \\frac{-1}{28} & \\frac{-1}{28} & \\frac{3}{14}\\end{bmatrix}",
+            "fallback": "A⁻¹ = [[3/14, −1/28, −1/28; −1/28, 3/14, −1/28; −1/28, −1/28, 3/14]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Verify by multiplying in both orders; this also checks every entry of the inverse.",
-        "eq": "AA⁻¹ = A⁻¹A = [[1, 0, 0; 0, 1, 0; 0, 0, 1]]"
+        "eq": "AA⁻¹ = A⁻¹A = [[1, 0, 0; 0, 1, 0; 0, 0, 1]]",
+        "math": [
+          {
+            "latex": "AA^{-1} = A^{-1}A = \\begin{bmatrix}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{bmatrix}",
+            "fallback": "AA⁻¹ = A⁻¹A = [[1, 0, 0; 0, 1, 0; 0, 0, 1]]",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "A⁻¹ = [[3/14, −1/28, −1/28; −1/28, 3/14, −1/28; −1/28, −1/28, 3/14]]",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p15; PDF p23"
+    "reference": "2025 revised English Volume I; printed p15; PDF p23",
+    "questionMath": {
+      "en": [
+        "Find the inverse (if it exists) of the following: (ii) ",
+        {
+          "latex": "\\begin{bmatrix}5 & 1 & 1 \\\\ 1 & 5 & 1 \\\\ 1 & 1 & 5\\end{bmatrix}",
+          "fallback": "[[5, 1, 1; 1, 5, 1; 1, 1, 5]]",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "A^{-1} = \\begin{bmatrix}\\frac{3}{14} & \\frac{-1}{28} & \\frac{-1}{28} \\\\ \\frac{-1}{28} & \\frac{3}{14} & \\frac{-1}{28} \\\\ \\frac{-1}{28} & \\frac{-1}{28} & \\frac{3}{14}\\end{bmatrix}",
+      "fallback": "A⁻¹ = [[3/14, −1/28, −1/28; −1/28, 3/14, −1/28; −1/28, −1/28, 3/14]]",
+      "display": true
+    }
   },
   {
     "id": "g12-ch1-ex1.1-q2-iii",
@@ -355,61 +1044,261 @@ const entries=[
     },
     "steps": [
       {
-        "en": "An inverse exists exactly when the determinant is nonzero."
+        "en": "The determinant det(A) is a number computed from the square matrix A. An inverse exists exactly when this number is nonzero. The minor at row i, column j is the determinant left after deleting that row and column; its signed value is the cofactor. Transpose the cofactor matrix to get the adjoint, then divide by the determinant.",
+        "eq": "If determinant of A is nonzero, inverse A is its adjoint divided by its determinant",
+        "math": {
+          "latex": "A^{-1}=\\frac{1}{\\det A}\\operatorname{adj}(A),\\quad\\det A\\ne0",
+          "fallback": "If determinant of A is nonzero, inverse A is its adjoint divided by its determinant",
+          "display": true
+        }
       },
       {
         "en": "Expand along the first row, using signed cofactors.",
-        "eq": "|A| = (2) × (1) + (3) × (-3) + (1) × (9) = 2"
+        "eq": "|A| = (2) × (1) + (3) × (-3) + (1) × (9) = 2",
+        "math": [
+          {
+            "latex": "|A| = (2) \\times  (1) + (3) \\times  (-3) + (1) \\times  (9) = 2",
+            "fallback": "|A| = (2) × (1) + (3) × (-3) + (1) × (9) = 2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Compute cofactor C11 by deleting row 1 and column 1.",
-        "eq": "C11 = (−1)^(1+1) × (1) = 1"
+        "eq": "C11 = (−1)^(1+1) × (1) = 1",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^{1+1} \\times  (1) = 1",
+            "fallback": "C11 = (−1)^(1+1) × (1) = 1",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{11}",
+              "fallback": "cofactor in row 1, column 1"
+            },
+            " by deleting row 1 and column 1."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C12 by deleting row 1 and column 2.",
-        "eq": "C12 = (−1)^(1+2) × (3) = -3"
+        "eq": "C12 = (−1)^(1+2) × (3) = -3",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^{1+2} \\times  (3) = -3",
+            "fallback": "C12 = (−1)^(1+2) × (3) = -3",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{12}",
+              "fallback": "cofactor in row 1, column 2"
+            },
+            " by deleting row 1 and column 2."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C13 by deleting row 1 and column 3.",
-        "eq": "C13 = (−1)^(1+3) × (9) = 9"
+        "eq": "C13 = (−1)^(1+3) × (9) = 9",
+        "math": [
+          {
+            "latex": "C_{13} = (-1)^{1+3} \\times  (9) = 9",
+            "fallback": "C13 = (−1)^(1+3) × (9) = 9",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{13}",
+              "fallback": "cofactor in row 1, column 3"
+            },
+            " by deleting row 1 and column 3."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C21 by deleting row 2 and column 1.",
-        "eq": "C21 = (−1)^(2+1) × (-1) = 1"
+        "eq": "C21 = (−1)^(2+1) × (-1) = 1",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^{2+1} \\times  (-1) = 1",
+            "fallback": "C21 = (−1)^(2+1) × (-1) = 1",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{21}",
+              "fallback": "cofactor in row 2, column 1"
+            },
+            " by deleting row 2 and column 1."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C22 by deleting row 2 and column 2.",
-        "eq": "C22 = (−1)^(2+2) × (1) = 1"
+        "eq": "C22 = (−1)^(2+2) × (1) = 1",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^{2+2} \\times  (1) = 1",
+            "fallback": "C22 = (−1)^(2+2) × (1) = 1",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{22}",
+              "fallback": "cofactor in row 2, column 2"
+            },
+            " by deleting row 2 and column 2."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C23 by deleting row 2 and column 3.",
-        "eq": "C23 = (−1)^(2+3) × (5) = -5"
+        "eq": "C23 = (−1)^(2+3) × (5) = -5",
+        "math": [
+          {
+            "latex": "C_{23} = (-1)^{2+3} \\times  (5) = -5",
+            "fallback": "C23 = (−1)^(2+3) × (5) = -5",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{23}",
+              "fallback": "cofactor in row 2, column 3"
+            },
+            " by deleting row 2 and column 3."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C31 by deleting row 3 and column 1.",
-        "eq": "C31 = (−1)^(3+1) × (-1) = -1"
+        "eq": "C31 = (−1)^(3+1) × (-1) = -1",
+        "math": [
+          {
+            "latex": "C_{31} = (-1)^{3+1} \\times  (-1) = -1",
+            "fallback": "C31 = (−1)^(3+1) × (-1) = -1",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{31}",
+              "fallback": "cofactor in row 3, column 1"
+            },
+            " by deleting row 3 and column 1."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C32 by deleting row 3 and column 2.",
-        "eq": "C32 = (−1)^(3+2) × (-1) = 1"
+        "eq": "C32 = (−1)^(3+2) × (-1) = 1",
+        "math": [
+          {
+            "latex": "C_{32} = (-1)^{3+2} \\times  (-1) = 1",
+            "fallback": "C32 = (−1)^(3+2) × (-1) = 1",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{32}",
+              "fallback": "cofactor in row 3, column 2"
+            },
+            " by deleting row 3 and column 2."
+          ]
+        }
       },
       {
         "en": "Compute cofactor C33 by deleting row 3 and column 3.",
-        "eq": "C33 = (−1)^(3+3) × (-1) = -1"
+        "eq": "C33 = (−1)^(3+3) × (-1) = -1",
+        "math": [
+          {
+            "latex": "C_{33} = (-1)^{3+3} \\times  (-1) = -1",
+            "fallback": "C33 = (−1)^(3+3) × (-1) = -1",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Compute cofactor ",
+            {
+              "latex": "C_{33}",
+              "fallback": "cofactor in row 3, column 3"
+            },
+            " by deleting row 3 and column 3."
+          ]
+        }
       },
       {
         "en": "Transpose the cofactors and divide each entry by the determinant.",
-        "eq": "adj A = [[1, 1, −1; −3, 1, 1; 9, −5, −1]]; A⁻¹ = [[1/2, 1/2, −1/2; −3/2, 1/2, 1/2; 9/2, −5/2, −1/2]]"
+        "eq": "adj A = [[1, 1, −1; −3, 1, 1; 9, −5, −1]]; A⁻¹ = [[1/2, 1/2, −1/2; −3/2, 1/2, 1/2; 9/2, −5/2, −1/2]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj}(A) = \\begin{bmatrix}1 & 1 & -1 \\\\ -3 & 1 & 1 \\\\ 9 & -5 & -1\\end{bmatrix}",
+            "fallback": "adj A = [[1, 1, −1; −3, 1, 1; 9, −5, −1]]",
+            "display": true
+          },
+          {
+            "latex": "A^{-1} = \\begin{bmatrix}\\frac{1}{2} & \\frac{1}{2} & \\frac{-1}{2} \\\\ \\frac{-3}{2} & \\frac{1}{2} & \\frac{1}{2} \\\\ \\frac{9}{2} & \\frac{-5}{2} & \\frac{-1}{2}\\end{bmatrix}",
+            "fallback": "A⁻¹ = [[1/2, 1/2, −1/2; −3/2, 1/2, 1/2; 9/2, −5/2, −1/2]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Verify by multiplying in both orders; this also checks every entry of the inverse.",
-        "eq": "AA⁻¹ = A⁻¹A = [[1, 0, 0; 0, 1, 0; 0, 0, 1]]"
+        "eq": "AA⁻¹ = A⁻¹A = [[1, 0, 0; 0, 1, 0; 0, 0, 1]]",
+        "math": [
+          {
+            "latex": "AA^{-1} = A^{-1}A = \\begin{bmatrix}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{bmatrix}",
+            "fallback": "AA⁻¹ = A⁻¹A = [[1, 0, 0; 0, 1, 0; 0, 0, 1]]",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "A⁻¹ = [[1/2, 1/2, −1/2; −3/2, 1/2, 1/2; 9/2, −5/2, −1/2]]",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p15; PDF p23"
+    "reference": "2025 revised English Volume I; printed p15; PDF p23",
+    "questionMath": {
+      "en": [
+        "Find the inverse (if it exists) of the following: (iii) ",
+        {
+          "latex": "\\begin{bmatrix}2 & 3 & 1 \\\\ 3 & 4 & 1 \\\\ 3 & 7 & 2\\end{bmatrix}",
+          "fallback": "[[2, 3, 1; 3, 4, 1; 3, 7, 2]]",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "A^{-1} = \\begin{bmatrix}\\frac{1}{2} & \\frac{1}{2} & \\frac{-1}{2} \\\\ \\frac{-3}{2} & \\frac{1}{2} & \\frac{1}{2} \\\\ \\frac{9}{2} & \\frac{-5}{2} & \\frac{-1}{2}\\end{bmatrix}",
+      "fallback": "A⁻¹ = [[1/2, 1/2, −1/2; −3/2, 1/2, 1/2; 9/2, −5/2, −1/2]]",
+      "display": true
+    }
   },
   {
     "id": "g12-ch1-ex1.1-q3",

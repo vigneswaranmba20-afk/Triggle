@@ -44,7 +44,7 @@ const glass=/\.figure-dialog\{[\s\S]*?background:rgba\(239,232,250,\.68\)!import
 assert(glass,'Venn dialog must be visibly translucent, not nearly opaque');
 assert(html.includes('textbook-activities.js?v=math-first-1'),'New activities renderer not versioned');
 assert(html.includes('chapter-hub.js?v=exercise-direct-1'),'New direct exercise chapter hub must load');
-assert(html.includes('app.js?v=compact-answer-1'),'New direct exercise reader code must load');
+assert(html.includes('app.js?v=katex-1'),'Current direct exercise reader with structured mathematics must load');
 assert(sw.includes("'./assets/math-first.css'"),'Offline shell must include new CSS');
 const cacheVersion=Number(sw.match(/triggle-shell-real-2025-v(\d+)/)?.[1]);
 assert.ok(Number.isInteger(cacheVersion)&&cacheVersion>=55,'Offline cache must invalidate all previous published versions');

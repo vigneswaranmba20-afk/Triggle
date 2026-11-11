@@ -379,10 +379,12 @@
  function buildStep(s,index){
   const li=document.createElement('li');li.className='worked-step';
   const number=document.createElement('span');number.className='step-circle';number.textContent=index+1;
-  const body=document.createElement('div');const reason=document.createElement('div');reason.className='step-reason';reason.textContent=tr(s);
+  const body=document.createElement('div');const reason=document.createElement('div');reason.className='step-reason';
+  if(s.reasonMath)reason.innerHTML=math(s.reasonMath[lang]||s.reasonMath.en);else reason.textContent=tr(s);
   const equation=document.createElement('div');equation.className='step-equation';
   const fragments=String(s.eq||'').split(/\s+;\s+/);
-  if(fragments.length>1&&fragments.length<=8){equation.classList.add('step-equation-group');equation.innerHTML=fragments.map(x=>'<span class="math-part">'+math(x)+'</span>').join('');}
+  if(s.math){equation.classList.add('structured-equation');equation.innerHTML=math(s.math);}
+  else if(fragments.length>1&&fragments.length<=8){equation.classList.add('step-equation-group');equation.innerHTML=fragments.map(x=>'<span class="math-part">'+math(x)+'</span>').join('');}
   else equation.innerHTML=math(s.eq);
   body.append(reason,equation);li.append(number,body);return li;
  }
@@ -422,13 +424,15 @@
   const all=current.steps||[];const ul=$('stepsList');ul.replaceChildren();
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
-  const canGrid=parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
+  const canGrid=!current.answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
-  $('answerText').innerHTML=canGrid?parts.map(v=>'<span class="answer-part">'+math(v)+'</span>').join(''):math(localizedAnswer);
+  $('answerText').innerHTML=current.answerMath?math(current.answerMath):(canGrid?parts.map(v=>'<span class="answer-part">'+math(v)+'</span>').join(''):math(localizedAnswer));
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
+  requestAnimationFrame(()=>window.TriggleNotation?.prepare?.($('lessonCard')));
+  document.fonts?.ready.then(()=>window.TriggleNotation?.prepare?.($('lessonCard')));
  }
  function isQuestionFigure(item){
   if(item.figureSrc)return true;
@@ -560,7 +564,7 @@
   $('gradeTotal').textContent=list.length+' '+ui('lessons');$('questionLabel').textContent=labelForGroup(current.exercise).toUpperCase();$('itemPosition').textContent=num(position)+' / '+num(list.length);
   $('questionTitle').textContent=tr(current.topic);$('questionHead').textContent=tr(current.label);
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
-  $('questionText').innerHTML=workedDisplay?.question||math(tr(current.q));$('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
+  $('questionText').innerHTML=workedDisplay?.question||math(current.questionMath?.[lang]||current.questionMath?.en||tr(current.q));$('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
 
   $('figureBtn').hidden=!hasUsefulFigure(current);
