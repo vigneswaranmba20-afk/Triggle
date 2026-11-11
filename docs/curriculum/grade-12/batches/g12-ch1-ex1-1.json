@@ -1760,21 +1760,76 @@
       "steps": [
         {
           "en": "Use cosine evenness and sine oddness to write the proposed inverse.",
-          "eq": "F(−α) = [[cos α, 0, −sin α; 0, 1, 0; sin α, 0, cos α]]"
+          "eq": "F(−α) = [[cos α, 0, −sin α; 0, 1, 0; sin α, 0, cos α]]",
+          "math": [
+            {
+              "latex": "F(-\\alpha ) = \\begin{bmatrix}\\cos \\alpha  & 0 & -\\sin \\alpha  \\\\ 0 & 1 & 0 \\\\ \\sin \\alpha  & 0 & \\cos \\alpha \\end{bmatrix}",
+              "fallback": "F(−α) = [[cos α, 0, −sin α; 0, 1, 0; sin α, 0, cos α]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Multiply row by column. The corner diagonal entries are cos²α + sin²α = 1; the off-diagonal corner entries cancel. The middle row and column give 1 on the diagonal and zeros elsewhere.",
-          "eq": "(1,1) = (3,3) = cos²α+sin²α = 1; (1,3) = −cos α sin α+sin α cos α = 0; (3,1) = −sin α cos α+cos α sin α = 0; F(α)F(−α) = I₃"
+          "eq": "(1,1) = (3,3) = cos²α+sin²α = 1; (1,3) = −cos α sin α+sin α cos α = 0; (3,1) = −sin α cos α+cos α sin α = 0; F(α)F(−α) = I₃",
+          "math": [
+            {
+              "latex": "(1,1) = (3,3) = \\cos^{2}\\alpha +\\sin^{2}\\alpha  = 1",
+              "fallback": "(1,1) = (3,3) = cos²α+sin²α = 1",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "(1,3) = -\\cos \\alpha  \\sin \\alpha +\\sin \\alpha  \\cos \\alpha  = 0",
+              "fallback": "(1,3) = −cos α sin α+sin α cos α = 0",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "(3,1) = -\\sin \\alpha  \\cos \\alpha +\\cos \\alpha  \\sin \\alpha  = 0",
+              "fallback": "(3,1) = −sin α cos α+cos α sin α = 0",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "F(\\alpha )F(-\\alpha ) = I_{3}",
+              "fallback": "F(α)F(−α) = I₃",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Reversing the factors changes only the signs of the cancelling terms, so the reverse product is also I₃. This proves the inverse for every real α.",
-          "eq": "F(−α)F(α) = I₃"
+          "eq": "F(−α)F(α) = I₃",
+          "math": [
+            {
+              "latex": "F(-\\alpha )F(\\alpha ) = I_{3}",
+              "fallback": "F(−α)F(α) = I₃",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "[F(α)]⁻¹ = F(−α).",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p15; PDF p23"
+      "reference": "2025 revised English Volume I; printed p15; PDF p23",
+      "questionMath": {
+        "en": [
+          "If F(α) = ",
+          {
+            "latex": "\\begin{bmatrix}\\cos \\alpha  & 0 & \\sin \\alpha  \\\\ 0 & 1 & 0 \\\\ -\\sin \\alpha  & 0 & \\cos \\alpha \\end{bmatrix}",
+            "fallback": "[[cos α, 0, sin α; 0, 1, 0; −sin α, 0, cos α]]",
+            "display": true
+          },
+          ", show that [F(α)]⁻¹ = F(−α)."
+        ]
+      },
+      "answerMath": {
+        "latex": "[F(\\alpha )]^{-1} = F(-\\alpha ).",
+        "fallback": "[F(α)]⁻¹ = F(−α).",
+        "display": true
+      }
     },
     {
       "id": "g12-ch1-ex1.1-q4",
@@ -1797,25 +1852,83 @@
       "steps": [
         {
           "en": "Multiply A by itself, taking row-column dot products.",
-          "eq": "A² = [[25−3, 15−6; −5+2, −3+4]] = [[22, 9; −3, 1]]"
+          "eq": "A² = [[25−3, 15−6; −5+2, −3+4]] = [[22, 9; −3, 1]]",
+          "math": [
+            {
+              "latex": "A^{2} = \\begin{bmatrix}25-3 & 15-6 \\\\ -5+2 & -3+4\\end{bmatrix} = \\begin{bmatrix}22 & 9 \\\\ -3 & 1\\end{bmatrix}",
+              "fallback": "A² = [[25−3, 15−6; −5+2, −3+4]] = [[22, 9; −3, 1]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Subtract 3A and 7I₂ entry by entry.",
-          "eq": "A² − 3A − 7I₂ = [[22−15−7, 9−9; −3+3, 1+6−7]] = O₂"
+          "eq": "A² − 3A − 7I₂ = [[22−15−7, 9−9; −3+3, 1+6−7]] = O₂",
+          "math": [
+            {
+              "latex": "A^{2} - 3A - 7I_{2} = \\begin{bmatrix}22-15-7 & 9-9 \\\\ -3+3 & 1+6-7\\end{bmatrix} = O_{2}",
+              "fallback": "A² − 3A − 7I₂ = [[22−15−7, 9−9; −3+3, 1+6−7]] = O₂",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Rearrange the identity as a product equal to I₂. Since A commutes with A−3I₂, the factor is both a left and a right inverse.",
-          "eq": "A(A−3I₂) = 7I₂; A[(A−3I₂)/7] = [(A−3I₂)/7]A = I₂"
+          "eq": "A(A−3I₂) = 7I₂; A[(A−3I₂)/7] = [(A−3I₂)/7]A = I₂",
+          "math": [
+            {
+              "latex": "A(A-3I_{2}) = 7I_{2}",
+              "fallback": "A(A−3I₂) = 7I₂",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "A[(A-3I_{2})/7] = [(A-3I_{2})/7]A = I_{2}",
+              "fallback": "A[(A−3I₂)/7] = [(A−3I₂)/7]A = I₂",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Subtract 3 from each diagonal entry, then divide all entries by 7.",
-          "eq": "A⁻¹ = (A−3I₂)/7 = [[2/7, 3/7; −1/7, −5/7]]"
+          "eq": "A⁻¹ = (A−3I₂)/7 = [[2/7, 3/7; −1/7, −5/7]]",
+          "math": [
+            {
+              "latex": "A^{-1} = (A-3I_{2})/7 = \\begin{bmatrix}\\frac{2}{7} & \\frac{3}{7} \\\\ -\\frac{1}{7} & -\\frac{5}{7}\\end{bmatrix}",
+              "fallback": "A⁻¹ = (A−3I₂)/7 = [[2/7, 3/7; −1/7, −5/7]]",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "A² − 3A − 7I₂ = O₂; A⁻¹ = [[2/7, 3/7; −1/7, −5/7]]",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p15; PDF p23"
+      "reference": "2025 revised English Volume I; printed p15; PDF p23",
+      "questionMath": {
+        "en": [
+          "If A = ",
+          {
+            "latex": "\\begin{bmatrix}5 & 3 \\\\ -1 & -2\\end{bmatrix}",
+            "fallback": "[[5, 3; −1, −2]]",
+            "display": true
+          },
+          ", show that A² − 3A − 7I₂ = O₂. hence find A⁻¹."
+        ]
+      },
+      "answerMath": [
+        {
+          "latex": "A^{2} - 3A - 7I_{2} = O_{2}",
+          "fallback": "A² − 3A − 7I₂ = O₂",
+          "display": true
+        },
+        "; ",
+        {
+          "latex": "A^{-1} = \\begin{bmatrix}\\frac{2}{7} & \\frac{3}{7} \\\\ -\\frac{1}{7} & -\\frac{5}{7}\\end{bmatrix}",
+          "fallback": "A⁻¹ = [[2/7, 3/7; −1/7, −5/7]]",
+          "display": true
+        }
+      ]
     },
     {
       "id": "g12-ch1-ex1.1-q5",
@@ -1838,25 +1951,93 @@
       "steps": [
         {
           "en": "Write A = M/9. To prove the result, check that the rows and columns of M have squared length 81 and are mutually perpendicular.",
-          "eq": "M = [[−8, 1, 4; 4, 4, 7; 1, −8, 4]]"
+          "eq": "M = [[−8, 1, 4; 4, 4, 7; 1, −8, 4]]",
+          "math": [
+            {
+              "latex": "M = \\begin{bmatrix}-8 & 1 & 4 \\\\ 4 & 4 & 7 \\\\ 1 & -8 & 4\\end{bmatrix}",
+              "fallback": "M = [[−8, 1, 4; 4, 4, 7; 1, −8, 4]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Row squared lengths are 64+1+16, 16+16+49 and 1+64+16. Each is 81. Pairwise dot products vanish.",
-          "eq": "r₁·r₂ = −32+4+28 = 0; r₁·r₃ = −8−8+16 = 0; r₂·r₃ = 4−32+28 = 0"
+          "eq": "r₁·r₂ = −32+4+28 = 0; r₁·r₃ = −8−8+16 = 0; r₂·r₃ = 4−32+28 = 0",
+          "math": [
+            {
+              "latex": "r_{1}\\cdot r_{2} = -32+4+28 = 0",
+              "fallback": "r₁·r₂ = −32+4+28 = 0",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "r_{1}\\cdot r_{3} = -8-8+16 = 0",
+              "fallback": "r₁·r₃ = −8−8+16 = 0",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "r_{2}\\cdot r_{3} = 4-32+28 = 0",
+              "fallback": "r₂·r₃ = 4−32+28 = 0",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Column squared lengths are also 81. Their pairwise products are −8+16−8, −32+28+4 and 4+28−32, all zero.",
-          "eq": "MMᵀ = MᵀM = 81I₃"
+          "eq": "MMᵀ = MᵀM = 81I₃",
+          "math": [
+            {
+              "latex": "MM^{T} = M^{T}M = 81I_{3}",
+              "fallback": "MMᵀ = MᵀM = 81I₃",
+              "display": true
+            }
+          ]
         },
         {
           "en": "The factor 1/9 occurs twice in each product, cancelling 81. Hence the transpose is the inverse.",
-          "eq": "AAᵀ = AᵀA = I₃; Aᵀ = [[1|9]] [[−8, 4, 1; 1, 4, −8; 4, 7, 4]]"
+          "eq": "AAᵀ = AᵀA = I₃; Aᵀ = [[1|9]] [[−8, 4, 1; 1, 4, −8; 4, 7, 4]]",
+          "math": [
+            {
+              "latex": "AA^{T} = A^{T}A = I_{3}",
+              "fallback": "AAᵀ = AᵀA = I₃",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "A^{T} = \\frac{1}{9} \\begin{bmatrix}-8 & 4 & 1 \\\\ 1 & 4 & -8 \\\\ 4 & 7 & 4\\end{bmatrix}",
+              "fallback": "Aᵀ = [[1|9]] [[−8, 4, 1; 1, 4, −8; 4, 7, 4]]",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "A⁻¹ = Aᵀ = [[1|9]] [[−8, 4, 1; 1, 4, −8; 4, 7, 4]]",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p15; PDF p23"
+      "reference": "2025 revised English Volume I; printed p15; PDF p23",
+      "questionMath": {
+        "en": [
+          "If A = ",
+          {
+            "latex": "\\frac{1}{9}",
+            "fallback": "[[1|9]]",
+            "display": true
+          },
+          " ",
+          {
+            "latex": "\\begin{bmatrix}-8 & 1 & 4 \\\\ 4 & 4 & 7 \\\\ 1 & -8 & 4\\end{bmatrix}",
+            "fallback": "[[−8, 1, 4; 4, 4, 7; 1, −8, 4]]",
+            "display": true
+          },
+          ", prove that A⁻¹ = Aᵀ."
+        ]
+      },
+      "answerMath": {
+        "latex": "A^{-1} = A^{T} = \\frac{1}{9} \\begin{bmatrix}-8 & 4 & 1 \\\\ 1 & 4 & -8 \\\\ 4 & 7 & 4\\end{bmatrix}",
+        "fallback": "A⁻¹ = Aᵀ = [[1|9]] [[−8, 4, 1; 1, 4, −8; 4, 7, 4]]",
+        "display": true
+      }
     },
     {
       "id": "g12-ch1-ex1.1-q6",
@@ -1879,25 +2060,69 @@
       "steps": [
         {
           "en": "For a 2×2 matrix, interchange the diagonal entries and negate the other entries.",
-          "eq": "adj A = [[3, 4; 5, 8]]"
+          "eq": "adj A = [[3, 4; 5, 8]]",
+          "math": [
+            {
+              "latex": "\\operatorname{adj} A = \\begin{bmatrix}3 & 4 \\\\ 5 & 8\\end{bmatrix}",
+              "fallback": "adj A = [[3, 4; 5, 8]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Compute the determinant.",
-          "eq": "|A| = 8 × 3 − (−4) × (−5) = 4"
+          "eq": "|A| = 8 × 3 − (−4) × (−5) = 4",
+          "math": [
+            {
+              "latex": "\\lvert A\\rvert  = 8 \\times  3 - (-4) \\times  (-5) = 4",
+              "fallback": "|A| = 8 × 3 − (−4) × (−5) = 4",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Multiply A by its adjoint.",
-          "eq": "A(adj A) = [[24−20, 32−32; −15+15, −20+24]] = [[4, 0; 0, 4]]"
+          "eq": "A(adj A) = [[24−20, 32−32; −15+15, −20+24]] = [[4, 0; 0, 4]]",
+          "math": [
+            {
+              "latex": "A(\\operatorname{adj} A) = \\begin{bmatrix}24-20 & 32-32 \\\\ -15+15 & -20+24\\end{bmatrix} = \\begin{bmatrix}4 & 0 \\\\ 0 & 4\\end{bmatrix}",
+              "fallback": "A(adj A) = [[24−20, 32−32; −15+15, −20+24]] = [[4, 0; 0, 4]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Check the reverse product separately.",
-          "eq": "(adj A)A = [[24−20, −12+12; 40−40, −20+24]] = [[4, 0; 0, 4]]"
+          "eq": "(adj A)A = [[24−20, −12+12; 40−40, −20+24]] = [[4, 0; 0, 4]]",
+          "math": [
+            {
+              "latex": "(\\operatorname{adj} A)A = \\begin{bmatrix}24-20 & -12+12 \\\\ 40-40 & -20+24\\end{bmatrix} = \\begin{bmatrix}4 & 0 \\\\ 0 & 4\\end{bmatrix}",
+              "fallback": "(adj A)A = [[24−20, −12+12; 40−40, −20+24]] = [[4, 0; 0, 4]]",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "A(adj A) = (adj A)A = 4I₂ = |A|I₂.",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p16; PDF p24"
+      "reference": "2025 revised English Volume I; printed p16; PDF p24",
+      "questionMath": {
+        "en": [
+          "If A = ",
+          {
+            "latex": "\\begin{bmatrix}8 & -4 \\\\ -5 & 3\\end{bmatrix}",
+            "fallback": "[[8, −4; −5, 3]]",
+            "display": true
+          },
+          ", verify that A(adj A) = (adj A)A = |A|I₂."
+        ]
+      },
+      "answerMath": {
+        "latex": "A(\\operatorname{adj} A) = (\\operatorname{adj} A)A = 4I_{2} = \\lvert A\\rvert I_{2}.",
+        "fallback": "A(adj A) = (adj A)A = 4I₂ = |A|I₂.",
+        "display": true
+      }
     },
     {
       "id": "g12-ch1-ex1.1-q7",
@@ -1920,29 +2145,104 @@
       "steps": [
         {
           "en": "The determinant test permits inversion of both matrices.",
-          "eq": "|A| = 15−14 = 1; |B| = −2+15 = 13"
+          "eq": "|A| = 15−14 = 1; |B| = −2+15 = 13",
+          "math": [
+            {
+              "latex": "\\lvert A\\rvert  = 15-14 = 1",
+              "fallback": "|A| = 15−14 = 1",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "\\lvert B\\rvert  = -2+15 = 13",
+              "fallback": "|B| = −2+15 = 13",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Compute the product and its determinant.",
-          "eq": "AB = [[7, −5; 18, −11]]; |AB| = 13"
+          "eq": "AB = [[7, −5; 18, −11]]; |AB| = 13",
+          "math": [
+            {
+              "latex": "AB = \\begin{bmatrix}7 & -5 \\\\ 18 & -11\\end{bmatrix}",
+              "fallback": "AB = [[7, −5; 18, −11]]",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "|AB| = 13",
+              "fallback": "|AB| = 13",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Use the 2×2 inverse rule on the product.",
-          "eq": "(AB)⁻¹ = [[−11/13, 5/13; −18/13, 7/13]]"
+          "eq": "(AB)⁻¹ = [[−11/13, 5/13; −18/13, 7/13]]",
+          "math": [
+            {
+              "latex": "(AB)^{-1} = \\begin{bmatrix}-\\frac{11}{13} & \\frac{5}{13} \\\\ -\\frac{18}{13} & \\frac{7}{13}\\end{bmatrix}",
+              "fallback": "(AB)⁻¹ = [[−11/13, 5/13; −18/13, 7/13]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Invert each factor separately.",
-          "eq": "A⁻¹ = [[5, −2; −7, 3]]; B⁻¹ = [[2/13, 3/13; −5/13, −1/13]]"
+          "eq": "A⁻¹ = [[5, −2; −7, 3]]; B⁻¹ = [[2/13, 3/13; −5/13, −1/13]]",
+          "math": [
+            {
+              "latex": "A^{-1} = \\begin{bmatrix}5 & -2 \\\\ -7 & 3\\end{bmatrix}",
+              "fallback": "A⁻¹ = [[5, −2; −7, 3]]",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "B^{-1} = \\begin{bmatrix}\\frac{2}{13} & \\frac{3}{13} \\\\ -\\frac{5}{13} & -\\frac{1}{13}\\end{bmatrix}",
+              "fallback": "B⁻¹ = [[2/13, 3/13; −5/13, −1/13]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Multiply in the stated reverse order; the matrices agree entry by entry.",
-          "eq": "B⁻¹A⁻¹ = [[−11/13, 5/13; −18/13, 7/13]]"
+          "eq": "B⁻¹A⁻¹ = [[−11/13, 5/13; −18/13, 7/13]]",
+          "math": [
+            {
+              "latex": "B^{-1}A^{-1} = \\begin{bmatrix}-\\frac{11}{13} & \\frac{5}{13} \\\\ -\\frac{18}{13} & \\frac{7}{13}\\end{bmatrix}",
+              "fallback": "B⁻¹A⁻¹ = [[−11/13, 5/13; −18/13, 7/13]]",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "(AB)⁻¹ = B⁻¹A⁻¹ = [[−11/13, 5/13; −18/13, 7/13]]",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p16; PDF p24"
+      "reference": "2025 revised English Volume I; printed p16; PDF p24",
+      "questionMath": {
+        "en": [
+          "If A = ",
+          {
+            "latex": "\\begin{bmatrix}3 & 2 \\\\ 7 & 5\\end{bmatrix}",
+            "fallback": "[[3, 2; 7, 5]]",
+            "display": true
+          },
+          " and B = ",
+          {
+            "latex": "\\begin{bmatrix}-1 & -3 \\\\ 5 & 2\\end{bmatrix}",
+            "fallback": "[[−1, −3; 5, 2]]",
+            "display": true
+          },
+          ", verify that (AB)⁻¹ = B⁻¹A⁻¹."
+        ]
+      },
+      "answerMath": {
+        "latex": "(AB)^{-1} = B^{-1}A^{-1} = \\begin{bmatrix}-\\frac{11}{13} & \\frac{5}{13} \\\\ -\\frac{18}{13} & \\frac{7}{13}\\end{bmatrix}",
+        "fallback": "(AB)⁻¹ = B⁻¹A⁻¹ = [[−11/13, 5/13; −18/13, 7/13]]",
+        "display": true
+      }
     },
     {
       "id": "g12-ch1-ex1.1-q8",
@@ -1965,25 +2265,84 @@
       "steps": [
         {
           "en": "Let J = adj A. For a 3×3 matrix, det J = (det A)². Expand det J along the first row.",
-          "eq": "|J| = 2(24) + 4(−20) + 2(24) = 16; |A| = ±4"
+          "eq": "|J| = 2(24) + 4(−20) + 2(24) = 16; |A| = ±4",
+          "math": [
+            {
+              "latex": "\\lvert J\\rvert  = 2(24) + 4(-20) + 2(24) = 16",
+              "fallback": "|J| = 2(24) + 4(−20) + 2(24) = 16",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "\\lvert A\\rvert  = \\pm 4",
+              "fallback": "|A| = ±4",
+              "display": true
+            }
+          ]
         },
         {
           "en": "The identity adj(adj A) = |A|A gives A once each possible sign is considered.",
-          "eq": "adj J = [[24, 8, 4; 20, 8, 8; 24, 8, 12]]; A = (adj J)/|A|"
+          "eq": "adj J = [[24, 8, 4; 20, 8, 8; 24, 8, 12]]; A = (adj J)/|A|",
+          "math": [
+            {
+              "latex": "\\operatorname{adj} J = \\begin{bmatrix}24 & 8 & 4 \\\\ 20 & 8 & 8 \\\\ 24 & 8 & 12\\end{bmatrix}",
+              "fallback": "adj J = [[24, 8, 4; 20, 8, 8; 24, 8, 12]]",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "A = (\\operatorname{adj} J)/\\lvert A\\rvert ",
+              "fallback": "A = (adj J)/|A|",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Divide by +4 or −4. Both signs are possible because adj(−A) = adj A for order 3. No assumption in the question chooses one sign.",
-          "eq": "A = ±[[6, 2, 1; 5, 2, 2; 6, 2, 3]]"
+          "eq": "A = ±[[6, 2, 1; 5, 2, 2; 6, 2, 3]]",
+          "math": [
+            {
+              "latex": "A = \\pm \\begin{bmatrix}6 & 2 & 1 \\\\ 5 & 2 & 2 \\\\ 6 & 2 & 3\\end{bmatrix}",
+              "fallback": "A = ±[[6, 2, 1; 5, 2, 2; 6, 2, 3]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Verify both candidates by their cofactors, independently of the determinant identity.",
-          "eq": "adj([[6, 2, 1; 5, 2, 2; 6, 2, 3]]) = adj([[−6, −2, −1; −5, −2, −2; −6, −2, −3]]) = [[2, −4, 2; −3, 12, −7; −2, 0, 2]]"
+          "eq": "adj([[6, 2, 1; 5, 2, 2; 6, 2, 3]]) = adj([[−6, −2, −1; −5, −2, −2; −6, −2, −3]]) = [[2, −4, 2; −3, 12, −7; −2, 0, 2]]",
+          "math": [
+            {
+              "latex": "\\operatorname{adj}(\\begin{bmatrix}6 & 2 & 1 \\\\ 5 & 2 & 2 \\\\ 6 & 2 & 3\\end{bmatrix}) = \\operatorname{adj}(\\begin{bmatrix}-6 & -2 & -1 \\\\ -5 & -2 & -2 \\\\ -6 & -2 & -3\\end{bmatrix}) = \\begin{bmatrix}2 & -4 & 2 \\\\ -3 & 12 & -7 \\\\ -2 & 0 & 2\\end{bmatrix}",
+              "fallback": "adj([[6, 2, 1; 5, 2, 2; 6, 2, 3]]) = adj([[−6, −2, −1; −5, −2, −2; −6, −2, −3]]) = [[2, −4, 2; −3, 12, −7; −2, 0, 2]]",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "A = ±[[6, 2, 1; 5, 2, 2; 6, 2, 3]] (both signs satisfy the given adjoint).",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p16; PDF p24"
+      "reference": "2025 revised English Volume I; printed p16; PDF p24",
+      "questionMath": {
+        "en": [
+          "If adj(A) = ",
+          {
+            "latex": "\\begin{bmatrix}2 & -4 & 2 \\\\ -3 & 12 & -7 \\\\ -2 & 0 & 2\\end{bmatrix}",
+            "fallback": "[[2, −4, 2; −3, 12, −7; −2, 0, 2]]",
+            "display": true
+          },
+          ", find A."
+        ]
+      },
+      "answerMath": [
+        {
+          "latex": "A = \\pm \\begin{bmatrix}6 & 2 & 1 \\\\ 5 & 2 & 2 \\\\ 6 & 2 & 3\\end{bmatrix}",
+          "fallback": "A = ±[[6, 2, 1; 5, 2, 2; 6, 2, 3]]",
+          "display": true
+        },
+        " (both signs satisfy the given adjoint)."
+      ]
     },
     {
       "id": "g12-ch1-ex1.1-q9",
@@ -2006,25 +2365,90 @@
       "steps": [
         {
           "en": "Put J = adj A. Its nonzero determinant ensures that A is invertible.",
-          "eq": "|J| = 2(36−18) = 36; (|A|)² = 36; |A| = ±6"
+          "eq": "|J| = 2(36−18) = 36; (|A|)² = 36; |A| = ±6",
+          "math": [
+            {
+              "latex": "\\lvert J\\rvert  = 2(36-18) = 36",
+              "fallback": "|J| = 2(36−18) = 36",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "(\\lvert A\\rvert )^{2} = 36",
+              "fallback": "(|A|)² = 36",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "\\lvert A\\rvert  = \\pm 6",
+              "fallback": "|A| = ±6",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Divide the given adjoint by each possible determinant.",
-          "eq": "A⁻¹ = (adj A)/|A| = ±[[0, −1/3, 0; 1, 1/3, −1; −1/2, 0, 1]]"
+          "eq": "A⁻¹ = (adj A)/|A| = ±[[0, −1/3, 0; 1, 1/3, −1; −1/2, 0, 1]]",
+          "math": [
+            {
+              "latex": "A^{-1} = (\\operatorname{adj} A)/\\lvert A\\rvert  = \\pm \\begin{bmatrix}0 & -\\frac{1}{3} & 0 \\\\ 1 & \\frac{1}{3} & -1 \\\\ -\\frac{1}{2} & 0 & 1\\end{bmatrix}",
+              "fallback": "A⁻¹ = (adj A)/|A| = ±[[0, −1/3, 0; 1, 1/3, −1; −1/2, 0, 1]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "To check existence of both signs, take A₊ = adj J/6 and A₋ = −A₊. Their adjoints are both J, while their inverses have opposite signs.",
-          "eq": "A₊ = [[2, 2, 2; −3, 0, 0; 1, 1, 2]]; A₊(J/6) = (J/6)A₊ = I₃"
+          "eq": "A₊ = [[2, 2, 2; −3, 0, 0; 1, 1, 2]]; A₊(J/6) = (J/6)A₊ = I₃",
+          "math": [
+            {
+              "latex": "A_{+} = \\begin{bmatrix}2 & 2 & 2 \\\\ -3 & 0 & 0 \\\\ 1 & 1 & 2\\end{bmatrix}",
+              "fallback": "A₊ = [[2, 2, 2; −3, 0, 0; 1, 1, 2]]",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "A_{+}(J/6) = (J/6)A_{+} = I_{3}",
+              "fallback": "A₊(J/6) = (J/6)A₊ = I₃",
+              "display": true
+            }
+          ]
         },
         {
           "en": "The source does not give a determinant sign, so a unique inverse cannot be selected.",
-          "eq": "A₋⁻¹ = −J/6"
+          "eq": "A₋⁻¹ = −J/6",
+          "math": [
+            {
+              "latex": "A_{-}^{-1} = -J/6",
+              "fallback": "A₋⁻¹ = −J/6",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "A⁻¹ = ±[[0, −1/3, 0; 1, 1/3, −1; −1/2, 0, 1]] (the determinant sign is not specified).",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p16; PDF p24"
+      "reference": "2025 revised English Volume I; printed p16; PDF p24",
+      "questionMath": {
+        "en": [
+          "If adj(A) = ",
+          {
+            "latex": "\\begin{bmatrix}0 & -2 & 0 \\\\ 6 & 2 & -6 \\\\ -3 & 0 & 6\\end{bmatrix}",
+            "fallback": "[[0, −2, 0; 6, 2, −6; −3, 0, 6]]",
+            "display": true
+          },
+          ", find A⁻¹."
+        ]
+      },
+      "answerMath": [
+        {
+          "latex": "A^{-1} = \\pm \\begin{bmatrix}0 & -\\frac{1}{3} & 0 \\\\ 1 & \\frac{1}{3} & -1 \\\\ -\\frac{1}{2} & 0 & 1\\end{bmatrix}",
+          "fallback": "A⁻¹ = ±[[0, −1/3, 0; 1, 1/3, −1; −1/2, 0, 1]]",
+          "display": true
+        },
+        " (the determinant sign is not specified)."
+      ]
     },
     {
       "id": "g12-ch1-ex1.1-q10",
@@ -2047,25 +2471,69 @@
       "steps": [
         {
           "en": "Treat the given adjoint as a new matrix J. The requested matrix is adj J.",
-          "eq": "J = [[1, 0, 1; 0, 2, 0; −1, 0, 1]]"
+          "eq": "J = [[1, 0, 1; 0, 2, 0; −1, 0, 1]]",
+          "math": [
+            {
+              "latex": "J = \\begin{bmatrix}1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ -1 & 0 & 1\\end{bmatrix}",
+              "fallback": "J = [[1, 0, 1; 0, 2, 0; −1, 0, 1]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Compute all signed minors. For example C₁₁ = 2×1−0×0 = 2, C₁₃ = 0×0−2×(−1) = 2, and C₂₂ = 1×1−1×(−1) = 2.",
-          "eq": "C = [[2, 0, 2; 0, 2, 0; −2, 0, 2]]"
+          "eq": "C = [[2, 0, 2; 0, 2, 0; −2, 0, 2]]",
+          "math": [
+            {
+              "latex": "C = \\begin{bmatrix}2 & 0 & 2 \\\\ 0 & 2 & 0 \\\\ -2 & 0 & 2\\end{bmatrix}",
+              "fallback": "C = [[2, 0, 2; 0, 2, 0; −2, 0, 2]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Transpose the cofactor matrix; the off-diagonal signs switch positions.",
-          "eq": "adj J = [[2, 0, −2; 0, 2, 0; 2, 0, 2]]"
+          "eq": "adj J = [[2, 0, −2; 0, 2, 0; 2, 0, 2]]",
+          "math": [
+            {
+              "latex": "\\operatorname{adj} J = \\begin{bmatrix}2 & 0 & -2 \\\\ 0 & 2 & 0 \\\\ 2 & 0 & 2\\end{bmatrix}",
+              "fallback": "adj J = [[2, 0, −2; 0, 2, 0; 2, 0, 2]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "As a check, |J| = 4 and multiplication in either order gives 4I₃.",
-          "eq": "J(adj J) = (adj J)J = 4I₃"
+          "eq": "J(adj J) = (adj J)J = 4I₃",
+          "math": [
+            {
+              "latex": "J(\\operatorname{adj} J) = (\\operatorname{adj} J)J = 4I_{3}",
+              "fallback": "J(adj J) = (adj J)J = 4I₃",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "adj(adj(A)) = [[2, 0, −2; 0, 2, 0; 2, 0, 2]]",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p16; PDF p24"
+      "reference": "2025 revised English Volume I; printed p16; PDF p24",
+      "questionMath": {
+        "en": [
+          "Find adj(adj(A)) if adj A = ",
+          {
+            "latex": "\\begin{bmatrix}1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ -1 & 0 & 1\\end{bmatrix}",
+            "fallback": "[[1, 0, 1; 0, 2, 0; −1, 0, 1]]",
+            "display": true
+          },
+          "."
+        ]
+      },
+      "answerMath": {
+        "latex": "\\operatorname{adj}(\\operatorname{adj}(A)) = \\begin{bmatrix}2 & 0 & -2 \\\\ 0 & 2 & 0 \\\\ 2 & 0 & 2\\end{bmatrix}",
+        "fallback": "adj(adj(A)) = [[2, 0, −2; 0, 2, 0; 2, 0, 2]]",
+        "display": true
+      }
     },
     {
       "id": "g12-ch1-ex1.1-q11",
@@ -2088,25 +2556,90 @@
       "steps": [
         {
           "en": "Work on the domain cos x ≠ 0, where the given tan x is defined. Put t = tan x. The determinant 1+t² is positive.",
-          "eq": "A⁻¹ = [[1|1+t²]] [[1, −t; t, 1]]; Aᵀ = [[1, −t; t, 1]]"
+          "eq": "A⁻¹ = [[1|1+t²]] [[1, −t; t, 1]]; Aᵀ = [[1, −t; t, 1]]",
+          "math": [
+            {
+              "latex": "A^{-1} = \\frac{1}{1+t^{2}} \\begin{bmatrix}1 & -t \\\\ t & 1\\end{bmatrix}",
+              "fallback": "A⁻¹ = [[1|1+t²]] [[1, −t; t, 1]]",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "A^{T} = \\begin{bmatrix}1 & -t \\\\ t & 1\\end{bmatrix}",
+              "fallback": "Aᵀ = [[1, −t; t, 1]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Multiply the two identical numerator matrices.",
-          "eq": "AᵀA⁻¹ = [[1|1+t²]] [[1−t², −2t; 2t, 1−t²]]"
+          "eq": "AᵀA⁻¹ = [[1|1+t²]] [[1−t², −2t; 2t, 1−t²]]",
+          "math": [
+            {
+              "latex": "A^{T}A^{-1} = \\frac{1}{1+t^{2}} \\begin{bmatrix}1-t^{2} & -2t \\\\ 2t & 1-t^{2}\\end{bmatrix}",
+              "fallback": "AᵀA⁻¹ = [[1|1+t²]] [[1−t², −2t; 2t, 1−t²]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Divide the double-angle formulas by cos²x, which is nonzero on the stated domain.",
-          "eq": "(1−tan²x)/(1+tan²x) = cos 2x; 2tan x/(1+tan²x) = sin 2x"
+          "eq": "(1−tan²x)/(1+tan²x) = cos 2x; 2tan x/(1+tan²x) = sin 2x",
+          "math": [
+            {
+              "latex": "(1-\\tan^{2}x)/(1+\\tan^{2}x) = \\cos 2x",
+              "fallback": "(1−tan²x)/(1+tan²x) = cos 2x",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "2\\tan x/(1+\\tan^{2}x) = \\sin 2x",
+              "fallback": "2tan x/(1+tan²x) = sin 2x",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Substitute these identities in all four positions.",
-          "eq": "AᵀA⁻¹ = [[cos 2x, −sin 2x; sin 2x, cos 2x]]"
+          "eq": "AᵀA⁻¹ = [[cos 2x, −sin 2x; sin 2x, cos 2x]]",
+          "math": [
+            {
+              "latex": "A^{T}A^{-1} = \\begin{bmatrix}\\cos 2x & -\\sin 2x \\\\ \\sin 2x & \\cos 2x\\end{bmatrix}",
+              "fallback": "AᵀA⁻¹ = [[cos 2x, −sin 2x; sin 2x, cos 2x]]",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "AᵀA⁻¹ = [[cos 2x, −sin 2x; sin 2x, cos 2x]], for cos x ≠ 0.",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p16; PDF p24"
+      "reference": "2025 revised English Volume I; printed p16; PDF p24",
+      "questionMath": {
+        "en": [
+          "A = ",
+          {
+            "latex": "\\begin{bmatrix}1 & \\tan x \\\\ -\\tan x & 1\\end{bmatrix}",
+            "fallback": "[[1, tan x; −tan x, 1]]",
+            "display": true
+          },
+          ", show that AᵀA⁻¹ = ",
+          {
+            "latex": "\\begin{bmatrix}\\cos 2x & -\\sin 2x \\\\ \\sin 2x & \\cos 2x\\end{bmatrix}",
+            "fallback": "[[cos 2x, −sin 2x; sin 2x, cos 2x]]",
+            "display": true
+          },
+          "."
+        ]
+      },
+      "answerMath": [
+        {
+          "latex": "A^{T}A^{-1} = \\begin{bmatrix}\\cos 2x & -\\sin 2x \\\\ \\sin 2x & \\cos 2x\\end{bmatrix},",
+          "fallback": "AᵀA⁻¹ = [[cos 2x, −sin 2x; sin 2x, cos 2x]],",
+          "display": true
+        },
+        " for cos x ≠ 0."
+      ]
     },
     {
       "id": "g12-ch1-ex1.1-q12",
@@ -2129,25 +2662,75 @@
       "steps": [
         {
           "en": "Write the equation as AB = C. Since |B| = −10+3 = −7 ≠ 0, multiply on the right by B⁻¹; order matters.",
-          "eq": "A = CB⁻¹"
+          "eq": "A = CB⁻¹",
+          "math": [
+            {
+              "latex": "A = CB^{-1}",
+              "fallback": "A = CB⁻¹",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Use the 2×2 inverse formula.",
-          "eq": "B⁻¹ = [[2/7, 3/7; −1/7, −5/7]]"
+          "eq": "B⁻¹ = [[2/7, 3/7; −1/7, −5/7]]",
+          "math": [
+            {
+              "latex": "B^{-1} = \\begin{bmatrix}\\frac{2}{7} & \\frac{3}{7} \\\\ -\\frac{1}{7} & -\\frac{5}{7}\\end{bmatrix}",
+              "fallback": "B⁻¹ = [[2/7, 3/7; −1/7, −5/7]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Multiply each row of C by each column of B⁻¹.",
-          "eq": "A = [[4−1, 6−5; 2−1, 3−5]] = [[3, 1; 1, −2]]"
+          "eq": "A = [[4−1, 6−5; 2−1, 3−5]] = [[3, 1; 1, −2]]",
+          "math": [
+            {
+              "latex": "A = \\begin{bmatrix}4-1 & 6-5 \\\\ 2-1 & 3-5\\end{bmatrix} = \\begin{bmatrix}3 & 1 \\\\ 1 & -2\\end{bmatrix}",
+              "fallback": "A = [[4−1, 6−5; 2−1, 3−5]] = [[3, 1; 1, −2]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Substitute the result into the original equation.",
-          "eq": "AB = [[15−1, 9−2; 5+2, 3+4]] = [[14, 7; 7, 7]]"
+          "eq": "AB = [[15−1, 9−2; 5+2, 3+4]] = [[14, 7; 7, 7]]",
+          "math": [
+            {
+              "latex": "AB = \\begin{bmatrix}15-1 & 9-2 \\\\ 5+2 & 3+4\\end{bmatrix} = \\begin{bmatrix}14 & 7 \\\\ 7 & 7\\end{bmatrix}",
+              "fallback": "AB = [[15−1, 9−2; 5+2, 3+4]] = [[14, 7; 7, 7]]",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "A = [[3, 1; 1, −2]]",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p16; PDF p24"
+      "reference": "2025 revised English Volume I; printed p16; PDF p24",
+      "questionMath": {
+        "en": [
+          "Find the matrix A for which A ",
+          {
+            "latex": "\\begin{bmatrix}5 & 3 \\\\ -1 & -2\\end{bmatrix}",
+            "fallback": "[[5, 3; −1, −2]]",
+            "display": true
+          },
+          " = ",
+          {
+            "latex": "\\begin{bmatrix}14 & 7 \\\\ 7 & 7\\end{bmatrix}",
+            "fallback": "[[14, 7; 7, 7]]",
+            "display": true
+          },
+          "."
+        ]
+      },
+      "answerMath": {
+        "latex": "A = \\begin{bmatrix}3 & 1 \\\\ 1 & -2\\end{bmatrix}",
+        "fallback": "A = [[3, 1; 1, −2]]",
+        "display": true
+      }
     },
     {
       "id": "g12-ch1-ex1.1-q13",
@@ -2170,29 +2753,104 @@
       "steps": [
         {
           "en": "Both coefficient matrices are invertible, since |A| = 2 and |B| = 5. Multiply on the left by A⁻¹ and on the right by B⁻¹.",
-          "eq": "X = A⁻¹CB⁻¹"
+          "eq": "X = A⁻¹CB⁻¹",
+          "math": [
+            {
+              "latex": "X = A^{-1}CB^{-1}",
+              "fallback": "X = A⁻¹CB⁻¹",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Compute each inverse.",
-          "eq": "A⁻¹ = [[0, 1/2; −1, 1/2]]; B⁻¹ = [[1/5, 2/5; −1/5, 3/5]]"
+          "eq": "A⁻¹ = [[0, 1/2; −1, 1/2]]; B⁻¹ = [[1/5, 2/5; −1/5, 3/5]]",
+          "math": [
+            {
+              "latex": "A^{-1} = \\begin{bmatrix}0 & \\frac{1}{2} \\\\ -1 & \\frac{1}{2}\\end{bmatrix}",
+              "fallback": "A⁻¹ = [[0, 1/2; −1, 1/2]]",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "B^{-1} = \\begin{bmatrix}\\frac{1}{5} & \\frac{2}{5} \\\\ -\\frac{1}{5} & \\frac{3}{5}\\end{bmatrix}",
+              "fallback": "B⁻¹ = [[1/5, 2/5; −1/5, 3/5]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Multiply the first two factors.",
-          "eq": "A⁻¹C = [[1, 1; 0, 0]]"
+          "eq": "A⁻¹C = [[1, 1; 0, 0]]",
+          "math": [
+            {
+              "latex": "A^{-1}C = \\begin{bmatrix}1 & 1 \\\\ 0 & 0\\end{bmatrix}",
+              "fallback": "A⁻¹C = [[1, 1; 0, 0]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Now multiply by B⁻¹.",
-          "eq": "X = [[0, 1; 0, 0]]"
+          "eq": "X = [[0, 1; 0, 0]]",
+          "math": [
+            {
+              "latex": "X = \\begin{bmatrix}0 & 1 \\\\ 0 & 0\\end{bmatrix}",
+              "fallback": "X = [[0, 1; 0, 0]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Verify with the original order of factors.",
-          "eq": "AX = [[0, 1; 0, 2]]; AXB = [[1, 1; 2, 2]] = C"
+          "eq": "AX = [[0, 1; 0, 2]]; AXB = [[1, 1; 2, 2]] = C",
+          "math": [
+            {
+              "latex": "AX = \\begin{bmatrix}0 & 1 \\\\ 0 & 2\\end{bmatrix}",
+              "fallback": "AX = [[0, 1; 0, 2]]",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "AXB = \\begin{bmatrix}1 & 1 \\\\ 2 & 2\\end{bmatrix} = C",
+              "fallback": "AXB = [[1, 1; 2, 2]] = C",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "X = [[0, 1; 0, 0]]",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p16; PDF p24"
+      "reference": "2025 revised English Volume I; printed p16; PDF p24",
+      "questionMath": {
+        "en": [
+          "Given A = ",
+          {
+            "latex": "\\begin{bmatrix}1 & -1 \\\\ 2 & 0\\end{bmatrix}",
+            "fallback": "[[1, −1; 2, 0]]",
+            "display": true
+          },
+          ", B = ",
+          {
+            "latex": "\\begin{bmatrix}3 & -2 \\\\ 1 & 1\\end{bmatrix}",
+            "fallback": "[[3, −2; 1, 1]]",
+            "display": true
+          },
+          " and C = ",
+          {
+            "latex": "\\begin{bmatrix}1 & 1 \\\\ 2 & 2\\end{bmatrix}",
+            "fallback": "[[1, 1; 2, 2]]",
+            "display": true
+          },
+          ", find a matrix X such that AXB = C."
+        ]
+      },
+      "answerMath": {
+        "latex": "X = \\begin{bmatrix}0 & 1 \\\\ 0 & 0\\end{bmatrix}",
+        "fallback": "X = [[0, 1; 0, 0]]",
+        "display": true
+      }
     },
     {
       "id": "g12-ch1-ex1.1-q14",
@@ -2215,25 +2873,75 @@
       "steps": [
         {
           "en": "Multiply A by itself; a diagonal dot product is 2 and an off-diagonal dot product is 1.",
-          "eq": "A² = [[2, 1, 1; 1, 2, 1; 1, 1, 2]]"
+          "eq": "A² = [[2, 1, 1; 1, 2, 1; 1, 1, 2]]",
+          "math": [
+            {
+              "latex": "A^{2} = \\begin{bmatrix}2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2\\end{bmatrix}",
+              "fallback": "A² = [[2, 1, 1; 1, 2, 1; 1, 1, 2]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Multiply once more. Each diagonal entry of A³ is 2 and each off-diagonal entry is 3.",
-          "eq": "A³ = [[2, 3, 3; 3, 2, 3; 3, 3, 2]] = 3A+2I₃"
+          "eq": "A³ = [[2, 3, 3; 3, 2, 3; 3, 3, 2]] = 3A+2I₃",
+          "math": [
+            {
+              "latex": "A^{3} = \\begin{bmatrix}2 & 3 & 3 \\\\ 3 & 2 & 3 \\\\ 3 & 3 & 2\\end{bmatrix} = 3A+2I_{3}",
+              "fallback": "A³ = [[2, 3, 3; 3, 2, 3; 3, 3, 2]] = 3A+2I₃",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Rearrange and factor in both orders.",
-          "eq": "A(A²−3I₃) = (A²−3I₃)A = 2I₃"
+          "eq": "A(A²−3I₃) = (A²−3I₃)A = 2I₃",
+          "math": [
+            {
+              "latex": "A(A^{2}-3I_{3}) = (A^{2}-3I_{3})A = 2I_{3}",
+              "fallback": "A(A²−3I₃) = (A²−3I₃)A = 2I₃",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Divide by 2 to obtain a left and right inverse.",
-          "eq": "A⁻¹ = (A²−3I₃)/2 = [[−1/2, 1/2, 1/2; 1/2, −1/2, 1/2; 1/2, 1/2, −1/2]]"
+          "eq": "A⁻¹ = (A²−3I₃)/2 = [[−1/2, 1/2, 1/2; 1/2, −1/2, 1/2; 1/2, 1/2, −1/2]]",
+          "math": [
+            {
+              "latex": "A^{-1} = (A^{2}-3I_{3})/2 = \\begin{bmatrix}-\\frac{1}{2} & \\frac{1}{2} & \\frac{1}{2} \\\\ \\frac{1}{2} & -\\frac{1}{2} & \\frac{1}{2} \\\\ \\frac{1}{2} & \\frac{1}{2} & -\\frac{1}{2}\\end{bmatrix}",
+              "fallback": "A⁻¹ = (A²−3I₃)/2 = [[−1/2, 1/2, 1/2; 1/2, −1/2, 1/2; 1/2, 1/2, −1/2]]",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "A⁻¹ = [[1|2]] (A² − 3I) = [[−1/2, 1/2, 1/2; 1/2, −1/2, 1/2; 1/2, 1/2, −1/2]]",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p16; PDF p24"
+      "reference": "2025 revised English Volume I; printed p16; PDF p24",
+      "questionMath": {
+        "en": [
+          "If A = ",
+          {
+            "latex": "\\begin{bmatrix}0 & 1 & 1 \\\\ 1 & 0 & 1 \\\\ 1 & 1 & 0\\end{bmatrix}",
+            "fallback": "[[0, 1, 1; 1, 0, 1; 1, 1, 0]]",
+            "display": true
+          },
+          ", show that A⁻¹ = ",
+          {
+            "latex": "\\frac{1}{2}",
+            "fallback": "[[1|2]]",
+            "display": true
+          },
+          " (A² − 3I)."
+        ]
+      },
+      "answerMath": {
+        "latex": "A^{-1} = \\frac{1}{2} (A^{2} - 3I) = \\begin{bmatrix}-\\frac{1}{2} & \\frac{1}{2} & \\frac{1}{2} \\\\ \\frac{1}{2} & -\\frac{1}{2} & \\frac{1}{2} \\\\ \\frac{1}{2} & \\frac{1}{2} & -\\frac{1}{2}\\end{bmatrix}",
+        "fallback": "A⁻¹ = [[1|2]] (A² − 3I) = [[−1/2, 1/2, 1/2; 1/2, −1/2, 1/2; 1/2, 1/2, −1/2]]",
+        "display": true
+      }
     },
     {
       "id": "g12-ch1-ex1.1-q15",
@@ -2256,25 +2964,99 @@
       "steps": [
         {
           "en": "The message is grouped into row vectors, so decrypt by multiplying each row on the right by the inverse of the encryption matrix.",
-          "eq": "|A| = −1+2 = 1; A⁻¹ = [[1, 1; −2, −1]]"
+          "eq": "|A| = −1+2 = 1; A⁻¹ = [[1, 1; −2, −1]]",
+          "math": [
+            {
+              "latex": "\\lvert A\\rvert  = -1+2 = 1",
+              "fallback": "|A| = −1+2 = 1",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "A^{-1} = \\begin{bmatrix}1 & 1 \\\\ -2 & -1\\end{bmatrix}",
+              "fallback": "A⁻¹ = [[1, 1; −2, −1]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Decode the first row with row-column dot products.",
-          "eq": "[[2, −3]]A⁻¹ = [[2+6, 2+3]] = [[8, 5]]"
+          "eq": "[[2, −3]]A⁻¹ = [[2+6, 2+3]] = [[8, 5]]",
+          "math": [
+            {
+              "latex": "\\begin{bmatrix}2 & -3\\end{bmatrix}A^{-1} = \\begin{bmatrix}2+6 & 2+3\\end{bmatrix} = \\begin{bmatrix}8 & 5\\end{bmatrix}",
+              "fallback": "[[2, −3]]A⁻¹ = [[2+6, 2+3]] = [[8, 5]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Decode the second row in the same order.",
-          "eq": "[[20, 4]]A⁻¹ = [[20−8, 20−4]] = [[12, 16]]"
+          "eq": "[[20, 4]]A⁻¹ = [[20−8, 20−4]] = [[12, 16]]",
+          "math": [
+            {
+              "latex": "\\begin{bmatrix}20 & 4\\end{bmatrix}A^{-1} = \\begin{bmatrix}20-8 & 20-4\\end{bmatrix} = \\begin{bmatrix}12 & 16\\end{bmatrix}",
+              "fallback": "[[20, 4]]A⁻¹ = [[20−8, 20−4]] = [[12, 16]]",
+              "display": true
+            }
+          ]
         },
         {
           "en": "Map the numbers back to letters in sequence. Re-encrypting [8,5] and [12,16] returns the original rows.",
-          "eq": "8 → H; 5 → E; 12 → L; 16 → P"
+          "eq": "8 → H; 5 → E; 12 → L; 16 → P",
+          "math": [
+            {
+              "latex": "8 \\to  H",
+              "fallback": "8 → H",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "5 \\to  E",
+              "fallback": "5 → E",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "12 \\to  L",
+              "fallback": "12 → L",
+              "display": true
+            },
+            "; ",
+            {
+              "latex": "16 \\to  P",
+              "fallback": "16 → P",
+              "display": true
+            }
+          ]
         }
       ],
       "answer": "HELP",
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-      "reference": "2025 revised English Volume I; printed p16; PDF p24"
+      "reference": "2025 revised English Volume I; printed p16; PDF p24",
+      "questionMath": {
+        "en": [
+          "Decrypt the received encoded message ",
+          {
+            "latex": "\\begin{bmatrix}2 & -3\\end{bmatrix}",
+            "fallback": "[[2, −3]]",
+            "display": true
+          },
+          {
+            "latex": "\\begin{bmatrix}20 & 4\\end{bmatrix}",
+            "fallback": "[[20, 4]]",
+            "display": true
+          },
+          " with the encryption matrix ",
+          {
+            "latex": "\\begin{bmatrix}-1 & -1 \\\\ 2 & 1\\end{bmatrix}",
+            "fallback": "[[−1, −1; 2, 1]]",
+            "display": true
+          },
+          " and the decryption matrix as its inverse, where the system of codes are described by the numbers 1-26 to the letters A–Z respectively, and the number 0 to a blank space."
+        ]
+      }
     }
   ],
   "mapping": [
