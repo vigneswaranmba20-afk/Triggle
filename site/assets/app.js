@@ -240,7 +240,8 @@
      const title=document.createElement('strong');title.textContent=ui('chapter')+' '+chapter.number+' · '+tr(chapter.title);
      const meta=document.createElement('small');
      const interactiveStages=chapter.id==='g9-ch1'?window.TRIGGLE_SET_PATH?.stages:
-       chapter.id==='g9-ch2'?window.TRIGGLE_REAL_PATH?.stages:null;
+       chapter.id==='g9-ch2'?window.TRIGGLE_REAL_PATH?.stages:
+       chapter.id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:null;
      const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
      const practiceCount=all.length;
      const grade9Journey=chapter.id==='g9-ch1'||chapter.id==='g9-ch2';
@@ -282,6 +283,7 @@
     window.TriggleChapterHub.mount(container,{
       chapter,grade,lang,section:chapterSection,questions:chapterItems(chapter),
       sources:curriculum.sources||[],initialConcept:conceptIndex,
+      onConcept:(index,replace)=>{conceptIndex=index;updateUrl(replace);},
       onSection:(key)=>openChapterSection(key,chapter),
       onQuestion:selectLesson,onClass:()=>changeGrade(grade),onHome:goHome
     });
