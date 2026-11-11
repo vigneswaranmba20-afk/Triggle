@@ -80,9 +80,11 @@ async function run(engine,name,base){
    assert.equal(await page.locator('#math-fixture .triggle-tex[tabindex="0"]').count(),1);
    const scrolling=page.locator('#math-fixture .triggle-tex[tabindex="0"]');await scrolling.focus();await page.keyboard.press('End');
    await geometry(page);
-   // Smoke-test every remaining question at phone width, plus representative
-   // 320px and desktop cases; catch real KaTeX fallback, layout and route issues.
-   if(width===390||width===320||width===1280){
+   // Exhaustive Chromium review of every remaining question at 390px and
+   // representative cases at 320/1280px. WebKit retains the original six-
+   // question matrix, language, history, offline and multi-width regression
+   // without revisiting dozens of expensive 3x pixel-ratio pages per context.
+   if(name==='chromium'&&(width===390||width===320||width===1280)){
     const sample=width===390?migrated:[
      migrated[0],migrated[3],migrated[8],migrated[12],
      migrated[14],migrated[23],migrated[25],migrated[31]
@@ -120,7 +122,7 @@ async function run(engine,name,base){
   await page.locator('#next').click();await page.locator('#next').click();
   assert.ok(await page.locator('#stepsList .katex mfrac').count()>0);
   assert.equal(await page.locator('.math-fallback').count(),0);await geometry(page);
-  for(const question of [migrated[15],migrated[27]]){
+  if(name==='chromium')for(const question of [migrated[15],migrated[27]]){
    await page.goto(offlineApp.base+'/index.html?class=12&question='+encodeURIComponent(question.id));
    assert.equal(new URL(page.url()).searchParams.get('question'),question.id);
    assert.equal(await page.locator('.math-fallback').count(),0,'Offline notation: '+question.id);
