@@ -8,7 +8,7 @@ const twelveExercises=manifest.grades.find(g=>g.grade===12).chapters[0].exercise
 const ex11=twelveExercises.find(e=>e.id==='1.1');
 // A changed module awaits a new live hash verification; retain all 21 source-verified tasks.
 assert.equal(ex11.verifiedTasks,21);
-assert.equal(manifest.summary.verifiedDeployedTasks,ex11.stages.deployed?55:34);assert.equal(manifest.summary.knownRemainingTasks,53);
+assert.equal(manifest.summary.verifiedDeployedTasks,manifest.grades.flatMap(g=>g.chapters).flatMap(c=>c.exercises).filter(e=>e.stages.deployed).reduce((n,e)=>n+e.verifiedTasks,0));assert.equal(manifest.summary.knownRemainingTasks,53);
 if(!ex11.stages.deployed)assert.equal(ex11.status,'Awaiting verification');
 const twelve=manifest.grades.find(g=>g.grade===12).chapters[0];assert.equal(twelve.totalTasks,95);assert.equal(twelve.verifiedTasks,42);assert.equal(twelve.missingTasks,53);
 const task=manifest.actions[0];assert.equal(task.grade,12);assert.equal(task.exercise,'1.4');assert.equal(task.startingQuestion,'Q1(i)');assert.deepEqual(task.scope,['Q1(i)','Q1(ii)','Q1(iii)','Q1(iv)','Q2','Q3','Q4','Q5']);
