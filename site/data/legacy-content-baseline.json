@@ -133,13 +133,16 @@
       "sha256": "f29d4c0e0d9f2f38b68779a3141bc211c18034b3c54357b60ab0d98c5f1aaacc"
     },
     "assets/deep-lessons.js": {
-      "sha256": "dafab61798e933211866ecd941271b1adae09129187aac48d6d8dd54cf4644c8"
+      "sha256": "dafab61798e933211866ecd941271b1adae09129187aac48d6d8dd54cf4644c8",
+      "archivedAs": "docs/history/discontinued-explanation-modes/deep-lessons.js"
     },
     "assets/deep-experience.js": {
-      "sha256": "cb731036c8cb7924df4ec64a78ecfa63a9ac50ed5967aaab0116e59a418534c4"
+      "sha256": "cb731036c8cb7924df4ec64a78ecfa63a9ac50ed5967aaab0116e59a418534c4",
+      "archivedAs": "docs/history/discontinued-explanation-modes/deep-experience.js"
     },
     "assets/guided-lessons.js": {
-      "sha256": "14768f974d0cabd5134735789c864b1331e4feef9f785a38c34b906d144d0c58"
+      "sha256": "14768f974d0cabd5134735789c864b1331e4feef9f785a38c34b906d144d0c58",
+      "archivedAs": "docs/history/discontinued-explanation-modes/guided-lessons.js"
     },
     "assets/visual-lessons.js": {
       "sha256": "ece6303557d19bf5dcd36c8a3d44f4dbe2bbeb25ad0842ecd204a1ffc366c31b"

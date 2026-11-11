@@ -70,20 +70,15 @@ vm.runInNewContext(read('assets/real-number-line.js'),sandbox,{filename:'assets/
 const graphic=sandbox.window.TriggleDraw.drawClassic({demo:{kind:'real-number-line',target:Math.sqrt(3),min:1,max:2,label:'√3'},ref:'Example 2.8',title:'Number line'});
 assert.match(graphic,/<svg/);
 assert.match(graphic,/√3/);
-vm.runInNewContext(read('assets/deep-lessons.js'),sandbox,{filename:'deep-lessons.js',timeout:5000});
-vm.runInNewContext(read('assets/real-numbers-deep.js'),sandbox,{filename:'real-numbers-deep.js',timeout:5000});
 const hard=items.find(x=>x.id==='g9-ch2-example-5');
-const easy=items.find(x=>x.id==='g9-ch2-example-4');
-assert.equal(hard.difficulty,'hard');
-assert.ok(sandbox.window.TriggleDeep.hasLesson(hard.id),'hard problem has detailed view');
-assert.ok(sandbox.window.TriggleDeep.build(hard,'ta').stages.length>hard.steps.length,'deep Tamil stage coverage');
-assert.ok(!sandbox.window.TriggleDeep.hasLesson(easy.id),'no detailed view on easy problem');
+assert.equal(hard.difficulty,'hard','Preserve reviewed difficulty in authored record');
+assert.ok(hard.steps.length>0&&hard.steps.every(s=>s.en&&s.ta),'Canonical bilingual working remains');
 const index=read('index.html');
 for(const p of scripts.slice(2)){
  assert.ok(index.includes(p),'missing script: '+p);
  assert.ok(index.indexOf(p)<index.indexOf('assets/app.js'),'script after app: '+p);
 }
-assert.ok(index.includes('assets/real-numbers-deep.js'));
+assert.ok(!index.includes('assets/real-numbers-deep.js'),'Removed detailed renderer is not loaded');
 assert.ok(index.includes('assets/real-number-line.js'));
 const sw=read('service-worker.js');
 assert.ok(sw.includes('assets/real-number-line.js'));

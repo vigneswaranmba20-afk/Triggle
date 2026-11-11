@@ -178,8 +178,12 @@ function validatePreservation(root = siteRoot) {
   const baseline = JSON.parse(fs.readFileSync(path.join(root, 'data/legacy-content-baseline.json'), 'utf8'));
   if (!/^[0-9a-f]{40}$/.test(baseline.baseCommit || '')) errors.push('Preservation baseline: missing base commit');
   for (const [relative, entry] of Object.entries(baseline.files || {})) {
-    const file = path.resolve(root, relative);
-    if (!file.startsWith(root + path.sep)) { errors.push('Preservation baseline: path escapes site: ' + relative); continue; }
+    const archived = entry.archivedAs;
+    if (archived && !/^docs\/history\/discontinued-explanation-modes\/[a-z-]+\.js$/.test(archived)) {
+      errors.push('Invalid preservation archive path: ' + relative); continue;
+    }
+    const file = archived ? path.resolve(root, '..', archived) : path.resolve(root, relative);
+    if (!archived && !file.startsWith(root + path.sep)) { errors.push('Preservation baseline: path escapes site: ' + relative); continue; }
     if (!fs.existsSync(file)) { errors.push('Preserved file missing: ' + relative); continue; }
     const content = fs.readFileSync(file);
     if (crypto.createHash('sha256').update(content).digest('hex') !== entry.sha256) errors.push('Preserved content changed: ' + relative);

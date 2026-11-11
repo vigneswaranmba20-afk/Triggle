@@ -3,7 +3,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const read=p=>fs.readFileSync('site/'+p,'utf8');
 const css=read('assets/reader-pin.css'),html=read('index.html'),app=read('assets/app.js'),js=read('assets/quiet-reader.js'),sw=read('service-worker.js');
-assert.match(html,/reader-pin\.css\?v=adaptive-reader-1/);
+assert.match(html,/reader-pin\.css\?v=standard-20261111/);
 assert.match(html,/id="questionJump" hidden/);
 assert.match(html,/id="stepsRegion" role="region" tabindex="0"/);
 assert.match(html,/id="questionText" class="question-text" tabindex="0"/);

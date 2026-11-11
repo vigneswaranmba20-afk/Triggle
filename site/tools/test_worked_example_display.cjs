@@ -15,7 +15,7 @@ for(const lang of ['en','ta']){
  const v=get(item,lang);
  assert.ok(v,lang+' view missing');
  assert.equal((v.question.match(/class="twd-question-part"/g)||[]).length,0,lang+' introduction must not bury four questions before their answers');
- assert.equal((v.pinnedQuestion.match(/class="twd-question-part"/g)||[]).length,4,lang+' detailed view keeps all four questions');
+ assert.equal((v.pinnedQuestion.match(/class="twd-question-part"/g)||[]).length,4,lang+' complete question retains all four parts');
  assert.equal((v.steps.match(/class="twd-question-part"/g)||[]).length,4,lang+' each question appears beside its solution');
  assert.equal((v.steps.match(/class="worked-step twd-worked-step"/g)||[]).length,4,lang+' four authored parts with reasoning');
  assert.equal((v.answer.match(/class="twd-final-row"/g)||[]).length,4,lang+' four scan-friendly answers');
@@ -70,6 +70,6 @@ assert.ok(app.includes("window.TriggleWorkedDisplay?.get(current,lang)"),'Main a
 assert.ok(app.includes("if(authored){")&&app.includes("'twd-lesson'"),'Authored layout only when supported');
 assert.ok(css.includes('.twd-question-parts')&&css.includes('.twd-derivations')&&css.includes('.twd-final-values'),'Spacing classes exist');
 assert.ok(app.includes("'answerBox').hidden=true"),'The repeated summary must be hidden after paired solutions');
-assert.ok(app.includes("?.pinnedQuestion||math(tr(current.q))"),'Detailed view keeps the original complete question');
+assert.ok(!app.includes("guidedQuestion"),'No duplicate detailed question view');
 assert.ok(css.includes('.twd-question-answer-pair'),'Paired question-answer styles must exist');
 console.log('PASS: rich bilingual Worked Example 2.12, 4 question-answer pairs, 8 conclusions, offline hook and independent identities');

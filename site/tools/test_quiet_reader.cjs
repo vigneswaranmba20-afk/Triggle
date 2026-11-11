@@ -13,7 +13,7 @@ assert.match(css,/#figureBtn:not\(\[hidden\]\)\{[\s\S]*display:inline-flex!impor
 assert.match(css,/#inlineFigure:not\(\[hidden\]\)\{[\s\S]*display:block!important/);
 assert.match(css,/#questionNavDock\{[\s\S]*visibility:visible!important/);
 assert.doesNotMatch(css,/reader-peek:not\(\.reader-options-visible\)/);
-assert.match(html,/quiet-reader\.css\?v=static-reader-1/);
+assert.match(html,/quiet-reader\.css\?v=standard-20261111/);
 assert.match(html,/quiet-reader\.js\?v=adaptive-reader-1/);
 assert.doesNotMatch(html,/focus-navigation\.js|id="focusNavToggle"/);
 assert.doesNotMatch(html,/class="reference-line"|class="bottom-extras"/);

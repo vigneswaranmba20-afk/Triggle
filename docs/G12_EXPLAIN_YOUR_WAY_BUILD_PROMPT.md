@@ -1,3 +1,5 @@
+> **Discontinued design (2026-11-11):** retained as historical research. Exam/Detailed/Fun presentation and hard-only Detailed views are no longer product requirements. Use [the standard-solution direction](STANDARD_SOLUTIONS_2026-11-11.md).
+
 # Triggle reusable build prompt: Grade 12 medium/hard “Explain Your Way”
 Version 1.1 — 2026-11-11 (product choice updated: Exam + Detailed)
 Use with the audited design decision documented in `docs/G12_EXPLANATION_40_APPROACH_SIMULATION.md`.
