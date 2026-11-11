@@ -102,6 +102,23 @@ async function run(engine,name,base){
    assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);await ctx.close();
    console.log('PASS '+name+' mathematical reader at '+width+'px');
   }
+  // Fresh-context WebKit smoke test for each migrated exercise family. Use
+  // deviceScaleFactor 1 to avoid unrelated 3x raster-memory stress from the
+  // extensive original six-question regression.
+  if(name==='webkit'){
+   for(const question of [migrated[0],migrated[15],migrated[27]]){
+    const clean=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,serviceWorkers:'block'});
+    try{
+     const sample=await clean.newPage();
+     await sample.goto(base+'/index.html?class=12&question='+encodeURIComponent(question.id),{waitUntil:'domcontentloaded'});
+     await sample.locator('#stepsList .katex').first().waitFor();
+     assert.equal(await sample.locator('.math-fallback').count(),0,'Fresh WebKit KaTeX: '+question.id);
+     assert.ok(await sample.locator('#stepsList mtable').count()>0,'Fresh WebKit matrices: '+question.id);
+     await geometry(sample);
+    }finally{await clean.close();}
+   }
+   console.log('PASS webkit: isolated Exercise 1.1, 1.2 and 1.3 rich math routes at 390px.');
+  }
   // Cold cache includes *every* KaTeX font, even those absent from the first lesson.
   const offlineApp=await server();
   const ctx=await browser.newContext({viewport:{width:390,height:844},serviceWorkers:'allow'}),page=await ctx.newPage();
