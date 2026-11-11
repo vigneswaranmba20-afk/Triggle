@@ -983,7 +983,7 @@ async function main() {
         await selectChapter(page, 'g9-ch6');
         assert.equal(await page.locator('.hub-section-card[data-hub-section="examples"]').count(),0);
         await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-        assert.match(await page.locator('#questionHead').innerText(),/Exercise 6\.1/);
+        assert.match(await page.locator('#questionHead').innerText(),/(?:Exercise|பயிற்சி) 6\.1/);
         assert.equal(await page.locator('#lessonCard').isVisible(), true);
         await noOverflow(page, `${width}px exercise from chapter`);
         await page.close();
