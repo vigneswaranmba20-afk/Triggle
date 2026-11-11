@@ -82,4 +82,51 @@ for(const [file,expected] of Object.entries(manifest.files))assert.equal(require
 for(const file of ['katex.min.js','katex.min.css','LICENSE',...fs.readdirSync(path.join(vendor,'fonts')).map(f=>'fonts/'+f)])assert.ok(sw.includes('./assets/vendor/katex/'+file),'Precache '+file);
 for(const match of fs.readFileSync(path.join(vendor,'katex.min.css'),'utf8').matchAll(/url\(([^)]+)\)/g))assert.ok(fs.existsSync(path.join(vendor,match[1])));
 assert.equal(require('../../package.json').dependencies.katex,'0.16.22');
+
+// All 32 newly migrated Chapter 1 records must retain canonical text and render
+// through locally pinned KaTeX; no hidden dependency on a network renderer.
+let remainingCount=0, formulaCount=0, matrixCount=0;
+for(const [file,skip] of [
+ ['g12-ch1-ex1-1.json',6],['g12-ch1-ex1-2.json',0],['g12-ch1-ex1-3.json',0]
+]){
+ const source=require('../../docs/curriculum/grade-12/batches/'+file);
+ for(const r of source.records.slice(skip)){
+  remainingCount++;
+  const mapping=source.mapping.find(m=>m.recordId===r.id);
+  assert.equal(r.q.en,mapping.sourceText.en,r.id+': original textbook wording');
+  const fallbackOf=v=>Array.isArray(v)?v.map(fallbackOf).join(''):typeof v==='string'?v:v.fallback;
+  const validate=v=>{
+   if(Array.isArray(v))return v.forEach(validate);
+   if(!v||typeof v!=='object')return;
+   if('latex' in v){
+    const html=renderLatex(v.latex,{displayMode:v.display===true,fallback:v.fallback});
+    assert.ok(!html.includes('data-math-error'),r.id+': invalid TeX '+v.latex);
+    assert.ok(html.includes('<math'),r.id+': missing semantic MathML');
+    if(v.latex.includes('bmatrix')||v.latex.includes('\\begin{array}')){
+     assert.ok(html.includes('<mtable'),r.id+': missing semantic matrix');
+     matrixCount++;
+    }
+    formulaCount++;
+   }else Object.values(v).forEach(validate);
+  };
+  if(r.questionMath){
+   assert.equal(fallbackOf(r.questionMath.en),r.q.en,r.id+': question fallback');
+   validate(r.questionMath);
+  }
+  for(const s of r.steps)if(s.eq){
+   assert.ok(s.math,r.id+': missing structured step');
+   assert.equal(fallbackOf(s.math),s.eq,r.id+': step fallback');
+   validate(s.math);
+  }
+  if(r.answerMath){
+   assert.equal(fallbackOf(r.answerMath),r.answer,r.id+': answer fallback');
+   validate(r.answerMath);
+  }
+  assert.ok(r.steps.some(s=>s.math),r.id+': expected migrated solution');
+ }
+}
+assert.equal(remainingCount,32);
+assert.ok(formulaCount>250&&matrixCount>75,'Expected complete mathematical typesetting coverage');
+console.log('PASS 32 migrated Grade 12 records, '+formulaCount+' mathematical formulas, source wording, step/answer fallbacks and semantic matrices.');
+
 console.log('PASS structured KaTeX notation, safe fallback, mixed Tamil/English, exact source text, cofactor signs/transpose/two-sided identity, local assets and cache.');
