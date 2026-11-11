@@ -1,3 +1,21 @@
+# Checkpoint 2 — remaining Grade 12 Chapter 1 matrix notation (2026-11-11)
+
+This branch migrates the remaining **32 of 38** already-published Chapter 1 records from the legacy visual notation to explicitly authored local KaTeX. Checkpoint 1 below documents the preceding six-record release and should be read as **historical status at that point**, not the current branch's counts. All 38 records now have structured mathematics in the branch.
+
+| Exercise | Newly migrated | Source (English 2025 Volume I) |
+| --- | ---: | --- |
+| 1.1 | 13 (Q3–Q15) | printed pp. 15–16, PDF pp. 23–24 |
+| 1.2 | 11 (Q1(i–v), Q2(i–iii), Q3(i–iii)) | printed p. 27, PDF p. 35 |
+| 1.3 | 8 (Q1(i–iv), Q2–Q5) | printed p. 33, PDF p. 41 |
+
+Preserved: all exact English canonical question strings, worked-step equation strings, answers, immutable question IDs, source mappings, chapter order and student progress keys. Explicit display formulas include proper matrices, semantic fractions, integer powers and transposes, signed minors, determinant/inverse operations and correctly separated Gauss–Jordan augmented blocks. They use only the KaTeX 0.16.22 assets locally bundled in checkpoint 1. The newly authored `questionMath`, `steps[].math` and `answerMath` fields have readable exact-text fallbacks. The proof hash snapshots were renewed for the same underlying calculations; independent rational math verifiers are unchanged.
+
+The original English and Tamil 2025-revised Volume I PDFs are available from the user-provided Drive references, and their exercise texts were consulted. Previous English source-page and independent arithmetic evidence remains the basis of the exact-source manifests. **No new complete Tamil translations were authored**; their status remains English-only/Tamil editorial pending. A Tamil textbook being available does not certify Tamil lesson parity, and the 2026–27 edition is not independently certified.
+
+A new full-inventory pinned-KaTeX regression check validates all 32 rich formulas, exact wording and fallbacks. Source, mathematical, CI, browser, security and live Pages verification must be recorded separately; a branch or an open PR is **not** a live deployment. The offline cache and three module URL revisions were advanced for an eventual verified release.
+
+---
+
 # Locally bundled mathematical typesetting — checkpoint 1
 
 Scope: Grade 12 Chapter 1, Exercise 1.1 Q1(i–iii) and Q2(i–iii), plus the shared Grades 9–12 rendering foundation. Question IDs, exact source wording, canonical answers, chapter order, storage keys, Grade 10 extraction schedules and PWA routes are preserved. Chapter 1 is not complete.
