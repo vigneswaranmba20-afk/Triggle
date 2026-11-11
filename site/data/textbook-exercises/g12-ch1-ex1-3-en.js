@@ -25,49 +25,153 @@ const entries=[
     "steps": [
       {
         "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
-        "eq": "AX = B; A = [[2, 5; 1, 2]]; B = [[−2; −3]]"
+        "eq": "AX = B; A = [[2, 5; 1, 2]]; B = [[−2; −3]]",
+        "math": [
+          {
+            "latex": "AX = B",
+            "fallback": "AX = B",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A = \\begin{bmatrix}2 & 5 \\\\ 1 & 2\\end{bmatrix}",
+            "fallback": "A = [[2, 5; 1, 2]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "B = \\begin{bmatrix}-2 \\\\ -3\\end{bmatrix}",
+            "fallback": "B = [[−2; −3]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
-        "eq": "|A| = -1; X = A⁻¹B"
+        "eq": "|A| = -1; X = A⁻¹B",
+        "math": [
+          {
+            "latex": "\\lvert A\\rvert  = -1",
+            "fallback": "|A| = -1",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "X = A^{-1}B",
+            "fallback": "X = A⁻¹B",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C11 = (−1)^(1+1) × (2) = 2"
+        "eq": "C11 = (−1)^(1+1) × (2) = 2",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^(1+1) \\times  (2) = 2",
+            "fallback": "C11 = (−1)^(1+1) × (2) = 2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C12 = (−1)^(1+2) × (1) = -1"
+        "eq": "C12 = (−1)^(1+2) × (1) = -1",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^(1+2) \\times  (1) = -1",
+            "fallback": "C12 = (−1)^(1+2) × (1) = -1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C21 = (−1)^(2+1) × (5) = -5"
+        "eq": "C21 = (−1)^(2+1) × (5) = -5",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^(2+1) \\times  (5) = -5",
+            "fallback": "C21 = (−1)^(2+1) × (5) = -5",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C22 = (−1)^(2+2) × (2) = 2"
+        "eq": "C22 = (−1)^(2+2) × (2) = 2",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^(2+2) \\times  (2) = 2",
+            "fallback": "C22 = (−1)^(2+2) × (2) = 2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Transpose the cofactors and divide by the determinant.",
-        "eq": "adj A = [[2, −5; −1, 2]]; A⁻¹ = [[−2, 5; 1, −2]]"
+        "eq": "adj A = [[2, −5; −1, 2]]; A⁻¹ = [[−2, 5; 1, −2]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj} A = \\begin{bmatrix}2 & -5 \\\\ -1 & 2\\end{bmatrix}",
+            "fallback": "adj A = [[2, −5; −1, 2]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A^{-1} = \\begin{bmatrix}-2 & 5 \\\\ 1 & -2\\end{bmatrix}",
+            "fallback": "A⁻¹ = [[−2, 5; 1, −2]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
-        "eq": "(-2) × (-2) + (5) × (-3) = -11"
+        "eq": "(-2) × (-2) + (5) × (-3) = -11",
+        "math": [
+          {
+            "latex": "(-2) \\times  (-2) + (5) \\times  (-3) = -11",
+            "fallback": "(-2) × (-2) + (5) × (-3) = -11",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
-        "eq": "(1) × (-2) + (-2) × (-3) = 4"
+        "eq": "(1) × (-2) + (-2) × (-3) = 4",
+        "math": [
+          {
+            "latex": "(1) \\times  (-2) + (-2) \\times  (-3) = 4",
+            "fallback": "(1) × (-2) + (-2) × (-3) = 4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Substitution in every original row confirms the solution.",
-        "eq": "AX = [[−2; −3]] = B"
+        "eq": "AX = [[−2; −3]] = B",
+        "math": [
+          {
+            "latex": "AX = \\begin{bmatrix}-2 \\\\ -3\\end{bmatrix} = B",
+            "fallback": "AX = [[−2; −3]] = B",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "x = -11, y = 4.",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    "reference": "2025 revised English Volume I; printed p33; PDF p41",
+    "questionMath": {
+      "en": [
+        "Solve the following system of linear equations by matrix inversion method: (i) 2x + 5y = −2, x + 2y = −3"
+      ]
+    },
+    "answerMath": {
+      "latex": "x = -11, y = 4.",
+      "fallback": "x = -11, y = 4.",
+      "display": true
+    }
   },
   {
     "id": "g12-ch1-ex1.3-q1-ii",
@@ -90,49 +194,153 @@ const entries=[
     "steps": [
       {
         "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
-        "eq": "AX = B; A = [[2, −1; 3, 2]]; B = [[8; −2]]"
+        "eq": "AX = B; A = [[2, −1; 3, 2]]; B = [[8; −2]]",
+        "math": [
+          {
+            "latex": "AX = B",
+            "fallback": "AX = B",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A = \\begin{bmatrix}2 & -1 \\\\ 3 & 2\\end{bmatrix}",
+            "fallback": "A = [[2, −1; 3, 2]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "B = \\begin{bmatrix}8 \\\\ -2\\end{bmatrix}",
+            "fallback": "B = [[8; −2]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
-        "eq": "|A| = 7; X = A⁻¹B"
+        "eq": "|A| = 7; X = A⁻¹B",
+        "math": [
+          {
+            "latex": "\\lvert A\\rvert  = 7",
+            "fallback": "|A| = 7",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "X = A^{-1}B",
+            "fallback": "X = A⁻¹B",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C11 = (−1)^(1+1) × (2) = 2"
+        "eq": "C11 = (−1)^(1+1) × (2) = 2",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^(1+1) \\times  (2) = 2",
+            "fallback": "C11 = (−1)^(1+1) × (2) = 2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C12 = (−1)^(1+2) × (3) = -3"
+        "eq": "C12 = (−1)^(1+2) × (3) = -3",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^(1+2) \\times  (3) = -3",
+            "fallback": "C12 = (−1)^(1+2) × (3) = -3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C21 = (−1)^(2+1) × (-1) = 1"
+        "eq": "C21 = (−1)^(2+1) × (-1) = 1",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^(2+1) \\times  (-1) = 1",
+            "fallback": "C21 = (−1)^(2+1) × (-1) = 1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C22 = (−1)^(2+2) × (2) = 2"
+        "eq": "C22 = (−1)^(2+2) × (2) = 2",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^(2+2) \\times  (2) = 2",
+            "fallback": "C22 = (−1)^(2+2) × (2) = 2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Transpose the cofactors and divide by the determinant.",
-        "eq": "adj A = [[2, 1; −3, 2]]; A⁻¹ = [[2/7, 1/7; −3/7, 2/7]]"
+        "eq": "adj A = [[2, 1; −3, 2]]; A⁻¹ = [[2/7, 1/7; −3/7, 2/7]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj} A = \\begin{bmatrix}2 & 1 \\\\ -3 & 2\\end{bmatrix}",
+            "fallback": "adj A = [[2, 1; −3, 2]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A^{-1} = \\begin{bmatrix}\\frac{2}{7} & \\frac{1}{7} \\\\ -\\frac{3}{7} & \\frac{2}{7}\\end{bmatrix}",
+            "fallback": "A⁻¹ = [[2/7, 1/7; −3/7, 2/7]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
-        "eq": "(2/7) × (8) + (1/7) × (-2) = 2"
+        "eq": "(2/7) × (8) + (1/7) × (-2) = 2",
+        "math": [
+          {
+            "latex": "(\\frac{2}{7}) \\times  (8) + (\\frac{1}{7}) \\times  (-2) = 2",
+            "fallback": "(2/7) × (8) + (1/7) × (-2) = 2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
-        "eq": "(-3/7) × (8) + (2/7) × (-2) = -4"
+        "eq": "(-3/7) × (8) + (2/7) × (-2) = -4",
+        "math": [
+          {
+            "latex": "(-\\frac{3}{7}) \\times  (8) + (\\frac{2}{7}) \\times  (-2) = -4",
+            "fallback": "(-3/7) × (8) + (2/7) × (-2) = -4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Substitution in every original row confirms the solution.",
-        "eq": "AX = [[8; −2]] = B"
+        "eq": "AX = [[8; −2]] = B",
+        "math": [
+          {
+            "latex": "AX = \\begin{bmatrix}8 \\\\ -2\\end{bmatrix} = B",
+            "fallback": "AX = [[8; −2]] = B",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "x = 2, y = -4.",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    "reference": "2025 revised English Volume I; printed p33; PDF p41",
+    "questionMath": {
+      "en": [
+        "Solve the following system of linear equations by matrix inversion method: (ii) 2x − y = 8, 3x + 2y = −2"
+      ]
+    },
+    "answerMath": {
+      "latex": "x = 2, y = -4.",
+      "fallback": "x = 2, y = -4.",
+      "display": true
+    }
   },
   {
     "id": "g12-ch1-ex1.3-q1-iii",
@@ -155,73 +363,219 @@ const entries=[
     "steps": [
       {
         "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
-        "eq": "AX = B; A = [[2, 3, −1; 1, 1, 1; 3, −1, −1]]; B = [[9; 9; −1]]"
+        "eq": "AX = B; A = [[2, 3, −1; 1, 1, 1; 3, −1, −1]]; B = [[9; 9; −1]]",
+        "math": [
+          {
+            "latex": "AX = B",
+            "fallback": "AX = B",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A = \\begin{bmatrix}2 & 3 & -1 \\\\ 1 & 1 & 1 \\\\ 3 & -1 & -1\\end{bmatrix}",
+            "fallback": "A = [[2, 3, −1; 1, 1, 1; 3, −1, −1]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "B = \\begin{bmatrix}9 \\\\ 9 \\\\ -1\\end{bmatrix}",
+            "fallback": "B = [[9; 9; −1]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
-        "eq": "|A| = 16; X = A⁻¹B"
+        "eq": "|A| = 16; X = A⁻¹B",
+        "math": [
+          {
+            "latex": "\\lvert A\\rvert  = 16",
+            "fallback": "|A| = 16",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "X = A^{-1}B",
+            "fallback": "X = A⁻¹B",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C11 = (−1)^(1+1) × (0) = 0"
+        "eq": "C11 = (−1)^(1+1) × (0) = 0",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^(1+1) \\times  (0) = 0",
+            "fallback": "C11 = (−1)^(1+1) × (0) = 0",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C12 = (−1)^(1+2) × (-4) = 4"
+        "eq": "C12 = (−1)^(1+2) × (-4) = 4",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^(1+2) \\times  (-4) = 4",
+            "fallback": "C12 = (−1)^(1+2) × (-4) = 4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 3, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C13 = (−1)^(1+3) × (-4) = -4"
+        "eq": "C13 = (−1)^(1+3) × (-4) = -4",
+        "math": [
+          {
+            "latex": "C_{13} = (-1)^(1+3) \\times  (-4) = -4",
+            "fallback": "C13 = (−1)^(1+3) × (-4) = -4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C21 = (−1)^(2+1) × (-4) = 4"
+        "eq": "C21 = (−1)^(2+1) × (-4) = 4",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^(2+1) \\times  (-4) = 4",
+            "fallback": "C21 = (−1)^(2+1) × (-4) = 4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C22 = (−1)^(2+2) × (1) = 1"
+        "eq": "C22 = (−1)^(2+2) × (1) = 1",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^(2+2) \\times  (1) = 1",
+            "fallback": "C22 = (−1)^(2+2) × (1) = 1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 3, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C23 = (−1)^(2+3) × (-11) = 11"
+        "eq": "C23 = (−1)^(2+3) × (-11) = 11",
+        "math": [
+          {
+            "latex": "C_{23} = (-1)^(2+3) \\times  (-11) = 11",
+            "fallback": "C23 = (−1)^(2+3) × (-11) = 11",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C31 = (−1)^(3+1) × (4) = 4"
+        "eq": "C31 = (−1)^(3+1) × (4) = 4",
+        "math": [
+          {
+            "latex": "C_{31} = (-1)^(3+1) \\times  (4) = 4",
+            "fallback": "C31 = (−1)^(3+1) × (4) = 4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C32 = (−1)^(3+2) × (3) = -3"
+        "eq": "C32 = (−1)^(3+2) × (3) = -3",
+        "math": [
+          {
+            "latex": "C_{32} = (-1)^(3+2) \\times  (3) = -3",
+            "fallback": "C32 = (−1)^(3+2) × (3) = -3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 3, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C33 = (−1)^(3+3) × (-1) = -1"
+        "eq": "C33 = (−1)^(3+3) × (-1) = -1",
+        "math": [
+          {
+            "latex": "C_{33} = (-1)^(3+3) \\times  (-1) = -1",
+            "fallback": "C33 = (−1)^(3+3) × (-1) = -1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Transpose the cofactors and divide by the determinant.",
-        "eq": "adj A = [[0, 4, 4; 4, 1, −3; −4, 11, −1]]; A⁻¹ = [[0, 1/4, 1/4; 1/4, 1/16, −3/16; −1/4, 11/16, −1/16]]"
+        "eq": "adj A = [[0, 4, 4; 4, 1, −3; −4, 11, −1]]; A⁻¹ = [[0, 1/4, 1/4; 1/4, 1/16, −3/16; −1/4, 11/16, −1/16]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj} A = \\begin{bmatrix}0 & 4 & 4 \\\\ 4 & 1 & -3 \\\\ -4 & 11 & -1\\end{bmatrix}",
+            "fallback": "adj A = [[0, 4, 4; 4, 1, −3; −4, 11, −1]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A^{-1} = \\begin{bmatrix}0 & \\frac{1}{4} & \\frac{1}{4} \\\\ \\frac{1}{4} & \\frac{1}{16} & -\\frac{3}{16} \\\\ -\\frac{1}{4} & \\frac{11}{16} & -\\frac{1}{16}\\end{bmatrix}",
+            "fallback": "A⁻¹ = [[0, 1/4, 1/4; 1/4, 1/16, −3/16; −1/4, 11/16, −1/16]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
-        "eq": "(0) × (9) + (1/4) × (9) + (1/4) × (-1) = 2"
+        "eq": "(0) × (9) + (1/4) × (9) + (1/4) × (-1) = 2",
+        "math": [
+          {
+            "latex": "(0) \\times  (9) + (\\frac{1}{4}) \\times  (9) + (\\frac{1}{4}) \\times  (-1) = 2",
+            "fallback": "(0) × (9) + (1/4) × (9) + (1/4) × (-1) = 2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
-        "eq": "(1/4) × (9) + (1/16) × (9) + (-3/16) × (-1) = 3"
+        "eq": "(1/4) × (9) + (1/16) × (9) + (-3/16) × (-1) = 3",
+        "math": [
+          {
+            "latex": "(\\frac{1}{4}) \\times  (9) + (\\frac{1}{16}) \\times  (9) + (-\\frac{3}{16}) \\times  (-1) = 3",
+            "fallback": "(1/4) × (9) + (1/16) × (9) + (-3/16) × (-1) = 3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The third component of X is the dot product of row 3 of A⁻¹ with B.",
-        "eq": "(-1/4) × (9) + (11/16) × (9) + (-1/16) × (-1) = 4"
+        "eq": "(-1/4) × (9) + (11/16) × (9) + (-1/16) × (-1) = 4",
+        "math": [
+          {
+            "latex": "(-\\frac{1}{4}) \\times  (9) + (\\frac{11}{16}) \\times  (9) + (-\\frac{1}{16}) \\times  (-1) = 4",
+            "fallback": "(-1/4) × (9) + (11/16) × (9) + (-1/16) × (-1) = 4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Substitution in every original row confirms the solution.",
-        "eq": "AX = [[9; 9; −1]] = B"
+        "eq": "AX = [[9; 9; −1]] = B",
+        "math": [
+          {
+            "latex": "AX = \\begin{bmatrix}9 \\\\ 9 \\\\ -1\\end{bmatrix} = B",
+            "fallback": "AX = [[9; 9; −1]] = B",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "x = 2, y = 3, z = 4.",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    "reference": "2025 revised English Volume I; printed p33; PDF p41",
+    "questionMath": {
+      "en": [
+        "Solve the following system of linear equations by matrix inversion method: (iii) 2x + 3y − z = 9, x + y + z = 9, 3x − y − z = −1"
+      ]
+    },
+    "answerMath": {
+      "latex": "x = 2, y = 3, z = 4.",
+      "fallback": "x = 2, y = 3, z = 4.",
+      "display": true
+    }
   },
   {
     "id": "g12-ch1-ex1.3-q1-iv",
@@ -244,73 +598,219 @@ const entries=[
     "steps": [
       {
         "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
-        "eq": "AX = B; A = [[1, 1, 1; 6, −4, 5; 5, 2, 2]]; B = [[2; 31; 13]]"
+        "eq": "AX = B; A = [[1, 1, 1; 6, −4, 5; 5, 2, 2]]; B = [[2; 31; 13]]",
+        "math": [
+          {
+            "latex": "AX = B",
+            "fallback": "AX = B",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A = \\begin{bmatrix}1 & 1 & 1 \\\\ 6 & -4 & 5 \\\\ 5 & 2 & 2\\end{bmatrix}",
+            "fallback": "A = [[1, 1, 1; 6, −4, 5; 5, 2, 2]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "B = \\begin{bmatrix}2 \\\\ 31 \\\\ 13\\end{bmatrix}",
+            "fallback": "B = [[2; 31; 13]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
-        "eq": "|A| = 27; X = A⁻¹B"
+        "eq": "|A| = 27; X = A⁻¹B",
+        "math": [
+          {
+            "latex": "\\lvert A\\rvert  = 27",
+            "fallback": "|A| = 27",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "X = A^{-1}B",
+            "fallback": "X = A⁻¹B",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C11 = (−1)^(1+1) × (-18) = -18"
+        "eq": "C11 = (−1)^(1+1) × (-18) = -18",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^(1+1) \\times  (-18) = -18",
+            "fallback": "C11 = (−1)^(1+1) × (-18) = -18",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C12 = (−1)^(1+2) × (-13) = 13"
+        "eq": "C12 = (−1)^(1+2) × (-13) = 13",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^(1+2) \\times  (-13) = 13",
+            "fallback": "C12 = (−1)^(1+2) × (-13) = 13",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 3, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C13 = (−1)^(1+3) × (32) = 32"
+        "eq": "C13 = (−1)^(1+3) × (32) = 32",
+        "math": [
+          {
+            "latex": "C_{13} = (-1)^(1+3) \\times  (32) = 32",
+            "fallback": "C13 = (−1)^(1+3) × (32) = 32",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C21 = (−1)^(2+1) × (0) = 0"
+        "eq": "C21 = (−1)^(2+1) × (0) = 0",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^(2+1) \\times  (0) = 0",
+            "fallback": "C21 = (−1)^(2+1) × (0) = 0",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C22 = (−1)^(2+2) × (-3) = -3"
+        "eq": "C22 = (−1)^(2+2) × (-3) = -3",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^(2+2) \\times  (-3) = -3",
+            "fallback": "C22 = (−1)^(2+2) × (-3) = -3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 3, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C23 = (−1)^(2+3) × (-3) = 3"
+        "eq": "C23 = (−1)^(2+3) × (-3) = 3",
+        "math": [
+          {
+            "latex": "C_{23} = (-1)^(2+3) \\times  (-3) = 3",
+            "fallback": "C23 = (−1)^(2+3) × (-3) = 3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C31 = (−1)^(3+1) × (9) = 9"
+        "eq": "C31 = (−1)^(3+1) × (9) = 9",
+        "math": [
+          {
+            "latex": "C_{31} = (-1)^(3+1) \\times  (9) = 9",
+            "fallback": "C31 = (−1)^(3+1) × (9) = 9",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C32 = (−1)^(3+2) × (-1) = 1"
+        "eq": "C32 = (−1)^(3+2) × (-1) = 1",
+        "math": [
+          {
+            "latex": "C_{32} = (-1)^(3+2) \\times  (-1) = 1",
+            "fallback": "C32 = (−1)^(3+2) × (-1) = 1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 3, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C33 = (−1)^(3+3) × (-10) = -10"
+        "eq": "C33 = (−1)^(3+3) × (-10) = -10",
+        "math": [
+          {
+            "latex": "C_{33} = (-1)^(3+3) \\times  (-10) = -10",
+            "fallback": "C33 = (−1)^(3+3) × (-10) = -10",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Transpose the cofactors and divide by the determinant.",
-        "eq": "adj A = [[−18, 0, 9; 13, −3, 1; 32, 3, −10]]; A⁻¹ = [[−2/3, 0, 1/3; 13/27, −1/9, 1/27; 32/27, 1/9, −10/27]]"
+        "eq": "adj A = [[−18, 0, 9; 13, −3, 1; 32, 3, −10]]; A⁻¹ = [[−2/3, 0, 1/3; 13/27, −1/9, 1/27; 32/27, 1/9, −10/27]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj} A = \\begin{bmatrix}-18 & 0 & 9 \\\\ 13 & -3 & 1 \\\\ 32 & 3 & -10\\end{bmatrix}",
+            "fallback": "adj A = [[−18, 0, 9; 13, −3, 1; 32, 3, −10]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A^{-1} = \\begin{bmatrix}-\\frac{2}{3} & 0 & \\frac{1}{3} \\\\ \\frac{13}{27} & -\\frac{1}{9} & \\frac{1}{27} \\\\ \\frac{32}{27} & \\frac{1}{9} & -\\frac{10}{27}\\end{bmatrix}",
+            "fallback": "A⁻¹ = [[−2/3, 0, 1/3; 13/27, −1/9, 1/27; 32/27, 1/9, −10/27]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
-        "eq": "(-2/3) × (2) + (0) × (31) + (1/3) × (13) = 3"
+        "eq": "(-2/3) × (2) + (0) × (31) + (1/3) × (13) = 3",
+        "math": [
+          {
+            "latex": "(-\\frac{2}{3}) \\times  (2) + (0) \\times  (31) + (\\frac{1}{3}) \\times  (13) = 3",
+            "fallback": "(-2/3) × (2) + (0) × (31) + (1/3) × (13) = 3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
-        "eq": "(13/27) × (2) + (-1/9) × (31) + (1/27) × (13) = -2"
+        "eq": "(13/27) × (2) + (-1/9) × (31) + (1/27) × (13) = -2",
+        "math": [
+          {
+            "latex": "(\\frac{13}{27}) \\times  (2) + (-\\frac{1}{9}) \\times  (31) + (\\frac{1}{27}) \\times  (13) = -2",
+            "fallback": "(13/27) × (2) + (-1/9) × (31) + (1/27) × (13) = -2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The third component of X is the dot product of row 3 of A⁻¹ with B.",
-        "eq": "(32/27) × (2) + (1/9) × (31) + (-10/27) × (13) = 1"
+        "eq": "(32/27) × (2) + (1/9) × (31) + (-10/27) × (13) = 1",
+        "math": [
+          {
+            "latex": "(\\frac{32}{27}) \\times  (2) + (\\frac{1}{9}) \\times  (31) + (-\\frac{10}{27}) \\times  (13) = 1",
+            "fallback": "(32/27) × (2) + (1/9) × (31) + (-10/27) × (13) = 1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Substitution in every original row confirms the solution.",
-        "eq": "AX = [[2; 31; 13]] = B"
+        "eq": "AX = [[2; 31; 13]] = B",
+        "math": [
+          {
+            "latex": "AX = \\begin{bmatrix}2 \\\\ 31 \\\\ 13\\end{bmatrix} = B",
+            "fallback": "AX = [[2; 31; 13]] = B",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "x = 3, y = -2, z = 1.",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    "reference": "2025 revised English Volume I; printed p33; PDF p41",
+    "questionMath": {
+      "en": [
+        "Solve the following system of linear equations by matrix inversion method: (iv) x + y + z − 2 = 0, 6x − 4y + 5z − 31 = 0, 5x + 2y + 2z = 13"
+      ]
+    },
+    "answerMath": {
+      "latex": "x = 3, y = -2, z = 1.",
+      "fallback": "x = 3, y = -2, z = 1.",
+      "display": true
+    }
   },
   {
     "id": "g12-ch1-ex1.3-q2",
@@ -333,29 +833,226 @@ const entries=[
     "steps": [
       {
         "en": "Compute each product by multiplying rows of the first matrix by columns of the second.",
-        "eq": "(AB)₁₁ = −5+3+6 = 4; (AB)₁₂ = −5+2+3 = 0; (AB)₁₃ = −10+1+9 = 0; (AB)₂₁ = 7+3−10 = 0; (AB)₂₂ = 7+2−5 = 4; (AB)₂₃ = 14+1−15 = 0; (AB)₃₁ = 1−3+2 = 0; (AB)₃₂ = 1−2+1 = 0; (AB)₃₃ = 2−1+3 = 4; AB = 4I₃"
+        "eq": "(AB)₁₁ = −5+3+6 = 4; (AB)₁₂ = −5+2+3 = 0; (AB)₁₃ = −10+1+9 = 0; (AB)₂₁ = 7+3−10 = 0; (AB)₂₂ = 7+2−5 = 4; (AB)₂₃ = 14+1−15 = 0; (AB)₃₁ = 1−3+2 = 0; (AB)₃₂ = 1−2+1 = 0; (AB)₃₃ = 2−1+3 = 4; AB = 4I₃",
+        "math": [
+          {
+            "latex": "(AB)_{1}_{1} = -5+3+6 = 4",
+            "fallback": "(AB)₁₁ = −5+3+6 = 4",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(AB)_{1}_{2} = -5+2+3 = 0",
+            "fallback": "(AB)₁₂ = −5+2+3 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(AB)_{1}_{3} = -10+1+9 = 0",
+            "fallback": "(AB)₁₃ = −10+1+9 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(AB)_{2}_{1} = 7+3-10 = 0",
+            "fallback": "(AB)₂₁ = 7+3−10 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(AB)_{2}_{2} = 7+2-5 = 4",
+            "fallback": "(AB)₂₂ = 7+2−5 = 4",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(AB)_{2}_{3} = 14+1-15 = 0",
+            "fallback": "(AB)₂₃ = 14+1−15 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(AB)_{3}_{1} = 1-3+2 = 0",
+            "fallback": "(AB)₃₁ = 1−3+2 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(AB)_{3}_{2} = 1-2+1 = 0",
+            "fallback": "(AB)₃₂ = 1−2+1 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(AB)_{3}_{3} = 2-1+3 = 4",
+            "fallback": "(AB)₃₃ = 2−1+3 = 4",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "AB = 4I_{3}",
+            "fallback": "AB = 4I₃",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Check the reverse order independently.",
-        "eq": "(BA)₁₁ = −5+7+2 = 4; (BA)₁₂ = 1+1−2 = 0; (BA)₁₃ = 3−5+2 = 0; (BA)₂₁ = −15+14+1 = 0; (BA)₂₂ = 3+2−1 = 4; (BA)₂₃ = 9−10+1 = 0; (BA)₃₁ = −10+7+3 = 0; (BA)₃₂ = 2+1−3 = 0; (BA)₃₃ = 6−5+3 = 4; BA = 4I₃"
+        "eq": "(BA)₁₁ = −5+7+2 = 4; (BA)₁₂ = 1+1−2 = 0; (BA)₁₃ = 3−5+2 = 0; (BA)₂₁ = −15+14+1 = 0; (BA)₂₂ = 3+2−1 = 4; (BA)₂₃ = 9−10+1 = 0; (BA)₃₁ = −10+7+3 = 0; (BA)₃₂ = 2+1−3 = 0; (BA)₃₃ = 6−5+3 = 4; BA = 4I₃",
+        "math": [
+          {
+            "latex": "(BA)_{1}_{1} = -5+7+2 = 4",
+            "fallback": "(BA)₁₁ = −5+7+2 = 4",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(BA)_{1}_{2} = 1+1-2 = 0",
+            "fallback": "(BA)₁₂ = 1+1−2 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(BA)_{1}_{3} = 3-5+2 = 0",
+            "fallback": "(BA)₁₃ = 3−5+2 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(BA)_{2}_{1} = -15+14+1 = 0",
+            "fallback": "(BA)₂₁ = −15+14+1 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(BA)_{2}_{2} = 3+2-1 = 4",
+            "fallback": "(BA)₂₂ = 3+2−1 = 4",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(BA)_{2}_{3} = 9-10+1 = 0",
+            "fallback": "(BA)₂₃ = 9−10+1 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(BA)_{3}_{1} = -10+7+3 = 0",
+            "fallback": "(BA)₃₁ = −10+7+3 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(BA)_{3}_{2} = 2+1-3 = 0",
+            "fallback": "(BA)₃₂ = 2+1−3 = 0",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "(BA)_{3}_{3} = 6-5+3 = 4",
+            "fallback": "(BA)₃₃ = 6−5+3 = 4",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "BA = 4I_{3}",
+            "fallback": "BA = 4I₃",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The coefficient matrix of the given equations is B. Both products show that B⁻¹ = A/4.",
-        "eq": "X = B⁻¹[[1; 7; 2]] = (A/4)[[1; 7; 2]]"
+        "eq": "X = B⁻¹[[1; 7; 2]] = (A/4)[[1; 7; 2]]",
+        "math": [
+          {
+            "latex": "X = B^{-1}\\begin{bmatrix}1 \\\\ 7 \\\\ 2\\end{bmatrix} = (A/4)\\begin{bmatrix}1 \\\\ 7 \\\\ 2\\end{bmatrix}",
+            "fallback": "X = B⁻¹[[1; 7; 2]] = (A/4)[[1; 7; 2]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Multiply the rows of A by the right-hand side, then divide by 4.",
-        "eq": "x = (−5+7+6)/4 = 2; y = (7+7−10)/4 = 1; z = (1−7+2)/4 = −1"
+        "eq": "x = (−5+7+6)/4 = 2; y = (7+7−10)/4 = 1; z = (1−7+2)/4 = −1",
+        "math": [
+          {
+            "latex": "x = (-5+7+6)/4 = 2",
+            "fallback": "x = (−5+7+6)/4 = 2",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "y = (7+7-10)/4 = 1",
+            "fallback": "y = (7+7−10)/4 = 1",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "z = (1-7+2)/4 = -1",
+            "fallback": "z = (1−7+2)/4 = −1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Substitution verifies all three original equations.",
-        "eq": "2+1−2 = 1; 6+2−1 = 7; 4+1−3 = 2"
+        "eq": "2+1−2 = 1; 6+2−1 = 7; 4+1−3 = 2",
+        "math": [
+          {
+            "latex": "2+1-2 = 1",
+            "fallback": "2+1−2 = 1",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "6+2-1 = 7",
+            "fallback": "6+2−1 = 7",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "4+1-3 = 2",
+            "fallback": "4+1−3 = 2",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "AB = BA = 4I₃; x = 2, y = 1, z = −1.",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    "reference": "2025 revised English Volume I; printed p33; PDF p41",
+    "questionMath": {
+      "en": [
+        "If A = ",
+        {
+          "latex": "\\begin{bmatrix}-5 & 1 & 3 \\\\ 7 & 1 & -5 \\\\ 1 & -1 & 1\\end{bmatrix}",
+          "fallback": "[[−5, 1, 3; 7, 1, −5; 1, −1, 1]]",
+          "display": true
+        },
+        " and B = ",
+        {
+          "latex": "\\begin{bmatrix}1 & 1 & 2 \\\\ 3 & 2 & 1 \\\\ 2 & 1 & 3\\end{bmatrix}",
+          "fallback": "[[1, 1, 2; 3, 2, 1; 2, 1, 3]]",
+          "display": true
+        },
+        ", find the products AB and BA and hence solve the system of equations x + y + 2z = 1, 3x + 2y + z = 7, 2x + y + 3z = 2."
+      ]
+    },
+    "answerMath": [
+      {
+        "latex": "AB = BA = 4I_{3}",
+        "fallback": "AB = BA = 4I₃",
+        "display": true
+      },
+      "; ",
+      {
+        "latex": "x = 2, y = 1, z = -1.",
+        "fallback": "x = 2, y = 1, z = −1.",
+        "display": true
+      }
+    ]
   },
   {
     "id": "g12-ch1-ex1.3-q3",
@@ -378,57 +1075,195 @@ const entries=[
     "steps": [
       {
         "en": "Let s be the starting monthly salary and d the fixed increase in monthly salary after each year, both in rupees.",
-        "eq": "s + 3d = 19800; s + 9d = 23400"
+        "eq": "s + 3d = 19800; s + 9d = 23400",
+        "math": [
+          {
+            "latex": "s + 3d = 19800",
+            "fallback": "s + 3d = 19800",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "s + 9d = 23400",
+            "fallback": "s + 9d = 23400",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
-        "eq": "AX = B; A = [[1, 3; 1, 9]]; B = [[19800; 23400]]"
+        "eq": "AX = B; A = [[1, 3; 1, 9]]; B = [[19800; 23400]]",
+        "math": [
+          {
+            "latex": "AX = B",
+            "fallback": "AX = B",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A = \\begin{bmatrix}1 & 3 \\\\ 1 & 9\\end{bmatrix}",
+            "fallback": "A = [[1, 3; 1, 9]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "B = \\begin{bmatrix}19800 \\\\ 23400\\end{bmatrix}",
+            "fallback": "B = [[19800; 23400]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
-        "eq": "|A| = 6; X = A⁻¹B"
+        "eq": "|A| = 6; X = A⁻¹B",
+        "math": [
+          {
+            "latex": "\\lvert A\\rvert  = 6",
+            "fallback": "|A| = 6",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "X = A^{-1}B",
+            "fallback": "X = A⁻¹B",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C11 = (−1)^(1+1) × (9) = 9"
+        "eq": "C11 = (−1)^(1+1) × (9) = 9",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^(1+1) \\times  (9) = 9",
+            "fallback": "C11 = (−1)^(1+1) × (9) = 9",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C12 = (−1)^(1+2) × (1) = -1"
+        "eq": "C12 = (−1)^(1+2) × (1) = -1",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^(1+2) \\times  (1) = -1",
+            "fallback": "C12 = (−1)^(1+2) × (1) = -1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C21 = (−1)^(2+1) × (3) = -3"
+        "eq": "C21 = (−1)^(2+1) × (3) = -3",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^(2+1) \\times  (3) = -3",
+            "fallback": "C21 = (−1)^(2+1) × (3) = -3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C22 = (−1)^(2+2) × (1) = 1"
+        "eq": "C22 = (−1)^(2+2) × (1) = 1",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^(2+2) \\times  (1) = 1",
+            "fallback": "C22 = (−1)^(2+2) × (1) = 1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Transpose the cofactors and divide by the determinant.",
-        "eq": "adj A = [[9, −3; −1, 1]]; A⁻¹ = [[3/2, −1/2; −1/6, 1/6]]"
+        "eq": "adj A = [[9, −3; −1, 1]]; A⁻¹ = [[3/2, −1/2; −1/6, 1/6]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj} A = \\begin{bmatrix}9 & -3 \\\\ -1 & 1\\end{bmatrix}",
+            "fallback": "adj A = [[9, −3; −1, 1]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A^{-1} = \\begin{bmatrix}\\frac{3}{2} & -\\frac{1}{2} \\\\ -\\frac{1}{6} & \\frac{1}{6}\\end{bmatrix}",
+            "fallback": "A⁻¹ = [[3/2, −1/2; −1/6, 1/6]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
-        "eq": "(3/2) × (19800) + (-1/2) × (23400) = 18000"
+        "eq": "(3/2) × (19800) + (-1/2) × (23400) = 18000",
+        "math": [
+          {
+            "latex": "(\\frac{3}{2}) \\times  (19800) + (-\\frac{1}{2}) \\times  (23400) = 18000",
+            "fallback": "(3/2) × (19800) + (-1/2) × (23400) = 18000",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
-        "eq": "(-1/6) × (19800) + (1/6) × (23400) = 600"
+        "eq": "(-1/6) × (19800) + (1/6) × (23400) = 600",
+        "math": [
+          {
+            "latex": "(-\\frac{1}{6}) \\times  (19800) + (\\frac{1}{6}) \\times  (23400) = 600",
+            "fallback": "(-1/6) × (19800) + (1/6) × (23400) = 600",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Substitution in every original row confirms the solution.",
-        "eq": "AX = [[19800; 23400]] = B"
+        "eq": "AX = [[19800; 23400]] = B",
+        "math": [
+          {
+            "latex": "AX = \\begin{bmatrix}19800 \\\\ 23400\\end{bmatrix} = B",
+            "fallback": "AX = [[19800; 23400]] = B",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Interpret the two components in the salary model and verify both service-year amounts.",
-        "eq": "18000+3×600 = 19800; 18000+9×600 = 23400"
+        "eq": "18000+3×600 = 19800; 18000+9×600 = 23400",
+        "math": [
+          {
+            "latex": "18000+3\\times 600 = 19800",
+            "fallback": "18000+3×600 = 19800",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "18000+9\\times 600 = 23400",
+            "fallback": "18000+9×600 = 23400",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "Starting salary = ₹18,000 per month; annual increment = ₹600.",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    "reference": "2025 revised English Volume I; printed p33; PDF p41",
+    "questionMath": {
+      "en": [
+        "A man is appointed in a job with a monthly salary of certain amount and a fixed amount of annual increment. If his salary was ₹ 19,800 per month at the end of the first month after 3 years of service and ₹ 23,400 per month at the end of the first month after 9 years of service, find his starting salary and his annual increment. (Use matrix inversion method to solve the problem.)"
+      ]
+    },
+    "answerMath": [
+      {
+        "latex": "Starting salary = ₹18,000 per month",
+        "fallback": "Starting salary = ₹18,000 per month",
+        "display": true
+      },
+      "; ",
+      {
+        "latex": "annual increment = ₹600.",
+        "fallback": "annual increment = ₹600.",
+        "display": true
+      }
+    ]
   },
   {
     "id": "g12-ch1-ex1.3-q4",
@@ -451,57 +1286,194 @@ const entries=[
     "steps": [
       {
         "en": "Take the complete job as one unit. Let m and w be the fractions of the job completed per day by one man and one woman. Team rates add.",
-        "eq": "4m + 4w = 1/3; 2m + 5w = 1/4"
+        "eq": "4m + 4w = 1/3; 2m + 5w = 1/4",
+        "math": [
+          {
+            "latex": "4m + 4w = \\frac{1}{3}",
+            "fallback": "4m + 4w = 1/3",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "2m + 5w = \\frac{1}{4}",
+            "fallback": "2m + 5w = 1/4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
-        "eq": "AX = B; A = [[4, 4; 2, 5]]; B = [[1/3; 1/4]]"
+        "eq": "AX = B; A = [[4, 4; 2, 5]]; B = [[1/3; 1/4]]",
+        "math": [
+          {
+            "latex": "AX = B",
+            "fallback": "AX = B",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A = \\begin{bmatrix}4 & 4 \\\\ 2 & 5\\end{bmatrix}",
+            "fallback": "A = [[4, 4; 2, 5]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "B = \\begin{bmatrix}\\frac{1}{3} \\\\ \\frac{1}{4}\\end{bmatrix}",
+            "fallback": "B = [[1/3; 1/4]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
-        "eq": "|A| = 12; X = A⁻¹B"
+        "eq": "|A| = 12; X = A⁻¹B",
+        "math": [
+          {
+            "latex": "\\lvert A\\rvert  = 12",
+            "fallback": "|A| = 12",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "X = A^{-1}B",
+            "fallback": "X = A⁻¹B",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C11 = (−1)^(1+1) × (5) = 5"
+        "eq": "C11 = (−1)^(1+1) × (5) = 5",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^(1+1) \\times  (5) = 5",
+            "fallback": "C11 = (−1)^(1+1) × (5) = 5",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C12 = (−1)^(1+2) × (2) = -2"
+        "eq": "C12 = (−1)^(1+2) × (2) = -2",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^(1+2) \\times  (2) = -2",
+            "fallback": "C12 = (−1)^(1+2) × (2) = -2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C21 = (−1)^(2+1) × (4) = -4"
+        "eq": "C21 = (−1)^(2+1) × (4) = -4",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^(2+1) \\times  (4) = -4",
+            "fallback": "C21 = (−1)^(2+1) × (4) = -4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C22 = (−1)^(2+2) × (4) = 4"
+        "eq": "C22 = (−1)^(2+2) × (4) = 4",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^(2+2) \\times  (4) = 4",
+            "fallback": "C22 = (−1)^(2+2) × (4) = 4",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Transpose the cofactors and divide by the determinant.",
-        "eq": "adj A = [[5, −4; −2, 4]]; A⁻¹ = [[5/12, −1/3; −1/6, 1/3]]"
+        "eq": "adj A = [[5, −4; −2, 4]]; A⁻¹ = [[5/12, −1/3; −1/6, 1/3]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj} A = \\begin{bmatrix}5 & -4 \\\\ -2 & 4\\end{bmatrix}",
+            "fallback": "adj A = [[5, −4; −2, 4]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A^{-1} = \\begin{bmatrix}\\frac{5}{12} & -\\frac{1}{3} \\\\ -\\frac{1}{6} & \\frac{1}{3}\\end{bmatrix}",
+            "fallback": "A⁻¹ = [[5/12, −1/3; −1/6, 1/3]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
-        "eq": "(5/12) × (1/3) + (-1/3) × (1/4) = 1/18"
+        "eq": "(5/12) × (1/3) + (-1/3) × (1/4) = 1/18",
+        "math": [
+          {
+            "latex": "(\\frac{5}{12}) \\times  (\\frac{1}{3}) + (-\\frac{1}{3}) \\times  (\\frac{1}{4}) = \\frac{1}{18}",
+            "fallback": "(5/12) × (1/3) + (-1/3) × (1/4) = 1/18",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
-        "eq": "(-1/6) × (1/3) + (1/3) × (1/4) = 1/36"
+        "eq": "(-1/6) × (1/3) + (1/3) × (1/4) = 1/36",
+        "math": [
+          {
+            "latex": "(-\\frac{1}{6}) \\times  (\\frac{1}{3}) + (\\frac{1}{3}) \\times  (\\frac{1}{4}) = \\frac{1}{36}",
+            "fallback": "(-1/6) × (1/3) + (1/3) × (1/4) = 1/36",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Substitution in every original row confirms the solution.",
-        "eq": "AX = [[1/3; 1/4]] = B"
+        "eq": "AX = [[1/3; 1/4]] = B",
+        "math": [
+          {
+            "latex": "AX = \\begin{bmatrix}\\frac{1}{3} \\\\ \\frac{1}{4}\\end{bmatrix} = B",
+            "fallback": "AX = [[1/3; 1/4]] = B",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Time for one complete job is the reciprocal of the daily rate.",
-        "eq": "m = 1/18; w = 1/36; one man: 1/m = 18 days; one woman: 1/w = 36 days"
+        "eq": "m = 1/18; w = 1/36; one man: 1/m = 18 days; one woman: 1/w = 36 days",
+        "math": [
+          {
+            "latex": "m = \\frac{1}{18}",
+            "fallback": "m = 1/18",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "w = \\frac{1}{36}",
+            "fallback": "w = 1/36",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "one man: 1/m = 18 days",
+            "fallback": "one man: 1/m = 18 days",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "one woman: 1/w = 36 days",
+            "fallback": "one woman: 1/w = 36 days",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "One man alone: 18 days; one woman alone: 36 days.",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    "reference": "2025 revised English Volume I; printed p33; PDF p41",
+    "questionMath": {
+      "en": [
+        "Four men and 4 women can finish a piece of work jointly in 3 days while 2 men and 5 women can finish the same work jointly in 4 days. Find the time taken by one man alone and that of one woman alone to finish the same work by using matrix inversion method."
+      ]
+    }
   },
   {
     "id": "g12-ch1-ex1.3-q5",
@@ -524,81 +1496,260 @@ const entries=[
     "steps": [
       {
         "en": "Earnings equal sales receipts minus purchase costs. Translate each person’s transactions with these signs.",
-        "eq": "P: 2x − 4y + 5z = 15000; Q: 3x + y − 2z = 1000; R: −x + 3y + z = 4000"
+        "eq": "P: 2x − 4y + 5z = 15000; Q: 3x + y − 2z = 1000; R: −x + 3y + z = 4000",
+        "math": [
+          {
+            "latex": "P: 2x - 4y + 5z = 15000",
+            "fallback": "P: 2x − 4y + 5z = 15000",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "Q: 3x + y - 2z = 1000",
+            "fallback": "Q: 3x + y − 2z = 1000",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "R: -x + 3y + z = 4000",
+            "fallback": "R: −x + 3y + z = 4000",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Write the coefficients in A, the unknowns in a column X, and the constants in B. The same order of unknowns must be used in every row.",
-        "eq": "AX = B; A = [[2, −4, 5; 3, 1, −2; −1, 3, 1]]; B = [[15000; 1000; 4000]]"
+        "eq": "AX = B; A = [[2, −4, 5; 3, 1, −2; −1, 3, 1]]; B = [[15000; 1000; 4000]]",
+        "math": [
+          {
+            "latex": "AX = B",
+            "fallback": "AX = B",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A = \\begin{bmatrix}2 & -4 & 5 \\\\ 3 & 1 & -2 \\\\ -1 & 3 & 1\\end{bmatrix}",
+            "fallback": "A = [[2, −4, 5; 3, 1, −2; −1, 3, 1]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "B = \\begin{bmatrix}15000 \\\\ 1000 \\\\ 4000\\end{bmatrix}",
+            "fallback": "B = [[15000; 1000; 4000]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "A nonzero determinant guarantees a unique solution, obtained by multiplying on the left by A⁻¹.",
-        "eq": "|A| = 68; X = A⁻¹B"
+        "eq": "|A| = 68; X = A⁻¹B",
+        "math": [
+          {
+            "latex": "\\lvert A\\rvert  = 68",
+            "fallback": "|A| = 68",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "X = A^{-1}B",
+            "fallback": "X = A⁻¹B",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C11 = (−1)^(1+1) × (7) = 7"
+        "eq": "C11 = (−1)^(1+1) × (7) = 7",
+        "math": [
+          {
+            "latex": "C_{11} = (-1)^(1+1) \\times  (7) = 7",
+            "fallback": "C11 = (−1)^(1+1) × (7) = 7",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C12 = (−1)^(1+2) × (1) = -1"
+        "eq": "C12 = (−1)^(1+2) × (1) = -1",
+        "math": [
+          {
+            "latex": "C_{12} = (-1)^(1+2) \\times  (1) = -1",
+            "fallback": "C12 = (−1)^(1+2) × (1) = -1",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 1 and column 3, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C13 = (−1)^(1+3) × (10) = 10"
+        "eq": "C13 = (−1)^(1+3) × (10) = 10",
+        "math": [
+          {
+            "latex": "C_{13} = (-1)^(1+3) \\times  (10) = 10",
+            "fallback": "C13 = (−1)^(1+3) × (10) = 10",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C21 = (−1)^(2+1) × (-19) = 19"
+        "eq": "C21 = (−1)^(2+1) × (-19) = 19",
+        "math": [
+          {
+            "latex": "C_{21} = (-1)^(2+1) \\times  (-19) = 19",
+            "fallback": "C21 = (−1)^(2+1) × (-19) = 19",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C22 = (−1)^(2+2) × (7) = 7"
+        "eq": "C22 = (−1)^(2+2) × (7) = 7",
+        "math": [
+          {
+            "latex": "C_{22} = (-1)^(2+2) \\times  (7) = 7",
+            "fallback": "C22 = (−1)^(2+2) × (7) = 7",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 2 and column 3, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C23 = (−1)^(2+3) × (2) = -2"
+        "eq": "C23 = (−1)^(2+3) × (2) = -2",
+        "math": [
+          {
+            "latex": "C_{23} = (-1)^(2+3) \\times  (2) = -2",
+            "fallback": "C23 = (−1)^(2+3) × (2) = -2",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 1, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C31 = (−1)^(3+1) × (3) = 3"
+        "eq": "C31 = (−1)^(3+1) × (3) = 3",
+        "math": [
+          {
+            "latex": "C_{31} = (-1)^(3+1) \\times  (3) = 3",
+            "fallback": "C31 = (−1)^(3+1) × (3) = 3",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 2, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C32 = (−1)^(3+2) × (-19) = 19"
+        "eq": "C32 = (−1)^(3+2) × (-19) = 19",
+        "math": [
+          {
+            "latex": "C_{32} = (-1)^(3+2) \\times  (-19) = 19",
+            "fallback": "C32 = (−1)^(3+2) × (-19) = 19",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Delete row 3 and column 3, then apply the alternating sign to obtain the cofactor.",
-        "eq": "C33 = (−1)^(3+3) × (14) = 14"
+        "eq": "C33 = (−1)^(3+3) × (14) = 14",
+        "math": [
+          {
+            "latex": "C_{33} = (-1)^(3+3) \\times  (14) = 14",
+            "fallback": "C33 = (−1)^(3+3) × (14) = 14",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Transpose the cofactors and divide by the determinant.",
-        "eq": "adj A = [[7, 19, 3; −1, 7, 19; 10, −2, 14]]; A⁻¹ = [[7/68, 19/68, 3/68; −1/68, 7/68, 19/68; 5/34, −1/34, 7/34]]"
+        "eq": "adj A = [[7, 19, 3; −1, 7, 19; 10, −2, 14]]; A⁻¹ = [[7/68, 19/68, 3/68; −1/68, 7/68, 19/68; 5/34, −1/34, 7/34]]",
+        "math": [
+          {
+            "latex": "\\operatorname{adj} A = \\begin{bmatrix}7 & 19 & 3 \\\\ -1 & 7 & 19 \\\\ 10 & -2 & 14\\end{bmatrix}",
+            "fallback": "adj A = [[7, 19, 3; −1, 7, 19; 10, −2, 14]]",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "A^{-1} = \\begin{bmatrix}\\frac{7}{68} & \\frac{19}{68} & \\frac{3}{68} \\\\ -\\frac{1}{68} & \\frac{7}{68} & \\frac{19}{68} \\\\ \\frac{5}{34} & -\\frac{1}{34} & \\frac{7}{34}\\end{bmatrix}",
+            "fallback": "A⁻¹ = [[7/68, 19/68, 3/68; −1/68, 7/68, 19/68; 5/34, −1/34, 7/34]]",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The first component of X is the dot product of row 1 of A⁻¹ with B.",
-        "eq": "(7/68) × (15000) + (19/68) × (1000) + (3/68) × (4000) = 2000"
+        "eq": "(7/68) × (15000) + (19/68) × (1000) + (3/68) × (4000) = 2000",
+        "math": [
+          {
+            "latex": "(\\frac{7}{68}) \\times  (15000) + (\\frac{19}{68}) \\times  (1000) + (\\frac{3}{68}) \\times  (4000) = 2000",
+            "fallback": "(7/68) × (15000) + (19/68) × (1000) + (3/68) × (4000) = 2000",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The second component of X is the dot product of row 2 of A⁻¹ with B.",
-        "eq": "(-1/68) × (15000) + (7/68) × (1000) + (19/68) × (4000) = 1000"
+        "eq": "(-1/68) × (15000) + (7/68) × (1000) + (19/68) × (4000) = 1000",
+        "math": [
+          {
+            "latex": "(-\\frac{1}{68}) \\times  (15000) + (\\frac{7}{68}) \\times  (1000) + (\\frac{19}{68}) \\times  (4000) = 1000",
+            "fallback": "(-1/68) × (15000) + (7/68) × (1000) + (19/68) × (4000) = 1000",
+            "display": true
+          }
+        ]
       },
       {
         "en": "The third component of X is the dot product of row 3 of A⁻¹ with B.",
-        "eq": "(5/34) × (15000) + (-1/34) × (1000) + (7/34) × (4000) = 3000"
+        "eq": "(5/34) × (15000) + (-1/34) × (1000) + (7/34) × (4000) = 3000",
+        "math": [
+          {
+            "latex": "(\\frac{5}{34}) \\times  (15000) + (-\\frac{1}{34}) \\times  (1000) + (\\frac{7}{34}) \\times  (4000) = 3000",
+            "fallback": "(5/34) × (15000) + (-1/34) × (1000) + (7/34) × (4000) = 3000",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Substitution in every original row confirms the solution.",
-        "eq": "AX = [[15000; 1000; 4000]] = B"
+        "eq": "AX = [[15000; 1000; 4000]] = B",
+        "math": [
+          {
+            "latex": "AX = \\begin{bmatrix}15000 \\\\ 1000 \\\\ 4000\\end{bmatrix} = B",
+            "fallback": "AX = [[15000; 1000; 4000]] = B",
+            "display": true
+          }
+        ]
       },
       {
         "en": "These positive values are prices per unit; substituting them reproduces the three net earnings.",
-        "eq": "4000−4000+15000 = 15000; 6000+1000−6000 = 1000; −2000+3000+3000 = 4000"
+        "eq": "4000−4000+15000 = 15000; 6000+1000−6000 = 1000; −2000+3000+3000 = 4000",
+        "math": [
+          {
+            "latex": "4000-4000+15000 = 15000",
+            "fallback": "4000−4000+15000 = 15000",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "6000+1000-6000 = 1000",
+            "fallback": "6000+1000−6000 = 1000",
+            "display": true
+          },
+          "; ",
+          {
+            "latex": "-2000+3000+3000 = 4000",
+            "fallback": "−2000+3000+3000 = 4000",
+            "display": true
+          }
+        ]
       }
     ],
     "answer": "A: ₹2,000 per unit; B: ₹1,000 per unit; C: ₹3,000 per unit.",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
-    "reference": "2025 revised English Volume I; printed p33; PDF p41"
+    "reference": "2025 revised English Volume I; printed p33; PDF p41",
+    "questionMath": {
+      "en": [
+        "The prices of three commodities A, B and C are ₹ x, y and z per units respectively. A person P purchases 4 units of B and sells two units of A and 5 units of C. Person Q purchases 2 units of C and sells 3 units of A and one unit of B. Person R purchases one unit of A and sells 3 unit of B and one unit of C. In the process, P, Q and R earn ₹ 15,000, ₹ 1,000 and ₹ 4,000 respectively. Find the prices per unit of A, B and C. (Use matrix inversion method to solve the problem.)"
+      ]
+    }
   }
 ];
 const stable=v=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])])):v;
