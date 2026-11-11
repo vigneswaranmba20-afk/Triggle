@@ -8,7 +8,14 @@
  Object.assign(dictionary.ta,{backAllChapters:'அனைத்து அத்தியாயங்களுக்கும் திரும்பு',searchOptional:'தேடல் (விருப்பப்படி)',browse:'அத்தியாயங்கள்',exploreExercise:'அத்தியாயங்களும் பகுதிகளும்',search:'அத்தியாயம், பயிற்சி, வினாவைத் தேட…',chapter:'அத்தியாயம்',chapters:'அத்தியாயங்கள்',overview:'அத்தியாயக் கண்ணோட்டம்',planned:'திட்டமிடப்பட்டுள்ளது',drafting:'எழுதப்படுகிறது',review:'மீளாய்வில் உள்ளது',published:'வெளியிடப்பட்டது',existingQuestions:'ஏற்கெனவே உள்ள வினாக்கள்',chapterNotComplete:'ஏற்கெனவே உள்ள வினாக்களைப் பயிற்சி செய்யலாம். வினாக்கள் இருப்பதால் மட்டும் இந்த அத்தியாயம் முழுமையானது அல்லது மீளாய்வு செய்யப்பட்டது என்று பொருளல்ல.',contentPlanned:'முழு அத்தியாய உள்ளடக்கம் திட்டமிடப்பட்டுள்ளது. கற்றல் பகுதிகள் எழுதப்பட்டு மீளாய்வு செய்யப்பட்டதும் இங்கே இடம்பெறும்.',noQuestions:'இந்த அத்தியாயத்திற்கான வினாக்கள் திட்டமிடப்பட்டுள்ளன.',terminologyPending:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட வேண்டும்.',terminologyVerified:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட்டுள்ளன.',concepts:'கருத்துகள்',prerequisites:'முன்தேவைகள்',workedExamples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'குறுவினாத் தேர்வுகள்',unitExercise:'தொகுப்புப் பயிற்சி',chooseLanguage:'மொழி',closeNavigation:'வழிசெலுத்தலை மூடு',navigationLabel:'வகுப்பு, அத்தியாயம் மற்றும் பயிற்சி வழிசெலுத்தல்',searchLabel:'அத்தியாயங்களையும் வினாக்களையும் தேடுக',visualMathematics:'காட்சி வழிக் கணிதம்',textbookReferences:'பாடநூல் குறிப்புகள்',edition:'பதிப்பு',locator:'பாடநூலில் உள்ள இடம்',englishMedium:'ஆங்கிலவழி',tamilMedium:'தமிழ்வழி',archivedReference:'காப்பகப் பாடநூல் குறிப்புகள்; உங்கள் பள்ளி பரிந்துரைக்கும் பதிப்புடன் ஒப்பிடுங்கள்.',figureLabel:'பொருத்தமான கணிதப் படத்தைத் திற',completeSolution:'தீர்வு விளக்கம்',workedSolution:'தீர்வு விளக்கம்',navigateQuestions:'வினாக்களுக்குச் செல்லவும்',switchClass:'வகுப்பை மாற்றவும்',diagramDialog:'கணிதப் படம்',reviewState:'மீளாய்வு நிலை',unreviewed:'மீளாய்வு செய்யப்படவில்லை',in_review:'மீளாய்வில் உள்ளது',approved:'ஏற்கப்பட்டது',home:'முகப்பு',browse:'தலைப்பைத் தேடுக'});
  const ui=k=>dictionary[lang][k]||dictionary.en[k]||k;
  const classes=window.TRIGGLE_CLASSES||{};
- for(const key of [9,10,11,12]){if(!classes[key]||!Array.isArray(classes[key].items))throw Error('Missing data for class '+key);}
+ // Preserve source records while showing exercise questions, not worked examples.
+ const isWorkedExample=item=>item?.kind==='textbook-example'||
+   /(?:^|[-_])(?:worked[-_])?examples?(?:[-_]|$)/i.test(item?.id||'')||
+   /^\s*(?:Worked\s+)?Example\b/i.test(item?.label?.en||'');
+ for(const key of [9,10,11,12]){
+   if(!classes[key]||!Array.isArray(classes[key].items))throw Error('Missing data for class '+key);
+   classes[key].items=classes[key].items.filter(item=>!isWorkedExample(item));
+ }
  const curriculum=window.TRIGGLE_CURRICULUM;
  if(!curriculum?.grades)throw Error('Missing curriculum metadata');
  const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];
@@ -28,7 +35,7 @@
  let chapterOverview=url.searchParams.has('question')?null:chapterList().find(c=>c.id===url.searchParams.get('chapter'))||null;
  let homeView=!url.searchParams.has('class')&&!url.searchParams.has('question')&&!url.searchParams.has('chapter');
  let classIndex=!homeView&&!url.searchParams.has('question')&&!url.searchParams.has('chapter');
- const validSections=new Set(['concepts','examples','exercises','quizzes','activities','sources']);
+ const validSections=new Set(['concepts','exercises','quizzes','activities','sources']);
  let chapterSection=chapterOverview&&validSections.has(url.searchParams.get('section'))?url.searchParams.get('section'):null;
  let conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(url.searchParams.get('concept')||'')?Number(url.searchParams.get('concept')):null;
  let questionOrigin=null;
@@ -51,7 +58,7 @@
    return exercises.some(item=>item.id===current.id)?exercises:classes[grade].items;
  };
  const currentIndex=()=>activeList().findIndex(i=>i.id===current.id);
- const sectionForQuestion=item=>/^\s*Example\b/i.test(item?.label?.en||'')?'examples':'exercises';
+ const sectionForQuestion=item=>'exercises';
  const num=n=>String(n).padStart(2,'0');
  const labelForGroup=(e)=>e.endsWith('.examples')?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?ui('unitExercise')+' '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
  function updateUrl(replace=false){
@@ -215,8 +222,8 @@
    const query=$('search').value.trim().toLocaleLowerCase();
    const container=$('exerciseList');container.replaceChildren();
    const menuNames=lang==='ta'
-     ?{concepts:'கருத்துகள்',examples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'சிறு தேர்வுகள்',activities:'சிந்தனை மூலை & செயல்பாடுகள்'}
-     :{concepts:'Concepts',examples:'Worked Examples',exercises:'Exercises',quizzes:'Quizzes',activities:'Thinking Corner & Activities'};
+     ?{concepts:'கருத்துகள்',exercises:'பயிற்சிகள்',quizzes:'சிறு தேர்வுகள்',activities:'சிந்தனை மூலை & செயல்பாடுகள்'}
+     :{concepts:'Concepts',exercises:'Exercises',quizzes:'Quizzes',activities:'Thinking Corner & Activities'};
    const matches=item=>[item.label?.en,item.label?.ta,item.title?.en,item.title?.ta,item.q?.en,item.q?.ta,item.topic?.en,item.topic?.ta,item.exercise].join(' ').toLocaleLowerCase().includes(query);
    let visible=0;
    for(const chapter of chapterList()){
@@ -235,19 +242,18 @@
      const interactiveStages=chapter.id==='g9-ch1'?window.TRIGGLE_SET_PATH?.stages:
        chapter.id==='g9-ch2'?window.TRIGGLE_REAL_PATH?.stages:null;
      const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
-     const workedCount=all.filter(item=>/^\s*Example\b/i.test(item.label?.en||'')).length;
-     const practiceCount=all.length-workedCount;
+     const practiceCount=all.length;
      const grade9Journey=chapter.id==='g9-ch1'||chapter.id==='g9-ch2';
      meta.textContent=grade9Journey
        ?(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+
-         (lang==='ta'?workedCount+' எடுத்துக்காட்டுகள் · '+practiceCount+' பயிற்சி வினாக்கள்':workedCount+' worked examples · '+practiceCount+' exercise/practice questions')
+         (lang==='ta'?practiceCount+' பயிற்சி வினாக்கள்':practiceCount+' exercise/practice questions')
        :(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+all.length+' '+ui('existingQuestions');
      button.append(title,meta);button.onclick=()=>selectChapter(chapter);section.append(button);
      if(selected&&!query){
        const quick=document.createElement('div');quick.className='sidebar-chapter-sections';
-       for(const key of (window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]?.length?['concepts','examples','exercises','quizzes','activities']:['concepts','examples','exercises','quizzes'])){
+       for(const key of (window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]?.length?['concepts','exercises','quizzes','activities']:['concepts','exercises','quizzes'])){
          const direct=document.createElement('button');direct.type='button';direct.dataset.section=key;
-         direct.textContent=menuNames[key]+(grade9Journey&&(key==='exercises'||key==='examples')?' ('+(key==='examples'?workedCount:practiceCount)+')':'');
+         direct.textContent=menuNames[key]+(grade9Journey&&key==='exercises'?' ('+practiceCount+')':'');
          direct.classList.toggle('active',chapterOverview?.id===chapter.id&&chapterSection===key);
          direct.addEventListener('click',()=>openChapterSection(key,chapter));
          quick.append(direct);
@@ -357,7 +363,7 @@
   }
   if(chapter.terminology?.ta!=='verified'){const terminology=document.createElement('p');terminology.className='terminology-note';terminology.textContent=ui('terminologyPending');container.append(terminology)}
   const sections=document.createElement('ul');sections.className='chapter-sections';sections.id='chapterSections';
-  for(const key of ['concepts','prerequisites','workedExamples','exercises','quizzes']){const row=document.createElement('li');const label=document.createElement('span');label.textContent=ui(key);const state=document.createElement('small');state.textContent=ui('planned');
+  for(const key of ['concepts','prerequisites','exercises','quizzes']){const row=document.createElement('li');const label=document.createElement('span');label.textContent=ui(key);const state=document.createElement('small');state.textContent=ui('planned');
     if(chapter.id==='g9-ch1'&&(key==='concepts'||key==='quizzes')){
       state.textContent=lang==='ta'?'முன்னோட்டம் உள்ளது':'Pilot available';
     }
