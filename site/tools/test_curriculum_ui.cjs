@@ -1037,7 +1037,7 @@ async function main() {
       assert.equal(new URL(page.url()).searchParams.has('section'),false,'Old section links resolve to chapter');
       await gotoWithControls(page,url+'/index.html?class=9&question=c9-example-6-1');
       assert.notEqual(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
-      assert.match(await page.locator('#questionHead').innerText(),/Exercise/);
+      assert.match(await page.locator('#questionHead').innerText(),/(?:Exercise|பயிற்சி)/);
       assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
     });
     await check('legacy progress, diagrams and standard solutions survive chapter navigation', async () => {
