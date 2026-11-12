@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "observedAt": "2026-11-12T02:45:01.777932+00:00",
+  "observedAt": "2026-11-12T02:48:42.817495+00:00",
   "status": "TESTED_DRAFT_READY_FOR_PR",
   "branch": "feature/trace-ledger-offline-20261112",
   "baseCommit": "91c56ddfd556cc6e748c39bbfb7861658170da92",
@@ -9,7 +9,8 @@
     "reconciliation": "Runtime, pinned open-PR candidate index, inherited source/math ledger, known gaps; original ZIP reread blocked",
     "providerBroker": "Offline mock and injected-adapter contract tests only",
     "newOfficialQuestionParts": 0,
-    "studentFacingChanges": false
+    "studentFacingChanges": false,
+    "authorizationGuard": "Non-boolean offline/spending flags rejected; string false cannot authorize an adapter."
   },
   "summaryArtifact": "docs/trace/reports/2026-11-12/summary.json",
   "sourcePagesInspected": 0,

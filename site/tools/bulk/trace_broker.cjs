@@ -38,6 +38,7 @@ class Broker{
  constructor({stateDir,adapters=[mockAdapter()],offline=true,spendingAuthorized=false,runBudgetUsd=0,dayBudgetUsd=0,providerBudgetsUsd={},
   maxItems=20,concurrency=2,maxOutputTokens=1024,circuitThreshold=3,env=process.env,now=()=>Date.now(),sleep,root=bulk.ROOT}={}){
   if(!stateDir)fail('STATE_DIRECTORY_REQUIRED');
+  if(typeof offline!=='boolean'||typeof spendingAuthorized!=='boolean')fail('INVALID_AUTHORIZATION_FLAGS');
   this.root=root;this.stateDir=path.resolve(stateDir);
   fs.mkdirSync(this.stateDir,{recursive:true,mode:0o700});
   const real=fs.realpathSync(this.stateDir),publicDir=path.resolve(root,'site');

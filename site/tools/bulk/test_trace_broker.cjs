@@ -15,6 +15,8 @@ const paidTask=()=>({...taskFixture(),budget:0.1});
   const b=new Broker({stateDir:fresh()});const r=await b.run(taskFixture());assert.equal(r.status,'UNTRUSTED_CANDIDATE');assert.equal(b.report().reservedCostUsd,0);
   await rejects(b.run({...taskFixture(),input_hash:'forged'}),'INPUT_HASH_MISMATCH');
   assert.throws(()=>new Broker({stateDir:fresh(),concurrency:9}),/INVALID_LIMITS/);
+  assert.throws(()=>new Broker({stateDir:fresh(),spendingAuthorized:'false'}),/INVALID_AUTHORIZATION_FLAGS/);
+  assert.throws(()=>new Broker({stateDir:fresh(),offline:'false'}),/INVALID_AUTHORIZATION_FLAGS/);
  });
  await test('missing keys and absent spending authority fail before invocation',async()=>{
   let calls=0;const conf=paidConfig();conf.adapters=[paid(async()=>{calls++;return ok();})];
