@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "grade": 10,
+  "chapter": "8",
+  "exercise": "8.2",
+  "scope": "Only this source-image-checked exercise; NOT full Chapter 8, whole-grade coverage, solutions or pilot eligibility",
+  "sourcePageInventoryStatus": "BOTH_ORIGINAL_MEDIUM_PAGE_IMAGES_CHECKED",
+  "questionStems": 8,
+  "questionParts": 8,
+  "crossMediumPartsCountedOnce": true,
+  "mediumRepresentations": 16,
+  "questions": [
+    {
+      "question": "1",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 322,
+          "printedPage": 316
+        },
+        "ta": {
+          "pdfPage": 331,
+          "printedPage": 325
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        6.5,
+        12.5
+      ],
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 322,
+          "printedPage": 316
+        },
+        "ta": {
+          "pdfPage": 331,
+          "printedPage": 325
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        1.2,
+        25.6
+      ],
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "3",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 322,
+          "printedPage": 316
+        },
+        "ta": {
+          "pdfPage": 331,
+          "printedPage": 325
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        15,
+        48
+      ],
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 322,
+          "printedPage": 316
+        },
+        "ta": {
+          "pdfPage": 331,
+          "printedPage": 325
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        5,
+        6,
+        765
+      ],
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 322,
+          "printedPage": 316
+        },
+        "ta": {
+          "pdfPage": 331,
+          "printedPage": 325
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        24,
+        26,
+        33,
+        37,
+        29,
+        31
+      ],
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "6",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 322,
+          "printedPage": 316
+        },
+        "ta": {
+          "pdfPage": 332,
+          "printedPage": 326
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        38,
+        40,
+        47,
+        44,
+        46,
+        43,
+        49,
+        53
+      ],
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "7",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 322,
+          "printedPage": 316
+        },
+        "ta": {
+          "pdfPage": 332,
+          "printedPage": 326
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        460,
+        480,
+        4.6,
+        2.4
+      ],
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "8",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 322,
+          "printedPage": 316
+        },
+        "ta": {
+          "pdfPage": 332,
+          "printedPage": 326
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        56,
+        12,
+        65,
+        14,
+        60,
+        10
+      ],
+      "tablesRequired": true,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    }
+  ],
+  "tableEvidence": {
+    "question": "8",
+    "columns": [
+      "subject",
+      "mean",
+      "standardDeviation"
+    ],
+    "rows": [
+      {
+        "subject": "Mathematics",
+        "mean": 56,
+        "standardDeviation": 12
+      },
+      {
+        "subject": "Science",
+        "mean": 65,
+        "standardDeviation": 14
+      },
+      {
+        "subject": "Social Science",
+        "mean": 60,
+        "standardDeviation": 10
+      }
+    ],
+    "check": "Table values match both original English and Tamil page images; no figure required"
+  },
+  "sources": [
+    {
+      "medium": "en",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "edition": "2025 revised",
+      "pages": [
+        {
+          "pdfPage": 322,
+          "printedPage": 316,
+          "imageSha256": "fb80c39919c15a2463de4b876db2d104f44f1b145953ab0e03084d88b557d2a4",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "medium": "ta",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "edition": "2025 revised",
+      "pages": [
+        {
+          "pdfPage": 331,
+          "printedPage": 325,
+          "imageSha256": "3de34847578bb2696cf503699f588f4366abc01a350a0dcfb07c5420378be6a0",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 332,
+          "printedPage": 326,
+          "imageSha256": "59071b34c69dbd903a8f327ed0a4d225bb89f1d735b41e5f4c0c064cbc2155ad",
+          "visualChecked": true
+        }
+      ]
+    }
+  ],
+  "pageImageReviewMethod": "Original Drive PDF bytes SHA256 verified against pinned textbook source register; source images rendered locally via pdftoppm -f <page> -l <page> -scale-to 1300 -png -r 110, visually inspected in both media. PNG hashes above are local reproducibility evidence; PNGs/PDFs not redistributed.",
+  "professionalTamilReview": "pending",
+  "teacherApproval": "not performed (owner deferred)",
+  "mathSolutionsVerified": false,
+  "exerciseSourceInventoryComplete": true,
+  "chapterSourceInventoryComplete": false,
+  "allGradeQuestionDenominator": null,
+  "realPilotEligibleParts": 0,
+  "releaseApproved": false,
+  "limitations": [
+    "This records only eight numbered whole questions Q1-Q8. Q8 requests two comparisons, but contains no textbook-labelled (i)/(ii) subparts.",
+    "Tamil and English page images agree on numbered questions, numerical input and Q8's table; this is not a certification of full Tamil editorial wording.",
+    "No exercise problem is registered in the app; no answer, independent solution, difficulty, pilot-unworked classification or live deployment is approved by this inventory.",
+    "Original English/Tamil PDFs and rendered page images remain outside the public GitHub repository.",
+    "Whole Grade 10 / Chapter 8 question-subpart denominators remain unknown. The confirmed Ex8.1 Q5 worker-count discrepancy is unaffected."
+  ]
+}
