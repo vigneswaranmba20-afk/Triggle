@@ -70,16 +70,24 @@
     {
       "id": "all-grade-denominators",
       "category": "sources-and-language",
-      "status": "not-started",
+      "status": "partial",
       "acceptance": "Source-page-verified exercise/question/subpart denominators across all 41 English/Tamil chapter pairs.",
-      "blocker": "A full page-image inventory is not established. Repository links and text extraction cannot supply verified totals."
+      "blocker": "Bounded G10 Ex8.1 (15 questions/16 parts) and G12 Ex1.4 (8 parts) have original bilingual image inventories; complete all-grade exercise/subpart denominators across 41 chapter pairs are not established.",
+      "evidence": [
+        {
+          "file": "docs/trace/source-inventories/g10-ch8-ex8-1.json"
+        },
+        {
+          "file": "docs/trace/candidates/g12-ex1-4/batch.json"
+        }
+      ]
     },
     {
       "id": "original-zip-reconciliation",
       "category": "sources-and-language",
       "status": "blocked",
       "acceptance": "Reopen and reconcile the latest five original W1\u2013W5 ZIPs, not only historical summaries.",
-      "blocker": "Original ZIPs are not in the checkout or connected Drive search; no ChatGPT Library file-access tool is available."
+      "blocker": "Read-only lookup of five paused tasks found last-run reports naming ChatGPT Library /VER-Triggle/Grade10-Staging and chat-scoped download links. This session has no supported Library retrieval API and the original bytes remain unavailable; connected Drive ZIP search was empty."
     },
     {
       "id": "runtime-pr-dedup",
@@ -227,9 +235,22 @@
     {
       "id": "mandatory-gates",
       "category": "release",
-      "status": "partial",
+      "status": "complete",
       "acceptance": "Pass all applicable local and exact-head CI gates for the current implementation, with truthful source/teacher statuses.",
-      "blocker": "PR148 passed all local and remote gates. The new compiler/pilot branch still needs its final full-suite and CI run."
+      "evidence": [
+        {
+          "file": "docs/trace/validation-sprint2.json"
+        },
+        {
+          "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/43149587004"
+        },
+        {
+          "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/43149586988"
+        },
+        {
+          "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/43149587087"
+        }
+      ]
     },
     {
       "id": "guarded-integration",

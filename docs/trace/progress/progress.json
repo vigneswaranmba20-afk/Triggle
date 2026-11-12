@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "measure": "equal-weight-required-milestones-not-curriculum-or-effort",
-  "completedMilestones": 15,
+  "completedMilestones": 16,
   "totalMilestones": 20,
-  "percentComplete": 75,
+  "percentComplete": 80,
   "baselineCompletedMilestones": 8,
   "baselinePercentComplete": 40,
   "categories": {
@@ -18,9 +18,9 @@
     "sources-and-language": {
       "total": 5,
       "complete": 2,
-      "partial": 0,
+      "partial": 1,
       "blocked": 2,
-      "notStarted": 1,
+      "notStarted": 0,
       "percentComplete": 40
     },
     "mathematics": {
@@ -57,11 +57,11 @@
     },
     "release": {
       "total": 3,
-      "complete": 2,
-      "partial": 1,
+      "complete": 3,
+      "partial": 0,
       "blocked": 0,
       "notStarted": 0,
-      "percentComplete": 66.67
+      "percentComplete": 100
     }
   },
   "curriculumPercent": null,
@@ -71,15 +71,15 @@
   "incomplete": [
     {
       "id": "all-grade-denominators",
-      "status": "not-started",
+      "status": "partial",
       "acceptance": "Source-page-verified exercise/question/subpart denominators across all 41 English/Tamil chapter pairs.",
-      "blocker": "A full page-image inventory is not established. Repository links and text extraction cannot supply verified totals."
+      "blocker": "Bounded G10 Ex8.1 (15 questions/16 parts) and G12 Ex1.4 (8 parts) have original bilingual image inventories; complete all-grade exercise/subpart denominators across 41 chapter pairs are not established."
     },
     {
       "id": "original-zip-reconciliation",
       "status": "blocked",
       "acceptance": "Reopen and reconcile the latest five original W1–W5 ZIPs, not only historical summaries.",
-      "blocker": "Original ZIPs are not in the checkout or connected Drive search; no ChatGPT Library file-access tool is available."
+      "blocker": "Read-only lookup of five paused tasks found last-run reports naming ChatGPT Library /VER-Triggle/Grade10-Staging and chat-scoped download links. This session has no supported Library retrieval API and the original bytes remain unavailable; connected Drive ZIP search was empty."
     },
     {
       "id": "professional-tamil-review",
@@ -92,12 +92,6 @@
       "status": "blocked",
       "acceptance": "Run the real 60 eligible unworked source-verified parts with independent math/bilingual/teacher review and real effort/cost measurements.",
       "blocker": "Sixty eligible unique unworked bilingual-source-checked parts plus reviewers have not been established. No real trial has started."
-    },
-    {
-      "id": "mandatory-gates",
-      "status": "partial",
-      "acceptance": "Pass all applicable local and exact-head CI gates for the current implementation, with truthful source/teacher statuses.",
-      "blocker": "PR148 passed all local and remote gates. The new compiler/pilot branch still needs its final full-suite and CI run."
     }
   ],
   "conditional": [

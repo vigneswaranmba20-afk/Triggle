@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "grade": 10,
+  "chapter": "8",
+  "exercise": "8.1",
+  "scope": "Only this exercise; neither full chapter nor all-grade denominator",
+  "sourcePageInventoryStatus": "BOTH_ORIGINAL_MEDIUM_PAGE_IMAGES_CHECKED",
+  "questionStems": 15,
+  "questionParts": 16,
+  "crossMediumPartsCountedOnce": true,
+  "mediumRepresentations": 32,
+  "questions": [
+    {
+      "question": "1",
+      "parts": [
+        "i",
+        "ii"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 319,
+          "printedPage": 313
+        },
+        "ta": {
+          "pdfPage": 328,
+          "printedPage": 322
+        }
+      },
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 319,
+          "printedPage": 313
+        },
+        "ta": {
+          "pdfPage": 328,
+          "printedPage": 322
+        }
+      },
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "3",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 319,
+          "printedPage": 313
+        },
+        "ta": {
+          "pdfPage": 328,
+          "printedPage": 322
+        }
+      },
+      "tablesRequired": true,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 319,
+          "printedPage": 313
+        },
+        "ta": {
+          "pdfPage": 328,
+          "printedPage": 322
+        }
+      },
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 319,
+          "printedPage": 313
+        },
+        "ta": {
+          "pdfPage": 328,
+          "printedPage": 322
+        }
+      },
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": "EN 9 workers; TA 10 workers; both list 9 wages",
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "6",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 319,
+          "printedPage": 313
+        },
+        "ta": {
+          "pdfPage": 328,
+          "printedPage": 322
+        }
+      },
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "7",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 319,
+          "printedPage": 313
+        },
+        "ta": {
+          "pdfPage": 328,
+          "printedPage": 322
+        }
+      },
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "8",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 319,
+          "printedPage": 313
+        },
+        "ta": {
+          "pdfPage": 328,
+          "printedPage": 322
+        }
+      },
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "9",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 319,
+          "printedPage": 313
+        },
+        "ta": {
+          "pdfPage": 328,
+          "printedPage": 322
+        }
+      },
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "10",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 319,
+          "printedPage": 313
+        },
+        "ta": {
+          "pdfPage": 329,
+          "printedPage": 323
+        }
+      },
+      "tablesRequired": true,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "11",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 320,
+          "printedPage": 314
+        },
+        "ta": {
+          "pdfPage": 329,
+          "printedPage": 323
+        }
+      },
+      "tablesRequired": true,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "12",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 320,
+          "printedPage": 314
+        },
+        "ta": {
+          "pdfPage": 329,
+          "printedPage": 323
+        }
+      },
+      "tablesRequired": true,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "13",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 320,
+          "printedPage": 314
+        },
+        "ta": {
+          "pdfPage": 329,
+          "printedPage": 323
+        }
+      },
+      "tablesRequired": true,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "14",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 320,
+          "printedPage": 314
+        },
+        "ta": {
+          "pdfPage": 329,
+          "printedPage": 323
+        }
+      },
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "15",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 320,
+          "printedPage": 314
+        },
+        "ta": {
+          "pdfPage": 329,
+          "printedPage": 323
+        }
+      },
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    }
+  ],
+  "sources": [
+    {
+      "medium": "en",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "edition": "2025 revised",
+      "pages": [
+        {
+          "pdfPage": 319,
+          "printedPage": 313,
+          "imageSha256": "a77093b2a80654c902f2c55a4eeae28002615d9b83e440c0d477ede775fef12d",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 320,
+          "printedPage": 314,
+          "imageSha256": "86bd9bfe98aba6ee696628099d4738488c0373871e47cbc320f0f909e8d64b9b",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "medium": "ta",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "edition": "2025 revised",
+      "pages": [
+        {
+          "pdfPage": 328,
+          "printedPage": 322,
+          "imageSha256": "4e8d1e54224b87225f2eb64d42fa98a7efd557252356dd63eeb1daf784eb2c05",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 329,
+          "printedPage": 323,
+          "imageSha256": "d4e6f51ed94f7d462a2dc97ea3d6d32d7cf15758e887c4b077aceb428b64c569",
+          "visualChecked": true
+        }
+      ]
+    }
+  ],
+  "professionalTamilReview": "pending",
+  "releaseApproved": false,
+  "limitations": [
+    "Counts official labelled subparts; multiple requested quantities within an unlabelled question are one whole part.",
+    "Tables remain part of the source specification; their transcription is not certified by this inventory.",
+    "Source counts do not imply unworked, missing, solved, integrated or accepted pilot eligibility.",
+    "Q5 stays quarantined for the confirmed original-source worker-count difference."
+  ]
+}
