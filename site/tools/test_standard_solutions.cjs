@@ -15,7 +15,7 @@ let count=0,reviewed=0;
 for(const [grade,data] of Object.entries(classes)){
  const baselineIds=preserved.grades[grade],currentIds=data.items.map(item=>item.id);
  assert.equal(JSON.stringify(currentIds.slice(0,baselineIds.length)),JSON.stringify(baselineIds),'Original 568 IDs/order preserved as the exact prefix');
- assert.deepEqual(currentIds.slice(baselineIds.length),grade==='10'?approvedNewIds:[],'Only eight approved Grade 10 Exercise 2.2 additions allowed');
+ assert.equal(JSON.stringify(currentIds.slice(baselineIds.length)),JSON.stringify(grade==='10'?approvedNewIds:[]),'Only eight approved Grade 10 Exercise 2.2 additions allowed');
  for(const item of data.items){
   const hash=crypto.createHash('sha256').update(JSON.stringify(item)).digest('hex');
   if(Object.hasOwn(preserved.sha256,item.id)){
