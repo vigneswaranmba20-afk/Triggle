@@ -4,7 +4,8 @@ const html=fs.readFileSync('site/index.html','utf8'),js=fs.readFileSync('site/as
 assert.equal((html.match(/id="questionText"/g)||[]).length,1);
 assert.ok(html.indexOf('id="questionText"')<html.indexOf('id="stepsRegion"'));
 assert.ok(!/id="(?:guidedDialog|deepQuestionDock|deepQuestionContext)"/.test(html));
-assert.ok(js.includes("$('questionText').innerHTML=workedDisplay?.question||math(current.questionMath?.[lang]||current.questionMath?.en||tr(current.q))"));
+assert.ok(js.includes('const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath'),'Grade 9 presentation retains canonical rich-math fallback');
+assert.ok(js.includes("$('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q))"),'Original question remains permanent, localized and typeset');
 assert.ok(js.includes('all.forEach((s,i)=>ul.append(buildStep(s,i)))'),'All authored steps rendered');
 assert.ok(js.includes('appendFinalStep(ul)'),'Final answer follows working');
 console.log('PASS one permanent original question followed by full working and final answer.');
