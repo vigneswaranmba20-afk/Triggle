@@ -3,7 +3,7 @@
   "date": "2026-11-12",
   "grade": 10,
   "sourceEdition": "2025",
-  "scope": "EXERCISE_HEADING_LOCATORS_ONLY",
+  "scope": "HEADING_LOCATORS_WITH_ONE_BOUNDED_IMAGE_VERIFIED_EXERCISE_8_2",
   "english": {
     "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
     "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
@@ -16,7 +16,7 @@
     "pdfPages": 368,
     "headingLabel": "பயிற்சி"
   },
-  "methods": "Exact text-layer heading N.N matches before separate answers appendices in both original PDFs; compare unique heading ID sets. Rendered/visually inspected English PDF p12,319,340 and Tamil PDF p328,354. Full page-by-page human image verification not performed.",
+  "methods": "Exact text-layer heading N.N matches before separate answers appendices in both original PDFs; compare unique heading ID sets. Rendered/visually inspected English PDF p12,319,340 and Tamil PDF p328,354. Full page-by-page human image verification not performed. Original PDF images English p322, Tamil pp331-332 were separately inspected for Exercise 8.2 Q1-Q8 and numeric/table/part parity; do not extrapolate to the remaining headings.",
   "chapterCounts": {
     "1": 6,
     "2": 10,
@@ -558,7 +558,7 @@
       "taPdfPage": 331,
       "englishHeadingLocated": true,
       "tamilHeadingLocated": true,
-      "questionAndSubpartParityChecked": false
+      "questionAndSubpartParityChecked": true
     },
     {
       "exercise": "8.3",
@@ -589,7 +589,7 @@
     }
   ],
   "limitations": [
-    "Heading numbers agree across both media; this does not certify that questions, subparts, figures or quantities agree.",
+    "Heading numbers agree across both media; question/subpart/quantity parity is only established for the bounded Exercise 8.2 inventory. The remaining 60 headings are not certified.",
     "Text-layer extraction may miss image-only content; use source-page image verification for every exercise before a complete denominator claim.",
     "Do not classify any question as unworked or pilot-eligible from exercise headings alone.",
     "Answer appendix and Worked Examples excluded."
