@@ -298,7 +298,11 @@
       "priority": "high",
       "englishExerciseHeadingCount": 6,
       "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
-      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 6,
+      "bilingualHeadingParities": 6,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
     },
     {
       "grade": 10,
@@ -328,7 +332,11 @@
       "priority": "high",
       "englishExerciseHeadingCount": 10,
       "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
-      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 10,
+      "bilingualHeadingParities": 10,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
     },
     {
       "grade": 10,
@@ -358,7 +366,11 @@
       "priority": "high",
       "englishExerciseHeadingCount": 20,
       "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
-      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 20,
+      "bilingualHeadingParities": 20,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
     },
     {
       "grade": 10,
@@ -388,7 +400,11 @@
       "priority": "high",
       "englishExerciseHeadingCount": 5,
       "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
-      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 5,
+      "bilingualHeadingParities": 5,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
     },
     {
       "grade": 10,
@@ -418,7 +434,11 @@
       "priority": "high",
       "englishExerciseHeadingCount": 5,
       "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
-      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 5,
+      "bilingualHeadingParities": 5,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
     },
     {
       "grade": 10,
@@ -448,7 +468,11 @@
       "priority": "high",
       "englishExerciseHeadingCount": 5,
       "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
-      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 5,
+      "bilingualHeadingParities": 5,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
     },
     {
       "grade": 10,
@@ -478,7 +502,11 @@
       "priority": "high",
       "englishExerciseHeadingCount": 5,
       "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
-      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 5,
+      "bilingualHeadingParities": 5,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
     },
     {
       "grade": 10,
@@ -508,7 +536,11 @@
       "priority": "high",
       "englishExerciseHeadingCount": 5,
       "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
-      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 5,
+      "bilingualHeadingParities": 5,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
     },
     {
       "grade": 11,
@@ -1175,5 +1207,11 @@
     },
     "status": "ENGLISH_ONLY_TEXT_LAYER_LOCATOR_INDEX_AWAITING_FULL_IMAGE_AND_TAMIL_PARITY",
     "questionPartDenominatorEstablished": false
+  },
+  "boundedGrade10BilingualHeadingAudit": {
+    "source": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+    "matchedHeadingIdentifiers": 61,
+    "verifiedQuestionAndPartDenominator": false,
+    "contentParityCertified": false
   }
 }
