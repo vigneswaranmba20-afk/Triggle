@@ -93,8 +93,22 @@ function expression(source,{display=false}={}){
 function rich(source,{display=false}={}){
  if(typeof source!=='string')return source;
  if(source.includes('₹'))display=false;
+ // Keep each enumerated result beside its label, including when its working
+ // spans several aligned lines. Labels and semicolons must not become lonely
+ // prose lines between display formulas.
+ if(display&&/^\([iv]+\)\s/.test(source)){
+  const parts=source.split(/;\s*(?=\([iv]+\)\s)/),rows=[];
+  try{
+   for(const part of parts){const match=part.match(/^(\([iv]+\))\s+(.+)$/);if(!match)throw Error('Unsupported labelled row');
+    let formula=expression(match[2],{display:true}).latex;
+    formula=formula.replace('\\begin{aligned}','\\begin{aligned}[t]');
+    rows.push('\\text{'+match[1]+'}\\quad '+formula);
+   }
+   return {latex:'\\begin{gathered}'+rows.join(' \\\\ ')+'\\end{gathered}',fallback:source,display:true};
+  }catch{/* Unsupported labelled prose follows the normal lossless path. */}
+ }
  // Enumerated question/subpart labels are prose, never factors of a formula.
- const labels=/(^|\n|;\s*|\s{2,})(\((?:[iv]+|[1-4])\))(?=\s)/g;
+ const labels=/(^|\s|;\s*)(\((?:[iv]+|[1-4])\))(?=\s|[.,]|$)/g;
  const protectedRanges=[...source.matchAll(labels)].map(m=>[m.index+m[1].length,m.index+m[0].length]);
  const tokens=lex(source),segments=[];let start=0,index=0;
  const pushText=text=>{if(!text)return;if(typeof segments.at(-1)==='string')segments[segments.length-1]+=text;else segments.push(text);};
@@ -114,6 +128,7 @@ function rich(source,{display=false}={}){
   try{
    if(!body)throw Error('Whitespace');
    if(/^[aAiI]$/.test(body)&&body!==source.trim())throw Error('Leave prose articles and labels as text');
+   if(/^period\s+\d+$/.test(body))throw Error('A prose period length is not a product');
    const math=expression(body,{display});
    if(!display&&math.latex.includes('\\frac'))math.latex='\\displaystyle '+math.latex;
    pushText(source.slice(start,a)+lead);segments.push(math);pushText(tail);start=b;

@@ -24,6 +24,10 @@ async function geometry(page,id){
     assert.equal(await page.locator('[data-math-error]').count(),0,q.id+' valid math');
     assert.equal(await page.locator('#stepsList .worked-step').count(),q.steps.length+1,q.id+' full standard solution');
     assert(await page.locator('#lessonCard .katex').count()>0,q.id+' uses typeset notation');
+    if(q.id==='g9-ch3-ex3.2-q4'){
+     assert.equal(await page.locator('#questionText .katex').count(),4,'All four polynomial equations render');
+     assert.equal(await page.locator('.final-answer-step mfrac').count(),3,'All fractional roots retain numerator/denominator structure');
+    }
     await geometry(page,q.id);
     if(width===390||samples.includes(q.id)){
      await page.locator('#langTa').click();assert.equal(await page.locator('[data-math-error]').count(),0,q.id+' Tamil math');await geometry(page,q.id+' Tamil');await page.locator('#langEn').click();

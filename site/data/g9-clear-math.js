@@ -610,12 +610,7 @@ const records=[
         "fallback": "0.(285714)",
         "display": true
       },
-      " — Recurring, ",
-      {
-        "latex": "\\text{period} 6",
-        "fallback": "period 6",
-        "display": true
-      }
+      " — Recurring, period 6"
     ],
     "steps": [
       {
@@ -630,14 +625,7 @@ const records=[
         }
       },
       {
-        "math": [
-          "Recurring, ",
-          {
-            "latex": "\\text{period} 6",
-            "fallback": "period 6",
-            "display": true
-          }
-        ],
+        "math": "Recurring, period 6",
         "reasonMath": {
           "en": "A zero remainder means terminating; repeated nonzero remainders produce a recurring block.",
           "ta": "மீதி பூச்சியம் எனில் முடிவுறும்; மீதி மீண்டும்வந்தால் தொடர்தசமம்."
@@ -670,12 +658,7 @@ const records=[
         "fallback": "−5.(27)",
         "display": true
       },
-      " — Recurring, ",
-      {
-        "latex": "\\text{period} 2",
-        "fallback": "period 2",
-        "display": true
-      }
+      " — Recurring, period 2"
     ],
     "steps": [
       {
@@ -690,14 +673,7 @@ const records=[
         }
       },
       {
-        "math": [
-          "Recurring, ",
-          {
-            "latex": "\\text{period} 2",
-            "fallback": "period 2",
-            "display": true
-          }
-        ],
+        "math": "Recurring, period 2",
         "reasonMath": {
           "en": "A zero remainder means terminating; repeated nonzero remainders produce a recurring block.",
           "ta": "மீதி பூச்சியம் எனில் முடிவுறும்; மீதி மீண்டும்வந்தால் தொடர்தசமம்."
@@ -730,12 +706,7 @@ const records=[
         "fallback": "7.(3)",
         "display": true
       },
-      " — Recurring, ",
-      {
-        "latex": "\\text{period} 1",
-        "fallback": "period 1",
-        "display": true
-      }
+      " — Recurring, period 1"
     ],
     "steps": [
       {
@@ -750,14 +721,7 @@ const records=[
         }
       },
       {
-        "math": [
-          "Recurring, ",
-          {
-            "latex": "\\text{period} 1",
-            "fallback": "period 1",
-            "display": true
-          }
-        ],
+        "math": "Recurring, period 1",
         "reasonMath": {
           "en": "A zero remainder means terminating; repeated nonzero remainders produce a recurring block.",
           "ta": "மீதி பூச்சியம் எனில் முடிவுறும்; மீதி மீண்டும்வந்தால் தொடர்தசமம்."
@@ -837,11 +801,14 @@ const records=[
         " ஐ தொடர்தசமமாக எழுதிப் அதன் சுழற்சி நீளத்தைக் காண்க."
       ]
     },
-    "answerMath": {
-      "latex": "\\begin{gathered}\\frac{1}{13} = 0.\\overline{076923} \\\\ \\text{period} 6\\end{gathered}",
-      "fallback": "1/13=0.(076923), period 6",
-      "display": true
-    },
+    "answerMath": [
+      {
+        "latex": "\\frac{1}{13} = 0.\\overline{076923}",
+        "fallback": "1/13=0.(076923)",
+        "display": true
+      },
+      ", period 6"
+    ],
     "steps": [
       {
         "math": {
@@ -6990,15 +6957,7 @@ const records=[
         " எவ்வகையான எண்ணாக இருக்கலாம்?\n(1) எப்போதும் இயல் எண்  (2) எப்போதும் விகிதமுறா எண்  (3) எப்போதும் விகிதமுறு எண்  (4) விகிதமுறு அல்லது விகிதமுறா எண்"
       ]
     },
-    "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(4\\right)",
-        "fallback": "(4)",
-        "display": true
-      },
-      " — Rational or irrational"
-    ],
+    "answerMath": "Option (4) — Rational or irrational",
     "steps": [
       {
         "math": [
@@ -7061,15 +7020,7 @@ const records=[
       "en": "Which statement is NOT true?\n(1) Every rational number is real  (2) Every integer is rational  (3) Every real number is irrational  (4) Every natural number is whole",
       "ta": "கீழ்க்கண்டவற்றுள் உண்மையல்லாத கூற்று எது?\n(1) ஒவ்வொரு விகிதமுறு எண்ணும் மெய்யெண்  (2) ஒவ்வொரு முழு எண்ணும் விகிதமுறு எண்  (3) ஒவ்வொரு மெய்யெண்ணும் விகிதமுறா எண்  (4) ஒவ்வொரு இயல் எண்ணும் முழு எண்"
     },
-    "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(3\\right)",
-        "fallback": "(3)",
-        "display": true
-      },
-      " — Every real number is irrational"
-    ],
+    "answerMath": "Option (3) — Every real number is irrational",
     "steps": [
       {
         "math": "Real numbers include both rational and irrational numbers.",
@@ -7095,12 +7046,7 @@ const records=[
               "latex": "2",
               "fallback": "2"
             },
-            " disproves statement ",
-            {
-              "latex": "\\left(3\\right)",
-              "fallback": "(3)"
-            },
-            "."
+            " disproves statement (3)."
           ],
           "ta": "மெய்யெண்களில் விகிதமுறு, விகிதமுறா எண்கள் இரண்டும் உள்ளன."
         }
@@ -7113,15 +7059,7 @@ const records=[
       "en": "The sum of two irrational numbers is:\n(1) Always irrational  (2) Rational or irrational  (3) Always rational  (4) Always an integer",
       "ta": "இரு விகிதமுறா எண்களின் கூடுதல் எவ்வகையாக இருக்கலாம்?\n(1) எப்போதும் விகிதமுறா எண்  (2) விகிதமுறு அல்லது விகிதமுறா எண்  (3) எப்போதும் விகிதமுறு எண்  (4) எப்போதும் முழு எண்"
     },
-    "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(2\\right)",
-        "fallback": "(2)",
-        "display": true
-      },
-      " — Rational or irrational"
-    ],
+    "answerMath": "Option (2) — Rational or irrational",
     "steps": [
       {
         "math": [
@@ -7220,13 +7158,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(1\\right)",
-        "fallback": "(1)",
-        "display": true
-      },
-      " — ",
+      "Option (1) — ",
       {
         "latex": "\\frac{5}{64}",
         "fallback": "5/64",
@@ -7364,13 +7296,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(4\\right)",
-        "fallback": "(4)",
-        "display": true
-      },
-      " — ",
+      "Option (4) — ",
       {
         "latex": "\\pi",
         "fallback": "π",
@@ -7516,13 +7442,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(2\\right)",
-        "fallback": "(2)",
-        "display": true
-      },
-      " — ",
+      "Option (2) — ",
       {
         "latex": "\\sqrt{5}",
         "fallback": "√5",
@@ -7652,13 +7572,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(2\\right)",
-        "fallback": "(2)",
-        "display": true
-      },
-      " — ",
+      "Option (2) — ",
       {
         "latex": "\\frac{3}{10}",
         "fallback": "3/10",
@@ -7797,13 +7711,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(2\\right)",
-        "fallback": "(2)",
-        "display": true
-      },
-      " — ",
+      "Option (2) — ",
       {
         "latex": "0.\\overline{714285}",
         "fallback": "0.(714285)",
@@ -7915,13 +7823,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(4\\right)",
-        "fallback": "(4)",
-        "display": true
-      },
-      " — ",
+      "Option (4) — ",
       {
         "latex": "\\frac{\\sqrt{54}}{\\sqrt{18}}",
         "fallback": "√54 / √18",
@@ -8059,13 +7961,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(1\\right)",
-        "fallback": "(1)",
-        "display": true
-      },
-      " — ",
+      "Option (1) — ",
       {
         "latex": "0.6\\overline{87}",
         "fallback": "0.6(87)",
@@ -8200,13 +8096,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(4\\right)",
-        "fallback": "(4)",
-        "display": true
-      },
-      " — ",
+      "Option (4) — ",
       {
         "latex": "\\sqrt{25} = \\pm 5",
         "fallback": "√25=±5",
@@ -8309,13 +8199,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(4\\right)",
-        "fallback": "(4)",
-        "display": true
-      },
-      " — ",
+      "Option (4) — ",
       {
         "latex": "\\sqrt{13}",
         "fallback": "√13",
@@ -8445,13 +8329,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(3\\right)",
-        "fallback": "(3)",
-        "display": true
-      },
-      " — ",
+      "Option (3) — ",
       {
         "latex": "5 \\sqrt{3}",
         "fallback": "5√3",
@@ -8586,13 +8464,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(2\\right)",
-        "fallback": "(2)",
-        "display": true
-      },
-      " — ",
+      "Option (2) — ",
       {
         "latex": "4",
         "fallback": "4",
@@ -8712,13 +8584,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(2\\right)",
-        "fallback": "(2)",
-        "display": true
-      },
-      " — ",
+      "Option (2) — ",
       {
         "latex": "8 \\sqrt{21}",
         "fallback": "8√21",
@@ -8819,13 +8685,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(3\\right)",
-        "fallback": "(3)",
-        "display": true
-      },
-      " — ",
+      "Option (3) — ",
       {
         "latex": "\\frac{\\sqrt{6}}{3}",
         "fallback": "√6/3",
@@ -8946,13 +8806,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(2\\right)",
-        "fallback": "(2)",
-        "display": true
-      },
-      " — ",
+      "Option (2) — ",
       {
         "latex": "22 - 4 \\sqrt{10}",
         "fallback": "22−4√10",
@@ -9067,13 +8921,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(4\\right)",
-        "fallback": "(4)",
-        "display": true
-      },
-      " — ",
+      "Option (4) — ",
       {
         "latex": "\\frac{10^{6}}{3^{6}}",
         "fallback": "10⁶/3⁶",
@@ -9208,13 +9056,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(2\\right)",
-        "fallback": "(2)",
-        "display": true
-      },
-      " — ",
+      "Option (2) — ",
       {
         "latex": "\\frac{4}{3}",
         "fallback": "4/3",
@@ -9342,13 +9184,7 @@ const records=[
       ]
     },
     "answerMath": [
-      "Option ",
-      {
-        "latex": "\\left(3\\right)",
-        "fallback": "(3)",
-        "display": true
-      },
-      " — ",
+      "Option (3) — ",
       {
         "latex": "2 \\times 10^{10} m^{2}",
         "fallback": "2×10¹⁰ m²",
@@ -9845,12 +9681,21 @@ const records=[
           "latex": "5 x - 6 = 0",
           "fallback": "5x – 6 = 0"
         },
-        " (ii) x +3 = 0\n(iii) ",
+        " (ii) ",
+        {
+          "latex": "x + 3 = 0",
+          "fallback": "x +3 = 0"
+        },
+        "\n(iii) ",
         {
           "latex": "10 x + 9 = 0",
           "fallback": "10x + 9 = 0"
         },
-        " (iv) 9x – 4 = 0"
+        " (iv) ",
+        {
+          "latex": "9 x - 4 = 0",
+          "fallback": "9x – 4 = 0"
+        }
       ],
       "ta": [
         "English-language question; Tamil version not changed. Find the roots of the polynomial equations .\n(i) ",
@@ -9858,40 +9703,28 @@ const records=[
           "latex": "5 x - 6 = 0",
           "fallback": "5x – 6 = 0"
         },
-        " (ii) x +3 = 0\n(iii) ",
+        " (ii) ",
+        {
+          "latex": "x + 3 = 0",
+          "fallback": "x +3 = 0"
+        },
+        "\n(iii) ",
         {
           "latex": "10 x + 9 = 0",
           "fallback": "10x + 9 = 0"
         },
-        " (iv) 9x – 4 = 0"
+        " (iv) ",
+        {
+          "latex": "9 x - 4 = 0",
+          "fallback": "9x – 4 = 0"
+        }
       ]
     },
-    "answerMath": [
-      "(i) ",
-      {
-        "latex": "\\frac{6}{5}",
-        "fallback": "[[6|5]]",
-        "display": true
-      },
-      "; (ii) ",
-      {
-        "latex": "- 3",
-        "fallback": "−3",
-        "display": true
-      },
-      "; (iii) ",
-      {
-        "latex": "- \\frac{9}{10}",
-        "fallback": "−[[9|10]]",
-        "display": true
-      },
-      "; (iv) ",
-      {
-        "latex": "\\frac{4}{9}",
-        "fallback": "[[4|9]]",
-        "display": true
-      }
-    ],
+    "answerMath": {
+      "latex": "\\begin{gathered}\\text{(i)}\\quad \\frac{6}{5} \\\\ \\text{(ii)}\\quad - 3 \\\\ \\text{(iii)}\\quad - \\frac{9}{10} \\\\ \\text{(iv)}\\quad \\frac{4}{9}\\end{gathered}",
+      "fallback": "(i) [[6|5]]; (ii) −3; (iii) −[[9|10]]; (iv) [[4|9]]",
+      "display": true
+    },
     "steps": [
       {
         "math": {
@@ -9939,54 +9772,22 @@ const records=[
         }
       },
       {
-        "math": [
-          "(i) ",
-          {
-            "latex": "\\begin{aligned}5 x  &=  6  \\\\  x  &=  \\frac{6}{5}\\end{aligned}",
-            "fallback": "5x=6 ⇒ x=[[6|5]]",
-            "display": true
-          },
-          "; (ii) ",
-          {
-            "latex": "x = - 3",
-            "fallback": "x=−3",
-            "display": true
-          }
-        ],
+        "math": {
+          "latex": "\\begin{gathered}\\text{(i)}\\quad \\begin{aligned}[t]5 x  &=  6  \\\\  x  &=  \\frac{6}{5}\\end{aligned} \\\\ \\text{(ii)}\\quad x = - 3\\end{gathered}",
+          "fallback": "(i) 5x=6 ⇒ x=[[6|5]]; (ii) x=−3",
+          "display": true
+        },
         "reasonMath": {
-          "en": [
-            "Move the constant term in parts ",
-            {
-              "latex": "\\left(i\\right)",
-              "fallback": "(i)"
-            },
-            " and (ii)."
-          ],
-          "ta": [
-            "English explanation (Tamil unchanged): Move the constant term in parts ",
-            {
-              "latex": "\\left(i\\right)",
-              "fallback": "(i)"
-            },
-            " and (ii)."
-          ]
+          "en": "Move the constant term in parts (i) and (ii).",
+          "ta": "English explanation (Tamil unchanged): Move the constant term in parts (i) and (ii)."
         }
       },
       {
-        "math": [
-          "(iii) ",
-          {
-            "latex": "\\begin{aligned}10 x  &=  - 9  \\\\  x  &=  - \\frac{9}{10}\\end{aligned}",
-            "fallback": "10x=−9 ⇒ x=−[[9|10]]",
-            "display": true
-          },
-          "; (iv) ",
-          {
-            "latex": "\\begin{aligned}9 x  &=  4  \\\\  x  &=  \\frac{4}{9}\\end{aligned}",
-            "fallback": "9x=4 ⇒ x=[[4|9]]",
-            "display": true
-          }
-        ],
+        "math": {
+          "latex": "\\begin{gathered}\\text{(iii)}\\quad \\begin{aligned}[t]10 x  &=  - 9  \\\\  x  &=  - \\frac{9}{10}\\end{aligned} \\\\ \\text{(iv)}\\quad \\begin{aligned}[t]9 x  &=  4  \\\\  x  &=  \\frac{4}{9}\\end{aligned}\\end{gathered}",
+          "fallback": "(iii) 10x=−9 ⇒ x=−[[9|10]]; (iv) 9x=4 ⇒ x=[[4|9]]",
+          "display": true
+        },
         "reasonMath": {
           "en": "Move the constant term and divide in parts (iii) and (iv).",
           "ta": "English explanation (Tamil unchanged): Move the constant term and divide in parts (iii) and (iv)."

@@ -40,6 +40,10 @@ assert.equal(compact('3⅔'),'3\\,\\frac{2}{3}','Mixed number retains its whole 
 assert.equal(compact('−5 3/11'),'-5\\,\\frac{3}{11}','Negative mixed number must not turn into a product or an improper numerator');
 assert.equal(compact('4 9/35'),'4\\,\\frac{9}{35}','Mixed number whitespace is meaningful');
 assert.equal(rich('a pure surd'),'a pure surd','Prose articles remain prose');
+assert.equal(rich('Recurring, period 2'),'Recurring, period 2','Period length remains prose');
+const roots=items.find(q=>q.id==='g9-ch3-ex3.2-q4'),rootPresentation=get(roots);
+assert.equal(rootPresentation.questionMath.en.filter(p=>p?.latex).length,4,'All four polynomial equations are typeset, including labels separated by a single space');
+assert.match(rootPresentation.answerMath.latex,/begin\{gathered\}/,'Answer labels stay with their fractional results');
 assert.match(rich('x²+1/x²=(2√5)²−2=20−2=18',{display:true}).latex,/begin\{aligned\}/,'Calculation chains align on separate lines');
 assert.match(rich('√48=4√3; √32=4√2',{display:true}).latex,/begin\{gathered\}/,'Related equalities share compact rows');
 assert.equal(fallback(rich('Find 1/x² (where x≠0).')),'Find 1/x² (where x≠0).');
