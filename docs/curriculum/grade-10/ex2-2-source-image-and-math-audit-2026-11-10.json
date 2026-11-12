@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": "2",
+  "exercise": "2.2",
+  "status": "source-image-reviewed-math-audited-not-registered",
+  "source": {
+    "title": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+    "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+    "edition": "First edition 2019; revised 2020, 2021, 2022, 2023, 2025",
+    "imprintPdfPage": 2,
+    "exercisePdfPage": 52,
+    "exercisePrintedPage": 46,
+    "sourcePageImageInspected": true,
+    "answerKeyPdfPage": 342,
+    "answerKeyPrintedPage": 336
+  },
+  "inventory": {
+    "numberedQuestions": 9,
+    "unlabelledTasks": 9,
+    "figures": 0,
+    "tables": 0,
+    "graphs": 0,
+    "mcq": 0,
+    "exerciseHeadingVerified": true,
+    "completeExercise": true,
+    "completeChapter": false
+  },
+  "questions": [
+    {
+      "number": "1",
+      "parts": [
+        "whole"
+      ],
+      "wordingReviewedFromPageImage": true,
+      "transcription": "For what values of natural number n, 4ⁿ can end with the digit 6?",
+      "answer": "All positive even natural numbers n.",
+      "solutionOutline": "4¹ ends in 4; multiplying by 4 alternates the last digit between 4 and 6. Since 4² ends in 6, precisely even n give 6.",
+      "independentCheck": "For n=2k (k≥1), 4ⁿ=(4²)^k and 16^k ends in 6. For n odd, 4ⁿ ends in 4.",
+      "sourcePage": 52,
+      "printedPage": 46,
+      "status": "math-audited"
+    },
+    {
+      "number": "2",
+      "parts": [
+        "whole"
+      ],
+      "wordingReviewedFromPageImage": true,
+      "transcription": "If m, n are natural numbers, for what values of m, does 2ⁿ × 5ᵐ ends in 5?",
+      "answer": "No natural number m (when m,n≥1).",
+      "solutionOutline": "Since m,n≥1, 2ⁿ×5ᵐ contains both 2 and 5, hence a factor 10.",
+      "independentCheck": "Its final digit must be 0, not 5; the natural-number-positive domain matters.",
+      "sourcePage": 52,
+      "printedPage": 46,
+      "status": "math-audited"
+    },
+    {
+      "number": "3",
+      "parts": [
+        "whole"
+      ],
+      "wordingReviewedFromPageImage": true,
+      "transcription": "Find the HCF of 252525 and 363636.",
+      "answer": "10101",
+      "solutionOutline": "252525=10101×25 and 363636=10101×36.",
+      "independentCheck": "Since gcd(25,36)=1, gcd(252525,363636)=10101.",
+      "sourcePage": 52,
+      "printedPage": 46,
+      "status": "math-audited"
+    },
+    {
+      "number": "4",
+      "parts": [
+        "whole"
+      ],
+      "wordingReviewedFromPageImage": true,
+      "transcription": "If 13824 = 2ᵃ × 3ᵇ then find a and b.",
+      "answer": "a=9, b=3",
+      "solutionOutline": "13824÷27=512; 27=3³ and 512=2⁹.",
+      "independentCheck": "2⁹×3³=512×27=13824.",
+      "sourcePage": 52,
+      "printedPage": 46,
+      "status": "math-audited"
+    },
+    {
+      "number": "5",
+      "parts": [
+        "whole"
+      ],
+      "wordingReviewedFromPageImage": true,
+      "transcription": "If p₁ˣ¹ × p₂ˣ² × p₃ˣ³ × p₄ˣ⁴ = 113400 where p₁,p₂,p₃,p₄ are primes in ascending order and x₁,x₂,x₃,x₄ are integers, find the value of p₁,p₂,p₃,p₄ and x₁,x₂,x₃,x₄.",
+      "answer": "(p₁,p₂,p₃,p₄)=(2,3,5,7); (x₁,x₂,x₃,x₄)=(3,4,2,1).",
+      "solutionOutline": "113400=1134×100=(2×3⁴×7)×(2²×5²)=2³×3⁴×5²×7.",
+      "independentCheck": "8×81×25×7=113400; unique prime factorisation determines all exponents.",
+      "sourcePage": 52,
+      "printedPage": 46,
+      "status": "math-audited"
+    },
+    {
+      "number": "6",
+      "parts": [
+        "whole"
+      ],
+      "wordingReviewedFromPageImage": true,
+      "transcription": "Find the LCM and HCF of 408 and 170 by applying the fundamental theorem of arithmetic.",
+      "answer": "LCM=2040; HCF=34",
+      "solutionOutline": "408=2³×3×17 and 170=2×5×17.",
+      "independentCheck": "HCF=2×17=34; LCM=2³×3×5×17=2040; 34×2040=408×170.",
+      "sourcePage": 52,
+      "printedPage": 46,
+      "status": "math-audited"
+    },
+    {
+      "number": "7",
+      "parts": [
+        "whole"
+      ],
+      "wordingReviewedFromPageImage": true,
+      "transcription": "Find the greatest number consisting of 6 digits which is exactly divisible by 24,15,36?",
+      "answer": "999720",
+      "solutionOutline": "LCM(24,15,36)=360. Greatest six-digit integer is 999999.",
+      "independentCheck": "360×2777=999720≤999999; 360×2778=1000080>999999.",
+      "sourcePage": 52,
+      "printedPage": 46,
+      "status": "math-audited"
+    },
+    {
+      "number": "8",
+      "parts": [
+        "whole"
+      ],
+      "wordingReviewedFromPageImage": true,
+      "transcription": "What is the smallest number that when divided by three numbers such as 35, 56 and 91 leaves remainder 7 in each case?",
+      "answer": "3647 (under the textbook's intended nontrivial interpretation).",
+      "solutionOutline": "35=5×7, 56=2³×7, 91=7×13, so LCM=2³×5×7×13=3640.",
+      "independentCheck": "3640+7=3647 leaves remainder 7 in each division. Caveat: literal smallest positive integer is 7, because 7 divided by each larger divisor also leaves remainder 7. The textbook key expects 3647; the implied condition is a number larger than the divisors / positive common multiple offset.",
+      "sourcePage": 52,
+      "printedPage": 46,
+      "status": "mathematically-verified-with-wording-ambiguity"
+    },
+    {
+      "number": "9",
+      "parts": [
+        "whole"
+      ],
+      "wordingReviewedFromPageImage": true,
+      "transcription": "Find the least number that is divisible by the first ten natural numbers.",
+      "answer": "2520",
+      "solutionOutline": "LCM(1,2,...,10)=2³×3²×5×7.",
+      "independentCheck": "2520 is divisible by every integer from 1 through 10; each prime-power factor is necessary.",
+      "sourcePage": 52,
+      "printedPage": 46,
+      "status": "math-audited"
+    }
+  ],
+  "editorialFlags": [
+    {
+      "question": "8",
+      "reason": "The literal minimum positive solution is 7; appendix expects 3647. Preserve source wording and explain implicit nontrivial condition; do not publish a misleading unqualified answer."
+    }
+  ],
+  "tamilStatus": "pending",
+  "registrationStatus": "not-registered",
+  "validationStatus": "full engine validation and CI not yet run",
+  "next": "Convert this verified source inventory into documented batch schema, write full student steps and synchronous independent verifier, validate, then claim integration lease for registration/cache and PR CI."
+}

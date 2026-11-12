@@ -3839,6 +3839,54 @@ const metadata={
         "family": "word-problem",
         "source": "audited-ch1-batch"
       }
+    },
+    "c10-2-ex2-2-q1": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Two-step periodic units-digit pattern with even exponents.",
+      "review": "implementation-audit"
+    },
+    "c10-2-ex2-2-q2": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Direct factor of ten makes the units digit zero.",
+      "review": "implementation-audit"
+    },
+    "c10-2-ex2-2-q3": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor common repeated-number multiplier and test coprimality.",
+      "review": "implementation-audit"
+    },
+    "c10-2-ex2-2-q4": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Direct prime factorisation into powers of 2 and 3.",
+      "review": "implementation-audit"
+    },
+    "c10-2-ex2-2-q5": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Multistage prime factorisation and matching four exponents.",
+      "review": "implementation-audit"
+    },
+    "c10-2-ex2-2-q6": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Use HCF and LCM prime exponents and verify product identity.",
+      "review": "implementation-audit"
+    },
+    "c10-2-ex2-2-q7": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Find a three-number LCM and bound a six-digit multiple.",
+      "review": "implementation-audit"
+    },
+    "c10-2-ex2-2-q9": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Prime-power LCM reasoning for the first ten natural numbers.",
+      "review": "implementation-audit"
     }
   },
   "solutionReviews": {
