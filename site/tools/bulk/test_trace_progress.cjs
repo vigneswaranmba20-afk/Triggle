@@ -13,6 +13,21 @@ for(const c of chapterQueue.chapters){
  assert.equal(c.completeSourcePageInventory,false);
 }
 assert.equal(chapterQueue.knownBoundedExercises.length,2);
+const headingIndex=require('../../../docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json');
+assert.equal(headingIndex.exerciseHeadingCount,61);
+assert.equal(headingIndex.entries.length,61);
+assert.equal(headingIndex.source.pdfSha256,'602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d');
+assert.equal(headingIndex.sourcePageImageAllHeadingsVerified,false);
+assert.equal(headingIndex.bilingualCrossCheck,'NOT_YET_PERFORMED');
+for(let chapter=1;chapter<=8;chapter++){
+ const entry=chapterQueue.chapters.find(c=>c.grade===10&&c.chapter===chapter);
+ const headings=headingIndex.entries.filter(h=>h.chapter===chapter);
+ assert.equal(entry.englishExerciseHeadingCount,headings.length);
+ assert.equal(headings.length,headingIndex.chapterExerciseHeadingCounts[String(chapter)]);
+ assert.deepEqual(headings.map(h=>h.exercise),headings.map((h,i)=>chapter+'.'+(i+1)));
+ for(const h of headings){assert(h.pdfPage>=1&&h.pdfPage<339);assert.equal(h.questionCount,null);assert.equal(h.subpartCount,null);}
+}
+
 assert.equal(report.totalMilestones,18);assert.equal(report.baselinePercentComplete,44.44);assert.equal(report.originalBaselinePercentComplete,40);
 assert.equal(report.curriculumPercent,null);assert.equal(report.pilotRealPercent,0);
 assert.equal(report.percentComplete,88.89);assert.deepEqual(report.deferredMilestones.map(x=>x.id).sort(),['original-zip-reconciliation','professional-tamil-review']);
