@@ -100,8 +100,7 @@ function rich(source,{display=false}={}){
   const parts=source.split(/;\s*(?=\([iv]+\)\s)/),rows=[];
   try{
    for(const part of parts){const match=part.match(/^(\([iv]+\))\s+(.+)$/);if(!match)throw Error('Unsupported labelled row');
-    let formula=expression(match[2],{display:true}).latex;
-    formula=formula.replace('\\begin{aligned}','\\begin{aligned}[t]');
+    const formula=expression(match[2],{display:true}).latex;
     rows.push('\\text{'+match[1]+'}\\quad '+formula);
    }
    return {latex:'\\begin{gathered}'+rows.join(' \\\\ ')+'\\end{gathered}',fallback:source,display:true};

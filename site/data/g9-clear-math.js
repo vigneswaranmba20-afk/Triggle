@@ -9773,7 +9773,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{gathered}\\text{(i)}\\quad \\begin{aligned}[t]5 x  &=  6  \\\\  x  &=  \\frac{6}{5}\\end{aligned} \\\\ \\text{(ii)}\\quad x = - 3\\end{gathered}",
+          "latex": "\\begin{gathered}\\text{(i)}\\quad \\begin{aligned}5 x  &=  6  \\\\  x  &=  \\frac{6}{5}\\end{aligned} \\\\ \\text{(ii)}\\quad x = - 3\\end{gathered}",
           "fallback": "(i) 5x=6 ⇒ x=[[6|5]]; (ii) x=−3",
           "display": true
         },
@@ -9784,7 +9784,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{gathered}\\text{(iii)}\\quad \\begin{aligned}[t]10 x  &=  - 9  \\\\  x  &=  - \\frac{9}{10}\\end{aligned} \\\\ \\text{(iv)}\\quad \\begin{aligned}[t]9 x  &=  4  \\\\  x  &=  \\frac{4}{9}\\end{aligned}\\end{gathered}",
+          "latex": "\\begin{gathered}\\text{(iii)}\\quad \\begin{aligned}10 x  &=  - 9  \\\\  x  &=  - \\frac{9}{10}\\end{aligned} \\\\ \\text{(iv)}\\quad \\begin{aligned}9 x  &=  4  \\\\  x  &=  \\frac{4}{9}\\end{aligned}\\end{gathered}",
           "fallback": "(iii) 10x=−9 ⇒ x=−[[9|10]]; (iv) 9x=4 ⇒ x=[[4|9]]",
           "display": true
         },
