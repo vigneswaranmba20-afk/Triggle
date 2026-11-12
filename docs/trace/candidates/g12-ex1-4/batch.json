@@ -1,0 +1,3267 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g12-ch1-ex1-4",
+  "grade": 12,
+  "chapter": "1",
+  "chapterTitle": "Applications of Matrices and Determinants",
+  "module": "data/textbook-exercises/g12-ch1-ex1-4-en.js",
+  "sources": [
+    {
+      "id": "tn-g12-en-v1-2025-owner",
+      "grade": 12,
+      "language": "en",
+      "volume": 1,
+      "title": "Class_12_Mathematics_English_Volume_1_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "First edition 2019; revised editions 2020, 2022, 2023, 2025",
+      "url": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+      "sha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    },
+    {
+      "id": "tn-g12-ta-v1-2025-owner",
+      "grade": 12,
+      "language": "ta",
+      "volume": 1,
+      "title": "Class_12_Mathematics_Tamil_Volume_1_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "First edition 2019; revised editions 2020, 2022, 2023, 2025",
+      "url": "https://drive.google.com/file/d/1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c/view",
+      "driveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+      "sha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    }
+  ],
+  "inventory": {
+    "completeChapter": false,
+    "exercises": [
+      {
+        "id": "1.4",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              35
+            ],
+            "pdfPages": [
+              43
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "x = −2, y = 3. x = 1/2, y = 3. x = 2, y = 3, z = 4. x = 1, y = 3, z = 3.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true
+            }
+          },
+          {
+            "number": "2",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              35
+            ],
+            "pdfPages": [
+              43
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "84 questions answered correctly; 16 answered wrongly.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true
+            }
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              35
+            ],
+            "pdfPages": [
+              43
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "Mix 6 litres of the 50% solution and 4 litres of the 25% solution.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true
+            }
+          },
+          {
+            "number": "4",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              35
+            ],
+            "pdfPages": [
+              43
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "Pump A: 15 minutes; pump B: 30 minutes.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true
+            }
+          },
+          {
+            "number": "5",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g12-en-v1-2025-owner",
+            "printedPages": [
+              36
+            ],
+            "pdfPages": [
+              44
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "text": "Yes. Bill = ₹330; balance = ₹20. One dosai = ₹30, one idli = ₹10, one vadai = ₹30.",
+              "sourceId": "tn-g12-en-v1-2025-owner",
+              "printedPages": [
+                282
+              ],
+              "pdfPages": [
+                290
+              ],
+              "visualChecked": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "g12-ch1-ex1.4-q1-i",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.4",
+      "kind": "textbook",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "title": {
+        "en": "Cramer’s rule"
+      },
+      "label": {
+        "en": "Exercise 1.4 · Q1(i)",
+        "ta": "Exercise 1.4 · Q1 · English only; Tamil pending"
+      },
+      "q": {
+        "en": "Solve the following systems of linear equations by Cramer’s rule: (i) 5x − 2y + 16 = 0, x + 3y − 7 = 0"
+      },
+      "steps": [
+        {
+          "en": "Move the constants to the right-hand sides, preserving their signs.",
+          "eq": "5x − 2y = −16; x + 3y = 7",
+          "math": [
+            {
+              "latex": "5x-2y=-16,\\quad x+3y=7",
+              "fallback": "5x − 2y = −16; x + 3y = 7",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Arrange the coefficients and constants in the same variable order. Each row is one of the equations in the reviewed model.",
+          "eq": "A = [[5, −2; 1, 3]]; U = [[x; y]]; B = [[−16; 7]]",
+          "math": [
+            {
+              "latex": "A=\\begin{bmatrix}5 & -2 \\\\ 1 & 3\\end{bmatrix},\\quad U=\\begin{bmatrix}x \\\\ y\\end{bmatrix},\\quad B=\\begin{bmatrix}-16 \\\\ 7\\end{bmatrix}",
+              "fallback": "A = [[5, −2; 1, 3]]; U = [[x; y]]; B = [[−16; 7]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Compute the coefficient determinant.",
+          "eq": "Δ = det [[5, −2; 1, 3]]",
+          "math": [
+            {
+              "latex": "\\Delta=\\begin{vmatrix}5 & -2 \\\\ 1 & 3\\end{vmatrix}",
+              "fallback": "Δ = det [[5, −2; 1, 3]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (5)(3) = 15",
+          "math": [
+            {
+              "latex": "T_{1}=(5)(3)=15",
+              "fallback": "T1 = (5)(3) = 15",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(−2)(1) = 2",
+          "math": [
+            {
+              "latex": "T_{2}=-(-2)(1)=2",
+              "fallback": "T2 = −(−2)(1) = 2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ = (15) + (2) = 17",
+          "math": [
+            {
+              "latex": "\\Delta=(15)+(2)=17",
+              "fallback": "Δ = (15) + (2) = 17",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the x column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_x = det [[−16, −2; 7, 3]]",
+          "math": [
+            {
+              "latex": "\\Delta_{x}=\\begin{vmatrix}-16 & -2 \\\\ 7 & 3\\end{vmatrix}",
+              "fallback": "Δ_x = det [[−16, −2; 7, 3]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (−16)(3) = −48",
+          "math": [
+            {
+              "latex": "T_{1}=(-16)(3)=-48",
+              "fallback": "T1 = (−16)(3) = −48",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(−2)(7) = 14",
+          "math": [
+            {
+              "latex": "T_{2}=-(-2)(7)=14",
+              "fallback": "T2 = −(−2)(7) = 14",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_x = (−48) + (14) = −34",
+          "math": [
+            {
+              "latex": "\\Delta_{x}=(-48)+(14)=-34",
+              "fallback": "Δ_x = (−48) + (14) = −34",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the y column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_y = det [[5, −16; 1, 7]]",
+          "math": [
+            {
+              "latex": "\\Delta_{y}=\\begin{vmatrix}5 & -16 \\\\ 1 & 7\\end{vmatrix}",
+              "fallback": "Δ_y = det [[5, −16; 1, 7]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (5)(7) = 35",
+          "math": [
+            {
+              "latex": "T_{1}=(5)(7)=35",
+              "fallback": "T1 = (5)(7) = 35",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(−16)(1) = 16",
+          "math": [
+            {
+              "latex": "T_{2}=-(-16)(1)=16",
+              "fallback": "T2 = −(−16)(1) = 16",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_y = (35) + (16) = 51",
+          "math": [
+            {
+              "latex": "\\Delta_{y}=(35)+(16)=51",
+              "fallback": "Δ_y = (35) + (16) = 51",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "The coefficient determinant is nonzero, so Cramer’s rule applies and gives one unique solution for the transformed variables.",
+          "eq": "Δ = 17 ≠ 0",
+          "math": [
+            {
+              "latex": "\\Delta=17\\ne0",
+              "fallback": "Δ = 17 ≠ 0",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "x = (−34)/(17) = −2",
+          "math": [
+            {
+              "latex": "x=\\frac{\\Delta_{x}}{\\Delta}=\\frac{-34}{17}=-2",
+              "fallback": "x = (−34)/(17) = −2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "y = (51)/(17) = 3",
+          "math": [
+            {
+              "latex": "y=\\frac{\\Delta_{y}}{\\Delta}=\\frac{51}{17}=3",
+              "fallback": "y = (51)/(17) = 3",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 1. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(5)(−2) + (−2)(3) = −16 = −16",
+          "math": [
+            {
+              "latex": "(5)(-2)+(-2)(3)=-16=-16",
+              "fallback": "(5)(−2) + (−2)(3) = −16 = −16",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 2. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(1)(−2) + (3)(3) = 7 = 7",
+          "math": [
+            {
+              "latex": "(1)(-2)+(3)(3)=7=7",
+              "fallback": "(1)(−2) + (3)(3) = 7 = 7",
+              "display": true
+            }
+          ]
+        }
+      ],
+      "answer": "x = −2, y = 3.",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p35; PDF p43",
+      "questionMath": {
+        "en": [
+          "Solve the following systems of linear equations by Cramer’s rule: (i) ",
+          {
+            "latex": "\\begin{gathered}5x-2y+16=0 \\\\  x+3y-7=0\\end{gathered}",
+            "fallback": "5x − 2y + 16 = 0, x + 3y − 7 = 0",
+            "display": true
+          }
+        ]
+      },
+      "answerMath": {
+        "latex": "x=-2,\\quad y=3",
+        "fallback": "x = −2, y = 3.",
+        "display": true
+      }
+    },
+    {
+      "id": "g12-ch1-ex1.4-q1-ii",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.4",
+      "kind": "textbook",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "title": {
+        "en": "Cramer’s rule"
+      },
+      "label": {
+        "en": "Exercise 1.4 · Q1(ii)",
+        "ta": "Exercise 1.4 · Q1 · English only; Tamil pending"
+      },
+      "q": {
+        "en": "Solve the following systems of linear equations by Cramer’s rule: (ii) 3/x + 2y = 12, 2/x + 3y = 13"
+      },
+      "steps": [
+        {
+          "en": "Every denominator must be nonzero. Introduce a reciprocal variable for each denominator; these substitutions will be reversed after solving.",
+          "eq": "x ≠ 0; u_x = 1/x",
+          "math": [
+            {
+              "latex": "x\\ne0,\\quad u_{x}=\\frac1{x}",
+              "fallback": "x ≠ 0; u_x = 1/x",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "After the reciprocal substitution, the two equations are linear in u_x and y.",
+          "eq": "3u_x + 2y = 12; 2u_x + 3y = 13",
+          "math": [
+            {
+              "latex": "3u_x+2y=12,\\quad2u_x+3y=13",
+              "fallback": "3u_x + 2y = 12; 2u_x + 3y = 13",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Arrange the coefficients and constants in the same variable order. Each row is one of the equations in the reviewed model.",
+          "eq": "A = [[3, 2; 2, 3]]; U = [[u_x; y]]; B = [[12; 13]]",
+          "math": [
+            {
+              "latex": "A=\\begin{bmatrix}3 & 2 \\\\ 2 & 3\\end{bmatrix},\\quad U=\\begin{bmatrix}u_{x} \\\\ y\\end{bmatrix},\\quad B=\\begin{bmatrix}12 \\\\ 13\\end{bmatrix}",
+              "fallback": "A = [[3, 2; 2, 3]]; U = [[u_x; y]]; B = [[12; 13]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Compute the coefficient determinant.",
+          "eq": "Δ = det [[3, 2; 2, 3]]",
+          "math": [
+            {
+              "latex": "\\Delta=\\begin{vmatrix}3 & 2 \\\\ 2 & 3\\end{vmatrix}",
+              "fallback": "Δ = det [[3, 2; 2, 3]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (3)(3) = 9",
+          "math": [
+            {
+              "latex": "T_{1}=(3)(3)=9",
+              "fallback": "T1 = (3)(3) = 9",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(2)(2) = −4",
+          "math": [
+            {
+              "latex": "T_{2}=-(2)(2)=-4",
+              "fallback": "T2 = −(2)(2) = −4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ = (9) + (−4) = 5",
+          "math": [
+            {
+              "latex": "\\Delta=(9)+(-4)=5",
+              "fallback": "Δ = (9) + (−4) = 5",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the x column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_x = det [[12, 2; 13, 3]]",
+          "math": [
+            {
+              "latex": "\\Delta_{x}=\\begin{vmatrix}12 & 2 \\\\ 13 & 3\\end{vmatrix}",
+              "fallback": "Δ_x = det [[12, 2; 13, 3]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (12)(3) = 36",
+          "math": [
+            {
+              "latex": "T_{1}=(12)(3)=36",
+              "fallback": "T1 = (12)(3) = 36",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(2)(13) = −26",
+          "math": [
+            {
+              "latex": "T_{2}=-(2)(13)=-26",
+              "fallback": "T2 = −(2)(13) = −26",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_x = (36) + (−26) = 10",
+          "math": [
+            {
+              "latex": "\\Delta_{x}=(36)+(-26)=10",
+              "fallback": "Δ_x = (36) + (−26) = 10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the y column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_y = det [[3, 12; 2, 13]]",
+          "math": [
+            {
+              "latex": "\\Delta_{y}=\\begin{vmatrix}3 & 12 \\\\ 2 & 13\\end{vmatrix}",
+              "fallback": "Δ_y = det [[3, 12; 2, 13]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (3)(13) = 39",
+          "math": [
+            {
+              "latex": "T_{1}=(3)(13)=39",
+              "fallback": "T1 = (3)(13) = 39",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(12)(2) = −24",
+          "math": [
+            {
+              "latex": "T_{2}=-(12)(2)=-24",
+              "fallback": "T2 = −(12)(2) = −24",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_y = (39) + (−24) = 15",
+          "math": [
+            {
+              "latex": "\\Delta_{y}=(39)+(-24)=15",
+              "fallback": "Δ_y = (39) + (−24) = 15",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "The coefficient determinant is nonzero, so Cramer’s rule applies and gives one unique solution for the transformed variables.",
+          "eq": "Δ = 5 ≠ 0",
+          "math": [
+            {
+              "latex": "\\Delta=5\\ne0",
+              "fallback": "Δ = 5 ≠ 0",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "u_x = (10)/(5) = 2",
+          "math": [
+            {
+              "latex": "u_{x}=\\frac{\\Delta_{x}}{\\Delta}=\\frac{10}{5}=2",
+              "fallback": "u_x = (10)/(5) = 2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Reverse the reciprocal substitution. A transformed value of zero would not give a finite original variable.",
+          "eq": "x = 1/(2) = 1/2",
+          "math": [
+            {
+              "latex": "x=\\frac1{2}=\\frac{1}{2}",
+              "fallback": "x = 1/(2) = 1/2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "y = (15)/(5) = 3",
+          "math": [
+            {
+              "latex": "y=\\frac{\\Delta_{y}}{\\Delta}=\\frac{15}{5}=3",
+              "fallback": "y = (15)/(5) = 3",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 1. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(3)(2) + (2)(3) = 12 = 12",
+          "math": [
+            {
+              "latex": "(3)(2)+(2)(3)=12=12",
+              "fallback": "(3)(2) + (2)(3) = 12 = 12",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 2. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(2)(2) + (3)(3) = 13 = 13",
+          "math": [
+            {
+              "latex": "(2)(2)+(3)(3)=13=13",
+              "fallback": "(2)(2) + (3)(3) = 13 = 13",
+              "display": true
+            }
+          ]
+        }
+      ],
+      "answer": "x = 1/2, y = 3.",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p35; PDF p43",
+      "questionMath": {
+        "en": [
+          "Solve the following systems of linear equations by Cramer’s rule: (ii) ",
+          {
+            "latex": "\\begin{gathered}\\frac3x+2y=12 \\\\  \\frac2x+3y=13\\end{gathered}",
+            "fallback": "3/x + 2y = 12, 2/x + 3y = 13",
+            "display": true
+          }
+        ]
+      },
+      "answerMath": {
+        "latex": "x=\\frac{1}{2},\\quad y=3",
+        "fallback": "x = 1/2, y = 3.",
+        "display": true
+      }
+    },
+    {
+      "id": "g12-ch1-ex1.4-q1-iii",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.4",
+      "kind": "textbook",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "title": {
+        "en": "Cramer’s rule"
+      },
+      "label": {
+        "en": "Exercise 1.4 · Q1(iii)",
+        "ta": "Exercise 1.4 · Q1 · English only; Tamil pending"
+      },
+      "q": {
+        "en": "Solve the following systems of linear equations by Cramer’s rule: (iii) 3x + 3y − z = 11, 2x − y + 2z = 9, 4x + 3y + 2z = 25"
+      },
+      "steps": [
+        {
+          "en": "Arrange the coefficients and constants in the same variable order. Each row is one of the equations in the reviewed model.",
+          "eq": "A = [[3, 3, −1; 2, −1, 2; 4, 3, 2]]; U = [[x; y; z]]; B = [[11; 9; 25]]",
+          "math": [
+            {
+              "latex": "A=\\begin{bmatrix}3 & 3 & -1 \\\\ 2 & -1 & 2 \\\\ 4 & 3 & 2\\end{bmatrix},\\quad U=\\begin{bmatrix}x \\\\ y \\\\ z\\end{bmatrix},\\quad B=\\begin{bmatrix}11 \\\\ 9 \\\\ 25\\end{bmatrix}",
+              "fallback": "A = [[3, 3, −1; 2, −1, 2; 4, 3, 2]]; U = [[x; y; z]]; B = [[11; 9; 25]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Compute the coefficient determinant.",
+          "eq": "Δ = det [[3, 3, −1; 2, −1, 2; 4, 3, 2]]",
+          "math": [
+            {
+              "latex": "\\Delta=\\begin{vmatrix}3 & 3 & -1 \\\\ 2 & -1 & 2 \\\\ 4 & 3 & 2\\end{vmatrix}",
+              "fallback": "Δ = det [[3, 3, −1; 2, −1, 2; 4, 3, 2]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (−1)(2) − (2)(3) = −8",
+          "math": [
+            {
+              "latex": "M_{1}=(-1)(2)-(2)(3)=-8",
+              "fallback": "Minor 1 = (−1)(2) − (2)(3) = −8",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (3)(−8) = −24",
+          "math": [
+            {
+              "latex": "T_{1}=(3)(-8)=-24",
+              "fallback": "T1 = (3)(−8) = −24",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (2)(2) − (2)(4) = −4",
+          "math": [
+            {
+              "latex": "M_{2}=(2)(2)-(2)(4)=-4",
+              "fallback": "Minor 2 = (2)(2) − (2)(4) = −4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(3)(−4) = 12",
+          "math": [
+            {
+              "latex": "T_{2}=-(3)(-4)=12",
+              "fallback": "T2 = −(3)(−4) = 12",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (2)(3) − (−1)(4) = 10",
+          "math": [
+            {
+              "latex": "M_{3}=(2)(3)-(-1)(4)=10",
+              "fallback": "Minor 3 = (2)(3) − (−1)(4) = 10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (−1)(10) = −10",
+          "math": [
+            {
+              "latex": "T_{3}=(-1)(10)=-10",
+              "fallback": "T3 = (−1)(10) = −10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ = (−24) + (12) + (−10) = −22",
+          "math": [
+            {
+              "latex": "\\Delta=(-24)+(12)+(-10)=-22",
+              "fallback": "Δ = (−24) + (12) + (−10) = −22",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the x column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_x = det [[11, 3, −1; 9, −1, 2; 25, 3, 2]]",
+          "math": [
+            {
+              "latex": "\\Delta_{x}=\\begin{vmatrix}11 & 3 & -1 \\\\ 9 & -1 & 2 \\\\ 25 & 3 & 2\\end{vmatrix}",
+              "fallback": "Δ_x = det [[11, 3, −1; 9, −1, 2; 25, 3, 2]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (−1)(2) − (2)(3) = −8",
+          "math": [
+            {
+              "latex": "M_{1}=(-1)(2)-(2)(3)=-8",
+              "fallback": "Minor 1 = (−1)(2) − (2)(3) = −8",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (11)(−8) = −88",
+          "math": [
+            {
+              "latex": "T_{1}=(11)(-8)=-88",
+              "fallback": "T1 = (11)(−8) = −88",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (9)(2) − (2)(25) = −32",
+          "math": [
+            {
+              "latex": "M_{2}=(9)(2)-(2)(25)=-32",
+              "fallback": "Minor 2 = (9)(2) − (2)(25) = −32",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(3)(−32) = 96",
+          "math": [
+            {
+              "latex": "T_{2}=-(3)(-32)=96",
+              "fallback": "T2 = −(3)(−32) = 96",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (9)(3) − (−1)(25) = 52",
+          "math": [
+            {
+              "latex": "M_{3}=(9)(3)-(-1)(25)=52",
+              "fallback": "Minor 3 = (9)(3) − (−1)(25) = 52",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (−1)(52) = −52",
+          "math": [
+            {
+              "latex": "T_{3}=(-1)(52)=-52",
+              "fallback": "T3 = (−1)(52) = −52",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_x = (−88) + (96) + (−52) = −44",
+          "math": [
+            {
+              "latex": "\\Delta_{x}=(-88)+(96)+(-52)=-44",
+              "fallback": "Δ_x = (−88) + (96) + (−52) = −44",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the y column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_y = det [[3, 11, −1; 2, 9, 2; 4, 25, 2]]",
+          "math": [
+            {
+              "latex": "\\Delta_{y}=\\begin{vmatrix}3 & 11 & -1 \\\\ 2 & 9 & 2 \\\\ 4 & 25 & 2\\end{vmatrix}",
+              "fallback": "Δ_y = det [[3, 11, −1; 2, 9, 2; 4, 25, 2]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (9)(2) − (2)(25) = −32",
+          "math": [
+            {
+              "latex": "M_{1}=(9)(2)-(2)(25)=-32",
+              "fallback": "Minor 1 = (9)(2) − (2)(25) = −32",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (3)(−32) = −96",
+          "math": [
+            {
+              "latex": "T_{1}=(3)(-32)=-96",
+              "fallback": "T1 = (3)(−32) = −96",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (2)(2) − (2)(4) = −4",
+          "math": [
+            {
+              "latex": "M_{2}=(2)(2)-(2)(4)=-4",
+              "fallback": "Minor 2 = (2)(2) − (2)(4) = −4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(11)(−4) = 44",
+          "math": [
+            {
+              "latex": "T_{2}=-(11)(-4)=44",
+              "fallback": "T2 = −(11)(−4) = 44",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (2)(25) − (9)(4) = 14",
+          "math": [
+            {
+              "latex": "M_{3}=(2)(25)-(9)(4)=14",
+              "fallback": "Minor 3 = (2)(25) − (9)(4) = 14",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (−1)(14) = −14",
+          "math": [
+            {
+              "latex": "T_{3}=(-1)(14)=-14",
+              "fallback": "T3 = (−1)(14) = −14",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_y = (−96) + (44) + (−14) = −66",
+          "math": [
+            {
+              "latex": "\\Delta_{y}=(-96)+(44)+(-14)=-66",
+              "fallback": "Δ_y = (−96) + (44) + (−14) = −66",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the z column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_z = det [[3, 3, 11; 2, −1, 9; 4, 3, 25]]",
+          "math": [
+            {
+              "latex": "\\Delta_{z}=\\begin{vmatrix}3 & 3 & 11 \\\\ 2 & -1 & 9 \\\\ 4 & 3 & 25\\end{vmatrix}",
+              "fallback": "Δ_z = det [[3, 3, 11; 2, −1, 9; 4, 3, 25]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (−1)(25) − (9)(3) = −52",
+          "math": [
+            {
+              "latex": "M_{1}=(-1)(25)-(9)(3)=-52",
+              "fallback": "Minor 1 = (−1)(25) − (9)(3) = −52",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (3)(−52) = −156",
+          "math": [
+            {
+              "latex": "T_{1}=(3)(-52)=-156",
+              "fallback": "T1 = (3)(−52) = −156",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (2)(25) − (9)(4) = 14",
+          "math": [
+            {
+              "latex": "M_{2}=(2)(25)-(9)(4)=14",
+              "fallback": "Minor 2 = (2)(25) − (9)(4) = 14",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(3)(14) = −42",
+          "math": [
+            {
+              "latex": "T_{2}=-(3)(14)=-42",
+              "fallback": "T2 = −(3)(14) = −42",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (2)(3) − (−1)(4) = 10",
+          "math": [
+            {
+              "latex": "M_{3}=(2)(3)-(-1)(4)=10",
+              "fallback": "Minor 3 = (2)(3) − (−1)(4) = 10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (11)(10) = 110",
+          "math": [
+            {
+              "latex": "T_{3}=(11)(10)=110",
+              "fallback": "T3 = (11)(10) = 110",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_z = (−156) + (−42) + (110) = −88",
+          "math": [
+            {
+              "latex": "\\Delta_{z}=(-156)+(-42)+(110)=-88",
+              "fallback": "Δ_z = (−156) + (−42) + (110) = −88",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "The coefficient determinant is nonzero, so Cramer’s rule applies and gives one unique solution for the transformed variables.",
+          "eq": "Δ = −22 ≠ 0",
+          "math": [
+            {
+              "latex": "\\Delta=-22\\ne0",
+              "fallback": "Δ = −22 ≠ 0",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "x = (−44)/(−22) = 2",
+          "math": [
+            {
+              "latex": "x=\\frac{\\Delta_{x}}{\\Delta}=\\frac{-44}{-22}=2",
+              "fallback": "x = (−44)/(−22) = 2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "y = (−66)/(−22) = 3",
+          "math": [
+            {
+              "latex": "y=\\frac{\\Delta_{y}}{\\Delta}=\\frac{-66}{-22}=3",
+              "fallback": "y = (−66)/(−22) = 3",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "z = (−88)/(−22) = 4",
+          "math": [
+            {
+              "latex": "z=\\frac{\\Delta_{z}}{\\Delta}=\\frac{-88}{-22}=4",
+              "fallback": "z = (−88)/(−22) = 4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 1. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(3)(2) + (3)(3) + (−1)(4) = 11 = 11",
+          "math": [
+            {
+              "latex": "(3)(2)+(3)(3)+(-1)(4)=11=11",
+              "fallback": "(3)(2) + (3)(3) + (−1)(4) = 11 = 11",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 2. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(2)(2) + (−1)(3) + (2)(4) = 9 = 9",
+          "math": [
+            {
+              "latex": "(2)(2)+(-1)(3)+(2)(4)=9=9",
+              "fallback": "(2)(2) + (−1)(3) + (2)(4) = 9 = 9",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 3. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(4)(2) + (3)(3) + (2)(4) = 25 = 25",
+          "math": [
+            {
+              "latex": "(4)(2)+(3)(3)+(2)(4)=25=25",
+              "fallback": "(4)(2) + (3)(3) + (2)(4) = 25 = 25",
+              "display": true
+            }
+          ]
+        }
+      ],
+      "answer": "x = 2, y = 3, z = 4.",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p35; PDF p43",
+      "questionMath": {
+        "en": [
+          "Solve the following systems of linear equations by Cramer’s rule: (iii) ",
+          {
+            "latex": "\\begin{gathered}3x+3y-z=11 \\\\ 2x-y+2z=9 \\\\ 4x+3y+2z=25\\end{gathered}",
+            "fallback": "3x + 3y − z = 11, 2x − y + 2z = 9, 4x + 3y + 2z = 25",
+            "display": true
+          }
+        ]
+      },
+      "answerMath": {
+        "latex": "x=2,\\quad y=3,\\quad z=4",
+        "fallback": "x = 2, y = 3, z = 4.",
+        "display": true
+      }
+    },
+    {
+      "id": "g12-ch1-ex1.4-q1-iv",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.4",
+      "kind": "textbook",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "title": {
+        "en": "Cramer’s rule"
+      },
+      "label": {
+        "en": "Exercise 1.4 · Q1(iv)",
+        "ta": "Exercise 1.4 · Q1 · English only; Tamil pending"
+      },
+      "q": {
+        "en": "Solve the following systems of linear equations by Cramer’s rule: (iv) 3/x − 4/y − 2/z − 1 = 0, 1/x + 2/y + 1/z − 2 = 0, 2/x − 5/y − 4/z + 1 = 0"
+      },
+      "steps": [
+        {
+          "en": "Every denominator must be nonzero. Introduce a reciprocal variable for each denominator; these substitutions will be reversed after solving.",
+          "eq": "x ≠ 0; u_x = 1/x; y ≠ 0; u_y = 1/y; z ≠ 0; u_z = 1/z",
+          "math": [
+            {
+              "latex": "x\\ne0,\\quad u_{x}=\\frac1{x}\\qquad y\\ne0,\\quad u_{y}=\\frac1{y}\\qquad z\\ne0,\\quad u_{z}=\\frac1{z}",
+              "fallback": "x ≠ 0; u_x = 1/x; y ≠ 0; u_y = 1/y; z ≠ 0; u_z = 1/z",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Move the constant terms to the right and use the three reciprocal variables. In the first equation the coefficient of 1/z is negative.",
+          "eq": "3u_x − 4u_y − 2u_z = 1; u_x + 2u_y + u_z = 2; 2u_x − 5u_y − 4u_z = −1",
+          "math": [
+            {
+              "latex": "3u_x-4u_y-2u_z=1,\\quad u_x+2u_y+u_z=2,\\quad2u_x-5u_y-4u_z=-1",
+              "fallback": "3u_x − 4u_y − 2u_z = 1; u_x + 2u_y + u_z = 2; 2u_x − 5u_y − 4u_z = −1",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Arrange the coefficients and constants in the same variable order. Each row is one of the equations in the reviewed model.",
+          "eq": "A = [[3, −4, −2; 1, 2, 1; 2, −5, −4]]; U = [[u_x; u_y; u_z]]; B = [[1; 2; −1]]",
+          "math": [
+            {
+              "latex": "A=\\begin{bmatrix}3 & -4 & -2 \\\\ 1 & 2 & 1 \\\\ 2 & -5 & -4\\end{bmatrix},\\quad U=\\begin{bmatrix}u_{x} \\\\ u_{y} \\\\ u_{z}\\end{bmatrix},\\quad B=\\begin{bmatrix}1 \\\\ 2 \\\\ -1\\end{bmatrix}",
+              "fallback": "A = [[3, −4, −2; 1, 2, 1; 2, −5, −4]]; U = [[u_x; u_y; u_z]]; B = [[1; 2; −1]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Compute the coefficient determinant.",
+          "eq": "Δ = det [[3, −4, −2; 1, 2, 1; 2, −5, −4]]",
+          "math": [
+            {
+              "latex": "\\Delta=\\begin{vmatrix}3 & -4 & -2 \\\\ 1 & 2 & 1 \\\\ 2 & -5 & -4\\end{vmatrix}",
+              "fallback": "Δ = det [[3, −4, −2; 1, 2, 1; 2, −5, −4]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (2)(−4) − (1)(−5) = −3",
+          "math": [
+            {
+              "latex": "M_{1}=(2)(-4)-(1)(-5)=-3",
+              "fallback": "Minor 1 = (2)(−4) − (1)(−5) = −3",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (3)(−3) = −9",
+          "math": [
+            {
+              "latex": "T_{1}=(3)(-3)=-9",
+              "fallback": "T1 = (3)(−3) = −9",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (1)(−4) − (1)(2) = −6",
+          "math": [
+            {
+              "latex": "M_{2}=(1)(-4)-(1)(2)=-6",
+              "fallback": "Minor 2 = (1)(−4) − (1)(2) = −6",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(−4)(−6) = −24",
+          "math": [
+            {
+              "latex": "T_{2}=-(-4)(-6)=-24",
+              "fallback": "T2 = −(−4)(−6) = −24",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (1)(−5) − (2)(2) = −9",
+          "math": [
+            {
+              "latex": "M_{3}=(1)(-5)-(2)(2)=-9",
+              "fallback": "Minor 3 = (1)(−5) − (2)(2) = −9",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (−2)(−9) = 18",
+          "math": [
+            {
+              "latex": "T_{3}=(-2)(-9)=18",
+              "fallback": "T3 = (−2)(−9) = 18",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ = (−9) + (−24) + (18) = −15",
+          "math": [
+            {
+              "latex": "\\Delta=(-9)+(-24)+(18)=-15",
+              "fallback": "Δ = (−9) + (−24) + (18) = −15",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the x column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_x = det [[1, −4, −2; 2, 2, 1; −1, −5, −4]]",
+          "math": [
+            {
+              "latex": "\\Delta_{x}=\\begin{vmatrix}1 & -4 & -2 \\\\ 2 & 2 & 1 \\\\ -1 & -5 & -4\\end{vmatrix}",
+              "fallback": "Δ_x = det [[1, −4, −2; 2, 2, 1; −1, −5, −4]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (2)(−4) − (1)(−5) = −3",
+          "math": [
+            {
+              "latex": "M_{1}=(2)(-4)-(1)(-5)=-3",
+              "fallback": "Minor 1 = (2)(−4) − (1)(−5) = −3",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (1)(−3) = −3",
+          "math": [
+            {
+              "latex": "T_{1}=(1)(-3)=-3",
+              "fallback": "T1 = (1)(−3) = −3",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (2)(−4) − (1)(−1) = −7",
+          "math": [
+            {
+              "latex": "M_{2}=(2)(-4)-(1)(-1)=-7",
+              "fallback": "Minor 2 = (2)(−4) − (1)(−1) = −7",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(−4)(−7) = −28",
+          "math": [
+            {
+              "latex": "T_{2}=-(-4)(-7)=-28",
+              "fallback": "T2 = −(−4)(−7) = −28",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (2)(−5) − (2)(−1) = −8",
+          "math": [
+            {
+              "latex": "M_{3}=(2)(-5)-(2)(-1)=-8",
+              "fallback": "Minor 3 = (2)(−5) − (2)(−1) = −8",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (−2)(−8) = 16",
+          "math": [
+            {
+              "latex": "T_{3}=(-2)(-8)=16",
+              "fallback": "T3 = (−2)(−8) = 16",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_x = (−3) + (−28) + (16) = −15",
+          "math": [
+            {
+              "latex": "\\Delta_{x}=(-3)+(-28)+(16)=-15",
+              "fallback": "Δ_x = (−3) + (−28) + (16) = −15",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the y column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_y = det [[3, 1, −2; 1, 2, 1; 2, −1, −4]]",
+          "math": [
+            {
+              "latex": "\\Delta_{y}=\\begin{vmatrix}3 & 1 & -2 \\\\ 1 & 2 & 1 \\\\ 2 & -1 & -4\\end{vmatrix}",
+              "fallback": "Δ_y = det [[3, 1, −2; 1, 2, 1; 2, −1, −4]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (2)(−4) − (1)(−1) = −7",
+          "math": [
+            {
+              "latex": "M_{1}=(2)(-4)-(1)(-1)=-7",
+              "fallback": "Minor 1 = (2)(−4) − (1)(−1) = −7",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (3)(−7) = −21",
+          "math": [
+            {
+              "latex": "T_{1}=(3)(-7)=-21",
+              "fallback": "T1 = (3)(−7) = −21",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (1)(−4) − (1)(2) = −6",
+          "math": [
+            {
+              "latex": "M_{2}=(1)(-4)-(1)(2)=-6",
+              "fallback": "Minor 2 = (1)(−4) − (1)(2) = −6",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(1)(−6) = 6",
+          "math": [
+            {
+              "latex": "T_{2}=-(1)(-6)=6",
+              "fallback": "T2 = −(1)(−6) = 6",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (1)(−1) − (2)(2) = −5",
+          "math": [
+            {
+              "latex": "M_{3}=(1)(-1)-(2)(2)=-5",
+              "fallback": "Minor 3 = (1)(−1) − (2)(2) = −5",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (−2)(−5) = 10",
+          "math": [
+            {
+              "latex": "T_{3}=(-2)(-5)=10",
+              "fallback": "T3 = (−2)(−5) = 10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_y = (−21) + (6) + (10) = −5",
+          "math": [
+            {
+              "latex": "\\Delta_{y}=(-21)+(6)+(10)=-5",
+              "fallback": "Δ_y = (−21) + (6) + (10) = −5",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the z column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_z = det [[3, −4, 1; 1, 2, 2; 2, −5, −1]]",
+          "math": [
+            {
+              "latex": "\\Delta_{z}=\\begin{vmatrix}3 & -4 & 1 \\\\ 1 & 2 & 2 \\\\ 2 & -5 & -1\\end{vmatrix}",
+              "fallback": "Δ_z = det [[3, −4, 1; 1, 2, 2; 2, −5, −1]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (2)(−1) − (2)(−5) = 8",
+          "math": [
+            {
+              "latex": "M_{1}=(2)(-1)-(2)(-5)=8",
+              "fallback": "Minor 1 = (2)(−1) − (2)(−5) = 8",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (3)(8) = 24",
+          "math": [
+            {
+              "latex": "T_{1}=(3)(8)=24",
+              "fallback": "T1 = (3)(8) = 24",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (1)(−1) − (2)(2) = −5",
+          "math": [
+            {
+              "latex": "M_{2}=(1)(-1)-(2)(2)=-5",
+              "fallback": "Minor 2 = (1)(−1) − (2)(2) = −5",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(−4)(−5) = −20",
+          "math": [
+            {
+              "latex": "T_{2}=-(-4)(-5)=-20",
+              "fallback": "T2 = −(−4)(−5) = −20",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (1)(−5) − (2)(2) = −9",
+          "math": [
+            {
+              "latex": "M_{3}=(1)(-5)-(2)(2)=-9",
+              "fallback": "Minor 3 = (1)(−5) − (2)(2) = −9",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (1)(−9) = −9",
+          "math": [
+            {
+              "latex": "T_{3}=(1)(-9)=-9",
+              "fallback": "T3 = (1)(−9) = −9",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_z = (24) + (−20) + (−9) = −5",
+          "math": [
+            {
+              "latex": "\\Delta_{z}=(24)+(-20)+(-9)=-5",
+              "fallback": "Δ_z = (24) + (−20) + (−9) = −5",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "The coefficient determinant is nonzero, so Cramer’s rule applies and gives one unique solution for the transformed variables.",
+          "eq": "Δ = −15 ≠ 0",
+          "math": [
+            {
+              "latex": "\\Delta=-15\\ne0",
+              "fallback": "Δ = −15 ≠ 0",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "u_x = (−15)/(−15) = 1",
+          "math": [
+            {
+              "latex": "u_{x}=\\frac{\\Delta_{x}}{\\Delta}=\\frac{-15}{-15}=1",
+              "fallback": "u_x = (−15)/(−15) = 1",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Reverse the reciprocal substitution. A transformed value of zero would not give a finite original variable.",
+          "eq": "x = 1/(1) = 1",
+          "math": [
+            {
+              "latex": "x=\\frac1{1}=1",
+              "fallback": "x = 1/(1) = 1",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "u_y = (−5)/(−15) = 1/3",
+          "math": [
+            {
+              "latex": "u_{y}=\\frac{\\Delta_{y}}{\\Delta}=\\frac{-5}{-15}=\\frac{1}{3}",
+              "fallback": "u_y = (−5)/(−15) = 1/3",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Reverse the reciprocal substitution. A transformed value of zero would not give a finite original variable.",
+          "eq": "y = 1/(1/3) = 3",
+          "math": [
+            {
+              "latex": "y=\\frac1{\\frac{1}{3}}=3",
+              "fallback": "y = 1/(1/3) = 3",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "u_z = (−5)/(−15) = 1/3",
+          "math": [
+            {
+              "latex": "u_{z}=\\frac{\\Delta_{z}}{\\Delta}=\\frac{-5}{-15}=\\frac{1}{3}",
+              "fallback": "u_z = (−5)/(−15) = 1/3",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Reverse the reciprocal substitution. A transformed value of zero would not give a finite original variable.",
+          "eq": "z = 1/(1/3) = 3",
+          "math": [
+            {
+              "latex": "z=\\frac1{\\frac{1}{3}}=3",
+              "fallback": "z = 1/(1/3) = 3",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 1. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(3)(1) + (−4)(1/3) + (−2)(1/3) = 1 = 1",
+          "math": [
+            {
+              "latex": "(3)(1)+(-4)(\\frac{1}{3})+(-2)(\\frac{1}{3})=1=1",
+              "fallback": "(3)(1) + (−4)(1/3) + (−2)(1/3) = 1 = 1",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 2. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(1)(1) + (2)(1/3) + (1)(1/3) = 2 = 2",
+          "math": [
+            {
+              "latex": "(1)(1)+(2)(\\frac{1}{3})+(1)(\\frac{1}{3})=2=2",
+              "fallback": "(1)(1) + (2)(1/3) + (1)(1/3) = 2 = 2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 3. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(2)(1) + (−5)(1/3) + (−4)(1/3) = −1 = −1",
+          "math": [
+            {
+              "latex": "(2)(1)+(-5)(\\frac{1}{3})+(-4)(\\frac{1}{3})=-1=-1",
+              "fallback": "(2)(1) + (−5)(1/3) + (−4)(1/3) = −1 = −1",
+              "display": true
+            }
+          ]
+        }
+      ],
+      "answer": "x = 1, y = 3, z = 3.",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p35; PDF p43",
+      "questionMath": {
+        "en": [
+          "Solve the following systems of linear equations by Cramer’s rule: (iv) ",
+          {
+            "latex": "\\begin{gathered}\\frac3x-\\frac4y-\\frac2z-1=0 \\\\ \\frac1x+\\frac2y+\\frac1z-2=0 \\\\ \\frac2x-\\frac5y-\\frac4z+1=0\\end{gathered}",
+            "fallback": "3/x − 4/y − 2/z − 1 = 0, 1/x + 2/y + 1/z − 2 = 0, 2/x − 5/y − 4/z + 1 = 0",
+            "display": true
+          }
+        ]
+      },
+      "answerMath": {
+        "latex": "x=1,\\quad y=3,\\quad z=3",
+        "fallback": "x = 1, y = 3, z = 3.",
+        "display": true
+      }
+    },
+    {
+      "id": "g12-ch1-ex1.4-q2",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.4",
+      "kind": "textbook",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "title": {
+        "en": "Cramer’s rule"
+      },
+      "label": {
+        "en": "Exercise 1.4 · Q2",
+        "ta": "Exercise 1.4 · Q2 · English only; Tamil pending"
+      },
+      "q": {
+        "en": "In a competitive examination, one mark is awarded for every correct answer while 1/4 mark is deducted for every wrong answer. A student answered 100 questions and got 80 marks. How many questions did he answer correctly ? (Use Cramer’s rule to solve the problem)."
+      },
+      "steps": [
+        {
+          "en": "Let c be the number of correct answers and w the number of wrong answers. Both are nonnegative integers. Every answered question is either correct or wrong.",
+          "eq": "c + w = 100",
+          "math": [
+            {
+              "latex": "c+w=100",
+              "fallback": "c + w = 100",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Each correct answer earns one mark and each wrong answer loses one quarter of a mark.",
+          "eq": "c − w/4 = 80",
+          "math": [
+            {
+              "latex": "c-\\frac w4=80",
+              "fallback": "c − w/4 = 80",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Arrange the coefficients and constants in the same variable order. Each row is one of the equations in the reviewed model.",
+          "eq": "A = [[1, 1; 1, −1/4]]; U = [[c; w]]; B = [[100; 80]]",
+          "math": [
+            {
+              "latex": "A=\\begin{bmatrix}1 & 1 \\\\ 1 & -\\frac{1}{4}\\end{bmatrix},\\quad U=\\begin{bmatrix}c \\\\ w\\end{bmatrix},\\quad B=\\begin{bmatrix}100 \\\\ 80\\end{bmatrix}",
+              "fallback": "A = [[1, 1; 1, −1/4]]; U = [[c; w]]; B = [[100; 80]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Compute the coefficient determinant.",
+          "eq": "Δ = det [[1, 1; 1, −1/4]]",
+          "math": [
+            {
+              "latex": "\\Delta=\\begin{vmatrix}1 & 1 \\\\ 1 & -\\frac{1}{4}\\end{vmatrix}",
+              "fallback": "Δ = det [[1, 1; 1, −1/4]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (1)(−1/4) = −1/4",
+          "math": [
+            {
+              "latex": "T_{1}=(1)(-\\frac{1}{4})=-\\frac{1}{4}",
+              "fallback": "T1 = (1)(−1/4) = −1/4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(1)(1) = −1",
+          "math": [
+            {
+              "latex": "T_{2}=-(1)(1)=-1",
+              "fallback": "T2 = −(1)(1) = −1",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ = (−1/4) + (−1) = −5/4",
+          "math": [
+            {
+              "latex": "\\Delta=(-\\frac{1}{4})+(-1)=-\\frac{5}{4}",
+              "fallback": "Δ = (−1/4) + (−1) = −5/4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the c column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_c = det [[100, 1; 80, −1/4]]",
+          "math": [
+            {
+              "latex": "\\Delta_{c}=\\begin{vmatrix}100 & 1 \\\\ 80 & -\\frac{1}{4}\\end{vmatrix}",
+              "fallback": "Δ_c = det [[100, 1; 80, −1/4]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (100)(−1/4) = −25",
+          "math": [
+            {
+              "latex": "T_{1}=(100)(-\\frac{1}{4})=-25",
+              "fallback": "T1 = (100)(−1/4) = −25",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(1)(80) = −80",
+          "math": [
+            {
+              "latex": "T_{2}=-(1)(80)=-80",
+              "fallback": "T2 = −(1)(80) = −80",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_c = (−25) + (−80) = −105",
+          "math": [
+            {
+              "latex": "\\Delta_{c}=(-25)+(-80)=-105",
+              "fallback": "Δ_c = (−25) + (−80) = −105",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the w column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_w = det [[1, 100; 1, 80]]",
+          "math": [
+            {
+              "latex": "\\Delta_{w}=\\begin{vmatrix}1 & 100 \\\\ 1 & 80\\end{vmatrix}",
+              "fallback": "Δ_w = det [[1, 100; 1, 80]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (1)(80) = 80",
+          "math": [
+            {
+              "latex": "T_{1}=(1)(80)=80",
+              "fallback": "T1 = (1)(80) = 80",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(100)(1) = −100",
+          "math": [
+            {
+              "latex": "T_{2}=-(100)(1)=-100",
+              "fallback": "T2 = −(100)(1) = −100",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_w = (80) + (−100) = −20",
+          "math": [
+            {
+              "latex": "\\Delta_{w}=(80)+(-100)=-20",
+              "fallback": "Δ_w = (80) + (−100) = −20",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "The coefficient determinant is nonzero, so Cramer’s rule applies and gives one unique solution for the transformed variables.",
+          "eq": "Δ = −5/4 ≠ 0",
+          "math": [
+            {
+              "latex": "\\Delta=-\\frac{5}{4}\\ne0",
+              "fallback": "Δ = −5/4 ≠ 0",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "c = (−105)/(−5/4) = 84",
+          "math": [
+            {
+              "latex": "c=\\frac{\\Delta_{c}}{\\Delta}=\\frac{-105}{-\\frac{5}{4}}=84",
+              "fallback": "c = (−105)/(−5/4) = 84",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "w = (−20)/(−5/4) = 16",
+          "math": [
+            {
+              "latex": "w=\\frac{\\Delta_{w}}{\\Delta}=\\frac{-20}{-\\frac{5}{4}}=16",
+              "fallback": "w = (−20)/(−5/4) = 16",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 1. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(1)(84) + (1)(16) = 100 = 100",
+          "math": [
+            {
+              "latex": "(1)(84)+(1)(16)=100=100",
+              "fallback": "(1)(84) + (1)(16) = 100 = 100",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 2. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(1)(84) + (−1/4)(16) = 80 = 80",
+          "math": [
+            {
+              "latex": "(1)(84)+(-\\frac{1}{4})(16)=80=80",
+              "fallback": "(1)(84) + (−1/4)(16) = 80 = 80",
+              "display": true
+            }
+          ]
+        }
+      ],
+      "answer": "84 questions answered correctly; 16 answered wrongly.",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p35; PDF p43"
+    },
+    {
+      "id": "g12-ch1-ex1.4-q3",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.4",
+      "kind": "textbook",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "title": {
+        "en": "Cramer’s rule"
+      },
+      "label": {
+        "en": "Exercise 1.4 · Q3",
+        "ta": "Exercise 1.4 · Q3 · English only; Tamil pending"
+      },
+      "q": {
+        "en": "A chemist has one solution which is 50% acid and another solution which is 25% acid. How much each should be mixed to make 10 litres of a 40% acid solution ? (Use Cramer’s rule to solve the problem)."
+      },
+      "steps": [
+        {
+          "en": "Let h and l be the litres of the 50% and 25% solutions respectively. Their volumes add to 10 litres.",
+          "eq": "h + l = 10",
+          "math": [
+            {
+              "latex": "h+l=10",
+              "fallback": "h + l = 10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "The final mixture contains 40% of 10 litres, or 4 litres, of pure acid. Balance the acid amounts using exact fractions.",
+          "eq": "(1/2)h + (1/4)l = (2/5)(10) = 4",
+          "math": [
+            {
+              "latex": "\\frac12h+\\frac14l=\\frac25(10)=4",
+              "fallback": "(1/2)h + (1/4)l = (2/5)(10) = 4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Arrange the coefficients and constants in the same variable order. Each row is one of the equations in the reviewed model.",
+          "eq": "A = [[1, 1; 1/2, 1/4]]; U = [[h; l]]; B = [[10; 4]]",
+          "math": [
+            {
+              "latex": "A=\\begin{bmatrix}1 & 1 \\\\ \\frac{1}{2} & \\frac{1}{4}\\end{bmatrix},\\quad U=\\begin{bmatrix}h \\\\ l\\end{bmatrix},\\quad B=\\begin{bmatrix}10 \\\\ 4\\end{bmatrix}",
+              "fallback": "A = [[1, 1; 1/2, 1/4]]; U = [[h; l]]; B = [[10; 4]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Compute the coefficient determinant.",
+          "eq": "Δ = det [[1, 1; 1/2, 1/4]]",
+          "math": [
+            {
+              "latex": "\\Delta=\\begin{vmatrix}1 & 1 \\\\ \\frac{1}{2} & \\frac{1}{4}\\end{vmatrix}",
+              "fallback": "Δ = det [[1, 1; 1/2, 1/4]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (1)(1/4) = 1/4",
+          "math": [
+            {
+              "latex": "T_{1}=(1)(\\frac{1}{4})=\\frac{1}{4}",
+              "fallback": "T1 = (1)(1/4) = 1/4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(1)(1/2) = −1/2",
+          "math": [
+            {
+              "latex": "T_{2}=-(1)(\\frac{1}{2})=-\\frac{1}{2}",
+              "fallback": "T2 = −(1)(1/2) = −1/2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ = (1/4) + (−1/2) = −1/4",
+          "math": [
+            {
+              "latex": "\\Delta=(\\frac{1}{4})+(-\\frac{1}{2})=-\\frac{1}{4}",
+              "fallback": "Δ = (1/4) + (−1/2) = −1/4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the h column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_h = det [[10, 1; 4, 1/4]]",
+          "math": [
+            {
+              "latex": "\\Delta_{h}=\\begin{vmatrix}10 & 1 \\\\ 4 & \\frac{1}{4}\\end{vmatrix}",
+              "fallback": "Δ_h = det [[10, 1; 4, 1/4]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (10)(1/4) = 5/2",
+          "math": [
+            {
+              "latex": "T_{1}=(10)(\\frac{1}{4})=\\frac{5}{2}",
+              "fallback": "T1 = (10)(1/4) = 5/2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(1)(4) = −4",
+          "math": [
+            {
+              "latex": "T_{2}=-(1)(4)=-4",
+              "fallback": "T2 = −(1)(4) = −4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_h = (5/2) + (−4) = −3/2",
+          "math": [
+            {
+              "latex": "\\Delta_{h}=(\\frac{5}{2})+(-4)=-\\frac{3}{2}",
+              "fallback": "Δ_h = (5/2) + (−4) = −3/2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the l column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_l = det [[1, 10; 1/2, 4]]",
+          "math": [
+            {
+              "latex": "\\Delta_{l}=\\begin{vmatrix}1 & 10 \\\\ \\frac{1}{2} & 4\\end{vmatrix}",
+              "fallback": "Δ_l = det [[1, 10; 1/2, 4]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (1)(4) = 4",
+          "math": [
+            {
+              "latex": "T_{1}=(1)(4)=4",
+              "fallback": "T1 = (1)(4) = 4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(10)(1/2) = −5",
+          "math": [
+            {
+              "latex": "T_{2}=-(10)(\\frac{1}{2})=-5",
+              "fallback": "T2 = −(10)(1/2) = −5",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_l = (4) + (−5) = −1",
+          "math": [
+            {
+              "latex": "\\Delta_{l}=(4)+(-5)=-1",
+              "fallback": "Δ_l = (4) + (−5) = −1",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "The coefficient determinant is nonzero, so Cramer’s rule applies and gives one unique solution for the transformed variables.",
+          "eq": "Δ = −1/4 ≠ 0",
+          "math": [
+            {
+              "latex": "\\Delta=-\\frac{1}{4}\\ne0",
+              "fallback": "Δ = −1/4 ≠ 0",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "h = (−3/2)/(−1/4) = 6",
+          "math": [
+            {
+              "latex": "h=\\frac{\\Delta_{h}}{\\Delta}=\\frac{-\\frac{3}{2}}{-\\frac{1}{4}}=6",
+              "fallback": "h = (−3/2)/(−1/4) = 6",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "l = (−1)/(−1/4) = 4",
+          "math": [
+            {
+              "latex": "l=\\frac{\\Delta_{l}}{\\Delta}=\\frac{-1}{-\\frac{1}{4}}=4",
+              "fallback": "l = (−1)/(−1/4) = 4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 1. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(1)(6) + (1)(4) = 10 = 10",
+          "math": [
+            {
+              "latex": "(1)(6)+(1)(4)=10=10",
+              "fallback": "(1)(6) + (1)(4) = 10 = 10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 2. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(1/2)(6) + (1/4)(4) = 4 = 4",
+          "math": [
+            {
+              "latex": "(\\frac{1}{2})(6)+(\\frac{1}{4})(4)=4=4",
+              "fallback": "(1/2)(6) + (1/4)(4) = 4 = 4",
+              "display": true
+            }
+          ]
+        }
+      ],
+      "answer": "Mix 6 litres of the 50% solution and 4 litres of the 25% solution.",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p35; PDF p43"
+    },
+    {
+      "id": "g12-ch1-ex1.4-q4",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.4",
+      "kind": "textbook",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "title": {
+        "en": "Cramer’s rule"
+      },
+      "label": {
+        "en": "Exercise 1.4 · Q4",
+        "ta": "Exercise 1.4 · Q4 · English only; Tamil pending"
+      },
+      "q": {
+        "en": "A fish tank can be filled in 10 minutes using both pumps A and B simultaneously. However, pump B can pump water in or out at the same rate. If pump B is inadvertently run in reverse, then the tank will be filled in 30 minutes. How long would it take each pump to fill the tank by itself ? (Use Cramer’s rule to solve the problem)."
+      },
+      "steps": [
+        {
+          "en": "Let a and b be the times in minutes for pumps A and B to fill one tank individually. Their filling rates are u_a = 1/a and u_b = 1/b tanks per minute, both positive.",
+          "eq": "u_a + u_b = 1/10",
+          "math": [
+            {
+              "latex": "u_a+u_b=\\frac1{10}",
+              "fallback": "u_a + u_b = 1/10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Every denominator must be nonzero. Introduce a reciprocal variable for each denominator; these substitutions will be reversed after solving.",
+          "eq": "a ≠ 0; u_a = 1/a; b ≠ 0; u_b = 1/b",
+          "math": [
+            {
+              "latex": "a\\ne0,\\quad u_{a}=\\frac1{a}\\qquad b\\ne0,\\quad u_{b}=\\frac1{b}",
+              "fallback": "a ≠ 0; u_a = 1/a; b ≠ 0; u_b = 1/b",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Running pump B in reverse subtracts its rate. The remaining net rate fills one tank in 30 minutes.",
+          "eq": "u_a − u_b = 1/30",
+          "math": [
+            {
+              "latex": "u_a-u_b=\\frac1{30}",
+              "fallback": "u_a − u_b = 1/30",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Arrange the coefficients and constants in the same variable order. Each row is one of the equations in the reviewed model.",
+          "eq": "A = [[1, 1; 1, −1]]; U = [[u_a; u_b]]; B = [[1/10; 1/30]]",
+          "math": [
+            {
+              "latex": "A=\\begin{bmatrix}1 & 1 \\\\ 1 & -1\\end{bmatrix},\\quad U=\\begin{bmatrix}u_{a} \\\\ u_{b}\\end{bmatrix},\\quad B=\\begin{bmatrix}\\frac{1}{10} \\\\ \\frac{1}{30}\\end{bmatrix}",
+              "fallback": "A = [[1, 1; 1, −1]]; U = [[u_a; u_b]]; B = [[1/10; 1/30]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Compute the coefficient determinant.",
+          "eq": "Δ = det [[1, 1; 1, −1]]",
+          "math": [
+            {
+              "latex": "\\Delta=\\begin{vmatrix}1 & 1 \\\\ 1 & -1\\end{vmatrix}",
+              "fallback": "Δ = det [[1, 1; 1, −1]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (1)(−1) = −1",
+          "math": [
+            {
+              "latex": "T_{1}=(1)(-1)=-1",
+              "fallback": "T1 = (1)(−1) = −1",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(1)(1) = −1",
+          "math": [
+            {
+              "latex": "T_{2}=-(1)(1)=-1",
+              "fallback": "T2 = −(1)(1) = −1",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ = (−1) + (−1) = −2",
+          "math": [
+            {
+              "latex": "\\Delta=(-1)+(-1)=-2",
+              "fallback": "Δ = (−1) + (−1) = −2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the a column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_a = det [[1/10, 1; 1/30, −1]]",
+          "math": [
+            {
+              "latex": "\\Delta_{a}=\\begin{vmatrix}\\frac{1}{10} & 1 \\\\ \\frac{1}{30} & -1\\end{vmatrix}",
+              "fallback": "Δ_a = det [[1/10, 1; 1/30, −1]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (1/10)(−1) = −1/10",
+          "math": [
+            {
+              "latex": "T_{1}=(\\frac{1}{10})(-1)=-\\frac{1}{10}",
+              "fallback": "T1 = (1/10)(−1) = −1/10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(1)(1/30) = −1/30",
+          "math": [
+            {
+              "latex": "T_{2}=-(1)(\\frac{1}{30})=-\\frac{1}{30}",
+              "fallback": "T2 = −(1)(1/30) = −1/30",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_a = (−1/10) + (−1/30) = −2/15",
+          "math": [
+            {
+              "latex": "\\Delta_{a}=(-\\frac{1}{10})+(-\\frac{1}{30})=-\\frac{2}{15}",
+              "fallback": "Δ_a = (−1/10) + (−1/30) = −2/15",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the b column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_b = det [[1, 1/10; 1, 1/30]]",
+          "math": [
+            {
+              "latex": "\\Delta_{b}=\\begin{vmatrix}1 & \\frac{1}{10} \\\\ 1 & \\frac{1}{30}\\end{vmatrix}",
+              "fallback": "Δ_b = det [[1, 1/10; 1, 1/30]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (1)(1/30) = 1/30",
+          "math": [
+            {
+              "latex": "T_{1}=(1)(\\frac{1}{30})=\\frac{1}{30}",
+              "fallback": "T1 = (1)(1/30) = 1/30",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(1/10)(1) = −1/10",
+          "math": [
+            {
+              "latex": "T_{2}=-(\\frac{1}{10})(1)=-\\frac{1}{10}",
+              "fallback": "T2 = −(1/10)(1) = −1/10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_b = (1/30) + (−1/10) = −1/15",
+          "math": [
+            {
+              "latex": "\\Delta_{b}=(\\frac{1}{30})+(-\\frac{1}{10})=-\\frac{1}{15}",
+              "fallback": "Δ_b = (1/30) + (−1/10) = −1/15",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "The coefficient determinant is nonzero, so Cramer’s rule applies and gives one unique solution for the transformed variables.",
+          "eq": "Δ = −2 ≠ 0",
+          "math": [
+            {
+              "latex": "\\Delta=-2\\ne0",
+              "fallback": "Δ = −2 ≠ 0",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "u_a = (−2/15)/(−2) = 1/15",
+          "math": [
+            {
+              "latex": "u_{a}=\\frac{\\Delta_{a}}{\\Delta}=\\frac{-\\frac{2}{15}}{-2}=\\frac{1}{15}",
+              "fallback": "u_a = (−2/15)/(−2) = 1/15",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Reverse the reciprocal substitution. A transformed value of zero would not give a finite original variable.",
+          "eq": "a = 1/(1/15) = 15",
+          "math": [
+            {
+              "latex": "a=\\frac1{\\frac{1}{15}}=15",
+              "fallback": "a = 1/(1/15) = 15",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "u_b = (−1/15)/(−2) = 1/30",
+          "math": [
+            {
+              "latex": "u_{b}=\\frac{\\Delta_{b}}{\\Delta}=\\frac{-\\frac{1}{15}}{-2}=\\frac{1}{30}",
+              "fallback": "u_b = (−1/15)/(−2) = 1/30",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Reverse the reciprocal substitution. A transformed value of zero would not give a finite original variable.",
+          "eq": "b = 1/(1/30) = 30",
+          "math": [
+            {
+              "latex": "b=\\frac1{\\frac{1}{30}}=30",
+              "fallback": "b = 1/(1/30) = 30",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 1. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(1)(1/15) + (1)(1/30) = 1/10 = 1/10",
+          "math": [
+            {
+              "latex": "(1)(\\frac{1}{15})+(1)(\\frac{1}{30})=\\frac{1}{10}=\\frac{1}{10}",
+              "fallback": "(1)(1/15) + (1)(1/30) = 1/10 = 1/10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 2. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(1)(1/15) + (−1)(1/30) = 1/30 = 1/30",
+          "math": [
+            {
+              "latex": "(1)(\\frac{1}{15})+(-1)(\\frac{1}{30})=\\frac{1}{30}=\\frac{1}{30}",
+              "fallback": "(1)(1/15) + (−1)(1/30) = 1/30 = 1/30",
+              "display": true
+            }
+          ]
+        }
+      ],
+      "answer": "Pump A: 15 minutes; pump B: 30 minutes.",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p35; PDF p43"
+    },
+    {
+      "id": "g12-ch1-ex1.4-q5",
+      "classNum": 12,
+      "chapter": "1",
+      "exercise": "1.4",
+      "kind": "textbook",
+      "topic": {
+        "en": "Applications of Matrices and Determinants"
+      },
+      "title": {
+        "en": "Cramer’s rule"
+      },
+      "label": {
+        "en": "Exercise 1.4 · Q5",
+        "ta": "Exercise 1.4 · Q5 · English only; Tamil pending"
+      },
+      "q": {
+        "en": "A family of 3 people went out for dinner in a restaurant. The cost of two dosai, three idlies and two vadais is ₹ 150. The cost of the two dosai, two idlies and four vadais is ₹ 200. The cost of five dosai, four idlies and two vadais is ₹ 250. The family has ₹ 350 in hand and they ate 3 dosai and six idlies and six vadais. Will they be able to manage to pay the bill within the amount they had ?"
+      },
+      "steps": [
+        {
+          "en": "Let d, i and v be the prices in rupees of one dosai, one idli and one vadai. Translate each of the three quoted meals into an equation in the same order.",
+          "eq": "2d + 3i + 2v = 150; 2d + 2i + 4v = 200; 5d + 4i + 2v = 250",
+          "math": [
+            {
+              "latex": "2d+3i+2v=150,\\quad2d+2i+4v=200,\\quad5d+4i+2v=250",
+              "fallback": "2d + 3i + 2v = 150; 2d + 2i + 4v = 200; 5d + 4i + 2v = 250",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Arrange the coefficients and constants in the same variable order. Each row is one of the equations in the reviewed model.",
+          "eq": "A = [[2, 3, 2; 2, 2, 4; 5, 4, 2]]; U = [[d; i; v]]; B = [[150; 200; 250]]",
+          "math": [
+            {
+              "latex": "A=\\begin{bmatrix}2 & 3 & 2 \\\\ 2 & 2 & 4 \\\\ 5 & 4 & 2\\end{bmatrix},\\quad U=\\begin{bmatrix}d \\\\ i \\\\ v\\end{bmatrix},\\quad B=\\begin{bmatrix}150 \\\\ 200 \\\\ 250\\end{bmatrix}",
+              "fallback": "A = [[2, 3, 2; 2, 2, 4; 5, 4, 2]]; U = [[d; i; v]]; B = [[150; 200; 250]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Compute the coefficient determinant.",
+          "eq": "Δ = det [[2, 3, 2; 2, 2, 4; 5, 4, 2]]",
+          "math": [
+            {
+              "latex": "\\Delta=\\begin{vmatrix}2 & 3 & 2 \\\\ 2 & 2 & 4 \\\\ 5 & 4 & 2\\end{vmatrix}",
+              "fallback": "Δ = det [[2, 3, 2; 2, 2, 4; 5, 4, 2]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (2)(2) − (4)(4) = −12",
+          "math": [
+            {
+              "latex": "M_{1}=(2)(2)-(4)(4)=-12",
+              "fallback": "Minor 1 = (2)(2) − (4)(4) = −12",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (2)(−12) = −24",
+          "math": [
+            {
+              "latex": "T_{1}=(2)(-12)=-24",
+              "fallback": "T1 = (2)(−12) = −24",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (2)(2) − (4)(5) = −16",
+          "math": [
+            {
+              "latex": "M_{2}=(2)(2)-(4)(5)=-16",
+              "fallback": "Minor 2 = (2)(2) − (4)(5) = −16",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(3)(−16) = 48",
+          "math": [
+            {
+              "latex": "T_{2}=-(3)(-16)=48",
+              "fallback": "T2 = −(3)(−16) = 48",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (2)(4) − (2)(5) = −2",
+          "math": [
+            {
+              "latex": "M_{3}=(2)(4)-(2)(5)=-2",
+              "fallback": "Minor 3 = (2)(4) − (2)(5) = −2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (2)(−2) = −4",
+          "math": [
+            {
+              "latex": "T_{3}=(2)(-2)=-4",
+              "fallback": "T3 = (2)(−2) = −4",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ = (−24) + (48) + (−4) = 20",
+          "math": [
+            {
+              "latex": "\\Delta=(-24)+(48)+(-4)=20",
+              "fallback": "Δ = (−24) + (48) + (−4) = 20",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the d column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_d = det [[150, 3, 2; 200, 2, 4; 250, 4, 2]]",
+          "math": [
+            {
+              "latex": "\\Delta_{d}=\\begin{vmatrix}150 & 3 & 2 \\\\ 200 & 2 & 4 \\\\ 250 & 4 & 2\\end{vmatrix}",
+              "fallback": "Δ_d = det [[150, 3, 2; 200, 2, 4; 250, 4, 2]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (2)(2) − (4)(4) = −12",
+          "math": [
+            {
+              "latex": "M_{1}=(2)(2)-(4)(4)=-12",
+              "fallback": "Minor 1 = (2)(2) − (4)(4) = −12",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (150)(−12) = −1800",
+          "math": [
+            {
+              "latex": "T_{1}=(150)(-12)=-1800",
+              "fallback": "T1 = (150)(−12) = −1800",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (200)(2) − (4)(250) = −600",
+          "math": [
+            {
+              "latex": "M_{2}=(200)(2)-(4)(250)=-600",
+              "fallback": "Minor 2 = (200)(2) − (4)(250) = −600",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(3)(−600) = 1800",
+          "math": [
+            {
+              "latex": "T_{2}=-(3)(-600)=1800",
+              "fallback": "T2 = −(3)(−600) = 1800",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (200)(4) − (2)(250) = 300",
+          "math": [
+            {
+              "latex": "M_{3}=(200)(4)-(2)(250)=300",
+              "fallback": "Minor 3 = (200)(4) − (2)(250) = 300",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (2)(300) = 600",
+          "math": [
+            {
+              "latex": "T_{3}=(2)(300)=600",
+              "fallback": "T3 = (2)(300) = 600",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_d = (−1800) + (1800) + (600) = 600",
+          "math": [
+            {
+              "latex": "\\Delta_{d}=(-1800)+(1800)+(600)=600",
+              "fallback": "Δ_d = (−1800) + (1800) + (600) = 600",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the i column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_i = det [[2, 150, 2; 2, 200, 4; 5, 250, 2]]",
+          "math": [
+            {
+              "latex": "\\Delta_{i}=\\begin{vmatrix}2 & 150 & 2 \\\\ 2 & 200 & 4 \\\\ 5 & 250 & 2\\end{vmatrix}",
+              "fallback": "Δ_i = det [[2, 150, 2; 2, 200, 4; 5, 250, 2]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (200)(2) − (4)(250) = −600",
+          "math": [
+            {
+              "latex": "M_{1}=(200)(2)-(4)(250)=-600",
+              "fallback": "Minor 1 = (200)(2) − (4)(250) = −600",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (2)(−600) = −1200",
+          "math": [
+            {
+              "latex": "T_{1}=(2)(-600)=-1200",
+              "fallback": "T1 = (2)(−600) = −1200",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (2)(2) − (4)(5) = −16",
+          "math": [
+            {
+              "latex": "M_{2}=(2)(2)-(4)(5)=-16",
+              "fallback": "Minor 2 = (2)(2) − (4)(5) = −16",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(150)(−16) = 2400",
+          "math": [
+            {
+              "latex": "T_{2}=-(150)(-16)=2400",
+              "fallback": "T2 = −(150)(−16) = 2400",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (2)(250) − (200)(5) = −500",
+          "math": [
+            {
+              "latex": "M_{3}=(2)(250)-(200)(5)=-500",
+              "fallback": "Minor 3 = (2)(250) − (200)(5) = −500",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (2)(−500) = −1000",
+          "math": [
+            {
+              "latex": "T_{3}=(2)(-500)=-1000",
+              "fallback": "T3 = (2)(−500) = −1000",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_i = (−1200) + (2400) + (−1000) = 200",
+          "math": [
+            {
+              "latex": "\\Delta_{i}=(-1200)+(2400)+(-1000)=200",
+              "fallback": "Δ_i = (−1200) + (2400) + (−1000) = 200",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Replace only the v column of A by the constants B, then compute this determinant.",
+          "eq": "Δ_v = det [[2, 3, 150; 2, 2, 200; 5, 4, 250]]",
+          "math": [
+            {
+              "latex": "\\Delta_{v}=\\begin{vmatrix}2 & 3 & 150 \\\\ 2 & 2 & 200 \\\\ 5 & 4 & 250\\end{vmatrix}",
+              "fallback": "Δ_v = det [[2, 3, 150; 2, 2, 200; 5, 4, 250]]",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 1. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 1 = (2)(250) − (200)(4) = −300",
+          "math": [
+            {
+              "latex": "M_{1}=(2)(250)-(200)(4)=-300",
+              "fallback": "Minor 1 = (2)(250) − (200)(4) = −300",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 1 is the entry in column 1 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T1.",
+          "eq": "T1 = (2)(−300) = −600",
+          "math": [
+            {
+              "latex": "T_{1}=(2)(-300)=-600",
+              "fallback": "T1 = (2)(−300) = −600",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 2. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 2 = (2)(250) − (200)(5) = −500",
+          "math": [
+            {
+              "latex": "M_{2}=(2)(250)-(200)(5)=-500",
+              "fallback": "Minor 2 = (2)(250) − (200)(5) = −500",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 2 is the entry in column 2 times its minor, with the minus sign from the alternating cofactor pattern. Call this term T2.",
+          "eq": "T2 = −(3)(−500) = 1500",
+          "math": [
+            {
+              "latex": "T_{2}=-(3)(-500)=1500",
+              "fallback": "T2 = −(3)(−500) = 1500",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Delete the first row and column 3. Evaluate the remaining 2 by 2 minor by multiplying its diagonal entries and subtracting the other diagonal product.",
+          "eq": "Minor 3 = (2)(4) − (2)(5) = −2",
+          "math": [
+            {
+              "latex": "M_{3}=(2)(4)-(2)(5)=-2",
+              "fallback": "Minor 3 = (2)(4) − (2)(5) = −2",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "First-row term 3 is the entry in column 3 times its minor, with the plus sign from the alternating cofactor pattern. Call this term T3.",
+          "eq": "T3 = (150)(−2) = −300",
+          "math": [
+            {
+              "latex": "T_{3}=(150)(-2)=-300",
+              "fallback": "T3 = (150)(−2) = −300",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Add the signed first-row terms to obtain the determinant.",
+          "eq": "Δ_v = (−600) + (1500) + (−300) = 600",
+          "math": [
+            {
+              "latex": "\\Delta_{v}=(-600)+(1500)+(-300)=600",
+              "fallback": "Δ_v = (−600) + (1500) + (−300) = 600",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "The coefficient determinant is nonzero, so Cramer’s rule applies and gives one unique solution for the transformed variables.",
+          "eq": "Δ = 20 ≠ 0",
+          "math": [
+            {
+              "latex": "\\Delta=20\\ne0",
+              "fallback": "Δ = 20 ≠ 0",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "d = (600)/(20) = 30",
+          "math": [
+            {
+              "latex": "d=\\frac{\\Delta_{d}}{\\Delta}=\\frac{600}{20}=30",
+              "fallback": "d = (600)/(20) = 30",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "i = (200)/(20) = 10",
+          "math": [
+            {
+              "latex": "i=\\frac{\\Delta_{i}}{\\Delta}=\\frac{200}{20}=10",
+              "fallback": "i = (200)/(20) = 10",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Divide the replacement determinant by the coefficient determinant.",
+          "eq": "v = (600)/(20) = 30",
+          "math": [
+            {
+              "latex": "v=\\frac{\\Delta_{v}}{\\Delta}=\\frac{600}{20}=30",
+              "fallback": "v = (600)/(20) = 30",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 1. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(2)(30) + (3)(10) + (2)(30) = 150 = 150",
+          "math": [
+            {
+              "latex": "(2)(30)+(3)(10)+(2)(30)=150=150",
+              "fallback": "(2)(30) + (3)(10) + (2)(30) = 150 = 150",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 2. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(2)(30) + (2)(10) + (4)(30) = 200 = 200",
+          "math": [
+            {
+              "latex": "(2)(30)+(2)(10)+(4)(30)=200=200",
+              "fallback": "(2)(30) + (2)(10) + (4)(30) = 200 = 200",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "Substitute the computed values into equation 3. Reciprocal variables stand for the original denominators, so this also checks that original equation.",
+          "eq": "(5)(30) + (4)(10) + (2)(30) = 250 = 250",
+          "math": [
+            {
+              "latex": "(5)(30)+(4)(10)+(2)(30)=250=250",
+              "fallback": "(5)(30) + (4)(10) + (2)(30) = 250 = 250",
+              "display": true
+            }
+          ]
+        },
+        {
+          "en": "The family ordered three dosai, six idlies and six vadais. Add those item costs and compare the bill with ₹350.",
+          "eq": "Bill = 3(30) + 6(10) + 6(30) = 330; balance = 350 − 330 = 20",
+          "math": [
+            {
+              "latex": "3(30)+6(10)+6(30)=330,\\quad350-330=20",
+              "fallback": "Bill = 3(30) + 6(10) + 6(30) = 330; balance = 350 − 330 = 20",
+              "display": true
+            }
+          ]
+        }
+      ],
+      "answer": "Yes. Bill = ₹330; balance = ₹20. One dosai = ₹30, one idli = ₹10, one vadai = ₹30.",
+      "source": "https://drive.google.com/file/d/1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm/view",
+      "reference": "2025 revised English Volume I; printed p36; PDF p44"
+    }
+  ],
+  "mapping": [
+    {
+      "recordId": "g12-ch1-ex1.4-q1-i",
+      "exercise": "1.4",
+      "question": "1",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Solve the following systems of linear equations by Cramer’s rule: (i) 5x − 2y + 16 = 0, x + 3y − 7 = 0"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        35
+      ],
+      "pdfPages": [
+        43
+      ],
+      "tamilCounterpart": {
+        "sourceId": "tn-g12-ta-v1-2025-owner",
+        "printedPages": [
+          39
+        ],
+        "pdfPages": [
+          47
+        ],
+        "visualChecked": true,
+        "numericalDataCompared": true,
+        "fullTranscription": false,
+        "professionalReview": "pending"
+      }
+    },
+    {
+      "recordId": "g12-ch1-ex1.4-q1-ii",
+      "exercise": "1.4",
+      "question": "1",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Solve the following systems of linear equations by Cramer’s rule: (ii) 3/x + 2y = 12, 2/x + 3y = 13"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        35
+      ],
+      "pdfPages": [
+        43
+      ],
+      "tamilCounterpart": {
+        "sourceId": "tn-g12-ta-v1-2025-owner",
+        "printedPages": [
+          39
+        ],
+        "pdfPages": [
+          47
+        ],
+        "visualChecked": true,
+        "numericalDataCompared": true,
+        "fullTranscription": false,
+        "professionalReview": "pending"
+      }
+    },
+    {
+      "recordId": "g12-ch1-ex1.4-q1-iii",
+      "exercise": "1.4",
+      "question": "1",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Solve the following systems of linear equations by Cramer’s rule: (iii) 3x + 3y − z = 11, 2x − y + 2z = 9, 4x + 3y + 2z = 25"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        35
+      ],
+      "pdfPages": [
+        43
+      ],
+      "tamilCounterpart": {
+        "sourceId": "tn-g12-ta-v1-2025-owner",
+        "printedPages": [
+          39
+        ],
+        "pdfPages": [
+          47
+        ],
+        "visualChecked": true,
+        "numericalDataCompared": true,
+        "fullTranscription": false,
+        "professionalReview": "pending"
+      }
+    },
+    {
+      "recordId": "g12-ch1-ex1.4-q1-iv",
+      "exercise": "1.4",
+      "question": "1",
+      "parts": [
+        "iv"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "Solve the following systems of linear equations by Cramer’s rule: (iv) 3/x − 4/y − 2/z − 1 = 0, 1/x + 2/y + 1/z − 2 = 0, 2/x − 5/y − 4/z + 1 = 0"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        35
+      ],
+      "pdfPages": [
+        43
+      ],
+      "tamilCounterpart": {
+        "sourceId": "tn-g12-ta-v1-2025-owner",
+        "printedPages": [
+          39
+        ],
+        "pdfPages": [
+          47
+        ],
+        "visualChecked": true,
+        "numericalDataCompared": true,
+        "fullTranscription": false,
+        "professionalReview": "pending"
+      }
+    },
+    {
+      "recordId": "g12-ch1-ex1.4-q2",
+      "exercise": "1.4",
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "In a competitive examination, one mark is awarded for every correct answer while 1/4 mark is deducted for every wrong answer. A student answered 100 questions and got 80 marks. How many questions did he answer correctly ? (Use Cramer’s rule to solve the problem)."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        35
+      ],
+      "pdfPages": [
+        43
+      ],
+      "tamilCounterpart": {
+        "sourceId": "tn-g12-ta-v1-2025-owner",
+        "printedPages": [
+          39
+        ],
+        "pdfPages": [
+          47
+        ],
+        "visualChecked": true,
+        "numericalDataCompared": true,
+        "fullTranscription": false,
+        "professionalReview": "pending"
+      }
+    },
+    {
+      "recordId": "g12-ch1-ex1.4-q3",
+      "exercise": "1.4",
+      "question": "3",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "A chemist has one solution which is 50% acid and another solution which is 25% acid. How much each should be mixed to make 10 litres of a 40% acid solution ? (Use Cramer’s rule to solve the problem)."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        35
+      ],
+      "pdfPages": [
+        43
+      ],
+      "tamilCounterpart": {
+        "sourceId": "tn-g12-ta-v1-2025-owner",
+        "printedPages": [
+          39
+        ],
+        "pdfPages": [
+          47
+        ],
+        "visualChecked": true,
+        "numericalDataCompared": true,
+        "fullTranscription": false,
+        "professionalReview": "pending"
+      }
+    },
+    {
+      "recordId": "g12-ch1-ex1.4-q4",
+      "exercise": "1.4",
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "A fish tank can be filled in 10 minutes using both pumps A and B simultaneously. However, pump B can pump water in or out at the same rate. If pump B is inadvertently run in reverse, then the tank will be filled in 30 minutes. How long would it take each pump to fill the tank by itself ? (Use Cramer’s rule to solve the problem)."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        35
+      ],
+      "pdfPages": [
+        43
+      ],
+      "tamilCounterpart": {
+        "sourceId": "tn-g12-ta-v1-2025-owner",
+        "printedPages": [
+          39
+        ],
+        "pdfPages": [
+          47
+        ],
+        "visualChecked": true,
+        "numericalDataCompared": true,
+        "fullTranscription": false,
+        "professionalReview": "pending"
+      }
+    },
+    {
+      "recordId": "g12-ch1-ex1.4-q5",
+      "exercise": "1.4",
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g12-en-v1-2025-owner",
+      "sourceText": {
+        "en": "A family of 3 people went out for dinner in a restaurant. The cost of two dosai, three idlies and two vadais is ₹ 150. The cost of the two dosai, two idlies and four vadais is ₹ 200. The cost of five dosai, four idlies and two vadais is ₹ 250. The family has ₹ 350 in hand and they ate 3 dosai and six idlies and six vadais. Will they be able to manage to pay the bill within the amount they had ?"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        36
+      ],
+      "pdfPages": [
+        44
+      ],
+      "tamilCounterpart": {
+        "sourceId": "tn-g12-ta-v1-2025-owner",
+        "printedPages": [
+          39
+        ],
+        "pdfPages": [
+          47
+        ],
+        "visualChecked": true,
+        "numericalDataCompared": true,
+        "fullTranscription": false,
+        "professionalReview": "pending"
+      }
+    }
+  ],
+  "verification": {
+    "script": "site/tools/bulk/verify_g12_ch1_ex1_4.cjs"
+  },
+  "tamilStatus": "pending"
+}

@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "kind": "TRACE_60_PART_PILOT",
+  "seed": 20261112,
+  "mode": "LABELLED_SYNTHETIC",
+  "eligibleCount": 60,
+  "poolHash": "26dae2a23d3bc42db8cd790650d0673140810fedeea44710bfe8bd9486beccda",
+  "metric": {
+    "name": "active-human-plus-compute-minutes",
+    "computeWeight": 1,
+    "formula": "activeAuthoringMinutes + computeWeight * computeWallSeconds / 60",
+    "failureAccounting": "Distribute every nonaccepted case effort equally over accepted parts in the same arm; also report total effort/accepted count."
+  },
+  "reviewers": [
+    {
+      "id": "SYNTHETIC_MATH",
+      "role": "math",
+      "available": true,
+      "synthetic": true
+    },
+    {
+      "id": "SYNTHETIC_BILINGUAL",
+      "role": "bilingual",
+      "available": true,
+      "synthetic": true
+    }
+  ],
+  "status": "SYNTHETIC_HARNESS_ONLY",
+  "realPilotStatus": "NOT_STARTED",
+  "assignments": [
+    {
+      "id": "SYNTHETIC-01",
+      "crossMediumId": "SYNTHETIC-PART-1",
+      "arm": "trace",
+      "stratum": "[9,\"sets\",\"easy\",true,\"en\"]",
+      "sourceHash": "941a0f7299b6f07c3614e4d8fc63dce089c40d7623f64f302037d946dfccaf65"
+    },
+    {
+      "id": "SYNTHETIC-02",
+      "crossMediumId": "SYNTHETIC-PART-2",
+      "arm": "trace",
+      "stratum": "[10,\"linear-system\",\"easy\",false,\"ta\"]",
+      "sourceHash": "b2a7f6eea3155fc141573916b8ea4ffec820d0e318d6431f106e682032c5730e"
+    },
+    {
+      "id": "SYNTHETIC-03",
+      "crossMediumId": "SYNTHETIC-PART-3",
+      "arm": "baseline",
+      "stratum": "[11,\"trigonometry\",\"easy\",false,\"en\"]",
+      "sourceHash": "0243510ebab05d42cf44038587696c55300863ce9c875e0e7c526de1897187e1"
+    },
+    {
+      "id": "SYNTHETIC-04",
+      "crossMediumId": "SYNTHETIC-PART-4",
+      "arm": "baseline",
+      "stratum": "[12,\"sets\",\"easy\",false,\"ta\"]",
+      "sourceHash": "e992ac20642adbddbc0775ed3f21fcafe2f6076d473ef9d533a0f68d43fb0dea"
+    },
+    {
+      "id": "SYNTHETIC-05",
+      "crossMediumId": "SYNTHETIC-PART-5",
+      "arm": "trace",
+      "stratum": "[9,\"linear-system\",\"medium\",false,\"en\"]",
+      "sourceHash": "ce022e174bb0136cea0996e02a9b7498fb4388d3a1c1857f4ca8c69552357866"
+    },
+    {
+      "id": "SYNTHETIC-06",
+      "crossMediumId": "SYNTHETIC-PART-6",
+      "arm": "trace",
+      "stratum": "[10,\"trigonometry\",\"medium\",true,\"ta\"]",
+      "sourceHash": "c9329444950349ffdcc164ce5550c901b24a8687e8e40562234981eee07e83a5"
+    },
+    {
+      "id": "SYNTHETIC-07",
+      "crossMediumId": "SYNTHETIC-PART-7",
+      "arm": "trace",
+      "stratum": "[11,\"sets\",\"medium\",false,\"en\"]",
+      "sourceHash": "8bd679dbf940a7d34f4ef7f938a5a13db618b30ff07fb50d013869f35e130bae"
+    },
+    {
+      "id": "SYNTHETIC-08",
+      "crossMediumId": "SYNTHETIC-PART-8",
+      "arm": "baseline",
+      "stratum": "[12,\"linear-system\",\"medium\",false,\"ta\"]",
+      "sourceHash": "14834780d7af8b395072d5daab60081f1a11a6a935ffdd49e1dbf880ea893e20"
+    },
+    {
+      "id": "SYNTHETIC-09",
+      "crossMediumId": "SYNTHETIC-PART-9",
+      "arm": "baseline",
+      "stratum": "[9,\"trigonometry\",\"difficult\",false,\"en\"]",
+      "sourceHash": "7d50501b9dd97165122f065784b17507421238802ccb5f71436d7ce3013133c8"
+    },
+    {
+      "id": "SYNTHETIC-10",
+      "crossMediumId": "SYNTHETIC-PART-10",
+      "arm": "baseline",
+      "stratum": "[10,\"sets\",\"difficult\",false,\"ta\"]",
+      "sourceHash": "793a4d45c7340919488ff2c51a81f996c5b89481cb25cdf3ee66d95640c2f096"
+    },
+    {
+      "id": "SYNTHETIC-11",
+      "crossMediumId": "SYNTHETIC-PART-11",
+      "arm": "trace",
+      "stratum": "[11,\"linear-system\",\"difficult\",true,\"en\"]",
+      "sourceHash": "67210828e74489cdf11fbbdf0e6d1110581a61356ecdfffef4fb0a3e93ea6333"
+    },
+    {
+      "id": "SYNTHETIC-12",
+      "crossMediumId": "SYNTHETIC-PART-12",
+      "arm": "baseline",
+      "stratum": "[12,\"trigonometry\",\"difficult\",false,\"ta\"]",
+      "sourceHash": "ea33e66e868b1bd8e849b4af6ef502a10d61d8c06e81c685f42ce3fe80e11446"
+    },
+    {
+      "id": "SYNTHETIC-13",
+      "crossMediumId": "SYNTHETIC-PART-13",
+      "arm": "trace",
+      "stratum": "[9,\"sets\",\"easy\",false,\"en\"]",
+      "sourceHash": "ff28764795e92039ac9561630f674c386a62e521754c9cdf0e512ea6d7676ecc"
+    },
+    {
+      "id": "SYNTHETIC-14",
+      "crossMediumId": "SYNTHETIC-PART-14",
+      "arm": "baseline",
+      "stratum": "[10,\"linear-system\",\"easy\",false,\"ta\"]",
+      "sourceHash": "c9d7a7456bf47d10d878cd7fa761b42206272340f3084b368d4de7cde1571f73"
+    },
+    {
+      "id": "SYNTHETIC-15",
+      "crossMediumId": "SYNTHETIC-PART-15",
+      "arm": "baseline",
+      "stratum": "[11,\"trigonometry\",\"easy\",false,\"en\"]",
+      "sourceHash": "4bad0ac8d0145b8038471dde655bf749849ff09ded3edb64715770911f16048c"
+    },
+    {
+      "id": "SYNTHETIC-16",
+      "crossMediumId": "SYNTHETIC-PART-16",
+      "arm": "trace",
+      "stratum": "[12,\"sets\",\"easy\",true,\"ta\"]",
+      "sourceHash": "c02c09893a3daebbe369771d68ebbac7885773c36af7bccb5e1632b696272cc6"
+    },
+    {
+      "id": "SYNTHETIC-17",
+      "crossMediumId": "SYNTHETIC-PART-17",
+      "arm": "baseline",
+      "stratum": "[9,\"linear-system\",\"medium\",false,\"en\"]",
+      "sourceHash": "a58c6d1305626839744746b08c72a2d998a2c09651797451e6c9ecfe9c0f0f1f"
+    },
+    {
+      "id": "SYNTHETIC-18",
+      "crossMediumId": "SYNTHETIC-PART-18",
+      "arm": "trace",
+      "stratum": "[10,\"trigonometry\",\"medium\",false,\"ta\"]",
+      "sourceHash": "4b504dada425e4be1e599eacbc1d4a15a9847a83614fe69ece5e89fb73bc3484"
+    },
+    {
+      "id": "SYNTHETIC-19",
+      "crossMediumId": "SYNTHETIC-PART-19",
+      "arm": "baseline",
+      "stratum": "[11,\"sets\",\"medium\",false,\"en\"]",
+      "sourceHash": "bb08041945da85b093efdc0bc942b7c98261430ac1ddff4fcdaa9b38d4397ccb"
+    },
+    {
+      "id": "SYNTHETIC-20",
+      "crossMediumId": "SYNTHETIC-PART-20",
+      "arm": "baseline",
+      "stratum": "[12,\"linear-system\",\"medium\",false,\"ta\"]",
+      "sourceHash": "d9cf895e8dea1f29b3ac6ef5d1fa4f503ebaa3ad9e2bc9c04c4d52d30228c9e0"
+    },
+    {
+      "id": "SYNTHETIC-21",
+      "crossMediumId": "SYNTHETIC-PART-21",
+      "arm": "trace",
+      "stratum": "[9,\"trigonometry\",\"difficult\",true,\"en\"]",
+      "sourceHash": "98be29d1ef7a019bce760b3c0dd1fa83693f076ebeb57e89e3be20af05550cc8"
+    },
+    {
+      "id": "SYNTHETIC-22",
+      "crossMediumId": "SYNTHETIC-PART-22",
+      "arm": "trace",
+      "stratum": "[10,\"sets\",\"difficult\",false,\"ta\"]",
+      "sourceHash": "738f17401a5ef82e5057e8b732018a474b2f1981d206fb7b160fe474ca72bbce"
+    },
+    {
+      "id": "SYNTHETIC-23",
+      "crossMediumId": "SYNTHETIC-PART-23",
+      "arm": "trace",
+      "stratum": "[11,\"linear-system\",\"difficult\",false,\"en\"]",
+      "sourceHash": "8053da36107433059e394b6f4dc2dcacfc87bf4bba1169ef89a749af908d526b"
+    },
+    {
+      "id": "SYNTHETIC-24",
+      "crossMediumId": "SYNTHETIC-PART-24",
+      "arm": "trace",
+      "stratum": "[12,\"trigonometry\",\"difficult\",false,\"ta\"]",
+      "sourceHash": "9d1e73b64cc9ecdd35d4752d8dca8b96c52e903babec0b96cb3868e02f217f7e"
+    },
+    {
+      "id": "SYNTHETIC-25",
+      "crossMediumId": "SYNTHETIC-PART-25",
+      "arm": "trace",
+      "stratum": "[9,\"sets\",\"easy\",false,\"en\"]",
+      "sourceHash": "7352acdbd72017f22f86e94fc92d4710d75ec775fad50225032679b2ec40cd54"
+    },
+    {
+      "id": "SYNTHETIC-26",
+      "crossMediumId": "SYNTHETIC-PART-26",
+      "arm": "baseline",
+      "stratum": "[10,\"linear-system\",\"easy\",true,\"ta\"]",
+      "sourceHash": "c429d6412e8174d0535408a0c365bb31bd723ba09dfccbfefa3a94d1da502310"
+    },
+    {
+      "id": "SYNTHETIC-27",
+      "crossMediumId": "SYNTHETIC-PART-27",
+      "arm": "trace",
+      "stratum": "[11,\"trigonometry\",\"easy\",false,\"en\"]",
+      "sourceHash": "50ef762159e42699296d65f63e95c331b7fd02a4c913eefc0bf85a01125fad0b"
+    },
+    {
+      "id": "SYNTHETIC-28",
+      "crossMediumId": "SYNTHETIC-PART-28",
+      "arm": "trace",
+      "stratum": "[12,\"sets\",\"easy\",false,\"ta\"]",
+      "sourceHash": "6f84296887db5c8cfe94bc0191b6760f9fc9cfac2c4af74038d74bf5795574ac"
+    },
+    {
+      "id": "SYNTHETIC-29",
+      "crossMediumId": "SYNTHETIC-PART-29",
+      "arm": "trace",
+      "stratum": "[9,\"linear-system\",\"medium\",false,\"en\"]",
+      "sourceHash": "e8d4c3efc34a7a4c45032a31446e5d75c6b73d036b313bd47cd0ce6aea537e10"
+    },
+    {
+      "id": "SYNTHETIC-30",
+      "crossMediumId": "SYNTHETIC-PART-30",
+      "arm": "baseline",
+      "stratum": "[10,\"trigonometry\",\"medium\",false,\"ta\"]",
+      "sourceHash": "3f1c2168c7bbb2b5c9f58fef3f01267085851fd2beed5edf7b3df5a67309ac6c"
+    },
+    {
+      "id": "SYNTHETIC-31",
+      "crossMediumId": "SYNTHETIC-PART-31",
+      "arm": "baseline",
+      "stratum": "[11,\"sets\",\"medium\",true,\"en\"]",
+      "sourceHash": "560bb9b7b78104f58520cf311306c02b661336c31b91e072451c6dd91d863c2b"
+    },
+    {
+      "id": "SYNTHETIC-32",
+      "crossMediumId": "SYNTHETIC-PART-32",
+      "arm": "trace",
+      "stratum": "[12,\"linear-system\",\"medium\",false,\"ta\"]",
+      "sourceHash": "4e2c208329422749c63befd1527767e18f00aa61cc9bb6cfa0c2bd0e6e06b09e"
+    },
+    {
+      "id": "SYNTHETIC-33",
+      "crossMediumId": "SYNTHETIC-PART-33",
+      "arm": "trace",
+      "stratum": "[9,\"trigonometry\",\"difficult\",false,\"en\"]",
+      "sourceHash": "e0c22f75d05b5b83ed7e382951c76cb9cb3d11518c9c661e30e3b0e1d29c65c2"
+    },
+    {
+      "id": "SYNTHETIC-34",
+      "crossMediumId": "SYNTHETIC-PART-34",
+      "arm": "trace",
+      "stratum": "[10,\"sets\",\"difficult\",false,\"ta\"]",
+      "sourceHash": "f443ef5fbb3bdba6207d9becdb7a2f31d202962d0f1e0628a3dffa444246a0bf"
+    },
+    {
+      "id": "SYNTHETIC-35",
+      "crossMediumId": "SYNTHETIC-PART-35",
+      "arm": "baseline",
+      "stratum": "[11,\"linear-system\",\"difficult\",false,\"en\"]",
+      "sourceHash": "ba8efb10c0ef156858a2f6e588b5b15d8c5c22119553e1dff4318102c23c509c"
+    },
+    {
+      "id": "SYNTHETIC-36",
+      "crossMediumId": "SYNTHETIC-PART-36",
+      "arm": "baseline",
+      "stratum": "[12,\"trigonometry\",\"difficult\",true,\"ta\"]",
+      "sourceHash": "a559c5bc7291f83b5b42bed9bcf279b36730eb76d6d8423eb980da126e586439"
+    },
+    {
+      "id": "SYNTHETIC-37",
+      "crossMediumId": "SYNTHETIC-PART-37",
+      "arm": "baseline",
+      "stratum": "[9,\"sets\",\"easy\",false,\"en\"]",
+      "sourceHash": "f5854cfcb1325d0017ed4978103be2a2adaba904f01bcce6c2ce416a3ce5122e"
+    },
+    {
+      "id": "SYNTHETIC-38",
+      "crossMediumId": "SYNTHETIC-PART-38",
+      "arm": "baseline",
+      "stratum": "[10,\"linear-system\",\"easy\",false,\"ta\"]",
+      "sourceHash": "3c40d21e45c64532ccc6c11dfec989bf224c72b1e23bb3457d7bead4a17fafde"
+    },
+    {
+      "id": "SYNTHETIC-39",
+      "crossMediumId": "SYNTHETIC-PART-39",
+      "arm": "trace",
+      "stratum": "[11,\"trigonometry\",\"easy\",false,\"en\"]",
+      "sourceHash": "41b459d18d3e656857a627f3cea5fd20fd617094e23c8b0b089d9617e346a436"
+    },
+    {
+      "id": "SYNTHETIC-40",
+      "crossMediumId": "SYNTHETIC-PART-40",
+      "arm": "trace",
+      "stratum": "[12,\"sets\",\"easy\",false,\"ta\"]",
+      "sourceHash": "e5c406201b9362f01197182df85b86a0153ce298b9ebd7b36ea76dc32da36425"
+    },
+    {
+      "id": "SYNTHETIC-41",
+      "crossMediumId": "SYNTHETIC-PART-41",
+      "arm": "baseline",
+      "stratum": "[9,\"linear-system\",\"medium\",true,\"en\"]",
+      "sourceHash": "1c05b517820814015eb65b2321559e92dd3b38b2b5d8fe091a6130c493e2d0e2"
+    },
+    {
+      "id": "SYNTHETIC-42",
+      "crossMediumId": "SYNTHETIC-PART-42",
+      "arm": "baseline",
+      "stratum": "[10,\"trigonometry\",\"medium\",false,\"ta\"]",
+      "sourceHash": "fe13c252be5a5cf9974b65d63de165eb13c71b0c08d25771b42efbbdb39dd4eb"
+    },
+    {
+      "id": "SYNTHETIC-43",
+      "crossMediumId": "SYNTHETIC-PART-43",
+      "arm": "trace",
+      "stratum": "[11,\"sets\",\"medium\",false,\"en\"]",
+      "sourceHash": "f27ccfa0c629a6733f3cc42f11192ac19db59c49ad7a79a0be8de1646b8fdc3a"
+    },
+    {
+      "id": "SYNTHETIC-44",
+      "crossMediumId": "SYNTHETIC-PART-44",
+      "arm": "trace",
+      "stratum": "[12,\"linear-system\",\"medium\",false,\"ta\"]",
+      "sourceHash": "2eaf6b106c1acae3b7941b6ee34753ea3cef3ef344d472401ec64715ea8a73b8"
+    },
+    {
+      "id": "SYNTHETIC-45",
+      "crossMediumId": "SYNTHETIC-PART-45",
+      "arm": "baseline",
+      "stratum": "[9,\"trigonometry\",\"difficult\",false,\"en\"]",
+      "sourceHash": "66e9e9a6455e7076b7d9b5fe8948527a27caf2a0e37cf0bb74ee0b54dba3faf8"
+    },
+    {
+      "id": "SYNTHETIC-46",
+      "crossMediumId": "SYNTHETIC-PART-46",
+      "arm": "trace",
+      "stratum": "[10,\"sets\",\"difficult\",true,\"ta\"]",
+      "sourceHash": "80c6bc91dcfb9907d1f249a57f7adb0926be39364afea7ec5862da2bcad6fc3f"
+    },
+    {
+      "id": "SYNTHETIC-47",
+      "crossMediumId": "SYNTHETIC-PART-47",
+      "arm": "baseline",
+      "stratum": "[11,\"linear-system\",\"difficult\",false,\"en\"]",
+      "sourceHash": "c2f533345c54896f590612bc6b8992e365714cfafafec7a68aa62c6e9b6ed01f"
+    },
+    {
+      "id": "SYNTHETIC-48",
+      "crossMediumId": "SYNTHETIC-PART-48",
+      "arm": "baseline",
+      "stratum": "[12,\"trigonometry\",\"difficult\",false,\"ta\"]",
+      "sourceHash": "f394d62b6161f2eda3a250921dbacded46d9bdb0c703753555c2d38e34ae6dda"
+    },
+    {
+      "id": "SYNTHETIC-49",
+      "crossMediumId": "SYNTHETIC-PART-49",
+      "arm": "baseline",
+      "stratum": "[9,\"sets\",\"easy\",false,\"en\"]",
+      "sourceHash": "03a0e6b13a1f72b74438377b72c3d25372c016ce1436a10d953124a45aff85c3"
+    },
+    {
+      "id": "SYNTHETIC-50",
+      "crossMediumId": "SYNTHETIC-PART-50",
+      "arm": "trace",
+      "stratum": "[10,\"linear-system\",\"easy\",false,\"ta\"]",
+      "sourceHash": "941ae5e44327b76b8cb2d78426df8cf3f93cda74b542825a3629396222331277"
+    },
+    {
+      "id": "SYNTHETIC-51",
+      "crossMediumId": "SYNTHETIC-PART-51",
+      "arm": "baseline",
+      "stratum": "[11,\"trigonometry\",\"easy\",true,\"en\"]",
+      "sourceHash": "02ad2bf13f98bd8dfb0b0fb15aceeecb413dcf210d00eba94c52cc74aefbec9b"
+    },
+    {
+      "id": "SYNTHETIC-52",
+      "crossMediumId": "SYNTHETIC-PART-52",
+      "arm": "baseline",
+      "stratum": "[12,\"sets\",\"easy\",false,\"ta\"]",
+      "sourceHash": "60fb126daee69b8ef11f9dc09e829527501d6b559673072cf524205a99fb74aa"
+    },
+    {
+      "id": "SYNTHETIC-53",
+      "crossMediumId": "SYNTHETIC-PART-53",
+      "arm": "baseline",
+      "stratum": "[9,\"linear-system\",\"medium\",false,\"en\"]",
+      "sourceHash": "ee399217eac9005f28f3a1f419fafbe099418c4e4ed9c1b75bf69b08d873fa96"
+    },
+    {
+      "id": "SYNTHETIC-54",
+      "crossMediumId": "SYNTHETIC-PART-54",
+      "arm": "trace",
+      "stratum": "[10,\"trigonometry\",\"medium\",false,\"ta\"]",
+      "sourceHash": "c1bbb068b1fd92c98c3c6f764900a12db7788031c39d3b2079e3f66630365fce"
+    },
+    {
+      "id": "SYNTHETIC-55",
+      "crossMediumId": "SYNTHETIC-PART-55",
+      "arm": "baseline",
+      "stratum": "[11,\"sets\",\"medium\",false,\"en\"]",
+      "sourceHash": "4782d0d50824dd83ba9952a9923a330a52265bdc2cd88ccc8f2801a607a435e6"
+    },
+    {
+      "id": "SYNTHETIC-56",
+      "crossMediumId": "SYNTHETIC-PART-56",
+      "arm": "baseline",
+      "stratum": "[12,\"linear-system\",\"medium\",true,\"ta\"]",
+      "sourceHash": "12247de45a8a620699a16586ea5d177d3257c55ca196508b00e91ea4e24424b1"
+    },
+    {
+      "id": "SYNTHETIC-57",
+      "crossMediumId": "SYNTHETIC-PART-57",
+      "arm": "trace",
+      "stratum": "[9,\"trigonometry\",\"difficult\",false,\"en\"]",
+      "sourceHash": "8cf466e3869e62f720bf253cd25124f01d732d60353b2baf968cc75e5faa13f4"
+    },
+    {
+      "id": "SYNTHETIC-58",
+      "crossMediumId": "SYNTHETIC-PART-58",
+      "arm": "baseline",
+      "stratum": "[10,\"sets\",\"difficult\",false,\"ta\"]",
+      "sourceHash": "2d223399f845127513d8b86a807227889ba5f9540d03e63f08513dec64688303"
+    },
+    {
+      "id": "SYNTHETIC-59",
+      "crossMediumId": "SYNTHETIC-PART-59",
+      "arm": "trace",
+      "stratum": "[11,\"linear-system\",\"difficult\",false,\"en\"]",
+      "sourceHash": "d3693fee446a2fc49f15737c06254fb2ef7ae0c4de1587aa1e578d2aba17a359"
+    },
+    {
+      "id": "SYNTHETIC-60",
+      "crossMediumId": "SYNTHETIC-PART-60",
+      "arm": "trace",
+      "stratum": "[12,\"trigonometry\",\"difficult\",false,\"ta\"]",
+      "sourceHash": "815459288003ff84d36711f941f4d9d2726621df51654e1665bb7bd25b2b2027"
+    }
+  ],
+  "strata": [
+    {
+      "key": "[11,\"linear-system\",\"difficult\",true,\"en\"]",
+      "selected": 1
+    },
+    {
+      "key": "[9,\"sets\",\"easy\",false,\"en\"]",
+      "selected": 4
+    },
+    {
+      "key": "[10,\"trigonometry\",\"medium\",true,\"ta\"]",
+      "selected": 1
+    },
+    {
+      "key": "[9,\"trigonometry\",\"difficult\",false,\"en\"]",
+      "selected": 4
+    },
+    {
+      "key": "[10,\"linear-system\",\"easy\",true,\"ta\"]",
+      "selected": 1
+    },
+    {
+      "key": "[9,\"trigonometry\",\"difficult\",true,\"en\"]",
+      "selected": 1
+    },
+    {
+      "key": "[12,\"sets\",\"easy\",true,\"ta\"]",
+      "selected": 1
+    },
+    {
+      "key": "[10,\"sets\",\"difficult\",false,\"ta\"]",
+      "selected": 4
+    },
+    {
+      "key": "[10,\"linear-system\",\"easy\",false,\"ta\"]",
+      "selected": 4
+    },
+    {
+      "key": "[9,\"linear-system\",\"medium\",false,\"en\"]",
+      "selected": 4
+    },
+    {
+      "key": "[10,\"sets\",\"difficult\",true,\"ta\"]",
+      "selected": 1
+    },
+    {
+      "key": "[9,\"linear-system\",\"medium\",true,\"en\"]",
+      "selected": 1
+    },
+    {
+      "key": "[11,\"trigonometry\",\"easy\",false,\"en\"]",
+      "selected": 4
+    },
+    {
+      "key": "[12,\"linear-system\",\"medium\",true,\"ta\"]",
+      "selected": 1
+    },
+    {
+      "key": "[12,\"sets\",\"easy\",false,\"ta\"]",
+      "selected": 4
+    },
+    {
+      "key": "[12,\"linear-system\",\"medium\",false,\"ta\"]",
+      "selected": 4
+    },
+    {
+      "key": "[11,\"linear-system\",\"difficult\",false,\"en\"]",
+      "selected": 4
+    },
+    {
+      "key": "[12,\"trigonometry\",\"difficult\",false,\"ta\"]",
+      "selected": 4
+    },
+    {
+      "key": "[10,\"trigonometry\",\"medium\",false,\"ta\"]",
+      "selected": 4
+    },
+    {
+      "key": "[9,\"sets\",\"easy\",true,\"en\"]",
+      "selected": 1
+    },
+    {
+      "key": "[11,\"sets\",\"medium\",false,\"en\"]",
+      "selected": 4
+    },
+    {
+      "key": "[12,\"trigonometry\",\"difficult\",true,\"ta\"]",
+      "selected": 1
+    },
+    {
+      "key": "[11,\"sets\",\"medium\",true,\"en\"]",
+      "selected": 1
+    },
+    {
+      "key": "[11,\"trigonometry\",\"easy\",true,\"en\"]",
+      "selected": 1
+    }
+  ],
+  "blockers": [],
+  "planHash": "478f92a07fbdbeec5e71f7584c2b6d5ae648f3974d27016099027d363fa95ae0"
+}

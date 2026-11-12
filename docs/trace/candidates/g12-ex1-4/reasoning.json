@@ -1,0 +1,4341 @@
+[
+  {
+    "recordId": "g12-ch1-ex1.4-q1-i",
+    "model": {
+      "schemaVersion": 1,
+      "method": "cramer",
+      "variables": [
+        {
+          "name": "x",
+          "transform": "identity"
+        },
+        {
+          "name": "y",
+          "transform": "identity"
+        }
+      ],
+      "A": [
+        [
+          5,
+          -2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "B": [
+        [
+          -16
+        ],
+        [
+          7
+        ]
+      ]
+    },
+    "reasoning": {
+      "schemaVersion": 1,
+      "family": "CRAMER_LINEAR_SYSTEM",
+      "modelHash": "cad40ce92f55076ff23c981825cfc5e1cdff09b184d809a69f4054152a0d1ca5",
+      "model": {
+        "schemaVersion": 1,
+        "method": "cramer",
+        "variables": [
+          {
+            "name": "x",
+            "transform": "identity"
+          },
+          {
+            "name": "y",
+            "transform": "identity"
+          }
+        ],
+        "A": [
+          [
+            5,
+            -2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "B": [
+          [
+            -16
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "domain": [],
+      "determinant": {
+        "kind": "determinant",
+        "label": "Δ",
+        "matrix": [
+          [
+            {
+              "n": 5,
+              "d": 1
+            },
+            {
+              "n": -2,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 1,
+              "d": 1
+            },
+            {
+              "n": 3,
+              "d": 1
+            }
+          ]
+        ],
+        "terms": [
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": 5,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 3,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": 3,
+              "d": 1
+            },
+            "value": {
+              "n": 15,
+              "d": 1
+            }
+          },
+          {
+            "sign": -1,
+            "coefficient": {
+              "n": -2,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 1,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": 1,
+              "d": 1
+            },
+            "value": {
+              "n": 2,
+              "d": 1
+            }
+          }
+        ],
+        "value": {
+          "n": 17,
+          "d": 1
+        }
+      },
+      "determinants": [
+        {
+          "kind": "determinant",
+          "label": "Δ_x",
+          "matrix": [
+            [
+              {
+                "n": -16,
+                "d": 1
+              },
+              {
+                "n": -2,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 7,
+                "d": 1
+              },
+              {
+                "n": 3,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": -16,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 3,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 3,
+                "d": 1
+              },
+              "value": {
+                "n": -48,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": -2,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 7,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 7,
+                "d": 1
+              },
+              "value": {
+                "n": 14,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -34,
+            "d": 1
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_y",
+          "matrix": [
+            [
+              {
+                "n": 5,
+                "d": 1
+              },
+              {
+                "n": -16,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 1,
+                "d": 1
+              },
+              {
+                "n": 7,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 5,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 7,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 7,
+                "d": 1
+              },
+              "value": {
+                "n": 35,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": -16,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 1,
+                "d": 1
+              },
+              "value": {
+                "n": 16,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": 51,
+            "d": 1
+          }
+        }
+      ],
+      "transformed": [
+        {
+          "n": -2,
+          "d": 1
+        },
+        {
+          "n": 3,
+          "d": 1
+        }
+      ],
+      "values": [
+        {
+          "n": -2,
+          "d": 1
+        },
+        {
+          "n": 3,
+          "d": 1
+        }
+      ],
+      "substitution": [
+        {
+          "n": -16,
+          "d": 1
+        },
+        {
+          "n": 7,
+          "d": 1
+        }
+      ],
+      "applicability": {
+        "square": true,
+        "determinantNonzero": true,
+        "uniqueInTransformedVariables": true
+      },
+      "review": {
+        "source": "REQUIRES_SEPARATE_SOURCE_EVIDENCE",
+        "language": "PROFESSIONAL_REVIEW_PENDING",
+        "release": "NOT_APPROVED"
+      }
+    },
+    "critic": {
+      "passed": true,
+      "modelHash": "cad40ce92f55076ff23c981825cfc5e1cdff09b184d809a69f4054152a0d1ca5",
+      "reasoningHash": "1dfbe1bb067e83ab5a04c56a1ce4dbfa8d677210865eee81d818754af2251827",
+      "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints"
+    },
+    "recordSha256": "b1c04805804f543cf3045f6b6d66246f9c57596d9192233f9670fccee5e98ffd"
+  },
+  {
+    "recordId": "g12-ch1-ex1.4-q1-ii",
+    "model": {
+      "schemaVersion": 1,
+      "method": "cramer",
+      "variables": [
+        {
+          "name": "x",
+          "transform": "reciprocal"
+        },
+        {
+          "name": "y",
+          "transform": "identity"
+        }
+      ],
+      "A": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "B": [
+        [
+          12
+        ],
+        [
+          13
+        ]
+      ]
+    },
+    "reasoning": {
+      "schemaVersion": 1,
+      "family": "CRAMER_LINEAR_SYSTEM",
+      "modelHash": "e08979175d70c8b33081e5eff9695141da7216a545d2c57a03aa6b27ef1b6c5e",
+      "model": {
+        "schemaVersion": 1,
+        "method": "cramer",
+        "variables": [
+          {
+            "name": "x",
+            "transform": "reciprocal"
+          },
+          {
+            "name": "y",
+            "transform": "identity"
+          }
+        ],
+        "A": [
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "B": [
+          [
+            12
+          ],
+          [
+            13
+          ]
+        ]
+      },
+      "domain": [
+        {
+          "variable": "x",
+          "excludedValue": {
+            "n": 0,
+            "d": 1
+          }
+        }
+      ],
+      "determinant": {
+        "kind": "determinant",
+        "label": "Δ",
+        "matrix": [
+          [
+            {
+              "n": 3,
+              "d": 1
+            },
+            {
+              "n": 2,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 2,
+              "d": 1
+            },
+            {
+              "n": 3,
+              "d": 1
+            }
+          ]
+        ],
+        "terms": [
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": 3,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 3,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": 3,
+              "d": 1
+            },
+            "value": {
+              "n": 9,
+              "d": 1
+            }
+          },
+          {
+            "sign": -1,
+            "coefficient": {
+              "n": 2,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 2,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": 2,
+              "d": 1
+            },
+            "value": {
+              "n": -4,
+              "d": 1
+            }
+          }
+        ],
+        "value": {
+          "n": 5,
+          "d": 1
+        }
+      },
+      "determinants": [
+        {
+          "kind": "determinant",
+          "label": "Δ_x",
+          "matrix": [
+            [
+              {
+                "n": 12,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 13,
+                "d": 1
+              },
+              {
+                "n": 3,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 12,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 3,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 3,
+                "d": 1
+              },
+              "value": {
+                "n": 36,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 2,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 13,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 13,
+                "d": 1
+              },
+              "value": {
+                "n": -26,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": 10,
+            "d": 1
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_y",
+          "matrix": [
+            [
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": 12,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 13,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 3,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 13,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 13,
+                "d": 1
+              },
+              "value": {
+                "n": 39,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 12,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 2,
+                "d": 1
+              },
+              "value": {
+                "n": -24,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": 15,
+            "d": 1
+          }
+        }
+      ],
+      "transformed": [
+        {
+          "n": 2,
+          "d": 1
+        },
+        {
+          "n": 3,
+          "d": 1
+        }
+      ],
+      "values": [
+        {
+          "n": 1,
+          "d": 2
+        },
+        {
+          "n": 3,
+          "d": 1
+        }
+      ],
+      "substitution": [
+        {
+          "n": 12,
+          "d": 1
+        },
+        {
+          "n": 13,
+          "d": 1
+        }
+      ],
+      "applicability": {
+        "square": true,
+        "determinantNonzero": true,
+        "uniqueInTransformedVariables": true
+      },
+      "review": {
+        "source": "REQUIRES_SEPARATE_SOURCE_EVIDENCE",
+        "language": "PROFESSIONAL_REVIEW_PENDING",
+        "release": "NOT_APPROVED"
+      }
+    },
+    "critic": {
+      "passed": true,
+      "modelHash": "e08979175d70c8b33081e5eff9695141da7216a545d2c57a03aa6b27ef1b6c5e",
+      "reasoningHash": "cb5455958447c865676cf976b4dfff67097ad718def11b30a8b913435edb8f74",
+      "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints"
+    },
+    "recordSha256": "5a83be4b45fe9ac9a616448436fe7e196bf6ca3078dfb674dffd0af90c7d2ddf"
+  },
+  {
+    "recordId": "g12-ch1-ex1.4-q1-iii",
+    "model": {
+      "schemaVersion": 1,
+      "method": "cramer",
+      "variables": [
+        {
+          "name": "x",
+          "transform": "identity"
+        },
+        {
+          "name": "y",
+          "transform": "identity"
+        },
+        {
+          "name": "z",
+          "transform": "identity"
+        }
+      ],
+      "A": [
+        [
+          3,
+          3,
+          -1
+        ],
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          4,
+          3,
+          2
+        ]
+      ],
+      "B": [
+        [
+          11
+        ],
+        [
+          9
+        ],
+        [
+          25
+        ]
+      ]
+    },
+    "reasoning": {
+      "schemaVersion": 1,
+      "family": "CRAMER_LINEAR_SYSTEM",
+      "modelHash": "38214bdc69363dc5a87837d5a092e036fd20f8cf9ad482891f75202ae09e0ad8",
+      "model": {
+        "schemaVersion": 1,
+        "method": "cramer",
+        "variables": [
+          {
+            "name": "x",
+            "transform": "identity"
+          },
+          {
+            "name": "y",
+            "transform": "identity"
+          },
+          {
+            "name": "z",
+            "transform": "identity"
+          }
+        ],
+        "A": [
+          [
+            3,
+            3,
+            -1
+          ],
+          [
+            2,
+            -1,
+            2
+          ],
+          [
+            4,
+            3,
+            2
+          ]
+        ],
+        "B": [
+          [
+            11
+          ],
+          [
+            9
+          ],
+          [
+            25
+          ]
+        ]
+      },
+      "domain": [],
+      "determinant": {
+        "kind": "determinant",
+        "label": "Δ",
+        "matrix": [
+          [
+            {
+              "n": 3,
+              "d": 1
+            },
+            {
+              "n": 3,
+              "d": 1
+            },
+            {
+              "n": -1,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 2,
+              "d": 1
+            },
+            {
+              "n": -1,
+              "d": 1
+            },
+            {
+              "n": 2,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 4,
+              "d": 1
+            },
+            {
+              "n": 3,
+              "d": 1
+            },
+            {
+              "n": 2,
+              "d": 1
+            }
+          ]
+        ],
+        "terms": [
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": 3,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": -1,
+                  "d": 1
+                },
+                {
+                  "n": 2,
+                  "d": 1
+                }
+              ],
+              [
+                {
+                  "n": 3,
+                  "d": 1
+                },
+                {
+                  "n": 2,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": -8,
+              "d": 1
+            },
+            "value": {
+              "n": -24,
+              "d": 1
+            }
+          },
+          {
+            "sign": -1,
+            "coefficient": {
+              "n": 3,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 2,
+                  "d": 1
+                },
+                {
+                  "n": 2,
+                  "d": 1
+                }
+              ],
+              [
+                {
+                  "n": 4,
+                  "d": 1
+                },
+                {
+                  "n": 2,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": -4,
+              "d": 1
+            },
+            "value": {
+              "n": 12,
+              "d": 1
+            }
+          },
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": -1,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 2,
+                  "d": 1
+                },
+                {
+                  "n": -1,
+                  "d": 1
+                }
+              ],
+              [
+                {
+                  "n": 4,
+                  "d": 1
+                },
+                {
+                  "n": 3,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": 10,
+              "d": 1
+            },
+            "value": {
+              "n": -10,
+              "d": 1
+            }
+          }
+        ],
+        "value": {
+          "n": -22,
+          "d": 1
+        }
+      },
+      "determinants": [
+        {
+          "kind": "determinant",
+          "label": "Δ_x",
+          "matrix": [
+            [
+              {
+                "n": 11,
+                "d": 1
+              },
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": -1,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 9,
+                "d": 1
+              },
+              {
+                "n": -1,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 25,
+                "d": 1
+              },
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 11,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": -1,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 3,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -8,
+                "d": 1
+              },
+              "value": {
+                "n": -88,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 3,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 9,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 25,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -32,
+                "d": 1
+              },
+              "value": {
+                "n": 96,
+                "d": 1
+              }
+            },
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": -1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 9,
+                    "d": 1
+                  },
+                  {
+                    "n": -1,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 25,
+                    "d": 1
+                  },
+                  {
+                    "n": 3,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 52,
+                "d": 1
+              },
+              "value": {
+                "n": -52,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -44,
+            "d": 1
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_y",
+          "matrix": [
+            [
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": 11,
+                "d": 1
+              },
+              {
+                "n": -1,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 9,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 4,
+                "d": 1
+              },
+              {
+                "n": 25,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 3,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 9,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 25,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -32,
+                "d": 1
+              },
+              "value": {
+                "n": -96,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 11,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 4,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -4,
+                "d": 1
+              },
+              "value": {
+                "n": 44,
+                "d": 1
+              }
+            },
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": -1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 9,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 4,
+                    "d": 1
+                  },
+                  {
+                    "n": 25,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 14,
+                "d": 1
+              },
+              "value": {
+                "n": -14,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -66,
+            "d": 1
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_z",
+          "matrix": [
+            [
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": 11,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": -1,
+                "d": 1
+              },
+              {
+                "n": 9,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 4,
+                "d": 1
+              },
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": 25,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 3,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": -1,
+                    "d": 1
+                  },
+                  {
+                    "n": 9,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 3,
+                    "d": 1
+                  },
+                  {
+                    "n": 25,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -52,
+                "d": 1
+              },
+              "value": {
+                "n": -156,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 3,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 9,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 4,
+                    "d": 1
+                  },
+                  {
+                    "n": 25,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 14,
+                "d": 1
+              },
+              "value": {
+                "n": -42,
+                "d": 1
+              }
+            },
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 11,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": -1,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 4,
+                    "d": 1
+                  },
+                  {
+                    "n": 3,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 10,
+                "d": 1
+              },
+              "value": {
+                "n": 110,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -88,
+            "d": 1
+          }
+        }
+      ],
+      "transformed": [
+        {
+          "n": 2,
+          "d": 1
+        },
+        {
+          "n": 3,
+          "d": 1
+        },
+        {
+          "n": 4,
+          "d": 1
+        }
+      ],
+      "values": [
+        {
+          "n": 2,
+          "d": 1
+        },
+        {
+          "n": 3,
+          "d": 1
+        },
+        {
+          "n": 4,
+          "d": 1
+        }
+      ],
+      "substitution": [
+        {
+          "n": 11,
+          "d": 1
+        },
+        {
+          "n": 9,
+          "d": 1
+        },
+        {
+          "n": 25,
+          "d": 1
+        }
+      ],
+      "applicability": {
+        "square": true,
+        "determinantNonzero": true,
+        "uniqueInTransformedVariables": true
+      },
+      "review": {
+        "source": "REQUIRES_SEPARATE_SOURCE_EVIDENCE",
+        "language": "PROFESSIONAL_REVIEW_PENDING",
+        "release": "NOT_APPROVED"
+      }
+    },
+    "critic": {
+      "passed": true,
+      "modelHash": "38214bdc69363dc5a87837d5a092e036fd20f8cf9ad482891f75202ae09e0ad8",
+      "reasoningHash": "eb5f2c78e3df657dc5cd31ddedbfe5ea598caee155c72194720bcddc74afd80b",
+      "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints"
+    },
+    "recordSha256": "f3f4e057d2b81527e8d55a232a97177b9d48c149d5fae17e48c89e6acd0f6326"
+  },
+  {
+    "recordId": "g12-ch1-ex1.4-q1-iv",
+    "model": {
+      "schemaVersion": 1,
+      "method": "cramer",
+      "variables": [
+        {
+          "name": "x",
+          "transform": "reciprocal"
+        },
+        {
+          "name": "y",
+          "transform": "reciprocal"
+        },
+        {
+          "name": "z",
+          "transform": "reciprocal"
+        }
+      ],
+      "A": [
+        [
+          3,
+          -4,
+          -2
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          -5,
+          -4
+        ]
+      ],
+      "B": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          -1
+        ]
+      ]
+    },
+    "reasoning": {
+      "schemaVersion": 1,
+      "family": "CRAMER_LINEAR_SYSTEM",
+      "modelHash": "965388349bc57d07daf58af148c32abe64aae6e262dff4528e96e544da06b7f7",
+      "model": {
+        "schemaVersion": 1,
+        "method": "cramer",
+        "variables": [
+          {
+            "name": "x",
+            "transform": "reciprocal"
+          },
+          {
+            "name": "y",
+            "transform": "reciprocal"
+          },
+          {
+            "name": "z",
+            "transform": "reciprocal"
+          }
+        ],
+        "A": [
+          [
+            3,
+            -4,
+            -2
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            -5,
+            -4
+          ]
+        ],
+        "B": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            -1
+          ]
+        ]
+      },
+      "domain": [
+        {
+          "variable": "x",
+          "excludedValue": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "variable": "y",
+          "excludedValue": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "variable": "z",
+          "excludedValue": {
+            "n": 0,
+            "d": 1
+          }
+        }
+      ],
+      "determinant": {
+        "kind": "determinant",
+        "label": "Δ",
+        "matrix": [
+          [
+            {
+              "n": 3,
+              "d": 1
+            },
+            {
+              "n": -4,
+              "d": 1
+            },
+            {
+              "n": -2,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 1,
+              "d": 1
+            },
+            {
+              "n": 2,
+              "d": 1
+            },
+            {
+              "n": 1,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 2,
+              "d": 1
+            },
+            {
+              "n": -5,
+              "d": 1
+            },
+            {
+              "n": -4,
+              "d": 1
+            }
+          ]
+        ],
+        "terms": [
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": 3,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 2,
+                  "d": 1
+                },
+                {
+                  "n": 1,
+                  "d": 1
+                }
+              ],
+              [
+                {
+                  "n": -5,
+                  "d": 1
+                },
+                {
+                  "n": -4,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": -3,
+              "d": 1
+            },
+            "value": {
+              "n": -9,
+              "d": 1
+            }
+          },
+          {
+            "sign": -1,
+            "coefficient": {
+              "n": -4,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 1,
+                  "d": 1
+                },
+                {
+                  "n": 1,
+                  "d": 1
+                }
+              ],
+              [
+                {
+                  "n": 2,
+                  "d": 1
+                },
+                {
+                  "n": -4,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": -6,
+              "d": 1
+            },
+            "value": {
+              "n": -24,
+              "d": 1
+            }
+          },
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": -2,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 1,
+                  "d": 1
+                },
+                {
+                  "n": 2,
+                  "d": 1
+                }
+              ],
+              [
+                {
+                  "n": 2,
+                  "d": 1
+                },
+                {
+                  "n": -5,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": -9,
+              "d": 1
+            },
+            "value": {
+              "n": 18,
+              "d": 1
+            }
+          }
+        ],
+        "value": {
+          "n": -15,
+          "d": 1
+        }
+      },
+      "determinants": [
+        {
+          "kind": "determinant",
+          "label": "Δ_x",
+          "matrix": [
+            [
+              {
+                "n": 1,
+                "d": 1
+              },
+              {
+                "n": -4,
+                "d": 1
+              },
+              {
+                "n": -2,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 1,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": -1,
+                "d": 1
+              },
+              {
+                "n": -5,
+                "d": 1
+              },
+              {
+                "n": -4,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 1,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": -5,
+                    "d": 1
+                  },
+                  {
+                    "n": -4,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -3,
+                "d": 1
+              },
+              "value": {
+                "n": -3,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": -4,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 1,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": -1,
+                    "d": 1
+                  },
+                  {
+                    "n": -4,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -7,
+                "d": 1
+              },
+              "value": {
+                "n": -28,
+                "d": 1
+              }
+            },
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": -2,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": -1,
+                    "d": 1
+                  },
+                  {
+                    "n": -5,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -8,
+                "d": 1
+              },
+              "value": {
+                "n": 16,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -15,
+            "d": 1
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_y",
+          "matrix": [
+            [
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": 1,
+                "d": 1
+              },
+              {
+                "n": -2,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 1,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 1,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": -1,
+                "d": 1
+              },
+              {
+                "n": -4,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 3,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 1,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": -1,
+                    "d": 1
+                  },
+                  {
+                    "n": -4,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -7,
+                "d": 1
+              },
+              "value": {
+                "n": -21,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 1
+                  },
+                  {
+                    "n": 1,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": -4,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -6,
+                "d": 1
+              },
+              "value": {
+                "n": 6,
+                "d": 1
+              }
+            },
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": -2,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": -1,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -5,
+                "d": 1
+              },
+              "value": {
+                "n": 10,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -5,
+            "d": 1
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_z",
+          "matrix": [
+            [
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": -4,
+                "d": 1
+              },
+              {
+                "n": 1,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 1,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": -5,
+                "d": 1
+              },
+              {
+                "n": -1,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 3,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": -5,
+                    "d": 1
+                  },
+                  {
+                    "n": -1,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 8,
+                "d": 1
+              },
+              "value": {
+                "n": 24,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": -4,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": -1,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -5,
+                "d": 1
+              },
+              "value": {
+                "n": -20,
+                "d": 1
+              }
+            },
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": -5,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -9,
+                "d": 1
+              },
+              "value": {
+                "n": -9,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -5,
+            "d": 1
+          }
+        }
+      ],
+      "transformed": [
+        {
+          "n": 1,
+          "d": 1
+        },
+        {
+          "n": 1,
+          "d": 3
+        },
+        {
+          "n": 1,
+          "d": 3
+        }
+      ],
+      "values": [
+        {
+          "n": 1,
+          "d": 1
+        },
+        {
+          "n": 3,
+          "d": 1
+        },
+        {
+          "n": 3,
+          "d": 1
+        }
+      ],
+      "substitution": [
+        {
+          "n": 1,
+          "d": 1
+        },
+        {
+          "n": 2,
+          "d": 1
+        },
+        {
+          "n": -1,
+          "d": 1
+        }
+      ],
+      "applicability": {
+        "square": true,
+        "determinantNonzero": true,
+        "uniqueInTransformedVariables": true
+      },
+      "review": {
+        "source": "REQUIRES_SEPARATE_SOURCE_EVIDENCE",
+        "language": "PROFESSIONAL_REVIEW_PENDING",
+        "release": "NOT_APPROVED"
+      }
+    },
+    "critic": {
+      "passed": true,
+      "modelHash": "965388349bc57d07daf58af148c32abe64aae6e262dff4528e96e544da06b7f7",
+      "reasoningHash": "7cac1d3cecbfd2ed6f71e7e684f2b1a79c7c7a0139c3c0b4ca0ee50def8e4770",
+      "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints"
+    },
+    "recordSha256": "a206842a551f2b52139b934adf27426e67054ef49248e3c866fb676250afecc4"
+  },
+  {
+    "recordId": "g12-ch1-ex1.4-q2",
+    "model": {
+      "schemaVersion": 1,
+      "method": "cramer",
+      "variables": [
+        {
+          "name": "c",
+          "transform": "identity",
+          "constraint": "nonnegative-integer"
+        },
+        {
+          "name": "w",
+          "transform": "identity",
+          "constraint": "nonnegative-integer"
+        }
+      ],
+      "A": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          {
+            "n": -1,
+            "d": 4
+          }
+        ]
+      ],
+      "B": [
+        [
+          100
+        ],
+        [
+          80
+        ]
+      ]
+    },
+    "reasoning": {
+      "schemaVersion": 1,
+      "family": "CRAMER_LINEAR_SYSTEM",
+      "modelHash": "a338c0e451506e7bbee0a83408acf7174145361d770642c70fa7fb63a4e48233",
+      "model": {
+        "schemaVersion": 1,
+        "method": "cramer",
+        "variables": [
+          {
+            "name": "c",
+            "transform": "identity",
+            "constraint": "nonnegative-integer"
+          },
+          {
+            "name": "w",
+            "transform": "identity",
+            "constraint": "nonnegative-integer"
+          }
+        ],
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            {
+              "n": -1,
+              "d": 4
+            }
+          ]
+        ],
+        "B": [
+          [
+            100
+          ],
+          [
+            80
+          ]
+        ]
+      },
+      "domain": [],
+      "determinant": {
+        "kind": "determinant",
+        "label": "Δ",
+        "matrix": [
+          [
+            {
+              "n": 1,
+              "d": 1
+            },
+            {
+              "n": 1,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 1,
+              "d": 1
+            },
+            {
+              "n": -1,
+              "d": 4
+            }
+          ]
+        ],
+        "terms": [
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": 1,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": -1,
+                  "d": 4
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": -1,
+              "d": 4
+            },
+            "value": {
+              "n": -1,
+              "d": 4
+            }
+          },
+          {
+            "sign": -1,
+            "coefficient": {
+              "n": 1,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 1,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": 1,
+              "d": 1
+            },
+            "value": {
+              "n": -1,
+              "d": 1
+            }
+          }
+        ],
+        "value": {
+          "n": -5,
+          "d": 4
+        }
+      },
+      "determinants": [
+        {
+          "kind": "determinant",
+          "label": "Δ_c",
+          "matrix": [
+            [
+              {
+                "n": 100,
+                "d": 1
+              },
+              {
+                "n": 1,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 80,
+                "d": 1
+              },
+              {
+                "n": -1,
+                "d": 4
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 100,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": -1,
+                    "d": 4
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -1,
+                "d": 4
+              },
+              "value": {
+                "n": -25,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 80,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 80,
+                "d": 1
+              },
+              "value": {
+                "n": -80,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -105,
+            "d": 1
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_w",
+          "matrix": [
+            [
+              {
+                "n": 1,
+                "d": 1
+              },
+              {
+                "n": 100,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 1,
+                "d": 1
+              },
+              {
+                "n": 80,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 80,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 80,
+                "d": 1
+              },
+              "value": {
+                "n": 80,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 100,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 1,
+                "d": 1
+              },
+              "value": {
+                "n": -100,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -20,
+            "d": 1
+          }
+        }
+      ],
+      "transformed": [
+        {
+          "n": 84,
+          "d": 1
+        },
+        {
+          "n": 16,
+          "d": 1
+        }
+      ],
+      "values": [
+        {
+          "n": 84,
+          "d": 1
+        },
+        {
+          "n": 16,
+          "d": 1
+        }
+      ],
+      "substitution": [
+        {
+          "n": 100,
+          "d": 1
+        },
+        {
+          "n": 80,
+          "d": 1
+        }
+      ],
+      "applicability": {
+        "square": true,
+        "determinantNonzero": true,
+        "uniqueInTransformedVariables": true
+      },
+      "review": {
+        "source": "REQUIRES_SEPARATE_SOURCE_EVIDENCE",
+        "language": "PROFESSIONAL_REVIEW_PENDING",
+        "release": "NOT_APPROVED"
+      }
+    },
+    "critic": {
+      "passed": true,
+      "modelHash": "a338c0e451506e7bbee0a83408acf7174145361d770642c70fa7fb63a4e48233",
+      "reasoningHash": "6e85287a4c902a600c19c7efa96f20c40c8cf21b961244f3624fcd02c55af4de",
+      "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints"
+    },
+    "recordSha256": "36c0241e550ea1f96ce9f51a84567ddc9f7191a984ef450cf5257d1d48af3180"
+  },
+  {
+    "recordId": "g12-ch1-ex1.4-q3",
+    "model": {
+      "schemaVersion": 1,
+      "method": "cramer",
+      "variables": [
+        {
+          "name": "h",
+          "transform": "identity",
+          "constraint": "positive"
+        },
+        {
+          "name": "l",
+          "transform": "identity",
+          "constraint": "positive"
+        }
+      ],
+      "A": [
+        [
+          1,
+          1
+        ],
+        [
+          {
+            "n": 1,
+            "d": 2
+          },
+          {
+            "n": 1,
+            "d": 4
+          }
+        ]
+      ],
+      "B": [
+        [
+          10
+        ],
+        [
+          4
+        ]
+      ]
+    },
+    "reasoning": {
+      "schemaVersion": 1,
+      "family": "CRAMER_LINEAR_SYSTEM",
+      "modelHash": "6defce67e9aff4352c5a58b754182f55a89388e306a3d7388d7d1845cc62e5ac",
+      "model": {
+        "schemaVersion": 1,
+        "method": "cramer",
+        "variables": [
+          {
+            "name": "h",
+            "transform": "identity",
+            "constraint": "positive"
+          },
+          {
+            "name": "l",
+            "transform": "identity",
+            "constraint": "positive"
+          }
+        ],
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            {
+              "n": 1,
+              "d": 2
+            },
+            {
+              "n": 1,
+              "d": 4
+            }
+          ]
+        ],
+        "B": [
+          [
+            10
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "domain": [],
+      "determinant": {
+        "kind": "determinant",
+        "label": "Δ",
+        "matrix": [
+          [
+            {
+              "n": 1,
+              "d": 1
+            },
+            {
+              "n": 1,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 1,
+              "d": 2
+            },
+            {
+              "n": 1,
+              "d": 4
+            }
+          ]
+        ],
+        "terms": [
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": 1,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 1,
+                  "d": 4
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": 1,
+              "d": 4
+            },
+            "value": {
+              "n": 1,
+              "d": 4
+            }
+          },
+          {
+            "sign": -1,
+            "coefficient": {
+              "n": 1,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 1,
+                  "d": 2
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": 1,
+              "d": 2
+            },
+            "value": {
+              "n": -1,
+              "d": 2
+            }
+          }
+        ],
+        "value": {
+          "n": -1,
+          "d": 4
+        }
+      },
+      "determinants": [
+        {
+          "kind": "determinant",
+          "label": "Δ_h",
+          "matrix": [
+            [
+              {
+                "n": 10,
+                "d": 1
+              },
+              {
+                "n": 1,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 4,
+                "d": 1
+              },
+              {
+                "n": 1,
+                "d": 4
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 10,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 4
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 1,
+                "d": 4
+              },
+              "value": {
+                "n": 5,
+                "d": 2
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 4,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 4,
+                "d": 1
+              },
+              "value": {
+                "n": -4,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -3,
+            "d": 2
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_l",
+          "matrix": [
+            [
+              {
+                "n": 1,
+                "d": 1
+              },
+              {
+                "n": 10,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 1,
+                "d": 2
+              },
+              {
+                "n": 4,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 4,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 4,
+                "d": 1
+              },
+              "value": {
+                "n": 4,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 10,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 2
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 1,
+                "d": 2
+              },
+              "value": {
+                "n": -5,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": -1,
+            "d": 1
+          }
+        }
+      ],
+      "transformed": [
+        {
+          "n": 6,
+          "d": 1
+        },
+        {
+          "n": 4,
+          "d": 1
+        }
+      ],
+      "values": [
+        {
+          "n": 6,
+          "d": 1
+        },
+        {
+          "n": 4,
+          "d": 1
+        }
+      ],
+      "substitution": [
+        {
+          "n": 10,
+          "d": 1
+        },
+        {
+          "n": 4,
+          "d": 1
+        }
+      ],
+      "applicability": {
+        "square": true,
+        "determinantNonzero": true,
+        "uniqueInTransformedVariables": true
+      },
+      "review": {
+        "source": "REQUIRES_SEPARATE_SOURCE_EVIDENCE",
+        "language": "PROFESSIONAL_REVIEW_PENDING",
+        "release": "NOT_APPROVED"
+      }
+    },
+    "critic": {
+      "passed": true,
+      "modelHash": "6defce67e9aff4352c5a58b754182f55a89388e306a3d7388d7d1845cc62e5ac",
+      "reasoningHash": "5578ff45ee06efdd6b674e0524dc429e5dc94b6462af40954406ce201f6bce27",
+      "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints"
+    },
+    "recordSha256": "700a78ca2bbed8ec925957975ca9af427775a5e459b35951a647fdd6e125f6e0"
+  },
+  {
+    "recordId": "g12-ch1-ex1.4-q4",
+    "model": {
+      "schemaVersion": 1,
+      "method": "cramer",
+      "variables": [
+        {
+          "name": "a",
+          "transform": "reciprocal",
+          "constraint": "positive"
+        },
+        {
+          "name": "b",
+          "transform": "reciprocal",
+          "constraint": "positive"
+        }
+      ],
+      "A": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "B": [
+        [
+          {
+            "n": 1,
+            "d": 10
+          }
+        ],
+        [
+          {
+            "n": 1,
+            "d": 30
+          }
+        ]
+      ]
+    },
+    "reasoning": {
+      "schemaVersion": 1,
+      "family": "CRAMER_LINEAR_SYSTEM",
+      "modelHash": "2a690eb9f04210a69744dc900bdc9038b64eefc6ae79b770401b1639a2633a78",
+      "model": {
+        "schemaVersion": 1,
+        "method": "cramer",
+        "variables": [
+          {
+            "name": "a",
+            "transform": "reciprocal",
+            "constraint": "positive"
+          },
+          {
+            "name": "b",
+            "transform": "reciprocal",
+            "constraint": "positive"
+          }
+        ],
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "B": [
+          [
+            {
+              "n": 1,
+              "d": 10
+            }
+          ],
+          [
+            {
+              "n": 1,
+              "d": 30
+            }
+          ]
+        ]
+      },
+      "domain": [
+        {
+          "variable": "a",
+          "excludedValue": {
+            "n": 0,
+            "d": 1
+          }
+        },
+        {
+          "variable": "b",
+          "excludedValue": {
+            "n": 0,
+            "d": 1
+          }
+        }
+      ],
+      "determinant": {
+        "kind": "determinant",
+        "label": "Δ",
+        "matrix": [
+          [
+            {
+              "n": 1,
+              "d": 1
+            },
+            {
+              "n": 1,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 1,
+              "d": 1
+            },
+            {
+              "n": -1,
+              "d": 1
+            }
+          ]
+        ],
+        "terms": [
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": 1,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": -1,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": -1,
+              "d": 1
+            },
+            "value": {
+              "n": -1,
+              "d": 1
+            }
+          },
+          {
+            "sign": -1,
+            "coefficient": {
+              "n": 1,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 1,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": 1,
+              "d": 1
+            },
+            "value": {
+              "n": -1,
+              "d": 1
+            }
+          }
+        ],
+        "value": {
+          "n": -2,
+          "d": 1
+        }
+      },
+      "determinants": [
+        {
+          "kind": "determinant",
+          "label": "Δ_a",
+          "matrix": [
+            [
+              {
+                "n": 1,
+                "d": 10
+              },
+              {
+                "n": 1,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 1,
+                "d": 30
+              },
+              {
+                "n": -1,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 1,
+                "d": 10
+              },
+              "minor": [
+                [
+                  {
+                    "n": -1,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -1,
+                "d": 1
+              },
+              "value": {
+                "n": -1,
+                "d": 10
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 30
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 1,
+                "d": 30
+              },
+              "value": {
+                "n": -1,
+                "d": 30
+              }
+            }
+          ],
+          "value": {
+            "n": -2,
+            "d": 15
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_b",
+          "matrix": [
+            [
+              {
+                "n": 1,
+                "d": 1
+              },
+              {
+                "n": 1,
+                "d": 10
+              }
+            ],
+            [
+              {
+                "n": 1,
+                "d": 1
+              },
+              {
+                "n": 1,
+                "d": 30
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 1,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 30
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 1,
+                "d": 30
+              },
+              "value": {
+                "n": 1,
+                "d": 30
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 1,
+                "d": 10
+              },
+              "minor": [
+                [
+                  {
+                    "n": 1,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 1,
+                "d": 1
+              },
+              "value": {
+                "n": -1,
+                "d": 10
+              }
+            }
+          ],
+          "value": {
+            "n": -1,
+            "d": 15
+          }
+        }
+      ],
+      "transformed": [
+        {
+          "n": 1,
+          "d": 15
+        },
+        {
+          "n": 1,
+          "d": 30
+        }
+      ],
+      "values": [
+        {
+          "n": 15,
+          "d": 1
+        },
+        {
+          "n": 30,
+          "d": 1
+        }
+      ],
+      "substitution": [
+        {
+          "n": 1,
+          "d": 10
+        },
+        {
+          "n": 1,
+          "d": 30
+        }
+      ],
+      "applicability": {
+        "square": true,
+        "determinantNonzero": true,
+        "uniqueInTransformedVariables": true
+      },
+      "review": {
+        "source": "REQUIRES_SEPARATE_SOURCE_EVIDENCE",
+        "language": "PROFESSIONAL_REVIEW_PENDING",
+        "release": "NOT_APPROVED"
+      }
+    },
+    "critic": {
+      "passed": true,
+      "modelHash": "2a690eb9f04210a69744dc900bdc9038b64eefc6ae79b770401b1639a2633a78",
+      "reasoningHash": "9c8a6f6989346d61ec1a2c7b22bacb79823097d49c51311c91ef52e1241e0ad1",
+      "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints"
+    },
+    "recordSha256": "3c1c45f66521159dfa2dca7bbdfd025b69bd24c9b1088dc56c541fd9350de7da"
+  },
+  {
+    "recordId": "g12-ch1-ex1.4-q5",
+    "model": {
+      "schemaVersion": 1,
+      "method": "cramer",
+      "variables": [
+        {
+          "name": "d",
+          "transform": "identity",
+          "constraint": "positive"
+        },
+        {
+          "name": "i",
+          "transform": "identity",
+          "constraint": "positive"
+        },
+        {
+          "name": "v",
+          "transform": "identity",
+          "constraint": "positive"
+        }
+      ],
+      "A": [
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          5,
+          4,
+          2
+        ]
+      ],
+      "B": [
+        [
+          150
+        ],
+        [
+          200
+        ],
+        [
+          250
+        ]
+      ]
+    },
+    "reasoning": {
+      "schemaVersion": 1,
+      "family": "CRAMER_LINEAR_SYSTEM",
+      "modelHash": "d5b2b395d84b34fab49965d4e5d206c2543e84b1c1dfa2619c037e8e2cd0c5c6",
+      "model": {
+        "schemaVersion": 1,
+        "method": "cramer",
+        "variables": [
+          {
+            "name": "d",
+            "transform": "identity",
+            "constraint": "positive"
+          },
+          {
+            "name": "i",
+            "transform": "identity",
+            "constraint": "positive"
+          },
+          {
+            "name": "v",
+            "transform": "identity",
+            "constraint": "positive"
+          }
+        ],
+        "A": [
+          [
+            2,
+            3,
+            2
+          ],
+          [
+            2,
+            2,
+            4
+          ],
+          [
+            5,
+            4,
+            2
+          ]
+        ],
+        "B": [
+          [
+            150
+          ],
+          [
+            200
+          ],
+          [
+            250
+          ]
+        ]
+      },
+      "domain": [],
+      "determinant": {
+        "kind": "determinant",
+        "label": "Δ",
+        "matrix": [
+          [
+            {
+              "n": 2,
+              "d": 1
+            },
+            {
+              "n": 3,
+              "d": 1
+            },
+            {
+              "n": 2,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 2,
+              "d": 1
+            },
+            {
+              "n": 2,
+              "d": 1
+            },
+            {
+              "n": 4,
+              "d": 1
+            }
+          ],
+          [
+            {
+              "n": 5,
+              "d": 1
+            },
+            {
+              "n": 4,
+              "d": 1
+            },
+            {
+              "n": 2,
+              "d": 1
+            }
+          ]
+        ],
+        "terms": [
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": 2,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 2,
+                  "d": 1
+                },
+                {
+                  "n": 4,
+                  "d": 1
+                }
+              ],
+              [
+                {
+                  "n": 4,
+                  "d": 1
+                },
+                {
+                  "n": 2,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": -12,
+              "d": 1
+            },
+            "value": {
+              "n": -24,
+              "d": 1
+            }
+          },
+          {
+            "sign": -1,
+            "coefficient": {
+              "n": 3,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 2,
+                  "d": 1
+                },
+                {
+                  "n": 4,
+                  "d": 1
+                }
+              ],
+              [
+                {
+                  "n": 5,
+                  "d": 1
+                },
+                {
+                  "n": 2,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": -16,
+              "d": 1
+            },
+            "value": {
+              "n": 48,
+              "d": 1
+            }
+          },
+          {
+            "sign": 1,
+            "coefficient": {
+              "n": 2,
+              "d": 1
+            },
+            "minor": [
+              [
+                {
+                  "n": 2,
+                  "d": 1
+                },
+                {
+                  "n": 2,
+                  "d": 1
+                }
+              ],
+              [
+                {
+                  "n": 5,
+                  "d": 1
+                },
+                {
+                  "n": 4,
+                  "d": 1
+                }
+              ]
+            ],
+            "minorValue": {
+              "n": -2,
+              "d": 1
+            },
+            "value": {
+              "n": -4,
+              "d": 1
+            }
+          }
+        ],
+        "value": {
+          "n": 20,
+          "d": 1
+        }
+      },
+      "determinants": [
+        {
+          "kind": "determinant",
+          "label": "Δ_d",
+          "matrix": [
+            [
+              {
+                "n": 150,
+                "d": 1
+              },
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 200,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 4,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 250,
+                "d": 1
+              },
+              {
+                "n": 4,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 150,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 4,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 4,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -12,
+                "d": 1
+              },
+              "value": {
+                "n": -1800,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 3,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 200,
+                    "d": 1
+                  },
+                  {
+                    "n": 4,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 250,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -600,
+                "d": 1
+              },
+              "value": {
+                "n": 1800,
+                "d": 1
+              }
+            },
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 2,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 200,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 250,
+                    "d": 1
+                  },
+                  {
+                    "n": 4,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": 300,
+                "d": 1
+              },
+              "value": {
+                "n": 600,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": 600,
+            "d": 1
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_i",
+          "matrix": [
+            [
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 150,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 200,
+                "d": 1
+              },
+              {
+                "n": 4,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 5,
+                "d": 1
+              },
+              {
+                "n": 250,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 2,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 200,
+                    "d": 1
+                  },
+                  {
+                    "n": 4,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 250,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -600,
+                "d": 1
+              },
+              "value": {
+                "n": -1200,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 150,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 4,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 5,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -16,
+                "d": 1
+              },
+              "value": {
+                "n": 2400,
+                "d": 1
+              }
+            },
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 2,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 200,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 5,
+                    "d": 1
+                  },
+                  {
+                    "n": 250,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -500,
+                "d": 1
+              },
+              "value": {
+                "n": -1000,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": 200,
+            "d": 1
+          }
+        },
+        {
+          "kind": "determinant",
+          "label": "Δ_v",
+          "matrix": [
+            [
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 3,
+                "d": 1
+              },
+              {
+                "n": 150,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 2,
+                "d": 1
+              },
+              {
+                "n": 200,
+                "d": 1
+              }
+            ],
+            [
+              {
+                "n": 5,
+                "d": 1
+              },
+              {
+                "n": 4,
+                "d": 1
+              },
+              {
+                "n": 250,
+                "d": 1
+              }
+            ]
+          ],
+          "terms": [
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 2,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 200,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 4,
+                    "d": 1
+                  },
+                  {
+                    "n": 250,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -300,
+                "d": 1
+              },
+              "value": {
+                "n": -600,
+                "d": 1
+              }
+            },
+            {
+              "sign": -1,
+              "coefficient": {
+                "n": 3,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 200,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 5,
+                    "d": 1
+                  },
+                  {
+                    "n": 250,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -500,
+                "d": 1
+              },
+              "value": {
+                "n": 1500,
+                "d": 1
+              }
+            },
+            {
+              "sign": 1,
+              "coefficient": {
+                "n": 150,
+                "d": 1
+              },
+              "minor": [
+                [
+                  {
+                    "n": 2,
+                    "d": 1
+                  },
+                  {
+                    "n": 2,
+                    "d": 1
+                  }
+                ],
+                [
+                  {
+                    "n": 5,
+                    "d": 1
+                  },
+                  {
+                    "n": 4,
+                    "d": 1
+                  }
+                ]
+              ],
+              "minorValue": {
+                "n": -2,
+                "d": 1
+              },
+              "value": {
+                "n": -300,
+                "d": 1
+              }
+            }
+          ],
+          "value": {
+            "n": 600,
+            "d": 1
+          }
+        }
+      ],
+      "transformed": [
+        {
+          "n": 30,
+          "d": 1
+        },
+        {
+          "n": 10,
+          "d": 1
+        },
+        {
+          "n": 30,
+          "d": 1
+        }
+      ],
+      "values": [
+        {
+          "n": 30,
+          "d": 1
+        },
+        {
+          "n": 10,
+          "d": 1
+        },
+        {
+          "n": 30,
+          "d": 1
+        }
+      ],
+      "substitution": [
+        {
+          "n": 150,
+          "d": 1
+        },
+        {
+          "n": 200,
+          "d": 1
+        },
+        {
+          "n": 250,
+          "d": 1
+        }
+      ],
+      "applicability": {
+        "square": true,
+        "determinantNonzero": true,
+        "uniqueInTransformedVariables": true
+      },
+      "review": {
+        "source": "REQUIRES_SEPARATE_SOURCE_EVIDENCE",
+        "language": "PROFESSIONAL_REVIEW_PENDING",
+        "release": "NOT_APPROVED"
+      }
+    },
+    "critic": {
+      "passed": true,
+      "modelHash": "d5b2b395d84b34fab49965d4e5d206c2543e84b1c1dfa2619c037e8e2cd0c5c6",
+      "reasoningHash": "571e41ccb2025ada29ef8e5e93e7ce74bf14093d15a3d5fc09451207f6ed4f05",
+      "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints"
+    },
+    "recordSha256": "8113ca29f9032c9d44251f6bd015d4fbb6a09800257fbde5ea82cda69a08f0a8"
+  }
+]

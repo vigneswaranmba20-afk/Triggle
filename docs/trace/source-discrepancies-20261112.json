@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "items": [
+    {
+      "id": "g10-ch8-ex8.1-q5",
+      "figureRequired": false,
+      "finding": "Original English says 9 workers; Tamil says 10 workers. Both list nine identical wages. No missing wage is invented; item remains quarantined.",
+      "sources": [
+        {
+          "medium": "en",
+          "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+          "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+          "edition": "2025",
+          "pdfPage": 319,
+          "printedPage": 313,
+          "imageSha256": "a77093b2a80654c902f2c55a4eeae28002615d9b83e440c0d477ede775fef12d",
+          "visualChecked": true,
+          "uncertainties": [],
+          "quantities": {
+            "wages": {
+              "declaredCount": 9,
+              "values": [
+                310,
+                290,
+                320,
+                280,
+                300,
+                290,
+                320,
+                310,
+                280
+              ]
+            }
+          },
+          "mathModelHash": "565cc166f4e443fca2d073c6ff5f133db8ba8d8bea8eb9ba4c75004401f1ce51",
+          "methodInstruction": "standard deviation"
+        },
+        {
+          "medium": "ta",
+          "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+          "pdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+          "edition": "2025",
+          "pdfPage": 328,
+          "printedPage": 322,
+          "imageSha256": "4e8d1e54224b87225f2eb64d42fa98a7efd557252356dd63eeb1daf784eb2c05",
+          "visualChecked": true,
+          "uncertainties": [],
+          "quantities": {
+            "wages": {
+              "declaredCount": 10,
+              "values": [
+                310,
+                290,
+                320,
+                280,
+                300,
+                290,
+                320,
+                310,
+                280
+              ]
+            }
+          },
+          "mathModelHash": "565cc166f4e443fca2d073c6ff5f133db8ba8d8bea8eb9ba4c75004401f1ce51",
+          "methodInstruction": "standard deviation"
+        }
+      ]
+    },
+    {
+      "id": "g12-ch1-ex1.4-q5",
+      "figureRequired": false,
+      "finding": "Tamil explicitly asks for Cramer’s rule; English Q5 does not repeat this instruction. Preserve both originals. Numbers and answers agree; full Tamil prose review remains pending.",
+      "sources": [
+        {
+          "medium": "en",
+          "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+          "pdfSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+          "edition": "2025",
+          "pdfPage": 44,
+          "printedPage": 36,
+          "imageSha256": "2628500354ecd76f02c23558bf47730285253da44ae7fb39ef5ad0e97496e11d",
+          "visualChecked": true,
+          "uncertainties": [],
+          "quantities": {
+            "meal-data": {
+              "values": [
+                2,
+                3,
+                2,
+                150,
+                2,
+                2,
+                4,
+                200,
+                5,
+                4,
+                2,
+                250,
+                3,
+                6,
+                6,
+                350
+              ]
+            }
+          },
+          "mathModelHash": "d52bf73e07b9c52f1efd9b5575a108e7f24c65ee55e647c73db4a1aadb29f988",
+          "methodInstruction": "not repeated in this question"
+        },
+        {
+          "medium": "ta",
+          "driveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+          "pdfSha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+          "edition": "2025",
+          "pdfPage": 47,
+          "printedPage": 39,
+          "imageSha256": "e7a3f47197507a469725a19480609b34407aef244123d41e929895de8562946d",
+          "visualChecked": true,
+          "uncertainties": [],
+          "quantities": {
+            "meal-data": {
+              "values": [
+                2,
+                3,
+                2,
+                150,
+                2,
+                2,
+                4,
+                200,
+                5,
+                4,
+                2,
+                250,
+                3,
+                6,
+                6,
+                350
+              ]
+            }
+          },
+          "mathModelHash": "d52bf73e07b9c52f1efd9b5575a108e7f24c65ee55e647c73db4a1aadb29f988",
+          "methodInstruction": "Cramer’s rule"
+        }
+      ]
+    }
+  ],
+  "professionalTamilReview": "pending",
+  "releaseApproved": false
+}

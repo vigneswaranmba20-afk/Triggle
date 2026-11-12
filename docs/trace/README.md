@@ -2,6 +2,15 @@
 
 ## Current implementation (12 November 2026)
 
+The compiler/pilot sprint adds a source-grounded exact Cramer compiler, independent BigInt critic, isolated eight-part preview, source discrepancy guard, seeded pilot harness and a fixed 20-milestone progress report. See [the second sprint handoff](SPRINT-2-2026-11-12.md) and [task progress](progress/progress.md). The eight parts are **unregistered candidates**, with professional Tamil/teacher review pending. The real 60-part experiment remains **NOT_STARTED**.
+
+```bash
+npm run trace:progress
+npm run trace:pilot -- --synthetic --report /tmp/triggle-synthetic-pilot
+```
+
+Synthetic pilot timings and results exercise the evaluator only; they are not evidence of acceleration.
+
 The current tool extends the existing bulk engine. It reads all runtime data modules, pins open-PR evidence to commit SHAs, and writes a source/math/editorial/deployment ledger and gap report. The original v0 observations below are historical evidence. They are not newly checked source pages.
 
 From the repository root:
@@ -24,7 +33,7 @@ Ledger rows count **medium/part representations**, not unique completed question
 
 Stages are independent evidence states: true = established by this adapter's stated evidence, false = not established by this adapter, null = unknown/not rechecked. Source and mathematical checks are inherited from passing bulk-engine validation, bound to the exact record hash. Merged means the contributing runtime module's bytes match the pinned main commit. No deployment or live verification follows from that fact. Professional Tamil review and release readiness are never inferred from generated or bilingual text.
 
-**Access limits:** connected Drive search located all twelve PDFs, and the English Grade 10 raw-file fetch succeeded. No textbook page image was inspected during this tooling run. Original W1–W5 ZIPs were absent locally and Drive search found no `G10_W` files; ChatGPT Library access was unavailable. The 16-item comparison therefore reuses the explicitly labelled historical intake snapshot. The old `published_legacy_evidence.json` contained an access-error string rather than JSON; it is preserved as `.error.txt`, and the replacement contains reproducible base-module labels only.
+**First-sprint access checkpoint (superseded by the second sprint):** connected Drive search located all twelve PDFs, and the English Grade 10 raw-file fetch succeeded. No textbook page image was inspected in that first sprint. In the second sprint all twelve PDFs were materialized, digest-matched and their imprints/contents viewed; see `source-audit-20261112.json`. This establishes source access, not all-grade exercise counts. Original W1–W5 ZIPs were absent locally and Drive search found no `G10_W` files; ChatGPT Library access was unavailable. The 16-item comparison therefore reuses the explicitly labelled historical intake snapshot. The old `published_legacy_evidence.json` contained an access-error string rather than JSON; it is preserved as `.error.txt`, and the replacement contains reproducible base-module labels only.
 
 See [execution evidence and decisions](EXECUTION-2026-11-12.md) and [the offline broker contract](BROKER.md). The pilot remains **NOT_STARTED**: 60 eligible unworked source-verified parts and independent bilingual reviewers have not been established. No acceleration result is claimed.
 

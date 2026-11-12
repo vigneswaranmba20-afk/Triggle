@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "volume": 1,
+  "edition": "2025 revised",
+  "questionParts": 8,
+  "pages": [
+    {
+      "medium": "en",
+      "pdfPage": 2,
+      "printedPage": "II",
+      "imageSha256": "ea153e1ba6ff304e1c08184cf5e165553b39064553fe10b06a2934c576fd5e06",
+      "visualChecked": true,
+      "purpose": "imprint"
+    },
+    {
+      "medium": "en",
+      "pdfPage": 43,
+      "printedPage": 35,
+      "imageSha256": "0f6a6cecfeefa1bbdd5586034763712c806f369e2c59ba3548e807a9b2395f74",
+      "visualChecked": true,
+      "purpose": "exercise 1.4"
+    },
+    {
+      "medium": "en",
+      "pdfPage": 44,
+      "printedPage": 36,
+      "imageSha256": "2628500354ecd76f02c23558bf47730285253da44ae7fb39ef5ad0e97496e11d",
+      "visualChecked": true,
+      "purpose": "exercise 1.4"
+    },
+    {
+      "medium": "en",
+      "pdfPage": 290,
+      "printedPage": 282,
+      "imageSha256": "b4e2af9362d4aae5d36acc4ca8047f216780374716e4e235ba9a4c827a635380",
+      "visualChecked": true,
+      "purpose": "answer appendix"
+    },
+    {
+      "medium": "ta",
+      "pdfPage": 2,
+      "printedPage": "II",
+      "imageSha256": "b84050cd34b119b7f18310170da948f433ccf66b7b5896173ba09734ce25947c",
+      "visualChecked": true,
+      "purpose": "imprint"
+    },
+    {
+      "medium": "ta",
+      "pdfPage": 47,
+      "printedPage": 39,
+      "imageSha256": "e7a3f47197507a469725a19480609b34407aef244123d41e929895de8562946d",
+      "visualChecked": true,
+      "purpose": "exercise 1.4"
+    },
+    {
+      "medium": "ta",
+      "pdfPage": 318,
+      "printedPage": 310,
+      "imageSha256": "7913f41f0cdfc8f8f473f4ae350b3db75fa93af44463977b4dd90a3abc90715a",
+      "visualChecked": true,
+      "purpose": "answer appendix"
+    }
+  ],
+  "pageImagesInspected": 7,
+  "englishQuestionTranscription": "literal prose, inline fractions and whitespace normalized from the original page images",
+  "tamilQuestionCorrespondence": "Original equations, data, quantities and answer appendix compared visually; full Tamil prose transcription/editorial review pending",
+  "professionalTamilReview": "pending",
+  "releaseApproval": false,
+  "sourceSignGuard": "Q1(iv) first row contains \u22122/z; changing it to +2/z changes the problem and is rejected by source-model review hashes.",
+  "priorDraftOverlap": {
+    "pr": 38,
+    "headSha": "cb79f77df1ce6d1fba30b16acc1db269f218c892",
+    "scope": "Existing provisional eight-slot inventory and Q2\u2013Q5 mathematical drafts. New raw-page checks and compiler fixtures are not counted as unworked pilot items.",
+    "pilotEligible": false
+  }
+}

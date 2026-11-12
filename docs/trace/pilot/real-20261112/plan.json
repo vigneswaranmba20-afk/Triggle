@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "TRACE_60_PART_PILOT",
+  "seed": 20261112,
+  "mode": "REAL",
+  "eligibleCount": 0,
+  "poolHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "metric": {
+    "name": "active-human-plus-compute-minutes",
+    "computeWeight": 1,
+    "formula": "activeAuthoringMinutes + computeWeight * computeWallSeconds / 60",
+    "failureAccounting": "Distribute every nonaccepted case effort equally over accepted parts in the same arm; also report total effort/accepted count."
+  },
+  "reviewers": [],
+  "status": "BLOCKED",
+  "realPilotStatus": "NOT_STARTED",
+  "assignments": [],
+  "blockers": [
+    "FEWER_THAN_60_ACCESSIBLE_SOURCE_CHECKED_UNWORKED_UNCERTAIN_FREE_PARTS",
+    "INDEPENDENT_MATH_AND_BILINGUAL_REVIEWERS_UNAVAILABLE"
+  ]
+}

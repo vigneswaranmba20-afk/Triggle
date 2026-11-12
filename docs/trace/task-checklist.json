@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 1,
+  "measure": "equal-weight-required-milestones-not-curriculum-or-effort",
+  "requiredMilestones": 20,
+  "baselineCompletedIds": [
+    "inspect-state",
+    "preserve-engine",
+    "ledger-contract",
+    "runtime-pr-dedup",
+    "offline-broker",
+    "provider-protections",
+    "gap-reports",
+    "manual-checkpoints"
+  ],
+  "scope": "Twenty acceptance milestones derived from the attached TRACE master prompt. Equal weights count deliverables, not workload. Optional/conditional actions are recorded separately. No percentage of textbook completion is inferred.",
+  "milestones": [
+    {
+      "id": "inspect-state",
+      "category": "foundation",
+      "status": "complete",
+      "acceptance": "Inspect current main, AGENTS, master prompts, PR147, open content PRs, workflows and schemas.",
+      "evidence": [
+        {
+          "file": "docs/trace/EXECUTION-2026-11-12.md"
+        },
+        {
+          "file": "docs/trace/open-pr-snapshot-20261112.json"
+        }
+      ]
+    },
+    {
+      "id": "preserve-engine",
+      "category": "foundation",
+      "status": "complete",
+      "acceptance": "Extend existing bulk engine and preserve runtime records, IDs, progress, offline behavior and paused schedules.",
+      "evidence": [
+        {
+          "file": "site/tools/bulk/test_trace_reconcile.cjs"
+        },
+        {
+          "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/148"
+        }
+      ]
+    },
+    {
+      "id": "ledger-contract",
+      "category": "foundation",
+      "status": "complete",
+      "acceptance": "Machine-readable canonical identities, hashes, independent stage states and validated ledger/report contract.",
+      "evidence": [
+        {
+          "file": "docs/trace/ledger.schema.json"
+        },
+        {
+          "file": "site/tools/bulk/trace_reconcile.cjs"
+        }
+      ]
+    },
+    {
+      "id": "textbook-access",
+      "category": "sources-and-language",
+      "status": "complete",
+      "acceptance": "Materialize all twelve connected original PDFs, match hashes and visually verify imprints/contents before treating source access as established.",
+      "evidence": [
+        {
+          "file": "docs/trace/source-audit-20261112.json"
+        }
+      ]
+    },
+    {
+      "id": "all-grade-denominators",
+      "category": "sources-and-language",
+      "status": "not-started",
+      "acceptance": "Source-page-verified exercise/question/subpart denominators across all 41 English/Tamil chapter pairs.",
+      "blocker": "A full page-image inventory is not established. Repository links and text extraction cannot supply verified totals."
+    },
+    {
+      "id": "original-zip-reconciliation",
+      "category": "sources-and-language",
+      "status": "blocked",
+      "acceptance": "Reopen and reconcile the latest five original W1\u2013W5 ZIPs, not only historical summaries.",
+      "blocker": "Original ZIPs are not in the checkout or connected Drive search; no ChatGPT Library file-access tool is available."
+    },
+    {
+      "id": "runtime-pr-dedup",
+      "category": "foundation",
+      "status": "complete",
+      "acceptance": "Index dynamic runtime modules and pinned open-PR candidates; flag overlaps without silently merging distinct questions.",
+      "evidence": [
+        {
+          "file": "docs/trace/reports/2026-11-12/ledger.json"
+        },
+        {
+          "file": "site/tools/bulk/test_trace_reconcile.cjs"
+        }
+      ]
+    },
+    {
+      "id": "cross-medium-qa",
+      "category": "sources-and-language",
+      "status": "complete",
+      "acceptance": "Operational source discrepancy/uncertainty checks covering editions, numerals/symbols, bilingual differences and figure-dependent items.",
+      "evidence": [
+        {
+          "file": "docs/trace/source-discrepancies-20261112.json"
+        },
+        {
+          "file": "site/tools/bulk/test_trace_source_guard.cjs"
+        }
+      ]
+    },
+    {
+      "id": "deterministic-compiler",
+      "category": "mathematics",
+      "status": "complete",
+      "acceptance": "One reusable source-grounded deterministic family with separate reasoning representation and complete exam presentation.",
+      "evidence": [
+        {
+          "file": "site/tools/bulk/trace_cramer.cjs"
+        },
+        {
+          "file": "docs/trace/candidates/g12-ex1-4-models.json"
+        }
+      ]
+    },
+    {
+      "id": "independent-math-critic",
+      "category": "mathematics",
+      "status": "complete",
+      "acceptance": "Independent exact arithmetic, substitutions, domain/degeneracy checks and seeded counterexample/mutation tests for that family.",
+      "evidence": [
+        {
+          "file": "site/tools/bulk/trace_cramer_verify.cjs"
+        },
+        {
+          "file": "site/tools/bulk/test_trace_cramer.cjs"
+        }
+      ]
+    },
+    {
+      "id": "professional-tamil-review",
+      "category": "sources-and-language",
+      "status": "blocked",
+      "acceptance": "Qualified independent Tamil editorial review of complete bilingual content; never infer it from source access or generated text.",
+      "blocker": "No qualified reviewer or completed professional review has been provided. Source correspondence is not full Tamil editorial approval."
+    },
+    {
+      "id": "offline-broker",
+      "category": "provider-interface",
+      "status": "complete",
+      "acceptance": "Capability-based offline/dry-run routing interface with a clearly labelled mock and documented connection contract.",
+      "evidence": [
+        {
+          "file": "site/tools/bulk/trace_broker.cjs"
+        },
+        {
+          "file": "docs/trace/BROKER.md"
+        }
+      ]
+    },
+    {
+      "id": "provider-protections",
+      "category": "provider-interface",
+      "status": "complete",
+      "acceptance": "Tested missing-key/schema/timeout/429/5xx/replay/outage/cost/masking/interruption, bounded queues and spending ceilings.",
+      "evidence": [
+        {
+          "file": "site/tools/bulk/test_trace_broker.cjs"
+        },
+        {
+          "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/43143976297"
+        }
+      ]
+    },
+    {
+      "id": "pilot-harness",
+      "category": "experiment",
+      "status": "complete",
+      "acceptance": "Seeded 60-part stratified 30/30 allocator and failure-inclusive evaluator with conservative quality/adoption gates, using labelled fixtures when blocked.",
+      "evidence": [
+        {
+          "file": "site/tools/bulk/trace_pilot.cjs"
+        },
+        {
+          "file": "site/tools/bulk/test_trace_pilot.cjs"
+        },
+        {
+          "file": "docs/trace/pilot/synthetic-20261112/plan.json"
+        }
+      ]
+    },
+    {
+      "id": "pilot-real",
+      "category": "experiment",
+      "status": "blocked",
+      "acceptance": "Run the real 60 eligible unworked source-verified parts with independent math/bilingual/teacher review and real effort/cost measurements.",
+      "blocker": "Sixty eligible unique unworked bilingual-source-checked parts plus reviewers have not been established. No real trial has started."
+    },
+    {
+      "id": "gap-reports",
+      "category": "reporting",
+      "status": "complete",
+      "acceptance": "Reproducible JSON/CSV gap reports and human delta with unknown denominators and unresolved mismatches.",
+      "evidence": [
+        {
+          "file": "docs/trace/reports/2026-11-12/gaps.csv"
+        },
+        {
+          "file": "docs/trace/reports/2026-11-12/delta.md"
+        }
+      ]
+    },
+    {
+      "id": "manual-checkpoints",
+      "category": "reporting",
+      "status": "complete",
+      "acceptance": "Manual bounded commands and auditable resumption checkpoints; do not duplicate or resume automations.",
+      "evidence": [
+        {
+          "file": "docs/trace/README.md"
+        },
+        {
+          "file": "docs/trace/session-checkpoint.json"
+        }
+      ]
+    },
+    {
+      "id": "mandatory-gates",
+      "category": "release",
+      "status": "partial",
+      "acceptance": "Pass all applicable local and exact-head CI gates for the current implementation, with truthful source/teacher statuses.",
+      "blocker": "PR148 passed all local and remote gates. The new compiler/pilot branch still needs its final full-suite and CI run."
+    },
+    {
+      "id": "guarded-integration",
+      "category": "release",
+      "status": "complete",
+      "acceptance": "Integrate at least one complete eligible TRACE tooling slice after all gates, using exact-head merge protection and the existing lease.",
+      "evidence": [
+        {
+          "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/148"
+        },
+        {
+          "url": "https://github.com/vigneswaranmba20-afk/Triggle/commit/9928e35b46b2b512a672438a47e1a2fdc62ba1cf"
+        }
+      ]
+    },
+    {
+      "id": "pages-live-verification",
+      "category": "release",
+      "status": "complete",
+      "acceptance": "Verify that tooling release's published commit/bytes plus live mobile, language, figure, navigation and offline behavior.",
+      "evidence": [
+        {
+          "url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/43145052787"
+        },
+        {
+          "file": "docs/trace/releases/pr148-live.json"
+        }
+      ]
+    }
+  ],
+  "conditional": [
+    {
+      "id": "live-provider-adapters",
+      "status": "not-applicable-without-connection-and-spending-authority",
+      "reason": "No approved provider credentials, current endpoint contract or funded hard limits are configured. Mock-only operation is the required fallback."
+    },
+    {
+      "id": "optional-concept-ux",
+      "status": "not-selected",
+      "reason": "No demonstrated high-value interaction defect was selected; the existing concept UI is preserved."
+    },
+    {
+      "id": "library-mirror",
+      "status": "unavailable",
+      "reason": "No supported ChatGPT Library file API is present; no original WIP ZIP is touched."
+    }
+  ]
+}
