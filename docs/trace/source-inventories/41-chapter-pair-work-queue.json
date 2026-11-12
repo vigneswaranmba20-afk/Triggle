@@ -295,7 +295,10 @@
       "chapterQuestionCount": null,
       "chapterSubpartCount": null,
       "completeSourcePageInventory": false,
-      "priority": "high"
+      "priority": "high",
+      "englishExerciseHeadingCount": 6,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
     },
     {
       "grade": 10,
@@ -322,7 +325,10 @@
       "chapterQuestionCount": null,
       "chapterSubpartCount": null,
       "completeSourcePageInventory": false,
-      "priority": "high"
+      "priority": "high",
+      "englishExerciseHeadingCount": 10,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
     },
     {
       "grade": 10,
@@ -349,7 +355,10 @@
       "chapterQuestionCount": null,
       "chapterSubpartCount": null,
       "completeSourcePageInventory": false,
-      "priority": "high"
+      "priority": "high",
+      "englishExerciseHeadingCount": 20,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
     },
     {
       "grade": 10,
@@ -376,7 +385,10 @@
       "chapterQuestionCount": null,
       "chapterSubpartCount": null,
       "completeSourcePageInventory": false,
-      "priority": "high"
+      "priority": "high",
+      "englishExerciseHeadingCount": 5,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
     },
     {
       "grade": 10,
@@ -403,7 +415,10 @@
       "chapterQuestionCount": null,
       "chapterSubpartCount": null,
       "completeSourcePageInventory": false,
-      "priority": "high"
+      "priority": "high",
+      "englishExerciseHeadingCount": 5,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
     },
     {
       "grade": 10,
@@ -430,7 +445,10 @@
       "chapterQuestionCount": null,
       "chapterSubpartCount": null,
       "completeSourcePageInventory": false,
-      "priority": "high"
+      "priority": "high",
+      "englishExerciseHeadingCount": 5,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
     },
     {
       "grade": 10,
@@ -457,7 +475,10 @@
       "chapterQuestionCount": null,
       "chapterSubpartCount": null,
       "completeSourcePageInventory": false,
-      "priority": "high"
+      "priority": "high",
+      "englishExerciseHeadingCount": 5,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
     },
     {
       "grade": 10,
@@ -484,7 +505,10 @@
       "chapterQuestionCount": null,
       "chapterSubpartCount": null,
       "completeSourcePageInventory": false,
-      "priority": "high"
+      "priority": "high",
+      "englishExerciseHeadingCount": 5,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED"
     },
     {
       "grade": 11,
@@ -1134,5 +1158,22 @@
       "completeSourcePageInventory": false,
       "priority": "high"
     }
-  ]
+  ],
+  "boundedNewGrade10EnglishExerciseIndex": {
+    "source": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+    "sourceSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+    "exerciseHeadings": 61,
+    "chapterCounts": {
+      "1": 6,
+      "2": 10,
+      "3": 20,
+      "4": 5,
+      "5": 5,
+      "6": 5,
+      "7": 5,
+      "8": 5
+    },
+    "status": "ENGLISH_ONLY_TEXT_LAYER_LOCATOR_INDEX_AWAITING_FULL_IMAGE_AND_TAMIL_PARITY",
+    "questionPartDenominatorEstablished": false
+  }
 }
