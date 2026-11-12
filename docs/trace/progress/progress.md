@@ -1,8 +1,10 @@
 # TRACE task-checklist progress
 
-**80% (16/20)** of the fixed milestone checklist; baseline 40% (8/20).
+**88.89% (16/18)** of the 18 active milestone checklist; re-based baseline 44.44% (8/18). Historical baseline 40% (8/20).
 
-Counts completed acceptance milestones equally. It does not estimate effort, all-grade question coverage, exam readiness or Tamil certification. Partial milestones receive no completion credit.
+**Deferred, not completed:** W1–W5 ZIP reconciliation and professional Tamil/teacher review.
+
+Counts 18 owner-scoped active milestones equally. Original ZIP reconciliation and professional Tamil/teacher review are deferred, not completed. No curriculum coverage, effort, exam-readiness or certification is inferred.
 
 Whole Grades 9–12 curriculum coverage: **unknown**. Real pilot completion: **0%**.
 
@@ -13,12 +15,12 @@ Whole Grades 9–12 curriculum coverage: **unknown**. Real pilot completion: **0
 | ledger-contract | complete | Machine-readable canonical identities, hashes, independent stage states and validated ledger/report contract. |
 | textbook-access | complete | Materialize all twelve connected original PDFs, match hashes and visually verify imprints/contents before treating source access as established. |
 | all-grade-denominators | partial | Source-page-verified exercise/question/subpart denominators across all 41 English/Tamil chapter pairs. |
-| original-zip-reconciliation | blocked | Reopen and reconcile the latest five original W1–W5 ZIPs, not only historical summaries. |
+| original-zip-reconciliation | deferred | Reopen and reconcile the latest five original W1–W5 ZIPs, not only historical summaries. |
 | runtime-pr-dedup | complete | Index dynamic runtime modules and pinned open-PR candidates; flag overlaps without silently merging distinct questions. |
 | cross-medium-qa | complete | Operational source discrepancy/uncertainty checks covering editions, numerals/symbols, bilingual differences and figure-dependent items. |
 | deterministic-compiler | complete | One reusable source-grounded deterministic family with separate reasoning representation and complete exam presentation. |
 | independent-math-critic | complete | Independent exact arithmetic, substitutions, domain/degeneracy checks and seeded counterexample/mutation tests for that family. |
-| professional-tamil-review | blocked | Qualified independent Tamil editorial review of complete bilingual content; never infer it from source access or generated text. |
+| professional-tamil-review | deferred | Qualified independent Tamil editorial review of complete bilingual content; never infer it from source access or generated text. |
 | offline-broker | complete | Capability-based offline/dry-run routing interface with a clearly labelled mock and documented connection contract. |
 | provider-protections | complete | Tested missing-key/schema/timeout/429/5xx/replay/outage/cost/masking/interruption, bounded queues and spending ceilings. |
 | pilot-harness | complete | Seeded 60-part stratified 30/30 allocator and failure-inclusive evaluator with conservative quality/adoption gates, using labelled fixtures when blocked. |
