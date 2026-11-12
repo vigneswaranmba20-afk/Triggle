@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "branch": "feature/trace-compiler-pilot-20261112",
+  "baseCommit": "9928e35b46b2b512a672438a47e1a2fdc62ba1cf",
+  "priorReleasePR": 148,
+  "runtimeRecords": 568,
+  "runtimeExerciseRecords": 478,
+  "runtimeModules": 46,
+  "newUnregisteredCandidateParts": 8,
+  "newStudentPublishedParts": 0,
+  "allGradeQuestionDenominator": null,
+  "realPilot": "NOT_STARTED",
+  "externalProviderCalls": 0,
+  "externalProviderCostUsd": 0,
+  "sourceReview": "All 12 original PDF hashes/page counts matched; 36 imprint/contents page images inspected. G12 Ex1.4 EN/TA exercises and answer appendices compared. G10 Ex8.1 Q5 discrepancy confirmed from both original page images.",
+  "nextTask": "Build page-image-verified all-grade exercise/question/subpart inventories, prioritising Grades 10 and 12; deduplicate against pinned runtime and open-PR evidence before recruiting 60 real pilot parts.",
+  "blockers": [
+    "Original W1\u2013W5 ZIP files unavailable through current connected sources",
+    "Full all-grade question/subpart denominators not established",
+    "Qualified professional Tamil/teacher editorial review pending",
+    "Sixty eligible unworked real pilot parts and independent reviewers unavailable"
+  ],
+  "automationChanges": false,
+  "candidateReleaseApproval": false,
+  "manualResume": [
+    "npm run test:trace",
+    "npm run trace:progress",
+    "npm run trace:pilot -- --synthetic --report /tmp/triggle-synthetic-pilot",
+    "npm run trace:reconcile -- --report /tmp/triggle-reconciliation"
+  ],
+  "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/149",
+  "implementationCommit": "58b0860c0778910b831cc1ae01bb2e0bf254dc10",
+  "milestonePercent": 80,
+  "originalArchiveRecovery": "Last-run reports claim ChatGPT Library /VER-Triggle/Grade10-Staging. Original bytes remain inaccessible. Private original-chat recovery links are stored outside this public repository.",
+  "localGates": "All npm test/browser/security/WebKit and 238/238 Grade9 usability checks passed",
+  "implementationCIGates": "All three exact-head workflows passed at 58b0860; follow-up documentation-head gates must pass before merge.",
+  "boundedSourceInventory": {
+    "grade10Exercise8_1": {
+      "questions": 15,
+      "parts": 16,
+      "fullChapter": false,
+      "reconciled": false
+    }
+  }
+}

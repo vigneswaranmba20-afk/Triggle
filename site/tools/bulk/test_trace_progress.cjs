@@ -1,0 +1,16 @@
+'use strict';
+const assert=require('node:assert/strict'),{summarize}=require('./trace_progress.cjs');
+const manifest=require('../../../docs/trace/task-checklist.json');
+const report=summarize(manifest);
+assert.equal(report.totalMilestones,20);assert.equal(report.baselinePercentComplete,40);
+assert.equal(report.curriculumPercent,null);assert.equal(report.pilotRealPercent,0);
+assert.equal(report.percentComplete,5*manifest.milestones.filter(m=>m.status==='complete').length);
+for(const mutate of [
+ m=>m.requiredMilestones=19,m=>m.milestones.pop(),m=>m.milestones[1].id=m.milestones[0].id,
+ m=>m.baselineCompletedIds.push(m.baselineCompletedIds[0]),m=>m.baselineCompletedIds[0]='invented',
+ m=>m.milestones[0].evidence=[],m=>m.milestones[0].evidence=[{file:'../outside'}],
+ m=>m.milestones[0].evidence=[{file:'AGENTS.md',sha256:'0'.repeat(64)}],
+ m=>m.milestones[0].evidence=[{url:'https://github.com/unrelated/project/pull/1'}]
+]){const changed=structuredClone(manifest);mutate(changed);assert.throws(()=>summarize(changed));}
+const partial=structuredClone(manifest);const blocked=partial.milestones.find(m=>m.status==='blocked');blocked.status='partial';assert.equal(summarize(partial).percentComplete,report.percentComplete);
+console.log('PASS fixed-denominator progress: no partial credit, evidence/baseline/duplicate guards, curriculum unknown and real pilot zero');

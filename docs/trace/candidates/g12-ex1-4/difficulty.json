@@ -1,0 +1,50 @@
+{
+  "g12-ch1-ex1.4-q1-i": {
+    "grade": 12,
+    "level": "medium",
+    "basis": "A coefficient model, several determinant evaluations and independent substitution.",
+    "review": "source-and-math-implementation-audit; teacher editorial pending"
+  },
+  "g12-ch1-ex1.4-q1-ii": {
+    "grade": 12,
+    "level": "medium",
+    "basis": "A coefficient model, several determinant evaluations and independent substitution.",
+    "review": "source-and-math-implementation-audit; teacher editorial pending"
+  },
+  "g12-ch1-ex1.4-q1-iii": {
+    "grade": 12,
+    "level": "medium",
+    "basis": "A coefficient model, several determinant evaluations and independent substitution.",
+    "review": "source-and-math-implementation-audit; teacher editorial pending"
+  },
+  "g12-ch1-ex1.4-q1-iv": {
+    "grade": 12,
+    "level": "difficult",
+    "basis": "Reciprocal variables or reversed-rate modelling with multiple nonzero-domain checks.",
+    "review": "source-and-math-implementation-audit; teacher editorial pending"
+  },
+  "g12-ch1-ex1.4-q2": {
+    "grade": 12,
+    "level": "medium",
+    "basis": "A coefficient model, several determinant evaluations and independent substitution.",
+    "review": "source-and-math-implementation-audit; teacher editorial pending"
+  },
+  "g12-ch1-ex1.4-q3": {
+    "grade": 12,
+    "level": "medium",
+    "basis": "A coefficient model, several determinant evaluations and independent substitution.",
+    "review": "source-and-math-implementation-audit; teacher editorial pending"
+  },
+  "g12-ch1-ex1.4-q4": {
+    "grade": 12,
+    "level": "difficult",
+    "basis": "Reciprocal variables or reversed-rate modelling with multiple nonzero-domain checks.",
+    "review": "source-and-math-implementation-audit; teacher editorial pending"
+  },
+  "g12-ch1-ex1.4-q5": {
+    "grade": 12,
+    "level": "medium",
+    "basis": "A coefficient model, several determinant evaluations and independent substitution.",
+    "review": "source-and-math-implementation-audit; teacher editorial pending"
+  }
+}

@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "books": [
+    {
+      "key": "g12-ta-v2",
+      "grade": 12,
+      "medium": "ta",
+      "volume": 2,
+      "driveId": "1XdaQTr6BsERWUJNQr-yUsxr7bKnfMxtw",
+      "sourceSha256": "3b5769235e90e3176719d15110a9eabbccbcbd3ec23d66cd12068a4115f4ebea",
+      "pdfPages": 288,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "a16bd54006c8e3cbd9cc86e981c74332450c0c15234107e28dbdd281b7f0b0f8",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 3,
+          "purpose": "contents",
+          "imageSha256": "f7dc981b3d175913cc0c75602d802c6fe27470b4ed562300e05be3e421d02a74",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 4,
+          "purpose": "contents",
+          "imageSha256": "77a3964cf8ccf3756756ce8e9a307e4923d71dd65dfa320171e41de0b03f1179",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g10-ta-v0",
+      "grade": 10,
+      "medium": "ta",
+      "volume": null,
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "sourceSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "pdfPages": 368,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        5,
+        6
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "ff42146f166e20cbe35fcbf945521ee2afc304cfcd1eaa4b329578e889d1f3e9",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 5,
+          "purpose": "contents",
+          "imageSha256": "2db812a96fccb76825e4bb4f1c3931517ed071d3539a24084c288f3b895a9a9d",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 6,
+          "purpose": "contents",
+          "imageSha256": "5547207e034619d17a6050f0d759ac9718184eb8ec4100326510f3aea9d12a12",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g9-ta-v0",
+      "grade": 9,
+      "medium": "ta",
+      "volume": null,
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "sourceSha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "pdfPages": 344,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "f2ad407b1740af818f7565171cc13a0045aed3db68be7e2ffc637227f6d49e62",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 3,
+          "purpose": "contents",
+          "imageSha256": "845935a525acdb981ddec7fc0a63a148dba2a0dd012ad540f816bab80982eba6",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 4,
+          "purpose": "contents",
+          "imageSha256": "78770bddf674e80a061ba94852a848c70750877dd2f84b0b5ccd1b8d2ffffe1e",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g12-ta-v1",
+      "grade": 12,
+      "medium": "ta",
+      "volume": 1,
+      "driveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+      "sourceSha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+      "pdfPages": 336,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        4,
+        5
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "23fef0b9a7faf5abe0244c17598d18df2733923a4edfb0fdccd364d73993cc9d",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 4,
+          "purpose": "contents",
+          "imageSha256": "2bb4456a2fd7bbebbc6176b9d3c2b9b3f8170226eb682188c4e3aa05230a43aa",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 5,
+          "purpose": "contents",
+          "imageSha256": "d23c81637cf6bfec005480a428acf7ae6c691b62be1e29ba76932ad2dc687b2e",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g11-ta-v1",
+      "grade": 11,
+      "medium": "ta",
+      "volume": 1,
+      "driveId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
+      "sourceSha256": "0a7b7987216b911f16e7232eec609d56aff67cb540484d93a879cd834ad22e24",
+      "pdfPages": 368,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        4,
+        5
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "060063c1d6e3d160f574af45815791847d1856b1d5cb3a3d7ac5b5f16b7f3eff",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 4,
+          "purpose": "contents",
+          "imageSha256": "216b8b952d6e0440e801af369feecc19c03956c5d2c242d091794aaed4cbdaab",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 5,
+          "purpose": "contents",
+          "imageSha256": "6d5a69155457c36b6d25d1e7a46d56ab8d8378bf464b250ed7af443c3ecf609a",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g12-en-v2",
+      "grade": 12,
+      "medium": "en",
+      "volume": 2,
+      "driveId": "1EpNZmRikhWY6zsYRMnAtC4N_K6S3iB34",
+      "sourceSha256": "379e496ea7d093fe5cf8a9a3801128a5645344b1c431d6ed9665886751c48c75",
+      "pdfPages": 272,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "b301888b8f4c0821738946b8a7d714504e66d076e045b9e80458caa87b5540f4",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 3,
+          "purpose": "contents",
+          "imageSha256": "5f9247c48c3d3719091b61c61b1764d5920c1aa2c43da6b2b8e6819558c3cc0d",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 4,
+          "purpose": "contents",
+          "imageSha256": "b878fdecb0a7fa755913a4e721b18621bae0c051823bba657f680cd8bacd161f",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g10-en-v0",
+      "grade": 10,
+      "medium": "en",
+      "volume": null,
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "sourceSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "pdfPages": 352,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        5,
+        6
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "0794ce2a110ce763a56466e9503ac0ac29f24e073840e9b153a8ccea259d669e",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 5,
+          "purpose": "contents",
+          "imageSha256": "04e0ae4289e60a6f2cbcb6355b728678d45eadada2dbdccdafeedaadd6f9494d",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 6,
+          "purpose": "contents",
+          "imageSha256": "a4de005e26ce904ce969be7015ff5480dc6bcde1e50ec3a8cd4b5d1a4f861cf3",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g11-en-v2",
+      "grade": 11,
+      "medium": "en",
+      "volume": 2,
+      "driveId": "1untv9Niccely-Gbu81onCZVS2TyCp45D",
+      "sourceSha256": "565edc0c56e711ce86d7da8fe922c473dafa6725a0bc171c88aec5ae2e22a5dc",
+      "pdfPages": 288,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "cfeed0de9c446cfbb69baeed180a820d38629a02ce3b3a677c1291bb821be2f1",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 3,
+          "purpose": "contents",
+          "imageSha256": "9332ef4560e5a24621c5df2928c6276f450f561aa9d7726182e3b615d81feace",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 4,
+          "purpose": "contents",
+          "imageSha256": "37010e9e5ffb41d11d234297c828030b09acf3cb50da33555b35ca0d6efb5cf7",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g12-en-v1",
+      "grade": 12,
+      "medium": "en",
+      "volume": 1,
+      "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+      "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+      "pdfPages": 304,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        4,
+        5
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "463512e814db8858f315c676ee4e8c3dc5d00fbe01c28a822e782e2b5c5f4496",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 4,
+          "purpose": "contents",
+          "imageSha256": "f016b31ad99fc5770499329229ca1d9a2798181dfd5c646ff815d92d3a9be63d",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 5,
+          "purpose": "contents",
+          "imageSha256": "136024d04a0b2ef012ff8a5aff6f3406fe0064212d75081dd592ac504cf425d1",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g9-en-v0",
+      "grade": 9,
+      "medium": "en",
+      "volume": null,
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "sourceSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "pdfPages": 328,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "8eb72ab3741021a0b38c5c43e59964bbf1978a5b47eb6103da20125f20121d94",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 3,
+          "purpose": "contents",
+          "imageSha256": "de2bd2b3f8e6134feeb8578561bdead0373762135a5add08f93d99731b6e0659",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 4,
+          "purpose": "contents",
+          "imageSha256": "5280d4c974359c062a650424a842f821e70d132e32dbe1f54f6e822840fe4f00",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g11-en-v1",
+      "grade": 11,
+      "medium": "en",
+      "volume": 1,
+      "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+      "sourceSha256": "970f0930d74074c8c45247a4587797bb3d11ca6dcd9e4a9c834b691910f940f0",
+      "pdfPages": 320,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        4,
+        5
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "665bc90b88f66fc82b17bb29812f5ccac93135fd1bfd6ff53a7a53fea4a80094",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 4,
+          "purpose": "contents",
+          "imageSha256": "8ba9342a4b5dfcc57fec4e1532a1787ef4316193e4c338e3f5c0c8052afd411a",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 5,
+          "purpose": "contents",
+          "imageSha256": "c7c6e3a78fbcf7fe249428111c8fd21f2688781c8506b09782e0b3084562c9c1",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "key": "g11-ta-v2",
+      "grade": 11,
+      "medium": "ta",
+      "volume": 2,
+      "driveId": "1o4KgsRPqhKSsJ4vgJeeY_lyTgNeHDMIU",
+      "sourceSha256": "4965766db057e0ca7edc95c306c88abbb7a2dee94ad4a98e8958d91582c94c49",
+      "pdfPages": 304,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "localSourceAccess": "MATERIALIZED_DIGEST_MATCHED",
+      "visualReview": "IMPRINT_AND_CONTENTS_IMAGES_CHECKED",
+      "revisionSeen": "2025",
+      "visualEvidence": [
+        {
+          "pdfPage": 2,
+          "purpose": "imprint",
+          "imageSha256": "665f3276a3af5b9aa63119f70dc4e48a13fedc95a1a32a43e12333083f5890f4",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 3,
+          "purpose": "contents",
+          "imageSha256": "064b844b059a2d879dc588067f17412468af235c887e7923824f32fc1f5d32be",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 4,
+          "purpose": "contents",
+          "imageSha256": "0761dcc6d70d25eaec738eaa4d5fcbd52e79e56ea375b99da248bdc00b74b6b9",
+          "visualChecked": true
+        }
+      ]
+    }
+  ],
+  "booksMaterializedAndDigestMatched": 12,
+  "booksImprintAndContentsVisuallyChecked": 12,
+  "chapterPairsRepresented": 41,
+  "exerciseQuestionDenominators": "unknown",
+  "limitations": [
+    "Imprints and contents establish access and chapter scope; they do not establish all exercise/question/subpart denominators.",
+    "No 2026\u201327 prescribed-edition equivalence or professional Tamil lesson review is inferred.",
+    "Original PDFs and page images remain outside the repository."
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "status": "SOURCE_IMAGE_CHECKED_MODELS_NOT_RELEASE_APPROVED",
+  "grade": 12,
+  "chapter": "1",
+  "exercise": "1.4",
+  "edition": "2025 revised",
+  "source": {
+    "englishDriveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "englishSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+    "tamilDriveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+    "tamilSha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+    "volume": 1,
+    "englishPrintedPages": [35,36],
+    "englishPdfPages": [43,44],
+    "tamilPrintedPages": [39],
+    "tamilPdfPages": [47],
+    "imprintPdfPage": 2,
+    "pageImagesVisuallyInspected": true,
+    "professionalTamilReview": "pending",
+    "figuresRequired": false,
+    "mediumDifference": "Tamil Q5 explicitly requests Cramer's rule; English Q5 does not repeat that instruction. Both give identical meal data and budget. Preserve each medium's wording."
+  },
+  "models": [
+    {
+      "id": "g12-ch1-ex1.4-q1-i",
+      "question": "1", "parts": ["i"], "printedPage": 35, "pdfPage": 43,
+      "q": "Solve the following systems of linear equations by Cramer’s rule: (i) 5x − 2y + 16 = 0, x + 3y − 7 = 0",
+      "equationLatex": "5x-2y+16=0,\\quad x+3y-7=0",
+      "difficulty": "medium",
+      "model": {"schemaVersion":1,"method":"cramer","variables":[{"name":"x","transform":"identity"},{"name":"y","transform":"identity"}],"A":[[5,-2],[1,3]],"B":[[-16],[7]]},
+      "modelling": [{"en":"Move the constants to the right-hand sides, preserving their signs.","eq":"5x − 2y = −16; x + 3y = 7","latex":"5x-2y=-16,\\quad x+3y=7"}],
+      "expectedValues": [-2,3],
+      "answer": "x = −2, y = 3."
+    },
+    {
+      "id": "g12-ch1-ex1.4-q1-ii",
+      "question": "1", "parts": ["ii"], "printedPage": 35, "pdfPage": 43,
+      "q": "Solve the following systems of linear equations by Cramer’s rule: (ii) 3/x + 2y = 12, 2/x + 3y = 13",
+      "equationLatex": "\\frac3x+2y=12,\\quad \\frac2x+3y=13",
+      "difficulty": "medium",
+      "model": {"schemaVersion":1,"method":"cramer","variables":[{"name":"x","transform":"reciprocal"},{"name":"y","transform":"identity"}],"A":[[3,2],[2,3]],"B":[[12],[13]]},
+      "modelling": [{"en":"After the reciprocal substitution, the two equations are linear in u_x and y.","eq":"3u_x + 2y = 12; 2u_x + 3y = 13","latex":"3u_x+2y=12,\\quad2u_x+3y=13"}],
+      "expectedValues": [{"n":1,"d":2},3],
+      "answer": "x = 1/2, y = 3."
+    },
+    {
+      "id": "g12-ch1-ex1.4-q1-iii",
+      "question": "1", "parts": ["iii"], "printedPage": 35, "pdfPage": 43,
+      "q": "Solve the following systems of linear equations by Cramer’s rule: (iii) 3x + 3y − z = 11, 2x − y + 2z = 9, 4x + 3y + 2z = 25",
+      "equationLatex": "3x+3y-z=11,\\quad2x-y+2z=9,\\quad4x+3y+2z=25",
+      "difficulty": "medium",
+      "model": {"schemaVersion":1,"method":"cramer","variables":[{"name":"x","transform":"identity"},{"name":"y","transform":"identity"},{"name":"z","transform":"identity"}],"A":[[3,3,-1],[2,-1,2],[4,3,2]],"B":[[11],[9],[25]]},
+      "modelling": [],
+      "expectedValues": [2,3,4],
+      "answer": "x = 2, y = 3, z = 4."
+    },
+    {
+      "id": "g12-ch1-ex1.4-q1-iv",
+      "question": "1", "parts": ["iv"], "printedPage": 35, "pdfPage": 43,
+      "q": "Solve the following systems of linear equations by Cramer’s rule: (iv) 3/x − 4/y − 2/z − 1 = 0, 1/x + 2/y + 1/z − 2 = 0, 2/x − 5/y − 4/z + 1 = 0",
+      "equationLatex": "\\frac3x-\\frac4y-\\frac2z-1=0,\\quad\\frac1x+\\frac2y+\\frac1z-2=0,\\quad\\frac2x-\\frac5y-\\frac4z+1=0",
+      "difficulty": "difficult",
+      "model": {"schemaVersion":1,"method":"cramer","variables":[{"name":"x","transform":"reciprocal"},{"name":"y","transform":"reciprocal"},{"name":"z","transform":"reciprocal"}],"A":[[3,-4,-2],[1,2,1],[2,-5,-4]],"B":[[1],[2],[-1]]},
+      "modelling": [{"en":"Move the constant terms to the right and use the three reciprocal variables. In the first equation the coefficient of 1/z is negative.","eq":"3u_x − 4u_y − 2u_z = 1; u_x + 2u_y + u_z = 2; 2u_x − 5u_y − 4u_z = −1","latex":"3u_x-4u_y-2u_z=1,\\quad u_x+2u_y+u_z=2,\\quad2u_x-5u_y-4u_z=-1"}],
+      "expectedValues": [1,3,3],
+      "answer": "x = 1, y = 3, z = 3."
+    },
+    {
+      "id": "g12-ch1-ex1.4-q2",
+      "question": "2", "parts": ["whole"], "printedPage": 35, "pdfPage": 43,
+      "q": "In a competitive examination, one mark is awarded for every correct answer while 1/4 mark is deducted for every wrong answer. A student answered 100 questions and got 80 marks. How many questions did he answer correctly ? (Use Cramer’s rule to solve the problem).",
+      "difficulty": "medium",
+      "model": {"schemaVersion":1,"method":"cramer","variables":[{"name":"c","transform":"identity","constraint":"nonnegative-integer"},{"name":"w","transform":"identity","constraint":"nonnegative-integer"}],"A":[[1,1],[1,{"n":-1,"d":4}]],"B":[[100],[80]]},
+      "modelling": [{"en":"Let c be the number of correct answers and w the number of wrong answers. Both are nonnegative integers. Every answered question is either correct or wrong.","eq":"c + w = 100","latex":"c+w=100"},{"en":"Each correct answer earns one mark and each wrong answer loses one quarter of a mark.","eq":"c − w/4 = 80","latex":"c-\\frac w4=80"}],
+      "expectedValues": [84,16],
+      "answer": "84 questions answered correctly; 16 answered wrongly."
+    },
+    {
+      "id": "g12-ch1-ex1.4-q3",
+      "question": "3", "parts": ["whole"], "printedPage": 35, "pdfPage": 43,
+      "q": "A chemist has one solution which is 50% acid and another solution which is 25% acid. How much each should be mixed to make 10 litres of a 40% acid solution ? (Use Cramer’s rule to solve the problem).",
+      "difficulty": "medium",
+      "model": {"schemaVersion":1,"method":"cramer","variables":[{"name":"h","transform":"identity","constraint":"positive"},{"name":"l","transform":"identity","constraint":"positive"}],"A":[[1,1],[{"n":1,"d":2},{"n":1,"d":4}]],"B":[[10],[4]]},
+      "modelling": [{"en":"Let h and l be the litres of the 50% and 25% solutions respectively. Their volumes add to 10 litres.","eq":"h + l = 10","latex":"h+l=10"},{"en":"The final mixture contains 40% of 10 litres, or 4 litres, of pure acid. Balance the acid amounts using exact fractions.","eq":"(1/2)h + (1/4)l = (2/5)(10) = 4","latex":"\\frac12h+\\frac14l=\\frac25(10)=4"}],
+      "expectedValues": [6,4],
+      "answer": "Mix 6 litres of the 50% solution and 4 litres of the 25% solution."
+    },
+    {
+      "id": "g12-ch1-ex1.4-q4",
+      "question": "4", "parts": ["whole"], "printedPage": 35, "pdfPage": 43,
+      "q": "A fish tank can be filled in 10 minutes using both pumps A and B simultaneously. However, pump B can pump water in or out at the same rate. If pump B is inadvertently run in reverse, then the tank will be filled in 30 minutes. How long would it take each pump to fill the tank by itself ? (Use Cramer’s rule to solve the problem).",
+      "difficulty": "difficult",
+      "model": {"schemaVersion":1,"method":"cramer","variables":[{"name":"a","transform":"reciprocal","constraint":"positive"},{"name":"b","transform":"reciprocal","constraint":"positive"}],"A":[[1,1],[1,-1]],"B":[[{"n":1,"d":10}],[{"n":1,"d":30}]]},
+      "modelling": [{"en":"Let a and b be the times in minutes for pumps A and B to fill one tank individually. Their filling rates are u_a = 1/a and u_b = 1/b tanks per minute, both positive.","eq":"u_a + u_b = 1/10","latex":"u_a+u_b=\\frac1{10}"},{"en":"Running pump B in reverse subtracts its rate. The remaining net rate fills one tank in 30 minutes.","eq":"u_a − u_b = 1/30","latex":"u_a-u_b=\\frac1{30}"}],
+      "expectedValues": [15,30],
+      "answer": "Pump A: 15 minutes; pump B: 30 minutes."
+    },
+    {
+      "id": "g12-ch1-ex1.4-q5",
+      "question": "5", "parts": ["whole"], "printedPage": 36, "pdfPage": 44,
+      "q": "A family of 3 people went out for dinner in a restaurant. The cost of two dosai, three idlies and two vadais is ₹ 150. The cost of the two dosai, two idlies and four vadais is ₹ 200. The cost of five dosai, four idlies and two vadais is ₹ 250. The family has ₹ 350 in hand and they ate 3 dosai and six idlies and six vadais. Will they be able to manage to pay the bill within the amount they had ?",
+      "difficulty": "medium",
+      "model": {"schemaVersion":1,"method":"cramer","variables":[{"name":"d","transform":"identity","constraint":"positive"},{"name":"i","transform":"identity","constraint":"positive"},{"name":"v","transform":"identity","constraint":"positive"}],"A":[[2,3,2],[2,2,4],[5,4,2]],"B":[[150],[200],[250]]},
+      "modelling": [{"en":"Let d, i and v be the prices in rupees of one dosai, one idli and one vadai. Translate each of the three quoted meals into an equation in the same order.","eq":"2d + 3i + 2v = 150; 2d + 2i + 4v = 200; 5d + 4i + 2v = 250","latex":"2d+3i+2v=150,\\quad2d+2i+4v=200,\\quad5d+4i+2v=250"}],
+      "expectedValues": [30,10,30],
+      "afterSolution": [{"en":"The family ordered three dosai, six idlies and six vadais. Add those item costs and compare the bill with ₹350.","eq":"Bill = 3(30) + 6(10) + 6(30) = 330; balance = 350 − 330 = 20","latex":"3(30)+6(10)+6(30)=330,\\quad350-330=20"}],
+      "answer": "Yes. Bill = ₹330; balance = ₹20. One dosai = ₹30, one idli = ₹10, one vadai = ₹30."
+    }
+  ]
+}

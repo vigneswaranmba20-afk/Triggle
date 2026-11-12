@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "results": [
+    {
+      "schemaVersion": 1,
+      "id": "g10-ch8-ex8.1-q5",
+      "observationHash": "d84864ed4ea83a8cc8f1eb1f58d1f558906a8df3964faa7205b8da0a8a2ba782",
+      "status": "QUARANTINED_FOR_SOURCE_REVIEW",
+      "issues": [
+        {
+          "code": "DECLARED_COUNT_DIFFERS_FROM_VALUES:wages",
+          "medium": "ta"
+        },
+        {
+          "code": "CROSS_MEDIUM_QUANTITY_DIFFERENCE"
+        }
+      ],
+      "professionalTamilReview": "pending",
+      "releaseApproved": false,
+      "limitation": "Checks recorded manual observations against pinned book metadata. A pass does not certify uninspected pages, full Tamil prose or release readiness."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "g12-ch1-ex1.4-q5",
+      "observationHash": "d5f05fa8fe42cbde2fb0781b2d5a136203c193b5db1e15436b6c664ff82e18d8",
+      "status": "QUARANTINED_FOR_SOURCE_REVIEW",
+      "issues": [
+        {
+          "code": "CROSS_MEDIUM_METHOD_INSTRUCTION_DIFFERENCE"
+        }
+      ],
+      "professionalTamilReview": "pending",
+      "releaseApproved": false,
+      "limitation": "Checks recorded manual observations against pinned book metadata. A pass does not certify uninspected pages, full Tamil prose or release readiness."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "implementationHead": "58b0860c0778910b831cc1ae01bb2e0bf254dc10",
+  "localTests": [
+    {
+      "name": "npm test",
+      "status": "passed",
+      "logSha256": "92624a0f0dbbada50a0ffede3b8b907e3ae434f200ea8c286368b92d20611dd5"
+    },
+    {
+      "name": "npm run test:browser",
+      "status": "passed",
+      "logSha256": "4721acf9a979889886466b41b9e1075da9b66fe187f609e7b7b97a6c1a12a244"
+    },
+    {
+      "name": "npm run test:security",
+      "status": "passed",
+      "logSha256": "17db0d2f44f99f34f169b5d81437b948dd80d5cd5cb1c686985b056cc6dee735"
+    },
+    {
+      "name": "npm run test:webkit",
+      "status": "passed",
+      "logSha256": "7dfcf4a70982dc3f3cf95e4624abef65a017a5217f4a6282903b74b8b1b9e7a4"
+    },
+    {
+      "name": "Grade 9 usability",
+      "status": "passed",
+      "logSha256": "a5423fbfdb983338d1de96d45f70f4c85559386d4491c1d6ebc34ae4c69c6be8"
+    }
+  ],
+  "usability": {
+    "passed": 238,
+    "checks": 238,
+    "findings": 0
+  },
+  "dependencyAudit": {
+    "status": "existing-advisories",
+    "total": 20,
+    "low": 1,
+    "moderate": 14,
+    "high": 5,
+    "manifestDependenciesChanged": false,
+    "lockChanged": false
+  },
+  "newStudentRecordsReleased": 0,
+  "providerCalls": 0,
+  "providerSpendUsd": 0,
+  "exactImplementationHeadGitHubChecks": [
+    {
+      "runId": 43149587004,
+      "name": "Validate curriculum and Pages source",
+      "conclusion": "success"
+    },
+    {
+      "runId": 43149586988,
+      "name": "Grade 9 student usability audit",
+      "conclusion": "success"
+    },
+    {
+      "runId": 43149587087,
+      "name": "Test Triggle changes",
+      "conclusion": "success"
+    }
+  ],
+  "scope": "All code gates passed at the exact implementation head. Follow-up checkpoint/progress/source-inventory edits are documentation only; their PR-head checks must pass again before merge."
+}

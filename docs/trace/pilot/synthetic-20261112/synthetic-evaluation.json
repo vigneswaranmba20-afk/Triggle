@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "planHash": "478f92a07fbdbeec5e71f7584c2b6d5ae648f3974d27016099027d363fa95ae0",
+  "mode": "LABELLED_SYNTHETIC",
+  "realPilotStatus": "NOT_STARTED",
+  "complete": true,
+  "arms": {
+    "baseline": {
+      "allocated": 30,
+      "recorded": 30,
+      "missing": 0,
+      "accepted": 30,
+      "failedOrRejected": 0,
+      "pending": 0,
+      "acceptanceRate": 1,
+      "firstPassAccepted": 30,
+      "corrections": 0,
+      "duplicatesAvoided": 0,
+      "totals": {
+        "effortMinutes": 270,
+        "wallClockSeconds": 18000,
+        "activeAuthoringMinutes": 240,
+        "providerCalls": 0,
+        "providerTokens": 0,
+        "costUsd": 0
+      },
+      "nonacceptedEffortMinutes": 0,
+      "effortMinutesPerAccepted": 9,
+      "failureAdjustedMedianEffortMinutes": 9,
+      "defects": {
+        "source": 0,
+        "math": 0,
+        "language": 0,
+        "integration": 0
+      },
+      "sourceMathReviewed": 30,
+      "zeroObservedSourceMathFaultUpper95": null
+    },
+    "trace": {
+      "allocated": 30,
+      "recorded": 30,
+      "missing": 0,
+      "accepted": 30,
+      "failedOrRejected": 0,
+      "pending": 0,
+      "acceptanceRate": 1,
+      "firstPassAccepted": 30,
+      "corrections": 0,
+      "duplicatesAvoided": 0,
+      "totals": {
+        "effortMinutes": 150,
+        "wallClockSeconds": 10800,
+        "activeAuthoringMinutes": 120,
+        "providerCalls": 0,
+        "providerTokens": 0,
+        "costUsd": 0
+      },
+      "nonacceptedEffortMinutes": 0,
+      "effortMinutesPerAccepted": 5,
+      "failureAdjustedMedianEffortMinutes": 5,
+      "defects": {
+        "source": 0,
+        "math": 0,
+        "language": 0,
+        "integration": 0
+      },
+      "sourceMathReviewed": 30,
+      "zeroObservedSourceMathFaultUpper95": null
+    }
+  },
+  "medianEffortReduction": 0.4444444444444444,
+  "bootstrap95ReductionInterval": [
+    0.4444444444444444,
+    0.4444444444444444
+  ],
+  "bootstrapNote": "Small-sample descriptive bootstrap of failure-adjusted accepted-part effort; does not establish causal generalization or zero error.",
+  "mandatoryTestsPassed": true,
+  "qualityPassed": true,
+  "reviewsComplete": true,
+  "adoptionDecision": "NOT_EVALUATED_SYNTHETIC",
+  "syntheticDiagnosticWouldMeetThreshold": true,
+  "limitation": "Every allocated case remains in denominators. Failed/nonaccepted effort is charged to accepted parts. Small samples cannot prove zero error. Synthetic timings/costs are not measured project performance."
+}
