@@ -45,7 +45,8 @@
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  function math(str){
   // Local typesetting: accessible group exponents and no cloud requests.
-  return window.TriggleNotation ? window.TriggleNotation.render(str) : esc(str);
+  const alignCoefficientPowers=grade===10&&String(selectedChapter()?.number)==='2';
+  return window.TriggleNotation ? window.TriggleNotation.render(str,{alignCoefficientPowers}) : esc(str);
  }
 
  // Within textbook exercises, Previous/Next follows only that chapter's
