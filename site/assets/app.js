@@ -485,6 +485,9 @@
    });
  }
  function render(){renderText();renderGrades();
+    // Chapter-only typography: follow lesson, chapter hub, browser back, language and grade switching.
+    const typographyChapter=homeView||classIndex?null:(chapterOverview?.number??chapterForItem(current)?.number);
+    document.body.classList.toggle('g10-ch2-type',grade===10&&String(typographyChapter)==='2');
    $('questionReturn').hidden=true;
    const showingQuestion=!homeView&&!classIndex&&!chapterOverview;
    $('allChaptersReturn').hidden=true; // Chapters remain accessible through the existing breadcrumb/menu.
