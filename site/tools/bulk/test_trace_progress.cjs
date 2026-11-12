@@ -14,6 +14,20 @@ for(const c of chapterQueue.chapters){
 }
 assert.equal(chapterQueue.knownBoundedExercises.length,2);
 const headingIndex=require('../../../docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json');
+const bilingualHeadings=require('../../../docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json');
+assert.equal(bilingualHeadings.matchingHeadingIdentifiers,61);
+assert.equal(bilingualHeadings.uniqueEnglishHeadings,61);
+assert.equal(bilingualHeadings.uniqueTamilHeadings,61);
+assert.equal(bilingualHeadings.questionTextParityCertified,false);
+assert.equal(bilingualHeadings.tamilTranslationReviewed,false);
+assert.equal(bilingualHeadings.entries.length,61);
+for(const h of bilingualHeadings.entries){
+ assert(h.enPdfPage>0&&h.enPdfPage<340);
+ assert(h.taPdfPage>0&&h.taPdfPage<351);
+ assert.equal(h.questionAndSubpartParityChecked,false);
+ assert.equal(headingIndex.entries.find(e=>e.exercise===h.exercise)?.pdfPage,h.enPdfPage);
+}
+
 assert.equal(headingIndex.exerciseHeadingCount,61);
 assert.equal(headingIndex.entries.length,61);
 assert.equal(headingIndex.source.pdfSha256,'602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d');
@@ -23,6 +37,8 @@ for(let chapter=1;chapter<=8;chapter++){
  const entry=chapterQueue.chapters.find(c=>c.grade===10&&c.chapter===chapter);
  const headings=headingIndex.entries.filter(h=>h.chapter===chapter);
  assert.equal(entry.englishExerciseHeadingCount,headings.length);
+ assert.equal(entry.tamilExerciseHeadingCount,headings.length);
+ assert.equal(entry.bilingualHeadingParities,headings.length);
  assert.equal(headings.length,headingIndex.chapterExerciseHeadingCounts[String(chapter)]);
  assert.deepEqual(headings.map(h=>h.exercise),headings.map((h,i)=>chapter+'.'+(i+1)));
  for(const h of headings){assert(h.pdfPage>=1&&h.pdfPage<339);assert.equal(h.questionCount,null);assert.equal(h.subpartCount,null);}
