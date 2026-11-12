@@ -46,8 +46,8 @@
       return '<span class="math-fallback" data-math-error="true">'+esc(label)+'</span>';
     }
   }
-  function render(value) {
-    if(Array.isArray(value))return value.map(render).join('');
+  function render(value,options={}) {
+    if(Array.isArray(value))return value.map(item=>render(item,options)).join('');
     if(value && typeof value==='object')return renderLatex(value.latex,{displayMode:value.display===true,fallback:value.fallback});
     const tokens=[];
     const stash=html=>{tokens.push(html);return '\uE000N'+(tokens.length-1)+'\uE001';};
@@ -69,7 +69,7 @@
     // A parenthesized fraction raised to a power: include the parentheses.
     s=s.replace(/\(\s*\[\[([^\]|]+)\|([^\]]+)\]\]\s*\)([⁰¹²³⁴⁵⁶⁷⁸⁹]|\^[a-zA-Z0-9−-]+)/g,
       (_full,n,d,p)=>stash('<span class="math-group-power" role="math"><span class="math-group">'+
-      '<span class="math-bracket">(</span><span class="frac"><span>'+render(n)+'</span><span>'+render(d)+
+      '<span class="math-bracket">(</span><span class="frac"><span>'+render(n,options)+'</span><span>'+render(d,options)+
       '</span></span><span class="math-bracket">)</span></span><sup>'+esc(exponents[p]||p.slice(1))+'</sup></span>'));
     // Legacy authored [[numerator|denominator]] markup: stacked fraction.
     s=s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g,(_full,n,d)=>stash(
@@ -77,8 +77,20 @@
     // Keep group powers attached, even when the group contains a radical.
     s=s.replace(/(\[[^\[\]\n]{1,100}\]|\([^()\n]{1,100}\)|\{[^{}\n]{1,100}\})([⁰¹²³⁴⁵⁶⁷⁸⁹]|\^[a-zA-Z0-9−-]+)/g,
       (_full,group,p)=>stash('<span class="math-group-power" role="math"><span class="math-group">'+
-        '<span class="math-bracket">'+group[0]+'</span><span class="math-group-inner">'+render(group.slice(1,-1))+
+        '<span class="math-bracket">'+group[0]+'</span><span class="math-group-inner">'+render(group.slice(1,-1),options)+
         '</span><span class="math-bracket">'+group[group.length-1]+'</span></span><sup>'+esc(exponents[p]||p.slice(1))+'</sup></span>'));
+    // Chapter 2 opt-in: render '4k²' as ONE MathML row. Separate DOM text
+    // '4' and a stand-alone MathML 'k²' acquire different vertical baselines.
+    // Do not force the entire algebraic equality onto one unbroken line.
+    if(options?.alignCoefficientPowers===true) {
+      s=s.replace(/(\d+(?:\.\d+)?)([A-Za-z])((?:⁻?[⁰¹²³⁴⁵⁶⁷⁸⁹ᵏⁿ]+)|(?:\^[−-]?[A-Za-z0-9]+))/gu,
+        (whole,coefficient,variable,raw)=>{
+          const exponent=raw[0]==='^'?raw.slice(1):
+            [...raw].map(ch=>ch==='⁻'?'−':ch==='ⁿ'?'n':exponents[ch]||ch).join('');
+          return stash(typeset(whole,'<mrow>'+symbol(coefficient)+
+            '<msup>'+symbol(variable)+signed(exponent)+'</msup></mrow>'));
+        });
+    }
     // x^(m/n), 64^(−2/3), etc: a genuine stacked exponent fraction.
     s=s.replace(/([a-zA-Z]|\d+(?:\.\d+)?)\^\(([−-]?[a-zA-Z0-9]+)\s*\/\s*([a-zA-Z0-9]+)\)/g,
       (whole,base,n,d)=>stash(typeset(whole,'<msup>'+symbol(base)+'<mfrac>'+signed(n)+symbol(d)+'</mfrac></msup>')));
