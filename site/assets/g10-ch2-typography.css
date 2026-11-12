@@ -1,0 +1,142 @@
+/* VER Triggle: Grade 10 / Chapter 2 only.
+   Inspired by the clear, restrained typography of a ChatGPT maths explanation.
+   Uses system fonts and the app's existing offline KaTeX assets; no remote fonts. */
+body.g10-ch2-type{
+  --g10-ch2-text:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans Tamil",Arial,sans-serif;
+  --g10-ch2-maths:"KaTeX_Main","STIX Two Math","Cambria Math","Latin Modern Math","Noto Sans Math",serif;
+  font-family:var(--g10-ch2-text);
+  font-kerning:normal;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+body.g10-ch2-type :is(button,input,select,textarea),
+body.g10-ch2-type :is(.welcome h1,.lesson-progress,.difficulty-indicator,.solution-review),
+body.g10-ch2-type :is(.lesson-card,.lesson-container,.chapter-overview,.page-controls,.crumb,.sidebar,.appbar,.path-dialog,.figure-dialog){
+  font-family:var(--g10-ch2-text);
+}
+/* Question first: calm text with comfortable line lengths. */
+body.g10-ch2-type .lesson-card .lesson-title-row h2{
+  font-family:var(--g10-ch2-text);
+  font-weight:650;
+  font-size:clamp(20px,4.6vw,26px);
+  line-height:1.35;
+  letter-spacing:-.025em;
+}
+body.g10-ch2-type .lesson-card :is(.mini-topic,.lesson-tag,.lesson-progress){
+  font-family:var(--g10-ch2-text);
+  font-weight:600;
+  font-size:12px;
+  line-height:1.4;
+  letter-spacing:0;
+}
+body.g10-ch2-type .lesson-card .question-text{
+  font-family:var(--g10-ch2-text);
+  font-size:clamp(16px,3.8vw,18px)!important;
+  font-weight:450;
+  line-height:1.64;
+  letter-spacing:0;
+  color:#27313b;
+  padding:clamp(12px,2.2vw,18px);
+  overflow-wrap:anywhere;
+}
+/* Existing mobile reader uses #questionText with !important.
+   Match its specificity so our Chapter 2 legibility survives at 320px. */
+body.g10-ch2-type.textbook-reader #lessonCard>#questionText{
+  font-family:var(--g10-ch2-text);
+  font-size:clamp(16px,3.8vw,18px)!important;
+  font-weight:450;
+  line-height:1.64!important;
+}
+body.g10-ch2-type .lesson-card .lesson-divider>span:first-child,
+body.g10-ch2-type .lesson-card .step-count{
+  font-family:var(--g10-ch2-text);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+body.g10-ch2-type .lesson-card .worked-step .step-reason{
+  font-family:var(--g10-ch2-text);
+  font-size:clamp(15.5px,3.7vw,17px)!important;
+  font-weight:450;
+  line-height:1.58;
+  letter-spacing:0;
+  color:#384454;
+  overflow-wrap:anywhere;
+}
+body.g10-ch2-type .lesson-card .worked-step .step-equation{
+  font-family:var(--g10-ch2-maths);
+  font-size:clamp(17px,4.15vw,21px)!important;
+  font-weight:500;
+  line-height:1.68;
+  letter-spacing:0;
+  color:#26344a;
+  max-width:100%;
+  min-width:0;
+  overflow-x:auto;
+  overscroll-behavior-x:contain;
+  overflow-wrap:anywhere;
+}
+body.g10-ch2-type :is(.question-text,.step-equation,.math-answer,.final-answer-value,.chapter-overview) math{
+  font-family:"STIX Two Math","Cambria Math","Latin Modern Math","Noto Sans Math",serif;
+  font-weight:normal;
+}
+/* KaTeX already provides its own mathematical glyphs/geometry: do not override them. */
+body.g10-ch2-type :is(.question-text,.step-equation,.math-answer,.final-answer-value) .triggle-tex{
+  font-weight:400;
+  max-width:100%;
+}
+body.g10-ch2-type .lesson-card :is(.math-answer,.final-answer-value){
+  font-family:var(--g10-ch2-text);
+  font-size:clamp(17px,4vw,21px)!important;
+  font-weight:550;
+  line-height:1.55;
+  letter-spacing:0;
+  overflow-wrap:anywhere;
+}
+body.g10-ch2-type .lesson-card .final-answer-step .step-reason{
+  font-weight:600;
+}
+body.g10-ch2-type .lesson-card .step-circle{
+  font-family:var(--g10-ch2-text);
+  font-weight:650;
+  font-size:13px;
+}
+body.g10-ch2-type .lesson-card :is(.kind-badge,.mark-button){
+  font-family:var(--g10-ch2-text);
+  font-weight:550;
+  font-size:12px;
+  line-height:1.45;
+}
+body.g10-ch2-type .chapter-overview{
+  font-family:var(--g10-ch2-text);
+  line-height:1.6;
+}
+body.g10-ch2-type .chapter-overview :is(h1,h2,h3){
+  font-family:var(--g10-ch2-text);
+  font-weight:650;
+  letter-spacing:-.02em;
+}
+body.g10-ch2-type .chapter-overview :is(p,li,summary,button){
+  font-family:var(--g10-ch2-text);
+  line-height:1.55;
+}
+body.g10-ch2-type .page-controls .page-button,
+body.g10-ch2-type .page-controls .all-chapters-button,
+body.g10-ch2-type .crumb-link{
+  font-family:var(--g10-ch2-text);
+  font-weight:650;
+  letter-spacing:0;
+}
+@media(max-width:430px){
+  body.g10-ch2-type .lesson-card .question-text,
+  body.g10-ch2-type.textbook-reader #lessonCard>#questionText{font-size:16px!important;line-height:1.62!important}
+  body.g10-ch2-type .lesson-card .worked-step .step-reason{font-size:15.5px!important}
+  body.g10-ch2-type .lesson-card .worked-step .step-equation{font-size:18px!important;line-height:1.6}
+  body.g10-ch2-type .lesson-card :is(.math-answer,.final-answer-value){font-size:18px!important}
+}
+/* Large text must remain usable inside the existing one-scroll-area mobile reader. */
+@media(max-width:800px){
+  body.g10-ch2-type.textbook-reader .lesson-container{overflow-y:auto!important;overflow-x:hidden!important}
+  body.g10-ch2-type .lesson-card .worked-step{min-width:0}
+  body.g10-ch2-type .lesson-card .worked-step>div{min-width:0}
+}
