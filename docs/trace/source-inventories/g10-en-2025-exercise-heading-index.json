@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "grade": 10,
+  "medium": "en",
+  "edition": "2025",
+  "source": {
+    "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+    "pdfPages": 352
+  },
+  "indexMethod": "Exact text-layer Exercise N.N heading match through PDF p338; first occurrences in body only. Visually spot-checked PDF pages 12 and 319 and answer appendix PDF p340, which is explicitly excluded. Not a complete page-by-page image validation.",
+  "exerciseHeadingCount": 61,
+  "chapterExerciseHeadingCounts": {
+    "1": 6,
+    "2": 10,
+    "3": 20,
+    "4": 5,
+    "5": 5,
+    "6": 5,
+    "7": 5,
+    "8": 5
+  },
+  "bilingualCrossCheck": "NOT_YET_PERFORMED",
+  "questionAndSubpartCounts": "UNKNOWN",
+  "questionCount": null,
+  "subpartCount": null,
+  "sourcePageImageAllHeadingsVerified": false,
+  "studentReleaseApproved": false,
+  "entries": [
+    {
+      "exercise": "1.1",
+      "grade": 10,
+      "chapter": 1,
+      "pdfPage": 12,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": true
+    },
+    {
+      "exercise": "1.2",
+      "grade": 10,
+      "chapter": 1,
+      "pdfPage": 15,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "1.3",
+      "grade": 10,
+      "chapter": 1,
+      "pdfPage": 19,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "1.4",
+      "grade": 10,
+      "chapter": 1,
+      "pdfPage": 30,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "1.5",
+      "grade": 10,
+      "chapter": 1,
+      "pdfPage": 37,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "1.6",
+      "grade": 10,
+      "chapter": 1,
+      "pdfPage": 38,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "2.1",
+      "grade": 10,
+      "chapter": 2,
+      "pdfPage": 48,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "2.2",
+      "grade": 10,
+      "chapter": 2,
+      "pdfPage": 52,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "2.3",
+      "grade": 10,
+      "chapter": 2,
+      "pdfPage": 57,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "2.4",
+      "grade": 10,
+      "chapter": 2,
+      "pdfPage": 61,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "2.5",
+      "grade": 10,
+      "chapter": 2,
+      "pdfPage": 67,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "2.6",
+      "grade": 10,
+      "chapter": 2,
+      "pdfPage": 73,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "2.7",
+      "grade": 10,
+      "chapter": 2,
+      "pdfPage": 78,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "2.8",
+      "grade": 10,
+      "chapter": 2,
+      "pdfPage": 82,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "2.9",
+      "grade": 10,
+      "chapter": 2,
+      "pdfPage": 87,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "2.10",
+      "grade": 10,
+      "chapter": 2,
+      "pdfPage": 88,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.1",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 98,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.2",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 102,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.3",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 103,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.4",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 105,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.5",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 107,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.6",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 109,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.7",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 111,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.8",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 112,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.9",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 115,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.10",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 117,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.11",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 120,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.12",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 122,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.13",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 125,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.14",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 128,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.15",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 135,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.16",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 143,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.17",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 150,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.18",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 154,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.19",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 159,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "3.20",
+      "grade": 10,
+      "chapter": 3,
+      "pdfPage": 160,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "4.1",
+      "grade": 10,
+      "chapter": 4,
+      "pdfPage": 176,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "4.2",
+      "grade": 10,
+      "chapter": 4,
+      "pdfPage": 187,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "4.3",
+      "grade": 10,
+      "chapter": 4,
+      "pdfPage": 193,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "4.4",
+      "grade": 10,
+      "chapter": 4,
+      "pdfPage": 204,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "4.5",
+      "grade": 10,
+      "chapter": 4,
+      "pdfPage": 205,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "5.1",
+      "grade": 10,
+      "chapter": 5,
+      "pdfPage": 217,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "5.2",
+      "grade": 10,
+      "chapter": 5,
+      "pdfPage": 226,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "5.3",
+      "grade": 10,
+      "chapter": 5,
+      "pdfPage": 235,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "5.4",
+      "grade": 10,
+      "chapter": 5,
+      "pdfPage": 241,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "5.5",
+      "grade": 10,
+      "chapter": 5,
+      "pdfPage": 241,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "6.1",
+      "grade": 10,
+      "chapter": 6,
+      "pdfPage": 255,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "6.2",
+      "grade": 10,
+      "chapter": 6,
+      "pdfPage": 263,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "6.3",
+      "grade": 10,
+      "chapter": 6,
+      "pdfPage": 267,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "6.4",
+      "grade": 10,
+      "chapter": 6,
+      "pdfPage": 270,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "6.5",
+      "grade": 10,
+      "chapter": 6,
+      "pdfPage": 271,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "7.1",
+      "grade": 10,
+      "chapter": 7,
+      "pdfPage": 288,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "7.2",
+      "grade": 10,
+      "chapter": 7,
+      "pdfPage": 296,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "7.3",
+      "grade": 10,
+      "chapter": 7,
+      "pdfPage": 300,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "7.4",
+      "grade": 10,
+      "chapter": 7,
+      "pdfPage": 302,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "7.5",
+      "grade": 10,
+      "chapter": 7,
+      "pdfPage": 303,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "8.1",
+      "grade": 10,
+      "chapter": 8,
+      "pdfPage": 319,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": true
+    },
+    {
+      "exercise": "8.2",
+      "grade": 10,
+      "chapter": 8,
+      "pdfPage": 322,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "8.3",
+      "grade": 10,
+      "chapter": 8,
+      "pdfPage": 328,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "8.4",
+      "grade": 10,
+      "chapter": 8,
+      "pdfPage": 335,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    },
+    {
+      "exercise": "8.5",
+      "grade": 10,
+      "chapter": 8,
+      "pdfPage": 336,
+      "questionCount": null,
+      "subpartCount": null,
+      "imageVerified": false
+    }
+  ],
+  "limitations": [
+    "Exercise heading starts only: not a complete count or verification of question texts, subparts, mathematical figures or tables.",
+    "PDF page numbers are 1-based; some exercise headings share the same PDF page.",
+    "Tamil page audit, bilingual parity and runtime/pinned-PR deduplication remain outstanding.",
+    "Worked examples and answer appendix headings are excluded."
+  ]
+}
