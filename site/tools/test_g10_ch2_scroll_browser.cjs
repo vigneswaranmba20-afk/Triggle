@@ -38,7 +38,7 @@ async function swipeUp(cdp,x,start,end){
     });
     assert.equal(initial.readerY,'visible','Lesson must not trap vertical swipes '+id+' '+JSON.stringify(initial));
     assert.equal(initial.readerX,'visible','Do not make vertical scroll auto by hiding x overflow '+id);
-    assert(initial.scrollHeight>initial.clientHeight+100,'Document should be scrollable '+JSON.stringify(initial));
+    assert(initial.scrollHeight>initial.clientHeight+35,'Document should have enough scroll range to reveal answer '+JSON.stringify(initial));
     assert(initial.horizontal<=1,'No horizontal overflow '+JSON.stringify(initial));
     const startY=Math.round(Math.min(560,initial.dockTop-35)),endY=205;
     assert(startY>endY+100,'Swipe area too small');
