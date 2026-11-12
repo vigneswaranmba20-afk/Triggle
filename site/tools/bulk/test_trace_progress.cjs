@@ -2,6 +2,17 @@
 const assert=require('node:assert/strict'),{summarize}=require('./trace_progress.cjs');
 const manifest=require('../../../docs/trace/task-checklist.json');
 const report=summarize(manifest);
+const chapterQueue=require('../../../docs/trace/source-inventories/41-chapter-pair-work-queue.json');
+assert.equal(chapterQueue.chapterPairs,41);
+assert.equal(chapterQueue.chapters.length,41);
+assert.equal(new Set(chapterQueue.chapters.map(c=>c.pairKey)).size,41);
+assert.equal(chapterQueue.chapters.filter(c=>c.priority==='high').length,20);
+for(const c of chapterQueue.chapters){
+ assert(c.mediumSources.en?.sha256&&c.mediumSources.ta?.sha256);
+ assert.equal(c.chapterQuestionCount,null);assert.equal(c.chapterSubpartCount,null);
+ assert.equal(c.completeSourcePageInventory,false);
+}
+assert.equal(chapterQueue.knownBoundedExercises.length,2);
 assert.equal(report.totalMilestones,18);assert.equal(report.baselinePercentComplete,44.44);assert.equal(report.originalBaselinePercentComplete,40);
 assert.equal(report.curriculumPercent,null);assert.equal(report.pilotRealPercent,0);
 assert.equal(report.percentComplete,88.89);assert.deepEqual(report.deferredMilestones.map(x=>x.id).sort(),['original-zip-reconciliation','professional-tamil-review']);
