@@ -57,7 +57,8 @@ async function verify(browser,name,base){
          const value=presented[document.documentElement.lang]||presented.en;
          const original=v=>Array.isArray(v)?v.map(original).join(''):typeof v==='string'?v:v.fallback;
          if(original(value)!==reason)fail('Changed reasoning source');
-         if(reasonNode?.innerHTML!==window.TriggleNotation.render(value))fail('Changed reasoning presentation');
+         const expected=document.createElement('div');expected.innerHTML=window.TriggleNotation.render(value);
+         if(reasonNode?.innerHTML!==expected.innerHTML)fail('Changed reasoning presentation');
         }else if(!s.reasonMath&&reasonNode?.textContent!==reason)fail('Changed reasoning');
        });
        const final=document.querySelector('#stepsList .final-answer-value');
