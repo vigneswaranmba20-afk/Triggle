@@ -79,6 +79,18 @@
       (_full,group,p)=>stash('<span class="math-group-power" role="math"><span class="math-group">'+
         '<span class="math-bracket">'+group[0]+'</span><span class="math-group-inner">'+render(group.slice(1,-1),options)+
         '</span><span class="math-bracket">'+group[group.length-1]+'</span></span><sup>'+esc(exponents[p]||p.slice(1))+'</sup></span>'));
+    // Chapter 2 opt-in: render '4k²' as ONE MathML row. Separate DOM text
+    // '4' and a stand-alone MathML 'k²' acquire different vertical baselines.
+    // Do not force the entire algebraic equality onto one unbroken line.
+    if(options?.alignCoefficientPowers===true) {
+      s=s.replace(/(\d+(?:\.\d+)?)([A-Za-z])((?:⁻?[⁰¹²³⁴⁵⁶⁷⁸⁹ᵏⁿ]+)|(?:\^[−-]?[A-Za-z0-9]+))/gu,
+        (whole,coefficient,variable,raw)=>{
+          const exponent=raw[0]==='^'?raw.slice(1):
+            [...raw].map(ch=>ch==='⁻'?'−':ch==='ⁿ'?'n':exponents[ch]||ch).join('');
+          return stash(typeset(whole,'<mrow>'+symbol(coefficient)+
+            '<msup>'+symbol(variable)+signed(exponent)+'</msup></mrow>'));
+        });
+    }
     // x^(m/n), 64^(−2/3), etc: a genuine stacked exponent fraction.
     s=s.replace(/([a-zA-Z]|\d+(?:\.\d+)?)\^\(([−-]?[a-zA-Z0-9]+)\s*\/\s*([a-zA-Z0-9]+)\)/g,
       (whole,base,n,d)=>stash(typeset(whole,'<msup>'+symbol(base)+'<mfrac>'+signed(n)+symbol(d)+'</mfrac></msup>')));
@@ -106,18 +118,6 @@
       (whole,root,raw)=>stash(typeset(whole,'<mroot>'+simpleMath(raw[0]==='('?raw.slice(1,-1):raw)+symbol(root==='∛'?'3':'4')+'</mroot>')));
     s=s.replace(/√(\([^()\n]{1,100}\)|[a-zA-Z]+|\d+(?:\.\d+)?)/gu,
       (whole,raw)=>stash(typeset(whole,'<msqrt>'+simpleMath(raw[0]==='('?raw.slice(1,-1):raw)+'</msqrt>')));
-    // Chapter 2 opt-in: render '4k²' as ONE MathML row. Separate DOM text
-    // '4' and a stand-alone MathML 'k²' acquire different vertical baselines.
-    // Do not force the entire algebraic equality onto one unbroken line.
-    if(options?.alignCoefficientPowers===true) {
-      s=s.replace(/(\d+(?:\.\d+)?)([A-Za-z])((?:⁻?[⁰¹²³⁴⁵⁶⁷⁸⁹ᵏⁿ]+)|(?:\^[−-]?[A-Za-z0-9]+))/gu,
-        (whole,coefficient,variable,raw)=>{
-          const exponent=raw[0]==='^'?raw.slice(1):
-            [...raw].map(ch=>ch==='⁻'?'−':ch==='ⁿ'?'n':exponents[ch]||ch).join('');
-          return stash(typeset(whole,'<mrow>'+symbol(coefficient)+
-            '<msup>'+symbol(variable)+signed(exponent)+'</msup></mrow>'));
-        });
-    }
     // Pair a base and its superscript into one semantic MathML expression.
     // Standalone <sup> nodes become separate flex items in maths buttons and
     // may appear as baseline text (e.g. "x 2 = 25" instead of x² = 25).
