@@ -136,7 +136,13 @@ body.g10-ch2-type .crumb-link{
 }
 /* Large text must remain usable inside the existing one-scroll-area mobile reader. */
 @media(max-width:800px){
-  body.g10-ch2-type.textbook-reader .lesson-container{overflow-y:auto!important;overflow-x:hidden!important}
+  /* The shared reader has one DOCUMENT scroller. Constraining only the X axis
+     turns overflow-y:visible into overflow-y:auto, trapping Android swipes. */
+  body.g10-ch2-type.textbook-reader .lesson-container{
+    overflow:visible!important;
+    height:auto!important;
+    max-height:none!important;
+  }
   body.g10-ch2-type .lesson-card .worked-step{min-width:0}
   body.g10-ch2-type .lesson-card .worked-step>div{min-width:0}
 }
