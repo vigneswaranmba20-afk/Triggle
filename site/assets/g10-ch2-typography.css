@@ -39,6 +39,14 @@ body.g10-ch2-type .lesson-card .question-text{
   padding:clamp(12px,2.2vw,18px);
   overflow-wrap:anywhere;
 }
+/* Existing mobile reader uses #questionText with !important.
+   Match its specificity so our Chapter 2 legibility survives at 320px. */
+body.g10-ch2-type.textbook-reader #lessonCard>#questionText{
+  font-family:var(--g10-ch2-text);
+  font-size:clamp(16px,3.8vw,18px)!important;
+  font-weight:450;
+  line-height:1.64!important;
+}
 body.g10-ch2-type .lesson-card .lesson-divider>span:first-child,
 body.g10-ch2-type .lesson-card .step-count{
   font-family:var(--g10-ch2-text);
@@ -120,7 +128,8 @@ body.g10-ch2-type .crumb-link{
   letter-spacing:0;
 }
 @media(max-width:430px){
-  body.g10-ch2-type .lesson-card .question-text{font-size:16px!important;line-height:1.62}
+  body.g10-ch2-type .lesson-card .question-text,
+  body.g10-ch2-type.textbook-reader #lessonCard>#questionText{font-size:16px!important;line-height:1.62!important}
   body.g10-ch2-type .lesson-card .worked-step .step-reason{font-size:15.5px!important}
   body.g10-ch2-type .lesson-card .worked-step .step-equation{font-size:18px!important;line-height:1.6}
   body.g10-ch2-type .lesson-card :is(.math-answer,.final-answer-value){font-size:18px!important}
