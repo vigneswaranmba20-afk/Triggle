@@ -51,7 +51,15 @@ async function verify(browser,name,base){
        if(steps.length!==item.steps.length||steps.some(s=>s.hidden))fail('Omitted working');
        item.steps.forEach((s,i)=>{
         const reason=s[document.documentElement.lang]||s.en;
-        if(!s.reasonMath&&steps[i]?.querySelector('.step-reason')?.textContent!==reason)fail('Changed reasoning');
+        const presented=window.TriggleG9Math?.get(item)?.steps[i]?.reasonMath;
+        const reasonNode=steps[i]?.querySelector('.step-reason');
+        if(presented){
+         const value=presented[document.documentElement.lang]||presented.en;
+         const original=v=>Array.isArray(v)?v.map(original).join(''):typeof v==='string'?v:v.fallback;
+         if(original(value)!==reason)fail('Changed reasoning source');
+         const expected=document.createElement('div');expected.innerHTML=window.TriggleNotation.render(value);
+         if(reasonNode?.innerHTML!==expected.innerHTML)fail('Changed reasoning presentation');
+        }else if(!s.reasonMath&&reasonNode?.textContent!==reason)fail('Changed reasoning');
        });
        const final=document.querySelector('#stepsList .final-answer-value');
        if(!final||final.innerHTML!==document.querySelector('#answerText').innerHTML)fail('Omitted or changed final answer');
