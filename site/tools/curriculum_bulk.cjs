@@ -21,14 +21,23 @@ function scripts(root=ROOT){
  const html=fs.readFileSync(path.join(root,'site/index.html'),'utf8');
  return [...html.matchAll(/<script\b[^>]*\bsrc=["'](?:\.\/)?([^"'?]+)(?:\?[^"']*)?["']/g)].map(m=>m[1]);
 }
-function loadRuntime(root=ROOT,{omit=[]}={}){
- const context=vm.createContext({window:{},console});const loaded=[];
+function loadRuntime(root=ROOT,{omit=[],trace=false}={}){
+ const context=vm.createContext({window:{},console});const loaded=[],registrations=[];let previous=new Map();
  for(const file of scripts(root).filter(f=>f.startsWith('data/')&&f.endsWith('.js')&&!omit.includes(f))){
   vm.runInContext(fs.readFileSync(inside(path.join(root,'site'),file),'utf8'),context,{filename:file,timeout:5000});loaded.push(file);
+  if(trace){
+   const current=new Map();
+   for(const [grade,value] of Object.entries(context.window.TRIGGLE_CLASSES||{}))for(const item of value.items||[]){
+    const digest=hashRecord(JSON.parse(JSON.stringify(item)));current.set(item.id,digest);
+    if(previous.get(item.id)!==digest)registrations.push({id:item.id,grade:Number(grade),module:file,change:previous.has(item.id)?'updated':'added',recordSha256:digest});
+   }
+   for(const id of previous.keys())if(!current.has(id))registrations.push({id,module:file,change:'removed'});
+   previous=current;
+  }
  }
  if(!context.window.TRIGGLE_CLASSES||!context.window.TRIGGLE_CURRICULUM)throw Error('Runtime data/curriculum was not registered');
  // JSON round trip removes VM prototypes and gives verifiers ordinary data, not live objects.
- return JSON.parse(JSON.stringify({classes:context.window.TRIGGLE_CLASSES,curriculum:context.window.TRIGGLE_CURRICULUM,loaded}));
+ return JSON.parse(JSON.stringify({classes:context.window.TRIGGLE_CLASSES,curriculum:context.window.TRIGGLE_CURRICULUM,loaded,...(trace?{registrations}:{})}));
 }
 function exerciseItem(item){return item.kind!=='practice'&&/^(?:Exercise|Unit Exercise)\b/i.test(item.label?.en||'');}
 function chapterItems(runtime,grade,chapter){

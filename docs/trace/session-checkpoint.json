@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-11-12T02:45:01.777932+00:00",
+  "status": "TESTED_DRAFT_READY_FOR_PR",
+  "branch": "feature/trace-ledger-offline-20261112",
+  "baseCommit": "91c56ddfd556cc6e748c39bbfb7861658170da92",
+  "commitReference": "Resolve the commit containing this checkpoint with git log -- docs/trace/session-checkpoint.json",
+  "implementation": {
+    "reconciliation": "Runtime, pinned open-PR candidate index, inherited source/math ledger, known gaps; original ZIP reread blocked",
+    "providerBroker": "Offline mock and injected-adapter contract tests only",
+    "newOfficialQuestionParts": 0,
+    "studentFacingChanges": false
+  },
+  "summaryArtifact": "docs/trace/reports/2026-11-12/summary.json",
+  "sourcePagesInspected": 0,
+  "modelProviderApiCalls": 0,
+  "modelProviderApiSpendUsd": 0,
+  "visibleRemainingAllowance": null,
+  "providerTokenCount": null,
+  "pilot": "NOT_STARTED",
+  "tests": [
+    {
+      "command": "npm test",
+      "result": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:trace",
+      "result": "PASS",
+      "exitCode": 0,
+      "pythonTests": 7,
+      "reconciliationGroups": 6,
+      "brokerGroups": 12
+    },
+    {
+      "command": "npm run test:browser",
+      "result": "PASS",
+      "exitCode": 0,
+      "engines": [
+        "Chromium",
+        "WebKit"
+      ],
+      "note": "Verified local WebKit runtime; system-only ldconfig heuristic bypassed, no assertions skipped."
+    },
+    {
+      "command": "npm run test:security",
+      "result": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:webkit",
+      "result": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium node site/tools/audit_g9_usability.cjs",
+      "result": "PASS",
+      "exitCode": 0,
+      "checks": 238,
+      "findings": 0,
+      "blocking": 0
+    },
+    {
+      "command": "npm audit --json",
+      "result": "EXISTING_ADVISORIES",
+      "exitCode": 1,
+      "counts": {
+        "low": 1,
+        "moderate": 14,
+        "high": 5,
+        "critical": 0
+      },
+      "dependencyVersionsChanged": false
+    },
+    {
+      "command": "git diff --check / syntax / JSON parsing / credential-pattern scan",
+      "result": "PASS"
+    }
+  ],
+  "logEvidence": {
+    "npmTest": {
+      "localPath": "/tmp/triggle-final-test.log",
+      "sha256": "2871049d126869f104ba2599f3b4d4d825162f11a72f93ffc81c664d4668974f"
+    },
+    "traceTests": {
+      "localPath": "/tmp/triggle-trace-final.log",
+      "sha256": "de4a69f774eda4704dc2c098aab69352a14ca46ddd175660e16faba0794ec0e9"
+    },
+    "browser": {
+      "localPath": "/tmp/triggle-browser-final.log",
+      "sha256": "b495dfe9ea225c50e9d82a65f5a4e4bdf775f3db93ef24a336f81d0eeb8a0c9a"
+    },
+    "security": {
+      "localPath": "/tmp/triggle-security.log",
+      "sha256": "c8b8d2e0af749556cf7c2e64c1adf0f3de56ba579b02d9da914dce421c783d89"
+    },
+    "webkit": {
+      "localPath": "/tmp/triggle-webkit.log",
+      "sha256": "7dfcf4a70982dc3f3cf95e4624abef65a017a5217f4a6282903b74b8b1b9e7a4"
+    },
+    "usability": {
+      "localPath": "/tmp/triggle-usability.log",
+      "sha256": "a5423fbfdb983338d1de96d45f70f4c85559386d4491c1d6ebc34ae4c69c6be8"
+    }
+  },
+  "lease": {
+    "scope": "integration",
+    "released": true,
+    "method": "Existing engine guarded exact-owner release with readback"
+  },
+  "release": {
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false,
+    "requiredCi": "Not yet observed for the new branch; do not infer from local pass"
+  },
+  "automationChanges": false,
+  "blockers": [
+    "Original W1-W5 archives not available locally or through Drive search; Library tool unavailable.",
+    "No source-page images inspected during this tooling run.",
+    "Full all-grade denominators and professional Tamil review not established.",
+    "No connected/authorized live model-provider adapter.",
+    "Real pilot eligibility and reviewers not established."
+  ],
+  "nextTask": "Reconcile original archives and PR #38 Grade 12 Exercise 1.4 audit against current runtime plus original EN/TA page images; reuse verified work before authoring eight missing app parts.",
+  "manualCommands": {
+    "reconcile": "npm run trace:reconcile -- --report /tmp/triggle-reconciliation",
+    "mock": "npm run trace:dry-run -- --state-dir /tmp/triggle-trace-private --report /tmp/triggle-broker.json"
+  }
+}

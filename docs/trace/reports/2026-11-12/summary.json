@@ -1,0 +1,71 @@
+{
+  "mainSha": "91c56ddfd556cc6e748c39bbfb7861658170da92",
+  "runtimeRecords": 568,
+  "runtimeExerciseRecords": 478,
+  "runtimeDataModules": 46,
+  "runtimeGrade10Records": 110,
+  "legacyBaseGrade10Records": 20,
+  "strictMathCheckedAppRecords": 48,
+  "ledgerMediumPartRows": 847,
+  "unlocatedExerciseRecords": 0,
+  "openPrsInspected": 35,
+  "prCandidateOccurrences": 227,
+  "historicalStagingRecords": 16,
+  "historicalStagingWithRuntimeLabelOverlap": 12,
+  "historicalStagingWithPrOverlap": 6,
+  "knownMissingSourceParts": 53,
+  "wholeProjectQuestionDenominator": null,
+  "wholeProjectTaskDenominator": null,
+  "newAcceptedUniqueParts": 0,
+  "sourcePagesInspectedThisRun": 0,
+  "modelProviderApiCalls": 0,
+  "modelProviderApiCostUsd": 0,
+  "stagePopulationMediumPartRows": 900,
+  "stages": {
+    "missing": {
+      "true": 53,
+      "false": 847,
+      "unknown": 0
+    },
+    "candidate": {
+      "true": 847,
+      "false": 53,
+      "unknown": 0
+    },
+    "source-checked": {
+      "true": 108,
+      "false": 792,
+      "unknown": 0
+    },
+    "math-checked": {
+      "true": 55,
+      "false": 845,
+      "unknown": 0
+    },
+    "language-reviewed": {
+      "true": 0,
+      "false": 900,
+      "unknown": 0
+    },
+    "ready-for-integration": {
+      "true": 0,
+      "false": 900,
+      "unknown": 0
+    },
+    "merged": {
+      "true": 847,
+      "false": 0,
+      "unknown": 53
+    },
+    "deployed": {
+      "true": 0,
+      "false": 0,
+      "unknown": 900
+    },
+    "live-verified": {
+      "true": 0,
+      "false": 0,
+      "unknown": 900
+    }
+  }
+}

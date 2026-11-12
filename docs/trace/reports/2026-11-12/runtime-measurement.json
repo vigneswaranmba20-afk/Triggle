@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-11-12T02:44:18.709172+00:00",
+  "command": "npm run trace:reconcile -- --report /tmp/triggle-repeat-check",
+  "toolSha256": "7c26dcd6671c73acb67dafd98f6c8ff179dbf0ebb3700bbd309c0f5eba326ecf",
+  "wallClockSeconds": 1.2964,
+  "exitCode": 0,
+  "newAcceptedParts": 0,
+  "secondsPerAcceptedPart": null,
+  "accelerationClaim": null,
+  "note": "Single local measurement of expanded reconciliation, not an authoring A/B experiment."
+}
