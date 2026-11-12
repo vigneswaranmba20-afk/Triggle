@@ -2,6 +2,8 @@
 
 ## Current implementation (12 November 2026)
 
+**Owner-directed scope update:** W1–W5 original ZIP reconciliation and professional Tamil/teacher review are deferred, not counted complete. The [active milestone report](progress/progress.md) is now **16/18 (88.89%)** for implementation checklists only; curriculum denominator remains unknown and the real pilot remains **0/60**. The [41-chapter bilingual work queue](source-inventories/41-chapter-pair-work-queue.json) links original 2025 book identities, but records no invented complete exercise or question counts. Grades 10 and 12 take priority. The existing real pilot CLI still requires reviewers; no teacher approval, Tamil certification, paid calls, or real measurements are implied. Student releases remain behind current quality gates.
+
 The compiler/pilot sprint adds a source-grounded exact Cramer compiler, independent BigInt critic, isolated eight-part preview, source discrepancy guard, seeded pilot harness and a fixed 20-milestone progress report. See [the second sprint handoff](SPRINT-2-2026-11-12.md) and [task progress](progress/progress.md). The eight parts are **unregistered candidates**, with professional Tamil/teacher review pending. The real 60-part experiment remains **NOT_STARTED**.
 
 ```bash
