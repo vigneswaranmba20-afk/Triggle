@@ -2,10 +2,12 @@
   "schemaVersion": 1,
   "measure": "equal-weight-required-milestones-not-curriculum-or-effort",
   "completedMilestones": 16,
-  "totalMilestones": 20,
-  "percentComplete": 80,
+  "totalMilestones": 18,
+  "originalMilestones": 20,
+  "percentComplete": 88.89,
   "baselineCompletedMilestones": 8,
-  "baselinePercentComplete": 40,
+  "baselinePercentComplete": 44.44,
+  "originalBaselinePercentComplete": 40,
   "categories": {
     "foundation": {
       "total": 4,
@@ -13,15 +15,17 @@
       "partial": 0,
       "blocked": 0,
       "notStarted": 0,
+      "deferred": 0,
       "percentComplete": 100
     },
     "sources-and-language": {
-      "total": 5,
+      "total": 3,
       "complete": 2,
       "partial": 1,
-      "blocked": 2,
+      "blocked": 0,
       "notStarted": 0,
-      "percentComplete": 40
+      "deferred": 2,
+      "percentComplete": 66.67
     },
     "mathematics": {
       "total": 2,
@@ -29,6 +33,7 @@
       "partial": 0,
       "blocked": 0,
       "notStarted": 0,
+      "deferred": 0,
       "percentComplete": 100
     },
     "provider-interface": {
@@ -37,6 +42,7 @@
       "partial": 0,
       "blocked": 0,
       "notStarted": 0,
+      "deferred": 0,
       "percentComplete": 100
     },
     "experiment": {
@@ -45,6 +51,7 @@
       "partial": 0,
       "blocked": 1,
       "notStarted": 0,
+      "deferred": 0,
       "percentComplete": 50
     },
     "reporting": {
@@ -53,6 +60,7 @@
       "partial": 0,
       "blocked": 0,
       "notStarted": 0,
+      "deferred": 0,
       "percentComplete": 100
     },
     "release": {
@@ -61,13 +69,26 @@
       "partial": 0,
       "blocked": 0,
       "notStarted": 0,
+      "deferred": 0,
       "percentComplete": 100
     }
   },
   "curriculumPercent": null,
   "curriculumDenominator": "unknown",
   "pilotRealPercent": 0,
-  "note": "Counts completed acceptance milestones equally. It does not estimate effort, all-grade question coverage, exam readiness or Tamil certification. Partial milestones receive no completion credit.",
+  "note": "Counts 18 owner-scoped active milestones equally. Original ZIP reconciliation and professional Tamil/teacher review are deferred, not completed. No curriculum coverage, effort, exam-readiness or certification is inferred.",
+  "deferredMilestones": [
+    {
+      "id": "original-zip-reconciliation",
+      "status": "deferred",
+      "reason": "Owner deferred inaccessible W1–W5 ZIP reconciliation on 2026-11-12; preserve historical evidence and do not claim archive comparison."
+    },
+    {
+      "id": "professional-tamil-review",
+      "status": "deferred",
+      "reason": "Owner deferred professional Tamil/teacher review on 2026-11-12; no human certification is claimed."
+    }
+  ],
   "incomplete": [
     {
       "id": "all-grade-denominators",
@@ -76,22 +97,10 @@
       "blocker": "Bounded G10 Ex8.1 (15 questions/16 parts) and G12 Ex1.4 (8 parts) have original bilingual image inventories; complete all-grade exercise/subpart denominators across 41 chapter pairs are not established."
     },
     {
-      "id": "original-zip-reconciliation",
-      "status": "blocked",
-      "acceptance": "Reopen and reconcile the latest five original W1–W5 ZIPs, not only historical summaries.",
-      "blocker": "Read-only lookup of five paused tasks found last-run reports naming ChatGPT Library /VER-Triggle/Grade10-Staging and chat-scoped download links. This session has no supported Library retrieval API and the original bytes remain unavailable; connected Drive ZIP search was empty."
-    },
-    {
-      "id": "professional-tamil-review",
-      "status": "blocked",
-      "acceptance": "Qualified independent Tamil editorial review of complete bilingual content; never infer it from source access or generated text.",
-      "blocker": "No qualified reviewer or completed professional review has been provided. Source correspondence is not full Tamil editorial approval."
-    },
-    {
       "id": "pilot-real",
       "status": "blocked",
       "acceptance": "Run the real 60 eligible unworked source-verified parts with independent math/bilingual/teacher review and real effort/cost measurements.",
-      "blocker": "Sixty eligible unique unworked bilingual-source-checked parts plus reviewers have not been established. No real trial has started."
+      "blocker": "No 60 source-checked genuinely unworked parts yet; real 30/30 pilot has not started. Existing pilot evaluator still requires human reviewers, so engineering-only validation must be separately designed without asserting their certification."
     }
   ],
   "conditional": [
