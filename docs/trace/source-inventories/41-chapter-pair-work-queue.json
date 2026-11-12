@@ -1,0 +1,1217 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "source": "docs/trace/source-audit-20261112.json",
+  "scope": "Chapters only, not completed question/subpart inventory",
+  "chapterPairs": 41,
+  "allBooksSeen": 12,
+  "completedChapterDenominators": "NOT_DETERMINED_BY_THIS_QUEUE",
+  "knownBoundedExercises": [
+    {
+      "pairKey": "g10-ch8",
+      "exercise": "8.1",
+      "questions": 15,
+      "parts": 16,
+      "sourceInventory": "docs/trace/source-inventories/g10-ch8-ex8-1.json",
+      "notWholeChapter": true,
+      "issue": "Q5 English/Tamil worker-count discrepancy remains unresolved"
+    },
+    {
+      "pairKey": "g12-ch1",
+      "exercise": "1.4",
+      "parts": 8,
+      "sourceInventory": "docs/trace/candidates/g12-ex1-4/source-review.json",
+      "notWholeChapter": true,
+      "issue": "8 drafts overlap PR #38 and are ineligible as new unworked pilot parts"
+    }
+  ],
+  "prioritization": "Grades 10 and 12 first; read original page images and reconcile live runtime plus open PR before declaring a candidate unworked. Do not count Worked Examples.",
+  "chapters": [
+    {
+      "grade": 9,
+      "chapter": 1,
+      "pairKey": "g9-ch1",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g9-ta-v0",
+          "volume": null,
+          "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+          "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g9-en-v0",
+          "volume": null,
+          "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 9,
+      "chapter": 2,
+      "pairKey": "g9-ch2",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g9-ta-v0",
+          "volume": null,
+          "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+          "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g9-en-v0",
+          "volume": null,
+          "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "pairKey": "g9-ch3",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g9-ta-v0",
+          "volume": null,
+          "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+          "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g9-en-v0",
+          "volume": null,
+          "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 9,
+      "chapter": 4,
+      "pairKey": "g9-ch4",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g9-ta-v0",
+          "volume": null,
+          "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+          "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g9-en-v0",
+          "volume": null,
+          "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "pairKey": "g9-ch5",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g9-ta-v0",
+          "volume": null,
+          "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+          "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g9-en-v0",
+          "volume": null,
+          "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 9,
+      "chapter": 6,
+      "pairKey": "g9-ch6",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g9-ta-v0",
+          "volume": null,
+          "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+          "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g9-en-v0",
+          "volume": null,
+          "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "pairKey": "g9-ch7",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g9-ta-v0",
+          "volume": null,
+          "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+          "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g9-en-v0",
+          "volume": null,
+          "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 9,
+      "chapter": 8,
+      "pairKey": "g9-ch8",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g9-ta-v0",
+          "volume": null,
+          "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+          "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g9-en-v0",
+          "volume": null,
+          "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 9,
+      "chapter": 9,
+      "pairKey": "g9-ch9",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g9-ta-v0",
+          "volume": null,
+          "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+          "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g9-en-v0",
+          "volume": null,
+          "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+          "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 10,
+      "chapter": 1,
+      "pairKey": "g10-ch1",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g10-ta-v0",
+          "volume": null,
+          "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+          "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g10-en-v0",
+          "volume": null,
+          "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+          "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high",
+      "englishExerciseHeadingCount": 6,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 6,
+      "bilingualHeadingParities": 6,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
+    },
+    {
+      "grade": 10,
+      "chapter": 2,
+      "pairKey": "g10-ch2",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g10-ta-v0",
+          "volume": null,
+          "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+          "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g10-en-v0",
+          "volume": null,
+          "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+          "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high",
+      "englishExerciseHeadingCount": 10,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 10,
+      "bilingualHeadingParities": 10,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "pairKey": "g10-ch3",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g10-ta-v0",
+          "volume": null,
+          "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+          "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g10-en-v0",
+          "volume": null,
+          "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+          "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high",
+      "englishExerciseHeadingCount": 20,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 20,
+      "bilingualHeadingParities": 20,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
+    },
+    {
+      "grade": 10,
+      "chapter": 4,
+      "pairKey": "g10-ch4",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g10-ta-v0",
+          "volume": null,
+          "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+          "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g10-en-v0",
+          "volume": null,
+          "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+          "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high",
+      "englishExerciseHeadingCount": 5,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 5,
+      "bilingualHeadingParities": 5,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
+    },
+    {
+      "grade": 10,
+      "chapter": 5,
+      "pairKey": "g10-ch5",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g10-ta-v0",
+          "volume": null,
+          "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+          "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g10-en-v0",
+          "volume": null,
+          "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+          "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high",
+      "englishExerciseHeadingCount": 5,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 5,
+      "bilingualHeadingParities": 5,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
+    },
+    {
+      "grade": 10,
+      "chapter": 6,
+      "pairKey": "g10-ch6",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g10-ta-v0",
+          "volume": null,
+          "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+          "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g10-en-v0",
+          "volume": null,
+          "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+          "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high",
+      "englishExerciseHeadingCount": 5,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 5,
+      "bilingualHeadingParities": 5,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
+    },
+    {
+      "grade": 10,
+      "chapter": 7,
+      "pairKey": "g10-ch7",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g10-ta-v0",
+          "volume": null,
+          "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+          "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g10-en-v0",
+          "volume": null,
+          "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+          "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high",
+      "englishExerciseHeadingCount": 5,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 5,
+      "bilingualHeadingParities": 5,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
+    },
+    {
+      "grade": 10,
+      "chapter": 8,
+      "pairKey": "g10-ch8",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g10-ta-v0",
+          "volume": null,
+          "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+          "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g10-en-v0",
+          "volume": null,
+          "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+          "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high",
+      "englishExerciseHeadingCount": 5,
+      "englishHeadingSource": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+      "englishHeadingInventoryStatus": "SOURCE_HASH_MATCHED_TEXT_LAYER_INDEX_2_EXERCISE_PAGES_SPOT_CHECKED",
+      "tamilExerciseHeadingCount": 5,
+      "bilingualHeadingParities": 5,
+      "bilingualHeadingSource": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+      "bilingualHeadingStatus": "IDENTIFIERS_MATCH_ONLY_SOURCE_TEXT_AND_PARTS_UNREVIEWED"
+    },
+    {
+      "grade": 11,
+      "chapter": 1,
+      "pairKey": "g11-ch1",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g11-ta-v1",
+          "volume": 1,
+          "driveId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
+          "sha256": "0a7b7987216b911f16e7232eec609d56aff67cb540484d93a879cd834ad22e24",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g11-en-v1",
+          "volume": 1,
+          "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+          "sha256": "970f0930d74074c8c45247a4587797bb3d11ca6dcd9e4a9c834b691910f940f0",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 2,
+      "pairKey": "g11-ch2",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g11-ta-v1",
+          "volume": 1,
+          "driveId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
+          "sha256": "0a7b7987216b911f16e7232eec609d56aff67cb540484d93a879cd834ad22e24",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g11-en-v1",
+          "volume": 1,
+          "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+          "sha256": "970f0930d74074c8c45247a4587797bb3d11ca6dcd9e4a9c834b691910f940f0",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 3,
+      "pairKey": "g11-ch3",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g11-ta-v1",
+          "volume": 1,
+          "driveId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
+          "sha256": "0a7b7987216b911f16e7232eec609d56aff67cb540484d93a879cd834ad22e24",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g11-en-v1",
+          "volume": 1,
+          "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+          "sha256": "970f0930d74074c8c45247a4587797bb3d11ca6dcd9e4a9c834b691910f940f0",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 4,
+      "pairKey": "g11-ch4",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g11-ta-v1",
+          "volume": 1,
+          "driveId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
+          "sha256": "0a7b7987216b911f16e7232eec609d56aff67cb540484d93a879cd834ad22e24",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g11-en-v1",
+          "volume": 1,
+          "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+          "sha256": "970f0930d74074c8c45247a4587797bb3d11ca6dcd9e4a9c834b691910f940f0",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 5,
+      "pairKey": "g11-ch5",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g11-ta-v1",
+          "volume": 1,
+          "driveId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
+          "sha256": "0a7b7987216b911f16e7232eec609d56aff67cb540484d93a879cd834ad22e24",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g11-en-v1",
+          "volume": 1,
+          "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+          "sha256": "970f0930d74074c8c45247a4587797bb3d11ca6dcd9e4a9c834b691910f940f0",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 6,
+      "pairKey": "g11-ch6",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g11-ta-v1",
+          "volume": 1,
+          "driveId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
+          "sha256": "0a7b7987216b911f16e7232eec609d56aff67cb540484d93a879cd834ad22e24",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g11-en-v1",
+          "volume": 1,
+          "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+          "sha256": "970f0930d74074c8c45247a4587797bb3d11ca6dcd9e4a9c834b691910f940f0",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 7,
+      "pairKey": "g11-ch7",
+      "mediumSources": {
+        "en": {
+          "bookKey": "g11-en-v2",
+          "volume": 2,
+          "driveId": "1untv9Niccely-Gbu81onCZVS2TyCp45D",
+          "sha256": "565edc0c56e711ce86d7da8fe922c473dafa6725a0bc171c88aec5ae2e22a5dc",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "ta": {
+          "bookKey": "g11-ta-v2",
+          "volume": 2,
+          "driveId": "1o4KgsRPqhKSsJ4vgJeeY_lyTgNeHDMIU",
+          "sha256": "4965766db057e0ca7edc95c306c88abbb7a2dee94ad4a98e8958d91582c94c49",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 8,
+      "pairKey": "g11-ch8",
+      "mediumSources": {
+        "en": {
+          "bookKey": "g11-en-v2",
+          "volume": 2,
+          "driveId": "1untv9Niccely-Gbu81onCZVS2TyCp45D",
+          "sha256": "565edc0c56e711ce86d7da8fe922c473dafa6725a0bc171c88aec5ae2e22a5dc",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "ta": {
+          "bookKey": "g11-ta-v2",
+          "volume": 2,
+          "driveId": "1o4KgsRPqhKSsJ4vgJeeY_lyTgNeHDMIU",
+          "sha256": "4965766db057e0ca7edc95c306c88abbb7a2dee94ad4a98e8958d91582c94c49",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 9,
+      "pairKey": "g11-ch9",
+      "mediumSources": {
+        "en": {
+          "bookKey": "g11-en-v2",
+          "volume": 2,
+          "driveId": "1untv9Niccely-Gbu81onCZVS2TyCp45D",
+          "sha256": "565edc0c56e711ce86d7da8fe922c473dafa6725a0bc171c88aec5ae2e22a5dc",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "ta": {
+          "bookKey": "g11-ta-v2",
+          "volume": 2,
+          "driveId": "1o4KgsRPqhKSsJ4vgJeeY_lyTgNeHDMIU",
+          "sha256": "4965766db057e0ca7edc95c306c88abbb7a2dee94ad4a98e8958d91582c94c49",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 10,
+      "pairKey": "g11-ch10",
+      "mediumSources": {
+        "en": {
+          "bookKey": "g11-en-v2",
+          "volume": 2,
+          "driveId": "1untv9Niccely-Gbu81onCZVS2TyCp45D",
+          "sha256": "565edc0c56e711ce86d7da8fe922c473dafa6725a0bc171c88aec5ae2e22a5dc",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "ta": {
+          "bookKey": "g11-ta-v2",
+          "volume": 2,
+          "driveId": "1o4KgsRPqhKSsJ4vgJeeY_lyTgNeHDMIU",
+          "sha256": "4965766db057e0ca7edc95c306c88abbb7a2dee94ad4a98e8958d91582c94c49",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 11,
+      "pairKey": "g11-ch11",
+      "mediumSources": {
+        "en": {
+          "bookKey": "g11-en-v2",
+          "volume": 2,
+          "driveId": "1untv9Niccely-Gbu81onCZVS2TyCp45D",
+          "sha256": "565edc0c56e711ce86d7da8fe922c473dafa6725a0bc171c88aec5ae2e22a5dc",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "ta": {
+          "bookKey": "g11-ta-v2",
+          "volume": 2,
+          "driveId": "1o4KgsRPqhKSsJ4vgJeeY_lyTgNeHDMIU",
+          "sha256": "4965766db057e0ca7edc95c306c88abbb7a2dee94ad4a98e8958d91582c94c49",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 11,
+      "chapter": 12,
+      "pairKey": "g11-ch12",
+      "mediumSources": {
+        "en": {
+          "bookKey": "g11-en-v2",
+          "volume": 2,
+          "driveId": "1untv9Niccely-Gbu81onCZVS2TyCp45D",
+          "sha256": "565edc0c56e711ce86d7da8fe922c473dafa6725a0bc171c88aec5ae2e22a5dc",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "ta": {
+          "bookKey": "g11-ta-v2",
+          "volume": 2,
+          "driveId": "1o4KgsRPqhKSsJ4vgJeeY_lyTgNeHDMIU",
+          "sha256": "4965766db057e0ca7edc95c306c88abbb7a2dee94ad4a98e8958d91582c94c49",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "normal"
+    },
+    {
+      "grade": 12,
+      "chapter": 1,
+      "pairKey": "g12-ch1",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v1",
+          "volume": 1,
+          "driveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+          "sha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v1",
+          "volume": 1,
+          "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+          "sha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 2,
+      "pairKey": "g12-ch2",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v1",
+          "volume": 1,
+          "driveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+          "sha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v1",
+          "volume": 1,
+          "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+          "sha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 3,
+      "pairKey": "g12-ch3",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v1",
+          "volume": 1,
+          "driveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+          "sha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v1",
+          "volume": 1,
+          "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+          "sha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 4,
+      "pairKey": "g12-ch4",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v1",
+          "volume": 1,
+          "driveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+          "sha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v1",
+          "volume": 1,
+          "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+          "sha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 5,
+      "pairKey": "g12-ch5",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v1",
+          "volume": 1,
+          "driveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+          "sha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v1",
+          "volume": 1,
+          "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+          "sha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 6,
+      "pairKey": "g12-ch6",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v1",
+          "volume": 1,
+          "driveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+          "sha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v1",
+          "volume": 1,
+          "driveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+          "sha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 7,
+      "pairKey": "g12-ch7",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v2",
+          "volume": 2,
+          "driveId": "1XdaQTr6BsERWUJNQr-yUsxr7bKnfMxtw",
+          "sha256": "3b5769235e90e3176719d15110a9eabbccbcbd3ec23d66cd12068a4115f4ebea",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v2",
+          "volume": 2,
+          "driveId": "1EpNZmRikhWY6zsYRMnAtC4N_K6S3iB34",
+          "sha256": "379e496ea7d093fe5cf8a9a3801128a5645344b1c431d6ed9665886751c48c75",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 8,
+      "pairKey": "g12-ch8",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v2",
+          "volume": 2,
+          "driveId": "1XdaQTr6BsERWUJNQr-yUsxr7bKnfMxtw",
+          "sha256": "3b5769235e90e3176719d15110a9eabbccbcbd3ec23d66cd12068a4115f4ebea",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v2",
+          "volume": 2,
+          "driveId": "1EpNZmRikhWY6zsYRMnAtC4N_K6S3iB34",
+          "sha256": "379e496ea7d093fe5cf8a9a3801128a5645344b1c431d6ed9665886751c48c75",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 9,
+      "pairKey": "g12-ch9",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v2",
+          "volume": 2,
+          "driveId": "1XdaQTr6BsERWUJNQr-yUsxr7bKnfMxtw",
+          "sha256": "3b5769235e90e3176719d15110a9eabbccbcbd3ec23d66cd12068a4115f4ebea",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v2",
+          "volume": 2,
+          "driveId": "1EpNZmRikhWY6zsYRMnAtC4N_K6S3iB34",
+          "sha256": "379e496ea7d093fe5cf8a9a3801128a5645344b1c431d6ed9665886751c48c75",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 10,
+      "pairKey": "g12-ch10",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v2",
+          "volume": 2,
+          "driveId": "1XdaQTr6BsERWUJNQr-yUsxr7bKnfMxtw",
+          "sha256": "3b5769235e90e3176719d15110a9eabbccbcbd3ec23d66cd12068a4115f4ebea",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v2",
+          "volume": 2,
+          "driveId": "1EpNZmRikhWY6zsYRMnAtC4N_K6S3iB34",
+          "sha256": "379e496ea7d093fe5cf8a9a3801128a5645344b1c431d6ed9665886751c48c75",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 11,
+      "pairKey": "g12-ch11",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v2",
+          "volume": 2,
+          "driveId": "1XdaQTr6BsERWUJNQr-yUsxr7bKnfMxtw",
+          "sha256": "3b5769235e90e3176719d15110a9eabbccbcbd3ec23d66cd12068a4115f4ebea",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v2",
+          "volume": 2,
+          "driveId": "1EpNZmRikhWY6zsYRMnAtC4N_K6S3iB34",
+          "sha256": "379e496ea7d093fe5cf8a9a3801128a5645344b1c431d6ed9665886751c48c75",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    },
+    {
+      "grade": 12,
+      "chapter": 12,
+      "pairKey": "g12-ch12",
+      "mediumSources": {
+        "ta": {
+          "bookKey": "g12-ta-v2",
+          "volume": 2,
+          "driveId": "1XdaQTr6BsERWUJNQr-yUsxr7bKnfMxtw",
+          "sha256": "3b5769235e90e3176719d15110a9eabbccbcbd3ec23d66cd12068a4115f4ebea",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        },
+        "en": {
+          "bookKey": "g12-en-v2",
+          "volume": 2,
+          "driveId": "1EpNZmRikhWY6zsYRMnAtC4N_K6S3iB34",
+          "sha256": "379e496ea7d093fe5cf8a9a3801128a5645344b1c431d6ed9665886751c48c75",
+          "edition": "2025",
+          "contentsImagesChecked": true
+        }
+      },
+      "chapterQuestionCount": null,
+      "chapterSubpartCount": null,
+      "completeSourcePageInventory": false,
+      "priority": "high"
+    }
+  ],
+  "boundedNewGrade10EnglishExerciseIndex": {
+    "source": "docs/trace/source-inventories/g10-en-2025-exercise-heading-index.json",
+    "sourceSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+    "exerciseHeadings": 61,
+    "chapterCounts": {
+      "1": 6,
+      "2": 10,
+      "3": 20,
+      "4": 5,
+      "5": 5,
+      "6": 5,
+      "7": 5,
+      "8": 5
+    },
+    "status": "ENGLISH_ONLY_TEXT_LAYER_LOCATOR_INDEX_AWAITING_FULL_IMAGE_AND_TAMIL_PARITY",
+    "questionPartDenominatorEstablished": false
+  },
+  "boundedGrade10BilingualHeadingAudit": {
+    "source": "docs/trace/source-inventories/g10-2025-bilingual-exercise-heading-parity.json",
+    "matchedHeadingIdentifiers": 61,
+    "verifiedQuestionAndPartDenominator": false,
+    "contentParityCertified": false
+  }
+}
