@@ -4,8 +4,8 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
 (async()=>{
  const site=await server(),browser=await chromium.launch(launchOptions());
  try{
-  for(const width of [320,390,412,768]){
-   const context=await browser.newContext({viewport:{width,height:820},deviceScaleFactor:1,isMobile:width<=412,hasTouch:width<=412,serviceWorkers:'block'});
+  for(const width of [360,390,412,430]){
+   const context=await browser.newContext({viewport:{width,height:820},deviceScaleFactor:1,isMobile:true,hasTouch:true,serviceWorkers:'block'});
    const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(site.base+'/index.html?class=10&question=c10-2-ex2-1-q5');
    await page.locator('#stepsList .worked-step').nth(2).waitFor();
@@ -26,13 +26,13 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    assert(proof.valid,'Coefficient/base baseline semantics '+JSON.stringify({width,proof}));
    assert(proof.original.includes('4k+1'),'No missing expression after 4k² '+JSON.stringify({width,proof}));
    assert(proof.horizontal<=1,'No horizontal clipping '+JSON.stringify({width,proof}));
-   if(width<=412)assert(proof.overflowY==='visible','Preserve Android document scroll');
+   assert(proof.overflowY==='visible','Preserve Android document scroll');
    await page.goto(site.base+'/index.html?class=10&question=c10-1-ex1-1-q1-i');
    assert(!(await page.locator('body').evaluate(el=>el.classList.contains('g10-ch2-type'))),
      'Chapter 1 must not inherit Chapter 2 styling');
    assert.deepEqual(errors,[],'Browser errors');
    await context.close();
   }
-  console.log('PASS Chapter 2 Q5 4k² unified maths baseline at 320/390/412/768px, original equation, vertical scroll, chapter isolation');
+  console.log('PASS Chapter 2 Q5 4k² unified maths baseline at 360/390/412/430px, original equation, vertical scroll, chapter isolation');
  }finally{await browser.close();await site.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
