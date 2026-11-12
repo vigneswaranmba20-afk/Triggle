@@ -24,7 +24,7 @@ assert.equal(bilingualHeadings.entries.length,61);
 for(const h of bilingualHeadings.entries){
  assert(h.enPdfPage>0&&h.enPdfPage<340);
  assert(h.taPdfPage>0&&h.taPdfPage<351);
- assert.equal(h.questionAndSubpartParityChecked,h.exercise==='8.2');
+ assert.equal(h.questionAndSubpartParityChecked,['8.2','8.3'].includes(h.exercise));
  assert.equal(headingIndex.entries.find(e=>e.exercise===h.exercise)?.pdfPage,h.enPdfPage);
 }
 
@@ -32,7 +32,7 @@ assert.equal(headingIndex.exerciseHeadingCount,61);
 assert.equal(headingIndex.entries.length,61);
 assert.equal(headingIndex.source.pdfSha256,'602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d');
 assert.equal(headingIndex.sourcePageImageAllHeadingsVerified,false);
-assert.equal(headingIndex.bilingualCrossCheck,'PARTIAL_EX8_2_NUMBERS_AND_SUBPARTS_ONLY');
+assert.equal(headingIndex.bilingualCrossCheck,'PARTIAL_EX8_2_AND_EX8_3_NUMBERS_AND_SUBPARTS_ONLY');
 for(let chapter=1;chapter<=8;chapter++){
  const entry=chapterQueue.chapters.find(c=>c.grade===10&&c.chapter===chapter);
  const headings=headingIndex.entries.filter(h=>h.chapter===chapter);
@@ -41,7 +41,7 @@ for(let chapter=1;chapter<=8;chapter++){
  assert.equal(entry.bilingualHeadingParities,headings.length);
  assert.equal(headings.length,headingIndex.chapterExerciseHeadingCounts[String(chapter)]);
  assert.deepEqual(headings.map(h=>h.exercise),headings.map((h,i)=>chapter+'.'+(i+1)));
- for(const h of headings){assert(h.pdfPage>=1&&h.pdfPage<339);assert.equal(h.questionCount,h.exercise==='8.2'?8:null);assert.equal(h.subpartCount,h.exercise==='8.2'?8:null);}
+ for(const h of headings){assert(h.pdfPage>=1&&h.pdfPage<339);assert.equal(h.questionCount,h.exercise==='8.2'?8:h.exercise==='8.3'?13:null);assert.equal(h.subpartCount,h.exercise==='8.2'?8:h.exercise==='8.3'?29:null);}
 }
 
 
@@ -81,9 +81,61 @@ for(const q of ex82.questions){
  }
 }
 assert.equal(headingIndex.entries.find(x=>x.exercise==='8.2').imageVerified,true);
-assert.equal(bilingualHeadings.entries.filter(x=>x.questionAndSubpartParityChecked).length,1);
+assert.equal(bilingualHeadings.entries.filter(x=>x.questionAndSubpartParityChecked).length,2);
 assert.equal(headingIndex.sourcePageImageAllHeadingsVerified,false);
 assert.equal(bilingualHeadings.questionTextParityCertified,false);
+
+
+ // New bounded source-page inventory: G10 Statistics/Probability Ex8.3.
+ // Prevent silently treating figure/tree requests as full solution coverage.
+ const ex83=require('../../../docs/trace/source-inventories/g10-ch8-ex8-3.json');
+ assert.equal(ex83.sourcePageInventoryStatus,'BOTH_ORIGINAL_MEDIUM_PAGE_IMAGES_CHECKED');
+ assert.equal(ex83.questionStems,13);assert.equal(ex83.questionParts,29);
+ assert.equal(ex83.mediumRepresentations,58);
+ assert.equal(ex83.questions.length,13);
+ assert.deepEqual(ex83.questions.map(q=>q.question),Array.from({length:13},(_,i)=>String(i+1)));
+ const expectedParts={1:1,2:1,3:2,4:1,5:2,6:2,7:4,8:4,9:4,10:1,11:1,12:3,13:3};
+ assert.equal(Object.values(expectedParts).reduce((n,p)=>n+p,0),29);
+ for(const q of ex83.questions){
+  assert.equal(q.parts.length,expectedParts[q.question]);
+  assert(q.parts.length===1?q.parts[0]==='whole':q.parts.every((p,i)=>p===['i','ii','iii','iv'][i]));
+  assert(q.crossMediumIntentAndNumbersChecked===true);
+  assert.equal(q.runtimeAndPrReconciliation,'NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY');
+  assert.equal(q.sourceDiscrepancy,null);assert.equal(q.tablesRequired,false);
+ }
+ assert.deepEqual(ex83.questions.filter(q=>q.diagramRequested).map(q=>q.question),['1','2']);
+ assert.deepEqual(ex83.questions.filter(q=>q.figuresRequired).map(q=>q.question),['11']);
+ assert.equal(ex83.figureEvidence.question,'11');
+ assert.deepEqual(ex83.figureEvidence.rectangle,{widthFeet:4,heightFeet:3});
+ assert.deepEqual(ex83.figureEvidence.targetCircle,{radiusFeet:1});
+ assert.equal(ex83.figureEvidence.piGiven,3.14);
+ assert.match(ex83.questions.find(q=>q.question==='3').symbolEvidence,/overbar/i);
+ assert.deepEqual(ex83.questions.find(q=>q.question==='3').numericalEvidenceBothMediums,[17,15,640]);
+ assert.deepEqual(ex83.questions.find(q=>q.question==='9').numericalEvidenceBothMediums,[5,6,7,8]);
+ assert.deepEqual(ex83.questions.find(q=>q.question==='11').numericalEvidenceBothMediums,[4,3,1,3.14]);
+ assert.equal(ex83.exerciseSourceInventoryComplete,true);
+ assert.equal(ex83.chapterSourceInventoryComplete,false);
+ assert.equal(ex83.allGradeQuestionDenominator,null);
+ assert.equal(ex83.professionalTamilReview,'pending');
+ assert.equal(ex83.teacherApproval,'not performed (owner deferred)');
+ assert.equal(ex83.mathSolutionsVerified,false);
+ assert.equal(ex83.realPilotEligibleParts,0);
+ assert.equal(ex83.releaseApproved,false);
+ assert.deepEqual(ex83.sources.map(s=>s.medium),['en','ta']);
+ for(const s of ex83.sources){
+  assert.equal(s.pdfSha256,s.medium==='en'?headingIndex.source.pdfSha256:bilingualHeadings.tamil.sha256);
+  assert.equal(s.pages.length,2);
+  assert(s.pages.every(page=>page.pdfPage>0&&page.printedPage>0&&page.visualChecked&&/^[a-f0-9]{64}$/.test(page.imageSha256)));
+ }
+ for(const q of ex83.questions)for(const medium of ['en','ta']){
+  const sr=ex83.sources.find(s=>s.medium===medium);
+  assert(sr.pages.some(p=>p.pdfPage===q.sourceLocators[medium].pdfPage&&p.printedPage===q.sourceLocators[medium].printedPage));
+ }
+ assert.equal(headingIndex.entries.find(x=>x.exercise==='8.3').imageVerified,true);
+ assert.equal(headingIndex.sourcePageImageAllHeadingsVerified,false);
+ assert.equal(bilingualHeadings.fullImageReviewComplete,false);
+ assert.equal(bilingualHeadings.questionTextParityCertified,false);
+ assert.equal(bilingualHeadings.tamilTranslationReviewed,false);
 
 assert.equal(report.totalMilestones,18);assert.equal(report.baselinePercentComplete,44.44);assert.equal(report.originalBaselinePercentComplete,40);
 assert.equal(report.curriculumPercent,null);assert.equal(report.pilotRealPercent,0);
