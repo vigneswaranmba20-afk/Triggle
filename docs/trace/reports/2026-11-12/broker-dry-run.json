@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "mode": "offline",
+  "adapterAvailability": [
+    {
+      "id": "offline-mock-v1",
+      "local": true,
+      "credentialAvailable": null
+    }
+  ],
+  "reservedCostUsd": 0,
+  "events": [
+    {
+      "key": "d926495dab41cccdf28530f3ab782ffbbdffc968398995397a67a29849eea748",
+      "adapter": "offline-mock-v1",
+      "attempt": 0,
+      "status": "candidate",
+      "reservedMicros": 0
+    }
+  ],
+  "policy": "Outputs are candidates. Reserved cost is a conservative ceiling, not a provider invoice. No input text or credential values in traces.",
+  "fixture": "LABELLED_SYNTHETIC_NOT_TEXTBOOK_CONTENT",
+  "results": [
+    {
+      "ok": true,
+      "result": {
+        "key": "d926495dab41cccdf28530f3ab782ffbbdffc968398995397a67a29849eea748",
+        "adapter": "offline-mock-v1",
+        "status": "UNTRUSTED_CANDIDATE",
+        "output": {
+          "label": "SYNTHETIC_CANDIDATE",
+          "reviewRequired": true
+        },
+        "cacheHit": false
+      }
+    }
+  ]
+}

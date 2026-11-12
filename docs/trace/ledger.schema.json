@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TRACE reconciliation projection; candidate indexes never certify source equivalence",
+  "type": "object",
+  "required": ["schemaVersion", "type", "mainSha", "summary", "ledger", "gaps", "expectedMissingParts", "validation", "pilot"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "type": {"const": "TRACE_RECONCILIATION"},
+    "mainSha": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "ledger": {"type": "array", "items": {"$ref": "#/$defs/row"}},
+    "gaps": {"type": "array", "items": {"type": "object", "required": ["grade", "chapter", "numberedQuestionDenominator", "sourceTaskDenominator", "knownMissingParts"]}},
+    "expectedMissingParts": {"type": "array", "items": {"type": "object", "required": ["key", "location", "stages", "source", "uncertainty"]}},
+    "summary": {"type": "object"},
+    "validation": {"type": "object"},
+    "pilot": {"type": "object", "properties": {"status": {"enum": ["NOT_STARTED", "BLOCKED"]}}}
+  },
+  "$defs": {
+    "evidenceState": {"type": ["boolean", "null"]},
+    "stages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["missing", "candidate", "source-checked", "math-checked", "language-reviewed", "ready-for-integration", "merged", "deployed", "live-verified"],
+      "properties": {
+        "missing": {"$ref": "#/$defs/evidenceState"},
+        "candidate": {"$ref": "#/$defs/evidenceState"},
+        "source-checked": {"$ref": "#/$defs/evidenceState"},
+        "math-checked": {"$ref": "#/$defs/evidenceState"},
+        "language-reviewed": {"$ref": "#/$defs/evidenceState"},
+        "ready-for-integration": {"$ref": "#/$defs/evidenceState"},
+        "merged": {"$ref": "#/$defs/evidenceState"},
+        "deployed": {"$ref": "#/$defs/evidenceState"},
+        "live-verified": {"$ref": "#/$defs/evidenceState"}
+      }
+    },
+    "row": {
+      "type": "object",
+      "required": ["key", "crossMediumKey", "appId", "module", "hashes", "location", "stages", "source", "uncertainty"],
+      "properties": {
+        "key": {"type": "string"},
+        "crossMediumKey": {"type": "string"},
+        "appId": {"type": "string"},
+        "module": {"type": "string"},
+        "hashes": {"type": "object", "required": ["record", "text", "normalizedText", "module"]},
+        "location": {"type": "object", "required": ["grade", "edition", "volume", "chapter", "exercise", "question", "part", "medium"]},
+        "stages": {"$ref": "#/$defs/stages"},
+        "source": {"type": ["object", "null"]},
+        "uncertainty": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

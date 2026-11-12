@@ -1,0 +1,225 @@
+{
+  "scope": "Regenerated base class-10 labels only; not source verification or the full runtime. Prior invalid input preserved in published_legacy_evidence.error.txt.",
+  "items": [
+    {
+      "id": "c10-6-6-1-1",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.1 · Q1(i)",
+        "ta": "பயிற்சி 6.1 · வினா 1(i)"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-1-2",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.1 · Q1(ii)",
+        "ta": "பயிற்சி 6.1 · வினா 1(ii)"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-1-3",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.1 · Q2(ii)",
+        "ta": "பயிற்சி 6.1 · வினா 2(ii)"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-2-4",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.2 · Q1",
+        "ta": "பயிற்சி 6.2 · வினா 1"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-2-5",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.2 · Q2",
+        "ta": "பயிற்சி 6.2 · வினா 2"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-2-6",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.2 · Q3",
+        "ta": "பயிற்சி 6.2 · வினா 3"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-3-7",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.3 · Q1",
+        "ta": "பயிற்சி 6.3 · வினா 1"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-3-8",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.3 · Q2",
+        "ta": "பயிற்சி 6.3 · வினா 2"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-3-9",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.3 · Q4",
+        "ta": "பயிற்சி 6.3 · வினா 4"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-4-10",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.4 · Q1",
+        "ta": "பயிற்சி 6.4 · வினா 1"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-4-11",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.4 · Q2",
+        "ta": "பயிற்சி 6.4 · வினா 2"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-4-12",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.4 · Q4",
+        "ta": "பயிற்சி 6.4 · வினா 4"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-5-13",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.5 · Q1",
+        "ta": "பயிற்சி 6.5 · வினா 1"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-5-14",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.5 · Q2",
+        "ta": "பயிற்சி 6.5 · வினா 2"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-5-15",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.5 · Q6",
+        "ta": "பயிற்சி 6.5 · வினா 6"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-5-16",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Exercise 6.5 · Q7",
+        "ta": "பயிற்சி 6.5 · வினா 7"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-6-6-unit-17",
+      "classNum": 10,
+      "chapter": "6",
+      "label": {
+        "en": "Unit Exercise 6 · Q1(ii)",
+        "ta": "Unit பயிற்சி 6 · வினா 1(ii)"
+      },
+      "kind": "textbook",
+      "reference": "Earlier-edition textbook exercise; confirm prescribed edition"
+    },
+    {
+      "id": "c10-3-3-practice-18",
+      "classNum": 10,
+      "chapter": "3",
+      "label": {
+        "en": "Triggle Practice · Quadratic A",
+        "ta": "Triggle பயிற்சி · வினா uadratic A"
+      },
+      "kind": "practice",
+      "reference": "Original Triggle practice — not a numbered textbook question"
+    },
+    {
+      "id": "c10-2-2-practice-19",
+      "classNum": 10,
+      "chapter": "2",
+      "label": {
+        "en": "Triggle Practice · Sequence A",
+        "ta": "Triggle பயிற்சி · Sequence A"
+      },
+      "kind": "practice",
+      "reference": "Original Triggle practice — not a numbered textbook question"
+    },
+    {
+      "id": "c10-5-5-practice-20",
+      "classNum": 10,
+      "chapter": "5",
+      "label": {
+        "en": "Triggle Practice · Midpoint A",
+        "ta": "Triggle பயிற்சி · Midpoint A"
+      },
+      "kind": "practice",
+      "reference": "Original Triggle practice — not a numbered textbook question"
+    }
+  ]
+}

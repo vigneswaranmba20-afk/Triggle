@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "type": "TRACE_READ_ONLY_INTAKE",
+  "scope": "provided staging ZIPs and optional PR/live snapshots, NOT full textbook denominator",
+  "archives": [
+    {
+      "name": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "sha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "rows": 6,
+      "release_ready": false,
+      "status": "WIP_NOT_CHAPTER_COMPLETE"
+    },
+    {
+      "name": "G10_W2_2026-11-11_batch02_WIP.zip",
+      "sha256": "73696700437d151721484ccc8361e7f463626d61e4c8d869584fe1c28266f852",
+      "rows": 2,
+      "release_ready": false,
+      "status": "WIP_NOT_CHAPTER_COMPLETE"
+    },
+    {
+      "name": "G10_W3_2026-11-11_batch02_WIP.zip",
+      "sha256": "cf77a5211a070cc457d57f2e3dedb42aa1ef92d59ef995818b56ffe8435c787d",
+      "rows": 2,
+      "release_ready": false,
+      "status": "WIP_NOT_CHAPTER_COMPLETE"
+    },
+    {
+      "name": "G10_W4_2026-11-11_batch02_WIP.zip",
+      "sha256": "761511c95f53e49fdf3be62d00311ed633311b8fdd244b57146e14c88df4a2ca",
+      "rows": 4,
+      "release_ready": false,
+      "status": "WIP_NOT_CHAPTER_COMPLETE"
+    },
+    {
+      "name": "G10_W5_2026-11-11_batch02_WIP.zip",
+      "sha256": "54df234a571ef6fced9b9d34af092c97b33b8e04b9f29794c8e223b2932f7e16",
+      "rows": 2,
+      "release_ready": false,
+      "status": "WIP_NOT_CHAPTER_COMPLETE"
+    }
+  ],
+  "summary": {
+    "archive_records": 16,
+    "unique_staging_ids": 16,
+    "records_overlapping_supplied_drafts": 6,
+    "records_with_possible_legacy_live_label": 3,
+    "items_without_structured_working": 8,
+    "chapter_complete": false,
+    "new_release_count": 0
+  },
+  "records": [
+    {
+      "key": "g10/ch1/ex1.2/q1/i",
+      "id": "g10-ch01-ex1.2-q1-i",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "reported_status": "verified_math_source_visual_checked",
+      "carried_forward": false,
+      "draft_prs": [
+        "114"
+      ],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch1/ex1.2/q1/ii",
+      "id": "g10-ch01-ex1.2-q1-ii",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "reported_status": "verified_math_source_visual_checked",
+      "carried_forward": false,
+      "draft_prs": [
+        "114"
+      ],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch1/ex1.2/q1/iii",
+      "id": "g10-ch01-ex1.2-q1-iii",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "reported_status": "verified_math_source_visual_checked",
+      "carried_forward": false,
+      "draft_prs": [
+        "114"
+      ],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch1/ex1.2/q1/iv",
+      "id": "g10-ch01-ex1.2-q1-iv",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "reported_status": "verified_math_source_visual_checked",
+      "carried_forward": false,
+      "draft_prs": [
+        "114"
+      ],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch1/ex1.2/q2/-",
+      "id": "g10-ch01-ex1.2-q2",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "reported_status": "verified_math_source_visual_checked",
+      "carried_forward": false,
+      "draft_prs": [
+        "114"
+      ],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch1/ex1.2/q3/-",
+      "id": "g10-ch01-ex1.2-q3",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "reported_status": "verified_math_source_visual_checked",
+      "carried_forward": false,
+      "draft_prs": [
+        "114"
+      ],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch3/ex3.1/q1/ii",
+      "id": "g10-ch03-ex3.1-q1-ii",
+      "archive": "G10_W2_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "73696700437d151721484ccc8361e7f463626d61e4c8d869584fe1c28266f852",
+      "reported_status": "source_image_verified_math_verified",
+      "carried_forward": false,
+      "draft_prs": [],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "no_structured_steps_check_markdown",
+        "source_page_schema_review",
+        "source_page_schema_review_ta",
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch3/ex3.1/q1/iii",
+      "id": "g10-ch03-ex3.1-q1-iii",
+      "archive": "G10_W2_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "73696700437d151721484ccc8361e7f463626d61e4c8d869584fe1c28266f852",
+      "reported_status": "source_image_verified_math_verified",
+      "carried_forward": false,
+      "draft_prs": [],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "no_structured_steps_check_markdown",
+        "source_page_schema_review",
+        "source_page_schema_review_ta",
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch4/ex4.1/q1/i",
+      "id": "g10-ch04-ex4.1-q1-i",
+      "archive": "G10_W3_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "cf77a5211a070cc457d57f2e3dedb42aa1ef92d59ef995818b56ffe8435c787d",
+      "reported_status": "verified_math_source_figure",
+      "carried_forward": false,
+      "draft_prs": [],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "figure_visual_check_required",
+        "no_structured_steps_check_markdown",
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch4/ex4.1/q1/ii",
+      "id": "g10-ch04-ex4.1-q1-ii",
+      "archive": "G10_W3_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "cf77a5211a070cc457d57f2e3dedb42aa1ef92d59ef995818b56ffe8435c787d",
+      "reported_status": "verified_math_source_figure",
+      "carried_forward": false,
+      "draft_prs": [],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "figure_visual_check_required",
+        "no_structured_steps_check_markdown",
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch6/ex6.1/q1/i",
+      "id": "g10-ch06-ex6.1-q1-i",
+      "archive": "G10_W4_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "761511c95f53e49fdf3be62d00311ed633311b8fdd244b57146e14c88df4a2ca",
+      "reported_status": "source_image_checked_math_independently_verified",
+      "carried_forward": true,
+      "draft_prs": [],
+      "possible_legacy_live_ids": [
+        "c10-6-6-1-1"
+      ],
+      "risk_flags": [
+        "no_structured_english_question",
+        "no_structured_steps_check_markdown",
+        "no_structured_tamil_question",
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch6/ex6.1/q1/ii",
+      "id": "g10-ch06-ex6.1-q1-ii",
+      "archive": "G10_W4_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "761511c95f53e49fdf3be62d00311ed633311b8fdd244b57146e14c88df4a2ca",
+      "reported_status": "source_image_checked_math_independently_verified",
+      "carried_forward": true,
+      "draft_prs": [],
+      "possible_legacy_live_ids": [
+        "c10-6-6-1-2"
+      ],
+      "risk_flags": [
+        "no_structured_english_question",
+        "no_structured_steps_check_markdown",
+        "no_structured_tamil_question",
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch6/ex6.1/q2/i",
+      "id": "g10-ch06-ex6.1-q2-i",
+      "archive": "G10_W4_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "761511c95f53e49fdf3be62d00311ed633311b8fdd244b57146e14c88df4a2ca",
+      "reported_status": "source_image_checked_math_independently_verified",
+      "carried_forward": false,
+      "draft_prs": [],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch6/ex6.1/q2/ii",
+      "id": "g10-ch06-ex6.1-q2-ii",
+      "archive": "G10_W4_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "761511c95f53e49fdf3be62d00311ed633311b8fdd244b57146e14c88df4a2ca",
+      "reported_status": "source_image_checked_math_independently_verified",
+      "carried_forward": false,
+      "draft_prs": [],
+      "possible_legacy_live_ids": [
+        "c10-6-6-1-3"
+      ],
+      "risk_flags": [
+        "tamil_review_pending"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch8/ex8.1/q3/-",
+      "id": "g10-ch08-ex8.1-q3",
+      "archive": "G10_W5_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "54df234a571ef6fced9b9d34af092c97b33b8e04b9f29794c8e223b2932f7e16",
+      "reported_status": "bilingual_source_image_verified_solution_checked",
+      "carried_forward": false,
+      "draft_prs": [],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "no_structured_steps_check_markdown"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    },
+    {
+      "key": "g10/ch8/ex8.1/q4/-",
+      "id": "g10-ch08-ex8.1-q4",
+      "archive": "G10_W5_2026-11-11_batch02_WIP.zip",
+      "source_sha256": "54df234a571ef6fced9b9d34af092c97b33b8e04b9f29794c8e223b2932f7e16",
+      "reported_status": "bilingual_source_image_verified_solution_checked",
+      "carried_forward": false,
+      "draft_prs": [],
+      "possible_legacy_live_ids": [],
+      "risk_flags": [
+        "no_structured_steps_check_markdown"
+      ],
+      "source_verified_claimed": true,
+      "independent_external_review": false,
+      "student_live_verified": false
+    }
+  ]
+}
