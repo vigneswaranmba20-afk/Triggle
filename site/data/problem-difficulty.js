@@ -3965,6 +3965,36 @@ const metadata={
       "level": "medium",
       "basis": "Prime-power LCM reasoning for the first ten natural numbers.",
       "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q11": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Seven-class weighted grouped-data standard deviation using midpoints",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q12": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Inclusive grouped-diameter midpoints and weighted variance",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q13": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Five-bin grouped race-time variance and square root",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q14": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Correct both first and second moments after two data-entry substitutions",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q15": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Recover two observations from both sum and sum of squares",
+      "review": "implementation-audit"
     }
   },
   "solutionReviews": {
