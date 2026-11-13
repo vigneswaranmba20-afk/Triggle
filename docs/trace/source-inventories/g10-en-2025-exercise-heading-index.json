@@ -9,7 +9,7 @@
     "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
     "pdfPages": 352
   },
-  "indexMethod": "Exact text-layer Exercise N.N heading match through PDF p338; first occurrences in body only. Visually spot-checked PDF pages 12 and 319 and answer appendix PDF p340, which is explicitly excluded. Not a complete page-by-page image validation. Grade 10 Exercise 8.2 English original PDF p322 and Tamil original PDF pp331-332 were additionally inspected visually for Q1-Q8 numerical/count parity. Exercise 8.3 original 2025 English PDF pp328–329 and Tamil PDF pp340–341 were separately visually reviewed for Q1–Q13 and 29 labelled parts, numerical/figure consistency. Exercise 8.4 English PDF p335 and Tamil pp347–348 additionally visually checked: 13 question stems, 15 labelled parts; Q1 source numerical contradiction quarantined and Q4 complement bars preserved. Exercise 8.5 visually reviewed English original PDF pp336–337 and Tamil original PDF pp348–349, 15 whole single-choice questions with four options each; Q11 book-page-count ambiguity retained. Exercise 7.1 source-page image inspection: EN PDF p288 (printed282) and TA p296 (printed290), Q1–Q10 all whole parts, single table-lamp frustum illustration for Q10; 7.3 cylinder figure excluded.",
+  "indexMethod": "Exact text-layer Exercise N.N heading match through PDF p338; first occurrences in body only. Visually spot-checked PDF pages 12 and 319 and answer appendix PDF p340, which is explicitly excluded. Not a complete page-by-page image validation. Grade 10 Exercise 8.2 English original PDF p322 and Tamil original PDF pp331-332 were additionally inspected visually for Q1-Q8 numerical/count parity. Exercise 8.3 original 2025 English PDF pp328–329 and Tamil PDF pp340–341 were separately visually reviewed for Q1–Q13 and 29 labelled parts, numerical/figure consistency. Exercise 8.4 English PDF p335 and Tamil pp347–348 additionally visually checked: 13 question stems, 15 labelled parts; Q1 source numerical contradiction quarantined and Q4 complement bars preserved. Exercise 8.5 visually reviewed English original PDF pp336–337 and Tamil original PDF pp348–349, 15 whole single-choice questions with four options each; Q11 book-page-count ambiguity retained. Exercise 7.1 source-page image inspection: EN PDF p288 (printed282) and TA p296 (printed290), Q1–Q10 all whole parts, single table-lamp frustum illustration for Q10; 7.3 cylinder figure excluded. Exercise 7.2 English PDF p296 and Tamil p304 source page images visually verified Q1–Q10, ten whole parts and radical 3√3:4 in Q8. Figure 7.36 immediately above heading is excluded.",
   "exerciseHeadingCount": 61,
   "chapterExerciseHeadingCounts": {
     "1": 6,
@@ -21,7 +21,7 @@
     "7": 5,
     "8": 5
   },
-  "bilingualCrossCheck": "PARTIAL_EX7_1_AND_EX8_2_EX8_3_EX8_4_EX8_5_NUMBERS_AND_SUBPARTS_ONLY",
+  "bilingualCrossCheck": "PARTIAL_EX7_1_EX7_2_AND_EX8_2_EX8_3_EX8_4_EX8_5_NUMBERS_AND_SUBPARTS_ONLY",
   "questionAndSubpartCounts": "UNKNOWN",
   "questionCount": null,
   "subpartCount": null,
@@ -501,9 +501,9 @@
       "grade": 10,
       "chapter": 7,
       "pdfPage": 296,
-      "questionCount": null,
-      "subpartCount": null,
-      "imageVerified": false
+      "questionCount": 10,
+      "subpartCount": 10,
+      "imageVerified": true
     },
     {
       "exercise": "7.3",
@@ -581,7 +581,7 @@
   "limitations": [
     "Exercise heading starts only: not a complete count or verification of question texts, subparts, mathematical figures or tables.",
     "PDF page numbers are 1-based; some exercise headings share the same PDF page.",
-    "Whole-grade Tamil page audit and question/part parity remain outstanding except Exercises 7.1, 8.2, 8.3, 8.4 and 8.5; runtime and open-PR reconciliation for these bounded inventories is not established.",
+    "Whole-grade Tamil page audit and question/part parity remain outstanding except Exercises 7.1, 7.2, 8.2, 8.3, 8.4 and 8.5; runtime and open-PR reconciliation for these bounded inventories is not established.",
     "Worked examples and answer appendix headings are excluded."
   ]
 }

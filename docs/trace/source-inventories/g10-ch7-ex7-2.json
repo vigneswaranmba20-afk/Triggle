@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "grade": 10,
+  "chapter": "7",
+  "exercise": "7.2",
+  "scope": "Exercise 7.2 original-page bilingual question/part and numerical-symbol source inventory only; not Chapter 7/full grade, authored solutions, teacher certification, student release, or pilot eligibility.",
+  "sourcePageInventoryStatus": "BOTH_ORIGINAL_MEDIUM_PAGE_IMAGES_CHECKED",
+  "questionStems": 10,
+  "questionParts": 10,
+  "crossMediumPartsCountedOnce": true,
+  "mediumRepresentations": 20,
+  "questions": [
+    {
+      "question": "1",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 296,
+          "printedPage": 290
+        },
+        "ta": {
+          "pdfPage": 304,
+          "printedPage": 298
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        14,
+        10,
+        5
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Well depth 14 m, inner diameter 10 m, excavated earth forms annular embankment of width 5 m; find embankment height."
+    },
+    {
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 296,
+          "printedPage": 290
+        },
+        "ta": {
+          "pdfPage": 304,
+          "printedPage": 298
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        20,
+        9,
+        5,
+        4
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Glass inner diameter 20 cm, initial water depth 9 cm; completely immersed cylinder radius 5 cm and height 4 cm; find water rise."
+    },
+    {
+      "question": "3",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 296,
+          "printedPage": 290
+        },
+        "ta": {
+          "pdfPage": 304,
+          "printedPage": 298
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        484,
+        105
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Conical wood with circumference 484 cm and height 105 cm; find volume. The source assumes cone base circumference without a separate numerical radius."
+    },
+    {
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 296,
+          "printedPage": 290
+        },
+        "ta": {
+          "pdfPage": 304,
+          "printedPage": 298
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        10,
+        15,
+        25
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Petrol cone radius 10 m, height 15 m, discharges 25 cubic metres per minute; round emptying time to nearest minute."
+    },
+    {
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 296,
+          "printedPage": 290
+        },
+        "ta": {
+          "pdfPage": 304,
+          "printedPage": 298
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        6,
+        8,
+        10
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "6–8–10 right triangle rotated separately about the two legs; difference between resulting cone volumes."
+    },
+    {
+      "question": "6",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 296,
+          "printedPage": 290
+        },
+        "ta": {
+          "pdfPage": 304,
+          "printedPage": 298
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        3600,
+        5040
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Two cones equal base radius with volumes 3600 and 5040 cubic centimetres; find height ratio."
+    },
+    {
+      "question": "7",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 296,
+          "printedPage": 290
+        },
+        "ta": {
+          "pdfPage": 304,
+          "printedPage": 298
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        "4:7"
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Radii ratio of two spheres 4:7; find their volume ratio."
+    },
+    {
+      "question": "8",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 296,
+          "printedPage": 290
+        },
+        "ta": {
+          "pdfPage": 304,
+          "printedPage": 298
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        "3√3:4"
+      ],
+      "symbolEvidence": [
+        "3√3:4",
+        "TSA(sphere)=TSA(hemisphere)"
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Equal total surface areas of solid sphere and solid hemisphere; prove volume ratio 3√3:4. Root glyph visibly present in both English and Tamil original image; text extraction flattens 3√3 to 3 3."
+    },
+    {
+      "question": "9",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 296,
+          "printedPage": 290
+        },
+        "ta": {
+          "pdfPage": 304,
+          "printedPage": 298
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        "576π",
+        "324π"
+      ],
+      "symbolEvidence": [
+        "π cm²",
+        "outer and inner spherical surface areas"
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Hollow copper spherical shell exterior area 576π cm² and interior area 324π cm²; find metal volume."
+    },
+    {
+      "question": "10",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 296,
+          "printedPage": 290
+        },
+        "ta": {
+          "pdfPage": 304,
+          "printedPage": 298
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        16,
+        8,
+        20,
+        40
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Open frustum container height 16 cm, lower radius 8 cm, upper radius 20 cm, milk price ₹40/litre; find total cost for full container."
+    }
+  ],
+  "nonExerciseFigureEvidence": {
+    "figure": "7.36",
+    "topic": "oblique frustum of cylinder",
+    "sourcePlacement": "Immediately above Exercise 7.2 heading on both source pages",
+    "belongsToExercise": false,
+    "excludeFromQuestionFigureCount": true
+  },
+  "sources": [
+    {
+      "medium": "en",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "edition": "2025 revised",
+      "pages": [
+        {
+          "pdfPage": 296,
+          "printedPage": 290,
+          "imageSha256": "a42b315b740e469632f317e9cbe075151cc47c6064c03c355310c68507c9b0e0",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "medium": "ta",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "edition": "2025 revised",
+      "pages": [
+        {
+          "pdfPage": 304,
+          "printedPage": 298,
+          "imageSha256": "ed8c3d3aa40f679541457bce1f953ed2821565115ca9f34e6e3835d9203e5e84",
+          "visualChecked": true
+        }
+      ]
+    }
+  ],
+  "pageImageReviewMethod": "Source PDFs materialized from connected Drive and matched with SHA256 registered textbook digests. Original EN PDF p296 (printed290), TA PDF p304 (printed298) rendered using pdftoppm -scale-to 2100 -png -singlefile. Both complete pages visually checked for Q1-Q10 counts, quantities and symbols including Q8 radical. PNG hashes refer to these exact local nonredistributed outputs.",
+  "professionalTamilReview": "pending",
+  "teacherApproval": "not performed (owner deferred)",
+  "mathSolutionsVerified": false,
+  "exerciseSourceInventoryComplete": true,
+  "chapterSourceInventoryComplete": false,
+  "allGradeQuestionDenominator": null,
+  "realPilotEligibleParts": 0,
+  "releaseApproved": false,
+  "limitations": [
+    "Ten numbered questions, each one whole question-part; counted once across media. No officially labelled (i),(ii) or MCQ options.",
+    "No exercise-specific printed figure or table. Fig.7.36 at top of source page illustrates preceding explanatory text, not a question. 7.4 combined-solids section below Ex7.2 is excluded.",
+    "Q8 original target ratio contains the radical: 3√3:4. Reject plain-text extraction that displays 3 3 : 4.",
+    "Q9 π (pi) and Q10 upper/lower radii must be preserved; source images supersede lossy extracted text.",
+    "Source-number and scope parity were visually reviewed for both media; no independent translation/editorial certification or mathematical solution verification was performed.",
+    "Source inventory does not classify any problem as unworked, establish pilot eligibility, register an answer in the application, or make lesson changes.",
+    "Previous EX8.1 Q5, EX8.4 Q1 and EX8.5 Q11 quarantines remain unchanged; complete Chapter 7 and Grade 10 denominators still unknown."
+  ]
+}
