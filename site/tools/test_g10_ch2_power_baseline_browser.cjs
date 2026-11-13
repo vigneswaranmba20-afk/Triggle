@@ -10,19 +10,29 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    await page.goto(site.base+'/index.html?class=10&question=c10-2-ex2-1-q5');
    await page.locator('#stepsList .worked-step').nth(2).waitFor();
    const proof=await page.evaluate(()=>{
-    const nodes=[...document.querySelectorAll('#stepsList .step-equation math.triggle-math')];
-    const groups=nodes.filter(m=>m.getAttribute('aria-label')==='4k²');
-    const valid=groups.every(m=>{
-      const row=m.querySelector('mrow'),coefficient=row?.querySelector(':scope > mn'),power=row?.querySelector(':scope > msup');
-      const base=power?.querySelector('mi'),exp=power?.querySelector('mn');
-      return coefficient?.textContent==='4'&&base?.textContent==='k'&&exp?.textContent==='2';
+    // True semantic KaTeX MathML keeps coefficient 4 next to k squared;
+    // do not depend on the old stand-alone math.triggle-math wrapper.
+    const nodes=[...document.querySelectorAll('#stepsList .step-equation .triggle-tex math')];
+    const powers=nodes.flatMap(m=>[...m.querySelectorAll('msup')]);
+    const groups=powers.filter(power=>{
+      const parts=[...power.children],base=parts[0],exponent=parts[1];
+      if(base?.textContent!=='k'||exponent?.textContent!=='2')return false;
+      let previous=power.previousElementSibling;
+      while(previous?.localName==='mspace')previous=previous.previousElementSibling;
+      return previous?.localName==='mn'&&previous.textContent==='4';
+    });
+    const valid=groups.every(power=>{
+      const parts=[...power.children];let previous=power.previousElementSibling;
+      while(previous?.localName==='mspace')previous=previous.previousElementSibling;
+      return !!power.closest('math')&&previous?.textContent==='4'&&
+        parts[0]?.textContent==='k'&&parts[1]?.textContent==='2';
     });
     return {groups:groups.length,valid,
       original:document.querySelector('#stepsList .worked-step:nth-child(3) .step-equation')?.textContent||'',
       overflowY:getComputedStyle(document.querySelector('.lesson-container')).overflowY,
       horizontal:document.documentElement.scrollWidth-innerWidth};
    });
-   assert(proof.groups===2,'Expected 4k² in both Q5 derivations '+JSON.stringify({width,proof}));
+   assert(proof.groups===2,'Expected 4k² coefficient and exponent in both Q5 derivations '+JSON.stringify({width,proof}));
    assert(proof.valid,'Coefficient/base baseline semantics '+JSON.stringify({width,proof}));
    assert(proof.original.includes('4k+1'),'No missing expression after 4k² '+JSON.stringify({width,proof}));
    assert(proof.horizontal<=1,'No horizontal clipping '+JSON.stringify({width,proof}));

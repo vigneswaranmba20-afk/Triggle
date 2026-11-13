@@ -33,9 +33,22 @@ async function main(){
     const record=batch.records[i];
     assert.equal(new URL(page.url()).searchParams.get('question'),record.id,'Every record navigable in order');
     const rendered=await page.locator('#questionText').innerText();
-    assert.equal(rendered.replace(/\s+/g,' ').trim(),record.q.en.replace(/\s+/g,' ').trim(),'Exact source question '+record.id);
+    const exactQuestion=await page.locator('#questionText').evaluate(host=>{
+      function sourceText(node){
+        if(node.nodeType===Node.TEXT_NODE)return node.textContent;
+        if(node.nodeType!==Node.ELEMENT_NODE)return '';
+        if(node.classList.contains('triggle-tex'))return node.getAttribute('data-math-fallback')||'';
+        return Array.from(node.childNodes,sourceText).join('');
+      }
+      return sourceText(host);
+    });
+    assert.equal(exactQuestion,record.q.en,'Exact source question including author-approved maths '+record.id);
     assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'One final answer in How It Works');
-    assert.ok((await page.locator('#stepsList').innerText()).includes(record.answer),'Authored final answer rendered');
+    // KaTeX renders genuine fractions/powers instead of the legacy flat string.
+    // Verify the source-exact accessible fallback AND the visual semantic maths.
+    const final=page.locator('#stepsList .final-answer-step');
+    assert.equal(await final.locator('.triggle-tex').getAttribute('data-math-fallback'),record.answer,'Exact authored final answer retained for accessibility');
+    assert.ok(await final.locator('math').count()>0,'Authored final answer rendered as semantic maths');
     assert.ok(await page.locator('#stepsRegion').isVisible());
     assert.equal(await page.locator('#figureBtn').isVisible(),false,'No invented compulsory diagram');
     assert.equal(await page.locator('#answerBox').isVisible(),false,'Existing final-answer presentation');
