@@ -1,0 +1,20 @@
+name: Temporary Class 10 Maths mobile browser preflight
+on:
+  push:
+    branches: [fix/g10-all-chapters-chatgpt-maths-20261113]
+permissions:
+  contents: read
+jobs:
+  focused:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify original lesson source parity with math typography
+        run: node site/tools/test_curriculum_bulk_browser.cjs
+      - name: Inspect all 44 previously plain-text lessons on Android viewports
+        run: node site/tools/test_g10_remaining_math_browser.cjs
