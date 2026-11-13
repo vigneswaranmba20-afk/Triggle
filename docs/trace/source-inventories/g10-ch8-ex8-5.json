@@ -1,0 +1,722 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "grade": 10,
+  "chapter": "8",
+  "exercise": "8.5",
+  "scope": "Original bilingual MCQ source-page inventory only. Options recorded as concise canonical mathematical values/semantic descriptors, not full Tamil editorial transcript. No app authorship or solution approval.",
+  "sourcePageInventoryStatus": "BOTH_ORIGINAL_MEDIUM_PAGE_IMAGES_CHECKED",
+  "questionStems": 15,
+  "questionParts": 15,
+  "crossMediumPartsCountedOnce": true,
+  "mediumRepresentations": 30,
+  "mcqChoicesPerQuestion": 4,
+  "mcqChoiceOccurrencesPerMedium": 60,
+  "mcqChoiceOccurrencesAcrossMedia": 120,
+  "questions": [
+    {
+      "question": "1",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "Range",
+        "Standard deviation",
+        "Arithmetic mean",
+        "Variance"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 348,
+          "printedPage": 342
+        }
+      },
+      "topic": "dispersion versus arithmetic mean",
+      "numericalEvidenceBothMediums": [],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "0",
+        "1",
+        "8",
+        "3"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 348,
+          "printedPage": 342
+        }
+      },
+      "topic": "range of constant data",
+      "numericalEvidenceBothMediums": [
+        8
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Ellipsis denotes repeated 8s; count of data points is irrelevant to range"
+    },
+    {
+      "question": "3",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "always positive",
+        "always negative",
+        "zero",
+        "nonzero integer"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 348,
+          "printedPage": 342
+        }
+      },
+      "topic": "sum of deviations from arithmetic mean",
+      "numericalEvidenceBothMediums": [],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "40000",
+        "160900",
+        "160000",
+        "30000"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 348,
+          "printedPage": 342
+        }
+      },
+      "topic": "sum of squared observations from mean and standard deviation",
+      "numericalEvidenceBothMediums": [
+        100,
+        40,
+        3
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "32.25",
+        "44.25",
+        "33.25",
+        "30"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "variance of first 20 natural numbers",
+      "numericalEvidenceBothMediums": [
+        20
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "6",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "3",
+        "15",
+        "5",
+        "225"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "variance scaling when data multiplied",
+      "numericalEvidenceBothMediums": [
+        3,
+        5
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "7",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "3p+5",
+        "3p",
+        "p+5",
+        "9p+15"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "standard deviation under affine transform",
+      "numericalEvidenceBothMediums": [
+        3,
+        5
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "symbolEvidence": "Each original expression is 3x+5, 3y+5, 3z+5; extraction loses spacing and can read 35x"
+    },
+    {
+      "question": "8",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "3.5",
+        "3",
+        "4.5",
+        "2.5"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "coefficient of variation",
+      "numericalEvidenceBothMediums": [
+        4,
+        87.5
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "9",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "P(A)>1",
+        "0≤P(A)≤1",
+        "P(∅)=0",
+        "P(A)+P(Ā)=1"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "invalid axiom of probability",
+      "numericalEvidenceBothMediums": [
+        0,
+        1
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "symbolEvidence": "Keep the complement bar in option D and ∅ in option C; plain text extraction may lose these"
+    },
+    {
+      "question": "10",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "q/(p+q+r)",
+        "p/(p+q+r)",
+        "(p+q)/(p+q+r)",
+        "(p+r)/(p+q+r)"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "probability of selecting red marble with p, q, r colors",
+      "numericalEvidenceBothMediums": [
+        "p",
+        "q",
+        "r"
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "symbolEvidence": "Options consist of four distinct rational expressions; fraction bars and numerator grouping require source-image fidelity"
+    },
+    {
+      "question": "11",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "3/10",
+        "7/10",
+        "3/9",
+        "7/9"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "page-number units digit less than seven",
+      "numericalEvidenceBothMediums": [
+        7
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": "UNSPECIFIED_BOOK_PAGE_COUNT",
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "No total number of pages N is given. For pages 1..10 probability is 7/10; for pages 1..9 it is 6/9. The stated question has no fixed probability without a sample-space assumption."
+    },
+    {
+      "question": "12",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "2",
+        "1",
+        "3",
+        "1.5"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 336,
+          "printedPage": 330
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "job success probability complement",
+      "numericalEvidenceBothMediums": [
+        "x/3",
+        "2/3"
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "symbolEvidence": "Read x/3 for getting a job and 2/3 for not getting the job"
+    },
+    {
+      "question": "13",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 337,
+          "printedPage": 331
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "lucky draw number of tickets",
+      "numericalEvidenceBothMediums": [
+        135,
+        "1/9"
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY"
+    },
+    {
+      "question": "14",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "12/13",
+        "1/13",
+        "23/26",
+        "3/26"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 337,
+          "printedPage": 331
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "alphabet letters before x",
+      "numericalEvidenceBothMediums": [
+        26
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "symbolEvidence": "The chosen letter precedes lowercase x; x itself is not included"
+    },
+    {
+      "question": "15",
+      "parts": [
+        "whole"
+      ],
+      "questionType": "single-choice",
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionContentCanonical": [
+        "1/5",
+        "3/10",
+        "2/3",
+        "4/5"
+      ],
+      "choiceContentEnglishAndTamilCompared": true,
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 337,
+          "printedPage": 331
+        },
+        "ta": {
+          "pdfPage": 349,
+          "printedPage": 343
+        }
+      },
+      "topic": "currency note draw from three denominations",
+      "numericalEvidenceBothMediums": [
+        10,
+        2000,
+        15,
+        500,
+        25,
+        200
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "symbolEvidence": "Keep ₹2000, ₹500, and ₹200 counts separate; the queried event combines the latter two"
+    }
+  ],
+  "sourceAmbiguities": [
+    {
+      "question": "11",
+      "type": "UNSPECIFIED_BOOK_PAGE_COUNT",
+      "severity": "block_unconditional_correct_answer_and_pilot_eligibility",
+      "originalQuestionSummary": "A randomly chosen book page has a units digit less than 7; number of pages not specified",
+      "why": "Assuming pages are numbered 1..N, the probability depends on N. At N=10 seven pages qualify (7/10); at N=9 six pages qualify (6/9). Uniform independent units digits require a separately declared premise.",
+      "handling": "Preserve both source wordings; flag as conditional/ambiguous instead of presenting 7/10 as universally proven; request source/editorial clarification before independent mathematical acceptance or pilot inclusion."
+    }
+  ],
+  "sources": [
+    {
+      "medium": "en",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "edition": "2025 revised",
+      "pages": [
+        {
+          "pdfPage": 336,
+          "printedPage": 330,
+          "imageSha256": "cdf25d6d1a72960c4248909df3693b4bc3bff67b347e5097cc58592ea6eeaad6",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 337,
+          "printedPage": 331,
+          "imageSha256": "d427a11cf67611aff4f1f6585ac7ccb1e8e53ee3f3ba8a8f70c71c37e7906781",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "medium": "ta",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "edition": "2025 revised",
+      "pages": [
+        {
+          "pdfPage": 348,
+          "printedPage": 342,
+          "imageSha256": "9749ad7d5fe2b1ccb5f3883e49c9112eba83ab33c8c86ab93e7ce124d48e91ca",
+          "visualChecked": true
+        },
+        {
+          "pdfPage": 349,
+          "printedPage": 343,
+          "imageSha256": "61786b9f18f094cc6ba977477a893dafd184fc1405871c5e6f19a31ff95a340f",
+          "visualChecked": true
+        }
+      ]
+    }
+  ],
+  "pageImageReviewMethod": "Verified materialized original Google Drive 2025 PDF bytes match registered SHA256; rendered English pp336–337 and Tamil pp348–349 with pdftoppm -r 150 -png, visually inspected all 15 questions, four options each, numerical/notation parity. PNG hashes refer to exact nonpublished local renders. Tamil Exercise 8.5 starts halfway through PDF p348; English Unit Exercise 8 begins halfway through p337 and is EXCLUDED.",
+  "professionalTamilReview": "pending",
+  "teacherApproval": "not performed (owner deferred)",
+  "mathSolutionsVerified": false,
+  "exerciseSourceInventoryComplete": true,
+  "chapterSourceInventoryComplete": false,
+  "allGradeQuestionDenominator": null,
+  "realPilotEligibleParts": 0,
+  "releaseApproved": false,
+  "limitations": [
+    "MCQ Q1–Q15 each represent one whole-question part with four A–D options. 15 question-parts counted once across English/Tamil, 60 answer choices per language, not 60 new questions.",
+    "Question 11 omits book page count, preventing a unique unconditional probability. Flag it, do not invent the assumption.",
+    "Question 9 option D and Q7/10/12 fractional or algebraic displays require original page images, not plain text extraction alone.",
+    "No preprinted figure or tabular exercise items in Exercise 8.5; its opening shares Tamil p348 with the preceding exercise and the English ending shares p337 with Unit Exercise 8.",
+    "All 15 option sets compared visually against two language source images. This does not establish independent Tamil translation editing, mathematical correctness of published textbook answers, teacher certification or production registration.",
+    "This PR only adds bounded source inventory and regression checks; no consumer app, cache, scripts that publish student data or live pilot.",
+    "Prior Exercise 8.4 Q1 and Exercise 8.1 Q5 quarantines remain intact; overall Grade 10 and 41 chapter-pair denominators remain unknown."
+  ]
+}
