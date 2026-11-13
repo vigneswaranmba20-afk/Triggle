@@ -6,6 +6,7 @@ on:
       - ".github/workflows/live-g10-recovery-smoke.yml"
       - "site/index.html"
       - "site/data/textbook-exercises/g10-seven-recovery-20261113-en.js"
+      - "site/data/textbook-exercises/g10-ch8-ex8-1-q5-q10-en.js"
       - "site/assets/grade10-recovery/**"
   workflow_dispatch:
 permissions:
@@ -49,3 +50,26 @@ jobs:
             echo "PASS live Class 10 route and authored ID: $id"
           done
           echo "PASS: deployed source-identical 7-part recovery, 7 public student routes, 2 original Geometry figures."
+          STAT_MODULE="data/textbook-exercises/g10-ch8-ex8-1-q5-q10-en.js"
+          STATS_SUCCESS=0
+          for attempt in $(seq 1 24); do
+            if curl -fsSL --max-time 20 "$BASE/$STAT_MODULE?release=$GITHUB_SHA" -o "$TEMP/statistics.js" \
+               && cmp -s "site/$STAT_MODULE" "$TEMP/statistics.js"; then
+              STATS_SUCCESS=1
+              echo "Verified live six-part Statistics module on attempt $attempt"
+              break
+            fi
+            echo "Statistics module not yet matching source; attempt $attempt/24"
+            sleep 10
+          done
+          test "$STATS_SUCCESS" = 1 || { echo "Live Statistics module differs from tested source"; exit 1; }
+          grep -Fq "g10-ch8-ex8-1-q5-q10-en.js" "$TEMP/index.html"
+          for n in 5 6 7 8 9 10; do
+            id="c10-8-ex8-1-q$n"
+            curl -fsSL --max-time 25 "$BASE/index.html?class=10&question=$id" -o "$TEMP/stats-route.html"
+            grep -Fq "g10-ch8-ex8-1-q5-q10-en.js" "$TEMP/stats-route.html"
+            grep -Fq "$id" "$TEMP/statistics.js"
+            echo "PASS live English Statistics route: $id"
+          done
+          echo "PASS: source-identical 7-part recovery and 6-part Statistics module live, with all 13 student routes."
+
