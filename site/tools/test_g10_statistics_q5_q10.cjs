@@ -33,7 +33,7 @@ for(const record of manifest.records){
 }
 for(const id of ['c10-8-ex8-1-q1-i','c10-8-ex8-1-q1-ii','c10-8-ex8-1-q2','c10-8-ex8-1-q3','c10-8-ex8-1-q4'])
  assert.ok(items.some(r=>r.id===id),'Previously deployed Exercise 8.1 record preserved: '+id);
-assert.ok(!items.some(r=>r.id==='c10-8-ex8-1-q11'),'Do not invent incomplete later questions');
+assert.ok(items.some(r=>r.id==='c10-8-ex8-1-q11'),'Source-verified Q11 follow-up must be visible');
 function exactVariance(vals){
  const n=vals.length,m=vals.reduce((a,b)=>a+b,0)/n;
  const centered=vals.reduce((a,b)=>a+(b-m)**2,0)/n;
