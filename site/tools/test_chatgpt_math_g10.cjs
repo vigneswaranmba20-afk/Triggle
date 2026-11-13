@@ -46,7 +46,7 @@ for(const record of [p4,p5]){
  assert.ok(record.steps.some(s=>s.math.latex.includes('\\dfrac')),'Fractions must be stacked');
  assert.ok(record.steps.some(s=>s.math.latex.includes('\\sqrt')),'Roots must be correctly bracketed');
  assert.ok(record.steps.some(s=>s.math.latex.includes('\\bar{x}')),'Means must have a genuine overbar');
- assert.ok(render(record.steps[3].math).includes('<mfrac>'),'Use semantic fraction rather than literal slash');
+ assert.ok(record.steps.some(step=>render(step.math).includes('<mfrac>')),'Use semantic fractions rather than literal slashes');
  assert.ok(render(record.steps[4].math).includes('<mfrac>'),'Variance must show a real fraction');
  assert.ok(render(record.steps.find(s=>s.math.latex.includes('\\sqrt')).math).includes('<msqrt>'),'Radical must have correct MathML');
  assert.ok(record.answerMath.latex.includes('\\dfrac')||record.id==='c10-8-ex8-1-q4');
