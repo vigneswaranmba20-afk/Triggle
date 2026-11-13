@@ -1,0 +1,99 @@
+{
+  "checkpoint": "2026-11-13",
+  "status": "ENGLISH_SOURCE_VISUAL_CHECKED_TAMIL_EDITORIAL_PENDING",
+  "source": {
+    "english": {
+      "drive_id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "filename": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "tamil": {
+      "drive_id": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "filename": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "records": [
+    {
+      "id": "c10-3-ex3-1-q1-ii",
+      "english_question": "1. Solve the following system of linear equations in three variables. (ii) 1/x − 2/y + 4 = 0; 1/y − 1/z + 1 = 0; 2/z + 3/x = 14.",
+      "english_printed_page": 92,
+      "english_pdf_page": 98,
+      "tamil_printed_page": 94,
+      "tamil_pdf_page": 100,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    },
+    {
+      "id": "c10-3-ex3-1-q1-iii",
+      "english_question": "1. Solve the following system of linear equations in three variables. (iii) x + 20 = 3y/2 + 10 = 2z + 5 = 110 − (y + z).",
+      "english_printed_page": 92,
+      "english_pdf_page": 98,
+      "tamil_printed_page": 94,
+      "tamil_pdf_page": 100,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    },
+    {
+      "id": "c10-4-ex4-1-q1-i",
+      "english_question": "1. In the given triangles, check which triangles are similar? Also find the value of x. (i) In the diagram, D lies on AB and E lies on AC; AD = 3, DB = 5, AE = 2 and EC = 3½.",
+      "english_printed_page": 170,
+      "english_pdf_page": 176,
+      "tamil_printed_page": 175,
+      "tamil_pdf_page": 181,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true,
+      "figure_original_reconstructed": "assets/grade10-recovery/ex4-1-q1-i.svg"
+    },
+    {
+      "id": "c10-4-ex4-1-q1-ii",
+      "english_question": "1. In the given triangles, check which triangles are similar? Also find the value of x. (ii) In triangle ABC, Q lies on BC, P lies on AC, ∠ABC = 70°, ∠BQP = 110°, BQ = QC = 3, AB = 5 and PQ = x.",
+      "english_printed_page": 170,
+      "english_pdf_page": 176,
+      "tamil_printed_page": 175,
+      "tamil_pdf_page": 181,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true,
+      "figure_original_reconstructed": "assets/grade10-recovery/ex4-1-q1-ii.svg"
+    },
+    {
+      "id": "c10-6-ex6-1-q2-i",
+      "english_question": "2. Prove the following identities. (i) (1 − tan²θ)/(cot²θ − 1) = tan²θ.",
+      "english_printed_page": 249,
+      "english_pdf_page": 255,
+      "tamil_printed_page": 258,
+      "tamil_pdf_page": 264,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    },
+    {
+      "id": "c10-8-ex8-1-q3",
+      "english_question": "3. Calculate the range of the following data. Income: 400–450, 450–500, 500–550, 550–600, 600–650. Number of workers: 8, 12, 30, 21, 6.",
+      "english_printed_page": 313,
+      "english_pdf_page": 319,
+      "tamil_printed_page": 322,
+      "tamil_pdf_page": 328,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    },
+    {
+      "id": "c10-8-ex8-1-q4",
+      "english_question": "4. A teacher asked the students to complete 60 pages of a record note book. Eight students have completed only 32, 35, 37, 30, 33, 36, 35 and 37 pages. Find the standard deviation of the pages completed by them.",
+      "english_printed_page": 313,
+      "english_pdf_page": 319,
+      "tamil_printed_page": 322,
+      "tamil_pdf_page": 328,
+      "source_image_compared": true,
+      "tamil_editorial_review": "pending",
+      "answer_independently_checked": true
+    }
+  ],
+  "exercise_completion_claim": false,
+  "student_release_requires": "CI success, preserved IDs, offline assets and live verification"
+}

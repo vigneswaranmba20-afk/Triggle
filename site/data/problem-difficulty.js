@@ -3840,6 +3840,48 @@ const metadata={
         "source": "audited-ch1-batch"
       }
     },
+    "c10-3-ex3-1-q1-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Reciprocal substitution and elimination in three variables.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-1-q1-iii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Set multiple equal expressions equal and eliminate variables.",
+      "review": "implementation-audit"
+    },
+    "c10-4-ex4-1-q1-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Compare exact side ratios in a figure-dependent similarity test.",
+      "review": "implementation-audit"
+    },
+    "c10-4-ex4-1-q1-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "AA similarity and corresponding scale factor from the diagram.",
+      "review": "implementation-audit"
+    },
+    "c10-6-ex6-1-q2-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Prove identity by reciprocal substitution and domain restrictions.",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q3": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Direct grouped-data class-boundary range calculation.",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q4": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Calculate mean, sum of squares, variance and standard deviation.",
+      "review": "implementation-audit"
+    },
     "c10-2-ex2-2-q1": {
       "grade": 10,
       "level": "easy",
