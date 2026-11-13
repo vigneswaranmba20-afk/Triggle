@@ -8,8 +8,11 @@ const approvedBatch=require('../../docs/curriculum/grade-10/batches/g10-ch2-ex2-
 const originalEight=['1','2','3','4','5','6','7','9'].map(n=>'c10-2-ex2-2-q'+n);
 const recoveredBatch=require('../../docs/curriculum/grade-10/g10-seven-recovery-20261113.json');
 const recoveryIds=recoveredBatch.records.map(r=>r.id);
+const statisticsBatch=require('../../docs/curriculum/grade-10/g10-ch8-ex8-1-q5-q10-20261113.json');
+const statisticsIds=statisticsBatch.records.map(r=>r.id);
+assert.equal(statisticsIds.length,6);
 assert.equal(recoveryIds.length,7);
-const approvedNewIds=[...originalEight,...recoveryIds];
+const approvedNewIds=[...originalEight,...recoveryIds,...statisticsIds];
 assert.deepEqual(approvedBatch.records.map(r=>r.id),originalEight);
 assert(!approvedNewIds.some(id=>Object.hasOwn(preserved.sha256,id)));
 
@@ -26,7 +29,7 @@ for(const [grade,data] of Object.entries(classes)){
    assert.equal(hash,preserved.sha256[item.id],'Entire original question, mathematical working, notation, answer and metadata: '+item.id);
   }else{
    assert.ok(grade==='10'&&approvedNewIds.includes(item.id),'No unapproved question '+item.id);
-   const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id);
+   const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id);
    assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'New content exactly matches source-verified batch '+item.id);
   }
   const meta=registry.get(item);assert.ok(meta,'Explicit difficulty '+item.id);
@@ -51,7 +54,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,583);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,589);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');
@@ -64,4 +67,4 @@ for(const file of ['g12-explain-modes.js','g12-explain-modes.css','matrix-pilot.
 assert.ok(sw.includes('./data/problem-difficulty.js'));
 assert.ok(html.indexOf('data/problem-difficulty.js')<html.indexOf('assets/app.js'));
 assert.doesNotMatch(app,/localStorage\.clear|removeItem/,'Student progress is never cleared');
-console.log('PASS 568 original records and order byte-preserved, eight existing plus seven new Grade 10 source-bound records, 583 explicit difficulties, 88 reviewed classifications retained, no explanation switches, offline metadata.');
+console.log('PASS 568 original records and order byte-preserved, eight existing plus seven recovered and six Statistics Grade 10 source-bound records, 589 explicit difficulties, 88 reviewed classifications retained, no explanation switches, offline metadata.');
