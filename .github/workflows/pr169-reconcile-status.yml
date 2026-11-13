@@ -1,0 +1,28 @@
+name: One-off PR169 source-derived status reconciliation
+on:
+  push:
+    branches:
+      - feat/g10-statistics-ex8-1-q11-q15-20261113
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate status from validated project sources
+        run: npm run status:build
+      - name: Commit generated projection to this branch
+        run: |
+          if ! git diff --quiet -- site/data/project-status.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add site/data/project-status.json
+            git commit -m "chore: regenerate source-derived project status for G10 Statistics 8.1"
+            git push origin HEAD:feat/g10-statistics-ex8-1-q11-q15-20261113
+          fi
