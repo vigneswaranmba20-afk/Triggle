@@ -15,7 +15,7 @@ const overlay=ctx.window.TriggleChapter1Math;
 assert.ok(overlay);
 assert.equal(overlay.ids.length,74,'No missing or extra Chapter 1 notation records');
 assert.equal(new Set(overlay.ids).size,74,'No duplicate question IDs');
-assert.deepEqual([...overlay.ids].sort(),records.map(r=>r.id).sort(),'All original textbook IDs covered exactly');
+assert.equal(JSON.stringify(Array.from(overlay.ids).sort()),JSON.stringify(Array.from(records,x=>x.id).sort()),'All original textbook IDs covered exactly');
 let steps=0,formulas=0,answers=0,structuredFractions=0;
 const fallback=v=>Array.isArray(v)?v.map(x=>x.fallback).join('; '):v.fallback;
 const inspect=(v,source,label)=>{
@@ -42,6 +42,22 @@ assert.equal(steps,259,'Do not shorten any worked solution');
 assert.equal(answers,74);
 assert.ok(formulas>300,'All authored equations and answer parts should be typeset');
 assert.ok(structuredFractions>=20,'Fractions in functions and composition need true vertical forms');
+let enrichedQuestions=0;
+for(const record of records){
+ const question=overlay.getQuestion(record,'en');
+ if(!question)continue;
+ enrichedQuestions++;
+ const spans=question.en;
+ const plain=spans.map(x=>typeof x==='string'?x:x.fallback).join('');
+ assert.equal(plain,record.q.en,'Question text may not change '+record.id);
+ for(const span of spans)if(typeof span==='object'){
+   const rendered=render(span);
+   assert.ok(!rendered.includes('data-math-error'),'Question formula rejected '+record.id);
+   assert.ok(rendered.includes('<math'),'Rich question formula missing MathML '+record.id);
+ }
+ if(record.q.ta)assert.equal(overlay.getQuestion(record,'ta'),null,'Preserve original Tamil wording '+record.id);
+}
+assert.ok(enrichedQuestions>=15,'At least 15 original formula-heavy questions upgraded');
 const ref=records.find(r=>r.id==='c10-1-1-unit-q8');
 assert.ok(render(overlay.getStep(ref,0)).includes('<mfrac>'),'Nested function composition fraction must be stacked');
 assert.ok(!JSON.stringify(overlay.getStep(ref,0)).includes('FRAC'),'No text placeholder');
