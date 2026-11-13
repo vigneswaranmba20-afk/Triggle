@@ -5,7 +5,7 @@
   "chapter": "8",
   "exercise": "8.1",
   "scope": "English-only Q5–Q10. Q1–Q4 already live. Q11–Q15 not in this release; no exercise/chapter completeness claim.",
-  "status": "ENGLISH_AUTHORED_REVIEW_GATE",
+  "status": "ENGLISH_PUBLISHED_LIVE_VERIFIED",
   "source": {
     "en": {
       "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
@@ -361,5 +361,28 @@
       "translationReview": "pending",
       "checkpoint": "2026-11-13"
     }
-  ]
+  ],
+  "studentReleaseStatus": "LIVE_VERIFIED_ENGLISH_ONLY",
+  "liveVerification": {
+    "passed": true,
+    "workflowRun": 43388861723,
+    "workflowUrl": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/43388861723",
+    "releaseCommit": "0e3ac0779f0cce968fef4ee174237677a376a168",
+    "postMergeStatusCommit": "e55d77cabb09cf4e048c8c671bbff336b779ec6a",
+    "verifiedRecordIds": [
+      "c10-8-ex8-1-q5",
+      "c10-8-ex8-1-q6",
+      "c10-8-ex8-1-q7",
+      "c10-8-ex8-1-q8",
+      "c10-8-ex8-1-q9",
+      "c10-8-ex8-1-q10"
+    ],
+    "checks": [
+      "GitHub Pages serves byte-identical English Statistics module",
+      "Published index references the new module",
+      "All six public student routes checked",
+      "Seven previously released questions and their figures preserved"
+    ],
+    "note": "English-only source verification is not Tamil editorial or teacher approval; Q11–Q15 remain incomplete."
+  }
 }
