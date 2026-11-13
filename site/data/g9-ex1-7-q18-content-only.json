@@ -1,0 +1,39 @@
+{
+  "status": "staged-content-only-not-published",
+  "grade": 9,
+  "chapter": 1,
+  "exercise": "1.7",
+  "edition": "Tamil Nadu SCERT revised 2025 English",
+  "source": {
+    "driveFileId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPages": [
+      38
+    ],
+    "fidelity": "PDF text-layer verified only; original printed-page image not yet inspected"
+  },
+  "numberedQuestions": 1,
+  "questionSubparts": 1,
+  "fullySourceImageVerified": 0,
+  "excluded": "Other exercise 1.7 entries already in PR #115; Q9 and Q19 require diagrams; Q12 requires clarification of the assumed union; notation in Q13–Q17 requires page-image verification.",
+  "entries": [
+    {
+      "id": "g9-ch1-ex1-7-q18",
+      "number": 18,
+      "question": "18. If J = Set of three sided shapes, K = Set of shapes with two equal sides and L = Set of shapes with right angle, then J∩K∩L is\n(1) Set of isoceles triangles (2) Set of equilateral triangles\n(3) Set of isoceles right triangles (4) Set of right angled triangles",
+      "steps": [
+        "J contains three-sided shapes, so any shape in J must be a triangle.",
+        "K requires two equal sides, making a triangle in J∩K isosceles.",
+        "L requires a right angle, so a shape in J∩K∩L must also be right-angled.",
+        "A triangle with two equal sides and one right angle is an isosceles right triangle.",
+        "Therefore the correct answer is option (3)."
+      ],
+      "answer": "Option (3) Set of isoceles right triangles.",
+      "chapter": 1,
+      "exercise": "1.7",
+      "sourcePage": 38,
+      "sourceTextStatus": "2025 PDF text layer; printed-page image fidelity pending",
+      "studentRegistration": "not registered",
+      "kind": "textbook"
+    }
+  ]
+}
