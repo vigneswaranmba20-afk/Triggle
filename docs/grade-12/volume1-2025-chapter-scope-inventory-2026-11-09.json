@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "edition": "2025 revised",
+  "language": "English",
+  "volume": 1,
+  "sourceDriveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+  "sourceEditionEvidence": "PDF front matter states Revised Edition - 2020, 2022, 2023, 2025",
+  "sourceEvidence": "PDF contents text layer; chapter titles and printed start pages only",
+  "questionPageImagesInspected": false,
+  "sourceFidelityStatus": "chapter headings only; no exercise questions or solutions certified",
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "Applications of Matrices and Determinants",
+      "printedStartPage": 1,
+      "exerciseQuestionDenominator": null,
+      "exerciseSubpartDenominator": null,
+      "questionPagesImageVerified": false,
+      "inventoryStatus": "partial (exercises 1.1-1.3 only)",
+      "certifiedNewInThisBatch": 0
+    },
+    {
+      "chapter": 2,
+      "title": "Complex Numbers",
+      "printedStartPage": 52,
+      "exerciseQuestionDenominator": null,
+      "exerciseSubpartDenominator": null,
+      "questionPagesImageVerified": false,
+      "inventoryStatus": "not inventoried",
+      "certifiedNewInThisBatch": 0
+    },
+    {
+      "chapter": 3,
+      "title": "Theory of Equations",
+      "printedStartPage": 97,
+      "exerciseQuestionDenominator": null,
+      "exerciseSubpartDenominator": null,
+      "questionPagesImageVerified": false,
+      "inventoryStatus": "not inventoried",
+      "certifiedNewInThisBatch": 0
+    },
+    {
+      "chapter": 4,
+      "title": "Inverse Trigonometric Functions",
+      "printedStartPage": 129,
+      "exerciseQuestionDenominator": null,
+      "exerciseSubpartDenominator": null,
+      "questionPagesImageVerified": false,
+      "inventoryStatus": "not inventoried",
+      "certifiedNewInThisBatch": 0
+    },
+    {
+      "chapter": 5,
+      "title": "Two Dimensional Analytical Geometry-II",
+      "printedStartPage": 172,
+      "exerciseQuestionDenominator": null,
+      "exerciseSubpartDenominator": null,
+      "questionPagesImageVerified": false,
+      "inventoryStatus": "not inventoried",
+      "certifiedNewInThisBatch": 0
+    },
+    {
+      "chapter": 6,
+      "title": "Applications of Vector Algebra",
+      "printedStartPage": 221,
+      "exerciseQuestionDenominator": null,
+      "exerciseSubpartDenominator": null,
+      "questionPagesImageVerified": false,
+      "inventoryStatus": "not inventoried",
+      "certifiedNewInThisBatch": 0
+    }
+  ],
+  "volume1ChapterCount": 6,
+  "volume1QuestionDenominator": null,
+  "volume1SubpartDenominator": null,
+  "newVerifiedQuestionCount": 0,
+  "newVerifiedSubpartCount": 0,
+  "existingChapter1RecordedSlots": 38,
+  "existingChapter1PreviouslyVerifiedEnglishSlots": 3,
+  "existingChapter1PendingSlots": 35,
+  "figureReviewStatus": "not yet inventoried",
+  "tamilStatus": "not editorially certified",
+  "releaseStatus": "unpublished inventory metadata only",
+  "nextBatch": "Use original page images for Chapter 1 Exercise 1.3 Q1-Q5; resolve damaged matrix glyphs; generate and independently test verified English solutions; then inventory remaining exercises of Chapter 1 and Chapters 2-6."
+}

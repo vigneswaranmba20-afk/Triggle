@@ -1,0 +1,238 @@
+{
+  "grade": 12,
+  "edition": "2025 revised",
+  "inventoryComplete": false,
+  "chapterCount": 12,
+  "chapterStatus": [
+    {
+      "chapter": 1,
+      "exerciseInventory": "Exercise 1.1 inventoried: 19 question/subpart IDs; remaining chapter exercises UNKNOWN",
+      "missingSubparts": "16 known missing in Exercise 1.1; other chapter exercises UNKNOWN",
+      "verifiedSubparts": 3,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 2,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 3,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 4,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 5,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 6,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 7,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 8,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 9,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 10,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 11,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    },
+    {
+      "chapter": 12,
+      "exerciseInventory": "UNKNOWN",
+      "missingSubparts": "UNKNOWN",
+      "verifiedSubparts": 0,
+      "mergedSubparts": 0,
+      "liveVerifiedSubparts": 0
+    }
+  ],
+  "verifiedSources": {
+    "english": {
+      "volume": 1,
+      "pdfPage": 23,
+      "printedPage": 15,
+      "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm"
+    },
+    "tamil": {
+      "volume": 1,
+      "pdfPage": 24,
+      "printedPage": 16,
+      "driveFileId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c"
+    }
+  },
+  "items": [
+    {
+      "id": "g12-ch1-ex1.1-q1-i",
+      "chapter": 1,
+      "exercise": "1.1",
+      "question": "1",
+      "subpart": "i",
+      "status": "mathematically_verified",
+      "sourceVerified": true,
+      "bilingualTextCheckedAgainstSource": true,
+      "tamilEditorialReview": "pending",
+      "ci": "passed",
+      "browser": "passed",
+      "merged": false,
+      "liveVerified": false,
+      "sourcePages": {
+        "english": {
+          "volume": 1,
+          "pdfPage": 23,
+          "printedPage": 15
+        },
+        "tamil": {
+          "volume": 1,
+          "pdfPage": 24,
+          "printedPage": 16
+        }
+      },
+      "ciEvidence": {
+        "commit": "9cd1c69b6503916f9c9e8f1d52a91cd0c6c6b2b6",
+        "grade12Run": 42446360731,
+        "sharedRun": 42446360750,
+        "validatedAt": "2026-11-08"
+      }
+    },
+    {
+      "id": "g12-ch1-ex1.1-q1-ii",
+      "chapter": 1,
+      "exercise": "1.1",
+      "question": "1",
+      "subpart": "ii",
+      "status": "mathematically_verified",
+      "sourceVerified": true,
+      "bilingualTextCheckedAgainstSource": true,
+      "sourcePages": {
+        "english": {
+          "volume": 1,
+          "printedPage": 15,
+          "pdfPage": 23
+        },
+        "tamil": {
+          "volume": 1,
+          "printedPage": 16,
+          "pdfPage": 24
+        }
+      },
+      "tamilEditorialReview": "pending",
+      "ci": "passed",
+      "browser": "passed",
+      "merged": false,
+      "liveVerified": false,
+      "ciEvidence": {
+        "commit": "9cd1c69b6503916f9c9e8f1d52a91cd0c6c6b2b6",
+        "grade12Run": 42446360731,
+        "sharedRun": 42446360750,
+        "validatedAt": "2026-11-08"
+      }
+    },
+    {
+      "id": "g12-ch1-ex1.1-q1-iii",
+      "chapter": 1,
+      "exercise": "1.1",
+      "question": "1",
+      "subpart": "iii",
+      "status": "mathematically_verified",
+      "sourceVerified": true,
+      "bilingualTextCheckedAgainstSource": true,
+      "tamilEditorialReview": "pending",
+      "ci": "passed",
+      "browser": "passed",
+      "merged": false,
+      "liveVerified": false,
+      "sourcePages": {
+        "english": {
+          "volume": 1,
+          "printedPage": 15,
+          "pdfPage": 23
+        },
+        "tamil": {
+          "volume": 1,
+          "printedPage": 16,
+          "pdfPage": 24
+        }
+      },
+      "sourceImageCheckedAt": "2026-11-08",
+      "mathEvidence": "Nine cofactors; det(A)=1; exact integer products M·N=N·M=9I for A=M/3, adj(A)=N/3.",
+      "ciEvidence": {
+        "commit": "b0353f5deae9a506c85f83dac27cef9dc60fe1bd",
+        "grade12Run": 42489365500,
+        "sharedRun": 42489365527,
+        "grade9Run": 42489365422,
+        "pagesValidationRun": 42489365498,
+        "validatedAt": "2026-11-08"
+      }
+    }
+  ],
+  "lastVerifiedCheckpoint": {
+    "date": "2026-11-08",
+    "result": "Previous commit 99e574b: shared, Grade 9 and Pages workflows passed; Grade 12 workflow failed ONLY at shared browser assertion site/tools/test_curriculum_ui.cjs:1117 at 1280px ('Dock stays at screen bottom'; navPosition relative). Grade 12 dedicated browser test passed. New Grade-12-only inverse prerequisite test committed da2e2fc, locally checked 2112 invertible + 289 singular integer 2x2 matrices; not yet CI confirmed.",
+    "grade12Run": 42489365500,
+    "sharedRun": 42489365527,
+    "grade9Run": 42489365422,
+    "pagesValidationRun": 42489365498,
+    "nextSourceItem": "Chapter 1 Exercise 1.1 Q2(i): English 2025 Vol I printed p15/PDF23; Tamil 2025 Vol I printed p16/PDF24. Extracted matrix glyphs unreliable; visually inspect original page images before exact transcription.",
+    "branchBehindMainAtCheckpoint": 99,
+    "nextAction": "Verify page-image matrix entries and exact bilingual stem; add independently checked inverse solution. Await new CI and coordinate Grade 9 shared 1280px dock regression correction from latest main; rerun all workflows before merge.",
+    "failedGrade12Run": 42493846976,
+    "passingSharedRun": 42493847131,
+    "passingGrade9Run": 42493847151,
+    "passingPagesRun": 42493847061
+  }
+}

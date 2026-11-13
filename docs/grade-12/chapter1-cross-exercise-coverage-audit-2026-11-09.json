@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "edition": "2025 revised",
+  "auditDate": "2026-11-09",
+  "scope": "Chapter 1 exercise inventories 1.1-1.3 only; incomplete textbook denominator",
+  "sourceFiles": {
+    "englishVolume1": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "tamilVolume1": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c"
+  },
+  "sourceAccess": "Drive file metadata confirmed; original PDF question-page images not inspected in this batch",
+  "exerciseInventory": [
+    {
+      "exercise": "1.1",
+      "recordedSlots": 19,
+      "previouslySourceAndMathVerified": 3,
+      "notCertified": 16,
+      "exerciseDenominatorVerified": true,
+      "figuresPending": "unknown"
+    },
+    {
+      "exercise": "1.2",
+      "recordedSlots": 11,
+      "previouslySourceAndMathVerified": 0,
+      "notCertified": 11,
+      "exerciseDenominatorVerified": false,
+      "figuresPending": "unknown"
+    },
+    {
+      "exercise": "1.3",
+      "recordedSlots": 8,
+      "previouslySourceAndMathVerified": 0,
+      "notCertified": 8,
+      "exerciseDenominatorVerified": false,
+      "figuresPending": "unknown"
+    }
+  ],
+  "recordedSlotsAcrossInventories": 38,
+  "previouslyVerifiedEnglishSlots": 3,
+  "uncertifiedOrMissingSlots": 35,
+  "newCertifiedQuestions": 0,
+  "newCertifiedSubparts": 0,
+  "newTamilCertified": 0,
+  "wholeTextbookQuestionDenominator": null,
+  "wholeTextbookSubpartDenominator": null,
+  "knownGaps": [
+    "1.1 Q2(i-iii) matrix glyphs require page-image review",
+    "1.2 Q1(i-v), Q2(i-iii), Q3(i-iii) original question pages unverified",
+    "1.3 Q1(i-iv) equation glyphs, Q2 matrix layout require page-image review",
+    "1.3 Q3-Q5 wording needs image verification; Q3/Q4 existing drafts unpublished"
+  ],
+  "releaseGate": "No new content may be registered or deployed without original-page fidelity and required CI",
+  "nextBatch": "Obtain original PDF page-image inspection of Exercise 1.3 Q1-Q5 and certify exact English statements before solutions",
+  "notes": "38 is a sum of inventory slots, not a certified textbook denominator; 3 previously verified slots are from Exercise 1.1 only."
+}
