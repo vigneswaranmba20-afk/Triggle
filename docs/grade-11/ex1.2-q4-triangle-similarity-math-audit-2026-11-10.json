@@ -1,0 +1,54 @@
+{
+  "schema": "triggle.grade11.source-extracted-math-audit.v1",
+  "grade": 11,
+  "chapter": 1,
+  "exercise": "1.2",
+  "date": "2026-11-10",
+  "source": {
+    "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "edition": "2025 revised",
+    "volume": "English I",
+    "printedPage": 18,
+    "pageImageVerified": false
+  },
+  "questions": [
+    {
+      "id": "g11-c1-ex1.2-q4",
+      "extractedQuestion": "Let P be the set of all triangles in a plane and R be the relation defined on P as aRb if a is similar to b. Prove that R is an equivalence relation.",
+      "steps": [
+        "Two triangles are similar when their corresponding angles are equal and their corresponding sides have a common positive scale factor.",
+        "Reflexive: every triangle has the same angles and side lengths as itself; scale factor 1, so aRa.",
+        "Symmetric: if triangle a is similar to b with scale factor k>0, the reverse correspondence has scale factor 1/k>0, so bRa.",
+        "Transitive: if a is similar to b with scale factor k>0 and b is similar to c with scale factor h>0, corresponding angles remain equal and the composed scale factor kh>0, so aRc.",
+        "Thus similarity is reflexive, symmetric and transitive; R is an equivalence relation."
+      ],
+      "verification": {
+        "method": "positive-ratio composition and angle equality",
+        "scaleFactorsSample": [
+          2,
+          3
+        ],
+        "composedFactor": 6,
+        "reverseFactor": 0.5,
+        "mathematicallyChecked": true
+      },
+      "status": "unpublished-source-extracted-draft"
+    }
+  ],
+  "coverage": {
+    "newDraftQuestionStems": 1,
+    "newDraftSubparts": 0,
+    "newSourceImageCertifiedQuestions": 0,
+    "newPublishedQuestions": 0,
+    "gradeDenominator": null,
+    "exerciseQuestionStemsFromExtraction": 9,
+    "exerciseSubpartSlotsProvisional": null,
+    "denominatorCertified": false,
+    "denominatorNote": "Exercise 1.2 has 9 numbered stems in extracted text; count of subparts and image fidelity require verification."
+  },
+  "publication": {
+    "studentFacing": false,
+    "reason": "Original printed page image not inspected; exact wording and source fidelity not certified."
+  },
+  "next": "Inspect printed page 18 image for Q4 and exercise subpart boundaries; certify wording before registration."
+}

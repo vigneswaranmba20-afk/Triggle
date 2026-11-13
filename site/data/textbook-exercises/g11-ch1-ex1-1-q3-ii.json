@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapterId": "g11-ch1",
+  "chapterTitle": "Sets, Relations and Functions",
+  "exercise": "1.1",
+  "sourceAccess": "2025 revised English and Tamil Volume I PDFs directly inspected",
+  "questions": [
+    {
+      "id": "g11-ch1-ex1.1-q3-ii",
+      "exercise": "1.1",
+      "question": 3,
+      "subpart": "ii",
+      "prompt": {
+        "en": "Determine whether the set of odd prime natural numbers is finite or infinite.",
+        "ta": "ஒற்றைப்படை பகா எண்களாக உள்ள இயல் எண்களின் கணம் முடிவுள்ளதா அல்லது முடிவில்லாததா எனக் கண்டறிக."
+      },
+      "steps": {
+        "en": [
+          "Suppose there were only finitely many odd primes, listed as p₁, p₂, …, pₙ.",
+          "Form N = 2p₁p₂⋯pₙ + 1. This is odd and greater than 1.",
+          "For each listed odd prime pᵢ, division of N by pᵢ leaves remainder 1, so none divides N.",
+          "Every integer greater than 1 has a prime divisor. Since N is odd, that divisor is an odd prime not in the list, a contradiction.",
+          "Hence there are infinitely many odd prime natural numbers."
+        ],
+        "ta": [
+          "ஒற்றைப்படை பகா எண்கள் முடிவுள்ளவை என்று கருதி அவற்றை p₁, p₂, …, pₙ எனப் பட்டியலிடுவோம்.",
+          "N = 2p₁p₂⋯pₙ + 1 என அமைக்க. இது 1-ஐ விடப் பெரிய ஒற்றைப்படை எண்.",
+          "பட்டியலில் உள்ள ஒவ்வொரு pᵢ-ஆலும் N-ஐ வகுத்தால் மீதி 1 கிடைக்கும்; ஆகவே அவற்றில் எதுவும் N-ஐ வகுக்காது.",
+          "1-ஐ விடப் பெரிய ஒவ்வோர் முழு எண்ணுக்கும் ஒரு பகா வகுத்தி உண்டு. N ஒற்றைப்படை என்பதால் அதன் பகா வகுத்தியும் ஒற்றைப்படையாகும்; அது பட்டியலில் இல்லை. இது முரண்பாடு.",
+          "எனவே ஒற்றைப்படை பகா இயல் எண்கள் முடிவில்லாதவை."
+        ]
+      },
+      "answer": {
+        "en": "Infinite set (all odd prime natural numbers).",
+        "ta": "முடிவில்லாத கணம் (அனைத்து ஒற்றைப்படை பகா இயல் எண்கள்)."
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 9
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 17
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I",
+          "2025 Tamil Volume I"
+        ]
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    }
+  ]
+}

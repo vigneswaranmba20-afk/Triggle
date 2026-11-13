@@ -1,0 +1,80 @@
+{
+  "schema": "triggle.grade11.source-audit.v1",
+  "grade": 11,
+  "chapter": 1,
+  "exercise": "1.2",
+  "source": {
+    "title": "Class 11 Mathematics English Volume 1 2025",
+    "driveFileId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "section": "Answers appendix, printed page 290",
+    "sourceType": "answer-key-text-layer",
+    "questionPageImageVerified": false
+  },
+  "status": "inventory-only-not-publishable",
+  "answerKeyEvidence": [
+    {
+      "question": 1,
+      "subparts": [
+        "i",
+        "ii",
+        "iii",
+        "iv",
+        "v"
+      ],
+      "answers": [
+        "reflexive; not symmetric; transitive",
+        "not reflexive; symmetric; not transitive",
+        "reflexive; not symmetric; not transitive",
+        "reflexive; symmetric (transitivity not stated in extracted key)",
+        "empty relation; not reflexive; symmetric; transitive"
+      ]
+    },
+    {
+      "question": 2,
+      "subparts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "answers": [
+        "(c,c) and (d,d)",
+        "(c,a)",
+        "nothing to include",
+        "(c,c),(d,d),(c,a) to be included"
+      ]
+    },
+    {
+      "question": 3,
+      "subparts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "answers": [
+        "(c,c)",
+        "(c,a)",
+        "nothing",
+        "(c,c) and (c,a)"
+      ]
+    },
+    {
+      "question": 5,
+      "answer": "{(3,8),(6,6),(9,4),(12,2)}; not reflexive; not symmetric; transitive; not an equivalence relation"
+    },
+    {
+      "question": 7,
+      "answer": "15 ordered pairs listed in appendix; exact question page pending"
+    },
+    {
+      "question": 8,
+      "answer": "smallest set {(a,a),(b,b),(c,c)}; largest set A×A"
+    }
+  ],
+  "knownAnswerKeySlots": 16,
+  "missingQuestionPageVerification": true,
+  "mathSolutionVerification": "not-attempted-no-question-stems",
+  "tamilStatus": "not-verified",
+  "next": "Inspect original Exercise 1.2 question-page images; verify every relation definition and subpart; independently solve before creating student-facing content."
+}

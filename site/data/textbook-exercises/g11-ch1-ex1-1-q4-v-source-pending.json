@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapterId": "g11-ch1",
+  "chapterTitle": "Sets, Relations and Functions",
+  "exercise": "1.1",
+  "questions": [
+    {
+      "id": "g11-ch1-ex1.1-q4-v",
+      "question": 4,
+      "subpart": "v",
+      "prompt": {
+        "en": "4. By taking suitable sets A, B, C, verify the following results:\n(v) (B − A) ∩ C = (B ∩ C) − A = B ∩ (C − A).",
+        "ta": null
+      },
+      "steps": {
+        "en": [
+          "Choose A = {1, 2}, B = {2, 3, 4}, and C = {1, 3, 4}.",
+          "B − A = {3, 4}, so (B − A) ∩ C = {3, 4}.",
+          "B ∩ C = {3, 4}; removing A gives (B ∩ C) − A = {3, 4}.",
+          "C − A = {3, 4}, hence B ∩ (C − A) = {3, 4}.",
+          "All three expressions equal {3, 4} for the chosen sets.",
+          "For any x, membership in each expression is equivalent to x ∈ B AND x ∈ C AND x ∉ A. Therefore the equality holds for arbitrary sets A, B, C."
+        ],
+        "ta": []
+      },
+      "answer": {
+        "en": "Each expression equals {3, 4} for the chosen sets; the membership argument proves the identity for all sets.",
+        "ta": null
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "driveFileIds": {
+          "en": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+          "ta": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A"
+        },
+        "page": {
+          "en": 7,
+          "ta": 10
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 18
+        },
+        "pageImagesVisuallyChecked": {
+          "en": false,
+          "ta": false
+        },
+        "englishTextExtractLocated": true,
+        "tamilTextExtractLocated": false,
+        "sourceExact": false,
+        "transcriptionNote": "English text extracted from original 2025 revised PDF; image comparison still required before certifying textbook-exact. Tamil transcription and editorial approval pending."
+      },
+      "review": {
+        "publication": "source-pending-unmerged",
+        "mathematics": "independently checked by exhaustive finite-universe test",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    }
+  ]
+}

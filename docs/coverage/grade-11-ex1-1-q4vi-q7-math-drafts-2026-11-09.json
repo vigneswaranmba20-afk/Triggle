@@ -1,0 +1,75 @@
+{
+  "grade": 11,
+  "edition": "2025 revised",
+  "exercise": "1.1",
+  "status": "english-math-verified-source-image-pending",
+  "source": {
+    "englishDriveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "englishPrintedPage": 7,
+    "englishPdfPage": 15,
+    "tamilDriveId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
+    "tamilPrintedPage": 10,
+    "tamilPdfPage": 18,
+    "englishPageImageChecked": false,
+    "tamilPageImageChecked": false
+  },
+  "items": [
+    {
+      "id": "g11-ch1-ex1.1-q4-vi",
+      "questionEnglish": "(vi) (B − A) ∪ C = (B ∪ C) − (A − C).",
+      "answerEnglish": "The two sets are equal.",
+      "stepsEnglish": [
+        "For any x, the left side means x is in C, or x is in B but not A.",
+        "The right side means x is in B or C, but not in A − C.",
+        "When x is in C, both sides contain x.",
+        "When x is not in C, both sides contain x precisely when x is in B and not A.",
+        "Thus the two sides have the same elements."
+      ],
+      "mathChecked": true,
+      "sourceExact": false
+    },
+    {
+      "id": "g11-ch1-ex1.1-q5",
+      "questionEnglish": "5. Justify the trueness of the statement: “An element of a set can never be a subset of itself.”",
+      "answerEnglish": "False.",
+      "stepsEnglish": [
+        "Consider the set A = {∅}.",
+        "The empty set ∅ is an element of A.",
+        "Every set is a subset of itself, including ∅ ⊆ ∅.",
+        "Therefore ∅ is an element of A that is a subset of itself, disproving the claim."
+      ],
+      "mathChecked": true,
+      "sourceExact": false
+    },
+    {
+      "id": "g11-ch1-ex1.1-q6",
+      "questionEnglish": "6. If n(P(A)) = 1024, n(A ∪ B) = 15 and n(P(B)) = 32, then find n(A ∩ B).",
+      "answerEnglish": "0",
+      "stepsEnglish": [
+        "For a finite set X, n(P(X)) = 2^{n(X)}.",
+        "Since 1024 = 2^10, n(A) = 10.",
+        "Since 32 = 2^5, n(B) = 5.",
+        "Use n(A ∪ B) = n(A) + n(B) − n(A ∩ B).",
+        "15 = 10 + 5 − n(A ∩ B), so n(A ∩ B) = 0."
+      ],
+      "mathChecked": true,
+      "sourceExact": false
+    },
+    {
+      "id": "g11-ch1-ex1.1-q7",
+      "questionEnglish": "7. If n(A ∩ B) = 3 and n(A ∪ B) = 10, then find n(P(A∆B)).",
+      "answerEnglish": "128",
+      "stepsEnglish": [
+        "A∆B consists of elements in exactly one of A and B.",
+        "The union contains 10 elements, of which 3 are in both sets.",
+        "Thus n(A∆B) = 10 − 3 = 7.",
+        "The power set has 2^7 = 128 elements."
+      ],
+      "mathChecked": true,
+      "sourceExact": false
+    }
+  ],
+  "tamilEditorial": "pending",
+  "studentFacingRegistered": false,
+  "releaseEligible": false
+}

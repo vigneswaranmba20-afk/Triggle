@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapterId": "g11-ch1",
+  "chapterTitle": "Sets, Relations and Functions",
+  "exercise": "1.1",
+  "sourceAccess": "2025 revised English and Tamil Volume I PDF text inspected; mathematical notation cross-checked between editions",
+  "questions": [
+    {
+      "id": "g11-ch1-ex1.1-q4-i",
+      "exercise": "1.1",
+      "question": 4,
+      "subpart": "i",
+      "prompt": {
+        "en": "Choose suitable finite sets A, B and C and verify A × (B ∩ C) = (A × B) ∩ (A × C).",
+        "ta": "தகுந்த முடிவுள்ள A, B, C கணங்களை எடுத்துக்கொண்டு A × (B ∩ C) = (A × B) ∩ (A × C) என்பதைச் சரிபார்க்கவும்."
+      },
+      "steps": {
+        "en": [
+          "Choose A = {1, 2}, B = {a, b} and C = {b, c}. These choices allow an overlapping element in B and C.",
+          "B ∩ C = {b}, so A × (B ∩ C) = {(1,b), (2,b)}.",
+          "A × B = {(1,a), (1,b), (2,a), (2,b)} and A × C = {(1,b), (1,c), (2,b), (2,c)}.",
+          "The common ordered pairs are (1,b) and (2,b); hence (A × B) ∩ (A × C) = {(1,b), (2,b)}.",
+          "Both sides agree for these chosen sets. More generally, (x,y) belongs to either side exactly when x ∈ A and y belongs to both B and C."
+        ],
+        "ta": [
+          "A = {1, 2}, B = {a, b}, C = {b, c} என எடுத்துக்கொள்வோம். B, C இரண்டிலும் b உள்ளது.",
+          "B ∩ C = {b}. எனவே A × (B ∩ C) = {(1,b), (2,b)}.",
+          "A × B = {(1,a), (1,b), (2,a), (2,b)}; A × C = {(1,b), (1,c), (2,b), (2,c)}.",
+          "இரண்டு கார்டீசியன் பெருக்கல்களிலும் உள்ள வரிசைச் சோடிகள் (1,b), (2,b). ஆகவே (A × B) ∩ (A × C) = {(1,b), (2,b)}.",
+          "இருபுறமும் ஒரே கணம் கிடைக்கிறது. பொதுவாக, (x,y) இருபுறத்திலும் இருப்பதற்கான நிபந்தனை x ∈ A மற்றும் y ∈ B ∩ C என்பதே."
+        ]
+      },
+      "answer": {
+        "en": "Verified: both sides equal {(1,b), (2,b)} for the chosen sets; the identity holds for all sets.",
+        "ta": "சரிபார்க்கப்பட்டது: எடுத்துக்கொண்ட கணங்களுக்கு இருபுறமும் {(1,b), (2,b)}. இந்த முற்றொருமை எல்லாக் கணங்களுக்கும் பொருந்தும்."
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 10
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 18
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I",
+          "2025 Tamil Volume I"
+        ]
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    }
+  ]
+}

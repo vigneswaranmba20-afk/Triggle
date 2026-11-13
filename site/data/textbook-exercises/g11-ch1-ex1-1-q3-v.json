@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapterId": "g11-ch1",
+  "chapterTitle": "Sets, Relations and Functions",
+  "exercise": "1.1",
+  "sourceAccess": "2025 revised English and Tamil Volume I PDFs directly inspected",
+  "questions": [
+    {
+      "id": "g11-ch1-ex1.1-q3-v",
+      "exercise": "1.1",
+      "question": 3,
+      "subpart": "v",
+      "prompt": {
+        "en": "Determine whether the set of rational natural numbers is finite or infinite.",
+        "ta": "விகிதமுறு எண்களாக உள்ள இயல் எண்களின் கணம் முடிவுள்ளதா அல்லது முடிவில்லாததா எனக் கண்டறிக."
+      },
+      "steps": {
+        "en": [
+          "Let T = {x ∈ ℕ : x ∈ ℚ}.",
+          "Every natural number n is rational, because n = n/1 with denominator 1 ≠ 0.",
+          "Consequently T = ℕ = {1, 2, 3, …}.",
+          "For every positive integer k, k belongs to T, and all such k are distinct. Therefore T is infinite."
+        ],
+        "ta": [
+          "T = {x ∈ ℕ : x ∈ ℚ} என்க.",
+          "ஒவ்வொரு இயல் எண் n-உம் n = n/1 என எழுதப்படுவதால் விகிதமுறு எண்ணாகும்; பகுதி 1 ≠ 0.",
+          "எனவே T = ℕ = {1, 2, 3, …}.",
+          "ஒவ்வொரு மிகை முழு எண் k-உம் T-இல் உள்ளது; அவை அனைத்தும் வேறுபட்டவை. ஆகவே T முடிவில்லாத கணம்."
+        ]
+      },
+      "answer": {
+        "en": "Infinite set: every natural number is rational, so T = ℕ.",
+        "ta": "முடிவில்லாத கணம்: எல்லா இயல் எண்களும் விகிதமுறு எண்களே; எனவே T = ℕ."
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 10
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 18
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I",
+          "2025 Tamil Volume I"
+        ]
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    }
+  ]
+}

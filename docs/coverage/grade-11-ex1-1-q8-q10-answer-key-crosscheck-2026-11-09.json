@@ -1,0 +1,37 @@
+{
+  "grade": 11,
+  "edition": "2025 revised",
+  "source": {
+    "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "volume": 1,
+    "section": "Answers — Exercise 1.1",
+    "printedPage": 290,
+    "kind": "answer-key-text-extraction",
+    "questionPageImageChecked": false
+  },
+  "entries": [
+    {
+      "id": "g11-ch1-ex1.1-q8",
+      "answerKeyExtract": "{0, 1, 2, 3}",
+      "questionSourceExact": false,
+      "mathVerified": false
+    },
+    {
+      "id": "g11-ch1-ex1.1-q9",
+      "answerKeyExtract": "A = {x, y, z} and B = {1, 2}",
+      "questionSourceExact": false,
+      "mathVerified": false
+    },
+    {
+      "id": "g11-ch1-ex1.1-q10",
+      "answerKeyExtract": "{(-1, 0), (-1, 1), (0, 2), (1, 2)}",
+      "questionSourceExact": false,
+      "mathVerified": false
+    }
+  ],
+  "purpose": "Answer-key crosscheck ONLY; cannot reconstruct exact original questions from answers. Inspect original question page before creating solutions.",
+  "studentFacing": false,
+  "englishCertifiedNew": 0,
+  "tamilCertifiedNew": 0,
+  "denominatorVerified": false
+}
