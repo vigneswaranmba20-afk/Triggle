@@ -15,3 +15,49 @@
 #lessonCard:has(.triggle-tex) .worked-step:not(.final-answer-step) .step-circle{color:#65528f}
 #lessonCard:has(.triggle-tex) .step-reason{color:#555f73}
 #lessonCard:has(.triggle-tex) :is(#questionTitle,[data-i18n="stepByStep"]){color:#665778}
+
+/* Triggle mathematics typography contract (2026-11-13):
+   offline KaTeX as the primary display, not plain-text slash fractions.
+   Align maths like a clear worked ChatGPT explanation; scroll only the
+   individual exceptionally wide formula, never the full question page. */
+#lessonCard .worked-step .structured-equation{
+  max-width:100%;
+  min-width:0;
+  font-size:clamp(17px,4vw,20px);
+  line-height:1.7;
+  overflow:visible;
+}
+#lessonCard .structured-equation .triggle-tex-display,
+#lessonCard .final-answer-value .triggle-tex-display,
+#lessonCard #answerText .triggle-tex-display{
+  display:block;
+  width:100%;
+  max-width:100%;
+  margin:.32em 0 .55em;
+  padding:.33em .12em .48em;
+  text-align:left;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scrollbar-width:thin;
+  overscroll-behavior-x:contain;
+}
+#lessonCard :is(.structured-equation,.final-answer-value,#answerText) .triggle-tex-display .katex-display,
+#lessonCard :is(.structured-equation,.final-answer-value,#answerText) .triggle-tex-display .katex{
+  text-align:left;
+}
+#lessonCard :is(.structured-equation,.final-answer-value,#answerText) .triggle-tex-display .katex{
+  font-size:1.04em;
+}
+#lessonCard .structured-equation .katex-html{
+  white-space:nowrap;
+}
+#lessonCard .worked-step .step-reason{
+  margin-bottom:.28em;
+}
+@media (max-width:420px){
+ #lessonCard .worked-step .structured-equation{font-size:17px}
+ #lessonCard :is(.structured-equation,.final-answer-value,#answerText) .triggle-tex-display{
+   margin:.3em 0 .45em;
+   padding:.28em .08em .4em;
+ }
+}
