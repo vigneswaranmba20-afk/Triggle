@@ -506,10 +506,10 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "(i) -2",
-      "(ii) x=\\dfrac{3}{2}",
-      "(iii) x=3",
-      "(iv) x=\\dfrac{1}{2.}"
+      "\\text{(i) }-2",
+      "\\text{(ii) }x=\\dfrac32",
+      "\\text{(iii) }x=3",
+      "\\text{(iv) }x=\\dfrac12"
     ]
   },
   "c10-1-1-3-q7": {
@@ -726,7 +726,7 @@ const LAYOUT={
         "2a+1=2b+1 \\Rightarrow  a=b"
       ],
       [
-        "f(\\dfrac{y-1}{2})=y \\Rightarrow  (i) one-one and onto."
+        "f\\left(\\dfrac{y-1}{2}\\right)=y\\Rightarrow\\text{one-to-one and onto}"
       ],
       [
         "f(1)=f(-1)=-1 \\Rightarrow  not one-one"
@@ -809,10 +809,10 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "(i) 2",
-      "(ii) 10",
-      "(iii) 178",
-      "(iv) \\dfrac{-9}{17.}"
+      "\\text{(i) }2",
+      "\\text{(ii) }10",
+      "\\text{(iii) }178",
+      "\\text{(iv) }-\\dfrac9{17}"
     ]
   },
   "c10-1-1-4-q11": {
@@ -870,8 +870,8 @@ const LAYOUT={
         "\\text{unequal}"
       ],
       [
-        "f\\circ g=\\dfrac{2}{2x^{2}-1}",
-        "g\\circ f=2(\\dfrac{2}{x})^{2}-1=\\dfrac{8}{x^{2}-1}",
+        "f\\circ g=\\dfrac2{2x^2-1}",
+        "g\\circ f=2\\left(\\dfrac2x\\right)^2-1=\\dfrac8{x^2}-1",
         "\\text{unequal}"
       ],
       [
@@ -891,11 +891,11 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "(i) x^{2}-6, (x-6)^{2}",
-      "not equal. (ii) \\dfrac{2}{2x^{2}-1}, \\dfrac{8}{x^{2}-1}",
-      "not equal. (iii) \\dfrac{9-x}{3}, \\dfrac{3-x}{3}",
-      "not equal. (iv) x-1, x-1",
-      "equal. (v) 4x^{2}+8x+3, 4x^{2}",
+      "\\text{(i) }\\ x^2-6,\\ (x-6)^2",
+      "\\text{not equal. (ii) }\\ \\dfrac2{2x^2-1},\\ \\dfrac8{x^2}-1",
+      "\\text{not equal. (iii) }\\ \\dfrac{9-x}3,\\ \\dfrac{3-x}3",
+      "\\text{not equal. (iv) }\\ x-1,\\ x-1",
+      "\\text{equal. (v) }\\ 4x^2+8x+3,\\ 4x^2",
       "\\text{not equal.}"
     ]
   },
@@ -917,8 +917,8 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "(i) k=-5",
-      "(ii) k=\\dfrac{-5}{3.}"
+      "\\text{(i) }k=-5",
+      "\\text{(ii) }k=-\\dfrac53"
     ]
   },
   "c10-1-1-5-q3": {
@@ -946,7 +946,7 @@ const LAYOUT={
         "a^{2}-3=1 \\Rightarrow  a^{2}=4"
       ],
       [
-        "a=2 or a=-2"
+        "a=2\\text{ or }a=-2"
       ]
     ],
     "answer": [
@@ -972,8 +972,8 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "\\text{Range} of f\\circ g=\\{2x^{2}+1 : x\\in \\mathbb{N}\\}",
-      "\\text{range} of g\\circ f=\\{(2x+1)^{2} : x\\in \\mathbb{N}\\}, on the intended natural-\\text{number} domains."
+      "\\text{Range of }f\\circ g=\\{2x^2+1:x\\in\\mathbb N\\}",
+      "\\text{Range of }g\\circ f=\\{(2x+1)^2:x\\in\\mathbb N\\}\\text{ on compatible natural-number domains}"
     ]
   },
   "c10-1-1-5-q6": {
@@ -1002,13 +1002,13 @@ const LAYOUT={
         "f(a)=f(b) \\Rightarrow  a^{5}=b^{5} \\Rightarrow  a=b"
       ],
       [
-        "g(1)=g(-1)=1 \\Rightarrow  g is not one-one"
+        "g(1)=g(-1)=1\\ \\Rightarrow\\ \\text{not one-to-one}"
       ],
       [
         "f(g(x))=(x^{4})^{5}=x^{20}"
       ],
       [
-        "(f\\circ g)(1)=(f\\circ g)(-1)=1 \\Rightarrow  not one-one"
+        "(f\\circ g)(1)=(f\\circ g)(-1)=1\\ \\Rightarrow\\ \\text{not one-to-one}"
       ]
     ],
     "answer": [
@@ -1288,18 +1288,18 @@ const LAYOUT={
         "x^{2}-3x=-2 \\Rightarrow  x^{2}-3x+2=0"
       ],
       [
-        "(x-1)(x-2)=0 \\Rightarrow  x=1 or 2"
+        "(x-1)(x-2)=0\\ \\Rightarrow\\ x=1\\text{ or }2"
       ],
       [
         "y^{2}+4y=5 \\Rightarrow  y^{2}+4y-5=0"
       ],
       [
-        "(y+5)(y-1)=0 \\Rightarrow  y=-5 or 1"
+        "(y+5)(y-1)=0\\ \\Rightarrow\\ y=-5\\text{ or }1"
       ]
     ],
     "answer": [
-      "x=1 or 2",
-      "y=1 or -5."
+      "x=1\\text{ or }2",
+      "y=1\\text{ or }-5"
     ]
   },
   "c10-1-1-unit-q2": {
@@ -1424,7 +1424,7 @@ const LAYOUT={
   "c10-1-1-unit-q8": {
     "steps": [
       [
-        "f(f(x))=\\{FRAC1|\\dfrac{x-1}{x+1}-1|\\dfrac{x-1}{x+1}+1\\}"
+        "f(f(x))=\\dfrac{\\dfrac{x-1}{x+1}-1}{\\dfrac{x-1}{x+1}+1}"
       ],
       [
         "\\dfrac{x-1}{x+1}-1=\\dfrac{-2}{x+1}"
@@ -1433,20 +1433,20 @@ const LAYOUT={
         "\\dfrac{x-1}{x+1}+1=\\dfrac{2x}{x+1}"
       ],
       [
-        "f(f(x))=\\{FRAC1|\\dfrac{-2}{x+1}|\\dfrac{2x}{x+1}\\}=\\dfrac{-1}{x}"
+        "f(f(x))=\\dfrac{\\dfrac{-2}{x+1}}{\\dfrac{2x}{x+1}}=-\\dfrac{1}{x}"
       ]
     ],
     "answer": [
-      "f(f(x))=\\dfrac{-1}{x} for x\\ne -1,0."
+      "f(f(x))=-\\dfrac1x\\quad \\text{for }x\\ne -1,0"
     ]
   },
   "c10-1-1-unit-q9": {
     "steps": [
       [
-        "g(\\dfrac{1}{2})=\\{FRAC2|\\dfrac{1}{2-2}|3\\}=\\{FRAC4|\\dfrac{-3}{2}|3\\}=\\dfrac{-1}{2}"
+        "\\begin{aligned}g\\left(\\dfrac12\\right)&=\\dfrac{\\frac12-2}{3}\\\\&=\\dfrac{-\\frac32}{3}=-\\dfrac12\\end{aligned}"
       ],
       [
-        "g(g(\\dfrac{1}{2}))=g(\\dfrac{-1}{2})=\\{FRAC3|\\dfrac{-1}{2-2}|3\\}=\\dfrac{-5}{6}"
+        "\\begin{aligned}g\\left(g\\left(\\dfrac12\\right)\\right)&=g\\left(-\\dfrac12\\right)\\\\&=\\dfrac{-\\frac12-2}{3}=-\\dfrac56\\end{aligned}"
       ],
       [
         "g(f(x))=\\dfrac{(6x+8)-2}{3}"
