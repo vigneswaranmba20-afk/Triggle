@@ -3882,6 +3882,42 @@ const metadata={
       "basis": "Calculate mean, sum of squares, variance and standard deviation.",
       "review": "implementation-audit"
     },
+    "c10-8-ex8-1-q5": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Nine-value wage variance and standard deviation with independent check",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q6": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Two 12-hour cycles; 24 observations and squared-deviation computation",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q7": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Consecutive natural-number sum-of-squares identity and variance",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q8": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Translation invariance of standard deviation",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q9": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Scaling rule for variance and standard deviation",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-1-q10": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Frequency-weighted mean, variance and standard deviation",
+      "review": "implementation-audit"
+    },
     "c10-2-ex2-2-q1": {
       "grade": 10,
       "level": "easy",
