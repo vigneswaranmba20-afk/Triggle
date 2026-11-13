@@ -389,6 +389,8 @@
   s={...s,...window.TriggleG9Math?.get(current)?.steps[index]};
   const chapter1Math=window.TriggleChapter1Math?.getStep?.(current,index);
   if(chapter1Math)s={...s,math:chapter1Math};
+  const remainingMath=window.TriggleG10RemainingMath?.getStep?.(current,index);
+  if(remainingMath&&!s.math)s={...s,math:remainingMath};
   const li=document.createElement('li');li.className='worked-step';
   const number=document.createElement('span');number.className='step-circle';number.textContent=index+1;
   const body=document.createElement('div');const reason=document.createElement('div');reason.className='step-reason';
@@ -436,7 +438,7 @@
   const all=current.steps||[];const ul=$('stepsList');ul.replaceChildren();
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
-  const answerMath=window.TriggleG9Math?.get(current)?.answerMath||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current);
+  const answerMath=window.TriggleG9Math?.get(current)?.answerMath||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||window.TriggleG10RemainingMath?.getAnswer?.(current);
   const canGrid=!answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
@@ -532,7 +534,7 @@
   $('gradeTotal').textContent=list.length+' '+ui('lessons');$('questionLabel').textContent=labelForGroup(current.exercise).toUpperCase();$('itemPosition').textContent=num(position)+' / '+num(list.length);
   $('questionTitle').textContent=tr(current.topic);$('questionHead').textContent=tr(current.label);
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
-  const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang);
+  const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||window.TriggleG10RemainingMath?.getQuestion?.(current,lang);
   $('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));$('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
 
