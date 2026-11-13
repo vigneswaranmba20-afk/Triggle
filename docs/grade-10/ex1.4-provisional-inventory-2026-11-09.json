@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.4",
+  "source": {
+    "edition": "2025 revised",
+    "language": "English",
+    "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "printedPages": [
+      24,
+      25
+    ],
+    "pdfPagesEstimated": [
+      30,
+      31
+    ],
+    "verification": "text_layer_only",
+    "figurePending": [
+      "Fig. 1.39 Q1(i–iv)"
+    ],
+    "mathNotationPending": [
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5",
+      "Q6",
+      "Q7",
+      "Q8",
+      "Q9",
+      "Q10",
+      "Q11"
+    ]
+  },
+  "questionStemCount": 12,
+  "provisionalAtomicSlots": 32,
+  "verifiedOriginalQuestionCount": 0,
+  "verifiedOriginalSubpartCount": 0,
+  "verifiedSolutions": 0,
+  "tamilEditorial": "pending",
+  "entries": [
+    {
+      "id": "g10-ch1-ex1-4-q1i",
+      "question": 1,
+      "subpart": "i",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q1ii",
+      "question": 1,
+      "subpart": "ii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q1iii",
+      "question": 1,
+      "subpart": "iii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q1iv",
+      "question": 1,
+      "subpart": "iv",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q2i",
+      "question": 2,
+      "subpart": "i",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q2ii",
+      "question": 2,
+      "subpart": "ii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q2iii",
+      "question": 2,
+      "subpart": "iii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q2iv",
+      "question": 2,
+      "subpart": "iv",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q3i",
+      "question": 3,
+      "subpart": "i",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q3ii",
+      "question": 3,
+      "subpart": "ii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q3iii",
+      "question": 3,
+      "subpart": "iii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q4",
+      "question": 4,
+      "subpart": null,
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q5",
+      "question": 5,
+      "subpart": null,
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q6i",
+      "question": 6,
+      "subpart": "i",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q6ii",
+      "question": 6,
+      "subpart": "ii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q7i",
+      "question": 7,
+      "subpart": "i",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q7ii",
+      "question": 7,
+      "subpart": "ii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q8",
+      "question": 8,
+      "subpart": null,
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q9i",
+      "question": 9,
+      "subpart": "i",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q9ii",
+      "question": 9,
+      "subpart": "ii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q9iii",
+      "question": 9,
+      "subpart": "iii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q9iv",
+      "question": 9,
+      "subpart": "iv",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q10i",
+      "question": 10,
+      "subpart": "i",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q10ii",
+      "question": 10,
+      "subpart": "ii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q10iii",
+      "question": 10,
+      "subpart": "iii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q10iv",
+      "question": 10,
+      "subpart": "iv",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q11",
+      "question": 11,
+      "subpart": null,
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12i",
+      "question": 12,
+      "subpart": "i",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12ii",
+      "question": 12,
+      "subpart": "ii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12iii",
+      "question": 12,
+      "subpart": "iii",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12iv",
+      "question": 12,
+      "subpart": "iv",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12v",
+      "question": 12,
+      "subpart": "v",
+      "status": "source_image_pending",
+      "solutionStatus": "not_started"
+    }
+  ],
+  "nextAction": "Inspect original printed pp.24–25 PDF page images for Fig.1.39 and formula fidelity; certify wording before solution generation. Keep all slots unpublished."
+}

@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-1-q5",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.1",
+  "question": "5",
+  "subpart": null,
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "tamil": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "manifest": "docs/reference-library/2025-user-textbook-manifest.json",
+    "verificationNote": "2025 English and Tamil PDF text, printed p.6, both show A={1,2,3}, B={2,3,5}, C={3,4}, D={1,3,5}; identity read as (A∩C)×(B∩D)=(A×B)∩(C×D)."
+  },
+  "review": {
+    "sourceVerified": true,
+    "mathVerified": true,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  },
+  "title": {
+    "en": "Check a Cartesian-product intersection identity",
+    "ta": "கார்டீசியன் பெருக்கல் வெட்டுக் கண முற்றொருமையைச் சரிபார்த்தல்"
+  },
+  "questionParaphrase": {
+    "en": "Given A={1,2,3}, B={2,3,5}, C={3,4} and D={1,3,5}, determine whether (A∩C)×(B∩D)=(A×B)∩(C×D).",
+    "ta": "A={1,2,3}, B={2,3,5}, C={3,4}, D={1,3,5} எனில் (A∩C)×(B∩D)=(A×B)∩(C×D) என்பது உண்மையா எனச் சரிபார்க்கவும்."
+  },
+  "steps": [
+    {
+      "en": "Find each intersection before multiplying the sets.",
+      "ta": "முதலில் ஒவ்வொரு வெட்டுக் கணத்தையும் காண்க.",
+      "equation": "A ∩ C = {3}; B ∩ D = {3,5}"
+    },
+    {
+      "en": "Take the Cartesian product of those intersections to evaluate the left side.",
+      "ta": "இவ்விரு வெட்டுக் கணங்களின் கார்டீசியன் பெருக்கலைக் கண்டு இடப்பக்கத்தை மதிப்பிடுக.",
+      "equation": "(A ∩ C) × (B ∩ D) = {(3,3),(3,5)}"
+    },
+    {
+      "en": "On the right, a pair is in both A×B and C×D only when its first coordinate is in A∩C and its second in B∩D.",
+      "ta": "வலப்பக்கத்தில் ஒரு வரிசைச் சோடி A×B மற்றும் C×D இரண்டிலும் இருக்க, அதன் முதல் உறுப்பு A∩C-இலும் இரண்டாம் உறுப்பு B∩D-இலும் இருக்க வேண்டும்.",
+      "equation": "(A × B) ∩ (C × D) = {(3,3),(3,5)}"
+    },
+    {
+      "en": "Both sides contain exactly the same two ordered pairs, so the proposed equality is true.",
+      "ta": "இரு பக்கங்களிலும் ஒரே இரண்டு வரிசைச் சோடிகள் உள்ளதால் கொடுக்கப்பட்ட சமன்பாடு உண்மையாகும்.",
+      "equation": "(A ∩ C) × (B ∩ D) = (A × B) ∩ (C × D)"
+    }
+  ],
+  "answers": {
+    "A": [
+      1,
+      2,
+      3
+    ],
+    "B": [
+      2,
+      3,
+      5
+    ],
+    "C": [
+      3,
+      4
+    ],
+    "D": [
+      1,
+      3,
+      5
+    ],
+    "AxB": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "CxD": [
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "left": [
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "right": [
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "intersection": [
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        5
+      ]
+    ]
+  },
+  "misconception": {
+    "en": "The intersection of products requires both coordinates to match the respective intersections; it is not a union.",
+    "ta": "பெருக்கல்களின் வெட்டுக் கணத்தில் இரு உறுப்புகளும் தத்தம் வெட்டுக் கணங்களில் இருக்க வேண்டும்; இது சேர்ப்புக் கணம் அல்ல."
+  }
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Triggle · Grade 10 · Cartesian products (testing preview)</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#16313a;background:#f3f8fa}*{box-sizing:border-box}
+body{max-width:850px;margin:auto;padding:1rem}header,article{background:white;border-radius:1rem;padding:1.2rem;margin:1rem 0;box-shadow:0 2px 12px #1232}
+h1{font-size:clamp(1.5rem,5vw,2.2rem)}nav{display:flex;gap:.6rem;flex-wrap:wrap}
+button{font:inherit;padding:.6rem 1rem;border:2px solid #176a75;border-radius:.5rem;background:white;color:#07505c;cursor:pointer}
+button[hidden]{display:none}button[aria-pressed="true"]{background:#07505c;color:white}button:focus-visible,summary:focus-visible{outline:3px solid #dd891c;outline-offset:3px}
+.math{overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:1rem/1.65 ui-monospace,monospace;background:#edf6f8;padding:.7rem;border-radius:.5rem}
+li{margin:.6rem 0;line-height:1.65}.pair-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:.5rem;margin:.8rem 0}.pair-cell{border:1px solid #b7d4d8;background:#f2f9fa;border-radius:.5rem;padding:.65rem;text-align:center;font-family:ui-monospace,monospace}.pair-cell:focus-visible{outline:3px solid #dd891c;outline-offset:2px}details{border-top:1px solid #ccd;margin-top:1rem;padding-top:.7rem}summary{cursor:pointer;font-weight:700}
+.notice,small{color:#40545e}#status[role="alert"]{color:#9b1c1c}
+</style></head><body><header>
+<small>Triggle · Grade 10 · Chapter 1 · Exercise 1.1 · testing preview</small>
+<h1 id="title">Cartesian products / கார்டீசியன் பெருக்கல்</h1>
+<p class="notice" id="notice">Q1(i–iii), Q2–Q5 verified; Q6(i) mathematical draft pending source glyph review. Tamil human editorial review pending. Not a certification of complete curriculum coverage or live deployment.</p>
+<nav aria-label="Lesson language"><button type="button" id="en" aria-pressed="true">English</button><button type="button" id="ta" aria-pressed="false" lang="ta">தமிழ்</button></nav>
+</header><button type="button" id="retry" hidden>Retry loading lessons</button><main id="lessons" aria-live="polite"><p id="status" role="status">Loading lessons…</p></main>
+<script>
+'use strict';
+const base='../data/textbook-exercises/';
+const ids=['g10-ch1-ex1-1-q1i','g10-ch1-ex1-1-q1ii','g10-ch1-ex1-1-q1iii','g10-ch1-ex1-1-q2','g10-ch1-ex1-1-q3','g10-ch1-ex1-1-q4','g10-ch1-ex1-1-q5','g10-ch1-ex1-1-q6i'];
+let lessons=[],lang='en';
+const retry=document.getElementById('retry');
+const errorText={en:'Unable to load verified lessons. Please check your connection and retry.',ta:'சரிபார்க்கப்பட்ட பாடங்களை ஏற்ற முடியவில்லை. இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்.'};
+const main=document.getElementById('lessons');
+const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
+function validLesson(q,id){
+ return q && q.id===id && q.grade===10 && q.chapter===1 && q.exercise==='1.1' && ((q.question==='1' && id==='g10-ch1-ex1-1-q1'+q.subpart)||(['2','3','4','5'].includes(q.question) && q.subpart===null && id==='g10-ch1-ex1-1-q'+q.question) || (q.question==='6' && q.subpart==='i' && id==='g10-ch1-ex1-1-q6i')) && q.source?.edition==='2025 revised' && (q.review?.sourceVerified===true || (q.id==='g10-ch1-ex1-1-q6i' && q.review?.sourceVerified===false)) && q.review?.mathVerified===true &&
+ ['en','ta'].every(k=>typeof q.title?.[k]==='string' && q.title[k].trim() && typeof q.questionParaphrase?.[k]==='string' && q.questionParaphrase[k].trim() && typeof q.misconception?.[k]==='string' && q.misconception[k].trim()) &&
+ Array.isArray(q.steps) && q.steps.length>0 && q.steps.every(step=>typeof step.equation==='string' && ['en','ta'].every(k=>typeof step[k]==='string' && step[k].trim())) &&
+ Number.isInteger(q.source?.english?.printedPage) && Number.isInteger(q.source?.tamil?.printedPage) && Number.isInteger(q.source?.english?.pdfPage) && Number.isInteger(q.source?.tamil?.pdfPage) && q.source.english.printedPage>0 && q.source.tamil.printedPage>0 && (q.question==='6' ? (['A','B','C','BunionC','AxB','AxC','left','right'].every(k=>Array.isArray(q.answers?.[k]))) : q.question==='5' ? (['A','B','C','D','AxB','CxD','left','right','intersection'].every(k=>Array.isArray(q.answers?.[k]))) : q.question==='4' ? (['A','B','C','AxA','BxB','CxC','intersection'].every(k=>Array.isArray(q.answers?.[k]))) : q.question==='3' ? (Array.isArray(q.answers?.A) && Array.isArray(q.answers?.B) && Array.isArray(q.answers?.BxA)) : ['AxB','AxA','BxA'].every(k=>Array.isArray(q.answers?.[k]) && q.answers[k].every(pair=>Array.isArray(pair)&&pair.length===2)));
+}
+function draw(){
+ main.replaceChildren();retry.hidden=true;
+ for(const q of lessons){
+  const article=el('article');article.dataset.questionId=q.id;
+  article.append(el('h2','Exercise '+q.exercise+' · Q'+q.question+(q.subpart==null?'':'('+q.subpart+')')));
+  article.append(el('p',q.title[lang]));
+  article.append(el('p',lang==='en'?'Learning restatement — not a verified verbatim textbook transcription:':'கற்றலுக்கான மறுவடிவாக்கம் — பாடநூலின் சொற்சொல்லான சரிபார்க்கப்பட்ட பதிவு அல்ல:','notice'));
+  article.append(el('p',q.questionParaphrase[lang]));
+  if(q.review.sourceVerified===false)article.append(el('p',lang==='en'?'Source notation pending visual verification — mathematical draft only.':'மூலக் குறியீடுகள் படத்தின் மூலம் சரிபார்க்கப்பட வேண்டும் — கணித வரைவு மட்டும்.','notice'));
+  article.append(el('small','2025 revised · English printed p.'+q.source.english.printedPage+' (PDF '+q.source.english.pdfPage+'); Tamil printed p.'+q.source.tamil.printedPage+' (PDF '+q.source.tamil.pdfPage+').'));
+  const details=el('details'),summary=el('summary',lang==='en'?'Show step-by-step solution':'படிப்படியான விடையைக் காண்க');details.append(summary);
+  const steps=el('ol');for(const step of q.steps){const li=el('li',step[lang]);li.append(el('div',step.equation,'math'));steps.append(li);}details.append(steps);
+  const gridTitle=el('h3',lang==='en'?'Explore ordered pairs':'வரிசைச் சோடிகளை ஆராய்க');details.append(gridTitle);
+  const hint=el('p',lang==='en'?'Each tile shows one ordered pair. Notice how reversing coordinates changes the product.':'ஒவ்வொரு கட்டத்திலும் ஒரு வரிசைச் சோடி உள்ளது. உறுப்புகளின் வரிசை மாறும்போது பெருக்கல் எவ்வாறு மாறுகிறது எனக் கவனிக்கவும்.');details.append(hint);
+  for(const key of (q.question==='6'?['left','right']:(q.question==='5'?['left','right']:(q.question==='4'?['AxA','intersection']:(q.question==='3'?['BxA']:(q.question==='2'?['AxB','BxA']:['AxB','AxA','BxA'])))))){const section=el('section');section.append(el('h4',(key==='left'?(q.question==='6'?'A × (B ∪ C)':'(A ∩ C) × (B ∩ D)'):key==='right'?(q.question==='6'?'(A × B) ∪ (A × C)':'(A × B) ∩ (C × D)'):key==='intersection'?'(B × B) ∩ (C × C)':key.replace('x',' × '))));const grid=el('div');grid.className='pair-grid';grid.setAttribute('role','list');if(!q.answers[key].length){grid.append(el('p',lang==='en'?'∅ — no ordered pairs':'∅ — வரிசைச் சோடிகள் இல்லை'));}for(const pair of q.answers[key]){const tile=el('div','('+pair.join(', ')+')','pair-cell');tile.setAttribute('role','listitem');grid.append(tile);}section.append(grid);details.append(section);}
+  details.append(el('p',q.misconception[lang]));article.append(details);main.append(article);
+ }
+ document.documentElement.lang=lang;
+ retry.textContent=lang==='en'?'Retry loading lessons':'பாடங்களை மீண்டும் ஏற்றுக';
+ for(const key of ['en','ta'])document.getElementById(key).setAttribute('aria-pressed',String(key===lang));
+ document.getElementById('notice').textContent=lang==='en'?'Q1(i–iii), Q2–Q5 checked; Q6(i) mathematical draft, source notation pending visual review. Tamil human editorial review pending. This is a testing preview, not full curriculum coverage.':'Q1(i–iii), Q2–Q5 சரிபார்க்கப்பட்டன; Q6(i) கணித வரைவு, மூலக் குறியீட்டுச் சரிபார்ப்பு நிலுவையில் உள்ளது. தமிழ் மனிதத் தொகுப்பாசிரியர் மதிப்பாய்வு நிலுவையில் உள்ளது. இது சோதனை முன்னோட்டம் மட்டுமே.';
+}
+for(const key of ['en','ta'])document.getElementById(key).addEventListener('click',()=>{lang=key;document.documentElement.lang=lang;retry.textContent=lang==='en'?'Retry loading lessons':'பாடங்களை மீண்டும் ஏற்றுக';if(lessons.length)draw();else if(!retry.hidden){const message=el('p',errorText[lang]);message.id='status';message.setAttribute('role','alert');main.replaceChildren(message);}});
+async function loadLessons(){retry.hidden=true;main.replaceChildren(el('p',lang==='en'?'Loading lessons…':'பாடங்கள் ஏற்றப்படுகின்றன…'));try{
+ const responses=await Promise.all(ids.map(id=>fetch(base+id+'.json')));
+ if(responses.some(r=>!r.ok))throw Error('lesson file unavailable');
+ lessons=await Promise.all(responses.map(r=>r.json()));
+ for(let i=0;i<lessons.length;i++){if(!validLesson(lessons[i],ids[i]))throw Error('lesson metadata mismatch');}
+ draw();
+}catch(e){lessons=[];main.replaceChildren(el('p',errorText[lang]));main.firstChild.id='status';main.firstChild.setAttribute('role','alert');retry.hidden=false;}}
+retry.addEventListener('click',loadLessons);
+loadLessons();
+</script></body></html>

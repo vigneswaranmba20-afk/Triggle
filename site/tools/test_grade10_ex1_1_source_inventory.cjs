@@ -1,0 +1,30 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.resolve(__dirname, '../data/textbook-exercises');
+const ledger = JSON.parse(fs.readFileSync(path.join(root,'grade-10-coverage-2025.json'),'utf8'));
+const chapter = ledger.chapters.find(c => c.chapter === 1);
+const inventory = chapter.exerciseInventory['1.1'];
+const expected = ['1(i)','1(ii)','1(iii)','2','3','4','5','6(i)','6(ii)','6(iii)','7(i)','7(ii)'];
+assert.deepEqual(inventory.enumeratedQuestionSubparts,expected);
+assert.equal(inventory.questionSubpartInventoryComplete,true);
+assert.equal(new Set(expected).size,12);
+assert.equal(inventory.verifiedCount,chapter.verifiedQuestionSubparts.length);
+assert.deepEqual(inventory.missingSourceVerified,expected.filter(x=>!chapter.verifiedQuestionSubparts.includes(x)));
+assert.deepEqual(inventory.missingSourceVerified,['6(i)','6(ii)','6(iii)','7(i)','7(ii)']);
+assert.deepEqual(chapter.mergedQuestionSubparts,[]);
+assert.deepEqual(chapter.liveVerifiedQuestionSubparts,[]);
+const q6 = JSON.parse(fs.readFileSync(path.join(root,'g10-ch1-ex1-1-q6i.json'),'utf8'));
+assert.equal(q6.review.mathVerified,true);
+assert.equal(q6.review.sourceVerified,false);
+assert.equal(q6.review.merged,false);
+assert.equal(q6.review.liveVerified,false);
+for (const lang of ['english','tamil']) {
+  assert.equal(q6.source[lang].printedPage,6);
+  assert.equal(q6.source[lang].pdfPage,12);
+  assert.ok(q6.source[lang].driveFileId);
+  assert.equal(q6.source.fidelity[lang+'ExactQuestionVerified'],false);
+  assert.equal(q6.source.fidelity[lang+'PageImageVerified'],false);
+}
+console.log('PASS: Grade 10 Exercise 1.1 twelve-slot source inventory and five honest fidelity gaps');

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "exercise": "1.4",
+  "question": "7",
+  "subpart": "ii",
+  "kind": "conditional_math_audit_unpublished",
+  "source": {
+    "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "edition": "2025 revised",
+    "printedPage": 25,
+    "extractedText": "(ii) f :  ® defined by fx() = 34 – x\\n2",
+    "pageImageVerified": false,
+    "ambiguity": "Fraction bar and placement of 2 not recoverable from text extraction. Do not assert exact function."
+  },
+  "candidateInterpretations": [
+    {
+      "expression": "f(x)=(3-4x)/2",
+      "slope": -2,
+      "intercept": 1.5,
+      "inverse": "x=(3-2y)/4"
+    },
+    {
+      "expression": "f(x)=3-(4x)/2",
+      "slope": -2,
+      "intercept": 3,
+      "inverse": "x=(3-y)/2"
+    },
+    {
+      "expression": "f(x)=3-4x^2",
+      "note": "If the 2 is a superscript rather than denominator, this is not injective on R; f(a)=f(-a)."
+    }
+  ],
+  "conditionalProof": "For either affine interpretation with slope -2 and domain/codomain R: if f(a)=f(b), cancellation gives -2a=-2b, hence a=b. For any y in R, x=(y-b)/(-2) is real and satisfies f(x)=y, so the function is bijective. This does not apply if the 2 denotes a square.",
+  "verification": {
+    "affineAlgebra": "slope=-2 !=0 implies bijective R->R",
+    "quadraticCounterexample": "f(1)=f(-1) if f(x)=3-4x²",
+    "duplicateIdsWithinFile": 0
+  },
+  "coverageDelta": {
+    "sourceCertifiedQuestions": 0,
+    "sourceCertifiedSubparts": 0,
+    "publishedSolutions": 0,
+    "tamilSolutions": 0
+  },
+  "verifiedExerciseDenominator": null,
+  "figuresPending": [
+    "Q1 Fig.1.39"
+  ],
+  "publication": "BLOCKED until original page image confirms fraction/exponent and exact wording",
+  "next": "Inspect printed page 25 image, certify Q7(ii) exact expression, then register correct solution only after CI."
+}

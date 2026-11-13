@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-1-q3",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.1",
+  "question": "3",
+  "subpart": null,
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "tamil": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "manifest": "docs/reference-library/2025-user-textbook-manifest.json",
+    "verificationNote": "Both 2025 revised books, Exercise 1.1 Q3, printed p.6; text extraction loses mathematical glyph placement; ordered pairs checked against matching bilingual extraction."
+  },
+  "review": {
+    "sourceVerified": true,
+    "mathVerified": true,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  },
+  "title": {
+    "en": "Recover the sets from a Cartesian product",
+    "ta": "கார்டீசியன் பெருக்கலிலிருந்து கணங்களைக் கண்டறிதல்"
+  },
+  "questionParaphrase": {
+    "en": "Given B × A = {(−2,−3), (−2,4), (0,−3), (0,4), (3,−3), (3,4)}, determine A and B.",
+    "ta": "B × A = {(−2,−3), (−2,4), (0,−3), (0,4), (3,−3), (3,4)} எனில் A மற்றும் B கணங்களைக் காண்க."
+  },
+  "steps": [
+    {
+      "en": "In B × A, the first coordinate of every ordered pair comes from B; the second comes from A.",
+      "ta": "B × A என்ற கார்டீசியன் பெருக்கலில் ஒவ்வொரு வரிசைச் சோடியின் முதல் உறுப்பு B-இலிருந்தும் இரண்டாம் உறுப்பு A-இலிருந்தும் வருகிறது.",
+      "equation": "(b,a) ∈ B × A ⇔ b ∈ B and a ∈ A"
+    },
+    {
+      "en": "Read the distinct first coordinates from the six pairs. Do not repeat an element when writing a set.",
+      "ta": "ஆறு வரிசைச் சோடிகளின் முதல் உறுப்புகளில் உள்ள வெவ்வேறு மதிப்புகளை மட்டும் எடுத்துக் கணமாக எழுதுக.",
+      "equation": "B = {−2, 0, 3}"
+    },
+    {
+      "en": "Read the distinct second coordinates from the six pairs.",
+      "ta": "ஆறு வரிசைச் சோடிகளின் இரண்டாம் உறுப்புகளில் உள்ள வெவ்வேறு மதிப்புகளை எடுத்துக் கணமாக எழுதுக.",
+      "equation": "A = {−3, 4}"
+    },
+    {
+      "en": "Verify by forming every pair with its first coordinate in B and second in A. Three choices times two choices gives all six given pairs, with none missing or extra.",
+      "ta": "முதல் உறுப்பை B-இலிருந்தும் இரண்டாம் உறுப்பை A-இலிருந்தும் தேர்ந்தெடுத்து மீண்டும் பெருக்கலை அமைத்துச் சரிபார்க்கவும். 3 × 2 = 6 வரிசைச் சோடிகளும் கொடுக்கப்பட்டவற்றுடன் பொருந்துகின்றன.",
+      "equation": "B × A = {(−2,−3), (−2,4), (0,−3), (0,4), (3,−3), (3,4)}; n(B × A)=3 × 2=6"
+    }
+  ],
+  "answers": {
+    "A": [
+      -3,
+      4
+    ],
+    "B": [
+      -2,
+      0,
+      3
+    ],
+    "BxA": [
+      [
+        -2,
+        -3
+      ],
+      [
+        -2,
+        4
+      ],
+      [
+        0,
+        -3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        3,
+        -3
+      ],
+      [
+        3,
+        4
+      ]
+    ]
+  },
+  "misconception": {
+    "en": "For B × A, the first coordinates determine B, not A. Swapping the order reverses the answer.",
+    "ta": "B × A-இல் முதல் உறுப்புகள் B கணத்தைத் தருகின்றன; A-ஐ அல்ல. வரிசையை மாற்றினால் விடையும் மாறும்."
+  }
+}

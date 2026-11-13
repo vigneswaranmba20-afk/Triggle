@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "edition": "2025 revised",
+  "lastVerified": "2026-11-08",
+  "sourceManifest": "docs/reference-library/2025-user-textbook-manifest.json",
+  "notes": "2026-11-08 19:31 IST: Q6(i) English/Tamil revised printed p.6/PDF p.12 text confirms A={0,1}, B={2,3,4}, C={3,5}, Cartesian-product union identity. Independent 8-pair enumeration and bilingual mathematical draft committed. Source glyph visual verification and Tamil human editorial remain pending; Q6(i) NOT included in source-verified count. Prior commit 9bc0b38 passed all four workflows. 2026-11-09: Q7(i) provisional mathematical draft + focused content assertion added, not source-verified and not student-facing. 2026-11-09: Exercise 1.2 Q5 salary-to-employee 14-pair English mathematical draft and deterministic regression committed; source page images not inspected, not source-certified or published. 2026-11-09: Exercise 1.2 Q2 six-pair math draft independently enumerated; source-image pending; no increase in certified count. 2026-11-09 19:32 IST: Exercise 1.3 text-layer inventory added: 10 stems and 26 provisional atomic answer slots; no source-image certification or new solutions.",
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "Relations and Functions",
+      "englishPrintedStart": 1,
+      "tamilPrintedStart": 1,
+      "exerciseInventory": {
+        "1.1": {
+          "questionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "verifiedSourcePages": {
+            "english": 6,
+            "tamil": 6
+          },
+          "knownSubparts": {
+            "1": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "6": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "7": [
+              "i",
+              "ii"
+            ]
+          },
+          "questionSubpartInventoryComplete": true,
+          "enumeratedQuestionSubparts": [
+            "1(i)",
+            "1(ii)",
+            "1(iii)",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6(i)",
+            "6(ii)",
+            "6(iii)",
+            "7(i)",
+            "7(ii)"
+          ],
+          "verifiedCount": 7,
+          "missingSourceVerified": [
+            "6(i)",
+            "6(ii)",
+            "6(iii)",
+            "7(i)",
+            "7(ii)"
+          ],
+          "inventoryNote": "12 question/subpart slots enumerated from both original 2025 revised Grade 10 PDF text, printed page 6 / PDF page 12; Q6(i–iii) and Q7(i–ii) mathematical glyphs require page-image confirmation. Enumerated is not completed."
+        },
+        "1.2": {
+          "questionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "knownSubparts": {
+            "1": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "4": [
+              "i",
+              "ii"
+            ]
+          },
+          "enumeratedQuestionSubparts": [
+            "1(i)",
+            "1(ii)",
+            "1(iii)",
+            "1(iv)",
+            "2",
+            "3",
+            "4(i)",
+            "4(ii)",
+            "5"
+          ],
+          "questionSubpartInventoryComplete": true,
+          "sourceTextLayerChecked": true,
+          "sourceImageVerified": false,
+          "verifiedCount": 0,
+          "sourcePendingDrafts": [
+            "1(i)",
+            "1(ii)",
+            "1(iii)",
+            "1(iv)",
+            "4(i)",
+            "4(ii)",
+            "5",
+            "2"
+          ],
+          "pendingSourceImageReview": [
+            "1(i)",
+            "1(ii)",
+            "1(iii)",
+            "1(iv)",
+            "2",
+            "3",
+            "4(i)",
+            "4(ii)",
+            "5"
+          ],
+          "inventoryNote": "2025 revised English printed pp.9–10/PDF pp.15–16; 9 subpart slots. Q3 algebraic glyphs corrupted in extracted text. Q5 crosses a page boundary. All exact source transcription and diagram fidelity remain pending visual verification. No published or source-certified Exercise 1.2 content. 2026-11-09: Q2 six-pair square relation mathematically enumerated in a separate unpublished English draft; original page-image and orientation remain unverified."
+        },
+        "1.3": {
+          "questionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "knownSubparts": {
+            "3": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "4": [
+              "i(a)",
+              "i(b)",
+              "i(c)",
+              "i(d)",
+              "ii",
+              "iii(domain)",
+              "iii(range)",
+              "iv"
+            ],
+            "6": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "10": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ]
+          },
+          "enumeratedQuestionSubparts": [
+            "1",
+            "2",
+            "3(i)",
+            "3(ii)",
+            "3(iii)",
+            "3(iv)",
+            "4(i)(a)",
+            "4(i)(b)",
+            "4(i)(c)",
+            "4(i)(d)",
+            "4(ii)",
+            "4(iii)(domain)",
+            "4(iii)(range)",
+            "4(iv)",
+            "5",
+            "6(i)",
+            "6(ii)",
+            "6(iii)",
+            "6(iv)",
+            "7",
+            "8",
+            "9",
+            "10(i)",
+            "10(ii)",
+            "10(iii)",
+            "10(iv)"
+          ],
+          "questionSubpartInventoryComplete": false,
+          "sourceTextLayerChecked": true,
+          "sourceImageVerified": false,
+          "verifiedCount": 0,
+          "sourceReference": {
+            "englishDriveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+            "printedPages": [
+              13,
+              14,
+              15
+            ],
+            "pdfPages": [
+              19,
+              20,
+              21
+            ]
+          },
+          "pendingSourceImageReview": [
+            "Q1 relation exponent",
+            "Q2 function formula",
+            "Q3 polynomial formula",
+            "Q4 Fig.1.16 graph",
+            "Q5 fractional expression",
+            "Q6 function formula",
+            "Q7 Fig.1.17 box",
+            "Q8 equation",
+            "Q10 forehand table"
+          ],
+          "inventoryNote": "2026-11-09: 10 stems, 26 explicitly tracked answer slots from 2025 revised English text layer. Q4(iii) split into domain and range, Q4(i) has four nested parts. This is a provisional subpart denominator, not source-image-certified; notation/figures need page-image review. No question or solution is certified or published."
+        }
+      },
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete; 7 source-verified math drafts, Q6(i) math drafted pending source-image review",
+      "verifiedQuestionSubparts": [
+        "1(i)",
+        "1(ii)",
+        "1(iii)",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 2,
+      "title": "Numbers and Sequences",
+      "englishPrintedStart": 36,
+      "tamilPrintedStart": 37,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 3,
+      "title": "Algebra",
+      "englishPrintedStart": 85,
+      "tamilPrintedStart": 86,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 4,
+      "title": "Geometry",
+      "englishPrintedStart": 161,
+      "tamilPrintedStart": 165,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 5,
+      "title": "Coordinate Geometry",
+      "englishPrintedStart": 203,
+      "tamilPrintedStart": 210,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 6,
+      "title": "Trigonometry",
+      "englishPrintedStart": 239,
+      "tamilPrintedStart": 247,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 7,
+      "title": "Mensuration",
+      "englishPrintedStart": 269,
+      "tamilPrintedStart": 277,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    },
+    {
+      "chapter": 8,
+      "title": "Statistics and Probability",
+      "englishPrintedStart": 301,
+      "tamilPrintedStart": 309,
+      "exerciseInventory": {},
+      "fullChapterExerciseInventoryComplete": false,
+      "coverageStatus": "incomplete",
+      "verifiedQuestionSubparts": [],
+      "mergedQuestionSubparts": [],
+      "liveVerifiedQuestionSubparts": [],
+      "tamilEditorial": "pending"
+    }
+  ],
+  "nextAction": "Visually verify Exercise 1.3 English printed pp.13-15 / PDF pp.19-21; resolve graph Fig.1.16, box Fig.1.17 and corrupted formulas; then produce source-exact English solution batches. Exercise 1.2 Q2/Q3 remain source-image pending.",
+  "testStatus": {
+    "localMathEnumeration": "Q6(i): A={0,1}, B={2,3,4}, C={3,5}, both sides enumerate eight ordered pairs; verified by independent code assertion; local npm test not run.",
+    "npmTest": "Prior commit 9bc0b38 shared test workflow passed; new Q6(i) commit pending.",
+    "playwright": "Q6(i) preview added with pending-source warning; browser CI pending.",
+    "githubCI": "Commit 9bc0b38 passed four GitHub Actions workflows (runs 42482581931, 42482581901, 42482581876, 42482581917). Q6(i) new commit CI pending.",
+    "merged": false,
+    "liveVerified": false,
+    "latestGrade10PreviewCommit": "27ccdbef3231177b29796cdf08d95a2be4928eab",
+    "newPreviewFeatures": "Q1(i–iii) bilingual solutions, empty-set grid support, source/math gates; Tamil editorial pending"
+  },
+  "pendingSourceReviewQuestionSubparts": [
+    "1.1 Q6(i)",
+    "1.1 Q7(i)",
+    "1.2 Q1(i–iv)",
+    "1.2 Q2",
+    "1.2 Q3",
+    "1.2 Q4(i–ii)",
+    "1.2 Q5"
+  ]
+}

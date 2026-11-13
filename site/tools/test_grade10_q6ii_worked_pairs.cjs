@@ -1,0 +1,21 @@
+'use strict';
+// Supplementary Grade 10 Q6(ii) worked-pair arithmetic; not a source-exactness certification.
+const assert = require('node:assert/strict');
+const lesson = require('../data/textbook-exercises/g10-ch1-ex1-1-q6ii-supplement.json');
+const {A,B,C} = lesson.sets;
+const cartesian = (X,Y) => X.flatMap(x => Y.map(y => [x,y]));
+const sort = pairs => pairs.map(pair => JSON.stringify(pair)).sort();
+assert.deepEqual(sort(lesson.answers.AxB),sort(cartesian(A,B)));
+assert.deepEqual(sort(lesson.answers.CxA),sort(cartesian(C,A)));
+const common = cartesian(A,B).filter(pair => cartesian(C,A).some(other => JSON.stringify(pair)===JSON.stringify(other)));
+assert.deepEqual(sort(common),sort(lesson.answers.intersection));
+assert.deepEqual(lesson.answers.AintersectionC,A.filter(x=>C.includes(x)));
+assert.deepEqual(lesson.answers.BintersectionA,B.filter(x=>A.includes(x)));
+assert.deepEqual(common,[]);
+assert.ok(lesson.steps.some(step=>step.equation.includes('C×A={(3,0),(3,1),(5,0),(5,1)}')));
+assert.ok(lesson.misconception.en.includes('(0,3)') && lesson.misconception.ta.includes('(3,0)'));
+assert.equal(lesson.source.exactQuestionVerified,false);
+assert.equal(lesson.review.sourceVerified,false);
+assert.equal(lesson.review.tamilEditorial,'pending');
+assert.equal(lesson.review.liveVerified,false);
+console.log('PASS Grade 10 supplementary Q6(ii): independently enumerated 6 + 4 ordered pairs, no intersection; textbook exactness pending');

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.4",
+  "question": 12,
+  "kind": "unpublished_english_worked_solution_drafts",
+  "source": {
+    "edition": "2025 revised",
+    "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "printedPage": 25,
+    "extractedFormula": "F = (9/5)C + 32",
+    "extractionStatus": "legible_text_layer",
+    "originalPageImageVerified": false,
+    "exactWordingCertified": false
+  },
+  "stemParaphrase": "Convert Celsius temperatures to Fahrenheit using F = (9/5)C + 32, evaluate three inputs, invert for F=212, and find the common numerical Celsius/Fahrenheit temperature.",
+  "atomicSubparts": 5,
+  "entries": [
+    {
+      "id": "g10-ch1-ex1-4-q12i",
+      "subpart": "i",
+      "task": "t(0)",
+      "steps": [
+        "9/5 × 0 + 32 = 32"
+      ],
+      "answer": "32 °F",
+      "independentlyCalculatedValue": 32,
+      "mathCheck": "passed",
+      "sourceCertification": "pending_page_image",
+      "publication": "blocked"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12ii",
+      "subpart": "ii",
+      "task": "t(28)",
+      "steps": [
+        "9/5 × 28 + 32 = 50.4 + 32 = 82.4"
+      ],
+      "answer": "82.4 °F",
+      "independentlyCalculatedValue": 82.4,
+      "mathCheck": "passed",
+      "sourceCertification": "pending_page_image",
+      "publication": "blocked"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12iii",
+      "subpart": "iii",
+      "task": "t(−10)",
+      "steps": [
+        "9/5 × (−10) + 32 = −18 + 32 = 14"
+      ],
+      "answer": "14 °F",
+      "independentlyCalculatedValue": 14,
+      "mathCheck": "passed",
+      "sourceCertification": "pending_page_image",
+      "publication": "blocked"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12iv",
+      "subpart": "iv",
+      "task": "Find C when t(C) = 212",
+      "steps": [
+        "212 = 9C/5 + 32",
+        "subtract 32: 180 = 9C/5",
+        "multiply by 5/9: C = 100"
+      ],
+      "answer": "100 °C",
+      "independentlyCalculatedValue": 100,
+      "mathCheck": "passed",
+      "sourceCertification": "pending_page_image",
+      "publication": "blocked"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q12v",
+      "subpart": "v",
+      "task": "Find the temperature where Celsius and Fahrenheit readings are equal",
+      "steps": [
+        "Set C = 9C/5 + 32",
+        "multiply by 5: 5C = 9C + 160",
+        "−4C = 160",
+        "C = −40"
+      ],
+      "answer": "−40 °C = −40 °F",
+      "independentlyCalculatedValue": -40,
+      "mathCheck": "passed",
+      "sourceCertification": "pending_page_image",
+      "publication": "blocked"
+    }
+  ],
+  "validation": {
+    "uniqueIds": true,
+    "arithmeticChecks": {
+      "i": 32,
+      "ii": 82.4,
+      "iii": 14,
+      "iv": 100,
+      "v": -40
+    },
+    "inverseChecks": {
+      "at100": 212,
+      "atMinus40": -40
+    },
+    "passed": true
+  },
+  "certification": {
+    "newVerifiedEnglishQuestions": 0,
+    "newVerifiedEnglishSubparts": 0,
+    "newPublishedSolutions": 0,
+    "tamil": "not_started_editorial_pending"
+  },
+  "next": "Visually verify printed page 25 original question and formula, then certify exact wording and register these five verified calculations; do not publish beforehand."
+}

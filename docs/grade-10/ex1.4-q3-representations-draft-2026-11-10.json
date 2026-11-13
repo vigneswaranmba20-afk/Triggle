@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.4",
+  "question": 3,
+  "kind": "unpublished_english_solution_draft",
+  "source": {
+    "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "edition": "2025 revised",
+    "printedPage": 25,
+    "sourceText": "Represent the function f = {(1,2), (2,2), (3,2), (4,3), (5,4)} through (i) an arrow diagram (ii) a table form (iii) a graph",
+    "originalPageImageVerified": false,
+    "exactWordingCertified": false,
+    "notationReconstructionPending": true
+  },
+  "entries": [
+    {
+      "id": "g10-ch1-ex1-4-q3i",
+      "subpart": "i",
+      "steps": [
+        "Read each ordered pair (input, output).",
+        "Draw a left column with 1, 2, 3, 4, 5 and a right column with 2, 3, 4.",
+        "Draw arrows 1→2, 2→2, 3→2, 4→3, 5→4."
+      ],
+      "answer": "1→2; 2→2; 3→2; 4→3; 5→4"
+    },
+    {
+      "id": "g10-ch1-ex1-4-q3ii",
+      "subpart": "ii",
+      "steps": [
+        "The first coordinate is the input x.",
+        "The second coordinate is the corresponding output f(x).",
+        "Write one row for each ordered pair."
+      ],
+      "table": {
+        "x": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "fx": [
+          2,
+          2,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "g10-ch1-ex1-4-q3iii",
+      "subpart": "iii",
+      "steps": [
+        "Draw horizontal x and vertical y axes with equal unit spacing.",
+        "Plot the five points individually: (1,2), (2,2), (3,2), (4,3), (5,4).",
+        "Do not connect these points: the function is defined only on the five listed inputs."
+      ],
+      "points": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "figureRequired": "coordinate_plot_not_created"
+    }
+  ],
+  "validation": {
+    "deterministicChecksPassed": true,
+    "uniqueInputs": 5,
+    "distinctOutputs": 3,
+    "allEntriesPreserved": true,
+    "uniqueIds": 3,
+    "graphPointCount": 5,
+    "sourceFidelity": "pending_original_page_image"
+  },
+  "certification": {
+    "newSourceCertifiedQuestions": 0,
+    "newSourceCertifiedSubparts": 0,
+    "newPublishedSolutions": 0,
+    "tamil": "editorial_pending"
+  },
+  "next": "Inspect original printed page 25 image to certify all five ordered pairs; then register three worked English representations after required CI."
+}
