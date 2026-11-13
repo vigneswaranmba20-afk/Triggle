@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g10-seven-blocked-recovery-20261113",
+  "status": "ENGLISH_AUTHORING_PENDING_CI",
+  "grade": 10,
+  "scope": "Only seven blocked question parts across chapters 3, 4, 6, 8; no complete-exercise or complete-chapter claim",
+  "sources": {
+    "en": {
+      "file": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "file": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "pageMap": {
+    "3": {
+      "en": [
+        92,
+        98
+      ],
+      "ta": [
+        94,
+        100
+      ]
+    },
+    "4": {
+      "en": [
+        170,
+        176
+      ],
+      "ta": [
+        175,
+        181
+      ]
+    },
+    "6": {
+      "en": [
+        249,
+        255
+      ],
+      "ta": [
+        258,
+        264
+      ]
+    },
+    "8": {
+      "en": [
+        313,
+        319
+      ],
+      "ta": [
+        322,
+        328
+      ]
+    }
+  },
+  "sourceImagesChecked": true,
+  "englishQuestionTranscriptionStatus": "Source mathematical expressions/figures visually verified; punctuation normalized for phone readability",
+  "tamilQuestionTranscriptionStatus": "Source pages visually inspected; original Tamil authored text pending review",
+  "tamilEditorialCertification": "not_claimed",
+  "professionalTeacherReview": "not_claimed",
+  "requiredFigureAssets": [
+    "assets/grade10-recovery/ex4-1-q1-i.svg",
+    "assets/grade10-recovery/ex4-1-q1-ii.svg"
+  ],
+  "mathematicsVerification": "Independent substitutions, fraction/geometry comparisons and variance/deviation checks added as executable regression tests",
+  "records": [
+    {
+      "id": "c10-3-ex3-1-q1-ii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.1",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.1 · Q1(ii)",
+        "ta": "Exercise 3.1 · Q1(ii) (English only; Tamil review pending)"
+      },
+      "title": {
+        "en": "Reciprocal substitution in simultaneous equations"
+      },
+      "q": {
+        "en": "1. Solve the following system of linear equations in three variables. (ii) 1/x − 2/y + 4 = 0; 1/y − 1/z + 1 = 0; 2/z + 3/x = 14."
+      },
+      "steps": [
+        {
+          "en": "Since x, y and z occur in denominators, take A = 1/x, B = 1/y and C = 1/z (so none of x, y, z is zero).",
+          "eq": "A − 2B = −4; B − C = −1; 3A + 2C = 14"
+        },
+        {
+          "en": "Use the second equation to express C in terms of B.",
+          "eq": "C = B + 1"
+        },
+        {
+          "en": "Use the first equation to express A in terms of B.",
+          "eq": "A = 2B − 4"
+        },
+        {
+          "en": "Substitute both expressions into the third equation and solve.",
+          "eq": "3(2B − 4) + 2(B + 1) = 14 ⇒ 8B − 10 = 14 ⇒ B = 3"
+        },
+        {
+          "en": "Recover A and C, then undo the reciprocal substitutions.",
+          "eq": "A = 2; C = 4; x = 1/2, y = 1/3, z = 1/4"
+        },
+        {
+          "en": "Verify in all three original equations.",
+          "eq": "2 − 2(3) + 4 = 0; 3 − 4 + 1 = 0; 2(4) + 3(2) = 14"
+        }
+      ],
+      "answer": "(x, y, z) = (1/2, 1/3, 1/4)",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 92, PDF p. 98; corresponding Tamil printed p. 94, PDF p. 100. Source page images checked; Tamil authored wording pending editorial review.",
+      "edition": "2025",
+      "translationReview": "pending",
+      "checkpoint": "2026-11-13"
+    },
+    {
+      "id": "c10-3-ex3-1-q1-iii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.1",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.1 · Q1(iii)",
+        "ta": "Exercise 3.1 · Q1(iii) (English only; Tamil review pending)"
+      },
+      "title": {
+        "en": "Solve a chain of four equal expressions"
+      },
+      "q": {
+        "en": "1. Solve the following system of linear equations in three variables. (iii) x + 20 = 3y/2 + 10 = 2z + 5 = 110 − (y + z)."
+      },
+      "steps": [
+        {
+          "en": "Because all four expressions are equal, equate neighboring expressions.",
+          "eq": "x + 20 = 3y/2 + 10; 3y/2 + 10 = 2z + 5; 2z + 5 = 110 − (y + z)"
+        },
+        {
+          "en": "Rearrange these three equations.",
+          "eq": "x = 3y/2 − 10; 3y − 4z = −10; y + 3z = 105"
+        },
+        {
+          "en": "Use y = 105 − 3z in the second equation.",
+          "eq": "3(105 − 3z) − 4z = −10 ⇒ 315 − 13z = −10 ⇒ z = 25"
+        },
+        {
+          "en": "Substitute z = 25 to determine y.",
+          "eq": "y = 105 − 3(25) = 30"
+        },
+        {
+          "en": "Find x from the first equation.",
+          "eq": "x = (3 × 30)/2 − 10 = 35"
+        },
+        {
+          "en": "Check every term of the original equality chain.",
+          "eq": "x + 20 = 55; 3y/2 + 10 = 55; 2z + 5 = 55; 110 − (y + z) = 55"
+        }
+      ],
+      "answer": "(x, y, z) = (35, 30, 25)",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 92, PDF p. 98; corresponding Tamil printed p. 94, PDF p. 100. Source page images checked; Tamil authored wording pending editorial review.",
+      "edition": "2025",
+      "translationReview": "pending",
+      "checkpoint": "2026-11-13"
+    },
+    {
+      "id": "c10-4-ex4-1-q1-i",
+      "classNum": 10,
+      "chapter": "4",
+      "exercise": "4.1",
+      "topic": {
+        "en": "Geometry"
+      },
+      "label": {
+        "en": "Exercise 4.1 · Q1(i)",
+        "ta": "Exercise 4.1 · Q1(i) (English only; Tamil review pending)"
+      },
+      "title": {
+        "en": "Check triangle similarity using corresponding sides"
+      },
+      "q": {
+        "en": "1. In the given triangles, check which triangles are similar? Also find the value of x. (i) In the diagram, D lies on AB and E lies on AC; AD = 3, DB = 5, AE = 2 and EC = 3½."
+      },
+      "steps": [
+        {
+          "en": "In the two triangles ADE and ABC, find the whole sides of the larger triangle.",
+          "eq": "AB = AD + DB = 3 + 5 = 8; AC = AE + EC = 2 + 3.5 = 5.5"
+        },
+        {
+          "en": "For similar triangles sharing angle A, corresponding side ratios must agree.",
+          "eq": "AD / AB = 3 / 8; AE / AC = 2 / 5.5 = 4 / 11"
+        },
+        {
+          "en": "Compare the fractions exactly (not just by rounding).",
+          "eq": "3 × 11 = 33; 4 × 8 = 32 ⇒ 3/8 ≠ 4/11"
+        },
+        {
+          "en": "Therefore the sides are not proportional, so the two triangles are not similar.",
+          "eq": "△ADE is not similar to △ABC"
+        }
+      ],
+      "answer": "The two triangles are not similar.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 170, PDF p. 176; corresponding Tamil printed p. 175, PDF p. 181. Source page images checked; Tamil authored wording pending editorial review.",
+      "edition": "2025",
+      "translationReview": "pending",
+      "figureSrc": "assets/grade10-recovery/ex4-1-q1-i.svg",
+      "checkpoint": "2026-11-13"
+    },
+    {
+      "id": "c10-4-ex4-1-q1-ii",
+      "classNum": 10,
+      "chapter": "4",
+      "exercise": "4.1",
+      "topic": {
+        "en": "Geometry"
+      },
+      "label": {
+        "en": "Exercise 4.1 · Q1(ii)",
+        "ta": "Exercise 4.1 · Q1(ii) (English only; Tamil review pending)"
+      },
+      "title": {
+        "en": "Prove similarity and calculate x"
+      },
+      "q": {
+        "en": "1. In the given triangles, check which triangles are similar? Also find the value of x. (ii) In triangle ABC, Q lies on BC, P lies on AC, ∠ABC = 70°, ∠BQP = 110°, BQ = QC = 3, AB = 5 and PQ = x."
+      },
+      "steps": [
+        {
+          "en": "Since B, Q and C are in a straight line, the angles on either side of QP add to 180°.",
+          "eq": "∠PQC = 180° − 110° = 70°"
+        },
+        {
+          "en": "Compare this with the angle at B and the common angle at C.",
+          "eq": "∠PQC = ∠ABC = 70°; ∠PCQ = ∠ACB"
+        },
+        {
+          "en": "By the AA similarity criterion, the small and large triangles are similar.",
+          "eq": "△PQC ∼ △ABC"
+        },
+        {
+          "en": "Find the corresponding scale factor using the base.",
+          "eq": "QC / BC = 3 / (3 + 3) = 1/2"
+        },
+        {
+          "en": "Corresponding sides have the same ratio, so solve for x.",
+          "eq": "PQ / AB = 1/2 ⇒ x / 5 = 1/2 ⇒ x = 5/2 = 2.5"
+        },
+        {
+          "en": "Check: the small triangle has half the large base and half its matching side.",
+          "eq": "3/6 = 2.5/5 = 1/2"
+        }
+      ],
+      "answer": "The triangles are similar; x = 2.5.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 170, PDF p. 176; corresponding Tamil printed p. 175, PDF p. 181. Source page images checked; Tamil authored wording pending editorial review.",
+      "edition": "2025",
+      "translationReview": "pending",
+      "figureSrc": "assets/grade10-recovery/ex4-1-q1-ii.svg",
+      "checkpoint": "2026-11-13"
+    },
+    {
+      "id": "c10-6-ex6-1-q2-i",
+      "classNum": 10,
+      "chapter": "6",
+      "exercise": "6.1",
+      "topic": {
+        "en": "Trigonometry"
+      },
+      "label": {
+        "en": "Exercise 6.1 · Q2(i)",
+        "ta": "Exercise 6.1 · Q2(i) (English only; Tamil review pending)"
+      },
+      "title": {
+        "en": "Prove a trigonometric identity"
+      },
+      "q": {
+        "en": "2. Prove the following identities. (i) (1 − tan²θ)/(cot²θ − 1) = tan²θ."
+      },
+      "steps": [
+        {
+          "en": "Start with the left-hand side; use cotθ = 1/tanθ where both functions are defined.",
+          "eq": "(1 − tan²θ)/(cot²θ − 1)"
+        },
+        {
+          "en": "Rewrite the denominator using tan²θ.",
+          "eq": "cot²θ − 1 = 1/tan²θ − 1 = (1 − tan²θ)/tan²θ"
+        },
+        {
+          "en": "Divide by a fraction by multiplying by its reciprocal.",
+          "eq": "(1 − tan²θ) × tan²θ/(1 − tan²θ)"
+        },
+        {
+          "en": "Cancel the common nonzero factor on the domain where the original expression is defined.",
+          "eq": "= tan²θ = RHS"
+        },
+        {
+          "en": "Independently verify using θ = 30°, a value in the domain.",
+          "eq": "LHS = (1 − 1/3)/(3 − 1) = 1/3; RHS = tan²30° = 1/3"
+        },
+        {
+          "en": "Domain note: sinθ and cosθ must be nonzero, and cot²θ − 1 must not be zero.",
+          "eq": "sinθ ≠ 0, cosθ ≠ 0, tan²θ ≠ 1"
+        }
+      ],
+      "answer": "LHS = RHS = tan²θ (where defined).",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 249, PDF p. 255; corresponding Tamil printed p. 258, PDF p. 264. Source page images checked; Tamil authored wording pending editorial review.",
+      "edition": "2025",
+      "translationReview": "pending",
+      "checkpoint": "2026-11-13"
+    },
+    {
+      "id": "c10-8-ex8-1-q3",
+      "classNum": 10,
+      "chapter": "8",
+      "exercise": "8.1",
+      "topic": {
+        "en": "Statistics and Probability"
+      },
+      "label": {
+        "en": "Exercise 8.1 · Q3",
+        "ta": "Exercise 8.1 · Q3 (English only; Tamil review pending)"
+      },
+      "title": {
+        "en": "Range of grouped income data"
+      },
+      "q": {
+        "en": "3. Calculate the range of the following data. Income: 400–450, 450–500, 500–550, 550–600, 600–650. Number of workers: 8, 12, 30, 21, 6."
+      },
+      "steps": [
+        {
+          "en": "For grouped continuous data, take the beginning of the lowest interval and the end of the highest interval.",
+          "eq": "Lowest class boundary = 400; highest class boundary = 650"
+        },
+        {
+          "en": "Recall the formula for range.",
+          "eq": "Range = highest boundary − lowest boundary"
+        },
+        {
+          "en": "Substitute the boundaries and subtract.",
+          "eq": "Range = 650 − 400 = 250"
+        },
+        {
+          "en": "Check the boundaries are correctly ordered and that frequencies do not change the range.",
+          "eq": "Lowest class 400–450; highest class 600–650; difference = 250"
+        }
+      ],
+      "answer": "Range = 250.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 313, PDF p. 319; corresponding Tamil printed p. 322, PDF p. 328. Source page images checked; Tamil authored wording pending editorial review.",
+      "edition": "2025",
+      "translationReview": "pending",
+      "checkpoint": "2026-11-13"
+    },
+    {
+      "id": "c10-8-ex8-1-q4",
+      "classNum": 10,
+      "chapter": "8",
+      "exercise": "8.1",
+      "topic": {
+        "en": "Statistics and Probability"
+      },
+      "label": {
+        "en": "Exercise 8.1 · Q4",
+        "ta": "Exercise 8.1 · Q4 (English only; Tamil review pending)"
+      },
+      "title": {
+        "en": "Standard deviation of pages completed"
+      },
+      "q": {
+        "en": "4. A teacher asked the students to complete 60 pages of a record note book. Eight students have completed only 32, 35, 37, 30, 33, 36, 35 and 37 pages. Find the standard deviation of the pages completed by them."
+      },
+      "steps": [
+        {
+          "en": "List the eight completed-page counts and find their total.",
+          "eq": "n = 8; Σx = 32 + 35 + 37 + 30 + 33 + 36 + 35 + 37 = 275"
+        },
+        {
+          "en": "Compute the mean number of pages completed.",
+          "eq": "x̄ = Σx/n = 275/8 = 34.375"
+        },
+        {
+          "en": "Compute the total of squared page counts.",
+          "eq": "Σx² = 32² + 35² + 37² + 30² + 33² + 36² + 35² + 37² = 9497"
+        },
+        {
+          "en": "Use the population standard-deviation formula for the listed complete group.",
+          "eq": "σ² = Σx²/n − x̄² = 9497/8 − (275/8)² = 351/64 = 5.484375"
+        },
+        {
+          "en": "Take the square root, rounding only at the final step.",
+          "eq": "σ = √351/8 = 3√39/8 ≈ 2.34 pages"
+        },
+        {
+          "en": "Check independently by summing all eight squared deviations from 34.375.",
+          "eq": "Σ(x − 34.375)² = 43.875; 43.875/8 = 5.484375"
+        }
+      ],
+      "answer": "Standard deviation ≈ 2.34 pages.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 313, PDF p. 319; corresponding Tamil printed p. 322, PDF p. 328. Source page images checked; Tamil authored wording pending editorial review.",
+      "edition": "2025",
+      "translationReview": "pending",
+      "checkpoint": "2026-11-13"
+    }
+  ]
+}
