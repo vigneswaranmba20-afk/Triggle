@@ -41,7 +41,7 @@ for(let chapter=1;chapter<=8;chapter++){
  assert.equal(entry.bilingualHeadingParities,headings.length);
  assert.equal(headings.length,headingIndex.chapterExerciseHeadingCounts[String(chapter)]);
  assert.deepEqual(headings.map(h=>h.exercise),headings.map((h,i)=>chapter+'.'+(i+1)));
- for(const h of headings){assert(h.pdfPage>=1&&h.pdfPage<339);assert.equal(h.questionCount,h.exercise==='8.2'?8:h.exercise==='8.3'?13:h.exercise==='8.4'?13:h.exercise==='8.5'?15:h.exercise==='7.1'?10:null);assert.equal(h.subpartCount,h.exercise==='8.2'?8:h.exercise==='8.3'?29:h.exercise==='8.4'?15:h.exercise==='8.5'?15:null);}
+ for(const h of headings){assert(h.pdfPage>=1&&h.pdfPage<339);assert.equal(h.questionCount,h.exercise==='8.2'?8:h.exercise==='8.3'?13:h.exercise==='8.4'?13:h.exercise==='8.5'?15:h.exercise==='7.1'?10:null);assert.equal(h.subpartCount,h.exercise==='8.2'?8:h.exercise==='8.3'?29:h.exercise==='8.4'?15:h.exercise==='8.5'?15:h.exercise==='7.1'?10:null);}
 }
 
 
