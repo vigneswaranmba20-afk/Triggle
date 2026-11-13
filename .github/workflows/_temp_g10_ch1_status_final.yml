@@ -1,0 +1,23 @@
+name: Temporary Chapter 1 status refresh after asset versioning
+on:
+  push:
+    branches: [fix/g10-ch1-chatgpt-maths-notation-20261113]
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0, persist-credentials: true}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm run status:build
+      - run: |
+          git config user.name "triggle-status-bot"
+          git config user.email "triggle-status-bot@users.noreply.github.com"
+          git add site/data/project-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: reconcile maths asset versions with source-derived status"
+            git push origin HEAD:fix/g10-ch1-chatgpt-maths-notation-20261113
+          fi
