@@ -201,7 +201,7 @@ const M={
       "n=2k\\quad\\text{or}\\quad n=2k+1",
       "n^2=(2k)^2=4k^2",
       "n^2=(2k+1)^2=4k^2+4k+1=4(k^2+k)+1",
-      "n^2\\equiv0\\text{ or }1\\pmod4"
+      "n^2\\equiv0\\text{ or }1\\pmod{4}"
     ],
     "a": "\\begin{aligned}\\text{Even integer: remainder}&=0\\\\\\text{Odd integer: remainder}&=1\\end{aligned}"
   },
