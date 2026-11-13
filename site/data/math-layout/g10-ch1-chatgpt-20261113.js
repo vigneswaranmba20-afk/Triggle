@@ -823,7 +823,7 @@ const LAYOUT={
         "a>0"
       ],
       [
-        "S(t_{2})-S(t_{1})=(t_{2}-t_{1})[½g(t_{2}+t_{1})+a]"
+        "S(t_{2})-S(t_{1})=(t_{2}-t_{1})\\left[\\dfrac12g(t_{2}+t_{1})+a\\right]"
       ],
       [
         "t_{2}>t_{1} \\Rightarrow  S(t_{2})>S(t_{1}) \\Rightarrow  one-one"
