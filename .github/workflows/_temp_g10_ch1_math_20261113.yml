@@ -1,0 +1,32 @@
+name: Temporary Chapter 1 Maths validation and status
+on:
+  push:
+    branches: [fix/g10-ch1-chatgpt-maths-notation-20261113]
+permissions:
+  contents: write
+jobs:
+  verify-and-refresh:
+    if: github.repository == 'vigneswaranmba20-afk/Triggle'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate all 74 Chapter 1 formulas with pinned offline KaTeX
+        run: node site/tools/test_g10_ch1_chatgpt_math.cjs
+      - name: Refresh verified source-derived project status
+        run: npm run status:build
+      - name: Commit only generated status
+        run: |
+          git config user.name "triggle-status-bot"
+          git config user.email "triggle-status-bot@users.noreply.github.com"
+          git add site/data/project-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh generated status after Chapter 1 notation"
+            git push origin HEAD:fix/g10-ch1-chatgpt-maths-notation-20261113
+          fi
