@@ -51,7 +51,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
   assert.equal(await page.locator('#stepsList details.why-step-g10').count(),1,'Tamil translation remains available');
   assert.ok((await page.locator('#stepsList .why-step-g10 summary').innerText()).includes('ஏன்'));
   await page.locator('#stepsList .why-step-g10 summary').click();
-  assert.ok((await page.locator('#stepsList .why-step-panel p').innerText()).includes('பின்னம்'));
+  assert.ok((await page.locator('#stepsList .why-step-panel p').innerText()).includes('பூஜ்ஜியமற்ற'));
   await page.goto(app.base+'/index.html?class=10&question=c10-8-ex8-1-q13');
   assert.equal(await page.locator('#stepsList .why-step-g10').count(),0,'No generic filler on unreviewed steps');
   await page.goto(app.base+'/index.html?class=9&question=c9-2-2-1');
