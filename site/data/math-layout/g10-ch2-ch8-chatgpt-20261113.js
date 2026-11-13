@@ -373,9 +373,259 @@ const M={
     "a": "\\text{Largest value}=50.2"
   }
 };
+const QUESTIONS={
+  "c10-6-6-1-1": [
+    [
+      "cot θ + tan θ = sec θ cosec θ",
+      "\\cot\\theta+\\tan\\theta=\\sec\\theta\\csc\\theta"
+    ]
+  ],
+  "c10-6-6-1-2": [
+    [
+      "tan⁴θ + tan²θ = sec⁴θ − sec²θ",
+      "\\tan^4\\theta+\\tan^2\\theta=\\sec^4\\theta-\\sec^2\\theta"
+    ]
+  ],
+  "c10-6-6-1-3": [
+    [
+      "cos θ/(1 + sin θ) = sec θ − tan θ",
+      "\\dfrac{\\cos\\theta}{1+\\sin\\theta}=\\sec\\theta-\\tan\\theta"
+    ]
+  ],
+  "c10-6-6-2-4": [
+    [
+      "10√3 m",
+      "10\\sqrt3\\ \\mathrm m"
+    ]
+  ],
+  "c10-6-6-2-5": [
+    [
+      "4√3 m",
+      "4\\sqrt3\\ \\mathrm m"
+    ],
+    [
+      "30°",
+      "30^\\circ"
+    ]
+  ],
+  "c10-6-6-2-6": [
+    [
+      "45°",
+      "45^\\circ"
+    ],
+    [
+      "60°",
+      "60^\\circ"
+    ]
+  ],
+  "c10-6-6-3-7": [
+    [
+      "50√3 m",
+      "50\\sqrt3\\ \\mathrm m"
+    ],
+    [
+      "30°",
+      "30^\\circ"
+    ]
+  ],
+  "c10-6-6-3-8": [
+    [
+      "45°",
+      "45^\\circ"
+    ]
+  ],
+  "c10-6-6-3-9": [
+    [
+      "60°",
+      "60^\\circ"
+    ],
+    [
+      "30°",
+      "30^\\circ"
+    ]
+  ],
+  "c10-6-6-4-10": [
+    [
+      "45°",
+      "45^\\circ"
+    ],
+    [
+      "30°",
+      "30^\\circ"
+    ]
+  ],
+  "c10-6-6-4-11": [
+    [
+      "60°",
+      "60^\\circ"
+    ],
+    [
+      "30°",
+      "30^\\circ"
+    ]
+  ],
+  "c10-6-6-4-12": [
+    [
+      "30°",
+      "30^\\circ"
+    ],
+    [
+      "60°",
+      "60^\\circ"
+    ]
+  ],
+  "c10-6-6-5-13": [
+    [
+      "sin²θ + 1/(1 + tan²θ)",
+      "\\sin^2\\theta+\\dfrac1{1+\\tan^2\\theta}"
+    ]
+  ],
+  "c10-6-6-5-14": [
+    [
+      "tan θ cosec²θ − tan θ",
+      "\\tan\\theta\\,\\csc^2\\theta-\\tan\\theta"
+    ]
+  ],
+  "c10-6-6-5-15": [
+    [
+      "sin θ = cos θ",
+      "\\sin\\theta=\\cos\\theta"
+    ],
+    [
+      "2 tan²θ + sin²θ − 1",
+      "2\\tan^2\\theta+\\sin^2\\theta-1"
+    ]
+  ],
+  "c10-6-6-5-16": [
+    [
+      "x = a tan θ",
+      "x=a\\tan\\theta"
+    ],
+    [
+      "y = b sec θ",
+      "y=b\\sec\\theta"
+    ]
+  ],
+  "c10-6-6-unit-17": [
+    [
+      "(tan²θ − 1)/(tan²θ + 1) = 1 − 2cos²θ",
+      "\\dfrac{\\tan^2\\theta-1}{\\tan^2\\theta+1}=1-2\\cos^2\\theta"
+    ]
+  ],
+  "c10-3-3-practice-18": [
+    [
+      "x²−5x+6=0",
+      "x^2-5x+6=0"
+    ]
+  ],
+  "c10-2-2-practice-19": [],
+  "c10-5-5-practice-20": [],
+  "c10-2-ex2-1-q8": [
+    [
+      "d = 32x + 60y",
+      "d=32x+60y"
+    ]
+  ],
+  "c10-2-ex2-2-q1": [
+    [
+      "4ⁿ",
+      "4^n"
+    ]
+  ],
+  "c10-2-ex2-2-q2": [
+    [
+      "2ⁿ × 5ᵐ",
+      "2^n\\times5^m"
+    ]
+  ],
+  "c10-2-ex2-2-q4": [
+    [
+      "13824 = 2ᵃ × 3ᵇ",
+      "13824=2^a\\times3^b"
+    ]
+  ],
+  "c10-2-ex2-2-q5": [
+    [
+      "p₁ˣ¹ × p₂ˣ² × p₃ˣ³ × p₄ˣ⁴ = 113400",
+      "p_1^{x_1}\\times p_2^{x_2}\\times p_3^{x_3}\\times p_4^{x_4}=113400"
+    ],
+    [
+      "p₁,p₂,p₃,p₄",
+      "p_1,p_2,p_3,p_4"
+    ],
+    [
+      "x₁,x₂,x₃,x₄",
+      "x_1,x_2,x_3,x_4"
+    ]
+  ],
+  "c10-3-ex3-1-q1-i": [
+    [
+      "x + y + z = 5; 2x − y + z = 9; x − 2y + 3z = 16",
+      "\\begin{aligned}x+y+z&=5\\\\2x-y+z&=9\\\\x-2y+3z&=16\\end{aligned}"
+    ]
+  ],
+  "c10-3-ex3-1-q1-ii": [
+    [
+      "1/x − 2/y + 4 = 0; 1/y − 1/z + 1 = 0; 2/z + 3/x = 14",
+      "\\begin{aligned}\\dfrac1x-\\dfrac2y+4&=0\\\\\\dfrac1y-\\dfrac1z+1&=0\\\\\\dfrac2z+\\dfrac3x&=14\\end{aligned}"
+    ]
+  ],
+  "c10-3-ex3-1-q1-iii": [
+    [
+      "x + 20 = 3y/2 + 10 = 2z + 5 = 110 − (y + z)",
+      "x+20=\\dfrac{3y}{2}+10=2z+5=110-(y+z)"
+    ]
+  ],
+  "c10-4-ex4-1-q1-i": [
+    [
+      "3½",
+      "3\\dfrac12"
+    ]
+  ],
+  "c10-4-ex4-1-q1-ii": [
+    [
+      "∠ABC = 70°",
+      "\\angle ABC=70^\\circ"
+    ],
+    [
+      "∠BQP = 110°",
+      "\\angle BQP=110^\\circ"
+    ]
+  ],
+  "c10-6-ex6-1-q2-i": [
+    [
+      "(1 − tan²θ)/(cot²θ − 1) = tan²θ",
+      "\\dfrac{1-\\tan^2\\theta}{\\cot^2\\theta-1}=\\tan^2\\theta"
+    ]
+  ]
+};
 function check(record){return !!record&&record.classNum===10&&String(record.chapter)!=='1'&&Object.hasOwn(M,record.id);}
 window.TriggleG10RemainingMath=Object.freeze({
  ids:Object.freeze(Object.keys(M)),
+ questionIds:Object.freeze(Object.keys(QUESTIONS).filter(id=>QUESTIONS[id].length)),
+ getQuestion(record,lang){
+  if(!record||record.classNum!==10||String(record.chapter)==='1')return null;
+  const anchors=QUESTIONS[record.id];if(!anchors?.length)return null;
+  const text=String(record.q?.[lang]||record.q?.en||'');
+  let cursor=0,spans=[];
+  for(const [needle,latex] of anchors){
+   const at=text.indexOf(needle,cursor);
+   // Tamil has textbook-authored prose which must remain unaltered; annotate
+   // only exact formula substrings, with literal fallback for all other text.
+   if(at<0){
+    if(lang==='ta')continue;
+    throw Error('G10 question wording changed for '+record.id+'/'+needle);
+   }
+   if(at>cursor)spans.push(text.slice(cursor,at));
+   spans.push({latex,display:latex.includes('\\begin{aligned}'),fallback:needle});
+   cursor=at+needle.length;
+  }
+  if(!spans.some(x=>x&&typeof x==='object'))return null;
+  if(cursor<text.length)spans.push(text.slice(cursor));
+  const localized={en:spans,ta:spans};
+  return localized;
+ },
+
  getStep(record,index){
   if(!check(record))return null;
   if(!Array.isArray(record.steps)||record.steps.length!==M[record.id].s.length)throw Error('G10 notation source steps changed: '+record.id);
