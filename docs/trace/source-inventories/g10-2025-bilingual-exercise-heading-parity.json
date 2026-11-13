@@ -3,7 +3,7 @@
   "date": "2026-11-13",
   "grade": 10,
   "sourceEdition": "2025",
-  "scope": "HEADING_LOCATORS_WITH_SIX_BOUNDED_IMAGE_VERIFIED_EXERCISES_7_1_7_2_8_2_8_3_8_4_8_5",
+  "scope": "HEADING_LOCATORS_WITH_SEVEN_BOUNDED_IMAGE_VERIFIED_EXERCISES_7_1_7_2_7_3_8_2_8_3_8_4_8_5",
   "english": {
     "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
     "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
@@ -16,7 +16,7 @@
     "pdfPages": 368,
     "headingLabel": "பயிற்சி"
   },
-  "methods": "Exact text-layer heading N.N matches before separate answers appendices in both original PDFs; compare unique heading ID sets. Rendered/visually inspected English PDF p12,319,340 and Tamil PDF p328,354. Full page-by-page human image verification not performed. Original PDF images English p322, Tamil pp331-332 were separately inspected for Exercise 8.2 Q1-Q8 and numeric/table/part parity; do not extrapolate to the remaining headings. Exercise 8.3 was additionally inspected in original English PDF pp328–329 and Tamil PDF pp340–341 for question/part counts, mathematical symbols and the Q11 diagram; no inference for other exercises. Exercise 8.4 original English p335 and Tamil pp347–348 images were inspected for Q1–Q13, 15 labelled parts, Q4 complement symbols and the shared Q1 mathematically impossible statement. This verifies source fidelity, not solution validity. Exercise 8.5 English original PDF pp336–337 and Tamil pp348–349 visually checked 15 MCQs (60 options per medium), including potentially missing math symbols, and book page-count uncertainty in Q11. Unit Exercise 8 excluded. Exercise 7.1 EN original PDF p288 and TA p296 source images checked for Q1–Q10 whole-question counts, numerical parity and Q10 lamp frustum diagram; the next section's cylinder figure excluded. Exercise 7.2 EN p296 and TA p304 original-page images checked Q1–Q10, numerical and radical symbol parity, and that Fig.7.36 above the heading is not an exercise question figure.",
+  "methods": "Exact text-layer heading N.N matches before separate answers appendices in both original PDFs; compare unique heading ID sets. Rendered/visually inspected English PDF p12,319,340 and Tamil PDF p328,354. Full page-by-page human image verification not performed. Original PDF images English p322, Tamil pp331-332 were separately inspected for Exercise 8.2 Q1-Q8 and numeric/table/part parity; do not extrapolate to the remaining headings. Exercise 8.3 was additionally inspected in original English PDF pp328–329 and Tamil PDF pp340–341 for question/part counts, mathematical symbols and the Q11 diagram; no inference for other exercises. Exercise 8.4 original English p335 and Tamil pp347–348 images were inspected for Q1–Q13, 15 labelled parts, Q4 complement symbols and the shared Q1 mathematically impossible statement. This verifies source fidelity, not solution validity. Exercise 8.5 English original PDF pp336–337 and Tamil pp348–349 visually checked 15 MCQs (60 options per medium), including potentially missing math symbols, and book page-count uncertainty in Q11. Unit Exercise 8 excluded. Exercise 7.1 EN original PDF p288 and TA p296 source images checked for Q1–Q10 whole-question counts, numerical parity and Q10 lamp frustum diagram; the next section's cylinder figure excluded. Exercise 7.2 EN p296 and TA p304 original-page images checked Q1–Q10, numerical and radical symbol parity, and that Fig.7.36 above the heading is not an exercise question figure. Exercise 7.3 original full-page English p300 and Tamil p308 images independently checked for seven numbered questions and nine labelled parts, with the cone/hemisphere-in-cylinder Q4 figure and hemisphere-on-cube Q6 figure, excluding Activity 4.",
   "chapterCounts": {
     "1": 6,
     "2": 10,
@@ -522,7 +522,7 @@
       "taPdfPage": 308,
       "englishHeadingLocated": true,
       "tamilHeadingLocated": true,
-      "questionAndSubpartParityChecked": false
+      "questionAndSubpartParityChecked": true
     },
     {
       "exercise": "7.4",
@@ -589,7 +589,7 @@
     }
   ],
   "limitations": [
-    "Heading numbers agree across both media; question/part/quantity parity is established only for bounded Exercises 7.1, 7.2, 8.2, 8.3, 8.4 and 8.5, not the other 55 headings.",
+    "Heading numbers agree across both media; question/part/quantity parity is established only for bounded Exercises 7.1, 7.2, 7.3, 8.2, 8.3, 8.4 and 8.5, not the other 54 headings.",
     "Text-layer extraction may miss image-only content; use source-page image verification for every exercise before a complete denominator claim.",
     "Do not classify any question as unworked or pilot-eligible from exercise headings alone.",
     "Answer appendix and Worked Examples excluded."
