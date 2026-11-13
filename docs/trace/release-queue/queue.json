@@ -20,21 +20,21 @@
     "publisher": "site/tools/curriculum_bulk.cjs; grade and integration leases; exact-head CI; Pages and live verification"
   },
   "counts": {
-    "candidatesDiscovered": 491,
+    "candidatesDiscovered": 490,
     "authoredOrPartial": 222,
-    "sourceOrIdOnly": 269,
+    "sourceOrIdOnly": 268,
     "existingDuplicates": 8,
     "candidatesValidated": 8,
     "candidatesPromotedReady": 0,
     "exercisesIntegrated": 0,
     "exercisesLiveVerified": 0,
-    "remainingBlockedCandidates": 483,
+    "remainingBlockedCandidates": 482,
     "statuses": {
       "READY": 0,
       "NEEDS_REPAIR": 78,
       "NEEDS_REVIEW": 136,
       "DUPLICATE": 8,
-      "BLOCKED": 269
+      "BLOCKED": 268
     }
   },
   "runtimeSummary": {
@@ -384,7 +384,7 @@
       "ref": "6b5f72843973f68a7b999cabf2feebc901b7edaa",
       "file": "site/data/textbook-exercises/g9-ex1-2-q1-i-ii-en.json",
       "fileSha256": "af59e4e17feec326bd1dacb2f893e288ce7939dbb556343ea96b5ebf4764a6db",
-      "locatedOccurrences": 3,
+      "locatedOccurrences": 2,
       "status": "LOCATED"
     },
     {
@@ -54740,93 +54740,6 @@
         ]
       },
       "nextAction": "Recover the linked authored record, compare original EN/TA images and runtime IDs, normalize to bulk schema and independently validate."
-    },
-    {
-      "key": "g9/ch1/ex1.2/q1/i-ii-en-20261109",
-      "location": {
-        "grade": 9,
-        "chapter": "1",
-        "exercise": "1.2",
-        "question": "1",
-        "part": "i-ii-en-20261109"
-      },
-      "origins": [
-        {
-          "kind": "PR_ARTIFACT",
-          "pr": 82,
-          "ref": "6b5f72843973f68a7b999cabf2feebc901b7edaa",
-          "file": "site/data/textbook-exercises/g9-ex1-2-q1-i-ii-en.json",
-          "pointer": "literal-id-reference:13",
-          "appId": "g9-ex1-2-q1-i-ii-en-20261109",
-          "recordSha256": "3e8afe37a58ba50b20710d8005147153bc56cae5db21cdf7befe5e89c7dd0898",
-          "questionSha256": null,
-          "authored": {
-            "questionPresent": false,
-            "stepCount": 0,
-            "answerPresent": false,
-            "structuredRuntime": false
-          },
-          "sourceEvidence": null,
-          "inheritedClaims": {
-            "source": null,
-            "reference": null,
-            "review": null,
-            "status": null,
-            "blockers": null
-          },
-          "evidenceNote": "Presence/claims only; full solution correctness and source fidelity require separate validation."
-        }
-      ],
-      "status": "BLOCKED",
-      "candidateKind": "SOURCE_OR_ID_ONLY",
-      "existingApp": {
-        "samePartIds": [],
-        "sameNumberedQuestionIds": [],
-        "exactRecordDuplicates": [],
-        "normalizedEnglishTextMatches": [],
-        "policy": "Only full record equality is classified DUPLICATE. Labels/text matches alone require review; no deletion or new ID assignment."
-      },
-      "mathematicalValidation": {
-        "status": "NOT_ESTABLISHED",
-        "recordSha256": null,
-        "report": null,
-        "method": null
-      },
-      "english": {
-        "sourceFidelity": "NOT_REVALIDATED",
-        "solution": "REVIEW_REQUIRED",
-        "teacherReview": "NOT_ESTABLISHED",
-        "eligible": false,
-        "blockingReasons": [
-          "NO_RECOVERED_AUTHORED_QUESTION_AND_COMPLETE_SOLUTION",
-          "CURRENT_RECORD_BOUND_INDEPENDENT_MATH_VALIDATION_MISSING",
-          "ORIGINAL_2025_EN_TA_SOURCE_FIDELITY_NOT_REVALIDATED_FOR_THIS_CANDIDATE",
-          "BULK_BATCH_SCHEMA_AND_FULL_STANDARD_SOLUTION_NOT_ESTABLISHED"
-        ]
-      },
-      "tamil": {
-        "sourceCorrespondence": "NOT_REVALIDATED",
-        "fullTranscription": null,
-        "professionalReview": "OWNER_DEFERRED_PENDING",
-        "eligible": false,
-        "blockingReasons": [
-          "FULL_TAMIL_WORDING_AND_SOLUTION_REVIEW_PENDING",
-          "PROFESSIONAL_TAMIL_TEACHER_REVIEW_OWNER_DEFERRED"
-        ]
-      },
-      "deployment": {
-        "eligible": false,
-        "integrated": false,
-        "liveVerified": false,
-        "blockingReasons": [
-          "NO_RECOVERED_AUTHORED_QUESTION_AND_COMPLETE_SOLUTION",
-          "CURRENT_RECORD_BOUND_INDEPENDENT_MATH_VALIDATION_MISSING",
-          "ORIGINAL_2025_EN_TA_SOURCE_FIDELITY_NOT_REVALIDATED_FOR_THIS_CANDIDATE",
-          "BULK_BATCH_SCHEMA_AND_FULL_STANDARD_SOLUTION_NOT_ESTABLISHED",
-          "EXACT_HEAD_SOURCE_UNIT_MOBILE_SECURITY_CI_AND_PAGES_GATES_NOT_RUN_FOR_INTEGRATION"
-        ]
-      },
-      "nextAction": "Recover existing authored evidence if available; source-only inventory is not permission to author unrelated exercises."
     },
     {
       "key": "g9/ch1/ex1.2/q1/ii",

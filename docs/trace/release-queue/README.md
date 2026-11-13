@@ -6,17 +6,17 @@ The baseline is main `6e288869d550493d7dec11dd168cd3e614690b28`. All **35 open P
 
 | Measure | Actual |
 |---|---:|
-| Unique location groups located | 491 |
+| Unique location groups located | 490 |
 | Authored or partial candidate groups | 222 |
-| Source/ID-only groups, separately identified | 269 |
+| Source/ID-only groups, separately identified | 268 |
 | Exact full-record duplicates already in runtime | 8 |
 | Candidates independently math-validated this run | 8 |
 | Promoted to READY | 0 |
 | Exercises integrated / newly live-verified | 0 / 0 |
-| Remaining groups with release blockers | 483 |
+| Remaining groups with release blockers | 482 |
 | Of those, authored/partial candidates | 214 |
 
-Disposition: 78 NEEDS_REPAIR, 136 NEEDS_REVIEW, 8 DUPLICATE, 269 BLOCKED, 0 READY. A location group is a triage identity, **not a certified source-equivalence claim**. Every original app ID, artifact pointer, PR and commit is retained. Multiple representations of the same location are not counted as new exercises. Only complete record equality establishes DUPLICATE here; normalized text and source-number matches remain explicit review evidence. Existing English/Tamil source claims stay inherited unless revalidated.
+Disposition: 78 NEEDS_REPAIR, 136 NEEDS_REVIEW, 8 DUPLICATE, 268 BLOCKED, 0 READY. A location group is a triage identity, **not a certified source-equivalence claim**. Every original app ID, artifact pointer, PR and commit is retained. Multiple representations of the same location are not counted as new exercises. Only complete record equality establishes DUPLICATE here; normalized text and source-number matches remain explicit review evidence. Existing English/Tamil source claims stay inherited unless revalidated.
 
 The eight exact duplicates are Grade 10 Exercise 2.2 Q1–Q7 and Q9 from PR #130, already released by PR #151. Q8 remains blocked. Runtime inspection now finds **576 source-loaded records, 486 exercise records and 48 modules**, versus 568/478/46 in the old report. The app filters archived Worked Examples before student use; source-loaded totals must not be presented as student-visible question counts.
 

@@ -3,21 +3,21 @@
   "observedAt": "2026-11-13T05:01:29.893Z",
   "baselineMain": "6e288869d550493d7dec11dd168cd3e614690b28",
   "counts": {
-    "candidatesDiscovered": 491,
+    "candidatesDiscovered": 490,
     "authoredOrPartial": 222,
-    "sourceOrIdOnly": 269,
+    "sourceOrIdOnly": 268,
     "existingDuplicates": 8,
     "candidatesValidated": 8,
     "candidatesPromotedReady": 0,
     "exercisesIntegrated": 0,
     "exercisesLiveVerified": 0,
-    "remainingBlockedCandidates": 483,
+    "remainingBlockedCandidates": 482,
     "statuses": {
       "READY": 0,
       "NEEDS_REPAIR": 78,
       "NEEDS_REVIEW": 136,
       "DUPLICATE": 8,
-      "BLOCKED": 269
+      "BLOCKED": 268
     }
   },
   "sourcePagesInspected": 7,
@@ -27,7 +27,7 @@
       "file": "/tmp/triggle-unit-final.log",
       "status": "PASSED",
       "note": "Full npm test including six release-queue regression groups.",
-      "sha256": "5daf8a8353b0bd7a3aa7f453e941fca8d75ad45eef88bffd5b3ab0b26fb07e6c"
+      "sha256": "120a83db138c4587041723c649c7a50740df03ccc13f33ef5d532204a6c52b9e"
     },
     {
       "file": "/tmp/triggle-preview.log",
@@ -76,7 +76,7 @@
   "release": {
     "newExerciseDeployments": 0,
     "mergePerformed": false,
-    "ci": "PR not opened yet; no exact-head CI result claimed",
+    "ci": "PR #163 exact final-head GitHub validation, usability and test workflows must pass; prior-head runs do not authorize merging a later head.",
     "teacherReview": "OWNER_DEFERRED_NOT_APPROVED",
     "tamilEditorialReview": "OWNER_DEFERRED_PENDING"
   },
@@ -85,5 +85,6 @@
     "Read per-candidate blockers and unparsed artifact list in queue.json.",
     "Do not mark Ex1.4 READY until its explicit teacher release hold is genuinely satisfied.",
     "Then use existing bulk publisher and grade/integration leases; run exact-head release gates and live verification."
-  ]
+  ],
+  "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/163"
 }

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-13T05:04:11.353Z",
+  "repository": "vigneswaranmba20-afk/Triggle",
+  "branch": "trace/exercise-release-queue-20261113",
+  "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/163",
+  "baselineMain": "6e288869d550493d7dec11dd168cd3e614690b28",
+  "counts": {
+    "candidatesDiscovered": 490,
+    "authoredOrPartial": 222,
+    "sourceOrIdOnly": 268,
+    "existingDuplicates": 8,
+    "candidatesValidated": 8,
+    "candidatesPromotedReady": 0,
+    "exercisesIntegrated": 0,
+    "exercisesLiveVerified": 0,
+    "remainingBlockedCandidates": 482,
+    "statuses": {
+      "READY": 0,
+      "NEEDS_REPAIR": 78,
+      "NEEDS_REVIEW": 136,
+      "DUPLICATE": 8,
+      "BLOCKED": 268
+    }
+  },
+  "nextAction": "Resolve real review/source/schema blockers per queue; Ex1.4 requires the explicit teacher gate. Do not re-author unrelated source-only gaps.",
+  "teacherReview": "OWNER_DEFERRED_NOT_APPROVED",
+  "tamilReview": "OWNER_DEFERRED_PENDING",
+  "archiveReconciliation": "OWNER_DEFERRED_NOT_COMPLETED",
+  "pilot": "NOT_STARTED",
+  "studentRuntimeChanged": false,
+  "newExerciseDeployment": null,
+  "unparsedArtifactOccurrences": 17,
+  "reproduce": "See README.md; pinned Git refs, queue, source review, math validation and live baseline are retained.",
+  "leaseReceipt": "Grade 12 and integration acquired through existing bulk engine; only owned claims are released at session end. No stale claim is stolen."
+}

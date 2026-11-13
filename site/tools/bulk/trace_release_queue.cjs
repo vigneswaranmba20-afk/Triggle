@@ -68,7 +68,7 @@ function build({snapshotFile='docs/trace/open-pr-snapshot-20261113.json'}={}){
    if(p.number===38&&/ex1\.1-q1-(i|ii|iii)\.md$/.test(file))entries=[{location:{grade:12,chapter:'1',exercise:'1.1',question:'1',part:file.match(/q1-(i+)\.md$/)[1]},record:{id:'g12-ch1-ex1.1-q1-'+file.match(/q1-(i+)\.md$/)[1]},pointer:'',markdownWorking:true}];
    // Locate ID references even when a heterogeneous audit has no extractable record body.
    for(const m of text.matchAll(/(["'`])(g(?:9|10|11|12)-(?:ch\d+-|c\d+-)?ex\d+[.-]\d+-q\d+(?:-?[a-z]+(?:-[a-z0-9]+)*)?)\1/gi)){
-    const l=locate(m[2],inferred);if(l&&!entries.some(e=>key(e.location)===key(l)))entries.push({location:l,record:{id:m[2]},pointer:'literal-id-reference:'+m.index});
+    const l=locate(m[2],inferred);if(l&&/^(?:whole|[ivx]+|[ab](?:-[ivx]+)?)$/.test(l.part)&&!entries.some(e=>key(e.location)===key(l)))entries.push({location:l,record:{id:m[2]},pointer:'literal-id-reference:'+m.index});
    }
    const excluded=/worked-examples/.test(file);
    artifacts.push({pr:p.number,ref:p.head_sha,file,fileSha256:sha(text),locatedOccurrences:entries.length,status:entries.length?'LOCATED':excluded?'EXCLUDED_WORKED_EXAMPLES':'MANUAL_EXTRACTION_PENDING'});
