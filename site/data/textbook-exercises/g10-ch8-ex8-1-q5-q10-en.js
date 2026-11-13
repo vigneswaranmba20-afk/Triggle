@@ -24,27 +24,57 @@ const entries=[
     "steps": [
       {
         "en": "Write the nine wages as the complete data set; n is 9, not 10.",
-        "eq": "n = 9; data = 310, 290, 320, 280, 300, 290, 320, 310, 280"
+        "eq": "n = 9; data = 310, 290, 320, 280, 300, 290, 320, 310, 280",
+        "math": {
+          "latex": "\\begin{aligned}n&=9\\\\\\text{Wages}&:\\ 310,290,320,280,300,\\\\&\\qquad 290,320,310,280\\end{aligned}",
+          "display": true,
+          "fallback": "n = 9; data = 310, 290, 320, 280, 300, 290, 320, 310, 280"
+        }
       },
       {
         "en": "Add the wages and divide by the number of workers to find the mean.",
-        "eq": "Σx = ₹2700; x̄ = 2700/9 = ₹300"
+        "eq": "Σx = ₹2700; x̄ = 2700/9 = ₹300",
+        "math": {
+          "latex": "\\begin{aligned}\\sum x&=\\text{₹}2700\\\\\\bar{x}&=\\dfrac{2700}{9}=\\text{₹}300\\end{aligned}",
+          "display": true,
+          "fallback": "Σx = ₹2700; x̄ = 2700/9 = ₹300"
+        }
       },
       {
         "en": "Use the deviations from 300: +10, −10, +20, −20, 0, −10, +20, +10, −20.",
-        "eq": "(x − x̄) = 10, −10, 20, −20, 0, −10, 20, 10, −20"
+        "eq": "(x − x̄) = 10, −10, 20, −20, 0, −10, 20, 10, −20",
+        "math": {
+          "latex": "\\begin{aligned}x-\\bar{x}&:\\ 10,-10,20,-20,0,\\\\&\\quad-10,20,10,-20\\end{aligned}",
+          "display": true,
+          "fallback": "(x − x̄) = 10, −10, 20, −20, 0, −10, 20, 10, −20"
+        }
       },
       {
         "en": "Square the deviations, add them, and divide by the number of observations.",
-        "eq": "Σ(x − x̄)² = 100 + 100 + 400 + 400 + 0 + 100 + 400 + 100 + 400 = 2000"
+        "eq": "Σ(x − x̄)² = 100 + 100 + 400 + 400 + 0 + 100 + 400 + 100 + 400 = 2000",
+        "math": {
+          "latex": "\\begin{aligned}\\sum(x-\\bar{x})^2&=100+100+400+400\\\\&\\quad+0+100+400+100+400\\\\&=2000\\end{aligned}",
+          "display": true,
+          "fallback": "Σ(x − x̄)² = 100 + 100 + 400 + 400 + 0 + 100 + 400 + 100 + 400 = 2000"
+        }
       },
       {
         "en": "Calculate the population variance, in squared rupees.",
-        "eq": "Variance σ² = 2000/9 ≈ 222.22 ₹²"
+        "eq": "Variance σ² = 2000/9 ≈ 222.22 ₹²",
+        "math": {
+          "latex": "\\begin{aligned}\\text{Variance }\\sigma^2&=\\dfrac{2000}{9}\\\\&\\approx222.22\\ \\text{₹}^2\\end{aligned}",
+          "display": true,
+          "fallback": "Variance σ² = 2000/9 ≈ 222.22 ₹²"
+        }
       },
       {
         "en": "Take the positive square root for standard deviation; check with Σx² = 812000.",
-        "eq": "σ = √(2000/9) = 20√5/3 ≈ ₹14.91; check σ² = 812000/9 − 300² = 2000/9"
+        "eq": "σ = √(2000/9) = 20√5/3 ≈ ₹14.91; check σ² = 812000/9 − 300² = 2000/9",
+        "math": {
+          "latex": "\\begin{aligned}\\sigma&=\\sqrt{\\dfrac{2000}{9}}\\\\&=\\dfrac{20\\sqrt5}{3}\\approx\\text{₹}14.91\\\\\\text{Check: }\\sigma^2&=\\dfrac{812000}{9}-300^2\\\\&=\\dfrac{2000}{9}\\end{aligned}",
+          "display": true,
+          "fallback": "σ = √(2000/9) = 20√5/3 ≈ ₹14.91; check σ² = 812000/9 − 300² = 2000/9"
+        }
       }
     ],
     "answer": "Variance = 2000/9 ≈ 222.22 ₹²; standard deviation = 20√5/3 ≈ ₹14.91.",
@@ -53,7 +83,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics, revised 2025, English printed p. 313 / PDF p. 319, Tamil printed p. 322 / PDF p. 328. Original pages visually checked. Tamil wording and teaching review pending. Source-edition discrepancy: English question says 9 workers and lists 9 wages; Tamil wording says 10 workers but likewise lists 9 wages. English solution uses all 9 listed values; Tamil publication pending correction.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\begin{aligned}\\text{Variance}&=\\dfrac{2000}{9}\\\\&\\approx222.22\\ \\text{₹}^2\\\\\\text{Std. deviation}&=\\dfrac{20\\sqrt5}{3}\\\\&\\approx\\text{₹}14.91\\end{aligned}",
+      "display": true,
+      "fallback": "Variance = 2000/9 ≈ 222.22 ₹²; standard deviation = 20√5/3 ≈ ₹14.91."
+    }
   },
   {
     "id": "c10-8-ex8-1-q6",
@@ -76,27 +111,57 @@ const entries=[
     "steps": [
       {
         "en": "A 12-hour clock gives 1 through 12 strikes in sequence, and repeats the same pattern in the second half of a 24-hour day.",
-        "eq": "Daily observations: 1, 2, …, 12, 1, 2, …, 12 (n = 24)"
+        "eq": "Daily observations: 1, 2, …, 12, 1, 2, …, 12 (n = 24)",
+        "math": {
+          "latex": "\\begin{aligned}\\text{Each cycle}&:\\ 1,2,\\ldots,12\\\\n&=24\\quad(\\text{two cycles})\\end{aligned}",
+          "display": true,
+          "fallback": "Daily observations: 1, 2, …, 12, 1, 2, …, 12 (n = 24)"
+        }
       },
       {
         "en": "The sum of the first 12 natural numbers is 12×13/2 = 78. Double for the entire day.",
-        "eq": "Total strikes = 2 × 78 = 156"
+        "eq": "Total strikes = 2 × 78 = 156",
+        "math": {
+          "latex": "\\text{Total strikes}=2\\times78=156",
+          "display": true,
+          "fallback": "Total strikes = 2 × 78 = 156"
+        }
       },
       {
         "en": "Compute the mean number of strikes per hour.",
-        "eq": "x̄ = 156/24 = 13/2 = 6.5"
+        "eq": "x̄ = 156/24 = 13/2 = 6.5",
+        "math": {
+          "latex": "\\bar{x}=\\dfrac{156}{24}=\\dfrac{13}{2}=6.5",
+          "display": true,
+          "fallback": "x̄ = 156/24 = 13/2 = 6.5"
+        }
       },
       {
         "en": "The sum of squares of 1 through 12 is 12×13×25/6 = 650; double it.",
-        "eq": "Σx² = 2 × 650 = 1300"
+        "eq": "Σx² = 2 × 650 = 1300",
+        "math": {
+          "latex": "\\sum x^2=2\\times650=1300",
+          "display": true,
+          "fallback": "Σx² = 2 × 650 = 1300"
+        }
       },
       {
         "en": "Use population variance = mean square minus square of the mean.",
-        "eq": "σ² = 1300/24 − (13/2)² = 143/12"
+        "eq": "σ² = 1300/24 − (13/2)² = 143/12",
+        "math": {
+          "latex": "\\begin{aligned}\\sigma^2&=\\dfrac{1300}{24}-\\left(\\dfrac{13}{2}\\right)^2\\\\&=\\dfrac{143}{12}\\end{aligned}",
+          "display": true,
+          "fallback": "σ² = 1300/24 − (13/2)² = 143/12"
+        }
       },
       {
         "en": "Take the square root and give the daily strike total separately.",
-        "eq": "σ = √(143/12) ≈ 3.45 strikes per hour; total daily strikes = 156"
+        "eq": "σ = √(143/12) ≈ 3.45 strikes per hour; total daily strikes = 156",
+        "math": {
+          "latex": "\\begin{aligned}\\sigma&=\\sqrt{\\dfrac{143}{12}}\\approx3.45\\\\\\text{Total strikes}&=156\\end{aligned}",
+          "display": true,
+          "fallback": "σ = √(143/12) ≈ 3.45 strikes per hour; total daily strikes = 156"
+        }
       }
     ],
     "answer": "Total strikes in 24 hours = 156; standard deviation of hourly strike counts = √(143/12) ≈ 3.45.",
@@ -105,7 +170,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics, revised 2025, English printed p. 313 / PDF p. 319, Tamil printed p. 322 / PDF p. 328. Original pages visually checked. Tamil wording and teaching review pending.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\begin{aligned}\\text{Total strikes}&=156\\\\\\sigma&=\\sqrt{\\dfrac{143}{12}}\\approx3.45\\end{aligned}",
+      "display": true,
+      "fallback": "Total strikes in 24 hours = 156; standard deviation of hourly strike counts = √(143/12) ≈ 3.45."
+    }
   },
   {
     "id": "c10-8-ex8-1-q7",
@@ -128,27 +198,57 @@ const entries=[
     "steps": [
       {
         "en": "The observations are the natural numbers 1 through 21, so there are 21 values.",
-        "eq": "n = 21; data = 1, 2, 3, …, 21"
+        "eq": "n = 21; data = 1, 2, 3, …, 21",
+        "math": {
+          "latex": "n=21,\\quad x=1,2,3,\\ldots,21",
+          "display": true,
+          "fallback": "n = 21; data = 1, 2, 3, …, 21"
+        }
       },
       {
         "en": "Calculate the mean of equally spaced consecutive integers.",
-        "eq": "x̄ = (1 + 21)/2 = 11"
+        "eq": "x̄ = (1 + 21)/2 = 11",
+        "math": {
+          "latex": "\\bar{x}=\\dfrac{1+21}{2}=11",
+          "display": true,
+          "fallback": "x̄ = (1 + 21)/2 = 11"
+        }
       },
       {
         "en": "Use the formula for the sum of squares of the first n natural numbers.",
-        "eq": "Σx² = n(n + 1)(2n + 1)/6 = 21 × 22 × 43 / 6 = 3311"
+        "eq": "Σx² = n(n + 1)(2n + 1)/6 = 21 × 22 × 43 / 6 = 3311",
+        "math": {
+          "latex": "\\begin{aligned}\\sum x^2&=\\dfrac{n(n+1)(2n+1)}{6}\\\\&=\\dfrac{21\\times22\\times43}{6}=3311\\end{aligned}",
+          "display": true,
+          "fallback": "Σx² = n(n + 1)(2n + 1)/6 = 21 × 22 × 43 / 6 = 3311"
+        }
       },
       {
         "en": "Use the population variance formula.",
-        "eq": "σ² = 3311/21 − 11² = 110/3"
+        "eq": "σ² = 3311/21 − 11² = 110/3",
+        "math": {
+          "latex": "\\sigma^2=\\dfrac{3311}{21}-11^2=\\dfrac{110}{3}",
+          "display": true,
+          "fallback": "σ² = 3311/21 − 11² = 110/3"
+        }
       },
       {
         "en": "Take the square root only after computing the exact variance.",
-        "eq": "σ = √(110/3) ≈ 6.06"
+        "eq": "σ = √(110/3) ≈ 6.06",
+        "math": {
+          "latex": "\\sigma=\\sqrt{\\dfrac{110}{3}}\\approx6.06",
+          "display": true,
+          "fallback": "σ = √(110/3) ≈ 6.06"
+        }
       },
       {
         "en": "Cross-check with the formula for a uniform sequence 1 to n.",
-        "eq": "σ² = (n² − 1)/12 = (21² − 1)/12 = 110/3"
+        "eq": "σ² = (n² − 1)/12 = (21² − 1)/12 = 110/3",
+        "math": {
+          "latex": "\\begin{aligned}\\sigma^2&=\\dfrac{n^2-1}{12}\\\\&=\\dfrac{21^2-1}{12}=\\dfrac{110}{3}\\end{aligned}",
+          "display": true,
+          "fallback": "σ² = (n² − 1)/12 = (21² − 1)/12 = 110/3"
+        }
       }
     ],
     "answer": "Standard deviation = √(110/3) ≈ 6.06.",
@@ -157,7 +257,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics, revised 2025, English printed p. 313 / PDF p. 319, Tamil printed p. 322 / PDF p. 328. Original pages visually checked. Tamil wording and teaching review pending.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\sigma=\\sqrt{\\dfrac{110}{3}}\\approx6.06",
+      "display": true,
+      "fallback": "Standard deviation = √(110/3) ≈ 6.06."
+    }
   },
   {
     "id": "c10-8-ex8-1-q8",
@@ -180,23 +285,48 @@ const entries=[
     "steps": [
       {
         "en": "Let the old observations be x and their old mean be x̄. Every new observation is smaller by 5.",
-        "eq": "y = x − 5"
+        "eq": "y = x − 5",
+        "math": {
+          "latex": "y=x-5",
+          "display": true,
+          "fallback": "y = x − 5"
+        }
       },
       {
         "en": "When 5 is subtracted from each value, the mean also decreases by 5.",
-        "eq": "ȳ = x̄ − 5"
+        "eq": "ȳ = x̄ − 5",
+        "math": {
+          "latex": "\\bar{y}=\\bar{x}-5",
+          "display": true,
+          "fallback": "ȳ = x̄ − 5"
+        }
       },
       {
         "en": "Compare a new deviation from the new mean with the old deviation.",
-        "eq": "y − ȳ = (x − 5) − (x̄ − 5) = x − x̄"
+        "eq": "y − ȳ = (x − 5) − (x̄ − 5) = x − x̄",
+        "math": {
+          "latex": "\\begin{aligned}y-\\bar{y}&=(x-5)-(\\bar{x}-5)\\\\&=x-\\bar{x}\\end{aligned}",
+          "display": true,
+          "fallback": "y − ȳ = (x − 5) − (x̄ − 5) = x − x̄"
+        }
       },
       {
         "en": "Because every deviation is unchanged, the mean squared deviation (variance) is unchanged.",
-        "eq": "σᵧ² = σₓ²"
+        "eq": "σᵧ² = σₓ²",
+        "math": {
+          "latex": "\\sigma_y^2=\\sigma_x^2",
+          "display": true,
+          "fallback": "σᵧ² = σₓ²"
+        }
       },
       {
         "en": "Hence the standard deviation remains the original value.",
-        "eq": "σᵧ = σₓ = 4.5"
+        "eq": "σᵧ = σₓ = 4.5",
+        "math": {
+          "latex": "\\sigma_y=\\sigma_x=4.5",
+          "display": true,
+          "fallback": "σᵧ = σₓ = 4.5"
+        }
       }
     ],
     "answer": "New standard deviation = 4.5.",
@@ -205,7 +335,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics, revised 2025, English printed p. 313 / PDF p. 319, Tamil printed p. 322 / PDF p. 328. Original pages visually checked. Tamil wording and teaching review pending.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\text{New standard deviation}=4.5",
+      "display": true,
+      "fallback": "New standard deviation = 4.5."
+    }
   },
   {
     "id": "c10-8-ex8-1-q9",
@@ -228,19 +363,39 @@ const entries=[
     "steps": [
       {
         "en": "Dividing each observation by 3 scales every deviation from the mean by the same factor.",
-        "eq": "y = x/3; ȳ = x̄/3; y − ȳ = (x − x̄)/3"
+        "eq": "y = x/3; ȳ = x̄/3; y − ȳ = (x − x̄)/3",
+        "math": {
+          "latex": "\\begin{aligned}y&=\\dfrac x3,\\quad\\bar{y}=\\dfrac{\\bar{x}}3\\\\y-\\bar{y}&=\\dfrac{x-\\bar{x}}3\\end{aligned}",
+          "display": true,
+          "fallback": "y = x/3; ȳ = x̄/3; y − ȳ = (x − x̄)/3"
+        }
       },
       {
         "en": "Standard deviation scales by the absolute value of the multiplier.",
-        "eq": "σᵧ = σₓ/3 = 3.6/3 = 1.2"
+        "eq": "σᵧ = σₓ/3 = 3.6/3 = 1.2",
+        "math": {
+          "latex": "\\sigma_y=\\dfrac{\\sigma_x}{3}=\\dfrac{3.6}{3}=1.2",
+          "display": true,
+          "fallback": "σᵧ = σₓ/3 = 3.6/3 = 1.2"
+        }
       },
       {
         "en": "Variance is the square of the standard deviation.",
-        "eq": "σᵧ² = (1.2)² = 1.44"
+        "eq": "σᵧ² = (1.2)² = 1.44",
+        "math": {
+          "latex": "\\sigma_y^2=(1.2)^2=1.44",
+          "display": true,
+          "fallback": "σᵧ² = (1.2)² = 1.44"
+        }
       },
       {
         "en": "Check using the variance scaling rule directly.",
-        "eq": "Old variance = 3.6² = 12.96; new variance = 12.96/9 = 1.44"
+        "eq": "Old variance = 3.6² = 12.96; new variance = 12.96/9 = 1.44",
+        "math": {
+          "latex": "\\begin{aligned}\\text{Old variance}&=(3.6)^2=12.96\\\\\\text{New variance}&=\\dfrac{12.96}{9}=1.44\\end{aligned}",
+          "display": true,
+          "fallback": "Old variance = 3.6² = 12.96; new variance = 12.96/9 = 1.44"
+        }
       }
     ],
     "answer": "New variance = 1.44; new standard deviation = 1.2.",
@@ -249,7 +404,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics, revised 2025, English printed p. 313 / PDF p. 319, Tamil printed p. 322 / PDF p. 328. Original pages visually checked. Tamil wording and teaching review pending.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\begin{aligned}\\text{New variance}&=1.44\\\\\\text{New standard deviation}&=1.2\\end{aligned}",
+      "display": true,
+      "fallback": "New variance = 1.44; new standard deviation = 1.2."
+    }
   },
   {
     "id": "c10-8-ex8-1-q10",
@@ -272,31 +432,66 @@ const entries=[
     "steps": [
       {
         "en": "Each rainfall value x occurs at a number of places f, so this is a frequency distribution.",
-        "eq": "x: 45, 50, 55, 60, 65, 70; f: 5, 13, 4, 9, 5, 4"
+        "eq": "x: 45, 50, 55, 60, 65, 70; f: 5, 13, 4, 9, 5, 4",
+        "math": {
+          "latex": "\\begin{aligned}x&:\\ 45,50,55,60,65,70\\\\f&:\\ 5,13,4,9,5,4\\end{aligned}",
+          "display": true,
+          "fallback": "x: 45, 50, 55, 60, 65, 70; f: 5, 13, 4, 9, 5, 4"
+        }
       },
       {
         "en": "Add all frequencies to find the number of places.",
-        "eq": "N = Σf = 5 + 13 + 4 + 9 + 5 + 4 = 40"
+        "eq": "N = Σf = 5 + 13 + 4 + 9 + 5 + 4 = 40",
+        "math": {
+          "latex": "\\begin{aligned}N=\\sum f&=5+13+4+9+5+4\\\\&=40\\end{aligned}",
+          "display": true,
+          "fallback": "N = Σf = 5 + 13 + 4 + 9 + 5 + 4 = 40"
+        }
       },
       {
         "en": "Multiply rainfall by frequency and add to obtain the weighted total.",
-        "eq": "Σfx = 45×5 + 50×13 + 55×4 + 60×9 + 65×5 + 70×4 = 2240"
+        "eq": "Σfx = 45×5 + 50×13 + 55×4 + 60×9 + 65×5 + 70×4 = 2240",
+        "math": {
+          "latex": "\\begin{aligned}\\sum fx&=45\\times5+50\\times13\\\\&\\quad+55\\times4+60\\times9\\\\&\\quad+65\\times5+70\\times4\\\\&=2240\\end{aligned}",
+          "display": true,
+          "fallback": "Σfx = 45×5 + 50×13 + 55×4 + 60×9 + 65×5 + 70×4 = 2240"
+        }
       },
       {
         "en": "Calculate the mean weekly rainfall.",
-        "eq": "x̄ = Σfx/N = 2240/40 = 56 mm"
+        "eq": "x̄ = Σfx/N = 2240/40 = 56 mm",
+        "math": {
+          "latex": "\\bar{x}=\\dfrac{\\sum fx}{N}=\\dfrac{2240}{40}=56\\ \\mathrm{mm}",
+          "display": true,
+          "fallback": "x̄ = Σfx/N = 2240/40 = 56 mm"
+        }
       },
       {
         "en": "Compute the frequency-weighted sum of squared rainfall values.",
-        "eq": "Σfx² = 45²×5 + 50²×13 + 55²×4 + 60²×9 + 65²×5 + 70²×4 = 127850"
+        "eq": "Σfx² = 45²×5 + 50²×13 + 55²×4 + 60²×9 + 65²×5 + 70²×4 = 127850",
+        "math": {
+          "latex": "\\begin{aligned}\\sum fx^2&=45^2\\times5+50^2\\times13\\\\&\\quad+55^2\\times4+60^2\\times9\\\\&\\quad+65^2\\times5+70^2\\times4\\\\&=127850\\end{aligned}",
+          "display": true,
+          "fallback": "Σfx² = 45²×5 + 50²×13 + 55²×4 + 60²×9 + 65²×5 + 70²×4 = 127850"
+        }
       },
       {
         "en": "Use the population frequency-variance formula.",
-        "eq": "σ² = Σfx²/N − x̄² = 127850/40 − 56² = 241/4 = 60.25 mm²"
+        "eq": "σ² = Σfx²/N − x̄² = 127850/40 − 56² = 241/4 = 60.25 mm²",
+        "math": {
+          "latex": "\\begin{aligned}\\sigma^2&=\\dfrac{\\sum fx^2}{N}-\\bar{x}^2\\\\&=\\dfrac{127850}{40}-56^2\\\\&=\\dfrac{241}{4}=60.25\\ \\mathrm{mm}^2\\end{aligned}",
+          "display": true,
+          "fallback": "σ² = Σfx²/N − x̄² = 127850/40 − 56² = 241/4 = 60.25 mm²"
+        }
       },
       {
         "en": "Take the square root, retaining units and rounding only in the final answer.",
-        "eq": "σ = √(241/4) = √241/2 ≈ 7.76 mm"
+        "eq": "σ = √(241/4) = √241/2 ≈ 7.76 mm",
+        "math": {
+          "latex": "\\begin{aligned}\\sigma&=\\sqrt{\\dfrac{241}{4}}=\\dfrac{\\sqrt{241}}2\\\\&\\approx7.76\\ \\mathrm{mm}\\end{aligned}",
+          "display": true,
+          "fallback": "σ = √(241/4) = √241/2 ≈ 7.76 mm"
+        }
       }
     ],
     "answer": "Standard deviation = √241/2 ≈ 7.76 mm.",
@@ -305,7 +500,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics, revised 2025, English printed p. 313 / PDF p. 319, Tamil printed p. 323 / PDF p. 329. Original pages visually checked. Tamil wording and teaching review pending.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\sigma=\\dfrac{\\sqrt{241}}2\\approx7.76\\ \\mathrm{mm}",
+      "display": true,
+      "fallback": "Standard deviation = √241/2 ≈ 7.76 mm."
+    }
   }
 ];
 const ids=new Set(Object.values(window.TRIGGLE_CLASSES).flatMap(g=>g.items.map(q=>q.id)));
