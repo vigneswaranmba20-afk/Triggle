@@ -1,0 +1,28 @@
+name: Temporary full Class 10 Maths verification and source-status
+on:
+  push:
+    branches: [fix/g10-all-chapters-chatgpt-maths-20261113]
+permissions:
+  contents: write
+jobs:
+  validate-refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0, persist-credentials: true}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Check all legacy Class 10 rich formulas
+        run: node site/tools/test_g10_remaining_math.cjs
+      - name: Refresh source-derived project status
+        run: npm run status:build
+      - name: Commit generated status
+        run: |
+          git config user.name "triggle-status-bot"
+          git config user.email "triggle-status-bot@users.noreply.github.com"
+          git add site/data/project-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: regenerate validated project status for complete Grade 10 maths"
+            git push origin HEAD:fix/g10-all-chapters-chatgpt-maths-20261113
+          fi
