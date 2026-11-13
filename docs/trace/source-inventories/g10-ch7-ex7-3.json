@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "grade": 10,
+  "chapter": "7",
+  "exercise": "7.3",
+  "scope": "Original 2025 English and Tamil textbook Exercise 7.3 source-page question/part and figure audit only; not production math solution, chapter/grade completion, teacher/Tamil editorial certification or real pilot eligibility.",
+  "sourcePageInventoryStatus": "BOTH_ORIGINAL_MEDIUM_PAGE_IMAGES_CHECKED",
+  "questionStems": 7,
+  "questionParts": 9,
+  "crossMediumPartsCountedOnce": true,
+  "mediumRepresentations": 18,
+  "questions": [
+    {
+      "question": "1",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 300,
+          "printedPage": 294
+        },
+        "ta": {
+          "pdfPage": 308,
+          "printedPage": 302
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        14,
+        13
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Hemispherical bowl surmounted by a hollow cylinder; vessel diameter 14 cm and overall height 13 cm; find capacity."
+    },
+    {
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 300,
+          "printedPage": 294
+        },
+        "ta": {
+          "pdfPage": 308,
+          "printedPage": 302
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        3,
+        12,
+        2
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Nathan's model: cylinder with a cone attached to each end, total length 12 cm and common diameter 3 cm; each cone height 2 cm."
+    },
+    {
+      "question": "3",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 300,
+          "printedPage": 294
+        },
+        "ta": {
+          "pdfPage": 308,
+          "printedPage": 302
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        2.4,
+        1.4
+      ],
+      "symbolEvidence": "Requested nearest cubic centimetre (cm³), NOT 2.4 cm³; carved-out cone has same height and diameter as cylinder.",
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Cylinder height 2.4 cm, diameter 1.4 cm; coaxial cone removed; remaining volume rounded to nearest cm³."
+    },
+    {
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 300,
+          "printedPage": 294
+        },
+        "ta": {
+          "pdfPage": 308,
+          "printedPage": 302
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        12,
+        6,
+        6,
+        6,
+        18
+      ],
+      "symbolEvidence": "Source illustration shows 12 cm cone height, 6 cm hemispherical component, 6 cm marked base; question text explicitly states cylinder radius 6 cm, height 18 cm.",
+      "diagramRequested": null,
+      "textbookFigure": "q4-cone-hemisphere-in-water-filled-cylinder",
+      "tablesRequired": false,
+      "figuresRequired": true,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Solid cone of height 12 cm and radius 6 cm stands on hemisphere radius 6 cm, fully immersed upright in a 6 cm radius, 18 cm high water-filled cylinder; find displaced water volume."
+    },
+    {
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 300,
+          "printedPage": 294
+        },
+        "ta": {
+          "pdfPage": 308,
+          "printedPage": 302
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        12,
+        3
+      ],
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "Capsule cylinder with two hemispherical end caps; entire length 12 mm, diameter 3 mm. Distinguish overall capsule length from middle cylindrical segment."
+    },
+    {
+      "question": "6",
+      "parts": [
+        "whole"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 300,
+          "printedPage": 294
+        },
+        "ta": {
+          "pdfPage": 308,
+          "printedPage": 302
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        7
+      ],
+      "symbolEvidence": "Only dimension explicitly labelled in figure is cube edge 7 cm; hemisphere sits on top face. Radius is not separately marked.",
+      "diagramRequested": null,
+      "textbookFigure": "q6-hemisphere-on-cube",
+      "tablesRequired": false,
+      "figuresRequired": true,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "7 cm cube surmounted by a hemisphere; find exposed solid surface area. Original composite solid diagram required to infer attached circular interface."
+    },
+    {
+      "question": "7",
+      "parts": [
+        "i",
+        "ii",
+        "iii"
+      ],
+      "sourceLocators": {
+        "en": {
+          "pdfPage": 300,
+          "printedPage": 294
+        },
+        "ta": {
+          "pdfPage": 308,
+          "printedPage": 302
+        }
+      },
+      "numericalEvidenceBothMediums": [
+        "r"
+      ],
+      "symbolEvidence": "(i) sphere's total surface area; (ii) curved surface area of enclosing right cylinder; (iii) ratio (i):(ii)",
+      "diagramRequested": null,
+      "textbookFigure": null,
+      "tablesRequired": false,
+      "figuresRequired": false,
+      "sourceDiscrepancy": null,
+      "crossMediumIntentAndNumbersChecked": true,
+      "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
+      "note": "A right circular cylinder just encloses sphere of radius r; three explicitly labelled (i)–(iii) parts."
+    }
+  ],
+  "figureEvidence": [
+    {
+      "question": "4",
+      "type": "original-exercise-composite-solid-figure",
+      "figureId": "q4-cone-hemisphere-in-water-filled-cylinder",
+      "parts": [
+        "right circular cone",
+        "hemisphere",
+        "water-filled right circular cylinder"
+      ],
+      "textDimensionsCm": {
+        "coneHeight": 12,
+        "coneRadius": 6,
+        "hemisphereRadius": 6,
+        "cylinderRadius": 6,
+        "cylinderHeight": 18
+      },
+      "enPdfPage": 300,
+      "taPdfPage": 308,
+      "note": "Figure at right of Q4 presents cone/hemisphere inside water cylinder, marks 12 cm cone and 6 cm hemisphere vertical heights. Full prompt gives radius 6 and cylinder height 18; avoid extrapolating diameters from drawing."
+    },
+    {
+      "question": "6",
+      "type": "original-exercise-composite-solid-figure",
+      "figureId": "q6-hemisphere-on-cube",
+      "parts": [
+        "cube",
+        "hemisphere"
+      ],
+      "cubeSideCm": 7,
+      "enPdfPage": 300,
+      "taPdfPage": 308,
+      "note": "Hemisphere is mounted on cube top; cube edge 7 cm. Figure does not separately mark hemisphere radius."
+    }
+  ],
+  "nonExerciseFigureEvidence": {
+    "figure": "Activity 4 combined solids",
+    "imageCount": 4,
+    "sourcePlacement": "Above Exercise 7.3 heading in the same English and Tamil pages",
+    "belongsToExercise": false,
+    "excludeFromQuestionFigureCount": true
+  },
+  "sources": [
+    {
+      "medium": "en",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "edition": "2025 revised",
+      "pages": [
+        {
+          "pdfPage": 300,
+          "printedPage": 294,
+          "imageSha256": "7f74f68d35bf30eb90465a432d226f4dae6c67005d9fad2867cec11c8dcbce33",
+          "visualChecked": true
+        }
+      ]
+    },
+    {
+      "medium": "ta",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "edition": "2025 revised",
+      "pages": [
+        {
+          "pdfPage": 308,
+          "printedPage": 302,
+          "imageSha256": "74a89be1b1e5754298c54eb61e1b38b28ebcfd495d8bae3e9cf470185a0ec2af",
+          "visualChecked": true
+        }
+      ]
+    }
+  ],
+  "pageImageReviewMethod": "Original English and Tamil Grade 10 2025 PDFs materialized from connected Google Drive. Both source bytes SHA256 matched the registered TRACE textbook digests, then original 1-based EN PDF p300 (printed p294) and TA PDF p308 (printed p302) were rendered with PyMuPDF at 2x (RGB, no alpha). Both full-page PNG images visually inspected for all seven numbered questions, three Q7 labelled subparts, Q4/Q6 figures, measurements/units, and Activity 4 exclusion. PNG SHA256 digests above refer to these specific local renderings; textbook images not redistributed.",
+  "professionalTamilReview": "pending",
+  "teacherApproval": "not performed (owner deferred)",
+  "mathSolutionsVerified": false,
+  "exerciseSourceInventoryComplete": true,
+  "chapterSourceInventoryComplete": false,
+  "allGradeQuestionDenominator": null,
+  "realPilotEligibleParts": 0,
+  "releaseApproved": false,
+  "limitations": [
+    "Seven numbered questions; Q1-Q6 each whole, Q7 has exactly three explicitly labelled parts (i),(ii),(iii): 9 unique question-parts counted once across EN/TA, 18 medium representations.",
+    "Only exercise-specific figures are Q4 (cone on hemisphere placed in full cylinder) and Q6 (hemisphere on cube). The four pictured combined solids in Activity 4 belong to the preceding activity, not to Exercise 7.3.",
+    "Question 3 asks for remaining volume rounded to nearest cm³; do not confuse its decimal dimension 2.4 with a measurement in cm³ or claim a solved value without independent math review.",
+    "Question 5 uses millimetres and total capsule length, not the central cylinder's length. Question 6's hemisphere radius is inferred from figure geometry and is not explicitly given as a printed number.",
+    "Question/part labels, associated numeric dimensions/units and figure membership were visually checked in both originals. This does NOT constitute an independent full-solution validation, editorial Tamil language signoff, or a completed chapter/grade denominator.",
+    "No student-facing app changes, authored solutions, media redistribution, hidden example import, release approval, or real 60-part pilot acceptance. Runtime and open PR deduplication remains unverified in this bounded source inventory.",
+    "Owner-deferred W1-W5 archive recovery and professional Tamil/teacher review remain deferred; previous exercise quarantines unchanged."
+  ]
+}
