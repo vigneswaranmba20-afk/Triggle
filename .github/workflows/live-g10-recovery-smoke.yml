@@ -1,0 +1,51 @@
+name: Live Grade 10 recovery smoke
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/live-g10-recovery-smoke.yml"
+      - "site/index.html"
+      - "site/data/textbook-exercises/g10-seven-recovery-20261113-en.js"
+      - "site/assets/grade10-recovery/**"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-live-release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare LIVE GitHub Pages bytes with tested release and visit student routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://vigneswaranmba20-afk.github.io/Triggle"
+          TEMP="$(mktemp -d)"
+          trap 'rm -rf "$TEMP"' EXIT
+          MODULE="data/textbook-exercises/g10-seven-recovery-20261113-en.js"
+          SUCCESS=0
+          for attempt in $(seq 1 24); do
+            if curl -fsSL --max-time 20 "$BASE/$MODULE?release=$GITHUB_SHA" -o "$TEMP/module.js" \
+               && cmp -s "site/$MODULE" "$TEMP/module.js"; then
+              SUCCESS=1
+              echo "Verified deployed module bytes on attempt $attempt"
+              break
+            fi
+            echo "Live module not yet matching tested source; attempt $attempt/24"
+            sleep 10
+          done
+          test "$SUCCESS" = 1 || { echo "Live JS module differs from current tested source"; exit 1; }
+          curl -fsSL --max-time 30 "$BASE/index.html?release=$GITHUB_SHA" -o "$TEMP/index.html"
+          grep -Fq "g10-seven-recovery-20261113-en.js" "$TEMP/index.html"
+          for asset in assets/grade10-recovery/ex4-1-q1-i.svg assets/grade10-recovery/ex4-1-q1-ii.svg; do
+            curl -fsSL --max-time 25 "$BASE/$asset?release=$GITHUB_SHA" -o "$TEMP/$(basename "$asset")"
+            cmp -s "site/$asset" "$TEMP/$(basename "$asset")" || { echo "Figure source mismatch: $asset"; exit 1; }
+          done
+          for id in c10-3-ex3-1-q1-ii c10-3-ex3-1-q1-iii c10-4-ex4-1-q1-i c10-4-ex4-1-q1-ii c10-6-ex6-1-q2-i c10-8-ex8-1-q3 c10-8-ex8-1-q4; do
+            curl -fsSL --max-time 25 "$BASE/index.html?class=10&question=$id" -o "$TEMP/route.html"
+            grep -Fq "g10-seven-recovery-20261113-en.js" "$TEMP/route.html"
+            grep -Fq "$id" "$TEMP/module.js"
+            echo "PASS live Class 10 route and authored ID: $id"
+          done
+          echo "PASS: deployed source-identical 7-part recovery, 7 public student routes, 2 original Geometry figures."
