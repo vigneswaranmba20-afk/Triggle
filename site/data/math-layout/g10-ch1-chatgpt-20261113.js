@@ -1483,6 +1483,166 @@ const LAYOUT={
     ]
   }
 };
+const QUESTIONS={
+  "c10-1-1-3-q3": [
+    [
+      "f : x → x² − 5x + 6",
+      "f:x\\mapsto x^2-5x+6"
+    ]
+  ],
+  "c10-1-1-3-q5": [
+    [
+      "f(x)=2x+5",
+      "f(x)=2x+5"
+    ],
+    [
+      "(f(x+2)−f(2))/x",
+      "\\dfrac{f(x+2)-f(2)}x"
+    ]
+  ],
+  "c10-1-1-3-q6": [
+    [
+      "f(x)=2x−3",
+      "f(x)=2x-3"
+    ],
+    [
+      "(f(0)+f(1))/2",
+      "\\dfrac{f(0)+f(1)}2"
+    ]
+  ],
+  "c10-1-1-3-q8": [
+    [
+      "f(x)=3−2x",
+      "f(x)=3-2x"
+    ],
+    [
+      "f(x²)=(f(x))²",
+      "f(x^2)=(f(x))^2"
+    ]
+  ],
+  "c10-1-1-4-q2": [
+    [
+      "f(x)=x/2−1",
+      "f(x)=\\dfrac x2-1"
+    ]
+  ],
+  "c10-1-1-4-q10": [
+    [
+      "f(x)={6x+1 if −5≤x<2; 5x²−1 if 2≤x<6; 3x−4 if 6≤x≤9}",
+      "f(x)=\\begin{cases}6x+1,&-5\\le x<2\\\\5x^2-1,&2\\le x<6\\\\3x-4,&6\\le x\\le9\\end{cases}"
+    ],
+    [
+      "(2f(−2)−f(6))/(f(4)+f(−2))",
+      "\\dfrac{2f(-2)-f(6)}{f(4)+f(-2)}"
+    ]
+  ],
+  "c10-1-1-4-q11": [
+    [
+      "S(t)=½gt²+at+b",
+      "S(t)=\\dfrac12gt^2+at+b"
+    ]
+  ],
+  "c10-1-1-4-q12": [
+    [
+      "F=(9/5)C+32",
+      "F=\\dfrac95 C+32"
+    ]
+  ],
+  "c10-1-1-5-q1": [
+    [
+      "f(x)=2/x",
+      "f(x)=\\dfrac2x"
+    ],
+    [
+      "f(x)=(x+6)/3",
+      "f(x)=\\dfrac{x+6}3"
+    ]
+  ],
+  "c10-1-1-5-q3": [
+    [
+      "g(x)=(x+1)/2",
+      "g(x)=\\dfrac{x+1}2"
+    ]
+  ],
+  "c10-1-1-6-q10": [
+    [
+      "f(x)=2x²",
+      "f(x)=2x^2"
+    ],
+    [
+      "g(x)=1/(3x)",
+      "g(x)=\\dfrac1{3x}"
+    ],
+    [
+      "3/(2x²)",
+      "\\dfrac3{2x^2}"
+    ],
+    [
+      "2/(3x²)",
+      "\\dfrac2{3x^2}"
+    ],
+    [
+      "2/(9x²)",
+      "\\dfrac2{9x^2}"
+    ],
+    [
+      "1/(6x²)",
+      "\\dfrac1{6x^2}"
+    ]
+  ],
+  "c10-1-1-6-q13": [
+    [
+      "f(x)=√(1+x²)",
+      "f(x)=\\sqrt{1+x^2}"
+    ]
+  ],
+  "c10-1-1-unit-q3": [
+    [
+      "f(x)={√(x−1) if x≥1; 4 if x<1}",
+      "f(x)=\\begin{cases}\\sqrt{x-1},&x\\ge1\\\\4,&x<1\\end{cases}"
+    ]
+  ],
+  "c10-1-1-unit-q5": [
+    [
+      "f(x)=√(1+√(1−√(1−x²)))",
+      "f(x)=\\sqrt{1+\\sqrt{1-\\sqrt{1-x^2}}}"
+    ]
+  ],
+  "c10-1-1-unit-q8": [
+    [
+      "f(x)=(x−1)/(x+1)",
+      "f(x)=\\dfrac{x-1}{x+1}"
+    ],
+    [
+      "f(f(x))=−1/x",
+      "f(f(x))=-\\dfrac1x"
+    ]
+  ],
+  "c10-1-1-unit-q9": [
+    [
+      "g(x)=(x−2)/3",
+      "g(x)=\\dfrac{x-2}3"
+    ],
+    [
+      "gg(1/2)",
+      "g\\left(g\\left(\\dfrac12\\right)\\right)"
+    ]
+  ],
+  "c10-1-1-unit-q10": [
+    [
+      "f(x)=(2x+1)/(x−9)",
+      "f(x)=\\dfrac{2x+1}{x-9}"
+    ],
+    [
+      "p(x)=−5/(4x²+1)",
+      "p(x)=-\\dfrac5{4x^2+1}"
+    ],
+    [
+      "g(x)=√(x−2)",
+      "g(x)=\\sqrt{x-2}"
+    ]
+  ]
+};
 const item=id=>Object.prototype.hasOwnProperty.call(LAYOUT,id)?LAYOUT[id]:null;
 function matchingParts(segments,fallback,label){
   const original=String(fallback||'');
@@ -1497,6 +1657,21 @@ window.TriggleChapter1Math=Object.freeze({
     const source=record.steps[index];if(!source||!entry.steps[index])throw Error('Missing Chapter 1 step notation '+record.id+'/'+index);
     const segments=matchingParts(entry.steps[index],source.eq,record.id+'/'+index);
     return segments.length===1?segments[0]:segments;
+  },
+  getQuestion(record,lang){
+    const anchors=QUESTIONS[record?.id];
+    if(!anchors)return null;
+    if(lang==='ta'&&record.q?.ta)return null;
+    const source=String(record.q?.en||'');let cursor=0;const output=[];
+    for(const [needle,latex] of anchors){
+      const at=source.indexOf(needle,cursor);
+      if(at<0)throw Error('Question notation mismatch '+record.id+'/'+needle);
+      if(at>cursor)output.push(source.slice(cursor,at));
+      output.push({latex,fallback:needle,display:latex.includes('\\begin{cases}')});
+      cursor=at+needle.length;
+    }
+    if(cursor<source.length)output.push(source.slice(cursor));
+    return {en:output,ta:output};
   },
   getAnswer(record){
     const entry=item(record?.id);if(!entry)return null;
