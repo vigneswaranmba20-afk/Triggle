@@ -63,7 +63,18 @@ jobs:
             sleep 10
           done
           test "$STATS_SUCCESS" = 1 || { echo "Live Statistics module differs from tested source"; exit 1; }
-          grep -Fq "g10-ch8-ex8-1-q5-q10-en.js" "$TEMP/index.html"
+          INDEX_SUCCESS=0
+          for attempt in $(seq 1 24); do
+            if curl -fsSL --max-time 30 "$BASE/index.html?release=$GITHUB_SHA&statistics-index=1" -o "$TEMP/index.html" \
+               && grep -Fq "g10-ch8-ex8-1-q5-q10-en.js" "$TEMP/index.html"; then
+              INDEX_SUCCESS=1
+              echo "Verified the updated live app index on attempt $attempt"
+              break
+            fi
+            echo "Live HTML index still propagating; attempt $attempt/24"
+            sleep 10
+          done
+          test "$INDEX_SUCCESS" = 1 || { echo "Live app index does not register Statistics questions"; exit 1; }
           for n in 5 6 7 8 9 10; do
             id="c10-8-ex8-1-q$n"
             curl -fsSL --max-time 25 "$BASE/index.html?class=10&question=$id" -o "$TEMP/stats-route.html"
