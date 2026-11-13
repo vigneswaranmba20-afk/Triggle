@@ -24,7 +24,7 @@ assert.equal(bilingualHeadings.entries.length,61);
 for(const h of bilingualHeadings.entries){
  assert(h.enPdfPage>0&&h.enPdfPage<340);
  assert(h.taPdfPage>0&&h.taPdfPage<351);
- assert.equal(h.questionAndSubpartParityChecked,['8.2','8.3'].includes(h.exercise));
+ assert.equal(h.questionAndSubpartParityChecked,['8.2','8.3','8.4'].includes(h.exercise));
  assert.equal(headingIndex.entries.find(e=>e.exercise===h.exercise)?.pdfPage,h.enPdfPage);
 }
 
@@ -32,7 +32,7 @@ assert.equal(headingIndex.exerciseHeadingCount,61);
 assert.equal(headingIndex.entries.length,61);
 assert.equal(headingIndex.source.pdfSha256,'602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d');
 assert.equal(headingIndex.sourcePageImageAllHeadingsVerified,false);
-assert.equal(headingIndex.bilingualCrossCheck,'PARTIAL_EX8_2_AND_EX8_3_NUMBERS_AND_SUBPARTS_ONLY');
+assert.equal(headingIndex.bilingualCrossCheck,'PARTIAL_EX8_2_EX8_3_EX8_4_NUMBERS_AND_SUBPARTS_ONLY');
 for(let chapter=1;chapter<=8;chapter++){
  const entry=chapterQueue.chapters.find(c=>c.grade===10&&c.chapter===chapter);
  const headings=headingIndex.entries.filter(h=>h.chapter===chapter);
@@ -41,7 +41,7 @@ for(let chapter=1;chapter<=8;chapter++){
  assert.equal(entry.bilingualHeadingParities,headings.length);
  assert.equal(headings.length,headingIndex.chapterExerciseHeadingCounts[String(chapter)]);
  assert.deepEqual(headings.map(h=>h.exercise),headings.map((h,i)=>chapter+'.'+(i+1)));
- for(const h of headings){assert(h.pdfPage>=1&&h.pdfPage<339);assert.equal(h.questionCount,h.exercise==='8.2'?8:h.exercise==='8.3'?13:null);assert.equal(h.subpartCount,h.exercise==='8.2'?8:h.exercise==='8.3'?29:null);}
+ for(const h of headings){assert(h.pdfPage>=1&&h.pdfPage<339);assert.equal(h.questionCount,h.exercise==='8.2'?8:h.exercise==='8.3'?13:h.exercise==='8.4'?13:null);assert.equal(h.subpartCount,h.exercise==='8.2'?8:h.exercise==='8.3'?29:h.exercise==='8.4'?15:null);}
 }
 
 
@@ -81,7 +81,7 @@ for(const q of ex82.questions){
  }
 }
 assert.equal(headingIndex.entries.find(x=>x.exercise==='8.2').imageVerified,true);
-assert.equal(bilingualHeadings.entries.filter(x=>x.questionAndSubpartParityChecked).length,2);
+assert.equal(bilingualHeadings.entries.filter(x=>x.questionAndSubpartParityChecked).length,3);
 assert.equal(headingIndex.sourcePageImageAllHeadingsVerified,false);
 assert.equal(bilingualHeadings.questionTextParityCertified,false);
 
@@ -136,6 +136,47 @@ assert.equal(bilingualHeadings.questionTextParityCertified,false);
  assert.equal(bilingualHeadings.fullImageReviewComplete,false);
  assert.equal(bilingualHeadings.questionTextParityCertified,false);
  assert.equal(bilingualHeadings.tamilTranslationReviewed,false);
+
+// Ex8.4: original English/Tamil page images establish bounded source counts, not valid solutions.
+const ex84=require('../../../docs/trace/source-inventories/g10-ch8-ex8-4.json');
+assert.equal(ex84.sourcePageInventoryStatus,'BOTH_ORIGINAL_MEDIUM_PAGE_IMAGES_CHECKED');
+assert.equal(ex84.questionStems,13);assert.equal(ex84.questionParts,15);
+assert.equal(ex84.mediumRepresentations,30);assert.equal(ex84.questions.length,13);
+assert.deepEqual(ex84.questions.map(x=>x.question),Array.from({length:13},(_,i)=>String(i+1)));
+assert.deepEqual(ex84.questions.map(x=>x.parts.length),[1,3,1,1,1,1,1,1,1,1,1,1,1]);
+assert.deepEqual(ex84.questions[1].parts,['i','ii','iii']);
+assert(ex84.questions.every(x=>x.crossMediumIntentAndNumbersChecked===true));
+assert(ex84.questions.every(x=>x.runtimeAndPrReconciliation==='NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY'));
+assert(ex84.questions.every(x=>x.tablesRequired===false && x.figuresRequired===false));
+assert.equal(ex84.sourceAnomalies.length,1);
+assert.equal(ex84.sourceAnomalies[0].question,'1');
+assert.equal(ex84.sourceAnomalies[0].type,'MATHEMATICAL_IMPOSSIBILITY_PRINTED_IN_BOTH_MEDIA');
+assert.equal(ex84.questions[0].sourceDiscrepancy,'BILINGUAL_SOURCE_MATH_CONTRADICTION');
+assert(ex84.questions.slice(1).every(x=>x.sourceDiscrepancy===null));
+assert.equal(Number(ex84.sourceAnomalies[0].given['P(A)'].split('/')[0])/3,2/3);
+assert(1/3 < 2/3,'The printed union probability must remain quarantined');
+assert.match(ex84.questions.find(x=>x.question==='4').symbolEvidence,/both complement bars/i);
+assert.deepEqual(ex84.sources.map(x=>x.medium),['en','ta']);
+assert.deepEqual(ex84.sources.map(x=>x.pages.length),[1,2]);
+for(const sr of ex84.sources){
+ assert.equal(sr.pdfSha256,sr.medium==='en'?headingIndex.source.pdfSha256:bilingualHeadings.tamil.sha256);
+ assert(sr.pages.every(p=>p.pdfPage>0&&p.printedPage>0&&p.visualChecked&&/^[a-f0-9]{64}$/.test(p.imageSha256)));
+}
+for(const q of ex84.questions)for(const medium of ['en','ta']){
+ assert(ex84.sources.find(s=>s.medium===medium).pages.some(p=>p.pdfPage===q.sourceLocators[medium].pdfPage&&p.printedPage===q.sourceLocators[medium].printedPage));
+}
+assert.equal(ex84.exerciseSourceInventoryComplete,true);
+assert.equal(ex84.chapterSourceInventoryComplete,false);
+assert.equal(ex84.allGradeQuestionDenominator,null);
+assert.equal(ex84.realPilotEligibleParts,0);
+assert.equal(ex84.mathSolutionsVerified,false);assert.equal(ex84.releaseApproved,false);
+assert.equal(ex84.professionalTamilReview,'pending');
+assert.equal(headingIndex.entries.find(x=>x.exercise==='8.4').questionCount,13);
+assert.equal(headingIndex.entries.find(x=>x.exercise==='8.4').subpartCount,15);
+assert.equal(headingIndex.entries.find(x=>x.exercise==='8.4').imageVerified,true);
+assert.equal(bilingualHeadings.entries.find(x=>x.exercise==='8.4').questionAndSubpartParityChecked,true);
+assert.equal(bilingualHeadings.entries.filter(x=>!x.questionAndSubpartParityChecked).length,58);
+assert.equal(bilingualHeadings.questionTextParityCertified,false);
 
 assert.equal(report.totalMilestones,18);assert.equal(report.baselinePercentComplete,44.44);assert.equal(report.originalBaselinePercentComplete,40);
 assert.equal(report.curriculumPercent,null);assert.equal(report.pilotRealPercent,0);
