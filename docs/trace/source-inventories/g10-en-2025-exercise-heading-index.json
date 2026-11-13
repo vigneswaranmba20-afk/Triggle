@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "grade": 10,
   "medium": "en",
   "edition": "2025",
@@ -9,7 +9,7 @@
     "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
     "pdfPages": 352
   },
-  "indexMethod": "Exact text-layer Exercise N.N heading match through PDF p338; first occurrences in body only. Visually spot-checked PDF pages 12 and 319 and answer appendix PDF p340, which is explicitly excluded. Not a complete page-by-page image validation. Grade 10 Exercise 8.2 English original PDF p322 and Tamil original PDF pp331-332 were additionally inspected visually for Q1-Q8 numerical/count parity. Exercise 8.3 original 2025 English PDF pp328–329 and Tamil PDF pp340–341 were separately visually reviewed for Q1–Q13 and 29 labelled parts, numerical/figure consistency.",
+  "indexMethod": "Exact text-layer Exercise N.N heading match through PDF p338; first occurrences in body only. Visually spot-checked PDF pages 12 and 319 and answer appendix PDF p340, which is explicitly excluded. Not a complete page-by-page image validation. Grade 10 Exercise 8.2 English original PDF p322 and Tamil original PDF pp331-332 were additionally inspected visually for Q1-Q8 numerical/count parity. Exercise 8.3 original 2025 English PDF pp328–329 and Tamil PDF pp340–341 were separately visually reviewed for Q1–Q13 and 29 labelled parts, numerical/figure consistency. Exercise 8.4 English PDF p335 and Tamil pp347–348 additionally visually checked: 13 question stems, 15 labelled parts; Q1 source numerical contradiction quarantined and Q4 complement bars preserved.",
   "exerciseHeadingCount": 61,
   "chapterExerciseHeadingCounts": {
     "1": 6,
@@ -21,7 +21,7 @@
     "7": 5,
     "8": 5
   },
-  "bilingualCrossCheck": "PARTIAL_EX8_2_AND_EX8_3_NUMBERS_AND_SUBPARTS_ONLY",
+  "bilingualCrossCheck": "PARTIAL_EX8_2_EX8_3_EX8_4_NUMBERS_AND_SUBPARTS_ONLY",
   "questionAndSubpartCounts": "UNKNOWN",
   "questionCount": null,
   "subpartCount": null,
@@ -564,9 +564,9 @@
       "grade": 10,
       "chapter": 8,
       "pdfPage": 335,
-      "questionCount": null,
-      "subpartCount": null,
-      "imageVerified": false
+      "questionCount": 13,
+      "subpartCount": 15,
+      "imageVerified": true
     },
     {
       "exercise": "8.5",
@@ -581,7 +581,7 @@
   "limitations": [
     "Exercise heading starts only: not a complete count or verification of question texts, subparts, mathematical figures or tables.",
     "PDF page numbers are 1-based; some exercise headings share the same PDF page.",
-    "Whole-grade Tamil page audit and question/part parity remain outstanding except Exercises 8.2 and 8.3; runtime and open-PR reconciliation for these bounded inventories is not established.",
+    "Whole-grade Tamil page audit and question/part parity remain outstanding except Exercises 8.2, 8.3 and 8.4; runtime and open-PR reconciliation for these bounded inventories is not established.",
     "Worked examples and answer appendix headings are excluded."
   ]
 }
