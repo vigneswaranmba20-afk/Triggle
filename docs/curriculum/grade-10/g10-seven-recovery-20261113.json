@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "batchId": "g10-seven-blocked-recovery-20261113",
-  "status": "ENGLISH_AUTHORING_PENDING_CI",
+  "status": "ENGLISH_PUBLISHED_LIVE_VERIFIED",
   "grade": 10,
   "scope": "Only seven blocked question parts across chapters 3, 4, 6, 8; no complete-exercise or complete-chapter claim",
   "sources": {
@@ -419,5 +419,22 @@
       "translationReview": "pending",
       "checkpoint": "2026-11-13"
     }
-  ]
+  ],
+  "studentReleaseStatus": "LIVE_VERIFIED_ENGLISH_ONLY",
+  "deploymentEvidence": {
+    "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/164",
+    "mergeCommit": "10e1d6b3f7faa2fd96c4ad5105014da79c7d4ce4",
+    "statusReconciliationCommit": "b26a0afcdf7d6183522cb4676fb6aa57f57a1034",
+    "publishWorkflow": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/43384162435",
+    "pagesDeployment": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/43384161369",
+    "liveSourceAndRoutesSmoke": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/43385260169",
+    "verifiedCanonicalBase": "https://vigneswaranmba20-afk.github.io/Triggle/site/",
+    "liveSourceMatch": "exact bytes confirmed for JS module and both diagram assets",
+    "liveRouteCount": 7,
+    "sourceAndMathTests": "passed",
+    "fullBrowserAndWebkitTests": "passed in PR #164",
+    "tamilEditorialCertification": "pending / not claimed",
+    "teacherApproval": "not claimed",
+    "releaseScope": "Only seven English question parts; no whole-exercise or whole-chapter completion"
+  }
 }
