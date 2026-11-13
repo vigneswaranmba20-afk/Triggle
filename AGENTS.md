@@ -1,5 +1,9 @@
 # AI coding-agent guidance for Triggle
 
+## Standing mathematics-notation requirement (user directive, 2026-11-13)
+
+**ALWAYS use ChatGPT-style mathematical typesetting in every student-facing solution (Grades 9–12, English and Tamil).** Never publish new equations as long plain strings containing `2000/9`, `√351/8`, visually detached exponents, or slash fractions. Use the offline KaTeX renderer in `site/assets/math-notation.js` with **authored structured LaTeX** (`steps[].math`, `answerMath`, and `questionMath` when needed) for true stacked fractions (`\\dfrac`), radicals (`\\sqrt{...}`), powers and indices, aligned multi-line derivations (`aligned`), and readable mobile layouts. Preserve `eq`, `answer`, original source question wording and IDs as the accessible plain-text fallback. Never infer LaTeX from prose, change maths to improve appearance, or shorten working. Long derivations should break into legible aligned lines rather than requiring horizontal page scrolling. On phones, test real rendered KaTeX glyphs, clipping, focusable formula scrolling, and answer readability at 320/390/412px; test both language interfaces, offline assets, and source/answer parity. Follow `docs/CHATGPT_STYLE_MATH_NOTATION_STANDARD.md`; failures block release. Carry this forward to every future maths batch, not only the screenshots.
+
 ## Mandatory execution workflow for every Triggle content or UI task
 
 **Read and follow [the reusable Triggle master development prompt](docs/TRIGGLE_MASTER_PROMPT.md) before editing, testing, or deploying.** Its Google Drive 2025 textbook-first verification, single standard solution with independent difficulty metadata, useful question-specific figure icons, batch testing, and live deployment gates are mandatory. A repository clone does not contain the user's PDFs: use the connected Drive app to open them, and report an access blocker instead of pretending to have read them.
