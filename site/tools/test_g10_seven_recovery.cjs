@@ -10,8 +10,8 @@ assert.equal(manifest.sources.ta.sha256,'6c6629e39b3ba5c7fccf43c320dc54eec56f7ae
 assert.equal(manifest.tamilEditorialCertification,'not_claimed');
 assert.equal(manifest.professionalTeacherReview,'not_claimed');
 const scripts=[...read('site/index.html').matchAll(/<script src="\.\/(data\/[^?"']+)(?:\?[^"']*)?"[^>]*><\/script>/g)].map(m=>m[1]);
-const module='data/textbook-exercises/g10-seven-recovery-20261113-en.js';
-assert.equal(scripts.filter(s=>s===module).length,1,'Recovery JS loads exactly once');
+const recoveryModule='data/textbook-exercises/g10-seven-recovery-20261113-en.js';
+assert.equal(scripts.filter(s=>s===recoveryModule).length,1,'Recovery JS loads exactly once');
 const ctx={window:{},console};
 vm.createContext(ctx);
 for(const file of scripts)vm.runInContext(read('site/'+file),ctx,{filename:file,timeout:10000});
@@ -34,7 +34,7 @@ for(const r of manifest.records){
 assert.ok(all.some(r=>r.id==='c10-2-ex2-2-q1'),'Previously deployed Exercise 2.2 preserved');
 assert.ok(!all.some(r=>r.id==='c10-2-ex2-2-q8'),'Previously held ambiguous Q8 is still withheld');
 const sw=read('site/service-worker.js');
-for(const file of [module,...manifest.requiredFigureAssets])assert.ok(sw.includes('./'+file),'Offline cache includes '+file);
+for(const file of [recoveryModule,...manifest.requiredFigureAssets])assert.ok(sw.includes('./'+file),'Offline cache includes '+file);
 // Independently re-solve reciprocal linear system: a=1/x, b=1/y, c=1/z.
 const [a,b,c]=[2,3,4];assert.equal(a-2*b+4,0);assert.equal(b-c+1,0);assert.equal(2*c+3*a,14);
 assert.deepEqual([1/a,1/b,1/c],[.5,1/3,.25]);
