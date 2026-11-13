@@ -32,7 +32,7 @@ assert.equal(headingIndex.exerciseHeadingCount,61);
 assert.equal(headingIndex.entries.length,61);
 assert.equal(headingIndex.source.pdfSha256,'602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d');
 assert.equal(headingIndex.sourcePageImageAllHeadingsVerified,false);
-assert.equal(headingIndex.bilingualCrossCheck,'PARTIAL_EX8_2_AND_EX8_3_NUMBERS_AND_SUBPARTS_ONLY');
+assert.equal(headingIndex.bilingualCrossCheck,'PARTIAL_EX8_2_EX8_3_EX8_4_NUMBERS_AND_SUBPARTS_ONLY');
 for(let chapter=1;chapter<=8;chapter++){
  const entry=chapterQueue.chapters.find(c=>c.grade===10&&c.chapter===chapter);
  const headings=headingIndex.entries.filter(h=>h.chapter===chapter);
