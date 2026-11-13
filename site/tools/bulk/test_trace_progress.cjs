@@ -24,7 +24,7 @@ assert.equal(bilingualHeadings.entries.length,61);
 for(const h of bilingualHeadings.entries){
  assert(h.enPdfPage>0&&h.enPdfPage<340);
  assert(h.taPdfPage>0&&h.taPdfPage<351);
- assert.equal(h.questionAndSubpartParityChecked,['7.1','8.2','8.3','8.4','8.5'].includes(h.exercise));
+ assert.equal(h.questionAndSubpartParityChecked,['7.1','7.2','8.2','8.3','8.4','8.5'].includes(h.exercise));
  assert.equal(headingIndex.entries.find(e=>e.exercise===h.exercise)?.pdfPage,h.enPdfPage);
 }
 
@@ -32,7 +32,7 @@ assert.equal(headingIndex.exerciseHeadingCount,61);
 assert.equal(headingIndex.entries.length,61);
 assert.equal(headingIndex.source.pdfSha256,'602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d');
 assert.equal(headingIndex.sourcePageImageAllHeadingsVerified,false);
-assert.equal(headingIndex.bilingualCrossCheck,'PARTIAL_EX7_1_AND_EX8_2_EX8_3_EX8_4_EX8_5_NUMBERS_AND_SUBPARTS_ONLY');
+assert.equal(headingIndex.bilingualCrossCheck,'PARTIAL_EX7_1_EX7_2_AND_EX8_2_EX8_3_EX8_4_EX8_5_NUMBERS_AND_SUBPARTS_ONLY');
 for(let chapter=1;chapter<=8;chapter++){
  const entry=chapterQueue.chapters.find(c=>c.grade===10&&c.chapter===chapter);
  const headings=headingIndex.entries.filter(h=>h.chapter===chapter);
@@ -41,7 +41,7 @@ for(let chapter=1;chapter<=8;chapter++){
  assert.equal(entry.bilingualHeadingParities,headings.length);
  assert.equal(headings.length,headingIndex.chapterExerciseHeadingCounts[String(chapter)]);
  assert.deepEqual(headings.map(h=>h.exercise),headings.map((h,i)=>chapter+'.'+(i+1)));
- for(const h of headings){assert(h.pdfPage>=1&&h.pdfPage<339);assert.equal(h.questionCount,h.exercise==='8.2'?8:h.exercise==='8.3'?13:h.exercise==='8.4'?13:h.exercise==='8.5'?15:h.exercise==='7.1'?10:null);assert.equal(h.subpartCount,h.exercise==='8.2'?8:h.exercise==='8.3'?29:h.exercise==='8.4'?15:h.exercise==='8.5'?15:h.exercise==='7.1'?10:null);}
+ for(const h of headings){assert(h.pdfPage>=1&&h.pdfPage<339);assert.equal(h.questionCount,h.exercise==='8.2'?8:h.exercise==='8.3'?13:h.exercise==='8.4'?13:h.exercise==='8.5'?15:h.exercise==='7.1'?10:h.exercise==='7.2'?10:null);assert.equal(h.subpartCount,h.exercise==='8.2'?8:h.exercise==='8.3'?29:h.exercise==='8.4'?15:h.exercise==='8.5'?15:h.exercise==='7.1'?10:h.exercise==='7.2'?10:null);}
 }
 
 
@@ -81,7 +81,7 @@ for(const q of ex82.questions){
  }
 }
 assert.equal(headingIndex.entries.find(x=>x.exercise==='8.2').imageVerified,true);
-assert.equal(bilingualHeadings.entries.filter(x=>x.questionAndSubpartParityChecked).length,5);
+assert.equal(bilingualHeadings.entries.filter(x=>x.questionAndSubpartParityChecked).length,6);
 assert.equal(headingIndex.sourcePageImageAllHeadingsVerified,false);
 assert.equal(bilingualHeadings.questionTextParityCertified,false);
 
@@ -175,7 +175,7 @@ assert.equal(headingIndex.entries.find(x=>x.exercise==='8.4').questionCount,13);
 assert.equal(headingIndex.entries.find(x=>x.exercise==='8.4').subpartCount,15);
 assert.equal(headingIndex.entries.find(x=>x.exercise==='8.4').imageVerified,true);
 assert.equal(bilingualHeadings.entries.find(x=>x.exercise==='8.4').questionAndSubpartParityChecked,true);
-assert.equal(bilingualHeadings.entries.filter(x=>!x.questionAndSubpartParityChecked).length,56);
+assert.equal(bilingualHeadings.entries.filter(x=>!x.questionAndSubpartParityChecked).length,55);
 assert.equal(bilingualHeadings.questionTextParityCertified,false);
 
 // Exercise 8.5: original English/Tamil MCQ pages and all options verified as source inventory only.
@@ -229,7 +229,7 @@ assert.equal(headingIndex.entries.find(x=>x.exercise==='8.5').imageVerified,true
 assert.equal(headingIndex.entries.find(x=>x.exercise==='8.5').questionCount,15);
 assert.equal(headingIndex.entries.find(x=>x.exercise==='8.5').subpartCount,15);
 assert.equal(bilingualHeadings.entries.find(x=>x.exercise==='8.5').questionAndSubpartParityChecked,true);
-assert.equal(bilingualHeadings.entries.filter(x=>!x.questionAndSubpartParityChecked).length,56);
+assert.equal(bilingualHeadings.entries.filter(x=>!x.questionAndSubpartParityChecked).length,55);
 assert.equal(bilingualHeadings.questionTextParityCertified,false);
 assert.equal(bilingualHeadings.tamilTranslationReviewed,false);
 
@@ -275,7 +275,58 @@ assert.equal(headingIndex.entries.find(x=>x.exercise==='7.1').questionCount,10);
 assert.equal(headingIndex.entries.find(x=>x.exercise==='7.1').subpartCount,10);
 assert.equal(headingIndex.entries.find(x=>x.exercise==='7.1').imageVerified,true);
 assert.equal(bilingualHeadings.entries.find(x=>x.exercise==='7.1').questionAndSubpartParityChecked,true);
-assert.equal(bilingualHeadings.entries.filter(x=>!x.questionAndSubpartParityChecked).length,56);
+assert.equal(bilingualHeadings.entries.filter(x=>!x.questionAndSubpartParityChecked).length,55);
+assert.equal(bilingualHeadings.questionTextParityCertified,false);
+
+
+// Grade 10 Exercise 7.2: original bilingual single-page source audit; no release claims.
+const ex72=require('../../../docs/trace/source-inventories/g10-ch7-ex7-2.json');
+assert.equal(ex72.sourcePageInventoryStatus,'BOTH_ORIGINAL_MEDIUM_PAGE_IMAGES_CHECKED');
+assert.equal(ex72.questionStems,10);
+assert.equal(ex72.questionParts,10);
+assert.equal(ex72.mediumRepresentations,20);
+assert.equal(ex72.questions.length,10);
+assert.deepEqual(ex72.questions.map(q=>q.question),Array.from({length:10},(_,i)=>String(i+1)));
+assert(ex72.questions.every(q=>q.parts.length===1 && q.parts[0]==='whole'));
+assert(ex72.questions.every(q=>q.crossMediumIntentAndNumbersChecked===true));
+assert(ex72.questions.every(q=>q.runtimeAndPrReconciliation==='NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY'));
+assert(ex72.questions.every(q=>q.tablesRequired===false && q.figuresRequired===false && q.textbookFigure===null));
+assert(ex72.questions.every(q=>q.sourceDiscrepancy===null));
+assert.deepEqual(ex72.questions.find(q=>q.question==='1').numericalEvidenceBothMediums,[14,10,5]);
+assert.deepEqual(ex72.questions.find(q=>q.question==='2').numericalEvidenceBothMediums,[20,9,5,4]);
+assert.deepEqual(ex72.questions.find(q=>q.question==='6').numericalEvidenceBothMediums,[3600,5040]);
+assert.deepEqual(ex72.questions.find(q=>q.question==='8').numericalEvidenceBothMediums,['3√3:4']);
+assert(ex72.questions.find(q=>q.question==='8').symbolEvidence.includes('3√3:4'));
+assert.deepEqual(ex72.questions.find(q=>q.question==='9').numericalEvidenceBothMediums,['576π','324π']);
+assert.deepEqual(ex72.questions.find(q=>q.question==='10').numericalEvidenceBothMediums,[16,8,20,40]);
+assert.equal(ex72.nonExerciseFigureEvidence.figure,'7.36');
+assert.equal(ex72.nonExerciseFigureEvidence.belongsToExercise,false);
+assert.equal(ex72.nonExerciseFigureEvidence.excludeFromQuestionFigureCount,true);
+assert.deepEqual(ex72.sources.map(s=>s.medium),['en','ta']);
+assert.deepEqual(ex72.sources.map(s=>s.pages.length),[1,1]);
+for(const source of ex72.sources){
+ assert.equal(source.pdfSha256,source.medium==='en'?headingIndex.source.pdfSha256:bilingualHeadings.tamil.sha256);
+ assert(source.pages.every(page=>page.visualChecked===true && /^[a-f0-9]{64}$/.test(page.imageSha256)));
+}
+for(const question of ex72.questions)for(const medium of ['en','ta']){
+ assert(ex72.sources.find(s=>s.medium===medium).pages.some(page=>
+  page.pdfPage===question.sourceLocators[medium].pdfPage &&
+  page.printedPage===question.sourceLocators[medium].printedPage));
+}
+assert.equal(ex72.sources.find(s=>s.medium==='en').pages[0].pdfPage,296);
+assert.equal(ex72.sources.find(s=>s.medium==='ta').pages[0].pdfPage,304);
+assert.equal(ex72.exerciseSourceInventoryComplete,true);
+assert.equal(ex72.chapterSourceInventoryComplete,false);
+assert.equal(ex72.allGradeQuestionDenominator,null);
+assert.equal(ex72.realPilotEligibleParts,0);
+assert.equal(ex72.mathSolutionsVerified,false);
+assert.equal(ex72.releaseApproved,false);
+assert.equal(ex72.professionalTamilReview,'pending');
+assert.equal(headingIndex.entries.find(x=>x.exercise==='7.2').questionCount,10);
+assert.equal(headingIndex.entries.find(x=>x.exercise==='7.2').subpartCount,10);
+assert.equal(headingIndex.entries.find(x=>x.exercise==='7.2').imageVerified,true);
+assert.equal(bilingualHeadings.entries.find(x=>x.exercise==='7.2').questionAndSubpartParityChecked,true);
+assert.equal(bilingualHeadings.entries.filter(x=>!x.questionAndSubpartParityChecked).length,55);
 assert.equal(bilingualHeadings.questionTextParityCertified,false);
 
 assert.equal(report.totalMilestones,18);assert.equal(report.baselinePercentComplete,44.44);assert.equal(report.originalBaselinePercentComplete,40);
