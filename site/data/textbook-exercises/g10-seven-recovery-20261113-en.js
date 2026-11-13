@@ -24,27 +24,57 @@ const entries=[
     "steps": [
       {
         "en": "Since x, y and z occur in denominators, take A = 1/x, B = 1/y and C = 1/z (so none of x, y, z is zero).",
-        "eq": "A − 2B = −4; B − C = −1; 3A + 2C = 14"
+        "eq": "A − 2B = −4; B − C = −1; 3A + 2C = 14",
+        "math": {
+          "latex": "\\begin{aligned}A-2B&=-4\\\\B-C&=-1\\\\3A+2C&=14\\end{aligned}",
+          "display": true,
+          "fallback": "A − 2B = −4; B − C = −1; 3A + 2C = 14"
+        }
       },
       {
         "en": "Use the second equation to express C in terms of B.",
-        "eq": "C = B + 1"
+        "eq": "C = B + 1",
+        "math": {
+          "latex": "C=B+1",
+          "display": true,
+          "fallback": "C = B + 1"
+        }
       },
       {
         "en": "Use the first equation to express A in terms of B.",
-        "eq": "A = 2B − 4"
+        "eq": "A = 2B − 4",
+        "math": {
+          "latex": "A=2B-4",
+          "display": true,
+          "fallback": "A = 2B − 4"
+        }
       },
       {
         "en": "Substitute both expressions into the third equation and solve.",
-        "eq": "3(2B − 4) + 2(B + 1) = 14 ⇒ 8B − 10 = 14 ⇒ B = 3"
+        "eq": "3(2B − 4) + 2(B + 1) = 14 ⇒ 8B − 10 = 14 ⇒ B = 3",
+        "math": {
+          "latex": "\\begin{aligned}3(2B-4)+2(B+1)&=14\\\\8B-10&=14\\\\B&=3\\end{aligned}",
+          "display": true,
+          "fallback": "3(2B − 4) + 2(B + 1) = 14 ⇒ 8B − 10 = 14 ⇒ B = 3"
+        }
       },
       {
         "en": "Recover A and C, then undo the reciprocal substitutions.",
-        "eq": "A = 2; C = 4; x = 1/2, y = 1/3, z = 1/4"
+        "eq": "A = 2; C = 4; x = 1/2, y = 1/3, z = 1/4",
+        "math": {
+          "latex": "\\begin{aligned}A&=2,\\quad C=4\\\\x&=\\dfrac12,\\quad y=\\dfrac13,\\quad z=\\dfrac14\\end{aligned}",
+          "display": true,
+          "fallback": "A = 2; C = 4; x = 1/2, y = 1/3, z = 1/4"
+        }
       },
       {
         "en": "Verify in all three original equations.",
-        "eq": "2 − 2(3) + 4 = 0; 3 − 4 + 1 = 0; 2(4) + 3(2) = 14"
+        "eq": "2 − 2(3) + 4 = 0; 3 − 4 + 1 = 0; 2(4) + 3(2) = 14",
+        "math": {
+          "latex": "\\begin{aligned}2-2(3)+4&=0\\\\3-4+1&=0\\\\2(4)+3(2)&=14\\end{aligned}",
+          "display": true,
+          "fallback": "2 − 2(3) + 4 = 0; 3 − 4 + 1 = 0; 2(4) + 3(2) = 14"
+        }
       }
     ],
     "answer": "(x, y, z) = (1/2, 1/3, 1/4)",
@@ -53,7 +83,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 92, PDF p. 98; corresponding Tamil printed p. 94, PDF p. 100. Source page images checked; Tamil authored wording pending editorial review.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "(x,y,z)=\\left(\\dfrac12,\\dfrac13,\\dfrac14\\right)",
+      "display": true,
+      "fallback": "(x, y, z) = (1/2, 1/3, 1/4)"
+    }
   },
   {
     "id": "c10-3-ex3-1-q1-iii",
@@ -76,27 +111,57 @@ const entries=[
     "steps": [
       {
         "en": "Because all four expressions are equal, equate neighboring expressions.",
-        "eq": "x + 20 = 3y/2 + 10; 3y/2 + 10 = 2z + 5; 2z + 5 = 110 − (y + z)"
+        "eq": "x + 20 = 3y/2 + 10; 3y/2 + 10 = 2z + 5; 2z + 5 = 110 − (y + z)",
+        "math": {
+          "latex": "\\begin{aligned}x+20&=\\dfrac{3y}{2}+10\\\\\\dfrac{3y}{2}+10&=2z+5\\\\2z+5&=110-(y+z)\\end{aligned}",
+          "display": true,
+          "fallback": "x + 20 = 3y/2 + 10; 3y/2 + 10 = 2z + 5; 2z + 5 = 110 − (y + z)"
+        }
       },
       {
         "en": "Rearrange these three equations.",
-        "eq": "x = 3y/2 − 10; 3y − 4z = −10; y + 3z = 105"
+        "eq": "x = 3y/2 − 10; 3y − 4z = −10; y + 3z = 105",
+        "math": {
+          "latex": "\\begin{aligned}x&=\\dfrac{3y}{2}-10\\\\3y-4z&=-10\\\\y+3z&=105\\end{aligned}",
+          "display": true,
+          "fallback": "x = 3y/2 − 10; 3y − 4z = −10; y + 3z = 105"
+        }
       },
       {
         "en": "Use y = 105 − 3z in the second equation.",
-        "eq": "3(105 − 3z) − 4z = −10 ⇒ 315 − 13z = −10 ⇒ z = 25"
+        "eq": "3(105 − 3z) − 4z = −10 ⇒ 315 − 13z = −10 ⇒ z = 25",
+        "math": {
+          "latex": "\\begin{aligned}3(105-3z)-4z&=-10\\\\315-13z&=-10\\\\z&=25\\end{aligned}",
+          "display": true,
+          "fallback": "3(105 − 3z) − 4z = −10 ⇒ 315 − 13z = −10 ⇒ z = 25"
+        }
       },
       {
         "en": "Substitute z = 25 to determine y.",
-        "eq": "y = 105 − 3(25) = 30"
+        "eq": "y = 105 − 3(25) = 30",
+        "math": {
+          "latex": "y=105-3(25)=30",
+          "display": true,
+          "fallback": "y = 105 − 3(25) = 30"
+        }
       },
       {
         "en": "Find x from the first equation.",
-        "eq": "x = (3 × 30)/2 − 10 = 35"
+        "eq": "x = (3 × 30)/2 − 10 = 35",
+        "math": {
+          "latex": "x=\\dfrac{3\\times30}{2}-10=35",
+          "display": true,
+          "fallback": "x = (3 × 30)/2 − 10 = 35"
+        }
       },
       {
         "en": "Check every term of the original equality chain.",
-        "eq": "x + 20 = 55; 3y/2 + 10 = 55; 2z + 5 = 55; 110 − (y + z) = 55"
+        "eq": "x + 20 = 55; 3y/2 + 10 = 55; 2z + 5 = 55; 110 − (y + z) = 55",
+        "math": {
+          "latex": "\\begin{aligned}x+20&=55\\\\\\dfrac{3y}{2}+10&=55\\\\2z+5&=55\\\\110-(y+z)&=55\\end{aligned}",
+          "display": true,
+          "fallback": "x + 20 = 55; 3y/2 + 10 = 55; 2z + 5 = 55; 110 − (y + z) = 55"
+        }
       }
     ],
     "answer": "(x, y, z) = (35, 30, 25)",
@@ -105,7 +170,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 92, PDF p. 98; corresponding Tamil printed p. 94, PDF p. 100. Source page images checked; Tamil authored wording pending editorial review.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "(x,y,z)=(35,30,25)",
+      "display": true,
+      "fallback": "(x, y, z) = (35, 30, 25)"
+    }
   },
   {
     "id": "c10-4-ex4-1-q1-i",
@@ -128,19 +198,39 @@ const entries=[
     "steps": [
       {
         "en": "In the two triangles ADE and ABC, find the whole sides of the larger triangle.",
-        "eq": "AB = AD + DB = 3 + 5 = 8; AC = AE + EC = 2 + 3.5 = 5.5"
+        "eq": "AB = AD + DB = 3 + 5 = 8; AC = AE + EC = 2 + 3.5 = 5.5",
+        "math": {
+          "latex": "\\begin{aligned}AB&=AD+DB=3+5=8\\\\AC&=AE+EC=2+3.5=5.5\\end{aligned}",
+          "display": true,
+          "fallback": "AB = AD + DB = 3 + 5 = 8; AC = AE + EC = 2 + 3.5 = 5.5"
+        }
       },
       {
         "en": "For similar triangles sharing angle A, corresponding side ratios must agree.",
-        "eq": "AD / AB = 3 / 8; AE / AC = 2 / 5.5 = 4 / 11"
+        "eq": "AD / AB = 3 / 8; AE / AC = 2 / 5.5 = 4 / 11",
+        "math": {
+          "latex": "\\begin{aligned}\\dfrac{AD}{AB}&=\\dfrac38\\\\\\dfrac{AE}{AC}&=\\dfrac{2}{5.5}=\\dfrac4{11}\\end{aligned}",
+          "display": true,
+          "fallback": "AD / AB = 3 / 8; AE / AC = 2 / 5.5 = 4 / 11"
+        }
       },
       {
         "en": "Compare the fractions exactly (not just by rounding).",
-        "eq": "3 × 11 = 33; 4 × 8 = 32 ⇒ 3/8 ≠ 4/11"
+        "eq": "3 × 11 = 33; 4 × 8 = 32 ⇒ 3/8 ≠ 4/11",
+        "math": {
+          "latex": "\\begin{aligned}3\\times11&=33\\\\4\\times8&=32\\\\\\dfrac38&\\ne\\dfrac4{11}\\end{aligned}",
+          "display": true,
+          "fallback": "3 × 11 = 33; 4 × 8 = 32 ⇒ 3/8 ≠ 4/11"
+        }
       },
       {
         "en": "Therefore the sides are not proportional, so the two triangles are not similar.",
-        "eq": "△ADE is not similar to △ABC"
+        "eq": "△ADE is not similar to △ABC",
+        "math": {
+          "latex": "\\triangle ADE\\not\\sim\\triangle ABC",
+          "display": true,
+          "fallback": "△ADE is not similar to △ABC"
+        }
       }
     ],
     "answer": "The two triangles are not similar.",
@@ -150,7 +240,12 @@ const entries=[
     "edition": "2025",
     "translationReview": "pending",
     "figureSrc": "assets/grade10-recovery/ex4-1-q1-i.svg",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\triangle ADE\\not\\sim\\triangle ABC",
+      "display": true,
+      "fallback": "The two triangles are not similar."
+    }
   },
   {
     "id": "c10-4-ex4-1-q1-ii",
@@ -173,27 +268,57 @@ const entries=[
     "steps": [
       {
         "en": "Since B, Q and C are in a straight line, the angles on either side of QP add to 180°.",
-        "eq": "∠PQC = 180° − 110° = 70°"
+        "eq": "∠PQC = 180° − 110° = 70°",
+        "math": {
+          "latex": "\\angle PQC=180^\\circ-110^\\circ=70^\\circ",
+          "display": true,
+          "fallback": "∠PQC = 180° − 110° = 70°"
+        }
       },
       {
         "en": "Compare this with the angle at B and the common angle at C.",
-        "eq": "∠PQC = ∠ABC = 70°; ∠PCQ = ∠ACB"
+        "eq": "∠PQC = ∠ABC = 70°; ∠PCQ = ∠ACB",
+        "math": {
+          "latex": "\\begin{aligned}\\angle PQC&=\\angle ABC=70^\\circ\\\\\\angle PCQ&=\\angle ACB\\end{aligned}",
+          "display": true,
+          "fallback": "∠PQC = ∠ABC = 70°; ∠PCQ = ∠ACB"
+        }
       },
       {
         "en": "By the AA similarity criterion, the small and large triangles are similar.",
-        "eq": "△PQC ∼ △ABC"
+        "eq": "△PQC ∼ △ABC",
+        "math": {
+          "latex": "\\triangle PQC\\sim\\triangle ABC",
+          "display": true,
+          "fallback": "△PQC ∼ △ABC"
+        }
       },
       {
         "en": "Find the corresponding scale factor using the base.",
-        "eq": "QC / BC = 3 / (3 + 3) = 1/2"
+        "eq": "QC / BC = 3 / (3 + 3) = 1/2",
+        "math": {
+          "latex": "\\dfrac{QC}{BC}=\\dfrac3{3+3}=\\dfrac12",
+          "display": true,
+          "fallback": "QC / BC = 3 / (3 + 3) = 1/2"
+        }
       },
       {
         "en": "Corresponding sides have the same ratio, so solve for x.",
-        "eq": "PQ / AB = 1/2 ⇒ x / 5 = 1/2 ⇒ x = 5/2 = 2.5"
+        "eq": "PQ / AB = 1/2 ⇒ x / 5 = 1/2 ⇒ x = 5/2 = 2.5",
+        "math": {
+          "latex": "\\begin{aligned}\\dfrac{PQ}{AB}&=\\dfrac12\\\\\\dfrac x5&=\\dfrac12\\\\x&=\\dfrac52=2.5\\end{aligned}",
+          "display": true,
+          "fallback": "PQ / AB = 1/2 ⇒ x / 5 = 1/2 ⇒ x = 5/2 = 2.5"
+        }
       },
       {
         "en": "Check: the small triangle has half the large base and half its matching side.",
-        "eq": "3/6 = 2.5/5 = 1/2"
+        "eq": "3/6 = 2.5/5 = 1/2",
+        "math": {
+          "latex": "\\dfrac36=\\dfrac{2.5}5=\\dfrac12",
+          "display": true,
+          "fallback": "3/6 = 2.5/5 = 1/2"
+        }
       }
     ],
     "answer": "The triangles are similar; x = 2.5.",
@@ -203,7 +328,12 @@ const entries=[
     "edition": "2025",
     "translationReview": "pending",
     "figureSrc": "assets/grade10-recovery/ex4-1-q1-ii.svg",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\begin{aligned}\\triangle PQC&\\sim\\triangle ABC\\\\x&=\\dfrac52=2.5\\end{aligned}",
+      "display": true,
+      "fallback": "The triangles are similar; x = 2.5."
+    }
   },
   {
     "id": "c10-6-ex6-1-q2-i",
@@ -226,27 +356,57 @@ const entries=[
     "steps": [
       {
         "en": "Start with the left-hand side; use cotθ = 1/tanθ where both functions are defined.",
-        "eq": "(1 − tan²θ)/(cot²θ − 1)"
+        "eq": "(1 − tan²θ)/(cot²θ − 1)",
+        "math": {
+          "latex": "\\dfrac{1-\\tan^2\\theta}{\\cot^2\\theta-1}",
+          "display": true,
+          "fallback": "(1 − tan²θ)/(cot²θ − 1)"
+        }
       },
       {
         "en": "Rewrite the denominator using tan²θ.",
-        "eq": "cot²θ − 1 = 1/tan²θ − 1 = (1 − tan²θ)/tan²θ"
+        "eq": "cot²θ − 1 = 1/tan²θ − 1 = (1 − tan²θ)/tan²θ",
+        "math": {
+          "latex": "\\begin{aligned}\\cot^2\\theta-1&=\\dfrac1{\\tan^2\\theta}-1\\\\&=\\dfrac{1-\\tan^2\\theta}{\\tan^2\\theta}\\end{aligned}",
+          "display": true,
+          "fallback": "cot²θ − 1 = 1/tan²θ − 1 = (1 − tan²θ)/tan²θ"
+        }
       },
       {
         "en": "Divide by a fraction by multiplying by its reciprocal.",
-        "eq": "(1 − tan²θ) × tan²θ/(1 − tan²θ)"
+        "eq": "(1 − tan²θ) × tan²θ/(1 − tan²θ)",
+        "math": {
+          "latex": "\\dfrac{(1-\\tan^2\\theta)\\tan^2\\theta}{1-\\tan^2\\theta}",
+          "display": true,
+          "fallback": "(1 − tan²θ) × tan²θ/(1 − tan²θ)"
+        }
       },
       {
         "en": "Cancel the common nonzero factor on the domain where the original expression is defined.",
-        "eq": "= tan²θ = RHS"
+        "eq": "= tan²θ = RHS",
+        "math": {
+          "latex": "=\\tan^2\\theta=\\mathrm{RHS}",
+          "display": true,
+          "fallback": "= tan²θ = RHS"
+        }
       },
       {
         "en": "Independently verify using θ = 30°, a value in the domain.",
-        "eq": "LHS = (1 − 1/3)/(3 − 1) = 1/3; RHS = tan²30° = 1/3"
+        "eq": "LHS = (1 − 1/3)/(3 − 1) = 1/3; RHS = tan²30° = 1/3",
+        "math": {
+          "latex": "\\begin{aligned}\\mathrm{LHS}&=\\dfrac{1-\\frac13}{3-1}=\\dfrac13\\\\\\mathrm{RHS}&=\\tan^2 30^\\circ=\\dfrac13\\end{aligned}",
+          "display": true,
+          "fallback": "LHS = (1 − 1/3)/(3 − 1) = 1/3; RHS = tan²30° = 1/3"
+        }
       },
       {
         "en": "Domain note: sinθ and cosθ must be nonzero, and cot²θ − 1 must not be zero.",
-        "eq": "sinθ ≠ 0, cosθ ≠ 0, tan²θ ≠ 1"
+        "eq": "sinθ ≠ 0, cosθ ≠ 0, tan²θ ≠ 1",
+        "math": {
+          "latex": "\\begin{aligned}\\sin\\theta&\\ne0,\\quad\\cos\\theta\\ne0\\\\\\tan^2\\theta&\\ne1\\end{aligned}",
+          "display": true,
+          "fallback": "sinθ ≠ 0, cosθ ≠ 0, tan²θ ≠ 1"
+        }
       }
     ],
     "answer": "LHS = RHS = tan²θ (where defined).",
@@ -255,7 +415,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 249, PDF p. 255; corresponding Tamil printed p. 258, PDF p. 264. Source page images checked; Tamil authored wording pending editorial review.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\mathrm{LHS}=\\mathrm{RHS}=\\tan^2\\theta",
+      "display": true,
+      "fallback": "LHS = RHS = tan²θ (where defined)."
+    }
   },
   {
     "id": "c10-8-ex8-1-q3",
@@ -278,19 +443,39 @@ const entries=[
     "steps": [
       {
         "en": "For grouped continuous data, take the beginning of the lowest interval and the end of the highest interval.",
-        "eq": "Lowest class boundary = 400; highest class boundary = 650"
+        "eq": "Lowest class boundary = 400; highest class boundary = 650",
+        "math": {
+          "latex": "\\begin{aligned}\\text{Lowest boundary}&=400\\\\\\text{Highest boundary}&=650\\end{aligned}",
+          "display": true,
+          "fallback": "Lowest class boundary = 400; highest class boundary = 650"
+        }
       },
       {
         "en": "Recall the formula for range.",
-        "eq": "Range = highest boundary − lowest boundary"
+        "eq": "Range = highest boundary − lowest boundary",
+        "math": {
+          "latex": "\\text{Range}=\\text{highest}-\\text{lowest}",
+          "display": true,
+          "fallback": "Range = highest boundary − lowest boundary"
+        }
       },
       {
         "en": "Substitute the boundaries and subtract.",
-        "eq": "Range = 650 − 400 = 250"
+        "eq": "Range = 650 − 400 = 250",
+        "math": {
+          "latex": "\\text{Range}=650-400=250",
+          "display": true,
+          "fallback": "Range = 650 − 400 = 250"
+        }
       },
       {
         "en": "Check the boundaries are correctly ordered and that frequencies do not change the range.",
-        "eq": "Lowest class 400–450; highest class 600–650; difference = 250"
+        "eq": "Lowest class 400–450; highest class 600–650; difference = 250",
+        "math": {
+          "latex": "\\begin{aligned}\\text{Lowest class}&:\\ 400\\text{–}450\\\\\\text{Highest class}&:\\ 600\\text{–}650\\\\\\text{Difference}&=250\\end{aligned}",
+          "display": true,
+          "fallback": "Lowest class 400–450; highest class 600–650; difference = 250"
+        }
       }
     ],
     "answer": "Range = 250.",
@@ -299,7 +484,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 313, PDF p. 319; corresponding Tamil printed p. 322, PDF p. 328. Source page images checked; Tamil authored wording pending editorial review.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\text{Range}=250",
+      "display": true,
+      "fallback": "Range = 250."
+    }
   },
   {
     "id": "c10-8-ex8-1-q4",
@@ -322,27 +512,57 @@ const entries=[
     "steps": [
       {
         "en": "List the eight completed-page counts and find their total.",
-        "eq": "n = 8; Σx = 32 + 35 + 37 + 30 + 33 + 36 + 35 + 37 = 275"
+        "eq": "n = 8; Σx = 32 + 35 + 37 + 30 + 33 + 36 + 35 + 37 = 275",
+        "math": {
+          "latex": "\\begin{aligned}n&=8\\\\\\sum x&=32+35+37+30\\\\&\\quad+33+36+35+37\\\\&=275\\end{aligned}",
+          "display": true,
+          "fallback": "n = 8; Σx = 32 + 35 + 37 + 30 + 33 + 36 + 35 + 37 = 275"
+        }
       },
       {
         "en": "Compute the mean number of pages completed.",
-        "eq": "x̄ = Σx/n = 275/8 = 34.375"
+        "eq": "x̄ = Σx/n = 275/8 = 34.375",
+        "math": {
+          "latex": "\\bar{x}=\\dfrac{\\sum x}{n}=\\dfrac{275}{8}=34.375",
+          "display": true,
+          "fallback": "x̄ = Σx/n = 275/8 = 34.375"
+        }
       },
       {
         "en": "Compute the total of squared page counts.",
-        "eq": "Σx² = 32² + 35² + 37² + 30² + 33² + 36² + 35² + 37² = 9497"
+        "eq": "Σx² = 32² + 35² + 37² + 30² + 33² + 36² + 35² + 37² = 9497",
+        "math": {
+          "latex": "\\begin{aligned}\\sum x^2&=32^2+35^2+37^2+30^2\\\\&\\quad+33^2+36^2+35^2+37^2\\\\&=9497\\end{aligned}",
+          "display": true,
+          "fallback": "Σx² = 32² + 35² + 37² + 30² + 33² + 36² + 35² + 37² = 9497"
+        }
       },
       {
         "en": "Use the population standard-deviation formula for the listed complete group.",
-        "eq": "σ² = Σx²/n − x̄² = 9497/8 − (275/8)² = 351/64 = 5.484375"
+        "eq": "σ² = Σx²/n − x̄² = 9497/8 − (275/8)² = 351/64 = 5.484375",
+        "math": {
+          "latex": "\\begin{aligned}\\sigma^2&=\\dfrac{\\sum x^2}{n}-\\bar{x}^2\\\\&=\\dfrac{9497}{8}-\\left(\\dfrac{275}{8}\\right)^2\\\\&=\\dfrac{351}{64}=5.484375\\end{aligned}",
+          "display": true,
+          "fallback": "σ² = Σx²/n − x̄² = 9497/8 − (275/8)² = 351/64 = 5.484375"
+        }
       },
       {
         "en": "Take the square root, rounding only at the final step.",
-        "eq": "σ = √351/8 = 3√39/8 ≈ 2.34 pages"
+        "eq": "σ = √351/8 = 3√39/8 ≈ 2.34 pages",
+        "math": {
+          "latex": "\\begin{aligned}\\sigma&=\\dfrac{\\sqrt{351}}8=\\dfrac{3\\sqrt{39}}8\\\\&\\approx2.34\\ \\text{pages}\\end{aligned}",
+          "display": true,
+          "fallback": "σ = √351/8 = 3√39/8 ≈ 2.34 pages"
+        }
       },
       {
         "en": "Check independently by summing all eight squared deviations from 34.375.",
-        "eq": "Σ(x − 34.375)² = 43.875; 43.875/8 = 5.484375"
+        "eq": "Σ(x − 34.375)² = 43.875; 43.875/8 = 5.484375",
+        "math": {
+          "latex": "\\begin{aligned}\\sum(x-34.375)^2&=43.875\\\\\\dfrac{43.875}{8}&=5.484375\\end{aligned}",
+          "display": true,
+          "fallback": "Σ(x − 34.375)² = 43.875; 43.875/8 = 5.484375"
+        }
       }
     ],
     "answer": "Standard deviation ≈ 2.34 pages.",
@@ -351,7 +571,12 @@ const entries=[
     "reference": "TN SCERT Standard Ten Mathematics 2025 revised edition; English printed p. 313, PDF p. 319; corresponding Tamil printed p. 322, PDF p. 328. Source page images checked; Tamil authored wording pending editorial review.",
     "edition": "2025",
     "translationReview": "pending",
-    "checkpoint": "2026-11-13"
+    "checkpoint": "2026-11-13",
+    "answerMath": {
+      "latex": "\\sigma\\approx2.34\\ \\text{pages}",
+      "display": true,
+      "fallback": "Standard deviation ≈ 2.34 pages."
+    }
   }
 ];
 const seen=new Set(Object.values(window.TRIGGLE_CLASSES).flatMap(g=>g.items.map(x=>x.id)));
