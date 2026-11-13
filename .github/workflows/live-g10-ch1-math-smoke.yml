@@ -1,0 +1,51 @@
+name: Live Class 10 Chapter 1 ChatGPT maths verification
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/live-g10-ch1-math-smoke.yml"
+      - "site/index.html"
+      - "site/assets/app.js"
+      - "site/data/math-layout/g10-ch1-chatgpt-20261113.js"
+permissions:
+  contents: read
+jobs:
+  verify-live-chapter:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare live source with deployed Chapter 1 notation and public student routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://vigneswaranmba20-afk.github.io/Triggle/site"
+          TEMP="$(mktemp -d)"
+          trap 'rm -rf "$TEMP"' EXIT
+          MATCHED=0
+          for attempt in $(seq 1 30); do
+            if curl -fsSL --max-time 25 "$BASE/data/math-layout/g10-ch1-chatgpt-20261113.js?sha=$GITHUB_SHA" -o "$TEMP/notation.js" \
+              && cmp -s "site/data/math-layout/g10-ch1-chatgpt-20261113.js" "$TEMP/notation.js" \
+              && curl -fsSL --max-time 25 "$BASE/index.html?sha=$GITHUB_SHA" -o "$TEMP/index.html" \
+              && grep -Fq "g10-ch1-chatgpt-20261113.js" "$TEMP/index.html"; then
+              MATCHED=1
+              echo "Live notation and student app index match tested source on attempt $attempt"
+              break
+            fi
+            echo "Pages rollout still propagating ($attempt/30)"
+            sleep 10
+          done
+          test "$MATCHED" = 1 || { echo "FAIL: Chapter 1 mathematics module not deployed or registered"; exit 1; }
+          for asset in assets/app.js service-worker.js; do
+            curl -fsSL --max-time 25 "$BASE/$asset?sha=$GITHUB_SHA" -o "$TEMP/$(basename "$asset")"
+            cmp -s "site/$asset" "$TEMP/$(basename "$asset")" || { echo "FAIL: live asset differs from source: $asset"; exit 1; }
+          done
+          grep -Fq 'TriggleChapter1Math?.getStep' "$TEMP/app.js"
+          grep -Fq 'g10-ch1-chatgpt-20261113.js' "$TEMP/service-worker.js"
+          for id in c10-1-ex1-1-q1-i c10-1-ex1-1-q7-ii c10-1-1-3-q5 c10-1-1-4-q10 c10-1-1-5-q1 c10-1-1-unit-q5 c10-1-1-unit-q8 c10-1-1-unit-q9 c10-1-1-unit-q10; do
+            curl -fsSL --max-time 25 "$BASE/index.html?class=10&question=$id&sha=$GITHUB_SHA" -o "$TEMP/route.html"
+            grep -Fq 'g10-ch1-chatgpt-20261113.js' "$TEMP/route.html"
+            grep -Fq "$id" "$TEMP/notation.js"
+            echo "PASS public Chapter 1 question route and content ID: $id"
+          done
+          echo "PASS: source-identical mathematical notation for all 74 Chapter 1 parts deployed; sample routes and offline assets reachable."
