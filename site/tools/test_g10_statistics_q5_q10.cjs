@@ -38,7 +38,7 @@ function exactVariance(vals){
  const n=vals.length,m=vals.reduce((a,b)=>a+b,0)/n;
  const centered=vals.reduce((a,b)=>a+(b-m)**2,0)/n;
  const squares=vals.reduce((a,b)=>a+b*b,0)/n-m*m;
- assert.ok(Math.abs(centered-squares)<1e-12);
+ assert.ok(Math.abs(centered-squares)<1e-9,'Floating-point cancellation tolerance for equivalent variance formulas');
  return centered;
 }
 const wages=[310,290,320,280,300,290,320,310,280];
