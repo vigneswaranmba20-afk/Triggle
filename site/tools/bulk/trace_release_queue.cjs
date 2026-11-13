@@ -47,6 +47,10 @@ function classify({origins,exactRuntime,reviewHold=false,mathPassed=false,source
 }
 function build({snapshotFile='docs/trace/open-pr-snapshot-20261113.json'}={}){
  const snapshot=read(snapshotFile),intake=read('docs/trace/trace_intake_2026-11-12.json');
+ const mainSha=git(['rev-parse','origin/main']).trim();
+ // A fetched main SHA must never label evidence computed from an older runtime.
+ const runtimeChanges=git(['diff','--name-only',mainSha,'--','site/data','site/index.html']).trim();
+ if(runtimeChanges)throw Error('RUNTIME_BASELINE_MISMATCH: reconcile the checkout with current main before rebuilding the release queue: '+runtimeChanges);
  const report=reconcile.reconcile({prSnapshot:snapshot,intakeSnapshot:intake});reconcile.validateReport(report);
  const runtime=bulk.loadRuntime(),runtimeRecords=Object.values(runtime.classes).flatMap(g=>g.items).filter(bulk.exerciseItem),groups=new Map(),artifacts=[];
  const add=(loc,origin)=>{const k=key(loc);if(!groups.has(k))groups.set(k,{key:k,location:loc,origins:[]});const g=groups.get(k);if(!g.origins.some(o=>o.ref===origin.ref&&o.file===origin.file&&o.pointer===origin.pointer&&o.appId===origin.appId))g.origins.push(origin);};

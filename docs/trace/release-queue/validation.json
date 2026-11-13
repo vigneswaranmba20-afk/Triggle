@@ -27,7 +27,7 @@
       "file": "/tmp/triggle-unit-final.log",
       "status": "PASSED",
       "note": "Full npm test including six release-queue regression groups.",
-      "sha256": "120a83db138c4587041723c649c7a50740df03ccc13f33ef5d532204a6c52b9e"
+      "sha256": "e0d74c2e42323ada7ccebdacc86e0a5b6755e8735d56b848ac6c613912e67f05"
     },
     {
       "file": "/tmp/triggle-preview.log",
