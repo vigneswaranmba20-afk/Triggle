@@ -229,7 +229,7 @@ assert.equal(headingIndex.entries.find(x=>x.exercise==='8.5').imageVerified,true
 assert.equal(headingIndex.entries.find(x=>x.exercise==='8.5').questionCount,15);
 assert.equal(headingIndex.entries.find(x=>x.exercise==='8.5').subpartCount,15);
 assert.equal(bilingualHeadings.entries.find(x=>x.exercise==='8.5').questionAndSubpartParityChecked,true);
-assert.equal(bilingualHeadings.entries.filter(x=>!x.questionAndSubpartParityChecked).length,57);
+assert.equal(bilingualHeadings.entries.filter(x=>!x.questionAndSubpartParityChecked).length,56);
 assert.equal(bilingualHeadings.questionTextParityCertified,false);
 assert.equal(bilingualHeadings.tamilTranslationReviewed,false);
 
