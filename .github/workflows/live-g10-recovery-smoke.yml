@@ -20,7 +20,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          BASE="https://vigneswaranmba20-afk.github.io/Triggle"
+          BASE="https://vigneswaranmba20-afk.github.io/Triggle/site"
           TEMP="$(mktemp -d)"
           trap 'rm -rf "$TEMP"' EXIT
           MODULE="data/textbook-exercises/g10-seven-recovery-20261113-en.js"
