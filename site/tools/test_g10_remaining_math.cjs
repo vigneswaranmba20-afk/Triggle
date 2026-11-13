@@ -80,10 +80,10 @@ assert.equal(layout.getAnswer(outsider),null,'Never touch already migrated Chapt
 const preserved={id:'c10-8-ex8-1-q5',classNum:10,chapter:'8',steps:[],answer:'1'};
 assert.equal(layout.getStep(preserved,0),null,'Retain prior rich KaTeX content without override');
 const html=read('index.html'),app=read('assets/app.js'),sw=read('service-worker.js');
-const module='data/math-layout/g10-ch2-ch8-chatgpt-20261113.js';
-assert.ok(html.includes(module),'New module must load in student app');
-assert.ok(sw.includes('./'+module),'New module must work offline');
-assert.ok(html.indexOf(module)<html.indexOf('assets/app.js'),'Notation layer must load before app');
+const modulePath='data/math-layout/g10-ch2-ch8-chatgpt-20261113.js';
+assert.ok(html.includes(modulePath),'New module must load in student app');
+assert.ok(sw.includes('./'+modulePath),'New module must work offline');
+assert.ok(html.indexOf(modulePath)<html.indexOf('assets/app.js'),'Notation layer must load before app');
 assert.ok(app.includes('TriggleG10RemainingMath?.getStep'),'Exercise steps must use new notation layer');
 assert.ok(app.includes('TriggleG10RemainingMath?.getAnswer'),'Final answer must use rich notation');
 assert.ok(app.includes('TriggleG10RemainingMath?.getQuestion'),'Source-exact question maths must be rendered');
