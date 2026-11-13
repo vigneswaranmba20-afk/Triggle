@@ -36,7 +36,7 @@ for(const asset of ['data/why-step-g10.js','assets/why-step-g10.js','assets/why-
  assert.ok(sw.includes('./'+asset),'Offline cache missing '+asset);
 }
 assert.ok(html.indexOf('assets/why-step-g10.js')<html.indexOf('assets/app.js'),'Listener must mount before first lesson render');
-const module=read('site/assets/why-step-g10.js');
-assert.ok(module.includes('triggle:lessonchange')&&module.includes('original.en.includes(hint.expected)'),'No generic, stale or incorrect fallback hint');
-assert.ok(module.includes('document.createElement(\'details\')')&&module.includes('textContent='),'Accessible native disclosure and text-safe hints required');
+const source=read('site/assets/why-step-g10.js');
+assert.ok(source.includes('triggle:lessonchange')&&source.includes('original.en.includes(hint.expected)'),'No generic, stale or incorrect fallback hint');
+assert.ok(source.includes('document.createElement(\'details\')')&&source.includes('textContent='),'Accessible native disclosure and text-safe hints required');
 console.log('PASS Class 10 Why: '+ids.length+' exact-step original bilingual bridges across '+coverage.size+' active chapters, source guards, offline assets, KaTeX and untouched authored maths.');
