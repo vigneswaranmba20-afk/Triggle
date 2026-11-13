@@ -35,7 +35,7 @@ const entries=[
         "en": "Add the wages and divide by the number of workers to find the mean.",
         "eq": "Σx = ₹2700; x̄ = 2700/9 = ₹300",
         "math": {
-          "latex": "\\begin{aligned}\\sum x&=\\text{₹}2700\\\\\\bar{x}&=\\dfrac{2700}{9}=\\text{₹}300\\end{aligned}",
+          "latex": "\\begin{aligned}\\sum x&=\\text{Rs.}2700\\\\\\bar{x}&=\\dfrac{2700}{9}=\\text{Rs.}300\\end{aligned}",
           "display": true,
           "fallback": "Σx = ₹2700; x̄ = 2700/9 = ₹300"
         }
@@ -62,7 +62,7 @@ const entries=[
         "en": "Calculate the population variance, in squared rupees.",
         "eq": "Variance σ² = 2000/9 ≈ 222.22 ₹²",
         "math": {
-          "latex": "\\begin{aligned}\\text{Variance }\\sigma^2&=\\dfrac{2000}{9}\\\\&\\approx222.22\\ \\text{₹}^2\\end{aligned}",
+          "latex": "\\begin{aligned}\\text{Variance }\\sigma^2&=\\dfrac{2000}{9}\\\\&\\approx222.22\\ \\text{Rs.}^2\\end{aligned}",
           "display": true,
           "fallback": "Variance σ² = 2000/9 ≈ 222.22 ₹²"
         }
@@ -71,7 +71,7 @@ const entries=[
         "en": "Take the positive square root for standard deviation; check with Σx² = 812000.",
         "eq": "σ = √(2000/9) = 20√5/3 ≈ ₹14.91; check σ² = 812000/9 − 300² = 2000/9",
         "math": {
-          "latex": "\\begin{aligned}\\sigma&=\\sqrt{\\dfrac{2000}{9}}\\\\&=\\dfrac{20\\sqrt5}{3}\\approx\\text{₹}14.91\\\\\\text{Check: }\\sigma^2&=\\dfrac{812000}{9}-300^2\\\\&=\\dfrac{2000}{9}\\end{aligned}",
+          "latex": "\\begin{aligned}\\sigma&=\\sqrt{\\dfrac{2000}{9}}\\\\&=\\dfrac{20\\sqrt5}{3}\\approx\\text{Rs.}14.91\\\\\\text{Check: }\\sigma^2&=\\dfrac{812000}{9}-300^2\\\\&=\\dfrac{2000}{9}\\end{aligned}",
           "display": true,
           "fallback": "σ = √(2000/9) = 20√5/3 ≈ ₹14.91; check σ² = 812000/9 − 300² = 2000/9"
         }
@@ -85,7 +85,7 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-13",
     "answerMath": {
-      "latex": "\\begin{aligned}\\text{Variance}&=\\dfrac{2000}{9}\\\\&\\approx222.22\\ \\text{₹}^2\\\\\\text{Std. deviation}&=\\dfrac{20\\sqrt5}{3}\\\\&\\approx\\text{₹}14.91\\end{aligned}",
+      "latex": "\\begin{aligned}\\text{Variance}&=\\dfrac{2000}{9}\\\\&\\approx222.22\\ \\text{Rs.}^2\\\\\\text{Std. deviation}&=\\dfrac{20\\sqrt5}{3}\\\\&\\approx\\text{Rs.}14.91\\end{aligned}",
       "display": true,
       "fallback": "Variance = 2000/9 ≈ 222.22 ₹²; standard deviation = 20√5/3 ≈ ₹14.91."
     }
