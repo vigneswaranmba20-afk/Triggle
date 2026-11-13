@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-11-13T05:01:29.893Z",
+  "baselineMain": "6e288869d550493d7dec11dd168cd3e614690b28",
+  "counts": {
+    "candidatesDiscovered": 491,
+    "authoredOrPartial": 222,
+    "sourceOrIdOnly": 269,
+    "existingDuplicates": 8,
+    "candidatesValidated": 8,
+    "candidatesPromotedReady": 0,
+    "exercisesIntegrated": 0,
+    "exercisesLiveVerified": 0,
+    "remainingBlockedCandidates": 483,
+    "statuses": {
+      "READY": 0,
+      "NEEDS_REPAIR": 78,
+      "NEEDS_REVIEW": 136,
+      "DUPLICATE": 8,
+      "BLOCKED": 269
+    }
+  },
+  "sourcePagesInspected": 7,
+  "studentContentFilesChanged": false,
+  "localChecks": [
+    {
+      "file": "/tmp/triggle-unit-final.log",
+      "status": "PASSED",
+      "note": "Full npm test including six release-queue regression groups.",
+      "sha256": "5daf8a8353b0bd7a3aa7f453e941fca8d75ad45eef88bffd5b3ab0b26fb07e6c"
+    },
+    {
+      "file": "/tmp/triggle-preview.log",
+      "status": "PASSED",
+      "note": "Eight-part unregistered preview at 320/390/1280px; source text, complete answers, native math, navigation and Tamil pending.",
+      "sha256": "afeb84eb25c418f29e33fe4c50eabdc103069247b7641822a45f8f05dbf9c3cf"
+    },
+    {
+      "file": "/tmp/triggle-security-alternate.log",
+      "status": "PASSED",
+      "note": "Same Firestore security assertions on port 18085; environment cloud browser occupies 8085. Only ephemeral runner/config port changed; repository test/rules unchanged.",
+      "sha256": "835c04acd1ac25bd054a345f78cd5819a8320c7c95d3ff531fe865afc8915c7a"
+    },
+    {
+      "file": "/tmp/triggle-browser.log",
+      "status": "PARTIAL_LOCAL_ENVIRONMENT_BLOCKER",
+      "note": "Full npm run test:browser passed Chromium checks through mathematical reader, then WebKit unavailable. Installed WebKit, but seven system libraries missing; sudo/helper unavailable and apt denied filesystem permissions. Exact-head supported GitHub CI must settle the full gate.",
+      "sha256": "64e6a5e64325810c6645bba8f2fde8e14d77b348cc97521ac02a97d1f36107da"
+    },
+    {
+      "file": "/tmp/triggle-browser-suffix.log",
+      "status": "PARTIAL_LOCAL_ENVIRONMENT_BLOCKER",
+      "note": "Matrix pilot and standard-solution Chromium checks passed; standard-solution WebKit blocked by same missing libraries.",
+      "sha256": "ae63c90da8dded680c3c8319e543ca1275ae9da2150e296fce727e10f4adf48f"
+    },
+    {
+      "file": "/tmp/triggle-browser-remaining.log",
+      "status": "PASSED",
+      "note": "Remaining focused Chromium checks: concepts/offline, typography, Android scroll, baseline powers and Grade9 notation.",
+      "sha256": "9d848bdd36bd1aed3cb01b381686600e666e62625ec7abb66edf0db44c47a5cb"
+    },
+    {
+      "file": "/tmp/triggle-live.log",
+      "status": "PASSED",
+      "note": "Existing Pages baseline only; 48 module bytes and student-visible IDs matched main. Eight unpublished candidates absent.",
+      "sha256": "acd1a94232a3ccbd8724f0bb84bcd40a95abc3d0244285b6142fbb77f255fba5"
+    }
+  ],
+  "existingPagesDeployment": {
+    "conclusion": "success",
+    "head_sha": "6e288869d550493d7dec11dd168cd3e614690b28",
+    "html_url": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/43355192423",
+    "id": 43355192423,
+    "status": "completed"
+  },
+  "release": {
+    "newExerciseDeployments": 0,
+    "mergePerformed": false,
+    "ci": "PR not opened yet; no exact-head CI result claimed",
+    "teacherReview": "OWNER_DEFERRED_NOT_APPROVED",
+    "tamilEditorialReview": "OWNER_DEFERRED_PENDING"
+  },
+  "resume": [
+    "Retain all original IDs and linked authored artifacts.",
+    "Read per-candidate blockers and unparsed artifact list in queue.json.",
+    "Do not mark Ex1.4 READY until its explicit teacher release hold is genuinely satisfied.",
+    "Then use existing bulk publisher and grade/integration leases; run exact-head release gates and live verification."
+  ]
+}

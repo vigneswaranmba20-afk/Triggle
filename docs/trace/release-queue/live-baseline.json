@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-11-13T04:58:37.797Z",
+  "type": "EXISTING_RUNTIME_BASELINE_NOT_NEW_DEPLOYMENT",
+  "baseMainSha": "6e288869d550493d7dec11dd168cd3e614690b28",
+  "url": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=12&question=g12-ch1-ex1.3-q5",
+  "runtimeRecords": 501,
+  "runtimeIdsMatchMain": true,
+  "workedExamplesHiddenAcrossGrades9To12": true,
+  "moduleChecks": [
+    {
+      "file": "data/class-9.js",
+      "sha256": "43a89a10a92fad10ea6a19c8b7ea5d96fff56218ce864f997e45472fc722370e"
+    },
+    {
+      "file": "data/class-10.js",
+      "sha256": "458954d73988b14b987f0a3abbfba88b097ab6bbfae064c92237cfec56994b7b"
+    },
+    {
+      "file": "data/class-10-ex1-1-2025.js",
+      "sha256": "eb28504809a557112251c883867b36eb996888b3dd56477f9b11144b33989f66"
+    },
+    {
+      "file": "data/class-10-chapter-1.js",
+      "sha256": "b75b0003c00ef01bbf8036b24982f463e258ba1ba39af11cadb5eeab3e638f6c"
+    },
+    {
+      "file": "data/class-11.js",
+      "sha256": "3a2dbc24d95e9117c32dab7e3e177f8952af819371671014dacb0601caff9fa7"
+    },
+    {
+      "file": "data/class-12.js",
+      "sha256": "fac485c578fc2779bd082935d4048f9f58d36431a0c708061d748cb9196ea194"
+    },
+    {
+      "file": "data/curriculum.js",
+      "sha256": "1d49b3c31bed70448d84d58e41e2019faeca9aaf5eec840065dedac421ee2827"
+    },
+    {
+      "file": "data/real-numbers/g9-ch2-core.js",
+      "sha256": "aa11da8281a83d1eec91f1f42205f35a3e023f95bea0ebf72168acb33f903279"
+    },
+    {
+      "file": "data/real-numbers/g9-ch2-examples-a.js",
+      "sha256": "b6f78eb165adfe7f63daa65a138d58d9ca44f2ea1a219513805355b6ea93e8d7"
+    },
+    {
+      "file": "data/real-numbers/g9-ch2-examples-b.js",
+      "sha256": "4662b4a507440f7f4bf9b0e7e1a7c19ec75a11517f014b22c244a287c94e90ff"
+    },
+    {
+      "file": "data/real-numbers/g9-ch2-exercises-a.js",
+      "sha256": "52d095f39046cd0b8e0dc74e475372c4ca78dd4226fc1d35bcabccc23d018347"
+    },
+    {
+      "file": "data/real-numbers/g9-ch2-exercises-b.js",
+      "sha256": "b91185172edb0daa894f2fb9a0849bfbd0ac090ab134f17137840297607372e1"
+    },
+    {
+      "file": "data/real-numbers/g9-ch2-exercises-c.js",
+      "sha256": "07a14e6a5d49f6329a3a438ccf21463cfee479768dd1e8e300c4da5a5ae0da91"
+    },
+    {
+      "file": "data/real-numbers/g9-ch2-exercises-d.js",
+      "sha256": "5c22405b260f87175da41cd36f4e526819736209acd3b2c72ea2c4fa97ea6ff2"
+    },
+    {
+      "file": "data/real-numbers/g9-ch2-exercises-e.js",
+      "sha256": "90f52ed936b8b814999a20f2394571469c2f05130ecbc5f1374362aea1bca1c9"
+    },
+    {
+      "file": "data/real-numbers/g9-ch2-exercises-f.js",
+      "sha256": "9e3ae9335db966a9e5ded74d79b7d436d0deaf85d255e4957460aec9ed44d12e"
+    },
+    {
+      "file": "data/real-numbers/g9-ch2-concepts.js",
+      "sha256": "ccccf6be7165344c5337aecff4120c8763b55481b516fd22a63fe57d4c958564"
+    },
+    {
+      "file": "data/textbook-examples/g9-ch1.js",
+      "sha256": "9bb935e51d98a6f2f1beb0b69775c111c773c534bd061cf9a813484c1a0c255b"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch1-ex1-1-view.js",
+      "sha256": "abde387cdbbcdcbd10e160940343aaab2a49fb7bd0a9e2055248fe8ea93f156e"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch3-ex3-1-q10-q12-en.js",
+      "sha256": "09d627729266bbda78da8fbad94c639b329419393f9bc39b7f3d583e450a408c"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch3-ex3-2-q4-en.js",
+      "sha256": "ac38b0d0f99e681a6f1be347b65887cb55465fdb4786b4e4859a783974f5a221"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch4-ex4-1-q2-q4-en.js",
+      "sha256": "8dd13609b698e2c220841c1d5165a2a42d466e13e6500b796849e9fa08d54d33"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch4-ex4-2-en.js",
+      "sha256": "cb6c8505d5ac540d228f75a6095ca173be13935d1137d939a48630d05e826adf"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch4-ex4-3-en.js",
+      "sha256": "50f1ab8b6f7845d322690cff0672d0ba38062b33bdc03150d6d1c8fb6cb30dde"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch5-ex5-2-en.js",
+      "sha256": "e669e61061f6243af699f4257a760cf48b5af7175f9c673f471d151570cd8935"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch7-ex7-1-en.js",
+      "sha256": "60900b13454aad3808d432ed5fec5ed280215a0de37ff30f8240b1b6e5c844f7"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch7-ex7-2-en.js",
+      "sha256": "bd3e6a2856b0cd7a789c10b67e40bc01ea4c00a01f773a54ff7a249ac1140868"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch7-ex7-3-en.js",
+      "sha256": "4eec3ff6ea59b3bc0d40c3f86734ed8bae44c96dbb617cf85d4e69dd41a9cd3c"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch7-ex7-4-en.js",
+      "sha256": "1b1554356792aeda6682775a9f40bacd2b18d8aa274efd0bacb2eae48cce5beb"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch8-ex8-1-en.js",
+      "sha256": "a428a646bf84c0057625596dbe3e49588e016b6219ffdbe11aae439a7df5949e"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch8-ex8.2-en.js",
+      "sha256": "50492d828ec9eb70fe7c7811f188e908ea1067b4f443dcd7a4291cb54306c8b4"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch8-ex8.3-en.js",
+      "sha256": "384f6ad22b54e9f79c4ab73964887ec7f236651ae14d311690d16f8062e025c3"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch8-ex8-4-en.js",
+      "sha256": "7223684e2c3eb21643e8c59774a56e56d6f17d52a80e6be66d7b8e63f7274c3a"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch9-ex9-1-en.js",
+      "sha256": "d8e32f6b7b271f0a37f1c3b0f2359d1f71ffb20a34ee9c9d13d388c4c453c419"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch9-ex9-2-en.js",
+      "sha256": "56f5ccd3160a545a45523ee1f01a728b87dcf81eb407bdd35cb5cc864c1222d8"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch9-ex9-2-q5-ex9-3-en.js",
+      "sha256": "a2111946d5f04081223b3d79c5c40cc6196585729e0a3572978ac36c7ce0266a"
+    },
+    {
+      "file": "data/textbook-exercises/g9-ch9-ex9-1-q9-q10-and-examples-en.js",
+      "sha256": "6168d85551b403bdc7ca694a8c2dd82e2db2436f13ceb799997aeb4e06f6cde2"
+    },
+    {
+      "file": "data/set-language-path.js",
+      "sha256": "30dfb756ffc351c4d9d9e48c23d00fbdd81e7a18327f528110ca0d557a13bcf7"
+    },
+    {
+      "file": "data/g9-textbook-activities.js",
+      "sha256": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4"
+    },
+    {
+      "file": "data/g9-probability-chapter.js",
+      "sha256": "ba7189fc6ac5e0dc305fc10b168733a45ae2b2eda7bce2334384615ea8298bd2"
+    },
+    {
+      "file": "data/textbook-exercises/g10-ch2-ex2-1-en.js",
+      "sha256": "a44e474ef9516aa795507e9046cc0e41bb208dd78ed8c9a97a7742be3b81bcd7"
+    },
+    {
+      "file": "data/textbook-exercises/g10-checkpoint-20261110-en.js",
+      "sha256": "30ec65b4e2f007ae25fcde957dd6bf933c5b9ea3c26536b827c835a15c20c309"
+    },
+    {
+      "file": "data/textbook-exercises/g12-ch1-ex1-1-en.js",
+      "sha256": "d979dd28edcd293771fcad174ade5ac4690781330306583cf437c025f617ed26"
+    },
+    {
+      "file": "data/textbook-exercises/g12-ch1-ex1-2-en.js",
+      "sha256": "06805b9f72e3097ca24a148ea792253135fa83596f3c66607bf1eff3f4fb8557"
+    },
+    {
+      "file": "data/textbook-exercises/g12-ch1-ex1-3-en.js",
+      "sha256": "e2bf2136a401c661ba858ef91e87e3fa38e099142ce1fb685fe51433df827c08"
+    },
+    {
+      "file": "data/g9-clear-math.js",
+      "sha256": "7ecf0255b68293247201f346fccc5ba58bf14d60af7701cb73d1c1581e4bd554"
+    },
+    {
+      "file": "data/problem-difficulty.js",
+      "sha256": "6a8d6a243d194c915000abb80b316252a5bacee233a9881d0559ab425e4b573e"
+    },
+    {
+      "file": "data/textbook-exercises/g10-ch2-ex2-2-en.js",
+      "sha256": "52b66d54596a96ba23eee82fd26bf74500bd3cd7d6766a1d231a42b655617130"
+    }
+  ],
+  "compilerCandidateIdsAbsent": [
+    "g12-ch1-ex1.4-q1-i",
+    "g12-ch1-ex1.4-q1-ii",
+    "g12-ch1-ex1.4-q1-iii",
+    "g12-ch1-ex1.4-q1-iv",
+    "g12-ch1-ex1.4-q2",
+    "g12-ch1-ex1.4-q3",
+    "g12-ch1-ex1.4-q4",
+    "g12-ch1-ex1.4-q5"
+  ],
+  "question": "The prices of three commodities A, B and C are ₹ x, y and z per units respectively. A person P purchases 4 units of B and sells two units of A and 5 units of C. Person Q purchases 2 units of C and sells 3 units of A and one unit of B. Person R purchases one unit of A and sells 3 unit of B and one unit of C. In the process, P, Q and R earn ₹ 15,000, ₹ 1,000 and ₹ 4,000 respectively. Find the prices per unit of A, B and C. (Use matrix inversion method to solve the problem.)",
+  "answer": "✓\nFinal answer\nA: ₹2,000 per unit; B: ₹1,000 per unit; C: ₹3,000 per unit.",
+  "tamilHeading": "Exercise 1.3 · Q5 · English only; Tamil pending",
+  "mobileWidth": 390,
+  "pageErrors": [],
+  "newExercisesIntegrated": 0,
+  "newExercisesLiveVerified": 0
+}

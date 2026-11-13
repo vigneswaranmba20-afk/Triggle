@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TRACE exercise release recovery queue",
+  "type": "object",
+  "required": ["schemaVersion", "type", "mainSha", "observedAt", "inputHashes", "policy", "counts", "artifacts", "candidates"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "type": {"const": "TRACE_EXERCISE_RELEASE_QUEUE"},
+    "mainSha": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "observedAt": {"type": "string"},
+    "counts": {"type": "object"},
+    "artifacts": {"type": "array"},
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "location", "origins", "status", "candidateKind", "existingApp", "mathematicalValidation", "english", "tamil", "deployment", "nextAction"],
+        "properties": {
+          "key": {"type": "string"},
+          "location": {
+            "type": "object",
+            "required": ["grade", "chapter", "exercise", "question", "part"],
+            "properties": {
+              "grade": {"enum": [9, 10, 11, 12]},
+              "chapter": {"type": "string"},
+              "exercise": {"type": "string"},
+              "question": {"type": "string"},
+              "part": {"type": "string"}
+            }
+          },
+          "status": {"enum": ["READY", "NEEDS_REPAIR", "NEEDS_REVIEW", "DUPLICATE", "BLOCKED"]},
+          "candidateKind": {"enum": ["AUTHORED_OR_PARTIAL", "SOURCE_OR_ID_ONLY"]},
+          "origins": {"type": "array", "minItems": 1},
+          "english": {"$ref": "#/$defs/eligibility"},
+          "tamil": {"$ref": "#/$defs/eligibility"},
+          "deployment": {"$ref": "#/$defs/eligibility"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "eligibility": {
+      "type": "object",
+      "required": ["eligible", "blockingReasons"],
+      "properties": {
+        "eligible": {"type": "boolean"},
+        "blockingReasons": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "$comment": "The executable validator additionally checks unique identities, all counts, pinned hashes, exact duplicate evidence and rejects release approval in this recovery-only version. A schema-valid READY value alone never authorizes publishing."
+}
