@@ -67,9 +67,9 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
    if(index===6){
     const input=page.locator('#sp2-overlap-control');
     await input.evaluate(el=>{el.value='8';el.dispatchEvent(new Event('input',{bubbles:true}));});
-    assert.equal(await page.locator('[data-lc-both]').innerText(),'8','Overlap diagram follows slider');
-    assert.equal(await page.locator('[data-lc-only-a]').innerText(),'6');
-    assert.equal(await page.locator('[data-lc-only-b]').innerText(),'3');
+    assert.equal(await page.locator('[data-lc-both]').textContent(),'8','Overlap diagram follows slider');
+    assert.equal(await page.locator('[data-lc-only-a]').textContent(),'6');
+    assert.equal(await page.locator('[data-lc-only-b]').textContent(),'3');
    }
   }
   if(chapter===1&&index===6){
