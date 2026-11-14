@@ -33,11 +33,11 @@ assert.equal(remaining.length,25,'Only 25 parts remain unregistered from Exercis
 assert.deepEqual([...new Set(remaining.map(x=>Number(x.question)))],[3,4,5,6,7,8,9,10]);
 for(const row of overlap){
  const source=candidate.rows.find(x=>x.id===row.id);
- assert(source&&source.sourceEnglish&&row.q.en.includes(source.sourceEnglish),
+ assert(source&&source.sourceEnglish&&row.q.en.replace(/\s+/gu,'').includes(source.sourceEnglish.replace(/\s+/gu,'')),
    'Already-registered English text differs from source candidate: '+row.id);
  assert.equal(row.answer,source.answer,'Already-registered final answer differs: '+row.id);
 }
-// Fail loudly if somebody tries to register the full candidate module on top of Q1/Q2.
+// Ignore only typesetting whitespace in source expressions; all mathematical\n// characters, inequalities, operands and answers must still match exactly.\n// Fail loudly if somebody tries to register the full candidate module on top of Q1/Q2.
 const full=read('site/data/textbook-exercises/g9-ch1-ex1-2-en.js');
 assert(!html.includes('g9-ch1-ex1-2-en.js'),'Full 34-part archive must remain isolated');
 assert.throws(()=>vm.runInNewContext(full,ctx,{filename:'g9-ch1-ex1-2-en.js',timeout:5000}),
