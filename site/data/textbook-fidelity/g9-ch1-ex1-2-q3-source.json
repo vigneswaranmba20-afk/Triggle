@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "release": "staged-not-live",
+  "grade": 9,
+  "chapter": "1",
+  "exercise": "1.2",
+  "question": "3",
+  "questionStem": "3. Which of the following sets are equivalent or unequal or equal sets?",
+  "evidence": {
+    "english": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "edition": "2025",
+      "printedPage": 12,
+      "pdfPage": 18
+    },
+    "tamil": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "edition": "2025",
+      "printedPage": 13,
+      "pdfPage": 19,
+      "review": "Text layer compared; editorial and image-level sign-off deferred"
+    },
+    "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
+    "sourceStatus": "English 2025 source text re-opened and cross-checked against inherited source-image audit. Tamil text-layer checked without claiming editorial certification."
+  },
+  "rows": [
+    {
+      "id": "g9-ch1-ex1.2-q3-i",
+      "part": "i",
+      "sourceEnglish": "A = The set of vowels in the English alphabets.\nB = The set of all letters in the word “VOWEL”",
+      "classification": "Equivalent sets",
+      "reason": "Five distinct elements in each set; members differ",
+      "exactCountA": 5,
+      "exactCountB": 5
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-ii",
+      "part": "ii",
+      "sourceEnglish": "C = {2,3,4,5} D = { x : x ∈W, 1< x<5}",
+      "classification": "Unequal sets",
+      "reason": "C has four distinct members but D = {2,3,4} has three",
+      "exactCountC": 4,
+      "exactCountD": 3
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-iii",
+      "part": "iii",
+      "sourceEnglish": "X = { x : x is a letter in the word “LIFE”} Y = { F, I, L, E}",
+      "classification": "Equal sets",
+      "reason": "Order does not change set membership; X and Y are the same four letters",
+      "exactCountX": 4,
+      "exactCountY": 4
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-iv",
+      "part": "iv",
+      "sourceEnglish": "G = { x : x is a prime number and 3 < x < 23} H = { x : x is a divisor of 18}",
+      "classification": "Equivalent sets",
+      "reason": "G = {5,7,11,13,17,19} and H = {1,2,3,6,9,18}; both have six elements",
+      "exactCountG": 6,
+      "exactCountH": 6
+    }
+  ],
+  "review": {
+    "math": "independent exact-element verification",
+    "tamilEditorial": "deferred",
+    "teacherReview": "deferred",
+    "sourceFigures": "none",
+    "studentRegistration": "not registered"
+  }
+}
