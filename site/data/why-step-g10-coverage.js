@@ -11,8 +11,8 @@ const additional={
   "c10-1-ex1-1-q1-i": {
     "step": 1,
     "expected": "For A × A, pair every member of A with every member of ",
-    "en": "A Cartesian square pairs every element of a set with every element of the same set. The first position chooses the row; the second chooses the column, including pairs like (5,5).",
-    "ta": "ஒரே கணத்தின் ஒவ்வோர் உறுப்பையும் அதே கணத்தின் ஒவ்வோர் உறுப்புடனும் சோடியாக்குவதுதான் கார்டீசியன் வர்க்கம். முதல் ஆயம் வரிசையையும் இரண்டாம் ஆயம் நெடுவரிசையையும் குறிக்கும்.",
+    "en": "A Cartesian square pairs each element of a set with every element of that same set. Choose the first coordinate from the row and the second from the column; self-pairs are included.",
+    "ta": "ஒரே கணத்தின் ஒவ்வோர் உறுப்பையும் அதே கணத்தின் எல்லா உறுப்புகளுடனும் சோடியாக்க வேண்டும். முதல் ஆயத்தை வரிசையிலிருந்தும் இரண்டாம் ஆயத்தை நெடுவரிசையிலிருந்தும் எடுக்கவும்; ஒரே உறுப்பு இரு இடங்களிலும் வரலாம்.",
     "diagram": {
       "type": "grid",
       "rows": [
@@ -30,8 +30,8 @@ const additional={
   "c10-1-ex1-1-q1-ii": {
     "step": 1,
     "expected": "List the ordered pairs, taking p and then q as the firs",
-    "en": "A Cartesian square pairs every element of a set with every element of the same set. The first position chooses the row; the second chooses the column, including pairs like (5,5).",
-    "ta": "ஒரே கணத்தின் ஒவ்வோர் உறுப்பையும் அதே கணத்தின் ஒவ்வோர் உறுப்புடனும் சோடியாக்குவதுதான் கார்டீசியன் வர்க்கம். முதல் ஆயம் வரிசையையும் இரண்டாம் ஆயம் நெடுவரிசையையும் குறிக்கும்.",
+    "en": "A Cartesian square pairs each element of a set with every element of that same set. Choose the first coordinate from the row and the second from the column; self-pairs are included.",
+    "ta": "ஒரே கணத்தின் ஒவ்வோர் உறுப்பையும் அதே கணத்தின் எல்லா உறுப்புகளுடனும் சோடியாக்க வேண்டும். முதல் ஆயத்தை வரிசையிலிருந்தும் இரண்டாம் ஆயத்தை நெடுவரிசையிலிருந்தும் எடுக்கவும்; ஒரே உறுப்பு இரு இடங்களிலும் வரலாம்.",
     "diagram": {
       "type": "grid",
       "rows": [
@@ -54,8 +54,8 @@ const additional={
     {
       "step": 0,
       "expected": "First find the Cartesian square of A.",
-      "en": "A Cartesian square pairs every element of a set with every element of the same set. The first position chooses the row; the second chooses the column, including pairs like (5,5).",
-      "ta": "ஒரே கணத்தின் ஒவ்வோர் உறுப்பையும் அதே கணத்தின் ஒவ்வோர் உறுப்புடனும் சோடியாக்குவதுதான் கார்டீசியன் வர்க்கம். முதல் ஆயம் வரிசையையும் இரண்டாம் ஆயம் நெடுவரிசையையும் குறிக்கும்.",
+      "en": "Since A={5,6}, first pair 5 with both 5 and 6, then pair 6 with both 5 and 6. Reading the four cells gives the entire Cartesian square A×A.",
+      "ta": "A={5,6} என்பதால் முதலில் 5-ஐ 5 மற்றும் 6 உடனும், பின்னர் 6-ஐ 5 மற்றும் 6 உடனும் சோடியாக்கவும். அட்டவணையின் நான்கு கட்டங்களும் A×A-இன் எல்லாச் சோடிகளும் ஆகும்.",
       "diagram": {
         "type": "grid",
         "rows": [
