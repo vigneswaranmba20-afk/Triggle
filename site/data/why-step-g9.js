@@ -161,8 +161,8 @@
     "c9-exercise-6-2-q2-i": {
       "step": 0,
       "expected": "Replace the six functions with their known values.",
-      "en": "Opposite and adjacent sides are named relative to the marked angle; the hypotenuse is always opposite the right angle. Identify them before forming ratios.",
-      "ta": "எதிர்ப்பக்கம், அடுத்த பக்கம் ஆகியவை குறிக்கப்பட்ட கோணத்தைப் பொறுத்தவை. கர்ணம் எப்போதும் செங்கோணத்திற்கு எதிரே இருக்கும். விகிதம் காணும்முன் பக்கங்களை அறியவும்.",
+      "en": "The six trigonometric ratios are not independent numbers. Start with the given angle or triangle, identify each ratio, and substitute only after confirming the side order.",
+      "ta": "ஆறு முக்கோணவியல் விகிதங்களும் தனித்த எண்கள் அல்ல. கொடுக்கப்பட்ட கோணம் அல்லது முக்கோணத்தில் ஒவ்வொரு விகிதத்தையும் கண்ட பிறகே பதிலிடவும்.",
       "concept": "trigSides",
       "diagram": {
         "type": "triangle",
@@ -172,8 +172,8 @@
     "c9-exercise-6-2-q2-ii": {
       "step": 0,
       "expected": "Substitute into each bracket without changing its term order.",
-      "en": "Opposite and adjacent sides are named relative to the marked angle; the hypotenuse is always opposite the right angle. Identify them before forming ratios.",
-      "ta": "எதிர்ப்பக்கம், அடுத்த பக்கம் ஆகியவை குறிக்கப்பட்ட கோணத்தைப் பொறுத்தவை. கர்ணம் எப்போதும் செங்கோணத்திற்கு எதிரே இருக்கும். விகிதம் காணும்முன் பக்கங்களை அறியவும்.",
+      "en": "A complement of an angle is what remains to make 90°. Sine of an angle equals cosine of its complement, allowing matching terms to simplify.",
+      "ta": "ஒரு கோணத்தின் நிரப்புக் கோணத்துடன் சேர்த்து 90° கிடைக்கும். ஒரு கோணத்தின் சைன் அதன் நிரப்புக் கோணத்தின் கோசைனுக்குச் சமம்.",
       "concept": "trigSides",
       "diagram": {
         "type": "triangle",
@@ -414,8 +414,8 @@
     "c9-exercise-6-5-q8": {
       "step": 0,
       "expected": "The first two angles add to 90°, so the first two values are equal.",
-      "en": "Opposite and adjacent sides are named relative to the marked angle; the hypotenuse is always opposite the right angle. Identify them before forming ratios.",
-      "ta": "எதிர்ப்பக்கம், அடுத்த பக்கம் ஆகியவை குறிக்கப்பட்ட கோணத்தைப் பொறுத்தவை. கர்ணம் எப்போதும் செங்கோணத்திற்கு எதிரே இருக்கும். விகிதம் காணும்முன் பக்கங்களை அறியவும்.",
+      "en": "When two angles add to 90°, the sine of either is the cosine of the other. Recognising these matching pairs reveals which terms cancel.",
+      "ta": "இரண்டு கோணங்களின் கூடுதல் 90° என்றால் ஒன்றின் சைன் மற்றொன்றின் கோசைன். சமமான உறுப்புகளைக் கண்டால் எவை நீங்குகின்றன என்பது தெளிவாகும்.",
       "concept": "trigSides",
       "diagram": {
         "type": "triangle",
@@ -498,7 +498,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "c9-8-8-practice-8": {
@@ -605,8 +606,8 @@
     "g9-ch2-ex2-q2": {
       "step": 0,
       "expected": "Divide one by thirteen, keeping leading zeros in the repeating block.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "In long division the repeating block can begin with zeros. Keep every digit of the remainder cycle; omitting a leading zero changes the represented fraction.",
+      "ta": "நெடுவகுத்தலில் திரும்பும் இலக்கத் தொகுதி பூஜ்ஜியத்துடன் தொடங்கலாம். சுழற்சியின் எந்த இலக்கத்தையும் விடக்கூடாது; ஆரம்பப் பூஜ்ஜியத்தை நீக்கினால் மதிப்பு மாறலாம்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1018,8 +1019,8 @@
     "g9-ch2-ex6-q3-ii": {
       "step": 0,
       "expected": "Factor out square numbers to produce the given root values.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "Look for the greatest perfect-square factor inside each root. Taking its square root outside leaves a smaller radical that matches the supplied approximate values.",
+      "ta": "ஒவ்வொரு மூலத்தின் உள்ளேயும் நிறைவர்க்கக் காரணியைத் தேடுங்கள். அதன் மூலத்தை வெளியே எடுத்தால் கொடுக்கப்பட்ட தோராய மதிப்புகளுடன் பொருத்தலாம்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1047,8 +1048,8 @@
     "g9-ch2-ex6-q5-i": {
       "step": 0,
       "expected": "A pure surd has coefficient 1 in simplified radical form.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "A pure surd has no coefficient other than one in front of the radical. A mixed surd has an additional numerical coefficient; the expressions can represent equal values in different forms.",
+      "ta": "தூய முறுடில் மூலக்குறிக்கு முன் ஒன்றைத் தவிர வேறு கெழு இல்லை. கலப்பு முறுடில் கூடுதல் எண் கெழு இருக்கும்; இரு வடிவங்களின் மதிப்பு சமமாக இருக்கலாம்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1062,8 +1063,8 @@
     "g9-ch2-ex6-q5-ii": {
       "step": 0,
       "expected": "A pure surd has coefficient 1 in simplified radical form.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "A mixed surd shows a numerical factor outside the root. Move that factor inside using its matching power when the textbook asks for pure-surd form.",
+      "ta": "கலப்பு முறுடில் மூலத்திற்கு வெளியே ஒரு எண் காரணியாக இருக்கும். தூய முறுடாக மாற்றும்போது அந்தக் காரணியை உரிய அடுக்காக மூலத்திற்குள் கொண்டு செல்லவும்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1343,8 +1344,8 @@
     "g9-ch2-ex9-q4": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "A fraction in lowest terms has a terminating decimal exactly when its denominator has no prime factors other than two or five.",
+      "ta": "சுருக்கிய பின்னத்தின் பகுதியில் 2 மற்றும் 5 ஆகிய பகாக்காரணிகள் மட்டுமே இருந்தால் அதன் தசமம் முடிவுறும்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1365,8 +1366,8 @@
     "g9-ch2-ex9-q6": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "To compare square roots with positive bounds, square the bounds and compare with the radicand. This avoids rounding the roots too early.",
+      "ta": "நேர்ம எல்லைகளுடன் வர்க்கமூலத்தை ஒப்பிட, எல்லைகளை வர்க்கமிட்டு மூலத்திற்குள் உள்ள எண்ணுடன் ஒப்பிடுங்கள். இவ்வாறு முன்கூட்டியே தோராயப்படுத்த வேண்டாம்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1380,8 +1381,8 @@
     "g9-ch2-ex9-q7": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "To obtain one decimal place, the final simplified denominator should divide ten. Check each offered multiplier by first cancelling common factors.",
+      "ta": "ஒரு தசம இடத்தில் முடிவதற்கு சுருக்கிய பின்னத்தின் பகுதி பத்தை வகுக்க வேண்டும். ஒவ்வொரு பெருக்கியிலும் பொதுக்காரணிகளை முதலில் நீக்கிப் பாருங்கள்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1395,8 +1396,8 @@
     "g9-ch2-ex9-q8": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "Multiplying a repeating decimal changes where its recurring digits start. Keep the full repeating block; an answer that simply stops after six digits is not exact.",
+      "ta": "சுழற்சித் தசமத்தைப் பெருக்கும்போது திரும்பும் இலக்கத் தொகுதியின் தொடக்கம் மாறலாம். ஆறு இலக்கங்களுடன் நிறுத்துவது சரியான முழு விடை அல்ல.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1417,8 +1418,8 @@
     "g9-ch2-ex9-q10": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "A recurring decimal can be converted into a fraction by subtracting shifted copies of it. This removes the repeating part and permits exact addition.",
+      "ta": "சுழற்சித் தசமத்தைத் தகுந்த அடுக்கால் பெருக்கி வேறுபாட்டைக் கண்டால் திரும்பும் பகுதி நீங்கும். அப்போது துல்லியமான பின்னக் கூட்டல் செய்யலாம்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1432,8 +1433,8 @@
     "g9-ch2-ex9-q11": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "The symbol for the principal square root gives the nonnegative value only. The equation saying a number squared equals 25 has two solutions, but the radical symbol has one principal value.",
+      "ta": "முதன்மை வர்க்கமூலக் குறி எதிர்மமற்ற மதிப்பை மட்டுமே குறிக்கும். ஒரு எண்ணின் வர்க்கம் 25 என்ற சமன்பாட்டுக்கு இரண்டு விடைகள் இருக்கலாம்; ஆனால் மூலக்குறியின் முதன்மை மதிப்பு ஒன்றே.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1454,8 +1455,8 @@
     "g9-ch2-ex9-q13": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "First simplify each radical by extracting perfect-square factors. Once both contain the same radical, add their numerical coefficients rather than their radicands.",
+      "ta": "முதலில் நிறைவர்க்கக் காரணிகளை வெளியே எடுத்து மூலங்களை எளிமைப்படுத்துங்கள். ஒரே மூலம் வந்த பின் அதன் கெழுக்களைக் கூட்ட வேண்டும்; மூல எண்களைக் கூட்டக்கூடாது.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1469,8 +1470,8 @@
     "g9-ch2-ex9-q14": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "Rewrite the radicand as a perfect square times five. Only the perfect-square root becomes the coefficient multiplying the remaining square root.",
+      "ta": "மூல எண்ணை ஒரு நிறைவர்க்கம் மற்றும் ஐந்து ஆகியவற்றின் பெருக்கலாக எழுதுங்கள். நிறைவர்க்கத்தின் மூலம்தான் வெளியே கெழுவாக வரும்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1484,8 +1485,8 @@
     "g9-ch2-ex9-q15": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "Multiply the coefficients with each other and the radicands with each other. Do not add unlike square roots during multiplication.",
+      "ta": "கெழுக்களை ஒன்றுடன் ஒன்று பெருக்கவும்; மூல எண்களை ஒன்றுடன் ஒன்று பெருக்கவும். பெருக்கும்போது வேறுபட்ட மூலங்களை கூட்ட வேண்டாம்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1499,8 +1500,8 @@
     "g9-ch2-ex9-q16": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "Rationalising a denominator means multiplying both numerator and denominator by a suitable radical so the denominator becomes rational. The fraction's value stays unchanged.",
+      "ta": "பகுதியை விகிதப்படுத்த தொகுதியையும் பகுதியையும் பொருத்தமான மூலத்தால் பெருக்குகிறோம். இதனால் பகுதி விகிதமுறு எண்ணாகும்; பின்னத்தின் மதிப்பு மாறாது.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1514,8 +1515,8 @@
     "g9-ch2-ex9-q17": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "Squaring a difference produces the square of the first term, minus twice the product, plus the square of the second term. The middle term is essential.",
+      "ta": "வேறுபாட்டின் வர்க்கத்தில் முதல் உறுப்பின் வர்க்கம், இருமடங்கு பெருக்கலின் எதிர்மம், இரண்டாம் உறுப்பின் வர்க்கம் ஆகியவை வரும். நடு உறுப்பை விடக்கூடாது.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1529,8 +1530,8 @@
     "g9-ch2-ex9-q18": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "Equal bases let us combine the two powers by adding exponents. A negative exponent reverses the fraction, so keep the sign until the end.",
+      "ta": "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். எதிர்ம அடுக்கு பின்னத்தைத் தலைகீழாக்கும்; குறியை இறுதிவரை கவனிக்கவும்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1544,8 +1545,8 @@
     "g9-ch2-ex9-q19": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "A square root is a power of one-half, and a cube root is a power of one-third. With the same positive base, equate the resulting exponents.",
+      "ta": "வர்க்கமூலம் அரை அடுக்காகவும் கனமூலம் மூன்றில் ஒரு பங்கு அடுக்காகவும் எழுதலாம். ஒரே நேர்ம அடிமானம் என்பதால் அடுக்குகளை ஒப்பிடலாம்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1559,8 +1560,8 @@
     "g9-ch2-ex9-q20": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
-      "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
+      "en": "Area is length multiplied by breadth. When multiplying powers of ten, add their exponents; when converting to scientific notation, keep one nonzero digit before the decimal point.",
+      "ta": "பரப்பளவு = நீளம் × அகலம். பத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும்; அறிவியல் குறியீட்டில் தசமப் புள்ளிக்கு முன் ஒரு பூஜ்ஜியமற்ற இலக்கம் மட்டுமே இருக்கும்.",
       "concept": "realLine",
       "diagram": {
         "type": "numberline",
@@ -1672,29 +1673,29 @@
     "g9-ch1-ex1.1-q3-b-i": {
       "step": 0,
       "expected": "Inspect the given set A = {0, 3, 5, 8}.",
-      "en": "A set requires an exact rule for membership. For each proposed element, the answer to “Does it belong?” must not depend on personal opinion.",
-      "ta": "ஒரு கணத்தில் உறுப்பு இருக்கிறதா என்பதைத் தெளிவான விதியால் முடிவு செய்ய வேண்டும்; தனிப்பட்ட கருத்தால் அல்ல.",
+      "en": "For membership, compare the proposed number directly with the roster of set A. Write the belongs-to symbol only if that exact number is listed.",
+      "ta": "உறுப்புரிமைக்கு கொடுக்கப்பட்ட எண்ணை A கணத்தின் பட்டியலுடன் நேரடியாக ஒப்பிடவும். அதே எண் இருந்தால்தான் உறுப்பு குறியை எழுதவும்.",
       "concept": "membership"
     },
     "g9-ch1-ex1.1-q3-b-ii": {
       "step": 0,
       "expected": "Inspect the given set C = {12, 14, 18, 20}.",
-      "en": "A set requires an exact rule for membership. For each proposed element, the answer to “Does it belong?” must not depend on personal opinion.",
-      "ta": "ஒரு கணத்தில் உறுப்பு இருக்கிறதா என்பதைத் தெளிவான விதியால் முடிவு செய்ய வேண்டும்; தனிப்பட்ட கருத்தால் அல்ல.",
+      "en": "A roster set contains exactly the elements shown between its braces. Do not infer extra numbers just because they follow the same pattern.",
+      "ta": "பட்டியல் கணத்தில் அடைப்புக்குறிக்குள் காட்டப்பட்ட உறுப்புகள் மட்டுமே இருக்கும். ஒரே முறை தொடர்வதுபோலத் தோன்றினாலும் கூடுதல் எண்களைச் சேர்க்க வேண்டாம்.",
       "concept": "membership"
     },
     "g9-ch1-ex1.1-q3-b-iii": {
       "step": 0,
       "expected": "Inspect the given set B = {2, 4, 6, 10}.",
-      "en": "A set requires an exact rule for membership. For each proposed element, the answer to “Does it belong?” must not depend on personal opinion.",
-      "ta": "ஒரு கணத்தில் உறுப்பு இருக்கிறதா என்பதைத் தெளிவான விதியால் முடிவு செய்ய வேண்டும்; தனிப்பட்ட கருத்தால் அல்ல.",
+      "en": "The symbol for belongs-to checks one number, not a whole range. Compare the candidate to every member of B and decide whether it is present.",
+      "ta": "உறுப்பு குறி ஒரு எண்ணின் உறுப்புரிமையைத்தான் சோதிக்கும். கொடுக்கப்பட்ட எண்ணை B இன் உறுப்புகளுடன் ஒப்பிட்டு உள்ளதா எனத் தீர்மானிக்கவும்.",
       "concept": "membership"
     },
     "g9-ch1-ex1.1-q3-b-iv": {
       "step": 0,
       "expected": "Inspect the given set B = {2, 4, 6, 10}.",
-      "en": "A set requires an exact rule for membership. For each proposed element, the answer to “Does it belong?” must not depend on personal opinion.",
-      "ta": "ஒரு கணத்தில் உறுப்பு இருக்கிறதா என்பதைத் தெளிவான விதியால் முடிவு செய்ய வேண்டும்; தனிப்பட்ட கருத்தால் அல்ல.",
+      "en": "The not-an-element symbol is justified only when the given object is absent from the listed set. Inspect the exact roster rather than using a pattern guess.",
+      "ta": "உறுப்பு அல்ல என்ற குறி, கொடுக்கப்பட்ட மதிப்பு கணத்தில் இல்லாதபோது மட்டுமே பொருந்தும். ஊகிக்காமல் பட்டியலைப் பார்க்கவும்.",
       "concept": "membership"
     },
     "g9-ch1-ex1.1-q4-i": {
@@ -1756,8 +1757,8 @@
     "g9-ch1-ex1.1-q6-i": {
       "step": 0,
       "expected": "Read the three members: January, June, and July.",
-      "en": "A set requires an exact rule for membership. For each proposed element, the answer to “Does it belong?” must not depend on personal opinion.",
-      "ta": "ஒரு கணத்தில் உறுப்பு இருக்கிறதா என்பதைத் தெளிவான விதியால் முடிவு செய்ய வேண்டும்; தனிப்பட்ட கருத்தால் அல்ல.",
+      "en": "Descriptive form states a defining characteristic in words. Look for the property shared by January, June and July rather than simply repeating their names.",
+      "ta": "விளக்க வடிவம் உறுப்புகளின் பொதுப் பண்பைச் சொற்களால் கூறும். ஜனவரி, ஜூன், ஜூலை ஆகியவற்றின் பொதுப் பண்பைத் தேடுங்கள்; பெயர்களை மட்டும் மீண்டும் எழுத வேண்டாம்.",
       "concept": "membership"
     },
     "g9-ch1-ex1.1-q6-ii": {
@@ -1777,8 +1778,8 @@
     "g9-ch1-ex1.1-q6-iv": {
       "step": 0,
       "expected": "The rule describes letters of the English alphabet.",
-      "en": "A set requires an exact rule for membership. For each proposed element, the answer to “Does it belong?” must not depend on personal opinion.",
-      "ta": "ஒரு கணத்தில் உறுப்பு இருக்கிறதா என்பதைத் தெளிவான விதியால் முடிவு செய்ய வேண்டும்; தனிப்பட்ட கருத்தால் அல்ல.",
+      "en": "In descriptive form, specify which letters are included and their defining property. Check that the description neither leaves out nor adds letters.",
+      "ta": "விளக்க வடிவில் எந்த எழுத்துகள் சேர்க்கப்படுகின்றன, அவற்றின் பொதுப் பண்பு என்ன என்பதைச் சொல்ல வேண்டும். எந்த எழுத்தும் தவறவிடப்படவோ கூடுதலாகச் சேர்க்கப்படவோ கூடாது.",
       "concept": "membership"
     },
     "g9-ch3-ex3.1-q10": {
@@ -1798,8 +1799,8 @@
     "g9-ch3-ex3.1-q12": {
       "step": 0,
       "expected": "A polynomial of degree 1 has a nonzero x coefficient, and one of degree 2 has a ",
-      "en": "An algebraic identity holds for every allowed value. Expand the factors carefully and combine like terms to see why both sides are equal.",
-      "ta": "ஒரு இயற்கணித முற்றொருமை எல்லா அனுமதிக்கப்பட்ட மதிப்புகளுக்கும் பொருந்தும். காரணிகளை விரித்து ஒத்த உறுப்புகளைச் சேர்த்துப் பார்க்கலாம்.",
+      "en": "The highest degree in a product is usually found by multiplying the highest-degree terms. Their nonzero coefficients cannot cancel because that is the unique leading product.",
+      "ta": "பெருக்கலின் அதிகபட்ச படியை ஒவ்வொரு பல்லுறுப்பின் அதிகபட்ச படி உறுப்புகளைப் பெருக்கிக் காணலாம். பூஜ்ஜியமற்ற முதன்மைக் கெழுக்கள் இருப்பதால் அந்த உறுப்பு மறையாது.",
       "concept": "identity"
     },
     "g9-ch3-ex3.2-q4": {
@@ -1826,8 +1827,8 @@
     "g9-ch4-ex4.2-q1": {
       "step": 0,
       "expected": "Represent the four angles by 2x, 4x, 5x and 7x.",
-      "en": "State exactly which geometric fact connects the given measurements to the unknown. A diagram suggests a relation but does not prove it by appearance alone.",
-      "ta": "கொடுக்கப்பட்ட அளவுகளையும் தேடப்படும் மதிப்பையும் இணைக்கும் வடிவியல் உண்மையைக் குறிப்பிட வேண்டும். படம் பார்த்து மட்டும் முடிவு செய்யக் கூடாது.",
+      "en": "A quadrilateral's interior angles total 360 degrees, not 180. Representing them as multiples of the same unknown lets us determine the common unit first.",
+      "ta": "நாற்கரத்தின் உட்கோணங்களின் கூடுதல் 360°, 180° அல்ல. எல்லா கோணங்களையும் ஒரே மாறியின் மடங்குகளாகக் கொண்டால் பொதுவான அளவை முதலில் காணலாம்.",
       "concept": "theorem"
     },
     "g9-ch4-ex4.2-q2": {
@@ -1915,8 +1916,8 @@
     "g9-ch5-ex5.2-q5": {
       "step": 0,
       "expected": "Opposite sides of a quadrilateral are equal and parallel if their direction vect",
-      "en": "An ordered pair lists horizontal position first, then vertical position. Negative values go left or down respectively; do not swap the coordinates.",
-      "ta": "வரிசைச் சோடியில் முதலில் கிடைமட்ட இடமும் பின்னர் செங்குத்து இடமும் வரும். எதிர்ம மதிப்புகள் முறையே இடப்பக்கம் அல்லது கீழ்ப்பக்கம் செல்லும்.",
+      "en": "Opposite sides of a parallelogram must be equal and parallel. Compare both horizontal and vertical changes for opposite sides; matching direction vectors certify this.",
+      "ta": "இணைகரத்தின் எதிர்பக்கங்கள் சமமாகவும் இணையாகவும் இருக்க வேண்டும். இரு எதிர்பக்கங்களின் கிடைமட்ட, செங்குத்து மாற்றங்களை ஒப்பிடவும்.",
       "concept": "coordinates",
       "diagram": {
         "type": "coordinates",
@@ -1983,22 +1984,14 @@
       "expected": "For both triangles use the semiperimeter s=(a+b+c)/2 and Heron’s formula.",
       "en": "Heron’s formula uses only the three side lengths. First find the semiperimeter, then substitute s, s−a, s−b, and s−c under one square root.",
       "ta": "ஹெரான் சூத்திரத்தில் மூன்று பக்க நீளங்கள் போதும். முதலில் அரைச் சுற்றளவைக் கண்டு s, s−a, s−b, s−c மதிப்புகளை ஒரே வர்க்கமூலத்தில் இடவும்.",
-      "concept": "heron",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "heron"
     },
     "g9-ch7-ex7.1-q2": {
       "step": 0,
       "expected": "Find the semiperimeter.",
       "en": "Heron’s formula uses only the three side lengths. First find the semiperimeter, then substitute s, s−a, s−b, and s−c under one square root.",
       "ta": "ஹெரான் சூத்திரத்தில் மூன்று பக்க நீளங்கள் போதும். முதலில் அரைச் சுற்றளவைக் கண்டு s, s−a, s−b, s−c மதிப்புகளை ஒரே வர்க்கமூலத்தில் இடவும்.",
-      "concept": "heron",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "heron"
     },
     "g9-ch7-ex7.1-q3": {
       "step": 2,
@@ -2008,7 +2001,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.1-q4": {
@@ -2040,7 +2034,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.1-q8": {
@@ -2051,7 +2046,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.1-q9": {
@@ -2062,7 +2058,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.1-q10": {
@@ -2073,7 +2070,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.2-q1": {
@@ -2084,7 +2082,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.2-q2": {
@@ -2102,18 +2101,20 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.2-q4": {
       "step": 0,
       "expected": "For a cube of side a, calculate all six faces and four lateral faces.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
+      "en": "A cube has six equal square faces, but its lateral surface includes only four side faces. Count the correct faces before multiplying by the area of one square.",
+      "ta": "கனசதுரத்தில் ஆறு சமமான சதுர முகங்கள் உள்ளன; பக்கப்பரப்பில் நான்கு பக்க முகங்கள் மட்டுமே அடங்கும். சரியான முக எண்ணிக்கையை முதலில் எடுக்கவும்.",
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.2-q5": {
@@ -2124,7 +2125,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.2-q6": {
@@ -2135,7 +2137,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.2-q7": {
@@ -2213,11 +2216,7 @@
       "expected": "A semiperimeter is half the perimeter.",
       "en": "Heron’s formula uses only the three side lengths. First find the semiperimeter, then substitute s, s−a, s−b, and s−c under one square root.",
       "ta": "ஹெரான் சூத்திரத்தில் மூன்று பக்க நீளங்கள் போதும். முதலில் அரைச் சுற்றளவைக் கண்டு s, s−a, s−b, s−c மதிப்புகளை ஒரே வர்க்கமூலத்தில் இடவும்.",
-      "concept": "heron",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "heron"
     },
     "g9-ch7-ex7.4-q2": {
       "step": 0,
@@ -2227,7 +2226,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.4-q3": {
@@ -2245,7 +2245,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.4-q5": {
@@ -2256,7 +2257,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.4-q6": {
@@ -2267,7 +2269,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.4-q7": {
@@ -2278,7 +2281,8 @@
       "concept": "triangleArea",
       "diagram": {
         "type": "triangle",
-        "generic": true
+        "generic": true,
+        "mode": "altitude"
       }
     },
     "g9-ch7-ex7.4-q8": {
@@ -2445,8 +2449,8 @@
     "g9-ch8-ex8.4-q1": {
       "step": 0,
       "expected": "The midpoint is half the sum of the class lower and upper limits.",
-      "en": "A frequency shows how many observations fall in a group. Count each group according to its frequency rather than treating every row as one observation.",
-      "ta": "ஒரு வகுப்பில் எத்தனை தரவுகள் உள்ளன என்பதை நிகழ்வெண் காட்டுகிறது. ஒவ்வொரு வரியையும் ஒரு தரவாக எடுத்துக்கொள்ளாமல் நிகழ்வெண்ணைப் பயன்படுத்தவும்.",
+      "en": "The midpoint is halfway between the lower and upper class limits. Once one boundary and the midpoint are known, use their average relationship to recover the other boundary.",
+      "ta": "நடுமதிப்பு கீழ் மற்றும் மேல் வகுப்பு எல்லைகளின் சராசரி. ஒரு எல்லையும் நடுமதிப்பும் தெரிந்தால் சராசரி உறவைப் பயன்படுத்தி மற்ற எல்லையைக் காணலாம்.",
       "concept": "grouped"
     },
     "g9-ch8-ex8.4-q2": {
@@ -2536,8 +2540,8 @@
     "g9-ch9-ex9.1-q4": {
       "step": 0,
       "expected": "First find the number of green balls.",
-      "en": "Probability is favourable equally likely outcomes divided by all equally likely outcomes. Define the sample space before counting favourable results.",
-      "ta": "நிகழ்தகவு என்பது சாதகமான சமவாய்ப்பு முடிவுகளின் எண்ணிக்கையை எல்லா சமவாய்ப்பு முடிவுகளின் எண்ணிக்கையால் வகுத்த விகிதம். முதலில் முடிவுக் கணத்தை அறியவும்.",
+      "en": "The total number of balls equals the sum of all colours. Subtract the known colour counts to find the missing number before calculating probability.",
+      "ta": "மொத்தப் பந்துகளின் எண்ணிக்கை எல்லா நிறப் பந்துகளின் கூட்டல். நிகழ்தகவைக் காணும்முன் தெரிந்த நிற எண்ணிக்கைகளைக் கழித்துத் தெரியாததை அறியவும்.",
       "concept": "probability"
     },
     "g9-ch9-ex9.1-q5": {
@@ -2564,8 +2568,8 @@
     "g9-ch9-ex9.1-q8": {
       "step": 0,
       "expected": "There were 40 attempts, of which the goalkeeper stopped 32.",
-      "en": "Probability is favourable equally likely outcomes divided by all equally likely outcomes. Define the sample space before counting favourable results.",
-      "ta": "நிகழ்தகவு என்பது சாதகமான சமவாய்ப்பு முடிவுகளின் எண்ணிக்கையை எல்லா சமவாய்ப்பு முடிவுகளின் எண்ணிக்கையால் வகுத்த விகிதம். முதலில் முடிவுக் கணத்தை அறியவும்.",
+      "en": "A save and a conceded goal are complementary outcomes for this simplified goalkeeper model. Use the given attempts as the common denominator for either probability.",
+      "ta": "இந்த எளிய மாதிரியில் தடுத்தலும் கோல் விடுதலும் ஒன்றுக்கொன்று நிரப்புநிகழ்ச்சிகள். இரண்டுக்கும் மொத்த முயற்சிகளையே பகுதியாக எடுக்கவும்.",
       "concept": "probability"
     },
     "g9-ch9-ex9.2-q1": {
