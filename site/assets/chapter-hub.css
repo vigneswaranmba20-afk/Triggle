@@ -337,3 +337,59 @@
   .workspace:has(.chapter-hub .sp2-journey) .brand-mobile .logo{width:27px;height:27px}
   .chapter-hub .sp2-learning-toolbar .sp2-progress{font-size:10px!important}
 }
+
+
+/* Grade 9 Set Language Concepts — index first, one Back button in lessons.
+   Scope to the Concepts journey; all other chapters retain their navigation. */
+.chapter-hub .sp2-index-view[hidden],
+.chapter-hub .sp2-detail-view[hidden]{display:none!important}
+.chapter-hub .sp2-index-view .sp2-progress{
+  display:block;margin:0 0 12px;padding:0;border:0;
+  font:700 12px/1.5 system-ui,sans-serif;color:#645775!important
+}
+.chapter-hub .sp2-index-view .sp2-nav{
+  display:grid;grid-template-columns:minmax(0,1fr);
+  gap:9px;overflow:visible;border:0;background:transparent;
+  border-radius:0;padding:0;margin:0;max-width:100%
+}
+.chapter-hub .sp2-index-view .sp2-nav-button{
+  min-height:57px;display:flex;align-items:center;gap:12px;
+  padding:11px 13px;background:#fff;border:1px solid #e3ddec;
+  border-radius:12px;font-size:14px;line-height:1.5;font-weight:750;
+  color:#403658;box-shadow:none;text-align:left;
+  white-space:normal;overflow-wrap:normal
+}
+.chapter-hub .sp2-index-view .sp2-nav-name{
+  overflow-wrap:break-word;word-break:normal
+}
+.chapter-hub .sp2-index-view .sp2-nav-button.sp2-done .sp2-nav-number{
+  background:#e3f5ec;color:#246e53
+}
+.chapter-hub .sp2-index-view .sp2-done-mark{margin-left:auto}
+.chapter-hub .sp2-detail-navigation{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:8px;margin:0 0 9px
+}
+.chapter-hub .sp2-detail-navigation [data-journey-index]{
+  color:#6b607a;font:750 12px/1.4 system-ui,sans-serif;
+}
+.chapter-hub .sp2-back-index{
+  display:inline-flex;align-items:center;min-height:44px;
+  border:0;background:transparent;padding:8px 3px;
+  color:#473873;font:800 14px/1.4 system-ui,sans-serif;
+  cursor:pointer;text-align:left
+}
+.chapter-hub .sp2-back-index:focus-visible{
+  outline:3px solid #9470de;outline-offset:2px;border-radius:7px
+}
+.chapter-hub:has(.sp2-journey[data-view="lesson"]) .hub-top-actions{display:none}
+.chapter-hub .sp2-detail-view .sp2-panel{padding:0;margin:0;border:0}
+@media(max-width:800px){
+  .chapter-hub .sp2-index-view .sp2-nav-button{
+    padding:10px 12px;min-height:56px;font-size:13.5px
+  }
+  .chapter-hub .sp2-index-view .sp2-nav-number{
+    flex:none;width:33px;height:34px;font-size:14px
+  }
+  .chapter-hub .sp2-detail-navigation{margin:0 0 7px}
+}
