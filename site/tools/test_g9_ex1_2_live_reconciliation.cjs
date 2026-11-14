@@ -37,7 +37,17 @@ for(const row of overlap){
    'Already-registered English text differs from source candidate: '+row.id);
  assert.equal(row.answer,source.answer,'Already-registered final answer differs: '+row.id);
 }
-// Ignore only typesetting whitespace in source expressions; all mathematical\n// characters, inequalities, operands and answers must still match exactly.\n// Fail loudly if somebody tries to register the full candidate module on top of Q1/Q2.
+// Ignore only typesetting whitespace in source expressions; all mathematical
+// characters, inequalities, operands and answers must still match exactly.
+// Guard the high-risk Q2(iv) quadratic against a typographic en dash masquerading
+// as a mathematical minus sign in either the visible source or its fallback.
+const quadratic=live.find(row=>row.id==='g9-ch1-ex1.2-q2-iv');
+assert(quadratic,'Q2(iv) must be registered');
+assert(quadratic.q.en.includes('x²−5x+6'),'Q2(iv) must retain the mathematical minus');
+assert(!quadratic.q.en.includes('x²–5x+6'),'En dash is not a mathematical minus');
+const quadraticFallback=quadratic.questionMath?.en?.find?.(part=>part&&typeof part==='object')?.fallback;
+assert(quadraticFallback?.includes('x²−5x+6'),'Accessible Q2(iv) fallback must retain the mathematical minus');
+// Fail loudly if somebody tries to register the full candidate module on top of Q1/Q2.
 const full=read('site/data/textbook-exercises/g9-ch1-ex1-2-en.js');
 assert(!html.includes('g9-ch1-ex1-2-en.js'),'Full 34-part archive must remain isolated');
 assert.throws(()=>vm.runInNewContext(full,ctx,{filename:'g9-ch1-ex1-2-en.js',timeout:5000}),
