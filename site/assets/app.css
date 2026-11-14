@@ -1053,3 +1053,20 @@ body.textbook-reader .all-chapters-button{
 .difficulty-indicator{display:inline-flex;align-items:center;margin-top:6px;padding:2px 7px;border:1px solid #d8d3df;border-radius:6px;color:#3f3550;background:#f7f5fa;font:600 .75rem/1.5 system-ui,sans-serif;white-space:nowrap}
 .difficulty-indicator[hidden],.solution-review[hidden]{display:none}
 .solution-review{display:block;margin-top:5px;font:500 .75rem/1.5 system-ui,sans-serif;color:#644b20}
+
+/* Grade 9 Chapter 2: one compact conceptual beat at a time; no extra pages or modes. */
+.rnlab .rnlab-foundation{min-width:0;margin:15px 0 16px;padding:14px;border:1px solid #e6e2ef;border-radius:17px;background:#fcfbff}
+.rnlab .rnlab-foundation-tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,120px),1fr));gap:7px;margin-bottom:10px}
+.rnlab .rnlab-foundation-tabs button{display:flex;align-items:center;gap:7px;padding:8px 9px;min-height:44px;border:1px solid #e4dfeb;border-radius:11px;background:#fff;color:#504d6a;text-align:left;font-size:12px;font-weight:720;line-height:1.35}
+.rnlab .rnlab-foundation-tabs button[aria-pressed="true"]{background:#efecfa;border-color:#9384cc;color:#3d3179}
+.rnlab .rnlab-foundation-num{flex:none;display:grid;place-items:center;border:1px solid currentColor;border-radius:50%;width:23px;height:23px;font-size:11px}
+.rnlab .rnlab-foundation-current{min-width:0}
+.rnlab .rnlab-foundation-current p{margin:3px 0 9px;font-size:clamp(13px,2.7vw,15px);line-height:1.65;color:#37384f}
+.rnlab .rnlab-foundation-equation{max-width:100%;min-width:0;overflow-x:auto;overflow-y:hidden;padding:11px 7px;border-radius:11px;background:#fff;text-align:center;font-size:clamp(17px,3.2vw,22px);scrollbar-width:thin;overscroll-behavior-x:contain}
+.rnlab .rnlab-foundation-equation .katex-display{margin:0;min-width:max-content}
+.rnlab .rnlab-foundation-equation math{font-size:1em}
+.rnlab .rnlab-pitfall{margin:11px 0 0;padding:11px 13px;border:1px solid #eee7dc;border-radius:12px;background:#fffefa;color:#5a4d36}
+.rnlab .rnlab-pitfall summary{cursor:pointer;font-weight:750;font-size:12px;min-height:22px}
+.rnlab .rnlab-pitfall p{font-size:13px;line-height:1.6;margin:9px 0 0}
+@media(max-width:390px){.rnlab .rnlab-foundation{padding:10px}.rnlab .rnlab-foundation-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.rnlab .rnlab-foundation-tabs button{font-size:11px;padding:8px 7px}.rnlab .rnlab-foundation-equation{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.rnlab .rnlab-foundation *{scroll-behavior:auto}}
