@@ -14,7 +14,6 @@ assert.equal(teaching.teacherReview,'deferred');
 assert.equal(teaching.rows.length,4);
 assert.deepEqual(teaching.rows.map(r=>r.id),source.rows.map(r=>r.id));
 assert.deepEqual(teaching.rows.map(r=>r.answer),source.rows.map(r=>r.classification));
-const latexCommands=/\\(?:ne|in|quad|qquad)/g;
 for(const row of teaching.rows){
  assert(['Easy','Medium','Difficult'].includes(row.difficulty));
  assert(row.steps.length>=3);
@@ -22,7 +21,6 @@ for(const row of teaching.rows){
   assert(step.why.length>=25,'Why-step must explain a mathematical reason');
   assert(step.latex.length>=3);
   assert(!/\$|\\\\|<[^>]+>/.test(step.latex),'Use raw KaTeX expressions, not Markdown/HTML');
-  assert(!/\\(?:frac|sqrt|left|right)\b/.test(step.latex)||step.latex.includes('\\'),'KaTeX syntax');
  }
 }
 assert(teaching.rows[0].steps.some(s=>s.latex.includes('n(A)=5')));
