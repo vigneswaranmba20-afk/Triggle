@@ -37,7 +37,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    await page.setViewportSize({width,height:852});
    for(const lang of ['en','ta']){
     await page.goto(app.base+'/index.html?class=9&chapter=g9-ch1&section=concepts');
-    if(lang==='ta')await page.locator('#langTa').click();
+    await page.locator(lang==='ta'?'#langTa':'#langEn').click();
     assert.equal(await page.locator('.sp2-journey-footer:visible').count(),0,'Index has no navigation dock');
     await page.locator('.sp2-nav [data-index="1"]').click();
     assert.equal(await page.locator('.sp2-journey-footer:visible').count(),1,'Lesson has exactly one navigation dock');
