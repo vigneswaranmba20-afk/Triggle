@@ -62,9 +62,45 @@ assert.equal(answer('g9-ch2-ex6-q2-v'),'5/16');
 assert.equal(answer('g9-ch2-ex7-q4'),'18');
 assert.equal(answer('g9-ch2-ex8-q3-iii'),'2.5×10⁻³⁶');
 assert.equal(answer('g9-ch2-ex9-q18'),'Option (4) — 10⁶/3⁶');
+vm.runInNewContext(read('assets/real-numbers-foundations.js'),sandbox,{filename:'assets/real-numbers-foundations.js',timeout:5000});
 const stages=sandbox.window.TRIGGLE_REAL_PATH.stages;
 assert.equal(stages.length,8,'eight concept and quiz stages');
 stages.forEach(s=>assert.ok(s.title.en&&s.title.ta&&s.idea.en&&s.idea.ta&&s.choices.length===3&&s.correct>=0&&s.correct<3));
+
+// Grade 9 Chapter 2 is a full concept-learning path, not eight answer-only flashcards.
+// Validate every English/Tamil foundation beat and its exact-display mathematics.
+const expectedSteps=[3,4,3,3,4,3,4,3];
+stages.forEach((stage,i)=>{
+ assert.equal(stage.foundation.length,expectedSteps[i],'complete foundational coverage for '+stage.id);
+ assert.ok(stage.pitfall?.en&&stage.pitfall?.ta,'specific misconception for '+stage.id);
+ assert.ok(!stage.hint.en.includes('Use the chapter rule'),'replace generic hints: '+stage.id);
+ for(const beat of stage.foundation){
+  for(const language of ['en','ta']){
+   assert.ok(beat.label?.[language]?.length>=8,'step label '+stage.id+' '+language);
+   assert.ok(beat.explain?.[language]?.length>=35,'substantive foundation '+stage.id+' '+language);
+  }
+  assert.ok(beat.math?.latex&&beat.math?.fallback,'accessible authored mathematical display '+stage.id);
+ }
+});
+assert.equal(stages[7].section,'2.8 · review','review is not mislabelled as section 2.9');
+const learningUI=read('assets/real-numbers-journey.js');
+const learningCSS=read('assets/app.css');
+assert.match(learningUI,/function foundationMarkup\(stage\)/,'concept beats render in the lesson');
+assert.match(learningUI,/bindFoundation\(stage\)/,'concept beats respond to taps');
+assert.match(learningUI,/data-foundation-step/,'step selector is keyboard-operable');
+assert.match(learningUI,/slider\(zoomLabel,1,3,1,1/,'successive-magnification demonstration');
+assert.match(learningUI,/k\*k/,'surds square-factor diagram uses a true square arrangement');
+assert.match(learningCSS,/\.rnlab \.rnlab-foundation-equation/,'rendered equations have scoped mobile typography');
+// Independent numerical checks for the concepts in the visible foundation ladder.
+assert.ok(1/2 < 7/12 && 7/12 < 2/3);
+assert.ok(Math.abs((1/2 + 7/12)/2 - 13/24)<1e-12);
+assert.ok(1.414<Math.sqrt(2)&&Math.sqrt(2)<1.415);
+assert.ok(Math.abs(Math.pow(8,2/3)-4)<1e-12);
+assert.equal(Math.pow(4,-3/2),1/8);
+assert.ok(Math.abs((Math.sqrt(12)+Math.sqrt(27))-5*Math.sqrt(3))<1e-12);
+assert.ok(Math.abs(3/(Math.sqrt(7)+2)-(Math.sqrt(7)-2))<1e-12);
+assert.ok(Math.abs(6.4*Math.pow(10,-4)-.00064)<1e-15);
+
 vm.runInNewContext(read('assets/diagrams.js'),sandbox,{filename:'assets/diagrams.js',timeout:5000});
 vm.runInNewContext(read('assets/real-number-line.js'),sandbox,{filename:'assets/real-number-line.js',timeout:5000});
 const graphic=sandbox.window.TriggleDraw.drawClassic({demo:{kind:'real-number-line',target:Math.sqrt(3),min:1,max:2,label:'√3'},ref:'Example 2.8',title:'Number line'});
@@ -83,6 +119,9 @@ assert.ok(index.includes('assets/real-number-line.js'));
 const sw=read('service-worker.js');
 assert.ok(sw.includes('assets/real-number-line.js'));
 assert.ok(index.includes('assets/real-numbers-journey.js'),'Real Numbers interactive script must load');
+assert.ok(index.includes('assets/real-numbers-foundations.js'),'Real Numbers foundations must be loaded');
+assert.ok(index.indexOf('assets/real-numbers-foundations.js')<index.indexOf('assets/real-numbers-journey.js'),'Foundation data must precede the journey');
+assert.ok(sw.includes('assets/real-numbers-foundations.js'),'Foundations must be cached offline');
 assert.ok(sw.includes('assets/real-numbers-journey.js'),'Real Numbers interactive module must work offline');
 const originalArrow=items.find(x=>x.id==='g9-ch2-ex1-q1');
 assert.equal(originalArrow?.diagram?.kind,'real-number-arrows','A–D choice figure restored');
