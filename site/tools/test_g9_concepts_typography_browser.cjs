@@ -52,7 +52,7 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
     await page.locator('[data-demo-mode="3"]').click();
     assert.equal(await page.locator('[data-lc-outsider]').getAttribute('visibility'),'visible');
     assert.equal(await page.locator('.lc-detective').count(),1,'Canonical textbook check becomes Rule Detective');
-    assert.equal(await page.locator('.sp2-recall').count(),1,'No duplicate quiz');
+    assert.equal(await page.locator('.sp2-panel > .sp2-recall').count(),1,'One canonical quick check; extra practice stays optional');
     if(width===360&&lang==='en'){
      const dir=path.resolve('screenshots/g9-compact-concepts');
      await fs.mkdir(dir,{recursive:true});
