@@ -114,7 +114,7 @@ function rich(source,{display=false}={}){
   for(let j=end;j>index;j--){const raw=source.slice(t.start,ts[j-1].end).trimEnd();
    if(!raw||/[=+\-−–×÷/:;,]$/.test(raw))continue;
    if(/^[aAiI]$/.test(raw)&&raw!==source.trim())continue;
-   if(/[A-Za-z]{2,}/.test(raw)&&!/[0-9=+−–×÷/<>∈∉∪∩√²³Σ°₀₁₂₃₄₅₆₇₈₉]/.test(raw)&&!/^[A-Za-z]\(/.test(raw)&&! /\b(?:sin|cos|tan|sec|cosec|cot|deg)\b/.test(raw)&&!/^\d/.test(raw)&&!/^[A-Z]{2,4}$/.test(raw))continue;
+   if(/[A-Za-z]{2,}/.test(raw)&&!/[0-9=+−–×÷/<>∈∉∪∩√∠Δ²³Σ°₀₁₂₃₄₅₆₇₈₉]/.test(raw)&&!/^[A-Za-z]\(/.test(raw)&&! /\b(?:sin|cos|tan|sec|cosec|cot|deg)\b/.test(raw)&&!products.has(raw)&&!/^\d/.test(raw)&&!/^[A-Z]{2,4}$/.test(raw))continue;
    // A bare prose word/number is not a product; only variables, mathematical
    // symbols and complete numeric tokens are eligible as isolated anchors.
    if(word(raw)&&raw.length>1&&!/^[A-Z]{2,4}$/.test(raw))continue;

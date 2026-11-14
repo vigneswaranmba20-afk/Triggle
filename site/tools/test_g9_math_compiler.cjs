@@ -4,6 +4,7 @@ const {expression,rich}=require('./g9_math_compiler.cjs');
 const compact=s=>expression(s).latex.replace(/\s/g,'');
 assert.equal(compact('A={0,3,5,8}'),'A=\\left\\{0,3,5,8\\right\\}');
 assert.equal(compact('18∈C'),'18\\inC');assert.equal(compact('6∉A'),'6\\notinA');
+assert.equal(rich('Find ∠OBC').find(p=>p?.latex)?.latex,'\\angle OBC','An angle name stays in one mathematical span');
 assert.equal(compact('∠ABC=90°'),'\\angleABC=90^{\\circ}');
 assert.equal(compact('√(x²+y²)'),'\\sqrt{x^{2}+y^{2}}');
 assert.equal(compact('sin A = [[∣1−x²∣|1+x²]]'),'\\sinA=\\dfrac{\\left|1-x^{2}\\right|}{1+x^{2}}');

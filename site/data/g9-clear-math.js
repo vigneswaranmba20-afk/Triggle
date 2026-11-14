@@ -17879,15 +17879,14 @@ const records=[
     "id": "g9-ch4-ex4.1-q4",
     "questionMath": {
       "en": [
-        "Δ",
         {
-          "latex": "ABC",
-          "fallback": "ABC"
+          "latex": "\\triangle ABC",
+          "fallback": "ΔABC"
         },
-        " and Δ",
+        " and ",
         {
-          "latex": "DEF",
-          "fallback": "DEF"
+          "latex": "\\triangle DEF",
+          "fallback": "ΔDEF"
         },
         " are two triangles in which ",
         {
@@ -17902,15 +17901,15 @@ const records=[
         ". Prove that the triangles are congruent."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. Δ",
+        "English-language question; Tamil version not changed. ",
         {
-          "latex": "ABC",
-          "fallback": "ABC"
+          "latex": "\\triangle ABC",
+          "fallback": "ΔABC"
         },
-        " and Δ",
+        " and ",
         {
-          "latex": "DEF",
-          "fallback": "DEF"
+          "latex": "\\triangle DEF",
+          "fallback": "ΔDEF"
         },
         " are two triangles in which ",
         {
@@ -17925,29 +17924,11 @@ const records=[
         ". Prove that the triangles are congruent."
       ]
     },
-    "answerMath": [
-      "Δ",
-      {
-        "latex": "ABC",
-        "fallback": "ABC"
-      },
-      " ",
-      {
-        "latex": "\\cong",
-        "fallback": "≅"
-      },
-      " Δ",
-      {
-        "latex": "FDE",
-        "fallback": "FDE"
-      },
-      " (",
-      {
-        "latex": "ASA",
-        "fallback": "ASA"
-      },
-      ")"
-    ],
+    "answerMath": {
+      "latex": "\\triangle ABC \\cong \\triangle FDE \\left(ASA\\right)",
+      "fallback": "ΔABC ≅ ΔFDE (ASA)",
+      "display": true
+    },
     "steps": [
       {
         "math": {
@@ -17957,18 +17938,18 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Use the angle-sum property in Δ",
+            "Use the angle-sum property in ",
             {
-              "latex": "ABC",
-              "fallback": "ABC"
+              "latex": "\\triangle ABC",
+              "fallback": "ΔABC"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Use the angle-sum property in Δ",
+            "English explanation (Tamil unchanged): Use the angle-sum property in ",
             {
-              "latex": "ABC",
-              "fallback": "ABC"
+              "latex": "\\triangle ABC",
+              "fallback": "ΔABC"
             },
             "."
           ]
@@ -17982,18 +17963,18 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Find the remaining angle of Δ",
+            "Find the remaining angle of ",
             {
-              "latex": "DEF",
-              "fallback": "DEF"
+              "latex": "\\triangle DEF",
+              "fallback": "ΔDEF"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Find the remaining angle of Δ",
+            "English explanation (Tamil unchanged): Find the remaining angle of ",
             {
-              "latex": "DEF",
-              "fallback": "DEF"
+              "latex": "\\triangle DEF",
+              "fallback": "ΔDEF"
             },
             "."
           ]
@@ -18011,29 +17992,11 @@ const records=[
         }
       },
       {
-        "math": [
-          "Δ",
-          {
-            "latex": "ABC",
-            "fallback": "ABC"
-          },
-          " ",
-          {
-            "latex": "\\cong",
-            "fallback": "≅"
-          },
-          " Δ",
-          {
-            "latex": "FDE",
-            "fallback": "FDE"
-          },
-          " (",
-          {
-            "latex": "ASA",
-            "fallback": "ASA"
-          },
-          ")"
-        ],
+        "math": {
+          "latex": "\\triangle ABC \\cong \\triangle FDE \\left(ASA\\right)",
+          "fallback": "ΔABC ≅ ΔFDE (ASA)",
+          "display": true
+        },
         "reasonMath": {
           "en": [
             "Apply the Angle",
@@ -18343,10 +18306,10 @@ const records=[
           "latex": "\\angle OAB = 46^{\\circ}",
           "fallback": "∠OAB =46°"
         },
-        ", find ∠",
+        ", find ",
         {
-          "latex": "OBC",
-          "fallback": "OBC"
+          "latex": "\\angle OBC",
+          "fallback": "∠OBC"
         }
       ],
       "ta": [
@@ -18375,10 +18338,10 @@ const records=[
           "latex": "\\angle OAB = 46^{\\circ}",
           "fallback": "∠OAB =46°"
         },
-        ", find ∠",
+        ", find ",
         {
-          "latex": "OBC",
-          "fallback": "OBC"
+          "latex": "\\angle OBC",
+          "fallback": "∠OBC"
         }
       ]
     },
@@ -18419,18 +18382,18 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Therefore Δ",
+            "Therefore ",
             {
-              "latex": "AOB",
-              "fallback": "AOB"
+              "latex": "\\triangle AOB",
+              "fallback": "ΔAOB"
             },
             " is isosceles: its two base angles are equal."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Therefore Δ",
+            "English explanation (Tamil unchanged): Therefore ",
             {
-              "latex": "AOB",
-              "fallback": "AOB"
+              "latex": "\\triangle AOB",
+              "fallback": "ΔAOB"
             },
             " is isosceles: its two base angles are equal."
           ]
@@ -18478,28 +18441,28 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Subtract ∠",
+            "Subtract ",
             {
-              "latex": "ABO",
-              "fallback": "ABO"
+              "latex": "\\angle ABO",
+              "fallback": "∠ABO"
             },
-            " from ∠",
+            " from ",
             {
-              "latex": "ABC",
-              "fallback": "ABC"
+              "latex": "\\angle ABC",
+              "fallback": "∠ABC"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Subtract ∠",
+            "English explanation (Tamil unchanged): Subtract ",
             {
-              "latex": "ABO",
-              "fallback": "ABO"
+              "latex": "\\angle ABO",
+              "fallback": "∠ABO"
             },
-            " from ∠",
+            " from ",
             {
-              "latex": "ABC",
-              "fallback": "ABC"
+              "latex": "\\angle ABC",
+              "fallback": "∠ABC"
             },
             "."
           ]
@@ -38002,10 +37965,10 @@ const texts={
     "."
   ],
   "Use the angle-sum property in ΔABC.": [
-    "Use the angle-sum property in Δ",
+    "Use the angle-sum property in ",
     {
-      "latex": "ABC",
-      "fallback": "ABC"
+      "latex": "\\triangle ABC",
+      "fallback": "ΔABC"
     },
     "."
   ],
