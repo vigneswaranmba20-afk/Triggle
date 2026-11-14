@@ -32,11 +32,19 @@ function figure(spec,lang){
  }else if(spec.type==='triangle'){
   cap.textContent=ta?'கருத்துப் படம்: அளவுக்கேற்ப வரையப்படவில்லை':'Concept sketch: not drawn to scale';
   svg=shape('svg',{...attrs,'aria-label':'Right triangle with generic sides and perpendicular height'});
-  svg.append(shape('path',{d:'M55 136 L268 136 L268 23 Z',fill:'#eee7fa',stroke:'#7560a7','stroke-width':2.5,'stroke-linejoin':'round'}));
-  svg.append(shape('path',{d:'M250 136 L250 118 L268 118',fill:'none',stroke:'#7560a7','stroke-width':1.8}));
+  if(spec.mode==='altitude'){
+   // A general triangle is not necessarily right angled; the dashed altitude
+   // is perpendicular to its base and is not an assertion about source lengths.
+   svg.append(shape('path',{d:'M50 136 L180 24 L285 136 Z',fill:'#eee7fa',stroke:'#7560a7','stroke-width':2.5,'stroke-linejoin':'round'}));
+   svg.append(shape('line',{x1:180,y1:24,x2:180,y2:136,stroke:'#7560a7','stroke-dasharray':'5 5','stroke-width':2}));
+   svg.append(shape('path',{d:'M180 118 L198 118 L198 136',stroke:'#7560a7',fill:'none','stroke-width':1.6}));
+   svg.append(shape('text',{x:167,y:87,'font-size':15,fill:'#302843'},'height'));
+  }else{
+   svg.append(shape('path',{d:'M55 136 L268 136 L268 23 Z',fill:'#eee7fa',stroke:'#7560a7','stroke-width':2.5,'stroke-linejoin':'round'}));
+   svg.append(shape('path',{d:'M250 136 L250 118 L268 118',fill:'none',stroke:'#7560a7','stroke-width':1.8}));
+   svg.append(shape('text',{x:275,y:82,'font-size':15,fill:'#302843'},'height'));
+  }
   svg.append(shape('text',{x:155,y:160,'text-anchor':'middle','font-size':16,fill:'#302843'},'base'));
-  svg.append(shape('text',{x:275,y:82,'font-size':16,fill:'#302843'},'height'));
-  svg.append(shape('text',{x:131,y:71,'font-size':16,fill:'#302843'},'hypotenuse'));
  }else if(spec.type==='coordinates'){
   cap.textContent=ta?'கருத்துப் படம்: முதலில் x, பின்னர் y':'Concept sketch: horizontal x first, vertical y second';
   svg=shape('svg',{...attrs,'aria-label':'Coordinate axes with point x comma y'});
