@@ -1,4 +1,5 @@
 name: Generate Grade 9 source-pinned Why-step annotations (temporary)
+# regeneration pass after editorial improvements
 on:
   push:
     branches: [feat/g9-why-this-step-20261114]
