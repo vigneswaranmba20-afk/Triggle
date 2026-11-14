@@ -34,11 +34,9 @@
         '<g data-lc-outsider><circle cx="286" cy="107" r="26" class="lc-outsider"/>'+
         '<text x="286" y="114" class="lc-number" data-lc-out-number>3</text></g>';
       wrap.append(svg,el('p','lc-vis-description',t.members));
-      const feedback=el('p','lc-equation');
-      feedback.dataset.lcEquation='';
-      feedback.setAttribute('aria-live','polite');
-      wrap.append(feedback);
       lab.insertBefore(wrap,controls);
+      const feedback=lab.querySelector('[data-demo-output]');
+      feedback.classList.add('lc-equation');
       const paint=()=>{
         const selected=controls.querySelector('[data-demo-mode][aria-pressed="true"]');
         const n=Number(selected?.dataset.demoMode||2);
