@@ -12,7 +12,7 @@ assert.ok(db&&db.grade===9,'Grade 9 source data loaded in the app');
 const hints=db.hints,ids=Object.keys(hints);
 const eligible=all.filter(q=>q.id&&q.steps?.length&&q.q?.en&&!/example/i.test(q.id)&&!/example/i.test(q.label?.en||'')&&q.kind!=='textbook-example'&&/^(?:g9-ch\d+-ex|c9-exercise-|c9-\d+-\d+-practice-)/.test(q.id));
 assert.equal(ids.length,eligible.length,'Every released exercise or Triggle practice has exactly one Why bridge');
-assert.equal(ids.length,313,'Current Grade 9 content snapshot should be reviewed on change');
+assert.equal(ids.length,318,'Grade 9 content snapshot expands only with source-backed Ex1.2 Q1 parts');
 const chapters=new Set();let countDiagrams=0;
 for(const id of ids){
  const q=source.get(id),h=hints[id];
@@ -23,6 +23,7 @@ for(const id of ids){
  assert.ok(typeof h.expected==='string'&&h.expected.length>12,'Missing source sentinel '+id);
  assert.ok(q.steps[h.step].en.includes(h.expected),'Explanation does not match the authored step '+id);
  for(const lang of ['en','ta']){
+  if(lang==='ta'&&!q.q.ta){assert.ok(!h.ta,'Unreviewed Tamil hint must not be fabricated: '+id);assert.match(q.label.ta,/English only/,'English-only fallback must be labelled: '+id);continue;}
   assert.ok(h[lang]?.length>=35,'Missing '+lang+' explanation '+id);
   assert.ok(!/<[a-z][^>]*>/i.test(h[lang]),'Hint may not introduce markup '+id);
  }
