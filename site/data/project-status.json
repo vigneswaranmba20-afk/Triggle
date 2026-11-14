@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "aaa4dd250e7a2c05858aa9e61cc7f5433cd899b8",
-  "updatedAt": "2026-11-14T01:07:39+05:30",
+  "sourceCommit": "206659a43355dbaa3ca8443d5d7abd222a0c58c5",
+  "updatedAt": "2026-11-14T05:39:54+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -69,8 +69,9 @@
     "site/data/textbook-exercises/g9-ch9-ex9-1-q9-q10-and-examples-en.js": "6168d85551b403bdc7ca694a8c2dd82e2db2436f13ceb799997aeb4e06f6cde2",
     "site/data/textbook-exercises/g9-ch9-ex9-2-en.js": "56f5ccd3160a545a45523ee1f01a728b87dcf81eb407bdd35cb5cc864c1222d8",
     "site/data/textbook-exercises/g9-ch9-ex9-2-q5-ex9-3-en.js": "a2111946d5f04081223b3d79c5c40cc6196585729e0a3572978ac36c7ce0266a",
-    "site/data/why-step-g10.js": "dd1420df5a70dc237e45a81120083f12a5d71c63c3d1d69964448d2868e02c74",
-    "site/index.html": "a4a91152f8b63eed435b301425c5533c34e36a0604231c42bb38fd627a53efa8",
+    "site/data/why-step-g10-coverage.js": "1dbc92d2a8e441b94815f5bd7ac7198cf0a2c1dd2e20125e6b2d12fcda1694dc",
+    "site/data/why-step-g10.js": "0b69575de1a452cf86d770f252d6d5900d9ad9018be6ec2e7782493666613781",
+    "site/index.html": "0c447b7933d40fc58de9529e8d62b5c44b28d5b7d5f243e578fd6a78c5efa976",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
