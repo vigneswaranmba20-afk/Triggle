@@ -1144,7 +1144,8 @@ async function main() {
       assert.ok((await journey.locator('[data-progress]').innerText()).includes('0 / 7'));
       // Membership: choose a number not belonging to the set.
       await journey.locator('[data-demo-mode="3"]').click();
-      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('∉ A'));
+      assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('∉ A'));
+      assert((await journey.locator('[data-demo-output] math mo').allTextContents()).includes('∉'),'Non-membership renders as semantic MathML');
       // Correct independent check persists only in localStorage.
       await journey.locator('[data-answers] [data-choice="0"]').click();
       assert.ok((await journey.locator('[data-feedback]').innerText()).includes('Not yet'));
@@ -1154,23 +1155,23 @@ async function main() {
       assert.ok((await journey.locator('[data-progress]').innerText()).includes('1 / 7'));
       await journey.locator('[data-nav] [data-index="1"]').click();
       await journey.locator('[data-demo-mode="builder"]').click();
-      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('x < 10'));
+      assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('x < 10'));
       await journey.locator('[data-nav] [data-index="2"]').click();
       await journey.locator('[data-demo-mode="subset"]').click();
-      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('⊂'));
+      assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('⊂'));
       await journey.locator('[data-nav] [data-index="4"]').click();
       await journey.locator('[data-demo-mode="distributive"]').click();
-      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('{2}'));
+      assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('{2}'));
       await journey.locator('[data-nav] [data-index="5"]').click();
       await journey.locator('[data-demo-mode="intersection"]').click();
-      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('{1, 2, 4, 5, 6}'));
+      assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('{1, 2, 4, 5, 6}'));
       await journey.locator('[data-nav] [data-index="6"]').click();
       await journey.locator('input[type="range"]').evaluate(el=>{
         el.value='9';el.dispatchEvent(new Event('input',{bubbles:true}));
       });
-      assert.ok((await journey.locator('[data-demo-output]').innerText()).includes('16'));
+      assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('16'));
       await journey.locator('.sp2-extra summary').click();
-      assert.ok((await journey.locator('.sp2-extra').innerText()).includes('In a class of 50'));
+      assert.ok((await sourceText(journey.locator('.sp2-extra'))).includes('In a class of 50'));
       await journey.locator('[data-extra-answers] [data-extra-choice="0"]').click();
       assert.ok((await journey.locator('[data-extra-feedback]').innerText()).includes('Not yet'));
       await journey.locator('[data-extra-hint]').click();
@@ -1180,7 +1181,7 @@ async function main() {
       await journey.locator('.sp2-hard summary').click();
       for(let i=0;i<6;i++)await journey.locator('[data-hard-next]').click();
       assert.equal(await journey.locator('[data-hard-steps] li').count(),6);
-      assert.ok((await journey.locator('[data-hard-steps]').innerText()).includes('21 people'));
+      assert.ok((await sourceText(journey.locator('[data-hard-steps]'))).includes('21 people'));
       await page.locator('#langTa').click();
       assert.ok((await journey.locator('h3').first().innerText()).includes('கண மொழி'));
       await journey.locator('[data-nav] [data-index="5"]').click();
@@ -1211,7 +1212,7 @@ async function main() {
       await lab.locator('[data-op="neither"]').click();
       assert.equal(await lab.locator('[data-result-set]').innerText(),'{7, 8}');
       await journey.locator('[data-nav] [data-index="6"]').click();
-      assert.ok((await journey.locator('.sp2-formula').innerText()).includes('n(A ∪ B)'));
+      assert.ok((await sourceText(journey.locator('.sp2-formula'))).includes('n(A ∪ B)'));
       await ctx.setOffline(false);
     });
     await check('service worker caches curriculum and supports an offline chapter reload', async () => {
