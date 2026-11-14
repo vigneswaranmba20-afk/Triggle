@@ -51,6 +51,7 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
     assert.equal(await page.locator('[data-lc-outsider]').getAttribute('visibility'),'hidden');
     await page.locator('[data-demo-mode="3"]').click();
     assert.equal(await page.locator('[data-lc-outsider]').getAttribute('visibility'),'visible');
+    assert.equal(await page.locator('.lc-selected').count(),0,'No inside number stays highlighted for an outsider');
     assert.equal(await page.locator('.lc-detective').count(),1,'Canonical textbook check becomes Rule Detective');
     assert.equal(await page.locator('.sp2-panel > .sp2-recall').count(),1,'One canonical quick check; extra practice stays optional');
     if(width===360&&lang==='en'){
