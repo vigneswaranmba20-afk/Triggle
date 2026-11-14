@@ -11,6 +11,10 @@ const metadata={
     "difficult": "Complex reasoning, proof, case analysis, multi-stage calculations or advanced connections."
   },
   "entries": {
+    "g9-ch1-ex1.2-q2-i": {"grade":9,"level":"easy","basis":"Classify a current finite administrative list without asserting a fixed district count","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q2-ii": {"grade":9,"level":"medium","basis":"Demonstrate arbitrarily many lines through one point","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q2-iii": {"grade":9,"level":"medium","basis":"Show that all integers below a bound are unbounded to the left","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q2-iv": {"grade":9,"level":"medium","basis":"Factor a quadratic and count its natural-number roots","review":"implementation-audit"},
     "g9-ch1-ex1.2-q1-i": {"grade":9,"level":"easy","basis":"Direct count of distinct set members","review":"implementation-audit"},
     "g9-ch1-ex1.2-q1-ii": {"grade":9,"level":"medium","basis":"Whole-number domain enumeration with strict upper bound","review":"implementation-audit"},
     "g9-ch1-ex1.2-q1-iii": {"grade":9,"level":"medium","basis":"Natural-number domain and exact fractional set evaluation","review":"implementation-audit"},
