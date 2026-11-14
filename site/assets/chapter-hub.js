@@ -187,7 +187,9 @@
           });
           return;
         }
-        info(t.learning);
+        // The Set Language lesson has its own concise orientation and begins with maths.
+        // Avoid a second introductory paragraph between the chapter title and concept.
+        if(chapter.id!=='g9-ch1')info(t.learning);
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang);
         }else if(chapter.id==='g9-ch2'||chapter.id==='g9-ch9'){
