@@ -780,7 +780,9 @@ async function main() {
       const lab=page.locator('.rnlab');
       assert.equal(await lab.locator('input[type="range"]').count(),1,'movable rational number line');
       await lab.locator('input[type="range"]').evaluate(input=>{input.value='10';input.dispatchEvent(new Event('input',{bubbles:true}));});
-      assert.match(await lab.locator('[data-demo-output]').innerText(),/7\/12/);
+      const rationalFractions=await lab.locator('[data-demo-output] mfrac').evaluateAll(nodes=>nodes.map(n=>[n.children[0].textContent,n.children[1].textContent]));
+      assert(rationalFractions.some(([n,d])=>n==='7'&&d==='12'),'The selected 7/12 is a semantic stacked fraction');
+      assert.equal(await lab.locator('[data-demo-output] .triggle-tex').getAttribute('data-math-fallback'),'1/2 < 70/120 < 2/3  =  7/12','Keep the original numerical source fallback');
       await lab.locator('[data-answers] button').nth(0).click();
       await lab.locator('[data-answers] button').nth(1).click();
       assert.match(await lab.locator('[data-progress]').innerText(),/1 \/ 8/);

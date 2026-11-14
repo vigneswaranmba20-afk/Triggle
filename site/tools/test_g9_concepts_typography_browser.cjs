@@ -23,8 +23,8 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
   for(let i=0;i<await sliders.count();i++)for(const extreme of ['min','max']){await sliders.nth(i).evaluate((el,key)=>{el.value=el[key];el.dispatchEvent(new Event('input',{bubbles:true}));},extreme);await check('slider '+chapter+'/'+index);}
  }
 }
-for(const id of ['c9-exercise-6-1-q6','g9-ch1-ex1.1-q3-a-i']){
- await page.goto(app.base+'/index.html?class=9&question='+id);await page.locator('#figureBtn').click();await check('figure '+id);
+for(const id of ['c9-exercise-6-1-q1','c9-1-1-practice-1']){
+ await page.goto(app.base+'/index.html?class=9&question='+id);if(await page.evaluate(()=>window.TriggleQuietReader?.isActive()))await page.keyboard.press('Tab');await page.locator('#figureBtn').click();await check('figure '+id);
  assert(await page.locator('#figureDialog').isVisible());assert.equal(await page.locator('#figureDialog [data-math-error]').count(),0);await page.keyboard.press('Escape');
 }
 console.log('PASS concepts, dynamic controls, both languages, figures '+width+'px');
