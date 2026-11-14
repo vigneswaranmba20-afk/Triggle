@@ -18,7 +18,7 @@ async function inspect(page,q,lang){
    el.querySelectorAll('details').forEach(d=>d.remove());return el.textContent;
   };
   const hint=document.querySelector('details.why-step-g9')?window.TriggleWhyStepG9.hints[q.id]:null;
-  const expected=count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null)+count(p.questionMath[lang])+count(p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s)=>n+count(s.math)+count(s.reasonMath?.[lang]),0);
+  const expected=count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null)+count(p.questionMath[lang]||p.questionMath.en)+count(p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s)=>n+count(s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);
   const rendered=document.querySelectorAll('#questionText .katex,#stepsList .katex').length;
   return {expected,rendered,width:innerWidth,pageWidth:document.documentElement.scrollWidth,
    errors:document.querySelectorAll('[data-math-error]').length,
@@ -29,10 +29,10 @@ async function inspect(page,q,lang){
  const label=q.id+' '+lang+' '+state.width;
  assert.equal(state.errors,0,label+' no renderer fallback');
  assert.equal(state.rendered,state.expected,label+' every authored formula renders exactly once');
- assert.equal(normalize(state.question),normalize(q.q[lang]),label+' question wording');
+ assert.equal(normalize(state.question),normalize(q.q[lang]||q.q.en),label+' question wording');
  assert.equal(normalize(state.answer),normalize(q.answer?.[lang]||q.answer),label+' final answer');
  assert.equal(state.steps.length,q.steps.length,label+' all steps retained');
- state.steps.forEach((s,i)=>{assert.equal(normalize(s.reason),normalize(q.steps[i][lang]),label+' reason '+i);assert.equal(normalize(s.eq),normalize(q.steps[i].eq),label+' equation '+i);});
+ state.steps.forEach((s,i)=>{assert.equal(normalize(s.reason),normalize(q.steps[i][lang]||q.steps[i].en),label+' reason '+i);assert.equal(normalize(s.eq),normalize(q.steps[i].eq),label+' equation '+i);});
  assert(state.pageWidth<=state.width+1,label+' no page overflow');
  for(const f of state.formulas){assert(f.mathml,label+' semantic MathML');assert(f.height+1>=f.glyphHeight,label+' no glyph clipping');if(f.scroll>f.width+1)assert.equal(f.tab,0,label+' keyboard-scrollable expression');}
  return state.formulas.length;
@@ -54,11 +54,11 @@ async function inspect(page,q,lang){
     await page.evaluate(()=>document.querySelector('#langTa').click());await page.evaluate(()=>window.TriggleNotation.prepare(document));
     formulas+=await inspect(page,q,'ta');
     await page.evaluate(()=>document.querySelector('#langEn').click());
-    if(++done%75===0)console.log('Progress '+width+'px: '+done+'/313 questions in both languages');
+    if(++done%75===0)console.log('Progress '+width+'px: '+done+'/318 questions in both languages');
     if(width===393&&samples.get(q.chapter)===q.id){await page.locator('#lessonCard').screenshot({path:path.join(output,'chapter-'+q.chapter+'-393.png')});}
    }}finally{await context.close();}
-   console.log('PASS '+width+'px: 313 questions, English/Tamil, '+formulas+' formula instances; source parity, complete steps, MathML, clipping and page overflow');
-   return {width,questions:313,languages:['en','ta'],formulas};
+   console.log('PASS '+width+'px: 318 questions, English/Tamil, '+formulas+' formula instances; source parity, complete steps, MathML, clipping and page overflow');
+   return {width,questions:318,languages:['en','ta'],formulas};
   }));
   assert.deepEqual(errors,[],'No browser errors');
   await fs.writeFile(path.join(output,'sweep-results.json'),JSON.stringify(results,null,2));
