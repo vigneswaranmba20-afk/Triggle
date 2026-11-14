@@ -2,10 +2,10 @@
   "generatedAt": "2026-11-14",
   "grade": 9,
   "source": "existing authored student-facing content",
-  "totalAuthored": 393,
-  "eligible": 318,
+  "totalAuthored": 397,
+  "eligible": 322,
   "byChapter": {
-    "1": 36,
+    "1": 40,
     "2": 121,
     "3": 6,
     "4": 12,
@@ -79,7 +79,11 @@
     "wholeNumbers": 1,
     "rationalSet": 1,
     "integerInterval": 1,
-    "leapYear": 1
+    "leapYear": 1,
+    "finiteSet": 1,
+    "infiniteLines": 1,
+    "unboundedIntegers": 1,
+    "quadraticRoots": 1
   },
   "fallbacks": [],
   "diagrams": 30,
@@ -388,7 +392,7 @@
   "qualityReview": {
     "kind": "human-in-the-loop editorial static corrections",
     "scope": "all source-aligned question IDs plus targeted semantic corrections for radical arithmetic, exponent rules, repetition, cube/cuboid surface area, statistical mode, and diagram relevance",
-    "notes": "Kept 30 relevant conceptual figures; excluded generic illustrations for surface area, rounding, and chord cases where geometry could imply incorrect conditions. Textbook content and answers unchanged. New Ex1.2 Q1(i–v) bridges are English-only (Tamil editorial deferred), with five previously audited source parts and no generic figures.",
+    "notes": "Kept 30 relevant conceptual figures; excluded generic illustrations for surface area, rounding, and chord cases where geometry could imply incorrect conditions. Textbook content and answers unchanged. New Ex1.2 Q1(i–v) bridges are English-only (Tamil editorial deferred), with five previously audited source parts and no generic figures. Four additional Grade 9 Ex1.2 Q2 source-backed English-only why-step explanations added; Tamil review deferred.",
     "date": "2026-11-14",
     "tamil": "editorial pending"
   }
