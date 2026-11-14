@@ -175,10 +175,13 @@ for(const item of eligible){
  audit.byConcept[choice.key]=(audit.byConcept[choice.key]||0)+1;
  if(choice.fallback)audit.fallbacks.push({id:item.id,chapter:item.chapter,title:item.title?.en,step:step.en});
 }
-const output='/* Source-pinned Grade 9 optional explanations. Original textbook questions and answers unchanged.\\n'+
-' * Generated from existing authored source and pedagogically authored concept library.\\n'+
-' * Tamil editor review pending. Run node site/tools/generate_why_step_g9.cjs after source updates. */\\n'+
-'(()=>{\\'use strict\\';window.TriggleWhyStepG9=Object.freeze('+JSON.stringify({version:'2026-11-14-g9',grade:9,review:{ta:'editorial-pending'},hints},null,2)+');})();\\n';
+const output=[
+ '/* Source-pinned Grade 9 optional explanations. Original textbook questions and answers unchanged.',
+ ' * Generated from existing authored source and pedagogically authored concept library.',
+ ' * Tamil editor review pending. Run node site/tools/generate_why_step_g9.cjs after source updates. */',
+ "(()=>{'use strict';window.TriggleWhyStepG9=Object.freeze("+JSON.stringify({version:'2026-11-14-g9',grade:9,review:{ta:'editorial-pending'},hints},null,2)+");})();",
+ ''
+].join('\n');
 fs.writeFileSync(path.join(root,'site/data/why-step-g9.js'),output);
 fs.mkdirSync(path.join(root,'docs/curriculum/grade-9'),{recursive:true});
 fs.writeFileSync(path.join(root,'docs/curriculum/grade-9/why-step-audit.json'),JSON.stringify(audit,null,2)+'\n');
