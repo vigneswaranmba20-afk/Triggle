@@ -92,7 +92,7 @@ assert.match(learningUI,/k\*k/,'surds square-factor diagram uses a true square a
 assert.match(learningCSS,/\.rnlab \.rnlab-foundation-equation/,'rendered equations have scoped mobile typography');
 // Independent numerical checks for the concepts in the visible foundation ladder.
 assert.ok(1/2 < 7/12 && 7/12 < 2/3);
-assert.equal((1/2 + 7/12)/2,13/24);
+assert.ok(Math.abs((1/2 + 7/12)/2 - 13/24)<1e-12);
 assert.ok(1.414<Math.sqrt(2)&&Math.sqrt(2)<1.415);
 assert.ok(Math.abs(Math.pow(8,2/3)-4)<1e-12);
 assert.equal(Math.pow(4,-3/2),1/8);
