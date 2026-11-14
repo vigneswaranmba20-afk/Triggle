@@ -46,7 +46,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    assert.ok(after.sw<=after.vw+1,'No mobile horizontal page overflow at '+width);
    await why.first().locator('summary').click();
    assert.equal(await why.first().evaluate(el=>el.open),false,'Dismiss without leaving question');
-   if(width===390)await page.screenshot({path:'screenshots/g10-why-q4-390.png',fullPage:true});
+   if(width===390){require('node:fs').mkdirSync('screenshots',{recursive:true});await page.screenshot({path:'screenshots/g10-why-q4-390.png',fullPage:true});}
   }
   const samples=[
    'c10-1-ex1-1-q1-ii','c10-1-1-3-q1','c10-1-1-4-q3','c10-1-1-5-q1',
