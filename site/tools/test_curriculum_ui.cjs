@@ -6,6 +6,15 @@ const http = require('node:http');
 const path = require('node:path');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
+// Fidelity assertions read the preserved authored text, while the dedicated
+// typography suites check the visible glyphs and semantic fraction structure.
+const sourceText=locator=>locator.evaluate(node=>{
+ const clone=node.cloneNode(true);
+ clone.querySelectorAll('.triggle-tex').forEach(el=>el.replaceWith(document.createTextNode(el.dataset.mathFallback)));
+ clone.querySelectorAll('math.triggle-math[aria-label]').forEach(el=>el.replaceWith(document.createTextNode(el.getAttribute('aria-label'))));
+ return clone.textContent;
+});
+
 
 async function serve() {
   const server = http.createServer(async (req, res) => {
@@ -662,7 +671,7 @@ async function main() {
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
       assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i',
         'Tamil Exercises opens the actual first textbook question directly');
-      assert.match(await page.locator('#questionText').innerText(),/1\. பின்வருவனவற்றில்/);
+      assert.match(await sourceText(page.locator('#questionText')),/1\. பின்வருவனவற்றில்/);
       await page.goBack();
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1',
         'Back from an exercise must return to the chapter choices');
@@ -788,7 +797,7 @@ async function main() {
       assert.match(await lab.locator('[data-progress]').innerText(),/1 \/ 8/);
       await lab.locator('[data-nav] [data-index="1"]').click();
       await lab.locator('[data-demo-mode="repeat"]').click();
-      assert.match(await lab.locator('[data-demo-output]').innerText(),/Repeating/);
+      assert.match(await sourceText(lab.locator('[data-demo-output]')),/Repeating/);
       await lab.locator('[data-nav] [data-index="4"]').click();
       // Grade 9 surd options: a baseline coefficient must be visibly separated
       // from the radical; a fifth-root index uses <mroot> instead.
@@ -840,7 +849,7 @@ async function main() {
       await noOverflow(page,'Rationalisation four steps at 390px');
       await lab.locator('[data-nav] [data-index="6"]').click();
       await lab.locator('input[type="range"]').evaluate(input=>{input.value='-3';input.dispatchEvent(new Event('input',{bubbles:true}));});
-      assert.match(await lab.locator('[data-demo-output]').innerText(),/0\.0032/);
+      assert.match(await sourceText(lab.locator('[data-demo-output]')),/0\.0032/);
       await lab.locator('[data-nav] [data-index="7"]').click();
       const squaredButton=lab.locator('[data-demo-mode="equation"]');
       assert.equal(await squaredButton.locator('math msup').count(),1,
@@ -856,7 +865,7 @@ async function main() {
       assert.equal(await squaredButton.locator('.rnlab-math-choice').count(),1,
         'The complete equation must be an atomic expression inside its flex-based button');
       await squaredButton.click();
-      assert.match(await lab.locator('[data-demo-output]').innerText(),/25/);
+      assert.match(await sourceText(lab.locator('[data-demo-output]')),/25/);
       await noOverflow(page,'Exponent button and root comparison at 390px');
       await page.locator('#langTa').click();
       assert.match(await page.locator('.rnlab h3').innerText(),/எண்களை/);
@@ -1017,7 +1026,7 @@ async function main() {
         assert.equal(await page.locator('#lessonCard').isVisible(), true, id);
         assert.equal(await page.locator('#chapterOverview').isVisible(), false, id);
         assert.ok(await page.locator('#stepsList li').count() > 0, id);
-        assert.ok((await page.locator('#answerText').innerText()).trim(), id);
+        assert.ok((await sourceText(page.locator('#answerText'))).trim(), id);
       }
       await page.close();
     });
@@ -1044,7 +1053,7 @@ async function main() {
     });
     await check('legacy progress, diagrams and standard solutions survive chapter navigation', async () => {
       const page = await visit(await context(1280), '/index.html?class=9&question=c9-exercise-6-1-q2');
-      const question = await page.locator('#questionText').innerText();
+      const question = await sourceText(page.locator('#questionText'));
       assert.equal(await page.locator('#markDone').isVisible(),false,'Progress control removed from question view');
       await page.locator('#markDone').evaluate(el=>el.click());
       assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'), 'true');
@@ -1056,7 +1065,7 @@ async function main() {
       await page.locator('#closeDiagram').click();
       assert.equal(await page.locator('#tabGuided,#guidedDialog').count(),0);
       assert.ok((await page.locator('#stepsList').innerText()).trim());
-      assert.equal(await page.locator('#questionText').innerText(), question);
+      assert.equal(await sourceText(page.locator('#questionText')), question);
       const prior = page.url();
       await selectChapter(page, 'g9-ch1');
       await page.goBack();
@@ -1233,45 +1242,45 @@ async function main() {
         const cards=page.locator('#chapterOverview [data-question-id^="g9-ch1-ex1.1-"]');
         assert.equal(await cards.count(),30,'All 30 source-matched textbook subparts must appear in Exercises');
         await page.locator('#chapterOverview [data-question-id="g9-ch1-ex1.1-q1-i"]').click();
-        assert.match(await page.locator('#questionText').innerText(),/1\. Which of the following are sets\?\s*\(i\) The collection of prime numbers upto 100\./,'Display the original 2025 English textbook question, including its unmodified spelling');
+        assert.match(await sourceText(page.locator('#questionText')),/1\. Which of the following are sets\?\s*\(i\) The collection of prime numbers upto 100\./,'Display the original 2025 English textbook question, including its unmodified spelling');
         assert.equal(await page.locator('#stepsList li').count(),4);
-        assert.match(await page.locator('#answerText').innerText(),/set/i);
+        assert.match(await sourceText(page.locator('#answerText')),/set/i);
         await page.locator('#langTa').click();
-        assert.match(await page.locator('#questionText').innerText(),/1\. பின்வருவனவற்றில் எவை கணங்களாகும்\?\s*\(i\) ஒன்று முதல் 100 வரையுள்ள பகா எண்களின் தொகுப்பு\./,'Preserve textbook-exact Tamil source wording');
-        assert.match(await page.locator('#answerText').innerText(),/கணம்/);
+        assert.match(await sourceText(page.locator('#questionText')),/1\. பின்வருவனவற்றில் எவை கணங்களாகும்\?\s*\(i\) ஒன்று முதல் 100 வரையுள்ள பகா எண்களின் தொகுப்பு\./,'Preserve textbook-exact Tamil source wording');
+        assert.match(await sourceText(page.locator('#answerText')),/கணம்/);
         await noOverflow(page,'Grade 9 Q1 Tamil at '+width+'px');
         await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-iv');
         await page.locator('#stepsList li').first().waitFor({state:'visible'});
-        assert.match(await page.locator('#answerText').innerText(),/C, Z, E, H, O, S, L, V, A, K, I/);
+        assert.match(await sourceText(page.locator('#answerText')),/C, Z, E, H, O, S, L, V, A, K, I/);
         assert.equal(await page.locator('#stepsList li').count(),4);
         await noOverflow(page,'Grade 9 Q2 mobile at '+width+'px');
         await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-a-i');
         await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
         await page.locator('#langEn').click(); // Language persists from the preceding Tamil navigation test.
-        assert.match(await page.locator('#questionText').innerText(),/State whether True or False:\s*\(i\) 18 ∈ C/,'Keep Q3 original source wording and membership glyph');
-        assert.match(await page.locator('#answerText').innerText(),/True/);
+        assert.match(await sourceText(page.locator('#questionText')),/State whether True or False:\s*\(i\) 18 ∈ C/,'Keep Q3 original source wording and membership glyph');
+        assert.match(await sourceText(page.locator('#answerText')),/True/);
         assert.ok((await page.locator('#stepsList li').count())>0,'Q3(a) must include explanation steps');
         await page.locator('#langTa').click();
-        assert.match(await page.locator('#questionText').innerText(),/சரியா,\s*தவறா/,'Keep original Tamil textbook punctuation');
+        assert.match(await sourceText(page.locator('#questionText')),/சரியா,\s*தவறா/,'Keep original Tamil textbook punctuation');
         await noOverflow(page,'Grade 9 Q3(a) Tamil at '+width+'px');
         await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q3-b-i');
         await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
-        assert.match(await page.locator('#questionText').innerText(),/3 ∈/);
-        assert.equal((await page.locator('#answerText').innerText()).trim(),'A');
+        assert.match(await sourceText(page.locator('#questionText')),/3 ∈/);
+        assert.equal((await sourceText(page.locator('#answerText'))).trim(),'A');
         await noOverflow(page,'Grade 9 Q3(b) mobile at '+width+'px');
         await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q5-ii');
         await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
         await page.locator('#langEn').click(); // The preceding Q3(b) check leaves the language in Tamil.
         await page.locator('#langTa').click();
-        assert.match(await page.locator('#questionText').innerText(),/பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக/,'Q5 Tamil textbook wording');
+        assert.match(await sourceText(page.locator('#questionText')),/பின்வரும் கணங்களைக் கணக் கட்டமைப்பு முறையில் எழுதுக/,'Q5 Tamil textbook wording');
         await page.locator('#langEn').click();
-        assert.match(await page.locator('#questionText').innerText(),/Represent the following sets in set builder form/,'Q5 English textbook wording');
+        assert.match(await sourceText(page.locator('#questionText')),/Represent the following sets in set builder form/,'Q5 English textbook wording');
         assert.ok((await page.locator('#stepsList li').count())>=3,'Q5 requires three reasoning steps');
         await noOverflow(page,'Grade 9 Q5 fraction problem at '+width+'px');
         await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q6-iv');
         await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
-        assert.match(await page.locator('#questionText').innerText(),/consonant in English alphabet/);
-        assert.match(await page.locator('#answerText').innerText(),/English consonants/);
+        assert.match(await sourceText(page.locator('#questionText')),/consonant in English alphabet/);
+        assert.match(await sourceText(page.locator('#answerText')),/English consonants/);
         await noOverflow(page,'Grade 9 Q6 descriptive problem at '+width+'px');
       });
     }
@@ -1316,7 +1325,7 @@ async function main() {
       await ctx.setOffline(true);
       await gotoWithControls(page,url+'/index.html?class=9&question=g9-ch1-ex1.1-q2-i');
       await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
-      assert.match(await page.locator('#answerText').innerText(),/I, N, D, A/);
+      assert.match(await sourceText(page.locator('#answerText')),/I, N, D, A/);
       await ctx.setOffline(false);
     });
     assert.deepEqual(errors, [], 'No uncaught browser errors');
