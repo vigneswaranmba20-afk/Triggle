@@ -65,5 +65,5 @@ assert.deepEqual([3,4,5].map(n=>4/(3*n)).length,[3,4,5].length);
 assert.equal(new Set([3,4,5].map(n=>4/(3*n))).size,3);
 assert.equal(Array.from({length:25},(_,i)=>1882+i).filter(y=>y%4===0&&(y%100!==0||y%400===0)).length,5);
 assert.equal(Array.from({length:10},(_,i)=>i-5).length,10);
-assert.equal(all.filter(q=>q.exercise==='1.2'&&q.chapter==='1'&&q.kind==='textbook').length,9,'Q1 five and Q2 four are now registered; 25 parts remain staged');
+assert.equal(all.filter(q=>q.exercise==='1.2'&&q.chapter==='1'&&q.kind==='textbook').length,5,'Isolated Q1 fixture must register exactly five parts; Q2 is verified in the separate full-release regression');
 console.log('PASS Grade 9 Ex1.2 Q1: 5 official parts, exact English question/fraction, all steps and answers, no duplicate IDs, matched Why-step hints, English-only notice, offline caching, and mathematical checks');
