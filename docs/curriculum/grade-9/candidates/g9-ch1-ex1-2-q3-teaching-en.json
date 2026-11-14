@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "status": "staged-not-live",
+  "grade": 9,
+  "chapter": "1",
+  "exercise": "1.2",
+  "question": "3",
+  "language": "en",
+  "source": "site/data/textbook-fidelity/g9-ch1-ex1-2-q3-source.json",
+  "tamilEditorial": "deferred",
+  "teacherReview": "deferred",
+  "rows": [
+    {
+      "id": "g9-ch1-ex1.2-q3-i",
+      "part": "i",
+      "answer": "Equivalent sets",
+      "difficulty": "Easy",
+      "steps": [
+        {
+          "why": "List the vowels and the distinct letters of VOWEL.",
+          "latex": "A=\\{a,e,i,o,u\\},\\quad B=\\{V,O,W,E,L\\}"
+        },
+        {
+          "why": "Count the distinct elements in both sets.",
+          "latex": "n(A)=5,\\qquad n(B)=5"
+        },
+        {
+          "why": "Their elements differ, so they are not equal; equal cardinality makes them equivalent.",
+          "latex": "A\\ne B,\\quad n(A)=n(B)=5"
+        }
+      ]
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-ii",
+      "part": "ii",
+      "answer": "Unequal sets",
+      "difficulty": "Easy",
+      "steps": [
+        {
+          "why": "W means whole numbers; the strict inequalities exclude 1 and 5.",
+          "latex": "D=\\{x\\in W:1<x<5\\}=\\{2,3,4\\}"
+        },
+        {
+          "why": "The given set C includes 5, which is absent from D.",
+          "latex": "C=\\{2,3,4,5\\},\\qquad C\\ne D"
+        },
+        {
+          "why": "The two sets have different numbers of elements, so they are neither equal nor equivalent.",
+          "latex": "n(C)=4,\\qquad n(D)=3"
+        }
+      ]
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-iii",
+      "part": "iii",
+      "answer": "Equal sets",
+      "difficulty": "Easy",
+      "steps": [
+        {
+          "why": "Write each distinct letter in LIFE once.",
+          "latex": "X=\\{L,I,F,E\\}"
+        },
+        {
+          "why": "A set ignores the order in which elements are written.",
+          "latex": "Y=\\{F,I,L,E\\}=\\{L,I,F,E\\}"
+        },
+        {
+          "why": "Every element belongs to both sets, so the sets are equal.",
+          "latex": "X=Y"
+        }
+      ]
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-iv",
+      "part": "iv",
+      "answer": "Equivalent sets",
+      "difficulty": "Medium",
+      "steps": [
+        {
+          "why": "List primes greater than 3 and less than 23; neither endpoint is included.",
+          "latex": "G=\\{5,7,11,13,17,19\\}"
+        },
+        {
+          "why": "List all positive factors of 18.",
+          "latex": "H=\\{1,2,3,6,9,18\\}"
+        },
+        {
+          "why": "Both sets contain six elements, although their members differ.",
+          "latex": "n(G)=n(H)=6,\\qquad G\\ne H"
+        }
+      ]
+    }
+  ]
+}
