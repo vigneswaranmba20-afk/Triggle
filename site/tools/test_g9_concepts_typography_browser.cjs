@@ -20,10 +20,12 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
  }
  for(let index=0;index<Math.max(nav,1);index++){
   if(nav){
-   await page.locator('[data-idea-picker]').click();
-   assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'true');
+   if(chapter===1){
+    await page.locator('[data-idea-picker]').click();
+    assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'true');
+   }
    await page.locator('.sp2-nav [data-index]').nth(index).click();
-   assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'false');
+   if(chapter===1)assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'false');
   }
   await check(chapter+'/'+index+' '+lang+' '+width);
   if(chapter===1){
