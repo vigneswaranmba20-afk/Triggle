@@ -1,0 +1,601 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": "1",
+  "exercise": "1.2",
+  "stage": "ENGLISH_SOURCE_AUDITED_NOT_INTEGRATED",
+  "studentFacing": false,
+  "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+  "sourceAuditPr": 129,
+  "sourcePrintedPages": [
+    11,
+    12
+  ],
+  "sourcePdfPages": [
+    17,
+    18
+  ],
+  "englishMathValidation": "TO_RUN_IN_CI",
+  "tamilReview": "deferred",
+  "records": [
+    {
+      "id": "g9-ch1-ex1.2-q1-i",
+      "classNum": 9,
+      "chapter": "1",
+      "exercise": "1.2",
+      "topic": {
+        "en": "Set Language"
+      },
+      "label": {
+        "en": "Exercise 1.2 · Q1 (i)",
+        "ta": "English only — Tamil review pending"
+      },
+      "title": {
+        "en": "Count the elements of a set"
+      },
+      "q": {
+        "en": "1. Find the cardinal number of the following sets.\n(i) M = {p, q, r, s, t, u}"
+      },
+      "steps": [
+        {
+          "en": "Cardinality counts each distinct element exactly once.",
+          "eq": "M = {p, q, r, s, t, u}",
+          "math": {
+            "latex": "M=\\{p,q,r,s,t,u\\}",
+            "display": true,
+            "fallback": "M = {p, q, r, s, t, u}"
+          }
+        },
+        {
+          "en": "The six listed letters are all different.",
+          "eq": "n(M) = 6",
+          "math": {
+            "latex": "n(M)=6",
+            "display": true,
+            "fallback": "n(M) = 6"
+          }
+        }
+      ],
+      "answer": "n(M) = 6",
+      "answerMath": {
+        "latex": "n(M)=6",
+        "display": true,
+        "fallback": "n(M) = 6"
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+      "reference": "TN SCERT Standard Nine Mathematics revised 2025, Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. English source-image evidence inherited from PR #129; Tamil review pending.",
+      "sourceFidelity": {
+        "status": "English audited in PR #129; no new visual check in this PR",
+        "englishPdfPages": [
+          17,
+          18
+        ],
+        "tamilEditorial": "pending"
+      },
+      "translationReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-ii",
+      "classNum": 9,
+      "chapter": "1",
+      "exercise": "1.2",
+      "topic": {
+        "en": "Set Language"
+      },
+      "label": {
+        "en": "Exercise 1.2 · Q1 (ii)",
+        "ta": "English only — Tamil review pending"
+      },
+      "title": {
+        "en": "Cardinality from a whole-number rule"
+      },
+      "q": {
+        "en": "1. Find the cardinal number of the following sets.\n(ii) P = {x : x = 3n+2, n∈W and x< 15}"
+      },
+      "steps": [
+        {
+          "en": "Whole numbers start at zero. Use the upper bound before listing the set.",
+          "eq": "3n + 2 < 15 ⇒ n < 13/3",
+          "math": {
+            "latex": "3n+2<15\\Rightarrow n<\\dfrac{13}{3}",
+            "display": true,
+            "fallback": "3n + 2 < 15 ⇒ n < 13/3"
+          }
+        },
+        {
+          "en": "The allowed whole numbers are zero through four.",
+          "eq": "n ∈ {0, 1, 2, 3, 4}",
+          "math": {
+            "latex": "n\\in\\{0,1,2,3,4\\}",
+            "display": true,
+            "fallback": "n ∈ {0, 1, 2, 3, 4}"
+          }
+        },
+        {
+          "en": "Substitute each allowed n; there are five distinct results.",
+          "eq": "P = {2, 5, 8, 11, 14}; n(P) = 5",
+          "math": {
+            "latex": "\\begin{aligned}P&=\\{2,5,8,11,14\\}\\\\n(P)&=5\\end{aligned}",
+            "display": true,
+            "fallback": "P = {2, 5, 8, 11, 14}; n(P) = 5"
+          }
+        }
+      ],
+      "answer": "n(P) = 5",
+      "answerMath": {
+        "latex": "n(P)=5",
+        "display": true,
+        "fallback": "n(P) = 5"
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+      "reference": "TN SCERT Standard Nine Mathematics revised 2025, Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. English source-image evidence inherited from PR #129; Tamil review pending.",
+      "sourceFidelity": {
+        "status": "English audited in PR #129; no new visual check in this PR",
+        "englishPdfPages": [
+          17,
+          18
+        ],
+        "tamilEditorial": "pending"
+      },
+      "translationReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-iii",
+      "classNum": 9,
+      "chapter": "1",
+      "exercise": "1.2",
+      "topic": {
+        "en": "Set Language"
+      },
+      "label": {
+        "en": "Exercise 1.2 · Q1 (iii)",
+        "ta": "English only — Tamil review pending"
+      },
+      "title": {
+        "en": "Fractional elements of Q"
+      },
+      "q": {
+        "en": "1. Find the cardinal number of the following sets.\n(iii) Q = {y : y = 4/(3n), n∈N and 2 < n ≤5}"
+      },
+      "steps": [
+        {
+          "en": "Read the printed stacked fraction correctly: four divided by the full denominator 3n.",
+          "eq": "y = 4/(3n)",
+          "math": {
+            "latex": "y=\\dfrac{4}{3n}",
+            "display": true,
+            "fallback": "y = 4/(3n)"
+          }
+        },
+        {
+          "en": "Only natural numbers 3, 4 and 5 satisfy the interval.",
+          "eq": "2 < n ≤ 5 ⇒ n ∈ {3, 4, 5}",
+          "math": {
+            "latex": "2<n\\le5\\Rightarrow n\\in\\{3,4,5\\}",
+            "display": true,
+            "fallback": "2 < n ≤ 5 ⇒ n ∈ {3, 4, 5}"
+          }
+        },
+        {
+          "en": "Substitute and simplify: each rational number is different.",
+          "eq": "Q = {4/9, 1/3, 4/15}",
+          "math": {
+            "latex": "Q=\\left\\{\\dfrac{4}{9},\\dfrac{1}{3},\\dfrac{4}{15}\\right\\}",
+            "display": true,
+            "fallback": "Q = {4/9, 1/3, 4/15}"
+          }
+        },
+        {
+          "en": "Count the three distinct members.",
+          "eq": "n(Q) = 3",
+          "math": {
+            "latex": "n(Q)=3",
+            "display": true,
+            "fallback": "n(Q) = 3"
+          }
+        }
+      ],
+      "answer": "n(Q) = 3",
+      "answerMath": {
+        "latex": "n(Q)=3",
+        "display": true,
+        "fallback": "n(Q) = 3"
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+      "reference": "TN SCERT Standard Nine Mathematics revised 2025, Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. English source-image evidence inherited from PR #129; Tamil review pending.",
+      "sourceFidelity": {
+        "status": "English audited in PR #129; no new visual check in this PR",
+        "englishPdfPages": [
+          17,
+          18
+        ],
+        "tamilEditorial": "pending"
+      },
+      "translationReview": "pending",
+      "sourceNotationNote": "The source image shows 4 over 3n. The PDF text layer reverses its visual order."
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-iv",
+      "classNum": 9,
+      "chapter": "1",
+      "exercise": "1.2",
+      "topic": {
+        "en": "Set Language"
+      },
+      "label": {
+        "en": "Exercise 1.2 · Q1 (iv)",
+        "ta": "English only — Tamil review pending"
+      },
+      "title": {
+        "en": "Count integers from −5 to 4"
+      },
+      "q": {
+        "en": "1. Find the cardinal number of the following sets.\n(iv) R = {x : x is an integers, x∈ Z and −5 ≤ x <5}"
+      },
+      "steps": [
+        {
+          "en": "The left endpoint −5 is included. The right endpoint 5 is excluded.",
+          "eq": "−5 ≤ x < 5",
+          "math": {
+            "latex": "-5\\le x<5",
+            "display": true,
+            "fallback": "−5 ≤ x < 5"
+          }
+        },
+        {
+          "en": "List each integer in the interval.",
+          "eq": "R = {−5,−4,−3,−2,−1,0,1,2,3,4}",
+          "math": {
+            "latex": "R=\\{-5,-4,-3,-2,-1,0,1,2,3,4\\}",
+            "display": true,
+            "fallback": "R = {−5,−4,−3,−2,−1,0,1,2,3,4}"
+          }
+        },
+        {
+          "en": "Counting inclusively from −5 through 4 gives ten integers.",
+          "eq": "n(R) = 4 − (−5) + 1 = 10",
+          "math": {
+            "latex": "n(R)=4-(-5)+1=10",
+            "display": true,
+            "fallback": "n(R) = 4 − (−5) + 1 = 10"
+          }
+        }
+      ],
+      "answer": "n(R) = 10",
+      "answerMath": {
+        "latex": "n(R)=10",
+        "display": true,
+        "fallback": "n(R) = 10"
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+      "reference": "TN SCERT Standard Nine Mathematics revised 2025, Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. English source-image evidence inherited from PR #129; Tamil review pending.",
+      "sourceFidelity": {
+        "status": "English audited in PR #129; no new visual check in this PR",
+        "englishPdfPages": [
+          17,
+          18
+        ],
+        "tamilEditorial": "pending"
+      },
+      "translationReview": "pending",
+      "sourceNotationNote": "Preserve the original inequality bounds. The source's 'an integers' grammar is retained."
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-v",
+      "classNum": 9,
+      "chapter": "1",
+      "exercise": "1.2",
+      "topic": {
+        "en": "Set Language"
+      },
+      "label": {
+        "en": "Exercise 1.2 · Q1 (v)",
+        "ta": "English only — Tamil review pending"
+      },
+      "title": {
+        "en": "Leap years in the given range"
+      },
+      "q": {
+        "en": "1. Find the cardinal number of the following sets.\n(v) S = The set of all leap years between 1882 and 1906."
+      },
+      "steps": [
+        {
+          "en": "Candidates divisible by four are 1884, 1888, 1892, 1896, 1900 and 1904.",
+          "eq": "1884, 1888, 1892, 1896, 1900, 1904",
+          "math": {
+            "latex": "1884,\\ 1888,\\ 1892,\\ 1896,\\ 1900,\\ 1904",
+            "display": true,
+            "fallback": "1884, 1888, 1892, 1896, 1900, 1904"
+          }
+        },
+        {
+          "en": "A century year must be divisible by 400 to be a leap year. Exclude 1900.",
+          "eq": "400 does not divide 1900",
+          "math": {
+            "latex": "400\\nmid 1900",
+            "display": true,
+            "fallback": "400 does not divide 1900"
+          }
+        },
+        {
+          "en": "Five years remain after removing 1900.",
+          "eq": "S = {1884,1888,1892,1896,1904}; n(S) = 5",
+          "math": {
+            "latex": "\\begin{aligned}S&=\\{1884,1888,1892,1896,1904\\}\\\\n(S)&=5\\end{aligned}",
+            "display": true,
+            "fallback": "S = {1884,1888,1892,1896,1904}; n(S) = 5"
+          }
+        }
+      ],
+      "answer": "n(S) = 5",
+      "answerMath": {
+        "latex": "n(S)=5",
+        "display": true,
+        "fallback": "n(S) = 5"
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+      "reference": "TN SCERT Standard Nine Mathematics revised 2025, Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. English source-image evidence inherited from PR #129; Tamil review pending.",
+      "sourceFidelity": {
+        "status": "English audited in PR #129; no new visual check in this PR",
+        "englishPdfPages": [
+          17,
+          18
+        ],
+        "tamilEditorial": "pending"
+      },
+      "translationReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-i",
+      "classNum": 9,
+      "chapter": "1",
+      "exercise": "1.2",
+      "topic": {
+        "en": "Set Language"
+      },
+      "label": {
+        "en": "Exercise 1.2 · Q2 (i)",
+        "ta": "English only — Tamil review pending"
+      },
+      "title": {
+        "en": "A finite administrative set"
+      },
+      "q": {
+        "en": "2. Identify the following sets as finite or infinite.\n(i) X = The set of all districts in Tamilnadu."
+      },
+      "steps": [
+        {
+          "en": "At a particular date, official districts form a countable administrative list. The exact number can change.",
+          "eq": "Number of districts at a fixed date is finite",
+          "math": {
+            "latex": "n(X)<\\infty",
+            "display": true,
+            "fallback": "Number of districts at a fixed date is finite"
+          }
+        },
+        {
+          "en": "A set with a finite number of members is a finite set.",
+          "eq": "X is finite",
+          "math": {
+            "latex": "X:\\text{ finite}",
+            "display": true,
+            "fallback": "X is finite"
+          }
+        }
+      ],
+      "answer": "Finite",
+      "answerMath": {
+        "latex": "\\text{Finite}",
+        "display": true,
+        "fallback": "Finite"
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+      "reference": "TN SCERT Standard Nine Mathematics revised 2025, Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. English source-image evidence inherited from PR #129; Tamil review pending.",
+      "sourceFidelity": {
+        "status": "English audited in PR #129; no new visual check in this PR",
+        "englishPdfPages": [
+          17,
+          18
+        ],
+        "tamilEditorial": "pending"
+      },
+      "translationReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-ii",
+      "classNum": 9,
+      "chapter": "1",
+      "exercise": "1.2",
+      "topic": {
+        "en": "Set Language"
+      },
+      "label": {
+        "en": "Exercise 1.2 · Q2 (ii)",
+        "ta": "English only — Tamil review pending"
+      },
+      "title": {
+        "en": "Lines through one point"
+      },
+      "q": {
+        "en": "2. Identify the following sets as finite or infinite.\n(ii) Y = The set of all straight lines passing through a point."
+      },
+      "steps": [
+        {
+          "en": "Fix the point. Every distinct direction through it determines a distinct line.",
+          "eq": "Distinct directions give distinct lines",
+          "math": {
+            "latex": "\\text{distinct directions}\\Rightarrow\\text{distinct lines}",
+            "display": true,
+            "fallback": "Distinct directions give distinct lines"
+          }
+        },
+        {
+          "en": "Between any two different directions there are more possible directions, with no finite limit.",
+          "eq": "n(Y) is infinite",
+          "math": {
+            "latex": "n(Y)=\\infty",
+            "display": true,
+            "fallback": "n(Y) is infinite"
+          }
+        }
+      ],
+      "answer": "Infinite",
+      "answerMath": {
+        "latex": "\\text{Infinite}",
+        "display": true,
+        "fallback": "Infinite"
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+      "reference": "TN SCERT Standard Nine Mathematics revised 2025, Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. English source-image evidence inherited from PR #129; Tamil review pending.",
+      "sourceFidelity": {
+        "status": "English audited in PR #129; no new visual check in this PR",
+        "englishPdfPages": [
+          17,
+          18
+        ],
+        "tamilEditorial": "pending"
+      },
+      "translationReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-iii",
+      "classNum": 9,
+      "chapter": "1",
+      "exercise": "1.2",
+      "topic": {
+        "en": "Set Language"
+      },
+      "label": {
+        "en": "Exercise 1.2 · Q2 (iii)",
+        "ta": "English only — Tamil review pending"
+      },
+      "title": {
+        "en": "Integers smaller than five"
+      },
+      "q": {
+        "en": "2. Identify the following sets as finite or infinite.\n(iii) A = {x : x∈Z and x<5}"
+      },
+      "steps": [
+        {
+          "en": "All integers below five qualify, including negative integers.",
+          "eq": "A = {…, −2, −1, 0, 1, 2, 3, 4}",
+          "math": {
+            "latex": "A=\\{\\ldots,-2,-1,0,1,2,3,4\\}",
+            "display": true,
+            "fallback": "A = {…, −2, −1, 0, 1, 2, 3, 4}"
+          }
+        },
+        {
+          "en": "For every integer in A, subtracting one gives another integer in A.",
+          "eq": "x ∈ A ⇒ x − 1 ∈ A",
+          "math": {
+            "latex": "x\\in A\\Rightarrow x-1\\in A",
+            "display": true,
+            "fallback": "x ∈ A ⇒ x − 1 ∈ A"
+          }
+        },
+        {
+          "en": "The sequence continues without a smallest element, so A is infinite.",
+          "eq": "A is infinite",
+          "math": {
+            "latex": "A:\\text{ infinite}",
+            "display": true,
+            "fallback": "A is infinite"
+          }
+        }
+      ],
+      "answer": "Infinite",
+      "answerMath": {
+        "latex": "\\text{Infinite}",
+        "display": true,
+        "fallback": "Infinite"
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+      "reference": "TN SCERT Standard Nine Mathematics revised 2025, Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. English source-image evidence inherited from PR #129; Tamil review pending.",
+      "sourceFidelity": {
+        "status": "English audited in PR #129; no new visual check in this PR",
+        "englishPdfPages": [
+          17,
+          18
+        ],
+        "tamilEditorial": "pending"
+      },
+      "translationReview": "pending"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-iv",
+      "classNum": 9,
+      "chapter": "1",
+      "exercise": "1.2",
+      "topic": {
+        "en": "Set Language"
+      },
+      "label": {
+        "en": "Exercise 1.2 · Q2 (iv)",
+        "ta": "English only — Tamil review pending"
+      },
+      "title": {
+        "en": "Finite roots of a polynomial"
+      },
+      "q": {
+        "en": "2. Identify the following sets as finite or infinite.\n(iv) B = {x : x²−5x+6 = 0, x∈N}"
+      },
+      "steps": [
+        {
+          "en": "Factor the polynomial into two linear factors.",
+          "eq": "x² − 5x + 6 = (x − 2)(x − 3)",
+          "math": {
+            "latex": "x^2-5x+6=(x-2)(x-3)",
+            "display": true,
+            "fallback": "x² − 5x + 6 = (x − 2)(x − 3)"
+          }
+        },
+        {
+          "en": "A zero product means one of its factors is zero.",
+          "eq": "x = 2 or x = 3",
+          "math": {
+            "latex": "x=2\\quad\\text{or}\\quad x=3",
+            "display": true,
+            "fallback": "x = 2 or x = 3"
+          }
+        },
+        {
+          "en": "Both solutions are natural numbers, and there are exactly two members.",
+          "eq": "B = {2, 3}; n(B) = 2",
+          "math": {
+            "latex": "\\begin{aligned}B&=\\{2,3\\}\\\\n(B)&=2\\end{aligned}",
+            "display": true,
+            "fallback": "B = {2, 3}; n(B) = 2"
+          }
+        }
+      ],
+      "answer": "Finite (B = {2, 3})",
+      "answerMath": {
+        "latex": "B=\\{2,3\\}\\quad\\text{finite}",
+        "display": true,
+        "fallback": "Finite (B = {2, 3})"
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+      "reference": "TN SCERT Standard Nine Mathematics revised 2025, Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. English source-image evidence inherited from PR #129; Tamil review pending.",
+      "sourceFidelity": {
+        "status": "English audited in PR #129; no new visual check in this PR",
+        "englishPdfPages": [
+          17,
+          18
+        ],
+        "tamilEditorial": "pending"
+      },
+      "translationReview": "pending",
+      "sourceNotationNote": "Restore the printed superscript ²; flattened PDF text can show x2."
+    }
+  ]
+}
