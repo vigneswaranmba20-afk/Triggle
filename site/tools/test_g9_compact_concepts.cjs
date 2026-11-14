@@ -10,5 +10,11 @@ assert.match(css, /@media\s*\(max-width:800px\)/, 'Mobile layout breakpoint requ
 assert.match(css, /\.chapter-hub:has\(\.sp2-journey\)/, 'Scope chapter overrides to journey');
 assert.match(css, /\.chapter-hub \.sp2-journey \.sp2-journey-controls button\s*\{[^}]*min-height:44px/s, 'Navigation touch targets must remain at least 44px');
 assert.match(css, /\.chapter-hub \.sp2-journey \.sp2-formula\s*\{[^}]*padding:10px 12px/s, 'Math formula remains padded');
-assert.doesNotMatch(css.slice(css.indexOf('Grade 9 Set Language concepts: mobile-first density pass')), /display:\s*none\s*!important/, 'Do not conceal lesson or navigation');
+const legacySection=css.slice(css.indexOf('Grade 9 Set Language concepts: mobile-first density pass'),css.indexOf('Math-First Learning Canvas'));
+assert.doesNotMatch(legacySection, /display:\s*none\s*!important/, 'Earlier density rules must not hide student content');
+const journey=fs.readFileSync(path.join(__dirname, '../assets/set-language-journey.js'), 'utf8');
+assert.match(journey, /data-idea-picker/, 'All seven concepts have one accessible picker');
+assert.match(journey, /sp2-g9-ideas/, 'Idea list is named and linked');
+assert.match(journey, /sessionStorage\.setItem\(ACTIVE_STAGE/, 'Language switches preserve the active idea');
+assert.match(css, /\.sp2-journey \.sp2-nav\[hidden\]\{display:none!important\}/, 'Collapsed idea menu must be visually hidden');
 console.log('Grade 9 compact concepts CSS contract passed');

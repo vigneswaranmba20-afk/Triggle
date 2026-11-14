@@ -5,6 +5,7 @@
   const book=window.TRIGGLE_SET_PATH;
   if(!book || book.chapterId!=='g9-ch1')return;
   const STORAGE='triggle.g9.set-path.v1';
+  const ACTIVE_STAGE='triggle.g9.set-path.active.v1';
   const pick=(v,l)=>typeof v==='string'?v:(v?.[l]||v?.en||'');
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const plain=s=>Array.isArray(s)?s.map(plain).join(''):typeof s==='object'?(s?.fallback||''):String(s??'');
@@ -12,7 +13,7 @@
   const words={
     en:{label:'YOUR SHORT LEARNING PATH',title:'Build Set Language, one idea at a time',
       intro:'Seven short explorations follow the 2025 textbook. Choose one, try it, then practise on paper. You can stop whenever you understand.',
-      state:'Ideas checked on this device',source:'Textbook section',enPage:'English page',taPage:'Tamil page',
+      state:'Ideas checked on this device',learned:'learned',source:'Textbook section',enPage:'English page',taPage:'Tamil page',
       select:'Pick an idea',try:'Try a quick check',hint:'One clue',why:'Why does this work?',
       correct:'You got it. This idea is ready for paper practice.',retry:'Not yet. Try the clue, then choose again.',
       paper:'Now put the phone down: one paper task',tryVenn:'Open the interactive Venn diagram ↓',
@@ -29,7 +30,7 @@
        questionLabel:'CURRENT QUESTION',nextPage:'Next page',backChapter:'Back to Chapter 1',sliderTip:'Drag left or right (or use arrow keys) to change how many students are in BOTH groups. Tap − or + to change one student at a time. Watch the numbers and equation update.',sliderFormula:(both,union,neither)=>[{latex:'A\\text{ or }B=14+11-'+both+'='+union,fallback:`A or B = 14 + 11 − ${both} = ${union}`},'. ',{latex:'\\text{Neither}=30-'+union+'='+neither,fallback:`Neither = 30 − ${union} = ${neither}`},'. The overlap was counted twice, so subtract it once.']},
     ta:{label:'சிறிய கற்றல் பாதை',title:'கண மொழியை ஒவ்வொரு கருத்தாகக் கற்போம்',
       intro:'2025 பாடநூலை அடிப்படையாகக் கொண்ட ஏழு சிறு ஆராய்ச்சிகள். ஒன்றைத் தேர்ந்து முயலுங்கள்; பிறகு தாளில் பயிற்சி செய்யுங்கள்.',
-      state:'இந்த சாதனத்தில் சரிபார்த்த கருத்துகள்',source:'பாடநூல் பகுதி',enPage:'ஆங்கிலம் பக்கம்',taPage:'தமிழ் பக்கம்',
+      state:'இந்த சாதனத்தில் சரிபார்த்த கருத்துகள்',learned:'கற்றவை',source:'பாடநூல் பகுதி',enPage:'ஆங்கிலம் பக்கம்',taPage:'தமிழ் பக்கம்',
       select:'ஒரு கருத்தைத் தேர்ந்தெடுக்கவும்',try:'ஒரு சிறிய வினா',hint:'ஒரு குறிப்பு',why:'இது ஏன் சரி?',
       correct:'சரி! இப்போது தாளில் நீங்களே முயலலாம்.',retry:'இன்னும் இல்லை. குறிப்பைப் பார்த்து மீண்டும் முயலுங்கள்.',
       paper:'கைப்பேசியை வைத்துவிட்டு தாளில் செய்யுங்கள்',tryVenn:'வென் பட ஆய்வகத்தைத் திறக்க ↓',
@@ -56,27 +57,41 @@
     if(!container||chapter?.id!=='g9-ch1')return false;
     const lang=language==='ta'?'ta':'en',t=words[lang],done=load();
     let active=0;
+    try{
+      const stored=Number(sessionStorage.getItem(ACTIVE_STAGE));
+      if(Number.isInteger(stored)&&stored>=0&&stored<book.stages.length)active=stored;
+    }catch{}
     const root=document.createElement('section');
     root.className='sp2-journey';
     root.setAttribute('aria-label',t.title);
-    root.innerHTML='<div class="sp2-kicker">'+esc(t.label)+'</div>'+
-      '<h3>'+esc(t.title)+'</h3><p class="sp2-intro">'+esc(t.intro)+'</p>'+
-      '<p class="sp2-progress" role="status" aria-live="polite" data-progress></p>'+
-      '<div class="sp2-journey-controls" role="group" aria-label="'+esc(t.select)+'">'+
-      '<button type="button" data-journey-prev>'+esc('← '+t.previousIdea)+'</button>'+
-      '<span data-journey-index role="status" aria-live="polite"></span>'+
-      '<button type="button" data-journey-next>'+esc(t.nextIdea+' →')+'</button></div>'+
-      '<p class="sp2-navigation-tip">'+esc(t.navTip)+'</p>'+
-      '<div class="sp2-nav" role="group" aria-label="'+esc(t.select)+'" data-nav></div>'+
-      '<div class="sp2-panel" data-panel></div>'+ 
-       '<nav class="sp2-journey-footer" aria-label="'+esc(t.select)+'">'+
-       '<button type="button" class="sp2-footer-prev" data-footer-prev>'+esc('← '+t.previousIdea)+'</button>'+
-       '<button type="button" class="sp2-footer-next" data-footer-next></button></nav>'+
+    root.innerHTML='<div class="sp2-learning-toolbar">'+
+      '<button type="button" class="sp2-idea-picker" data-idea-picker aria-controls="sp2-g9-ideas" aria-expanded="false" aria-label="'+esc(t.select)+'">'+
+      '<span data-journey-index></span><span class="sp2-picker-chevron" aria-hidden="true">⌄</span></button>'+
+      '<span class="sp2-progress" role="status" aria-live="polite" data-progress></span></div>'+
+      '<div class="sp2-nav" id="sp2-g9-ideas" role="group" aria-label="'+esc(t.select)+'" data-nav hidden></div>'+
+      '<div class="sp2-panel" data-panel></div>'+
+      '<nav class="sp2-journey-footer" aria-label="'+esc(t.select)+'">'+
+      '<button type="button" class="sp2-footer-prev" data-footer-prev>'+esc('← '+t.previousIdea)+'</button>'+
+      '<button type="button" class="sp2-footer-next" data-footer-next></button></nav>'+
       '<p class="sp2-private">'+esc(t.saved)+'</p>';
     container.append(root);
     const nav=root.querySelector('[data-nav]'),panel=root.querySelector('[data-panel]');
+    const picker=root.querySelector('[data-idea-picker]');
+    function closePicker(refocus=false){
+      nav.hidden=true;
+      picker.setAttribute('aria-expanded','false');
+      if(refocus)picker.focus();
+    }
+    picker.addEventListener('click',()=>{
+      const open=nav.hidden;
+      nav.hidden=!open;
+      picker.setAttribute('aria-expanded',String(open));
+    });
+    nav.addEventListener('keydown',event=>{
+      if(event.key==='Escape'){event.preventDefault();closePicker(true);}
+    });
     function updateProgress(){
-      root.querySelector('[data-progress]').textContent=t.state+': '+done.size+' / '+book.stages.length;
+      root.querySelector('[data-progress]').textContent=done.size+' / '+book.stages.length+' '+t.learned;
       nav.querySelectorAll('button').forEach(button=>{
         const stage=book.stages[Number(button.dataset.index)];
         button.classList.toggle('sp2-done',done.has(stage.id));
@@ -86,13 +101,9 @@
         button.querySelector('.sp2-done-mark').textContent=done.has(stage.id)?'✓':'';
       });
       root.querySelector('[data-journey-index]').textContent=t.position(active+1,book.stages.length);
-      root.querySelector('[data-journey-prev]').disabled=active===0;
-      root.querySelector('[data-journey-next]').disabled=active===book.stages.length-1;
-       root.querySelector('[data-footer-prev]').disabled=active===0;
+      root.querySelector('[data-footer-prev]').disabled=active===0;
        root.querySelector('[data-footer-next]').textContent=active===book.stages.length-1?t.backChapter+' →':t.nextPage+' →';
        root.querySelector('[data-footer-next]').classList.toggle('is-return',active===book.stages.length-1);
-      const selected=nav.querySelector('.sp2-current');
-      if(selected)nav.scrollLeft=Math.max(0,selected.offsetLeft-nav.offsetLeft-8);
     }
     book.stages.forEach((stage,i)=>{
       const button=document.createElement('button');
@@ -101,8 +112,6 @@
       button.addEventListener('click',()=>show(i,true));
       nav.append(button);
     });
-    root.querySelector('[data-journey-prev]').addEventListener('click',()=>show(active-1,true));
-    root.querySelector('[data-journey-next]').addEventListener('click',()=>show(active+1,true));
      root.querySelector('[data-footer-prev]').addEventListener('click',()=>show(active-1,true));
      root.querySelector('[data-footer-next]').addEventListener('click',()=>{
        if(active===book.stages.length-1){if(typeof onBack==='function')onBack();return;}
@@ -273,17 +282,22 @@
     function show(index,focus=false){
       if(index<0||index>=book.stages.length)return;
       active=index;
+      closePicker();
+      try{sessionStorage.setItem(ACTIVE_STAGE,String(index));}catch{}
       const stage=book.stages[index];
       const demoTitle=({membership:t.membership,forms:t.forms,types:t.types,
         venn:t.tryVenn,properties:t.properties,demorgan:t.law,count:t.count})[stage.visual]||t.select;
+      // Keep the textbook rule unchanged; only its mobile presentation uses
+      // aligned two-line KaTeX to avoid a clipped long equation.
+      const visibleRule=stage.visual==='count'
+        ? {latex:String.raw`\begin{aligned}n(A\cup B)&=n(A)+n(B)\\&\quad-n(A\cap B)\end{aligned}`,fallback:stage.rule}
+        : stage.rule;
       panel.innerHTML=
-        '<div class="sp2-stage-reference">'+esc(t.source)+' '+esc(stage.section)+
-        ' · '+esc(t.enPage)+' '+stage.page.en+' · '+esc(t.taPage)+' '+stage.page.ta+'</div>'+
         '<div class="sp2-concept-heading" tabindex="-1">'+
          '<h4>'+esc((index+1)+'. '+pick(stage.title,lang))+'</h4></div>'+
         '<p class="sp2-idea">'+htmlMath(pick(stage.idea,lang))+'</p>'+
         '<p class="sp2-example">'+htmlMath(pick(stage.example,lang))+'</p>'+
-        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(stage.rule)+'</div>'+
+        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(visibleRule)+'</div>'+
         demoShell(demoTitle)+
         '<div class="sp2-recall"><h5>'+esc(t.try)+'</h5>'+
         '<p class="sp2-concept-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p>'+
@@ -294,7 +308,9 @@
         '<div class="sp2-why" data-why hidden>'+htmlMath(pick(stage.why,lang))+'</div></div>'+
         '<details class="sp2-paper"><summary>✎ '+esc(t.paper)+'</summary>'+
         '<p>'+htmlMath(pick(stage.paper,lang))+'</p></details>'+
-        '<div data-extra-practice></div>'+ (stage.id==='cardinality'?'<div data-hard></div>':'');
+        '<div data-extra-practice></div>'+ (stage.id==='cardinality'?'<div data-hard></div>':'')+
+        '<div class="sp2-stage-reference">'+esc(t.source)+' '+esc(stage.section)+
+        ' · '+esc(t.enPage)+' '+stage.page.en+' · '+esc(t.taPage)+' '+stage.page.ta+'</div>';
       const answers=panel.querySelector('[data-answers]');
       let wrongAttempts=0;
       stage.choices.forEach((choice,i)=>{
@@ -321,7 +337,7 @@
       updateProgress();
       if(focus){const selected=panel.querySelector('.sp2-concept-heading');selected?.scrollIntoView({behavior:'auto',block:'start'});selected?.focus({preventScroll:true});}
     }
-    show(0);
+    show(active);
     return true;
   }
   window.TriggleSetJourney=Object.freeze({mount});

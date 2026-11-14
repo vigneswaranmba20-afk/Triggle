@@ -12,13 +12,35 @@ for(const width of [320,360,393,430]){await page.setViewportSize({width,height:8
 for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
  await page.goto(app.base+'/index.html?class=9&chapter=g9-ch'+chapter+'&section=concepts');await page.locator(lang==='en'?'#langEn':'#langTa').click();
  const nav=await page.locator('.sp2-nav [data-index]').count();
+ if(chapter===1){
+  assert.equal(nav,7,'Seven concepts remain accessible');
+  assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'false','Idea menu starts collapsed');
+  const first=await page.locator('.sp2-concept-heading').boundingBox();
+  assert(first&&first.y>=0&&first.y<=page.viewportSize().height*.7,'First maths concept is above the fold '+width+' '+lang+' at '+first?.y);
+  if(width===360||width===393){
+   const directory=path.resolve('screenshots/g9-compact-concepts');
+   await fs.mkdir(directory,{recursive:true});
+   await page.screenshot({path:path.join(directory,'first-fold-'+width+'-'+lang+'.png'),fullPage:false});
+  }
+ }
  for(let index=0;index<Math.max(nav,1);index++){
-  if(nav)await page.locator('.sp2-nav [data-index]').nth(index).click();
+  if(nav){
+   if(chapter===1){
+    await page.locator('[data-idea-picker]').click();
+    assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'true');
+   }
+   await page.locator('.sp2-nav [data-index]').nth(index).click();
+   if(chapter===1)assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'false');
+  }
   await check(chapter+'/'+index+' '+lang+' '+width);
+  if(chapter===1&&index===6){
+   const formula=await page.locator('.sp2-formula').evaluate(el=>({width:el.clientWidth,scroll:el.scrollWidth}));
+   assert(formula.scroll<=formula.width+1,'Cardinality KaTeX fits without horizontal clipping '+lang+' '+width+' '+JSON.stringify(formula));
+  }
   if(chapter===1){
    const layout=await page.locator('.sp2-journey').evaluate(el=>{
-    const css=getComputedStyle(el),nav=el.querySelector('.sp2-journey-controls button');
-    const heading=el.querySelector('h3'),panel=el.querySelector('.sp2-panel');
+    const css=getComputedStyle(el),nav=el.querySelector('[data-idea-picker]');
+    const heading=el.querySelector('.sp2-concept-heading h4'),panel=el.querySelector('.sp2-panel');
     return {padding:parseFloat(css.paddingLeft),navHeight:nav?.getBoundingClientRect().height,
       headingVisible:!!heading?.getClientRects().length,panelVisible:!!panel?.getClientRects().length,
       viewportWidth:document.documentElement.clientWidth};
@@ -26,6 +48,13 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
    assert(layout.padding<=14,'Compact concepts padding '+width+' '+lang);
    assert(layout.navHeight>=44,'Concept navigation touch height '+width+' '+lang);
    assert(layout.headingVisible&&layout.panelVisible,'Concept heading and lesson remain visible '+width+' '+lang);
+   if(index===1){
+    const alternate=lang==='en'?'#langTa':'#langEn';
+    await page.locator(alternate).click();
+    assert.equal(await page.locator('.sp2-nav [aria-current="step"]').getAttribute('data-index'),'1','Active concept survives language switch');
+    await page.locator(lang==='en'?'#langEn':'#langTa').click();
+    assert.equal(await page.locator('.sp2-nav [aria-current="step"]').getAttribute('data-index'),'1','Restoring language preserves concept');
+   }
    if(index===0 && (width===360||width===393)){
     const directory=path.resolve('screenshots/g9-compact-concepts');
     await fs.mkdir(directory,{recursive:true});

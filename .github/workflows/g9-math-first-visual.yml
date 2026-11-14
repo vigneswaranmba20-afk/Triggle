@@ -1,0 +1,34 @@
+name: Grade 9 math-first canvas visual regression
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - '.github/workflows/g9-math-first-visual.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mobile-concepts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify 320, 360, 393 and 430px concepts, Tamil and English
+        run: node site/tools/test_g9_concepts_typography_browser.cjs
+        env:
+          CHROMIUM_PATH: ''
+      - name: Preserve actual initial mobile viewport and full-page screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: g9-math-first-visual-review
+          path: screenshots/g9-compact-concepts/
+          if-no-files-found: warn
