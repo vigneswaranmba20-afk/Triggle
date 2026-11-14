@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "title": "Grade 9 / Set Language / Exercise 1.2 source and mathematical audit recovery",
+  "date": "2026-11-14",
+  "grade": 9,
+  "chapter": "1",
+  "exercise": "1.2",
+  "sourceScope": "EXERCISE_ONLY_NOT_CHAPTER_OR_GRADE",
+  "status": "SOURCE_IMAGE_AUDIT_RECOVERED_MATH_CHECKS_RECORDED_NOT_REGISTERED",
+  "numberedQuestions": 10,
+  "uniqueTextbookParts": 34,
+  "mediumRepresentations": 68,
+  "countsDoNotMeasureDeployment": true,
+  "sourceBook": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "edition": "2025 revised",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "visualAuditFromPr": 129,
+      "printedPages": [
+        11,
+        12
+      ],
+      "pdfPages": [
+        17,
+        18
+      ],
+      "reviewBasis": "Source page images verified in earlier PR #129; existing evidence recovered, not newly re-rendered"
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "edition": "2025 revised",
+      "textLayerReadOn": "2026-11-14",
+      "observedExerciseLabels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "printedPages": [
+        13,
+        14
+      ],
+      "pdfPages": null,
+      "imageVerifiedInThisChange": false,
+      "editorialReview": "DEFERRED_NOT_APPROVED",
+      "note": "Tamil text layer matches the numbered question/part structure but visually ambiguous mathematical fraction layout has not been newly inspected"
+    }
+  },
+  "questionPartStructure": [
+    {
+      "number": "1",
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv",
+        "v"
+      ],
+      "printedPages": [
+        11
+      ],
+      "sourcePdfPages": [
+        17
+      ],
+      "visualEvidence": "INHERITED_FROM_20261110_PR129_ENGLISH_SOURCE_IMAGE_REVIEW",
+      "mathAudit": "INHERITED_34_PART_REASONED_SOLUTION_AND_EXECUTABLE_CHECKS",
+      "appRegistration": "NOT_ESTABLISHED_BY_THIS_INVENTORY"
+    },
+    {
+      "number": "2",
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "printedPages": [
+        11
+      ],
+      "sourcePdfPages": [
+        17
+      ],
+      "visualEvidence": "INHERITED_FROM_20261110_PR129_ENGLISH_SOURCE_IMAGE_REVIEW",
+      "mathAudit": "INHERITED_34_PART_REASONED_SOLUTION_AND_EXECUTABLE_CHECKS",
+      "appRegistration": "NOT_ESTABLISHED_BY_THIS_INVENTORY"
+    },
+    {
+      "number": "3",
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "printedPages": [
+        12
+      ],
+      "sourcePdfPages": [
+        18
+      ],
+      "visualEvidence": "INHERITED_FROM_20261110_PR129_ENGLISH_SOURCE_IMAGE_REVIEW",
+      "mathAudit": "INHERITED_34_PART_REASONED_SOLUTION_AND_EXECUTABLE_CHECKS",
+      "appRegistration": "NOT_ESTABLISHED_BY_THIS_INVENTORY"
+    },
+    {
+      "number": "4",
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "printedPages": [
+        12
+      ],
+      "sourcePdfPages": [
+        18
+      ],
+      "visualEvidence": "INHERITED_FROM_20261110_PR129_ENGLISH_SOURCE_IMAGE_REVIEW",
+      "mathAudit": "INHERITED_34_PART_REASONED_SOLUTION_AND_EXECUTABLE_CHECKS",
+      "appRegistration": "NOT_ESTABLISHED_BY_THIS_INVENTORY"
+    },
+    {
+      "number": "5",
+      "parts": [
+        "i",
+        "ii",
+        "iii"
+      ],
+      "printedPages": [
+        12
+      ],
+      "sourcePdfPages": [
+        18
+      ],
+      "visualEvidence": "INHERITED_FROM_20261110_PR129_ENGLISH_SOURCE_IMAGE_REVIEW",
+      "mathAudit": "INHERITED_34_PART_REASONED_SOLUTION_AND_EXECUTABLE_CHECKS",
+      "appRegistration": "NOT_ESTABLISHED_BY_THIS_INVENTORY"
+    },
+    {
+      "number": "6",
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "printedPages": [
+        12
+      ],
+      "sourcePdfPages": [
+        18
+      ],
+      "visualEvidence": "INHERITED_FROM_20261110_PR129_ENGLISH_SOURCE_IMAGE_REVIEW",
+      "mathAudit": "INHERITED_34_PART_REASONED_SOLUTION_AND_EXECUTABLE_CHECKS",
+      "appRegistration": "NOT_ESTABLISHED_BY_THIS_INVENTORY"
+    },
+    {
+      "number": "7",
+      "parts": [
+        "whole"
+      ],
+      "printedPages": [
+        12
+      ],
+      "sourcePdfPages": [
+        18
+      ],
+      "visualEvidence": "INHERITED_FROM_20261110_PR129_ENGLISH_SOURCE_IMAGE_REVIEW",
+      "mathAudit": "INHERITED_34_PART_REASONED_SOLUTION_AND_EXECUTABLE_CHECKS",
+      "appRegistration": "NOT_ESTABLISHED_BY_THIS_INVENTORY"
+    },
+    {
+      "number": "8",
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "printedPages": [
+        12
+      ],
+      "sourcePdfPages": [
+        18
+      ],
+      "visualEvidence": "INHERITED_FROM_20261110_PR129_ENGLISH_SOURCE_IMAGE_REVIEW",
+      "mathAudit": "INHERITED_34_PART_REASONED_SOLUTION_AND_EXECUTABLE_CHECKS",
+      "appRegistration": "NOT_ESTABLISHED_BY_THIS_INVENTORY"
+    },
+    {
+      "number": "9",
+      "parts": [
+        "i",
+        "ii"
+      ],
+      "printedPages": [
+        12
+      ],
+      "sourcePdfPages": [
+        18
+      ],
+      "visualEvidence": "INHERITED_FROM_20261110_PR129_ENGLISH_SOURCE_IMAGE_REVIEW",
+      "mathAudit": "INHERITED_34_PART_REASONED_SOLUTION_AND_EXECUTABLE_CHECKS",
+      "appRegistration": "NOT_ESTABLISHED_BY_THIS_INVENTORY"
+    },
+    {
+      "number": "10",
+      "parts": [
+        "i",
+        "ii",
+        "iii"
+      ],
+      "printedPages": [
+        12
+      ],
+      "sourcePdfPages": [
+        18
+      ],
+      "visualEvidence": "INHERITED_FROM_20261110_PR129_ENGLISH_SOURCE_IMAGE_REVIEW",
+      "mathAudit": "INHERITED_34_PART_REASONED_SOLUTION_AND_EXECUTABLE_CHECKS",
+      "appRegistration": "NOT_ESTABLISHED_BY_THIS_INVENTORY"
+    }
+  ],
+  "requiredExerciseFigures": 0,
+  "requiredExerciseTables": 0,
+  "sourceFidelityFlags": [
+    {
+      "id": "q1-iii",
+      "issue": "PDF text layer reverses stacked fraction spatial order",
+      "verifiedFormula": "4/(3n)",
+      "status": "SOURCE_IMAGE_RESOLVED_IN_PR129"
+    },
+    {
+      "id": "q2-iv",
+      "issue": "PDF text layer flattens exponent",
+      "verifiedFormula": "x²−5x+6=0",
+      "status": "SOURCE_IMAGE_RESOLVED_IN_PR129"
+    },
+    {
+      "id": "q7",
+      "issue": "Nested set notation must preserve {a,{a,b}} and four subsets",
+      "status": "SOURCE_IMAGE_RESOLVED_IN_PR129"
+    },
+    {
+      "id": "q9-ii",
+      "issue": "Exponent on set-builder variable must be preserved",
+      "verifiedFormula": "x²≤100",
+      "status": "SOURCE_IMAGE_RESOLVED_IN_PR129"
+    }
+  ],
+  "evidence": {
+    "historicalPr": "https://github.com/vigneswaranmba20-afk/Triggle/pull/129",
+    "recoveredAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
+    "executableMathCheck": "docs/curriculum/grade-9/tests/ex1-2-source-audit-math.cjs"
+  },
+  "releaseReadiness": {
+    "sourceInventory": "ENGLISH_VISUALLY_REVIEWED_IN_PR129",
+    "sourceMathEvidence": "34_TASKS_AUDITED_IN_PR129",
+    "independentMathChecks": "34_ASSERTIONS_IN_REPO",
+    "validatedProductionBatch": false,
+    "studentRecordsIntegratedInThisChange": 0,
+    "tamilEditorialReview": false,
+    "productionDeployment": false
+  },
+  "nextActions": [
+    "Reconcile 34 tasks with every current registered Grade 9 record and overlapping drafts before changing IDs.",
+    "Convert source-audited questions into current curriculum-bulk schema with exact mapping and independent maths verifier.",
+    "Register checked English-only question records through current modules with full offline KaTeX.",
+    "Pass complete automated tests, Android viewport checks, and GitHub Pages live verification after any student release."
+  ],
+  "limitations": [
+    "Do not add these 34 to the number of student-live tasks, nor treat the 34 checked answers as 34 integrated question records.",
+    "Source-image evidence for English is inherited from old PR #129; this merge does not itself repeat the visual review.",
+    "The Tamil text-layer exercise structure is not a completed Tamil translation, source-page-image review, or professional approval.",
+    "Grade 9 chapter and whole-grade total question/part denominators remain unverified."
+  ]
+}
