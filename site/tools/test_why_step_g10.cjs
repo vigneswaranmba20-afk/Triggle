@@ -30,7 +30,7 @@ for(const id of ids){
   assert.ok(entry.expected.length>=10&&item.steps[entry.step].en.includes(entry.expected),'Stale explanation '+id);
   for(const lang of ['en','ta']){
    assert.ok(typeof entry[lang]==='string'&&entry[lang].length>=35,'Missing '+lang+' note '+id);
-   assert.ok(!/<\\/?[A-Za-z][^>]*>/.test(entry[lang]),'No HTML tags in hint '+id);
+   assert.ok(!/<[A-Za-z][^>]*>/.test(entry[lang]),'No HTML tags in hint '+id);
   }
   if(entry.math){
    assert.equal(entry.math.display,true);
