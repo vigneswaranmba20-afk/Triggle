@@ -13,8 +13,11 @@ assert.match(css, /\.chapter-hub \.sp2-journey \.sp2-formula\s*\{[^}]*padding:10
 const legacySection=css.slice(css.indexOf('Grade 9 Set Language concepts: mobile-first density pass'),css.indexOf('Math-First Learning Canvas'));
 assert.doesNotMatch(legacySection, /display:\s*none\s*!important/, 'Earlier density rules must not hide student content');
 const journey=fs.readFileSync(path.join(__dirname, '../assets/set-language-journey.js'), 'utf8');
-assert.match(journey, /data-idea-picker/, 'All seven concepts have one accessible picker');
-assert.match(journey, /sp2-g9-ideas/, 'Idea list is named and linked');
-assert.match(journey, /sessionStorage\.setItem\(ACTIVE_STAGE/, 'Language switches preserve the active idea');
-assert.match(css, /\.sp2-journey \.sp2-nav\[hidden\]\{display:none!important\}/, 'Collapsed idea menu must be visually hidden');
+assert.match(journey, /data-index-view/, 'Concepts must open on an index page');
+assert.match(journey, /data-detail-view/, 'Each idea has its own detail view');
+assert.match(journey, /data-back-index/, 'Lesson has a Back to concepts button');
+assert.match(journey, /initialConcept=null,onConcept=null/, 'Deep links and language switch must preserve the selected idea');
+assert.doesNotMatch(journey, /data-idea-picker/, 'No dropdown or carousel picker in lessons');
+assert.match(css, /\.sp2-detail-view\[hidden\]\{display:none!important\}/, 'Inactive lesson view must be hidden');
+assert.match(css, /sp2-journey\[data-view="lesson"\]/, 'Duplicate chapter Back button must disappear inside an idea');
 console.log('Grade 9 compact concepts CSS contract passed');
