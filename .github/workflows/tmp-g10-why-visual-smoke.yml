@@ -1,0 +1,27 @@
+name: Grade 10 Why targeted browser proof (temporary)
+on:
+  push:
+    branches: [feat/g10-why-comprehensive-20261114]
+    paths: ['.github/workflows/tmp-g10-why-visual-smoke.yml']
+permissions:
+  contents: read
+jobs:
+  smoke:
+    name: Targeted Grade 10 Why browser validation
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: node site/tools/test_why_step_g10_browser.cjs
+      - run: node site/tools/test_why_step_g10_coverage_browser.cjs
+      - name: Save Q4 visual proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: g10-why-q4-targeted-390
+          path: screenshots/g10-why-q4-390.png
+          if-no-files-found: ignore
