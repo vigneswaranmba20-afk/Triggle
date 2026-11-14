@@ -1,0 +1,571 @@
+{
+  "generatedAt": "2026-11-14",
+  "grade": 9,
+  "source": "existing authored student-facing content",
+  "totalAuthored": 388,
+  "eligible": 313,
+  "byChapter": {
+    "1": 31,
+    "2": 121,
+    "3": 6,
+    "4": 12,
+    "5": 9,
+    "6": 40,
+    "7": 37,
+    "8": 31,
+    "9": 26
+  },
+  "byConcept": {
+    "trigSides": 12,
+    "pythagoras": 3,
+    "trigRatio": 25,
+    "reciprocal": 1,
+    "union": 1,
+    "radical": 22,
+    "factor": 1,
+    "equation": 2,
+    "angles": 3,
+    "distance": 6,
+    "triangleArea": 16,
+    "mean": 17,
+    "probability": 16,
+    "realLine": 22,
+    "rational": 12,
+    "rounding": 3,
+    "scientific": 12,
+    "irrational": 8,
+    "between": 2,
+    "exponent": 16,
+    "rootPower": 8,
+    "likeSurds": 4,
+    "conjugate": 12,
+    "prime": 2,
+    "membership": 9,
+    "roster": 14,
+    "setBuilder": 5,
+    "wordModel": 2,
+    "identity": 1,
+    "theorem": 7,
+    "parallel": 1,
+    "coordinates": 3,
+    "heron": 3,
+    "perimeter": 3,
+    "conversion": 6,
+    "volume": 9,
+    "grouped": 9,
+    "median": 5,
+    "countOutcomes": 3,
+    "experimentalP": 1,
+    "complementP": 5,
+    "mutuallyExclusive": 1
+  },
+  "fallbacks": [
+    {
+      "id": "c9-exercise-6-2-q2-i",
+      "chapter": "6",
+      "title": "Evaluate a three-part expression",
+      "step": "Replace the six functions with their known values."
+    },
+    {
+      "id": "c9-exercise-6-2-q2-ii",
+      "chapter": "6",
+      "title": "Multiply complementary expressions",
+      "step": "Substitute into each bracket without changing its term order."
+    },
+    {
+      "id": "c9-exercise-6-5-q8",
+      "chapter": "6",
+      "title": "Two cancelling complementary pairs",
+      "step": "The first two angles add to 90°, so the first two values are equal."
+    },
+    {
+      "id": "g9-ch2-ex2-q2",
+      "chapter": "2",
+      "title": "Exercise 2.2 · Question 2",
+      "step": "Divide one by thirteen, keeping leading zeros in the repeating block."
+    },
+    {
+      "id": "g9-ch2-ex6-q3-ii",
+      "chapter": "2",
+      "title": "Surds · Exercise 2.6 · Q3 (ii)",
+      "step": "Factor out square numbers to produce the given root values."
+    },
+    {
+      "id": "g9-ch2-ex6-q5-i",
+      "chapter": "2",
+      "title": "Surds · Exercise 2.6 · Q5 (i)",
+      "step": "A pure surd has coefficient 1 in simplified radical form."
+    },
+    {
+      "id": "g9-ch2-ex6-q5-ii",
+      "chapter": "2",
+      "title": "Surds · Exercise 2.6 · Q5 (ii)",
+      "step": "A pure surd has coefficient 1 in simplified radical form."
+    },
+    {
+      "id": "g9-ch2-ex9-q4",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 4",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q6",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 6",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q7",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 7",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q8",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 8",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q10",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 10",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q11",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 11",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q13",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 13",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q14",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 14",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q15",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 15",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q16",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 16",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q17",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 17",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q18",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 18",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q19",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 19",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch2-ex9-q20",
+      "chapter": "2",
+      "title": "Real Numbers · MCQ 20",
+      "step": "Read the mathematical property, not just the form of the expression."
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-i",
+      "chapter": "1",
+      "title": "Set membership: fill the blank",
+      "step": "Inspect the given set A = {0, 3, 5, 8}."
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-ii",
+      "chapter": "1",
+      "title": "Set membership: fill the blank",
+      "step": "Inspect the given set C = {12, 14, 18, 20}."
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-iii",
+      "chapter": "1",
+      "title": "Set membership: fill the blank",
+      "step": "Inspect the given set B = {2, 4, 6, 10}."
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-iv",
+      "chapter": "1",
+      "title": "Set membership: fill the blank",
+      "step": "Inspect the given set B = {2, 4, 6, 10}."
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-i",
+      "chapter": "1",
+      "title": "Write in descriptive form",
+      "step": "Read the three members: January, June, and July."
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-iv",
+      "chapter": "1",
+      "title": "Write in descriptive form",
+      "step": "The rule describes letters of the English alphabet."
+    },
+    {
+      "id": "g9-ch3-ex3.1-q12",
+      "chapter": "3",
+      "title": "Degree of a product",
+      "step": "A polynomial of degree 1 has a nonzero x coefficient, and one of degree 2 has a nonzero x² coefficient."
+    },
+    {
+      "id": "g9-ch4-ex4.2-q1",
+      "chapter": "4",
+      "title": "Four angles of a quadrilateral",
+      "step": "Represent the four angles by 2x, 4x, 5x and 7x."
+    },
+    {
+      "id": "g9-ch5-ex5.2-q5",
+      "chapter": "5",
+      "title": "Verify parallelograms",
+      "step": "Opposite sides of a quadrilateral are equal and parallel if their direction vectors match."
+    },
+    {
+      "id": "g9-ch7-ex7.2-q4",
+      "chapter": "7",
+      "title": "Cube TSA and LSA for three sides",
+      "step": "For a cube of side a, calculate all six faces and four lateral faces."
+    },
+    {
+      "id": "g9-ch8-ex8.4-q1",
+      "chapter": "8",
+      "title": "Lower limit from midpoint and upper limit",
+      "step": "The midpoint is half the sum of the class lower and upper limits."
+    },
+    {
+      "id": "g9-ch9-ex9.1-q4",
+      "chapter": "9",
+      "title": "Blue, Red and Green balls",
+      "step": "First find the number of green balls."
+    },
+    {
+      "id": "g9-ch9-ex9.1-q8",
+      "chapter": "9",
+      "title": "Goalkeeper and scoring",
+      "step": "There were 40 attempts, of which the goalkeeper stopped 32."
+    }
+  ],
+  "diagrams": 95,
+  "excluded": [
+    {
+      "id": "c9-example-6-1",
+      "kind": "reference"
+    },
+    {
+      "id": "c9-example-6-2",
+      "kind": "reference"
+    },
+    {
+      "id": "c9-example-6-3",
+      "kind": "reference"
+    },
+    {
+      "id": "c9-example-6-4",
+      "kind": "reference"
+    },
+    {
+      "id": "g9-ch2-example-1",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-2",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-3",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-4",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-5",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-6",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-7",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-8",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-9",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-10",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-11",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-12",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-13",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-14",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-15",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-16",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-17",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-18",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-19",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-20",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-21",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-22",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-23",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-24",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-25",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-26",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-27",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-28",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-29",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-30",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch2-example-31",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-1",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-2",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-3",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-4",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-5",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-6",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-7",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-8",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-9",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-10",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-11",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-12",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-13",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-14",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-15",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-16",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-17",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-18",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-19",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-20",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-21",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-22",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-23",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-24",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-25",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-26",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-27",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-28",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-29",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-30",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-31",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-32",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-33",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-34",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "c9-textbook-example-1-35",
+      "kind": "textbook-example"
+    },
+    {
+      "id": "g9-ch9-example-9.1",
+      "kind": "reference"
+    },
+    {
+      "id": "g9-ch9-example-9.2",
+      "kind": "reference"
+    },
+    {
+      "id": "g9-ch9-example-9.3",
+      "kind": "reference"
+    },
+    {
+      "id": "g9-ch9-example-9.4",
+      "kind": "reference"
+    },
+    {
+      "id": "g9-ch9-example-9.5",
+      "kind": "reference"
+    }
+  ]
+}
