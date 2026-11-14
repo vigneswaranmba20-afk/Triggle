@@ -1,7 +1,19 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {build}=require('./build_project_status.cjs'),model=require('../assets/project-model.js');
-const manifest=build();assert.deepEqual(manifest,require('../data/project-status.json'),'Regenerate project status from current validated sources');
+const manifest=build(),saved=require('../data/project-status.json');
+// A committed snapshot cannot contain its own commit SHA: committing that SHA creates
+// a different commit. Compare all source-derived curriculum data strictly, but validate
+// provenance metadata separately rather than requiring a self-referential SHA.
+const {sourceCommit:generatedCommit,updatedAt:generatedAt,...generatedData}=manifest;
+const {sourceCommit:snapshotCommit,updatedAt:snapshotAt,...snapshotData}=saved;
+assert.deepEqual(generatedData,snapshotData,'Regenerate source-derived curriculum data before release');
+for(const [label,sha] of [['generated',generatedCommit],['snapshot',snapshotCommit]])
+  assert.match(sha,/^[a-f0-9]{40}$/,'Invalid '+label+' provenance SHA');
+for(const [label,stamp] of [['generated',generatedAt],['snapshot',snapshotAt]])
+  assert(Number.isFinite(Date.parse(stamp)),'Invalid '+label+' provenance timestamp');
+// The snapshot is allowed to lag the head commit, but must never be future-dated.
+assert(Date.parse(snapshotAt)<=Date.now()+60000,'Snapshot provenance timestamp is in the future');
 assert.deepEqual(manifest.grades.map(g=>g.totalChapters),[9,8,12,12]);
 for(const g of manifest.grades){assert.equal(g.completedEnglishChapters+g.partialChapters+g.pendingChapters,g.totalChapters);assert.equal(g.coveragePercent,null);assert.equal(g.wholeGradeTaskDenominator,null);}
 const twelveExercises=manifest.grades.find(g=>g.grade===12).chapters[0].exercises;
