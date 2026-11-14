@@ -55,8 +55,13 @@ const records=[
           "en": [
             "At ",
             {
-              "latex": "B, AC",
-              "fallback": "B, AC"
+              "latex": "B",
+              "fallback": "B"
+            },
+            ", ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
             },
             " is opposite, ",
             {
@@ -187,15 +192,15 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Apply Pythagoras in ",
+            "Apply Pythagoras in triangle ",
             {
-              "latex": "\\text{triangle} ABD",
-              "fallback": "triangle ABD"
+              "latex": "ABD",
+              "fallback": "ABD"
             },
-            " to find the common ",
+            " to find the common height ",
             {
-              "latex": "\\text{height} AD",
-              "fallback": "height AD"
+              "latex": "AD",
+              "fallback": "AD"
             },
             "."
           ],
@@ -226,10 +231,10 @@ const records=[
               "latex": "AC",
               "fallback": "AC"
             },
-            " of the second right ",
+            " of the second right triangle ",
             {
-              "latex": "\\text{triangle} ADC",
-              "fallback": "triangle ADC"
+              "latex": "ADC",
+              "fallback": "ADC"
             },
             "."
           ],
@@ -255,10 +260,10 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "In ",
+            "In triangle ",
             {
-              "latex": "\\text{triangle} ABD",
-              "fallback": "triangle ABD"
+              "latex": "ABD",
+              "fallback": "ABD"
             },
             ", use opposite ",
             {
@@ -309,10 +314,10 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "In ",
+            "In triangle ",
             {
-              "latex": "\\text{triangle} ADC",
-              "fallback": "triangle ADC"
+              "latex": "ADC",
+              "fallback": "ADC"
             },
             ", use opposite ",
             {
@@ -716,14 +721,7 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": [
-            "Calculate the opposite side using Pythagoras. ",
-            {
-              "latex": "A \\text{length}",
-              "fallback": "A length"
-            },
-            " cannot be negative."
-          ],
+          "en": "Calculate the opposite side using Pythagoras. A length cannot be negative.",
           "ta": "பிதாகரஸ் தேற்றத்தால் எதிர்ப்பக்கத்தைக் காண்க. பக்க நீளம் எதிர்மறையாக இருக்க முடியாது."
         }
       },
@@ -1321,8 +1319,13 @@ const records=[
           ],
           "ta": [
             {
-              "latex": "ACD, BCD",
-              "fallback": "ACD, BCD"
+              "latex": "ACD",
+              "fallback": "ACD"
+            },
+            ", ",
+            {
+              "latex": "BCD",
+              "fallback": "BCD"
             },
             " ஆகியவை ",
             {
@@ -1341,10 +1344,10 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "The complete ",
+            "The complete triangle ",
             {
-              "latex": "\\text{triangle} ABC",
-              "fallback": "triangle ABC"
+              "latex": "ABC",
+              "fallback": "ABC"
             },
             " is also right angled at ",
             {
@@ -1428,10 +1431,10 @@ const records=[
               "latex": "\\alpha",
               "fallback": "α"
             },
-            " in ",
+            " in triangle ",
             {
-              "latex": "\\text{triangle} ACD",
-              "fallback": "triangle ACD"
+              "latex": "ACD",
+              "fallback": "ACD"
             },
             ", opposite = ",
             {
@@ -1482,10 +1485,10 @@ const records=[
               "latex": "\\beta",
               "fallback": "β"
             },
-            " in ",
+            " in triangle ",
             {
-              "latex": "\\text{triangle} BCD",
-              "fallback": "triangle BCD"
+              "latex": "BCD",
+              "fallback": "BCD"
             },
             ", adjacent = ",
             {
@@ -1541,10 +1544,10 @@ const records=[
               "latex": "C",
               "fallback": "C"
             },
-            " in ",
+            " in triangle ",
             {
-              "latex": "\\text{triangle} BCD",
-              "fallback": "triangle BCD"
+              "latex": "BCD",
+              "fallback": "BCD"
             },
             ", opposite = ",
             {
@@ -1593,12 +1596,7 @@ const records=[
           "latex": "25\\,\\mathrm{m}",
           "fallback": "25 m"
         },
-        " and reaches ",
-        {
-          "latex": "a \\text{height}",
-          "fallback": "a height"
-        },
-        " of ",
+        " and reaches a height of ",
         {
           "latex": "5\\,\\mathrm{m}",
           "fallback": "5 m"
@@ -3411,12 +3409,7 @@ const records=[
           "latex": "24'",
           "fallback": "24′"
         },
-        ". Calculate the triangle’",
-        {
-          "latex": "s",
-          "fallback": "s"
-        },
-        " area."
+        ". Calculate the triangle’s area."
       ],
       "ta": [
         "கர்ணம் ",
@@ -3491,12 +3484,7 @@ const records=[
           "latex": "A 5\\,\\mathrm{m}",
           "fallback": "A 5 m"
         },
-        " ladder rests against ",
-        {
-          "latex": "a \\text{wall}",
-          "fallback": "a wall"
-        },
-        ", with its foot ",
+        " ladder rests against a wall, with its foot ",
         {
           "latex": "4\\,\\mathrm{m}",
           "fallback": "4 m"
@@ -4732,12 +4720,7 @@ const records=[
     "id": "c9-4-4-practice-5",
     "questionMath": {
       "en": [
-        "Two angles of ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " are ",
+        "Two angles of a triangle are ",
         {
           "latex": "55^{\\circ}",
           "fallback": "55°"
@@ -17787,12 +17770,7 @@ const records=[
     "id": "g9-ch4-ex4.1-q2",
     "questionMath": {
       "en": [
-        "The angles of ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " are in the ratio ",
+        "The angles of a triangle are in the ratio ",
         {
           "latex": "1 : 2 : 3",
           "fallback": "1: 2 : 3"
@@ -17800,12 +17778,7 @@ const records=[
         ", find the measure of each angle of the triangle."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. The angles of ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " are in the ratio ",
+        "English-language question; Tamil version not changed. The angles of a triangle are in the ratio ",
         {
           "latex": "1 : 2 : 3",
           "fallback": "1: 2 : 3"
@@ -17861,12 +17834,7 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "The three interior angles of ",
-            {
-              "latex": "a \\text{triangle}",
-              "fallback": "a triangle"
-            },
-            " add to ",
+            "The three interior angles of a triangle add to ",
             {
               "latex": "180^{\\circ}",
               "fallback": "180°"
@@ -17874,12 +17842,7 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): The three interior angles of ",
-            {
-              "latex": "a \\text{triangle}",
-              "fallback": "a triangle"
-            },
-            " add to ",
+            "English explanation (Tamil unchanged): The three interior angles of a triangle add to ",
             {
               "latex": "180^{\\circ}",
               "fallback": "180°"
@@ -17916,14 +17879,15 @@ const records=[
     "id": "g9-ch4-ex4.1-q4",
     "questionMath": {
       "en": [
+        "Δ",
         {
-          "latex": "\\triangle ABC",
-          "fallback": "ΔABC"
+          "latex": "ABC",
+          "fallback": "ABC"
         },
-        " and ",
+        " and Δ",
         {
-          "latex": "\\triangle DEF",
-          "fallback": "ΔDEF"
+          "latex": "DEF",
+          "fallback": "DEF"
         },
         " are two triangles in which ",
         {
@@ -17938,15 +17902,15 @@ const records=[
         ". Prove that the triangles are congruent."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. ",
+        "English-language question; Tamil version not changed. Δ",
         {
-          "latex": "\\triangle ABC",
-          "fallback": "ΔABC"
+          "latex": "ABC",
+          "fallback": "ABC"
         },
-        " and ",
+        " and Δ",
         {
-          "latex": "\\triangle DEF",
-          "fallback": "ΔDEF"
+          "latex": "DEF",
+          "fallback": "DEF"
         },
         " are two triangles in which ",
         {
@@ -17961,11 +17925,29 @@ const records=[
         ". Prove that the triangles are congruent."
       ]
     },
-    "answerMath": {
-      "latex": "\\triangle ABC \\cong \\triangle FDE \\left(ASA\\right)",
-      "fallback": "ΔABC ≅ ΔFDE (ASA)",
-      "display": true
-    },
+    "answerMath": [
+      "Δ",
+      {
+        "latex": "ABC",
+        "fallback": "ABC"
+      },
+      " ",
+      {
+        "latex": "\\cong",
+        "fallback": "≅"
+      },
+      " Δ",
+      {
+        "latex": "FDE",
+        "fallback": "FDE"
+      },
+      " (",
+      {
+        "latex": "ASA",
+        "fallback": "ASA"
+      },
+      ")"
+    ],
     "steps": [
       {
         "math": {
@@ -17975,28 +17957,18 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Use the angle",
+            "Use the angle-sum property in Δ",
             {
-              "latex": "- \\text{sum}",
-              "fallback": "-sum"
-            },
-            " property in ",
-            {
-              "latex": "\\triangle ABC",
-              "fallback": "ΔABC"
+              "latex": "ABC",
+              "fallback": "ABC"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Use the angle",
+            "English explanation (Tamil unchanged): Use the angle-sum property in Δ",
             {
-              "latex": "- \\text{sum}",
-              "fallback": "-sum"
-            },
-            " property in ",
-            {
-              "latex": "\\triangle ABC",
-              "fallback": "ΔABC"
+              "latex": "ABC",
+              "fallback": "ABC"
             },
             "."
           ]
@@ -18010,18 +17982,18 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Find the remaining angle of ",
+            "Find the remaining angle of Δ",
             {
-              "latex": "\\triangle DEF",
-              "fallback": "ΔDEF"
+              "latex": "DEF",
+              "fallback": "DEF"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Find the remaining angle of ",
+            "English explanation (Tamil unchanged): Find the remaining angle of Δ",
             {
-              "latex": "\\triangle DEF",
-              "fallback": "ΔDEF"
+              "latex": "DEF",
+              "fallback": "DEF"
             },
             "."
           ]
@@ -18039,11 +18011,29 @@ const records=[
         }
       },
       {
-        "math": {
-          "latex": "\\triangle ABC \\cong \\triangle FDE \\left(ASA\\right)",
-          "fallback": "ΔABC ≅ ΔFDE (ASA)",
-          "display": true
-        },
+        "math": [
+          "Δ",
+          {
+            "latex": "ABC",
+            "fallback": "ABC"
+          },
+          " ",
+          {
+            "latex": "\\cong",
+            "fallback": "≅"
+          },
+          " Δ",
+          {
+            "latex": "FDE",
+            "fallback": "FDE"
+          },
+          " (",
+          {
+            "latex": "ASA",
+            "fallback": "ASA"
+          },
+          ")"
+        ],
         "reasonMath": {
           "en": [
             "Apply the Angle",
@@ -18353,10 +18343,10 @@ const records=[
           "latex": "\\angle OAB = 46^{\\circ}",
           "fallback": "∠OAB =46°"
         },
-        ", find ",
+        ", find ∠",
         {
-          "latex": "\\angle OBC",
-          "fallback": "∠OBC"
+          "latex": "OBC",
+          "fallback": "OBC"
         }
       ],
       "ta": [
@@ -18385,10 +18375,10 @@ const records=[
           "latex": "\\angle OAB = 46^{\\circ}",
           "fallback": "∠OAB =46°"
         },
-        ", find ",
+        ", find ∠",
         {
-          "latex": "\\angle OBC",
-          "fallback": "∠OBC"
+          "latex": "OBC",
+          "fallback": "OBC"
         }
       ]
     },
@@ -18429,18 +18419,18 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Therefore ",
+            "Therefore Δ",
             {
-              "latex": "\\triangle AOB",
-              "fallback": "ΔAOB"
+              "latex": "AOB",
+              "fallback": "AOB"
             },
             " is isosceles: its two base angles are equal."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Therefore ",
+            "English explanation (Tamil unchanged): Therefore Δ",
             {
-              "latex": "\\triangle AOB",
-              "fallback": "ΔAOB"
+              "latex": "AOB",
+              "fallback": "AOB"
             },
             " is isosceles: its two base angles are equal."
           ]
@@ -18488,28 +18478,28 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Subtract ",
+            "Subtract ∠",
             {
-              "latex": "\\angle ABO",
-              "fallback": "∠ABO"
+              "latex": "ABO",
+              "fallback": "ABO"
             },
-            " from ",
+            " from ∠",
             {
-              "latex": "\\angle ABC",
-              "fallback": "∠ABC"
+              "latex": "ABC",
+              "fallback": "ABC"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Subtract ",
+            "English explanation (Tamil unchanged): Subtract ∠",
             {
-              "latex": "\\angle ABO",
-              "fallback": "∠ABO"
+              "latex": "ABO",
+              "fallback": "ABO"
             },
-            " from ",
+            " from ∠",
             {
-              "latex": "\\angle ABC",
-              "fallback": "∠ABC"
+              "latex": "ABC",
+              "fallback": "ABC"
             },
             "."
           ]
@@ -18596,32 +18586,8 @@ const records=[
   {
     "id": "g9-ch4-ex4.2-q6",
     "questionMath": {
-      "en": [
-        "If ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " and ",
-        {
-          "latex": "a \\text{parallelogram}",
-          "fallback": "a parallelogram"
-        },
-        " lie on the same base and between the same parallels, then prove that the area of the triangle is equal to half of the area of parallelogram."
-      ],
-      "ta": [
-        "English-language question; Tamil version not changed. If ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " and ",
-        {
-          "latex": "a \\text{parallelogram}",
-          "fallback": "a parallelogram"
-        },
-        " lie on the same base and between the same parallels, then prove that the area of the triangle is equal to half of the area of parallelogram."
-      ]
+      "en": "If a triangle and a parallelogram lie on the same base and between the same parallels, then prove that the area of the triangle is equal to half of the area of parallelogram.",
+      "ta": "English-language question; Tamil version not changed. If a triangle and a parallelogram lie on the same base and between the same parallels, then prove that the area of the triangle is equal to half of the area of parallelogram."
     },
     "answerMath": "Area of triangle = half the area of parallelogram",
     "steps": [
@@ -18635,18 +18601,18 @@ const records=[
         ],
         "reasonMath": {
           "en": [
-            "A common base gives the same ",
+            "A common base gives the same base length ",
             {
-              "latex": "\\text{base} \\text{length} b",
-              "fallback": "base length b"
+              "latex": "b",
+              "fallback": "b"
             },
             " to both figures."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): A common base gives the same ",
+            "English explanation (Tamil unchanged): A common base gives the same base length ",
             {
-              "latex": "\\text{base} \\text{length} b",
-              "fallback": "base length b"
+              "latex": "b",
+              "fallback": "b"
             },
             " to both figures."
           ]
@@ -18662,18 +18628,18 @@ const records=[
         ],
         "reasonMath": {
           "en": [
-            "Lying between the same parallel lines gives the same perpendicular ",
+            "Lying between the same parallel lines gives the same perpendicular height ",
             {
-              "latex": "\\text{height} h",
-              "fallback": "height h"
+              "latex": "h",
+              "fallback": "h"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Lying between the same parallel lines gives the same perpendicular ",
+            "English explanation (Tamil unchanged): Lying between the same parallel lines gives the same perpendicular height ",
             {
-              "latex": "\\text{height} h",
-              "fallback": "height h"
+              "latex": "h",
+              "fallback": "h"
             },
             "."
           ]
@@ -18762,22 +18728,8 @@ const records=[
           "fallback": "d²+10²=26²"
         },
         "reasonMath": {
-          "en": [
-            "The radius, half",
-            {
-              "latex": "- \\text{chord}",
-              "fallback": "-chord"
-            },
-            " and perpendicular distance form a right triangle."
-          ],
-          "ta": [
-            "English explanation (Tamil unchanged): The radius, half",
-            {
-              "latex": "- \\text{chord}",
-              "fallback": "-chord"
-            },
-            " and perpendicular distance form a right triangle."
-          ]
+          "en": "The radius, half-chord and perpendicular distance form a right triangle.",
+          "ta": "English explanation (Tamil unchanged): The radius, half-chord and perpendicular distance form a right triangle."
         }
       },
       {
@@ -18903,11 +18855,7 @@ const records=[
     "id": "g9-ch4-ex4.3-q4",
     "questionMath": {
       "en": [
-        {
-          "latex": "A \\text{chord}",
-          "fallback": "A chord"
-        },
-        " is ",
+        "A chord is ",
         {
           "latex": "12\\,\\mathrm{cm}",
           "fallback": "12cm"
@@ -18920,12 +18868,7 @@ const records=[
         ". Find the length of the chord."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. ",
-        {
-          "latex": "A \\text{chord}",
-          "fallback": "A chord"
-        },
-        " is ",
+        "English-language question; Tamil version not changed. A chord is ",
         {
           "latex": "12\\,\\mathrm{cm}",
           "fallback": "12cm"
@@ -19166,22 +19109,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": [
-            "Find the half",
-            {
-              "latex": "- \\text{chord}",
-              "fallback": "-chord"
-            },
-            " and double it."
-          ],
-          "ta": [
-            "English explanation (Tamil unchanged): Find the half",
-            {
-              "latex": "- \\text{chord}",
-              "fallback": "-chord"
-            },
-            " and double it."
-          ]
+          "en": "Find the half-chord and double it.",
+          "ta": "English explanation (Tamil unchanged): Find the half-chord and double it."
         }
       }
     ]
@@ -19440,12 +19369,7 @@ const records=[
     "id": "g9-ch5-ex5.2-q5",
     "questionMath": {
       "en": [
-        "Show that the following points taken in order form the vertices of ",
-        {
-          "latex": "a \\text{parallelogram}",
-          "fallback": "a parallelogram"
-        },
-        ".\n(i) ",
+        "Show that the following points taken in order form the vertices of a parallelogram.\n(i) ",
         {
           "latex": "A \\left(- 3, 1\\right), B \\left(- 6, - 7\\right), C \\left(3, - 9\\right), D \\left(6, - 1\\right)",
           "fallback": "A(–3, 1), B(–6, –7), C(3, –9), D(6, –1)"
@@ -19457,12 +19381,7 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version not changed. Show that the following points taken in order form the vertices of ",
-        {
-          "latex": "a \\text{parallelogram}",
-          "fallback": "a parallelogram"
-        },
-        ".\n(i) ",
+        "English-language question; Tamil version not changed. Show that the following points taken in order form the vertices of a parallelogram.\n(i) ",
         {
           "latex": "A \\left(- 3, 1\\right), B \\left(- 6, - 7\\right), C \\left(3, - 9\\right), D \\left(6, - 1\\right)",
           "fallback": "A(–3, 1), B(–6, –7), C(3, –9), D(6, –1)"
@@ -19489,21 +19408,8 @@ const records=[
           }
         ],
         "reasonMath": {
-          "en": [
-            {
-              "latex": "\\text{Opposite} \\text{sides}",
-              "fallback": "Opposite sides"
-            },
-            " of a quadrilateral are equal and parallel if their direction vectors match."
-          ],
-          "ta": [
-            "English explanation (Tamil unchanged): ",
-            {
-              "latex": "\\text{Opposite} \\text{sides}",
-              "fallback": "Opposite sides"
-            },
-            " of a quadrilateral are equal and parallel if their direction vectors match."
-          ]
+          "en": "Opposite sides of a quadrilateral are equal and parallel if their direction vectors match.",
+          "ta": "English explanation (Tamil unchanged): Opposite sides of a quadrilateral are equal and parallel if their direction vectors match."
         }
       },
       {
@@ -19520,22 +19426,8 @@ const records=[
       {
         "math": "(i) Parallelogram",
         "reasonMath": {
-          "en": [
-            "Both pairs agree, so the first set of points is ",
-            {
-              "latex": "a \\text{parallelogram}",
-              "fallback": "a parallelogram"
-            },
-            "."
-          ],
-          "ta": [
-            "English explanation (Tamil unchanged): Both pairs agree, so the first set of points is ",
-            {
-              "latex": "a \\text{parallelogram}",
-              "fallback": "a parallelogram"
-            },
-            "."
-          ]
+          "en": "Both pairs agree, so the first set of points is a parallelogram.",
+          "ta": "English explanation (Tamil unchanged): Both pairs agree, so the first set of points is a parallelogram."
         }
       },
       {
@@ -20264,17 +20156,7 @@ const records=[
     "id": "g9-ch7-ex7.1-q1",
     "questionMath": {
       "en": [
-        "Using Heron’",
-        {
-          "latex": "s",
-          "fallback": "s"
-        },
-        " formula, find the area of ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " whose sides are\n(i) ",
+        "Using Heron’s formula, find the area of a triangle whose sides are\n(i) ",
         {
           "latex": "10\\,\\mathrm{cm}, 24\\,\\mathrm{cm}, 26\\,\\mathrm{cm}",
           "fallback": "10 cm, 24 cm, 26 cm"
@@ -20286,17 +20168,7 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Using Heron’",
-        {
-          "latex": "s",
-          "fallback": "s"
-        },
-        " formula, find the area of ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " whose sides are\n(i) ",
+        "English-language question; Tamil version pending. Using Heron’s formula, find the area of a triangle whose sides are\n(i) ",
         {
           "latex": "10\\,\\mathrm{cm}, 24\\,\\mathrm{cm}, 26\\,\\mathrm{cm}",
           "fallback": "10 cm, 24 cm, 26 cm"
@@ -20334,12 +20206,7 @@ const records=[
               "latex": "s = \\dfrac{\\left(a + b + c\\right)}{2}",
               "fallback": "s=(a+b+c)/2"
             },
-            " and Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " formula."
+            " and Heron’s formula."
           ],
           "ta": [
             "English explanation (Tamil version pending): For both triangles use the semiperimeter ",
@@ -20347,12 +20214,7 @@ const records=[
               "latex": "s = \\dfrac{\\left(a + b + c\\right)}{2}",
               "fallback": "s=(a+b+c)/2"
             },
-            " and Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " formula."
+            " and Heron’s formula."
           ]
         }
       },
@@ -20388,22 +20250,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": [
-            "Substitute each side into Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " expression."
-          ],
-          "ta": [
-            "English explanation (Tamil version pending): Substitute each side into Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " expression."
-          ]
+          "en": "Substitute each side into Heron’s expression.",
+          "ta": "English explanation (Tamil version pending): Substitute each side into Heron’s expression."
         }
       },
       {
@@ -20525,22 +20373,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": [
-            "Apply Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " formula to the three side lengths."
-          ],
-          "ta": [
-            "English explanation (Tamil version pending): Apply Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " formula to the three side lengths."
-          ]
+          "en": "Apply Heron’s formula to the three side lengths.",
+          "ta": "English explanation (Tamil version pending): Apply Heron’s formula to the three side lengths."
         }
       },
       {
@@ -20937,10 +20771,10 @@ const records=[
               "latex": "AB",
               "fallback": "AB"
             },
-            " from right ",
+            " from right triangle ",
             {
-              "latex": "\\text{triangle} ADB",
-              "fallback": "triangle ADB"
+              "latex": "ADB",
+              "fallback": "ADB"
             },
             "."
           ],
@@ -20950,10 +20784,10 @@ const records=[
               "latex": "AB",
               "fallback": "AB"
             },
-            " from right ",
+            " from right triangle ",
             {
-              "latex": "\\text{triangle} ADB",
-              "fallback": "triangle ADB"
+              "latex": "ADB",
+              "fallback": "ADB"
             },
             "."
           ]
@@ -20967,10 +20801,10 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Outer ",
+            "Outer triangle ",
             {
-              "latex": "\\text{triangle} ABC",
-              "fallback": "triangle ABC"
+              "latex": "ABC",
+              "fallback": "ABC"
             },
             " has ",
             {
@@ -20990,10 +20824,10 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Outer ",
+            "English explanation (Tamil version pending): Outer triangle ",
             {
-              "latex": "\\text{triangle} ABC",
-              "fallback": "triangle ABC"
+              "latex": "ABC",
+              "fallback": "ABC"
             },
             " has ",
             {
@@ -21021,22 +20855,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": [
-            "Calculate the outer triangle area using Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " formula."
-          ],
-          "ta": [
-            "English explanation (Tamil version pending): Calculate the outer triangle area using Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " formula."
-          ]
+          "en": "Calculate the outer triangle area using Heron’s formula.",
+          "ta": "English explanation (Tamil version pending): Calculate the outer triangle area using Heron’s formula."
         }
       },
       {
@@ -21047,18 +20867,18 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "The coloured ",
+            "The coloured triangle ",
             {
-              "latex": "\\text{triangle} ADB",
-              "fallback": "triangle ADB"
+              "latex": "ADB",
+              "fallback": "ADB"
             },
             " has area half its perpendicular-leg product."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The coloured ",
+            "English explanation (Tamil version pending): The coloured triangle ",
             {
-              "latex": "\\text{triangle} ADB",
-              "fallback": "triangle ADB"
+              "latex": "ADB",
+              "fallback": "ADB"
             },
             " has area half its perpendicular-leg product."
           ]
@@ -21132,9 +20952,10 @@ const records=[
         },
         "reasonMath": {
           "en": [
+            "Diagonal ",
             {
-              "latex": "\\text{Diagonal} BD",
-              "fallback": "Diagonal BD"
+              "latex": "BD",
+              "fallback": "BD"
             },
             " forms triangles ",
             {
@@ -21149,10 +20970,10 @@ const records=[
             "; calculate each separately."
           ],
           "ta": [
-            "English explanation (Tamil version pending): ",
+            "English explanation (Tamil version pending): Diagonal ",
             {
-              "latex": "\\text{Diagonal} BD",
-              "fallback": "Diagonal BD"
+              "latex": "BD",
+              "fallback": "BD"
             },
             " forms triangles ",
             {
@@ -21176,12 +20997,12 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "For ",
+            "For triangle ",
             {
-              "latex": "\\text{triangle} ABD, \\text{sides}",
-              "fallback": "triangle ABD, sides"
+              "latex": "ABD",
+              "fallback": "ABD"
             },
-            " are ",
+            ", sides are ",
             {
               "latex": "13, 14, 15",
               "fallback": "13,14,15"
@@ -21194,12 +21015,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For ",
+            "English explanation (Tamil version pending): For triangle ",
             {
-              "latex": "\\text{triangle} ABD, \\text{sides}",
-              "fallback": "triangle ABD, sides"
+              "latex": "ABD",
+              "fallback": "ABD"
             },
-            " are ",
+            ", sides are ",
             {
               "latex": "13, 14, 15",
               "fallback": "13,14,15"
@@ -21221,12 +21042,12 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "For ",
+            "For triangle ",
             {
-              "latex": "\\text{triangle} BCD, \\text{sides}",
-              "fallback": "triangle BCD, sides"
+              "latex": "BCD",
+              "fallback": "BCD"
             },
-            " are ",
+            ", sides are ",
             {
               "latex": "12, 9, 15",
               "fallback": "12,9,15"
@@ -21239,12 +21060,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For ",
+            "English explanation (Tamil version pending): For triangle ",
             {
-              "latex": "\\text{triangle} BCD, \\text{sides}",
-              "fallback": "triangle BCD, sides"
+              "latex": "BCD",
+              "fallback": "BCD"
             },
-            " are ",
+            ", sides are ",
             {
               "latex": "12, 9, 15",
               "fallback": "12,9,15"
@@ -21394,22 +21215,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": [
-            "Use Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " formula for its area."
-          ],
-          "ta": [
-            "English explanation (Tamil version pending): Use Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " formula for its area."
-          ]
+          "en": "Use Heron’s formula for its area.",
+          "ta": "English explanation (Tamil version pending): Use Heron’s formula for its area."
         }
       },
       {
@@ -21544,12 +21351,7 @@ const records=[
     "id": "g9-ch7-ex7.1-q10",
     "questionMath": {
       "en": [
-        "The adjacent sides of ",
-        {
-          "latex": "a \\text{parallelogram}",
-          "fallback": "a parallelogram"
-        },
-        " measures ",
+        "The adjacent sides of a parallelogram measures ",
         {
           "latex": "34\\,\\mathrm{m}, 20\\,\\mathrm{m}",
           "fallback": "34 m, 20 m"
@@ -21562,12 +21364,7 @@ const records=[
         ". Find the area of parallelogram."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The adjacent sides of ",
-        {
-          "latex": "a \\text{parallelogram}",
-          "fallback": "a parallelogram"
-        },
-        " measures ",
+        "English-language question; Tamil version pending. The adjacent sides of a parallelogram measures ",
         {
           "latex": "34\\,\\mathrm{m}, 20\\,\\mathrm{m}",
           "fallback": "34 m, 20 m"
@@ -21620,22 +21417,8 @@ const records=[
           }
         ],
         "reasonMath": {
-          "en": [
-            "Use Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " formula for one triangle."
-          ],
-          "ta": [
-            "English explanation (Tamil version pending): Use Heron’",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " formula for one triangle."
-          ]
+          "en": "Use Heron’s formula for one triangle.",
+          "ta": "English explanation (Tamil version pending): Use Heron’s formula for one triangle."
         }
       },
       {
@@ -22220,12 +22003,7 @@ const records=[
           "latex": "6.5\\,\\mathrm{m}",
           "fallback": "6.5 m"
         },
-        " is to be painted on the entire outer surface. Find the area to be painted and the ",
-        {
-          "latex": "\\text{total} \\text{cost}",
-          "fallback": "total cost"
-        },
-        " of painting it at the rate of ₹",
+        " is to be painted on the entire outer surface. Find the area to be painted and the total cost of painting it at the rate of ₹",
         {
           "latex": "24",
           "fallback": "24"
@@ -22243,12 +22021,7 @@ const records=[
           "latex": "6.5\\,\\mathrm{m}",
           "fallback": "6.5 m"
         },
-        " is to be painted on the entire outer surface. Find the area to be painted and the ",
-        {
-          "latex": "\\text{total} \\text{cost}",
-          "fallback": "total cost"
-        },
-        " of painting it at the rate of ₹",
+        " is to be painted on the entire outer surface. Find the area to be painted and the total cost of painting it at the rate of ₹",
         {
           "latex": "24",
           "fallback": "24"
@@ -22612,12 +22385,7 @@ const records=[
     "id": "g9-ch7-ex7.3-q3",
     "questionMath": {
       "en": [
-        "The ",
-        {
-          "latex": "\\text{length}, \\text{breadth}",
-          "fallback": "length, breadth"
-        },
-        " and height of a chocolate box are in the ratio ",
+        "The length, breadth and height of a chocolate box are in the ratio ",
         {
           "latex": "5 : 4 : 3",
           "fallback": "5:4:3"
@@ -22634,12 +22402,7 @@ const records=[
         ", then find its dimensions."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The ",
-        {
-          "latex": "\\text{length}, \\text{breadth}",
-          "fallback": "length, breadth"
-        },
-        " and height of a chocolate box are in the ratio ",
+        "English-language question; Tamil version pending. The length, breadth and height of a chocolate box are in the ratio ",
         {
           "latex": "5 : 4 : 3",
           "fallback": "5:4:3"
@@ -22736,12 +22499,7 @@ const records=[
     "id": "g9-ch7-ex7.3-q4",
     "questionMath": {
       "en": [
-        "The ",
-        {
-          "latex": "\\text{length}, \\text{breadth}",
-          "fallback": "length, breadth"
-        },
-        " and depth of a pond are ",
+        "The length, breadth and depth of a pond are ",
         {
           "latex": "20.5\\,\\mathrm{m}, 16\\,\\mathrm{m}",
           "fallback": "20.5 m, 16 m"
@@ -22754,12 +22512,7 @@ const records=[
         " respectively. Find the capacity of the pond in litres."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The ",
-        {
-          "latex": "\\text{length}, \\text{breadth}",
-          "fallback": "length, breadth"
-        },
-        " and depth of a pond are ",
+        "English-language question; Tamil version pending. The length, breadth and depth of a pond are ",
         {
           "latex": "20.5\\,\\mathrm{m}, 16\\,\\mathrm{m}",
           "fallback": "20.5 m, 16 m"
@@ -22785,22 +22538,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": [
-            "Find the pond'",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " capacity as a rectangular prism in cubic metres."
-          ],
-          "ta": [
-            "English explanation (Tamil version pending): Find the pond'",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " capacity as a rectangular prism in cubic metres."
-          ]
+          "en": "Find the pond's capacity as a rectangular prism in cubic metres.",
+          "ta": "English explanation (Tamil version pending): Find the pond's capacity as a rectangular prism in cubic metres."
         }
       },
       {
@@ -22831,12 +22570,7 @@ const records=[
     "id": "g9-ch7-ex7.3-q5",
     "questionMath": {
       "en": [
-        "The dimensions of ",
-        {
-          "latex": "a \\text{brick}",
-          "fallback": "a brick"
-        },
-        " are ",
+        "The dimensions of a brick are ",
         {
           "latex": "24\\,\\mathrm{cm}",
           "fallback": "24 cm"
@@ -22851,12 +22585,7 @@ const records=[
           "latex": "\\times 8\\,\\mathrm{cm}",
           "fallback": "× 8 cm"
         },
-        ". How many such bricks will be required to build ",
-        {
-          "latex": "a \\text{wall}",
-          "fallback": "a wall"
-        },
-        " of ",
+        ". How many such bricks will be required to build a wall of ",
         {
           "latex": "20\\,\\mathrm{m}",
           "fallback": "20 m"
@@ -22874,12 +22603,7 @@ const records=[
         " height?"
       ],
       "ta": [
-        "English-language question; Tamil version pending. The dimensions of ",
-        {
-          "latex": "a \\text{brick}",
-          "fallback": "a brick"
-        },
-        " are ",
+        "English-language question; Tamil version pending. The dimensions of a brick are ",
         {
           "latex": "24\\,\\mathrm{cm}",
           "fallback": "24 cm"
@@ -22894,12 +22618,7 @@ const records=[
           "latex": "\\times 8\\,\\mathrm{cm}",
           "fallback": "× 8 cm"
         },
-        ". How many such bricks will be required to build ",
-        {
-          "latex": "a \\text{wall}",
-          "fallback": "a wall"
-        },
-        " of ",
+        ". How many such bricks will be required to build a wall of ",
         {
           "latex": "20\\,\\mathrm{m}",
           "fallback": "20 m"
@@ -22943,22 +22662,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": [
-            "Compute the ",
-            {
-              "latex": "\\text{wall}' s",
-              "fallback": "wall's"
-            },
-            " volume."
-          ],
-          "ta": [
-            "English explanation (Tamil version pending): Compute the ",
-            {
-              "latex": "\\text{wall}' s",
-              "fallback": "wall's"
-            },
-            " volume."
-          ]
+          "en": "Compute the wall's volume.",
+          "ta": "English explanation (Tamil version pending): Compute the wall's volume."
         }
       },
       {
@@ -23352,28 +23057,18 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Express the new cuboid'",
+            "Express the new cuboid's volume using unknown breadth ",
             {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " volume using unknown ",
-            {
-              "latex": "\\text{breadth} b",
-              "fallback": "breadth b"
+              "latex": "b",
+              "fallback": "b"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Express the new cuboid'",
+            "English explanation (Tamil version pending): Express the new cuboid's volume using unknown breadth ",
             {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " volume using unknown ",
-            {
-              "latex": "\\text{breadth} b",
-              "fallback": "breadth b"
+              "latex": "b",
+              "fallback": "b"
             },
             "."
           ]
@@ -23421,12 +23116,7 @@ const records=[
     "id": "g9-ch7-ex7.4-q1",
     "questionMath": {
       "en": [
-        "The semi-perimeter of ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " having ",
+        "The semi-perimeter of a triangle having ",
         {
           "latex": "\\text{sides} 15\\,\\mathrm{cm}, 20\\,\\mathrm{cm}",
           "fallback": "sides 15 cm, 20 cm"
@@ -23458,12 +23148,7 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The semi-perimeter of ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " having ",
+        "English-language question; Tamil version pending. The semi-perimeter of a triangle having ",
         {
           "latex": "\\text{sides} 15\\,\\mathrm{cm}, 20\\,\\mathrm{cm}",
           "fallback": "sides 15 cm, 20 cm"
@@ -23551,12 +23236,7 @@ const records=[
     "id": "g9-ch7-ex7.4-q2",
     "questionMath": {
       "en": [
-        "If the sides of ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " are ",
+        "If the sides of a triangle are ",
         {
           "latex": "3\\,\\mathrm{cm}, 4\\,\\mathrm{cm}",
           "fallback": "3 cm, 4 cm"
@@ -23588,12 +23268,7 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. If the sides of ",
-        {
-          "latex": "a \\text{triangle}",
-          "fallback": "a triangle"
-        },
-        " are ",
+        "English-language question; Tamil version pending. If the sides of a triangle are ",
         {
           "latex": "3\\,\\mathrm{cm}, 4\\,\\mathrm{cm}",
           "fallback": "3 cm, 4 cm"
@@ -24472,12 +24147,7 @@ const records=[
           "latex": "\\times 20\\,\\mathrm{cm}",
           "fallback": "× 20 cm"
         },
-        " that will be required to build ",
-        {
-          "latex": "a \\text{wall}",
-          "fallback": "a wall"
-        },
-        " whose dimensions are ",
+        " that will be required to build a wall whose dimensions are ",
         {
           "latex": "5\\,\\mathrm{m}",
           "fallback": "5 m"
@@ -24514,12 +24184,7 @@ const records=[
           "latex": "\\times 20\\,\\mathrm{cm}",
           "fallback": "× 20 cm"
         },
-        " that will be required to build ",
-        {
-          "latex": "a \\text{wall}",
-          "fallback": "a wall"
-        },
-        " whose dimensions are ",
+        " that will be required to build a wall whose dimensions are ",
         {
           "latex": "5\\,\\mathrm{m}",
           "fallback": "5 m"
@@ -24790,22 +24455,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": [
-            "Subtract to obtain the fourth member'",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " weight."
-          ],
-          "ta": [
-            "English explanation (Tamil version pending): Subtract to obtain the fourth member'",
-            {
-              "latex": "s",
-              "fallback": "s"
-            },
-            " weight."
-          ]
+          "en": "Subtract to obtain the fourth member's weight.",
+          "ta": "English explanation (Tamil version pending): Subtract to obtain the fourth member's weight."
         }
       }
     ]
@@ -26504,12 +26155,7 @@ const records=[
               "latex": "\\text{mean} 12",
               "fallback": "mean 12"
             },
-            " have ",
-            {
-              "latex": "a \\text{total}",
-              "fallback": "a total"
-            },
-            " of ",
+            " have a total of ",
             {
               "latex": "60",
               "fallback": "60"
@@ -26522,12 +26168,7 @@ const records=[
               "latex": "\\text{mean} 12",
               "fallback": "mean 12"
             },
-            " have ",
-            {
-              "latex": "a \\text{total}",
-              "fallback": "a total"
-            },
-            " of ",
+            " have a total of ",
             {
               "latex": "60",
               "fallback": "60"
@@ -26619,12 +26260,7 @@ const records=[
           "latex": "5000",
           "fallback": "5000"
         },
-        "\nFind the ",
-        {
-          "latex": "\\text{mean}, \\text{median}",
-          "fallback": "mean, median"
-        },
-        " and mode."
+        "\nFind the mean, median and mode."
       ],
       "ta": [
         "English-language question; Tamil version pending. The monthly salary of ",
@@ -26682,12 +26318,7 @@ const records=[
           "latex": "5000",
           "fallback": "5000"
         },
-        "\nFind the ",
-        {
-          "latex": "\\text{mean}, \\text{median}",
-          "fallback": "mean, median"
-        },
-        " and mode."
+        "\nFind the mean, median and mode."
       ]
     },
     "answerMath": [
@@ -26977,11 +26608,7 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            {
-              "latex": "A \\text{mean}",
-              "fallback": "A mean"
-            },
-            " of ",
+            "A mean of ",
             {
               "latex": "14",
               "fallback": "14"
@@ -26989,12 +26616,7 @@ const records=[
             " across seven numbers gives the total."
           ],
           "ta": [
-            "English explanation (Tamil version pending): ",
-            {
-              "latex": "A \\text{mean}",
-              "fallback": "A mean"
-            },
-            " of ",
+            "English explanation (Tamil version pending): A mean of ",
             {
               "latex": "14",
               "fallback": "14"
@@ -27954,24 +27576,14 @@ const records=[
     "id": "g9-ch8-ex8.4-q4",
     "questionMath": {
       "en": [
-        "For which set of numbers do the ",
-        {
-          "latex": "\\text{mean}, \\text{median}",
-          "fallback": "mean, median"
-        },
-        " and mode all have the same values?\n(1) ",
+        "For which set of numbers do the mean, median and mode all have the same values?\n(1) ",
         {
           "latex": "2, 2, 2, 4 \\left(2\\right) 1, 3, 3, 3, 5 \\left(3\\right) 1, 1, 2, 5, 6 \\left(4\\right) 1, 1, 2, 1, 5",
           "fallback": "2,2,2,4   (2) 1,3,3,3,5   (3) 1,1,2,5,6   (4) 1,1,2,1,5"
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. For which set of numbers do the ",
-        {
-          "latex": "\\text{mean}, \\text{median}",
-          "fallback": "mean, median"
-        },
-        " and mode all have the same values?\n(1) ",
+        "English-language question; Tamil version pending. For which set of numbers do the mean, median and mode all have the same values?\n(1) ",
         {
           "latex": "2, 2, 2, 4 \\left(2\\right) 1, 3, 3, 3, 5 \\left(3\\right) 1, 1, 2, 5, 6 \\left(4\\right) 1, 1, 2, 1, 5",
           "fallback": "2,2,2,4   (2) 1,3,3,3,5   (3) 1,1,2,5,6   (4) 1,1,2,1,5"
@@ -28008,12 +27620,7 @@ const records=[
               "latex": "15",
               "fallback": "15"
             },
-            ", giving ",
-            {
-              "latex": "a \\text{mean}",
-              "fallback": "a mean"
-            },
-            " of ",
+            ", giving a mean of ",
             {
               "latex": "3",
               "fallback": "3"
@@ -28026,12 +27633,7 @@ const records=[
               "latex": "15",
               "fallback": "15"
             },
-            ", giving ",
-            {
-              "latex": "a \\text{mean}",
-              "fallback": "a mean"
-            },
-            " of ",
+            ", giving a mean of ",
             {
               "latex": "3",
               "fallback": "3"
@@ -28869,22 +28471,8 @@ const records=[
   {
     "id": "g9-ch9-ex9.1-q1",
     "questionMath": {
-      "en": [
-        "What is the probability of a person’",
-        {
-          "latex": "s",
-          "fallback": "s"
-        },
-        " birthday will fall on a Sunday?"
-      ],
-      "ta": [
-        "English-language question; Tamil version pending. What is the probability of a person’",
-        {
-          "latex": "s",
-          "fallback": "s"
-        },
-        " birthday will fall on a Sunday?"
-      ]
+      "en": "What is the probability of a person’s birthday will fall on a Sunday?",
+      "ta": "English-language question; Tamil version pending. What is the probability of a person’s birthday will fall on a Sunday?"
     },
     "answerMath": {
       "latex": "\\dfrac{1}{7}",
@@ -29122,22 +28710,7 @@ const records=[
           "latex": "\\text{Red}, 5",
           "fallback": "Red, 5"
         },
-        " of them are Blue and the remaining are Green then, what is the probability of picking out (i) ",
-        {
-          "latex": "a \\text{Blue}",
-          "fallback": "a Blue"
-        },
-        " ball, (ii) ",
-        {
-          "latex": "a \\text{Red}",
-          "fallback": "a Red"
-        },
-        " ball and (iii) ",
-        {
-          "latex": "a \\text{Green}",
-          "fallback": "a Green"
-        },
-        " ball?"
+        " of them are Blue and the remaining are Green then, what is the probability of picking out (i) a Blue ball, (ii) a Red ball and (iii) a Green ball?"
       ],
       "ta": [
         "English-language question; Tamil version pending. There are ",
@@ -29155,22 +28728,7 @@ const records=[
           "latex": "\\text{Red}, 5",
           "fallback": "Red, 5"
         },
-        " of them are Blue and the remaining are Green then, what is the probability of picking out (i) ",
-        {
-          "latex": "a \\text{Blue}",
-          "fallback": "a Blue"
-        },
-        " ball, (ii) ",
-        {
-          "latex": "a \\text{Red}",
-          "fallback": "a Red"
-        },
-        " ball and (iii) ",
-        {
-          "latex": "a \\text{Green}",
-          "fallback": "a Green"
-        },
-        " ball?"
+        " of them are Blue and the remaining are Green then, what is the probability of picking out (i) a Blue ball, (ii) a Red ball and (iii) a Green ball?"
       ]
     },
     "answerMath": [
@@ -29429,12 +28987,7 @@ const records=[
               "latex": "2",
               "fallback": "2"
             },
-            ", so ",
-            {
-              "latex": "a \\text{sum}",
-              "fallback": "a sum"
-            },
-            " of ",
+            ", so a sum of ",
             {
               "latex": "1",
               "fallback": "1"
@@ -29447,12 +29000,7 @@ const records=[
               "latex": "2",
               "fallback": "2"
             },
-            ", so ",
-            {
-              "latex": "a \\text{sum}",
-              "fallback": "a sum"
-            },
-            " of ",
+            ", so a sum of ",
             {
               "latex": "1",
               "fallback": "1"
@@ -29469,12 +29017,7 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "(ii) ",
-            {
-              "latex": "A \\text{sum}",
-              "fallback": "A sum"
-            },
-            " of ",
+            "(ii) A sum of ",
             {
               "latex": "4",
               "fallback": "4"
@@ -29492,12 +29035,7 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): (ii) ",
-            {
-              "latex": "A \\text{sum}",
-              "fallback": "A sum"
-            },
-            " of ",
+            "English explanation (Tamil version pending): (ii) A sum of ",
             {
               "latex": "4",
               "fallback": "4"
@@ -29529,12 +29067,7 @@ const records=[
               "latex": "12",
               "fallback": "12"
             },
-            ", so every outcome has ",
-            {
-              "latex": "a \\text{sum}",
-              "fallback": "a sum"
-            },
-            " below ",
+            ", so every outcome has a sum below ",
             {
               "latex": "13",
               "fallback": "13"
@@ -29547,12 +29080,7 @@ const records=[
               "latex": "12",
               "fallback": "12"
             },
-            ", so every outcome has ",
-            {
-              "latex": "a \\text{sum}",
-              "fallback": "a sum"
-            },
-            " below ",
+            ", so every outcome has a sum below ",
             {
               "latex": "13",
               "fallback": "13"
@@ -29577,10 +29105,10 @@ const records=[
           "latex": "25",
           "fallback": "25"
         },
-        " of them were defective. If ",
+        " of them were defective. If a ",
         {
-          "latex": "a LED",
-          "fallback": "a LED"
+          "latex": "LED",
+          "fallback": "LED"
         },
         " light is selected at random, what is the probability that the selected ",
         {
@@ -29600,10 +29128,10 @@ const records=[
           "latex": "25",
           "fallback": "25"
         },
-        " of them were defective. If ",
+        " of them were defective. If a ",
         {
-          "latex": "a LED",
-          "fallback": "a LED"
+          "latex": "LED",
+          "fallback": "LED"
         },
         " light is selected at random, what is the probability that the selected ",
         {
@@ -31757,14 +31285,6 @@ const texts={
     },
     " நாட்களைக் கொண்ட மாதங்களின் கணத்தைச் சொற்களாலும் பட்டியல் முறையாலும் எழுதுக."
   ],
-  "Distinct members determine a set's size. The empty set has zero members, a singleton has one, and subsets contain only members of a larger set.": [
-    "Distinct members determine a set'",
-    {
-      "latex": "s",
-      "fallback": "s"
-    },
-    " size. The empty set has zero members, a singleton has one, and subsets contain only members of a larger set."
-  ],
   "P = {a, a, b} is the same set as {a, b}, so n(P)=2; {a} is a proper subset of P.": [
     {
       "latex": "P = \\left\\{a, a, b\\right\\}",
@@ -32972,12 +32492,7 @@ const texts={
     "fallback": "A ∪ B"
   },
   "De Morgan's second law says (A ∩ B)′ = A′ ∪ B′. An element is not in both precisely when it is outside at least one.": [
-    "De Morgan'",
-    {
-      "latex": "s",
-      "fallback": "s"
-    },
-    " second law says ",
+    "De Morgan's second law says ",
     {
       "latex": "\\left(A \\cap B\\right)' = A' \\cup B'",
       "fallback": "(A ∩ B)′ = A′ ∪ B′"
@@ -33479,12 +32994,22 @@ const texts={
       "latex": "S = \\left\\{HH, HT, TH, TT\\right\\}",
       "fallback": "S={HH,HT,TH,TT}"
     },
-    ". The event of at least one head is ",
+    ". The event of at least one head is {",
     {
-      "latex": "\\left\\{HH, HT, TH\\right\\}",
-      "fallback": "{HH,HT,TH}"
+      "latex": "HH",
+      "fallback": "HH"
     },
-    "."
+    ",",
+    {
+      "latex": "HT",
+      "fallback": "HT"
+    },
+    ",",
+    {
+      "latex": "TH",
+      "fallback": "TH"
+    },
+    "}."
   ],
   "English version only — Tamil editorial content pending. Two coins: S={HH,HT,TH,TT}. The event of at least one head is {HH,HT,TH}.": [
     "English version only — Tamil editorial content pending. Two coins: ",
@@ -33492,12 +33017,22 @@ const texts={
       "latex": "S = \\left\\{HH, HT, TH, TT\\right\\}",
       "fallback": "S={HH,HT,TH,TT}"
     },
-    ". The event of at least one head is ",
+    ". The event of at least one head is {",
     {
-      "latex": "\\left\\{HH, HT, TH\\right\\}",
-      "fallback": "{HH,HT,TH}"
+      "latex": "HH",
+      "fallback": "HH"
     },
-    "."
+    ",",
+    {
+      "latex": "HT",
+      "fallback": "HT"
+    },
+    ",",
+    {
+      "latex": "TH",
+      "fallback": "TH"
+    },
+    "}."
   ],
   "E ⊆ S; n(S)=4 for two distinguishable coin tosses.": [
     {
@@ -33538,8 +33073,18 @@ const texts={
   "List HH, HT, TH and TT.": [
     "List ",
     {
-      "latex": "HH, HT, TH",
-      "fallback": "HH, HT, TH"
+      "latex": "HH",
+      "fallback": "HH"
+    },
+    ", ",
+    {
+      "latex": "HT",
+      "fallback": "HT"
+    },
+    ", ",
+    {
+      "latex": "TH",
+      "fallback": "TH"
     },
     " and ",
     {
@@ -33551,8 +33096,18 @@ const texts={
   "English version only — Tamil editorial content pending. List HH, HT, TH and TT.": [
     "English version only — Tamil editorial content pending. List ",
     {
-      "latex": "HH, HT, TH",
-      "fallback": "HH, HT, TH"
+      "latex": "HH",
+      "fallback": "HH"
+    },
+    ", ",
+    {
+      "latex": "HT",
+      "fallback": "HT"
+    },
+    ", ",
+    {
+      "latex": "TH",
+      "fallback": "TH"
     },
     " and ",
     {
@@ -35441,22 +34996,6 @@ const texts={
     },
     " வேறு."
   ],
-  "Compare the colours of the Indian national flag with {Red, Blue, Green}. Are the sets equivalent?": [
-    "Compare the colours of the Indian national flag with ",
-    {
-      "latex": "\\left\\{\\text{Red}, \\text{Blue}, \\text{Green}\\right\\}",
-      "fallback": "{Red, Blue, Green}"
-    },
-    ". Are the sets equivalent?"
-  ],
-  "இந்திய தேசியக் கொடியின் நிறங்கள் மற்றும் {Red, Blue, Green} கணங்கள் சமானமா?": [
-    "இந்திய தேசியக் கொடியின் நிறங்கள் மற்றும் ",
-    {
-      "latex": "\\left\\{\\text{Red}, \\text{Blue}, \\text{Green}\\right\\}",
-      "fallback": "{Red, Blue, Green}"
-    },
-    " கணங்கள் சமானமா?"
-  ],
   "If A includes every colour on the Indian flag, n(A)=4: saffron, white, green and the navy-blue Ashoka Chakra. B has 3 colours, so the sets are not equivalent. If the question counts only the three horizontal bands, both have 3 and are equivalent. State the counting convention explicitly.": [
     "If A includes every colour on the Indian flag, ",
     {
@@ -36728,12 +36267,37 @@ const texts={
       "latex": "S = \\left\\{HH, HT, TH, TT\\right\\}",
       "fallback": "S={HH,HT,TH,TT}"
     },
-    ". Three example events: ",
+    ". Three example events: {",
     {
-      "latex": "\\left\\{HH\\right\\}, \\left\\{HT, TH\\right\\}, \\left\\{HH, HT, TH\\right\\}",
-      "fallback": "{HH}, {HT,TH}, {HH,HT,TH}"
+      "latex": "HH",
+      "fallback": "HH"
     },
-    ". Two dice: ",
+    "}, {",
+    {
+      "latex": "HT",
+      "fallback": "HT"
+    },
+    ",",
+    {
+      "latex": "TH",
+      "fallback": "TH"
+    },
+    "}, {",
+    {
+      "latex": "HH",
+      "fallback": "HH"
+    },
+    ",",
+    {
+      "latex": "HT",
+      "fallback": "HT"
+    },
+    ",",
+    {
+      "latex": "TH",
+      "fallback": "TH"
+    },
+    "}. Two dice: ",
     {
       "latex": "S = \\left\\{\\left(i, j\\right) : i, j \\in \\left\\{1, 2, 3, 4, 5, 6\\right\\}\\right\\}",
       "fallback": "S={(i,j): i,j∈{1,2,3,4,5,6}}"
@@ -36761,12 +36325,37 @@ const texts={
       "latex": "S = \\left\\{HH, HT, TH, TT\\right\\}",
       "fallback": "S={HH,HT,TH,TT}"
     },
-    ". Three example events: ",
+    ". Three example events: {",
     {
-      "latex": "\\left\\{HH\\right\\}, \\left\\{HT, TH\\right\\}, \\left\\{HH, HT, TH\\right\\}",
-      "fallback": "{HH}, {HT,TH}, {HH,HT,TH}"
+      "latex": "HH",
+      "fallback": "HH"
     },
-    ". Two dice: ",
+    "}, {",
+    {
+      "latex": "HT",
+      "fallback": "HT"
+    },
+    ",",
+    {
+      "latex": "TH",
+      "fallback": "TH"
+    },
+    "}, {",
+    {
+      "latex": "HH",
+      "fallback": "HH"
+    },
+    ",",
+    {
+      "latex": "HT",
+      "fallback": "HT"
+    },
+    ",",
+    {
+      "latex": "TH",
+      "fallback": "TH"
+    },
+    "}. Two dice: ",
     {
       "latex": "S = \\left\\{\\left(i, j\\right) : i, j \\in \\left\\{1, 2, 3, 4, 5, 6\\right\\}\\right\\}",
       "fallback": "S={(i,j): i,j∈{1,2,3,4,5,6}}"
@@ -37143,12 +36732,7 @@ const texts={
     " cannot be probability"
   ],
   "For a question on probability the student's answer was 3/2. The teacher said it was wrong. Why?": [
-    "For a question on probability the student'",
-    {
-      "latex": "s",
-      "fallback": "s"
-    },
-    " answer was ",
+    "For a question on probability the student's answer was ",
     {
       "latex": "\\dfrac{3}{2}",
       "fallback": "3/2"
@@ -37156,12 +36740,7 @@ const texts={
     ". The teacher said it was wrong. Why?"
   ],
   "English version only — Tamil editorial content pending. For a question on probability the student's answer was 3/2. The teacher said it was wrong. Why?": [
-    "English version only — Tamil editorial content pending. For a question on probability the student'",
-    {
-      "latex": "s",
-      "fallback": "s"
-    },
-    " answer was ",
+    "English version only — Tamil editorial content pending. For a question on probability the student's answer was ",
     {
       "latex": "\\dfrac{3}{2}",
       "fallback": "3/2"
@@ -37445,8 +37024,13 @@ const texts={
   "At B, AC is opposite, AB is adjacent, and BC is the hypotenuse.": [
     "At ",
     {
-      "latex": "B, AC",
-      "fallback": "B, AC"
+      "latex": "B",
+      "fallback": "B"
+    },
+    ", ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
     },
     " is opposite, ",
     {
@@ -37461,15 +37045,15 @@ const texts={
     " is the hypotenuse."
   ],
   "Apply Pythagoras in triangle ABD to find the common height AD.": [
-    "Apply Pythagoras in ",
+    "Apply Pythagoras in triangle ",
     {
-      "latex": "\\text{triangle} ABD",
-      "fallback": "triangle ABD"
+      "latex": "ABD",
+      "fallback": "ABD"
     },
-    " to find the common ",
+    " to find the common height ",
     {
-      "latex": "\\text{height} AD",
-      "fallback": "height AD"
+      "latex": "AD",
+      "fallback": "AD"
     },
     "."
   ],
@@ -37874,12 +37458,7 @@ const texts={
       "latex": "\\text{length} \\sqrt{n}",
       "fallback": "length √n"
     },
-    " by the geometric",
-    {
-      "latex": "- \\text{mean}",
-      "fallback": "-mean"
-    },
-    " theorem, giving the required point on a number line."
+    " by the geometric-mean theorem, giving the required point on a number line."
   ],
   "அரைவட்ட அமைப்பில் 1 மற்றும் n நீளமுள்ள இரு துண்டுகளின் சந்திப்பில் வரையும் செங்குத்தின் நீளம் வடிவியல் சராசரி தேற்றப்படி √n ஆகும்.": [
     "அரைவட்ட அமைப்பில் ",
@@ -38003,14 +37582,6 @@ const texts={
       "fallback": "1/3"
     },
     "."
-  ],
-  "Multiplying by the conjugate changes a sum-and-difference product into a difference of squares. The numerator and denominator must be multiplied by the same nonzero value.": [
-    "Multiplying by the conjugate changes ",
-    {
-      "latex": "a \\text{sum}",
-      "fallback": "a sum"
-    },
-    "-and-difference product into a difference of squares. The numerator and denominator must be multiplied by the same nonzero value."
   ],
   "A pure surd has coefficient 1 in simplified radical form.": [
     "A pure surd has coefficient ",
@@ -38191,14 +37762,6 @@ const texts={
       "fallback": "√13"
     },
     "-ஐ இரு முழு எண்களின் விகிதமாக எழுத முடியாது; அது விகிதமுறா எண்."
-  ],
-  "Rationalising a denominator means multiplying both numerator and denominator by a suitable radical so the denominator becomes rational. The fraction's value stays unchanged.": [
-    "Rationalising a denominator means multiplying both numerator and denominator by a suitable radical so the denominator becomes rational. The fraction'",
-    {
-      "latex": "s",
-      "fallback": "s"
-    },
-    " value stays unchanged."
   ],
   "A prime number is an integer greater than 1 with exactly two positive divisors.": [
     "A prime number is an integer greater than ",
@@ -38394,21 +37957,6 @@ const texts={
     },
     "."
   ],
-  "Total cost equals price per chocolate multiplied by the number purchased.": [
-    {
-      "latex": "\\text{Total} \\text{cost}",
-      "fallback": "Total cost"
-    },
-    " equals price per chocolate multiplied by the number purchased."
-  ],
-  "Translate the real-world wording into a mathematical operation first. Keep the units and identify whether the question asks for a total, difference, area or rate.": [
-    "Translate the real-world wording into a mathematical operation first. Keep the units and identify whether the question asks for ",
-    {
-      "latex": "a \\text{total}",
-      "fallback": "a total"
-    },
-    ", difference, area or rate."
-  ],
   "A polynomial of degree 1 has a nonzero x coefficient, and one of degree 2 has a ": [
     "A polynomial of degree ",
     {
@@ -38446,12 +37994,7 @@ const texts={
     "."
   ],
   "The three interior angles of a triangle add to 180°.": [
-    "The three interior angles of ",
-    {
-      "latex": "a \\text{triangle}",
-      "fallback": "a triangle"
-    },
-    " add to ",
+    "The three interior angles of a triangle add to ",
     {
       "latex": "180^{\\circ}",
       "fallback": "180°"
@@ -38459,15 +38002,10 @@ const texts={
     "."
   ],
   "Use the angle-sum property in ΔABC.": [
-    "Use the angle",
+    "Use the angle-sum property in Δ",
     {
-      "latex": "- \\text{sum}",
-      "fallback": "-sum"
-    },
-    " property in ",
-    {
-      "latex": "\\triangle ABC",
-      "fallback": "ΔABC"
+      "latex": "ABC",
+      "fallback": "ABC"
     },
     "."
   ],
@@ -38485,12 +38023,7 @@ const texts={
     "."
   ],
   "A quadrilateral's interior angles total 360 degrees, not 180. Representing them as multiples of the same unknown lets us determine the common unit first.": [
-    "A quadrilateral'",
-    {
-      "latex": "s",
-      "fallback": "s"
-    },
-    " interior angles ",
+    "A quadrilateral's interior angles ",
     {
       "latex": "\\text{total} 360",
       "fallback": "total 360"
@@ -38527,10 +38060,10 @@ const texts={
     "."
   ],
   "Lying between the same parallel lines gives the same perpendicular height h.": [
-    "Lying between the same parallel lines gives the same perpendicular ",
+    "Lying between the same parallel lines gives the same perpendicular height ",
     {
-      "latex": "\\text{height} h",
-      "fallback": "height h"
+      "latex": "h",
+      "fallback": "h"
     },
     "."
   ],
@@ -38541,25 +38074,6 @@ const texts={
       "fallback": "x"
     },
     "-coordinates equal a, so the three points lie on the vertical"
-  ],
-  "Opposite sides of a quadrilateral are equal and parallel if their direction vect": [
-    {
-      "latex": "\\text{Opposite} \\text{sides}",
-      "fallback": "Opposite sides"
-    },
-    " of a quadrilateral are equal and parallel if their direction vect"
-  ],
-  "Opposite sides of a parallelogram must be equal and parallel. Compare both horizontal and vertical changes for opposite sides; matching direction vectors certify this.": [
-    {
-      "latex": "\\text{Opposite} \\text{sides}",
-      "fallback": "Opposite sides"
-    },
-    " of ",
-    {
-      "latex": "a \\text{parallelogram}",
-      "fallback": "a parallelogram"
-    },
-    " must be equal and parallel. Compare both horizontal and vertical changes for opposite sides; matching direction vectors certify this."
   ],
   "Apply the distance formula to B(1,3).": [
     "Apply the distance formula to ",
@@ -38575,20 +38089,10 @@ const texts={
       "latex": "s = \\dfrac{\\left(a + b + c\\right)}{2}",
       "fallback": "s=(a+b+c)/2"
     },
-    " and Heron’",
-    {
-      "latex": "s",
-      "fallback": "s"
-    },
-    " formula."
+    " and Heron’s formula."
   ],
   "Heron’s formula uses only the three side lengths. First find the semiperimeter, then substitute s, s−a, s−b, and s−c under one square root.": [
-    "Heron’",
-    {
-      "latex": "s",
-      "fallback": "s"
-    },
-    " formula uses only the three side lengths. First find the semiperimeter, then substitute ",
+    "Heron’s formula uses only the three side lengths. First find the semiperimeter, then substitute ",
     {
       "latex": "s, s - a, s - b",
       "fallback": "s, s−a, s−b"
@@ -38629,9 +38133,10 @@ const texts={
     }
   ],
   "Diagonal BD forms triangles ABD and BCD; calculate each separately.": [
+    "Diagonal ",
     {
-      "latex": "\\text{Diagonal} BD",
-      "fallback": "Diagonal BD"
+      "latex": "BD",
+      "fallback": "BD"
     },
     " forms triangles ",
     {
@@ -38682,14 +38187,6 @@ const texts={
     },
     " centimetres and the total surface area formula."
   ],
-  "Convert every dimension into the same unit before calculating surface area. If a length is multiplied by a conversion factor, the area uses its square.": [
-    "Convert every dimension into the same unit before calculating surface area. If ",
-    {
-      "latex": "a \\text{length}",
-      "fallback": "a length"
-    },
-    " is multiplied by a conversion factor, the area uses its square."
-  ],
   "Calculate painted area at a=6.5 metres.": [
     "Calculate painted area at ",
     {
@@ -38718,14 +38215,6 @@ const texts={
       "fallback": "length × breadth × height"
     },
     "."
-  ],
-  "Find the pond's capacity as a rectangular prism in cubic metres.": [
-    "Find the pond'",
-    {
-      "latex": "s",
-      "fallback": "s"
-    },
-    " capacity as a rectangular prism in cubic metres."
   ],
   "Use midpoint x and a convenient assumed mean A = 27 with class width h = 5.": [
     "Use midpoint ",
@@ -38788,11 +38277,7 @@ const texts={
     " gives the mean."
   ],
   "A mean of 14 across seven numbers gives the total.": [
-    {
-      "latex": "A \\text{mean}",
-      "fallback": "A mean"
-    },
-    " of ",
+    "A mean of ",
     {
       "latex": "14",
       "fallback": "14"
@@ -38844,12 +38329,7 @@ const texts={
       "latex": "15",
       "fallback": "15"
     },
-    ", giving ",
-    {
-      "latex": "a \\text{mean}",
-      "fallback": "a mean"
-    },
-    " of ",
+    ", giving a mean of ",
     {
       "latex": "3",
       "fallback": "3"

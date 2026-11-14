@@ -20,6 +20,8 @@ assert.match(parameters,/cf\} = 24/,'Separate parameter equalities retain their 
 assert(!parameters.includes('30, \\text{cf}'),'Parameters have independent aligned rows');
 const original={latex:'x^2',fallback:'x²'};assert.equal(rich(original),original,'Never process structured math twice');
 assert.equal(rich('a pure surd'),'a pure surd');
+assert.equal(rich('Find the area of a triangle'),'Find the area of a triangle','Prose articles and geometry words must not become algebraic products');
+assert.equal(rich("Heron’s formula"),"Heron’s formula",'Possessive endings remain prose');
 const ctx={window:{katex:require('../assets/vendor/katex/katex.min.js')}};vm.createContext(ctx);
 vm.runInContext(fs.readFileSync('site/assets/math-notation.js','utf8'),ctx);
 const evil=ctx.window.TriggleNotation.render(rich('<img src=x onerror=alert(1)>'));

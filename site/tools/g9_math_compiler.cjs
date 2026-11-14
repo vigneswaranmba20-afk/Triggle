@@ -106,7 +106,7 @@ function rich(source,{display=false}={}){
  const labels=/^(?:\((?:[iv]+|[1-9]|[a-d])\))/;
  while(index<ts.length){const t=ts[index];
   if(t.text==='('){const m=source.slice(t.start).match(labels);if(m){index=ts.findIndex((v,i)=>i>=index&&v.end>=t.start+m[0].length)+1;continue;}}
-  if(!allowed(t.text)||/^\s+$/.test(t.text)){index++;continue;}
+  if(!allowed(t.text)||/^\s+$/.test(t.text)||(t.text==='s'&&/[’']/.test(source[t.start-1]||'')&&/[A-Za-z]/.test(source[t.start-2]||''))){index++;continue;}
   // Find the longest valid bounded expression at this token. Failed enclosing
   // groups cannot swallow a smaller valid formula later in the same sentence.
   let end=index,fractionDepth=0,eventDepth=0;while(end<ts.length){const token=ts[end].text;if(token==='[[')fractionDepth++;if(!fractionDepth&&!allowed(token)&&!eventDepth)break;if(token===']]')fractionDepth--;if(token==='P'&&ts[end+1]?.text==='(')eventDepth=1;else if(eventDepth&&token===')')eventDepth=0;if(/^\n/.test(token))break;end++;}
@@ -114,6 +114,7 @@ function rich(source,{display=false}={}){
   for(let j=end;j>index;j--){const raw=source.slice(t.start,ts[j-1].end).trimEnd();
    if(!raw||/[=+\-−–×÷/:;,]$/.test(raw))continue;
    if(/^[aAiI]$/.test(raw)&&raw!==source.trim())continue;
+   if(/[A-Za-z]{2,}/.test(raw)&&!/[0-9=+−–×÷/<>∈∉∪∩√²³Σ°₀₁₂₃₄₅₆₇₈₉]/.test(raw)&&!/^[A-Za-z]\(/.test(raw)&&! /\b(?:sin|cos|tan|sec|cosec|cot|deg)\b/.test(raw)&&!/^\d/.test(raw)&&!/^[A-Z]{2,4}$/.test(raw))continue;
    // A bare prose word/number is not a product; only variables, mathematical
    // symbols and complete numeric tokens are eligible as isolated anchors.
    if(word(raw)&&raw.length>1&&!/^[A-Z]{2,4}$/.test(raw))continue;
