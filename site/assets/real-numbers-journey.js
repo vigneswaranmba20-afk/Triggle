@@ -18,8 +18,8 @@ function numberLine(min,max,points,ta){
  const x=v=>40+520*(v-min)/(max-min),y=82;
  let out='<svg class="rnlab-line" viewBox="0 0 600 166" role="img" aria-label="'+esc(ta?'எண்கோடு':'Number line')+'"><title>'+esc(ta?'எண்கோடு':'Number line')+'</title>'+
    '<line x1="38" y1="'+y+'" x2="564" y2="'+y+'" stroke="#697aa0" stroke-width="2.5"/><path d="M558 76L566 82L558 88" stroke="#697aa0" stroke-width="2" fill="none"/>';
- for(let i=0;i<=4;i++){const n=min+(max-min)*i/4;out+='<line x1="'+x(n)+'" y1="'+(y-6)+'" x2="'+x(n)+'" y2="'+(y+6)+'" stroke="#697aa0"/>'+
-   '<text x="'+x(n)+'" y="113" fill="#5c5b73" font-size="14" text-anchor="middle">'+esc(Number(n.toFixed(3)))+'</text>';}
+ for(let i=0;i<=4;i++){const n=min+(max-min)*i/4;const precision=(max-min)<.01?4:(max-min)<.1?3:(max-min)<1?2:1;out+='<line x1="'+x(n)+'" y1="'+(y-6)+'" x2="'+x(n)+'" y2="'+(y+6)+'" stroke="#697aa0"/>'+
+   '<text x="'+x(n)+'" y="113" fill="#5c5b73" font-size="14" text-anchor="middle">'+esc(Number(n.toFixed(precision)).toFixed(precision))+'</text>';}
  points.forEach((p,i)=>{const px=x(p.value);out+='<line x1="'+px+'" y1="'+(y-29)+'" x2="'+px+'" y2="'+y+'" stroke="'+(i===0?'#bf467d':'#527ab2')+'" stroke-width="3"/>'+
   '<circle cx="'+px+'" cy="'+y+'" r="5" fill="'+(i===0?'#bf467d':'#527ab2')+'"/>'+
   '<text x="'+px+'" y="'+(i===0?'32':i%2?'49':'16')+'" font-weight="750" font-size="15" text-anchor="middle" fill="#5c3272">'+esc(p.label)+'</text>';});
@@ -139,6 +139,30 @@ function mount(container,chapter,language){
      'இந்த விளக்கம் பாடநூலின் விகிதப்படுத்துதல் முறையை அடிப்படையாகக் கொண்டது.':
      'A step-by-step explanation of the textbook rationalisation method.';
  }
+ // A short, visible-to-screen-readers foundation path. Each selected beat occupies
+ // one compact card, instead of stacking lengthy explanations on an Android screen.
+ function foundationMarkup(stage){
+  if(!Array.isArray(stage.foundation)||!stage.foundation.length)return '';
+  return '<section class="rnlab-foundation" aria-label="'+esc(ta?'கருத்தின் அடிப்படை படிகள்':'Understand the idea step by step')+'">'+
+   '<div class="rnlab-foundation-tabs" role="group" aria-label="'+esc(ta?'கற்றல் படிகளைத் தேர்ந்தெடுக்கவும்':'Choose a learning step')+'">'+
+   stage.foundation.map((step,i)=>'<button type="button" data-foundation-step="'+i+'" aria-pressed="'+(i===0)+'">'+
+     '<span class="rnlab-foundation-num">'+(i+1)+'</span><span>'+esc(pick(step.label,lang))+'</span></button>').join('')+
+   '</div><div class="rnlab-foundation-current" data-foundation-current aria-live="polite"></div></section>';
+ }
+ function bindFoundation(stage){
+  if(!Array.isArray(stage.foundation)||!stage.foundation.length)return;
+  const host=panel.querySelector('[data-foundation-current]');
+  const buttons=[...panel.querySelectorAll('[data-foundation-step]')];
+  function select(i){
+   const step=stage.foundation[i];
+   buttons.forEach((b,index)=>b.setAttribute('aria-pressed',String(i===index)));
+   host.innerHTML='<p>'+notation(pick(step.explain,lang))+'</p>'+
+    '<div class="rnlab-foundation-equation" role="group" aria-label="'+esc(pick(step.label,lang))+'">'+
+    notation(step.math)+'</div>';
+  }
+  buttons.forEach((b,i)=>b.addEventListener('click',()=>select(i)));
+  select(0);
+ }
  function renderDemo(index){
   const visual=panel.querySelector('[data-demo-visual]'),output=panel.querySelector('[data-demo-output]');
   const set=(html,answer)=>{visual.innerHTML=html;output.innerHTML=notation(answer);};
@@ -157,10 +181,12 @@ function mount(container,chapter,language){
      set('<div class="rnlab-big">'+esc(d[mode][0])+'</div>',d[mode][1]);
     });
   }else if(index===2){
-    slider(t.move,-40,40,1,28,n=>{
-      const value=n/20;
-      set(numberLine(-2,2,[{value,label:value.toFixed(2)},{value:Math.sqrt(2),label:'√2'}],ta),
-       value.toFixed(2)+(ta?' என்ற இடத்தில் புள்ளி உள்ளது.':' is the point on the number line.'));
+    const zoomLabel=ta?'தசம இடங்களைப் பெரிதாக்குக':'Zoom into decimal places';
+    slider(zoomLabel,1,3,1,1,n=>{
+      const scale=Math.pow(10,n),base=Math.floor(Math.sqrt(2)*scale)/scale,high=(Math.floor(Math.sqrt(2)*scale)+1)/scale;
+      const lo=base.toFixed(n),hi=high.toFixed(n);
+      set(numberLine(base,high,[{value:Math.sqrt(2),label:'√2'}],ta),
+        {latex:lo+' < \\sqrt{2} < '+hi,fallback:lo+' < √2 < '+hi});
     });
   }else if(index===3){
     const choices=[['0','4^0'],['half','4^(1/2)'],['1','4^1'],['threehalf','4^(3/2)']];
@@ -169,9 +195,15 @@ function mount(container,chapter,language){
   }else if(index===4){
     slider(t.factor,1,6,1,3,k=>{
       const rad=2*k*k;
-      const bars=Array.from({length:k},(_,i)=>'<rect x="'+(36+i*40)+'" y="'+(115-(i+1)*8)+'" width="29" height="'+(i+1)*8+'" rx="3" fill="#ad8ad4"/>').join('');
-      set('<svg class="rnlab-line" viewBox="0 0 330 146" role="img" aria-label="'+esc('√'+rad+' = '+k+'√2')+'"><title>'+esc('√'+rad+' = '+k+'√2')+'</title>'+bars+'</svg>',
-      '√'+rad+' = √('+k+'²×2) = '+k+'√2');
+      const side=25,offsetX=(330-k*side)/2,offsetY=15;
+      const tiles=Array.from({length:k*k},(_,i)=>{
+        const x=offsetX+(i%k)*side,y=offsetY+Math.floor(i/k)*side;
+        return '<rect x="'+x+'" y="'+y+'" width="'+side+'" height="'+side+'" stroke="#fff" stroke-width="1.6" fill="#9174c3"/>';
+      }).join('');
+      const title=ta?'ஒவ்வொரு சிறு சதுரத்தின் பரப்பளவு 2':'Each small square represents area 2';
+      set('<svg class="rnlab-line" viewBox="0 0 330 190" role="img" aria-label="'+esc('√'+rad+' = '+k+'√2')+'"><title>'+esc(title)+'</title>'+
+        tiles+'<text x="165" y="185" text-anchor="middle" font-size="16" fill="#504078" font-weight="700">'+esc(k+' × '+k+' squares · area '+rad)+'</text></svg>',
+        {latex:'\\sqrt{'+rad+'}=\\sqrt{'+k+'^2\\times2}='+k+'\\sqrt2',fallback:'√'+rad+' = √('+k+'²×2) = '+k+'√2'});
     });
   }else if(index===5){
     const labelFor=rad=>ta?
@@ -202,7 +234,8 @@ function mount(container,chapter,language){
   active=i;const stage=path.stages[i];
   panel.innerHTML='<small class="sp2-stage-reference">'+esc(t.source)+' '+esc(stage.section)+(stage.page?.en?' · EN p.'+stage.page.en:'')+'</small>'+
    '<h4>'+esc(pick(stage.title,lang))+'</h4><p class="sp2-idea">'+notation(pick(stage.idea,lang))+'</p>'+
-   '<p class="sp2-example">'+notation(pick(stage.example,lang))+'</p><div class="sp2-formula">'+notation(pick(stage.rule,lang))+'</div>'+
+   '<p class="sp2-example">'+notation(pick(stage.example,lang))+'</p><div class="sp2-formula">'+notation(pick(stage.rule,lang))+'</div>'+ 
+   foundationMarkup(stage)+
    '<div class="sp2-demo"><h5 class="sp2-demo-title">'+esc(t.explore)+'</h5>'+
    '<div class="sp2-demo-controls" data-demo-controls></div>'+
    '<div class="rnlab-visual" data-demo-visual></div><p class="sp2-demo-output" data-demo-output aria-live="polite"></p>'+
@@ -210,7 +243,8 @@ function mount(container,chapter,language){
    '<div class="sp2-recall"><h5>'+esc(t.check)+'</h5><p>'+notation(pick(stage.question,lang))+'</p>'+
    '<div class="sp2-answers" data-answers></div><div class="sp2-recall-actions">'+
    '<button type="button" data-hint>'+esc(t.hint)+'</button><button type="button" data-why>'+esc(t.why)+'</button></div>'+
-   '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-explanation hidden></div></div>'+
+   '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-explanation hidden></div></div>'+ 
+   (stage.pitfall?'<details class="rnlab-pitfall"><summary>'+esc(ta?'பொதுவாக ஏற்படும் தவறு':'Avoid this mistake')+'</summary><p>'+notation(pick(stage.pitfall,lang))+'</p></details>':'')+
    (i+1<path.stages.length?'<button type="button" class="rnlab-next" data-next>'+esc(t.next)+' →</button>':'');
   const choices=panel.querySelector('[data-answers]'),feedback=panel.querySelector('[data-feedback]'),explanation=panel.querySelector('[data-explanation]');
   let wrongAttempts=0;
@@ -222,10 +256,10 @@ function mount(container,chapter,language){
       feedback.innerHTML=notation(t.wrong+clue);}
    });choices.append(b);
   });
-  panel.querySelector('[data-hint]').addEventListener('click',()=>{feedback.textContent=pick(stage.hint,lang);});
+  panel.querySelector('[data-hint]').addEventListener('click',()=>{feedback.innerHTML=notation(pick(stage.hint,lang));});
   panel.querySelector('[data-why]').addEventListener('click',()=>{explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=!explanation.hidden;});
   panel.querySelector('[data-next]')?.addEventListener('click',()=>{show(i+1);root.querySelector('[data-panel]').scrollIntoView({block:'nearest'});});
-  renderDemo(i);update();
+  bindFoundation(stage);renderDemo(i);update();
  }
  show(0);return true;
 }
