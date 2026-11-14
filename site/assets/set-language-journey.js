@@ -336,7 +336,12 @@
       extraPractice(stage);
       if(stage.id==='cardinality')hard();
       updateProgress();
-      if(focus){const selected=panel.querySelector('.sp2-concept-heading');selected?.scrollIntoView({behavior:'auto',block:'start'});selected?.focus({preventScroll:true});}
+      if(focus){
+        // Keep the single Back to concepts action visible when opening an idea.
+        // Focus the mathematical heading without scrolling it over the Back button.
+        root.scrollIntoView({behavior:'auto',block:'start'});
+        panel.querySelector('.sp2-concept-heading')?.focus({preventScroll:true});
+      }
     }
     if(Number.isInteger(initialConcept)&&initialConcept>=0&&initialConcept<book.stages.length)
       show(initialConcept,false,false);
