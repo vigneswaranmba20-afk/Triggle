@@ -33,6 +33,10 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
    if(chapter===1)assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'false');
   }
   await check(chapter+'/'+index+' '+lang+' '+width);
+  if(chapter===1&&index===6){
+   const formula=await page.locator('.sp2-formula').evaluate(el=>({width:el.clientWidth,scroll:el.scrollWidth}));
+   assert(formula.scroll<=formula.width+1,'Cardinality KaTeX fits without horizontal clipping '+lang+' '+width+' '+JSON.stringify(formula));
+  }
   if(chapter===1){
    const layout=await page.locator('.sp2-journey').evaluate(el=>{
     const css=getComputedStyle(el),nav=el.querySelector('[data-idea-picker]');
