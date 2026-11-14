@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": "1",
+  "exercise": "1.2",
+  "question": "2",
+  "release": "staged-not-live",
+  "sourceEdition": "Tamil Nadu SCERT Standard Nine Mathematics revised 2025",
+  "english": {
+    "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 11,
+    "pdfPage": 17,
+    "review": "Original printed-page source-image audit inherited from PR #129 and compared with current connected PDF text"
+  },
+  "tamil": {
+    "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+    "printedPage": 13,
+    "pdfPage": 19,
+    "review": "Text layer cross-checked, Tamil page image/editorial sign-off not claimed",
+    "translationReview": "deferred"
+  },
+  "questionStem": "2. Identify the following sets as finite or infinite.",
+  "parts": [
+    {
+      "part": "i",
+      "id": "g9-ch1-ex1.2-q2-i",
+      "exactEnglish": "X = The set of all districts in Tamilnadu.",
+      "expectedAnswer": "Finite"
+    },
+    {
+      "part": "ii",
+      "id": "g9-ch1-ex1.2-q2-ii",
+      "exactEnglish": "Y = The set of all straight lines passing through a point.",
+      "expectedAnswer": "Infinite"
+    },
+    {
+      "part": "iii",
+      "id": "g9-ch1-ex1.2-q2-iii",
+      "exactEnglish": "A = { x : x ∈ Z and x <5}",
+      "expectedAnswer": "Infinite"
+    },
+    {
+      "part": "iv",
+      "id": "g9-ch1-ex1.2-q2-iv",
+      "exactEnglish": "B = { x : x²–5x+6 = 0, x ∈ N }",
+      "expectedAnswer": "Finite"
+    }
+  ],
+  "mathematicalNotes": [
+    "Q2(i): avoid a fixed district count, since administrative boundaries can change.",
+    "Q2(ii): infinitely many directions through a point.",
+    "Q2(iii): integers below 5 have no lower bound.",
+    "Q2(iv): x²−5x+6=(x−2)(x−3); both roots are natural."
+  ],
+  "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
+  "certification": "Source-audited English teaching candidate. No student-facing release or Tamil editorial certification."
+}
