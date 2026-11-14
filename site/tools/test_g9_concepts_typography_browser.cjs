@@ -15,6 +15,18 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
  for(let index=0;index<Math.max(nav,1);index++){
   if(nav)await page.locator('.sp2-nav [data-index]').nth(index).click();
   await check(chapter+'/'+index+' '+lang+' '+width);
+  if(chapter===1){
+   const layout=await page.locator('.sp2-journey').evaluate(el=>{
+    const css=getComputedStyle(el),nav=el.querySelector('.sp2-journey-controls button');
+    const heading=el.querySelector('h3'),panel=el.querySelector('.sp2-panel');
+    return {padding:parseFloat(css.paddingLeft),navHeight:nav?.getBoundingClientRect().height,
+      headingVisible:!!heading?.getClientRects().length,panelVisible:!!panel?.getClientRects().length,
+      viewportWidth:document.documentElement.clientWidth};
+   });
+   assert(layout.padding<=14,'Compact concepts padding '+width+' '+lang);
+   assert(layout.navHeight>=44,'Concept navigation touch height '+width+' '+lang);
+   assert(layout.headingVisible&&layout.panelVisible,'Concept heading and lesson remain visible '+width+' '+lang);
+  }
   const controls=await page.locator('[data-demo-mode]').count();
   for(let i=0;i<controls;i++){
    const button=page.locator('[data-demo-mode]').nth(i);if(await button.getAttribute('data-demo-mode')==='go')continue;
