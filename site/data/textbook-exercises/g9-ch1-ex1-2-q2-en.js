@@ -249,7 +249,7 @@ const entries=[
       "en": "Natural-number roots of a quadratic"
     },
     "q": {
-      "en": "2. Identify the following sets as finite or infinite.\n(iv) B = { x : x²–5x+6 = 0, x ∈ N }"
+      "en": "2. Identify the following sets as finite or infinite.\n(iv) B = { x : x²−5x+6 = 0, x ∈ N }"
     },
     "steps": [
       {
@@ -315,7 +315,7 @@ const entries=[
         "2. Identify the following sets as finite or infinite.\n(iv) ",
         {
           "latex": "B=\\{x:x^2-5x+6=0,\\ x\\in\\mathbb N\\}",
-          "fallback": "B = { x : x²–5x+6 = 0, x ∈ N }",
+          "fallback": "B = { x : x²−5x+6 = 0, x ∈ N }",
           "display": true
         }
       ]
