@@ -68,22 +68,43 @@ async function main(){
     });
     await check(c,'Interactive lesson stages available','interactivity',async()=>{
      await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
+     const picker=page.locator('#chapterOverview [data-idea-picker]');
+     if(config.chapter==='g9-ch1')await picker.click();
      await page.locator('#chapterOverview .sp2-journey [data-nav] button').first().waitFor({state:'visible'});
      const count=await page.locator('#chapterOverview .sp2-journey [data-nav] button').count();
-     assert.equal(count,config.expected);return count+' stages';
+     assert.equal(count,config.expected);
+     if(config.chapter==='g9-ch1')await picker.click();
+     return count+' stages';
     });
     const lab=page.locator('#chapterOverview .sp2-journey');
     if(!await lab.isVisible())continue;
+    const selectStage=async index=>{
+      if(config.chapter==='g9-ch1')await lab.locator('[data-idea-picker]').click();
+      await lab.locator('[data-nav] button').nth(index).click();
+    };
     await check(c,'Discoverable previous/next controls reach all concepts','navigation',async()=>{
-     const prev=lab.locator('[data-journey-prev]'),next=lab.locator('[data-journey-next]'),index=lab.locator('[data-journey-index]');
-     assert.equal(await prev.isDisabled(),true);
-     assert.ok((await index.innerText()).includes('1'));
-     await next.click();assert.ok((await index.innerText()).includes('2'));
-     await prev.click();assert.ok((await index.innerText()).includes('1'));
-     for(let n=1;n<config.expected;n++)await next.click();
-     assert.equal(await next.isDisabled(),true);
-     assert.equal(await lab.locator('[data-nav] button[aria-current="step"]').count(),1);
-     await lab.locator('[data-nav] button').first().click();
+     const index=lab.locator('[data-journey-index]');
+     if(config.chapter==='g9-ch1'){
+       const prev=lab.locator('[data-footer-prev]'),next=lab.locator('[data-footer-next]');
+       assert.equal(await prev.isDisabled(),true);
+       assert.ok((await index.innerText()).includes('1'));
+       await next.click();assert.ok((await index.innerText()).includes('2'));
+       await prev.click();assert.ok((await index.innerText()).includes('1'));
+       for(let n=1;n<config.expected;n++)await next.click();
+       assert.ok((await next.innerText()).includes(lang==='ta'?'அத்தியாயம் 1':'Chapter 1'));
+       assert.equal(await lab.locator('[data-nav] button[aria-current="step"]').count(),1);
+       await selectStage(0);
+     }else{
+       const prev=lab.locator('[data-journey-prev]'),next=lab.locator('[data-journey-next]');
+       assert.equal(await prev.isDisabled(),true);
+       assert.ok((await index.innerText()).includes('1'));
+       await next.click();assert.ok((await index.innerText()).includes('2'));
+       await prev.click();assert.ok((await index.innerText()).includes('1'));
+       for(let n=1;n<config.expected;n++)await next.click();
+       assert.equal(await next.isDisabled(),true);
+       assert.equal(await lab.locator('[data-nav] button[aria-current="step"]').count(),1);
+       await selectStage(0);
+     }
     });
     await check(c,'Demo and self-check are usable','learning',async()=>{
      assert.ok(await lab.locator('[data-demo-controls] button,input[type=range]').count()>0,'No demo control');
@@ -101,11 +122,11 @@ async function main(){
     });
     await check(c,'Switching stages updates the problem','orientation',async()=>{
      const before=await lab.locator('[data-panel] h4').innerText();
-     await lab.locator('[data-nav] button').nth(1).click();
+     await selectStage(1);
      assert.notEqual(await lab.locator('[data-panel] h4').innerText(),before);
     });
     await check(c,'Second wrong answer gives a concept-specific clue','feedback',async()=>{
-     await lab.locator('[data-nav] button').first().click();
+     await selectStage(0);
      const idx=await page.evaluate(chapter=>{
        const p=chapter==='g9-ch1'?window.TRIGGLE_SET_PATH:window.TRIGGLE_REAL_PATH;
        return p.stages[0].correct===0?1:0;
@@ -146,7 +167,7 @@ async function main(){
 
     if(config.chapter==='g9-ch1'){
       await check(c,'Question scrolls normally with its answer choices','orientation',async()=>{
-       await lab.locator('[data-nav] button').first().click();
+       await selectStage(0);
        const m=await lab.locator('.sp2-concept-heading').evaluate(el=>({position:getComputedStyle(el).position,heading:el.querySelector('h4')?.innerText}));
        const q=await lab.locator('.sp2-concept-question').evaluate(el=>({position:getComputedStyle(el).position,question:el.innerText,after:!!el.nextElementSibling?.matches('[data-answers]')}));
        assert.notEqual(m.position,'sticky','Concept heading must not float');
@@ -157,14 +178,14 @@ async function main(){
        assert.equal(await lab.locator('.sp2-sticky-context').count(),0);
       });
       await check(c,'Textbook set-form names are visible','terminology',async()=>{
-       await lab.locator('[data-nav] button').nth(1).click();
+       await selectStage(1);
        const labels=await lab.locator('[data-demo-mode]').allInnerTexts();
        assert.equal(labels.length,3);
        if(lang==='en')assert.deepEqual(labels,['Descriptive Form','Roster Form','Set-Builder Form']);
        else assert(labels.every(x=>/[\u0B80-\u0BFF]/.test(x)),JSON.stringify(labels));
       });
       await check(c,'Venn lab opens once without repeating Phase 2','learning',async()=>{
-       await lab.locator('[data-nav] button').nth(3).click();
+       await selectStage(3);
        assert.equal(await lab.locator('.p2-lab').count(),0);
        await lab.locator('[data-demo-mode="go"]').click();
        assert.equal(await lab.locator('.p2-lab').count(),1);
@@ -173,7 +194,7 @@ async function main(){
        assert.equal(await lab.locator('.p2-lab').count(),1);
       });
       await check(c,'Common-member slider recalculates visibly','interactivity',async()=>{
-       await lab.locator('[data-nav] button').nth(6).click();
+       await selectStage(6);
        await lab.locator('#sp2-overlap-control').evaluate(el=>{el.value='8';el.dispatchEvent(new Event('input',{bubbles:true}));});
        const explanation=await lab.locator('[data-slider-formula]').evaluate(node=>{const clone=node.cloneNode(true);clone.querySelectorAll('.triggle-tex').forEach(el=>el.replaceWith(document.createTextNode(el.dataset.mathFallback)));return clone.textContent;});
        assert((await lab.locator('[data-slider-formula] math mn').allTextContents()).includes('17'),'Updated union count is semantic mathematical output');
@@ -181,12 +202,12 @@ async function main(){
        assert.ok((await lab.locator('[data-demo-output]').innerText()).includes('17'));
       });
       await check(c,'Bottom Next Page and final chapter return work','navigation',async()=>{
-       await lab.locator('[data-nav] button').first().click();
+       await selectStage(0);
        const button=lab.locator('[data-footer-next]');
        assert.ok(await button.isVisible());
        await button.click();
        assert.ok((await lab.locator('[data-journey-index]').innerText()).includes('2'));
-       await lab.locator('[data-nav] button').nth(6).click();
+       await selectStage(6);
        assert.ok((await button.innerText()).includes(lang==='ta'?'அத்தியாயம் 1':'Chapter 1'));
        await button.click();
        assert.equal(await page.locator('.hub-section-card').count(),4);
