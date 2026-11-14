@@ -32,7 +32,7 @@ new vm.Script(file);
 assert(!file.includes('sp2-sticky-context'),'Concept questions must not use floating/sticky context containers');
 assert(file.includes('sp2-concept-question'),'Concept questions are placed next to their answer choices');
 assert(file.includes("esc((index+1)+'. '+pick(stage.title,lang))"),'Concept title is visibly numbered');
-assert(file.includes("data-footer-next")&&file.includes("t.nextPage"),'End of concept contains a next page action');
+assert(file.includes("data-footer-next")&&file.includes("t.nextIdea"),'End of concept advances to the next idea, not an unrelated page');
 assert(file.includes("t.backConcepts")&&file.includes("showIndex(true)"),'Final idea returns to the Concepts index');
 assert(file.includes("data-back-index"),'Every concept lesson includes a Back to concepts action');
 for(const label of ['Descriptive Form','Roster Form','Set-Builder Form'])assert(file.includes(label),'Textbook representation: '+label);
