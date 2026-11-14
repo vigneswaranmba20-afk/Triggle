@@ -1,5 +1,5 @@
-/* Grade 9: editorially reviewed and source-pinned hints; only existing exercises and practice.
- * Original source equations, question text and answers are untouched. Tamil editorial review pending. */
+/* Grade 9: source-pinned optional teaching notes; no changes to source math, questions, or answers.
+ * Tamil phrasing remains editorial-pending. Generic drawings appear only where mathematically helpful. */
 (()=>{'use strict';window.TriggleWhyStepG9=Object.freeze({
   "version": "2026-11-14-g9",
   "grade": 9,
@@ -382,12 +382,7 @@
       "expected": "The area of a rectangle is length × width.",
       "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
       "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "concept": "triangleArea"
     },
     "c9-8-8-practice-8": {
       "step": 0,
@@ -659,30 +654,14 @@
       "expected": "The repeating digit 4 gives 6.444 to three decimal places.",
       "en": "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.",
       "ta": "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது 5 அல்லது அதற்கு மேல் இருந்தால்தான் இலக்கத்தை உயர்த்த வேண்டும்.",
-      "concept": "rounding",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "rounding"
     },
     "g9-ch2-ex4-q1-iii": {
       "step": 0,
       "expected": "The repeating block 73 gives 4.7373 to four decimal places.",
       "en": "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.",
       "ta": "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது 5 அல்லது அதற்கு மேல் இருந்தால்தான் இலக்கத்தை உயர்த்த வேண்டும்.",
-      "concept": "rounding",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "rounding"
     },
     "g9-ch2-ex5-q1-i": {
       "step": 1,
@@ -1620,11 +1599,7 @@
       "expected": "The common chord is perpendicular to the line of centres. If its midpoint is dis",
       "en": "Pythagoras applies only to right triangles. The longest side opposite the right angle is the hypotenuse; its square equals the sum of the other two squares.",
       "ta": "பிதாகரஸ் தேற்றம் செங்கோண முக்கோணத்திற்கே பொருந்தும். செங்கோணத்திற்கு எதிரே உள்ள கர்ணத்தின் வர்க்கம் மற்ற இரு பக்கங்களின் வர்க்கக் கூட்டலுக்குச் சமம்.",
-      "concept": "pythagoras",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "pythagoras"
     },
     "g9-ch5-ex5.2-q2": {
       "step": 3,
