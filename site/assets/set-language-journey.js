@@ -7,6 +7,7 @@
   const STORAGE='triggle.g9.set-path.v1';
   const pick=(v,l)=>typeof v==='string'?v:(v?.[l]||v?.en||'');
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const plain=s=>Array.isArray(s)?s.map(plain).join(''):typeof s==='object'?(s?.fallback||''):String(s??'');
   const htmlMath=s=>{s=window.TriggleG9Math?.text(s)??s;return window.TriggleNotation?.render(s)||esc(s);};
   const words={
     en:{label:'YOUR SHORT LEARNING PATH',title:'Build Set Language, one idea at a time',
@@ -108,7 +109,7 @@
        show(active+1,true);
      });
     function demoShell(title){return '<div class="sp2-demo" data-demo><p class="sp2-demo-title">'+esc(title)+'</p><div class="sp2-demo-controls" data-demo-controls></div><p class="sp2-demo-output" data-demo-output role="status" aria-live="polite"></p></div>';}
-    function btn(name,key){return '<button type="button" data-demo-mode="'+esc(key)+'">'+htmlMath(name)+'</button>';}
+    function btn(name,key){return '<button type="button" data-demo-mode="'+esc(key)+'" aria-label="'+esc(plain(name))+'">'+htmlMath(name)+'</button>';}
     function setDemo(state,options,paint){
       const controls=panel.querySelector('[data-demo-controls]');
       controls.innerHTML=options.map(([name,key])=>btn(name,key)).join('');
@@ -232,7 +233,7 @@
       const choices=holder.querySelector('[data-extra-answers]');
       item.choices.forEach((choice,i)=>{
         const button=document.createElement('button');
-        button.type='button';button.dataset.extraChoice=String(i);button.innerHTML=htmlMath(pick(choice,lang));
+        button.type='button';button.dataset.extraChoice=String(i);button.innerHTML=htmlMath(pick(choice,lang));button.setAttribute('aria-label',plain(pick(choice,lang)));
         button.addEventListener('click',()=>{
           choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
           holder.querySelector('[data-extra-feedback]').textContent=i===item.correct?t.correct:t.retry;
@@ -282,7 +283,7 @@
          '<h4>'+esc((index+1)+'. '+pick(stage.title,lang))+'</h4></div>'+
         '<p class="sp2-idea">'+htmlMath(pick(stage.idea,lang))+'</p>'+
         '<p class="sp2-example">'+htmlMath(pick(stage.example,lang))+'</p>'+
-        '<div class="sp2-formula" aria-label="Mathematics expression">'+htmlMath(stage.rule)+'</div>'+
+        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(stage.rule)+'</div>'+
         demoShell(demoTitle)+
         '<div class="sp2-recall"><h5>'+esc(t.try)+'</h5>'+
         '<p class="sp2-concept-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p>'+
@@ -298,7 +299,7 @@
       let wrongAttempts=0;
       stage.choices.forEach((choice,i)=>{
         const button=document.createElement('button');
-        button.type='button';button.dataset.choice=String(i);button.innerHTML=htmlMath(pick(choice,lang));
+        button.type='button';button.dataset.choice=String(i);button.innerHTML=htmlMath(pick(choice,lang));button.setAttribute('aria-label',plain(pick(choice,lang)));
         button.addEventListener('click',()=>{
           answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
           const good=i===stage.correct;

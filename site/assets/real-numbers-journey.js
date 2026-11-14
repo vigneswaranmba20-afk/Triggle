@@ -57,7 +57,7 @@ function mount(container,chapter,language){
  function controls(label,items,value,onChange){const host=panel.querySelector('[data-demo-controls]');
   const group=document.createElement('div');group.className='rnlab-choices';group.setAttribute('role','group');group.setAttribute('aria-label',label);
   items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);if(typeof caption==='object'){b.innerHTML=caption.html;b.setAttribute('aria-label',caption.label);}
-   else b.innerHTML='<span class="rnlab-math-choice">'+notation(caption)+'</span>';
+   else{b.innerHTML='<span class="rnlab-math-choice">'+notation(caption)+'</span>';b.setAttribute('aria-label',String(caption));}
    b.setAttribute('aria-pressed',String(val===value));b.addEventListener('click',()=>{
     group.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
     onChange(val);});group.append(b);});host.append(group);onChange(value);
@@ -214,7 +214,7 @@ function mount(container,chapter,language){
    (i+1<path.stages.length?'<button type="button" class="rnlab-next" data-next>'+esc(t.next)+' →</button>':'');
   const choices=panel.querySelector('[data-answers]'),feedback=panel.querySelector('[data-feedback]'),explanation=panel.querySelector('[data-explanation]');
   let wrongAttempts=0;
-  stage.choices.forEach((opt,j)=>{const b=document.createElement('button');b.type='button';b.dataset.choice=String(j);b.innerHTML=notation(pick(opt,lang));
+  stage.choices.forEach((opt,j)=>{const b=document.createElement('button');b.type='button';b.dataset.choice=String(j);b.innerHTML=notation(pick(opt,lang));b.setAttribute('aria-label',pick(opt,lang));
    b.addEventListener('click',()=>{const correct=j===stage.correct;
     choices.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
     if(correct){feedback.textContent=t.right;done.add(stage.id);save(done);update();explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=false;}

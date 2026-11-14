@@ -284,7 +284,7 @@
           const feedback=document.createElement('p');feedback.setAttribute('aria-live','polite');feedback.className='hub-quiz-feedback';
           let wrongAttempts=0;
           stage.choices.forEach((choice,i)=>{
-            const button=document.createElement('button');button.type='button';button.innerHTML=chapterTypeset(text(choice));
+            const button=document.createElement('button');button.type='button';button.innerHTML=chapterTypeset(text(choice));if(grade===9)button.setAttribute('aria-label',text(choice));
             button.addEventListener('click',()=>{
               answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
               const right=i===stage.correct;
