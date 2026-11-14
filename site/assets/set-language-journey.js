@@ -5,7 +5,6 @@
   const book=window.TRIGGLE_SET_PATH;
   if(!book || book.chapterId!=='g9-ch1')return;
   const STORAGE='triggle.g9.set-path.v1';
-  const ACTIVE_STAGE='triggle.g9.set-path.active.v1';
   const pick=(v,l)=>typeof v==='string'?v:(v?.[l]||v?.en||'');
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const plain=s=>Array.isArray(s)?s.map(plain).join(''):typeof s==='object'?(s?.fallback||''):String(s??'');
@@ -25,7 +24,7 @@
       count:'Move the common-member count',atleast:'At least one',none:'Neither',
       onlyA:'Only A',onlyB:'Only B',overlap:'Both',lawResult:'Both sides give',
       extra:'Try a second practice question',reason:'Show the reasoning',top:'Back to learning path',
-      previousIdea:'Previous idea',nextIdea:'Next idea',position:(n,total)=>'Idea '+n+' of '+total,
+      previousIdea:'Previous idea',nextIdea:'Next idea',backConcepts:'Back to concepts',position:(n,total)=>'Idea '+n+' of '+total,
       navTip:'Choose one of seven numbered ideas. The question appears directly above its answers and scrolls naturally.',
        questionLabel:'CURRENT QUESTION',nextPage:'Next page',backChapter:'Back to Chapter 1',sliderTip:'Drag left or right (or use arrow keys) to change how many students are in BOTH groups. Tap − or + to change one student at a time. Watch the numbers and equation update.',sliderFormula:(both,union,neither)=>[{latex:'A\\text{ or }B=14+11-'+both+'='+union,fallback:`A or B = 14 + 11 − ${both} = ${union}`},'. ',{latex:'\\text{Neither}=30-'+union+'='+neither,fallback:`Neither = 30 − ${union} = ${neither}`},'. The overlap was counted twice, so subtract it once.']},
     ta:{label:'சிறிய கற்றல் பாதை',title:'கண மொழியை ஒவ்வொரு கருத்தாகக் கற்போம்',
@@ -42,7 +41,7 @@
       count:'பொதுவான உறுப்புகளின் எண்ணிக்கையை மாற்றுங்கள்',atleast:'குறைந்தது ஒன்று',none:'எதுவுமில்லை',
       onlyA:'A மட்டும்',onlyB:'B மட்டும்',overlap:'இரண்டும்',lawResult:'இருபுறங்களிலும் கிடைப்பது',
       extra:'இன்னொரு பயிற்சி வினா',reason:'காரணத்தைப் பார்க்க',top:'கற்றல் பாதைக்குத் திரும்புக',
-      previousIdea:'முந்தைய கருத்து',nextIdea:'அடுத்த கருத்து',position:(n,total)=>total+' இல் கருத்து '+n,
+      previousIdea:'முந்தைய கருத்து',nextIdea:'அடுத்த கருத்து',backConcepts:'கருத்துகளுக்குத் திரும்பு',position:(n,total)=>total+' இல் கருத்து '+n,
       navTip:'எண்ணிடப்பட்ட ஏழு கருத்துகளில் ஒன்றைத் தேர்ந்தெடுக்கவும். ஒவ்வொரு வினாவும் விடைத்தேர்வுகளுக்கு மேலே தோன்றும்; பக்கத்துடன் இயல்பாக நகரும்.',
        questionLabel:'தற்போதைய வினா',nextPage:'அடுத்த பக்கம்',backChapter:'அத்தியாயம் 1-க்குத் திரும்பு',sliderTip:'இரு குழுக்களிலும் உள்ள மாணவர்களின் எண்ணிக்கையை மாற்ற ஸ்லைடரை இடம் அல்லது வலமாக நகர்த்துங்கள் (அல்லது அம்பு விசைகளைப் பயன்படுத்துங்கள்). − அல்லது + பொத்தானைத் தொட்டு ஒரு மாணவராக மாற்றலாம். எண்ணிக்கையும் கணக்கும் மாறுவதைக் கவனியுங்கள்.',sliderFormula:(both,union,neither)=>[{latex:'A',fallback:'A'},' அல்லது ',{latex:'B',fallback:'B'},' = ',{latex:'14+11-'+both+'='+union,fallback:`14 + 11 − ${both} = ${union}`},'. எதுவுமில்லை = ',{latex:'30-'+union+'='+neither,fallback:`30 − ${union} = ${neither}`},'. பொதுவானவர்கள் இரு குழுக்களிலும் எண்ணப்படுவதால் ஒருமுறை கழிக்க வேண்டும்.']}
   };
@@ -53,56 +52,56 @@
     }catch{return new Set();}
   }
   function save(done){try{localStorage.setItem(STORAGE,JSON.stringify([...done]))}catch{}}
-  function mount(container,chapter,language,onBack){
+  function mount(container,chapter,language,onBack,initialConcept=null,onConcept=null){
     if(!container||chapter?.id!=='g9-ch1')return false;
     const lang=language==='ta'?'ta':'en',t=words[lang],done=load();
-    let active=0;
-    try{
-      const stored=Number(sessionStorage.getItem(ACTIVE_STAGE));
-      if(Number.isInteger(stored)&&stored>=0&&stored<book.stages.length)active=stored;
-    }catch{}
+    // Each visit to Concepts starts at an index. The URL's ?concept=N
+    // alone selects a lesson, so browser navigation and language changes work.
+    let active=-1;
     const root=document.createElement('section');
     root.className='sp2-journey';
-    root.setAttribute('aria-label',t.title);
-    root.innerHTML='<div class="sp2-learning-toolbar">'+
-      '<button type="button" class="sp2-idea-picker" data-idea-picker aria-controls="sp2-g9-ideas" aria-expanded="false" aria-label="'+esc(t.select)+'">'+
-      '<span data-journey-index></span><span class="sp2-picker-chevron" aria-hidden="true">⌄</span></button>'+
-      '<span class="sp2-progress" role="status" aria-live="polite" data-progress></span></div>'+
-      '<div class="sp2-nav" id="sp2-g9-ideas" role="group" aria-label="'+esc(t.select)+'" data-nav hidden></div>'+
+    root.setAttribute('aria-label',t.select);
+    root.innerHTML='<div class="sp2-index-view" data-index-view>'+
+      '<p class="sp2-progress" role="status" aria-live="polite" data-progress></p>'+
+      '<div class="sp2-nav" role="group" aria-label="'+esc(t.select)+'" data-nav></div>'+
+      '<p class="sp2-private">'+esc(t.saved)+'</p></div>'+
+      '<div class="sp2-detail-view" data-detail-view hidden>'+
+      '<div class="sp2-detail-navigation">'+
+      '<button type="button" class="sp2-back-index" data-back-index>'+esc('← '+t.backConcepts)+'</button>'+
+      '<span data-journey-index role="status" aria-live="polite"></span></div>'+
       '<div class="sp2-panel" data-panel></div>'+
       '<nav class="sp2-journey-footer" aria-label="'+esc(t.select)+'">'+
       '<button type="button" class="sp2-footer-prev" data-footer-prev>'+esc('← '+t.previousIdea)+'</button>'+
-      '<button type="button" class="sp2-footer-next" data-footer-next></button></nav>'+
-      '<p class="sp2-private">'+esc(t.saved)+'</p>';
+      '<button type="button" class="sp2-footer-next" data-footer-next></button></nav></div>';
     container.append(root);
     const nav=root.querySelector('[data-nav]'),panel=root.querySelector('[data-panel]');
-    const picker=root.querySelector('[data-idea-picker]');
-    function closePicker(refocus=false){
-      nav.hidden=true;
-      picker.setAttribute('aria-expanded','false');
-      if(refocus)picker.focus();
+    const indexView=root.querySelector('[data-index-view]'),detailView=root.querySelector('[data-detail-view]');
+    function showIndex(focus=false,notify=true){
+      active=-1;
+      root.dataset.view='index';
+      indexView.hidden=false;
+      detailView.hidden=true;
+      updateProgress();
+      if(notify&&typeof onConcept==='function')onConcept(null,true);
+      if(focus){
+        root.querySelector('[data-nav] button')?.focus({preventScroll:true});
+        root.scrollIntoView({behavior:'auto',block:'start'});
+      }
     }
-    picker.addEventListener('click',()=>{
-      const open=nav.hidden;
-      nav.hidden=!open;
-      picker.setAttribute('aria-expanded',String(open));
-    });
-    nav.addEventListener('keydown',event=>{
-      if(event.key==='Escape'){event.preventDefault();closePicker(true);}
-    });
+    root.querySelector('[data-back-index]').addEventListener('click',()=>showIndex(true));
     function updateProgress(){
       root.querySelector('[data-progress]').textContent=done.size+' / '+book.stages.length+' '+t.learned;
       nav.querySelectorAll('button').forEach(button=>{
         const stage=book.stages[Number(button.dataset.index)];
         button.classList.toggle('sp2-done',done.has(stage.id));
-        button.classList.toggle('sp2-current',Number(button.dataset.index)===active);
-        button.setAttribute('aria-pressed',String(Number(button.dataset.index)===active));
-        button.setAttribute('aria-current',Number(button.dataset.index)===active?'step':'false');
+        button.classList.toggle('sp2-current',active>=0&&Number(button.dataset.index)===active);
+        button.setAttribute('aria-pressed',String(active>=0&&Number(button.dataset.index)===active));
+        button.setAttribute('aria-current',active>=0&&Number(button.dataset.index)===active?'step':'false');
         button.querySelector('.sp2-done-mark').textContent=done.has(stage.id)?'✓':'';
       });
-      root.querySelector('[data-journey-index]').textContent=t.position(active+1,book.stages.length);
+      if(active>=0)root.querySelector('[data-journey-index]').textContent=t.position(active+1,book.stages.length);
       root.querySelector('[data-footer-prev]').disabled=active===0;
-       root.querySelector('[data-footer-next]').textContent=active===book.stages.length-1?t.backChapter+' →':t.nextPage+' →';
+       root.querySelector('[data-footer-next]').textContent=active===book.stages.length-1?t.backConcepts+' →':t.nextPage+' →';
        root.querySelector('[data-footer-next]').classList.toggle('is-return',active===book.stages.length-1);
     }
     book.stages.forEach((stage,i)=>{
@@ -114,7 +113,7 @@
     });
      root.querySelector('[data-footer-prev]').addEventListener('click',()=>show(active-1,true));
      root.querySelector('[data-footer-next]').addEventListener('click',()=>{
-       if(active===book.stages.length-1){if(typeof onBack==='function')onBack();return;}
+       if(active===book.stages.length-1){showIndex(true);return;}
        show(active+1,true);
      });
     function demoShell(title){return '<div class="sp2-demo" data-demo><p class="sp2-demo-title">'+esc(title)+'</p><div class="sp2-demo-controls" data-demo-controls></div><p class="sp2-demo-output" data-demo-output role="status" aria-live="polite"></p></div>';}
@@ -279,11 +278,13 @@
       });
       holder.append(details);
     }
-    function show(index,focus=false){
+    function show(index,focus=false,notify=true){
       if(index<0||index>=book.stages.length)return;
       active=index;
-      closePicker();
-      try{sessionStorage.setItem(ACTIVE_STAGE,String(index));}catch{}
+      root.dataset.view='lesson';
+      indexView.hidden=true;
+      detailView.hidden=false;
+      if(notify&&typeof onConcept==='function')onConcept(index);
       const stage=book.stages[index];
       const demoTitle=({membership:t.membership,forms:t.forms,types:t.types,
         venn:t.tryVenn,properties:t.properties,demorgan:t.law,count:t.count})[stage.visual]||t.select;
@@ -337,7 +338,9 @@
       updateProgress();
       if(focus){const selected=panel.querySelector('.sp2-concept-heading');selected?.scrollIntoView({behavior:'auto',block:'start'});selected?.focus({preventScroll:true});}
     }
-    show(active);
+    if(Number.isInteger(initialConcept)&&initialConcept>=0&&initialConcept<book.stages.length)
+      show(initialConcept,false,false);
+    else showIndex(false,false);
     return true;
   }
   window.TriggleSetJourney=Object.freeze({mount});
