@@ -1,5 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict');
+const fs=require('node:fs/promises');
+const path=require('node:path');
 const {chromium}=require('playwright');
 const {server,launchOptions}=require('./dashboard_test_support.cjs');
 (async()=>{
@@ -49,6 +51,11 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     await page.locator('.lesson-container').evaluate(el=>el.scrollTop=el.scrollHeight/2);
     await page.waitForTimeout(45);
     await dockAtBottom('middle '+width+' '+lang);
+    if(width===360){
+      const dir=path.resolve('screenshots/g9-adaptive-dock');
+      await fs.mkdir(dir,{recursive:true});
+      await page.screenshot({path:path.join(dir,'dock-mid-360-'+lang+'.png'),fullPage:false});
+    }
     const choices=page.locator('.sp2-panel > .sp2-recall [data-choice]');
     if(await choices.count()){
       await choices.last().focus();
@@ -62,6 +69,10 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     }
     await page.locator('.lesson-container').evaluate(el=>el.scrollTop=el.scrollHeight);
     await page.waitForTimeout(45);
+    if(width===360){
+      const dir=path.resolve('screenshots/g9-adaptive-dock');
+      await page.screenshot({path:path.join(dir,'dock-end-360-'+lang+'.png'),fullPage:false});
+    }
     const end=await geometry();
     assert(end.bottom<=end.scrollerBottom+3&&end.top>=end.scrollerTop-2,
      'Dock returns to its normal footer at page end '+JSON.stringify(end));
