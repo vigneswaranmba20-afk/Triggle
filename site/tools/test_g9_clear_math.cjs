@@ -17,8 +17,8 @@ function check(value,original,id){
   assert(html.includes('<math')&&html.includes('katex-html'),'Accessible and visual math: '+id);formulas++;
  }
 }
-const items=load();assert.equal(items.length,318);
-assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[36,121,6,12,9,40,37,31,26]);
+const items=load();assert.equal(items.length,322);
+assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[40,121,6,12,9,40,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
 assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,4);
 for(const q of items){
@@ -54,4 +54,4 @@ const html=read('index.html'),sw=read('service-worker.js');
 assert(html.indexOf('data/g9-clear-math.js')>html.indexOf('data/textbook-exercises/g9-ch3-ex3-2-q4-en.js'));
 assert(html.indexOf('data/g9-clear-math.js')<html.indexOf('assets/app.js'));
 assert(sw.includes("'./data/g9-clear-math.js'"));assert(sw.includes('g9-clear-math'));
-console.log('PASS Grade 9: 318 preserved records across all nine chapters, '+formulas+' valid offline TeX formulas, bilingual fallbacks, fractional powers, radical/fraction grouping, recurring decimals, aligned steps and isolated presentation.');
+console.log('PASS Grade 9: 322 preserved records across all nine chapters, '+formulas+' valid offline TeX formulas, bilingual fallbacks, fractional powers, radical/fraction grouping, recurring decimals, aligned steps and isolated presentation.');
