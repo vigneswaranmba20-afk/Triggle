@@ -43,13 +43,55 @@
       "step": 2,
       "expected": "Read the first",
       "en": "The domain collects the first coordinates; the range collects the second coordinates. Repeated values are listed only once.",
-      "ta": "சார்பகத்தில் முதல் ஆயங்கள்; வீச்சகத்தில் இரண்டாம் ஆயங்கள் இடம்பெறும். ஒரே மதிப்பை மீண்டும் எழுத வேண்டாம்."
+      "ta": "சார்பகத்தில் முதல் ஆயங்கள்; வீச்சகத்தில் இரண்டாம் ஆயங்கள் இடம்பெறும். ஒரே மதிப்பை மீண்டும் எழுத வேண்டாம்.",
+      "diagram": {
+        "type": "mapping",
+        "pairs": [
+          [
+            "0",
+            "3"
+          ],
+          [
+            "1",
+            "4"
+          ],
+          [
+            "2",
+            "5"
+          ],
+          [
+            "3",
+            "6"
+          ],
+          [
+            "4",
+            "7"
+          ],
+          [
+            "5",
+            "8"
+          ]
+        ]
+      }
     },
     "c10-1-1-2-q4": {
       "step": 0,
       "expected": "For (i), solve",
       "en": "Solving a rule is not enough: the question also restricts which values may appear in each set.",
-      "ta": "விதியைத் தீர்ப்பது மட்டும் போதாது. ஒவ்வொரு கணத்திலும் எந்த மதிப்புகள் இடம்பெறலாம் என்ற கட்டுப்பாட்டையும் பார்க்க வேண்டும்."
+      "ta": "விதியைத் தீர்ப்பது மட்டும் போதாது. ஒவ்வொரு கணத்திலும் எந்த மதிப்புகள் இடம்பெறலாம் என்ற கட்டுப்பாட்டையும் பார்க்க வேண்டும்.",
+      "diagram": {
+        "type": "mapping",
+        "pairs": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "4",
+            "2"
+          ]
+        ]
+      }
     },
     "c10-2-ex2-1-q1": {
       "step": 0,
@@ -178,13 +220,25 @@
       "step": 1,
       "expected": "Set up the tangent",
       "en": "Tangent compares the side opposite the angle with the adjacent side. Use those sides, not the hypotenuse.",
-      "ta": "டேன்ஜென்ட் என்பது கோணத்திற்கு எதிர்ப்பக்கத்தையும் அடுத்த பக்கத்தையும் ஒப்பிடும் விகிதம். கர்ணத்தை இங்கு பயன்படுத்த வேண்டாம்."
+      "ta": "டேன்ஜென்ட் என்பது கோணத்திற்கு எதிர்ப்பக்கத்தையும் அடுத்த பக்கத்தையும் ஒப்பிடும் விகிதம். கர்ணத்தை இங்கு பயன்படுத்த வேண்டாம்.",
+      "diagram": {
+        "type": "triangle",
+        "base": "30 m",
+        "height": "10√3 m",
+        "angle": "θ"
+      }
     },
     "c10-6-6-2-5": {
       "step": 2,
       "expected": "Double the distance",
       "en": "The observer is in the middle. The single triangle reaches only one edge, so the whole width contains two equal halves.",
-      "ta": "பார்வையாளர் நடுவில் உள்ளார். ஒரு முக்கோணம் சாலையின் ஒரு பாதியை மட்டுமே அளக்கும்; முழு அகலத்திற்கு இரு சமமான பாதிகள் வேண்டும்."
+      "ta": "பார்வையாளர் நடுவில் உள்ளார். ஒரு முக்கோணம் சாலையின் ஒரு பாதியை மட்டுமே அளக்கும்; முழு அகலத்திற்கு இரு சமமான பாதிகள் வேண்டும்.",
+      "diagram": {
+        "type": "triangle",
+        "base": "Road width ÷ 2",
+        "height": "4√3 m",
+        "angle": "30°"
+      }
     },
     "c10-6-6-2-6": {
       "step": 2,
@@ -253,13 +307,27 @@
         "latex": "x=\\dfrac{\\text{lower limit}+\\text{upper limit}}{2}",
         "display": true,
         "fallback": "Each class contains an interval, not a single age. Its midpoint represents the interval when applying the grouped-data formula."
+      },
+      "diagram": {
+        "type": "interval",
+        "start": "0",
+        "mid": "5",
+        "end": "10",
+        "unit": "years"
       }
     },
     "c10-8-ex8-1-q12": {
       "step": 0,
       "expected": "Replace each diameter",
       "en": "Frequency tells us how many plates fall in each interval. The midpoint stands in for the interval in the grouped calculation.",
-      "ta": "ஒவ்வோர் இடைவெளியிலும் எத்தனை தட்டுகள் உள்ளன என்பதை நிகழ்வெண் காட்டுகிறது. தொகுக்கப்பட்ட கணக்கில் அந்த வகுப்பின் நடுமதிப்பைப் பயன்படுத்துகிறோம்."
+      "ta": "ஒவ்வோர் இடைவெளியிலும் எத்தனை தட்டுகள் உள்ளன என்பதை நிகழ்வெண் காட்டுகிறது. தொகுக்கப்பட்ட கணக்கில் அந்த வகுப்பின் நடுமதிப்பைப் பயன்படுத்துகிறோம்.",
+      "diagram": {
+        "type": "interval",
+        "start": "21",
+        "mid": "22.5",
+        "end": "24",
+        "unit": "cm"
+      }
     },
     "c10-8-ex8-1-q14": {
       "step": 1,

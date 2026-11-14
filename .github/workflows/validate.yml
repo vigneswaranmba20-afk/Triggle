@@ -42,3 +42,10 @@ jobs:
           name: adaptive-reader-grade10-q5
           path: screenshots/adaptive-reader-grade10-q5-390.png
           if-no-files-found: ignore
+      - name: Archive Class 10 Why-step Cartesian grid mobile screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: g10-why-step-q4-mobile
+          path: screenshots/g10-why-q4-390.png
+          if-no-files-found: ignore
