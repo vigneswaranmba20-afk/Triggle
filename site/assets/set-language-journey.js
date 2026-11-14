@@ -287,12 +287,17 @@
       const stage=book.stages[index];
       const demoTitle=({membership:t.membership,forms:t.forms,types:t.types,
         venn:t.tryVenn,properties:t.properties,demorgan:t.law,count:t.count})[stage.visual]||t.select;
+      // Keep the textbook rule unchanged; only its mobile presentation uses
+      // aligned two-line KaTeX to avoid a clipped long equation.
+      const visibleRule=stage.visual==='count'
+        ? {latex:String.raw`\\begin{aligned}n(A\\cup B)&=n(A)+n(B)\\\\&\\quad-n(A\\cap B)\\end{aligned}`,fallback:stage.rule}
+        : stage.rule;
       panel.innerHTML=
         '<div class="sp2-concept-heading" tabindex="-1">'+
          '<h4>'+esc((index+1)+'. '+pick(stage.title,lang))+'</h4></div>'+
         '<p class="sp2-idea">'+htmlMath(pick(stage.idea,lang))+'</p>'+
         '<p class="sp2-example">'+htmlMath(pick(stage.example,lang))+'</p>'+
-        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(stage.rule)+'</div>'+
+        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(visibleRule)+'</div>'+
         demoShell(demoTitle)+
         '<div class="sp2-recall"><h5>'+esc(t.try)+'</h5>'+
         '<p class="sp2-concept-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p>'+
