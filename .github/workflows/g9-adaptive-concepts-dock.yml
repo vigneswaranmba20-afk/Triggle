@@ -1,0 +1,27 @@
+name: Grade 9 adaptive bottom dock validation
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - '.github/workflows/g9-adaptive-concepts-dock.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mobile-dock:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify sticky navigation, quiz focus clearance and bilingual mobile routes
+        run: node site/tools/test_g9_adaptive_dock_browser.cjs
+        env:
+          CHROMIUM_PATH: ''
