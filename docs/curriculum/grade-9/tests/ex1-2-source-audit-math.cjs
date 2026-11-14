@@ -45,4 +45,20 @@ check('q10-i',2**4===16,'power-set cardinality');
 check('q10-ii',2**0===1,'empty-set power-set cardinality');
 check('q10-iii',Math.log2(256)===8,'inverse power-set cardinality');
 assert.equal(checks.length,34);
+const sourceInventory=JSON.parse(require('node:fs').readFileSync(
+ require('node:path').resolve(__dirname,'../../../trace/source-inventories/g9-ch1-ex1-2.json'),'utf8'));
+assert.equal(sourceInventory.grade,9);
+assert.equal(sourceInventory.chapter,'1');
+assert.equal(sourceInventory.exercise,'1.2');
+assert.equal(sourceInventory.numberedQuestions,10);
+assert.equal(sourceInventory.uniqueTextbookParts,34);
+assert.deepEqual(sourceInventory.questionPartStructure.map(q=>q.parts.length),[5,4,4,4,3,4,1,4,2,3]);
+assert.equal(new Set(sourceInventory.questionPartStructure.flatMap(q=>q.parts.map(p=>q.number+':'+p))).size,34);
+assert.equal(sourceInventory.releaseReadiness.studentRecordsIntegratedInThisChange,0);
+assert.equal(sourceInventory.releaseReadiness.validatedProductionBatch,false);
+assert.equal(sourceInventory.releaseReadiness.productionDeployment,false);
+assert.equal(sourceInventory.releaseReadiness.tamilEditorialReview,false);
+assert.match(sourceInventory.sourceBook.en.sha256,/^[a-f0-9]{64}$/);
+assert.equal(sourceInventory.sourceFidelityFlags.find(x=>x.id==='q1-iii').verifiedFormula,'4/(3n)');
+
 console.log(JSON.stringify({grade:9,exercise:'1.2',checked:checks.length,passed:checks.every(c=>c.passed),checks},null,2));
