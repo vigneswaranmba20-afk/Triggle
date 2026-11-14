@@ -33,6 +33,9 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
      assert.equal(await page.locator('[data-detail-view]').isVisible(),true);
      assert.equal(await page.locator('[data-index-view]').isVisible(),false);
      assert.equal(new URL(page.url()).searchParams.get('concept'),String(index),'Lesson deep link identifies the selected idea');
+     const back=await page.locator('[data-back-index]').boundingBox();
+     assert(back&&back.y>=0&&back.y+back.height<=page.viewportSize().height,
+       'Back to concepts must remain in the initial lesson viewport '+width+' '+lang);
      if(width<=430){
        const dock=page.locator('[data-adaptive-dock]');
        assert.equal(await dock.count(),1,'Exactly one sequential navigation dock');
@@ -56,10 +59,6 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
        });
        assert.equal(overlap,false,'Dock must not obscure focused question controls');
      }
-     await page.evaluate(()=>window.scrollTo(0,0)); // Restore the initial viewport after dock-end checks.
-     const back=await page.locator('[data-back-index]').boundingBox();
-     assert(back&&back.y>=0&&back.y+back.height<=page.viewportSize().height,
-       'Back to concepts must remain in the initial lesson viewport '+width+' '+lang);
    }
   }
   await check(chapter+'/'+index+' '+lang+' '+width);
