@@ -438,7 +438,8 @@
   const all=current.steps||[];const ul=$('stepsList');ul.replaceChildren();
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
-  const answerMath=window.TriggleG9Math?.get(current)?.answerMath||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||window.TriggleG10RemainingMath?.getAnswer?.(current);
+  const grade9Answer=window.TriggleG9Math?.get(current)?.answerMath;
+  const answerMath=(grade9Answer?.[lang]||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||window.TriggleG10RemainingMath?.getAnswer?.(current);
   const canGrid=!answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
@@ -570,6 +571,7 @@
   $('diagramCompareAnswer').innerHTML=$('answerText').innerHTML;
   $('diagramCompareLabel').textContent=ui('finalAnswer');
   $('figureDialog').showModal();
+  if(grade===9)window.TriggleNotation?.prepareSvg?.($('diagramContent'),window.TriggleG9Math?.diagramLabels);
   $('closeDiagram').focus({preventScroll:true});
   window.TriggleConcept?.attach(context,$('diagramContent'));
  }

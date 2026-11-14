@@ -175,7 +175,8 @@ async function main(){
       await check(c,'Common-member slider recalculates visibly','interactivity',async()=>{
        await lab.locator('[data-nav] button').nth(6).click();
        await lab.locator('#sp2-overlap-control').evaluate(el=>{el.value='8';el.dispatchEvent(new Event('input',{bubbles:true}));});
-       const explanation=await lab.locator('[data-slider-formula]').innerText();
+       const explanation=await lab.locator('[data-slider-formula]').evaluate(node=>{const clone=node.cloneNode(true);clone.querySelectorAll('.triggle-tex').forEach(el=>el.replaceWith(document.createTextNode(el.dataset.mathFallback)));return clone.textContent;});
+       assert((await lab.locator('[data-slider-formula] math mn').allTextContents()).includes('17'),'Updated union count is semantic mathematical output');
        assert.ok(explanation.includes('14 + 11 − 8 = 17'),explanation);
        assert.ok((await lab.locator('[data-demo-output]').innerText()).includes('17'));
       });

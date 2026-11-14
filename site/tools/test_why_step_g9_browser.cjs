@@ -61,7 +61,10 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
   assert.equal(await page.locator('#stepsList details.why-step-g9').count(),1,'Tamil disclosure accessible');
   await page.locator('#stepsList details.why-step-g9 summary').click();
   const expected=await page.evaluate(()=>window.TriggleWhyStepG9.hints['g9-ch1-ex1.1-q3-b-i'].ta);
-  assert.equal((await page.locator('#stepsList .why-step-g9 .why-step-panel p').innerText()).trim(),expected);
+  const explanation=page.locator('#stepsList .why-step-g9 .why-step-panel p');
+  const original=await explanation.evaluate(node=>{const clone=node.cloneNode(true);clone.querySelectorAll('.triggle-tex').forEach(el=>el.replaceWith(document.createTextNode(el.dataset.mathFallback)));return clone.textContent;});
+  assert.equal(original.trim(),expected,'Tamil optional explanation preserves its exact source');
+  assert((await explanation.locator('math mo').allTextContents()).includes('∈'),'Membership is semantic MathML in the Tamil explanation');
   // Generic diagrams are optional: when present, they must be inline SVG and
   // remain hidden until the specific explanation is opened.
   await page.goto(route('c9-exercise-6-1-q1'));

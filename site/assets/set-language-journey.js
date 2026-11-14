@@ -7,7 +7,8 @@
   const STORAGE='triggle.g9.set-path.v1';
   const pick=(v,l)=>typeof v==='string'?v:(v?.[l]||v?.en||'');
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const htmlMath=s=>window.TriggleNotation?.render(s)||esc(s);
+  const plain=s=>Array.isArray(s)?s.map(plain).join(''):typeof s==='object'?(s?.fallback||''):String(s??'');
+  const htmlMath=s=>{s=window.TriggleG9Math?.text(s)??s;return window.TriggleNotation?.render(s)||esc(s);};
   const words={
     en:{label:'YOUR SHORT LEARNING PATH',title:'Build Set Language, one idea at a time',
       intro:'Seven short explorations follow the 2025 textbook. Choose one, try it, then practise on paper. You can stop whenever you understand.',
@@ -25,7 +26,7 @@
       extra:'Try a second practice question',reason:'Show the reasoning',top:'Back to learning path',
       previousIdea:'Previous idea',nextIdea:'Next idea',position:(n,total)=>'Idea '+n+' of '+total,
       navTip:'Choose one of seven numbered ideas. The question appears directly above its answers and scrolls naturally.',
-       questionLabel:'CURRENT QUESTION',nextPage:'Next page',backChapter:'Back to Chapter 1',sliderTip:'Drag left or right (or use arrow keys) to change how many students are in BOTH groups. Tap − or + to change one student at a time. Watch the numbers and equation update.',sliderFormula:(both,union,neither)=>`A or B = 14 + 11 − ${both} = ${union}. Neither = 30 − ${union} = ${neither}. The overlap was counted twice, so subtract it once.`},
+       questionLabel:'CURRENT QUESTION',nextPage:'Next page',backChapter:'Back to Chapter 1',sliderTip:'Drag left or right (or use arrow keys) to change how many students are in BOTH groups. Tap − or + to change one student at a time. Watch the numbers and equation update.',sliderFormula:(both,union,neither)=>[{latex:'A\\text{ or }B=14+11-'+both+'='+union,fallback:`A or B = 14 + 11 − ${both} = ${union}`},'. ',{latex:'\\text{Neither}=30-'+union+'='+neither,fallback:`Neither = 30 − ${union} = ${neither}`},'. The overlap was counted twice, so subtract it once.']},
     ta:{label:'சிறிய கற்றல் பாதை',title:'கண மொழியை ஒவ்வொரு கருத்தாகக் கற்போம்',
       intro:'2025 பாடநூலை அடிப்படையாகக் கொண்ட ஏழு சிறு ஆராய்ச்சிகள். ஒன்றைத் தேர்ந்து முயலுங்கள்; பிறகு தாளில் பயிற்சி செய்யுங்கள்.',
       state:'இந்த சாதனத்தில் சரிபார்த்த கருத்துகள்',source:'பாடநூல் பகுதி',enPage:'ஆங்கிலம் பக்கம்',taPage:'தமிழ் பக்கம்',
@@ -42,7 +43,7 @@
       extra:'இன்னொரு பயிற்சி வினா',reason:'காரணத்தைப் பார்க்க',top:'கற்றல் பாதைக்குத் திரும்புக',
       previousIdea:'முந்தைய கருத்து',nextIdea:'அடுத்த கருத்து',position:(n,total)=>total+' இல் கருத்து '+n,
       navTip:'எண்ணிடப்பட்ட ஏழு கருத்துகளில் ஒன்றைத் தேர்ந்தெடுக்கவும். ஒவ்வொரு வினாவும் விடைத்தேர்வுகளுக்கு மேலே தோன்றும்; பக்கத்துடன் இயல்பாக நகரும்.',
-       questionLabel:'தற்போதைய வினா',nextPage:'அடுத்த பக்கம்',backChapter:'அத்தியாயம் 1-க்குத் திரும்பு',sliderTip:'இரு குழுக்களிலும் உள்ள மாணவர்களின் எண்ணிக்கையை மாற்ற ஸ்லைடரை இடம் அல்லது வலமாக நகர்த்துங்கள் (அல்லது அம்பு விசைகளைப் பயன்படுத்துங்கள்). − அல்லது + பொத்தானைத் தொட்டு ஒரு மாணவராக மாற்றலாம். எண்ணிக்கையும் கணக்கும் மாறுவதைக் கவனியுங்கள்.',sliderFormula:(both,union,neither)=>`A அல்லது B = 14 + 11 − ${both} = ${union}. எதுவுமில்லை = 30 − ${union} = ${neither}. பொதுவானவர்கள் இரு குழுக்களிலும் எண்ணப்படுவதால் ஒருமுறை கழிக்க வேண்டும்.`}
+       questionLabel:'தற்போதைய வினா',nextPage:'அடுத்த பக்கம்',backChapter:'அத்தியாயம் 1-க்குத் திரும்பு',sliderTip:'இரு குழுக்களிலும் உள்ள மாணவர்களின் எண்ணிக்கையை மாற்ற ஸ்லைடரை இடம் அல்லது வலமாக நகர்த்துங்கள் (அல்லது அம்பு விசைகளைப் பயன்படுத்துங்கள்). − அல்லது + பொத்தானைத் தொட்டு ஒரு மாணவராக மாற்றலாம். எண்ணிக்கையும் கணக்கும் மாறுவதைக் கவனியுங்கள்.',sliderFormula:(both,union,neither)=>[{latex:'A',fallback:'A'},' அல்லது ',{latex:'B',fallback:'B'},' = ',{latex:'14+11-'+both+'='+union,fallback:`14 + 11 − ${both} = ${union}`},'. எதுவுமில்லை = ',{latex:'30-'+union+'='+neither,fallback:`30 − ${union} = ${neither}`},'. பொதுவானவர்கள் இரு குழுக்களிலும் எண்ணப்படுவதால் ஒருமுறை கழிக்க வேண்டும்.']}
   };
   function load(){
     try{
@@ -108,7 +109,7 @@
        show(active+1,true);
      });
     function demoShell(title){return '<div class="sp2-demo" data-demo><p class="sp2-demo-title">'+esc(title)+'</p><div class="sp2-demo-controls" data-demo-controls></div><p class="sp2-demo-output" data-demo-output role="status" aria-live="polite"></p></div>';}
-    function btn(name,key){return '<button type="button" data-demo-mode="'+esc(key)+'">'+esc(name)+'</button>';}
+    function btn(name,key){return '<button type="button" data-demo-mode="'+esc(key)+'" aria-label="'+esc(plain(name))+'">'+htmlMath(name)+'</button>';}
     function setDemo(state,options,paint){
       const controls=panel.querySelector('[data-demo-controls]');
       controls.innerHTML=options.map(([name,key])=>btn(name,key)).join('');
@@ -127,7 +128,8 @@
         const options=[2,3,4,5].map(n=>[String(n),String(n)]);
         setDemo('2',options,(n,update)=>{
           const yes=[2,4].includes(Number(n));
-          update(n,n+(yes?' ∈ A':' ∉ A')+(lang==='ta'?(yes?' · உறுப்பு':' · உறுப்பு அல்ல'):(yes?' · belongs':' · does not belong')));
+          const fallback=n+(yes?' ∈ A':' ∉ A');
+          update(n,[{latex:n+(yes?'\\in A':'\\notin A'),fallback},(lang==='ta'?(yes?' · உறுப்பு':' · உறுப்பு அல்ல'):(yes?' · belongs':' · does not belong'))]);
         });
       }else if(stage.visual==='forms'){
         const options=lang==='ta'
@@ -135,8 +137,8 @@
           :[['Descriptive Form','description'],['Roster Form','roster'],['Set-Builder Form','builder']];
         const forms={
           description:lang==='ta'?'10-ஐ விடச் சிறிய நேர்ம இரட்டைப்படை முழு எண்களின் கணம்':'Positive even whole numbers less than 10',
-          roster:'E = {2, 4, 6, 8}',
-          builder:'E = {x ∈ N : x < 10, x is even}'
+          roster:{"latex": "E=\\{2,4,6,8\\}", "fallback": "E = {2, 4, 6, 8}"},
+          builder:{"latex": "\\begin{aligned}E=\\{x\\in N: {}&x<10,\\\\ &x\\text{ is even}\\}\\end{aligned}", "fallback": "E = {x ∈ N : x < 10, x is even}"}
         };
         setDemo('roster',options,(key,update)=>update(key,forms[key]));
       }else if(stage.visual==='types'){
@@ -144,11 +146,11 @@
           ?[['வெற்று','empty'],['ஓருறுப்பு','single'],['முடிவுறு','finite'],['முடிவுறா','infinite'],['உட்கணம்','subset'],['சம / சமான','equivalent']]
           :[['Empty','empty'],['Singleton','single'],['Finite','finite'],['Infinite','infinite'],['Subset','subset'],['Equal vs same size','equivalent']];
         const values={
-          empty:'∅ = {} ; n(∅) = 0',
-          single:'{7} ; n({7}) = 1',
-          finite:'{1, 2, 3} ; n(A) = 3',
-          infinite:'N = {1, 2, 3, …}',
-          subset:'{1, 3} ⊂ {1, 2, 3} ; {1, 2, 3} ⊆ {1, 2, 3}',
+          empty:{"latex": "\\varnothing=\\{\\};\\quad n(\\varnothing)=0", "fallback": "∅ = {} ; n(∅) = 0"},
+          single:{"latex": "\\{7\\};\\quad n(\\{7\\})=1", "fallback": "{7} ; n({7}) = 1"},
+          finite:{"latex": "\\{1,2,3\\};\\quad n(A)=3", "fallback": "{1, 2, 3} ; n(A) = 3"},
+          infinite:{"latex": "N=\\{1,2,3,\\ldots\\}", "fallback": "N = {1, 2, 3, …}"},
+          subset:{"latex": "\\begin{gathered}\\{1,3\\}\\subset\\{1,2,3\\}\\\\\\{1,2,3\\}\\subseteq\\{1,2,3\\}\\end{gathered}", "fallback": "{1, 3} ⊂ {1, 2, 3} ; {1, 2, 3} ⊆ {1, 2, 3}"},
           equivalent:lang==='ta'
             ?'{a, b} ≠ {1, 2}; ஆதி எண் இரண்டிலும் 2. சமமான கணங்கள்; சம கணங்கள் அல்ல.'
             :'{a, b} ≠ {1, 2}; both have 2 members (same size), but are not equal sets.'
@@ -164,24 +166,22 @@
           target.setAttribute('tabindex','-1');
           target.focus({preventScroll:true});
         });
-        panel.querySelector('[data-demo-output]').textContent=
-          lang==='ta'?'A ∩ B = {3, 5}; A ∪ B = {1, 2, 3, 4, 5, 6}':
-          'A ∩ B = {3, 5}; A ∪ B = {1, 2, 3, 4, 5, 6}';
+        panel.querySelector('[data-demo-output]').innerHTML=htmlMath({latex:'\\begin{gathered}A\\cap B=\\{3,5\\}\\\\A\\cup B=\\{1,2,3,4,5,6\\}\\end{gathered}',fallback:'A ∩ B = {3, 5}; A ∪ B = {1, 2, 3, 4, 5, 6}'});
       }else if(stage.visual==='properties'){
         const options=lang==='ta'
           ?[['பரிமாற்று','commutative'],['சேர்ப்பு','associative'],['பங்கீட்டு','distributive']]
           :[['Commutative','commutative'],['Associative','associative'],['Distributive','distributive']];
         const values={
-          commutative:'A ∪ B = B ∪ A = {1, 2, 3}',
-          associative:'(A ∪ B) ∪ C = A ∪ (B ∪ C) = {1, 2, 3, 4}',
-          distributive:'A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) = {2}'
+          commutative:{"latex": "\\begin{aligned}A\\cup B&=B\\cup A\\\\&=\\{1,2,3\\}\\end{aligned}", "fallback": "A ∪ B = B ∪ A = {1, 2, 3}"},
+          associative:{"latex": "\\begin{aligned}(A\\cup B)\\cup C&=A\\cup(B\\cup C)\\\\&=\\{1,2,3,4\\}\\end{aligned}", "fallback": "(A ∪ B) ∪ C = A ∪ (B ∪ C) = {1, 2, 3, 4}"},
+          distributive:{"latex": "\\begin{aligned}A\\cap(B\\cup C)&=(A\\cap B)\\cup(A\\cap C)\\\\&=\\{2\\}\\end{aligned}", "fallback": "A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) = {2}"}
         };
         setDemo('commutative',options,(key,update)=>update(key,values[key]));
       }else if(stage.visual==='demorgan'){
-        const options=[['(A ∪ B)′','union'],['(A ∩ B)′','intersection']];
+        const options=[[{latex:'(A\\cup B)^{\\prime}',fallback:'(A ∪ B)′'},'union'],[{latex:'(A\\cap B)^{\\prime}',fallback:'(A ∩ B)′'},'intersection']];
         const values={
-          union:'(A ∪ B)′ = A′ ∩ B′ = {5, 6}',
-          intersection:'(A ∩ B)′ = A′ ∪ B′ = {1, 2, 4, 5, 6}'
+          union:{"latex": "\\begin{aligned}(A\\cup B)^{\\prime}&=A^{\\prime}\\cap B^{\\prime}\\\\&=\\{5,6\\}\\end{aligned}", "fallback": "(A ∪ B)′ = A′ ∩ B′ = {5, 6}"},
+          intersection:{"latex": "\\begin{aligned}(A\\cap B)^{\\prime}&=A^{\\prime}\\cup B^{\\prime}\\\\&=\\{1,2,4,5,6\\}\\end{aligned}", "fallback": "(A ∩ B)′ = A′ ∪ B′ = {1, 2, 4, 5, 6}"}
         };
         setDemo('union',options,(key,update)=>update(key,values[key]));
       }else if(stage.visual==='count'){
@@ -201,7 +201,7 @@
         const update=()=>{
           const both=Number(input.value),union=25-both;
           controls.querySelector('[data-overlap-count]').textContent=String(both);
-           controls.querySelector('[data-slider-formula]').textContent=t.sliderFormula(both,union,30-union);
+           controls.querySelector('[data-slider-formula]').innerHTML=htmlMath(t.sliderFormula(both,union,30-union));
            input.setAttribute('aria-valuetext',String(both)+' · '+t.overlap);
            decrease.disabled=both===0;
            increase.disabled=both===11;
@@ -233,7 +233,7 @@
       const choices=holder.querySelector('[data-extra-answers]');
       item.choices.forEach((choice,i)=>{
         const button=document.createElement('button');
-        button.type='button';button.dataset.extraChoice=String(i);button.innerHTML=htmlMath(pick(choice,lang));
+        button.type='button';button.dataset.extraChoice=String(i);button.innerHTML=htmlMath(pick(choice,lang));button.setAttribute('aria-label',plain(pick(choice,lang)));
         button.addEventListener('click',()=>{
           choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
           holder.querySelector('[data-extra-feedback]').textContent=i===item.correct?t.correct:t.retry;
@@ -283,7 +283,7 @@
          '<h4>'+esc((index+1)+'. '+pick(stage.title,lang))+'</h4></div>'+
         '<p class="sp2-idea">'+htmlMath(pick(stage.idea,lang))+'</p>'+
         '<p class="sp2-example">'+htmlMath(pick(stage.example,lang))+'</p>'+
-        '<div class="sp2-formula" aria-label="Mathematics expression">'+htmlMath(stage.rule)+'</div>'+
+        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(stage.rule)+'</div>'+
         demoShell(demoTitle)+
         '<div class="sp2-recall"><h5>'+esc(t.try)+'</h5>'+
         '<p class="sp2-concept-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p>'+
@@ -299,7 +299,7 @@
       let wrongAttempts=0;
       stage.choices.forEach((choice,i)=>{
         const button=document.createElement('button');
-        button.type='button';button.dataset.choice=String(i);button.innerHTML=htmlMath(pick(choice,lang));
+        button.type='button';button.dataset.choice=String(i);button.innerHTML=htmlMath(pick(choice,lang));button.setAttribute('aria-label',plain(pick(choice,lang)));
         button.addEventListener('click',()=>{
           answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
           const good=i===stage.correct;

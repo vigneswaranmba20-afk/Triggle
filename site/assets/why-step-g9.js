@@ -6,7 +6,7 @@
 (()=>{'use strict';
 const NS='http://www.w3.org/2000/svg';
 const el=(tag,cls,text)=>{const a=document.createElement(tag);if(cls)a.className=cls;if(text!==undefined)a.textContent=String(text);return a;};
-const shape=(tag,attrs={},label)=>{const a=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))a.setAttribute(k,String(v));if(label!==undefined)a.textContent=String(label);return a;};
+const shape=(tag,attrs={},label)=>{if(tag==='text'&&['A','B','A∩B','a','b','x','y','(x,y)'].includes(label))attrs={...attrs,'font-family':'KaTeX_Math, KaTeX_Main, serif','font-style':'italic'};const a=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))a.setAttribute(k,String(v));if(label!==undefined)a.textContent=String(label);return a;};
 function figure(spec,lang){
  if(!spec||typeof spec!=='object')return null;
  const ta=lang==='ta',f=el('figure','why-step-visual why-step-g9-figure'),cap=el('figcaption','why-step-visual-caption');
@@ -85,7 +85,9 @@ function render(event){
  summary.setAttribute('aria-label',(lang==='ta'?'படி ':'Step ')+(hint.step+1)+': '+summary.textContent);
  summary.addEventListener('keydown',ev=>{if(ev.key==='ArrowLeft'||ev.key==='ArrowRight')ev.stopPropagation();});
  const panel=el('div','why-step-panel');panel.lang=lang;
- panel.append(el('p',null,lang==='ta'&&hint.ta?hint.ta:hint.en));
+ const explanation=el('p'),source=lang==='ta'&&hint.ta?hint.ta:hint.en;
+ explanation.innerHTML=window.TriggleNotation.render(window.TriggleG9Math?.text(source)??source);
+ panel.append(explanation);
  if(hint.diagram){const pic=figure(hint.diagram,lang);if(pic)panel.append(pic);}
  details.append(summary,panel);body.append(details);
 }

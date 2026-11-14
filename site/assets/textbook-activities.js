@@ -8,7 +8,7 @@
  const pick=(value,lang)=>typeof value==='string'?value:(value?.[lang]||value?.en||'');
  function paragraph(parent,text,cls){
   if(!text?.trim())return;
-  const p=document.createElement('p');p.className=cls;p.textContent=text.trim();parent.append(p);
+  const p=document.createElement('p');p.className=cls;p.textContent=text.trim();if(window.TriggleNotation)p.innerHTML=window.TriggleNotation.render(window.TriggleG9Math?.text(text.trim())??text.trim());parent.append(p);
  }
  // An actual table is much easier to compare than six numbers inside each
  // sentence. Extract only rows already written in the reviewed answer string.
@@ -19,7 +19,7 @@
   const caption=document.createElement('caption');caption.textContent=language==='ta'?'கணங்களின் உறுப்புகள் அட்டவணை':'Completed cardinality table';table.append(caption);
   const thead=document.createElement('thead'),hrow=document.createElement('tr');
   for(const title of [language==='ta'?'வரி':'Row','n(A)','n(B)','n(A∪B)','n(A∩B)','n(A−B)','n(B−A)']){
-   const th=document.createElement('th');th.scope='col';th.textContent=title;hrow.append(th);
+   const th=document.createElement('th');th.scope='col';th.innerHTML=window.TriggleNotation.render(window.TriggleG9Math?.text(title)??title);hrow.append(th);
   }
   thead.append(hrow);table.append(thead);
   const tbody=document.createElement('tbody');
@@ -48,7 +48,7 @@
    card.dataset.textbookReview=item.review||'source-matched';
    card.open=index===0; // The first question and its answer are immediately visible.
    const summary=document.createElement('summary');summary.textContent=(index+1)+'. '+pick(item.title,lang);
-   const question=document.createElement('p');question.className='task-question';question.textContent=pick(item.question,lang);
+   const question=document.createElement('p');question.className='task-question';question.innerHTML=window.TriggleNotation.render(window.TriggleG9Math?.text(pick(item.question,lang))??pick(item.question,lang));
    const worked=document.createElement('section');worked.className='task-solution';
    const label=document.createElement('h4');label.className='task-solution-label';label.textContent=t.answer;worked.append(label);
    const body=document.createElement('div');body.className='task-answer';
