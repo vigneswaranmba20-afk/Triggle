@@ -59,7 +59,7 @@ const entries=[
     "reference": "TN SCERT Grade 9 Mathematics, revised 2025, Exercise 1.2 Q2 (printed English p. 11, PDF p. 17). English wording reviewed against source; Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
-    "releaseStatus": "staged-not-live",
+    "releaseStatus": "english-preview",
     "sourceFidelity": {
       "status": "English visual audit archived in Exercise 1.2 source audit",
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -131,7 +131,7 @@ const entries=[
     "reference": "TN SCERT Grade 9 Mathematics, revised 2025, Exercise 1.2 Q2 (printed English p. 11, PDF p. 17). English wording reviewed against source; Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
-    "releaseStatus": "staged-not-live",
+    "releaseStatus": "english-preview",
     "sourceFidelity": {
       "status": "English visual audit archived in Exercise 1.2 source audit",
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -212,7 +212,7 @@ const entries=[
     "reference": "TN SCERT Grade 9 Mathematics, revised 2025, Exercise 1.2 Q2 (printed English p. 11, PDF p. 17). English wording reviewed against source; Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
-    "releaseStatus": "staged-not-live",
+    "releaseStatus": "english-preview",
     "sourceFidelity": {
       "status": "English visual audit archived in Exercise 1.2 source audit",
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -300,7 +300,7 @@ const entries=[
     "reference": "TN SCERT Grade 9 Mathematics, revised 2025, Exercise 1.2 Q2 (printed English p. 11, PDF p. 17). English wording reviewed against source; Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
-    "releaseStatus": "staged-not-live",
+    "releaseStatus": "english-preview",
     "sourceFidelity": {
       "status": "English visual audit archived in Exercise 1.2 source audit",
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
