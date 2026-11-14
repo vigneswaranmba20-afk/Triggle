@@ -101,7 +101,7 @@
       });
       if(active>=0)root.querySelector('[data-journey-index]').textContent=t.position(active+1,book.stages.length);
       root.querySelector('[data-footer-prev]').disabled=active===0;
-       root.querySelector('[data-footer-next]').textContent=active===book.stages.length-1?t.backConcepts+' →':t.nextPage+' →';
+       root.querySelector('[data-footer-next]').textContent=active===book.stages.length-1?t.backConcepts+' →':t.nextIdea+' →';
        root.querySelector('[data-footer-next]').classList.toggle('is-return',active===book.stages.length-1);
     }
     book.stages.forEach((stage,i)=>{
