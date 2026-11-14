@@ -77,7 +77,7 @@
     "mutuallyExclusive": 1
   },
   "fallbacks": [],
-  "diagrams": 34,
+  "diagrams": 30,
   "excluded": [
     {
       "id": "c9-example-6-1",
@@ -383,7 +383,7 @@
   "qualityReview": {
     "kind": "human-in-the-loop editorial static corrections",
     "scope": "all source-aligned question IDs plus targeted semantic corrections for radical arithmetic, exponent rules, repetition, cube/cuboid surface area, statistical mode, and diagram relevance",
-    "notes": "No generated numeric values or modified textbook problems. Diagrams removed where irrelevant.",
+    "notes": "Kept 30 relevant conceptual figures; excluded generic illustrations for surface area, rounding, and chord cases where geometry could imply incorrect conditions. Textbook content and answers unchanged.",
     "date": "2026-11-14",
     "tamil": "editorial pending"
   }
