@@ -1,5 +1,5 @@
 'use strict';
-const assert=require('node:assert/strict'),{chromium}=require('playwright');
+const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path'),{chromium}=require('playwright');
 const {server,launchOptions}=require('./dashboard_test_support.cjs');
 (async()=>{const app=await server(),browser=await chromium.launch(launchOptions());try{
 const page=await browser.newPage({viewport:{width:320,height:852},serviceWorkers:'block'}),errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -26,6 +26,11 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
    assert(layout.padding<=14,'Compact concepts padding '+width+' '+lang);
    assert(layout.navHeight>=44,'Concept navigation touch height '+width+' '+lang);
    assert(layout.headingVisible&&layout.panelVisible,'Concept heading and lesson remain visible '+width+' '+lang);
+   if(index===0 && (width===360||width===393)){
+    const directory=path.resolve('screenshots/g9-compact-concepts');
+    await fs.mkdir(directory,{recursive:true});
+    await page.screenshot({path:path.join(directory,'concepts-'+width+'-'+lang+'.png'),fullPage:true});
+   }
   }
   const controls=await page.locator('[data-demo-mode]').count();
   for(let i=0;i<controls;i++){
