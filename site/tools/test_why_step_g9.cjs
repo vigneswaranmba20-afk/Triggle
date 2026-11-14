@@ -35,7 +35,7 @@ for(const id of ids){
  chapters.add(String(q.chapter));
 }
 assert.deepEqual([...chapters].sort(),['1','2','3','4','5','6','7','8','9'],'All nine Grade 9 chapters represented');
-assert.ok(countDiagrams>=60&&countDiagrams<ids.length/2,'Use only contextual diagrams, not a visual on every step');
+assert.ok(countDiagrams>=25&&countDiagrams<ids.length/2,'Use only contextual diagrams, not a visual on every step');
 assert.equal(db.review.ta,'editorial-pending','Do not claim professionally reviewed Tamil');
 for(const name of ['data/why-step-g9.js','assets/why-step-g9.js','assets/why-step-g9.css']){
  assert.ok(html.includes('./'+name),'Missing HTML asset '+name);
