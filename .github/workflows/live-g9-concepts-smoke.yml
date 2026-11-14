@@ -1,0 +1,64 @@
+name: Live Grade 9 Concepts release verification
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/live-g9-concepts-smoke.yml'
+      - 'site/assets/chapter-hub.css'
+      - 'site/assets/set-language-journey.js'
+      - 'site/tools/test_g9_concepts_typography_browser.cjs'
+      - 'site/index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-live-grade9-concepts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Confirm live GitHub Pages files match merged source
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://vigneswaranmba20-afk.github.io/Triggle/site"
+          TMP="$(mktemp -d)"
+          trap 'rm -rf "$TMP"' EXIT
+          for asset in assets/chapter-hub.css assets/set-language-journey.js index.html; do
+            good=0
+            for attempt in $(seq 1 18); do
+              if curl -fsSL --max-time 20 "$BASE/$asset?release=$GITHUB_SHA" -o "$TMP/$(basename "$asset")" &&
+                 cmp -s "site/$asset" "$TMP/$(basename "$asset")"; then
+                good=1
+                echo "PASS live source parity: $asset"
+                break
+              fi
+              sleep 10
+            done
+            if [ "$good" -ne 1 ]; then
+              echo "FAIL live source differs or unavailable: $asset"
+              exit 1
+            fi
+          done
+          grep -Fq "chapter-hub.css" "$TMP/index.html"
+          grep -Fq "set-language-journey.js" "$TMP/index.html"
+          echo "PASS live Grade 9 Concepts HTML, CSS and interactive module"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify English and Tamil concepts at four Android widths
+        run: node site/tools/test_g9_concepts_typography_browser.cjs
+        env:
+          CHROMIUM_PATH: ''
+      - name: Archive mobile English and Tamil screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: g9-compact-concepts-english-tamil
+          path: screenshots/g9-compact-concepts/
+          if-no-files-found: warn
