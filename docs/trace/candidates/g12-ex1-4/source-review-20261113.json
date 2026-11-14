@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "grade": 12,
+  "volume": 1,
+  "edition": "2025 revised",
+  "source": {
+    "englishDriveId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "englishSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+    "tamilDriveId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+    "tamilSha256": "2aed3006325727da9cb9be4eaadb76d89586b71677200652c8c95b4ad66845e8",
+    "volume": 1,
+    "englishPrintedPages": [
+      35,
+      36
+    ],
+    "englishPdfPages": [
+      43,
+      44
+    ],
+    "tamilPrintedPages": [
+      39
+    ],
+    "tamilPdfPages": [
+      47
+    ],
+    "imprintPdfPage": 2,
+    "pageImagesVisuallyInspected": true,
+    "professionalTamilReview": "pending",
+    "figuresRequired": false,
+    "mediumDifference": "Tamil Q5 explicitly requests Cramer's rule; English Q5 does not repeat that instruction. Both give identical meal data and budget. Preserve each medium's wording."
+  },
+  "reviewMethod": "Downloaded original connected Drive PDFs, verified raw SHA-256, rendered pdftoppm -scale-to 1800 -png -singlefile, visually inspected seven pages. Private PDFs/PNGs are not committed.",
+  "pages": [
+    {
+      "medium": "en",
+      "pdfPage": 2,
+      "printedPage": "II",
+      "purpose": "imprint",
+      "imageSha256": "75385d4d11f77881d9e2eda29365b6048453443ea218e595824cc5b8b3515110",
+      "visualChecked": true
+    },
+    {
+      "medium": "en",
+      "pdfPage": 43,
+      "printedPage": 35,
+      "purpose": "Exercise 1.4 Q1-Q4",
+      "imageSha256": "9a722cefa4cb84b5a617388bec83e2661067731ad0c405c92687a2e3fe09c5d2",
+      "visualChecked": true
+    },
+    {
+      "medium": "en",
+      "pdfPage": 44,
+      "printedPage": 36,
+      "purpose": "Exercise 1.4 Q5",
+      "imageSha256": "ca67b7c0d1a259ad3bf00ffa7d97d56ce25958b1fb5dbd68a980af0a05636b4e",
+      "visualChecked": true
+    },
+    {
+      "medium": "en",
+      "pdfPage": 290,
+      "printedPage": 282,
+      "purpose": "answer appendix",
+      "imageSha256": "1094b0569200ebb6f36f64e9024bd9c36e13d771c675b92fbe7b21e260de208a",
+      "visualChecked": true
+    },
+    {
+      "medium": "ta",
+      "pdfPage": 2,
+      "printedPage": "II",
+      "purpose": "imprint",
+      "imageSha256": "cc0371ab1f9e35589603ab05627e354b1c6d9787db3e79a2b25896c5c0ee50a8",
+      "visualChecked": true
+    },
+    {
+      "medium": "ta",
+      "pdfPage": 47,
+      "printedPage": 39,
+      "purpose": "Exercise 1.4 Q1-Q5",
+      "imageSha256": "e2f089a9808d4afafb9ddd05303feccec692565929fbea04ebb1f78bf037a086",
+      "visualChecked": true
+    },
+    {
+      "medium": "ta",
+      "pdfPage": 318,
+      "printedPage": 310,
+      "purpose": "answer appendix",
+      "imageSha256": "b169e255d05208079ee9155ac8ed0b4e514c8eb4f718c7e281338d076fa9eeb1",
+      "visualChecked": true
+    }
+  ],
+  "findings": [
+    "Q1(i): 5x - 2y + 16 = 0 and x + 3y - 7 = 0; x=-2,y=3.",
+    "Q1(ii): 3/x+2y=12, 2/x+3y=13; x=1/2,y=3; x nonzero.",
+    "Q1(iii): solution (2,3,4) satisfies all three source equations.",
+    "Q1(iv): original first equation contains -2/z; solution (1,3,3); x,y,z nonzero.",
+    "Q2: 84 correct, 16 wrong, 100 total, score 80.",
+    "Q3: 6 litres at 50% and 4 at 25%; 10 litres at 40%.",
+    "Q4: pumps A=15 minutes, B=30 minutes; forward total 1/10 and reverse 1/30.",
+    "Q5: dosai=30, idli=10, vadai=30 rupees; bill 330, balance 20. Tamil explicitly requests Cramer rule; English does not repeat it."
+  ],
+  "englishQuestionComparison": "Existing candidate prose, quantities and normalized inline mathematical notation compared to original page images; no candidate content change required.",
+  "tamilReview": "Numerical/equation and answer correspondence only. Full Tamil prose transcription and qualified editorial review are pending.",
+  "teacherApproval": "OWNER_DEFERRED_NOT_PERFORMED",
+  "professionalTamilReview": "OWNER_DEFERRED_PENDING",
+  "releaseApproved": false,
+  "releaseHoldEvidence": {
+    "file": "docs/trace/SPRINT-2-2026-11-12.md",
+    "quote": "Qualified Tamil and teacher reviews are required before the eight staged records can be released."
+  },
+  "batchSha256": "6b61fc2abe4f67e422ad24ddf386125e45773dab37a1ab82326d38d04c710037"
+}

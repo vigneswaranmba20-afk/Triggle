@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g12-ch1-ex1-4",
+  "grade": 12,
+  "chapter": "1",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "issues": [],
+  "metrics": {
+    "numberedQuestions": 5,
+    "labelledSubparts": 4,
+    "sourceTasks": 8,
+    "appRecords": 8,
+    "newAppRecords": 8,
+    "sourceVerifiedNumberedQuestions": 5,
+    "verifiedNumberedQuestions": 5,
+    "mathematicallyVerifiedRecords": 8,
+    "solvedSubparts": 8,
+    "englishSourceVerifiedRecords": 8,
+    "tamilSourceVerifiedRecords": 0
+  },
+  "coverage": {
+    "inventoryCompleteChapter": false,
+    "exercises": [
+      {
+        "exercise": "1.4",
+        "inventoryVerified": true,
+        "numberedQuestions": 5,
+        "complete": true
+      }
+    ],
+    "missing": [],
+    "blocked": [],
+    "chapterComplete": false
+  },
+  "mathematics": {
+    "script": "site/tools/bulk/verify_g12_ch1_ex1_4.cjs",
+    "verifierSha256": "37bc9abbd1162183f4aab9c9a9c7bdb801044fcecea0876d5a5e473f6cc57eee",
+    "checks": [
+      {
+        "recordId": "g12-ch1-ex1.4-q1-i",
+        "parts": [
+          "i"
+        ],
+        "passed": true,
+        "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints; exact solution and application interpretation compared with both visually reviewed answer appendices; professional Tamil review pending",
+        "recordSha256": "b1c04805804f543cf3045f6b6d66246f9c57596d9192233f9670fccee5e98ffd"
+      },
+      {
+        "recordId": "g12-ch1-ex1.4-q1-ii",
+        "parts": [
+          "ii"
+        ],
+        "passed": true,
+        "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints; exact solution and application interpretation compared with both visually reviewed answer appendices; professional Tamil review pending",
+        "recordSha256": "5a83be4b45fe9ac9a616448436fe7e196bf6ca3078dfb674dffd0af90c7d2ddf"
+      },
+      {
+        "recordId": "g12-ch1-ex1.4-q1-iii",
+        "parts": [
+          "iii"
+        ],
+        "passed": true,
+        "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints; exact solution and application interpretation compared with both visually reviewed answer appendices; professional Tamil review pending",
+        "recordSha256": "f3f4e057d2b81527e8d55a232a97177b9d48c149d5fae17e48c89e6acd0f6326"
+      },
+      {
+        "recordId": "g12-ch1-ex1.4-q1-iv",
+        "parts": [
+          "iv"
+        ],
+        "passed": true,
+        "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints; exact solution and application interpretation compared with both visually reviewed answer appendices; professional Tamil review pending",
+        "recordSha256": "a206842a551f2b52139b934adf27426e67054ef49248e3c866fb676250afecc4"
+      },
+      {
+        "recordId": "g12-ch1-ex1.4-q2",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints; exact solution and application interpretation compared with both visually reviewed answer appendices; professional Tamil review pending",
+        "recordSha256": "36c0241e550ea1f96ce9f51a84567ddc9f7191a984ef450cf5257d1d48af3180"
+      },
+      {
+        "recordId": "g12-ch1-ex1.4-q3",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints; exact solution and application interpretation compared with both visually reviewed answer appendices; professional Tamil review pending",
+        "recordSha256": "700a78ca2bbed8ec925957975ca9af427775a5e459b35951a647fdd6e125f6e0"
+      },
+      {
+        "recordId": "g12-ch1-ex1.4-q4",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints; exact solution and application interpretation compared with both visually reviewed answer appendices; professional Tamil review pending",
+        "recordSha256": "3c1c45f66521159dfa2dca7bbdfd025b69bd24c9b1088dc56c541fd9350de7da"
+      },
+      {
+        "recordId": "g12-ch1-ex1.4-q5",
+        "parts": [
+          "whole"
+        ],
+        "passed": true,
+        "method": "Independent BigInt elimination determinant, Gauss-Jordan inverse and original-equation substitution with reciprocal-domain and context constraints; exact solution and application interpretation compared with both visually reviewed answer appendices; professional Tamil review pending",
+        "recordSha256": "8113ca29f9032c9d44251f6bd015d4fbb6a09800257fbde5ea82cda69a08f0a8"
+      }
+    ]
+  }
+}
