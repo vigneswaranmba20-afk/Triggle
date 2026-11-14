@@ -21,4 +21,4 @@ The full Grade 9 sweep checks 313 records × English/Tamil × 320/360/393/430 px
 
 Screenshots and machine-readable viewport results are written to ignored `screenshots/g9-typography/`; the new PR workflow uploads them as an artifact. Deployment must be verified separately from a successful commit or PR check.
 
-Checkpoint: implementation complete; full browser/mobile checks and release verification are in progress. Do not merge until required checks pass. Live deployment has not yet been claimed.
+Release record: [PR #173](https://github.com/vigneswaranmba20-afk/Triggle/pull/173). The PR checks and Pages workflow are the release gates. `screenshots/g9-typography/live-results.json` is written only by the production browser verifier and records the actual tested deployment commit. A source commit alone is not deployment evidence.
