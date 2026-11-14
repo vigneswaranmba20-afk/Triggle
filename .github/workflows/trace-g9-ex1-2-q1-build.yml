@@ -1,0 +1,46 @@
+name: TRACE temporary Grade 9 Ex1.2 Q1 asset generator
+on:
+  push:
+    branches:
+      - curriculum/g9-ex1-2-q1-fivepart-release-20261114
+    paths:
+      - '.github/workflows/trace-g9-ex1-2-q1-build.yml'
+      - 'site/index.html'
+      - 'site/data/textbook-exercises/g9-ch1-ex1-2-q1-en.js'
+      - 'site/data/why-step-g9-ex1-2-q1.js'
+      - 'site/tools/build_g9_math.cjs'
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Generate and commit the canonical Grade 9 maths projection
+        shell: bash
+        run: |
+          set -euo pipefail
+          node site/tools/build_g9_math.cjs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/g9-clear-math.js
+          if ! git diff --cached --quiet; then
+            git commit -m "TRACE: regenerate 318-question Grade 9 KaTeX projection"
+          fi
+      - name: Reconcile public project status against resulting source commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          node site/tools/build_project_status.cjs
+          git add site/data/project-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "TRACE: reconcile public status after Grade 9 Q1 typesetting"
+          fi
+          git push origin "HEAD:${GITHUB_REF_NAME}"
