@@ -151,10 +151,26 @@ function loadContext(){const context={window:{}};vm.createContext(context);
 function load(){return loadContext().TRIGGLE_CLASSES[9].items.filter(q=>q.kind!=='textbook-example'&&!/(?:^|[-_])(?:worked[-_])?examples?(?:[-_]|$)/i.test(q.id)&&!/^\s*(?:Worked\s+)?Example\b/i.test(q.label?.en||''));}
 function build(){
  const extended=require('./g9_math_compiler.cjs'),items=load();
+ const authored=JSON.parse(fs.readFileSync(path.join(root,'data/math-layout/g9-authored-math.json'),'utf8'));
  const records=items.map(q=>{
   const compile=['2','3'].includes(String(q.chapter))?rich:extended.rich;
-  return {id:q.id,questionMath:q.questionMath||Object.fromEntries(Object.entries(q.q).map(([lang,text])=>[lang,compile(text)])),
+  const record={id:q.id,questionMath:q.questionMath||Object.fromEntries(Object.entries(q.q).map(([lang,text])=>[lang,compile(text)])),
    answerMath:q.answerMath||compile(q.answer,{display:true}),steps:q.steps.map(s=>({math:s.math||compile(s.eq,{display:true}),reasonMath:s.reasonMath||Object.fromEntries(['en','ta'].filter(lang=>s[lang]).map(lang=>[lang,compile(s[lang])]))}))};
+  const overrides=authored[q.id];
+  if(overrides){
+   for(const [index,value] of Object.entries(overrides.steps||{})){
+    if(q.steps[index]?.eq!==value.source)throw Error('Authored Grade 9 notation source mismatch: '+q.id+'/'+index);
+    record.steps[index].math={latex:value.latex,fallback:value.source,display:true};
+   }
+   if(overrides.questionAnchors)for(const [lang,source] of Object.entries(q.q)){
+    let cursor=0;const parts=[];
+    for(const anchor of overrides.questionAnchors){const at=source.indexOf(anchor.source,cursor);if(at<0)throw Error('Authored Grade 9 question anchor missing: '+q.id+'/'+lang);
+     parts.push(source.slice(cursor,at),{latex:anchor.latex,fallback:anchor.source});cursor=at+anchor.source.length;
+    }
+    parts.push(source.slice(cursor));record.questionMath[lang]=parts;
+   }
+  }
+  return record;
  });
  // Exact-string lookup for original concept text and optional explanations.
  // No parsing, replacement, or DOM walking takes place in the application.

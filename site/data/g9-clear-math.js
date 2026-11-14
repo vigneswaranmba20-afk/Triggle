@@ -11362,46 +11362,16 @@ const records=[
       "en": [
         "Convert this textbook quantity into scientific notation: The textbook states the world population is nearly ",
         {
-          "latex": "7",
-          "fallback": "7"
-        },
-        ",",
-        {
-          "latex": "000",
-          "fallback": "000"
-        },
-        ",",
-        {
-          "latex": "000",
-          "fallback": "000"
-        },
-        ",",
-        {
-          "latex": "000",
-          "fallback": "000"
+          "latex": "7{,}000{,}000{,}000",
+          "fallback": "7,000,000,000"
         },
         "."
       ],
       "ta": [
         "இந்தப் பாடநூல் அளவை அறிவியல் குறியீட்டில் எழுதுக: பாடநூலில் உலக மக்கள் தொகை ஏறத்தாழ ",
         {
-          "latex": "7",
-          "fallback": "7"
-        },
-        ",",
-        {
-          "latex": "000",
-          "fallback": "000"
-        },
-        ",",
-        {
-          "latex": "000",
-          "fallback": "000"
-        },
-        ",",
-        {
-          "latex": "000",
-          "fallback": "000"
+          "latex": "7{,}000{,}000{,}000",
+          "fallback": "7,000,000,000"
         },
         " என்று கொடுக்கப்பட்டுள்ளது."
       ]
@@ -11425,7 +11395,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{gathered}7 \\\\ 000 \\\\ 000 \\\\ 000 = 7 \\times 10^{9}\\end{gathered}",
+          "latex": "\\begin{aligned}&7{,}000{,}000{,}000\\\\&=7\\times10^{9}\\end{aligned}",
           "fallback": "7,000,000,000=7×10⁹",
           "display": true
         },

@@ -32,5 +32,8 @@ function validate(v,id){if(v?.latex){assert(!ctx.window.TriggleNotation.render(v
 const data=fs.readFileSync('site/data/g9-clear-math.js','utf8');
 const texts=JSON.parse(data.slice(data.indexOf('const texts=')+12,data.indexOf(';\nconst diagramLabels=')));
 validate(texts,'concept/why');validate(ctx.window.TriggleG9Math.diagramLabels,'diagram labels');
+const population=ctx.window.TriggleG9Math.get(load().find(q=>q.id==='g9-ch2-ex8-q4-i'));
+assert.match(population.steps[1].math.latex,/7\{,\}000\{,\}000\{,\}000/,'The complete seven-billion integer stays on one line');
+assert(!population.steps[1].math.latex.includes('gathered'),'Never split thousands into separate mathematical values');
 for(const q of load())validate(ctx.window.TriggleG9Math.get(q),q.id);
 console.log('PASS Grade 9 compiler: grouping, membership, units, absolute values, probability labels, statistical bars, data spacing, alignment, escaping, and every compiled formula');

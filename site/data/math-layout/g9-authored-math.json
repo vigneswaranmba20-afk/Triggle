@@ -1,0 +1,13 @@
+{
+  "g9-ch2-ex8-q4-i": {
+    "questionAnchors": [
+      {"source":"7,000,000,000","latex":"7{,}000{,}000{,}000"}
+    ],
+    "steps": {
+      "1": {
+        "source":"7,000,000,000=7×10⁹",
+        "latex":"\\begin{aligned}&7{,}000{,}000{,}000\\\\&=7\\times10^{9}\\end{aligned}"
+      }
+    }
+  }
+}
