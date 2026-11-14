@@ -290,7 +290,7 @@
       // Keep the textbook rule unchanged; only its mobile presentation uses
       // aligned two-line KaTeX to avoid a clipped long equation.
       const visibleRule=stage.visual==='count'
-        ? {latex:String.raw`\\begin{aligned}n(A\\cup B)&=n(A)+n(B)\\\\&\\quad-n(A\\cap B)\\end{aligned}`,fallback:stage.rule}
+        ? {latex:String.raw`\begin{aligned}n(A\cup B)&=n(A)+n(B)\\&\quad-n(A\cap B)\end{aligned}`,fallback:stage.rule}
         : stage.rule;
       panel.innerHTML=
         '<div class="sp2-concept-heading" tabindex="-1">'+
