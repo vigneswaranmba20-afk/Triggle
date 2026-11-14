@@ -1,6 +1,5 @@
-/* Source-pinned Grade 9 optional explanations. Original textbook questions and answers unchanged.
- * Generated from existing authored source and pedagogically authored concept library.
- * Tamil editor review pending. Run node site/tools/generate_why_step_g9.cjs after source updates. */
+/* Grade 9: editorially reviewed and source-pinned hints; only existing exercises and practice.
+ * Original source equations, question text and answers are untouched. Tamil editorial review pending. */
 (()=>{'use strict';window.TriggleWhyStepG9=Object.freeze({
   "version": "2026-11-14-g9",
   "grade": 9,
@@ -35,11 +34,7 @@
       "expected": "Isolate cosine by dividing both sides by 2.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-1-q4": {
       "step": 0,
@@ -90,11 +85,7 @@
       "expected": "The ratio cos θ : sin θ = 1 : 2 means adjacent : opposite = 1 : 2.",
       "en": "Opposite and adjacent sides are named relative to the marked angle; the hypotenuse is always opposite the right angle. Identify them before forming ratios.",
       "ta": "எதிர்ப்பக்கம், அடுத்த பக்கம் ஆகியவை குறிக்கப்பட்ட கோணத்தைப் பொறுத்தவை. கர்ணம் எப்போதும் செங்கோணத்திற்கு எதிரே இருக்கும். விகிதம் காணும்முன் பக்கங்களை அறியவும்.",
-      "concept": "trigSides",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigSides"
     },
     "c9-exercise-6-1-q9": {
       "step": 0,
@@ -123,11 +114,7 @@
       "expected": "Take the exact special-angle values.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-2-q1-ii": {
       "step": 0,
@@ -141,187 +128,119 @@
       "expected": "The cosine of 90° is zero.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-2-q1-iv": {
       "step": 0,
       "expected": "Recall the four values in the exact order of the left-hand expression.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-2-q2-i": {
       "step": 0,
       "expected": "Replace the six functions with their known values.",
       "en": "The six trigonometric ratios are not independent numbers. Start with the given angle or triangle, identify each ratio, and substitute only after confirming the side order.",
       "ta": "ஆறு முக்கோணவியல் விகிதங்களும் தனித்த எண்கள் அல்ல. கொடுக்கப்பட்ட கோணம் அல்லது முக்கோணத்தில் ஒவ்வொரு விகிதத்தையும் கண்ட பிறகே பதிலிடவும்.",
-      "concept": "trigSides",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigSides"
     },
     "c9-exercise-6-2-q2-ii": {
       "step": 0,
       "expected": "Substitute into each bracket without changing its term order.",
       "en": "A complement of an angle is what remains to make 90°. Sine of an angle equals cosine of its complement, allowing matching terms to simplify.",
       "ta": "ஒரு கோணத்தின் நிரப்புக் கோணத்துடன் சேர்த்து 90° கிடைக்கும். ஒரு கோணத்தின் சைன் அதன் நிரப்புக் கோணத்தின் கோசைனுக்குச் சமம்.",
-      "concept": "trigSides",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigSides"
     },
     "c9-exercise-6-2-q2-iii": {
       "step": 0,
       "expected": "The values are one half, one half and one.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-2-q3": {
       "step": 1,
       "expected": "Then evaluate the right-hand expression using cos30°.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-2-q4": {
       "step": 1,
       "expected": "Substitute the exact sine and cosine values.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-3-q-i": {
       "step": 0,
       "expected": "47° + 43° = 90°. Hence cos47° = sin43°, so their ratio is 1.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-3-q-ii": {
       "step": 0,
       "expected": "Each numerator matches its denominator: 70°+20°=90°, 59°+31°=90°, and sin(90°−θ)",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-3-q-iii": {
       "step": 0,
       "expected": "Start with the five factors in the exact order shown in the question.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-3-q-iv": {
       "step": 1,
       "expected": "For the numerator of the second fraction, convert only the first and third facto",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-i": {
       "step": 1,
       "expected": "Find the sine at that angle with the table or calculator.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-ii": {
       "step": 1,
       "expected": "Evaluate cosine, retaining extra digits before rounding.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-iii": {
       "step": 1,
       "expected": "Evaluate tangent without rounding the angle first.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-iv": {
       "step": 1,
       "expected": "Calculate sine before rounding.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-v": {
       "step": 1,
       "expected": "Calculate cosine before rounding.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-vi": {
       "step": 1,
       "expected": "Evaluate tangent without rounding the angle first.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-4-q4": {
       "step": 0,
@@ -361,88 +280,56 @@
       "expected": "Both values are one half.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-5-q2": {
       "step": 0,
       "expected": "Keep the given left-hand side, and replace cot37° by tangent of its complement.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-5-q3": {
       "step": 2,
       "expected": "Replace only the first factor; keep tan18° second, exactly as the question does.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-5-q4": {
       "step": 0,
       "expected": "At 30°, tangent has the exact value 1/√3.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-5-q7": {
       "step": 0,
       "expected": "At 45°, tangent equals one.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-5-q8": {
       "step": 0,
       "expected": "The first two angles add to 90°, so the first two values are equal.",
       "en": "When two angles add to 90°, the sine of either is the cosine of the other. Recognising these matching pairs reveals which terms cancel.",
       "ta": "இரண்டு கோணங்களின் கூடுதல் 90° என்றால் ஒன்றின் சைன் மற்றொன்றின் கோசைன். சமமான உறுப்புகளைக் கண்டால் எவை நீங்குகின்றன என்பது தெளிவாகும்.",
-      "concept": "trigSides",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigSides"
     },
     "c9-exercise-6-5-q9": {
       "step": 0,
       "expected": "Write the full product in its original ascending order.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-exercise-6-5-q10": {
       "step": 0,
       "expected": "Sine equals one half at 30° in the acute-angle range.",
       "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
-      "concept": "trigRatio",
-      "diagram": {
-        "type": "triangle",
-        "generic": true
-      }
+      "concept": "trigRatio"
     },
     "c9-1-1-practice-1": {
       "step": 0,
@@ -541,24 +428,16 @@
     "g9-ch2-ex1-q3-i": {
       "step": 0,
       "expected": "Convert both fractions to decimals.",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
-      "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
-      "concept": "rational"
+      "en": "To compare fractions or decimals, express both in comparable forms first—for example with a common denominator or the same number of decimal places—then compare digits carefully.",
+      "ta": "பின்னங்கள் அல்லது தசமங்களை ஒப்பிட முதலில் ஒரே பகுதி அல்லது ஒரே தசம இடங்கள் கொண்ட வடிவத்திற்கு மாற்றி, பின்னர் இலக்கங்களை ஒப்பிடவும்.",
+      "concept": "comparison"
     },
     "g9-ch2-ex1-q3-ii": {
       "step": 0,
       "expected": "Write both values to three decimal places.",
       "en": "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.",
       "ta": "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது 5 அல்லது அதற்கு மேல் இருந்தால்தான் இலக்கத்தை உயர்த்த வேண்டும்.",
-      "concept": "rounding",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "rounding"
     },
     "g9-ch2-ex1-q3-iii": {
       "step": 0,
@@ -606,17 +485,9 @@
     "g9-ch2-ex2-q2": {
       "step": 0,
       "expected": "Divide one by thirteen, keeping leading zeros in the repeating block.",
-      "en": "In long division the repeating block can begin with zeros. Keep every digit of the remainder cycle; omitting a leading zero changes the represented fraction.",
-      "ta": "நெடுவகுத்தலில் திரும்பும் இலக்கத் தொகுதி பூஜ்ஜியத்துடன் தொடங்கலாம். சுழற்சியின் எந்த இலக்கத்தையும் விடக்கூடாது; ஆரம்பப் பூஜ்ஜியத்தை நீக்கினால் மதிப்பு மாறலாம்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
+      "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q3": {
       "step": 1,
@@ -628,93 +499,93 @@
     "g9-ch2-ex2-q4-i": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "Scientific notation separates a number into a coefficient between 1 and 10 and a power of ten. The exponent records how far the decimal point moved.",
-      "ta": "அறிவியல் குறியீட்டில் 1 முதல் 10-க்கு இடைப்பட்ட கெழுவையும் பத்தின் அடுக்கையும் பயன்படுத்துகிறோம். தசமப் புள்ளி எத்தனை இடம் நகர்ந்தது என்பதை அடுக்கு காட்டும்.",
-      "concept": "scientific"
+      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
+      "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q4-ii": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "Scientific notation separates a number into a coefficient between 1 and 10 and a power of ten. The exponent records how far the decimal point moved.",
-      "ta": "அறிவியல் குறியீட்டில் 1 முதல் 10-க்கு இடைப்பட்ட கெழுவையும் பத்தின் அடுக்கையும் பயன்படுத்துகிறோம். தசமப் புள்ளி எத்தனை இடம் நகர்ந்தது என்பதை அடுக்கு காட்டும்.",
-      "concept": "scientific"
+      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
+      "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q4-iii": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "Scientific notation separates a number into a coefficient between 1 and 10 and a power of ten. The exponent records how far the decimal point moved.",
-      "ta": "அறிவியல் குறியீட்டில் 1 முதல் 10-க்கு இடைப்பட்ட கெழுவையும் பத்தின் அடுக்கையும் பயன்படுத்துகிறோம். தசமப் புள்ளி எத்தனை இடம் நகர்ந்தது என்பதை அடுக்கு காட்டும்.",
-      "concept": "scientific"
+      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
+      "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q4-iv": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "Scientific notation separates a number into a coefficient between 1 and 10 and a power of ten. The exponent records how far the decimal point moved.",
-      "ta": "அறிவியல் குறியீட்டில் 1 முதல் 10-க்கு இடைப்பட்ட கெழுவையும் பத்தின் அடுக்கையும் பயன்படுத்துகிறோம். தசமப் புள்ளி எத்தனை இடம் நகர்ந்தது என்பதை அடுக்கு காட்டும்.",
-      "concept": "scientific"
+      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
+      "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q4-v": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "Scientific notation separates a number into a coefficient between 1 and 10 and a power of ten. The exponent records how far the decimal point moved.",
-      "ta": "அறிவியல் குறியீட்டில் 1 முதல் 10-க்கு இடைப்பட்ட கெழுவையும் பத்தின் அடுக்கையும் பயன்படுத்துகிறோம். தசமப் புள்ளி எத்தனை இடம் நகர்ந்தது என்பதை அடுக்கு காட்டும்.",
-      "concept": "scientific"
+      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
+      "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q4-vi": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "Scientific notation separates a number into a coefficient between 1 and 10 and a power of ten. The exponent records how far the decimal point moved.",
-      "ta": "அறிவியல் குறியீட்டில் 1 முதல் 10-க்கு இடைப்பட்ட கெழுவையும் பத்தின் அடுக்கையும் பயன்படுத்துகிறோம். தசமப் புள்ளி எத்தனை இடம் நகர்ந்தது என்பதை அடுக்கு காட்டும்.",
-      "concept": "scientific"
+      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
+      "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q5-i": {
       "step": 0,
       "expected": "Reduce the fraction and factor its denominator.",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
-      "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
-      "concept": "rational"
+      "en": "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than 2 and 5.",
+      "ta": "பின்னத்தை முதலில் மீச்சிறு வடிவிற்கு சுருக்கவும். அதன் பகுதியில் 2, 5 தவிர வேறு பகா காரணி இல்லாவிட்டால்தான் தசமம் முடிவுறும்.",
+      "concept": "terminatingRule"
     },
     "g9-ch2-ex2-q5-ii": {
       "step": 0,
       "expected": "Reduce the fraction and factor its denominator.",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
-      "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
-      "concept": "rational"
+      "en": "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than 2 and 5.",
+      "ta": "பின்னத்தை முதலில் மீச்சிறு வடிவிற்கு சுருக்கவும். அதன் பகுதியில் 2, 5 தவிர வேறு பகா காரணி இல்லாவிட்டால்தான் தசமம் முடிவுறும்.",
+      "concept": "terminatingRule"
     },
     "g9-ch2-ex2-q5-iii": {
       "step": 0,
       "expected": "Reduce the fraction and factor its denominator.",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
-      "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
-      "concept": "rational"
+      "en": "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than 2 and 5.",
+      "ta": "பின்னத்தை முதலில் மீச்சிறு வடிவிற்கு சுருக்கவும். அதன் பகுதியில் 2, 5 தவிர வேறு பகா காரணி இல்லாவிட்டால்தான் தசமம் முடிவுறும்.",
+      "concept": "terminatingRule"
     },
     "g9-ch2-ex2-q5-iv": {
       "step": 0,
       "expected": "Reduce the fraction and factor its denominator.",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
-      "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
-      "concept": "rational"
+      "en": "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than 2 and 5.",
+      "ta": "பின்னத்தை முதலில் மீச்சிறு வடிவிற்கு சுருக்கவும். அதன் பகுதியில் 2, 5 தவிர வேறு பகா காரணி இல்லாவிட்டால்தான் தசமம் முடிவுறும்.",
+      "concept": "terminatingRule"
     },
     "g9-ch2-ex3-q1-i": {
       "step": 0,
       "expected": "Use a semicircle whose diameter is a segment of length (radicand+1); put its spl",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "The semicircle construction makes two segments of lengths 1 and n. The perpendicular at their join has length √n by the geometric-mean theorem, giving the required point on a number line.",
+      "ta": "அரைவட்ட அமைப்பில் 1 மற்றும் n நீளமுள்ள இரு துண்டுகளின் சந்திப்பில் வரையும் செங்குத்தின் நீளம் வடிவியல் சராசரி தேற்றப்படி √n ஆகும்.",
+      "concept": "geometricMean"
     },
     "g9-ch2-ex3-q1-ii": {
       "step": 0,
       "expected": "Use a semicircle whose diameter is a segment of length (radicand+1); put its spl",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "The semicircle construction makes two segments of lengths 1 and n. The perpendicular at their join has length √n by the geometric-mean theorem, giving the required point on a number line.",
+      "ta": "அரைவட்ட அமைப்பில் 1 மற்றும் n நீளமுள்ள இரு துண்டுகளின் சந்திப்பில் வரையும் செங்குத்தின் நீளம் வடிவியல் சராசரி தேற்றப்படி √n ஆகும்.",
+      "concept": "geometricMean"
     },
     "g9-ch2-ex3-q1-iii": {
       "step": 0,
       "expected": "Use a semicircle whose diameter is a segment of length (radicand+1); put its spl",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "The semicircle construction makes two segments of lengths 1 and n. The perpendicular at their join has length √n by the geometric-mean theorem, giving the required point on a number line.",
+      "ta": "அரைவட்ட அமைப்பில் 1 மற்றும் n நீளமுள்ள இரு துண்டுகளின் சந்திப்பில் வரையும் செங்குத்தின் நீளம் வடிவியல் சராசரி தேற்றப்படி √n ஆகும்.",
+      "concept": "geometricMean"
     },
     "g9-ch2-ex3-q2-i": {
       "step": 0,
@@ -816,30 +687,30 @@
     "g9-ch2-ex5-q1-i": {
       "step": 1,
       "expected": "Use negative indices for reciprocals and one-half indices for square roots.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "Negative powers mean reciprocals, while fractional powers mean roots: a⁻ⁿ = 1/aⁿ for a≠0 and a¹/ⁿ is an nth root on its real domain.",
+      "ta": "எதிர்ம அடுக்குகள் தலைகீழ் மதிப்புகளைக் குறிக்கும்; பின்ன அடுக்குகள் மூலங்களைக் குறிக்கும். a≠0 எனில் a⁻ⁿ=1/aⁿ; a¹/ⁿ என்பது n-ஆவது மூலம்.",
+      "concept": "fractionalIndices"
     },
     "g9-ch2-ex5-q1-ii": {
       "step": 1,
       "expected": "Use negative indices for reciprocals and one-half indices for square roots.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "Negative powers mean reciprocals, while fractional powers mean roots: a⁻ⁿ = 1/aⁿ for a≠0 and a¹/ⁿ is an nth root on its real domain.",
+      "ta": "எதிர்ம அடுக்குகள் தலைகீழ் மதிப்புகளைக் குறிக்கும்; பின்ன அடுக்குகள் மூலங்களைக் குறிக்கும். a≠0 எனில் a⁻ⁿ=1/aⁿ; a¹/ⁿ என்பது n-ஆவது மூலம்.",
+      "concept": "fractionalIndices"
     },
     "g9-ch2-ex5-q1-iii": {
       "step": 1,
       "expected": "Use negative indices for reciprocals and one-half indices for square roots.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "Negative powers mean reciprocals, while fractional powers mean roots: a⁻ⁿ = 1/aⁿ for a≠0 and a¹/ⁿ is an nth root on its real domain.",
+      "ta": "எதிர்ம அடுக்குகள் தலைகீழ் மதிப்புகளைக் குறிக்கும்; பின்ன அடுக்குகள் மூலங்களைக் குறிக்கும். a≠0 எனில் a⁻ⁿ=1/aⁿ; a¹/ⁿ என்பது n-ஆவது மூலம்.",
+      "concept": "fractionalIndices"
     },
     "g9-ch2-ex5-q1-iv": {
       "step": 1,
       "expected": "Use negative indices for reciprocals and one-half indices for square roots.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "Negative powers mean reciprocals, while fractional powers mean roots: a⁻ⁿ = 1/aⁿ for a≠0 and a¹/ⁿ is an nth root on its real domain.",
+      "ta": "எதிர்ம அடுக்குகள் தலைகீழ் மதிப்புகளைக் குறிக்கும்; பின்ன அடுக்குகள் மூலங்களைக் குறிக்கும். a≠0 எனில் a⁻ⁿ=1/aⁿ; a¹/ⁿ என்பது n-ஆவது மூலம்.",
+      "concept": "fractionalIndices"
     },
     "g9-ch2-ex5-q2-i": {
       "step": 1,
@@ -921,30 +792,30 @@
     "g9-ch2-ex5-q5-i": {
       "step": 0,
       "expected": "Express the radicand as a fifth power.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "A fifth root undoes a fifth power. Rewrite the number as something raised to the fifth power, then remove the power by taking its fifth root.",
+      "ta": "ஐந்தாம் மூலம் ஐந்தாம் அடுக்கை நீக்கும். எண்ணை ஒரு மதிப்பின் ஐந்தாம் அடுக்காக எழுதிப் பின் ஐந்தாம் மூலத்தை எடுக்கவும்.",
+      "concept": "fifthRoot"
     },
     "g9-ch2-ex5-q5-ii": {
       "step": 0,
       "expected": "Express the radicand as a fifth power.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "A fifth root undoes a fifth power. Rewrite the number as something raised to the fifth power, then remove the power by taking its fifth root.",
+      "ta": "ஐந்தாம் மூலம் ஐந்தாம் அடுக்கை நீக்கும். எண்ணை ஒரு மதிப்பின் ஐந்தாம் அடுக்காக எழுதிப் பின் ஐந்தாம் மூலத்தை எடுக்கவும்.",
+      "concept": "fifthRoot"
     },
     "g9-ch2-ex5-q5-iii": {
       "step": 0,
       "expected": "Express the radicand as a fifth power.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "A fifth root undoes a fifth power. Rewrite the number as something raised to the fifth power, then remove the power by taking its fifth root.",
+      "ta": "ஐந்தாம் மூலம் ஐந்தாம் அடுக்கை நீக்கும். எண்ணை ஒரு மதிப்பின் ஐந்தாம் அடுக்காக எழுதிப் பின் ஐந்தாம் மூலத்தை எடுக்கவும்.",
+      "concept": "fifthRoot"
     },
     "g9-ch2-ex5-q5-iv": {
       "step": 0,
       "expected": "Express the radicand as a fifth power.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "A fifth root undoes a fifth power. Rewrite the number as something raised to the fifth power, then remove the power by taking its fifth root.",
+      "ta": "ஐந்தாம் மூலம் ஐந்தாம் அடுக்கை நீக்கும். எண்ணை ஒரு மதிப்பின் ஐந்தாம் அடுக்காக எழுதிப் பின் ஐந்தாம் மூலத்தை எடுக்கவும்.",
+      "concept": "fifthRoot"
     },
     "g9-ch2-ex6-q1-i": {
       "step": 0,
@@ -977,23 +848,23 @@
     "g9-ch2-ex6-q2-i": {
       "step": 0,
       "expected": "Apply the product/quotient of radicals, or the conjugate identity.",
-      "en": "Multiplying by the conjugate changes a sum-and-difference product into a difference of squares. The numerator and denominator must be multiplied by the same nonzero value.",
-      "ta": "இணைக் கோவையால் பெருக்கினால் கூட்டல்–கழித்தல் பெருக்கல் வர்க்கங்களின் வித்தியாசமாகும். தொகுதியையும் பகுதியையும் ஒரே பூஜ்ஜியமற்ற கோவையால் பெருக்க வேண்டும்.",
-      "concept": "conjugate"
+      "en": "When multiplying or dividing nonnegative square roots, combine the values inside the roots before simplifying. For cube roots, the same product rule works for real values.",
+      "ta": "எதிர்மமற்ற வர்க்கமூலங்களைப் பெருக்க அல்லது வகுக்க மூலத்திற்குள்ளான மதிப்புகளைச் சேர்த்து கணக்கிடவும். கனமூலப் பெருக்கல் விதி மெய்யெண்களுக்கும் பொருந்தும்.",
+      "concept": "rootArithmetic"
     },
     "g9-ch2-ex6-q2-ii": {
       "step": 0,
       "expected": "Apply the product/quotient of radicals, or the conjugate identity.",
-      "en": "Multiplying by the conjugate changes a sum-and-difference product into a difference of squares. The numerator and denominator must be multiplied by the same nonzero value.",
-      "ta": "இணைக் கோவையால் பெருக்கினால் கூட்டல்–கழித்தல் பெருக்கல் வர்க்கங்களின் வித்தியாசமாகும். தொகுதியையும் பகுதியையும் ஒரே பூஜ்ஜியமற்ற கோவையால் பெருக்க வேண்டும்.",
-      "concept": "conjugate"
+      "en": "When multiplying or dividing nonnegative square roots, combine the values inside the roots before simplifying. For cube roots, the same product rule works for real values.",
+      "ta": "எதிர்மமற்ற வர்க்கமூலங்களைப் பெருக்க அல்லது வகுக்க மூலத்திற்குள்ளான மதிப்புகளைச் சேர்த்து கணக்கிடவும். கனமூலப் பெருக்கல் விதி மெய்யெண்களுக்கும் பொருந்தும்.",
+      "concept": "rootArithmetic"
     },
     "g9-ch2-ex6-q2-iii": {
       "step": 0,
       "expected": "Apply the product/quotient of radicals, or the conjugate identity.",
-      "en": "Multiplying by the conjugate changes a sum-and-difference product into a difference of squares. The numerator and denominator must be multiplied by the same nonzero value.",
-      "ta": "இணைக் கோவையால் பெருக்கினால் கூட்டல்–கழித்தல் பெருக்கல் வர்க்கங்களின் வித்தியாசமாகும். தொகுதியையும் பகுதியையும் ஒரே பூஜ்ஜியமற்ற கோவையால் பெருக்க வேண்டும்.",
-      "concept": "conjugate"
+      "en": "When multiplying or dividing nonnegative square roots, combine the values inside the roots before simplifying. For cube roots, the same product rule works for real values.",
+      "ta": "எதிர்மமற்ற வர்க்கமூலங்களைப் பெருக்க அல்லது வகுக்க மூலத்திற்குள்ளான மதிப்புகளைச் சேர்த்து கணக்கிடவும். கனமூலப் பெருக்கல் விதி மெய்யெண்களுக்கும் பொருந்தும்.",
+      "concept": "rootArithmetic"
     },
     "g9-ch2-ex6-q2-iv": {
       "step": 0,
@@ -1005,9 +876,9 @@
     "g9-ch2-ex6-q2-v": {
       "step": 0,
       "expected": "Apply the product/quotient of radicals, or the conjugate identity.",
-      "en": "Multiplying by the conjugate changes a sum-and-difference product into a difference of squares. The numerator and denominator must be multiplied by the same nonzero value.",
-      "ta": "இணைக் கோவையால் பெருக்கினால் கூட்டல்–கழித்தல் பெருக்கல் வர்க்கங்களின் வித்தியாசமாகும். தொகுதியையும் பகுதியையும் ஒரே பூஜ்ஜியமற்ற கோவையால் பெருக்க வேண்டும்.",
-      "concept": "conjugate"
+      "en": "Take each square root of the perfect-square numerator and denominator separately, then combine the resulting fractions before simplifying the division.",
+      "ta": "தொகுதியும் பகுதியும் நிறைவர்க்கமாக இருந்தால் அவற்றின் வர்க்கமூலங்களைத் தனித்தனியே கண்டு, கிடைக்கும் பின்னங்களை ஒன்றிணைத்து எளிமைப்படுத்தவும்.",
+      "concept": "rootArithmetic"
     },
     "g9-ch2-ex6-q3-i": {
       "step": 0,
@@ -1019,61 +890,37 @@
     "g9-ch2-ex6-q3-ii": {
       "step": 0,
       "expected": "Factor out square numbers to produce the given root values.",
-      "en": "Look for the greatest perfect-square factor inside each root. Taking its square root outside leaves a smaller radical that matches the supplied approximate values.",
-      "ta": "ஒவ்வொரு மூலத்தின் உள்ளேயும் நிறைவர்க்கக் காரணியைத் தேடுங்கள். அதன் மூலத்தை வெளியே எடுத்தால் கொடுக்கப்பட்ட தோராய மதிப்புகளுடன் பொருத்தலாம்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "en": "Look for a perfect-square factor under each square root. Extract that factor before substituting the decimal approximations given in the question.",
+      "ta": "ஒவ்வொரு வர்க்கமூலத்திலும் நிறைவர்க்கக் காரணியைத் தேடி வெளியே எடுக்கவும். பிறகு வினாவில் தரப்பட்ட தசம தோராய மதிப்புகளைப் பயன்படுத்தவும்.",
+      "concept": "radical"
     },
     "g9-ch2-ex6-q4-i": {
       "step": 1,
       "expected": "Compare positive radicands, then reverse into descending order.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "To compare fractions or decimals, express both in comparable forms first—for example with a common denominator or the same number of decimal places—then compare digits carefully.",
+      "ta": "பின்னங்கள் அல்லது தசமங்களை ஒப்பிட முதலில் ஒரே பகுதி அல்லது ஒரே தசம இடங்கள் கொண்ட வடிவத்திற்கு மாற்றி, பின்னர் இலக்கங்களை ஒப்பிடவும்.",
+      "concept": "comparison"
     },
     "g9-ch2-ex6-q4-ii": {
       "step": 0,
       "expected": "Convert each nested root to a fractional exponent.",
-      "en": "When multiplying powers with the same base, their exponents add. When dividing nonzero powers with the same base, their exponents subtract.",
-      "ta": "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். பூஜ்ஜியமற்ற அதே அடிமான அடுக்குகளை வகுக்கும்போது அடுக்குகள் கழிக்கப்படும்.",
-      "concept": "exponent"
+      "en": "To compare fractions or decimals, express both in comparable forms first—for example with a common denominator or the same number of decimal places—then compare digits carefully.",
+      "ta": "பின்னங்கள் அல்லது தசமங்களை ஒப்பிட முதலில் ஒரே பகுதி அல்லது ஒரே தசம இடங்கள் கொண்ட வடிவத்திற்கு மாற்றி, பின்னர் இலக்கங்களை ஒப்பிடவும்.",
+      "concept": "comparison"
     },
     "g9-ch2-ex6-q5-i": {
       "step": 0,
       "expected": "A pure surd has coefficient 1 in simplified radical form.",
       "en": "A pure surd has no coefficient other than one in front of the radical. A mixed surd has an additional numerical coefficient; the expressions can represent equal values in different forms.",
       "ta": "தூய முறுடில் மூலக்குறிக்கு முன் ஒன்றைத் தவிர வேறு கெழு இல்லை. கலப்பு முறுடில் கூடுதல் எண் கெழு இருக்கும்; இரு வடிவங்களின் மதிப்பு சமமாக இருக்கலாம்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex6-q5-ii": {
       "step": 0,
       "expected": "A pure surd has coefficient 1 in simplified radical form.",
       "en": "A mixed surd shows a numerical factor outside the root. Move that factor inside using its matching power when the textbook asks for pure-surd form.",
       "ta": "கலப்பு முறுடில் மூலத்திற்கு வெளியே ஒரு எண் காரணியாக இருக்கும். தூய முறுடாக மாற்றும்போது அந்தக் காரணியை உரிய அடுக்காக மூலத்திற்குள் கொண்டு செல்லவும்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex6-q5-iii": {
       "step": 1,
@@ -1092,86 +939,86 @@
     "g9-ch2-ex6-q6-i": {
       "step": 0,
       "expected": "A rational result is possible even when the original numbers are irrational.",
-      "en": "A non-terminating decimal is irrational only if it is also non-repeating. Terminating decimals and repeating decimals are rational because they equal fractions.",
-      "ta": "முடிவில்லாத தசமம் திரும்பத் திரும்ப மாறாத முறையில் வந்தால்தான் விகிதமுறா எண். முடிவுறும் அல்லது சுழற்சியுள்ள தசமம் பின்னமாக எழுதலாம்.",
-      "concept": "irrational"
+      "en": "Irrational inputs do not guarantee an irrational result. Simplify the whole expression first: matching radicals can cancel or combine into rational numbers.",
+      "ta": "விகிதமுறா உள்ளீடுகள் இருந்தாலும் விடை விகிதமுறாததாக இருக்க வேண்டியதில்லை. ஒத்த மூல உறுப்புகள் நீங்கினால் விகிதமுறு விடை கிடைக்கலாம்.",
+      "concept": "rationalResult"
     },
     "g9-ch2-ex6-q6-ii": {
       "step": 0,
       "expected": "A rational result is possible even when the original numbers are irrational.",
-      "en": "A non-terminating decimal is irrational only if it is also non-repeating. Terminating decimals and repeating decimals are rational because they equal fractions.",
-      "ta": "முடிவில்லாத தசமம் திரும்பத் திரும்ப மாறாத முறையில் வந்தால்தான் விகிதமுறா எண். முடிவுறும் அல்லது சுழற்சியுள்ள தசமம் பின்னமாக எழுதலாம்.",
-      "concept": "irrational"
+      "en": "Irrational inputs do not guarantee an irrational result. Simplify the whole expression first: matching radicals can cancel or combine into rational numbers.",
+      "ta": "விகிதமுறா உள்ளீடுகள் இருந்தாலும் விடை விகிதமுறாததாக இருக்க வேண்டியதில்லை. ஒத்த மூல உறுப்புகள் நீங்கினால் விகிதமுறு விடை கிடைக்கலாம்.",
+      "concept": "rationalResult"
     },
     "g9-ch2-ex6-q6-iii": {
       "step": 0,
       "expected": "A rational result is possible even when the original numbers are irrational.",
-      "en": "A non-terminating decimal is irrational only if it is also non-repeating. Terminating decimals and repeating decimals are rational because they equal fractions.",
-      "ta": "முடிவில்லாத தசமம் திரும்பத் திரும்ப மாறாத முறையில் வந்தால்தான் விகிதமுறா எண். முடிவுறும் அல்லது சுழற்சியுள்ள தசமம் பின்னமாக எழுதலாம்.",
-      "concept": "irrational"
+      "en": "Irrational inputs do not guarantee an irrational result. Simplify the whole expression first: matching radicals can cancel or combine into rational numbers.",
+      "ta": "விகிதமுறா உள்ளீடுகள் இருந்தாலும் விடை விகிதமுறாததாக இருக்க வேண்டியதில்லை. ஒத்த மூல உறுப்புகள் நீங்கினால் விகிதமுறு விடை கிடைக்கலாம்.",
+      "concept": "rationalResult"
     },
     "g9-ch2-ex6-q6-iv": {
       "step": 0,
       "expected": "A rational result is possible even when the original numbers are irrational.",
-      "en": "A non-terminating decimal is irrational only if it is also non-repeating. Terminating decimals and repeating decimals are rational because they equal fractions.",
-      "ta": "முடிவில்லாத தசமம் திரும்பத் திரும்ப மாறாத முறையில் வந்தால்தான் விகிதமுறா எண். முடிவுறும் அல்லது சுழற்சியுள்ள தசமம் பின்னமாக எழுதலாம்.",
-      "concept": "irrational"
+      "en": "Irrational inputs do not guarantee an irrational result. Simplify the whole expression first: matching radicals can cancel or combine into rational numbers.",
+      "ta": "விகிதமுறா உள்ளீடுகள் இருந்தாலும் விடை விகிதமுறாததாக இருக்க வேண்டியதில்லை. ஒத்த மூல உறுப்புகள் நீங்கினால் விகிதமுறு விடை கிடைக்கலாம்.",
+      "concept": "rationalResult"
     },
     "g9-ch2-ex7-q1-i": {
       "step": 1,
       "expected": "Simplify; there must be no surd remaining in the denominator.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "To remove a radical from the denominator, multiply numerator and denominator by an appropriate nonzero root or conjugate. This changes the form, not the value.",
+      "ta": "பகுதியிலுள்ள முறுடை நீக்க, தொகுதியையும் பகுதியையும் ஏற்ற பூஜ்ஜியமற்ற மூலக் காரணி அல்லது இணைக் கோவையால் பெருக்கவும். மதிப்பு மாறாது.",
+      "concept": "rationalize"
     },
     "g9-ch2-ex7-q1-ii": {
       "step": 1,
       "expected": "Simplify; there must be no surd remaining in the denominator.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "To remove a radical from the denominator, multiply numerator and denominator by an appropriate nonzero root or conjugate. This changes the form, not the value.",
+      "ta": "பகுதியிலுள்ள முறுடை நீக்க, தொகுதியையும் பகுதியையும் ஏற்ற பூஜ்ஜியமற்ற மூலக் காரணி அல்லது இணைக் கோவையால் பெருக்கவும். மதிப்பு மாறாது.",
+      "concept": "rationalize"
     },
     "g9-ch2-ex7-q1-iii": {
       "step": 1,
       "expected": "Simplify; there must be no surd remaining in the denominator.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "To remove a radical from the denominator, multiply numerator and denominator by an appropriate nonzero root or conjugate. This changes the form, not the value.",
+      "ta": "பகுதியிலுள்ள முறுடை நீக்க, தொகுதியையும் பகுதியையும் ஏற்ற பூஜ்ஜியமற்ற மூலக் காரணி அல்லது இணைக் கோவையால் பெருக்கவும். மதிப்பு மாறாது.",
+      "concept": "rationalize"
     },
     "g9-ch2-ex7-q1-iv": {
       "step": 1,
       "expected": "Simplify; there must be no surd remaining in the denominator.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "To remove a radical from the denominator, multiply numerator and denominator by an appropriate nonzero root or conjugate. This changes the form, not the value.",
+      "ta": "பகுதியிலுள்ள முறுடை நீக்க, தொகுதியையும் பகுதியையும் ஏற்ற பூஜ்ஜியமற்ற மூலக் காரணி அல்லது இணைக் கோவையால் பெருக்கவும். மதிப்பு மாறாது.",
+      "concept": "rationalize"
     },
     "g9-ch2-ex7-q2-i": {
       "step": 0,
       "expected": "Identify and simplify like radicals, or combine fractions before rationalising.",
-      "en": "Multiplying by the conjugate changes a sum-and-difference product into a difference of squares. The numerator and denominator must be multiplied by the same nonzero value.",
-      "ta": "இணைக் கோவையால் பெருக்கினால் கூட்டல்–கழித்தல் பெருக்கல் வர்க்கங்களின் வித்தியாசமாகும். தொகுதியையும் பகுதியையும் ஒரே பூஜ்ஜியமற்ற கோவையால் பெருக்க வேண்டும்.",
-      "concept": "conjugate"
+      "en": "Simplify the radicals into like terms first. Combine only coefficients of the same radical; unlike radicals cannot be directly added.",
+      "ta": "முதலில் முறுடுகளை ஒத்த உறுப்புகளாக எளிமைப்படுத்தவும். ஒரே வகை முறுடுகளின் கெழுக்களை மட்டுமே சேர்க்கலாம்; வேறுபட்ட முறுடுகளை நேரடியாகக் கூட்ட முடியாது.",
+      "concept": "surdCombine"
     },
     "g9-ch2-ex7-q2-ii": {
       "step": 0,
       "expected": "Identify and simplify like radicals, or combine fractions before rationalising.",
-      "en": "Multiplying by the conjugate changes a sum-and-difference product into a difference of squares. The numerator and denominator must be multiplied by the same nonzero value.",
-      "ta": "இணைக் கோவையால் பெருக்கினால் கூட்டல்–கழித்தல் பெருக்கல் வர்க்கங்களின் வித்தியாசமாகும். தொகுதியையும் பகுதியையும் ஒரே பூஜ்ஜியமற்ற கோவையால் பெருக்க வேண்டும்.",
-      "concept": "conjugate"
+      "en": "Simplify the radicals into like terms first. Combine only coefficients of the same radical; unlike radicals cannot be directly added.",
+      "ta": "முதலில் முறுடுகளை ஒத்த உறுப்புகளாக எளிமைப்படுத்தவும். ஒரே வகை முறுடுகளின் கெழுக்களை மட்டுமே சேர்க்கலாம்; வேறுபட்ட முறுடுகளை நேரடியாகக் கூட்ட முடியாது.",
+      "concept": "surdCombine"
     },
     "g9-ch2-ex7-q2-iii": {
       "step": 0,
       "expected": "Identify and simplify like radicals, or combine fractions before rationalising.",
-      "en": "Multiplying by the conjugate changes a sum-and-difference product into a difference of squares. The numerator and denominator must be multiplied by the same nonzero value.",
-      "ta": "இணைக் கோவையால் பெருக்கினால் கூட்டல்–கழித்தல் பெருக்கல் வர்க்கங்களின் வித்தியாசமாகும். தொகுதியையும் பகுதியையும் ஒரே பூஜ்ஜியமற்ற கோவையால் பெருக்க வேண்டும்.",
-      "concept": "conjugate"
+      "en": "Simplify the radicals into like terms first. Combine only coefficients of the same radical; unlike radicals cannot be directly added.",
+      "ta": "முதலில் முறுடுகளை ஒத்த உறுப்புகளாக எளிமைப்படுத்தவும். ஒரே வகை முறுடுகளின் கெழுக்களை மட்டுமே சேர்க்கலாம்; வேறுபட்ட முறுடுகளை நேரடியாகக் கூட்ட முடியாது.",
+      "concept": "surdCombine"
     },
     "g9-ch2-ex7-q2-iv": {
       "step": 0,
       "expected": "Identify and simplify like radicals, or combine fractions before rationalising.",
-      "en": "Multiplying by the conjugate changes a sum-and-difference product into a difference of squares. The numerator and denominator must be multiplied by the same nonzero value.",
-      "ta": "இணைக் கோவையால் பெருக்கினால் கூட்டல்–கழித்தல் பெருக்கல் வர்க்கங்களின் வித்தியாசமாகும். தொகுதியையும் பகுதியையும் ஒரே பூஜ்ஜியமற்ற கோவையால் பெருக்க வேண்டும்.",
-      "concept": "conjugate"
+      "en": "Simplify the radicals into like terms first. Combine only coefficients of the same radical; unlike radicals cannot be directly added.",
+      "ta": "முதலில் முறுடுகளை ஒத்த உறுப்புகளாக எளிமைப்படுத்தவும். ஒரே வகை முறுடுகளின் கெழுக்களை மட்டுமே சேர்க்கலாம்; வேறுபட்ட முறுடுகளை நேரடியாகக் கூட்ட முடியாது.",
+      "concept": "surdCombine"
     },
     "g9-ch2-ex7-q3": {
       "step": 0,
@@ -1225,30 +1072,30 @@
     "g9-ch2-ex8-q2-i": {
       "step": 0,
       "expected": "Positive powers of 10 move the decimal right; negative powers move it left.",
-      "en": "When multiplying powers with the same base, their exponents add. When dividing nonzero powers with the same base, their exponents subtract.",
-      "ta": "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். பூஜ்ஜியமற்ற அதே அடிமான அடுக்குகளை வகுக்கும்போது அடுக்குகள் கழிக்கப்படும்.",
-      "concept": "exponent"
+      "en": "A positive power of ten moves the decimal point right; a negative power moves it left. The number of places equals the magnitude of the exponent.",
+      "ta": "பத்தின் நேர்ம அடுக்கு தசமப் புள்ளியை வலப்பக்கம் நகர்த்தும்; எதிர்ம அடுக்கு இடப்பக்கம் நகர்த்தும். நகரும் இடங்களின் எண்ணிக்கை அடுக்கின் அளவாகும்.",
+      "concept": "decimalShift"
     },
     "g9-ch2-ex8-q2-ii": {
       "step": 0,
       "expected": "Positive powers of 10 move the decimal right; negative powers move it left.",
-      "en": "When multiplying powers with the same base, their exponents add. When dividing nonzero powers with the same base, their exponents subtract.",
-      "ta": "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். பூஜ்ஜியமற்ற அதே அடிமான அடுக்குகளை வகுக்கும்போது அடுக்குகள் கழிக்கப்படும்.",
-      "concept": "exponent"
+      "en": "A positive power of ten moves the decimal point right; a negative power moves it left. The number of places equals the magnitude of the exponent.",
+      "ta": "பத்தின் நேர்ம அடுக்கு தசமப் புள்ளியை வலப்பக்கம் நகர்த்தும்; எதிர்ம அடுக்கு இடப்பக்கம் நகர்த்தும். நகரும் இடங்களின் எண்ணிக்கை அடுக்கின் அளவாகும்.",
+      "concept": "decimalShift"
     },
     "g9-ch2-ex8-q2-iii": {
       "step": 0,
       "expected": "Positive powers of 10 move the decimal right; negative powers move it left.",
-      "en": "When multiplying powers with the same base, their exponents add. When dividing nonzero powers with the same base, their exponents subtract.",
-      "ta": "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். பூஜ்ஜியமற்ற அதே அடிமான அடுக்குகளை வகுக்கும்போது அடுக்குகள் கழிக்கப்படும்.",
-      "concept": "exponent"
+      "en": "A positive power of ten moves the decimal point right; a negative power moves it left. The number of places equals the magnitude of the exponent.",
+      "ta": "பத்தின் நேர்ம அடுக்கு தசமப் புள்ளியை வலப்பக்கம் நகர்த்தும்; எதிர்ம அடுக்கு இடப்பக்கம் நகர்த்தும். நகரும் இடங்களின் எண்ணிக்கை அடுக்கின் அளவாகும்.",
+      "concept": "decimalShift"
     },
     "g9-ch2-ex8-q2-iv": {
       "step": 0,
       "expected": "Positive powers of 10 move the decimal right; negative powers move it left.",
-      "en": "When multiplying powers with the same base, their exponents add. When dividing nonzero powers with the same base, their exponents subtract.",
-      "ta": "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். பூஜ்ஜியமற்ற அதே அடிமான அடுக்குகளை வகுக்கும்போது அடுக்குகள் கழிக்கப்படும்.",
-      "concept": "exponent"
+      "en": "A positive power of ten moves the decimal point right; a negative power moves it left. The number of places equals the magnitude of the exponent.",
+      "ta": "பத்தின் நேர்ம அடுக்கு தசமப் புள்ளியை வலப்பக்கம் நகர்த்தும்; எதிர்ம அடுக்கு இடப்பக்கம் நகர்த்தும். நகரும் இடங்களின் எண்ணிக்கை அடுக்கின் அளவாகும்.",
+      "concept": "decimalShift"
     },
     "g9-ch2-ex8-q3-i": {
       "step": 0,
@@ -1274,23 +1121,23 @@
     "g9-ch2-ex8-q4-i": {
       "step": 1,
       "expected": "Count decimal shifts and apply the correct sign of the exponent.",
-      "en": "When multiplying powers with the same base, their exponents add. When dividing nonzero powers with the same base, their exponents subtract.",
-      "ta": "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். பூஜ்ஜியமற்ற அதே அடிமான அடுக்குகளை வகுக்கும்போது அடுக்குகள் கழிக்கப்படும்.",
-      "concept": "exponent"
+      "en": "A positive power of ten moves the decimal point right; a negative power moves it left. The number of places equals the magnitude of the exponent.",
+      "ta": "பத்தின் நேர்ம அடுக்கு தசமப் புள்ளியை வலப்பக்கம் நகர்த்தும்; எதிர்ம அடுக்கு இடப்பக்கம் நகர்த்தும். நகரும் இடங்களின் எண்ணிக்கை அடுக்கின் அளவாகும்.",
+      "concept": "decimalShift"
     },
     "g9-ch2-ex8-q4-ii": {
       "step": 1,
       "expected": "Count decimal shifts and apply the correct sign of the exponent.",
-      "en": "When multiplying powers with the same base, their exponents add. When dividing nonzero powers with the same base, their exponents subtract.",
-      "ta": "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். பூஜ்ஜியமற்ற அதே அடிமான அடுக்குகளை வகுக்கும்போது அடுக்குகள் கழிக்கப்படும்.",
-      "concept": "exponent"
+      "en": "A positive power of ten moves the decimal point right; a negative power moves it left. The number of places equals the magnitude of the exponent.",
+      "ta": "பத்தின் நேர்ம அடுக்கு தசமப் புள்ளியை வலப்பக்கம் நகர்த்தும்; எதிர்ம அடுக்கு இடப்பக்கம் நகர்த்தும். நகரும் இடங்களின் எண்ணிக்கை அடுக்கின் அளவாகும்.",
+      "concept": "decimalShift"
     },
     "g9-ch2-ex8-q4-iii": {
       "step": 1,
       "expected": "Count decimal shifts and apply the correct sign of the exponent.",
-      "en": "When multiplying powers with the same base, their exponents add. When dividing nonzero powers with the same base, their exponents subtract.",
-      "ta": "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். பூஜ்ஜியமற்ற அதே அடிமான அடுக்குகளை வகுக்கும்போது அடுக்குகள் கழிக்கப்படும்.",
-      "concept": "exponent"
+      "en": "A positive power of ten moves the decimal point right; a negative power moves it left. The number of places equals the magnitude of the exponent.",
+      "ta": "பத்தின் நேர்ம அடுக்கு தசமப் புள்ளியை வலப்பக்கம் நகர்த்தும்; எதிர்ம அடுக்கு இடப்பக்கம் நகர்த்தும். நகரும் இடங்களின் எண்ணிக்கை அடுக்கின் அளவாகும்.",
+      "concept": "decimalShift"
     },
     "g9-ch2-ex8-q5-i": {
       "step": 0,
@@ -1346,15 +1193,7 @@
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "A fraction in lowest terms has a terminating decimal exactly when its denominator has no prime factors other than two or five.",
       "ta": "சுருக்கிய பின்னத்தின் பகுதியில் 2 மற்றும் 5 ஆகிய பகாக்காரணிகள் மட்டுமே இருந்தால் அதன் தசமம் முடிவுறும்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q5": {
       "step": 1,
@@ -1368,45 +1207,21 @@
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "To compare square roots with positive bounds, square the bounds and compare with the radicand. This avoids rounding the roots too early.",
       "ta": "நேர்ம எல்லைகளுடன் வர்க்கமூலத்தை ஒப்பிட, எல்லைகளை வர்க்கமிட்டு மூலத்திற்குள் உள்ள எண்ணுடன் ஒப்பிடுங்கள். இவ்வாறு முன்கூட்டியே தோராயப்படுத்த வேண்டாம்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q7": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "To obtain one decimal place, the final simplified denominator should divide ten. Check each offered multiplier by first cancelling common factors.",
       "ta": "ஒரு தசம இடத்தில் முடிவதற்கு சுருக்கிய பின்னத்தின் பகுதி பத்தை வகுக்க வேண்டும். ஒவ்வொரு பெருக்கியிலும் பொதுக்காரணிகளை முதலில் நீக்கிப் பாருங்கள்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q8": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "Multiplying a repeating decimal changes where its recurring digits start. Keep the full repeating block; an answer that simply stops after six digits is not exact.",
       "ta": "சுழற்சித் தசமத்தைப் பெருக்கும்போது திரும்பும் இலக்கத் தொகுதியின் தொடக்கம் மாறலாம். ஆறு இலக்கங்களுடன் நிறுத்துவது சரியான முழு விடை அல்ல.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q9": {
       "step": 1,
@@ -1420,157 +1235,77 @@
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "A recurring decimal can be converted into a fraction by subtracting shifted copies of it. This removes the repeating part and permits exact addition.",
       "ta": "சுழற்சித் தசமத்தைத் தகுந்த அடுக்கால் பெருக்கி வேறுபாட்டைக் கண்டால் திரும்பும் பகுதி நீங்கும். அப்போது துல்லியமான பின்னக் கூட்டல் செய்யலாம்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q11": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "The symbol for the principal square root gives the nonnegative value only. The equation saying a number squared equals 25 has two solutions, but the radical symbol has one principal value.",
       "ta": "முதன்மை வர்க்கமூலக் குறி எதிர்மமற்ற மதிப்பை மட்டுமே குறிக்கும். ஒரு எண்ணின் வர்க்கம் 25 என்ற சமன்பாட்டுக்கு இரண்டு விடைகள் இருக்கலாம்; ஆனால் மூலக்குறியின் முதன்மை மதிப்பு ஒன்றே.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q12": {
       "step": 1,
       "expected": "√13 is irrational because 13 is not a perfect square.",
-      "en": "A perfect-square factor can move outside a square root. For example, the square root of 9 times a number equals three times the root of that number.",
-      "ta": "வர்க்கமூலத்தின் உள்ளேயுள்ள நிறைவர்க்கக் காரணியை வெளியே எடுக்கலாம். 9 மடங்கின் வர்க்கமூலம் அந்த எண்ணின் மூலத்தை 3-ஆல் பெருக்கியதற்குச் சமம்.",
-      "concept": "radical"
+      "en": "Irrational inputs do not guarantee an irrational result. Simplify the whole expression first: matching radicals can cancel or combine into rational numbers.",
+      "ta": "விகிதமுறா உள்ளீடுகள் இருந்தாலும் விடை விகிதமுறாததாக இருக்க வேண்டியதில்லை. ஒத்த மூல உறுப்புகள் நீங்கினால் விகிதமுறு விடை கிடைக்கலாம்.",
+      "concept": "irrationalRoot"
     },
     "g9-ch2-ex9-q13": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "First simplify each radical by extracting perfect-square factors. Once both contain the same radical, add their numerical coefficients rather than their radicands.",
       "ta": "முதலில் நிறைவர்க்கக் காரணிகளை வெளியே எடுத்து மூலங்களை எளிமைப்படுத்துங்கள். ஒரே மூலம் வந்த பின் அதன் கெழுக்களைக் கூட்ட வேண்டும்; மூல எண்களைக் கூட்டக்கூடாது.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q14": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "Rewrite the radicand as a perfect square times five. Only the perfect-square root becomes the coefficient multiplying the remaining square root.",
       "ta": "மூல எண்ணை ஒரு நிறைவர்க்கம் மற்றும் ஐந்து ஆகியவற்றின் பெருக்கலாக எழுதுங்கள். நிறைவர்க்கத்தின் மூலம்தான் வெளியே கெழுவாக வரும்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q15": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "Multiply the coefficients with each other and the radicands with each other. Do not add unlike square roots during multiplication.",
       "ta": "கெழுக்களை ஒன்றுடன் ஒன்று பெருக்கவும்; மூல எண்களை ஒன்றுடன் ஒன்று பெருக்கவும். பெருக்கும்போது வேறுபட்ட மூலங்களை கூட்ட வேண்டாம்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q16": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "Rationalising a denominator means multiplying both numerator and denominator by a suitable radical so the denominator becomes rational. The fraction's value stays unchanged.",
       "ta": "பகுதியை விகிதப்படுத்த தொகுதியையும் பகுதியையும் பொருத்தமான மூலத்தால் பெருக்குகிறோம். இதனால் பகுதி விகிதமுறு எண்ணாகும்; பின்னத்தின் மதிப்பு மாறாது.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q17": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "Squaring a difference produces the square of the first term, minus twice the product, plus the square of the second term. The middle term is essential.",
       "ta": "வேறுபாட்டின் வர்க்கத்தில் முதல் உறுப்பின் வர்க்கம், இருமடங்கு பெருக்கலின் எதிர்மம், இரண்டாம் உறுப்பின் வர்க்கம் ஆகியவை வரும். நடு உறுப்பை விடக்கூடாது.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q18": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "Equal bases let us combine the two powers by adding exponents. A negative exponent reverses the fraction, so keep the sign until the end.",
       "ta": "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். எதிர்ம அடுக்கு பின்னத்தைத் தலைகீழாக்கும்; குறியை இறுதிவரை கவனிக்கவும்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q19": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "A square root is a power of one-half, and a cube root is a power of one-third. With the same positive base, equate the resulting exponents.",
       "ta": "வர்க்கமூலம் அரை அடுக்காகவும் கனமூலம் மூன்றில் ஒரு பங்கு அடுக்காகவும் எழுதலாம். ஒரே நேர்ம அடிமானம் என்பதால் அடுக்குகளை ஒப்பிடலாம்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch2-ex9-q20": {
       "step": 0,
       "expected": "Read the mathematical property, not just the form of the expression.",
       "en": "Area is length multiplied by breadth. When multiplying powers of ten, add their exponents; when converting to scientific notation, keep one nonzero digit before the decimal point.",
       "ta": "பரப்பளவு = நீளம் × அகலம். பத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும்; அறிவியல் குறியீட்டில் தசமப் புள்ளிக்கு முன் ஒரு பூஜ்ஜியமற்ற இலக்கம் மட்டுமே இருக்கும்.",
-      "concept": "realLine",
-      "diagram": {
-        "type": "numberline",
-        "labels": [
-          "smaller",
-          "between",
-          "larger"
-        ]
-      }
+      "concept": "realLine"
     },
     "g9-ch1-ex1.1-q1-i": {
       "step": 0,
@@ -1673,29 +1408,29 @@
     "g9-ch1-ex1.1-q3-b-i": {
       "step": 0,
       "expected": "Inspect the given set A = {0, 3, 5, 8}.",
-      "en": "For membership, compare the proposed number directly with the roster of set A. Write the belongs-to symbol only if that exact number is listed.",
-      "ta": "உறுப்புரிமைக்கு கொடுக்கப்பட்ட எண்ணை A கணத்தின் பட்டியலுடன் நேரடியாக ஒப்பிடவும். அதே எண் இருந்தால்தான் உறுப்பு குறியை எழுதவும்.",
+      "en": "The symbol ∈ asks whether one specific element is listed in the stated set. Compare that candidate with each listed member; the order of the list does not matter.",
+      "ta": "∈ குறி ஒரு குறிப்பிட்ட உறுப்பு கொடுக்கப்பட்ட கணத்தில் உள்ளதா என்று கேட்கிறது. பட்டியலில் அந்த மதிப்பு உள்ளதா என்பதைச் சரிபார்க்கவும்; உறுப்புகளின் வரிசை முக்கியமல்ல.",
       "concept": "membership"
     },
     "g9-ch1-ex1.1-q3-b-ii": {
       "step": 0,
       "expected": "Inspect the given set C = {12, 14, 18, 20}.",
-      "en": "A roster set contains exactly the elements shown between its braces. Do not infer extra numbers just because they follow the same pattern.",
-      "ta": "பட்டியல் கணத்தில் அடைப்புக்குறிக்குள் காட்டப்பட்ட உறுப்புகள் மட்டுமே இருக்கும். ஒரே முறை தொடர்வதுபோலத் தோன்றினாலும் கூடுதல் எண்களைச் சேர்க்க வேண்டாம்.",
+      "en": "The symbol ∈ asks whether one specific element is listed in the stated set. Compare that candidate with each listed member; the order of the list does not matter.",
+      "ta": "∈ குறி ஒரு குறிப்பிட்ட உறுப்பு கொடுக்கப்பட்ட கணத்தில் உள்ளதா என்று கேட்கிறது. பட்டியலில் அந்த மதிப்பு உள்ளதா என்பதைச் சரிபார்க்கவும்; உறுப்புகளின் வரிசை முக்கியமல்ல.",
       "concept": "membership"
     },
     "g9-ch1-ex1.1-q3-b-iii": {
       "step": 0,
       "expected": "Inspect the given set B = {2, 4, 6, 10}.",
-      "en": "The symbol for belongs-to checks one number, not a whole range. Compare the candidate to every member of B and decide whether it is present.",
-      "ta": "உறுப்பு குறி ஒரு எண்ணின் உறுப்புரிமையைத்தான் சோதிக்கும். கொடுக்கப்பட்ட எண்ணை B இன் உறுப்புகளுடன் ஒப்பிட்டு உள்ளதா எனத் தீர்மானிக்கவும்.",
+      "en": "The symbol ∈ asks whether one specific element is listed in the stated set. Compare that candidate with each listed member; the order of the list does not matter.",
+      "ta": "∈ குறி ஒரு குறிப்பிட்ட உறுப்பு கொடுக்கப்பட்ட கணத்தில் உள்ளதா என்று கேட்கிறது. பட்டியலில் அந்த மதிப்பு உள்ளதா என்பதைச் சரிபார்க்கவும்; உறுப்புகளின் வரிசை முக்கியமல்ல.",
       "concept": "membership"
     },
     "g9-ch1-ex1.1-q3-b-iv": {
       "step": 0,
       "expected": "Inspect the given set B = {2, 4, 6, 10}.",
-      "en": "The not-an-element symbol is justified only when the given object is absent from the listed set. Inspect the exact roster rather than using a pattern guess.",
-      "ta": "உறுப்பு அல்ல என்ற குறி, கொடுக்கப்பட்ட மதிப்பு கணத்தில் இல்லாதபோது மட்டுமே பொருந்தும். ஊகிக்காமல் பட்டியலைப் பார்க்கவும்.",
+      "en": "The symbol ∈ asks whether one specific element is listed in the stated set. Compare that candidate with each listed member; the order of the list does not matter.",
+      "ta": "∈ குறி ஒரு குறிப்பிட்ட உறுப்பு கொடுக்கப்பட்ட கணத்தில் உள்ளதா என்று கேட்கிறது. பட்டியலில் அந்த மதிப்பு உள்ளதா என்பதைச் சரிபார்க்கவும்; உறுப்புகளின் வரிசை முக்கியமல்ல.",
       "concept": "membership"
     },
     "g9-ch1-ex1.1-q4-i": {
@@ -2022,9 +1757,9 @@
     "g9-ch7-ex7.1-q6": {
       "step": 0,
       "expected": "Read the textbook diagram: BC=42 cm, CA=34 cm, BD=16 cm, AD=12 cm, with ∠BDA=90°",
-      "en": "Unit conversions must happen before substituting into a formula. For area, the conversion factor is squared; for volume, it is cubed.",
-      "ta": "சூத்திரத்தில் பதிலிடுமுன் அலகுகளை மாற்ற வேண்டும். பரப்பளவில் மாற்றுக் காரணி வர்க்கமாகவும் கனஅளவில் கனமாகவும் மாறும்.",
-      "concept": "conversion"
+      "en": "The picture contains a right angle at the stated point, so the opposite side is the hypotenuse of that small triangle. Use the given lengths with that right angle before applying Pythagoras.",
+      "ta": "கொடுக்கப்பட்ட புள்ளியில் செங்கோணம் இருப்பதால் அதற்கு எதிர்ப்பக்கமே அந்தச் சிறிய முக்கோணத்தின் கர்ணம். பிதாகரஸ் தேற்றத்திற்கு முன் அந்தப் பக்கங்களைக் கண்டறியவும்.",
+      "concept": "rightTriangle"
     },
     "g9-ch7-ex7.1-q7": {
       "step": 0,
@@ -2053,14 +1788,9 @@
     "g9-ch7-ex7.1-q9": {
       "step": 0,
       "expected": "Each of the four equal sides is 160/4 m.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "en": "The semiperimeter is half the full boundary length. Add all three sides first, divide by two, then use that value consistently in Heron's formula.",
+      "ta": "அரைச் சுற்றளவு என்பது முழுச் சுற்றளவின் பாதி. முதலில் மூன்று பக்கங்களையும் கூட்டி இரண்டால் வகுத்து, அந்த மதிப்பை ஹெரான் சூத்திரத்தில் பயன்படுத்தவும்.",
+      "concept": "perimeter"
     },
     "g9-ch7-ex7.1-q10": {
       "step": 0,
@@ -2077,76 +1807,51 @@
     "g9-ch7-ex7.2-q1": {
       "step": 0,
       "expected": "Use l=20,b=15,h=8 centimetres and the total surface area formula.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "en": "A cuboid has three pairs of equal rectangular faces. Total surface area counts all six; lateral surface area counts the four side faces only.",
+      "ta": "ஒரு கனசெவ்வகத்தில் சமமான செவ்வக முகங்கள் மூன்று சோடிகள் உள்ளன. மொத்தப் பரப்பில் ஆறு முகங்களும்; பக்கவாட்டுப் பரப்பில் நான்கும் சேரும்.",
+      "concept": "cuboidSurface"
     },
     "g9-ch7-ex7.2-q2": {
       "step": 0,
       "expected": "Convert all the dimensions to metres.",
-      "en": "Unit conversions must happen before substituting into a formula. For area, the conversion factor is squared; for volume, it is cubed.",
-      "ta": "சூத்திரத்தில் பதிலிடுமுன் அலகுகளை மாற்ற வேண்டும். பரப்பளவில் மாற்றுக் காரணி வர்க்கமாகவும் கனஅளவில் கனமாகவும் மாறும்.",
-      "concept": "conversion"
+      "en": "A cuboid has three pairs of equal rectangular faces. Total surface area counts all six; lateral surface area counts the four side faces only.",
+      "ta": "ஒரு கனசெவ்வகத்தில் சமமான செவ்வக முகங்கள் மூன்று சோடிகள் உள்ளன. மொத்தப் பரப்பில் ஆறு முகங்களும்; பக்கவாட்டுப் பரப்பில் நான்கும் சேரும்.",
+      "concept": "cuboidSurface"
     },
     "g9-ch7-ex7.2-q3": {
       "step": 2,
       "expected": "Add the ceiling area once.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "en": "A cuboid has three pairs of equal rectangular faces. Total surface area counts all six; lateral surface area counts the four side faces only.",
+      "ta": "ஒரு கனசெவ்வகத்தில் சமமான செவ்வக முகங்கள் மூன்று சோடிகள் உள்ளன. மொத்தப் பரப்பில் ஆறு முகங்களும்; பக்கவாட்டுப் பரப்பில் நான்கும் சேரும்.",
+      "concept": "cuboidSurface"
     },
     "g9-ch7-ex7.2-q4": {
       "step": 0,
       "expected": "For a cube of side a, calculate all six faces and four lateral faces.",
-      "en": "A cube has six equal square faces, but its lateral surface includes only four side faces. Count the correct faces before multiplying by the area of one square.",
-      "ta": "கனசதுரத்தில் ஆறு சமமான சதுர முகங்கள் உள்ளன; பக்கப்பரப்பில் நான்கு பக்க முகங்கள் மட்டுமே அடங்கும். சரியான முக எண்ணிக்கையை முதலில் எடுக்கவும்.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "en": "A cube has six equal square faces, but the lateral surface consists of only the four side faces. Decide whether the question needs four faces or all six.",
+      "ta": "ஒரு கனசதுரத்தில் ஆறு சம சதுர முகங்கள் உள்ளன. பக்கவாட்டுப் பரப்பு நான்கு பக்க முகங்களை மட்டுமே குறிக்கும்; மொத்தப் பரப்பிற்கு ஆறும் வேண்டும்.",
+      "concept": "cubeSurface"
     },
     "g9-ch7-ex7.2-q5": {
       "step": 0,
       "expected": "The total area is six congruent square faces.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "en": "A cube has six equal square faces, but the lateral surface consists of only the four side faces. Decide whether the question needs four faces or all six.",
+      "ta": "ஒரு கனசதுரத்தில் ஆறு சம சதுர முகங்கள் உள்ளன. பக்கவாட்டுப் பரப்பு நான்கு பக்க முகங்களை மட்டுமே குறிக்கும்; மொத்தப் பரப்பிற்கு ஆறும் வேண்டும்.",
+      "concept": "cubeSurface"
     },
     "g9-ch7-ex7.2-q6": {
       "step": 1,
       "expected": "Calculate painted area at a=6.5 metres.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "en": "A cube has six equal square faces, but the lateral surface consists of only the four side faces. Decide whether the question needs four faces or all six.",
+      "ta": "ஒரு கனசதுரத்தில் ஆறு சம சதுர முகங்கள் உள்ளன. பக்கவாட்டுப் பரப்பு நான்கு பக்க முகங்களை மட்டுமே குறிக்கும்; மொத்தப் பரப்பிற்கு ஆறும் வேண்டும்.",
+      "concept": "cubeSurface"
     },
     "g9-ch7-ex7.2-q7": {
       "step": 0,
       "expected": "Joining three 4 cm cubes end to end makes dimensions 12×4×4 cm.",
-      "en": "Unit conversions must happen before substituting into a formula. For area, the conversion factor is squared; for volume, it is cubed.",
-      "ta": "சூத்திரத்தில் பதிலிடுமுன் அலகுகளை மாற்ற வேண்டும். பரப்பளவில் மாற்றுக் காரணி வர்க்கமாகவும் கனஅளவில் கனமாகவும் மாறும்.",
-      "concept": "conversion"
+      "en": "A cuboid has three pairs of equal rectangular faces. Total surface area counts all six; lateral surface area counts the four side faces only.",
+      "ta": "ஒரு கனசெவ்வகத்தில் சமமான செவ்வக முகங்கள் மூன்று சோடிகள் உள்ளன. மொத்தப் பரப்பில் ஆறு முகங்களும்; பக்கவாட்டுப் பரப்பில் நான்கும் சேரும்.",
+      "concept": "cuboidSurface"
     },
     "g9-ch7-ex7.3-q1": {
       "step": 0,
@@ -2223,12 +1928,7 @@
       "expected": "Check whether the triangle is right-angled.",
       "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
       "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "concept": "triangleArea"
     },
     "g9-ch7-ex7.4-q3": {
       "step": 0,
@@ -2240,50 +1940,30 @@
     "g9-ch7-ex7.4-q4": {
       "step": 0,
       "expected": "A cube has four lateral square faces.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "en": "A cube has six equal square faces, but the lateral surface consists of only the four side faces. Decide whether the question needs four faces or all six.",
+      "ta": "ஒரு கனசதுரத்தில் ஆறு சம சதுர முகங்கள் உள்ளன. பக்கவாட்டுப் பரப்பு நான்கு பக்க முகங்களை மட்டுமே குறிக்கும்; மொத்தப் பரப்பிற்கு ஆறும் வேண்டும்.",
+      "concept": "cubeSurface"
     },
     "g9-ch7-ex7.4-q5": {
       "step": 0,
       "expected": "Divide the lateral area by four to get one face area.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "en": "A cube has six equal square faces, but the lateral surface consists of only the four side faces. Decide whether the question needs four faces or all six.",
+      "ta": "ஒரு கனசதுரத்தில் ஆறு சம சதுர முகங்கள் உள்ளன. பக்கவாட்டுப் பரப்பு நான்கு பக்க முகங்களை மட்டுமே குறிக்கும்; மொத்தப் பரப்பிற்கு ஆறும் வேண்டும்.",
+      "concept": "cubeSurface"
     },
     "g9-ch7-ex7.4-q6": {
       "step": 0,
       "expected": "Use total surface area of a cuboid.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "en": "A cuboid has three pairs of equal rectangular faces. Total surface area counts all six; lateral surface area counts the four side faces only.",
+      "ta": "ஒரு கனசெவ்வகத்தில் சமமான செவ்வக முகங்கள் மூன்று சோடிகள் உள்ளன. மொத்தப் பரப்பில் ஆறு முகங்களும்; பக்கவாட்டுப் பரப்பில் நான்கும் சேரும்.",
+      "concept": "cuboidSurface"
     },
     "g9-ch7-ex7.4-q7": {
       "step": 0,
       "expected": "Cube surface area is proportional to the square of side length.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
-      "diagram": {
-        "type": "triangle",
-        "generic": true,
-        "mode": "altitude"
-      }
+      "en": "A cube has six equal square faces, but the lateral surface consists of only the four side faces. Decide whether the question needs four faces or all six.",
+      "ta": "ஒரு கனசதுரத்தில் ஆறு சம சதுர முகங்கள் உள்ளன. பக்கவாட்டுப் பரப்பு நான்கு பக்க முகங்களை மட்டுமே குறிக்கும்; மொத்தப் பரப்பிற்கு ஆறும் வேண்டும்.",
+      "concept": "cubeSurface"
     },
     "g9-ch7-ex7.4-q8": {
       "step": 0,
@@ -2372,9 +2052,9 @@
     "g9-ch8-ex8.2-q2": {
       "step": 1,
       "expected": "For an even count of ten, take the mean of the fifth and sixth values.",
-      "en": "The arithmetic mean is the total of all observations divided by how many observations there are. Repeated values count each time they appear.",
-      "ta": "கூட்டுச் சராசரி என்பது எல்லா மதிப்புகளின் கூட்டலை தரவுகளின் எண்ணிக்கையால் வகுத்ததாகும். மீண்டும் வரும் மதிப்புகளையும் ஒவ்வொரு முறையும் எண்ண வேண்டும்.",
-      "concept": "mean"
+      "en": "First order the observations and find the middle position. For an even number of observations, take the average of the two central values.",
+      "ta": "முதலில் தரவுகளை வரிசைப்படுத்தி நடுப்புள்ளியைக் கண்டறியவும். தரவுகளின் எண்ணிக்கை இரட்டையெனில் நடுவிலுள்ள இரு மதிப்புகளின் சராசரி இடைநிலை.",
+      "concept": "median"
     },
     "g9-ch8-ex8.2-q3": {
       "step": 1,
@@ -2414,9 +2094,9 @@
     "g9-ch8-ex8.3-q2": {
       "step": 1,
       "expected": "Identify the largest frequency.",
-      "en": "A frequency shows how many observations fall in a group. Count each group according to its frequency rather than treating every row as one observation.",
-      "ta": "ஒரு வகுப்பில் எத்தனை தரவுகள் உள்ளன என்பதை நிகழ்வெண் காட்டுகிறது. ஒவ்வொரு வரியையும் ஒரு தரவாக எடுத்துக்கொள்ளாமல் நிகழ்வெண்ணைப் பயன்படுத்தவும்.",
-      "concept": "grouped"
+      "en": "The mode is the observation—or class interval—with the greatest frequency. Compare frequencies, not the numerical sizes of the labels.",
+      "ta": "அதிக நிகழ்வெண் கொண்ட மதிப்பு அல்லது வகுப்பு இடைவெளியே முகடு. மதிப்புகளின் பெரிய அளவை அல்ல, நிகழ்வெண்களை ஒப்பிடவும்.",
+      "concept": "mode"
     },
     "g9-ch8-ex8.3-q3": {
       "step": 0,
@@ -2428,23 +2108,23 @@
     "g9-ch8-ex8.3-q4": {
       "step": 1,
       "expected": "Find the maximum frequency.",
-      "en": "A frequency shows how many observations fall in a group. Count each group according to its frequency rather than treating every row as one observation.",
-      "ta": "ஒரு வகுப்பில் எத்தனை தரவுகள் உள்ளன என்பதை நிகழ்வெண் காட்டுகிறது. ஒவ்வொரு வரியையும் ஒரு தரவாக எடுத்துக்கொள்ளாமல் நிகழ்வெண்ணைப் பயன்படுத்தவும்.",
-      "concept": "grouped"
+      "en": "The mode is the observation—or class interval—with the greatest frequency. Compare frequencies, not the numerical sizes of the labels.",
+      "ta": "அதிக நிகழ்வெண் கொண்ட மதிப்பு அல்லது வகுப்பு இடைவெளியே முகடு. மதிப்புகளின் பெரிய அளவை அல்ல, நிகழ்வெண்களை ஒப்பிடவும்.",
+      "concept": "mode"
     },
     "g9-ch8-ex8.3-q5": {
       "step": 0,
       "expected": "The largest frequency 46 occurs in class 20–30.",
-      "en": "A frequency shows how many observations fall in a group. Count each group according to its frequency rather than treating every row as one observation.",
-      "ta": "ஒரு வகுப்பில் எத்தனை தரவுகள் உள்ளன என்பதை நிகழ்வெண் காட்டுகிறது. ஒவ்வொரு வரியையும் ஒரு தரவாக எடுத்துக்கொள்ளாமல் நிகழ்வெண்ணைப் பயன்படுத்தவும்.",
-      "concept": "grouped"
+      "en": "The mode is the observation—or class interval—with the greatest frequency. Compare frequencies, not the numerical sizes of the labels.",
+      "ta": "அதிக நிகழ்வெண் கொண்ட மதிப்பு அல்லது வகுப்பு இடைவெளியே முகடு. மதிப்புகளின் பெரிய அளவை அல்ல, நிகழ்வெண்களை ஒப்பிடவும்.",
+      "concept": "mode"
     },
     "g9-ch8-ex8.3-q6": {
       "step": 0,
       "expected": "The modal class is 55–64 with the highest frequency 14.",
-      "en": "A frequency shows how many observations fall in a group. Count each group according to its frequency rather than treating every row as one observation.",
-      "ta": "ஒரு வகுப்பில் எத்தனை தரவுகள் உள்ளன என்பதை நிகழ்வெண் காட்டுகிறது. ஒவ்வொரு வரியையும் ஒரு தரவாக எடுத்துக்கொள்ளாமல் நிகழ்வெண்ணைப் பயன்படுத்தவும்.",
-      "concept": "grouped"
+      "en": "The mode is the observation—or class interval—with the greatest frequency. Compare frequencies, not the numerical sizes of the labels.",
+      "ta": "அதிக நிகழ்வெண் கொண்ட மதிப்பு அல்லது வகுப்பு இடைவெளியே முகடு. மதிப்புகளின் பெரிய அளவை அல்ல, நிகழ்வெண்களை ஒப்பிடவும்.",
+      "concept": "mode"
     },
     "g9-ch8-ex8.4-q1": {
       "step": 0,
