@@ -25,7 +25,7 @@
           "latex": "n(A)=5,\\qquad n(B)=5"
         },
         {
-          "why": "Their elements differ, so they are not equal; equal cardinality makes them equivalent.",
+          "why": "The sets have five members each, but their members are different; equal size means equivalent, not equal.",
           "latex": "A\\ne B,\\quad n(A)=n(B)=5"
         }
       ]
@@ -47,6 +47,10 @@
         {
           "why": "The two sets have different numbers of elements, so they are neither equal nor equivalent.",
           "latex": "n(C)=4,\\qquad n(D)=3"
+        },
+        {
+          "why": "Because their members and their numbers of elements differ, the correct classification is unequal sets (and not equivalent sets).",
+          "latex": "C\\ne D,\\qquad n(C)\\ne n(D)"
         }
       ]
     },
@@ -87,6 +91,10 @@
         {
           "why": "Both sets contain six elements, although their members differ.",
           "latex": "n(G)=n(H)=6,\\qquad G\\ne H"
+        },
+        {
+          "why": "Equivalent sets need the same number of elements, not the same elements. Therefore G and H are equivalent but not equal.",
+          "latex": "n(G)=n(H)\\implies G\\text{ and }H\\text{ are equivalent}"
         }
       ]
     }
