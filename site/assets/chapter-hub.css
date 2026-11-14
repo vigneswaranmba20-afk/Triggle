@@ -458,3 +458,56 @@
     font-size:12px;padding:9px 6px;
   }
 }
+
+/* Grade 9 Living Concepts — single adaptive lesson dock.
+   A bottom-sticky element stays in the viewport while the student reads,
+   then occupies its normal place at the natural end of the lesson.
+   No duplicated navigation and no scroll listeners. */
+@media(max-width:800px){
+  .chapter-hub .sp2-journey[data-view="lesson"] .sp2-detail-view{
+    overflow:visible;min-width:0
+  }
+  .chapter-hub .sp2-journey[data-view="lesson"] .sp2-panel{
+    padding-bottom:clamp(12px,3vh,24px)!important
+  }
+  .chapter-hub .sp2-journey[data-view="lesson"] [data-adaptive-dock]{
+    position:sticky;bottom:0;z-index:25;
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.18fr);
+    align-items:stretch;gap:10px;
+    margin:10px -10px 0;
+    padding:9px max(10px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));
+    border-top:1px solid #e4deec;
+    background:rgba(255,255,255,.97);
+    box-shadow:0 -5px 18px rgba(43,32,68,.065);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px)
+  }
+  .chapter-hub .sp2-journey [data-adaptive-dock] button{
+    width:100%;min-width:0;min-height:50px;margin:0;
+    padding:10px 9px;border-radius:12px;
+    font-size:clamp(11px,3.25vw,14px);
+    line-height:1.35;white-space:normal;
+    overflow-wrap:break-word
+  }
+  .chapter-hub .sp2-journey [data-adaptive-dock] .sp2-footer-prev:disabled{
+    opacity:.48;cursor:default
+  }
+  .chapter-hub .sp2-journey [data-adaptive-dock] button:focus-visible{
+    outline:3px solid #8066c4;outline-offset:2px
+  }
+  html:has(.chapter-hub .sp2-journey[data-view="lesson"]){
+    scroll-padding-bottom:110px
+  }
+  .chapter-hub .sp2-journey[data-view="lesson"] :is(button,input,summary,[tabindex]):focus{
+    scroll-margin-bottom:110px
+  }
+}
+@media(max-width:355px){
+  .chapter-hub .sp2-journey[data-view="lesson"] [data-adaptive-dock]{gap:6px}
+  .chapter-hub .sp2-journey [data-adaptive-dock] button{padding:8px 6px}
+}
+@media(prefers-reduced-transparency:reduce){
+  .chapter-hub .sp2-journey [data-adaptive-dock]{
+    background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none
+  }
+}
