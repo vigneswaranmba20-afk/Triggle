@@ -1,0 +1,821 @@
+{
+  "version": 1,
+  "grade": 9,
+  "chapter": "1",
+  "exercise": "1.2",
+  "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
+  "stage": "CANDIDATE_NOT_REGISTERED",
+  "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+  "sourcePages": {
+    "printed": [
+      11,
+      12
+    ],
+    "pdf": [
+      17,
+      18
+    ]
+  },
+  "englishTextbookParts": 34,
+  "questions": 10,
+  "englishOnly": true,
+  "teacherReview": "deferred",
+  "tamilEditorialReview": "deferred",
+  "draftIdPolicy": "Preserve main IDs. No bulk integration until CI, typography, why-step and status projection are regenerated.",
+  "rows": [
+    {
+      "id": "g9-ch1-ex1.2-q1-i",
+      "question": "1",
+      "part": "i",
+      "stem": "Find the cardinal number of the following sets.",
+      "sourceEnglish": "M = {p, q, r, s, t, u}",
+      "answer": "n(M) = 6",
+      "steps": [
+        {
+          "reason": "The cardinal number counts the distinct elements of a set.",
+          "equation": "M = {p, q, r, s, t, u}"
+        },
+        {
+          "reason": "List the elements once; none is repeated.",
+          "equation": "p, q, r, s, t, u"
+        },
+        {
+          "reason": "There are six elements, so the cardinal number is six.",
+          "equation": "n(M) = 6"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-ii",
+      "question": "1",
+      "part": "ii",
+      "stem": "Find the cardinal number of the following sets.",
+      "sourceEnglish": "P = {x : x = 3n+2, n∈W and x< 15}",
+      "answer": "n(P) = 5",
+      "steps": [
+        {
+          "reason": "Whole numbers start at zero; use x=3n+2 and the upper limit.",
+          "equation": "3n+2<15 ⇒ 3n<13"
+        },
+        {
+          "reason": "The allowed whole numbers are 0 through 4.",
+          "equation": "n = 0, 1, 2, 3, 4"
+        },
+        {
+          "reason": "Substitute these five values and count the distinct results.",
+          "equation": "P = {2, 5, 8, 11, 14}; n(P) = 5"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-iii",
+      "question": "1",
+      "part": "iii",
+      "stem": "Find the cardinal number of the following sets.",
+      "sourceEnglish": "Q = {y : y = 4/(3n), n∈N and 2 < n ≤ 5}",
+      "answer": "n(Q) = 3",
+      "steps": [
+        {
+          "reason": "The printed expression is four divided by the whole product 3n, not (4/3)n.",
+          "equation": "y = [[4|3n]]"
+        },
+        {
+          "reason": "Natural numbers strictly above 2 and at most 5 are 3, 4, and 5.",
+          "equation": "n = 3, 4, 5"
+        },
+        {
+          "reason": "Evaluate one fraction for each n and count the different values.",
+          "equation": "Q = {[[4|9]], [[1|3]], [[4|15]]}; n(Q) = 3"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-iv",
+      "question": "1",
+      "part": "iv",
+      "stem": "Find the cardinal number of the following sets.",
+      "sourceEnglish": "R = {x : x is an integer, x∈Z and −5 ≤ x < 5}",
+      "answer": "n(R) = 10",
+      "steps": [
+        {
+          "reason": "The lower endpoint −5 is included, but the upper endpoint 5 is excluded.",
+          "equation": "−5 ≤ x < 5"
+        },
+        {
+          "reason": "Write every integer in this interval.",
+          "equation": "R = {−5, −4, −3, −2, −1, 0, 1, 2, 3, 4}"
+        },
+        {
+          "reason": "Count from −5 through 4, inclusive.",
+          "equation": "n(R) = 4 − (−5) + 1 = 10"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-v",
+      "question": "1",
+      "part": "v",
+      "stem": "Find the cardinal number of the following sets.",
+      "sourceEnglish": "S = The set of all leap years between 1882 and 1906.",
+      "answer": "n(S) = 5",
+      "steps": [
+        {
+          "reason": "Check multiples of four between the stated years.",
+          "equation": "1884, 1888, 1892, 1896, 1900, 1904"
+        },
+        {
+          "reason": "A century year is a leap year only when divisible by 400. Exclude 1900.",
+          "equation": "1900 ÷ 400 is not an integer"
+        },
+        {
+          "reason": "Keep the five actual leap years and count them.",
+          "equation": "S = {1884, 1888, 1892, 1896, 1904}; n(S) = 5"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-i",
+      "question": "2",
+      "part": "i",
+      "stem": "Identify the following sets as finite or infinite.",
+      "sourceEnglish": "X = The set of all districts in Tamilnadu.",
+      "answer": "Finite",
+      "steps": [
+        {
+          "reason": "A finite set has a limited number of members.",
+          "equation": "X = {districts in Tamil Nadu}"
+        },
+        {
+          "reason": "At any fixed time, a state has a finite list of districts; the list can change.",
+          "equation": "n(X) is finite"
+        },
+        {
+          "reason": "Hence X is a finite set.",
+          "equation": "X: finite"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-ii",
+      "question": "2",
+      "part": "ii",
+      "stem": "Identify the following sets as finite or infinite.",
+      "sourceEnglish": "Y = The set of all straight lines passing through a point.",
+      "answer": "Infinite",
+      "steps": [
+        {
+          "reason": "Fix one point in a plane.",
+          "equation": "P = a fixed point"
+        },
+        {
+          "reason": "Each different direction gives another straight line through P.",
+          "equation": "The number of possible directions is infinite"
+        },
+        {
+          "reason": "There is no limit to the number of distinct lines through P.",
+          "equation": "Y: infinite"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-iii",
+      "question": "2",
+      "part": "iii",
+      "stem": "Identify the following sets as finite or infinite.",
+      "sourceEnglish": "A = {x : x∈Z and x < 5}",
+      "answer": "Infinite",
+      "steps": [
+        {
+          "reason": "The condition includes every integer smaller than five.",
+          "equation": "x = 4, 3, 2, 1, 0, −1, −2, …"
+        },
+        {
+          "reason": "There is no smallest negative integer; the list continues without end.",
+          "equation": "…, −3, −2, −1 < 5"
+        },
+        {
+          "reason": "Therefore the set has infinitely many elements.",
+          "equation": "A: infinite"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-iv",
+      "question": "2",
+      "part": "iv",
+      "stem": "Identify the following sets as finite or infinite.",
+      "sourceEnglish": "B = {x : x²−5x+6 = 0, x∈N}",
+      "answer": "Finite",
+      "steps": [
+        {
+          "reason": "Factor the quadratic expression.",
+          "equation": "x²−5x+6 = (x−2)(x−3)"
+        },
+        {
+          "reason": "A product is zero when one factor is zero.",
+          "equation": "x = 2 or x = 3"
+        },
+        {
+          "reason": "Both roots are natural numbers, and there are no others.",
+          "equation": "B = {2, 3}; n(B) = 2; finite"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-i",
+      "question": "3",
+      "part": "i",
+      "stem": "Which of the following sets are equivalent or unequal or equal sets?",
+      "sourceEnglish": "A = The set of vowels in the English alphabets. B = The set of all letters in the word “VOWEL”.",
+      "answer": "Equivalent sets",
+      "steps": [
+        {
+          "reason": "List the distinct letters in each set.",
+          "equation": "A = {a, e, i, o, u}; B = {V, O, W, E, L}"
+        },
+        {
+          "reason": "Each set has five elements, but the members differ.",
+          "equation": "n(A) = n(B) = 5; A ≠ B"
+        },
+        {
+          "reason": "Same number of members means the sets are equivalent.",
+          "equation": "A and B: equivalent"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-ii",
+      "question": "3",
+      "part": "ii",
+      "stem": "Which of the following sets are equivalent or unequal or equal sets?",
+      "sourceEnglish": "C = {2,3,4,5} D = {x : x∈W, 1 < x < 5}",
+      "answer": "Unequal sets",
+      "steps": [
+        {
+          "reason": "List the whole numbers strictly between 1 and 5.",
+          "equation": "D = {2, 3, 4}"
+        },
+        {
+          "reason": "Compare D with the given set C.",
+          "equation": "C = {2, 3, 4, 5}"
+        },
+        {
+          "reason": "The element 5 is in C but not in D.",
+          "equation": "C ≠ D; unequal sets"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-iii",
+      "question": "3",
+      "part": "iii",
+      "stem": "Which of the following sets are equivalent or unequal or equal sets?",
+      "sourceEnglish": "X = {x : x is a letter in the word “LIFE”} Y = {F, I, L, E}",
+      "answer": "Equal sets",
+      "steps": [
+        {
+          "reason": "Write the distinct letters appearing in LIFE.",
+          "equation": "X = {L, I, F, E}"
+        },
+        {
+          "reason": "Compare those members with Y; order does not matter in a set.",
+          "equation": "Y = {F, I, L, E}"
+        },
+        {
+          "reason": "Both sets contain exactly the same four elements.",
+          "equation": "X = Y; equal sets"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-iv",
+      "question": "3",
+      "part": "iv",
+      "stem": "Which of the following sets are equivalent or unequal or equal sets?",
+      "sourceEnglish": "G = {x : x is a prime number and 3 < x < 23} H = {x : x is a divisor of 18}",
+      "answer": "Equivalent sets",
+      "steps": [
+        {
+          "reason": "List the primes strictly between 3 and 23.",
+          "equation": "G = {5, 7, 11, 13, 17, 19}"
+        },
+        {
+          "reason": "List the positive divisors of 18.",
+          "equation": "H = {1, 2, 3, 6, 9, 18}"
+        },
+        {
+          "reason": "Both sets contain six distinct members, but different values.",
+          "equation": "n(G) = n(H) = 6; equivalent sets"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-i",
+      "question": "4",
+      "part": "i",
+      "stem": "Identify the following sets as null set or singleton set.",
+      "sourceEnglish": "A = {x : x∈N, 1 < x < 2}",
+      "answer": "Null set",
+      "steps": [
+        {
+          "reason": "There is no natural number strictly between consecutive integers 1 and 2.",
+          "equation": "1 < x < 2"
+        },
+        {
+          "reason": "So the membership condition has no solution.",
+          "equation": "A = ∅"
+        },
+        {
+          "reason": "A set without elements is called the null or empty set.",
+          "equation": "A: null set"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-ii",
+      "question": "4",
+      "part": "ii",
+      "stem": "Identify the following sets as null set or singleton set.",
+      "sourceEnglish": "B = The set of all even natural numbers which are not divisible by 2",
+      "answer": "Null set",
+      "steps": [
+        {
+          "reason": "Every even natural number is divisible by two by definition.",
+          "equation": "even ⇒ divisible by 2"
+        },
+        {
+          "reason": "The question requires an even number that is not divisible by two.",
+          "equation": "No number satisfies both conditions"
+        },
+        {
+          "reason": "Thus B has no members.",
+          "equation": "B = ∅; null set"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-iii",
+      "question": "4",
+      "part": "iii",
+      "stem": "Identify the following sets as null set or singleton set.",
+      "sourceEnglish": "C = {0}",
+      "answer": "Singleton set",
+      "steps": [
+        {
+          "reason": "The curly brackets contain the number zero as one element.",
+          "equation": "C = {0}"
+        },
+        {
+          "reason": "This is not the empty set: it contains one element.",
+          "equation": "n(C) = 1"
+        },
+        {
+          "reason": "A one-element set is a singleton.",
+          "equation": "C: singleton set"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-iv",
+      "question": "4",
+      "part": "iv",
+      "stem": "Identify the following sets as null set or singleton set.",
+      "sourceEnglish": "D = The set of all triangles having four sides.",
+      "answer": "Null set",
+      "steps": [
+        {
+          "reason": "By definition, every triangle has exactly three sides.",
+          "equation": "triangle: 3 sides"
+        },
+        {
+          "reason": "No triangle has four sides.",
+          "equation": "D = ∅"
+        },
+        {
+          "reason": "Therefore D is the null set.",
+          "equation": "D: null set"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q5-i",
+      "question": "5",
+      "part": "i",
+      "stem": "State which pairs of sets are disjoint or overlapping?",
+      "sourceEnglish": "A = {f, i, a, s} and B = {a, n, f, h, s}",
+      "answer": "Overlapping",
+      "steps": [
+        {
+          "reason": "Find the letters appearing in both sets.",
+          "equation": "A = {f, i, a, s}; B = {a, n, f, h, s}"
+        },
+        {
+          "reason": "Their common elements are a, f, and s.",
+          "equation": "A∩B = {a, f, s}"
+        },
+        {
+          "reason": "The intersection is nonempty, so the sets overlap.",
+          "equation": "A and B: overlapping"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q5-ii",
+      "question": "5",
+      "part": "ii",
+      "stem": "State which pairs of sets are disjoint or overlapping?",
+      "sourceEnglish": "C = {x : x is a prime number, x > 2} and D = {x : x is an even prime number}",
+      "answer": "Disjoint",
+      "steps": [
+        {
+          "reason": "The only even prime number is two.",
+          "equation": "D = {2}"
+        },
+        {
+          "reason": "C contains only prime numbers greater than 2, so it excludes 2.",
+          "equation": "2 ∉ C"
+        },
+        {
+          "reason": "There is no common element.",
+          "equation": "C∩D = ∅; disjoint"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q5-iii",
+      "question": "5",
+      "part": "iii",
+      "stem": "State which pairs of sets are disjoint or overlapping?",
+      "sourceEnglish": "E = {x : x is a factor of 24} and F = {x : x is a multiple of 3, x < 30}",
+      "answer": "Overlapping",
+      "steps": [
+        {
+          "reason": "List the positive factors of 24.",
+          "equation": "E = {1, 2, 3, 4, 6, 8, 12, 24}"
+        },
+        {
+          "reason": "List the positive multiples of 3 below 30.",
+          "equation": "F = {3, 6, 9, 12, 15, 18, 21, 24, 27}"
+        },
+        {
+          "reason": "The sets share 3, 6, 12, and 24.",
+          "equation": "E∩F = {3, 6, 12, 24}; overlapping"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-i",
+      "question": "6",
+      "part": "i",
+      "stem": "If S = {square, rectangle, circle, rhombus, triangle}, list the elements of the following subset of S.",
+      "sourceEnglish": "The set of shapes which have 4 equal sides.",
+      "answer": "{square, rhombus}",
+      "steps": [
+        {
+          "reason": "Look for figures with four sides of equal length.",
+          "equation": "square: 4 equal sides; rhombus: 4 equal sides"
+        },
+        {
+          "reason": "A general rectangle does not necessarily have four equal sides.",
+          "equation": "rectangle: opposite sides equal"
+        },
+        {
+          "reason": "Choose the square and rhombus from S.",
+          "equation": "{square, rhombus}"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-ii",
+      "question": "6",
+      "part": "ii",
+      "stem": "If S = {square, rectangle, circle, rhombus, triangle}, list the elements of the following subset of S.",
+      "sourceEnglish": "The set of shapes which have radius.",
+      "answer": "{circle}",
+      "steps": [
+        {
+          "reason": "Radius is the distance from the centre of a circle to its boundary.",
+          "equation": "r = distance from centre to circle"
+        },
+        {
+          "reason": "Among the shapes listed in S, the circle is the one identified by a radius.",
+          "equation": "S = {square, rectangle, circle, rhombus, triangle}"
+        },
+        {
+          "reason": "The requested subset contains one element.",
+          "equation": "{circle}"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-iii",
+      "question": "6",
+      "part": "iii",
+      "stem": "If S = {square, rectangle, circle, rhombus, triangle}, list the elements of the following subset of S.",
+      "sourceEnglish": "The set of shapes in which the sum of all interior angles is 180°. ",
+      "answer": "{triangle}",
+      "steps": [
+        {
+          "reason": "A triangle has three interior angles that total 180 degrees.",
+          "equation": "∠A+∠B+∠C=180°"
+        },
+        {
+          "reason": "Quadrilaterals in S have an interior-angle sum of 360 degrees.",
+          "equation": "square, rectangle, rhombus: 360°"
+        },
+        {
+          "reason": "Only a triangle has the requested total.",
+          "equation": "{triangle}"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-iv",
+      "question": "6",
+      "part": "iv",
+      "stem": "If S = {square, rectangle, circle, rhombus, triangle}, list the elements of the following subset of S.",
+      "sourceEnglish": "The set of shapes which have 5 sides.",
+      "answer": "∅",
+      "steps": [
+        {
+          "reason": "A five-sided polygon is called a pentagon.",
+          "equation": "pentagon: 5 sides"
+        },
+        {
+          "reason": "S contains a circle, triangle, and three four-sided shapes, not a pentagon.",
+          "equation": "S = {square, rectangle, circle, rhombus, triangle}"
+        },
+        {
+          "reason": "No listed element qualifies.",
+          "equation": "∅"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q7",
+      "question": "7",
+      "part": "whole",
+      "stem": "If A = {a, {a, b}}, write all the subsets of A.",
+      "sourceEnglish": "A = {a, {a, b}}",
+      "answer": "∅, {a}, {{a, b}}, {a, {a, b}}",
+      "steps": [
+        {
+          "reason": "The outer set A has two elements: a and the inner set {a,b}.",
+          "equation": "A = {a, {a,b}}; n(A)=2"
+        },
+        {
+          "reason": "A two-element set has four subsets.",
+          "equation": "n[P(A)] = 2² = 4"
+        },
+        {
+          "reason": "List the empty set, both singleton subsets and A itself.",
+          "equation": "P(A) = {∅, {a}, {{a,b}}, {a,{a,b}}}"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q8-i",
+      "question": "8",
+      "part": "i",
+      "stem": "Write down the power set of the following sets:",
+      "sourceEnglish": "A = {a, b}",
+      "answer": "P(A) = {∅, {a}, {b}, {a, b}}",
+      "steps": [
+        {
+          "reason": "A contains two distinct elements.",
+          "equation": "n(A) = 2"
+        },
+        {
+          "reason": "Choose no elements, each singleton, or both.",
+          "equation": "∅; {a}; {b}; {a,b}"
+        },
+        {
+          "reason": "Write these four subsets together as a power set.",
+          "equation": "P(A) = {∅, {a}, {b}, {a,b}}"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q8-ii",
+      "question": "8",
+      "part": "ii",
+      "stem": "Write down the power set of the following sets:",
+      "sourceEnglish": "B = {1, 2, 3}",
+      "answer": "P(B) = {∅, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}, {1,2,3}}",
+      "steps": [
+        {
+          "reason": "Three distinct members have two choices each: include or omit.",
+          "equation": "2³ = 8 subsets"
+        },
+        {
+          "reason": "Group the subsets by size zero, one, two and three.",
+          "equation": "1 + 3 + 3 + 1 = 8"
+        },
+        {
+          "reason": "List all eight subsets without repetition.",
+          "equation": "P(B) = {∅, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}, {1,2,3}}"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q8-iii",
+      "question": "8",
+      "part": "iii",
+      "stem": "Write down the power set of the following sets:",
+      "sourceEnglish": "D = {p, q, r, s}",
+      "answer": "P(D) has 16 subsets",
+      "steps": [
+        {
+          "reason": "Four distinct members give 2^4 subsets.",
+          "equation": "n[P(D)] = 2⁴ = 16"
+        },
+        {
+          "reason": "Take all subsets with zero or one element.",
+          "equation": "∅; {p}; {q}; {r}; {s}"
+        },
+        {
+          "reason": "Add the six two-element subsets.",
+          "equation": "{p,q}; {p,r}; {p,s}; {q,r}; {q,s}; {r,s}"
+        },
+        {
+          "reason": "Add the four triples and the full set.",
+          "equation": "{p,q,r}; {p,q,s}; {p,r,s}; {q,r,s}; {p,q,r,s}"
+        },
+        {
+          "reason": "The complete power set is precisely the sixteen subsets listed above.",
+          "equation": "1 + 4 + 6 + 4 + 1 = 16"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q8-iv",
+      "question": "8",
+      "part": "iv",
+      "stem": "Write down the power set of the following sets:",
+      "sourceEnglish": "E = ∅",
+      "answer": "P(E) = {∅}",
+      "steps": [
+        {
+          "reason": "The set E has no elements.",
+          "equation": "E = ∅"
+        },
+        {
+          "reason": "Every set has the empty set as a subset, including E itself.",
+          "equation": "∅ ⊆ ∅"
+        },
+        {
+          "reason": "There is no other subset of an empty set.",
+          "equation": "P(E) = {∅}; n[P(E)] = 1"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q9-i",
+      "question": "9",
+      "part": "i",
+      "stem": "Find the number of subsets and the number of proper subsets of the following sets.",
+      "sourceEnglish": "W = {red, blue, yellow}",
+      "answer": "8 subsets; 7 proper subsets",
+      "steps": [
+        {
+          "reason": "The set has three distinct colours.",
+          "equation": "n(W) = 3"
+        },
+        {
+          "reason": "Each element can be included or excluded from a subset.",
+          "equation": "Number of subsets = 2³ = 8"
+        },
+        {
+          "reason": "Exclude W itself when counting proper subsets.",
+          "equation": "Proper subsets = 2³ − 1 = 7"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q9-ii",
+      "question": "9",
+      "part": "ii",
+      "stem": "Find the number of subsets and the number of proper subsets of the following sets.",
+      "sourceEnglish": "X = {x² : x∈N, x² ≤ 100}",
+      "answer": "1024 subsets; 1023 proper subsets",
+      "steps": [
+        {
+          "reason": "The allowed natural numbers are 1 through 10.",
+          "equation": "x = 1, 2, …, 10"
+        },
+        {
+          "reason": "Their squares are ten distinct elements of X.",
+          "equation": "X = {1, 4, 9, 16, 25, 36, 49, 64, 81, 100}"
+        },
+        {
+          "reason": "Calculate all subsets using 2 raised to the cardinal number.",
+          "equation": "2¹⁰ = 1024 subsets"
+        },
+        {
+          "reason": "Exclude X itself for proper subsets.",
+          "equation": "1024 − 1 = 1023 proper subsets"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q10-i",
+      "question": "10",
+      "part": "i",
+      "stem": "Find the requested power-set cardinality.",
+      "sourceEnglish": "If n(A) = 4, find n[P(A)].",
+      "answer": "16",
+      "steps": [
+        {
+          "reason": "An n-element set has 2^n subsets.",
+          "equation": "n[P(A)] = 2^{n(A)}"
+        },
+        {
+          "reason": "Substitute n(A)=4.",
+          "equation": "n[P(A)] = 2⁴"
+        },
+        {
+          "reason": "Evaluate.",
+          "equation": "2⁴ = 16"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q10-ii",
+      "question": "10",
+      "part": "ii",
+      "stem": "Find the requested power-set cardinality.",
+      "sourceEnglish": "If n(A) = 0, find n[P(A)].",
+      "answer": "1",
+      "steps": [
+        {
+          "reason": "Even an empty set has one subset, the empty set.",
+          "equation": "A = ∅; P(A) = {∅}"
+        },
+        {
+          "reason": "Apply the power-set cardinality rule.",
+          "equation": "n[P(A)] = 2⁰"
+        },
+        {
+          "reason": "Evaluate.",
+          "equation": "2⁰ = 1"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    },
+    {
+      "id": "g9-ch1-ex1.2-q10-iii",
+      "question": "10",
+      "part": "iii",
+      "stem": "Find the requested power-set cardinality.",
+      "sourceEnglish": "If n[P(A)] = 256, find n(A).",
+      "answer": "8",
+      "steps": [
+        {
+          "reason": "Write the power-set count as a power of two.",
+          "equation": "2^{n(A)} = 256"
+        },
+        {
+          "reason": "Recognise 256 as two to the eighth power.",
+          "equation": "256 = 2⁸"
+        },
+        {
+          "reason": "The exponents must match.",
+          "equation": "n(A) = 8"
+        }
+      ],
+      "verifiedInOriginalAudit": true
+    }
+  ]
+}
