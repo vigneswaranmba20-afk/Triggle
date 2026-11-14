@@ -33,6 +33,29 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
      assert.equal(await page.locator('[data-detail-view]').isVisible(),true);
      assert.equal(await page.locator('[data-index-view]').isVisible(),false);
      assert.equal(new URL(page.url()).searchParams.get('concept'),String(index),'Lesson deep link identifies the selected idea');
+     if(width<=430){
+       const dock=page.locator('[data-adaptive-dock]');
+       assert.equal(await dock.count(),1,'Exactly one sequential navigation dock');
+       const style=await dock.evaluate(el=>({position:getComputedStyle(el).position,buttons:[...el.querySelectorAll('button')].map(b=>b.getBoundingClientRect().height)}));
+       assert.equal(style.position,'sticky','Navigation uses native sticky positioning');
+       assert(style.buttons.every(h=>h>=48),'Navigation touch targets remain at least 48px');
+       const next=await page.locator('[data-footer-next]').innerText();
+       assert(next.includes(index===6?(lang==='en'?'Back to concepts':'கருத்துகளுக்குத் திரும்பு'):(lang==='en'?'Next idea':'அடுத்த கருத்து')),'Correct localized Next idea / index label');
+       await page.evaluate(()=>window.scrollTo(0,0));
+       const initial=await dock.boundingBox();
+       assert(initial&&initial.y>=0&&initial.y+initial.height<=852,'Navigation dock visible at top of long lesson');
+       await page.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight));
+       const ending=await dock.boundingBox();
+       assert(ending&&ending.y>=0&&ending.y+ending.height<=852,'Dock remains accessible at page end');
+       const answer=page.locator('.sp2-panel [data-answers] button').first();
+       await answer.scrollIntoViewIfNeeded();
+       const overlap=await page.evaluate(()=>{
+         const dock=document.querySelector('[data-adaptive-dock]').getBoundingClientRect();
+         const target=document.activeElement?.getBoundingClientRect();
+         return !!target&&target.bottom>dock.top&&target.top<dock.bottom;
+       });
+       assert.equal(overlap,false,'Dock must not obscure focused question controls');
+     }
      const back=await page.locator('[data-back-index]').boundingBox();
      assert(back&&back.y>=0&&back.y+back.height<=page.viewportSize().height,
        'Back to concepts must remain in the initial lesson viewport '+width+' '+lang);
