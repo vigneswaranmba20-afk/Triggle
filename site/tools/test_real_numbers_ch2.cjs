@@ -94,11 +94,11 @@ assert.match(learningCSS,/\.rnlab \.rnlab-foundation-equation/,'rendered equatio
 assert.ok(1/2 < 7/12 && 7/12 < 2/3);
 assert.equal((1/2 + 7/12)/2,13/24);
 assert.ok(1.414<Math.sqrt(2)&&Math.sqrt(2)<1.415);
-assert.equal(Math.pow(8,2/3),4);
+assert.ok(Math.abs(Math.pow(8,2/3)-4)<1e-12);
 assert.equal(Math.pow(4,-3/2),1/8);
 assert.ok(Math.abs((Math.sqrt(12)+Math.sqrt(27))-5*Math.sqrt(3))<1e-12);
 assert.ok(Math.abs(3/(Math.sqrt(7)+2)-(Math.sqrt(7)-2))<1e-12);
-assert.equal(6.4*Math.pow(10,-4),.00064);
+assert.ok(Math.abs(6.4*Math.pow(10,-4)-.00064)<1e-15);
 
 vm.runInNewContext(read('assets/diagrams.js'),sandbox,{filename:'assets/diagrams.js',timeout:5000});
 vm.runInNewContext(read('assets/real-number-line.js'),sandbox,{filename:'assets/real-number-line.js',timeout:5000});
