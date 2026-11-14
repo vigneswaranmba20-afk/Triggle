@@ -897,16 +897,16 @@
     "g9-ch2-ex6-q4-i": {
       "step": 1,
       "expected": "Compare positive radicands, then reverse into descending order.",
-      "en": "To compare fractions or decimals, express both in comparable forms first—for example with a common denominator or the same number of decimal places—then compare digits carefully.",
-      "ta": "பின்னங்கள் அல்லது தசமங்களை ஒப்பிட முதலில் ஒரே பகுதி அல்லது ஒரே தசம இடங்கள் கொண்ட வடிவத்திற்கு மாற்றி, பின்னர் இலக்கங்களை ஒப்பிடவும்.",
-      "concept": "comparison"
+      "en": "For nonnegative numbers, a larger radicand has a larger square root. Simplify roots or compare their squares before writing them in the requested order.",
+      "ta": "எதிர்மமற்ற எண்களில் மூலத்தினுள்ளான எண் அதிகமானால் அதன் வர்க்கமூலமும் அதிகமாகும். மூலங்களை எளிமைப்படுத்தியோ வர்க்கங்களை ஒப்பிட்டோ வரிசைப்படுத்தவும்.",
+      "concept": "radicalOrdering"
     },
     "g9-ch2-ex6-q4-ii": {
       "step": 0,
       "expected": "Convert each nested root to a fractional exponent.",
-      "en": "To compare fractions or decimals, express both in comparable forms first—for example with a common denominator or the same number of decimal places—then compare digits carefully.",
-      "ta": "பின்னங்கள் அல்லது தசமங்களை ஒப்பிட முதலில் ஒரே பகுதி அல்லது ஒரே தசம இடங்கள் கொண்ட வடிவத்திற்கு மாற்றி, பின்னர் இலக்கங்களை ஒப்பிடவும்.",
-      "concept": "comparison"
+      "en": "For nonnegative numbers, a larger radicand has a larger square root. Simplify roots or compare their squares before writing them in the requested order.",
+      "ta": "எதிர்மமற்ற எண்களில் மூலத்தினுள்ளான எண் அதிகமானால் அதன் வர்க்கமூலமும் அதிகமாகும். மூலங்களை எளிமைப்படுத்தியோ வர்க்கங்களை ஒப்பிட்டோ வரிசைப்படுத்தவும்.",
+      "concept": "radicalOrdering"
     },
     "g9-ch2-ex6-q5-i": {
       "step": 0,
@@ -1247,8 +1247,8 @@
     "g9-ch2-ex9-q12": {
       "step": 1,
       "expected": "√13 is irrational because 13 is not a perfect square.",
-      "en": "Irrational inputs do not guarantee an irrational result. Simplify the whole expression first: matching radicals can cancel or combine into rational numbers.",
-      "ta": "விகிதமுறா உள்ளீடுகள் இருந்தாலும் விடை விகிதமுறாததாக இருக்க வேண்டியதில்லை. ஒத்த மூல உறுப்புகள் நீங்கினால் விகிதமுறு விடை கிடைக்கலாம்.",
+      "en": "The principal square root of 13 is irrational: 13 is not a perfect square, so √13 cannot be expressed as a ratio of two integers.",
+      "ta": "13 என்பது நிறைவர்க்கம் அல்ல. ஆகவே √13-ஐ இரு முழு எண்களின் விகிதமாக எழுத முடியாது; அது விகிதமுறா எண்.",
       "concept": "irrationalRoot"
     },
     "g9-ch2-ex9-q13": {
@@ -1731,9 +1731,9 @@
     "g9-ch7-ex7.1-q3": {
       "step": 2,
       "expected": "Because 5²+12²=13², the scaled triangle is right-angled.",
-      "en": "Triangle area is half the area of a rectangle or parallelogram with the same base and perpendicular height. Use a perpendicular height, not an arbitrary slanted side.",
-      "ta": "ஒரே அடிப்பக்கமும் செங்குத்து உயரமும் கொண்ட இணைகரத்தின் பரப்பளவில் பாதியே முக்கோணத்தின் பரப்பளவு. சாய்ந்த பக்கத்தைக் உயரமாக எடுக்கக் கூடாது.",
-      "concept": "triangleArea",
+      "en": "Check that the side lengths satisfy the Pythagorean theorem before treating the triangle as right-angled. Only then can the perpendicular sides serve as base and height.",
+      "ta": "முக்கோணத்தை செங்கோண முக்கோணம் என்று கூறும்முன் அதன் பக்கங்கள் பிதாகரஸ் தேற்றத்தை நிறைவேற்றுகிறதா என்று பார்க்க வேண்டும். பின்னரே செங்குத்துப் பக்கங்களை அடி, உயரமாக எடுக்கலாம்.",
+      "concept": "pythagoras",
       "diagram": {
         "type": "triangle",
         "generic": true,
@@ -1788,8 +1788,8 @@
     "g9-ch7-ex7.1-q9": {
       "step": 0,
       "expected": "Each of the four equal sides is 160/4 m.",
-      "en": "The semiperimeter is half the full boundary length. Add all three sides first, divide by two, then use that value consistently in Heron's formula.",
-      "ta": "அரைச் சுற்றளவு என்பது முழுச் சுற்றளவின் பாதி. முதலில் மூன்று பக்கங்களையும் கூட்டி இரண்டால் வகுத்து, அந்த மதிப்பை ஹெரான் சூத்திரத்தில் பயன்படுத்தவும்.",
+      "en": "A figure with four equal sides has perimeter four times one side. Divide the given perimeter by four before using that side length in later calculations.",
+      "ta": "நான்கு சமமான பக்கங்கள் கொண்ட வடிவத்தின் சுற்றளவு ஒரு பக்கத்தின் நான்கு மடங்கு. அடுத்த கணக்கிற்கு முன் கொடுக்கப்பட்ட சுற்றளவை நான்கால் வகுக்க வேண்டும்.",
       "concept": "perimeter"
     },
     "g9-ch7-ex7.1-q10": {
@@ -1814,9 +1814,9 @@
     "g9-ch7-ex7.2-q2": {
       "step": 0,
       "expected": "Convert all the dimensions to metres.",
-      "en": "A cuboid has three pairs of equal rectangular faces. Total surface area counts all six; lateral surface area counts the four side faces only.",
-      "ta": "ஒரு கனசெவ்வகத்தில் சமமான செவ்வக முகங்கள் மூன்று சோடிகள் உள்ளன. மொத்தப் பரப்பில் ஆறு முகங்களும்; பக்கவாட்டுப் பரப்பில் நான்கும் சேரும்.",
-      "concept": "cuboidSurface"
+      "en": "Convert every dimension into the same unit before calculating surface area. If a length is multiplied by a conversion factor, the area uses its square.",
+      "ta": "புறப்பரப்பைக் காணும்முன் எல்லா நீளங்களையும் ஒரே அலகிற்கு மாற்ற வேண்டும். நீளத்தின் மாற்றுக் காரணி பரப்பளவிற்கு வர்க்கமாகும்.",
+      "concept": "conversion"
     },
     "g9-ch7-ex7.2-q3": {
       "step": 2,
