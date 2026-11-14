@@ -18,8 +18,9 @@ assert.equal(recoveryIds.length,7);
 const approvedNewIds=[...originalEight,...recoveryIds,...statisticsIds,...followupIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
-const approvedG9Ids=g9Fidelity.partIds;
-assert.equal(approvedG9Ids.length,5);
+const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
+const approvedG9Ids=[...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id)];
+assert.equal(approvedG9Ids.length,9);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),originalEight);
@@ -31,7 +32,7 @@ let count=0,reviewed=0;
 for(const [grade,data] of Object.entries(classes)){
  const baselineIds=preserved.grades[grade],currentIds=data.items.map(item=>item.id);
  assert.equal(JSON.stringify(currentIds.slice(0,baselineIds.length)),JSON.stringify(baselineIds),'Original 568 IDs/order preserved as the exact prefix');
- assert.equal(JSON.stringify(currentIds.slice(baselineIds.length)),JSON.stringify(grade==='10'?approvedNewIds:grade==='9'?approvedG9Ids:[]),'Only explicitly source-matched Grade 9 Q1 and approved Grade 10 additions allowed');
+ assert.equal(JSON.stringify(currentIds.slice(baselineIds.length)),JSON.stringify(grade==='10'?approvedNewIds:grade==='9'?approvedG9Ids:[]),'Only source-aligned Grade 9 Q1/Q2 and reviewed Grade 10 additions allowed');
  for(const item of data.items){
   const hash=crypto.createHash('sha256').update(JSON.stringify(item)).digest('hex');
   if(Object.hasOwn(preserved.sha256,item.id)){
@@ -41,14 +42,25 @@ for(const [grade,data] of Object.entries(classes)){
    const approvedG10=grade==='10'&&approvedNewIds.includes(item.id);
    assert.ok(approvedG9||approvedG10,'No unapproved question '+item.id);
    if(approvedG9){
-     const source=g9Candidates.rows.find(row=>row.id===item.id);
-     assert.ok(source,'Missing original Grade 9 audited candidate '+item.id);
-     assert.equal(item.q.en,source.question+'. '+source.stem+'\n('+source.part+') '+source.sourceEnglish);
-     assert.equal(item.answer,source.answer,'Grade 9 audited answer '+item.id);
-     assert.equal(item.steps.length,source.steps.length,'Grade 9 worked steps retained '+item.id);
-     for(let n=0;n<item.steps.length;n++){
-       assert.equal(item.steps[n].en,source.steps[n].reason);
-       assert.equal(item.steps[n].eq,source.steps[n].equation);
+     if(g9Fidelity.partIds.includes(item.id)){
+       const source=g9Candidates.rows.find(row=>row.id===item.id);
+       assert.ok(source,'Missing original Grade 9 audited Q1 candidate '+item.id);
+       assert.equal(item.q.en,source.question+'. '+source.stem+'\n('+source.part+') '+source.sourceEnglish);
+       assert.equal(item.answer,source.answer,'Grade 9 audited Q1 answer '+item.id);
+       assert.equal(item.steps.length,source.steps.length,'Grade 9 Q1 worked steps retained '+item.id);
+       for(let n=0;n<item.steps.length;n++){
+         assert.equal(item.steps[n].en,source.steps[n].reason);
+         assert.equal(item.steps[n].eq,source.steps[n].equation);
+       }
+     }else{
+       const source=g9Q2Fidelity.parts.find(p=>p.id===item.id);
+       assert.ok(source,'Missing Grade 9 Exercise 1.2 Q2 source '+item.id);
+       assert.equal(item.q.en,g9Q2Fidelity.questionStem+'\n('+source.part+') '+source.exactEnglish);
+       assert.equal(item.answer,source.expectedAnswer,'Grade 9 Q2 source checked answer '+item.id);
+       assert.ok(item.steps.length>=3,'No missing Grade 9 Q2 working '+item.id);
+       for(const step of item.steps)assert.equal(step.math?.fallback,step.eq,'Full accessible KaTeX fallbacks: '+item.id);
+       assert.equal(item.releaseStatus,'english-preview');
+       assert(!item.q.ta,'Do not invent Grade 9 Tamil questions');
      }
    }else{
      const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id);
@@ -77,7 +89,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,599);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,603);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');
@@ -90,4 +102,4 @@ for(const file of ['g12-explain-modes.js','g12-explain-modes.css','matrix-pilot.
 assert.ok(sw.includes('./data/problem-difficulty.js'));
 assert.ok(html.indexOf('data/problem-difficulty.js')<html.indexOf('assets/app.js'));
 assert.doesNotMatch(app,/localStorage\.clear|removeItem/,'Student progress is never cleared');
-console.log('PASS 568 original records and order byte-preserved, five Grade 9 Exercise 1.2 plus eight existing, seven recovered and eleven Statistics Grade 10 source-bound records, 599 explicit difficulties, 88 reviewed classifications retained, no explanation switches, offline metadata.');
+console.log('PASS 568 original records and order byte-preserved, nine Grade 9 Exercise 1.2 plus eight existing, seven recovered and eleven Statistics Grade 10 source-bound records, 603 explicit difficulties, 88 reviewed classifications retained, no explanation switches, offline metadata.');
