@@ -1,0 +1,32 @@
+name: TEMP Grade 9 Exercise 1.2 Q2 Rebuild
+on:
+  push:
+    branches:
+      - curriculum/g9-ex1-2-q2-fourpart-release-20261114
+permissions:
+  contents: write
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Regenerate source-backed Grade 9 math
+        run: node site/tools/build_g9_math.cjs
+      - name: Reconcile public source status
+        run: node site/tools/build_project_status.cjs
+      - name: Commit deterministic output if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/g9-clear-math.js site/data/project-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "TRACE: regenerate Grade 9 322-question notation and public status"
+            git push origin HEAD:curriculum/g9-ex1-2-q2-fourpart-release-20261114
+          fi
