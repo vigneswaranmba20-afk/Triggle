@@ -30922,6 +30922,269 @@ const records=[
         }
       }
     ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q2-i",
+    "questionMath": {
+      "en": "2. Identify the following sets as finite or infinite.\n(i) X = The set of all districts in Tamilnadu."
+    },
+    "answerMath": {
+      "latex": "\\text{Finite set}",
+      "fallback": "Finite",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "n(X)<\\infty",
+          "fallback": "n(X) < ∞",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A finite set contains only a limited number of distinct members."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{A fixed list has finitely many entries}",
+          "fallback": "A fixed list has finitely many entries",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Tamil Nadu has a countable administrative list of districts at any fixed time; its number may change, but never becomes unlimited."
+        }
+      },
+      {
+        "math": {
+          "latex": "X:\\ \\text{finite}",
+          "fallback": "X: finite",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Therefore ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            },
+            " is a finite set. No particular district count is required."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q2-ii",
+    "questionMath": {
+      "en": "2. Identify the following sets as finite or infinite.\n(ii) Y = The set of all straight lines passing through a point."
+    },
+    "answerMath": {
+      "latex": "\\text{Infinite set}",
+      "fallback": "Infinite",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "m=0,1,2,3,\\ldots",
+          "fallback": "m = 0, 1, 2, 3, …",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Fix a point ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " in a plane, then draw straight lines through ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " in different directions."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "m_1\\ne m_2\\ \\Rightarrow\\ \\ell_{m_1}\\ne\\ell_{m_2}",
+          "fallback": "Different slopes give different lines",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Each new direction (for example a different slope ",
+            {
+              "latex": "\\mathrm{m}",
+              "fallback": "m"
+            },
+            ") produces another line passing through ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "Y:\\ \\text{infinite}",
+          "fallback": "Y: infinite",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "There is no largest number of possible directions; the lines continue without end."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q2-iii",
+    "questionMath": {
+      "en": [
+        "2. Identify the following sets as finite or infinite.\n(iii) ",
+        {
+          "latex": "A=\\{x:x\\in\\mathbb Z,\\ x<5\\}",
+          "fallback": "A = { x : x ∈ Z and x <5}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Infinite set}",
+      "fallback": "Infinite",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x\\in\\mathbb Z,\\quad x<5",
+          "fallback": "x∈Z and x<5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The set A contains every integer strictly less than five."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\ldots,-3,-2,-1,0,1,2,3,4",
+          "fallback": "…, −3, −2, −1, 0, 1, 2, 3, 4",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "For example it contains ",
+            {
+              "latex": "4, 3, 2, 1, 0, - 1, - 2",
+              "fallback": "4, 3, 2, 1, 0, −1, −2"
+            },
+            ", and so on to the left."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x<5\\ \\Rightarrow\\ x-1<5",
+          "fallback": "x<5 ⇒ x−1<5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "For any integer ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " below five, the smaller integer ",
+            {
+              "latex": "x - 1",
+              "fallback": "x−1"
+            },
+            " also lies below five."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "A:\\ \\text{infinite}",
+          "fallback": "A: infinite",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Therefore the list never ends and A is infinite."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q2-iv",
+    "questionMath": {
+      "en": [
+        "2. Identify the following sets as finite or infinite.\n(iv) ",
+        {
+          "latex": "B=\\{x:x^2-5x+6=0,\\ x\\in\\mathbb N\\}",
+          "fallback": "B = { x : x²–5x+6 = 0, x ∈ N }",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Finite set}",
+      "fallback": "Finite",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^2-5x+6=0",
+          "fallback": "x²−5x+6 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Only natural numbers that satisfy the quadratic equation belong to ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x-2)(x-3)=0",
+          "fallback": "(x−2)(x−3) = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Factor the quadratic expression into two linear factors."
+        }
+      },
+      {
+        "math": {
+          "latex": "x=2\\ \\text{or}\\ x=3",
+          "fallback": "x=2 or x=3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A product is zero when one factor is zero, giving exactly two natural-number solutions."
+        }
+      },
+      {
+        "math": {
+          "latex": "B=\\{2,3\\},\\quad n(B)=2",
+          "fallback": "B={2,3}; n(B)=2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the two members and count them."
+        }
+      }
+    ]
   }
 ];
 const texts={
@@ -38672,6 +38935,32 @@ const texts={
       "fallback": "5"
     },
     " is excluded."
+  ],
+  "Each new direction (for example a different slope m) produces another line passing through P.": [
+    "Each new direction (for example a different slope ",
+    {
+      "latex": "\\mathrm{m}",
+      "fallback": "m"
+    },
+    ") produces another line passing through ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    "."
+  ],
+  "For any integer x below five, the smaller integer x−1 also lies below five.": [
+    "For any integer ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " below five, the smaller integer ",
+    {
+      "latex": "x - 1",
+      "fallback": "x−1"
+    },
+    " also lies below five."
   ]
 };
 const diagramLabels={"A":{"latex":"A","fallback":"A"},"B":{"latex":"B","fallback":"B"},"C":{"latex":"C","fallback":"C"},"D":{"latex":"D","fallback":"D"},"E":{"latex":"E","fallback":"E"},"F":{"latex":"F","fallback":"F"},"O":{"latex":"O","fallback":"O"},"P":{"latex":"P","fallback":"P"},"Q":{"latex":"Q","fallback":"Q"},"a":{"latex":"a","fallback":"a"},"b":{"latex":"b","fallback":"b"},"x":{"latex":"x","fallback":"x"},"y":{"latex":"y","fallback":"y"},"θ":{"latex":"\\theta","fallback":"θ"},"φ":{"latex":"\\phi","fallback":"φ"},"α":{"latex":"\\alpha","fallback":"α"},"β":{"latex":"\\beta","fallback":"β"},"√13":{"latex":"\\sqrt{13}","fallback":"√13"},"√5":{"latex":"\\sqrt{5}","fallback":"√5"},"√(a² + b²)":{"latex":"\\sqrt{a^{2} + b^{2}}","fallback":"√(a² + b²)"}};

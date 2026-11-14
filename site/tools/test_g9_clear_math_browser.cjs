@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs/promises');
 const {chromium}=require('playwright'),{server,launchOptions}=require('./dashboard_test_support.cjs');
 // This existing suite retains its original 127 mathematics-bearing records.
-// test_g9_typography_browser.cjs separately checks all 313, including prose-only definitions.
+// test_g9_typography_browser.cjs separately checks all current Grade 9 questions, including prose-only definitions.
 const {load:loadAll}=require('./build_g9_math.cjs');
 const load=()=>loadAll().filter(q=>['2','3'].includes(String(q.chapter)));
 const samples=['g9-ch2-ex2-q4-iv','g9-ch2-ex5-q3-iv','g9-ch2-ex6-q4-i','g9-ch2-ex7-q2-i','g9-ch2-ex7-q4','g9-ch2-ex8-q3-iii','g9-ch3-ex3.1-q10','g9-ch3-ex3.1-q11','g9-ch3-ex3.1-q12','g9-ch3-ex3.2-q4'];

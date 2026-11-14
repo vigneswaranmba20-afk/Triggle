@@ -54,11 +54,11 @@ async function inspect(page,q,lang){
     await page.evaluate(()=>document.querySelector('#langTa').click());await page.evaluate(()=>window.TriggleNotation.prepare(document));
     formulas+=await inspect(page,q,'ta');
     await page.evaluate(()=>document.querySelector('#langEn').click());
-    if(++done%75===0)console.log('Progress '+width+'px: '+done+'/318 questions in both languages');
+    if(++done%75===0)console.log('Progress '+width+'px: '+done+'/322 questions in both languages');
     if(width===393&&samples.get(q.chapter)===q.id){await page.locator('#lessonCard').screenshot({path:path.join(output,'chapter-'+q.chapter+'-393.png')});}
    }}finally{await context.close();}
-   console.log('PASS '+width+'px: 318 questions, English/Tamil, '+formulas+' formula instances; source parity, complete steps, MathML, clipping and page overflow');
-   return {width,questions:318,languages:['en','ta'],formulas};
+   console.log('PASS '+width+'px: 322 questions, English/Tamil, '+formulas+' formula instances; source parity, complete steps, MathML, clipping and page overflow');
+   return {width,questions:322,languages:['en','ta'],formulas};
   }));
   assert.deepEqual(errors,[],'No browser errors');
   await fs.writeFile(path.join(output,'sweep-results.json'),JSON.stringify(results,null,2));
