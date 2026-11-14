@@ -173,7 +173,7 @@ const entries=[
       "en": "Cardinal numbers: Q1(iv)"
     },
     "q": {
-      "en": "1. Find the cardinal number of the following sets.\n(iv) R = {x : x is an integer, x∈Z and −5 ≤ x < 5}"
+      "en": "1. Find the cardinal number of the following sets.\n(iv) R = {x : x is an integers, x∈Z and −5 ≤ x < 5}"
     },
     "steps": [
       {
@@ -1445,7 +1445,7 @@ const entries=[
         "eq": "1 + 4 + 6 + 4 + 1 = 16"
       }
     ],
-    "answer": "P(D) has 16 subsets",
+    "answer": "P(D) = {∅, {p}, {q}, {r}, {s}, {p,q}, {p,r}, {p,s}, {q,r}, {q,s}, {r,s}, {p,q,r}, {p,q,s}, {p,r,s}, {q,r,s}, {p,q,r,s}}",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
     "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
