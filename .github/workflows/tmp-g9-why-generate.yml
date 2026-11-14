@@ -1,0 +1,29 @@
+name: Generate Grade 9 source-pinned Why-step annotations (temporary)
+on:
+  push:
+    branches: [feat/g9-why-this-step-20261114]
+    paths: ['.github/workflows/tmp-g9-why-generate.yml']
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/g9-why-this-step-20261114
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check site/tools/generate_why_step_g9.cjs
+      - run: node site/tools/generate_why_step_g9.cjs
+      - name: Commit generated explanation source and audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/data/why-step-g9.js docs/curriculum/grade-9/why-step-audit.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data(g9): source-pin every authored student exercise Why hint'
+            git push origin HEAD:feat/g9-why-this-step-20261114
+          fi
