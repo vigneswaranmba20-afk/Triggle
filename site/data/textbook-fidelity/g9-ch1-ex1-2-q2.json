@@ -4,7 +4,7 @@
   "chapter": "1",
   "exercise": "1.2",
   "question": "2",
-  "release": "staged-not-live",
+  "release": "english-release-candidate",
   "sourceEdition": "Tamil Nadu SCERT Standard Nine Mathematics revised 2025",
   "english": {
     "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
@@ -53,5 +53,5 @@
     "Q2(iv): x²−5x+6=(x−2)(x−3); both roots are natural."
   ],
   "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
-  "certification": "Source-audited English teaching candidate. No student-facing release or Tamil editorial certification."
+  "certification": "Source-audited English release candidate. No Tamil editorial or teacher certification is claimed; publication requires CI and live Pages verification."
 }
