@@ -200,8 +200,8 @@ const additional={
   "c10-1-1-3-q9": {
     "step": 0,
     "expected": "Use distance=speed×time for constant speed.",
-    "en": "The slope tells how much the output changes when the input increases by one unit. Use the same straight-line rule with one known pair to find the intercept.",
-    "ta": "உள்ளீடு ஒரு அலகு கூடும்போது வெளியீடு எவ்வளவு மாறுகிறது என்பதே சாய்வு. ஒரு தெரிந்த சோடியைப் பயன்படுத்தி நிலையான உறுப்பைக் காணலாம்."
+    "en": "At constant speed, distance increases in direct proportion to elapsed time. Multiplying speed (km per hour) by time (hours) leaves distance in kilometres.",
+    "ta": "மாறாத வேகத்தில் பயணித்த தூரம் நேரத்திற்கு நேர் விகிதமாக அதிகரிக்கும். கி.மீ/மணி வேகத்தை மணிநேரத்தால் பெருக்கினால் தூரம் கி.மீ-யில் கிடைக்கும்."
   },
   "c10-1-1-3-q10": {
     "step": 1,
@@ -417,8 +417,8 @@ const additional={
   "c10-1-1-6-q5": {
     "step": 1,
     "expected": "Square each prime to obtain its image.",
-    "en": "A prime factor is a prime that divides the number. Factor composites first; a prime number's greatest prime factor is the number itself.",
-    "ta": "பகா காரணி என்பது எண்ணை வகுக்கும் பகா எண். பகு எண்களைக் காரணிப்படுத்தவும்; ஒரு பகா எண்ணின் மிகப் பெரிய பகா காரணி அதுவே."
+    "en": "The range contains output values, not the prime inputs. List primes smaller than 13 first, then square each to build the set of outputs.",
+    "ta": "வீச்சகத்தில் பகா எண் உள்ளீடுகள் அல்ல, அவற்றின் வெளியீடுகள் இடம்பெறும். முதலில் 13-ஐவிடச் சிறிய பகா எண்களைக் கண்டு ஒவ்வொன்றையும் வர்க்கப்படுத்தவும்."
   },
   "c10-1-1-6-q6": {
     "step": 0,
@@ -718,8 +718,8 @@ const additional={
   "c10-8-ex8-1-q1-ii": {
     "step": 2,
     "expected": "Calculate the coefficient of range.",
-    "en": "A grouped interval describes values between its boundaries. For the range, compare the lowest and highest boundaries; the frequencies do not alter those extremes.",
-    "ta": "தொகுக்கப்பட்ட வகுப்பில் இரு எல்லைகளுக்கிடையிலான மதிப்புகள் உள்ளன. வீச்சுக்கு மிகக் குறைந்த, மிக அதிக எல்லைகளை ஒப்பிடவும்; நிகழ்வெண்கள் எல்லைகளை மாற்றாது."
+    "en": "The range is the difference between the greatest and least observations. Its coefficient divides that difference by their sum, giving a relative measure.",
+    "ta": "வீச்சு என்பது மிகப் பெரிய, மிகச் சிறிய தரவுகளின் வித்தியாசம். வீச்சுக் கெழு அந்த வித்தியாசத்தை இரு மதிப்புகளின் கூட்டால் வகுத்துக் காணப்படுகிறது."
   },
   "c10-8-ex8-1-q3": {
     "step": 0,
