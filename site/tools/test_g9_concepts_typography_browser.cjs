@@ -56,6 +56,7 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
        });
        assert.equal(overlap,false,'Dock must not obscure focused question controls');
      }
+     await page.evaluate(()=>window.scrollTo(0,0)); // Restore the initial viewport after dock-end checks.
      const back=await page.locator('[data-back-index]').boundingBox();
      assert(back&&back.y>=0&&back.y+back.height<=page.viewportSize().height,
        'Back to concepts must remain in the initial lesson viewport '+width+' '+lang);
