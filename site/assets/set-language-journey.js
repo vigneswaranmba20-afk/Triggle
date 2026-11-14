@@ -108,7 +108,7 @@
        show(active+1,true);
      });
     function demoShell(title){return '<div class="sp2-demo" data-demo><p class="sp2-demo-title">'+esc(title)+'</p><div class="sp2-demo-controls" data-demo-controls></div><p class="sp2-demo-output" data-demo-output role="status" aria-live="polite"></p></div>';}
-    function btn(name,key){return '<button type="button" data-demo-mode="'+esc(key)+'">'+esc(name)+'</button>';}
+    function btn(name,key){return '<button type="button" data-demo-mode="'+esc(key)+'">'+htmlMath(name)+'</button>';}
     function setDemo(state,options,paint){
       const controls=panel.querySelector('[data-demo-controls]');
       controls.innerHTML=options.map(([name,key])=>btn(name,key)).join('');
@@ -177,7 +177,7 @@
         };
         setDemo('commutative',options,(key,update)=>update(key,values[key]));
       }else if(stage.visual==='demorgan'){
-        const options=[['(A ∪ B)′','union'],['(A ∩ B)′','intersection']];
+        const options=[[{latex:'(A\\cup B)^{\\prime}',fallback:'(A ∪ B)′'},'union'],[{latex:'(A\\cap B)^{\\prime}',fallback:'(A ∩ B)′'},'intersection']];
         const values={
           union:{"latex": "\\begin{aligned}(A\\cup B)^{\\prime}&=A^{\\prime}\\cap B^{\\prime}\\\\&=\\{5,6\\}\\end{aligned}", "fallback": "(A ∪ B)′ = A′ ∩ B′ = {5, 6}"},
           intersection:{"latex": "\\begin{aligned}(A\\cap B)^{\\prime}&=A^{\\prime}\\cup B^{\\prime}\\\\&=\\{1,2,4,5,6\\}\\end{aligned}", "fallback": "(A ∩ B)′ = A′ ∪ B′ = {1, 2, 4, 5, 6}"}

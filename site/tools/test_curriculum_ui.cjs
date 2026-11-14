@@ -804,7 +804,7 @@ async function main() {
       const rootOption=lab.locator('[data-answers] button').first();
       assert.equal(await rootOption.locator('math mn').first().textContent(),'5');
       assert.equal(await rootOption.locator('math msqrt').count(),1,'5√3 is a coefficient times a square root');
-      assert.equal(await rootOption.locator('math mspace').first().evaluate(el=>el.namespaceURI),'http://www.w3.org/1998/Math/MathML','Coefficient spacing is semantic MathML');
+      assert.equal(await rootOption.locator('math mtext').first().textContent(),'\u2009','KaTeX preserves a semantic thin space between coefficient and radical');
       const gap=await rootOption.locator('.katex-html .mspace').first().evaluate(el=>Math.max(el.getBoundingClientRect().width,parseFloat(getComputedStyle(el).marginRight)||0));
       assert.ok(gap>=1.5,'Coefficient and radical need a visible gap on a 390px mobile screen');
       assert.equal(await lab.locator('[data-answers] button').nth(1).locator('math msqrt').count(),1,

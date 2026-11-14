@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "790b46954731dfa9ea6c5ad8614b0332030516dc",
-  "updatedAt": "2026-11-14T03:16:35Z",
+  "sourceCommit": "0e754c43fbfab67f9519cafa2a14ce7ce996820c",
+  "updatedAt": "2026-11-14T03:23:10Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -23,7 +23,7 @@
     "site/data/class-12.js": "fac485c578fc2779bd082935d4048f9f58d36431a0c708061d748cb9196ea194",
     "site/data/class-9.js": "43a89a10a92fad10ea6a19c8b7ea5d96fff56218ce864f997e45472fc722370e",
     "site/data/curriculum.js": "1d49b3c31bed70448d84d58e41e2019faeca9aaf5eec840065dedac421ee2827",
-    "site/data/g9-clear-math.js": "886ff5f578a8796057a19a34591b2223e9aaf43344d3952283a2043577c41af4",
+    "site/data/g9-clear-math.js": "ec1b5b8b60e85a3d6548b4246c0552ccfebd66c802b12e83f3df19578f81d49b",
     "site/data/g9-probability-chapter.js": "ba7189fc6ac5e0dc305fc10b168733a45ae2b2eda7bce2334384615ea8298bd2",
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "9a0843a303be9d4ac547a825478a0ddd3e21f3952dafefa16e248fe9f23aaaac",
