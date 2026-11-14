@@ -11,7 +11,12 @@ const metadata={
     "difficult": "Complex reasoning, proof, case analysis, multi-stage calculations or advanced connections."
   },
   "entries": {
-    "c9-example-6-1": {
+    "g9-ch1-ex1.2-q1-i": {"grade":9,"level":"easy","basis":"Direct count of distinct set members","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q1-ii": {"grade":9,"level":"medium","basis":"Whole-number domain enumeration with strict upper bound","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q1-iii": {"grade":9,"level":"medium","basis":"Natural-number domain and exact fractional set evaluation","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q1-iv": {"grade":9,"level":"easy","basis":"Integer enumeration across one inclusive and one strict endpoint","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q1-v": {"grade":9,"level":"medium","basis":"Leap-year rule including exclusion of century year 1900","review":"implementation-audit"},
+        "c9-example-6-1": {
       "grade": 9,
       "level": "easy",
       "basis": "Direct definition, formula or routine calculation.",

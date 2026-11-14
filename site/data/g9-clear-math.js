@@ -30666,6 +30666,262 @@ const records=[
         }
       }
     ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Find the cardinal number of the following sets.\n(i) ",
+        {
+          "latex": "M=\\{p,q,r,s,t,u\\}",
+          "fallback": "M = {p, q, r, s, t, u}"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "n(M)=6",
+      "fallback": "n(M) = 6",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "M=\\{p,q,r,s,t,u\\}",
+          "fallback": "M = {p, q, r, s, t, u}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The cardinal number counts the distinct elements of a set."
+        }
+      },
+      {
+        "math": {
+          "latex": "p,\\ q,\\ r,\\ s,\\ t,\\ u",
+          "fallback": "p, q, r, s, t, u",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the elements once; none is repeated."
+        }
+      },
+      {
+        "math": {
+          "latex": "n(M)=6",
+          "fallback": "n(M) = 6",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "There are six elements, so the cardinal number is six."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Find the cardinal number of the following sets.\n(ii) ",
+        {
+          "latex": "\\begin{aligned}P=\\{x: &\\ x=3n+2,\\\\ &n\\in\\mathbb W,\\ x<15\\}\\end{aligned}",
+          "fallback": "P = {x : x = 3n+2, n∈W and x< 15}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "n(P)=5",
+      "fallback": "n(P) = 5",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}3n+2&<15\\\\3n&<13\\end{aligned}",
+          "fallback": "3n+2<15 ⇒ 3n<13",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Whole numbers start at zero; use ",
+            {
+              "latex": "x=3n+2",
+              "fallback": "x=3n+2"
+            },
+            " and the upper limit."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "n=0,1,2,3,4",
+          "fallback": "n = 0, 1, 2, 3, 4",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The allowed whole numbers are 0 through 4."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}P&=\\{2,5,8,11,14\\}\\\\n(P)&=5\\end{aligned}",
+          "fallback": "P = {2, 5, 8, 11, 14}; n(P) = 5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute these five values and count the distinct results."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Find the cardinal number of the following sets.\n(iii) ",
+        {
+          "latex": "\\begin{aligned}Q=\\{y: &\\ y=\\dfrac{4}{3n},\\\\ &n\\in\\mathbb N,\\ 2<n\\le5\\}\\end{aligned}",
+          "fallback": "Q = {y : y = 4/(3n), n∈N and 2 < n ≤ 5}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "n(Q)=3",
+      "fallback": "n(Q) = 3",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y=\\dfrac{4}{3n}",
+          "fallback": "y = [[4|3n]]",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "The printed expression is four divided by the whole product 3n, not ",
+            {
+              "latex": "\\left(\\frac43\\right)n",
+              "fallback": "(4/3)n"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "n=3,4,5",
+          "fallback": "n = 3, 4, 5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Natural numbers strictly above 2 and at most 5 are 3, 4, and 5."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}Q&=\\left\\{\\frac49,\\frac13,\\frac4{15}\\right\\}\\\\n(Q)&=3\\end{aligned}",
+          "fallback": "Q = {[[4|9]], [[1|3]], [[4|15]]}; n(Q) = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Evaluate one fraction for each n and count the different values."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q1-iv",
+    "questionMath": {
+      "en": [
+        "1. Find the cardinal number of the following sets.\n(iv) R = {x : x is an integers, ",
+        {
+          "latex": "x\\in\\mathbb Z\\ \\text{and}\\ -5\\le x<5",
+          "fallback": "x∈Z and −5 ≤ x < 5"
+        },
+        "}"
+      ]
+    },
+    "answerMath": {
+      "latex": "n(R)=10",
+      "fallback": "n(R) = 10",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "-5\\le x<5",
+          "fallback": "−5 ≤ x < 5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The lower endpoint −5 is included, but the upper endpoint 5 is excluded."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}R=&\\{-5,-4,-3,-2,-1,\\\\&\\quad0,1,2,3,4\\}\\end{aligned}",
+          "fallback": "R = {−5, −4, −3, −2, −1, 0, 1, 2, 3, 4}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Write every integer in this interval."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}n(R)&=4-(-5)+1\\\\&=10\\end{aligned}",
+          "fallback": "n(R) = 4 − (−5) + 1 = 10",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Count from −5 through 4, inclusive."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q1-v",
+    "questionMath": {
+      "en": "1. Find the cardinal number of the following sets.\n(v) S = The set of all leap years between 1882 and 1906."
+    },
+    "answerMath": {
+      "latex": "n(S)=5",
+      "fallback": "n(S) = 5",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{gathered}1884,1888,1892,\\\\1896,1900,1904\\end{gathered}",
+          "fallback": "1884, 1888, 1892, 1896, 1900, 1904",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Check multiples of four between the stated years."
+        }
+      },
+      {
+        "math": {
+          "latex": "1900\\div400\\notin\\mathbb Z",
+          "fallback": "1900 ÷ 400 is not an integer",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A century year is a leap year only when divisible by 400. Exclude 1900."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}S=&\\{1884,1888,1892,\\\\&\\quad1896,1904\\}\\\\n(S)&=5\\end{aligned}",
+          "fallback": "S = {1884, 1888, 1892, 1896, 1904}; n(S) = 5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Keep the five actual leap years and count them."
+        }
+      }
+    ]
   }
 ];
 const texts={
@@ -38382,6 +38638,40 @@ const texts={
       "fallback": "3"
     },
     "."
+  ],
+  "Whole numbers start at zero; use x=3n+2 and the upper limit.": [
+    "Whole numbers start at zero; use ",
+    {
+      "latex": "x = 3 n + 2",
+      "fallback": "x=3n+2"
+    },
+    " and the upper limit."
+  ],
+  "The printed expression is four divided by the whole product 3n, not (4/3)n.": [
+    "The printed expression is four divided by the whole product ",
+    {
+      "latex": "3 n",
+      "fallback": "3n"
+    },
+    ", not ",
+    {
+      "latex": "\\left(\\dfrac{4}{3}\\right) n",
+      "fallback": "(4/3)n"
+    },
+    "."
+  ],
+  "The lower endpoint −5 is included, but the upper endpoint 5 is excluded.": [
+    "The lower endpoint ",
+    {
+      "latex": "- 5",
+      "fallback": "−5"
+    },
+    " is included, but the upper endpoint ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " is excluded."
   ]
 };
 const diagramLabels={"A":{"latex":"A","fallback":"A"},"B":{"latex":"B","fallback":"B"},"C":{"latex":"C","fallback":"C"},"D":{"latex":"D","fallback":"D"},"E":{"latex":"E","fallback":"E"},"F":{"latex":"F","fallback":"F"},"O":{"latex":"O","fallback":"O"},"P":{"latex":"P","fallback":"P"},"Q":{"latex":"Q","fallback":"Q"},"a":{"latex":"a","fallback":"a"},"b":{"latex":"b","fallback":"b"},"x":{"latex":"x","fallback":"x"},"y":{"latex":"y","fallback":"y"},"θ":{"latex":"\\theta","fallback":"θ"},"φ":{"latex":"\\phi","fallback":"φ"},"α":{"latex":"\\alpha","fallback":"α"},"β":{"latex":"\\beta","fallback":"β"},"√13":{"latex":"\\sqrt{13}","fallback":"√13"},"√5":{"latex":"\\sqrt{5}","fallback":"√5"},"√(a² + b²)":{"latex":"\\sqrt{a^{2} + b^{2}}","fallback":"√(a² + b²)"}};

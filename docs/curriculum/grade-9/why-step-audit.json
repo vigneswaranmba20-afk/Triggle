@@ -2,10 +2,10 @@
   "generatedAt": "2026-11-14",
   "grade": 9,
   "source": "existing authored student-facing content",
-  "totalAuthored": 388,
-  "eligible": 313,
+  "totalAuthored": 393,
+  "eligible": 318,
   "byChapter": {
-    "1": 31,
+    "1": 36,
     "2": 121,
     "3": 6,
     "4": 12,
@@ -74,7 +74,12 @@
     "countOutcomes": 3,
     "experimentalP": 1,
     "complementP": 5,
-    "mutuallyExclusive": 1
+    "mutuallyExclusive": 1,
+    "cardinality": 1,
+    "wholeNumbers": 1,
+    "rationalSet": 1,
+    "integerInterval": 1,
+    "leapYear": 1
   },
   "fallbacks": [],
   "diagrams": 30,
@@ -383,7 +388,7 @@
   "qualityReview": {
     "kind": "human-in-the-loop editorial static corrections",
     "scope": "all source-aligned question IDs plus targeted semantic corrections for radical arithmetic, exponent rules, repetition, cube/cuboid surface area, statistical mode, and diagram relevance",
-    "notes": "Kept 30 relevant conceptual figures; excluded generic illustrations for surface area, rounding, and chord cases where geometry could imply incorrect conditions. Textbook content and answers unchanged.",
+    "notes": "Kept 30 relevant conceptual figures; excluded generic illustrations for surface area, rounding, and chord cases where geometry could imply incorrect conditions. Textbook content and answers unchanged. New Ex1.2 Q1(i–v) bridges are English-only (Tamil editorial deferred), with five previously audited source parts and no generic figures.",
     "date": "2026-11-14",
     "tamil": "editorial pending"
   }

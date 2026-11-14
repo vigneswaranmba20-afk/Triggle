@@ -84,7 +84,7 @@ function render(event){
  const summary=el('summary',null,lang==='ta'?'ஏன் இந்தப் படி?':'Why this step?');
  summary.setAttribute('aria-label',(lang==='ta'?'படி ':'Step ')+(hint.step+1)+': '+summary.textContent);
  summary.addEventListener('keydown',ev=>{if(ev.key==='ArrowLeft'||ev.key==='ArrowRight')ev.stopPropagation();});
- const panel=el('div','why-step-panel');panel.lang=lang;
+ const panel=el('div','why-step-panel');panel.lang=(lang==='ta'&&!hint.ta)?'en':lang;
  const explanation=el('p'),source=lang==='ta'&&hint.ta?hint.ta:hint.en;
  explanation.innerHTML=window.TriggleNotation.render(window.TriggleG9Math?.text(source)??source);
  panel.append(explanation);

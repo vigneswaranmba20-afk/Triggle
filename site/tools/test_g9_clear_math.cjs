@@ -17,16 +17,16 @@ function check(value,original,id){
   assert(html.includes('<math')&&html.includes('katex-html'),'Accessible and visual math: '+id);formulas++;
  }
 }
-const items=load();assert.equal(items.length,313);
-assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[31,121,6,12,9,40,37,31,26]);
+const items=load();assert.equal(items.length,318);
+assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[36,121,6,12,9,40,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
 assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,4);
 for(const q of items){
  const before=JSON.stringify(q),p=get(q);assert(p,q.id);assert.equal(p.steps.length,q.steps.length);
- for(const lang of ['en','ta'])check(p.questionMath[lang],q.q[lang],q.id+' '+lang);
+ for(const lang of ['en','ta'])check(p.questionMath[lang]||p.questionMath.en,q.q[lang]||q.q.en,q.id+' '+lang);
  if(typeof q.answer==='object')for(const lang of ['en','ta'])check(p.answerMath[lang],q.answer[lang],q.id+' answer '+lang);
  else check(p.answerMath,q.answer,q.id+' answer');
- q.steps.forEach((s,i)=>{if(s.eq!==undefined)check(p.steps[i].math,s.eq,q.id+' step '+i);for(const lang of ['en','ta'])check(p.steps[i].reasonMath[lang],s[lang],q.id+' reason '+i+' '+lang);});
+ q.steps.forEach((s,i)=>{if(s.eq!==undefined)check(p.steps[i].math,s.eq,q.id+' step '+i);for(const lang of ['en','ta'])check(p.steps[i].reasonMath[lang]||p.steps[i].reasonMath.en,s[lang]||s.en,q.id+' reason '+i+' '+lang);});
  assert.equal(JSON.stringify(q),before,'Canonical question object is never mutated');
 }
 assert(formulas>3800,'Full question, explanation, working and answer coverage');
@@ -54,4 +54,4 @@ const html=read('index.html'),sw=read('service-worker.js');
 assert(html.indexOf('data/g9-clear-math.js')>html.indexOf('data/textbook-exercises/g9-ch3-ex3-2-q4-en.js'));
 assert(html.indexOf('data/g9-clear-math.js')<html.indexOf('assets/app.js'));
 assert(sw.includes("'./data/g9-clear-math.js'"));assert(sw.includes('g9-clear-math'));
-console.log('PASS Grade 9: 313 preserved records across all nine chapters, '+formulas+' valid offline TeX formulas, bilingual fallbacks, fractional powers, radical/fraction grouping, recurring decimals, aligned steps and isolated presentation.');
+console.log('PASS Grade 9: 318 preserved records across all nine chapters, '+formulas+' valid offline TeX formulas, bilingual fallbacks, fractional powers, radical/fraction grouping, recurring decimals, aligned steps and isolated presentation.');
