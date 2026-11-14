@@ -39,6 +39,40 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
    }
   }
   await check(chapter+'/'+index+' '+lang+' '+width);
+  if(chapter===1){
+   assert.equal(await page.locator('.sp2-explanation').count(),1,'Textbook meaning is available on demand');
+   assert.equal(await page.locator('.sp2-explanation').evaluate(el=>el.open),false,'Discover first, explain second');
+   assert.equal(await page.locator('[data-demo]').count(),1,'Every idea retains its own interaction');
+   if(index===0){
+    assert.equal(await page.locator('.lc-membership .lc-scene').count(),1,'Visual set must be present');
+    await page.locator('[data-demo-mode="8"]').click();
+    const eq=await page.locator('[data-demo-output]').innerText();
+    assert(eq.includes('8')&&eq.includes('∈'),'Set membership and MathML feedback respond together '+eq);
+    assert.equal(await page.locator('[data-lc-outsider]').getAttribute('visibility'),'hidden');
+    await page.locator('[data-demo-mode="3"]').click();
+    assert.equal(await page.locator('[data-lc-outsider]').getAttribute('visibility'),'visible');
+    assert.equal(await page.locator('.lc-selected').count(),0,'No inside number stays highlighted for an outsider');
+    assert.equal(await page.locator('.lc-detective').count(),1,'Canonical textbook check becomes Rule Detective');
+    assert.equal(await page.locator('.sp2-panel > .sp2-recall').count(),1,'One canonical quick check; extra practice stays optional');
+    if(width===360&&lang==='en'){
+     const dir=path.resolve('screenshots/g9-compact-concepts');
+     await fs.mkdir(dir,{recursive:true});
+     await page.screenshot({path:path.join(dir,'living-first-fold-360-en.png'),fullPage:false});
+    }
+   }
+   if(index===5){
+    assert.equal(await page.locator('[data-lc-venn]').count(),6,'De Morgan visual preserves the universe');
+    await page.locator('[data-demo-mode="intersection"]').click();
+    assert.equal(await page.locator('.lc-highlight').count(),5,'Complement of intersection highlights five members');
+   }
+   if(index===6){
+    const input=page.locator('#sp2-overlap-control');
+    await input.evaluate(el=>{el.value='8';el.dispatchEvent(new Event('input',{bubbles:true}));});
+    assert.equal(await page.locator('[data-lc-both]').textContent(),'8','Overlap diagram follows slider');
+    assert.equal(await page.locator('[data-lc-only-a]').textContent(),'6');
+    assert.equal(await page.locator('[data-lc-only-b]').textContent(),'3');
+   }
+  }
   if(chapter===1&&index===6){
    const formula=await page.locator('.sp2-formula').evaluate(el=>({width:el.clientWidth,scroll:el.scrollWidth}));
    assert(formula.scroll<=formula.width+1,'Cardinality KaTeX fits without horizontal clipping '+lang+' '+width+' '+JSON.stringify(formula));

@@ -20,4 +20,21 @@ assert.match(journey, /initialConcept=null,onConcept=null/, 'Deep links and lang
 assert.doesNotMatch(journey, /data-idea-picker/, 'No dropdown or carousel picker in lessons');
 assert.match(css, /\.sp2-detail-view\[hidden\]\{display:none!important\}/, 'Inactive lesson view must be hidden');
 assert.match(css, /sp2-journey\[data-view="lesson"\]/, 'Duplicate chapter Back button must disappear inside an idea');
+const vm = require('node:vm');
+const livingJs = fs.readFileSync(path.join(__dirname, '../assets/living-concepts.js'), 'utf8');
+const livingCss = fs.readFileSync(path.join(__dirname, '../assets/living-concepts.css'), 'utf8');
+new vm.Script(livingJs);
+assert.match(html, /assets\/living-concepts\.css/, 'Live stylesheet loads');
+assert.match(html, /assets\/living-concepts\.js/, 'Living engine loads');
+assert(html.indexOf('assets/living-concepts.js') < html.indexOf('assets/set-language-journey.js'), 'Engine must load before lessons');
+assert.match(journey, /TriggleLivingConcepts\?\.decorate/, 'All seven existing interactive demos are enhanced');
+assert.match(journey, /sp2-explanation/, 'Original source text remains available on demand');
+assert.match(journey, /\[2,3,4,5,8\]/, 'Membership demonstration includes an even number above six');
+assert.match(livingJs, /data-lc-member/, 'Living membership diagram is rendered');
+assert.match(livingJs, /data-lc-venn/, 'De Morgan set-membership visualization exists');
+assert.match(livingJs, /data-lc-only-a/, 'Dynamic overlap counts exist');
+assert.match(livingJs, /data-demo-output/, 'Visual feedback reuses the original mathematical status region');
+assert.doesNotMatch(livingJs, /\bfetch\s*\(|XMLHttpRequest/, 'Living Concepts makes no network requests');
+assert.match(livingCss, /prefers-reduced-motion/, 'Reduced-motion preference is respected');
+
 console.log('Grade 9 compact concepts CSS contract passed');

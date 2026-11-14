@@ -13,7 +13,7 @@
     en:{label:'YOUR SHORT LEARNING PATH',title:'Build Set Language, one idea at a time',
       intro:'Seven short explorations follow the 2025 textbook. Choose one, try it, then practise on paper. You can stop whenever you understand.',
       state:'Ideas checked on this device',learned:'learned',source:'Textbook section',enPage:'English page',taPage:'Tamil page',
-      select:'Pick an idea',try:'Try a quick check',hint:'One clue',why:'Why does this work?',
+      select:'Pick an idea',try:'Try a quick check',understand:'Understand the idea',detective:'Rule Detective',hint:'One clue',why:'Why does this work?',
       correct:'You got it. This idea is ready for paper practice.',retry:'Not yet. Try the clue, then choose again.',
       paper:'Now put the phone down: one paper task',tryVenn:'Open the interactive Venn diagram ↓',
       deeper:'Harder example · Explain it one step at a time',next:'Show next reasoning step',
@@ -30,7 +30,7 @@
     ta:{label:'சிறிய கற்றல் பாதை',title:'கண மொழியை ஒவ்வொரு கருத்தாகக் கற்போம்',
       intro:'2025 பாடநூலை அடிப்படையாகக் கொண்ட ஏழு சிறு ஆராய்ச்சிகள். ஒன்றைத் தேர்ந்து முயலுங்கள்; பிறகு தாளில் பயிற்சி செய்யுங்கள்.',
       state:'இந்த சாதனத்தில் சரிபார்த்த கருத்துகள்',learned:'கற்றவை',source:'பாடநூல் பகுதி',enPage:'ஆங்கிலம் பக்கம்',taPage:'தமிழ் பக்கம்',
-      select:'ஒரு கருத்தைத் தேர்ந்தெடுக்கவும்',try:'ஒரு சிறிய வினா',hint:'ஒரு குறிப்பு',why:'இது ஏன் சரி?',
+      select:'ஒரு கருத்தைத் தேர்ந்தெடுக்கவும்',try:'ஒரு சிறிய வினா',understand:'கருத்தைப் புரிந்துகொள்',detective:'விதியைக் கண்டறி',hint:'ஒரு குறிப்பு',why:'இது ஏன் சரி?',
       correct:'சரி! இப்போது தாளில் நீங்களே முயலலாம்.',retry:'இன்னும் இல்லை. குறிப்பைப் பார்த்து மீண்டும் முயலுங்கள்.',
       paper:'கைப்பேசியை வைத்துவிட்டு தாளில் செய்யுங்கள்',tryVenn:'வென் பட ஆய்வகத்தைத் திறக்க ↓',
       deeper:'கடினமான எடுத்துக்காட்டு · ஒவ்வொரு காரணப் படியாகப் பார்ப்போம்',next:'அடுத்த காரணப் படியைக் காட்டு',
@@ -133,9 +133,9 @@
       const out=panel.querySelector('[data-demo]');
       if(!out)return;
       if(stage.visual==='membership'){
-        const options=[2,3,4,5].map(n=>[String(n),String(n)]);
+        const options=[2,3,4,5,8].map(n=>[String(n),String(n)]);
         setDemo('2',options,(n,update)=>{
-          const yes=[2,4].includes(Number(n));
+          const yes=[2,4,6,8].includes(Number(n));
           const fallback=n+(yes?' ∈ A':' ∉ A');
           update(n,[{latex:n+(yes?'\\in A':'\\notin A'),fallback},(lang==='ta'?(yes?' · உறுப்பு':' · உறுப்பு அல்ல'):(yes?' · belongs':' · does not belong'))]);
         });
@@ -296,11 +296,13 @@
       panel.innerHTML=
         '<div class="sp2-concept-heading" tabindex="-1">'+
          '<h4>'+esc((index+1)+'. '+pick(stage.title,lang))+'</h4></div>'+
+        demoShell(demoTitle)+
+        '<details class="sp2-explanation"><summary>'+esc(t.understand)+'</summary>'+
+        '<div class="sp2-explanation-body">'+
         '<p class="sp2-idea">'+htmlMath(pick(stage.idea,lang))+'</p>'+
         '<p class="sp2-example">'+htmlMath(pick(stage.example,lang))+'</p>'+
-        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(visibleRule)+'</div>'+
-        demoShell(demoTitle)+
-        '<div class="sp2-recall"><h5>'+esc(t.try)+'</h5>'+
+        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(visibleRule)+'</div></div></details>'+
+        '<div class="sp2-recall"><h5>'+esc(stage.visual==='membership'?t.detective:t.try)+'</h5>'+
         '<p class="sp2-concept-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p>'+
         '<div class="sp2-answers" data-answers role="group" aria-label="'+esc(pick(stage.question,lang))+'"></div>'+
         '<div class="sp2-recall-actions"><button type="button" data-hint>'+esc(t.hint)+
@@ -333,6 +335,7 @@
         const target=panel.querySelector('[data-why]');target.hidden=!target.hidden;
       });
       demo(stage);
+      window.TriggleLivingConcepts?.decorate(stage,panel,lang,htmlMath);
       extraPractice(stage);
       if(stage.id==='cardinality')hard();
       updateProgress();
