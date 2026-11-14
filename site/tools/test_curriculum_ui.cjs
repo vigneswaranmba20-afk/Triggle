@@ -7,8 +7,8 @@ const path = require('node:path');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
 async function selectSetIdea(journey,index){
-  const picker=journey.locator('[data-idea-picker]');
-  await picker.click();
+  if(await journey.locator('[data-detail-view]').isVisible())
+    await journey.locator('[data-back-index]').click();
   await journey.locator('[data-nav] [data-index="'+index+'"]').click();
 }
 // Fidelity assertions read the preserved authored text, while the dedicated
@@ -580,6 +580,7 @@ async function main() {
       await page.locator('.sp2-journey').waitFor({state:'visible'});
       await selectSetIdea(page.locator('.sp2-journey'),5);
       assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
+      await page.locator('[data-back-index]').click();
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
       assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i',
@@ -1147,6 +1148,8 @@ async function main() {
       await journey.waitFor({state:'visible'});
       assert.equal(await journey.locator('[data-nav] button').count(),7);
       assert.ok((await journey.locator('[data-progress]').innerText()).includes('0 / 7'));
+      assert.equal(await journey.locator('[data-index-view]').isVisible(),true);
+      await selectSetIdea(journey,0);
       // Membership: choose a number not belonging to the set.
       await journey.locator('[data-demo-mode="3"]').click();
       assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('∉ A'));
