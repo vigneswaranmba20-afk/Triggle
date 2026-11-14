@@ -48,7 +48,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
      'Next correctly says idea rather than page: '+JSON.stringify({lang,width,nextLabel,url:page.url()}));
     const first=await dockAtBottom('start '+width+' '+lang);
     assert(first.maxScroll>100,'Enough scrollable lesson content to validate dock behavior');
-    await page.locator('.lesson-container').evaluate(el=>el.scrollTop=el.scrollHeight/2);
+    await page.locator('.lesson-container').evaluate(el=>el.scrollTop=(el.scrollHeight-el.clientHeight)/2);
     await page.waitForTimeout(45);
     await dockAtBottom('middle '+width+' '+lang);
     if(width===360){
