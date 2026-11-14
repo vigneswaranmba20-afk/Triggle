@@ -97,7 +97,7 @@
       "question": "1",
       "part": "iv",
       "stem": "Find the cardinal number of the following sets.",
-      "sourceEnglish": "R = {x : x is an integer, x∈Z and −5 ≤ x < 5}",
+      "sourceEnglish": "R = {x : x is an integers, x∈Z and −5 ≤ x < 5}",
       "answer": "n(R) = 10",
       "steps": [
         {
@@ -650,7 +650,7 @@
       "part": "iii",
       "stem": "Write down the power set of the following sets:",
       "sourceEnglish": "D = {p, q, r, s}",
-      "answer": "P(D) has 16 subsets",
+      "answer": "P(D) = {∅, {p}, {q}, {r}, {s}, {p,q}, {p,r}, {p,s}, {q,r}, {q,s}, {r,s}, {p,q,r}, {p,q,s}, {p,r,s}, {q,r,s}, {p,q,r,s}}",
       "steps": [
         {
           "reason": "Four distinct members give 2^4 subsets.",
@@ -752,7 +752,7 @@
       "id": "g9-ch1-ex1.2-q10-i",
       "question": "10",
       "part": "i",
-      "stem": "Find the requested power-set cardinality.",
+      "stem": "",
       "sourceEnglish": "If n(A) = 4, find n[P(A)].",
       "answer": "16",
       "steps": [
@@ -775,7 +775,7 @@
       "id": "g9-ch1-ex1.2-q10-ii",
       "question": "10",
       "part": "ii",
-      "stem": "Find the requested power-set cardinality.",
+      "stem": "",
       "sourceEnglish": "If n(A) = 0, find n[P(A)].",
       "answer": "1",
       "steps": [
@@ -798,7 +798,7 @@
       "id": "g9-ch1-ex1.2-q10-iii",
       "question": "10",
       "part": "iii",
-      "stem": "Find the requested power-set cardinality.",
+      "stem": "",
       "sourceEnglish": "If n[P(A)] = 256, find n(A).",
       "answer": "8",
       "steps": [
