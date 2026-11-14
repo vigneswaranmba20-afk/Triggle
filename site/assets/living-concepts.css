@@ -1,0 +1,90 @@
+/* Triggle Living Concepts — one visual stage, original mathematics retained. */
+.chapter-hub .sp2-journey .lc-lab{
+  border:1px solid #ded4ee;border-radius:20px;background:#f7f3fd;
+  padding:13px;margin:8px 0 12px;box-shadow:0 7px 20px rgba(69,43,96,.035)
+}
+.chapter-hub .lc-lab .lc-lab-title{
+  margin:0 0 8px;font-size:11px!important;letter-spacing:.07em;
+  color:#5c4e83;text-transform:uppercase;font-weight:800
+}
+.chapter-hub .lc-instruction{font-size:14px;line-height:1.5;font-weight:750;margin:4px 0;color:#4e416e}
+.chapter-hub .lc-scene{display:block;width:100%;height:auto;max-height:252px;margin:7px auto}
+.chapter-hub .lc-boundary{stroke:#8e7abc;fill:#fffefa;stroke-width:2.5}
+.chapter-hub .lc-set-label,.chapter-hub .lc-count-label{font:750 15px/1 system-ui,sans-serif;fill:#5a487c}
+.chapter-hub .lc-node{fill:#ece6f7;stroke:#b9abd9;stroke-width:1.5}
+.chapter-hub .lc-selected .lc-node{fill:#dff3e9;stroke:#37896e;stroke-width:3}
+.chapter-hub .lc-outsider{fill:#fff0e7;stroke:#ce8c68;stroke-width:2.5}
+.chapter-hub .lc-number{font:24px Georgia,serif;fill:#413658;text-anchor:middle}
+.chapter-hub .lc-vis-description{font-size:11px;line-height:1.45;color:#635776;margin:0 0 10px}
+.chapter-hub .lc-equation{
+  display:flex;flex-wrap:wrap;gap:9px 14px;justify-content:center;align-items:center;
+  background:#fff;border:1px solid #e4ddec;border-radius:12px;
+  margin:12px 0 4px;padding:12px 8px;font-size:18px;min-height:52px;
+}
+.chapter-hub .lc-meaning{font:650 12px/1.5 system-ui,sans-serif;color:#645a77}
+.chapter-hub .lc-tag{
+  font:800 11px/1.4 system-ui,sans-serif;letter-spacing:.055em;
+  color:#6d5b99;margin:0 0 7px
+}
+.chapter-hub .lc-detective{
+  margin:12px 0 14px;border:1px solid #e3ddeb;border-radius:17px;
+  padding:14px;background:#fff
+}
+.chapter-hub .lc-detective h5{font-size:17px;line-height:1.4;color:#362c52;margin:0 0 11px}
+.chapter-hub .lc-rules{display:grid;gap:8px}
+.chapter-hub .lc-rules button{
+  width:100%;min-height:48px;border:1px solid #dcd5e6;background:#fefcff;
+  border-radius:11px;text-align:left;padding:10px 12px;font:700 13px/1.4 system-ui,sans-serif;
+  color:#443756;cursor:pointer
+}
+.chapter-hub .lc-rules button[aria-pressed=true]{
+  background:#f1ebfb;border-color:#8d72c4;box-shadow:inset 0 0 0 1px #8d72c4
+}
+.chapter-hub .lc-rule-feedback{
+  margin:10px 0 0;padding:10px 12px;background:#faf1e9;
+  border-radius:10px;font-size:13px;line-height:1.5;color:#65482e
+}
+.chapter-hub .lc-rule-feedback[data-correct=true]{background:#e9f5ee;color:#275a45}
+.chapter-hub .lc-count-a,.chapter-hub .lc-count-b{
+  fill:rgba(137,107,204,.13);stroke:#8069b4;stroke-width:2.5
+}
+.chapter-hub .lc-count-b{fill:rgba(73,157,134,.12);stroke:#4e967e}
+.chapter-hub .lc-count-value{
+  font:750 24px/1 Georgia,serif;text-anchor:middle;fill:#423560
+}
+.chapter-hub .lc-count-caption{
+  font:700 12px/1.4 system-ui,sans-serif;text-anchor:middle;fill:#635574
+}
+.chapter-hub .lc-universe{fill:#fffefa;stroke:#b2a2cd;stroke-width:2}
+.chapter-hub .lc-d-circle{fill:rgba(140,112,198,.065);stroke:#8872b6;stroke-width:2}
+.chapter-hub .lc-d-member{fill:#f5f1fa;stroke:#b6a9d0;stroke-width:1}
+.chapter-hub .lc-highlight .lc-d-member{fill:#d9f2e5;stroke:#33856a;stroke-width:2.2}
+.chapter-hub .lc-d-number{
+  font:750 16px Georgia,serif;fill:#46375d;text-anchor:middle
+}
+.chapter-hub .lc-d-legend{
+  color:#514466;font-size:12px;line-height:1.5;margin:0 2px 8px;text-align:center
+}
+.chapter-hub .sp2-journey .lc-lab .sp2-demo-controls button{
+  min-width:44px;min-height:47px;font-size:16px
+}
+.chapter-hub .sp2-explanation{
+  margin:7px 0 12px;padding:0;border:1px solid #e5deec;border-radius:13px;
+  background:#fff;overflow:hidden
+}
+.chapter-hub .sp2-explanation summary{
+  min-height:45px;padding:11px 14px;cursor:pointer;
+  font:750 13px/1.5 system-ui,sans-serif;color:#5a4c78
+}
+.chapter-hub .sp2-explanation-body{padding:0 13px 13px}
+.chapter-hub .sp2-journey .lc-hide-original{display:none}
+@media (prefers-reduced-motion:no-preference){
+  .chapter-hub .lc-node,.chapter-hub .lc-d-member{
+    transition:fill .18s ease,stroke .18s ease
+  }
+}
+@media(max-width:370px){
+  .chapter-hub .sp2-journey .lc-lab{padding:10px}
+  .chapter-hub .lc-scene{max-height:212px}
+  .chapter-hub .lc-equation{font-size:16px}
+}
