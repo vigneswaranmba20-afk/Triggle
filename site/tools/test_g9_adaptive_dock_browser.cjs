@@ -41,8 +41,9 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert.equal(await page.locator('.sp2-journey-footer:visible').count(),0,'Index has no navigation dock');
     await page.locator('.sp2-nav [data-index="1"]').click();
     assert.equal(await page.locator('.sp2-journey-footer:visible').count(),1,'Lesson has exactly one navigation dock');
-    assert((await page.locator('[data-footer-next]').innerText()).includes(lang==='ta'?'அடுத்த கருத்து':'Next idea'),
-     'Next correctly says idea rather than page');
+    const nextLabel=await page.locator('[data-footer-next]').innerText();
+    assert(nextLabel.includes(lang==='ta'?'அடுத்த கருத்து':'Next idea'),
+     'Next correctly says idea rather than page: '+JSON.stringify({lang,width,nextLabel,url:page.url()}));
     const first=await dockAtBottom('start '+width+' '+lang);
     assert(first.maxScroll>100,'Enough scrollable lesson content to validate dock behavior');
     await page.locator('.lesson-container').evaluate(el=>el.scrollTop=el.scrollHeight/2);
