@@ -146,5 +146,26 @@
       }
     });
   }
-  window.TriggleNotation=Object.freeze({render,renderLatex,prepare});
+  // Opt-in annotations for existing SVG labels. Keep the original diagram's
+  // coordinates and geometry; only exact, authored label matches use KaTeX.
+  function prepareSvg(root,annotations={}) {
+    root.querySelectorAll('svg text').forEach(label=>{
+      const source=label.textContent;
+      const formula=Object.prototype.hasOwnProperty.call(annotations,source)?annotations[source]:null;
+      if(!formula||label.hasAttribute('transform')||label.id)return;
+      const box=label.getBBox(),style=getComputedStyle(label);
+      const foreign=document.createElementNS('http://www.w3.org/2000/svg','foreignObject');
+      const width=Math.max(40,box.width+24),height=Math.max(42,box.height+18);
+      foreign.setAttribute('x',box.x+box.width/2-width/2);
+      foreign.setAttribute('y',box.y+box.height/2-height/2);
+      foreign.setAttribute('width',width);foreign.setAttribute('height',height);
+      const content=document.createElement('div');
+      content.setAttribute('xmlns','http://www.w3.org/1999/xhtml');
+      Object.assign(content.style,{display:'flex',alignItems:'center',justifyContent:'center',height:'100%',fontSize:style.fontSize,color:style.fill});
+      content.innerHTML=render(formula);
+      foreign.append(content);label.replaceWith(foreign);
+    });
+    prepare(root);
+  }
+  window.TriggleNotation=Object.freeze({render,renderLatex,prepare,prepareSvg});
 })();

@@ -1,0 +1,42 @@
+name: Grade 9 mathematical typography
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'package*.json'
+      - '.github/workflows/g9-math-typography.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  typography:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Validate source-preserving annotations and mathematical grammar
+        run: node site/tools/test_g9_clear_math.cjs && node site/tools/test_g9_math_compiler.cjs
+      - name: Test all 313 questions in both languages at four Android widths
+        run: node site/tools/test_g9_typography_browser.cjs
+      - name: Test concept controls, slider extremes and diagrams
+        run: node site/tools/test_g9_concepts_typography_browser.cjs
+      - name: Create clean Grade 10 reference checkout
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.sha }}
+        run: git worktree add --detach "$RUNNER_TEMP/triggle-reference" "$BASE_SHA"
+      - name: Compare Grade 10 screenshots with the unchanged reference
+        run: node site/tools/compare_math_reference_browser.cjs --baseline="$RUNNER_TEMP/triggle-reference"
+      - name: Upload screenshots and viewport results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grade-9-mathematical-typography
+          path: screenshots/g9-typography/

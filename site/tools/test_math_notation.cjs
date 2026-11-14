@@ -75,8 +75,8 @@ for(const source of ['x²=25','x^2=25','x³=27','a²+b²=c²','sin²θ+cos²θ=1
 const project=[
   ['assets/app.js', 'window.TriggleNotation.render'],
   ['assets/chapter-hub.js','const typeset=s=>window.TriggleNotation?.render(s)'],
-  ['assets/set-language-journey.js','const htmlMath=s=>window.TriggleNotation?.render(s)'],
-  ['assets/real-numbers-journey.js','const notation=value=>window.TriggleNotation?window.TriggleNotation.render(value)']
+  ['assets/set-language-journey.js','const htmlMath=s=>{s=window.TriggleG9Math?.text(s)??s;return window.TriggleNotation?.render(s)'],
+  ['assets/real-numbers-journey.js','const notation=value=>{value=window.TriggleG9Math?.text(value)??value;return window.TriggleNotation?window.TriggleNotation.render(value)']
 ];
 for(const [file,needle] of project){
   const source=fs.readFileSync(path.join(root,file),'utf8');

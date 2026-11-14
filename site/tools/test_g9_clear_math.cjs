@@ -17,18 +17,20 @@ function check(value,original,id){
   assert(html.includes('<math')&&html.includes('katex-html'),'Accessible and visual math: '+id);formulas++;
  }
 }
-const items=load();assert.equal(items.length,127);
+const items=load();assert.equal(items.length,313);
+assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[31,121,6,12,9,40,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
 assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,4);
 for(const q of items){
  const before=JSON.stringify(q),p=get(q);assert(p,q.id);assert.equal(p.steps.length,q.steps.length);
  for(const lang of ['en','ta'])check(p.questionMath[lang],q.q[lang],q.id+' '+lang);
- check(p.answerMath,q.answer,q.id+' answer');
- q.steps.forEach((s,i)=>{check(p.steps[i].math,s.eq,q.id+' step '+i);for(const lang of ['en','ta'])check(p.steps[i].reasonMath[lang],s[lang],q.id+' reason '+i+' '+lang);});
+ if(typeof q.answer==='object')for(const lang of ['en','ta'])check(p.answerMath[lang],q.answer[lang],q.id+' answer '+lang);
+ else check(p.answerMath,q.answer,q.id+' answer');
+ q.steps.forEach((s,i)=>{if(s.eq!==undefined)check(p.steps[i].math,s.eq,q.id+' step '+i);for(const lang of ['en','ta'])check(p.steps[i].reasonMath[lang],s[lang],q.id+' reason '+i+' '+lang);});
  assert.equal(JSON.stringify(q),before,'Canonical question object is never mutated');
 }
-assert(formulas>1100,'Full question, explanation, working and answer coverage');
-for(const q of [{id:items[0].id,classNum:10,chapter:'2'},{id:items[0].id,classNum:9,chapter:'1'},{id:'g9-ch2-example-1',classNum:9,chapter:'2'}])assert.equal(get(q),undefined,'Scope excludes other grades/chapters and archived examples');
+assert(formulas>3800,'Full question, explanation, working and answer coverage');
+for(const q of [{id:items[0].id,classNum:10,chapter:'2'},{id:items[0].id,classNum:11,chapter:'1'},{id:'g9-ch2-example-1',classNum:9,chapter:'2'}])assert.equal(get(q),undefined,'Scope excludes other grades/chapters and archived examples');
 const compact=source=>expression(source).latex.replace(/\s/g,'');
 assert.equal(compact('3√5/√6'),'\\frac{3\\sqrt{5}}{\\sqrt{6}}','Coefficient and radical belong in the numerator');
 assert.equal(compact('1/x²'),'\\frac{1}{x^{2}}','Power belongs to denominator');
@@ -51,5 +53,5 @@ assert.equal(fallback(rich('Find 1/x² (where x≠0).')),'Find 1/x² (where x≠
 const html=read('index.html'),sw=read('service-worker.js');
 assert(html.indexOf('data/g9-clear-math.js')>html.indexOf('data/textbook-exercises/g9-ch3-ex3-2-q4-en.js'));
 assert(html.indexOf('data/g9-clear-math.js')<html.indexOf('assets/app.js'));
-assert(sw.includes("'./data/g9-clear-math.js'"));assert(sw.includes('v79-g9-clear-math'));
-console.log('PASS Grade 9: 127 preserved records, '+formulas+' valid offline TeX formulas, bilingual fallbacks, fractional powers, radical/fraction grouping, recurring decimals, aligned steps and isolated presentation.');
+assert(sw.includes("'./data/g9-clear-math.js'"));assert(sw.includes('g9-clear-math'));
+console.log('PASS Grade 9: 313 preserved records across all nine chapters, '+formulas+' valid offline TeX formulas, bilingual fallbacks, fractional powers, radical/fraction grouping, recurring decimals, aligned steps and isolated presentation.');

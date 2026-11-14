@@ -6,7 +6,7 @@ const path=window.TRIGGLE_REAL_PATH;
 if(!path||path.chapterId!=='g9-ch2')return;
 const KEY='triggle.g9.real-journey.v1';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const notation=value=>window.TriggleNotation?window.TriggleNotation.render(value):esc(value);
+const notation=value=>{value=window.TriggleG9Math?.text(value)??value;return window.TriggleNotation?window.TriggleNotation.render(value):esc(value);};
 const pick=(obj,lang)=>typeof obj==='string'?obj:obj?.[lang]||obj?.en||'';
 const words={
  en:{kicker:'REAL NUMBERS · INTERACTIVE LAB',title:'See every number come alive',intro:'Move the controls, predict what changes, and test your understanding. Eight small explorations follow Chapter 2 of your 2025 SCERT textbook.',progress:'Concepts checked',source:'Textbook section',explore:'Explore this idea',check:'Now check yourself',hint:'Show a hint',why:'Why this works',right:'Correct! Explain it aloud or on paper.',wrong:'Not yet. Use the hint and try again.',paper:'Try this on paper',saved:'Progress is kept only on this device.',numberLine:'Number-line explorer',category:'Tap a number',move:'Move the point',factor:'Choose the factor',power:'Choose the power',magnitude:'Move the power of ten',next:'Next concept',previousIdea:'Previous idea',nextIdea:'Next idea',position:(n,total)=>'Idea '+n+' of '+total,navTip:'Use the arrows to move through all eight concepts.',detailed:'The picture is a mathematical model, not a copied textbook illustration.'},
@@ -145,7 +145,7 @@ function mount(container,chapter,language){
   if(index===0){
     slider(t.move,1,19,1,10,n=>{const numerator=60+n,value=numerator/120;
       set(numberLine(.5,2/3,[{value,label:numerator+'/120'},{value:.5,label:'1/2'},{value:2/3,label:'2/3'}],ta),
-       '1/2 < '+numerator+'/120 < 2/3'+(n===10?'  =  7/12':''));
+       {latex:'\\dfrac12 < '+(n===10?'\\underbrace{\\dfrac{'+numerator+'}{120}}_{=\\,\\dfrac7{12}}':'\\dfrac{'+numerator+'}{120}')+' < \\dfrac23',fallback:'1/2 < '+numerator+'/120 < 2/3'+(n===10?'  =  7/12':'')});
     });
   }else if(index===1){
     const options=[['term','1/8'],['repeat','1/3'],['root','√2'],['nonrepeat','0.1010010001…']];
