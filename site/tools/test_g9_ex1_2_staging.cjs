@@ -1,0 +1,58 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const katex=require('../assets/vendor/katex/katex.min.js');
+const stage=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../docs/curriculum/grade-9/staging/g9-ch1-ex1-2-q1-q2-en-20261114.json'),'utf8'));
+assert.equal(stage.schemaVersion,1);
+assert.equal(stage.grade,9);
+assert.equal(stage.chapter,'1');
+assert.equal(stage.exercise,'1.2');
+assert.equal(stage.studentFacing,false,'Staging may not claim release');
+assert.equal(stage.stage,'ENGLISH_SOURCE_AUDITED_NOT_INTEGRATED');
+assert.equal(stage.tamilReview,'deferred');
+assert.equal(stage.records.length,9);
+assert.deepEqual(stage.records.map(r=>r.id),['i','ii','iii','iv','v'].map(p=>'g9-ch1-ex1.2-q1-'+p).concat(['i','ii','iii','iv'].map(p=>'g9-ch1-ex1.2-q2-'+p)));
+assert.equal(new Set(stage.records.map(r=>r.id)).size,9);
+let formulas=0;
+for(const r of stage.records){
+ assert.equal(r.kind,'textbook');
+ assert.equal(r.classNum,9);
+ assert.equal(r.chapter,'1');
+ assert.equal(r.exercise,'1.2');
+ assert.match(r.label.ta,/English only/);
+ assert.equal(r.q.ta,undefined,'Do not fabricate unreviewed Tamil question');
+ assert.equal(r.translationReview,'pending');
+ assert.ok(r.q.en&&r.answer&&r.title.en);
+ assert.ok(r.steps.length>=2);
+ for(const s of r.steps){
+  assert.ok(s.en&&s.eq&&s.math?.latex);
+  assert.equal(s.math.fallback,s.eq);
+  const math=katex.renderToString(s.math.latex,{output:'htmlAndMathml',throwOnError:true,strict:'error',trust:false});
+  assert.ok(math.includes('katex-html')&&math.includes('<math'));
+  formulas++;
+ }
+ assert.equal(r.answerMath.fallback,r.answer);
+ assert.ok(katex.renderToString(r.answerMath.latex,{throwOnError:true,strict:'error',trust:false}).includes('katex-html'));
+ formulas++;
+}
+const q1=stage.records.slice(0,5), q2=stage.records.slice(5);
+assert.deepEqual(q1.map(r=>r.answer),['n(M) = 6','n(P) = 5','n(Q) = 3','n(R) = 10','n(S) = 5']);
+assert.deepEqual(q2.map(r=>r.answer),['Finite','Infinite','Infinite','Finite (B = {2, 3})']);
+assert.equal(new Set('pqrstu').size,6);
+assert.deepEqual(Array.from({length:20},(_,n)=>3*n+2).filter(x=>x<15),[2,5,8,11,14]);
+assert.deepEqual([3,4,5].map(n=>4/(3*n)),[4/9,1/3,4/15]);
+assert.equal(new Set([3,4,5].map(n=>4/(3*n))).size,3);
+assert.equal(Array.from({length:10},(_,i)=>i-5).length,10);
+const leap=y=>y%4===0&&(y%100!==0||y%400===0);
+assert.deepEqual(Array.from({length:25},(_,i)=>1882+i).filter(leap),[1884,1888,1892,1896,1904]);
+assert.ok(!leap(1900));
+assert.ok(Number.isFinite(1)&&Number.isFinite(100),'Finite set count requires no fixed district count');
+assert.equal(new Set(Array.from({length:1000},(_,i)=>i/1000)).size,1000);
+assert.ok(Array.from({length:1000},(_,i)=>-i).every(x=>x<5));
+assert.deepEqual([0,1,2,3,4,5].filter(x=>x*x-5*x+6===0),[2,3]);
+assert.match(q1[2].q.en,/4\/\(3n\)/);
+assert.match(q2[3].q.en,/x²−5x\+6/);
+const html=fs.readFileSync(path.resolve(__dirname,'../index.html'),'utf8');
+assert.ok(!html.includes('g9-ch1-ex1-2-q1-q2-en-20261114.json'),'No direct student module import before integration');
+console.log('PASS TRACE G9 Exercise 1.2 Q1–Q2: nine English staging records, '+formulas+' authored KaTeX formulas, independent maths, preserved source distinctions, Tamil deferred and student release blocked.');
