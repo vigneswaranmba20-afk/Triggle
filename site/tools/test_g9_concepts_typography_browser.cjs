@@ -17,6 +17,11 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
   assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'false','Idea menu starts collapsed');
   const first=await page.locator('.sp2-concept-heading').boundingBox();
   assert(first&&first.y>=0&&first.y<=page.viewportSize().height*.7,'First maths concept is above the fold '+width+' '+lang+' at '+first?.y);
+  if(width===360||width===393){
+   const directory=path.resolve('screenshots/g9-compact-concepts');
+   await fs.mkdir(directory,{recursive:true});
+   await page.screenshot({path:path.join(directory,'first-fold-'+width+'-'+lang+'.png'),fullPage:false});
+  }
  }
  for(let index=0;index<Math.max(nav,1);index++){
   if(nav){
