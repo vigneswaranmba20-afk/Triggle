@@ -1,0 +1,14 @@
+'use strict';
+const fs = require('node:fs');
+const assert = require('node:assert/strict');
+const path = require('node:path');
+const css = fs.readFileSync(path.join(__dirname, '../assets/chapter-hub.css'), 'utf8');
+const html = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
+assert.match(html, /assets\/chapter-hub\.css/, 'Chapter hub stylesheet must load');
+assert.match(css, /Grade 9 Set Language concepts: mobile-first density pass/, 'Scoped mobile density section must exist');
+assert.match(css, /@media\s*\(max-width:800px\)/, 'Mobile layout breakpoint required');
+assert.match(css, /\.chapter-hub:has\(\.sp2-journey\)/, 'Scope chapter overrides to journey');
+assert.match(css, /\.chapter-hub \.sp2-journey \.sp2-journey-controls button\s*\{[^}]*min-height:44px/s, 'Navigation touch targets must remain at least 44px');
+assert.match(css, /\.chapter-hub \.sp2-journey \.sp2-formula\s*\{[^}]*padding:10px 12px/s, 'Math formula remains padded');
+assert.doesNotMatch(css.slice(css.indexOf('Grade 9 Set Language concepts: mobile-first density pass')), /display:\s*none\s*!important/, 'Do not conceal lesson or navigation');
+console.log('Grade 9 compact concepts CSS contract passed');
