@@ -802,14 +802,11 @@ async function main() {
       // Grade 9 surd options: a baseline coefficient must be visibly separated
       // from the radical; a fifth-root index uses <mroot> instead.
       const rootOption=lab.locator('[data-answers] button').first();
-      assert.equal(await rootOption.locator('math > mrow > mn').first().textContent(),'5');
-      assert.equal(await rootOption.locator('math > mrow > msqrt').count(),1,'5√3 is a coefficient times a square root');
-      const gap=await rootOption.locator('math > mrow > mspace').evaluate(el=>({
-        width:el.getBoundingClientRect().width,
-        namespace:el.namespaceURI
-      }));
-      assert.equal(gap.namespace,'http://www.w3.org/1998/Math/MathML','Coefficient is represented by native MathML');
-      assert.ok(gap.width>=1.5,'Coefficient and radical need a visible gap on a 390px mobile screen');
+      assert.equal(await rootOption.locator('math mn').first().textContent(),'5');
+      assert.equal(await rootOption.locator('math msqrt').count(),1,'5√3 is a coefficient times a square root');
+      assert.equal(await rootOption.locator('math mspace').first().evaluate(el=>el.namespaceURI),'http://www.w3.org/1998/Math/MathML','Coefficient spacing is semantic MathML');
+      const gap=await rootOption.locator('.katex-html .mspace').first().evaluate(el=>Math.max(el.getBoundingClientRect().width,parseFloat(getComputedStyle(el).marginRight)||0));
+      assert.ok(gap>=1.5,'Coefficient and radical need a visible gap on a 390px mobile screen');
       assert.equal(await lab.locator('[data-answers] button').nth(1).locator('math msqrt').count(),1,
         'A standalone √39 remains a standalone square root');
 
@@ -854,12 +851,12 @@ async function main() {
       const squaredButton=lab.locator('[data-demo-mode="equation"]');
       assert.equal(await squaredButton.locator('math msup').count(),1,
         'The x²=25 button must render a true raised exponent');
-      const vertical=await squaredButton.locator('math msup').evaluate(node=>{
-        const [base,power]=node.children;
-        return {base:base.getBoundingClientRect().bottom,power:power.getBoundingClientRect().bottom,
-          mathNamespace:node.namespaceURI};
+      assert.equal(await squaredButton.locator('math msup').evaluate(node=>node.namespaceURI),'http://www.w3.org/1998/Math/MathML');
+      const vertical=await squaredButton.locator('.katex-html').evaluate(node=>{
+        const base=[...node.querySelectorAll('.mathnormal')].find(el=>el.textContent==='x');
+        const power=[...node.querySelectorAll('.msupsub .mord')].find(el=>el.textContent==='2');
+        return {base:base.getBoundingClientRect().bottom,power:power.getBoundingClientRect().bottom};
       });
-      assert.equal(vertical.mathNamespace,'http://www.w3.org/1998/Math/MathML');
       assert.ok(vertical.power<=vertical.base-1,
         'The 2 in x²=25 must sit above the x, not beside it: '+JSON.stringify(vertical));
       assert.equal(await squaredButton.locator('.rnlab-math-choice').count(),1,

@@ -2318,7 +2318,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\dfrac{3 \\sqrt{3}}{2} - \\dfrac{3 \\sqrt{3}}{2} = 0",
+          "latex": "\\dfrac{3\\,\\sqrt{3}}{2} - \\dfrac{3\\,\\sqrt{3}}{2} = 0",
           "fallback": "[[3√3|2]] − [[3√3|2]] = 0",
           "display": true
         },
@@ -19269,7 +19269,7 @@ const records=[
       },
       "; (ii) ",
       {
-        "latex": "BC = CA = 2 \\sqrt{53}",
+        "latex": "BC = CA = 2\\,\\sqrt{53}",
         "fallback": "BC=CA=2√53"
       },
       " — both triangles are isosceles"
@@ -19339,7 +19339,7 @@ const records=[
         "math": [
           "(ii) ",
           {
-            "latex": "\\begin{aligned}&BC = CA  \\\\ &= \\sqrt{212}  \\\\ &= 2 \\sqrt{53}\\end{aligned}",
+            "latex": "\\begin{aligned}&BC = CA  \\\\ &= \\sqrt{212}  \\\\ &= 2\\,\\sqrt{53}\\end{aligned}",
             "fallback": "BC=CA=√212=2√53",
             "display": true
           }
@@ -19481,7 +19481,7 @@ const records=[
     "answerMath": [
       "(i) Rhombus, side ",
       {
-        "latex": "4 \\sqrt{5}",
+        "latex": "4\\,\\sqrt{5}",
         "fallback": "4√5"
       },
       "; (ii) Rhombus (a square), side ",
@@ -19520,7 +19520,7 @@ const records=[
         "math": [
           "(i) Rhombus; each side=",
           {
-            "latex": "4 \\sqrt{5}",
+            "latex": "4\\,\\sqrt{5}",
             "fallback": "4√5"
           }
         ],
@@ -19528,7 +19528,7 @@ const records=[
           "en": [
             "All four sides therefore have ",
             {
-              "latex": "\\text{length} \\sqrt{80} = 4 \\sqrt{5}",
+              "latex": "\\text{length}\\,\\sqrt{80} = 4\\,\\sqrt{5}",
               "fallback": "length √80=4√5"
             },
             "."
@@ -19536,7 +19536,7 @@ const records=[
           "ta": [
             "English explanation (Tamil unchanged): All four sides therefore have ",
             {
-              "latex": "\\text{length} \\sqrt{80} = 4 \\sqrt{5}",
+              "latex": "\\text{length}\\,\\sqrt{80} = 4\\,\\sqrt{5}",
               "fallback": "length √80=4√5"
             },
             "."
@@ -20554,7 +20554,7 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "900 \\sqrt{3}\\,\\mathrm{cm}^{2} \\approx 1558.8\\,\\mathrm{cm}^{2}",
+      "latex": "900\\,\\sqrt{3}\\,\\mathrm{cm}^{2} \\approx 1558.8\\,\\mathrm{cm}^{2}",
       "fallback": "900√3 cm² ≈ 1558.8 cm²",
       "display": true
     },
@@ -20582,7 +20582,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&A = \\left(\\dfrac{\\sqrt{3}}{4}\\right) \\times 60^{2}  \\\\ &= 900 \\sqrt{3}\\,\\mathrm{cm}^{2}\\end{aligned}",
+          "latex": "\\begin{aligned}&A = \\left(\\dfrac{\\sqrt{3}}{4}\\right) \\times 60^{2}  \\\\ &= 900\\,\\sqrt{3}\\,\\mathrm{cm}^{2}\\end{aligned}",
           "fallback": "A = (√3/4)×60² = 900√3 cm²",
           "display": true
         },
@@ -23363,22 +23363,22 @@ const records=[
         },
         ". The area is\n(1) ",
         {
-          "latex": "10 \\sqrt{3}\\,\\mathrm{cm}^{2}",
+          "latex": "10\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
           "fallback": "10√3 cm²"
         },
         "   (2) ",
         {
-          "latex": "12 \\sqrt{3}\\,\\mathrm{cm}^{2}",
+          "latex": "12\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
           "fallback": "12√3 cm²"
         },
         "   (3) ",
         {
-          "latex": "15 \\sqrt{3}\\,\\mathrm{cm}^{2}",
+          "latex": "15\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
           "fallback": "15√3 cm²"
         },
         "   (4) ",
         {
-          "latex": "25 \\sqrt{3}\\,\\mathrm{cm}^{2}",
+          "latex": "25\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
           "fallback": "25√3 cm²"
         }
       ],
@@ -23390,22 +23390,22 @@ const records=[
         },
         ". The area is\n(1) ",
         {
-          "latex": "10 \\sqrt{3}\\,\\mathrm{cm}^{2}",
+          "latex": "10\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
           "fallback": "10√3 cm²"
         },
         "   (2) ",
         {
-          "latex": "12 \\sqrt{3}\\,\\mathrm{cm}^{2}",
+          "latex": "12\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
           "fallback": "12√3 cm²"
         },
         "   (3) ",
         {
-          "latex": "15 \\sqrt{3}\\,\\mathrm{cm}^{2}",
+          "latex": "15\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
           "fallback": "15√3 cm²"
         },
         "   (4) ",
         {
-          "latex": "25 \\sqrt{3}\\,\\mathrm{cm}^{2}",
+          "latex": "25\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
           "fallback": "25√3 cm²"
         }
       ]
@@ -23413,7 +23413,7 @@ const records=[
     "answerMath": [
       "(4) ",
       {
-        "latex": "25 \\sqrt{3}\\,\\mathrm{cm}^{2}",
+        "latex": "25\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
         "fallback": "25√3 cm²"
       }
     ],
@@ -23441,7 +23441,7 @@ const records=[
       {
         "math": [
           {
-            "latex": "A = 25 \\sqrt{3}\\,\\mathrm{cm}^{2}",
+            "latex": "A = 25\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
             "fallback": "A=25√3 cm²"
           },
           "; correct option (4)"
@@ -30939,27 +30939,27 @@ const texts={
     ". சமமான கணங்கள்; சம கணங்கள் அல்ல."
   ],
   "√2 = √(1²×2) = 1√2": {
-    "latex": "\\sqrt{2} = \\sqrt{1^{2} \\times 2} = 1 \\sqrt{2}",
+    "latex": "\\sqrt{2} = \\sqrt{1^{2} \\times 2} = 1\\,\\sqrt{2}",
     "fallback": "√2 = √(1²×2) = 1√2"
   },
   "√8 = √(2²×2) = 2√2": {
-    "latex": "\\sqrt{8} = \\sqrt{2^{2} \\times 2} = 2 \\sqrt{2}",
+    "latex": "\\sqrt{8} = \\sqrt{2^{2} \\times 2} = 2\\,\\sqrt{2}",
     "fallback": "√8 = √(2²×2) = 2√2"
   },
   "√18 = √(3²×2) = 3√2": {
-    "latex": "\\sqrt{18} = \\sqrt{3^{2} \\times 2} = 3 \\sqrt{2}",
+    "latex": "\\sqrt{18} = \\sqrt{3^{2} \\times 2} = 3\\,\\sqrt{2}",
     "fallback": "√18 = √(3²×2) = 3√2"
   },
   "√32 = √(4²×2) = 4√2": {
-    "latex": "\\sqrt{32} = \\sqrt{4^{2} \\times 2} = 4 \\sqrt{2}",
+    "latex": "\\sqrt{32} = \\sqrt{4^{2} \\times 2} = 4\\,\\sqrt{2}",
     "fallback": "√32 = √(4²×2) = 4√2"
   },
   "√50 = √(5²×2) = 5√2": {
-    "latex": "\\sqrt{50} = \\sqrt{5^{2} \\times 2} = 5 \\sqrt{2}",
+    "latex": "\\sqrt{50} = \\sqrt{5^{2} \\times 2} = 5\\,\\sqrt{2}",
     "fallback": "√50 = √(5²×2) = 5√2"
   },
   "√72 = √(6²×2) = 6√2": {
-    "latex": "\\sqrt{72} = \\sqrt{6^{2} \\times 2} = 6 \\sqrt{2}",
+    "latex": "\\sqrt{72} = \\sqrt{6^{2} \\times 2} = 6\\,\\sqrt{2}",
     "fallback": "√72 = √(6²×2) = 6√2"
   },
   "3.2 × 10^-6": {
@@ -34145,36 +34145,36 @@ const texts={
   },
   "√75=5√3 and √48=4√3, so √75+√48=9√3.": [
     {
-      "latex": "\\sqrt{75} = 5 \\sqrt{3}",
+      "latex": "\\sqrt{75} = 5\\,\\sqrt{3}",
       "fallback": "√75=5√3"
     },
     " and ",
     {
-      "latex": "\\sqrt{48} = 4 \\sqrt{3}",
+      "latex": "\\sqrt{48} = 4\\,\\sqrt{3}",
       "fallback": "√48=4√3"
     },
     ", so ",
     {
-      "latex": "\\sqrt{75} + \\sqrt{48} = 9 \\sqrt{3}",
+      "latex": "\\sqrt{75} + \\sqrt{48} = 9\\,\\sqrt{3}",
       "fallback": "√75+√48=9√3"
     },
     "."
   ],
   "√75=5√3, √48=4√3; எனவே கூட்டல் 9√3.": [
     {
-      "latex": "\\sqrt{75} = 5 \\sqrt{3}, \\sqrt{48} = 4 \\sqrt{3}",
+      "latex": "\\sqrt{75} = 5\\,\\sqrt{3}, \\sqrt{48} = 4\\,\\sqrt{3}",
       "fallback": "√75=5√3, √48=4√3"
     },
     "; எனவே கூட்டல் ",
     {
-      "latex": "9 \\sqrt{3}",
+      "latex": "9\\,\\sqrt{3}",
       "fallback": "9√3"
     },
     "."
   ],
   "a√m+b√m=(a+b)√m.": [
     {
-      "latex": "a \\sqrt{\\mathrm{m}} + b \\sqrt{\\mathrm{m}} = \\left(a + b\\right) \\sqrt{\\mathrm{m}}",
+      "latex": "a\\,\\sqrt{\\mathrm{m}} + b\\,\\sqrt{\\mathrm{m}} = \\left(a + b\\right)\\,\\sqrt{\\mathrm{m}}",
       "fallback": "a√m+b√m=(a+b)√m"
     },
     "."
@@ -34195,7 +34195,7 @@ const texts={
     " ஐச் சுருக்குக."
   ],
   "5√3": {
-    "latex": "5 \\sqrt{3}",
+    "latex": "5\\,\\sqrt{3}",
     "fallback": "5√3"
   },
   "√39": {
@@ -34203,34 +34203,34 @@ const texts={
     "fallback": "√39"
   },
   "6√3": {
-    "latex": "6 \\sqrt{3}",
+    "latex": "6\\,\\sqrt{3}",
     "fallback": "6√3"
   },
   "√12=2√3 and √27=3√3, so the sum is 5√3.": [
     {
-      "latex": "\\sqrt{12} = 2 \\sqrt{3}",
+      "latex": "\\sqrt{12} = 2\\,\\sqrt{3}",
       "fallback": "√12=2√3"
     },
     " and ",
     {
-      "latex": "\\sqrt{27} = 3 \\sqrt{3}",
+      "latex": "\\sqrt{27} = 3\\,\\sqrt{3}",
       "fallback": "√27=3√3"
     },
     ", so the sum is ",
     {
-      "latex": "5 \\sqrt{3}",
+      "latex": "5\\,\\sqrt{3}",
       "fallback": "5√3"
     },
     "."
   ],
   "√12=2√3, √27=3√3; கூட்டல் 5√3.": [
     {
-      "latex": "\\sqrt{12} = 2 \\sqrt{3}, \\sqrt{27} = 3 \\sqrt{3}",
+      "latex": "\\sqrt{12} = 2\\,\\sqrt{3}, \\sqrt{27} = 3\\,\\sqrt{3}",
       "fallback": "√12=2√3, √27=3√3"
     },
     "; கூட்டல் ",
     {
-      "latex": "5 \\sqrt{3}",
+      "latex": "5\\,\\sqrt{3}",
       "fallback": "5√3"
     },
     "."
@@ -34309,7 +34309,7 @@ const texts={
     "fallback": "[[√5|5]]"
   },
   "5√5": {
-    "latex": "5 \\sqrt{5}",
+    "latex": "5\\,\\sqrt{5}",
     "fallback": "5√5"
   },
   "√5": {
@@ -35878,7 +35878,7 @@ const texts={
   "A useful identity is √(a+b+2√(ab))=√a+√b for a,b≥0: square the right side. Four examples: √(3+2√2)=1+√2; √(5+2√6)=√2+√3; √(7+4√3)=2+√3; √(9+4√5)=2+√5. Check by squaring each result. The original textbook typesetting of its two displayed patterns requires visual verification.": [
     "A useful identity is ",
     {
-      "latex": "\\sqrt{a + b + 2 \\sqrt{ab}} = \\sqrt{a} + \\sqrt{b}",
+      "latex": "\\sqrt{a + b + 2\\,\\sqrt{ab}} = \\sqrt{a} + \\sqrt{b}",
       "fallback": "√(a+b+2√(ab))=√a+√b"
     },
     " for ",
@@ -35888,7 +35888,7 @@ const texts={
     },
     ": square the right side. Four examples: ",
     {
-      "latex": "\\sqrt{3 + 2 \\sqrt{2}} = 1 + \\sqrt{2};\\quad \\sqrt{5 + 2 \\sqrt{6}} = \\sqrt{2} + \\sqrt{3};\\quad \\sqrt{7 + 4 \\sqrt{3}} = 2 + \\sqrt{3};\\quad \\sqrt{9 + 4 \\sqrt{5}} = 2 + \\sqrt{5}",
+      "latex": "\\sqrt{3 + 2\\,\\sqrt{2}} = 1 + \\sqrt{2};\\quad \\sqrt{5 + 2\\,\\sqrt{6}} = \\sqrt{2} + \\sqrt{3};\\quad \\sqrt{7 + 4\\,\\sqrt{3}} = 2 + \\sqrt{3};\\quad \\sqrt{9 + 4\\,\\sqrt{5}} = 2 + \\sqrt{5}",
       "fallback": "√(3+2√2)=1+√2; √(5+2√6)=√2+√3; √(7+4√3)=2+√3; √(9+4√5)=2+√5"
     },
     ". Check by squaring each result. The original textbook typesetting of its two displayed patterns requires visual verification."
@@ -35900,12 +35900,12 @@ const texts={
     },
     " எனில் ",
     {
-      "latex": "\\sqrt{a + b + 2 \\sqrt{ab}} = \\sqrt{a} + \\sqrt{b}",
+      "latex": "\\sqrt{a + b + 2\\,\\sqrt{ab}} = \\sqrt{a} + \\sqrt{b}",
       "fallback": "√(a+b+2√(ab))=√a+√b"
     },
     ". வலப்பக்கத்தை வர்க்கப்படுத்திச் சரிபார்க்கலாம். நான்கு எடுத்துக்காட்டுகள்: ",
     {
-      "latex": "\\sqrt{3 + 2 \\sqrt{2}} = 1 + \\sqrt{2};\\quad \\sqrt{5 + 2 \\sqrt{6}} = \\sqrt{2} + \\sqrt{3};\\quad \\sqrt{7 + 4 \\sqrt{3}} = 2 + \\sqrt{3};\\quad \\sqrt{9 + 4 \\sqrt{5}} = 2 + \\sqrt{5}",
+      "latex": "\\sqrt{3 + 2\\,\\sqrt{2}} = 1 + \\sqrt{2};\\quad \\sqrt{5 + 2\\,\\sqrt{6}} = \\sqrt{2} + \\sqrt{3};\\quad \\sqrt{7 + 4\\,\\sqrt{3}} = 2 + \\sqrt{3};\\quad \\sqrt{9 + 4\\,\\sqrt{5}} = 2 + \\sqrt{5}",
       "fallback": "√(3+2√2)=1+√2; √(5+2√6)=√2+√3; √(7+4√3)=2+√3; √(9+4√5)=2+√5"
     },
     ". ஒவ்வொன்றையும் வர்க்கப்படுத்துக. பாடநூலின் அச்சுக் கோலங்களைப் படம் மூலம் மீண்டும் சரிபார்க்க வேண்டும்."
@@ -35947,7 +35947,7 @@ const texts={
     },
     ". For side ",
     {
-      "latex": "3, d = \\sqrt{3^{2} + 3^{2}} = \\sqrt{18} = 3 \\sqrt{2}",
+      "latex": "3, d = \\sqrt{3^{2} + 3^{2}} = \\sqrt{18} = 3\\,\\sqrt{2}",
       "fallback": "3, d=√(3²+3²)=√18=3√2"
     },
     ". Equally, moving across ",
@@ -35957,7 +35957,7 @@ const texts={
     },
     " unit squares along the diagonal gives ",
     {
-      "latex": "\\sqrt{2} + \\sqrt{2} + \\sqrt{2} = 3 \\sqrt{2}",
+      "latex": "\\sqrt{2} + \\sqrt{2} + \\sqrt{2} = 3\\,\\sqrt{2}",
       "fallback": "√2+√2+√2=3√2"
     },
     ". Both methods agree."
@@ -35980,12 +35980,12 @@ const texts={
     },
     " எனில் ",
     {
-      "latex": "d = \\sqrt{3^{2} + 3^{2}} = \\sqrt{18} = 3 \\sqrt{2}",
+      "latex": "d = \\sqrt{3^{2} + 3^{2}} = \\sqrt{18} = 3\\,\\sqrt{2}",
       "fallback": "d=√(3²+3²)=√18=3√2"
     },
     ". மூன்று அலகுச் சதுரங்களின் மூலைவிட்டம் வழியாகவும் ",
     {
-      "latex": "\\sqrt{2} + \\sqrt{2} + \\sqrt{2} = 3 \\sqrt{2}",
+      "latex": "\\sqrt{2} + \\sqrt{2} + \\sqrt{2} = 3\\,\\sqrt{2}",
       "fallback": "√2+√2+√2=3√2"
     },
     ". இரு முறைகளிலும் ஒரே விடை."
@@ -35998,7 +35998,7 @@ const texts={
     },
     " and ",
     {
-      "latex": "\\sqrt{12} = 2 \\sqrt{3}",
+      "latex": "\\sqrt{12} = 2\\,\\sqrt{3}",
       "fallback": "√12=2√3"
     },
     " rationalise ",
@@ -36023,7 +36023,7 @@ const texts={
     },
     " works. For ",
     {
-      "latex": "\\dfrac{\\left(5 \\sqrt{7}\\right)}{3}, \\sqrt{7}",
+      "latex": "\\dfrac{\\left(5\\,\\sqrt{7}\\right)}{3}, \\sqrt{7}",
       "fallback": "(5√7)/3, √7"
     },
     " gives the rational product ",
@@ -36046,7 +36046,7 @@ const texts={
     },
     " மற்றும் ",
     {
-      "latex": "\\sqrt{12} = 2 \\sqrt{3}",
+      "latex": "\\sqrt{12} = 2\\,\\sqrt{3}",
       "fallback": "√12=2√3"
     },
     " இரண்டும் விகிதமுறுக் காரணிகள்; ",
@@ -36056,7 +36056,7 @@ const texts={
     },
     ". பூச்சியமல்லாத விகிதமுறு மடங்குகளும் உதவும். ",
     {
-      "latex": "\\dfrac{\\left(5 \\sqrt{7}\\right)}{3}",
+      "latex": "\\dfrac{\\left(5\\,\\sqrt{7}\\right)}{3}",
       "fallback": "(5√7)/3"
     },
     "-க்கு ",
@@ -37455,7 +37455,7 @@ const texts={
     },
     ". The perpendicular at their join has ",
     {
-      "latex": "\\text{length} \\sqrt{n}",
+      "latex": "\\text{length}\\,\\sqrt{n}",
       "fallback": "length √n"
     },
     " by the geometric-mean theorem, giving the required point on a number line."
@@ -37610,7 +37610,7 @@ const texts={
   "Multiply the numerator and denominator by 3+2√2.": [
     "Multiply the numerator and denominator by ",
     {
-      "latex": "3 + 2 \\sqrt{2}",
+      "latex": "3 + 2\\,\\sqrt{2}",
       "fallback": "3+2√2"
     },
     "."

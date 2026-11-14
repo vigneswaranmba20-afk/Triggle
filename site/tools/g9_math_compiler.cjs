@@ -72,7 +72,7 @@ function expression(source,{display=false}={}){
   }return base;
  }
  function unary(){if(['+','-','−','–','±','≈'].includes(peek())){const t=take();return node((ops[t]|| (t==='±'?'\\pm':t))+' '+unary().latex);}return power();}
- function juxtapose(){let v=unary();while(begins(peek())){if(v.kind==='number'&&/^\d/.test(peek()))throw Error('Adjacent data values retain their source spacing');const r=unary();v=node(v.latex+(r.kind==='unit'?'\\,':' ')+r.latex,'product');}return v;}
+ function juxtapose(){let v=unary();while(begins(peek())){if(v.kind==='number'&&/^\d/.test(peek()))throw Error('Adjacent data values retain their source spacing');const r=unary();v=node(v.latex+(['unit','root'].includes(r.kind)?'\\,':' ')+r.latex,'product');}return v;}
  function product(){let v=juxtapose();while(['/','×','÷'].includes(peek())){const t=take(),r=juxtapose();v=t==='/'?node('\\dfrac{'+v.latex+'}{'+r.latex+'}','fraction'):node(v.latex+' '+ops[t]+' '+r.latex);}while(units.has(peek())){const unit=power();v=node(v.latex+'\\,'+unit.latex,'quantity');}return v;}
  function sum(){let v=product();while(['+','-','−','–','±','∪','∩'].includes(peek())){const t=take();v=node(v.latex+' '+(ops[t]||(t==='±'?'\\pm':t))+' '+product().latex);}return v;}
  function relation(){let v=sum();while(['=','<','>','≤','≥','≠','≈','⇒','∈','∉','⊂','⊆','≅'].includes(peek())){const t=take();v=node(v.latex+' '+(ops[t]||t)+' '+sum().latex);}return v;}

@@ -6,6 +6,7 @@ const page=await browser.newPage({viewport:{width:320,height:852},serviceWorkers
 async function check(label){await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>window.TriggleNotation.prepare(document));
  assert.equal(await page.locator('[data-math-error]').count(),0,label+' valid notation');
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),label+' no page overflow');
+ const clipped=await page.locator('.triggle-tex').evaluateAll(nodes=>nodes.filter(el=>el.getClientRects().length&&el.clientHeight+1<el.querySelector('.katex-html').getBoundingClientRect().height).length);assert.equal(clipped,0,label+' no clipped formula glyphs');
 }
 for(const width of [320,360,393,430]){await page.setViewportSize({width,height:852});
 for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
