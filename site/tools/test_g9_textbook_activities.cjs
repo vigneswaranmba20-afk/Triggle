@@ -33,7 +33,8 @@ assert(!file.includes('sp2-sticky-context'),'Concept questions must not use floa
 assert(file.includes('sp2-concept-question'),'Concept questions are placed next to their answer choices');
 assert(file.includes("esc((index+1)+'. '+pick(stage.title,lang))"),'Concept title is visibly numbered');
 assert(file.includes("data-footer-next")&&file.includes("t.nextPage"),'End of concept contains a next page action');
-assert(file.includes("t.backChapter")&&file.includes("typeof onBack==='function'"),'Final page provides working chapter return callback');
+assert(file.includes("t.backConcepts")&&file.includes("showIndex(true)"),'Final idea returns to the Concepts index');
+assert(file.includes("data-back-index"),'Every concept lesson includes a Back to concepts action');
 for(const label of ['Descriptive Form','Roster Form','Set-Builder Form'])assert(file.includes(label),'Textbook representation: '+label);
 assert(file.includes('data-slider-formula')&&file.includes('aria-valuetext'),'Overlap slider explains its result accessibly');
 assert(file.includes('data-overlap-decrease')&&file.includes('data-overlap-increase'),'Slider has precise accessible step buttons');

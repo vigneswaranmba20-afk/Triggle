@@ -203,11 +203,11 @@
             article.append(heading,idea,example,rule,source);panel.append(article);
           }
         }else{
-          window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null));
+          window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }
         // Textbook Thinking Corners and Activities are a separate chapter destination,
         // not a repeated appendix on the Concepts page.
-        if(Number.isInteger(initialConcept)&&initialConcept>=0){
+        if(chapter.id!=='g9-ch1'&&Number.isInteger(initialConcept)&&initialConcept>=0){
           const target=panel.querySelector('.sp2-nav [data-index="'+initialConcept+'"]');
           if(target)target.click();
         }

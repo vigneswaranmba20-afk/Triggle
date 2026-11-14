@@ -68,30 +68,34 @@ async function main(){
     });
     await check(c,'Interactive lesson stages available','interactivity',async()=>{
      await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
-     const picker=page.locator('#chapterOverview [data-idea-picker]');
-     if(config.chapter==='g9-ch1')await picker.click();
+     if(config.chapter==='g9-ch1'){
+       assert.equal(await page.locator('[data-index-view]').isVisible(),true,'Concepts opens index');
+       assert.equal(await page.locator('[data-detail-view]').isVisible(),false,'Lesson hidden until selection');
+       assert.equal(await page.locator('[data-idea-picker]').count(),0,'No dropdown');
+     }
      await page.locator('#chapterOverview .sp2-journey [data-nav] button').first().waitFor({state:'visible'});
      const count=await page.locator('#chapterOverview .sp2-journey [data-nav] button').count();
      assert.equal(count,config.expected);
-     if(config.chapter==='g9-ch1')await picker.click();
      return count+' stages';
     });
     const lab=page.locator('#chapterOverview .sp2-journey');
     if(!await lab.isVisible())continue;
     const selectStage=async index=>{
-      if(config.chapter==='g9-ch1')await lab.locator('[data-idea-picker]').click();
+      if(config.chapter==='g9-ch1'&&await lab.locator('[data-detail-view]').isVisible())
+        await lab.locator('[data-back-index]').click();
       await lab.locator('[data-nav] button').nth(index).click();
     };
     await check(c,'Discoverable previous/next controls reach all concepts','navigation',async()=>{
      const index=lab.locator('[data-journey-index]');
      if(config.chapter==='g9-ch1'){
+       await selectStage(0);
        const prev=lab.locator('[data-footer-prev]'),next=lab.locator('[data-footer-next]');
        assert.equal(await prev.isDisabled(),true);
        assert.ok((await index.innerText()).includes('1'));
        await next.click();assert.ok((await index.innerText()).includes('2'));
        await prev.click();assert.ok((await index.innerText()).includes('1'));
        for(let n=1;n<config.expected;n++)await next.click();
-       assert.ok((await next.innerText()).includes(lang==='ta'?'அத்தியாயம் 1':'Chapter 1'));
+       assert.ok((await next.innerText()).includes(lang==='ta'?'கருத்துகளுக்குத் திரும்பு':'Back to concepts'));
        assert.equal(await lab.locator('[data-nav] button[aria-current="step"]').count(),1);
        await selectStage(0);
      }else{
@@ -208,9 +212,10 @@ async function main(){
        await button.click();
        assert.ok((await lab.locator('[data-journey-index]').innerText()).includes('2'));
        await selectStage(6);
-       assert.ok((await button.innerText()).includes(lang==='ta'?'அத்தியாயம் 1':'Chapter 1'));
+       assert.ok((await button.innerText()).includes(lang==='ta'?'கருத்துகளுக்குத் திரும்பு':'Back to concepts'));
        await button.click();
-       assert.equal(await page.locator('.hub-section-card').count(),4);
+       assert.equal(await lab.locator('[data-index-view]').isVisible(),true,'Last idea returns to index');
+       assert.equal(await page.locator('.hub-section-card').count(),0,'Still in Concepts section');
       });
     }
     await check(c,'Chapter activities and thinking corners open with answers','textbook',async()=>{

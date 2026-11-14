@@ -13,24 +13,30 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
  await page.goto(app.base+'/index.html?class=9&chapter=g9-ch'+chapter+'&section=concepts');await page.locator(lang==='en'?'#langEn':'#langTa').click();
  const nav=await page.locator('.sp2-nav [data-index]').count();
  if(chapter===1){
-  assert.equal(nav,7,'Seven concepts remain accessible');
-  assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'false','Idea menu starts collapsed');
-  const first=await page.locator('.sp2-concept-heading').boundingBox();
-  assert(first&&first.y>=0&&first.y<=page.viewportSize().height*.7,'First maths concept is above the fold '+width+' '+lang+' at '+first?.y);
+  assert.equal(nav,7,'All seven concepts remain available on the index');
+  assert.equal(await page.locator('[data-index-view]').isVisible(),true,'Concepts opens the index');
+  assert.equal(await page.locator('[data-detail-view]').isVisible(),false,'No detail before selection');
+  assert.equal(await page.locator('[data-idea-picker]').count(),0,'Dropdown is removed');
+  assert.equal(await page.locator('.sp2-nav-button:visible').count(),7);
   if(width===360||width===393){
    const directory=path.resolve('screenshots/g9-compact-concepts');
    await fs.mkdir(directory,{recursive:true});
-   await page.screenshot({path:path.join(directory,'first-fold-'+width+'-'+lang+'.png'),fullPage:false});
+   await page.screenshot({path:path.join(directory,'index-'+width+'-'+lang+'.png'),fullPage:false});
   }
  }
  for(let index=0;index<Math.max(nav,1);index++){
   if(nav){
-   if(chapter===1){
-    await page.locator('[data-idea-picker]').click();
-    assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'true');
-   }
+   if(chapter===1 && await page.locator('[data-detail-view]').isVisible())
+     await page.locator('[data-back-index]').click();
    await page.locator('.sp2-nav [data-index]').nth(index).click();
-   if(chapter===1)assert.equal(await page.locator('[data-idea-picker]').getAttribute('aria-expanded'),'false');
+   if(chapter===1){
+     assert.equal(await page.locator('[data-detail-view]').isVisible(),true);
+     assert.equal(await page.locator('[data-index-view]').isVisible(),false);
+     assert.equal(new URL(page.url()).searchParams.get('concept'),String(index),'Lesson deep link identifies the selected idea');
+     const back=await page.locator('[data-back-index]').boundingBox();
+     assert(back&&back.y>=0&&back.y+back.height<=page.viewportSize().height,
+       'Back to concepts must remain in the initial lesson viewport '+width+' '+lang);
+   }
   }
   await check(chapter+'/'+index+' '+lang+' '+width);
   if(chapter===1&&index===6){
@@ -39,19 +45,21 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
   }
   if(chapter===1){
    const layout=await page.locator('.sp2-journey').evaluate(el=>{
-    const css=getComputedStyle(el),nav=el.querySelector('[data-idea-picker]');
+    const css=getComputedStyle(el),nav=el.querySelector('[data-back-index]');
     const heading=el.querySelector('.sp2-concept-heading h4'),panel=el.querySelector('.sp2-panel');
     return {padding:parseFloat(css.paddingLeft),navHeight:nav?.getBoundingClientRect().height,
       headingVisible:!!heading?.getClientRects().length,panelVisible:!!panel?.getClientRects().length,
       viewportWidth:document.documentElement.clientWidth};
    });
    assert(layout.padding<=14,'Compact concepts padding '+width+' '+lang);
-   assert(layout.navHeight>=44,'Concept navigation touch height '+width+' '+lang);
+   assert(layout.navHeight>=44,'Back to concepts touch height '+width+' '+lang);
    assert(layout.headingVisible&&layout.panelVisible,'Concept heading and lesson remain visible '+width+' '+lang);
+   assert.equal(await page.locator('.hub-back-menu').isVisible(),false,'No second Back button inside lesson');
    if(index===1){
     const alternate=lang==='en'?'#langTa':'#langEn';
     await page.locator(alternate).click();
-    assert.equal(await page.locator('.sp2-nav [aria-current="step"]').getAttribute('data-index'),'1','Active concept survives language switch');
+    assert.equal(await page.locator('[data-detail-view]').isVisible(),true,'Lesson remains open after switching language');
+    assert.equal(new URL(page.url()).searchParams.get('concept'),'1','Concept deep link persists through language switch');
     await page.locator(lang==='en'?'#langEn':'#langTa').click();
     assert.equal(await page.locator('.sp2-nav [aria-current="step"]').getAttribute('data-index'),'1','Restoring language preserves concept');
    }
