@@ -70,7 +70,7 @@
       '<button type="button" class="sp2-back-index" data-back-index>'+esc('← '+t.backConcepts)+'</button>'+
       '<span data-journey-index role="status" aria-live="polite"></span></div>'+
       '<div class="sp2-panel" data-panel></div>'+
-      '<nav class="sp2-journey-footer" aria-label="'+esc(t.select)+'">'+
+      '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+esc(t.select)+'">'+
       '<button type="button" class="sp2-footer-prev" data-footer-prev>'+esc('← '+t.previousIdea)+'</button>'+
       '<button type="button" class="sp2-footer-next" data-footer-next></button></nav></div>';
     container.append(root);
