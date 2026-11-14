@@ -53,30 +53,10 @@
       };
       controls.addEventListener('click',e=>{if(e.target.closest('[data-demo-mode]'))paint()});
       paint();
-      const detective=el('section','lc-detective');
-      detective.setAttribute('aria-label',t.detective);
-      detective.append(el('p','lc-tag',t.detective),el('h5','',t.question));
-      const choices=el('div','lc-rules');
-      choices.setAttribute('role','group');choices.setAttribute('aria-label',t.question);
-      for(const [id,label] of [['subjective',t.subjective],['objective',t.objective]]){
-        const button=el('button','',label);
-        button.type='button';
-        button.dataset.lcRule=id;
-        button.setAttribute('aria-pressed','false');
-        choices.append(button);
-      }
-      const result=el('p','lc-rule-feedback');
-      result.hidden=true;result.dataset.lcRuleFeedback='';
-      result.setAttribute('role','status');result.setAttribute('aria-live','polite');
-      choices.addEventListener('click',e=>{
-        const button=e.target.closest('[data-lc-rule]');if(!button)return;
-        choices.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
-        const correct=button.dataset.lcRule==='objective';
-        result.hidden=false;result.dataset.correct=String(correct);
-        result.textContent=correct?t.right:t.wrong;
-      });
-      detective.append(choices,result);
-      lab.insertAdjacentElement('afterend',detective);
+      // The canonical textbook quick check below doubles as Rule Detective:
+      // no duplicate quiz, and successful answers still update saved progress.
+      panel.querySelector('.sp2-recall')?.classList.add('lc-detective');
+
     }else if(stage.visual==='count'){
       const wrap=el('div','lc-count');
       wrap.innerHTML='<p class="lc-tag">'+t.groups+'</p>'+
