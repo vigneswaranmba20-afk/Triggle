@@ -88,3 +88,12 @@
   .chapter-hub .lc-scene{max-height:212px}
   .chapter-hub .lc-equation{font-size:16px}
 }
+
+/* In membership, the active question is the only instruction and the
+   verified Rule Detective question needs no redundant "Current question" label. */
+.chapter-hub .sp2-journey [data-living-concept="membership"] .sp2-demo-title,
+.chapter-hub .sp2-journey [data-living-concept="membership"] .sp2-question-label{
+  display:none
+}
+/* Membership status must switch immediately when an inside/outside choice changes. */
+.chapter-hub .lc-node{transition:none!important}
