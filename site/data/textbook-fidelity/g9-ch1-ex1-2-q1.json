@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": "1",
+  "exercise": "1.2",
+  "question": "1",
+  "sourceEdition": "2025 revised",
+  "english": {
+    "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 11,
+    "pdfPage": 17,
+    "sourceVisualStatus": "English Q1 source page reviewed in historical PR #129",
+    "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md"
+  },
+  "tamil": {
+    "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+    "printedPage": 13,
+    "pdfPage": 19,
+    "sourceVisualStatus": "current text extraction cross-checked; Tamil source image and editorial review not certified",
+    "translationReview": "deferred"
+  },
+  "partIds": [
+    "g9-ch1-ex1.2-q1-i",
+    "g9-ch1-ex1.2-q1-ii",
+    "g9-ch1-ex1.2-q1-iii",
+    "g9-ch1-ex1.2-q1-iv",
+    "g9-ch1-ex1.2-q1-v"
+  ],
+  "mathAmbiguities": [
+    {
+      "part": "iii",
+      "printedInterpretation": "4 divided by (3n)",
+      "latex": "\\dfrac{4}{3n}",
+      "pdfExtractionIssue": "Plain PDF text linearizes the stacked fraction incorrectly"
+    }
+  ],
+  "releaseScope": "English-only Q1(i–v) source-aligned student lessons; does not claim all Exercise 1.2 or Grade 9 complete"
+}
