@@ -62,6 +62,32 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
    }
   }
   await check(chapter+'/'+index+' '+lang+' '+width);
+  if(chapter===2){
+   const beats=page.locator('.rnlab-foundation-tabs [data-foundation-step]');
+   const expected=[3,4,3,3,4,3,4,3][index];
+   assert.equal(await beats.count(),expected,'Real Numbers learning beats '+index+' '+lang+' '+width);
+   const active=page.locator('.rnlab-foundation-tabs [aria-pressed="true"]');
+   assert.equal(await active.count(),1,'exactly one foundation step selected');
+   const before=await page.locator('[data-foundation-current]').innerText();
+   await beats.last().click();
+   assert.equal(await page.locator('.rnlab-foundation-tabs [aria-pressed="true"]').count(),1);
+   const after=await page.locator('[data-foundation-current]').innerText();
+   assert.notEqual(after,before,'tapping a learning step changes its explanation');
+   assert(await page.locator('.rnlab-foundation-equation').count()===1,'one mathematical display');
+   assert(await page.locator('.rnlab-pitfall').count()===1,'one optional misconception');
+   await check('Real Numbers foundation '+index+' '+lang+' '+width);
+   const geometry=await page.locator('.rnlab-foundation-equation').evaluate(el=>({
+    elementWidth:el.getBoundingClientRect().width,pageWidth:document.documentElement.clientWidth,
+    allowedScroll:el.scrollWidth>=el.clientWidth
+   }));
+   assert(geometry.elementWidth<=geometry.pageWidth+1,'math remains within phone width');
+   if(index===2){
+     const zoom=page.locator('.sp2-panel input[type="range"]');
+     await zoom.evaluate(el=>{el.value='3';el.dispatchEvent(new Event('input',{bubbles:true}));});
+     assert((await page.locator('[data-demo-output]').innerText()).includes('1.414'),'zoom to third decimal works');
+   }
+   if(index===4)assert.equal(await page.locator('[data-demo-visual] svg rect').count(),9,'surds visualize a 3×3 square factor');
+  }
   if(chapter===1){
    assert.equal(await page.locator('.sp2-explanation').count(),1,'Textbook meaning is available on demand');
    assert.equal(await page.locator('.sp2-explanation').evaluate(el=>el.open),false,'Discover first, explain second');
