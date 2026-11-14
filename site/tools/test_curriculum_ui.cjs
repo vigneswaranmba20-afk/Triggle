@@ -6,6 +6,11 @@ const http = require('node:http');
 const path = require('node:path');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
+async function selectSetIdea(journey,index){
+  const picker=journey.locator('[data-idea-picker]');
+  await picker.click();
+  await journey.locator('[data-nav] [data-index="'+index+'"]').click();
+}
 // Fidelity assertions read the preserved authored text, while the dedicated
 // typography suites check the visible glyphs and semantic fraction structure.
 const sourceText=locator=>locator.evaluate(node=>{
@@ -573,7 +578,7 @@ async function main() {
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
       assert.equal(await page.locator('.textbook-extra').count(),0,'No repeated activity list beneath concepts');
       await page.locator('.sp2-journey').waitFor({state:'visible'});
-      await page.locator('.sp2-journey [data-nav] [data-index="5"]').click();
+      await selectSetIdea(page.locator('.sp2-journey'),5);
       assert.ok((await page.locator('.sp2-panel h4').innerText()).includes('De Morgan'));
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
@@ -1085,7 +1090,7 @@ async function main() {
     await check('Phase 2 bilingual Set Language micro-lab works without leaving the chapter', async () => {
       const page = await visit(await context(320), '/index.html?class=9&chapter=g9-ch1');
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
-      await page.locator('.sp2-journey [data-nav] button').nth(3).click();
+      await selectSetIdea(page.locator('.sp2-journey'),3);
       assert.equal(await page.locator('#chapterOverview .p2-lab').count(),0,'Venn lab must open only when requested');
       await page.locator('.sp2-journey [data-demo-mode="go"]').click();
       const lab = page.locator('#chapterOverview .p2-lab');
@@ -1106,7 +1111,7 @@ async function main() {
       assert.ok((await lab.locator('[data-reasoning]').innerText()).includes('20 − 16 = 4'));
       assert.equal(await lab.locator('[data-next-reason]').isVisible(), false);
       await page.locator('#langTa').click();
-      await page.locator('.sp2-journey [data-nav] button').nth(3).click();
+      await selectSetIdea(page.locator('.sp2-journey'),3);
       await page.locator('.sp2-journey [data-demo-mode="go"]').click();
       await lab.waitFor({state:'visible'});
       assert.ok((await lab.locator('h3').first().innerText()).includes('கண மொழி'));
@@ -1153,19 +1158,19 @@ async function main() {
       assert.ok((await journey.locator('[data-feedback]').innerText()).includes('same rule'));
       await journey.locator('[data-answers] [data-choice="1"]').click();
       assert.ok((await journey.locator('[data-progress]').innerText()).includes('1 / 7'));
-      await journey.locator('[data-nav] [data-index="1"]').click();
+      await selectSetIdea(journey,1);
       await journey.locator('[data-demo-mode="builder"]').click();
       assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('x < 10'));
-      await journey.locator('[data-nav] [data-index="2"]').click();
+      await selectSetIdea(journey,2);
       await journey.locator('[data-demo-mode="subset"]').click();
       assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('⊂'));
-      await journey.locator('[data-nav] [data-index="4"]').click();
+      await selectSetIdea(journey,4);
       await journey.locator('[data-demo-mode="distributive"]').click();
       assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('{2}'));
-      await journey.locator('[data-nav] [data-index="5"]').click();
+      await selectSetIdea(journey,5);
       await journey.locator('[data-demo-mode="intersection"]').click();
       assert.ok((await sourceText(journey.locator('[data-demo-output]'))).includes('{1, 2, 4, 5, 6}'));
-      await journey.locator('[data-nav] [data-index="6"]').click();
+      await selectSetIdea(journey,6);
       await journey.locator('input[type="range"]').evaluate(el=>{
         el.value='9';el.dispatchEvent(new Event('input',{bubbles:true}));
       });
@@ -1183,8 +1188,8 @@ async function main() {
       assert.equal(await journey.locator('[data-hard-steps] li').count(),6);
       assert.ok((await sourceText(journey.locator('[data-hard-steps]'))).includes('21 people'));
       await page.locator('#langTa').click();
-      assert.ok((await journey.locator('h3').first().innerText()).includes('கண மொழி'));
-      await journey.locator('[data-nav] [data-index="5"]').click();
+      assert.match(await journey.locator('.sp2-concept-heading h4').innerText(),/[\u0B80-\u0BFF]/,'Tamil concept heading remains readable');
+      await selectSetIdea(journey,5);
       assert.ok((await journey.locator('.sp2-stage-reference').innerText()).includes('தமிழ் பக்கம் 26'));
       await journey.locator('[data-answers] [data-choice="1"]').click();
       assert.ok((await journey.locator('[data-progress]').innerText()).includes('2 / 7'));
@@ -1205,13 +1210,13 @@ async function main() {
       const journey=page.locator('.sp2-journey');
       await journey.waitFor({state:'visible'});
       assert.equal(await journey.locator('.p2-lab').count(),0,'Lab must stay optional even offline');
-      await journey.locator('[data-nav] [data-index="3"]').click();
+      await selectSetIdea(journey,3);
       await journey.locator('[data-demo-mode="go"]').click();
       const lab=journey.locator('.p2-lab');
       await lab.waitFor({state:'visible'});
       await lab.locator('[data-op="neither"]').click();
       assert.equal(await lab.locator('[data-result-set]').innerText(),'{7, 8}');
-      await journey.locator('[data-nav] [data-index="6"]').click();
+      await selectSetIdea(journey,6);
       assert.ok((await sourceText(journey.locator('.sp2-formula'))).includes('n(A ∪ B)'));
       await ctx.setOffline(false);
     });
