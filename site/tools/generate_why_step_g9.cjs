@@ -157,23 +157,163 @@ function picture(item,choice){
    return {type:'coordinates',generic:true};
  if(ch==='6'&&['trigSides','trigRatio','pythagoras'].includes(choice.key))
    return {type:'triangle',generic:true};
- if(ch==='7'&&['heron','triangleArea'].includes(choice.key))
-   return {type:'triangle',generic:true};
+ if(ch==='7'&&choice.key==='triangleArea')
+   return {type:'triangle',generic:true,mode:'altitude'};
  if(ch==='9'&&/fair\s+(?:die|dice)|rolling? a die|throw.*die|die is thrown/i.test(q)&&choice.key==='countOutcomes')
    return {type:'dice',outcomes:[1,2,3,4,5,6]};
  return null;
 }
+const OVERRIDES={
+  "c9-exercise-6-2-q2-i": [
+    "The six trigonometric ratios are not independent numbers. Start with the given angle or triangle, identify each ratio, and substitute only after confirming the side order.",
+    "ஆறு முக்கோணவியல் விகிதங்களும் தனித்த எண்கள் அல்ல. கொடுக்கப்பட்ட கோணம் அல்லது முக்கோணத்தில் ஒவ்வொரு விகிதத்தையும் கண்ட பிறகே பதிலிடவும்."
+  ],
+  "c9-exercise-6-2-q2-ii": [
+    "A complement of an angle is what remains to make 90°. Sine of an angle equals cosine of its complement, allowing matching terms to simplify.",
+    "ஒரு கோணத்தின் நிரப்புக் கோணத்துடன் சேர்த்து 90° கிடைக்கும். ஒரு கோணத்தின் சைன் அதன் நிரப்புக் கோணத்தின் கோசைனுக்குச் சமம்."
+  ],
+  "c9-exercise-6-5-q8": [
+    "When two angles add to 90°, the sine of either is the cosine of the other. Recognising these matching pairs reveals which terms cancel.",
+    "இரண்டு கோணங்களின் கூடுதல் 90° என்றால் ஒன்றின் சைன் மற்றொன்றின் கோசைன். சமமான உறுப்புகளைக் கண்டால் எவை நீங்குகின்றன என்பது தெளிவாகும்."
+  ],
+  "g9-ch2-ex2-q2": [
+    "In long division the repeating block can begin with zeros. Keep every digit of the remainder cycle; omitting a leading zero changes the represented fraction.",
+    "நெடுவகுத்தலில் திரும்பும் இலக்கத் தொகுதி பூஜ்ஜியத்துடன் தொடங்கலாம். சுழற்சியின் எந்த இலக்கத்தையும் விடக்கூடாது; ஆரம்பப் பூஜ்ஜியத்தை நீக்கினால் மதிப்பு மாறலாம்."
+  ],
+  "g9-ch2-ex6-q3-ii": [
+    "Look for the greatest perfect-square factor inside each root. Taking its square root outside leaves a smaller radical that matches the supplied approximate values.",
+    "ஒவ்வொரு மூலத்தின் உள்ளேயும் நிறைவர்க்கக் காரணியைத் தேடுங்கள். அதன் மூலத்தை வெளியே எடுத்தால் கொடுக்கப்பட்ட தோராய மதிப்புகளுடன் பொருத்தலாம்."
+  ],
+  "g9-ch2-ex6-q5-i": [
+    "A pure surd has no coefficient other than one in front of the radical. A mixed surd has an additional numerical coefficient; the expressions can represent equal values in different forms.",
+    "தூய முறுடில் மூலக்குறிக்கு முன் ஒன்றைத் தவிர வேறு கெழு இல்லை. கலப்பு முறுடில் கூடுதல் எண் கெழு இருக்கும்; இரு வடிவங்களின் மதிப்பு சமமாக இருக்கலாம்."
+  ],
+  "g9-ch2-ex6-q5-ii": [
+    "A mixed surd shows a numerical factor outside the root. Move that factor inside using its matching power when the textbook asks for pure-surd form.",
+    "கலப்பு முறுடில் மூலத்திற்கு வெளியே ஒரு எண் காரணியாக இருக்கும். தூய முறுடாக மாற்றும்போது அந்தக் காரணியை உரிய அடுக்காக மூலத்திற்குள் கொண்டு செல்லவும்."
+  ],
+  "g9-ch2-ex9-q4": [
+    "A fraction in lowest terms has a terminating decimal exactly when its denominator has no prime factors other than two or five.",
+    "சுருக்கிய பின்னத்தின் பகுதியில் 2 மற்றும் 5 ஆகிய பகாக்காரணிகள் மட்டுமே இருந்தால் அதன் தசமம் முடிவுறும்."
+  ],
+  "g9-ch2-ex9-q6": [
+    "To compare square roots with positive bounds, square the bounds and compare with the radicand. This avoids rounding the roots too early.",
+    "நேர்ம எல்லைகளுடன் வர்க்கமூலத்தை ஒப்பிட, எல்லைகளை வர்க்கமிட்டு மூலத்திற்குள் உள்ள எண்ணுடன் ஒப்பிடுங்கள். இவ்வாறு முன்கூட்டியே தோராயப்படுத்த வேண்டாம்."
+  ],
+  "g9-ch2-ex9-q7": [
+    "To obtain one decimal place, the final simplified denominator should divide ten. Check each offered multiplier by first cancelling common factors.",
+    "ஒரு தசம இடத்தில் முடிவதற்கு சுருக்கிய பின்னத்தின் பகுதி பத்தை வகுக்க வேண்டும். ஒவ்வொரு பெருக்கியிலும் பொதுக்காரணிகளை முதலில் நீக்கிப் பாருங்கள்."
+  ],
+  "g9-ch2-ex9-q8": [
+    "Multiplying a repeating decimal changes where its recurring digits start. Keep the full repeating block; an answer that simply stops after six digits is not exact.",
+    "சுழற்சித் தசமத்தைப் பெருக்கும்போது திரும்பும் இலக்கத் தொகுதியின் தொடக்கம் மாறலாம். ஆறு இலக்கங்களுடன் நிறுத்துவது சரியான முழு விடை அல்ல."
+  ],
+  "g9-ch2-ex9-q10": [
+    "A recurring decimal can be converted into a fraction by subtracting shifted copies of it. This removes the repeating part and permits exact addition.",
+    "சுழற்சித் தசமத்தைத் தகுந்த அடுக்கால் பெருக்கி வேறுபாட்டைக் கண்டால் திரும்பும் பகுதி நீங்கும். அப்போது துல்லியமான பின்னக் கூட்டல் செய்யலாம்."
+  ],
+  "g9-ch2-ex9-q11": [
+    "The symbol for the principal square root gives the nonnegative value only. The equation saying a number squared equals 25 has two solutions, but the radical symbol has one principal value.",
+    "முதன்மை வர்க்கமூலக் குறி எதிர்மமற்ற மதிப்பை மட்டுமே குறிக்கும். ஒரு எண்ணின் வர்க்கம் 25 என்ற சமன்பாட்டுக்கு இரண்டு விடைகள் இருக்கலாம்; ஆனால் மூலக்குறியின் முதன்மை மதிப்பு ஒன்றே."
+  ],
+  "g9-ch2-ex9-q13": [
+    "First simplify each radical by extracting perfect-square factors. Once both contain the same radical, add their numerical coefficients rather than their radicands.",
+    "முதலில் நிறைவர்க்கக் காரணிகளை வெளியே எடுத்து மூலங்களை எளிமைப்படுத்துங்கள். ஒரே மூலம் வந்த பின் அதன் கெழுக்களைக் கூட்ட வேண்டும்; மூல எண்களைக் கூட்டக்கூடாது."
+  ],
+  "g9-ch2-ex9-q14": [
+    "Rewrite the radicand as a perfect square times five. Only the perfect-square root becomes the coefficient multiplying the remaining square root.",
+    "மூல எண்ணை ஒரு நிறைவர்க்கம் மற்றும் ஐந்து ஆகியவற்றின் பெருக்கலாக எழுதுங்கள். நிறைவர்க்கத்தின் மூலம்தான் வெளியே கெழுவாக வரும்."
+  ],
+  "g9-ch2-ex9-q15": [
+    "Multiply the coefficients with each other and the radicands with each other. Do not add unlike square roots during multiplication.",
+    "கெழுக்களை ஒன்றுடன் ஒன்று பெருக்கவும்; மூல எண்களை ஒன்றுடன் ஒன்று பெருக்கவும். பெருக்கும்போது வேறுபட்ட மூலங்களை கூட்ட வேண்டாம்."
+  ],
+  "g9-ch2-ex9-q16": [
+    "Rationalising a denominator means multiplying both numerator and denominator by a suitable radical so the denominator becomes rational. The fraction's value stays unchanged.",
+    "பகுதியை விகிதப்படுத்த தொகுதியையும் பகுதியையும் பொருத்தமான மூலத்தால் பெருக்குகிறோம். இதனால் பகுதி விகிதமுறு எண்ணாகும்; பின்னத்தின் மதிப்பு மாறாது."
+  ],
+  "g9-ch2-ex9-q17": [
+    "Squaring a difference produces the square of the first term, minus twice the product, plus the square of the second term. The middle term is essential.",
+    "வேறுபாட்டின் வர்க்கத்தில் முதல் உறுப்பின் வர்க்கம், இருமடங்கு பெருக்கலின் எதிர்மம், இரண்டாம் உறுப்பின் வர்க்கம் ஆகியவை வரும். நடு உறுப்பை விடக்கூடாது."
+  ],
+  "g9-ch2-ex9-q18": [
+    "Equal bases let us combine the two powers by adding exponents. A negative exponent reverses the fraction, so keep the sign until the end.",
+    "ஒரே அடிமானத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும். எதிர்ம அடுக்கு பின்னத்தைத் தலைகீழாக்கும்; குறியை இறுதிவரை கவனிக்கவும்."
+  ],
+  "g9-ch2-ex9-q19": [
+    "A square root is a power of one-half, and a cube root is a power of one-third. With the same positive base, equate the resulting exponents.",
+    "வர்க்கமூலம் அரை அடுக்காகவும் கனமூலம் மூன்றில் ஒரு பங்கு அடுக்காகவும் எழுதலாம். ஒரே நேர்ம அடிமானம் என்பதால் அடுக்குகளை ஒப்பிடலாம்."
+  ],
+  "g9-ch2-ex9-q20": [
+    "Area is length multiplied by breadth. When multiplying powers of ten, add their exponents; when converting to scientific notation, keep one nonzero digit before the decimal point.",
+    "பரப்பளவு = நீளம் × அகலம். பத்தின் அடுக்குகளைப் பெருக்கும்போது அடுக்குகள் கூடும்; அறிவியல் குறியீட்டில் தசமப் புள்ளிக்கு முன் ஒரு பூஜ்ஜியமற்ற இலக்கம் மட்டுமே இருக்கும்."
+  ],
+  "g9-ch1-ex1.1-q3-b-i": [
+    "For membership, compare the proposed number directly with the roster of set A. Write the belongs-to symbol only if that exact number is listed.",
+    "உறுப்புரிமைக்கு கொடுக்கப்பட்ட எண்ணை A கணத்தின் பட்டியலுடன் நேரடியாக ஒப்பிடவும். அதே எண் இருந்தால்தான் உறுப்பு குறியை எழுதவும்."
+  ],
+  "g9-ch1-ex1.1-q3-b-ii": [
+    "A roster set contains exactly the elements shown between its braces. Do not infer extra numbers just because they follow the same pattern.",
+    "பட்டியல் கணத்தில் அடைப்புக்குறிக்குள் காட்டப்பட்ட உறுப்புகள் மட்டுமே இருக்கும். ஒரே முறை தொடர்வதுபோலத் தோன்றினாலும் கூடுதல் எண்களைச் சேர்க்க வேண்டாம்."
+  ],
+  "g9-ch1-ex1.1-q3-b-iii": [
+    "The symbol for belongs-to checks one number, not a whole range. Compare the candidate to every member of B and decide whether it is present.",
+    "உறுப்பு குறி ஒரு எண்ணின் உறுப்புரிமையைத்தான் சோதிக்கும். கொடுக்கப்பட்ட எண்ணை B இன் உறுப்புகளுடன் ஒப்பிட்டு உள்ளதா எனத் தீர்மானிக்கவும்."
+  ],
+  "g9-ch1-ex1.1-q3-b-iv": [
+    "The not-an-element symbol is justified only when the given object is absent from the listed set. Inspect the exact roster rather than using a pattern guess.",
+    "உறுப்பு அல்ல என்ற குறி, கொடுக்கப்பட்ட மதிப்பு கணத்தில் இல்லாதபோது மட்டுமே பொருந்தும். ஊகிக்காமல் பட்டியலைப் பார்க்கவும்."
+  ],
+  "g9-ch1-ex1.1-q6-i": [
+    "Descriptive form states a defining characteristic in words. Look for the property shared by January, June and July rather than simply repeating their names.",
+    "விளக்க வடிவம் உறுப்புகளின் பொதுப் பண்பைச் சொற்களால் கூறும். ஜனவரி, ஜூன், ஜூலை ஆகியவற்றின் பொதுப் பண்பைத் தேடுங்கள்; பெயர்களை மட்டும் மீண்டும் எழுத வேண்டாம்."
+  ],
+  "g9-ch1-ex1.1-q6-iv": [
+    "In descriptive form, specify which letters are included and their defining property. Check that the description neither leaves out nor adds letters.",
+    "விளக்க வடிவில் எந்த எழுத்துகள் சேர்க்கப்படுகின்றன, அவற்றின் பொதுப் பண்பு என்ன என்பதைச் சொல்ல வேண்டும். எந்த எழுத்தும் தவறவிடப்படவோ கூடுதலாகச் சேர்க்கப்படவோ கூடாது."
+  ],
+  "g9-ch3-ex3.1-q12": [
+    "The highest degree in a product is usually found by multiplying the highest-degree terms. Their nonzero coefficients cannot cancel because that is the unique leading product.",
+    "பெருக்கலின் அதிகபட்ச படியை ஒவ்வொரு பல்லுறுப்பின் அதிகபட்ச படி உறுப்புகளைப் பெருக்கிக் காணலாம். பூஜ்ஜியமற்ற முதன்மைக் கெழுக்கள் இருப்பதால் அந்த உறுப்பு மறையாது."
+  ],
+  "g9-ch4-ex4.2-q1": [
+    "A quadrilateral's interior angles total 360 degrees, not 180. Representing them as multiples of the same unknown lets us determine the common unit first.",
+    "நாற்கரத்தின் உட்கோணங்களின் கூடுதல் 360°, 180° அல்ல. எல்லா கோணங்களையும் ஒரே மாறியின் மடங்குகளாகக் கொண்டால் பொதுவான அளவை முதலில் காணலாம்."
+  ],
+  "g9-ch5-ex5.2-q5": [
+    "Opposite sides of a parallelogram must be equal and parallel. Compare both horizontal and vertical changes for opposite sides; matching direction vectors certify this.",
+    "இணைகரத்தின் எதிர்பக்கங்கள் சமமாகவும் இணையாகவும் இருக்க வேண்டும். இரு எதிர்பக்கங்களின் கிடைமட்ட, செங்குத்து மாற்றங்களை ஒப்பிடவும்."
+  ],
+  "g9-ch7-ex7.2-q4": [
+    "A cube has six equal square faces, but its lateral surface includes only four side faces. Count the correct faces before multiplying by the area of one square.",
+    "கனசதுரத்தில் ஆறு சமமான சதுர முகங்கள் உள்ளன; பக்கப்பரப்பில் நான்கு பக்க முகங்கள் மட்டுமே அடங்கும். சரியான முக எண்ணிக்கையை முதலில் எடுக்கவும்."
+  ],
+  "g9-ch8-ex8.4-q1": [
+    "The midpoint is halfway between the lower and upper class limits. Once one boundary and the midpoint are known, use their average relationship to recover the other boundary.",
+    "நடுமதிப்பு கீழ் மற்றும் மேல் வகுப்பு எல்லைகளின் சராசரி. ஒரு எல்லையும் நடுமதிப்பும் தெரிந்தால் சராசரி உறவைப் பயன்படுத்தி மற்ற எல்லையைக் காணலாம்."
+  ],
+  "g9-ch9-ex9.1-q4": [
+    "The total number of balls equals the sum of all colours. Subtract the known colour counts to find the missing number before calculating probability.",
+    "மொத்தப் பந்துகளின் எண்ணிக்கை எல்லா நிறப் பந்துகளின் கூட்டல். நிகழ்தகவைக் காணும்முன் தெரிந்த நிற எண்ணிக்கைகளைக் கழித்துத் தெரியாததை அறியவும்."
+  ],
+  "g9-ch9-ex9.1-q8": [
+    "A save and a conceded goal are complementary outcomes for this simplified goalkeeper model. Use the given attempts as the common denominator for either probability.",
+    "இந்த எளிய மாதிரியில் தடுத்தலும் கோல் விடுதலும் ஒன்றுக்கொன்று நிரப்புநிகழ்ச்சிகள். இரண்டுக்கும் மொத்த முயற்சிகளையே பகுதியாக எடுக்கவும்."
+  ]
+};
 const hints={},audit={generatedAt:'2026-11-14',grade:9,source:'existing authored student-facing content',totalAuthored:grade.items.length,eligible:eligible.length,byChapter:{},byConcept:{},fallbacks:[],diagrams:0,excluded:grade.items.filter(x=>!eligible.includes(x)).map(x=>({id:x.id,kind:x.kind}))};
 for(const item of eligible){
  if(hints[item.id])throw Error('Duplicate '+item.id);
  const choice=choose(item),step=item.steps[choice.step],pair=BANK[choice.key];
  if(!pair||!step?.en)throw Error('Cannot explain '+item.id);
- const expected=step.en.slice(0,Math.min(step.en.length,80)),entry={step:choice.step,expected,en:pair[0],ta:pair[1],concept:choice.key};
+ const expected=step.en.slice(0,Math.min(step.en.length,80));
+ const custom=OVERRIDES[item.id];
+ const entry={step:choice.step,expected,en:custom?.[0]||pair[0],ta:custom?.[1]||pair[1],concept:choice.key};
  const diagram=picture(item,choice);if(diagram){entry.diagram=diagram;audit.diagrams++;}
  hints[item.id]=entry;
  audit.byChapter[item.chapter]=(audit.byChapter[item.chapter]||0)+1;
  audit.byConcept[choice.key]=(audit.byConcept[choice.key]||0)+1;
- if(choice.fallback)audit.fallbacks.push({id:item.id,chapter:item.chapter,title:item.title?.en,step:step.en});
+ if(choice.fallback&&!OVERRIDES[item.id])audit.fallbacks.push({id:item.id,chapter:item.chapter,title:item.title?.en,step:step.en});
 }
 const output=[
  '/* Source-pinned Grade 9 optional explanations. Original textbook questions and answers unchanged.',
