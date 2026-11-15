@@ -88,8 +88,97 @@
   // Back/Previous/Next pattern as Grade 9 Set Language and Real Numbers.
   // Purposeful, offline mathematical interactions for Grade 10 Number & Sequences.
   // No welcome slides, dashboards, autoplay or external scripts.
+  // A.P. sum: pair opposite ends instead of selecting an arbitrary term.
+  // This is intentionally scoped to a single concept; other sequence labs stay intact.
+  function showAPSumPairing(host,lang){
+    const ta=lang==='ta';
+    const copy=ta?{
+      heading:'இரு முனைகளிலிருந்தும் இணைத்துக் கூட்டுங்கள்',
+      term:'உறுப்பு',pair1:'ஜோடி 1',pair2:'ஜோடி 2',middle:'நடு',
+      notes:[
+        'ஒவ்வொன்றாகக் கூட்டாமல், முதல் உறுப்பையும் கடைசி உறுப்பையும் இணைத்துப் பாருங்கள்.',
+        'முதல் உறுப்பும் கடைசி உறுப்பும்: 1 + 5 = 6.',
+        'அடுத்த இரு முனை உறுப்புகளும்: 2 + 4 = 6. இரண்டு ஜோடிகளும் சமம்!',
+        'நடுவில் 3 மீதமுள்ளது. 6 + 6 + 3 = 15. சூத்திரமும் இதே விடையைத் தருகிறது.'
+      ],
+      previous:'முந்தைய படி',next:'அடுத்த படி',replay:'மீண்டும் பார்',step:'படி',
+      of:'இல்',formula:'சூத்திரம்'
+    }:{
+      heading:'See how pairing works',
+      term:'Term',pair1:'Pair 1',pair2:'Pair 2',middle:'Middle',
+      notes:[
+        'Instead of adding one by one, pair the terms at opposite ends.',
+        'The first and last terms make one pair: 1 + 5 = 6.',
+        'The next pair is 2 + 4 = 6. Both pairs have the same sum!',
+        'The middle term is 3. So 6 + 6 + 3 = 15. The formula gives the same answer.'
+      ],
+      previous:'Previous step',next:'Next step',replay:'Replay',step:'Step',
+      of:'of',formula:'Formula'
+    };
+    let step=0;
+    host.className='g10ch2-visual g10ch2-pairing';
+    host.setAttribute('role','group');
+    host.setAttribute('aria-label',copy.heading);
+    const title=document.createElement('p');title.className='g10ch2-pairing-title';
+    title.textContent=copy.heading;
+    const list=document.createElement('div');list.className='g10ch2-pairing-terms';
+    list.setAttribute('role','list');
+    const cells=[1,2,3,4,5].map((n,i)=>{
+      const cell=document.createElement('div');cell.className='g10ch2-pairing-term';
+      cell.setAttribute('role','listitem');
+      const value=document.createElement('strong');value.className='g10ch2-pairing-number';
+      value.textContent=String(n);
+      const label=document.createElement('small');label.className='g10ch2-pairing-label';
+      cell.append(value,label);list.append(cell);
+      return {cell,label,i,n};
+    });
+    const explanation=document.createElement('div');explanation.className='g10ch2-pairing-explanation';
+    const math=document.createElement('div');math.className='g10ch2-pairing-math';
+    const extra=document.createElement('div');extra.className='g10ch2-pairing-formula';
+    const note=document.createElement('p');note.className='g10ch2-pairing-note';
+    note.setAttribute('role','status');note.setAttribute('aria-live','polite');
+    explanation.append(math,extra,note);
+    const controls=document.createElement('div');controls.className='g10ch2-pairing-controls';
+    const previous=document.createElement('button');previous.type='button';
+    previous.textContent='← '+copy.previous;
+    const progress=document.createElement('span');progress.className='g10ch2-pairing-progress';
+    const next=document.createElement('button');next.type='button';
+    controls.append(previous,progress,next);
+    host.append(title,list,explanation,controls);
+    const equations=['1+2+3+4+5','1+5=6','2+4=6','6+6+3=15'];
+    const formula='S_5=\\frac{5}{2}(1+5)=15';
+    const showMath=(element,latex,fallback)=>{
+      element.innerHTML=typeof window.TriggleNotation?.renderLatex==='function'?
+        window.TriggleNotation.renderLatex(latex,{displayMode:true,fallback}):e(fallback);
+    };
+    function draw(){
+      cells.forEach(({cell,label,i,n})=>{
+        const first=step>=1&&(i===0||i===4);
+        const second=step>=2&&(i===1||i===3);
+        const center=step>=3&&i===2;
+        cell.classList.toggle('is-pair-one',first);
+        cell.classList.toggle('is-pair-two',second);
+        cell.classList.toggle('is-middle',center);
+        const group=first?copy.pair1:second?copy.pair2:center?copy.middle:'';
+        label.textContent=group;
+        cell.setAttribute('aria-label',copy.term+' '+(i+1)+': '+n+(group?', '+group:''));
+      });
+      showMath(math,equations[step],equations[step]);
+      extra.hidden=step!==3;
+      if(step===3)showMath(extra,formula,'S₅ = 5/2 × (1 + 5) = 15');
+      note.textContent=copy.notes[step];
+      progress.textContent=copy.step+' '+(step+1)+' '+copy.of+' 4';
+      previous.disabled=step===0;
+      next.textContent=step===3?copy.replay+' ↻':copy.next+' →';
+    }
+    previous.addEventListener('click',()=>{if(step>0){step--;draw();}});
+    next.addEventListener('click',()=>{step=(step+1)%4;draw();});
+    draw();
+  }
+
   function showG10Ch2Visual(stage,host,lang){
     const v=stage.visual;if(!v||!host)return;
+    if(stage.id==='g10-ch2-ap-sum'){showAPSumPairing(host,lang);return;}
     const ta=lang==='ta',caption=ta?'நீங்களே மாற்றிப் பாருங்கள்':'Change the value and observe';
     host.className='g10ch2-visual';host.setAttribute('role','group');host.setAttribute('aria-label',caption);
     const title=document.createElement('p');title.className='g10ch2-visual-title';title.textContent=caption;
