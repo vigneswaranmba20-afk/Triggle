@@ -25,7 +25,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
       'Exact source question must match the specified textbook expression '+id);
     assert(source.answer.includes(answerToken),'Source-verified canonical answer '+id);
     const q=await page.locator('#questionText').innerText();
-    assert(q.length>=10&&q.startsWith(source.question.split(/\\s+/)[0]),
+    assert(q.length>=10&&q.startsWith(source.question.split(/\s+/)[0]),
       'Actual question text must be displayed, not a loading placeholder '+id+' @'+width+': '+q);
     const answer=await page.locator('#answerText').innerText();
     assert(answer.trim().length>0&&!/loading/i.test(answer),
