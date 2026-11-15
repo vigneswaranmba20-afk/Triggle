@@ -33,4 +33,10 @@ assert.equal(c.length,4);assert.deepEqual(d,[2,3,4]);assert.equal(eq(c,d),false)
 assert.equal(eq(x,y),true,'Sets LIFE and {F,I,L,E} must be equal, regardless of order');
 assert.deepEqual(g,[5,7,11,13,17,19]);assert.deepEqual(h,[1,2,3,6,9,18]);
 assert.equal(g.length,h.length);assert.equal(eq(g,h),false,'Equal cardinality does not imply equal sets');
+// Derive classifications from actual set membership and cardinality, not only copied answer strings.
+const classify=(left,right)=>eq(left,right)?'Equal sets':left.length===right.length?'Equivalent sets':'Unequal sets';
+assert.deepEqual([classify(a,b),classify(c,d),classify(x,y),classify(g,h)],m.rows.map(row=>row.classification),
+ 'Each source classification must follow from independently enumerated sets');
+assert.deepEqual(m.rows.map(row=>row.id),['g9-ch1-ex1.2-q3-i','g9-ch1-ex1.2-q3-ii','g9-ch1-ex1.2-q3-iii','g9-ch1-ex1.2-q3-iv'],
+ 'Stable textbook part IDs and ordering must not drift');
 console.log('PASS Grade 9 Exercise 1.2 Q3 source: 4 English tasks and independent set reasoning, 2025 bilingual source locators, Tamil pending, no premature student publication.');
