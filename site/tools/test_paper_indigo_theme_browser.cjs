@@ -59,6 +59,7 @@ async function main(){
    assert.equal(await p.locator('.lesson-card').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Class 10 exercise paper');
    assert(await p.locator('#questionText').innerText(),'Original mathematical question preserved');
    await visit(p,base+'?class=12&chapter=g12-ch1&section=concepts');
+   await p.locator('#langEn').click(); // Grade 12 matrix scenes are currently published in English only.
    await p.locator('.matrix-concepts [data-scene="0"]').waitFor({state:'visible'});
    assert.equal(await p.locator('.matrix-concepts .mc-index button').first().evaluate(el=>getComputedStyle(el).backgroundColor),white,'Matrix index paper');
    await p.locator('.matrix-concepts [data-scene="0"]').click();
