@@ -99,7 +99,7 @@
         'ஒவ்வொன்றாகக் கூட்டாமல், முதல் உறுப்பையும் கடைசி உறுப்பையும் இணைத்துப் பாருங்கள்.',
         'முதல் உறுப்பும் கடைசி உறுப்பும்: 1 + 5 = 6.',
         'அடுத்த இரு முனை உறுப்புகளும்: 2 + 4 = 6. இரண்டு ஜோடிகளும் சமம்!',
-        'நடுவில் 3 மீதமுள்ளது. 6 + 6 + 3 = 15. சூத்திரமும் இதே விடையைத் தருகிறது.'
+        'நடுவில் 3 மீதமுள்ளது. 6 + 6 + 3 = 15. தொகையை முன்னும் பின்னும் எழுதிக் கூட்டினால் இருமுறை எண்ணுகிறோம். அதனால்தான் சூத்திரத்தில் 2-ஆல் வகுக்கிறோம்.'
       ],
       previous:'முந்தைய படி',next:'அடுத்த படி',replay:'மீண்டும் பார்',step:'படி',
       of:'இல்',formula:'சூத்திரம்'
@@ -110,7 +110,7 @@
         'Instead of adding one by one, pair the terms at opposite ends.',
         'The first and last terms make one pair: 1 + 5 = 6.',
         'The next pair is 2 + 4 = 6. Both pairs have the same sum!',
-        'The middle term is 3. So 6 + 6 + 3 = 15. The formula gives the same answer.'
+        'The middle term is 3. So 6 + 6 + 3 = 15. Writing the sum forwards and backwards counts it twice. That is why the formula divides by 2.'
       ],
       previous:'Previous step',next:'Next step',replay:'Replay',step:'Step',
       of:'of',formula:'Formula'
@@ -247,7 +247,7 @@
     const ta=lang==='ta',button=document.createElement('button');
     button.type='button';button.className='sp2-concept-video-button';
     button.textContent=ta?'▶ காணொளி விளக்கம் · ஆங்கிலக் குரல்':'▶ Watch video explanation · 1:48';
-    const anchor=panel.querySelector('.sp2-explanation');
+    const anchor=panel.querySelector('.sp2-recall') || panel.querySelector('.sp2-lesson-note');
     if(anchor)anchor.before(button);else panel.append(button);
     button.addEventListener('click',()=>{
       const dialog=document.createElement('dialog');dialog.className='sp2-concept-video-dialog';
@@ -319,10 +319,11 @@
        '<div class="sp2-formula" role="group" aria-label="'+e(ta?'கணிதக் கருத்து':'Mathematical idea')+'">'+
        (stage.math?.latex?window.TriggleNotation.renderLatex(stage.math.latex,{displayMode:true,fallback:stage.math.fallback||pick(stage.rule)}):typeset(pick(stage.rule)))+'</div>'+
        (stage.visual?'<div data-g10ch2-visual></div>':'')+
-       '<details class="sp2-explanation"><summary>'+e(ta?'கருத்தைப் புரிந்துகொள்':'Understand the idea')+'</summary>'+
-       '<div class="sp2-explanation-body"><p class="sp2-idea">'+typeset(pick(stage.idea))+'</p>'+
+       (stage.id==='g10-ch2-ap-sum'?'':
+       '<div class="sp2-lesson-note" aria-label="'+e(ta?'கருத்து விளக்கம்':'Concept explanation')+'">'+
+       '<p class="sp2-idea">'+typeset(pick(stage.idea))+'</p>'+
        '<p class="sp2-example">'+typeset(pick(stage.example))+'</p><small class="sp2-stage-reference">'+
-       e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+'</small></div></details>'+
+       e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+'</small></div>')+
        (choices.length?'<div class="sp2-recall"><h5>'+e(ta?'நீங்களே முயற்சிக்கவும்':'Try it yourself')+'</h5>'+
        '<p>'+typeset(pick(stage.question))+'</p><div class="sp2-answers" data-answers role="group" aria-label="'+e(pick(stage.question))+'"></div>'+
        '<div class="sp2-recall-actions"><button type="button" data-hint>'+e(ta?'குறிப்பு':'Hint')+'</button>'+
