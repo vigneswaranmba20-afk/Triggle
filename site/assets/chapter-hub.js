@@ -83,6 +83,83 @@
     examples:questions.filter(q=>/^\s*Example\b/i.test(q.label?.en||'')),
     exercises:textbookExercises(questions)
   });
+  // Shared fallback for any chapter that has textbook-grounded concept stages
+  // but no specialised animation engine yet. The student uses the same index and
+  // Back/Previous/Next pattern as Grade 9 Set Language and Real Numbers.
+  function mountStageJourney(container,stages,lang,initialConcept,onConcept){
+    const ta=lang==='ta',pick=value=>typeof value==='string'?value:(value?.[lang]||value?.en||'');
+    const back=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
+    const nextLabel=ta?'அடுத்த கருத்து':'Next idea';
+    const prevLabel=ta?'முந்தைய கருத்து':'Previous idea';
+    const root=document.createElement('section');root.className='sp2-journey sp2-simple-journey';root.dataset.view='index';
+    root.innerHTML='<div class="sp2-index-view" data-index-view><nav class="sp2-nav" data-nav role="group" aria-label="'+
+      e(ta?'கருத்தைத் தேர்க':'Choose a concept')+'"></nav></div>'+
+      '<div class="sp2-detail-view" data-detail-view hidden>'+
+      '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+e(back)+'</button></div>'+
+      '<div class="sp2-panel" data-panel></div>'+
+      '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+e(ta?'கருத்துகளுக்கான வழிசெலுத்தல்':'Concept navigation')+'">'+
+      '<button type="button" class="sp2-footer-prev" data-footer-prev>← '+e(prevLabel)+'</button>'+
+      '<button type="button" class="sp2-footer-next" data-footer-next></button></nav></div>';
+    container.append(root);
+    const nav=root.querySelector('[data-nav]'),panel=root.querySelector('[data-panel]');
+    const indexView=root.querySelector('[data-index-view]'),detailView=root.querySelector('[data-detail-view]');
+    let active=-1;
+    stages.forEach((stage,i)=>{
+      const button=document.createElement('button');button.type='button';button.className='sp2-nav-button';button.dataset.index=String(i);
+      button.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+e(pick(stage.title))+
+        '</span><span class="sp2-done-mark" aria-hidden="true"></span>';button.addEventListener('click',()=>show(i,true));nav.append(button);
+    });
+    function update(){
+      nav.querySelectorAll('button').forEach((button,i)=>{
+        button.classList.toggle('sp2-current',i===active);button.setAttribute('aria-current',i===active?'step':'false');
+      });
+      root.querySelector('[data-footer-prev]').disabled=active<=0;
+      const next=root.querySelector('[data-footer-next]');next.textContent=active===stages.length-1?back+' →':nextLabel+' →';
+      next.classList.toggle('is-return',active===stages.length-1);
+    }
+    function showIndex(focus=false,notify=true){
+      active=-1;root.dataset.view='index';indexView.hidden=false;detailView.hidden=true;update();
+      if(notify)onConcept?.(null,true);
+      if(focus){nav.querySelector('button')?.focus({preventScroll:true});root.scrollIntoView({block:'start',behavior:'auto'});}
+    }
+    function show(i,focus=false,notify=true){
+      if(i<0||i>=stages.length)return;active=i;root.dataset.view='lesson';indexView.hidden=true;detailView.hidden=false;
+      if(notify)onConcept?.(i);
+      const stage=stages[i],choices=Array.isArray(stage.choices)?stage.choices:[];
+      panel.innerHTML='<div class="sp2-concept-heading" tabindex="-1"><h4>'+e((i+1)+'. '+pick(stage.title))+'</h4></div>'+
+       '<div class="sp2-formula" role="group" aria-label="'+e(ta?'கணிதக் கருத்து':'Mathematical idea')+'">'+typeset(pick(stage.rule))+'</div>'+
+       '<details class="sp2-explanation"><summary>'+e(ta?'கருத்தைப் புரிந்துகொள்':'Understand the idea')+'</summary>'+
+       '<div class="sp2-explanation-body"><p class="sp2-idea">'+typeset(pick(stage.idea))+'</p>'+
+       '<p class="sp2-example">'+typeset(pick(stage.example))+'</p><small class="sp2-stage-reference">'+
+       e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+'</small></div></details>'+
+       (choices.length?'<div class="sp2-recall"><h5>'+e(ta?'நீங்களே முயற்சிக்கவும்':'Try it yourself')+'</h5>'+
+       '<p>'+typeset(pick(stage.question))+'</p><div class="sp2-answers" data-answers role="group" aria-label="'+e(pick(stage.question))+'"></div>'+
+       '<div class="sp2-recall-actions"><button type="button" data-hint>'+e(ta?'குறிப்பு':'Hint')+'</button>'+
+       '<button type="button" data-why>'+e(ta?'விளக்கம்':'Why?')+'</button></div>'+
+       '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-why-response hidden></div></div>':'');
+      const holder=panel.querySelector('[data-answers]');if(holder){
+        choices.forEach((choice,j)=>{
+          const button=document.createElement('button');button.type='button';button.dataset.choice=String(j);
+          button.innerHTML=typeset(pick(choice));button.setAttribute('aria-label',pick(choice));
+          button.addEventListener('click',()=>{
+            holder.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+            panel.querySelector('[data-feedback]').textContent=j===stage.correct?(ta?'சரி!':'Correct!'):(ta?'மீண்டும் முயற்சிக்கவும்':'Try again');
+          });holder.append(button);
+        });
+        panel.querySelector('[data-hint]').onclick=()=>{panel.querySelector('[data-feedback]').innerHTML=typeset(pick(stage.hint));};
+        panel.querySelector('[data-why]').onclick=()=>{const d=panel.querySelector('[data-why-response]');d.innerHTML=typeset(pick(stage.why));d.hidden=!d.hidden;};
+      }
+      update();
+      if(focus){root.scrollIntoView({block:'start',behavior:'auto'});panel.querySelector('.sp2-concept-heading')?.focus({preventScroll:true});}
+    }
+    root.querySelector('[data-back-index]').onclick=()=>showIndex(true);
+    root.querySelector('[data-footer-prev]').onclick=()=>show(active-1,true);
+    root.querySelector('[data-footer-next]').onclick=()=>active===stages.length-1?showIndex(true):show(active+1,true);
+    if(Number.isInteger(initialConcept)&&initialConcept>=0&&initialConcept<stages.length)
+      show(initialConcept,false,false);
+    else showIndex(false,false);
+    return true;
+  }
   function mount(root,opts){
     if(!root||!opts?.chapter)return;
     const {chapter,grade,lang,section,questions,sources,onSection,onQuestion,onClass,onHome,initialConcept}=opts;
@@ -192,25 +269,13 @@
         // No chapter title, marketing paragraph, progress count or second navigation row.
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
-        }else if(chapter.id==='g9-ch2'||chapter.id==='g9-ch9'){
-          for(const stage of stages){
-            const article=document.createElement('article');article.className='hub-question-group';
-            const heading=document.createElement('h4');heading.textContent=text(stage.title);
-            const idea=document.createElement('p');idea.innerHTML=chapterTypeset(text(stage.idea));
-            const example=document.createElement('p');example.innerHTML=chapterTypeset(text(stage.example));
-            const rule=document.createElement('p');rule.innerHTML=chapterTypeset(text(stage.rule));
-            const source=document.createElement('small');source.textContent='SCERT 2025 · §'+stage.section;
-            article.append(heading,idea,example,rule,source);panel.append(article);
-          }
+        }else if(chapter.id==='g9-ch9'){
+          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept);
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }
         // Textbook Thinking Corners and Activities are a separate chapter destination,
         // not a repeated appendix on the Concepts page.
-        if(chapter.id==='g9-ch9'&&Number.isInteger(initialConcept)&&initialConcept>=0){
-          const target=panel.querySelector('.sp2-nav [data-index="'+initialConcept+'"]');
-          if(target)target.click();
-        }
       }else{info(t.noneConcept);}
     }
     if(section==='activities'&&activityEntries.length&&window.TriggleTextbookActivities){
