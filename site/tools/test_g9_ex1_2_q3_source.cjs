@@ -26,7 +26,8 @@ for(const row of m.rows){
 }
 // Validate the source expressions themselves so a changed inequality, word, or divisor
 // cannot silently retain a correct-looking answer copied from the answer key.
-const normalized=s=>s.replace(/\\s+/g,'').toLowerCase();
+const normalized=s=>s.replace(/\s+/g,'').toLowerCase();
+assert.equal(normalized('3 < x < 23'),'3<x<23','Source normalization must strip actual whitespace');
 assert(normalized(m.rows[0].sourceEnglish).includes('vowel'),'Q3(i) must retain the word VOWEL');
 assert(normalized(m.rows[1].sourceEnglish).includes('1<x<5'),'Q3(ii) must retain both strict bounds');
 assert(normalized(m.rows[2].sourceEnglish).includes('life'),'Q3(iii) must retain LIFE');
