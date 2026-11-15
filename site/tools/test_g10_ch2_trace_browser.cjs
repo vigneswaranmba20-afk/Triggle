@@ -60,7 +60,7 @@ async function main(){
     assert.equal(await page.locator('[data-math-error]').count(),0,'Rendered exercise maths valid');
     await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-2-q8');
     await page.locator('#stepsList .worked-step').first().waitFor({state:'visible'});
-    assert.match(await page.locator('#questionText').innerText(),/35[\\s\\S]*56[\\s\\S]*91/,'Exercise 2.2 Q8 opens with authentic divisors');
+    assert.match(await page.locator('#questionText').innerText(),/35[\s\S]*56[\s\S]*91/,'Exercise 2.2 Q8 opens with authentic divisors');
     const answerQ8=await page.locator('#answerText').innerText();
     assert.match(answerQ8,/3647/,'Student sees the textbook appendix answer');
     assert.match(answerQ8,/Literally, 7/,'Student is not told that the literal mathematical minimum is wrong');
