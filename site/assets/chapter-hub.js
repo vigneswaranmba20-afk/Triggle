@@ -147,22 +147,19 @@
     }
   }
 
-  // Optional concept video. No button appears until media metadata loads successfully.
+  // Stream the optional concept video only after a deliberate student action.
+  // Do not probe the remote R2 asset on concept open: avoid wasting mobile data
+  // and avoid holding up navigation/browser tests when the CDN is slow.
   function attachStageVideo(panel,stage,lang){
     if(stage?.id!=='g10-ch2-ap-sum'||!stage.video?.src)return;
     let url;try{url=new URL(stage.video.src,document.baseURI);}catch{return;}
     if(url.protocol!=='https:'||!url.pathname.toLowerCase().endsWith('.mp4'))return;
     if(url.origin!==location.origin&&url.hostname!=='pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev')return;
     const ta=lang==='ta',button=document.createElement('button');
-    button.type='button';button.hidden=true;button.className='sp2-concept-video-button';
+    button.type='button';button.className='sp2-concept-video-button';
     button.textContent=ta?'▶ காணொளி விளக்கம் · ஆங்கிலக் குரல்':'▶ Watch video explanation · 1:48';
     const anchor=panel.querySelector('.sp2-explanation');
     if(anchor)anchor.before(button);else panel.append(button);
-    // HTML media metadata works for public cross-origin R2 without fetch/CORS.
-    const probe=document.createElement('video');probe.preload='metadata';probe.muted=true;probe.playsInline=true;
-    const release=()=>{probe.removeAttribute('src');probe.load();};
-    probe.addEventListener('loadedmetadata',()=>{if(button.isConnected)button.hidden=false;release();},{once:true});
-    probe.addEventListener('error',release,{once:true});probe.src=url.href;probe.load();
     button.addEventListener('click',()=>{
       const dialog=document.createElement('dialog');dialog.className='sp2-concept-video-dialog';
       const header=document.createElement('div');header.className='sp2-concept-video-heading';
@@ -172,10 +169,14 @@
       close.textContent=ta?'✕ மூடு':'✕ Close';close.setAttribute('aria-label',ta?'காணொளியை மூடு':'Close visual lesson');
       header.append(title,close);
       const video=document.createElement('video');video.controls=true;video.playsInline=true;
-      video.preload='metadata';video.src=url.href;video.setAttribute('aria-label',title.textContent);
+      video.preload='none';video.src=url.href;video.setAttribute('aria-label',title.textContent);
       const note=document.createElement('p');note.className='sp2-concept-video-note';
       note.textContent=ta?'ஆங்கிலக் குரல் · சிந்திக்க வேண்டுமென்றால் இடைநிறுத்துங்கள்':'Pause whenever you need more thinking time.';
-      dialog.setAttribute('aria-labelledby',title.id);dialog.append(header,video,note);document.body.append(dialog);
+      const error=document.createElement('p');error.className='sp2-concept-video-note';
+      error.hidden=true;error.setAttribute('role','alert');
+      error.textContent=ta?'தற்போது காணொளியை இயக்க முடியவில்லை. எழுத்து விளக்கம் தொடர்ந்து கிடைக்கும்.':'Video is temporarily unavailable. The written lesson still works.';
+      video.addEventListener('error',()=>{error.hidden=false;note.hidden=true;});
+      dialog.setAttribute('aria-labelledby',title.id);dialog.append(header,video,note,error);document.body.append(dialog);
       dialog.addEventListener('close',()=>{
         video.pause();video.removeAttribute('src');video.load();dialog.remove();
         if(button.isConnected)button.focus({preventScroll:true});
