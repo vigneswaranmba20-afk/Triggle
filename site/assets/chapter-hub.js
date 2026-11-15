@@ -146,6 +146,45 @@
       });
     }
   }
+
+  // Optional concept video. No button appears until media metadata loads successfully.
+  function attachStageVideo(panel,stage,lang){
+    if(stage?.id!=='g10-ch2-ap-sum'||!stage.video?.src)return;
+    let url;try{url=new URL(stage.video.src,document.baseURI);}catch{return;}
+    if(url.protocol!=='https:'||!url.pathname.toLowerCase().endsWith('.mp4'))return;
+    if(url.origin!==location.origin&&url.hostname!=='pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev')return;
+    const ta=lang==='ta',button=document.createElement('button');
+    button.type='button';button.hidden=true;button.className='sp2-concept-video-button';
+    button.textContent=ta?'▶ காணொளி விளக்கம் · ஆங்கிலக் குரல்':'▶ Watch video explanation · 1:48';
+    const anchor=panel.querySelector('.sp2-explanation');
+    if(anchor)anchor.before(button);else panel.append(button);
+    // HTML media metadata works for public cross-origin R2 without fetch/CORS.
+    const probe=document.createElement('video');probe.preload='metadata';probe.muted=true;probe.playsInline=true;
+    const release=()=>{probe.removeAttribute('src');probe.load();};
+    probe.addEventListener('loadedmetadata',()=>{if(button.isConnected)button.hidden=false;release();},{once:true});
+    probe.addEventListener('error',release,{once:true});probe.src=url.href;probe.load();
+    button.addEventListener('click',()=>{
+      const dialog=document.createElement('dialog');dialog.className='sp2-concept-video-dialog';
+      const header=document.createElement('div');header.className='sp2-concept-video-heading';
+      const title=document.createElement('h3');title.id='triggle-ap-sum-video-title';
+      title.textContent=ta?'கூட்டுத்தொடர் தொகை — இணைத்துக் கூட்டுதல்':'Arithmetic progression — pairing the ends';
+      const close=document.createElement('button');close.type='button';close.className='sp2-concept-video-close';
+      close.textContent=ta?'✕ மூடு':'✕ Close';close.setAttribute('aria-label',ta?'காணொளியை மூடு':'Close visual lesson');
+      header.append(title,close);
+      const video=document.createElement('video');video.controls=true;video.playsInline=true;
+      video.preload='metadata';video.src=url.href;video.setAttribute('aria-label',title.textContent);
+      const note=document.createElement('p');note.className='sp2-concept-video-note';
+      note.textContent=ta?'ஆங்கிலக் குரல் · சிந்திக்க வேண்டுமென்றால் இடைநிறுத்துங்கள்':'Pause whenever you need more thinking time.';
+      dialog.setAttribute('aria-labelledby',title.id);dialog.append(header,video,note);document.body.append(dialog);
+      dialog.addEventListener('close',()=>{
+        video.pause();video.removeAttribute('src');video.load();dialog.remove();
+        if(button.isConnected)button.focus({preventScroll:true});
+      },{once:true});
+      close.addEventListener('click',()=>dialog.close());
+      dialog.showModal();close.focus({preventScroll:true});
+    });
+  }
+
   function mountStageJourney(container,stages,lang,initialConcept,onConcept,onQuestion=null,chapterQuestions=[]){
     const ta=lang==='ta',pick=value=>typeof value==='string'?value:(value?.[lang]||value?.en||'');
     const back=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
@@ -200,6 +239,7 @@
        '<button type="button" data-why>'+e(ta?'விளக்கம்':'Why?')+'</button></div>'+
        '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-why-response hidden></div></div>':'');
       if(stage.visual)showG10Ch2Visual(stage,panel.querySelector('[data-g10ch2-visual]'),lang);
+      if(stage.video)attachStageVideo(panel,stage,lang);
       const related=stage.practiceId&&chapterQuestions.find(q=>q.id===stage.practiceId);
       if(related&&typeof onQuestion==='function'){
         const button=document.createElement('button');button.type='button';
