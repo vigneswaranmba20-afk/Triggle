@@ -55,6 +55,11 @@ const q2=['i','ii','iii','iv'].map(part=>{
 });
 assert.match(q2[0].q.en,/districts in Tamilnadu/i);
 assert.match(q2[1].q.en,/straight lines passing through a point/i);
+// Q2(ii) must display the actual constructive family, not only describe it in prose.
+const linesMath=q2[1].steps.find(step=>step.math?.latex?.includes('y-b=m(x-a)'));
+assert(linesMath,'Q2(ii) must display the family of lines through a fixed point');
+assert(linesMath.math.fallback.includes('y−b=m(x−a)'),'Accessible line equation missing');
+assert(linesMath.math.latex.includes('m=0,1,2'),'Infinite distinct slopes must be visible');
 assert.match(q2[2].q.en,/x\s*∈\s*Z/);
 assert.match(q2[2].q.en,/x\s*<\s*5/);
 assert.match(q2[3].q.en,/x²−5x\+6\s*=\s*0/);
