@@ -1,0 +1,32 @@
+name: Grade 10 Chapter 2 TRACE learning release
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'package*.json'
+      - '.github/workflows/g10-ch2-trace.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'package*.json'
+permissions:
+  contents: read
+jobs:
+  grade10-ch2:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Validate exact coverage and source arithmetic
+        run: |
+          node site/tools/test_g10_ch2_trace.cjs
+          node site/tools/test_g10_ch2_trace_release.cjs
+      - run: npx playwright install --with-deps chromium
+      - name: Validate student-facing English and Tamil concepts at mobile widths
+        run: node site/tools/test_g10_ch2_trace_browser.cjs
