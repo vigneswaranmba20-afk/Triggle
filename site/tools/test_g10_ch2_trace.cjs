@@ -35,7 +35,7 @@ assert.equal(additions.length,53,'53 distinct original English textbook question
 assert.equal(new Set(additions.map(q=>q.id)).size,53);
 assert.equal(textbook.filter(q=>q.exercise==='2.1').length,10);
 assert.equal(textbook.filter(q=>q.exercise==='2.2').length,9);
-assert.equal(textbook.length,82,'Retain 19 Exercise 2.1–2.2 items, 53 canonical TRACE items, and 10 non-overlapping supplements');
+assert.equal(textbook.length,92,'Retain 82 source-aligned parts and ten newly source-image-checked Ex 2.3 modular tasks');
 const supplements=all.classes[10].items.filter(q=>q.traceStatus?.startsWith('source-text reviewed'));
 assert.equal(supplements.length,10,'Integrate precisely ten unique textbook subparts without duplicate bundled questions');
 assert.equal(new Set(textbook.map(q=>q.id)).size,textbook.length,'Never duplicate student-facing question IDs');

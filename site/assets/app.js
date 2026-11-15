@@ -51,9 +51,21 @@
 
  // Within textbook exercises, Previous/Next follows only that chapter's
  // exercise sequence (never original practice or an unrelated chapter).
- const textbookExerciseList=chapter=>chapter
-   ?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[])
-   :[];
+ const textbookExerciseList=chapter=>{
+   const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
+   if(grade!==10||String(chapter?.number)!=='2')return items;
+   // Source-verified TRACE parts arrive in batches, sometimes after later
+   // exercises. Navigation stays in 2025 textbook order without reordering
+   // immutable question records or altering other grades.
+   const part={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
+   const index=q=>{const m=String(q.id).match(/-q(\d+)(?:-([ivx]+))?$/);
+     return [m?Number(m[1]):Number.MAX_SAFE_INTEGER,m?.[2]?part[m[2]]||99:0];};
+   return [...items].sort((a,b)=>{
+     const ex=String(a.exercise||'').localeCompare(String(b.exercise||''),undefined,{numeric:true});
+     if(ex)return ex;
+     const x=index(a),y=index(b);return x[0]-y[0]||x[1]-y[1];
+   });
+ };
  const activeList=()=>{
    const chapter=chapterForItem(current),exercises=textbookExerciseList(chapter);
    return exercises.some(item=>item.id===current.id)?exercises:classes[grade].items;

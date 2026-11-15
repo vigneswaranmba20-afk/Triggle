@@ -4073,7 +4073,17 @@ const metadata={
     "c10-2-ex2-7-q1-ii": {"grade":10,"level":"easy","basis":"Grade 10 Chapter 2, Exercise 2.7 · Q1(ii): Repeated digits do not guarantee a common ratio; 3-step original solution and direct pattern/formula work.","review":"implementation-audit"},
     "c10-2-ex2-7-q1-iii": {"grade":10,"level":"easy","basis":"Grade 10 Chapter 2, Exercise 2.7 · Q1(iii): Decimal G.P. decreasing by a tenth; 3-step original solution and direct pattern/formula work.","review":"implementation-audit"},
     "c10-2-ex2-7-q1-iv": {"grade":10,"level":"easy","basis":"Grade 10 Chapter 2, Exercise 2.7 · Q1(iv): Halving a fraction at each step; 3-step original solution and direct pattern/formula work.","review":"implementation-audit"},
-    "c10-2-ex2-7-q1-vi": {"grade":10,"level":"easy","basis":"Grade 10 Chapter 2, Exercise 2.7 · Q1(vi): Test every visible ratio, not just the first two; 3-step original solution and direct pattern/formula work.","review":"implementation-audit"}
+    "c10-2-ex2-7-q1-vi": {"grade":10,"level":"easy","basis":"Grade 10 Chapter 2, Exercise 2.7 · Q1(vi): Test every visible ratio, not just the first two; 3-step original solution and direct pattern/formula work.","review":"implementation-audit"},
+    "c10-2-ex2-3-q1-i": {"grade":10,"level":"easy","basis":"Compute the remainder of 71 modulo 8 and read least positive representative","review":"implementation-audit"},
+    "c10-2-ex2-3-q1-ii": {"grade":10,"level":"medium","basis":"Distinguish zero remainder from least positive solution after simplifying congruence","review":"implementation-audit"},
+    "c10-2-ex2-3-q1-iii": {"grade":10,"level":"medium","basis":"Solve an additive congruence with a negative intermediate residue","review":"implementation-audit"},
+    "c10-2-ex2-3-q1-iv": {"grade":10,"level":"difficult","basis":"Interpret the x/7 fraction as an integer inside a modular expression","review":"implementation-audit"},
+    "c10-2-ex2-3-q1-v": {"grade":10,"level":"medium","basis":"Use 5 congruent to negative one modulo 6 to reverse multiplication","review":"implementation-audit"},
+    "c10-2-ex2-3-q2": {"grade":10,"level":"medium","basis":"Transfer a given congruence through an affine expression and reduce the remainder","review":"implementation-audit"},
+    "c10-2-ex2-3-q3": {"grade":10,"level":"medium","basis":"Express all integer solutions of 5x congruent 4 modulo 6","review":"implementation-audit"},
+    "c10-2-ex2-3-q4": {"grade":10,"level":"difficult","basis":"Find a modular multiplicative inverse rather than divide as ordinary arithmetic","review":"implementation-audit"},
+    "c10-2-ex2-3-q8": {"grade":10,"level":"difficult","basis":"Prove a congruence for every positive integer power using equal residues","review":"implementation-audit"},
+    "c10-2-ex2-3-q9": {"grade":10,"level":"medium","basis":"Use periodic powers of two to compute the huge 81st exponent modulo 17","review":"implementation-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
