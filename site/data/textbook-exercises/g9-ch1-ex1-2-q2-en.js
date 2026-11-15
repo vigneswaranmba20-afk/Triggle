@@ -280,6 +280,15 @@ const entries=[
         }
       },
       {
+        "en": "Check both values in the original equation: for x = 2, 4 − 10 + 6 = 0; for x = 3, 9 − 15 + 6 = 0. Both are natural numbers.",
+        "eq": "2²−5(2)+6=0; 3²−5(3)+6=0",
+        "math": {
+          "latex": "2^2-5(2)+6=0,\\quad 3^2-5(3)+6=0",
+          "fallback": "2²−5(2)+6=0; 3²−5(3)+6=0",
+          "display": true
+        }
+      },
+      {
         "en": "List the two members and count them.",
         "eq": "B={2,3}; n(B)=2",
         "math": {
