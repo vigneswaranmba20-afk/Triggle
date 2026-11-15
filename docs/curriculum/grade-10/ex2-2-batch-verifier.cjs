@@ -1,12 +1,12 @@
 'use strict';
 // Independent checks of the actual Grade 10 Exercise 2.2 student records.
-// Q8 is intentionally excluded: its original wording has an unresolved minimum ambiguity.
+// Q8 is included with transparent handling of the textbook's missing positive-quotient restriction.
 const assert = require('node:assert/strict');
 const gcd=(a,b)=>b?gcd(b,a%b):a;
 const lcm=(a,b)=>a/gcd(a,b)*b;
 module.exports = function verify({records,mapping,inventory},{hashRecord}) {
-  assert.equal(records.length,8);
-  const expected=[1,2,3,4,5,6,7,9];
+  assert.equal(records.length,9);
+  const expected=[1,2,3,4,5,6,7,8,9];
   const checks=[];
   for(const n of expected){
     const id='c10-2-ex2-2-q'+n;
@@ -38,14 +38,31 @@ module.exports = function verify({records,mapping,inventory},{hashRecord}) {
         assert.equal(lcm(lcm(24,15),36),360);
         assert.equal(Math.floor(999999/360)*360,999720);
         assert.ok(999720+360>999999);contains('999720');break;
+      case 8: {
+        const divisors=[35,56,91],common=divisors.reduce(lcm,1);
+        assert.equal(common,3640,'Prime-power LCM');
+        assert.equal(common+7,3647,'Textbook intended answer');
+        for(const divisor of divisors){
+          assert.equal(7%divisor,7,'Literal zero-quotient counterexample');
+          assert.equal(3647%divisor,7,'Book answer leaves remainder 7');
+          assert.equal(Math.floor(7/divisor),0);
+          assert.ok(Math.floor(3647/divisor)>0);
+        }
+        assert.equal([35,56,91].reduce(lcm,1)+7,3647);
+        for(let n=1;n<3647;n++)if(divisors.every(d=>n%d===7)&&n!==7)throw Error('Unexpected smaller positive answer '+n);
+        contains('3647');contains('7 = 35 × 0 + 7');
+        assert.match(r.answer,/Literally, 7/,'Student must see the ambiguity');
+        assert.match(r.answer,/Textbook answer: 3647/,'Keep the examination answer clearly identified');
+        break;
+      }
       case 9:
         assert.equal(Array.from({length:10},(_,i)=>i+1).reduce(lcm,1),2520);
         contains('2520');break;
     }
     checks.push({recordId:id,parts:['whole'],passed:true,method:'Independent integer arithmetic and source-linked answer/step assertions for Q'+n,recordSha256:hashRecord(r)});
   }
-  const blocked=inventory.exercises[0].questions.find(q=>q.number==='8');
-  assert.equal(blocked.status,'blocked');
-  assert.ok(!records.some(r=>r.id.endsWith('-q8')));
+  const question8=inventory.exercises[0].questions.find(q=>q.number==='8');
+  assert.ok(question8&&question8.status!=='blocked');
+  assert.equal(inventory.exercises[0].complete,true,'All nine printed questions are inventoried and checked');
   return {checks};
 };

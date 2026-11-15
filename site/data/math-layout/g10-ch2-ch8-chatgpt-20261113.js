@@ -1,5 +1,5 @@
 /* Triggle Grade 10 remaining-chapter maths typography, 13 November 2026.
- * Author-edited TeX annotations for the original immutable 44 records; all
+ * Author-edited TeX annotations for the original 45 source-checked records; all
  * 13 previously typeset new items retain their own rich maths unchanged.
  * Never re-author or replace original Tamil or English source content here. */
 (()=>{'use strict';
@@ -311,6 +311,16 @@ const M={
       "\\begin{aligned}360\\times2777&=999720\\\\360\\times2778&=1000080\\end{aligned}"
     ],
     "a": "999720"
+  },
+  "c10-2-ex2-2-q8": {
+    "s": [
+      "N-7=35a=56b=91c",
+      "\\begin{aligned}35&=5\\times7\\\\56&=2^3\\times7\\\\91&=7\\times13\\end{aligned}",
+      "\\operatorname{LCM}(35,56,91)=2^3\\times5\\times7\\times13=3640",
+      "\\begin{aligned}3647&=35\\times104+7\\\\&=56\\times65+7\\\\&=91\\times40+7\\end{aligned}",
+      "\\begin{aligned}7&=35\\times0+7\\\\&=56\\times0+7\\\\&=91\\times0+7\\end{aligned}"
+    ],
+    "a": "\\begin{aligned}\\text{Textbook answer: }&3647\\\\\\text{Literally, }&7\\end{aligned}"
   },
   "c10-2-ex2-2-q9": {
     "s": [

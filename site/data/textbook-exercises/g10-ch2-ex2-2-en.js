@@ -290,6 +290,53 @@ const entries=[
     "translationReview": "pending"
   },
   {
+    "id": "c10-2-ex2-2-q8",
+    "classNum": 10,
+    "chapter": "2",
+    "exercise": "2.2",
+    "topic": {
+      "en": "Numbers and Sequences"
+    },
+    "label": {
+      "en": "Exercise 2.2 · Q8",
+      "ta": "Exercise 2.2 · Q8 (English only; Tamil pending)"
+    },
+    "title": {
+      "en": "Remainders and the smallest common multiple"
+    },
+    "q": {
+      "en": "What is the smallest number that when divided by three numbers such as 35, 56 and 91 leaves remainder 7 in each case?"
+    },
+    "steps": [
+      {
+        "en": "Subtract the shared remainder 7. What remains must be a multiple of 35, 56 and 91.",
+        "eq": "N − 7 = 35a = 56b = 91c"
+      },
+      {
+        "en": "Find the least positive common multiple by choosing the largest exponent of every prime factor.",
+        "eq": "35 = 5 × 7; 56 = 2³ × 7; 91 = 7 × 13"
+      },
+      {
+        "en": "For positive quotients, the first possible common multiple is 3640; adding back 7 gives the textbook answer.",
+        "eq": "LCM(35, 56, 91) = 2³ × 5 × 7 × 13 = 3640; 3640 + 7 = 3647"
+      },
+      {
+        "en": "Check each division directly. Each divisor leaves exactly remainder 7.",
+        "eq": "3647 = 35 × 104 + 7 = 56 × 65 + 7 = 91 × 40 + 7"
+      },
+      {
+        "en": "Important: the textbook does not explicitly require a positive quotient. If zero quotients are allowed, the smaller positive number 7 also satisfies the exact wording. The appendix gives 3647, so this is an ambiguity in the question, not in your calculation.",
+        "eq": "7 = 35 × 0 + 7 = 56 × 0 + 7 = 91 × 0 + 7"
+      }
+    ],
+    "answer": "Textbook answer: 3647 (smallest with positive quotients). Literally, 7 is the smallest positive number satisfying the printed wording, since zero quotients are allowed.",
+    "kind": "textbook",
+    "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+    "reference": "TN SCERT Standard Ten Mathematics; revised 2025 English edition; Chapter 2, Exercise 2.2 Q8, printed p. 46/PDF p. 52. Appendix lists 3647; the unqualified wording also permits 7.",
+    "edition": "2025",
+    "translationReview": "pending"
+  },
+  {
     "id": "c10-2-ex2-2-q9",
     "classNum": 10,
     "chapter": "2",

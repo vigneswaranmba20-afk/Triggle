@@ -5,7 +5,7 @@ for(const m of html.matchAll(/<script src="\.\/(data\/[^?\"]+)[^\"]*"/g))vm.runI
 const {TRIGGLE_CLASSES:classes,TriggleDifficulty:registry}=ctx.window;
 const preserved=require('../../docs/standard-solution-preservation.json');
 const approvedBatch=require('../../docs/curriculum/grade-10/batches/g10-ch2-ex2-2.json');
-const originalEight=['1','2','3','4','5','6','7','9'].map(n=>'c10-2-ex2-2-q'+n);
+const approvedEx22=['1','2','3','4','5','6','7','8','9'].map(n=>'c10-2-ex2-2-q'+n);
 const recoveredBatch=require('../../docs/curriculum/grade-10/g10-seven-recovery-20261113.json');
 const recoveryIds=recoveredBatch.records.map(r=>r.id);
 const statisticsBatch=require('../../docs/curriculum/grade-10/g10-ch8-ex8-1-q5-q10-20261113.json');
@@ -18,7 +18,7 @@ assert.equal(recoveryIds.length,7);
 const traceSourceGate=require('../../docs/curriculum/grade-10/trace/g10-ch2-source-gate.json');
 const traceIds=traceSourceGate.records.map(r=>r.id);
 assert.equal(traceIds.length,63,'Only the 63 reconciled Chapter 2 additions are approved');
-const approvedNewIds=[...originalEight,...traceIds,...recoveryIds,...statisticsIds,...followupIds];
+const approvedNewIds=[...approvedEx22,...traceIds,...recoveryIds,...statisticsIds,...followupIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -26,7 +26,7 @@ const approvedG9Ids=[...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id)];
 assert.equal(approvedG9Ids.length,9);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
-assert.deepEqual(approvedBatch.records.map(r=>r.id),originalEight);
+assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
 assert(!approvedNewIds.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.match(preserved.baselineCommit,/^[a-f0-9]{40}$/);
@@ -101,7 +101,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,666);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,667);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');
@@ -114,4 +114,4 @@ for(const file of ['g12-explain-modes.js','g12-explain-modes.css','matrix-pilot.
 assert.ok(sw.includes('./data/problem-difficulty.js'));
 assert.ok(html.indexOf('data/problem-difficulty.js')<html.indexOf('assets/app.js'));
 assert.doesNotMatch(app,/localStorage\.clear|removeItem/,'Student progress is never cleared');
-console.log('PASS 568 original records and order byte-preserved, nine Grade 9 Exercise 1.2 plus eight existing, seven recovered and eleven Statistics Grade 10 source-bound records, 603 explicit difficulties, 88 reviewed classifications retained, no explanation switches, offline metadata.');
+console.log('PASS 568 original records and order byte-preserved, nine Grade 9 Exercise 1.2 plus nine Exercise 2.2, seven recovered and eleven Statistics Grade 10 source-bound records, 603 explicit difficulties, 88 reviewed classifications retained, no explanation switches, offline metadata.');

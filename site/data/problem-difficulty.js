@@ -3969,6 +3969,12 @@ const metadata={
       "basis": "Find a three-number LCM and bound a six-digit multiple.",
       "review": "implementation-audit"
     },
+    "c10-2-ex2-2-q8": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Three-number prime-factor LCM, remainder verification, and distinguishing the textbook's positive-quotient convention from the zero-quotient literal minimum.",
+      "review": "implementation-audit"
+    },
     "c10-2-ex2-2-q9": {
       "grade": 10,
       "level": "medium",
