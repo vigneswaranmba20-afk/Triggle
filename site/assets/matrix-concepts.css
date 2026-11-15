@@ -48,3 +48,41 @@
 @media(min-width:700px){.mc-visual{min-height:210px;padding:20px}.mc-controls{padding:14px 20px}.mc-result{padding:14px 20px}.mc-stage{max-width:660px;margin:auto}.mc-scene-heading{padding:20px 0 15px}.mc-plane{max-height:250px}}
 @media(max-width:370px){.mc-visual{padding:12px 5px}.mc-controls{padding:9px 7px;gap:7px}.mc-control{flex-basis:120px}.mc-result{padding:11px 8px}.mc-matrix td{min-width:30px;padding:3px 4px;font-size:1rem}.mc-equation{gap:5px}.mc-top{gap:5px}.mc-top button{font-size:.8125rem}.mc-ranks{gap:12px}}
 @media(prefers-reduced-motion:reduce){.matrix-concepts *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Shared all-grade Concepts contract: Grade 12 matrices start at a quiet
+   numbered index, then one immersive mathematical scene at a time. */
+.matrix-concepts .sp2-index-view[hidden],.matrix-concepts .sp2-detail-view[hidden]{display:none!important}
+.matrix-concepts .mc-index{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;margin:0;padding:0}
+.matrix-concepts .mc-index button{
+ width:100%;min-width:0;display:flex;align-items:center;gap:12px;
+ min-height:57px;padding:11px 13px;background:#fff;text-align:left;
+ border:1px solid #e3ddec;border-radius:12px;font-weight:750;line-height:1.5
+}
+.matrix-concepts .mc-index button span{
+ display:grid;place-items:center;flex:none;width:32px;height:33px;
+ border-radius:9px;background:#f0ebfb;color:#6b5b98;font-size:13px
+}
+.matrix-concepts .sp2-detail-navigation{margin:0 0 7px}
+.matrix-concepts [data-index-toggle]{
+ display:inline-flex;align-items:center;min-height:44px;
+ border:0;background:transparent;padding:8px 3px;color:#473873;
+ text-align:left;font-weight:800
+}
+.matrix-concepts[data-view="lesson"] .mc-scene-heading{padding:2px 0 11px}
+.matrix-concepts[data-view="lesson"] .mc-navigation button{min-height:50px}
+@media(max-width:800px){
+ .matrix-concepts[data-view="lesson"] [data-adaptive-dock]{
+  position:sticky;bottom:0;z-index:25;display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.18fr);gap:8px;
+  margin:12px -10px 0;padding:9px max(10px,env(safe-area-inset-right))
+    max(10px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));
+  border-top:1px solid #e4deec;background:#fff;box-shadow:0 -5px 18px #2b204411
+ }
+ .matrix-concepts[data-view="lesson"] [data-adaptive-dock] button{
+  min-width:0;width:100%;min-height:50px;padding:9px 6px;
+  font-size:clamp(12px,3.25vw,14px);white-space:normal
+ }
+ .matrix-concepts[data-view="lesson"] :is(button,select,[tabindex]):focus{
+  scroll-margin-bottom:112px
+ }
+}
