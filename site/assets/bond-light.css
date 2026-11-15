@@ -189,7 +189,8 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
   background: var(--bond-selection); color: var(--bond-burgundy);
   border-color: var(--bond-burgundy);
 }
-.sp2-demo, .matrix-concepts .mc-stage, .sp2-formula {
+.sp2-demo, .chapter-hub .sp2-journey .sp2-demo,
+.matrix-concepts .mc-stage, .sp2-formula {
   background: #FFFFFF;
 }
 .sp2-demo-controls input[type=range], .rnlab-range input,
