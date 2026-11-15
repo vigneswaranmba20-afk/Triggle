@@ -83,6 +83,19 @@ for(const row of q2.slice(2)){
  assert(parts.some(part=>typeof part==='object'&&part.latex?.trim()&&part.fallback?.trim()),
   'Question must have both KaTeX and accessible fallback: '+row.id);
 }
+// The learner must see substitution, not only a claim that the roots work.
+// Independently calculate the residuals and require both checked substitutions
+// in the student-facing KaTeX and accessible fallback.
+const rootCheck=q2[3].steps.find(step=>step.en?.includes('Check both values'));
+assert(rootCheck,'Q2(iv) must explicitly verify both natural-number roots');
+for(const x of [2,3]){
+ const residual=x*x-5*x+6;
+ assert.equal(residual,0,'Claimed root does not satisfy the original quadratic: '+x);
+ assert(rootCheck.math?.latex?.includes(x+'^2-5('+x+')+6=0'),
+  'Missing exact root substitution in KaTeX: '+x);
+ assert(rootCheck.math?.fallback?.includes(x+'²−5('+x+')+6=0'),
+  'Missing accessible root substitution: '+x);
+}
 // Fail loudly if somebody tries to register the full candidate module on top of Q1/Q2.
 const full=read('site/data/textbook-exercises/g9-ch1-ex1-2-en.js');
 assert(!html.includes('g9-ch1-ex1-2-en.js'),'Full 34-part archive must remain isolated');
