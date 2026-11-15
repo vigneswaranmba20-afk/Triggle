@@ -102,7 +102,7 @@ const entries=[
         }
       },
       {
-        "en": "Each new direction (for example a different slope m) produces another line passing through P.",
+        "en": "For a fixed point P = (a, b), each whole-number slope m = 0, 1, 2, … gives a line y − b = m(x − a) through P. Different slopes give different lines, so even this small selection of directions never runs out.",
         "eq": "Different slopes give different lines",
         "math": {
           "latex": "m_1\\ne m_2\\ \\Rightarrow\\ \\ell_{m_1}\\ne\\ell_{m_2}",
