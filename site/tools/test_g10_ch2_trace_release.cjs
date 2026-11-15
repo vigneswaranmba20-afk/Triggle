@@ -58,7 +58,7 @@ assert.equal(40*(3+(3+39*4))/2,3240);
 assert.equal(27*(102+(102+26*-5))/2,999);
 assert.equal(10*(4800+4800+9*-50)/2,45750);
 assert.equal(30*(100+100+29*-2)/2,2130);
-assert.equal(729*(1/3)**6,1);
+assert.ok(Math.abs(729*(1/3)**6-1)<1e-12,'Floating point GP arithmetic within tolerance');
 assert.equal(5*(3**6-1)/(3-1),1820);
 assert.equal(12*(5**6-1)/(5-1),46872);
 assert.equal(3*(2**10-1),3069);
