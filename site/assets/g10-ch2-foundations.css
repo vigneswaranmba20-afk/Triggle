@@ -42,3 +42,33 @@
  .g10ch2-dot-group{gap:0}
  .g10ch2-dot-group .g10ch2-chip{font-size:17px;padding:1px}
 }
+
+/* A.P. sum only: teach equal end-pairs, not an arbitrary sequence position. */
+.g10ch2-pairing{background:#FCFCFE}
+.g10ch2-pairing-title{margin:0 0 12px;font-size:15px;font-weight:750;line-height:1.45;color:#344254}
+.g10ch2-pairing-terms{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-bottom:12px}
+.g10ch2-pairing-term{box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;min-height:80px;padding:8px 2px 6px;border:1px solid #DADCE5;border-radius:11px;background:white}
+.g10ch2-pairing-number{font-size:clamp(19px,4vw,27px);font-weight:750;line-height:1.15;color:#22283B;font-variant-numeric:tabular-nums}
+.g10ch2-pairing-label{min-height:2.7em;display:grid;place-items:center;font-size:10px;line-height:1.25;text-align:center;color:#596272;font-weight:650}
+.g10ch2-pairing-term.is-pair-one{background:#EDE7FA;border-color:#7560B0}
+.g10ch2-pairing-term.is-pair-two{background:#E3F0EB;border-color:#478B76}
+.g10ch2-pairing-term.is-middle{background:#FFF2D9;border-color:#B78A42}
+.g10ch2-pairing-explanation{min-width:0;padding:11px 12px;background:#F5F5FA;border-radius:12px}
+.g10ch2-pairing-math,.g10ch2-pairing-formula{min-width:0;overflow-x:auto;text-align:center;color:#22283B;font-size:clamp(15px,3.5vw,19px)}
+.g10ch2-pairing-math .katex-display,.g10ch2-pairing-formula .katex-display{margin:.2em 0;overflow-x:auto;overflow-y:hidden;padding:2px 0}
+.g10ch2-pairing-formula{margin-top:8px;border-top:1px solid #E2DFEA;padding-top:8px}
+.g10ch2-pairing-formula[hidden]{display:none}
+.g10ch2-pairing-note{font-size:13px!important;line-height:1.55!important;margin:10px 0 0!important;color:#344254!important}
+.g10ch2-pairing-controls{display:flex;justify-content:space-between;align-items:center;gap:7px;margin-top:12px}
+.g10ch2-pairing-controls button{box-sizing:border-box;min-height:44px;padding:10px 12px;border:1px solid #C9C5D6;border-radius:10px;background:white;color:#332D50;font:inherit;font-size:13px;font-weight:730;cursor:pointer}
+.g10ch2-pairing-controls button:last-child{background:#232A34;color:white;border-color:#232A34}
+.g10ch2-pairing-controls button:disabled{opacity:.45;cursor:default}
+.g10ch2-pairing-controls button:focus-visible{outline:3px solid #8061C9;outline-offset:2px}
+.g10ch2-pairing-progress{font-size:11px;color:#586170;text-align:center;white-space:nowrap}
+@media(max-width:430px){
+ .g10ch2-pairing{padding:11px 9px}
+ .g10ch2-pairing-terms{gap:4px}
+ .g10ch2-pairing-term{min-height:72px;padding:6px 1px 4px}
+ .g10ch2-pairing-label{font-size:9px}
+ .g10ch2-pairing-controls button{font-size:12px;padding:10px 8px}
+}
