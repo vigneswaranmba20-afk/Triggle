@@ -75,7 +75,7 @@ const entries=[
         "en": "Remove complete groups of 5 from 78. The part left over is 3.",
         "eq": "78 ≡ 3 (mod 5)",
         "math": {
-          "latex": "78\\equiv3\\pmod5",
+          "latex": "78\\equiv3\\pmod{5}",
           "fallback": "78 ≡ 3 (mod 5)",
           "display": true
         }
@@ -84,7 +84,7 @@ const entries=[
         "en": "Subtract 3 from both sides of the congruence to find which remainder x must have.",
         "eq": "x ≡ 0 (mod 5)",
         "math": {
-          "latex": "78+x\\equiv3\\Rightarrow x\\equiv0\\pmod5",
+          "latex": "78+x\\equiv3\\Rightarrow x\\equiv0\\pmod{5}",
           "fallback": "x ≡ 0 (mod 5)",
           "display": true
         }
@@ -139,7 +139,7 @@ const entries=[
         "en": "The expression x + 3 therefore must have remainder 1. Subtract 3, then add a full group of 4 to reach a positive representative.",
         "eq": "x ≡ 1 − 3 ≡ −2 ≡ 2 (mod 4)",
         "math": {
-          "latex": "x\\equiv1-3\\equiv-2\\equiv2\\pmod4",
+          "latex": "x\\equiv1-3\\equiv-2\\equiv2\\pmod{4}",
           "fallback": "x ≡ 1 − 3 ≡ −2 ≡ 2 (mod 4)",
           "display": true
         }
@@ -194,7 +194,7 @@ const entries=[
         "en": "Since 96 leaves remainder 1 upon division by 5, the integer k = x/7 must also leave remainder 1.",
         "eq": "96 = 5 × 19 + 1; k ≡ 1 (mod 5)",
         "math": {
-          "latex": "96=5(19)+1,\\quad k\\equiv1\\pmod5",
+          "latex": "96=5(19)+1,\\quad k\\equiv1\\pmod{5}",
           "fallback": "96 = 5 × 19 + 1; k ≡ 1 (mod 5)",
           "display": true
         }
@@ -240,7 +240,7 @@ const entries=[
         "en": "Modulo 6, multiplying by 5 is the same as multiplying by −1, because 5 and −1 differ by 6.",
         "eq": "5 ≡ −1 (mod 6)",
         "math": {
-          "latex": "5\\equiv-1\\pmod6",
+          "latex": "5\\equiv-1\\pmod{6}",
           "fallback": "5 ≡ −1 (mod 6)",
           "display": true
         }
@@ -249,7 +249,7 @@ const entries=[
         "en": "Replace 5x with −x, then change the sign on both sides.",
         "eq": "−x ≡ 4 (mod 6); x ≡ −4 ≡ 2 (mod 6)",
         "math": {
-          "latex": "-x\\equiv4\\pmod6\\Rightarrow x\\equiv-4\\equiv2\\pmod6",
+          "latex": "-x\\equiv4\\pmod{6}\\Rightarrow x\\equiv-4\\equiv2\\pmod{6}",
           "fallback": "−x ≡ 4 (mod 6); x ≡ −4 ≡ 2 (mod 6)",
           "display": true
         }
@@ -350,7 +350,7 @@ const entries=[
         "en": "Since 5 differs from −1 by a multiple of 6, use −x in place of 5x.",
         "eq": "5x ≡ −x (mod 6)",
         "math": {
-          "latex": "5x\\equiv-x\\pmod6",
+          "latex": "5x\\equiv-x\\pmod{6}",
           "fallback": "5x ≡ −x (mod 6)",
           "display": true
         }
@@ -359,7 +359,7 @@ const entries=[
         "en": "Change the sign and add 6 to find a nonnegative representative.",
         "eq": "x ≡ −4 ≡ 2 (mod 6)",
         "math": {
-          "latex": "x\\equiv-4\\equiv2\\pmod6",
+          "latex": "x\\equiv-4\\equiv2\\pmod{6}",
           "fallback": "x ≡ −4 ≡ 2 (mod 6)",
           "display": true
         }
@@ -460,7 +460,7 @@ const entries=[
         "en": "9 differs from 2 by exactly 7. Therefore, 9 and 2 behave identically under multiplication modulo 7, even after raising both to the nth power.",
         "eq": "9 ≡ 2 (mod 7) ⇒ 9ⁿ ≡ 2ⁿ (mod 7)",
         "math": {
-          "latex": "9\\equiv2\\pmod7\\Rightarrow9^n\\equiv2^n\\pmod7",
+          "latex": "9\\equiv2\\pmod{7}\\Rightarrow9^n\\equiv2^n\\pmod{7}",
           "fallback": "9 ≡ 2 (mod 7) ⇒ 9ⁿ ≡ 2ⁿ (mod 7)",
           "display": true
         }
@@ -469,7 +469,7 @@ const entries=[
         "en": "Replace 9ⁿ with its congruent counterpart, then take the common factor 2ⁿ.",
         "eq": "2ⁿ + 6 × 9ⁿ ≡ 2ⁿ + 6 × 2ⁿ = 7 × 2ⁿ (mod 7)",
         "math": {
-          "latex": "2^n+6\\cdot9^n\\equiv2^n+6\\cdot2^n=7\\cdot2^n\\pmod7",
+          "latex": "2^n+6\\cdot9^n\\equiv2^n+6\\cdot2^n=7\\cdot2^n\\pmod{7}",
           "fallback": "2ⁿ + 6 × 9ⁿ ≡ 2ⁿ + 6 × 2ⁿ = 7 × 2ⁿ (mod 7)",
           "display": true
         }
@@ -478,7 +478,7 @@ const entries=[
         "en": "Seven times any integer is divisible by 7. This holds for every positive n, so we have a proof, not just a numerical example.",
         "eq": "2ⁿ + 6 × 9ⁿ ≡ 0 (mod 7)",
         "math": {
-          "latex": "2^n+6\\cdot9^n\\equiv0\\pmod7",
+          "latex": "2^n+6\\cdot9^n\\equiv0\\pmod{7}",
           "fallback": "2ⁿ + 6 × 9ⁿ ≡ 0 (mod 7)",
           "display": true
         }
