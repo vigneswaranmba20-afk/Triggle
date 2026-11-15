@@ -1,0 +1,45 @@
+name: Paper + Indigo all-grade visual QA
+on:
+  pull_request:
+    paths:
+      - 'site/assets/paper-indigo.css'
+      - 'site/index.html'
+      - 'site/service-worker.js'
+      - 'site/tools/test_paper_indigo_theme*.cjs'
+      - 'package.json'
+      - '.github/workflows/paper-indigo-theme.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/assets/paper-indigo.css'
+      - 'site/index.html'
+      - 'site/service-worker.js'
+      - 'site/tools/test_paper_indigo_theme*.cjs'
+      - 'package.json'
+permissions:
+  contents: read
+jobs:
+  palette:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Check seven contrast pairs and offline asset registration
+        run: node site/tools/test_paper_indigo_theme.cjs
+      - run: npx playwright install --with-deps chromium
+      - name: Verify palette on Grade 9 / 10 / 12 and Tamil mobile
+        run: node site/tools/test_paper_indigo_theme_browser.cjs
+        env:
+          CHROMIUM_PATH: ''
+      - name: Attach mobile screenshot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-indigo-mobile-qa
+          path: screenshots/paper-indigo/
+          if-no-files-found: warn
