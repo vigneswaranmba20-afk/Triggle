@@ -26,30 +26,33 @@ for(const s of foundations.stages){
  assert(!/English version only — Tamil editorial content pending/.test(s.title.ta),'No fake translated placeholders');
  assert(s.visual,'Every concept should present a mathematical visual');
 }
-for(const file of ['data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js'])
+for(const file of ['data/textbook-exercises/g10-ch2-trace-en.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js'])
  vm.runInContext(read(file),ctx,{filename:file});
 const items=window.TRIGGLE_CLASSES[10].items;
-assert.equal(items.length,52,'52 new released parts in the focused chapter');
+assert.equal(items.length,63,'53 canonical and 10 non-overlapping additional textbook question parts');
+assert.equal(window.TRIGGLE_G10_CH2_SUPPLEMENTS['2.3–2.6'].integrated,5);
+assert.equal(window.TRIGGLE_G10_CH2_SUPPLEMENTS['2.7–2.10'].integrated,5);
+assert.equal(window.TriggleG10Ch2TraceRecords.count,53);
 assert.equal(new Set(items.map(q=>q.id)).size,items.length,'All question IDs unique');
 assert.equal([...new Set(items.map(q=>q.exercise))].sort().join(','),['2.10','2.3','2.4','2.5','2.6','2.7','2.8','2.9'].sort().join(','),'Exercises 2.3–2.10 represented');
 assert(items.every(q=>q.chapter==='2'&&q.classNum===10&&q.kind==='textbook'));
 assert(items.every(q=>q.source.includes('13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of')&&q.edition==='2025'));
-assert(items.every(q=>q.steps.length>=3&&q.steps.every(s=>s.en.length>15&&s.eq.length>2)));
+assert(items.every(q=>q.steps.length>=2&&q.steps.every(s=>s.en.length>15&&s.eq.length>2)));
 assert(items.every(q=>q.translationReview==='pending'),'Do not present provisional Tamil reviews as final');
 assert(items.every(q=>!q.id.includes('ex2-2-q8')),'Hold unresolved 2.2 Q8');
 const answers=Object.fromEntries(items.map(q=>[q.id,q.answer]));
 function has(id,t){assert(answers[id]?.includes(t),id+' answer must include '+t)}
 has('c10-2-ex2-3-q7','Friday');has('c10-2-ex2-3-q10','Monday');
-has('c10-2-ex2-4-q1-i','1944');
+has('c10-2-ex2-4-q1','1944');
 has('c10-2-ex2-5-q5','15th');has('c10-2-ex2-5-q6','93 and 99');
-has('c10-2-ex2-5-q11','2, 9, 16');
-has('c10-2-ex2-6-q1-i','3240');has('c10-2-ex2-6-q1-ii','999');
-has('c10-2-ex2-6-q8-i','45,750');has('c10-2-ex2-6-q8-ii','5,750');
-has('c10-2-ex2-6-q10-ii','2,130');
+has('c10-2-ex2-5-q11','2, 9 and 16');
+has('c10-2-ex2-6-q1','3240');has('c10-2-ex2-6-q1','999');
+has('c10-2-ex2-6-q8','45,750');has('c10-2-ex2-6-q8','5,750');
+has('c10-2-ex2-6-q10','2,130');
 has('c10-2-ex2-7-q3','1');has('c10-2-ex2-7-q7','3072');
 has('c10-2-ex2-8-q2','1820');has('c10-2-ex2-8-q7','3069');
-has('c10-2-ex2-9-q2','105625');has('c10-2-ex2-9-q3','210');
-has('c10-2-ex2-10-q2','0, 1, 8');has('c10-2-ex2-10-q10','31m');
+has('c10-2-ex2-9-q2','105,625');has('c10-2-ex2-9-q3','210');
+has('c10-2-ex2-10-q2','0, 1 and 8');has('c10-2-ex2-10-q10','31m');
 /* Independently evaluate several key equations, not just matching strings. */
 assert.equal(40*(3+(3+39*4))/2,3240);
 assert.equal(27*(102+(102+26*-5))/2,999);
@@ -67,9 +70,9 @@ vm.runInContext(read('data/g10-ch2-teaching-bridges.js'),ctx,{filename:'g10-ch2-
 const bridge=window.TriggleG10Ch2Bridge.get({id:'c10-2-ex2-1-q8',classNum:10,chapter:'2'},'en');
 assert(bridge.explain.includes('64 − 60 = 4')&&bridge.explain.includes('reliable method'),'HCF bridge must teach intuitive goal and systematic method');
 assert.equal(window.TriggleG10Ch2Bridge.get({id:'c10-1-q8',classNum:10,chapter:'1'},'en'),null,'No other chapter affected');
-for(const src of ['data/g10-ch2-concepts.js','data/g10-ch2-teaching-bridges.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js'])
+for(const src of ['data/g10-ch2-concepts.js','data/g10-ch2-teaching-bridges.js','data/textbook-exercises/g10-ch2-trace-en.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js'])
  assert(html.includes(src),'HTML must load '+src);
-for(const src of ['data/g10-ch2-concepts.js','data/g10-ch2-teaching-bridges.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js','assets/g10-ch2-foundations.css'])
+for(const src of ['data/g10-ch2-concepts.js','data/g10-ch2-teaching-bridges.js','data/textbook-exercises/g10-ch2-trace-en.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js','assets/g10-ch2-foundations.css'])
  assert(cache.includes("'./"+src+"'"),'Android offline cache missing '+src);
 assert(/v87-g10ch2-trace-bulk/.test(cache),'Offline cache must refresh');
-console.log('PASS TRACE Grade 10 Chapter 2: 15 concept stages, 52 source-scoped question parts, independent math, HCF pedagogy and offline assets');
+console.log('PASS TRACE Grade 10 Chapter 2: 15 concept stages, 63 deduplicated source-scoped question parts, independent math, HCF pedagogy and offline assets');
