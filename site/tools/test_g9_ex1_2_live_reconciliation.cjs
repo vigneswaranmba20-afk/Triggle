@@ -65,6 +65,24 @@ assert([-100,-1,0,4].every(x=>x<5&&x-1<5));
 // The only natural roots of x²-5x+6 are 2 and 3; Q2(iv) is finite.
 assert.deepEqual(Array.from({length:20},(_,i)=>i+1).filter(x=>x*x-5*x+6===0),[2,3]);
 assert(q2.every(row=>row.translationReview==='pending'));
+// Student-facing mathematical notation must remain renderable and accessible.
+// Check the actual registered Q2 entries, not only the archived source answers.
+for(const row of q2){
+ assert(row.answerMath?.latex?.trim(),'Missing KaTeX final answer: '+row.id);
+ assert(row.answerMath?.fallback?.trim(),'Missing accessible final answer: '+row.id);
+ assert(Array.isArray(row.steps)&&row.steps.length>=3,'Missing explanatory steps: '+row.id);
+ for(const [index,step] of row.steps.entries()){
+  assert(step.en?.trim(),'Missing English reasoning in step '+index+': '+row.id);
+  assert(step.math?.latex?.trim(),'Missing KaTeX in step '+index+': '+row.id);
+  assert(step.math?.fallback?.trim(),'Missing accessible math fallback in step '+index+': '+row.id);
+ }
+}
+for(const row of q2.slice(2)){
+ const parts=row.questionMath?.en;
+ assert(Array.isArray(parts),'Structured question math missing: '+row.id);
+ assert(parts.some(part=>typeof part==='object'&&part.latex?.trim()&&part.fallback?.trim()),
+  'Question must have both KaTeX and accessible fallback: '+row.id);
+}
 // Fail loudly if somebody tries to register the full candidate module on top of Q1/Q2.
 const full=read('site/data/textbook-exercises/g9-ch1-ex1-2-en.js');
 assert(!html.includes('g9-ch1-ex1-2-en.js'),'Full 34-part archive must remain isolated');
