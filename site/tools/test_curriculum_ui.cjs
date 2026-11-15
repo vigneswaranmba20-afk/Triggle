@@ -793,18 +793,22 @@ async function main() {
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
       assert.equal(await page.locator('.rnlab [data-nav] button').count(),8,'eight interactive Real Numbers concepts');
       const lab=page.locator('.rnlab');
-      assert.equal(await lab.locator('input[type="range"]').count(),1,'movable rational number line');
+      assert.equal(await lab.locator('[data-index-view]').isVisible(),true,'Concepts opens at the idea index');
+       assert.equal(await lab.locator('[data-detail-view]').isVisible(),false,'No premature lesson');
+       await lab.locator('[data-nav] [data-index="0"]').click();
+       assert.equal(await lab.locator('input[type="range"]').count(),1,'movable rational number line');
       await lab.locator('input[type="range"]').evaluate(input=>{input.value='10';input.dispatchEvent(new Event('input',{bubbles:true}));});
       const rationalFractions=await lab.locator('[data-demo-output] mfrac').evaluateAll(nodes=>nodes.map(n=>[n.children[0].textContent,n.children[1].textContent]));
       assert(rationalFractions.some(([n,d])=>n==='7'&&d==='12'),'The selected 7/12 is a semantic stacked fraction');
       assert.equal(await lab.locator('[data-demo-output] .triggle-tex').getAttribute('data-math-fallback'),'1/2 < 70/120 < 2/3  =  7/12','Keep the original numerical source fallback');
       await lab.locator('[data-answers] button').nth(0).click();
       await lab.locator('[data-answers] button').nth(1).click();
-      assert.match(await lab.locator('[data-progress]').innerText(),/1 \/ 8/);
-      await lab.locator('[data-nav] [data-index="1"]').click();
+      assert.equal(await lab.locator('.sp2-progress:visible').count(),0,'No visible 1/8 counter');
+       assert.equal(await lab.locator('[data-nav] .sp2-done').count(),1,'A subtle index checkmark is enough');
+      await lab.locator('[data-back-index]').click();await lab.locator('[data-nav] [data-index="1"]').click();
       await lab.locator('[data-demo-mode="repeat"]').click();
       assert.match(await sourceText(lab.locator('[data-demo-output]')),/Repeating/);
-      await lab.locator('[data-nav] [data-index="4"]').click();
+      await lab.locator('[data-back-index]').click();await lab.locator('[data-nav] [data-index="4"]').click();
       // Grade 9 surd options: a baseline coefficient must be visibly separated
       // from the radical; a fifth-root index uses <mroot> instead.
       const rootOption=lab.locator('[data-answers] button').first();
@@ -819,7 +823,7 @@ async function main() {
       await lab.locator('input[type="range"]').evaluate(input=>{input.value='4';input.dispatchEvent(new Event('input',{bubbles:true}));});
       assert.equal(await lab.locator('[data-demo-output] math msqrt').count(),3,'√32, √(4²×2) and √2 must use real radical notation');
       assert.equal((await lab.locator('[data-demo-output] math msqrt').last().textContent()).trim(),'2');
-      await lab.locator('[data-nav] [data-index="5"]').click();
+      await lab.locator('[data-back-index]').click();await lab.locator('[data-nav] [data-index="5"]').click();
       assert.equal(await lab.locator('[data-demo-controls] math mfrac').count(),2,
         'Both rationalisation choices must use real stacked fraction bars');
       assert.equal(await lab.locator('.rnlab-rational-step').count(),4,
@@ -850,10 +854,10 @@ async function main() {
       assert.match(await lab.locator('.rnlab-rational-step').nth(2).innerText(),/7.*4.*3/s,
         'The second example denominator simplifies from 7−4 to 3');
       await noOverflow(page,'Rationalisation four steps at 390px');
-      await lab.locator('[data-nav] [data-index="6"]').click();
+      await lab.locator('[data-back-index]').click();await lab.locator('[data-nav] [data-index="6"]').click();
       await lab.locator('input[type="range"]').evaluate(input=>{input.value='-3';input.dispatchEvent(new Event('input',{bubbles:true}));});
       assert.match(await sourceText(lab.locator('[data-demo-output]')),/0\.0032/);
-      await lab.locator('[data-nav] [data-index="7"]').click();
+      await lab.locator('[data-back-index]').click();await lab.locator('[data-nav] [data-index="7"]').click();
       const squaredButton=lab.locator('[data-demo-mode="equation"]');
       assert.equal(await squaredButton.locator('math msup').count(),1,
         'The x²=25 button must render a true raised exponent');
@@ -871,18 +875,19 @@ async function main() {
       assert.match(await sourceText(lab.locator('[data-demo-output]')),/25/);
       await noOverflow(page,'Exponent button and root comparison at 390px');
       await page.locator('#langTa').click();
-      assert.match(await page.locator('.rnlab h3').innerText(),/எண்களை/);
-      await lab.locator('[data-nav] [data-index="7"]').click();
+      assert.match(await page.locator('.rnlab .sp2-concept-heading h4').innerText(),/[\u0B80-\u0BFF]/,'Tamil opens the actual idea, not a marketing heading');
+      await lab.locator('[data-back-index]').click();await lab.locator('[data-nav] [data-index="7"]').click();
       assert.equal(await lab.locator('[data-demo-mode="equation"] math msup').count(),1,
         'Tamil lesson must preserve the exact same squared-x typography');
-      await lab.locator('[data-nav] [data-index="5"]').click();
+      await lab.locator('[data-back-index]').click();await lab.locator('[data-nav] [data-index="5"]').click();
       assert.equal(await lab.locator('.rnlab-rational-step').count(),4);
       assert.match(await lab.locator('.rnlab-rational-step').first().innerText(),/தொடக்க/);
       assert.equal(await lab.locator('[data-demo-controls] math mfrac').count(),2,
         'Tamil fraction choices must also have proper fraction bars');
       await noOverflow(page,'Tamil Real Numbers interactive lab at 390px');
       
-      await page.locator('.hub-back-menu').click();
+      await lab.locator('[data-back-index]').click();
+       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="quizzes"]').click();
       assert.equal(await page.locator('.hub-quiz-question').count(),8,'eight concept quizzes');
       await page.locator('#langTa').click();
