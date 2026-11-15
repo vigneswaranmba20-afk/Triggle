@@ -604,8 +604,8 @@ const additional={
   "c10-2-ex2-2-q5": {
     "step": 2,
     "expected": "Combine like prime factors.",
-    "en": "The fundamental theorem of arithmetic says prime factorisation is unique apart from ordering. Once each prime power is found, its exponent is fixed.",
-    "ta": "எண்கணிதத்தின் அடிப்படைத் தேற்றப்படி பகாக்காரணிப் பகுப்பு வரிசையைத் தவிர தனித்துவமானது. ஒவ்வொரு பகா அடுக்கும் கண்ட பிறகு அதன் அடுக்கு நிலையானது."
+    "en": "Read the factorisation as two matching rows: the primes in increasing order are 2, 3, 5, 7; their exponents are 3, 4, 2, 1. The small subscript in p₁ names the first prime, while the raised exponent x₁ tells how many times that prime occurs. No guessing is needed.",
+    "ta": "பகாக்களை ஏறுவரிசையில் எழுதுங்கள்: 2, 3, 5, 7. அவற்றின் அடுக்குகள் முறையே 3, 4, 2, 1. p₁ இல் கீழுள்ள 1 முதல் பகாவைக் குறிக்கிறது; மேலுள்ள x₁ அந்தப் பகா எத்தனை முறை காரணியாக வருகிறது என்பதைக் காட்டுகிறது."
   },
   "c10-2-ex2-2-q6": {
     "step": 1,
