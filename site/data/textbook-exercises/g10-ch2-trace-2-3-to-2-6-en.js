@@ -1024,10 +1024,20 @@ const entries=[
   }
 ];
 const allIds=new Set(Object.values(window.TRIGGLE_CLASSES).flatMap(g=>(g.items||[]).map(q=>q.id)));
-if(entries.some(q=>allIds.has(q.id)))throw Error('TRACE Ch2 duplicate content ID');
+const originalCount=entries.length;
+// The canonical TRACE source release loads first. Do not duplicate a textbook
+// question already published there, including one with bundled subparts.
+const extras=entries.filter(q=>{
+ if(allIds.has(q.id))return false;
+ const parent=q.id.replace(/-(?:i|ii|iii|iv|v|vi)$/,'');
+ return parent===q.id||!allIds.has(parent);
+});
+if(new Set(extras.map(q=>q.id)).size!==extras.length)throw Error('Duplicate TRACE supplement IDs');
 chapter.textbookQuestionIds=chapter.textbookQuestionIds||[];
-for(const q of entries){
+for(const q of extras){
  grade.items.push(q);
  if(!chapter.textbookQuestionIds.includes(q.id))chapter.textbookQuestionIds.push(q.id);
 }
+window.TRIGGLE_G10_CH2_SUPPLEMENTS=window.TRIGGLE_G10_CH2_SUPPLEMENTS||{};
+window.TRIGGLE_G10_CH2_SUPPLEMENTS['2.3–2.6']={candidates:originalCount,integrated:extras.length,held:originalCount-extras.length};
 })();
