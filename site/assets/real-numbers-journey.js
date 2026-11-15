@@ -249,39 +249,52 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
     });
   }
  }
- function show(i){
+ function show(i,focus=false,notify=true){
   if(i<0||i>=path.stages.length)return;
-  active=i;const stage=path.stages[i];
-  panel.innerHTML='<small class="sp2-stage-reference">'+esc(t.source)+' '+esc(stage.section)+(stage.page?.en?' · EN p.'+stage.page.en:'')+'</small>'+
-   '<h4>'+esc(pick(stage.title,lang))+'</h4><p class="sp2-idea">'+notation(pick(stage.idea,lang))+'</p>'+
-   '<p class="sp2-example">'+notation(pick(stage.example,lang))+'</p><div class="sp2-formula">'+notation(pick(stage.rule,lang))+'</div>'+ 
-   foundationMarkup(stage)+
-   '<div class="sp2-demo"><h5 class="sp2-demo-title">'+esc(t.explore)+'</h5>'+
+  active=i;root.dataset.view='lesson';indexView.hidden=true;detailView.hidden=false;
+  if(notify&&typeof onConcept==='function')onConcept(i);
+  const stage=path.stages[i];
+  panel.innerHTML=
+   '<div class="sp2-concept-heading" tabindex="-1"><h4>'+esc((i+1)+'. '+pick(stage.title,lang))+'</h4></div>'+
+   '<div class="sp2-demo" data-demo><h5 class="sp2-demo-title">'+esc(t.explore)+'</h5>'+
    '<div class="sp2-demo-controls" data-demo-controls></div>'+
-   '<div class="rnlab-visual" data-demo-visual></div><p class="sp2-demo-output" data-demo-output aria-live="polite"></p>'+
-   '<small class="rnlab-source-note">'+esc(t.detailed)+'</small></div>'+
+   '<div class="rnlab-visual" data-demo-visual></div><p class="sp2-demo-output" data-demo-output aria-live="polite"></p></div>'+
+   '<details class="sp2-explanation"><summary>'+esc(explanationLabel)+'</summary>'+
+   '<div class="sp2-explanation-body">'+
+   '<p class="sp2-idea">'+notation(pick(stage.idea,lang))+'</p>'+
+   '<p class="sp2-example">'+notation(pick(stage.example,lang))+'</p>'+
+   '<div class="sp2-formula">'+notation(pick(stage.rule,lang))+'</div>'+
+   foundationMarkup(stage)+
+   '<small class="rnlab-source-note">'+esc(t.source)+' '+esc(stage.section)+(stage.page?.en?' · EN p.'+esc(stage.page.en):'')+'</small></div></details>'+
    '<div class="sp2-recall"><h5>'+esc(t.check)+'</h5><p>'+notation(pick(stage.question,lang))+'</p>'+
-   '<div class="sp2-answers" data-answers></div><div class="sp2-recall-actions">'+
+   '<div class="sp2-answers" data-answers role="group" aria-label="'+esc(pick(stage.question,lang))+'"></div>'+
+   '<div class="sp2-recall-actions">'+
    '<button type="button" data-hint>'+esc(t.hint)+'</button><button type="button" data-why>'+esc(t.why)+'</button></div>'+
-   '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-explanation hidden></div></div>'+ 
-   (stage.pitfall?'<details class="rnlab-pitfall"><summary>'+esc(ta?'பொதுவாக ஏற்படும் தவறு':'Avoid this mistake')+'</summary><p>'+notation(pick(stage.pitfall,lang))+'</p></details>':'')+
-   (i+1<path.stages.length?'<button type="button" class="rnlab-next" data-next>'+esc(t.next)+' →</button>':'');
+   '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-explanation hidden></div></div>'+
+   (stage.pitfall?'<details class="rnlab-pitfall"><summary>'+esc(ta?'பொதுவாக ஏற்படும் தவறு':'Avoid this mistake')+
+    '</summary><p>'+notation(pick(stage.pitfall,lang))+'</p></details>':'');
   const choices=panel.querySelector('[data-answers]'),feedback=panel.querySelector('[data-feedback]'),explanation=panel.querySelector('[data-explanation]');
   let wrongAttempts=0;
-  stage.choices.forEach((opt,j)=>{const b=document.createElement('button');b.type='button';b.dataset.choice=String(j);b.innerHTML=notation(pick(opt,lang));b.setAttribute('aria-label',pick(opt,lang));
-   b.addEventListener('click',()=>{const correct=j===stage.correct;
-    choices.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  stage.choices.forEach((opt,j)=>{
+   const button=document.createElement('button');button.type='button';button.dataset.choice=String(j);
+   button.innerHTML=notation(pick(opt,lang));button.setAttribute('aria-label',pick(opt,lang));
+   button.addEventListener('click',()=>{
+    const correct=j===stage.correct;
+    choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
     if(correct){feedback.textContent=t.right;done.add(stage.id);save(done);update();explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=false;}
     else{wrongAttempts++;const clue=wrongAttempts===2?' '+pick(stage.hint,lang):wrongAttempts>=3?' '+pick(stage.why,lang):'';
       feedback.innerHTML=notation(t.wrong+clue);}
-   });choices.append(b);
+   });choices.append(button);
   });
   panel.querySelector('[data-hint]').addEventListener('click',()=>{feedback.innerHTML=notation(pick(stage.hint,lang));});
   panel.querySelector('[data-why]').addEventListener('click',()=>{explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=!explanation.hidden;});
-  panel.querySelector('[data-next]')?.addEventListener('click',()=>{show(i+1);root.querySelector('[data-panel]').scrollIntoView({block:'nearest'});});
   bindFoundation(stage);renderDemo(i);update();
+  if(focus){root.scrollIntoView({behavior:'auto',block:'start'});panel.querySelector('.sp2-concept-heading')?.focus({preventScroll:true});}
  }
- show(0);return true;
+ if(Number.isInteger(initialConcept)&&initialConcept>=0&&initialConcept<path.stages.length)
+  show(initialConcept,false,false);
+ else showIndex(false,false);
+ return true;
 }
 window.TriggleRealJourney=Object.freeze({mount});
 })();
