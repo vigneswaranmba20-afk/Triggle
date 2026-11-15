@@ -4083,7 +4083,17 @@ const metadata={
     "c10-2-ex2-3-q3": {"grade":10,"level":"medium","basis":"Express all integer solutions of 5x congruent 4 modulo 6","review":"implementation-audit"},
     "c10-2-ex2-3-q4": {"grade":10,"level":"difficult","basis":"Find a modular multiplicative inverse rather than divide as ordinary arithmetic","review":"implementation-audit"},
     "c10-2-ex2-3-q8": {"grade":10,"level":"difficult","basis":"Prove a congruence for every positive integer power using equal residues","review":"implementation-audit"},
-    "c10-2-ex2-3-q9": {"grade":10,"level":"medium","basis":"Use periodic powers of two to compute the huge 81st exponent modulo 17","review":"implementation-audit"}
+    "c10-2-ex2-3-q9": {"grade":10,"level":"medium","basis":"Use periodic powers of two to compute the huge 81st exponent modulo 17","review":"implementation-audit"},
+    "c10-2-ex2-4-q2-i": {"grade":10,"level":"easy","basis":"Straight substitution into a cubic nth-term rule","review":"implementation-audit"},
+    "c10-2-ex2-4-q2-ii": {"grade":10,"level":"medium","basis":"Alternating-sign exponent before nth-term multiplication","review":"implementation-audit"},
+    "c10-2-ex2-4-q2-iii": {"grade":10,"level":"easy","basis":"Square, multiply then subtract in a given nth-term formula","review":"implementation-audit"},
+    "c10-2-ex2-4-q3-i": {"grade":10,"level":"medium","basis":"Infer the square-plus-one pattern from consecutive terms","review":"implementation-audit"},
+    "c10-2-ex2-4-q3-ii": {"grade":10,"level":"medium","basis":"Recognise numerator n minus one and denominator n, including first zero term","review":"implementation-audit"},
+    "c10-2-ex2-4-q3-iii": {"grade":10,"level":"easy","basis":"Generalize a constant-difference arithmetic sequence","review":"implementation-audit"},
+    "c10-2-ex2-4-q4-i": {"grade":10,"level":"easy","basis":"Evaluate and simplify a rational formula at two indices","review":"implementation-audit"},
+    "c10-2-ex2-4-q4-ii": {"grade":10,"level":"easy","basis":"Apply the outer minus sign after evaluating the bracket","review":"implementation-audit"},
+    "c10-2-ex2-4-q5": {"grade":10,"level":"difficult","basis":"Select even versus odd branch before substituting in piecewise nth term","review":"implementation-audit"},
+    "c10-2-ex2-4-q6": {"grade":10,"level":"medium","basis":"Use two previous terms in the correct recurrence order","review":"implementation-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
