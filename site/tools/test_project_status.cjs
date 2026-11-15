@@ -7,30 +7,6 @@ const manifest=build(),saved=require('../data/project-status.json');
 // provenance metadata separately rather than requiring a self-referential SHA.
 const {sourceCommit:generatedCommit,updatedAt:generatedAt,...generatedData}=manifest;
 const {sourceCommit:snapshotCommit,updatedAt:snapshotAt,...snapshotData}=saved;
-
-// Temporary PR diagnostic: print compact changes to the generated status projection.
-// Removed once the checked-in snapshot is reconciled.
-function eqPatch(a,b){return require('node:util').isDeepStrictEqual(a,b);}
-function compactPatch(oldValue,newValue,path){
- if(eqPatch(oldValue,newValue))return;
- if(Array.isArray(oldValue)&&Array.isArray(newValue)){
-  if(oldValue.length!==newValue.length){
-   let prefix=0,suffix=0;
-   while(prefix<Math.min(oldValue.length,newValue.length)&&eqPatch(oldValue[prefix],newValue[prefix]))prefix++;
-   while(suffix<Math.min(oldValue.length,newValue.length)-prefix&&eqPatch(oldValue[oldValue.length-1-suffix],newValue[newValue.length-1-suffix]))suffix++;
-   console.log('TRACE_STATUS_PATCH|'+JSON.stringify({op:'splice',path,index:prefix,deleteCount:oldValue.length-prefix-suffix,insert:newValue.slice(prefix,newValue.length-suffix)}));
-  }else for(let i=0;i<oldValue.length;i++)compactPatch(oldValue[i],newValue[i],[...path,i]);
- }else if(oldValue&&newValue&&typeof oldValue==='object'&&typeof newValue==='object'){
-  for(const k of new Set([...Object.keys(oldValue),...Object.keys(newValue)])){
-   if(!Object.hasOwn(newValue,k))console.log('TRACE_STATUS_PATCH|'+JSON.stringify({op:'delete',path:[...path,k]}));
-   else if(!Object.hasOwn(oldValue,k))console.log('TRACE_STATUS_PATCH|'+JSON.stringify({op:'set',path:[...path,k],value:newValue[k]}));
-   else compactPatch(oldValue[k],newValue[k],[...path,k]);
-  }
- }else console.log('TRACE_STATUS_PATCH|'+JSON.stringify({op:'set',path,value:newValue}));
-}
-compactPatch(snapshotData,generatedData,[]);
-console.log('TRACE_STATUS_PATCH_END');
-
 assert.deepEqual(generatedData,snapshotData,'Regenerate source-derived curriculum data before release');
 for(const [label,sha] of [['generated',generatedCommit],['snapshot',snapshotCommit]])
   assert.match(sha,/^[a-f0-9]{40}$/,'Invalid '+label+' provenance SHA');
