@@ -18,7 +18,16 @@ check('q1-v',JSON.stringify(Array.from({length:25},(_,i)=>1882+i).filter(y=>y%4=
 check('q2-i',new Set(['district-A','district-B','district-C']).size===3,'finite administrative roster illustration; no unverified current district count');
 check('q2-ii',new Set(Array.from({length:1000},(_,i)=>i/1000)).size===1000,'arbitrarily many distinct slopes');
 check('q2-iii',Array.from({length:1000},(_,i)=>4-i).every(x=>Number.isInteger(x)&&x<5&&Number.isInteger(x-1)&&x-1<5)&&4<5,'constructive infinite descending integer sequence; each member has a distinct smaller member');
-check('q2-iv',[2,3].every(x=>x*x-5*x+6===0)&&[1,4].every(x=>x*x-5*x+6!==0),'factor roots and exclusions');
+// Exhaustive roots follow from the factor identity over all integers,
+// not from testing a handful of nearby natural numbers.
+const quadratic=x=>x*x-5*x+6;
+const factors=x=>(x-2)*(x-3);
+check('q2-iv',
+ [2,3].every(x=>quadratic(x)===0)&&
+ Array.from({length:101},(_,i)=>i-50).every(x=>quadratic(x)===factors(x))&&
+ (5*5-4*6)===1&&
+ ((5-Math.sqrt(1))/2===2)&&((5+Math.sqrt(1))/2===3),
+ 'quadratic factor identity, discriminant and complete natural roots');
 check('q3-i',new Set('aeiou').size===new Set('VOWEL').size&&!equal(new Set('aeiou'),new Set('VOWEL')),'five vowels versus five different letters: equivalent, not equal');
 check('q3-ii',!equal(new Set([2,3,4,5]),new Set([2,3,4])),'different membership');
 check('q3-iii',equal(new Set('LIFE'),new Set(['F','I','L','E'])),'set equality');
