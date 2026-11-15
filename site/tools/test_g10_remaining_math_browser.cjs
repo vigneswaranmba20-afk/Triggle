@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
 const {server,launchOptions}=require('./dashboard_test_support.cjs');
 const remaining=[
  ...Array.from({length:10},(_,i)=>'c10-2-ex2-1-q'+(i+1)),
- ...[1,2,3,4,5,6,7,9].map(n=>'c10-2-ex2-2-q'+n),
+ ...[1,2,3,4,5,6,7,8,9].map(n=>'c10-2-ex2-2-q'+n),
  'c10-3-ex3-1-q1-i','c10-4-ex4-1-q2','c10-4-ex4-1-q3',
  'c10-8-ex8-1-q1-i','c10-8-ex8-1-q1-ii','c10-8-ex8-1-q2',
  ...[1,2,3].map(n=>'c10-'+(n===1?'3-3-practice-18':n===2?'2-2-practice-19':'5-5-practice-20')),
@@ -15,11 +15,11 @@ const remaining=[
   const ctx=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:2,serviceWorkers:'block'}),page=await ctx.newPage(),errors=[],missing=[];
   page.on('pageerror',e=>errors.push(e.message));
   page.on('response',r=>{if(r.status()>=400)missing.push(r.url());});
-  assert.equal(remaining.length,44);
+  assert.equal(remaining.length,45);
   for(const width of [320,390,412,768]){
    await page.setViewportSize({width,height:844});
    const selection=width===390?remaining:[
-    'c10-2-ex2-1-q6','c10-2-ex2-2-q5','c10-3-ex3-1-q1-i',
+    'c10-2-ex2-1-q6','c10-2-ex2-2-q5','c10-2-ex2-2-q8','c10-3-ex3-1-q1-i',
     'c10-4-ex4-1-q2','c10-6-6-1-3','c10-6-6-2-5',
     'c10-6-6-5-16','c10-8-ex8-1-q1-i'
    ];
@@ -64,7 +64,7 @@ const remaining=[
   }
   assert.deepEqual(errors,[],'Uncaught browser errors');
   assert.deepEqual(missing,[],'Missing maths/offline assets');
-  console.log('PASS Grade 10 rich maths all remaining chapters: 44 routes at 390px, 8 high-risk problems at 320/412/768px, stacked fractions, Tamil interface, long-equation access, no horizontal overflow and earlier lessons preserved.');
+  console.log('PASS Grade 10 rich maths all remaining chapters: 45 routes at 390px, 9 high-risk problems at 320/412/768px, stacked fractions, Tamil interface, long-equation access, no horizontal overflow and earlier lessons preserved.');
   await ctx.close();
  } finally {await browser.close();await app.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
