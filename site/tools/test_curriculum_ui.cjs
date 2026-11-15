@@ -315,9 +315,12 @@ async function main() {
           assert.ok((await page.locator('#questionText').boundingBox()).y<175,'Question anchor returns to the source');
         }
         await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='';});
-        await page.locator('#next').click();
-        assert.notEqual(new URL(page.url()).searchParams.get('question'),'c10-1-1-2-q5');
+        // Q5 is the final question of its exercise: Next must not enter 1.3.
+        assert.equal(await page.locator('#next').isDisabled(),true,
+          'Exercise-bounded Next stops at Q5');
         await page.locator('#previous').click();
+        assert.notEqual(new URL(page.url()).searchParams.get('question'),'c10-1-1-2-q5');
+        await page.locator('#next').click();
         assert.equal(new URL(page.url()).searchParams.get('question'),'c10-1-1-2-q5');
         await page.locator('#langTa').click();
         assert.equal(await page.locator('html').getAttribute('lang'),'ta');
