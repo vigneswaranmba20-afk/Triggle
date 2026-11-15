@@ -8,10 +8,10 @@
     en:{
       eyebrow:'YOUR CHAPTER',choose:'Choose a section',
       intro:'Choose one section. You can come back here whenever you want.',
-      concepts:'Concepts',examples:'Worked Examples',exercises:'Exercises',quizzes:'Quizzes',activities:'Thinking Corner & Activities',
+      concepts:'Concepts',examples:'Worked Examples',exercises:'Exercises',exerciseSingle:'Exercise',unitExercise:'Unit Exercise',quizzes:'Quizzes',activities:'Thinking Corner & Activities',
       conceptsHint:'Learn ideas with short, interactive explanations',
       examplesHint:'Study questions solved step by step',
-      exercisesHint:'Go straight to available questions and solutions',
+      exercisesHint:'Choose a numbered exercise to start solving',
       quizzesHint:'Check what you remember',activitiesHint:'Open textbook thinking questions and activities with worked answers',
       available:'available',soon:'More coming',checks:'quick checks',questions:'questions',worked:'examples',
       back:'Back to chapter',classBack:'Back to all chapters',home:'Home',
@@ -41,10 +41,10 @@
     ta:{
       eyebrow:'உங்கள் அத்தியாயம்',choose:'ஒரு பகுதியைத் தேர்ந்தெடுக்கவும்',
       intro:'ஒரு பகுதியைத் தேர்ந்தெடுக்கவும். எப்போது வேண்டுமானாலும் இங்கு திரும்பலாம்.',
-      concepts:'கருத்துகள்',examples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'சிறு தேர்வுகள்',activities:'சிந்தனை மூலை & செயல்பாடுகள்',
+      concepts:'கருத்துகள்',examples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',exerciseSingle:'பயிற்சி',unitExercise:'அலகுப் பயிற்சி',quizzes:'சிறு தேர்வுகள்',activities:'சிந்தனை மூலை & செயல்பாடுகள்',
       conceptsHint:'சிறு விளக்கங்களுடன் செயல்வழியாகக் கற்றுக்கொள்ளுங்கள்',
       examplesHint:'படிப்படியாகத் தீர்க்கப்பட்ட வினாக்களைப் பாருங்கள்',
-      exercisesHint:'வினாக்களையும் தீர்வுகளையும் நேராக அணுகுங்கள்',
+      exercisesHint:'பயிற்சி எண்ணைத் தேர்ந்தெடுத்து வினாக்களுக்குச் செல்லுங்கள்',
       quizzesHint:'நினைவில் உள்ளதைச் சரிபாருங்கள்',activitiesHint:'பாடநூல் சிந்தனை வினாக்களும் செயல்பாடுகளும், விளக்க விடைகளுடன்',
       available:'கிடைக்கிறது',soon:'மேலும் உருவாகின்றன',checks:'சிறு வினாக்கள்',questions:'வினாக்கள்',worked:'எடுத்துக்காட்டுகள்',
       back:'அத்தியாயத்திற்குத் திரும்பு',classBack:'அனைத்து அத்தியாயங்களுக்கும் திரும்பு',home:'முகப்பு',
@@ -231,7 +231,7 @@
   }
   function mount(root,opts){
     if(!root||!opts?.chapter)return;
-    const {chapter,grade,lang,section,questions,sources,onSection,onQuestion,onClass,onHome,initialConcept}=opts;
+    const {chapter,grade,lang,section,questions,sources,onSection,onQuestion,onClass,onHome,initialConcept,orderedExercises}=opts;
     const t=texts[lang==='ta'?'ta':'en'];
     const chapterTypeset=s=>typeset(grade===9?(window.TriggleG9Math?.text(s)??s):s);
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
@@ -351,56 +351,41 @@
       window.TriggleTextbookActivities.mount(panel,chapter,lang);
     }
     if(section==='exercises'){
-      const selected=sets[section];
+      // One index of exercise numbers per chapter. No huge question catalog.
+      const selected=Array.isArray(orderedExercises)&&orderedExercises.length?orderedExercises:sets.exercises;
       if(!selected.length){
-        info(section==='examples'?t.noneWorked:t.noneExercises);
-        if(section==='examples'){
-          info(t.whyWorked);
-        }
+        info(t.noneExercises);
       }else{
-        // Coverage details stay available but do not block Question 1.
-        const notes=[];
-        if(chapter.id==='g9-ch1'){
-          const availableEx11=selected.filter(q=>q.exercise==='1.1'&&q.kind!=='practice').length;
-          notes.push(section==='examples'?t.exampleWordingNote:t.exerciseCoverageNote(availableEx11));
-        }
-        if(section==='exercises'&&selected.some(q=>q.kind==='practice')&&selected.some(q=>q.kind!=='practice')){
-          const filters=document.createElement('div');filters.className='hub-question-filters';
-          const filterOptions=[['all',t.all],['textbook',t.official],['practice',t.original]];
-          const select=document.createElement('select');select.setAttribute('aria-label',t.selectQuestion);
-          for(const [key,label] of filterOptions){const option=document.createElement('option');option.value=key;option.textContent=label;select.append(option);}
-          filters.append(select);panel.append(filters);
-          select.addEventListener('change',()=>{
-            panel.querySelectorAll('[data-question-id]').forEach(b=>{
-              const question=selected.find(q=>q.id===b.dataset.questionId);
-              b.hidden=select.value==='all'?false:select.value==='practice'?question?.kind!=='practice':question?.kind==='practice';
-            });
-            panel.querySelectorAll('.hub-question-group').forEach(g=>{
-              g.hidden=!g.querySelector('.hub-question:not([hidden])');
-            });
-          });
-        }
         const buckets=new Map();
         for(const item of selected){
-          const group=item.kind==='practice'?'practice':item.exercise||'other';
-          if(!buckets.has(group))buckets.set(group,[]);
-          buckets.get(group).push(item);
+          const key=String(item.exercise||'').trim();
+          if(!key)continue;
+          if(!buckets.has(key))buckets.set(key,[]);
+          buckets.get(key).push(item);
         }
-        for(const [group,items] of buckets){
-          const box=document.createElement('section');box.className='hub-question-group';
-          const h=document.createElement('h4');
-          h.textContent=group==='practice'?t.original:
-            section==='examples'?t.examples+' · '+group:(items[0].label?.en||'').startsWith('Unit Exercise')?'Unit Exercise':t.group+' '+group;
-          box.append(h);
-          items.forEach(item=>box.append(cardFor(item)));
-          panel.append(box);
+        const keys=[...buckets.keys()].sort((a,b)=>{
+          const unit=a.includes('unit'),unitB=b.includes('unit');
+          return unit!==unitB?(unit?1:-1):a.localeCompare(b,undefined,{numeric:true});
+        });
+        const index=document.createElement('nav');
+        index.className='hub-exercise-index';
+        index.setAttribute('aria-label',t.exercises);
+        for(const key of keys){
+          const items=buckets.get(key);
+          const unit=/^Unit Exercise\b/i.test(items[0].label?.en||'')||key.includes('unit');
+          const num=key.match(/\d+/)?.[0]||'';
+          const name=unit?(t.unitExercise+(num?' '+num:'')):(t.exerciseSingle+' '+key);
+          const button=document.createElement('button');
+          button.type='button';button.className='hub-exercise-link';button.dataset.exercise=key;
+          const label=document.createElement('strong');label.textContent=name;
+          const count=document.createElement('small');count.textContent=items.length+' '+t.questions+' '+t.available;
+          const arrow=document.createElement('span');arrow.className='hub-exercise-arrow';arrow.textContent='›';arrow.setAttribute('aria-hidden','true');
+          button.append(label,count,arrow);
+          button.setAttribute('aria-label',name+' · '+count.textContent);
+          button.addEventListener('click',()=>onQuestion(items[0]));
+          index.append(button);
         }
-        if(notes.length){
-          const review=document.createElement('details');review.className='hub-content-status';
-          const toggle=document.createElement('summary');toggle.textContent=t.review;
-          review.append(toggle);notes.forEach(copy=>{const p=document.createElement('p');p.textContent=copy;review.append(p);});
-          panel.append(review);
-        }
+        panel.append(index);
       }
     }
     if(section==='quizzes'){
