@@ -1296,7 +1296,7 @@ const entries=[
         }
       },
       {
-        "en": "Multiply 768 by 4.",
+        "en": "Each step of a G.P. multiplies by the ratio. From term 8 to term 10 there are two steps, so multiply 768 by 2² = 4.",
         "eq": "t₁₀ = 768 × 2² = 3072",
         "math": {
           "latex": "t_{10}=768\\cdot2^2=3072",
@@ -1789,7 +1789,7 @@ const entries=[
         }
       },
       {
-        "en": "Solve n(n+1)=90.",
+        "en": "Multiplying both sides by 2 gives n(n+1)=90. Two consecutive positive integers whose product is 90 are 9 and 10, so n=9.",
         "eq": "9×10=90 ⇒ n=9",
         "math": {
           "latex": "n=9",
