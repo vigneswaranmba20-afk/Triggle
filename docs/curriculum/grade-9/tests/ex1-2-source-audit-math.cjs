@@ -12,8 +12,9 @@ const subsets=a=>{let out=[[]];for(const v of a)out=out.concat(out.map(s=>[...s,
 const primes=n=>n>1&&Array.from({length:Math.floor(Math.sqrt(n))-1},(_,i)=>i+2).every(d=>n%d!==0);
 check('q1-i',new Set(['p','q','r','s','t','u']).size===6,'distinct enumeration');
 check('q1-ii',JSON.stringify(Array.from({length:30},(_,n)=>3*n+2).filter(x=>x<15))==='[2,5,8,11,14]','whole-number enumeration');
-check('q1-iii',new Set([3,4,5].map(n=>4/(3*n))).size===3,'distinct rational values');
-check('q1-iv',Array.from({length:10},(_,i)=>i-5).length===10,'integer interval');
+check('q1-iii',[3,4,5].every(n=>Number.isInteger(n)&&n>2&&n<=5)&&[3,4,5].map(n=>4/(3*n)).every((v,i)=>Math.abs(v-[4/9,1/3,4/15][i])<1e-12)&&new Set([3,4,5].map(n=>4/(3*n))).size===3,'strict natural-number bounds and exact rational values 4/9, 1/3, 4/15');
+const q1iv=Array.from({length:21},(_,i)=>i-10).filter(x=>Number.isInteger(x)&&x>=-5&&x<5);
+check('q1-iv',JSON.stringify(q1iv)==='[-5,-4,-3,-2,-1,0,1,2,3,4]'&&q1iv.length===10&&!q1iv.includes(5)&&q1iv.includes(-5),'independently enumerate inclusive -5 and exclusive 5 interval');
 check('q1-v',JSON.stringify(Array.from({length:25},(_,i)=>1882+i).filter(y=>y%4===0&&(y%100!==0||y%400===0)))==='[1884,1888,1892,1896,1904]','Gregorian leap-year rule');
 check('q2-i',new Set(['district-A','district-B','district-C']).size===3,'finite administrative roster illustration; no unverified current district count');
 check('q2-ii',new Set(Array.from({length:1000},(_,i)=>i/1000)).size===1000,'arbitrarily many distinct slopes');
