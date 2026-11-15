@@ -103,6 +103,7 @@
       counts[kind]+' '+(kind==='concepts'?t.available:kind==='examples'?t.worked:kind==='quizzes'?t.checks:t.questions):t.soon;
     root.replaceChildren();
     root.classList.add('chapter-hub');
+     root.dataset.hubSection=section||'overview';
     const mk=(label,fn,cls)=>{
       const b=document.createElement('button');b.type='button';b.className=cls;
       b.textContent=label;b.addEventListener('click',fn);return b;
