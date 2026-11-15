@@ -32,7 +32,10 @@ for(const r of manifest.records){
  if(r.figureSrc)assert.ok(fs.statSync(path.join(ROOT,'site',r.figureSrc)).isFile(),'Required geometry figure: '+r.figureSrc);
 }
 assert.ok(all.some(r=>r.id==='c10-2-ex2-2-q1'),'Previously deployed Exercise 2.2 preserved');
-assert.ok(!all.some(r=>r.id==='c10-2-ex2-2-q8'),'Previously held ambiguous Q8 is still withheld');
+const resolvedQ8=all.find(r=>r.id==='c10-2-ex2-2-q8');
+assert.ok(resolvedQ8,'Reconciled Exercise 2.2 Q8 stays available to students');
+assert.match(resolvedQ8.answer,/Textbook answer: 3647/,'Keep the textbook appendix answer explicit');
+assert.match(resolvedQ8.answer,/Literally, 7/,'Disclose the correct zero-quotient counterexample');
 const sw=read('site/service-worker.js');
 for(const file of [recoveryModule,...manifest.requiredFigureAssets])assert.ok(sw.includes('./'+file),'Offline cache includes '+file);
 // Independently re-solve reciprocal linear system: a=1/x, b=1/y, c=1/z.
