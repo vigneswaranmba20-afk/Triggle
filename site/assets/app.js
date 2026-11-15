@@ -52,11 +52,21 @@
  // Within textbook exercises, Previous/Next follows only that chapter's
  // exercise sequence (never original practice or an unrelated chapter).
  const textbookExerciseList=chapter=>{
-   const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
-   if(grade!==10||String(chapter?.number)!=='2')return items;
-   // Source-verified TRACE parts arrive in batches, sometimes after later
-   // exercises. Navigation stays in 2025 textbook order without reordering
-   // immutable question records or altering other grades.
+   const listed=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
+   if(grade!==10||String(chapter?.number)!=='2')return listed;
+   // Grade 10 Chapter 2 receives source-verified batches after initial
+   // chapter registration. Include every loaded, textbook-labelled Chapter 2
+   // part even if an old chapter ID list was captured before a later batch.
+   // Do not surface examples or practice and do not touch other grades.
+   const byId=new Map(listed.map(item=>[item.id,item]));
+   for(const item of classes[10].items){
+     if(String(item.chapter)!=='2'||item.kind==='practice')continue;
+     if(!/^(?:Exercise|Unit Exercise)\\b/i.test(item.label?.en||''))continue;
+     if(!byId.has(item.id))byId.set(item.id,item);
+   }
+   const items=[...byId.values()];
+   // Keep 2025 textbook order regardless of module load order. Never mutate
+   // immutable question records or the saved curriculum metadata.
    const part={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
    const index=q=>{const m=String(q.id).match(/-q(\d+)(?:-([ivx]+))?$/);
      return [m?Number(m[1]):Number.MAX_SAFE_INTEGER,m?.[2]?part[m[2]]||99:0];};
