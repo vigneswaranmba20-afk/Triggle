@@ -1,0 +1,283 @@
+/*
+ * Triggle | Paper + Indigo | 2026-11-15
+ * One shared, low-bandwidth color layer for Grades 9–12.
+ * Applied AFTER the functional CSS; no layout changes, scripts, external fonts
+ * or image downloads. Preserve distinct colors on mathematical graphs,
+ * warnings, success/errors and multi-set Venn diagrams.
+ *
+ * 7 preview contrast pairs: body 14.64:1, white on indigo 8.96:1,
+ * teal plot on white 5.59:1. Those are token-level, not site-wide claims.
+ */
+:root {
+  color-scheme: light;
+  --bg: #F7F7F4;
+  --card: #FFFFFF;
+  --ink: #22283B;
+  --muted: #566275;
+  --violet: #473D91;
+  --deep: #473D91;
+  --border: #DADCE5;
+  --gold: #B77D20;
+  --paper-indigo: #473D91;
+  --paper-tint: #EEEAF8;
+  --paper-teal: #13746F;
+  --paper-rule: #DADCE5;
+  --paper-muted: #566275;
+  --paper-ink: #22283B;
+  --paper-white: #FFFFFF;
+  --shadow: 0 6px 24px rgba(34,40,59,.045);
+}
+body { background: var(--bg); color: var(--ink); }
+::selection { background: var(--paper-tint); color: var(--paper-ink); }
+
+/* The surrounding UI reads like paper, not a second interactive activity. */
+.sidebar, .appbar, .class-dock, .lesson-card, .chapter-hub,
+.path-dialog, .figure-dialog, .discover-resume-card {
+  background-color: var(--paper-white);
+  color: var(--paper-ink);
+}
+.appbar { border-bottom-color: var(--paper-rule); }
+.sidebar { border-right-color: var(--paper-rule); }
+.class-dock { border-color: var(--paper-rule); }
+.logo, .brand-mobile .logo, .side-brand .logo {
+  background: var(--paper-tint);
+  color: var(--paper-indigo);
+}
+.brand-mobile b, .side-brand b { color: var(--paper-ink); }
+.gold { color: var(--gold); }
+.lang-switch { background: var(--paper-tint); }
+.lang-switch button { color: var(--paper-muted); }
+.lang-switch button.active {
+  background: var(--paper-white); color: var(--paper-indigo);
+}
+.browse-button, .basics-link, .icon-button, .side-grade,
+.crumb-link, .question-return button {
+  color: var(--paper-indigo);
+}
+.browse-button, .basics-link { background: var(--paper-white); border-color: var(--paper-rule); }
+.icon-button { background: var(--paper-tint); }
+.crumb-link:hover, .basics-link:hover { background: var(--paper-tint); }
+.class-dock .dock-grade.active, .page-button.next,
+.step-primary {
+  background: var(--paper-indigo); color: white; border-color: var(--paper-indigo);
+}
+.class-dock .dock-grade:not(.active) { color: var(--paper-muted); }
+.page-button:not(.next), .step-quiet, .mark-button, .figure-button,
+.dialog-close {
+  background: var(--paper-white); color: var(--paper-indigo);
+  border-color: var(--paper-rule);
+}
+.page-track span { background: var(--paper-indigo); }
+.lesson-tag, .small-total { background: var(--paper-tint); color: var(--paper-indigo); }
+.lesson-card { border-color: var(--paper-rule); }
+.question-text {
+  color: var(--paper-ink); background: #F8F9FC;
+  border-left-color: var(--paper-indigo);
+}
+.step-reason, .lesson-progress, .mini-topic, .reference-line,
+.kind-badge, .step-count { color: var(--paper-muted); }
+.step-equation, .lesson-title-row h2 { color: var(--paper-ink); }
+.step-circle { background: var(--paper-tint); color: var(--paper-indigo); }
+.answer-box, .lesson-card .answer-box { background: #F0F9F6; border-color: #BFDCD4; }
+.answer-box>div:first-child, .math-answer { color: #11645B; }
+
+/* Grade chooser and chapter directory. Color conveys selection, not "grade rank". */
+.discover-hero {
+  background: var(--paper-indigo);
+  color: white;
+  box-shadow: 0 7px 24px rgba(71,61,145,.09);
+}
+.discover-hero .discover-description,
+.discover-hero .discover-eyebrow { color: #F0ECFF; }
+.discover-primary {
+  background: #FFFFFF; color: var(--paper-indigo);
+  box-shadow: none;
+}
+.discover-secondary { background: transparent; color: white; border-color: #E3DFFF; }
+.discover-grade, .discover-chapter, .discover-recent, .discover-feature,
+.discover-no-recent, .discover-resume-card {
+  background: var(--paper-white); color: var(--paper-ink);
+  border-color: var(--paper-rule);
+}
+.discover-grade-copy b, .discover-chapter strong, .discover-section h2,
+.discover-feature h2, .discover-directory-head h1,
+.discover-resume-name, .discover-recent strong { color: var(--paper-ink); }
+.discover-grade-copy small, .discover-chapter-meta,
+.discover-feature p, .discover-no-recent,
+.discover-recent small { color: var(--paper-muted); }
+.discover-grade-number, .discover-grade-10 .discover-grade-number,
+.discover-grade-11 .discover-grade-number,
+.discover-grade-12 .discover-grade-number, .discover-feature-icon {
+  background: var(--paper-tint); color: var(--paper-indigo);
+}
+.discover-grade-arrow, .discover-card-arrow, .discover-resume-action {
+  color: var(--paper-indigo);
+}
+.discover-grade:hover, .discover-chapter:hover, .discover-resume-card:hover {
+  background: #FBFAFF; border-color: var(--paper-indigo);
+}
+.discover-find input, .discover-find select {
+  background: var(--paper-white); color: var(--paper-ink); border-color: var(--paper-rule);
+}
+.discover-back, .discover-change, .discover-recent button,
+.discover-feature button, .discover-feature-tag {
+  color: var(--paper-indigo);
+}
+.discover-recent button { background: var(--paper-tint); border-color: var(--paper-rule); }
+.discover-feature { background: #FFFFFF; }
+.discover-feature button {
+  background: var(--paper-indigo); color: #FFFFFF;
+}
+
+/* Chapter menus and textbook exercise choices. */
+.chapter-hub .hub-header h2, .chapter-hub .hub-question-group h4,
+.hub-section-card strong { color: var(--paper-ink); }
+.hub-top-actions button, .hub-back-menu, .hub-resource-link,
+.chapter-hub .hub-back-class, .hub-question-arrow {
+  color: var(--paper-indigo);
+}
+.hub-section-card, .hub-question, .hub-quiz-question {
+  color: var(--paper-ink); background: var(--paper-white);
+  border-color: var(--paper-rule); box-shadow: none;
+}
+.hub-section-card:hover, .hub-question:hover {
+  background: #FBFAFF; border-color: var(--paper-indigo);
+}
+.hub-section-card.is-current, .hub-quiz-answers button[aria-pressed=true] {
+  background: var(--paper-tint); border-color: var(--paper-indigo);
+  box-shadow: inset 0 0 0 1px var(--paper-indigo);
+}
+.hub-section-icon,
+.hub-section-card[data-hub-section=exercises] .hub-section-icon,
+.hub-section-card[data-hub-section=quizzes] .hub-section-icon,
+.hub-section-card[data-hub-section=examples] .hub-section-icon {
+  background: var(--paper-tint); color: var(--paper-indigo);
+}
+.hub-question-title, .hub-section-count { color: var(--paper-muted); }
+.hub-question-filters select, .hub-quiz-answers button {
+  background: var(--paper-white); color: var(--paper-ink);
+  border-color: var(--paper-rule);
+}
+
+/* Every grade's Concepts entry and lesson: same paper surface. */
+.chapter-hub .sp2-index-view .sp2-nav-button,
+.matrix-concepts .mc-index button {
+  background: var(--paper-white); color: var(--paper-ink);
+  border-color: var(--paper-rule);
+  box-shadow: none;
+}
+.chapter-hub .sp2-index-view .sp2-nav-button.sp2-current,
+.chapter-hub .sp2-index-view .sp2-nav-button[aria-current=step],
+.matrix-concepts .mc-index button[aria-current=step] {
+  background: var(--paper-tint); color: var(--paper-ink);
+  border-color: var(--paper-indigo);
+}
+.sp2-nav-number, .chapter-hub .sp2-index-view .sp2-nav-number,
+.matrix-concepts .mc-index button span {
+  background: var(--paper-tint); color: var(--paper-indigo);
+}
+.chapter-hub .sp2-back-index, .matrix-concepts [data-index-toggle] {
+  color: var(--paper-indigo);
+}
+.chapter-overview .sp2-journey h4,
+.chapter-overview .sp2-journey h5, .sp2-idea,
+.rnlab-big, .sp2-demo-output, .sp2-recall>p {
+  color: var(--paper-ink);
+}
+.sp2-formula, .chapter-hub .sp2-journey .sp2-formula,
+.rnlab .rnlab-foundation-equation {
+  background: #F8F7FD; color: var(--paper-ink);
+  border-color: var(--paper-rule);
+}
+.sp2-demo, .chapter-hub .sp2-journey .sp2-demo {
+  background: #FBFBFE; border-color: var(--paper-rule);
+}
+.sp2-demo-title, .sp2-range-label, .rnlab-range label {
+  color: var(--paper-muted);
+}
+.sp2-demo-controls button, .sp2-answers button,
+.sp2-recall-actions button, .sp2-reveal,
+.rnlab .rnlab-choice {
+  background: var(--paper-white); border-color: var(--paper-rule);
+  color: var(--paper-indigo);
+}
+.sp2-demo-controls button[aria-pressed=true],
+.sp2-answers button[aria-pressed=true],
+.rnlab [data-answers] button[aria-pressed=true] {
+  background: var(--paper-tint); color: var(--paper-indigo);
+  border-color: var(--paper-indigo);
+  box-shadow: inset 0 0 0 1px var(--paper-indigo);
+}
+.sp2-why, .sp2-explanation, .rnlab-pitfall {
+  background: #FAF9FD; border-color: var(--paper-rule);
+  color: var(--paper-ink);
+}
+.sp2-explanation summary { color: var(--paper-indigo); }
+.sp2-stage-reference, .rnlab-source-note { color: var(--paper-muted); }
+.sp2-journey-footer, .chapter-hub .sp2-journey[data-view=lesson] .sp2-journey-footer,
+.matrix-concepts[data-view=lesson] [data-adaptive-dock] {
+  background: #FFFFFF; border-color: var(--paper-rule);
+}
+.sp2-journey-footer button, .chapter-hub .sp2-journey[data-view=lesson] .sp2-journey-footer button,
+.matrix-concepts[data-view=lesson] [data-adaptive-dock] button {
+  background: var(--paper-white); border-color: var(--paper-rule);
+  color: var(--paper-indigo);
+}
+.sp2-journey-footer .sp2-footer-next,
+.chapter-hub .sp2-journey[data-view=lesson] .sp2-journey-footer button.sp2-footer-next {
+  background: var(--paper-indigo); color: white; border-color: var(--paper-indigo);
+}
+.sp2-demo-controls input[type=range], .rnlab-range input,
+.matrix-concepts input[type=range] { accent-color: var(--paper-indigo); }
+
+/* A second hue is reserved for mathematical plot marks and data. Don't turn
+   all graphs into one color: Venn memberships and contrasting quantities
+   need their existing separate visual encodings. */
+.rnlab .rnlab-line :is(.rnlab-selected,.selected-point) {
+  fill: var(--paper-teal); stroke: var(--paper-teal);
+}
+.matrix-concepts {
+  --mc-ink: var(--paper-ink);
+  --mc-purple: var(--paper-indigo);
+  --mc-line: var(--paper-rule);
+  color: var(--paper-ink);
+}
+.matrix-concepts .mc-stage,
+.matrix-concepts .mc-controls,
+.matrix-concepts .mc-index button,
+.matrix-concepts .mc-check {
+  border-color: var(--paper-rule);
+}
+.matrix-concepts .mc-stage { background: var(--paper-white); }
+.matrix-concepts .mc-controls { background: #F7F7FA; }
+.matrix-concepts .mc-index button,
+.matrix-concepts button, .matrix-concepts select {
+  color: var(--paper-ink);
+}
+.matrix-concepts .mc-primary {
+  background: var(--paper-indigo); color: #FFFFFF; border-color: var(--paper-indigo);
+}
+.matrix-concepts .mc-navigation button:last-child {
+  background: var(--paper-indigo); color: #FFFFFF; border-color: var(--paper-indigo);
+}
+.matrix-concepts [data-index-toggle] { color: var(--paper-indigo); }
+.matrix-concepts .mc-takeaway { border-left-color: var(--paper-teal); color: var(--paper-ink); }
+.matrix-concepts .mc-dot-primary { fill: var(--paper-teal); }
+.matrix-concepts .mc-line-primary { stroke: var(--paper-teal); }
+
+/* Keyboard and low-cost-device contrast. No animation, images or requests. */
+:where(button,a,input,select,summary,[tabindex]):focus-visible,
+.sp2-journey button:focus-visible,
+.sp2-journey summary:focus-visible,
+.matrix-concepts button:focus-visible,
+.matrix-concepts select:focus-visible {
+  outline: 3px solid var(--paper-indigo);
+  outline-offset: 3px;
+}
+.discover-hero :is(button,a):focus-visible { outline-color: #FFFFFF; }
+@media (forced-colors: active) {
+  .sp2-nav-button[aria-current=step], .matrix-concepts .mc-index button[aria-current=step],
+  .sp2-answers button[aria-pressed=true], .hub-section-card.is-current {
+    outline: 2px solid Highlight; outline-offset: -2px;
+  }
+}
