@@ -115,11 +115,11 @@ const entries=[
         }
       },
       {
-        "en": "The element 5 is in C but not in D.",
-        "eq": "C ≠ D; unequal sets",
+        "en": "C has four members, while D has three. The sets are neither equal nor equivalent: 5 belongs to C but not D.",
+        "eq": "n(C) = 4; n(D) = 3; C ≠ D",
         "math": {
-          "latex": "5\\in C,\\quad 5\\notin D,\\quad C\\ne D",
-          "fallback": "5 is in C but not D; C ≠ D",
+          "latex": "n(C)=4,\\quad n(D)=3,\\quad C\\ne D",
+          "fallback": "n(C) = 4; n(D) = 3; C ≠ D; neither equal nor equivalent",
           "display": true
         }
       }
