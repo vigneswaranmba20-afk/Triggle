@@ -121,7 +121,7 @@
     // Activities and quizzes open straight into the first question.
     // Keep the heading available to assistive tech without a redundant
     // multi-line visible introduction above the actual learning activity.
-    if(section==='activities'||section==='quizzes')heading.classList.add('hub-heading-a11y');
+    if(section==='activities'||section==='quizzes'||section==='concepts')heading.classList.add('hub-heading-a11y');
     // The Class switcher appears in the breadcrumb. Do not repeat Class
     // and the chapter name in multiple stacked headings on the hub.
     const chapterNumber=(lang==='ta'?'அத்தியாயம் ':'Chapter ')+chapter.number;
@@ -187,11 +187,10 @@
           });
           return;
         }
-        // The Set Language lesson has its own concise orientation and begins with maths.
-        // Avoid a second introductory paragraph between the chapter title and concept.
-        if(chapter.id!=='g9-ch1')info(t.learning);
+        // Concept screens start with the index or the mathematical interaction.
+        // No chapter title, marketing paragraph, progress count or second navigation row.
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
-          window.TriggleRealJourney.mount(panel,chapter,lang);
+          window.TriggleRealJourney.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }else if(chapter.id==='g9-ch2'||chapter.id==='g9-ch9'){
           for(const stage of stages){
             const article=document.createElement('article');article.className='hub-question-group';
@@ -207,7 +206,7 @@
         }
         // Textbook Thinking Corners and Activities are a separate chapter destination,
         // not a repeated appendix on the Concepts page.
-        if(chapter.id!=='g9-ch1'&&Number.isInteger(initialConcept)&&initialConcept>=0){
+        if(chapter.id==='g9-ch9'&&Number.isInteger(initialConcept)&&initialConcept>=0){
           const target=panel.querySelector('.sp2-nav [data-index="'+initialConcept+'"]');
           if(target)target.click();
         }
