@@ -11,7 +11,19 @@
       "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
       "edition": "2025",
       "printedPage": 12,
-      "pdfPage": 18
+      "pdfPage": 18,
+      "answerKey": {
+        "printedPage": 305,
+        "source": "2025 Grade 9 English textbook Exercise 1.2 answer section; inherited text-layer transcription from PR #180 (not reverified in this commit)",
+        "textLayerChecked": true,
+        "answers": [
+          "Equivalent sets",
+          "Unequal sets",
+          "Equal sets",
+          "Equivalent sets"
+        ],
+        "pageImageChecked": false
+      }
     },
     "tamil": {
       "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
