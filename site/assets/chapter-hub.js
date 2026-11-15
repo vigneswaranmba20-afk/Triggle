@@ -212,7 +212,7 @@
           button.innerHTML=typeset(pick(choice));button.setAttribute('aria-label',pick(choice));
           button.addEventListener('click',()=>{
             holder.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-            panel.querySelector('[data-feedback]').textContent=j===stage.correct?(ta?'சரி!':'Correct!'):(ta?'மீண்டும் முயற்சிக்கவும்':'Try again');
+            panel.querySelector('[data-feedback]').textContent=j===stage.correct?(ta?'சரி!':'Correct!'):(ta?'மீண்டும் முயற்சிக்கவும். ':'Try again. ')+pick(stage.hint);
           });holder.append(button);
         });
         panel.querySelector('[data-hint]').onclick=()=>{panel.querySelector('[data-feedback]').innerHTML=typeset(pick(stage.hint));};
