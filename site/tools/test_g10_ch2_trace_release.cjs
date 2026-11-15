@@ -17,15 +17,17 @@ const foundations=window.TRIGGLE_G10_CH2_PATH;
 assert.equal(foundations.chapterId,'g10-ch2');
 assert.equal(foundations.stages.length,15,'15 textbook-ordered foundation steps');
 const secOrder=foundations.stages.map(s=>Number(s.section.split('.')[1]));assert(secOrder.every((x,i)=>i===0||x>=secOrder[i-1]),'Concepts in textbook order');
+const answerPositions=[0,0,0];
 for(const s of foundations.stages){
  assert.match(s.id,/^g10-ch2-/);
  assert(s.title.en&&s.title.ta&&s.idea.en&&s.idea.ta&&s.example.en&&s.example.ta);
  assert(s.why.en&&s.why.ta&&s.hint.en&&s.hint.ta);
- assert.equal(s.choices.length,3);assert.equal(s.correct,0);
+ assert.equal(s.choices.length,3);assert(Number.isInteger(s.correct)&&s.correct>=0&&s.correct<=2,'Valid self-check answer index');answerPositions[s.correct]++;
  assert(typeof s.math.latex==='string'&&s.math.latex.length>3,'Explicit ChatGPT-style mathematical notation');
  assert(!/English version only — Tamil editorial content pending/.test(s.title.ta),'No fake translated placeholders');
  assert(s.visual,'Every concept should present a mathematical visual');
 }
+assert.deepEqual(answerPositions,[5,5,5],'Prevent all-first-answer shortcuts');
 for(const file of ['data/textbook-exercises/g10-ch2-trace-en.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js'])
  vm.runInContext(read(file),ctx,{filename:file});
 const items=window.TRIGGLE_CLASSES[10].items;

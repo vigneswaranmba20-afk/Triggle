@@ -10,6 +10,8 @@ assert.equal(entry.chapterId,'g10-ch2');
 assert.equal(entry.stages.length,15,'15 short, textbook-ordered foundations');
 const sections=['2.2','2.3','2.3','2.4','2.5','2.5','2.6','2.6','2.7','2.7','2.8','2.9','2.10','2.10','2.11'];
 assert.equal(JSON.stringify(entry.stages.map(s=>s.section)),JSON.stringify(sections));
+const answerKey=new Map([["g10-ch2-division","2"],["g10-ch2-gcd","6"],["g10-ch2-bezout","4"],["g10-ch2-primes","36"],["g10-ch2-modulo","11 a.m."],["g10-ch2-congruence","4"],["g10-ch2-sequence","14"],["g10-ch2-recursive","8"],["g10-ch2-ap","Yes, d = 3"],["g10-ch2-ap-nth","39"],["g10-ch2-ap-sum","15"],["g10-ch2-gp","135"],["g10-ch2-gp-sum","15"],["g10-ch2-gp-infinite","2"],["g10-ch2-special","36"]]);
+const answerPositionCounts=[0,0,0];
 for(const stage of entry.stages){
  assert.ok(stage.id.startsWith('g10-ch2-'));
  for(const lang of ['en','ta']){
@@ -17,11 +19,14 @@ for(const stage of entry.stages){
    assert.ok((stage[key]?.[lang]||'').length>=4,'Missing '+key+' '+lang+' on '+stage.id);
   assert.ok(stage.choices.every(c=>c[lang]?.length>0),'Bilingual options: '+stage.id);
  }
- assert.equal(stage.correct,0,'Known correct answer: '+stage.id);
+ assert(Number.isInteger(stage.correct)&&stage.correct>=0&&stage.correct<3,'Valid answer position: '+stage.id);
+ answerPositionCounts[stage.correct]++;
+ assert.equal(stage.choices[stage.correct].en,answerKey.get(stage.id),'Correct answer must match independently checked key: '+stage.id);
  assert.equal(stage.choices.length,3,'Student self-check choices: '+stage.id);
  assert.ok(stage.math?.latex&&stage.math.fallback,'Authored KaTeX and accessible fallback: '+stage.id);
 }
 assert.equal(new Set(entry.stages.map(s=>s.id)).size,15);
+assert.deepEqual(answerPositionCounts,[5,5,5],'Correct answers are evenly spread across first, second and third positions');
 const all=loadRuntime();
 const chapter=all.curriculum.grades.find(g=>g.grade===10).chapters.find(c=>String(c.number)==='2');
 const textbook=all.classes[10].items.filter(q=>q.chapter==='2'&&q.kind==='textbook'&&q.exercise);
