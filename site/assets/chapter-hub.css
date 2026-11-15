@@ -581,3 +581,44 @@
 .sp2-concept-video-dialog video{display:block;margin:auto;max-width:100%;width:auto;max-height:min(75dvh,780px);aspect-ratio:9/16;background:#111;border-radius:9px}
 .sp2-concept-video-note{font-size:.8rem;line-height:1.4;color:#4c5b63;margin:9px 4px 2px;text-align:center}
 @media(max-width:480px){.sp2-concept-video-dialog{width:97vw;max-height:98dvh;padding:8px}.sp2-concept-video-dialog video{max-height:78dvh}.sp2-concept-video-heading h3{font-size:.9rem}}
+
+
+/* Concept-first Grade 10 flow, 2026-11-16.
+   The optional explanation toggle is removed. Keep indispensable teaching
+   text as quiet, always-visible notes on concepts without a full guided video. */
+.chapter-hub .sp2-simple-journey .sp2-lesson-note{
+  margin:12px 0 14px;
+  padding:2px 1px 11px;
+  border-bottom:1px solid #e9e6ed;
+  color:#344254;
+}
+.chapter-hub .sp2-simple-journey .sp2-lesson-note p{
+  margin:0 0 7px;
+  font-size:clamp(14px,3.5vw,16px);
+  line-height:1.6;
+}
+.chapter-hub .sp2-simple-journey .sp2-lesson-note .sp2-example{
+  font-weight:400;
+}
+.chapter-hub .sp2-simple-journey .sp2-lesson-note .sp2-stage-reference{
+  display:block;margin-top:4px;
+}
+@media(max-width:800px){
+  /* Navigation follows the practice activity; it cannot float over answers. */
+  .chapter-hub .sp2-simple-journey[data-view="lesson"] [data-adaptive-dock]{
+    position:static;
+    bottom:auto;
+    z-index:auto;
+    margin:15px 0 0;
+    padding:8px;
+    border:1px solid #ded6ed;
+    border-radius:15px;
+    background:#fff;
+    box-shadow:none;
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+  }
+  .chapter-hub .sp2-simple-journey[data-view="lesson"] .sp2-panel{
+    padding-bottom:0!important;
+  }
+}
