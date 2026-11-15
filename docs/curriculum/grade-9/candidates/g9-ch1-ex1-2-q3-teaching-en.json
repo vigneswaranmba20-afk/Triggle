@@ -85,6 +85,10 @@
           "latex": "G=\\{5,7,11,13,17,19\\}"
         },
         {
+          "why": "A prime number has exactly two positive factors: 1 and itself. Numbers such as 9, 15 and 21 are excluded because they have additional factors; 23 is excluded by the strict upper bound.",
+          "latex": "9=3\\times3,\\quad 15=3\\times5,\\quad 21=3\\times7,\\quad 3< x<23"
+        },
+        {
           "why": "List all positive factors of 18.",
           "latex": "H=\\{1,2,3,6,9,18\\}"
         },
