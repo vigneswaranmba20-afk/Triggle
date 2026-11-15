@@ -37,29 +37,35 @@
 body { background: var(--bond-ivory); color: var(--bond-graphite); }
 ::selection { background: #E9D8BD; color: var(--bond-graphite); }
 
-/* Graphite surrounds the reader; the actual maths stays on light paper. */
+/* A white, distraction-free navigation surface on every grade and lesson.
+ * The graphite-and-brass logo is the single Bond signature, not a dark toolbar. */
 .appbar {
-  background: var(--bond-graphite);
-  border-bottom-color: #3A3E44;
-  color: var(--bond-white);
+  background: var(--bond-white);
+  border-bottom-color: var(--bond-border);
+  color: var(--bond-graphite);
   backdrop-filter: none;
 }
-.appbar .brand-mobile b { color: var(--bond-white); }
+.appbar .brand-mobile b { color: var(--bond-graphite); }
 .appbar .brand-mobile .logo {
-  background: #30343B; color: #E0BE84;
+  background: var(--bond-graphite); color: #E0BE84;
 }
-.appbar .gold { color: #E0BE84; }
+.appbar .gold { color: var(--bond-brass); }
 .appbar .browse-button,
 .appbar .basics-link {
-  background: #2B3036; border-color: #51555A; color: #FFFFFF;
+  background: var(--bond-white); border-color: var(--bond-border);
+  color: var(--bond-graphite);
 }
-.appbar .browse-button:hover, .appbar .basics-link:hover {
-  background: #3A3E43;
+.appbar .browse-button:hover, .appbar .basics-link:hover,
+.appbar .home-link[aria-current=page] {
+  background: var(--bond-tint);
+  border-color: var(--bond-border);
+  color: var(--bond-graphite);
 }
-.appbar .lang-switch { background: #35393F; }
-.appbar .lang-switch button { color: #EEEDE9; }
+.appbar .lang-switch { background: var(--bond-tint); }
+.appbar .lang-switch button { color: var(--bond-graphite); }
 .appbar .lang-switch button.active {
   background: var(--bond-white); color: var(--bond-graphite);
+  box-shadow: 0 1px 5px rgba(24,27,32,.12);
 }
 
 /* Class rail and concise chapter/exercise wayfinding. */
@@ -138,6 +144,65 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
   box-shadow: inset 0 0 0 1px var(--bond-burgundy);
 }
 
+/* The theme applies to the complete student journey (not only the home).
+ * Grade 10 Relations and Functions has the same surfaces as Grades 9, 11 and 12.
+ * No change to content, spacing, mathematics, transitions or navigation. */
+.discover-home-minimal h1, .discover-home-minimal h2 {
+  color: var(--bond-graphite) !important;
+}
+.discover-class-header h1, .discover-directory-head h1,
+.discover-section h2, .discover-feature h2,
+.chapter-hub .hub-header h2, .chapter-hub .hub-section-menu h3,
+.chapter-overview h2, .chapter-overview h3,
+.welcome h1 { color: var(--bond-graphite); }
+.discover-class-switch, .discover-class-switch span,
+.discover-grade-copy b, .discover-chapter strong,
+.discover-resume-name { color: var(--bond-graphite); }
+.discover-class-count, .discover-class-options {
+  background: var(--bond-tint); border-color: var(--bond-border);
+  color: var(--bond-muted);
+}
+.discover-class-option {
+  background: var(--bond-white); border-color: var(--bond-border);
+  color: var(--bond-graphite);
+}
+.discover-class-option.is-current {
+  background: var(--bond-graphite); border-color: var(--bond-graphite);
+  color: var(--bond-white);
+}
+.discover-resume-card:hover { background: #FCFBF8; border-color: var(--bond-burgundy); }
+.hub-section-menu h3, .hub-question-group h4,
+.chapter-hub .hub-question-label { color: var(--bond-graphite); }
+.hub-section-description, .hub-section-count, .hub-question-title,
+.discover-chapter-meta, .discover-grade-copy small, .crumb {
+  color: var(--bond-muted);
+}
+.hub-exercise-link, .chapter-link, .chapter-question-links button {
+  background: var(--bond-white); border-color: var(--bond-border);
+  color: var(--bond-graphite);
+}
+.hub-exercise-link:hover, .chapter-link:hover,
+.chapter-question-links button:hover {
+  background: #FCFBF8; border-color: var(--bond-burgundy);
+}
+.hub-exercise-arrow, .chapter-reference a, .hub-resource-link {
+  color: var(--bond-burgundy);
+}
+.chapter-link.active {
+  background: var(--bond-selection); border-color: var(--bond-burgundy);
+  color: var(--bond-graphite);
+}
+.chapter-overview, .chapter-sections li,
+.chapter-fastnav select, .hub-question-filters select {
+  background: var(--bond-white); border-color: var(--bond-border);
+  color: var(--bond-graphite);
+}
+.hub-exercise-link:focus-visible, .discover-class-switch:focus-visible,
+.discover-class-option:focus-visible {
+  outline: 3px solid var(--bond-burgundy);
+  outline-offset: 2px;
+}
+
 /* Exercise reader. Preserve original mathematical glyphs and line spacing. */
 .lesson-card { background: #FFFFFF; border-color: var(--bond-border); }
 .lesson-title-row h2, .step-equation, .question-text { color: var(--bond-graphite); }
@@ -204,7 +269,10 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
   outline: 3px solid var(--bond-burgundy);
   outline-offset: 3px;
 }
-.appbar :is(button,a):focus-visible,
+.appbar :is(button,a):focus-visible {
+  outline: 3px solid var(--bond-burgundy);
+  outline-offset: 3px;
+}
 .discover-hero :is(button,a):focus-visible {
   outline: 3px solid #F0D7A9;
   outline-offset: 3px;
