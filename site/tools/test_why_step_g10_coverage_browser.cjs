@@ -63,7 +63,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert.ok(await control.count()>0,'Every sampled Grade 10 question has a Why: '+id);
     await control.first().locator('summary').click();
     assert.equal(await control.first().evaluate(el=>el.open),true,'Must expand '+id);
-    assert.ok((await control.first().locator('.why-step-panel p').innerText()).length>=35);
+    assert.ok((await control.first().locator('.why-step-panel > p').first().innerText()).length>=35);
     assert.equal(await page.locator('#lessonCard .math-fallback').count(),0,'No invalid math '+id);
     const sizes=await page.evaluate(()=>({width:document.documentElement.scrollWidth,viewport:innerWidth}));
     assert.ok(sizes.width<=sizes.viewport+1,'No screen overflow '+id+' @'+width+'px');
