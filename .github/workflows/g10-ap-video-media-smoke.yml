@@ -1,0 +1,51 @@
+name: Class 10 AP concept-video media smoke
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'site/assets/chapter-hub.js'
+      - 'site/data/g10-ch2-concepts.js'
+      - '.github/workflows/g10-ap-video-media-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-ap-video:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Confirm the exact authorized public media URL is referenced
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          source=Path('site/data/g10-ch2-concepts.js').read_text(encoding='utf-8')
+          expected='https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle_v3.mp4'
+          assert expected in source, 'Concept does not use the verified AP sum video URL'
+          assert 'g10-ch2-ap-sum' in source, 'The intended concept is missing'
+          PY
+      - name: Confirm hosted V3 byte-for-byte and playable portrait narration
+        shell: bash
+        env:
+          VIDEO_URL: https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle_v3.mp4
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 2 --max-time 55 -o /tmp/triggle-ap-sum.mp4 "$VIDEO_URL"
+          printf '%s  %s\n' '364923f57dfd33dd9b5b5575763a99f567d0a335061b57d52ef4fe6d8544baec' '/tmp/triggle-ap-sum.mp4' | sha256sum --check
+          command -v ffprobe || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          ffprobe -v error -show_entries stream=codec_type,codec_name,width,height -show_entries format=duration -of json /tmp/triggle-ap-sum.mp4 > /tmp/triggle-ap-sum-probe.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          result=json.loads(Path('/tmp/triggle-ap-sum-probe.json').read_text())
+          streams=result['streams']
+          assert any(s['codec_type']=='video' and s['codec_name']=='h264' and s.get('width')==720 and s.get('height')==1280 for s in streams), 'Missing H.264 portrait video'
+          assert any(s['codec_type']=='audio' and s['codec_name']=='aac' for s in streams), 'Missing narrated AAC audio'
+          duration=float(result['format']['duration'])
+          assert abs(duration-107.52)<1.0, f'Unexpected narration duration: {duration}'
+          print(f'Hosted AP Sum V3: verified byte-for-byte, 720×1280, AAC, {duration:.2f}s')
+          PY
