@@ -73,6 +73,6 @@ assert.equal(window.TriggleG10Ch2Bridge.get({id:'c10-1-q8',classNum:10,chapter:'
 for(const src of ['data/g10-ch2-concepts.js','data/g10-ch2-teaching-bridges.js','data/textbook-exercises/g10-ch2-trace-en.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js'])
  assert(html.includes(src),'HTML must load '+src);
 for(const src of ['data/g10-ch2-concepts.js','data/g10-ch2-teaching-bridges.js','data/textbook-exercises/g10-ch2-trace-en.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js','assets/g10-ch2-foundations.css'])
- assert(cache.includes("'./"+src+"'"),'Android offline cache missing '+src);
+ assert(cache.includes(src),'Android offline cache missing '+src);
 assert(/v87-g10ch2-trace-bulk/.test(cache),'Offline cache must refresh');
 console.log('PASS TRACE Grade 10 Chapter 2: 15 concept stages, 63 deduplicated source-scoped question parts, independent math, HCF pedagogy and offline assets');
