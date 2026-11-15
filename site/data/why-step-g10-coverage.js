@@ -610,8 +610,37 @@ const additional={
   "c10-2-ex2-2-q6": {
     "step": 1,
     "expected": "For HCF, take only shared primes with their smaller exp",
-    "en": "The HCF keeps the smaller exponent of primes common to both numbers. The LCM keeps the larger exponent of every prime appearing in either number.",
-    "ta": "மீ.பொ.வ. பொதுவான பகாக்களின் சிறிய அடுக்குகளை எடுக்கும். மீ.சி.ம. இரு எண்களிலுள்ள ஒவ்வொரு பகாவின் பெரிய அடுக்கையும் எடுக்கும்."
+    "en": "The HCF must divide both numbers, so it can only use a prime as many times as the smaller exponent allows. The LCM must be divisible by both numbers, so it needs the larger exponent of every prime. This is a reason for the rule, not just a formula to memorise.",
+    "ta": "மீ.பொ.வ. இரண்டு எண்களையும் வகுக்க வேண்டும். அதனால் ஒவ்வொரு பொதுப் பகாக் காரணியின் சிறிய அடுக்கை மட்டுமே எடுத்துக்கொள்ளலாம். மீ.சி.ம. இரண்டு எண்களாலும் வகுபட வேண்டும்; எனவே ஒவ்வொரு பகாக் காரணியின் பெரிய அடுக்கு தேவை.",
+    "transfer": {
+      "prompt": {
+        "en": "What is the HCF of 2³ × 3 and 2 × 3²?",
+        "ta": "2³ × 3 மற்றும் 2 × 3² ஆகியவற்றின் மீ.பொ.வ. என்ன?"
+      },
+      "choices": [
+        {
+          "en": "18",
+          "ta": "18"
+        },
+        {
+          "en": "72",
+          "ta": "72"
+        },
+        {
+          "en": "6",
+          "ta": "6"
+        }
+      ],
+      "correct": 2,
+      "wrong": {
+        "en": "For the HCF, use the smaller exponent of each common prime: 2¹ × 3¹.",
+        "ta": "மீ.பொ.வ.-க்கு பொதுவான பகா எண்களின் சிறிய அடுக்கை எடுக்கவும்: 2¹ × 3¹."
+      },
+      "success": {
+        "en": "Correct: 2 × 3 = 6 divides both numbers.",
+        "ta": "சரி! 2 × 3 = 6 இரண்டு எண்களையும் வகுக்கிறது."
+      }
+    }
   },
   "c10-2-ex2-2-q7": {
     "step": 2,
