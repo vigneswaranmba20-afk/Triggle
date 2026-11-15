@@ -14,7 +14,7 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
  const nav=await page.locator('.sp2-nav [data-index]').count();
  if([1,2,9].includes(chapter)){
   assert.equal(nav,chapter===1?7:chapter===2?8:5,'All chapter concepts remain available on the index');
-  assert.equal(await page.locator('.hub-header').isVisible(),false,'No repeated chapter title above concepts');
+  assert(await page.locator('.hub-header').evaluate(el=>el.classList.contains('hub-heading-a11y')&&el.getBoundingClientRect().width<=1&&el.getBoundingClientRect().height<=1),'Chapter title is screen-reader-only, not a visible repeated heading');
   assert.equal(await page.locator('.hub-back-menu').isVisible(),true,'One Back to chapter on the index');
   assert.equal(await page.locator('.sp2-progress:visible').count(),0,'No progress counter pushing down mathematics');
   assert.equal(await page.locator('.sp2-intro:visible').count(),0,'No promotional introductory copy');
