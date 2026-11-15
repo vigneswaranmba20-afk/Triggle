@@ -61,7 +61,7 @@
    const byId=new Map(listed.map(item=>[item.id,item]));
    for(const item of classes[10].items){
      if(String(item.chapter)!=='2'||item.kind==='practice')continue;
-     if(!/^(?:Exercise|Unit Exercise)\\b/i.test(item.label?.en||''))continue;
+     if(!/^(?:Exercise|Unit Exercise)\b/i.test(item.label?.en||''))continue;
      if(!byId.has(item.id))byId.set(item.id,item);
    }
    const items=[...byId.values()];
