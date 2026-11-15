@@ -511,3 +511,34 @@
     background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none
   }
 }
+
+/* All-grade student concepts contract, 2026-11-15:
+   one quiet index -> one mathematical idea -> one Back -> one bottom Previous/Next.
+   Never repeat the chapter title, introductory sales text or progress counts here.
+   Source attribution and deeper reasoning remain available on demand. */
+.chapter-hub[data-hub-section="concepts"] .hub-top-actions{margin:0 0 10px}
+.chapter-hub[data-hub-section="concepts"] .hub-panel{padding:0;margin:0;border:0;min-width:0}
+.chapter-hub[data-hub-section="concepts"] .hub-panel>.hub-info{display:none}
+.chapter-hub[data-hub-section="concepts"] .sp2-journey{
+ margin:0;padding:0;border:0;box-shadow:none;background:transparent;min-width:0
+}
+.chapter-hub[data-hub-section="concepts"] .sp2-index-view .sp2-progress,
+.chapter-hub[data-hub-section="concepts"] .sp2-private,
+.chapter-hub[data-hub-section="concepts"] .sp2-detail-navigation [data-journey-index]{
+ display:none!important
+}
+.chapter-hub[data-hub-section="concepts"] .sp2-index-view .sp2-nav{margin:0;padding:0}
+.chapter-hub[data-hub-section="concepts"] .sp2-detail-navigation{margin:0 0 7px}
+.chapter-hub[data-hub-section="concepts"] .sp2-detail-view .sp2-concept-heading{margin:3px 0 10px}
+.chapter-hub[data-hub-section="concepts"] .sp2-detail-view .sp2-concept-heading h4{margin:0;line-height:1.35}
+.chapter-hub[data-hub-section="concepts"] .rnlab .sp2-demo{margin:8px 0 13px}
+.chapter-hub[data-hub-section="concepts"] .rnlab .sp2-explanation{margin:10px 0 15px}
+.chapter-hub[data-hub-section="concepts"] .rnlab .sp2-recall{margin-top:13px}
+.chapter-hub[data-hub-section="concepts"] .rnlab .sp2-journey-footer{margin-top:14px}
+@media(max-width:800px){
+ .chapter-hub[data-hub-section="concepts"] .sp2-index-view .sp2-nav{gap:8px}
+ .chapter-hub[data-hub-section="concepts"] .sp2-index-view .sp2-nav-button{
+  min-height:55px;padding:11px 12px;font-size:14px
+ }
+ .chapter-hub[data-hub-section="concepts"] .sp2-detail-view .sp2-panel{min-width:0}
+}
