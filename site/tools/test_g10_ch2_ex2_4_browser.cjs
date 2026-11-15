@@ -15,10 +15,23 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    ]){
     await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-4-'+id);
     await page.locator('#stepsList .worked-step').first().waitFor({state:'visible'});
+    // Rendering replaces Unicode powers/fractions with KaTeX MathML. Never
+    // compare visual innerText against unrendered Unicode source bytes.
+    const source=await page.evaluate(id=>{
+      const item=window.TRIGGLE_CLASSES?.[10]?.items.find(item=>item.id===id);
+      return item?{question:item.q?.en,answer:item.answer,label:item.label?.en}:null;
+    },'c10-2-ex2-4-'+id);
+    assert(source&&source.question.includes(queryToken),
+      'Exact source question must match the specified textbook expression '+id);
+    assert(source.answer.includes(answerToken),'Source-verified canonical answer '+id);
     const q=await page.locator('#questionText').innerText();
-    assert(q.includes(queryToken),'Source-matched question '+id+' @'+width+': '+q);
+    assert(q.length>=10&&q.startsWith(source.question.split(/\\s+/)[0]),
+      'Actual question text must be displayed, not a loading placeholder '+id+' @'+width+': '+q);
     const answer=await page.locator('#answerText').innerText();
-    assert(answer.includes(answerToken),'Correct answer '+id+' @'+width+': '+answer);
+    assert(answer.trim().length>0&&!/loading/i.test(answer),
+      'Rendered final answer must be visible '+id+' @'+width+': '+answer);
+    assert((await page.locator('#stepsList .katex').count())>=1,
+      'Student working must render at least one mathematical expression '+id);
     assert((await page.locator('#stepsList li.worked-step').count())>=2,'At least two explained steps '+id);
     assert.equal(await page.locator('[data-math-error]').count(),0,'Math notation correctly typeset '+id);
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),
