@@ -12,12 +12,17 @@ for(const width of [320,360,393,430]){await page.setViewportSize({width,height:8
 for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
  await page.goto(app.base+'/index.html?class=9&chapter=g9-ch'+chapter+'&section=concepts');await page.locator(lang==='en'?'#langEn':'#langTa').click();
  const nav=await page.locator('.sp2-nav [data-index]').count();
- if(chapter===1){
-  assert.equal(nav,7,'All seven concepts remain available on the index');
+ if([1,2,9].includes(chapter)){
+  assert.equal(nav,chapter===1?7:chapter===2?8:5,'All chapter concepts remain available on the index');
+  assert(await page.locator('.hub-header').evaluate(el=>el.classList.contains('hub-heading-a11y')&&el.getBoundingClientRect().width<=1&&el.getBoundingClientRect().height<=1),'Chapter title is screen-reader-only, not a visible repeated heading');
+  assert.equal(await page.locator('.hub-back-menu').isVisible(),true,'One Back to chapter on the index');
+  assert.equal(await page.locator('.sp2-progress:visible').count(),0,'No progress counter pushing down mathematics');
+  assert.equal(await page.locator('.sp2-intro:visible').count(),0,'No promotional introductory copy');
+  assert.equal(await page.locator('.sp2-journey-controls:visible').count(),0,'No extra navigation buttons');
   assert.equal(await page.locator('[data-index-view]').isVisible(),true,'Concepts opens the index');
   assert.equal(await page.locator('[data-detail-view]').isVisible(),false,'No detail before selection');
   assert.equal(await page.locator('[data-idea-picker]').count(),0,'Dropdown is removed');
-  assert.equal(await page.locator('.sp2-nav-button:visible').count(),7);
+  assert.equal(await page.locator('.sp2-nav-button:visible').count(),nav);
   if(width===360||width===393){
    const directory=path.resolve('screenshots/g9-compact-concepts');
    await fs.mkdir(directory,{recursive:true});
@@ -26,10 +31,10 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
  }
  for(let index=0;index<Math.max(nav,1);index++){
   if(nav){
-   if(chapter===1 && await page.locator('[data-detail-view]').isVisible())
+   if([1,2,9].includes(chapter) && await page.locator('[data-detail-view]').isVisible())
      await page.locator('[data-back-index]').click();
    await page.locator('.sp2-nav [data-index]').nth(index).click();
-   if(chapter===1){
+   if([1,2,9].includes(chapter)){
      assert.equal(await page.locator('[data-detail-view]').isVisible(),true);
      assert.equal(await page.locator('[data-index-view]').isVisible(),false);
      assert.equal(new URL(page.url()).searchParams.get('concept'),String(index),'Lesson deep link identifies the selected idea');
@@ -43,7 +48,7 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
        assert.equal(style.position,'sticky','Navigation uses native sticky positioning');
        assert(style.buttons.every(h=>h>=48),'Navigation touch targets remain at least 48px');
        const next=await page.locator('[data-footer-next]').innerText();
-       assert(next.includes(index===6?(lang==='en'?'Back to concepts':'கருத்துகளுக்குத் திரும்பு'):(lang==='en'?'Next idea':'அடுத்த கருத்து')),'Correct localized Next idea / index label');
+       assert(next.includes(index===nav-1?(lang==='en'?'Back to concepts':'கருத்துகளுக்குத் திரும்பு'):(lang==='en'?'Next idea':'அடுத்த கருத்து')),'Correct localized Next idea / index label');
        await page.evaluate(()=>window.scrollTo(0,0));
        const initial=await dock.boundingBox();
        assert(initial&&initial.y>=0&&initial.y+initial.height<=852,'Navigation dock visible at top of long lesson');
@@ -63,6 +68,9 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
   }
   await check(chapter+'/'+index+' '+lang+' '+width);
   if(chapter===2){
+   assert.equal(await page.locator('.sp2-explanation').evaluate(el=>el.open),false,'Real Numbers starts with the visual idea');
+   assert.equal(await page.locator('[data-demo]').count(),1,'One mathematical activity per idea');
+   await page.locator('.sp2-explanation summary').click();
    const beats=page.locator('.rnlab-foundation-tabs [data-foundation-step]');
    const expected=[3,4,3,3,4,3,4,3][index];
    assert.equal(await beats.count(),expected,'Real Numbers learning beats '+index+' '+lang+' '+width);

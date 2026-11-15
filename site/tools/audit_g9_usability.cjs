@@ -68,7 +68,7 @@ async function main(){
     });
     await check(c,'Interactive lesson stages available','interactivity',async()=>{
      await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
-     if(config.chapter==='g9-ch1'){
+     if(config.chapter==='g9-ch1'||config.chapter==='g9-ch2'){
        assert.equal(await page.locator('[data-index-view]').isVisible(),true,'Concepts opens index');
        assert.equal(await page.locator('[data-detail-view]').isVisible(),false,'Lesson hidden until selection');
        assert.equal(await page.locator('[data-idea-picker]').count(),0,'No dropdown');
@@ -81,34 +81,23 @@ async function main(){
     const lab=page.locator('#chapterOverview .sp2-journey');
     if(!await lab.isVisible())continue;
     const selectStage=async index=>{
-      if(config.chapter==='g9-ch1'&&await lab.locator('[data-detail-view]').isVisible())
+      if(await lab.locator('[data-detail-view]').isVisible())
         await lab.locator('[data-back-index]').click();
       await lab.locator('[data-nav] button').nth(index).click();
     };
     await check(c,'Discoverable previous/next controls reach all concepts','navigation',async()=>{
-     const index=lab.locator('[data-journey-index]');
-     if(config.chapter==='g9-ch1'){
-       await selectStage(0);
-       const prev=lab.locator('[data-footer-prev]'),next=lab.locator('[data-footer-next]');
-       assert.equal(await prev.isDisabled(),true);
-       assert.ok((await index.innerText()).includes('1'));
-       await next.click();assert.ok((await index.innerText()).includes('2'));
-       await prev.click();assert.ok((await index.innerText()).includes('1'));
-       for(let n=1;n<config.expected;n++)await next.click();
-       assert.ok((await next.innerText()).includes(lang==='ta'?'கருத்துகளுக்குத் திரும்பு':'Back to concepts'));
-       assert.equal(await lab.locator('[data-nav] button[aria-current="step"]').count(),1);
-       await selectStage(0);
-     }else{
-       const prev=lab.locator('[data-journey-prev]'),next=lab.locator('[data-journey-next]');
-       assert.equal(await prev.isDisabled(),true);
-       assert.ok((await index.innerText()).includes('1'));
-       await next.click();assert.ok((await index.innerText()).includes('2'));
-       await prev.click();assert.ok((await index.innerText()).includes('1'));
-       for(let n=1;n<config.expected;n++)await next.click();
-       assert.equal(await next.isDisabled(),true);
-       assert.equal(await lab.locator('[data-nav] button[aria-current="step"]').count(),1);
-       await selectStage(0);
-     }
+      assert.equal(await lab.locator('[data-index-view]').isVisible(),true,'Index first, no duplicate navigation');
+      assert.equal(await lab.locator('[data-adaptive-dock]:visible').count(),0,'Index has no bottom dock');
+      await selectStage(0);
+      const prev=lab.locator('[data-footer-prev]'),next=lab.locator('[data-footer-next]');
+      assert.equal(await prev.isDisabled(),true,'First concept has no previous idea');
+      assert.equal(new URL(page.url()).searchParams.get('concept'),'0','First concept has a stable deep link');
+      await next.click();assert.equal(new URL(page.url()).searchParams.get('concept'),'1','Next navigates to second idea');
+      await prev.click();assert.equal(new URL(page.url()).searchParams.get('concept'),'0','Previous navigates back');
+      for(let n=1;n<config.expected;n++)await next.click();
+      assert.ok((await next.innerText()).includes(lang==='ta'?'கருத்துகளுக்குத் திரும்பு':'Back to concepts'),'Final idea returns to index');
+      assert.equal(await lab.locator('[data-nav] button[aria-current="step"]').count(),1);
+      await selectStage(0);
     });
     await check(c,'Demo and self-check are usable','learning',async()=>{
      assert.ok(await lab.locator('[data-demo-controls] button,input[type=range]').count()>0,'No demo control');
@@ -220,6 +209,7 @@ async function main(){
     }
     await check(c,'Chapter activities and thinking corners open with answers','textbook',async()=>{
       assert.equal(await page.locator('.hub-panel .textbook-extra').count(),0,'Concepts should not append textbook activities');
+      if(await lab.locator('[data-detail-view]').isVisible())await lab.locator('[data-back-index]').click();
       if(await page.locator('.hub-back-menu').count())await page.locator('.hub-back-menu').click();
       assert.equal(await page.locator('.hub-section-card[data-hub-section="activities"]').count(),1);
       await page.locator('.hub-section-card[data-hub-section="activities"]').click();

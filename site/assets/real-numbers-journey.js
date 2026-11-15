@@ -25,35 +25,55 @@ function numberLine(min,max,points,ta){
   '<text x="'+px+'" y="'+(i===0?'32':i%2?'49':'16')+'" font-weight="750" font-size="15" text-anchor="middle" fill="#5c3272">'+esc(p.label)+'</text>';});
  return out+'</svg>';
 }
-function mount(container,chapter,language){
+function mount(container,chapter,language,onBack,initialConcept=null,onConcept=null){
  if(!container||chapter?.id!=='g9-ch2')return false;
  const lang=language==='ta'?'ta':'en',ta=lang==='ta',t=words[lang],done=load(),root=document.createElement('section');
- root.className='sp2-journey rnlab';root.setAttribute('aria-label',t.title);
- root.innerHTML='<p class="sp2-kicker">'+esc(t.kicker)+'</p><h3>'+esc(t.title)+'</h3>'+
- '<p class="sp2-intro">'+esc(t.intro)+'</p><p class="sp2-progress" data-progress role="status" aria-live="polite"></p>'+
- '<div class="sp2-journey-controls" role="group" aria-label="'+esc(t.title)+'">'+
- '<button type="button" data-journey-prev>'+esc('← '+t.previousIdea)+'</button>'+
- '<span data-journey-index role="status" aria-live="polite"></span>'+
- '<button type="button" data-journey-next>'+esc(t.nextIdea+' →')+'</button></div>'+
- '<p class="sp2-navigation-tip">'+esc(t.navTip)+'</p>'+
- '<nav class="sp2-nav" data-nav aria-label="'+esc(t.title)+'"></nav><div class="sp2-panel" data-panel></div>'+
- '<p class="sp2-private">'+esc(t.saved)+'</p>';
+ const backLabel=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
+ const explanationLabel=ta?'கருத்தைப் புரிந்துகொள்':'Understand the idea';
+ root.className='sp2-journey rnlab';root.dataset.view='index';
+ root.setAttribute('aria-label',ta?'மெய்யெண்கள் கருத்துகள்':'Real Numbers concepts');
+ root.innerHTML='<div class="sp2-index-view" data-index-view>'+
+   '<nav class="sp2-nav" data-nav role="group" aria-label="'+esc(ta?'ஒரு கருத்தைத் தேர்ந்தெடுக்கவும்':'Choose a concept')+'"></nav></div>'+
+   '<div class="sp2-detail-view" data-detail-view hidden>'+
+   '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+esc(backLabel)+'</button></div>'+
+   '<div class="sp2-panel" data-panel></div>'+
+   '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+esc(ta?'கருத்துகளுக்கிடையே நகர்க':'Move between concepts')+'">'+
+   '<button type="button" class="sp2-footer-prev" data-footer-prev>← '+esc(t.previousIdea)+'</button>'+
+   '<button type="button" class="sp2-footer-next" data-footer-next></button></nav></div>';
  container.append(root);
- const nav=root.querySelector('[data-nav]'),panel=root.querySelector('[data-panel]');let active=0;
- path.stages.forEach((stage,i)=>{const b=document.createElement('button');b.type='button';b.className='sp2-nav-button';b.dataset.index=String(i);
-  b.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+esc(pick(stage.title,lang))+'</span><span class="sp2-done-mark" aria-hidden="true"></span>';
-  b.addEventListener('click',()=>show(i));nav.append(b);
+ const nav=root.querySelector('[data-nav]'),panel=root.querySelector('[data-panel]');
+ const indexView=root.querySelector('[data-index-view]'),detailView=root.querySelector('[data-detail-view]');
+ let active=-1;
+ path.stages.forEach((stage,i)=>{
+  const button=document.createElement('button');button.type='button';
+  button.className='sp2-nav-button';button.dataset.index=String(i);
+  button.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+esc(pick(stage.title,lang))+
+   '</span><span class="sp2-done-mark" aria-hidden="true"></span>';
+  button.addEventListener('click',()=>show(i,true));nav.append(button);
  });
- root.querySelector('[data-journey-prev]').addEventListener('click',()=>show(active-1));
- root.querySelector('[data-journey-next]').addEventListener('click',()=>show(active+1));
- function update(){root.querySelector('[data-progress]').textContent=t.progress+': '+done.size+' / '+path.stages.length;
-   nav.querySelectorAll('button').forEach((b,i)=>{b.classList.toggle('sp2-current',i===active);b.classList.toggle('sp2-done',done.has(path.stages[i].id));
-    b.setAttribute('aria-pressed',String(i===active));b.setAttribute('aria-current',i===active?'step':'false');b.querySelector('.sp2-done-mark').textContent=done.has(path.stages[i].id)?'✓':'';});
-   root.querySelector('[data-journey-index]').textContent=t.position(active+1,path.stages.length);
-   root.querySelector('[data-journey-prev]').disabled=active===0;
-   root.querySelector('[data-journey-next]').disabled=active===path.stages.length-1;
-   const selected=nav.querySelector('.sp2-current');if(selected)nav.scrollLeft=Math.max(0,selected.offsetLeft-nav.offsetLeft-8);
+ function update(){
+  nav.querySelectorAll('button').forEach((button,i)=>{
+   const selected=active===i,complete=done.has(path.stages[i].id);
+   button.classList.toggle('sp2-current',selected);button.classList.toggle('sp2-done',complete);
+   button.setAttribute('aria-pressed',String(selected));button.setAttribute('aria-current',selected?'step':'false');
+   button.querySelector('.sp2-done-mark').textContent=complete?'✓':'';
+  });
+  root.querySelector('[data-footer-prev]').disabled=active<=0;
+  const next=root.querySelector('[data-footer-next]');
+  next.textContent=active===path.stages.length-1?backLabel+' →':t.nextIdea+' →';
+  next.classList.toggle('is-return',active===path.stages.length-1);
  }
+ function showIndex(focus=false,notify=true){
+  active=-1;root.dataset.view='index';indexView.hidden=false;detailView.hidden=true;update();
+  if(notify&&typeof onConcept==='function')onConcept(null,true);
+  if(focus){nav.querySelector('button')?.focus({preventScroll:true});root.scrollIntoView({behavior:'auto',block:'start'});}
+ }
+ root.querySelector('[data-back-index]').addEventListener('click',()=>showIndex(true));
+ root.querySelector('[data-footer-prev]').addEventListener('click',()=>show(active-1,true));
+ root.querySelector('[data-footer-next]').addEventListener('click',()=>{
+  if(active===path.stages.length-1){showIndex(true);return;}
+  show(active+1,true);
+ });
  function controls(label,items,value,onChange){const host=panel.querySelector('[data-demo-controls]');
   const group=document.createElement('div');group.className='rnlab-choices';group.setAttribute('role','group');group.setAttribute('aria-label',label);
   items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);if(typeof caption==='object'){b.innerHTML=caption.html;b.setAttribute('aria-label',caption.label);}
@@ -229,39 +249,52 @@ function mount(container,chapter,language){
     });
   }
  }
- function show(i){
+ function show(i,focus=false,notify=true){
   if(i<0||i>=path.stages.length)return;
-  active=i;const stage=path.stages[i];
-  panel.innerHTML='<small class="sp2-stage-reference">'+esc(t.source)+' '+esc(stage.section)+(stage.page?.en?' · EN p.'+stage.page.en:'')+'</small>'+
-   '<h4>'+esc(pick(stage.title,lang))+'</h4><p class="sp2-idea">'+notation(pick(stage.idea,lang))+'</p>'+
-   '<p class="sp2-example">'+notation(pick(stage.example,lang))+'</p><div class="sp2-formula">'+notation(pick(stage.rule,lang))+'</div>'+ 
-   foundationMarkup(stage)+
-   '<div class="sp2-demo"><h5 class="sp2-demo-title">'+esc(t.explore)+'</h5>'+
+  active=i;root.dataset.view='lesson';indexView.hidden=true;detailView.hidden=false;
+  if(notify&&typeof onConcept==='function')onConcept(i);
+  const stage=path.stages[i];
+  panel.innerHTML=
+   '<div class="sp2-concept-heading" tabindex="-1"><h4>'+esc((i+1)+'. '+pick(stage.title,lang))+'</h4></div>'+
+   '<div class="sp2-demo" data-demo><h5 class="sp2-demo-title">'+esc(t.explore)+'</h5>'+
    '<div class="sp2-demo-controls" data-demo-controls></div>'+
-   '<div class="rnlab-visual" data-demo-visual></div><p class="sp2-demo-output" data-demo-output aria-live="polite"></p>'+
-   '<small class="rnlab-source-note">'+esc(t.detailed)+'</small></div>'+
+   '<div class="rnlab-visual" data-demo-visual></div><p class="sp2-demo-output" data-demo-output aria-live="polite"></p></div>'+
+   '<details class="sp2-explanation"><summary>'+esc(explanationLabel)+'</summary>'+
+   '<div class="sp2-explanation-body">'+
+   '<p class="sp2-idea">'+notation(pick(stage.idea,lang))+'</p>'+
+   '<p class="sp2-example">'+notation(pick(stage.example,lang))+'</p>'+
+   '<div class="sp2-formula">'+notation(pick(stage.rule,lang))+'</div>'+
+   foundationMarkup(stage)+
+   '<small class="rnlab-source-note">'+esc(t.source)+' '+esc(stage.section)+(stage.page?.en?' · EN p.'+esc(stage.page.en):'')+'</small></div></details>'+
    '<div class="sp2-recall"><h5>'+esc(t.check)+'</h5><p>'+notation(pick(stage.question,lang))+'</p>'+
-   '<div class="sp2-answers" data-answers></div><div class="sp2-recall-actions">'+
+   '<div class="sp2-answers" data-answers role="group" aria-label="'+esc(pick(stage.question,lang))+'"></div>'+
+   '<div class="sp2-recall-actions">'+
    '<button type="button" data-hint>'+esc(t.hint)+'</button><button type="button" data-why>'+esc(t.why)+'</button></div>'+
-   '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-explanation hidden></div></div>'+ 
-   (stage.pitfall?'<details class="rnlab-pitfall"><summary>'+esc(ta?'பொதுவாக ஏற்படும் தவறு':'Avoid this mistake')+'</summary><p>'+notation(pick(stage.pitfall,lang))+'</p></details>':'')+
-   (i+1<path.stages.length?'<button type="button" class="rnlab-next" data-next>'+esc(t.next)+' →</button>':'');
+   '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-explanation hidden></div></div>'+
+   (stage.pitfall?'<details class="rnlab-pitfall"><summary>'+esc(ta?'பொதுவாக ஏற்படும் தவறு':'Avoid this mistake')+
+    '</summary><p>'+notation(pick(stage.pitfall,lang))+'</p></details>':'');
   const choices=panel.querySelector('[data-answers]'),feedback=panel.querySelector('[data-feedback]'),explanation=panel.querySelector('[data-explanation]');
   let wrongAttempts=0;
-  stage.choices.forEach((opt,j)=>{const b=document.createElement('button');b.type='button';b.dataset.choice=String(j);b.innerHTML=notation(pick(opt,lang));b.setAttribute('aria-label',pick(opt,lang));
-   b.addEventListener('click',()=>{const correct=j===stage.correct;
-    choices.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  stage.choices.forEach((opt,j)=>{
+   const button=document.createElement('button');button.type='button';button.dataset.choice=String(j);
+   button.innerHTML=notation(pick(opt,lang));button.setAttribute('aria-label',pick(opt,lang));
+   button.addEventListener('click',()=>{
+    const correct=j===stage.correct;
+    choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
     if(correct){feedback.textContent=t.right;done.add(stage.id);save(done);update();explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=false;}
     else{wrongAttempts++;const clue=wrongAttempts===2?' '+pick(stage.hint,lang):wrongAttempts>=3?' '+pick(stage.why,lang):'';
       feedback.innerHTML=notation(t.wrong+clue);}
-   });choices.append(b);
+   });choices.append(button);
   });
   panel.querySelector('[data-hint]').addEventListener('click',()=>{feedback.innerHTML=notation(pick(stage.hint,lang));});
   panel.querySelector('[data-why]').addEventListener('click',()=>{explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=!explanation.hidden;});
-  panel.querySelector('[data-next]')?.addEventListener('click',()=>{show(i+1);root.querySelector('[data-panel]').scrollIntoView({block:'nearest'});});
   bindFoundation(stage);renderDemo(i);update();
+  if(focus){root.scrollIntoView({behavior:'auto',block:'start'});panel.querySelector('.sp2-concept-heading')?.focus({preventScroll:true});}
  }
- show(0);return true;
+ if(Number.isInteger(initialConcept)&&initialConcept>=0&&initialConcept<path.stages.length)
+  show(initialConcept,false,false);
+ else showIndex(false,false);
+ return true;
 }
 window.TriggleRealJourney=Object.freeze({mount});
 })();

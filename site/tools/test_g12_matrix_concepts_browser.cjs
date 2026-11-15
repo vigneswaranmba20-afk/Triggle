@@ -16,6 +16,10 @@ async function main(){
    await p.locator('[data-hub-section=concepts]').click();
    const lab=p.locator('.matrix-concepts'),control=key=>lab.locator('[data-control="'+key+'"]'),action=key=>lab.locator('[data-action="'+key+'"]'),result=()=>lab.locator('[data-result]').innerText();
    const go=async i=>{await lab.locator('[data-index-toggle]').click();await lab.locator('[data-scene="'+i+'"]').click();assert.equal(new URL(p.url()).searchParams.get('concept'),String(i));};
+   assert.equal(await lab.locator('[data-index-view]').isVisible(),true,'Matrix Concepts opens the same quiet index as every chapter');
+   assert.equal(await lab.locator('[data-detail-view]').isVisible(),false,'No matrix animation before an idea is chosen');
+   assert.equal(await p.locator('.hub-header').evaluate(el=>el.classList.contains('hub-heading-a11y')),true,'No repeated visible chapter heading');
+   await lab.locator('[data-scene="0"]').click();
    await noOverflow(p);
    await lab.locator('[data-cell="1,0"]').click();await action('cofactor-step').click();assert.match(await result(),/M21 = 1 × 1 − 0 × 1 = 1/);
    await action('cofactor-step').click();assert.match(await result(),/C21 = −1 × \(1\) = -1/);
@@ -46,16 +50,16 @@ async function main(){
     await go(0);await p.screenshot({path:path.join(shots,'g12-cofactor-'+width+'.png'),fullPage:true});
     await go(8);await p.screenshot({path:path.join(shots,'g12-consistency-'+width+'.png'),fullPage:true});
    }
-   await p.reload();assert.match(await lab.locator('.mc-scene-heading').innerText(),/Consistency Scanner/);assert.equal(await control('case').inputValue(),'three','Refresh keeps visual state');
-   await go(2);await go(3);await p.goBack();assert.match(await lab.locator('.mc-scene-heading').innerText(),/Order Matters/,'Browser Back returns to prior scene');
-   await p.locator('.hub-back-menu').click();assert.equal(await p.locator('.hub-section-card').count(),3);await p.locator('[data-hub-section=exercises]').click();assert.equal(new URL(p.url()).searchParams.get('question'),'g12-ch1-ex1.1-q1-i');assert(await p.locator('#stepsList .final-answer-step').isVisible());
+   await p.reload();assert.match(await lab.locator('.mc-scene-heading').innerText(),/Does the right-hand side add a contradiction\?/,'Reload preserves the actual mathematical question');assert.equal(await control('case').inputValue(),'three','Refresh keeps visual state');
+   await go(2);await go(3);await p.goBack();assert.equal(await lab.locator('[data-index-view]').isVisible(),true,'Browser Back returns to the simple concept index');await lab.locator('[data-scene="2"]').click();assert.match(await lab.locator('.mc-scene-heading').innerText(),/Which action must Undo reverse first\?/,'Index reopens the correct mathematical question');
+   await lab.locator('[data-index-toggle]').click();assert.equal(await lab.locator('[data-index-view]').isVisible(),true,'Return to the matrix concept index first');await p.locator('.hub-back-menu').click();assert.equal(await p.locator('.hub-section-card').count(),3);await p.locator('[data-hub-section=exercises]').click();assert.equal(new URL(p.url()).searchParams.get('question'),'g12-ch1-ex1.1-q1-i');assert(await p.locator('#stepsList .final-answer-step').isVisible());
    await p.locator('#langTa').click();assert.equal(await p.locator('.matrix-concepts').count(),0);assert(await p.locator('#questionText').innerText());await p.goto(app.base+route+'&section=concepts');assert.equal(await p.locator('.matrix-concepts').count(),0,'Tamil does not falsely expose English concepts');
    await p.locator('#langEn').click();assert.equal(await p.locator('.matrix-concepts').count(),1);await p.locator('#homeBtn').click();assert(await p.locator('#discoveryView').isVisible());
    assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);await ctx.close();console.log('PASS all matrix interactions, predictions, proof, Back, refresh, exercises and EN/TA at '+width+'px');
   }
   const large=await browser.newContext({viewport:{width:360,height:640},serviceWorkers:'block'}),largePage=await large.newPage();
   await largePage.goto(app.base+route+'&section=concepts');await largePage.addStyleTag({content:'html{font-size:200%!important}'});
-  for(let i=0;i<9;i++){if(i){await largePage.locator('[data-index-toggle]').click();await largePage.locator('[data-scene="'+i+'"]').click();}await noOverflow(largePage);assert(await largePage.locator('.mc-stage').evaluate(el=>el.scrollWidth<=el.clientWidth+1));}
+  for(let i=0;i<9;i++){if(i)await largePage.locator('[data-index-toggle]').click();await largePage.locator('[data-scene="'+i+'"]').click();await noOverflow(largePage);assert(await largePage.locator('.mc-stage').evaluate(el=>el.scrollWidth<=el.clientWidth+1));}
   await large.close();console.log('PASS 200% text scaling at 360 × 640 with no clipped lesson stage');
   // The lesson is static and cached with the rest of the existing offline shell.
   const ctx=await browser.newContext({viewport:{width:390,height:844}}),p=await ctx.newPage();await p.goto(app.base+route+'&section=concepts&concept=1');
