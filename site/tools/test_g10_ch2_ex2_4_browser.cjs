@@ -37,9 +37,18 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),
       'No horizontal overflow '+id+' @'+width);
    }
-   // Unchanged Q1(i–iii), followed by ten new textbook parts, then Exercise 2.5.
+   // Q1 is one published grouped lesson with three subparts. The separately
+   // authored Q1(i–iii) drafts are intentionally suppressed to avoid duplicate
+   // student questions; the next visible lesson must be Q2(i).
+   const q1=await page.evaluate(()=>{
+     const rows=window.TRIGGLE_CLASSES?.[10]?.items||[];
+     return {grouped:rows.some(r=>r.id==='c10-2-ex2-4-q1'),
+       suppressed:['i','ii','iii'].every(s=>!rows.some(r=>r.id==='c10-2-ex2-4-q1-'+s))};
+   });
+   assert(q1.grouped&&q1.suppressed,
+     'Exercise 2.4 Q1 must be one canonical grouped lesson, not duplicated');
    for(const [start,end] of [
-    ['q1-iii','q2-i'],['q2-i','q2-ii'],['q2-iii','q3-i'],
+    ['q1','q2-i'],['q2-i','q2-ii'],['q2-iii','q3-i'],
     ['q3-iii','q4-i'],['q4-ii','q5'],['q5','q6']
    ]){
     await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-4-'+start);
