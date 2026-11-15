@@ -8,7 +8,7 @@ for(const file of scripts)vm.runInContext(read(file),context,{filename:file,time
 const lessons=new Map(context.window.TRIGGLE_CLASSES[10].items.map(item=>[item.id,item]));
 const hints=context.window.TriggleWhyStepG10.hints,ids=Object.keys(hints);
 assert.ok(lessons.size>=136,'Grade 10 baseline authored catalogue');
-assert.equal(ids.length,136,'Every existing authored Grade 10 problem has a curated, source-matched bridge');
+assert.equal(ids.length,137,'One additional source-matched Q8 explanation; existing Grade 10 coverage preserved');
 const pages=['data/why-step-g10.js','data/why-step-g10-coverage.js','assets/why-step-g10.js','assets/why-step-g10.css'];
 for(const asset of pages){assert.ok(html.includes('./'+asset),'HTML missing '+asset);assert.ok(sw.includes('./'+asset),'Offline cache missing '+asset);}
 assert.ok(html.indexOf('data/why-step-g10.js')<html.indexOf('data/why-step-g10-coverage.js'),'Base must load before extension');
@@ -52,6 +52,37 @@ for(const id of ids){
  }
 }
 assert.deepEqual([...chapters].sort(),['1','2','3','4','5','6','8'],'No fabricated Grade 7 questions');
+// Only four high-transfer-risk questions get a voluntary self-check. Students
+// see neither a quiz nor additional controls before opening the Why disclosure.
+const checks={
+ 'c10-2-ex2-2-q1':{correct:0,values:['4','6','8']},
+ 'c10-2-ex2-2-q3':{correct:1,values:['12','120','10']},
+ 'c10-2-ex2-2-q6':{correct:2,values:['18','72','6']},
+ 'c10-2-ex2-2-q8':{correct:2,values:['1','12','13']}
+};
+const actualTransfers=ids.filter(id=>[].concat(hints[id]).some(h=>!!h.transfer));
+assert.deepEqual(actualTransfers.sort(),Object.keys(checks).sort(),'No quizzes on straightforward repetition');
+for(const [id,expected] of Object.entries(checks)){
+ const note=[].concat(hints[id]).find(h=>h.transfer);
+ const check=note.transfer;
+ assert.equal(check.correct,expected.correct);
+ assert.deepEqual(Array.from(check.choices.map(v=>v.en)),expected.values);
+ assert.equal(check.choices.length,3);
+ assert.equal(new Set(check.choices.map(v=>v.en)).size,3);
+ for(const lang of ['en','ta']){
+  assert.ok(check.prompt[lang]?.length>15,'Question translation missing '+id+' '+lang);
+  assert.ok(check.wrong[lang]?.length>15,'Wrong-answer teaching hint missing '+id+' '+lang);
+  assert.ok(check.success[lang]?.length>15,'Answer explanation missing '+id+' '+lang);
+  assert(check.choices.every(v=>v[lang]?.length>0),'Option translation missing '+id+' '+lang);
+ }
+}
+assert.equal(4n**7n%10n,4n,'Last-digit cycle check');
+assert.equal((a=>{let b=360;while(b){const t=a%b;a=b;b=t;}return a;})(240),120,'HCF scaling check');
+assert.equal((a=>{let b=18;while(b){const t=a%b;a=b;b=t;}return a;})(24),6,'Prime exponent HCF check');
+assert.equal(13%4,1);assert.equal(13%6,1);assert.equal(1%4,1);assert.equal(1%6,1);
+const q8=hints['c10-2-ex2-2-q8'];
+assert.equal(q8.step,0);
+assert.ok(q8.en.includes('3647')&&q8.en.includes('7')&&q8.en.includes('zero'),'Explicit original question ambiguity');
 const q4=hints['c10-1-ex1-1-q4'];
 assert.ok(Array.isArray(q4)&&q4.length===2,'Screenshot question must have TWO source-specific explanations');
 assert.equal(q4[0].step,0);assert.equal(q4[0].diagram.type,'grid');

@@ -43,6 +43,54 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert.equal(await control.evaluate(el=>el.open),false,'Closes without mode change');
    }
   }
+  // Three new numbers and one ambiguous remainder case. All controls stay
+  // inside the existing disclosure; never mutate the textbook answer or steps.
+  for(const width of [320,390]){
+   await page.setViewportSize({width,height:760});
+   for(const [id,correct] of [['c10-2-ex2-2-q1',0],['c10-2-ex2-2-q3',1],['c10-2-ex2-2-q6',2],['c10-2-ex2-2-q8',2]]){
+    await page.goto(app.base+'/index.html?class=10&question='+id);
+    await page.locator('#langEn').click();
+    const details=page.locator('#stepsList details.why-step-g10');
+    await details.waitFor({state:'attached'});
+    assert.equal(await details.count(),1,'A single extra teaching control: '+id);
+    const options=details.locator('button.why-step-transfer-choice');
+    assert.equal(await options.count(),3,'Exactly three transfer answers '+id);
+    assert.equal(await options.first().isVisible(),false,'Transfer quiz stays hidden with the Why disclosure '+id);
+    const before=await page.evaluate(()=>({
+      question:document.querySelector('#questionText')?.textContent,
+      steps:[...document.querySelectorAll('#stepsList .step-equation')].map(el=>el.textContent),
+      final:document.querySelector('.final-answer-step')?.textContent
+    }));
+    await details.locator('summary').click();
+    assert.equal(await options.first().isVisible(),true,'Opened check visible '+id);
+    const wrongIndex=(correct+1)%3;
+    await options.nth(wrongIndex).click();
+    assert.equal(await details.locator('.why-step-transfer-feedback').getAttribute('data-result'),'retry','Wrong choice gives hint '+id);
+    assert((await details.locator('.why-step-transfer-feedback').innerText()).length>20,'Useful, not generic, retry message '+id);
+    await options.nth(correct).click();
+    assert.equal(await details.locator('.why-step-transfer-feedback').getAttribute('data-result'),'correct','Transfer answer verifies '+id);
+    assert.equal(await options.nth(correct).getAttribute('aria-pressed'),'true','Selected state is accessible '+id);
+    const after=await page.evaluate(()=>({
+      question:document.querySelector('#questionText')?.textContent,
+      steps:[...document.querySelectorAll('#stepsList .step-equation')].map(el=>el.textContent),
+      final:document.querySelector('.final-answer-step')?.textContent
+    }));
+    assert.deepEqual(after,before,'Explanation cannot change original verified working '+id);
+    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No mobile overflow '+id+' '+width);
+    await details.locator('summary').click();
+    assert.equal(await options.first().isVisible(),false,'Closing Why also hides quiz');
+   }
+  }
+  await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-2-q8');
+  await page.locator('#langTa').click();
+  const ta=page.locator('#stepsList details.why-step-g10');
+  await ta.waitFor();
+  await ta.locator('summary').click();
+  assert.match(await ta.locator('.why-step-transfer-prompt').innerText(),/[\u0B80-\u0BFF]/,'Tamil check is independently translated');
+  await ta.locator('button.why-step-transfer-choice').nth(2).click();
+  assert.equal(await ta.locator('.why-step-transfer-feedback').getAttribute('data-result'),'correct');
+  assert.match(await ta.locator('.why-step-transfer-feedback').innerText(),/[\u0B80-\u0BFF]/,'Tamil feedback');
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Tamil opened quiz does not overflow');
   await page.goto(app.base+'/index.html?class=10&question=c10-6-6-1-3');
   await page.locator('#stepsList .why-step-g10 summary').focus();
   await page.keyboard.press('ArrowRight');

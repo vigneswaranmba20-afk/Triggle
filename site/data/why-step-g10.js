@@ -127,12 +127,41 @@
         "fallback": "A remainder total may be larger than the divisor. Here the combined remainder itself forms complete groups, leaving none."
       }
     },
-    "c10-2-ex2-2-q1": {
-      "step": 1,
-      "expected": "The last digit alternates",
-      "en": "Only the units digit matters for the units digit of the next product. The pattern therefore repeats every two powers.",
-      "ta": "அடுத்த பெருக்கலின் ஒன்றுகள் இலக்கத்தைக் கண்டறிய தற்போதைய ஒன்றுகள் இலக்கமே போதும். அதனால் இரு அடுக்குகளுக்கு ஒருமுறை முறை மீள்கிறது."
-    },
+  "c10-2-ex2-2-q1": {
+    "step": 1,
+    "expected": "The last digit alternates",
+    "en": "Multiplication only needs the previous units digit: 4 × 4 ends in 6, then 6 × 4 ends in 4. This two-step cycle keeps repeating, so even powers of 4 end in 6 and odd powers end in 4.",
+    "ta": "ஒன்றுகள் இலக்கத்தை அறிய முந்தைய எண்ணின் ஒன்றுகள் இலக்கம் போதும்: 4 × 4 இன் கடைசி இலக்கம் 6; அடுத்து 6 × 4 இன் கடைசி இலக்கம் 4. இது இரண்டு படிகளுக்கு ஒருமுறை திரும்புவதால் இரட்டை அடுக்குகள் 6-இலும் ஒற்றை அடுக்குகள் 4-இலும் முடியும்.",
+    "transfer": {
+      "prompt": {
+        "en": "Try a different power: what is the last digit of 4⁷?",
+        "ta": "வேறு ஓர் அடுக்கு: 4⁷ இன் ஒன்றுகள் இலக்கம் என்ன?"
+      },
+      "choices": [
+        {
+          "en": "4",
+          "ta": "4"
+        },
+        {
+          "en": "6",
+          "ta": "6"
+        },
+        {
+          "en": "8",
+          "ta": "8"
+        }
+      ],
+      "correct": 0,
+      "wrong": {
+        "en": "Look for the 4, 6, 4, 6 cycle. Is the power 7 odd or even?",
+        "ta": "4, 6, 4, 6 என்ற சுழற்சியைப் பாருங்கள். 7 ஒற்றையா, இரட்டையா?"
+      },
+      "success": {
+        "en": "Correct: 7 is odd, and odd powers of 4 end in 4.",
+        "ta": "சரி! 7 ஒற்றை எண். எனவே 4 இன் ஒற்றை அடுக்கு 4-இல் முடியும்."
+      }
+    }
+  },
     "c10-2-ex2-2-q2": {
       "step": 1,
       "expected": "A factor of 10",
@@ -140,10 +169,74 @@
       "ta": "பத்தை ஒரு முழு எண்ணால் பெருக்கினால் ஒன்றுகள் இலக்கம் பூஜ்ஜியம். மீதமுள்ள காரணிகள் இதை மாற்ற முடியாது."
     },
     "c10-2-ex2-2-q3": {
-      "step": 2,
-      "expected": "Thus the common factor",
-      "en": "After removing the known common factor, the leftover numbers share no factor greater than one. There is nothing more to add to the HCF.",
-      "ta": "தெரிந்த பொதுக்காரணியை நீக்கிய பின் மீதமுள்ள இரு எண்களுக்கும் ஒன்றைத் தவிர பொதுக்காரணி இல்லை. ஆகவே மீ.பொ.வ. இன்னும் பெருகாது."
+      "step": 0,
+      "expected": "Factor both numbers by 10101.",
+      "en": "Spot the repeating blocks: 252525 = 25×10000 + 25×100 + 25 = 25×10101. In the same way, 363636 = 36×10101. Since HCF(25, 36) = 1, the biggest shared factor is 10101. This pattern explains where that surprising factor came from.",
+      "ta": "மீண்டும் வரும் இலக்கக் குழுக்களைப் பாருங்கள்: 252525 = 25×10000 + 25×100 + 25 = 25×10101. அதேபோல் 363636 = 36×10101. 25, 36 இன் மீ.பொ.வ. 1 என்பதால் மிகப்பெரிய பொதுக் காரணி 10101 ஆகும்.",
+      "transfer": {
+        "prompt": {
+          "en": "If HCF(24, 36) = 12, what is HCF(240, 360)?",
+          "ta": "HCF(24, 36) = 12 எனில் HCF(240, 360) என்ன?"
+        },
+        "choices": [
+          {
+            "en": "12",
+            "ta": "12"
+          },
+          {
+            "en": "120",
+            "ta": "120"
+          },
+          {
+            "en": "10",
+            "ta": "10"
+          }
+        ],
+        "correct": 1,
+        "wrong": {
+          "en": "Both original numbers were multiplied by 10. What happens to their greatest common factor?",
+          "ta": "இரண்டு எண்களும் 10 ஆல் பெருக்கப்பட்டுள்ளன. அவற்றின் மீ.பொ.வ. எப்படி மாறும்?"
+        },
+        "success": {
+          "en": "Correct: multiplying both numbers by 10 also multiplies their HCF by 10.",
+          "ta": "சரி! இரண்டு எண்களையும் 10 ஆல் பெருக்கினால் அவற்றின் மீ.பொ.வ.-வும் 10 ஆல் பெருகும்."
+        }
+      }
+    },
+    "c10-2-ex2-2-q8": {
+      "step": 0,
+      "expected": "Subtract the shared remainder 7.",
+      "en": "Removing the same remainder makes exact division possible: N − 7 must be divisible by 35, 56 and 91. Their least common multiple is 3640, giving the textbook answer 3647. But the printed question never says that every quotient must be positive: N = 7 also leaves remainder 7 with quotient zero. The two answers rely on different assumptions.",
+      "ta": "ஒரே மீதியான 7-ஐக் கழித்தால், N − 7 என்பது 35, 56, 91 ஆகிய மூன்றாலும் முழுமையாக வகுபட வேண்டும். அவற்றின் மீ.சி.ம. 3640; அதனால் பாடநூல் விடை 3647. ஆனால் ஒவ்வொரு வகுத்தலிலும் ஈவு நேர்மமாக இருக்க வேண்டும் என்று கேள்வி கூறவில்லை. ஈவு 0 ஆக இருந்தாலும் N = 7 மீதி 7-ஐத் தரும்.",
+      "transfer": {
+        "prompt": {
+          "en": "Remainder 1 when dividing by 4 and by 6. If both quotients must be positive, what is the smallest number?",
+          "ta": "4 மற்றும் 6 ஆல் வகுக்கும்போது மீதி 1. இரண்டு ஈவுகளும் நேர்மமாக இருக்க வேண்டும் எனில் மிகச்சிறிய எண் எது?"
+        },
+        "choices": [
+          {
+            "en": "1",
+            "ta": "1"
+          },
+          {
+            "en": "12",
+            "ta": "12"
+          },
+          {
+            "en": "13",
+            "ta": "13"
+          }
+        ],
+        "correct": 2,
+        "wrong": {
+          "en": "Subtract 1 first. The remaining number must be a positive common multiple of 4 and 6; their LCM is 12.",
+          "ta": "முதலில் 1-ஐக் கழிக்கவும். மீதமுள்ள எண் 4, 6 ஆகியவற்றின் நேர்மப் பொதுமடங்காக இருக்க வேண்டும். அவற்றின் மீ.சி.ம. 12."
+        },
+        "success": {
+          "en": "Correct: 12 + 1 = 13. Without the positive-quotient condition, 1 would also satisfy the wording.",
+          "ta": "சரி! 12 + 1 = 13. ஈவு நேர்மமாக இருக்க வேண்டியதில்லை எனில் 1-உம் கேள்வியின் நிபந்தனைக்கு பொருந்தும்."
+        }
+      }
     },
     "c10-3-ex3-1-q1-i": {
       "step": 0,
