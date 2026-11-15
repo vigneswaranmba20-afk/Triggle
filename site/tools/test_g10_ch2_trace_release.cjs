@@ -16,7 +16,7 @@ vm.runInContext(pathScript,ctx,{filename:'g10-ch2-concepts.js'});
 const foundations=window.TRIGGLE_G10_CH2_PATH;
 assert.equal(foundations.chapterId,'g10-ch2');
 assert.equal(foundations.stages.length,15,'15 textbook-ordered foundation steps');
-const secOrder=foundations.stages.map(s=>Number(s.section));assert(secOrder.every((x,i)=>i===0||x>=secOrder[i-1]),'Concepts in textbook order');
+const secOrder=foundations.stages.map(s=>Number(s.section.split('.')[1]));assert(secOrder.every((x,i)=>i===0||x>=secOrder[i-1]),'Concepts in textbook order');
 for(const s of foundations.stages){
  assert.match(s.id,/^g10-ch2-/);
  assert(s.title.en&&s.title.ta&&s.idea.en&&s.idea.ta&&s.example.en&&s.example.ta);
@@ -31,7 +31,7 @@ for(const file of ['data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','dat
 const items=window.TRIGGLE_CLASSES[10].items;
 assert.equal(items.length,52,'52 new released parts in the focused chapter');
 assert.equal(new Set(items.map(q=>q.id)).size,items.length,'All question IDs unique');
-assert.deepEqual([...new Set(items.map(q=>q.exercise))].sort(),['2.10','2.3','2.4','2.5','2.6','2.7','2.8','2.9'].sort(),'Exercises 2.3–2.10 represented');
+assert.equal([...new Set(items.map(q=>q.exercise))].sort().join(','),['2.10','2.3','2.4','2.5','2.6','2.7','2.8','2.9'].sort().join(','),'Exercises 2.3–2.10 represented');
 assert(items.every(q=>q.chapter==='2'&&q.classNum===10&&q.kind==='textbook'));
 assert(items.every(q=>q.source.includes('13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of')&&q.edition==='2025'));
 assert(items.every(q=>q.steps.length>=3&&q.steps.every(s=>s.en.length>15&&s.eq.length>2)));
