@@ -44,7 +44,7 @@ async function main(){
         font:cs.fontFamily,size:cs.fontSize,weight:cs.fontWeight,line:cs.lineHeight,
         spacing:cs.letterSpacing,scroll:el.scrollWidth,client:el.clientWidth};
       };
-      const selectors=['#lessonCard','#questionText','#stepsList',
+      const selectors=['#questionText','#stepsList',
        '#stepsList .worked-step','#stepsList .step-equation','#stepsList .katex',
        '#questionText .katex','#answerBox .katex','.final-answer-step'];
       const anchors=selectors.map(selector=>({
