@@ -24,6 +24,14 @@ for(const row of m.rows){
  assert.equal(row.classification,oldItem.answer,'Independent classification must match 34-part archive '+row.id);
  assert(row.sourceEnglish&&row.reason&&oldItem.steps.length>=3,'Full source evidence and working remain staged');
 }
+// Validate the source expressions themselves so a changed inequality, word, or divisor
+// cannot silently retain a correct-looking answer copied from the answer key.
+const normalized=s=>s.replace(/\\s+/g,'').toLowerCase();
+assert(normalized(m.rows[0].sourceEnglish).includes('vowel'),'Q3(i) must retain the word VOWEL');
+assert(normalized(m.rows[1].sourceEnglish).includes('1<x<5'),'Q3(ii) must retain both strict bounds');
+assert(normalized(m.rows[2].sourceEnglish).includes('life'),'Q3(iii) must retain LIFE');
+assert(normalized(m.rows[3].sourceEnglish).includes('3<x<23'),'Q3(iv) must retain strict prime bounds');
+assert(normalized(m.rows[3].sourceEnglish).includes('divisorof18'),'Q3(iv) must retain the divisor condition');
 const eq=(a,b)=>a.length===b.length&&a.every(x=>b.includes(x));
 const a=['a','e','i','o','u'],b=[...'VOWEL'],c=[2,3,4,5],d=[2,3,4],
  x=[...'LIFE'],y=['F','I','L','E'],g=Array.from({length:19},(_,i)=>i+4).filter(n=>n>3&&n<23&&n>1&&!Array.from({length:Math.floor(Math.sqrt(n))-1},(_,i)=>i+2).some(k=>n%k===0)),
