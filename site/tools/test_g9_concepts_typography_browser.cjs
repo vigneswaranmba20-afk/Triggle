@@ -12,8 +12,8 @@ for(const width of [320,360,393,430]){await page.setViewportSize({width,height:8
 for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
  await page.goto(app.base+'/index.html?class=9&chapter=g9-ch'+chapter+'&section=concepts');await page.locator(lang==='en'?'#langEn':'#langTa').click();
  const nav=await page.locator('.sp2-nav [data-index]').count();
- if(chapter===1||chapter===2){
-  assert.equal(nav,chapter===1?7:8,'All chapter concepts remain available on the index');
+ if([1,2,9].includes(chapter)){
+  assert.equal(nav,chapter===1?7:chapter===2?8:5,'All chapter concepts remain available on the index');
   assert.equal(await page.locator('.hub-header').isVisible(),false,'No repeated chapter title above concepts');
   assert.equal(await page.locator('.hub-back-menu').isVisible(),true,'One Back to chapter on the index');
   assert.equal(await page.locator('.sp2-progress:visible').count(),0,'No progress counter pushing down mathematics');
@@ -31,10 +31,10 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
  }
  for(let index=0;index<Math.max(nav,1);index++){
   if(nav){
-   if((chapter===1||chapter===2) && await page.locator('[data-detail-view]').isVisible())
+   if([1,2,9].includes(chapter) && await page.locator('[data-detail-view]').isVisible())
      await page.locator('[data-back-index]').click();
    await page.locator('.sp2-nav [data-index]').nth(index).click();
-   if(chapter===1||chapter===2){
+   if([1,2,9].includes(chapter)){
      assert.equal(await page.locator('[data-detail-view]').isVisible(),true);
      assert.equal(await page.locator('[data-index-view]').isVisible(),false);
      assert.equal(new URL(page.url()).searchParams.get('concept'),String(index),'Lesson deep link identifies the selected idea');
