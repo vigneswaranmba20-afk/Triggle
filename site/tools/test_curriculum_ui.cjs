@@ -492,6 +492,8 @@ async function main() {
           ['concepts','exercises','quizzes','activities']);
         assert.equal(await page.locator('[data-hub-section="examples"]').count(),0);
         await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+        assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+        await page.locator('.hub-exercise-link').first().click();
         assert.match(await page.locator('#questionHead').innerText(),/Exercise/);
         assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
         await page.locator('#crumb .crumb-link').nth(1).click();
@@ -499,6 +501,8 @@ async function main() {
         assert.equal(await page.locator('#pathOptions .path-option').count(),9);
         await page.locator('#pathClose').click();
         await page.goBack();
+        assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+        await page.locator('.hub-back-menu').click();
         assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
         await page.locator('.hub-section-card[data-hub-section="activities"]').click();
         assert.equal(await page.locator('.textbook-extra').count(),18);
@@ -583,14 +587,18 @@ async function main() {
       await page.locator('[data-back-index]').click();
       await page.locator('.hub-back-menu').click();
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+      await page.locator('.hub-exercise-link[data-exercise="1.1"]').click();
       assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i',
-        'Exercises must open Exercise 1.1 Q1(i) without a practice-list page');
+        'Choosing Exercise 1.1 opens its first textbook question');
       assert.equal(await page.locator('#lessonCard').isVisible(),true);
       assert.equal(await page.locator('.hub-question').count(),0,
         'No All questions filter or Original Triggle practice cards before Q1');
       assert.equal(await page.evaluate(()=>window.TRIGGLE_CLASSES[9].items.some(q=>q.id==='c9-1-1-practice-1')),true,
         'Previously stored practice must not be deleted from the data');
       assert.equal(await page.locator('#questionReturn').isVisible(),false,'No redundant question return row');
+      await page.goBack();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
       await page.goBack();
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
       assert.equal(new URL(page.url()).searchParams.has('section'),false);
@@ -675,9 +683,13 @@ async function main() {
       assert.match(await page.locator('.hub-section-menu h3').innerText(),/ஒரு பகுதியைத்/);
       assert.equal(await page.locator('.class-dock').isVisible(),false);
       await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+      await page.locator('.hub-exercise-link[data-exercise="1.1"]').click();
       assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q1-i',
-        'Tamil Exercises opens the actual first textbook question directly');
+        'Tamil exercise-number index opens the first textbook question');
       assert.match(await sourceText(page.locator('#questionText')),/1\. பின்வருவனவற்றில்/);
+      await page.goBack();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
       await page.goBack();
       assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1',
         'Back from an exercise must return to the chapter choices');
@@ -695,10 +707,14 @@ async function main() {
        assert.equal(await page.locator('.hub-section-card').count(),3);
        assert.equal(await page.locator('[data-hub-section="examples"]').count(),0);
        await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+      await page.locator('.hub-exercise-link').first().click();
        assert.equal(new URL(page.url()).searchParams.has('question'),true);
        assert.match(await page.locator('#questionHead').innerText(),/Exercise 6\.1/);
        assert.ok((await page.locator('#stepsList li').count())>0,'Full exercise working remains');
        await page.goBack();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+      await page.goBack();
        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch6');
        assert.equal(await page.locator('.hub-section-card').count(),3);
        await page.locator('.hub-back-class').click();
@@ -776,6 +792,8 @@ async function main() {
        });
        assert.ok(order,'Optional search stays below chapter navigation');
        await page.locator('#exerciseList [data-section="exercises"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+      await page.locator('.hub-exercise-link').first().click();
        assert.match(await page.locator('#questionHead').innerText(),/Exercise/);
        assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
        await noOverflow(page,'mobile chapter-first drawer');
@@ -786,7 +804,10 @@ async function main() {
     }
     await check('Real Numbers full exercises, concepts and quizzes show correct counts',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch2&section=exercises');
-      assert.equal(await page.locator('.hub-question').count(),120,'Only the 120 authored textbook exercise units, no original practice');
+      assert.equal(await page.locator('.hub-question').count(),0,'Exercise index shows only exercise groups');
+      assert.ok(await page.locator('.hub-exercise-link').count()>0,'Numbered exercises are listed');
+      const sourceCount=await page.evaluate(()=>{const ch=window.TRIGGLE_CURRICULUM.grades.find(g=>g.grade===9).chapters.find(c=>c.id==='g9-ch2');const ids=new Set([...(ch.legacyQuestionIds||[]),...(ch.textbookQuestionIds||[])]);return window.TriggleChapterHub.textbookExercises(window.TRIGGLE_CLASSES[9].items.filter(q=>ids.has(q.id))).length});
+      assert.equal(sourceCount,120,'Original 120 available textbook parts retained in source');
       assert.equal(await page.locator('.hub-question-group h4').filter({hasText:'Original Triggle practice'}).count(),0,
         'Original Triggle practice is never mixed into textbook Exercises');
       await page.locator('.hub-back-menu').click();
@@ -1002,6 +1023,7 @@ async function main() {
         await selectChapter(page, 'g9-ch6');
         assert.equal(await page.locator('.hub-section-card[data-hub-section="examples"]').count(),0);
         await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+        await page.locator('.hub-exercise-link').first().click();
         assert.match(await page.locator('#questionHead').innerText(),/(?:Exercise|பயிற்சி) 6\.1/);
         assert.equal(await page.locator('#lessonCard').isVisible(), true);
         await noOverflow(page, `${width}px exercise from chapter`);
@@ -1250,9 +1272,11 @@ async function main() {
     for(const width of [320,390]){
       await check('Grade 9 Exercise 1.1 bilingual textbook questions work at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch1&section=exercises');
-        const cards=page.locator('#chapterOverview [data-question-id^="g9-ch1-ex1.1-"]');
-        assert.equal(await cards.count(),30,'All 30 source-matched textbook subparts must appear in Exercises');
-        await page.locator('#chapterOverview [data-question-id="g9-ch1-ex1.1-q1-i"]').click();
+        const cards=page.locator('#chapterOverview .hub-exercise-link[data-exercise="1.1"]');
+        assert.equal(await cards.count(),1,'Exercise 1.1 appears once in the index');
+        const available=await page.evaluate(()=>window.TRIGGLE_CLASSES[9].items.filter(q=>q.exercise==='1.1'&&q.kind!=='practice'&&q.id.startsWith('g9-ch1-')).length);
+        assert.equal(available,30,'All 30 textbook subparts remain in data');
+        await cards.click();
         assert.match(await sourceText(page.locator('#questionText')),/1\. Which of the following are sets\?\s*\(i\) The collection of prime numbers upto 100\./,'Display the original 2025 English textbook question, including its unmodified spelling');
         assert.equal(await page.locator('#stepsList li').count(),4);
         assert.match(await sourceText(page.locator('#answerText')),/set/i);
