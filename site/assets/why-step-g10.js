@@ -122,6 +122,31 @@ function mount(event){
     window.TriggleNotation.prepare?.(formula);
   }
   if(hint.diagram){const picture=visual(hint.diagram,lang);if(picture)panel.append(picture);}
+  // One opt-in transfer check inside the existing explanation; no progress tracking,
+  // extra page, score, modal or new always-visible control.
+  const check=hint.transfer;
+  if(check&&Array.isArray(check.choices)&&check.choices.length===3&&Number.isInteger(check.correct)&&check.correct>=0&&check.correct<3){
+    const quiz=make('section','why-step-transfer');
+    quiz.setAttribute('aria-label',lang==='ta'?'புரிதலைச் சரிபார்க்கவும்':'Check understanding');
+    const heading=make('p','why-step-transfer-heading',lang==='ta'?'இன்னொரு எண்ணில் முயற்சி செய்யுங்கள்':'Try the idea with new numbers');
+    const prompt=make('p','why-step-transfer-prompt',(lang==='ta'&&check.prompt?.ta)||check.prompt?.en);
+    const options=make('div','why-step-transfer-options'),message=make('p','why-step-transfer-feedback');
+    message.setAttribute('role','status');message.setAttribute('aria-live','polite');
+    const buttons=[];
+    check.choices.forEach((choice,i)=>{
+      const button=make('button','why-step-transfer-choice',(lang==='ta'&&choice.ta)||choice.en);
+      button.type='button';button.setAttribute('aria-pressed','false');
+      button.addEventListener('click',()=>{
+        buttons.forEach(b=>b.setAttribute('aria-pressed','false'));
+        button.setAttribute('aria-pressed','true');
+        const correct=i===check.correct;
+        message.dataset.result=correct?'correct':'retry';
+        message.textContent=(lang==='ta'&& (correct?check.success?.ta:check.wrong?.ta))||(correct?check.success?.en:check.wrong?.en)||'';
+      });
+      buttons.push(button);options.append(button);
+    });
+    quiz.append(heading,prompt,options,message);panel.append(quiz);
+  }
   details.append(summary,panel);body.append(details);
  }
 }
