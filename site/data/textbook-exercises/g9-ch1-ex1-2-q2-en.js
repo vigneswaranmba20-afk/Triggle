@@ -103,10 +103,10 @@ const entries=[
       },
       {
         "en": "For a fixed point P = (a, b), each whole-number slope m = 0, 1, 2, … gives a line y − b = m(x − a) through P. Different slopes give different lines, so even this small selection of directions never runs out.",
-        "eq": "Different slopes give different lines",
+        "eq": "y−b=m(x−a), m=0,1,2,…",
         "math": {
-          "latex": "m_1\\ne m_2\\ \\Rightarrow\\ \\ell_{m_1}\\ne\\ell_{m_2}",
-          "fallback": "Different slopes give different lines",
+          "latex": "y-b=m(x-a),\\quad m=0,1,2,\\ldots",
+          "fallback": "y−b=m(x−a), m=0,1,2,…",
           "display": true
         }
       },
