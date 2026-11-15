@@ -436,6 +436,17 @@
    return;
   }
   const all=current.steps||[];const ul=$('stepsList');ul.replaceChildren();
+  // TRACE teaching bridge: begin with meaning, without changing textbook
+  // exercise data, authored steps or strict mathematical source checksums.
+  const teacherBridge=window.TriggleG10Ch2Bridge?.get?.(current,lang);
+  if(teacherBridge){
+   const intro=document.createElement('li');intro.className='g10ch2-teaching-bridge';
+   const title=document.createElement('strong');title.textContent=teacherBridge.title;
+   const p=document.createElement('p');p.textContent=teacherBridge.explain;
+   const formula=document.createElement('div');formula.className='g10ch2-bridge-math';
+   formula.innerHTML=math(teacherBridge.math);
+   intro.append(title,p,formula);ul.append(intro);
+  }
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
   const grade9Answer=window.TriggleG9Math?.get(current)?.answerMath;

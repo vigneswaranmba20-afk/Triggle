@@ -580,8 +580,8 @@ const additional={
   "c10-2-ex2-1-q8": {
     "step": 1,
     "expected": "Work backwards to express the remainder 4 in terms of 3",
-    "en": "Euclid's algorithm first finds the HCF. Work backwards, replacing each remainder by the subtraction that produced it, to express the HCF with the original numbers.",
-    "ta": "யூக்ளிடின் முறையில் முதலில் மீ.பொ.வ. கிடைக்கும். பின்னோக்கிச் செல்லும்போது ஒவ்வொரு மீதியையும் அதனை உருவாக்கிய கழித்தலால் மாற்றி ஆரம்ப எண்களால் எழுதலாம்."
+    "en": "Start with the goal: 32×2 = 64, and 64−60 = 4. So the HCF can be written 4 = 32×2 + 60×(−1). The textbook works backwards because this systematic approach also succeeds when the numbers are too large to spot a shortcut: substitute each earlier remainder until only 32 and 60 remain.",
+    "ta": "முதலில் நோக்கத்தைப் பாருங்கள்: 32×2 = 64; 64−60 = 4. எனவே 4 = 32×2 + 60×(−1). பெரிய எண்களுக்கு இந்த எளிய கழித்தலை உடனே காண முடியாது. அதனால்தான் வகுத்தலில் கிடைத்த மீதிகளை முந்தைய கணக்குகளால் மாற்றிப் பின்னோக்கிச் செல்கிறோம். இறுதியில் 32, 60 மட்டும் இருக்கும்."
   },
   "c10-2-ex2-1-q9": {
     "step": 1,
