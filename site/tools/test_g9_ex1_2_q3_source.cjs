@@ -9,6 +9,10 @@ assert.equal(m.evidence.english.printedPage,12);assert.equal(m.evidence.english.
 assert.equal(m.evidence.tamil.printedPage,13);assert.equal(m.evidence.tamil.pdfPage,19);
 assert.equal(m.review.tamilEditorial,'deferred');assert.equal(m.review.teacherReview,'deferred');
 assert.equal(m.review.studentRegistration,'not registered');assert.equal(m.review.sourceFigures,'none');
+assert.equal(m.evidence.english.answerKey.printedPage,305);
+assert.equal(m.evidence.english.answerKey.textLayerChecked,true,'Inherited English answer-key text transcription must remain explicit');
+assert.equal(m.evidence.english.answerKey.pageImageChecked,false,'Do not claim unverified answer-key page-image evidence');
+assert.deepEqual(m.evidence.english.answerKey.answers,m.rows.map(x=>x.classification),'Four staged classifications must match the inherited 2025 answer-key transcription');
 assert.equal(m.rows.length,4);assert.equal(new Set(m.rows.map(x=>x.id)).size,4);
 assert.deepEqual(m.rows.map(x=>x.classification),['Equivalent sets','Unequal sets','Equal sets','Equivalent sets']);
 const html=read('site/index.html'),sw=read('site/service-worker.js');
