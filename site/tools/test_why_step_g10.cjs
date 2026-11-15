@@ -8,7 +8,7 @@ for(const file of scripts)vm.runInContext(read(file),context,{filename:file,time
 const lessons=new Map(context.window.TRIGGLE_CLASSES[10].items.map(item=>[item.id,item]));
 const hints=context.window.TriggleWhyStepG10.hints,ids=Object.keys(hints);
 assert.ok(lessons.size>=136,'Grade 10 baseline authored catalogue');
-assert.equal(ids.length,137,'One additional source-matched Q8 explanation; existing Grade 10 coverage preserved');
+assert.equal(ids.length,145,'Eight source-bound Exercise 2.3 bridges plus the reviewed Grade 10 baseline');
 const pages=['data/why-step-g10.js','data/why-step-g10-coverage.js','assets/why-step-g10.js','assets/why-step-g10.css'];
 for(const asset of pages){assert.ok(html.includes('./'+asset),'HTML missing '+asset);assert.ok(sw.includes('./'+asset),'Offline cache missing '+asset);}
 assert.ok(html.indexOf('data/why-step-g10.js')<html.indexOf('data/why-step-g10-coverage.js'),'Base must load before extension');
@@ -76,6 +76,10 @@ for(const [id,expected] of Object.entries(checks)){
   assert(check.choices.every(v=>v[lang]?.length>0),'Option translation missing '+id+' '+lang);
  }
 }
+const ex23Hints=Object.keys(hints).filter(id=>/^c10-2-ex2-3-(?:q1-(?:ii|iii|iv|v)|q2|q3|q4|q8)$/.test(id));
+assert.equal(ex23Hints.length,8,'Only eight source-specific bridges for cognitively difficult modular tasks');
+assert.equal(hints['c10-2-ex2-3-q1-iv'].step,0,'Clarify integer interpretation of textbook fraction');
+assert.ok(hints['c10-2-ex2-3-q4'].en.includes('3 × 4'),'Bridge modular inverse concretely');
 assert.equal(4n**7n%10n,4n,'Last-digit cycle check');
 assert.equal((a=>{let b=360;while(b){const t=a%b;a=b;b=t;}return a;})(240),120,'HCF scaling check');
 assert.equal((a=>{let b=18;while(b){const t=a%b;a=b;b=t;}return a;})(24),6,'Prime exponent HCF check');
