@@ -354,6 +354,46 @@ const entries=[
     "traceStatus": "source-text-checked; arithmetic independently tested where numeric"
   },
   {
+    "id": "c10-2-ex2-5-q7",
+    "classNum": 10,
+    "chapter": "2",
+    "exercise": "2.5",
+    "topic": {
+      "en": "Numbers and Sequences"
+    },
+    "label": {
+      "en": "Exercise 2.5 · Q7",
+      "ta": "Exercise 2.5 · Q7 (English only; Tamil pending)"
+    },
+    "title": {
+      "en": "Find and explain the reason"
+    },
+    "q": {
+      "en": "If nine times the 9th term of an A.P. equals fifteen times its 15th term, show that six times the 24th term is zero."
+    },
+    "steps": [
+      {
+        "en": "Write the 9th and 15th terms using the first term a and difference d.",
+        "eq": "9(a+8d)=15(a+14d)"
+      },
+      {
+        "en": "Rearrange: 9a+72d=15a+210d, so 6a+138d=0.",
+        "eq": "a+23d=0"
+      },
+      {
+        "en": "But the 24th term is a+23d, so it is zero.",
+        "eq": "6t₂₄=6(a+23d)=0"
+      }
+    ],
+    "answer": "6t₂₄ = 0.",
+    "kind": "textbook",
+    "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+    "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.5 Q7; printed p. 62, PDF p. 68. English source text and derivation checked.",
+    "edition": "2025",
+    "translationReview": "pending",
+    "traceStatus": "source-text-checked; exact algebra verified"
+  },
+  {
     "id": "c10-2-ex2-5-q9",
     "classNum": 10,
     "chapter": "2",
@@ -810,6 +850,50 @@ const entries=[
     "traceStatus": "source-text-checked; arithmetic independently tested where numeric"
   },
   {
+    "id": "c10-2-ex2-6-q7",
+    "classNum": 10,
+    "chapter": "2",
+    "exercise": "2.6",
+    "topic": {
+      "en": "Numbers and Sequences"
+    },
+    "label": {
+      "en": "Exercise 2.6 · Q7",
+      "ta": "Exercise 2.6 · Q7 (English only; Tamil pending)"
+    },
+    "title": {
+      "en": "Find and explain the reason"
+    },
+    "q": {
+      "en": "Find the sum of all natural numbers between 602 and 902 which are not divisible by 4."
+    },
+    "steps": [
+      {
+        "en": "The integers strictly between 602 and 902 are 603 to 901.",
+        "eq": "Number of integers = 901−603+1 = 299"
+      },
+      {
+        "en": "Their total is the sum of an A.P. with first term 603 and last term 901.",
+        "eq": "(603+901)×299/2 = 224,848"
+      },
+      {
+        "en": "The multiples of four in this interval are 604, 608, …, 900, a sequence of 75 terms.",
+        "eq": "(604+900)×75/2 = 56,400"
+      },
+      {
+        "en": "Subtract all multiples of four from the total.",
+        "eq": "224,848−56,400 = 168,448"
+      }
+    ],
+    "answer": "168,448.",
+    "kind": "textbook",
+    "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+    "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.6 Q7; printed p. 67, PDF p. 73. English source text and derivation checked.",
+    "edition": "2025",
+    "translationReview": "pending",
+    "traceStatus": "source-text-checked; exact algebra verified"
+  },
+  {
     "id": "c10-2-ex2-6-q8",
     "classNum": 10,
     "chapter": "2",
@@ -1228,6 +1312,46 @@ const entries=[
     "edition": "2025",
     "translationReview": "pending",
     "traceStatus": "source-text-checked; arithmetic independently tested where numeric"
+  },
+  {
+    "id": "c10-2-ex2-7-q8",
+    "classNum": 10,
+    "chapter": "2",
+    "exercise": "2.7",
+    "topic": {
+      "en": "Numbers and Sequences"
+    },
+    "label": {
+      "en": "Exercise 2.7 · Q8",
+      "ta": "Exercise 2.7 · Q8 (English only; Tamil pending)"
+    },
+    "title": {
+      "en": "Find and explain the reason"
+    },
+    "q": {
+      "en": "If a, b, c are in arithmetic progression, show that 3ᵃ, 3ᵇ, 3ᶜ are in geometric progression."
+    },
+    "steps": [
+      {
+        "en": "For three terms in A.P., the middle term is the average of its neighbours.",
+        "eq": "2b = a+c"
+      },
+      {
+        "en": "Raise 3 to both sides, then separate the product of powers.",
+        "eq": "3²ᵇ = 3ᵃ⁺ᶜ = 3ᵃ × 3ᶜ"
+      },
+      {
+        "en": "The middle term squared equals the product of the extremes; this is a defining G.P. property.",
+        "eq": "(3ᵇ)² = 3ᵃ × 3ᶜ"
+      }
+    ],
+    "answer": "3ᵃ, 3ᵇ, 3ᶜ form a G.P.",
+    "kind": "textbook",
+    "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+    "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.7 Q8; printed p. 73, PDF p. 79. English source text and derivation checked.",
+    "edition": "2025",
+    "translationReview": "pending",
+    "traceStatus": "source-text-checked; exact algebra verified"
   },
   {
     "id": "c10-2-ex2-7-q11",
@@ -2142,6 +2266,46 @@ const entries=[
     "edition": "2025",
     "translationReview": "pending",
     "traceStatus": "source-text-checked; arithmetic independently tested where numeric"
+  },
+  {
+    "id": "c10-2-ex2-10-q12",
+    "classNum": 10,
+    "chapter": "2",
+    "exercise": "2.10",
+    "topic": {
+      "en": "Numbers and Sequences"
+    },
+    "label": {
+      "en": "Exercise 2.10 · Q12",
+      "ta": "Exercise 2.10 · Q12 (English only; Tamil pending)"
+    },
+    "title": {
+      "en": "Find and explain the reason"
+    },
+    "q": {
+      "en": "Let A = 2⁶⁵ and B = 2⁶⁴ + 2⁶³ + 2⁶² + … + 2⁰. Which is larger and by how much?"
+    },
+    "steps": [
+      {
+        "en": "B is a finite geometric series with first term 1 and powers through 64.",
+        "eq": "B = 1+2+4+…+2⁶⁴"
+      },
+      {
+        "en": "Use the finite G.P. sum formula with n=65, a=1 and r=2.",
+        "eq": "B = (2⁶⁵−1)/(2−1) = 2⁶⁵−1"
+      },
+      {
+        "en": "A is therefore one more than B.",
+        "eq": "A−B = 2⁶⁵−(2⁶⁵−1)=1"
+      }
+    ],
+    "answer": "A is larger than B by 1 (option D).",
+    "kind": "textbook",
+    "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+    "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.10 Q12; printed p. 83, PDF p. 89. English source text and derivation checked.",
+    "edition": "2025",
+    "translationReview": "pending",
+    "traceStatus": "source-text-checked; exact algebra verified"
   },
   {
     "id": "c10-2-ex2-10-q14",
