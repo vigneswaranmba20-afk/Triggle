@@ -17,7 +17,7 @@ check('q1-iv',Array.from({length:10},(_,i)=>i-5).length===10,'integer interval')
 check('q1-v',JSON.stringify(Array.from({length:25},(_,i)=>1882+i).filter(y=>y%4===0&&(y%100!==0||y%400===0)))==='[1884,1888,1892,1896,1904]','Gregorian leap-year rule');
 check('q2-i',new Set(['district-A','district-B','district-C']).size===3,'finite administrative roster illustration; no unverified current district count');
 check('q2-ii',new Set(Array.from({length:1000},(_,i)=>i/1000)).size===1000,'arbitrarily many distinct slopes');
-check('q2-iii',Array.from({length:1000},(_,i)=>-i).every(x=>x<5),'unbounded integers below five');
+check('q2-iii',Array.from({length:1000},(_,i)=>4-i).every(x=>Number.isInteger(x)&&x<5&&Number.isInteger(x-1)&&x-1<5)&&4<5,'constructive infinite descending integer sequence; each member has a distinct smaller member');
 check('q2-iv',[2,3].every(x=>x*x-5*x+6===0)&&[1,4].every(x=>x*x-5*x+6!==0),'factor roots and exclusions');
 check('q3-i',new Set('aeiou').size===new Set('VOWEL').size&&!equal(new Set('aeiou'),new Set('VOWEL')),'five vowels versus five different letters: equivalent, not equal');
 check('q3-ii',!equal(new Set([2,3,4,5]),new Set([2,3,4])),'different membership');
