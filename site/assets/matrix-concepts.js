@@ -31,20 +31,31 @@
   const dot=(p,label,kind='primary')=>{const [x,y]=xy(p);return '<circle cx="'+x+'" cy="'+y+'" r="5" class="mc-dot-'+kind+'"/><text x="'+(x+8)+'" y="'+(y-9)+'">'+esc(label)+'</text>';};
   const segment=(p,q,cls)=>{const a=xy(p),b=xy(q);return '<path d="M'+a.join(' ')+'L'+b.join(' ')+'" class="'+cls+'"/>';};
   function mount(container,opts={}) {
-    const root=document.createElement('section');root.className='matrix-concepts';root.setAttribute('aria-label','Explore matrices and determinants');container.append(root);
+    const root=document.createElement('section');root.className='matrix-concepts';root.dataset.view='index';root.setAttribute('aria-label','Explore matrices and determinants');container.append(root);
     let saved={};try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch{}
     const states=Array.from({length:scenes.length},(_,i)=>saved.scenes?.[i]&&typeof saved.scenes[i]==='object'?saved.scenes[i]:{});
-    let active=Number.isInteger(opts.initialConcept)&&opts.initialConcept>=0&&opts.initialConcept<scenes.length?opts.initialConcept:Number.isInteger(saved.active)&&saved.active>=0&&saved.active<scenes.length?saved.active:0;
+    let active=Number.isInteger(opts.initialConcept)&&opts.initialConcept>=0&&opts.initialConcept<scenes.length?opts.initialConcept:0;
     const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify({active,scenes:states}));}catch{}};
     const set=(key,val)=>{states[active][key]=val;persist();};
     const setting=(key,fallback,allowed)=>allowed.includes(states[active][key])?states[active][key]:fallback;
-    root.innerHTML='<div class="mc-top"><span data-position></span><button type="button" data-index-toggle aria-expanded="false" aria-controls="mc-index">Find a concept ↓</button></div><nav id="mc-index" class="mc-index" aria-label="Chapter concept index" hidden>'+scenes.map((s,i)=>'<button type="button" data-scene="'+i+'"><span>'+String(i+1).padStart(2,'0')+'</span> '+esc(s.title)+'<small>§'+s.section+'</small></button>').join('')+'</nav><article data-scene-panel></article><nav class="mc-navigation" aria-label="Concept navigation"><button type="button" data-prev>← Back</button><button type="button" data-next>Next →</button></nav><div class="mc-end"><button type="button" data-exercises>Open chapter exercises ↗</button><span>Original Triggle explorations · English</span></div>';
+    root.innerHTML='<div class="sp2-index-view" data-index-view><nav id="mc-index" class="mc-index" aria-label="Choose a matrix concept">'+scenes.map((s,i)=>'<button type="button" data-scene="'+i+'"><span>'+String(i+1).padStart(2,'0')+'</span> '+esc(s.title)+'</button>').join('')+'</nav></div>'+
+      '<div class="sp2-detail-view" data-detail-view hidden><div class="sp2-detail-navigation">'+
+      '<button type="button" class="sp2-back-index" data-index-toggle>← Back to concepts</button></div>'+
+      '<article data-scene-panel></article><nav class="mc-navigation" data-adaptive-dock aria-label="Concept navigation">'+
+      '<button type="button" data-prev>← Previous idea</button><button type="button" data-next>Next idea →</button></nav>'+
+      '<div class="mc-end"><button type="button" data-exercises>Practise chapter exercises ↗</button></div></div>';
     const panel=root.querySelector('[data-scene-panel]'),index=root.querySelector('#mc-index'),indexButton=root.querySelector('[data-index-toggle]');
-    indexButton.onclick=()=>{index.hidden=!index.hidden;indexButton.setAttribute('aria-expanded',String(!index.hidden));};
+    const indexView=root.querySelector('[data-index-view]'),detailView=root.querySelector('[data-detail-view]');
+    indexButton.onclick=()=>showIndex(true);
     root.querySelectorAll('[data-scene]').forEach(b=>b.onclick=()=>show(+b.dataset.scene,true));
     root.querySelector('[data-prev]').onclick=()=>show(active-1,true);
-    root.querySelector('[data-next]').onclick=()=>active===scenes.length-1?opts.onExercises?.():show(active+1,true);
+    root.querySelector('[data-next]').onclick=()=>active===scenes.length-1?showIndex(true):show(active+1,true);
     root.querySelector('[data-exercises]').onclick=()=>opts.onExercises?.();
+    function showIndex(focus=false,notify=true){
+      root.dataset.view='index';indexView.hidden=false;detailView.hidden=true;
+      if(notify)opts.onConcept?.(null,true);
+      if(focus){index.querySelector('button')?.focus({preventScroll:true});root.scrollIntoView({block:'start',behavior:'auto'});}
+    }
     function exerciseLink(exercise){
       const available=opts.availableExercises?.includes(exercise),b=root.querySelector('[data-exercises]');
       b.textContent=available?'Practise Exercise '+exercise+' ↗':'Open chapter exercises ↗';
@@ -60,11 +71,11 @@
     const result=html=>{panel.querySelector('[data-result]').innerHTML=html;};
     const takeaway=text=>{panel.querySelector('[data-takeaway]').textContent=text;};
     function show(i,navigate=false){
-      if(i<0||i>=scenes.length)return;active=i;persist();index.hidden=true;indexButton.setAttribute('aria-expanded','false');
-      opts.onConcept?.(i,!navigate);const s=scenes[i];root.querySelector('[data-position]').textContent='Explore '+(i+1)+' / '+scenes.length;
+      if(i<0||i>=scenes.length)return;active=i;persist();root.dataset.view='lesson';indexView.hidden=true;detailView.hidden=false;
+      opts.onConcept?.(i,!navigate);const s=scenes[i];
       root.querySelectorAll('[data-scene]').forEach((b,j)=>b.setAttribute('aria-current',j===i?'step':'false'));
-      root.querySelector('[data-prev]').disabled=i===0;root.querySelector('[data-next]').textContent=i===scenes.length-1?'Try exercises ↗':'Next →';
-      panel.innerHTML='<header class="mc-scene-heading"><p>§'+esc(s.section)+' · '+esc(s.title)+'</p><h3 tabindex="-1">'+esc(s.question)+'</h3></header><div class="mc-stage"><div class="mc-visual" data-visual></div><div class="mc-controls" data-controls></div><div class="mc-result" data-result role="status" aria-live="polite" aria-atomic="true"></div></div><p class="mc-takeaway" data-takeaway></p><div class="mc-secondary"><button type="button" data-proof>Understand deeper</button><button type="button" data-check-toggle aria-expanded="false">Predict & check</button></div><div class="mc-check" data-check hidden><p>'+esc(s.check)+'</p><div>'+s.options.map((o,j)=>'<button type="button" data-answer="'+j+'">'+esc(o)+'</button>').join('')+'</div><p data-feedback role="status"></p><button type="button" data-reason>Reveal the reasoning</button></div>';
+      root.querySelector('[data-prev]').disabled=i===0;root.querySelector('[data-next]').textContent=i===scenes.length-1?'Back to concepts →':'Next idea →';
+      panel.innerHTML='<header class="mc-scene-heading"><h3 tabindex="-1">'+esc(s.question)+'</h3></header><div class="mc-stage"><div class="mc-visual" data-visual></div><div class="mc-controls" data-controls></div><div class="mc-result" data-result role="status" aria-live="polite" aria-atomic="true"></div></div><p class="mc-takeaway" data-takeaway></p><div class="mc-secondary"><button type="button" data-proof>Understand deeper</button><button type="button" data-check-toggle aria-expanded="false">Predict & check</button></div><div class="mc-check" data-check hidden><p>'+esc(s.check)+'</p><div>'+s.options.map((o,j)=>'<button type="button" data-answer="'+j+'">'+esc(o)+'</button>').join('')+'</div><p data-feedback role="status"></p><button type="button" data-reason>Reveal the reasoning</button></div>';
       panel.querySelector('[data-check-toggle]').onclick=e=>{const el=panel.querySelector('[data-check]');el.hidden=!el.hidden;e.target.setAttribute('aria-expanded',String(!el.hidden));};
       panel.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{set('prediction',+b.dataset.answer);panel.querySelector('[data-feedback]').textContent=s.feedback[+b.dataset.answer];b.setAttribute('aria-pressed','true');panel.querySelectorAll('[data-answer]').forEach(other=>{if(other!==b)other.setAttribute('aria-pressed','false');});});
       panel.querySelector('[data-reason]').onclick=()=>{panel.querySelector('[data-feedback]').textContent=s.feedback[s.answer];};
@@ -206,7 +217,9 @@
         takeaway(homogeneous==='yes'?'AX = 0 is always consistent. Nonzero solutions exist exactly when ρ(A) < n.':'Equal ranks decide existence. Comparing their common rank with n decides uniqueness.');
       }draw();
     }
-    show(active);
+    if(Number.isInteger(opts.initialConcept)&&opts.initialConcept>=0&&opts.initialConcept<scenes.length)
+      show(opts.initialConcept);
+    else showIndex(false,false);
     return root;
   }
   window.TriggleMatrixConcepts=Object.freeze({scenes,mount});
