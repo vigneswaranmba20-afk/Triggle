@@ -22,6 +22,7 @@ function light(hex){
 const contrast=(a,b)=>(Math.max(light(a),light(b))+.05)/(Math.min(light(a),light(b))+.05);
 for(const [name,a,b,min] of [
  ['reading ink',C.graphite,C.ivory,4.5],
+ ['header navigation ink',C.graphite,C.white,4.5],
  ['white on primary',C.white,C.graphite,4.5],
  ['muted on paper',C.muted,C.white,4.5],
  ['brass on graphite',C.brass,C.graphite,4.5],
@@ -33,11 +34,19 @@ for(const [name,a,b,min] of [
 }
 const b=html.indexOf('assets/bond-light.css');
 assert.ok(b>html.indexOf('assets/paper-indigo.css')&&b<html.indexOf('</head>'),'Bond layer must load last');
-assert.match(html,/assets\/bond-light\.css\?v=bond-light-20261115-1/,'Versioned theme link');
+assert.match(html,/assets\/bond-light\.css\?v=bond-light-20261115-2/,'Versioned theme link');
 assert.match(sw,/'\.\/assets\/bond-light\.css'/,'Android offline theme cache');
-assert.match(sw,/bond-light-20261115-1/,'Versioned PWA cache');
+assert.match(sw,/bond-light-20261115-2/,'Versioned PWA cache');
 assert.equal(manifest.background_color,C.ivory,'Android launch surface matches reading page');
-assert.equal(manifest.theme_color,C.graphite,'Android browser chrome matches header');
+assert.equal(manifest.theme_color,C.white,'Android browser chrome matches white header');
+assert.match(html,/<meta name="theme-color" content="#FFFFFF">/,'Browser chrome matches white header');
+assert.match(css,/\.appbar\s*\{\s*background:\s*var\(--bond-white\)/,'Shared header must be white');
+assert.match(css,/\.appbar \.lang-switch\s*\{\s*background:\s*var\(--bond-tint\)/,'Language toggle must be light');
+assert.match(css,/\.appbar \.browse-button/,'Exercises navigation themed');
+assert.match(css,/\.appbar \.basics-link/,'Home navigation themed');
+assert.match(css,/\.hub-exercise-link/,'Exercise 2.1 / 2.2 index themed');
+assert.match(css,/\.discover-class-header h1/,'Grade 10 Relations and Functions directory themed');
+assert.match(css,/\.chapter-overview h2/,'Chapter pages themed');
 assert.doesNotMatch(css,/@import\b|url\(/,'No remote style/font/image downloads');
 assert.doesNotMatch(css,/\b(?:font-size|line-height|position\s*:|grid-template-columns|display\s*:|overflow\s*:|transform\s*:)/,'Color layer may not move, hide or resize lessons');
 assert.match(css,/forced-colors:\s*active/,'Respect high contrast preferences');
@@ -46,4 +55,4 @@ assert.match(css,/\.hub-section-card/,'Chapter index styled');
 assert.match(css,/\.matrix-concepts/,'Grade 12 concepts styled');
 assert.match(css,/\.sp2-journey-footer/,'Concept navigation styled');
 assert.match(css,/Mathematics plot colors/,'Graph diagrams remain distinct');
-console.log('PASS Midnight Precision palette: six contrast pairs, mobile PWA, all-grade source contract');
+console.log('PASS Midnight Precision palette: seven contrast pairs, mobile PWA, all-grade source contract');
