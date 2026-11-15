@@ -1,0 +1,218 @@
+/*
+ * VER Triggle | Midnight Precision (Bond-inspired light learning)
+ * 2026-11-15. Loaded after paper-indigo.css, intentionally reversible.
+ *
+ * No fonts, images, imports or animations. Retains all maths and diagrams.
+ * Gold is decorative only: it must not carry small-text contrast on white.
+ */
+:root {
+  color-scheme: light;
+  --bond-graphite: #181B20;
+  --bond-charcoal: #24282E;
+  --bond-brass: #B79253;
+  --bond-burgundy: #6E2933;
+  --bond-ivory: #F7F6F2;
+  --bond-white: #FFFFFF;
+  --bond-emerald: #166353;
+  --bond-muted: #525B62;
+  --bond-border: #D7D4CC;
+  --bond-tint: #F3F0E9;
+  --bond-selection: #F6EDE7;
+  --bg: var(--bond-ivory);
+  --card: var(--bond-white);
+  --ink: var(--bond-graphite);
+  --muted: var(--bond-muted);
+  --violet: var(--bond-graphite);
+  --deep: var(--bond-graphite);
+  --border: var(--bond-border);
+  --gold: var(--bond-brass);
+  --paper-indigo: var(--bond-graphite);
+  --paper-tint: var(--bond-tint);
+  --paper-rule: var(--bond-border);
+  --paper-muted: var(--bond-muted);
+  --paper-ink: var(--bond-graphite);
+  --paper-white: var(--bond-white);
+  --shadow: 0 5px 23px rgba(24,27,32,.045);
+}
+body { background: var(--bond-ivory); color: var(--bond-graphite); }
+::selection { background: #E9D8BD; color: var(--bond-graphite); }
+
+/* Graphite surrounds the reader; the actual maths stays on light paper. */
+.appbar {
+  background: var(--bond-graphite);
+  border-bottom-color: #3A3E44;
+  color: var(--bond-white);
+  backdrop-filter: none;
+}
+.appbar .brand-mobile b { color: var(--bond-white); }
+.appbar .brand-mobile .logo {
+  background: #30343B; color: #E0BE84;
+}
+.appbar .gold { color: #E0BE84; }
+.appbar .browse-button,
+.appbar .basics-link {
+  background: #2B3036; border-color: #51555A; color: #FFFFFF;
+}
+.appbar .browse-button:hover, .appbar .basics-link:hover {
+  background: #3A3E43;
+}
+.appbar .lang-switch { background: #35393F; }
+.appbar .lang-switch button { color: #EEEDE9; }
+.appbar .lang-switch button.active {
+  background: var(--bond-white); color: var(--bond-graphite);
+}
+
+/* Class rail and concise chapter/exercise wayfinding. */
+.sidebar, .sidebar-foot, .sidebar-search-bottom {
+  background: #FBFAF7;
+  border-color: var(--bond-border);
+}
+.side-brand .logo {
+  background: var(--bond-graphite); color: #E0BE84;
+}
+.side-brand b { color: var(--bond-graphite); }
+.side-caption, .side-brand small, .side-count, .sidebar-foot p {
+  color: var(--bond-muted);
+}
+.side-grade { background: var(--bond-white); border-color: var(--bond-border); color: var(--bond-graphite); }
+.side-grade.active, .class-dock .dock-grade.active {
+  background: var(--bond-graphite); border-color: var(--bond-graphite); color: #FFFFFF;
+}
+.side-grade:hover, .exercise-group>summary:hover, .exercise-question:hover {
+  background: var(--bond-tint); border-color: var(--bond-burgundy);
+}
+.exercise-group>summary { color: var(--bond-graphite); }
+.exercise-question { color: var(--bond-muted); }
+.exercise-question.active {
+  background: var(--bond-selection); color: var(--bond-burgundy);
+}
+.sidebar-chapter-sections button.active {
+  background: var(--bond-selection); color: var(--bond-burgundy); border-color: var(--bond-burgundy);
+}
+.search-field {
+  background: var(--bond-white); border-color: var(--bond-border); color: var(--bond-muted);
+}
+.search-field input { color: var(--bond-graphite); }
+
+/* Home: one distinctive dark signature, then calm light chapter cards. */
+.discover-hero {
+  background: var(--bond-graphite); color: #FFFFFF;
+  box-shadow: 0 7px 22px rgba(24,27,32,.085);
+}
+.discover-hero .discover-eyebrow, .discover-hero .discover-description { color: #F0EEEA; }
+.discover-hero .discover-primary {
+  background: #FFFFFF; color: var(--bond-graphite);
+}
+.discover-hero .discover-secondary {
+  background: transparent; color: #FFFFFF; border-color: #D6C5AB;
+}
+.discover-grade, .discover-chapter, .discover-recent, .discover-feature,
+.discover-no-recent, .discover-resume-card, .hub-section-card,
+.hub-question, .hub-quiz-question {
+  background: #FFFFFF; color: var(--bond-graphite);
+  border-color: var(--bond-border);
+  box-shadow: none;
+}
+.discover-grade-number, .discover-feature-icon, .hub-section-icon,
+.hub-section-card[data-hub-section=exercises] .hub-section-icon,
+.hub-section-card[data-hub-section=quizzes] .hub-section-icon,
+.hub-section-card[data-hub-section=examples] .hub-section-icon {
+  background: var(--bond-graphite); color: #E0BE84;
+}
+.discover-grade-arrow, .discover-card-arrow, .discover-resume-action,
+.hub-question-arrow { color: var(--bond-burgundy); }
+.discover-grade:hover, .discover-chapter:hover, .hub-section-card:hover,
+.hub-question:hover {
+  background: #FCFBF8; border-color: var(--bond-burgundy);
+}
+.discover-directory-head, .chapter-fastnav {
+  background: var(--bond-tint); border-color: var(--bond-border);
+}
+.discover-back, .discover-change, .chapter-hub .hub-top-actions button,
+.hub-back-menu, .question-return button, .exercise-index-link {
+  color: var(--bond-burgundy);
+}
+.hub-section-card.is-current, .hub-quiz-answers button[aria-pressed=true] {
+  background: var(--bond-selection);
+  border-color: var(--bond-burgundy);
+  box-shadow: inset 0 0 0 1px var(--bond-burgundy);
+}
+
+/* Exercise reader. Preserve original mathematical glyphs and line spacing. */
+.lesson-card { background: #FFFFFF; border-color: var(--bond-border); }
+.lesson-title-row h2, .step-equation, .question-text { color: var(--bond-graphite); }
+.lesson-tag, .small-total {
+  background: var(--bond-selection); border-color: #E8D5D2; color: var(--bond-burgundy);
+}
+.question-text {
+  background: #FAF9F6; border-left-color: var(--bond-burgundy);
+}
+.step-circle {
+  background: var(--bond-tint); color: var(--bond-graphite);
+}
+.figure-button, .page-button:not(.next), .step-quiet,
+.mark-button, .dialog-close {
+  background: #FFFFFF; color: var(--bond-graphite); border-color: var(--bond-border);
+}
+.page-button.next, .step-primary, .discover-feature button {
+  background: var(--bond-graphite); border-color: var(--bond-graphite); color: #FFFFFF;
+}
+.page-track span { background: var(--bond-burgundy); }
+.answer-box, .lesson-card .answer-box {
+  background: #EFF8F4; border-color: #BEDFD2;
+}
+.answer-box>div:first-child, .math-answer { color: var(--bond-emerald); }
+.mark-button[aria-pressed=true] {
+  background: #EFF8F4; border-color: #BEDFD2; color: var(--bond-emerald);
+}
+
+/* Concept indexes, demos, matrices: selection is not confused with correctness. */
+.chapter-hub .sp2-index-view .sp2-nav-button.sp2-current,
+.chapter-hub .sp2-index-view .sp2-nav-button[aria-current=step],
+.matrix-concepts .mc-index button[aria-current=step] {
+  background: var(--bond-selection);
+  color: var(--bond-graphite);
+  border-color: var(--bond-burgundy);
+}
+.sp2-nav-number, .chapter-hub .sp2-index-view .sp2-nav-number,
+.matrix-concepts .mc-index button span {
+  background: var(--bond-tint); color: var(--bond-graphite);
+}
+.sp2-journey-footer .sp2-footer-next,
+.chapter-hub .sp2-journey[data-view=lesson] .sp2-journey-footer button.sp2-footer-next,
+.matrix-concepts .mc-primary,
+.matrix-concepts .mc-navigation button:last-child {
+  background: var(--bond-graphite); border-color: var(--bond-graphite); color: #FFFFFF;
+}
+.sp2-demo-controls button[aria-pressed=true], .sp2-answers button[aria-pressed=true],
+.rnlab [data-answers] button[aria-pressed=true] {
+  background: var(--bond-selection); color: var(--bond-burgundy);
+  border-color: var(--bond-burgundy);
+}
+.sp2-demo, .chapter-hub .sp2-journey .sp2-demo,
+.matrix-concepts .mc-stage, .sp2-formula {
+  background: #FFFFFF;
+}
+.sp2-demo-controls input[type=range], .rnlab-range input,
+.matrix-concepts input[type=range] { accent-color: var(--bond-burgundy); }
+/* Mathematics plot colors (multiple sets, lines, points), warning and error
+ * states are deliberately NOT overridden by this visual theme. */
+
+/* Discoverable keyboard navigation and accessible focus on both surfaces. */
+:where(button,a,input,select,summary,[tabindex]):focus-visible,
+.sp2-journey button:focus-visible, .matrix-concepts button:focus-visible {
+  outline: 3px solid var(--bond-burgundy);
+  outline-offset: 3px;
+}
+.appbar :is(button,a):focus-visible,
+.discover-hero :is(button,a):focus-visible {
+  outline: 3px solid #F0D7A9;
+  outline-offset: 3px;
+}
+@media (forced-colors: active) {
+  .hub-section-card.is-current, .exercise-question.active,
+  .sp2-nav-button[aria-current=step] {
+    outline: 2px solid Highlight;
+    outline-offset: -2px;
+  }
+}

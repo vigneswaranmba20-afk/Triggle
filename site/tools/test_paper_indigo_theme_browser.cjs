@@ -1,10 +1,10 @@
 'use strict';
-/* Real Chromium checks, not just swatch arithmetic. */
+/* Current Bond light theme: mobile browser checks on top of retained Paper + Indigo base. */
 const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path');
 const {chromium}=require('playwright');
 const {server,launchOptions}=require('./dashboard_test_support.cjs');
 const out=path.resolve(__dirname,'../../screenshots/paper-indigo');
-const indigo='rgb(71, 61, 145)',white='rgb(255, 255, 255)',paper='rgb(247, 247, 244)';
+const indigo='rgb(24, 27, 32)',white='rgb(255, 255, 255)',paper='rgb(247, 246, 242)';
 const label=(page)=>page.evaluate(()=>({
   paper:getComputedStyle(document.body).backgroundColor,
   ink:getComputedStyle(document.body).color,
@@ -15,8 +15,10 @@ async function visit(page,url){
  assert.ok(r?.ok(),'HTTP page must load: '+url);
  await page.locator('.appbar').waitFor({state:'visible'});
  const l=await label(page);
- assert.deepEqual(l,{paper,ink:'rgb(34, 40, 59)',accent:'#473D91'},'Themed student shell');
- await page.locator('link[href*="paper-indigo.css"]').evaluate(el=>new Promise((resolve,reject)=>{
+ assert.deepEqual(l,{paper,ink:'rgb(24, 27, 32)',accent:'#181B20'},'Bond light student shell');
+ assert.equal(await page.locator('.appbar').evaluate(el=>getComputedStyle(el).backgroundColor),indigo,'Graphite app bar');
+ assert.equal(await page.locator('.appbar .browse-button').evaluate(el=>getComputedStyle(el).color),white,'Header navigation is readable');
+ await page.locator('link[href*="bond-light.css"]').evaluate(el=>new Promise((resolve,reject)=>{
    if(el.sheet)return resolve();
    el.addEventListener('load',resolve,{once:true});
    el.addEventListener('error',()=>reject(Error('Theme stylesheet did not load')),{once:true});
@@ -49,7 +51,7 @@ async function main(){
    assert.equal(await p.locator('.sp2-demo').count(),1,'Mathematical demo stays intact');
    assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).backgroundColor),indigo,'Real Numbers Next is indigo');
    assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).color),white,'Next label stays readable');
-   assert.equal(await p.locator('.sp2-demo').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(251, 251, 254)','Demo uses near-white paper');
+   assert.equal(await p.locator('.sp2-demo').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Demo uses white paper');
    await p.locator('#langTa').click();
    assert(await p.locator('.sp2-concept-heading').innerText().then(t=>/[\u0B80-\u0BFF]/.test(t)),'Tamil math lesson stays visible');
    assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).backgroundColor),indigo,'Tamil Next uses same color');
@@ -68,7 +70,7 @@ async function main(){
    if(width===390)await p.screenshot({path:path.join(out,'g12-matrices-390.png'),fullPage:false});
    assert.deepEqual(errors,[],'No JS page exceptions at '+width+'px');
    await ctx.close();
-   console.log('PASS Paper + Indigo rendered index, Tamil concepts, Grade 10 maths and Grade 12 interactions at '+width+'px');
+   console.log('PASS Midnight Precision rendered index, Tamil concepts, Grade 10 maths and Grade 12 interactions at '+width+'px');
   }
  }finally{await browser.close();await app.close();}
 }
