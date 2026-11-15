@@ -58,6 +58,16 @@ async function main(){
     assert.match(await page.locator('#questionText').innerText(),/cubes|கனங்கள்|2025/i,'Correct newly published textbook question');
     assert.match(await page.locator('#answerText').innerText(),/9/,'Computed final answer');
     assert.equal(await page.locator('[data-math-error]').count(),0,'Rendered exercise maths valid');
+    await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-2-q8');
+    await page.locator('#stepsList .worked-step').first().waitFor({state:'visible'});
+    assert.match(await page.locator('#questionText').innerText(),/35[\\s\\S]*56[\\s\\S]*91/,'Exercise 2.2 Q8 opens with authentic divisors');
+    const answerQ8=await page.locator('#answerText').innerText();
+    assert.match(answerQ8,/3647/,'Student sees the textbook appendix answer');
+    assert.match(answerQ8,/Literally, 7/,'Student is not told that the literal mathematical minimum is wrong');
+    const stepsQ8=await page.locator('#stepsList').innerText();
+    assert(stepsQ8.includes('3640')&&stepsQ8.includes('35')&&stepsQ8.includes('zero'),'Student sees LCM reasoning and zero-quotient caveat');
+    assert.equal(new URL(page.url()).searchParams.get('question'),'c10-2-ex2-2-q8','Q8 remains deep-linkable');
+    assert.equal(await page.locator('[data-math-error]').count(),0,'No malformed Q8 mathematical notation');
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No horizontal page overflow');
    }
    assert.deepEqual(errors,[],'No uncaught JavaScript exceptions at '+width);
