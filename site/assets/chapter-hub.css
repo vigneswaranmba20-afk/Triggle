@@ -541,3 +541,6 @@
  }
  .chapter-hub[data-hub-section="concepts"] .sp2-detail-view .sp2-panel{min-width:0}
 }
+
+/* Specialised Grade 12 matrix scenes follow the same one-Back rule. */
+.chapter-hub:has(.matrix-concepts[data-view="lesson"]) .hub-top-actions{display:none}
