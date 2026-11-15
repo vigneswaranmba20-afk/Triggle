@@ -55,9 +55,13 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
   background: var(--bond-white); border-color: var(--bond-border);
   color: var(--bond-graphite);
 }
-.appbar .browse-button:hover, .appbar .basics-link:hover,
-.appbar .home-link[aria-current=page] {
+.appbar .browse-button:hover, .appbar .basics-link:hover {
   background: var(--bond-tint);
+  border-color: var(--bond-border);
+  color: var(--bond-graphite);
+}
+.appbar .home-link[aria-current=page] {
+  background: var(--bond-white);
   border-color: var(--bond-border);
   color: var(--bond-graphite);
 }
