@@ -25,35 +25,55 @@ function numberLine(min,max,points,ta){
   '<text x="'+px+'" y="'+(i===0?'32':i%2?'49':'16')+'" font-weight="750" font-size="15" text-anchor="middle" fill="#5c3272">'+esc(p.label)+'</text>';});
  return out+'</svg>';
 }
-function mount(container,chapter,language){
+function mount(container,chapter,language,onBack,initialConcept=null,onConcept=null){
  if(!container||chapter?.id!=='g9-ch2')return false;
  const lang=language==='ta'?'ta':'en',ta=lang==='ta',t=words[lang],done=load(),root=document.createElement('section');
- root.className='sp2-journey rnlab';root.setAttribute('aria-label',t.title);
- root.innerHTML='<p class="sp2-kicker">'+esc(t.kicker)+'</p><h3>'+esc(t.title)+'</h3>'+
- '<p class="sp2-intro">'+esc(t.intro)+'</p><p class="sp2-progress" data-progress role="status" aria-live="polite"></p>'+
- '<div class="sp2-journey-controls" role="group" aria-label="'+esc(t.title)+'">'+
- '<button type="button" data-journey-prev>'+esc('← '+t.previousIdea)+'</button>'+
- '<span data-journey-index role="status" aria-live="polite"></span>'+
- '<button type="button" data-journey-next>'+esc(t.nextIdea+' →')+'</button></div>'+
- '<p class="sp2-navigation-tip">'+esc(t.navTip)+'</p>'+
- '<nav class="sp2-nav" data-nav aria-label="'+esc(t.title)+'"></nav><div class="sp2-panel" data-panel></div>'+
- '<p class="sp2-private">'+esc(t.saved)+'</p>';
+ const backLabel=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
+ const explanationLabel=ta?'கருத்தைப் புரிந்துகொள்':'Understand the idea';
+ root.className='sp2-journey rnlab';root.dataset.view='index';
+ root.setAttribute('aria-label',ta?'மெய்யெண்கள் கருத்துகள்':'Real Numbers concepts');
+ root.innerHTML='<div class="sp2-index-view" data-index-view>'+
+   '<nav class="sp2-nav" data-nav role="group" aria-label="'+esc(ta?'ஒரு கருத்தைத் தேர்ந்தெடுக்கவும்':'Choose a concept')+'"></nav></div>'+
+   '<div class="sp2-detail-view" data-detail-view hidden>'+
+   '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+esc(backLabel)+'</button></div>'+
+   '<div class="sp2-panel" data-panel></div>'+
+   '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+esc(ta?'கருத்துகளுக்கிடையே நகர்க':'Move between concepts')+'">'+
+   '<button type="button" class="sp2-footer-prev" data-footer-prev>← '+esc(t.previousIdea)+'</button>'+
+   '<button type="button" class="sp2-footer-next" data-footer-next></button></nav></div>';
  container.append(root);
- const nav=root.querySelector('[data-nav]'),panel=root.querySelector('[data-panel]');let active=0;
- path.stages.forEach((stage,i)=>{const b=document.createElement('button');b.type='button';b.className='sp2-nav-button';b.dataset.index=String(i);
-  b.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+esc(pick(stage.title,lang))+'</span><span class="sp2-done-mark" aria-hidden="true"></span>';
-  b.addEventListener('click',()=>show(i));nav.append(b);
+ const nav=root.querySelector('[data-nav]'),panel=root.querySelector('[data-panel]');
+ const indexView=root.querySelector('[data-index-view]'),detailView=root.querySelector('[data-detail-view]');
+ let active=-1;
+ path.stages.forEach((stage,i)=>{
+  const button=document.createElement('button');button.type='button';
+  button.className='sp2-nav-button';button.dataset.index=String(i);
+  button.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+esc(pick(stage.title,lang))+
+   '</span><span class="sp2-done-mark" aria-hidden="true"></span>';
+  button.addEventListener('click',()=>show(i,true));nav.append(button);
  });
- root.querySelector('[data-journey-prev]').addEventListener('click',()=>show(active-1));
- root.querySelector('[data-journey-next]').addEventListener('click',()=>show(active+1));
- function update(){root.querySelector('[data-progress]').textContent=t.progress+': '+done.size+' / '+path.stages.length;
-   nav.querySelectorAll('button').forEach((b,i)=>{b.classList.toggle('sp2-current',i===active);b.classList.toggle('sp2-done',done.has(path.stages[i].id));
-    b.setAttribute('aria-pressed',String(i===active));b.setAttribute('aria-current',i===active?'step':'false');b.querySelector('.sp2-done-mark').textContent=done.has(path.stages[i].id)?'✓':'';});
-   root.querySelector('[data-journey-index]').textContent=t.position(active+1,path.stages.length);
-   root.querySelector('[data-journey-prev]').disabled=active===0;
-   root.querySelector('[data-journey-next]').disabled=active===path.stages.length-1;
-   const selected=nav.querySelector('.sp2-current');if(selected)nav.scrollLeft=Math.max(0,selected.offsetLeft-nav.offsetLeft-8);
+ function update(){
+  nav.querySelectorAll('button').forEach((button,i)=>{
+   const selected=active===i,complete=done.has(path.stages[i].id);
+   button.classList.toggle('sp2-current',selected);button.classList.toggle('sp2-done',complete);
+   button.setAttribute('aria-pressed',String(selected));button.setAttribute('aria-current',selected?'step':'false');
+   button.querySelector('.sp2-done-mark').textContent=complete?'✓':'';
+  });
+  root.querySelector('[data-footer-prev]').disabled=active<=0;
+  const next=root.querySelector('[data-footer-next]');
+  next.textContent=active===path.stages.length-1?backLabel+' →':t.nextIdea+' →';
+  next.classList.toggle('is-return',active===path.stages.length-1);
  }
+ function showIndex(focus=false,notify=true){
+  active=-1;root.dataset.view='index';indexView.hidden=false;detailView.hidden=true;update();
+  if(notify&&typeof onConcept==='function')onConcept(null,true);
+  if(focus){nav.querySelector('button')?.focus({preventScroll:true});root.scrollIntoView({behavior:'auto',block:'start'});}
+ }
+ root.querySelector('[data-back-index]').addEventListener('click',()=>showIndex(true));
+ root.querySelector('[data-footer-prev]').addEventListener('click',()=>show(active-1,true));
+ root.querySelector('[data-footer-next]').addEventListener('click',()=>{
+  if(active===path.stages.length-1){showIndex(true);return;}
+  show(active+1,true);
+ });
  function controls(label,items,value,onChange){const host=panel.querySelector('[data-demo-controls]');
   const group=document.createElement('div');group.className='rnlab-choices';group.setAttribute('role','group');group.setAttribute('aria-label',label);
   items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);if(typeof caption==='object'){b.innerHTML=caption.html;b.setAttribute('aria-label',caption.label);}
