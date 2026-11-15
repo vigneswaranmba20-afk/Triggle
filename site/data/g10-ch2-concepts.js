@@ -11,6 +11,7 @@ window.TRIGGLE_G10_CH2_PATH={
   "stages": [
     {
       "id": "g10-ch2-division",
+      "practiceId": "c10-2-ex2-1-q1",
       "section": "2.2",
       "title": {
         "en": "Division means groups and leftovers",
@@ -67,6 +68,7 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-gcd",
+      "practiceId": "c10-2-ex2-1-q6",
       "section": "2.3",
       "title": {
         "en": "Find the HCF without guessing",
@@ -127,6 +129,7 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-bezout",
+      "practiceId": "c10-2-ex2-1-q8",
       "section": "2.3",
       "title": {
         "en": "Why we work backwards",
@@ -186,6 +189,7 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-primes",
+      "practiceId": "c10-2-ex2-2-q6",
       "section": "2.4",
       "title": {
         "en": "Prime factors are number fingerprints",
@@ -296,13 +300,13 @@ window.TRIGGLE_G10_CH2_PATH={
         "kind": "cycle",
         "size": 7,
         "values": [
-          "Su",
-          "Mo",
           "Tu",
           "We",
           "Th",
           "Fr",
-          "Sa"
+          "Sa",
+          "Su",
+          "Mo"
         ]
       }
     },
