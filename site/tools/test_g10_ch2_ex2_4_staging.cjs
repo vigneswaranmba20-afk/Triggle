@@ -45,7 +45,7 @@ assert.deepEqual([1,2,3,4].map(n=>(-1)**(n+1)*n*(n+1)),[2,-6,12,-20]);
 assert.deepEqual([1,2,3,4].map(n=>2*n*n-6),[-4,2,12,26]);
 for(let n=1;n<=50;n++){
  assert.equal(n*n+1, [n*n+1][0]);
- assert.equal((n-1)/n, 1-1/n);
+ assert(Math.abs((n-1)/n - (1-1/n))<1e-12, 'Equivalent rational expressions within floating tolerance');
  assert.equal(5*n-2,3+(n-1)*5);
 }
 assert.equal(5*6/(6+2),15/4);assert.equal(5*13/(13+2),13/3);
