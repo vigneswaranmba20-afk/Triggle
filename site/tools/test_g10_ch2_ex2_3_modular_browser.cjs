@@ -10,7 +10,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    page.on('pageerror',e=>errors.push(e.message));
    for(const [id,queryPart,answerPart] of [
     ['q1-ii','78','5'],['q1-iv','96','7'],['q2','13','3'],
-    ['q3','5x','2'],['q4','3x','8'],['q8','divisible','7'],['q9','81','2']
+    ['q3','Solve','2'],['q4','Solve','8'],['q8','divisible','7'],['q9','remainder','2']
    ]){
     await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-3-'+id);
     await page.locator('#stepsList .worked-step').first().waitFor({state:'visible'});
