@@ -16,6 +16,10 @@ async function main(){
    await p.locator('[data-hub-section=concepts]').click();
    const lab=p.locator('.matrix-concepts'),control=key=>lab.locator('[data-control="'+key+'"]'),action=key=>lab.locator('[data-action="'+key+'"]'),result=()=>lab.locator('[data-result]').innerText();
    const go=async i=>{await lab.locator('[data-index-toggle]').click();await lab.locator('[data-scene="'+i+'"]').click();assert.equal(new URL(p.url()).searchParams.get('concept'),String(i));};
+   assert.equal(await lab.locator('[data-index-view]').isVisible(),true,'Matrix Concepts opens the same quiet index as every chapter');
+   assert.equal(await lab.locator('[data-detail-view]').isVisible(),false,'No matrix animation before an idea is chosen');
+   assert.equal(await p.locator('.hub-header').evaluate(el=>el.classList.contains('hub-heading-a11y')),true,'No repeated visible chapter heading');
+   await lab.locator('[data-scene="0"]').click();
    await noOverflow(p);
    await lab.locator('[data-cell="1,0"]').click();await action('cofactor-step').click();assert.match(await result(),/M21 = 1 × 1 − 0 × 1 = 1/);
    await action('cofactor-step').click();assert.match(await result(),/C21 = −1 × \(1\) = -1/);
@@ -55,7 +59,7 @@ async function main(){
   }
   const large=await browser.newContext({viewport:{width:360,height:640},serviceWorkers:'block'}),largePage=await large.newPage();
   await largePage.goto(app.base+route+'&section=concepts');await largePage.addStyleTag({content:'html{font-size:200%!important}'});
-  for(let i=0;i<9;i++){if(i){await largePage.locator('[data-index-toggle]').click();await largePage.locator('[data-scene="'+i+'"]').click();}await noOverflow(largePage);assert(await largePage.locator('.mc-stage').evaluate(el=>el.scrollWidth<=el.clientWidth+1));}
+  for(let i=0;i<9;i++){if(i)await largePage.locator('[data-index-toggle]').click();await largePage.locator('[data-scene="'+i+'"]').click();await noOverflow(largePage);assert(await largePage.locator('.mc-stage').evaluate(el=>el.scrollWidth<=el.clientWidth+1));}
   await large.close();console.log('PASS 200% text scaling at 360 × 640 with no clipped lesson stage');
   // The lesson is static and cached with the rest of the existing offline shell.
   const ctx=await browser.newContext({viewport:{width:390,height:844}}),p=await ctx.newPage();await p.goto(app.base+route+'&section=concepts&concept=1');
