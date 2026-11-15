@@ -1,14 +1,14 @@
 'use strict';
 /* Original English PDF page 61, printed p55, source visually checked.
- * This is a staged-only candidate: no student HTML or service worker load.
+ * The source module is published only with release gates.
  * Numerical assertions are independent of the authored solution strings. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'../..');
 const src=fs.readFileSync(path.join(root,'site/data/textbook-exercises/g10-ch2-ex2-4-sequences-en.js'),'utf8');
 const html=fs.readFileSync(path.join(root,'site/index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'site/service-worker.js'),'utf8');
-assert(!html.includes('g10-ch2-ex2-4-sequences-en.js')&&!sw.includes('g10-ch2-ex2-4-sequences-en.js'),
- 'A staging-only PR must not silently publish unreviewed student material');
+assert(html.includes('g10-ch2-ex2-4-sequences-en.js')&&sw.includes('g10-ch2-ex2-4-sequences-en.js'),
+ 'Student release must load and precache every verified Exercise 2.4 module');
 const previous={id:'c10-2-ex2-4-q1-i'};
 const window={TRIGGLE_CLASSES:{10:{items:[previous]}},TRIGGLE_CURRICULUM:{grades:[{grade:10,chapters:[{number:2,textbookQuestionIds:[previous.id]}]}]}};
 vm.runInNewContext(src,{window},{filename:'g10-ch2-ex2-4-sequences-en.js',timeout:5000});
@@ -59,4 +59,4 @@ for(const key of ['q2-ii','q3-ii','q5','q6']) {
  assert(row.steps.some(s=>/sign|pattern|even|odd|previous|term number/i.test(s.en)),
  'Explain conceptual decision where required '+key);
 }
-console.log('PASS source-checked Grade 10 Ex 2.4 staged Q2–Q6: ten accurate parts, full math, source provenance and no premature publishing.');
+console.log('PASS source-checked Grade 10 Ex 2.4 integrated Q2–Q6: ten accurate parts, full math, source provenance and offline loaded.');
