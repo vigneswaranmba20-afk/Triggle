@@ -30,3 +30,5 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - name: Validate student-facing English and Tamil concepts at mobile widths
         run: node site/tools/test_g10_ch2_trace_browser.cjs
+      - name: Validate Grade 10 Exercise 2.4 source, KaTeX and textbook-order navigation at mobile widths
+        run: node site/tools/test_g10_ch2_ex2_4_browser.cjs
