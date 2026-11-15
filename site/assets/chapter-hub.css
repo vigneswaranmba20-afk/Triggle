@@ -518,7 +518,6 @@
    Source attribution and deeper reasoning remain available on demand. */
 .chapter-hub[data-hub-section="concepts"] .hub-top-actions{margin:0 0 10px}
 .chapter-hub[data-hub-section="concepts"] .hub-panel{padding:0;margin:0;border:0;min-width:0}
-.chapter-hub[data-hub-section="concepts"] .hub-panel>.hub-info{display:none}
 .chapter-hub[data-hub-section="concepts"] .sp2-journey{
  margin:0;padding:0;border:0;box-shadow:none;background:transparent;min-width:0
 }
