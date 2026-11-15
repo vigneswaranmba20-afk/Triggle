@@ -22,13 +22,13 @@ function extract(path){
  throw Error('Unable to parse '+path);
 }
 const records=sourceFiles.flatMap(extract),ids=records.map(r=>r.id);
-assert.equal(records.length,44,'Every legacy Class 10 record in Chapters 2–8 must be annotated');
-assert.equal(new Set(ids).size,44,'No duplicate legacy records');
+assert.equal(records.length,45,'Every legacy Class 10 record in Chapters 2–8 must be annotated');
+assert.equal(new Set(ids).size,45,'No duplicate legacy records');
 const approvedHash=crypto.createHash('sha256').update(JSON.stringify(records)).digest('hex');
 const ctx={window:{}};vm.runInNewContext(read('data/math-layout/g10-ch2-ch8-chatgpt-20261113.js'),ctx);
 const layout=ctx.window.TriggleG10RemainingMath;
 assert.ok(layout,'Grade 10 math display layer missing');
-assert.equal(layout.ids.length,44,'All existing legacy records must be included');
+assert.equal(layout.ids.length,45,'All existing legacy records must be included');
 assert.equal(JSON.stringify(Array.from(layout.ids).sort()),JSON.stringify(ids.sort()),'No unapproved or missing math overlays');
 let steps=0,answers=0,formulas=0,fractions=0,roots=0,exponents=0;
 for(const item of records){
@@ -66,8 +66,8 @@ for(const item of records){
   if(tq)assert.equal(tq.ta.map(x=>typeof x==='string'?x:x.fallback).join(''),item.q.ta,'Tamil question text changed: '+item.id);
  }
 }
-assert.equal(steps,148,'No worked mathematical step removed');
-assert.equal(answers,44);
+assert.equal(steps,153,'No worked mathematical step removed');
+assert.equal(answers,45);
 assert.ok(formulas>=190,'Insufficient mathematical display coverage');
 assert.ok(fractions>=20,'Rendered true stacked fractions must appear in statistics and trigonometry');
 assert.ok(roots>=8,'Rendered radicals must be visible in height-distance trigonometry');
@@ -87,4 +87,4 @@ assert.ok(html.indexOf(modulePath)<html.indexOf('assets/app.js'),'Notation layer
 assert.ok(app.includes('TriggleG10RemainingMath?.getStep'),'Exercise steps must use new notation layer');
 assert.ok(app.includes('TriggleG10RemainingMath?.getAnswer'),'Final answer must use rich notation');
 assert.ok(app.includes('TriggleG10RemainingMath?.getQuestion'),'Source-exact question maths must be rendered');
-console.log('PASS Grade 10 Chapters 2–8 rich maths: 44 immutable source records, 148 complete steps, 44 final answers, 29 formula-heavy questions, '+fractions+' stacked fractions, '+roots+' radicals, '+exponents+' powers, offline cache and Tamil preservation.');
+console.log('PASS Grade 10 Chapters 2–8 rich maths: 45 source-checked records, 153 complete steps, 45 final answers, 29 formula-heavy questions, '+fractions+' stacked fractions, '+roots+' radicals, '+exponents+' powers, offline cache and Tamil preservation.');
