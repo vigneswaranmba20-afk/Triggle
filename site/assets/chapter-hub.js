@@ -86,7 +86,67 @@
   // Shared fallback for any chapter that has textbook-grounded concept stages
   // but no specialised animation engine yet. The student uses the same index and
   // Back/Previous/Next pattern as Grade 9 Set Language and Real Numbers.
-  function mountStageJourney(container,stages,lang,initialConcept,onConcept){
+  // Purposeful, offline mathematical interactions for Grade 10 Number & Sequences.
+  // No welcome slides, dashboards, autoplay or external scripts.
+  function showG10Ch2Visual(stage,host,lang){
+    const v=stage.visual;if(!v||!host)return;
+    const ta=lang==='ta',caption=ta?'நீங்களே மாற்றிப் பாருங்கள்':'Change the value and observe';
+    host.className='g10ch2-visual';host.setAttribute('role','group');host.setAttribute('aria-label',caption);
+    const title=document.createElement('p');title.className='g10ch2-visual-title';title.textContent=caption;
+    const scene=document.createElement('div');scene.className='g10ch2-scene';
+    const feedback=document.createElement('p');feedback.className='g10ch2-visual-feedback';feedback.setAttribute('aria-live','polite');
+    host.append(title,scene,feedback);
+    const chip=(value,selected=false)=>{
+      const node=document.createElement('span');node.className='g10ch2-chip'+(selected?' is-selected':'');
+      node.textContent=String(value);return node;
+    };
+    const control=(min,max,first,update)=>{
+      const input=document.createElement('input');input.type='range';input.min=String(min);input.max=String(max);input.step='1';
+      input.value=String(first);input.setAttribute('aria-label',caption);
+      input.addEventListener('input',()=>update(Number(input.value)));host.insertBefore(input,feedback);update(first);
+    };
+    if(v.kind==='groups'){
+      control(10,30,17,n=>{
+        scene.replaceChildren();
+        const q=Math.floor(n/v.size),r=n%v.size;
+        for(let i=0;i<q;i++){
+          const group=document.createElement('span');group.className='g10ch2-dot-group';
+          for(let j=0;j<v.size;j++)group.append(chip('•'));
+          scene.append(group);
+        }
+        if(r){const rest=document.createElement('span');rest.className='g10ch2-dot-group is-remainder';
+          for(let j=0;j<r;j++)rest.append(chip('•'));scene.append(rest);}
+        feedback.textContent=n+' = '+v.size+' × '+q+' + '+r+(ta?' (மீதி '+r+')':' (remainder '+r+')');
+      });
+    }else if(v.kind==='sequence'||v.kind==='remainders'){
+      control(1,v.values.length,1,n=>{
+        scene.replaceChildren();v.values.forEach((value,i)=>scene.append(chip(value,i===n-1)));
+        feedback.textContent=(ta?'உறுப்பு ':'Term ')+n+' = '+v.values[n-1];
+      });
+    }else if(v.kind==='cycle'){
+      control(0,45,3,n=>{
+        scene.replaceChildren();const mark=n%v.size;
+        v.values.forEach((value,i)=>scene.append(chip(value,i===mark)));
+        feedback.textContent=n+' = '+v.size+' × '+Math.floor(n/v.size)+' + '+mark;
+      });
+    }else if(v.kind==='factors'){
+      scene.append(chip('12 = 2 × 2 × 3'),chip('18 = 2 × 3 × 3'));
+      feedback.textContent=ta?'மீ.பொ.வ = 6; மீ.சி.ம = 36':'HCF = 6; LCM = 36';
+    }else if(v.kind==='bars'){
+      scene.append(chip('+32'),chip('+32'),chip('−60'),chip('= 4',true));
+      feedback.textContent=ta?'64 − 60 = 4; முதலில் பொருள் புரியட்டும்':'64 − 60 = 4. Understand this before reversing the algorithm.';
+    }else if(v.kind==='fractions'){
+      const values=[1,.5,.25,.125,.0625];control(1,values.length,3,n=>{
+        scene.replaceChildren();values.slice(0,n).forEach((x,i)=>{
+          const bar=document.createElement('span');bar.className='g10ch2-fraction-bar';
+          bar.style.width=(x*100)+'%';bar.style.minWidth='14px';
+          bar.textContent=i===0?'1':'1/'+Math.pow(2,i);scene.append(bar);
+        });const total=2-1/Math.pow(2,n-1);
+        feedback.textContent=(ta?'பகுதித் தொகை: ':'Partial sum: ')+total.toFixed(4)+(ta?' → 2-ஐ அணுகுகிறது':' → approaches 2');
+      });
+    }
+  }
+  function mountStageJourney(container,stages,lang,initialConcept,onConcept,onQuestion=null,chapterQuestions=[]){
     const ta=lang==='ta',pick=value=>typeof value==='string'?value:(value?.[lang]||value?.en||'');
     const back=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
     const nextLabel=ta?'அடுத்த கருத்து':'Next idea';
@@ -127,7 +187,9 @@
       if(notify)onConcept?.(i);
       const stage=stages[i],choices=Array.isArray(stage.choices)?stage.choices:[];
       panel.innerHTML='<div class="sp2-concept-heading" tabindex="-1"><h4>'+e((i+1)+'. '+pick(stage.title))+'</h4></div>'+
-       '<div class="sp2-formula" role="group" aria-label="'+e(ta?'கணிதக் கருத்து':'Mathematical idea')+'">'+typeset(pick(stage.rule))+'</div>'+
+       '<div class="sp2-formula" role="group" aria-label="'+e(ta?'கணிதக் கருத்து':'Mathematical idea')+'">'+
+       (stage.math?.latex?window.TriggleNotation.renderLatex(stage.math.latex,{displayMode:true,fallback:stage.math.fallback||pick(stage.rule)}):typeset(pick(stage.rule)))+'</div>'+
+       (stage.visual?'<div data-g10ch2-visual></div>':'')+
        '<details class="sp2-explanation"><summary>'+e(ta?'கருத்தைப் புரிந்துகொள்':'Understand the idea')+'</summary>'+
        '<div class="sp2-explanation-body"><p class="sp2-idea">'+typeset(pick(stage.idea))+'</p>'+
        '<p class="sp2-example">'+typeset(pick(stage.example))+'</p><small class="sp2-stage-reference">'+
@@ -137,6 +199,13 @@
        '<div class="sp2-recall-actions"><button type="button" data-hint>'+e(ta?'குறிப்பு':'Hint')+'</button>'+
        '<button type="button" data-why>'+e(ta?'விளக்கம்':'Why?')+'</button></div>'+
        '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-why-response hidden></div></div>':'');
+      if(stage.visual)showG10Ch2Visual(stage,panel.querySelector('[data-g10ch2-visual]'),lang);
+      const related=stage.practiceId&&chapterQuestions.find(q=>q.id===stage.practiceId);
+      if(related&&typeof onQuestion==='function'){
+        const button=document.createElement('button');button.type='button';
+        button.className='g10ch2-practice-link';button.textContent=ta?'பாடநூல் பயிற்சியைத் தீர்ப்போம் →':'Try the related textbook exercise →';
+        button.onclick=()=>onQuestion(related);panel.append(button);
+      }
       const holder=panel.querySelector('[data-answers]');if(holder){
         choices.forEach((choice,j)=>{
           const button=document.createElement('button');button.type='button';button.dataset.choice=String(j);
@@ -168,7 +237,7 @@
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
     const sets=categorized(questions); // Examples stay archived in source, outside student navigation.
     const matrixConcepts=chapter.id==='g12-ch1'&&lang==='en'&&window.TriggleMatrixConcepts;
-    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
+    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const kinds=activityEntries.length?[...baseKinds,'activities']:baseKinds;
     const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:matrixConcepts?0:stages.length,activities:activityEntries.length};
@@ -269,8 +338,8 @@
         // No chapter title, marketing paragraph, progress count or second navigation row.
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
-        }else if(chapter.id==='g9-ch9'){
-          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept);
+        }else if(chapter.id==='g9-ch9'||chapter.id==='g10-ch2'){
+          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,sets.exercises);
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }
