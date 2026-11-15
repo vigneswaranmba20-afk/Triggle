@@ -1,0 +1,641 @@
+{
+  "schemaVersion": 1,
+  "chapter": "g10-ch2",
+  "sourceTitle": "Tamil Nadu Standard Ten Mathematics, English revised 2025, Chapter 2",
+  "sourceUrl": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+  "scope": "53 canonical source-text-checked question records plus 10 unique supplementary parts; ambiguity and incomplete inventory remain held.",
+  "tamilReview": "pending",
+  "humanTeacherReview": "not performed",
+  "records": [
+    {
+      "id": "c10-2-ex2-3-q5",
+      "exercise": "2.3",
+      "label": "Exercise 2.3 · Q5",
+      "question": "What is the time 100 hours after 7 a.m.?",
+      "answer": "11 a.m.",
+      "recordSha256": "84ba8707d747766ee7434611d88e596fdcdb44b8a48f7439ad30600e9d4c3aae",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-3-q6",
+      "exercise": "2.3",
+      "label": "Exercise 2.3 · Q6",
+      "question": "What is the time 15 hours before 11 p.m.?",
+      "answer": "8 a.m.",
+      "recordSha256": "cd5cc18fc375bce8bc9fdc163908370012e77f5a5c747aa60c74cc2f1ec90dd0",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-3-q7",
+      "exercise": "2.3",
+      "label": "Exercise 2.3 · Q7",
+      "question": "Today is Tuesday. My uncle will come after 45 days. On which day will he come?",
+      "answer": "Friday.",
+      "recordSha256": "a0e85fb274646994bcf1a146a2949d425e8c46de2f732df75ba1881171f3cd51",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-3-q10",
+      "exercise": "2.3",
+      "label": "Exercise 2.3 · Q10",
+      "question": "A flight from Chennai to London takes approximately 11 hours. It leaves on Sunday at 23:30 hours. Chennai is 4½ hours ahead of London. Find the London arrival day and time.",
+      "answer": "Monday, 6:00 a.m. London time, using the textbook's fixed 4½-hour time difference.",
+      "recordSha256": "bfec95864c4ba998da2161af11d14fdb7c2beed09e57eac9cb6fb6f743cd2844",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-4-q1",
+      "exercise": "2.4",
+      "label": "Exercise 2.4 · Q1",
+      "question": "Find the next three terms: (i) 8, 24, 72, … (ii) 5, 1, −3, … (iii) 1/4, 2/9, 3/16, …",
+      "answer": "(i) 216, 648, 1944; (ii) −7, −11, −15; (iii) 4/25, 5/36, 6/49.",
+      "recordSha256": "69a8b78492c9f3926910d0f8eb494dd7f36ee2e0f51cf1a5cf2d0e0f015533c3",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q4",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q4",
+      "question": "Find the 19th term of the A.P. −11, −15, −19, …",
+      "answer": "−83.",
+      "recordSha256": "e4e6726f84c12b92312c1dddf0b6e10de4b55eb89cb267bae3bdb312690b1dc4",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q5",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q5",
+      "question": "Which term of the A.P. 16, 11, 6, 1, … is −54?",
+      "answer": "15th term.",
+      "recordSha256": "d0e1321780b6976f7c86686d088ac7e3ea6067e2fe5766c504b8822fb6372ca4",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q6",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q6",
+      "question": "Find the middle term(s) of the A.P. 9, 15, 21, 27, …, 183.",
+      "answer": "93 and 99.",
+      "recordSha256": "023c37075a1f5bb14bf91dbaca86a0e9d14af9a1a5a0b97091b61e389adc5beb",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q7",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q7",
+      "question": "If nine times the 9th term of an A.P. equals fifteen times its 15th term, show that six times the 24th term is zero.",
+      "answer": "6t₂₄ = 0.",
+      "recordSha256": "f88072c1301d4362953e5f890ba9fa52797b4ef480ec0590b70c8bffb6bceadf",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q9",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q9",
+      "question": "Find x, y and z if x, 10, y, 24, z are in A.P.",
+      "answer": "x = 3, y = 17, z = 31.",
+      "recordSha256": "7615fccdbf12580d6892e6eb9511d4be0774126ffc2cd22d5ca638caea052a02",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q10",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q10",
+      "question": "A theatre has 20 seats in its front row and 30 rows. Each next row has 2 more seats. How many seats are in the last row?",
+      "answer": "78 seats.",
+      "recordSha256": "e52a02d15f630127695ce980edb7e6120d18b1d7fc244f2d760504b7eda064f0",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q11",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q11",
+      "question": "The sum of three consecutive terms in A.P. is 27 and their product is 288. Find the three terms.",
+      "answer": "2, 9 and 16 (or in reverse order).",
+      "recordSha256": "03347da307b5a337ec4fb852e73b9a860eb339e07c375326b4bec71930cea3ee",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q12",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q12",
+      "question": "The ratio of the 6th to the 8th term of an A.P. is 7:9. Find the ratio of the 9th to the 13th term.",
+      "answer": "5:7.",
+      "recordSha256": "26a93f96394758633926fcdd870998e3db22c760388c54d60a230e23213a9da6",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q13",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q13",
+      "question": "The temperatures from Monday to Friday are in A.P. The Monday–Wednesday sum is 0°C and the Wednesday–Friday sum is 18°C. Find each day's temperature.",
+      "answer": "Monday −3°C, Tuesday 0°C, Wednesday 3°C, Thursday 6°C, Friday 9°C.",
+      "recordSha256": "aac2eaeb54b68a6016df1138bb63869783020bd0b3cc62d1783159d6cd7f6385",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q14",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q14",
+      "question": "Priya earns ₹15,000 monthly at first, increasing ₹1,500 annually. Her initial monthly expenses are ₹13,000, increasing ₹900 annually. When can she save ₹20,000 each month?",
+      "answer": "From the 31st year (after 30 annual increases).",
+      "recordSha256": "108526719508b770f29cbba4cdd2e9385d30d7715dcf83e955f171edcc0b054c",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-6-q1",
+      "exercise": "2.6",
+      "label": "Exercise 2.6 · Q1",
+      "question": "Find (i) the sum of 3, 7, 11, … up to 40 terms and (ii) the sum of 102, 97, 92, … up to 27 terms.",
+      "answer": "(i) 3240; (ii) 999.",
+      "recordSha256": "de71243f39b7371a7dd7e4dd170b7d2dbf4cbef86a3b28edf6feee458fed0e92",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-6-q2",
+      "exercise": "2.6",
+      "label": "Exercise 2.6 · Q2",
+      "question": "How many consecutive odd integers, beginning with 5, sum to 480?",
+      "answer": "20 terms.",
+      "recordSha256": "b2f09f937cc4e9331f29226a6f163af66e224039739e75c94541a35b12d1f9bc",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-6-q5",
+      "exercise": "2.6",
+      "label": "Exercise 2.6 · Q5",
+      "question": "The 104th term and 4th term of an A.P. are 125 and 0. Find the sum of its first 35 terms.",
+      "answer": "612.5.",
+      "recordSha256": "1e91e9b8e74e2d7f040b513bc24303efb7d8cc818567ac9c053b3abc28a2ceb5",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-6-q6",
+      "exercise": "2.6",
+      "label": "Exercise 2.6 · Q6",
+      "question": "Find the sum of all odd positive integers less than 450.",
+      "answer": "50,625.",
+      "recordSha256": "50479f77325e5613fa0fba151b73fbcc2b5c7e253e52010f939760c21582728f",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-6-q7",
+      "exercise": "2.6",
+      "label": "Exercise 2.6 · Q7",
+      "question": "Find the sum of all natural numbers between 602 and 902 which are not divisible by 4.",
+      "answer": "168,448.",
+      "recordSha256": "873b049213e16b69cdc8cee50172fcf0dd661f5f688b95500f6df496fcf66e88",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-6-q8",
+      "exercise": "2.6",
+      "label": "Exercise 2.6 · Q8",
+      "question": "A laptop costs ₹40,000 in cash or 10 instalments starting ₹4,800, decreasing by ₹50 each month. Find (i) total instalments and (ii) extra cost.",
+      "answer": "(i) ₹45,750; (ii) ₹5,750 extra.",
+      "recordSha256": "3813b0e82596cc3532e3fca67ef9b7de1b9b59ec237e01e841afdf8a43d71c03",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-6-q9",
+      "exercise": "2.6",
+      "label": "Exercise 2.6 · Q9",
+      "question": "A man repays ₹65,000 starting with ₹400 the first month, increasing each monthly payment by ₹300. After how many months is the loan cleared?",
+      "answer": "20 months.",
+      "recordSha256": "2dcd56ea62cc3fd4ac78ae7ba4208d690b86ef1e19a10ae0ff5feac42ea974a1",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-6-q10",
+      "exercise": "2.6",
+      "label": "Exercise 2.6 · Q10",
+      "question": "A staircase has 30 steps. The bottom needs 100 bricks and each higher step needs 2 fewer. Find (i) bricks at the top and (ii) the total bricks.",
+      "answer": "(i) 42 bricks; (ii) 2,130 bricks.",
+      "recordSha256": "0d291d4ad596ace7e44a6aa6d2388dbdbb9df7ebecfe32d216a965b6008b165d",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q2",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q2",
+      "question": "Write the first three G.P. terms when (i) a=6, r=3 (ii) a=2, r=2 (iii) a=1000, r=2/5.",
+      "answer": "(i) 6, 18, 54; (ii) 2, 4, 8; (iii) 1000, 400, 160.",
+      "recordSha256": "4dc9585bfd06f5fc003f4577c169e0805189e148e285fc57cb4cb867590479fa",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q3",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q3",
+      "question": "In the G.P. 729, 243, 81, … find the seventh term.",
+      "answer": "1.",
+      "recordSha256": "5241bd8eb5dfc566e7628936c8580d474c4323a59443f2df57860a4ebe77c29e",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q4",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q4",
+      "question": "Find x so that x+6, x+12, x+15 are consecutive terms in a G.P.",
+      "answer": "x = −18.",
+      "recordSha256": "37bdfe4d4542a4b8b83351216bc03cb46318cf61d6aafb7c105ba647cd1e6830",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q5",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q5",
+      "question": "Find the number of terms of (i) 4, 8, 16, …, 8192 and (ii) 1/3, 1/9, 1/27, …, 1/2187.",
+      "answer": "(i) 12 terms; (ii) 7 terms.",
+      "recordSha256": "f3302f3af843ac5f8a1d933327f11ae383d0758a4352711c5f5f4b4f07e23c5c",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q6",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q6",
+      "question": "In a G.P., the ninth term is 32805 and sixth is 1215. Find the twelfth term.",
+      "answer": "885,735.",
+      "recordSha256": "7967c3f390babcb57d2948b7f2bcb816e22a0571fc4e16a8199588968925d647",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q7",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q7",
+      "question": "Find the 10th term of a G.P. whose eighth term is 768 and ratio is 2.",
+      "answer": "3072.",
+      "recordSha256": "f3f4958dfc5227ac35bc895e4c3cc7dd600cbd20241a9bbdfdb45e9c99b69256",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q8",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q8",
+      "question": "If a, b, c are in arithmetic progression, show that 3ᵃ, 3ᵇ, 3ᶜ are in geometric progression.",
+      "answer": "3ᵃ, 3ᵇ, 3ᶜ form a G.P.",
+      "recordSha256": "f4a0589101ca6f87158374c277fad0f17188ee9f342c64a36545fe272407b5d5",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q11",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q11",
+      "question": "Offer A starts at ₹20,000 with a 6% annual rise; Offer B starts at ₹22,000 with a 3% rise. Find the fourth-year salaries.",
+      "answer": "Offer A: ₹23,820.32; Offer B: about ₹24,039.39; Offer B is larger.",
+      "recordSha256": "44598bd20944984a33f24f38fe48567f0709b0c603cd1df571d9cbf90921c24a",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-8-q2",
+      "exercise": "2.8",
+      "label": "Exercise 2.8 · Q2",
+      "question": "Find the sum of the first six terms of the G.P. 5, 15, 45, …",
+      "answer": "1820.",
+      "recordSha256": "c7eaeeaf05d447c91744fc4705a5ae7218ac2bce666a012222849efe43f30f89",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-8-q3",
+      "exercise": "2.8",
+      "label": "Exercise 2.8 · Q3",
+      "question": "Find the first term of a G.P. with common ratio 5 and sum of the first six terms 46872.",
+      "answer": "12.",
+      "recordSha256": "c756bc2870f08e7969037d618f1b38d3c89607d5ebfe06b5a1dbeaedc9f7b2b4",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-8-q4",
+      "exercise": "2.8",
+      "label": "Exercise 2.8 · Q4",
+      "question": "Find the infinite sums of (i) 9+3+1+… and (ii) 21+14+28/3+…",
+      "answer": "(i) 27/2 = 13.5; (ii) 63.",
+      "recordSha256": "5c6b0565bcfae356405656bd581d59e39b679f5e26bff071a75867ff88a772b6",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-8-q5",
+      "exercise": "2.8",
+      "label": "Exercise 2.8 · Q5",
+      "question": "An infinite G.P. has first term 8 and sum to infinity 32/3. Find its common ratio.",
+      "answer": "1/4.",
+      "recordSha256": "70e232856b818b048d875a0cf5bdbe6dd14bf5210760741e0d17ec252ac6254d",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-8-q7",
+      "exercise": "2.8",
+      "label": "Exercise 2.8 · Q7",
+      "question": "Find the sum 3+6+12+…+1536.",
+      "answer": "3069.",
+      "recordSha256": "10a338d5aa99b966cf45896dd26c01dea6bbd7db7185cc3f34986f1445b9220b",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-9-q2",
+      "exercise": "2.9",
+      "label": "Exercise 2.9 · Q2",
+      "question": "If 1+2+3+…+k=325, find 1³+2³+…+k³.",
+      "answer": "105,625.",
+      "recordSha256": "2ca4db37d0b0b37004d43e08b67c2614508089fb13957a4f0e7a0f505a42a2fd",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-9-q3",
+      "exercise": "2.9",
+      "label": "Exercise 2.9 · Q3",
+      "question": "If 1³+2³+…+k³=44100, find 1+2+3+…+k.",
+      "answer": "210.",
+      "recordSha256": "60592f86cc793613fedddda279b464b617219a8734e64f658bbc44ba861d31bc",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-9-q4",
+      "exercise": "2.9",
+      "label": "Exercise 2.9 · Q4",
+      "question": "How many terms of 1³+2³+3³+… have sum 14400?",
+      "answer": "15 terms.",
+      "recordSha256": "9a07b5c185f83c2604805474b00efd9989810741620998a2bb6b05e4b26fc481",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-9-q5",
+      "exercise": "2.9",
+      "label": "Exercise 2.9 · Q5",
+      "question": "The sum of cubes of the first n natural numbers is 2025. Find n.",
+      "answer": "n = 9.",
+      "recordSha256": "530e40a96d6b59d149138ba3b392ae29b14c9b55b7773bb80bc81ffc5ce942b8",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-9-q6",
+      "exercise": "2.9",
+      "label": "Exercise 2.9 · Q6",
+      "question": "Rekha has 15 square sheets with side lengths 10 cm, 11 cm, …, 24 cm. Find the total area.",
+      "answer": "4615 cm².",
+      "recordSha256": "33567caa3e11635cbb8827337a7883d7966e80af5837f598183e2b38e327a155",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q1",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q1",
+      "question": "Which inequality must the remainder r satisfy in Euclid's division lemma for positive a and b? Options: (A) 1<r<b (B) 0<r<b (C) 0≤r<b (D) 0<r≤b.",
+      "answer": "Option C: 0≤r<b.",
+      "recordSha256": "6b6ddfe0827efb5d98d1a8aa68d949fdc6c3c53a7d973dfb44453b1f36facfad",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q2",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q2",
+      "question": "Possible remainders when the cube of a positive integer is divided by 9: (A) 0,1,8 (B) 1,4,8 (C) 0,1,3 (D) 1,3,5.",
+      "answer": "Option A: 0, 1 and 8.",
+      "recordSha256": "83648f7501ff910b47f4277f6a6e8f0b1016565381b74a9115102d20578171d6",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q3",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q3",
+      "question": "HCF(65,117) is expressible as 65m−117. Find m. Options: (A) 4 (B) 2 (C) 1 (D) 3.",
+      "answer": "Option B: m = 2.",
+      "recordSha256": "ff5cd616209cc64ccfb7e2cc2f591d08987e268b71251fec65edb01022a383ad",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q4",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q4",
+      "question": "The sum of the exponents of prime factors in 1729 is: (A) 1 (B) 2 (C) 3 (D) 4.",
+      "answer": "Option C: 3.",
+      "recordSha256": "ed541b8d4a23eccf75d864764090b50a7955f28757c8cc73c0b70164c6693f11",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q5",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q5",
+      "question": "The least positive number divisible by every number 1 through 10 is: (A) 2025 (B) 5220 (C) 5025 (D) 2520.",
+      "answer": "Option D: 2520.",
+      "recordSha256": "6343bbf718c4a76056ce85b180113e1f9f72add266b6ba45703ef91f958c9ace",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q7",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q7",
+      "question": "Given F₁=1, F₂=3 and Fₙ=Fₙ₋₁+Fₙ₋₂, find F₅. Options: (A)3 (B)5 (C)8 (D)11.",
+      "answer": "Option D: 11.",
+      "recordSha256": "a3755c0955fcba930bc033470c18ff158ab7055e33734179f90b7d6b4d60b0e3",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q8",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q8",
+      "question": "An A.P. starts at 1 with common difference 4. Which is a term: (A)4551 (B)10091 (C)7881 (D)13531?",
+      "answer": "Option C: 7881.",
+      "recordSha256": "70f192ac009003524762250af294f444d40af3f8fcd76e2a707aa241e3eebf03",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q9",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q9",
+      "question": "If six times the 6th A.P. term equals seven times the 7th, find the 13th term. Options: (A)0 (B)6 (C)7 (D)13.",
+      "answer": "Option A: 0.",
+      "recordSha256": "e616e361a6598c7a56c6dcf4744090700297de2dee190dc413cd46d476958e3c",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q10",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q10",
+      "question": "An A.P. has 31 terms and the 16th term is m. Its sum is: (A)16m (B)62m (C)31m (D)31m/2.",
+      "answer": "Option C: 31m.",
+      "recordSha256": "37dcced352019e5032bc610f089aa5af868136359b0af9dbbe6937b97c46ffb2",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q11",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q11",
+      "question": "An A.P. begins at 1 and has common difference 4. How many terms have sum 120? Options: (A)6 (B)7 (C)8 (D)9.",
+      "answer": "Option C: 8.",
+      "recordSha256": "9c2e2e373da3caac9abad46d125f7736dd8618340ddcf1ff7c3b8f839450e811",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q12",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q12",
+      "question": "Let A = 2⁶⁵ and B = 2⁶⁴ + 2⁶³ + 2⁶² + … + 2⁰. Which is larger and by how much?",
+      "answer": "A is larger than B by 1 (option D).",
+      "recordSha256": "1d8fb4d7cecba76d30275af43b89c4b9060ada8c58f99a699471825ef7461dd4",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-10-q14",
+      "exercise": "2.10",
+      "label": "Exercise 2.10 · Q14",
+      "question": "If t₁,t₂,t₃,… form an A.P., what type of sequence is t₆,t₁₂,t₁₈,…? Options include A.P., G.P. and neither.",
+      "answer": "Option B: An arithmetic progression.",
+      "recordSha256": "7e5536fabc53d95fedb0da7694dd2e2d2ec508166c4ad3c0eac81e84be1159b5",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q1-ii",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q1(ii)",
+      "question": "Check whether the sequence 1/2, 1/3, 1/4, 1/5, … is in A.P.",
+      "answer": "Not an arithmetic progression.",
+      "recordSha256": "d3b6b91fd3a6822ae7cfe941518ca0f5d45a1bd1c27e926b53e0f21df30f473f",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q1-iii",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q1(iii)",
+      "question": "Check whether 9, 13, 17, 21, 25, … is in A.P.",
+      "answer": "Yes, it is an A.P. with common difference 4.",
+      "recordSha256": "95b16530d345fd99ae436aa4e3edae5f7d0d0154c89e2eebf2f66fbfeb3df2b8",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q1-iv",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q1(iv)",
+      "question": "Check whether −1/3, 0, 1/3, 2/3, … is in A.P.",
+      "answer": "Yes, an A.P. with common difference 1/3.",
+      "recordSha256": "f39b25f18cff6763610f8772a0aa7a20acdc49230bc3e943b6fb0d56bf766f19",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q2-i",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q2(i)",
+      "question": "The first term a = 5 and common difference d = 6. Find the corresponding A.P.",
+      "answer": "5, 11, 17, 23, …",
+      "recordSha256": "04b88464dbd676194889e5592f01d287797231c35062beda949320c86641caa7",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-5-q2-ii",
+      "exercise": "2.5",
+      "label": "Exercise 2.5 · Q2(ii)",
+      "question": "The first term a = 7 and common difference d = −5. Find the corresponding A.P.",
+      "answer": "7, 2, −3, −8, …",
+      "recordSha256": "45bc528d03ee1a7d1ffec99b6e0ca29fde1e2468cc5a235fc9829c83d4a269d7",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q1-i",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q1(i)",
+      "question": "Which of the following sequences are in G.P.? (i) 3, 9, 27, 81, …",
+      "answer": "Yes, it is a G.P.; common ratio 3.",
+      "recordSha256": "641e37538f19ad2ce7661a22f4df64f81248290a86cea59b6cc9400224eb6ea7",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q1-ii",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q1(ii)",
+      "question": "Which of the following sequences are in G.P.? (ii) 4, 44, 444, 4444, …",
+      "answer": "No, this is not a G.P.",
+      "recordSha256": "f4bb128b6609fae9aeb04fd4c6693481bf7e615e2e642c136fd529661ddf98ef",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q1-iii",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q1(iii)",
+      "question": "Which of the following sequences are in G.P.? (iii) 0.5, 0.05, 0.005, …",
+      "answer": "Yes, it is a G.P. with common ratio 1/10.",
+      "recordSha256": "e95c52ab82737282d331d86ce3a8385f9e8ebfaee7a4830cb0d44cdf0957b0fc",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q1-iv",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q1(iv)",
+      "question": "Which of the following sequences are in G.P.? (iv) 1/3, 1/6, 1/12, …",
+      "answer": "Yes, it is a G.P. with common ratio 1/2.",
+      "recordSha256": "b936af50b441e3d1060e8c84a44723ec1937e368d28333c6127c004841d92f3a",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    },
+    {
+      "id": "c10-2-ex2-7-q1-vi",
+      "exercise": "2.7",
+      "label": "Exercise 2.7 · Q1(vi)",
+      "question": "Which of the following sequences are in G.P.? (vi) 120, 60, 30, 18, …",
+      "answer": "No, it is not a G.P.",
+      "recordSha256": "382bfcf93e4596f58232198c9ef79d1daff2487676c48c9cf9577ffc643b28eb",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "edition": "2025"
+    }
+  ]
+}
