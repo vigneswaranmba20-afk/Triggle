@@ -58,8 +58,8 @@ const map={
     "ta": "மீளுரு விதி முந்தைய உறுப்புகளைப் பயன்படுத்தும். aₙ₋₁ என்பது உடனடியான முந்தைய உறுப்பு; aₙ₋₂ என்பது அதற்கு முன்புள்ள உறுப்பு. a₄-ஐக் காண a₃, a₂ இரண்டும் தெரிந்திருக்க வேண்டும்.",
     "transfer": {
       "prompt": {
-        "en": "If the first three terms are 1, 1, 3, what is a₄ = 2a₃ + a₂?",
-        "ta": "முதல் மூன்று உறுப்புகள் 1, 1, 3 எனில் a₄ = 2a₃ + a₂ என்ன?"
+        "en": "With a₁ = 2 and a₂ = 3, what is a₃ = 2a₂ + a₁?",
+        "ta": "a₁ = 2, a₂ = 3 எனில் a₃ = 2a₂ + a₁ எவ்வளவு?"
       },
       "choices": [
         {
@@ -67,22 +67,22 @@ const map={
           "ta": "5"
         },
         {
-          "en": "7",
-          "ta": "7"
+          "en": "8",
+        "ta": "8"
         },
         {
-          "en": "9",
-          "ta": "9"
+          "en": "10",
+        "ta": "10"
         }
       ],
       "correct": 1,
       "wrong": {
-        "en": "Use the immediate preceding terms: twice a₃ (=3) plus a₂ (=1).",
-        "ta": "உடனடியான முந்தைய உறுப்புகளைப் பயன்படுத்துங்கள்: 2×a₃(=3)+a₂(=1)."
+        "en": "Use the previous two terms: twice a₂ (=3) plus a₁ (=2).",
+        "ta": "முந்தைய இரு உறுப்புகளைப் பயன்படுத்துங்கள்: 2×a₂(=3)+a₁(=2)."
       },
       "success": {
-        "en": "Correct: 2×3+1=7. Each new term then becomes available for the next calculation.",
-        "ta": "சரி! 2×3+1=7. அடுத்த உறுப்பைக் காண இந்த 7-ஐயும் பயன்படுத்தலாம்."
+        "en": "Correct: 2×3+2=8. The rule works with new starting values, too.",
+        "ta": "சரி! 2×3+2=8. தொடக்க மதிப்புகளை மாற்றினாலும் இதே விதி செயல்படும்."
       }
     }
   }
