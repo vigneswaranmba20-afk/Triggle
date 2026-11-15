@@ -82,10 +82,15 @@ async function main(){
    }else{
     assert.notEqual(metrics.navPosition,'fixed','Desktop navigation remains in normal flow');
    }
-   await page.locator('#next').click();
-   assert.ok(new URL(page.url()).searchParams.get('question')!==grade10,'Next navigates');
-   await page.locator('#previous').click();
-   assert.equal(new URL(page.url()).searchParams.get('question'),grade10,'Previous restores');
+   if(await page.locator('#next').isEnabled()){
+     await page.locator('#next').click();
+     assert.ok(new URL(page.url()).searchParams.get('question')!==grade10,'Next stays inside the current exercise');
+     await page.locator('#previous').click();
+     assert.equal(new URL(page.url()).searchParams.get('question'),grade10,'Previous restores');
+   }else{
+     assert.match(await page.locator('#next').innerText(),/End of exercise|பயிற்சி முடிந்தது/,'Last question stays at exercise boundary');
+     assert.equal(await page.locator('#exerciseIndexLink').isVisible(),true,'Choose a different exercise from the index');
+   }
    await page.locator('#crumb .crumb-link').nth(1).click();
    assert.equal(await page.locator('#pathDialog').evaluate(el=>el.open),true,'Chapter picker remains accessible');
    await page.locator('#pathClose').click();

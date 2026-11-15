@@ -29,7 +29,9 @@ async function main(batch){
    page.on('pageerror',error=>errors.push(error.message));
    page.on('response',response=>{if(response.status()===404)missing.push(response.url());});
    if(batch.batchId==='g12-ch1-ex1-1'){await page.goto(base+'/index.html?class=12&chapter=g12-ch1');
-   await page.locator('.hub-section-card[data-hub-section="exercises"]').click();}else await page.goto(base+'/index.html?class=12&question='+batch.records[0].id);
+   await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+   assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+   await page.locator('.hub-exercise-link[data-exercise="1.1"]').click();}else await page.goto(base+'/index.html?class=12&question='+batch.records[0].id);
    assert.equal(new URL(page.url()).searchParams.get('question'),batch.records[0].id);
    for(let i=0;i<batch.records.length;i++){
     const record=batch.records[i];

@@ -13,9 +13,9 @@ for(const [path,body] of [['app.js',app],['chapter-hub.js',hub],['textbook-activ
 // bypass the complete worked-example/exercise list.
 assert(app.includes('function selectChapter(chapter)'), 'Explicit chapter-menu route missing');
 assert(app.includes('homeView=false;classIndex=false;chapterOverview=chapter;chapterSection=null;conceptIndex=null;'), 'Chapter card must open its hub');
-assert(app.includes("if(section==='exercises')"), 'Exercises card must open the first textbook question');
-assert(app.includes('current=exercises[0]'), 'Direct exercise route must start with Question 1');
-assert(app.includes('textbookExerciseList(chapter)'), 'Textbook navigation must be chapter-scoped');
+assert(hub.includes("if(section==='exercises')"), 'Exercises card must open the numbered exercise index');
+assert(!app.includes('current=exercises[0]'), 'Exercises section must not bypass the exercise index');
+assert(app.includes('exercises.filter(item=>item.exercise===current.exercise)'), 'Textbook Previous/Next must be exercise-scoped');
 assert(app.includes('function openChapterSection(section,chapter=chapterOverview,concept=null)'), 'Section navigation missing');
 assert(app.includes("b.onclick=()=>openPath(c.type)"), 'Chapter chevron must invoke chapter picker');
 assert(app.includes("chapterList().forEach(c=>options.push"), 'Chapter picker must list active-class chapters');
@@ -43,8 +43,8 @@ assert(html.includes('math-first.css?v=standard-20261111'),'Updated chapter-navi
 const glass=/\.figure-dialog\{[\s\S]*?background:rgba\(239,232,250,\.68\)!important/.test(css);
 assert(glass,'Venn dialog must be visibly translucent, not nearly opaque');
 assert(html.includes('textbook-activities.js?v=math-first-1'),'New activities renderer not versioned');
-assert(html.includes('chapter-hub.js?v=trace-g10ch2-20261115-2'),'Current uncluttered chapter hub must load without regressing matrix Concepts');
-assert(html.includes('app.js?v=trace-g10ch2-20261115-2'),'Current single-solution reader and fixed Chapter 2 navigation must load');
+assert(html.includes('chapter-hub.js?v=exercise-index-all-grades-20261115-1'),'Current uncluttered chapter hub must load without regressing matrix Concepts');
+assert(html.includes('app.js?v=exercise-index-all-grades-20261115-1'),'Current single-solution reader and fixed Chapter 2 navigation must load');
 assert(sw.includes("'./assets/math-first.css'"),'Offline shell must include new CSS');
 const cacheVersion=Number(sw.match(/triggle-shell-real-2025-v(\d+)/)?.[1]);
 assert.ok(Number.isInteger(cacheVersion)&&cacheVersion>=55,'Offline cache must invalidate all previous published versions');
@@ -59,7 +59,7 @@ assert(app.includes("if(window.TriggleSetVenn?.supports(item))return false"),'Su
 assert(!app.includes("$('diagramCaption').textContent"),'Removed figure caption must not cause a null dereference');
 assert(!html.includes('id="chapterMenuBtn"'),'Do not reintroduce old reader clutter');
 assert(html.includes('assets/set-venn-figures.js?v=venn-tall-2'),'New Venn SVG geometry must be loaded');
-assert(html.includes('assets/app.css?v=standard-20261111'),'Updated app CSS must be loaded');
+assert(html.includes('assets/app.css?v=exercise-index-20261115-1'),'Updated app CSS must be loaded');
 const venn=read('assets/set-venn-figures.js');
 assert(venn.includes('viewBox="0 0 560 420"'),'Taller Venn viewBox must match CSS proportions');
 new vm.Script(venn,{filename:'set-venn-figures.js'});

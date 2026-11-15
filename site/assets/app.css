@@ -1070,3 +1070,10 @@ body.textbook-reader .all-chapters-button{
 .rnlab .rnlab-pitfall p{font-size:13px;line-height:1.6;margin:9px 0 0}
 @media(max-width:390px){.rnlab .rnlab-foundation{padding:10px}.rnlab .rnlab-foundation-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.rnlab .rnlab-foundation-tabs button{font-size:11px;padding:8px 7px}.rnlab .rnlab-foundation-equation{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.rnlab .rnlab-foundation *{scroll-behavior:auto}}
+
+/* One-line return route before the current exercise identifier. */
+.question-exercise-path{display:flex;align-items:center;gap:7px;min-width:0;flex-wrap:wrap}
+.exercise-index-link{min-height:40px;padding:7px 9px;border:1px solid #d6cae8;border-radius:10px;background:#f9f6ff;color:#49346b;font-size:13px;font-weight:780;cursor:pointer;white-space:nowrap}
+.exercise-index-link[hidden]{display:none!important}
+.exercise-index-link:focus-visible{outline:3px solid #7c64af;outline-offset:2px}
+@media(max-width:430px){body.textbook-reader .question-exercise-path{gap:5px}body.textbook-reader .exercise-index-link{font-size:12px;min-height:38px;padding:6px 8px}body.textbook-reader .question-top{align-items:flex-start}body.textbook-reader .lesson-progress{padding-top:8px}}

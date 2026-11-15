@@ -49,8 +49,8 @@
   return window.TriggleNotation ? window.TriggleNotation.render(str,{alignCoefficientPowers}) : esc(str);
  }
 
- // Within textbook exercises, Previous/Next follows only that chapter's
- // exercise sequence (never original practice or an unrelated chapter).
+ // Textbook ordering is preserved; Previous/Next are further confined to the
+ // current exercise by activeList(), consistently for all Classes 9–12.
  const textbookExerciseList=chapter=>{
    const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
    if(grade!==10||String(chapter?.number)!=='2')return items;
@@ -68,7 +68,13 @@
  };
  const activeList=()=>{
    const chapter=chapterForItem(current),exercises=textbookExerciseList(chapter);
-   return exercises.some(item=>item.id===current.id)?exercises:classes[grade].items;
+   if(exercises.some(item=>item.id===current.id)){
+     // The selected exercise is a self-contained learning path in every grade.
+     return exercises.filter(item=>item.exercise===current.exercise);
+   }
+   // Legacy practice is also kept inside its own exercise when possible.
+   const local=classes[grade].items.filter(item=>item.chapter===current.chapter&&item.exercise===current.exercise);
+   return local.some(item=>item.id===current.id)?local:classes[grade].items;
  };
  const currentIndex=()=>activeList().findIndex(i=>i.id===current.id);
  const sectionForQuestion=item=>'exercises';
@@ -132,8 +138,8 @@
    updateUrl();remember();render();closeDrawer();resetScroll();
    $('lessonCard').focus({preventScroll:true});
  }
- // Chapter menus remain explicit; Exercises intentionally opens the first
- // available textbook problem directly, without intermediate practice lists.
+ // Every chapter's Exercises card opens the exercise-number index first.
+ // Choosing a numbered exercise begins at its first available question.
  function selectChapter(chapter){
    homeView=false;classIndex=false;chapterOverview=chapter;chapterSection=null;conceptIndex=null;
    questionOrigin=null;
@@ -142,21 +148,6 @@
  }
  function openChapterSection(section,chapter=chapterOverview,concept=null){
    if(!chapter||(!validSections.has(section)&&section!==null))return;
-   if(section==='exercises'){
-     const exercises=textbookExerciseList(chapter);
-     if(exercises.length){
-       // Exercise N.1 Q1 is the first textbook entry in the chapter sequence.
-       // Retain legacy practice data, but do not present it as textbook content.
-       homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;
-       conceptIndex=null;current=exercises[0];
-       questionOrigin={grade,chapterId:chapter.id,section:'exercises',direct:true};
-       updateUrl();remember();render();closeDrawer();resetScroll();
-       $('lessonCard').focus({preventScroll:true});
-       return;
-     }
-     // No textbook question yet: keep an honest empty-state section instead
-     // of redirecting children into an unrelated Triggle practice problem.
-   }
    homeView=false;classIndex=false;chapterOverview=chapter;
    chapterSection=section;conceptIndex=Number.isInteger(concept)?concept:null;
    updateUrl();render();closeDrawer();resetScroll();
@@ -205,9 +196,11 @@
    }else if(type==='chapter'){
      chapterList().forEach(c=>options.push({title:ui('chapter')+' '+c.number+' · '+tr(c.title),meta:ui(c.status)+' · '+chapterItems(c).length+' '+ui('existingQuestions'),active:c.id===selectedChapter()?.id,choose:()=>selectChapter(c)}));
    }else{
-     const group=new Map();activeList().filter(i=>i.chapter===current.chapter).forEach(i=>{const k=i.exercise;if(!group.has(k))group.set(k,{key:k,count:0,first:i});group.get(k).count++});
+     const chapter=chapterForItem(current);
+     const navigable=chapter?textbookExerciseList(chapter):activeList();
+     const group=new Map();navigable.forEach(i=>{const k=i.exercise;if(!group.has(k))group.set(k,{key:k,count:0,first:i});group.get(k).count++});
      [...group.values()].forEach(g=>options.push({title:labelForGroup(g.key),meta:g.count+' '+ui('lessons'),active:g.key===current.exercise,choose:()=>selectLesson(g.first)}));
-     activeList().filter(i=>i.chapter===current.chapter).forEach(item=>options.push({title:tr(item.label)+' · '+tr(item.title),meta:labelForGroup(item.exercise),active:item.id===current.id,choose:()=>selectLesson(item)}));
+     navigable.filter(i=>i.exercise===current.exercise).forEach(item=>options.push({title:tr(item.label)+' · '+tr(item.title),meta:labelForGroup(item.exercise),active:item.id===current.id,choose:()=>selectLesson(item)}));
    }
    options.forEach(option=>{const button=document.createElement('button');button.type='button';button.className='path-option'+(option.active?' selected':'');button.innerHTML='<span><strong>'+esc(option.title)+'</strong><small>'+esc(option.meta)+'</small></span><span aria-hidden="true">'+(option.active?'✓':'›')+'</span>';
      button.onclick=()=>{dialog.close();option.choose()};list.append(button)
@@ -298,6 +291,7 @@
       sources:curriculum.sources||[],initialConcept:conceptIndex,
       onConcept:(index,replace)=>{conceptIndex=index;updateUrl(replace);},
       onSection:(key)=>openChapterSection(key,chapter),
+      orderedExercises:textbookExerciseList(chapter),
       onQuestion:selectLesson,onClass:()=>changeGrade(grade),onHome:goHome
     });
     return;
@@ -541,11 +535,14 @@
   if(chapterOverview){$('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;renderBreadcrumb(chapterOverview.title);$('gradeTotal').textContent=chapterList().length+' '+ui('chapters');renderOverview(chapterOverview);renderList();window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:null,lang,grade,chapter:chapterOverview}}));return}
   const list=activeList();const n=currentIndex(),position=n+1,chapter=chapterForItem(current)?.title||classes[grade].chapters[current.chapter]||current.topic;
    const questionChapter=chapterForItem(current);
+   const isTextbookExercise=!!questionChapter&&textbookExerciseList(questionChapter).some(item=>item.id===current.id);
+   $('exerciseIndexLink').hidden=!isTextbookExercise;
+   $('exerciseIndexLink').textContent=lang==='ta'?'← பயிற்சிகள்':'← Exercises';
+   $('exerciseIndexLink').setAttribute('aria-label',lang==='ta'?'பயிற்சிகளின் பட்டியலுக்குத் திரும்பு':'Back to exercise list');
    if(questionChapter){
      const cameFrom=questionOrigin?.grade===grade&&questionOrigin?.chapterId===questionChapter.id;
      const returnTo=cameFrom&&['examples','exercises'].includes(questionOrigin.section)
        ?questionOrigin.section:sectionForQuestion(current);
-     const isTextbookExercise=textbookExerciseList(questionChapter).some(item=>item.id===current.id);
      const label=isTextbookExercise?(lang==='ta'?'அத்தியாயத்திற்குத் திரும்பு':'Back to chapter'):
        returnTo==='examples'?(lang==='ta'?'தீர்க்கப்பட்ட எடுத்துக்காட்டுகளுக்குத் திரும்பு':'Back to worked examples'):
        returnTo==='exercises'?(lang==='ta'?'அனைத்துப் பயிற்சிகளுக்கும் திரும்பு':'Back to all exercises'):
@@ -566,7 +563,10 @@
   renderInlineFigure();
   $('pageStatus').textContent=position+' '+ui('of')+' '+list.length;$('pageFill').style.width=(position/list.length*100)+'%';
   $('previous').disabled=n===0;$('next').disabled=n===list.length-1;
-  $('previous').innerHTML='← '+esc(ui('previous'));$('next').innerHTML=esc(document.body.classList.contains('textbook-reader')?(lang==='ta'?'அடுத்த பக்கம்':'Next page'):ui('nextQuestion'))+' →';
+  $('previous').innerHTML='← '+esc(ui('previous'));
+  $('next').innerHTML=isTextbookExercise&&n===list.length-1
+    ?esc(lang==='ta'?'பயிற்சி முடிந்தது':'End of exercise')+' ✓'
+    :esc(document.body.classList.contains('textbook-reader')?(lang==='ta'?'அடுத்த பக்கம்':'Next page'):ui('nextQuestion'))+' →';
   renderSteps();
   const difficulty=window.TriggleDifficulty?.get(current);
   const indicator=$('difficultyIndicator');
@@ -599,15 +599,15 @@
   window.TriggleConcept?.attach(context,$('diagramContent'));
  }
  $('previous').onclick=()=>navMove(-1);$('next').onclick=()=>navMove(1);
+ $('exerciseIndexLink').onclick=()=>{const chapter=chapterForItem(current);if(chapter)openChapterSection('exercises',chapter);};
  $('allChaptersButton').onclick=()=>changeGrade(grade);
  $('markDone').onclick=()=>{if(completed.has(current.id))completed.delete(current.id);else completed.add(current.id);store('triggle.learned.v119',[...completed]);render()};
  $('homeBtn').onclick=e=>{e.preventDefault();goHome()};
  $('questionReturnBtn').onclick=()=>{
    const chapter=chapterForItem(current);
    if(!chapter)return;
-   // The Exercises card no longer has a question-list landing page.
    if(textbookExerciseList(chapter).some(item=>item.id===current.id)){
-     selectChapter(chapter);
+     openChapterSection('exercises',chapter);
      return;
    }
    const section=questionOrigin?.grade===grade&&questionOrigin?.chapterId===chapter.id&&

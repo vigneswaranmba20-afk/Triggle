@@ -28,6 +28,8 @@ async function main(){
    page.on('response',response=>{if(response.status()===404)missing.push(response.url());});
    await page.goto(base+'/index.html?class=10&chapter=g10-ch2');
    await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
+   assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
+   await page.locator('.hub-exercise-link[data-exercise="2.1"]').click();
    assert.equal(new URL(page.url()).searchParams.get('question'),batch.records[0].id);
    for(let i=0;i<batch.records.length;i++){
     const record=batch.records[i];

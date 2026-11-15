@@ -20,10 +20,12 @@ const fixtures=[
 assert.deepEqual(Array.from(select(fixtures),item=>item.id),['ex9-1-q1','ex9-1-q2','unit']);
 assert.equal(select([fixtures[0],fixtures[3],fixtures[5]]).length,0);
 assert.equal(context.window.TriggleChapterHub.categorized(fixtures).exercises.length,3);
-assert.match(app,/if\(section==='exercises'\)/,'Exercise route must have a direct entry path');
-assert.match(app,/current=exercises\[0\]/,'First textbook question must open, never practice');
-assert.match(app,/textbookExerciseList\(chapter\)/,'Use chapter-only exercise navigation');
-assert.match(app,/selectChapter\(chapter\);\s*return;/,'Back from a textbook exercise returns to chapter');
-assert.match(app,/questionOrigin=\{grade,chapterId:chapter\.id,section:'exercises',direct:true\}/);
+assert.match(app,/chapterSection=section/,'Exercises stays a chapter section first');
+assert.doesNotMatch(app,/current=exercises\[0\]/,'No automatic jump into Question 1');
+assert.match(app,/exercises\.filter\(item=>item\.exercise===current\.exercise\)/,'Previous and Next remain inside one exercise');
+assert.match(app,/exerciseIndexLink/,'Visible return-to-index button is wired');
+assert.match(chapterHub,/hub-exercise-index/,'Shared chapter UI shows exercise numbers');
+assert.match(chapterHub,/onQuestion\(items\[0\]\)/,'Selecting an exercise opens its first question');
+assert.match(html,/id="exerciseIndexLink"/,'Every question template supports the Exercises link');
 assert.match(html,/chapter-hub\.js\?v=/,'Shared route helper must load');
-console.log('PASS: Exercises picks first textbook question, excludes original practice, preserves next/previous and safe empty-state.');
+console.log('PASS: exercises index first, one-exercise navigation boundary, linked return to index, and textbook/practice separation.');
