@@ -55,10 +55,10 @@ const q2=['i','ii','iii','iv'].map(part=>{
 });
 assert.match(q2[0].q.en,/districts in Tamilnadu/i);
 assert.match(q2[1].q.en,/straight lines passing through a point/i);
-assert.match(q2[2].q.en,/x\\s*∈\\s*Z/);
-assert.match(q2[2].q.en,/x\\s*<\\s*5/);
-assert.match(q2[3].q.en,/x²−5x\\+6\\s*=\\s*0/);
-assert.match(q2[3].q.en,/x\\s*∈\\s*N/);
+assert.match(q2[2].q.en,/x\s*∈\s*Z/);
+assert.match(q2[2].q.en,/x\s*<\s*5/);
+assert.match(q2[3].q.en,/x²−5x\+6\s*=\s*0/);
+assert.match(q2[3].q.en,/x\s*∈\s*N/);
 assert.deepEqual(q2.map(row=>row.answer),['Finite','Infinite','Infinite','Finite']);
 // An integer x<5 always has a smaller integer x-1<5; Q2(iii) is infinite.
 assert([-100,-1,0,4].every(x=>x<5&&x-1<5));
