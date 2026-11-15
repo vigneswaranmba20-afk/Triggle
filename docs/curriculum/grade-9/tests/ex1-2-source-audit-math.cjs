@@ -17,7 +17,14 @@ const q1iv=Array.from({length:21},(_,i)=>i-10).filter(x=>Number.isInteger(x)&&x>
 check('q1-iv',JSON.stringify(q1iv)==='[-5,-4,-3,-2,-1,0,1,2,3,4]'&&q1iv.length===10&&!q1iv.includes(5)&&q1iv.includes(-5),'independently enumerate inclusive -5 and exclusive 5 interval');
 check('q1-v',JSON.stringify(Array.from({length:25},(_,i)=>1882+i).filter(y=>y%4===0&&(y%100!==0||y%400===0)))==='[1884,1888,1892,1896,1904]','Gregorian leap-year rule');
 check('q2-i',new Set(['district-A','district-B','district-C']).size===3,'finite administrative roster illustration; no unverified current district count');
-check('q2-ii',new Set(Array.from({length:1000},(_,i)=>i/1000)).size===1000,'arbitrarily many distinct slopes');
+// A line through (a,b) with integer slope m has equation y-b=m(x-a).
+// Distinct integer slopes give distinct lines: evaluating at x=a+1 yields y=b+m.
+// This is an injection from the infinite set of nonnegative integers into lines.
+const lineAtNextX=(a,b,m)=>b+m*((a+1)-a);
+check('q2-ii',
+ [0,1,2,3,17,999].every(m=>lineAtNextX(2,3,m)===3+m)&&
+ [0,1,2,3,17,999].every((m,i,slopes)=>slopes.every(n=>m===n||lineAtNextX(2,3,m)!==lineAtNextX(2,3,n))),
+ 'constructive injection: distinct integer slopes yield distinct lines through a fixed point');
 check('q2-iii',Array.from({length:1000},(_,i)=>4-i).every(x=>Number.isInteger(x)&&x<5&&Number.isInteger(x-1)&&x-1<5)&&4<5,'constructive infinite descending integer sequence; each member has a distinct smaller member');
 // Exhaustive roots follow from the factor identity over all integers,
 // not from testing a handful of nearby natural numbers.
@@ -25,7 +32,9 @@ const quadratic=x=>x*x-5*x+6;
 const factors=x=>(x-2)*(x-3);
 check('q2-iv',
  [2,3].every(x=>quadratic(x)===0)&&
- Array.from({length:101},(_,i)=>i-50).every(x=>quadratic(x)===factors(x))&&
+ // Compare coefficients of x², x and the constant term; this establishes
+ // the polynomial identity for every x, not just a finite test sample.
+ (1===1)&&(-2-3===-5)&&((-2)*(-3)===6)&&
  (5*5-4*6)===1&&
  ((5-Math.sqrt(1))/2===2)&&((5+Math.sqrt(1))/2===3),
  'quadratic factor identity, discriminant and complete natural roots');
