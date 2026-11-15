@@ -39,19 +39,19 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "choices": [
         {
-          "en": "2",
-          "ta": "2"
-        },
-        {
           "en": "3",
           "ta": "3"
         },
         {
           "en": "5",
           "ta": "5"
+        },
+        {
+          "en": "2",
+          "ta": "2"
         }
       ],
-      "correct": 0,
+      "correct": 2,
       "hint": {
         "en": "Make groups of five first.",
         "ta": "முதலில் ஐந்து கொண்ட குழுக்களை உருவாக்குங்கள்."
@@ -157,19 +157,19 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "choices": [
         {
-          "en": "4",
-          "ta": "4"
-        },
-        {
           "en": "−4",
           "ta": "−4"
+        },
+        {
+          "en": "4",
+          "ta": "4"
         },
         {
           "en": "32",
           "ta": "32"
         }
       ],
-      "correct": 0,
+      "correct": 1,
       "hint": {
         "en": "32 × 2 = 64.",
         "ta": "32 × 2 = 64."
@@ -217,19 +217,19 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "choices": [
         {
-          "en": "36",
-          "ta": "36"
-        },
-        {
           "en": "6",
           "ta": "6"
+        },
+        {
+          "en": "36",
+          "ta": "36"
         },
         {
           "en": "24",
           "ta": "24"
         }
       ],
-      "correct": 0,
+      "correct": 1,
       "hint": {
         "en": "Take enough 2s and 3s to contain both factorisations.",
         "ta": "இரண்டு காரணிப் பிரிப்புகளுக்கும் போதுமான 2, 3 காரணிகளை எடுத்துக்கொள்ளுங்கள்."
@@ -275,19 +275,19 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "choices": [
         {
-          "en": "11 a.m.",
-          "ta": "காலை 11 மணி"
-        },
-        {
           "en": "7 a.m.",
           "ta": "காலை 7 மணி"
         },
         {
           "en": "11 p.m.",
           "ta": "இரவு 11 மணி"
+        },
+        {
+          "en": "11 a.m.",
+          "ta": "காலை 11 மணி"
         }
       ],
-      "correct": 0,
+      "correct": 2,
       "hint": {
         "en": "100 hours is 4 full days and 4 more hours.",
         "ta": "100 மணி = 4 முழு நாட்கள் + 4 மணிநேரம்."
@@ -401,19 +401,19 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "choices": [
         {
-          "en": "14",
-          "ta": "14"
-        },
-        {
           "en": "13",
           "ta": "13"
         },
         {
           "en": "15",
           "ta": "15"
+        },
+        {
+          "en": "14",
+          "ta": "14"
         }
       ],
-      "correct": 0,
+      "correct": 2,
       "hint": {
         "en": "Keep adding 3.",
         "ta": "ஒவ்வொரு முறையும் 3-ஐக் கூட்டுங்கள்."
@@ -462,19 +462,19 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "choices": [
         {
-          "en": "8",
-          "ta": "8"
-        },
-        {
           "en": "6",
           "ta": "6"
+        },
+        {
+          "en": "8",
+          "ta": "8"
         },
         {
           "en": "10",
           "ta": "10"
         }
       ],
-      "correct": 0,
+      "correct": 1,
       "hint": {
         "en": "Add the previous two values: 3 and 5.",
         "ta": "முந்தைய இரண்டான 3, 5-ஐக் கூட்டுங்கள்."
@@ -645,19 +645,19 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "choices": [
         {
-          "en": "15",
-          "ta": "15"
-        },
-        {
           "en": "10",
           "ta": "10"
         },
         {
           "en": "20",
           "ta": "20"
+        },
+        {
+          "en": "15",
+          "ta": "15"
         }
       ],
-      "correct": 0,
+      "correct": 2,
       "hint": {
         "en": "Pair 1 with 5 and 2 with 4.",
         "ta": "1, 5-ஐயும் 2, 4-ஐயும் இணைத்துக் கூட்டுங்கள்."
@@ -706,19 +706,19 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "choices": [
         {
-          "en": "135",
-          "ta": "135"
-        },
-        {
           "en": "90",
           "ta": "90"
+        },
+        {
+          "en": "135",
+          "ta": "135"
         },
         {
           "en": "60",
           "ta": "60"
         }
       ],
-      "correct": 0,
+      "correct": 1,
       "hint": {
         "en": "Multiply 45 by the same ratio 3.",
         "ta": "45-ஐப் பொதுவிகிதம் 3-ஆல் பெருக்குங்கள்."
@@ -766,19 +766,19 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "choices": [
         {
-          "en": "15",
-          "ta": "15"
-        },
-        {
           "en": "16",
           "ta": "16"
+        },
+        {
+          "en": "15",
+          "ta": "15"
         },
         {
           "en": "12",
           "ta": "12"
         }
       ],
-      "correct": 0,
+      "correct": 1,
       "hint": {
         "en": "Add the four terms or use n = 4.",
         "ta": "நான்கு உறுப்புகளைக் கூட்டுங்கள்; அல்லது n = 4 பயன்படுத்துங்கள்."
@@ -887,19 +887,19 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "choices": [
         {
-          "en": "36",
-          "ta": "36"
-        },
-        {
           "en": "27",
           "ta": "27"
         },
         {
           "en": "18",
           "ta": "18"
+        },
+        {
+          "en": "36",
+          "ta": "36"
         }
       ],
-      "correct": 0,
+      "correct": 2,
       "hint": {
         "en": "1 + 8 + 27.",
         "ta": "1 + 8 + 27."
