@@ -47,6 +47,24 @@ assert(quadratic.q.en.includes('x²−5x+6'),'Q2(iv) must retain the mathematica
 assert(!quadratic.q.en.includes('x²–5x+6'),'En dash is not a mathematical minus');
 const quadraticFallback=quadratic.questionMath?.en?.find?.(part=>part&&typeof part==='object')?.fallback;
 assert(quadraticFallback?.includes('x²−5x+6'),'Accessible Q2(iv) fallback must retain the mathematical minus');
+// Independently protect the mathematical conditions of Q2, rather than
+// accepting a matching answer string from the candidate archive alone.
+const q2=['i','ii','iii','iv'].map(part=>{
+ const row=live.find(item=>item.id==='g9-ch1-ex1.2-q2-'+part);
+ assert(row,'Missing Q2('+part+')'); return row;
+});
+assert.match(q2[0].q.en,/districts in Tamilnadu/i);
+assert.match(q2[1].q.en,/straight lines passing through a point/i);
+assert.match(q2[2].q.en,/x\\s*∈\\s*Z/);
+assert.match(q2[2].q.en,/x\\s*<\\s*5/);
+assert.match(q2[3].q.en,/x²−5x\\+6\\s*=\\s*0/);
+assert.match(q2[3].q.en,/x\\s*∈\\s*N/);
+assert.deepEqual(q2.map(row=>row.answer),['Finite','Infinite','Infinite','Finite']);
+// An integer x<5 always has a smaller integer x-1<5; Q2(iii) is infinite.
+assert([-100,-1,0,4].every(x=>x<5&&x-1<5));
+// The only natural roots of x²-5x+6 are 2 and 3; Q2(iv) is finite.
+assert.deepEqual(Array.from({length:20},(_,i)=>i+1).filter(x=>x*x-5*x+6===0),[2,3]);
+assert(q2.every(row=>row.translationReview==='pending'));
 // Fail loudly if somebody tries to register the full candidate module on top of Q1/Q2.
 const full=read('site/data/textbook-exercises/g9-ch1-ex1-2-en.js');
 assert(!html.includes('g9-ch1-ex1-2-en.js'),'Full 34-part archive must remain isolated');
