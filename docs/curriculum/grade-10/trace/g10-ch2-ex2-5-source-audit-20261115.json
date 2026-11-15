@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 2,
+  "exercise": "2.5",
+  "edition": "TN SCERT 2025 revised English",
+  "textbook": "Class 10 Mathematics, Chapter 2 Numbers and Sequences",
+  "originalPdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+  "sourcePages": {
+    "printed": [
+      61,
+      62
+    ],
+    "pdf": [
+      67,
+      68
+    ]
+  },
+  "reviewMethod": "Visually checked original English page images against the existing source-linked student question records and six independently solved missing parts",
+  "sourceLanguages": {
+    "english": "source-image checked",
+    "tamil": "pending, not claimed"
+  },
+  "teacherReview": "not performed",
+  "chapterCompletion": false,
+  "numberedQuestions": 14,
+  "uniqueSubpartTasks": 21,
+  "existingIntegratedUniqueTasks": 15,
+  "missingStagedTasks": 6,
+  "releaseState": "staging only; no student-facing integration until CI and browser gates",
+  "tasks": [
+    {
+      "label": "Q1(i)",
+      "id": "c10-2-ex2-5-q1-i",
+      "sourcePdfPage": 67,
+      "state": "new source-image-checked staged candidate"
+    },
+    {
+      "label": "Q1(ii)",
+      "id": "c10-2-ex2-5-q1-ii",
+      "sourcePdfPage": 67,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q1(iii)",
+      "id": "c10-2-ex2-5-q1-iii",
+      "sourcePdfPage": 67,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q1(iv)",
+      "id": "c10-2-ex2-5-q1-iv",
+      "sourcePdfPage": 67,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q1(v)",
+      "id": "c10-2-ex2-5-q1-v",
+      "sourcePdfPage": 67,
+      "state": "new source-image-checked staged candidate"
+    },
+    {
+      "label": "Q2(i)",
+      "id": "c10-2-ex2-5-q2-i",
+      "sourcePdfPage": 67,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q2(ii)",
+      "id": "c10-2-ex2-5-q2-ii",
+      "sourcePdfPage": 67,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q2(iii)",
+      "id": "c10-2-ex2-5-q2-iii",
+      "sourcePdfPage": 67,
+      "state": "new source-image-checked staged candidate"
+    },
+    {
+      "label": "Q3(i)",
+      "id": "c10-2-ex2-5-q3-i",
+      "sourcePdfPage": 67,
+      "state": "new source-image-checked staged candidate"
+    },
+    {
+      "label": "Q3(ii)",
+      "id": "c10-2-ex2-5-q3-ii",
+      "sourcePdfPage": 67,
+      "state": "new source-image-checked staged candidate"
+    },
+    {
+      "label": "Q4",
+      "id": "c10-2-ex2-5-q4",
+      "sourcePdfPage": 68,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q5",
+      "id": "c10-2-ex2-5-q5",
+      "sourcePdfPage": 68,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q6",
+      "id": "c10-2-ex2-5-q6",
+      "sourcePdfPage": 68,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q7",
+      "id": "c10-2-ex2-5-q7",
+      "sourcePdfPage": 68,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q8",
+      "id": "c10-2-ex2-5-q8",
+      "sourcePdfPage": 68,
+      "state": "new source-image-checked staged candidate"
+    },
+    {
+      "label": "Q9",
+      "id": "c10-2-ex2-5-q9",
+      "sourcePdfPage": 68,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q10",
+      "id": "c10-2-ex2-5-q10",
+      "sourcePdfPage": 68,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q11",
+      "id": "c10-2-ex2-5-q11",
+      "sourcePdfPage": 68,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q12",
+      "id": "c10-2-ex2-5-q12",
+      "sourcePdfPage": 68,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q13",
+      "id": "c10-2-ex2-5-q13",
+      "sourcePdfPage": 68,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q14",
+      "id": "c10-2-ex2-5-q14",
+      "sourcePdfPage": 68,
+      "state": "existing student record"
+    }
+  ],
+  "priorityExplanations": [
+    {
+      "question": "Q1(v)",
+      "reason": "Repeating terms are not necessarily arithmetic progressions"
+    },
+    {
+      "question": "Q3(i–ii)",
+      "reason": "Obtain first term from t1 and common difference from t2−t1"
+    },
+    {
+      "question": "Q6",
+      "reason": "Even number of terms means two middle terms"
+    },
+    {
+      "question": "Q7",
+      "reason": "Rearrange 9t9=15t15 before identifying t24"
+    },
+    {
+      "question": "Q8",
+      "reason": "Use the middle-term property 2b=a+c and check k"
+    },
+    {
+      "question": "Q12",
+      "reason": "Use proportionality and note nonzero ratio denominators"
+    },
+    {
+      "question": "Q14",
+      "reason": "Distinguish year number from annual increase count"
+    }
+  ]
+}
