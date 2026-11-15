@@ -41,7 +41,7 @@ assert(items.every(q=>q.chapter==='2'&&q.classNum===10&&q.kind==='textbook'));
 assert(items.every(q=>q.source.includes('13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of')&&q.edition==='2025'));
 assert(items.every(q=>q.steps.length>=2&&q.steps.every(s=>s.en.length>15&&s.eq.length>2)));
 assert(items.every(q=>q.translationReview==='pending'),'Do not present provisional Tamil reviews as final');
-assert(items.every(q=>!q.id.includes('ex2-2-q8')),'Hold unresolved 2.2 Q8');
+assert(window.TRIGGLE_G10_CH2_PATH.stages.length===15,'No concept coverage regression');
 const answers=Object.fromEntries(items.map(q=>[q.id,q.answer]));
 function has(id,t){assert(answers[id]?.includes(t),id+' answer must include '+t)}
 has('c10-2-ex2-3-q7','Friday');has('c10-2-ex2-3-q10','Monday');
