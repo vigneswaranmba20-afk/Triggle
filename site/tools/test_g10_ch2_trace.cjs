@@ -30,7 +30,10 @@ assert.equal(additions.length,53,'53 distinct original English textbook question
 assert.equal(new Set(additions.map(q=>q.id)).size,53);
 assert.equal(textbook.filter(q=>q.exercise==='2.1').length,10);
 assert.equal(textbook.filter(q=>q.exercise==='2.2').length,8);
-assert.equal(textbook.length,71,'Retain 18 earlier published + add 53');
+assert.equal(textbook.length,81,'Retain 18 earlier published, 53 canonical TRACE items, and 10 non-overlapping supplements');
+const supplements=all.classes[10].items.filter(q=>q.traceStatus?.startsWith('source-text reviewed'));
+assert.equal(supplements.length,10,'Integrate precisely ten unique textbook subparts without duplicate bundled questions');
+assert.equal(new Set(textbook.map(q=>q.id)).size,textbook.length,'Never duplicate student-facing question IDs');
 const grouped={'2.3':4,'2.4':1,'2.5':10,'2.6':8,'2.7':8,'2.8':5,'2.9':5,'2.10':12};
 for(const [ex,n] of Object.entries(grouped))assert.equal(additions.filter(q=>q.exercise===ex).length,n,ex);
 assert.ok(!all.classes[10].items.some(q=>q.id==='c10-2-ex2-2-q8'),'Hold disputed Exercise 2.2 Question 8');
