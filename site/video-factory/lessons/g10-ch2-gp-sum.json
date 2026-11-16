@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch2-gp-sum",
+  "class": 10,
+  "chapter": "2",
+  "language": "en",
+  "title": "Why a geometric series cancels itself",
+  "subtitle": "Geometric Series · Grade 10",
+  "voice": {
+    "model": "gemini-3.1-flash-tts-preview",
+    "name": "Kore"
+  },
+  "beats": [
+    {
+      "id": "wonder",
+      "scene": "gp-intro",
+      "narration": "How can we add one, two, four, and eight quickly? There is a pattern hiding here.",
+      "holdAfter": 1.1
+    },
+    {
+      "id": "doubling-pattern",
+      "scene": "gp-pattern",
+      "narration": "Each term is double the previous one. That fixed multiplier, two, is called the common ratio.",
+      "holdAfter": 1.1
+    },
+    {
+      "id": "name-the-sum",
+      "scene": "gp-name",
+      "narration": "Call the sum S. So S equals one plus two plus four plus eight.",
+      "holdAfter": 0.9
+    },
+    {
+      "id": "double-the-sum",
+      "scene": "gp-double",
+      "narration": "Double every term. Two S equals two plus four plus eight plus sixteen. Notice how the terms shift.",
+      "holdAfter": 1.1
+    },
+    {
+      "id": "align-the-rows",
+      "scene": "gp-align",
+      "narration": "Align the doubled sum and the original. Two, four, and eight now match, column for column.",
+      "holdAfter": 1.2
+    },
+    {
+      "id": "cancel-the-middle",
+      "scene": "gp-cancel",
+      "narration": "Subtract S from two S. The three matching terms cancel. Sixteen minus one remains. Since two S minus S equals S, the sum is fifteen.",
+      "holdAfter": 1.6
+    },
+    {
+      "id": "discover-formula",
+      "scene": "gp-rule",
+      "narration": "The same idea works with any first term a and ratio r. Multiply by r and subtract. For n terms, the sum is a times the bracket r to the power n minus one, all divided by r minus one. But r must not equal one.",
+      "holdAfter": 2
+    },
+    {
+      "id": "your-turn",
+      "scene": "gp-practice",
+      "narration": "Your turn. Add one, three, nine, and twenty-seven. Multiply the sum by three, then subtract. Which terms cancel? Pause and try it yourself.",
+      "holdAfter": 3.6
+    },
+    {
+      "id": "check-your-thinking",
+      "scene": "gp-answer",
+      "narration": "Three S equals three plus nine plus twenty-seven plus eighty-one. Subtract S. Two S equals eighty-one minus one, which is eighty. So S equals forty. That's the shortcut.",
+      "holdAfter": 2.3
+    }
+  ],
+  "visual": {
+    "template": "gp-sum-cancel-v1",
+    "unit": "GEOMETRIC SERIES",
+    "exampleTerms": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "practiceTerms": [
+      1,
+      3,
+      9,
+      27
+    ]
+  }
+}

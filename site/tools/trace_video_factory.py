@@ -21,7 +21,9 @@ import urllib.error
 import urllib.request
 import wave
 
-SCENES = {"intro", "sequence", "outer-pair", "inner-pair", "middle", "formula", "apply", "practice", "answer"}
+SCENES = {"intro", "sequence", "outer-pair", "inner-pair", "middle", "formula", "apply", "practice", "answer",
+          "gp-intro", "gp-pattern", "gp-name", "gp-double", "gp-align", "gp-cancel", "gp-rule", "gp-practice", "gp-answer"}
+GP_ORDER = ["gp-intro","gp-pattern","gp-name","gp-double","gp-align","gp-cancel","gp-rule","gp-practice","gp-answer"]
 ROOT = Path(__file__).resolve().parents[2]
 PALETTE = {"bg":"#FAF8F5", "ink":"#172337", "sub":"#5B6776", "maroon":"#80324A", "gold":"#C5A371", "surface":"#FFFFFF", "line":"#E8E2DA", "soft":"#F1ECE6"}
 FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
@@ -76,19 +78,36 @@ def validate_lesson(spec):
     if 'answer' in scenes and ('practice' not in scenes or scenes.index('answer') <= scenes.index('practice')):
         raise ValueError('Practice answer must be in a separate later scene')
     visual=spec.get('visual',{})
-    if visual.get('template')!='ap-sum-pairs-v1':
-        raise ValueError('Only the reviewed A.P. pairing visual template is supported yet')
-    for key in ('exampleTerms','practiceTerms'):
-        terms=visual.get(key)
-        if not isinstance(terms,list) or len(terms)!=5 or any(type(x) is not int or x<1 or x>99 for x in terms):
-            raise ValueError('Visual requires five positive integer terms')
-        delta=terms[1]-terms[0]
-        if not delta or any(terms[i+1]-terms[i]!=delta for i in range(4)):
-            raise ValueError('Terms must be an exact arithmetic progression')
-        if 5*(terms[0]+terms[-1])!=2*sum(terms):
-            raise ValueError('Displayed sum formula fails exact integer arithmetic')
-    if scenes != ['intro','sequence','outer-pair','inner-pair','middle','formula','apply','practice','answer']:
-        raise ValueError('A.P. pairing scene order changed unexpectedly')
+    if visual.get('template')=='ap-sum-pairs-v1':
+        for key in ('exampleTerms','practiceTerms'):
+            terms=visual.get(key)
+            if not isinstance(terms,list) or len(terms)!=5 or any(type(x) is not int or x<1 or x>99 for x in terms):
+                raise ValueError('Visual requires five positive integer terms')
+            delta=terms[1]-terms[0]
+            if not delta or any(terms[i+1]-terms[i]!=delta for i in range(4)):
+                raise ValueError('Terms must be an exact arithmetic progression')
+            if 5*(terms[0]+terms[-1])!=2*sum(terms):
+                raise ValueError('Displayed sum formula fails exact integer arithmetic')
+        if scenes != ['intro','sequence','outer-pair','inner-pair','middle','formula','apply','practice','answer']:
+            raise ValueError('A.P. pairing scene order changed unexpectedly')
+    elif visual.get('template')=='gp-sum-cancel-v1':
+        if spec.get('id')!='g10-ch2-gp-sum' or scenes!=GP_ORDER:
+            raise ValueError('G.P. requires its nine verified cancellation scenes in order')
+        for key,ratio in [('exampleTerms',2),('practiceTerms',3)]:
+            terms=visual.get(key)
+            if not isinstance(terms,list) or len(terms)!=4 or any(type(x) is not int for x in terms):
+                raise ValueError('G.P. requires four integer terms')
+            if terms != [ratio**i for i in range(4)]:
+                raise ValueError('G.P. term alignment and ratio must match exact validated values')
+            if sum(terms)!=(ratio**4-1)//(ratio-1):
+                raise ValueError('G.P. sum and cancellation disagree')
+        if any(x in ' '.join(b['narration'].lower() for b in beats[:-1]) for x in ('40', 'equals forty', 'is forty')):
+            raise ValueError('G.P. practice answer is revealed before the last scene')
+        if 'pause' not in beats[-2]['narration'].lower():
+            raise ValueError('G.P. practice must allow a real pause before answer')
+        # No arbitrary textbook question is transcribed. This is original Triggle practice.
+    else:
+        raise ValueError('Unsupported visual template')
     return spec
 
 
@@ -214,6 +233,9 @@ def segment_audio(beat, lesson, audio_root, mode, existing_dir, api_key):
 
 
 def artwork(spec, beat, fraction, index, total, w, h, demo):
+    if spec.get('visual',{}).get('template')=='gp-sum-cancel-v1':
+        from trace_gp_artwork import artwork as gp_artwork
+        return gp_artwork(spec,beat,fraction,index,total,w,h,demo)
     from PIL import Image, ImageDraw, ImageFont
     im=Image.new('RGB',(w,h),PALETTE['bg'])
     d=ImageDraw.Draw(im)
@@ -381,14 +403,15 @@ def render(args):
 
 def self_test(lesson):
     x=load_lesson(lesson)
-    assert x['beats'][0]['scene']=='intro'
-    assert x['beats'][-1]['scene']=='answer'
-    assert x['beats'][-2]['scene']=='practice'
-    bad=json.loads(json.dumps(x));bad['beats'][-1]['scene']='practice'
+    gp=x.get('visual',{}).get('template')=='gp-sum-cancel-v1'
+    assert x['beats'][0]['scene']==('gp-intro' if gp else 'intro')
+    assert x['beats'][-1]['scene']==('gp-answer' if gp else 'answer')
+    assert x['beats'][-2]['scene']==('gp-practice' if gp else 'practice')
+    bad=json.loads(json.dumps(x));bad['beats'][-1]['scene']='gp-practice' if gp else 'practice'
     try:validate_lesson(bad)
     except ValueError:pass
     else:raise AssertionError('Lost exercise order guard')
-    print('PASS template validation, A.P. arithmetic and practice-answer sequencing:',lesson)
+    print('PASS template validation, exact progression arithmetic and practice-answer sequencing:',lesson)
 
 
 def main():

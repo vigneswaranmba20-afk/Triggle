@@ -10,7 +10,7 @@ import sys
 from urllib.parse import urlsplit
 
 ROOT=Path(__file__).resolve().parents[2]
-ALLOWED={'g10-ch2-ap-sum':ROOT/'site/data/g10-ch2-concepts.js'}
+ALLOWED={key:ROOT/'site/data/g10-ch2-concepts.js' for key in ('g10-ch2-ap-sum','g10-ch2-gp-sum')}
 
 def digest(path):
     h=hashlib.sha256()
@@ -48,7 +48,8 @@ def verify(result_file,expected_sha,lesson):
     planned=[b['id'] for b in spec['beats']]
     actual=[b['beat'] for b in record['beats']]
     if planned!=actual: raise ValueError('Incomplete or reordered reviewed beats')
-    if record['beats'][-2]['scene']!='practice' or record['beats'][-1]['scene']!='answer':
+    expected=('gp-practice','gp-answer') if lesson=='g10-ch2-gp-sum' else ('practice','answer')
+    if (record['beats'][-2]['scene'],record['beats'][-1]['scene'])!=expected:
         raise ValueError('Practice must precede answer reveal')
     return record,path
 
@@ -59,9 +60,9 @@ def register(lesson, url, seconds):
         raise ValueError('Expected a public direct HTTPS MP4 URL')
     if not 10<=seconds<=600: raise ValueError('Unexpected video duration')
     file=ALLOWED[lesson]; old=file.read_text(encoding='utf8')
-    pattern=r'("id":\s*"g10-ch2-ap-sum",\s*\n\s*"video":\s*)\{[^}]*\}'
+    pattern=r'("id":\s*"'+re.escape(lesson)+r'",\s*\n\s*)(?:"video":\s*\{[^}]*\},\s*)?'
     newvideo=json.dumps({'src':url,'language':'en','durationSeconds':round(seconds,2)},ensure_ascii=False)
-    updated,n=re.subn(pattern,lambda m:m.group(1)+newvideo,old)
+    updated,n=re.subn(pattern,lambda m:m.group(1)+'"video": '+newvideo+',\n      ',old)
     if n!=1:raise ValueError('Cannot uniquely find reviewed target concept, refusing to modify app')
     file.write_text(updated,encoding='utf8')
     print('Updated only existing video reference for '+lesson)
