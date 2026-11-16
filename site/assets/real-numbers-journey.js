@@ -35,7 +35,7 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
  root.innerHTML='<div class="sp2-index-view" data-index-view>'+
    '<nav class="sp2-nav" data-nav role="group" aria-label="'+esc(ta?'ஒரு கருத்தைத் தேர்ந்தெடுக்கவும்':'Choose a concept')+'"></nav></div>'+
    '<div class="sp2-detail-view" data-detail-view hidden>'+
-   '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+esc(backLabel)+'</button></div>'+
+   '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+esc(backLabel)+'</button><button type="button" class="sp2-next-concept" data-top-next></button></div>'+
    '<div class="sp2-panel" data-panel></div>'+
    '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+esc(ta?'கருத்துகளுக்கிடையே நகர்க':'Move between concepts')+'">'+
    '<button type="button" class="sp2-footer-prev" data-footer-prev>← '+esc(t.previousIdea)+'</button>'+
@@ -62,6 +62,9 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
   const next=root.querySelector('[data-footer-next]');
   next.textContent=active===path.stages.length-1?backLabel+' →':t.nextIdea+' →';
   next.classList.toggle('is-return',active===path.stages.length-1);
+   const top=root.querySelector('[data-top-next]');
+   top.textContent=active===path.stages.length-1?(ta?'கருத்துகள் →':'Concept list →'):(ta?'அடுத்த கருத்து →':'Next concept →');
+   top.setAttribute('aria-label',active===path.stages.length-1?backLabel:t.nextIdea);
  }
  function showIndex(focus=false,notify=true){
   active=-1;root.dataset.view='index';indexView.hidden=false;detailView.hidden=true;update();
@@ -74,7 +77,8 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
   if(active===path.stages.length-1){showIndex(true);return;}
   show(active+1,true);
  });
- function controls(label,items,value,onChange){const host=panel.querySelector('[data-demo-controls]');
+ root.querySelector('[data-top-next]').addEventListener('click',()=>root.querySelector('[data-footer-next]').click());
+  function controls(label,items,value,onChange){const host=panel.querySelector('[data-demo-controls]');
   const group=document.createElement('div');group.className='rnlab-choices';group.setAttribute('role','group');group.setAttribute('aria-label',label);
   items.forEach(([val,caption])=>{const b=document.createElement('button');b.type='button';b.className='rnlab-choice';b.dataset.demoMode=String(val);if(typeof caption==='object'){b.innerHTML=caption.html;b.setAttribute('aria-label',caption.label);}
    else{b.innerHTML='<span class="rnlab-math-choice">'+notation(caption)+'</span>';b.setAttribute('aria-label',String(caption));}
