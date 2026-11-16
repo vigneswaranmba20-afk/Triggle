@@ -16,7 +16,7 @@
       68
     ]
   },
-  "reviewMethod": "Visually checked original English page images against the existing source-linked student question records and six independently solved missing parts",
+  "reviewMethod": "Visually checked original English page images against the existing source-linked student question records and six independently solved missing parts; Q3(i–ii) printed p. 62 verified against connected 2025 English textbook text (PDF p. 68) on 2026-11-16",
   "sourceLanguages": {
     "english": "source-image checked",
     "tamil": "pending, not claimed"
@@ -80,13 +80,13 @@
     {
       "label": "Q3(i)",
       "id": "c10-2-ex2-5-q3-i",
-      "sourcePdfPage": 67,
+      "sourcePdfPage": 68,
       "state": "new source-image-checked staged candidate"
     },
     {
       "label": "Q3(ii)",
       "id": "c10-2-ex2-5-q3-ii",
-      "sourcePdfPage": 67,
+      "sourcePdfPage": 68,
       "state": "new source-image-checked staged candidate"
     },
     {
