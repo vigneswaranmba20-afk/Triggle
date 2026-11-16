@@ -65,5 +65,23 @@
       "narration": "There are five terms. Three plus fifteen is eighteen. Five divided by two, times eighteen, gives forty-five. Beautiful. You have just used the arithmetic progression sum formula.",
       "holdAfter": 2.2
     }
-  ]
+  ],
+  "visual": {
+    "template": "ap-sum-pairs-v1",
+    "unit": "ARITHMETIC PROGRESSIONS",
+    "exampleTerms": [
+      2,
+      4,
+      6,
+      8,
+      10
+    ],
+    "practiceTerms": [
+      3,
+      6,
+      9,
+      12,
+      15
+    ]
+  }
 }
