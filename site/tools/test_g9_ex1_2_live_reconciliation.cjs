@@ -137,6 +137,15 @@ for(let i=0;i<expectedQ3.length;i++){
  const row=staged[i],id='g9-ch1-ex1.2-q3-'+part;
  assert.equal(row.id,id,'Staged Q3 order/ID mismatch');
  assert(candidateIds.has(id),'Staged ID absent from source inventory: '+id);
+ // Protect exact source-question fidelity, not merely the ID and answer.
+ // Ignore whitespace introduced by mobile layout, but preserve every symbol,
+ // bound, letter, and operand from the previously audited English source.
+ const source=candidate.rows.find(item=>item.id===id);
+ const compact=value=>value.replace(/\\s+/gu,'');
+ assert(row.q?.en&&compact(row.q.en).includes(compact(source.sourceEnglish)),
+  'Staged question differs from archived source English: '+id);
+ assert(compact(row.q.en).includes(compact(source.stem)),
+  'Staged question omits textbook Q3 stem: '+id);
  assert(!liveIds.has(id),'Staged Q3 already registered: '+id);
  const [a,b]=actualSets[i];
  assert.equal(new Set(a).size,nA);
