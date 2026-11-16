@@ -23,7 +23,7 @@
     "site/data/class-12.js": "fac485c578fc2779bd082935d4048f9f58d36431a0c708061d748cb9196ea194",
     "site/data/class-9.js": "43a89a10a92fad10ea6a19c8b7ea5d96fff56218ce864f997e45472fc722370e",
     "site/data/curriculum.js": "1d49b3c31bed70448d84d58e41e2019faeca9aaf5eec840065dedac421ee2827",
-    "site/data/g10-ch2-concepts.js": "379ed61d3024b1ba11e68ce12a9a05f170afcefae8b1debce7b5fb605abf0414",
+    "site/data/g10-ch2-concepts.js": "c2f31d3c954271f12fb4d448d9335937ae04b4151900ab1efff6a4ba6c3d5b1e",
     "site/data/g10-ch2-teaching-bridges.js": "4a968e6a6b1eeb90908670f83b3407cc9217116425d55e7071325cf4992d6b7e",
     "site/data/g9-clear-math.js": "078a8d48822de1ac3c9affcc0bdf09ecc766fc77ee68f337a918d08591b39991",
     "site/data/g9-probability-chapter.js": "ba7189fc6ac5e0dc305fc10b168733a45ae2b2eda7bce2334384615ea8298bd2",
@@ -85,7 +85,7 @@
     "site/data/why-step-g9-ex1-2-q1.js": "3a455f5dbba4189564c390af633de45cf05aeccb235304f71717f3130b39fe69",
     "site/data/why-step-g9-ex1-2-q2.js": "b1e9513604a3143efe7d2665b658f441012635a1799e6996ad239eccdd60a7b0",
     "site/data/why-step-g9.js": "bb50faef659c15dffe6bcb6f3b8856115f10848ec14cdb9a169626d1814e3380",
-    "site/index.html": "449e5b034554886d49c890e0c1b262fc0c7af847ab587fa2c5ac928d43983822",
+    "site/index.html": "61050d6de4e680cd10e265a9f3c7fc22dbcd3aaabcf93b8c6ca43885c26295db",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
