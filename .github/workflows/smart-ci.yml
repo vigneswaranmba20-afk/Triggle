@@ -47,6 +47,8 @@ jobs:
             exit 0
           fi
           if git diff --name-only "$BASE" HEAD | grep -Eq '^(\.github/workflows/trace-video-|site/tools/trace_video_|site/video-factory/)'; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
             python3 -m pip install --quiet -r site/video-factory/requirements.txt
             python3 site/tools/trace_video_factory.py render \
               --mode demo --width 360 --height 640 --fps 8 \
