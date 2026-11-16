@@ -1,0 +1,26 @@
+# One-time, owner-requested TRACE geometric-series preview.
+# Adding this file to main dispatches one Gemini-narrated render of the
+# maths storyboard. It NEVER publishes a video to R2 or changes Triggle.
+name: TRACE G.P. geometric-series video — create preview once
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/trace-gp-preview-once.yml
+permissions:
+  actions: write
+  contents: read
+jobs:
+  start-gp-video-preview:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Dispatch audio-first Gemini 9:16 video production
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh workflow run trace-video-factory.yml --repo "$GITHUB_REPOSITORY" --ref main \
+            -f lesson=g10-ch2-gp-sum -f mode=gemini -f render_size=final -f cache_revision=gp-v1
+          echo "Dispatched GP-sum narration review render; no site or R2 publication."
