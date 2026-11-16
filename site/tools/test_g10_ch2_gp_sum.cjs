@@ -17,7 +17,7 @@ for(const [a,r,n] of [[1,2,4],[1,3,4],[2,2,5],[3,-2,4],[5,1,4]]){
 }
 assert.equal(calc(1,2,4).sum,15);
 assert.equal(calc(1,3,4).sum,40);
-assert.throws(()=>calc(1,2,0),RangeError);
+assert.throws(()=>calc(1,2,0),/Use small integer terms/);
 const stageContext={window:{}};
 vm.runInNewContext(read('data/g10-ch2-concepts.js'),stageContext,{timeout:5000});
 const stage=stageContext.window.TRIGGLE_G10_CH2_PATH.stages.find(s=>s.id==='g10-ch2-gp-sum');
