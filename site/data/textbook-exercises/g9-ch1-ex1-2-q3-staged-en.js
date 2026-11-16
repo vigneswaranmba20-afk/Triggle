@@ -191,7 +191,7 @@ const entries=[
         }
       },
       {
-        "en": "Both sets contain exactly the same four elements.",
+        "en": "Every member of X is in Y, and every member of Y is in X. The order of letters does not matter. Therefore X and Y are equal; equal sets also have the same number of members, so they are equivalent too.",
         "eq": "X = Y; equal sets",
         "math": {
           "latex": "X=Y,\\quad n(X)=n(Y)=4",
@@ -267,7 +267,7 @@ const entries=[
         }
       },
       {
-        "en": "Both sets contain six distinct members, but different values.",
+        "en": "Count the six distinct members of each set. The sets are equivalent because their cardinalities agree, but they are not equal: for example, 5 belongs to G and not H.",
         "eq": "n(G) = n(H) = 6; equivalent sets",
         "math": {
           "latex": "n(G)=n(H)=6,\\quad G\\ne H",
