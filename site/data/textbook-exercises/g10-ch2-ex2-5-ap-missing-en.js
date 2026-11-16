@@ -1,7 +1,7 @@
 /* TRACE Grade 10 Exercise 2.5: six missing textbook parts, 2025 English.
  * Original PDF SHA256 602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d.
  * Printed pp. 61–62 (PDF pp. 67–68), independently visually checked.
- * Stage ONLY: no student HTML import until full release checks pass.
+ * Release module: student import requires GitHub quality and Pages checks.
  * 15 already-present student tasks must remain unchanged.
  */
 (()=>{'use strict';
