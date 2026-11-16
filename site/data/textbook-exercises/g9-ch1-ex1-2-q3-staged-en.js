@@ -122,7 +122,7 @@ const entries=[
         "en": "C has four members, while D has three. The sets are neither equal nor equivalent: 5 belongs to C but not D.",
         "eq": "n(C) = 4; n(D) = 3; C ≠ D",
         "math": {
-          "latex": "n(C)=4,\\quad n(D)=3,\\quad C\\ne D",
+          "latex": "n(C)=4\\ne 3=n(D),\\quad C\\ne D",
           "fallback": "n(C) = 4; n(D) = 3; C ≠ D; neither equal nor equivalent",
           "display": true
         }
