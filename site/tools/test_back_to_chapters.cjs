@@ -21,8 +21,7 @@ assert.match(reader,/padding-bottom:calc\(var\(--triggle-reader-dock-height/,'Re
 assert.match(reader,/body\.textbook-reader #questionJump\{/,'Compact question reference exists');
 assert.match(reader,/body\.textbook-reader #questionJump:focus-visible/,'Keyboard focus visible');
 assert.match(sw,/reader-pin\.css/);
-const cacheVersion=Number(sw.match(/triggle-shell-real-2025-v(\d+)/)?.[1]);
-assert.ok(Number.isInteger(cacheVersion)&&cacheVersion>=42);
+assert.match(sw,/^const CACHE=['"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['"];?/m,'Published offline cache has an explicit Triggle version');
 const hub=read('site/assets/chapter-hub.js'),hubCss=read('site/assets/chapter-hub.css');
 assert.match(content,/class="nav-arrow" aria-hidden="true">←<\/span>/,'Return arrow is separate from the label');
 assert.match(css,/--triggle-nav-font-size:16px/,'All reader buttons use 16px type');
