@@ -740,6 +740,7 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-gp-sum",
+      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-gp-sum/cbb3e46ec0c1cd7637bfcd3d623b459893ad772fe31d3b6f8b93f6ca4ea0f4db.mp4", "language": "en", "durationSeconds": 134.1},
       "section": "2.10",
       "title": {
         "en": "Geometric series: a shortcut for repeated growth",
