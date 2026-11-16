@@ -1,0 +1,2950 @@
+{
+  "schemaVersion": 1,
+  "type": "TRACE_RECONCILIATION",
+  "mainSha": "6e288869d550493d7dec11dd168cd3e614690b28",
+  "policy": {
+    "scope": "Runtime and pinned open-PR candidates plus inherited validation; no publication authority",
+    "denominators": "Unknown is null; known missing parts are a lower bound",
+    "stages": "Independent evidence states, never inferred from another stage",
+    "sourceAccess": "Drive metadata located; page images not inspected by this run",
+    "archiveAccess": "Original five WIP ZIPs not present locally or found by Drive search; historical snapshot only"
+  },
+  "inputHashes": {
+    "prSnapshot": "60686f3a3ff108dba8ecf14a2ec3893fc447c798536c576412285ad85a7d6efa",
+    "intakeSnapshot": "beff932d2f490df2f5b02c9d1d05b9b743567f5474d2afafc0952ccdd9a945fc"
+  },
+  "summary": {
+    "runtimeRecords": 576,
+    "runtimeExerciseRecords": 486,
+    "runtimeDataModules": 48,
+    "runtimeGrade10Records": 118,
+    "legacyBaseGrade10Records": 20,
+    "strictMathCheckedAppRecords": 56,
+    "ledgerMediumPartRows": 855,
+    "unlocatedExerciseRecords": 0,
+    "openPrsInspected": 35,
+    "prCandidateOccurrences": 227,
+    "historicalStagingRecords": 16,
+    "historicalStagingWithRuntimeLabelOverlap": 12,
+    "historicalStagingWithPrOverlap": 6,
+    "knownMissingSourceParts": 53,
+    "wholeProjectQuestionDenominator": null,
+    "wholeProjectTaskDenominator": null,
+    "newAcceptedUniqueParts": 0,
+    "sourcePagesInspectedThisRun": 0,
+    "modelProviderApiCalls": 0,
+    "modelProviderApiCostUsd": 0,
+    "stagePopulationMediumPartRows": 908,
+    "stages": {
+      "missing": {
+        "true": 53,
+        "false": 855,
+        "unknown": 0
+      },
+      "candidate": {
+        "true": 855,
+        "false": 53,
+        "unknown": 0
+      },
+      "source-checked": {
+        "true": 116,
+        "false": 792,
+        "unknown": 0
+      },
+      "math-checked": {
+        "true": 63,
+        "false": 845,
+        "unknown": 0
+      },
+      "language-reviewed": {
+        "true": 0,
+        "false": 908,
+        "unknown": 0
+      },
+      "ready-for-integration": {
+        "true": 0,
+        "false": 908,
+        "unknown": 0
+      },
+      "merged": {
+        "true": 855,
+        "false": 0,
+        "unknown": 53
+      },
+      "deployed": {
+        "true": 0,
+        "false": 0,
+        "unknown": 908
+      },
+      "live-verified": {
+        "true": 0,
+        "false": 0,
+        "unknown": 908
+      }
+    }
+  },
+  "gaps": [
+    {
+      "grade": 9,
+      "chapter": "1",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 9,
+      "chapter": "2",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 9,
+      "chapter": "3",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 9,
+      "chapter": "4",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 9,
+      "chapter": "5",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 9,
+      "chapter": "6",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 9,
+      "chapter": "7",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 9,
+      "chapter": "8",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 9,
+      "chapter": "9",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 10,
+      "chapter": "1",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 10,
+      "chapter": "2",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 10,
+      "chapter": "3",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 10,
+      "chapter": "4",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 10,
+      "chapter": "5",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 10,
+      "chapter": "6",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 10,
+      "chapter": "7",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 10,
+      "chapter": "8",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "1",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "2",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "3",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "4",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "5",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "6",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "7",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "8",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "9",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "10",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "11",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 11,
+      "chapter": "12",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "1",
+      "numberedQuestionDenominator": 63,
+      "sourceTaskDenominator": 95,
+      "denominatorState": "INHERITED_VERIFIED_INVENTORY",
+      "knownMissingParts": [
+        "1.4:1:i",
+        "1.4:1:ii",
+        "1.4:1:iii",
+        "1.4:1:iv",
+        "1.4:2:whole",
+        "1.4:3:whole",
+        "1.4:4:whole",
+        "1.4:5:whole",
+        "1.5:1:i",
+        "1.5:1:ii",
+        "1.5:2:whole",
+        "1.5:3:whole",
+        "1.5:4:whole",
+        "1.6:1:i",
+        "1.6:1:ii",
+        "1.6:1:iii",
+        "1.6:1:iv",
+        "1.6:2:i",
+        "1.6:2:ii",
+        "1.6:2:iii",
+        "1.6:3:i",
+        "1.6:3:ii",
+        "1.6:3:iii",
+        "1.7:1:i",
+        "1.7:1:ii",
+        "1.7:2:i",
+        "1.7:2:ii",
+        "1.7:3:whole",
+        "1.8:1:whole",
+        "1.8:2:whole",
+        "1.8:3:whole",
+        "1.8:4:whole",
+        "1.8:5:whole",
+        "1.8:6:whole",
+        "1.8:7:whole",
+        "1.8:8:whole",
+        "1.8:9:whole",
+        "1.8:10:whole",
+        "1.8:11:whole",
+        "1.8:12:whole",
+        "1.8:13:whole",
+        "1.8:14:whole",
+        "1.8:15:whole",
+        "1.8:16:whole",
+        "1.8:17:whole",
+        "1.8:18:whole",
+        "1.8:19:whole",
+        "1.8:20:whole",
+        "1.8:21:whole",
+        "1.8:22:whole",
+        "1.8:23:whole",
+        "1.8:24:whole",
+        "1.8:25:whole"
+      ],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "2",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "3",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "4",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "5",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "6",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "7",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "8",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "9",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "10",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "11",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    },
+    {
+      "grade": 12,
+      "chapter": "12",
+      "numberedQuestionDenominator": null,
+      "sourceTaskDenominator": null,
+      "denominatorState": "UNKNOWN",
+      "knownMissingParts": [],
+      "complete": false,
+      "tamilEditorialReview": "pending"
+    }
+  ],
+  "expectedMissingParts": [
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.4/q1/i/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.4",
+        "question": "1",
+        "part": "i",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          35
+        ],
+        "pdfPages": [
+          43
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.4/q1/ii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.4",
+        "question": "1",
+        "part": "ii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          35
+        ],
+        "pdfPages": [
+          43
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.4/q1/iii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.4",
+        "question": "1",
+        "part": "iii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          35
+        ],
+        "pdfPages": [
+          43
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.4/q1/iv/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.4",
+        "question": "1",
+        "part": "iv",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          35
+        ],
+        "pdfPages": [
+          43
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.4/q2/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.4",
+        "question": "2",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          35
+        ],
+        "pdfPages": [
+          43
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.4/q3/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.4",
+        "question": "3",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          35
+        ],
+        "pdfPages": [
+          43
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.4/q4/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.4",
+        "question": "4",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          35
+        ],
+        "pdfPages": [
+          43
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.4/q5/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.4",
+        "question": "5",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          36
+        ],
+        "pdfPages": [
+          44
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.5/q1/i/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.5",
+        "question": "1",
+        "part": "i",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          37
+        ],
+        "pdfPages": [
+          45
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.5/q1/ii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.5",
+        "question": "1",
+        "part": "ii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          37
+        ],
+        "pdfPages": [
+          45
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.5/q2/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.5",
+        "question": "2",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          37
+        ],
+        "pdfPages": [
+          45
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.5/q3/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.5",
+        "question": "3",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          37
+        ],
+        "pdfPages": [
+          45
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.5/q4/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.5",
+        "question": "4",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          37
+        ],
+        "pdfPages": [
+          45
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.6/q1/i/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.6",
+        "question": "1",
+        "part": "i",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          50
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.6/q1/ii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.6",
+        "question": "1",
+        "part": "ii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          50
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.6/q1/iii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.6",
+        "question": "1",
+        "part": "iii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          50
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.6/q1/iv/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.6",
+        "question": "1",
+        "part": "iv",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          50
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.6/q2/i/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.6",
+        "question": "2",
+        "part": "i",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          50
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.6/q2/ii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.6",
+        "question": "2",
+        "part": "ii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          50
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.6/q2/iii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.6",
+        "question": "2",
+        "part": "iii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          50
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.6/q3/i/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.6",
+        "question": "3",
+        "part": "i",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          50
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.6/q3/ii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.6",
+        "question": "3",
+        "part": "ii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          50
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.6/q3/iii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.6",
+        "question": "3",
+        "part": "iii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          50
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.7/q1/i/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.7",
+        "question": "1",
+        "part": "i",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          47
+        ],
+        "pdfPages": [
+          55
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.7/q1/ii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.7",
+        "question": "1",
+        "part": "ii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          47
+        ],
+        "pdfPages": [
+          55
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.7/q2/i/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.7",
+        "question": "2",
+        "part": "i",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          47
+        ],
+        "pdfPages": [
+          55
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.7/q2/ii/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.7",
+        "question": "2",
+        "part": "ii",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          47
+        ],
+        "pdfPages": [
+          55
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.7/q3/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.7",
+        "question": "3",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          47
+        ],
+        "pdfPages": [
+          55
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q1/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "1",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q2/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "2",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q3/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "3",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q4/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "4",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q5/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "5",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q6/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "6",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q7/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "7",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q8/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "8",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q9/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "9",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q10/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "10",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          48
+        ],
+        "pdfPages": [
+          56
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q11/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "11",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          57
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q12/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "12",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          57
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q13/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "13",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          57
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q14/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "14",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          57
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q15/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "15",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          57
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q16/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "16",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          57
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q17/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "17",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          57
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q18/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "18",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          57
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q19/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "19",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          57
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q20/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "20",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          50
+        ],
+        "pdfPages": [
+          58
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q21/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "21",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          50
+        ],
+        "pdfPages": [
+          58
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q22/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "22",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          50
+        ],
+        "pdfPages": [
+          58
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q23/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "23",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          50
+        ],
+        "pdfPages": [
+          58
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q24/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "24",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          50
+        ],
+        "pdfPages": [
+          58
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    },
+    {
+      "key": "g12/edition-2025/vol-1/ch1/exercise-1.8/q25/whole/en",
+      "location": {
+        "grade": 12,
+        "chapter": "1",
+        "exercise": "1.8",
+        "question": "25",
+        "part": "whole",
+        "edition": "2025",
+        "volume": 1,
+        "medium": "en"
+      },
+      "stages": {
+        "missing": true,
+        "candidate": false,
+        "source-checked": true,
+        "math-checked": false,
+        "language-reviewed": false,
+        "ready-for-integration": false,
+        "merged": null,
+        "deployed": null,
+        "live-verified": null
+      },
+      "source": {
+        "file": "docs/curriculum/grade-12/chapters/g12-ch1.json",
+        "sourceSha256": "d930d0c7d4ca52ebdbceeeca3e2f11e372b0874024f69691b63a639d067feb3a",
+        "printedPages": [
+          50
+        ],
+        "pdfPages": [
+          58
+        ]
+      },
+      "uncertainty": [
+        "SOURCE_INVENTORY_INHERITED_NOT_RECHECKED",
+        "PR_AUDITS_MAY_CONTAIN_WORK_NOT_REGISTERED"
+      ]
+    }
+  ],
+  "unlocated": [],
+  "labelCollisions": [],
+  "exactTextMatches": [],
+  "nearTextMatches": [],
+  "historicalStaging": [
+    {
+      "id": "g10-ch01-ex1.2-q1-i",
+      "key": "g10/ch1/ex1.2/q1/i",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [
+        "c10-1-1-2-q1"
+      ],
+      "possiblePrs": [
+        106,
+        112,
+        114
+      ],
+      "riskFlags": [
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch01-ex1.2-q1-ii",
+      "key": "g10/ch1/ex1.2/q1/ii",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [
+        "c10-1-1-2-q1"
+      ],
+      "possiblePrs": [
+        106,
+        112,
+        114
+      ],
+      "riskFlags": [
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch01-ex1.2-q1-iii",
+      "key": "g10/ch1/ex1.2/q1/iii",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [
+        "c10-1-1-2-q1"
+      ],
+      "possiblePrs": [
+        106,
+        112,
+        114
+      ],
+      "riskFlags": [
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch01-ex1.2-q1-iv",
+      "key": "g10/ch1/ex1.2/q1/iv",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [
+        "c10-1-1-2-q1"
+      ],
+      "possiblePrs": [
+        106,
+        112,
+        114
+      ],
+      "riskFlags": [
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch01-ex1.2-q2",
+      "key": "g10/ch1/ex1.2/q2/-",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [
+        "c10-1-1-2-q2"
+      ],
+      "sameNumberedQuestionAppIds": [
+        "c10-1-1-2-q2"
+      ],
+      "possiblePrs": [
+        106,
+        112,
+        114
+      ],
+      "riskFlags": [
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch01-ex1.2-q3",
+      "key": "g10/ch1/ex1.2/q3/-",
+      "archive": "G10_W1_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "00e3c46e3bcecc4e4c145dd6c743ff9d705da5d9bf6143f20901c30f284b3c56",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [
+        "c10-1-1-2-q3"
+      ],
+      "sameNumberedQuestionAppIds": [
+        "c10-1-1-2-q3"
+      ],
+      "possiblePrs": [
+        106,
+        112,
+        114
+      ],
+      "riskFlags": [
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch03-ex3.1-q1-ii",
+      "key": "g10/ch3/ex3.1/q1/ii",
+      "archive": "G10_W2_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "73696700437d151721484ccc8361e7f463626d61e4c8d869584fe1c28266f852",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [
+        "c10-3-ex3-1-q1-i"
+      ],
+      "possiblePrs": [],
+      "riskFlags": [
+        "no_structured_steps_check_markdown",
+        "source_page_schema_review",
+        "source_page_schema_review_ta",
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch03-ex3.1-q1-iii",
+      "key": "g10/ch3/ex3.1/q1/iii",
+      "archive": "G10_W2_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "73696700437d151721484ccc8361e7f463626d61e4c8d869584fe1c28266f852",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [
+        "c10-3-ex3-1-q1-i"
+      ],
+      "possiblePrs": [],
+      "riskFlags": [
+        "no_structured_steps_check_markdown",
+        "source_page_schema_review",
+        "source_page_schema_review_ta",
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch04-ex4.1-q1-i",
+      "key": "g10/ch4/ex4.1/q1/i",
+      "archive": "G10_W3_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "cf77a5211a070cc457d57f2e3dedb42aa1ef92d59ef995818b56ffe8435c787d",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [],
+      "possiblePrs": [],
+      "riskFlags": [
+        "figure_visual_check_required",
+        "no_structured_steps_check_markdown",
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch04-ex4.1-q1-ii",
+      "key": "g10/ch4/ex4.1/q1/ii",
+      "archive": "G10_W3_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "cf77a5211a070cc457d57f2e3dedb42aa1ef92d59ef995818b56ffe8435c787d",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [],
+      "possiblePrs": [],
+      "riskFlags": [
+        "figure_visual_check_required",
+        "no_structured_steps_check_markdown",
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch06-ex6.1-q1-i",
+      "key": "g10/ch6/ex6.1/q1/i",
+      "archive": "G10_W4_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "761511c95f53e49fdf3be62d00311ed633311b8fdd244b57146e14c88df4a2ca",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [
+        "c10-6-6-1-1"
+      ],
+      "sameNumberedQuestionAppIds": [
+        "c10-6-6-1-1",
+        "c10-6-6-1-2"
+      ],
+      "possiblePrs": [],
+      "riskFlags": [
+        "no_structured_english_question",
+        "no_structured_steps_check_markdown",
+        "no_structured_tamil_question",
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch06-ex6.1-q1-ii",
+      "key": "g10/ch6/ex6.1/q1/ii",
+      "archive": "G10_W4_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "761511c95f53e49fdf3be62d00311ed633311b8fdd244b57146e14c88df4a2ca",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [
+        "c10-6-6-1-2"
+      ],
+      "sameNumberedQuestionAppIds": [
+        "c10-6-6-1-1",
+        "c10-6-6-1-2"
+      ],
+      "possiblePrs": [],
+      "riskFlags": [
+        "no_structured_english_question",
+        "no_structured_steps_check_markdown",
+        "no_structured_tamil_question",
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch06-ex6.1-q2-i",
+      "key": "g10/ch6/ex6.1/q2/i",
+      "archive": "G10_W4_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "761511c95f53e49fdf3be62d00311ed633311b8fdd244b57146e14c88df4a2ca",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [
+        "c10-6-6-1-3"
+      ],
+      "possiblePrs": [],
+      "riskFlags": [
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch06-ex6.1-q2-ii",
+      "key": "g10/ch6/ex6.1/q2/ii",
+      "archive": "G10_W4_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "761511c95f53e49fdf3be62d00311ed633311b8fdd244b57146e14c88df4a2ca",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [
+        "c10-6-6-1-3"
+      ],
+      "sameNumberedQuestionAppIds": [
+        "c10-6-6-1-3"
+      ],
+      "possiblePrs": [],
+      "riskFlags": [
+        "tamil_review_pending"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch08-ex8.1-q3",
+      "key": "g10/ch8/ex8.1/q3/-",
+      "archive": "G10_W5_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "54df234a571ef6fced9b9d34af092c97b33b8e04b9f29794c8e223b2932f7e16",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [],
+      "possiblePrs": [],
+      "riskFlags": [
+        "no_structured_steps_check_markdown"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    },
+    {
+      "id": "g10-ch08-ex8.1-q4",
+      "key": "g10/ch8/ex8.1/q4/-",
+      "archive": "G10_W5_2026-11-11_batch02_WIP.zip",
+      "archiveSha256": "54df234a571ef6fced9b9d34af092c97b33b8e04b9f29794c8e223b2932f7e16",
+      "evidence": "HISTORICAL_INTAKE_SNAPSHOT_ORIGINAL_ZIP_NOT_REOPENED",
+      "samePartAppIds": [],
+      "sameNumberedQuestionAppIds": [],
+      "possiblePrs": [],
+      "riskFlags": [
+        "no_structured_steps_check_markdown"
+      ],
+      "sourceChecked": false,
+      "mathChecked": false,
+      "languageReviewed": false
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "reports": [
+      {
+        "file": "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json",
+        "passed": true,
+        "errors": []
+      },
+      {
+        "file": "docs/curriculum/grade-10/batches/g10-ch2-ex2-2.json",
+        "passed": true,
+        "errors": []
+      },
+      {
+        "file": "docs/curriculum/grade-12/batches/g12-ch1-ex1-1.json",
+        "passed": true,
+        "errors": []
+      },
+      {
+        "file": "docs/curriculum/grade-12/batches/g12-ch1-ex1-2.json",
+        "passed": true,
+        "errors": []
+      },
+      {
+        "file": "docs/curriculum/grade-12/batches/g12-ch1-ex1-3.json",
+        "passed": true,
+        "errors": []
+      }
+    ]
+  },
+  "unresolvedSourceMismatches": [
+    {
+      "grade": 10,
+      "exercise": "8.1",
+      "question": "5",
+      "status": "UNRESOLVED_INHERITED_REPORT",
+      "detail": "Historical report: English nine workers / Tamil ten workers, nine wage values; original images not rechecked."
+    }
+  ],
+  "pilot": {
+    "status": "NOT_STARTED",
+    "reason": "60 accessible source-verified unworked parts and independent bilingual reviewers not established"
+  },
+  "ledgerStorage": "Reproduce full ledger via trace_reconcile.cjs using the pinned 20261113 PR snapshot; runtimeSummary and all candidate overlaps are retained here."
+}
