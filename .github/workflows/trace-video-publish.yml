@@ -58,6 +58,10 @@ jobs:
             --repo "$GITHUB_REPOSITORY" \
             --name "trace-video-${VIDEO_LESSON}-gemini-${SOURCE_RUN}" \
             --dir build/trace-video/release
+      - name: Install FFprobe for approved-media verification
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
       - name: Verify fingerprint, math-scene order, resolution, codecs and provenance
         env:
           APPROVED_SHA: ${{ inputs.approved_sha256 }}
