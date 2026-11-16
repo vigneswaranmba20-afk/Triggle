@@ -141,7 +141,7 @@ for(let i=0;i<expectedQ3.length;i++){
  // Ignore whitespace introduced by mobile layout, but preserve every symbol,
  // bound, letter, and operand from the previously audited English source.
  const source=candidate.rows.find(item=>item.id===id);
- const compact=value=>value.replace(/\\s+/gu,'');
+ const compact=value=>value.replace(/\s+/gu,'');
  assert(row.q?.en&&compact(row.q.en).includes(compact(source.sourceEnglish)),
   'Staged question differs from archived source English: '+id);
  assert(compact(row.q.en).includes(compact(source.stem)),
