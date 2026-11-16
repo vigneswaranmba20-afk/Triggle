@@ -74,7 +74,11 @@ const entries=[
     },
     "releaseStatus": "staged-english-not-registered",
     "questionMath": {
-      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(i) A = The set of vowels in the English alphabets. B = The set of all letters in the word “VOWEL”."
+      "en": [
+        "3. Which of the following sets are equivalent or unequal or equal sets? (i)",
+        "A is the set of vowels in the English alphabet; B is the set of letters in VOWEL.",
+        {"latex":"A=\\{a,e,i,o,u\\},\\quad B=\\{V,O,W,E,L\\}","fallback":"A = {a, e, i, o, u}; B = {V, O, W, E, L}","display":true}
+      ]
     }
   },
   {
@@ -233,7 +237,10 @@ const entries=[
     },
     "releaseStatus": "staged-english-not-registered",
     "questionMath": {
-      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iii) X = {x : x is a letter in the word “LIFE”} Y = {F, I, L, E}"
+      "en": [
+        "3. Which of the following sets are equivalent or unequal or equal sets? (iii)",
+        {"latex":"X=\\{x:x\\text{ is a letter in LIFE}\\},\\quad Y=\\{F,I,L,E\\}","fallback":"X = {x: x is a letter in LIFE}; Y = {F, I, L, E}","display":true}
+      ]
     }
   },
   {
