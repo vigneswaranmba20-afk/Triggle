@@ -119,6 +119,19 @@ const actualSets=[
  [['L','I','F','E'],['F','I','L','E']],
  [[5,7,11,13,17,19],[1,2,3,6,9,18]]
 ];
+// Derive Q3(iv) members from the textbook predicates rather than trusting
+// two hard-coded arrays that could share the same transcription mistake.
+const isPrime=n=>Number.isInteger(n)&&n>=2&&
+ Array.from({length:Math.floor(Math.sqrt(n))-1},(_,i)=>i+2).every(d=>n%d!==0);
+const derivedPrimes=Array.from({length:19},(_,i)=>i+4).filter(isPrime);
+const derivedDivisors=Array.from({length:18},(_,i)=>i+1).filter(n=>18%n===0);
+assert.deepEqual(derivedPrimes,actualSets[3][0],
+ 'Q3(iv) prime enumeration must follow 3 < x < 23');
+assert.deepEqual(derivedDivisors,actualSets[3][1],
+ 'Q3(iv) positive divisors of 18 must be independently enumerated');
+assert.equal(derivedPrimes.length,derivedDivisors.length);
+assert(derivedPrimes.some(x=>!derivedDivisors.includes(x)),
+ 'Q3(iv) sets must be equivalent but not equal');
 for(let i=0;i<expectedQ3.length;i++){
  const [part,answer,nA,nB,equal]=expectedQ3[i];
  const row=staged[i],id='g9-ch1-ex1.2-q3-'+part;
