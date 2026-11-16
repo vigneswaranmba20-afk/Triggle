@@ -26,6 +26,8 @@ jobs:
           fetch-depth: 0
       - name: Self-test conservative risk policy
         run: node site/tools/ci/risk-policy.cjs --self-test
+      - name: Verify browser shard coverage and estimated balance
+        run: node site/tools/run_browser_shard.cjs --plan-only
       - id: risk
         name: Classify changed files
         env:
@@ -87,7 +89,8 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      - name: Install Chromium headless shell only
+        run: npx playwright install --with-deps --only-shell chromium
       - name: Focused mobile browser validation
         env:
           TEST_TIER: ${{ needs.plan.outputs.tier }}
@@ -152,13 +155,16 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - name: Install only needed browsers
+      - name: Install only required headless browsers
         shell: bash
         run: |
+          # These two scripts launch WebKit internally. Other shards use only Chromium.
+          # Chromium launches are headless without a named channel, so its full UI
+          # binary is unnecessary. Keep WebKit on shards 0 and 2.
           if [ "${{ matrix.shard }}" = 0 ] || [ "${{ matrix.shard }}" = 2 ]; then
-            npx playwright install --with-deps chromium webkit
+            npx playwright install --with-deps --only-shell chromium webkit
           else
-            npx playwright install --with-deps chromium
+            npx playwright install --with-deps --only-shell chromium
           fi
       - name: Run assigned browser partition without repeating unit tests
         env:
