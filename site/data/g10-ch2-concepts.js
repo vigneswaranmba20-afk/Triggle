@@ -152,31 +152,31 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "4 = 32(2) + 60(−1); x = 2, y = −1"
       },
       "question": {
-        "en": "What is 32 × 2 − 60?",
-        "ta": "32 × 2 − 60 = ?"
+        "en": "Express 3 as 21x + 15y using integers. Which pair works?",
+        "ta": "3 = 21x + 15y ஆக அமைய எந்த முழு எண் ஜோடி பொருந்தும்?"
       },
       "choices": [
         {
-          "en": "−4",
-          "ta": "−4"
+          "en": "x = −2, y = 3",
+          "ta": "x = −2, y = 3"
         },
         {
-          "en": "4",
-          "ta": "4"
+          "en": "x = 1, y = −1",
+          "ta": "x = 1, y = −1"
         },
         {
-          "en": "32",
-          "ta": "32"
+          "en": "x = 2, y = −3",
+          "ta": "x = 2, y = −3"
         }
       ],
-      "correct": 1,
+      "correct": 0,
       "hint": {
-        "en": "32 × 2 = 64.",
-        "ta": "32 × 2 = 64."
+        "en": "Try each pair in 21x + 15y. The result must be 3.",
+        "ta": "ஒவ்வொரு ஜோடியையும் 21x + 15y-இல் பதிலிட்டு 3 வருகிறதா பாருங்கள்."
       },
       "why": {
-        "en": "64 − 60 = 4, which is the HCF. The extended Euclidean method finds such integers systematically.",
-        "ta": "64 − 60 = 4. இதுவே மீ.பொ.வ. இத்தகைய முழு எண்களை முறையாகக் கண்டறிய யூக்ளிடின் நீட்டித்த முறை உதவும்."
+        "en": "21(−2) + 15(3) = −42 + 45 = 3. Other integer pairs may also work; this is one valid pair.",
+        "ta": "21(−2) + 15(3) = −42 + 45 = 3. இதுபோன்ற வேறு முழு எண் ஜோடிகளும் இருக்கலாம்."
       },
       "visual": {
         "kind": "bars",
@@ -618,7 +618,11 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-ap-sum",
-      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-ap-sum/4bb9ea8b8b754b5b585034b18b34545e6bd7fa3114a70b037178e8b4d3e81ab2.mp4", "language": "en", "durationSeconds": 120.94},
+      "video": {
+        "src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-ap-sum/4bb9ea8b8b754b5b585034b18b34545e6bd7fa3114a70b037178e8b4d3e81ab2.mp4",
+        "language": "en",
+        "durationSeconds": 120.94
+      },
       "section": "2.8",
       "title": {
         "en": "An A.P. sum pairs the first and last terms",
@@ -740,7 +744,11 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-gp-sum",
-      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-gp-sum/cbb3e46ec0c1cd7637bfcd3d623b459893ad772fe31d3b6f8b93f6ca4ea0f4db.mp4", "language": "en", "durationSeconds": 134.1},
+      "video": {
+        "src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-gp-sum/cbb3e46ec0c1cd7637bfcd3d623b459893ad772fe31d3b6f8b93f6ca4ea0f4db.mp4",
+        "language": "en",
+        "durationSeconds": 134.1
+      },
       "section": "2.10",
       "title": {
         "en": "Geometric series: a shortcut for repeated growth",
@@ -824,31 +832,31 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "S∞ = a/(1−r), |r| < 1"
       },
       "question": {
-        "en": "What does 1 + 1/2 + 1/4 + ... approach?",
-        "ta": "1 + 1/2 + 1/4 + ... எந்த எண்ணை அணுகுகிறது?"
+        "en": "For 3 + 3/2 + 3/4 + ···, what finite value does the sum approach?",
+        "ta": "3 + 3/2 + 3/4 + ··· இன் கூட்டுத்தொகை எந்த மதிப்பை நெருங்கும்?"
       },
       "choices": [
         {
-          "en": "2",
-          "ta": "2"
+          "en": "3",
+          "ta": "3"
         },
         {
-          "en": "1",
-          "ta": "1"
+          "en": "6",
+          "ta": "6"
         },
         {
-          "en": "∞",
-          "ta": "∞"
+          "en": "It has no finite limit",
+          "ta": "முடிவுள்ள எல்லை மதிப்பு இல்லை"
         }
       ],
-      "correct": 0,
+      "correct": 1,
       "hint": {
-        "en": "Each new piece fills half of what remains to reach 2.",
-        "ta": "2-ஐ அடைவதற்கான மீதியில் பாதியை ஒவ்வொரு புதிய உறுப்பும் நிரப்பும்."
+        "en": "The first term is 3 and each term halves. Compute 3/(1 − 1/2).",
+        "ta": "முதல் உறுப்பு 3; ஒவ்வொரு உறுப்பும் பாதியாகும். 3/(1 − 1/2) கணக்கிடுங்கள்."
       },
       "why": {
-        "en": "With a = 1 and r = 1/2, sum = 1/(1−1/2) = 2.",
-        "ta": "a = 1, r = 1/2 எனில் தொகை 1/(1−1/2) = 2."
+        "en": "Here a = 3 and r = 1/2, so S∞ = 3/(1 − 1/2) = 6.",
+        "ta": "இங்கே a = 3, r = 1/2. எனவே S∞ = 3/(1 − 1/2) = 6."
       },
       "visual": {
         "kind": "fractions",
@@ -884,31 +892,31 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "1³ + 2³ + ... + n³ = [n(n+1)/2]²"
       },
       "question": {
-        "en": "1³ + 2³ + 3³ = ?",
-        "ta": "1³ + 2³ + 3³ = ?"
+        "en": "Find 1² + 2² + 3² + 4².",
+        "ta": "1² + 2² + 3² + 4² இன் மதிப்பைக் காண்க."
       },
       "choices": [
         {
-          "en": "27",
-          "ta": "27"
+          "en": "10",
+          "ta": "10"
         },
         {
-          "en": "18",
-          "ta": "18"
+          "en": "30",
+          "ta": "30"
         },
         {
-          "en": "36",
-          "ta": "36"
+          "en": "100",
+          "ta": "100"
         }
       ],
-      "correct": 2,
+      "correct": 1,
       "hint": {
-        "en": "1 + 8 + 27.",
-        "ta": "1 + 8 + 27."
+        "en": "Use the squares rule or add 1 + 4 + 9 + 16.",
+        "ta": "வர்க்கக் கூட்டுத்தொகை விதியைப் பயன்படுத்து அல்லது 1 + 4 + 9 + 16 கூட்டுக."
       },
       "why": {
-        "en": "The result is 36, the square of 1+2+3 = 6.",
-        "ta": "விடை 36; இது 1+2+3 = 6-இன் வர்க்கம்."
+        "en": "1 + 4 + 9 + 16 = 30. Also 4(5)(9)/6 = 30. The cubes and ordinary numbers use different formulas.",
+        "ta": "1 + 4 + 9 + 16 = 30. மேலும் 4(5)(9)/6 = 30. கனங்களுக்கும் சாதாரண எண்களுக்கும் வேறு சூத்திரங்கள் உண்டு."
       },
       "visual": {
         "kind": "sequence",
