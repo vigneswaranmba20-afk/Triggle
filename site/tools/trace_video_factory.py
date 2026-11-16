@@ -75,10 +75,20 @@ def validate_lesson(spec):
     scenes = [b['scene'] for b in beats]
     if 'answer' in scenes and ('practice' not in scenes or scenes.index('answer') <= scenes.index('practice')):
         raise ValueError('Practice answer must be in a separate later scene')
-    if spec['id'] == 'g10-ch2-ap-sum':
-        assert sum([2,4,6,8,10]) == 30 and sum([3,6,9,12,15]) == 45
-        if scenes != ['intro','sequence','outer-pair','inner-pair','middle','formula','apply','practice','answer']:
-            raise ValueError('A.P. review scene order changed unexpectedly')
+    visual=spec.get('visual',{})
+    if visual.get('template')!='ap-sum-pairs-v1':
+        raise ValueError('Only the reviewed A.P. pairing visual template is supported yet')
+    for key in ('exampleTerms','practiceTerms'):
+        terms=visual.get(key)
+        if not isinstance(terms,list) or len(terms)!=5 or any(type(x) is not int or x<1 or x>99 for x in terms):
+            raise ValueError('Visual requires five positive integer terms')
+        delta=terms[1]-terms[0]
+        if not delta or any(terms[i+1]-terms[i]!=delta for i in range(4)):
+            raise ValueError('Terms must be an exact arithmetic progression')
+        if 5*(terms[0]+terms[-1])!=2*sum(terms):
+            raise ValueError('Displayed sum formula fails exact integer arithmetic')
+    if scenes != ['intro','sequence','outer-pair','inner-pair','middle','formula','apply','practice','answer']:
+        raise ValueError('A.P. pairing scene order changed unexpectedly')
     return spec
 
 
@@ -185,8 +195,8 @@ def artwork(spec, beat, fraction, index, total, w, h, demo):
     rect((28,28,692,1252),'#FFFFFF',22,PALETTE['line'],2)
     rect((60,76,112,84),PALETTE['maroon'],5)
     txt(128,61,'TRIGGLE',34,'ink',True)
-    txt(565,71,'CLASS 10',17,'sub',True)
-    txt(60,135,'ARITHMETIC PROGRESSIONS',17,'maroon',True)
+    txt(565,71,'CLASS '+str(spec['class']),17,'sub',True)
+    txt(60,135,spec['visual'].get('unit','ARITHMETIC PROGRESSIONS'),17,'maroon',True)
     d.line([(px(60),px(184)),(px(660),px(184))],fill=PALETTE['line'],width=max(1,px(2)))
     heading={
         'intro':('Can a pattern','save us time?'),
@@ -203,7 +213,9 @@ def artwork(spec, beat, fraction, index, total, w, h, demo):
     # Progress-driven visual states. Scene boundaries are actual audio segment lengths.
     reveal = max(0,min(1,(fraction-.06)/.25))
     scene=beat['scene']
-    terms=[2,4,6,8,10] if scene not in ('practice','answer') else [3,6,9,12,15]
+    example=spec['visual']['exampleTerms']
+    practice=spec['visual']['practiceTerms']
+    terms=example if scene not in ('practice','answer') else practice
     boxes=[(62+i*123,463,166+i*123,573) for i in range(5)]
     if scene!='intro':
         for i,(box,value) in enumerate(zip(boxes,terms)):
@@ -218,36 +230,36 @@ def artwork(spec, beat, fraction, index, total, w, h, demo):
                 if i!=j:
                     d.arc([px(boxes[i][0]+52),px(582),px(boxes[j][2]-52),px(704)],180,360,fill=PALETTE['gold'],width=max(3,px(7)))
     if scene=='intro':
-        centered(463,'2 + 4 + 6 + 8 + 10',48,'maroon',True)
+        centered(463,' + '.join(str(x) for x in example),48,'maroon',True)
         centered(557,'A simpler way to add',28,'sub')
         centered(610,'is hiding in plain sight.',28,'sub')
     elif scene=='sequence':
-        centered(668,'Same difference: +2',36,'maroon',True)
-        centered(760,'First  =  2      Last  =  10',26,'sub')
+        centered(668,'Same difference: '+str(example[1]-example[0]),36,'maroon',True)
+        centered(760,f'First = {example[0]}      Last = {example[-1]}',26,'sub')
     elif scene=='outer-pair':
-        centered(738,'2 + 10 = 12',49,'maroon',True)
+        centered(738,f'{example[0]} + {example[-1]} = {example[0]+example[-1]}',49,'maroon',True)
         centered(825,'Pair the outside terms.',27,'sub')
     elif scene=='inner-pair':
-        centered(738,'4 + 8 = 12',49,'maroon',True)
+        centered(738,f'{example[1]} + {example[-2]} = {example[1]+example[-2]}',49,'maroon',True)
         centered(825,'Two pairs. Same sum.',27,'sub')
     elif scene=='middle':
-        centered(744,'12 + 12 + 6',47,'ink',True)
-        centered(822,'= 30',62,'maroon',True)
+        centered(744,f'{example[0]+example[-1]} + {example[1]+example[-2]} + {example[2]}',40,'ink',True)
+        centered(822,f'= {sum(example)}',62,'maroon',True)
     elif scene=='formula':
         centered(633,'S_n = n / 2 (a + l)',40,'maroon',True)
         centered(716,'n: number of terms',24,'sub')
         centered(762,'a: first term   l: last term',24,'sub')
     elif scene=='apply':
-        centered(668,'5 / 2 (2 + 10)',46,'ink',True)
-        centered(748,'= 5 / 2 × 12 = 30',40,'maroon',True)
+        centered(668,f'5 / 2 ({example[0]} + {example[-1]})',43,'ink',True)
+        centered(748,f'= 5 / 2 × {example[0]+example[-1]} = {sum(example)}',38,'maroon',True)
     elif scene=='practice':
-        centered(670,'3 + 6 + 9 + 12 + 15',32,'ink',True)
+        centered(670,' + '.join(str(x) for x in practice),32,'ink',True)
         rect((124,751,596,838),PALETTE['soft'],20)
         centered(786,'Pause and try it yourself',25,'maroon',True)
         # Deliberately NEVER display the answer during this scene.
     elif scene=='answer':
-        centered(662,'5 / 2 × (3 + 15)',38,'ink',True)
-        centered(742,'= 45',60,'maroon',True)
+        centered(662,f'5 / 2 × ({practice[0]} + {practice[-1]})',38,'ink',True)
+        centered(742,f'= {sum(practice)}',60,'maroon',True)
     d.line([(px(60),px(1092)),(px(660),px(1092))],fill=PALETTE['line'],width=max(1,px(2)))
     txt(60,1114,'WATCH  ·  UNDERSTAND  ·  TRY',17,'sub',True)
     rect((60,1186,660,1196),PALETTE['soft'],6)
