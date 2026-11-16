@@ -178,6 +178,7 @@
 
   function showG10Ch2Visual(stage,host,lang){
     const v=stage.visual;if(!v||!host)return;
+    if(window.TriggleG10ConceptLabs?.mount(stage,host,lang))return;
     if(stage.id==='g10-ch2-ap-sum'){showAPSumPairing(host,lang);return;}
     if(stage.id==='g10-ch2-gp-sum'&&window.TriggleGPSumLab){window.TriggleGPSumLab.mount(host,lang);return;}
     const ta=lang==='ta',caption=ta?'நீங்களே மாற்றிப் பாருங்கள்':'Change the value and observe';
@@ -323,11 +324,11 @@
       if(notify)onConcept?.(i);
       const stage=stages[i],choices=Array.isArray(stage.choices)?stage.choices:[];
       panel.innerHTML='<div class="sp2-concept-heading" tabindex="-1"><h4>'+e((i+1)+'. '+pick(stage.title))+'</h4></div>'+
-       (stage.id==='g10-ch2-gp-sum'?'':
+       (['g10-ch2-gp-sum','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
        '<div class="sp2-formula" role="group" aria-label="'+e(ta?'கணிதக் கருத்து':'Mathematical idea')+'">'+
        (stage.math?.latex?window.TriggleNotation.renderLatex(stage.math.latex,{displayMode:true,fallback:stage.math.fallback||pick(stage.rule)}):typeset(pick(stage.rule)))+'</div>')+
        (stage.visual?'<div data-g10ch2-visual></div>':'')+
-       (stage.id==='g10-ch2-ap-sum'||stage.id==='g10-ch2-gp-sum'?'':
+       (['g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
        '<div class="sp2-lesson-note" aria-label="'+e(ta?'கருத்து விளக்கம்':'Concept explanation')+'">'+
        '<p class="sp2-idea">'+typeset(pick(stage.idea))+'</p>'+
        '<p class="sp2-example">'+typeset(pick(stage.example))+'</p><small class="sp2-stage-reference">'+

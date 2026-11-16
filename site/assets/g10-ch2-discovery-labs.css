@@ -1,0 +1,28 @@
+/* Three focused, mobile-first discovery labs: Grade 10 Chapter 2. */
+.g10ch2-discovery{background:#FCFCFD;border:1px solid #D9DEE7;border-radius:14px;padding:14px 12px;max-width:100%;min-width:0;overflow:hidden}
+.g10ch2-discovery-title{margin:0 0 12px;color:#253043;font:750 16px/1.4 system-ui,sans-serif}
+.g10ch2-discovery-trail{display:flex;gap:5px;flex-wrap:wrap;min-width:0;margin:8px 0 12px}
+.g10ch2-discovery-chip{background:#F4F1F5;color:#394356;padding:7px 9px;border-radius:9px;font:650 13px/1.4 system-ui,sans-serif}
+.g10ch2-discovery-chip.is-active{background:#E9F2EC;border:1px solid #A9C5B6;color:#234E39}
+.g10ch2-discovery-math{overflow-x:auto;max-width:100%;padding:10px 6px;border-radius:10px;background:#F1F4F7;color:#253043}
+.g10ch2-discovery-math .katex-display{margin:.35em 0}
+.g10ch2-discovery-note{color:#374357;font:500 14px/1.65 system-ui,sans-serif;margin:11px 0}
+.g10ch2-discovery-subnote,.g10ch2-discovery-complete{color:#536173;font:500 12px/1.6 system-ui,sans-serif;margin:9px 0 0}
+.g10ch2-discovery-complete{color:#245341;font-weight:700}
+.g10ch2-discovery-controls{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px}
+.g10ch2-discovery-controls button,.g10ch2-discovery-choices button{min-height:44px;border:1px solid #BDC6D1;background:#FFF;color:#263249;border-radius:10px;padding:8px 12px;font:700 13px/1.35 system-ui,sans-serif}
+.g10ch2-discovery-controls button:last-child{background:#263244;color:#FFF}
+.g10ch2-discovery-controls button:disabled{opacity:.45}
+.g10ch2-discovery-progress{font:600 12px/1.4 system-ui,sans-serif;color:#596576;white-space:nowrap}
+.g10ch2-discovery-label{font:650 13px/1.4 system-ui,sans-serif;color:#394356;margin:6px 0}
+.g10ch2-discovery-choices{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.g10ch2-discovery-choices button[aria-pressed=true]{background:#742B46;border-color:#742B46;color:#FFF}
+.g10ch2-discovery-range-row{display:flex;align-items:center;gap:10px;margin:10px 0 12px}
+.g10ch2-discovery-range-row label{font:600 13px/1.4 system-ui,sans-serif;flex:0 0 auto;color:#384458}
+.g10ch2-discovery-range-row input{flex:1;min-width:40px;accent-color:#742B46}
+.g10ch2-discovery-range-row strong{font:750 15px system-ui,sans-serif;min-width:2ch;text-align:right;color:#23354A}
+.g10ch2-discovery-track{background:#E1E7EA;border:1px solid #B7C6CA;border-radius:12px;width:100%;height:32px;overflow:hidden}
+.g10ch2-discovery-filled{height:100%;background:#2D806C;transition:width .15s ease-out}
+.g10ch2-discovery-controls button:focus-visible,.g10ch2-discovery-choices button:focus-visible,.g10ch2-discovery-range-row input:focus-visible{outline:3px solid #8F6ED0;outline-offset:2px}
+@media(max-width:360px){.g10ch2-discovery{padding:10px 8px}.g10ch2-discovery-chip{font-size:12px;padding:6px 7px}.g10ch2-discovery-controls button{padding:8px}}
+@media(prefers-reduced-motion:reduce){.g10ch2-discovery-filled{transition:none}}

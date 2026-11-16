@@ -28,7 +28,7 @@ assert.match(stage.question.en,/3S − S/);
 assert.match(stage.question.ta,/3S − S/);
 const hub=read('assets/chapter-hub.js'),idx=read('index.html'),sw=read('service-worker.js');
 assert.match(hub,/window\.TriggleGPSumLab\.mount\(host,lang\)/,'Dedicated geometric-series lab');
-assert.match(hub,/stage\.id==='g10-ch2-gp-sum'\?'':/,'Formula is discovered, not shown first');
+assert.match(hub,/\['g10-ch2-gp-sum'.*includes\(stage\.id\)\?'':/,'Formula is discovered, not shown first');
 assert(idx.indexOf('assets/g10-ch2-gp-sum.js')<idx.indexOf('assets/chapter-hub.js'),'Dependency loads first');
 assert(sw.includes('assets/g10-ch2-gp-sum.js'),'Offline cache includes lab');
 assert.match(read('assets/g10-ch2-foundations.css'),/gp-lab-term\.is-cancelled/);
