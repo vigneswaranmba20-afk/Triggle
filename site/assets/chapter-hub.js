@@ -284,7 +284,7 @@
     root.innerHTML='<div class="sp2-index-view" data-index-view><nav class="sp2-nav" data-nav role="group" aria-label="'+
       e(ta?'கருத்தைத் தேர்க':'Choose a concept')+'"></nav></div>'+
       '<div class="sp2-detail-view" data-detail-view hidden>'+
-      '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+e(back)+'</button></div>'+
+      '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+e(back)+'</button><button type="button" class="sp2-next-concept" data-top-next></button></div>'+
       '<div class="sp2-panel" data-panel></div>'+
       '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+e(ta?'கருத்துகளுக்கான வழிசெலுத்தல்':'Concept navigation')+'">'+
       '<button type="button" class="sp2-footer-prev" data-footer-prev>← '+e(prevLabel)+'</button>'+
@@ -305,6 +305,9 @@
       root.querySelector('[data-footer-prev]').disabled=active<=0;
       const next=root.querySelector('[data-footer-next]');next.textContent=active===stages.length-1?back+' →':nextLabel+' →';
       next.classList.toggle('is-return',active===stages.length-1);
+      const top=root.querySelector('[data-top-next]');
+      top.textContent=active===stages.length-1?(ta?'கருத்துகள் →':'Concept list →'):(ta?'அடுத்த கருத்து →':'Next concept →');
+      top.setAttribute('aria-label',active===stages.length-1?back:nextLabel);
     }
     function showIndex(focus=false,notify=true){
       active=-1;root.dataset.view='index';indexView.hidden=false;detailView.hidden=true;update();
@@ -355,6 +358,7 @@
     root.querySelector('[data-back-index]').onclick=()=>showIndex(true);
     root.querySelector('[data-footer-prev]').onclick=()=>show(active-1,true);
     root.querySelector('[data-footer-next]').onclick=()=>active===stages.length-1?showIndex(true):show(active+1,true);
+    root.querySelector('[data-top-next]').onclick=()=>root.querySelector('[data-footer-next]').click();
     if(Number.isInteger(initialConcept)&&initialConcept>=0&&initialConcept<stages.length)
       show(initialConcept,false,false);
     else showIndex(false,false);
