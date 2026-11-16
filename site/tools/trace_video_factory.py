@@ -321,15 +321,17 @@ def render(args):
     cache.mkdir(parents=True,exist_ok=True)
     stages=out/'segments';stages.mkdir(exist_ok=True)
     records=[]
+    segments=[]
     for i,beat in enumerate(beats):
         audio=segment_audio(beat,spec,cache,args.mode,args.existing_dir,os.environ.get('GEMINI_API_KEY'))
         target=stages/(f'{i:02d}-{beat["id"]}.mp4')
         sec=render_beat(spec,beat,audio,target,i,len(beats),args.width,args.height,args.fps,args.mode)
+        segments.append(target)
         records.append({'beat':beat['id'],'scene':beat['scene'],'narrationSeconds':round(duration(audio),3),
            'visualSeconds':round(sec,3),'audioSha256':sha256(audio)})
         print(f'PASS beat {i+1}/{len(beats)} {beat["id"]}: voice={duration(audio):.2f}s, scene={sec:.2f}s',flush=True)
     playlist=out/'concat.txt'
-    playlist.write_text(''.join("file '"+str(p.resolve()).replace("'", "'\\''")+"'\\n" for p in sorted(stages.glob('*.mp4'))))
+    playlist.write_text(''.join(f"file '{p.resolve()}'\n" for p in segments))
     video=out/(spec['id']+'-'+args.mode+'.mp4')
     run(['ffmpeg','-y','-hide_banner','-loglevel','error','-f','concat','-safe','0','-i',str(playlist),'-c','copy','-movflags','+faststart',str(video)])
     details=verify_video(video,args.width,args.height)
