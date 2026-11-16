@@ -32,6 +32,35 @@ jobs:
         run: |
           python3 -m py_compile site/tools/trace_video_factory.py site/tools/trace_video_release.py
           python3 site/tools/trace_video_factory.py self-test --lesson g10-ch2-ap-sum
+      - name: Render short TRACE demo only when factory files change
+        shell: bash
+        env:
+          CI_PR_BASE: ${{ github.event.pull_request.base.sha }}
+          CI_PUSH_BEFORE: ${{ github.event.before }}
+          CI_EVENT: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          BASE="$CI_PUSH_BEFORE"
+          if [[ "$CI_EVENT" == pull_request ]]; then BASE="$CI_PR_BASE"; fi
+          if [[ ! "$BASE" =~ ^[0-9a-f]{40}$ ]]; then
+            echo 'No safe diff base; skipping media smoke (unit self-test still runs).'
+            exit 0
+          fi
+          if git diff --name-only "$BASE" HEAD | grep -Eq '^(\.github/workflows/trace-video-|site/tools/trace_video_|site/video-factory/)'; then
+            python3 -m pip install --quiet -r site/video-factory/requirements.txt
+            python3 site/tools/trace_video_factory.py render \
+              --mode demo --width 360 --height 640 --fps 8 \
+              --limit-beats 2 --output /tmp/trace-video-ci \
+              --cache /tmp/trace-video-cache
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/trace-video-ci/result.json').read_text())
+          assert r['mode']=='demo' and r['publishable'] is False
+          assert len(r['beats'])==2 and r['durationSeconds']>5
+          print('PASS TRACE smoke: real MP4 and AAC, full media provenance, nonpublishable demo')
+          PY
+          fi
       - id: risk
         name: Classify changed files
         env:
