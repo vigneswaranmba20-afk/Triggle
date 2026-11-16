@@ -101,6 +101,48 @@ for(const x of [2,3]){
  assert(rootCheck.math?.fallback?.includes(x+'²−5('+x+')+6=0'),
   'Missing accessible root substitution: '+x);
 }
+// Q3(i–iv) are authored but intentionally NOT registered. Validate the actual
+// staged lessons against the audited IDs and independently derived set results.
+const stagedCtx={window:{}};
+vm.runInNewContext(read('site/data/textbook-exercises/g9-ch1-ex1-2-q3-staged-en.js'),stagedCtx,{timeout:5000});
+const staged=Array.from(stagedCtx.window.TRIGGLE_G9_EX1_2_Q3_STAGED||[]);
+assert.equal(staged.length,4,'Exactly four Q3 lessons should be staged');
+const expectedQ3=[
+ ['i','Equivalent sets',5,5,false],
+ ['ii','Unequal sets',4,3,false],
+ ['iii','Equal sets',4,4,true],
+ ['iv','Equivalent sets',6,6,false]
+];
+const actualSets=[
+ [['a','e','i','o','u'],['V','O','W','E','L']],
+ [[2,3,4,5],[2,3,4]],
+ [['L','I','F','E'],['F','I','L','E']],
+ [[5,7,11,13,17,19],[1,2,3,6,9,18]]
+];
+for(let i=0;i<expectedQ3.length;i++){
+ const [part,answer,nA,nB,equal]=expectedQ3[i];
+ const row=staged[i],id='g9-ch1-ex1.2-q3-'+part;
+ assert.equal(row.id,id,'Staged Q3 order/ID mismatch');
+ assert(candidateIds.has(id),'Staged ID absent from source inventory: '+id);
+ assert(!liveIds.has(id),'Staged Q3 already registered: '+id);
+ const [a,b]=actualSets[i];
+ assert.equal(new Set(a).size,nA);
+ assert.equal(new Set(b).size,nB);
+ assert.equal(a.length===b.length&&a.every(x=>b.includes(x)),equal);
+ assert.equal(row.answer,answer,'Incorrect Q3 classification: '+id);
+ assert.equal(row.releaseStatus,'staged-english-not-registered');
+ assert.equal(row.translationReview,'pending');
+ assert.equal(row.sourceFidelity?.tamilEditorial,'deferred');
+ assert(Array.isArray(row.steps)&&row.steps.length>=3,'Missing Q3 teaching steps: '+id);
+ for(const step of row.steps){
+  assert(step.en?.trim()&&step.math?.latex?.trim()&&step.math?.fallback?.trim(),
+   'Missing explanation/KaTeX/accessibility fallback: '+id);
+ }
+ assert(row.answerMath?.latex?.trim()&&row.answerMath?.fallback?.trim(),
+  'Missing accessible Q3 final answer: '+id);
+}
+assert(!html.includes('g9-ch1-ex1-2-q3-staged-en.js'),
+ 'Staged Q3 must not be loaded by the student-facing index');
 // Fail loudly if somebody tries to register the full candidate module on top of Q1/Q2.
 const full=read('site/data/textbook-exercises/g9-ch1-ex1-2-en.js');
 assert(!html.includes('g9-ch1-ex1-2-en.js'),'Full 34-part archive must remain isolated');
