@@ -14,6 +14,7 @@ on:
         default: g10-ch2-ap-sum
         options:
           - g10-ch2-ap-sum
+          - g10-ch2-gp-sum
       approved_sha256:
         description: Exact 64-character MP4 SHA-256 shown in preview run summary
         type: string
