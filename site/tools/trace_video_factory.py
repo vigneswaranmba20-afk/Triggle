@@ -119,7 +119,26 @@ def demo_audio(path, *, seconds=2.5):
             wf.writeframes(b''.join(frames))
 
 
+LAST_GEMINI_REQUEST_AT = 0.0
+
+def gemini_error_status(exc):
+    """Return only safe HTTP code/status, never API key or provider response body."""
+    if not isinstance(exc, urllib.error.HTTPError):
+        return type(exc).__name__
+    code = exc.code
+    status = 'UNKNOWN'
+    try:
+        parsed=json.loads(exc.read().decode('utf8'))
+        candidate=str(parsed.get('error',{}).get('status','UNKNOWN'))
+        if re.fullmatch(r'[A-Z_]{2,60}',candidate):
+            status=candidate
+    except (ValueError,UnicodeDecodeError,AttributeError):
+        pass
+    return f'HTTP {code} {status}'
+
+
 def gemini_audio(text, path, model, voice, api_key):
+    global LAST_GEMINI_REQUEST_AT
     prompt = ("Synthesize exactly the following spoken lesson passage. "
               "Warm, calm, natural teacher voice with gentle Indian English pronunciation. "
               "Unhurried but not unnaturally stretched. No background music. "
@@ -129,8 +148,15 @@ def gemini_audio(text, path, model, voice, api_key):
         "speechConfig":{"voiceConfig":{"prebuiltVoiceConfig":{"voiceName":voice}}}}}
     url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent'
     raw = json.dumps(payload).encode('utf8')
-    last = None
-    for attempt in range(3):
+    last_status = None
+    max_attempts = 4
+    for attempt in range(max_attempts):
+        # Preview models have relatively tight RPM quotas. Space out distinct
+        # requests without slowing down audio previously restored from cache.
+        remaining = 10.0 - (time.monotonic() - LAST_GEMINI_REQUEST_AT)
+        if remaining > 0:
+            time.sleep(remaining)
+        LAST_GEMINI_REQUEST_AT=time.monotonic()
         try:
             request = urllib.request.Request(url, raw, headers={'Content-Type':'application/json','x-goog-api-key':api_key}, method='POST')
             with urllib.request.urlopen(request, timeout=160) as response:
@@ -151,12 +177,20 @@ def gemini_audio(text, path, model, voice, api_key):
             if duration(path) < .5: raise RuntimeError('TTS segment unexpectedly short')
             return
         except (urllib.error.HTTPError, urllib.error.URLError, ValueError, KeyError, RuntimeError) as exc:
-            last = exc
+            last_status = gemini_error_status(exc)
             code = getattr(exc,'code',None)
             if isinstance(exc, urllib.error.HTTPError) and code not in (429,500,502,503,504):
-                raise RuntimeError(f'Non-retryable TTS status {code}') from None
-            if attempt<2: time.sleep(2**attempt)
-    raise RuntimeError(f'TTS could not complete after 3 attempts: {type(last).__name__}')
+                raise RuntimeError(f'Gemini TTS non-retryable {last_status}; check your API project settings') from None
+            print(f'TRACE narration attempt {attempt+1}/{max_attempts} failed: {last_status}',flush=True)
+            if attempt < max_attempts - 1:
+                # Bounded exponential-ish delay; do not hammer a rate-limited API.
+                backoff=(8,22,45)[attempt]
+                if isinstance(exc, urllib.error.HTTPError):
+                    retry_after=exc.headers.get('Retry-After','')
+                    if retry_after.isdigit(): backoff=max(backoff,min(90,int(retry_after)))
+                print(f'Retrying only the unfinished narration beat after {backoff}s',flush=True)
+                time.sleep(backoff)
+    raise RuntimeError(f'Gemini TTS stopped after {max_attempts} attempts ({last_status}); check AI Studio quotas/billing and rerun with unchanged cache_revision to resume generated beats')
 
 
 def segment_audio(beat, lesson, audio_root, mode, existing_dir, api_key):
