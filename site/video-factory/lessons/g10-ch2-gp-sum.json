@@ -14,55 +14,55 @@
     {
       "id": "wonder",
       "scene": "gp-intro",
-      "narration": "Can we add one, two, four, and eight without counting every number? There is a beautiful shortcut hiding in the pattern.",
+      "narration": "How can we add one, two, four, and eight quickly? There is a pattern hiding here.",
       "holdAfter": 1.1
     },
     {
       "id": "doubling-pattern",
       "scene": "gp-pattern",
-      "narration": "Notice what happens from one term to the next. We multiply by two, again and again. Two is called the common ratio.",
+      "narration": "Each term is double the previous one. That fixed multiplier, two, is called the common ratio.",
       "holdAfter": 1.1
     },
     {
       "id": "name-the-sum",
       "scene": "gp-name",
-      "narration": "Let us call the whole sum S. So S equals one plus two plus four plus eight. We will find S using a clever subtraction.",
+      "narration": "Call the sum S. So S equals one plus two plus four plus eight.",
       "holdAfter": 0.9
     },
     {
       "id": "double-the-sum",
       "scene": "gp-double",
-      "narration": "Double every term, not just the first one. Two S equals two plus four plus eight plus sixteen. Watch how the numbers line up.",
+      "narration": "Double every term. Two S equals two plus four plus eight plus sixteen. Notice how the terms shift.",
       "holdAfter": 1.1
     },
     {
       "id": "align-the-rows",
       "scene": "gp-align",
-      "narration": "Put the doubled sum above the original sum. The two, four, and eight now sit in the same columns. Those are the terms that will disappear.",
+      "narration": "Align the doubled sum and the original. Two, four, and eight now match, column for column.",
       "holdAfter": 1.2
     },
     {
       "id": "cancel-the-middle",
       "scene": "gp-cancel",
-      "narration": "Subtract the original S from two S. The matching middle terms cancel each other. We are left with sixteen minus one. And two S minus S is just S, so S equals fifteen.",
+      "narration": "Subtract S from two S. The three matching terms cancel. Sixteen minus one remains. Since two S minus S equals S, the sum is fifteen.",
       "holdAfter": 1.6
     },
     {
       "id": "discover-formula",
       "scene": "gp-rule",
-      "narration": "This trick works for any geometric progression. Multiply the sum by the common ratio r, then subtract. The sum of n terms equals a times the bracket r to the power n minus one, all divided by r minus one. Remember, r cannot equal one here.",
+      "narration": "The same idea works with any first term a and ratio r. Multiply by r and subtract. For n terms, the sum is a times the bracket r to the power n minus one, all divided by r minus one. But r must not equal one.",
       "holdAfter": 2
     },
     {
       "id": "your-turn",
       "scene": "gp-practice",
-      "narration": "Now try one yourself. Add one, three, nine, and twenty-seven. If you multiply this sum by three, which terms will cancel? Pause the video and work it out on paper.",
+      "narration": "Your turn. Add one, three, nine, and twenty-seven. Multiply the sum by three, then subtract. Which terms cancel? Pause and try it yourself.",
       "holdAfter": 3.6
     },
     {
       "id": "check-your-thinking",
       "scene": "gp-answer",
-      "narration": "Three S equals three plus nine plus twenty-seven plus eighty-one. Subtract S and the matching terms disappear. Two S equals eighty-one minus one, which is eighty. Therefore S equals forty. You have discovered the geometric series shortcut.",
+      "narration": "Three S equals three plus nine plus twenty-seven plus eighty-one. Subtract S. Two S equals eighty-one minus one, which is eighty. So S equals forty. That's the shortcut.",
       "holdAfter": 2.3
     }
   ],
