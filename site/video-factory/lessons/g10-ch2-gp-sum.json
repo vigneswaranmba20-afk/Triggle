@@ -50,7 +50,7 @@
     {
       "id": "discover-formula",
       "scene": "gp-rule",
-      "narration": "The same trick works for any geometric progression. Multiply by the common ratio r, then subtract. For n terms, the sum is a times r to the power n minus one, divided by r minus one. This division shortcut requires r not equal to one.",
+      "narration": "This trick works for any geometric progression. Multiply the sum by the common ratio r, then subtract. The sum of n terms equals a times the bracket r to the power n minus one, all divided by r minus one. Remember, r cannot equal one here.",
       "holdAfter": 2
     },
     {
