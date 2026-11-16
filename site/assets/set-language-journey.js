@@ -67,7 +67,8 @@
       '<p class="sp2-private">'+esc(t.saved)+'</p></div>'+
       '<div class="sp2-detail-view" data-detail-view hidden>'+
       '<div class="sp2-detail-navigation">'+
-      '<button type="button" class="sp2-back-index" data-back-index>'+esc('← '+t.backConcepts)+'</button>'+
+      '<button type="button" class="sp2-back-index" data-back-index>'+esc('← '+t.backConcepts)+'</button>'+ 
+       '<button type="button" class="sp2-next-concept" data-top-next></button>'+
       '<span data-journey-index role="status" aria-live="polite"></span></div>'+
       '<div class="sp2-panel" data-panel></div>'+
       '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+esc(t.select)+'">'+
@@ -103,6 +104,9 @@
       root.querySelector('[data-footer-prev]').disabled=active===0;
        root.querySelector('[data-footer-next]').textContent=active===book.stages.length-1?t.backConcepts+' →':t.nextIdea+' →';
        root.querySelector('[data-footer-next]').classList.toggle('is-return',active===book.stages.length-1);
+       const top=root.querySelector('[data-top-next]');
+       top.textContent=active===book.stages.length-1?(lang==='ta'?'கருத்துகள் →':'Concept list →'):(lang==='ta'?'அடுத்த கருத்து →':'Next concept →');
+       top.setAttribute('aria-label',active===book.stages.length-1?t.backConcepts:t.nextIdea);
     }
     book.stages.forEach((stage,i)=>{
       const button=document.createElement('button');
@@ -116,6 +120,7 @@
        if(active===book.stages.length-1){showIndex(true);return;}
        show(active+1,true);
      });
+    root.querySelector('[data-top-next]').addEventListener('click',()=>root.querySelector('[data-footer-next]').click());
     function demoShell(title){return '<div class="sp2-demo" data-demo><p class="sp2-demo-title">'+esc(title)+'</p><div class="sp2-demo-controls" data-demo-controls></div><p class="sp2-demo-output" data-demo-output role="status" aria-live="polite"></p></div>';}
     function btn(name,key){return '<button type="button" data-demo-mode="'+esc(key)+'" aria-label="'+esc(plain(name))+'">'+htmlMath(name)+'</button>';}
     function setDemo(state,options,paint){
