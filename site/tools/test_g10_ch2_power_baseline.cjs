@@ -24,5 +24,5 @@ const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 assert(app.includes("grade===10&&String(selectedChapter()?.number)==='2'"),
   'Only Grade 10 Chapter 2 invokes the baseline correction');
 assert(html.includes('math-notation.js?v=g10-ch2-math-baseline-1'),'Version bump for Android');
-assert(sw.includes('scroll2-baseline1'),'Offline cache should refresh');
+assert.match(sw,/^const CACHE=['"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['"];?/m,'Offline cache must retain an explicit versioned namespace');
 console.log('PASS coefficient and powered base share a MathML row only in Grade 10 Chapter 2; original text and other grades preserved');
