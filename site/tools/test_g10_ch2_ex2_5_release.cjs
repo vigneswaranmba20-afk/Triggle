@@ -25,7 +25,7 @@ assert.equal(audit.tasks.length,21);
 assert.deepEqual(new Set(included.map(q=>q.id)),new Set(audit.tasks.map(x=>x.id)));
 assert.equal(new Set(included.map(x=>x.id.match(/-q\d+/)?.[0])).size,14);
 const ans=['Yes, an A.P. with common difference −2.','No, this is not an A.P.','3/4, 5/4, 7/4, 9/4, …','First term a = −1; common difference d = 2.','First term a = −3; common difference d = −7.','k = 4.'];
-added.forEach((q,i)=>{assert.equal(q.answer,ans[i]);assert.equal(q.translationReview,'pending');assert(q.steps.length>=3);assert(q.steps.every(x=>x.eq&&x.math?.latex&&x.math.display));});
+added.forEach((q,i)=>{assert.equal(q.answer,ans[i]);assert.equal(q.translationReview,'pending');assert(q.steps.length>=3);assert(q.steps.every(x=>x.eq&&x.math?.latex&&x.math.display&&x.math.fallback===x.eq),'Every displayed equation needs an exact accessible fallback: '+q.id);});
 for(const a of [-100,0,2.5,100])assert.equal((a-5)-(a-3),(a-7)-(a-5));
 assert.notEqual(-1-1,1-(-1));
 assert.deepEqual([0,1,2,3].map(i=>3/4+i/2),[3/4,5/4,7/4,9/4]);
