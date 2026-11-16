@@ -1,0 +1,15 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const js=fs.readFileSync('site/assets/chapter-hub.js','utf8');
+const css=fs.readFileSync('site/assets/chapter-hub.css','utf8');
+const html=fs.readFileSync('site/index.html','utf8');
+assert(js.includes('hasTopNext=false'));
+assert(js.includes('data-top-next'));
+assert(js.includes("chapter.id==='g10-ch2'"));
+assert(js.includes("ta?'அடுத்த கருத்து':'Next concept'"));
+assert(js.includes("root.querySelector('[data-top-next]').onclick"));
+assert(js.includes("root.querySelector('[data-footer-next]').onclick"));
+assert(css.includes('.sp2-top-next:focus-visible'));
+assert(css.includes('min-height:44px'));
+assert(html.includes('chapter-hub.js?v=g10-ch2-top-next-20261116-1'));
+console.log('PASS Grade 10 Chapter 2 top Next navigation remains touch-friendly, bilingual and isolated');
