@@ -149,8 +149,17 @@ const entries=[
       "display": true
     },
     "releaseStatus": "staged-english-not-registered",
-    "questionMath": {
-      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(ii) C = {2,3,4,5} D = {x : x∈W, 1 < x < 5}"
+    {
+      "questionMath": {
+        "en": [
+          "3. Which of the following sets are equivalent or unequal or equal sets? (ii)",
+          {
+            "latex": "C=\\{2,3,4,5\\},\\quad D=\\{x\\in\\mathbb{W}:1<x<5\\}",
+            "fallback": "C = {2, 3, 4, 5}; D = {x in whole numbers: 1 < x < 5}",
+            "display": true
+          }
+        ]
+      }
     }
   },
   {
@@ -301,8 +310,22 @@ const entries=[
       "display": true
     },
     "releaseStatus": "staged-english-not-registered",
-    "questionMath": {
-      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iv) G = {x : x is a prime number and 3 < x < 23} H = {x : x is a divisor of 18}"
+    {
+      "questionMath": {
+        "en": [
+          "3. Which of the following sets are equivalent or unequal or equal sets? (iv)",
+          {
+            "latex": "G=\\{x:x\\text{ is prime},\\;3<x<23\\}",
+            "fallback": "G = {x: x is prime and 3 < x < 23}",
+            "display": true
+          },
+          {
+            "latex": "H=\\{x:x\\text{ is a positive divisor of }18\\}",
+            "fallback": "H = {x: x is a positive divisor of 18}",
+            "display": true
+          }
+        ]
+      }
     }
   }
 ];
