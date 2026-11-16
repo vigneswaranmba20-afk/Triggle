@@ -130,7 +130,7 @@ for(let i=0;i<expectedQ3.length;i++){
  assert.equal(new Set(b).size,nB);
  assert.equal(a.length===b.length&&a.every(x=>b.includes(x)),equal);
  assert.equal(row.answer,answer,'Incorrect Q3 classification: '+id);
- if(part==='ii'||part==='iv'){
+ if(['i','ii','iii','iv'].includes(part)){
   const questionParts=row.questionMath?.en;
   assert(Array.isArray(questionParts),'Set-builder question needs structured math: '+id);
   const expectedDisplays=part==='iv'?2:1;
