@@ -163,6 +163,15 @@ const entries=[
           "fallback": "a₄ = 7/4 + 2/4 = 9/4",
           "display": true
         }
+      },
+      {
+        "en": "To find any term, start with 3/4 and add the common difference 1/2 exactly n − 1 times. This rule reproduces every term without repeatedly adding fractions.",
+        "eq": "aₙ = 3/4 + (n − 1)/2 = (2n + 1)/4",
+        "math": {
+          "latex": "a_n=\\frac34+\\frac{n-1}{2}=\\frac{2n+1}{4}",
+          "fallback": "aₙ = 3/4 + (n − 1)/2 = (2n + 1)/4",
+          "display": true
+        }
       }
     ],
     "answer": "3/4, 5/4, 7/4, 9/4, …",
