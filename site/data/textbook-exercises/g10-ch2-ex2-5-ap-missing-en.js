@@ -47,10 +47,10 @@ const entries=[
       },
       {
         "en": "The nth term follows tₙ = a − (2n + 1), so tₙ₊₁ − tₙ = [a − (2n + 3)] − [a − (2n + 1)] = −2 for every positive integer n. Therefore the common difference is constant for the entire sequence, for any fixed real a.",
-        "eq": "d = −2",
+        "eq": "tₙ₊₁ − tₙ = [a − (2n + 3)] − [a − (2n + 1)] = −2",
         "math": {
-          "latex": "d=-2",
-          "fallback": "d = −2",
+          "latex": "t_{n+1}-t_n=\\bigl[a-(2n+3)\\bigr]-\\bigl[a-(2n+1)\\bigr]=-2",
+          "fallback": "tₙ₊₁ − tₙ = [a − (2n + 3)] − [a − (2n + 1)] = −2",
           "display": true
         }
       }
