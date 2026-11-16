@@ -622,3 +622,21 @@
     padding-bottom:0!important;
   }
 }
+
+/* Top Next concept: fast page changes without scrolling to the footer. */
+.chapter-hub[data-hub-section="concepts"] .sp2-detail-navigation{flex-wrap:nowrap;gap:8px}
+.chapter-hub[data-hub-section="concepts"] .sp2-detail-navigation .sp2-back-index{
+  min-width:0;flex:0 1 auto;overflow-wrap:anywhere;
+}
+.chapter-hub[data-hub-section="concepts"] .sp2-next-concept{
+  box-sizing:border-box;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;padding:8px 10px;border:1px solid #d9d2e3;border-radius:10px;
+  background:#f8f7fa;color:#282631;font:800 13px/1.35 system-ui,sans-serif;
+  white-space:nowrap;cursor:pointer;
+}
+.chapter-hub[data-hub-section="concepts"] .sp2-next-concept:hover{background:#efecf3}
+.chapter-hub[data-hub-section="concepts"] .sp2-next-concept:focus-visible{outline:3px solid #7252bc;outline-offset:2px}
+@media(max-width:355px){
+ .chapter-hub[data-hub-section="concepts"] .sp2-detail-navigation{gap:5px}
+ .chapter-hub[data-hub-section="concepts"] .sp2-next-concept{font-size:12px;padding:8px 7px}
+}
