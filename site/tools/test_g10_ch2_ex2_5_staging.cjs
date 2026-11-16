@@ -56,6 +56,10 @@ for(const row of newRows){
  assert.equal(row.kind,'textbook');assert.equal(row.edition,'2025');assert.equal(row.translationReview,'pending');
  assert(row.source.includes('13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of'));
  assert(row.reference.includes('PDF p. ')&&row.reference.includes('printed p. '));
+ const auditTask=audit.tasks.find(t=>t.id===row.id);
+ assert(auditTask,'Staged lesson must have an audited source ID: '+row.id);
+ assert(row.reference.includes('PDF p. '+auditTask.sourcePdfPage),
+   'Source-page mismatch for '+row.id+': audit PDF p. '+auditTask.sourcePdfPage+' versus lesson '+row.reference);
  assert(row.q.en.length>35,'Full question wording');
  assert(row.steps.length>=3&&row.steps.every(step=>step.en.length>30&&step.eq&&step.math?.latex&&step.math?.display&&step.math.fallback===step.eq));
 }
