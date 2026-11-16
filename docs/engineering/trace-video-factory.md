@@ -72,3 +72,16 @@ No direct push to main, no WAV download/re-upload and no unrestricted token are 
 - The first demo works without API keys; actual narration and R2 publish require the named secrets.
 
 Official references: https://ai.google.dev/gemini-api/docs/generate-content/speech-generation and https://developers.cloudflare.com/r2/get-started/s3/.
+
+## Recovering safely from a Gemini voice API interruption
+
+The first real narration run (GitHub Actions #43806055627) rendered beats 1–7, then Gemini returned an HTTP error on beat 8 after three short retries. The original job did not preserve its partial audio cache. These changes address that design flaw.
+
+- New Gemini narration requests are spaced at least 10 seconds apart, but cache hits skip requests entirely.
+- Retryable HTTP 429/5xx errors use bounded backoff (8, 22 and 45 seconds, or longer when Gemini returns a numeric Retry-After), capped at four attempts.
+- The logs show only the HTTP status/category, never the API key or full provider response.
+- New jobs save generated WAV segments **even when the render step fails**. The next run with the same lesson source and cache_revision restores those segments using a prefix-matched per-run cache key and generates only the missing narration.
+- Keep cache_revision unchanged (normally v1) when retrying. Change it only when you explicitly want to force fresh synthesis of every segment. The cache remains subject to GitHub retention and permission limits.
+- A failed run still produces no public MP4 and cannot publish. Gemini API rate/quota/billing settings may need attention for persistent 429 errors. Other failures may be temporary provider overload.
+
+**Security note:** GitHub Actions caches are not private encrypted vaults. Only generated voice segments from publicly authored scripts are cached. API keys are never saved into cache files.

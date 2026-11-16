@@ -59,12 +59,16 @@ jobs:
           test -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
       - name: Validate exact lesson script and prevent early answer reveals
         run: python3 site/tools/trace_video_factory.py self-test --lesson "${{ inputs.lesson }}"
-      - name: Restore narration segments by immutable script/voice cache key
+      # Each run gets an immutable cache entry. Restore the most recent matching
+      # narration cache, then save even after a failed render to preserve WAV work.
+      - name: Resume existing narration segments
         if: inputs.mode == 'gemini'
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: build/trace-video/voice-cache
-          key: trace-voice-${{ runner.os }}-${{ inputs.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-${{ inputs.cache_revision }}
+          key: trace-voice-${{ runner.os }}-${{ inputs.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-${{ inputs.cache_revision }}-${{ github.run_id }}
+          restore-keys: |
+            trace-voice-${{ runner.os }}-${{ inputs.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-${{ inputs.cache_revision }}-
       - name: Render audio-first storyboard
         shell: bash
         env:
@@ -84,6 +88,12 @@ jobs:
             --width "$W" --height "$H" --fps 12 \
             --output build/trace-video/preview \
             --cache build/trace-video/voice-cache
+      - name: Save completed narration even if rendering fails
+        if: always() && inputs.mode == 'gemini'
+        uses: actions/cache/save@v4
+        with:
+          path: build/trace-video/voice-cache
+          key: trace-voice-${{ runner.os }}-${{ inputs.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-${{ inputs.cache_revision }}-${{ github.run_id }}
       - name: Record review information
         if: success()
         run: |
