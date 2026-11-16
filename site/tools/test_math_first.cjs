@@ -43,7 +43,7 @@ assert(html.includes('math-first.css?v=standard-20261111'),'Updated chapter-navi
 const glass=/\.figure-dialog\{[\s\S]*?background:rgba\(239,232,250,\.68\)!important/.test(css);
 assert(glass,'Venn dialog must be visibly translucent, not nearly opaque');
 assert(html.includes('textbook-activities.js?v=math-first-1'),'New activities renderer not versioned');
-assert(html.includes('chapter-hub.js?v=exercise-index-all-grades-20261115-1'),'Current uncluttered chapter hub must load without regressing matrix Concepts');
+assert(html.includes('chapter-hub.js?v=gp-discovery-20261116-1'),'Current uncluttered chapter hub must load with the new GP discovery lab without regressing matrix Concepts');
 assert(html.includes('app.js?v=exercise-index-all-grades-20261115-1'),'Current single-solution reader and fixed Chapter 2 navigation must load');
 assert(sw.includes("'./assets/math-first.css'"),'Offline shell must include new CSS');
 assert.match(sw,/^const CACHE=['\"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['\"];?/m,'Offline cache must use a versioned Triggle namespace');
