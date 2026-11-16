@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch2-ap-sum",
+  "class": 10,
+  "chapter": "2",
+  "language": "en",
+  "title": "Why pairing terms reveals the A.P. sum",
+  "subtitle": "Arithmetic Progressions · Grade 10",
+  "voice": {
+    "model": "gemini-3.1-flash-tts-preview",
+    "name": "Kore"
+  },
+  "beats": [
+    {
+      "id": "welcome",
+      "scene": "intro",
+      "narration": "How can we add a long arithmetic progression without counting every term? Let us discover a clever pattern.",
+      "holdAfter": 1.1
+    },
+    {
+      "id": "sequence",
+      "scene": "sequence",
+      "narration": "Look at the five numbers: two, four, six, eight, and ten. The difference between neighboring terms is always two.",
+      "holdAfter": 1.1
+    },
+    {
+      "id": "pair-outside",
+      "scene": "outer-pair",
+      "narration": "Start at the two ends. Two plus ten equals twelve. We can join the first and last terms into one pair.",
+      "holdAfter": 1
+    },
+    {
+      "id": "pair-inside",
+      "scene": "inner-pair",
+      "narration": "Now move inward. Four plus eight also equals twelve. Both pairs have exactly the same sum.",
+      "holdAfter": 1
+    },
+    {
+      "id": "middle",
+      "scene": "middle",
+      "narration": "Six is left in the middle. So the total is twelve plus twelve plus six, which equals thirty.",
+      "holdAfter": 1.2
+    },
+    {
+      "id": "formula",
+      "scene": "formula",
+      "narration": "That pattern gives us a shortcut. The sum equals the number of terms, divided by two, multiplied by the first term plus the last term.",
+      "holdAfter": 1.5
+    },
+    {
+      "id": "apply",
+      "scene": "apply",
+      "narration": "Here we have five terms. The first is two, and the last is ten. Five divided by two, times twelve, equals thirty. Exactly the same answer.",
+      "holdAfter": 1.5
+    },
+    {
+      "id": "try",
+      "scene": "practice",
+      "narration": "Your turn. What is the sum of three, six, nine, twelve, and fifteen? Think about the first and last terms. Pause here if you need more time.",
+      "holdAfter": 3.5
+    },
+    {
+      "id": "reveal",
+      "scene": "answer",
+      "narration": "There are five terms. Three plus fifteen is eighteen. Five divided by two, times eighteen, gives forty-five. Beautiful. You have just used the arithmetic progression sum formula.",
+      "holdAfter": 2.2
+    }
+  ]
+}
