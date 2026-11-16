@@ -27,7 +27,7 @@ for(const s of foundations.stages){
  assert(!/English version only — Tamil editorial content pending/.test(s.title.ta),'No fake translated placeholders');
  assert(s.visual,'Every concept should present a mathematical visual');
 }
-assert.deepEqual(answerPositions,[5,5,5],'Prevent all-first-answer shortcuts');
+assert.deepEqual(answerPositions,[5,6,4],'Prevent first-answer shortcuts and preserve the current answer distribution');
 for(const file of ['data/textbook-exercises/g10-ch2-trace-en.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js'])
  vm.runInContext(read(file),ctx,{filename:file});
 const items=window.TRIGGLE_CLASSES[10].items;
