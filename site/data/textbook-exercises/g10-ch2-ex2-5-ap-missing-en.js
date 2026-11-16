@@ -46,7 +46,7 @@ const entries=[
         }
       },
       {
-        "en": "Both consecutive differences are −2; the displayed rule continues with subtraction of 2. This works for any fixed real a.",
+        "en": "The nth term follows tₙ = a − (2n + 1), so tₙ₊₁ − tₙ = [a − (2n + 3)] − [a − (2n + 1)] = −2 for every positive integer n. Therefore the common difference is constant for the entire sequence, for any fixed real a.",
         "eq": "d = −2",
         "math": {
           "latex": "d=-2",
