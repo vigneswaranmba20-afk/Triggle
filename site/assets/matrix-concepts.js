@@ -40,7 +40,7 @@
     const setting=(key,fallback,allowed)=>allowed.includes(states[active][key])?states[active][key]:fallback;
     root.innerHTML='<div class="sp2-index-view" data-index-view><nav id="mc-index" class="mc-index" aria-label="Choose a matrix concept">'+scenes.map((s,i)=>'<button type="button" data-scene="'+i+'"><span>'+String(i+1).padStart(2,'0')+'</span> '+esc(s.title)+'</button>').join('')+'</nav></div>'+
       '<div class="sp2-detail-view" data-detail-view hidden><div class="sp2-detail-navigation">'+
-      '<button type="button" class="sp2-back-index" data-index-toggle>← Back to concepts</button></div>'+
+      '<button type="button" class="sp2-back-index" data-index-toggle>← Back to concepts</button><button type="button" class="sp2-next-concept" data-top-next></button></div>'+
       '<article data-scene-panel></article><nav class="mc-navigation" data-adaptive-dock aria-label="Concept navigation">'+
       '<button type="button" data-prev>← Previous idea</button><button type="button" data-next>Next idea →</button></nav>'+
       '<div class="mc-end"><button type="button" data-exercises>Practise chapter exercises ↗</button></div></div>';
@@ -50,6 +50,7 @@
     root.querySelectorAll('[data-scene]').forEach(b=>b.onclick=()=>show(+b.dataset.scene,true));
     root.querySelector('[data-prev]').onclick=()=>show(active-1,true);
     root.querySelector('[data-next]').onclick=()=>active===scenes.length-1?showIndex(true):show(active+1,true);
+     root.querySelector('[data-top-next]').onclick=()=>root.querySelector('[data-next]').click();
     root.querySelector('[data-exercises]').onclick=()=>opts.onExercises?.();
     function showIndex(focus=false,notify=true){
       root.dataset.view='index';indexView.hidden=false;detailView.hidden=true;
@@ -75,6 +76,8 @@
       opts.onConcept?.(i,!navigate);const s=scenes[i];
       root.querySelectorAll('[data-scene]').forEach((b,j)=>b.setAttribute('aria-current',j===i?'step':'false'));
       root.querySelector('[data-prev]').disabled=i===0;root.querySelector('[data-next]').textContent=i===scenes.length-1?'Back to concepts →':'Next idea →';
+       root.querySelector('[data-top-next]').textContent=i===scenes.length-1?'Concept list →':'Next concept →';
+       root.querySelector('[data-top-next]').setAttribute('aria-label',i===scenes.length-1?'Back to concepts':'Next idea');
       panel.innerHTML='<header class="mc-scene-heading"><h3 tabindex="-1">'+esc(s.question)+'</h3></header><div class="mc-stage"><div class="mc-visual" data-visual></div><div class="mc-controls" data-controls></div><div class="mc-result" data-result role="status" aria-live="polite" aria-atomic="true"></div></div><p class="mc-takeaway" data-takeaway></p><div class="mc-secondary"><button type="button" data-proof>Understand deeper</button><button type="button" data-check-toggle aria-expanded="false">Predict & check</button></div><div class="mc-check" data-check hidden><p>'+esc(s.check)+'</p><div>'+s.options.map((o,j)=>'<button type="button" data-answer="'+j+'">'+esc(o)+'</button>').join('')+'</div><p data-feedback role="status"></p><button type="button" data-reason>Reveal the reasoning</button></div>';
       panel.querySelector('[data-check-toggle]').onclick=e=>{const el=panel.querySelector('[data-check]');el.hidden=!el.hidden;e.target.setAttribute('aria-expanded',String(!el.hidden));};
       panel.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{set('prediction',+b.dataset.answer);panel.querySelector('[data-feedback]').textContent=s.feedback[+b.dataset.answer];b.setAttribute('aria-pressed','true');panel.querySelectorAll('[data-answer]').forEach(other=>{if(other!==b)other.setAttribute('aria-pressed','false');});});
