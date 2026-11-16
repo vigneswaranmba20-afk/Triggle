@@ -10,6 +10,7 @@ on:
         type: choice
         options:
           - g10-ch2-ap-sum
+          - g10-ch2-gp-sum
       mode:
         description: Demo has clearly labeled synthetic audio; Gemini requires a secret
         required: true
