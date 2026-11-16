@@ -14,6 +14,25 @@ const current25=current.classes[10].items.filter(q=>String(q.chapter)==='2'&&q.e
   q.kind!=='practice'&&/^(?:Exercise|Unit Exercise)\b/.test(q.label?.en||''));
 assert.equal(current25.length,15,'Preserve 15 previously published, unique Exercise 2.5 parts');
 const expected=['q1-i','q1-v','q2-iii','q3-i','q3-ii','q8'].map(k=>'c10-2-ex2-5-'+k);
+// Reconcile every source task, not merely the six staged IDs. This prevents
+// missing/duplicated textbook parts from being hidden by a passing 15+6 count.
+const audit=JSON.parse(fs.readFileSync('docs/curriculum/grade-10/trace/g10-ch2-ex2-5-source-audit-20261115.json','utf8'));
+assert.equal(audit.numberedQuestions,14);
+assert.equal(audit.uniqueSubpartTasks,21);
+assert.equal(audit.existingIntegratedUniqueTasks,15);
+assert.equal(audit.missingStagedTasks,6);
+assert.equal(audit.tasks.length,21);
+const sourceIds=audit.tasks.map(t=>t.id);
+assert.equal(new Set(sourceIds).size,21,'Every textbook task must have a unique ID');
+const existingIds=new Set(current25.map(t=>t.id));
+const stagedIds=new Set(audit.tasks.filter(t=>t.state.startsWith('new ')).map(t=>t.id));
+assert.equal(stagedIds.size,6,'Exactly six source tasks are staged');
+for(const task of audit.tasks){
+ assert([67,68].includes(task.sourcePdfPage),'Source page must be in audited range: '+task.id);
+ if(stagedIds.has(task.id))assert(!existingIds.has(task.id),'Staged task already live: '+task.id);
+ else assert(existingIds.has(task.id),'Source-listed existing task absent from runtime: '+task.id);
+}
+assert.equal(new Set([...existingIds,...stagedIds]).size,21,'Source/runtime union must contain all 21 tasks');
 for(const id of expected)assert(!current25.some(q=>q.id===id),'No duplicate source ID '+id);
 const context={window:{TRIGGLE_CLASSES:current.classes,TRIGGLE_CURRICULUM:current.curriculum}};
 vm.runInNewContext(code,context,{filename:modulePath,timeout:6000});
