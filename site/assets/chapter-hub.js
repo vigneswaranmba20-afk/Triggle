@@ -280,7 +280,7 @@
     });
   }
 
-  function mountStageJourney(container,stages,lang,initialConcept,onConcept,onQuestion=null,chapterQuestions=[]){
+  function mountStageJourney(container,stages,lang,initialConcept,onConcept,onQuestion=null,chapterQuestions=[],hasTopNext=false){
     const ta=lang==='ta',pick=value=>typeof value==='string'?value:(value?.[lang]||value?.en||'');
     const back=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
     const nextLabel=ta?'அடுத்த கருத்து':'Next idea';
@@ -289,7 +289,7 @@
     root.innerHTML='<div class="sp2-index-view" data-index-view><nav class="sp2-nav" data-nav role="group" aria-label="'+
       e(ta?'கருத்தைத் தேர்க':'Choose a concept')+'"></nav></div>'+
       '<div class="sp2-detail-view" data-detail-view hidden>'+
-      '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+e(back)+'</button></div>'+
+      '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+e(back)+'</button>'+(hasTopNext?'<button type="button" class="sp2-top-next" data-top-next></button>':'')+'</div>'+
       '<div class="sp2-panel" data-panel></div>'+
       '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+e(ta?'கருத்துகளுக்கான வழிசெலுத்தல்':'Concept navigation')+'">'+
       '<button type="button" class="sp2-footer-prev" data-footer-prev>← '+e(prevLabel)+'</button>'+
@@ -310,6 +310,8 @@
       root.querySelector('[data-footer-prev]').disabled=active<=0;
       const next=root.querySelector('[data-footer-next]');next.textContent=active===stages.length-1?back+' →':nextLabel+' →';
       next.classList.toggle('is-return',active===stages.length-1);
+      const topNext=root.querySelector('[data-top-next]');
+      if(topNext){topNext.textContent=active===stages.length-1?back+' →':(ta?'அடுத்த கருத்து':'Next concept')+' →';topNext.classList.toggle('is-return',active===stages.length-1);}
     }
     function showIndex(focus=false,notify=true){
       active=-1;root.dataset.view='index';indexView.hidden=false;detailView.hidden=true;update();
@@ -361,6 +363,7 @@
     root.querySelector('[data-back-index]').onclick=()=>showIndex(true);
     root.querySelector('[data-footer-prev]').onclick=()=>show(active-1,true);
     root.querySelector('[data-footer-next]').onclick=()=>active===stages.length-1?showIndex(true):show(active+1,true);
+    if(hasTopNext)root.querySelector('[data-top-next]').onclick=()=>active===stages.length-1?showIndex(true):show(active+1,true);
     if(Number.isInteger(initialConcept)&&initialConcept>=0&&initialConcept<stages.length)
       show(initialConcept,false,false);
     else showIndex(false,false);
@@ -476,7 +479,7 @@
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }else if(chapter.id==='g9-ch9'||chapter.id==='g10-ch2'){
-          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,sets.exercises);
+          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,sets.exercises,chapter.id==='g10-ch2');
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }
