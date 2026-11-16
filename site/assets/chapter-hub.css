@@ -622,3 +622,20 @@
     padding-bottom:0!important;
   }
 }
+
+/* Grade 10 Chapter 2: easy next-concept access beside the index return.
+   Reuses existing navigation; exercise navigation and every other chapter stay unchanged. */
+.chapter-hub[data-hub-section="concepts"] .sp2-top-next{
+  display:inline-flex;align-items:center;justify-content:flex-end;
+  min-height:44px;min-width:0;padding:8px 3px;
+  border:0;background:transparent;color:#792b45;
+  font:800 14px/1.4 system-ui,sans-serif;cursor:pointer;text-align:right
+}
+.chapter-hub[data-hub-section="concepts"] .sp2-top-next:focus-visible{
+  outline:3px solid #9470de;outline-offset:2px;border-radius:7px
+}
+@media(max-width:355px){
+  .chapter-hub[data-hub-section="concepts"] .sp2-detail-navigation{flex-wrap:nowrap;gap:5px}
+  .chapter-hub[data-hub-section="concepts"] .sp2-top-next,
+  .chapter-hub[data-hub-section="concepts"] .sp2-back-index{font-size:12px}
+}
