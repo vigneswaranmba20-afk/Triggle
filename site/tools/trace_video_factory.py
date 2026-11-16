@@ -246,7 +246,11 @@ def artwork(spec, beat, fraction, index, total, w, h, demo):
         centered(744,f'{example[0]+example[-1]} + {example[1]+example[-2]} + {example[2]}',40,'ink',True)
         centered(822,f'= {sum(example)}',62,'maroon',True)
     elif scene=='formula':
-        centered(633,'S_n = n / 2 (a + l)',40,'maroon',True)
+        txt(145,613,'Sₙ =',51,'maroon',True)
+        txt(369,599,'n',37,'maroon',True,'mm')
+        d.line([(px(341),px(636)),(px(397),px(636))],fill=PALETTE['maroon'],width=max(2,px(3)))
+        txt(369,661,'2',37,'maroon',True,'mm')
+        txt(417,613,'(a + l)',44,'maroon',True)
         centered(716,'n: number of terms',24,'sub')
         centered(762,'a: first term   l: last term',24,'sub')
     elif scene=='apply':
