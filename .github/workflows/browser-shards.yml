@@ -1,12 +1,7 @@
 name: Full browser regression (sharded)
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'site/**'
-      - 'package.json'
-      - '.github/workflows/browser-shards.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read

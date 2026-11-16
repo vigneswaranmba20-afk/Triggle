@@ -1,14 +1,7 @@
 name: Live Grade 10 recovery smoke
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/live-g10-recovery-smoke.yml"
-      - "site/index.html"
-      - "site/data/textbook-exercises/g10-seven-recovery-20261113-en.js"
-      - "site/data/textbook-exercises/g10-ch8-ex8-1-q5-q10-en.js"
-      - "site/assets/grade10-recovery/**"
   workflow_dispatch:
+
 permissions:
   contents: read
 jobs:

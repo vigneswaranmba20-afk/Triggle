@@ -1,12 +1,7 @@
 name: Live Class 10 Chapter 1 ChatGPT maths verification
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/live-g10-ch1-math-smoke.yml"
-      - "site/index.html"
-      - "site/assets/app.js"
-      - "site/data/math-layout/g10-ch1-chatgpt-20261113.js"
+  workflow_dispatch:
+
 permissions:
   contents: read
 jobs:

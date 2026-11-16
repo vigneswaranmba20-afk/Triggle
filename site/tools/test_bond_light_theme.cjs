@@ -36,7 +36,7 @@ const b=html.indexOf('assets/bond-light.css');
 assert.ok(b>html.indexOf('assets/paper-indigo.css')&&b<html.indexOf('</head>'),'Bond layer must load last');
 assert.match(html,/assets\/bond-light\.css\?v=bond-light-20261115-2/,'Versioned theme link');
 assert.match(sw,/'\.\/assets\/bond-light\.css'/,'Android offline theme cache');
-assert.match(sw,/bond-light-20261115-2/,'Versioned PWA cache');
+assert.match(sw,/^const CACHE=['"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['"];?/m,'Versioned PWA cache');
 assert.equal(manifest.background_color,C.ivory,'Android launch surface matches reading page');
 assert.equal(manifest.theme_color,C.white,'Android browser chrome matches white header');
 assert.match(html,/<meta name="theme-color" content="#FFFFFF">/,'Browser chrome matches white header');

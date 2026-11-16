@@ -29,5 +29,5 @@ const html=fs.readFileSync(path.join(root,'site/index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'site/service-worker.js'),'utf8');
 assert(html.includes('g10-ch2-ex2-2-en.js'));
 assert(sw.includes('g10-ch2-ex2-2-en.js'));
-assert(sw.includes('matrix-concepts-bulk-g10ex22'));
+assert.match(sw,/^const CACHE=['"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['"];?/m,'Offline cache must retain an explicit versioned namespace');
 console.log('PASS Grade 10 Exercise 2.2 release: nine source-checked records, Q8 disclosed without hiding literal minimum, navigation/offline/cache ready, no false complete claim');

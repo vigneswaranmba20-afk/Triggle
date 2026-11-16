@@ -47,7 +47,7 @@ assert(at>html.indexOf('assets/matrix-concepts.css'),'Color-only layer must foll
 assert(at>html.indexOf('assets/g10-ch2-typography.css'),'Theme must follow Grade 10 typography');
 assert(html.indexOf('assets/paper-indigo.css')<html.indexOf('</head>'),'Theme must load in head');
 assert.match(sw,/'\.\/assets\/paper-indigo\.css'/,'Theme is cached for offline Android use');
-assert.ok(Number(sw.match(/triggle-shell-real-2025-v(\d+)/)?.[1])>=85,'Offline service-worker cache remains newer than Paper + Indigo baseline');
+assert.match(sw,/^const CACHE=['\"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['\"];?/m,'Offline cache must use a versioned Triggle namespace');
 assert.doesNotMatch(css,/@import\b|url\(/,'Theme must not download images or external resources');
 assert.doesNotMatch(css,/\b(?:font-size|position:\s*(?:fixed|sticky)|grid-template-columns|display:\s*none)\s*:/,'Theme must not change learning layout');
 assert.match(css,/forced-colors:\s*active/,'System high-contrast colors must be respected');

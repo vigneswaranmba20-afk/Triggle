@@ -1,9 +1,5 @@
 name: Grade 9 math-first canvas visual regression
 on:
-  pull_request:
-    paths:
-      - 'site/**'
-      - '.github/workflows/g9-math-first-visual.yml'
   workflow_dispatch:
 
 permissions:

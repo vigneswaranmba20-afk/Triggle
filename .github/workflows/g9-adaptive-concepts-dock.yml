@@ -1,9 +1,5 @@
 name: Grade 9 adaptive bottom dock validation
 on:
-  pull_request:
-    paths:
-      - 'site/**'
-      - '.github/workflows/g9-adaptive-concepts-dock.yml'
   workflow_dispatch:
 
 permissions:

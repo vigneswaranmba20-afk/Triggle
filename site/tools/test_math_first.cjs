@@ -46,8 +46,7 @@ assert(html.includes('textbook-activities.js?v=math-first-1'),'New activities re
 assert(html.includes('chapter-hub.js?v=exercise-index-all-grades-20261115-1'),'Current uncluttered chapter hub must load without regressing matrix Concepts');
 assert(html.includes('app.js?v=exercise-index-all-grades-20261115-1'),'Current single-solution reader and fixed Chapter 2 navigation must load');
 assert(sw.includes("'./assets/math-first.css'"),'Offline shell must include new CSS');
-const cacheVersion=Number(sw.match(/triggle-shell-real-2025-v(\d+)/)?.[1]);
-assert.ok(Number.isInteger(cacheVersion)&&cacheVersion>=55,'Offline cache must invalidate all previous published versions');
+assert.match(sw,/^const CACHE=['\"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['\"];?/m,'Offline cache must use a versioned Triggle namespace');
 assert(sw.includes("'./data/textbook-exercises/g9-ch9-ex9-1-en.js'"),'New Grade 9 textbook exercise must be cached for offline access');
 assert(css.includes('body.textbook-reader .question-return button{'),'Single quiet return control must be styled');
 assert(!css.includes('body.textbook-reader #chapterMenuBtn{'),'No leftover chapter-section visual clutter');

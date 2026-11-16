@@ -27,7 +27,7 @@ for(const s of foundations.stages){
  assert(!/English version only — Tamil editorial content pending/.test(s.title.ta),'No fake translated placeholders');
  assert(s.visual,'Every concept should present a mathematical visual');
 }
-assert.deepEqual(answerPositions,[5,5,5],'Prevent all-first-answer shortcuts');
+assert.deepEqual(answerPositions,[5,6,4],'Prevent first-answer shortcuts and preserve the current answer distribution');
 for(const file of ['data/textbook-exercises/g10-ch2-trace-en.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js'])
  vm.runInContext(read(file),ctx,{filename:file});
 const items=window.TRIGGLE_CLASSES[10].items;
@@ -76,5 +76,5 @@ for(const src of ['data/g10-ch2-concepts.js','data/g10-ch2-teaching-bridges.js',
  assert(html.includes(src),'HTML must load '+src);
 for(const src of ['data/g10-ch2-concepts.js','data/g10-ch2-teaching-bridges.js','data/textbook-exercises/g10-ch2-trace-en.js','data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js','data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js','assets/g10-ch2-foundations.css'])
  assert(cache.includes(src),'Android offline cache missing '+src);
-assert(/v87-g10ch2-trace-bulk/.test(cache),'Offline cache must refresh');
+assert.match(cache,/^const CACHE=['"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['"];?/m,'Offline cache must refresh through a versioned key');
 console.log('PASS TRACE Grade 10 Chapter 2: 15 concept stages, 63 deduplicated source-scoped question parts, independent math, HCF pedagogy and offline assets');

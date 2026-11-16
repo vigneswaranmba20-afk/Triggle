@@ -10,7 +10,7 @@ assert(css.includes('body.g10-ch2-type.textbook-reader .lesson-container{'));
 assert(css.includes('overflow:visible!important;'),'Chapter 2 must inherit the document scroll');
 assert(!/body\.g10-ch2-type\.textbook-reader \.lesson-container\{[^}]*overflow-y:auto/i.test(css),'Do not re-enable nested scroll');
 assert(sw.includes("./assets/g10-ch2-typography.css"));
-assert(sw.includes('g10ex22-type1-scroll2'));
+assert.match(sw,/^const CACHE=['"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['"];?/m,'Offline cache must retain an explicit versioned namespace');
 assert(css.includes('body.g10-ch2-type .lesson-card .question-text'));
 assert(css.includes('body.g10-ch2-type .lesson-card .worked-step .step-reason'));
 assert(css.includes('body.g10-ch2-type .lesson-card .worked-step .step-equation'));

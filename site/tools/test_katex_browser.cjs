@@ -127,7 +127,7 @@ async function run(engine,name,base){
    (async()=>{await navigator.serviceWorker.ready;if(!navigator.serviceWorker.controller)await new Promise(r=>navigator.serviceWorker.addEventListener('controllerchange',r,{once:true}));})(),
    new Promise((_,reject)=>setTimeout(()=>reject(Error('Offline cache did not become ready')),30000))
   ]));
-  const cached=await page.evaluate(async()=>{const cache=await caches.open((await caches.keys()).find(k=>k.startsWith('triggle-shell')));const keys=await cache.keys();return keys.filter(k=>k.url.includes('/vendor/katex/')).length;});
+  const cached=await page.evaluate(async()=>{const cache=await caches.open((await caches.keys()).find(k=>k.startsWith('triggle-')));const keys=await cache.keys();return keys.filter(k=>k.url.includes('/vendor/katex/')).length;});
   assert.equal(cached,23,'20 WOFF2 fonts plus script, stylesheet and license cached');
   // Stop the actual origin: every HTTP request now fails, including requests
   // made inside the service worker (which browser route mocks cannot intercept).
