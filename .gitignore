@@ -8,3 +8,7 @@ __pycache__/
 .firebase/
 screenshots/
 _pages/
+
+# Generated narration and unapproved video media must never enter Git history.
+build/trace-video/
+site/video-factory/.cache/
