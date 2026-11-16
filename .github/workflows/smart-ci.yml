@@ -28,6 +28,10 @@ jobs:
         run: node site/tools/ci/risk-policy.cjs --self-test
       - name: Verify browser shard coverage and estimated balance
         run: node site/tools/run_browser_shard.cjs --plan-only
+      - name: Validate TRACE Video Factory offline (no API calls)
+        run: |
+          python3 -m py_compile site/tools/trace_video_factory.py site/tools/trace_video_release.py
+          python3 site/tools/trace_video_factory.py self-test --lesson g10-ch2-ap-sum
       - id: risk
         name: Classify changed files
         env:
