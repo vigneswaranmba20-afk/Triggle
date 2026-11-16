@@ -126,11 +126,14 @@ jobs:
           DURATION="$(python3 -c "import json;print(json.load(open('build/trace-video/release/result.json'))['durationSeconds'])")"
           python3 site/tools/trace_video_release.py register \
             --lesson "$VIDEO_LESSON" --url "$PUBLIC_URL" --duration "$DURATION"
+          # TRACE maintains a source-hash projection: changing a concept
+          # requires rebuilding and committing it in the same release.
+          node site/tools/build_project_status.cjs
           BRANCH="video/trace-approved-${SOURCE_RUN}-${GITHUB_RUN_ID}"
           git switch -c "$BRANCH"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add site/data/g10-ch2-concepts.js
+          git add site/data/g10-ch2-concepts.js site/data/project-status.json
           git diff --cached --quiet && { echo 'No difference to publish'; exit 1; }
           git commit -m "Publish owner-approved TRACE narration for ${VIDEO_LESSON}"
           git push origin "$BRANCH"
