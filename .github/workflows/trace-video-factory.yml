@@ -51,6 +51,8 @@ jobs:
           python-version: '3.12'
       - name: Install deterministic rendering dependencies
         run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
           python -m pip install -r site/video-factory/requirements.txt
           ffmpeg -version | head -n 1
           ffprobe -version | head -n 1
