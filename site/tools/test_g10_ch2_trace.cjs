@@ -28,7 +28,7 @@ for(const stage of entry.stages){
  assert.ok(stage.math?.latex&&stage.math.fallback,'Authored KaTeX and accessible fallback: '+stage.id);
 }
 assert.equal(new Set(entry.stages.map(s=>s.id)).size,15);
-assert.deepEqual(answerPositionCounts,[5,7,3],'Pin the current balanced answer placements after the A.P. pairing lesson update');
+assert.deepEqual(answerPositionCounts,[5,6,4],'Pin the current balanced answer placements after the A.P. pairing lesson update');
 const all=loadRuntime();
 const chapter=all.curriculum.grades.find(g=>g.grade===10).chapters.find(c=>String(c.number)==='2');
 const textbook=all.classes[10].items.filter(q=>q.chapter==='2'&&q.kind==='textbook'&&q.exercise);
