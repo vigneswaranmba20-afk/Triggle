@@ -33,7 +33,12 @@ const sequenceRecords=sequenceContext.window.TRIGGLE_CLASSES[10].items;
 const sequenceIds=sequenceRecords.map(r=>r.id);
 assert.equal(sequenceIds.length,10,'Ten original-page Ex 2.4 Q2–Q6 parts');
 assert.equal(new Set(sequenceIds).size,10);
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...recoveryIds,...statisticsIds,...followupIds];
+const ex25Context={window:{TRIGGLE_CLASSES:{10:{items:[]}},TRIGGLE_CURRICULUM:{grades:[{grade:10,chapters:[{number:2,textbookQuestionIds:[]}]}]}}};
+vm.runInNewContext(read('data/textbook-exercises/g10-ch2-ex2-5-ap-missing-en.js'),ex25Context,{filename:'g10-ch2-ex2-5-ap-missing-en.js'});
+const ex25Records=ex25Context.window.TRIGGLE_CLASSES[10].items;
+const ex25Ids=ex25Records.map(r=>r.id);
+assert.equal(ex25Records.length,6,'Six source-reviewed Exercise 2.5 parts');
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...recoveryIds,...statisticsIds,...followupIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -89,7 +94,7 @@ for(const [grade,data] of Object.entries(classes)){
        assert.equal(item.edition,'2025','TRACE source edition '+item.id);
        assert.equal(item.translationReview,'pending','Do not invent Tamil teacher approval '+item.id);
      }else{
-       const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id);
+       const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id);
        assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'New content exactly matches source-verified batch '+item.id);
      }
    }
@@ -116,7 +121,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,687);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,693);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');
@@ -129,4 +134,4 @@ for(const file of ['g12-explain-modes.js','g12-explain-modes.css','matrix-pilot.
 assert.ok(sw.includes('./data/problem-difficulty.js'));
 assert.ok(html.indexOf('data/problem-difficulty.js')<html.indexOf('assets/app.js'));
 assert.doesNotMatch(app,/localStorage\.clear|removeItem/,'Student progress is never cleared');
-console.log('PASS 568 original records and order byte-preserved, nine Grade 9 Exercise 1.2 plus nine Exercise 2.2, ten Exercise 2.3 modular parts, seven recovered and eleven Statistics Grade 10 source-bound records, 603 explicit difficulties, 88 reviewed classifications retained, no explanation switches, offline metadata.');
+console.log('PASS 568 original records and order byte-preserved, nine Grade 9 Exercise 1.2 plus nine Exercise 2.2, ten Exercise 2.3 modular parts, seven recovered and eleven Statistics Grade 10 source-bound records, 609 explicit difficulties, 88 reviewed classifications retained, no explanation switches, offline metadata.');
