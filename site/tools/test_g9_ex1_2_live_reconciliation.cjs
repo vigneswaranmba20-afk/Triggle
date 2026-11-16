@@ -130,6 +130,18 @@ for(let i=0;i<expectedQ3.length;i++){
  assert.equal(new Set(b).size,nB);
  assert.equal(a.length===b.length&&a.every(x=>b.includes(x)),equal);
  assert.equal(row.answer,answer,'Incorrect Q3 classification: '+id);
+ if(part==='ii'||part==='iv'){
+  const questionParts=row.questionMath?.en;
+  assert(Array.isArray(questionParts),'Set-builder question needs structured math: '+id);
+  const expectedDisplays=part==='iv'?2:1;
+  const displays=questionParts.filter(x=>x&&typeof x==='object');
+  assert.equal(displays.length,expectedDisplays,'Missing set-builder display: '+id);
+  for(const display of displays){
+   assert(display.latex?.trim()&&display.fallback?.trim()&&display.display===true,
+    'Missing readable KaTeX or accessible question fallback: '+id);
+  }
+ }
+
  assert.equal(row.releaseStatus,'staged-english-not-registered');
  assert.equal(row.translationReview,'pending');
  assert.equal(row.sourceFidelity?.tamilEditorial,'deferred');
