@@ -50,5 +50,14 @@ assert.deepEqual([1,2,3].map(n=>4-7*n),[-3,-10,-17]);
 const k=4;
 assert.equal(2*(18-k),(3+k)+(5*k+1));
 assert.deepEqual([3+k,18-k,5*k+1],[7,14,21]);
+// Check the AP condition symbolically: 2(18-k)-(3+k)-(5k+1)=32-8k.
+// This rules out accidental acceptance of a single trial value as proof of uniqueness.
+const apResidual=k=>2*(18-k)-(3+k)-(5*k+1);
+for(const k of [-100,-7,-1,0,1,3,4,5,19,100])
+  assert.equal(apResidual(k),32-8*k,'Q8 exact linear identity at k='+k);
+assert.equal(apResidual(4),0);
+for(const k of [-100,-7,-1,0,1,3,5,19,100])
+  assert.notEqual(apResidual(k),0,'Q8 must reject incorrect k='+k);
+assert.equal(32/8,4,'Q8 unique solution from nonzero coefficient');
 assert.equal(context.window.TRIGGLE_G10_CH2_EX25_STAGED.count,6);
 console.log('PASS Grade 10 Exercise 2.5: six exact-source English tasks independently checked; 15 originals preserved; no premature deployment.');
