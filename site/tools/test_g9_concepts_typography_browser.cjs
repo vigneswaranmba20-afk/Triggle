@@ -45,16 +45,31 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
        const dock=page.locator('[data-adaptive-dock]');
        assert.equal(await dock.count(),1,'Exactly one sequential navigation dock');
        const style=await dock.evaluate(el=>({position:getComputedStyle(el).position,buttons:[...el.querySelectorAll('button')].map(b=>b.getBoundingClientRect().height)}));
-       assert.equal(style.position,'sticky','Navigation uses native sticky positioning');
+       const usesAfterActivityNavigation=await page.locator('.sp2-journey').evaluate(el=>el.classList.contains('sp2-simple-journey'));
+       assert.equal(style.position,usesAfterActivityNavigation?'static':'sticky',
+         'Navigation matches the intentionally non-overlapping mobile lesson layout');
        assert(style.buttons.every(h=>h>=48),'Navigation touch targets remain at least 48px');
        const next=await page.locator('[data-footer-next]').innerText();
        assert(next.includes(index===nav-1?(lang==='en'?'Back to concepts':'கருத்துகளுக்குத் திரும்பு'):(lang==='en'?'Next idea':'அடுத்த கருத்து')),'Correct localized Next idea / index label');
-       await page.evaluate(()=>window.scrollTo(0,0));
-       const initial=await dock.boundingBox();
-       assert(initial&&initial.y>=0&&initial.y+initial.height<=852,'Navigation dock visible at top of long lesson');
-       await page.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight));
-       const ending=await dock.boundingBox();
-       assert(ending&&ending.y>=0&&ending.y+ending.height<=852,'Dock remains accessible at page end');
+       if(usesAfterActivityNavigation){
+         const followsPractice=await page.evaluate(()=>{
+           const dock=document.querySelector('[data-adaptive-dock]');
+           const panel=document.querySelector('.sp2-journey[data-view="lesson"] .sp2-panel');
+           return !!panel&&!!dock&&!!(panel.compareDocumentPosition(dock)&Node.DOCUMENT_POSITION_FOLLOWING);
+         });
+         assert(followsPractice,'Mobile concept navigation follows the practice content in document order');
+         await dock.scrollIntoViewIfNeeded();
+         const bottomNav=await dock.boundingBox();
+         assert(bottomNav&&bottomNav.y>=0&&bottomNav.y+bottomNav.height<=852,
+           'After-activity navigation is accessible when reached');
+       }else{
+         await page.evaluate(()=>window.scrollTo(0,0));
+         const initial=await dock.boundingBox();
+         assert(initial&&initial.y>=0&&initial.y+initial.height<=852,'Sticky navigation remains visible at top');
+         await page.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight));
+         const ending=await dock.boundingBox();
+         assert(ending&&ending.y>=0&&ending.y+ending.height<=852,'Sticky navigation remains accessible at page end');
+       }
        const answer=page.locator('.sp2-panel [data-answers] button').first();
        await answer.scrollIntoViewIfNeeded();
        const overlap=await page.evaluate(()=>{
