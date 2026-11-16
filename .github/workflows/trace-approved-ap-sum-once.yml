@@ -1,0 +1,37 @@
+# One-time trigger after owner approval in ChatGPT on 16 November 2026.
+# Adding this file to main triggers its own push-path event once.
+# It never uploads media itself or changes Triggle; it starts the existing
+# verification -> Cloudflare R2 -> required quality gate workflow.
+name: TRACE approved A.P. video — start Cloudflare release once
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/trace-approved-ap-sum-once.yml
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  start-owner-approved-release:
+    name: Dispatch approved checksum release
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Dispatch existing hash-verified Cloudflare R2 publishing pipeline
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh workflow run trace-video-publish.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main \
+            -f source_run_id=43810256718 \
+            -f lesson=g10-ch2-ap-sum \
+            -f approved_sha256=4bb9ea8b8b754b5b585034b18b34545e6bd7fa3114a70b037178e8b4d3e81ab2
+          echo "Dispatched exact reviewed MP4 release from run 43810256718."
+          echo "Cloudflare credentials are checked inside the publishing job; no site change occurs if unavailable."
