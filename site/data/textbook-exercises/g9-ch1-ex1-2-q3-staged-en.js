@@ -30,7 +30,7 @@ const entries=[
         }
       },
       {
-        "en": "Each set has five elements, but the members differ.",
+        "en": "Both sets have five distinct letters. Even if we ignore uppercase and lowercase, W belongs to B but is not a vowel, while A and I are vowels absent from B. Equal size does not mean equal members.",
         "eq": "n(A) = n(B) = 5; A ≠ B",
         "math": {
           "latex": "n(A)=n(B)=5,\\quad A\\ne B",
