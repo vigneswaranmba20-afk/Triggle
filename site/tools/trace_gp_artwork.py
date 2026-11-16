@@ -119,7 +119,7 @@ def artwork(spec,beat,fraction,index,total,w,h,demo):
         # Hand-drawn stacked fraction: mathematically legible on 320px screens.
         txt(134,722,"Sₙ =",43,"ink",True)
         mid(667,"a(rⁿ − 1)",44,"maroon",True)
-        horizontal(724,317,555,"maroon",3)
+        horizontal(724,232,488,"maroon",3)
         mid(748,"r − 1",39,"maroon",True)
         mid(867,"Use this only when r ≠ 1",24,"sub")
     elif scene=="gp-practice":
