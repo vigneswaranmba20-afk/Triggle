@@ -1,0 +1,14 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const site=path.resolve(__dirname,'..'),get=x=>fs.readFileSync(path.join(site,x),'utf8');
+const hub=get('assets/chapter-hub.js'),css=get('assets/chapter-hub.css'),html=get('index.html'),sw=get('service-worker.js');
+assert.match(hub,/hasTopNext=false/);assert.match(hub,/chapter\.id==='g10-ch2'\);/);
+assert.match(hub,/data-top-next/);assert.match(hub,/Next concept/);assert.match(hub,/அடுத்த கருத்து/);
+assert.match(hub,/if\(hasTopNext\)root\.querySelector\('\[data-top-next\]'\)\.onclick=/);
+assert.match(hub,/root\.querySelector\('\[data-footer-next\]'\)\.onclick=/);
+assert.match(css,/\.sp2-top-next\{[\s\S]*?min-height:44px/);
+assert.match(css,/\.sp2-top-next:focus-visible/);
+assert(html.includes('chapter-hub.js?v=g10-ch2-top-next-20261116-1'));
+assert(html.includes('chapter-hub.css?v=g10-ch2-top-next-20261116-1'));
+assert(sw.includes('triggle-g10-ch2-ex25-20261116-v1'));
+console.log('PASS Grade 10 Chapter 2 Next concept: bilingual, isolated, keyboard- and touch-friendly');

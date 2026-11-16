@@ -30,7 +30,7 @@
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "9a0843a303be9d4ac547a825478a0ddd3e21f3952dafefa16e248fe9f23aaaac",
     "site/data/math-layout/g10-ch2-ch8-chatgpt-20261113.js": "7c9e63f5a069dc5658601181f5d6b1df16ec9d0d457e21964fb2b24ec291d134",
-    "site/data/problem-difficulty.js": "90b25355393410827785fd6b5797e2d67eff01208b30440a1e4d833ec7d088c1",
+    "site/data/problem-difficulty.js": "5c64fbb906c762a92b908e06145d1d264962bf305f6e77f7359bc7b4ee4ed444",
     "site/data/real-numbers/g9-ch2-concepts.js": "ccccf6be7165344c5337aecff4120c8763b55481b516fd22a63fe57d4c958564",
     "site/data/real-numbers/g9-ch2-core.js": "aa11da8281a83d1eec91f1f42205f35a3e023f95bea0ebf72168acb33f903279",
     "site/data/real-numbers/g9-ch2-examples-a.js": "b6f78eb165adfe7f63daa65a138d58d9ca44f2ea1a219513805355b6ea93e8d7",
@@ -47,6 +47,7 @@
     "site/data/textbook-exercises/g10-ch2-ex2-2-en.js": "3389bfb87349ff0471ea3a476e197f8624d5fc88d6bc31d6e28db35247d255f4",
     "site/data/textbook-exercises/g10-ch2-ex2-3-modular-en.js": "292042b767e8747403ee6c7cc4835c3edb90942a47910cddeab9024b3f93939d",
     "site/data/textbook-exercises/g10-ch2-ex2-4-sequences-en.js": "1e52ac14760cd9ec9aad2a28439dfeabf1df75fc1efdf492995addb5b1f4e72b",
+    "site/data/textbook-exercises/g10-ch2-ex2-5-ap-missing-en.js": "dfe23ef67b751c634b047d14bffe15d6a44cef6b356742dc4d22a03c0b98e09b",
     "site/data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js": "96cb87f5ba2e964668783cf3fab8456a88ea63a7b9dad28ab688854f230ef396",
     "site/data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js": "d4f26052386dbac4f9ca46bc9b80ed899085677590f2e7e4a126442b42b77fd0",
     "site/data/textbook-exercises/g10-ch2-trace-en.js": "52dc0f4e66f6935d4b2144bdd5385aa535b7572fe2c357dfcbfa555923f506aa",
@@ -84,7 +85,7 @@
     "site/data/why-step-g9-ex1-2-q1.js": "3a455f5dbba4189564c390af633de45cf05aeccb235304f71717f3130b39fe69",
     "site/data/why-step-g9-ex1-2-q2.js": "b1e9513604a3143efe7d2665b658f441012635a1799e6996ad239eccdd60a7b0",
     "site/data/why-step-g9.js": "bb50faef659c15dffe6bcb6f3b8856115f10848ec14cdb9a169626d1814e3380",
-    "site/index.html": "88d4f771956b64362204104c687bb02111eab9f46968a20d975d7f0e805bb0be",
+    "site/index.html": "449e5b034554886d49c890e0c1b262fc0c7af847ab587fa2c5ac928d43983822",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
@@ -4018,7 +4019,7 @@
       "completedEnglishChapters": 1,
       "partialChapters": 5,
       "pendingChapters": 2,
-      "exerciseRecords": 217,
+      "exerciseRecords": 223,
       "verifiedNumberedQuestions": 19,
       "verifiedTasks": 22,
       "wholeGradeQuestionDenominator": null,
@@ -4917,7 +4918,7 @@
         {
           "number": "2",
           "title": "Numbers and Sequences",
-          "exerciseRecords": 102,
+          "exerciseRecords": 108,
           "completeEnglish": false,
           "completionBasis": "Incomplete or denominator unknown",
           "verifiedNumberedQuestions": 19,
@@ -5925,6 +5926,60 @@
                   "englishAvailable": true,
                   "tamilAvailable": false,
                   "recordSha256": "128db1906dbf6b2253f807b0c300909b73ae7095b3beabbe99440b576384fa2f",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-5-q1-i",
+                  "label": "Exercise 2.5 · Q1(i)",
+                  "url": "../index.html?class=10&question=c10-2-ex2-5-q1-i",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "739bf8f76d4db4925d6348f072a807c842d16959c25a5887425e11b435848ecd",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-5-q1-v",
+                  "label": "Exercise 2.5 · Q1(v)",
+                  "url": "../index.html?class=10&question=c10-2-ex2-5-q1-v",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "dcad4ac47ccdae418ba1277c78bc729124d7b5789cb9565b517b7316ba541bac",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-5-q2-iii",
+                  "label": "Exercise 2.5 · Q2(iii)",
+                  "url": "../index.html?class=10&question=c10-2-ex2-5-q2-iii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "5a2f01f0cd4bb9a9127e7a5b7fd11d331dcf2dbb492de4a8ede433636ca80f67",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-5-q3-i",
+                  "label": "Exercise 2.5 · Q3(i)",
+                  "url": "../index.html?class=10&question=c10-2-ex2-5-q3-i",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "eef830d0148f6863a68c939e92a5f10547b6a5acd8d18a4e903ed17cf185e066",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-5-q3-ii",
+                  "label": "Exercise 2.5 · Q3(ii)",
+                  "url": "../index.html?class=10&question=c10-2-ex2-5-q3-ii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "6ba6df1b8a0a1e3bb047ffae066ada44be881645e4bf08759a102d3fb9ed32e7",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-5-q8",
+                  "label": "Exercise 2.5 · Q8",
+                  "url": "../index.html?class=10&question=c10-2-ex2-5-q8",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "12f3e9cfe31d2cb75b2b5ce13c94ac487636bbe1f268441a78afba8ee5b93378",
                   "verified": false
                 }
               ],
@@ -11143,7 +11198,13 @@
         "c10-2-ex2-5-q1-iii",
         "c10-2-ex2-5-q1-iv",
         "c10-2-ex2-5-q2-i",
-        "c10-2-ex2-5-q2-ii"
+        "c10-2-ex2-5-q2-ii",
+        "c10-2-ex2-5-q1-i",
+        "c10-2-ex2-5-q1-v",
+        "c10-2-ex2-5-q2-iii",
+        "c10-2-ex2-5-q3-i",
+        "c10-2-ex2-5-q3-ii",
+        "c10-2-ex2-5-q8"
       ],
       "scope": [],
       "status": "Awaiting verification",
