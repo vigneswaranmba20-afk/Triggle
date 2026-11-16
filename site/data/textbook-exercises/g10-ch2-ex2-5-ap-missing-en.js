@@ -218,6 +218,15 @@ const entries=[
           "fallback": "d = t₂ − t₁ = 1 − (−1) = 2",
           "display": true
         }
+      },
+      {
+        "en": "Check that this difference holds between every pair of consecutive terms, not just the first two. Replace n with n + 1 in the given formula and subtract.",
+        "eq": "tₙ₊₁ − tₙ = [−3 + 2(n + 1)] − [−3 + 2n] = 2",
+        "math": {
+          "latex": "t_{n+1}-t_n=[-3+2(n+1)]-[-3+2n]=2",
+          "fallback": "tₙ₊₁ − tₙ = [−3 + 2(n + 1)] − [−3 + 2n] = 2",
+          "display": true
+        }
       }
     ],
     "answer": "First term a = −1; common difference d = 2.",
@@ -271,6 +280,15 @@ const entries=[
         "math": {
           "latex": "d=-10-(-3)=-7",
           "fallback": "d = −10 − (−3) = −7",
+          "display": true
+        }
+      },
+      {
+        "en": "Confirm that the common difference stays negative for every positive integer n. Subtract the nth term from the next term.",
+        "eq": "tₙ₊₁ − tₙ = [4 − 7(n + 1)] − [4 − 7n] = −7",
+        "math": {
+          "latex": "t_{n+1}-t_n=[4-7(n+1)]-[4-7n]=-7",
+          "fallback": "tₙ₊₁ − tₙ = [4 − 7(n + 1)] − [4 − 7n] = −7",
           "display": true
         }
       }
