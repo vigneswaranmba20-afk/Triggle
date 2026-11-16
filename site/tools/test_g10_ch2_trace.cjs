@@ -10,7 +10,7 @@ assert.equal(entry.chapterId,'g10-ch2');
 assert.equal(entry.stages.length,15,'15 short, textbook-ordered foundations');
 const sections=['2.2','2.3','2.3','2.4','2.5','2.5','2.6','2.6','2.7','2.7','2.8','2.9','2.10','2.10','2.11'];
 assert.equal(JSON.stringify(entry.stages.map(s=>s.section)),JSON.stringify(sections));
-const answerKey=new Map([["g10-ch2-division","2"],["g10-ch2-gcd","6"],["g10-ch2-bezout","4"],["g10-ch2-primes","36"],["g10-ch2-modulo","11 a.m."],["g10-ch2-congruence","4"],["g10-ch2-sequence","14"],["g10-ch2-recursive","8"],["g10-ch2-ap","Yes, d = 3"],["g10-ch2-ap-nth","39"],["g10-ch2-ap-sum","69"],["g10-ch2-gp","135"],["g10-ch2-gp-sum","15"],["g10-ch2-gp-infinite","2"],["g10-ch2-special","36"]]);
+const answerKey=new Map([["g10-ch2-division","2"],["g10-ch2-gcd","6"],["g10-ch2-bezout","4"],["g10-ch2-primes","36"],["g10-ch2-modulo","11 a.m."],["g10-ch2-congruence","4"],["g10-ch2-sequence","14"],["g10-ch2-recursive","8"],["g10-ch2-ap","Yes, d = 3"],["g10-ch2-ap-nth","39"],["g10-ch2-ap-sum","69"],["g10-ch2-gp","135"],["g10-ch2-gp-sum","81 − 1"],["g10-ch2-gp-infinite","2"],["g10-ch2-special","36"]]);
 assert.equal([4,7,10,13,16,19].reduce((total,term)=>total+term,0),69,'Independently add all six A.P. terms');
 assert.equal(6*(4+19)/2,69,'Pairing formula must agree with termwise arithmetic');
 const answerPositionCounts=[0,0,0];
