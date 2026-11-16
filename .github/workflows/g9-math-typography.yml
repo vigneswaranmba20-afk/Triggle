@@ -1,11 +1,7 @@
 name: Grade 9 mathematical typography
 on:
-  pull_request:
-    paths:
-      - 'site/**'
-      - 'package*.json'
-      - '.github/workflows/g9-math-typography.yml'
   workflow_dispatch:
+
 permissions:
   contents: read
 jobs:

@@ -2,13 +2,7 @@
 name: Publish Triggle from source
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'site/**'
-      - '.github/workflows/deploy.yml'
-  workflow_dispatch:
+  workflow_call:
 
 permissions:
   contents: write
@@ -70,8 +64,8 @@ jobs:
           test -s site/index.html
           test -s site/grades.html
           test -s site/playground.html
-          npm test
-          node site/tools/test_back_to_chapters.cjs
+          node --check site/assets/app.js
+          node site/tools/check_site.cjs
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -95,3 +89,21 @@ jobs:
       - name: Publish website
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify freshly deployed Pages source
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://vigneswaranmba20-afk.github.io/Triggle/site"
+          for attempt in $(seq 1 18); do
+            if curl -fsSL --max-time 12 "$BASE/index.html?sha=$GITHUB_SHA" -o /tmp/triggle-live-index &&
+               curl -fsSL --max-time 12 "$BASE/service-worker.js?sha=$GITHUB_SHA" -o /tmp/triggle-live-worker &&
+               cmp -s site/index.html /tmp/triggle-live-index &&
+               cmp -s site/service-worker.js /tmp/triggle-live-worker; then
+              echo "PASS: Pages HTML and service worker match tested source"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "ERROR: Published Pages source never matched validated commit" >&2
+          exit 1

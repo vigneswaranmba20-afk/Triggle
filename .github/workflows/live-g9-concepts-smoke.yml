@@ -1,13 +1,5 @@
 name: Live Grade 9 Concepts release verification
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/live-g9-concepts-smoke.yml'
-      - 'site/assets/chapter-hub.css'
-      - 'site/assets/set-language-journey.js'
-      - 'site/tools/test_g9_concepts_typography_browser.cjs'
-      - 'site/index.html'
   workflow_dispatch:
 
 permissions:

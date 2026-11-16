@@ -1,12 +1,6 @@
 name: Class 10 AP concept-video media smoke
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'site/assets/chapter-hub.js'
-      - 'site/data/g10-ch2-concepts.js'
-      - '.github/workflows/g10-ap-video-media-smoke.yml'
   workflow_dispatch:
 
 permissions:

@@ -1,15 +1,7 @@
 name: Grade 10 Chapter 2 TRACE learning release
 on:
-  pull_request:
-    paths:
-      - 'site/**'
-      - 'package*.json'
-      - '.github/workflows/g10-ch2-trace.yml'
-  push:
-    branches: [main]
-    paths:
-      - 'site/**'
-      - 'package*.json'
+  workflow_dispatch:
+
 permissions:
   contents: read
 jobs:

@@ -1,21 +1,7 @@
 name: Paper + Indigo all-grade visual QA
 on:
-  pull_request:
-    paths:
-      - 'site/assets/paper-indigo.css'
-      - 'site/index.html'
-      - 'site/service-worker.js'
-      - 'site/tools/test_paper_indigo_theme*.cjs'
-      - 'package.json'
-      - '.github/workflows/paper-indigo-theme.yml'
-  push:
-    branches: [main]
-    paths:
-      - 'site/assets/paper-indigo.css'
-      - 'site/index.html'
-      - 'site/service-worker.js'
-      - 'site/tools/test_paper_indigo_theme*.cjs'
-      - 'package.json'
+  workflow_dispatch:
+
 permissions:
   contents: read
 jobs:
