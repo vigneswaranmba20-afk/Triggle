@@ -641,31 +641,31 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "Sₙ = n(a + l)/2"
       },
       "question": {
-        "en": "What is 1 + 2 + 3 + 4 + 5?",
-        "ta": "1 + 2 + 3 + 4 + 5 = ?"
+        "en": "Find the sum of 4 + 7 + 10 + 13 + 16 + 19 without adding every term one by one.",
+        "ta": "ஒவ்வொரு உறுப்பாகக் கூட்டாமல், 4 + 7 + 10 + 13 + 16 + 19 என்ற தொடரின் கூட்டுத்தொகையைக் காண்க."
       },
       "choices": [
         {
-          "en": "10",
-          "ta": "10"
+          "en": "66",
+          "ta": "66"
         },
         {
-          "en": "20",
-          "ta": "20"
+          "en": "69",
+          "ta": "69"
         },
         {
-          "en": "15",
-          "ta": "15"
+          "en": "72",
+          "ta": "72"
         }
       ],
-      "correct": 2,
+      "correct": 1,
       "hint": {
-        "en": "Pair 1 with 5 and 2 with 4.",
-        "ta": "1, 5-ஐயும் 2, 4-ஐயும் இணைத்துக் கூட்டுங்கள்."
+        "en": "Pair the first and last terms: 4 + 19. Work inward to find three equal pairs.",
+        "ta": "முதல் உறுப்பையும் கடைசி உறுப்பையும் இணைக்கவும்: 4 + 19. உள்ளே சென்று சமமான மூன்று ஜோடிகளைக் காண்க."
       },
       "why": {
-        "en": "6 + 6 + 3 = 15.",
-        "ta": "6 + 6 + 3 = 15."
+        "en": "4 + 19 = 23, 7 + 16 = 23, and 10 + 13 = 23. There are three pairs, so the sum is 3 × 23 = 69.",
+        "ta": "4 + 19 = 23, 7 + 16 = 23, 10 + 13 = 23. மூன்று ஜோடிகள் உள்ளன. எனவே கூட்டுத்தொகை 3 × 23 = 69."
       },
       "visual": {
         "kind": "sequence",
