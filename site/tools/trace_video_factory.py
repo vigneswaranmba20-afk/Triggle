@@ -101,7 +101,7 @@ def validate_lesson(spec):
                 raise ValueError('G.P. term alignment and ratio must match exact validated values')
             if sum(terms)!=(ratio**4-1)//(ratio-1):
                 raise ValueError('G.P. sum and cancellation disagree')
-        if '40' in ' '.join(b['narration'] for b in beats[:-1]):
+        if any(x in ' '.join(b['narration'].lower() for b in beats[:-1]) for x in ('40', 'equals forty', 'is forty')):
             raise ValueError('G.P. practice answer is revealed before the last scene')
         if 'pause' not in beats[-2]['narration'].lower():
             raise ValueError('G.P. practice must allow a real pause before answer')
