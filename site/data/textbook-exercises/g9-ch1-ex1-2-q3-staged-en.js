@@ -149,8 +149,7 @@ const entries=[
       "display": true
     },
     "releaseStatus": "staged-english-not-registered",
-    {
-      "questionMath": {
+    "questionMath": {
         "en": [
           "3. Which of the following sets are equivalent or unequal or equal sets? (ii)",
           {
@@ -160,7 +159,6 @@ const entries=[
           }
         ]
       }
-    }
   },
   {
     "id": "g9-ch1-ex1.2-q3-iii",
@@ -310,8 +308,7 @@ const entries=[
       "display": true
     },
     "releaseStatus": "staged-english-not-registered",
-    {
-      "questionMath": {
+    "questionMath": {
         "en": [
           "3. Which of the following sets are equivalent or unequal or equal sets? (iv)",
           {
@@ -326,7 +323,6 @@ const entries=[
           }
         ]
       }
-    }
   }
 ];
 // Deliberately no curriculum registration: staging must never imply publication.
