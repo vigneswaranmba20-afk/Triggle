@@ -155,7 +155,7 @@ jobs:
       - name: Install only needed browsers
         shell: bash
         run: |
-          if [ "${{ matrix.shard }}" = 0 ]; then
+          if [ "${{ matrix.shard }}" = 0 ] || [ "${{ matrix.shard }}" = 2 ]; then
             npx playwright install --with-deps chromium webkit
           else
             npx playwright install --with-deps chromium
