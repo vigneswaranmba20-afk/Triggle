@@ -154,17 +154,17 @@ for(let i=0;i<expectedQ3.length;i++){
  assert.equal(row.answer,answer,'Incorrect Q3 classification: '+id);
  // Verify that the *student-visible* enumerations match the independently
  // derived sets. Checking only the answer label would miss a wrong element.
- const normalizeSet=value=>value.replace(/\\s+/gu,'');
+ const normalizeSet=value=>value.replace(/\s+/gu,'');
  const expectedMembers=actualSets[i].map(members=>'{'+members.join(',')+'}');
  const displayedSteps=row.steps.map(step=>normalizeSet(step.math?.fallback||''));
  for(const members of expectedMembers){
   assert(displayedSteps.some(display=>display.includes(normalizeSet(members))),
-   'Staged KaTeX fallback omits or misstates enumerated members '+members+': '+id);
+   'Staged accessible fallback omits or misstates enumerated members '+members+': '+id);
  }
  // Keep visual KaTeX and accessible fallback enumerations in agreement.
- const latexSteps=row.steps.map(step=>(step.math?.latex||'').replace(/\\s+/gu,''));
+ const latexSteps=row.steps.map(step=>(step.math?.latex||'').replace(/\s+/gu,''));
  for(const members of expectedMembers){
-  const latexSet='\\\\{'+members.slice(1,-1)+'\\\\}';
+  const latexSet='\\{'+members.slice(1,-1)+'\\}';
   assert(latexSteps.some(display=>display.includes(latexSet)),
    'Staged KaTeX omits or misstates enumerated members '+members+': '+id);
  }
