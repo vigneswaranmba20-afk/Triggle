@@ -636,8 +636,8 @@
     },
     "g9-ch2-ex4-q1-i": {
       "step": 1,
-      "expected": "Magnify successive intervals until the target value is reached.",
-      "en": "To find numbers strictly between two bounds, choose values larger than the lower bound and smaller than the upper bound. Check both inequalities.",
+      "expected": "Zoom the number line to the target place-value interval; check the target lies strictly between the displayed bounds.",
+      "en": "Unlike recurring decimals, 5.348 is already exact. First zoom from 5 to 6, then 5.3 to 5.4, then 5.34 to 5.35. Divide the last interval into ten thousandths and mark the eighth tick after 5.340, which is exactly 5.348. The equality sign (=) is correct here; no approximation is needed.",
       "ta": "இரு எல்லைகளுக்கு இடையில் உள்ள எண்ணைத் தேர்வுசெய்ய அது கீழ் எல்லையைவிடப் பெரியதும் மேல் எல்லையைவிடச் சிறியதும் ஆக வேண்டும்.",
       "concept": "between",
       "diagram": {
@@ -651,15 +651,15 @@
     },
     "g9-ch2-ex4-q1-ii": {
       "step": 0,
-      "expected": "The repeating digit 4 gives 6.444 to three decimal places.",
-      "en": "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.",
+      "expected": "6.(4)=6.4444…; the fourth decimal digit is 4, so rounding to three decimal places gives 6.444.",
+      "en": "The bar over 4 means 6.44444… continues forever; its exact value is 58/9, not exactly 6.444. Zoom between 6.444 and 6.445: the true point lies inside. For a three-decimal label, check the fourth decimal digit (4). It is less than 5, so the nearest three-decimal number is 6.444.",
       "ta": "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது 5 அல்லது அதற்கு மேல் இருந்தால்தான் இலக்கத்தை உயர்த்த வேண்டும்.",
       "concept": "rounding"
     },
     "g9-ch2-ex4-q1-iii": {
       "step": 0,
-      "expected": "The repeating block 73 gives 4.7373 to four decimal places.",
-      "en": "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.",
+      "expected": "4.(73)=4.737373…; 4.7373 is the lower four-decimal bound, while rounding to the nearest four decimal places gives 4.7374.",
+      "en": "The bar covers BOTH digits 73, so the exact decimal is 4.737373… = 469/99. The first four digits after the point give 4.7373, but that is truncation, not rounding. The fifth decimal digit is 7, so to the nearest four decimal places it is 4.7374. On the zoomed number line, the exact point lies strictly between 4.7373 and 4.7374, nearer the latter.",
       "ta": "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது 5 அல்லது அதற்கு மேல் இருந்தால்தான் இலக்கத்தை உயர்த்த வேண்டும்.",
       "concept": "rounding"
     },
