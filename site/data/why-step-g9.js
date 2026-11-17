@@ -637,7 +637,7 @@
     "g9-ch2-ex4-q1-i": {
       "step": 1,
       "expected": "Magnify successive intervals until the target value is reached.",
-      "en": "To find numbers strictly between two bounds, choose values larger than the lower bound and smaller than the upper bound. Check both inequalities.",
+      "en": "5.348 is exact, not recurring. First zoom from 5 to 6, then 5.3 to 5.4, then 5.34 to 5.35. Divide the last interval into ten thousandths and mark the eighth tick after 5.340: exactly 5.348. The equality sign (=), rather than an approximation sign, describes this decimal; the existing generic step uses an approximation sign, so treat it as a formatting issue, not a changed answer.",
       "ta": "இரு எல்லைகளுக்கு இடையில் உள்ள எண்ணைத் தேர்வுசெய்ய அது கீழ் எல்லையைவிடப் பெரியதும் மேல் எல்லையைவிடச் சிறியதும் ஆக வேண்டும்.",
       "concept": "between",
       "diagram": {
@@ -652,14 +652,14 @@
     "g9-ch2-ex4-q1-ii": {
       "step": 0,
       "expected": "The repeating digit 4 gives 6.444 to three decimal places.",
-      "en": "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.",
+      "en": "The bar over 4 means 6.44444… forever; the exact rational value is 58/9, not exactly 6.444. The current app marks the three-decimal approximation 6.444. The true point lies strictly between 6.444 and 6.445. Since the fourth decimal digit is 4 (less than 5), the nearest three-place rounded value is 6.444.",
       "ta": "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது 5 அல்லது அதற்கு மேல் இருந்தால்தான் இலக்கத்தை உயர்த்த வேண்டும்.",
       "concept": "rounding"
     },
     "g9-ch2-ex4-q1-iii": {
       "step": 0,
       "expected": "The repeating block 73 gives 4.7373 to four decimal places.",
-      "en": "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.",
+      "en": "The bar covers both digits 73: the exact number is 4.737373… = 469/99. Its first four decimal digits are 4.7373, which is the lower four-digit truncation bound, NOT the correctly rounded value. The fifth digit is 7, so the nearest four-place rounded value is 4.7374. The original student answer and number-line marker still show the truncated 4.7373 while the textbook's 'upto four decimal places' interpretation is independently reviewed. The true point lies between 4.7373 and 4.7374.",
       "ta": "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது 5 அல்லது அதற்கு மேல் இருந்தால்தான் இலக்கத்தை உயர்த்த வேண்டும்.",
       "concept": "rounding"
     },

@@ -174,14 +174,17 @@
         },
         {
           "id": "2.4",
-          "expectedQuestionCount": null,
-          "expectedSubquestionCount": null,
+          "expectedQuestionCount": 1,
+          "expectedSubquestionCount": 3,
           "integratedInThisWorkstream": 0,
-          "verifiedInThisWorkstream": 0,
-          "verifiedIds": [],
-          "unresolvedCount": null,
+          "verifiedInThisWorkstream": 2,
+          "verifiedIds": [
+            "g9-ch2-ex4-q1-i",
+            "g9-ch2-ex4-q1-ii"
+          ],
+          "unresolvedCount": 1,
           "unresolvedFigureDependencies": [],
-          "inventoryStatus": "question-count-review-pending"
+          "inventoryStatus": "source-visual-checked-q1iii-truncation-versus-rounding-awaiting-independent-review"
         },
         {
           "id": "2.5",

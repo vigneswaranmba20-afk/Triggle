@@ -40584,6 +40584,53 @@ const texts={
     },
     "."
   ],
+  "5.348 is exact, not recurring. First zoom from 5 to 6, then 5.3 to 5.4, then 5.34 to 5.35. Divide the last interval into ten thousandths and mark the eighth tick after 5.340: exactly 5.348. The equality sign (=), rather than an approximation sign, describes this decimal; the existing generic step uses an approximation sign, so treat it as a formatting issue, not a changed answer.": [
+    {
+      "latex": "5.348",
+      "fallback": "5.348"
+    },
+    " is exact, not recurring. First zoom from ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " to ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    ", then ",
+    {
+      "latex": "5.3",
+      "fallback": "5.3"
+    },
+    " to ",
+    {
+      "latex": "5.4",
+      "fallback": "5.4"
+    },
+    ", then ",
+    {
+      "latex": "5.34",
+      "fallback": "5.34"
+    },
+    " to ",
+    {
+      "latex": "5.35",
+      "fallback": "5.35"
+    },
+    ". Divide the last interval into ten thousandths and mark the eighth tick after ",
+    {
+      "latex": "5.340",
+      "fallback": "5.340"
+    },
+    ": exactly ",
+    {
+      "latex": "5.348",
+      "fallback": "5.348"
+    },
+    ". The equality sign (=), rather than an approximation sign, describes this decimal; the existing generic step uses an approximation sign, so treat it as a formatting issue, not a changed answer."
+  ],
   "The repeating digit 4 gives 6.444 to three decimal places.": [
     "The repeating digit ",
     {
@@ -40597,13 +40644,58 @@ const texts={
     },
     " to three decimal places."
   ],
-  "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.": [
-    "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is ",
+  "The bar over 4 means 6.44444… forever; the exact rational value is 58/9, not exactly 6.444. The current app marks the three-decimal approximation 6.444. The true point lies strictly between 6.444 and 6.445. Since the fourth decimal digit is 4 (less than 5), the nearest three-place rounded value is 6.444.": [
+    "The bar over ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " means ",
+    {
+      "latex": "6.44444\\ldots",
+      "fallback": "6.44444…"
+    },
+    " forever; the exact rational value is ",
+    {
+      "latex": "\\dfrac{58}{9}",
+      "fallback": "58/9"
+    },
+    ", not exactly ",
+    {
+      "latex": "6.444",
+      "fallback": "6.444"
+    },
+    ". The current app marks the three-decimal approximation ",
+    {
+      "latex": "6.444",
+      "fallback": "6.444"
+    },
+    ". The true point lies strictly between ",
+    {
+      "latex": "6.444",
+      "fallback": "6.444"
+    },
+    " and ",
+    {
+      "latex": "6.445",
+      "fallback": "6.445"
+    },
+    ". Since the fourth decimal digit is ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " (less than ",
     {
       "latex": "5",
       "fallback": "5"
     },
-    " or more."
+    "), the nearest three-place rounded value is ",
+    {
+      "latex": "6.444",
+      "fallback": "6.444"
+    },
+    "."
   ],
   "The repeating block 73 gives 4.7373 to four decimal places.": [
     "The repeating block ",
@@ -40617,6 +40709,59 @@ const texts={
       "fallback": "4.7373"
     },
     " to four decimal places."
+  ],
+  "The bar covers both digits 73: the exact number is 4.737373… = 469/99. Its first four decimal digits are 4.7373, which is the lower four-digit truncation bound, NOT the correctly rounded value. The fifth digit is 7, so the nearest four-place rounded value is 4.7374. The original student answer and number-line marker still show the truncated 4.7373 while the textbook's 'upto four decimal places' interpretation is independently reviewed. The true point lies between 4.7373 and 4.7374.": [
+    "The bar covers both digits ",
+    {
+      "latex": "73",
+      "fallback": "73"
+    },
+    ": the exact number is ",
+    {
+      "latex": "4.737373\\ldots",
+      "fallback": "4.737373…"
+    },
+    " = ",
+    {
+      "latex": "\\dfrac{469}{99}",
+      "fallback": "469/99"
+    },
+    ". Its first four decimal digits are ",
+    {
+      "latex": "4.7373",
+      "fallback": "4.7373"
+    },
+    ", which is the lower four-digit truncation bound, ",
+    {
+      "latex": "NOT",
+      "fallback": "NOT"
+    },
+    " the correctly rounded value. The fifth digit is ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    ", so the nearest four-place rounded value is ",
+    {
+      "latex": "4.7374",
+      "fallback": "4.7374"
+    },
+    ". The original student answer and number-line marker still show the truncated ",
+    {
+      "latex": "4.7373",
+      "fallback": "4.7373"
+    },
+    " while the textbook's 'upto four decimal places' interpretation is independently reviewed. The true point lies between ",
+    {
+      "latex": "4.7373",
+      "fallback": "4.7373"
+    },
+    " and ",
+    {
+      "latex": "4.7374",
+      "fallback": "4.7374"
+    },
+    "."
   ],
   "Negative powers mean reciprocals, while fractional powers mean roots: a⁻ⁿ = 1/aⁿ for a≠0 and a¹/ⁿ is an nth root on its real domain.": [
     "Negative powers mean reciprocals, while fractional powers mean roots: ",
