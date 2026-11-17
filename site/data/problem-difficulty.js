@@ -4099,7 +4099,12 @@ const metadata={
     "c10-2-ex2-4-q4-i": {"grade":10,"level":"easy","basis":"Evaluate and simplify a rational formula at two indices","review":"implementation-audit"},
     "c10-2-ex2-4-q4-ii": {"grade":10,"level":"easy","basis":"Apply the outer minus sign after evaluating the bracket","review":"implementation-audit"},
     "c10-2-ex2-4-q5": {"grade":10,"level":"difficult","basis":"Select even versus odd branch before substituting in piecewise nth term","review":"implementation-audit"},
-    "c10-2-ex2-4-q6": {"grade":10,"level":"medium","basis":"Use two previous terms in the correct recurrence order","review":"implementation-audit"}
+    "c10-2-ex2-4-q6": {"grade":10,"level":"medium","basis":"Use two previous terms in the correct recurrence order","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q5-iii": {"grade":9,"level":"medium","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q5(iii): List positive factors of 24 and multiples of 3 below 30, then test whether their intersection is nonempty.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q6-i": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(i): Identify the four-equal-sided shapes (square and rhombus) from a 5-element parent set S.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q6-ii": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(ii): Select the circle as the only shape defined by a radius in the given parent set S.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q6-iii": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(iii): Use the 180-degree interior-angle sum property to select the triangle from S.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q6-iv": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(iv): Recognise that no shape in S has 5 sides and write the subset as the empty set ∅.","review":"implementation-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."

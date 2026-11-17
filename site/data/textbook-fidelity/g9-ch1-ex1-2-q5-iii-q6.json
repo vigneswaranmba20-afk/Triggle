@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": "1",
+  "exercise": "1.2",
+  "batch": "q5(iii)-q6(iv)",
+  "questions": [
+    "5",
+    "6"
+  ],
+  "release": "english-release-candidate",
+  "sourceEdition": "Tamil Nadu SCERT Standard Nine Mathematics revised 2025",
+  "english": {
+    "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+    "printedPage": 12,
+    "pdfPage": 18,
+    "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+    "review": "Original printed-page source-image audit inherited from PR #129 and compared against the 2025 English PDF text layer"
+  },
+  "tamil": {
+    "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+    "printedPage": 13,
+    "pdfPage": 19,
+    "review": "Text layer cross-checked; Tamil page-image and teacher/editorial sign-off deferred",
+    "translationReview": "deferred"
+  },
+  "parts": [
+    {
+      "id": "g9-ch1-ex1.2-q5-iii",
+      "question": "5",
+      "part": "iii",
+      "questionStem": "5. State which pairs of sets are disjoint or overlapping?",
+      "exactEnglish": "E = {x : x is a factor of 24} and F = {x : x is a multiple of 3, x < 30}",
+      "expectedAnswer": "Overlapping"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-i",
+      "question": "6",
+      "part": "i",
+      "questionStem": "6. If S = {square, rectangle, circle, rhombus, triangle}, list the elements of the following subset of S.",
+      "exactEnglish": "The set of shapes which have 4 equal sides.",
+      "expectedAnswer": "{square, rhombus}"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-ii",
+      "question": "6",
+      "part": "ii",
+      "questionStem": "6. If S = {square, rectangle, circle, rhombus, triangle}, list the elements of the following subset of S.",
+      "exactEnglish": "The set of shapes which have radius.",
+      "expectedAnswer": "{circle}"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-iii",
+      "question": "6",
+      "part": "iii",
+      "questionStem": "6. If S = {square, rectangle, circle, rhombus, triangle}, list the elements of the following subset of S.",
+      "exactEnglish": "The set of shapes in which the sum of all interior angles is 180°. ",
+      "expectedAnswer": "{triangle}"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-iv",
+      "question": "6",
+      "part": "iv",
+      "questionStem": "6. If S = {square, rectangle, circle, rhombus, triangle}, list the elements of the following subset of S.",
+      "exactEnglish": "The set of shapes which have 5 sides.",
+      "expectedAnswer": "∅"
+    }
+  ],
+  "mathematicalNotes": [
+    "Q5(iii): E = {1, 2, 3, 4, 6, 8, 12, 24} and F = {3, 6, 9, 12, 15, 18, 21, 24, 27}; E ∩ F = {3, 6, 12, 24} ≠ ∅, so E and F are overlapping sets.",
+    "Q6(i): Both a square and a rhombus have 4 sides of equal length; a general rectangle only guarantees equal opposite sides.",
+    "Q6(ii): Among the listed shapes in S, only the circle is defined by a centre and radius r.",
+    "Q6(iii): A triangle has interior-angle sum 180°; quadrilaterals in S have interior-angle sum 360°.",
+    "Q6(iv): A 5-sided polygon is a pentagon, which is not in S, so the subset is the empty set ∅ (not {∅})."
+  ],
+  "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
+  "certification": "Source-audited English release batch for Q5(iii) and Q6(i–iv). No Tamil editorial or teacher certification is claimed."
+}
