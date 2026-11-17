@@ -43,8 +43,9 @@ const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
 const g9Q5Q6Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q5-iii-q6.json');
-const approvedG9Ids=[...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id)];
-assert.equal(approvedG9Ids.length,14);
+const g9Q7Q10Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q7-q10.json');
+const approvedG9Ids=[...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id)];
+assert.equal(approvedG9Ids.length,24);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
@@ -56,7 +57,7 @@ let count=0,reviewed=0;
 for(const [grade,data] of Object.entries(classes)){
  const baselineIds=preserved.grades[grade],currentIds=data.items.map(item=>item.id);
  assert.equal(JSON.stringify(currentIds.slice(0,baselineIds.length)),JSON.stringify(baselineIds),'Original 568 IDs/order preserved as the exact prefix');
- assert.equal(JSON.stringify(currentIds.slice(baselineIds.length)),JSON.stringify(grade==='10'?approvedNewIds:grade==='9'?approvedG9Ids:[]),'Only source-aligned Grade 9 Q1/Q2/Q5(iii)-Q6 and reviewed Grade 10 additions allowed');
+ assert.equal(JSON.stringify(currentIds.slice(baselineIds.length)),JSON.stringify(grade==='10'?approvedNewIds:grade==='9'?approvedG9Ids:[]),'Only source-aligned Grade 9 Q1/Q2/Q5(iii)-Q6/Q7-Q10 and reviewed Grade 10 additions allowed');
  for(const item of data.items){
   const hash=crypto.createHash('sha256').update(JSON.stringify(item)).digest('hex');
   if(Object.hasOwn(preserved.sha256,item.id)){
@@ -77,10 +78,11 @@ for(const [grade,data] of Object.entries(classes)){
          assert.equal(item.steps[n].eq,source.steps[n].equation);
        }
      }else{
-       const source=g9Q2Fidelity.parts.find(p=>p.id===item.id)||g9Q5Q6Fidelity.parts.find(p=>p.id===item.id);
+       const source=g9Q2Fidelity.parts.find(p=>p.id===item.id)||g9Q5Q6Fidelity.parts.find(p=>p.id===item.id)||g9Q7Q10Fidelity.parts.find(p=>p.id===item.id);
        assert.ok(source,'Missing Grade 9 Exercise 1.2 source '+item.id);
        const stem=source.questionStem||g9Q2Fidelity.questionStem;
-       assert.equal(item.q.en,stem+'\n('+source.part+') '+source.exactEnglish);
+       const expectedPrompt=source.expectedPrompt||(stem+'\n('+source.part+') '+source.exactEnglish);
+       assert.equal(item.q.en,expectedPrompt);
        assert.equal(item.answer,source.expectedAnswer,'Grade 9 source checked answer '+item.id);
        assert.ok(item.steps.length>=3,'No missing Grade 9 working '+item.id);
        for(const step of item.steps)assert.equal(step.math?.fallback,step.eq,'Full accessible KaTeX fallbacks: '+item.id);
@@ -123,7 +125,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,698);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,708);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');

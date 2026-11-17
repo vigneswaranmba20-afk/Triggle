@@ -4104,7 +4104,17 @@ const metadata={
     "g9-ch1-ex1.2-q6-i": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(i): Identify the four-equal-sided shapes (square and rhombus) from a 5-element parent set S.","review":"implementation-audit"},
     "g9-ch1-ex1.2-q6-ii": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(ii): Select the circle as the only shape defined by a radius in the given parent set S.","review":"implementation-audit"},
     "g9-ch1-ex1.2-q6-iii": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(iii): Use the 180-degree interior-angle sum property to select the triangle from S.","review":"implementation-audit"},
-    "g9-ch1-ex1.2-q6-iv": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(iv): Recognise that no shape in S has 5 sides and write the subset as the empty set ∅.","review":"implementation-audit"}
+    "g9-ch1-ex1.2-q6-iv": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(iv): Recognise that no shape in S has 5 sides and write the subset as the empty set ∅.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q7": {"grade":9,"level":"medium","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q7: Treat the nested set {a, b} as one element of A = {a, {a, b}} and list all 2² = 4 subsets.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q8-i": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q8(i): List all four subsets of the two-element set A = {a, b} to form P(A).","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q8-ii": {"grade":9,"level":"medium","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q8(ii): Enumerate all eight subsets of B = {1, 2, 3} by subset size to write P(B).","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q8-iii": {"grade":9,"level":"medium","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q8(iii): Systematically enumerate all sixteen subsets of the four-element set D = {p, q, r, s} by size 0, 1, 2, 3, and 4.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q8-iv": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q8(iv): Recognise that the empty set E = ∅ has exactly one subset, giving P(E) = {∅}.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q9-i": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q9(i): Calculate 2³ = 8 subsets and 2³ − 1 = 7 proper subsets for a 3-element set W.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q9-ii": {"grade":9,"level":"medium","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q9(ii): Identify the 10 natural-number squares up to 100 in X, then compute 2¹⁰ = 1024 subsets and 1023 proper subsets.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q10-i": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q10(i): Apply n[P(A)] = 2^{n(A)} directly for n(A) = 4 to obtain 16.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q10-ii": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q10(ii): Evaluate n[P(A)] = 2⁰ = 1 when n(A) = 0.","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q10-iii": {"grade":9,"level":"medium","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q10(iii): Solve 2^{n(A)} = 256 = 2⁸ by matching exponents to find n(A) = 8.","review":"implementation-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."

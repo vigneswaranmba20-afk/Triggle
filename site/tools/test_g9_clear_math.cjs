@@ -17,8 +17,8 @@ function check(value,original,id){
   assert(html.includes('<math')&&html.includes('katex-html'),'Accessible and visual math: '+id);formulas++;
  }
 }
-const items=load();assert.equal(items.length,327);
-assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[45,121,6,12,9,40,37,31,26]);
+const items=load();assert.equal(items.length,337);
+assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[55,121,6,12,9,40,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
 assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,4);
 for(const q of items){
