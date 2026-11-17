@@ -39,3 +39,4 @@ jobs:
             git commit -m "ci: regenerate integrated Grade 9 maths and curriculum status"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
+# Recheck all 347 authored Grade 9 records after adjusting Chapter 1 count.
