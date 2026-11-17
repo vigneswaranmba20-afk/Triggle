@@ -77,6 +77,23 @@ async function main(){
     // Re-enter concepts and exercise the weakest redesigned lessons in both languages.
     await page.goto(url);
     await page.locator(language==='en'?'#langEn':'#langTa').click();
+    await page.locator('.sp2-nav-button').nth(4).click();
+    const clock=page.locator('[data-g10ch2-visual] input[type=range]');
+    assert.equal(await clock.inputValue(),'45','Clock starts at its 45-day example');
+    assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('45 = 7 × 6 + 3'),'Clock makes the full-cycle division visible');
+    await page.locator('[data-back-index]').click();
+    await page.locator('.sp2-nav-button').nth(5).click();
+    const congruence=page.locator('[data-g10ch2-visual] input[type=range]');
+    assert.equal(await congruence.inputValue(),'14','Congruence starts at its quiz example');
+    assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('14 ≡ 4 (mod 5)'),'Congruence joins the remainder to its residue');
+    await page.locator('[data-back-index]').click();
+    await page.locator('.sp2-nav-button').nth(6).click();
+    const position=page.locator('[data-g10ch2-visual] input[type=range]');
+    assert.equal(await position.inputValue(),'4','One-based term-position slider');
+    assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('4 = 11'),'Fourth sequence term corresponds to position four');
+    await position.fill('5');
+    assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('5 = 14'),'Student can reveal the next sequence term');
+    await page.locator('[data-back-index]').click();
     await page.locator('.sp2-nav-button').nth(7).click();
     assert((await page.locator('.sp2-formula').innerText()).includes('a'), 'Recursive rule is visible');
     assert.equal(await page.locator('[data-math-error]').count(),0,'Recursive initial terms render');
