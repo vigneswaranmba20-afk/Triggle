@@ -2,10 +2,10 @@
   "generatedAt": "2026-11-14",
   "grade": 9,
   "source": "existing authored student-facing content",
-  "totalAuthored": 397,
-  "eligible": 322,
+  "totalAuthored": 402,
+  "eligible": 327,
   "byChapter": {
-    "1": 40,
+    "1": 45,
     "2": 121,
     "3": 6,
     "4": 12,
@@ -83,7 +83,8 @@
     "finiteSet": 1,
     "infiniteLines": 1,
     "unboundedIntegers": 1,
-    "quadraticRoots": 1
+    "quadraticRoots": 1,
+    "setClassification": 5
   },
   "fallbacks": [],
   "diagrams": 30,

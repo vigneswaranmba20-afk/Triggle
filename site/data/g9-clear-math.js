@@ -31185,6 +31185,265 @@ const records=[
         }
       }
     ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q5-iii",
+    "questionMath": {
+      "en": [
+        "5. State which pairs of sets are disjoint or overlapping?\n(iii) ",
+        {
+          "latex": "\\begin{aligned}E&=\\{x:x\\text{ is a factor of }24\\}\\\\F&=\\{x:x\\text{ is a multiple of }3,\\ x<30\\}\\end{aligned}",
+          "fallback": "E = {x : x is a factor of 24} and F = {x : x is a multiple of 3, x < 30}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Overlapping sets}",
+      "fallback": "Overlapping",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "E=\\{1,2,3,4,6,8,12,24\\}",
+          "fallback": "E = {1, 2, 3, 4, 6, 8, 12, 24}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "In set-builder notation {x : …}, the curly braces { } enclose a set and the colon : means “such that”. List every positive integer that divides 24 with remainder 0 to write set E."
+        }
+      },
+      {
+        "math": {
+          "latex": "F=\\{3,6,9,12,15,18,21,24,27\\}",
+          "fallback": "F = {3, 6, 9, 12, 15, 18, 21, 24, 27}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The symbol < means “is strictly less than”, so x < 30 excludes 30. List the positive multiples of 3 smaller than 30 to write set F."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}E\\cap F&=\\{3,6,12,24\\}\\neq\\varnothing\\\\&\\Rightarrow\\ \\text{overlapping sets}\\end{aligned}",
+          "fallback": "E∩F = {3, 6, 12, 24}; overlapping",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The intersection symbol ∩ denotes elements belonging to both sets. Because E ∩ F contains the shared numbers 3, 6, 12, and 24 (not empty), sets E and F are overlapping."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q6-i",
+    "questionMath": {
+      "en": [
+        "6. If ",
+        {
+          "latex": "\\begin{aligned}S=\\{&\\text{square, rectangle, circle,}\\\\&\\text{rhombus, triangle}\\}\\end{aligned}",
+          "fallback": "S = {square, rectangle, circle, rhombus, triangle}",
+          "display": true
+        },
+        ", list the elements of the following subset of S.\n(i) The set of shapes which have 4 equal sides."
+      ]
+    },
+    "answerMath": {
+      "latex": "\\{\\text{square},\\ \\text{rhombus}\\}",
+      "fallback": "{square, rhombus}",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\text{square}&:\\text{ 4 equal sides}\\\\\\text{rhombus}&:\\text{ 4 equal sides}\\end{aligned}",
+          "fallback": "square: 4 equal sides; rhombus: 4 equal sides",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The curly braces { } enclose the 5 shapes in the parent set S. Check which shapes in S have all 4 sides of equal length: both a square and a rhombus have 4 equal sides."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{rectangle: opposite sides equal}",
+          "fallback": "rectangle: opposite sides equal",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Check the remaining shapes in S: a general rectangle has only opposite sides equal, a triangle has 3 sides, and a circle has a curved boundary."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\{\\text{square},\\ \\text{rhombus}\\}",
+          "fallback": "{square, rhombus}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A subset of S is a set formed by selecting only the matching elements from S and writing them inside curly braces { }."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q6-ii",
+    "questionMath": {
+      "en": [
+        "6. If ",
+        {
+          "latex": "\\begin{aligned}S=\\{&\\text{square, rectangle, circle,}\\\\&\\text{rhombus, triangle}\\}\\end{aligned}",
+          "fallback": "S = {square, rectangle, circle, rhombus, triangle}",
+          "display": true
+        },
+        ", list the elements of the following subset of S.\n(ii) The set of shapes which have radius."
+      ]
+    },
+    "answerMath": {
+      "latex": "\\{\\text{circle}\\}",
+      "fallback": "{circle}",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "r=\\text{distance from centre to circle}",
+          "fallback": "r = distance from centre to circle",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The radius r of a circle is the constant distance from its centre to any point on its curved boundary."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}S=\\{&\\text{square, rectangle, circle,}\\\\&\\text{rhombus, triangle}\\}\\end{aligned}",
+          "fallback": "S = {square, rectangle, circle, rhombus, triangle}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Inspect the 5 shapes inside the curly braces { } of S: square, rectangle, rhombus, and triangle are polygons made of straight sides, so only the circle is defined by a radius."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\{\\text{circle}\\}",
+          "fallback": "{circle}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Write the single matching element from S inside curly braces { } to form the subset."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q6-iii",
+    "questionMath": {
+      "en": [
+        "6. If ",
+        {
+          "latex": "\\begin{aligned}S=\\{&\\text{square, rectangle, circle,}\\\\&\\text{rhombus, triangle}\\}\\end{aligned}",
+          "fallback": "S = {square, rectangle, circle, rhombus, triangle}",
+          "display": true
+        },
+        ", list the elements of the following subset of S.\n(iii) The set of shapes in which the sum of all interior angles is ",
+        {
+          "latex": "180^\\circ",
+          "fallback": "180°"
+        },
+        ". "
+      ]
+    },
+    "answerMath": {
+      "latex": "\\{\\text{triangle}\\}",
+      "fallback": "{triangle}",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\angle A+\\angle B+\\angle C=180^\\circ",
+          "fallback": "∠A+∠B+∠C=180°",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "In ∠A + ∠B + ∠C = 180°, the symbol ∠ means “angle” and ° means “degrees”. The 3 interior (inside) angles of any triangle always add up to 180°."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{square, rectangle, rhombus}:\\ 360^\\circ",
+          "fallback": "square, rectangle, rhombus: 360°",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The four-sided shapes in S (square, rectangle, and rhombus) each have an interior-angle sum of 360°, while a circle has no polygon vertex angles."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\{\\text{triangle}\\}",
+          "fallback": "{triangle}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Select the triangle from S and enclose it in curly braces { } to write the subset."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q6-iv",
+    "questionMath": {
+      "en": [
+        "6. If ",
+        {
+          "latex": "\\begin{aligned}S=\\{&\\text{square, rectangle, circle,}\\\\&\\text{rhombus, triangle}\\}\\end{aligned}",
+          "fallback": "S = {square, rectangle, circle, rhombus, triangle}",
+          "display": true
+        },
+        ", list the elements of the following subset of S.\n(iv) The set of shapes which have 5 sides."
+      ]
+    },
+    "answerMath": {
+      "latex": "\\varnothing",
+      "fallback": "∅",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{pentagon: 5 sides}",
+          "fallback": "pentagon: 5 sides",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A closed flat shape with 5 straight sides is a pentagon."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}S=\\{&\\text{square, rectangle, circle,}\\\\&\\text{rhombus, triangle}\\}\\end{aligned}",
+          "fallback": "S = {square, rectangle, circle, rhombus, triangle}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Count the sides of each shape in S: square (4), rectangle (4), rhombus (4), triangle (3), and circle (0 straight sides). None has 5 sides."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\varnothing",
+          "fallback": "∅",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "When no element of S satisfies the condition, the subset is the empty (null) set, denoted by the symbol ∅ (or empty braces { })."
+        }
+      }
+    ]
   }
 ];
 const texts={
@@ -38961,6 +39220,195 @@ const texts={
       "fallback": "x−1"
     },
     " also lies below five."
+  ],
+  "The intersection symbol ∩ denotes elements belonging to both sets. Because E ∩ F contains the shared numbers 3, 6, 12, and 24 (not empty), sets E and F are overlapping.": [
+    "The intersection symbol ",
+    {
+      "latex": "\\cap",
+      "fallback": "∩"
+    },
+    " denotes elements belonging to both sets. Because ",
+    {
+      "latex": "E \\cap F",
+      "fallback": "E ∩ F"
+    },
+    " contains the shared numbers ",
+    {
+      "latex": "3, 6, 12",
+      "fallback": "3, 6, 12"
+    },
+    ", and ",
+    {
+      "latex": "24",
+      "fallback": "24"
+    },
+    " (not empty), sets ",
+    {
+      "latex": "E",
+      "fallback": "E"
+    },
+    " and ",
+    {
+      "latex": "F",
+      "fallback": "F"
+    },
+    " are overlapping."
+  ],
+  "Even one common member is enough to make two sets overlapping. Here 3, 6, 12, and 24 each divide 24 and are also multiples of 3 below 30.": [
+    "Even one common member is enough to make two sets overlapping. Here ",
+    {
+      "latex": "3, 6, 12",
+      "fallback": "3, 6, 12"
+    },
+    ", and ",
+    {
+      "latex": "24",
+      "fallback": "24"
+    },
+    " each divide ",
+    {
+      "latex": "24",
+      "fallback": "24"
+    },
+    " and are also multiples of ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " below ",
+    {
+      "latex": "30",
+      "fallback": "30"
+    },
+    "."
+  ],
+  "The curly braces { } enclose the 5 shapes in the parent set S. Check which shapes in S have all 4 sides of equal length: both a square and a rhombus have 4 equal sides.": [
+    "The curly braces { } enclose the ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " shapes in the parent set ",
+    {
+      "latex": "S",
+      "fallback": "S"
+    },
+    ". Check which shapes in ",
+    {
+      "latex": "S",
+      "fallback": "S"
+    },
+    " have all ",
+    {
+      "latex": "4 \\text{sides}",
+      "fallback": "4 sides"
+    },
+    " of equal length: both a square and a rhombus have ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " equal sides."
+  ],
+  "Inspect the 5 shapes inside the curly braces { } of S: square, rectangle, rhombus, and triangle are polygons made of straight sides, so only the circle is defined by a radius.": [
+    "Inspect the ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " shapes inside the curly braces { } of ",
+    {
+      "latex": "S",
+      "fallback": "S"
+    },
+    ": square, rectangle, rhombus, and triangle are polygons made of straight sides, so only the circle is defined by a radius."
+  ],
+  "In ∠A + ∠B + ∠C = 180°, the symbol ∠ means “angle” and ° means “degrees”. The 3 interior (inside) angles of any triangle always add up to 180°.": [
+    "In ",
+    {
+      "latex": "\\angle A + \\angle B + \\angle C = 180^{\\circ}",
+      "fallback": "∠A + ∠B + ∠C = 180°"
+    },
+    ", the symbol ∠ means “angle” and ",
+    {
+      "latex": "^{\\circ}",
+      "fallback": "°"
+    },
+    " means “degrees”. The ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " interior (inside) angles of any triangle always add up to ",
+    {
+      "latex": "180^{\\circ}",
+      "fallback": "180°"
+    },
+    "."
+  ],
+  "For an n-sided polygon, the interior angles sum to (n − 2) × 180 degrees. Setting n = 3 gives 180 degrees for a triangle, while n = 4 gives 360 degrees for quadrilaterals.": [
+    "For an ",
+    {
+      "latex": "n",
+      "fallback": "n"
+    },
+    "-sided polygon, the interior angles sum to ",
+    {
+      "latex": "\\left(n - 2\\right) \\times 180",
+      "fallback": "(n − 2) × 180"
+    },
+    " degrees. Setting ",
+    {
+      "latex": "n = 3",
+      "fallback": "n = 3"
+    },
+    " gives ",
+    {
+      "latex": "180",
+      "fallback": "180"
+    },
+    " degrees for a triangle, while ",
+    {
+      "latex": "n = 4",
+      "fallback": "n = 4"
+    },
+    " gives ",
+    {
+      "latex": "360",
+      "fallback": "360"
+    },
+    " degrees for quadrilaterals."
+  ],
+  "When no element of S satisfies the condition, the subset is the empty (null) set, denoted by the symbol ∅ (or empty braces { }).": [
+    "When no element of ",
+    {
+      "latex": "S",
+      "fallback": "S"
+    },
+    " satisfies the condition, the subset is the empty (null) set, denoted by the symbol ",
+    {
+      "latex": "\\varnothing",
+      "fallback": "∅"
+    },
+    " (or empty braces { })."
+  ],
+  "Write the empty set as ∅ or { }, never as {∅}. Putting ∅ inside braces would create a one-element set instead of an empty subset.": [
+    "Write the empty set as ",
+    {
+      "latex": "\\varnothing",
+      "fallback": "∅"
+    },
+    " or { }, never as ",
+    {
+      "latex": "\\left\\{\\varnothing\\right\\}",
+      "fallback": "{∅}"
+    },
+    ". Putting ",
+    {
+      "latex": "\\varnothing",
+      "fallback": "∅"
+    },
+    " inside braces would create a one-element set instead of an empty subset."
   ]
 };
 const diagramLabels={"A":{"latex":"A","fallback":"A"},"B":{"latex":"B","fallback":"B"},"C":{"latex":"C","fallback":"C"},"D":{"latex":"D","fallback":"D"},"E":{"latex":"E","fallback":"E"},"F":{"latex":"F","fallback":"F"},"O":{"latex":"O","fallback":"O"},"P":{"latex":"P","fallback":"P"},"Q":{"latex":"Q","fallback":"Q"},"a":{"latex":"a","fallback":"a"},"b":{"latex":"b","fallback":"b"},"x":{"latex":"x","fallback":"x"},"y":{"latex":"y","fallback":"y"},"θ":{"latex":"\\theta","fallback":"θ"},"φ":{"latex":"\\phi","fallback":"φ"},"α":{"latex":"\\alpha","fallback":"α"},"β":{"latex":"\\beta","fallback":"β"},"√13":{"latex":"\\sqrt{13}","fallback":"√13"},"√5":{"latex":"\\sqrt{5}","fallback":"√5"},"√(a² + b²)":{"latex":"\\sqrt{a^{2} + b^{2}}","fallback":"√(a² + b²)"}};
