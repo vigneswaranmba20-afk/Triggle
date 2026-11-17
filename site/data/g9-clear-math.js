@@ -39799,8 +39799,96 @@ const texts={
     },
     " is a rational number in this range."
   ],
-  "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than 2 and 5.": [
-    "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than ",
+  "Divide 2 by 7. The nonzero remainders cycle and give 0.285714285714..., with the six-digit block 285714 repeating. Because the remainder never reaches zero, this decimal is non-terminating and recurring.": [
+    "Divide ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " by ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    ". The nonzero remainders cycle and give ",
+    {
+      "latex": "0.285714285714\\ldots",
+      "fallback": "0.285714285714..."
+    },
+    ", with the six-digit block ",
+    {
+      "latex": "285714",
+      "fallback": "285714"
+    },
+    " repeating. Because the remainder never reaches zero, this decimal is non-terminating and recurring."
+  ],
+  "Convert the negative mixed number first: -5 3/11 = -58/11. Because 3/11 = 0.272727..., the answer is -5.272727...; the repeating block is 27, and the minus sign applies to the whole number.": [
+    "Convert the negative mixed number first: ",
+    {
+      "latex": "\\dfrac{- 5 3}{11} = \\dfrac{- 58}{11}",
+      "fallback": "-5 3/11 = -58/11"
+    },
+    ". Because ",
+    {
+      "latex": "\\dfrac{3}{11} = 0.272727\\ldots",
+      "fallback": "3/11 = 0.272727..."
+    },
+    ", the answer is ",
+    {
+      "latex": "- 5.272727\\ldots",
+      "fallback": "-5.272727..."
+    },
+    "; the repeating block is ",
+    {
+      "latex": "27",
+      "fallback": "27"
+    },
+    ", and the minus sign applies to the whole number."
+  ],
+  "22 divided by 3 is 7 with remainder 1. The remainder 1 keeps producing another 3, so 22/3 = 7.3333...; the shortest repeating block has one digit.": [
+    {
+      "latex": "22",
+      "fallback": "22"
+    },
+    " divided by ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " is ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    " with remainder ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ". The remainder ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " keeps producing another ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    ", so ",
+    {
+      "latex": "\\dfrac{22}{3} = 7.3333\\ldots",
+      "fallback": "22/3 = 7.3333..."
+    },
+    "; the shortest repeating block has one digit."
+  ],
+  "The denominator 200 = 2^3 x 5^2 has no prime factors other than 2 and 5. Long division reaches zero remainder: 327/200 = 1.635, a terminating decimal.": [
+    "The denominator ",
+    {
+      "latex": "200 = 2^{3} x 5^{2}",
+      "fallback": "200 = 2^3 x 5^2"
+    },
+    " has no prime factors other than ",
     {
       "latex": "2",
       "fallback": "2"
@@ -39810,7 +39898,274 @@ const texts={
       "latex": "5",
       "fallback": "5"
     },
+    ". Long division reaches zero remainder: ",
+    {
+      "latex": "\\dfrac{327}{200} = 1.635, a",
+      "fallback": "327/200 = 1.635, a"
+    },
+    " terminating decimal."
+  ],
+  "Long division of 1 by 13 gives 0.076923076923... . The repeating block is 076923, including its first zero; leaving that zero out changes the number. The remainder first repeats after six decimal digits, so the shortest period has length 6.": [
+    "Long division of ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " by ",
+    {
+      "latex": "13",
+      "fallback": "13"
+    },
+    " gives ",
+    {
+      "latex": "0.076923076923\\ldots",
+      "fallback": "0.076923076923..."
+    },
+    " . The repeating block is ",
+    {
+      "latex": "076923",
+      "fallback": "076923"
+    },
+    ", including its first zero; leaving that zero out changes the number. The remainder first repeats after six decimal digits, so the shortest period has ",
+    {
+      "latex": "\\text{length} 6",
+      "fallback": "length 6"
+    },
     "."
+  ],
+  "Start with 1/11 = 0.090909... . Dividing by 3 gives 1/33 = 0.030303... . Then 71/33 = 2 + 5/33 = 2.151515...: only the digits 15 repeat after the decimal point.": [
+    "Start with ",
+    {
+      "latex": "\\dfrac{1}{11} = 0.090909\\ldots",
+      "fallback": "1/11 = 0.090909..."
+    },
+    " . Dividing by ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " gives ",
+    {
+      "latex": "\\dfrac{1}{33} = 0.030303\\ldots",
+      "fallback": "1/33 = 0.030303..."
+    },
+    " . Then ",
+    {
+      "latex": "\\dfrac{71}{33} = 2 + \\dfrac{5}{33} = 2.151515\\ldots",
+      "fallback": "71/33 = 2 + 5/33 = 2.151515..."
+    },
+    ": only the digits ",
+    {
+      "latex": "15",
+      "fallback": "15"
+    },
+    " repeat after the decimal point."
+  ],
+  "The overbar covers BOTH digits 24: x = 0.242424..., not terminating 0.24. Align the repeating tails: 100x - x = 24, so 99x = 24 and x = 8/33.": [
+    "The overbar covers ",
+    {
+      "latex": "BOTH",
+      "fallback": "BOTH"
+    },
+    " digits ",
+    {
+      "latex": "24 : x = 0.242424\\ldots",
+      "fallback": "24: x = 0.242424..."
+    },
+    ", not terminating ",
+    {
+      "latex": "0.24",
+      "fallback": "0.24"
+    },
+    ". Align the repeating tails: ",
+    {
+      "latex": "100 x - x = 24",
+      "fallback": "100x - x = 24"
+    },
+    ", so ",
+    {
+      "latex": "99 x = 24",
+      "fallback": "99x = 24"
+    },
+    " and ",
+    {
+      "latex": "x = \\dfrac{8}{33}",
+      "fallback": "x = 8/33"
+    },
+    "."
+  ],
+  "The bar covers all three digits 327, so x = 2.327327327... . Multiply by 1000 and subtract x: 999x = 2325; hence x = 2325/999 = 775/333.": [
+    "The bar covers all three digits ",
+    {
+      "latex": "327",
+      "fallback": "327"
+    },
+    ", so ",
+    {
+      "latex": "x = 2.327327327\\ldots",
+      "fallback": "x = 2.327327327..."
+    },
+    " . Multiply by ",
+    {
+      "latex": "1000",
+      "fallback": "1000"
+    },
+    " and subtract ",
+    {
+      "latex": "x : 999 x = 2325",
+      "fallback": "x: 999x = 2325"
+    },
+    "; hence ",
+    {
+      "latex": "x = \\dfrac{2325}{999} = \\dfrac{775}{333}",
+      "fallback": "x = 2325/999 = 775/333"
+    },
+    "."
+  ],
+  "There is NO recurring bar on -5.132. This is a terminating decimal: -5.132 = -5132/1000 = -1283/250. Do not apply the repeating-decimal subtraction rule to it.": [
+    "There is ",
+    {
+      "latex": "NO",
+      "fallback": "NO"
+    },
+    " recurring bar on ",
+    {
+      "latex": "- 5.132",
+      "fallback": "-5.132"
+    },
+    ". This is a terminating decimal: ",
+    {
+      "latex": "- 5.132 = \\dfrac{- 5132}{1000} = \\dfrac{- 1283}{250}",
+      "fallback": "-5.132 = -5132/1000 = -1283/250"
+    },
+    ". Do not apply the repeating-decimal subtraction rule to it."
+  ],
+  "Only 7 has the recurring bar: x = 3.17777..., not 3.171717... . Align the 7 tails by subtracting 10x from 100x: 90x = 317 - 31 = 286, giving x = 143/45.": [
+    "Only ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    " has the recurring bar: ",
+    {
+      "latex": "x = 3.17777\\ldots",
+      "fallback": "x = 3.17777..."
+    },
+    ", not ",
+    {
+      "latex": "3.171717\\ldots",
+      "fallback": "3.171717..."
+    },
+    " . Align the ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    " tails by subtracting ",
+    {
+      "latex": "10 x",
+      "fallback": "10x"
+    },
+    " from ",
+    {
+      "latex": "100 x : 90 x = 317 - 31 = 286",
+      "fallback": "100x: 90x = 317 - 31 = 286"
+    },
+    ", giving ",
+    {
+      "latex": "x = \\dfrac{143}{45}",
+      "fallback": "x = 143/45"
+    },
+    "."
+  ],
+  "In 17.2(15), the digit 2 is NOT repeating; only 15 repeats: x = 17.2151515... . Then 1000x - 10x = 17215 - 172 = 17043, so x = 5681/330.": [
+    "In ",
+    {
+      "latex": "17.2 \\left(15\\right)",
+      "fallback": "17.2(15)"
+    },
+    ", the digit ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " is ",
+    {
+      "latex": "NOT",
+      "fallback": "NOT"
+    },
+    " repeating; only ",
+    {
+      "latex": "15",
+      "fallback": "15"
+    },
+    " repeats: ",
+    {
+      "latex": "x = 17.2151515\\ldots",
+      "fallback": "x = 17.2151515..."
+    },
+    " . Then ",
+    {
+      "latex": "1000 x - 10 x = 17215 - 172 = 17043",
+      "fallback": "1000x - 10x = 17215 - 172 = 17043"
+    },
+    ", so ",
+    {
+      "latex": "x = \\dfrac{5681}{330}",
+      "fallback": "x = 5681/330"
+    },
+    "."
+  ],
+  "In -21.213(7), only the final 7 repeats: x = -21.213777... . The negative sign matters: 10000x - 1000x = -212137 + 21213 = -190924, so x = -47731/2250.": [
+    "In ",
+    {
+      "latex": "- 21.213 \\left(7\\right)",
+      "fallback": "-21.213(7)"
+    },
+    ", only the final ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    " repeats: ",
+    {
+      "latex": "x = - 21.213777\\ldots",
+      "fallback": "x = -21.213777..."
+    },
+    " . The negative sign matters: ",
+    {
+      "latex": "10000 x - 1000 x = - 212137 + 21213 = - 190924",
+      "fallback": "10000x - 1000x = -212137 + 21213 = -190924"
+    },
+    ", so ",
+    {
+      "latex": "x = \\dfrac{- 47731}{2250}",
+      "fallback": "x = -47731/2250"
+    },
+    "."
+  ],
+  "After reducing 7/128, the denominator remains 128 = 2^7. A denominator containing only factors 2 and 5 gives a terminating decimal; no long division is needed.": [
+    "After reducing ",
+    {
+      "latex": "\\dfrac{7}{128}",
+      "fallback": "7/128"
+    },
+    ", the denominator remains ",
+    {
+      "latex": "128 = 2^{7}",
+      "fallback": "128 = 2^7"
+    },
+    ". A denominator containing only factors ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " and ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " gives a terminating decimal; no long division is needed."
   ],
   "பின்னத்தை முதலில் மீச்சிறு வடிவிற்கு சுருக்கவும். அதன் பகுதியில் 2, 5 தவிர வேறு பகா காரணி இல்லாவிட்டால்தான் தசமம் முடிவுறும்.": [
     "பின்னத்தை முதலில் மீச்சிறு வடிவிற்கு சுருக்கவும். அதன் பகுதியில் ",
@@ -39819,6 +40174,75 @@ const texts={
       "fallback": "2, 5"
     },
     " தவிர வேறு பகா காரணி இல்லாவிட்டால்தான் தசமம் முடிவுறும்."
+  ],
+  "Always reduce first: 21/15 = 7/5. Although the original denominator 15 contains a 3, it cancels; the reduced denominator 5 gives a terminating decimal.": [
+    "Always reduce first: ",
+    {
+      "latex": "\\dfrac{21}{15} = \\dfrac{7}{5}",
+      "fallback": "21/15 = 7/5"
+    },
+    ". Although the original denominator ",
+    {
+      "latex": "15",
+      "fallback": "15"
+    },
+    " contains ",
+    {
+      "latex": "a 3",
+      "fallback": "a 3"
+    },
+    ", it cancels; the reduced denominator ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " gives a terminating decimal."
+  ],
+  "Convert the mixed number: 4 9/35 = 149/35. It is already reduced, and 35 = 5 x 7 contains the prime 7, so the decimal does not terminate (it recurs).": [
+    "Convert the mixed number: ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " ",
+    {
+      "latex": "\\dfrac{9}{35} = \\dfrac{149}{35}",
+      "fallback": "9/35 = 149/35"
+    },
+    ". It is already reduced, and ",
+    {
+      "latex": "35 = 5 x 7",
+      "fallback": "35 = 5 x 7"
+    },
+    " contains the prime ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    ", so the decimal does not terminate (it recurs)."
+  ],
+  "The fraction 219/2200 is reduced: 219 = 3 x 73 and 2200 = 2^3 x 5^2 x 11. The factor 11 cannot cancel, so the decimal is non-terminating and recurring.": [
+    "The fraction ",
+    {
+      "latex": "\\dfrac{219}{2200}",
+      "fallback": "219/2200"
+    },
+    " is reduced: ",
+    {
+      "latex": "219 = 3 x 73",
+      "fallback": "219 = 3 x 73"
+    },
+    " and ",
+    {
+      "latex": "2200 = 2^{3} x 5^{2} x 11",
+      "fallback": "2200 = 2^3 x 5^2 x 11"
+    },
+    ". The factor ",
+    {
+      "latex": "11",
+      "fallback": "11"
+    },
+    " cannot cancel, so the decimal is non-terminating and recurring."
   ],
   "Use a semicircle whose diameter is a segment of length (radicand+1); put its spl": [
     "Use a semicircle whose diameter is a segment of length (radicand",
