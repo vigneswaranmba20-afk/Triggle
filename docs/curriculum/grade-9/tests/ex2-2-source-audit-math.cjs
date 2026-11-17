@@ -52,7 +52,7 @@ function repeat(whole, prefix, block, sign = 1) {
   const p = 10n ** BigInt(prefix.length), b = 10n ** BigInt(block.length) - 1n;
   const denominator = p * b;
   const numerator = BigInt(whole) * denominator + BigInt(prefix || '0') * b + BigInt(block);
-  return ratio(sign * numerator, denominator);
+  return ratio(BigInt(sign) * numerator, denominator);
 }
 function check(actual, n, d, name) { assert.equal(actual, ratio(n, d), name); }
 // Q1: compare independently reconstructed decimal to the source rational number.
