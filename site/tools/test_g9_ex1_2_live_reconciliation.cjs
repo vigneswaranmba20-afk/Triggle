@@ -107,6 +107,7 @@ const stagedCtx={window:{}};
 vm.runInNewContext(read('site/data/textbook-exercises/g9-ch1-ex1-2-q3-staged-en.js'),stagedCtx,{timeout:5000});
 const staged=Array.from(stagedCtx.window.TRIGGLE_G9_EX1_2_Q3_STAGED||[]);
 assert.equal(staged.length,4,'Exactly four Q3 lessons should be staged');
+assert.equal(new Set(staged.map(row=>row.id)).size,4,'Staged Q3 must have unique IDs');
 const expectedQ3=[
  ['i','Equivalent sets',5,5,false],
  ['ii','Unequal sets',4,3,false],
@@ -152,6 +153,7 @@ for(let i=0;i<expectedQ3.length;i++){
  assert.equal(new Set(b).size,nB);
  assert.equal(a.length===b.length&&a.every(x=>b.includes(x)),equal);
  assert.equal(row.answer,answer,'Incorrect Q3 classification: '+id);
+ assert.equal(row.answer,source.answer,'Staged Q3 answer differs from audited source archive: '+id);
  // Verify that the *student-visible* enumerations match the independently
  // derived sets. Checking only the answer label would miss a wrong element.
  const normalizeSet=value=>value.replace(/\s+/gu,'');
