@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "780dce89d82b36be95d06b5be45cb16ffddcec3e",
-  "updatedAt": "2026-11-17T13:23:57+05:30",
+  "sourceCommit": "2195ca4d57c7aee2ef516175fb90e802de78a2b8",
+  "updatedAt": "2026-11-17T14:01:33+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -25,12 +25,12 @@
     "site/data/curriculum.js": "1d49b3c31bed70448d84d58e41e2019faeca9aaf5eec840065dedac421ee2827",
     "site/data/g10-ch2-concepts.js": "7af37327ce13b50bce11c1b2bd6f096e1f6434a6d04f0a6a07e846607c8da06c",
     "site/data/g10-ch2-teaching-bridges.js": "4a968e6a6b1eeb90908670f83b3407cc9217116425d55e7071325cf4992d6b7e",
-    "site/data/g9-clear-math.js": "8bff0a6ab6ec72944aaf80aa53a3dc959584f7d3f6b12d3727e702985b29a2a1",
+    "site/data/g9-clear-math.js": "96f68bcc00eee8be4b8257f79edace171214a63bda1168250eb0cf9981500060",
     "site/data/g9-probability-chapter.js": "ba7189fc6ac5e0dc305fc10b168733a45ae2b2eda7bce2334384615ea8298bd2",
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "9a0843a303be9d4ac547a825478a0ddd3e21f3952dafefa16e248fe9f23aaaac",
     "site/data/math-layout/g10-ch2-ch8-chatgpt-20261113.js": "7c9e63f5a069dc5658601181f5d6b1df16ec9d0d457e21964fb2b24ec291d134",
-    "site/data/problem-difficulty.js": "c1374eb47114c8be2b29c414053c0cc7bbd5f3463511d99ac7da431012a16f33",
+    "site/data/problem-difficulty.js": "dda70f4639004eda2dc36853745d75dee9221a0c459bb83bd7908c16f807238c",
     "site/data/real-numbers/g9-ch2-concepts.js": "ccccf6be7165344c5337aecff4120c8763b55481b516fd22a63fe57d4c958564",
     "site/data/real-numbers/g9-ch2-core.js": "aa11da8281a83d1eec91f1f42205f35a3e023f95bea0ebf72168acb33f903279",
     "site/data/real-numbers/g9-ch2-examples-a.js": "b6f78eb165adfe7f63daa65a138d58d9ca44f2ea1a219513805355b6ea93e8d7",
@@ -64,6 +64,7 @@
     "site/data/textbook-exercises/g9-ch1-ex1-2-q3-q5-batch1-en.js": "d299d17f9ec627816efdce5031e7f311cd459a9d3aeef46583466e32f517af38",
     "site/data/textbook-exercises/g9-ch1-ex1-2-q5-iii-q6-en.js": "e3bb4bed1e5f3a5c10bf9f35275234f41fd3a573313d53252b52e8b0c47f4c36",
     "site/data/textbook-exercises/g9-ch1-ex1-2-q7-q10-en.js": "f9f9b5a2eee60f5ae07e6ec5c4355d04fac21b497042e45891c02a0353b96b1b",
+    "site/data/textbook-exercises/g9-ch3-ex3-1-q1-q2-en.js": "7dff54c537f852c18ba2bc7ad937359b8c9dae49c28a586462a4d8526a7f3ad1",
     "site/data/textbook-exercises/g9-ch3-ex3-1-q10-q12-en.js": "09d627729266bbda78da8fbad94c639b329419393f9bc39b7f3d583e450a408c",
     "site/data/textbook-exercises/g9-ch3-ex3-2-q4-en.js": "ac38b0d0f99e681a6f1be347b65887cb55465fdb4786b4e4859a783974f5a221",
     "site/data/textbook-exercises/g9-ch4-ex4-1-q2-q4-en.js": "8dd13609b698e2c220841c1d5165a2a42d466e13e6500b796849e9fa08d54d33",
@@ -90,8 +91,9 @@
     "site/data/why-step-g9-ex1-2-q3-q5-batch1.js": "2db9b68747641446a67241af38ee0a950243a5faec90c9b4446980e7d0a72b41",
     "site/data/why-step-g9-ex1-2-q5-iii-q6.js": "1995eef069a08af2255b1417009a6af5955bf06d53952e905e66379e5c426a30",
     "site/data/why-step-g9-ex1-2-q7-q10.js": "c7bdb60911415c938387024d5b04ab88b5fb3cfb64d04241443455825af04540",
+    "site/data/why-step-g9-ex3-1-q1-q2.js": "3f927d1b487d49069f3e3bc29665d803ac423554d0118d53b1422b7e7fe7250a",
     "site/data/why-step-g9.js": "bb50faef659c15dffe6bcb6f3b8856115f10848ec14cdb9a169626d1814e3380",
-    "site/index.html": "da964b53a761deb0590455b5af537b31ab18c109c7437d806df35bf0c115c907",
+    "site/index.html": "ef1846fb02c76ef3e159aec7d87c2572e33eefd90b4e40da9da9e76cbc48f8c2",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
@@ -135,7 +137,7 @@
       "completedEnglishChapters": 0,
       "partialChapters": 9,
       "pendingChapters": 0,
-      "exerciseRecords": 338,
+      "exerciseRecords": 349,
       "verifiedNumberedQuestions": 0,
       "verifiedTasks": 0,
       "wholeGradeQuestionDenominator": null,
@@ -2140,7 +2142,7 @@
         {
           "number": "3",
           "title": "Algebra",
-          "exerciseRecords": 4,
+          "exerciseRecords": 15,
           "completeEnglish": false,
           "completionBasis": "Incomplete or denominator unknown",
           "verifiedNumberedQuestions": 0,
@@ -2181,6 +2183,105 @@
                   "englishAvailable": true,
                   "tamilAvailable": true,
                   "recordSha256": "863c4cd68cc8c381163b2a2b0db8f2e73e05e34651b252e8d95cb11f20a6a6c4",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q1-i",
+                  "label": "Exercise 3.1 · Q1(i)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q1-i",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "f6eb881d3330d77fe418d63ba0618b0e674954d20dda4b74237fb41936ac58dd",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q1-ii",
+                  "label": "Exercise 3.1 · Q1(ii)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q1-ii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "b60a83bdddd185c06fc90eea42dd98cc30791af78e2e397b6462974d2ec21259",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q1-iii",
+                  "label": "Exercise 3.1 · Q1(iii)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q1-iii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "cf59b0f5ef2395c894794126480477d427eb9a3b8cf30f22e9936cd59384ca81",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q1-iv",
+                  "label": "Exercise 3.1 · Q1(iv)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q1-iv",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "0feb0aeb8ae887eb9b848250cf65cd01c24de36677e02ca08102c176f1d6b3fb",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q1-v",
+                  "label": "Exercise 3.1 · Q1(v)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q1-v",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "5a71e0deaafb1767466feadc1713dfb6c74b23d0d6775cc9221bd1deb85642e8",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q1-vi",
+                  "label": "Exercise 3.1 · Q1(vi)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q1-vi",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "0bd8af18c2aee0c088addb4b7c68f937c4b3aa8084ff95486a26c3a3e377f333",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q2-i",
+                  "label": "Exercise 3.1 · Q2(i)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q2-i",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "89f57087fa99708b1525852d2b3b84cf84aaf8f91000a19ddaa7c6acc078e072",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q2-ii",
+                  "label": "Exercise 3.1 · Q2(ii)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q2-ii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "08453294c4a20ac343c978a98a8d40c2f68f48031d2ef2a4cca7cf71d7aa7510",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q2-iii",
+                  "label": "Exercise 3.1 · Q2(iii)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q2-iii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "7a1a6446010c15c509f95f34b59748571668287aaf3f272d23f173da99d0b79b",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q2-iv",
+                  "label": "Exercise 3.1 · Q2(iv)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q2-iv",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "48cacf3dadc783bad4ead2dc75ea752081ad33725625a6d8af9d6c10d2ced02c",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch3-ex3.1-q2-v",
+                  "label": "Exercise 3.1 · Q2(v)",
+                  "url": "../index.html?class=9&question=g9-ch3-ex3.1-q2-v",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "44ee25e628caa7a44d10304d6485595bf52bdea0aa4d00a2a7763f043717f16a",
                   "verified": false
                 }
               ],
@@ -11816,7 +11917,18 @@
       "questionIds": [
         "g9-ch3-ex3.1-q10",
         "g9-ch3-ex3.1-q11",
-        "g9-ch3-ex3.1-q12"
+        "g9-ch3-ex3.1-q12",
+        "g9-ch3-ex3.1-q1-i",
+        "g9-ch3-ex3.1-q1-ii",
+        "g9-ch3-ex3.1-q1-iii",
+        "g9-ch3-ex3.1-q1-iv",
+        "g9-ch3-ex3.1-q1-v",
+        "g9-ch3-ex3.1-q1-vi",
+        "g9-ch3-ex3.1-q2-i",
+        "g9-ch3-ex3.1-q2-ii",
+        "g9-ch3-ex3.1-q2-iii",
+        "g9-ch3-ex3.1-q2-iv",
+        "g9-ch3-ex3.1-q2-v"
       ],
       "scope": [],
       "status": "Awaiting verification",

@@ -29,7 +29,7 @@ for(const id of ids){
 }
 assert.equal(new Set(items.map(x=>x.id)).size,items.length,'No duplicate Grade 9 IDs');
 const app=read('site/assets/app.js');
-assert(app.includes("(grade===9&&String(chapter?.number)==='1')"),'Student navigation must sort Grade 9 Chapter 1 textbook batches');
+assert(app.includes("(grade===9&&['1','3'].includes(String(chapter?.number)))"),'Student navigation must sort Grade 9 Chapters 1 and 3 textbook batches');
 const candidateItems=items.filter(q=>ids.includes(q.id));
 const roman={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
 const byQuestion=q=>{

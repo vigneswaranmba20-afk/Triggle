@@ -10,7 +10,7 @@
     316
   ],
   "pageImagesInspected": true,
-  "status": "audited-English-candidates-not-student-registered",
+  "status": "student-source-registered-not-live-verified",
   "englishPartCount": 11,
   "textbookAnswerKeyConfirmed": true,
   "tamilTeacherReview": "deferred",
@@ -19,7 +19,8 @@
     "Math expressions transcribed from the 2025 original high-resolution page image, not from the corrupted extracted math layer.",
     "Q1(iv) follows textbook's 'polynomial' classification after algebraic simplification; original expression is undefined at x = 0 and that caveat must be retained.",
     "Textbook answer appendix PDF page 316 confirms Q1 classification and Q2 coefficients.",
-    "These are not counted as deployed or released until app integration, full tests and live Pages validation."
+    "These are not counted as deployed or released until app integration, full tests and live Pages validation.",
+    "Student module now loaded in site/index.html on integration branch; source registration is NOT yet a live Pages deployment."
   ],
   "rows": [
     {
@@ -55,7 +56,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q1-ii",
@@ -90,7 +92,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q1-iii",
@@ -125,7 +128,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q1-iv",
@@ -160,7 +164,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q1-v",
@@ -195,7 +200,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q1-vi",
@@ -230,7 +236,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q2-i",
@@ -265,7 +272,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q2-ii",
@@ -300,7 +308,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q2-iii",
@@ -335,7 +344,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q2-iv",
@@ -370,7 +380,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q2-v",
@@ -405,7 +416,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     }
   ]
 }
