@@ -155,14 +155,22 @@
         },
         {
           "id": "2.3",
-          "expectedQuestionCount": null,
-          "expectedSubquestionCount": null,
+          "expectedQuestionCount": 3,
+          "expectedSubquestionCount": 7,
           "integratedInThisWorkstream": 0,
-          "verifiedInThisWorkstream": 0,
-          "verifiedIds": [],
-          "unresolvedCount": null,
+          "verifiedInThisWorkstream": 7,
+          "verifiedIds": [
+            "g9-ch2-ex3-q1-i",
+            "g9-ch2-ex3-q1-ii",
+            "g9-ch2-ex3-q1-iii",
+            "g9-ch2-ex3-q2-i",
+            "g9-ch2-ex3-q2-ii",
+            "g9-ch2-ex3-q2-iii",
+            "g9-ch2-ex3-q3"
+          ],
+          "unresolvedCount": 0,
           "unresolvedFigureDependencies": [],
-          "inventoryStatus": "question-count-review-pending"
+          "inventoryStatus": "source-page-and-answer-appendix-visual-checked"
         },
         {
           "id": "2.4",
