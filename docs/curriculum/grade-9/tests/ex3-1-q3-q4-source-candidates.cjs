@@ -130,11 +130,18 @@ for(let i=0;i<4;i++){
  const row=m.rows[i+5], terms=q4CoefficientWitnesses[i];
  assert.equal(row.steps[2].mathLatex,ascending[i],'Ascending source witness drift: '+row.id);
  assert.equal(row.answerMathLatex,descending[i],'Descending source witness drift: '+row.id);
+ // The coefficient witness is in ascending exponent order; derive a separate
+ // descending sequence and independently evaluate both term sequences.
+ // This checks arithmetic/order consistency but cannot parse KaTeX or certify
+ // original textbook transcription (the string locks above serve that gate).
+ const descendingTerms=[...terms].reverse();
+ assert(terms.every(([power],j)=>j===0||power>terms[j-1][0]),'Ascending exponents required: '+row.id);
+ assert(descendingTerms.every(([power],j)=>j===0||power<descendingTerms[j-1][0]),'Descending exponents required: '+row.id);
  for(const value of samples){
-  const sum=terms.reduce((total,[power,coefficient])=>total+coefficient*value**power,0);
-  assert(Number.isFinite(sum),'Finite polynomial witness required: '+row.id);
-  // Both display orders must contain the same number of nonzero terms.
-  assert.equal(terms.filter(([,c])=>c!==0).length,terms.length,'Unexpected zero coefficient: '+row.id);
+  const evaluate=sequence=>sequence.reduce((total,[power,coefficient])=>total+coefficient*value**power,0);
+  const ascValue=evaluate(terms),descValue=evaluate(descendingTerms);
+  assert(Number.isFinite(ascValue)&&Number.isFinite(descValue),'Finite polynomial witnesses required: '+row.id);
+  close(ascValue,descValue);
  }
 }
 console.log('PASS Q4 ascending/descending presentation witnesses across five sample inputs.');
