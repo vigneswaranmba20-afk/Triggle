@@ -19,14 +19,19 @@ No source items are missing.
 | q1(ii) | 6.(4) = 58/9 = 6.44444… | Rounded to 3 dp: **6.444** | Exact recurring value lies strictly inside (6.444, 6.445), nearer the lower endpoint |
 | q1(iii) | 4.(73) = 469/99 = 4.737373… | First four digits/truncation **4.7373**; nearest-four-decimal rounding **4.7374** | Exact recurring value lies strictly inside (4.7373, 4.7374), nearer the upper endpoint |
 
-**Important nuance:** The textbook says “upto 4 decimal places” rather than explicitly “round to the nearest”. Thus a sequence-of-magnification approach can first locate the left four-decimal endpoint `4.7373`. However **`4.7373` is not a correctly rounded four-decimal approximation**; the next digit is 7. To avoid teaching an incorrect rounding rule, the student app now labels the point `4.7374` as the four-decimal rounded approximation while placing its actual location at `469/99` inside the final interval. A truncation-only walkthrough must say it is a *bound*, not an exact equality or a nearest-four-decimal answer.
+**Important nuance:** The textbook says “upto 4 decimal places” rather than explicitly “round to the nearest”. Thus a sequence-of-magnification approach can first locate the left four-decimal endpoint `4.7373`. However **`4.7373` is not a correctly rounded four-decimal approximation**; the next digit is 7. To avoid teaching an incorrect rounding rule, the student app's *protected original* Q1(iii) answer and diagram currently show `4.7373` as the first four-digit truncation. The independent Gemini review must determine whether the textbook intends a truncated four-digit *zoom interval* or standard nearest-place rounding. Until then, do **not** claim the protected `4.7373` marker is exact or that the author intended a nearest-four-decimal rounded answer.
 
 ## Changes, independent mathematics, and quality gate
 
 - Keep the same one-question/three-part inventory, textbook prompt IDs, general number-line diagrams and non-Exercise-2.4 curricula.
-- Repair the source-pinned rounding answer for q1(iii), ensure exact diagram targets for the two recurring numbers, distinguish equality for q1(i) from approximation, and supply source-specific beginner explanations.
-- English-first source verification. The q1(iii) Tamil teaching line only receives the corresponding numeric correction; full Tamil editorial review remains pending.
+- **Preserve all original student question, answer, working, metadata and diagram records** because the project protects them with a source-solution regression baseline. Add optional English Why-step teaching explanations that disclose approximation and truncation, without replacing the locked source.
+- English-first source audit; original Tamil source strings are unchanged and Tamil editorial review remains pending.
 - Include `docs/curriculum/grade-9/tests/ex2-4-source-audit-math.cjs` in `npm test`: exact rational checks, strict placement in intervals, recurrence and decimal-place semantics, and hint/manifest coverage.
-- **Gemini independent review requested:** see the GitHub issue created for independent Antigravity review of the rounding interpretation. No claim that Gemini has already audited the answer. Review concerns the "upto" interpretation, not the exact algebra.
+- **independent Gemini review requested** in GitHub issue [#246](https://github.com/vigneswaranmba20-afk/Triggle/issues/246) for the 'upto' interpretation. This is a request, not proof Gemini has run. No claim that Gemini has already audited the answer. Review concerns the "upto" interpretation, not the exact algebra.
 
 Release requires green standard PR gates, merge, repeat post-merge regression and Pages source verification.
+
+## Unresolved outcome / release gate
+- Textbook inventory: **3/3 source parts present**. Correct final rounding and original source-answer interpretation: **2/3 verified, 1 pending**, specifically Q1(iii).
+- GitHub's standard-solution-preservation regression failed on the initial proposed direct answer correction; it was **restored exactly from main**. Never bypass this baseline or claim the unresolved part is fixed.
+- Before changing the locked Q1(iii) answer, require explicit evidence from independent Gemini reviewer and a narrowly scoped, approved source-baseline migration accompanied by regression tests. Draft PR only in the meantime.
