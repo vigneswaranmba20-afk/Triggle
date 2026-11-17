@@ -564,28 +564,28 @@
     "g9-ch2-ex3-q1-i": {
       "step": 0,
       "expected": "Use a semicircle whose diameter is a segment of length (radicand+1); put its spl",
-      "en": "The semicircle construction makes two segments of lengths 1 and n. The perpendicular at their join has length √n by the geometric-mean theorem, giving the required point on a number line.",
+      "en": "Set A=0, B=3 and C=4 on the line, so AB=3 and BC=1. Draw the semicircle with diameter AC and a perpendicular from B to its arc at D. The height satisfies BD²=AB×BC=3, so BD=√3. Copy that length from zero to mark √3≈1.73205 between 1 and 2; an approximate decimal alone is not an exact construction.",
       "ta": "அரைவட்ட அமைப்பில் 1 மற்றும் n நீளமுள்ள இரு துண்டுகளின் சந்திப்பில் வரையும் செங்குத்தின் நீளம் வடிவியல் சராசரி தேற்றப்படி √n ஆகும்.",
       "concept": "geometricMean"
     },
     "g9-ch2-ex3-q1-ii": {
       "step": 0,
       "expected": "Use a semicircle whose diameter is a segment of length (radicand+1); put its spl",
-      "en": "The semicircle construction makes two segments of lengths 1 and n. The perpendicular at their join has length √n by the geometric-mean theorem, giving the required point on a number line.",
+      "en": "Set A=0, B=4.7 and C=5.7, with BC=1. Draw the semicircle over AC, and from B draw the perpendicular meeting the arc at D. By the geometric-mean relation BD²=AB×BC=4.7, so BD=√4.7. Transfer BD from zero; the point is about 2.16795, between 2 and 3.",
       "ta": "அரைவட்ட அமைப்பில் 1 மற்றும் n நீளமுள்ள இரு துண்டுகளின் சந்திப்பில் வரையும் செங்குத்தின் நீளம் வடிவியல் சராசரி தேற்றப்படி √n ஆகும்.",
       "concept": "geometricMean"
     },
     "g9-ch2-ex3-q1-iii": {
       "step": 0,
       "expected": "Use a semicircle whose diameter is a segment of length (radicand+1); put its spl",
-      "en": "The semicircle construction makes two segments of lengths 1 and n. The perpendicular at their join has length √n by the geometric-mean theorem, giving the required point on a number line.",
+      "en": "Set A=0, B=6.5 and C=7.5, keeping BC=1. Use a semicircle with diameter AC and draw the perpendicular BD up to the arc. Then BD²=AB×BC=6.5 and BD=√6.5. Copy BD from zero, giving approximately 2.54951 between 2 and 3; the construction identifies the exact irrational length.",
       "ta": "அரைவட்ட அமைப்பில் 1 மற்றும் n நீளமுள்ள இரு துண்டுகளின் சந்திப்பில் வரையும் செங்குத்தின் நீளம் வடிவியல் சராசரி தேற்றப்படி √n ஆகும்.",
       "concept": "geometricMean"
     },
     "g9-ch2-ex3-q2-i": {
       "step": 0,
       "expected": "Choose prefixes strictly between 0.301001… and 0.302002….",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
+      "en": "The lower bound begins 0.3010… and the upper bound begins 0.3020… . Choose smaller prefixes 0.3013… and 0.3016… between them. For each chosen answer, continue with 1s separated by ever-longer runs of zeros, as in 1001000100001… . No single block repeats forever, so each decimal is non-terminating and non-recurring: that is why it is irrational.",
       "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
       "concept": "realLine",
       "diagram": {
@@ -600,14 +600,14 @@
     "g9-ch2-ex3-q2-ii": {
       "step": 1,
       "expected": "Pick irrational roots inside that interval and verify.",
-      "en": "A non-terminating decimal is irrational only if it is also non-repeating. Terminating decimals and repeating decimals are rational because they equal fractions.",
+      "en": "Both endpoints are positive. Squaring allows an exact check without trusting rounded decimals: (6/7)²=36/49 < 3/4 < 4/5 < 144/169=(12/13)². Taking positive square roots proves 6/7 < √3/2 < √(4/5) < 12/13. Both choices are irrational because 3/4 and 4/5 are reduced fractions that are not squares of rational numbers.",
       "ta": "முடிவில்லாத தசமம் திரும்பத் திரும்ப மாறாத முறையில் வந்தால்தான் விகிதமுறா எண். முடிவுறும் அல்லது சுழற்சியுள்ள தசமம் பின்னமாக எழுதலாம்.",
       "concept": "irrational"
     },
     "g9-ch2-ex3-q2-iii": {
       "step": 0,
       "expected": "Square the positive bounds to compare values under roots.",
-      "en": "To find numbers strictly between two bounds, choose values larger than the lower bound and smaller than the upper bound. Check both inequalities.",
+      "en": "Compare the values inside the positive square roots: 2 < 5/2 < 8/3 < 3. Positive square roots keep the order, giving √2 < √(5/2) < √(8/3) < √3. Neither selected root can be rational: 5/2 and 8/3 are reduced fractions whose numerator and denominator are not both perfect squares.",
       "ta": "இரு எல்லைகளுக்கு இடையில் உள்ள எண்ணைத் தேர்வுசெய்ய அது கீழ் எல்லையைவிடப் பெரியதும் மேல் எல்லையைவிடச் சிறியதும் ஆக வேண்டும்.",
       "concept": "between",
       "diagram": {
@@ -622,7 +622,7 @@
     "g9-ch2-ex3-q3": {
       "step": 0,
       "expected": "Use finite decimals with digits between the two bounds.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
+      "en": "The given lower value starts 2.2360679… and the upper starts 2.236505500… . Both selected values satisfy 2.2360679… < 2.2361 < 2.2363 < 2.236505500… . They are rational because they terminate exactly: 2.2361=22361/10000 and 2.2363=22363/10000. The textbook also accepts other interior values, such as 2.2362.",
       "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
       "concept": "realLine",
       "diagram": {
