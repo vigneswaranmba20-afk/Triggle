@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "sourceEdition": "Tamil Nadu SCERT Grade 9 English revised 2025",
+  "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+  "sourceUrl": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+  "sourceOriginalPdfPages": [
+    93
+  ],
+  "sourceAnswerAppendixPdfPages": [
+    316
+  ],
+  "imageEvidenceChecked": true,
+  "scope": "Grade 9 Chapter 3 Exercise 3.1 Q3(i–v), Q4(i–iv)",
+  "englishPartCount": 9,
+  "status": "source-audited-candidates-not-published",
+  "tamilReview": "pending",
+  "teacherReview": "pending",
+  "externalApiSpendUsd": 0,
+  "caveats": [
+    "Textbook source and official appendix visually compared at original high-resolution.",
+    "Q3(ii) simplifies a rational expression into a polynomial degree 4 only for x ≠ 0; original expression is undefined at zero.",
+    "Q4 answer key gives both descending and ascending standard forms; both versions recorded.",
+    "No student module registration or release is approved by this source record alone."
+  ],
+  "rows": [
+    {
+      "id": "g9-ch3-ex3.1-q3-i",
+      "question": 3,
+      "part": "i",
+      "stem": "Find the degree of the following polynomials.",
+      "sourceEnglish": "1 − √2 y² + y⁷",
+      "sourceMathLatex": "1-\\sqrt2\\,y^2+y^7",
+      "answer": "Degree 7",
+      "answerMathLatex": "7",
+      "answerKeyShort": "7",
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "The degree of a polynomial is the largest exponent of its variable with a nonzero coefficient.",
+          "equation": "powers: 0, 2, 7",
+          "mathLatex": "0,\\ 2,\\ 7"
+        },
+        {
+          "reason": "The square-root two is a numerical coefficient and does not change the exponent on y.",
+          "equation": "−√2 y² has power 2",
+          "mathLatex": "-\\sqrt2\\,y^2"
+        },
+        {
+          "reason": "The highest power present is y⁷, so the degree is seven.",
+          "equation": "deg = 7",
+          "mathLatex": "\\deg=7"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q3-ii",
+      "question": 3,
+      "part": "ii",
+      "stem": "Find the degree of the following polynomials.",
+      "sourceEnglish": "(x³ − x⁴ + 6x⁶)/x²",
+      "sourceMathLatex": "\\frac{x^3-x^4+6x^6}{x^2}",
+      "answer": "Degree 4 (after simplifying for x ≠ 0)",
+      "answerMathLatex": "4",
+      "answerKeyShort": "4",
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Divide each term in the numerator by x squared; this calculation requires x to be nonzero.",
+          "equation": "x³/x² − x⁴/x² + 6x⁶/x²",
+          "mathLatex": "\\frac{x^3}{x^2}-\\frac{x^4}{x^2}+\\frac{6x^6}{x^2}"
+        },
+        {
+          "reason": "Subtract exponents on the same base to get the simplified polynomial expression.",
+          "equation": "x − x² + 6x⁴",
+          "mathLatex": "x-x^2+6x^4"
+        },
+        {
+          "reason": "The largest exponent in the simplified polynomial is four. The original fractional expression is undefined at x = 0.",
+          "equation": "degree = 4; x ≠ 0",
+          "mathLatex": "\\deg=4,\\quad x\\ne0"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q3-iii",
+      "question": 3,
+      "part": "iii",
+      "stem": "Find the degree of the following polynomials.",
+      "sourceEnglish": "x³(x² + x)",
+      "sourceMathLatex": "x^3(x^2+x)",
+      "answer": "Degree 5",
+      "answerMathLatex": "5",
+      "answerKeyShort": "5",
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Distribute x cubed across both terms inside the bracket.",
+          "equation": "x³·x² + x³·x",
+          "mathLatex": "x^3\\cdot x^2+x^3\\cdot x"
+        },
+        {
+          "reason": "When multiplying the same variable, add exponents.",
+          "equation": "x⁵ + x⁴",
+          "mathLatex": "x^5+x^4"
+        },
+        {
+          "reason": "The highest exponent is five, so this is a fifth-degree polynomial.",
+          "equation": "degree = 5",
+          "mathLatex": "\\deg=5"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q3-iv",
+      "question": 3,
+      "part": "iv",
+      "stem": "Find the degree of the following polynomials.",
+      "sourceEnglish": "3x⁴ + 9x² + 27x⁶",
+      "sourceMathLatex": "3x^4+9x^2+27x^6",
+      "answer": "Degree 6",
+      "answerMathLatex": "6",
+      "answerKeyShort": "6",
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "A polynomial's degree comes from the greatest exponent after collecting any like terms.",
+          "equation": "powers: 4, 2, 6",
+          "mathLatex": "4,\\ 2,\\ 6"
+        },
+        {
+          "reason": "The coefficients 3, 9, and 27 are all nonzero, so none of these powers disappears.",
+          "equation": "27x⁶ has a nonzero coefficient",
+          "mathLatex": "27x^6"
+        },
+        {
+          "reason": "The greatest exponent is six, so the degree is six.",
+          "equation": "degree = 6",
+          "mathLatex": "\\deg=6"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q3-v",
+      "question": 3,
+      "part": "v",
+      "stem": "Find the degree of the following polynomials.",
+      "sourceEnglish": "2√5 p⁴ − (8p³)/√3 + (2p²)/7",
+      "sourceMathLatex": "2\\sqrt5\\,p^4-\\frac{8p^3}{\\sqrt3}+\\frac{2p^2}{7}",
+      "answer": "Degree 4",
+      "answerMathLatex": "4",
+      "answerKeyShort": "4",
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "The radicals and denominators are numbers only; they are coefficients, not powers of the variable p.",
+          "equation": "coefficient of p⁴ = 2√5",
+          "mathLatex": "2\\sqrt5\\,p^4"
+        },
+        {
+          "reason": "Read the variable exponents from the three nonzero terms.",
+          "equation": "powers: 4, 3, 2",
+          "mathLatex": "4,\\ 3,\\ 2"
+        },
+        {
+          "reason": "The largest exponent is four, therefore the polynomial has degree four.",
+          "equation": "degree = 4",
+          "mathLatex": "\\deg=4"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q4-i",
+      "question": 4,
+      "part": "i",
+      "stem": "Rewrite the following polynomial in standard form.",
+      "sourceEnglish": "x − 9 + √7 x³ + 6x²",
+      "sourceMathLatex": "x-9+\\sqrt7\\,x^3+6x^2",
+      "answer": "Descending: √7 x³ + 6x² + x − 9; ascending: −9 + x + 6x² + √7 x³",
+      "answerMathLatex": "\\sqrt7\\,x^3+6x^2+x-9",
+      "answerKeyShort": "descending-and-ascending-verified",
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Standard form lists polynomial terms according to their powers, most commonly in descending order.",
+          "equation": "powers: 3, 2, 1, 0",
+          "mathLatex": "3,\\ 2,\\ 1,\\ 0"
+        },
+        {
+          "reason": "Place the x-cubed term first, followed by x-squared, x, and the constant; keep each coefficient and sign.",
+          "equation": "√7 x³ + 6x² + x − 9",
+          "mathLatex": "\\sqrt7\\,x^3+6x^2+x-9"
+        },
+        {
+          "reason": "The textbook answer key also lists the same terms in ascending order, from constant to highest power.",
+          "equation": "−9 + x + 6x² + √7 x³",
+          "mathLatex": "-9+x+6x^2+\\sqrt7\\,x^3"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q4-ii",
+      "question": 4,
+      "part": "ii",
+      "stem": "Rewrite the following polynomial in standard form.",
+      "sourceEnglish": "√2 x² − (7/2)x⁴ + x − 5x³",
+      "sourceMathLatex": "\\sqrt2\\,x^2-\\frac72x^4+x-5x^3",
+      "answer": "Descending: −(7/2)x⁴ − 5x³ + √2 x² + x; ascending: x + √2 x² − 5x³ − (7/2)x⁴",
+      "answerMathLatex": "-\\frac72x^4-5x^3+\\sqrt2\\,x^2+x",
+      "answerKeyShort": "descending-and-ascending-verified",
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "List the powers present in the original polynomial: four, three, two, and one.",
+          "equation": "powers: 4, 3, 2, 1",
+          "mathLatex": "4,\\ 3,\\ 2,\\ 1"
+        },
+        {
+          "reason": "Keep each coefficient, including its minus sign, while arranging from greatest power to least.",
+          "equation": "−(7/2)x⁴ − 5x³ + √2 x² + x",
+          "mathLatex": "-\\frac72x^4-5x^3+\\sqrt2\\,x^2+x"
+        },
+        {
+          "reason": "Reverse the sequence to write ascending order; no coefficients or exponents change.",
+          "equation": "x + √2 x² − 5x³ − (7/2)x⁴",
+          "mathLatex": "x+\\sqrt2\\,x^2-5x^3-\\frac72x^4"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q4-iii",
+      "question": 4,
+      "part": "iii",
+      "stem": "Rewrite the following polynomial in standard form.",
+      "sourceEnglish": "7x³ − (6/5)x² + 4x − 1",
+      "sourceMathLatex": "7x^3-\\frac65x^2+4x-1",
+      "answer": "Descending: 7x³ − (6/5)x² + 4x − 1; ascending: −1 + 4x − (6/5)x² + 7x³",
+      "answerMathLatex": "7x^3-\\frac65x^2+4x-1",
+      "answerKeyShort": "descending-and-ascending-verified",
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "The original polynomial already lists powers three, two, one, and zero in descending order.",
+          "equation": "powers: 3, 2, 1, 0",
+          "mathLatex": "3,\\ 2,\\ 1,\\ 0"
+        },
+        {
+          "reason": "So its descending standard form is unchanged; preserve the negative fraction and constant.",
+          "equation": "7x³ − (6/5)x² + 4x − 1",
+          "mathLatex": "7x^3-\\frac65x^2+4x-1"
+        },
+        {
+          "reason": "For ascending order, write the constant first and finish with the x-cubed term.",
+          "equation": "−1 + 4x − (6/5)x² + 7x³",
+          "mathLatex": "-1+4x-\\frac65x^2+7x^3"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q4-iv",
+      "question": 4,
+      "part": "iv",
+      "stem": "Rewrite the following polynomial in standard form.",
+      "sourceEnglish": "y² + √5 y³ − 11 − (7/3)y + 9y⁴",
+      "sourceMathLatex": "y^2+\\sqrt5\\,y^3-11-\\frac73y+9y^4",
+      "answer": "Descending: 9y⁴ + √5 y³ + y² − (7/3)y − 11; ascending: −11 − (7/3)y + y² + √5 y³ + 9y⁴",
+      "answerMathLatex": "9y^4+\\sqrt5\\,y^3+y^2-\\frac73y-11",
+      "answerKeyShort": "descending-and-ascending-verified",
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Identify all powers of y: four, three, two, one, and zero for the constant.",
+          "equation": "powers: 4, 3, 2, 1, 0",
+          "mathLatex": "4,\\ 3,\\ 2,\\ 1,\\ 0"
+        },
+        {
+          "reason": "Place the highest-degree term first; retain the minus sign in front of the y term and the constant.",
+          "equation": "9y⁴ + √5 y³ + y² − (7/3)y − 11",
+          "mathLatex": "9y^4+\\sqrt5\\,y^3+y^2-\\frac73y-11"
+        },
+        {
+          "reason": "The official appendix also gives the ascending version, beginning with the constant −11.",
+          "equation": "−11 − (7/3)y + y² + √5 y³ + 9y⁴",
+          "mathLatex": "-11-\\frac73y+y^2+\\sqrt5\\,y^3+9y^4"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    }
+  ]
+}
