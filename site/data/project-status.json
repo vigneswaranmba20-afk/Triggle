@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "9fe5eba649997c77403dd79ab0bc427cdb2671a5",
-  "updatedAt": "2026-11-17T19:40:31+05:30",
+  "sourceCommit": "57d138fa6a6b20aeb02ac6cddfbed485329b0479",
+  "updatedAt": "2026-11-17T19:51:39+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -30,7 +30,7 @@
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "9a0843a303be9d4ac547a825478a0ddd3e21f3952dafefa16e248fe9f23aaaac",
     "site/data/math-layout/g10-ch2-ch8-chatgpt-20261113.js": "7c9e63f5a069dc5658601181f5d6b1df16ec9d0d457e21964fb2b24ec291d134",
-    "site/data/problem-difficulty.js": "dda70f4639004eda2dc36853745d75dee9221a0c459bb83bd7908c16f807238c",
+    "site/data/problem-difficulty.js": "199140048a9ac214d24f42488b491cbc32ed56a8a5bdb522aa1215bb2042d51d",
     "site/data/real-numbers/g9-ch2-concepts.js": "ccccf6be7165344c5337aecff4120c8763b55481b516fd22a63fe57d4c958564",
     "site/data/real-numbers/g9-ch2-core.js": "aa11da8281a83d1eec91f1f42205f35a3e023f95bea0ebf72168acb33f903279",
     "site/data/real-numbers/g9-ch2-examples-a.js": "b6f78eb165adfe7f63daa65a138d58d9ca44f2ea1a219513805355b6ea93e8d7",
@@ -48,6 +48,7 @@
     "site/data/textbook-exercises/g10-ch2-ex2-3-modular-en.js": "292042b767e8747403ee6c7cc4835c3edb90942a47910cddeab9024b3f93939d",
     "site/data/textbook-exercises/g10-ch2-ex2-4-sequences-en.js": "1e52ac14760cd9ec9aad2a28439dfeabf1df75fc1efdf492995addb5b1f4e72b",
     "site/data/textbook-exercises/g10-ch2-ex2-5-ap-missing-en.js": "394c40236a236faae051ed9465a231f0e526032965812a87fca557ad5eab5cdc",
+    "site/data/textbook-exercises/g10-ch2-ex2-6-ap-sum-missing-en.js": "13ba1b765ece31678c1a7a0d73b496be92b9b7f486be0d1b9e527981d077fd0f",
     "site/data/textbook-exercises/g10-ch2-trace-2-3-to-2-6-en.js": "96cb87f5ba2e964668783cf3fab8456a88ea63a7b9dad28ab688854f230ef396",
     "site/data/textbook-exercises/g10-ch2-trace-2-7-to-2-10-en.js": "d4f26052386dbac4f9ca46bc9b80ed899085677590f2e7e4a126442b42b77fd0",
     "site/data/textbook-exercises/g10-ch2-trace-en.js": "52dc0f4e66f6935d4b2144bdd5385aa535b7572fe2c357dfcbfa555923f506aa",
@@ -93,7 +94,7 @@
     "site/data/why-step-g9-ex1-2-q7-q10.js": "c7bdb60911415c938387024d5b04ab88b5fb3cfb64d04241443455825af04540",
     "site/data/why-step-g9-ex3-1-q1-q2.js": "3f927d1b487d49069f3e3bc29665d803ac423554d0118d53b1422b7e7fe7250a",
     "site/data/why-step-g9.js": "1157ca14960fa6efd0bd5e4be5c3713c2fbda64437febf6b7b334a6d69db3985",
-    "site/index.html": "ef1846fb02c76ef3e159aec7d87c2572e33eefd90b4e40da9da9e76cbc48f8c2",
+    "site/index.html": "415e9f1c9396e890ee6cd871978f7b7fecb85c3566ec05a9ff6db4be6c6a3656",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
@@ -4351,7 +4352,7 @@
       "completedEnglishChapters": 1,
       "partialChapters": 5,
       "pendingChapters": 2,
-      "exerciseRecords": 223,
+      "exerciseRecords": 228,
       "verifiedNumberedQuestions": 19,
       "verifiedTasks": 22,
       "wholeGradeQuestionDenominator": null,
@@ -5250,7 +5251,7 @@
         {
           "number": "2",
           "title": "Numbers and Sequences",
-          "exerciseRecords": 108,
+          "exerciseRecords": 113,
           "completeEnglish": false,
           "completionBasis": "Incomplete or denominator unknown",
           "verifiedNumberedQuestions": 19,
@@ -6410,6 +6411,51 @@
                   "englishAvailable": true,
                   "tamilAvailable": false,
                   "recordSha256": "be83b11e4e44171ed39bc0db6af9899956da6204eed62388ff27899a20f15c3b",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-6-q1-iii",
+                  "label": "Exercise 2.6 · Q1(iii)",
+                  "url": "../index.html?class=10&question=c10-2-ex2-6-q1-iii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "190ed3c088be41e2652b1d1e2b1c8aa9474880b69054b52e555846fd8ba2dd78",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-6-q3",
+                  "label": "Exercise 2.6 · Q3",
+                  "url": "../index.html?class=10&question=c10-2-ex2-6-q3",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "a06deef4acdc2b3dc721997e289b21f02aa91dabba1a08e51cc351b9d6ade3d0",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-6-q4",
+                  "label": "Exercise 2.6 · Q4",
+                  "url": "../index.html?class=10&question=c10-2-ex2-6-q4",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "f9b6c7f7561d6b0a51d59dceec3e3f290424bc9818ff326ac624d7e940f6048d",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-6-q11",
+                  "label": "Exercise 2.6 · Q11",
+                  "url": "../index.html?class=10&question=c10-2-ex2-6-q11",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "dea0dbd932794562b763cd00120302f6187e72e4fcf806acb0693d9977cd5b1a",
+                  "verified": false
+                },
+                {
+                  "id": "c10-2-ex2-6-q12",
+                  "label": "Exercise 2.6 · Q12",
+                  "url": "../index.html?class=10&question=c10-2-ex2-6-q12",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "7f9c72624cfc6c492304bfe56d1ba1ccacc909bb9638420adea1a702f32dca64",
                   "verified": false
                 }
               ],
@@ -11634,7 +11680,12 @@
         "c10-2-ex2-6-q7",
         "c10-2-ex2-6-q8",
         "c10-2-ex2-6-q9",
-        "c10-2-ex2-6-q10"
+        "c10-2-ex2-6-q10",
+        "c10-2-ex2-6-q1-iii",
+        "c10-2-ex2-6-q3",
+        "c10-2-ex2-6-q4",
+        "c10-2-ex2-6-q11",
+        "c10-2-ex2-6-q12"
       ],
       "scope": [],
       "status": "Awaiting verification",
