@@ -1,0 +1,411 @@
+{
+  "schemaVersion": 1,
+  "scope": "Grade 9 revised 2025 English Chapter 3 Exercise 3.1 Q1(i–vi), Q2(i–v)",
+  "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+  "sourceUrl": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+  "sourceOriginalPdfPages": [
+    93
+  ],
+  "answerKeyPdfPages": [
+    316
+  ],
+  "pageImagesInspected": true,
+  "status": "audited-English-candidates-not-student-registered",
+  "englishPartCount": 11,
+  "textbookAnswerKeyConfirmed": true,
+  "tamilTeacherReview": "deferred",
+  "externalApiSpendUsd": 0,
+  "notes": [
+    "Math expressions transcribed from the 2025 original high-resolution page image, not from the corrupted extracted math layer.",
+    "Q1(iv) follows textbook's 'polynomial' classification after algebraic simplification; original expression is undefined at x = 0 and that caveat must be retained.",
+    "Textbook answer appendix PDF page 316 confirms Q1 classification and Q2 coefficients.",
+    "These are not counted as deployed or released until app integration, full tests and live Pages validation."
+  ],
+  "rows": [
+    {
+      "id": "g9-ch3-ex3.1-q1-i",
+      "question": 1,
+      "part": "i",
+      "stem": "Which of the following expressions are polynomials? If not give reason:",
+      "sourceEnglish": "(i) 1/x² + 3x − 4",
+      "sourceMathLatex": "\\frac{1}{x^2}+3x-4",
+      "answer": "Not a polynomial",
+      "answerMathLatex": "\\text{Not a polynomial}",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "A polynomial is a finite sum of terms with variables raised only to whole-number powers 0, 1, 2, and so on.",
+          "equation": "allowed exponents: 0, 1, 2, …",
+          "mathLatex": "0,1,2,\\ldots"
+        },
+        {
+          "reason": "Rewrite the reciprocal as a negative power; dividing by x squared is the same as multiplying by x to the power minus two, wherever x is nonzero.",
+          "equation": "1/x² = x⁻²",
+          "mathLatex": "\\frac{1}{x^2}=x^{-2}"
+        },
+        {
+          "reason": "The exponent −2 is negative, so this expression is not a polynomial in x.",
+          "equation": "−2 < 0",
+          "mathLatex": "-2<0"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q1-ii",
+      "question": 1,
+      "part": "ii",
+      "stem": "Which of the following expressions are polynomials? If not give reason:",
+      "sourceEnglish": "(ii) x²(x − 1)",
+      "sourceMathLatex": "x^2(x-1)",
+      "answer": "Polynomial",
+      "answerMathLatex": "\\text{Polynomial}",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Multiply x squared by each term inside the bracket using the distributive law.",
+          "equation": "x²(x − 1) = x²·x − x²·1",
+          "mathLatex": "x^2(x-1)=x^2\\cdot x-x^2\\cdot1"
+        },
+        {
+          "reason": "Add exponents when multiplying powers of the same base, giving x cubed minus x squared.",
+          "equation": "x³ − x²",
+          "mathLatex": "x^3-x^2"
+        },
+        {
+          "reason": "Both exponents 3 and 2 are nonnegative integers, so the expression is a polynomial of degree three.",
+          "equation": "degree = 3",
+          "mathLatex": "\\deg=3"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q1-iii",
+      "question": 1,
+      "part": "iii",
+      "stem": "Which of the following expressions are polynomials? If not give reason:",
+      "sourceEnglish": "(iii) (1/x)(x + 5)",
+      "sourceMathLatex": "\\frac{1}{x}(x+5)",
+      "answer": "Not a polynomial",
+      "answerMathLatex": "\\text{Not a polynomial}",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Distribute 1/x across the two terms inside (x + 5); the original expression requires x to be nonzero.",
+          "equation": "(1/x)(x + 5) = x/x + 5/x",
+          "mathLatex": "\\frac{1}{x}(x+5)=\\frac{x}{x}+\\frac{5}{x}"
+        },
+        {
+          "reason": "Simplify x/x to one and rewrite 5/x with exponent −1.",
+          "equation": "1 + 5/x = 1 + 5x⁻¹",
+          "mathLatex": "1+\\frac{5}{x}=1+5x^{-1}"
+        },
+        {
+          "reason": "A variable appearing with a negative exponent violates the polynomial definition, so the expression is not a polynomial.",
+          "equation": "exponent = −1",
+          "mathLatex": "-1"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q1-iv",
+      "question": 1,
+      "part": "iv",
+      "stem": "Which of the following expressions are polynomials? If not give reason:",
+      "sourceEnglish": "(iv) 1/x⁻² + 1/x⁻¹ + 7",
+      "sourceMathLatex": "\\frac{1}{x^{-2}}+\\frac{1}{x^{-1}}+7",
+      "answer": "Polynomial (after simplification for x ≠ 0)",
+      "answerMathLatex": "\\text{Polynomial (for }x\\ne0\\text{)}",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "A negative exponent means a reciprocal; taking the reciprocal of x to the power −2 gives x squared, when x is nonzero.",
+          "equation": "1/x⁻² = x²",
+          "mathLatex": "\\frac{1}{x^{-2}}=x^2\\quad(x\\ne0)"
+        },
+        {
+          "reason": "Similarly, the reciprocal of x to the power −1 equals x, so simplify both fractions before checking powers.",
+          "equation": "1/x⁻¹ = x",
+          "mathLatex": "\\frac{1}{x^{-1}}=x\\quad(x\\ne0)"
+        },
+        {
+          "reason": "The result x² + x + 7 has only nonnegative whole-number powers, which is the polynomial form listed in the textbook answer key. The unsimplified original expression remains undefined at x = 0.",
+          "equation": "x² + x + 7",
+          "mathLatex": "x^2+x+7"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q1-v",
+      "question": 1,
+      "part": "v",
+      "stem": "Which of the following expressions are polynomials? If not give reason:",
+      "sourceEnglish": "(v) √5 x² + √3 x + √2",
+      "sourceMathLatex": "\\sqrt5\\,x^2+\\sqrt3\\,x+\\sqrt2",
+      "answer": "Polynomial",
+      "answerMathLatex": "\\text{Polynomial}",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "The square roots of 5, 3, and 2 are real numbers, so they may be used as constant coefficients in a polynomial.",
+          "equation": "√5, √3, √2 ∈ ℝ",
+          "mathLatex": "\\sqrt5,\\sqrt3,\\sqrt2\\in\\mathbb{R}"
+        },
+        {
+          "reason": "The powers of x in the three terms are 2, 1, and 0; a constant term has power zero.",
+          "equation": "powers of x: 2, 1, 0",
+          "mathLatex": "x^2,\\ x^1,\\ x^0"
+        },
+        {
+          "reason": "All variable exponents are nonnegative integers, so this is a polynomial of degree two.",
+          "equation": "degree = 2",
+          "mathLatex": "\\deg=2"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q1-vi",
+      "question": 1,
+      "part": "vi",
+      "stem": "Which of the following expressions are polynomials? If not give reason:",
+      "sourceEnglish": "(vi) m² − ∛m + 7m − 10",
+      "sourceMathLatex": "m^2-\\sqrt[3]{m}+7m-10",
+      "answer": "Not a polynomial",
+      "answerMathLatex": "\\text{Not a polynomial}",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "A cube root can be written as a fractional exponent one-third.",
+          "equation": "∛m = m¹ᐟ³",
+          "mathLatex": "\\sqrt[3]{m}=m^{1/3}"
+        },
+        {
+          "reason": "Rewrite the expression with that exponent to check whether each variable power is a whole number.",
+          "equation": "m² − m¹ᐟ³ + 7m − 10",
+          "mathLatex": "m^2-m^{1/3}+7m-10"
+        },
+        {
+          "reason": "One-third is not a nonnegative integer, so the expression is not a polynomial in m.",
+          "equation": "1/3 ∉ {0,1,2,…}",
+          "mathLatex": "\\frac13\\notin\\{0,1,2,\\ldots\\}"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q2-i",
+      "question": 2,
+      "part": "i",
+      "stem": "Write the coefficient of x² and x in each of the following polynomials.",
+      "sourceEnglish": "(i) 4 + (2/5)x² − 3x",
+      "sourceMathLatex": "4+\\frac25x^2-3x",
+      "answer": "Coefficient of x²: 2/5; coefficient of x: −3",
+      "answerMathLatex": "a_{x^2}=\\frac25,\\ a_x=-3",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "The coefficient is the number multiplying the specified power of x, including its sign.",
+          "equation": "coefficient × power",
+          "mathLatex": "a\\cdot x^n"
+        },
+        {
+          "reason": "The x-squared term is (2/5)x², so its coefficient is two-fifths.",
+          "equation": "coefficient of x² = 2/5",
+          "mathLatex": "a_{x^2}=\\frac25"
+        },
+        {
+          "reason": "The x term is −3x, so its coefficient is negative three. The separate constant 4 is not part of either requested coefficient.",
+          "equation": "coefficient of x = −3",
+          "mathLatex": "a_x=-3"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q2-ii",
+      "question": 2,
+      "part": "ii",
+      "stem": "Write the coefficient of x² and x in each of the following polynomials.",
+      "sourceEnglish": "(ii) 6 − 2x² + 3x³ − √7 x",
+      "sourceMathLatex": "6-2x^2+3x^3-\\sqrt7\\,x",
+      "answer": "Coefficient of x²: −2; coefficient of x: −√7",
+      "answerMathLatex": "a_{x^2}=-2,\\ a_x=-\\sqrt7",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Locate the term multiplying x squared; the minus sign belongs to the coefficient.",
+          "equation": "−2x²",
+          "mathLatex": "-2x^2"
+        },
+        {
+          "reason": "Therefore, the coefficient of x squared is negative two.",
+          "equation": "coefficient of x² = −2",
+          "mathLatex": "a_{x^2}=-2"
+        },
+        {
+          "reason": "The term with x to the first power is −√7 x, so its coefficient is negative square-root seven, not the constant six or the x-cubed coefficient.",
+          "equation": "coefficient of x = −√7",
+          "mathLatex": "a_x=-\\sqrt7"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q2-iii",
+      "question": 2,
+      "part": "iii",
+      "stem": "Write the coefficient of x² and x in each of the following polynomials.",
+      "sourceEnglish": "(iii) πx² − x + 2",
+      "sourceMathLatex": "\\pi x^2-x+2",
+      "answer": "Coefficient of x²: π; coefficient of x: −1",
+      "answerMathLatex": "a_{x^2}=\\pi,\\ a_x=-1",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Pi is a real constant, so it can be the coefficient multiplying x squared.",
+          "equation": "πx²",
+          "mathLatex": "\\pi x^2"
+        },
+        {
+          "reason": "The coefficient of x squared is pi.",
+          "equation": "coefficient of x² = π",
+          "mathLatex": "a_{x^2}=\\pi"
+        },
+        {
+          "reason": "A bare −x means −1 times x, so its coefficient is negative one.",
+          "equation": "coefficient of x = −1",
+          "mathLatex": "a_x=-1"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q2-iv",
+      "question": 2,
+      "part": "iv",
+      "stem": "Write the coefficient of x² and x in each of the following polynomials.",
+      "sourceEnglish": "(iv) √3 x² + √2 x + 0.5",
+      "sourceMathLatex": "\\sqrt3\\,x^2+\\sqrt2\\,x+0.5",
+      "answer": "Coefficient of x²: √3; coefficient of x: √2",
+      "answerMathLatex": "a_{x^2}=\\sqrt3,\\ a_x=\\sqrt2",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "A square-root number can be a real coefficient even though it is irrational.",
+          "equation": "√3, √2 ∈ ℝ",
+          "mathLatex": "\\sqrt3,\\sqrt2\\in\\mathbb{R}"
+        },
+        {
+          "reason": "The term √3 x² has coefficient square-root three.",
+          "equation": "coefficient of x² = √3",
+          "mathLatex": "a_{x^2}=\\sqrt3"
+        },
+        {
+          "reason": "The term √2 x has coefficient square-root two; 0.5 is a separate constant.",
+          "equation": "coefficient of x = √2",
+          "mathLatex": "a_x=\\sqrt2"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    },
+    {
+      "id": "g9-ch3-ex3.1-q2-v",
+      "question": 2,
+      "part": "v",
+      "stem": "Write the coefficient of x² and x in each of the following polynomials.",
+      "sourceEnglish": "(v) x² − (7/2)x + 8",
+      "sourceMathLatex": "x^2-\\frac72x+8",
+      "answer": "Coefficient of x²: 1; coefficient of x: −7/2",
+      "answerMathLatex": "a_{x^2}=1,\\ a_x=-\\frac72",
+      "sourceEvidence": {
+        "printedPage": 87,
+        "pdfPage": 93,
+        "answerPrintedPage": 310,
+        "answerPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "When x squared has no number written before it, the implied coefficient is one.",
+          "equation": "x² = 1·x²",
+          "mathLatex": "x^2=1\\cdot x^2"
+        },
+        {
+          "reason": "Read the x-squared coefficient as one.",
+          "equation": "coefficient of x² = 1",
+          "mathLatex": "a_{x^2}=1"
+        },
+        {
+          "reason": "The x term is negative seven-halves times x, so the second coefficient is −7/2.",
+          "equation": "coefficient of x = −7/2",
+          "mathLatex": "a_x=-\\frac72"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false
+    }
+  ]
+}
