@@ -112,3 +112,27 @@ The private input JSON must also contain a `sourceEvidence` object, structured a
 Added offline negative tests for swapped books, impossible pages, missing visual inspection, unrecognized image hashes, mismatched grades and provider refusals. No paid API requests occur in these tests.
 
 API references: [GPT-6 Luna](https://developers.openai.com/api/docs/models/gpt-6-luna), [Gemini 3.8 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash).
+
+
+## Phase C: repeatable, $0 offline pilot rehearsal
+
+The new command `npm run trace:dual-rehearsal` executes 12 **synthetic** Grade 10 geometric-series scenarios:
+
+- Ten deliberately correct finite sums, including ratios 0, 1, negative ratios and a one-term boundary case.
+- Two deliberately incorrect totals, which are rejected **before** OpenAI or Gemini is called.
+- Twenty simulated reviewer responses for the ten correct totals. These are fixed offline mocks, **not** genuine OpenAI or Gemini model reasoning.
+- All results explicitly carry `releaseApproved:false` and `externalApiCostUsd:0`.
+
+Use `node site/tools/bulk/trace_dual_rehearsal.cjs --output /tmp/trace-dual-pilot.json` to save a local JSON report. A GitHub Actions workflow named **TRACE Dual Intelligence — offline pilot rehearsal** also uploads a review artifact, with no credentials, billable calls or publishing actions.
+
+The supported mathematical oracle uses BigInt integer arithmetic for finite geometric series and checks the telescoping identity `(r-1)S = a(r^n-1)`. This verifies the stated **numeric total** for a known structured mathematical test fixture. It does not prove every written explanation step is valid, and it does not inspect copyrighted textbook PDF images.
+
+This is a reproducible system rehearsal, **not a real 10-exercise textbook pilot**. Live model calls remain explicitly gated by verified API permissions, real textbook evidence and user-approved spending. Existing hourly curricula and Fola video workflows remain unchanged.
+
+Android/Termux commands after the branch is merged:
+
+~~~sh
+cd ~/Triggle
+git pull --ff-only
+npm run trace:dual-rehearsal
+~~~
