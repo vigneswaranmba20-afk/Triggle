@@ -618,11 +618,7 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-ap-sum",
-      "video": {
-        "src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-ap-sum/4bb9ea8b8b754b5b585034b18b34545e6bd7fa3114a70b037178e8b4d3e81ab2.mp4",
-        "language": "en",
-        "durationSeconds": 120.94
-      },
+      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-ap-sum/c3d7df0a9e29b4bb59932525bb4b25be0e84f3c00651ef7dc10feb8042ce4188.mp4", "language": "en", "durationSeconds": 106.69},
       "section": "2.8",
       "title": {
         "en": "An A.P. sum pairs the first and last terms",
