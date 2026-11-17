@@ -12,7 +12,7 @@
   "imageEvidenceChecked": true,
   "scope": "Grade 9 Chapter 3 Exercise 3.1 Q3(i–v), Q4(i–iv)",
   "englishPartCount": 9,
-  "status": "source-audited-candidates-not-published",
+  "status": "student-source-registered-not-live-verified",
   "tamilReview": "pending",
   "teacherReview": "pending",
   "externalApiSpendUsd": 0,
@@ -57,7 +57,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q3-ii",
@@ -93,7 +94,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q3-iii",
@@ -129,7 +131,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q3-iv",
@@ -165,7 +168,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q3-v",
@@ -201,7 +205,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q4-i",
@@ -237,7 +242,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q4-ii",
@@ -273,7 +279,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q4-iii",
@@ -309,7 +316,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     },
     {
       "id": "g9-ch3-ex3.1-q4-iv",
@@ -345,7 +353,8 @@
         }
       ],
       "translationReview": "pending",
-      "studentPublished": false
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
     }
   ]
 }
