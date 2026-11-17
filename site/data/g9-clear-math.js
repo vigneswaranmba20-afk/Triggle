@@ -31185,6 +31185,464 @@ const records=[
         }
       }
     ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q3-i",
+    "questionMath": {
+      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(i) A = The set of vowels in the English alphabets. B = The set of all letters in the word “VOWEL”."
+    },
+    "answerMath": {
+      "latex": "\\text{Equivalent sets}",
+      "fallback": "Equivalent sets",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}A&=\\{a,e,i,o,u\\}\\\\B&=\\{V,O,W,E,L\\}\\end{aligned}",
+          "fallback": "A = {a, e, i, o, u}; B = {V, O, W, E, L}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the distinct letters in each set."
+        }
+      },
+      {
+        "math": {
+          "latex": "n(A)=n(B)=5,\\quad A\\ne B",
+          "fallback": "n(A) = n(B) = 5; A ≠ B",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Each set has five elements, but the members differ."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Equivalent sets}",
+          "fallback": "A and B: equivalent",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Same number of members means the sets are equivalent."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q3-ii",
+    "questionMath": {
+      "en": [
+        "3. Which of the following sets are equivalent or unequal or equal sets?\n(ii) ",
+        {
+          "latex": "\\begin{aligned}C&=\\{2,3,4,5\\}\\\\D&=\\{x:x\\in\\mathbb W,\\ 1<x<5\\}\\end{aligned}",
+          "fallback": "C = {2,3,4,5} D = {x : x∈W, 1 < x < 5}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Unequal sets}",
+      "fallback": "Unequal sets",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "D=\\{2,3,4\\}",
+          "fallback": "D = {2, 3, 4}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the whole numbers strictly between 1 and 5."
+        }
+      },
+      {
+        "math": {
+          "latex": "C=\\{2,3,4,5\\}",
+          "fallback": "C = {2, 3, 4, 5}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Compare D with the given set C."
+        }
+      },
+      {
+        "math": {
+          "latex": "C\\ne D\\quad\\text{(unequal)}",
+          "fallback": "C ≠ D; unequal sets",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The element 5 is in C but not in D."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q3-iii",
+    "questionMath": {
+      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iii) X = {x : x is a letter in the word “LIFE”} Y = {F, I, L, E}"
+    },
+    "answerMath": {
+      "latex": "\\text{Equal sets}",
+      "fallback": "Equal sets",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "X=\\{L,I,F,E\\}",
+          "fallback": "X = {L, I, F, E}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Write the distinct letters appearing in LIFE."
+        }
+      },
+      {
+        "math": {
+          "latex": "Y=\\{F,I,L,E\\}",
+          "fallback": "Y = {F, I, L, E}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Compare those members with Y; order does not matter in a set."
+        }
+      },
+      {
+        "math": {
+          "latex": "X=Y\\quad\\text{(equal)}",
+          "fallback": "X = Y; equal sets",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Both sets contain exactly the same four elements."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q3-iv",
+    "questionMath": {
+      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iv) G = {x : x is a prime number and 3 < x < 23} H = {x : x is a divisor of 18}"
+    },
+    "answerMath": {
+      "latex": "\\text{Equivalent sets}",
+      "fallback": "Equivalent sets",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "G=\\{5,7,11,13,17,19\\}",
+          "fallback": "G = {5, 7, 11, 13, 17, 19}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the primes strictly between 3 and 23."
+        }
+      },
+      {
+        "math": {
+          "latex": "H=\\{1,2,3,6,9,18\\}",
+          "fallback": "H = {1, 2, 3, 6, 9, 18}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the positive divisors of 18."
+        }
+      },
+      {
+        "math": {
+          "latex": "n(G)=n(H)=6\\quad\\text{(equivalent)}",
+          "fallback": "n(G) = n(H) = 6; equivalent sets",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Both sets contain six distinct members, but different values."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q4-i",
+    "questionMath": {
+      "en": [
+        "4. Identify the following sets as null set or singleton set.\n(i) ",
+        {
+          "latex": "A=\\{x:x\\in\\mathbb N,\\ 1<x<2\\}",
+          "fallback": "A = {x : x∈N, 1 < x < 2}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Null set}",
+      "fallback": "Null set",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "1<x<2,\\quad x\\in\\mathbb N",
+          "fallback": "1 < x < 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "There is no natural number strictly between consecutive integers 1 and 2."
+        }
+      },
+      {
+        "math": {
+          "latex": "A=\\varnothing",
+          "fallback": "A = ∅",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "So the membership condition has no solution."
+        }
+      },
+      {
+        "math": {
+          "latex": "A\\text{ is a null set}",
+          "fallback": "A: null set",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A set without elements is called the null or empty set."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q4-ii",
+    "questionMath": {
+      "en": "4. Identify the following sets as null set or singleton set.\n(ii) B = The set of all even natural numbers which are not divisible by 2"
+    },
+    "answerMath": {
+      "latex": "\\text{Null set}",
+      "fallback": "Null set",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{Even}\\ \\Rightarrow\\ \\text{divisible by }2",
+          "fallback": "even ⇒ divisible by 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Every even natural number is divisible by two by definition."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{No possible elements}",
+          "fallback": "No number satisfies both conditions",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The question requires an even number that is not divisible by two."
+        }
+      },
+      {
+        "math": {
+          "latex": "B=\\varnothing\\quad\\text{(null)}",
+          "fallback": "B = ∅; null set",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Thus B has no members."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q4-iii",
+    "questionMath": {
+      "en": [
+        "4. Identify the following sets as null set or singleton set.\n(iii) ",
+        {
+          "latex": "C=\\{0\\}",
+          "fallback": "C = {0}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Singleton set}",
+      "fallback": "Singleton set",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "C=\\{0\\}",
+          "fallback": "C = {0}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The curly brackets contain the number zero as one element."
+        }
+      },
+      {
+        "math": {
+          "latex": "n(C)=1",
+          "fallback": "n(C) = 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "This is not the empty set: it contains one element."
+        }
+      },
+      {
+        "math": {
+          "latex": "C\\text{ is a singleton set}",
+          "fallback": "C: singleton set",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A one-element set is a singleton."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q4-iv",
+    "questionMath": {
+      "en": "4. Identify the following sets as null set or singleton set.\n(iv) D = The set of all triangles having four sides."
+    },
+    "answerMath": {
+      "latex": "\\text{Null set}",
+      "fallback": "Null set",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{A triangle has exactly 3 sides}",
+          "fallback": "triangle: 3 sides",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "By definition, every triangle has exactly three sides."
+        }
+      },
+      {
+        "math": {
+          "latex": "D=\\varnothing",
+          "fallback": "D = ∅",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "No triangle has four sides."
+        }
+      },
+      {
+        "math": {
+          "latex": "D\\text{ is a null set}",
+          "fallback": "D: null set",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Therefore D is the null set."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q5-i",
+    "questionMath": {
+      "en": [
+        "5. State which pairs of sets are disjoint or overlapping?\n(i) ",
+        {
+          "latex": "\\begin{aligned}A&=\\{f,i,a,s\\}\\\\B&=\\{a,n,f,h,s\\}\\end{aligned}",
+          "fallback": "A = {f, i, a, s} and B = {a, n, f, h, s}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Overlapping sets}",
+      "fallback": "Overlapping",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}A&=\\{f,i,a,s\\}\\\\B&=\\{a,n,f,h,s\\}\\end{aligned}",
+          "fallback": "A = {f, i, a, s}; B = {a, n, f, h, s}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Find the letters appearing in both sets."
+        }
+      },
+      {
+        "math": {
+          "latex": "A\\cap B=\\{a,f,s\\}",
+          "fallback": "A∩B = {a, f, s}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Their common elements are a, f, and s."
+        }
+      },
+      {
+        "math": {
+          "latex": "A\\cap B\\ne\\varnothing\\quad\\text{(overlap)}",
+          "fallback": "A and B: overlapping",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The intersection is nonempty, so the sets overlap."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q5-ii",
+    "questionMath": {
+      "en": "5. State which pairs of sets are disjoint or overlapping?\n(ii) C = {x : x is a prime number, x > 2} and D = {x : x is an even prime number}"
+    },
+    "answerMath": {
+      "latex": "\\text{Disjoint sets}",
+      "fallback": "Disjoint",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "D=\\{2\\}",
+          "fallback": "D = {2}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The only even prime number is two."
+        }
+      },
+      {
+        "math": {
+          "latex": "2\\notin C",
+          "fallback": "2 ∉ C",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "C contains only prime numbers greater than 2, so it excludes 2."
+        }
+      },
+      {
+        "math": {
+          "latex": "C\\cap D=\\varnothing\\quad\\text{(disjoint)}",
+          "fallback": "C∩D = ∅; disjoint",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "There is no common element."
+        }
+      }
+    ]
   }
 ];
 const texts={
@@ -38961,6 +39419,194 @@ const texts={
       "fallback": "x−1"
     },
     " also lies below five."
+  ],
+  "Compare D with the given set C.": [
+    "Compare ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " with the given set ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    "."
+  ],
+  "Write out every whole number strictly between 1 and 5 before comparing. The number 5 appears in C but the strict inequality excludes it from D.": [
+    "Write out every whole number strictly between ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " and ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " before comparing. The number ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " appears in ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " but the strict inequality excludes it from ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    "."
+  ],
+  "Compare those members with Y; order does not matter in a set.": [
+    "Compare those members with ",
+    {
+      "latex": "Y",
+      "fallback": "Y"
+    },
+    "; order does not matter in a set."
+  ],
+  "In set notation, order does not matter. Both sets contain the same four distinct letters L, I, F and E, so they are equal.": [
+    "In set notation, order does not matter. Both sets contain the same four distinct letters ",
+    {
+      "latex": "L, I, F",
+      "fallback": "L, I, F"
+    },
+    " and ",
+    {
+      "latex": "E",
+      "fallback": "E"
+    },
+    ", so they are equal."
+  ],
+  "List the positive divisors of 18.": [
+    "List the positive divisors of ",
+    {
+      "latex": "18",
+      "fallback": "18"
+    },
+    "."
+  ],
+  "Count the primes in G and the positive divisors of 18 in H. Their members differ, but both counts are six, so the sets are equivalent.": [
+    "Count the primes in ",
+    {
+      "latex": "G",
+      "fallback": "G"
+    },
+    " and the positive divisors of ",
+    {
+      "latex": "18",
+      "fallback": "18"
+    },
+    " in ",
+    {
+      "latex": "H",
+      "fallback": "H"
+    },
+    ". Their members differ, but both counts are six, so the sets are equivalent."
+  ],
+  "There is no natural number between 1 and 2. Both endpoints are excluded by the strict signs, so the set has no elements.": [
+    "There is no natural number between ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " and ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ". Both endpoints are excluded by the strict signs, so the set has no elements."
+  ],
+  "Even numbers are defined as multiples of 2. Requiring an even number that is not divisible by 2 is impossible.": [
+    "Even numbers are defined as multiples of ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ". Requiring an even number that is not divisible by ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " is impossible."
+  ],
+  "The braces enclose a genuine element, zero. The empty set has no elements, but {0} has exactly one element.": [
+    "The braces enclose a genuine element, zero. The empty set has no elements, but ",
+    {
+      "latex": "\\left\\{0\\right\\}",
+      "fallback": "{0}"
+    },
+    " has exactly one element."
+  ],
+  "Their common elements are a, f, and s.": [
+    "Their common elements are ",
+    {
+      "latex": "a, f",
+      "fallback": "a, f"
+    },
+    ", and ",
+    {
+      "latex": "s",
+      "fallback": "s"
+    },
+    "."
+  ],
+  "To test for overlap, look for elements that belong to both sets. The letters a, f and s are in both; a nonempty intersection means overlapping.": [
+    "To test for overlap, look for elements that belong to both sets. The letters ",
+    {
+      "latex": "a, f",
+      "fallback": "a, f"
+    },
+    " and ",
+    {
+      "latex": "s",
+      "fallback": "s"
+    },
+    " are in both; a nonempty intersection means overlapping."
+  ],
+  "C contains only prime numbers greater than 2, so it excludes 2.": [
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " contains only prime numbers greater than ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ", so it excludes ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "."
+  ],
+  "The only even prime number is 2. Set C excludes 2 because it requires primes greater than 2, so the two sets cannot share an element.": [
+    "The only even prime number is ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ". Set ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " excludes ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " because it requires primes greater than ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ", so the two sets cannot share an element."
   ]
 };
 const diagramLabels={"A":{"latex":"A","fallback":"A"},"B":{"latex":"B","fallback":"B"},"C":{"latex":"C","fallback":"C"},"D":{"latex":"D","fallback":"D"},"E":{"latex":"E","fallback":"E"},"F":{"latex":"F","fallback":"F"},"O":{"latex":"O","fallback":"O"},"P":{"latex":"P","fallback":"P"},"Q":{"latex":"Q","fallback":"Q"},"a":{"latex":"a","fallback":"a"},"b":{"latex":"b","fallback":"b"},"x":{"latex":"x","fallback":"x"},"y":{"latex":"y","fallback":"y"},"θ":{"latex":"\\theta","fallback":"θ"},"φ":{"latex":"\\phi","fallback":"φ"},"α":{"latex":"\\alpha","fallback":"α"},"β":{"latex":"\\beta","fallback":"β"},"√13":{"latex":"\\sqrt{13}","fallback":"√13"},"√5":{"latex":"\\sqrt{5}","fallback":"√5"},"√(a² + b²)":{"latex":"\\sqrt{a^{2} + b^{2}}","fallback":"√(a² + b²)"}};
