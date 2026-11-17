@@ -1,4 +1,15 @@
 {
+  "g9-ch2-ex1-q1": {
+    "questionAnchors": [
+      {"source":"11/3","latex":"\\displaystyle \\frac{11}{3}"}
+    ],
+    "steps": {
+      "1": {
+        "source":"D: approximately 3.67",
+        "latex":"\\text{Arrow }D:\\quad \\frac{11}{3}\\approx 3.67"
+      }
+    }
+  },
   "g9-ch2-ex8-q4-i": {
     "questionAnchors": [
       {"source":"7,000,000,000","latex":"7{,}000{,}000{,}000"}
