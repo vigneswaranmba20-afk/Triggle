@@ -37,3 +37,4 @@ jobs:
             git commit -m "ci: rebuild Grade 9 maths and curriculum status for 10 reviewed parts"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
+# Re-run after source-backed Grade 9 math population gate update.
