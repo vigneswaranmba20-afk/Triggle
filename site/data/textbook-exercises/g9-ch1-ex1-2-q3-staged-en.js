@@ -101,10 +101,10 @@ const entries=[
     },
     "steps": [
       {
-        "en": "List the whole numbers strictly between 1 and 5.",
+        "en": "The inequalities are strict, so neither endpoint 1 nor endpoint 5 is included. List the whole numbers between them and count the members.",
         "eq": "D = {2, 3, 4}",
         "math": {
-          "latex": "D=\\{x\\in\\mathbb W:1<x<5\\}=\\{2,3,4\\}",
+          "latex": "D=\\{x\\in\\mathbb{W}:1<x<5\\}=\\{2,3,4\\},\\quad n(D)=3",
           "fallback": "D = {x in whole numbers: 1 < x < 5} = {2, 3, 4}; 1 and 5 are excluded; n(D) = 3",
           "display": true
         }
