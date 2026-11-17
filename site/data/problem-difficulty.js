@@ -4160,7 +4160,16 @@ const metadata={
     "c10-2-ex2-6-q3": {"grade":10,"level":"easy","basis":"Evaluate first and 28th terms from linear nth-term formula and sum the A.P.","review":"implementation-audit"},
     "c10-2-ex2-6-q4": {"grade":10,"level":"medium","basis":"Recover t_n = S_n - S_{n-1} from quadratic partial sum and prove constant difference","review":"implementation-audit"},
     "c10-2-ex2-6-q11": {"grade":10,"level":"difficult","basis":"Generalize n-term sum across m arithmetic progressions and sum over k = 1..m","review":"implementation-audit"},
-    "c10-2-ex2-6-q12": {"grade":10,"level":"medium","basis":"Sum 12 fractional algebraic terms with common denominator a + b in A.P.","review":"implementation-audit"}
+    "c10-2-ex2-6-q12": {"grade":10,"level":"medium","basis":"Sum 12 fractional algebraic terms with common denominator a + b in A.P.","review":"implementation-audit"},
+    "c10-2-ex2-9-q1-i": {"grade":10,"level":"easy","basis":"Sum the first 60 natural numbers using n(n + 1)/2","review":"implementation-audit"},
+    "c10-2-ex2-9-q1-ii": {"grade":10,"level":"easy","basis":"Factor out 3 and sum the first 32 natural numbers","review":"implementation-audit"},
+    "c10-2-ex2-9-q1-iii": {"grade":10,"level":"easy","basis":"Subtract the sum of 1..50 from the sum of 1..92","review":"implementation-audit"},
+    "c10-2-ex2-9-q1-iv": {"grade":10,"level":"easy","basis":"Recognise perfect squares 1^2..15^2 and apply n(n + 1)(2n + 1)/6","review":"implementation-audit"},
+    "c10-2-ex2-9-q1-v": {"grade":10,"level":"medium","basis":"Subtract the sum of squares 1^2..5^2 from the sum of squares 1^2..21^2","review":"implementation-audit"},
+    "c10-2-ex2-9-q1-vi": {"grade":10,"level":"medium","basis":"Subtract the sum of cubes 1^3..9^3 from the sum of cubes 1^3..20^3","review":"implementation-audit"},
+    "c10-2-ex2-9-q1-vii": {"grade":10,"level":"easy","basis":"Find the number of odd terms up to 71 and apply n^2","review":"implementation-audit"},
+    "c10-2-ex2-9-q7-i": {"grade":10,"level":"difficult","basis":"Expand the kth difference of cubes (2k)^3 - (2k - 1)^3 = 12k^2 - 6k + 1 and sum over k = 1..n","review":"implementation-audit"},
+    "c10-2-ex2-9-q7-ii": {"grade":10,"level":"medium","basis":"Evaluate the n-term special-series formula 4n^3 + 3n^2 at n = 8","review":"implementation-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."

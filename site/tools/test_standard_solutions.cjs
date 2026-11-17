@@ -43,7 +43,12 @@ vm.runInNewContext(read('data/textbook-exercises/g10-ch2-ex2-6-ap-sum-missing-en
 const ex26Records=ex26Context.window.TRIGGLE_CLASSES[10].items;
 const ex26Ids=ex26Records.map(r=>r.id);
 assert.equal(ex26Records.length,5,'Five source-reviewed Exercise 2.6 parts');
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...recoveryIds,...statisticsIds,...followupIds];
+const ex29Context={window:{TRIGGLE_CLASSES:{10:{items:[]}},TRIGGLE_CURRICULUM:{grades:[{grade:10,chapters:[{number:2,textbookQuestionIds:[]}]}]}}};
+vm.runInNewContext(read('data/textbook-exercises/g10-ch2-ex2-9-special-series-missing-en.js'),ex29Context,{filename:'g10-ch2-ex2-9-special-series-missing-en.js'});
+const ex29Records=ex29Context.window.TRIGGLE_CLASSES[10].items;
+const ex29Ids=ex29Records.map(r=>r.id);
+assert.equal(ex29Records.length,9,'Nine source-reviewed Exercise 2.9 parts');
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -137,7 +142,7 @@ for(const [grade,data] of Object.entries(classes)){
        assert.equal(item.edition,'2025','TRACE source edition '+item.id);
        assert.equal(item.translationReview,'pending','Do not invent Tamil teacher approval '+item.id);
      }else{
-       const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id)||ex26Records.find(r=>r.id===item.id);
+       const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id)||ex26Records.find(r=>r.id===item.id)||ex29Records.find(r=>r.id===item.id);
        assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'New content exactly matches source-verified batch '+item.id);
      }
    }
@@ -164,7 +169,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,754);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,763);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');
