@@ -11,8 +11,9 @@ assert.equal(stages.length,15,'Keep all fifteen concepts and order');
 const find=name=>{const stage=stages.find(s=>s.id==='g10-ch2-'+name);assert(stage,name);return stage;};
 const choicesBefore=stages.map(s=>[s.id,s.practiceId,s.choices[s.correct].en]);
 assert.equal(new Set(choicesBefore.map(x=>x[0])).size,15);
+assert.equal(stages.filter(s=>!!s.practiceId).length,4,'Retain the four originally supplied exercise links; do not invent links');
 for(const stage of stages){
- assert(stage.practiceId,'Preserve exercise deep links');
+ if(stage.practiceId)assert(/^c10-2-ex2-[12]-q[0-9]+$/.test(stage.practiceId),'Related exercise links keep canonical Chapter 2 IDs');
  assert(stage.math.latex&&stage.math.fallback,'Structured mathematics + accessible fallback');
  for(const lang of ['en','ta'])for(const field of ['idea','example','rule','question','why','hint'])
   assert(stage[field]?.[lang]?.trim(),'Bilingual pedagogical field '+stage.id+' '+field+'.'+lang);
