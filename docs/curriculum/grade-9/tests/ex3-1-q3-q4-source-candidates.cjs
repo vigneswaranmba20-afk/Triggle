@@ -48,6 +48,16 @@ for(const row of m.rows.slice(5)){
  assert.equal(row.steps[2].equation,row.answer.split('ascending: ')[1],'Ascending accessible answer disagrees: '+row.id);
  assert(row.steps[2].mathLatex!==row.answerMathLatex,'Both mathematical orders required: '+row.id);
 }
+// Ensure the visible ascending answers exactly match the audited worked mathematics,
+// not merely an unstructured English string that could drift independently.
+const ascending=[
+ '-9+x+6x^2+\\sqrt7\\,x^3',
+ 'x+\\sqrt2\\,x^2-5x^3-\\frac72x^4',
+ '-1+4x-\\frac65x^2+7x^3',
+ '-11-\\frac73y+y^2+\\sqrt5\\,y^3+9y^4'
+];
+assert.deepEqual(m.rows.slice(5).map(x=>x.steps[2].mathLatex),ascending,'Ascending math must match source-audited standard order');
+assert(m.rows[1].steps.at(-1).mathLatex.includes('x\\\\ne0') || m.rows[1].steps.at(-1).mathLatex.includes('x\\ne0'),'Q3(ii) displayed domain caveat required');
 assert.equal(m.tamilReview,'pending');assert.equal(m.teacherReview,'pending');
 assert.equal(renders,45);assert.equal(steps,27);
 console.log('PASS G9 Algebra Ex3.1 Q3–Q4: nine original-image-audited parts, official degree answers [7,4,5,6,4], standard-order results, domain caveat, 27 steps, 45 accessible KaTeX renders, no premature student publication.');
