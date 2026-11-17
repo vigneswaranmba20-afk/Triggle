@@ -103,3 +103,17 @@ for(let i=0;i<degreeWitnesses.length;i++){
  assert.equal(Number(row.answerMathLatex),computedDegree,'Authored degree mismatch: '+row.id);
 }
 console.log('PASS five independent Q3 coefficient/degree witnesses, including radical coefficients and restricted rational simplification.');
+
+
+// Independent Q4 source-expression locks. A change to the original textbook
+// transcription must be re-audited rather than silently passing a test that
+// checks only reordered answers and their self-consistency.
+const q4SourceWitnesses=[
+ 'x-9+\\sqrt7\\,x^3+6x^2',
+ '\\sqrt2\\,x^2-\\frac72x^4+x-5x^3',
+ '7x^3-\\frac65x^2+4x-1',
+ 'y^2+\\sqrt5\\,y^3-11-\\frac73y+9y^4'
+];
+assert.deepEqual(m.rows.slice(5).map(row=>row.sourceMathLatex),q4SourceWitnesses,
+ 'Q4 source transcription drift: reopen original 2025 textbook page before changing');
+console.log('PASS four independent Q4 source-expression witnesses.');
