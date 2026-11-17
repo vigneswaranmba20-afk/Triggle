@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 2,
+  "exercise": "2.8",
+  "edition": "TN SCERT 2025 revised English",
+  "textbook": "Class 10 Mathematics, Chapter 2 Numbers and Sequences",
+  "originalPdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+  "sourcePages": {
+    "printed": [
+      76
+    ],
+    "pdf": [
+      82
+    ],
+    "answerAppendixPrinted": [
+      337
+    ],
+    "answerAppendixPdf": [
+      343
+    ]
+  },
+  "pageImageSha256": {
+    "pdf-2.png": "0a6566f3fa3e55590e333bee2b09d81ce434336870980369e0736dca06e6a3cd",
+    "pdf-82.png": "e2a30a68be4128930018da6b7adbcc8dbba63c9a84ae47354832e1c8ff5a89d8",
+    "pdf-343.png": "27a01e087be00ec90491ad1fec38bcce26e4afc7e369ddbd6e43b62b0dc45fbb"
+  },
+  "reviewMethod": "Visually checked rendered 200-DPI page images of printed p. 76 (PDF p. 82) and Answer Appendix printed p. 337 (PDF p. 343) from the connected 2025 English textbook against the 5 existing Exercise 2.8 student records and 7 independently solved missing parts (Q1(i), Q1(ii), Q6(i), Q6(ii), Q8, Q9, Q10).",
+  "sourceLanguages": {
+    "english": "source-image checked",
+    "tamil": "pending, not claimed"
+  },
+  "teacherReview": "not performed",
+  "chapterCompletion": false,
+  "numberedQuestions": 10,
+  "uniqueSubpartTasks": 13,
+  "existingStudentRecords": 5,
+  "newStudentRecords": 7,
+  "totalStudentRecords": 12,
+  "tasks": [
+    {
+      "label": "Q1(i)",
+      "id": "c10-2-ex2-8-q1-i",
+      "sourcePdfPage": 82,
+      "state": "new source-image-checked student record"
+    },
+    {
+      "label": "Q1(ii)",
+      "id": "c10-2-ex2-8-q1-ii",
+      "sourcePdfPage": 82,
+      "state": "new source-image-checked student record"
+    },
+    {
+      "label": "Q2",
+      "id": "c10-2-ex2-8-q2",
+      "sourcePdfPage": 82,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q3",
+      "id": "c10-2-ex2-8-q3",
+      "sourcePdfPage": 82,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q4(i)",
+      "id": "c10-2-ex2-8-q4",
+      "sourcePdfPage": 82,
+      "state": "existing bundled student record"
+    },
+    {
+      "label": "Q4(ii)",
+      "id": "c10-2-ex2-8-q4",
+      "sourcePdfPage": 82,
+      "state": "existing bundled student record"
+    },
+    {
+      "label": "Q5",
+      "id": "c10-2-ex2-8-q5",
+      "sourcePdfPage": 82,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q6(i)",
+      "id": "c10-2-ex2-8-q6-i",
+      "sourcePdfPage": 82,
+      "state": "new source-image-checked student record"
+    },
+    {
+      "label": "Q6(ii)",
+      "id": "c10-2-ex2-8-q6-ii",
+      "sourcePdfPage": 82,
+      "state": "new source-image-checked student record"
+    },
+    {
+      "label": "Q7",
+      "id": "c10-2-ex2-8-q7",
+      "sourcePdfPage": 82,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q8",
+      "id": "c10-2-ex2-8-q8",
+      "sourcePdfPage": 82,
+      "state": "new source-image-checked student record"
+    },
+    {
+      "label": "Q9",
+      "id": "c10-2-ex2-8-q9",
+      "sourcePdfPage": 82,
+      "state": "new source-image-checked student record"
+    },
+    {
+      "label": "Q10",
+      "id": "c10-2-ex2-8-q10",
+      "sourcePdfPage": 82,
+      "state": "new source-image-checked student record"
+    }
+  ]
+}
