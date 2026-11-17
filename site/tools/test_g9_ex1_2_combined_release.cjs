@@ -28,6 +28,21 @@ for(const id of ids){
  assert(ctx.window.TriggleDifficulty.get(q)?.grade===9,'Difficulty metadata '+id);
 }
 assert.equal(new Set(items.map(x=>x.id)).size,items.length,'No duplicate Grade 9 IDs');
+const app=read('site/assets/app.js');
+assert(app.includes("(grade===9&&String(chapter?.number)==='1')"),'Student navigation must sort Grade 9 Chapter 1 textbook batches');
+const candidateItems=items.filter(q=>ids.includes(q.id));
+const roman={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
+const byQuestion=q=>{
+ const match=q.id.match(/-q(\d+)(?:-([ivx]+))?$/);
+ return [match?Number(match[1]):Number.MAX_SAFE_INTEGER,match?.[2]?roman[match[2]]||99:0];
+};
+const textbookOrder=[...candidateItems].sort((a,b)=>{
+ const ex=String(a.exercise||'').localeCompare(String(b.exercise||''),undefined,{numeric:true});
+ if(ex)return ex;
+ const x=byQuestion(a),y=byQuestion(b);return x[0]-y[0]||x[1]-y[1];
+}).map(q=>q.id);
+assert.deepEqual(textbookOrder,ids,'Grade 9 Ex1.2 Next/Previous order matches source Q1(i)–Q10(iii)');
+
 const {buildPlan}=require('./bulk/trace_g9_g10_batch.cjs');
 const plan=buildPlan();
 assert.equal(plan.grade9.registeredCandidateIds,34);
