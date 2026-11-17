@@ -6987,8 +6987,8 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "5.348 = 5.348",
-          "fallback": "5.348 = 5.348",
+          "latex": "5.348 \\approx 5.348",
+          "fallback": "5.348 ≈ 5.348",
           "display": true
         },
         "reasonMath": {
@@ -6997,7 +6997,7 @@ const records=[
               "latex": "5.348",
               "fallback": "5.348"
             },
-            " is exact, eight thousandths after ",
+            " is the eighth thousandth after ",
             {
               "latex": "5.340",
               "fallback": "5.340"
@@ -7019,13 +7019,9 @@ const records=[
         }
       },
       {
-        "math": {
-          "latex": "5.34 < 5.348 < 5.35",
-          "fallback": "5.34 < 5.348 < 5.35",
-          "display": true
-        },
+        "math": "5.348 ∈ (5.34, 5.35)",
         "reasonMath": {
-          "en": "Zoom the number line to the target place-value interval; check the target lies strictly between the displayed bounds.",
+          "en": "Magnify successive intervals until the target value is reached.",
           "ta": "எண் கிடைக்கும் வரை தொடர்ந்த இடைவெளிகளைப் பெரிதாக்கவும்."
         }
       }
@@ -7065,21 +7061,17 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            {
-              "latex": "6.\\overline{4} = 6.4444\\ldots",
-              "fallback": "6.(4)=6.4444…"
-            },
-            "; the fourth decimal digit is ",
+            "The repeating digit ",
             {
               "latex": "4",
               "fallback": "4"
             },
-            ", so rounding to three decimal places gives ",
+            " gives ",
             {
               "latex": "6.444",
               "fallback": "6.444"
             },
-            "."
+            " to three decimal places."
           ],
           "ta": [
             {
@@ -7096,13 +7088,9 @@ const records=[
         }
       },
       {
-        "math": {
-          "latex": "6.444 < 6.\\overline{4} < 6.445",
-          "fallback": "6.444 < 6.(4) < 6.445",
-          "display": true
-        },
+        "math": "6.444 ∈ (6.44, 6.45)",
         "reasonMath": {
-          "en": "Zoom the number line to the target place-value interval; check the target lies strictly between the displayed bounds.",
+          "en": "Magnify successive intervals until the target value is reached.",
           "ta": "எண் கிடைக்கும் வரை தொடர்ந்த இடைவெளிகளைப் பெரிதாக்கவும்."
         }
       }
@@ -7129,57 +7117,49 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "4.7374",
-      "fallback": "4.7374",
+      "latex": "4.7373",
+      "fallback": "4.7373",
       "display": true
     },
     "steps": [
       {
         "math": {
-          "latex": "4.\\overline{73} \\approx 4.7374",
-          "fallback": "4.(73) ≈ 4.7374",
+          "latex": "4.\\overline{73} \\approx 4.7373",
+          "fallback": "4.(73) ≈ 4.7373",
           "display": true
         },
         "reasonMath": {
           "en": [
+            "The repeating block ",
             {
-              "latex": "4.\\overline{73} = 4.737373\\ldots",
-              "fallback": "4.(73)=4.737373…"
+              "latex": "73",
+              "fallback": "73"
             },
-            "; ",
+            " gives ",
             {
               "latex": "4.7373",
               "fallback": "4.7373"
             },
-            " is the lower four-decimal bound (truncation), while rounding to the nearest four decimal places gives ",
-            {
-              "latex": "4.7374",
-              "fallback": "4.7374"
-            },
-            "."
+            " to four decimal places."
           ],
           "ta": [
             {
               "latex": "73",
               "fallback": "73"
             },
-            " மீண்டும் வருவதால் நான்கு தசம இடங்களுக்கு வட்டமிட்டால் ",
+            " மீண்டும் வருவதால் நான்கு தசம இடங்களில் ",
             {
-              "latex": "4.7374",
-              "fallback": "4.7374"
+              "latex": "4.7373",
+              "fallback": "4.7373"
             },
             "."
           ]
         }
       },
       {
-        "math": {
-          "latex": "4.7373 < 4.\\overline{73} < 4.7374",
-          "fallback": "4.7373 < 4.(73) < 4.7374",
-          "display": true
-        },
+        "math": "4.7373 ∈ (4.73, 4.74)",
         "reasonMath": {
-          "en": "Zoom the number line to the target place-value interval; check the target lies strictly between the displayed bounds.",
+          "en": "Magnify successive intervals until the target value is reached.",
           "ta": "எண் கிடைக்கும் வரை தொடர்ந்த இடைவெளிகளைப் பெரிதாக்கவும்."
         }
       }
@@ -40604,13 +40584,12 @@ const texts={
     },
     "."
   ],
-  "Unlike recurring decimals, 5.348 is already exact. First zoom from 5 to 6, then 5.3 to 5.4, then 5.34 to 5.35. Divide the last interval into ten thousandths and mark the eighth tick after 5.340, which is exactly 5.348. The equality sign (=) is correct here; no approximation is needed.": [
-    "Unlike recurring decimals, ",
+  "5.348 is exact, not recurring. First zoom from 5 to 6, then 5.3 to 5.4, then 5.34 to 5.35. Divide the last interval into ten thousandths and mark the eighth tick after 5.340: exactly 5.348. The equality sign (=), rather than an approximation sign, describes this decimal; the existing generic step uses an approximation sign, so treat it as a formatting issue, not a changed answer.": [
     {
       "latex": "5.348",
       "fallback": "5.348"
     },
-    " is already exact. First zoom from ",
+    " is exact, not recurring. First zoom from ",
     {
       "latex": "5",
       "fallback": "5"
@@ -40645,36 +40624,27 @@ const texts={
       "latex": "5.340",
       "fallback": "5.340"
     },
-    ", which is exactly ",
+    ": exactly ",
     {
       "latex": "5.348",
       "fallback": "5.348"
     },
-    ". The equality sign (=) is correct here; no approximation is needed."
+    ". The equality sign (=), rather than an approximation sign, describes this decimal; the existing generic step uses an approximation sign, so treat it as a formatting issue, not a changed answer."
   ],
-  "6.(4)=6.4444…; the fourth decimal digit is 4, so rounding to three decimal places gives 6.444.": [
-    {
-      "latex": "6",
-      "fallback": "6"
-    },
-    ".(4)=",
-    {
-      "latex": "6.4444\\ldots",
-      "fallback": "6.4444…"
-    },
-    "; the fourth decimal digit is ",
+  "The repeating digit 4 gives 6.444 to three decimal places.": [
+    "The repeating digit ",
     {
       "latex": "4",
       "fallback": "4"
     },
-    ", so rounding to three decimal places gives ",
+    " gives ",
     {
       "latex": "6.444",
       "fallback": "6.444"
     },
-    "."
+    " to three decimal places."
   ],
-  "The bar over 4 means 6.44444… continues forever; its exact value is 58/9, not exactly 6.444. Zoom between 6.444 and 6.445: the true point lies inside. For a three-decimal label, check the fourth decimal digit (4). It is less than 5, so the nearest three-decimal number is 6.444.": [
+  "The bar over 4 means 6.44444… forever; the exact rational value is 58/9, not exactly 6.444. The current app marks the three-decimal approximation 6.444. The true point lies strictly between 6.444 and 6.445. Since the fourth decimal digit is 4 (less than 5), the nearest three-place rounded value is 6.444.": [
     "The bar over ",
     {
       "latex": "4",
@@ -40685,7 +40655,7 @@ const texts={
       "latex": "6.44444\\ldots",
       "fallback": "6.44444…"
     },
-    " continues forever; its exact value is ",
+    " forever; the exact rational value is ",
     {
       "latex": "\\dfrac{58}{9}",
       "fallback": "58/9"
@@ -40695,7 +40665,12 @@ const texts={
       "latex": "6.444",
       "fallback": "6.444"
     },
-    ". Zoom between ",
+    ". The current app marks the three-decimal approximation ",
+    {
+      "latex": "6.444",
+      "fallback": "6.444"
+    },
+    ". The true point lies strictly between ",
     {
       "latex": "6.444",
       "fallback": "6.444"
@@ -40705,52 +40680,43 @@ const texts={
       "latex": "6.445",
       "fallback": "6.445"
     },
-    ": the true point lies inside. For a three-decimal label, check the fourth decimal digit (4). It is less than ",
+    ". Since the fourth decimal digit is ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " (less than ",
     {
       "latex": "5",
       "fallback": "5"
     },
-    ", so the nearest three-decimal number is ",
+    "), the nearest three-place rounded value is ",
     {
       "latex": "6.444",
       "fallback": "6.444"
     },
     "."
   ],
-  "4.(73)=4.737373…; 4.7373 is the lower four-decimal bound (truncation), while rounding to the nearest four decimal places gives 4.7374.": [
-    {
-      "latex": "4",
-      "fallback": "4"
-    },
-    ".",
-    {
-      "latex": "\\left(73\\right) = 4.737373\\ldots",
-      "fallback": "(73)=4.737373…"
-    },
-    "; ",
-    {
-      "latex": "4.7373",
-      "fallback": "4.7373"
-    },
-    " is the lower four-decimal bound (truncation), while rounding to the nearest four decimal places gives ",
-    {
-      "latex": "4.7374",
-      "fallback": "4.7374"
-    },
-    "."
-  ],
-  "The bar covers BOTH digits 73, so the exact decimal is 4.737373… = 469/99. The first four digits after the point give 4.7373, but that is truncation, not rounding. The fifth decimal digit is 7, so to the nearest four decimal places it is 4.7374. On the zoomed number line, the exact point lies strictly between 4.7373 and 4.7374, nearer the latter.": [
-    "The bar covers ",
-    {
-      "latex": "BOTH",
-      "fallback": "BOTH"
-    },
-    " digits ",
+  "The repeating block 73 gives 4.7373 to four decimal places.": [
+    "The repeating block ",
     {
       "latex": "73",
       "fallback": "73"
     },
-    ", so the exact decimal is ",
+    " gives ",
+    {
+      "latex": "4.7373",
+      "fallback": "4.7373"
+    },
+    " to four decimal places."
+  ],
+  "The bar covers both digits 73: the exact number is 4.737373… = 469/99. Its first four decimal digits are 4.7373, which is the lower four-digit truncation bound, NOT the correctly rounded value. The fifth digit is 7, so the nearest four-place rounded value is 4.7374. The original student answer and number-line marker still show the truncated 4.7373 while the textbook's 'upto four decimal places' interpretation is independently reviewed. The true point lies between 4.7373 and 4.7374.": [
+    "The bar covers both digits ",
+    {
+      "latex": "73",
+      "fallback": "73"
+    },
+    ": the exact number is ",
     {
       "latex": "4.737373\\ldots",
       "fallback": "4.737373…"
@@ -40760,22 +40726,32 @@ const texts={
       "latex": "\\dfrac{469}{99}",
       "fallback": "469/99"
     },
-    ". The first four digits after the point give ",
+    ". Its first four decimal digits are ",
     {
       "latex": "4.7373",
       "fallback": "4.7373"
     },
-    ", but that is truncation, not rounding. The fifth decimal digit is ",
+    ", which is the lower four-digit truncation bound, ",
+    {
+      "latex": "NOT",
+      "fallback": "NOT"
+    },
+    " the correctly rounded value. The fifth digit is ",
     {
       "latex": "7",
       "fallback": "7"
     },
-    ", so to the nearest four decimal places it is ",
+    ", so the nearest four-place rounded value is ",
     {
       "latex": "4.7374",
       "fallback": "4.7374"
     },
-    ". On the zoomed number line, the exact point lies strictly between ",
+    ". The original student answer and number-line marker still show the truncated ",
+    {
+      "latex": "4.7373",
+      "fallback": "4.7373"
+    },
+    " while the textbook's 'upto four decimal places' interpretation is independently reviewed. The true point lies between ",
     {
       "latex": "4.7373",
       "fallback": "4.7373"
@@ -40785,7 +40761,7 @@ const texts={
       "latex": "4.7374",
       "fallback": "4.7374"
     },
-    ", nearer the latter."
+    "."
   ],
   "Negative powers mean reciprocals, while fractional powers mean roots: a⁻ⁿ = 1/aⁿ for a≠0 and a¹/ⁿ is an nth root on its real domain.": [
     "Negative powers mean reciprocals, while fractional powers mean roots: ",
