@@ -31169,6 +31169,986 @@ const records=[
     ]
   },
   {
+    "id": "g9-ch3-ex3.1-q3-i",
+    "questionMath": {
+      "en": [
+        "3. Find the degree of the following polynomials.\n(i) ",
+        {
+          "latex": "1-\\sqrt2\\,y^2+y^7",
+          "fallback": "1 − √2 y² + y⁷"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "7",
+      "fallback": "Degree 7",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "0,\\ 2,\\ 7",
+          "fallback": "powers: 0, 2, 7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The degree of a polynomial is the largest exponent of its variable with a nonzero coefficient."
+        }
+      },
+      {
+        "math": {
+          "latex": "-\\sqrt2\\,y^2",
+          "fallback": "−√2 y² has power 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The square-root two is a numerical coefficient and does not change the exponent on y."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=7",
+          "fallback": "deg = 7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The highest power present is y⁷, so the degree is seven."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q3-ii",
+    "questionMath": {
+      "en": [
+        "3. Find the degree of the following polynomials.\n(ii) ",
+        {
+          "latex": "\\frac{x^3-x^4+6x^6}{x^2}",
+          "fallback": "(x³ − x⁴ + 6x⁶)/x²"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "4",
+      "fallback": "Degree 4 (after simplifying for x ≠ 0)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\frac{x^3}{x^2}-\\frac{x^4}{x^2}+\\frac{6x^6}{x^2}",
+          "fallback": "x³/x² − x⁴/x² + 6x⁶/x²",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Divide each term in the numerator by x squared; this calculation requires x to be nonzero."
+        }
+      },
+      {
+        "math": {
+          "latex": "x-x^2+6x^4",
+          "fallback": "x − x² + 6x⁴",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Subtract exponents on the same base to get the simplified polynomial expression."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=4,\\quad x\\ne0",
+          "fallback": "degree = 4; x ≠ 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The largest exponent in the simplified polynomial is four. The original fractional expression is undefined at x = 0."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q3-iii",
+    "questionMath": {
+      "en": [
+        "3. Find the degree of the following polynomials.\n(iii) ",
+        {
+          "latex": "x^3(x^2+x)",
+          "fallback": "x³(x² + x)"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "5",
+      "fallback": "Degree 5",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^3\\cdot x^2+x^3\\cdot x",
+          "fallback": "x³·x² + x³·x",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Distribute x cubed across both terms inside the bracket."
+        }
+      },
+      {
+        "math": {
+          "latex": "x^5+x^4",
+          "fallback": "x⁵ + x⁴",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "When multiplying the same variable, add exponents."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=5",
+          "fallback": "degree = 5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The highest exponent is five, so this is a fifth-degree polynomial."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q3-iv",
+    "questionMath": {
+      "en": [
+        "3. Find the degree of the following polynomials.\n(iv) ",
+        {
+          "latex": "3x^4+9x^2+27x^6",
+          "fallback": "3x⁴ + 9x² + 27x⁶"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "6",
+      "fallback": "Degree 6",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "4,\\ 2,\\ 6",
+          "fallback": "powers: 4, 2, 6",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A polynomial's degree comes from the greatest exponent after collecting any like terms."
+        }
+      },
+      {
+        "math": {
+          "latex": "27x^6",
+          "fallback": "27x⁶ has a nonzero coefficient",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The coefficients 3, 9, and 27 are all nonzero, so none of these powers disappears."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=6",
+          "fallback": "degree = 6",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The greatest exponent is six, so the degree is six."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q3-v",
+    "questionMath": {
+      "en": [
+        "3. Find the degree of the following polynomials.\n(v) ",
+        {
+          "latex": "2\\sqrt5\\,p^4-\\frac{8p^3}{\\sqrt3}+\\frac{2p^2}{7}",
+          "fallback": "2√5 p⁴ − (8p³)/√3 + (2p²)/7"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "4",
+      "fallback": "Degree 4",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2\\sqrt5\\,p^4",
+          "fallback": "coefficient of p⁴ = 2√5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The radicals and denominators are numbers only; they are coefficients, not powers of the variable p."
+        }
+      },
+      {
+        "math": {
+          "latex": "4,\\ 3,\\ 2",
+          "fallback": "powers: 4, 3, 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Read the variable exponents from the three nonzero terms."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=4",
+          "fallback": "degree = 4",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The largest exponent is four, therefore the polynomial has degree four."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q4-i",
+    "questionMath": {
+      "en": [
+        "4. Rewrite the following polynomial in standard form.\n(i) ",
+        {
+          "latex": "x-9+\\sqrt7\\,x^3+6x^2",
+          "fallback": "x − 9 + √7 x³ + 6x²"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\sqrt7\\,x^3+6x^2+x-9",
+      "fallback": "Descending: √7 x³ + 6x² + x − 9; ascending: −9 + x + 6x² + √7 x³",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "3,\\ 2,\\ 1,\\ 0",
+          "fallback": "powers: 3, 2, 1, 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Standard form lists polynomial terms according to their powers, most commonly in descending order."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\sqrt7\\,x^3+6x^2+x-9",
+          "fallback": "√7 x³ + 6x² + x − 9",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Place the x-cubed term first, followed by x-squared, x, and the constant; keep each coefficient and sign."
+        }
+      },
+      {
+        "math": {
+          "latex": "-9+x+6x^2+\\sqrt7\\,x^3",
+          "fallback": "−9 + x + 6x² + √7 x³",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The textbook answer key also lists the same terms in ascending order, from constant to highest power."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q4-ii",
+    "questionMath": {
+      "en": [
+        "4. Rewrite the following polynomial in standard form.\n(ii) ",
+        {
+          "latex": "\\sqrt2\\,x^2-\\frac72x^4+x-5x^3",
+          "fallback": "√2 x² − (7/2)x⁴ + x − 5x³"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "-\\frac72x^4-5x^3+\\sqrt2\\,x^2+x",
+      "fallback": "Descending: −(7/2)x⁴ − 5x³ + √2 x² + x; ascending: x + √2 x² − 5x³ − (7/2)x⁴",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "4,\\ 3,\\ 2,\\ 1",
+          "fallback": "powers: 4, 3, 2, 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the powers present in the original polynomial: four, three, two, and one."
+        }
+      },
+      {
+        "math": {
+          "latex": "-\\frac72x^4-5x^3+\\sqrt2\\,x^2+x",
+          "fallback": "−(7/2)x⁴ − 5x³ + √2 x² + x",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Keep each coefficient, including its minus sign, while arranging from greatest power to least."
+        }
+      },
+      {
+        "math": {
+          "latex": "x+\\sqrt2\\,x^2-5x^3-\\frac72x^4",
+          "fallback": "x + √2 x² − 5x³ − (7/2)x⁴",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Reverse the sequence to write ascending order; no coefficients or exponents change."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q4-iii",
+    "questionMath": {
+      "en": [
+        "4. Rewrite the following polynomial in standard form.\n(iii) ",
+        {
+          "latex": "7x^3-\\frac65x^2+4x-1",
+          "fallback": "7x³ − (6/5)x² + 4x − 1"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "7x^3-\\frac65x^2+4x-1",
+      "fallback": "Descending: 7x³ − (6/5)x² + 4x − 1; ascending: −1 + 4x − (6/5)x² + 7x³",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "3,\\ 2,\\ 1,\\ 0",
+          "fallback": "powers: 3, 2, 1, 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The original polynomial already lists powers three, two, one, and zero in descending order."
+        }
+      },
+      {
+        "math": {
+          "latex": "7x^3-\\frac65x^2+4x-1",
+          "fallback": "7x³ − (6/5)x² + 4x − 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "So its descending standard form is unchanged; preserve the negative fraction and constant."
+        }
+      },
+      {
+        "math": {
+          "latex": "-1+4x-\\frac65x^2+7x^3",
+          "fallback": "−1 + 4x − (6/5)x² + 7x³",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "For ascending order, write the constant first and finish with the x-cubed term."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q4-iv",
+    "questionMath": {
+      "en": [
+        "4. Rewrite the following polynomial in standard form.\n(iv) ",
+        {
+          "latex": "y^2+\\sqrt5\\,y^3-11-\\frac73y+9y^4",
+          "fallback": "y² + √5 y³ − 11 − (7/3)y + 9y⁴"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "9y^4+\\sqrt5\\,y^3+y^2-\\frac73y-11",
+      "fallback": "Descending: 9y⁴ + √5 y³ + y² − (7/3)y − 11; ascending: −11 − (7/3)y + y² + √5 y³ + 9y⁴",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "4,\\ 3,\\ 2,\\ 1,\\ 0",
+          "fallback": "powers: 4, 3, 2, 1, 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Identify all powers of y: four, three, two, one, and zero for the constant."
+        }
+      },
+      {
+        "math": {
+          "latex": "9y^4+\\sqrt5\\,y^3+y^2-\\frac73y-11",
+          "fallback": "9y⁴ + √5 y³ + y² − (7/3)y − 11",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Place the highest-degree term first; retain the minus sign in front of the y term and the constant."
+        }
+      },
+      {
+        "math": {
+          "latex": "-11-\\frac73y+y^2+\\sqrt5\\,y^3+9y^4",
+          "fallback": "−11 − (7/3)y + y² + √5 y³ + 9y⁴",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The official appendix also gives the ascending version, beginning with the constant −11."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q5-i",
+    "questionMath": {
+      "en": [
+        "5. Add the following polynomials and find the degree of the resultant polynomial.\n(i) ",
+        {
+          "latex": "p(x)=6x^2-7x+2,\\quad q(x)=6x^3-7x+15",
+          "fallback": "p(x) = 6x² − 7x + 2; q(x) = 6x³ − 7x + 15"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "6x^3+6x^2-14x+17;\\quad \\deg=3",
+      "fallback": "6x³ + 6x² − 14x + 17; degree 3",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(x)+q(x)=6x^3+6x^2+(-7x-7x)+(2+15)",
+          "fallback": "p(x) + q(x) = 6x³ + 6x² + (−7x − 7x) + (2 + 15)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Write the sum p(x) + q(x) and group like powers of x in descending order from x³ down to the constant term."
+        }
+      },
+      {
+        "math": {
+          "latex": "p(x)+q(x)=6x^3+6x^2-14x+17",
+          "fallback": "p(x) + q(x) = 6x³ + 6x² − 14x + 17",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Add the coefficients of the like terms: −7 − 7 = −14 for x, and 2 + 15 = 17 for the constant."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=3",
+          "fallback": "degree = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The highest power of x with a nonzero coefficient in the resultant polynomial is x³, so its degree is 3."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q5-ii",
+    "questionMath": {
+      "en": [
+        "5. Add the following polynomials and find the degree of the resultant polynomial.\n(ii) ",
+        {
+          "latex": "h(x)=7x^3-6x+1,\\quad f(x)=7x^2+17x-9",
+          "fallback": "h(x) = 7x³ − 6x + 1; f(x) = 7x² + 17x − 9"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "7x^3+7x^2+11x-8;\\quad \\deg=3",
+      "fallback": "7x³ + 7x² + 11x − 8; degree 3",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "h(x)+f(x)=7x^3+7x^2+(-6x+17x)+(1-9)",
+          "fallback": "h(x) + f(x) = 7x³ + 7x² + (−6x + 17x) + (1 − 9)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Write the sum h(x) + f(x) and align like powers of x from highest to lowest."
+        }
+      },
+      {
+        "math": {
+          "latex": "h(x)+f(x)=7x^3+7x^2+11x-8",
+          "fallback": "h(x) + f(x) = 7x³ + 7x² + 11x − 8",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Combine the coefficients of like powers: −6 + 17 = 11 on x, and 1 − 9 = −8 for the constant term."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=3",
+          "fallback": "degree = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The largest exponent of x in the resultant polynomial is 3, so the degree of the sum is 3."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q5-iii",
+    "questionMath": {
+      "en": [
+        "5. Add the following polynomials and find the degree of the resultant polynomial.\n(iii) ",
+        {
+          "latex": "f(x)=16x^4-5x^2+9,\\quad g(x)=-6x^3+7x-15",
+          "fallback": "f(x) = 16x⁴ − 5x² + 9; g(x) = −6x³ + 7x − 15"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "16x^4-6x^3-5x^2+7x-6;\\quad \\deg=4",
+      "fallback": "16x⁴ − 6x³ − 5x² + 7x − 6; degree 4",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "f(x)+g(x)=16x^4-6x^3-5x^2+7x+(9-15)",
+          "fallback": "f(x) + g(x) = 16x⁴ − 6x³ − 5x² + 7x + (9 − 15)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Write the sum f(x) + g(x) in descending powers of x and group the two constant terms together."
+        }
+      },
+      {
+        "math": {
+          "latex": "f(x)+g(x)=16x^4-6x^3-5x^2+7x-6",
+          "fallback": "f(x) + g(x) = 16x⁴ − 6x³ − 5x² + 7x − 6",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Simplify the constant terms 9 − 15 = −6; all variable powers 4, 3, 2, and 1 have distinct exponents."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=4",
+          "fallback": "degree = 4",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The highest exponent with a nonzero coefficient is 4 on 16x⁴, so the resultant polynomial has degree 4."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q6-i",
+    "questionMath": {
+      "en": [
+        "6. Subtract the second polynomial from the first polynomial and find the degree of the resultant polynomial.\n(i) ",
+        {
+          "latex": "p(x)=7x^2+6x-1,\\quad q(x)=6x-9",
+          "fallback": "p(x) = 7x² + 6x − 1; q(x) = 6x − 9"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "7x^2+8;\\quad \\deg=2",
+      "fallback": "7x² + 8; degree 2",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(x)-q(x)=(7x^2+6x-1)-6x+9",
+          "fallback": "p(x) − q(x) = (7x² + 6x − 1) − 6x + 9",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Distribute the minus sign across every term of the second polynomial q(x) = 6x − 9."
+        }
+      },
+      {
+        "math": {
+          "latex": "p(x)-q(x)=7x^2+8",
+          "fallback": "p(x) − q(x) = 7x² + 8",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Group and combine like terms: 6x − 6x = 0x cancels out, and −1 + 9 = 8."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=2",
+          "fallback": "degree = 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The highest power of x remaining with a nonzero coefficient is x², so the degree is 2."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q6-ii",
+    "questionMath": {
+      "en": [
+        "6. Subtract the second polynomial from the first polynomial and find the degree of the resultant polynomial.\n(ii) ",
+        {
+          "latex": "f(y)=6y^2-7y+2,\\quad g(y)=7y+y^3",
+          "fallback": "f(y) = 6y² − 7y + 2; g(y) = 7y + y³"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "-y^3+6y^2-14y+2;\\quad \\deg=3",
+      "fallback": "−y³ + 6y² − 14y + 2; degree 3",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "f(y)-g(y)=6y^2-7y+2-7y-y^3",
+          "fallback": "f(y) − g(y) = 6y² − 7y + 2 − 7y − y³",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Subtract g(y) from f(y) by changing the sign of every term in g(y) = 7y + y³."
+        }
+      },
+      {
+        "math": {
+          "latex": "f(y)-g(y)=-y^3+6y^2-14y+2",
+          "fallback": "f(y) − g(y) = −y³ + 6y² − 14y + 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Arrange in descending powers of y and combine the linear terms −7y − 7y = −14y."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=3",
+          "fallback": "degree = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The highest power of y with a nonzero coefficient is −y³, so the resultant polynomial has degree 3."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q6-iii",
+    "questionMath": {
+      "en": [
+        "6. Subtract the second polynomial from the first polynomial and find the degree of the resultant polynomial.\n(iii) ",
+        {
+          "latex": "h(z)=z^5-6z^4+z,\\quad f(z)=6z^2+10z-7",
+          "fallback": "h(z) = z⁵ − 6z⁴ + z; f(z) = 6z² + 10z − 7"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "z^5-6z^4-6z^2-9z+7;\\quad \\deg=5",
+      "fallback": "z⁵ − 6z⁴ − 6z² − 9z + 7; degree 5",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "h(z)-f(z)=z^5-6z^4+z-6z^2-10z+7",
+          "fallback": "h(z) − f(z) = z⁵ − 6z⁴ + z − 6z² − 10z + 7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Distribute the subtraction sign across all three terms of f(z) = 6z² + 10z − 7."
+        }
+      },
+      {
+        "math": {
+          "latex": "h(z)-f(z)=z^5-6z^4-6z^2-9z+7",
+          "fallback": "h(z) − f(z) = z⁵ − 6z⁴ − 6z² − 9z + 7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Combine the like linear terms z − 10z = −9z and write the polynomial in descending powers of z."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=5",
+          "fallback": "degree = 5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The largest exponent of z is 5 on the leading term z⁵, so the resultant polynomial has degree 5."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q7",
+    "questionMath": {
+      "en": [
+        "7. What should be added to ",
+        {
+          "latex": "(2x^3+6x^2-5x+8)+P(x)=3x^3-2x^2+6x+15",
+          "fallback": "2x³ + 6x² − 5x + 8 to get 3x³ − 2x² + 6x + 15 ?"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "x^3-8x^2+11x+7",
+      "fallback": "x³ − 8x² + 11x + 7",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "P(x)=(3x^3-2x^2+6x+15)-(2x^3+6x^2-5x+8)",
+          "fallback": "P(x) = (3x³ − 2x² + 6x + 15) − (2x³ + 6x² − 5x + 8)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Let P(x) be the required polynomial; to find what must be added, subtract the starting polynomial from the target polynomial."
+        }
+      },
+      {
+        "math": {
+          "latex": "P(x)=(3-2)x^3+(-2-6)x^2+(6+5)x+(15-8)",
+          "fallback": "P(x) = (3 − 2)x³ + (−2 − 6)x² + (6 + 5)x + (15 − 8)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Distribute the minus sign across the second bracket and group like powers of x together."
+        }
+      },
+      {
+        "math": {
+          "latex": "P(x)=x^3-8x^2+11x+7",
+          "fallback": "P(x) = x³ − 8x² + 11x + 7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Simplify each coefficient to obtain the polynomial that must be added."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q8",
+    "questionMath": {
+      "en": [
+        "8. What must be subtracted from ",
+        {
+          "latex": "(2x^4+4x^2-3x+7)-P(x)=3x^3-x^2+2x+1",
+          "fallback": "2x⁴ + 4x² − 3x + 7 to get 3x³ − x² + 2x + 1 ?"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "2x^4-3x^3+5x^2-5x+6",
+      "fallback": "2x⁴ − 3x³ + 5x² − 5x + 6",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "P(x)=(2x^4+4x^2-3x+7)-(3x^3-x^2+2x+1)",
+          "fallback": "P(x) = (2x⁴ + 4x² − 3x + 7) − (3x³ − x² + 2x + 1)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "If A − P(x) = B, then P(x) = A − B; subtract the target polynomial from the starting polynomial."
+        }
+      },
+      {
+        "math": {
+          "latex": "P(x)=2x^4-3x^3+(4+1)x^2+(-3-2)x+(7-1)",
+          "fallback": "P(x) = 2x⁴ − 3x³ + (4 + 1)x² + (−3 − 2)x + (7 − 1)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Distribute the minus sign and arrange terms in descending powers from x⁴ to the constant."
+        }
+      },
+      {
+        "math": {
+          "latex": "P(x)=2x^4-3x^3+5x^2-5x+6",
+          "fallback": "P(x) = 2x⁴ − 3x³ + 5x² − 5x + 6",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Combine the coefficients of like powers to get the polynomial that must be subtracted."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q9-i",
+    "questionMath": {
+      "en": [
+        "9. Multiply the following polynomials and find the degree of the resultant polynomial:\n(i) ",
+        {
+          "latex": "p(x)=x^2-9,\\quad q(x)=6x^2+7x-2",
+          "fallback": "p(x) = x² − 9; q(x) = 6x² + 7x − 2"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "6x^4+7x^3-56x^2-63x+18;\\quad \\deg=4",
+      "fallback": "6x⁴ + 7x³ − 56x² − 63x + 18; degree 4",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(x)\\cdot q(x)=x^2(6x^2+7x-2)-9(6x^2+7x-2)",
+          "fallback": "p(x)·q(x) = x²(6x² + 7x − 2) − 9(6x² + 7x − 2)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Distribute each term of p(x) = x² − 9 across the trinomial q(x) = 6x² + 7x − 2."
+        }
+      },
+      {
+        "math": {
+          "latex": "p(x)\\cdot q(x)=6x^4+7x^3-56x^2-63x+18",
+          "fallback": "p(x)·q(x) = 6x⁴ + 7x³ − 56x² − 63x + 18",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Expand both products and combine the like x² terms: −2x² − 54x² = −56x²."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=4",
+          "fallback": "degree = 4",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The highest exponent of x in the product is 4 on 6x⁴, so the resultant polynomial has degree 4."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q9-ii",
+    "questionMath": {
+      "en": [
+        "9. Multiply the following polynomials and find the degree of the resultant polynomial:\n(ii) ",
+        {
+          "latex": "f(x)=7x+2,\\quad g(x)=15x-9",
+          "fallback": "f(x) = 7x + 2; g(x) = 15x − 9"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "105x^2-33x-18;\\quad \\deg=2",
+      "fallback": "105x² − 33x − 18; degree 2",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "f(x)\\cdot g(x)=7x(15x-9)+2(15x-9)=105x^2-63x+30x-18",
+          "fallback": "f(x)·g(x) = 7x(15x − 9) + 2(15x − 9) = 105x² − 63x + 30x − 18",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Multiply each term of f(x) = 7x + 2 by each term of g(x) = 15x − 9 using the distributive law."
+        }
+      },
+      {
+        "math": {
+          "latex": "f(x)\\cdot g(x)=105x^2-33x-18",
+          "fallback": "f(x)·g(x) = 105x² − 33x − 18",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Combine the middle linear terms −63x + 30x = −33x."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=2",
+          "fallback": "degree = 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The highest power of x in the expanded product is x², so the degree of the resultant polynomial is 2."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q9-iii",
+    "questionMath": {
+      "en": [
+        "9. Multiply the following polynomials and find the degree of the resultant polynomial:\n(iii) ",
+        {
+          "latex": "h(x)=6x^2-7x+1,\\quad f(x)=5x-7",
+          "fallback": "h(x) = 6x² − 7x + 1; f(x) = 5x − 7"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "30x^3-77x^2+54x-7;\\quad \\deg=3",
+      "fallback": "30x³ − 77x² + 54x − 7; degree 3",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "h(x)\\cdot f(x)=6x^2(5x-7)-7x(5x-7)+1(5x-7)",
+          "fallback": "h(x)·f(x) = 6x²(5x − 7) − 7x(5x − 7) + 1(5x − 7)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Distribute each term of h(x) = 6x² − 7x + 1 across f(x) = 5x − 7."
+        }
+      },
+      {
+        "math": {
+          "latex": "h(x)\\cdot f(x)=30x^3-77x^2+54x-7",
+          "fallback": "h(x)·f(x) = 30x³ − 77x² + 54x − 7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Expand to 30x³ − 42x² − 35x² + 49x + 5x − 7 and combine like x² and x terms."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=3",
+          "fallback": "degree = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The highest power of x in the product is 3 on 30x³, so the resultant polynomial has degree 3."
+        }
+      }
+    ]
+  },
+  {
     "id": "g9-ch1-ex1.2-q1-i",
     "questionMath": {
       "en": [
@@ -42661,6 +43641,273 @@ const texts={
     {
       "latex": "\\dfrac{- 7}{2}",
       "fallback": "−7/2"
+    },
+    "."
+  ],
+  "Divide each term in the numerator by x squared; this calculation requires x to be nonzero.": [
+    "Divide each term in the numerator by ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " squared; this calculation requires ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " to be nonzero."
+  ],
+  "Distribute x cubed across both terms inside the bracket.": [
+    "Distribute ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " cubed across both terms inside the bracket."
+  ],
+  "The radicals and denominators are numbers only; they are coefficients, not powers of the variable p.": [
+    "The radicals and denominators are numbers only; they are coefficients, not powers of the variable ",
+    {
+      "latex": "p",
+      "fallback": "p"
+    },
+    "."
+  ],
+  "Place the x-cubed term first, followed by x-squared, x, and the constant; keep each coefficient and sign.": [
+    "Place the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-cubed term first, followed by ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-squared, ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", and the constant; keep each coefficient and sign."
+  ],
+  "Place the highest-degree term first; retain the minus sign in front of the y term and the constant.": [
+    "Place the highest-degree term first; retain the minus sign in front of the ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " term and the constant."
+  ],
+  "Write the sum p(x) + q(x) and group like powers of x in descending order from x³ down to the constant term.": [
+    "Write the ",
+    {
+      "latex": "\\text{sum} p \\left(x\\right) + q \\left(x\\right)",
+      "fallback": "sum p(x) + q(x)"
+    },
+    " and group like powers of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " in descending order from ",
+    {
+      "latex": "x^{3}",
+      "fallback": "x³"
+    },
+    " down to the constant term."
+  ],
+  "Write the sum h(x) + f(x) and align like powers of x from highest to lowest.": [
+    "Write the ",
+    {
+      "latex": "\\text{sum} h \\left(x\\right) + f \\left(x\\right)",
+      "fallback": "sum h(x) + f(x)"
+    },
+    " and align like powers of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " from highest to lowest."
+  ],
+  "Write the sum f(x) + g(x) in descending powers of x and group the two constant terms together.": [
+    "Write the ",
+    {
+      "latex": "\\text{sum} f \\left(x\\right) + g \\left(x\\right)",
+      "fallback": "sum f(x) + g(x)"
+    },
+    " in descending powers of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " and group the two constant terms together."
+  ],
+  "Distribute the minus sign across every term of the second polynomial q(x) = 6x − 9.": [
+    "Distribute the minus sign across every term of the second polynomial ",
+    {
+      "latex": "q \\left(x\\right) = 6 x - 9",
+      "fallback": "q(x) = 6x − 9"
+    },
+    "."
+  ],
+  "Subtract g(y) from f(y) by changing the sign of every term in g(y) = 7y + y³.": [
+    "Subtract ",
+    {
+      "latex": "g \\left(y\\right)",
+      "fallback": "g(y)"
+    },
+    " from ",
+    {
+      "latex": "f \\left(y\\right)",
+      "fallback": "f(y)"
+    },
+    " by changing the sign of every term in ",
+    {
+      "latex": "g \\left(y\\right) = 7 y + y^{3}",
+      "fallback": "g(y) = 7y + y³"
+    },
+    "."
+  ],
+  "Distribute the subtraction sign across all three terms of f(z) = 6z² + 10z − 7.": [
+    "Distribute the subtraction sign across all three terms of ",
+    {
+      "latex": "f \\left(z\\right) = 6 z^{2} + 10 z - 7",
+      "fallback": "f(z) = 6z² + 10z − 7"
+    },
+    "."
+  ],
+  "Let P(x) be the required polynomial; to find what must be added, subtract the starting polynomial from the target polynomial.": [
+    "Let ",
+    {
+      "latex": "P\\left(x\\right)",
+      "fallback": "P(x)"
+    },
+    " be the required polynomial; to find what must be added, subtract the starting polynomial from the target polynomial."
+  ],
+  "Finding what polynomial P(x) must be added to A(x) to get B(x) is the inverse of addition: solve A(x) + P(x) = B(x) by subtracting every term of A(x) from B(x).": [
+    "Finding what polynomial ",
+    {
+      "latex": "P\\left(x\\right)",
+      "fallback": "P(x)"
+    },
+    " must be added to ",
+    {
+      "latex": "A \\left(x\\right)",
+      "fallback": "A(x)"
+    },
+    " to get ",
+    {
+      "latex": "B \\left(x\\right)",
+      "fallback": "B(x)"
+    },
+    " is the inverse of addition: solve ",
+    {
+      "latex": "A \\left(x\\right) + P\\left(x\\right) = B \\left(x\\right)",
+      "fallback": "A(x) + P(x) = B(x)"
+    },
+    " by subtracting every term of ",
+    {
+      "latex": "A \\left(x\\right)",
+      "fallback": "A(x)"
+    },
+    " from ",
+    {
+      "latex": "B \\left(x\\right)",
+      "fallback": "B(x)"
+    },
+    "."
+  ],
+  "If A − P(x) = B, then P(x) = A − B; subtract the target polynomial from the starting polynomial.": [
+    "If ",
+    {
+      "latex": "A - P\\left(x\\right) = B",
+      "fallback": "A − P(x) = B"
+    },
+    ", then ",
+    {
+      "latex": "P\\left(x\\right) = A - B",
+      "fallback": "P(x) = A − B"
+    },
+    "; subtract the target polynomial from the starting polynomial."
+  ],
+  "Finding what polynomial P(x) must be subtracted from A(x) to get B(x) means solving A(x) − P(x) = B(x), which rearranges to P(x) = A(x) − B(x): subtract the target polynomial from the starting polynomial.": [
+    "Finding what polynomial ",
+    {
+      "latex": "P\\left(x\\right)",
+      "fallback": "P(x)"
+    },
+    " must be subtracted from ",
+    {
+      "latex": "A \\left(x\\right)",
+      "fallback": "A(x)"
+    },
+    " to get ",
+    {
+      "latex": "B \\left(x\\right)",
+      "fallback": "B(x)"
+    },
+    " means solving ",
+    {
+      "latex": "A \\left(x\\right) - P\\left(x\\right) = B \\left(x\\right)",
+      "fallback": "A(x) − P(x) = B(x)"
+    },
+    ", which rearranges to ",
+    {
+      "latex": "P\\left(x\\right) = A \\left(x\\right) - B \\left(x\\right)",
+      "fallback": "P(x) = A(x) − B(x)"
+    },
+    ": subtract the target polynomial from the starting polynomial."
+  ],
+  "Distribute each term of p(x) = x² − 9 across the trinomial q(x) = 6x² + 7x − 2.": [
+    "Distribute each term of ",
+    {
+      "latex": "p \\left(x\\right) = x^{2} - 9",
+      "fallback": "p(x) = x² − 9"
+    },
+    " across the trinomial ",
+    {
+      "latex": "q \\left(x\\right) = 6 x^{2} + 7 x - 2",
+      "fallback": "q(x) = 6x² + 7x − 2"
+    },
+    "."
+  ],
+  "By the distributive law, every term of the first polynomial multiplies every term of the second polynomial, adding exponents of like bases (x^m · x^n = x^(m+n)) before collecting like terms.": [
+    "By the distributive law, every term of the first polynomial multiplies every term of the second polynomial, adding exponents of like bases (",
+    {
+      "latex": "x^{\\mathrm{m}}",
+      "fallback": "x^m"
+    },
+    " · ",
+    {
+      "latex": "x^{n} = x^{\\mathrm{m} + n}",
+      "fallback": "x^n = x^(m+n)"
+    },
+    ") before collecting like terms."
+  ],
+  "Multiply each term of f(x) = 7x + 2 by each term of g(x) = 15x − 9 using the distributive law.": [
+    "Multiply each term of ",
+    {
+      "latex": "f \\left(x\\right) = 7 x + 2",
+      "fallback": "f(x) = 7x + 2"
+    },
+    " by each term of ",
+    {
+      "latex": "g \\left(x\\right) = 15 x - 9",
+      "fallback": "g(x) = 15x − 9"
+    },
+    " using the distributive law."
+  ],
+  "Distribute each term of h(x) = 6x² − 7x + 1 across f(x) = 5x − 7.": [
+    "Distribute each term of ",
+    {
+      "latex": "h \\left(x\\right) = 6 x^{2} - 7 x + 1",
+      "fallback": "h(x) = 6x² − 7x + 1"
+    },
+    " across ",
+    {
+      "latex": "f \\left(x\\right) = 5 x - 7",
+      "fallback": "f(x) = 5x − 7"
     },
     "."
   ]

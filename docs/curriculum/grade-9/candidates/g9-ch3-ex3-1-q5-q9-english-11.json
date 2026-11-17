@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "sourceEdition": "Tamil Nadu SCERT Grade 9 English revised 2025",
+  "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+  "sourceUrl": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+  "sourceOriginalPdfPages": [
+    93,
+    94
+  ],
+  "sourceAnswerAppendixPdfPages": [
+    316
+  ],
+  "imageEvidenceChecked": true,
+  "scope": "Grade 9 Chapter 3 Exercise 3.1 Q5(i–iii), Q6(i–iii), Q7, Q8, Q9(i–iii)",
+  "englishPartCount": 11,
+  "status": "student-source-registered-not-live-verified",
+  "tamilReview": "pending",
+  "teacherReview": "pending",
+  "externalApiSpendUsd": 0,
+  "caveats": [
+    "Textbook source pages 93–94 (printed pp. 87–88) and official appendix page 316 (printed p. 310) visually compared at high resolution.",
+    "Q6(i) appears at the bottom of printed page 87 (PDF p. 93); Q6(ii–iii), Q7, Q8, and Q9(i–iii) appear at the top of printed page 88 (PDF p. 94).",
+    "Student module loaded in site/index.html on integration branch; source registration is NOT yet a live Pages deployment."
+  ],
+  "rows": [
+    {
+      "id": "g9-ch3-ex3.1-q5-i",
+      "question": 5,
+      "part": "i",
+      "title": "Add polynomials and find degree · (i)",
+      "stem": "Add the following polynomials and find the degree of the resultant polynomial.",
+      "sourceEnglish": "p(x) = 6x² − 7x + 2; q(x) = 6x³ − 7x + 15",
+      "sourceMathLatex": "p(x)=6x^2-7x+2,\\quad q(x)=6x^3-7x+15",
+      "answer": "6x³ + 6x² − 14x + 17; degree 3",
+      "answerMathLatex": "6x^3+6x^2-14x+17;\\quad \\deg=3",
+      "answerKeyShort": "6x^3+6x^2-14x+17, 3",
+      "resultDegree": 3,
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Write the sum p(x) + q(x) and group like powers of x in descending order from x³ down to the constant term.",
+          "equation": "p(x) + q(x) = 6x³ + 6x² + (−7x − 7x) + (2 + 15)",
+          "mathLatex": "p(x)+q(x)=6x^3+6x^2+(-7x-7x)+(2+15)"
+        },
+        {
+          "reason": "Add the coefficients of the like terms: −7 − 7 = −14 for x, and 2 + 15 = 17 for the constant.",
+          "equation": "p(x) + q(x) = 6x³ + 6x² − 14x + 17",
+          "mathLatex": "p(x)+q(x)=6x^3+6x^2-14x+17"
+        },
+        {
+          "reason": "The highest power of x with a nonzero coefficient in the resultant polynomial is x³, so its degree is 3.",
+          "equation": "degree = 3",
+          "mathLatex": "\\deg=3"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    },
+    {
+      "id": "g9-ch3-ex3.1-q5-ii",
+      "question": 5,
+      "part": "ii",
+      "title": "Add polynomials and find degree · (ii)",
+      "stem": "Add the following polynomials and find the degree of the resultant polynomial.",
+      "sourceEnglish": "h(x) = 7x³ − 6x + 1; f(x) = 7x² + 17x − 9",
+      "sourceMathLatex": "h(x)=7x^3-6x+1,\\quad f(x)=7x^2+17x-9",
+      "answer": "7x³ + 7x² + 11x − 8; degree 3",
+      "answerMathLatex": "7x^3+7x^2+11x-8;\\quad \\deg=3",
+      "answerKeyShort": "7x^3+7x^2+11x-8, 3",
+      "resultDegree": 3,
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Write the sum h(x) + f(x) and align like powers of x from highest to lowest.",
+          "equation": "h(x) + f(x) = 7x³ + 7x² + (−6x + 17x) + (1 − 9)",
+          "mathLatex": "h(x)+f(x)=7x^3+7x^2+(-6x+17x)+(1-9)"
+        },
+        {
+          "reason": "Combine the coefficients of like powers: −6 + 17 = 11 on x, and 1 − 9 = −8 for the constant term.",
+          "equation": "h(x) + f(x) = 7x³ + 7x² + 11x − 8",
+          "mathLatex": "h(x)+f(x)=7x^3+7x^2+11x-8"
+        },
+        {
+          "reason": "The largest exponent of x in the resultant polynomial is 3, so the degree of the sum is 3.",
+          "equation": "degree = 3",
+          "mathLatex": "\\deg=3"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    },
+    {
+      "id": "g9-ch3-ex3.1-q5-iii",
+      "question": 5,
+      "part": "iii",
+      "title": "Add polynomials and find degree · (iii)",
+      "stem": "Add the following polynomials and find the degree of the resultant polynomial.",
+      "sourceEnglish": "f(x) = 16x⁴ − 5x² + 9; g(x) = −6x³ + 7x − 15",
+      "sourceMathLatex": "f(x)=16x^4-5x^2+9,\\quad g(x)=-6x^3+7x-15",
+      "answer": "16x⁴ − 6x³ − 5x² + 7x − 6; degree 4",
+      "answerMathLatex": "16x^4-6x^3-5x^2+7x-6;\\quad \\deg=4",
+      "answerKeyShort": "16x^4-6x^3-5x^2+7x-6, 4",
+      "resultDegree": 4,
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Write the sum f(x) + g(x) in descending powers of x and group the two constant terms together.",
+          "equation": "f(x) + g(x) = 16x⁴ − 6x³ − 5x² + 7x + (9 − 15)",
+          "mathLatex": "f(x)+g(x)=16x^4-6x^3-5x^2+7x+(9-15)"
+        },
+        {
+          "reason": "Simplify the constant terms 9 − 15 = −6; all variable powers 4, 3, 2, and 1 have distinct exponents.",
+          "equation": "f(x) + g(x) = 16x⁴ − 6x³ − 5x² + 7x − 6",
+          "mathLatex": "f(x)+g(x)=16x^4-6x^3-5x^2+7x-6"
+        },
+        {
+          "reason": "The highest exponent with a nonzero coefficient is 4 on 16x⁴, so the resultant polynomial has degree 4.",
+          "equation": "degree = 4",
+          "mathLatex": "\\deg=4"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    },
+    {
+      "id": "g9-ch3-ex3.1-q6-i",
+      "question": 6,
+      "part": "i",
+      "title": "Subtract polynomials and find degree · (i)",
+      "stem": "Subtract the second polynomial from the first polynomial and find the degree of the resultant polynomial.",
+      "sourceEnglish": "p(x) = 7x² + 6x − 1; q(x) = 6x − 9",
+      "sourceMathLatex": "p(x)=7x^2+6x-1,\\quad q(x)=6x-9",
+      "answer": "7x² + 8; degree 2",
+      "answerMathLatex": "7x^2+8;\\quad \\deg=2",
+      "answerKeyShort": "7x^2+8, 2",
+      "resultDegree": 2,
+      "sourceEvidence": {
+        "enPrintedPage": 87,
+        "enPdfPage": 93,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Distribute the minus sign across every term of the second polynomial q(x) = 6x − 9.",
+          "equation": "p(x) − q(x) = (7x² + 6x − 1) − 6x + 9",
+          "mathLatex": "p(x)-q(x)=(7x^2+6x-1)-6x+9"
+        },
+        {
+          "reason": "Group and combine like terms: 6x − 6x = 0x cancels out, and −1 + 9 = 8.",
+          "equation": "p(x) − q(x) = 7x² + 8",
+          "mathLatex": "p(x)-q(x)=7x^2+8"
+        },
+        {
+          "reason": "The highest power of x remaining with a nonzero coefficient is x², so the degree is 2.",
+          "equation": "degree = 2",
+          "mathLatex": "\\deg=2"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    },
+    {
+      "id": "g9-ch3-ex3.1-q6-ii",
+      "question": 6,
+      "part": "ii",
+      "title": "Subtract polynomials and find degree · (ii)",
+      "stem": "Subtract the second polynomial from the first polynomial and find the degree of the resultant polynomial.",
+      "sourceEnglish": "f(y) = 6y² − 7y + 2; g(y) = 7y + y³",
+      "sourceMathLatex": "f(y)=6y^2-7y+2,\\quad g(y)=7y+y^3",
+      "answer": "−y³ + 6y² − 14y + 2; degree 3",
+      "answerMathLatex": "-y^3+6y^2-14y+2;\\quad \\deg=3",
+      "answerKeyShort": "-y^3+6y^2-14y+2, 3",
+      "resultDegree": 3,
+      "sourceEvidence": {
+        "enPrintedPage": 88,
+        "enPdfPage": 94,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Subtract g(y) from f(y) by changing the sign of every term in g(y) = 7y + y³.",
+          "equation": "f(y) − g(y) = 6y² − 7y + 2 − 7y − y³",
+          "mathLatex": "f(y)-g(y)=6y^2-7y+2-7y-y^3"
+        },
+        {
+          "reason": "Arrange in descending powers of y and combine the linear terms −7y − 7y = −14y.",
+          "equation": "f(y) − g(y) = −y³ + 6y² − 14y + 2",
+          "mathLatex": "f(y)-g(y)=-y^3+6y^2-14y+2"
+        },
+        {
+          "reason": "The highest power of y with a nonzero coefficient is −y³, so the resultant polynomial has degree 3.",
+          "equation": "degree = 3",
+          "mathLatex": "\\deg=3"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    },
+    {
+      "id": "g9-ch3-ex3.1-q6-iii",
+      "question": 6,
+      "part": "iii",
+      "title": "Subtract polynomials and find degree · (iii)",
+      "stem": "Subtract the second polynomial from the first polynomial and find the degree of the resultant polynomial.",
+      "sourceEnglish": "h(z) = z⁵ − 6z⁴ + z; f(z) = 6z² + 10z − 7",
+      "sourceMathLatex": "h(z)=z^5-6z^4+z,\\quad f(z)=6z^2+10z-7",
+      "answer": "z⁵ − 6z⁴ − 6z² − 9z + 7; degree 5",
+      "answerMathLatex": "z^5-6z^4-6z^2-9z+7;\\quad \\deg=5",
+      "answerKeyShort": "z^5-6z^4-6z^2-9z+7, 5",
+      "resultDegree": 5,
+      "sourceEvidence": {
+        "enPrintedPage": 88,
+        "enPdfPage": 94,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Distribute the subtraction sign across all three terms of f(z) = 6z² + 10z − 7.",
+          "equation": "h(z) − f(z) = z⁵ − 6z⁴ + z − 6z² − 10z + 7",
+          "mathLatex": "h(z)-f(z)=z^5-6z^4+z-6z^2-10z+7"
+        },
+        {
+          "reason": "Combine the like linear terms z − 10z = −9z and write the polynomial in descending powers of z.",
+          "equation": "h(z) − f(z) = z⁵ − 6z⁴ − 6z² − 9z + 7",
+          "mathLatex": "h(z)-f(z)=z^5-6z^4-6z^2-9z+7"
+        },
+        {
+          "reason": "The largest exponent of z is 5 on the leading term z⁵, so the resultant polynomial has degree 5.",
+          "equation": "degree = 5",
+          "mathLatex": "\\deg=5"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    },
+    {
+      "id": "g9-ch3-ex3.1-q7",
+      "question": 7,
+      "part": null,
+      "title": "Polynomial to be added",
+      "stem": "What should be added to",
+      "sourceEnglish": "2x³ + 6x² − 5x + 8 to get 3x³ − 2x² + 6x + 15 ?",
+      "sourceMathLatex": "(2x^3+6x^2-5x+8)+P(x)=3x^3-2x^2+6x+15",
+      "answer": "x³ − 8x² + 11x + 7",
+      "answerMathLatex": "x^3-8x^2+11x+7",
+      "answerKeyShort": "x^3-8x^2+11x+7",
+      "resultDegree": 3,
+      "sourceEvidence": {
+        "enPrintedPage": 88,
+        "enPdfPage": 94,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Let P(x) be the required polynomial; to find what must be added, subtract the starting polynomial from the target polynomial.",
+          "equation": "P(x) = (3x³ − 2x² + 6x + 15) − (2x³ + 6x² − 5x + 8)",
+          "mathLatex": "P(x)=(3x^3-2x^2+6x+15)-(2x^3+6x^2-5x+8)"
+        },
+        {
+          "reason": "Distribute the minus sign across the second bracket and group like powers of x together.",
+          "equation": "P(x) = (3 − 2)x³ + (−2 − 6)x² + (6 + 5)x + (15 − 8)",
+          "mathLatex": "P(x)=(3-2)x^3+(-2-6)x^2+(6+5)x+(15-8)"
+        },
+        {
+          "reason": "Simplify each coefficient to obtain the polynomial that must be added.",
+          "equation": "P(x) = x³ − 8x² + 11x + 7",
+          "mathLatex": "P(x)=x^3-8x^2+11x+7"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    },
+    {
+      "id": "g9-ch3-ex3.1-q8",
+      "question": 8,
+      "part": null,
+      "title": "Polynomial to be subtracted",
+      "stem": "What must be subtracted from",
+      "sourceEnglish": "2x⁴ + 4x² − 3x + 7 to get 3x³ − x² + 2x + 1 ?",
+      "sourceMathLatex": "(2x^4+4x^2-3x+7)-P(x)=3x^3-x^2+2x+1",
+      "answer": "2x⁴ − 3x³ + 5x² − 5x + 6",
+      "answerMathLatex": "2x^4-3x^3+5x^2-5x+6",
+      "answerKeyShort": "2x^4-3x^3+5x^2-5x+6",
+      "resultDegree": 4,
+      "sourceEvidence": {
+        "enPrintedPage": 88,
+        "enPdfPage": 94,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "If A − P(x) = B, then P(x) = A − B; subtract the target polynomial from the starting polynomial.",
+          "equation": "P(x) = (2x⁴ + 4x² − 3x + 7) − (3x³ − x² + 2x + 1)",
+          "mathLatex": "P(x)=(2x^4+4x^2-3x+7)-(3x^3-x^2+2x+1)"
+        },
+        {
+          "reason": "Distribute the minus sign and arrange terms in descending powers from x⁴ to the constant.",
+          "equation": "P(x) = 2x⁴ − 3x³ + (4 + 1)x² + (−3 − 2)x + (7 − 1)",
+          "mathLatex": "P(x)=2x^4-3x^3+(4+1)x^2+(-3-2)x+(7-1)"
+        },
+        {
+          "reason": "Combine the coefficients of like powers to get the polynomial that must be subtracted.",
+          "equation": "P(x) = 2x⁴ − 3x³ + 5x² − 5x + 6",
+          "mathLatex": "P(x)=2x^4-3x^3+5x^2-5x+6"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    },
+    {
+      "id": "g9-ch3-ex3.1-q9-i",
+      "question": 9,
+      "part": "i",
+      "title": "Multiply polynomials and find degree · (i)",
+      "stem": "Multiply the following polynomials and find the degree of the resultant polynomial:",
+      "sourceEnglish": "p(x) = x² − 9; q(x) = 6x² + 7x − 2",
+      "sourceMathLatex": "p(x)=x^2-9,\\quad q(x)=6x^2+7x-2",
+      "answer": "6x⁴ + 7x³ − 56x² − 63x + 18; degree 4",
+      "answerMathLatex": "6x^4+7x^3-56x^2-63x+18;\\quad \\deg=4",
+      "answerKeyShort": "6x^4+7x^3-56x^2-63x+18, 4",
+      "resultDegree": 4,
+      "sourceEvidence": {
+        "enPrintedPage": 88,
+        "enPdfPage": 94,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Distribute each term of p(x) = x² − 9 across the trinomial q(x) = 6x² + 7x − 2.",
+          "equation": "p(x)·q(x) = x²(6x² + 7x − 2) − 9(6x² + 7x − 2)",
+          "mathLatex": "p(x)\\cdot q(x)=x^2(6x^2+7x-2)-9(6x^2+7x-2)"
+        },
+        {
+          "reason": "Expand both products and combine the like x² terms: −2x² − 54x² = −56x².",
+          "equation": "p(x)·q(x) = 6x⁴ + 7x³ − 56x² − 63x + 18",
+          "mathLatex": "p(x)\\cdot q(x)=6x^4+7x^3-56x^2-63x+18"
+        },
+        {
+          "reason": "The highest exponent of x in the product is 4 on 6x⁴, so the resultant polynomial has degree 4.",
+          "equation": "degree = 4",
+          "mathLatex": "\\deg=4"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    },
+    {
+      "id": "g9-ch3-ex3.1-q9-ii",
+      "question": 9,
+      "part": "ii",
+      "title": "Multiply polynomials and find degree · (ii)",
+      "stem": "Multiply the following polynomials and find the degree of the resultant polynomial:",
+      "sourceEnglish": "f(x) = 7x + 2; g(x) = 15x − 9",
+      "sourceMathLatex": "f(x)=7x+2,\\quad g(x)=15x-9",
+      "answer": "105x² − 33x − 18; degree 2",
+      "answerMathLatex": "105x^2-33x-18;\\quad \\deg=2",
+      "answerKeyShort": "105x^2-33x-18, 2",
+      "resultDegree": 2,
+      "sourceEvidence": {
+        "enPrintedPage": 88,
+        "enPdfPage": 94,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Multiply each term of f(x) = 7x + 2 by each term of g(x) = 15x − 9 using the distributive law.",
+          "equation": "f(x)·g(x) = 7x(15x − 9) + 2(15x − 9) = 105x² − 63x + 30x − 18",
+          "mathLatex": "f(x)\\cdot g(x)=7x(15x-9)+2(15x-9)=105x^2-63x+30x-18"
+        },
+        {
+          "reason": "Combine the middle linear terms −63x + 30x = −33x.",
+          "equation": "f(x)·g(x) = 105x² − 33x − 18",
+          "mathLatex": "f(x)\\cdot g(x)=105x^2-33x-18"
+        },
+        {
+          "reason": "The highest power of x in the expanded product is x², so the degree of the resultant polynomial is 2.",
+          "equation": "degree = 2",
+          "mathLatex": "\\deg=2"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    },
+    {
+      "id": "g9-ch3-ex3.1-q9-iii",
+      "question": 9,
+      "part": "iii",
+      "title": "Multiply polynomials and find degree · (iii)",
+      "stem": "Multiply the following polynomials and find the degree of the resultant polynomial:",
+      "sourceEnglish": "h(x) = 6x² − 7x + 1; f(x) = 5x − 7",
+      "sourceMathLatex": "h(x)=6x^2-7x+1,\\quad f(x)=5x-7",
+      "answer": "30x³ − 77x² + 54x − 7; degree 3",
+      "answerMathLatex": "30x^3-77x^2+54x-7;\\quad \\deg=3",
+      "answerKeyShort": "30x^3-77x^2+54x-7, 3",
+      "resultDegree": 3,
+      "sourceEvidence": {
+        "enPrintedPage": 88,
+        "enPdfPage": 94,
+        "answerEnPrintedPage": 310,
+        "answerEnPdfPage": 316
+      },
+      "steps": [
+        {
+          "reason": "Distribute each term of h(x) = 6x² − 7x + 1 across f(x) = 5x − 7.",
+          "equation": "h(x)·f(x) = 6x²(5x − 7) − 7x(5x − 7) + 1(5x − 7)",
+          "mathLatex": "h(x)\\cdot f(x)=6x^2(5x-7)-7x(5x-7)+1(5x-7)"
+        },
+        {
+          "reason": "Expand to 30x³ − 42x² − 35x² + 49x + 5x − 7 and combine like x² and x terms.",
+          "equation": "h(x)·f(x) = 30x³ − 77x² + 54x − 7",
+          "mathLatex": "h(x)\\cdot f(x)=30x^3-77x^2+54x-7"
+        },
+        {
+          "reason": "The highest power of x in the product is 3 on 30x³, so the resultant polynomial has degree 3.",
+          "equation": "degree = 3",
+          "mathLatex": "\\deg=3"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": false,
+      "studentRegisteredOnBranch": true
+    }
+  ]
+}

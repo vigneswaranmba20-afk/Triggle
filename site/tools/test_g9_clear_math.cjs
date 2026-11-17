@@ -17,10 +17,10 @@ function check(value,original,id){
   assert(html.includes('<math')&&html.includes('katex-html'),'Accessible and visual math: '+id);formulas++;
  }
 }
-const items=load();assert.equal(items.length,358);
-assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,17,12,9,40,37,31,26]);
+const items=load();assert.equal(items.length,378);
+assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,37,12,9,40,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
-assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,15);
+assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,35);
 for(const q of items){
  const before=JSON.stringify(q),p=get(q);assert(p,q.id);assert.equal(p.steps.length,q.steps.length);
  for(const lang of ['en','ta'])check(p.questionMath[lang]||p.questionMath.en,q.q[lang]||q.q.en,q.id+' '+lang);
