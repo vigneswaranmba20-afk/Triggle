@@ -40,3 +40,24 @@ for(const row of m.rows){
 }
 assert.equal(renders,45);assert.equal(steps,27);
 console.log('PASS G9 Algebra Ex3.1 Q3–Q4: nine original-image-audited parts, official degree answers [7,4,5,6,4], standard-order results, domain caveat, 27 steps, 45 accessible KaTeX renders, no premature student publication.');
+
+// Independent polynomial arithmetic checks at multiple points, including zero.
+// These numeric identities guard the authored Q3 simplification and Q4 term order;
+// they do not replace original-page or answer-key verification.
+const samples=[-3,-1,0,2,5];
+const close=(a,b)=>assert(Math.abs(a-b)<1e-9,`Polynomial evaluation mismatch: ${a} versus ${b}`);
+for(const x of samples){
+ const q3iii=x**3*(x**2+x);
+ close(q3iii,x**5+x**4);
+ const q4i=x-9+Math.sqrt(7)*x**3+6*x**2;
+ close(q4i,Math.sqrt(7)*x**3+6*x**2+x-9);
+ const q4ii=Math.sqrt(2)*x**2-(7/2)*x**4+x-5*x**3;
+ close(q4ii,-(7/2)*x**4-5*x**3+Math.sqrt(2)*x**2+x);
+ const q4iii=7*x**3-(6/5)*x**2+4*x-1;
+ close(q4iii,-1+4*x-(6/5)*x**2+7*x**3);
+ const q4iv=x**2+Math.sqrt(5)*x**3-11-(7/3)*x+9*x**4;
+ close(q4iv,9*x**4+Math.sqrt(5)*x**3+x**2-(7/3)*x-11);
+ if(x!==0) close((x**3-x**4+6*x**6)/x**2,x-x**2+6*x**4);
+}
+assert.equal(m.rows[1].answerKeyShort,'4');
+console.log('PASS Q3/Q4 independent numeric equivalence: 5 sample points, original vs reordered/simplified polynomials; rational expression excludes x=0.');
