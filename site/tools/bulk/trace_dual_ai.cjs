@@ -133,6 +133,7 @@ async function runDualReview(record,options={}){
   const live=options.live===true;
   if(live&&(options.authorizeSpend!==true||process.env.TRACE_DUAL_AI_SPEND_APPROVED!=='YES'))
     throw Error('EXPLICIT_SPEND_APPROVAL_REQUIRED');
+  if(live&&!options.stateDir)throw Error('PERSISTENT_ACCOUNTING_REQUIRED');
   const adapters=live?
     [makeAdapter('openai',{...options.openai,env:options.env||process.env}),makeAdapter('gemini',{...options.gemini,env:options.env||process.env})]:
     [demoAdapter('openai'),demoAdapter('gemini')];
