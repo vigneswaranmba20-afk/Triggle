@@ -5006,22 +5006,7 @@ const records=[
     "id": "g9-ch2-ex1-q1",
     "questionMath": {
       "en": [
-        "Which marked arrow A, ",
-        {
-          "latex": "B",
-          "fallback": "B"
-        },
-        ", ",
-        {
-          "latex": "C",
-          "fallback": "C"
-        },
-        " or ",
-        {
-          "latex": "D",
-          "fallback": "D"
-        },
-        " on the textbook number line is closest to ",
+        "Which marked arrow A, B, C or D on the textbook number line is closest to ",
         {
           "latex": "\\displaystyle \\frac{11}{3}",
           "fallback": "11/3"
@@ -5034,22 +5019,7 @@ const records=[
           "latex": "\\displaystyle \\frac{11}{3}",
           "fallback": "11/3"
         },
-        " ஐச் சரியாகக் குறிக்கும் A, ",
-        {
-          "latex": "B",
-          "fallback": "B"
-        },
-        ", ",
-        {
-          "latex": "C",
-          "fallback": "C"
-        },
-        ", ",
-        {
-          "latex": "D",
-          "fallback": "D"
-        },
-        " அம்புகளில் எது?"
+        " ஐச் சரியாகக் குறிக்கும் A, B, C, D அம்புகளில் எது?"
       ]
     },
     "answerMath": [
@@ -5086,19 +5056,11 @@ const records=[
         }
       },
       {
-        "math": [
-          {
-            "latex": "D",
-            "fallback": "D",
-            "display": true
-          },
-          ": approximately ",
-          {
-            "latex": "3.67",
-            "fallback": "3.67",
-            "display": true
-          }
-        ],
+        "math": {
+          "latex": "\\text{Arrow }D:\\quad \\frac{11}{3}\\approx 3.67",
+          "fallback": "D: approximately 3.67",
+          "display": true
+        },
         "reasonMath": {
           "en": [
             "The point lies between ",
@@ -39631,13 +39593,152 @@ const texts={
     },
     "."
   ],
-  "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.": [
-    "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is ",
+  "Dividing 11 by 3 gives quotient 3 and remainder 2, so 11/3 = 3 + 2/3 ≈ 3.67. Dividing the unit interval from 3 to 4 into three equal thirds places 3 + 2/3 two-thirds of the way toward 4, which matches arrow D rather than arrow C.": [
+    "Dividing ",
     {
-      "latex": "5",
-      "fallback": "5"
+      "latex": "11",
+      "fallback": "11"
     },
-    " or more."
+    " by ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " gives quotient ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " and remainder ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ", so ",
+    {
+      "latex": "\\dfrac{11}{3} = 3 + \\dfrac{2}{3} \\approx 3.67",
+      "fallback": "11/3 = 3 + 2/3 ≈ 3.67"
+    },
+    ". Dividing the unit interval from ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " to ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " into three equal thirds places ",
+    {
+      "latex": "3 + \\dfrac{2}{3}",
+      "fallback": "3 + 2/3"
+    },
+    " two-thirds of the way toward ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    ", which matches arrow ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " rather than arrow ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    "."
+  ],
+  "When two fractions share the same positive denominator 11, their order matches the order of their integer numerators. Any integer numerator strictly between −7 and 2 (from −6 up to 1) gives a rational number strictly between −7/11 and 2/11.": [
+    "When two fractions share the same positive denominator ",
+    {
+      "latex": "11",
+      "fallback": "11"
+    },
+    ", their order matches the order of their integer numerators. Any integer numerator strictly between ",
+    {
+      "latex": "- 7",
+      "fallback": "−7"
+    },
+    " and ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " (from ",
+    {
+      "latex": "- 6",
+      "fallback": "−6"
+    },
+    " up to ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ") gives a rational number strictly between ",
+    {
+      "latex": "\\dfrac{- 7}{11}",
+      "fallback": "−7/11"
+    },
+    " and ",
+    {
+      "latex": "\\dfrac{2}{11}",
+      "fallback": "2/11"
+    },
+    "."
+  ],
+  "Because 5 > 4, the unit fraction 1/5 = 0.20 is smaller than 1/4 = 0.25. Writing both endpoints as hundredths lets you pick terminating decimals (such as 0.21, 0.22, 0.23, 0.24, 0.245) or repeated midpoints (9/40, 19/80, 39/160, 79/320, 159/640) strictly inside the interval.": [
+    "Because ",
+    {
+      "latex": "5 > 4",
+      "fallback": "5 > 4"
+    },
+    ", the unit fraction ",
+    {
+      "latex": "\\dfrac{1}{5} = 0.20",
+      "fallback": "1/5 = 0.20"
+    },
+    " is smaller than ",
+    {
+      "latex": "\\dfrac{1}{4} = 0.25",
+      "fallback": "1/4 = 0.25"
+    },
+    ". Writing both endpoints as hundredths lets you pick terminating decimals (such as ",
+    {
+      "latex": "0.21, 0.22, 0.23, 0.24, 0.245",
+      "fallback": "0.21, 0.22, 0.23, 0.24, 0.245"
+    },
+    ") or repeated midpoints ",
+    {
+      "latex": "\\left(\\dfrac{9}{40}, \\dfrac{19}{80}, \\dfrac{39}{160}, \\dfrac{79}{320}, \\dfrac{159}{640}\\right)",
+      "fallback": "(9/40, 19/80, 39/160, 79/320, 159/640)"
+    },
+    " strictly inside the interval."
+  ],
+  "Appending trailing zeros after a decimal point does not change a number's value: 0.1 = 0.100 and 0.11 = 0.110. Expressing both bounds in thousandths reveals nine thousandths (0.101 through 0.109) strictly between them without any rounding.": [
+    "Appending trailing zeros after a decimal point does not change a number's value: ",
+    {
+      "latex": "0.1 = 0.100",
+      "fallback": "0.1 = 0.100"
+    },
+    " and ",
+    {
+      "latex": "0.11 = 0.110",
+      "fallback": "0.11 = 0.110"
+    },
+    ". Expressing both bounds in thousandths reveals nine thousandths (",
+    {
+      "latex": "0.101",
+      "fallback": "0.101"
+    },
+    " through ",
+    {
+      "latex": "0.109",
+      "fallback": "0.109"
+    },
+    ") strictly between them without any rounding."
   ],
   "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது 5 அல்லது அதற்கு மேல் இருந்தால்தான் இலக்கத்தை உயர்த்த வேண்டும்.": [
     "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது ",
@@ -39659,6 +39760,44 @@ const texts={
       "fallback": "−1"
     },
     " on the number line."
+  ],
+  "On the number line, −2 lies to the left of −1, so −2 < x < −1. Any terminating decimal between −2.0 and −1.0 (such as −1.1, −1.2, −1.3, −1.4, −1.5) or repeated midpoint (−3/2, −5/4, −9/8, −17/16, −33/32) is a rational number in this range.": [
+    "On the number line, ",
+    {
+      "latex": "- 2",
+      "fallback": "−2"
+    },
+    " lies to the left of ",
+    {
+      "latex": "- 1",
+      "fallback": "−1"
+    },
+    ", so ",
+    {
+      "latex": "- 2 < x < - 1",
+      "fallback": "−2 < x < −1"
+    },
+    ". Any terminating decimal between ",
+    {
+      "latex": "- 2.0",
+      "fallback": "−2.0"
+    },
+    " and ",
+    {
+      "latex": "- 1.0",
+      "fallback": "−1.0"
+    },
+    " (such as ",
+    {
+      "latex": "- 1.1, - 1.2, - 1.3, - 1.4, - 1.5",
+      "fallback": "−1.1, −1.2, −1.3, −1.4, −1.5"
+    },
+    ") or repeated midpoint ",
+    {
+      "latex": "\\left(\\dfrac{- 3}{2}, \\dfrac{- 5}{4}, \\dfrac{- 9}{8}, \\dfrac{- 17}{16}, \\dfrac{- 33}{32}\\right)",
+      "fallback": "(−3/2, −5/4, −9/8, −17/16, −33/32)"
+    },
+    " is a rational number in this range."
   ],
   "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than 2 and 5.": [
     "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than ",
@@ -39750,6 +39889,14 @@ const texts={
       "fallback": "6.444"
     },
     " to three decimal places."
+  ],
+  "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.": [
+    "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " or more."
   ],
   "The repeating block 73 gives 4.7373 to four decimal places.": [
     "The repeating block ",

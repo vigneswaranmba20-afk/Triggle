@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "sourceEdition": "Tamil Nadu SCERT Grade 9 English revised 2025",
+  "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+  "sourceUrl": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+  "sourceOriginalPdfPages": [
+    51
+  ],
+  "sourceAnswerAppendixPdfPages": [
+    314
+  ],
+  "imprintEvidence": {
+    "pdfPage": 2,
+    "imageSha256": "72f075e09f09a8bab7e19c6bd0ef984bd7ec7c2b29cc7c37a780d4c57e4afc02",
+    "visualChecked": true
+  },
+  "pageImageEvidence": [
+    {
+      "pdfPage": 51,
+      "printedPage": 45,
+      "purpose": "exercise-2.1",
+      "imageSha256": "c3fbff5162db395a3e93014a044d9569e78c9992abed7eb14841d875dc1ddac4",
+      "visualChecked": true
+    },
+    {
+      "pdfPage": 314,
+      "printedPage": 308,
+      "purpose": "answer-appendix-exercise-2.1",
+      "imageSha256": "3af6ece4ad56a2bffe6e3ad0b124968b1a667ce644911fcdd7d4cce6d74ec60b",
+      "visualChecked": true
+    }
+  ],
+  "imageEvidenceChecked": true,
+  "scope": "Grade 9 Chapter 2 Exercise 2.1 Q1, Q2, Q3(i–iii)",
+  "numberedQuestionCount": 3,
+  "englishPartCount": 5,
+  "missingPartCount": 0,
+  "status": "source-audited-and-reconciled-with-preserved-runtime",
+  "tamilReview": "pending",
+  "teacherReview": "pending",
+  "externalApiSpendUsd": 0,
+  "caveats": [
+    "Printed page 45 (PDF page 51) contains exactly 3 numbered questions (Q1, Q2, Q3(i–iii)) before Section 2.3 Irrational Numbers.",
+    "All 5 subparts are already registered in runtime as preserved baseline records g9-ch2-ex1-q1 through g9-ch2-ex1-q3-iii.",
+    "Official answer appendix on printed page 308 (PDF page 314) explicitly notes for Q3(i–iii): 'The given answer is one of the answers. There can be many more answers'. Both the appendix midpoint answers and the preserved app answers are independently verified below."
+  ],
+  "rows": [
+    {
+      "id": "g9-ch2-ex1-q1",
+      "question": 1,
+      "part": "whole",
+      "stem": "Which arrow best shows the position of 11/3 on the number line?",
+      "sourceEnglish": "Which arrow best shows the position of 11/3 on the number line?",
+      "sourceMathLatex": "\\dfrac{11}{3}",
+      "answer": "Arrow D (11/3 = 3⅔ ≈ 3.667)",
+      "answerMathLatex": "\\text{Arrow }D\\left(\\dfrac{11}{3}=3\\dfrac{2}{3}\\approx 3.667\\right)",
+      "answerKeyShort": "D",
+      "sourceEvidence": {
+        "enPrintedPage": 45,
+        "enPdfPage": 51,
+        "answerEnPrintedPage": 308,
+        "answerEnPdfPage": 314
+      },
+      "steps": [
+        {
+          "reason": "Divide the numerator 11 by the denominator 3 to convert the improper fraction 11/3 into a mixed number and repeating decimal.",
+          "equation": "11/3 = 3 + 2/3 = 3.6666…",
+          "mathLatex": "\\dfrac{11}{3}=3+\\dfrac{2}{3}=3.6666\\ldots"
+        },
+        {
+          "reason": "Because 3⅔ is greater than 3 and less than 4, the point lies in the interval between 3 and 4, two-thirds of the way from 3 toward 4.",
+          "equation": "3 < 11/3 < 4",
+          "mathLatex": "3<\\dfrac{11}{3}<4"
+        },
+        {
+          "reason": "On the textbook number line, arrow C is just past 3 while arrow D is between 3 and 4 nearer to 4, so arrow D best represents 11/3.",
+          "equation": "D: approximately 3.67",
+          "mathLatex": "\\text{Arrow }D:\\quad \\dfrac{11}{3}\\approx 3.67"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": true
+    },
+    {
+      "id": "g9-ch2-ex1-q2",
+      "question": 2,
+      "part": "whole",
+      "stem": "Find any three rational numbers between -7/11 and 2/11.",
+      "sourceEnglish": "Find any three rational numbers between -7/11 and 2/11.",
+      "sourceMathLatex": "\\dfrac{-7}{11}\\text{ and }\\dfrac{2}{11}",
+      "answer": "−6/11, −5/11, −4/11",
+      "answerMathLatex": "-\\dfrac{6}{11},\\ -\\dfrac{5}{11},\\ -\\dfrac{4}{11}",
+      "answerKeyShort": "-6/11, -5/11, -4/11, ... 1/11",
+      "sourceEvidence": {
+        "enPrintedPage": 45,
+        "enPdfPage": 51,
+        "answerEnPrintedPage": 308,
+        "answerEnPdfPage": 314
+      },
+      "steps": [
+        {
+          "reason": "Both given rational numbers already share the same positive denominator 11, so we can compare them directly using their integer numerators.",
+          "equation": "−7 < −6 < −5 < −4 < −3 < −2 < −1 < 0 < 1 < 2",
+          "mathLatex": "-7<-6<-5<-4<-3<-2<-1<0<1<2"
+        },
+        {
+          "reason": "Dividing each interior integer numerator by the common denominator 11 gives fractions strictly between −7/11 and 2/11.",
+          "equation": "−7/11 < −6/11 < −5/11 < −4/11 < 2/11",
+          "mathLatex": "\\dfrac{-7}{11}<\\dfrac{-6}{11}<\\dfrac{-5}{11}<\\dfrac{-4}{11}<\\dfrac{2}{11}"
+        },
+        {
+          "reason": "Choose any three of these interior fractions, such as −6/11, −5/11, and −4/11.",
+          "equation": "−6/11, −5/11, −4/11",
+          "mathLatex": "-\\dfrac{6}{11},\\ -\\dfrac{5}{11},\\ -\\dfrac{4}{11}"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": true
+    },
+    {
+      "id": "g9-ch2-ex1-q3-i",
+      "question": 3,
+      "part": "i",
+      "stem": "Find any five rational numbers between",
+      "sourceEnglish": "1/4 and 1/5",
+      "sourceMathLatex": "\\dfrac{1}{4}\\text{ and }\\dfrac{1}{5}",
+      "answer": "0.21, 0.22, 0.23, 0.24, 0.245",
+      "answerMathLatex": "0.21,\\ 0.22,\\ 0.23,\\ 0.24,\\ 0.245",
+      "answerKeyShort": "9/40, 19/80, 39/160, 79/320, 159/640",
+      "sourceEvidence": {
+        "enPrintedPage": 45,
+        "enPdfPage": 51,
+        "answerEnPrintedPage": 308,
+        "answerEnPdfPage": 314
+      },
+      "steps": [
+        {
+          "reason": "Convert both unit fractions to terminating decimals (or common-denominator fractions) and order the smaller bound 1/5 before the larger bound 1/4.",
+          "equation": "1/5 = 0.20; 1/4 = 0.25",
+          "mathLatex": "\\dfrac{1}{5}=0.20,\\quad \\dfrac{1}{4}=0.25"
+        },
+        {
+          "reason": "Pick five terminating decimals (or repeated arithmetic midpoints 9/40, 19/80, 39/160, 79/320, 159/640) strictly between 0.20 and 0.25.",
+          "equation": "0.20 < 0.21 < 0.22 < 0.23 < 0.24 < 0.245 < 0.25",
+          "mathLatex": "0.20<0.21<0.22<0.23<0.24<0.245<0.25"
+        },
+        {
+          "reason": "Every terminating decimal is a rational number p/q, giving five valid rational numbers between 1/5 and 1/4.",
+          "equation": "0.21, 0.22, 0.23, 0.24, 0.245",
+          "mathLatex": "0.21,\\ 0.22,\\ 0.23,\\ 0.24,\\ 0.245"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": true
+    },
+    {
+      "id": "g9-ch2-ex1-q3-ii",
+      "question": 3,
+      "part": "ii",
+      "stem": "Find any five rational numbers between",
+      "sourceEnglish": "0.1 and 0.11",
+      "sourceMathLatex": "0.1\\text{ and }0.11",
+      "answer": "0.101, 0.102, 0.103, 0.104, 0.105",
+      "answerMathLatex": "0.101,\\ 0.102,\\ 0.103,\\ 0.104,\\ 0.105",
+      "answerKeyShort": "0.101, 0.102, ... 0.109",
+      "sourceEvidence": {
+        "enPrintedPage": 45,
+        "enPdfPage": 51,
+        "answerEnPrintedPage": 308,
+        "answerEnPdfPage": 314
+      },
+      "steps": [
+        {
+          "reason": "Append trailing zeros so both endpoints are written to three decimal places (thousandths) without changing their value.",
+          "equation": "0.1 = 0.100; 0.11 = 0.110",
+          "mathLatex": "0.1=0.100,\\quad 0.11=0.110"
+        },
+        {
+          "reason": "Any thousandth from 0.101 up to 0.109 lies strictly between 0.100 and 0.110.",
+          "equation": "0.100 < 0.101 < 0.102 < 0.103 < 0.104 < 0.105 < 0.110",
+          "mathLatex": "0.100<0.101<0.102<0.103<0.104<0.105<0.110"
+        },
+        {
+          "reason": "Select five distinct thousandths in that interval, such as 0.101, 0.102, 0.103, 0.104, and 0.105.",
+          "equation": "0.101, 0.102, 0.103, 0.104, 0.105",
+          "mathLatex": "0.101,\\ 0.102,\\ 0.103,\\ 0.104,\\ 0.105"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": true
+    },
+    {
+      "id": "g9-ch2-ex1-q3-iii",
+      "question": 3,
+      "part": "iii",
+      "stem": "Find any five rational numbers between",
+      "sourceEnglish": "–1 and –2",
+      "sourceMathLatex": "-1\\text{ and }-2",
+      "answer": "−1.1, −1.2, −1.3, −1.4, −1.5",
+      "answerMathLatex": "-1.1,\\ -1.2,\\ -1.3,\\ -1.4,\\ -1.5",
+      "answerKeyShort": "-3/2, -5/4, -9/8, -17/16, -33/32",
+      "sourceEvidence": {
+        "enPrintedPage": 45,
+        "enPdfPage": 51,
+        "answerEnPrintedPage": 308,
+        "answerEnPdfPage": 314
+      },
+      "steps": [
+        {
+          "reason": "On the number line, −2 lies to the left of −1, so −2 is the smaller endpoint and −1 is the larger endpoint.",
+          "equation": "−2 < x < −1",
+          "mathLatex": "-2<x<-1"
+        },
+        {
+          "reason": "Choose five terminating decimals (or repeated midpoints −3/2, −5/4, −9/8, −17/16, −33/32) strictly between −2 and −1.",
+          "equation": "−2 < −1.5 < −1.4 < −1.3 < −1.2 < −1.1 < −1",
+          "mathLatex": "-2<-1.5<-1.4<-1.3<-1.2<-1.1<-1"
+        },
+        {
+          "reason": "List the five rational numbers inside the interval (−2, −1).",
+          "equation": "−1.1, −1.2, −1.3, −1.4, −1.5",
+          "mathLatex": "-1.1,\\ -1.2,\\ -1.3,\\ -1.4,\\ -1.5"
+        }
+      ],
+      "translationReview": "pending",
+      "studentPublished": true
+    }
+  ]
+}

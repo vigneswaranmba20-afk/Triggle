@@ -401,7 +401,7 @@
     "g9-ch2-ex1-q1": {
       "step": 1,
       "expected": "The point lies between 3 and 4, nearer to 4; the matching arrow is D.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
+      "en": "Dividing 11 by 3 gives quotient 3 and remainder 2, so 11/3 = 3 + 2/3 ≈ 3.67. Dividing the unit interval from 3 to 4 into three equal thirds places 3 + 2/3 two-thirds of the way toward 4, which matches arrow D rather than arrow C.",
       "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
       "concept": "realLine",
       "diagram": {
@@ -416,28 +416,28 @@
     "g9-ch2-ex1-q2": {
       "step": 0,
       "expected": "The fractions already have a common positive denominator.",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
+      "en": "When two fractions share the same positive denominator 11, their order matches the order of their integer numerators. Any integer numerator strictly between −7 and 2 (from −6 up to 1) gives a rational number strictly between −7/11 and 2/11.",
       "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
       "concept": "rational"
     },
     "g9-ch2-ex1-q3-i": {
       "step": 0,
       "expected": "Convert both fractions to decimals.",
-      "en": "To compare fractions or decimals, express both in comparable forms first—for example with a common denominator or the same number of decimal places—then compare digits carefully.",
+      "en": "Because 5 > 4, the unit fraction 1/5 = 0.20 is smaller than 1/4 = 0.25. Writing both endpoints as hundredths lets you pick terminating decimals (such as 0.21, 0.22, 0.23, 0.24, 0.245) or repeated midpoints (9/40, 19/80, 39/160, 79/320, 159/640) strictly inside the interval.",
       "ta": "பின்னங்கள் அல்லது தசமங்களை ஒப்பிட முதலில் ஒரே பகுதி அல்லது ஒரே தசம இடங்கள் கொண்ட வடிவத்திற்கு மாற்றி, பின்னர் இலக்கங்களை ஒப்பிடவும்.",
       "concept": "comparison"
     },
     "g9-ch2-ex1-q3-ii": {
       "step": 0,
       "expected": "Write both values to three decimal places.",
-      "en": "Locate the place value requested, then inspect the next digit. Rounding changes the chosen digit only when that next digit is 5 or more.",
+      "en": "Appending trailing zeros after a decimal point does not change a number's value: 0.1 = 0.100 and 0.11 = 0.110. Expressing both bounds in thousandths reveals nine thousandths (0.101 through 0.109) strictly between them without any rounding.",
       "ta": "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது 5 அல்லது அதற்கு மேல் இருந்தால்தான் இலக்கத்தை உயர்த்த வேண்டும்.",
-      "concept": "rounding"
+      "concept": "comparison"
     },
     "g9-ch2-ex1-q3-iii": {
       "step": 0,
       "expected": "Remember −2 is less than −1 on the number line.",
-      "en": "A number line represents numbers by their order and distance. Values increase to the right; zooming an interval preserves their relative order.",
+      "en": "On the number line, −2 lies to the left of −1, so −2 < x < −1. Any terminating decimal between −2.0 and −1.0 (such as −1.1, −1.2, −1.3, −1.4, −1.5) or repeated midpoint (−3/2, −5/4, −9/8, −17/16, −33/32) is a rational number in this range.",
       "ta": "எண்கோட்டில் வலப்பக்கம் செல்லச் செல்ல மதிப்பு அதிகரிக்கும். ஓர் இடைவெளியைப் பெரிதாக்கினாலும் எண்களின் வரிசை மாறாது.",
       "concept": "realLine",
       "diagram": {
