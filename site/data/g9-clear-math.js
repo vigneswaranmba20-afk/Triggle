@@ -40252,23 +40252,68 @@ const texts={
     },
     "); put its spl"
   ],
-  "The semicircle construction makes two segments of lengths 1 and n. The perpendicular at their join has length √n by the geometric-mean theorem, giving the required point on a number line.": [
-    "The semicircle construction makes two segments of lengths ",
+  "Set A=0, B=3 and C=4 on the line, so AB=3 and BC=1. Draw the semicircle with diameter AC and a perpendicular from B to its arc at D. The height satisfies BD²=AB×BC=3, so BD=√3. Copy that length from zero to mark √3≈1.73205 between 1 and 2; an approximate decimal alone is not an exact construction.": [
+    "Set ",
+    {
+      "latex": "A = 0, B = 3",
+      "fallback": "A=0, B=3"
+    },
+    " and ",
+    {
+      "latex": "C = 4",
+      "fallback": "C=4"
+    },
+    " on the line, so ",
+    {
+      "latex": "AB = 3",
+      "fallback": "AB=3"
+    },
+    " and ",
+    {
+      "latex": "BC = 1",
+      "fallback": "BC=1"
+    },
+    ". Draw the semicircle with diameter ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    " and a perpendicular from ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " to its arc at ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    ". The height satisfies ",
+    {
+      "latex": "BD^{2} = AB \\times BC = 3",
+      "fallback": "BD²=AB×BC=3"
+    },
+    ", so ",
+    {
+      "latex": "BD = \\sqrt{3}",
+      "fallback": "BD=√3"
+    },
+    ". Copy that length from zero to mark ",
+    {
+      "latex": "\\sqrt{3} \\approx 1.73205",
+      "fallback": "√3≈1.73205"
+    },
+    " between ",
     {
       "latex": "1",
       "fallback": "1"
     },
     " and ",
     {
-      "latex": "n",
-      "fallback": "n"
+      "latex": "2",
+      "fallback": "2"
     },
-    ". The perpendicular at their join has ",
-    {
-      "latex": "\\text{length}\\,\\sqrt{n}",
-      "fallback": "length √n"
-    },
-    " by the geometric-mean theorem, giving the required point on a number line."
+    "; an approximate decimal alone is not an exact construction."
   ],
   "அரைவட்ட அமைப்பில் 1 மற்றும் n நீளமுள்ள இரு துண்டுகளின் சந்திப்பில் வரையும் செங்குத்தின் நீளம் வடிவியல் சராசரி தேற்றப்படி √n ஆகும்.": [
     "அரைவட்ட அமைப்பில் ",
@@ -40288,6 +40333,127 @@ const texts={
     },
     " ஆகும்."
   ],
+  "Set A=0, B=4.7 and C=5.7, with BC=1. Draw the semicircle over AC, and from B draw the perpendicular meeting the arc at D. By the geometric-mean relation BD²=AB×BC=4.7, so BD=√4.7. Transfer BD from zero; the point is about 2.16795, between 2 and 3.": [
+    "Set ",
+    {
+      "latex": "A = 0, B = 4.7",
+      "fallback": "A=0, B=4.7"
+    },
+    " and ",
+    {
+      "latex": "C = 5.7",
+      "fallback": "C=5.7"
+    },
+    ", with ",
+    {
+      "latex": "BC = 1",
+      "fallback": "BC=1"
+    },
+    ". Draw the semicircle over ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    ", and from ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " draw the perpendicular meeting the arc at ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    ". By the geometric-mean relation ",
+    {
+      "latex": "BD^{2} = AB \\times BC = 4.7",
+      "fallback": "BD²=AB×BC=4.7"
+    },
+    ", so ",
+    {
+      "latex": "BD = \\sqrt{4.7}",
+      "fallback": "BD=√4.7"
+    },
+    ". Transfer ",
+    {
+      "latex": "BD",
+      "fallback": "BD"
+    },
+    " from zero; the point is about ",
+    {
+      "latex": "2.16795",
+      "fallback": "2.16795"
+    },
+    ", between ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " and ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    "."
+  ],
+  "Set A=0, B=6.5 and C=7.5, keeping BC=1. Use a semicircle with diameter AC and draw the perpendicular BD up to the arc. Then BD²=AB×BC=6.5 and BD=√6.5. Copy BD from zero, giving approximately 2.54951 between 2 and 3; the construction identifies the exact irrational length.": [
+    "Set ",
+    {
+      "latex": "A = 0, B = 6.5",
+      "fallback": "A=0, B=6.5"
+    },
+    " and ",
+    {
+      "latex": "C = 7.5",
+      "fallback": "C=7.5"
+    },
+    ", keeping ",
+    {
+      "latex": "BC = 1",
+      "fallback": "BC=1"
+    },
+    ". Use a semicircle with diameter ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    " and draw the perpendicular ",
+    {
+      "latex": "BD",
+      "fallback": "BD"
+    },
+    " up to the arc. Then ",
+    {
+      "latex": "BD^{2} = AB \\times BC = 6.5",
+      "fallback": "BD²=AB×BC=6.5"
+    },
+    " and ",
+    {
+      "latex": "BD = \\sqrt{6.5}",
+      "fallback": "BD=√6.5"
+    },
+    ". Copy ",
+    {
+      "latex": "BD",
+      "fallback": "BD"
+    },
+    " from zero, giving approximately ",
+    {
+      "latex": "2.54951",
+      "fallback": "2.54951"
+    },
+    " between ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " and ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    "; the construction identifies the exact irrational length."
+  ],
   "Choose prefixes strictly between 0.301001… and 0.302002….": [
     "Choose prefixes strictly between ",
     {
@@ -40298,6 +40464,123 @@ const texts={
     {
       "latex": "0.302002\\ldots",
       "fallback": "0.302002…"
+    },
+    "."
+  ],
+  "The lower bound begins 0.3010… and the upper bound begins 0.3020… . Choose smaller prefixes 0.3013… and 0.3016… between them. For each chosen answer, continue with 1s separated by ever-longer runs of zeros, as in 1001000100001… . No single block repeats forever, so each decimal is non-terminating and non-recurring: that is why it is irrational.": [
+    "The lower bound begins ",
+    {
+      "latex": "0.3010\\ldots",
+      "fallback": "0.3010…"
+    },
+    " and the upper bound begins ",
+    {
+      "latex": "0.3020\\ldots",
+      "fallback": "0.3020…"
+    },
+    " . Choose smaller prefixes ",
+    {
+      "latex": "0.3013\\ldots",
+      "fallback": "0.3013…"
+    },
+    " and ",
+    {
+      "latex": "0.3016\\ldots",
+      "fallback": "0.3016…"
+    },
+    " between them. For each chosen answer, continue with ",
+    {
+      "latex": "1 s",
+      "fallback": "1s"
+    },
+    " separated by ever-longer runs of zeros, as in ",
+    {
+      "latex": "1001000100001\\ldots",
+      "fallback": "1001000100001…"
+    },
+    " . No single block repeats forever, so each decimal is non-terminating and non-recurring: that is why it is irrational."
+  ],
+  "Both endpoints are positive. Squaring allows an exact check without trusting rounded decimals: (6/7)²=36/49 < 3/4 < 4/5 < 144/169=(12/13)². Taking positive square roots proves 6/7 < √3/2 < √(4/5) < 12/13. Both choices are irrational because 3/4 and 4/5 are reduced fractions that are not squares of rational numbers.": [
+    "Both endpoints are positive. Squaring allows an exact check without trusting rounded decimals: ",
+    {
+      "latex": "\\left(\\dfrac{6}{7}\\right)^{2} = \\dfrac{36}{49} < \\dfrac{3}{4} < \\dfrac{4}{5} < \\dfrac{144}{169} = \\left(\\dfrac{12}{13}\\right)^{2}",
+      "fallback": "(6/7)²=36/49 < 3/4 < 4/5 < 144/169=(12/13)²"
+    },
+    ". Taking positive square roots proves ",
+    {
+      "latex": "\\dfrac{6}{7} < \\dfrac{\\sqrt{3}}{2} < \\sqrt{\\dfrac{4}{5}} < \\dfrac{12}{13}",
+      "fallback": "6/7 < √3/2 < √(4/5) < 12/13"
+    },
+    ". Both choices are irrational because ",
+    {
+      "latex": "\\dfrac{3}{4}",
+      "fallback": "3/4"
+    },
+    " and ",
+    {
+      "latex": "\\dfrac{4}{5}",
+      "fallback": "4/5"
+    },
+    " are reduced fractions that are not squares of rational numbers."
+  ],
+  "Compare the values inside the positive square roots: 2 < 5/2 < 8/3 < 3. Positive square roots keep the order, giving √2 < √(5/2) < √(8/3) < √3. Neither selected root can be rational: 5/2 and 8/3 are reduced fractions whose numerator and denominator are not both perfect squares.": [
+    "Compare the values inside the positive square roots: ",
+    {
+      "latex": "2 < \\dfrac{5}{2} < \\dfrac{8}{3} < 3",
+      "fallback": "2 < 5/2 < 8/3 < 3"
+    },
+    ". Positive square roots keep the order, giving ",
+    {
+      "latex": "\\sqrt{2} < \\sqrt{\\dfrac{5}{2}} < \\sqrt{\\dfrac{8}{3}} < \\sqrt{3}",
+      "fallback": "√2 < √(5/2) < √(8/3) < √3"
+    },
+    ". Neither selected root can be rational: ",
+    {
+      "latex": "\\dfrac{5}{2}",
+      "fallback": "5/2"
+    },
+    " and ",
+    {
+      "latex": "\\dfrac{8}{3}",
+      "fallback": "8/3"
+    },
+    " are reduced fractions whose numerator and denominator are not both perfect squares."
+  ],
+  "The given lower value starts 2.2360679… and the upper starts 2.236505500… . Both selected values satisfy 2.2360679… < 2.2361 < 2.2363 < 2.236505500… . They are rational because they terminate exactly: 2.2361=22361/10000 and 2.2363=22363/10000. The textbook also accepts other interior values, such as 2.2362.": [
+    "The given lower value starts ",
+    {
+      "latex": "2.2360679\\ldots",
+      "fallback": "2.2360679…"
+    },
+    " and the upper starts ",
+    {
+      "latex": "2.236505500\\ldots",
+      "fallback": "2.236505500…"
+    },
+    " . Both selected values satisfy ",
+    {
+      "latex": "2.2360679\\ldots",
+      "fallback": "2.2360679…"
+    },
+    " < ",
+    {
+      "latex": "2.2361 < 2.2363 < 2.236505500\\ldots",
+      "fallback": "2.2361 < 2.2363 < 2.236505500…"
+    },
+    " . They are rational because they terminate exactly: ",
+    {
+      "latex": "2.2361 = \\dfrac{22361}{10000}",
+      "fallback": "2.2361=22361/10000"
+    },
+    " and ",
+    {
+      "latex": "2.2363 = \\dfrac{22363}{10000}",
+      "fallback": "2.2363=22363/10000"
+    },
+    ". The textbook also accepts other interior values, such as ",
+    {
+      "latex": "2.2362",
+      "fallback": "2.2362"
     },
     "."
   ],
