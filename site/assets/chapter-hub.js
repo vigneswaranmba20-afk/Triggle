@@ -215,7 +215,7 @@
         feedback.textContent=(ta?'உறுப்பு ':'Term ')+n+' = '+v.values[n-1];
       });
     }else if(v.kind==='cycle'){
-      control(0,45,Number.isInteger(v.initial)?v.initial:3,n=>{
+      control(0,45,Number.isInteger(v.initial)?v.initial:(stage.id==='g10-ch2-modulo'?45:stage.id==='g10-ch2-congruence'?14:3),n=>{
         scene.replaceChildren();const mark=n%v.size;
         v.values.forEach((value,i)=>scene.append(chip(value,i===mark)));
         const division=n+' = '+v.size+' × '+Math.floor(n/v.size)+' + '+mark;
