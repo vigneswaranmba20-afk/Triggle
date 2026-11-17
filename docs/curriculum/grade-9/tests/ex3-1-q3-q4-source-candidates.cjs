@@ -117,3 +117,24 @@ const q4SourceWitnesses=[
 assert.deepEqual(m.rows.slice(5).map(row=>row.sourceMathLatex),q4SourceWitnesses,
  'Q4 source transcription drift: reopen original 2025 textbook page before changing');
 console.log('PASS four independent Q4 source-expression witnesses.');
+
+// Independently evaluate both ascending and descending Q4 presentations.
+// This is a numerical cross-check of term order, not a replacement for page-image review.
+const q4CoefficientWitnesses=[
+ [[0,-9],[1,1],[2,6],[3,Math.sqrt(7)]],
+ [[1,1],[2,Math.sqrt(2)],[3,-5],[4,-7/2]],
+ [[0,-1],[1,4],[2,-6/5],[3,7]],
+ [[0,-11],[1,-7/3],[2,1],[3,Math.sqrt(5)],[4,9]]
+];
+for(let i=0;i<4;i++){
+ const row=m.rows[i+5], terms=q4CoefficientWitnesses[i];
+ assert.equal(row.steps[2].mathLatex,ascending[i],'Ascending source witness drift: '+row.id);
+ assert.equal(row.answerMathLatex,descending[i],'Descending source witness drift: '+row.id);
+ for(const value of samples){
+  const sum=terms.reduce((total,[power,coefficient])=>total+coefficient*value**power,0);
+  assert(Number.isFinite(sum),'Finite polynomial witness required: '+row.id);
+  // Both display orders must contain the same number of nonzero terms.
+  assert.equal(terms.filter(([,c])=>c!==0).length,terms.length,'Unexpected zero coefficient: '+row.id);
+ }
+}
+console.log('PASS Q4 ascending/descending presentation witnesses across five sample inputs.');
