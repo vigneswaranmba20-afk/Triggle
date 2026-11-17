@@ -105,7 +105,7 @@ const entries=[
         "eq": "D = {2, 3, 4}",
         "math": {
           "latex": "D=\\{x\\in\\mathbb W:1<x<5\\}=\\{2,3,4\\}",
-          "fallback": "D = {2, 3, 4}",
+          "fallback": "D = {x in whole numbers: 1 < x < 5} = {2, 3, 4}; 1 and 5 are excluded; n(D) = 3",
           "display": true
         }
       },
