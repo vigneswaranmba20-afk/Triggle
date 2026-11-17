@@ -74,6 +74,37 @@ async function main(){
     assert(stepsQ8.includes('3640')&&stepsQ8.includes('35')&&stepsQ8.includes('zero'),'Student sees LCM reasoning and zero-quotient caveat');
     assert.equal(new URL(page.url()).searchParams.get('question'),'c10-2-ex2-2-q8','Q8 remains deep-linkable');
     assert.equal(await page.locator('[data-math-error]').count(),0,'No malformed Q8 mathematical notation');
+    // Re-enter concepts and exercise the weakest redesigned lessons in both languages.
+    await page.goto(url);
+    await page.locator(language==='en'?'#langEn':'#langTa').click();
+    await page.locator('.sp2-nav-button').nth(7).click();
+    assert((await page.locator('.sp2-formula').innerText()).includes('a'), 'Recursive rule is visible');
+    assert.equal(await page.locator('[data-math-error]').count(),0,'Recursive initial terms render');
+    await page.locator('[data-back-index]').click();
+    await page.locator('.sp2-nav-button').nth(12).click();
+    const gpNext=page.locator('.gp-lab-actions button').last();
+    for(let step=0;step<3;step++)await gpNext.click();
+    assert((await page.locator('.gp-lab-math').innerText()).includes('15'),'GP cancellation yields 15');
+    await gpNext.click();
+    assert(await page.locator('.gp-lab-general').isVisible(),'General formula revealed last');
+    await page.locator('[data-back-index]').click();
+    await page.locator('.sp2-nav-button').nth(13).click();
+    const ratios=page.locator('.g10ch2-discovery-choices button');
+    assert.equal(await ratios.count(),5,'Include an alternating negative ratio');
+    await ratios.nth(1).click();
+    assert.equal(await ratios.nth(1).getAttribute('aria-pressed'),'true');
+    await page.locator('.g10ch2-discovery-range-row input').fill('6');
+    assert((await page.locator('.g10ch2-discovery-note').innerText()).includes('0.65625'),'Negative-ratio partial sum');
+    assert(await page.locator('.g10ch2-discovery-track').isHidden(),'No deceptive progress bar for oscillation');
+    assert.equal(await page.locator('[data-math-error]').count(),0);
+    await page.locator('[data-back-index]').click();
+    await page.locator('.sp2-nav-button').nth(14).click();
+    const seriesOptions=page.locator('.g10ch2-discovery-choices button');
+    assert.equal(await seriesOptions.nth(1).getAttribute('aria-pressed'),'true','Start on squares to match quiz');
+    assert((await page.locator('.g10ch2-discovery-note').innerText()).includes('30'),'Four squares total 30');
+    await seriesOptions.nth(2).click();
+    assert((await page.locator('.g10ch2-discovery-note').innerText()).includes('100'),'Four cubes total 100');
+    assert.equal(await page.locator('[data-math-error]').count(),0,'Special series notation valid');
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No horizontal page overflow');
    }
    assert.deepEqual(errors,[],'No uncaught JavaScript exceptions at '+width);
