@@ -452,112 +452,112 @@
     "g9-ch2-ex2-q1-i": {
       "step": 1,
       "expected": "A zero remainder means terminating; repeated nonzero remainders produce a recurr",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
+      "en": "Divide 2 by 7. The nonzero remainders cycle and give 0.285714285714..., with the six-digit block 285714 repeating. Because the remainder never reaches zero, this decimal is non-terminating and recurring.",
       "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
       "concept": "rational"
     },
     "g9-ch2-ex2-q1-ii": {
       "step": 1,
       "expected": "A zero remainder means terminating; repeated nonzero remainders produce a recurr",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
+      "en": "Convert the negative mixed number first: -5 3/11 = -58/11. Because 3/11 = 0.272727..., the answer is -5.272727...; the repeating block is 27, and the minus sign applies to the whole number.",
       "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
       "concept": "rational"
     },
     "g9-ch2-ex2-q1-iii": {
       "step": 1,
       "expected": "A zero remainder means terminating; repeated nonzero remainders produce a recurr",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
+      "en": "22 divided by 3 is 7 with remainder 1. The remainder 1 keeps producing another 3, so 22/3 = 7.3333...; the shortest repeating block has one digit.",
       "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
       "concept": "rational"
     },
     "g9-ch2-ex2-q1-iv": {
       "step": 1,
       "expected": "A zero remainder means terminating; repeated nonzero remainders produce a recurr",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
+      "en": "The denominator 200 = 2^3 x 5^2 has no prime factors other than 2 and 5. Long division reaches zero remainder: 327/200 = 1.635, a terminating decimal.",
       "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
       "concept": "rational"
     },
     "g9-ch2-ex2-q2": {
       "step": 0,
       "expected": "Divide one by thirteen, keeping leading zeros in the repeating block.",
-      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "en": "Long division of 1 by 13 gives 0.076923076923... . The repeating block is 076923, including its first zero; leaving that zero out changes the number. The remainder first repeats after six decimal digits, so the shortest period has length 6.",
       "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
       "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q3": {
       "step": 1,
       "expected": "Separate the improper fraction into whole and fractional parts.",
-      "en": "To show a number is rational, write it as a fraction of two integers with a nonzero denominator. This includes terminating and repeating decimals.",
+      "en": "Start with 1/11 = 0.090909... . Dividing by 3 gives 1/33 = 0.030303... . Then 71/33 = 2 + 5/33 = 2.151515...: only the digits 15 repeat after the decimal point.",
       "ta": "ஒரு எண்ணை பூஜ்ஜியமற்ற பகுதியுள்ள இரு முழு எண்களின் பின்னமாக எழுத முடிந்தால் அது விகிதமுறு எண். முடிவுறும், சுழற்சி தசமங்களும் இதில் அடங்கும்.",
       "concept": "rational"
     },
     "g9-ch2-ex2-q4-i": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "en": "The overbar covers BOTH digits 24: x = 0.242424..., not terminating 0.24. Align the repeating tails: 100x - x = 24, so 99x = 24 and x = 8/33.",
       "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
       "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q4-ii": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "en": "The bar covers all three digits 327, so x = 2.327327327... . Multiply by 1000 and subtract x: 999x = 2325; hence x = 2325/999 = 775/333.",
       "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
       "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q4-iii": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "en": "There is NO recurring bar on -5.132. This is a terminating decimal: -5.132 = -5132/1000 = -1283/250. Do not apply the repeating-decimal subtraction rule to it.",
       "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
       "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q4-iv": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "en": "Only 7 has the recurring bar: x = 3.17777..., not 3.171717... . Align the 7 tails by subtracting 10x from 100x: 90x = 317 - 31 = 286, giving x = 143/45.",
       "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
       "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q4-v": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "en": "In 17.2(15), the digit 2 is NOT repeating; only 15 repeats: x = 17.2151515... . Then 1000x - 10x = 17215 - 172 = 17043, so x = 5681/330.",
       "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
       "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q4-vi": {
       "step": 0,
       "expected": "Align the repeating tails using appropriate powers of ten, or put a terminating ",
-      "en": "For a repeating decimal, multiply by powers of ten to align identical recurring tails, then subtract to eliminate those tails. This gives a fraction without guessing digits.",
+      "en": "In -21.213(7), only the final 7 repeats: x = -21.213777... . The negative sign matters: 10000x - 1000x = -212137 + 21213 = -190924, so x = -47731/2250.",
       "ta": "சுழற்சித் தசமத்தில் திரும்பும் இலக்கங்களை ஒரே இடத்தில் வருமாறு பத்தின் அடுக்குகளால் பெருக்கி கழித்தால் சுழற்சி நீங்கும்; பின்னம் கிடைக்கும்.",
       "concept": "repeatingDecimal"
     },
     "g9-ch2-ex2-q5-i": {
       "step": 0,
       "expected": "Reduce the fraction and factor its denominator.",
-      "en": "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than 2 and 5.",
+      "en": "After reducing 7/128, the denominator remains 128 = 2^7. A denominator containing only factors 2 and 5 gives a terminating decimal; no long division is needed.",
       "ta": "பின்னத்தை முதலில் மீச்சிறு வடிவிற்கு சுருக்கவும். அதன் பகுதியில் 2, 5 தவிர வேறு பகா காரணி இல்லாவிட்டால்தான் தசமம் முடிவுறும்.",
       "concept": "terminatingRule"
     },
     "g9-ch2-ex2-q5-ii": {
       "step": 0,
       "expected": "Reduce the fraction and factor its denominator.",
-      "en": "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than 2 and 5.",
+      "en": "Always reduce first: 21/15 = 7/5. Although the original denominator 15 contains a 3, it cancels; the reduced denominator 5 gives a terminating decimal.",
       "ta": "பின்னத்தை முதலில் மீச்சிறு வடிவிற்கு சுருக்கவும். அதன் பகுதியில் 2, 5 தவிர வேறு பகா காரணி இல்லாவிட்டால்தான் தசமம் முடிவுறும்.",
       "concept": "terminatingRule"
     },
     "g9-ch2-ex2-q5-iii": {
       "step": 0,
       "expected": "Reduce the fraction and factor its denominator.",
-      "en": "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than 2 and 5.",
+      "en": "Convert the mixed number: 4 9/35 = 149/35. It is already reduced, and 35 = 5 x 7 contains the prime 7, so the decimal does not terminate (it recurs).",
       "ta": "பின்னத்தை முதலில் மீச்சிறு வடிவிற்கு சுருக்கவும். அதன் பகுதியில் 2, 5 தவிர வேறு பகா காரணி இல்லாவிட்டால்தான் தசமம் முடிவுறும்.",
       "concept": "terminatingRule"
     },
     "g9-ch2-ex2-q5-iv": {
       "step": 0,
       "expected": "Reduce the fraction and factor its denominator.",
-      "en": "First reduce the fraction to lowest terms. Its decimal terminates precisely when the remaining denominator contains no prime factors other than 2 and 5.",
+      "en": "The fraction 219/2200 is reduced: 219 = 3 x 73 and 2200 = 2^3 x 5^2 x 11. The factor 11 cannot cancel, so the decimal is non-terminating and recurring.",
       "ta": "பின்னத்தை முதலில் மீச்சிறு வடிவிற்கு சுருக்கவும். அதன் பகுதியில் 2, 5 தவிர வேறு பகா காரணி இல்லாவிட்டால்தான் தசமம் முடிவுறும்.",
       "concept": "terminatingRule"
     },
