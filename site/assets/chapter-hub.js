@@ -209,7 +209,7 @@
           for(let j=0;j<r;j++)rest.append(chip('•'));scene.append(rest);}
         feedback.textContent=n+' = '+v.size+' × '+q+' + '+r+(ta?' (மீதி '+r+')':' (remainder '+r+')');
       });
-    }else if(v.kind==='sequence'||v.kind==='remainders'){
+    }else if(v.kind==='remainders'){
       control(1,v.values.length,1,n=>{
         scene.replaceChildren();v.values.forEach((value,i)=>scene.append(chip(value,i===n-1)));
         feedback.textContent=(ta?'உறுப்பு ':'Term ')+n+' = '+v.values[n-1];
