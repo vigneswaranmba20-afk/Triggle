@@ -65,7 +65,7 @@ const restore=(key,old)=>{if(old===undefined)delete process.env[key];else proces
  await test('local-first skips medium, and live cannot silently spend',async()=>{
    assert.equal((await runDualReview({...fixture,difficulty:'medium'})).status,'LOCAL_FIRST_SKIPPED');
    await assert.rejects(runDualReview(fixture,{live:true,authorizeSpend:false}),/EXPLICIT_SPEND_APPROVAL_REQUIRED/);
-   assert.equal(taskFor('openai',fixture,true).retry_policy.max_retries,0);
+   assert.equal(taskFor('openai',fixture,true,{evidenceSha256:'a'.repeat(64),claim:'STRUCTURALLY_VALIDATED_NOT_VISUALLY_CERTIFIED'}).retry_policy.max_retries,0);
  });
  await test('offline pilot runs both mocked adapters and publishes nothing',async()=>{
    const dir=fs.mkdtempSync(path.join(os.tmpdir(),'trace-dual-tests-'));

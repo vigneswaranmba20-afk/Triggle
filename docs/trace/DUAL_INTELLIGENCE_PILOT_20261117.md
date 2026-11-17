@@ -75,3 +75,40 @@ npm test
 ~~~
 
 Passing offline tests does not mean real Gemini quotas, API credit eligibility, Fola narration completion or actual production cost is verified.
+
+
+## Phase B evidence gate (17 November)
+
+Before any **live** OpenAI/Gemini review, TRACE requires source metadata for the actual Grade 9–12 English **and** Tamil textbook pages. The `sourceVerified: true` flag alone no longer passes.
+
+The private input JSON must also contain a `sourceEvidence` object, structured as follows (the placeholder hashes below are **not real evidence**):
+
+~~~json
+{
+  "sourceEvidence": {
+    "edition": "2025",
+    "pages": {
+      "en": {
+        "bookSha256": "ACTUAL_64_CHAR_HASH_FROM_REGISTRY",
+        "imageSha256": "ACTUAL_64_CHAR_IMAGE_DIGEST",
+        "pdfPage": 30,
+        "printedPage": 25,
+        "visualChecked": true
+      },
+      "ta": {
+        "bookSha256": "ACTUAL_64_CHAR_HASH_FROM_REGISTRY",
+        "imageSha256": "ACTUAL_64_CHAR_IMAGE_DIGEST",
+        "pdfPage": 30,
+        "printedPage": 25,
+        "visualChecked": true
+      }
+    }
+  }
+}
+~~~
+
+**Limitation:** This code validates only registry book identity, reported page bounds, supplied hashes and flags. It does **not** independently open the PDF or prove that the image hash corresponds to a genuine page. Never mark `visualChecked` true without an actual source-page inspection. Page-specific question matching and English/Tamil fidelity still require Triggle's existing source review gate. No textbook certification follows merely from this evidence structure.
+
+Added offline negative tests for swapped books, impossible pages, missing visual inspection, unrecognized image hashes, mismatched grades and provider refusals. No paid API requests occur in these tests.
+
+API references: [GPT-6 Luna](https://developers.openai.com/api/docs/models/gpt-6-luna), [Gemini 3.8 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash).
