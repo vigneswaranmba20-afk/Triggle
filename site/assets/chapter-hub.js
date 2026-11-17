@@ -209,16 +209,31 @@
           for(let j=0;j<r;j++)rest.append(chip('•'));scene.append(rest);}
         feedback.textContent=n+' = '+v.size+' × '+q+' + '+r+(ta?' (மீதி '+r+')':' (remainder '+r+')');
       });
-    }else if(v.kind==='sequence'||v.kind==='remainders'){
+    }else if(v.kind==='remainders'){
       control(1,v.values.length,1,n=>{
         scene.replaceChildren();v.values.forEach((value,i)=>scene.append(chip(value,i===n-1)));
         feedback.textContent=(ta?'உறுப்பு ':'Term ')+n+' = '+v.values[n-1];
       });
     }else if(v.kind==='cycle'){
-      control(0,45,3,n=>{
+      control(0,45,Number.isInteger(v.initial)?v.initial:(stage.id==='g10-ch2-modulo'?45:stage.id==='g10-ch2-congruence'?14:3),n=>{
         scene.replaceChildren();const mark=n%v.size;
         v.values.forEach((value,i)=>scene.append(chip(value,i===mark)));
-        feedback.textContent=n+' = '+v.size+' × '+Math.floor(n/v.size)+' + '+mark;
+        const division=n+' = '+v.size+' × '+Math.floor(n/v.size)+' + '+mark;
+        if(stage.id==='g10-ch2-congruence'){
+          feedback.textContent=division+'; '+n+' ≡ '+mark+' (mod '+v.size+')';
+        }else{
+          feedback.textContent=division+'; '+(ta?'நாள் '+n+' கழித்து: ':'After '+n+' days: ')+v.values[mark];
+        }
+      });
+    }else if(v.kind==='sequence'){
+      control(1,v.values.length,Math.min(4,v.values.length),n=>{
+        scene.replaceChildren();
+        v.values.forEach((value,i)=>{
+          const term=chip(value,i===n-1);
+          term.setAttribute('aria-label',(ta?'உறுப்பு ':'Term ')+(i+1)+': '+value);
+          scene.append(term);
+        });
+        feedback.textContent=(ta?'உறுப்பு ':'Term ')+n+' = '+v.values[n-1];
       });
     }else if(v.kind==='factors'){
       scene.append(chip('12 = 2 × 2 × 3'),chip('18 = 2 × 3 × 3'));
