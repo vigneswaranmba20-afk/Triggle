@@ -193,6 +193,18 @@ for(let i=0;i<expectedQ3.length;i++){
 }
 assert(!html.includes('g9-ch1-ex1-2-q3-staged-en.js'),
  'Staged Q3 must not be loaded by the student-facing index');
+// Guard the Q3(ii) strict-bound explanation against a partial visual update:
+// students and screen readers must both see the three-member count.
+const q3ii=staged.find(row=>row.id==='g9-ch1-ex1.2-q3-ii');
+assert(q3ii,'Missing staged Q3(ii)');
+const q3iiEnumeration=q3ii.steps.find(step=>step.math?.latex?.includes('n(D)=3'));
+assert(q3iiEnumeration,'Q3(ii) must display n(D)=3 in KaTeX');
+assert(q3iiEnumeration.math.fallback.includes('n(D) = 3'),
+ 'Q3(ii) accessible fallback must state n(D) = 3');
+assert(q3iiEnumeration.math.latex.includes('1<x<5'),
+ 'Q3(ii) must preserve both strict inequality bounds');
+assert(q3iiEnumeration.en.includes('neither endpoint 1 nor endpoint 5'),
+ 'Q3(ii) must explain excluded endpoints in plain English');
 // Fail loudly if somebody tries to register the full candidate module on top of Q1/Q2.
 const full=read('site/data/textbook-exercises/g9-ch1-ex1-2-en.js');
 assert(!html.includes('g9-ch1-ex1-2-en.js'),'Full 34-part archive must remain isolated');
