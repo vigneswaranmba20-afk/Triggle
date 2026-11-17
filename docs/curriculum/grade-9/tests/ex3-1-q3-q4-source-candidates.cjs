@@ -38,6 +38,17 @@ for(const row of m.rows){
  }
  for(const step of row.steps){assert(step.reason.length>45&&step.equation&&step.mathLatex);steps++;}
 }
+// Keep the authored explanations aligned with the displayed and accessible answers.
+for(const row of m.rows.slice(0,5)){
+ assert(row.steps.at(-1).mathLatex.includes(row.answerKeyShort),'Final degree explanation disagrees: '+row.id);
+ assert.equal(row.answerMathLatex,row.answerKeyShort,'Displayed degree disagrees: '+row.id);
+}
+for(const row of m.rows.slice(5)){
+ assert.equal(row.steps[1].mathLatex,row.answerMathLatex,'Descending worked step disagrees: '+row.id);
+ assert.equal(row.steps[2].equation,row.answer.split('ascending: ')[1],'Ascending accessible answer disagrees: '+row.id);
+ assert(row.steps[2].mathLatex!==row.answerMathLatex,'Both mathematical orders required: '+row.id);
+}
+assert.equal(m.tamilReview,'pending');assert.equal(m.teacherReview,'pending');
 assert.equal(renders,45);assert.equal(steps,27);
 console.log('PASS G9 Algebra Ex3.1 Q3–Q4: nine original-image-audited parts, official degree answers [7,4,5,6,4], standard-order results, domain caveat, 27 steps, 45 accessible KaTeX renders, no premature student publication.');
 
