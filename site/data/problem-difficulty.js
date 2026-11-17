@@ -4155,7 +4155,12 @@ const metadata={
     "g9-ch3-ex3.1-q8": {"grade":9,"level":"medium","basis":"Grade 9 Chapter 3, Exercise 3.1 · Q8: Solve A(x) − P(x) = B(x) by subtracting the target polynomial from the degree-4 starting polynomial.","review":"implementation-audit"},
     "g9-ch3-ex3.1-q9-i": {"grade":9,"level":"medium","basis":"Grade 9 Chapter 3, Exercise 3.1 · Q9(i): Multiply a quadratic binomial by a quadratic trinomial, collect like x² terms, and find the degree.","review":"implementation-audit"},
     "g9-ch3-ex3.1-q9-ii": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 3, Exercise 3.1 · Q9(ii): Multiply two linear binomials using the distributive law and state the degree.","review":"implementation-audit"},
-    "g9-ch3-ex3.1-q9-iii": {"grade":9,"level":"medium","basis":"Grade 9 Chapter 3, Exercise 3.1 · Q9(iii): Multiply a quadratic trinomial by a linear binomial, combine like terms, and state degree 3.","review":"implementation-audit"}
+    "g9-ch3-ex3.1-q9-iii": {"grade":9,"level":"medium","basis":"Grade 9 Chapter 3, Exercise 3.1 · Q9(iii): Multiply a quadratic trinomial by a linear binomial, combine like terms, and state degree 3.","review":"implementation-audit"},
+    "c10-2-ex2-6-q1-iii": {"grade":10,"level":"easy","basis":"Find the number of terms from the last term and apply the A.P. sum formula","review":"implementation-audit"},
+    "c10-2-ex2-6-q3": {"grade":10,"level":"easy","basis":"Evaluate first and 28th terms from linear nth-term formula and sum the A.P.","review":"implementation-audit"},
+    "c10-2-ex2-6-q4": {"grade":10,"level":"medium","basis":"Recover t_n = S_n - S_{n-1} from quadratic partial sum and prove constant difference","review":"implementation-audit"},
+    "c10-2-ex2-6-q11": {"grade":10,"level":"difficult","basis":"Generalize n-term sum across m arithmetic progressions and sum over k = 1..m","review":"implementation-audit"},
+    "c10-2-ex2-6-q12": {"grade":10,"level":"medium","basis":"Sum 12 fractional algebraic terms with common denominator a + b in A.P.","review":"implementation-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
