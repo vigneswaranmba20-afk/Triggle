@@ -11,6 +11,16 @@ const metadata={
     "difficult": "Complex reasoning, proof, case analysis, multi-stage calculations or advanced connections."
   },
   "entries": {
+    "g9-ch1-ex1.2-q3-i": {"grade":9,"level":"medium","basis":"Distinguish equivalent sets by cardinality from equal sets with identical members","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q3-ii": {"grade":9,"level":"easy","basis":"Enumerate whole-number values between strict bounds and compare membership","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q3-iii": {"grade":9,"level":"easy","basis":"Recognize equality of sets regardless of the ordering of their elements","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q3-iv": {"grade":9,"level":"medium","basis":"Independently enumerate prime numbers and divisors before counting two equivalent sets","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q4-i": {"grade":9,"level":"easy","basis":"Identify an empty natural-number interval with both endpoints excluded","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q4-ii": {"grade":9,"level":"easy","basis":"Use even-number definition to reject an impossible membership condition","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q4-iii": {"grade":9,"level":"easy","basis":"Distinguish the singleton set containing zero from the empty set","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q4-iv": {"grade":9,"level":"easy","basis":"Apply the defining number of sides of a triangle to identify an empty set","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q5-i": {"grade":9,"level":"easy","basis":"Find explicit common letter elements and decide the intersection is nonempty","review":"implementation-audit"},
+    "g9-ch1-ex1.2-q5-ii": {"grade":9,"level":"medium","basis":"Recognize the unique even prime and strict greater-than-two constraint","review":"implementation-audit"},
     "g9-ch1-ex1.2-q2-i": {"grade":9,"level":"easy","basis":"Classify a current finite administrative list without asserting a fixed district count","review":"implementation-audit"},
     "g9-ch1-ex1.2-q2-ii": {"grade":9,"level":"medium","basis":"Demonstrate arbitrarily many lines through one point","review":"implementation-audit"},
     "g9-ch1-ex1.2-q2-iii": {"grade":9,"level":"medium","basis":"Show that all integers below a bound are unbounded to the left","review":"implementation-audit"},
