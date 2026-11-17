@@ -17,10 +17,10 @@ function check(value,original,id){
   assert(html.includes('<math')&&html.includes('katex-html'),'Accessible and visual math: '+id);formulas++;
  }
 }
-const items=load();assert.equal(items.length,347);
-assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,6,12,9,40,37,31,26]);
+const items=load();assert.equal(items.length,358);
+assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,17,12,9,40,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
-assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,4);
+assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,15);
 for(const q of items){
  const before=JSON.stringify(q),p=get(q);assert(p,q.id);assert.equal(p.steps.length,q.steps.length);
  for(const lang of ['en','ta'])check(p.questionMath[lang]||p.questionMath.en,q.q[lang]||q.q.en,q.id+' '+lang);
@@ -54,4 +54,4 @@ const html=read('index.html'),sw=read('service-worker.js');
 assert(html.indexOf('data/g9-clear-math.js')>html.indexOf('data/textbook-exercises/g9-ch3-ex3-2-q4-en.js'));
 assert(html.indexOf('data/g9-clear-math.js')<html.indexOf('assets/app.js'));
 assert(sw.includes("'./data/g9-clear-math.js'"));assert(sw.includes('g9-clear-math'));
-console.log('PASS Grade 9: 347 preserved records across all nine chapters, '+formulas+' valid offline TeX formulas, bilingual fallbacks, fractional powers, radical/fraction grouping, recurring decimals, aligned steps and isolated presentation.');
+console.log('PASS Grade 9: 358 preserved records across all nine chapters, '+formulas+' valid offline TeX formulas, bilingual fallbacks, fractional powers, radical/fraction grouping, recurring decimals, aligned steps and isolated presentation.');

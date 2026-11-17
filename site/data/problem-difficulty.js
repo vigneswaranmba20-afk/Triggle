@@ -11,6 +11,17 @@ const metadata={
     "difficult": "Complex reasoning, proof, case analysis, multi-stage calculations or advanced connections."
   },
   "entries": {
+    "g9-ch3-ex3.1-q1-i": {"grade":9,"level":"easy","basis":"Classify polynomial forms using integer powers and valid algebraic simplification","review":"implementation-audit"},
+    "g9-ch3-ex3.1-q1-ii": {"grade":9,"level":"easy","basis":"Classify polynomial forms using integer powers and valid algebraic simplification","review":"implementation-audit"},
+    "g9-ch3-ex3.1-q1-iii": {"grade":9,"level":"easy","basis":"Classify polynomial forms using integer powers and valid algebraic simplification","review":"implementation-audit"},
+    "g9-ch3-ex3.1-q1-iv": {"grade":9,"level":"medium","basis":"Classify polynomial forms using integer powers and valid algebraic simplification","review":"implementation-audit"},
+    "g9-ch3-ex3.1-q1-v": {"grade":9,"level":"easy","basis":"Classify polynomial forms using integer powers and valid algebraic simplification","review":"implementation-audit"},
+    "g9-ch3-ex3.1-q1-vi": {"grade":9,"level":"medium","basis":"Classify polynomial forms using integer powers and valid algebraic simplification","review":"implementation-audit"},
+    "g9-ch3-ex3.1-q2-i": {"grade":9,"level":"easy","basis":"Read signed x-squared and x coefficients, including irrational constants","review":"implementation-audit"},
+    "g9-ch3-ex3.1-q2-ii": {"grade":9,"level":"easy","basis":"Read signed x-squared and x coefficients, including irrational constants","review":"implementation-audit"},
+    "g9-ch3-ex3.1-q2-iii": {"grade":9,"level":"easy","basis":"Read signed x-squared and x coefficients, including irrational constants","review":"implementation-audit"},
+    "g9-ch3-ex3.1-q2-iv": {"grade":9,"level":"easy","basis":"Read signed x-squared and x coefficients, including irrational constants","review":"implementation-audit"},
+    "g9-ch3-ex3.1-q2-v": {"grade":9,"level":"easy","basis":"Read signed x-squared and x coefficients, including irrational constants","review":"implementation-audit"},
     "g9-ch1-ex1.2-q3-i": {"grade":9,"level":"medium","basis":"Distinguish equivalent sets by cardinality from equal sets with identical members","review":"implementation-audit"},
     "g9-ch1-ex1.2-q3-ii": {"grade":9,"level":"easy","basis":"Enumerate whole-number values between strict bounds and compare membership","review":"implementation-audit"},
     "g9-ch1-ex1.2-q3-iii": {"grade":9,"level":"easy","basis":"Recognize equality of sets regardless of the ordering of their elements","review":"implementation-audit"},

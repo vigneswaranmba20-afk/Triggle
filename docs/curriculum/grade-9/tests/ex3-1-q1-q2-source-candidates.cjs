@@ -11,7 +11,7 @@ assert.equal(json.englishPartCount,11);
 assert.equal(json.rows.length,11);
 assert.equal(json.pageImagesInspected,true);
 assert.equal(json.textbookAnswerKeyConfirmed,true);
-assert.equal(json.status,'audited-English-candidates-not-student-registered');
+assert.equal(json.status,'student-source-registered-not-live-verified');
 assert.match(json.sourcePdfSha256,/^[0-9a-f]{64}$/);
 assert.equal(json.sourceOriginalPdfPages[0],93);
 assert.equal(json.answerKeyPdfPages[0],316);
@@ -38,7 +38,8 @@ for(const row of json.rows){
  assert.equal(row.sourceEvidence.pdfPage,93);
  assert.equal(row.sourceEvidence.answerPdfPage,316);
  assert(row.sourceEnglish&&row.stem&&row.answer,'Complete source and answer '+row.id);
- assert(!html.includes(row.id),'Candidate question IDs are not registered in the published student index: '+row.id);
+ assert.equal(row.studentRegisteredOnBranch,true,'Student source registration tracked: '+row.id);
+ assert(html.includes('data/textbook-exercises/g9-ch3-ex3-1-q1-q2-en.js'),'Source module included in student index');
  assert.equal(row.steps.length,3);
  for(const [name,latex] of [['source',row.sourceMathLatex],['answer',row.answerMathLatex],...row.steps.map((step,i)=>['step '+i,step.mathLatex])]){
   const rendered=katex.renderToString(latex,{throwOnError:true,trust:false,strict:'error',output:'htmlAndMathml'});

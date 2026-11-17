@@ -30668,6 +30668,545 @@ const records=[
     ]
   },
   {
+    "id": "g9-ch3-ex3.1-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Which of the following expressions are polynomials? If not give reason:\n(i) ",
+        {
+          "latex": "\\frac{1}{x^2}+3x-4",
+          "fallback": "(i) 1/x² + 3x − 4"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Not a polynomial}",
+      "fallback": "Not a polynomial",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "0,1,2,\\ldots",
+          "fallback": "allowed exponents: 0, 1, 2, …",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A polynomial is a finite sum of terms with variables raised only to whole-number powers 0, 1, 2, and so on."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\frac{1}{x^2}=x^{-2}",
+          "fallback": "1/x² = x⁻²",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Rewrite the reciprocal as a negative power; dividing by x squared is the same as multiplying by x to the power minus two, wherever x is nonzero."
+        }
+      },
+      {
+        "math": {
+          "latex": "-2<0",
+          "fallback": "−2 < 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The exponent −2 is negative, so this expression is not a polynomial in x."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Which of the following expressions are polynomials? If not give reason:\n(ii) ",
+        {
+          "latex": "x^2(x-1)",
+          "fallback": "(ii) x²(x − 1)"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Polynomial}",
+      "fallback": "Polynomial",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^2(x-1)=x^2\\cdot x-x^2\\cdot1",
+          "fallback": "x²(x − 1) = x²·x − x²·1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Multiply x squared by each term inside the bracket using the distributive law."
+        }
+      },
+      {
+        "math": {
+          "latex": "x^3-x^2",
+          "fallback": "x³ − x²",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Add exponents when multiplying powers of the same base, giving x cubed minus x squared."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=3",
+          "fallback": "degree = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Both exponents 3 and 2 are nonnegative integers, so the expression is a polynomial of degree three."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Which of the following expressions are polynomials? If not give reason:\n(iii) ",
+        {
+          "latex": "\\frac{1}{x}(x+5)",
+          "fallback": "(iii) (1/x)(x + 5)"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Not a polynomial}",
+      "fallback": "Not a polynomial",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\frac{1}{x}(x+5)=\\frac{x}{x}+\\frac{5}{x}",
+          "fallback": "(1/x)(x + 5) = x/x + 5/x",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Distribute 1/x across the two terms inside (x + 5); the original expression requires x to be nonzero."
+        }
+      },
+      {
+        "math": {
+          "latex": "1+\\frac{5}{x}=1+5x^{-1}",
+          "fallback": "1 + 5/x = 1 + 5x⁻¹",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Simplify x/x to one and rewrite 5/x with exponent −1."
+        }
+      },
+      {
+        "math": {
+          "latex": "-1",
+          "fallback": "exponent = −1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A variable appearing with a negative exponent violates the polynomial definition, so the expression is not a polynomial."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q1-iv",
+    "questionMath": {
+      "en": [
+        "1. Which of the following expressions are polynomials? If not give reason:\n(iv) ",
+        {
+          "latex": "\\frac{1}{x^{-2}}+\\frac{1}{x^{-1}}+7",
+          "fallback": "(iv) 1/x⁻² + 1/x⁻¹ + 7"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Polynomial (for }x\\ne0\\text{)}",
+      "fallback": "Polynomial (after simplification for x ≠ 0)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\frac{1}{x^{-2}}=x^2\\quad(x\\ne0)",
+          "fallback": "1/x⁻² = x²",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A negative exponent means a reciprocal; taking the reciprocal of x to the power −2 gives x squared, when x is nonzero."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\frac{1}{x^{-1}}=x\\quad(x\\ne0)",
+          "fallback": "1/x⁻¹ = x",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Similarly, the reciprocal of x to the power −1 equals x, so simplify both fractions before checking powers."
+        }
+      },
+      {
+        "math": {
+          "latex": "x^2+x+7",
+          "fallback": "x² + x + 7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The result x² + x + 7 has only nonnegative whole-number powers, which is the polynomial form listed in the textbook answer key. The unsimplified original expression remains undefined at x = 0."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q1-v",
+    "questionMath": {
+      "en": [
+        "1. Which of the following expressions are polynomials? If not give reason:\n(v) ",
+        {
+          "latex": "\\sqrt5\\,x^2+\\sqrt3\\,x+\\sqrt2",
+          "fallback": "(v) √5 x² + √3 x + √2"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Polynomial}",
+      "fallback": "Polynomial",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\sqrt5,\\sqrt3,\\sqrt2\\in\\mathbb{R}",
+          "fallback": "√5, √3, √2 ∈ ℝ",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The square roots of 5, 3, and 2 are real numbers, so they may be used as constant coefficients in a polynomial."
+        }
+      },
+      {
+        "math": {
+          "latex": "x^2,\\ x^1,\\ x^0",
+          "fallback": "powers of x: 2, 1, 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The powers of x in the three terms are 2, 1, and 0; a constant term has power zero."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\deg=2",
+          "fallback": "degree = 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "All variable exponents are nonnegative integers, so this is a polynomial of degree two."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q1-vi",
+    "questionMath": {
+      "en": [
+        "1. Which of the following expressions are polynomials? If not give reason:\n(vi) ",
+        {
+          "latex": "m^2-\\sqrt[3]{m}+7m-10",
+          "fallback": "(vi) m² − ∛m + 7m − 10"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Not a polynomial}",
+      "fallback": "Not a polynomial",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\sqrt[3]{m}=m^{1/3}",
+          "fallback": "∛m = m¹ᐟ³",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A cube root can be written as a fractional exponent one-third."
+        }
+      },
+      {
+        "math": {
+          "latex": "m^2-m^{1/3}+7m-10",
+          "fallback": "m² − m¹ᐟ³ + 7m − 10",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Rewrite the expression with that exponent to check whether each variable power is a whole number."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\frac13\\notin\\{0,1,2,\\ldots\\}",
+          "fallback": "1/3 ∉ {0,1,2,…}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "One-third is not a nonnegative integer, so the expression is not a polynomial in m."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q2-i",
+    "questionMath": {
+      "en": [
+        "2. Write the coefficient of x² and x in each of the following polynomials.\n(i) ",
+        {
+          "latex": "4+\\frac25x^2-3x",
+          "fallback": "(i) 4 + (2/5)x² − 3x"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "a_{x^2}=\\frac25,\\ a_x=-3",
+      "fallback": "Coefficient of x²: 2/5; coefficient of x: −3",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a\\cdot x^n",
+          "fallback": "coefficient × power",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The coefficient is the number multiplying the specified power of x, including its sign."
+        }
+      },
+      {
+        "math": {
+          "latex": "a_{x^2}=\\frac25",
+          "fallback": "coefficient of x² = 2/5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The x-squared term is (2/5)x², so its coefficient is two-fifths."
+        }
+      },
+      {
+        "math": {
+          "latex": "a_x=-3",
+          "fallback": "coefficient of x = −3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The x term is −3x, so its coefficient is negative three. The separate constant 4 is not part of either requested coefficient."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q2-ii",
+    "questionMath": {
+      "en": [
+        "2. Write the coefficient of x² and x in each of the following polynomials.\n(ii) ",
+        {
+          "latex": "6-2x^2+3x^3-\\sqrt7\\,x",
+          "fallback": "(ii) 6 − 2x² + 3x³ − √7 x"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "a_{x^2}=-2,\\ a_x=-\\sqrt7",
+      "fallback": "Coefficient of x²: −2; coefficient of x: −√7",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "-2x^2",
+          "fallback": "−2x²",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Locate the term multiplying x squared; the minus sign belongs to the coefficient."
+        }
+      },
+      {
+        "math": {
+          "latex": "a_{x^2}=-2",
+          "fallback": "coefficient of x² = −2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Therefore, the coefficient of x squared is negative two."
+        }
+      },
+      {
+        "math": {
+          "latex": "a_x=-\\sqrt7",
+          "fallback": "coefficient of x = −√7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The term with x to the first power is −√7 x, so its coefficient is negative square-root seven, not the constant six or the x-cubed coefficient."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q2-iii",
+    "questionMath": {
+      "en": [
+        "2. Write the coefficient of x² and x in each of the following polynomials.\n(iii) ",
+        {
+          "latex": "\\pi x^2-x+2",
+          "fallback": "(iii) πx² − x + 2"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "a_{x^2}=\\pi,\\ a_x=-1",
+      "fallback": "Coefficient of x²: π; coefficient of x: −1",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\pi x^2",
+          "fallback": "πx²",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Pi is a real constant, so it can be the coefficient multiplying x squared."
+        }
+      },
+      {
+        "math": {
+          "latex": "a_{x^2}=\\pi",
+          "fallback": "coefficient of x² = π",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The coefficient of x squared is pi."
+        }
+      },
+      {
+        "math": {
+          "latex": "a_x=-1",
+          "fallback": "coefficient of x = −1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A bare −x means −1 times x, so its coefficient is negative one."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q2-iv",
+    "questionMath": {
+      "en": [
+        "2. Write the coefficient of x² and x in each of the following polynomials.\n(iv) ",
+        {
+          "latex": "\\sqrt3\\,x^2+\\sqrt2\\,x+0.5",
+          "fallback": "(iv) √3 x² + √2 x + 0.5"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "a_{x^2}=\\sqrt3,\\ a_x=\\sqrt2",
+      "fallback": "Coefficient of x²: √3; coefficient of x: √2",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\sqrt3,\\sqrt2\\in\\mathbb{R}",
+          "fallback": "√3, √2 ∈ ℝ",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A square-root number can be a real coefficient even though it is irrational."
+        }
+      },
+      {
+        "math": {
+          "latex": "a_{x^2}=\\sqrt3",
+          "fallback": "coefficient of x² = √3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The term √3 x² has coefficient square-root three."
+        }
+      },
+      {
+        "math": {
+          "latex": "a_x=\\sqrt2",
+          "fallback": "coefficient of x = √2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The term √2 x has coefficient square-root two; 0.5 is a separate constant."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.1-q2-v",
+    "questionMath": {
+      "en": [
+        "2. Write the coefficient of x² and x in each of the following polynomials.\n(v) ",
+        {
+          "latex": "x^2-\\frac72x+8",
+          "fallback": "(v) x² − (7/2)x + 8"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "a_{x^2}=1,\\ a_x=-\\frac72",
+      "fallback": "Coefficient of x²: 1; coefficient of x: −7/2",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^2=1\\cdot x^2",
+          "fallback": "x² = 1·x²",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "When x squared has no number written before it, the implied coefficient is one."
+        }
+      },
+      {
+        "math": {
+          "latex": "a_{x^2}=1",
+          "fallback": "coefficient of x² = 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Read the x-squared coefficient as one."
+        }
+      },
+      {
+        "math": {
+          "latex": "a_x=-\\frac72",
+          "fallback": "coefficient of x = −7/2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The x term is negative seven-halves times x, so the second coefficient is −7/2."
+        }
+      }
+    ]
+  },
+  {
     "id": "g9-ch1-ex1.2-q1-i",
     "questionMath": {
       "en": [
@@ -41067,6 +41606,207 @@ const texts={
     {
       "latex": "8",
       "fallback": "8"
+    },
+    "."
+  ],
+  "Rewrite the reciprocal as a negative power; dividing by x squared is the same as multiplying by x to the power minus two, wherever x is nonzero.": [
+    "Rewrite the reciprocal as a negative power; dividing by ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " squared is the same as multiplying by ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " to the power minus two, wherever ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " is nonzero."
+  ],
+  "Add exponents when multiplying powers of the same base, giving x cubed minus x squared.": [
+    "Add exponents when multiplying powers of the same base, giving ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " cubed minus ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " squared."
+  ],
+  "Simplify x/x to one and rewrite 5/x with exponent −1.": [
+    "Simplify ",
+    {
+      "latex": "\\dfrac{x}{x}",
+      "fallback": "x/x"
+    },
+    " to one and rewrite ",
+    {
+      "latex": "\\dfrac{5}{x}",
+      "fallback": "5/x"
+    },
+    " with exponent ",
+    {
+      "latex": "- 1",
+      "fallback": "−1"
+    },
+    "."
+  ],
+  "Similarly, the reciprocal of x to the power −1 equals x, so simplify both fractions before checking powers.": [
+    "Similarly, the reciprocal of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " to the power ",
+    {
+      "latex": "- 1",
+      "fallback": "−1"
+    },
+    " equals ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", so simplify both fractions before checking powers."
+  ],
+  "This is a good exception to remember: dividing by a negative power turns into a positive power. The book calls the simplified result a polynomial, but the original fractions still exclude x=0.": [
+    "This is a good exception to remember: dividing by a negative power turns into a positive power. The book calls the simplified result a polynomial, but the original fractions still exclude ",
+    {
+      "latex": "x = 0",
+      "fallback": "x=0"
+    },
+    "."
+  ],
+  "The powers of x in the three terms are 2, 1, and 0; a constant term has power zero.": [
+    "The powers of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " in the three terms are ",
+    {
+      "latex": "2, 1",
+      "fallback": "2, 1"
+    },
+    ", and ",
+    {
+      "latex": "0;\\quad a",
+      "fallback": "0; a"
+    },
+    " constant term has power zero."
+  ],
+  "The x term is −3x, so its coefficient is negative three. The separate constant 4 is not part of either requested coefficient.": [
+    "The ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " term is ",
+    {
+      "latex": "- 3 x",
+      "fallback": "−3x"
+    },
+    ", so its coefficient is negative three. The separate constant ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " is not part of either requested coefficient."
+  ],
+  "A coefficient is the signed number immediately multiplying that particular power of x. Ignore the constant term and any x-cubed term when asked only for x-squared and x.": [
+    "A coefficient is the signed number immediately multiplying that particular power of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ". Ignore the constant term and any ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-cubed term when asked only for ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-squared and ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "."
+  ],
+  "The term with x to the first power is −√7 x, so its coefficient is negative square-root seven, not the constant six or the x-cubed coefficient.": [
+    "The term with ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " to the first power is ",
+    {
+      "latex": "- \\sqrt{7} x",
+      "fallback": "−√7 x"
+    },
+    ", so its coefficient is negative square-root seven, not the constant six or the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-cubed coefficient."
+  ],
+  "A bare −x means −1 times x, so its coefficient is negative one.": [
+    "A bare ",
+    {
+      "latex": "- x",
+      "fallback": "−x"
+    },
+    " means ",
+    {
+      "latex": "- 1",
+      "fallback": "−1"
+    },
+    " times ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", so its coefficient is negative one."
+  ],
+  "The term √2 x has coefficient square-root two; 0.5 is a separate constant.": [
+    "The term ",
+    {
+      "latex": "\\sqrt{2} x",
+      "fallback": "√2 x"
+    },
+    " has coefficient square-root two; ",
+    {
+      "latex": "0.5",
+      "fallback": "0.5"
+    },
+    " is a separate constant."
+  ],
+  "The x term is negative seven-halves times x, so the second coefficient is −7/2.": [
+    "The ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " term is negative seven-halves times ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", so the second coefficient is ",
+    {
+      "latex": "\\dfrac{- 7}{2}",
+      "fallback": "−7/2"
     },
     "."
   ]

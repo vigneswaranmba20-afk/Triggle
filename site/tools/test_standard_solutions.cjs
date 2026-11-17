@@ -45,8 +45,9 @@ const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
 const g9Q5Q6Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q5-iii-q6.json');
 const g9Batch1Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q3-q5-batch1.json');
 const g9Q7Q10Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q7-q10.json');
-const approvedG9Ids=[...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id)];
-assert.equal(approvedG9Ids.length,34);
+const g9AlgebraSource=require('../../docs/curriculum/grade-9/candidates/g9-ch3-ex3-1-q1-q2-english-11.json');
+const approvedG9Ids=[...g9AlgebraSource.rows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id)];
+assert.equal(approvedG9Ids.length,45);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
@@ -78,6 +79,19 @@ for(const [grade,data] of Object.entries(classes)){
          assert.equal(item.steps[n].en,source.steps[n].reason);
          assert.equal(item.steps[n].eq,source.steps[n].equation);
        }
+     }else if(g9AlgebraSource.rows.some(p=>p.id===item.id)){
+       const row=g9AlgebraSource.rows.find(p=>p.id===item.id);
+       assert.equal(item.q.en,row.question+'. '+row.stem+'\n('+row.part+') '+row.sourceEnglish);
+       assert.equal(item.answer,row.answer);
+       assert.equal(item.steps.length,row.steps.length);
+       for(let i=0;i<row.steps.length;i++){
+         assert.equal(item.steps[i].en,row.steps[i].reason);
+         assert.equal(item.steps[i].eq,row.steps[i].equation);
+         assert.equal(item.steps[i].math?.latex,row.steps[i].mathLatex);
+       }
+       assert.equal(item.releaseStatus,'english-preview');
+       assert.equal(item.translationReview,'pending');
+       assert(!item.q.ta,'Do not invent Tamil for Algebra '+item.id);
      }else if(g9Batch1Fidelity.parts.some(p=>p.id===item.id)){
        const source=g9Candidates.rows.find(p=>p.id===item.id);
        const manifest=g9Batch1Fidelity.parts.find(p=>p.id===item.id);
@@ -141,7 +155,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,718);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,729);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');
