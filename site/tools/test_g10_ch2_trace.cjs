@@ -37,7 +37,7 @@ assert.equal(additions.length,53,'53 distinct original English textbook question
 assert.equal(new Set(additions.map(q=>q.id)).size,53);
 assert.equal(textbook.filter(q=>q.exercise==='2.1').length,10);
 assert.equal(textbook.filter(q=>q.exercise==='2.2').length,9);
-assert.equal(textbook.length,108,'Retain 102 earlier Chapter 2 parts plus six Exercise 2.5 parts');
+assert.equal(textbook.length,114,'Retain 108 earlier Chapter 2 parts plus six Exercise 2.7 parts');
 const supplements=all.classes[10].items.filter(q=>q.traceStatus?.startsWith('source-text reviewed'));
 assert.equal(supplements.length,10,'Integrate precisely ten unique textbook subparts without duplicate bundled questions');
 assert.equal(new Set(textbook.map(q=>q.id)).size,textbook.length,'Never duplicate student-facing question IDs');
@@ -83,4 +83,4 @@ assert.match(hub,/showG10Ch2Visual/,'Interactively explain the mathematics');
 const bridge=read('data/why-step-g10-coverage.js');
 assert(bridge.includes('Start with the goal: 32×2 = 64'),'HCF explains why to work backwards');
 assert(!all.classes[10].items.some(q=>q.traceStatus==='chapterComplete'),'No false completion metadata');
-console.log('PASS TRACE Grade 10 Chapter 2: 15 bilingual foundations, 53 source-grounded exercises, 108 current textbook records, offline ordering, no false completion');
+console.log('PASS TRACE Grade 10 Chapter 2: 15 bilingual foundations, 53 source-grounded exercises, 114 current textbook records, offline ordering, no false completion');

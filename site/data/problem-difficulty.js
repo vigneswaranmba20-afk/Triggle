@@ -4135,7 +4135,13 @@ const metadata={
     "g9-ch1-ex1.2-q6-i": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(i): Identify the four-equal-sided shapes (square and rhombus) from a 5-element parent set S.","review":"implementation-audit"},
     "g9-ch1-ex1.2-q6-ii": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(ii): Select the circle as the only shape defined by a radius in the given parent set S.","review":"implementation-audit"},
     "g9-ch1-ex1.2-q6-iii": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(iii): Use the 180-degree interior-angle sum property to select the triangle from S.","review":"implementation-audit"},
-    "g9-ch1-ex1.2-q6-iv": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(iv): Recognise that no shape in S has 5 sides and write the subset as the empty set ∅.","review":"implementation-audit"}
+    "g9-ch1-ex1.2-q6-iv": {"grade":9,"level":"easy","basis":"Grade 9 Chapter 1, Exercise 1.2 · Q6(iv): Recognise that no shape in S has 5 sides and write the subset as the empty set ∅.","review":"implementation-audit"},
+    "c10-2-ex2-7-q1-v": {"grade":10,"level":"easy","basis":"Check consecutive ratios of an alternating-sign geometric sequence with r = -5","review":"implementation-audit"},
+    "c10-2-ex2-7-q1-vii": {"grade":10,"level":"easy","basis":"Check consecutive ratios of a decreasing geometric sequence with r = 1/4","review":"implementation-audit"},
+    "c10-2-ex2-7-q2-ii": {"grade":10,"level":"easy","basis":"Write first three G.P. terms when a = sqrt(2) and r = sqrt(2)","review":"implementation-audit"},
+    "c10-2-ex2-7-q9": {"grade":10,"level":"difficult","basis":"Use symmetric G.P. representation a/r, a, ar and solve quadratic for common ratio","review":"implementation-audit"},
+    "c10-2-ex2-7-q10": {"grade":10,"level":"medium","basis":"Model 5% annual salary increments over 5 years using compound G.P. factor 1.05^5","review":"implementation-audit"},
+    "c10-2-ex2-7-q12": {"grade":10,"level":"difficult","basis":"Combine A.P. exponent differences with G.P. middle-term property y^2 = xz","review":"implementation-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."

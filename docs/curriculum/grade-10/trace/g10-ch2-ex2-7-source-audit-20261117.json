@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 2,
+  "exercise": "2.7",
+  "edition": "TN SCERT 2025 revised English",
+  "textbook": "Class 10 Mathematics, Chapter 2 Numbers and Sequences",
+  "originalPdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+  "sourcePages": {
+    "printed": [
+      72,
+      73
+    ],
+    "pdf": [
+      78,
+      79
+    ],
+    "answerAppendixPrinted": [
+      336
+    ],
+    "answerAppendixPdf": [
+      342
+    ]
+  },
+  "pageImageSha256": {
+    "pdf-2.png": "c67e67917311579f1d97b3cad8a8fd981d6e29fd4b8cf3510e5e9a1766cb597f",
+    "pdf-78.png": "968953543252d6a0fa0a443c868ca4efcb2137fc05532004a56ca4568d67eb8f",
+    "pdf-79.png": "9f6336034c70a1c75ab3022a66f3a8f28bf6c23ec6e983dbca726f3902c7890f",
+    "pdf-342.png": "26f7ef95e373a86b3a17dd7759cfdf4c96cb5a4d77474d603fd93b37a0c1d1eb"
+  },
+  "reviewMethod": "Visually checked rendered 200-DPI page images of printed pp. 72-73 (PDF pp. 78-79) and Answer Appendix printed p. 336 (PDF p. 342) from the connected 2025 English textbook against the 13 existing Exercise 2.7 student records and 6 independently solved missing/exact-radical parts (Q1(v), Q1(vii), Q2(ii), Q9, Q10, Q12).",
+  "sourceLanguages": {
+    "english": "source-image checked",
+    "tamil": "pending, not claimed"
+  },
+  "teacherReview": "not performed",
+  "chapterCompletion": false,
+  "numberedQuestions": 12,
+  "uniqueSubpartTasks": 21,
+  "existingStudentRecords": 13,
+  "newStudentRecords": 6,
+  "totalStudentRecords": 19,
+  "tasks": [
+    {
+      "label": "Q1(i)",
+      "id": "c10-2-ex2-7-q1-i",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q1(ii)",
+      "id": "c10-2-ex2-7-q1-ii",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q1(iii)",
+      "id": "c10-2-ex2-7-q1-iii",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q1(iv)",
+      "id": "c10-2-ex2-7-q1-iv",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q1(v)",
+      "id": "c10-2-ex2-7-q1-v",
+      "sourcePdfPage": 78,
+      "state": "new source-image-checked student record"
+    },
+    {
+      "label": "Q1(vi)",
+      "id": "c10-2-ex2-7-q1-vi",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q1(vii)",
+      "id": "c10-2-ex2-7-q1-vii",
+      "sourcePdfPage": 78,
+      "state": "new source-image-checked student record"
+    },
+    {
+      "label": "Q2(i)",
+      "id": "c10-2-ex2-7-q2",
+      "sourcePdfPage": 78,
+      "state": "existing bundled student record"
+    },
+    {
+      "label": "Q2(ii)",
+      "id": "c10-2-ex2-7-q2-ii",
+      "sourcePdfPage": 78,
+      "state": "new source-image-checked student record (exact radical a = √2, r = √2)"
+    },
+    {
+      "label": "Q2(iii)",
+      "id": "c10-2-ex2-7-q2",
+      "sourcePdfPage": 78,
+      "state": "existing bundled student record"
+    },
+    {
+      "label": "Q3",
+      "id": "c10-2-ex2-7-q3",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q4",
+      "id": "c10-2-ex2-7-q4",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q5(i)",
+      "id": "c10-2-ex2-7-q5",
+      "sourcePdfPage": 78,
+      "state": "existing bundled student record"
+    },
+    {
+      "label": "Q5(ii)",
+      "id": "c10-2-ex2-7-q5",
+      "sourcePdfPage": 78,
+      "state": "existing bundled student record"
+    },
+    {
+      "label": "Q6",
+      "id": "c10-2-ex2-7-q6",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q7",
+      "id": "c10-2-ex2-7-q7",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q8",
+      "id": "c10-2-ex2-7-q8",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q9",
+      "id": "c10-2-ex2-7-q9",
+      "sourcePdfPage": 78,
+      "state": "new source-image-checked student record"
+    },
+    {
+      "label": "Q10",
+      "id": "c10-2-ex2-7-q10",
+      "sourcePdfPage": 78,
+      "state": "new source-image-checked student record"
+    },
+    {
+      "label": "Q11",
+      "id": "c10-2-ex2-7-q11",
+      "sourcePdfPage": 78,
+      "state": "existing student record"
+    },
+    {
+      "label": "Q12",
+      "id": "c10-2-ex2-7-q12",
+      "sourcePdfPage": 79,
+      "state": "new source-image-checked student record"
+    }
+  ]
+}
