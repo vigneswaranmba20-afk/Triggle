@@ -1,7 +1,8 @@
 'use strict';
 // TRACE evidence gate. Checks book identity and claimed page-image fingerprints.
 // It does NOT itself inspect a PDF, confirm that a screenshot matches a page,
-// or certify that an exercise/transcription is correct.
+// or certify that an exercise/transcription is correct. English-only reviews
+// require explicit sourceMedium:'en' and cannot certify Tamil content.
 const path=require('node:path');
 const fs=require('node:fs');
 const crypto=require('node:crypto');
@@ -15,10 +16,13 @@ function verifyEvidence(record,{root=ROOT}={}){
   if(!match)fail();
   const grade=Number(match[1]),chapter=Number(match[2]),evidence=record.sourceEvidence;
   if(!evidence||evidence.edition!=='2025'||!evidence.pages||
-     Object.keys(evidence.pages).sort().join(',')!=='en,ta')fail();
+     !['en','ta','bilingual'].includes(record.sourceMedium||'bilingual'))fail();
+  const requestedMedium=record.sourceMedium||'bilingual';
+  const requiredMediums=requestedMedium==='bilingual'?['en','ta']:[requestedMedium];
+  if(Object.keys(evidence.pages).sort().join(',')!==requiredMediums.slice().sort().join(','))fail();
   const registry=JSON.parse(fs.readFileSync(path.join(root,'docs/reference-library/2025-user-textbook-manifest.json'),'utf8'));
   const normalized=[];
-  for(const medium of ['en','ta']){
+  for(const medium of requiredMediums){
     const page=evidence.pages[medium];
     const fields=['bookSha256','imageSha256','pdfPage','printedPage','visualChecked'];
     if(!page||Object.keys(page).sort().join(',')!==fields.sort().join(','))fail();
@@ -32,9 +36,10 @@ function verifyEvidence(record,{root=ROOT}={}){
     normalized.push({medium,bookSha256:page.bookSha256,imageSha256:page.imageSha256,
       pdfPage:page.pdfPage,printedPage:page.printedPage});
   }
-  if(normalized[0].imageSha256===normalized[1].imageSha256)fail();
+  if(normalized.length===2&&normalized[0].imageSha256===normalized[1].imageSha256)fail();
   return {claim:'STRUCTURALLY_VALIDATED_NOT_VISUALLY_CERTIFIED',
-    evidenceSha256:sha({recordId:record.id,grade,chapter,pages:normalized}),
+    evidenceSha256:sha({recordId:record.id,grade,chapter,sourceMedium:requestedMedium,pages:normalized}),
+    scope:requestedMedium,
     pageIdentities:normalized};
 }
 module.exports={verifyEvidence};

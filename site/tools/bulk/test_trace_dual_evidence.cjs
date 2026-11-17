@@ -23,6 +23,23 @@ check('grade 10 metadata fingerprints bind both books',()=>{
  assert.equal(e.pageIdentities.length,2);
  assert.equal(taskFor('openai',fresh(),true,e).input.evidenceMetadataSha256,e.evidenceSha256);
 });
+check('explicit English-first evidence does not assert Tamil review',()=>{
+ const r=fresh();r.sourceMedium='en';delete r.sourceEvidence.pages.ta;
+ const e=verifyEvidence(r);
+ assert.equal(e.scope,'en');assert.equal(e.pageIdentities.length,1);
+ assert.equal(e.pageIdentities[0].medium,'en');
+ assert.equal(taskFor('gemini',r,true,e).input.reviewMedium,'en');
+ const copy=fresh();delete copy.sourceEvidence.pages.ta;
+ expectBad(()=>verifyEvidence(copy)); // implicit default remains bilingual
+});
+check('single-language metadata fails closed on swapped or extra pages',()=>{
+ const r=fresh();r.sourceMedium='en';delete r.sourceEvidence.pages.ta;
+ r.sourceEvidence.pages.en.bookSha256=books.ta.sha256;
+ expectBad(()=>verifyEvidence(r));
+ const x=fresh();x.sourceMedium='en';expectBad(()=>verifyEvidence(x));
+ const t=fresh();t.sourceMedium='ta';delete t.sourceEvidence.pages.en;
+ assert.equal(verifyEvidence(t).scope,'ta');
+});
 check('reject missing and fake book identity',()=>{
  const r=fresh();delete r.sourceEvidence;expectBad(()=>verifyEvidence(r));
  const q=fresh();q.sourceEvidence.pages.en.bookSha256='f'.repeat(64);expectBad(()=>verifyEvidence(q));
