@@ -8,7 +8,7 @@ const zoom=[
 ];
 for(const [part,q,answer,target,min,max,why,whyTa] of zoom)e(4,1,part,57,'Represent '+q+' on a number line'+(part==='i'?'.':part==='ii'?' to three decimal places.':' to four decimal places.'),'எண்கோட்டில் '+q+' ஐ '+(part==='i'?'குறிக்கவும்.':part==='ii'?'மூன்று தசம இடங்களுக்குக் குறிக்கவும்.':'நான்கு தசம இடங்களுக்குக் குறிக்கவும்.'),answer,[
  [why,whyTa,part==='i'?'5.348 = 5.348':q+' ≈ '+answer],
- ['Zoom the number line to the next place-value interval; the recurring value lies strictly between the displayed bounds.','எண் கிடைக்கும் வரை தொடர்ந்த இடைவெளிகளைப் பெரிதாக்கவும்.',min+' < '+(part==='i'?'5.348':q)+' < '+max]
+ ['Zoom the number line to the target place-value interval; check the target lies strictly between the displayed bounds.','எண் கிடைக்கும் வரை தொடர்ந்த இடைவெளிகளைப் பெரிதாக்கவும்.',min+' < '+(part==='i'?'5.348':q)+' < '+max]
  ],false,{kind:'real-number-line',target,min,max,label:answer});
 const p5=[
  ['i','625','5⁴','625=5×5×5×5'],
