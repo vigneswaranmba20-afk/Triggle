@@ -1,0 +1,24 @@
+name: Request approved A.P. Fola release (single-use)
+on:
+  push:
+    branches:
+      - video/request-ap-fola-20261117
+    paths:
+      - .github/workflows/request-approved-ap-fola.yml
+permissions:
+  actions: write
+  contents: read
+jobs:
+  request-reviewed-video:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Dispatch existing quality-gated R2 video release with immutable approved file
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run trace-video-publish.yml \
+            --repo "$GITHUB_REPOSITORY" --ref main \
+            --field source_run_id=43989815963 \
+            --field lesson=g10-ch2-ap-sum \
+            --field approved_sha256=c3d7df0a9e29b4bb59932525bb4b25be0e84f3c00651ef7dc10feb8042ce4188
+          echo 'Submitted approved A.P. Fola video to existing release pipeline.'
