@@ -12,6 +12,7 @@ const os=require('node:os');
 const crypto=require('node:crypto');
 const {Broker}=require('./trace_broker.cjs');
 const {hashRecord}=require('../curriculum_bulk.cjs');
+const {verifyEvidence}=require('./trace_dual_evidence.cjs');
 
 const REVIEW_SCHEMA={
   type:'object',required:['verdict','summary','issues','reviewRequired'],
@@ -53,10 +54,12 @@ function validateCandidate(x){
 function responseText(provider,data){
   if(provider==='openai'){
     if(data?.status&&data.status!=='completed')throw Error('INCOMPLETE_PROVIDER_REVIEW');
+    if((data?.output||[]).some(x=>(x?.content||[]).some(part=>part?.type==='refusal')))throw Error('PROVIDER_REFUSAL');
     const pieces=(data?.output||[]).flatMap(x=>x?.content||[]).filter(x=>x?.type==='output_text').map(x=>x.text);
     if(!pieces.length)throw Error('EMPTY_PROVIDER_REVIEW');
     return pieces.join('');
   }
+  if(data?.promptFeedback?.blockReason||data?.candidates?.[0]?.finishReason==='SAFETY')throw Error('PROVIDER_REFUSAL');
   const pieces=(data?.candidates?.[0]?.content?.parts||[]).map(p=>p.text).filter(x=>typeof x==='string');
   if(!pieces.length)throw Error('EMPTY_PROVIDER_REVIEW');
   return pieces.join('');
@@ -111,8 +114,10 @@ function demoAdapter(provider){
     qualityLevels:['high'],local:true,maxCostUsd:0,
     run:async()=>({output:{verdict:'insufficient-evidence',summary:'SYNTHETIC DEMO ONLY — no mathematical verification performed',issues:['Human and exact-maths checks remain required'],reviewRequired:true},costUsd:0})};
 }
-function taskFor(provider,record,live){
-  const input={id:record.id,sourceRef:record.sourceRef,claim:record.problem,proposedSolution:record.solution,sourceVerifiedByOwner:record.sourceVerified};
+function taskFor(provider,record,live,evidence){
+  const input={id:record.id,sourceRef:record.sourceRef,claim:record.problem,proposedSolution:record.solution,
+    sourceVerifiedByOwner:record.sourceVerified,
+    ...(live?{evidenceMetadataSha256:evidence.evidenceSha256,evidenceStatus:evidence.claim}:{})};
   return {capability:'trace-review-'+provider,sensitivity:'textbook-excerpt',quality_level:'high',
     latency_sla:45000,budget:live?RESERVATION_USD:0,
     input,input_hash:hashRecord(input),schema:REVIEW_SCHEMA,max_output_tokens:512,
@@ -134,6 +139,9 @@ async function runDualReview(record,options={}){
   if(live&&(options.authorizeSpend!==true||process.env.TRACE_DUAL_AI_SPEND_APPROVED!=='YES'))
     throw Error('EXPLICIT_SPEND_APPROVAL_REQUIRED');
   if(live&&!options.stateDir)throw Error('PERSISTENT_ACCOUNTING_REQUIRED');
+  // A boolean cannot certify a book: require EN/TA identity metadata in live mode.
+  // This checks identity/format only; it must not be treated as PDF-image verification.
+  const evidence=live?verifyEvidence(record):null;
   const adapters=live?
     [makeAdapter('openai',{...options.openai,env:options.env||process.env}),makeAdapter('gemini',{...options.gemini,env:options.env||process.env})]:
     [demoAdapter('openai'),demoAdapter('gemini')];
@@ -146,8 +154,8 @@ async function runDualReview(record,options={}){
     maxItems:2,concurrency:1,maxOutputTokens:512,circuitThreshold:1,
     env:options.env||process.env
   });
-  const results=await broker.batch(['openai','gemini'].map(provider=>taskFor(provider,record,live)));
+  const results=await broker.batch(['openai','gemini'].map(provider=>taskFor(provider,record,live,evidence)));
   return {...mergeReviews(results,live?'live':'offline'),accounting:broker.report()};
 }
 module.exports={REVIEW_SCHEMA,MODELS,IDS,RESERVATION_USD,checkRecord,validateCandidate,
-  responseText,makeAdapter,demoAdapter,taskFor,mergeReviews,runDualReview};
+  responseText,makeAdapter,demoAdapter,taskFor,mergeReviews,runDualReview,verifyEvidence};
