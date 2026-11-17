@@ -49,4 +49,10 @@ assert(js.includes('let power=2,n=4;'),'Squares, not cubes or plain numbers, are
 assert(js.includes('Math.abs(target-partial)'),'Gap magnitude cannot be presented as negative');
 assert(js.includes('ratio<0?copy.alternating:copy.converges'),'Alternating convergence is explained');
 assert(js.includes('track.hidden=!converges||ratio<0'),'Do not show a misleading filled bar for alternating sums');
-console.log('PASS G10 Ch2 quality: 15 bilingual concepts, 7 targeted teaching repairs, formulas and lab models');
+const hub=read('assets/chapter-hub.js');
+assert(hub.includes("v.kind==='sequence'"),'Student sees the one-based sequence visual instead of an empty stage');
+assert(hub.includes("v.values[n-1]"),'Sequence visual indexes from the first term');
+assert(hub.includes("stage.id==='g10-ch2-modulo'?45"),'Clock launches the taught 45-day example');
+assert(hub.includes("stage.id==='g10-ch2-congruence'?14"),'Congruence launches the 14 modulo 5 transfer');
+assert(hub.includes("n+' ≡ '+mark"),'Congruence exposes its equivalent residue');
+console.log('PASS G10 Ch2 quality: 15 bilingual concepts, 7 targeted teaching repairs and functional cycle/sequence visuals, formulas and lab models');
