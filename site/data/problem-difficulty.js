@@ -1834,6 +1834,120 @@ const metadata={
       "basis": "Direct definition, formula or routine calculation.",
       "review": "implementation-audit"
     },
+    "g9-ch3-ex3.2-q1-i": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Substitute a given integer and evaluate using order of operations.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q1-ii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Substitute a given integer and evaluate using order of operations.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q1-iii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Substitute a given integer and evaluate using order of operations.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q2": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Combines substitution and simplification of a product with radicals.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-i": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Set a linear polynomial to zero and isolate the input.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-ii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Set a linear polynomial to zero and isolate the input.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-iii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Set a linear polynomial to zero and isolate the input.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-iv": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Set a linear polynomial to zero and isolate the input.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-v": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Set a linear polynomial to zero and isolate the input.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-vi": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Isolate the variable using a symbolic nonzero coefficient.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q5-i": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Test the proposed input by substitution and compare the output with zero.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q5-ii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Test the proposed input by substitution and compare the output with zero.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q5-iii": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Verify a symbolic substitution and state its domain.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q5-iv": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Check two inputs and identify the zero factor in each product.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q6-i": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Identify the horizontal-axis intersections in the given figure.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q6-ii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Identify the horizontal-axis intersections in the given figure.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q6-iii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Identify the horizontal-axis intersections in the given figure.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q6-iv": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Identify the horizontal-axis intersections in the given figure.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q6-v": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Identify the horizontal-axis intersections in the given figure.",
+      "review": "implementation-audit"
+    },
     "g9-ch3-ex3.2-q4": {
       "grade": 9,
       "level": "easy",

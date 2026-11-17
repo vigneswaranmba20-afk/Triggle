@@ -13,7 +13,14 @@ const ids=["g9-ch3-ex3.1-q10","g9-ch3-ex3.1-q11","g9-ch3-ex3.1-q12","g9-ch3-ex3.
 const items=context.window.TRIGGLE_CLASSES[9].items.filter(e=>ids.includes(e.id));
 assert.equal(items.length,23);
 assert.equal(new Set(items.map(e=>e.id)).size,23);
-for(const q of items){assert.ok(q.q.en.length>40);assert.ok(q.answer.length>2);assert.ok(q.steps.length>=3);assert.equal(q.kind,'reference');assert.ok(q.sourceFidelity.status.includes('visual-pending'))}
+for(const q of items){assert.ok(q.q.en.length>40);assert.ok(q.answer.length>2);assert.ok(q.steps.length>=3);if(q.id==='g9-ch3-ex3.2-q4'){
+  assert.equal(q.kind,'textbook');
+  assert.equal(q.sourceFidelity.status,'english-source-page-visual-checked');
+  assert.equal(q.page,97);
+ }else{
+  assert.equal(q.kind,'reference');
+  assert.ok(q.sourceFidelity.status.includes('visual-pending'));
+ }}
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'data/g9-english-completeness-manifest.json'),'utf8'));
 assert.equal(manifest.expectedChapterCount,9);assert.equal(manifest.expectedExerciseCount,60);assert.equal(manifest.newlyMathematicallyVerified,23);assert.equal(manifest.verifiedCoveragePercent,null);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
