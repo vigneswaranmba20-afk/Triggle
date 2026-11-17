@@ -13,6 +13,7 @@ const crypto=require('node:crypto');
 const {Broker}=require('./trace_broker.cjs');
 const {hashRecord}=require('../curriculum_bulk.cjs');
 const {verifyEvidence}=require('./trace_dual_evidence.cjs');
+const {checkMath}=require('./trace_dual_math.cjs');
 
 const REVIEW_SCHEMA={
   type:'object',required:['verdict','summary','issues','reviewRequired'],
@@ -114,10 +115,11 @@ function demoAdapter(provider){
     qualityLevels:['high'],local:true,maxCostUsd:0,
     run:async()=>({output:{verdict:'insufficient-evidence',summary:'SYNTHETIC DEMO ONLY — no mathematical verification performed',issues:['Human and exact-maths checks remain required'],reviewRequired:true},costUsd:0})};
 }
-function taskFor(provider,record,live,evidence){
+function taskFor(provider,record,live,evidence,localMathCheck){
   const input={id:record.id,sourceRef:record.sourceRef,claim:record.problem,proposedSolution:record.solution,
     sourceVerifiedByOwner:record.sourceVerified,
-    ...(live?{evidenceMetadataSha256:evidence.evidenceSha256,evidenceStatus:evidence.claim}:{})};
+    ...(live?{evidenceMetadataSha256:evidence.evidenceSha256,evidenceStatus:evidence.claim}:{}),
+    ...(localMathCheck?{localMathSpecSha256:localMathCheck.mathSpecSha256}:{})};
   return {capability:'trace-review-'+provider,sensitivity:'textbook-excerpt',quality_level:'high',
     latency_sla:45000,budget:live?RESERVATION_USD:0,
     input,input_hash:hashRecord(input),schema:REVIEW_SCHEMA,max_output_tokens:512,
@@ -134,7 +136,12 @@ function mergeReviews(results,mode){
 }
 async function runDualReview(record,options={}){
   checkRecord(record);
-  if(record.difficulty!=='difficult')return {status:'LOCAL_FIRST_SKIPPED',releaseApproved:false,entries:[]};
+  const localMathCheck=checkMath(record);
+  if(localMathCheck?.status==='EXACT_MISMATCH')return {
+    status:'LOCAL_MATH_REJECTED',releaseApproved:false,requiresHumanOrDeterministicReview:true,
+    localMathCheck,entries:[],accounting:{reservedCostUsd:0}
+  };
+  if(record.difficulty!=='difficult')return {status:'LOCAL_FIRST_SKIPPED',releaseApproved:false,entries:[],localMathCheck};
   const live=options.live===true;
   if(live&&(options.authorizeSpend!==true||process.env.TRACE_DUAL_AI_SPEND_APPROVED!=='YES'))
     throw Error('EXPLICIT_SPEND_APPROVAL_REQUIRED');
@@ -154,8 +161,8 @@ async function runDualReview(record,options={}){
     maxItems:2,concurrency:1,maxOutputTokens:512,circuitThreshold:1,
     env:options.env||process.env
   });
-  const results=await broker.batch(['openai','gemini'].map(provider=>taskFor(provider,record,live,evidence)));
-  return {...mergeReviews(results,live?'live':'offline'),accounting:broker.report()};
+  const results=await broker.batch(['openai','gemini'].map(provider=>taskFor(provider,record,live,evidence,localMathCheck)));
+  return {...mergeReviews(results,live?'live':'offline'),localMathCheck,accounting:broker.report()};
 }
 module.exports={REVIEW_SCHEMA,MODELS,IDS,RESERVATION_USD,checkRecord,validateCandidate,
   responseText,makeAdapter,demoAdapter,taskFor,mergeReviews,runDualReview,verifyEvidence};
