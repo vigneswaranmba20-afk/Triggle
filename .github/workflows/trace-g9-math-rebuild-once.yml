@@ -1,0 +1,39 @@
+name: TRACE G9 one-time math presentation regeneration
+on:
+  push:
+    branches: [feature/trace-g9-ex12-batch1-q3-q5-20261117]
+    paths: [.github/workflows/trace-g9-math-rebuild-once.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compile canonical Grade 9 mathematics and refresh curriculum status
+        run: |
+          node site/tools/build_g9_math.cjs
+          npm run status:build
+          node site/tools/test_g9_clear_math.cjs
+          node site/tools/test_g9_math_compiler.cjs
+          node site/tools/test_g9_ex1_2_q3_q5_batch1.cjs
+          node site/tools/test_project_status.cjs
+      - name: Commit generated projections on feature branch only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- site/data/g9-clear-math.js site/data/project-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "ci: rebuild Grade 9 maths and curriculum status for 10 reviewed parts"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
