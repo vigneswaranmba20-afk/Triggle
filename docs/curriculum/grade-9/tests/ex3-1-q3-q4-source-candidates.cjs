@@ -82,3 +82,24 @@ for(const x of samples){
 }
 assert.equal(m.rows[1].answerKeyShort,'4');
 console.log('PASS Q3/Q4 independent numeric equivalence: 5 sample points, original vs reordered/simplified polynomials; rational expression excludes x=0.');
+
+// Independent degree witnesses: coefficients are transcribed separately from
+// answerKeyShort, so a mistaken answer-key edit cannot make this test pass.
+// For Q3(ii), coefficients describe the simplification only on x != 0.
+const degreeWitnesses=[
+ {source:'1-\\sqrt2\\,y^2+y^7',terms:[[0,1],[2,-Math.sqrt(2)],[7,1]],degree:7},
+ {source:'\\frac{x^3-x^4+6x^6}{x^2}',terms:[[1,1],[2,-1],[4,6]],degree:4},
+ {source:'x^3(x^2+x)',terms:[[4,1],[5,1]],degree:5},
+ {source:'3x^4+9x^2+27x^6',terms:[[2,9],[4,3],[6,27]],degree:6},
+ {source:'2\\sqrt5\\,p^4-\\frac{8p^3}{\\sqrt3}+\\frac{2p^2}{7}',terms:[[2,2/7],[3,-8/Math.sqrt(3)],[4,2*Math.sqrt(5)]],degree:4}
+];
+for(let i=0;i<degreeWitnesses.length;i++){
+ const witness=degreeWitnesses[i],row=m.rows[i];
+ assert.equal(row.sourceMathLatex,witness.source,'Source expression drift: '+row.id);
+ const nonzero=witness.terms.filter(([power,coefficient])=>Number.isInteger(power)&&Number.isFinite(coefficient)&&Math.abs(coefficient)>1e-12);
+ assert(nonzero.length>0,'No nonzero polynomial coefficients: '+row.id);
+ const computedDegree=Math.max(...nonzero.map(([power])=>power));
+ assert.equal(computedDegree,witness.degree,'Independent coefficient degree: '+row.id);
+ assert.equal(Number(row.answerMathLatex),computedDegree,'Authored degree mismatch: '+row.id);
+}
+console.log('PASS five independent Q3 coefficient/degree witnesses, including radical coefficients and restricted rational simplification.');
