@@ -18,20 +18,20 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "வகுத்தல்: குழுக்களும் மீதியும்"
       },
       "idea": {
-        "en": "Dividing 34 objects into groups of 5 makes 6 complete groups and leaves 4. The remainder must be smaller than 5.",
-        "ta": "34 பொருள்களை 5 பொருள்கள் வீதம் பிரித்தால் 6 முழுக் குழுக்கள் கிடைக்கும்; 4 மீதமாகும். மீதி 5-ஐவிடச் சிறியதாக இருக்க வேண்டும்."
+        "en": "Divide 34 objects into positive-size groups of 5: six complete groups and four left over. The remainder is smaller than the group size; it cannot be 5.",
+        "ta": "34 பொருள்களை 5 வீதம் குழுக்களாகப் பிரித்தால் 6 முழுக் குழுக்களும் 4 மீதியும் கிடைக்கும். மீதி குழுவின் அளவை விடச் சிறியதாக இருக்கும்; 5 ஆகாது."
       },
       "example": {
         "en": "34 = (5 × 6) + 4. The numbers mean: total = group size × number of groups + leftover.",
         "ta": "34 = (5 × 6) + 4. அதாவது: மொத்தம் = குழுவின் அளவு × குழுக்களின் எண்ணிக்கை + மீதி."
       },
       "rule": {
-        "en": "a = bq + r ; 0 ≤ r < b",
-        "ta": "a = bq + r ; 0 ≤ r < b"
+        "en": "a = bq + r, with b > 0 and 0 ≤ r < b",
+        "ta": "a = bq + r; b > 0, 0 ≤ r < b"
       },
       "math": {
-        "latex": "a=bq+r,\\quad 0\\le r<b",
-        "fallback": "a = bq + r ; 0 ≤ r < b"
+        "latex": "a=bq+r,\\quad b>0,\\quad 0\\le r<b",
+        "fallback": "a = bq + r, b > 0, 0 ≤ r < b"
       },
       "question": {
         "en": "17 ÷ 5: what is the remainder?",
@@ -196,12 +196,12 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "பகா காரணிகள் ஒரு எண்ணின் தனித்த அடையாளம்"
       },
       "idea": {
-        "en": "Every integer greater than 1 has one prime-factor collection, apart from order. Use the smallest exponents for the HCF and the largest for the LCM.",
-        "ta": "1-ஐ விடப் பெரிய எந்த முழு எண்ணுக்கும் வரிசையைத் தவிர ஒரே பகா காரணிப் பிரிப்பு உண்டு. மீ.பொ.வ-க்கு குறைந்த அடுக்கையும் மீ.சி.ம-க்கு அதிக அடுக்கையும் பயன்படுத்துங்கள்."
+        "en": "A prime number has exactly two positive divisors: 1 and itself. Break each number into prime factors. In 2², the small 2 means two factors of 2. Use the smaller powers for the HCF and the larger powers for the LCM.",
+        "ta": "ஒரு பகா எண்ணுக்கு 1 மற்றும் அதே எண் ஆகிய இரண்டு நேர்மறை வகுத்திகள் மட்டுமே உண்டு. ஒவ்வொரு எண்ணையும் பகா காரணிகளாகப் பிரிக்கவும். 2² என்பது 2 × 2. மீ.பொ.வ-க்கு சிறிய அடுக்குகளையும் மீ.சி.ம-க்கு பெரிய அடுக்குகளையும் எடுக்கவும்."
       },
       "example": {
-        "en": "12 = 2² × 3 and 18 = 2 × 3². HCF = 2 × 3 = 6; LCM = 2² × 3² = 36.",
-        "ta": "12 = 2² × 3; 18 = 2 × 3². மீ.பொ.வ = 6; மீ.சி.ம = 36."
+        "en": "12 = 2² × 3 and 18 = 2 × 3². HCF = 2 × 3 = 6 (smaller powers). LCM = 2² × 3² = 36 (larger powers). Check: 36 ÷ 12 = 3 and 36 ÷ 18 = 2.",
+        "ta": "12 = 2² × 3; 18 = 2 × 3². மீ.பொ.வ = 2 × 3 = 6 (சிறிய அடுக்குகள்). மீ.சி.ம = 2² × 3² = 36 (பெரிய அடுக்குகள்). 36-ஐ 12 மற்றும் 18 ஆகிய இரண்டும் மீதியின்றி வகுக்கும்."
       },
       "rule": {
         "en": "HCF(12,18) = 6 ; LCM(12,18) = 36",
@@ -235,8 +235,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "இரண்டு காரணிப் பிரிப்புகளுக்கும் போதுமான 2, 3 காரணிகளை எடுத்துக்கொள்ளுங்கள்."
       },
       "why": {
-        "en": "2² × 3² = 36 is divisible by both 12 and 18.",
-        "ta": "2² × 3² = 36; இதை 12, 18 இரண்டாலும் வகுக்கலாம்."
+        "en": "12 = 2² × 3 and 18 = 2 × 3². The larger powers give 2² × 3² = 36. Both 12 and 18 divide 36 exactly.",
+        "ta": "12 = 2² × 3; 18 = 2 × 3². பெரிய அடுக்குகளை எடுத்தால் 2² × 3² = 36. இரு எண்களும் 36-ஐ மீதியின்றி வகுக்கும்."
       },
       "visual": {
         "kind": "factors",
@@ -380,8 +380,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "தொடர்வரிசை என்பது வரிசைப்படுத்தப்பட்ட அமைப்பு"
       },
       "idea": {
-        "en": "A sequence has a first term, a second term, and so on. Position matters: the nth term tells us what number belongs at position n.",
-        "ta": "தொடர்வரிசையில் முதல் உறுப்பு, இரண்டாம் உறுப்பு எனத் தொடரும். இடம் முக்கியம்: n-ஆவது உறுப்பு n-ஆம் இடத்திலுள்ள எண்ணைக் குறிக்கும்."
+        "en": "A sequence lists numbers in order. Each number is a term; n counts its position starting at 1. A formula finds a term without listing every earlier term.",
+        "ta": "வரிசை என்பது ஒழுங்காக அமைந்த எண்களின் பட்டியல். ஒவ்வொரு எண்ணும் ஓர் உறுப்பு. n என்பது 1-இல் தொடங்கும் இட எண். ஒரு சூத்திரம் முந்தைய எல்லா உறுப்புகளையும் எழுதாமல் தேவையான உறுப்பைக் காண உதவும்."
       },
       "example": {
         "en": "2, 5, 8, 11, ... follows aₙ = 3n − 1. Put n = 4 to find 11.",
@@ -441,20 +441,20 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "முந்தைய உறுப்புகளைப் பயன்படுத்தும் விதி"
       },
       "idea": {
-        "en": "A recursive rule builds each new term from earlier ones. The starting terms are essential; without them the pattern is not determined.",
-        "ta": "மீள்வரையறை விதி முந்தைய உறுப்புகளிலிருந்து புதிய உறுப்பைக் கணக்கிடுகிறது. தொடக்க உறுப்புகள் இல்லாமல் தொடரைத் தீர்மானிக்க முடியாது."
+        "en": "Recursive means 'use earlier terms'. First state a₁ = 1 and a₂ = 1. From the third term on, add the previous two. Without the starting terms, the rule alone cannot determine the sequence.",
+        "ta": "மீள்வரையறை விதி என்பது முந்தைய உறுப்புகளைப் பயன்படுத்துவது. முதலில் a₁ = 1, a₂ = 1 என்று தர வேண்டும். மூன்றாவது உறுப்பிலிருந்து முந்தைய இரண்டு உறுப்புகளைக் கூட்டவும். தொடக்க உறுப்புகள் இல்லாமல் வரிசையைத் தீர்மானிக்க முடியாது."
       },
       "example": {
         "en": "Start with 1, 1. Each next term is the sum of the previous two: 1, 1, 2, 3, 5, 8.",
         "ta": "1, 1-இல் தொடங்குங்கள். அடுத்த உறுப்பு முந்தைய இரண்டின் கூட்டுத்தொகை: 1, 1, 2, 3, 5, 8."
       },
       "rule": {
-        "en": "aₙ = aₙ₋₁ + aₙ₋₂",
-        "ta": "aₙ = aₙ₋₁ + aₙ₋₂"
+        "en": "a₁ = 1, a₂ = 1; aₙ = aₙ₋₁ + aₙ₋₂ for n ≥ 3",
+        "ta": "a₁ = 1, a₂ = 1; n ≥ 3 எனில் aₙ = aₙ₋₁ + aₙ₋₂"
       },
       "math": {
-        "latex": "a_n=a_{n-1}+a_{n-2}",
-        "fallback": "aₙ = aₙ₋₁ + aₙ₋₂"
+        "latex": "\\begin{aligned}a_1&=1,\\quad a_2=1\\\\a_n&=a_{n-1}+a_{n-2},\\quad n\\ge 3\\end{aligned}",
+        "fallback": "a₁ = 1, a₂ = 1; aₙ = aₙ₋₁ + aₙ₋₂ for n ≥ 3"
       },
       "question": {
         "en": "What comes after 1, 1, 2, 3, 5?",
@@ -476,8 +476,8 @@ window.TRIGGLE_G10_CH2_PATH={
       ],
       "correct": 1,
       "hint": {
-        "en": "Add the previous two values: 3 and 5.",
-        "ta": "முந்தைய இரண்டான 3, 5-ஐக் கூட்டுங்கள்."
+        "en": "Add the fourth and fifth terms: 3 + 5.",
+        "ta": "நான்காவது மற்றும் ஐந்தாவது உறுப்புகளைக் கூட்டவும்: 3 + 5."
       },
       "why": {
         "en": "3 + 5 = 8. This is a sequence rule, not a claim that every pattern adds earlier terms.",
@@ -618,7 +618,11 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-ap-sum",
-      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-ap-sum/c3d7df0a9e29b4bb59932525bb4b25be0e84f3c00651ef7dc10feb8042ce4188.mp4", "language": "en", "durationSeconds": 106.69},
+      "video": {
+        "src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-ap-sum/c3d7df0a9e29b4bb59932525bb4b25be0e84f3c00651ef7dc10feb8042ce4188.mp4",
+        "language": "en",
+        "durationSeconds": 106.69
+      },
       "section": "2.8",
       "title": {
         "en": "An A.P. sum pairs the first and last terms",
@@ -740,19 +744,23 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-gp-sum",
-      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-gp-sum/b89073380f066247805c5b1ba5def43522c6424c36d731bc26973120c5438ab3.mp4", "language": "en", "durationSeconds": 93.0},
+      "video": {
+        "src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-gp-sum/b89073380f066247805c5b1ba5def43522c6424c36d731bc26973120c5438ab3.mp4",
+        "language": "en",
+        "durationSeconds": 93
+      },
       "section": "2.10",
       "title": {
         "en": "Geometric series: a shortcut for repeated growth",
         "ta": "பெருக்குத்தொடர் தொகைக்கான சுருக்குவழி"
       },
       "idea": {
-        "en": "Multiply the sum by the common ratio and subtract: most terms cancel. This is the reason for the geometric sum formula.",
-        "ta": "கூட்டுத்தொகையை பொதுவிகிதத்தால் பெருக்கி கழித்தால் பெரும்பாலான உறுப்புகள் நீங்கும். இதுவே பெருக்குத்தொடர் தொகைச் சூத்திரத்தின் காரணம்."
+        "en": "Call the geometric sum S, multiply it by the common ratio r, then subtract. The middle terms cancel; the visual shows why using 1 + 2 + 4 + 8.",
+        "ta": "பெருக்குத் தொடரின் கூட்டுத்தொகையை S என எழுதி, பொது விகிதம் r-ஆல் பெருக்கி, பிறகு கழித்தால் நடுவிலுள்ள உறுப்புகள் நீங்கும். 1 + 2 + 4 + 8 மூலம் இதைக் காணலாம்."
       },
       "example": {
-        "en": "1 + 2 + 4 + 8 + 16 = 31. Since r = 2, the formula gives (2⁵−1)/(2−1) = 31.",
-        "ta": "1 + 2 + 4 + 8 + 16 = 31. r = 2 என்பதால் (2⁵−1)/(2−1) = 31."
+        "en": "S = 1 + 2 + 4 + 8; 2S = 2 + 4 + 8 + 16. Subtract: 2S − S = 16 − 1 = 15, so S = 15. When r = 1 use Sₙ = na instead.",
+        "ta": "S = 1 + 2 + 4 + 8; 2S = 2 + 4 + 8 + 16. கழித்தால் 2S − S = 16 − 1 = 15; எனவே S = 15. r = 1 எனில் Sₙ = na பயன்படுத்தவும்."
       },
       "rule": {
         "en": "Sₙ = a(rⁿ−1)/(r−1), r ≠ 1",
@@ -786,8 +794,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "3S = 3 + 9 + 27 + 81 என எழுதுங்கள். இரு வரிகளிலும் உள்ள உறுப்புகளைக் கவனியுங்கள்."
       },
       "why": {
-        "en": "The 3, 9 and 27 terms cancel. So 3S − S = 81 − 1 = 80. That is 2S = 80, hence S = 40.",
-        "ta": "3, 9, 27 உறுப்புகள் நீங்கும். 3S − S = 81 − 1 = 80. எனவே 2S = 80; S = 40."
+        "en": "3S = 3 + 9 + 27 + 81; subtract S = 1 + 3 + 9 + 27. The middle terms cancel: 3S − S = 81 − 1 = 80, hence 2S = 80 and S = 40.",
+        "ta": "3S = 3 + 9 + 27 + 81; S = 1 + 3 + 9 + 27. கழித்தால் நடுவிலுள்ள உறுப்புகள் நீங்கும்: 3S − S = 81 − 1 = 80. எனவே 2S = 80; S = 40."
       },
       "visual": {
         "kind": "sequence",
@@ -795,8 +803,7 @@ window.TRIGGLE_G10_CH2_PATH={
           1,
           2,
           4,
-          8,
-          16
+          8
         ]
       }
     },
@@ -808,12 +815,12 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "முடிவில்லாத தொகையும் முடிவுள்ள மதிப்பும்"
       },
       "idea": {
-        "en": "If the absolute common ratio is less than 1, successive terms shrink to zero and the infinite sum converges. Otherwise this shortcut is invalid.",
-        "ta": "பொதுவிகிதத்தின் தனிமதிப்பு 1-ஐ விடக் குறைவாக இருந்தால் அடுத்தடுத்த உறுப்புகள் பூச்சியத்தை அணுகும்; முடிவிலா தொகை ஒரு மதிப்பை அணுகும். இல்லையெனில் இச்சூத்திரத்தைப் பயன்படுத்தக்கூடாது."
+        "en": "The infinite G.P. has a finite sum only when |r| < 1, meaning −1 < r < 1. A negative ratio makes signs alternate while the term sizes shrink. If |r| ≥ 1, the infinite-sum shortcut is invalid.",
+        "ta": "முடிவிலி பெருக்குத் தொடருக்கு |r| < 1 (அதாவது −1 < r < 1) எனில் மட்டுமே முடிவுள்ள கூட்டுத்தொகை உண்டு. எதிர்மறை விகிதத்தில் உறுப்புகளின் குறியீடு மாறி, அளவில் குறையும். |r| ≥ 1 எனில் இந்தச் சூத்திரம் பொருந்தாது."
       },
       "example": {
-        "en": "1 + 1/2 + 1/4 + 1/8 + ... approaches 2 as the pieces get smaller.",
-        "ta": "1 + 1/2 + 1/4 + 1/8 + ... என்பது உறுப்புகள் குறையக் குறைய 2-ஐ அணுகும்."
+        "en": "1 + 1/2 + 1/4 + ... approaches 2. With r = −1/2, the sum 1 − 1/2 + 1/4 − ... approaches 2/3 instead. Compare both ratios in the visual.",
+        "ta": "1 + 1/2 + 1/4 + ... என்பது 2-ஐ நெருங்கும். r = −1/2 எனில் 1 − 1/2 + 1/4 − ... என்பது 2/3-ஐ நெருங்கும். இரண்டையும் காட்சியில் ஒப்பிடவும்."
       },
       "rule": {
         "en": "S∞ = a/(1−r), |r| < 1",
@@ -847,8 +854,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "முதல் உறுப்பு 3; ஒவ்வொரு உறுப்பும் பாதியாகும். 3/(1 − 1/2) கணக்கிடுங்கள்."
       },
       "why": {
-        "en": "Here a = 3 and r = 1/2, so S∞ = 3/(1 − 1/2) = 6.",
-        "ta": "இங்கே a = 3, r = 1/2. எனவே S∞ = 3/(1 − 1/2) = 6."
+        "en": "Here a = 3 and r = 1/2, with |r| < 1. Hence S∞ = 3/(1 − 1/2) = 6. Do not use this formula for |r| ≥ 1.",
+        "ta": "இங்கே a = 3, r = 1/2; |r| < 1. எனவே S∞ = 3/(1 − 1/2) = 6. |r| ≥ 1 எனில் இந்தச் சூத்திரத்தைப் பயன்படுத்தக்கூடாது."
       },
       "visual": {
         "kind": "fractions",
@@ -864,24 +871,24 @@ window.TRIGGLE_G10_CH2_PATH={
       "id": "g10-ch2-special",
       "section": "2.11",
       "title": {
-        "en": "Special sums: notice the shape before using a formula",
-        "ta": "சிறப்பு தொகைகள்: சூத்திரத்திற்கு முன் அமைப்பைக் கவனியுங்கள்"
+        "en": "Special series: numbers, squares or cubes?",
+        "ta": "சிறப்புத் தொடர்கள்: எண்கள், வர்க்கங்கள், கனங்கள்"
       },
       "idea": {
-        "en": "Sums of the first n numbers, squares, and cubes have different formulas. The sum of cubes equals the square of the triangular-number sum.",
-        "ta": "முதல் n இயல் எண்கள், அவற்றின் வர்க்கங்கள், கனங்களின் தொகைக்கு வெவ்வேறு சூத்திரங்கள் உள்ளன. கனங்களின் தொகை, முதல் n இயல் எண்களின் தொகையின் வர்க்கமாகும்."
+        "en": "Look at what is added: numbers (1 + 2 + ...), squares (1² + 2² + ...), or cubes (1³ + 2³ + ...). Each needs a different rule. Start with squares, then switch the visual to compare.",
+        "ta": "எதை கூட்டுகிறோம் எனப் பாருங்கள்: எண்கள் (1 + 2 + ...), வர்க்கங்கள் (1² + 2² + ...), அல்லது கனங்கள் (1³ + 2³ + ...). ஒவ்வொன்றுக்கும் தனித்தனி விதி உண்டு. முதலில் வர்க்கங்களைக் கற்று காட்சியில் மற்றவற்றுடன் ஒப்பிடவும்."
       },
       "example": {
-        "en": "1³ + 2³ + 3³ = 36, and (1 + 2 + 3)² = 36. This pattern holds for all n.",
-        "ta": "1³ + 2³ + 3³ = 36; மேலும் (1 + 2 + 3)² = 36. இந்த விதி எல்லா n-க்கும் பொருந்தும்."
+        "en": "For squares, 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30. For cubes, 1³ + 2³ + 3³ = (1 + 2 + 3)² = 36. Never use the cubes rule for squares.",
+        "ta": "வர்க்கங்களுக்கு: 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30. கனங்களுக்கு: 1³ + 2³ + 3³ = (1 + 2 + 3)² = 36. வர்க்கங்களுக்குக் கனங்களின் விதியைப் பயன்படுத்த வேண்டாம்."
       },
       "rule": {
-        "en": "1³ + 2³ + ... + n³ = [n(n+1)/2]²",
-        "ta": "1³ + 2³ + ... + n³ = [n(n+1)/2]²"
+        "en": "1² + 2² + ··· + n² = n(n+1)(2n+1)/6",
+        "ta": "1² + 2² + ··· + n² = n(n+1)(2n+1)/6"
       },
       "math": {
-        "latex": "\\sum_{k=1}^{n}k^3=\\left(\\frac{n(n+1)}2\\right)^2",
-        "fallback": "1³ + 2³ + ... + n³ = [n(n+1)/2]²"
+        "latex": "\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}",
+        "fallback": "1² + 2² + ··· + n² = n(n+1)(2n+1)/6"
       },
       "question": {
         "en": "Find 1² + 2² + 3² + 4².",
@@ -903,19 +910,20 @@ window.TRIGGLE_G10_CH2_PATH={
       ],
       "correct": 2,
       "hint": {
-        "en": "Use the squares rule or add 1 + 4 + 9 + 16.",
-        "ta": "வர்க்கக் கூட்டுத்தொகை விதியைப் பயன்படுத்து அல்லது 1 + 4 + 9 + 16 கூட்டுக."
+        "en": "Square each number first: 1², 2², 3², 4². Then add.",
+        "ta": "முதலில் ஒவ்வொரு எண்ணையும் வர்க்கப்படுத்துங்கள்: 1², 2², 3², 4². பிறகு கூட்டவும்."
       },
       "why": {
-        "en": "1 + 4 + 9 + 16 = 30. Also 4(5)(9)/6 = 30. The cubes and ordinary numbers use different formulas.",
-        "ta": "1 + 4 + 9 + 16 = 30. மேலும் 4(5)(9)/6 = 30. கனங்களுக்கும் சாதாரண எண்களுக்கும் வேறு சூத்திரங்கள் உண்டு."
+        "en": "1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30. Using the squares rule: 4 × 5 × 9 ÷ 6 = 30. The cubes rule is different.",
+        "ta": "1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30. வர்க்கங்களின் விதிப்படி 4 × 5 × 9 ÷ 6 = 30. கனங்களின் விதி வேறு."
       },
       "visual": {
         "kind": "sequence",
         "values": [
           1,
-          8,
-          27
+          4,
+          9,
+          16
         ]
       }
     }
