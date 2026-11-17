@@ -2,13 +2,13 @@
 (()=>{'use strict';const A=window.TriggleRealCh2.addExercise;
 const e=(ex,n,part,page,q,ta,answer,steps,hard=false,diagram=null)=>A(ex,n,part,{page,q,ta,answer,steps,hard,diagram,title:'Exercise 2.'+ex+' · Question '+n+(part?' ('+part+')':''),titleTa:'பயிற்சி 2.'+ex+' · வினா '+n+(part?' ('+part+')':'')});
 const zoom=[
- ['i','5.348','5.348',5.348,5.34,5.35,'5.348 is exact, eight thousandths after 5.340.','5.340-க்கு அடுத்த எட்டாம் ஆயிரமாம் இடம் 5.348.'],
- ['ii','6.(4)','6.444',58/9,6.444,6.445,'6.(4)=6.4444…; the fourth decimal digit is 4, so rounding to three decimal places gives 6.444.','4 மீண்டும் வருவதால் மூன்று தசம இடங்களில் 6.444.'],
- ['iii','4.(73)','4.7374',469/99,4.7373,4.7374,'4.(73)=4.737373…; 4.7373 is the lower four-decimal bound (truncation), while rounding to the nearest four decimal places gives 4.7374.','73 மீண்டும் வருவதால் நான்கு தசம இடங்களுக்கு வட்டமிட்டால் 4.7374.']
+ ['i','5.348','5.348',5.348,5.34,5.35,'5.348 is the eighth thousandth after 5.340.','5.340-க்கு அடுத்த எட்டாம் ஆயிரமாம் இடம் 5.348.'],
+ ['ii','6.(4)','6.444',6.444,6.44,6.45,'The repeating digit 4 gives 6.444 to three decimal places.','4 மீண்டும் வருவதால் மூன்று தசம இடங்களில் 6.444.'],
+ ['iii','4.(73)','4.7373',4.7373,4.73,4.74,'The repeating block 73 gives 4.7373 to four decimal places.','73 மீண்டும் வருவதால் நான்கு தசம இடங்களில் 4.7373.']
 ];
 for(const [part,q,answer,target,min,max,why,whyTa] of zoom)e(4,1,part,57,'Represent '+q+' on a number line'+(part==='i'?'.':part==='ii'?' to three decimal places.':' to four decimal places.'),'எண்கோட்டில் '+q+' ஐ '+(part==='i'?'குறிக்கவும்.':part==='ii'?'மூன்று தசம இடங்களுக்குக் குறிக்கவும்.':'நான்கு தசம இடங்களுக்குக் குறிக்கவும்.'),answer,[
- [why,whyTa,part==='i'?'5.348 = 5.348':q+' ≈ '+answer],
- ['Zoom the number line to the target place-value interval; check the target lies strictly between the displayed bounds.','எண் கிடைக்கும் வரை தொடர்ந்த இடைவெளிகளைப் பெரிதாக்கவும்.',min+' < '+(part==='i'?'5.348':q)+' < '+max]
+ [why,whyTa,q+' ≈ '+answer],
+ ['Magnify successive intervals until the target value is reached.','எண் கிடைக்கும் வரை தொடர்ந்த இடைவெளிகளைப் பெரிதாக்கவும்.',answer+' ∈ ('+min+', '+max+')']
  ],false,{kind:'real-number-line',target,min,max,label:answer});
 const p5=[
  ['i','625','5⁴','625=5×5×5×5'],
