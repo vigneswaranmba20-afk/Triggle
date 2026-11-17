@@ -7,6 +7,10 @@ const candidate=JSON.parse(read('docs/curriculum/grade-9/candidates/g9-ch1-ex1-2
 const html=read('site/index.html'),sw=read('site/service-worker.js');
 const script='site/data/textbook-exercises/g9-ch1-ex1-2-q3-q5-batch1-en.js';
 const hintScript='site/data/why-step-g9-ex1-2-q3-q5-batch1.js';
+// PR #234 landed five additional parts on main. This release must be tested
+// against the complete combined student runtime, not the pre-merge nine parts.
+const mergedScript='site/data/textbook-exercises/g9-ch1-ex1-2-q5-iii-q6-en.js';
+const mergedIds=['g9-ch1-ex1.2-q5-iii','g9-ch1-ex1.2-q6-i','g9-ch1-ex1.2-q6-ii','g9-ch1-ex1.2-q6-iii','g9-ch1-ex1.2-q6-iv'];
 assert.equal(m.grade,9);assert.equal(m.chapter,'1');assert.equal(m.exercise,'1.2');
 assert.equal(m.english.printedPage,12);assert.equal(m.english.pdfPage,18);
 assert.equal(m.english.sourcePdfSha256,candidate.sourcePdfSha256);
@@ -16,11 +20,13 @@ assert.equal(html.split(script.slice(5)).length-1,1,'Student module must be load
 assert.equal(html.split(hintScript.slice(5)).length-1,1,'Hint module must be loaded once');
 assert(sw.includes("'./"+script.slice(5)+"'"),'Offline cache needs lesson module');
 assert(sw.includes("'./"+hintScript.slice(5)+"'"),'Offline cache needs hints');
+assert.equal(html.split(mergedScript.slice(5)).length-1,1,'Merged five-part module must be loaded once');
+assert(sw.includes("'./"+mergedScript.slice(5)+"'"),'Merged five-part module must be cached offline');
 assert(!html.includes('g9-ch1-ex1-2-en.js'),'Do not accidentally register all 34 generic candidates');
 const ctx={window:{},console};vm.createContext(ctx);
 for(const p of ['site/data/class-9.js','site/data/curriculum.js',
  'site/data/textbook-exercises/g9-ch1-ex1-2-q1-en.js',
- 'site/data/textbook-exercises/g9-ch1-ex1-2-q2-en.js',script,
+ 'site/data/textbook-exercises/g9-ch1-ex1-2-q2-en.js',mergedScript,script,
  'site/data/why-step-g9.js','site/data/why-step-g9-ex1-2-q1.js',
  'site/data/why-step-g9-ex1-2-q2.js',hintScript,'site/data/problem-difficulty.js']){
  vm.runInContext(read(p),ctx,{filename:p,timeout:10000});
@@ -28,6 +34,12 @@ for(const p of ['site/data/class-9.js','site/data/curriculum.js',
 const grade=ctx.window.TRIGGLE_CLASSES[9],ch=ctx.window.TRIGGLE_CURRICULUM.grades.find(g=>g.grade===9).chapters.find(c=>String(c.number)==='1');
 const ids=Array.from(ctx.window.TRIGGLE_G9_EX1_2_BATCH1_IDS);
 assert.equal(ids.length,10);assert.deepEqual(ids,m.parts.map(p=>p.id));
+const expectedIds=[...mergedIds,...ids];
+assert.equal(new Set(expectedIds).size,15,'No overlap between merged and proposed IDs');
+for(const id of expectedIds){
+ assert.equal(grade.items.filter(x=>x.id===id).length,1,'Exactly one student item for '+id);
+ assert.equal(ch.textbookQuestionIds.filter(x=>x===id).length,1,'Exactly one chapter link for '+id);
+}
 assert.equal(new Set(grade.items.map(x=>x.id)).size,grade.items.length,'No duplicate app IDs');
 assert.equal(new Set(ch.textbookQuestionIds).size,ch.textbookQuestionIds.length,'No duplicate chapter links');
 const fallback=v=>Array.isArray(v)?v.map(fallback).join(''):v?.latex?v.fallback:v;
