@@ -23,6 +23,7 @@ const REVIEW_SCHEMA={
     reviewRequired:{type:'boolean'}
   }
 };
+const API_SCHEMA=JSON.parse(JSON.stringify(REVIEW_SCHEMA),(key,value)=>['maxLength','maxItems'].includes(key)?undefined:value);
 const MODELS=Object.freeze({openai:'gpt-6-luna',gemini:'gemini-3.8-flash'});
 const IDS=Object.freeze({openai:'trace-openai-review-v1',gemini:'trace-gemini-review-v1'});
 // Conservative *reservation*, not a vendor billing quote or invoice.
@@ -68,7 +69,7 @@ function safeStatus(response){
   if(header&&/^[0-9]{1,2}$/.test(header))e.retryAfter=Number(header);
   return e;
 }
-function makeAdapter(provider,{fetchImpl=globalThis.fetch,model=MODELS[provider]}={}){
+function makeAdapter(provider,{fetchImpl=globalThis.fetch,model=MODELS[provider],env=process.env}={}){
   if(!['openai','gemini'].includes(provider)||model!==MODELS[provider]||typeof fetchImpl!=='function')throw Error('UNSUPPORTED_PROVIDER_CONFIGURATION');
   const credentialName=provider==='openai'?'OPENAI_API_KEY':'GEMINI_API_KEY';
   return {
@@ -77,7 +78,7 @@ function makeAdapter(provider,{fetchImpl=globalThis.fetch,model=MODELS[provider]
     local:false,credentialName,maxCostUsd:RESERVATION_USD,
     async run(task,{signal,maxOutputTokens}={}){
       // Broker already checks credential, authorization and cost *before* calling this.
-      const key=process.env[credentialName];
+      const key=env[credentialName];
       if(!key)throw Error('MISSING_CREDENTIAL');
       const input=JSON.stringify(task.input);
       if(Buffer.byteLength(input)>7500)throw Error('REVIEW_INPUT_TOO_LARGE');
@@ -88,13 +89,13 @@ function makeAdapter(provider,{fetchImpl=globalThis.fetch,model=MODELS[provider]
         headers={'authorization':'Bearer '+key,'content-type':'application/json'};
         body={model,store:false,max_output_tokens:limit,
           input:[{role:'developer',content:POLICY},{role:'user',content:input}],
-          text:{format:{type:'json_schema',name:'trace_independent_review',strict:true,schema:REVIEW_SCHEMA}}};
+          text:{format:{type:'json_schema',name:'trace_independent_review',strict:true,schema:API_SCHEMA}}};
       }else{
         url='https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent';
         headers={'x-goog-api-key':key,'content-type':'application/json'};
         body={systemInstruction:{parts:[{text:POLICY}]},
           contents:[{role:'user',parts:[{text:input}]}],
-          generationConfig:{responseMimeType:'application/json',responseJsonSchema:REVIEW_SCHEMA,maxOutputTokens:limit}};
+          generationConfig:{responseMimeType:'application/json',responseJsonSchema:API_SCHEMA,maxOutputTokens:limit}};
       }
       const response=await fetchImpl(url,{method:'POST',headers,body:JSON.stringify(body),signal});
       if(!response?.ok)throw safeStatus(response||{});
@@ -133,7 +134,7 @@ async function runDualReview(record,options={}){
   if(live&&(options.authorizeSpend!==true||process.env.TRACE_DUAL_AI_SPEND_APPROVED!=='YES'))
     throw Error('EXPLICIT_SPEND_APPROVAL_REQUIRED');
   const adapters=live?
-    [makeAdapter('openai',options.openai||{}),makeAdapter('gemini',options.gemini||{})]:
+    [makeAdapter('openai',{...options.openai,env:options.env||process.env}),makeAdapter('gemini',{...options.gemini,env:options.env||process.env})]:
     [demoAdapter('openai'),demoAdapter('gemini')];
   const stateDir=options.stateDir||fs.mkdtempSync(path.join(os.tmpdir(),'trace-dual-review-'));
   const broker=new Broker({
