@@ -2,8 +2,8 @@
 // English-only 2025 Grade 9 Algebra source/appendix candidates. NOT published student questions.
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path');
-const katex=require('../../../site/assets/vendor/katex/katex.min.js');
-const root=path.resolve(__dirname,'../../../');
+const katex=require('../../../../site/assets/vendor/katex/katex.min.js');
+const root=path.resolve(__dirname,'../../../../');
 const json=JSON.parse(fs.readFileSync(path.join(root,'docs/curriculum/grade-9/candidates/g9-ch3-ex3-1-q1-q2-english-11.json'),'utf8'));
 const html=fs.readFileSync(path.join(root,'site/index.html'),'utf8');
 assert.equal(json.schemaVersion,1);
