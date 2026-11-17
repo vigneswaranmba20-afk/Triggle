@@ -60,17 +60,15 @@ const entries=[
     "answer": "Equivalent sets",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
-    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
+    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025 English; Exercise 1.2 Q3–Q5, printed p. 12 / PDF p. 18. Source page and English mathematical reasoning checked in docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md. Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
     "sourceFidelity": {
       "status": "original-english-page-images-checked-in-source-audit",
       "enPrintedPages": [
-        11,
         12
       ],
       "enPdfPages": [
-        17,
         18
       ],
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -145,17 +143,15 @@ const entries=[
     "answer": "Unequal sets",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
-    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
+    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025 English; Exercise 1.2 Q3–Q5, printed p. 12 / PDF p. 18. Source page and English mathematical reasoning checked in docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md. Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
     "sourceFidelity": {
       "status": "original-english-page-images-checked-in-source-audit",
       "enPrintedPages": [
-        11,
         12
       ],
       "enPdfPages": [
-        17,
         18
       ],
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -237,17 +233,15 @@ const entries=[
     "answer": "Equal sets",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
-    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
+    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025 English; Exercise 1.2 Q3–Q5, printed p. 12 / PDF p. 18. Source page and English mathematical reasoning checked in docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md. Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
     "sourceFidelity": {
       "status": "original-english-page-images-checked-in-source-audit",
       "enPrintedPages": [
-        11,
         12
       ],
       "enPdfPages": [
-        17,
         18
       ],
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -322,17 +316,15 @@ const entries=[
     "answer": "Equivalent sets",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
-    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
+    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025 English; Exercise 1.2 Q3–Q5, printed p. 12 / PDF p. 18. Source page and English mathematical reasoning checked in docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md. Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
     "sourceFidelity": {
       "status": "original-english-page-images-checked-in-source-audit",
       "enPrintedPages": [
-        11,
         12
       ],
       "enPdfPages": [
-        17,
         18
       ],
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -407,17 +399,15 @@ const entries=[
     "answer": "Null set",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
-    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
+    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025 English; Exercise 1.2 Q3–Q5, printed p. 12 / PDF p. 18. Source page and English mathematical reasoning checked in docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md. Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
     "sourceFidelity": {
       "status": "original-english-page-images-checked-in-source-audit",
       "enPrintedPages": [
-        11,
         12
       ],
       "enPdfPages": [
-        17,
         18
       ],
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -499,17 +489,15 @@ const entries=[
     "answer": "Null set",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
-    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
+    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025 English; Exercise 1.2 Q3–Q5, printed p. 12 / PDF p. 18. Source page and English mathematical reasoning checked in docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md. Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
     "sourceFidelity": {
       "status": "original-english-page-images-checked-in-source-audit",
       "enPrintedPages": [
-        11,
         12
       ],
       "enPdfPages": [
-        17,
         18
       ],
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -584,17 +572,15 @@ const entries=[
     "answer": "Singleton set",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
-    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
+    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025 English; Exercise 1.2 Q3–Q5, printed p. 12 / PDF p. 18. Source page and English mathematical reasoning checked in docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md. Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
     "sourceFidelity": {
       "status": "original-english-page-images-checked-in-source-audit",
       "enPrintedPages": [
-        11,
         12
       ],
       "enPdfPages": [
-        17,
         18
       ],
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -676,17 +662,15 @@ const entries=[
     "answer": "Null set",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
-    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
+    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025 English; Exercise 1.2 Q3–Q5, printed p. 12 / PDF p. 18. Source page and English mathematical reasoning checked in docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md. Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
     "sourceFidelity": {
       "status": "original-english-page-images-checked-in-source-audit",
       "enPrintedPages": [
-        11,
         12
       ],
       "enPdfPages": [
-        17,
         18
       ],
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -761,17 +745,15 @@ const entries=[
     "answer": "Overlapping",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
-    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
+    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025 English; Exercise 1.2 Q3–Q5, printed p. 12 / PDF p. 18. Source page and English mathematical reasoning checked in docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md. Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
     "sourceFidelity": {
       "status": "original-english-page-images-checked-in-source-audit",
       "enPrintedPages": [
-        11,
         12
       ],
       "enPdfPages": [
-        17,
         18
       ],
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
@@ -853,17 +835,15 @@ const entries=[
     "answer": "Disjoint",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
-    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025; Exercise 1.2, printed pp. 11–12 / PDF pp. 17–18. Source images and English solution reasoning audited in PR #129. Tamil editorial and teacher approval deferred.",
+    "reference": "Tamil Nadu SCERT Standard Nine Mathematics, revised 2025 English; Exercise 1.2 Q3–Q5, printed p. 12 / PDF p. 18. Source page and English mathematical reasoning checked in docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md. Tamil editorial and teacher reviews deferred.",
     "edition": "2025",
     "translationReview": "pending",
     "sourceFidelity": {
       "status": "original-english-page-images-checked-in-source-audit",
       "enPrintedPages": [
-        11,
         12
       ],
       "enPdfPages": [
-        17,
         18
       ],
       "sourceAudit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
