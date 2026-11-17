@@ -36,7 +36,7 @@ function taskFixture(input='synthetic fixture'){return {capability:'classificati
  input,input_hash:digest(input),schema:outputSchema,max_output_tokens:128,retry_policy:{max_retries:1,max_delay_ms:1000}};}
 class Broker{
  constructor({stateDir,adapters=[mockAdapter()],offline=true,spendingAuthorized=false,runBudgetUsd=0,dayBudgetUsd=0,providerBudgetsUsd={},
-  maxItems=20,concurrency=2,maxOutputTokens=1024,circuitThreshold=3,env=process.env,now=()=>Date.now(),sleep,root=bulk.ROOT}={}){
+  monthBudgetUsd=null,maxItems=20,concurrency=2,maxOutputTokens=1024,circuitThreshold=3,env=process.env,now=()=>Date.now(),sleep,root=bulk.ROOT}={}){
   if(!stateDir)fail('STATE_DIRECTORY_REQUIRED');
   if(typeof offline!=='boolean'||typeof spendingAuthorized!=='boolean')fail('INVALID_AUTHORIZATION_FLAGS');
   this.root=root;this.stateDir=path.resolve(stateDir);
@@ -47,7 +47,7 @@ class Broker{
   if(!Number.isInteger(maxItems)||maxItems<1||maxItems>1000||!Number.isInteger(concurrency)||concurrency<1||concurrency>8||!Number.isInteger(maxOutputTokens)||maxOutputTokens<1||maxOutputTokens>32768||!Number.isInteger(circuitThreshold)||circuitThreshold<1)fail('INVALID_LIMITS');
   if(new Set(adapters.map(a=>a.id)).size!==adapters.length)fail('DUPLICATE_ADAPTER');
   this.adapters=adapters;this.offline=offline;this.spendingAuthorized=spendingAuthorized;this.env=env;this.now=now;
-  this.runCeiling=usd(runBudgetUsd);this.dayCeiling=usd(dayBudgetUsd);this.providerCeilings=Object.fromEntries(Object.entries(providerBudgetsUsd).map(([k,v])=>[k,usd(v)]));
+  this.runCeiling=usd(runBudgetUsd);this.dayCeiling=usd(dayBudgetUsd);this.monthCeiling=monthBudgetUsd===null?null:usd(monthBudgetUsd);this.providerCeilings=Object.fromEntries(Object.entries(providerBudgetsUsd).map(([k,v])=>[k,usd(v)]));
   this.maxItems=maxItems;this.concurrency=concurrency;this.maxOutputTokens=maxOutputTokens;this.circuitThreshold=circuitThreshold;
   this.sleep=sleep||((ms,signal)=>new Promise((resolve,reject)=>{
    if(signal?.aborted)return reject(new BrokerError('CANCELLED'));
@@ -128,7 +128,8 @@ class Broker{
    if(signal?.aborted)fail('CANCELLED');
    this.mutate(state=>{
     const day=new Date(this.now()).toISOString().slice(0,10),d=state.days[day]||{total:0,providers:{}};
-    if(maxCost>0&&(taskSpent+maxCost>taskCeiling||this.runSpent+maxCost>this.runCeiling||d.total+maxCost>this.dayCeiling||(d.providers[adapter.id]||0)+maxCost>(this.providerCeilings[adapter.id]??0)))fail('COST_CEILING');
+    const monthTotal=Object.entries(state.days).filter(([date])=>date.startsWith(day.slice(0,7)+'-')).reduce((sum,[,entry])=>sum+entry.total,0);
+    if(maxCost>0&&(taskSpent+maxCost>taskCeiling||this.runSpent+maxCost>this.runCeiling||d.total+maxCost>this.dayCeiling||(this.monthCeiling!==null&&monthTotal+maxCost>this.monthCeiling)||(d.providers[adapter.id]||0)+maxCost>(this.providerCeilings[adapter.id]??0)))fail('COST_CEILING');
     if(['reserved','interrupted'].includes(state.jobs[key]?.status))fail('INTERRUPTED_REVIEW_REQUIRED');
     d.total+=maxCost;d.providers[adapter.id]=(d.providers[adapter.id]||0)+maxCost;state.days[day]=d;
     state.jobs[key]={status:'reserved',runId:this.runId,adapter:adapter.id,attempt,reservedMicros:maxCost,inputHash:task.input_hash};
