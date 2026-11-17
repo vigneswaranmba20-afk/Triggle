@@ -84,5 +84,13 @@ const paidTask=()=>({...taskFixture(),budget:0.1});
   await rejects(new Broker({stateDir:dir}).run(taskFixture()),'INVALID_ACCOUNTING');
   assert.throws(()=>new Broker({stateDir:path.join(__dirname,'public-state-test')}),/PUBLIC_STATE_DIRECTORY_FORBIDDEN/);fs.rmdirSync(path.join(__dirname,'public-state-test'));
  });
+ await test('monthly cap counts reservations on different days',async()=>{
+   const conf=paidConfig(),date0=Date.parse('2026-11-16T04:00:00Z');
+   const first=new Broker({...conf,monthBudgetUsd:0.015,now:()=>date0});
+   assert.equal((await first.run({...taskFixture('day one'),budget:0.1})).status,'UNTRUSTED_CANDIDATE');
+   const second=new Broker({...conf,monthBudgetUsd:0.015,now:()=>date0+86400000});
+   await rejects(second.run({...taskFixture('day two'),budget:0.1}),'COST_CEILING');
+   assert.equal(second.report().reservedCostUsd,0);
+ });
  console.log(`PASS ${count} TRACE broker groups; all provider calls simulated, external spend USD 0`);
 }finally{fs.rmSync(root,{recursive:true,force:true});}})().catch(e=>{console.error(e);process.exitCode=1;});
