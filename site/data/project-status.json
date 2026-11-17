@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "4973ae81889bd841657972802ca5c8bf115bdab8",
-  "updatedAt": "2026-11-17T04:42:27+00:00",
+  "sourceCommit": "780dce89d82b36be95d06b5be45cb16ffddcec3e",
+  "updatedAt": "2026-11-17T13:23:57+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -25,12 +25,12 @@
     "site/data/curriculum.js": "1d49b3c31bed70448d84d58e41e2019faeca9aaf5eec840065dedac421ee2827",
     "site/data/g10-ch2-concepts.js": "7af37327ce13b50bce11c1b2bd6f096e1f6434a6d04f0a6a07e846607c8da06c",
     "site/data/g10-ch2-teaching-bridges.js": "4a968e6a6b1eeb90908670f83b3407cc9217116425d55e7071325cf4992d6b7e",
-    "site/data/g9-clear-math.js": "13bf3b8a10e43c370e719e7521aebfabcaa2f6af4b0affdcd9802e819f97defa",
+    "site/data/g9-clear-math.js": "8bff0a6ab6ec72944aaf80aa53a3dc959584f7d3f6b12d3727e702985b29a2a1",
     "site/data/g9-probability-chapter.js": "ba7189fc6ac5e0dc305fc10b168733a45ae2b2eda7bce2334384615ea8298bd2",
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "9a0843a303be9d4ac547a825478a0ddd3e21f3952dafefa16e248fe9f23aaaac",
     "site/data/math-layout/g10-ch2-ch8-chatgpt-20261113.js": "7c9e63f5a069dc5658601181f5d6b1df16ec9d0d457e21964fb2b24ec291d134",
-    "site/data/problem-difficulty.js": "d5b8a24529c9ce62313409f4c45d7e3f526ffadb91084b3db267b7d7da1544a8",
+    "site/data/problem-difficulty.js": "c1374eb47114c8be2b29c414053c0cc7bbd5f3463511d99ac7da431012a16f33",
     "site/data/real-numbers/g9-ch2-concepts.js": "ccccf6be7165344c5337aecff4120c8763b55481b516fd22a63fe57d4c958564",
     "site/data/real-numbers/g9-ch2-core.js": "aa11da8281a83d1eec91f1f42205f35a3e023f95bea0ebf72168acb33f903279",
     "site/data/real-numbers/g9-ch2-examples-a.js": "b6f78eb165adfe7f63daa65a138d58d9ca44f2ea1a219513805355b6ea93e8d7",
@@ -61,7 +61,9 @@
     "site/data/textbook-exercises/g9-ch1-ex1-1-view.js": "abde387cdbbcdcbd10e160940343aaab2a49fb7bd0a9e2055248fe8ea93f156e",
     "site/data/textbook-exercises/g9-ch1-ex1-2-q1-en.js": "652a1dec1346a56bfb9b95071e07a13336fd935abe5af4a64bf78ba230941c67",
     "site/data/textbook-exercises/g9-ch1-ex1-2-q2-en.js": "4282b467bda3a3f7827f120f99174a0ce9522b211e7ea0659883d6a9f0f16c32",
+    "site/data/textbook-exercises/g9-ch1-ex1-2-q3-q5-batch1-en.js": "d299d17f9ec627816efdce5031e7f311cd459a9d3aeef46583466e32f517af38",
     "site/data/textbook-exercises/g9-ch1-ex1-2-q5-iii-q6-en.js": "e3bb4bed1e5f3a5c10bf9f35275234f41fd3a573313d53252b52e8b0c47f4c36",
+    "site/data/textbook-exercises/g9-ch1-ex1-2-q7-q10-en.js": "f9f9b5a2eee60f5ae07e6ec5c4355d04fac21b497042e45891c02a0353b96b1b",
     "site/data/textbook-exercises/g9-ch3-ex3-1-q10-q12-en.js": "09d627729266bbda78da8fbad94c639b329419393f9bc39b7f3d583e450a408c",
     "site/data/textbook-exercises/g9-ch3-ex3-2-q4-en.js": "ac38b0d0f99e681a6f1be347b65887cb55465fdb4786b4e4859a783974f5a221",
     "site/data/textbook-exercises/g9-ch4-ex4-1-q2-q4-en.js": "8dd13609b698e2c220841c1d5165a2a42d466e13e6500b796849e9fa08d54d33",
@@ -85,9 +87,11 @@
     "site/data/why-step-g10.js": "0294380d9b5a3751ca952a101ab166155034210c0670c09e3bdc173e7c5f9f1a",
     "site/data/why-step-g9-ex1-2-q1.js": "3a455f5dbba4189564c390af633de45cf05aeccb235304f71717f3130b39fe69",
     "site/data/why-step-g9-ex1-2-q2.js": "b1e9513604a3143efe7d2665b658f441012635a1799e6996ad239eccdd60a7b0",
+    "site/data/why-step-g9-ex1-2-q3-q5-batch1.js": "2db9b68747641446a67241af38ee0a950243a5faec90c9b4446980e7d0a72b41",
     "site/data/why-step-g9-ex1-2-q5-iii-q6.js": "1995eef069a08af2255b1417009a6af5955bf06d53952e905e66379e5c426a30",
+    "site/data/why-step-g9-ex1-2-q7-q10.js": "c7bdb60911415c938387024d5b04ab88b5fb3cfb64d04241443455825af04540",
     "site/data/why-step-g9.js": "bb50faef659c15dffe6bcb6f3b8856115f10848ec14cdb9a169626d1814e3380",
-    "site/index.html": "0f1d7355b334600636f517e25af2b2eb87929689f0c7f0ad4abfc14c5db19dfd",
+    "site/index.html": "da964b53a761deb0590455b5af537b31ab18c109c7437d806df35bf0c115c907",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
@@ -131,7 +135,7 @@
       "completedEnglishChapters": 0,
       "partialChapters": 9,
       "pendingChapters": 0,
-      "exerciseRecords": 318,
+      "exerciseRecords": 338,
       "verifiedNumberedQuestions": 0,
       "verifiedTasks": 0,
       "wholeGradeQuestionDenominator": null,
@@ -152,7 +156,7 @@
         {
           "number": "1",
           "title": "Set Language",
-          "exerciseRecords": 44,
+          "exerciseRecords": 64,
           "completeEnglish": false,
           "completionBasis": "Incomplete or denominator unknown",
           "verifiedNumberedQuestions": 0,
@@ -588,6 +592,186 @@
                   "englishAvailable": true,
                   "tamilAvailable": false,
                   "recordSha256": "e474e9d11fb8da16e4c9bf677219d9c18064bec22824e00f5935898cfae94c7f",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q3-i",
+                  "label": "Exercise 1.2 · Q3(i)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q3-i",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "a455a7beea715f9ae55fbddcca2a9737965bfd658f8d56f1264e334cf350e880",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q3-ii",
+                  "label": "Exercise 1.2 · Q3(ii)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q3-ii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "c71e5a0e275c407d8ece20c79cbf399ef2a880b209f201a0f9ac964556c6397e",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q3-iii",
+                  "label": "Exercise 1.2 · Q3(iii)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q3-iii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "282c2d80292def0cd1cf15f152408ac8ca26f39eb1c31593374dbba7bbca8d46",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q3-iv",
+                  "label": "Exercise 1.2 · Q3(iv)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q3-iv",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "41ae06f15969ff353f0b5a58111306349bd308165b0157503d613b1d17b39c3d",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q4-i",
+                  "label": "Exercise 1.2 · Q4(i)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q4-i",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "220ea4db317dc26f74925ecc59fb3570c64867eca8f2153dc75ea8f2c861dcab",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q4-ii",
+                  "label": "Exercise 1.2 · Q4(ii)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q4-ii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "94b5ba6997fd7036b52c00d0abcbe0d1f4dbd4baae8502834c9a6cc982de70f2",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q4-iii",
+                  "label": "Exercise 1.2 · Q4(iii)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q4-iii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "7dbad8a720e3f3e2e10accaa6aa524b035e665ce20397f4462e2367dc8d30116",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q4-iv",
+                  "label": "Exercise 1.2 · Q4(iv)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q4-iv",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "f80a29f75a88eb0172654d27b6a818d147c9d637c44316d8f7dfddec6f0ef61d",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q5-i",
+                  "label": "Exercise 1.2 · Q5(i)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q5-i",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "3a9659114ef03b65133997a44d1b32f511f728af4844b42cd54c5d64d7aec607",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q5-ii",
+                  "label": "Exercise 1.2 · Q5(ii)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q5-ii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "1946423279d9390588af975faa976ac5d3bb3090d3757c3a2eedcd8ec03dac6b",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q7",
+                  "label": "Exercise 1.2 · Q7",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q7",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "3a8129c1161378849c905888b9f109d474014f2e06d225ba3c53360ce06b5614",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q8-i",
+                  "label": "Exercise 1.2 · Q8(i)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q8-i",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "94fefce3d2d2d339c067cc5b9ede2b45889ebf56318ea7090ed36fa2a6d23b52",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q8-ii",
+                  "label": "Exercise 1.2 · Q8(ii)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q8-ii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "eaa7c7223af318f0d4aaca1411bba3e83cf2465f84de8d4130cb6cc634fcfc02",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q8-iii",
+                  "label": "Exercise 1.2 · Q8(iii)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q8-iii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "c57defaa708550c345186f6d0faedc99eac389ddc95ffdfc1f9fff6a9d3b459b",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q8-iv",
+                  "label": "Exercise 1.2 · Q8(iv)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q8-iv",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "2d096963b3720623e5b9f1fcccdb1e80ba0c6570aa163aa734568d2f20075d31",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q9-i",
+                  "label": "Exercise 1.2 · Q9(i)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q9-i",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "5f9ce1adb4a9a2af188f7608862903a12cbe8f464a128e896aa837067f68fdcc",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q9-ii",
+                  "label": "Exercise 1.2 · Q9(ii)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q9-ii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "9be7d96cee958c1ab01d1a2c3ea135531ac5237ee40c0a5e34cfaaabc25151ef",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q10-i",
+                  "label": "Exercise 1.2 · Q10(i)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q10-i",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "8ebf1a92e9982f10902f2bb458978242247f0f1ecae2d35c8e47c1645c2c12af",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q10-ii",
+                  "label": "Exercise 1.2 · Q10(ii)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q10-ii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "55225679a654ef6625ab0f7f94013284d26b1bb19e98b8f120429091bcc12229",
+                  "verified": false
+                },
+                {
+                  "id": "g9-ch1-ex1.2-q10-iii",
+                  "label": "Exercise 1.2 · Q10(iii)",
+                  "url": "../index.html?class=9&question=g9-ch1-ex1.2-q10-iii",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "7bb111c3d1ea37a6ee16b14d9bc954633d086faad3d63471c05551ad3e9f6e4d",
                   "verified": false
                 }
               ],
@@ -10964,7 +11148,27 @@
         "g9-ch1-ex1.2-q6-i",
         "g9-ch1-ex1.2-q6-ii",
         "g9-ch1-ex1.2-q6-iii",
-        "g9-ch1-ex1.2-q6-iv"
+        "g9-ch1-ex1.2-q6-iv",
+        "g9-ch1-ex1.2-q3-i",
+        "g9-ch1-ex1.2-q3-ii",
+        "g9-ch1-ex1.2-q3-iii",
+        "g9-ch1-ex1.2-q3-iv",
+        "g9-ch1-ex1.2-q4-i",
+        "g9-ch1-ex1.2-q4-ii",
+        "g9-ch1-ex1.2-q4-iii",
+        "g9-ch1-ex1.2-q4-iv",
+        "g9-ch1-ex1.2-q5-i",
+        "g9-ch1-ex1.2-q5-ii",
+        "g9-ch1-ex1.2-q7",
+        "g9-ch1-ex1.2-q8-i",
+        "g9-ch1-ex1.2-q8-ii",
+        "g9-ch1-ex1.2-q8-iii",
+        "g9-ch1-ex1.2-q8-iv",
+        "g9-ch1-ex1.2-q9-i",
+        "g9-ch1-ex1.2-q9-ii",
+        "g9-ch1-ex1.2-q10-i",
+        "g9-ch1-ex1.2-q10-ii",
+        "g9-ch1-ex1.2-q10-iii"
       ],
       "scope": [],
       "status": "Awaiting verification",

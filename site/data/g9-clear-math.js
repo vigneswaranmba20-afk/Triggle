@@ -31444,6 +31444,1003 @@ const records=[
         }
       }
     ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q3-i",
+    "questionMath": {
+      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(i) A = The set of vowels in the English alphabets. B = The set of all letters in the word “VOWEL”."
+    },
+    "answerMath": {
+      "latex": "\\text{Equivalent sets}",
+      "fallback": "Equivalent sets",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}A&=\\{a,e,i,o,u\\}\\\\B&=\\{V,O,W,E,L\\}\\end{aligned}",
+          "fallback": "A = {a, e, i, o, u}; B = {V, O, W, E, L}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the distinct letters in each set."
+        }
+      },
+      {
+        "math": {
+          "latex": "n(A)=n(B)=5,\\quad A\\ne B",
+          "fallback": "n(A) = n(B) = 5; A ≠ B",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Each set has five elements, but the members differ."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Equivalent sets}",
+          "fallback": "A and B: equivalent",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Same number of members means the sets are equivalent."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q3-ii",
+    "questionMath": {
+      "en": [
+        "3. Which of the following sets are equivalent or unequal or equal sets?\n(ii) ",
+        {
+          "latex": "\\begin{aligned}C&=\\{2,3,4,5\\}\\\\D&=\\{x:x\\in\\mathbb W,\\ 1<x<5\\}\\end{aligned}",
+          "fallback": "C = {2,3,4,5} D = {x : x∈W, 1 < x < 5}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Unequal sets}",
+      "fallback": "Unequal sets",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "D=\\{2,3,4\\}",
+          "fallback": "D = {2, 3, 4}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the whole numbers strictly between 1 and 5."
+        }
+      },
+      {
+        "math": {
+          "latex": "C=\\{2,3,4,5\\}",
+          "fallback": "C = {2, 3, 4, 5}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Compare D with the given set C."
+        }
+      },
+      {
+        "math": {
+          "latex": "C\\ne D\\quad\\text{(unequal)}",
+          "fallback": "C ≠ D; unequal sets",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The element 5 is in C but not in D."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q3-iii",
+    "questionMath": {
+      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iii) X = {x : x is a letter in the word “LIFE”} Y = {F, I, L, E}"
+    },
+    "answerMath": {
+      "latex": "\\text{Equal sets}",
+      "fallback": "Equal sets",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "X=\\{L,I,F,E\\}",
+          "fallback": "X = {L, I, F, E}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Write the distinct letters appearing in LIFE."
+        }
+      },
+      {
+        "math": {
+          "latex": "Y=\\{F,I,L,E\\}",
+          "fallback": "Y = {F, I, L, E}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Compare those members with Y; order does not matter in a set."
+        }
+      },
+      {
+        "math": {
+          "latex": "X=Y\\quad\\text{(equal)}",
+          "fallback": "X = Y; equal sets",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Both sets contain exactly the same four elements."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q3-iv",
+    "questionMath": {
+      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iv) G = {x : x is a prime number and 3 < x < 23} H = {x : x is a divisor of 18}"
+    },
+    "answerMath": {
+      "latex": "\\text{Equivalent sets}",
+      "fallback": "Equivalent sets",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "G=\\{5,7,11,13,17,19\\}",
+          "fallback": "G = {5, 7, 11, 13, 17, 19}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the primes strictly between 3 and 23."
+        }
+      },
+      {
+        "math": {
+          "latex": "H=\\{1,2,3,6,9,18\\}",
+          "fallback": "H = {1, 2, 3, 6, 9, 18}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List the positive divisors of 18."
+        }
+      },
+      {
+        "math": {
+          "latex": "n(G)=n(H)=6\\quad\\text{(equivalent)}",
+          "fallback": "n(G) = n(H) = 6; equivalent sets",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Both sets contain six distinct members, but different values."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q4-i",
+    "questionMath": {
+      "en": [
+        "4. Identify the following sets as null set or singleton set.\n(i) ",
+        {
+          "latex": "A=\\{x:x\\in\\mathbb N,\\ 1<x<2\\}",
+          "fallback": "A = {x : x∈N, 1 < x < 2}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Null set}",
+      "fallback": "Null set",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "1<x<2,\\quad x\\in\\mathbb N",
+          "fallback": "1 < x < 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "There is no natural number strictly between consecutive integers 1 and 2."
+        }
+      },
+      {
+        "math": {
+          "latex": "A=\\varnothing",
+          "fallback": "A = ∅",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "So the membership condition has no solution."
+        }
+      },
+      {
+        "math": {
+          "latex": "A\\text{ is a null set}",
+          "fallback": "A: null set",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A set without elements is called the null or empty set."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q4-ii",
+    "questionMath": {
+      "en": "4. Identify the following sets as null set or singleton set.\n(ii) B = The set of all even natural numbers which are not divisible by 2"
+    },
+    "answerMath": {
+      "latex": "\\text{Null set}",
+      "fallback": "Null set",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{Even}\\ \\Rightarrow\\ \\text{divisible by }2",
+          "fallback": "even ⇒ divisible by 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Every even natural number is divisible by two by definition."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{No possible elements}",
+          "fallback": "No number satisfies both conditions",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The question requires an even number that is not divisible by two."
+        }
+      },
+      {
+        "math": {
+          "latex": "B=\\varnothing\\quad\\text{(null)}",
+          "fallback": "B = ∅; null set",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Thus B has no members."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q4-iii",
+    "questionMath": {
+      "en": [
+        "4. Identify the following sets as null set or singleton set.\n(iii) ",
+        {
+          "latex": "C=\\{0\\}",
+          "fallback": "C = {0}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Singleton set}",
+      "fallback": "Singleton set",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "C=\\{0\\}",
+          "fallback": "C = {0}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The curly brackets contain the number zero as one element."
+        }
+      },
+      {
+        "math": {
+          "latex": "n(C)=1",
+          "fallback": "n(C) = 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "This is not the empty set: it contains one element."
+        }
+      },
+      {
+        "math": {
+          "latex": "C\\text{ is a singleton set}",
+          "fallback": "C: singleton set",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A one-element set is a singleton."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q4-iv",
+    "questionMath": {
+      "en": "4. Identify the following sets as null set or singleton set.\n(iv) D = The set of all triangles having four sides."
+    },
+    "answerMath": {
+      "latex": "\\text{Null set}",
+      "fallback": "Null set",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{A triangle has exactly 3 sides}",
+          "fallback": "triangle: 3 sides",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "By definition, every triangle has exactly three sides."
+        }
+      },
+      {
+        "math": {
+          "latex": "D=\\varnothing",
+          "fallback": "D = ∅",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "No triangle has four sides."
+        }
+      },
+      {
+        "math": {
+          "latex": "D\\text{ is a null set}",
+          "fallback": "D: null set",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Therefore D is the null set."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q5-i",
+    "questionMath": {
+      "en": [
+        "5. State which pairs of sets are disjoint or overlapping?\n(i) ",
+        {
+          "latex": "\\begin{aligned}A&=\\{f,i,a,s\\}\\\\B&=\\{a,n,f,h,s\\}\\end{aligned}",
+          "fallback": "A = {f, i, a, s} and B = {a, n, f, h, s}",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Overlapping sets}",
+      "fallback": "Overlapping",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}A&=\\{f,i,a,s\\}\\\\B&=\\{a,n,f,h,s\\}\\end{aligned}",
+          "fallback": "A = {f, i, a, s}; B = {a, n, f, h, s}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Find the letters appearing in both sets."
+        }
+      },
+      {
+        "math": {
+          "latex": "A\\cap B=\\{a,f,s\\}",
+          "fallback": "A∩B = {a, f, s}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Their common elements are a, f, and s."
+        }
+      },
+      {
+        "math": {
+          "latex": "A\\cap B\\ne\\varnothing\\quad\\text{(overlap)}",
+          "fallback": "A and B: overlapping",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The intersection is nonempty, so the sets overlap."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q5-ii",
+    "questionMath": {
+      "en": "5. State which pairs of sets are disjoint or overlapping?\n(ii) C = {x : x is a prime number, x > 2} and D = {x : x is an even prime number}"
+    },
+    "answerMath": {
+      "latex": "\\text{Disjoint sets}",
+      "fallback": "Disjoint",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "D=\\{2\\}",
+          "fallback": "D = {2}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The only even prime number is two."
+        }
+      },
+      {
+        "math": {
+          "latex": "2\\notin C",
+          "fallback": "2 ∉ C",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "C contains only prime numbers greater than 2, so it excludes 2."
+        }
+      },
+      {
+        "math": {
+          "latex": "C\\cap D=\\varnothing\\quad\\text{(disjoint)}",
+          "fallback": "C∩D = ∅; disjoint",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "There is no common element."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q7",
+    "questionMath": {
+      "en": [
+        "7. If ",
+        {
+          "latex": "A=\\{a,\\ \\{a,b\\}\\}",
+          "fallback": "A = {a, {a, b}}"
+        },
+        ", write all the subsets of A."
+      ]
+    },
+    "answerMath": {
+      "latex": "\\varnothing,\\ \\{a\\},\\ \\{\\{a,b\\}\\},\\ \\{a,\\{a,b\\}\\}",
+      "fallback": "∅, {a}, {{a, b}}, {a, {a, b}}",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "A=\\{a,\\ \\{a,b\\}\\};\\quad n(A)=2",
+          "fallback": "A = {a, {a,b}}; n(A)=2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "In A = {a, {a, b}}, the outer curly braces { } enclose 2 elements: the single letter a and the entire inner set {a, b} treated as one object, so the cardinal number n(A) is 2."
+        }
+      },
+      {
+        "math": {
+          "latex": "n[P(A)]=2^2=4",
+          "fallback": "n[P(A)] = 2² = 4",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "In n[P(A)] = 2^{n(A)}, P(A) denotes the power set (the set of all subsets of A). Because n(A) = 2, set A has 2² = 4 subsets in total."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}P(A)=\\{&\\varnothing,\\ \\{a\\},\\\\&\\{\\{a,b\\}\\},\\ \\{a,\\{a,b\\}\\}\\}\\end{aligned}",
+          "fallback": "P(A) = {∅, {a}, {{a,b}}, {a,{a,b}}}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "List all 4 subsets of A: the empty set ∅ (0 elements), the two one-element subsets {a} and {{a, b}}, and the full set {a, {a, b}} itself."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q8-i",
+    "questionMath": {
+      "en": [
+        "8. Write down the power set of the following sets:\n(i) ",
+        {
+          "latex": "A=\\{a,b\\}",
+          "fallback": "A = {a, b}"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "P(A)=\\{\\varnothing,\\ \\{a\\},\\ \\{b\\},\\ \\{a,b\\}\\}",
+      "fallback": "P(A) = {∅, {a}, {b}, {a, b}}",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "n(A)=2",
+          "fallback": "n(A) = 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Set A = {a, b} contains 2 distinct elements inside its curly braces { }, so its cardinal number n(A) is 2 and it has 2² = 4 subsets."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\varnothing;\\ \\{a\\};\\ \\{b\\};\\ \\{a,b\\}",
+          "fallback": "∅; {a}; {b}; {a,b}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Form every possible subset of A by choosing 0 elements (the empty set ∅), 1 element at a time ({a} and {b}), or both elements ({a, b})."
+        }
+      },
+      {
+        "math": {
+          "latex": "P(A)=\\{\\varnothing,\\ \\{a\\},\\ \\{b\\},\\ \\{a,b\\}\\}",
+          "fallback": "P(A) = {∅, {a}, {b}, {a,b}}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The power set P(A) is the set whose elements are all the subsets of A, enclosed together inside outer curly braces { }."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q8-ii",
+    "questionMath": {
+      "en": [
+        "8. Write down the power set of the following sets:\n(ii) ",
+        {
+          "latex": "B=\\{1,2,3\\}",
+          "fallback": "B = {1, 2, 3}"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{aligned}P(B)=\\{&\\varnothing,\\ \\{1\\},\\ \\{2\\},\\ \\{3\\},\\\\&\\{1,2\\},\\ \\{1,3\\},\\ \\{2,3\\},\\ \\{1,2,3\\}\\}\\end{aligned}",
+      "fallback": "P(B) = {∅, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}, {1,2,3}}",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2^3=8\\text{ subsets}",
+          "fallback": "2³ = 8 subsets",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Each of the 3 distinct elements in B = {1, 2, 3} has 2 choices (either include it or omit it), giving 2³ = 8 subsets in total."
+        }
+      },
+      {
+        "math": {
+          "latex": "1+3+3+1=8",
+          "fallback": "1 + 3 + 3 + 1 = 8",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Group the subsets systematically by size: 1 empty subset (size 0), 3 singletons (size 1), 3 pairs (size 2), and 1 full set (size 3)."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}P(B)=\\{&\\varnothing,\\ \\{1\\},\\ \\{2\\},\\ \\{3\\},\\\\&\\{1,2\\},\\ \\{1,3\\},\\ \\{2,3\\},\\ \\{1,2,3\\}\\}\\end{aligned}",
+          "fallback": "P(B) = {∅, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}, {1,2,3}}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Enclose all 8 subsets—starting with the empty set ∅ and ending with {1, 2, 3}—inside outer curly braces { } to write the power set P(B)."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q8-iii",
+    "questionMath": {
+      "en": [
+        "8. Write down the power set of the following sets:\n(iii) ",
+        {
+          "latex": "D=\\{p,q,r,s\\}",
+          "fallback": "D = {p, q, r, s}"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{aligned}P(D)=\\{&\\varnothing,\\ \\{p\\},\\ \\{q\\},\\ \\{r\\},\\ \\{s\\},\\\\&\\{p,q\\},\\ \\{p,r\\},\\ \\{p,s\\},\\\\&\\{q,r\\},\\ \\{q,s\\},\\ \\{r,s\\},\\\\&\\{p,q,r\\},\\ \\{p,q,s\\},\\\\&\\{p,r,s\\},\\ \\{q,r,s\\},\\ \\{p,q,r,s\\}\\}\\end{aligned}",
+      "fallback": "P(D) = {∅, {p}, {q}, {r}, {s}, {p,q}, {p,r}, {p,s}, {q,r}, {q,s}, {r,s}, {p,q,r}, {p,q,s}, {p,r,s}, {q,r,s}, {p,q,r,s}}",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "n[P(D)]=2^4=16",
+          "fallback": "n[P(D)] = 2⁴ = 16",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Set D = {p, q, r, s} has 4 distinct elements, so the number of elements in its power set P(D) is n[P(D)] = 2⁴ = 16 subsets."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\varnothing;\\ \\{p\\};\\ \\{q\\};\\ \\{r\\};\\ \\{s\\}",
+          "fallback": "∅; {p}; {q}; {r}; {s}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "First list the 0-element subset (the empty set ∅) and the 4 one-element (singleton) subsets."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&\\{p,q\\};\\ \\{p,r\\};\\ \\{p,s\\};\\\\&\\{q,r\\};\\ \\{q,s\\};\\ \\{r,s\\}\\end{aligned}",
+          "fallback": "{p,q}; {p,r}; {p,s}; {q,r}; {q,s}; {r,s}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Next list all 6 two-element subsets in alphabetical pair order so that no pair is missed or repeated."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&\\{p,q,r\\};\\ \\{p,q,s\\};\\ \\{p,r,s\\};\\\\&\\{q,r,s\\};\\ \\{p,q,r,s\\}\\end{aligned}",
+          "fallback": "{p,q,r}; {p,q,s}; {p,r,s}; {q,r,s}; {p,q,r,s}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Then list the 4 three-element subsets (each formed by omitting one letter) together with the 1 four-element subset D itself."
+        }
+      },
+      {
+        "math": {
+          "latex": "1+4+6+4+1=16",
+          "fallback": "1 + 4 + 6 + 4 + 1 = 16",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Verify the total count across sizes 0, 1, 2, 3, and 4 (1 + 4 + 6 + 4 + 1 = 16) and enclose all 16 subsets in outer braces { } to form P(D)."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q8-iv",
+    "questionMath": {
+      "en": [
+        "8. Write down the power set of the following sets:\n(iv) ",
+        {
+          "latex": "E=\\varnothing",
+          "fallback": "E = ∅"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "P(E)=\\{\\varnothing\\}",
+      "fallback": "P(E) = {∅}",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "E=\\varnothing",
+          "fallback": "E = ∅",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The symbol ∅ denotes the empty (or null) set, so set E = ∅ contains 0 elements."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\varnothing\\subseteq\\varnothing",
+          "fallback": "∅ ⊆ ∅",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The symbol ⊆ means “is a subset of”. Because the empty set ∅ is a subset of every set, ∅ is a subset of E itself."
+        }
+      },
+      {
+        "math": {
+          "latex": "P(E)=\\{\\varnothing\\};\\quad n[P(E)]=1",
+          "fallback": "P(E) = {∅}; n[P(E)] = 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "An empty set has no other subsets, so the power set P(E) contains exactly 1 element—namely ∅ inside curly braces {∅}."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q9-i",
+    "questionMath": {
+      "en": [
+        "9. Find the number of subsets and the number of proper subsets of the following sets.\n(i) ",
+        {
+          "latex": "W=\\{\\text{red, blue, yellow}\\}",
+          "fallback": "W = {red, blue, yellow}"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{8 subsets;\\quad 7 proper subsets}",
+      "fallback": "8 subsets; 7 proper subsets",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "n(W)=3",
+          "fallback": "n(W) = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Count the distinct colour names inside the curly braces { } of W = {red, blue, yellow} to find its cardinal number n(W) = 3."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Number of subsets}=2^3=8",
+          "fallback": "Number of subsets = 2³ = 8",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A set with m = n(W) elements has 2^m subsets in total. Substitute m = 3 to get 2³ = 2 × 2 × 2 = 8 subsets."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Proper subsets}=2^3-1=7",
+          "fallback": "Proper subsets = 2³ − 1 = 7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A proper subset of W is any subset except the full set W itself, so subtract 1 from the total number of subsets: 2³ − 1 = 8 − 1 = 7."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q9-ii",
+    "questionMath": {
+      "en": [
+        "9. Find the number of subsets and the number of proper subsets of the following sets.\n(ii) ",
+        {
+          "latex": "X=\\{x^2:x\\in\\mathbb{N},\\ x^2\\le 100\\}",
+          "fallback": "X = {x² : x∈N, x² ≤ 100}"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{aligned}&\\text{1024 subsets;}\\\\&\\text{1023 proper subsets}\\end{aligned}",
+      "fallback": "1024 subsets; 1023 proper subsets",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x=1,2,\\ldots,10",
+          "fallback": "x = 1, 2, …, 10",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "In X = {x² : x ∈ N, x² ≤ 100}, ∈ means “belongs to”, N is the set of natural numbers {1, 2, 3, …}, and ≤ means “less than or equal to”. The natural numbers whose squares are at most 100 are 1 through 10."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}X=\\{&1,4,9,16,25,\\\\&36,49,64,81,100\\}\\end{aligned}",
+          "fallback": "X = {1, 4, 9, 16, 25, 36, 49, 64, 81, 100}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Square each natural number from 1 to 10 to list the 10 distinct elements of set X, giving cardinal number n(X) = 10."
+        }
+      },
+      {
+        "math": {
+          "latex": "2^{10}=1024\\text{ subsets}",
+          "fallback": "2¹⁰ = 1024 subsets",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Use the subset formula 2^{n(X)} with n(X) = 10 to find the total number of subsets: 2¹⁰ = 1024 subsets."
+        }
+      },
+      {
+        "math": {
+          "latex": "1024-1=1023\\text{ proper subsets}",
+          "fallback": "1024 − 1 = 1023 proper subsets",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Subtract 1 (to exclude the improper subset X itself) to find the number of proper subsets: 1024 − 1 = 1023 proper subsets."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q10-i",
+    "questionMath": {
+      "en": [
+        "10. (i) If ",
+        {
+          "latex": "n(A)=4",
+          "fallback": "n(A) = 4"
+        },
+        ", find ",
+        {
+          "latex": "n[P(A)]",
+          "fallback": "n[P(A)]"
+        },
+        "."
+      ]
+    },
+    "answerMath": {
+      "latex": "16",
+      "fallback": "16",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "n[P(A)]=2^{n(A)}",
+          "fallback": "n[P(A)] = 2^{n(A)}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "If a finite set A has n(A) elements, then its power set P(A) (the set of all subsets of A) contains n[P(A)] = 2^{n(A)} elements."
+        }
+      },
+      {
+        "math": {
+          "latex": "n[P(A)]=2^4",
+          "fallback": "n[P(A)] = 2⁴",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute the given cardinal number n(A) = 4 into the exponent of 2."
+        }
+      },
+      {
+        "math": {
+          "latex": "2^4=16",
+          "fallback": "2⁴ = 16",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Multiply four factors of 2 (2 × 2 × 2 × 2) to evaluate 2⁴ = 16."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q10-ii",
+    "questionMath": {
+      "en": [
+        "10. (ii) If ",
+        {
+          "latex": "n(A)=0",
+          "fallback": "n(A) = 0"
+        },
+        ", find ",
+        {
+          "latex": "n[P(A)]",
+          "fallback": "n[P(A)]"
+        },
+        "."
+      ]
+    },
+    "answerMath": {
+      "latex": "1",
+      "fallback": "1",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "A=\\varnothing;\\quad P(A)=\\{\\varnothing\\}",
+          "fallback": "A = ∅; P(A) = {∅}",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "When n(A) = 0, set A is the empty set ∅. Its only subset is ∅ itself, so its power set is P(A) = {∅}."
+        }
+      },
+      {
+        "math": {
+          "latex": "n[P(A)]=2^0",
+          "fallback": "n[P(A)] = 2⁰",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Apply the power-set cardinality formula n[P(A)] = 2^{n(A)} with n(A) = 0."
+        }
+      },
+      {
+        "math": {
+          "latex": "2^0=1",
+          "fallback": "2⁰ = 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Any nonzero number raised to the power 0 equals 1, so 2⁰ = 1."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch1-ex1.2-q10-iii",
+    "questionMath": {
+      "en": [
+        "10. (iii) If ",
+        {
+          "latex": "n[P(A)]=256",
+          "fallback": "n[P(A)] = 256"
+        },
+        ", find ",
+        {
+          "latex": "n(A)",
+          "fallback": "n(A)"
+        },
+        "."
+      ]
+    },
+    "answerMath": {
+      "latex": "8",
+      "fallback": "8",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2^{n(A)}=256",
+          "fallback": "2^{n(A)} = 256",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Use the power-set cardinality formula n[P(A)] = 2^{n(A)} and set it equal to the given value 256."
+        }
+      },
+      {
+        "math": {
+          "latex": "256=2^8",
+          "fallback": "256 = 2⁸",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Express 256 as a power of 2 by repeated doubling (2¹ = 2, 2² = 4, 2³ = 8, 2⁴ = 16, 2⁵ = 32, 2⁶ = 64, 2⁷ = 128, 2⁸ = 256)."
+        }
+      },
+      {
+        "math": {
+          "latex": "n(A)=8",
+          "fallback": "n(A) = 8",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Because 2^{n(A)} = 2⁸ has the same base 2 on both sides, equate the exponents to get n(A) = 8."
+        }
+      }
+    ]
   }
 ];
 const texts={
@@ -39409,6 +40406,669 @@ const texts={
       "fallback": "∅"
     },
     " inside braces would create a one-element set instead of an empty subset."
+  ],
+  "Compare D with the given set C.": [
+    "Compare ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " with the given set ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    "."
+  ],
+  "Write out every whole number strictly between 1 and 5 before comparing. The number 5 appears in C but the strict inequality excludes it from D.": [
+    "Write out every whole number strictly between ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " and ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " before comparing. The number ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " appears in ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " but the strict inequality excludes it from ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    "."
+  ],
+  "Compare those members with Y; order does not matter in a set.": [
+    "Compare those members with ",
+    {
+      "latex": "Y",
+      "fallback": "Y"
+    },
+    "; order does not matter in a set."
+  ],
+  "In set notation, order does not matter. Both sets contain the same four distinct letters L, I, F and E, so they are equal.": [
+    "In set notation, order does not matter. Both sets contain the same four distinct letters ",
+    {
+      "latex": "L, I, F",
+      "fallback": "L, I, F"
+    },
+    " and ",
+    {
+      "latex": "E",
+      "fallback": "E"
+    },
+    ", so they are equal."
+  ],
+  "List the positive divisors of 18.": [
+    "List the positive divisors of ",
+    {
+      "latex": "18",
+      "fallback": "18"
+    },
+    "."
+  ],
+  "Count the primes in G and the positive divisors of 18 in H. Their members differ, but both counts are six, so the sets are equivalent.": [
+    "Count the primes in ",
+    {
+      "latex": "G",
+      "fallback": "G"
+    },
+    " and the positive divisors of ",
+    {
+      "latex": "18",
+      "fallback": "18"
+    },
+    " in ",
+    {
+      "latex": "H",
+      "fallback": "H"
+    },
+    ". Their members differ, but both counts are six, so the sets are equivalent."
+  ],
+  "There is no natural number between 1 and 2. Both endpoints are excluded by the strict signs, so the set has no elements.": [
+    "There is no natural number between ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " and ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ". Both endpoints are excluded by the strict signs, so the set has no elements."
+  ],
+  "Even numbers are defined as multiples of 2. Requiring an even number that is not divisible by 2 is impossible.": [
+    "Even numbers are defined as multiples of ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ". Requiring an even number that is not divisible by ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " is impossible."
+  ],
+  "The braces enclose a genuine element, zero. The empty set has no elements, but {0} has exactly one element.": [
+    "The braces enclose a genuine element, zero. The empty set has no elements, but ",
+    {
+      "latex": "\\left\\{0\\right\\}",
+      "fallback": "{0}"
+    },
+    " has exactly one element."
+  ],
+  "Their common elements are a, f, and s.": [
+    "Their common elements are ",
+    {
+      "latex": "a, f",
+      "fallback": "a, f"
+    },
+    ", and ",
+    {
+      "latex": "s",
+      "fallback": "s"
+    },
+    "."
+  ],
+  "To test for overlap, look for elements that belong to both sets. The letters a, f and s are in both; a nonempty intersection means overlapping.": [
+    "To test for overlap, look for elements that belong to both sets. The letters ",
+    {
+      "latex": "a, f",
+      "fallback": "a, f"
+    },
+    " and ",
+    {
+      "latex": "s",
+      "fallback": "s"
+    },
+    " are in both; a nonempty intersection means overlapping."
+  ],
+  "C contains only prime numbers greater than 2, so it excludes 2.": [
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " contains only prime numbers greater than ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ", so it excludes ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "."
+  ],
+  "The only even prime number is 2. Set C excludes 2 because it requires primes greater than 2, so the two sets cannot share an element.": [
+    "The only even prime number is ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ". Set ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " excludes ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " because it requires primes greater than ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ", so the two sets cannot share an element."
+  ],
+  "In A = {a, {a, b}}, the outer curly braces { } enclose 2 elements: the single letter a and the entire inner set {a, b} treated as one object, so the cardinal number n(A) is 2.": [
+    "In ",
+    {
+      "latex": "A = \\left\\{a, \\left\\{a, b\\right\\}\\right\\}",
+      "fallback": "A = {a, {a, b}}"
+    },
+    ", the outer curly braces { } enclose ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " elements: the single letter a and the entire inner set ",
+    {
+      "latex": "\\left\\{a, b\\right\\}",
+      "fallback": "{a, b}"
+    },
+    " treated as one object, so the cardinal number ",
+    {
+      "latex": "n \\left(A\\right)",
+      "fallback": "n(A)"
+    },
+    " is ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "."
+  ],
+  "Treat the inner braces {a, b} as a single sealed package inside A. When forming subsets of A, you either pick that entire package {{a, b}} or leave it out—you do not unpack b as a separate element of A.": [
+    "Treat the inner braces ",
+    {
+      "latex": "\\left\\{a, b\\right\\}",
+      "fallback": "{a, b}"
+    },
+    " as a single sealed package inside A. When forming subsets of A, you either pick that entire package ",
+    {
+      "latex": "\\left\\{\\left\\{a, b\\right\\}\\right\\}",
+      "fallback": "{{a, b}}"
+    },
+    " or leave it out—you do not unpack ",
+    {
+      "latex": "b",
+      "fallback": "b"
+    },
+    " as a separate element of A."
+  ],
+  "The power set P(A) is the set whose elements are all the subsets of A, enclosed together inside outer curly braces { }.": [
+    "The power set ",
+    {
+      "latex": "P\\left(A\\right)",
+      "fallback": "P(A)"
+    },
+    " is the set whose elements are all the subsets of A, enclosed together inside outer curly braces { }."
+  ],
+  "Every member of a power set is itself a set. That is why each subset {a}, {b}, and {a, b} keeps its own inner braces inside the outer braces of P(A).": [
+    "Every member of a power set is itself a set. That is why each subset ",
+    {
+      "latex": "\\left\\{a\\right\\}, \\left\\{b\\right\\}",
+      "fallback": "{a}, {b}"
+    },
+    ", and ",
+    {
+      "latex": "\\left\\{a, b\\right\\}",
+      "fallback": "{a, b}"
+    },
+    " keeps its own inner braces inside the outer braces of ",
+    {
+      "latex": "P\\left(A\\right)",
+      "fallback": "P(A)"
+    },
+    "."
+  ],
+  "Group the subsets systematically by size: 1 empty subset (size 0), 3 singletons (size 1), 3 pairs (size 2), and 1 full set (size 3).": [
+    "Group the subsets systematically by size: ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " empty subset (size ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    "), ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " singletons (size ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "), ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " pairs (size ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "), and ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " full set (size ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    ")."
+  ],
+  "Listing subsets in order of size (0, 1, 2, then 3 elements) guarantees that none of the 2³ = 8 subsets is accidentally skipped or written twice.": [
+    "Listing subsets in order of size (",
+    {
+      "latex": "0, 1, 2",
+      "fallback": "0, 1, 2"
+    },
+    ", then ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " elements) guarantees that none of the ",
+    {
+      "latex": "2^{3} = 8",
+      "fallback": "2³ = 8"
+    },
+    " subsets is accidentally skipped or written twice."
+  ],
+  "Next list all 6 two-element subsets in alphabetical pair order so that no pair is missed or repeated.": [
+    "Next list all ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    " two-element subsets in alphabetical pair order so that no pair is missed or repeated."
+  ],
+  "In a set, order does not matter ({p, q} is the same subset as {q, p}). Moving forward alphabetically from p, then q, then r gives all 6 distinct pairs cleanly.": [
+    "In a set, order does not matter (",
+    {
+      "latex": "\\left\\{p, q\\right\\}",
+      "fallback": "{p, q}"
+    },
+    " is the same subset as ",
+    {
+      "latex": "\\left\\{q, p\\right\\}",
+      "fallback": "{q, p}"
+    },
+    "). Moving forward alphabetically from ",
+    {
+      "latex": "p",
+      "fallback": "p"
+    },
+    ", then ",
+    {
+      "latex": "q",
+      "fallback": "q"
+    },
+    ", then ",
+    {
+      "latex": "r",
+      "fallback": "r"
+    },
+    " gives all ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    " distinct pairs cleanly."
+  ],
+  "An empty set has no other subsets, so the power set P(E) contains exactly 1 element—namely ∅ inside curly braces {∅}.": [
+    "An empty set has no other subsets, so the power set ",
+    {
+      "latex": "P\\left(E\\right)",
+      "fallback": "P(E)"
+    },
+    " contains exactly ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " element—namely ",
+    {
+      "latex": "\\varnothing",
+      "fallback": "∅"
+    },
+    " inside curly braces ",
+    {
+      "latex": "\\left\\{\\varnothing\\right\\}",
+      "fallback": "{∅}"
+    },
+    "."
+  ],
+  "Notice the difference between ∅ and {∅}: ∅ is an empty box with 0 items, whereas P(E) = {∅} is a box containing 1 item (that empty box).": [
+    "Notice the difference between ",
+    {
+      "latex": "\\varnothing",
+      "fallback": "∅"
+    },
+    " and ",
+    {
+      "latex": "\\left\\{\\varnothing\\right\\} : \\varnothing",
+      "fallback": "{∅}: ∅"
+    },
+    " is an empty box with ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " items, whereas ",
+    {
+      "latex": "P\\left(E\\right) = \\left\\{\\varnothing\\right\\}",
+      "fallback": "P(E) = {∅}"
+    },
+    " is a box containing ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " item (that empty box)."
+  ],
+  "A proper subset of W is any subset except the full set W itself, so subtract 1 from the total number of subsets: 2³ − 1 = 8 − 1 = 7.": [
+    "A proper subset of ",
+    {
+      "latex": "W",
+      "fallback": "W"
+    },
+    " is any subset except the full set ",
+    {
+      "latex": "W",
+      "fallback": "W"
+    },
+    " itself, so subtract ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " from the total number of subsets: ",
+    {
+      "latex": "2^{3} - 1 = 8 - 1 = 7",
+      "fallback": "2³ − 1 = 8 − 1 = 7"
+    },
+    "."
+  ],
+  "Every subset of W is a proper subset except the full set W = {red, blue, yellow} itself, which is why the number of proper subsets is always 2^m − 1.": [
+    "Every subset of ",
+    {
+      "latex": "W",
+      "fallback": "W"
+    },
+    " is a proper subset except the full set ",
+    {
+      "latex": "W",
+      "fallback": "W"
+    },
+    " = {red, blue, yellow} itself, which is why the number of proper subsets is always ",
+    {
+      "latex": "2^{\\mathrm{m}} - 1",
+      "fallback": "2^m − 1"
+    },
+    "."
+  ],
+  "In X = {x² : x ∈ N, x² ≤ 100}, ∈ means “belongs to”, N is the set of natural numbers {1, 2, 3, …}, and ≤ means “less than or equal to”. The natural numbers whose squares are at most 100 are 1 through 10.": [
+    "In ",
+    {
+      "latex": "X = \\left\\{x^{2} : x \\in N, x^{2} \\le 100\\right\\}, \\in",
+      "fallback": "X = {x² : x ∈ N, x² ≤ 100}, ∈"
+    },
+    " means “belongs to”, ",
+    {
+      "latex": "N",
+      "fallback": "N"
+    },
+    " is the set of natural numbers ",
+    {
+      "latex": "\\left\\{1, 2, 3, \\ldots\\right\\}",
+      "fallback": "{1, 2, 3, …}"
+    },
+    ", and ",
+    {
+      "latex": "\\le",
+      "fallback": "≤"
+    },
+    " means “less than or equal to”. The natural numbers whose squares are at most ",
+    {
+      "latex": "100",
+      "fallback": "100"
+    },
+    " are ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " through ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    "."
+  ],
+  "Natural numbers N start at 1 (not 0), and 10² = 100 satisfies x² ≤ 100 while 11² = 121 exceeds 100, so there are exactly 10 elements in X.": [
+    "Natural numbers ",
+    {
+      "latex": "N",
+      "fallback": "N"
+    },
+    " start at ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " (not ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    "), and ",
+    {
+      "latex": "10^{2} = 100",
+      "fallback": "10² = 100"
+    },
+    " satisfies ",
+    {
+      "latex": "x^{2} \\le 100",
+      "fallback": "x² ≤ 100"
+    },
+    " while ",
+    {
+      "latex": "11^{2} = 121",
+      "fallback": "11² = 121"
+    },
+    " exceeds ",
+    {
+      "latex": "100",
+      "fallback": "100"
+    },
+    ", so there are exactly ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    " elements in ",
+    {
+      "latex": "X",
+      "fallback": "X"
+    },
+    "."
+  ],
+  "If a finite set A has n(A) elements, then its power set P(A) (the set of all subsets of A) contains n[P(A)] = 2^{n(A)} elements.": [
+    "If a finite set A has ",
+    {
+      "latex": "n \\left(A\\right)",
+      "fallback": "n(A)"
+    },
+    " elements, then its power set ",
+    {
+      "latex": "P\\left(A\\right)",
+      "fallback": "P(A)"
+    },
+    " (the set of all subsets of A) contains ",
+    {
+      "latex": "n \\left[P\\left(A\\right)\\right] = 2^{\\left\\{n \\left(A\\right)\\right\\}}",
+      "fallback": "n[P(A)] = 2^{n(A)}"
+    },
+    " elements."
+  ],
+  "Each of the 4 elements in A has 2 independent possibilities when building a subset (include or exclude), so the total number of subsets multiplies to 2 × 2 × 2 × 2 = 2⁴ = 16.": [
+    "Each of the ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " elements in A has ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " independent possibilities when building a subset (include or exclude), so the total number of subsets multiplies to ",
+    {
+      "latex": "2 \\times 2 \\times 2 \\times 2 = 2^{4} = 16",
+      "fallback": "2 × 2 × 2 × 2 = 2⁴ = 16"
+    },
+    "."
+  ],
+  "Any nonzero number raised to the power 0 equals 1, so 2⁰ = 1.": [
+    "Any nonzero number raised to the power ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " equals ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ", so ",
+    {
+      "latex": "2^{0} = 1",
+      "fallback": "2⁰ = 1"
+    },
+    "."
+  ],
+  "Even when a set has 0 elements, there is still 1 way to choose a subset—by choosing nothing—which gives the single subset ∅ and n[P(A)] = 2⁰ = 1.": [
+    "Even when a set has ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " elements, there is still ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " way to choose a subset—by choosing nothing—which gives the single subset ",
+    {
+      "latex": "\\varnothing",
+      "fallback": "∅"
+    },
+    " and ",
+    {
+      "latex": "n \\left[P\\left(A\\right)\\right] = 2^{0} = 1",
+      "fallback": "n[P(A)] = 2⁰ = 1"
+    },
+    "."
+  ],
+  "Express 256 as a power of 2 by repeated doubling (2¹ = 2, 2² = 4, 2³ = 8, 2⁴ = 16, 2⁵ = 32, 2⁶ = 64, 2⁷ = 128, 2⁸ = 256).": [
+    "Express ",
+    {
+      "latex": "256",
+      "fallback": "256"
+    },
+    " as a power of ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " by repeated doubling ",
+    {
+      "latex": "\\left(2^{1} = 2, 2^{2} = 4, 2^{3} = 8, 2^{4} = 16, 2^{5} = 32, 2^{6} = 64, 2^{7} = 128, 2^{8} = 256\\right)",
+      "fallback": "(2¹ = 2, 2² = 4, 2³ = 8, 2⁴ = 16, 2⁵ = 32, 2⁶ = 64, 2⁷ = 128, 2⁸ = 256)"
+    },
+    "."
+  ],
+  "Writing both sides with the same base 2 turns the exponential equation 2^{n(A)} = 256 into 2^{n(A)} = 2⁸, so the exponent n(A) must be 8.": [
+    "Writing both sides with the same ",
+    {
+      "latex": "\\text{base} 2",
+      "fallback": "base 2"
+    },
+    " turns the exponential equation ",
+    {
+      "latex": "2^{\\left\\{n \\left(A\\right)\\right\\}} = 256",
+      "fallback": "2^{n(A)} = 256"
+    },
+    " into ",
+    {
+      "latex": "2^{\\left\\{n \\left(A\\right)\\right\\}} = 2^{8}",
+      "fallback": "2^{n(A)} = 2⁸"
+    },
+    ", so the exponent ",
+    {
+      "latex": "n \\left(A\\right)",
+      "fallback": "n(A)"
+    },
+    " must be ",
+    {
+      "latex": "8",
+      "fallback": "8"
+    },
+    "."
   ]
 };
 const diagramLabels={"A":{"latex":"A","fallback":"A"},"B":{"latex":"B","fallback":"B"},"C":{"latex":"C","fallback":"C"},"D":{"latex":"D","fallback":"D"},"E":{"latex":"E","fallback":"E"},"F":{"latex":"F","fallback":"F"},"O":{"latex":"O","fallback":"O"},"P":{"latex":"P","fallback":"P"},"Q":{"latex":"Q","fallback":"Q"},"a":{"latex":"a","fallback":"a"},"b":{"latex":"b","fallback":"b"},"x":{"latex":"x","fallback":"x"},"y":{"latex":"y","fallback":"y"},"θ":{"latex":"\\theta","fallback":"θ"},"φ":{"latex":"\\phi","fallback":"φ"},"α":{"latex":"\\alpha","fallback":"α"},"β":{"latex":"\\beta","fallback":"β"},"√13":{"latex":"\\sqrt{13}","fallback":"√13"},"√5":{"latex":"\\sqrt{5}","fallback":"√5"},"√(a² + b²)":{"latex":"\\sqrt{a^{2} + b^{2}}","fallback":"√(a² + b²)"}};

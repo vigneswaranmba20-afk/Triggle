@@ -53,10 +53,11 @@
  // current exercise by activeList(), consistently for all Classes 9–12.
  const textbookExerciseList=chapter=>{
    const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
-   if(grade!==10||String(chapter?.number)!=='2')return items;
-   // Source-verified TRACE parts arrive in batches, sometimes after later
-   // exercises. Navigation stays in 2025 textbook order without reordering
-   // immutable question records or altering other grades.
+   const sourceBatches=(grade===10&&String(chapter?.number)==='2')||(grade===9&&String(chapter?.number)==='1');
+   if(!sourceBatches)return items;
+   // Source-verified Grade 9 Chapter 1 and Grade 10 Chapter 2 exercise parts
+   // arrive in independent batches. Sort only their navigation lists, preserving
+   // immutable question records and all other grades' established order.
    const part={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
    const index=q=>{const m=String(q.id).match(/-q(\d+)(?:-([ivx]+))?$/);
      return [m?Number(m[1]):Number.MAX_SAFE_INTEGER,m?.[2]?part[m[2]]||99:0];};

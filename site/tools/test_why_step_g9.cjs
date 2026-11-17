@@ -12,7 +12,7 @@ assert.ok(db&&db.grade===9,'Grade 9 source data loaded in the app');
 const hints=db.hints,ids=Object.keys(hints);
 const eligible=all.filter(q=>q.id&&q.steps?.length&&q.q?.en&&!/example/i.test(q.id)&&!/example/i.test(q.label?.en||'')&&q.kind!=='textbook-example'&&/^(?:g9-ch\d+-ex|c9-exercise-|c9-\d+-\d+-practice-)/.test(q.id));
 assert.equal(ids.length,eligible.length,'Every released exercise or Triggle practice has exactly one Why bridge');
-assert.equal(ids.length,327,'Grade 9 Q1, Q2, and Q5(iii)-Q6 contain 14 new English-only source-backed parts');
+assert.equal(ids.length,347,'Grade 9 Exercise 1.2 contains 34 source-audited English-only parts; Tamil review pending');
 const chapters=new Set();let countDiagrams=0;
 for(const id of ids){
  const q=source.get(id),h=hints[id];
