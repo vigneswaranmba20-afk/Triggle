@@ -19,6 +19,8 @@ const restore=(key,old)=>{if(old===undefined)delete process.env[key];else proces
    assert.equal(checkRecord(fixture),fixture);
    assert.throws(()=>checkRecord({...fixture,sourceVerified:false}),/SOURCE_NOT_VERIFIED/);
    assert.throws(()=>checkRecord({...fixture,sourceRef:''}),/MISSING_SOURCE_EVIDENCE/);
+   assert.throws(()=>checkRecord({...fixture,sourceMedium:'unknown'}),/INVALID_SOURCE_MEDIUM/);
+   assert.equal(checkRecord({...fixture,sourceMedium:'en'}).sourceMedium,'en');
    assert.throws(()=>checkRecord({...fixture,id:'../../oops'}),/INVALID_REVIEW_ID/);
    assert.throws(()=>checkRecord({...fixture,solution:'x'.repeat(4000)}),/INVALID_SOLUTION/);
    assert.throws(()=>validateCandidate({...candidate,reviewRequired:false}),/INVALID_PROVIDER_REVIEW/);
