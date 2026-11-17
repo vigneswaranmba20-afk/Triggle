@@ -658,7 +658,7 @@
     },
     "g9-ch2-ex4-q1-iii": {
       "step": 0,
-      "expected": "4.(73)=4.737373…; 4.7373 is the lower four-decimal bound, while rounding to the nearest four decimal places gives 4.7374.",
+      "expected": "4.(73)=4.737373…; 4.7373 is the lower four-decimal bound (truncation), while rounding to the nearest four decimal places gives 4.7374.",
       "en": "The bar covers BOTH digits 73, so the exact decimal is 4.737373… = 469/99. The first four digits after the point give 4.7373, but that is truncation, not rounding. The fifth decimal digit is 7, so to the nearest four decimal places it is 4.7374. On the zoomed number line, the exact point lies strictly between 4.7373 and 4.7374, nearer the latter.",
       "ta": "கேட்கப்பட்ட தசம இடத்தைக் கண்டபின் அதன் அடுத்த இலக்கத்தைப் பார்க்கவும். அது 5 அல்லது அதற்கு மேல் இருந்தால்தான் இலக்கத்தை உயர்த்த வேண்டும்.",
       "concept": "rounding"
