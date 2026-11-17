@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": "1",
+  "exercise": "1.2",
+  "batch": "q3(i)-q5(ii)",
+  "language": "en",
+  "release": "english-release-candidate",
+  "english": {
+    "edition": "2025",
+    "printedPage": 12,
+    "pdfPage": 18,
+    "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+    "audit": "docs/curriculum/grade-9/exercise-1-2-source-audit-20261110.md",
+    "sourcePageVisuallyCheckedInPriorAudit": true
+  },
+  "tamil": {
+    "translationReview": "deferred",
+    "sourcePageApproved": false
+  },
+  "parts": [
+    {
+      "id": "g9-ch1-ex1.2-q3-i",
+      "part": "Exercise 1.2 · Q3(i)",
+      "exactEnglish": "3. Which of the following sets are equivalent or unequal or equal sets?\n(i) A = The set of vowels in the English alphabets. B = The set of all letters in the word “VOWEL”.",
+      "answer": "Equivalent sets",
+      "stepCount": 3
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-ii",
+      "part": "Exercise 1.2 · Q3(ii)",
+      "exactEnglish": "3. Which of the following sets are equivalent or unequal or equal sets?\n(ii) C = {2,3,4,5} D = {x : x∈W, 1 < x < 5}",
+      "answer": "Unequal sets",
+      "stepCount": 3
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-iii",
+      "part": "Exercise 1.2 · Q3(iii)",
+      "exactEnglish": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iii) X = {x : x is a letter in the word “LIFE”} Y = {F, I, L, E}",
+      "answer": "Equal sets",
+      "stepCount": 3
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-iv",
+      "part": "Exercise 1.2 · Q3(iv)",
+      "exactEnglish": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iv) G = {x : x is a prime number and 3 < x < 23} H = {x : x is a divisor of 18}",
+      "answer": "Equivalent sets",
+      "stepCount": 3
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-i",
+      "part": "Exercise 1.2 · Q4(i)",
+      "exactEnglish": "4. Identify the following sets as null set or singleton set.\n(i) A = {x : x∈N, 1 < x < 2}",
+      "answer": "Null set",
+      "stepCount": 3
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-ii",
+      "part": "Exercise 1.2 · Q4(ii)",
+      "exactEnglish": "4. Identify the following sets as null set or singleton set.\n(ii) B = The set of all even natural numbers which are not divisible by 2",
+      "answer": "Null set",
+      "stepCount": 3
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-iii",
+      "part": "Exercise 1.2 · Q4(iii)",
+      "exactEnglish": "4. Identify the following sets as null set or singleton set.\n(iii) C = {0}",
+      "answer": "Singleton set",
+      "stepCount": 3
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-iv",
+      "part": "Exercise 1.2 · Q4(iv)",
+      "exactEnglish": "4. Identify the following sets as null set or singleton set.\n(iv) D = The set of all triangles having four sides.",
+      "answer": "Null set",
+      "stepCount": 3
+    },
+    {
+      "id": "g9-ch1-ex1.2-q5-i",
+      "part": "Exercise 1.2 · Q5(i)",
+      "exactEnglish": "5. State which pairs of sets are disjoint or overlapping?\n(i) A = {f, i, a, s} and B = {a, n, f, h, s}",
+      "answer": "Overlapping",
+      "stepCount": 3
+    },
+    {
+      "id": "g9-ch1-ex1.2-q5-ii",
+      "part": "Exercise 1.2 · Q5(ii)",
+      "exactEnglish": "5. State which pairs of sets are disjoint or overlapping?\n(ii) C = {x : x is a prime number, x > 2} and D = {x : x is an even prime number}",
+      "answer": "Disjoint",
+      "stepCount": 3
+    }
+  ],
+  "coverage": {
+    "textbookPartsInExercise": 34,
+    "previouslyRegistered": 9,
+    "thisBatch": 10,
+    "remainingUnregisteredAfterRelease": 15,
+    "gradeCompletionPercent": null
+  },
+  "checks": {
+    "mathIndependentPriorAudit": "25/25 Q3-Q10 targeted assertions passed (prior source audit)",
+    "releaseApprovedByAI": false,
+    "studentSourceImageComparedInThisRun": false
+  }
+}
