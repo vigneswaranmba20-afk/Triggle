@@ -177,15 +177,14 @@
           "expectedQuestionCount": 1,
           "expectedSubquestionCount": 3,
           "integratedInThisWorkstream": 0,
-          "verifiedInThisWorkstream": 3,
+          "verifiedInThisWorkstream": 2,
           "verifiedIds": [
             "g9-ch2-ex4-q1-i",
-            "g9-ch2-ex4-q1-ii",
-            "g9-ch2-ex4-q1-iii"
+            "g9-ch2-ex4-q1-ii"
           ],
-          "unresolvedCount": 0,
+          "unresolvedCount": 1,
           "unresolvedFigureDependencies": [],
-          "inventoryStatus": "source-page-visual-checked-answer-appendix-absent"
+          "inventoryStatus": "source-visual-checked-q1iii-truncation-versus-rounding-awaiting-independent-review"
         },
         {
           "id": "2.5",
