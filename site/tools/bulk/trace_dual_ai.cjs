@@ -38,6 +38,8 @@ function checkRecord(record){
   if(typeof id!=='string'||!/^g(?:9|10|11|12)-[a-z0-9-]{3,100}$/.test(id))throw Error('INVALID_REVIEW_ID');
   if(typeof sourceRef!=='string'||sourceRef.length>350||!sourceRef.trim())throw Error('MISSING_SOURCE_EVIDENCE');
   if(sourceVerified!==true)throw Error('SOURCE_NOT_VERIFIED');
+  if(record.sourceMedium!==undefined&&!['en','ta','bilingual'].includes(record.sourceMedium))
+    throw Error('INVALID_SOURCE_MEDIUM');
   if(!['easy','medium','difficult'].includes(difficulty))throw Error('INVALID_DIFFICULTY');
   if(typeof problem!=='string'||!problem.trim()||problem.length>2200)throw Error('INVALID_PROBLEM');
   if(typeof solution!=='string'||!solution.trim()||solution.length>3600)throw Error('INVALID_SOLUTION');
@@ -118,7 +120,8 @@ function demoAdapter(provider){
 function taskFor(provider,record,live,evidence,localMathCheck){
   const input={id:record.id,sourceRef:record.sourceRef,claim:record.problem,proposedSolution:record.solution,
     sourceVerifiedByOwner:record.sourceVerified,
-    ...(live?{evidenceMetadataSha256:evidence.evidenceSha256,evidenceStatus:evidence.claim}:{}),
+    ...(live?{evidenceMetadataSha256:evidence.evidenceSha256,evidenceStatus:evidence.claim,
+      reviewMedium:evidence.scope}:{}),
     ...(localMathCheck?{localMathSpecSha256:localMathCheck.mathSpecSha256}:{})};
   return {capability:'trace-review-'+provider,sensitivity:'textbook-excerpt',quality_level:'high',
     latency_sla:45000,budget:live?RESERVATION_USD:0,
@@ -146,7 +149,8 @@ async function runDualReview(record,options={}){
   if(live&&(options.authorizeSpend!==true||process.env.TRACE_DUAL_AI_SPEND_APPROVED!=='YES'))
     throw Error('EXPLICIT_SPEND_APPROVAL_REQUIRED');
   if(live&&!options.stateDir)throw Error('PERSISTENT_ACCOUNTING_REQUIRED');
-  // A boolean cannot certify a book: require EN/TA identity metadata in live mode.
+  // A boolean cannot certify a book: require the requested source-language
+  // identity metadata in live mode. No English-only review certifies Tamil.
   // This checks identity/format only; it must not be treated as PDF-image verification.
   const evidence=live?verifyEvidence(record):null;
   const adapters=live?
