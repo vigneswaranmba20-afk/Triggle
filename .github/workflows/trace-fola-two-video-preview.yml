@@ -24,7 +24,7 @@ jobs:
       fail-fast: false
       max-parallel: 1
       matrix:
-        lesson: [g10-ch2-ap-sum, g10-ch2-gp-sum]
+        lesson: [g10-ch2-gp-sum]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -52,7 +52,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: build/trace-video/voice-cache
-          key: fola-20261117-${{ runner.os }}-${{ matrix.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-${{ github.run_id }}
+          key: fola-20261117-${{ runner.os }}-${{ matrix.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
             fola-20261117-${{ runner.os }}-${{ matrix.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-
       - name: Render full-quality 720x1280 narrated lesson
@@ -64,12 +64,12 @@ jobs:
             --lesson "$VIDEO_LESSON" --mode gemini --width 720 --height 1280 \
             --fps 12 --output build/trace-video/preview \
             --cache build/trace-video/voice-cache
-      - name: Preserve generated beats even after a provider failure
+      - name: Preserve generated beats on this unique attempt even after a provider failure
         if: always()
         uses: actions/cache/save@v4
         with:
           path: build/trace-video/voice-cache
-          key: fola-20261117-${{ runner.os }}-${{ matrix.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-${{ github.run_id }}
+          key: fola-20261117-${{ runner.os }}-${{ matrix.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Save review SHA and audio provenance
         if: success()
         env:
