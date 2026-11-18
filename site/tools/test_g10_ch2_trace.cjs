@@ -37,7 +37,7 @@ assert.equal(additions.length,53,'53 distinct original English textbook question
 assert.equal(new Set(additions.map(q=>q.id)).size,53);
 assert.equal(textbook.filter(q=>q.exercise==='2.1').length,10);
 assert.equal(textbook.filter(q=>q.exercise==='2.2').length,9);
-assert.equal(textbook.length,120,'Retain 113 earlier Chapter 2 parts plus seven Exercise 2.8 parts');
+assert.equal(textbook.length,129,'Retain 113 earlier Chapter 2 parts plus seven Exercise 2.8 and nine Exercise 2.9 parts');
 const supplements=all.classes[10].items.filter(q=>q.traceStatus?.startsWith('source-text reviewed'));
 assert.equal(supplements.length,10,'Integrate precisely ten unique textbook subparts without duplicate bundled questions');
 assert.equal(new Set(textbook.map(q=>q.id)).size,textbook.length,'Never duplicate student-facing question IDs');

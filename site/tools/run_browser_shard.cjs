@@ -101,7 +101,9 @@ for(const task of lanes[index]){
   const started=Date.now();
   const result=spawnSync(process.execPath,[task.absolute],{
     cwd:repo,stdio:'inherit',env:process.env,
-    timeout:4*60*1000
+    // The exhaustive Chromium + WebKit solution audit can exceed four minutes
+    // as question inventory grows; retain a bounded eight-minute watchdog.
+    timeout:8*60*1000
   });
   const seconds=((Date.now()-started)/1000).toFixed(1);
   if(result.error||result.signal||result.status!==0){
