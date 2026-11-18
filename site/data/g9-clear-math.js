@@ -10,8 +10,14 @@ const records=[
       "en": [
         "The diagram identifies ",
         {
-          "latex": "AB = 40, AC = 9",
-          "fallback": "AB = 40, AC = 9"
+          "latex": "AB = 40",
+          "fallback": "AB = 40"
+        },
+        ",",
+        " ",
+        {
+          "latex": "AC = 9",
+          "fallback": "AC = 9"
         },
         " and ",
         {
@@ -28,8 +34,20 @@ const records=[
       "ta": [
         "படத்தில் ",
         {
-          "latex": "AB = 40, AC = 9, BC = 41",
-          "fallback": "AB = 40, AC = 9, BC = 41"
+          "latex": "AB = 40",
+          "fallback": "AB = 40"
+        },
+        ",",
+        " ",
+        {
+          "latex": "AC = 9",
+          "fallback": "AC = 9"
+        },
+        ",",
+        " ",
+        {
+          "latex": "BC = 41",
+          "fallback": "BC = 41"
         },
         " மற்றும் A-வில் செங்கோணம். ",
         {
@@ -129,8 +147,20 @@ const records=[
       "en": [
         "In the figure, ",
         {
-          "latex": "AB = 13, BD = 5, DC = 16",
-          "fallback": "AB = 13, BD = 5, DC = 16"
+          "latex": "AB = 13",
+          "fallback": "AB = 13"
+        },
+        ",",
+        " ",
+        {
+          "latex": "BD = 5",
+          "fallback": "BD = 5"
+        },
+        ",",
+        " ",
+        {
+          "latex": "DC = 16",
+          "fallback": "DC = 16"
         },
         " and ",
         {
@@ -157,8 +187,20 @@ const records=[
       "ta": [
         "படத்தில் ",
         {
-          "latex": "AB = 13, BD = 5, DC = 16;\\quad AD",
-          "fallback": "AB = 13, BD = 5, DC = 16; AD"
+          "latex": "AB = 13",
+          "fallback": "AB = 13"
+        },
+        ",",
+        " ",
+        {
+          "latex": "BD = 5",
+          "fallback": "BD = 5"
+        },
+        ",",
+        " ",
+        {
+          "latex": "DC = 16;\\quad AD",
+          "fallback": "DC = 16; AD"
         },
         " ⟂ ",
         {
@@ -1237,8 +1279,26 @@ const records=[
       "en": [
         "The diagram has ",
         {
-          "latex": "AD = 9, DB = 16, CD = 12, AC = 15",
-          "fallback": "AD=9, DB=16, CD=12, AC=15"
+          "latex": "AD = 9",
+          "fallback": "AD=9"
+        },
+        ",",
+        " ",
+        {
+          "latex": "DB = 16",
+          "fallback": "DB=16"
+        },
+        ",",
+        " ",
+        {
+          "latex": "CD = 12",
+          "fallback": "CD=12"
+        },
+        ",",
+        " ",
+        {
+          "latex": "AC = 15",
+          "fallback": "AC=15"
         },
         " and ",
         {
@@ -1270,13 +1330,43 @@ const records=[
       "ta": [
         "படத்தில் ",
         {
-          "latex": "AD = 9, DB = 16, CD = 12, AC = 15, BC = 20",
-          "fallback": "AD=9, DB=16, CD=12, AC=15, BC=20"
+          "latex": "AD = 9",
+          "fallback": "AD=9"
+        },
+        ",",
+        " ",
+        {
+          "latex": "DB = 16",
+          "fallback": "DB=16"
+        },
+        ",",
+        " ",
+        {
+          "latex": "CD = 12",
+          "fallback": "CD=12"
+        },
+        ",",
+        " ",
+        {
+          "latex": "AC = 15",
+          "fallback": "AC=15"
+        },
+        ",",
+        " ",
+        {
+          "latex": "BC = 20",
+          "fallback": "BC=20"
         },
         ". ",
         {
-          "latex": "\\theta + \\phi = 90^{\\circ}, \\angle ACB = 90^{\\circ}",
-          "fallback": "θ+φ=90°, ∠ACB=90°"
+          "latex": "\\theta + \\phi = 90^{\\circ}",
+          "fallback": "θ+φ=90°"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\angle ACB = 90^{\\circ}",
+          "fallback": "∠ACB=90°"
         },
         " என நிரூபித்து ",
         {
@@ -2610,8 +2700,14 @@ const records=[
           "en": [
             "Each numerator matches its denominator: ",
             {
-              "latex": "70^{\\circ} + 20^{\\circ} = 90^{\\circ}, 59^{\\circ} + 31^{\\circ} = 90^{\\circ}",
-              "fallback": "70°+20°=90°, 59°+31°=90°"
+              "latex": "70^{\\circ} + 20^{\\circ} = 90^{\\circ}",
+              "fallback": "70°+20°=90°"
+            },
+            ",",
+            " ",
+            {
+              "latex": "59^{\\circ} + 31^{\\circ} = 90^{\\circ}",
+              "fallback": "59°+31°=90°"
             },
             ", and ",
             {
@@ -3724,8 +3820,14 @@ const records=[
       ],
       "ta": [
         {
-          "latex": "x = \\sin 30^{\\circ}, y = \\cos 60^{\\circ}",
-          "fallback": "x = sin30°, y = cos60°"
+          "latex": "x = \\sin 30^{\\circ}",
+          "fallback": "x = sin30°"
+        },
+        ",",
+        " ",
+        {
+          "latex": "y = \\cos 60^{\\circ}",
+          "fallback": "y = cos60°"
         },
         " எனில் ",
         {
@@ -4486,8 +4588,14 @@ const records=[
       "en": [
         "Let ",
         {
-          "latex": "A = \\left\\{1, 2, 3\\right\\}, B = \\left\\{3, 4\\right\\}",
-          "fallback": "A={1,2,3}, B={3,4}"
+          "latex": "A = \\left\\{1, 2, 3\\right\\}",
+          "fallback": "A={1,2,3}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{3, 4\\right\\}",
+          "fallback": "B={3,4}"
         },
         ". Find ",
         {
@@ -4503,8 +4611,14 @@ const records=[
       ],
       "ta": [
         {
-          "latex": "A = \\left\\{1, 2, 3\\right\\}, B = \\left\\{3, 4\\right\\}",
-          "fallback": "A={1,2,3}, B={3,4}"
+          "latex": "A = \\left\\{1, 2, 3\\right\\}",
+          "fallback": "A={1,2,3}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{3, 4\\right\\}",
+          "fallback": "B={3,4}"
         },
         " எனில் ",
         {
@@ -5738,7 +5852,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}\\frac{5}{33}  &=  0.\\overline{15}  \\\\  \\frac{71}{33}  &=  2.\\overline{15}\\end{aligned}",
+          "latex": "\\begin{aligned}\\frac{5}{33}  &=  0.\\overline{15}  \\\\ \\Rightarrow\\;  \\frac{71}{33}  &=  2.\\overline{15}\\end{aligned}",
           "fallback": "5/33=0.(15) ⇒ 71/33=2.(15)",
           "display": true
         },
@@ -5832,7 +5946,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}100 x - x  &=  24  \\\\  99 x  &=  24  \\\\  x  &=  \\frac{8}{33}\\end{aligned}",
+          "latex": "\\begin{aligned}100 x - x  &=  24  \\\\ \\Rightarrow\\;  99 x  &=  24  \\\\ \\Rightarrow\\;  x  &=  \\frac{8}{33}\\end{aligned}",
           "fallback": "100x−x=24 ⇒ 99x=24 ⇒ x=8/33",
           "display": true
         },
@@ -5903,7 +6017,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}1000 x - x  &=  2325  \\\\  x  &=  \\frac{2325}{999}  \\\\ &=  \\frac{775}{333}\\end{aligned}",
+          "latex": "\\begin{aligned}1000 x - x  &=  2325  \\\\ \\Rightarrow\\;  x  &=  \\frac{2325}{999}  \\\\ &=  \\frac{775}{333}\\end{aligned}",
           "fallback": "1000x−x=2325 ⇒ x=2325/999=775/333",
           "display": true
         },
@@ -6045,7 +6159,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}100 x - 10 x  &=  317 - 31  \\\\ &=  286  \\\\  x  &=  \\frac{143}{45}\\end{aligned}",
+          "latex": "\\begin{aligned}100 x - 10 x  &=  317 - 31  \\\\ &=  286  \\\\ \\Rightarrow\\;  x  &=  \\frac{143}{45}\\end{aligned}",
           "fallback": "100x−10x=317−31=286 ⇒ x=143/45",
           "display": true
         },
@@ -6116,7 +6230,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}1000 x - 10 x  &=  17215 - 172  \\\\ &=  17043  \\\\  x  &=  \\frac{5681}{330}\\end{aligned}",
+          "latex": "\\begin{aligned}1000 x - 10 x  &=  17215 - 172  \\\\ &=  17043  \\\\ \\Rightarrow\\;  x  &=  \\frac{5681}{330}\\end{aligned}",
           "fallback": "1000x−10x=17215−172=17043 ⇒ x=5681/330",
           "display": true
         },
@@ -6187,7 +6301,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}10000 x - 1000 x  &=  - 212137 + 21213  \\\\ &=  - 190924  \\\\  x  &=  \\frac{- 47731}{2250}\\end{aligned}",
+          "latex": "\\begin{aligned}10000 x - 1000 x  &=  - 212137 + 21213  \\\\ &=  - 190924  \\\\ \\Rightarrow\\;  x  &=  \\frac{- 47731}{2250}\\end{aligned}",
           "fallback": "10000x−1000x=−212137+21213=−190924 ⇒ x=−47731/2250",
           "display": true
         },
@@ -9140,7 +9254,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}5^{6}  &=  15625 > 3^{3}  \\\\ &=  27 > 4^{2}  \\\\ &=  16  \\\\ & \\sqrt[3]{5} > \\sqrt[6]{3} > \\sqrt[9]{4}\\end{aligned}",
+          "latex": "\\begin{aligned}5^{6}  &=  15625 > 3^{3}  \\\\ &=  27 > 4^{2}  \\\\ &=  16  \\\\ &\\Rightarrow\\;  \\sqrt[3]{5} > \\sqrt[6]{3} > \\sqrt[9]{4}\\end{aligned}",
           "fallback": "5⁶=15625 > 3³=27 > 4²=16 ⇒ ∛5 > ⁶√3 > ⁹√4",
           "display": true
         },
@@ -10357,7 +10471,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{aligned}\\left(\\sqrt{5} + 2\\right) \\left(\\sqrt{5} - 2\\right)  &=  5 - 4  \\\\ &=  1  \\\\  \\frac{1}{x}  &=  \\sqrt{5} - 2\\end{aligned}",
+          "latex": "\\begin{aligned}\\left(\\sqrt{5} + 2\\right) \\left(\\sqrt{5} - 2\\right)  &=  5 - 4  \\\\ &=  1  \\\\ \\Rightarrow\\;  \\frac{1}{x}  &=  \\sqrt{5} - 2\\end{aligned}",
           "fallback": "(√5+2)(√5−2)=5−4=1 ⇒ 1/x=√5−2",
           "display": true
         },
@@ -11699,7 +11813,39 @@ const records=[
           "latex": "\\sqrt{n}",
           "fallback": "√n"
         },
-        " be?\n(1) Always natural  (2) Always irrational  (3) Always rational  (4) Rational or irrational"
+        " be?\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Always natural"
+          ],
+          "fallback": "(1) Always natural"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Always irrational"
+          ],
+          "fallback": "(2) Always irrational"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Always rational"
+          ],
+          "fallback": "(3) Always rational"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Rational or irrational"
+          ],
+          "fallback": "(4) Rational or irrational"
+        }
       ],
       "ta": [
         {
@@ -11711,7 +11857,39 @@ const records=[
           "latex": "\\sqrt{n}",
           "fallback": "√n"
         },
-        " எவ்வகையான எண்ணாக இருக்கலாம்?\n(1) எப்போதும் இயல் எண்  (2) எப்போதும் விகிதமுறா எண்  (3) எப்போதும் விகிதமுறு எண்  (4) விகிதமுறு அல்லது விகிதமுறா எண்"
+        " எவ்வகையான எண்ணாக இருக்கலாம்?\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "எப்போதும் இயல் எண்"
+          ],
+          "fallback": "(1) எப்போதும் இயல் எண்"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "எப்போதும் விகிதமுறா எண்"
+          ],
+          "fallback": "(2) எப்போதும் விகிதமுறா எண்"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "எப்போதும் விகிதமுறு எண்"
+          ],
+          "fallback": "(3) எப்போதும் விகிதமுறு எண்"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "விகிதமுறு அல்லது விகிதமுறா எண்"
+          ],
+          "fallback": "(4) விகிதமுறு அல்லது விகிதமுறா எண்"
+        }
       ]
     },
     "answerMath": "Option (4) — Rational or irrational",
@@ -11774,8 +11952,76 @@ const records=[
   {
     "id": "g9-ch2-ex9-q2",
     "questionMath": {
-      "en": "Which statement is NOT true?\n(1) Every rational number is real  (2) Every integer is rational  (3) Every real number is irrational  (4) Every natural number is whole",
-      "ta": "கீழ்க்கண்டவற்றுள் உண்மையல்லாத கூற்று எது?\n(1) ஒவ்வொரு விகிதமுறு எண்ணும் மெய்யெண்  (2) ஒவ்வொரு முழு எண்ணும் விகிதமுறு எண்  (3) ஒவ்வொரு மெய்யெண்ணும் விகிதமுறா எண்  (4) ஒவ்வொரு இயல் எண்ணும் முழு எண்"
+      "en": [
+        "Which statement is NOT true?\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Every rational number is real"
+          ],
+          "fallback": "(1) Every rational number is real"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Every integer is rational"
+          ],
+          "fallback": "(2) Every integer is rational"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Every real number is irrational"
+          ],
+          "fallback": "(3) Every real number is irrational"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Every natural number is whole"
+          ],
+          "fallback": "(4) Every natural number is whole"
+        }
+      ],
+      "ta": [
+        "கீழ்க்கண்டவற்றுள் உண்மையல்லாத கூற்று எது?\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "ஒவ்வொரு விகிதமுறு எண்ணும் மெய்யெண்"
+          ],
+          "fallback": "(1) ஒவ்வொரு விகிதமுறு எண்ணும் மெய்யெண்"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "ஒவ்வொரு முழு எண்ணும் விகிதமுறு எண்"
+          ],
+          "fallback": "(2) ஒவ்வொரு முழு எண்ணும் விகிதமுறு எண்"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "ஒவ்வொரு மெய்யெண்ணும் விகிதமுறா எண்"
+          ],
+          "fallback": "(3) ஒவ்வொரு மெய்யெண்ணும் விகிதமுறா எண்"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "ஒவ்வொரு இயல் எண்ணும் முழு எண்"
+          ],
+          "fallback": "(4) ஒவ்வொரு இயல் எண்ணும் முழு எண்"
+        }
+      ]
     },
     "answerMath": "Option (3) — Every real number is irrational",
     "steps": [
@@ -11813,8 +12059,76 @@ const records=[
   {
     "id": "g9-ch2-ex9-q3",
     "questionMath": {
-      "en": "The sum of two irrational numbers is:\n(1) Always irrational  (2) Rational or irrational  (3) Always rational  (4) Always an integer",
-      "ta": "இரு விகிதமுறா எண்களின் கூடுதல் எவ்வகையாக இருக்கலாம்?\n(1) எப்போதும் விகிதமுறா எண்  (2) விகிதமுறு அல்லது விகிதமுறா எண்  (3) எப்போதும் விகிதமுறு எண்  (4) எப்போதும் முழு எண்"
+      "en": [
+        "The sum of two irrational numbers is:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Always irrational"
+          ],
+          "fallback": "(1) Always irrational"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Rational or irrational"
+          ],
+          "fallback": "(2) Rational or irrational"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Always rational"
+          ],
+          "fallback": "(3) Always rational"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Always an integer"
+          ],
+          "fallback": "(4) Always an integer"
+        }
+      ],
+      "ta": [
+        "இரு விகிதமுறா எண்களின் கூடுதல் எவ்வகையாக இருக்கலாம்?\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "எப்போதும் விகிதமுறா எண்"
+          ],
+          "fallback": "(1) எப்போதும் விகிதமுறா எண்"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "விகிதமுறு அல்லது விகிதமுறா எண்"
+          ],
+          "fallback": "(2) விகிதமுறு அல்லது விகிதமுறா எண்"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "எப்போதும் விகிதமுறு எண்"
+          ],
+          "fallback": "(3) எப்போதும் விகிதமுறு எண்"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "எப்போதும் முழு எண்"
+          ],
+          "fallback": "(4) எப்போதும் முழு எண்"
+        }
+      ]
     },
     "answerMath": "Option (2) — Rational or irrational",
     "steps": [
@@ -11870,47 +12184,97 @@ const records=[
     "id": "g9-ch2-ex9-q4",
     "questionMath": {
       "en": [
-        "Which fraction has a terminating decimal?\n(1) ",
+        "Which fraction has a terminating decimal?\n",
+        "",
         {
-          "latex": "\\displaystyle \\frac{5}{64}",
-          "fallback": "5/64"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\frac{5}{64}",
+              "fallback": "5/64"
+            }
+          ],
+          "fallback": "(1) 5/64"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{8}{9}",
-          "fallback": "8/9"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{8}{9}",
+              "fallback": "8/9"
+            }
+          ],
+          "fallback": "(2) 8/9"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{14}{15}",
-          "fallback": "14/15"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\displaystyle \\frac{14}{15}",
+              "fallback": "14/15"
+            }
+          ],
+          "fallback": "(3) 14/15"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{1}{12}",
-          "fallback": "1/12"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\displaystyle \\frac{1}{12}",
+              "fallback": "1/12"
+            }
+          ],
+          "fallback": "(4) 1/12"
         }
       ],
       "ta": [
-        "எந்தப் பின்னம் முடிவுறும் தசம விரிவைக் கொண்டுள்ளது?\n(1) ",
+        "எந்தப் பின்னம் முடிவுறும் தசம விரிவைக் கொண்டுள்ளது?\n",
+        "",
         {
-          "latex": "\\displaystyle \\frac{5}{64}",
-          "fallback": "5/64"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\frac{5}{64}",
+              "fallback": "5/64"
+            }
+          ],
+          "fallback": "(1) 5/64"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{8}{9}",
-          "fallback": "8/9"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{8}{9}",
+              "fallback": "8/9"
+            }
+          ],
+          "fallback": "(2) 8/9"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{14}{15}",
-          "fallback": "14/15"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\displaystyle \\frac{14}{15}",
+              "fallback": "14/15"
+            }
+          ],
+          "fallback": "(3) 14/15"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{1}{12}",
-          "fallback": "1/12"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\displaystyle \\frac{1}{12}",
+              "fallback": "1/12"
+            }
+          ],
+          "fallback": "(4) 1/12"
         }
       ]
     },
@@ -12008,47 +12372,97 @@ const records=[
     "id": "g9-ch2-ex9-q5",
     "questionMath": {
       "en": [
-        "Which one is irrational?\n(1) ",
+        "Which one is irrational?\n",
+        "",
         {
-          "latex": "\\sqrt{25}",
-          "fallback": "√25"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\sqrt{25}",
+              "fallback": "√25"
+            }
+          ],
+          "fallback": "(1) √25"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\sqrt{\\frac{9}{4}}",
-          "fallback": "√(9/4)"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\sqrt{\\frac{9}{4}}",
+              "fallback": "√(9/4)"
+            }
+          ],
+          "fallback": "(2) √(9/4)"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{7}{11}",
-          "fallback": "7/11"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\displaystyle \\frac{7}{11}",
+              "fallback": "7/11"
+            }
+          ],
+          "fallback": "(3) 7/11"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\pi",
-          "fallback": "π"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\pi",
+              "fallback": "π"
+            }
+          ],
+          "fallback": "(4) π"
         }
       ],
       "ta": [
-        "எது விகிதமுறா எண்?\n(1) ",
+        "எது விகிதமுறா எண்?\n",
+        "",
         {
-          "latex": "\\sqrt{25}",
-          "fallback": "√25"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\sqrt{25}",
+              "fallback": "√25"
+            }
+          ],
+          "fallback": "(1) √25"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\sqrt{\\frac{9}{4}}",
-          "fallback": "√(9/4)"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\sqrt{\\frac{9}{4}}",
+              "fallback": "√(9/4)"
+            }
+          ],
+          "fallback": "(2) √(9/4)"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{7}{11}",
-          "fallback": "7/11"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\displaystyle \\frac{7}{11}",
+              "fallback": "7/11"
+            }
+          ],
+          "fallback": "(3) 7/11"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\pi",
-          "fallback": "π"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\pi",
+              "fallback": "π"
+            }
+          ],
+          "fallback": "(4) π"
         }
       ]
     },
@@ -12145,25 +12559,50 @@ const records=[
           "latex": "2.5",
           "fallback": "2.5"
         },
-        "?\n(1) ",
+        "?\n",
+        "",
         {
-          "latex": "\\sqrt{11}",
-          "fallback": "√11"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\sqrt{11}",
+              "fallback": "√11"
+            }
+          ],
+          "fallback": "(1) √11"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\sqrt{5}",
-          "fallback": "√5"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\sqrt{5}",
+              "fallback": "√5"
+            }
+          ],
+          "fallback": "(2) √5"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\sqrt{2.5}",
-          "fallback": "√2.5"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\sqrt{2.5}",
+              "fallback": "√2.5"
+            }
+          ],
+          "fallback": "(3) √2.5"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\sqrt{8}",
-          "fallback": "√8"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\sqrt{8}",
+              "fallback": "√8"
+            }
+          ],
+          "fallback": "(4) √8"
         }
       ],
       "ta": [
@@ -12176,25 +12615,50 @@ const records=[
           "latex": "2.5",
           "fallback": "2.5"
         },
-        " இடையே உள்ள விகிதமுறா எண் எது?\n(1) ",
+        " இடையே உள்ள விகிதமுறா எண் எது?\n",
+        "",
         {
-          "latex": "\\sqrt{11}",
-          "fallback": "√11"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\sqrt{11}",
+              "fallback": "√11"
+            }
+          ],
+          "fallback": "(1) √11"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\sqrt{5}",
-          "fallback": "√5"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\sqrt{5}",
+              "fallback": "√5"
+            }
+          ],
+          "fallback": "(2) √5"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\sqrt{2.5}",
-          "fallback": "√2.5"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\sqrt{2.5}",
+              "fallback": "√2.5"
+            }
+          ],
+          "fallback": "(3) √2.5"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\sqrt{8}",
-          "fallback": "√8"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\sqrt{8}",
+              "fallback": "√8"
+            }
+          ],
+          "fallback": "(4) √8"
         }
       ]
     },
@@ -12280,25 +12744,50 @@ const records=[
           "latex": "\\displaystyle \\frac{1}{3}",
           "fallback": "1/3"
         },
-        " to give a decimal terminating after one place.\n(1) ",
+        " to give a decimal terminating after one place.\n",
+        "",
         {
-          "latex": "\\displaystyle \\frac{1}{10}",
-          "fallback": "1/10"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\frac{1}{10}",
+              "fallback": "1/10"
+            }
+          ],
+          "fallback": "(1) 1/10"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{3}{10}",
-          "fallback": "3/10"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{3}{10}",
+              "fallback": "3/10"
+            }
+          ],
+          "fallback": "(2) 3/10"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "3",
-          "fallback": "3"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            }
+          ],
+          "fallback": "(3) 3"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "30",
-          "fallback": "30"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "30",
+              "fallback": "30"
+            }
+          ],
+          "fallback": "(4) 30"
         }
       ],
       "ta": [
@@ -12306,25 +12795,50 @@ const records=[
           "latex": "\\displaystyle \\frac{1}{3}",
           "fallback": "1/3"
         },
-        " ஐ எந்த விகிதமுறு எண்ணால் பெருக்கினால் ஒரு தசம இடத்துடன் முடியும்?\n(1) ",
+        " ஐ எந்த விகிதமுறு எண்ணால் பெருக்கினால் ஒரு தசம இடத்துடன் முடியும்?\n",
+        "",
         {
-          "latex": "\\displaystyle \\frac{1}{10}",
-          "fallback": "1/10"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\frac{1}{10}",
+              "fallback": "1/10"
+            }
+          ],
+          "fallback": "(1) 1/10"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{3}{10}",
-          "fallback": "3/10"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{3}{10}",
+              "fallback": "3/10"
+            }
+          ],
+          "fallback": "(2) 3/10"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "3",
-          "fallback": "3"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            }
+          ],
+          "fallback": "(3) 3"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "30",
-          "fallback": "30"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "30",
+              "fallback": "30"
+            }
+          ],
+          "fallback": "(4) 30"
         }
       ]
     },
@@ -12414,25 +12928,50 @@ const records=[
           "latex": "\\displaystyle \\frac{5}{7}",
           "fallback": "5/7"
         },
-        ".\n(1) ",
+        ".\n",
+        "",
         {
-          "latex": "0.\\overline{142857}",
-          "fallback": "0.(142857)"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0.\\overline{142857}",
+              "fallback": "0.(142857)"
+            }
+          ],
+          "fallback": "(1) 0.(142857)"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "0.\\overline{714285}",
-          "fallback": "0.(714285)"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "0.\\overline{714285}",
+              "fallback": "0.(714285)"
+            }
+          ],
+          "fallback": "(2) 0.(714285)"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "0.\\overline{571428}",
-          "fallback": "0.(571428)"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "0.\\overline{571428}",
+              "fallback": "0.(571428)"
+            }
+          ],
+          "fallback": "(3) 0.(571428)"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "0.714285",
-          "fallback": "0.714285"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "0.714285",
+              "fallback": "0.714285"
+            }
+          ],
+          "fallback": "(4) 0.714285"
         }
       ],
       "ta": [
@@ -12445,25 +12984,50 @@ const records=[
           "latex": "\\displaystyle \\frac{5}{7}",
           "fallback": "5/7"
         },
-        "-இன் மதிப்பு என்ன?\n(1) ",
+        "-இன் மதிப்பு என்ன?\n",
+        "",
         {
-          "latex": "0.\\overline{142857}",
-          "fallback": "0.(142857)"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0.\\overline{142857}",
+              "fallback": "0.(142857)"
+            }
+          ],
+          "fallback": "(1) 0.(142857)"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "0.\\overline{714285}",
-          "fallback": "0.(714285)"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "0.\\overline{714285}",
+              "fallback": "0.(714285)"
+            }
+          ],
+          "fallback": "(2) 0.(714285)"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "0.\\overline{571428}",
-          "fallback": "0.(571428)"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "0.\\overline{571428}",
+              "fallback": "0.(571428)"
+            }
+          ],
+          "fallback": "(3) 0.(571428)"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "0.714285",
-          "fallback": "0.714285"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "0.714285",
+              "fallback": "0.714285"
+            }
+          ],
+          "fallback": "(4) 0.714285"
         }
       ]
     },
@@ -12535,47 +13099,97 @@ const records=[
     "id": "g9-ch2-ex9-q9",
     "questionMath": {
       "en": [
-        "Find the irrational result among these four expressions (the odd one out).\n(1) ",
+        "Find the irrational result among these four expressions (the odd one out).\n",
+        "",
         {
-          "latex": "\\sqrt{32} \\times \\sqrt{2}",
-          "fallback": "√32 × √2"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\sqrt{32} \\times \\sqrt{2}",
+              "fallback": "√32 × √2"
+            }
+          ],
+          "fallback": "(1) √32 × √2"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{\\sqrt{27}}{\\sqrt{3}}",
-          "fallback": "√27 / √3"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{\\sqrt{27}}{\\sqrt{3}}",
+              "fallback": "√27 / √3"
+            }
+          ],
+          "fallback": "(2) √27 / √3"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\sqrt{72} \\times \\sqrt{8}",
-          "fallback": "√72 × √8"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\sqrt{72} \\times \\sqrt{8}",
+              "fallback": "√72 × √8"
+            }
+          ],
+          "fallback": "(3) √72 × √8"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{\\sqrt{54}}{\\sqrt{18}}",
-          "fallback": "√54 / √18"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\displaystyle \\frac{\\sqrt{54}}{\\sqrt{18}}",
+              "fallback": "√54 / √18"
+            }
+          ],
+          "fallback": "(4) √54 / √18"
         }
       ],
       "ta": [
-        "கீழ்காணும் கோவைகளில் விகிதமுறா மதிப்பைக் கொடுப்பது எது?\n(1) ",
+        "கீழ்காணும் கோவைகளில் விகிதமுறா மதிப்பைக் கொடுப்பது எது?\n",
+        "",
         {
-          "latex": "\\sqrt{32} \\times \\sqrt{2}",
-          "fallback": "√32 × √2"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\sqrt{32} \\times \\sqrt{2}",
+              "fallback": "√32 × √2"
+            }
+          ],
+          "fallback": "(1) √32 × √2"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{\\sqrt{27}}{\\sqrt{3}}",
-          "fallback": "√27 / √3"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{\\sqrt{27}}{\\sqrt{3}}",
+              "fallback": "√27 / √3"
+            }
+          ],
+          "fallback": "(2) √27 / √3"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\sqrt{72} \\times \\sqrt{8}",
-          "fallback": "√72 × √8"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\sqrt{72} \\times \\sqrt{8}",
+              "fallback": "√72 × √8"
+            }
+          ],
+          "fallback": "(3) √72 × √8"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{\\sqrt{54}}{\\sqrt{18}}",
-          "fallback": "√54 / √18"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\displaystyle \\frac{\\sqrt{54}}{\\sqrt{18}}",
+              "fallback": "√54 / √18"
+            }
+          ],
+          "fallback": "(4) √54 / √18"
         }
       ]
     },
@@ -12669,25 +13283,50 @@ const records=[
           "latex": "0.\\overline{34} + 0.3\\overline{4}",
           "fallback": "0.(34) + 0.3(4)"
         },
-        "; parentheses indicate recurring digits.\n(1) ",
+        "; parentheses indicate recurring digits.\n",
+        "",
         {
-          "latex": "0.6\\overline{87}",
-          "fallback": "0.6(87)"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0.6\\overline{87}",
+              "fallback": "0.6(87)"
+            }
+          ],
+          "fallback": "(1) 0.6(87)"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "0.\\overline{68}",
-          "fallback": "0.(68)"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "0.\\overline{68}",
+              "fallback": "0.(68)"
+            }
+          ],
+          "fallback": "(2) 0.(68)"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "0.6\\overline{8}",
-          "fallback": "0.6(8)"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "0.6\\overline{8}",
+              "fallback": "0.6(8)"
+            }
+          ],
+          "fallback": "(3) 0.6(8)"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "0.68\\overline{7}",
-          "fallback": "0.68(7)"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "0.68\\overline{7}",
+              "fallback": "0.68(7)"
+            }
+          ],
+          "fallback": "(4) 0.68(7)"
         }
       ],
       "ta": [
@@ -12695,25 +13334,50 @@ const records=[
           "latex": "0.\\overline{34} + 0.3\\overline{4}",
           "fallback": "0.(34)+0.3(4)"
         },
-        " இன் தொடர்தசமக் கூட்டலைக் காண்க.\n(1) ",
+        " இன் தொடர்தசமக் கூட்டலைக் காண்க.\n",
+        "",
         {
-          "latex": "0.6\\overline{87}",
-          "fallback": "0.6(87)"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0.6\\overline{87}",
+              "fallback": "0.6(87)"
+            }
+          ],
+          "fallback": "(1) 0.6(87)"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "0.\\overline{68}",
-          "fallback": "0.(68)"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "0.\\overline{68}",
+              "fallback": "0.(68)"
+            }
+          ],
+          "fallback": "(2) 0.(68)"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "0.6\\overline{8}",
-          "fallback": "0.6(8)"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "0.6\\overline{8}",
+              "fallback": "0.6(8)"
+            }
+          ],
+          "fallback": "(3) 0.6(8)"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "0.68\\overline{7}",
-          "fallback": "0.68(7)"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "0.68\\overline{7}",
+              "fallback": "0.68(7)"
+            }
+          ],
+          "fallback": "(4) 0.68(7)"
         }
       ]
     },
@@ -12794,30 +13458,58 @@ const records=[
           "latex": "\\sqrt{25}",
           "fallback": "√25"
         },
-        " is false?\n(1) The square roots of ",
+        " is false?\n",
+        "",
         {
-          "latex": "25",
-          "fallback": "25"
+          "questionOption": [
+            "(1) ",
+            [
+              "The square roots of ",
+              {
+                "latex": "25",
+                "fallback": "25"
+              },
+              " are ",
+              {
+                "latex": "\\pm 5",
+                "fallback": "±5"
+              }
+            ]
+          ],
+          "fallback": "(1) The square roots of 25 are ±5"
         },
-        " are ",
+        "  ",
         {
-          "latex": "\\pm 5",
-          "fallback": "±5"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "- \\sqrt{25} = - 5",
+              "fallback": "−√25=−5"
+            }
+          ],
+          "fallback": "(2) −√25=−5"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "- \\sqrt{25} = - 5",
-          "fallback": "−√25=−5"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\sqrt{25} = 5",
+              "fallback": "√25=5"
+            }
+          ],
+          "fallback": "(3) √25=5"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\sqrt{25} = 5",
-          "fallback": "√25=5"
-        },
-        "  (4) ",
-        {
-          "latex": "\\sqrt{25} = \\pm 5",
-          "fallback": "√25=±5"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\sqrt{25} = \\pm 5",
+              "fallback": "√25=±5"
+            }
+          ],
+          "fallback": "(4) √25=±5"
         }
       ],
       "ta": [
@@ -12825,30 +13517,57 @@ const records=[
           "latex": "\\sqrt{25}",
           "fallback": "√25"
         },
-        " பற்றிய எந்தக் கூற்று தவறு?\n(1) ",
+        " பற்றிய எந்தக் கூற்று தவறு?\n",
+        "",
         {
-          "latex": "25",
-          "fallback": "25"
+          "questionOption": [
+            "(1) ",
+            [
+              {
+                "latex": "25",
+                "fallback": "25"
+              },
+              "-இன் வர்க்கமூலங்கள் ",
+              {
+                "latex": "\\pm 5",
+                "fallback": "±5"
+              }
+            ]
+          ],
+          "fallback": "(1) 25-இன் வர்க்கமூலங்கள் ±5"
         },
-        "-இன் வர்க்கமூலங்கள் ",
+        "  ",
         {
-          "latex": "\\pm 5",
-          "fallback": "±5"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "- \\sqrt{25} = - 5",
+              "fallback": "−√25=−5"
+            }
+          ],
+          "fallback": "(2) −√25=−5"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "- \\sqrt{25} = - 5",
-          "fallback": "−√25=−5"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\sqrt{25} = 5",
+              "fallback": "√25=5"
+            }
+          ],
+          "fallback": "(3) √25=5"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\sqrt{25} = 5",
-          "fallback": "√25=5"
-        },
-        "  (4) ",
-        {
-          "latex": "\\sqrt{25} = \\pm 5",
-          "fallback": "√25=±5"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\sqrt{25} = \\pm 5",
+              "fallback": "√25=±5"
+            }
+          ],
+          "fallback": "(4) √25=±5"
         }
       ]
     },
@@ -12911,47 +13630,97 @@ const records=[
     "id": "g9-ch2-ex9-q12",
     "questionMath": {
       "en": [
-        "Which expression is NOT rational?\n(1) ",
+        "Which expression is NOT rational?\n",
+        "",
         {
-          "latex": "\\displaystyle \\sqrt{\\frac{8}{18}}",
-          "fallback": "√(8/18)"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\sqrt{\\frac{8}{18}}",
+              "fallback": "√(8/18)"
+            }
+          ],
+          "fallback": "(1) √(8/18)"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{7}{3}",
-          "fallback": "7/3"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{7}{3}",
+              "fallback": "7/3"
+            }
+          ],
+          "fallback": "(2) 7/3"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\sqrt{0.01}",
-          "fallback": "√0.01"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\sqrt{0.01}",
+              "fallback": "√0.01"
+            }
+          ],
+          "fallback": "(3) √0.01"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\sqrt{13}",
-          "fallback": "√13"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\sqrt{13}",
+              "fallback": "√13"
+            }
+          ],
+          "fallback": "(4) √13"
         }
       ],
       "ta": [
-        "கீழே உள்ளவற்றுள் விகிதமுறு எண் அல்லாதது எது?\n(1) ",
+        "கீழே உள்ளவற்றுள் விகிதமுறு எண் அல்லாதது எது?\n",
+        "",
         {
-          "latex": "\\displaystyle \\sqrt{\\frac{8}{18}}",
-          "fallback": "√(8/18)"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\sqrt{\\frac{8}{18}}",
+              "fallback": "√(8/18)"
+            }
+          ],
+          "fallback": "(1) √(8/18)"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{7}{3}",
-          "fallback": "7/3"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{7}{3}",
+              "fallback": "7/3"
+            }
+          ],
+          "fallback": "(2) 7/3"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\sqrt{0.01}",
-          "fallback": "√0.01"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\sqrt{0.01}",
+              "fallback": "√0.01"
+            }
+          ],
+          "fallback": "(3) √0.01"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\sqrt{13}",
-          "fallback": "√13"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\sqrt{13}",
+              "fallback": "√13"
+            }
+          ],
+          "fallback": "(4) √13"
         }
       ]
     },
@@ -13037,25 +13806,50 @@ const records=[
           "latex": "\\sqrt{27} + \\sqrt{12}",
           "fallback": "√27 + √12"
         },
-        ".\n(1) ",
+        ".\n",
+        "",
         {
-          "latex": "\\sqrt{39}",
-          "fallback": "√39"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\sqrt{39}",
+              "fallback": "√39"
+            }
+          ],
+          "fallback": "(1) √39"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "5 \\sqrt{6}",
-          "fallback": "5√6"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "5 \\sqrt{6}",
+              "fallback": "5√6"
+            }
+          ],
+          "fallback": "(2) 5√6"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "5 \\sqrt{3}",
-          "fallback": "5√3"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "5 \\sqrt{3}",
+              "fallback": "5√3"
+            }
+          ],
+          "fallback": "(3) 5√3"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "3 \\sqrt{5}",
-          "fallback": "3√5"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "3 \\sqrt{5}",
+              "fallback": "3√5"
+            }
+          ],
+          "fallback": "(4) 3√5"
         }
       ],
       "ta": [
@@ -13063,25 +13857,50 @@ const records=[
           "latex": "\\sqrt{27} + \\sqrt{12}",
           "fallback": "√27 + √12"
         },
-        " ஐச் சுருக்குக.\n(1) ",
+        " ஐச் சுருக்குக.\n",
+        "",
         {
-          "latex": "\\sqrt{39}",
-          "fallback": "√39"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\sqrt{39}",
+              "fallback": "√39"
+            }
+          ],
+          "fallback": "(1) √39"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "5 \\sqrt{6}",
-          "fallback": "5√6"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "5 \\sqrt{6}",
+              "fallback": "5√6"
+            }
+          ],
+          "fallback": "(2) 5√6"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "5 \\sqrt{3}",
-          "fallback": "5√3"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "5 \\sqrt{3}",
+              "fallback": "5√3"
+            }
+          ],
+          "fallback": "(3) 5√3"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "3 \\sqrt{5}",
-          "fallback": "3√5"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "3 \\sqrt{5}",
+              "fallback": "3√5"
+            }
+          ],
+          "fallback": "(4) 3√5"
         }
       ]
     },
@@ -13167,25 +13986,50 @@ const records=[
           "latex": "k",
           "fallback": "k"
         },
-        ".\n(1) ",
+        ".\n",
+        "",
         {
-          "latex": "2",
-          "fallback": "2"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            }
+          ],
+          "fallback": "(1) 2"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "4",
-          "fallback": "4"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            }
+          ],
+          "fallback": "(2) 4"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "8",
-          "fallback": "8"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            }
+          ],
+          "fallback": "(3) 8"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "16",
-          "fallback": "16"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "16",
+              "fallback": "16"
+            }
+          ],
+          "fallback": "(4) 16"
         }
       ],
       "ta": [
@@ -13198,25 +14042,50 @@ const records=[
           "latex": "k",
           "fallback": "k"
         },
-        " காண்க.\n(1) ",
+        " காண்க.\n",
+        "",
         {
-          "latex": "2",
-          "fallback": "2"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            }
+          ],
+          "fallback": "(1) 2"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "4",
-          "fallback": "4"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            }
+          ],
+          "fallback": "(2) 4"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "8",
-          "fallback": "8"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            }
+          ],
+          "fallback": "(3) 8"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "16",
-          "fallback": "16"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "16",
+              "fallback": "16"
+            }
+          ],
+          "fallback": "(4) 16"
         }
       ]
     },
@@ -13292,25 +14161,50 @@ const records=[
           "latex": "4 \\sqrt{7} \\times 2 \\sqrt{3}",
           "fallback": "4√7 × 2√3"
         },
-        ".\n(1) ",
+        ".\n",
+        "",
         {
-          "latex": "6 \\sqrt{10}",
-          "fallback": "6√10"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "6 \\sqrt{10}",
+              "fallback": "6√10"
+            }
+          ],
+          "fallback": "(1) 6√10"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "8 \\sqrt{21}",
-          "fallback": "8√21"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "8 \\sqrt{21}",
+              "fallback": "8√21"
+            }
+          ],
+          "fallback": "(2) 8√21"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "8 \\sqrt{10}",
-          "fallback": "8√10"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "8 \\sqrt{10}",
+              "fallback": "8√10"
+            }
+          ],
+          "fallback": "(3) 8√10"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "6 \\sqrt{21}",
-          "fallback": "6√21"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "6 \\sqrt{21}",
+              "fallback": "6√21"
+            }
+          ],
+          "fallback": "(4) 6√21"
         }
       ],
       "ta": [
@@ -13318,25 +14212,50 @@ const records=[
           "latex": "4 \\sqrt{7} \\times 2 \\sqrt{3}",
           "fallback": "4√7 × 2√3"
         },
-        " இன் மதிப்பு என்ன?\n(1) ",
+        " இன் மதிப்பு என்ன?\n",
+        "",
         {
-          "latex": "6 \\sqrt{10}",
-          "fallback": "6√10"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "6 \\sqrt{10}",
+              "fallback": "6√10"
+            }
+          ],
+          "fallback": "(1) 6√10"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "8 \\sqrt{21}",
-          "fallback": "8√21"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "8 \\sqrt{21}",
+              "fallback": "8√21"
+            }
+          ],
+          "fallback": "(2) 8√21"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "8 \\sqrt{10}",
-          "fallback": "8√10"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "8 \\sqrt{10}",
+              "fallback": "8√10"
+            }
+          ],
+          "fallback": "(3) 8√10"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "6 \\sqrt{21}",
-          "fallback": "6√21"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "6 \\sqrt{21}",
+              "fallback": "6√21"
+            }
+          ],
+          "fallback": "(4) 6√21"
         }
       ]
     },
@@ -13393,25 +14312,50 @@ const records=[
           "latex": "\\displaystyle \\frac{2 \\sqrt{3}}{\\left(3 \\sqrt{2}\\right)}",
           "fallback": "2√3/(3√2)"
         },
-        ".\n(1) ",
+        ".\n",
+        "",
         {
-          "latex": "\\displaystyle \\frac{\\sqrt{2}}{3}",
-          "fallback": "√2/3"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\frac{\\sqrt{2}}{3}",
+              "fallback": "√2/3"
+            }
+          ],
+          "fallback": "(1) √2/3"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{\\sqrt{3}}{2}",
-          "fallback": "√3/2"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{\\sqrt{3}}{2}",
+              "fallback": "√3/2"
+            }
+          ],
+          "fallback": "(2) √3/2"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{\\sqrt{6}}{3}",
-          "fallback": "√6/3"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\displaystyle \\frac{\\sqrt{6}}{3}",
+              "fallback": "√6/3"
+            }
+          ],
+          "fallback": "(3) √6/3"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{2}{3}",
-          "fallback": "2/3"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\displaystyle \\frac{2}{3}",
+              "fallback": "2/3"
+            }
+          ],
+          "fallback": "(4) 2/3"
         }
       ],
       "ta": [
@@ -13419,25 +14363,50 @@ const records=[
           "latex": "\\displaystyle \\frac{2 \\sqrt{3}}{\\left(3 \\sqrt{2}\\right)}",
           "fallback": "2√3/(3√2)"
         },
-        " இன் பகுதியை விகிதப்படுத்துக.\n(1) ",
+        " இன் பகுதியை விகிதப்படுத்துக.\n",
+        "",
         {
-          "latex": "\\displaystyle \\frac{\\sqrt{2}}{3}",
-          "fallback": "√2/3"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\frac{\\sqrt{2}}{3}",
+              "fallback": "√2/3"
+            }
+          ],
+          "fallback": "(1) √2/3"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{\\sqrt{3}}{2}",
-          "fallback": "√3/2"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{\\sqrt{3}}{2}",
+              "fallback": "√3/2"
+            }
+          ],
+          "fallback": "(2) √3/2"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{\\sqrt{6}}{3}",
-          "fallback": "√6/3"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\displaystyle \\frac{\\sqrt{6}}{3}",
+              "fallback": "√6/3"
+            }
+          ],
+          "fallback": "(3) √6/3"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{2}{3}",
-          "fallback": "2/3"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\displaystyle \\frac{2}{3}",
+              "fallback": "2/3"
+            }
+          ],
+          "fallback": "(4) 2/3"
         }
       ]
     },
@@ -13514,25 +14483,50 @@ const records=[
           "latex": "\\left(2 \\sqrt{5} - \\sqrt{2}\\right)^{2}",
           "fallback": "(2√5−√2)²"
         },
-        ".\n(1) ",
+        ".\n",
+        "",
         {
-          "latex": "4 \\sqrt{5} + 2 \\sqrt{2}",
-          "fallback": "4√5+2√2"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "4 \\sqrt{5} + 2 \\sqrt{2}",
+              "fallback": "4√5+2√2"
+            }
+          ],
+          "fallback": "(1) 4√5+2√2"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "22 - 4 \\sqrt{10}",
-          "fallback": "22−4√10"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "22 - 4 \\sqrt{10}",
+              "fallback": "22−4√10"
+            }
+          ],
+          "fallback": "(2) 22−4√10"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "8 - 4 \\sqrt{10}",
-          "fallback": "8−4√10"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "8 - 4 \\sqrt{10}",
+              "fallback": "8−4√10"
+            }
+          ],
+          "fallback": "(3) 8−4√10"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "2 \\sqrt{10} - 2",
-          "fallback": "2√10−2"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "2 \\sqrt{10} - 2",
+              "fallback": "2√10−2"
+            }
+          ],
+          "fallback": "(4) 2√10−2"
         }
       ],
       "ta": [
@@ -13540,25 +14534,50 @@ const records=[
           "latex": "\\left(2 \\sqrt{5} - \\sqrt{2}\\right)^{2}",
           "fallback": "(2√5−√2)²"
         },
-        " ஐ விரிக்கவும்.\n(1) ",
+        " ஐ விரிக்கவும்.\n",
+        "",
         {
-          "latex": "4 \\sqrt{5} + 2 \\sqrt{2}",
-          "fallback": "4√5+2√2"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "4 \\sqrt{5} + 2 \\sqrt{2}",
+              "fallback": "4√5+2√2"
+            }
+          ],
+          "fallback": "(1) 4√5+2√2"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "22 - 4 \\sqrt{10}",
-          "fallback": "22−4√10"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "22 - 4 \\sqrt{10}",
+              "fallback": "22−4√10"
+            }
+          ],
+          "fallback": "(2) 22−4√10"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "8 - 4 \\sqrt{10}",
-          "fallback": "8−4√10"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "8 - 4 \\sqrt{10}",
+              "fallback": "8−4√10"
+            }
+          ],
+          "fallback": "(3) 8−4√10"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "2 \\sqrt{10} - 2",
-          "fallback": "2√10−2"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "2 \\sqrt{10} - 2",
+              "fallback": "2√10−2"
+            }
+          ],
+          "fallback": "(4) 2√10−2"
         }
       ]
     },
@@ -13629,25 +14648,50 @@ const records=[
           "latex": "\\displaystyle \\left(0.000729\\right)^{\\frac{- 3}{4}} \\times \\left(0.09\\right)^{\\frac{- 3}{4}}",
           "fallback": "(0.000729)^(−3/4) × (0.09)^(−3/4)"
         },
-        ".\n(1) ",
+        ".\n",
+        "",
         {
-          "latex": "\\displaystyle \\frac{10^{3}}{3^{3}}",
-          "fallback": "10³/3³"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\frac{10^{3}}{3^{3}}",
+              "fallback": "10³/3³"
+            }
+          ],
+          "fallback": "(1) 10³/3³"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{10^{5}}{3^{5}}",
-          "fallback": "10⁵/3⁵"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{10^{5}}{3^{5}}",
+              "fallback": "10⁵/3⁵"
+            }
+          ],
+          "fallback": "(2) 10⁵/3⁵"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{10^{2}}{3^{2}}",
-          "fallback": "10²/3²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\displaystyle \\frac{10^{2}}{3^{2}}",
+              "fallback": "10²/3²"
+            }
+          ],
+          "fallback": "(3) 10²/3²"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{10^{6}}{3^{6}}",
-          "fallback": "10⁶/3⁶"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\displaystyle \\frac{10^{6}}{3^{6}}",
+              "fallback": "10⁶/3⁶"
+            }
+          ],
+          "fallback": "(4) 10⁶/3⁶"
         }
       ],
       "ta": [
@@ -13655,25 +14699,50 @@ const records=[
           "latex": "\\displaystyle \\left(0.000729\\right)^{\\frac{- 3}{4}} \\times \\left(0.09\\right)^{\\frac{- 3}{4}}",
           "fallback": "(0.000729)^(−3/4) × (0.09)^(−3/4)"
         },
-        " ஐச் சுருக்குக.\n(1) ",
+        " ஐச் சுருக்குக.\n",
+        "",
         {
-          "latex": "\\displaystyle \\frac{10^{3}}{3^{3}}",
-          "fallback": "10³/3³"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\frac{10^{3}}{3^{3}}",
+              "fallback": "10³/3³"
+            }
+          ],
+          "fallback": "(1) 10³/3³"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{10^{5}}{3^{5}}",
-          "fallback": "10⁵/3⁵"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{10^{5}}{3^{5}}",
+              "fallback": "10⁵/3⁵"
+            }
+          ],
+          "fallback": "(2) 10⁵/3⁵"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{10^{2}}{3^{2}}",
-          "fallback": "10²/3²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\displaystyle \\frac{10^{2}}{3^{2}}",
+              "fallback": "10²/3²"
+            }
+          ],
+          "fallback": "(3) 10²/3²"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{10^{6}}{3^{6}}",
-          "fallback": "10⁶/3⁶"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\displaystyle \\frac{10^{6}}{3^{6}}",
+              "fallback": "10⁶/3⁶"
+            }
+          ],
+          "fallback": "(4) 10⁶/3⁶"
         }
       ]
     },
@@ -13759,25 +14828,50 @@ const records=[
           "latex": "x",
           "fallback": "x"
         },
-        ".\n(1) ",
+        ".\n",
+        "",
         {
-          "latex": "\\displaystyle \\frac{2}{3}",
-          "fallback": "2/3"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\frac{2}{3}",
+              "fallback": "2/3"
+            }
+          ],
+          "fallback": "(1) 2/3"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{4}{3}",
-          "fallback": "4/3"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{4}{3}",
+              "fallback": "4/3"
+            }
+          ],
+          "fallback": "(2) 4/3"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{1}{3}",
-          "fallback": "1/3"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\displaystyle \\frac{1}{3}",
+              "fallback": "1/3"
+            }
+          ],
+          "fallback": "(3) 1/3"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{5}{3}",
-          "fallback": "5/3"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\displaystyle \\frac{5}{3}",
+              "fallback": "5/3"
+            }
+          ],
+          "fallback": "(4) 5/3"
         }
       ],
       "ta": [
@@ -13790,25 +14884,50 @@ const records=[
           "latex": "x",
           "fallback": "x"
         },
-        " காண்க.\n(1) ",
+        " காண்க.\n",
+        "",
         {
-          "latex": "\\displaystyle \\frac{2}{3}",
-          "fallback": "2/3"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\displaystyle \\frac{2}{3}",
+              "fallback": "2/3"
+            }
+          ],
+          "fallback": "(1) 2/3"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{4}{3}",
-          "fallback": "4/3"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\displaystyle \\frac{4}{3}",
+              "fallback": "4/3"
+            }
+          ],
+          "fallback": "(2) 4/3"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{1}{3}",
-          "fallback": "1/3"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\displaystyle \\frac{1}{3}",
+              "fallback": "1/3"
+            }
+          ],
+          "fallback": "(3) 1/3"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "\\displaystyle \\frac{5}{3}",
-          "fallback": "5/3"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\displaystyle \\frac{5}{3}",
+              "fallback": "5/3"
+            }
+          ],
+          "fallback": "(4) 5/3"
         }
       ]
     },
@@ -13885,25 +15004,50 @@ const records=[
           "latex": "4 \\times 10^{4} m",
           "fallback": "4×10⁴ m"
         },
-        ". Find its area.\n(1) ",
+        ". Find its area.\n",
+        "",
         {
-          "latex": "9 \\times 10^{1} m^{2}",
-          "fallback": "9×10¹ m²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "9 \\times 10^{1} m^{2}",
+              "fallback": "9×10¹ m²"
+            }
+          ],
+          "fallback": "(1) 9×10¹ m²"
         },
-        "  (2) ",
+        "  ",
         {
-          "latex": "9 \\times 10^{9} m^{2}",
-          "fallback": "9×10⁹ m²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "9 \\times 10^{9} m^{2}",
+              "fallback": "9×10⁹ m²"
+            }
+          ],
+          "fallback": "(2) 9×10⁹ m²"
         },
-        "  (3) ",
+        "  ",
         {
-          "latex": "2 \\times 10^{10} m^{2}",
-          "fallback": "2×10¹⁰ m²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "2 \\times 10^{10} m^{2}",
+              "fallback": "2×10¹⁰ m²"
+            }
+          ],
+          "fallback": "(3) 2×10¹⁰ m²"
         },
-        "  (4) ",
+        "  ",
         {
-          "latex": "20 \\times 10^{20} m^{2}",
-          "fallback": "20×10²⁰ m²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "20 \\times 10^{20} m^{2}",
+              "fallback": "20×10²⁰ m²"
+            }
+          ],
+          "fallback": "(4) 20×10²⁰ m²"
         }
       ],
       "ta": [
@@ -13917,27 +15061,63 @@ const records=[
           "latex": "4 \\times 10^{4}",
           "fallback": "4×10⁴"
         },
-        " மீ. பரப்பளவு காண்க.\n(1) ",
+        " மீ. பரப்பளவு காண்க.\n",
+        "",
         {
-          "latex": "9 \\times 10^{1}",
-          "fallback": "9×10¹"
+          "questionOption": [
+            "(1) ",
+            [
+              {
+                "latex": "9 \\times 10^{1}",
+                "fallback": "9×10¹"
+              },
+              " மீ²"
+            ]
+          ],
+          "fallback": "(1) 9×10¹ மீ²"
         },
-        " மீ²  (2) ",
+        "  ",
         {
-          "latex": "9 \\times 10^{9}",
-          "fallback": "9×10⁹"
+          "questionOption": [
+            "(2) ",
+            [
+              {
+                "latex": "9 \\times 10^{9}",
+                "fallback": "9×10⁹"
+              },
+              " மீ²"
+            ]
+          ],
+          "fallback": "(2) 9×10⁹ மீ²"
         },
-        " மீ²  (3) ",
+        "  ",
         {
-          "latex": "2 \\times 10^{10}",
-          "fallback": "2×10¹⁰"
+          "questionOption": [
+            "(3) ",
+            [
+              {
+                "latex": "2 \\times 10^{10}",
+                "fallback": "2×10¹⁰"
+              },
+              " மீ²"
+            ]
+          ],
+          "fallback": "(3) 2×10¹⁰ மீ²"
         },
-        " மீ²  (4) ",
+        "  ",
         {
-          "latex": "20 \\times 10^{20}",
-          "fallback": "20×10²⁰"
-        },
-        " மீ²"
+          "questionOption": [
+            "(4) ",
+            [
+              {
+                "latex": "20 \\times 10^{20}",
+                "fallback": "20×10²⁰"
+              },
+              " மீ²"
+            ]
+          ],
+          "fallback": "(4) 20×10²⁰ மீ²"
+        }
       ]
     },
     "answerMath": [
@@ -14474,8 +15654,14 @@ const records=[
         },
         ". Consider the following sets ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " and ",
         {
@@ -14495,8 +15681,14 @@ const records=[
         },
         ". ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " மற்றும் ",
         {
@@ -14599,8 +15791,14 @@ const records=[
         },
         ". Consider the following sets ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " and ",
         {
@@ -14620,8 +15818,14 @@ const records=[
         },
         ". ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " மற்றும் ",
         {
@@ -14710,8 +15914,14 @@ const records=[
         },
         ". Consider the following sets ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " and ",
         {
@@ -14731,8 +15941,14 @@ const records=[
         },
         ". ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " மற்றும் ",
         {
@@ -14835,8 +16051,14 @@ const records=[
         },
         ". Consider the following sets ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " and ",
         {
@@ -14856,8 +16078,14 @@ const records=[
         },
         ". ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " மற்றும் ",
         {
@@ -14960,8 +16188,14 @@ const records=[
         },
         ". Consider the following sets ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " and ",
         {
@@ -14981,8 +16215,14 @@ const records=[
         },
         ". ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " மற்றும் ",
         {
@@ -15085,8 +16325,14 @@ const records=[
         },
         ". Consider the following sets ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " and ",
         {
@@ -15106,8 +16352,14 @@ const records=[
         },
         ". ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " மற்றும் ",
         {
@@ -15210,8 +16462,14 @@ const records=[
         },
         ". Consider the following sets ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " and ",
         {
@@ -15231,8 +16489,14 @@ const records=[
         },
         ". ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " மற்றும் ",
         {
@@ -15327,8 +16591,14 @@ const records=[
         },
         ". Consider the following sets ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " and ",
         {
@@ -15348,8 +16618,14 @@ const records=[
         },
         ". ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " மற்றும் ",
         {
@@ -15469,8 +16745,14 @@ const records=[
         },
         ". Consider the following sets ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " and ",
         {
@@ -15490,8 +16772,14 @@ const records=[
         },
         ". ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " மற்றும் ",
         {
@@ -15611,8 +16899,14 @@ const records=[
         },
         ". Consider the following sets ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " and ",
         {
@@ -15632,8 +16926,14 @@ const records=[
         },
         ". ",
         {
-          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}, B = \\left\\{2, 4, 6, 10\\right\\}",
-          "fallback": "A = {0, 3, 5, 8}, B = {2, 4, 6, 10}"
+          "latex": "A = \\left\\{0, 3, 5, 8\\right\\}",
+          "fallback": "A = {0, 3, 5, 8}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "B = \\left\\{2, 4, 6, 10\\right\\}",
+          "fallback": "B = {2, 4, 6, 10}"
         },
         " மற்றும் ",
         {
@@ -16065,8 +17365,20 @@ const records=[
           "en": [
             "Perfect cubes near the interval are ",
             {
-              "latex": "3^{3} = 27, 4^{3} = 64, 5^{3} = 125",
-              "fallback": "3³ = 27, 4³ = 64, 5³ = 125"
+              "latex": "3^{3} = 27",
+              "fallback": "3³ = 27"
+            },
+            ",",
+            " ",
+            {
+              "latex": "4^{3} = 64",
+              "fallback": "4³ = 64"
+            },
+            ",",
+            " ",
+            {
+              "latex": "5^{3} = 125",
+              "fallback": "5³ = 125"
             },
             " and ",
             {
@@ -16078,8 +17390,26 @@ const records=[
           "ta": [
             "இந்த எல்லைக்கு அருகிலுள்ள முழுக் கன எண்கள் ",
             {
-              "latex": "3^{3} = 27, 4^{3} = 64, 5^{3} = 125, 6^{3} = 216",
-              "fallback": "3³ = 27, 4³ = 64, 5³ = 125, 6³ = 216"
+              "latex": "3^{3} = 27",
+              "fallback": "3³ = 27"
+            },
+            ",",
+            " ",
+            {
+              "latex": "4^{3} = 64",
+              "fallback": "4³ = 64"
+            },
+            ",",
+            " ",
+            {
+              "latex": "5^{3} = 125",
+              "fallback": "5³ = 125"
+            },
+            ",",
+            " ",
+            {
+              "latex": "6^{3} = 216",
+              "fallback": "6³ = 216"
             },
             "."
           ]
@@ -17625,7 +18955,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{gathered}\\text{(i)}\\quad \\begin{aligned}5 x  &=  6  \\\\  x  &=  \\frac{6}{5}\\end{aligned} \\\\ \\text{(ii)}\\quad x = - 3\\end{gathered}",
+          "latex": "\\begin{gathered}\\text{(i)}\\quad \\begin{aligned}5 x  &=  6  \\\\ \\Rightarrow\\;  x  &=  \\frac{6}{5}\\end{aligned} \\\\ \\text{(ii)}\\quad x = - 3\\end{gathered}",
           "fallback": "(i) 5x=6 ⇒ x=[[6|5]]; (ii) x=−3",
           "display": true
         },
@@ -17635,7 +18965,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{gathered}\\text{(iii)}\\quad \\begin{aligned}10 x  &=  - 9  \\\\  x  &=  - \\frac{9}{10}\\end{aligned} \\\\ \\text{(iv)}\\quad \\begin{aligned}9 x  &=  4  \\\\  x  &=  \\frac{4}{9}\\end{aligned}\\end{gathered}",
+          "latex": "\\begin{gathered}\\text{(iii)}\\quad \\begin{aligned}10 x  &=  - 9  \\\\ \\Rightarrow\\;  x  &=  - \\frac{9}{10}\\end{aligned} \\\\ \\text{(iv)}\\quad \\begin{aligned}9 x  &=  4  \\\\ \\Rightarrow\\;  x  &=  \\frac{4}{9}\\end{aligned}\\end{gathered}",
           "fallback": "(iii) 10x=−9 ⇒ x=−[[9|10]]; (iv) 9x=4 ⇒ x=[[4|9]]",
           "display": true
         },
@@ -17742,7 +19072,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&6 x = 180^{\\circ}  \\\\ & x = 30^{\\circ}\\end{aligned}",
+          "latex": "\\begin{aligned}&6 x = 180^{\\circ}  \\\\ &\\Rightarrow x = 30^{\\circ}\\end{aligned}",
           "fallback": "6x=180° ⇒ x=30°",
           "display": true
         },
@@ -17779,8 +19109,20 @@ const records=[
         },
         " are two triangles in which ",
         {
-          "latex": "AB = DF, \\angle ACB = 70^{\\circ}, \\angle ABC = 60^{\\circ};\\quad \\angle DEF = 70^{\\circ}",
-          "fallback": "AB=DF, ∠ACB=70°, ∠ABC=60°; ∠DEF=70°"
+          "latex": "AB = DF",
+          "fallback": "AB=DF"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\angle ACB = 70^{\\circ}",
+          "fallback": "∠ACB=70°"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\angle ABC = 60^{\\circ};\\quad \\angle DEF = 70^{\\circ}",
+          "fallback": "∠ABC=60°; ∠DEF=70°"
         },
         " and ",
         {
@@ -17802,8 +19144,20 @@ const records=[
         },
         " are two triangles in which ",
         {
-          "latex": "AB = DF, \\angle ACB = 70^{\\circ}, \\angle ABC = 60^{\\circ};\\quad \\angle DEF = 70^{\\circ}",
-          "fallback": "AB=DF, ∠ACB=70°, ∠ABC=60°; ∠DEF=70°"
+          "latex": "AB = DF",
+          "fallback": "AB=DF"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\angle ACB = 70^{\\circ}",
+          "fallback": "∠ACB=70°"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\angle ABC = 60^{\\circ};\\quad \\angle DEF = 70^{\\circ}",
+          "fallback": "∠ABC=60°; ∠DEF=70°"
         },
         " and ",
         {
@@ -17995,7 +19349,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&18 x = 360^{\\circ}  \\\\ & x = 20^{\\circ}\\end{aligned}",
+          "latex": "\\begin{aligned}&18 x = 360^{\\circ}  \\\\ &\\Rightarrow x = 20^{\\circ}\\end{aligned}",
           "fallback": "18x=360° ⇒ x=20°",
           "display": true
         },
@@ -18145,7 +19499,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&3 x + 174 = 360  \\\\ & 3 x = 186  \\\\ & x = 62\\end{aligned}",
+          "latex": "\\begin{aligned}&3 x + 174 = 360  \\\\ &\\Rightarrow 3 x = 186  \\\\ &\\Rightarrow x = 62\\end{aligned}",
           "fallback": "3x+174=360 ⇒ 3x=186 ⇒ x=62",
           "display": true
         },
@@ -18945,7 +20299,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&t^{2} - \\left(t - 4\\right)^{2} = 16  \\\\ & 8 t - 16 = 16  \\\\ & t = 4\\end{aligned}",
+          "latex": "\\begin{aligned}&t^{2} - \\left(t - 4\\right)^{2} = 16  \\\\ &\\Rightarrow 8 t - 16 = 16  \\\\ &\\Rightarrow t = 4\\end{aligned}",
           "fallback": "t²−(t−4)²=16 ⇒ 8t−16=16 ⇒ t=4",
           "display": true
         },
@@ -19513,7 +20867,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&8 = 4 + \\left(a - 3\\right)^{2}  \\\\ & \\left(a - 3\\right)^{2} = 4\\end{aligned}",
+          "latex": "\\begin{aligned}&8 = 4 + \\left(a - 3\\right)^{2}  \\\\ &\\Rightarrow \\left(a - 3\\right)^{2} = 4\\end{aligned}",
           "fallback": "8=4+(a−3)² ⇒ (a−3)²=4",
           "display": true
         },
@@ -19634,7 +20988,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&2 t^{2} - 8 t + 10 = 100  \\\\ & t^{2} - 4 t - 45 = 0\\end{aligned}",
+          "latex": "\\begin{aligned}&2 t^{2} - 8 t + 10 = 100  \\\\ &\\Rightarrow t^{2} - 4 t - 45 = 0\\end{aligned}",
           "fallback": "2t²−8t+10=100 ⇒ t²−4t−45=0",
           "display": true
         },
@@ -19646,7 +21000,7 @@ const records=[
       {
         "math": [
           {
-            "latex": "\\begin{aligned}&\\left(t - 9\\right) \\left(t + 5\\right) = 0  \\\\ & t = 9\\end{aligned}",
+            "latex": "\\begin{aligned}&\\left(t - 9\\right) \\left(t + 5\\right) = 0  \\\\ &\\Rightarrow t = 9\\end{aligned}",
             "fallback": "(t−9)(t+5)=0 ⇒ t=9",
             "display": true
           },
@@ -20585,8 +21939,26 @@ const records=[
           "en": [
             "Read the textbook diagram: ",
             {
-              "latex": "BC = 42\\,\\mathrm{cm}, CA = 34\\,\\mathrm{cm}, BD = 16\\,\\mathrm{cm}, AD = 12\\,\\mathrm{cm}",
-              "fallback": "BC=42 cm, CA=34 cm, BD=16 cm, AD=12 cm"
+              "latex": "BC = 42\\,\\mathrm{cm}",
+              "fallback": "BC=42 cm"
+            },
+            ",",
+            " ",
+            {
+              "latex": "CA = 34\\,\\mathrm{cm}",
+              "fallback": "CA=34 cm"
+            },
+            ",",
+            " ",
+            {
+              "latex": "BD = 16\\,\\mathrm{cm}",
+              "fallback": "BD=16 cm"
+            },
+            ",",
+            " ",
+            {
+              "latex": "AD = 12\\,\\mathrm{cm}",
+              "fallback": "AD=12 cm"
             },
             ", with ",
             {
@@ -20598,8 +21970,26 @@ const records=[
           "ta": [
             "English explanation (Tamil version pending): Read the textbook diagram: ",
             {
-              "latex": "BC = 42\\,\\mathrm{cm}, CA = 34\\,\\mathrm{cm}, BD = 16\\,\\mathrm{cm}, AD = 12\\,\\mathrm{cm}",
-              "fallback": "BC=42 cm, CA=34 cm, BD=16 cm, AD=12 cm"
+              "latex": "BC = 42\\,\\mathrm{cm}",
+              "fallback": "BC=42 cm"
+            },
+            ",",
+            " ",
+            {
+              "latex": "CA = 34\\,\\mathrm{cm}",
+              "fallback": "CA=34 cm"
+            },
+            ",",
+            " ",
+            {
+              "latex": "BD = 16\\,\\mathrm{cm}",
+              "fallback": "BD=16 cm"
+            },
+            ",",
+            " ",
+            {
+              "latex": "AD = 12\\,\\mathrm{cm}",
+              "fallback": "AD=12 cm"
             },
             ", with ",
             {
@@ -20763,8 +22153,26 @@ const records=[
         },
         " whose sides are ",
         {
-          "latex": "AB = 13\\,\\mathrm{cm}, BC = 12\\,\\mathrm{cm}, CD = 9\\,\\mathrm{cm}, AD = 14\\,\\mathrm{cm}",
-          "fallback": "AB =13 cm, BC =12 cm, CD = 9 cm, AD =14 cm"
+          "latex": "AB = 13\\,\\mathrm{cm}",
+          "fallback": "AB =13 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "BC = 12\\,\\mathrm{cm}",
+          "fallback": "BC =12 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "CD = 9\\,\\mathrm{cm}",
+          "fallback": "CD = 9 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "AD = 14\\,\\mathrm{cm}",
+          "fallback": "AD =14 cm"
         },
         " and diagonal ",
         {
@@ -20781,8 +22189,26 @@ const records=[
         },
         " whose sides are ",
         {
-          "latex": "AB = 13\\,\\mathrm{cm}, BC = 12\\,\\mathrm{cm}, CD = 9\\,\\mathrm{cm}, AD = 14\\,\\mathrm{cm}",
-          "fallback": "AB =13 cm, BC =12 cm, CD = 9 cm, AD =14 cm"
+          "latex": "AB = 13\\,\\mathrm{cm}",
+          "fallback": "AB =13 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "BC = 12\\,\\mathrm{cm}",
+          "fallback": "BC =12 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "CD = 9\\,\\mathrm{cm}",
+          "fallback": "CD = 9 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "AD = 14\\,\\mathrm{cm}",
+          "fallback": "AD =14 cm"
         },
         " and diagonal ",
         {
@@ -21294,8 +22720,14 @@ const records=[
       "en": [
         "Find the Total Surface Area and the Lateral Surface Area of a cuboid whose dimensions are: ",
         {
-          "latex": "\\text{length} = 20\\,\\mathrm{cm}, \\text{breadth} = 15\\,\\mathrm{cm}",
-          "fallback": "length = 20 cm, breadth = 15 cm"
+          "latex": "\\text{length} = 20\\,\\mathrm{cm}",
+          "fallback": "length = 20 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\text{breadth} = 15\\,\\mathrm{cm}",
+          "fallback": "breadth = 15 cm"
         },
         " and ",
         {
@@ -21306,8 +22738,14 @@ const records=[
       "ta": [
         "English-language question; Tamil version pending. Find the Total Surface Area and the Lateral Surface Area of a cuboid whose dimensions are: ",
         {
-          "latex": "\\text{length} = 20\\,\\mathrm{cm}, \\text{breadth} = 15\\,\\mathrm{cm}",
-          "fallback": "length = 20 cm, breadth = 15 cm"
+          "latex": "\\text{length} = 20\\,\\mathrm{cm}",
+          "fallback": "length = 20 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\text{breadth} = 15\\,\\mathrm{cm}",
+          "fallback": "breadth = 15 cm"
         },
         " and ",
         {
@@ -21332,16 +22770,36 @@ const records=[
           "en": [
             "Use ",
             {
-              "latex": "l = 20, b = 15, h = 8",
-              "fallback": "l=20,b=15,h=8"
+              "latex": "l = 20",
+              "fallback": "l=20"
+            },
+            ",",
+            {
+              "latex": "b = 15",
+              "fallback": "b=15"
+            },
+            ",",
+            {
+              "latex": "h = 8",
+              "fallback": "h=8"
             },
             " centimetres and the total surface area formula."
           ],
           "ta": [
             "English explanation (Tamil version pending): Use ",
             {
-              "latex": "l = 20, b = 15, h = 8",
-              "fallback": "l=20,b=15,h=8"
+              "latex": "l = 20",
+              "fallback": "l=20"
+            },
+            ",",
+            {
+              "latex": "b = 15",
+              "fallback": "b=15"
+            },
+            ",",
+            {
+              "latex": "h = 8",
+              "fallback": "h=8"
             },
             " centimetres and the total surface area formula."
           ]
@@ -22059,25 +23517,73 @@ const records=[
       "en": [
         "Find the volume of a cuboid whose dimensions are\n(i) ",
         {
-          "latex": "\\text{length} = 12\\,\\mathrm{cm}, \\text{breadth} = 8\\,\\mathrm{cm}, \\text{height} = 6\\,\\mathrm{cm}",
-          "fallback": "length = 12 cm, breadth = 8 cm, height = 6 cm"
+          "latex": "\\text{length} = 12\\,\\mathrm{cm}",
+          "fallback": "length = 12 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\text{breadth} = 8\\,\\mathrm{cm}",
+          "fallback": "breadth = 8 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\text{height} = 6\\,\\mathrm{cm}",
+          "fallback": "height = 6 cm"
         },
         "\n(ii) ",
         {
-          "latex": "\\text{length} = 60\\,\\mathrm{m}, \\text{breadth} = 25\\,\\mathrm{m}, \\text{height} = 1.5\\,\\mathrm{m}",
-          "fallback": "length = 60 m, breadth = 25 m, height = 1.5 m"
+          "latex": "\\text{length} = 60\\,\\mathrm{m}",
+          "fallback": "length = 60 m"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\text{breadth} = 25\\,\\mathrm{m}",
+          "fallback": "breadth = 25 m"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\text{height} = 1.5\\,\\mathrm{m}",
+          "fallback": "height = 1.5 m"
         }
       ],
       "ta": [
         "English-language question; Tamil version pending. Find the volume of a cuboid whose dimensions are\n(i) ",
         {
-          "latex": "\\text{length} = 12\\,\\mathrm{cm}, \\text{breadth} = 8\\,\\mathrm{cm}, \\text{height} = 6\\,\\mathrm{cm}",
-          "fallback": "length = 12 cm, breadth = 8 cm, height = 6 cm"
+          "latex": "\\text{length} = 12\\,\\mathrm{cm}",
+          "fallback": "length = 12 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\text{breadth} = 8\\,\\mathrm{cm}",
+          "fallback": "breadth = 8 cm"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\text{height} = 6\\,\\mathrm{cm}",
+          "fallback": "height = 6 cm"
         },
         "\n(ii) ",
         {
-          "latex": "\\text{length} = 60\\,\\mathrm{m}, \\text{breadth} = 25\\,\\mathrm{m}, \\text{height} = 1.5\\,\\mathrm{m}",
-          "fallback": "length = 60 m, breadth = 25 m, height = 1.5 m"
+          "latex": "\\text{length} = 60\\,\\mathrm{m}",
+          "fallback": "length = 60 m"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\text{breadth} = 25\\,\\mathrm{m}",
+          "fallback": "breadth = 25 m"
+        },
+        ",",
+        " ",
+        {
+          "latex": "\\text{height} = 1.5\\,\\mathrm{m}",
+          "fallback": "height = 1.5 m"
         }
       ]
     },
@@ -22314,7 +23820,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\left(5 x\\right) \\left(4 x\\right) \\left(3 x\\right) = 7500  \\\\ & 60 x^{3} = 7500\\end{aligned}",
+          "latex": "\\begin{aligned}&\\left(5 x\\right) \\left(4 x\\right) \\left(3 x\\right) = 7500  \\\\ &\\Rightarrow 60 x^{3} = 7500\\end{aligned}",
           "fallback": "(5x)(4x)(3x) = 7500 ⇒ 60x³ = 7500",
           "display": true
         },
@@ -22325,7 +23831,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&x^{3} = 125  \\\\ & x = 5\\end{aligned}",
+          "latex": "\\begin{aligned}&x^{3} = 125  \\\\ &\\Rightarrow x = 5\\end{aligned}",
           "fallback": "x³ = 125 ⇒ x = 5",
           "display": true
         },
@@ -22928,7 +24434,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&225 b = 3375  \\\\ & b = 15\\,\\mathrm{cm}\\end{aligned}",
+          "latex": "\\begin{aligned}&225 b = 3375  \\\\ &\\Rightarrow b = 15\\,\\mathrm{cm}\\end{aligned}",
           "fallback": "225b = 3375 ⇒ b = 15 cm",
           "display": true
         },
@@ -22978,25 +24484,50 @@ const records=[
           "latex": "25\\,\\mathrm{cm}",
           "fallback": "25 cm"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "60\\,\\mathrm{cm}",
-          "fallback": "60 cm"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "60\\,\\mathrm{cm}",
+              "fallback": "60 cm"
+            }
+          ],
+          "fallback": "(1) 60 cm"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "45\\,\\mathrm{cm}",
-          "fallback": "45 cm"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "45\\,\\mathrm{cm}",
+              "fallback": "45 cm"
+            }
+          ],
+          "fallback": "(2) 45 cm"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "30\\,\\mathrm{cm}",
-          "fallback": "30 cm"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "30\\,\\mathrm{cm}",
+              "fallback": "30 cm"
+            }
+          ],
+          "fallback": "(3) 30 cm"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "15\\,\\mathrm{cm}",
-          "fallback": "15 cm"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "15\\,\\mathrm{cm}",
+              "fallback": "15 cm"
+            }
+          ],
+          "fallback": "(4) 15 cm"
         }
       ],
       "ta": [
@@ -23010,25 +24541,50 @@ const records=[
           "latex": "25\\,\\mathrm{cm}",
           "fallback": "25 cm"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "60\\,\\mathrm{cm}",
-          "fallback": "60 cm"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "60\\,\\mathrm{cm}",
+              "fallback": "60 cm"
+            }
+          ],
+          "fallback": "(1) 60 cm"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "45\\,\\mathrm{cm}",
-          "fallback": "45 cm"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "45\\,\\mathrm{cm}",
+              "fallback": "45 cm"
+            }
+          ],
+          "fallback": "(2) 45 cm"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "30\\,\\mathrm{cm}",
-          "fallback": "30 cm"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "30\\,\\mathrm{cm}",
+              "fallback": "30 cm"
+            }
+          ],
+          "fallback": "(3) 30 cm"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "15\\,\\mathrm{cm}",
-          "fallback": "15 cm"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "15\\,\\mathrm{cm}",
+              "fallback": "15 cm"
+            }
+          ],
+          "fallback": "(4) 15 cm"
         }
       ]
     },
@@ -23098,25 +24654,50 @@ const records=[
           "latex": "5\\,\\mathrm{cm}",
           "fallback": "5 cm"
         },
-        ", then the area is\n(1) ",
+        ", then the area is\n",
+        "",
         {
-          "latex": "3\\,\\mathrm{cm}^{2}",
-          "fallback": "3 cm²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "3\\,\\mathrm{cm}^{2}",
+              "fallback": "3 cm²"
+            }
+          ],
+          "fallback": "(1) 3 cm²"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "6\\,\\mathrm{cm}^{2}",
-          "fallback": "6 cm²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "6\\,\\mathrm{cm}^{2}",
+              "fallback": "6 cm²"
+            }
+          ],
+          "fallback": "(2) 6 cm²"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "9\\,\\mathrm{cm}^{2}",
-          "fallback": "9 cm²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "9\\,\\mathrm{cm}^{2}",
+              "fallback": "9 cm²"
+            }
+          ],
+          "fallback": "(3) 9 cm²"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "12\\,\\mathrm{cm}^{2}",
-          "fallback": "12 cm²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "12\\,\\mathrm{cm}^{2}",
+              "fallback": "12 cm²"
+            }
+          ],
+          "fallback": "(4) 12 cm²"
         }
       ],
       "ta": [
@@ -23130,25 +24711,50 @@ const records=[
           "latex": "5\\,\\mathrm{cm}",
           "fallback": "5 cm"
         },
-        ", then the area is\n(1) ",
+        ", then the area is\n",
+        "",
         {
-          "latex": "3\\,\\mathrm{cm}^{2}",
-          "fallback": "3 cm²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "3\\,\\mathrm{cm}^{2}",
+              "fallback": "3 cm²"
+            }
+          ],
+          "fallback": "(1) 3 cm²"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "6\\,\\mathrm{cm}^{2}",
-          "fallback": "6 cm²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "6\\,\\mathrm{cm}^{2}",
+              "fallback": "6 cm²"
+            }
+          ],
+          "fallback": "(2) 6 cm²"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "9\\,\\mathrm{cm}^{2}",
-          "fallback": "9 cm²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "9\\,\\mathrm{cm}^{2}",
+              "fallback": "9 cm²"
+            }
+          ],
+          "fallback": "(3) 9 cm²"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "12\\,\\mathrm{cm}^{2}",
-          "fallback": "12 cm²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "12\\,\\mathrm{cm}^{2}",
+              "fallback": "12 cm²"
+            }
+          ],
+          "fallback": "(4) 12 cm²"
         }
       ]
     },
@@ -23213,25 +24819,50 @@ const records=[
           "latex": "30\\,\\mathrm{cm}",
           "fallback": "30 cm"
         },
-        ". The area is\n(1) ",
+        ". The area is\n",
+        "",
         {
-          "latex": "10\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-          "fallback": "10√3 cm²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "10\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
+              "fallback": "10√3 cm²"
+            }
+          ],
+          "fallback": "(1) 10√3 cm²"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "12\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-          "fallback": "12√3 cm²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "12\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
+              "fallback": "12√3 cm²"
+            }
+          ],
+          "fallback": "(2) 12√3 cm²"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "15\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-          "fallback": "15√3 cm²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "15\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
+              "fallback": "15√3 cm²"
+            }
+          ],
+          "fallback": "(3) 15√3 cm²"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "25\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-          "fallback": "25√3 cm²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "25\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
+              "fallback": "25√3 cm²"
+            }
+          ],
+          "fallback": "(4) 25√3 cm²"
         }
       ],
       "ta": [
@@ -23240,25 +24871,50 @@ const records=[
           "latex": "30\\,\\mathrm{cm}",
           "fallback": "30 cm"
         },
-        ". The area is\n(1) ",
+        ". The area is\n",
+        "",
         {
-          "latex": "10\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-          "fallback": "10√3 cm²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "10\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
+              "fallback": "10√3 cm²"
+            }
+          ],
+          "fallback": "(1) 10√3 cm²"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "12\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-          "fallback": "12√3 cm²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "12\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
+              "fallback": "12√3 cm²"
+            }
+          ],
+          "fallback": "(2) 12√3 cm²"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "15\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-          "fallback": "15√3 cm²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "15\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
+              "fallback": "15√3 cm²"
+            }
+          ],
+          "fallback": "(3) 15√3 cm²"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "25\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-          "fallback": "25√3 cm²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "25\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
+              "fallback": "25√3 cm²"
+            }
+          ],
+          "fallback": "(4) 25√3 cm²"
         }
       ]
     },
@@ -23314,25 +24970,50 @@ const records=[
           "latex": "12\\,\\mathrm{cm}",
           "fallback": "12 cm"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "144\\,\\mathrm{cm}^{2}",
-          "fallback": "144 cm²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "144\\,\\mathrm{cm}^{2}",
+              "fallback": "144 cm²"
+            }
+          ],
+          "fallback": "(1) 144 cm²"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "196\\,\\mathrm{cm}^{2}",
-          "fallback": "196 cm²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "196\\,\\mathrm{cm}^{2}",
+              "fallback": "196 cm²"
+            }
+          ],
+          "fallback": "(2) 196 cm²"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "576\\,\\mathrm{cm}^{2}",
-          "fallback": "576 cm²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "576\\,\\mathrm{cm}^{2}",
+              "fallback": "576 cm²"
+            }
+          ],
+          "fallback": "(3) 576 cm²"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "664\\,\\mathrm{cm}^{2}",
-          "fallback": "664 cm²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "664\\,\\mathrm{cm}^{2}",
+              "fallback": "664 cm²"
+            }
+          ],
+          "fallback": "(4) 664 cm²"
         }
       ],
       "ta": [
@@ -23341,25 +25022,50 @@ const records=[
           "latex": "12\\,\\mathrm{cm}",
           "fallback": "12 cm"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "144\\,\\mathrm{cm}^{2}",
-          "fallback": "144 cm²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "144\\,\\mathrm{cm}^{2}",
+              "fallback": "144 cm²"
+            }
+          ],
+          "fallback": "(1) 144 cm²"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "196\\,\\mathrm{cm}^{2}",
-          "fallback": "196 cm²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "196\\,\\mathrm{cm}^{2}",
+              "fallback": "196 cm²"
+            }
+          ],
+          "fallback": "(2) 196 cm²"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "576\\,\\mathrm{cm}^{2}",
-          "fallback": "576 cm²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "576\\,\\mathrm{cm}^{2}",
+              "fallback": "576 cm²"
+            }
+          ],
+          "fallback": "(3) 576 cm²"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "664\\,\\mathrm{cm}^{2}",
-          "fallback": "664 cm²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "664\\,\\mathrm{cm}^{2}",
+              "fallback": "664 cm²"
+            }
+          ],
+          "fallback": "(4) 664 cm²"
         }
       ]
     },
@@ -23424,25 +25130,50 @@ const records=[
           "latex": "600\\,\\mathrm{cm}^{2}",
           "fallback": "600 cm²"
         },
-        ", then the total surface area is\n(1) ",
+        ", then the total surface area is\n",
+        "",
         {
-          "latex": "150\\,\\mathrm{cm}^{2}",
-          "fallback": "150 cm²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "150\\,\\mathrm{cm}^{2}",
+              "fallback": "150 cm²"
+            }
+          ],
+          "fallback": "(1) 150 cm²"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "400\\,\\mathrm{cm}^{2}",
-          "fallback": "400 cm²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "400\\,\\mathrm{cm}^{2}",
+              "fallback": "400 cm²"
+            }
+          ],
+          "fallback": "(2) 400 cm²"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "900\\,\\mathrm{cm}^{2}",
-          "fallback": "900 cm²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "900\\,\\mathrm{cm}^{2}",
+              "fallback": "900 cm²"
+            }
+          ],
+          "fallback": "(3) 900 cm²"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "1350\\,\\mathrm{cm}^{2}",
-          "fallback": "1350 cm²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "1350\\,\\mathrm{cm}^{2}",
+              "fallback": "1350 cm²"
+            }
+          ],
+          "fallback": "(4) 1350 cm²"
         }
       ],
       "ta": [
@@ -23451,25 +25182,50 @@ const records=[
           "latex": "600\\,\\mathrm{cm}^{2}",
           "fallback": "600 cm²"
         },
-        ", then the total surface area is\n(1) ",
+        ", then the total surface area is\n",
+        "",
         {
-          "latex": "150\\,\\mathrm{cm}^{2}",
-          "fallback": "150 cm²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "150\\,\\mathrm{cm}^{2}",
+              "fallback": "150 cm²"
+            }
+          ],
+          "fallback": "(1) 150 cm²"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "400\\,\\mathrm{cm}^{2}",
-          "fallback": "400 cm²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "400\\,\\mathrm{cm}^{2}",
+              "fallback": "400 cm²"
+            }
+          ],
+          "fallback": "(2) 400 cm²"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "900\\,\\mathrm{cm}^{2}",
-          "fallback": "900 cm²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "900\\,\\mathrm{cm}^{2}",
+              "fallback": "900 cm²"
+            }
+          ],
+          "fallback": "(3) 900 cm²"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "1350\\,\\mathrm{cm}^{2}",
-          "fallback": "1350 cm²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "1350\\,\\mathrm{cm}^{2}",
+              "fallback": "1350 cm²"
+            }
+          ],
+          "fallback": "(4) 1350 cm²"
         }
       ]
     },
@@ -23545,25 +25301,50 @@ const records=[
           "latex": "\\times 5\\,\\mathrm{cm}",
           "fallback": "× 5 cm"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "280\\,\\mathrm{cm}^{2}",
-          "fallback": "280 cm²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "280\\,\\mathrm{cm}^{2}",
+              "fallback": "280 cm²"
+            }
+          ],
+          "fallback": "(1) 280 cm²"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "300\\,\\mathrm{cm}^{2}",
-          "fallback": "300 cm²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "300\\,\\mathrm{cm}^{2}",
+              "fallback": "300 cm²"
+            }
+          ],
+          "fallback": "(2) 300 cm²"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "360\\,\\mathrm{cm}^{2}",
-          "fallback": "360 cm²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "360\\,\\mathrm{cm}^{2}",
+              "fallback": "360 cm²"
+            }
+          ],
+          "fallback": "(3) 360 cm²"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "600\\,\\mathrm{cm}^{2}",
-          "fallback": "600 cm²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "600\\,\\mathrm{cm}^{2}",
+              "fallback": "600 cm²"
+            }
+          ],
+          "fallback": "(4) 600 cm²"
         }
       ],
       "ta": [
@@ -23582,25 +25363,50 @@ const records=[
           "latex": "\\times 5\\,\\mathrm{cm}",
           "fallback": "× 5 cm"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "280\\,\\mathrm{cm}^{2}",
-          "fallback": "280 cm²"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "280\\,\\mathrm{cm}^{2}",
+              "fallback": "280 cm²"
+            }
+          ],
+          "fallback": "(1) 280 cm²"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "300\\,\\mathrm{cm}^{2}",
-          "fallback": "300 cm²"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "300\\,\\mathrm{cm}^{2}",
+              "fallback": "300 cm²"
+            }
+          ],
+          "fallback": "(2) 300 cm²"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "360\\,\\mathrm{cm}^{2}",
-          "fallback": "360 cm²"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "360\\,\\mathrm{cm}^{2}",
+              "fallback": "360 cm²"
+            }
+          ],
+          "fallback": "(3) 360 cm²"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "600\\,\\mathrm{cm}^{2}",
-          "fallback": "600 cm²"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "600\\,\\mathrm{cm}^{2}",
+              "fallback": "600 cm²"
+            }
+          ],
+          "fallback": "(4) 600 cm²"
         }
       ]
     },
@@ -23633,16 +25439,36 @@ const records=[
           "en": [
             "Substitute ",
             {
-              "latex": "l = 10, b = 6, h = 5",
-              "fallback": "l=10,b=6,h=5"
+              "latex": "l = 10",
+              "fallback": "l=10"
+            },
+            ",",
+            {
+              "latex": "b = 6",
+              "fallback": "b=6"
+            },
+            ",",
+            {
+              "latex": "h = 5",
+              "fallback": "h=5"
             },
             "."
           ],
           "ta": [
             "English explanation (Tamil version pending): Substitute ",
             {
-              "latex": "l = 10, b = 6, h = 5",
-              "fallback": "l=10,b=6,h=5"
+              "latex": "l = 10",
+              "fallback": "l=10"
+            },
+            ",",
+            {
+              "latex": "b = 6",
+              "fallback": "b=6"
+            },
+            ",",
+            {
+              "latex": "h = 5",
+              "fallback": "h=5"
             },
             "."
           ]
@@ -23666,10 +25492,50 @@ const records=[
           "latex": "2 : 3",
           "fallback": "2:3"
         },
-        ", then ratio of their surface areas will be\n(1) ",
+        ", then ratio of their surface areas will be\n",
+        "",
         {
-          "latex": "4 : 6 \\left(2\\right) 4 : 9 \\left(3\\right) 6 : 9 \\left(4\\right) 16 : 36",
-          "fallback": "4:6   (2) 4:9   (3) 6:9   (4) 16:36"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "4 : 6",
+              "fallback": "4:6"
+            }
+          ],
+          "fallback": "(1) 4:6"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "4 : 9",
+              "fallback": "4:9"
+            }
+          ],
+          "fallback": "(2) 4:9"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "6 : 9",
+              "fallback": "6:9"
+            }
+          ],
+          "fallback": "(3) 6:9"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "16 : 36",
+              "fallback": "16:36"
+            }
+          ],
+          "fallback": "(4) 16:36"
         }
       ],
       "ta": [
@@ -23678,10 +25544,50 @@ const records=[
           "latex": "2 : 3",
           "fallback": "2:3"
         },
-        ", then ratio of their surface areas will be\n(1) ",
+        ", then ratio of their surface areas will be\n",
+        "",
         {
-          "latex": "4 : 6 \\left(2\\right) 4 : 9 \\left(3\\right) 6 : 9 \\left(4\\right) 16 : 36",
-          "fallback": "4:6   (2) 4:9   (3) 6:9   (4) 16:36"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "4 : 6",
+              "fallback": "4:6"
+            }
+          ],
+          "fallback": "(1) 4:6"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "4 : 9",
+              "fallback": "4:9"
+            }
+          ],
+          "fallback": "(2) 4:9"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "6 : 9",
+              "fallback": "6:9"
+            }
+          ],
+          "fallback": "(3) 6:9"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "16 : 36",
+              "fallback": "16:36"
+            }
+          ],
+          "fallback": "(4) 16:36"
         }
       ]
     },
@@ -23757,25 +25663,50 @@ const records=[
           "latex": "33\\,\\mathrm{cm}^{2}",
           "fallback": "33 cm²"
         },
-        ". Its height is\n(1) ",
+        ". Its height is\n",
+        "",
         {
-          "latex": "10\\,\\mathrm{cm}",
-          "fallback": "10 cm"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "10\\,\\mathrm{cm}",
+              "fallback": "10 cm"
+            }
+          ],
+          "fallback": "(1) 10 cm"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "12\\,\\mathrm{cm}",
-          "fallback": "12 cm"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "12\\,\\mathrm{cm}",
+              "fallback": "12 cm"
+            }
+          ],
+          "fallback": "(2) 12 cm"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "20\\,\\mathrm{cm}",
-          "fallback": "20 cm"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "20\\,\\mathrm{cm}",
+              "fallback": "20 cm"
+            }
+          ],
+          "fallback": "(3) 20 cm"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "22\\,\\mathrm{cm}",
-          "fallback": "22 cm"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "22\\,\\mathrm{cm}",
+              "fallback": "22 cm"
+            }
+          ],
+          "fallback": "(4) 22 cm"
         }
       ],
       "ta": [
@@ -23789,25 +25720,50 @@ const records=[
           "latex": "33\\,\\mathrm{cm}^{2}",
           "fallback": "33 cm²"
         },
-        ". Its height is\n(1) ",
+        ". Its height is\n",
+        "",
         {
-          "latex": "10\\,\\mathrm{cm}",
-          "fallback": "10 cm"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "10\\,\\mathrm{cm}",
+              "fallback": "10 cm"
+            }
+          ],
+          "fallback": "(1) 10 cm"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "12\\,\\mathrm{cm}",
-          "fallback": "12 cm"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "12\\,\\mathrm{cm}",
+              "fallback": "12 cm"
+            }
+          ],
+          "fallback": "(2) 12 cm"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "20\\,\\mathrm{cm}",
-          "fallback": "20 cm"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "20\\,\\mathrm{cm}",
+              "fallback": "20 cm"
+            }
+          ],
+          "fallback": "(3) 20 cm"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "22\\,\\mathrm{cm}",
-          "fallback": "22 cm"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "22\\,\\mathrm{cm}",
+              "fallback": "22 cm"
+            }
+          ],
+          "fallback": "(4) 22 cm"
         }
       ]
     },
@@ -23882,25 +25838,50 @@ const records=[
           "latex": "\\times 1.5\\,\\mathrm{m}",
           "fallback": "× 1.5 m"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "75\\,\\mathrm{litres}",
-          "fallback": "75 litres"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "75\\,\\mathrm{litres}",
+              "fallback": "75 litres"
+            }
+          ],
+          "fallback": "(1) 75 litres"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "750\\,\\mathrm{litres}",
-          "fallback": "750 litres"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "750\\,\\mathrm{litres}",
+              "fallback": "750 litres"
+            }
+          ],
+          "fallback": "(2) 750 litres"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "7500\\,\\mathrm{litres}",
-          "fallback": "7500 litres"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "7500\\,\\mathrm{litres}",
+              "fallback": "7500 litres"
+            }
+          ],
+          "fallback": "(3) 7500 litres"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "75000\\,\\mathrm{litres}",
-          "fallback": "75000 litres"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "75000\\,\\mathrm{litres}",
+              "fallback": "75000 litres"
+            }
+          ],
+          "fallback": "(4) 75000 litres"
         }
       ],
       "ta": [
@@ -23919,25 +25900,50 @@ const records=[
           "latex": "\\times 1.5\\,\\mathrm{m}",
           "fallback": "× 1.5 m"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "75\\,\\mathrm{litres}",
-          "fallback": "75 litres"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "75\\,\\mathrm{litres}",
+              "fallback": "75 litres"
+            }
+          ],
+          "fallback": "(1) 75 litres"
         },
-        "   (2) ",
+        "   ",
         {
-          "latex": "750\\,\\mathrm{litres}",
-          "fallback": "750 litres"
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "750\\,\\mathrm{litres}",
+              "fallback": "750 litres"
+            }
+          ],
+          "fallback": "(2) 750 litres"
         },
-        "   (3) ",
+        "   ",
         {
-          "latex": "7500\\,\\mathrm{litres}",
-          "fallback": "7500 litres"
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "7500\\,\\mathrm{litres}",
+              "fallback": "7500 litres"
+            }
+          ],
+          "fallback": "(3) 7500 litres"
         },
-        "   (4) ",
+        "   ",
         {
-          "latex": "75000\\,\\mathrm{litres}",
-          "fallback": "75000 litres"
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "75000\\,\\mathrm{litres}",
+              "fallback": "75000 litres"
+            }
+          ],
+          "fallback": "(4) 75000 litres"
         }
       ]
     },
@@ -24014,10 +26020,50 @@ const records=[
           "latex": "\\times 2\\,\\mathrm{m}",
           "fallback": "× 2 m"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "1000 \\left(2\\right) 2000 \\left(3\\right) 3000 \\left(4\\right) 5000",
-          "fallback": "1000   (2) 2000   (3) 3000   (4) 5000"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "1000",
+              "fallback": "1000"
+            }
+          ],
+          "fallback": "(1) 1000"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "2000",
+              "fallback": "2000"
+            }
+          ],
+          "fallback": "(2) 2000"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "3000",
+              "fallback": "3000"
+            }
+          ],
+          "fallback": "(3) 3000"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "5000",
+              "fallback": "5000"
+            }
+          ],
+          "fallback": "(4) 5000"
         }
       ],
       "ta": [
@@ -24051,10 +26097,50 @@ const records=[
           "latex": "\\times 2\\,\\mathrm{m}",
           "fallback": "× 2 m"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "1000 \\left(2\\right) 2000 \\left(3\\right) 3000 \\left(4\\right) 5000",
-          "fallback": "1000   (2) 2000   (3) 3000   (4) 5000"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "1000",
+              "fallback": "1000"
+            }
+          ],
+          "fallback": "(1) 1000"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "2000",
+              "fallback": "2000"
+            }
+          ],
+          "fallback": "(2) 2000"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "3000",
+              "fallback": "3000"
+            }
+          ],
+          "fallback": "(3) 3000"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "5000",
+              "fallback": "5000"
+            }
+          ],
+          "fallback": "(4) 5000"
         }
       ]
     },
@@ -24765,7 +26851,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&610 + 20 p = 606 + 20.2 p  \\\\ & p = 20\\end{aligned}",
+          "latex": "\\begin{aligned}&610 + 20 p = 606 + 20.2 p  \\\\ &\\Rightarrow p = 20\\end{aligned}",
           "fallback": "610+20p = 606+20.2p ⇒ p = 20",
           "display": true
         },
@@ -25596,7 +27682,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&x + 3 = 24  \\\\ & x = 21\\end{aligned}",
+          "latex": "\\begin{aligned}&x + 3 = 24  \\\\ &\\Rightarrow x = 21\\end{aligned}",
           "fallback": "x+3 = 24 ⇒ x=21",
           "display": true
         },
@@ -26504,7 +28590,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&64 + 2 x = 98  \\\\ & 2 x = 34  \\\\ & x = 17\\end{aligned}",
+          "latex": "\\begin{aligned}&64 + 2 x = 98  \\\\ &\\Rightarrow 2 x = 34  \\\\ &\\Rightarrow x = 17\\end{aligned}",
           "fallback": "64+2x = 98 ⇒ 2x=34 ⇒ x=17",
           "display": true
         },
@@ -27178,7 +29264,7 @@ const records=[
       "en": [
         "Let ",
         {
-          "latex": "\\mathrm{m}",
+          "latex": "m",
           "fallback": "m"
         },
         " be the mid point and ",
@@ -27186,16 +29272,56 @@ const records=[
           "latex": "b",
           "fallback": "b"
         },
-        " be the upper limit of a class in a continuous frequency distribution. The lower limit of the class is\n(1) ",
+        " be the upper limit of a class in a continuous frequency distribution. The lower limit of the class is\n",
+        "",
         {
-          "latex": "2\\,\\mathrm{m} - b \\left(2\\right) 2\\,\\mathrm{m} + b \\left(3\\right)\\,\\mathrm{m} - b \\left(4\\right)\\,\\mathrm{m} - 2 b",
-          "fallback": "2m − b   (2) 2m+b   (3) m-b   (4) m-2b"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "2 m - b",
+              "fallback": "2m − b"
+            }
+          ],
+          "fallback": "(1) 2m − b"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "2 m + b",
+              "fallback": "2m+b"
+            }
+          ],
+          "fallback": "(2) 2m+b"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "m - b",
+              "fallback": "m-b"
+            }
+          ],
+          "fallback": "(3) m-b"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "m - 2 b",
+              "fallback": "m-2b"
+            }
+          ],
+          "fallback": "(4) m-2b"
         }
       ],
       "ta": [
         "English-language question; Tamil version pending. Let ",
         {
-          "latex": "\\mathrm{m}",
+          "latex": "m",
           "fallback": "m"
         },
         " be the mid point and ",
@@ -27203,24 +29329,64 @@ const records=[
           "latex": "b",
           "fallback": "b"
         },
-        " be the upper limit of a class in a continuous frequency distribution. The lower limit of the class is\n(1) ",
+        " be the upper limit of a class in a continuous frequency distribution. The lower limit of the class is\n",
+        "",
         {
-          "latex": "2\\,\\mathrm{m} - b \\left(2\\right) 2\\,\\mathrm{m} + b \\left(3\\right)\\,\\mathrm{m} - b \\left(4\\right)\\,\\mathrm{m} - 2 b",
-          "fallback": "2m − b   (2) 2m+b   (3) m-b   (4) m-2b"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "2 m - b",
+              "fallback": "2m − b"
+            }
+          ],
+          "fallback": "(1) 2m − b"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "2 m + b",
+              "fallback": "2m+b"
+            }
+          ],
+          "fallback": "(2) 2m+b"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "m - b",
+              "fallback": "m-b"
+            }
+          ],
+          "fallback": "(3) m-b"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "m - 2 b",
+              "fallback": "m-2b"
+            }
+          ],
+          "fallback": "(4) m-2b"
         }
       ]
     },
     "answerMath": [
       "(1) ",
       {
-        "latex": "2\\,\\mathrm{m} - b",
+        "latex": "2 m - b",
         "fallback": "2m − b"
       }
     ],
     "steps": [
       {
         "math": {
-          "latex": "\\mathrm{m} = \\dfrac{\\left(a + b\\right)}{2}",
+          "latex": "m = \\dfrac{\\left(a + b\\right)}{2}",
           "fallback": "m=(a+b)/2"
         },
         "reasonMath": {
@@ -27230,7 +29396,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&2\\,\\mathrm{m} = a + b  \\\\ & a = 2\\,\\mathrm{m} - b\\end{aligned}",
+          "latex": "\\begin{aligned}&2 m = a + b  \\\\ &\\Rightarrow a = 2 m - b\\end{aligned}",
           "fallback": "2m=a+b ⇒ a=2m−b",
           "display": true
         },
@@ -27245,7 +29411,7 @@ const records=[
           "en": [
             "Choose the formula ",
             {
-              "latex": "2\\,\\mathrm{m} - b",
+              "latex": "2 m - b",
               "fallback": "2m−b"
             },
             "."
@@ -27253,7 +29419,7 @@ const records=[
           "ta": [
             "English explanation (Tamil version pending): Choose the formula ",
             {
-              "latex": "2\\,\\mathrm{m} - b",
+              "latex": "2 m - b",
               "fallback": "2m−b"
             },
             "."
@@ -27276,10 +29442,50 @@ const records=[
           "latex": "78",
           "fallback": "78"
         },
-        " . The value of discarded number is\n(1) ",
+        " . The value of discarded number is\n",
+        "",
         {
-          "latex": "101 \\left(2\\right) 100 \\left(3\\right) 99 \\left(4\\right) 98",
-          "fallback": "101   (2) 100   (3) 99   (4) 98"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "101",
+              "fallback": "101"
+            }
+          ],
+          "fallback": "(1) 101"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "100",
+              "fallback": "100"
+            }
+          ],
+          "fallback": "(2) 100"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "99",
+              "fallback": "99"
+            }
+          ],
+          "fallback": "(3) 99"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "98",
+              "fallback": "98"
+            }
+          ],
+          "fallback": "(4) 98"
         }
       ],
       "ta": [
@@ -27293,10 +29499,50 @@ const records=[
           "latex": "78",
           "fallback": "78"
         },
-        " . The value of discarded number is\n(1) ",
+        " . The value of discarded number is\n",
+        "",
         {
-          "latex": "101 \\left(2\\right) 100 \\left(3\\right) 99 \\left(4\\right) 98",
-          "fallback": "101   (2) 100   (3) 99   (4) 98"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "101",
+              "fallback": "101"
+            }
+          ],
+          "fallback": "(1) 101"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "100",
+              "fallback": "100"
+            }
+          ],
+          "fallback": "(2) 100"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "99",
+              "fallback": "99"
+            }
+          ],
+          "fallback": "(3) 99"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "98",
+              "fallback": "98"
+            }
+          ],
+          "fallback": "(4) 98"
         }
       ]
     },
@@ -27385,17 +29631,73 @@ const records=[
     "id": "g9-ch8-ex8.4-q3",
     "questionMath": {
       "en": [
-        "A particular observation which occurs maximum number of times in a given data is called its\n(1) Frequency   (2) range   (3) ",
+        "A particular observation which occurs maximum number of times in a given data is called its\n",
+        "",
         {
-          "latex": "\\text{mode} \\left(4\\right) \\text{Median}",
-          "fallback": "mode   (4) Median"
+          "questionOption": [
+            "(1) ",
+            "Frequency"
+          ],
+          "fallback": "(1) Frequency"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            "range"
+          ],
+          "fallback": "(2) range"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            "mode"
+          ],
+          "fallback": "(3) mode"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Median"
+          ],
+          "fallback": "(4) Median"
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. A particular observation which occurs maximum number of times in a given data is called its\n(1) Frequency   (2) range   (3) ",
+        "English-language question; Tamil version pending. A particular observation which occurs maximum number of times in a given data is called its\n",
+        "",
         {
-          "latex": "\\text{mode} \\left(4\\right) \\text{Median}",
-          "fallback": "mode   (4) Median"
+          "questionOption": [
+            "(1) ",
+            "Frequency"
+          ],
+          "fallback": "(1) Frequency"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            "range"
+          ],
+          "fallback": "(2) range"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            "mode"
+          ],
+          "fallback": "(3) mode"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Median"
+          ],
+          "fallback": "(4) Median"
         }
       ]
     },
@@ -27428,17 +29730,97 @@ const records=[
     "id": "g9-ch8-ex8.4-q4",
     "questionMath": {
       "en": [
-        "For which set of numbers do the mean, median and mode all have the same values?\n(1) ",
+        "For which set of numbers do the mean, median and mode all have the same values?\n",
+        "",
         {
-          "latex": "2, 2, 2, 4 \\left(2\\right) 1, 3, 3, 3, 5 \\left(3\\right) 1, 1, 2, 5, 6 \\left(4\\right) 1, 1, 2, 1, 5",
-          "fallback": "2,2,2,4   (2) 1,3,3,3,5   (3) 1,1,2,5,6   (4) 1,1,2,1,5"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "2, 2, 2, 4",
+              "fallback": "2,2,2,4"
+            }
+          ],
+          "fallback": "(1) 2,2,2,4"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "1, 3, 3, 3, 5",
+              "fallback": "1,3,3,3,5"
+            }
+          ],
+          "fallback": "(2) 1,3,3,3,5"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "1, 1, 2, 5, 6",
+              "fallback": "1,1,2,5,6"
+            }
+          ],
+          "fallback": "(3) 1,1,2,5,6"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "1, 1, 2, 1, 5",
+              "fallback": "1,1,2,1,5"
+            }
+          ],
+          "fallback": "(4) 1,1,2,1,5"
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. For which set of numbers do the mean, median and mode all have the same values?\n(1) ",
+        "English-language question; Tamil version pending. For which set of numbers do the mean, median and mode all have the same values?\n",
+        "",
         {
-          "latex": "2, 2, 2, 4 \\left(2\\right) 1, 3, 3, 3, 5 \\left(3\\right) 1, 1, 2, 5, 6 \\left(4\\right) 1, 1, 2, 1, 5",
-          "fallback": "2,2,2,4   (2) 1,3,3,3,5   (3) 1,1,2,5,6   (4) 1,1,2,1,5"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "2, 2, 2, 4",
+              "fallback": "2,2,2,4"
+            }
+          ],
+          "fallback": "(1) 2,2,2,4"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "1, 3, 3, 3, 5",
+              "fallback": "1,3,3,3,5"
+            }
+          ],
+          "fallback": "(2) 1,3,3,3,5"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "1, 1, 2, 5, 6",
+              "fallback": "1,1,2,5,6"
+            }
+          ],
+          "fallback": "(3) 1,1,2,5,6"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "1, 1, 2, 1, 5",
+              "fallback": "1,1,2,1,5"
+            }
+          ],
+          "fallback": "(4) 1,1,2,1,5"
         }
       ]
     },
@@ -27533,10 +29915,50 @@ const records=[
           "latex": "n",
           "fallback": "n"
         },
-        " values from their mean is\n(1) ",
+        " values from their mean is\n",
+        "",
         {
-          "latex": "0 \\left(2\\right) n - 1 \\left(3\\right) n \\left(4\\right) n + 1",
-          "fallback": "0   (2) n-1   (3) n   (4) n+1"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(1) 0"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "n - 1",
+              "fallback": "n-1"
+            }
+          ],
+          "fallback": "(2) n-1"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "n",
+              "fallback": "n"
+            }
+          ],
+          "fallback": "(3) n"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "n + 1",
+              "fallback": "n+1"
+            }
+          ],
+          "fallback": "(4) n+1"
         }
       ],
       "ta": [
@@ -27545,10 +29967,50 @@ const records=[
           "latex": "n",
           "fallback": "n"
         },
-        " values from their mean is\n(1) ",
+        " values from their mean is\n",
+        "",
         {
-          "latex": "0 \\left(2\\right) n - 1 \\left(3\\right) n \\left(4\\right) n + 1",
-          "fallback": "0   (2) n-1   (3) n   (4) n+1"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(1) 0"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "n - 1",
+              "fallback": "n-1"
+            }
+          ],
+          "fallback": "(2) n-1"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "n",
+              "fallback": "n"
+            }
+          ],
+          "fallback": "(3) n"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "n + 1",
+              "fallback": "n+1"
+            }
+          ],
+          "fallback": "(4) n+1"
         }
       ]
     },
@@ -27686,10 +30148,50 @@ const records=[
           "latex": "d",
           "fallback": "d"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "24 \\left(2\\right) 36 \\left(3\\right) 26 \\left(4\\right) 34",
-          "fallback": "24   (2) 36   (3) 26   (4) 34"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "24",
+              "fallback": "24"
+            }
+          ],
+          "fallback": "(1) 24"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "36",
+              "fallback": "36"
+            }
+          ],
+          "fallback": "(2) 36"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "26",
+              "fallback": "26"
+            }
+          ],
+          "fallback": "(3) 26"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "34",
+              "fallback": "34"
+            }
+          ],
+          "fallback": "(4) 34"
         }
       ],
       "ta": [
@@ -27733,10 +30235,50 @@ const records=[
           "latex": "d",
           "fallback": "d"
         },
-        " is\n(1) ",
+        " is\n",
+        "",
         {
-          "latex": "24 \\left(2\\right) 36 \\left(3\\right) 26 \\left(4\\right) 34",
-          "fallback": "24   (2) 36   (3) 26   (4) 34"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "24",
+              "fallback": "24"
+            }
+          ],
+          "fallback": "(1) 24"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "36",
+              "fallback": "36"
+            }
+          ],
+          "fallback": "(2) 36"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "26",
+              "fallback": "26"
+            }
+          ],
+          "fallback": "(3) 26"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "34",
+              "fallback": "34"
+            }
+          ],
+          "fallback": "(4) 34"
         }
       ]
     },
@@ -27871,10 +30413,50 @@ const records=[
           "latex": "11",
           "fallback": "11"
         },
-        ", then the mean of first three observations is\n(1) ",
+        ", then the mean of first three observations is\n",
+        "",
         {
-          "latex": "9 \\left(2\\right) 11 \\left(3\\right) 13 \\left(4\\right) 15",
-          "fallback": "9   (2) 11   (3) 13   (4) 15"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "9",
+              "fallback": "9"
+            }
+          ],
+          "fallback": "(1) 9"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "11",
+              "fallback": "11"
+            }
+          ],
+          "fallback": "(2) 11"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "13",
+              "fallback": "13"
+            }
+          ],
+          "fallback": "(3) 13"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "15",
+              "fallback": "15"
+            }
+          ],
+          "fallback": "(4) 15"
         }
       ],
       "ta": [
@@ -27888,10 +30470,50 @@ const records=[
           "latex": "11",
           "fallback": "11"
         },
-        ", then the mean of first three observations is\n(1) ",
+        ", then the mean of first three observations is\n",
+        "",
         {
-          "latex": "9 \\left(2\\right) 11 \\left(3\\right) 13 \\left(4\\right) 15",
-          "fallback": "9   (2) 11   (3) 13   (4) 15"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "9",
+              "fallback": "9"
+            }
+          ],
+          "fallback": "(1) 9"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "11",
+              "fallback": "11"
+            }
+          ],
+          "fallback": "(2) 11"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "13",
+              "fallback": "13"
+            }
+          ],
+          "fallback": "(3) 13"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "15",
+              "fallback": "15"
+            }
+          ],
+          "fallback": "(4) 15"
         }
       ]
     },
@@ -27990,10 +30612,50 @@ const records=[
           "latex": "x",
           "fallback": "x"
         },
-        "\n(1) ",
+        "\n",
+        "",
         {
-          "latex": "9 \\left(2\\right) 13 \\left(3\\right) 17 \\left(4\\right) 21",
-          "fallback": "9   (2) 13   (3) 17   (4) 21"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "9",
+              "fallback": "9"
+            }
+          ],
+          "fallback": "(1) 9"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "13",
+              "fallback": "13"
+            }
+          ],
+          "fallback": "(2) 13"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "17",
+              "fallback": "17"
+            }
+          ],
+          "fallback": "(3) 17"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "21",
+              "fallback": "21"
+            }
+          ],
+          "fallback": "(4) 21"
         }
       ],
       "ta": [
@@ -28017,10 +30679,50 @@ const records=[
           "latex": "x",
           "fallback": "x"
         },
-        "\n(1) ",
+        "\n",
+        "",
         {
-          "latex": "9 \\left(2\\right) 13 \\left(3\\right) 17 \\left(4\\right) 21",
-          "fallback": "9   (2) 13   (3) 17   (4) 21"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "9",
+              "fallback": "9"
+            }
+          ],
+          "fallback": "(1) 9"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "13",
+              "fallback": "13"
+            }
+          ],
+          "fallback": "(2) 13"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "17",
+              "fallback": "17"
+            }
+          ],
+          "fallback": "(3) 17"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "21",
+              "fallback": "21"
+            }
+          ],
+          "fallback": "(4) 21"
         }
       ]
     },
@@ -28091,10 +30793,50 @@ const records=[
           "latex": "11",
           "fallback": "11"
         },
-        " natural numbers is\n(1) ",
+        " natural numbers is\n",
+        "",
         {
-          "latex": "26 \\left(2\\right) 46 \\left(3\\right) 48 \\left(4\\right) 52",
-          "fallback": "26   (2) 46   (3) 48   (4) 52"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "26",
+              "fallback": "26"
+            }
+          ],
+          "fallback": "(1) 26"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "46",
+              "fallback": "46"
+            }
+          ],
+          "fallback": "(2) 46"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "48",
+              "fallback": "48"
+            }
+          ],
+          "fallback": "(3) 48"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "52",
+              "fallback": "52"
+            }
+          ],
+          "fallback": "(4) 52"
         }
       ],
       "ta": [
@@ -28103,10 +30845,50 @@ const records=[
           "latex": "11",
           "fallback": "11"
         },
-        " natural numbers is\n(1) ",
+        " natural numbers is\n",
+        "",
         {
-          "latex": "26 \\left(2\\right) 46 \\left(3\\right) 48 \\left(4\\right) 52",
-          "fallback": "26   (2) 46   (3) 48   (4) 52"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "26",
+              "fallback": "26"
+            }
+          ],
+          "fallback": "(1) 26"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "46",
+              "fallback": "46"
+            }
+          ],
+          "fallback": "(2) 46"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "48",
+              "fallback": "48"
+            }
+          ],
+          "fallback": "(3) 48"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "52",
+              "fallback": "52"
+            }
+          ],
+          "fallback": "(4) 52"
         }
       ]
     },
@@ -28217,10 +30999,50 @@ const records=[
           "latex": "z",
           "fallback": "z"
         },
-        ", the mean is\n(1) ",
+        ", the mean is\n",
+        "",
         {
-          "latex": "X + z \\left(2\\right) X - z \\left(3\\right) z X \\left(4\\right) X",
-          "fallback": "X +z   (2) X - z   (3) z X   (4) X"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "X + z",
+              "fallback": "X +z"
+            }
+          ],
+          "fallback": "(1) X +z"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "X - z",
+              "fallback": "X - z"
+            }
+          ],
+          "fallback": "(2) X - z"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "z X",
+              "fallback": "z X"
+            }
+          ],
+          "fallback": "(3) z X"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            }
+          ],
+          "fallback": "(4) X"
         }
       ],
       "ta": [
@@ -28234,10 +31056,50 @@ const records=[
           "latex": "z",
           "fallback": "z"
         },
-        ", the mean is\n(1) ",
+        ", the mean is\n",
+        "",
         {
-          "latex": "X + z \\left(2\\right) X - z \\left(3\\right) z X \\left(4\\right) X",
-          "fallback": "X +z   (2) X - z   (3) z X   (4) X"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "X + z",
+              "fallback": "X +z"
+            }
+          ],
+          "fallback": "(1) X +z"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "X - z",
+              "fallback": "X - z"
+            }
+          ],
+          "fallback": "(2) X - z"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "z X",
+              "fallback": "z X"
+            }
+          ],
+          "fallback": "(3) z X"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            }
+          ],
+          "fallback": "(4) X"
         }
       ]
     },
@@ -29469,7 +32331,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\dfrac{8 x}{15} = 1  \\\\ & 8 x = 15\\end{aligned}",
+          "latex": "\\begin{aligned}&\\dfrac{8 x}{15} = 1  \\\\ &\\Rightarrow 8 x = 15\\end{aligned}",
           "fallback": "[[8x|15]] = 1  ⇒  8x = 15",
           "display": true
         },
@@ -29754,7 +32616,39 @@ const records=[
           "latex": "1",
           "fallback": "1"
         },
-        " that is used to measure uncertainty is called\n(1) Random variable  (2) Trial  (3) Simple event  (4) Probability"
+        " that is used to measure uncertainty is called\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Random variable"
+          ],
+          "fallback": "(1) Random variable"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Trial"
+          ],
+          "fallback": "(2) Trial"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Simple event"
+          ],
+          "fallback": "(3) Simple event"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Probability"
+          ],
+          "fallback": "(4) Probability"
+        }
       ],
       "ta": [
         "English-language question; Tamil version pending. A number between ",
@@ -29767,7 +32661,39 @@ const records=[
           "latex": "1",
           "fallback": "1"
         },
-        " that is used to measure uncertainty is called\n(1) Random variable  (2) Trial  (3) Simple event  (4) Probability"
+        " that is used to measure uncertainty is called\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Random variable"
+          ],
+          "fallback": "(1) Random variable"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Trial"
+          ],
+          "fallback": "(2) Trial"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Simple event"
+          ],
+          "fallback": "(3) Simple event"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Probability"
+          ],
+          "fallback": "(4) Probability"
+        }
       ]
     },
     "answerMath": "(4) Probability",
@@ -29814,57 +32740,153 @@ const records=[
     "id": "g9-ch9-ex9.3-q2",
     "questionMath": {
       "en": [
-        "Probability lies between\n(1) ",
+        "Probability lies between\n",
+        "",
         {
-          "latex": "- 1",
-          "fallback": "−1"
+          "questionOption": [
+            "(1) ",
+            [
+              {
+                "latex": "- 1",
+                "fallback": "−1"
+              },
+              " and ",
+              {
+                "latex": "+ 1",
+                "fallback": "+1"
+              }
+            ]
+          ],
+          "fallback": "(1) −1 and +1"
         },
-        " and ",
+        "  ",
         {
-          "latex": "+ 1 \\left(2\\right) 0",
-          "fallback": "+1  (2) 0"
+          "questionOption": [
+            "(2) ",
+            [
+              {
+                "latex": "0",
+                "fallback": "0"
+              },
+              " and ",
+              {
+                "latex": "1",
+                "fallback": "1"
+              }
+            ]
+          ],
+          "fallback": "(2) 0 and 1"
         },
-        " and ",
+        "  ",
         {
-          "latex": "1 \\left(3\\right) 0",
-          "fallback": "1  (3) 0"
+          "questionOption": [
+            "(3) ",
+            [
+              {
+                "latex": "0",
+                "fallback": "0"
+              },
+              " and ",
+              {
+                "latex": "2",
+                "fallback": "2"
+              }
+            ]
+          ],
+          "fallback": "(3) 0 and 2"
         },
-        " and ",
+        "  ",
         {
-          "latex": "2 \\left(4\\right) 0",
-          "fallback": "2  (4) 0"
-        },
-        " and ",
-        {
-          "latex": "0.5",
-          "fallback": "0.5"
+          "questionOption": [
+            "(4) ",
+            [
+              {
+                "latex": "0",
+                "fallback": "0"
+              },
+              " and ",
+              {
+                "latex": "0.5",
+                "fallback": "0.5"
+              }
+            ]
+          ],
+          "fallback": "(4) 0 and 0.5"
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Probability lies between\n(1) ",
+        "English-language question; Tamil version pending. Probability lies between\n",
+        "",
         {
-          "latex": "- 1",
-          "fallback": "−1"
+          "questionOption": [
+            "(1) ",
+            [
+              {
+                "latex": "- 1",
+                "fallback": "−1"
+              },
+              " and ",
+              {
+                "latex": "+ 1",
+                "fallback": "+1"
+              }
+            ]
+          ],
+          "fallback": "(1) −1 and +1"
         },
-        " and ",
+        "  ",
         {
-          "latex": "+ 1 \\left(2\\right) 0",
-          "fallback": "+1  (2) 0"
+          "questionOption": [
+            "(2) ",
+            [
+              {
+                "latex": "0",
+                "fallback": "0"
+              },
+              " and ",
+              {
+                "latex": "1",
+                "fallback": "1"
+              }
+            ]
+          ],
+          "fallback": "(2) 0 and 1"
         },
-        " and ",
+        "  ",
         {
-          "latex": "1 \\left(3\\right) 0",
-          "fallback": "1  (3) 0"
+          "questionOption": [
+            "(3) ",
+            [
+              {
+                "latex": "0",
+                "fallback": "0"
+              },
+              " and ",
+              {
+                "latex": "2",
+                "fallback": "2"
+              }
+            ]
+          ],
+          "fallback": "(3) 0 and 2"
         },
-        " and ",
+        "  ",
         {
-          "latex": "2 \\left(4\\right) 0",
-          "fallback": "2  (4) 0"
-        },
-        " and ",
-        {
-          "latex": "0.5",
-          "fallback": "0.5"
+          "questionOption": [
+            "(4) ",
+            [
+              {
+                "latex": "0",
+                "fallback": "0"
+              },
+              " and ",
+              {
+                "latex": "0.5",
+                "fallback": "0.5"
+              }
+            ]
+          ],
+          "fallback": "(4) 0 and 0.5"
         }
       ]
     },
@@ -29928,8 +32950,76 @@ const records=[
   {
     "id": "g9-ch9-ex9.3-q3",
     "questionMath": {
-      "en": "The probability based on the concept of relative frequency theory is called\n(1) Empirical probability  (2) Classical probability  (3) Both (1) and (2)  (4) Neither (1) nor (2)",
-      "ta": "English-language question; Tamil version pending. The probability based on the concept of relative frequency theory is called\n(1) Empirical probability  (2) Classical probability  (3) Both (1) and (2)  (4) Neither (1) nor (2)"
+      "en": [
+        "The probability based on the concept of relative frequency theory is called\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Empirical probability"
+          ],
+          "fallback": "(1) Empirical probability"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Classical probability"
+          ],
+          "fallback": "(2) Classical probability"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Both (1) and (2)"
+          ],
+          "fallback": "(3) Both (1) and (2)"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Neither (1) nor (2)"
+          ],
+          "fallback": "(4) Neither (1) nor (2)"
+        }
+      ],
+      "ta": [
+        "English-language question; Tamil version pending. The probability based on the concept of relative frequency theory is called\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Empirical probability"
+          ],
+          "fallback": "(1) Empirical probability"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Classical probability"
+          ],
+          "fallback": "(2) Classical probability"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Both (1) and (2)"
+          ],
+          "fallback": "(3) Both (1) and (2)"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Neither (1) nor (2)"
+          ],
+          "fallback": "(4) Neither (1) nor (2)"
+        }
+      ]
     },
     "answerMath": "(1) Empirical probability",
     "steps": [
@@ -29963,8 +33053,76 @@ const records=[
   {
     "id": "g9-ch9-ex9.3-q4",
     "questionMath": {
-      "en": "The probability of an event cannot be\n(1) Equal to zero  (2) Greater than zero  (3) Equal to one  (4) Less than zero",
-      "ta": "English-language question; Tamil version pending. The probability of an event cannot be\n(1) Equal to zero  (2) Greater than zero  (3) Equal to one  (4) Less than zero"
+      "en": [
+        "The probability of an event cannot be\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Equal to zero"
+          ],
+          "fallback": "(1) Equal to zero"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Greater than zero"
+          ],
+          "fallback": "(2) Greater than zero"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Equal to one"
+          ],
+          "fallback": "(3) Equal to one"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Less than zero"
+          ],
+          "fallback": "(4) Less than zero"
+        }
+      ],
+      "ta": [
+        "English-language question; Tamil version pending. The probability of an event cannot be\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Equal to zero"
+          ],
+          "fallback": "(1) Equal to zero"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Greater than zero"
+          ],
+          "fallback": "(2) Greater than zero"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Equal to one"
+          ],
+          "fallback": "(3) Equal to one"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Less than zero"
+          ],
+          "fallback": "(4) Less than zero"
+        }
+      ]
     },
     "answerMath": "(4) Less than zero",
     "steps": [
@@ -30019,8 +33177,76 @@ const records=[
   {
     "id": "g9-ch9-ex9.3-q5",
     "questionMath": {
-      "en": "The probability of all possible outcomes of a random experiment is always equal to\n(1) One  (2) Zero  (3) Infinity  (4) Less than one",
-      "ta": "English-language question; Tamil version pending. The probability of all possible outcomes of a random experiment is always equal to\n(1) One  (2) Zero  (3) Infinity  (4) Less than one"
+      "en": [
+        "The probability of all possible outcomes of a random experiment is always equal to\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "One"
+          ],
+          "fallback": "(1) One"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Zero"
+          ],
+          "fallback": "(2) Zero"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Infinity"
+          ],
+          "fallback": "(3) Infinity"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Less than one"
+          ],
+          "fallback": "(4) Less than one"
+        }
+      ],
+      "ta": [
+        "English-language question; Tamil version pending. The probability of all possible outcomes of a random experiment is always equal to\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "One"
+          ],
+          "fallback": "(1) One"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Zero"
+          ],
+          "fallback": "(2) Zero"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Infinity"
+          ],
+          "fallback": "(3) Infinity"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Less than one"
+          ],
+          "fallback": "(4) Less than one"
+        }
+      ]
     },
     "answerMath": "(1) One",
     "steps": [
@@ -30071,10 +33297,50 @@ const records=[
           "latex": "P\\left(A'\\right)",
           "fallback": "P(A′)"
         },
-        " is equal to\n(1) ",
+        " is equal to\n",
+        "",
         {
-          "latex": "1 \\left(2\\right) 0 \\left(3\\right) 1 - A \\left(4\\right) 1 - P\\left(A\\right)",
-          "fallback": "1  (2) 0  (3) 1−A  (4) 1−P(A)"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(1) 1"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(2) 0"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "1 - A",
+              "fallback": "1−A"
+            }
+          ],
+          "fallback": "(3) 1−A"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "1 - P\\left(A\\right)",
+              "fallback": "1−P(A)"
+            }
+          ],
+          "fallback": "(4) 1−P(A)"
         }
       ],
       "ta": [
@@ -30088,10 +33354,50 @@ const records=[
           "latex": "P\\left(A'\\right)",
           "fallback": "P(A′)"
         },
-        " is equal to\n(1) ",
+        " is equal to\n",
+        "",
         {
-          "latex": "1 \\left(2\\right) 0 \\left(3\\right) 1 - A \\left(4\\right) 1 - P\\left(A\\right)",
-          "fallback": "1  (2) 0  (3) 1−A  (4) 1−P(A)"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(1) 1"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(2) 0"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "1 - A",
+              "fallback": "1−A"
+            }
+          ],
+          "fallback": "(3) 1−A"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "1 - P\\left(A\\right)",
+              "fallback": "1−P(A)"
+            }
+          ],
+          "fallback": "(4) 1−P(A)"
         }
       ]
     },
@@ -30147,17 +33453,97 @@ const records=[
     "id": "g9-ch9-ex9.3-q7",
     "questionMath": {
       "en": [
-        "Which of the following cannot be taken as probability of an event?\n(1) ",
+        "Which of the following cannot be taken as probability of an event?\n",
+        "",
         {
-          "latex": "0 \\left(2\\right) 0.5 \\left(3\\right) 1 \\left(4\\right) - 1",
-          "fallback": "0  (2) 0.5  (3) 1  (4) −1"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(1) 0"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "0.5",
+              "fallback": "0.5"
+            }
+          ],
+          "fallback": "(2) 0.5"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(3) 1"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "- 1",
+              "fallback": "−1"
+            }
+          ],
+          "fallback": "(4) −1"
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Which of the following cannot be taken as probability of an event?\n(1) ",
+        "English-language question; Tamil version pending. Which of the following cannot be taken as probability of an event?\n",
+        "",
         {
-          "latex": "0 \\left(2\\right) 0.5 \\left(3\\right) 1 \\left(4\\right) - 1",
-          "fallback": "0  (2) 0.5  (3) 1  (4) −1"
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(1) 0"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "0.5",
+              "fallback": "0.5"
+            }
+          ],
+          "fallback": "(2) 0.5"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(3) 1"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "- 1",
+              "fallback": "−1"
+            }
+          ],
+          "fallback": "(4) −1"
         }
       ]
     },
@@ -30217,8 +33603,76 @@ const records=[
   {
     "id": "g9-ch9-ex9.3-q8",
     "questionMath": {
-      "en": "A particular result of an experiment is called\n(1) Trial  (2) Simple event  (3) Compound event  (4) Outcome",
-      "ta": "English-language question; Tamil version pending. A particular result of an experiment is called\n(1) Trial  (2) Simple event  (3) Compound event  (4) Outcome"
+      "en": [
+        "A particular result of an experiment is called\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Trial"
+          ],
+          "fallback": "(1) Trial"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Simple event"
+          ],
+          "fallback": "(2) Simple event"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Compound event"
+          ],
+          "fallback": "(3) Compound event"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Outcome"
+          ],
+          "fallback": "(4) Outcome"
+        }
+      ],
+      "ta": [
+        "English-language question; Tamil version pending. A particular result of an experiment is called\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Trial"
+          ],
+          "fallback": "(1) Trial"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Simple event"
+          ],
+          "fallback": "(2) Simple event"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Compound event"
+          ],
+          "fallback": "(3) Compound event"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Outcome"
+          ],
+          "fallback": "(4) Outcome"
+        }
+      ]
     },
     "answerMath": "(4) Outcome",
     "steps": [
@@ -30248,8 +33702,76 @@ const records=[
   {
     "id": "g9-ch9-ex9.3-q9",
     "questionMath": {
-      "en": "A collection of one or more outcomes of an experiment is called\n(1) Event  (2) Outcome  (3) Sample point  (4) None of the above",
-      "ta": "English-language question; Tamil version pending. A collection of one or more outcomes of an experiment is called\n(1) Event  (2) Outcome  (3) Sample point  (4) None of the above"
+      "en": [
+        "A collection of one or more outcomes of an experiment is called\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Event"
+          ],
+          "fallback": "(1) Event"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Outcome"
+          ],
+          "fallback": "(2) Outcome"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Sample point"
+          ],
+          "fallback": "(3) Sample point"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "None of the above"
+          ],
+          "fallback": "(4) None of the above"
+        }
+      ],
+      "ta": [
+        "English-language question; Tamil version pending. A collection of one or more outcomes of an experiment is called\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Event"
+          ],
+          "fallback": "(1) Event"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Outcome"
+          ],
+          "fallback": "(2) Outcome"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Sample point"
+          ],
+          "fallback": "(3) Sample point"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "None of the above"
+          ],
+          "fallback": "(4) None of the above"
+        }
+      ]
     },
     "answerMath": "(1) Event",
     "steps": [
@@ -30282,8 +33804,76 @@ const records=[
   {
     "id": "g9-ch9-ex9.3-q10",
     "questionMath": {
-      "en": "The six faces of the dice are called equally likely if the dice is\n(1) Small  (2) Fair  (3) Six-faced  (4) Round",
-      "ta": "English-language question; Tamil version pending. The six faces of the dice are called equally likely if the dice is\n(1) Small  (2) Fair  (3) Six-faced  (4) Round"
+      "en": [
+        "The six faces of the dice are called equally likely if the dice is\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Small"
+          ],
+          "fallback": "(1) Small"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Fair"
+          ],
+          "fallback": "(2) Fair"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Six-faced"
+          ],
+          "fallback": "(3) Six-faced"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Round"
+          ],
+          "fallback": "(4) Round"
+        }
+      ],
+      "ta": [
+        "English-language question; Tamil version pending. The six faces of the dice are called equally likely if the dice is\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            "Small"
+          ],
+          "fallback": "(1) Small"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(2) ",
+            "Fair"
+          ],
+          "fallback": "(2) Fair"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(3) ",
+            "Six-faced"
+          ],
+          "fallback": "(3) Six-faced"
+        },
+        "  ",
+        {
+          "questionOption": [
+            "(4) ",
+            "Round"
+          ],
+          "fallback": "(4) Round"
+        }
+      ]
     },
     "answerMath": "(2) Fair",
     "steps": [
@@ -30590,10 +34180,11 @@ const records=[
     "id": "g9-ch3-ex3.1-q1-i",
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(i) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "\\frac{1}{x^2}+3x-4",
-          "fallback": "(i) 1/x² + 3x − 4"
+          "latex": "\\text{(i)}\\quad \\frac{1}{x^2}+3x-4",
+          "fallback": "(i) 1/x² + 3x − 4",
+          "display": true
         }
       ]
     },
@@ -30639,10 +34230,11 @@ const records=[
     "id": "g9-ch3-ex3.1-q1-ii",
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(ii) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "x^2(x-1)",
-          "fallback": "(ii) x²(x − 1)"
+          "latex": "\\text{(ii)}\\quad x^2(x-1)",
+          "fallback": "(ii) x²(x − 1)",
+          "display": true
         }
       ]
     },
@@ -30688,10 +34280,11 @@ const records=[
     "id": "g9-ch3-ex3.1-q1-iii",
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(iii) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "\\frac{1}{x}(x+5)",
-          "fallback": "(iii) (1/x)(x + 5)"
+          "latex": "\\text{(iii)}\\quad \\frac{1}{x}(x+5)",
+          "fallback": "(iii) (1/x)(x + 5)",
+          "display": true
         }
       ]
     },
@@ -30708,7 +34301,19 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Distribute 1/x across the two terms inside (x + 5); the original expression requires x to be nonzero."
+          "en": [
+            "Distribute ",
+            {
+              "latex": "\\frac{1}{x}",
+              "fallback": "1/x"
+            },
+            " across the two terms inside ",
+            {
+              "latex": "(x+5)",
+              "fallback": "(x + 5)"
+            },
+            "; the original expression requires x to be nonzero."
+          ]
         }
       },
       {
@@ -30718,7 +34323,24 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Simplify x/x to one and rewrite 5/x with exponent −1."
+          "en": [
+            "Simplify ",
+            {
+              "latex": "\\frac{x}{x}",
+              "fallback": "x/x"
+            },
+            " to one and rewrite ",
+            {
+              "latex": "\\frac{5}{x}",
+              "fallback": "5/x"
+            },
+            " with exponent ",
+            {
+              "latex": "-1",
+              "fallback": "−1"
+            },
+            "."
+          ]
         }
       },
       {
@@ -30737,10 +34359,11 @@ const records=[
     "id": "g9-ch3-ex3.1-q1-iv",
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(iv) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "\\frac{1}{x^{-2}}+\\frac{1}{x^{-1}}+7",
-          "fallback": "(iv) 1/x⁻² + 1/x⁻¹ + 7"
+          "latex": "\\text{(iv)}\\quad \\frac{1}{x^{-2}}+\\frac{1}{x^{-1}}+7",
+          "fallback": "(iv) 1/x⁻² + 1/x⁻¹ + 7",
+          "display": true
         }
       ]
     },
@@ -30786,10 +34409,11 @@ const records=[
     "id": "g9-ch3-ex3.1-q1-v",
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(v) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "\\sqrt5\\,x^2+\\sqrt3\\,x+\\sqrt2",
-          "fallback": "(v) √5 x² + √3 x + √2"
+          "latex": "\\text{(v)}\\quad \\sqrt5\\,x^2+\\sqrt3\\,x+\\sqrt2",
+          "fallback": "(v) √5 x² + √3 x + √2",
+          "display": true
         }
       ]
     },
@@ -30835,10 +34459,11 @@ const records=[
     "id": "g9-ch3-ex3.1-q1-vi",
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(vi) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "m^2-\\sqrt[3]{m}+7m-10",
-          "fallback": "(vi) m² − ∛m + 7m − 10"
+          "latex": "\\text{(vi)}\\quad m^2-\\sqrt[3]{m}+7m-10",
+          "fallback": "(vi) m² − ∛m + 7m − 10",
+          "display": true
         }
       ]
     },
@@ -30884,47 +34509,84 @@ const records=[
     "id": "g9-ch3-ex3.1-q2-i",
     "questionMath": {
       "en": [
-        "2. Write the coefficient of x² and x in each of the following polynomials.\n(i) ",
+        "2. Write the coefficient of ",
         {
-          "latex": "4+\\frac25x^2-3x",
-          "fallback": "(i) 4 + (2/5)x² − 3x"
+          "latex": "x^2",
+          "fallback": "x²"
+        },
+        " and ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(i)}\\quad 4+\\frac25x^2-3x",
+          "fallback": "(i) 4 + (2/5)x² − 3x",
+          "display": true
         }
       ]
     },
     "answerMath": {
-      "latex": "a_{x^2}=\\frac25,\\ a_x=-3",
+      "latex": "\\boxed{\\frac{2}{5}\\text{ and }-3}",
       "fallback": "Coefficient of x²: 2/5; coefficient of x: −3",
       "display": true
     },
     "steps": [
       {
         "math": {
-          "latex": "a\\cdot x^n",
-          "fallback": "coefficient × power",
+          "latex": "\\frac{2}{5}x^2\\qquad-3x",
+          "fallback": "(2/5)x² and −3x",
           "display": true
         },
         "reasonMath": {
-          "en": "The coefficient is the number multiplying the specified power of x, including its sign."
+          "en": [
+            "Identify the terms containing ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". A coefficient is the number multiplying a variable term, including its sign."
+          ]
         }
       },
       {
         "math": {
-          "latex": "a_{x^2}=\\frac25",
-          "fallback": "coefficient of x² = 2/5",
+          "latex": "\\frac{2}{5}x^2\\;\\Rightarrow\\;\\frac{2}{5}",
+          "fallback": "(2/5)x² ⇒ 2/5",
           "display": true
         },
         "reasonMath": {
-          "en": "The x-squared term is (2/5)x², so its coefficient is two-fifths."
+          "en": [
+            "Read the signed number that multiplies ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            "."
+          ]
         }
       },
       {
         "math": {
-          "latex": "a_x=-3",
-          "fallback": "coefficient of x = −3",
+          "latex": "-3x\\;\\Rightarrow\\;-3",
+          "fallback": "−3x ⇒ −3",
           "display": true
         },
         "reasonMath": {
-          "en": "The x term is −3x, so its coefficient is negative three. The separate constant 4 is not part of either requested coefficient."
+          "en": [
+            "Read the signed number multiplying ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". The constant 4 stands on its own."
+          ]
         }
       }
     ]
@@ -30933,47 +34595,89 @@ const records=[
     "id": "g9-ch3-ex3.1-q2-ii",
     "questionMath": {
       "en": [
-        "2. Write the coefficient of x² and x in each of the following polynomials.\n(ii) ",
+        "2. Write the coefficient of ",
         {
-          "latex": "6-2x^2+3x^3-\\sqrt7\\,x",
-          "fallback": "(ii) 6 − 2x² + 3x³ − √7 x"
+          "latex": "x^2",
+          "fallback": "x²"
+        },
+        " and ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(ii)}\\quad 6-2x^2+3x^3-\\sqrt7\\,x",
+          "fallback": "(ii) 6 − 2x² + 3x³ − √7 x",
+          "display": true
         }
       ]
     },
     "answerMath": {
-      "latex": "a_{x^2}=-2,\\ a_x=-\\sqrt7",
+      "latex": "\\boxed{-2\\text{ and }-\\sqrt{7}}",
       "fallback": "Coefficient of x²: −2; coefficient of x: −√7",
       "display": true
     },
     "steps": [
       {
         "math": {
-          "latex": "-2x^2",
-          "fallback": "−2x²",
+          "latex": "-2x^2\\qquad-\\sqrt{7}\\,x",
+          "fallback": "−2x² and −√7 x",
           "display": true
         },
         "reasonMath": {
-          "en": "Locate the term multiplying x squared; the minus sign belongs to the coefficient."
+          "en": [
+            "Identify the terms containing ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". The constant 6 and the ",
+            {
+              "latex": "x^3",
+              "fallback": "x³"
+            },
+            " term are separate."
+          ]
         }
       },
       {
         "math": {
-          "latex": "a_{x^2}=-2",
-          "fallback": "coefficient of x² = −2",
+          "latex": "-2x^2\\;\\Rightarrow\\;-2",
+          "fallback": "−2x² ⇒ −2",
           "display": true
         },
         "reasonMath": {
-          "en": "Therefore, the coefficient of x squared is negative two."
+          "en": [
+            "Read the signed number that multiplies ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            "."
+          ]
         }
       },
       {
         "math": {
-          "latex": "a_x=-\\sqrt7",
-          "fallback": "coefficient of x = −√7",
+          "latex": "-\\sqrt{7}\\,x\\;\\Rightarrow\\;-\\sqrt{7}",
+          "fallback": "−√7 x ⇒ −√7",
           "display": true
         },
         "reasonMath": {
-          "en": "The term with x to the first power is −√7 x, so its coefficient is negative square-root seven, not the constant six or the x-cubed coefficient."
+          "en": [
+            "Read the signed number multiplying ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". Keep the minus sign in front of the square root."
+          ]
         }
       }
     ]
@@ -30982,47 +34686,89 @@ const records=[
     "id": "g9-ch3-ex3.1-q2-iii",
     "questionMath": {
       "en": [
-        "2. Write the coefficient of x² and x in each of the following polynomials.\n(iii) ",
+        "2. Write the coefficient of ",
         {
-          "latex": "\\pi x^2-x+2",
-          "fallback": "(iii) πx² − x + 2"
+          "latex": "x^2",
+          "fallback": "x²"
+        },
+        " and ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(iii)}\\quad \\pi x^2-x+2",
+          "fallback": "(iii) πx² − x + 2",
+          "display": true
         }
       ]
     },
     "answerMath": {
-      "latex": "a_{x^2}=\\pi,\\ a_x=-1",
+      "latex": "\\boxed{\\pi\\text{ and }-1}",
       "fallback": "Coefficient of x²: π; coefficient of x: −1",
       "display": true
     },
     "steps": [
       {
         "math": {
-          "latex": "\\pi x^2",
-          "fallback": "πx²",
+          "latex": "\\pi x^2\\qquad-x",
+          "fallback": "πx² and −x",
           "display": true
         },
         "reasonMath": {
-          "en": "Pi is a real constant, so it can be the coefficient multiplying x squared."
+          "en": [
+            "Identify the terms containing ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". Pi is a real number, so it can be a coefficient."
+          ]
         }
       },
       {
         "math": {
-          "latex": "a_{x^2}=\\pi",
-          "fallback": "coefficient of x² = π",
+          "latex": "\\pi x^2\\;\\Rightarrow\\;\\pi",
+          "fallback": "πx² ⇒ π",
           "display": true
         },
         "reasonMath": {
-          "en": "The coefficient of x squared is pi."
+          "en": [
+            "Read the signed number that multiplies ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            "."
+          ]
         }
       },
       {
         "math": {
-          "latex": "a_x=-1",
-          "fallback": "coefficient of x = −1",
+          "latex": "-x=-1\\cdot x\\;\\Rightarrow\\;-1",
+          "fallback": "−x = −1·x ⇒ −1",
           "display": true
         },
         "reasonMath": {
-          "en": "A bare −x means −1 times x, so its coefficient is negative one."
+          "en": [
+            "Write ",
+            {
+              "latex": "-x",
+              "fallback": "−x"
+            },
+            " as negative one times ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ", then read the coefficient."
+          ]
         }
       }
     ]
@@ -31031,47 +34777,84 @@ const records=[
     "id": "g9-ch3-ex3.1-q2-iv",
     "questionMath": {
       "en": [
-        "2. Write the coefficient of x² and x in each of the following polynomials.\n(iv) ",
+        "2. Write the coefficient of ",
         {
-          "latex": "\\sqrt3\\,x^2+\\sqrt2\\,x+0.5",
-          "fallback": "(iv) √3 x² + √2 x + 0.5"
+          "latex": "x^2",
+          "fallback": "x²"
+        },
+        " and ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(iv)}\\quad \\sqrt3\\,x^2+\\sqrt2\\,x+0.5",
+          "fallback": "(iv) √3 x² + √2 x + 0.5",
+          "display": true
         }
       ]
     },
     "answerMath": {
-      "latex": "a_{x^2}=\\sqrt3,\\ a_x=\\sqrt2",
+      "latex": "\\boxed{\\sqrt{3}\\text{ and }\\sqrt{2}}",
       "fallback": "Coefficient of x²: √3; coefficient of x: √2",
       "display": true
     },
     "steps": [
       {
         "math": {
-          "latex": "\\sqrt3,\\sqrt2\\in\\mathbb{R}",
-          "fallback": "√3, √2 ∈ ℝ",
+          "latex": "\\sqrt{3}\\,x^2\\qquad\\sqrt{2}\\,x",
+          "fallback": "√3 x² and √2 x",
           "display": true
         },
         "reasonMath": {
-          "en": "A square-root number can be a real coefficient even though it is irrational."
+          "en": [
+            "Identify the terms containing ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". The square roots are real numbers, so they can be coefficients."
+          ]
         }
       },
       {
         "math": {
-          "latex": "a_{x^2}=\\sqrt3",
-          "fallback": "coefficient of x² = √3",
+          "latex": "\\sqrt{3}\\,x^2\\;\\Rightarrow\\;\\sqrt{3}",
+          "fallback": "√3 x² ⇒ √3",
           "display": true
         },
         "reasonMath": {
-          "en": "The term √3 x² has coefficient square-root three."
+          "en": [
+            "Read the signed number that multiplies ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            "."
+          ]
         }
       },
       {
         "math": {
-          "latex": "a_x=\\sqrt2",
-          "fallback": "coefficient of x = √2",
+          "latex": "\\sqrt{2}\\,x\\;\\Rightarrow\\;\\sqrt{2}",
+          "fallback": "√2 x ⇒ √2",
           "display": true
         },
         "reasonMath": {
-          "en": "The term √2 x has coefficient square-root two; 0.5 is a separate constant."
+          "en": [
+            "Read the number multiplying ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". The constant 0.5 stands on its own."
+          ]
         }
       }
     ]
@@ -31080,47 +34863,89 @@ const records=[
     "id": "g9-ch3-ex3.1-q2-v",
     "questionMath": {
       "en": [
-        "2. Write the coefficient of x² and x in each of the following polynomials.\n(v) ",
+        "2. Write the coefficient of ",
         {
-          "latex": "x^2-\\frac72x+8",
-          "fallback": "(v) x² − (7/2)x + 8"
+          "latex": "x^2",
+          "fallback": "x²"
+        },
+        " and ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(v)}\\quad x^2-\\frac72x+8",
+          "fallback": "(v) x² − (7/2)x + 8",
+          "display": true
         }
       ]
     },
     "answerMath": {
-      "latex": "a_{x^2}=1,\\ a_x=-\\frac72",
+      "latex": "\\boxed{1\\text{ and }-\\frac{7}{2}}",
       "fallback": "Coefficient of x²: 1; coefficient of x: −7/2",
       "display": true
     },
     "steps": [
       {
         "math": {
-          "latex": "x^2=1\\cdot x^2",
-          "fallback": "x² = 1·x²",
+          "latex": "x^2\\qquad-\\frac{7}{2}x",
+          "fallback": "x² and −(7/2)x",
           "display": true
         },
         "reasonMath": {
-          "en": "When x squared has no number written before it, the implied coefficient is one."
+          "en": [
+            "Identify the terms containing ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". When there is no number written before ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            ", its coefficient is one."
+          ]
         }
       },
       {
         "math": {
-          "latex": "a_{x^2}=1",
-          "fallback": "coefficient of x² = 1",
+          "latex": "x^2=1\\cdot x^2\\;\\Rightarrow\\;1",
+          "fallback": "x² = 1·x² ⇒ 1",
           "display": true
         },
         "reasonMath": {
-          "en": "Read the x-squared coefficient as one."
+          "en": [
+            "Read the signed number that multiplies ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            "."
+          ]
         }
       },
       {
         "math": {
-          "latex": "a_x=-\\frac72",
-          "fallback": "coefficient of x = −7/2",
+          "latex": "-\\frac{7}{2}x\\;\\Rightarrow\\;-\\frac{7}{2}",
+          "fallback": "−(7/2)x ⇒ −7/2",
           "display": true
         },
         "reasonMath": {
-          "en": "The x term is negative seven-halves times x, so the second coefficient is −7/2."
+          "en": [
+            "Read the signed number multiplying ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". Keep the minus sign with the fraction."
+          ]
         }
       }
     ]
@@ -32174,7 +35999,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{aligned}3n+2&<15\\\\3n&<13\\end{aligned}",
+          "latex": "\\begin{aligned}3n+2&<15\\\\\\Rightarrow 3n&<13\\end{aligned}",
           "fallback": "3n+2<15 ⇒ 3n<13",
           "display": true
         },
@@ -33948,7 +37773,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "f(-1)=6(-1) - 3(-1)^2 + 3",
+          "latex": "\\begin{aligned}f(-1)&=6(-1)-3(-1)^2\\\\&\\phantom{={}}+3\\end{aligned}",
           "fallback": "f(−1) = 6(−1) − 3(−1)² + 3",
           "display": true
         },
@@ -34165,7 +37990,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "p\\left(-\\dfrac{5}{2}\\right)=2\\left(-\\dfrac{5}{2}\\right)+5=0",
+          "latex": "\\begin{aligned}p\\left(-\\dfrac{5}{2}\\right)&=2\\left(-\\dfrac{5}{2}\\right)+5\\\\&=0\\end{aligned}",
           "fallback": "p(−5/2) = 2(−5/2) + 5 = 0",
           "display": true
         },
@@ -35420,8 +39245,14 @@ const texts={
   ],
   "A={1,2,3,5}, B={3,4,5,6}. The common members are 3 and 5. Explore these same sets in the interactive Venn lab below.": [
     {
-      "latex": "A = \\left\\{1, 2, 3, 5\\right\\}, B = \\left\\{3, 4, 5, 6\\right\\}",
-      "fallback": "A={1,2,3,5}, B={3,4,5,6}"
+      "latex": "A = \\left\\{1, 2, 3, 5\\right\\}",
+      "fallback": "A={1,2,3,5}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{3, 4, 5, 6\\right\\}",
+      "fallback": "B={3,4,5,6}"
     },
     ". The common members are ",
     {
@@ -35437,8 +39268,14 @@ const texts={
   ],
   "A={1,2,3,5}, B={3,4,5,6}. இரண்டிலும் உள்ள உறுப்புகள் 3, 5. கீழுள்ள வென் ஆய்வகத்தில் ஆராய்க.": [
     {
-      "latex": "A = \\left\\{1, 2, 3, 5\\right\\}, B = \\left\\{3, 4, 5, 6\\right\\}",
-      "fallback": "A={1,2,3,5}, B={3,4,5,6}"
+      "latex": "A = \\left\\{1, 2, 3, 5\\right\\}",
+      "fallback": "A={1,2,3,5}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{3, 4, 5, 6\\right\\}",
+      "fallback": "B={3,4,5,6}"
     },
     ". இரண்டிலும் உள்ள உறுப்புகள் ",
     {
@@ -35471,8 +39308,14 @@ const texts={
   ],
   "A={1,2,3,5}, B={3,4,5,6} எனில் A ∩ B என்ன?": [
     {
-      "latex": "A = \\left\\{1, 2, 3, 5\\right\\}, B = \\left\\{3, 4, 5, 6\\right\\}",
-      "fallback": "A={1,2,3,5}, B={3,4,5,6}"
+      "latex": "A = \\left\\{1, 2, 3, 5\\right\\}",
+      "fallback": "A={1,2,3,5}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{3, 4, 5, 6\\right\\}",
+      "fallback": "B={3,4,5,6}"
     },
     " எனில் ",
     {
@@ -35521,8 +39364,20 @@ const texts={
   "Take A={1,2,3,4}, B={2,4,6}, U={1,2,3,4,5,6,7}. Find A∪B, A∩B and A′.": [
     "Take ",
     {
-      "latex": "A = \\left\\{1, 2, 3, 4\\right\\}, B = \\left\\{2, 4, 6\\right\\}, U = \\left\\{1, 2, 3, 4, 5, 6, 7\\right\\}",
-      "fallback": "A={1,2,3,4}, B={2,4,6}, U={1,2,3,4,5,6,7}"
+      "latex": "A = \\left\\{1, 2, 3, 4\\right\\}",
+      "fallback": "A={1,2,3,4}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{2, 4, 6\\right\\}",
+      "fallback": "B={2,4,6}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "U = \\left\\{1, 2, 3, 4, 5, 6, 7\\right\\}",
+      "fallback": "U={1,2,3,4,5,6,7}"
     },
     ". Find ",
     {
@@ -35538,8 +39393,20 @@ const texts={
   ],
   "A={1,2,3,4}, B={2,4,6}, U={1,2,3,4,5,6,7} எனில் A∪B, A∩B, A′ ஆகியவற்றைக் காண்க.": [
     {
-      "latex": "A = \\left\\{1, 2, 3, 4\\right\\}, B = \\left\\{2, 4, 6\\right\\}, U = \\left\\{1, 2, 3, 4, 5, 6, 7\\right\\}",
-      "fallback": "A={1,2,3,4}, B={2,4,6}, U={1,2,3,4,5,6,7}"
+      "latex": "A = \\left\\{1, 2, 3, 4\\right\\}",
+      "fallback": "A={1,2,3,4}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{2, 4, 6\\right\\}",
+      "fallback": "B={2,4,6}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "U = \\left\\{1, 2, 3, 4, 5, 6, 7\\right\\}",
+      "fallback": "U={1,2,3,4,5,6,7}"
     },
     " எனில் ",
     {
@@ -35551,15 +39418,39 @@ const texts={
   "Use A={1,2}, B={2,3}, C={3,4}. Choose a property to see both sides give the same set.": [
     "Use ",
     {
-      "latex": "A = \\left\\{1, 2\\right\\}, B = \\left\\{2, 3\\right\\}, C = \\left\\{3, 4\\right\\}",
-      "fallback": "A={1,2}, B={2,3}, C={3,4}"
+      "latex": "A = \\left\\{1, 2\\right\\}",
+      "fallback": "A={1,2}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{2, 3\\right\\}",
+      "fallback": "B={2,3}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "C = \\left\\{3, 4\\right\\}",
+      "fallback": "C={3,4}"
     },
     ". Choose a property to see both sides give the same set."
   ],
   "A={1,2}, B={2,3}, C={3,4}. பண்பை மாற்றி இருபுறமும் ஒரே கணம் கிடைப்பதைப் பாருங்கள்.": [
     {
-      "latex": "A = \\left\\{1, 2\\right\\}, B = \\left\\{2, 3\\right\\}, C = \\left\\{3, 4\\right\\}",
-      "fallback": "A={1,2}, B={2,3}, C={3,4}"
+      "latex": "A = \\left\\{1, 2\\right\\}",
+      "fallback": "A={1,2}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{2, 3\\right\\}",
+      "fallback": "B={2,3}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "C = \\left\\{3, 4\\right\\}",
+      "fallback": "C={3,4}"
     },
     ". பண்பை மாற்றி இருபுறமும் ஒரே கணம் கிடைப்பதைப் பாருங்கள்."
   ],
@@ -35652,15 +39543,39 @@ const texts={
   "With A={1,2}, B={2,3}, C={3,4}, verify one associative law by listing both sides.": [
     "With ",
     {
-      "latex": "A = \\left\\{1, 2\\right\\}, B = \\left\\{2, 3\\right\\}, C = \\left\\{3, 4\\right\\}",
-      "fallback": "A={1,2}, B={2,3}, C={3,4}"
+      "latex": "A = \\left\\{1, 2\\right\\}",
+      "fallback": "A={1,2}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{2, 3\\right\\}",
+      "fallback": "B={2,3}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "C = \\left\\{3, 4\\right\\}",
+      "fallback": "C={3,4}"
     },
     ", verify one associative law by listing both sides."
   ],
   "A={1,2}, B={2,3}, C={3,4} எனில் சேர்ப்புப் பண்பின் ஒரு விதியை இருபுற உறுப்புகளையும் எழுதி சரிபார்க்கவும்.": [
     {
-      "latex": "A = \\left\\{1, 2\\right\\}, B = \\left\\{2, 3\\right\\}, C = \\left\\{3, 4\\right\\}",
-      "fallback": "A={1,2}, B={2,3}, C={3,4}"
+      "latex": "A = \\left\\{1, 2\\right\\}",
+      "fallback": "A={1,2}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{2, 3\\right\\}",
+      "fallback": "B={2,3}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "C = \\left\\{3, 4\\right\\}",
+      "fallback": "C={3,4}"
     },
     " எனில் சேர்ப்புப் பண்பின் ஒரு விதியை இருபுற உறுப்புகளையும் எழுதி சரிபார்க்கவும்."
   ],
@@ -35678,15 +39593,39 @@ const texts={
   ],
   "U={1,2,3,4,5,6}, A={1,2,3}, B={3,4}. Switch between the two laws and compare each side.": [
     {
-      "latex": "U = \\left\\{1, 2, 3, 4, 5, 6\\right\\}, A = \\left\\{1, 2, 3\\right\\}, B = \\left\\{3, 4\\right\\}",
-      "fallback": "U={1,2,3,4,5,6}, A={1,2,3}, B={3,4}"
+      "latex": "U = \\left\\{1, 2, 3, 4, 5, 6\\right\\}",
+      "fallback": "U={1,2,3,4,5,6}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "A = \\left\\{1, 2, 3\\right\\}",
+      "fallback": "A={1,2,3}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{3, 4\\right\\}",
+      "fallback": "B={3,4}"
     },
     ". Switch between the two laws and compare each side."
   ],
   "U={1,2,3,4,5,6}, A={1,2,3}, B={3,4}. இரண்டு விதிகளையும் மாற்றிப் பார்த்து இரு பக்கங்களையும் ஒப்பிடுங்கள்.": [
     {
-      "latex": "U = \\left\\{1, 2, 3, 4, 5, 6\\right\\}, A = \\left\\{1, 2, 3\\right\\}, B = \\left\\{3, 4\\right\\}",
-      "fallback": "U={1,2,3,4,5,6}, A={1,2,3}, B={3,4}"
+      "latex": "U = \\left\\{1, 2, 3, 4, 5, 6\\right\\}",
+      "fallback": "U={1,2,3,4,5,6}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "A = \\left\\{1, 2, 3\\right\\}",
+      "fallback": "A={1,2,3}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{3, 4\\right\\}",
+      "fallback": "B={3,4}"
     },
     ". இரண்டு விதிகளையும் மாற்றிப் பார்த்து இரு பக்கங்களையும் ஒப்பிடுங்கள்."
   ],
@@ -35697,8 +39636,14 @@ const texts={
   "Let U={1,2,3,4,5,6}, A={1,2,3} and B={3,4}. Which elements are outside A ∪ B?": [
     "Let ",
     {
-      "latex": "U = \\left\\{1, 2, 3, 4, 5, 6\\right\\}, A = \\left\\{1, 2, 3\\right\\}",
-      "fallback": "U={1,2,3,4,5,6}, A={1,2,3}"
+      "latex": "U = \\left\\{1, 2, 3, 4, 5, 6\\right\\}",
+      "fallback": "U={1,2,3,4,5,6}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "A = \\left\\{1, 2, 3\\right\\}",
+      "fallback": "A={1,2,3}"
     },
     " and ",
     {
@@ -35714,8 +39659,20 @@ const texts={
   ],
   "U={1,2,3,4,5,6}, A={1,2,3}, B={3,4} எனில் A ∪ B-க்கு வெளியே உள்ள உறுப்புகள் எவை?": [
     {
-      "latex": "U = \\left\\{1, 2, 3, 4, 5, 6\\right\\}, A = \\left\\{1, 2, 3\\right\\}, B = \\left\\{3, 4\\right\\}",
-      "fallback": "U={1,2,3,4,5,6}, A={1,2,3}, B={3,4}"
+      "latex": "U = \\left\\{1, 2, 3, 4, 5, 6\\right\\}",
+      "fallback": "U={1,2,3,4,5,6}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "A = \\left\\{1, 2, 3\\right\\}",
+      "fallback": "A={1,2,3}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{3, 4\\right\\}",
+      "fallback": "B={3,4}"
     },
     " எனில் ",
     {
@@ -35794,8 +39751,20 @@ const texts={
   "Let U={1,2,3,4,5}, A={1,2}, B={2,3}. Find (A∪B)′ and A′∩B′ separately.": [
     "Let ",
     {
-      "latex": "U = \\left\\{1, 2, 3, 4, 5\\right\\}, A = \\left\\{1, 2\\right\\}, B = \\left\\{2, 3\\right\\}",
-      "fallback": "U={1,2,3,4,5}, A={1,2}, B={2,3}"
+      "latex": "U = \\left\\{1, 2, 3, 4, 5\\right\\}",
+      "fallback": "U={1,2,3,4,5}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "A = \\left\\{1, 2\\right\\}",
+      "fallback": "A={1,2}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{2, 3\\right\\}",
+      "fallback": "B={2,3}"
     },
     ". Find ",
     {
@@ -35811,8 +39780,20 @@ const texts={
   ],
   "U={1,2,3,4,5}, A={1,2}, B={2,3}. (A∪B)′ மற்றும் A′∩B′-ஐத் தனித்தனியாகக் காண்க.": [
     {
-      "latex": "U = \\left\\{1, 2, 3, 4, 5\\right\\}, A = \\left\\{1, 2\\right\\}, B = \\left\\{2, 3\\right\\}",
-      "fallback": "U={1,2,3,4,5}, A={1,2}, B={2,3}"
+      "latex": "U = \\left\\{1, 2, 3, 4, 5\\right\\}",
+      "fallback": "U={1,2,3,4,5}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "A = \\left\\{1, 2\\right\\}",
+      "fallback": "A={1,2}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{2, 3\\right\\}",
+      "fallback": "B={2,3}"
     },
     ". ",
     {
@@ -35893,8 +39874,14 @@ const texts={
   "If n(A)=14, n(B)=11 and n(A∩B)=6, what is n(A∪B)?": [
     "If ",
     {
-      "latex": "n \\left(A\\right) = 14, n \\left(B\\right) = 11",
-      "fallback": "n(A)=14, n(B)=11"
+      "latex": "n \\left(A\\right) = 14",
+      "fallback": "n(A)=14"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(B\\right) = 11",
+      "fallback": "n(B)=11"
     },
     " and ",
     {
@@ -35910,8 +39897,20 @@ const texts={
   ],
   "n(A)=14, n(B)=11, n(A∩B)=6 எனில் n(A∪B) என்ன?": [
     {
-      "latex": "n \\left(A\\right) = 14, n \\left(B\\right) = 11, n \\left(A \\cap B\\right) = 6",
-      "fallback": "n(A)=14, n(B)=11, n(A∩B)=6"
+      "latex": "n \\left(A\\right) = 14",
+      "fallback": "n(A)=14"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(B\\right) = 11",
+      "fallback": "n(B)=11"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(A \\cap B\\right) = 6",
+      "fallback": "n(A∩B)=6"
     },
     " எனில் ",
     {
@@ -36332,8 +40331,14 @@ const texts={
   ],
   "A={1,2,4}, B={2,3} எனில் A − B என்ன?": [
     {
-      "latex": "A = \\left\\{1, 2, 4\\right\\}, B = \\left\\{2, 3\\right\\}",
-      "fallback": "A={1,2,4}, B={2,3}"
+      "latex": "A = \\left\\{1, 2, 4\\right\\}",
+      "fallback": "A={1,2,4}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = \\left\\{2, 3\\right\\}",
+      "fallback": "B={2,3}"
     },
     " எனில் ",
     {
@@ -36557,8 +40562,20 @@ const texts={
     },
     " பேர் உள்ள வகுப்பில் ",
     {
-      "latex": "n \\left(A\\right) = 21, n \\left(B\\right) = 18, n \\left(C\\right) = 17",
-      "fallback": "n(A)=21, n(B)=18, n(C)=17"
+      "latex": "n \\left(A\\right) = 21",
+      "fallback": "n(A)=21"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(B\\right) = 18",
+      "fallback": "n(B)=18"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(C\\right) = 17",
+      "fallback": "n(C)=17"
     },
     "; இரண்டிரண்டு பொதுவான எண்ணிக்கைகள் ",
     {
@@ -36630,8 +40647,38 @@ const texts={
     },
     " பேர் உள்ள குழுவில் ",
     {
-      "latex": "n \\left(A\\right) = 12, n \\left(B\\right) = 10, n \\left(C\\right) = 9;\\quad n \\left(A \\cap B\\right) = 4, n \\left(A \\cap C\\right) = 3, n \\left(B \\cap C\\right) = 5, n \\left(A \\cap B \\cap C\\right) = 2",
-      "fallback": "n(A)=12, n(B)=10, n(C)=9; n(A∩B)=4, n(A∩C)=3, n(B∩C)=5, n(A∩B∩C)=2"
+      "latex": "n \\left(A\\right) = 12",
+      "fallback": "n(A)=12"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(B\\right) = 10",
+      "fallback": "n(B)=10"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(C\\right) = 9;\\quad n \\left(A \\cap B\\right) = 4",
+      "fallback": "n(C)=9; n(A∩B)=4"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(A \\cap C\\right) = 3",
+      "fallback": "n(A∩C)=3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(B \\cap C\\right) = 5",
+      "fallback": "n(B∩C)=5"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(A \\cap B \\cap C\\right) = 2",
+      "fallback": "n(A∩B∩C)=2"
     },
     ". குறைந்தது ஒன்று, எதுவுமில்லை, சரியாக இரண்டு ஆகிய எண்ணிக்கைகளை காண்க."
   ],
@@ -37736,8 +41783,14 @@ const texts={
   ],
   "1/2=6/12, 2/3=8/12 என்பதால் 7/12 இடையில் உள்ளது.": [
     {
-      "latex": "\\dfrac{1}{2} = \\dfrac{6}{12}, \\dfrac{2}{3} = \\dfrac{8}{12}",
-      "fallback": "1/2=6/12, 2/3=8/12"
+      "latex": "\\dfrac{1}{2} = \\dfrac{6}{12}",
+      "fallback": "1/2=6/12"
+    },
+    ",",
+    " ",
+    {
+      "latex": "\\dfrac{2}{3} = \\dfrac{8}{12}",
+      "fallback": "2/3=8/12"
     },
     " என்பதால் ",
     {
@@ -38177,8 +42230,14 @@ const texts={
   ],
   "√75=5√3, √48=4√3; எனவே கூட்டல் 9√3.": [
     {
-      "latex": "\\sqrt{75} = 5\\,\\sqrt{3}, \\sqrt{48} = 4\\,\\sqrt{3}",
-      "fallback": "√75=5√3, √48=4√3"
+      "latex": "\\sqrt{75} = 5\\,\\sqrt{3}",
+      "fallback": "√75=5√3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "\\sqrt{48} = 4\\,\\sqrt{3}",
+      "fallback": "√48=4√3"
     },
     "; எனவே கூட்டல் ",
     {
@@ -38240,8 +42299,14 @@ const texts={
   ],
   "√12=2√3, √27=3√3; கூட்டல் 5√3.": [
     {
-      "latex": "\\sqrt{12} = 2\\,\\sqrt{3}, \\sqrt{27} = 3\\,\\sqrt{3}",
-      "fallback": "√12=2√3, √27=3√3"
+      "latex": "\\sqrt{12} = 2\\,\\sqrt{3}",
+      "fallback": "√12=2√3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "\\sqrt{27} = 3\\,\\sqrt{3}",
+      "fallback": "√27=3√3"
     },
     "; கூட்டல் ",
     {
@@ -39397,8 +43462,14 @@ const texts={
   "If P={l,n,p}, P∪Q={j,l,m,n,o,p} and P∩Q=∅, determine Q.": [
     "If ",
     {
-      "latex": "P = \\left\\{l, n, p\\right\\}, P \\cup Q = \\left\\{j, l, \\mathrm{m}, n, o, p\\right\\}",
-      "fallback": "P={l,n,p}, P∪Q={j,l,m,n,o,p}"
+      "latex": "P = \\left\\{l, n, p\\right\\}",
+      "fallback": "P={l,n,p}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "P \\cup Q = \\left\\{j, l, \\mathrm{m}, n, o, p\\right\\}",
+      "fallback": "P∪Q={j,l,m,n,o,p}"
     },
     " and ",
     {
@@ -39414,8 +43485,20 @@ const texts={
   ],
   "P={l,n,p}, P∪Q={j,l,m,n,o,p}, P∩Q=∅ எனில் Q காண்க.": [
     {
-      "latex": "P = \\left\\{l, n, p\\right\\}, P \\cup Q = \\left\\{j, l, \\mathrm{m}, n, o, p\\right\\}, P \\cap Q = \\varnothing",
-      "fallback": "P={l,n,p}, P∪Q={j,l,m,n,o,p}, P∩Q=∅"
+      "latex": "P = \\left\\{l, n, p\\right\\}",
+      "fallback": "P={l,n,p}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "P \\cup Q = \\left\\{j, l, \\mathrm{m}, n, o, p\\right\\}",
+      "fallback": "P∪Q={j,l,m,n,o,p}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "P \\cap Q = \\varnothing",
+      "fallback": "P∩Q=∅"
     },
     " எனில் ",
     {
@@ -39691,8 +43774,20 @@ const texts={
   "For every row, n(A∩B)=n(A)+n(B)−n(A∪B), n(A−B)=n(A)−n(A∩B), n(B−A)=n(B)−n(A∩B). Completed table [n(A), n(B), n(A∪B), n(A∩B), n(A−B), n(B−A)]: Row 1 [30,45,65,10,20,35]; row 2 [20,45,55,10,10,35] (45=55−20+10); row 3 [50,65,90,25,25,40] (90=50+65−25); row 4 [30,43,70,3,27,40] (3=30+43−70). Verify each row by adding only-A, intersection, and only-B to obtain the union.": [
     "For every row, ",
     {
-      "latex": "n \\left(A \\cap B\\right) = n \\left(A\\right) + n \\left(B\\right) - n \\left(A \\cup B\\right), n \\left(A - B\\right) = n \\left(A\\right) - n \\left(A \\cap B\\right), n \\left(B - A\\right) = n \\left(B\\right) - n \\left(A \\cap B\\right)",
-      "fallback": "n(A∩B)=n(A)+n(B)−n(A∪B), n(A−B)=n(A)−n(A∩B), n(B−A)=n(B)−n(A∩B)"
+      "latex": "n \\left(A \\cap B\\right) = n \\left(A\\right) + n \\left(B\\right) - n \\left(A \\cup B\\right)",
+      "fallback": "n(A∩B)=n(A)+n(B)−n(A∪B)"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(A - B\\right) = n \\left(A\\right) - n \\left(A \\cap B\\right)",
+      "fallback": "n(A−B)=n(A)−n(A∩B)"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(B - A\\right) = n \\left(B\\right) - n \\left(A \\cap B\\right)",
+      "fallback": "n(B−A)=n(B)−n(A∩B)"
     },
     ". Completed table ",
     {
@@ -39734,8 +43829,20 @@ const texts={
   "ஒவ்வொரு வரியிலும் n(A∩B)=n(A)+n(B)−n(A∪B), n(A−B)=n(A)−n(A∩B), n(B−A)=n(B)−n(A∩B). முழு அட்டவணை [n(A),n(B),n(A∪B),n(A∩B),n(A−B),n(B−A)]: வரி 1 [30,45,65,10,20,35]; வரி 2 [20,45,55,10,10,35] (45=55−20+10); வரி 3 [50,65,90,25,25,40] (90=50+65−25); வரி 4 [30,43,70,3,27,40] (3=30+43−70). A மட்டும் + பொதுவானவை + B மட்டும் = சேர்ப்புக் கண உறுப்பெண்ணிக்கை எனச் சரிபார்க்கவும்.": [
     "ஒவ்வொரு வரியிலும் ",
     {
-      "latex": "n \\left(A \\cap B\\right) = n \\left(A\\right) + n \\left(B\\right) - n \\left(A \\cup B\\right), n \\left(A - B\\right) = n \\left(A\\right) - n \\left(A \\cap B\\right), n \\left(B - A\\right) = n \\left(B\\right) - n \\left(A \\cap B\\right)",
-      "fallback": "n(A∩B)=n(A)+n(B)−n(A∪B), n(A−B)=n(A)−n(A∩B), n(B−A)=n(B)−n(A∩B)"
+      "latex": "n \\left(A \\cap B\\right) = n \\left(A\\right) + n \\left(B\\right) - n \\left(A \\cup B\\right)",
+      "fallback": "n(A∩B)=n(A)+n(B)−n(A∪B)"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(A - B\\right) = n \\left(A\\right) - n \\left(A \\cap B\\right)",
+      "fallback": "n(A−B)=n(A)−n(A∩B)"
+    },
+    ",",
+    " ",
+    {
+      "latex": "n \\left(B - A\\right) = n \\left(B\\right) - n \\left(A \\cap B\\right)",
+      "fallback": "n(B−A)=n(B)−n(A∩B)"
     },
     ". முழு அட்டவணை ",
     {
@@ -39812,8 +43919,14 @@ const texts={
     },
     " means the principal (nonnegative) square root, so ",
     {
-      "latex": "\\sqrt{9} = 3, - \\sqrt{9} = - 3",
-      "fallback": "√9=3, −√9=−3"
+      "latex": "\\sqrt{9} = 3",
+      "fallback": "√9=3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "- \\sqrt{9} = - 3",
+      "fallback": "−√9=−3"
     },
     " and ",
     {
@@ -40482,8 +44595,20 @@ const texts={
     },
     " (not claimed to be a performed experiment): at ",
     {
-      "latex": "n = 10, H = 6, T = 4",
-      "fallback": "n=10, H=6, T=4"
+      "latex": "n = 10",
+      "fallback": "n=10"
+    },
+    ",",
+    " ",
+    {
+      "latex": "H = 6",
+      "fallback": "H=6"
+    },
+    ",",
+    " ",
+    {
+      "latex": "T = 4",
+      "fallback": "T=4"
     },
     ", giving ",
     {
@@ -40497,8 +44622,20 @@ const texts={
     },
     "; at ",
     {
-      "latex": "n = 20, H = 11, T = 9",
-      "fallback": "n=20, H=11, T=9"
+      "latex": "n = 20",
+      "fallback": "n=20"
+    },
+    ",",
+    " ",
+    {
+      "latex": "H = 11",
+      "fallback": "H=11"
+    },
+    ",",
+    " ",
+    {
+      "latex": "T = 9",
+      "fallback": "T=9"
     },
     ", giving ",
     {
@@ -40550,8 +44687,20 @@ const texts={
     },
     " (not claimed to be a performed experiment): at ",
     {
-      "latex": "n = 10, H = 6, T = 4",
-      "fallback": "n=10, H=6, T=4"
+      "latex": "n = 10",
+      "fallback": "n=10"
+    },
+    ",",
+    " ",
+    {
+      "latex": "H = 6",
+      "fallback": "H=6"
+    },
+    ",",
+    " ",
+    {
+      "latex": "T = 4",
+      "fallback": "T=4"
     },
     ", giving ",
     {
@@ -40565,8 +44714,20 @@ const texts={
     },
     "; at ",
     {
-      "latex": "n = 20, H = 11, T = 9",
-      "fallback": "n=20, H=11, T=9"
+      "latex": "n = 20",
+      "fallback": "n=20"
+    },
+    ",",
+    " ",
+    {
+      "latex": "H = 11",
+      "fallback": "H=11"
+    },
+    ",",
+    " ",
+    {
+      "latex": "T = 9",
+      "fallback": "T=9"
     },
     ", giving ",
     {
@@ -41222,8 +45383,14 @@ const texts={
   "Each numerator matches its denominator: 70°+20°=90°, 59°+31°=90°, and sin(90°−θ)": [
     "Each numerator matches its denominator: ",
     {
-      "latex": "70^{\\circ} + 20^{\\circ} = 90^{\\circ}, 59^{\\circ} + 31^{\\circ} = 90^{\\circ}",
-      "fallback": "70°+20°=90°, 59°+31°=90°"
+      "latex": "70^{\\circ} + 20^{\\circ} = 90^{\\circ}",
+      "fallback": "70°+20°=90°"
+    },
+    ",",
+    " ",
+    {
+      "latex": "59^{\\circ} + 31^{\\circ} = 90^{\\circ}",
+      "fallback": "59°+31°=90°"
     },
     ", and ",
     {
@@ -42061,8 +46228,14 @@ const texts={
   "Set A=0, B=3 and C=4 on the line, so AB=3 and BC=1. Draw the semicircle with diameter AC and a perpendicular from B to its arc at D. The height satisfies BD²=AB×BC=3, so BD=√3. Copy that length from zero to mark √3≈1.73205 between 1 and 2; an approximate decimal alone is not an exact construction.": [
     "Set ",
     {
-      "latex": "A = 0, B = 3",
-      "fallback": "A=0, B=3"
+      "latex": "A = 0",
+      "fallback": "A=0"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = 3",
+      "fallback": "B=3"
     },
     " and ",
     {
@@ -42142,8 +46315,14 @@ const texts={
   "Set A=0, B=4.7 and C=5.7, with BC=1. Draw the semicircle over AC, and from B draw the perpendicular meeting the arc at D. By the geometric-mean relation BD²=AB×BC=4.7, so BD=√4.7. Transfer BD from zero; the point is about 2.16795, between 2 and 3.": [
     "Set ",
     {
-      "latex": "A = 0, B = 4.7",
-      "fallback": "A=0, B=4.7"
+      "latex": "A = 0",
+      "fallback": "A=0"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = 4.7",
+      "fallback": "B=4.7"
     },
     " and ",
     {
@@ -42205,8 +46384,14 @@ const texts={
   "Set A=0, B=6.5 and C=7.5, keeping BC=1. Use a semicircle with diameter AC and draw the perpendicular BD up to the arc. Then BD²=AB×BC=6.5 and BD=√6.5. Copy BD from zero, giving approximately 2.54951 between 2 and 3; the construction identifies the exact irrational length.": [
     "Set ",
     {
-      "latex": "A = 0, B = 6.5",
-      "fallback": "A=0, B=6.5"
+      "latex": "A = 0",
+      "fallback": "A=0"
+    },
+    ",",
+    " ",
+    {
+      "latex": "B = 6.5",
+      "fallback": "B=6.5"
     },
     " and ",
     {
@@ -42786,8 +46971,20 @@ const texts={
   "Perfect cubes near the interval are 3³ = 27, 4³ = 64, 5³ = 125 and 6³ = 216.": [
     "Perfect cubes near the interval are ",
     {
-      "latex": "3^{3} = 27, 4^{3} = 64, 5^{3} = 125",
-      "fallback": "3³ = 27, 4³ = 64, 5³ = 125"
+      "latex": "3^{3} = 27",
+      "fallback": "3³ = 27"
+    },
+    ",",
+    " ",
+    {
+      "latex": "4^{3} = 64",
+      "fallback": "4³ = 64"
+    },
+    ",",
+    " ",
+    {
+      "latex": "5^{3} = 125",
+      "fallback": "5³ = 125"
     },
     " and ",
     {
@@ -43030,8 +47227,26 @@ const texts={
   "Read the textbook diagram: BC=42 cm, CA=34 cm, BD=16 cm, AD=12 cm, with ∠BDA=90°": [
     "Read the textbook diagram: ",
     {
-      "latex": "BC = 42\\,\\mathrm{cm}, CA = 34\\,\\mathrm{cm}, BD = 16\\,\\mathrm{cm}, AD = 12\\,\\mathrm{cm}",
-      "fallback": "BC=42 cm, CA=34 cm, BD=16 cm, AD=12 cm"
+      "latex": "BC = 42\\,\\mathrm{cm}",
+      "fallback": "BC=42 cm"
+    },
+    ",",
+    " ",
+    {
+      "latex": "CA = 34\\,\\mathrm{cm}",
+      "fallback": "CA=34 cm"
+    },
+    ",",
+    " ",
+    {
+      "latex": "BD = 16\\,\\mathrm{cm}",
+      "fallback": "BD=16 cm"
+    },
+    ",",
+    " ",
+    {
+      "latex": "AD = 12\\,\\mathrm{cm}",
+      "fallback": "AD=12 cm"
     },
     ", with ",
     {
@@ -43089,8 +47304,18 @@ const texts={
   "Use l=20,b=15,h=8 centimetres and the total surface area formula.": [
     "Use ",
     {
-      "latex": "l = 20, b = 15, h = 8",
-      "fallback": "l=20,b=15,h=8"
+      "latex": "l = 20",
+      "fallback": "l=20"
+    },
+    ",",
+    {
+      "latex": "b = 15",
+      "fallback": "b=15"
+    },
+    ",",
+    {
+      "latex": "h = 8",
+      "fallback": "h=8"
     },
     " centimetres and the total surface area formula."
   ],
@@ -44362,23 +48587,18 @@ const texts={
     },
     " constant term has power zero."
   ],
-  "The x term is −3x, so its coefficient is negative three. The separate constant 4 is not part of either requested coefficient.": [
-    "The ",
+  "Read the signed number multiplying x. The constant 4 stands on its own.": [
+    "Read the signed number multiplying ",
     {
       "latex": "x",
       "fallback": "x"
     },
-    " term is ",
-    {
-      "latex": "- 3 x",
-      "fallback": "−3x"
-    },
-    ", so its coefficient is negative three. The separate constant ",
+    ". The constant ",
     {
       "latex": "4",
       "fallback": "4"
     },
-    " is not part of either requested coefficient."
+    " stands on its own."
   ],
   "A coefficient is the signed number immediately multiplying that particular power of x. Ignore the constant term and any x-cubed term when asked only for x-squared and x.": [
     "A coefficient is the signed number immediately multiplying that particular power of ",
@@ -44403,72 +48623,47 @@ const texts={
     },
     "."
   ],
-  "The term with x to the first power is −√7 x, so its coefficient is negative square-root seven, not the constant six or the x-cubed coefficient.": [
-    "The term with ",
+  "Read the signed number multiplying x. Keep the minus sign in front of the square root.": [
+    "Read the signed number multiplying ",
     {
       "latex": "x",
       "fallback": "x"
     },
-    " to the first power is ",
-    {
-      "latex": "- \\sqrt{7} x",
-      "fallback": "−√7 x"
-    },
-    ", so its coefficient is negative square-root seven, not the constant six or the ",
-    {
-      "latex": "x",
-      "fallback": "x"
-    },
-    "-cubed coefficient."
+    ". Keep the minus sign in front of the square root."
   ],
-  "A bare −x means −1 times x, so its coefficient is negative one.": [
-    "A bare ",
+  "Write −x as negative one times x, then read the coefficient.": [
+    "Write ",
     {
       "latex": "- x",
       "fallback": "−x"
     },
-    " means ",
-    {
-      "latex": "- 1",
-      "fallback": "−1"
-    },
-    " times ",
+    " as negative one times ",
     {
       "latex": "x",
       "fallback": "x"
     },
-    ", so its coefficient is negative one."
+    ", then read the coefficient."
   ],
-  "The term √2 x has coefficient square-root two; 0.5 is a separate constant.": [
-    "The term ",
+  "Read the number multiplying x. The constant 0.5 stands on its own.": [
+    "Read the number multiplying ",
     {
-      "latex": "\\sqrt{2} x",
-      "fallback": "√2 x"
+      "latex": "x",
+      "fallback": "x"
     },
-    " has coefficient square-root two; ",
+    ". The constant ",
     {
       "latex": "0.5",
       "fallback": "0.5"
     },
-    " is a separate constant."
+    " stands on its own."
   ],
-  "The x term is negative seven-halves times x, so the second coefficient is −7/2.": [
-    "The ",
+  "Read the signed number multiplying x. Keep the minus sign with the fraction.": [
+    "Read the signed number multiplying ",
     {
       "latex": "x",
       "fallback": "x"
     },
-    " term is negative seven-halves times ",
-    {
-      "latex": "x",
-      "fallback": "x"
-    },
-    ", so the second coefficient is ",
-    {
-      "latex": "\\dfrac{- 7}{2}",
-      "fallback": "−7/2"
-    },
-    "."
+    ". Keep the minus sign with the fraction."
   ],
   "Divide each term in the numerator by x squared; this calculation requires x to be nonzero.": [
     "Divide each term in the numerator by ",

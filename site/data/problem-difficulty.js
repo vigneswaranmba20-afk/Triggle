@@ -4297,6 +4297,132 @@ const metadata={
       "basis": "Identify the horizontal-axis intersections in the given figure.",
       "review": "implementation-audit"
     },
+    "c10-2-ex2-10-q6": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Compute 7⁴ = 2401 ≡ 1 (mod 100) and raise to power k.",
+      "review": "implementation-audit"
+    },
+    "c10-2-ex2-10-q13": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Identify the common ratio r = 2/3 of the G.P. and multiply the fourth term.",
+      "review": "implementation-audit"
+    },
+    "c10-2-ex2-10-q15": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Apply the sum of first n cubes and first n natural numbers for n = 15 and subtract.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q1": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor n² − n = n(n − 1) and prove divisibility by 2 across even and odd cases.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q2-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Compute HCF(175, 105) = 35 litres using Euclid's division algorithm.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q2-ii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Divide 175 litres of cow's milk by the 35-litre can capacity.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q2-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Divide 105 litres of buffalo's milk by the 35-litre can capacity.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q3": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Combine given remainders modulo 13 into a + 2b + 3c and reduce 53 modulo 13.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q4": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Apply Euclid's division lemma to express 107 as 4(26) + 3.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q5": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Express the first term a in terms of m, n, d from t_{m+1} = 2t_{n+1} and prove t_{3m+1} = 2t_{m+n+1}.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q6": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Use l − (k − 1)d to find the 12th term from the end of a finite A.P.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q7": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Compare nth-term expressions of two A.P.s sharing a common difference d.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q8": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Model 10-year increasing savings as an A.P. sum and solve for the first term a.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q9": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Determine r and a from the ratio of the 6th and 2nd G.P. terms with radicals.",
+      "review": "implementation-audit"
+    },
+    "c10-2-unit-q10": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Compute 3-year compound depreciation at 15% per year from ₹45,000.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-1-q2-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Eliminate variables in a 3-variable linear system to reach the identity 0 = 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-1-q2-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Rewrite equations in standard form and eliminate to expose an inconsistent contradiction.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-1-q2-iii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Convert a chain of equal ratios with x + y + z = 27 into a unique 3-variable solution.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-1-q3": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Translate a 3-generation age problem with fractional sums into a 3-variable linear system.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-1-q4": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Formulate place-value digit-reversal equations in three variables and solve for the three-digit number.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-1-q5": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Model currency counts and interchanged denominations as a 3-variable linear system.",
+      "review": "implementation-audit"
+    }
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."

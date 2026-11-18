@@ -61,3 +61,114 @@
    padding:.28em .08em .4em;
  }
 }
+
+/* Class 9 reader rhythm, shared by every chapter. Mobile declarations match
+   the specificity of the existing pinned reader overrides. */
+body.g9-math-first #lessonCard > #questionText {
+  font-size: clamp(18px, 4.5vw, 20px) !important;
+  line-height: 1.55 !important;
+  font-weight: 600;
+}
+body.g9-math-first #lessonCard .step-reason {
+  font-size: clamp(16px, 4vw, 18px) !important;
+  line-height: 1.55 !important;
+  margin-bottom: .1em;
+  color: var(--bond-charcoal);
+}
+body.g9-math-first #lessonCard .lesson-divider {
+  margin: 7px 0 6px !important;
+  padding-top: 9px !important;
+}
+body.g9-math-first #lessonCard .lesson-divider > [data-i18n="stepByStep"] {
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: normal;
+  color: var(--bond-graphite);
+}
+body.g9-math-first #lessonCard .worked-step {
+  grid-template-columns: 25px minmax(0, 1fr);
+  gap: 9px;
+  padding: 7px 0 !important;
+}
+body.g9-math-first #lessonCard .step-circle {
+  width: 25px;
+  height: 25px;
+  background: var(--bond-tint);
+  color: var(--bond-muted);
+  font-size: 12px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+body.g9-math-first #lessonCard .step-equation,
+body.g9-math-first #lessonCard .final-answer-value {
+  font-size: clamp(19px, 4.7vw, 22px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--bond-graphite);
+}
+body.g9-math-first #lessonCard .step-equation:empty { display: none; }
+
+/* Inline flex exposes the mathematical baseline even on a scroll container.
+   Keep the same box geometry before and after it becomes keyboard focusable. */
+body.g9-math-first #lessonCard .triggle-tex:not(.triggle-tex-display) {
+  display: inline-flex;
+  align-items: baseline;
+  vertical-align: baseline;
+  padding: .06em .15em;
+}
+body.g9-math-first #lessonCard :is(#questionText, .structured-equation, .final-answer-value, #answerText) .triggle-tex-display {
+  font-size: clamp(19px, 4.7vw, 22px);
+  margin: .08em 0;
+  padding: .16em .12em .22em;
+  text-align: left;
+  scrollbar-width: thin;
+}
+body.g9-math-first #lessonCard :is(#questionText, .structured-equation, .final-answer-value, #answerText) .triggle-tex-display :is(.katex-display, .katex) {
+  text-align: left;
+}
+body.g9-math-first #lessonCard :is(#questionText, .structured-equation, .final-answer-value, #answerText) .triggle-tex-display .katex {
+  font-size: 1.05em;
+}
+body.g9-math-first #questionText .g9-question-option {
+  display: inline-block;
+  max-width: 100%;
+}
+body.g9-math-first #lessonCard .triggle-tex[tabindex]:focus-visible {
+  outline-color: var(--bond-burgundy);
+}
+body.g9-math-first #lessonCard .final-answer-step {
+  margin: 10px 0 0;
+  border: 0;
+  border-top: 1px solid var(--bond-border);
+  border-radius: 0;
+  background: transparent;
+}
+body.g9-math-first #lessonCard .final-answer-step .step-circle {
+  background: #EFF8F4;
+  color: var(--bond-emerald);
+}
+body.g9-math-first #lessonCard .final-answer-label {
+  margin: 1px 0 2px;
+  font-size: 15px;
+  font-weight: 650;
+  color: var(--bond-emerald);
+}
+
+/* Existing Grade 9 concept and activity pages use the same reading scale. */
+body.g9-math-first #chapterOverview :is(.sp2-idea, .sp2-example, .sp2-recall > p, .task-question, .task-answer),
+body.g9-math-first #chapterOverview .rnlab .rnlab-step-content p {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: var(--bond-charcoal);
+}
+body.g9-math-first #chapterOverview .sp2-concept-question {
+  font-size: clamp(17px, 4.4vw, 19px) !important;
+}
+body.g9-math-first #chapterOverview .sp2-formula .triggle-tex { font-size: 18px; }
+
+@media (max-width: 800px) {
+  body.g9-math-first.textbook-reader { touch-action: auto !important; }
+  body.g9-math-first #lessonCard .triggle-tex[tabindex] {
+    scroll-margin-block: 108px var(--triggle-reader-dock-height, 70px);
+  }
+}

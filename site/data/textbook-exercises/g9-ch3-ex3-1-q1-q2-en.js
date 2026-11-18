@@ -17,14 +17,15 @@ const entries=[
       "en": "Is it a polynomial? · (i)"
     },
     "q": {
-      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(i) (i) 1/x² + 3x − 4"
+      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(i) 1/x² + 3x − 4"
     },
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(i) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "\\frac{1}{x^2}+3x-4",
-          "fallback": "(i) 1/x² + 3x − 4"
+          "latex": "\\text{(i)}\\quad \\frac{1}{x^2}+3x-4",
+          "fallback": "(i) 1/x² + 3x − 4",
+          "display": true
         }
       ]
     },
@@ -111,14 +112,15 @@ const entries=[
       "en": "Is it a polynomial? · (ii)"
     },
     "q": {
-      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(ii) (ii) x²(x − 1)"
+      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(ii) x²(x − 1)"
     },
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(ii) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "x^2(x-1)",
-          "fallback": "(ii) x²(x − 1)"
+          "latex": "\\text{(ii)}\\quad x^2(x-1)",
+          "fallback": "(ii) x²(x − 1)",
+          "display": true
         }
       ]
     },
@@ -205,14 +207,15 @@ const entries=[
       "en": "Is it a polynomial? · (iii)"
     },
     "q": {
-      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(iii) (iii) (1/x)(x + 5)"
+      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(iii) (1/x)(x + 5)"
     },
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(iii) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "\\frac{1}{x}(x+5)",
-          "fallback": "(iii) (1/x)(x + 5)"
+          "latex": "\\text{(iii)}\\quad \\frac{1}{x}(x+5)",
+          "fallback": "(iii) (1/x)(x + 5)",
+          "display": true
         }
       ]
     },
@@ -226,7 +229,19 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "Distribute 1/x across the two terms inside (x + 5); the original expression requires x to be nonzero."
+          "en": [
+            "Distribute ",
+            {
+              "latex": "\\frac{1}{x}",
+              "fallback": "1/x"
+            },
+            " across the two terms inside ",
+            {
+              "latex": "(x+5)",
+              "fallback": "(x + 5)"
+            },
+            "; the original expression requires x to be nonzero."
+          ]
         }
       },
       {
@@ -238,7 +253,24 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "Simplify x/x to one and rewrite 5/x with exponent −1."
+          "en": [
+            "Simplify ",
+            {
+              "latex": "\\frac{x}{x}",
+              "fallback": "x/x"
+            },
+            " to one and rewrite ",
+            {
+              "latex": "\\frac{5}{x}",
+              "fallback": "5/x"
+            },
+            " with exponent ",
+            {
+              "latex": "-1",
+              "fallback": "−1"
+            },
+            "."
+          ]
         }
       },
       {
@@ -299,14 +331,15 @@ const entries=[
       "en": "Is it a polynomial? · (iv)"
     },
     "q": {
-      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(iv) (iv) 1/x⁻² + 1/x⁻¹ + 7"
+      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(iv) 1/x⁻² + 1/x⁻¹ + 7"
     },
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(iv) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "\\frac{1}{x^{-2}}+\\frac{1}{x^{-1}}+7",
-          "fallback": "(iv) 1/x⁻² + 1/x⁻¹ + 7"
+          "latex": "\\text{(iv)}\\quad \\frac{1}{x^{-2}}+\\frac{1}{x^{-1}}+7",
+          "fallback": "(iv) 1/x⁻² + 1/x⁻¹ + 7",
+          "display": true
         }
       ]
     },
@@ -393,14 +426,15 @@ const entries=[
       "en": "Is it a polynomial? · (v)"
     },
     "q": {
-      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(v) (v) √5 x² + √3 x + √2"
+      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(v) √5 x² + √3 x + √2"
     },
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(v) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "\\sqrt5\\,x^2+\\sqrt3\\,x+\\sqrt2",
-          "fallback": "(v) √5 x² + √3 x + √2"
+          "latex": "\\text{(v)}\\quad \\sqrt5\\,x^2+\\sqrt3\\,x+\\sqrt2",
+          "fallback": "(v) √5 x² + √3 x + √2",
+          "display": true
         }
       ]
     },
@@ -487,14 +521,15 @@ const entries=[
       "en": "Is it a polynomial? · (vi)"
     },
     "q": {
-      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(vi) (vi) m² − ∛m + 7m − 10"
+      "en": "1. Which of the following expressions are polynomials? If not give reason:\n(vi) m² − ∛m + 7m − 10"
     },
     "questionMath": {
       "en": [
-        "1. Which of the following expressions are polynomials? If not give reason:\n(vi) ",
+        "1. Which of the following expressions are polynomials? If not give reason:\n",
         {
-          "latex": "m^2-\\sqrt[3]{m}+7m-10",
-          "fallback": "(vi) m² − ∛m + 7m − 10"
+          "latex": "\\text{(vi)}\\quad m^2-\\sqrt[3]{m}+7m-10",
+          "fallback": "(vi) m² − ∛m + 7m − 10",
+          "display": true
         }
       ]
     },
@@ -581,58 +616,95 @@ const entries=[
       "en": "Find the coefficients · (i)"
     },
     "q": {
-      "en": "2. Write the coefficient of x² and x in each of the following polynomials.\n(i) (i) 4 + (2/5)x² − 3x"
+      "en": "2. Write the coefficient of x² and x in each of the following polynomials.\n(i) 4 + (2/5)x² − 3x"
     },
     "questionMath": {
       "en": [
-        "2. Write the coefficient of x² and x in each of the following polynomials.\n(i) ",
+        "2. Write the coefficient of ",
         {
-          "latex": "4+\\frac25x^2-3x",
-          "fallback": "(i) 4 + (2/5)x² − 3x"
+          "latex": "x^2",
+          "fallback": "x²"
+        },
+        " and ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(i)}\\quad 4+\\frac25x^2-3x",
+          "fallback": "(i) 4 + (2/5)x² − 3x",
+          "display": true
         }
       ]
     },
     "steps": [
       {
-        "en": "The coefficient is the number multiplying the specified power of x, including its sign.",
-        "eq": "coefficient × power",
+        "en": "Identify the terms containing x² and x. A coefficient is the number multiplying a variable term, including its sign.",
+        "eq": "(2/5)x² and −3x",
         "math": {
-          "latex": "a\\cdot x^n",
-          "fallback": "coefficient × power",
+          "latex": "\\frac{2}{5}x^2\\qquad-3x",
+          "fallback": "(2/5)x² and −3x",
           "display": true
         },
         "reasonMath": {
-          "en": "The coefficient is the number multiplying the specified power of x, including its sign."
+          "en": [
+            "Identify the terms containing ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". A coefficient is the number multiplying a variable term, including its sign."
+          ]
         }
       },
       {
-        "en": "The x-squared term is (2/5)x², so its coefficient is two-fifths.",
-        "eq": "coefficient of x² = 2/5",
+        "en": "Read the signed number that multiplies x².",
+        "eq": "(2/5)x² ⇒ 2/5",
         "math": {
-          "latex": "a_{x^2}=\\frac25",
-          "fallback": "coefficient of x² = 2/5",
+          "latex": "\\frac{2}{5}x^2\\;\\Rightarrow\\;\\frac{2}{5}",
+          "fallback": "(2/5)x² ⇒ 2/5",
           "display": true
         },
         "reasonMath": {
-          "en": "The x-squared term is (2/5)x², so its coefficient is two-fifths."
+          "en": [
+            "Read the signed number that multiplies ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            "."
+          ]
         }
       },
       {
-        "en": "The x term is −3x, so its coefficient is negative three. The separate constant 4 is not part of either requested coefficient.",
-        "eq": "coefficient of x = −3",
+        "en": "Read the signed number multiplying x. The constant 4 stands on its own.",
+        "eq": "−3x ⇒ −3",
         "math": {
-          "latex": "a_x=-3",
-          "fallback": "coefficient of x = −3",
+          "latex": "-3x\\;\\Rightarrow\\;-3",
+          "fallback": "−3x ⇒ −3",
           "display": true
         },
         "reasonMath": {
-          "en": "The x term is −3x, so its coefficient is negative three. The separate constant 4 is not part of either requested coefficient."
+          "en": [
+            "Read the signed number multiplying ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". The constant 4 stands on its own."
+          ]
         }
       }
     ],
     "answer": "Coefficient of x²: 2/5; coefficient of x: −3",
     "answerMath": {
-      "latex": "a_{x^2}=\\frac25,\\ a_x=-3",
+      "latex": "\\boxed{\\frac{2}{5}\\text{ and }-3}",
       "fallback": "Coefficient of x²: 2/5; coefficient of x: −3",
       "display": true
     },
@@ -675,58 +747,100 @@ const entries=[
       "en": "Find the coefficients · (ii)"
     },
     "q": {
-      "en": "2. Write the coefficient of x² and x in each of the following polynomials.\n(ii) (ii) 6 − 2x² + 3x³ − √7 x"
+      "en": "2. Write the coefficient of x² and x in each of the following polynomials.\n(ii) 6 − 2x² + 3x³ − √7 x"
     },
     "questionMath": {
       "en": [
-        "2. Write the coefficient of x² and x in each of the following polynomials.\n(ii) ",
+        "2. Write the coefficient of ",
         {
-          "latex": "6-2x^2+3x^3-\\sqrt7\\,x",
-          "fallback": "(ii) 6 − 2x² + 3x³ − √7 x"
+          "latex": "x^2",
+          "fallback": "x²"
+        },
+        " and ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(ii)}\\quad 6-2x^2+3x^3-\\sqrt7\\,x",
+          "fallback": "(ii) 6 − 2x² + 3x³ − √7 x",
+          "display": true
         }
       ]
     },
     "steps": [
       {
-        "en": "Locate the term multiplying x squared; the minus sign belongs to the coefficient.",
-        "eq": "−2x²",
+        "en": "Identify the terms containing x² and x. The constant 6 and the x³ term are separate.",
+        "eq": "−2x² and −√7 x",
         "math": {
-          "latex": "-2x^2",
-          "fallback": "−2x²",
+          "latex": "-2x^2\\qquad-\\sqrt{7}\\,x",
+          "fallback": "−2x² and −√7 x",
           "display": true
         },
         "reasonMath": {
-          "en": "Locate the term multiplying x squared; the minus sign belongs to the coefficient."
+          "en": [
+            "Identify the terms containing ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". The constant 6 and the ",
+            {
+              "latex": "x^3",
+              "fallback": "x³"
+            },
+            " term are separate."
+          ]
         }
       },
       {
-        "en": "Therefore, the coefficient of x squared is negative two.",
-        "eq": "coefficient of x² = −2",
+        "en": "Read the signed number that multiplies x².",
+        "eq": "−2x² ⇒ −2",
         "math": {
-          "latex": "a_{x^2}=-2",
-          "fallback": "coefficient of x² = −2",
+          "latex": "-2x^2\\;\\Rightarrow\\;-2",
+          "fallback": "−2x² ⇒ −2",
           "display": true
         },
         "reasonMath": {
-          "en": "Therefore, the coefficient of x squared is negative two."
+          "en": [
+            "Read the signed number that multiplies ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            "."
+          ]
         }
       },
       {
-        "en": "The term with x to the first power is −√7 x, so its coefficient is negative square-root seven, not the constant six or the x-cubed coefficient.",
-        "eq": "coefficient of x = −√7",
+        "en": "Read the signed number multiplying x. Keep the minus sign in front of the square root.",
+        "eq": "−√7 x ⇒ −√7",
         "math": {
-          "latex": "a_x=-\\sqrt7",
-          "fallback": "coefficient of x = −√7",
+          "latex": "-\\sqrt{7}\\,x\\;\\Rightarrow\\;-\\sqrt{7}",
+          "fallback": "−√7 x ⇒ −√7",
           "display": true
         },
         "reasonMath": {
-          "en": "The term with x to the first power is −√7 x, so its coefficient is negative square-root seven, not the constant six or the x-cubed coefficient."
+          "en": [
+            "Read the signed number multiplying ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". Keep the minus sign in front of the square root."
+          ]
         }
       }
     ],
     "answer": "Coefficient of x²: −2; coefficient of x: −√7",
     "answerMath": {
-      "latex": "a_{x^2}=-2,\\ a_x=-\\sqrt7",
+      "latex": "\\boxed{-2\\text{ and }-\\sqrt{7}}",
       "fallback": "Coefficient of x²: −2; coefficient of x: −√7",
       "display": true
     },
@@ -769,58 +883,100 @@ const entries=[
       "en": "Find the coefficients · (iii)"
     },
     "q": {
-      "en": "2. Write the coefficient of x² and x in each of the following polynomials.\n(iii) (iii) πx² − x + 2"
+      "en": "2. Write the coefficient of x² and x in each of the following polynomials.\n(iii) πx² − x + 2"
     },
     "questionMath": {
       "en": [
-        "2. Write the coefficient of x² and x in each of the following polynomials.\n(iii) ",
+        "2. Write the coefficient of ",
         {
-          "latex": "\\pi x^2-x+2",
-          "fallback": "(iii) πx² − x + 2"
+          "latex": "x^2",
+          "fallback": "x²"
+        },
+        " and ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(iii)}\\quad \\pi x^2-x+2",
+          "fallback": "(iii) πx² − x + 2",
+          "display": true
         }
       ]
     },
     "steps": [
       {
-        "en": "Pi is a real constant, so it can be the coefficient multiplying x squared.",
-        "eq": "πx²",
+        "en": "Identify the terms containing x² and x. Pi is a real number, so it can be a coefficient.",
+        "eq": "πx² and −x",
         "math": {
-          "latex": "\\pi x^2",
-          "fallback": "πx²",
+          "latex": "\\pi x^2\\qquad-x",
+          "fallback": "πx² and −x",
           "display": true
         },
         "reasonMath": {
-          "en": "Pi is a real constant, so it can be the coefficient multiplying x squared."
+          "en": [
+            "Identify the terms containing ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". Pi is a real number, so it can be a coefficient."
+          ]
         }
       },
       {
-        "en": "The coefficient of x squared is pi.",
-        "eq": "coefficient of x² = π",
+        "en": "Read the signed number that multiplies x².",
+        "eq": "πx² ⇒ π",
         "math": {
-          "latex": "a_{x^2}=\\pi",
-          "fallback": "coefficient of x² = π",
+          "latex": "\\pi x^2\\;\\Rightarrow\\;\\pi",
+          "fallback": "πx² ⇒ π",
           "display": true
         },
         "reasonMath": {
-          "en": "The coefficient of x squared is pi."
+          "en": [
+            "Read the signed number that multiplies ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            "."
+          ]
         }
       },
       {
-        "en": "A bare −x means −1 times x, so its coefficient is negative one.",
-        "eq": "coefficient of x = −1",
+        "en": "Write −x as negative one times x, then read the coefficient.",
+        "eq": "−x = −1·x ⇒ −1",
         "math": {
-          "latex": "a_x=-1",
-          "fallback": "coefficient of x = −1",
+          "latex": "-x=-1\\cdot x\\;\\Rightarrow\\;-1",
+          "fallback": "−x = −1·x ⇒ −1",
           "display": true
         },
         "reasonMath": {
-          "en": "A bare −x means −1 times x, so its coefficient is negative one."
+          "en": [
+            "Write ",
+            {
+              "latex": "-x",
+              "fallback": "−x"
+            },
+            " as negative one times ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ", then read the coefficient."
+          ]
         }
       }
     ],
     "answer": "Coefficient of x²: π; coefficient of x: −1",
     "answerMath": {
-      "latex": "a_{x^2}=\\pi,\\ a_x=-1",
+      "latex": "\\boxed{\\pi\\text{ and }-1}",
       "fallback": "Coefficient of x²: π; coefficient of x: −1",
       "display": true
     },
@@ -863,58 +1019,95 @@ const entries=[
       "en": "Find the coefficients · (iv)"
     },
     "q": {
-      "en": "2. Write the coefficient of x² and x in each of the following polynomials.\n(iv) (iv) √3 x² + √2 x + 0.5"
+      "en": "2. Write the coefficient of x² and x in each of the following polynomials.\n(iv) √3 x² + √2 x + 0.5"
     },
     "questionMath": {
       "en": [
-        "2. Write the coefficient of x² and x in each of the following polynomials.\n(iv) ",
+        "2. Write the coefficient of ",
         {
-          "latex": "\\sqrt3\\,x^2+\\sqrt2\\,x+0.5",
-          "fallback": "(iv) √3 x² + √2 x + 0.5"
+          "latex": "x^2",
+          "fallback": "x²"
+        },
+        " and ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(iv)}\\quad \\sqrt3\\,x^2+\\sqrt2\\,x+0.5",
+          "fallback": "(iv) √3 x² + √2 x + 0.5",
+          "display": true
         }
       ]
     },
     "steps": [
       {
-        "en": "A square-root number can be a real coefficient even though it is irrational.",
-        "eq": "√3, √2 ∈ ℝ",
+        "en": "Identify the terms containing x² and x. The square roots are real numbers, so they can be coefficients.",
+        "eq": "√3 x² and √2 x",
         "math": {
-          "latex": "\\sqrt3,\\sqrt2\\in\\mathbb{R}",
-          "fallback": "√3, √2 ∈ ℝ",
+          "latex": "\\sqrt{3}\\,x^2\\qquad\\sqrt{2}\\,x",
+          "fallback": "√3 x² and √2 x",
           "display": true
         },
         "reasonMath": {
-          "en": "A square-root number can be a real coefficient even though it is irrational."
+          "en": [
+            "Identify the terms containing ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". The square roots are real numbers, so they can be coefficients."
+          ]
         }
       },
       {
-        "en": "The term √3 x² has coefficient square-root three.",
-        "eq": "coefficient of x² = √3",
+        "en": "Read the signed number that multiplies x².",
+        "eq": "√3 x² ⇒ √3",
         "math": {
-          "latex": "a_{x^2}=\\sqrt3",
-          "fallback": "coefficient of x² = √3",
+          "latex": "\\sqrt{3}\\,x^2\\;\\Rightarrow\\;\\sqrt{3}",
+          "fallback": "√3 x² ⇒ √3",
           "display": true
         },
         "reasonMath": {
-          "en": "The term √3 x² has coefficient square-root three."
+          "en": [
+            "Read the signed number that multiplies ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            "."
+          ]
         }
       },
       {
-        "en": "The term √2 x has coefficient square-root two; 0.5 is a separate constant.",
-        "eq": "coefficient of x = √2",
+        "en": "Read the number multiplying x. The constant 0.5 stands on its own.",
+        "eq": "√2 x ⇒ √2",
         "math": {
-          "latex": "a_x=\\sqrt2",
-          "fallback": "coefficient of x = √2",
+          "latex": "\\sqrt{2}\\,x\\;\\Rightarrow\\;\\sqrt{2}",
+          "fallback": "√2 x ⇒ √2",
           "display": true
         },
         "reasonMath": {
-          "en": "The term √2 x has coefficient square-root two; 0.5 is a separate constant."
+          "en": [
+            "Read the number multiplying ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". The constant 0.5 stands on its own."
+          ]
         }
       }
     ],
     "answer": "Coefficient of x²: √3; coefficient of x: √2",
     "answerMath": {
-      "latex": "a_{x^2}=\\sqrt3,\\ a_x=\\sqrt2",
+      "latex": "\\boxed{\\sqrt{3}\\text{ and }\\sqrt{2}}",
       "fallback": "Coefficient of x²: √3; coefficient of x: √2",
       "display": true
     },
@@ -957,58 +1150,100 @@ const entries=[
       "en": "Find the coefficients · (v)"
     },
     "q": {
-      "en": "2. Write the coefficient of x² and x in each of the following polynomials.\n(v) (v) x² − (7/2)x + 8"
+      "en": "2. Write the coefficient of x² and x in each of the following polynomials.\n(v) x² − (7/2)x + 8"
     },
     "questionMath": {
       "en": [
-        "2. Write the coefficient of x² and x in each of the following polynomials.\n(v) ",
+        "2. Write the coefficient of ",
         {
-          "latex": "x^2-\\frac72x+8",
-          "fallback": "(v) x² − (7/2)x + 8"
+          "latex": "x^2",
+          "fallback": "x²"
+        },
+        " and ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(v)}\\quad x^2-\\frac72x+8",
+          "fallback": "(v) x² − (7/2)x + 8",
+          "display": true
         }
       ]
     },
     "steps": [
       {
-        "en": "When x squared has no number written before it, the implied coefficient is one.",
-        "eq": "x² = 1·x²",
+        "en": "Identify the terms containing x² and x. When there is no number written before x², its coefficient is one.",
+        "eq": "x² and −(7/2)x",
         "math": {
-          "latex": "x^2=1\\cdot x^2",
-          "fallback": "x² = 1·x²",
+          "latex": "x^2\\qquad-\\frac{7}{2}x",
+          "fallback": "x² and −(7/2)x",
           "display": true
         },
         "reasonMath": {
-          "en": "When x squared has no number written before it, the implied coefficient is one."
+          "en": [
+            "Identify the terms containing ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". When there is no number written before ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            ", its coefficient is one."
+          ]
         }
       },
       {
-        "en": "Read the x-squared coefficient as one.",
-        "eq": "coefficient of x² = 1",
+        "en": "Read the signed number that multiplies x².",
+        "eq": "x² = 1·x² ⇒ 1",
         "math": {
-          "latex": "a_{x^2}=1",
-          "fallback": "coefficient of x² = 1",
+          "latex": "x^2=1\\cdot x^2\\;\\Rightarrow\\;1",
+          "fallback": "x² = 1·x² ⇒ 1",
           "display": true
         },
         "reasonMath": {
-          "en": "Read the x-squared coefficient as one."
+          "en": [
+            "Read the signed number that multiplies ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            "."
+          ]
         }
       },
       {
-        "en": "The x term is negative seven-halves times x, so the second coefficient is −7/2.",
-        "eq": "coefficient of x = −7/2",
+        "en": "Read the signed number multiplying x. Keep the minus sign with the fraction.",
+        "eq": "−(7/2)x ⇒ −7/2",
         "math": {
-          "latex": "a_x=-\\frac72",
-          "fallback": "coefficient of x = −7/2",
+          "latex": "-\\frac{7}{2}x\\;\\Rightarrow\\;-\\frac{7}{2}",
+          "fallback": "−(7/2)x ⇒ −7/2",
           "display": true
         },
         "reasonMath": {
-          "en": "The x term is negative seven-halves times x, so the second coefficient is −7/2."
+          "en": [
+            "Read the signed number multiplying ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". Keep the minus sign with the fraction."
+          ]
         }
       }
     ],
     "answer": "Coefficient of x²: 1; coefficient of x: −7/2",
     "answerMath": {
-      "latex": "a_{x^2}=1,\\ a_x=-\\frac72",
+      "latex": "\\boxed{1\\text{ and }-\\frac{7}{2}}",
       "fallback": "Coefficient of x²: 1; coefficient of x: −7/2",
       "display": true
     },

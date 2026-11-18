@@ -9,7 +9,7 @@ const normalize=s=>String(s??'').replace(/\s+/g,' ').trim();
 async function inspect(page,q,lang){
  const state=await page.evaluate(({q,lang})=>{
   const p=window.TriggleG9Math.get(q);
-  const count=v=>Array.isArray(v)?v.reduce((n,x)=>n+count(x),0):v?.latex?1:0;
+  const count=v=>Array.isArray(v)?v.reduce((n,x)=>n+count(x),0):v?.questionOption?count(v.questionOption):v?.latex?1:0;
   const fallback=selector=>{const el=document.querySelector(selector)?.cloneNode(true);if(!el)return null;
    el.querySelectorAll('.triggle-tex').forEach(math=>math.replaceWith(document.createTextNode(math.dataset.mathFallback)));
    el.querySelectorAll('math.triggle-math[aria-label]').forEach(math=>math.replaceWith(document.createTextNode(math.getAttribute('aria-label'))));

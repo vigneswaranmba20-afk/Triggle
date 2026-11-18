@@ -48,6 +48,7 @@
   }
   function render(value,options={}) {
     if(Array.isArray(value))return value.map(item=>render(item,options)).join('');
+    if(value?.questionOption)return '<span class="g9-question-option">'+render(value.questionOption,options)+'</span>';
     if(value && typeof value==='object')return renderLatex(value.latex,{displayMode:value.display===true,fallback:value.fallback});
     const tokens=[];
     const stash=html=>{tokens.push(html);return '\uE000N'+(tokens.length-1)+'\uE001';};

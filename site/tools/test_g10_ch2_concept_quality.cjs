@@ -86,6 +86,6 @@ const studentLabHtml=read('index.html');
 const studentLabSW=read('service-worker.js');
 assert(studentLabHtml.includes('assets/g10-ch2-foundations.css'),'HCF/GP mobile styling remains loaded');
 assert(studentLabHtml.includes('assets/chapter-hub.js'),'Concept behavior remains loaded');
-assert(studentLabSW.includes("const CACHE='triggle-student-lab-hcf-gp-20261118-g9ex32'"),'Offline cache invalidates old lesson assets');
+assert(studentLabSW.includes("const CACHE='triggle-g9-math-first-student-lab-hcf-gp-20261118-g9ex32'"),'Offline cache invalidates old lesson assets');
 
 console.log('PASS G10 Ch2 quality: 15 bilingual concepts, 7 targeted teaching repairs and functional cycle/sequence visuals, formulas and lab models');

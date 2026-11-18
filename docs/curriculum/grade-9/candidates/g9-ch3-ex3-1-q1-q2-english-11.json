@@ -20,7 +20,8 @@
     "Q1(iv) follows textbook's 'polynomial' classification after algebraic simplification; original expression is undefined at x = 0 and that caveat must be retained.",
     "Textbook answer appendix PDF page 316 confirms Q1 classification and Q2 coefficients.",
     "These are not counted as deployed or released until app integration, full tests and live Pages validation.",
-    "Student module now loaded in site/index.html on integration branch; source registration is NOT yet a live Pages deployment."
+    "Student module now loaded in site/index.html on integration branch; source registration is NOT yet a live Pages deployment.",
+    "The 2025 Tamil question and answer-key page images confirm the same mathematics as the English pages. English worked explanations were revised; Tamil translation and teacher review are still pending."
   ],
   "rows": [
     {
@@ -247,7 +248,7 @@
       "sourceEnglish": "(i) 4 + (2/5)x² − 3x",
       "sourceMathLatex": "4+\\frac25x^2-3x",
       "answer": "Coefficient of x²: 2/5; coefficient of x: −3",
-      "answerMathLatex": "a_{x^2}=\\frac25,\\ a_x=-3",
+      "answerMathLatex": "\\boxed{\\frac{2}{5}\\text{ and }-3}",
       "sourceEvidence": {
         "printedPage": 87,
         "pdfPage": 93,
@@ -256,19 +257,19 @@
       },
       "steps": [
         {
-          "reason": "The coefficient is the number multiplying the specified power of x, including its sign.",
-          "equation": "coefficient × power",
-          "mathLatex": "a\\cdot x^n"
+          "reason": "Identify the terms containing x² and x. A coefficient is the number multiplying a variable term, including its sign.",
+          "equation": "(2/5)x² and −3x",
+          "mathLatex": "\\frac{2}{5}x^2\\qquad-3x"
         },
         {
-          "reason": "The x-squared term is (2/5)x², so its coefficient is two-fifths.",
-          "equation": "coefficient of x² = 2/5",
-          "mathLatex": "a_{x^2}=\\frac25"
+          "reason": "Read the signed number that multiplies x².",
+          "equation": "(2/5)x² ⇒ 2/5",
+          "mathLatex": "\\frac{2}{5}x^2\\;\\Rightarrow\\;\\frac{2}{5}"
         },
         {
-          "reason": "The x term is −3x, so its coefficient is negative three. The separate constant 4 is not part of either requested coefficient.",
-          "equation": "coefficient of x = −3",
-          "mathLatex": "a_x=-3"
+          "reason": "Read the signed number multiplying x. The constant 4 stands on its own.",
+          "equation": "−3x ⇒ −3",
+          "mathLatex": "-3x\\;\\Rightarrow\\;-3"
         }
       ],
       "translationReview": "pending",
@@ -283,7 +284,7 @@
       "sourceEnglish": "(ii) 6 − 2x² + 3x³ − √7 x",
       "sourceMathLatex": "6-2x^2+3x^3-\\sqrt7\\,x",
       "answer": "Coefficient of x²: −2; coefficient of x: −√7",
-      "answerMathLatex": "a_{x^2}=-2,\\ a_x=-\\sqrt7",
+      "answerMathLatex": "\\boxed{-2\\text{ and }-\\sqrt{7}}",
       "sourceEvidence": {
         "printedPage": 87,
         "pdfPage": 93,
@@ -292,19 +293,19 @@
       },
       "steps": [
         {
-          "reason": "Locate the term multiplying x squared; the minus sign belongs to the coefficient.",
-          "equation": "−2x²",
-          "mathLatex": "-2x^2"
+          "reason": "Identify the terms containing x² and x. The constant 6 and the x³ term are separate.",
+          "equation": "−2x² and −√7 x",
+          "mathLatex": "-2x^2\\qquad-\\sqrt{7}\\,x"
         },
         {
-          "reason": "Therefore, the coefficient of x squared is negative two.",
-          "equation": "coefficient of x² = −2",
-          "mathLatex": "a_{x^2}=-2"
+          "reason": "Read the signed number that multiplies x².",
+          "equation": "−2x² ⇒ −2",
+          "mathLatex": "-2x^2\\;\\Rightarrow\\;-2"
         },
         {
-          "reason": "The term with x to the first power is −√7 x, so its coefficient is negative square-root seven, not the constant six or the x-cubed coefficient.",
-          "equation": "coefficient of x = −√7",
-          "mathLatex": "a_x=-\\sqrt7"
+          "reason": "Read the signed number multiplying x. Keep the minus sign in front of the square root.",
+          "equation": "−√7 x ⇒ −√7",
+          "mathLatex": "-\\sqrt{7}\\,x\\;\\Rightarrow\\;-\\sqrt{7}"
         }
       ],
       "translationReview": "pending",
@@ -319,7 +320,7 @@
       "sourceEnglish": "(iii) πx² − x + 2",
       "sourceMathLatex": "\\pi x^2-x+2",
       "answer": "Coefficient of x²: π; coefficient of x: −1",
-      "answerMathLatex": "a_{x^2}=\\pi,\\ a_x=-1",
+      "answerMathLatex": "\\boxed{\\pi\\text{ and }-1}",
       "sourceEvidence": {
         "printedPage": 87,
         "pdfPage": 93,
@@ -328,19 +329,19 @@
       },
       "steps": [
         {
-          "reason": "Pi is a real constant, so it can be the coefficient multiplying x squared.",
-          "equation": "πx²",
-          "mathLatex": "\\pi x^2"
+          "reason": "Identify the terms containing x² and x. Pi is a real number, so it can be a coefficient.",
+          "equation": "πx² and −x",
+          "mathLatex": "\\pi x^2\\qquad-x"
         },
         {
-          "reason": "The coefficient of x squared is pi.",
-          "equation": "coefficient of x² = π",
-          "mathLatex": "a_{x^2}=\\pi"
+          "reason": "Read the signed number that multiplies x².",
+          "equation": "πx² ⇒ π",
+          "mathLatex": "\\pi x^2\\;\\Rightarrow\\;\\pi"
         },
         {
-          "reason": "A bare −x means −1 times x, so its coefficient is negative one.",
-          "equation": "coefficient of x = −1",
-          "mathLatex": "a_x=-1"
+          "reason": "Write −x as negative one times x, then read the coefficient.",
+          "equation": "−x = −1·x ⇒ −1",
+          "mathLatex": "-x=-1\\cdot x\\;\\Rightarrow\\;-1"
         }
       ],
       "translationReview": "pending",
@@ -355,7 +356,7 @@
       "sourceEnglish": "(iv) √3 x² + √2 x + 0.5",
       "sourceMathLatex": "\\sqrt3\\,x^2+\\sqrt2\\,x+0.5",
       "answer": "Coefficient of x²: √3; coefficient of x: √2",
-      "answerMathLatex": "a_{x^2}=\\sqrt3,\\ a_x=\\sqrt2",
+      "answerMathLatex": "\\boxed{\\sqrt{3}\\text{ and }\\sqrt{2}}",
       "sourceEvidence": {
         "printedPage": 87,
         "pdfPage": 93,
@@ -364,19 +365,19 @@
       },
       "steps": [
         {
-          "reason": "A square-root number can be a real coefficient even though it is irrational.",
-          "equation": "√3, √2 ∈ ℝ",
-          "mathLatex": "\\sqrt3,\\sqrt2\\in\\mathbb{R}"
+          "reason": "Identify the terms containing x² and x. The square roots are real numbers, so they can be coefficients.",
+          "equation": "√3 x² and √2 x",
+          "mathLatex": "\\sqrt{3}\\,x^2\\qquad\\sqrt{2}\\,x"
         },
         {
-          "reason": "The term √3 x² has coefficient square-root three.",
-          "equation": "coefficient of x² = √3",
-          "mathLatex": "a_{x^2}=\\sqrt3"
+          "reason": "Read the signed number that multiplies x².",
+          "equation": "√3 x² ⇒ √3",
+          "mathLatex": "\\sqrt{3}\\,x^2\\;\\Rightarrow\\;\\sqrt{3}"
         },
         {
-          "reason": "The term √2 x has coefficient square-root two; 0.5 is a separate constant.",
-          "equation": "coefficient of x = √2",
-          "mathLatex": "a_x=\\sqrt2"
+          "reason": "Read the number multiplying x. The constant 0.5 stands on its own.",
+          "equation": "√2 x ⇒ √2",
+          "mathLatex": "\\sqrt{2}\\,x\\;\\Rightarrow\\;\\sqrt{2}"
         }
       ],
       "translationReview": "pending",
@@ -391,7 +392,7 @@
       "sourceEnglish": "(v) x² − (7/2)x + 8",
       "sourceMathLatex": "x^2-\\frac72x+8",
       "answer": "Coefficient of x²: 1; coefficient of x: −7/2",
-      "answerMathLatex": "a_{x^2}=1,\\ a_x=-\\frac72",
+      "answerMathLatex": "\\boxed{1\\text{ and }-\\frac{7}{2}}",
       "sourceEvidence": {
         "printedPage": 87,
         "pdfPage": 93,
@@ -400,19 +401,19 @@
       },
       "steps": [
         {
-          "reason": "When x squared has no number written before it, the implied coefficient is one.",
-          "equation": "x² = 1·x²",
-          "mathLatex": "x^2=1\\cdot x^2"
+          "reason": "Identify the terms containing x² and x. When there is no number written before x², its coefficient is one.",
+          "equation": "x² and −(7/2)x",
+          "mathLatex": "x^2\\qquad-\\frac{7}{2}x"
         },
         {
-          "reason": "Read the x-squared coefficient as one.",
-          "equation": "coefficient of x² = 1",
-          "mathLatex": "a_{x^2}=1"
+          "reason": "Read the signed number that multiplies x².",
+          "equation": "x² = 1·x² ⇒ 1",
+          "mathLatex": "x^2=1\\cdot x^2\\;\\Rightarrow\\;1"
         },
         {
-          "reason": "The x term is negative seven-halves times x, so the second coefficient is −7/2.",
-          "equation": "coefficient of x = −7/2",
-          "mathLatex": "a_x=-\\frac72"
+          "reason": "Read the signed number multiplying x. Keep the minus sign with the fraction.",
+          "equation": "−(7/2)x ⇒ −7/2",
+          "mathLatex": "-\\frac{7}{2}x\\;\\Rightarrow\\;-\\frac{7}{2}"
         }
       ],
       "translationReview": "pending",
