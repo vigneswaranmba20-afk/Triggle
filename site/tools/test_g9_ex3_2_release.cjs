@@ -109,5 +109,20 @@ for (const evidence of fidelity.items) {
     if (step.eq) checkMath(presentation.steps[i].math, step.eq);
   }
 }
+// Independent arithmetic guard: do not validate answers merely by comparing them to the source manifest.
+// These expected values are computed from the displayed polynomial definitions, not from batch answers.
+const q1Inputs = new Map([['i', 1], ['ii', -1], ['iii', 0]]);
+for (const [part, y] of q1Inputs) {
+  const actual = 6 * y - 3 * y ** 2 + 3;
+  const record = records.find(row => row.id === 'g9-ch3-ex3.2-q1-' + part);
+  assert.ok(record, 'missing Q1(' + part + ')');
+  assert.equal(record.answer, 'f(' + (y < 0 ? '−' + Math.abs(y) : y) + ') = ' + (actual < 0 ? '−' + Math.abs(actual) : actual));
+}
+// p(x)=x²−2√2 x+1 at x=2√2: (2√2)²−2√2(2√2)+1=8−8+1=1.
+const radicalInput = 2 * Math.sqrt(2);
+const radicalResult = radicalInput ** 2 - 2 * Math.sqrt(2) * radicalInput + 1;
+assert.ok(Math.abs(radicalResult - 1) < 1e-12);
+assert.equal(records.find(row => row.id === 'g9-ch3-ex3.2-q2')?.answer, 'p(2√2) = 1');
+
 assert.equal(records.filter(row => row.figureSrc).length, 5);
 console.log('PASS Grade 9 Exercise 3.2: 6 numbered questions, 22 labeled subparts, 23 checked tasks, five cached graphs, and unique source-aligned records.');
