@@ -42,6 +42,17 @@ async function main(){
     await nav.nth(1).click();
     await page.locator('.sp2-answers button').first().click();
     assert((await page.locator('[data-feedback]').innerText()).includes(language==='ta'?'சரி!':'Correct!'),'First choice is correct in second concept');
+    // Student Psychology Lab: every Euclidean step must be readable on a narrow phone.
+    assert.equal(await page.locator('.g10ch2-hcf-step').count(),3,'HCF uses three visible division steps');
+    assert.equal(await page.locator('[data-g10ch2-visual] input[type=range]').count(),0,'HCF needs no number-selection slider');
+    assert.equal(await page.locator('.sp2-formula').count(),0,'Do not clip a chained gcd equality');
+    assert((await page.locator('.g10ch2-hcf-answer').innerText()).includes('4'),'HCF ends with the last nonzero remainder');
+    assert((await page.locator('.g10ch2-hcf-step').last().innerText()).includes('0'),'HCF shows the final zero remainder');
+    for(const math of await page.locator('.g10ch2-hcf-equation').all()){
+      const bounds=await math.evaluate(el=>({width:el.clientWidth,scroll:el.scrollWidth}));
+      assert(bounds.scroll<=bounds.width+1,'HCF math must not require horizontal scrolling: '+JSON.stringify(bounds));
+    }
+    assert.equal(await page.locator('[data-math-error]').count(),0,'HCF steps render without notation errors');
     await page.locator('[data-back-index]').click();
     await nav.nth(2).click();
     assert.equal(await page.locator('.sp2-formula').count(),0,'Do not reveal shortcut before discovery');
@@ -97,6 +108,22 @@ async function main(){
     await page.locator('.sp2-nav-button').nth(7).click();
     assert((await page.locator('.sp2-formula').innerText()).includes('a'), 'Recursive rule is visible');
     assert.equal(await page.locator('[data-math-error]').count(),0,'Recursive initial terms render');
+    await page.locator('[data-back-index]').click();
+    await page.locator('.sp2-nav-button').nth(11).click();
+    assert.equal(await page.locator('[data-g10ch2-visual] input[type=range]').count(),0,'GP uses meaningful term controls');
+    const gpTerms=page.locator('.g10ch2-gp-term');
+    assert.equal(await gpTerms.count(),4,'GP displays all four terms together');
+    assert((await page.locator('.g10ch2-gp-equation').innerText()).includes('5 × 3 = 15'),'GP initially demonstrates multiplication');
+    await gpTerms.nth(3).click();
+    assert.equal(await gpTerms.nth(3).getAttribute('aria-pressed'),'true','Selected term announced to assistive tech');
+    assert((await page.locator('.g10ch2-gp-equation').innerText()).includes('45 × 3 = 135'),'Last term explains the operation');
+    await page.locator('.g10ch2-gp-actions button').first().click();
+    assert((await page.locator('.g10ch2-gp-equation').innerText()).includes('15 × 3 = 45'),'Previous restores earlier multiplication');
+    await gpTerms.first().focus();
+    await page.keyboard.press('Enter');
+    assert((await page.locator('.g10ch2-gp-equation').innerText()).trim()==='5','Keyboard selection reaches starting term');
+    assert.equal(await page.locator('[data-math-error]').count(),0,'GP formula and multiplication render cleanly');
+    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'GP fits mobile viewport without page-wide overflow');
     await page.locator('[data-back-index]').click();
     await page.locator('.sp2-nav-button').nth(12).click();
     const gpNext=page.locator('.gp-lab-actions button').last();
