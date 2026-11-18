@@ -262,12 +262,12 @@
           "mathLatex": "\\frac{2}{5}x^2\\qquad-3x"
         },
         {
-          "reason": "Read the signed number that multiplies x².",
+          "reason": "Read the signed number that multiplies x². The coefficient of x² is 2/5.",
           "equation": "(2/5)x² ⇒ 2/5",
           "mathLatex": "\\frac{2}{5}x^2\\;\\Rightarrow\\;\\frac{2}{5}"
         },
         {
-          "reason": "Read the signed number multiplying x. The constant 4 stands on its own.",
+          "reason": "Read the signed number multiplying x. The coefficient of x is −3. The constant 4 stands on its own.",
           "equation": "−3x ⇒ −3",
           "mathLatex": "-3x\\;\\Rightarrow\\;-3"
         }
@@ -298,12 +298,12 @@
           "mathLatex": "-2x^2\\qquad-\\sqrt{7}\\,x"
         },
         {
-          "reason": "Read the signed number that multiplies x².",
+          "reason": "Read the signed number that multiplies x². The coefficient of x² is −2.",
           "equation": "−2x² ⇒ −2",
           "mathLatex": "-2x^2\\;\\Rightarrow\\;-2"
         },
         {
-          "reason": "Read the signed number multiplying x. Keep the minus sign in front of the square root.",
+          "reason": "Read the signed number multiplying x. The coefficient of x is −√7. Keep the minus sign in front of the square root.",
           "equation": "−√7 x ⇒ −√7",
           "mathLatex": "-\\sqrt{7}\\,x\\;\\Rightarrow\\;-\\sqrt{7}"
         }
@@ -334,12 +334,12 @@
           "mathLatex": "\\pi x^2\\qquad-x"
         },
         {
-          "reason": "Read the signed number that multiplies x².",
+          "reason": "Read the signed number that multiplies x². The coefficient of x² is π.",
           "equation": "πx² ⇒ π",
           "mathLatex": "\\pi x^2\\;\\Rightarrow\\;\\pi"
         },
         {
-          "reason": "Write −x as negative one times x, then read the coefficient.",
+          "reason": "Write −x as negative one times x. The coefficient of x is −1.",
           "equation": "−x = −1·x ⇒ −1",
           "mathLatex": "-x=-1\\cdot x\\;\\Rightarrow\\;-1"
         }
@@ -370,12 +370,12 @@
           "mathLatex": "\\sqrt{3}\\,x^2\\qquad\\sqrt{2}\\,x"
         },
         {
-          "reason": "Read the signed number that multiplies x².",
+          "reason": "Read the signed number that multiplies x². The coefficient of x² is √3.",
           "equation": "√3 x² ⇒ √3",
           "mathLatex": "\\sqrt{3}\\,x^2\\;\\Rightarrow\\;\\sqrt{3}"
         },
         {
-          "reason": "Read the number multiplying x. The constant 0.5 stands on its own.",
+          "reason": "Read the number multiplying x. The coefficient of x is √2. The constant 0.5 stands on its own.",
           "equation": "√2 x ⇒ √2",
           "mathLatex": "\\sqrt{2}\\,x\\;\\Rightarrow\\;\\sqrt{2}"
         }
@@ -406,12 +406,12 @@
           "mathLatex": "x^2\\qquad-\\frac{7}{2}x"
         },
         {
-          "reason": "Read the signed number that multiplies x².",
+          "reason": "Read the signed number that multiplies x². The coefficient of x² is 1. The number 1 is understood even when it is not written.",
           "equation": "x² = 1·x² ⇒ 1",
           "mathLatex": "x^2=1\\cdot x^2\\;\\Rightarrow\\;1"
         },
         {
-          "reason": "Read the signed number multiplying x. Keep the minus sign with the fraction.",
+          "reason": "Read the signed number multiplying x. The coefficient of x is −7/2. Keep the minus sign with the fraction.",
           "equation": "−(7/2)x ⇒ −7/2",
           "mathLatex": "-\\frac{7}{2}x\\;\\Rightarrow\\;-\\frac{7}{2}"
         }
