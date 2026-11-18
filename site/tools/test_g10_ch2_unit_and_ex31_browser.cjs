@@ -8,7 +8,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    ['c10-2-ex2-10-q6','7^{4k}','Option (A)'],
    ['c10-2-ex2-10-q13','3/16','Option (B)'],
    ['c10-2-ex2-10-q15','15³','Option (C)'],
-   ['c10-2-unit-q1','n² − n','divisible by 2'],
+   ['c10-2-unit-q1','n² − n','multiple of 2'],
    ['c10-2-unit-q2-i','175 litres','35 litres'],
    ['c10-2-unit-q2-ii','cow’s milk','5'],
    ['c10-2-unit-q2-iii','buffalow’s milk','3'],
