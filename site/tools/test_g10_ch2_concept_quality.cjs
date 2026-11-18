@@ -82,5 +82,10 @@ const pilotCss=read('assets/g10-ch2-foundations.css');
 assert(pilotCss.includes('.g10ch2-hcf-steps'),'HCF-specific styles retained');
 assert(pilotCss.includes('.g10ch2-gp-term'),'GP controls have compact mobile layout');
 assert(pilotCss.includes('grid-template-columns:repeat(4,minmax(0,1fr))'),'All four GP terms fit in mobile grid');
+const studentLabHtml=read('index.html');
+const studentLabSW=read('service-worker.js');
+assert(studentLabHtml.includes('g10-ch2-foundations.css?v=student-lab-hcf-gp-20261118'),'Mobile CSS uses a fresh asset URL');
+assert(studentLabHtml.includes('student-lab-hcf-gp=1'),'Concept JS uses a fresh asset URL');
+assert(studentLabSW.includes("const CACHE='triggle-student-lab-hcf-gp-20261118'"),'Offline cache invalidates old lesson assets');
 
 console.log('PASS G10 Ch2 quality: 15 bilingual concepts, 7 targeted teaching repairs and functional cycle/sequence visuals, formulas and lab models');
