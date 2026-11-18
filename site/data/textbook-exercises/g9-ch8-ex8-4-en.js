@@ -49,6 +49,8 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 294,
       "enPrintedPage": 288,
+      "taPdfPage": 311,
+      "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [],
       "answerOptions": [
@@ -106,6 +108,8 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 294,
       "enPrintedPage": 288,
+      "taPdfPage": 311,
+      "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [],
       "answerOptions": [
@@ -163,6 +167,8 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 294,
       "enPrintedPage": 288,
+      "taPdfPage": 311,
+      "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [],
       "answerOptions": [
@@ -220,6 +226,8 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 294,
       "enPrintedPage": 288,
+      "taPdfPage": 311,
+      "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [],
       "answerOptions": [
@@ -277,6 +285,8 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 294,
       "enPrintedPage": 288,
+      "taPdfPage": 311,
+      "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [],
       "answerOptions": [
@@ -334,6 +344,8 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 294,
       "enPrintedPage": 288,
+      "taPdfPage": 311,
+      "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [],
       "answerOptions": [
@@ -391,6 +403,8 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 294,
       "enPrintedPage": 288,
+      "taPdfPage": 311,
+      "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [],
       "answerOptions": [
@@ -448,6 +462,8 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 294,
       "enPrintedPage": 288,
+      "taPdfPage": 311,
+      "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [],
       "answerOptions": [
@@ -505,6 +521,8 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 294,
       "enPrintedPage": 288,
+      "taPdfPage": 311,
+      "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [],
       "answerOptions": [
@@ -562,6 +580,8 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 294,
       "enPrintedPage": 288,
+      "taPdfPage": 311,
+      "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [],
       "answerOptions": [

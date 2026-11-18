@@ -14,7 +14,7 @@ let formulas=0;
 function check(value,original,id){
  assert.equal(fallback(value),original,'Verbatim wording and every calculation: '+id);
  for(const part of Array.isArray(value)?value:[value]){
-  if(typeof part==='string')assert.doesNotMatch(part,/\\(?:[a-z]{2,}|[()[\]])/i,'No raw TeX in rendered prose: '+id);
+  if(typeof part==='string')assert.doesNotMatch(part,/\\(?:[a-z]{2,}|[()[\]])|[0-9A-Za-z]\^(?:\{|\(|[0-9A-Za-z])/i,'No raw TeX or caret powers in rendered prose: '+id);
   if(part?.questionOption)check(part.questionOption,part.fallback,id+' option');
   if(part?.latex){
    const html=render(part);assert(!html.includes('data-math-error'),id+': '+part.latex);
@@ -25,13 +25,20 @@ function check(value,original,id){
 const items=load();assert.equal(items.length,397);
 assert.equal(new Set(items.map(q=>q.id)).size,397,'Student-facing IDs must be unique');
 assert.equal(items.filter(q=>q.kind!=='practice').length,388);
-// Pin the original order, work and answers from main at 9cde0fc. The Algebra
-// source gate verifies the corrected prompts and the five revised explanations.
-const preservation=items.map(q=>{
- const sourceReview=/^g9-ch3-ex3\.1-q[12]-[iv]+$/.test(q.id),coefficient=q.id.startsWith('g9-ch3-ex3.1-q2-');
- return [q.id,q.chapter,q.exercise,q.kind,q.answer,sourceReview?null:q.q,q.steps.length,coefficient?null:q.steps.map(({en,ta,eq})=>[en,ta,eq])];
-});
-assert.equal(createHash('sha256').update(JSON.stringify(preservation)).digest('hex'),'afee54516e87933582b637ee026f1acf62d4ffd1f44c57a250e0c3dd08cf11fa');
+// Pin order, question wording, answers, equations and all other reasons to
+// main at 31f4a4e, including the Algebra coefficient pilot. Only the edited
+// Statistics reasons and their English fallbacks in the Tamil reader vary.
+const revisedReasons={
+ 'g9-ch8-ex8.1-q5':[3],
+ 'g9-ch8-ex8.1-q7':[1,3],
+ 'g9-ch8-ex8.1-q8':[0,2],
+ 'g9-ch8-ex8.2-q5':[1,2,3],
+ 'g9-ch8-ex8.3-q5':[0,2],
+ 'g9-ch8-ex8.3-q6':[0,1,3],
+};
+const preservation=items.map(q=>[q.id,q.chapter,q.exercise,q.kind,q.q,q.answer,
+ q.steps.map(({en,ta,eq},index)=>revisedReasons[q.id]?.includes(index)?[null,null,eq]:[en,ta,eq])]);
+assert.equal(createHash('sha256').update(JSON.stringify(preservation)).digest('hex'),'b928be2ec7f64f89aea3313e212a0347e3d459bacea9a162df7fd9fdca8ebbfe');
 assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,56,12,9,40,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
 assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,54);

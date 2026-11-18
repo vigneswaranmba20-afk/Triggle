@@ -2012,7 +2012,7 @@
     },
     "g9-ch8-ex8.1-q8": {
       "step": 0,
-      "expected": "Use midpoint x and a convenient assumed mean A = 27 with class width h = 5.",
+      "expected": "Choose 27 years as the assumed mean.",
       "en": "The arithmetic mean is the total of all observations divided by how many observations there are. Repeated values count each time they appear.",
       "ta": "கூட்டுச் சராசரி என்பது எல்லா மதிப்புகளின் கூட்டலை தரவுகளின் எண்ணிக்கையால் வகுத்ததாகும். மீண்டும் வரும் மதிப்புகளையும் ஒவ்வொரு முறையும் எண்ண வேண்டும்.",
       "concept": "mean"
@@ -2047,7 +2047,7 @@
     },
     "g9-ch8-ex8.2-q5": {
       "step": 2,
-      "expected": "N/2 is 25; the median class is 30–40, since cumulative frequency first exceeds 2",
+      "expected": "The halfway position 25 lies between the running totals 24 and 34",
       "en": "The median is the middle value after ordering the data. With an even number of observations, average the two central values.",
       "ta": "தரவுகளை வரிசைப்படுத்திய பின் நடுவில் உள்ள மதிப்பே இடைநிலை. எண்ணிக்கை இரட்டையாக இருந்தால் நடுவிலுள்ள இரு மதிப்புகளின் சராசரியை எடுக்க வேண்டும்.",
       "concept": "median"
@@ -2089,16 +2089,16 @@
     },
     "g9-ch8-ex8.3-q5": {
       "step": 0,
-      "expected": "The largest frequency 46 occurs in class 20–30.",
-      "en": "The mode is the observation—or class interval—with the greatest frequency. Compare frequencies, not the numerical sizes of the labels.",
-      "ta": "அதிக நிகழ்வெண் கொண்ட மதிப்பு அல்லது வகுப்பு இடைவெளியே முகடு. மதிப்புகளின் பெரிய அளவை அல்ல, நிகழ்வெண்களை ஒப்பிடவும்.",
+      "expected": "The modal class is 20–30 because it has the most students.",
+      "en": "Compare the frequencies of the classes.",
+      "ta": "மதிப்புகளின் பெரிய அளவை அல்ல, நிகழ்வெண்களை ஒப்பிடவும்.",
       "concept": "mode"
     },
     "g9-ch8-ex8.3-q6": {
       "step": 0,
-      "expected": "The modal class is 55–64 with the highest frequency 14.",
-      "en": "The mode is the observation—or class interval—with the greatest frequency. Compare frequencies, not the numerical sizes of the labels.",
-      "ta": "அதிக நிகழ்வெண் கொண்ட மதிப்பு அல்லது வகுப்பு இடைவெளியே முகடு. மதிப்புகளின் பெரிய அளவை அல்ல, நிகழ்வெண்களை ஒப்பிடவும்.",
+      "expected": "The modal class is 55–64 kg.",
+      "en": "Compare the frequencies of the classes.",
+      "ta": "மதிப்புகளின் பெரிய அளவை அல்ல, நிகழ்வெண்களை ஒப்பிடவும்.",
       "concept": "mode"
     },
     "g9-ch8-ex8.4-q1": {

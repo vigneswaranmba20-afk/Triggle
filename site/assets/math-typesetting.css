@@ -108,19 +108,37 @@ body.g9-math-first #lessonCard .final-answer-value {
 }
 body.g9-math-first #lessonCard .step-equation:empty { display: none; }
 
-/* Inline flex exposes the mathematical baseline even on a scroll container.
-   Keep the same box geometry before and after it becomes keyboard focusable. */
+/* KaTeX's inline strut aligns the formula with the surrounding prose. Let
+   tall glyphs paint outside the wrapper when the expression fits. */
 body.g9-math-first #lessonCard .triggle-tex:not(.triggle-tex-display) {
   display: inline-flex;
   align-items: baseline;
   vertical-align: baseline;
   padding: .06em .15em;
+  overflow: visible;
+}
+/* Keep KaTeX's own breakpoints between terms and relations. A single
+   unbreakable fragment can still use the reader's local scroll. */
+body.g9-math-first #lessonCard .triggle-tex:not(.triggle-tex-display) .katex {
+  min-width: 0;
+}
+body.g9-math-first #lessonCard .triggle-tex:not(.triggle-tex-display) .katex-html {
+  white-space: normal;
 }
 body.g9-math-first #lessonCard :is(#questionText, .structured-equation, .final-answer-value, #answerText) .triggle-tex-display {
   font-size: clamp(19px, 4.7vw, 22px);
   margin: .08em 0;
   padding: .16em .12em .22em;
   text-align: left;
+  overflow: visible;
+}
+/* Oversized expressions still scroll locally. Reserve vertical room for
+   denominators, radicals and raised symbols inside the scroll container. */
+body.g9-math-first #lessonCard .triggle-tex:not(.triggle-tex-display)[tabindex],
+body.g9-math-first #lessonCard :is(#questionText, .structured-equation, .final-answer-value, #answerText) .triggle-tex-display[tabindex] {
+  padding-block: .4em;
+  overflow-x: auto;
+  overflow-y: hidden;
   scrollbar-width: thin;
 }
 body.g9-math-first #lessonCard :is(#questionText, .structured-equation, .final-answer-value, #answerText) .triggle-tex-display :is(.katex-display, .katex) {

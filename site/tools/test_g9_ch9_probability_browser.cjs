@@ -51,10 +51,31 @@ async function main(){
    await page.locator('#questionText').waitFor({state:'visible'});
    assert.match(await sourceText(page.locator('#questionText')),/less than 13/);
    assert.match(await sourceText(page.locator('#stepsList')),/sum of 4/);
+   await page.goto(base+'/index.html?class=9&chapter=g9-ch9&section=quizzes');
+   const rangeQuiz=page.locator('.hub-quiz-question').first();
+   for(const [language,button,incorrect,correct] of [
+    ['en','#langEn',/^Not quite/,/^Correct!/],
+    ['ta','#langTa',/^இன்னும் சரியாகவில்லை/,/^சரி!/]
+   ]){
+    await page.locator(button).click();
+    assert.equal(await page.locator('html').getAttribute('lang'),language);
+    const heading=await rangeQuiz.locator('h4').innerText();
+    assert.match(heading,/Which value cannot be a probability\?/);
+    if(language==='ta')assert.match(heading,/English version only/);
+    const choices=rangeQuiz.getByRole('button'),feedback=rangeQuiz.locator('.hub-quiz-feedback');
+    assert.equal(await choices.count(),3);
+    await choices.first().click();
+    assert.match(await feedback.innerText(),incorrect,'Zero is a valid probability');
+    await choices.last().click();
+    assert.match(await feedback.innerText(),correct,'A value above one is invalid');
+    await rangeQuiz.locator('.hub-quiz-help summary').click();
+    assert.match(await sourceText(rangeQuiz.locator('.hub-quiz-help')),
+      /An impossible event has probability 0, which is allowed/);
+   }
    assert.deepEqual(errors,[],'Browser JS errors at '+width);
    await ctx.close();
   }
-  console.log('PASS: Grade 9 2025 Probability Exercise 9.1 chapter navigation, Q4/Q6 and 320/390/1280 responsive browser scenarios.');
+  console.log('PASS: Grade 9 Probability Exercise 9.1 Q4/Q6 and range quiz in English and Tamil UI at 320/390/1280 px.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

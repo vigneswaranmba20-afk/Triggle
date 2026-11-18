@@ -14,12 +14,10 @@
     284
   ],
   "taPrintedPages": [
-    294,
-    295
+    294
   ],
   "taPdfPages": [
-    310,
-    311
+    300
   ],
   "visualReview": "pending",
   "tamilStudentVersion": "pending",
@@ -33,7 +31,7 @@
         "status": "pdf-text-checked-en-visual-pending",
         "enPdfPage": 283,
         "enPrintedPage": 277,
-        "taPdfPage": 310,
+        "taPdfPage": 300,
         "taPrintedPage": 294,
         "tamilEditorial": "pending",
         "notes": []
@@ -47,7 +45,7 @@
         "status": "pdf-text-checked-en-visual-pending",
         "enPdfPage": 283,
         "enPrintedPage": 277,
-        "taPdfPage": 310,
+        "taPdfPage": 300,
         "taPrintedPage": 294,
         "tamilEditorial": "pending",
         "notes": []
@@ -61,7 +59,7 @@
         "status": "pdf-text-checked-en-visual-pending",
         "enPdfPage": 283,
         "enPrintedPage": 277,
-        "taPdfPage": 310,
+        "taPdfPage": 300,
         "taPrintedPage": 294,
         "tamilEditorial": "pending",
         "notes": [
@@ -77,7 +75,7 @@
         "status": "pdf-text-checked-en-visual-pending",
         "enPdfPage": 283,
         "enPrintedPage": 277,
-        "taPdfPage": 310,
+        "taPdfPage": 300,
         "taPrintedPage": 294,
         "tamilEditorial": "pending",
         "notes": []
@@ -88,11 +86,11 @@
       "q": "If the mean of the following data is 20.2, then find the value of p\nMarks 10 15 20 25 30\nNo. of students 6 8 p 10 6",
       "answer": "p = 20",
       "sourceFidelity": {
-        "status": "pdf-text-checked-en-visual-pending",
+        "status": "english-source-page-visual-checked",
         "enPdfPage": 284,
         "enPrintedPage": 278,
-        "taPdfPage": 311,
-        "taPrintedPage": 295,
+        "taPdfPage": 300,
+        "taPrintedPage": 294,
         "tamilEditorial": "pending",
         "notes": []
       }
@@ -105,8 +103,8 @@
         "status": "pdf-text-checked-en-visual-pending",
         "enPdfPage": 284,
         "enPrintedPage": 278,
-        "taPdfPage": 311,
-        "taPrintedPage": 295,
+        "taPdfPage": 300,
+        "taPrintedPage": 294,
         "tamilEditorial": "pending",
         "notes": []
       }
@@ -116,11 +114,11 @@
       "q": "Calculate the mean of the following distribution using Assumed Mean Method:\nClass Interval 0-10 10-20 20-30 30-40 40-50\nFrequency 5 7 15 28 8",
       "answer": "[[205|7]] ≈ 29.29",
       "sourceFidelity": {
-        "status": "pdf-text-checked-en-visual-pending",
+        "status": "english-source-page-visual-checked",
         "enPdfPage": 284,
         "enPrintedPage": 278,
-        "taPdfPage": 311,
-        "taPrintedPage": 295,
+        "taPdfPage": 300,
+        "taPrintedPage": 294,
         "tamilEditorial": "pending",
         "notes": []
       }
@@ -130,11 +128,11 @@
       "q": "Find the Arithmetic Mean of the following data using Step Deviation Method:\nAge 15-19 20-24 25-29 30-34 35-39 40-44\nNo. of persons 4 20 38 24 10 9",
       "answer": "[[610|21]] ≈ 29.05 years",
       "sourceFidelity": {
-        "status": "pdf-text-checked-en-visual-pending",
+        "status": "english-source-page-visual-checked",
         "enPdfPage": 284,
         "enPrintedPage": 278,
-        "taPdfPage": 311,
-        "taPrintedPage": 295,
+        "taPdfPage": 300,
+        "taPrintedPage": 294,
         "tamilEditorial": "pending",
         "notes": []
       }

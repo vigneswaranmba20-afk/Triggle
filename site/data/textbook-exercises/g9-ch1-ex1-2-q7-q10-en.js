@@ -41,7 +41,14 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "In n[P(A)] = 2^{n(A)}, P(A) denotes the power set (the set of all subsets of A). Because n(A) = 2, set A has 2² = 4 subsets in total."
+          "en": [
+            "In ",
+            {
+              "latex": "n[P(A)]=2^{n(A)}",
+              "fallback": "n[P(A)] = 2^{n(A)}"
+            },
+            ", P(A) denotes the power set (the set of all subsets of A). Because n(A) = 2, set A has 2² = 4 subsets in total."
+          ]
         }
       },
       {
@@ -80,13 +87,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -181,13 +188,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -281,13 +288,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -405,13 +412,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -505,13 +512,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -566,7 +573,14 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "A set with m = n(W) elements has 2^m subsets in total. Substitute m = 3 to get 2³ = 2 × 2 × 2 = 8 subsets."
+          "en": [
+            "A set with m = n(W) elements has ",
+            {
+              "latex": "2^m",
+              "fallback": "2^m"
+            },
+            " subsets in total. Substitute m = 3 to get 2³ = 2 × 2 × 2 = 8 subsets."
+          ]
         }
       },
       {
@@ -605,13 +619,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -678,7 +692,14 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "Use the subset formula 2^{n(X)} with n(X) = 10 to find the total number of subsets: 2¹⁰ = 1024 subsets."
+          "en": [
+            "Use the subset formula ",
+            {
+              "latex": "2^{n(X)}",
+              "fallback": "2^{n(X)}"
+            },
+            " with n(X) = 10 to find the total number of subsets: 2¹⁰ = 1024 subsets."
+          ]
         }
       },
       {
@@ -717,13 +738,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -766,7 +787,14 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "If a finite set A has n(A) elements, then its power set P(A) (the set of all subsets of A) contains n[P(A)] = 2^{n(A)} elements."
+          "en": [
+            "If a finite set A has n(A) elements, then its power set P(A) (the set of all subsets of A) contains ",
+            {
+              "latex": "n[P(A)]=2^{n(A)}",
+              "fallback": "n[P(A)] = 2^{n(A)}"
+            },
+            " elements."
+          ]
         }
       },
       {
@@ -817,13 +845,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -884,7 +912,14 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "Apply the power-set cardinality formula n[P(A)] = 2^{n(A)} with n(A) = 0."
+          "en": [
+            "Apply the power-set cardinality formula ",
+            {
+              "latex": "n[P(A)]=2^{n(A)}",
+              "fallback": "n[P(A)] = 2^{n(A)}"
+            },
+            " with n(A) = 0."
+          ]
         }
       },
       {
@@ -923,13 +958,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -978,7 +1013,14 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "Use the power-set cardinality formula n[P(A)] = 2^{n(A)} and set it equal to the given value 256."
+          "en": [
+            "Use the power-set cardinality formula ",
+            {
+              "latex": "n[P(A)]=2^{n(A)}",
+              "fallback": "n[P(A)] = 2^{n(A)}"
+            },
+            " and set it equal to the given value 256."
+          ]
         }
       },
       {
@@ -1002,7 +1044,14 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "Because 2^{n(A)} = 2⁸ has the same base 2 on both sides, equate the exponents to get n(A) = 8."
+          "en": [
+            "Because ",
+            {
+              "latex": "2^{n(A)}=2^8",
+              "fallback": "2^{n(A)} = 2⁸"
+            },
+            " has the same base 2 on both sides, equate the exponents to get n(A) = 8."
+          ]
         }
       }
     ],
@@ -1029,13 +1078,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"

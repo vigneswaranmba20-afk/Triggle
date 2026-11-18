@@ -17,7 +17,7 @@
         "status": "pdf-text-checked-en-visual-pending",
         "enPdfPage": 293,
         "enPrintedPage": 287,
-        "taPdfPage": 320,
+        "taPdfPage": 310,
         "taPrintedPage": 304,
         "tamilEditorial": "pending",
         "notes": []
@@ -31,7 +31,7 @@
         "status": "pdf-text-checked-en-visual-pending",
         "enPdfPage": 293,
         "enPrintedPage": 287,
-        "taPdfPage": 320,
+        "taPdfPage": 310,
         "taPrintedPage": 304,
         "tamilEditorial": "pending",
         "notes": []
@@ -45,7 +45,7 @@
         "status": "pdf-text-checked-en-visual-pending",
         "enPdfPage": 293,
         "enPrintedPage": 287,
-        "taPdfPage": 320,
+        "taPdfPage": 310,
         "taPrintedPage": 304,
         "tamilEditorial": "pending",
         "notes": []
@@ -59,7 +59,7 @@
         "status": "pdf-text-checked-en-visual-pending",
         "enPdfPage": 293,
         "enPrintedPage": 287,
-        "taPdfPage": 320,
+        "taPdfPage": 310,
         "taPrintedPage": 304,
         "tamilEditorial": "pending",
         "notes": []
@@ -70,10 +70,10 @@
       "q": "Find the mode of the following data:\nMarks 0-10 10-20 20-30 30-40 40-50\nNumber of students 22 38 46 34 20",
       "answer": "24 marks",
       "sourcePages": {
-        "status": "pdf-text-checked-en-visual-pending",
+        "status": "english-source-page-visual-checked",
         "enPdfPage": 293,
         "enPrintedPage": 287,
-        "taPdfPage": 320,
+        "taPdfPage": 310,
         "taPrintedPage": 304,
         "tamilEditorial": "pending",
         "notes": []
@@ -84,10 +84,10 @@
       "q": "Find the mode of the following distribution:\nWeight(in kgs) 25-34 35-44 45-54 55-64 65-74 75-84\nNumber of students 4 8 10 14 8 6",
       "answer": "58.5 kg",
       "sourcePages": {
-        "status": "pdf-text-checked-en-visual-pending",
+        "status": "english-source-page-visual-checked",
         "enPdfPage": 293,
         "enPrintedPage": 287,
-        "taPdfPage": 321,
+        "taPdfPage": 311,
         "taPrintedPage": 305,
         "tamilEditorial": "pending",
         "notes": [

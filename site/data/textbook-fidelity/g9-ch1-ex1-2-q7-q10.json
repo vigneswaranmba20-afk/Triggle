@@ -21,9 +21,10 @@
   },
   "tamil": {
     "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
-    "printedPage": 13,
-    "pdfPage": 19,
-    "review": "Text layer cross-checked; Tamil page-image and teacher/editorial sign-off deferred",
+    "printedPage": 14,
+    "pdfPage": 20,
+    "sourcePdfSha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+    "review": "2025 page image checked for Q7–Q10; Tamil editorial and teacher sign-off deferred",
     "translationReview": "deferred"
   },
   "parts": [

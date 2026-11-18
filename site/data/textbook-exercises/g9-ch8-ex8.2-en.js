@@ -47,7 +47,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 289,
       "enPrintedPage": 283,
-      "taPdfPage": 316,
+      "taPdfPage": 306,
       "taPrintedPage": 300,
       "tamilEditorial": "pending",
       "notes": []
@@ -100,7 +100,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 289,
       "enPrintedPage": 283,
-      "taPdfPage": 316,
+      "taPdfPage": 306,
       "taPrintedPage": 300,
       "tamilEditorial": "pending",
       "notes": []
@@ -158,7 +158,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 290,
       "enPrintedPage": 284,
-      "taPdfPage": 316,
+      "taPdfPage": 306,
       "taPrintedPage": 300,
       "tamilEditorial": "pending",
       "notes": []
@@ -211,7 +211,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 290,
       "enPrintedPage": 284,
-      "taPdfPage": 317,
+      "taPdfPage": 307,
       "taPrintedPage": 301,
       "tamilEditorial": "pending",
       "notes": []
@@ -245,31 +245,55 @@
         "eq": "N = 2+7+15+10+11+5 = 50"
       },
       {
-        "en": "Compute cumulative frequencies.",
-        "ta": "English explanation (Tamil version pending): Compute cumulative frequencies.",
+        "en": "Add the frequencies in order. Each running total counts the students through that class.",
+        "ta": "English explanation (Tamil version pending): Add the frequencies in order. Each running total counts the students through that class.",
         "eq": "CF = 2,9,24,34,45,50"
       },
       {
-        "en": "N/2 is 25; the median class is 30–40, since cumulative frequency first exceeds 25 there.",
-        "ta": "English explanation (Tamil version pending): N/2 is 25; the median class is 30–40, since cumulative frequency first exceeds 25 there.",
+        "en": "The halfway position 25 lies between the running totals 24 and 34, so 30–40 is the median class. Here L is the lower boundary, cf the previous running total, f the frequency, and h the width.",
+        "ta": "English explanation (Tamil version pending): The halfway position 25 lies between the running totals 24 and 34, so 30–40 is the median class. Here L is the lower boundary, cf the previous running total, f the frequency, and h the width.",
+        "reasonMath": {
+          "en": [
+            "The halfway position 25 lies between the running totals 24 and 34, so 30–40 is the median class. Here ",
+            {"latex": "L", "fallback": "L"},
+            " is the lower boundary, ",
+            {"latex": "\\text{cf}", "fallback": "cf"},
+            " the previous running total, ",
+            {"latex": "f", "fallback": "f"},
+            " the frequency, and ",
+            {"latex": "h", "fallback": "h"},
+            " the width."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): The halfway position 25 lies between the running totals 24 and 34, so 30–40 is the median class. Here ",
+            {"latex": "L", "fallback": "L"},
+            " is the lower boundary, ",
+            {"latex": "\\text{cf}", "fallback": "cf"},
+            " the previous running total, ",
+            {"latex": "f", "fallback": "f"},
+            " the frequency, and ",
+            {"latex": "h", "fallback": "h"},
+            " the width."
+          ]
+        },
         "eq": "L=30, cf=24, f=10, h=10"
       },
       {
-        "en": "Use the grouped-data median formula.",
-        "ta": "English explanation (Tamil version pending): Use the grouped-data median formula.",
+        "en": "The halfway position is one place into a class of ten students. Move one-tenth of the class width from the lower boundary of 30 to estimate the median at 31 marks.",
+        "ta": "English explanation (Tamil version pending): The halfway position is one place into a class of ten students. Move one-tenth of the class width from the lower boundary of 30 to estimate the median at 31 marks.",
         "eq": "Median = L + [[N/2−cf|f]]×h = 30+[[25−24|10]]×10 = 31"
       }
     ],
     "answer": "31",
     "kind": "reference",
-    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics English · Exercise 8.2; PDF text cross-checked; page-image validation pending.",
+    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics (English) · Exercise 8.2, printed p. 284 / PDF p. 290. Source question and answer key checked against the page images.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
     "page": 290,
     "sourceFidelity": {
-      "status": "pdf-text-checked-en-visual-pending",
+      "status": "english-source-page-visual-checked",
       "enPdfPage": 290,
       "enPrintedPage": 284,
-      "taPdfPage": 317,
+      "taPdfPage": 307,
       "taPrintedPage": 301,
       "tamilEditorial": "pending",
       "notes": []
@@ -327,7 +351,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 290,
       "enPrintedPage": 284,
-      "taPdfPage": 317,
+      "taPdfPage": 307,
       "taPrintedPage": 301,
       "tamilEditorial": "pending",
       "notes": []

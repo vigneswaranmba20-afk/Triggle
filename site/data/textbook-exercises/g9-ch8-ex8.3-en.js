@@ -52,7 +52,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 293,
       "enPrintedPage": 287,
-      "taPdfPage": 320,
+      "taPdfPage": 310,
       "taPrintedPage": 304,
       "tamilEditorial": "pending",
       "notes": []
@@ -105,7 +105,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 293,
       "enPrintedPage": 287,
-      "taPdfPage": 320,
+      "taPdfPage": 310,
       "taPrintedPage": 304,
       "tamilEditorial": "pending",
       "notes": []
@@ -163,7 +163,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 293,
       "enPrintedPage": 287,
-      "taPdfPage": 320,
+      "taPdfPage": 310,
       "taPrintedPage": 304,
       "tamilEditorial": "pending",
       "notes": []
@@ -216,7 +216,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 293,
       "enPrintedPage": 287,
-      "taPdfPage": 320,
+      "taPdfPage": 310,
       "taPrintedPage": 304,
       "tamilEditorial": "pending",
       "notes": []
@@ -245,8 +245,28 @@
     },
     "steps": [
       {
-        "en": "The largest frequency 46 occurs in class 20–30.",
-        "ta": "English explanation (Tamil version pending): The largest frequency 46 occurs in class 20–30.",
+        "en": "The modal class is 20–30 because it has the most students. The frequencies are f₁ for this class, f₀ for the previous class, and f₂ for the next class.",
+        "ta": "English explanation (Tamil version pending): The modal class is 20–30 because it has the most students. The frequencies are f₁ for this class, f₀ for the previous class, and f₂ for the next class.",
+        "reasonMath": {
+          "en": [
+            "The modal class is 20–30 because it has the most students. The frequencies are ",
+            {"latex": "f_1", "fallback": "f₁"},
+            " for this class, ",
+            {"latex": "f_0", "fallback": "f₀"},
+            " for the previous class, and ",
+            {"latex": "f_2", "fallback": "f₂"},
+            " for the next class."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): The modal class is 20–30 because it has the most students. The frequencies are ",
+            {"latex": "f_1", "fallback": "f₁"},
+            " for this class, ",
+            {"latex": "f_0", "fallback": "f₀"},
+            " for the previous class, and ",
+            {"latex": "f_2", "fallback": "f₂"},
+            " for the next class."
+          ]
+        },
         "eq": "L=20, h=10, f₁=46, f₀=38, f₂=34"
       },
       {
@@ -255,21 +275,21 @@
         "eq": "Mode = L + [[f₁−f₀|2f₁−f₀−f₂]]×h"
       },
       {
-        "en": "Substitute values and simplify.",
-        "ta": "English explanation (Tamil version pending): Substitute values and simplify.",
+        "en": "Use the lower class boundary, class width, and three frequencies. The estimated mode is 24 marks, a value inside the modal class.",
+        "ta": "English explanation (Tamil version pending): Use the lower class boundary, class width, and three frequencies. The estimated mode is 24 marks, a value inside the modal class.",
         "eq": "Mode = 20 + [[46−38|92−38−34]]×10 = 20 + [[8|20]]×10 = 24"
       }
     ],
     "answer": "24 marks",
     "kind": "reference",
-    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics English · Exercise 8.3; PDF text cross-checked; page-image validation pending.",
+    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics (English) · Exercise 8.3, printed p. 287 / PDF p. 293. Source question and answer key checked against the page images.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
     "page": 293,
     "sourceFidelity": {
-      "status": "pdf-text-checked-en-visual-pending",
+      "status": "english-source-page-visual-checked",
       "enPdfPage": 293,
       "enPrintedPage": 287,
-      "taPdfPage": 320,
+      "taPdfPage": 310,
       "taPrintedPage": 304,
       "tamilEditorial": "pending",
       "notes": []
@@ -298,13 +318,49 @@
     },
     "steps": [
       {
-        "en": "The modal class is 55–64 with the highest frequency 14.",
-        "ta": "English explanation (Tamil version pending): The modal class is 55–64 with the highest frequency 14.",
+        "en": "The modal class is 55–64 kg. Its frequency is f₁, the previous class has frequency f₀, and the next class has frequency f₂.",
+        "ta": "English explanation (Tamil version pending): The modal class is 55–64 kg. Its frequency is f₁, the previous class has frequency f₀, and the next class has frequency f₂.",
+        "reasonMath": {
+          "en": [
+            "The modal class is 55–64 kg. Its frequency is ",
+            {"latex": "f_1", "fallback": "f₁"},
+            ", the previous class has frequency ",
+            {"latex": "f_0", "fallback": "f₀"},
+            ", and the next class has frequency ",
+            {"latex": "f_2", "fallback": "f₂"},
+            "."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): The modal class is 55–64 kg. Its frequency is ",
+            {"latex": "f_1", "fallback": "f₁"},
+            ", the previous class has frequency ",
+            {"latex": "f_0", "fallback": "f₀"},
+            ", and the next class has frequency ",
+            {"latex": "f_2", "fallback": "f₂"},
+            "."
+          ]
+        },
         "eq": "f₁=14, f₀=10, f₂=8"
       },
       {
-        "en": "Convert the inclusive integer-weight intervals to continuous boundaries: 55–64 becomes 54.5–64.5.",
-        "ta": "English explanation (Tamil version pending): Convert the inclusive integer-weight intervals to continuous boundaries: 55–64 becomes 54.5–64.5.",
+        "en": "Moving each endpoint by half a kilogram closes the gaps and gives boundaries from 54.5 to 64.5 kg. L is the lower boundary and h is the class width.",
+        "ta": "English explanation (Tamil version pending): Moving each endpoint by half a kilogram closes the gaps and gives boundaries from 54.5 to 64.5 kg. L is the lower boundary and h is the class width.",
+        "reasonMath": {
+          "en": [
+            "Moving each endpoint by half a kilogram closes the gaps and gives boundaries from 54.5 to 64.5 kg. ",
+            {"latex": "L", "fallback": "L"},
+            " is the lower boundary and ",
+            {"latex": "h", "fallback": "h"},
+            " is the class width."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): Moving each endpoint by half a kilogram closes the gaps and gives boundaries from 54.5 to 64.5 kg. ",
+            {"latex": "L", "fallback": "L"},
+            " is the lower boundary and ",
+            {"latex": "h", "fallback": "h"},
+            " is the class width."
+          ]
+        },
         "eq": "L=54.5, h=10"
       },
       {
@@ -313,21 +369,21 @@
         "eq": "Mode = L + [[f₁−f₀|2f₁−f₀−f₂]]×h"
       },
       {
-        "en": "Substitute and simplify.",
-        "ta": "English explanation (Tamil version pending): Substitute and simplify.",
+        "en": "Use the adjusted lower boundary of 54.5 kg and the three frequencies. The estimated mode is 58.5 kg.",
+        "ta": "English explanation (Tamil version pending): Use the adjusted lower boundary of 54.5 kg and the three frequencies. The estimated mode is 58.5 kg.",
         "eq": "Mode = 54.5 + [[14−10|28−10−8]]×10 = 58.5 kg"
       }
     ],
     "answer": "58.5 kg",
     "kind": "reference",
-    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics English · Exercise 8.3; PDF text cross-checked; page-image validation pending.",
+    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics (English) · Exercise 8.3, printed p. 287 / PDF p. 293. Source question and answer key checked against the page images.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
     "page": 293,
     "sourceFidelity": {
-      "status": "pdf-text-checked-en-visual-pending",
+      "status": "english-source-page-visual-checked",
       "enPdfPage": 293,
       "enPrintedPage": 287,
-      "taPdfPage": 321,
+      "taPdfPage": 311,
       "taPrintedPage": 305,
       "tamilEditorial": "pending",
       "notes": [

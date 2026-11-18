@@ -26856,8 +26856,32 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Cross-multiply and solve.",
-          "ta": "English explanation (Tamil version pending): Cross-multiply and solve."
+          "en": [
+            "Cross-multiply and solve for the missing frequency. The result means ",
+            {
+              "latex": "20",
+              "fallback": "20"
+            },
+            " students scored ",
+            {
+              "latex": "20",
+              "fallback": "20"
+            },
+            " marks."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): Cross-multiply and solve for the missing frequency. The result means ",
+            {
+              "latex": "20",
+              "fallback": "20"
+            },
+            " students scored ",
+            {
+              "latex": "20",
+              "fallback": "20"
+            },
+            " marks."
+          ]
         }
       },
       {
@@ -27185,28 +27209,28 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Take ",
+            "Choose ",
             {
-              "latex": "A = 25",
-              "fallback": "A = 25"
+              "latex": "25",
+              "fallback": "25"
             },
-            " and calculate ",
+            " as the assumed mean. Each deviation tells how far a midpoint is above or below ",
             {
-              "latex": "d = x - A",
-              "fallback": "d = x − A"
+              "latex": "25",
+              "fallback": "25"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Take ",
+            "English explanation (Tamil version pending): Choose ",
             {
-              "latex": "A = 25",
-              "fallback": "A = 25"
+              "latex": "25",
+              "fallback": "25"
             },
-            " and calculate ",
+            " as the assumed mean. Each deviation tells how far a midpoint is above or below ",
             {
-              "latex": "d = x - A",
-              "fallback": "d = x − A"
+              "latex": "25",
+              "fallback": "25"
             },
             "."
           ]
@@ -27230,8 +27254,32 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Use the assumed mean formula.",
-          "ta": "English explanation (Tamil version pending): Use the assumed mean formula."
+          "en": [
+            "Find the average deviation by dividing the weighted total by the total frequency. Add it to ",
+            {
+              "latex": "25",
+              "fallback": "25"
+            },
+            " to get an estimated mean of ",
+            {
+              "latex": "29.29",
+              "fallback": "29.29"
+            },
+            "."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): Find the average deviation by dividing the weighted total by the total frequency. Add it to ",
+            {
+              "latex": "25",
+              "fallback": "25"
+            },
+            " to get an estimated mean of ",
+            {
+              "latex": "29.29",
+              "fallback": "29.29"
+            },
+            "."
+          ]
         }
       }
     ]
@@ -27381,40 +27429,30 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Use midpoint ",
+            "Choose ",
             {
-              "latex": "x",
-              "fallback": "x"
+              "latex": "27",
+              "fallback": "27"
             },
-            " and a convenient assumed ",
+            " years as the assumed mean. Measure each midpoint’s deviation from ",
             {
-              "latex": "\\text{mean} A = 27",
-              "fallback": "mean A = 27"
+              "latex": "27",
+              "fallback": "27"
             },
-            " with class width ",
-            {
-              "latex": "h = 5",
-              "fallback": "h = 5"
-            },
-            "."
+            " in signed steps of five years."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Use midpoint ",
+            "English explanation (Tamil version pending): Choose ",
             {
-              "latex": "x",
-              "fallback": "x"
+              "latex": "27",
+              "fallback": "27"
             },
-            " and a convenient assumed ",
+            " years as the assumed mean. Measure each midpoint’s deviation from ",
             {
-              "latex": "\\text{mean} A = 27",
-              "fallback": "mean A = 27"
+              "latex": "27",
+              "fallback": "27"
             },
-            " with class width ",
-            {
-              "latex": "h = 5",
-              "fallback": "h = 5"
-            },
-            "."
+            " in signed steps of five years."
           ]
         }
       },
@@ -27439,8 +27477,32 @@ const records=[
           " years"
         ],
         "reasonMath": {
-          "en": "Apply the step deviation formula.",
-          "ta": "English explanation (Tamil version pending): Apply the step deviation formula."
+          "en": [
+            "Multiply the average deviation by the five-year class width to convert it back to years. Add it to ",
+            {
+              "latex": "27",
+              "fallback": "27"
+            },
+            " to estimate the mean age at ",
+            {
+              "latex": "29.05",
+              "fallback": "29.05"
+            },
+            " years."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): Multiply the average deviation by the five-year class width to convert it back to years. Add it to ",
+            {
+              "latex": "27",
+              "fallback": "27"
+            },
+            " to estimate the mean age at ",
+            {
+              "latex": "29.05",
+              "fallback": "29.05"
+            },
+            " years."
+          ]
         }
       },
       {
@@ -27949,8 +28011,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Compute cumulative frequencies.",
-          "ta": "English explanation (Tamil version pending): Compute cumulative frequencies."
+          "en": "Add the frequencies in order. Each running total counts the students through that class.",
+          "ta": "English explanation (Tamil version pending): Add the frequencies in order. Each running total counts the students through that class."
         }
       },
       {
@@ -27961,49 +28023,50 @@ const records=[
         },
         "reasonMath": {
           "en": [
+            "The halfway position 25 lies between the running totals 24 and 34, so 30–40 is the median class. Here ",
             {
-              "latex": "\\dfrac{N}{2}",
-              "fallback": "N/2"
+              "latex": "L",
+              "fallback": "L"
             },
-            " is ",
+            " is the lower boundary, ",
             {
-              "latex": "25",
-              "fallback": "25"
+              "latex": "\\text{cf}",
+              "fallback": "cf"
             },
-            "; the median class is ",
+            " the previous running total, ",
             {
-              "latex": "30 - 40",
-              "fallback": "30–40"
+              "latex": "f",
+              "fallback": "f"
             },
-            ", since cumulative frequency first exceeds ",
+            " the frequency, and ",
             {
-              "latex": "25",
-              "fallback": "25"
+              "latex": "h",
+              "fallback": "h"
             },
-            " there."
+            " the width."
           ],
           "ta": [
-            "English explanation (Tamil version pending): ",
+            "English explanation (Tamil version pending): The halfway position 25 lies between the running totals 24 and 34, so 30–40 is the median class. Here ",
             {
-              "latex": "\\dfrac{N}{2}",
-              "fallback": "N/2"
+              "latex": "L",
+              "fallback": "L"
             },
-            " is ",
+            " is the lower boundary, ",
             {
-              "latex": "25",
-              "fallback": "25"
+              "latex": "\\text{cf}",
+              "fallback": "cf"
             },
-            "; the median class is ",
+            " the previous running total, ",
             {
-              "latex": "30 - 40",
-              "fallback": "30–40"
+              "latex": "f",
+              "fallback": "f"
             },
-            ", since cumulative frequency first exceeds ",
+            " the frequency, and ",
             {
-              "latex": "25",
-              "fallback": "25"
+              "latex": "h",
+              "fallback": "h"
             },
-            " there."
+            " the width."
           ]
         }
       },
@@ -28014,8 +28077,32 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Use the grouped-data median formula.",
-          "ta": "English explanation (Tamil version pending): Use the grouped-data median formula."
+          "en": [
+            "The halfway position is one place into a class of ten students. Move one-tenth of the class width from the lower boundary of ",
+            {
+              "latex": "30",
+              "fallback": "30"
+            },
+            " to estimate the median at ",
+            {
+              "latex": "31",
+              "fallback": "31"
+            },
+            " marks."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): The halfway position is one place into a class of ten students. Move one-tenth of the class width from the lower boundary of ",
+            {
+              "latex": "30",
+              "fallback": "30"
+            },
+            " to estimate the median at ",
+            {
+              "latex": "31",
+              "fallback": "31"
+            },
+            " marks."
+          ]
         }
       }
     ]
@@ -28981,30 +29068,40 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "The largest frequency ",
+            "The modal class is 20–30 because it has the most students. The frequencies are ",
             {
-              "latex": "46",
-              "fallback": "46"
+              "latex": "f_1",
+              "fallback": "f₁"
             },
-            " occurs in class ",
+            " for this class, ",
             {
-              "latex": "20 - 30",
-              "fallback": "20–30"
+              "latex": "f_0",
+              "fallback": "f₀"
             },
-            "."
+            " for the previous class, and ",
+            {
+              "latex": "f_2",
+              "fallback": "f₂"
+            },
+            " for the next class."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The largest frequency ",
+            "English explanation (Tamil version pending): The modal class is 20–30 because it has the most students. The frequencies are ",
             {
-              "latex": "46",
-              "fallback": "46"
+              "latex": "f_1",
+              "fallback": "f₁"
             },
-            " occurs in class ",
+            " for this class, ",
             {
-              "latex": "20 - 30",
-              "fallback": "20–30"
+              "latex": "f_0",
+              "fallback": "f₀"
             },
-            "."
+            " for the previous class, and ",
+            {
+              "latex": "f_2",
+              "fallback": "f₂"
+            },
+            " for the next class."
           ]
         }
       },
@@ -29026,8 +29123,22 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute values and simplify.",
-          "ta": "English explanation (Tamil version pending): Substitute values and simplify."
+          "en": [
+            "Use the lower class boundary, class width, and three frequencies. The estimated mode is ",
+            {
+              "latex": "24",
+              "fallback": "24"
+            },
+            " marks, a value inside the modal class."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): Use the lower class boundary, class width, and three frequencies. The estimated mode is ",
+            {
+              "latex": "24",
+              "fallback": "24"
+            },
+            " marks, a value inside the modal class."
+          ]
         }
       }
     ]
@@ -29173,28 +29284,38 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "The modal class is ",
+            "The modal class is 55–64 kg. Its frequency is ",
             {
-              "latex": "55 - 64",
-              "fallback": "55–64"
+              "latex": "f_1",
+              "fallback": "f₁"
             },
-            " with the highest frequency ",
+            ", the previous class has frequency ",
             {
-              "latex": "14",
-              "fallback": "14"
+              "latex": "f_0",
+              "fallback": "f₀"
+            },
+            ", and the next class has frequency ",
+            {
+              "latex": "f_2",
+              "fallback": "f₂"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The modal class is ",
+            "English explanation (Tamil version pending): The modal class is 55–64 kg. Its frequency is ",
             {
-              "latex": "55 - 64",
-              "fallback": "55–64"
+              "latex": "f_1",
+              "fallback": "f₁"
             },
-            " with the highest frequency ",
+            ", the previous class has frequency ",
             {
-              "latex": "14",
-              "fallback": "14"
+              "latex": "f_0",
+              "fallback": "f₀"
+            },
+            ", and the next class has frequency ",
+            {
+              "latex": "f_2",
+              "fallback": "f₂"
             },
             "."
           ]
@@ -29207,30 +29328,30 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Convert the inclusive integer-weight intervals to continuous boundaries: ",
+            "Moving each endpoint by half a kilogram closes the gaps and gives boundaries from 54.5 to 64.5 kg. ",
             {
-              "latex": "55 - 64",
-              "fallback": "55–64"
+              "latex": "L",
+              "fallback": "L"
             },
-            " becomes ",
+            " is the lower boundary and ",
             {
-              "latex": "54.5 - 64.5",
-              "fallback": "54.5–64.5"
+              "latex": "h",
+              "fallback": "h"
             },
-            "."
+            " is the class width."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Convert the inclusive integer-weight intervals to continuous boundaries: ",
+            "English explanation (Tamil version pending): Moving each endpoint by half a kilogram closes the gaps and gives boundaries from 54.5 to 64.5 kg. ",
             {
-              "latex": "55 - 64",
-              "fallback": "55–64"
+              "latex": "L",
+              "fallback": "L"
             },
-            " becomes ",
+            " is the lower boundary and ",
             {
-              "latex": "54.5 - 64.5",
-              "fallback": "54.5–64.5"
+              "latex": "h",
+              "fallback": "h"
             },
-            "."
+            " is the class width."
           ]
         }
       },
@@ -29252,8 +29373,32 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute and simplify.",
-          "ta": "English explanation (Tamil version pending): Substitute and simplify."
+          "en": [
+            "Use the adjusted lower boundary of ",
+            {
+              "latex": "54.5\\,\\mathrm{kg}",
+              "fallback": "54.5 kg"
+            },
+            " and the three frequencies. The estimated mode is ",
+            {
+              "latex": "58.5\\,\\mathrm{kg}",
+              "fallback": "58.5 kg"
+            },
+            "."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): Use the adjusted lower boundary of ",
+            {
+              "latex": "54.5\\,\\mathrm{kg}",
+              "fallback": "54.5 kg"
+            },
+            " and the three frequencies. The estimated mode is ",
+            {
+              "latex": "58.5\\,\\mathrm{kg}",
+              "fallback": "58.5 kg"
+            },
+            "."
+          ]
         }
       }
     ]
@@ -36748,7 +36893,19 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "In ∠A + ∠B + ∠C = 180°, the symbol ∠ means “angle” and ° means “degrees”. The 3 interior (inside) angles of any triangle always add up to 180°."
+          "en": [
+            "In ",
+            {
+              "latex": "\\angle A+\\angle B+\\angle C=180^\\circ",
+              "fallback": "∠A + ∠B + ∠C = 180°"
+            },
+            ", the symbol ∠ means “angle” and ° means “degrees”. The 3 interior (inside) angles of any triangle always add up to ",
+            {
+              "latex": "180^\\circ",
+              "fallback": "180°"
+            },
+            "."
+          ]
         }
       },
       {
@@ -36758,7 +36915,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The four-sided shapes in S (square, rectangle, and rhombus) each have an interior-angle sum of 360°, while a circle has no polygon vertex angles."
+          "en": [
+            "The four-sided shapes in S (square, rectangle, and rhombus) each have an interior-angle sum of ",
+            {
+              "latex": "360^\\circ",
+              "fallback": "360°"
+            },
+            ", while a circle has no polygon vertex angles."
+          ]
         }
       },
       {
@@ -37317,7 +37481,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "In n[P(A)] = 2^{n(A)}, P(A) denotes the power set (the set of all subsets of A). Because n(A) = 2, set A has 2² = 4 subsets in total."
+          "en": [
+            "In ",
+            {
+              "latex": "n[P(A)]=2^{n(A)}",
+              "fallback": "n[P(A)] = 2^{n(A)}"
+            },
+            ", P(A) denotes the power set (the set of all subsets of A). Because n(A) = 2, set A has 2² = 4 subsets in total."
+          ]
         }
       },
       {
@@ -37582,7 +37753,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A set with m = n(W) elements has 2^m subsets in total. Substitute m = 3 to get 2³ = 2 × 2 × 2 = 8 subsets."
+          "en": [
+            "A set with m = n(W) elements has ",
+            {
+              "latex": "2^m",
+              "fallback": "2^m"
+            },
+            " subsets in total. Substitute m = 3 to get 2³ = 2 × 2 × 2 = 8 subsets."
+          ]
         }
       },
       {
@@ -37641,7 +37819,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Use the subset formula 2^{n(X)} with n(X) = 10 to find the total number of subsets: 2¹⁰ = 1024 subsets."
+          "en": [
+            "Use the subset formula ",
+            {
+              "latex": "2^{n(X)}",
+              "fallback": "2^{n(X)}"
+            },
+            " with n(X) = 10 to find the total number of subsets: 2¹⁰ = 1024 subsets."
+          ]
         }
       },
       {
@@ -37686,7 +37871,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "If a finite set A has n(A) elements, then its power set P(A) (the set of all subsets of A) contains n[P(A)] = 2^{n(A)} elements."
+          "en": [
+            "If a finite set A has n(A) elements, then its power set P(A) (the set of all subsets of A) contains ",
+            {
+              "latex": "n[P(A)]=2^{n(A)}",
+              "fallback": "n[P(A)] = 2^{n(A)}"
+            },
+            " elements."
+          ]
         }
       },
       {
@@ -37751,7 +37943,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Apply the power-set cardinality formula n[P(A)] = 2^{n(A)} with n(A) = 0."
+          "en": [
+            "Apply the power-set cardinality formula ",
+            {
+              "latex": "n[P(A)]=2^{n(A)}",
+              "fallback": "n[P(A)] = 2^{n(A)}"
+            },
+            " with n(A) = 0."
+          ]
         }
       },
       {
@@ -37796,7 +37995,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Use the power-set cardinality formula n[P(A)] = 2^{n(A)} and set it equal to the given value 256."
+          "en": [
+            "Use the power-set cardinality formula ",
+            {
+              "latex": "n[P(A)]=2^{n(A)}",
+              "fallback": "n[P(A)] = 2^{n(A)}"
+            },
+            " and set it equal to the given value 256."
+          ]
         }
       },
       {
@@ -37816,7 +38022,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Because 2^{n(A)} = 2⁸ has the same base 2 on both sides, equate the exponents to get n(A) = 8."
+          "en": [
+            "Because ",
+            {
+              "latex": "2^{n(A)}=2^8",
+              "fallback": "2^{n(A)} = 2⁸"
+            },
+            " has the same base 2 on both sides, equate the exponents to get n(A) = 8."
+          ]
         }
       }
     ]
@@ -41094,30 +41307,41 @@ const texts={
       "fallback": "1.2"
     }
   ],
-  "1.2 exceeds 1, the maximum possible probability.": [
+  "An impossible event has probability 0, which is allowed. The value 1.2 exceeds the maximum of 1.": [
+    "An impossible event has probability ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ", which is allowed. The value ",
     {
       "latex": "1.2",
       "fallback": "1.2"
     },
-    " exceeds ",
+    " exceeds the maximum of ",
     {
       "latex": "1",
       "fallback": "1"
     },
-    ", the maximum possible probability."
+    "."
   ],
-  "English version only — Tamil editorial content pending. 1.2 exceeds 1, the maximum possible probability.": [
-    "English version only — Tamil editorial content pending. ",
+  "English version only — Tamil editorial content pending. An impossible event has probability 0, which is allowed. The value 1.2 exceeds the maximum of 1.": [
+    "English version only — Tamil editorial content pending. An impossible event has probability ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ", which is allowed. The value ",
     {
       "latex": "1.2",
       "fallback": "1.2"
     },
-    " exceeds ",
+    " exceeds the maximum of ",
     {
       "latex": "1",
       "fallback": "1"
     },
-    ", the maximum possible probability."
+    "."
   ],
   "probability-2": [
     "probability",
@@ -47464,23 +47688,13 @@ const texts={
     },
     "."
   ],
-  "Use midpoint x and a convenient assumed mean A = 27 with class width h = 5.": [
-    "Use midpoint ",
+  "Choose 27 years as the assumed mean.": [
+    "Choose ",
     {
-      "latex": "x",
-      "fallback": "x"
+      "latex": "27",
+      "fallback": "27"
     },
-    " and a convenient assumed ",
-    {
-      "latex": "\\text{mean} A = 27",
-      "fallback": "mean A = 27"
-    },
-    " with class width ",
-    {
-      "latex": "h = 5",
-      "fallback": "h = 5"
-    },
-    "."
+    " years as the assumed mean."
   ],
   "Their two middle values are x+2 and x+4.": [
     "Their two middle values are ",
@@ -47495,25 +47709,21 @@ const texts={
     },
     "."
   ],
-  "N/2 is 25; the median class is 30–40, since cumulative frequency first exceeds 2": [
-    {
-      "latex": "\\dfrac{N}{2}",
-      "fallback": "N/2"
-    },
-    " is ",
+  "The halfway position 25 lies between the running totals 24 and 34": [
+    "The halfway position ",
     {
       "latex": "25",
       "fallback": "25"
     },
-    "; the median class is ",
+    " lies between the running totals ",
     {
-      "latex": "30 - 40",
-      "fallback": "30–40"
+      "latex": "24",
+      "fallback": "24"
     },
-    ", since cumulative frequency first exceeds ",
+    " and ",
     {
-      "latex": "2",
-      "fallback": "2"
+      "latex": "34",
+      "fallback": "34"
     }
   ],
   "Twice the median 6 gives the mean.": [
@@ -47532,29 +47742,19 @@ const texts={
     },
     " across seven numbers gives the total."
   ],
-  "The largest frequency 46 occurs in class 20–30.": [
-    "The largest frequency ",
-    {
-      "latex": "46",
-      "fallback": "46"
-    },
-    " occurs in class ",
+  "The modal class is 20–30 because it has the most students.": [
+    "The modal class is ",
     {
       "latex": "20 - 30",
       "fallback": "20–30"
     },
-    "."
+    " because it has the most students."
   ],
-  "The modal class is 55–64 with the highest frequency 14.": [
+  "The modal class is 55–64 kg.": [
     "The modal class is ",
     {
-      "latex": "55 - 64",
-      "fallback": "55–64"
-    },
-    " with the highest frequency ",
-    {
-      "latex": "14",
-      "fallback": "14"
+      "latex": "55 - 64\\,\\mathrm{kg}",
+      "fallback": "55–64 kg"
     },
     "."
   ],
