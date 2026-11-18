@@ -11,6 +11,8 @@ This is an instructional-design heuristic informed by cognitive-load and worked-
 1. **HCF / Euclidean algorithm:** The user found a clipped formula chain and an unrelated term/remainder slider confusing, despite being able to solve the quiz. Preferred: three fully visible and correctly labeled divisions (e.g. `60 = 32 × 1 + 28`, `32 = 28 × 1 + 4`, `28 = 4 × 7 + 0`), concluding that the last nonzero remainder is 4. Demonstrate sequential mathematical reasoning; avoid horizontal clipping.
 2. **Geometric Progression:** The user liked the existing lesson and preferred replacing a generic term slider with a clickable term sequence. For `5, 15, 45, 135`, selecting each step shows `5 × 3 = 15`, `15 × 3 = 45`, and `45 × 3 = 135`. Preserve the compact explanation, A.P.–G.P. contrast and formula, and define `a`, `r`, and `n` for beginners.
 
+**Symbol-to-language bridge:** Never assume a novice understands an implication arrow (⇒), equals sign (=), or boxed answer by itself. Whenever a symbolic result identifies a named quantity (such as a coefficient, common ratio, HCF, slope, or probability), add one concise natural-language conclusion: “The coefficient of x² is 2/5.” State the sign explicitly; use proper inline math notation and avoid repeating entire paragraphs. Include this check in the individual concept or exercise quality review.
+
 **Generalization:** Neither “always use three steps” nor “always use clickable terms” is a universal rule. Use the demonstration that reveals the defining mathematical relationship. A slider is appropriate *only when continuous change itself teaches something*. Do not redesign a lesson that already works merely for novelty.
 
 ## Standard workflow: automated first pass + individualized concept review
