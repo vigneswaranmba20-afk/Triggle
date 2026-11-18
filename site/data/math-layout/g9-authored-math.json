@@ -18,6 +18,9 @@
       }
     }
   },
+  "g9-ch8-ex8.4-q1": {
+    "variables": ["m"]
+  },
   "g9-ch2-ex8-q4-i": {
     "questionAnchors": [
       {"source":"7,000,000,000","latex":"7{,}000{,}000{,}000"}

@@ -664,7 +664,7 @@ const entries=[
         }
       },
       {
-        "en": "Read the number multiplying x².",
+        "en": "Read the signed number that multiplies x².",
         "eq": "(2/5)x² ⇒ 2/5",
         "math": {
           "latex": "\\frac{2}{5}x^2\\;\\Rightarrow\\;\\frac{2}{5}",
@@ -673,7 +673,7 @@ const entries=[
         },
         "reasonMath": {
           "en": [
-            "Read the number multiplying ",
+            "Read the signed number that multiplies ",
             {
               "latex": "x^2",
               "fallback": "x²"
@@ -800,7 +800,7 @@ const entries=[
         }
       },
       {
-        "en": "Read the number multiplying x².",
+        "en": "Read the signed number that multiplies x².",
         "eq": "−2x² ⇒ −2",
         "math": {
           "latex": "-2x^2\\;\\Rightarrow\\;-2",
@@ -809,7 +809,7 @@ const entries=[
         },
         "reasonMath": {
           "en": [
-            "Read the number multiplying ",
+            "Read the signed number that multiplies ",
             {
               "latex": "x^2",
               "fallback": "x²"
@@ -931,7 +931,7 @@ const entries=[
         }
       },
       {
-        "en": "Read the number multiplying x².",
+        "en": "Read the signed number that multiplies x².",
         "eq": "πx² ⇒ π",
         "math": {
           "latex": "\\pi x^2\\;\\Rightarrow\\;\\pi",
@@ -940,7 +940,7 @@ const entries=[
         },
         "reasonMath": {
           "en": [
-            "Read the number multiplying ",
+            "Read the signed number that multiplies ",
             {
               "latex": "x^2",
               "fallback": "x²"
@@ -1067,7 +1067,7 @@ const entries=[
         }
       },
       {
-        "en": "Read the number multiplying x².",
+        "en": "Read the signed number that multiplies x².",
         "eq": "√3 x² ⇒ √3",
         "math": {
           "latex": "\\sqrt{3}\\,x^2\\;\\Rightarrow\\;\\sqrt{3}",
@@ -1076,7 +1076,7 @@ const entries=[
         },
         "reasonMath": {
           "en": [
-            "Read the number multiplying ",
+            "Read the signed number that multiplies ",
             {
               "latex": "x^2",
               "fallback": "x²"
@@ -1203,7 +1203,7 @@ const entries=[
         }
       },
       {
-        "en": "Read the number multiplying x².",
+        "en": "Read the signed number that multiplies x².",
         "eq": "x² = 1·x² ⇒ 1",
         "math": {
           "latex": "x^2=1\\cdot x^2\\;\\Rightarrow\\;1",
@@ -1212,7 +1212,7 @@ const entries=[
         },
         "reasonMath": {
           "en": [
-            "Read the number multiplying ",
+            "Read the signed number that multiplies ",
             {
               "latex": "x^2",
               "fallback": "x²"

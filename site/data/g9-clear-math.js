@@ -29264,7 +29264,7 @@ const records=[
       "en": [
         "Let ",
         {
-          "latex": "\\mathrm{m}",
+          "latex": "m",
           "fallback": "m"
         },
         " be the mid point and ",
@@ -29278,7 +29278,7 @@ const records=[
           "questionOption": [
             "(1) ",
             {
-              "latex": "2\\,\\mathrm{m} - b",
+              "latex": "2 m - b",
               "fallback": "2m − b"
             }
           ],
@@ -29289,7 +29289,7 @@ const records=[
           "questionOption": [
             "(2) ",
             {
-              "latex": "2\\,\\mathrm{m} + b",
+              "latex": "2 m + b",
               "fallback": "2m+b"
             }
           ],
@@ -29300,7 +29300,7 @@ const records=[
           "questionOption": [
             "(3) ",
             {
-              "latex": "\\mathrm{m} - b",
+              "latex": "m - b",
               "fallback": "m-b"
             }
           ],
@@ -29311,7 +29311,7 @@ const records=[
           "questionOption": [
             "(4) ",
             {
-              "latex": "\\mathrm{m} - 2 b",
+              "latex": "m - 2 b",
               "fallback": "m-2b"
             }
           ],
@@ -29321,7 +29321,7 @@ const records=[
       "ta": [
         "English-language question; Tamil version pending. Let ",
         {
-          "latex": "\\mathrm{m}",
+          "latex": "m",
           "fallback": "m"
         },
         " be the mid point and ",
@@ -29335,7 +29335,7 @@ const records=[
           "questionOption": [
             "(1) ",
             {
-              "latex": "2\\,\\mathrm{m} - b",
+              "latex": "2 m - b",
               "fallback": "2m − b"
             }
           ],
@@ -29346,7 +29346,7 @@ const records=[
           "questionOption": [
             "(2) ",
             {
-              "latex": "2\\,\\mathrm{m} + b",
+              "latex": "2 m + b",
               "fallback": "2m+b"
             }
           ],
@@ -29357,7 +29357,7 @@ const records=[
           "questionOption": [
             "(3) ",
             {
-              "latex": "\\mathrm{m} - b",
+              "latex": "m - b",
               "fallback": "m-b"
             }
           ],
@@ -29368,7 +29368,7 @@ const records=[
           "questionOption": [
             "(4) ",
             {
-              "latex": "\\mathrm{m} - 2 b",
+              "latex": "m - 2 b",
               "fallback": "m-2b"
             }
           ],
@@ -29379,14 +29379,14 @@ const records=[
     "answerMath": [
       "(1) ",
       {
-        "latex": "2\\,\\mathrm{m} - b",
+        "latex": "2 m - b",
         "fallback": "2m − b"
       }
     ],
     "steps": [
       {
         "math": {
-          "latex": "\\mathrm{m} = \\dfrac{\\left(a + b\\right)}{2}",
+          "latex": "m = \\dfrac{\\left(a + b\\right)}{2}",
           "fallback": "m=(a+b)/2"
         },
         "reasonMath": {
@@ -29396,7 +29396,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&2\\,\\mathrm{m} = a + b  \\\\ &\\Rightarrow a = 2\\,\\mathrm{m} - b\\end{aligned}",
+          "latex": "\\begin{aligned}&2 m = a + b  \\\\ &\\Rightarrow a = 2 m - b\\end{aligned}",
           "fallback": "2m=a+b ⇒ a=2m−b",
           "display": true
         },
@@ -29411,7 +29411,7 @@ const records=[
           "en": [
             "Choose the formula ",
             {
-              "latex": "2\\,\\mathrm{m} - b",
+              "latex": "2 m - b",
               "fallback": "2m−b"
             },
             "."
@@ -29419,7 +29419,7 @@ const records=[
           "ta": [
             "English explanation (Tamil version pending): Choose the formula ",
             {
-              "latex": "2\\,\\mathrm{m} - b",
+              "latex": "2 m - b",
               "fallback": "2m−b"
             },
             "."
@@ -34563,7 +34563,7 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Read the number multiplying ",
+            "Read the signed number that multiplies ",
             {
               "latex": "x^2",
               "fallback": "x²"
@@ -34654,7 +34654,7 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Read the number multiplying ",
+            "Read the signed number that multiplies ",
             {
               "latex": "x^2",
               "fallback": "x²"
@@ -34740,7 +34740,7 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Read the number multiplying ",
+            "Read the signed number that multiplies ",
             {
               "latex": "x^2",
               "fallback": "x²"
@@ -34831,7 +34831,7 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Read the number multiplying ",
+            "Read the signed number that multiplies ",
             {
               "latex": "x^2",
               "fallback": "x²"
@@ -34922,7 +34922,7 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Read the number multiplying ",
+            "Read the signed number that multiplies ",
             {
               "latex": "x^2",
               "fallback": "x²"

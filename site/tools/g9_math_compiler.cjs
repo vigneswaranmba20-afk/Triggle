@@ -15,20 +15,21 @@ const identifier=t=>/^[A-Za-z]$/.test(t)||/^[A-Z]{2,4}$/.test(t)||functions.has(
 const lex=source=>[...source.matchAll(/\[\[|\]\]|\.{3}|\d{1,3}(?:,\d{3})+(?!\d)|\d+(?:\.\d+)?|[A-Za-z]+|_+|[⁰¹²³⁴⁵⁶⁷⁸⁹⁻ⁿᵏ]+|[₀₁₂₃₄₅₆₇₈₉ᵢ]+|\s+|./gu)].map(m=>({text:m[0],start:m.index,end:m.index+m[0].length}));
 const textLatex=s=>'\\text{'+s.replace(/[\\{}%&#_$]/g,c=>'\\'+c)+'}';
 const allowed=t=>/^\s+$/.test(t)||/^\d/.test(t)||identifier(t)||Object.hasOwn(ops,t)||['[[',']]','|','(',')','[',']','{','}','√','∛','∜','+','-','/','^','=','<','>',',',':',';',"'",'±','̄'].includes(t)||/^_+$/.test(t)||/^[⁰¹²³⁴⁵⁶⁷⁸⁹⁻ⁿᵏ₀₁₂₃₄₅₆₇₈₉ᵢ]+$/u.test(t);
-function expression(source,{display=false}={}){
+function expression(source,{display=false,variables=[]}={}){
  const tokenData=lex(source).filter(t=>!/^\s+$/.test(t.text)),ts=tokenData.map(t=>t.text==='∣'?'|':t.text);let at=0;
  const slice=(a,b)=>source.slice(tokenData[a]?.start??source.length,tokenData[b-1]?.end??source.length);
  const peek=()=>ts[at],take=()=>ts[at++],expect=t=>{if(take()!==t)throw Error('Expected '+t+' in '+source);};
  const isSuper=t=>/^[⁰¹²³⁴⁵⁶⁷⁸⁹⁻ⁿᵏ]+$/u.test(t||'');
  const node=(latex,kind='atom')=>({latex,kind});
- const begins=t=>t&&((identifier(t)&&!units.has(t))||/^\d/.test(t)||/^_+$/.test(t)||['(','[','{','[[','√','∛','∜','π','θ','φ','α','β','Σ','σ','μ','ℕ','ℤ','∅','∠','Δ','∣'].includes(t));
+ const isUnit=t=>units.has(t)&&!variables.includes(t);
+ const begins=t=>t&&((identifier(t)&&!isUnit(t))||/^\d/.test(t)||/^_+$/.test(t)||['(','[','{','[[','√','∛','∜','π','θ','φ','α','β','Σ','σ','μ','ℕ','ℤ','∅','∠','Δ','∣'].includes(t));
  function atom(){
   const t=take();if(!t)throw Error('Missing operand');
   if(t==='[['){
    const start=at;let depth=0,split=-1,end=-1;
    for(let i=at;i<ts.length;i++){if(ts[i]==='[[')depth++;else if(ts[i]===']]'){if(depth===0){end=i;break;}depth--;}else if(ts[i]==='|'&&depth===0)split=i;}
    if(split<0||end<0)throw Error('Unbalanced authored fraction');
-   const compile=source=>{try{return expression(source).latex;}catch{return textLatex(source);}};
+   const compile=source=>{try{return expression(source,{variables}).latex;}catch{return textLatex(source);}};
    const n=compile(slice(start,split)),d=compile(slice(split+1,end));at=end+1;
    return node('\\dfrac{'+n+'}{'+d+'}','fraction');
   }
@@ -43,7 +44,7 @@ function expression(source,{display=false}={}){
    return node('\\sqrt'+(t==='∛'?'[3]':t==='∜'?'[4]':'')+'{'+body+'}','root');
   }
   if(t==='∠'||t==='Δ'){return node(ops[t]+' '+atom().latex);}
-  if(t==='P'&&peek()==='('){take();const start=at;let depth=0;while(at<ts.length){if(peek()==='(')depth++;if(peek()===')'){if(depth===0)break;depth--;}take();}const body=slice(start,at);expect(')');let latex;try{latex=expression(body).latex;}catch{latex=textLatex(body);}return node('P\\left('+latex+'\\right)');}
+  if(t==='P'&&peek()==='('){take();const start=at;let depth=0;while(at<ts.length){if(peek()==='(')depth++;if(peek()===')'){if(depth===0)break;depth--;}take();}const body=slice(start,at);expect(')');let latex;try{latex=expression(body,{variables}).latex;}catch{latex=textLatex(body);}return node('P\\left('+latex+'\\right)');}
   if(t==='Σ')return node('\\sum '+atom().latex);
   if(functions.has(t)){
    let exponent='';if(isSuper(peek()))exponent='^{'+[...take()].map(c=>supers[c]).join('')+'}';
@@ -53,7 +54,7 @@ function expression(source,{display=false}={}){
   }
   if(/^\d/.test(t))return node(t.replaceAll(',','{,}'),'number');
   if(/^_+$/.test(t))return node('\\underline{\\phantom{000}}');
-  if(units.has(t))return node('\\mathrm{'+t+'}','unit');
+  if(isUnit(t))return node('\\mathrm{'+t+'}','unit');
   if(labels.has(t))return node('\\text{'+t+'}','label');
   if(identifier(t))return node(t);
   if(ops[t])return node(ops[t]);
@@ -73,7 +74,7 @@ function expression(source,{display=false}={}){
  }
  function unary(){if(['+','-','−','–','±','≈'].includes(peek())){const t=take();return node((ops[t]|| (t==='±'?'\\pm':t))+' '+unary().latex);}return power();}
  function juxtapose(){let v=unary();while(begins(peek())){if(v.kind==='number'&&/^\d/.test(peek()))throw Error('Adjacent data values retain their source spacing');const r=unary();v=node(v.latex+(['unit','root'].includes(r.kind)?'\\,':' ')+r.latex,'product');}return v;}
- function product(){let v=juxtapose();while(['/','×','÷'].includes(peek())){const t=take(),r=juxtapose();v=t==='/'?node('\\dfrac{'+v.latex+'}{'+r.latex+'}','fraction'):node(v.latex+' '+ops[t]+' '+r.latex);}while(units.has(peek())){const unit=power();v=node(v.latex+'\\,'+unit.latex,'quantity');}return v;}
+ function product(){let v=juxtapose();while(['/','×','÷'].includes(peek())){const t=take(),r=juxtapose();v=t==='/'?node('\\dfrac{'+v.latex+'}{'+r.latex+'}','fraction'):node(v.latex+' '+ops[t]+' '+r.latex);}while(isUnit(peek())){const unit=power();v=node(v.latex+'\\,'+unit.latex,'quantity');}return v;}
  function sum(){let v=product();while(['+','-','−','–','±','∪','∩'].includes(peek())){const t=take();v=node(v.latex+' '+(ops[t]||(t==='±'?'\\pm':t))+' '+product().latex);}return v;}
  function relation(){let v=sum();while(['=','<','>','≤','≥','≠','≈','⇒','∈','∉','⊂','⊆','≅'].includes(peek())){const t=take();v=node(v.latex+' '+(ops[t]||t)+' '+sum().latex);}return v;}
  function sequence(stop){let v=relation();while(peek()&&peek()!==stop&&[',',':',';'].includes(peek())){const t=take();v=node(v.latex+(t===','?', ':t===';'?';\\quad ':' : ')+relation().latex);}if(peek()==='…'||peek()==='...'){v=node(v.latex+'\\ldots');take();}return v;}
@@ -97,7 +98,7 @@ function expression(source,{display=false}={}){
 
 // A comma between complete inline equalities can be a line break. A comma
 // inside a set, coordinate, group or fraction stays with its expression.
-function inlineEqualities(source){
+function inlineEqualities(source,variables){
  if(/[|∣]/.test(source))return null;
  const separators=[];
  let depth=0,equality=false;
@@ -116,16 +117,16 @@ function inlineEqualities(source){
  for(const end of [...separators,source.length]){
   const clause=source.slice(cursor,end);
   const leading=clause.slice(0,clause.length-clause.trimStart().length);
-  parts.push(leading,expression(clause.trimStart()));
+  parts.push(leading,expression(clause.trimStart(),{variables}));
   if(end<source.length)parts.push(',');
   cursor=end+1;
  }
  return parts.filter(part=>part!=='');
 }
 
-function rich(source,{display=false}={}){
+function rich(source,{display=false,variables=[]}={}){
  if(Array.isArray(source))return source;
- if(source&&typeof source==='object')return source.latex?source:Object.fromEntries(Object.entries(source).map(([k,v])=>[k,rich(v,{display})]));
+ if(source&&typeof source==='object')return source.latex?source:Object.fromEntries(Object.entries(source).map(([k,v])=>[k,rich(v,{display,variables})]));
  if(typeof source!=='string')return source;
  // Preserve already authored structured notation and keep unsupported prose as
  // exact strings. The lexer cannot select text from inside an HTML element.
@@ -148,8 +149,8 @@ function rich(source,{display=false}={}){
    // symbols and complete numeric tokens are eligible as isolated anchors.
    if(word(raw)&&raw.length>1&&!/^[A-Z]{2,4}$/.test(raw))continue;
    try{
-    const value=expression(raw,{display:display&&raw.length>12});
-    found={parts:(!display&&inlineEqualities(raw))||[value],end:t.start+raw.length,index:j};break;
+    const value=expression(raw,{display:display&&raw.length>12,variables});
+    found={parts:(!display&&inlineEqualities(raw,variables))||[value],end:t.start+raw.length,index:j};break;
    }catch{}
   }
   if(found){text(source.slice(cursor,t.start));out.push(...found.parts);cursor=found.end;index=found.index;}else index++;

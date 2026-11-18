@@ -432,7 +432,9 @@
   body.append(title,result);li.append(number,body);steps.append(li);
  }
  const prepareLessonMath=()=>window.TriggleNotation?.prepare?.($('lessonCard'));
+ const lessonMathObserver=typeof ResizeObserver==='function'?new ResizeObserver(prepareLessonMath):null;
  function renderSteps(){
+  lessonMathObserver?.disconnect();
   const authored=window.TriggleWorkedDisplay?.get(current,lang);
   $('lessonCard').classList.toggle('twd-lesson',!!authored);
   $('questionText').classList.toggle('twd-question',!!authored);
@@ -470,21 +472,20 @@
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
+  if(grade===9&&lessonMathObserver){
+   // Android can reflow a formula after its initial font load. Observe both
+   // the scroll box and the natural width of its rendered inline contents.
+   for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
+    lessonMathObserver.observe(formula);
+    if(formula.firstElementChild)lessonMathObserver.observe(formula.firstElementChild);
+   }
+  }
   requestAnimationFrame(()=>{
    prepareLessonMath();
    // The layout read starts loading any math fonts this question newly uses.
    if(grade===9)document.fonts?.ready.then(prepareLessonMath);
   });
   if(grade!==9)document.fonts?.ready.then(prepareLessonMath);
- }
- // Local equation overflow can change when Android reflows the question or
- // solution after loading its fonts or rotating the screen.
- if(typeof ResizeObserver==='function'){
-  const observer=new ResizeObserver(()=>{
-   if(grade===9&&!$('lessonCard').hidden)prepareLessonMath();
-  });
-  observer.observe($('questionText'));
-  observer.observe($('stepsList'));
  }
  document.fonts?.addEventListener('loadingdone',()=>{
   if(grade===9&&!$('lessonCard').hidden)prepareLessonMath();
@@ -541,6 +542,7 @@
     document.body.classList.toggle('g10-ch2-type',grade===10&&String(typographyChapter)==='2');
    $('questionReturn').hidden=true;
    const showingQuestion=!homeView&&!classIndex&&!chapterOverview;
+   if(!showingQuestion)lessonMathObserver?.disconnect();
    document.body.classList.toggle('g9-math-first',grade===9&&!homeView&&!classIndex);
    if(grade===9&&showingQuestion)$('stepsList').setAttribute('role','list');else $('stepsList').removeAttribute('role');
    $('allChaptersReturn').hidden=true; // Chapters remain accessible through the existing breadcrumb/menu.

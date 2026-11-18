@@ -52,4 +52,4 @@ for(const row of json.rows){
  }
 }
 assert.equal(formulaCount,55);
-console.log('PASS 2025 original source pages 93 and answer appendix 316: 11 reviewed English-only Algebra Ex3.1 candidates, Q1 classifications, Q2 coefficients, 55 offline KaTeX renders, 33 step explanations, no student registration; Tamil pending.');
+console.log('PASS 2025 original source pages 93 and answer appendix 316: 11 registered English Algebra Ex3.1 records, Q1 classifications, Q2 coefficients, 55 offline KaTeX renders and 33 explanations. Tamil review pending.');

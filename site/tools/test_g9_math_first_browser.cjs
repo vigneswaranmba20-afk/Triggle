@@ -27,6 +27,8 @@ async function load(page, base, id) {
 async function sample(page, base, id, width) {
   await load(page, base, id);
   const name = `${id} at ${width}px`;
+  await page.waitForFunction(selector => [...document.querySelectorAll(selector)].every(formula =>
+    formula.scrollWidth <= formula.clientWidth + 1 || formula.tabIndex === 0), formulaSelector, { timeout: 3000 });
   const metrics = await page.evaluate(selector => {
     const font = element => parseFloat(getComputedStyle(document.querySelector(element)).fontSize);
     const details = [...document.querySelectorAll(selector)].map(formula => {
@@ -40,6 +42,7 @@ async function sample(page, base, id, width) {
     });
     return {
       overflow: document.documentElement.scrollWidth > innerWidth + 1,
+      viewport: innerWidth,
       question: font('#questionText'), reason: font('.step-reason'),
       answer: document.querySelectorAll('.final-answer-step').length,
       failures: document.querySelectorAll('[data-math-error]').length,
@@ -47,6 +50,7 @@ async function sample(page, base, id, width) {
     };
   }, formulaSelector);
   assert.equal(metrics.overflow, false, name + ' page width');
+  assert.equal(metrics.viewport, width, name + ' mobile viewport width');
   assert.equal(metrics.failures, 0, name + ' renders');
   assert(metrics.question >= 18 && metrics.reason >= 16, name + ' reading scale');
   assert.equal(metrics.answer, 1, name + ' visible final answer');
