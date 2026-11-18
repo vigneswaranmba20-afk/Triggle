@@ -1,0 +1,571 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 3,
+  "exercises": [
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5",
+    "3.6"
+  ],
+  "edition": "TN SCERT 2025 revised English and Tamil",
+  "textbook": "Class 10 Mathematics, Chapter 3 Algebra — GCD and LCM of Polynomials, Rational Expressions and Operations",
+  "originalPdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+  "tamilPdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+  "sourcePages": {
+    "printed": [
+      96,
+      97,
+      98,
+      99,
+      101,
+      103
+    ],
+    "pdf": [
+      102,
+      103,
+      104,
+      105,
+      107,
+      109
+    ],
+    "tamilPrinted": [
+      98,
+      99,
+      101,
+      103,
+      105
+    ],
+    "tamilPdf": [
+      104,
+      105,
+      107,
+      109,
+      111
+    ],
+    "answerAppendixPrinted": [
+      337,
+      338
+    ],
+    "answerAppendixPdf": [
+      343,
+      344
+    ],
+    "tamilAnswerAppendixPrinted": [
+      351,
+      352
+    ],
+    "tamilAnswerAppendixPdf": [
+      357,
+      358
+    ]
+  },
+  "pageImageSha256": {
+    "en-pdf-2.png": "2346d7f55d7602554c6072cc4e0971dceaf9734919d70c7f3f187f263b26aa74",
+    "en-pdf-102.png": "89e8fbf34f75014adac32d9f71bb600c937778b9fa5788ef32e743288cb2f697",
+    "en-pdf-103.png": "a12b178dbcc4d00a3e758bf6d3eb99c386277b302da6ad2ef68f9a9a8071ffb0",
+    "en-pdf-104.png": "eb780aa92317022148610a9eb56e199d807061186ee8ca031ccac00aa6cdc3c5",
+    "en-pdf-105.png": "af04fc6f0fd06626d5cd76ef736f46b0c2c509e6cc94915411700fb0bc0ca5c7",
+    "en-pdf-107.png": "9adeccb450c66095289c5f008ee39cedfe7f654f6248fccfe52e263c93021122",
+    "en-pdf-109.png": "6286a5b5b90b4bbae87409e5ce033e172ff89f7b032f6ec03d1100426878621e",
+    "en-pdf-343.png": "4f6b5648991578af0698970353e381c8c0fede96208d4c3832f7a92fe25d1bcd",
+    "en-pdf-344.png": "d47c3466063a725d652fc1d8f93d0efe0f03f79a8f41ec092731f72f2ffb640d",
+    "ta-pdf-2.png": "91fa5887459b63f16a4a6e9e753ce3ada7fba123fe9b10fe31ebb22df70809ad",
+    "ta-pdf-104.png": "e2a7432c5e90a7cf6583f798b916fcabcf1cd1c5d9a9f07326742e04f59dfa8d",
+    "ta-pdf-105.png": "0c69bc622f2c04d4abe3ba9b467dcf4bcfbc31b53fcff0420a1868a8496b3358",
+    "ta-pdf-107.png": "fc0d15a21adee30100d3a466ad3a543204895b0d07c4116b821181fb158174cd",
+    "ta-pdf-109.png": "31e1e7db8aa94e0dd191cc64b0096470644d0961c4ef9a42434af2ce36d0b15a",
+    "ta-pdf-111.png": "3f50cd86149655a0c15b1974a0237285b8a2545c09b59e7fb0e78d20e2285645",
+    "ta-pdf-357.png": "f677f1984492417d61b81f65cfc923d447ef5e856fc214a8724e6087df957e81",
+    "ta-pdf-358.png": "698d211ed89f6e953a1287a04413cf2d15df9c862d6b832b1e597bc1a8df7e45"
+  },
+  "reviewMethod": "Visually inspected rendered page images of printed pp. 96-99, 101, 103 (PDF pp. 102-105, 107, 109) and Answer Appendix printed pp. 337-338 (PDF pp. 343-344) from the 2025 English textbook, together with printed pp. 98-99, 101, 103, 105 (PDF pp. 104-105, 107, 109, 111) and Answer Appendix printed pp. 351-352 (PDF pp. 357-358) from the 2025 Tamil textbook, against all 50 independently solved student records across Exercises 3.2-3.6.",
+  "sourceLanguages": {
+    "english": "source-image checked",
+    "tamil": "source-image checked for question/part parity; Tamil student lesson editorial review pending"
+  },
+  "teacherReview": "not performed",
+  "chapterCompletion": false,
+  "exerciseBreakdown": {
+    "3.2": {
+      "numberedQuestions": 2,
+      "uniqueSubpartTasks": 10,
+      "newStudentRecords": 10,
+      "totalStudentRecords": 10
+    },
+    "3.3": {
+      "numberedQuestions": 4,
+      "uniqueSubpartTasks": 9,
+      "newStudentRecords": 9,
+      "totalStudentRecords": 9
+    },
+    "3.4": {
+      "numberedQuestions": 2,
+      "uniqueSubpartTasks": 8,
+      "newStudentRecords": 8,
+      "totalStudentRecords": 8
+    },
+    "3.5": {
+      "numberedQuestions": 5,
+      "uniqueSubpartTasks": 11,
+      "newStudentRecords": 11,
+      "totalStudentRecords": 11
+    },
+    "3.6": {
+      "numberedQuestions": 8,
+      "uniqueSubpartTasks": 11,
+      "newStudentRecords": 11,
+      "totalStudentRecords": 11,
+      "note": "In the 2025 English (printed p. 103, PDF p. 109) and Tamil (printed p. 105, PDF p. 111) textbooks and Answer Appendices (printed p. 338/352), Exercise 3.6 Q2 has 2 subparts: Q2(i) and Q2(ii). TEXTBOOK_SPEC has been updated from the unverified 3-part estimate to the exact 2-part textbook count (49 total tasks across 21 numbered questions in Exercises 3.2-3.6)."
+    }
+  },
+  "numberedQuestions": 21,
+  "uniqueSubpartTasks": 49,
+  "existingStudentRecords": 0,
+  "newStudentRecords": 49,
+  "totalStudentRecords": 49,
+  "tasks": [
+    {
+      "id": "c10-3-ex3-2-q1-i",
+      "exercise": "3.2",
+      "label": "Exercise 3.2 · Q1(i)",
+      "question": "Find the GCD of the given polynomials (i) x⁴ + 3x³ − x − 3, x³ + x² − 5x + 3",
+      "answer": "x² + 2x − 3",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.2 Q1(i); printed p. 96, PDF p. 102; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-2-q1-ii",
+      "exercise": "3.2",
+      "label": "Exercise 3.2 · Q1(ii)",
+      "question": "Find the GCD of the given polynomials (ii) x⁴ − 1 , x³ − 11x² + x − 11",
+      "answer": "x² + 1",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.2 Q1(ii); printed p. 96, PDF p. 102; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-2-q1-iii",
+      "exercise": "3.2",
+      "label": "Exercise 3.2 · Q1(iii)",
+      "question": "Find the GCD of the given polynomials (iii) 3x⁴ + 6x³ − 12x² − 24x, 4x⁴ + 14x³ + 8x² − 8x",
+      "answer": "x(x² + 4x + 4)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.2 Q1(iii); printed p. 96, PDF p. 102; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-2-q1-iv",
+      "exercise": "3.2",
+      "label": "Exercise 3.2 · Q1(iv)",
+      "question": "Find the GCD of the given polynomials (iv) 3x³ + 3x² + 3x + 3 , 6x³ + 12x² + 6x + 12",
+      "answer": "3(x² + 1)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.2 Q1(iv); printed p. 96, PDF p. 102; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-2-q2-i",
+      "exercise": "3.2",
+      "label": "Exercise 3.2 · Q2(i)",
+      "question": "Find the LCM of the given expressions. (i) 4x²y, 8x³y²",
+      "answer": "8x³y²",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.2 Q2(i); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-2-q2-ii",
+      "exercise": "3.2",
+      "label": "Exercise 3.2 · Q2(ii)",
+      "question": "Find the LCM of the given expressions. (ii) −9a³b², 12a²b²c",
+      "answer": "−36a³b²c",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.2 Q2(ii); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-2-q2-iii",
+      "exercise": "3.2",
+      "label": "Exercise 3.2 · Q2(iii)",
+      "question": "Find the LCM of the given expressions. (iii) 16m, −12m²n², 8n²",
+      "answer": "−48m²n²",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.2 Q2(iii); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-2-q2-iv",
+      "exercise": "3.2",
+      "label": "Exercise 3.2 · Q2(iv)",
+      "question": "Find the LCM of the given expressions. (iv) p² − 3p + 2, p² − 4",
+      "answer": "(p − 1)(p − 2)(p + 2)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.2 Q2(iv); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-2-q2-v",
+      "exercise": "3.2",
+      "label": "Exercise 3.2 · Q2(v)",
+      "question": "Find the LCM of the given expressions. (v) 2x² − 5x − 3, 4x² − 36",
+      "answer": "4(x + 3)(2x + 1)(x − 3)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.2 Q2(v); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-2-q2-vi",
+      "exercise": "3.2",
+      "label": "Exercise 3.2 · Q2(vi)",
+      "question": "Find the LCM of the given expressions. (vi) (2x² − 3xy)², (4x − 6y)³, 8x³ − 27y³",
+      "answer": "2³x²(2x − 3y)³(4x² + 6xy + 9y²)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.2 Q2(vi); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-3-q1-i",
+      "exercise": "3.3",
+      "label": "Exercise 3.3 · Q1(i)",
+      "question": "Find the LCM and GCD for the following and verify that f(x) × g(x) = LCM × GCD (i) 21x²y, 35xy²",
+      "answer": "7xy, 105x²y²",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.3 Q1(i); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-3-q1-ii",
+      "exercise": "3.3",
+      "label": "Exercise 3.3 · Q1(ii)",
+      "question": "Find the LCM and GCD for the following and verify that f(x) × g(x) = LCM × GCD (ii) (x³ − 1)(x + 1), (x³ + 1)",
+      "answer": "(x + 1), (x − 1)(x + 1)(x² + x + 1)(x² − x + 1)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.3 Q1(ii); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-3-q1-iii",
+      "exercise": "3.3",
+      "label": "Exercise 3.3 · Q1(iii)",
+      "question": "Find the LCM and GCD for the following and verify that f(x) × g(x) = LCM × GCD (iii) (x²y + xy²), (x² + xy)",
+      "answer": "x(x + y), xy(x + y)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.3 Q1(iii); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-3-q2-i",
+      "exercise": "3.3",
+      "label": "Exercise 3.3 · Q2(i)",
+      "question": "Find the LCM of each pair of the following polynomials (i) a² + 4a − 12, a² − 5a + 6 whose GCD is a − 2",
+      "answer": "(a + 6)(a − 2)(a − 3)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.3 Q2(i); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-3-q2-ii",
+      "exercise": "3.3",
+      "label": "Exercise 3.3 · Q2(ii)",
+      "question": "Find the LCM of each pair of the following polynomials (ii) x⁴ − 27a³x, (x − 3a)² whose GCD is (x − 3a)",
+      "answer": "x(x − 3a)²(x² + 3ax + 9a²)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.3 Q2(ii); printed p. 97, PDF p. 103; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-3-q3-i",
+      "exercise": "3.3",
+      "label": "Exercise 3.3 · Q3(i)",
+      "question": "Find the GCD of each pair of the following polynomials (i) 12(x⁴ − x³), 8(x⁴ − 3x³ + 2x²) whose LCM is 24x³(x − 1)(x − 2)",
+      "answer": "4x²(x − 1)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.3 Q3(i); printed p. 98, PDF p. 104; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-3-q3-ii",
+      "exercise": "3.3",
+      "label": "Exercise 3.3 · Q3(ii)",
+      "question": "Find the GCD of each pair of the following polynomials (ii) (x³ + y³), (x⁴ + x²y² + y⁴) whose LCM is (x³ + y³)(x² + xy + y²)",
+      "answer": "x² − xy + y²",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.3 Q3(ii); printed p. 98, PDF p. 104; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-3-q4-i",
+      "exercise": "3.3",
+      "label": "Exercise 3.3 · Q4(i)",
+      "question": "Given the LCM and GCD of the two polynomials p(x) and q(x) find the unknown polynomial in the following table (i) LCM = a³ − 10a² + 11a + 70, GCD = a − 7, p(x) = a² − 12a + 35, find q(x)",
+      "answer": "(a + 2)(a − 7)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.3 Q4(i); printed p. 98, PDF p. 104; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-3-q4-ii",
+      "exercise": "3.3",
+      "label": "Exercise 3.3 · Q4(ii)",
+      "question": "Given the LCM and GCD of the two polynomials p(x) and q(x) find the unknown polynomial in the following table (ii) LCM = (x⁴ − y⁴)(x⁴ + x²y² + y⁴), GCD = (x² − y²), q(x) = (x⁴ − y⁴)(x² + y² − xy), find p(x)",
+      "answer": "(x² − y²)(x² + xy + y²)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.3 Q4(ii); printed p. 98, PDF p. 104; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-4-q1-i",
+      "exercise": "3.4",
+      "label": "Exercise 3.4 · Q1(i)",
+      "question": "Reduce each of the following rational expressions to its lowest form. (i) (x² − 1)/(x² + x)",
+      "answer": "(x − 1)/x",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.4 Q1(i); printed p. 99, PDF p. 105; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-4-q1-ii",
+      "exercise": "3.4",
+      "label": "Exercise 3.4 · Q1(ii)",
+      "question": "Reduce each of the following rational expressions to its lowest form. (ii) (x² − 11x + 18)/(x² − 4x + 4)",
+      "answer": "(x − 9)/(x − 2)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.4 Q1(ii); printed p. 99, PDF p. 105; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-4-q1-iii",
+      "exercise": "3.4",
+      "label": "Exercise 3.4 · Q1(iii)",
+      "question": "Reduce each of the following rational expressions to its lowest form. (iii) (9x² + 81x)/(x³ + 8x² − 9x)",
+      "answer": "9/(x − 1)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.4 Q1(iii); printed p. 99, PDF p. 105; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-4-q1-iv",
+      "exercise": "3.4",
+      "label": "Exercise 3.4 · Q1(iv)",
+      "question": "Reduce each of the following rational expressions to its lowest form. (iv) (p² − 3p − 40)/(2p³ − 24p² + 64p)",
+      "answer": "(p + 5)/[2p(p − 4)]",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.4 Q1(iv); printed p. 99, PDF p. 105; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-4-q2-i",
+      "exercise": "3.4",
+      "label": "Exercise 3.4 · Q2(i)",
+      "question": "Find the excluded values, if any of the following expressions. (i) y/(y² − 25)",
+      "answer": "−5, 5",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.4 Q2(i); printed p. 99, PDF p. 105; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-4-q2-ii",
+      "exercise": "3.4",
+      "label": "Exercise 3.4 · Q2(ii)",
+      "question": "Find the excluded values, if any of the following expressions. (ii) t/(t² − 5t + 6)",
+      "answer": "2, 3",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.4 Q2(ii); printed p. 99, PDF p. 105; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-4-q2-iii",
+      "exercise": "3.4",
+      "label": "Exercise 3.4 · Q2(iii)",
+      "question": "Find the excluded values, if any of the following expressions. (iii) (x² + 6x + 8)/(x² + x − 2)",
+      "answer": "1",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.4 Q2(iii); printed p. 99, PDF p. 105; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-4-q2-iv",
+      "exercise": "3.4",
+      "label": "Exercise 3.4 · Q2(iv)",
+      "question": "Find the excluded values, if any of the following expressions. (iv) (x³ − 27)/(x³ + x² − 6x)",
+      "answer": "0, −3, 2",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.4 Q2(iv); printed p. 99, PDF p. 105; Answer Appendix printed p. 337, PDF p. 343; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q1-i",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q1(i)",
+      "question": "Simplify (i) (4x²y)/(2z²) × (6xz³)/(20y⁴)",
+      "answer": "(3x³z)/(5y³)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q1(i); printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q1-ii",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q1(ii)",
+      "question": "Simplify (ii) (p² − 10p + 21)/(p − 7) × (p² + p − 12)/(p − 3)²",
+      "answer": "p + 4",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q1(ii); printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q1-iii",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q1(iii)",
+      "question": "Simplify (iii) (5t³)/(4t − 8) × (6t − 12)/(10t)",
+      "answer": "(3t²)/4",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q1(iii); printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q2-i",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q2(i)",
+      "question": "Simplify (i) (x + 4)/(3x + 4y) × (9x² − 16y²)/(2x² + 3x − 20)",
+      "answer": "(3x − 4y)/(2x − 5)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q2(i); printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q2-ii",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q2(ii)",
+      "question": "Simplify (ii) (x³ − y³)/(3x² + 9xy + 6y²) × (x² + 2xy + y²)/(x² − y²)",
+      "answer": "(x² + xy + y²)/[3(x + 2y)]",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q2(ii); printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q3-i",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q3(i)",
+      "question": "Simplify (i) (2a² + 5a + 3)/(2a² + 7a + 6) ÷ (a² + 6a + 5)/(−5a² − 35a − 50)",
+      "answer": "−5",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q3(i); printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q3-ii",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q3(ii)",
+      "question": "Simplify (ii) (b² + 3b − 28)/(b² + 4b + 4) ÷ (b² − 49)/(b² − 5b − 14)",
+      "answer": "(b − 4)/(b + 2)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q3(ii); printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q3-iii",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q3(iii)",
+      "question": "Simplify (iii) (x + 2)/(4y) ÷ (x² − x − 6)/(12y²)",
+      "answer": "(3y)/(x − 3)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q3(iii); printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q3-iv",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q3(iv)",
+      "question": "Simplify (iv) (12t² − 22t + 8)/(3t) ÷ (3t² + 2t − 8)/(2t² + 4t)",
+      "answer": "4(2t − 1)/3",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q3(iv); printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q4",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q4",
+      "question": "If x = (a² + 3a − 4)/(3a² − 3) and y = (a² + 2a − 8)/(2a² − 2a − 4) find the value of x²y⁻².",
+      "answer": "4/9",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q4; printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-5-q5",
+      "exercise": "3.5",
+      "label": "Exercise 3.5 · Q5",
+      "question": "If a polynomial p(x) = x² − 5x − 14 is divided by another polynomial q(x) we get (x − 7)/(x + 2), find q(x).",
+      "answer": "x² + 4x + 4",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.5 Q5; printed p. 101, PDF p. 107; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q1-i",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q1(i)",
+      "question": "Simplify (i) x(x + 1)/(x − 2) + x(1 − x)/(x − 2)",
+      "answer": "(2x)/(x − 2)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q1(i); printed p. 103, PDF p. 109; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q1-ii",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q1(ii)",
+      "question": "Simplify (ii) (x + 2)/(x + 3) + (x − 1)/(x − 2)",
+      "answer": "(2x² + 2x − 7)/[(x + 3)(x − 2)]",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q1(ii); printed p. 103, PDF p. 109; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q1-iii",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q1(iii)",
+      "question": "Simplify (iii) x³/(x − y) + y³/(y − x)",
+      "answer": "x² + xy + y²",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q1(iii); printed p. 103, PDF p. 109; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q2-i",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q2(i)",
+      "question": "Simplify (i) (2x + 1)(x − 2)/(x − 4) − (2x² − 5x + 2)/(x − 4)",
+      "answer": "2(x − 2)/(x − 4)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q2(i); printed p. 103, PDF p. 109; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q2-ii",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q2(ii)",
+      "question": "Simplify (ii) 4x/(x² − 1) − (x + 1)/(x − 1)",
+      "answer": "(1 − x)/(1 + x)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q2(ii); printed p. 103, PDF p. 109; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q3",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q3",
+      "question": "Subtract 1/(x² + 2) from (2x³ + x² + 3)/(x² + 2)²",
+      "answer": "(2x³ + 1)/(x² + 2)²",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q3; printed p. 103, PDF p. 109; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q4",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q4",
+      "question": "Which rational expression should be subtracted from (x² + 6x + 8)/(x³ + 8) to get 3/(x² − 2x + 4)",
+      "answer": "(x + 1)/(x² − 2x + 4)",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q4; printed p. 103, PDF p. 109; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q5",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q5",
+      "question": "If A = (2x + 1)/(2x − 1), B = (2x − 1)/(2x + 1) find 1/(A − B) − 2B/(A² − B²)",
+      "answer": "(4x² − 1)/[2(4x² + 1)]",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q5; printed p. 103, PDF p. 109; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q6",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q6",
+      "question": "If A = x/(x + 1), B = 1/(x + 1), prove that [(A + B)² + (A − B)²]/(A ÷ B) = 2(x² + 1)/[x(x + 1)²]",
+      "answer": "Hence proved: [(A + B)² + (A − B)²]/(A ÷ B) = 2(x² + 1)/[x(x + 1)²]",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q6; printed p. 103, PDF p. 109; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q7",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q7",
+      "question": "Pari needs 4 hours to complete a work. His friend Yuvan needs 6 hours to complete the same work. How long will it take to complete if they work together?",
+      "answer": "2 hrs 24 minutes",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q7; printed p. 103, PDF p. 109; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-6-q8",
+      "exercise": "3.6",
+      "label": "Exercise 3.6 · Q8",
+      "question": "Iniya bought 50 kg of fruits consisting of apples and bananas. She paid twice as much per kg for the apple as she did for the banana. If Iniya bought ₹ 1800 worth of apples and ₹ 600 worth bananas, then how many kgs of each fruit did she buy?",
+      "answer": "30 kgs, 20 kgs",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.6 Q8; printed p. 103, PDF p. 109; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    }
+  ]
+}
