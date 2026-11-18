@@ -37773,7 +37773,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "f(-1)=6(-1) - 3(-1)^2 + 3",
+          "latex": "\\begin{aligned}f(-1)&=6(-1)-3(-1)^2\\\\&\\phantom{={}}+3\\end{aligned}",
           "fallback": "f(−1) = 6(−1) − 3(−1)² + 3",
           "display": true
         },
@@ -37990,7 +37990,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "p\\left(-\\dfrac{5}{2}\\right)=2\\left(-\\dfrac{5}{2}\\right)+5=0",
+          "latex": "\\begin{aligned}p\\left(-\\dfrac{5}{2}\\right)&=2\\left(-\\dfrac{5}{2}\\right)+5\\\\&=0\\end{aligned}",
           "fallback": "p(−5/2) = 2(−5/2) + 5 = 0",
           "display": true
         },

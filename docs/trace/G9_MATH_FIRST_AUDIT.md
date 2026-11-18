@@ -30,6 +30,7 @@ Counts refer to affected records unless otherwise stated. Some records occur in 
 | Medium | Coefficients written with invented symbolic names | 5 records, 15 formulas | 0. Worked terms and arrows lead to the same five signed pairs |
 | Medium | Repeated Algebra subpart label in the underlying source string | 11 records | 0. Each source-checked subpart has one label |
 | Medium | Independent equalities could extend past a single mobile line | Seen in Set Language and Geometry | Complete equalities can wrap at commas while grouped expressions stay together |
+| Medium | Two substitution and checking equations in Algebra 3.2 exceeded their 320 px line after increasing the math size | 2 candidate regressions caught by the release suite | 0. The same expressions use aligned lines |
 | Medium | Sampled questions and explanations below the 18 px and 16 px reading targets at 393 px | 3 of 3 screenshot pairs | 0 of 3 |
 | Medium | Reader arrows intercepted keyboard scrolling of wide mathematics. Without the notation script, structured arrays could display object labels | Shared reader defects | Grade 9 lets focused formula regions handle arrows and shows the original text if the script is unavailable |
 | Low | Slash-delimited fractions in displayed English solution prose | 4 text fragments in 3 records | 0 flagged fragments. Fractions appear as math or the explanation uses words |
@@ -48,6 +49,8 @@ Eleven Algebra Exercise 3.1 records, Q1(i–vi) and Q2(i–v), were individually
 The five coefficient pairs for `x²` and `x` in order are `(2/5, −3)`, `(−2, −√7)`, `(π, −1)`, `(√3, √2)` and `(1, −7/2)`. Reading each signed multiplier independently gives the textbook pairs. Q2(i) identifies the two terms, shows each term leading to its coefficient, and boxes the result. The visual question uses a stacked fraction. All 397 final answer strings match the baseline.
 
 Statistics Exercise 8.4 Q1 was also checked against both question-page images. The two sources use `m` for the midpoint, and solving `m = (a+b)/2` for the lower limit `a` gives the existing option 1, `2m−b`. English printed page 288 is PDF page 294. Tamil printed page 305 is PDF page 311. [English source](https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view) · [Tamil source](https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view)
+
+Exercise 3.2 Q1(ii) and Q3(ii) were rechecked against English printed page 91 (PDF 97), Tamil printed page 99 (PDF 105) and the answer keys. Substituting `−1` gives `−6` in Q1(ii). Substituting `−5/2` in `2x+5` gives zero in Q3(ii). The line breaks preserve the original equations and fallbacks. [Exercise 3.2 source evidence](../../site/data/textbook-fidelity/g9-ch3-ex3-2.json)
 
 ## Browser evidence
 

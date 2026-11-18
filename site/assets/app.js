@@ -472,12 +472,15 @@
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
-  if(grade===9&&lessonMathObserver){
-   // Android can reflow a formula after its initial font load. Observe both
-   // the scroll box and the natural width of its rendered inline contents.
-   for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
-    lessonMathObserver.observe(formula);
-    if(formula.firstElementChild)lessonMathObserver.observe(formula.firstElementChild);
+  if(grade===9){
+   // Language switching replaces the formula nodes. Set their keyboard state
+   // immediately and refresh it if Android reflows after loading web fonts.
+   prepareLessonMath();
+   if(lessonMathObserver){
+    for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
+     lessonMathObserver.observe(formula);
+     if(formula.firstElementChild)lessonMathObserver.observe(formula.firstElementChild);
+    }
    }
   }
   requestAnimationFrame(()=>{
