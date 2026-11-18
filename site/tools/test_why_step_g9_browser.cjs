@@ -20,7 +20,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    ['g9-ch9-ex9.1-q4','9']
   ];
   const route=id=>app.base+'/index.html?class=9&question='+id;
-  for(const width of [320,360,390,412]){
+  for(const width of [320,360,390,393,412,430,768,1280]){
    await page.setViewportSize({width,height:844});
    for(const [id] of cases){
     await page.goto(route(id),{waitUntil:'domcontentloaded'});
@@ -36,6 +36,9 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     }));
     await control.locator('summary').click();
     assert.equal(await control.evaluate(el=>el.open),true,'Open on tap '+id);
+    assert((await control.locator('summary').boundingBox()).height>=44,'Touch target is at least 44 px '+id);
+    const font=await control.locator('.why-step-panel').evaluate(el=>parseFloat(getComputedStyle(el).fontSize));
+    assert(font>=16&&font<=18,'Explanation is comfortably sized '+id+' at '+width);
     assert.ok((await control.locator('.why-step-panel p').innerText()).length>34,'Explanation is meaningful '+id);
     const after=await page.evaluate(()=>({
       q:document.querySelector('#questionText')?.innerHTML,
@@ -74,12 +77,18 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    await triangle.locator('summary').click();
    assert.ok(await triangle.locator('figure svg').count()>0,'Trigonometry figure is original inline vector');
   }
+  await page.goto(route('g9-ch7-ex7.1-q3'));
+  const altitude=page.locator('#stepsList details.why-step-g9');
+  await altitude.locator('summary').click();
+  const sketch=altitude.locator('figure svg');
+  assert.equal(await sketch.getAttribute('lang'),'en','English accessible figure text has its language marked');
+  assert.equal(await sketch.getAttribute('aria-label'),'Triangle with an altitude perpendicular to its base');
   await page.goto(app.base+'/index.html?class=10&question=c10-1-ex1-1-q4');
   assert.equal(await page.locator('#stepsList .why-step-g9').count(),0,'Grade 10 unaffected');
   assert.equal(await page.locator('#stepsList .why-step-g10').count(),2,'Grade 10 existing explanations retained');
   assert.deepEqual(errors,[],'No browser runtime exceptions');
   assert.deepEqual(missing,[],'No missing resources');
-  console.log('PASS Grade 9 Why: nine chapters at 320/360/390/412px, bilingual switch, keyboard, preserved questions/equations/answers, and Grade 10 regression.');
+  console.log('PASS Grade 9 Why: nine chapters across eight widths, bilingual switch, keyboard, preserved questions/equations/answers, and Grade 10 regression.');
   await context.close();
  }finally{await browser.close();await app.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

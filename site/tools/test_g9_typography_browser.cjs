@@ -24,7 +24,17 @@ async function inspect(page,q,lang){
    errors:document.querySelectorAll('[data-math-error]').length,
    question:fallback('#questionText'),answer:fallback('.final-answer-value'),
    steps:[...document.querySelectorAll('#stepsList li.worked-step:not(.final-answer-step)')].map((li,i)=>({reason:fallback('#stepsList li.worked-step:nth-child('+(i+1)+') .step-reason'),eq:fallback('#stepsList li.worked-step:nth-child('+(i+1)+') .step-equation')})),
-   formulas:[...document.querySelectorAll('#questionText .triggle-tex,#stepsList .triggle-tex')].map(el=>({height:el.clientHeight,glyphHeight:el.querySelector('.katex-html').getBoundingClientRect().height,width:el.clientWidth,scroll:el.scrollWidth,tab:el.tabIndex,mathml:!!el.querySelector('math')}))};
+   formulas:[...document.querySelectorAll('#questionText .triggle-tex,#stepsList .triggle-tex')].map(el=>{
+    const visual=el.querySelector('.katex-html'),wrapper=el.getBoundingClientRect();
+    const lines=new Set(Array.from(visual.querySelectorAll(':scope > .base'),row=>Math.round(row.getBoundingClientRect().top)));
+    return {height:el.clientHeight,glyphHeight:visual.getBoundingClientRect().height,width:el.clientWidth,
+     scroll:el.scrollWidth,tab:el.tabIndex,mathml:!!el.querySelector('math'),question:!!el.closest('#questionText'),
+     inline:!el.classList.contains('triggle-tex-display'),lines:lines.size,
+     hasVerticalRoom:[...visual.querySelectorAll('span:not(:has(span))')].every(leaf=>{
+      const box=leaf.getBoundingClientRect();
+      return !box.width||!box.height||(box.top>=wrapper.top-2&&box.bottom<=wrapper.bottom+2);
+     })};
+   })};
  },{q,lang});
  const label=q.id+' '+lang+' '+state.width;
  assert.equal(state.errors,0,label+' no renderer fallback');
@@ -34,7 +44,19 @@ async function inspect(page,q,lang){
  assert.equal(state.steps.length,q.steps.length,label+' all steps retained');
  state.steps.forEach((s,i)=>{assert.equal(normalize(s.reason),normalize(q.steps[i][lang]||q.steps[i].en),label+' reason '+i);assert.equal(normalize(s.eq),normalize(q.steps[i].eq),label+' equation '+i);});
  assert(state.pageWidth<=state.width+1,label+' no page overflow');
- for(const f of state.formulas){assert(f.mathml,label+' semantic MathML');assert(f.height+1>=f.glyphHeight,label+' no glyph clipping');if(f.scroll>f.width+1)assert.equal(f.tab,0,label+' keyboard-scrollable expression');}
+ for(const f of state.formulas){
+  assert(f.mathml,label+' semantic MathML');
+  assert(f.height+1>=f.glyphHeight,label+' no glyph clipping');
+  if(f.scroll>f.width+1){
+   assert.equal(f.tab,0,label+' keyboard-scrollable expression');
+   assert(f.hasVerticalRoom,label+' tall glyphs fit the scrollable expression');
+  }
+ }
+ if(state.width===320&&q.id==='c9-exercise-6-2-q1-iii'){
+  const wrapped=state.formulas.find(f=>f.question&&f.inline&&f.lines>1);
+  assert(wrapped,label+' the question relation wraps onto multiple lines');
+  assert(wrapped.scroll<=wrapped.width+1&&wrapped.tab===-1,label+' wrapping avoids horizontal scrolling and unnecessary focus');
+ }
  return state.formulas.length;
 }
 (async()=>{
