@@ -6,7 +6,9 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const file = path.resolve(__dirname, '../data/textbook-exercises/g9-ch3-ex3-1-q10-q12-en.js');
-const grade = { items: [] };\nconst chapter = { id: 'g9-ch3', textbookQuestionIds: [] };\nconst context = { window: { TRIGGLE_CLASSES: { 9: grade }, TRIGGLE_CURRICULUM: { grades: [{ grade: 9, chapters: [chapter] }] } }, console };
+const grade = { items: [] };
+const chapter = { id: 'g9-ch3', textbookQuestionIds: [] };
+const context = { window: { TRIGGLE_CLASSES: { 9: grade }, TRIGGLE_CURRICULUM: { grades: [{ grade: 9, chapters: [chapter] }] } }, console };
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(file, 'utf8'), context, { filename: file, timeout: 10000 });
 const entries = context.window.TRIGGLE_CLASSES?.[9]?.items || [];
@@ -30,7 +32,9 @@ assert.match(q12.answer, /degree 3/i);
 for (const [a,b,c,d,e] of [[1,2,3,4,5],[-2,7,4,1,9],[3,-1,-5,8,2]]) {
   assert.notEqual(a*c,0);
   // Leading term of (ax+b)(cx²+dx+e) is acx³.
-  const coefficient = [a*c, a*d+b*c, a*e+b*d, b*e];\n  assert.equal(coefficient[0], a*c);\n  assert.equal(coefficient.length, 4);
+  const coefficient = [a*c, a*d+b*c, a*e+b*d, b*e];
+  assert.equal(coefficient[0], a*c);
+  assert.equal(coefficient.length, 4);
 }
 for (const row of [q10,q11,q12]) {
   assert(row.steps.length>=3,'At least three explanatory steps: '+row.id);
