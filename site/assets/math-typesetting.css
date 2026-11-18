@@ -108,14 +108,14 @@ body.g9-math-first #lessonCard .final-answer-value {
 }
 body.g9-math-first #lessonCard .step-equation:empty { display: none; }
 
-/* KaTeX's inline strut aligns the formula with the surrounding prose. Let
-   tall glyphs paint outside the wrapper when the expression fits. */
+/* KaTeX's inline strut aligns the formula with the surrounding prose.
+   Allow tall glyphs, and contain width before scroll controls are prepared. */
 body.g9-math-first #lessonCard .triggle-tex:not(.triggle-tex-display) {
   display: inline-flex;
   align-items: baseline;
   vertical-align: baseline;
   padding: .06em .15em;
-  overflow: visible;
+  overflow: clip visible;
 }
 /* Keep KaTeX's own breakpoints between terms and relations. A single
    unbreakable fragment can still use the reader's local scroll. */
@@ -130,7 +130,7 @@ body.g9-math-first #lessonCard :is(#questionText, .structured-equation, .final-a
   margin: .08em 0;
   padding: .16em .12em .22em;
   text-align: left;
-  overflow: visible;
+  overflow: clip visible;
 }
 /* Oversized expressions still scroll locally. Reserve vertical room for
    denominators, radicals and raised symbols inside the scroll container. */

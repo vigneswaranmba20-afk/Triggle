@@ -52,6 +52,7 @@ async function inspect(page,q,lang){
  assert.equal(normalize(state.answer),normalize(q.answer?.[lang]||q.answer),label+' final answer');
  assert.equal(state.steps.length,q.steps.length,label+' all steps retained');
  state.steps.forEach((s,i)=>{assert.equal(normalize(s.reason),normalize(q.steps[i][lang]||q.steps[i].en),label+' reason '+i);assert.equal(normalize(s.eq),normalize(q.steps[i].eq),label+' equation '+i);});
+ assert.equal(state.width,page.viewportSize().width,label+' viewport stays at its requested mobile width');
  assert(state.pageWidth<=state.width+1,label+' no page overflow');
  for(const f of state.formulas){
   assert(f.mathml,label+' semantic MathML');
@@ -79,7 +80,7 @@ async function inspect(page,q,lang){
  const output=path.resolve('screenshots/g9-typography');await fs.mkdir(output,{recursive:true});
  try{
   const results=await Promise.all(widths.map(async width=>{
-   const context=await browser.newContext({viewport:{width,height:852},serviceWorkers:'block'}),page=await context.newPage();let formulas=0;
+   const context=await browser.newContext({viewport:{width,height:852},isMobile:true,hasTouch:true,serviceWorkers:'block'}),page=await context.newPage();let formulas=0;
    page.on('pageerror',e=>errors.push(e.message));
    try{let done=0,lastChapter=null;for(const q of records){
     const route=app.base+'/index.html?class=9&question='+encodeURIComponent(q.id);

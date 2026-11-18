@@ -36,6 +36,15 @@ async function sample(page, base, id, width) {
   const name = `${id} at ${width}px`;
   await page.waitForFunction(selector => [...document.querySelectorAll(selector)].every(formula =>
     formula.scrollWidth <= formula.clientWidth + 1 || formula.tabIndex === 0), formulaSelector, { timeout: 3000 });
+  if (id === coordinates && width === 430) {
+    const layoutWidth = await page.locator('#questionText .triggle-tex').evaluate(formula => {
+      const tabIndex = formula.getAttribute('tabindex');
+      formula.removeAttribute('tabindex');
+      try { return document.documentElement.scrollWidth; }
+      finally { if (tabIndex !== null) formula.setAttribute('tabindex', tabIndex); }
+    });
+    assert.equal(layoutWidth, width, name + ' the page fits before local scrolling is enabled');
+  }
   const metrics = await page.evaluate(selector => {
     const font = element => parseFloat(getComputedStyle(document.querySelector(element)).fontSize);
     const details = [...document.querySelectorAll(selector)].map(formula => {
