@@ -18,12 +18,12 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "வகுத்தல்: குழுக்களும் மீதியும்"
       },
       "idea": {
-        "en": "Divide 34 objects into positive-size groups of 5: six complete groups and four left over. The remainder is smaller than the group size; it cannot be 5.",
-        "ta": "34 பொருள்களை 5 வீதம் குழுக்களாகப் பிரித்தால் 6 முழுக் குழுக்களும் 4 மீதியும் கிடைக்கும். மீதி குழுவின் அளவை விடச் சிறியதாக இருக்கும்; 5 ஆகாது."
+        "en": "Divide 34 objects into groups of 5. There are six complete groups and four left over. A remainder of 5 would make one more group.",
+        "ta": "34 பொருள்களை 5 வீதம் பிரித்தால் 6 முழுக் குழுக்களும் 4 மீதியும் கிடைக்கும். மீதி 5 என்றால் இன்னொரு முழுக் குழுவை அமைக்கலாம்."
       },
       "example": {
-        "en": "34 = (5 × 6) + 4. The numbers mean: total = group size × number of groups + leftover.",
-        "ta": "34 = (5 × 6) + 4. அதாவது: மொத்தம் = குழுவின் அளவு × குழுக்களின் எண்ணிக்கை + மீதி."
+        "en": "In the rule, a is the total (dividend), b is the size of each group (divisor), q is the number of complete groups (quotient) and r is the remainder.",
+        "ta": "விதியில் a என்பது மொத்தம் (வகுபடும் எண்), b என்பது ஒரு குழுவின் அளவு (வகுக்கும் எண்), q என்பது முழுக் குழுக்களின் எண்ணிக்கை (ஈவு), r என்பது மீதி."
       },
       "rule": {
         "en": "a = bq + r, with b > 0 and 0 ≤ r < b",
@@ -34,13 +34,13 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "a = bq + r, b > 0, 0 ≤ r < b"
       },
       "question": {
-        "en": "17 ÷ 5: what is the remainder?",
-        "ta": "17-ஐ 5-ஆல் வகுத்தால் மீதி எவ்வளவு?"
+        "en": "What is the remainder when 42 is divided by 5?",
+        "ta": "42-ஐ 5-ஆல் வகுத்தால் மீதி எவ்வளவு?"
       },
       "choices": [
         {
-          "en": "3",
-          "ta": "3"
+          "en": "8",
+          "ta": "8"
         },
         {
           "en": "5",
@@ -53,18 +53,33 @@ window.TRIGGLE_G10_CH2_PATH={
       ],
       "correct": 2,
       "hint": {
-        "en": "Make groups of five first.",
-        "ta": "முதலில் ஐந்து கொண்ட குழுக்களை உருவாக்குங்கள்."
+        "en": "Find the largest multiple of five that fits inside 42. How many are left?",
+        "ta": "42-ஐ விடாத மிகப் பெரிய 5-இன் மடங்கைக் காணுங்கள். எத்தனை மீதம்?"
       },
       "why": {
-        "en": "17 = 5 × 3 + 2, so the leftover is 2.",
-        "ta": "17 = 5 × 3 + 2. ஆகவே மீதி 2."
+        "en": "Eight full groups use 40 objects. The remainder is 2.",
+        "ta": "எட்டு முழுக் குழுக்களுக்கு 40 பொருள்கள் தேவை. மீதி 2."
       },
       "visual": {
         "kind": "groups",
-        "total": 17,
+        "total": 34,
         "size": 5
-      }
+      },
+      "incorrectFeedback": [
+        {
+          "en": "Eight counts the full groups. How many objects remain after making them?",
+          "ta": "8 என்பது முழுக் குழுக்களின் எண்ணிக்கை. அவற்றை அமைத்த பின் எத்தனை பொருள்கள் மீதம்?"
+        },
+        {
+          "en": "Five more objects would make another full group. The remainder must be smaller than five.",
+          "ta": "5 பொருள்கள் மீதமிருந்தால் இன்னொரு முழுக் குழு அமையும். மீதி 5-ஐ விடச் சிறியதாக இருக்க வேண்டும்."
+        }
+      ],
+      "whyMath": {
+        "latex": "42=5\\times8+2",
+        "fallback": "42 = 5 × 8 + 2"
+      },
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-gcd",
@@ -75,12 +90,12 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "ஊகிக்காமல் மீ.பொ.வ காண்போம்"
       },
       "idea": {
-        "en": "If two numbers have a common divisor, it also divides their difference. Repeated division keeps the HCF unchanged.",
-        "ta": "இரண்டு எண்களை ஒரு எண் வகுத்தால், அவற்றின் வித்தியாசத்தையும் அது வகுக்கும். அடுத்தடுத்த வகுத்தல்களில் மீ.பொ.வ மாறாது."
+        "en": "Each common factor of the dividend and divisor also divides the remainder. Conversely, each common factor of the divisor and remainder divides the dividend. That is why replacing the pair leaves the HCF unchanged.",
+        "ta": "வகுபடும் எண்ணையும் வகுக்கும் எண்ணையும் வகுக்கும் பொதுக் காரணி மீதியையும் வகுக்கும். அதேபோல் வகுக்கும் எண்ணையும் மீதியையும் வகுக்கும் பொதுக் காரணி வகுபடும் எண்ணையும் வகுக்கும். எனவே ஒவ்வொரு படியிலும் மீ.பொ.வ மாறாது."
       },
       "example": {
-        "en": "60 = 32 × 1 + 28, then 32 = 28 × 1 + 4, and 28 = 4 × 7. The last nonzero remainder is 4.",
-        "ta": "60 = 32 × 1 + 28, அடுத்து 32 = 28 × 1 + 4; 28 = 4 × 7. பூச்சியமல்லாத கடைசி மீதி 4."
+        "en": "When the remainder is zero, the divisor in that division is the HCF. This also works when the first division is exact.",
+        "ta": "மீதி பூச்சியமாகும்போது, அந்தப் படியில் வகுக்கும் எண் தான் மீ.பொ.வ. முதல் வகுத்தலிலேயே மீதி பூச்சியம் வந்தாலும் இது பொருந்தும்."
       },
       "rule": {
         "en": "HCF(60,32) = HCF(32,28) = HCF(28,4) = 4",
@@ -110,12 +125,12 @@ window.TRIGGLE_G10_CH2_PATH={
       ],
       "correct": 0,
       "hint": {
-        "en": "18 = 12 + 6; 12 = 6 × 2.",
-        "ta": "18 = 12 + 6; 12 = 6 × 2."
+        "en": "Divide the larger number by the smaller one. Use the remainder as the next divisor.",
+        "ta": "பெரிய எண்ணைச் சிறிய எண்ணால் வகுக்கவும். கிடைக்கும் மீதியை அடுத்த வகுக்கும் எண்ணாகப் பயன்படுத்தவும்."
       },
       "why": {
-        "en": "The last nonzero remainder is 6.",
-        "ta": "பூச்சியமல்லாத கடைசி மீதி 6."
+        "en": "The second division leaves zero. Its divisor, 6, is the HCF.",
+        "ta": "இரண்டாவது வகுத்தலில் மீதி பூச்சியம். அந்தப் படியில் வகுக்கும் எண் 6 தான் மீ.பொ.வ."
       },
       "visual": {
         "kind": "remainders",
@@ -125,7 +140,23 @@ window.TRIGGLE_G10_CH2_PATH={
           28,
           4
         ]
-      }
+      },
+      "whyMath": {
+        "latex": "\\begin{aligned}18&=12\\times1+6\\\\12&=6\\times2+0\\end{aligned}",
+        "fallback": "18 = 12 × 1 + 6. 12 = 6 × 2 + 0."
+      },
+      "incorrectFeedback": [
+        null,
+        {
+          "en": "Three divides both numbers. Continue the divisions to find the highest common factor.",
+          "ta": "3 இரு எண்களையும் வகுக்கும். மிகப் பெரிய பொதுக் காரணியைக் காண வகுத்தலைத் தொடருங்கள்."
+        },
+        {
+          "en": "Twelve must divide both numbers to be a common factor. What remainder does it leave when dividing 18?",
+          "ta": "12 பொதுக் காரணியாக இருக்க இரு எண்களையும் வகுக்க வேண்டும். 18-ஐ 12-ஆல் வகுத்தால் என்ன மீதி?"
+        }
+      ],
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-bezout",
@@ -171,12 +202,12 @@ window.TRIGGLE_G10_CH2_PATH={
       ],
       "correct": 0,
       "hint": {
-        "en": "Try each pair in 21x + 15y. The result must be 3.",
-        "ta": "ஒவ்வொரு ஜோடியையும் 21x + 15y-இல் பதிலிட்டு 3 வருகிறதா பாருங்கள்."
+        "en": "The first division leaves 6 and the second leaves 3. Write 3 using 15 and 6, then replace 6 using the first division.",
+        "ta": "முதல் வகுத்தலில் 6, இரண்டாவது வகுத்தலில் 3 மீதியாகக் கிடைக்கும். 3-ஐ 15 மற்றும் 6 கொண்டு எழுதுங்கள். பிறகு முதல் வகுத்தலைப் பயன்படுத்தி 6-ஐப் பதிலிடுங்கள்."
       },
       "why": {
-        "en": "21(−2) + 15(3) = −42 + 45 = 3. Other integer pairs may also work; this is one valid pair.",
-        "ta": "21(−2) + 15(3) = −42 + 45 = 3. இதுபோன்ற வேறு முழு எண் ஜோடிகளும் இருக்கலாம்."
+        "en": "The divisions are written first. Then substitute for 6 and collect the original numbers. The multiplier of 21 is −2 and the multiplier of 15 is 3. Other integer pairs can also work.",
+        "ta": "முதலில் வகுத்தல்களை எழுதுவோம். பிறகு 6-க்குப் பதிலிட்டு தொடக்க எண்களைத் தொகுப்போம். 21-இன் பெருக்கி −2, 15-இன் பெருக்கி 3. வேறு முழு எண் சோடிகளும் பொருந்தலாம்."
       },
       "visual": {
         "kind": "bars",
@@ -185,7 +216,23 @@ window.TRIGGLE_G10_CH2_PATH={
           32,
           -60
         ]
-      }
+      },
+      "whyMath": {
+        "latex": "\\begin{aligned}21&=15\\times1+6\\\\15&=6\\times2+3\\\\3&=15-2\\times6\\\\&=15-2(21-15)\\\\&=21(-2)+15(3)\\end{aligned}",
+        "fallback": "21 = 15 × 1 + 6. 15 = 6 × 2 + 3. 3 = 15 − 2 × 6 = 15 − 2(21 − 15) = 21(−2) + 15(3)."
+      },
+      "incorrectFeedback": [
+        null,
+        {
+          "en": "This gives 6, the first remainder. Continue to the second nonzero remainder, 3.",
+          "ta": "இது முதல் மீதி 6-ஐத் தருகிறது. அடுத்த பூச்சியமல்லாத மீதி 3 வரை தொடருங்கள்."
+        },
+        {
+          "en": "This gives negative 3. Check the signs of both multipliers.",
+          "ta": "இது எதிர்மறை 3-ஐத் தருகிறது. இரண்டு பெருக்கிகளின் குறிகளையும் சரிபாருங்கள்."
+        }
+      ],
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-primes",
@@ -196,47 +243,47 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "பகா காரணிகள் ஒரு எண்ணின் தனித்த அடையாளம்"
       },
       "idea": {
-        "en": "A prime number has exactly two positive divisors: 1 and itself. Break each number into prime factors. In 2², the small 2 means two factors of 2. Use the smaller powers for the HCF and the larger powers for the LCM.",
-        "ta": "ஒரு பகா எண்ணுக்கு 1 மற்றும் அதே எண் ஆகிய இரண்டு நேர்மறை வகுத்திகள் மட்டுமே உண்டு. ஒவ்வொரு எண்ணையும் பகா காரணிகளாகப் பிரிக்கவும். 2² என்பது 2 × 2. மீ.பொ.வ-க்கு சிறிய அடுக்குகளையும் மீ.சி.ம-க்கு பெரிய அடுக்குகளையும் எடுக்கவும்."
+        "en": "A prime has exactly two positive divisors, 1 and itself. Every whole number greater than 1 has the same prime factors, including repeats, however you break it up. In 2² the small 2 counts two factors of 2.",
+        "ta": "பகா எண்ணுக்கு 1 மற்றும் அந்த எண் ஆகிய இரண்டு நேர்ம வகுத்திகள் மட்டுமே உண்டு. 1-ஐ விடப் பெரிய முழு எண்ணை எவ்வாறு பிரித்தாலும், மீண்டும் வரும் காரணிகள் உட்பட ஒரே பகா காரணிகள் கிடைக்கும். 2² என்பது 2 என்ற காரணி இருமுறை வருவதைக் குறிக்கும்."
       },
       "example": {
-        "en": "12 = 2² × 3 and 18 = 2 × 3². HCF = 2 × 3 = 6 (smaller powers). LCM = 2² × 3² = 36 (larger powers). Check: 36 ÷ 12 = 3 and 36 ÷ 18 = 2.",
-        "ta": "12 = 2² × 3; 18 = 2 × 3². மீ.பொ.வ = 2 × 3 = 6 (சிறிய அடுக்குகள்). மீ.சி.ம = 2² × 3² = 36 (பெரிய அடுக்குகள்). 36-ஐ 12 மற்றும் 18 ஆகிய இரண்டும் மீதியின்றி வகுக்கும்."
+        "en": "For each prime, use the smaller exponent for the highest common factor (HCF) and the larger for the least common multiple (LCM). If a prime is absent from one number, its exponent for that number is zero.",
+        "ta": "ஒவ்வொரு பகா எண்ணுக்கும் சிறிய அடுக்கை மீப்பெரு பொது வகுத்திக்கும் (மீ.பொ.வ), பெரிய அடுக்கை மீச்சிறு பொது மடங்கிற்கும் (மீ.பொ.ம) எடுக்கவும். ஓர் எண்ணின் காரணிகளில் ஒரு பகா எண் இல்லையெனில், அதற்கான அடுக்கு பூச்சியம்."
       },
       "rule": {
         "en": "HCF(12,18) = 6 ; LCM(12,18) = 36",
         "ta": "HCF(12,18) = 6 ; LCM(12,18) = 36"
       },
       "math": {
-        "latex": "\\gcd(12,18)=6,\\quad \\operatorname{lcm}(12,18)=36",
+        "latex": "\\begin{aligned}\\gcd(12,18)&=6\\\\\\operatorname{lcm}(12,18)&=36\\end{aligned}",
         "fallback": "HCF(12,18) = 6 ; LCM(12,18) = 36"
       },
       "question": {
-        "en": "Which number is the LCM of 12 and 18?",
-        "ta": "12, 18-இன் மீ.சி.ம எது?"
+        "en": "Which number is the LCM of 8 and 12?",
+        "ta": "8 மற்றும் 12-இன் மீ.பொ.ம எது?"
       },
       "choices": [
         {
-          "en": "6",
-          "ta": "6"
-        },
-        {
-          "en": "36",
-          "ta": "36"
+          "en": "4",
+          "ta": "4"
         },
         {
           "en": "24",
           "ta": "24"
+        },
+        {
+          "en": "96",
+          "ta": "96"
         }
       ],
       "correct": 1,
       "hint": {
-        "en": "Take enough 2s and 3s to contain both factorisations.",
-        "ta": "இரண்டு காரணிப் பிரிப்புகளுக்கும் போதுமான 2, 3 காரணிகளை எடுத்துக்கொள்ளுங்கள்."
+        "en": "Use enough of each prime factor to make both numbers. Where is the factor 3 needed?",
+        "ta": "இரு எண்களையும் உருவாக்கத் தேவையான அளவு பகா காரணிகளை எடுங்கள். காரணி 3 எந்த எண்ணுக்குத் தேவை?"
       },
       "why": {
-        "en": "12 = 2² × 3 and 18 = 2 × 3². The larger powers give 2² × 3² = 36. Both 12 and 18 divide 36 exactly.",
-        "ta": "12 = 2² × 3; 18 = 2 × 3². பெரிய அடுக்குகளை எடுத்தால் 2² × 3² = 36. இரு எண்களும் 36-ஐ மீதியின்றி வகுக்கும்."
+        "en": "Use three factors of 2 and one factor of 3. This makes 24, the smallest number divisible by both 8 and 12.",
+        "ta": "2 என்ற காரணியை மூன்று முறையும் 3 என்ற காரணியை ஒரு முறையும் எடுக்கவும். 8 மற்றும் 12 இரண்டாலும் வகுபடும் மிகச் சிறிய எண் 24."
       },
       "visual": {
         "kind": "factors",
@@ -244,7 +291,23 @@ window.TRIGGLE_G10_CH2_PATH={
           12,
           18
         ]
-      }
+      },
+      "incorrectFeedback": [
+        {
+          "en": "Four is a common factor. The LCM must be divisible by both 8 and 12.",
+          "ta": "4 ஒரு பொதுக் காரணி. மீ.பொ.ம என்பது 8 மற்றும் 12 ஆகிய இரண்டாலும் வகுபட வேண்டும்."
+        },
+        null,
+        {
+          "en": "The product is a common multiple. The two numbers share factors of 2, so a smaller common multiple is possible.",
+          "ta": "இரு எண்களின் பெருக்கற்பலன் ஒரு பொது மடங்கு. இரண்டிலும் 2 பொதுக் காரணியாக இருப்பதால் சிறிய பொது மடங்கு கிடைக்கும்."
+        }
+      ],
+      "whyMath": {
+        "latex": "\\begin{aligned}8&=2^3\\\\12&=2^2\\times3\\\\\\operatorname{lcm}(8,12)&=2^3\\times3=24\\end{aligned}",
+        "fallback": "8 = 2³. 12 = 2² × 3. LCM(8, 12) = 2³ × 3 = 24."
+      },
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-modulo",
@@ -254,8 +317,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "கடிகாரம் ஒரு எண் சுழற்சி"
       },
       "idea": {
-        "en": "Modulo keeps only the remainder. After counting through a full cycle, the position repeats.",
-        "ta": "மட்டு கணக்கு என்பது வகுத்த பின் வரும் மீதியைப் பயன்படுத்துவது. ஒரு முழுச் சுற்று முடிந்ததும் அதே இடம் மீண்டும் வரும்."
+        "en": "Modulo gives the remainder after division. A week repeats every seven days. Start on Tuesday at day zero, skip whole weeks and move forward by the leftover days.",
+        "ta": "மட்டு கணக்கில் வகுத்தலின் மீதியைக் காண்கிறோம். ஏழு நாட்களுக்கு ஒரு முறை வாரம் திரும்புகிறது. செவ்வாயை நாள் பூச்சியமாகக் கொண்டு முழு வாரங்களைத் தவிர்த்து மீதமுள்ள நாட்கள் முன்னேறுங்கள்."
       },
       "example": {
         "en": "Today is Tuesday. After 45 days, 45 = 7 × 6 + 3, so move three days: Friday.",
@@ -299,27 +362,49 @@ window.TRIGGLE_G10_CH2_PATH={
       "visual": {
         "kind": "cycle",
         "size": 7,
-        "values": [
-          "Tu",
-          "We",
-          "Th",
-          "Fr",
-          "Sa",
-          "Su",
-          "Mo"
-        ]
-      }
+        "values": {
+          "en": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+            "Monday"
+          ],
+          "ta": [
+            "செவ்வாய்",
+            "புதன்",
+            "வியாழன்",
+            "வெள்ளி",
+            "சனி",
+            "ஞாயிறு",
+            "திங்கள்"
+          ]
+        }
+      },
+      "incorrectFeedback": [
+        {
+          "en": "After four full days it is 7 a.m. Count the leftover hours too.",
+          "ta": "நான்கு முழு நாட்களுக்குப் பின் காலை 7 மணி. மீதமுள்ள மணிநேரங்களையும் எண்ணுங்கள்."
+        },
+        {
+          "en": "Four hours after 7 a.m. is still before noon.",
+          "ta": "காலை 7 மணிக்குப் பின் 4 மணி நேரம் சென்றாலும் நண்பகல் ஆகவில்லை."
+        }
+      ],
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-congruence",
       "section": "2.5",
       "title": {
         "en": "Same remainder means congruent",
-        "ta": "ஒரே மீதி என்றால் ஒப்பிசைவு"
+        "ta": "ஒரே மீதி என்றால் ஒருங்கிசைவு"
       },
       "idea": {
-        "en": "Two integers are congruent modulo m if dividing each by m gives the same remainder. Their difference is a multiple of m.",
-        "ta": "இரண்டு எண்களையும் m-ஆல் வகுத்தால் ஒரே மீதி வந்தால், அவை m மட்டு ஒப்பிசைவுடையவை. அவற்றின் வித்தியாசம் m-இன் மடங்காகும்."
+        "en": "The modulus m is a positive whole number. Two integers are congruent modulo m if they leave the same remainder on division by m. The symbol ≡ marks this relationship. Their difference is a multiple of m.",
+        "ta": "மட்டு m என்பது ஒரு நேர்ம முழு எண். இரு முழு எண்களை m-ஆல் வகுக்கும்போது ஒரே மீதி கிடைத்தால், அவை மட்டு m-இல் ஒருங்கிசைவானவை. ≡ என்பது இதன் குறி. அவற்றின் வித்தியாசம் m-இன் மடங்கு."
       },
       "example": {
         "en": "17 and 5 both leave remainder 2 on division by 3. Their difference is 12, divisible by 3.",
@@ -334,31 +419,31 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "17 ≡ 5 (mod 3)"
       },
       "question": {
-        "en": "Which number is congruent to 14 modulo 5?",
-        "ta": "14-க்கு மட்டு 5-இல் ஒப்பிசைவான எண் எது?"
+        "en": "Which number is congruent to 37 modulo 6?",
+        "ta": "37-க்கு மட்டு 6-இல் ஒருங்கிசைவான எண் எது?"
       },
       "choices": [
         {
-          "en": "4",
-          "ta": "4"
+          "en": "13",
+          "ta": "13"
         },
         {
-          "en": "5",
-          "ta": "5"
+          "en": "6",
+          "ta": "6"
         },
         {
-          "en": "8",
-          "ta": "8"
+          "en": "2",
+          "ta": "2"
         }
       ],
       "correct": 0,
       "hint": {
-        "en": "14 leaves remainder 4 when divided by 5.",
-        "ta": "14-ஐ 5-ஆல் வகுத்தால் மீதி 4."
+        "en": "Compare the remainders on division by 6, or check which difference is a multiple of 6.",
+        "ta": "6-ஆல் வகுத்துக் கிடைக்கும் மீதிகளை ஒப்பிடுங்கள். அல்லது எந்த வித்தியாசம் 6-இன் மடங்கு எனப் பாருங்கள்."
       },
       "why": {
-        "en": "14 and 4 both have remainder 4 (mod 5); the difference is 10.",
-        "ta": "14, 4 இரண்டிலும் மீதி 4 (mod 5); வித்தியாசம் 10."
+        "en": "Both 37 and 13 leave remainder 1. Their difference, 24, is four times 6.",
+        "ta": "37 மற்றும் 13 இரண்டையும் 6-ஆல் வகுத்தால் மீதி 1. அவற்றின் வித்தியாசம் 24 என்பது 6-இன் நான்கு மடங்கு."
       },
       "visual": {
         "kind": "cycle",
@@ -370,7 +455,23 @@ window.TRIGGLE_G10_CH2_PATH={
           "3",
           "4"
         ]
-      }
+      },
+      "incorrectFeedback": [
+        null,
+        {
+          "en": "Six is the modulus. It leaves zero as its own remainder. Compare that with the remainder for 37.",
+          "ta": "6 என்பது மட்டு. 6-ஐ 6-ஆல் வகுத்தால் மீதி பூச்சியம். அதை 37-இன் மீதியுடன் ஒப்பிடுங்கள்."
+        },
+        {
+          "en": "Two leaves remainder 2. Check the remainder when 37 is divided by 6.",
+          "ta": "2-ஐ 6-ஆல் வகுத்தால் மீதி 2. 37-ஐ 6-ஆல் வகுத்தால் வரும் மீதியைச் சரிபாருங்கள்."
+        }
+      ],
+      "whyMath": {
+        "latex": "\\begin{aligned}37-13&=24=6\\times4\\\\37&\\equiv13\\pmod6\\end{aligned}",
+        "fallback": "37 − 13 = 24 = 6 × 4. 37 is congruent to 13 modulo 6."
+      },
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-sequence",
@@ -396,31 +497,31 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "aₙ = 3n − 1"
       },
       "question": {
-        "en": "What is the 5th term of 2, 5, 8, 11, ...?",
-        "ta": "2, 5, 8, 11, ... தொடரின் ஐந்தாம் உறுப்பு என்ன?"
+        "en": "A different sequence follows this rule. What is its sixth term?",
+        "ta": "வேறொரு தொடர்வரிசையின் விதி கீழே உள்ளது. அதன் ஆறாவது உறுப்பு எது?"
       },
       "choices": [
         {
+          "en": "6",
+          "ta": "6"
+        },
+        {
+          "en": "11",
+          "ta": "11"
+        },
+        {
           "en": "13",
           "ta": "13"
-        },
-        {
-          "en": "15",
-          "ta": "15"
-        },
-        {
-          "en": "14",
-          "ta": "14"
         }
       ],
       "correct": 2,
       "hint": {
-        "en": "Keep adding 3.",
-        "ta": "ஒவ்வொரு முறையும் 3-ஐக் கூட்டுங்கள்."
+        "en": "Use six as the position in the new rule.",
+        "ta": "புதிய விதியில் இடத்திற்குப் பதிலாக 6-ஐப் பயன்படுத்துங்கள்."
       },
       "why": {
-        "en": "11 + 3 = 14. Equivalently, 3 × 5 − 1 = 14.",
-        "ta": "11 + 3 = 14. அல்லது 3 × 5 − 1 = 14."
+        "en": "Six is the position. Substituting it in the rule gives the term at that position, 13.",
+        "ta": "6 என்பது இடம். அதை விதியில் பதிலிட்டால் அந்த இடத்திலுள்ள உறுப்பு 13 கிடைக்கும்."
       },
       "visual": {
         "kind": "sequence",
@@ -431,7 +532,26 @@ window.TRIGGLE_G10_CH2_PATH={
           11,
           14
         ]
-      }
+      },
+      "incorrectFeedback": [
+        {
+          "en": "Six is the position. Use the rule to determine the value at that position.",
+          "ta": "6 என்பது இடம். அந்த இடத்தின் மதிப்பை விதியைப் பயன்படுத்திக் காணுங்கள்."
+        },
+        {
+          "en": "Eleven is the fifth term. Positions begin at one, so use six for the sixth term.",
+          "ta": "11 ஐந்தாவது உறுப்பு. இடங்கள் 1-இல் தொடங்குவதால், ஆறாவது உறுப்புக்கு 6-ஐப் பயன்படுத்துங்கள்."
+        }
+      ],
+      "questionMath": {
+        "latex": "a_n=2n+1",
+        "fallback": "aₙ = 2n + 1"
+      },
+      "whyMath": {
+        "latex": "a_6=2\\times6+1=13",
+        "fallback": "a₆ = 2 × 6 + 1 = 13"
+      },
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-recursive",
@@ -457,31 +577,31 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "a₁ = 1, a₂ = 1; aₙ = aₙ₋₁ + aₙ₋₂ for n ≥ 3"
       },
       "question": {
-        "en": "What comes after 1, 1, 2, 3, 5?",
-        "ta": "1, 1, 2, 3, 5-க்குப் பின் என்ன?"
+        "en": "Start with 2, 3 and add the previous two terms each time. What is the fifth term?",
+        "ta": "2, 3 எனத் தொடங்கி ஒவ்வொரு முறையும் முந்தைய இரு உறுப்புகளைக் கூட்டுங்கள். ஐந்தாவது உறுப்பு எது?"
       },
       "choices": [
-        {
-          "en": "6",
-          "ta": "6"
-        },
         {
           "en": "8",
           "ta": "8"
         },
         {
-          "en": "10",
-          "ta": "10"
+          "en": "13",
+          "ta": "13"
+        },
+        {
+          "en": "16",
+          "ta": "16"
         }
       ],
       "correct": 1,
       "hint": {
-        "en": "Add the fourth and fifth terms: 3 + 5.",
-        "ta": "நான்காவது மற்றும் ஐந்தாவது உறுப்புகளைக் கூட்டவும்: 3 + 5."
+        "en": "Build the third and fourth terms first. Then add those two results.",
+        "ta": "முதலில் மூன்றாவது, நான்காவது உறுப்புகளைக் காணுங்கள். பிறகு அவற்றைக் கூட்டுங்கள்."
       },
       "why": {
-        "en": "3 + 5 = 8. This is a sequence rule, not a claim that every pattern adds earlier terms.",
-        "ta": "3 + 5 = 8. இது ஒரு குறிப்பிட்ட தொடருக்கான விதி."
+        "en": "The third and fourth terms are 5 and 8. Adding them gives the fifth term, 13.",
+        "ta": "மூன்றாவது, நான்காவது உறுப்புகள் 5 மற்றும் 8. அவற்றைக் கூட்டினால் ஐந்தாவது உறுப்பு 13 கிடைக்கும்."
       },
       "visual": {
         "kind": "sequence",
@@ -493,7 +613,23 @@ window.TRIGGLE_G10_CH2_PATH={
           5,
           8
         ]
-      }
+      },
+      "incorrectFeedback": [
+        {
+          "en": "Eight is the fourth term. Add the third and fourth terms for the next one.",
+          "ta": "8 நான்காவது உறுப்பு. அடுத்த உறுப்புக்கு மூன்றாவது, நான்காவது உறுப்புகளைக் கூட்டுங்கள்."
+        },
+        null,
+        {
+          "en": "Doubling 8 would count the fourth term twice. Use the third and fourth terms.",
+          "ta": "8-ஐ இருமடங்காக்கினால் நான்காவது உறுப்பையே இருமுறை கூட்டுகிறோம். மூன்றாவது, நான்காவது உறுப்புகளைப் பயன்படுத்துங்கள்."
+        }
+      ],
+      "whyMath": {
+        "latex": "\\begin{aligned}a_3&=2+3=5\\\\a_4&=3+5=8\\\\a_5&=5+8=13\\end{aligned}",
+        "fallback": "a₃ = 2 + 3 = 5. a₄ = 3 + 5 = 8. a₅ = 5 + 8 = 13."
+      },
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-ap",
@@ -503,8 +639,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "கூட்டுத்தொடர்: ஒரே வேறுபாட்டைக் கூட்டுதல்"
       },
       "idea": {
-        "en": "In an arithmetic progression (A.P.), each consecutive difference is the same. That difference d can be positive, zero, or negative.",
-        "ta": "கூட்டுத்தொடரில் (A.P.) அடுத்தடுத்த உறுப்புகளின் வேறுபாடு ஒரே அளவில் இருக்கும். பொதுவேறுபாடு d நேர்ம, பூச்சியம் அல்லது எதிர்மமாகலாம்."
+        "en": "In an arithmetic progression (A.P.), subtract the previous term from the next term. The result is always the same common difference d, which can be positive, zero or negative. In the formula, a is the first term.",
+        "ta": "கூட்டுத்தொடர் வரிசையில் (A.P.) அடுத்த உறுப்பிலிருந்து முந்தைய உறுப்பைக் கழியுங்கள். கிடைக்கும் பொது வித்தியாசம் d எப்போதும் ஒன்றே. அது நேர்மமாகவோ, பூச்சியமாகவோ, எதிர்மமாகவோ இருக்கலாம். விதியில் a என்பது முதல் உறுப்பு."
       },
       "example": {
         "en": "9, 13, 17, 21 has a common difference of 4. The differences 4, 4, 4 confirm it.",
@@ -519,41 +655,57 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "a, a+d, a+2d, a+3d"
       },
       "question": {
-        "en": "Is 2, 5, 8, 11 an A.P.?",
-        "ta": "2, 5, 8, 11 கூட்டுத்தொடரா?"
+        "en": "Is 11, 8, 5, 2 an A.P.?",
+        "ta": "11, 8, 5, 2 ஒரு கூட்டுத்தொடர் வரிசையா?"
       },
       "choices": [
         {
+          "en": "Yes, d = −3",
+          "ta": "ஆம், d = −3"
+        },
+        {
+          "en": "No, the terms decrease",
+          "ta": "இல்லை, உறுப்புகள் குறைகின்றன"
+        },
+        {
           "en": "Yes, d = 3",
           "ta": "ஆம், d = 3"
-        },
-        {
-          "en": "No, gaps change",
-          "ta": "இல்லை, வேறுபாடு மாறுகிறது"
-        },
-        {
-          "en": "Yes, d = 2",
-          "ta": "ஆம், d = 2"
         }
       ],
       "correct": 0,
       "hint": {
-        "en": "Subtract adjacent terms.",
-        "ta": "அடுத்தடுத்த உறுப்புகளைக் கழியுங்கள்."
+        "en": "Subtract the previous term from each next term, in that order.",
+        "ta": "ஒவ்வொரு அடுத்த உறுப்பிலிருந்தும் அதன் முந்தைய உறுப்பைக் கழியுங்கள்."
       },
       "why": {
-        "en": "The differences are always 3, so this is an A.P.",
-        "ta": "எல்லா வேறுபாடுகளும் 3. ஆகவே இது கூட்டுத்தொடர்."
+        "en": "Each difference is negative three. A constant negative difference still makes an A.P.",
+        "ta": "ஒவ்வொரு வித்தியாசமும் எதிர்மறை 3. மாறாத எதிர்ம வித்தியாசமும் கூட்டுத்தொடர் வரிசையை அமைக்கும்."
       },
       "visual": {
         "kind": "sequence",
         "values": [
-          2,
-          5,
-          8,
-          11
+          9,
+          13,
+          17,
+          21
         ]
-      }
+      },
+      "incorrectFeedback": [
+        null,
+        {
+          "en": "A decreasing sequence can be an A.P. Check whether it decreases by the same amount each time.",
+          "ta": "குறையும் தொடர்வரிசையும் கூட்டுத்தொடர் வரிசையாக இருக்கலாம். ஒவ்வொரு முறையும் ஒரே அளவு குறைகிறதா பாருங்கள்."
+        },
+        {
+          "en": "The size of the change is three. Its sign comes from subtracting the earlier term from the later one.",
+          "ta": "மாற்றத்தின் அளவு 3. பிந்தைய உறுப்பிலிருந்து முந்தைய உறுப்பைக் கழிக்கும்போது அதன் குறி கிடைக்கும்."
+        }
+      ],
+      "whyMath": {
+        "latex": "8-11=5-8=2-5=-3",
+        "fallback": "8 − 11 = 5 − 8 = 2 − 5 = −3"
+      },
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-ap-nth",
@@ -563,8 +715,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "எழுதாமலே n-ஆவது கூட்டுத்தொடர் உறுப்பைக் காண்க"
       },
       "idea": {
-        "en": "The first term is a. Getting to the nth term takes n−1 jumps of size d, not n jumps.",
-        "ta": "முதல் உறுப்பு a. n-ஆவது உறுப்பை அடைய n−1 முறை மட்டுமே d-ஐக் கூட்ட வேண்டும்; n முறை அல்ல."
+        "en": "The first term is a, d is the common difference and n is the position. Count from the first term: reaching position n takes one fewer jump than its position number.",
+        "ta": "முதல் உறுப்பு a, பொது வித்தியாசம் d, இடம் n. முதல் உறுப்பிலிருந்து எண்ணும்போது n-ஆவது இடத்தை அடைய அதன் இட எண்ணை விட ஒரு படி குறைவாகத் தேவை."
       },
       "example": {
         "en": "For 5, 9, 13, ... the 10th term is 5 + (10−1) × 4 = 41.",
@@ -608,13 +760,25 @@ window.TRIGGLE_G10_CH2_PATH={
       "visual": {
         "kind": "sequence",
         "values": [
-          3,
-          7,
-          11,
-          15,
-          19
+          5,
+          9,
+          13,
+          17,
+          21
         ]
-      }
+      },
+      "incorrectFeedback": [
+        null,
+        {
+          "en": "This counts ten jumps. Position one is where you start, so count the jumps between positions one and ten.",
+          "ta": "இது பத்துப் படிகளைக் கணக்கிடுகிறது. முதல் இடத்திலிருந்து தொடங்குகிறோம். முதல் இடத்துக்கும் பத்தாம் இடத்துக்கும் இடையிலான படிகளை எண்ணுங்கள்."
+        },
+        {
+          "en": "Forty uses ten copies of the difference. Begin with the first term, then add only the jumps needed.",
+          "ta": "40 என்பது பொது வித்தியாசத்தின் பத்து மடங்கு. முதல் உறுப்பிலிருந்து தொடங்கித் தேவையான படிகளை மட்டும் கூட்டுங்கள்."
+        }
+      ],
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-ap-sum",
@@ -680,7 +844,19 @@ window.TRIGGLE_G10_CH2_PATH={
           4,
           5
         ]
-      }
+      },
+      "incorrectFeedback": [
+        {
+          "en": "Each end pair should give the same sum. Recheck the first and last terms before multiplying by the number of pairs.",
+          "ta": "ஒவ்வொரு முனைச் சோடியும் ஒரே கூடுதலைத் தர வேண்டும். சோடிகளின் எண்ணிக்கையால் பெருக்கும் முன் முதல், கடைசி உறுப்புகளைச் சரிபாருங்கள்."
+        },
+        null,
+        {
+          "en": "The final term is 19. Check the sum of the end pair before using it for all three pairs.",
+          "ta": "கடைசி உறுப்பு 19. மூன்று சோடிகளுக்கும் பயன்படுத்துவதற்கு முன் முனைச் சோடியின் கூடுதலைச் சரிபாருங்கள்."
+        }
+      ],
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-gp",
@@ -690,8 +866,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "பெருக்குத்தொடர்: ஒரே விகிதத்தால் பெருக்குதல்"
       },
       "idea": {
-        "en": "A geometric progression (G.P.) multiplies each term by a fixed ratio r. A.P. adds; G.P. multiplies.",
-        "ta": "பெருக்குத்தொடரில் (G.P.) ஒவ்வொரு உறுப்பும் நிலையான விகிதம் r-ஆல் பெருக்கப்படுகிறது. கூட்டுத்தொடரில் கூட்டுவோம்; பெருக்குத்தொடரில் பெருக்குவோம்."
+        "en": "A G.P. multiplies each term by the same nonzero common ratio r to reach the next. An A.P. adds the same difference. In the formula, a is the first term, n is the position, and the exponent counts the multiplications from the first term.",
+        "ta": "பெருக்குத்தொடர் வரிசையில் (G.P.) அடுத்த உறுப்பைப் பெற அதே பூச்சியமல்லாத பொது விகிதம் r-ஆல் பெருக்குகிறோம். கூட்டுத்தொடர் வரிசையில் ஒரே வித்தியாசத்தைக் கூட்டுகிறோம். விதியில் a முதல் உறுப்பு, n இடம். முதல் உறுப்பிலிருந்து எத்தனை முறை பெருக்குகிறோம் என்பதை அடுக்கு குறிக்கிறது."
       },
       "example": {
         "en": "3, 6, 12, 24 has common ratio 2, because each term is double the previous term.",
@@ -706,31 +882,31 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "aₙ = ar⁽ⁿ⁻¹⁾"
       },
       "question": {
-        "en": "Next term of 5, 15, 45, ...?",
-        "ta": "5, 15, 45, ... தொடரின் அடுத்த உறுப்பு?"
+        "en": "The numbers 81, 27, 9, … form a G.P. What is the next term?",
+        "ta": "81, 27, 9, … ஒரு பெருக்குத்தொடர் வரிசை. அடுத்த உறுப்பு எது?"
       },
       "choices": [
         {
-          "en": "90",
-          "ta": "90"
+          "en": "−9",
+          "ta": "−9"
         },
         {
-          "en": "135",
-          "ta": "135"
+          "en": "3",
+          "ta": "3"
         },
         {
-          "en": "60",
-          "ta": "60"
+          "en": "27",
+          "ta": "27"
         }
       ],
       "correct": 1,
       "hint": {
-        "en": "Multiply 45 by the same ratio 3.",
-        "ta": "45-ஐப் பொதுவிகிதம் 3-ஆல் பெருக்குங்கள்."
+        "en": "Divide the second term by the first to find the factor that takes you forward.",
+        "ta": "முன்னோக்கிச் செல்லும் பெருக்கியைக் காண, இரண்டாம் உறுப்பை முதல் உறுப்பால் வகுக்கவும்."
       },
       "why": {
-        "en": "45 × 3 = 135.",
-        "ta": "45 × 3 = 135."
+        "en": "Each term is one third of the previous term. The next term is 3.",
+        "ta": "ஒவ்வோர் உறுப்பும் முந்தைய உறுப்பின் மூன்றில் ஒரு பங்கு. அடுத்த உறுப்பு 3."
       },
       "visual": {
         "kind": "sequence",
@@ -740,7 +916,23 @@ window.TRIGGLE_G10_CH2_PATH={
           45,
           135
         ]
-      }
+      },
+      "incorrectFeedback": [
+        {
+          "en": "Negative nine repeats the last difference of negative eighteen. A G.P. repeats the multiplier.",
+          "ta": "கடைசி வித்தியாசமான −18-ஐ மீண்டும் பயன்படுத்தினால் −9 கிடைக்கும். பெருக்குத்தொடர் வரிசையில் பெருக்கி மாறாது."
+        },
+        null,
+        {
+          "en": "Multiplying by three goes backwards in this sequence. Find the ratio by dividing a later term by its previous term.",
+          "ta": "3-ஆல் பெருக்கினால் இந்தத் தொடர்வரிசையில் பின்னோக்கிச் செல்கிறோம். பிந்தைய உறுப்பை அதன் முந்தைய உறுப்பால் வகுத்து விகிதத்தைக் காணுங்கள்."
+        }
+      ],
+      "whyMath": {
+        "latex": "\\begin{aligned}r&=\\frac{27}{81}=\\frac13\\\\a_4&=9\\times\\frac13=3\\end{aligned}",
+        "fallback": "r = 27/81 = 1/3. a₄ = 9 × 1/3 = 3."
+      },
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-gp-sum",
@@ -805,7 +997,19 @@ window.TRIGGLE_G10_CH2_PATH={
           4,
           8
         ]
-      }
+      },
+      "incorrectFeedback": [
+        {
+          "en": "Multiplying the original sum by 3 creates a new last term. Recheck the product of 27 and 3.",
+          "ta": "மூலக் கூடுதலை 3-ஆல் பெருக்கும்போது புதிய கடைசி உறுப்பு கிடைக்கும். 27-ஐ 3-ஆல் பெருக்கிப் பாருங்கள்."
+        },
+        null,
+        {
+          "en": "The first term 1 is in the original sum being subtracted. Keep its minus sign.",
+          "ta": "கழிக்கப்படும் மூலக் கூடுதலில் முதல் உறுப்பு 1 உள்ளது. அதன் கழித்தல் குறியைக் கவனியுங்கள்."
+        }
+      ],
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-gp-infinite",
@@ -831,8 +1035,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "fallback": "S∞ = a/(1−r), |r| < 1"
       },
       "question": {
-        "en": "For 3 + 3/2 + 3/4 + ···, what finite value does the sum approach?",
-        "ta": "3 + 3/2 + 3/4 + ··· இன் கூட்டுத்தொகை எந்த மதிப்பை நெருங்கும்?"
+        "en": "What value does this infinite sum approach?",
+        "ta": "இந்த முடிவுறாத் தொடரின் கூடுதல் எந்த மதிப்பை நெருங்குகிறது?"
       },
       "choices": [
         {
@@ -850,12 +1054,12 @@ window.TRIGGLE_G10_CH2_PATH={
       ],
       "correct": 1,
       "hint": {
-        "en": "The first term is 3 and each term halves. Compute 3/(1 − 1/2).",
-        "ta": "முதல் உறுப்பு 3; ஒவ்வொரு உறுப்பும் பாதியாகும். 3/(1 − 1/2) கணக்கிடுங்கள்."
+        "en": "The first term is 3 and each later term is half the previous one. Use those values in the infinite sum rule.",
+        "ta": "முதல் உறுப்பு 3. அடுத்த ஒவ்வோர் உறுப்பும் முந்தைய உறுப்பின் பாதி. இந்த மதிப்புகளை முடிவுறாத் தொடரின் கூடுதல் விதியில் பயன்படுத்துங்கள்."
       },
       "why": {
-        "en": "Here a = 3 and r = 1/2, with |r| < 1. Hence S∞ = 3/(1 − 1/2) = 6. Do not use this formula for |r| ≥ 1.",
-        "ta": "இங்கே a = 3, r = 1/2; |r| < 1. எனவே S∞ = 3/(1 − 1/2) = 6. |r| ≥ 1 எனில் இந்தச் சூத்திரத்தைப் பயன்படுத்தக்கூடாது."
+        "en": "The ratio is one half, so the sum approaches 6. The formula requires the ratio to lie strictly between negative one and one.",
+        "ta": "பொது விகிதம் அரை. எனவே கூடுதல் 6-ஐ நெருங்குகிறது. இந்த விதியைப் பயன்படுத்த விகிதம் எதிர்மறை ஒன்றுக்கும் ஒன்றுக்கும் இடையில் இருக்க வேண்டும்."
       },
       "visual": {
         "kind": "fractions",
@@ -865,7 +1069,27 @@ window.TRIGGLE_G10_CH2_PATH={
           0.25,
           0.125
         ]
-      }
+      },
+      "questionMath": {
+        "latex": "3+\\frac32+\\frac34+\\cdots",
+        "fallback": "3 + 3/2 + 3/4 + …"
+      },
+      "whyMath": {
+        "latex": "S_{\\infty}=\\frac{3}{1-\\frac12}=6",
+        "fallback": "S∞ = 3/(1 − 1/2) = 6"
+      },
+      "incorrectFeedback": [
+        {
+          "en": "Three is the first term. Include the positive terms that follow it.",
+          "ta": "3 முதல் உறுப்பு. அதற்குப் பின் வரும் நேர்ம உறுப்புகளையும் சேர்க்க வேண்டும்."
+        },
+        null,
+        {
+          "en": "Infinitely many terms can have a finite sum. Here the common ratio has magnitude less than one.",
+          "ta": "முடிவுறா எண்ணிக்கையிலான உறுப்புகளின் கூடுதல் முடிவுள்ள மதிப்பைக் கொண்டிருக்கலாம். இங்கு பொது விகிதத்தின் தனி மதிப்பு ஒன்றை விடக் குறைவு."
+        }
+      ],
+      "explainAfterAttempt": true
     },
     {
       "id": "g10-ch2-special",
@@ -922,8 +1146,18 @@ window.TRIGGLE_G10_CH2_PATH={
             "ta": "மேலிருந்து கீழாக வரிசைகள்."
           },
           "diagramGroups": {
-            "en": ["First triangle", "Second triangle", "Third triangle", "Cell totals"],
-            "ta": ["முதல் முக்கோணம்", "இரண்டாம் முக்கோணம்", "மூன்றாம் முக்கோணம்", "கட்டங்களில் கிடைத்த கூடுதல்கள்"]
+            "en": [
+              "First triangle",
+              "Second triangle",
+              "Third triangle",
+              "Cell totals"
+            ],
+            "ta": [
+              "முதல் முக்கோணம்",
+              "இரண்டாம் முக்கோணம்",
+              "மூன்றாம் முக்கோணம்",
+              "கட்டங்களில் கிடைத்த கூடுதல்கள்"
+            ]
           },
           "caption": {
             "en": "Rotate two copies of the first triangle and add the three values at each position. The result has six cells, each with value 7.",

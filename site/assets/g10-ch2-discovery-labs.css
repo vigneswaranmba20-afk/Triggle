@@ -16,6 +16,7 @@
 .g10ch2-discovery-progress{font:600 12px/1.4 system-ui,sans-serif;color:#596576;white-space:nowrap}
 .g10ch2-discovery-label{font:650 13px/1.4 system-ui,sans-serif;color:#394356;margin:6px 0}
 .g10ch2-discovery-choices{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.g10ch2-discovery-choices button{min-width:44px}
 .g10ch2-discovery-choices button[aria-pressed=true]{background:#742B46;border-color:#742B46;color:#FFF}
 .g10ch2-discovery-range-row{display:flex;align-items:center;gap:10px;margin:10px 0 12px}
 .g10ch2-discovery-range-row label{font:600 13px/1.4 system-ui,sans-serif;flex:0 0 auto;color:#384458}

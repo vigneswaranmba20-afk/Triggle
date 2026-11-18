@@ -36,6 +36,9 @@
   padding:10px 14px;margin:14px 0;color:#473D91;font-size:14px;
   font-weight:750;text-align:center}
 .g10ch2-practice-link:focus-visible{outline:3px solid #473D91;outline-offset:3px}
+.chapter-hub .sp2-simple-journey .sp2-panel:has(.g10ch2-visual) .sp2-recall-actions button{
+  min-width:44px;min-height:44px
+}
 @media(max-width:430px){
  .g10ch2-visual{padding:11px 10px}
  .g10ch2-chip{font-size:15px;padding:8px}

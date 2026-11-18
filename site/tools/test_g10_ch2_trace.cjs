@@ -10,7 +10,18 @@ assert.equal(entry.chapterId,'g10-ch2');
 assert.equal(entry.stages.length,15,'15 short, textbook-ordered foundations');
 const sections=['2.2','2.3','2.3','2.4','2.5','2.5','2.6','2.6','2.7','2.7','2.8','2.9','2.10','2.10','2.11'];
 assert.equal(JSON.stringify(entry.stages.map(s=>s.section)),JSON.stringify(sections));
-const answerKey=new Map([["g10-ch2-division","2"],["g10-ch2-gcd","6"],["g10-ch2-bezout","x = −2, y = 3"],["g10-ch2-primes","36"],["g10-ch2-modulo","11 a.m."],["g10-ch2-congruence","4"],["g10-ch2-sequence","14"],["g10-ch2-recursive","8"],["g10-ch2-ap","Yes, d = 3"],["g10-ch2-ap-nth","39"],["g10-ch2-ap-sum","69"],["g10-ch2-gp","135"],["g10-ch2-gp-sum","81 − 1"],["g10-ch2-gp-infinite","6"],["g10-ch2-special","285"]]);
+const answerKey=new Map([
+ ['g10-ch2-division',String(42%5)],['g10-ch2-gcd','6'],['g10-ch2-bezout','x = −2, y = 3'],
+ ['g10-ch2-primes','24'],['g10-ch2-modulo','11 a.m.'],['g10-ch2-congruence','13'],
+ ['g10-ch2-sequence',String(2*6+1)],['g10-ch2-recursive',String((2+3)+(3+(2+3)))],
+ ['g10-ch2-ap','Yes, d = −3'],['g10-ch2-ap-nth','39'],['g10-ch2-ap-sum','69'],
+ ['g10-ch2-gp',String(9*27/81)],['g10-ch2-gp-sum','81 − 1'],
+ ['g10-ch2-gp-infinite','6'],['g10-ch2-special','285']
+]);
+assert.equal(21*(-2)+15*3,3);
+assert.equal([8,16,24].find(n=>n%12===0),24,'First positive multiple of both 8 and 12');
+assert.deepEqual([13,6,2].filter(n=>(37-n)%6===0),[13]);
+assert.deepEqual([8-11,5-8,2-5],[-3,-3,-3]);
 assert.equal([4,7,10,13,16,19].reduce((total,term)=>total+term,0),69,'Independently add all six A.P. terms');
 assert.equal(6*(4+19)/2,69,'Pairing formula must agree with termwise arithmetic');
 const answerPositionCounts=[0,0,0];
@@ -20,11 +31,15 @@ for(const stage of entry.stages){
   for(const key of ['title','idea','example','rule','question','hint','why'])
    assert.ok((stage[key]?.[lang]||'').length>=4,'Missing '+key+' '+lang+' on '+stage.id);
   assert.ok(stage.choices.every(c=>c[lang]?.length>0),'Bilingual options: '+stage.id);
+  stage.choices.forEach((_,i)=>{
+   if(i!==stage.correct)assert.ok(stage.incorrectFeedback?.[i]?.[lang]?.trim(),'Bilingual misconception feedback: '+stage.id+' '+i);
+  });
  }
  assert(Number.isInteger(stage.correct)&&stage.correct>=0&&stage.correct<3,'Valid answer position: '+stage.id);
  answerPositionCounts[stage.correct]++;
  assert.equal(stage.choices[stage.correct].en,answerKey.get(stage.id),'Correct answer must match independently checked key: '+stage.id);
  assert.equal(stage.choices.length,3,'Student self-check choices: '+stage.id);
+ assert.equal(stage.explainAfterAttempt,true,'Keep the transfer working behind an attempt: '+stage.id);
  assert.ok(stage.math?.latex&&stage.math.fallback,'Authored KaTeX and accessible fallback: '+stage.id);
 }
 assert.equal(new Set(entry.stages.map(s=>s.id)).size,15);
