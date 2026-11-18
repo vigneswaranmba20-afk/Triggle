@@ -36,6 +36,16 @@ for (const [a,b,c,d,e] of [[1,2,3,4,5],[-2,7,4,1,9],[3,-1,-5,8,2]]) {
   assert.equal(coefficient[0], a*c);
   assert.equal(coefficient.length, 4);
 }
+// Guard student-readable mathematical working, not only the final numeric answer.
+// These records use plain-text equations as the offline fallback.
+assert(q10.steps.some(s => /x²\s*\+\s*2xy\s*\+\s*y²/.test(s.eq)), 'Q10 must show the expanded identity');
+assert(q11.steps.some(s => /9x²\s*[−-]\s*4/.test(s.eq)), 'Q11 must show the simplified area formula');
+assert(q12.steps.some(s => /acx³/.test(s.eq)), 'Q12 must show the nonzero cubic leading term');
+for (const row of [q10,q11,q12]) {
+  assert(row.steps.every(s => typeof s.en === 'string' && s.en.trim().length > 0 && typeof s.eq === 'string' && s.eq.trim().length > 0),
+    'Every solution step must have readable English and a mathematical fallback: '+row.id);
+  assert.equal(row.sourceFidelity?.tamilEditorial, 'not-in-scope', 'Do not imply Tamil editorial approval: '+row.id);
+}
 for (const row of [q10,q11,q12]) {
   assert(row.steps.length>=3,'At least three explanatory steps: '+row.id);
   assert(row.sourceFidelity?.status?.includes('visual-pending'),
