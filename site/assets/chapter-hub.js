@@ -439,7 +439,7 @@
       if(notify)onConcept?.(i);
       const stage=stages[i],choices=Array.isArray(stage.choices)?stage.choices:[];
       panel.innerHTML='<div class="sp2-concept-heading" tabindex="-1"><h4>'+e((i+1)+'. '+pick(stage.title))+'</h4></div>'+
-       (['g10-ch2-gcd','g10-ch2-gp-sum','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
+       (['g10-ch2-gp-sum','g10-ch2-gcd','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
        '<div class="sp2-formula" role="group" aria-label="'+e(ta?'கணிதக் கருத்து':'Mathematical idea')+'">'+
        (stage.math?.latex?window.TriggleNotation.renderLatex(stage.math.latex,{displayMode:true,fallback:stage.math.fallback||pick(stage.rule)}):typeset(pick(stage.rule)))+'</div>')+
        (stage.visual?'<div data-g10ch2-visual></div>':'')+
