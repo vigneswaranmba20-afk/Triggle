@@ -1,0 +1,2374 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g9-ch3-ex3-2-english",
+  "grade": 9,
+  "chapter": "3",
+  "chapterTitle": "Algebra",
+  "module": "data/textbook-exercises/g9-ch3-ex3-2-missing-en.js",
+  "sources": [
+    {
+      "id": "tn-g9-en-2025-owner",
+      "grade": 9,
+      "language": "en",
+      "title": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "url": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "edition": "First edition 2018; revised editions 2019, 2020, 2022, 2023, 2025",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    },
+    {
+      "id": "tn-g9-ta-2025-owner",
+      "grade": 9,
+      "language": "ta",
+      "title": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "url": "https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view?usp=drivesdk",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "edition": "First edition 2018; revised editions 2019, 2020, 2022, 2023, 2025",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    }
+  ],
+  "inventory": {
+    "completeChapter": false,
+    "exercises": [
+      {
+        "id": "3.2",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "sourceId": "tn-g9-en-2025-owner",
+            "printedPages": [
+              91
+            ],
+            "pdfPages": [
+              97
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "printedPages": [
+                310
+              ],
+              "pdfPages": [
+                316
+              ],
+              "sourceId": "tn-g9-en-2025-owner",
+              "visualChecked": true,
+              "text": "(i) 6 (ii) −6 (iii) 3"
+            }
+          },
+          {
+            "number": "2",
+            "parts": [
+              "whole"
+            ],
+            "sourceId": "tn-g9-en-2025-owner",
+            "printedPages": [
+              91
+            ],
+            "pdfPages": [
+              97
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "printedPages": [
+                310
+              ],
+              "pdfPages": [
+                316
+              ],
+              "sourceId": "tn-g9-en-2025-owner",
+              "visualChecked": true,
+              "text": "1"
+            }
+          },
+          {
+            "number": "3",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi"
+            ],
+            "sourceId": "tn-g9-en-2025-owner",
+            "printedPages": [
+              91
+            ],
+            "pdfPages": [
+              97
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "printedPages": [
+                310
+              ],
+              "pdfPages": [
+                316
+              ],
+              "sourceId": "tn-g9-en-2025-owner",
+              "visualChecked": true,
+              "text": "(i) 3 (ii) −5/2 (iii) 3/2 (iv) 0 (v) 0 (vi) −b/a"
+            }
+          },
+          {
+            "number": "4",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "sourceId": "tn-g9-en-2025-owner",
+            "printedPages": [
+              91
+            ],
+            "pdfPages": [
+              97
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": {
+              "printedPages": [
+                310
+              ],
+              "pdfPages": [
+                316
+              ],
+              "sourceId": "tn-g9-en-2025-owner",
+              "visualChecked": true,
+              "text": "(i) 6/5 (ii) −3 (iii) −9/10 (iv) 4/9"
+            }
+          },
+          {
+            "number": "5",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv"
+            ],
+            "sourceId": "tn-g9-en-2025-owner",
+            "printedPages": [
+              91
+            ],
+            "pdfPages": [
+              97
+            ],
+            "visualChecked": true,
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null
+          },
+          {
+            "number": "6",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v"
+            ],
+            "sourceId": "tn-g9-en-2025-owner",
+            "printedPages": [
+              92
+            ],
+            "pdfPages": [
+              98
+            ],
+            "visualChecked": true,
+            "requiredFigures": [
+              "./assets/grade9-ch3/figure-3-10.svg",
+              "./assets/grade9-ch3/figure-3-11.svg",
+              "./assets/grade9-ch3/figure-3-12.svg",
+              "./assets/grade9-ch3/figure-3-13.svg",
+              "./assets/grade9-ch3/figure-3-14.svg"
+            ],
+            "tables": [],
+            "graphs": [
+              "./assets/grade9-ch3/figure-3-10.svg",
+              "./assets/grade9-ch3/figure-3-11.svg",
+              "./assets/grade9-ch3/figure-3-12.svg",
+              "./assets/grade9-ch3/figure-3-13.svg",
+              "./assets/grade9-ch3/figure-3-14.svg"
+            ],
+            "mcq": false,
+            "answerKey": {
+              "printedPages": [
+                310
+              ],
+              "pdfPages": [
+                316
+              ],
+              "sourceId": "tn-g9-en-2025-owner",
+              "visualChecked": true,
+              "text": "(i) 2 (ii) 3 (iii) 0 (iv) 1 (v) 1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "g9-ch3-ex3.2-q1-i",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q1(i)",
+        "ta": "Exercise 3.2 · Q1(i) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Evaluate the polynomial"
+      },
+      "q": {
+        "en": "1. Find the value of the polynomial f(y) = 6y − 3y² + 3 at\n(i) y = 1"
+      },
+      "questionMath": {
+        "en": [
+          "1. Find the value of the polynomial ",
+          {
+            "latex": "f(y)=6y-3y^2+3",
+            "fallback": "f(y) = 6y − 3y² + 3"
+          },
+          " at\n(i) ",
+          {
+            "latex": "y=1",
+            "fallback": "y = 1"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Replace every y with the given input. The notation f(y) means the output at that input.",
+          "eq": "f(1) = 6(1) − 3(1)² + 3",
+          "math": {
+            "latex": "f(1)=6(1) - 3(1)^2 + 3",
+            "fallback": "f(1) = 6(1) − 3(1)² + 3",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Replace every y with the given input. The notation f(y) means the output at that input."
+          }
+        },
+        {
+          "en": "Evaluate the square and the multiplications before adding the terms.",
+          "eq": "f(1) = 6 − 3 + 3 = 6",
+          "math": {
+            "latex": "\\begin{aligned}f(1)&=6 - 3 + 3\\\\&=6\\end{aligned}",
+            "fallback": "f(1) = 6 − 3 + 3 = 6",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Evaluate the square and the multiplications before adding the terms."
+          }
+        }
+      ],
+      "answer": "f(1) = 6",
+      "answerMath": {
+        "latex": "f(1)=6",
+        "fallback": "f(1) = 6",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q1 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q1-ii",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q1(ii)",
+        "ta": "Exercise 3.2 · Q1(ii) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Evaluate the polynomial"
+      },
+      "q": {
+        "en": "1. Find the value of the polynomial f(y) = 6y − 3y² + 3 at\n(ii) y = −1"
+      },
+      "questionMath": {
+        "en": [
+          "1. Find the value of the polynomial ",
+          {
+            "latex": "f(y)=6y-3y^2+3",
+            "fallback": "f(y) = 6y − 3y² + 3"
+          },
+          " at\n(ii) ",
+          {
+            "latex": "y=-1",
+            "fallback": "y = −1"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Replace every y with the given input. The notation f(y) means the output at that input.",
+          "eq": "f(−1) = 6(−1) − 3(−1)² + 3",
+          "math": {
+            "latex": "f(-1)=6(-1) - 3(-1)^2 + 3",
+            "fallback": "f(−1) = 6(−1) − 3(−1)² + 3",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Replace every y with the given input. The notation f(y) means the output at that input."
+          }
+        },
+        {
+          "en": "Square the entire negative input first. The square is positive, and the coefficient of that square is negative.",
+          "eq": "f(−1) = −6 − 3 + 3 = −6",
+          "math": {
+            "latex": "\\begin{aligned}f(-1)&=-6 - 3 + 3\\\\&=-6\\end{aligned}",
+            "fallback": "f(−1) = −6 − 3 + 3 = −6",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Square the entire negative input first. The square is positive, and the coefficient of that square is negative."
+          }
+        }
+      ],
+      "answer": "f(−1) = −6",
+      "answerMath": {
+        "latex": "f(-1)=-6",
+        "fallback": "f(−1) = −6",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q1 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q1-iii",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q1(iii)",
+        "ta": "Exercise 3.2 · Q1(iii) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Evaluate the polynomial"
+      },
+      "q": {
+        "en": "1. Find the value of the polynomial f(y) = 6y − 3y² + 3 at\n(iii) y = 0"
+      },
+      "questionMath": {
+        "en": [
+          "1. Find the value of the polynomial ",
+          {
+            "latex": "f(y)=6y-3y^2+3",
+            "fallback": "f(y) = 6y − 3y² + 3"
+          },
+          " at\n(iii) ",
+          {
+            "latex": "y=0",
+            "fallback": "y = 0"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Replace every y with the given input. The notation f(y) means the output at that input.",
+          "eq": "f(0) = 6(0) − 3(0)² + 3",
+          "math": {
+            "latex": "f(0)=6(0) - 3(0)^2 + 3",
+            "fallback": "f(0) = 6(0) − 3(0)² + 3",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Replace every y with the given input. The notation f(y) means the output at that input."
+          }
+        },
+        {
+          "en": "Evaluate the square and the multiplications before adding the terms.",
+          "eq": "f(0) = 0 − 0 + 3 = 3",
+          "math": {
+            "latex": "\\begin{aligned}f(0)&=0 - 0 + 3\\\\&=3\\end{aligned}",
+            "fallback": "f(0) = 0 − 0 + 3 = 3",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Evaluate the square and the multiplications before adding the terms."
+          }
+        }
+      ],
+      "answer": "f(0) = 3",
+      "answerMath": {
+        "latex": "f(0)=3",
+        "fallback": "f(0) = 3",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q1 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q2",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q2",
+        "ta": "Exercise 3.2 · Q2 (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Evaluate at a radical input"
+      },
+      "q": {
+        "en": "2. If p(x) = x² − 2√2 x + 1, find p(2√2)."
+      },
+      "questionMath": {
+        "en": [
+          "2. If ",
+          {
+            "latex": "p(x)=x^2-2\\sqrt{2}\\,x+1",
+            "fallback": "p(x) = x² − 2√2 x + 1"
+          },
+          ", find ",
+          {
+            "latex": "p(2\\sqrt{2})",
+            "fallback": "p(2√2)"
+          },
+          "."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Replace both occurrences of x with two times the square root of two.",
+          "eq": "p(2√2) = (2√2)² − 2√2(2√2) + 1",
+          "math": {
+            "latex": "\\begin{aligned}p(2\\sqrt{2})&=(2\\sqrt{2})^2\\\\&\\quad-2\\sqrt{2}(2\\sqrt{2})+1\\end{aligned}",
+            "fallback": "p(2√2) = (2√2)² − 2√2(2√2) + 1",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Replace both occurrences of x with two times the square root of two."
+          }
+        },
+        {
+          "en": "Squaring two times the square root of two gives eight. The product in the second term is the same square.",
+          "eq": "(2√2)² = 2² × 2 = 8",
+          "math": {
+            "latex": "(2\\sqrt{2})^2=2^2\\times2=8",
+            "fallback": "(2√2)² = 2² × 2 = 8",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Squaring two times the square root of two gives eight. The product in the second term is the same square."
+          }
+        },
+        {
+          "en": "The two eights cancel, leaving the constant term.",
+          "eq": "p(2√2) = 8 − 8 + 1 = 1",
+          "math": {
+            "latex": "\\begin{aligned}p(2\\sqrt{2})&=8-8+1\\\\&=1\\end{aligned}",
+            "fallback": "p(2√2) = 8 − 8 + 1 = 1",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "The two eights cancel, leaving the constant term."
+          }
+        }
+      ],
+      "answer": "p(2√2) = 1",
+      "answerMath": {
+        "latex": "p(2\\sqrt{2})=1",
+        "fallback": "p(2√2) = 1",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q2 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-i",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q3(i)",
+        "ta": "Exercise 3.2 · Q3(i) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Find the zero of p(x)"
+      },
+      "q": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(i) p(x) = x − 3"
+      },
+      "questionMath": {
+        "en": [
+          "3. Find the zeros of the polynomial in each of the following :\n(i) ",
+          {
+            "latex": "p(x)=x-3",
+            "fallback": "p(x) = x − 3"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "eq": "x − 3 = 0",
+          "math": {
+            "latex": "x-3=0",
+            "fallback": "x − 3 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          }
+        },
+        {
+          "en": "Add three to both sides.",
+          "eq": "x = 3",
+          "math": {
+            "latex": "x=3",
+            "fallback": "x = 3",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Add three to both sides."
+          }
+        },
+        {
+          "en": "Substitute the result to check that it gives zero.",
+          "eq": "p(3) = 3 − 3 = 0",
+          "math": {
+            "latex": "p(3)=3-3=0",
+            "fallback": "p(3) = 3 − 3 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Substitute the result to check that it gives zero."
+          }
+        }
+      ],
+      "answer": "x = 3",
+      "answerMath": {
+        "latex": "x=3",
+        "fallback": "x = 3",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q3 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-ii",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q3(ii)",
+        "ta": "Exercise 3.2 · Q3(ii) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Find the zero of p(x)"
+      },
+      "q": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(ii) p(x) = 2x + 5"
+      },
+      "questionMath": {
+        "en": [
+          "3. Find the zeros of the polynomial in each of the following :\n(ii) ",
+          {
+            "latex": "p(x)=2x+5",
+            "fallback": "p(x) = 2x + 5"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "eq": "2x + 5 = 0",
+          "math": {
+            "latex": "2x+5=0",
+            "fallback": "2x + 5 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          }
+        },
+        {
+          "en": "Subtract five from both sides.",
+          "eq": "2x = −5",
+          "math": {
+            "latex": "2x=-5",
+            "fallback": "2x = −5",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Subtract five from both sides."
+          }
+        },
+        {
+          "en": "Divide both sides by two to get x on its own.",
+          "eq": "x = −5/2",
+          "math": {
+            "latex": "x=-\\dfrac{5}{2}",
+            "fallback": "x = −5/2",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Divide both sides by two to get x on its own."
+          }
+        },
+        {
+          "en": "Substitute the result to check that it gives zero.",
+          "eq": "p(−5/2) = 2(−5/2) + 5 = 0",
+          "math": {
+            "latex": "p\\left(-\\dfrac{5}{2}\\right)=2\\left(-\\dfrac{5}{2}\\right)+5=0",
+            "fallback": "p(−5/2) = 2(−5/2) + 5 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Substitute the result to check that it gives zero."
+          }
+        }
+      ],
+      "answer": "x = −5/2",
+      "answerMath": {
+        "latex": "x=-\\dfrac{5}{2}",
+        "fallback": "x = −5/2",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q3 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-iii",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q3(iii)",
+        "ta": "Exercise 3.2 · Q3(iii) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Find the zero of q(y)"
+      },
+      "q": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(iii) q(y) = 2y − 3"
+      },
+      "questionMath": {
+        "en": [
+          "3. Find the zeros of the polynomial in each of the following :\n(iii) ",
+          {
+            "latex": "q(y)=2y-3",
+            "fallback": "q(y) = 2y − 3"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "eq": "2y − 3 = 0",
+          "math": {
+            "latex": "2y-3=0",
+            "fallback": "2y − 3 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          }
+        },
+        {
+          "en": "Add three to both sides.",
+          "eq": "2y = 3",
+          "math": {
+            "latex": "2y=3",
+            "fallback": "2y = 3",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Add three to both sides."
+          }
+        },
+        {
+          "en": "Divide both sides by two to get y on its own.",
+          "eq": "y = 3/2",
+          "math": {
+            "latex": "y=\\dfrac{3}{2}",
+            "fallback": "y = 3/2",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Divide both sides by two to get y on its own."
+          }
+        },
+        {
+          "en": "Substitute the result to check that it gives zero.",
+          "eq": "q(3/2) = 2(3/2) − 3 = 0",
+          "math": {
+            "latex": "q\\left(\\dfrac{3}{2}\\right)=2\\left(\\dfrac{3}{2}\\right)-3=0",
+            "fallback": "q(3/2) = 2(3/2) − 3 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Substitute the result to check that it gives zero."
+          }
+        }
+      ],
+      "answer": "y = 3/2",
+      "answerMath": {
+        "latex": "y=\\dfrac{3}{2}",
+        "fallback": "y = 3/2",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q3 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-iv",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q3(iv)",
+        "ta": "Exercise 3.2 · Q3(iv) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Find the zero of f(z)"
+      },
+      "q": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(iv) f(z) = 8z"
+      },
+      "questionMath": {
+        "en": [
+          "3. Find the zeros of the polynomial in each of the following :\n(iv) ",
+          {
+            "latex": "f(z)=8z",
+            "fallback": "f(z) = 8z"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "eq": "8z = 0",
+          "math": {
+            "latex": "8z=0",
+            "fallback": "8z = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          }
+        },
+        {
+          "en": "Divide both sides by eight.",
+          "eq": "z = 0",
+          "math": {
+            "latex": "z=0",
+            "fallback": "z = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Divide both sides by eight."
+          }
+        },
+        {
+          "en": "Substitute the result to check that it gives zero.",
+          "eq": "f(0) = 8 × 0 = 0",
+          "math": {
+            "latex": "f(0)=8\\times0=0",
+            "fallback": "f(0) = 8 × 0 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Substitute the result to check that it gives zero."
+          }
+        }
+      ],
+      "answer": "z = 0",
+      "answerMath": {
+        "latex": "z=0",
+        "fallback": "z = 0",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q3 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-v",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q3(v)",
+        "ta": "Exercise 3.2 · Q3(v) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Find the zero of p(x)"
+      },
+      "q": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(v) p(x) = ax when a ≠ 0"
+      },
+      "questionMath": {
+        "en": [
+          "3. Find the zeros of the polynomial in each of the following :\n(v) ",
+          {
+            "latex": "p(x)=ax",
+            "fallback": "p(x) = ax"
+          },
+          " when ",
+          {
+            "latex": "a\\ne 0",
+            "fallback": "a ≠ 0"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "eq": "ax = 0",
+          "math": {
+            "latex": "ax=0",
+            "fallback": "ax = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          }
+        },
+        {
+          "en": "The coefficient a is nonzero, so divide both sides by a.",
+          "eq": "x = 0/a = 0",
+          "math": {
+            "latex": "x=\\dfrac{0}{a}=0",
+            "fallback": "x = 0/a = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "The coefficient a is nonzero, so divide both sides by a."
+          }
+        },
+        {
+          "en": "Substitute the result to check that it gives zero.",
+          "eq": "p(0) = a × 0 = 0",
+          "math": {
+            "latex": "p(0)=a\\times0=0",
+            "fallback": "p(0) = a × 0 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Substitute the result to check that it gives zero."
+          }
+        }
+      ],
+      "answer": "x = 0",
+      "answerMath": {
+        "latex": "x=0",
+        "fallback": "x = 0",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q3 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-vi",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q3(vi)",
+        "ta": "Exercise 3.2 · Q3(vi) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Find the zero of h(x)"
+      },
+      "q": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(vi) h(x) = ax + b, a ≠ 0, a, b ∈ R"
+      },
+      "questionMath": {
+        "en": [
+          "3. Find the zeros of the polynomial in each of the following :\n(vi) ",
+          {
+            "latex": "h(x)=ax+b",
+            "fallback": "h(x) = ax + b"
+          },
+          ", ",
+          {
+            "latex": "a\\ne0",
+            "fallback": "a ≠ 0"
+          },
+          ", ",
+          {
+            "latex": "a,b\\in\\mathbb{R}",
+            "fallback": "a, b ∈ R"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "eq": "ax + b = 0",
+          "math": {
+            "latex": "ax+b=0",
+            "fallback": "ax + b = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          }
+        },
+        {
+          "en": "Here a and b are real numbers. Subtract b from both sides.",
+          "eq": "ax = −b",
+          "math": {
+            "latex": "ax=-b",
+            "fallback": "ax = −b",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Here a and b are real numbers. Subtract b from both sides."
+          }
+        },
+        {
+          "en": "The coefficient a is nonzero, so divide both sides by a.",
+          "eq": "x = −b/a",
+          "math": {
+            "latex": "x=-\\dfrac{b}{a}",
+            "fallback": "x = −b/a",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "The coefficient a is nonzero, so divide both sides by a."
+          }
+        },
+        {
+          "en": "Substitute the result to check that it gives zero.",
+          "eq": "h(−b/a) = a(−b/a) + b = −b + b = 0",
+          "math": {
+            "latex": "\\begin{aligned}h\\left(-\\dfrac{b}{a}\\right)&=a\\left(-\\dfrac{b}{a}\\right)+b\\\\&=-b+b=0\\end{aligned}",
+            "fallback": "h(−b/a) = a(−b/a) + b = −b + b = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Substitute the result to check that it gives zero."
+          }
+        }
+      ],
+      "answer": "x = −b/a",
+      "answerMath": {
+        "latex": "x=-\\dfrac{b}{a}",
+        "fallback": "x = −b/a",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q3 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q4",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra",
+        "ta": "Algebra (English version only)"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q4",
+        "ta": "Exercise 3.2 · Q4 (English only)"
+      },
+      "title": {
+        "en": "Roots of four linear equations",
+        "ta": "Roots of four linear equations (English only)"
+      },
+      "q": {
+        "en": "Find the roots of the polynomial equations .\n(i) 5x – 6 = 0 (ii) x +3 = 0\n(iii) 10x + 9 = 0 (iv) 9x – 4 = 0"
+      },
+      "steps": [
+        {
+          "en": "For a linear equation ax+b=0 with a≠0, isolate x.",
+          "eq": "x = −b/a"
+        },
+        {
+          "en": "Move the constant term in parts (i) and (ii).",
+          "eq": "(i) 5x=6 ⇒ x=[[6|5]]; (ii) x=−3"
+        },
+        {
+          "en": "Move the constant term and divide in parts (iii) and (iv).",
+          "eq": "(iii) 10x=−9 ⇒ x=−[[9|10]]; (iv) 9x=4 ⇒ x=[[4|9]]"
+        },
+        {
+          "en": "Each value makes its original left-hand side equal zero.",
+          "eq": "5([[6|5]])−6=0; −3+3=0; 10(−[[9|10]])+9=0; 9([[4|9]])−4=0"
+        }
+      ],
+      "answer": "(i) [[6|5]]; (ii) −3; (iii) −[[9|10]]; (iv) [[4|9]]",
+      "kind": "textbook",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q4 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "page": 97,
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      },
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview"
+    },
+    {
+      "id": "g9-ch3-ex3.2-q5-i",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q5(i)",
+        "ta": "Exercise 3.2 · Q5(i) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Check a fractional input"
+      },
+      "q": {
+        "en": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(i) p(x) = 2x − 1, x = 1/2"
+      },
+      "questionMath": {
+        "en": [
+          "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(i) ",
+          {
+            "latex": "p(x)=2x-1",
+            "fallback": "p(x) = 2x − 1"
+          },
+          ", ",
+          {
+            "latex": "x=\\dfrac12",
+            "fallback": "x = 1/2"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "A proposed input is a zero if substituting it makes the polynomial equal to zero.",
+          "eq": "p(1/2) = 2 × (1/2) − 1",
+          "math": {
+            "latex": "p\\left(\\dfrac12\\right)=2\\times\\dfrac12-1",
+            "fallback": "p(1/2) = 2 × (1/2) − 1",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A proposed input is a zero if substituting it makes the polynomial equal to zero."
+          }
+        },
+        {
+          "en": "Two halves make one. Subtract one to get zero.",
+          "eq": "p(1/2) = 1 − 1 = 0",
+          "math": {
+            "latex": "p\\left(\\dfrac12\\right)=1-1=0",
+            "fallback": "p(1/2) = 1 − 1 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Two halves make one. Subtract one to get zero."
+          }
+        }
+      ],
+      "answer": "Yes, 1/2 is a zero.",
+      "answerMath": {
+        "latex": "\\text{Yes. }\\dfrac12\\text{ is a zero.}",
+        "fallback": "Yes, 1/2 is a zero.",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q5 · printed p. 91 (PDF p. 97). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q5-ii",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q5(ii)",
+        "ta": "Exercise 3.2 · Q5(ii) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Check an input in a cubic"
+      },
+      "q": {
+        "en": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(ii) p(x) = x³ − 1, x = 1"
+      },
+      "questionMath": {
+        "en": [
+          "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(ii) ",
+          {
+            "latex": "p(x)=x^3-1",
+            "fallback": "p(x) = x³ − 1"
+          },
+          ", ",
+          {
+            "latex": "x=1",
+            "fallback": "x = 1"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Substitute the proposed input for x.",
+          "eq": "p(1) = 1³ − 1",
+          "math": {
+            "latex": "p(1)=1^3-1",
+            "fallback": "p(1) = 1³ − 1",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Substitute the proposed input for x."
+          }
+        },
+        {
+          "en": "The cube of one is one. The output is zero, so one is a zero.",
+          "eq": "p(1) = 1 − 1 = 0",
+          "math": {
+            "latex": "p(1)=1-1=0",
+            "fallback": "p(1) = 1 − 1 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "The cube of one is one. The output is zero, so one is a zero."
+          }
+        }
+      ],
+      "answer": "Yes, 1 is a zero.",
+      "answerMath": {
+        "latex": "\\text{Yes. }1\\text{ is a zero.}",
+        "fallback": "Yes, 1 is a zero.",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q5 · printed p. 91 (PDF p. 97). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q5-iii",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q5(iii)",
+        "ta": "Exercise 3.2 · Q5(iii) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Check a symbolic input"
+      },
+      "q": {
+        "en": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(iii) p(x) = ax + b, x = (−b)/a"
+      },
+      "questionMath": {
+        "en": [
+          "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(iii) ",
+          {
+            "latex": "p(x)=ax+b",
+            "fallback": "p(x) = ax + b"
+          },
+          ", ",
+          {
+            "latex": "x=\\dfrac{-b}{a}",
+            "fallback": "x = (−b)/a"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "The proposed input has a in its denominator, so it is defined only when a is nonzero.",
+          "eq": "a ≠ 0",
+          "math": {
+            "latex": "a\\ne0",
+            "fallback": "a ≠ 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "The proposed input has a in its denominator, so it is defined only when a is nonzero."
+          }
+        },
+        {
+          "en": "Substitute the fraction for x. The factor a cancels with the nonzero denominator a.",
+          "eq": "p(−b/a) = a(−b/a) + b = −b + b = 0",
+          "math": {
+            "latex": "\\begin{aligned}p\\left(-\\dfrac{b}{a}\\right)&=a\\left(-\\dfrac{b}{a}\\right)+b\\\\&=-b+b=0\\end{aligned}",
+            "fallback": "p(−b/a) = a(−b/a) + b = −b + b = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Substitute the fraction for x. The factor a cancels with the nonzero denominator a."
+          }
+        }
+      ],
+      "answer": "Yes, −b/a is a zero when a ≠ 0.",
+      "answerMath": {
+        "latex": "\\begin{gathered}\\text{Yes. }-\\dfrac ba\\text{ is a zero}\\\\ \\text{when }a\\ne0.\\end{gathered}",
+        "fallback": "Yes, −b/a is a zero when a ≠ 0.",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q5 · printed p. 91 (PDF p. 97). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q5-iv",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q5(iv)",
+        "ta": "Exercise 3.2 · Q5(iv) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Check both inputs in a product"
+      },
+      "q": {
+        "en": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(iv) p(x) = (x + 3)(x − 4), x = 4, x = −3"
+      },
+      "questionMath": {
+        "en": [
+          "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(iv) ",
+          {
+            "latex": "p(x)=(x+3)(x-4)",
+            "fallback": "p(x) = (x + 3)(x − 4)"
+          },
+          ", ",
+          {
+            "latex": "x=4",
+            "fallback": "x = 4"
+          },
+          ", ",
+          {
+            "latex": "x=-3",
+            "fallback": "x = −3"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Substitute four. The second factor becomes zero, so the whole product is zero.",
+          "eq": "p(4) = (4 + 3)(4 − 4) = 7 × 0 = 0",
+          "math": {
+            "latex": "\\begin{aligned}p(4)&=(4+3)(4-4)\\\\&=7\\times0=0\\end{aligned}",
+            "fallback": "p(4) = (4 + 3)(4 − 4) = 7 × 0 = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Substitute four. The second factor becomes zero, so the whole product is zero."
+          }
+        },
+        {
+          "en": "Substitute negative three. This time the first factor becomes zero.",
+          "eq": "p(−3) = (−3 + 3)(−3 − 4) = 0 × (−7) = 0",
+          "math": {
+            "latex": "\\begin{aligned}p(-3)&=(-3+3)(-3-4)\\\\&=0\\times(-7)=0\\end{aligned}",
+            "fallback": "p(−3) = (−3 + 3)(−3 − 4) = 0 × (−7) = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "Substitute negative three. This time the first factor becomes zero."
+          }
+        }
+      ],
+      "answer": "Yes, both 4 and −3 are zeros.",
+      "answerMath": {
+        "latex": "\\text{Yes. }4\\text{ and }-3\\text{ are zeros.}",
+        "fallback": "Yes, both 4 and −3 are zeros.",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q5 · printed p. 91 (PDF p. 97). Tamil editorial and teacher review pending.",
+      "page": 97,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 91,
+        "enPdfPage": 97,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q6-i",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q6(i)",
+        "ta": "Exercise 3.2 · Q6(i) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Count the zeros from Fig. 3.10"
+      },
+      "q": {
+        "en": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(i) Fig. 3.10"
+      },
+      "questionMath": {
+        "en": [
+          "6. Find the number of zeros of the following polynomials represented by their graphs.\n(i) Fig. 3.10"
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.",
+          "eq": "y = 0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+          }
+        },
+        {
+          "en": "The upward curve crosses the horizontal axis once on each side of the vertical axis."
+        }
+      ],
+      "answer": "2 zeros",
+      "answerMath": {
+        "latex": "2\\text{ zeros}",
+        "fallback": "2 zeros",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q6 · printed p. 92 (PDF p. 98) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 98,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 92,
+        "enPdfPage": 98,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      },
+      "figureSrc": "./assets/grade9-ch3/figure-3-10.svg",
+      "figureAlt": {
+        "en": "Upward-opening parabola with a marked crossing on each side of the vertical axis. Its lowest point is below the horizontal axis."
+      },
+      "figureCaption": {
+        "en": "Fig. 3.10 · Redrawn from the 2025 textbook"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q6-ii",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q6(ii)",
+        "ta": "Exercise 3.2 · Q6(ii) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Count the zeros from Fig. 3.11"
+      },
+      "q": {
+        "en": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(ii) Fig. 3.11"
+      },
+      "questionMath": {
+        "en": [
+          "6. Find the number of zeros of the following polynomials represented by their graphs.\n(ii) Fig. 3.11"
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.",
+          "eq": "y = 0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+          }
+        },
+        {
+          "en": "The curve crosses the horizontal axis three times. The marked point on the vertical axis sits above the horizontal axis."
+        }
+      ],
+      "answer": "3 zeros",
+      "answerMath": {
+        "latex": "3\\text{ zeros}",
+        "fallback": "3 zeros",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q6 · printed p. 92 (PDF p. 98) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 98,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 92,
+        "enPdfPage": 98,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      },
+      "figureSrc": "./assets/grade9-ch3/figure-3-11.svg",
+      "figureAlt": {
+        "en": "Cubic curve with one marked horizontal-axis crossing left of the vertical axis and two on the right. A fourth point marks its crossing of the vertical axis above the horizontal axis."
+      },
+      "figureCaption": {
+        "en": "Fig. 3.11 · Redrawn from the 2025 textbook"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q6-iii",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q6(iii)",
+        "ta": "Exercise 3.2 · Q6(iii) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Count the zeros from Fig. 3.12"
+      },
+      "q": {
+        "en": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iii) Fig. 3.12"
+      },
+      "questionMath": {
+        "en": [
+          "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iii) Fig. 3.12"
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.",
+          "eq": "y = 0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+          }
+        },
+        {
+          "en": "Even the lowest point of the curve is above the horizontal axis, so there is no meeting point."
+        }
+      ],
+      "answer": "0 zeros",
+      "answerMath": {
+        "latex": "0\\text{ zeros}",
+        "fallback": "0 zeros",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q6 · printed p. 92 (PDF p. 98) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 98,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 92,
+        "enPdfPage": 98,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      },
+      "figureSrc": "./assets/grade9-ch3/figure-3-12.svg",
+      "figureAlt": {
+        "en": "Upward-opening parabola with a marked lowest point on the vertical axis, above the horizontal axis."
+      },
+      "figureCaption": {
+        "en": "Fig. 3.12 · Redrawn from the 2025 textbook"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q6-iv",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q6(iv)",
+        "ta": "Exercise 3.2 · Q6(iv) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Count the zeros from Fig. 3.13"
+      },
+      "q": {
+        "en": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iv) Fig. 3.13"
+      },
+      "questionMath": {
+        "en": [
+          "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iv) Fig. 3.13"
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.",
+          "eq": "y = 0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+          }
+        },
+        {
+          "en": "The sideways curve meets the horizontal axis where the axes cross. Its other two marked points lie on the vertical axis at nonzero heights. The figure is sideways, so it does not represent a single output y for every input x. The textbook is counting its meetings with the horizontal axis."
+        }
+      ],
+      "answer": "1 zero",
+      "answerMath": {
+        "latex": "1\\text{ zero}",
+        "fallback": "1 zero",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q6 · printed p. 92 (PDF p. 98) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 98,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 92,
+        "enPdfPage": 98,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      },
+      "figureSrc": "./assets/grade9-ch3/figure-3-13.svg",
+      "figureAlt": {
+        "en": "Sideways S-shaped curve with three marked points on the vertical axis. Only the middle point sits on the horizontal axis."
+      },
+      "figureCaption": {
+        "en": "Fig. 3.13 · Redrawn from the 2025 textbook"
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.2-q6-v",
+      "classNum": 9,
+      "chapter": "3",
+      "exercise": "3.2",
+      "topic": {
+        "en": "Algebra"
+      },
+      "label": {
+        "en": "Exercise 3.2 · Q6(v)",
+        "ta": "Exercise 3.2 · Q6(v) (English only · Tamil review pending)"
+      },
+      "title": {
+        "en": "Count the zeros from Fig. 3.14"
+      },
+      "q": {
+        "en": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(v) Fig. 3.14"
+      },
+      "questionMath": {
+        "en": [
+          "6. Find the number of zeros of the following polynomials represented by their graphs.\n(v) Fig. 3.14"
+        ]
+      },
+      "steps": [
+        {
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.",
+          "eq": "y = 0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y = 0",
+            "display": true
+          },
+          "reasonMath": {
+            "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+          }
+        },
+        {
+          "en": "The highest point of the downward curve touches the horizontal axis once. That point has height zero."
+        }
+      ],
+      "answer": "1 zero",
+      "answerMath": {
+        "latex": "1\\text{ zero}",
+        "fallback": "1 zero",
+        "display": true
+      },
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q6 · printed p. 92 (PDF p. 98) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
+      "page": 98,
+      "edition": "2025",
+      "translationReview": "pending",
+      "releaseStatus": "english-preview",
+      "sourceFidelity": {
+        "status": "english-source-page-visual-checked",
+        "enPrintedPage": 92,
+        "enPdfPage": 98,
+        "answerKeyEnPrintedPage": 310,
+        "answerKeyEnPdfPage": 316,
+        "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+        "comparableTamilPrintedPage": 99,
+        "comparableTamilPdfPage": 105,
+        "tamilReview": "pending",
+        "teacherReview": "pending"
+      },
+      "figureSrc": "./assets/grade9-ch3/figure-3-14.svg",
+      "figureAlt": {
+        "en": "Downward-opening parabola with its highest point on the horizontal axis, right of the vertical axis. Its marked vertical-axis crossing is below the horizontal axis."
+      },
+      "figureCaption": {
+        "en": "Fig. 3.14 · Redrawn from the 2025 textbook"
+      }
+    }
+  ],
+  "mapping": [
+    {
+      "recordId": "g9-ch3-ex3.2-q1-i",
+      "exercise": "3.2",
+      "question": "1",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "1. Find the value of the polynomial f(y) = 6y − 3y² + 3 at\n(i) y = 1"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q1-ii",
+      "exercise": "3.2",
+      "question": "1",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "1. Find the value of the polynomial f(y) = 6y − 3y² + 3 at\n(ii) y = −1"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q1-iii",
+      "exercise": "3.2",
+      "question": "1",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "1. Find the value of the polynomial f(y) = 6y − 3y² + 3 at\n(iii) y = 0"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q2",
+      "exercise": "3.2",
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "2. If p(x) = x² − 2√2 x + 1, find p(2√2)."
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q3-i",
+      "exercise": "3.2",
+      "question": "3",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(i) p(x) = x − 3"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q3-ii",
+      "exercise": "3.2",
+      "question": "3",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(ii) p(x) = 2x + 5"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q3-iii",
+      "exercise": "3.2",
+      "question": "3",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(iii) q(y) = 2y − 3"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q3-iv",
+      "exercise": "3.2",
+      "question": "3",
+      "parts": [
+        "iv"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(iv) f(z) = 8z"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q3-v",
+      "exercise": "3.2",
+      "question": "3",
+      "parts": [
+        "v"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(v) p(x) = ax when a ≠ 0"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q3-vi",
+      "exercise": "3.2",
+      "question": "3",
+      "parts": [
+        "vi"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "3. Find the zeros of the polynomial in each of the following :\n(vi) h(x) = ax + b, a ≠ 0, a, b ∈ R"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q4",
+      "exercise": "3.2",
+      "question": "4",
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "Find the roots of the polynomial equations .\n(i) 5x – 6 = 0 (ii) x +3 = 0\n(iii) 10x + 9 = 0 (iv) 9x – 4 = 0"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q5-i",
+      "exercise": "3.2",
+      "question": "5",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(i) p(x) = 2x − 1, x = 1/2"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q5-ii",
+      "exercise": "3.2",
+      "question": "5",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(ii) p(x) = x³ − 1, x = 1"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q5-iii",
+      "exercise": "3.2",
+      "question": "5",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(iii) p(x) = ax + b, x = (−b)/a"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q5-iv",
+      "exercise": "3.2",
+      "question": "5",
+      "parts": [
+        "iv"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(iv) p(x) = (x + 3)(x − 4), x = 4, x = −3"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        91
+      ],
+      "pdfPages": [
+        97
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q6-i",
+      "exercise": "3.2",
+      "question": "6",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(i) Fig. 3.10"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        92
+      ],
+      "pdfPages": [
+        98
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q6-ii",
+      "exercise": "3.2",
+      "question": "6",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(ii) Fig. 3.11"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        92
+      ],
+      "pdfPages": [
+        98
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q6-iii",
+      "exercise": "3.2",
+      "question": "6",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iii) Fig. 3.12"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        92
+      ],
+      "pdfPages": [
+        98
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q6-iv",
+      "exercise": "3.2",
+      "question": "6",
+      "parts": [
+        "iv"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iv) Fig. 3.13"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        92
+      ],
+      "pdfPages": [
+        98
+      ]
+    },
+    {
+      "recordId": "g9-ch3-ex3.2-q6-v",
+      "exercise": "3.2",
+      "question": "6",
+      "parts": [
+        "v"
+      ],
+      "sourceId": "tn-g9-en-2025-owner",
+      "sourceText": {
+        "en": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(v) Fig. 3.14"
+      },
+      "visualChecked": {
+        "en": true
+      },
+      "printedPages": [
+        92
+      ],
+      "pdfPages": [
+        98
+      ]
+    }
+  ],
+  "verification": {
+    "script": "site/tools/bulk/verify_g9_ex3_2.cjs"
+  },
+  "tamilStatus": "pending"
+}

@@ -1,0 +1,304 @@
+{
+  "edition": "2025 revised",
+  "grade": 9,
+  "chapter": 3,
+  "exercise": "3.2",
+  "source": {
+    "en": {
+      "id": "tn-g9-en-2025-owner",
+      "grade": 9,
+      "language": "en",
+      "title": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "url": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "edition": "First edition 2018; revised editions 2019, 2020, 2022, 2023, 2025",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    },
+    "ta": {
+      "id": "tn-g9-ta-2025-owner",
+      "grade": 9,
+      "language": "ta",
+      "title": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "url": "https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view?usp=drivesdk",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "edition": "First edition 2018; revised editions 2019, 2020, 2022, 2023, 2025",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    }
+  },
+  "pages": {
+    "en": {
+      "printed": [
+        91,
+        92
+      ],
+      "pdf": [
+        97,
+        98
+      ],
+      "answerAppendixPrinted": [
+        310
+      ],
+      "answerAppendixPdf": [
+        316
+      ]
+    },
+    "ta": {
+      "printed": [
+        99
+      ],
+      "pdf": [
+        105
+      ]
+    }
+  },
+  "pageImageSha256At120Dpi": {
+    "en-2.png": "3a1425011688a2010965d619f3b8b00c956d8eee170bcea05d4d530b0b3ec8e4",
+    "en-97.png": "f1fd6912816cff13e6177af916c61baf09a10a9ab2833964f3a9d97d8ba9634f",
+    "en-98.png": "e6f86699f96c4423a1374e026772ba524cf65ed68bfb161503b3cadbaf2d7e93",
+    "en-316.png": "697a910afacf7fde63a6a2fb60fff89b75e08b2176662c3da574cb97b750e5a2",
+    "ta-2.png": "b9aed5ce26e5d7c6707529caa9ac657312308c4c9d4e230694a87e0df1e82102",
+    "ta-105.png": "85e8a76b131abfd5055271dadb114a4d27ab5cf9a01ad9527dad0a0cf2f79db7"
+  },
+  "coverage": {
+    "baselineCommit": "d294ebc150b5acae79bd8f756aa7d40f40b405c5",
+    "before": {
+      "numberedQuestions": 1,
+      "labeledSubparts": 4,
+      "tasks": 4,
+      "studentRecords": 1
+    },
+    "after": {
+      "numberedQuestions": 6,
+      "labeledSubparts": 22,
+      "tasks": 23,
+      "studentRecords": 20
+    }
+  },
+  "preservedRecord": {
+    "id": "g9-ch3-ex3.2-q4",
+    "englishLearningContentSha256": "9ed5073c408da151bf81648ea69dfa1b783400e3d4300f7ae756764ded4fc40a"
+  },
+  "tamilEditorialReview": "pending",
+  "teacherReview": "pending",
+  "items": [
+    {
+      "id": "g9-ch3-ex3.2-q1-i",
+      "question": "1",
+      "parts": [
+        "i"
+      ],
+      "exactEnglish": "1. Find the value of the polynomial f(y) = 6y − 3y² + 3 at\n(i) y = 1",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q1-ii",
+      "question": "1",
+      "parts": [
+        "ii"
+      ],
+      "exactEnglish": "1. Find the value of the polynomial f(y) = 6y − 3y² + 3 at\n(ii) y = −1",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q1-iii",
+      "question": "1",
+      "parts": [
+        "iii"
+      ],
+      "exactEnglish": "1. Find the value of the polynomial f(y) = 6y − 3y² + 3 at\n(iii) y = 0",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q2",
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "exactEnglish": "2. If p(x) = x² − 2√2 x + 1, find p(2√2).",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-i",
+      "question": "3",
+      "parts": [
+        "i"
+      ],
+      "exactEnglish": "3. Find the zeros of the polynomial in each of the following :\n(i) p(x) = x − 3",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-ii",
+      "question": "3",
+      "parts": [
+        "ii"
+      ],
+      "exactEnglish": "3. Find the zeros of the polynomial in each of the following :\n(ii) p(x) = 2x + 5",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-iii",
+      "question": "3",
+      "parts": [
+        "iii"
+      ],
+      "exactEnglish": "3. Find the zeros of the polynomial in each of the following :\n(iii) q(y) = 2y − 3",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-iv",
+      "question": "3",
+      "parts": [
+        "iv"
+      ],
+      "exactEnglish": "3. Find the zeros of the polynomial in each of the following :\n(iv) f(z) = 8z",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-v",
+      "question": "3",
+      "parts": [
+        "v"
+      ],
+      "exactEnglish": "3. Find the zeros of the polynomial in each of the following :\n(v) p(x) = ax when a ≠ 0",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q3-vi",
+      "question": "3",
+      "parts": [
+        "vi"
+      ],
+      "exactEnglish": "3. Find the zeros of the polynomial in each of the following :\n(vi) h(x) = ax + b, a ≠ 0, a, b ∈ R",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q4",
+      "question": "4",
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "exactEnglish": "Find the roots of the polynomial equations .\n(i) 5x – 6 = 0 (ii) x +3 = 0\n(iii) 10x + 9 = 0 (iv) 9x – 4 = 0",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q5-i",
+      "question": "5",
+      "parts": [
+        "i"
+      ],
+      "exactEnglish": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(i) p(x) = 2x − 1, x = 1/2",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q5-ii",
+      "question": "5",
+      "parts": [
+        "ii"
+      ],
+      "exactEnglish": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(ii) p(x) = x³ − 1, x = 1",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q5-iii",
+      "question": "5",
+      "parts": [
+        "iii"
+      ],
+      "exactEnglish": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(iii) p(x) = ax + b, x = (−b)/a",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q5-iv",
+      "question": "5",
+      "parts": [
+        "iv"
+      ],
+      "exactEnglish": "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(iv) p(x) = (x + 3)(x − 4), x = 4, x = −3",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "g9-ch3-ex3.2-q6-i",
+      "question": "6",
+      "parts": [
+        "i"
+      ],
+      "exactEnglish": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(i) Fig. 3.10",
+      "printedPage": 92,
+      "pdfPage": 98,
+      "figureSrc": "./assets/grade9-ch3/figure-3-10.svg",
+      "figure": "3.10"
+    },
+    {
+      "id": "g9-ch3-ex3.2-q6-ii",
+      "question": "6",
+      "parts": [
+        "ii"
+      ],
+      "exactEnglish": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(ii) Fig. 3.11",
+      "printedPage": 92,
+      "pdfPage": 98,
+      "figureSrc": "./assets/grade9-ch3/figure-3-11.svg",
+      "figure": "3.11"
+    },
+    {
+      "id": "g9-ch3-ex3.2-q6-iii",
+      "question": "6",
+      "parts": [
+        "iii"
+      ],
+      "exactEnglish": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iii) Fig. 3.12",
+      "printedPage": 92,
+      "pdfPage": 98,
+      "figureSrc": "./assets/grade9-ch3/figure-3-12.svg",
+      "figure": "3.12"
+    },
+    {
+      "id": "g9-ch3-ex3.2-q6-iv",
+      "question": "6",
+      "parts": [
+        "iv"
+      ],
+      "exactEnglish": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iv) Fig. 3.13",
+      "printedPage": 92,
+      "pdfPage": 98,
+      "figureSrc": "./assets/grade9-ch3/figure-3-13.svg",
+      "figure": "3.13"
+    },
+    {
+      "id": "g9-ch3-ex3.2-q6-v",
+      "question": "6",
+      "parts": [
+        "v"
+      ],
+      "exactEnglish": "6. Find the number of zeros of the following polynomials represented by their graphs.\n(v) Fig. 3.14",
+      "printedPage": 92,
+      "pdfPage": 98,
+      "figureSrc": "./assets/grade9-ch3/figure-3-14.svg",
+      "figure": "3.14"
+    }
+  ]
+}

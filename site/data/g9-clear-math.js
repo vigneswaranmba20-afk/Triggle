@@ -17588,28 +17588,6 @@ const records=[
           "latex": "9 x - 4 = 0",
           "fallback": "9x – 4 = 0"
         }
-      ],
-      "ta": [
-        "English-language question; Tamil version not changed. Find the roots of the polynomial equations .\n(i) ",
-        {
-          "latex": "5 x - 6 = 0",
-          "fallback": "5x – 6 = 0"
-        },
-        " (ii) ",
-        {
-          "latex": "x + 3 = 0",
-          "fallback": "x +3 = 0"
-        },
-        "\n(iii) ",
-        {
-          "latex": "10 x + 9 = 0",
-          "fallback": "10x + 9 = 0"
-        },
-        " (iv) ",
-        {
-          "latex": "9 x - 4 = 0",
-          "fallback": "9x – 4 = 0"
-        }
       ]
     },
     "answerMath": {
@@ -17642,24 +17620,6 @@ const records=[
               "fallback": "x"
             },
             "."
-          ],
-          "ta": [
-            "English explanation (Tamil unchanged): For a linear equation ",
-            {
-              "latex": "ax + b = 0",
-              "fallback": "ax+b=0"
-            },
-            " with ",
-            {
-              "latex": "a \\ne 0",
-              "fallback": "a≠0"
-            },
-            ", isolate ",
-            {
-              "latex": "x",
-              "fallback": "x"
-            },
-            "."
           ]
         }
       },
@@ -17670,8 +17630,7 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Move the constant term in parts (i) and (ii).",
-          "ta": "English explanation (Tamil unchanged): Move the constant term in parts (i) and (ii)."
+          "en": "Move the constant term in parts (i) and (ii)."
         }
       },
       {
@@ -17681,8 +17640,7 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Move the constant term and divide in parts (iii) and (iv).",
-          "ta": "English explanation (Tamil unchanged): Move the constant term and divide in parts (iii) and (iv)."
+          "en": "Move the constant term and divide in parts (iii) and (iv)."
         }
       },
       {
@@ -17692,8 +17650,7 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Each value makes its original left-hand side equal zero.",
-          "ta": "English explanation (Tamil unchanged): Each value makes its original left-hand side equal zero."
+          "en": "Each value makes its original left-hand side equal zero."
         }
       }
     ]
@@ -33922,6 +33879,875 @@ const records=[
         }
       }
     ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Find the value of the polynomial ",
+        {
+          "latex": "f(y)=6y-3y^2+3",
+          "fallback": "f(y) = 6y − 3y² + 3"
+        },
+        " at\n(i) ",
+        {
+          "latex": "y=1",
+          "fallback": "y = 1"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "f(1)=6",
+      "fallback": "f(1) = 6",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "f(1)=6(1) - 3(1)^2 + 3",
+          "fallback": "f(1) = 6(1) − 3(1)² + 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Replace every y with the given input. The notation f(y) means the output at that input."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}f(1)&=6 - 3 + 3\\\\&=6\\end{aligned}",
+          "fallback": "f(1) = 6 − 3 + 3 = 6",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Evaluate the square and the multiplications before adding the terms."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Find the value of the polynomial ",
+        {
+          "latex": "f(y)=6y-3y^2+3",
+          "fallback": "f(y) = 6y − 3y² + 3"
+        },
+        " at\n(ii) ",
+        {
+          "latex": "y=-1",
+          "fallback": "y = −1"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "f(-1)=-6",
+      "fallback": "f(−1) = −6",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "f(-1)=6(-1) - 3(-1)^2 + 3",
+          "fallback": "f(−1) = 6(−1) − 3(−1)² + 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Replace every y with the given input. The notation f(y) means the output at that input."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}f(-1)&=-6 - 3 + 3\\\\&=-6\\end{aligned}",
+          "fallback": "f(−1) = −6 − 3 + 3 = −6",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Square the entire negative input first. The square is positive, and the coefficient of that square is negative."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Find the value of the polynomial ",
+        {
+          "latex": "f(y)=6y-3y^2+3",
+          "fallback": "f(y) = 6y − 3y² + 3"
+        },
+        " at\n(iii) ",
+        {
+          "latex": "y=0",
+          "fallback": "y = 0"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "f(0)=3",
+      "fallback": "f(0) = 3",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "f(0)=6(0) - 3(0)^2 + 3",
+          "fallback": "f(0) = 6(0) − 3(0)² + 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Replace every y with the given input. The notation f(y) means the output at that input."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}f(0)&=0 - 0 + 3\\\\&=3\\end{aligned}",
+          "fallback": "f(0) = 0 − 0 + 3 = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Evaluate the square and the multiplications before adding the terms."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q2",
+    "questionMath": {
+      "en": [
+        "2. If ",
+        {
+          "latex": "p(x)=x^2-2\\sqrt{2}\\,x+1",
+          "fallback": "p(x) = x² − 2√2 x + 1"
+        },
+        ", find ",
+        {
+          "latex": "p(2\\sqrt{2})",
+          "fallback": "p(2√2)"
+        },
+        "."
+      ]
+    },
+    "answerMath": {
+      "latex": "p(2\\sqrt{2})=1",
+      "fallback": "p(2√2) = 1",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}p(2\\sqrt{2})&=(2\\sqrt{2})^2\\\\&\\quad-2\\sqrt{2}(2\\sqrt{2})+1\\end{aligned}",
+          "fallback": "p(2√2) = (2√2)² − 2√2(2√2) + 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Replace both occurrences of x with two times the square root of two."
+        }
+      },
+      {
+        "math": {
+          "latex": "(2\\sqrt{2})^2=2^2\\times2=8",
+          "fallback": "(2√2)² = 2² × 2 = 8",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Squaring two times the square root of two gives eight. The product in the second term is the same square."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}p(2\\sqrt{2})&=8-8+1\\\\&=1\\end{aligned}",
+          "fallback": "p(2√2) = 8 − 8 + 1 = 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The two eights cancel, leaving the constant term."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q3-i",
+    "questionMath": {
+      "en": [
+        "3. Find the zeros of the polynomial in each of the following :\n(i) ",
+        {
+          "latex": "p(x)=x-3",
+          "fallback": "p(x) = x − 3"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "x=3",
+      "fallback": "x = 3",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x-3=0",
+          "fallback": "x − 3 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+        }
+      },
+      {
+        "math": {
+          "latex": "x=3",
+          "fallback": "x = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Add three to both sides."
+        }
+      },
+      {
+        "math": {
+          "latex": "p(3)=3-3=0",
+          "fallback": "p(3) = 3 − 3 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute the result to check that it gives zero."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q3-ii",
+    "questionMath": {
+      "en": [
+        "3. Find the zeros of the polynomial in each of the following :\n(ii) ",
+        {
+          "latex": "p(x)=2x+5",
+          "fallback": "p(x) = 2x + 5"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "x=-\\dfrac{5}{2}",
+      "fallback": "x = −5/2",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2x+5=0",
+          "fallback": "2x + 5 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+        }
+      },
+      {
+        "math": {
+          "latex": "2x=-5",
+          "fallback": "2x = −5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Subtract five from both sides."
+        }
+      },
+      {
+        "math": {
+          "latex": "x=-\\dfrac{5}{2}",
+          "fallback": "x = −5/2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Divide both sides by two to get x on its own."
+        }
+      },
+      {
+        "math": {
+          "latex": "p\\left(-\\dfrac{5}{2}\\right)=2\\left(-\\dfrac{5}{2}\\right)+5=0",
+          "fallback": "p(−5/2) = 2(−5/2) + 5 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute the result to check that it gives zero."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q3-iii",
+    "questionMath": {
+      "en": [
+        "3. Find the zeros of the polynomial in each of the following :\n(iii) ",
+        {
+          "latex": "q(y)=2y-3",
+          "fallback": "q(y) = 2y − 3"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "y=\\dfrac{3}{2}",
+      "fallback": "y = 3/2",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2y-3=0",
+          "fallback": "2y − 3 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+        }
+      },
+      {
+        "math": {
+          "latex": "2y=3",
+          "fallback": "2y = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Add three to both sides."
+        }
+      },
+      {
+        "math": {
+          "latex": "y=\\dfrac{3}{2}",
+          "fallback": "y = 3/2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Divide both sides by two to get y on its own."
+        }
+      },
+      {
+        "math": {
+          "latex": "q\\left(\\dfrac{3}{2}\\right)=2\\left(\\dfrac{3}{2}\\right)-3=0",
+          "fallback": "q(3/2) = 2(3/2) − 3 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute the result to check that it gives zero."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q3-iv",
+    "questionMath": {
+      "en": [
+        "3. Find the zeros of the polynomial in each of the following :\n(iv) ",
+        {
+          "latex": "f(z)=8z",
+          "fallback": "f(z) = 8z"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "z=0",
+      "fallback": "z = 0",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "8z=0",
+          "fallback": "8z = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+        }
+      },
+      {
+        "math": {
+          "latex": "z=0",
+          "fallback": "z = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Divide both sides by eight."
+        }
+      },
+      {
+        "math": {
+          "latex": "f(0)=8\\times0=0",
+          "fallback": "f(0) = 8 × 0 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute the result to check that it gives zero."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q3-v",
+    "questionMath": {
+      "en": [
+        "3. Find the zeros of the polynomial in each of the following :\n(v) ",
+        {
+          "latex": "p(x)=ax",
+          "fallback": "p(x) = ax"
+        },
+        " when ",
+        {
+          "latex": "a\\ne 0",
+          "fallback": "a ≠ 0"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "x=0",
+      "fallback": "x = 0",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "ax=0",
+          "fallback": "ax = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+        }
+      },
+      {
+        "math": {
+          "latex": "x=\\dfrac{0}{a}=0",
+          "fallback": "x = 0/a = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The coefficient a is nonzero, so divide both sides by a."
+        }
+      },
+      {
+        "math": {
+          "latex": "p(0)=a\\times0=0",
+          "fallback": "p(0) = a × 0 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute the result to check that it gives zero."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q3-vi",
+    "questionMath": {
+      "en": [
+        "3. Find the zeros of the polynomial in each of the following :\n(vi) ",
+        {
+          "latex": "h(x)=ax+b",
+          "fallback": "h(x) = ax + b"
+        },
+        ", ",
+        {
+          "latex": "a\\ne0",
+          "fallback": "a ≠ 0"
+        },
+        ", ",
+        {
+          "latex": "a,b\\in\\mathbb{R}",
+          "fallback": "a, b ∈ R"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "x=-\\dfrac{b}{a}",
+      "fallback": "x = −b/a",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "ax+b=0",
+          "fallback": "ax + b = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+        }
+      },
+      {
+        "math": {
+          "latex": "ax=-b",
+          "fallback": "ax = −b",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Here a and b are real numbers. Subtract b from both sides."
+        }
+      },
+      {
+        "math": {
+          "latex": "x=-\\dfrac{b}{a}",
+          "fallback": "x = −b/a",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The coefficient a is nonzero, so divide both sides by a."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}h\\left(-\\dfrac{b}{a}\\right)&=a\\left(-\\dfrac{b}{a}\\right)+b\\\\&=-b+b=0\\end{aligned}",
+          "fallback": "h(−b/a) = a(−b/a) + b = −b + b = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute the result to check that it gives zero."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q5-i",
+    "questionMath": {
+      "en": [
+        "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(i) ",
+        {
+          "latex": "p(x)=2x-1",
+          "fallback": "p(x) = 2x − 1"
+        },
+        ", ",
+        {
+          "latex": "x=\\dfrac12",
+          "fallback": "x = 1/2"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Yes. }\\dfrac12\\text{ is a zero.}",
+      "fallback": "Yes, 1/2 is a zero.",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p\\left(\\dfrac12\\right)=2\\times\\dfrac12-1",
+          "fallback": "p(1/2) = 2 × (1/2) − 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A proposed input is a zero if substituting it makes the polynomial equal to zero."
+        }
+      },
+      {
+        "math": {
+          "latex": "p\\left(\\dfrac12\\right)=1-1=0",
+          "fallback": "p(1/2) = 1 − 1 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Two halves make one. Subtract one to get zero."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q5-ii",
+    "questionMath": {
+      "en": [
+        "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(ii) ",
+        {
+          "latex": "p(x)=x^3-1",
+          "fallback": "p(x) = x³ − 1"
+        },
+        ", ",
+        {
+          "latex": "x=1",
+          "fallback": "x = 1"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Yes. }1\\text{ is a zero.}",
+      "fallback": "Yes, 1 is a zero.",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(1)=1^3-1",
+          "fallback": "p(1) = 1³ − 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute the proposed input for x."
+        }
+      },
+      {
+        "math": {
+          "latex": "p(1)=1-1=0",
+          "fallback": "p(1) = 1 − 1 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The cube of one is one. The output is zero, so one is a zero."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q5-iii",
+    "questionMath": {
+      "en": [
+        "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(iii) ",
+        {
+          "latex": "p(x)=ax+b",
+          "fallback": "p(x) = ax + b"
+        },
+        ", ",
+        {
+          "latex": "x=\\dfrac{-b}{a}",
+          "fallback": "x = (−b)/a"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{gathered}\\text{Yes. }-\\dfrac ba\\text{ is a zero}\\\\ \\text{when }a\\ne0.\\end{gathered}",
+      "fallback": "Yes, −b/a is a zero when a ≠ 0.",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a\\ne0",
+          "fallback": "a ≠ 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The proposed input has a in its denominator, so it is defined only when a is nonzero."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}p\\left(-\\dfrac{b}{a}\\right)&=a\\left(-\\dfrac{b}{a}\\right)+b\\\\&=-b+b=0\\end{aligned}",
+          "fallback": "p(−b/a) = a(−b/a) + b = −b + b = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute the fraction for x. The factor a cancels with the nonzero denominator a."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q5-iv",
+    "questionMath": {
+      "en": [
+        "5. Verify whether the following are zeros of the polynomial indicated against them, or not.\n(iv) ",
+        {
+          "latex": "p(x)=(x+3)(x-4)",
+          "fallback": "p(x) = (x + 3)(x − 4)"
+        },
+        ", ",
+        {
+          "latex": "x=4",
+          "fallback": "x = 4"
+        },
+        ", ",
+        {
+          "latex": "x=-3",
+          "fallback": "x = −3"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Yes. }4\\text{ and }-3\\text{ are zeros.}",
+      "fallback": "Yes, both 4 and −3 are zeros.",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}p(4)&=(4+3)(4-4)\\\\&=7\\times0=0\\end{aligned}",
+          "fallback": "p(4) = (4 + 3)(4 − 4) = 7 × 0 = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute four. The second factor becomes zero, so the whole product is zero."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}p(-3)&=(-3+3)(-3-4)\\\\&=0\\times(-7)=0\\end{aligned}",
+          "fallback": "p(−3) = (−3 + 3)(−3 − 4) = 0 × (−7) = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Substitute negative three. This time the first factor becomes zero."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q6-i",
+    "questionMath": {
+      "en": [
+        "6. Find the number of zeros of the following polynomials represented by their graphs.\n(i) Fig. 3.10"
+      ]
+    },
+    "answerMath": {
+      "latex": "2\\text{ zeros}",
+      "fallback": "2 zeros",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y=0",
+          "fallback": "y = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+        }
+      },
+      {
+        "reasonMath": {
+          "en": "The upward curve crosses the horizontal axis once on each side of the vertical axis."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q6-ii",
+    "questionMath": {
+      "en": [
+        "6. Find the number of zeros of the following polynomials represented by their graphs.\n(ii) Fig. 3.11"
+      ]
+    },
+    "answerMath": {
+      "latex": "3\\text{ zeros}",
+      "fallback": "3 zeros",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y=0",
+          "fallback": "y = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+        }
+      },
+      {
+        "reasonMath": {
+          "en": "The curve crosses the horizontal axis three times. The marked point on the vertical axis sits above the horizontal axis."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q6-iii",
+    "questionMath": {
+      "en": [
+        "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iii) Fig. 3.12"
+      ]
+    },
+    "answerMath": {
+      "latex": "0\\text{ zeros}",
+      "fallback": "0 zeros",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y=0",
+          "fallback": "y = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+        }
+      },
+      {
+        "reasonMath": {
+          "en": "Even the lowest point of the curve is above the horizontal axis, so there is no meeting point."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q6-iv",
+    "questionMath": {
+      "en": [
+        "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iv) Fig. 3.13"
+      ]
+    },
+    "answerMath": {
+      "latex": "1\\text{ zero}",
+      "fallback": "1 zero",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y=0",
+          "fallback": "y = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+        }
+      },
+      {
+        "reasonMath": {
+          "en": [
+            "The sideways curve meets the horizontal axis where the axes cross. Its other two marked points lie on the vertical axis at nonzero heights. The figure is sideways, so it does not represent a single output ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " for every input ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ". The textbook is counting its meetings with the horizontal axis."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.2-q6-v",
+    "questionMath": {
+      "en": [
+        "6. Find the number of zeros of the following polynomials represented by their graphs.\n(v) Fig. 3.14"
+      ]
+    },
+    "answerMath": {
+      "latex": "1\\text{ zero}",
+      "fallback": "1 zero",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y=0",
+          "fallback": "y = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+        }
+      },
+      {
+        "reasonMath": {
+          "en": "The highest point of the downward curve touches the horizontal axis once. That point has height zero."
+        }
+      }
+    ]
   }
 ];
 const texts={
@@ -43910,6 +44736,40 @@ const texts={
       "fallback": "f(x) = 5x − 7"
     },
     "."
+  ],
+  "The symbol ≠ means “is not equal to.” Dividing both sides by the same nonzero number preserves the equality and leaves just x on the left.": [
+    "The symbol ",
+    {
+      "latex": "\\ne",
+      "fallback": "≠"
+    },
+    " means “is not equal to.” Dividing both sides by the same nonzero number preserves the equality and leaves just ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " on the left."
+  ],
+  "Substitute the fraction for x. The factor a cancels with the nonzero denominator a.": [
+    "Substitute the fraction for ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ". The factor a cancels with the nonzero denominator a."
+  ],
+  "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.": [
+    "A zero occurs where the curve meets the horizontal ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis. The height ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " at any point on that axis is zero."
   ]
 };
 const diagramLabels={"A":{"latex":"A","fallback":"A"},"B":{"latex":"B","fallback":"B"},"C":{"latex":"C","fallback":"C"},"D":{"latex":"D","fallback":"D"},"E":{"latex":"E","fallback":"E"},"F":{"latex":"F","fallback":"F"},"O":{"latex":"O","fallback":"O"},"P":{"latex":"P","fallback":"P"},"Q":{"latex":"Q","fallback":"Q"},"a":{"latex":"a","fallback":"a"},"b":{"latex":"b","fallback":"b"},"x":{"latex":"x","fallback":"x"},"y":{"latex":"y","fallback":"y"},"θ":{"latex":"\\theta","fallback":"θ"},"φ":{"latex":"\\phi","fallback":"φ"},"α":{"latex":"\\alpha","fallback":"α"},"β":{"latex":"\\beta","fallback":"β"},"√13":{"latex":"\\sqrt{13}","fallback":"√13"},"√5":{"latex":"\\sqrt{5}","fallback":"√5"},"√(a² + b²)":{"latex":"\\sqrt{a^{2} + b^{2}}","fallback":"√(a² + b²)"}};
