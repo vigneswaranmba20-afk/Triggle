@@ -32,9 +32,15 @@ assert.match(q12.answer, /degree 3/i);
 for (const [a,b,c,d,e] of [[1,2,3,4,5],[-2,7,4,1,9],[3,-1,-5,8,2]]) {
   assert.notEqual(a*c,0);
   // Leading term of (ax+b)(cx²+dx+e) is acx³.
-  const coefficient = [a*c, a*d+b*c, a*e+b*d, b*e];
-  assert.equal(coefficient[0], a*c);
-  assert.equal(coefficient.length, 4);
+  // Independently multiply coefficient arrays in ascending power order.
+  const p = [b,a], q = [e,d,c];
+  const product = Array(p.length + q.length - 1).fill(0);
+  for (let i = 0; i < p.length; i++) {
+    for (let j = 0; j < q.length; j++) product[i+j] += p[i]*q[j];
+  }
+  assert.deepEqual(product, [b*e, a*e+b*d, a*d+b*c, a*c]);
+  assert.notEqual(product[3], 0, 'Degree 3 requires a nonzero cubic coefficient');
+  assert.equal(product.length-1, 3);
 }
 // Guard student-readable mathematical working, not only the final numeric answer.
 // These records use plain-text equations as the offline fallback.
