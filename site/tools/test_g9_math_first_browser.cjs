@@ -37,7 +37,7 @@ async function sample(page, base, id, width) {
   await page.waitForFunction(selector => [...document.querySelectorAll(selector)].every(formula =>
     formula.scrollWidth <= formula.clientWidth + 1 || formula.tabIndex === 0), formulaSelector, { timeout: 3000 });
   if (id === coordinates && width === 430) {
-    const layoutWidth = await page.locator('#questionText .triggle-tex').evaluate(formula => {
+    const layoutWidth = await page.locator('#questionText .triggle-tex').first().evaluate(formula => {
       const tabIndex = formula.getAttribute('tabindex');
       formula.removeAttribute('tabindex');
       try { return document.documentElement.scrollWidth; }
