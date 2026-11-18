@@ -869,53 +869,193 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-special",
+      "practiceId": "c10-2-ex2-9-q1-v",
       "section": "2.11",
       "title": {
         "en": "Special series: numbers, squares or cubes?",
         "ta": "சிறப்புத் தொடர்கள்: எண்கள், வர்க்கங்கள், கனங்கள்"
       },
       "idea": {
-        "en": "Look at what is added: numbers (1 + 2 + ...), squares (1² + 2² + ...), or cubes (1³ + 2³ + ...). Each needs a different rule. Start with squares, then switch the visual to compare.",
-        "ta": "எதை கூட்டுகிறோம் எனப் பாருங்கள்: எண்கள் (1 + 2 + ...), வர்க்கங்கள் (1² + 2² + ...), அல்லது கனங்கள் (1³ + 2³ + ...). ஒவ்வொன்றுக்கும் தனித்தனி விதி உண்டு. முதலில் வர்க்கங்களைக் கற்று காட்சியில் மற்றவற்றுடன் ஒப்பிடவும்."
+        "en": "The natural numbers form an arithmetic progression (A.P.) with common difference 1. The A.P. sum is the number of terms times the average of the first and last terms. Here there are n terms, from 1 to n, so that average is (1 + n) ÷ 2.",
+        "ta": "இயல் எண்கள் 1 என்ற பொது வேறுபாடு கொண்ட கூட்டுத் தொடர்வரிசையாக (A.P.) அமைகின்றன. முதல் மற்றும் கடைசி உறுப்புகளின் சராசரியை உறுப்புகளின் எண்ணிக்கையால் பெருக்கினால் கூடுதல் கிடைக்கும். 1 முதல் n வரை n உறுப்புகள் உள்ளன. முதல், கடைசி உறுப்புகளின் சராசரி (1 + n) ÷ 2."
       },
       "example": {
-        "en": "For squares, 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30. For cubes, 1³ + 2³ + 3³ = (1 + 2 + 3)² = 36. Never use the cubes rule for squares.",
-        "ta": "வர்க்கங்களுக்கு: 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30. கனங்களுக்கு: 1³ + 2³ + 3³ = (1 + 2 + 3)² = 36. வர்க்கங்களுக்குக் கனங்களின் விதியைப் பயன்படுத்த வேண்டாம்."
+        "en": "An exponent tells you how many copies of a number to multiply. For squares, use two copies of each number. For cubes, use three. Then add the results.",
+        "ta": "ஓர் எண்ணை எத்தனை முறை காரணியாகப் பயன்படுத்த வேண்டும் என்பதை அடுக்கு காட்டுகிறது. வர்க்கம் காண ஒரே எண்ணை இரண்டு காரணிகளாகவும், கனம் காண மூன்று காரணிகளாகவும் பெருக்கவும். பிறகு கிடைத்த மதிப்புகளைக் கூட்டவும்."
       },
       "rule": {
-        "en": "1² + 2² + ··· + n² = n(n+1)(2n+1)/6",
-        "ta": "1² + 2² + ··· + n² = n(n+1)(2n+1)/6"
+        "en": "Sₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2",
+        "ta": "Sₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2"
       },
       "math": {
-        "latex": "\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}",
-        "fallback": "1² + 2² + ··· + n² = n(n+1)(2n+1)/6"
+        "latex": "\\begin{aligned}S_n&=\\sum_{k=1}^{n}k=1+2+\\cdots+n\\\\&=\\frac{n(n+1)}{2}\\end{aligned}",
+        "fallback": "Sₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2"
+      },
+      "lesson": {
+        "bridgeTitle": {
+          "en": "Start with the A.P. sum",
+          "ta": "கூட்டுத் தொடர்வரிசையின் கூடுதலிலிருந்து தொடங்குவோம்"
+        },
+        "notation": {
+          "en": "Sₙ means the sum of the first n terms. The symbol ∑ means “add”. Here k takes each value from 1 to n.",
+          "ta": "Sₙ என்பது முதல் n உறுப்புகளின் கூடுதல். ∑ என்பது கூட்டலைக் குறிக்கும். இங்கு k என்பது 1 முதல் n வரையிலான ஒவ்வோர் எண்ணையும் குறிக்கும்."
+        },
+        "powersMath": {
+          "latex": "2^2=2\\times2,\\quad 2^3=2\\times2\\times2",
+          "fallback": "2² = 2 × 2, 2³ = 2 × 2 × 2"
+        },
+        "squares": {
+          "title": {
+            "en": "Why the squares rule works",
+            "ta": "வர்க்கங்களின் கூடுதலுக்கான சூத்திரம் எப்படி கிடைக்கிறது?"
+          },
+          "intro": {
+            "en": "In the first triangle, the first row has one 1, the second has two 2s, and the third has three 3s. Each row adds up to its row number squared.",
+            "ta": "முதல் முக்கோணத்தில் முதல் வரிசையில் ஒரு 1, இரண்டாம் வரிசையில் இரண்டு 2-கள், மூன்றாம் வரிசையில் மூன்று 3-கள் உள்ளன. ஒவ்வொரு வரிசையின் கூடுதலும் அதன் வரிசை எண்ணின் வர்க்கம்."
+          },
+          "diagramLabel": {
+            "en": "Three rotations of a triangle, added cell by cell",
+            "ta": "முக்கோணத்தின் மூன்று சுழற்றிய வடிவங்களிலுள்ள எண்களை இடவாரியாகக் கூட்டுதல்"
+          },
+          "diagramRows": {
+            "en": "Rows from top to bottom.",
+            "ta": "மேலிருந்து கீழாக வரிசைகள்."
+          },
+          "diagramGroups": {
+            "en": ["First triangle", "Second triangle", "Third triangle", "Cell totals"],
+            "ta": ["முதல் முக்கோணம்", "இரண்டாம் முக்கோணம்", "மூன்றாம் முக்கோணம்", "கட்டங்களில் கிடைத்த கூடுதல்கள்"]
+          },
+          "caption": {
+            "en": "Rotate two copies of the first triangle and add the three values at each position. The result has six cells, each with value 7.",
+            "ta": "முதல் முக்கோணத்தின் இரு நகல்களைச் சுழற்றி, ஒவ்வோர் இடத்திலும் உள்ள மூன்று எண்களைக் கூட்டுங்கள். கிடைக்கும் ஆறு கட்டங்களிலும் மதிப்பு 7."
+          },
+          "exampleMath": {
+            "latex": "\\begin{aligned}3(1^2+2^2+3^2)&=6\\times7\\\\1^2+2^2+3^2&=\\frac{42}{3}=14\\end{aligned}",
+            "fallback": "3 × (1² + 2² + 3²) = 6 × 7. So 1² + 2² + 3² = 42 ÷ 3 = 14."
+          },
+          "general": {
+            "en": "With n rows, the top values are 1, n and n. Move to either cell just below and one value gains 1 while another loses 1. So every position adds to 2n + 1. Count the cells with the A.P. sum, multiply by the value per cell, then divide by 3 to get the sum for one triangle.",
+            "ta": "n வரிசைகள் இருந்தால், உச்சியில் உள்ள மதிப்புகள் 1, n, n. அடுத்த வரிசையில் நேரடியாகக் கீழுள்ள இரு கட்டங்களில் எதற்குச் சென்றாலும், ஒரு மதிப்பு 1 அதிகரிக்கிறது, மற்றொன்று 1 குறைகிறது. எனவே ஒவ்வோர் இடத்திலும் கூடுதல் 2n + 1. கூட்டுத் தொடர்வரிசைச் சூத்திரத்தால் கட்டங்களின் எண்ணிக்கையைக் காணுங்கள். அதைக் கட்டத்தின் மதிப்பால் பெருக்கி, 3-ஆல் வகுத்தால் ஒரு முக்கோணத்தின் கூடுதல் கிடைக்கும்."
+          },
+          "math": {
+            "latex": "\\begin{aligned}S_n&=1^2+2^2+\\cdots+n^2\\\\&=\\frac{n(n+1)}{2}\\times(2n+1)\\div3\\\\&=\\frac{n(n+1)(2n+1)}{6}\\end{aligned}",
+            "fallback": "Sₙ = 1² + 2² + ⋯ + n² = [n × (n + 1) ÷ 2] × (2n + 1) ÷ 3 = [n × (n + 1) × (2n + 1)] ÷ 6"
+          }
+        },
+        "cubes": {
+          "title": {
+            "en": "Sum of cubes",
+            "ta": "கனங்களின் கூடுதல்"
+          },
+          "intro": {
+            "en": "First add the natural numbers from 1 to n using the A.P. rule. Then square that entire sum to get the sum of their cubes.",
+            "ta": "முதலில் கூட்டுத் தொடர்வரிசைச் சூத்திரத்தைப் பயன்படுத்தி 1 முதல் n வரையிலான இயல் எண்களின் கூடுதலைக் காணுங்கள். அந்தக் கூடுதலை வர்க்கப்படுத்தினால் அவற்றின் கனங்களின் கூடுதல் கிடைக்கும்."
+          },
+          "math": {
+            "latex": "\\begin{aligned}&1^3+2^3+\\cdots+n^3\\\\&\\quad=(1+2+\\cdots+n)^2\\\\&\\quad=\\left(\\frac{n(n+1)}{2}\\right)^2\\end{aligned}",
+            "fallback": "1³ + 2³ + ⋯ + n³ = (1 + 2 + ⋯ + n)² = {[n × (n + 1)] ÷ 2}²"
+          },
+          "proofTitle": {
+            "en": "Why does the cubes rule work?",
+            "ta": "கனங்களின் கூடுதலுக்கான சூத்திரம் எப்படி கிடைக்கிறது?"
+          },
+          "proofStart": {
+            "en": "Tₖ is the kth triangular number, the sum from 1 to k. T₀ is zero because there are no terms to add.",
+            "ta": "Tₖ என்பது k-ஆவது முக்கோண எண். இது 1 முதல் k வரையிலான எண்களின் கூடுதல். கூட்ட உறுப்புகள் எதுவும் இல்லாததால் T₀-இன் மதிப்பு 0."
+          },
+          "triangularMath": {
+            "latex": "T_k=\\frac{k(k+1)}{2},\\quad T_0=0",
+            "fallback": "Tₖ = [k × (k + 1)] ÷ 2, T₀ = 0"
+          },
+          "proofFactors": {
+            "en": "To get the kth triangle from the previous one, add a row of k cells. The two triangular numbers differ by k. Add the formulas at k and k − 1 to find their sum.",
+            "ta": "முந்தைய முக்கோணத்துடன் k கட்டங்கள் கொண்ட ஒரு வரிசையைச் சேர்த்தால் k-ஆவது முக்கோணம் கிடைக்கும். இந்த இரு முக்கோண எண்களின் வேறுபாடு k. அவற்றின் கூடுதலைக் காண, சூத்திரத்தில் k மற்றும் k − 1 ஆகியவற்றைப் பதிலிட்டுக் கூட்டுங்கள்."
+          },
+          "factorsMath": {
+            "latex": "\\begin{aligned}T_k-T_{k-1}&=k\\\\T_k+T_{k-1}&=\\frac{k(k+1)+(k-1)k}{2}\\\\&=\\frac{k\\times2k}{2}=k^2\\end{aligned}",
+            "fallback": "Tₖ − Tₖ₋₁ = k. Tₖ + Tₖ₋₁ = [k × (k + 1) + (k − 1) × k] ÷ 2 = (k × 2k) ÷ 2 = k²."
+          },
+          "proofIdentity": {
+            "en": "A difference of squares is the difference times the sum. Here the two factors are k and k².",
+            "ta": "இரு வர்க்கங்களின் வேறுபாடு என்பது அந்த எண்களின் வேறுபாட்டையும் கூடுதலையும் பெருக்குவதால் கிடைப்பது. இங்கு அந்த இரு காரணிகள் k மற்றும் k²."
+          },
+          "identityMath": {
+            "latex": "\\begin{aligned}&T_k^2-T_{k-1}^2\\\\&=(T_k-T_{k-1})(T_k+T_{k-1})\\\\&=k\\times k^2=k^3\\end{aligned}",
+            "fallback": "Tₖ² − Tₖ₋₁² = (Tₖ − Tₖ₋₁) × (Tₖ + Tₖ₋₁) = k × k² = k³"
+          },
+          "proofCancel": {
+            "en": "Add these differences from k = 1 to n. Each middle square is added once and subtracted once, so it cancels. This is what happens for the first three cubes.",
+            "ta": "k = 1 முதல் n வரை இந்த வேறுபாடுகளைக் கூட்டுங்கள். இடையிலுள்ள ஒவ்வொரு வர்க்கமும் ஒருமுறை கூட்டப்பட்டு ஒருமுறை கழிக்கப்படுவதால் நீங்கிவிடுகிறது. முதல் மூன்று கனங்களைக் கூட்டும்போது இது எப்படி நடக்கிறது எனப் பாருங்கள்."
+          },
+          "cancelMath": {
+            "latex": "\\begin{aligned}&(T_1^2-T_0^2)+(T_2^2-T_1^2)\\\\&\\qquad+(T_3^2-T_2^2)=T_3^2-T_0^2\\end{aligned}",
+            "fallback": "(T₁² − T₀²) + (T₂² − T₁²) + (T₃² − T₂²) = T₃² − T₀²"
+          },
+          "proofEnd": {
+            "en": "For n cubes, only Tₙ² − T₀² is left. Since T₀ = 0, the sum is Tₙ².",
+            "ta": "n கனங்களைக் கூட்டும்போது Tₙ² − T₀² மட்டும் மிஞ்சும். T₀ = 0 என்பதால் கூடுதல் Tₙ²."
+          }
+        },
+        "range": {
+          "title": {
+            "en": "When a sum starts after 1",
+            "ta": "தொடர் 1-க்குப் பிறகு தொடங்கும்போது"
+          },
+          "intro": {
+            "en": "Find the sum from 1 through the last number. Subtract the extra terms through the number just before the start. For squares from 5 to 10, use the squares rule up to 10 and again up to 4.",
+            "ta": "முதலில் 1 முதல் கடைசி எண் வரை கூடுதலைக் காணுங்கள். பிறகு தொடக்க எண்ணுக்கு முந்தைய எண் வரையிலான கூடுதலைக் கழியுங்கள். 5 முதல் 10 வரையிலான வர்க்கங்களின் கூடுதலைக் காண, வர்க்கச் சூத்திரத்தை ஒருமுறை 10 வரையிலும் மறுமுறை 4 வரையிலும் பயன்படுத்துங்கள்."
+          },
+          "math": {
+            "latex": "\\begin{aligned}&5^2+6^2+\\cdots+10^2=S_{10}-S_4\\\\&=\\frac{10\\times11\\times21}{6}-\\frac{4\\times5\\times9}{6}\\\\&=385-30=355\\end{aligned}",
+            "fallback": "5² + 6² + ⋯ + 10² = S₁₀ − S₄ = (10 × 11 × 21) ÷ 6 − (4 × 5 × 9) ÷ 6 = 385 − 30 = 355"
+          }
+        }
       },
       "question": {
-        "en": "Find 1² + 2² + 3² + 4².",
-        "ta": "1² + 2² + 3² + 4² இன் மதிப்பைக் காண்க."
+        "en": "Find the sum of the first nine squares.",
+        "ta": "முதல் ஒன்பது இயல் எண்களின் வர்க்கங்களின் கூடுதலைக் காண்க."
+      },
+      "questionMath": {
+        "latex": "1^2+2^2+\\cdots+9^2=?",
+        "fallback": "1² + 2² + ⋯ + 9² = ?"
       },
       "choices": [
         {
-          "en": "10",
-          "ta": "10"
+          "en": "45",
+          "ta": "45"
         },
         {
-          "en": "100",
-          "ta": "100"
+          "en": "2025",
+          "ta": "2025"
         },
         {
-          "en": "30",
-          "ta": "30"
+          "en": "285",
+          "ta": "285"
         }
       ],
       "correct": 2,
+      "explainAfterAttempt": true,
+      "incorrectFeedback": [
+        {
+          "en": "That adds the natural numbers. Square each number first, then add.",
+          "ta": "அது இயல் எண்களின் கூடுதல். முதலில் ஒவ்வோர் எண்ணையும் வர்க்கப்படுத்திப் பிறகு கூட்டுங்கள்."
+        },
+        {
+          "en": "Squaring the natural-number sum gives the sum of cubes. Use the squares rule here.",
+          "ta": "இயல் எண்களின் கூடுதலை வர்க்கப்படுத்தினால் கனங்களின் கூடுதல் கிடைக்கும். இங்கு வர்க்கங்களுக்கான சூத்திரத்தைப் பயன்படுத்துங்கள்."
+        }
+      ],
       "hint": {
-        "en": "Square each number first: 1², 2², 3², 4². Then add.",
-        "ta": "முதலில் ஒவ்வொரு எண்ணையும் வர்க்கப்படுத்துங்கள்: 1², 2², 3², 4². பிறகு கூட்டவும்."
+        "en": "Use the squares rule with nine terms. Find the values in the two brackets before multiplying.",
+        "ta": "ஒன்பது உறுப்புகளுக்கு வர்க்கச் சூத்திரத்தைப் பயன்படுத்துங்கள். பெருக்குவதற்கு முன் இரு அடைப்புக்குறிகளுக்குள் உள்ள மதிப்புகளைக் காணுங்கள்."
       },
       "why": {
-        "en": "1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30. Using the squares rule: 4 × 5 × 9 ÷ 6 = 30. The cubes rule is different.",
-        "ta": "1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30. வர்க்கங்களின் விதிப்படி 4 × 5 × 9 ÷ 6 = 30. கனங்களின் விதி வேறு."
+        "en": "There are nine terms, so use 9 for n. The bracketed factors become 10 and 19.",
+        "ta": "ஒன்பது உறுப்புகள் உள்ளதால் n-க்குப் பதிலாக 9-ஐ இடுங்கள். அடைப்புக்குறிகளுக்குள் உள்ள காரணிகளின் மதிப்புகள் 10 மற்றும் 19."
+      },
+      "whyMath": {
+        "latex": "\\begin{aligned}S_9&=\\frac{9(9+1)(2\\times9+1)}{6}\\\\&=\\frac{9\\times10\\times19}{6}=285\\end{aligned}",
+        "fallback": "S₉ = [9 × (9 + 1) × (2 × 9 + 1)] ÷ 6 = (9 × 10 × 19) ÷ 6 = 285"
       },
       "visual": {
         "kind": "sequence",

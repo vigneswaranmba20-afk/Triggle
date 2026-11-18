@@ -2,11 +2,155 @@
 /* Student-facing tests of Grade 10 Chapter 2, mobile first, both mediums.
    No exercise screenshots used as a proxy for actual child comprehension. */
 const assert=require('node:assert/strict'),{chromium}=require('playwright'),{server,launchOptions}=require('./dashboard_test_support.cjs');
+
+const texSource=locator=>locator.locator('annotation[encoding="application/x-tex"]').textContent();
+async function assertSpecialMathFits(page,width,language){
+ await page.evaluate(async()=>{await document.fonts.ready;});
+ const layout=await page.locator('.sp2-panel').evaluate(panel=>({
+  pageWidth:document.documentElement.scrollWidth,
+  forms:[...panel.querySelectorAll('.triggle-tex-display')].filter(el=>el.getClientRects().length).map(el=>{
+   const box=el.getBoundingClientRect();
+   const clipped=[...el.querySelectorAll('.katex-html .base')].some(base=>{
+    const glyphs=base.getBoundingClientRect();
+    return glyphs.width&&(glyphs.left<box.left-1||glyphs.right>box.right+1||
+     glyphs.top<box.top-1||glyphs.bottom>box.bottom+1);
+   });
+   return {clipped,overflow:el.scrollWidth>el.clientWidth+1,tex:el.querySelector('annotation')?.textContent};
+  })
+ }));
+ assert(layout.pageWidth<=width+1,'Special Series stays inside '+width+'px ('+language+')');
+ assert(layout.forms.length>5,'Real display equations are visible');
+ assert.deepEqual(layout.forms.filter(form=>form.clipped||form.overflow),[],'No formula clipping at '+width+'px ('+language+')');
+}
+
+async function verifySpecialSeries(page,language,width){
+ const ta=language==='ta',lesson=page.locator('.g10ch2-special');
+ const demo=lesson.locator('.g10ch2-discovery');
+ const modes=demo.getByRole('button');
+ const slider=demo.getByRole('slider',{name:ta?'எத்தனை உறுப்புகள்?':'How many terms?'});
+ const formula=demo.locator('.g10ch2-discovery-math');
+ const answers=page.locator('.sp2-answers button');
+ const response=page.locator('[data-why-response]'),why=page.locator('[data-why]'),feedback=page.locator('[data-feedback]');
+ assert.deepEqual(await modes.allTextContents(),ta?['இயல் எண்கள்','வர்க்கங்கள்','கனங்கள்']:['Natural numbers','Squares','Cubes']);
+ assert.equal(await modes.nth(1).getAttribute('aria-pressed'),'true','Squares demonstration starts selected');
+ assert.equal(await slider.inputValue(),'4');
+ assert((await texSource(formula)).includes('\\frac{4(4+1)(2\\times4+1)}{6}'),'Display 2 × 4, never the concatenated 24');
+ assert(await why.isDisabled(),'Worked feedback requires an attempt');
+ assert.equal(await response.textContent(),'','Worked answer is absent before an attempt');
+ assert.equal(await texSource(page.locator('.sp2-recall')),'1^2+2^2+\\cdots+9^2=?');
+ assert.deepEqual(await answers.allTextContents(),['45','2025','285']);
+ for(const answer of await answers.all())assert.equal(await answer.getAttribute('aria-pressed'),'false');
+ await page.locator('[data-hint]').click();
+ assert.doesNotMatch(await feedback.innerText(),/\b285\b/);
+ assert(await why.isDisabled(),'Opening a hint does not count as an attempt');
+
+ const totals=[[1,3,6,10,15,21,28,36],[1,5,14,30,55,91,140,204],[1,9,36,100,225,441,784,1296]];
+ const oddFactors=[3,5,7,9,11,13,15,17];
+ const fraction=(numerator,denominator)=>'\\frac{'+numerator+'}{'+denominator+'}';
+ for(const power of [1,2,3]){
+  await modes.nth(power-1).click();
+  assert.equal(await modes.nth(power-1).getAttribute('aria-pressed'),'true');
+  await slider.press('End');
+  assert.equal(await slider.inputValue(),'8','Keyboard can select the largest term count');
+  await slider.press('Home');
+  assert.equal(await slider.inputValue(),'1','Keyboard can select the boundary case');
+  for(let n=1;n<=8;n++){
+   await slider.fill(String(n));
+   const terms=demo.locator('.g10ch2-discovery-chip');
+   const direct=Array.from({length:n},(_,i)=>(i+1)**power).reduce((sum,k)=>sum+k,0);
+   assert.equal(direct,totals[power-1][n-1]);
+   assert.equal(await terms.count(),n,'One chip per term');
+   assert.deepEqual(await terms.evaluateAll(chips=>chips.map(chip=>chip.querySelector('annotation')?.textContent||chip.textContent)),
+    Array.from({length:n},(_,i)=>String(i+1)+(power===1?'':'^'+power)));
+   const [substituted,simplified]=[
+    [fraction(n+'\\times('+n+'+1)',2),fraction(n+'\\times'+(n+1),2)],
+    [fraction(n+'('+n+'+1)(2\\times'+n+'+1)',6),fraction(n+'\\times'+(n+1)+'\\times'+oddFactors[n-1],6)],
+    ['\\left('+fraction(n+'\\times('+n+'+1)',2)+'\\right)^2',totals[0][n-1]+'^2']
+   ][power-1];
+   assert.equal(await texSource(formula),
+    '\\begin{aligned}S_{'+n+'}&='+substituted+'\\\\&='+simplified+'\\\\&='+direct+'\\end{aligned}',
+    'Check both numerical expressions and their total for power '+power+' at n='+n);
+   assert.match(await demo.getByRole('status').textContent(),new RegExp(' '+direct+'$'));
+  }
+  await assertSpecialMathFits(page,width,language);
+ }
+ assert.doesNotMatch(await lesson.innerText(),/\b285\b/,'No slider state supplies the independent answer');
+ assert(await why.isDisabled());
+ assert.equal(await response.textContent(),'','Moving demonstration controls cannot populate the answer');
+
+ const diagram=lesson.getByRole('img',{name:ta?/முக்கோணத்தின் மூன்று/:/Three rotations/});
+ assert(await diagram.isVisible());
+ assert.equal(await diagram.locator('rect').count(),24,'Six cells in each of four groups');
+ const labels=await diagram.locator('[data-triangle]').evaluateAll(groups=>groups.map(group=>
+  [...group.querySelectorAll('[data-triangle-row]')].map(row=>[...row.querySelectorAll('text')].map(text=>text.textContent))));
+ assert.deepEqual(labels,[
+  [['1'],['2','2'],['3','3','3']],
+  [['3'],['3','2'],['3','2','1']],
+  [['3'],['2','3'],['1','2','3']],
+  [['7'],['7','7'],['7','7','7']]
+ ]);
+ assert.match(await diagram.locator('desc').textContent(),ta?/முதல் முக்கோணம்/:/First triangle/);
+ const proof=lesson.locator('.g10ch2-special-proof'),summary=proof.locator('summary');
+ const identities=proof.locator('.g10ch2-special-math');
+ assert(await identities.first().isHidden(),'Cube derivation is optional');
+ await summary.press('Enter');
+ assert(await identities.first().isVisible(),'Keyboard opens the cube derivation');
+ assert((await texSource(identities.nth(2))).includes('T_k^2-T_{k-1}^2'));
+ assert((await texSource(identities.last())).includes('T_3^2-T_0^2'));
+ assert((await texSource(lesson.locator('.g10ch2-special-section').last())).includes('385-30=355'));
+ await assertSpecialMathFits(page,width,language);
+ await summary.press('Enter');
+ assert(await identities.first().isHidden());
+
+ await answers.first().click();
+ assert.match(await feedback.innerText(),ta?/இயல் எண்களின் கூடுதல்/:/adds the natural numbers/);
+ assert(await response.isHidden(),'Wrong attempts get a hint before showing the full solution');
+ await answers.nth(1).click();
+ assert.match(await feedback.innerText(),ta?/கனங்களின் கூடுதல்/:/sum of cubes/);
+ await answers.nth(2).click();
+ assert.match(await feedback.innerText(),ta?/சரி!/:/Correct!/);
+ await why.click();
+ assert.equal(await why.getAttribute('aria-expanded'),'true');
+ assert((await texSource(response)).includes('\\frac{9\\times10\\times19}{6}=285'));
+ await assertSpecialMathFits(page,width,language);
+ assert.equal(await page.locator('[data-math-error]').count(),0);
+
+ await page.locator('.g10ch2-practice-link').click();
+ assert.equal(new URL(page.url()).searchParams.get('question'),'c10-2-ex2-9-q1-v','Pairs with textbook Exercise 2.9 Q1(v)');
+ await page.locator('#stepsList .worked-step').first().waitFor({state:'visible'});
+ assert.match(await page.locator('#answerText').innerText(),/3256/,'Original textbook exercise solution is available');
+}
+
+async function verifySpecialOffline(browser,base){
+ const context=await browser.newContext({viewport:{width:320,height:852},isMobile:true,hasTouch:true});
+ try{
+  const page=await context.newPage();
+  const oldCache='triggle-g9-math-first-student-lab-hcf-gp-20261118-g9-lesson-read-g9ex32';
+  await page.goto(base+'/grades.html');
+  await page.evaluate(async cacheName=>{
+   const cache=await caches.open(cacheName);
+   await cache.put('./assets/g10-ch2-discovery-labs.js',new Response('Old lesson asset'));
+  },oldCache);
+  await page.goto(base+'/index.html?class=10&chapter=g10-ch2&section=concepts&concept=14');
+  await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
+  assert(!await page.evaluate(cacheName=>caches.has(cacheName),oldCache),'Activation clears the previous offline cache');
+  await context.setOffline(true);
+  await page.reload({waitUntil:'domcontentloaded'});
+  const demo=page.locator('.g10ch2-special .g10ch2-discovery');
+  await demo.waitFor({state:'visible'});
+  assert((await texSource(demo.locator('.g10ch2-discovery-math'))).includes('2\\times4+1'));
+  await page.locator('#langTa').click();
+  await demo.getByRole('button',{name:'கனங்கள்'}).click();
+  assert.match(await demo.getByRole('status').textContent(),/100$/);
+  assert.equal(await page.locator('[data-math-error]').count(),0,'KaTeX and Tamil lesson run from offline assets');
+ }finally{await context.close();}
+}
+
 async function main(){
  const app=await server(),browser=await chromium.launch(launchOptions());
  try{
   for(const width of [320,360,393,430]){
-   const context=await browser.newContext({viewport:{width,height:852},serviceWorkers:'block',reducedMotion:'reduce'});
+   const context=await browser.newContext({viewport:{width,height:852},deviceScaleFactor:1,isMobile:true,hasTouch:true,serviceWorkers:'block',reducedMotion:'reduce'});
    const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
    const url=app.base+'/index.html?class=10&chapter=g10-ch2&section=concepts';
    for(const language of ['en','ta']){
@@ -143,18 +287,16 @@ async function main(){
     assert.equal(await page.locator('[data-math-error]').count(),0);
     await page.locator('[data-back-index]').click();
     await page.locator('.sp2-nav-button').nth(14).click();
-    const seriesOptions=page.locator('.g10ch2-discovery-choices button');
-    assert.equal(await seriesOptions.nth(1).getAttribute('aria-pressed'),'true','Start on squares to match quiz');
-    assert((await page.locator('.g10ch2-discovery-note').innerText()).includes('30'),'Four squares total 30');
-    await seriesOptions.nth(2).click();
-    assert((await page.locator('.g10ch2-discovery-note').innerText()).includes('100'),'Four cubes total 100');
-    assert.equal(await page.locator('[data-math-error]').count(),0,'Special series notation valid');
-    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No horizontal page overflow');
+    assert.equal(new URL(page.url()).searchParams.get('concept'),'14','Concept 15 retains its direct URL');
+    await verifySpecialSeries(page,language,width);
    }
    assert.deepEqual(errors,[],'No uncaught JavaScript exceptions at '+width);
    await context.close();
-   console.log('PASS G10 Ch2 foundations, interactive HCF, arithmetic, exercise links EN/TA at '+width);
+   console.log('PASS G10 Ch2 foundations and all Special Series modes EN/TA at '+width+'px');
   }
+  await verifySpecialOffline(browser,app.base);
+  console.log('PASS Special Series offline cache migration, reload and bilingual interaction');
  }finally{await browser.close();await app.close()}
 }
-main().catch(e=>{console.error(e);process.exitCode=1;});
+if(require.main===module)main().catch(e=>{console.error(e);process.exitCode=1;});
+module.exports={verifySpecialSeries};

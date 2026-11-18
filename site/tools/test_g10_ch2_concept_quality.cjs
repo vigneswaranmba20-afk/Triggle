@@ -11,9 +11,15 @@ assert.equal(stages.length,15,'Keep all fifteen concepts and order');
 const find=name=>{const stage=stages.find(s=>s.id==='g10-ch2-'+name);assert(stage,name);return stage;};
 const choicesBefore=stages.map(s=>[s.id,s.practiceId,s.choices[s.correct].en]);
 assert.equal(new Set(choicesBefore.map(x=>x[0])).size,15);
-assert.equal(stages.filter(s=>!!s.practiceId).length,4,'Retain the four originally supplied exercise links; do not invent links');
+const exerciseLinks=Object.fromEntries(stages.filter(s=>s.practiceId).map(s=>[s.id,s.practiceId]));
+assert.deepEqual(exerciseLinks,{
+ 'g10-ch2-division':'c10-2-ex2-1-q1',
+ 'g10-ch2-gcd':'c10-2-ex2-1-q6',
+ 'g10-ch2-bezout':'c10-2-ex2-1-q8',
+ 'g10-ch2-primes':'c10-2-ex2-2-q6',
+ 'g10-ch2-special':'c10-2-ex2-9-q1-v'
+},'Retain the four prior exercise links and link shifted squares to the source-checked question');
 for(const stage of stages){
- if(stage.practiceId)assert(/^c10-2-ex2-[12]-q[0-9]+$/.test(stage.practiceId),'Related exercise links keep canonical Chapter 2 IDs');
  assert(stage.math.latex&&stage.math.fallback,'Structured mathematics + accessible fallback');
  for(const lang of ['en','ta'])for(const field of ['idea','example','rule','question','why','hint'])
   assert(stage[field]?.[lang]?.trim(),'Bilingual pedagogical field '+stage.id+' '+field+'.'+lang);
@@ -35,13 +41,14 @@ assert(gp.why.en.includes('S = 40'),'Quiz transfer separately derives ratio 3');
 assert.match(find('gp-infinite').idea.en,/−1 < r < 1/);
 assert(Math.abs(1/(1-(-.5))-2/3)<1e-12);
 const special=find('special');
-assert.match(special.math.latex,/k\^2/,'Displayed rule matches squares quiz');
-assert.match(special.question.en,/1²/);
-assert.equal(special.choices[special.correct].en,'30');
-assert.equal([1,2,3,4].reduce((sum,n)=>sum+n*n,0),30);
+assert.match(special.math.latex,/1\+2\+\\cdots\+n/,'The lesson starts with the known A.P. sum');
+assert.match(special.lesson.squares.math.latex,/n\(n\+1\)\(2n\+1\)/,'The diagram leads to the squares rule');
+assert.match(special.questionMath.latex,/9\^2/,'The quiz reaches beyond the demonstration slider');
+assert.match(special.whyMath.latex,/2\\times9\+1/,'Quiz feedback substitutes with explicit multiplication');
 vm.runInNewContext(read('assets/g10-ch2-discovery-labs.js'),ctx,{timeout:5000});
 const lab=ctx.window.TriggleG10ConceptLabs;
-assert.equal(lab.specialSum(2,4),30,'The selected squares lab model equals the quiz');
+assert.equal(lab.specialSum(2,4),30,'The default example demonstrates four squares');
+assert.equal(lab.specialSum(2,9),285,'The quiz uses nine squares');
 assert.equal(lab.specialSum(3,4),100,'Cubes have their own formula');
 assert(Math.abs(lab.geometricPartial(1,-.5,6)-.65625)<1e-12,'Alternating partial sum');
 const js=read('assets/g10-ch2-discovery-labs.js');
@@ -86,6 +93,6 @@ const studentLabHtml=read('index.html');
 const studentLabSW=read('service-worker.js');
 assert(studentLabHtml.includes('assets/g10-ch2-foundations.css'),'HCF/GP mobile styling remains loaded');
 assert(studentLabHtml.includes('assets/chapter-hub.js'),'Concept behavior remains loaded');
-assert(studentLabSW.includes("const CACHE='triggle-g9-math-first-student-lab-hcf-gp-20261118-g9-lesson-read-g9ex32'"),'Offline cache invalidates old lesson assets');
+assert.match(studentLabSW,/^const CACHE='triggle-[^']+-special-series-/,'Offline cache invalidates old lesson assets');
 
 console.log('PASS G10 Ch2 quality: 15 bilingual concepts, 7 targeted teaching repairs and functional cycle/sequence visuals, formulas and lab models');

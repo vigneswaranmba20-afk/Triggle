@@ -26,3 +26,25 @@
 .g10ch2-discovery-controls button:focus-visible,.g10ch2-discovery-choices button:focus-visible,.g10ch2-discovery-range-row input:focus-visible{outline:3px solid #8F6ED0;outline-offset:2px}
 @media(max-width:360px){.g10ch2-discovery{padding:10px 8px}.g10ch2-discovery-chip{font-size:12px;padding:6px 7px}.g10ch2-discovery-controls button{padding:8px}}
 @media(prefers-reduced-motion:reduce){.g10ch2-discovery-filled{transition:none}}
+
+.g10ch2-special-section{margin:16px 0;min-width:0}
+.g10ch2-special-section + .g10ch2-special-section{padding-top:14px;border-top:1px solid #D9DEE7}
+.g10ch2-special-section .g10ch2-discovery-title{margin-bottom:8px}
+.g10ch2-special-section p,.g10ch2-special-diagram figcaption{margin:8px 0;color:#374357;font-size:14px;line-height:1.65}
+.g10ch2-special-math{min-width:0;color:#253043}
+.g10ch2-special-math .triggle-tex-display{margin:.15em 0}
+.g10ch2-special .g10ch2-discovery-chip .triggle-tex{padding:0}
+.g10ch2-special .g10ch2-discovery-math .triggle-tex-display{margin:0}
+.g10ch2-special .g10ch2-special-status{
+  position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap
+}
+.g10ch2-special-diagram{margin:10px 0;text-align:center}
+.g10ch2-special-diagram svg{display:block;width:100%;max-width:350px;margin:0 auto}
+.g10ch2-special-diagram rect{fill:#F1F4F7;stroke:#C9D1DD}
+.g10ch2-special-diagram [data-triangle="3"] rect{fill:#E9F2EC;stroke:#A9C5B6}
+.g10ch2-special-diagram text{
+  fill:#253043;font:700 13px system-ui,sans-serif;text-anchor:middle;dominant-baseline:central
+}
+.g10ch2-special-proof{margin-top:8px;padding:0 8px;border:1px solid #D9DEE7;border-radius:10px;background:#FCFCFD}
+.g10ch2-special-proof summary{min-height:44px;padding:10px 2px;box-sizing:border-box;color:#253043;font-weight:700;cursor:pointer}
+.g10ch2-special-proof summary:focus-visible{outline:3px solid #8F6ED0;outline-offset:2px}
