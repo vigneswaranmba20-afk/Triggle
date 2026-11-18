@@ -664,7 +664,7 @@ const entries=[
         }
       },
       {
-        "en": "Read the signed number that multiplies x².",
+        "en": "Read the signed number that multiplies x². The coefficient of x² is 2/5.",
         "eq": "(2/5)x² ⇒ 2/5",
         "math": {
           "latex": "\\frac{2}{5}x^2\\;\\Rightarrow\\;\\frac{2}{5}",
@@ -678,12 +678,22 @@ const entries=[
               "latex": "x^2",
               "fallback": "x²"
             },
+            ". The coefficient of ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " is ",
+            {
+              "latex": "\\frac{2}{5}",
+              "fallback": "2/5"
+            },
             "."
           ]
         }
       },
       {
-        "en": "Read the signed number multiplying x. The constant 4 stands on its own.",
+        "en": "Read the signed number multiplying x. The coefficient of x is −3. The constant 4 stands on its own.",
         "eq": "−3x ⇒ −3",
         "math": {
           "latex": "-3x\\;\\Rightarrow\\;-3",
@@ -697,7 +707,22 @@ const entries=[
               "latex": "x",
               "fallback": "x"
             },
-            ". The constant 4 stands on its own."
+            ". The coefficient of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is ",
+            {
+              "latex": "-3",
+              "fallback": "−3"
+            },
+            ". The constant ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " stands on its own."
           ]
         }
       }
@@ -800,7 +825,7 @@ const entries=[
         }
       },
       {
-        "en": "Read the signed number that multiplies x².",
+        "en": "Read the signed number that multiplies x². The coefficient of x² is −2.",
         "eq": "−2x² ⇒ −2",
         "math": {
           "latex": "-2x^2\\;\\Rightarrow\\;-2",
@@ -814,12 +839,22 @@ const entries=[
               "latex": "x^2",
               "fallback": "x²"
             },
+            ". The coefficient of ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " is ",
+            {
+              "latex": "-2",
+              "fallback": "−2"
+            },
             "."
           ]
         }
       },
       {
-        "en": "Read the signed number multiplying x. Keep the minus sign in front of the square root.",
+        "en": "Read the signed number multiplying x. The coefficient of x is −√7. Keep the minus sign in front of the square root.",
         "eq": "−√7 x ⇒ −√7",
         "math": {
           "latex": "-\\sqrt{7}\\,x\\;\\Rightarrow\\;-\\sqrt{7}",
@@ -832,6 +867,16 @@ const entries=[
             {
               "latex": "x",
               "fallback": "x"
+            },
+            ". The coefficient of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is ",
+            {
+              "latex": "-\\sqrt{7}",
+              "fallback": "−√7"
             },
             ". Keep the minus sign in front of the square root."
           ]
@@ -931,7 +976,7 @@ const entries=[
         }
       },
       {
-        "en": "Read the signed number that multiplies x².",
+        "en": "Read the signed number that multiplies x². The coefficient of x² is π.",
         "eq": "πx² ⇒ π",
         "math": {
           "latex": "\\pi x^2\\;\\Rightarrow\\;\\pi",
@@ -945,12 +990,22 @@ const entries=[
               "latex": "x^2",
               "fallback": "x²"
             },
+            ". The coefficient of ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " is ",
+            {
+              "latex": "\\pi",
+              "fallback": "π"
+            },
             "."
           ]
         }
       },
       {
-        "en": "Write −x as negative one times x, then read the coefficient.",
+        "en": "Write −x as negative one times x. The coefficient of x is −1.",
         "eq": "−x = −1·x ⇒ −1",
         "math": {
           "latex": "-x=-1\\cdot x\\;\\Rightarrow\\;-1",
@@ -969,7 +1024,17 @@ const entries=[
               "latex": "x",
               "fallback": "x"
             },
-            ", then read the coefficient."
+            ". The coefficient of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is ",
+            {
+              "latex": "-1",
+              "fallback": "−1"
+            },
+            "."
           ]
         }
       }
@@ -1067,7 +1132,7 @@ const entries=[
         }
       },
       {
-        "en": "Read the signed number that multiplies x².",
+        "en": "Read the signed number that multiplies x². The coefficient of x² is √3.",
         "eq": "√3 x² ⇒ √3",
         "math": {
           "latex": "\\sqrt{3}\\,x^2\\;\\Rightarrow\\;\\sqrt{3}",
@@ -1081,12 +1146,22 @@ const entries=[
               "latex": "x^2",
               "fallback": "x²"
             },
+            ". The coefficient of ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " is ",
+            {
+              "latex": "\\sqrt{3}",
+              "fallback": "√3"
+            },
             "."
           ]
         }
       },
       {
-        "en": "Read the number multiplying x. The constant 0.5 stands on its own.",
+        "en": "Read the number multiplying x. The coefficient of x is √2. The constant 0.5 stands on its own.",
         "eq": "√2 x ⇒ √2",
         "math": {
           "latex": "\\sqrt{2}\\,x\\;\\Rightarrow\\;\\sqrt{2}",
@@ -1100,7 +1175,22 @@ const entries=[
               "latex": "x",
               "fallback": "x"
             },
-            ". The constant 0.5 stands on its own."
+            ". The coefficient of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is ",
+            {
+              "latex": "\\sqrt{2}",
+              "fallback": "√2"
+            },
+            ". The constant ",
+            {
+              "latex": "0.5",
+              "fallback": "0.5"
+            },
+            " stands on its own."
           ]
         }
       }
@@ -1203,7 +1293,7 @@ const entries=[
         }
       },
       {
-        "en": "Read the signed number that multiplies x².",
+        "en": "Read the signed number that multiplies x². The coefficient of x² is 1. The number 1 is understood even when it is not written.",
         "eq": "x² = 1·x² ⇒ 1",
         "math": {
           "latex": "x^2=1\\cdot x^2\\;\\Rightarrow\\;1",
@@ -1217,12 +1307,28 @@ const entries=[
               "latex": "x^2",
               "fallback": "x²"
             },
-            "."
+            ". The coefficient of ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " is ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            ".",
+            " The number ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " is understood even when it is not written."
           ]
         }
       },
       {
-        "en": "Read the signed number multiplying x. Keep the minus sign with the fraction.",
+        "en": "Read the signed number multiplying x. The coefficient of x is −7/2. Keep the minus sign with the fraction.",
         "eq": "−(7/2)x ⇒ −7/2",
         "math": {
           "latex": "-\\frac{7}{2}x\\;\\Rightarrow\\;-\\frac{7}{2}",
@@ -1235,6 +1341,16 @@ const entries=[
             {
               "latex": "x",
               "fallback": "x"
+            },
+            ". The coefficient of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is ",
+            {
+              "latex": "-\\frac{7}{2}",
+              "fallback": "−7/2"
             },
             ". Keep the minus sign with the fraction."
           ]

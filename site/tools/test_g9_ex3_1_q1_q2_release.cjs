@@ -47,6 +47,9 @@ for(const [index,row] of source.rows.entries()){
   assert.equal(item.steps[n].math.fallback,item.steps[n].eq);
  }
  if(row.question===2){
+  assert.match(item.steps[1].en,/The coefficient of x² is /,'Explicit novice-facing conclusion for x²');
+  assert.match(item.steps[2].en,/The coefficient of x is /,'Explicit novice-facing conclusion for x');
+  assert(!item.q.ta,'Do not invent Tamil translations for source-pending English lessons');
   assert.match(item.steps[1].math.latex,/\\Rightarrow/);
   assert.match(item.steps[2].math.latex,/\\Rightarrow/);
   assert.match(item.answerMath.latex,/^\\boxed\{/);
