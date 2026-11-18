@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 3,
+  "exercise": "3.1",
+  "edition": "TN SCERT 2025 revised English and Tamil",
+  "textbook": "Class 10 Mathematics, Chapter 3 Algebra — System of Linear Equations in Three Variables",
+  "originalPdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+  "tamilPdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+  "sourcePages": {
+    "printed": [
+      92,
+      93
+    ],
+    "pdf": [
+      98,
+      99
+    ],
+    "tamilPrinted": [
+      94
+    ],
+    "tamilPdf": [
+      100
+    ],
+    "answerAppendixPrinted": [
+      337
+    ],
+    "answerAppendixPdf": [
+      343
+    ]
+  },
+  "pageImageSha256": {
+    "en-pdf-2.png": "0a6566f3fa3e55590e333bee2b09d81ce434336870980369e0736dca06e6a3cd",
+    "en-pdf-98.png": "8f649584d37eff11880bf93a0ac30a5fffafd0dee4121262b493271984ffa5e6",
+    "en-pdf-99.png": "3f6b95efa94fabfe5c59c4cad664d1d4027e402cd9a29b9bd61761c2433903b3",
+    "en-pdf-343.png": "2872f9f3fbc1da43bd4735fb0682b883c1505f20cb2c0c771660c53b1f2a2f1a",
+    "ta-pdf-2.png": "3a545a419ac4891197a837eb6f35fb28bf8125d0f3cae64bcda9b353d73218cc",
+    "ta-pdf-100.png": "16521f7220be4f7b8f5ff8cf001d2900080311806405926d5aa847ea60cd216c"
+  },
+  "reviewMethod": "Visually inspected rendered page images of printed pp. 92-93 (PDF pp. 98-99) and Answer Appendix printed p. 337 (PDF p. 343) from the 2025 English textbook, together with printed p. 94 (PDF p. 100) from the 2025 Tamil textbook, against the 3 existing Exercise 3.1 student records (Q1(i)-(iii)) and 6 independently solved missing parts (Q2(i)-(iii), Q3, Q4, Q5).",
+  "sourceLanguages": {
+    "english": "source-image checked",
+    "tamil": "source-image checked for question/part parity; Tamil student lesson editorial review pending"
+  },
+  "teacherReview": "not performed",
+  "chapterCompletion": false,
+  "numberedQuestions": 5,
+  "uniqueSubpartTasks": 9,
+  "existingStudentRecords": 3,
+  "newStudentRecords": 6,
+  "totalStudentRecords": 9,
+  "tasks": [
+    { "label": "Q1(i)", "id": "c10-3-ex3-1-q1-i", "sourcePdfPage": 98, "state": "existing student record" },
+    { "label": "Q1(ii)", "id": "c10-3-ex3-1-q1-ii", "sourcePdfPage": 98, "state": "existing student record" },
+    { "label": "Q1(iii)", "id": "c10-3-ex3-1-q1-iii", "sourcePdfPage": 98, "state": "existing student record" },
+    { "label": "Q2(i)", "id": "c10-3-ex3-1-q2-i", "sourcePdfPage": 99, "state": "new source-image-checked student record" },
+    { "label": "Q2(ii)", "id": "c10-3-ex3-1-q2-ii", "sourcePdfPage": 99, "state": "new source-image-checked student record" },
+    { "label": "Q2(iii)", "id": "c10-3-ex3-1-q2-iii", "sourcePdfPage": 99, "state": "new source-image-checked student record" },
+    { "label": "Q3", "id": "c10-3-ex3-1-q3", "sourcePdfPage": 99, "state": "new source-image-checked student record" },
+    { "label": "Q4", "id": "c10-3-ex3-1-q4", "sourcePdfPage": 99, "state": "new source-image-checked student record" },
+    { "label": "Q5", "id": "c10-3-ex3-1-q5", "sourcePdfPage": 99, "state": "new source-image-checked student record" }
+  ]
+}

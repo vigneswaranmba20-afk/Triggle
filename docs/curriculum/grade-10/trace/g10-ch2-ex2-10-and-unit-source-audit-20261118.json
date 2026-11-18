@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 2,
+  "exercises": [
+    "2.10",
+    "2.unit"
+  ],
+  "edition": "TN SCERT 2025 revised English and Tamil",
+  "textbook": "Class 10 Mathematics, Chapter 2 Numbers and Sequences",
+  "originalPdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+  "tamilPdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+  "sourcePages": {
+    "printed": [
+      82,
+      83
+    ],
+    "pdf": [
+      88,
+      89
+    ],
+    "tamilPrinted": [
+      82,
+      83,
+      84
+    ],
+    "tamilPdf": [
+      88,
+      89,
+      90
+    ],
+    "answerAppendixPrinted": [
+      337
+    ],
+    "answerAppendixPdf": [
+      343
+    ]
+  },
+  "pageImageSha256": {
+    "en-pdf-2.png": "0a6566f3fa3e55590e333bee2b09d81ce434336870980369e0736dca06e6a3cd",
+    "en-pdf-88.png": "0d7669901f0499b3c55fc8a27a2bd44e14ab40ace19674fbb1a02cafec6e3c39",
+    "en-pdf-89.png": "6a19efba4583b2ce9aba8e585a93f5b09a10303d987dc735702c94bbb2664643",
+    "en-pdf-343.png": "27a01e087be00ec90491ad1fec38bcce26e4afc7e369ddbd6e43b62b0dc45fbb",
+    "ta-pdf-2.png": "3a545a419ac4891197a837eb6f35fb28bf8125d0f3cae64bcda9b353d73218cc",
+    "ta-pdf-88.png": "3f5e1ccc1f70343e18c1b73130e698d01c2299616224afde5c6ea8ce165b5157",
+    "ta-pdf-89.png": "24e8f93280bbfa1437bfe0228f3e8888f368eb896fd8d2c4c683fe0c2878b573",
+    "ta-pdf-90.png": "31b22db135ed695ee116782b26f973b2b8cb1ffd70b471f76680074486d1ae7f"
+  },
+  "reviewMethod": "Visually inspected rendered page images of printed pp. 82-83 (PDF pp. 88-89) and Answer Appendix printed p. 337 (PDF p. 343) from the 2025 English textbook, together with printed pp. 82-84 (PDF pp. 88-90) from the 2025 Tamil textbook, against the 12 existing Exercise 2.10 student records and 15 independently solved missing parts (Exercise 2.10 Q6, Q13, Q15 and Unit Exercise 2 Q1, Q2(i)-(iii), Q3-Q10).",
+  "sourceLanguages": {
+    "english": "source-image checked",
+    "tamil": "source-image checked for question/part parity; Tamil student lesson editorial review pending"
+  },
+  "teacherReview": "not performed",
+  "chapterCompletion": false,
+  "exercise210": {
+    "numberedQuestions": 15,
+    "uniqueSubpartTasks": 15,
+    "existingStudentRecords": 12,
+    "newStudentRecords": 3,
+    "totalStudentRecords": 15
+  },
+  "unitExercise2": {
+    "numberedQuestions": 10,
+    "uniqueSubpartTasks": 12,
+    "existingStudentRecords": 0,
+    "newStudentRecords": 12,
+    "totalStudentRecords": 12
+  },
+  "tasks": [
+    { "exercise": "2.10", "label": "Q1", "id": "c10-2-ex2-10-q1", "sourcePdfPage": 88, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q2", "id": "c10-2-ex2-10-q2", "sourcePdfPage": 88, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q3", "id": "c10-2-ex2-10-q3", "sourcePdfPage": 88, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q4", "id": "c10-2-ex2-10-q4", "sourcePdfPage": 88, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q5", "id": "c10-2-ex2-10-q5", "sourcePdfPage": 88, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q6", "id": "c10-2-ex2-10-q6", "sourcePdfPage": 88, "state": "new source-image-checked student record" },
+    { "exercise": "2.10", "label": "Q7", "id": "c10-2-ex2-10-q7", "sourcePdfPage": 88, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q8", "id": "c10-2-ex2-10-q8", "sourcePdfPage": 89, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q9", "id": "c10-2-ex2-10-q9", "sourcePdfPage": 89, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q10", "id": "c10-2-ex2-10-q10", "sourcePdfPage": 89, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q11", "id": "c10-2-ex2-10-q11", "sourcePdfPage": 89, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q12", "id": "c10-2-ex2-10-q12", "sourcePdfPage": 89, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q13", "id": "c10-2-ex2-10-q13", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.10", "label": "Q14", "id": "c10-2-ex2-10-q14", "sourcePdfPage": 89, "state": "existing student record" },
+    { "exercise": "2.10", "label": "Q15", "id": "c10-2-ex2-10-q15", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q1", "id": "c10-2-unit-q1", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q2(i)", "id": "c10-2-unit-q2-i", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q2(ii)", "id": "c10-2-unit-q2-ii", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q2(iii)", "id": "c10-2-unit-q2-iii", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q3", "id": "c10-2-unit-q3", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q4", "id": "c10-2-unit-q4", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q5", "id": "c10-2-unit-q5", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q6", "id": "c10-2-unit-q6", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q7", "id": "c10-2-unit-q7", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q8", "id": "c10-2-unit-q8", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q9", "id": "c10-2-unit-q9", "sourcePdfPage": 89, "state": "new source-image-checked student record" },
+    { "exercise": "2.unit", "label": "Q10", "id": "c10-2-unit-q10", "sourcePdfPage": 89, "state": "new source-image-checked student record" }
+  ]
+}
