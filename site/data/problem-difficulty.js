@@ -4176,7 +4176,13 @@ const metadata={
     "c10-2-ex2-9-q1-vi": {"grade":10,"level":"medium","basis":"Subtract the sum of cubes 1^3..9^3 from the sum of cubes 1^3..20^3","review":"implementation-audit"},
     "c10-2-ex2-9-q1-vii": {"grade":10,"level":"easy","basis":"Find the number of odd terms up to 71 and apply n^2","review":"implementation-audit"},
     "c10-2-ex2-9-q7-i": {"grade":10,"level":"difficult","basis":"Expand the kth difference of cubes (2k)^3 - (2k - 1)^3 = 12k^2 - 6k + 1 and sum over k = 1..n","review":"implementation-audit"},
-    "c10-2-ex2-9-q7-ii": {"grade":10,"level":"medium","basis":"Evaluate the n-term special-series formula 4n^3 + 3n^2 at n = 8","review":"implementation-audit"}
+    "c10-2-ex2-9-q7-ii": {"grade":10,"level":"medium","basis":"Evaluate the n-term special-series formula 4n^3 + 3n^2 at n = 8","review":"implementation-audit"},
+    "c10-2-ex2-7-q1-v": {"grade":10,"level":"easy","basis":"Check consecutive ratios of an alternating-sign geometric sequence with r = -5","review":"implementation-audit"},
+    "c10-2-ex2-7-q1-vii": {"grade":10,"level":"easy","basis":"Check consecutive ratios of a decreasing geometric sequence with r = 1/4","review":"implementation-audit"},
+    "c10-2-ex2-7-q2-ii": {"grade":10,"level":"easy","basis":"Write first three G.P. terms when a = sqrt(2) and r = sqrt(2)","review":"implementation-audit"},
+    "c10-2-ex2-7-q9": {"grade":10,"level":"difficult","basis":"Use symmetric G.P. representation a/r, a, ar and solve quadratic for common ratio","review":"implementation-audit"},
+    "c10-2-ex2-7-q10": {"grade":10,"level":"medium","basis":"Model 5% annual salary increments over 5 years using compound G.P. factor 1.05^5","review":"implementation-audit"},
+    "c10-2-ex2-7-q12": {"grade":10,"level":"difficult","basis":"Combine A.P. exponent differences with G.P. middle-term property y^2 = xz","review":"implementation-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
