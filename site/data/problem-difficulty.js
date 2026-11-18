@@ -4182,7 +4182,26 @@ const metadata={
     "c10-2-ex2-7-q2-ii": {"grade":10,"level":"easy","basis":"Write first three G.P. terms when a = sqrt(2) and r = sqrt(2)","review":"implementation-audit"},
     "c10-2-ex2-7-q9": {"grade":10,"level":"difficult","basis":"Use symmetric G.P. representation a/r, a, ar and solve quadratic for common ratio","review":"implementation-audit"},
     "c10-2-ex2-7-q10": {"grade":10,"level":"medium","basis":"Model 5% annual salary increments over 5 years using compound G.P. factor 1.05^5","review":"implementation-audit"},
-    "c10-2-ex2-7-q12": {"grade":10,"level":"difficult","basis":"Combine A.P. exponent differences with G.P. middle-term property y^2 = xz","review":"implementation-audit"}
+    "c10-2-ex2-7-q12": {"grade":10,"level":"difficult","basis":"Combine A.P. exponent differences with G.P. middle-term property y^2 = xz","review":"implementation-audit"},
+    "g9-ch3-ex3.2-q1-i": {
+    "g9-ch3-ex3.2-q1-ii": {
+    "g9-ch3-ex3.2-q1-iii": {
+    "g9-ch3-ex3.2-q2": {
+    "g9-ch3-ex3.2-q3-i": {
+    "g9-ch3-ex3.2-q3-ii": {
+    "g9-ch3-ex3.2-q3-iii": {
+    "g9-ch3-ex3.2-q3-iv": {
+    "g9-ch3-ex3.2-q3-v": {
+    "g9-ch3-ex3.2-q3-vi": {
+    "g9-ch3-ex3.2-q5-i": {
+    "g9-ch3-ex3.2-q5-ii": {
+    "g9-ch3-ex3.2-q5-iii": {
+    "g9-ch3-ex3.2-q5-iv": {
+    "g9-ch3-ex3.2-q6-i": {
+    "g9-ch3-ex3.2-q6-ii": {
+    "g9-ch3-ex3.2-q6-iii": {
+    "g9-ch3-ex3.2-q6-iv": {
+    "g9-ch3-ex3.2-q6-v": {
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
