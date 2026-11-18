@@ -34568,6 +34568,16 @@ const records=[
               "latex": "x^2",
               "fallback": "x²"
             },
+            ". The coefficient of ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " is ",
+            {
+              "latex": "\\frac{2}{5}",
+              "fallback": "2/5"
+            },
             "."
           ]
         }
@@ -34585,7 +34595,22 @@ const records=[
               "latex": "x",
               "fallback": "x"
             },
-            ". The constant 4 stands on its own."
+            ". The coefficient of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is ",
+            {
+              "latex": "-3",
+              "fallback": "−3"
+            },
+            ". The constant ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " stands on its own."
           ]
         }
       }
@@ -34659,6 +34684,16 @@ const records=[
               "latex": "x^2",
               "fallback": "x²"
             },
+            ". The coefficient of ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " is ",
+            {
+              "latex": "-2",
+              "fallback": "−2"
+            },
             "."
           ]
         }
@@ -34675,6 +34710,16 @@ const records=[
             {
               "latex": "x",
               "fallback": "x"
+            },
+            ". The coefficient of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is ",
+            {
+              "latex": "-\\sqrt{7}",
+              "fallback": "−√7"
             },
             ". Keep the minus sign in front of the square root."
           ]
@@ -34745,6 +34790,16 @@ const records=[
               "latex": "x^2",
               "fallback": "x²"
             },
+            ". The coefficient of ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " is ",
+            {
+              "latex": "\\pi",
+              "fallback": "π"
+            },
             "."
           ]
         }
@@ -34767,7 +34822,17 @@ const records=[
               "latex": "x",
               "fallback": "x"
             },
-            ", then read the coefficient."
+            ". The coefficient of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is ",
+            {
+              "latex": "-1",
+              "fallback": "−1"
+            },
+            "."
           ]
         }
       }
@@ -34836,6 +34901,16 @@ const records=[
               "latex": "x^2",
               "fallback": "x²"
             },
+            ". The coefficient of ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " is ",
+            {
+              "latex": "\\sqrt{3}",
+              "fallback": "√3"
+            },
             "."
           ]
         }
@@ -34853,7 +34928,22 @@ const records=[
               "latex": "x",
               "fallback": "x"
             },
-            ". The constant 0.5 stands on its own."
+            ". The coefficient of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is ",
+            {
+              "latex": "\\sqrt{2}",
+              "fallback": "√2"
+            },
+            ". The constant ",
+            {
+              "latex": "0.5",
+              "fallback": "0.5"
+            },
+            " stands on its own."
           ]
         }
       }
@@ -34927,7 +35017,23 @@ const records=[
               "latex": "x^2",
               "fallback": "x²"
             },
-            "."
+            ". The coefficient of ",
+            {
+              "latex": "x^2",
+              "fallback": "x²"
+            },
+            " is ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            ".",
+            " The number ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " is understood even when it is not written."
           ]
         }
       },
@@ -34943,6 +35049,16 @@ const records=[
             {
               "latex": "x",
               "fallback": "x"
+            },
+            ". The coefficient of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is ",
+            {
+              "latex": "-\\frac{7}{2}",
+              "fallback": "−7/2"
             },
             ". Keep the minus sign with the fraction."
           ]
