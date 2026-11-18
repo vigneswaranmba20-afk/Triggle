@@ -45,6 +45,11 @@ assert.match(special.math.latex,/1\+2\+\\cdots\+n/,'The lesson starts with the k
 assert.match(special.lesson.squares.math.latex,/n\(n\+1\)\(2n\+1\)/,'The diagram leads to the squares rule');
 assert.match(special.questionMath.latex,/9\^2/,'The quiz reaches beyond the demonstration slider');
 assert.match(special.whyMath.latex,/2\\times9\+1/,'Quiz feedback substitutes with explicit multiplication');
+assert.match(special.lesson.odd.math.latex,/n\^2/,'First odd numbers use the A.P. sum rule');
+for(let n=1;n<=20;n++){
+ const oddSum=Array.from({length:n},(_,i)=>2*i+1).reduce((sum,term)=>sum+term,0);
+ assert.equal(oddSum,n*n);
+}
 vm.runInNewContext(read('assets/g10-ch2-discovery-labs.js'),ctx,{timeout:5000});
 const lab=ctx.window.TriggleG10ConceptLabs;
 assert.equal(lab.specialSum(2,4),30,'The default example demonstrates four squares');

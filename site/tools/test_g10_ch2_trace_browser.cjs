@@ -139,6 +139,13 @@ async function verifySpecialSeries(page,language,width){
  assert(await why.isDisabled());
  assert.equal(await response.textContent(),'','Moving demonstration controls cannot populate the answer');
 
+ const odd=lesson.locator('.g10ch2-special-odd');
+ assert(await odd.locator('.katex').isHidden(),'Odd-number derivation is optional');
+ await odd.locator('summary').press('Enter');
+ assert.match(await texSource(odd),/S_4&=1\+3\+5\+7=16/);
+ await assertSpecialMathFits(page,width,language);
+ await odd.locator('summary').press('Enter');
+
  const diagram=lesson.getByRole('img',{name:ta?/முக்கோணத்தின் மூன்று/:/Three rotations/});
  assert(await diagram.isVisible());
  assert.equal(await diagram.locator('rect').count(),24,'Six cells in each of four groups');
@@ -229,6 +236,7 @@ async function main(){
     assert.equal(await page.locator('[data-g10ch2-visual] input[type=range]').count(),1);
     assert.equal(await page.locator('[data-math-error]').count(),0,'KaTeX does not silently fail');
     const group=page.locator('[data-g10ch2-visual] input[type=range]');
+    assert.equal(await group.inputValue(),'34','Division opens on the taught example');
     await group.fill('23');
     const message=await page.locator('.g10ch2-visual-feedback').innerText();
     assert(message.includes('23 = 5 × 4 + 3'),'Remainder manipulative validates actual division: '+message);
@@ -297,6 +305,9 @@ async function main(){
     const clock=page.locator('[data-g10ch2-visual] input[type=range]');
     assert.equal(await clock.inputValue(),'45','Clock starts at its 45-day example');
     assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('45 = 7 × 6 + 3'),'Clock makes the full-cycle division visible');
+    assert.equal(await page.locator('.g10ch2-chip.is-selected').innerText(),language==='ta'?'வெள்ளி':'Friday');
+    await clock.press('Home');
+    assert.equal(await page.locator('.g10ch2-chip.is-selected').innerText(),language==='ta'?'செவ்வாய்':'Tuesday');
     await page.locator('[data-back-index]').click();
     await page.locator('.sp2-nav-button').nth(5).click();
     const congruence=page.locator('[data-g10ch2-visual] input[type=range]');

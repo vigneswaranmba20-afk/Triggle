@@ -199,7 +199,7 @@
    return figure;
  }
  function special(host,t,stage,lang){
-   const {bridgeTitle,notation,powersMath,squares,cubes,range}=stage.lesson;
+   const {bridgeTitle,notation,powersMath,odd,squares,cubes,range}=stage.lesson;
    const pick=value=>value[lang==='ta'?'ta':'en'];
    const paragraph=value=>make('p','',pick(value));
    const equation=({latex,fallback})=>{
@@ -214,6 +214,8 @@
    };
    const demo=make('div');
    specialDemo(demo,t.special);
+   const oddSum=make('details','g10ch2-special-odd');
+   oddSum.append(make('summary','',pick(odd.title)),paragraph(odd.idea),equation(odd.math));
    const proof=make('details','g10ch2-special-proof');
    proof.append(make('summary','',pick(cubes.proofTitle)),
      paragraph(cubes.proofStart),equation(cubes.triangularMath),
@@ -225,6 +227,7 @@
      section(bridgeTitle,paragraph(stage.idea),equation(stage.math),paragraph(notation),
        paragraph(stage.example),equation(powersMath)),
      demo,
+     oddSum,
      section(squares.title,paragraph(squares.intro),squaresDiagram(squares,pick),
        equation(squares.exampleMath),paragraph(squares.general),equation(squares.math)),
      section(cubes.title,paragraph(cubes.intro),equation(cubes.math),proof),

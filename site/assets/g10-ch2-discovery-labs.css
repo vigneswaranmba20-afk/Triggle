@@ -46,6 +46,6 @@
 .g10ch2-special-diagram text{
   fill:#253043;font:700 13px system-ui,sans-serif;text-anchor:middle;dominant-baseline:central
 }
-.g10ch2-special-proof{margin-top:8px;padding:0 8px;border:1px solid #D9DEE7;border-radius:10px;background:#FCFCFD}
-.g10ch2-special-proof summary{min-height:44px;padding:10px 2px;box-sizing:border-box;color:#253043;font-weight:700;cursor:pointer}
-.g10ch2-special-proof summary:focus-visible{outline:3px solid #8F6ED0;outline-offset:2px}
+.g10ch2-special :is(.g10ch2-special-proof,.g10ch2-special-odd){margin-top:8px;padding:0 8px;border:1px solid #D9DEE7;border-radius:10px;background:#FCFCFD}
+.g10ch2-special summary{min-height:44px;padding:10px 2px;box-sizing:border-box;color:#253043;font-weight:700;cursor:pointer}
+.g10ch2-special summary:focus-visible{outline:3px solid #8F6ED0;outline-offset:2px}

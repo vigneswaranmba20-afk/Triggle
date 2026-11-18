@@ -1128,6 +1128,20 @@ window.TRIGGLE_G10_CH2_PATH={
           "latex": "2^2=2\\times2,\\quad 2^3=2\\times2\\times2",
           "fallback": "2² = 2 × 2, 2³ = 2 × 2 × 2"
         },
+        "odd": {
+          "title": {
+            "en": "Why the first odd numbers add to a square",
+            "ta": "முதல் ஒற்றை எண்களின் கூடுதல் ஏன் ஒரு வர்க்கம்?"
+          },
+          "idea": {
+            "en": "The odd numbers form an A.P. with common difference 2. The first term is 1 and the nth is 2n − 1. Their average is n, so n terms add to n squared.",
+            "ta": "ஒற்றை எண்கள் பொது வித்தியாசம் 2 கொண்ட கூட்டுத்தொடர் வரிசை. முதல் உறுப்பு 1, n-ஆவது உறுப்பு 2n − 1. இவற்றின் சராசரி n. எனவே n உறுப்புகளின் கூடுதல் n-இன் வர்க்கம்."
+          },
+          "math": {
+            "latex": "\\begin{aligned}S_n&=1+3+\\cdots+(2n-1)\\\\&=\\frac n2[1+(2n-1)]=n^2\\\\S_4&=1+3+5+7=16\\end{aligned}",
+            "fallback": "Sₙ = 1 + 3 + ⋯ + (2n − 1) = (n ÷ 2)[1 + (2n − 1)] = n². S₄ = 1 + 3 + 5 + 7 = 16."
+          }
+        },
         "squares": {
           "title": {
             "en": "Why the squares rule works",
