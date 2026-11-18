@@ -86,10 +86,12 @@ function render(event){
  summary.addEventListener('keydown',ev=>{if(ev.key==='ArrowLeft'||ev.key==='ArrowRight')ev.stopPropagation();});
  const panel=el('div','why-step-panel');panel.lang=(lang==='ta'&&!hint.ta)?'en':lang;
  const explanation=el('p'),source=lang==='ta'&&hint.ta?hint.ta:hint.en;
- explanation.innerHTML=window.TriggleNotation.render(window.TriggleG9Math?.text(source)??source);
+ if(window.TriggleNotation)explanation.innerHTML=window.TriggleNotation.render(window.TriggleG9Math?.text(source)??source);
+ else explanation.textContent=source;
  panel.append(explanation);
  if(hint.diagram){const pic=figure(hint.diagram,lang);if(pic)panel.append(pic);}
  details.append(summary,panel);body.append(details);
+ details.addEventListener('toggle',()=>{if(details.open)window.TriggleNotation?.prepare?.(panel);});
 }
 window.addEventListener('triggle:lessonchange',render);
 })();

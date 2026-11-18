@@ -22,6 +22,9 @@ assert(!parameters.includes('30, \\text{cf}'),'Parameters have independent align
 const original={latex:'x^2',fallback:'x²'};assert.equal(rich(original),original,'Never process structured math twice');
 assert.equal(rich('a pure surd'),'a pure surd');
 assert.equal(rich('Find the area of a triangle'),'Find the area of a triangle','Prose articles and geometry words must not become algebraic products');
+const inlineSets=rich('A = {0, 3, 5, 8}, B = {2, 4, 6, 10}');
+assert.deepEqual(inlineSets.filter(part=>part?.latex).map(part=>part.fallback),['A = {0, 3, 5, 8}','B = {2, 4, 6, 10}'],'Separate equalities can wrap without splitting a set');
+assert.equal(inlineSets.map(part=>part?.fallback??part).join(''),'A = {0, 3, 5, 8}, B = {2, 4, 6, 10}');
 assert.equal(rich("Heron’s formula"),"Heron’s formula",'Possessive endings remain prose');
 const ctx={window:{katex:require('../assets/vendor/katex/katex.min.js')}};vm.createContext(ctx);
 vm.runInContext(fs.readFileSync('site/assets/math-notation.js','utf8'),ctx);

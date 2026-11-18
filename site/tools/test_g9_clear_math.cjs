@@ -1,5 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const {createHash}=require('node:crypto');
 const {load,build,expression,rich}=require('./build_g9_math.cjs');
 const katex=require('../assets/vendor/katex/katex.min.js');
 const root=path.resolve(__dirname,'..'),read=file=>fs.readFileSync(path.join(root,file),'utf8');
@@ -12,23 +13,47 @@ const fallback=v=>Array.isArray(v)?v.map(fallback).join(''):typeof v==='string'?
 let formulas=0;
 function check(value,original,id){
  assert.equal(fallback(value),original,'Verbatim wording and every calculation: '+id);
- for(const part of Array.isArray(value)?value:[value])if(part?.latex){
-  const html=render(part);assert(!html.includes('data-math-error'),id+': '+part.latex);
-  assert(html.includes('<math')&&html.includes('katex-html'),'Accessible and visual math: '+id);formulas++;
+ for(const part of Array.isArray(value)?value:[value]){
+  if(typeof part==='string')assert.doesNotMatch(part,/\\(?:[a-z]{2,}|[()[\]])/i,'No raw TeX in rendered prose: '+id);
+  if(part?.questionOption)check(part.questionOption,part.fallback,id+' option');
+  if(part?.latex){
+   const html=render(part);assert(!html.includes('data-math-error'),id+': '+part.latex);
+   assert(html.includes('<math')&&html.includes('katex-html'),'Accessible and visual math: '+id);formulas++;
+  }
  }
 }
 const items=load();assert.equal(items.length,397);
+assert.equal(new Set(items.map(q=>q.id)).size,397,'Student-facing IDs must be unique');
+assert.equal(items.filter(q=>q.kind!=='practice').length,388);
+// Pin the original order, work and answers from main at 9cde0fc. The Algebra
+// source gate verifies the corrected prompts and the five revised explanations.
+const preservation=items.map(q=>{
+ const sourceReview=/^g9-ch3-ex3\.1-q[12]-[iv]+$/.test(q.id),coefficient=q.id.startsWith('g9-ch3-ex3.1-q2-');
+ return [q.id,q.chapter,q.exercise,q.kind,q.answer,sourceReview?null:q.q,q.steps.length,coefficient?null:q.steps.map(({en,ta,eq})=>[en,ta,eq])];
+});
+assert.equal(createHash('sha256').update(JSON.stringify(preservation)).digest('hex'),'afee54516e87933582b637ee026f1acf62d4ffd1f44c57a250e0c3dd08cf11fa');
 assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,56,12,9,40,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
 assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,54);
+let optionRecords=0;
 for(const q of items){
  const before=JSON.stringify(q),p=get(q);assert(p,q.id);assert.equal(p.steps.length,q.steps.length);
  for(const lang of ['en','ta'])check(p.questionMath[lang]||p.questionMath.en,q.q[lang]||q.q.en,q.id+' '+lang);
  if(typeof q.answer==='object')for(const lang of ['en','ta'])check(p.answerMath[lang],q.answer[lang],q.id+' answer '+lang);
  else check(p.answerMath,q.answer,q.id+' answer');
  q.steps.forEach((s,i)=>{if(s.eq!==undefined)check(p.steps[i].math,s.eq,q.id+' step '+i);for(const lang of ['en','ta'])check(p.steps[i].reasonMath[lang]||p.steps[i].reasonMath.en,s[lang]||s.en,q.id+' reason '+i+' '+lang);});
+ if(Array.isArray(p.questionMath.en)&&p.questionMath.en.some(part=>part?.questionOption)){
+  optionRecords++;
+  for(const lang of ['en','ta']){
+   const choices=p.questionMath[lang].filter(part=>part?.questionOption);
+   assert.deepEqual(Array.from(choices,part=>part.questionOption[0]),['(1) ','(2) ','(3) ','(4) '],q.id+' each option has its original label');
+  }
+ }
  assert.equal(JSON.stringify(q),before,'Canonical question object is never mutated');
 }
+assert.equal(optionRecords,50);
+assert.match(get(items.find(q=>q.id==='g9-ch2-ex2-q4-i')).steps[1].math.latex,/\\Rightarrow.*\\Rightarrow/);
+assert.match(get(items.find(q=>q.id==='g9-ch4-ex4.2-q1')).steps[2].math.latex,/\\Rightarrow/);
 assert(formulas>3800,'Full question, explanation, working and answer coverage');
 for(const q of [{id:items[0].id,classNum:10,chapter:'2'},{id:items[0].id,classNum:11,chapter:'1'},{id:'g9-ch2-example-1',classNum:9,chapter:'2'}])assert.equal(get(q),undefined,'Scope excludes other grades/chapters and archived examples');
 const compact=source=>expression(source).latex.replace(/\s/g,'');

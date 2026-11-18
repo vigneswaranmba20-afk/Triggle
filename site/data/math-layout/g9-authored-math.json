@@ -1,4 +1,12 @@
 {
+  "g9-ch1-ex1.2-q1-ii": {
+    "steps": {
+      "0": {
+        "source":"3n+2<15 ⇒ 3n<13",
+        "latex":"\\begin{aligned}3n+2&<15\\\\\\Rightarrow 3n&<13\\end{aligned}"
+      }
+    }
+  },
   "g9-ch2-ex1-q1": {
     "questionAnchors": [
       {"source":"11/3","latex":"\\displaystyle \\frac{11}{3}"}

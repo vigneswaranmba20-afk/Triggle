@@ -84,7 +84,7 @@ function expression(source,{display=false}={}){
   for(let i=0;i<latex.length;i++){
    if(['{','(','['].includes(latex[i]))depth++;else if(['}',')',']'].includes(latex[i]))depth--;
    if(depth===0&&latex[i]===','&&seen&&/^[^,;]*=/.test(latex.slice(i+1))){rows.push('&'+latex.slice(start,i));start=i+1;seen=false;}
-   else if(depth===0&&latex.slice(i,i+11)==='\\Rightarrow'){rows.push((seen?'&': '&')+latex.slice(start,i));start=i+11;i+=10;seen=false;}
+   else if(depth===0&&latex.startsWith('\\Rightarrow',i)){rows.push('&'+latex.slice(start,i));start=i;i+=10;seen=false;}
    else if(depth===0&&latex[i]==='='){
     if(seen){rows.push('&'+latex.slice(start,i));start=i;}
     seen=true;
@@ -94,6 +94,35 @@ function expression(source,{display=false}={}){
  }
  return {latex,fallback:source,...(display?{display:true}:{})};
 }
+
+// A comma between complete inline equalities can be a line break. A comma
+// inside a set, coordinate, group or fraction stays with its expression.
+function inlineEqualities(source){
+ if(/[|∣]/.test(source))return null;
+ const separators=[];
+ let depth=0,equality=false;
+ for(const {text,start} of lex(source)){
+  if(['(','[','{'].includes(text))depth++;
+  else if([')',']','}'].includes(text))depth--;
+  else if(depth===0&&text==='=')equality=true;
+  else if(depth===0&&text===','){
+   if(!equality)return null;
+   separators.push(start);equality=false;
+  }
+ }
+ if(!equality||!separators.length)return null;
+ let cursor=0;
+ const parts=[];
+ for(const end of [...separators,source.length]){
+  const clause=source.slice(cursor,end);
+  const leading=clause.slice(0,clause.length-clause.trimStart().length);
+  parts.push(leading,expression(clause.trimStart()));
+  if(end<source.length)parts.push(',');
+  cursor=end+1;
+ }
+ return parts.filter(part=>part!=='');
+}
+
 function rich(source,{display=false}={}){
  if(Array.isArray(source))return source;
  if(source&&typeof source==='object')return source.latex?source:Object.fromEntries(Object.entries(source).map(([k,v])=>[k,rich(v,{display})]));
@@ -118,9 +147,12 @@ function rich(source,{display=false}={}){
    // A bare prose word/number is not a product; only variables, mathematical
    // symbols and complete numeric tokens are eligible as isolated anchors.
    if(word(raw)&&raw.length>1&&!/^[A-Z]{2,4}$/.test(raw))continue;
-   try{found={value:expression(raw,{display:display&&raw.length>12}),end:t.start+raw.length,index:j};break;}catch{}
+   try{
+    const value=expression(raw,{display:display&&raw.length>12});
+    found={parts:(!display&&inlineEqualities(raw))||[value],end:t.start+raw.length,index:j};break;
+   }catch{}
   }
-  if(found){text(source.slice(cursor,t.start));out.push(found.value);cursor=found.end;index=found.index;}else index++;
+  if(found){text(source.slice(cursor,t.start));out.push(...found.parts);cursor=found.end;index=found.index;}else index++;
  }
  text(source.slice(cursor));
  if(!out.length)return source;
