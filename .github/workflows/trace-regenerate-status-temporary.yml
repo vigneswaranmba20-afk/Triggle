@@ -5,6 +5,7 @@ on:
       - integration/g9-ex3-2-after-g10-complete-20261118
     paths:
       - .github/workflows/trace-regenerate-status-temporary.yml
+      - site/data/problem-difficulty.js
 permissions:
   contents: write
 jobs:
