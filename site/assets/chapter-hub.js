@@ -398,6 +398,7 @@
 
   function mountStageJourney(container,stages,lang,initialConcept,onConcept,onQuestion=null,chapterQuestions=[],hasTopNext=false){
     const ta=lang==='ta',pick=value=>typeof value==='string'?value:(value?.[lang]||value?.en||'');
+    const displayMath=value=>window.TriggleNotation?.renderLatex?.(value.latex,{displayMode:true,fallback:value.fallback})||e(value.fallback);
     const back=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
     const nextLabel=ta?'அடுத்த கருத்து':'Next idea';
     const prevLabel=ta?'முந்தைய கருத்து':'Previous idea';
@@ -449,9 +450,11 @@
        '<p class="sp2-example">'+typeset(pick(stage.example))+'</p><small class="sp2-stage-reference">'+
        e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+'</small></div>')+
        (choices.length?'<div class="sp2-recall"><h5>'+e(ta?'நீங்களே முயற்சிக்கவும்':'Try it yourself')+'</h5>'+
-       '<p>'+typeset(pick(stage.question))+'</p><div class="sp2-answers" data-answers role="group" aria-label="'+e(pick(stage.question))+'"></div>'+
+       '<p>'+typeset(pick(stage.question))+'</p>'+
+       (stage.questionMath?'<div>'+displayMath(stage.questionMath)+'</div>':'')+
+       '<div class="sp2-answers" data-answers role="group" aria-label="'+e(pick(stage.question))+'"></div>'+
        '<div class="sp2-recall-actions"><button type="button" data-hint>'+e(ta?'குறிப்பு':'Hint')+'</button>'+
-       '<button type="button" data-why>'+e(ta?'விளக்கம்':'Why?')+'</button></div>'+
+       '<button type="button" data-why aria-expanded="false"'+(stage.explainAfterAttempt?' disabled':'')+'>'+e(ta?'விளக்கம்':'Why?')+'</button></div>'+
        '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-why-response hidden></div></div>':'');
       if(stage.visual)showG10Ch2Visual(stage,panel.querySelector('[data-g10ch2-visual]'),lang);
       if(stage.video)attachStageVideo(panel,stage,lang);
@@ -462,16 +465,30 @@
         button.onclick=()=>onQuestion(related);panel.append(button);
       }
       const holder=panel.querySelector('[data-answers]');if(holder){
+        const whyButton=panel.querySelector('[data-why]');
+        const feedback=panel.querySelector('[data-feedback]');
+        const response=panel.querySelector('[data-why-response]');
         choices.forEach((choice,j)=>{
           const button=document.createElement('button');button.type='button';button.dataset.choice=String(j);
           button.innerHTML=typeset(pick(choice));button.setAttribute('aria-label',pick(choice));
+          button.setAttribute('aria-pressed','false');
           button.addEventListener('click',()=>{
             holder.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-            panel.querySelector('[data-feedback]').textContent=j===stage.correct?(ta?'சரி!':'Correct!'):(ta?'மீண்டும் முயற்சிக்கவும். ':'Try again. ')+pick(stage.hint);
+            feedback.textContent=j===stage.correct?(ta?'சரி!':'Correct!'):
+              (ta?'மீண்டும் முயற்சிக்கவும். ':'Try again. ')+pick(stage.incorrectFeedback?.[j]||stage.hint);
+            whyButton.disabled=false;
           });holder.append(button);
         });
-        panel.querySelector('[data-hint]').onclick=()=>{panel.querySelector('[data-feedback]').innerHTML=typeset(pick(stage.hint));};
-        panel.querySelector('[data-why]').onclick=()=>{const d=panel.querySelector('[data-why-response]');d.innerHTML=typeset(pick(stage.why));d.hidden=!d.hidden;};
+        panel.querySelector('[data-hint]').onclick=()=>{feedback.innerHTML=typeset(pick(stage.hint));};
+        whyButton.onclick=()=>{
+          if(whyButton.disabled)return;
+          if(response.hidden){
+            const explanation=typeset(pick(stage.why));
+            response.innerHTML=stage.whyMath?explanation+displayMath(stage.whyMath):explanation;
+          }
+          response.hidden=!response.hidden;
+          whyButton.setAttribute('aria-expanded',String(!response.hidden));
+        };
       }
       update();
       if(focus){root.scrollIntoView({block:'start',behavior:'auto'});panel.querySelector('.sp2-concept-heading')?.focus({preventScroll:true});}

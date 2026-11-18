@@ -16,9 +16,8 @@
     alternating:'The signs alternate and the sum moves above and below its limit, but the gap shrinks.',
     diverges:'This sum does not approach a finite number. The infinite-sum shortcut cannot be used.',
     insight:'For a = 1, a finite limit exists here only when |r| < 1.'},
-   special:{title:'Choose the shape of the sum',terms:'How many terms?',kind:'Type of terms',ordinary:'Numbers',squares:'Squares',cubes:'Cubes',sum:'Sum',formula:'Rule for n terms',
-    insight:'Notice the pattern first. Different powers need different rules.',
-    meanings:['Add the positions from 1 to n.','Square every position, then add.','Cube every position, then add.']}
+   special:{title:'Compare three sums',terms:'How many terms?',kind:'Type of terms',ordinary:'Natural numbers',squares:'Squares',cubes:'Cubes',sum:'Sum',
+    meanings:['Add the natural numbers from 1 to n.','Square each number, then add the squares.','Cube each number, then add the cubes.']}
   },
   ta:{previous:'← முந்தையது',next:'அடுத்து →',replay:'மீண்டும் ↻',step:'படி',of:'இல்',
    bezout:{title:'மீ.பொ.வைக் கண்டு, படிகளைப் பின்னோக்கிச் செல்வோம்',notes:[
@@ -34,13 +33,12 @@
     alternating:'குறியீடுகள் மாறுகின்றன; கூட்டுத்தொகை எல்லை மதிப்பைச் சுற்றி மாறினாலும் இடைவெளி குறைகிறது.',
     diverges:'இந்தக் கூட்டுத்தொகை ஒரு முடிவுள்ள மதிப்பை நெருங்காது. முடிவிலிக் கூட்டுத்தொகைச் சூத்திரத்தைப் பயன்படுத்தக் கூடாது.',
     insight:'a = 1 எனில் இங்கே |r| < 1 ஆகும் போது மட்டுமே முடிவுள்ள எல்லை மதிப்பு உண்டு.'},
-   special:{title:'கூட்டுத்தொகையின் வடிவத்தைத் தேர்ந்தெடு',terms:'எத்தனை உறுப்புகள்?',kind:'உறுப்புகளின் வகை',ordinary:'எண்கள்',squares:'வர்க்கங்கள்',cubes:'கனங்கள்',sum:'கூட்டுத்தொகை',formula:'n உறுப்புகளுக்கான விதி',
-    insight:'முதலில் வடிவத்தைக் கவனி. வெவ்வேறு அடுக்குகளுக்கு வெவ்வேறு விதிகள் தேவை.',
-    meanings:['1 முதல் n வரையுள்ள எண்களைக் கூட்டவும்.','ஒவ்வொரு இட எண்ணையும் வர்க்கப்படுத்திக் கூட்டவும்.','ஒவ்வொரு இட எண்ணையும் கனப்படுத்திக் கூட்டவும்.']}
+   special:{title:'மூன்று கூடுதல்களை ஒப்பிடுங்கள்',terms:'எத்தனை உறுப்புகள்?',kind:'உறுப்புகளின் வகை',ordinary:'இயல் எண்கள்',squares:'வர்க்கங்கள்',cubes:'கனங்கள்',sum:'கூடுதல்',
+    meanings:['1 முதல் n வரையிலான இயல் எண்களைக் கூட்டுங்கள்.','ஒவ்வோர் எண்ணையும் வர்க்கப்படுத்திப் பிறகு கூட்டுங்கள்.','ஒவ்வோர் எண்ணையும் கனப்படுத்திப் பிறகு கூட்டுங்கள்.']}
   }
  };
- const math=(el,latex,fallback)=>{el.innerHTML=typeof window.TriggleNotation?.renderLatex==='function'
-   ?window.TriggleNotation.renderLatex(latex,{displayMode:true,fallback}):'';
+ const math=(el,latex,fallback,displayMode=true)=>{el.innerHTML=typeof window.TriggleNotation?.renderLatex==='function'
+   ?window.TriggleNotation.renderLatex(latex,{displayMode,fallback}):'';
    if(!el.innerHTML)el.textContent=fallback;
  };
  const make=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;};
@@ -93,28 +91,142 @@
    slider.addEventListener('input',()=>{n=Number(slider.value);draw();});draw();return true;}
  function specialSum(power,n){if(![1,2,3].includes(power)||!Number.isInteger(n)||n<1||n>50)throw new RangeError('Invalid special sum');
    if(power===1)return n*(n+1)/2;if(power===2)return n*(n+1)*(2*n+1)/6;return Math.pow(n*(n+1)/2,2);}
- function special(host,t){const copy=t.special;heading(host,copy.title);
+ function specialWorking(power,n,total){
+   const next=n+1;
+   let substituted,simplified,fallback;
+   if(power===1){
+     substituted=String.raw`\frac{${n}\times(${n}+1)}{2}`;
+     simplified=String.raw`\frac{${n}\times${next}}{2}`;
+     fallback=`[${n} × (${n} + 1)] ÷ 2 = (${n} × ${next}) ÷ 2`;
+   }else if(power===2){
+     const factor=2*n+1;
+     substituted=String.raw`\frac{${n}(${n}+1)(2\times${n}+1)}{6}`;
+     simplified=String.raw`\frac{${n}\times${next}\times${factor}}{6}`;
+     fallback=`[${n} × (${n} + 1) × (2 × ${n} + 1)] ÷ 6 = (${n} × ${next} × ${factor}) ÷ 6`;
+   }else{
+     const triangular=specialSum(1,n);
+     substituted=String.raw`\left(\frac{${n}\times(${n}+1)}{2}\right)^2`;
+     simplified=`${triangular}^2`;
+     fallback=`{[${n} × (${n} + 1)] ÷ 2}² = ${triangular}²`;
+   }
+   return [
+     String.raw`\begin{aligned}S_{${n}}&=${substituted}\\&=${simplified}\\&=${total}\end{aligned}`,
+     `S${n} = ${fallback} = ${total}`
+   ];
+ }
+ function specialDemo(demo,copy){
+   heading(demo,copy.title);
    let power=2,n=4;const kind=make('p','g10ch2-discovery-label',copy.kind),choices=make('div','g10ch2-discovery-choices');
+   choices.setAttribute('role','group');
+   choices.setAttribute('aria-label',copy.kind);
    const buttons=[1,2,3].map((p,i)=>{const b=make('button','',[copy.ordinary,copy.squares,copy.cubes][i]);b.type='button';
      b.addEventListener('click',()=>{power=p;draw();});choices.append(b);return b;});
    const row=make('div','g10ch2-discovery-range-row'),label=make('label','',copy.terms),slider=make('input');
-   slider.type='range';slider.min='2';slider.max='8';slider.step='1';slider.value=String(n);slider.setAttribute('aria-label',copy.terms);
-   const counter=make('strong');row.append(label,slider,counter);
-   const terms=make('div','g10ch2-discovery-trail'),rule=make('div','g10ch2-discovery-math'),sum=make('p','g10ch2-discovery-note');
-   const meaning=make('p','g10ch2-discovery-subnote');
-   sum.setAttribute('role','status');sum.setAttribute('aria-live','polite');host.append(kind,choices,row,terms,rule,sum,meaning);
-   const formulas={1:'\\frac{n(n+1)}{2}',2:'\\frac{n(n+1)(2n+1)}{6}',3:'\\left(\\frac{n(n+1)}{2}\\right)^2'};
-   function draw(){buttons.forEach((b,i)=>b.setAttribute('aria-pressed',String(i+1===power)));counter.textContent=String(n);
-     terms.replaceChildren();for(let i=1;i<=n;i++){const term=make('span','g10ch2-discovery-chip',power===1?String(i):power===2?i+'²':i+'³');terms.append(term);}
-     math(rule,'S_{'+n+'}='+formulas[power].replaceAll('n',String(n))+'='+specialSum(power,n),'S'+n+' = '+specialSum(power,n));
-     sum.textContent=copy.sum+': '+specialSum(power,n);
-     meaning.textContent=copy.meanings[power-1]+' '+copy.insight;
+   slider.type='range';slider.min='1';slider.max='8';slider.step='1';slider.value=String(n);
+   slider.id='g10ch2-special-terms';label.htmlFor=slider.id;
+   const counter=make('strong');counter.setAttribute('aria-hidden','true');row.append(label,slider,counter);
+   const terms=make('div','g10ch2-discovery-trail');
+   const rule=make('div','g10ch2-discovery-math');
+   const sum=make('p','g10ch2-special-status');
+   const meaning=make('p','g10ch2-discovery-note');
+   sum.setAttribute('role','status');
+   demo.append(kind,choices,row,meaning,terms,rule,sum);
+   function draw(){
+     buttons.forEach((b,i)=>b.setAttribute('aria-pressed',String(i+1===power)));
+     counter.textContent=String(n);
+     terms.replaceChildren();
+     for(let i=1;i<=n;i++){
+       const term=make('span','g10ch2-discovery-chip',String(i));
+       if(power>1)math(term,i+'^'+power,i+(power===2?'²':'³'),false);
+       terms.append(term);
+     }
+     const total=specialSum(power,n);
+     math(rule,...specialWorking(power,n,total));
+     sum.textContent=copy.sum+' '+total;
+     meaning.textContent=copy.meanings[power-1];
    }
-   slider.addEventListener('input',()=>{n=Number(slider.value);draw();});draw();return true;}
+   slider.addEventListener('input',()=>{n=Number(slider.value);draw();});
+   draw();
+ }
+ function squareTriangleRows(n){
+   // Number the rows from each of the three corners to get the three rotations.
+   return Array.from({length:n},(_,row)=>
+     Array.from({length:row+1},(_,column)=>[row+1,n-column,n-row+column]));
+ }
+ function svgNode(tag,attributes,label){
+   const node=document.createElementNS('http://www.w3.org/2000/svg',tag);
+   for(const [name,value] of Object.entries(attributes))node.setAttribute(name,value);
+   if(label!=null)node.textContent=label;
+   return node;
+ }
+ function squaresDiagram(copy,pick){
+   const rows=squareTriangleRows(3);
+   const groups=pick(copy.diagramGroups);
+   const triangles=[0,1,2].map(i=>rows.map(row=>row.map(cell=>cell[i])));
+   triangles.push(rows.map(row=>row.map(cell=>cell.reduce((sum,value)=>sum+value,0))));
+   const descId='g10ch2-special-diagram-description';
+   const svg=svgNode('svg',{viewBox:'0 0 270 88',role:'img',
+     'aria-label':pick(copy.diagramLabel),'aria-describedby':descId});
+   const descriptions=triangles.map((triangle,i)=>groups[i]+'. '+pick(copy.diagramRows)+' '+
+     triangle.map(row=>row.join(', ')).join('. ')+'.');
+   svg.append(svgNode('desc',{id:descId},descriptions.join(' ')));
+   triangles.forEach((triangle,i)=>{
+     const group=svgNode('g',{'data-triangle':i});
+     triangle.forEach((row,r)=>{
+       const rowGroup=svgNode('g',{'data-triangle-row':r+1});
+       row.forEach((value,c)=>{
+         const x=32+68*i+20*(c-r/2);
+         const y=17+27*r;
+         rowGroup.append(svgNode('rect',{x:x-9,y:y-9,width:18,height:18,rx:4}),
+           svgNode('text',{x,y},value));
+       });
+       group.append(rowGroup);
+     });
+     svg.append(group);
+   });
+   ['+','+','='].forEach((sign,i)=>svg.append(svgNode('text',{x:66+68*i,y:44},sign)));
+   const figure=make('figure','g10ch2-special-diagram');
+   figure.append(svg,make('figcaption','',pick(copy.caption)));
+   return figure;
+ }
+ function special(host,t,stage,lang){
+   const {bridgeTitle,notation,powersMath,squares,cubes,range}=stage.lesson;
+   const pick=value=>value[lang==='ta'?'ta':'en'];
+   const paragraph=value=>make('p','',pick(value));
+   const equation=({latex,fallback})=>{
+     const block=make('div','g10ch2-special-math');
+     math(block,latex,fallback);
+     return block;
+   };
+   const section=(title,...content)=>{
+     const block=make('section','g10ch2-special-section');
+     block.append(make('h5','g10ch2-discovery-title',pick(title)),...content);
+     return block;
+   };
+   const demo=make('div');
+   specialDemo(demo,t.special);
+   const proof=make('details','g10ch2-special-proof');
+   proof.append(make('summary','',pick(cubes.proofTitle)),
+     paragraph(cubes.proofStart),equation(cubes.triangularMath),
+     paragraph(cubes.proofFactors),equation(cubes.factorsMath),
+     paragraph(cubes.proofIdentity),equation(cubes.identityMath),
+     paragraph(cubes.proofCancel),equation(cubes.cancelMath),paragraph(cubes.proofEnd));
+   host.className='g10ch2-special';
+   host.append(
+     section(bridgeTitle,paragraph(stage.idea),equation(stage.math),paragraph(notation),
+       paragraph(stage.example),equation(powersMath)),
+     demo,
+     section(squares.title,paragraph(squares.intro),squaresDiagram(squares,pick),
+       equation(squares.exampleMath),paragraph(squares.general),equation(squares.math)),
+     section(cubes.title,paragraph(cubes.intro),equation(cubes.math),proof),
+     section(range.title,paragraph(range.intro),equation(range.math))
+   );
+   return true;
+ }
  function mount(stage,host,lang){if(!host)return false;const t=translations[lang==='ta'?'ta':'en'];
    if(stage?.id==='g10-ch2-bezout')return bezout(host,t);
    if(stage?.id==='g10-ch2-gp-infinite')return infinite(host,t);
-   if(stage?.id==='g10-ch2-special')return special(host,t);
+   if(stage?.id==='g10-ch2-special'&&stage.lesson)return special(host,t,stage,lang);
    return false;}
- window.TriggleG10ConceptLabs=Object.freeze({mount,geometricPartial,specialSum});
+ window.TriggleG10ConceptLabs=Object.freeze({mount,geometricPartial,specialSum,squareTriangleRows});
 })();
