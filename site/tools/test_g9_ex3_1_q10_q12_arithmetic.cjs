@@ -18,6 +18,17 @@ for (const id of ids) {
 }
 const byId = id => entries.find(x => x.id === id);
 const q10 = byId(ids[0]), q11 = byId(ids[1]), q12 = byId(ids[2]);
+// Check the recorded question inputs, not just independently true identities.
+// This guards against a question being changed while an old final answer still passes.
+assert.match(q10.q.en, /\(x\s*\+\s*y\)/, 'Q10 must retain its (x+y) purchase expression');
+assert.match(q10.q.en, /x\s*=\s*10\s*,?\s*y\s*=\s*5/, 'Q10 must retain x=10, y=5');
+assert.match(q10.answer, /x²\s*\+\s*2xy\s*\+\s*y²/, 'Q10 must retain the symbolic answer');
+assert.match(q11.q.en, /3x\s*\+\s*2/, 'Q11 must retain its length');
+assert.match(q11.q.en, /3x\s*[−–-]\s*2/, 'Q11 must retain its breadth');
+assert.match(q11.q.en, /x\s*=\s*20/, 'Q11 must retain x=20');
+assert.match(q11.answer, /9x²\s*[−-]\s*4/, 'Q11 must retain the symbolic area');
+assert.match(q12.q.en, /degree\s*1/, 'Q12 must retain the first polynomial degree');
+assert.match(q12.q.en, /degree\s*2/, 'Q12 must retain the second polynomial degree');
 for (const [x,y] of [[10,5],[0,2],[3,7],[-2,5]]) {
   assert.equal((x+y)*(x+y), x*x+2*x*y+y*y, 'Chocolate cost identity');
 }
