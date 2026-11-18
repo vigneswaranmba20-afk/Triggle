@@ -111,7 +111,8 @@ for(const [grade,data] of Object.entries(classes)){
        }
      }else if(g9AlgebraRows.some(p=>p.id===item.id)){
        const row=g9AlgebraRows.find(p=>p.id===item.id);
-       const expectedPrompt=row.part?row.question+'. '+row.stem+'\n('+row.part+') '+row.sourceEnglish:row.question+'. '+row.stem+' '+row.sourceEnglish;
+       const part=row.part&&!g9AlgebraSource.rows.includes(row)?'('+row.part+') ':'';
+       const expectedPrompt=row.question+'. '+row.stem+(row.part?'\n':' ')+part+row.sourceEnglish;
        assert.equal(item.q.en,expectedPrompt);
        assert.equal(item.answer,row.answer);
        assert.equal(item.steps.length,row.steps.length);

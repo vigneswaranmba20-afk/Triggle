@@ -1,6 +1,6 @@
 'use strict';
 /*
- * Grade 10 visual regression: exact *mathematics region* parity when color CSS is
+ * Grades 10–12 visual regression: exact mathematics region parity when color CSS is
  * unchanged; mathematical text, font styles and geometric parity when the
  * only intentional difference is the newly approved theme palette.
  * A colour change must not waive the typography/spacing invariants.
@@ -12,6 +12,7 @@ const {chromium}=require('playwright');
 const after=require('./dashboard_test_support.cjs');
 const before=require(path.resolve(baseline,'site/tools/dashboard_test_support.cjs'));
 const palettePath='site/assets/paper-indigo.css';
+const samples=[[10,'c10-1-ex1-1-q1-i'],[10,'c10-8-ex8-1-q5'],[11,'c11-3-3-1-1'],[12,'g12-ch1-ex1.1-q1-i']];
 const readOptional=async pathName=>fs.readFile(pathName,'utf8').catch(e=>e.code==='ENOENT'?'':Promise.reject(e));
 async function main(){
  const [oldPalette,newPalette]=await Promise.all([
@@ -22,14 +23,19 @@ async function main(){
  const a=await before.server(),z=await after.server(),b=await chromium.launch(after.launchOptions());
  await fs.mkdir('screenshots/g9-typography',{recursive:true});
  try{
-  for(const width of [320,393,430])for(const id of ['c10-1-ex1-1-q1-i','c10-8-ex8-1-q5']){
+  for(const width of [320,393,430])for(const [grade,id] of samples){
    const images=[],measurements=[];
    for(const [label,app] of [['baseline',a],['updated',z]]){
-    const c=await b.newContext({viewport:{width,height:852},serviceWorkers:'block'}),p=await c.newPage();
-    await p.goto(app.base+'/index.html?class=10&question='+id);
-    assert.equal(new URL(p.url()).searchParams.get('question'),id,'Requested Grade 10 question loaded');
-    await p.locator('#stepsList .katex').first().waitFor();
-    await p.evaluate(async()=>{document.body.getBoundingClientRect();await document.fonts.ready;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));});
+    const c=await b.newContext({viewport:{width,height:852},serviceWorkers:'block',reducedMotion:'reduce'}),p=await c.newPage();
+    await p.goto(app.base+'/index.html?class='+grade+'&question='+id);
+    assert.equal(new URL(p.url()).searchParams.get('question'),id,'Requested question loaded');
+    await p.locator('#stepsList .worked-step').first().waitFor();
+    assert.equal(await p.locator('body.g9-math-first').count(),0,'Grade 9 styles are isolated');
+    await p.evaluate(async()=>{
+      document.body.getBoundingClientRect();await document.fonts.ready;
+      const finite=document.getAnimations().filter(animation=>Number.isFinite(animation.effect.getTiming().iterations));
+      await Promise.allSettled(finite.map(animation=>animation.finished));
+    });
     measurements.push(await p.evaluate(()=>{
       const root=document.querySelector('#lessonCard');
       const base=root.getBoundingClientRect();
@@ -55,7 +61,7 @@ async function main(){
        katex:[...document.querySelectorAll('#questionText .katex,#stepsList .katex')].map(e=>clean(e.textContent)),
        anchors};
     }));
-    const file=path.resolve('screenshots/g9-typography')+'/g10-'+id+'-'+width+'-'+label+'.png';
+    const file=path.resolve('screenshots/g9-typography')+'/g'+grade+'-'+id+'-'+width+'-'+label+'.png';
     // Navigation labels intentionally differ: compare the actual question and
     // worked mathematics as pixel-identical regions, not changed navigation chrome.
     images.push({
@@ -90,7 +96,7 @@ async function main(){
       }
      }
     }
-    console.log('PASS Grade 10 mathematics text, fonts and region-relative layout '+id+' '+width+'px');
+   console.log('PASS Grade '+grade+' mathematics text, fonts and region-relative layout '+id+' '+width+'px');
    }
   }
  }finally{await b.close();await a.close();await z.close();}

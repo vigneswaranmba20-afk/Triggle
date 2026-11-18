@@ -1,0 +1,95 @@
+{
+  "edition": "2025 revised",
+  "exercise": "3.1",
+  "source": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "printedPage": 87,
+      "pdfPage": 93,
+      "answerPrintedPage": 310,
+      "answerPdfPage": 316,
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037"
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "printedPage": 94,
+      "pdfPage": 100,
+      "answerPrintedPage": 326,
+      "answerPdfPage": 332,
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303"
+    }
+  },
+  "review": {
+    "mathematicsAcrossSourceLanguages": "question-and-key-pages-visually-checked",
+    "tamilEditorial": "pending",
+    "teacher": "pending"
+  },
+  "items": [
+    {
+      "id": "g9-ch3-ex3.1-q1-i",
+      "questionNumber": 1,
+      "part": "i",
+      "englishPrompt": "1. Which of the following expressions are polynomials? If not give reason:\n(i) 1/x² + 3x − 4"
+    },
+    {
+      "id": "g9-ch3-ex3.1-q1-ii",
+      "questionNumber": 1,
+      "part": "ii",
+      "englishPrompt": "1. Which of the following expressions are polynomials? If not give reason:\n(ii) x²(x − 1)"
+    },
+    {
+      "id": "g9-ch3-ex3.1-q1-iii",
+      "questionNumber": 1,
+      "part": "iii",
+      "englishPrompt": "1. Which of the following expressions are polynomials? If not give reason:\n(iii) (1/x)(x + 5)"
+    },
+    {
+      "id": "g9-ch3-ex3.1-q1-iv",
+      "questionNumber": 1,
+      "part": "iv",
+      "englishPrompt": "1. Which of the following expressions are polynomials? If not give reason:\n(iv) 1/x⁻² + 1/x⁻¹ + 7"
+    },
+    {
+      "id": "g9-ch3-ex3.1-q1-v",
+      "questionNumber": 1,
+      "part": "v",
+      "englishPrompt": "1. Which of the following expressions are polynomials? If not give reason:\n(v) √5 x² + √3 x + √2"
+    },
+    {
+      "id": "g9-ch3-ex3.1-q1-vi",
+      "questionNumber": 1,
+      "part": "vi",
+      "englishPrompt": "1. Which of the following expressions are polynomials? If not give reason:\n(vi) m² − ∛m + 7m − 10"
+    },
+    {
+      "id": "g9-ch3-ex3.1-q2-i",
+      "questionNumber": 2,
+      "part": "i",
+      "englishPrompt": "2. Write the coefficient of x² and x in each of the following polynomials.\n(i) 4 + (2/5)x² − 3x"
+    },
+    {
+      "id": "g9-ch3-ex3.1-q2-ii",
+      "questionNumber": 2,
+      "part": "ii",
+      "englishPrompt": "2. Write the coefficient of x² and x in each of the following polynomials.\n(ii) 6 − 2x² + 3x³ − √7 x"
+    },
+    {
+      "id": "g9-ch3-ex3.1-q2-iii",
+      "questionNumber": 2,
+      "part": "iii",
+      "englishPrompt": "2. Write the coefficient of x² and x in each of the following polynomials.\n(iii) πx² − x + 2"
+    },
+    {
+      "id": "g9-ch3-ex3.1-q2-iv",
+      "questionNumber": 2,
+      "part": "iv",
+      "englishPrompt": "2. Write the coefficient of x² and x in each of the following polynomials.\n(iv) √3 x² + √2 x + 0.5"
+    },
+    {
+      "id": "g9-ch3-ex3.1-q2-v",
+      "questionNumber": 2,
+      "part": "v",
+      "englishPrompt": "2. Write the coefficient of x² and x in each of the following polynomials.\n(v) x² − (7/2)x + 8"
+    }
+  ]
+}

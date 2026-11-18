@@ -43,10 +43,12 @@
  const reduced=matchMedia('(prefers-reduced-motion:reduce)');
  const mobile=matchMedia('(max-width:800px)');
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+ const plainMath=value=>Array.isArray(value)?value.map(plainMath).join(''):(value?.fallback??value);
+ const englishInTamilReader=text=>grade===9&&lang==='ta'&&/[a-z]{2}/i.test(text)&&!/\p{Script=Tamil}/u.test(text);
  function math(str){
   // Local typesetting: accessible group exponents and no cloud requests.
   const alignCoefficientPowers=grade===10&&String(selectedChapter()?.number)==='2';
-  return window.TriggleNotation ? window.TriggleNotation.render(str,{alignCoefficientPowers}) : esc(str);
+  return window.TriggleNotation ? window.TriggleNotation.render(str,{alignCoefficientPowers}) : esc(grade===9?plainMath(str):str);
  }
 
  // Textbook ordering is preserved; Previous/Next are further confined to the
@@ -402,6 +404,7 @@
   const number=document.createElement('span');number.className='step-circle';number.textContent=index+1;
   const body=document.createElement('div');const reason=document.createElement('div');reason.className='step-reason';
   if(s.reasonMath)reason.innerHTML=math(s.reasonMath[lang]||s.reasonMath.en);else reason.textContent=tr(s);
+  if(englishInTamilReader(tr(s)))reason.lang='en';
   const equation=document.createElement('div');equation.className='step-equation';
   const fragments=String(s.eq||'').split(/\s+;\s+/);
   if(s.math){equation.classList.add('structured-equation');equation.innerHTML=math(s.math);}
@@ -422,12 +425,16 @@
   const title=document.createElement('strong');title.className='final-answer-label';
   title.textContent=ui('finalAnswer');
   const result=document.createElement('div');result.className='final-answer-value';
+  if(englishInTamilReader(tr(current.answer)))result.lang='en';
   result.classList.toggle('answer-grid',answer.classList.contains('answer-grid'));
   result.classList.toggle('answer-grid-many',answer.classList.contains('answer-grid-many'));
   result.innerHTML=answer.innerHTML;
   body.append(title,result);li.append(number,body);steps.append(li);
  }
+ const prepareLessonMath=()=>window.TriggleNotation?.prepare?.($('lessonCard'));
+ const lessonMathObserver=typeof ResizeObserver==='function'?new ResizeObserver(prepareLessonMath):null;
  function renderSteps(){
+  lessonMathObserver?.disconnect();
   const authored=window.TriggleWorkedDisplay?.get(current,lang);
   $('lessonCard').classList.toggle('twd-lesson',!!authored);
   $('questionText').classList.toggle('twd-question',!!authored);
@@ -457,7 +464,7 @@
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
   const grade9Answer=window.TriggleG9Math?.get(current)?.answerMath;
-  const answerMath=(grade9Answer?.[lang]||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||window.TriggleG10RemainingMath?.getAnswer?.(current);
+  const answerMath=(grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||window.TriggleG10RemainingMath?.getAnswer?.(current);
   const canGrid=!answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
@@ -465,9 +472,27 @@
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
-  requestAnimationFrame(()=>window.TriggleNotation?.prepare?.($('lessonCard')));
-  document.fonts?.ready.then(()=>window.TriggleNotation?.prepare?.($('lessonCard')));
+  if(grade===9){
+   // Language switching replaces the formula nodes. Set their keyboard state
+   // immediately and refresh it if Android reflows after loading web fonts.
+   prepareLessonMath();
+   if(lessonMathObserver){
+    for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
+     lessonMathObserver.observe(formula);
+     if(formula.firstElementChild)lessonMathObserver.observe(formula.firstElementChild);
+    }
+   }
+  }
+  requestAnimationFrame(()=>{
+   prepareLessonMath();
+   // The layout read starts loading any math fonts this question newly uses.
+   if(grade===9)document.fonts?.ready.then(prepareLessonMath);
+  });
+  if(grade!==9)document.fonts?.ready.then(prepareLessonMath);
  }
+ document.fonts?.addEventListener('loadingdone',()=>{
+  if(grade===9&&!$('lessonCard').hidden)prepareLessonMath();
+ });
  function isQuestionFigure(item){
   if(item.figureSrc)return true;
   // The Figure button already opens a full Venn: no duplicate mini preview.
@@ -520,6 +545,9 @@
     document.body.classList.toggle('g10-ch2-type',grade===10&&String(typographyChapter)==='2');
    $('questionReturn').hidden=true;
    const showingQuestion=!homeView&&!classIndex&&!chapterOverview;
+   if(!showingQuestion)lessonMathObserver?.disconnect();
+   document.body.classList.toggle('g9-math-first',grade===9&&!homeView&&!classIndex);
+   if(grade===9&&showingQuestion)$('stepsList').setAttribute('role','list');else $('stepsList').removeAttribute('role');
    $('allChaptersReturn').hidden=true; // Chapters remain accessible through the existing breadcrumb/menu.
    $('questionNavDock').hidden=!showingQuestion;
    document.body.classList.toggle('textbook-reader',showingQuestion);
@@ -562,6 +590,7 @@
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
   const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||window.TriggleG10RemainingMath?.getQuestion?.(current,lang);
   $('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));$('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
+  if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
 
   $('figureBtn').hidden=!hasUsefulFigure(current);
@@ -632,7 +661,7 @@
   if(e.key==='Escape'&&drawerOpen){closeDrawer();return}
   if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&e.target.tagName!=='INPUT'&&e.target.tagName!=='TEXTAREA'){e.preventDefault();openDrawer();$('search').focus();return}
   if(drawerOpen&&e.key==='Tab'){const focusable=[...$('sidebar').querySelectorAll('button:not([disabled]),input:not([disabled]),a[href],summary')].filter(el=>el.getClientRects().length);if(focusable.length){const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
-  if(e.target.matches('input,textarea,select,button')||$('figureDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
+  if(e.target.matches('input,textarea,select,button')||(grade===9&&e.target.closest('.triggle-tex[tabindex="0"]'))||$('figureDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
   if(e.key==='ArrowRight'){e.preventDefault();navMove(1)}else if(e.key==='ArrowLeft'){e.preventDefault();navMove(-1)}
  });
  window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams,g=Number(p.get('class'));grade=classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});

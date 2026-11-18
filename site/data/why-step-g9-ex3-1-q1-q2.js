@@ -40,31 +40,31 @@ const additions={
   },
   "g9-ch3-ex3.1-q2-i": {
     "step": 2,
-    "expected": "The x term is −3x, so its coefficient is negative three. The separate constant 4 is not part of either requested coefficient.",
+    "expected": "Read the signed number multiplying x. The constant 4 stands on its own.",
     "en": "A coefficient is the signed number immediately multiplying that particular power of x. Ignore the constant term and any x-cubed term when asked only for x-squared and x.",
     "concept": "coefficientIdentification"
   },
   "g9-ch3-ex3.1-q2-ii": {
     "step": 2,
-    "expected": "The term with x to the first power is −√7 x, so its coefficient is negative square-root seven, not the constant six or the x-cubed coefficient.",
+    "expected": "Read the signed number multiplying x. Keep the minus sign in front of the square root.",
     "en": "A coefficient is the signed number immediately multiplying that particular power of x. Ignore the constant term and any x-cubed term when asked only for x-squared and x.",
     "concept": "coefficientIdentification"
   },
   "g9-ch3-ex3.1-q2-iii": {
     "step": 2,
-    "expected": "A bare −x means −1 times x, so its coefficient is negative one.",
+    "expected": "Write −x as negative one times x, then read the coefficient.",
     "en": "A coefficient is the signed number immediately multiplying that particular power of x. Ignore the constant term and any x-cubed term when asked only for x-squared and x.",
     "concept": "coefficientIdentification"
   },
   "g9-ch3-ex3.1-q2-iv": {
     "step": 2,
-    "expected": "The term √2 x has coefficient square-root two; 0.5 is a separate constant.",
+    "expected": "Read the number multiplying x. The constant 0.5 stands on its own.",
     "en": "A coefficient is the signed number immediately multiplying that particular power of x. Ignore the constant term and any x-cubed term when asked only for x-squared and x.",
     "concept": "coefficientIdentification"
   },
   "g9-ch3-ex3.1-q2-v": {
     "step": 2,
-    "expected": "The x term is negative seven-halves times x, so the second coefficient is −7/2.",
+    "expected": "Read the signed number multiplying x. Keep the minus sign with the fraction.",
     "en": "A coefficient is the signed number immediately multiplying that particular power of x. Ignore the constant term and any x-cubed term when asked only for x-squared and x.",
     "concept": "coefficientIdentification"
   }

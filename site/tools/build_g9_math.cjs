@@ -75,14 +75,15 @@ function expression(source,{display=false}={}){
  // aligned rows: relations inside a radicand, bracket or exponent stay there.
  if(display){
   const rows=[];
-  for(const statement of latex.split('\\Rightarrow')){
+  for(const [index,statement] of latex.split('\\Rightarrow').entries()){
+   const implication=index?'\\Rightarrow\\; ':'';
    let depth=0,marks=[];
    for(let i=0;i<statement.length;i++){
     if(statement[i]==='{')depth++;else if(statement[i]==='}')depth--;
     else if(depth===0&&statement[i]==='=')marks.push(i);
    }
-   if(!marks.length)rows.push('&'+statement);
-   else{rows.push(statement.slice(0,marks[0])+' &= '+statement.slice(marks[0]+1,marks[1]??statement.length));
+   if(!marks.length)rows.push('&'+implication+statement);
+   else{rows.push(implication+statement.slice(0,marks[0])+' &= '+statement.slice(marks[0]+1,marks[1]??statement.length));
     for(let i=1;i<marks.length;i++)rows.push('&= '+statement.slice(marks[i]+1,marks[i+1]??statement.length));}
   }
   if(rows.length>1)latex='\\begin{aligned}'+rows.join(' \\\\ ')+'\\end{aligned}';
@@ -149,14 +150,32 @@ function loadContext(){const context={window:{}};vm.createContext(context);
  }return context.window;
 }
 function load(){return loadContext().TRIGGLE_CLASSES[9].items.filter(q=>q.kind!=='textbook-example'&&!/(?:^|[-_])(?:worked[-_])?examples?(?:[-_]|$)/i.test(q.id)&&!/^\s*(?:Worked\s+)?Example\b/i.test(q.label?.en||''));}
+
+// Split the four numbered choices before compiling formulas. In these source
+// records, choices start on a new line and are separated by a row break or
+// repeated spaces. A reference to an option inside its prose stays in the choice.
+function compileQuestion(text, compile) {
+ const start=text.indexOf('\n(1) ')+1;
+ if(!start)return compile(text);
+ const tail=text.slice(start);
+ const choices=[...tail.matchAll(/(^|[ \t]{2,}|\r?\n)(\(([1-4])\) )/g)];
+ if(choices.map(choice=>choice[3]).join('')!=='1234')return compile(text);
+ return [compile(text.slice(0,start)),...choices.flatMap((choice,index)=>{
+  const [,space,label]=choice;
+  const body=tail.slice(choice.index+choice[0].length,choices[index+1]?.index);
+  return [space,{questionOption:[label,compile(body)],fallback:label+body}];
+ })].flat();
+}
+
 function build(){
  const extended=require('./g9_math_compiler.cjs'),items=load();
  const authored=JSON.parse(fs.readFileSync(path.join(root,'data/math-layout/g9-authored-math.json'),'utf8'));
  const records=items.map(q=>{
-  const compile=['2','3'].includes(String(q.chapter))?rich:extended.rich;
-  const record={id:q.id,questionMath:q.questionMath||Object.fromEntries(Object.entries(q.q).map(([lang,text])=>[lang,compile(text)])),
-   answerMath:q.answerMath||compile(q.answer,{display:true}),steps:q.steps.map(s=>({math:s.math||compile(s.eq,{display:true}),reasonMath:s.reasonMath||Object.fromEntries(['en','ta'].filter(lang=>s[lang]).map(lang=>[lang,compile(s[lang])]))}))};
   const overrides=authored[q.id];
+  const compiler=['2','3'].includes(String(q.chapter))?rich:extended.rich;
+  const compile=overrides?.variables?(value,options)=>compiler(value,{...options,variables:overrides.variables}):compiler;
+  const record={id:q.id,questionMath:q.questionMath||Object.fromEntries(Object.entries(q.q).map(([lang,text])=>[lang,compileQuestion(text,compile)])),
+   answerMath:q.answerMath||compile(q.answer,{display:true}),steps:q.steps.map(s=>({math:s.math||compile(s.eq,{display:true}),reasonMath:s.reasonMath||Object.fromEntries(['en','ta'].filter(lang=>s[lang]).map(lang=>[lang,compile(s[lang])]))}))};
   if(overrides){
    for(const [index,value] of Object.entries(overrides.steps||{})){
     if(q.steps[index]?.eq!==value.source)throw Error('Authored Grade 9 notation source mismatch: '+q.id+'/'+index);
