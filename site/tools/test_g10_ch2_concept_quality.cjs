@@ -56,4 +56,31 @@ assert(hub.includes("v.values[n-1]"),'Sequence visual indexes from the first ter
 assert(hub.includes("stage.id==='g10-ch2-modulo'?45"),'Clock launches the taught 45-day example');
 assert(hub.includes("stage.id==='g10-ch2-congruence'?14"),'Congruence launches the 14 modulo 5 transfer');
 assert(hub.includes("n+' ≡ '+mark"),'Congruence exposes its equivalent residue');
+
+// Student Psychology Lab regression checks: make the meaning visible, not a slider.
+// These preserve the independent textbook questions and fifteen lesson IDs.
+const hcfStage=find('gcd'),gpStage=find('gp');
+assert.equal(hcfStage.visual.kind,'remainders');
+assert.equal(hcfStage.visual.values.join(','),'60,32,28,4');
+assert.equal(gpStage.visual.kind,'sequence');
+assert.equal(gpStage.visual.values.join(','),'5,15,45,135');
+assert.equal(60,32*1+28);
+assert.equal(32,28*1+4);
+assert.equal(28,4*7+0);
+assert.equal(gpStage.visual.values[1]/gpStage.visual.values[0],3);
+for(let i=1;i<gpStage.visual.values.length;i++){
+ assert.equal(gpStage.visual.values[i],gpStage.visual.values[i-1]*3,'Each visible GP term explicitly multiplies');
+}
+assert(hub.includes("function showHCFSteps("),'HCF has a dedicated no-slider teaching view');
+assert(hub.includes("function showGPMultiplication("),'GP has a dedicated multiplication stepper');
+assert(hub.includes("stage.id==='g10-ch2-gcd'){showHCFSteps"),'HCF is routed away from the generic slider');
+assert(hub.includes("stage.id==='g10-ch2-gp'){showGPMultiplication"),'GP is routed away from the generic slider');
+assert(hub.includes("['g10-ch2-gcd','g10-ch2-gp-sum'"),'HCF no longer starts with a clipped equality chain');
+assert(hub.includes("button.setAttribute('aria-pressed',String(i===selected))"),'GP selected step is accessible');
+assert(hub.includes("math.innerHTML=typeof window.TriggleNotation?.renderLatex"),'HCF equations remain typeset');
+const pilotCss=read('assets/g10-ch2-foundations.css');
+assert(pilotCss.includes('.g10ch2-hcf-steps'),'HCF-specific styles retained');
+assert(pilotCss.includes('.g10ch2-gp-term'),'GP controls have compact mobile layout');
+assert(pilotCss.includes('grid-template-columns:repeat(4,minmax(0,1fr))'),'All four GP terms fit in mobile grid');
+
 console.log('PASS G10 Ch2 quality: 15 bilingual concepts, 7 targeted teaching repairs and functional cycle/sequence visuals, formulas and lab models');
