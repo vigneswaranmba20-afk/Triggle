@@ -68,7 +68,32 @@ vm.runInNewContext(read('data/textbook-exercises/g10-ch3-ex3-1-complete-en.js'),
 const ex31Records=ex31Context.window.TRIGGLE_CLASSES[10].items;
 const ex31Ids=ex31Records.map(r=>r.id);
 assert.equal(ex31Records.length,6,'Six source-reviewed Exercise 3.1 parts');
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...ex210UnitIds,...ex31Ids];
+const ex32Context={window:{TRIGGLE_CLASSES:{10:{items:[]}},TRIGGLE_CURRICULUM:{grades:[{grade:10,chapters:[{number:3,textbookQuestionIds:[]}]}]}}};
+vm.runInNewContext(read('data/textbook-exercises/g10-ch3-ex3-2-complete-en.js'),ex32Context,{filename:'g10-ch3-ex3-2-complete-en.js'});
+const ex32Records=ex32Context.window.TRIGGLE_CLASSES[10].items;
+const ex32Ids=ex32Records.map(r=>r.id);
+assert.equal(ex32Records.length,10,'Ten source-reviewed Exercise 3.2 parts');
+const ex33Context={window:{TRIGGLE_CLASSES:{10:{items:[]}},TRIGGLE_CURRICULUM:{grades:[{grade:10,chapters:[{number:3,textbookQuestionIds:[]}]}]}}};
+vm.runInNewContext(read('data/textbook-exercises/g10-ch3-ex3-3-complete-en.js'),ex33Context,{filename:'g10-ch3-ex3-3-complete-en.js'});
+const ex33Records=ex33Context.window.TRIGGLE_CLASSES[10].items;
+const ex33Ids=ex33Records.map(r=>r.id);
+assert.equal(ex33Records.length,9,'Nine source-reviewed Exercise 3.3 parts');
+const ex34Context={window:{TRIGGLE_CLASSES:{10:{items:[]}},TRIGGLE_CURRICULUM:{grades:[{grade:10,chapters:[{number:3,textbookQuestionIds:[]}]}]}}};
+vm.runInNewContext(read('data/textbook-exercises/g10-ch3-ex3-4-complete-en.js'),ex34Context,{filename:'g10-ch3-ex3-4-complete-en.js'});
+const ex34Records=ex34Context.window.TRIGGLE_CLASSES[10].items;
+const ex34Ids=ex34Records.map(r=>r.id);
+assert.equal(ex34Records.length,8,'Eight source-reviewed Exercise 3.4 parts');
+const ex35Context={window:{TRIGGLE_CLASSES:{10:{items:[]}},TRIGGLE_CURRICULUM:{grades:[{grade:10,chapters:[{number:3,textbookQuestionIds:[]}]}]}}};
+vm.runInNewContext(read('data/textbook-exercises/g10-ch3-ex3-5-complete-en.js'),ex35Context,{filename:'g10-ch3-ex3-5-complete-en.js'});
+const ex35Records=ex35Context.window.TRIGGLE_CLASSES[10].items;
+const ex35Ids=ex35Records.map(r=>r.id);
+assert.equal(ex35Records.length,11,'Eleven source-reviewed Exercise 3.5 parts');
+const ex36Context={window:{TRIGGLE_CLASSES:{10:{items:[]}},TRIGGLE_CURRICULUM:{grades:[{grade:10,chapters:[{number:3,textbookQuestionIds:[]}]}]}}};
+vm.runInNewContext(read('data/textbook-exercises/g10-ch3-ex3-6-complete-en.js'),ex36Context,{filename:'g10-ch3-ex3-6-complete-en.js'});
+const ex36Records=ex36Context.window.TRIGGLE_CLASSES[10].items;
+const ex36Ids=ex36Records.map(r=>r.id);
+assert.equal(ex36Records.length,11,'Eleven source-reviewed Exercise 3.6 parts');
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -170,7 +195,7 @@ for(const [grade,data] of Object.entries(classes)){
        assert.equal(item.edition,'2025','TRACE source edition '+item.id);
        assert.equal(item.translationReview,'pending','Do not invent Tamil teacher approval '+item.id);
      }else{
-       const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id)||ex26Records.find(r=>r.id===item.id)||ex27Records.find(r=>r.id===item.id)||ex28Records.find(r=>r.id===item.id)||ex29Records.find(r=>r.id===item.id)||ex210UnitRecords.find(r=>r.id===item.id)||ex31Records.find(r=>r.id===item.id);
+       const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id)||ex26Records.find(r=>r.id===item.id)||ex27Records.find(r=>r.id===item.id)||ex28Records.find(r=>r.id===item.id)||ex29Records.find(r=>r.id===item.id)||ex210UnitRecords.find(r=>r.id===item.id)||ex31Records.find(r=>r.id===item.id)||ex32Records.find(r=>r.id===item.id)||ex33Records.find(r=>r.id===item.id)||ex34Records.find(r=>r.id===item.id)||ex35Records.find(r=>r.id===item.id)||ex36Records.find(r=>r.id===item.id);
        assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'New content exactly matches source-verified batch '+item.id);
      }
    }
@@ -197,7 +222,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,816);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,865);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');

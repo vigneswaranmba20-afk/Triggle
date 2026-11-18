@@ -72,11 +72,11 @@ const TEXTBOOK_SPEC = [
 
   // Chapter 3: Algebra
   { chapter: 3, exercise: '3.1', enPdfPages: [98, 99], enPrintedPages: [92, 93], taPdfPages: [100], questions: qRange(1, 5, { 1: ['i', 'ii', 'iii'], 2: ['i', 'ii', 'iii'] }) },
-  { chapter: 3, exercise: '3.2', enPdfPages: [102], enPrintedPages: [96], taPdfPages: [103], questions: qRange(1, 2, { 1: ['i', 'ii', 'iii', 'iv'], 2: ['i', 'ii', 'iii', 'iv', 'v', 'vi'] }) },
-  { chapter: 3, exercise: '3.3', enPdfPages: [103], enPrintedPages: [97], taPdfPages: [105], questions: qRange(1, 4, { 1: ['i', 'ii', 'iii'], 2: ['i', 'ii'], 3: ['i', 'ii'], 4: ['i', 'ii'] }) },
+  { chapter: 3, exercise: '3.2', enPdfPages: [102, 103], enPrintedPages: [96, 97], taPdfPages: [104], questions: qRange(1, 2, { 1: ['i', 'ii', 'iii', 'iv'], 2: ['i', 'ii', 'iii', 'iv', 'v', 'vi'] }) },
+  { chapter: 3, exercise: '3.3', enPdfPages: [103, 104], enPrintedPages: [97, 98], taPdfPages: [105], questions: qRange(1, 4, { 1: ['i', 'ii', 'iii'], 2: ['i', 'ii'], 3: ['i', 'ii'], 4: ['i', 'ii'] }) },
   { chapter: 3, exercise: '3.4', enPdfPages: [105], enPrintedPages: [99], taPdfPages: [107], questions: qRange(1, 2, { 1: ['i', 'ii', 'iii', 'iv'], 2: ['i', 'ii', 'iii', 'iv'] }) },
   { chapter: 3, exercise: '3.5', enPdfPages: [107], enPrintedPages: [101], taPdfPages: [109], questions: qRange(1, 5, { 1: ['i', 'ii', 'iii'], 2: ['i', 'ii'], 3: ['i', 'ii', 'iii', 'iv'] }) },
-  { chapter: 3, exercise: '3.6', enPdfPages: [109], enPrintedPages: [103], taPdfPages: [111], questions: qRange(1, 8, { 1: ['i', 'ii', 'iii'], 2: ['i', 'ii', 'iii'] }) },
+  { chapter: 3, exercise: '3.6', enPdfPages: [109], enPrintedPages: [103], taPdfPages: [111], questions: qRange(1, 8, { 1: ['i', 'ii', 'iii'], 2: ['i', 'ii'] }) },
   { chapter: 3, exercise: '3.7', enPdfPages: [111], enPrintedPages: [105], taPdfPages: [113], questions: qRange(1, 2, { 1: ['i', 'ii', 'iii'], 2: ['i', 'ii', 'iii', 'iv', 'v'] }) },
   { chapter: 3, exercise: '3.8', enPdfPages: [112, 113], enPrintedPages: [106, 107], taPdfPages: [115], questions: qRange(1, 3, { 1: ['i', 'ii', 'iii', 'iv'], 2: ['i', 'ii'], 3: ['i', 'ii'] }) },
   { chapter: 3, exercise: '3.9', enPdfPages: [115], enPrintedPages: [109], taPdfPages: [117], questions: qRange(1, 2, { 1: ['i', 'ii', 'iii', 'iv'], 2: ['i', 'ii', 'iii', 'iv'] }) },

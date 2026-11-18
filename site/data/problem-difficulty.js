@@ -4422,6 +4422,300 @@ const metadata={
       "level": "medium",
       "basis": "Model currency counts and interchanged denominations as a 3-variable linear system.",
       "review": "implementation-audit"
+    },
+    "c10-3-ex3-2-q1-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Use Euclid's division algorithm for polynomials to find the GCD of degree-4 and degree-3 polynomials.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-2-q1-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Perform polynomial long division on degree-4 polynomials and factor out numerical constants to find the GCD.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-2-q1-iii": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Extract common monomial factors 3x and 6x first, then apply polynomial long division to find the full GCD.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-2-q1-iv": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Find the numerical GCD of 3 and 6 alongside polynomial long division for degree-3 polynomials.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-2-q2-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Compute the LCM of two monomials by taking the numerical LCM and highest powers of each variable.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-2-q2-ii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor out −12 from −12(a² − b²) and apply the difference of squares identity to find the LCM.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-2-q2-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor out common monomial factors and use x² − 16 = (x − 4)(x + 4) to find the LCM.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-2-q2-iv": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor a quadratic trinomial and a difference of cubes p³ − 27 to determine the polynomial LCM.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-2-q2-v": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor three quadratic trinomials with leading coefficients 2, 3, and 6 to find their LCM.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-2-q2-vi": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor homogeneous two-variable polynomials using a perfect square and difference of cubes to find the LCM.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-3-q1-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor three homogeneous cubic polynomials in x and y and verify f(x) × g(x) = LCM × GCD for pairs.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-3-q1-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor sum of cubes x³ + y³ and x⁴ + x²y² + y⁴ and verify the product identity f(x) × g(x) = LCM × GCD.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-3-q1-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor out common monomials and verify the product relation f(x) × g(x) = LCM × GCD.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-3-q2-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor two polynomials and divide their product by the given GCD (a − 2) to find the LCM.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-3-q2-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor a difference/sum of cubes with a monomial factor and divide by the given GCD to find the LCM.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-3-q3-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor cubic polynomials and divide their product by the given LCM to find the GCD.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-3-q3-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor degree-4 polynomials using sum and difference of cubes and divide by the LCM to find the GCD.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-3-q4-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor f(x), LCM, and GCD by grouping and use g(x) = (LCM × GCD) / f(x) to find the missing polynomial.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-3-q4-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Use f(x) = (LCM × GCD) / g(x) with cubic and quadratic factors to determine the unknown polynomial f(x).",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-4-q1-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor difference of squares and a common factor to reduce a rational expression to lowest form.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-4-q1-ii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor numerator and denominator quadratics and cancel the common binomial factor (x − 5).",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-4-q1-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor out 9 in the numerator and factor the denominator quadratic to cancel (x + 2).",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-4-q1-iv": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor a cubic polynomial by grouping and cancel common linear factors with a difference of cubes.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-4-q2-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Set the denominator 8y = 0 to determine the excluded value of a rational expression.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-4-q2-ii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor the quadratic denominator p² + 6p + 8 = 0 to find the two excluded values.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-4-q2-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Solve x² − 25 = 0 to identify the excluded values where the denominator vanishes.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-4-q2-iv": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor the cubic denominator x³ + x² − 6x = x(x + 3)(x − 2) to find all three excluded values.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q1-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Cancel common numerical coefficients and variable powers when multiplying rational expressions.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q1-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor a difference of fourth powers p⁴ − 16 and quadratic trinomials to multiply rational expressions.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q1-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor out common monomial factors in two variables and cancel shared binomials.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q2-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor quadratic trinomials and a difference of squares to multiply two rational expressions.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q2-ii": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Factor a sum and difference of cubes along with homogeneous quadratics in x and y to simplify the product.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q3-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Invert the divisor fraction and factor quadratic, square, and difference-of-cubes expressions.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q3-ii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Multiply by the reciprocal and cancel common binomial factors after factoring quadratics.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q3-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Factor two quadratic trinomials and divide the rational expressions by multiplying by the reciprocal.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q3-iv": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor leading-coefficient quadratics and a sum of cubes to simplify rational division.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q4": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Evaluate x² + y² by factoring rational expressions for x and y first and using (x − y)² + 2xy.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-5-q5": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Substitute P(x) and Q(x) into [P² − Q²] / [P² + Q²] and simplify via difference of squares.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q1-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Rewrite x − 2 as −(2 − x) to combine rational expressions over a common denominator.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q1-ii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Use x − 3 = −(3 − x) to combine fractions and simplify using the difference of squares.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q1-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Subtract numerators over the common denominator x − y and factor the difference of cubes.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q2-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Combine fractions over (x + 1)(x − 2) and cancel the common factor after simplifying the numerator.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q2-ii": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Combine two rational expressions in x and y over (x + y)(x − y) and factor the degree-3 numerator by grouping.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q3": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Recognize x² + 2 = (x² + 1) + 1 to split and cancel terms when subtracting from a rational expression.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q4": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Solve for the subtracted rational expression Q(x) by factoring the quadratic denominator and simplifying.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q5": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Evaluate 1/A + 1/B − 2B/(A² − B²) by substituting the given rational expressions for A and B.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q6": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Prove (A + B)² + (A − B)² = 2(x² + 1)/(x² − 1) using the algebraic identity 2(A² + B²).",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q7": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Model combined work rates as 1/4 + 1/6, solve for total hours, and convert to hours and minutes.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-6-q8": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Formulate and solve a rational equation for fruit prices per kg and compute the weight of each fruit bought.",
+      "review": "implementation-audit"
     }
   },
   "solutionReviews": {
