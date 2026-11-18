@@ -4,7 +4,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path');
 const {chromium}=require('playwright'),{server,launchOptions}=require('./dashboard_test_support.cjs');
 const {load}=require('./build_g9_math.cjs');
-const widths=[320,360,393,430],samples=new Map(load().map(q=>[q.chapter,q.id]));
+const records=load(),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.chapter,q.id]));
 const normalize=s=>String(s??'').replace(/\s+/g,' ').trim();
 async function inspect(page,q,lang){
  const state=await page.evaluate(({q,lang})=>{
@@ -44,7 +44,7 @@ async function inspect(page,q,lang){
   const results=await Promise.all(widths.map(async width=>{
    const context=await browser.newContext({viewport:{width,height:852},serviceWorkers:'block'}),page=await context.newPage();let formulas=0;
    page.on('pageerror',e=>errors.push(e.message));
-   try{let done=0,lastChapter=null;for(const q of load()){
+   try{let done=0,lastChapter=null;for(const q of records){
     const route=app.base+'/index.html?class=9&question='+encodeURIComponent(q.id);
     if(lastChapter!==q.chapter){await page.goto(route);lastChapter=q.chapter;}
     else await page.evaluate(url=>{history.pushState({},'',url);dispatchEvent(new PopStateEvent('popstate'));},route);
@@ -54,11 +54,11 @@ async function inspect(page,q,lang){
     await page.evaluate(()=>document.querySelector('#langTa').click());await page.evaluate(()=>window.TriggleNotation.prepare(document));
     formulas+=await inspect(page,q,'ta');
     await page.evaluate(()=>document.querySelector('#langEn').click());
-    if(++done%75===0)console.log('Progress '+width+'px: '+done+'/378 questions in both languages');
+    if(++done%75===0)console.log('Progress '+width+'px: '+done+'/'+records.length+' questions in both languages');
     if(width===393&&samples.get(q.chapter)===q.id){await page.locator('#lessonCard').screenshot({path:path.join(output,'chapter-'+q.chapter+'-393.png')});}
    }}finally{await context.close();}
-   console.log('PASS '+width+'px: 378 questions, English/Tamil, '+formulas+' formula instances; source parity, complete steps, MathML, clipping and page overflow');
-   return {width,questions:378,languages:['en','ta'],formulas};
+   console.log('PASS '+width+'px: '+records.length+' questions, English/Tamil, '+formulas+' formula instances; source parity, complete steps, MathML, clipping and page overflow');
+   return {width,questions:records.length,languages:['en','ta'],formulas};
   }));
   assert.deepEqual(errors,[],'No browser errors');
   await fs.writeFile(path.join(output,'sweep-results.json'),JSON.stringify(results,null,2));

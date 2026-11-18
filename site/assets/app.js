@@ -485,15 +485,19 @@
   if(['stats','area','sets'].includes(kind))return item.kind==='practice';
   return ['triangle','two-triangles','two-right','kite','tree','unitcircle','complement-pairs','tower','circle','wave','inverse','real-number-line','real-number-arrows'].includes(kind);
  }
+ function textbookFigureImage(item,maxHeight){
+  const alt=tr(item.figureAlt)||tr(item.label)+' textbook figure';
+  return '<img src="'+esc(encodeURI(item.figureSrc))+'" alt="'+esc(alt)+'" style="display:block;max-width:100%;max-height:'+maxHeight+'vh;width:auto;height:auto;margin:auto;object-fit:contain">';
+ }
  function renderInlineFigure(){
    const figure=$('inlineFigure');const yes=isQuestionFigure(current);
    figure.hidden=!yes; if(!yes)return;
    const aligned=window.TriggleSetVenn?.render(current,lang);
-   const svg=current.figureSrc?'<img src="'+encodeURI(current.figureSrc)+'" alt="'+esc(tr(current.label))+' textbook figure" style="display:block;max-width:100%;max-height:66vh;width:auto;height:auto;margin:auto;object-fit:contain">':(aligned?.html||window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)}));
+   const svg=current.figureSrc?textbookFigureImage(current,66):(aligned?.html||window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)}));
    $('inlineFigureVisual').innerHTML=svg;
    const d=current.diagram;
    const measures=d?.kind==='triangle'?((lang==='ta'?'எதிர்ப்பக்கம் ':'Opposite ')+d.opp+' · '+(lang==='ta'?'அடுத்துள்ள பக்கம் ':'Adjacent ')+d.adj+' · '+(lang==='ta'?'கர்ணம் ':'Hypotenuse ')+d.hyp+'. '):'';
-   $('inlineFigureCaption').textContent=current.figureSrc?'2025 Tamil Nadu Mathematics textbook figure.':(aligned?.caption||(measures+ui('inlineFigureNote')));
+   $('inlineFigureCaption').textContent=current.figureSrc?(tr(current.figureCaption)||'2025 Tamil Nadu Mathematics textbook figure.'):(aligned?.caption||(measures+ui('inlineFigureNote')));
  }
  function renderText(){
   // Icon-only controls on narrow readers still have full bilingual names.
@@ -587,10 +591,10 @@
  function showDiagram(){
   if(!hasUsefulFigure(current))return;
   const context={item:current,lang,renderText:tr};
-  let graphic=current.figureSrc?{html:'<img src="'+encodeURI(current.figureSrc)+'" alt="'+esc(tr(current.label))+' textbook figure" style="display:block;max-width:100%;max-height:78vh;width:auto;height:auto;margin:auto;object-fit:contain">',caption:'2025 textbook figure.'}:(window.TriggleSetVenn?.render(current,lang)||window.TriggleConcept?.render(context));
+  let graphic=current.figureSrc?{html:textbookFigureImage(current,78),caption:tr(current.figureCaption)||'2025 textbook figure.'}:(window.TriggleSetVenn?.render(current,lang)||window.TriggleConcept?.render(context));
   if(!graphic){let svg='';if(current.diagram&&typeof current.diagram==='object')svg=window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});else svg=window.TriggleDraw.drawSimple(current.diagram||'identity');graphic={html:svg,caption:lang==='ta'?'படம் விளக்கத்திற்காக மட்டுமே; அளவுப்படி இல்லாமல் இருக்கலாம்.':'Original conceptual illustration; not necessarily drawn to scale.'}}
   $('diagramContent').innerHTML=graphic.html;
-  $('visualTitle').textContent=tr(current.title);
+  $('visualTitle').textContent=tr(current.figureCaption)||tr(current.title);
   // Same final answer inside glass viewer lets students compare regions to result.
   $('diagramCompareAnswer').innerHTML=$('answerText').innerHTML;
   $('diagramCompareLabel').textContent=ui('finalAnswer');

@@ -1,4 +1,4 @@
-// Grade 9 English 2025 source checked; original solutions; page-image review pending.
+// Grade 9 Exercise 3.2 Q4. English source page and answer appendix visually checked.
 (()=>{'use strict';
 const entries=[
   {
@@ -19,46 +19,46 @@ const entries=[
       "ta": "Roots of four linear equations (English only)"
     },
     "q": {
-      "en": "Find the roots of the polynomial equations .\n(i) 5x – 6 = 0 (ii) x +3 = 0\n(iii) 10x + 9 = 0 (iv) 9x – 4 = 0",
-      "ta": "English-language question; Tamil version not changed. Find the roots of the polynomial equations .\n(i) 5x – 6 = 0 (ii) x +3 = 0\n(iii) 10x + 9 = 0 (iv) 9x – 4 = 0"
+      "en": "Find the roots of the polynomial equations .\n(i) 5x – 6 = 0 (ii) x +3 = 0\n(iii) 10x + 9 = 0 (iv) 9x – 4 = 0"
     },
     "steps": [
       {
         "en": "For a linear equation ax+b=0 with a≠0, isolate x.",
-        "ta": "English explanation (Tamil unchanged): For a linear equation ax+b=0 with a≠0, isolate x.",
         "eq": "x = −b/a"
       },
       {
         "en": "Move the constant term in parts (i) and (ii).",
-        "ta": "English explanation (Tamil unchanged): Move the constant term in parts (i) and (ii).",
         "eq": "(i) 5x=6 ⇒ x=[[6|5]]; (ii) x=−3"
       },
       {
         "en": "Move the constant term and divide in parts (iii) and (iv).",
-        "ta": "English explanation (Tamil unchanged): Move the constant term and divide in parts (iii) and (iv).",
         "eq": "(iii) 10x=−9 ⇒ x=−[[9|10]]; (iv) 9x=4 ⇒ x=[[4|9]]"
       },
       {
         "en": "Each value makes its original left-hand side equal zero.",
-        "ta": "English explanation (Tamil unchanged): Each value makes its original left-hand side equal zero.",
         "eq": "5([[6|5]])−6=0; −3+3=0; 10(−[[9|10]])+9=0; 9([[4|9]])−4=0"
       }
     ],
     "answer": "(i) [[6|5]]; (ii) −3; (iii) −[[9|10]]; (iv) [[4|9]]",
-    "kind": "reference",
-    "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 3.2, Q4 · printed p. 92; mathematical solutions original to Triggle; page-image fidelity review pending.",
+    "kind": "textbook",
+    "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics English · Exercise 3.2, Q4 · printed p. 91 (PDF p. 97) · answer appendix printed p. 310 (PDF p. 316). Tamil editorial and teacher review pending.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
-    "page": 98,
+    "page": 97,
     "sourceFidelity": {
-      "status": "pdf-text-checked-en-visual-pending",
-      "enPrintedPage": 92,
-      "enPdfPage": 98,
-      "tamilEditorial": "not-in-scope",
-      "notes": [
-        "Original SCERT textbook English wording checked against Drive extraction; typography normalized where PDF text encodes math poorly.",
-        "No external diagram required for this question; page image has not been visually inspected."
-      ]
-    }
+      "status": "english-source-page-visual-checked",
+      "enPrintedPage": 91,
+      "enPdfPage": 97,
+      "answerKeyEnPrintedPage": 310,
+      "answerKeyEnPdfPage": 316,
+      "sourcePdfSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "comparableTamilPrintedPage": 99,
+      "comparableTamilPdfPage": 105,
+      "tamilReview": "pending",
+      "teacherReview": "pending"
+    },
+    "edition": "2025",
+    "translationReview": "pending",
+    "releaseStatus": "english-preview"
   }
 ];
 const grade=window.TRIGGLE_CLASSES?.[9];

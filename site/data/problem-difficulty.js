@@ -4182,7 +4182,121 @@ const metadata={
     "c10-2-ex2-7-q2-ii": {"grade":10,"level":"easy","basis":"Write first three G.P. terms when a = sqrt(2) and r = sqrt(2)","review":"implementation-audit"},
     "c10-2-ex2-7-q9": {"grade":10,"level":"difficult","basis":"Use symmetric G.P. representation a/r, a, ar and solve quadratic for common ratio","review":"implementation-audit"},
     "c10-2-ex2-7-q10": {"grade":10,"level":"medium","basis":"Model 5% annual salary increments over 5 years using compound G.P. factor 1.05^5","review":"implementation-audit"},
-    "c10-2-ex2-7-q12": {"grade":10,"level":"difficult","basis":"Combine A.P. exponent differences with G.P. middle-term property y^2 = xz","review":"implementation-audit"}
+    "c10-2-ex2-7-q12": {"grade":10,"level":"difficult","basis":"Combine A.P. exponent differences with G.P. middle-term property y^2 = xz","review":"implementation-audit"},
+    "g9-ch3-ex3.2-q1-i": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Substitute a given integer and evaluate using order of operations.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q1-ii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Substitute a given integer and evaluate using order of operations.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q1-iii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Substitute a given integer and evaluate using order of operations.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q2": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Combines substitution and simplification of a product with radicals.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-i": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Set a linear polynomial to zero and isolate the input.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-ii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Set a linear polynomial to zero and isolate the input.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-iii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Set a linear polynomial to zero and isolate the input.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-iv": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Set a linear polynomial to zero and isolate the input.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-v": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Set a linear polynomial to zero and isolate the input.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q3-vi": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Isolate the variable using a symbolic nonzero coefficient.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q5-i": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Test the proposed input by substitution and compare the output with zero.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q5-ii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Test the proposed input by substitution and compare the output with zero.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q5-iii": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Verify a symbolic substitution and state its domain.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q5-iv": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Check two inputs and identify the zero factor in each product.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q6-i": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Identify the horizontal-axis intersections in the given figure.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q6-ii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Identify the horizontal-axis intersections in the given figure.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q6-iii": {
+      "grade": 9,
+      "level": "easy",
+      "basis": "Identify the horizontal-axis intersections in the given figure.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q6-iv": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Identify the horizontal-axis intersections in the given figure.",
+      "review": "implementation-audit"
+    },
+    "g9-ch3-ex3.2-q6-v": {
+      "grade": 9,
+      "level": "medium",
+      "basis": "Identify the horizontal-axis intersections in the given figure.",
+      "review": "implementation-audit"
+    },
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
