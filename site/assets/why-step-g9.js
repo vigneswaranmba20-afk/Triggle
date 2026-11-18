@@ -22,7 +22,7 @@ function figure(spec,lang){
    svg.append(shape('text',{x,y,'font-size':16,'text-anchor':'middle',fill:'#322d46','font-weight':700},t));
  }else if(spec.type==='numberline'){
   cap.textContent=ta?'கருத்துப் படம்: a < x < b':'Concept sketch: a < x < b';
-  svg=shape('svg',{...attrs,viewBox:'0 0 340 110','aria-label':'Number line with values a, x and b in order'});
+  svg=shape('svg',{...attrs,viewBox:'0 0 340 110',lang:'en','aria-label':'Number line with values a, x and b in order'});
   svg.append(shape('line',{x1:25,y1:48,x2:316,y2:48,stroke:'#7560a7','stroke-width':2.5}));
   svg.append(shape('path',{d:'M306 42 L317 48 L306 54',fill:'none',stroke:'#7560a7','stroke-width':2}));
   for(const [x,t] of [[65,'a'],[166,'x'],[268,'b']]){
@@ -31,7 +31,9 @@ function figure(spec,lang){
   }
  }else if(spec.type==='triangle'){
   cap.textContent=ta?'கருத்துப் படம்: அளவுக்கேற்ப வரையப்படவில்லை':'Concept sketch: not drawn to scale';
-  svg=shape('svg',{...attrs,'aria-label':'Right triangle with generic sides and perpendicular height'});
+  svg=shape('svg',{...attrs,lang:'en','aria-label':spec.mode==='altitude'
+   ?'Triangle with an altitude perpendicular to its base'
+   :'Right triangle with its base and perpendicular height labelled'});
   if(spec.mode==='altitude'){
    // A general triangle is not necessarily right angled; the dashed altitude
    // is perpendicular to its base and is not an assertion about source lengths.
@@ -47,7 +49,7 @@ function figure(spec,lang){
   svg.append(shape('text',{x:155,y:160,'text-anchor':'middle','font-size':16,fill:'#302843'},'base'));
  }else if(spec.type==='coordinates'){
   cap.textContent=ta?'கருத்துப் படம்: முதலில் x, பின்னர் y':'Concept sketch: horizontal x first, vertical y second';
-  svg=shape('svg',{...attrs,'aria-label':'Coordinate axes with point x comma y'});
+  svg=shape('svg',{...attrs,lang:'en','aria-label':'Coordinate axes with point x comma y'});
   svg.append(shape('line',{x1:40,y1:135,x2:308,y2:135,stroke:'#7560a7','stroke-width':2}));
   svg.append(shape('line',{x1:100,y1:155,x2:100,y2:18,stroke:'#7560a7','stroke-width':2}));
   svg.append(shape('line',{x1:100,y1:65,x2:228,y2:65,stroke:'#b0a3c8','stroke-dasharray':'5 5'}));
@@ -57,7 +59,7 @@ function figure(spec,lang){
    svg.append(shape('text',{x,y,'font-size':16,fill:'#322d46'},t));
  }else if(spec.type==='dice'){
   cap.textContent=ta?'சமவாய்ப்புள்ள ஆறு முடிவுகள்':'Six equally likely die faces';
-  svg=shape('svg',{...attrs,viewBox:'0 0 340 95','aria-label':'A row showing the six possible faces of one fair die'});
+  svg=shape('svg',{...attrs,viewBox:'0 0 340 95',lang:'en','aria-label':'A row showing the six possible faces of one fair die'});
   for(let i=0;i<6;i++){
    const x=15+i*53;
    svg.append(shape('rect',{x,y:18,width:45,height:45,rx:8,fill:'#faf8fd',stroke:'#7560a7','stroke-width':2}));

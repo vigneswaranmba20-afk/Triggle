@@ -20,23 +20,29 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    ['g9-ch9-ex9.1-q4','9']
   ];
   const route=id=>app.base+'/index.html?class=9&question='+id;
-  for(const width of [320,360,390,412]){
+  const widths=[320,360,390,393,412,430,768,1280];
+  for(const width of widths){
    await page.setViewportSize({width,height:844});
    for(const [id] of cases){
     await page.goto(route(id),{waitUntil:'domcontentloaded'});
     const control=page.locator('#stepsList details.why-step-g9');
+    const summary=control.locator('summary');
     await control.waitFor({timeout:12000});
     assert.equal(await control.count(),1,'Quiet one disclosure per authored exercise '+id);
     assert.equal(await control.evaluate(el=>el.open),false,'Collapsed by default '+id);
+    assert.ok(await summary.evaluate(el=>el.offsetHeight>=44),'Readable touch target '+id+' @'+width);
+    assert.ok(await summary.evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=14),'Readable disclosure label '+id+' @'+width);
     const before=await page.evaluate(()=>({
       q:document.querySelector('#questionText')?.innerHTML,
       steps:[...document.querySelectorAll('#stepsList li.worked-step:not(.final-answer-step)')].map(li=>li.querySelector('.step-equation')?.innerHTML),
       final:document.querySelector('.final-answer-step')?.innerHTML,
       scroll:document.documentElement.scrollWidth,viewport:innerWidth
     }));
-    await control.locator('summary').click();
+    await summary.click();
     assert.equal(await control.evaluate(el=>el.open),true,'Open on tap '+id);
-    assert.ok((await control.locator('.why-step-panel p').innerText()).length>34,'Explanation is meaningful '+id);
+    const explanation=control.locator('.why-step-panel p');
+    assert.ok((await explanation.innerText()).length>34,'Explanation is meaningful '+id);
+    assert.ok(await explanation.evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=16),'Explanation uses reader prose scale '+id+' @'+width);
     const after=await page.evaluate(()=>({
       q:document.querySelector('#questionText')?.innerHTML,
       steps:[...document.querySelectorAll('#stepsList li.worked-step:not(.final-answer-step)')].map(li=>li.querySelector('.step-equation')?.innerHTML),
@@ -47,12 +53,12 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert.deepEqual(after.steps,before.steps,'Every original mathematical step unchanged '+id);
     assert.deepEqual(after.final,before.final,'Final answer unchanged '+id);
     assert.ok(after.scroll<=Math.max(before.scroll,after.viewport)+1,'No overflow introduced '+id+' @'+width);
-    await control.locator('summary').click();
+    await summary.click();
     assert.equal(await control.evaluate(el=>el.open),false,'Close in place '+id);
    }
   }
   // A relevant set-intersection question gets a conceptual Venn when authored.
-  await page.setViewportSize({width:390,height:844});
+  await page.setViewportSize({width:320,height:844});
   await page.goto(route('g9-ch1-ex1.1-q3-b-i'));
   const first=page.locator('#stepsList details.why-step-g9');
   await first.locator('summary').focus();await page.keyboard.press('ArrowRight');
@@ -65,6 +71,13 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
   const original=await explanation.evaluate(node=>{const clone=node.cloneNode(true);clone.querySelectorAll('.triggle-tex').forEach(el=>el.replaceWith(document.createTextNode(el.dataset.mathFallback)));return clone.textContent;});
   assert.equal(original.trim(),expected,'Tamil optional explanation preserves its exact source');
   assert((await explanation.locator('math mo').allTextContents()).includes('∈'),'Membership is semantic MathML in the Tamil explanation');
+  assert.ok(await explanation.evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=16),'Tamil explanation uses reader prose scale');
+  await page.goto(route('g9-ch7-ex7.1-q3'));
+  const altitude=page.locator('#stepsList details.why-step-g9');
+  await altitude.locator('summary').click();
+  const sketch=altitude.getByRole('img',{name:'Triangle with an altitude perpendicular to its base'});
+  assert.ok(await sketch.isVisible(),'Accessible name describes the generic altitude shown in the figure');
+  assert.equal(await sketch.getAttribute('lang'),'en','English figure description is marked in the Tamil interface');
   // Generic diagrams are optional: when present, they must be inline SVG and
   // remain hidden until the specific explanation is opened.
   await page.goto(route('c9-exercise-6-1-q1'));
@@ -79,7 +92,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
   assert.equal(await page.locator('#stepsList .why-step-g10').count(),2,'Grade 10 existing explanations retained');
   assert.deepEqual(errors,[],'No browser runtime exceptions');
   assert.deepEqual(missing,[],'No missing resources');
-  console.log('PASS Grade 9 Why: nine chapters at 320/360/390/412px, bilingual switch, keyboard, preserved questions/equations/answers, and Grade 10 regression.');
+  console.log('PASS Grade 9 Why: nine chapters at '+widths.join('/')+'px, readable disclosures, bilingual switch, keyboard, figure descriptions, preserved questions/equations/answers, and Grade 10 regression.');
   await context.close();
  }finally{await browser.close();await app.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

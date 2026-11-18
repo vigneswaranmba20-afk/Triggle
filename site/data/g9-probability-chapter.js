@@ -26,8 +26,8 @@ window.TRIGGLE_PROB_PATH={chapterId:'g9-ch9',stages:[
       "ta": "English version only — Tamil editorial content pending. 0 ≤ P(E) ≤ 1"
     },
     "question": {
-      "en": "Which value is an impossible probability?",
-      "ta": "English version only — Tamil editorial content pending. Which value is an impossible probability?"
+      "en": "Which value cannot be a probability?",
+      "ta": "English version only — Tamil editorial content pending. Which value cannot be a probability?"
     },
     "choices": [
       {
@@ -45,12 +45,12 @@ window.TRIGGLE_PROB_PATH={chapterId:'g9-ch9',stages:[
     ],
     "correct": 2,
     "hint": {
-      "en": "Probability must be between zero and one.",
-      "ta": "English version only — Tamil editorial content pending. Probability must be between zero and one."
+      "en": "The range includes both zero and one.",
+      "ta": "English version only — Tamil editorial content pending. The range includes both zero and one."
     },
     "why": {
-      "en": "1.2 exceeds 1, the maximum possible probability.",
-      "ta": "English version only — Tamil editorial content pending. 1.2 exceeds 1, the maximum possible probability."
+      "en": "An impossible event has probability 0, which is allowed. The value 1.2 exceeds the maximum of 1.",
+      "ta": "English version only — Tamil editorial content pending. An impossible event has probability 0, which is allowed. The value 1.2 exceeds the maximum of 1."
     }
   },
   {

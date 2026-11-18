@@ -42,6 +42,14 @@ for(const i of [9,10]){
  assert.equal(d.kind,'unitcircle');assert.equal(d.probabilitySpinner,true);assert.deepEqual(Array.from(d.sectors),[1,2,3,4,5,6,7,8]);
 }
 assert.equal(ctx.window.TRIGGLE_PROB_PATH.stages.length,5,'All five numbered chapter concepts');
+const probabilityRange=ctx.window.TRIGGLE_PROB_PATH.stages.find(stage=>stage.id==='probability-1');
+for(const lang of ['en','ta']){
+ assert.match(probabilityRange.question[lang],/Which value cannot be a probability\?$/);
+ assert.match(probabilityRange.hint[lang],/includes both zero and one/);
+ assert.match(probabilityRange.why[lang],/An impossible event has probability 0, which is allowed/);
+}
+const invalidChoices=Array.from(probabilityRange.choices,({en},index)=>({value:Number(en),index})).filter(({value})=>value<0||value>1);
+assert.deepEqual(invalidChoices,[{value:1.2,index:probabilityRange.correct}],'Only the out-of-range value is an invalid probability');
 assert.equal(ctx.window.TRIGGLE_TEXTBOOK_TASKS['g9-ch9'].length,7,'3 activities + 2 thinking corners + 2 progress checks');
 assert.equal(6/8,3/4);assert.equal(250/1500,1/6);assert.equal(860/1500,43/75);assert.equal(20/1500,1/75);
 assert.ok(Math.abs((1-91/100)-9/100)<1e-12);assert.equal(10/20,0.5);assert.equal(233+106<=1184,true);

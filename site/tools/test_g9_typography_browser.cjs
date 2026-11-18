@@ -20,11 +20,30 @@ async function inspect(page,q,lang){
   const hint=document.querySelector('details.why-step-g9')?window.TriggleWhyStepG9.hints[q.id]:null;
   const expected=count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null)+count(p.questionMath[lang]||p.questionMath.en)+count(p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s)=>n+count(s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);
   const rendered=document.querySelectorAll('#questionText .katex,#stepsList .katex').length;
+  const formulas=[...document.querySelectorAll('#questionText .triggle-tex,#stepsList .triggle-tex')].map(el=>{
+   const visual=el.querySelector('.katex-html');
+   const {top}=el.getBoundingClientRect();
+   const height=el.clientHeight, width=el.clientWidth, scroll=el.scrollWidth;
+   const scrolls=scroll>width+1;
+   // The outer KaTeX line box can fit even when a raised glyph or a
+   // denominator extends past it. Inspect the actual boxes inside scrollers.
+   let glyphOverhang=0;
+   if(scrolls){
+    for(const node of visual.querySelectorAll('span, svg')){
+     if(node.children.length||(!node.textContent.trim()&&!node.matches('svg,.frac-line')))continue;
+     const glyph=node.getBoundingClientRect();
+     glyphOverhang=Math.max(glyphOverhang,top-glyph.top,glyph.bottom-top-height);
+    }
+   }
+   return {height,glyphHeight:visual.getBoundingClientRect().height,scrolls,tab:el.tabIndex,
+    mathml:!!el.querySelector('math'),overflowY:getComputedStyle(el).overflowY,glyphOverhang,
+    fallback:el.dataset.mathFallback};
+  });
   return {expected,rendered,width:innerWidth,pageWidth:document.documentElement.scrollWidth,
    errors:document.querySelectorAll('[data-math-error]').length,
    question:fallback('#questionText'),answer:fallback('.final-answer-value'),
    steps:[...document.querySelectorAll('#stepsList li.worked-step:not(.final-answer-step)')].map((li,i)=>({reason:fallback('#stepsList li.worked-step:nth-child('+(i+1)+') .step-reason'),eq:fallback('#stepsList li.worked-step:nth-child('+(i+1)+') .step-equation')})),
-   formulas:[...document.querySelectorAll('#questionText .triggle-tex,#stepsList .triggle-tex')].map(el=>({height:el.clientHeight,glyphHeight:el.querySelector('.katex-html').getBoundingClientRect().height,width:el.clientWidth,scroll:el.scrollWidth,tab:el.tabIndex,mathml:!!el.querySelector('math')}))};
+   formulas};
  },{q,lang});
  const label=q.id+' '+lang+' '+state.width;
  assert.equal(state.errors,0,label+' no renderer fallback');
@@ -33,8 +52,27 @@ async function inspect(page,q,lang){
  assert.equal(normalize(state.answer),normalize(q.answer?.[lang]||q.answer),label+' final answer');
  assert.equal(state.steps.length,q.steps.length,label+' all steps retained');
  state.steps.forEach((s,i)=>{assert.equal(normalize(s.reason),normalize(q.steps[i][lang]||q.steps[i].en),label+' reason '+i);assert.equal(normalize(s.eq),normalize(q.steps[i].eq),label+' equation '+i);});
+ assert.equal(state.width,page.viewportSize().width,label+' viewport stays at its requested mobile width');
  assert(state.pageWidth<=state.width+1,label+' no page overflow');
- for(const f of state.formulas){assert(f.mathml,label+' semantic MathML');assert(f.height+1>=f.glyphHeight,label+' no glyph clipping');if(f.scroll>f.width+1)assert.equal(f.tab,0,label+' keyboard-scrollable expression');}
+ for(const f of state.formulas){
+  assert(f.mathml,label+' semantic MathML');
+  assert(f.height+1>=f.glyphHeight,label+' no glyph clipping');
+  if(f.scrolls){
+   assert.equal(f.tab,0,label+' keyboard-scrollable expression');
+   assert(f.glyphOverhang<=2,label+' room for the glyphs in '+f.fallback+' ('+f.glyphOverhang+'px outside)');
+  }else{
+   assert.equal(f.overflowY,'visible',label+' no vertical clipping for fitting expression '+f.fallback);
+  }
+ }
+ if(q.id==='c9-exercise-6-2-q1-iii'&&state.width===320){
+  const identity=await page.locator('#questionText .triggle-tex').evaluate(el=>{
+   const terms=[...el.querySelectorAll('.katex-html > .base')];
+   const first=terms[0].getBoundingClientRect();
+   const last=terms.at(-1).getBoundingClientRect();
+   return {wraps:last.top>=first.bottom-1, fits:el.scrollWidth<=el.clientWidth+1, tab:el.tabIndex};
+  });
+  assert.deepEqual(identity,{wraps:true,fits:true,tab:-1},label+' whole identity is readable across two lines');
+ }
  return state.formulas.length;
 }
 (async()=>{
@@ -42,7 +80,7 @@ async function inspect(page,q,lang){
  const output=path.resolve('screenshots/g9-typography');await fs.mkdir(output,{recursive:true});
  try{
   const results=await Promise.all(widths.map(async width=>{
-   const context=await browser.newContext({viewport:{width,height:852},serviceWorkers:'block'}),page=await context.newPage();let formulas=0;
+   const context=await browser.newContext({viewport:{width,height:852},isMobile:true,hasTouch:true,serviceWorkers:'block'}),page=await context.newPage();let formulas=0;
    page.on('pageerror',e=>errors.push(e.message));
    try{let done=0,lastChapter=null;for(const q of records){
     const route=app.base+'/index.html?class=9&question='+encodeURIComponent(q.id);

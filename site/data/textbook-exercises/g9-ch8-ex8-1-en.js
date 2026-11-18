@@ -50,7 +50,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 283,
       "enPrintedPage": 277,
-      "taPdfPage": 310,
+      "taPdfPage": 300,
       "taPrintedPage": 294,
       "tamilEditorial": "pending",
       "notes": []
@@ -103,7 +103,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 283,
       "enPrintedPage": 277,
-      "taPdfPage": 310,
+      "taPdfPage": 300,
       "taPrintedPage": 294,
       "tamilEditorial": "pending",
       "notes": []
@@ -161,7 +161,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 283,
       "enPrintedPage": 277,
-      "taPdfPage": 310,
+      "taPdfPage": 300,
       "taPrintedPage": 294,
       "tamilEditorial": "pending",
       "notes": [
@@ -216,7 +216,7 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 283,
       "enPrintedPage": 277,
-      "taPdfPage": 310,
+      "taPdfPage": 300,
       "taPrintedPage": 294,
       "tamilEditorial": "pending",
       "notes": []
@@ -260,8 +260,8 @@
         "eq": "[[610+20p|30+p]] = 20.2"
       },
       {
-        "en": "Cross-multiply and solve.",
-        "ta": "English explanation (Tamil version pending): Cross-multiply and solve.",
+        "en": "Cross-multiply and solve for the missing frequency. The result means 20 students scored 20 marks.",
+        "ta": "English explanation (Tamil version pending): Cross-multiply and solve for the missing frequency. The result means 20 students scored 20 marks.",
         "eq": "610+20p = 606+20.2p ⇒ p = 20"
       },
       {
@@ -272,15 +272,15 @@
     ],
     "answer": "p = 20",
     "kind": "reference",
-    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics (English) · Exercise 8.1, printed pp. 277–278 / PDF pp. 283–284. PDF text compared; source page-image review pending.",
+    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics (English) · Exercise 8.1, printed p. 278 / PDF p. 284. Source question and answer key checked against the page images.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
     "page": 284,
     "sourceFidelity": {
-      "status": "pdf-text-checked-en-visual-pending",
+      "status": "english-source-page-visual-checked",
       "enPdfPage": 284,
       "enPrintedPage": 278,
-      "taPdfPage": 311,
-      "taPrintedPage": 295,
+      "taPdfPage": 300,
+      "taPrintedPage": 294,
       "tamilEditorial": "pending",
       "notes": []
     }
@@ -337,8 +337,8 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 284,
       "enPrintedPage": 278,
-      "taPdfPage": 311,
-      "taPrintedPage": 295,
+      "taPdfPage": 300,
+      "taPrintedPage": 294,
       "tamilEditorial": "pending",
       "notes": []
     }
@@ -371,8 +371,8 @@
         "eq": "x = 5,15,25,35,45; f = 5,7,15,28,8"
       },
       {
-        "en": "Take A = 25 and calculate d = x − A.",
-        "ta": "English explanation (Tamil version pending): Take A = 25 and calculate d = x − A.",
+        "en": "Choose 25 as the assumed mean. Each deviation tells how far a midpoint is above or below 25.",
+        "ta": "English explanation (Tamil version pending): Choose 25 as the assumed mean. Each deviation tells how far a midpoint is above or below 25.",
         "eq": "d = −20,−10,0,10,20"
       },
       {
@@ -381,22 +381,22 @@
         "eq": "Σf = 63; Σfd = −100−70+0+280+160 = 270"
       },
       {
-        "en": "Use the assumed mean formula.",
-        "ta": "English explanation (Tamil version pending): Use the assumed mean formula.",
+        "en": "Find the average deviation by dividing the weighted total by the total frequency. Add it to 25 to get an estimated mean of 29.29.",
+        "ta": "English explanation (Tamil version pending): Find the average deviation by dividing the weighted total by the total frequency. Add it to 25 to get an estimated mean of 29.29.",
         "eq": "Mean = 25 + [[270|63]] = [[205|7]] ≈ 29.29"
       }
     ],
     "answer": "[[205|7]] ≈ 29.29",
     "kind": "reference",
-    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics (English) · Exercise 8.1, printed pp. 277–278 / PDF pp. 283–284. PDF text compared; source page-image review pending.",
+    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics (English) · Exercise 8.1, printed p. 278 / PDF p. 284. Source question and answer key checked against the page images.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
     "page": 284,
     "sourceFidelity": {
-      "status": "pdf-text-checked-en-visual-pending",
+      "status": "english-source-page-visual-checked",
       "enPdfPage": 284,
       "enPrintedPage": 278,
-      "taPdfPage": 311,
-      "taPrintedPage": 295,
+      "taPdfPage": 300,
+      "taPrintedPage": 294,
       "tamilEditorial": "pending",
       "notes": []
     }
@@ -424,8 +424,8 @@
     },
     "steps": [
       {
-        "en": "Use midpoint x and a convenient assumed mean A = 27 with class width h = 5.",
-        "ta": "English explanation (Tamil version pending): Use midpoint x and a convenient assumed mean A = 27 with class width h = 5.",
+        "en": "Choose 27 years as the assumed mean. Measure each midpoint’s deviation from 27 in signed steps of five years.",
+        "ta": "English explanation (Tamil version pending): Choose 27 years as the assumed mean. Measure each midpoint’s deviation from 27 in signed steps of five years.",
         "eq": "x = 17,22,27,32,37,42; u=(x−27)/5 = −2,−1,0,1,2,3"
       },
       {
@@ -434,8 +434,8 @@
         "eq": "Σf = 105; Σfu = −8−20+0+24+20+27 = 43"
       },
       {
-        "en": "Apply the step deviation formula.",
-        "ta": "English explanation (Tamil version pending): Apply the step deviation formula.",
+        "en": "Multiply the average deviation by the five-year class width to convert it back to years. Add it to 27 to estimate the mean age at 29.05 years.",
+        "ta": "English explanation (Tamil version pending): Multiply the average deviation by the five-year class width to convert it back to years. Add it to 27 to estimate the mean age at 29.05 years.",
         "eq": "Mean = 27 + 5×[[43|105]] = [[610|21]] ≈ 29.05 years"
       },
       {
@@ -446,15 +446,15 @@
     ],
     "answer": "[[610|21]] ≈ 29.05 years",
     "kind": "reference",
-    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics (English) · Exercise 8.1, printed pp. 277–278 / PDF pp. 283–284. PDF text compared; source page-image review pending.",
+    "reference": "Tamil Nadu 2025 revised Standard Nine Mathematics (English) · Exercise 8.1, printed p. 278 / PDF p. 284. Source question and answer key checked against the page images.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
     "page": 284,
     "sourceFidelity": {
-      "status": "pdf-text-checked-en-visual-pending",
+      "status": "english-source-page-visual-checked",
       "enPdfPage": 284,
       "enPrintedPage": 278,
-      "taPdfPage": 311,
-      "taPrintedPage": 295,
+      "taPdfPage": 300,
+      "taPrintedPage": 294,
       "tamilEditorial": "pending",
       "notes": []
     }

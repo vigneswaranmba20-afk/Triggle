@@ -181,13 +181,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -283,13 +283,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -334,7 +334,19 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "In ∠A + ∠B + ∠C = 180°, the symbol ∠ means “angle” and ° means “degrees”. The 3 interior (inside) angles of any triangle always add up to 180°."
+          "en": [
+            "In ",
+            {
+              "latex": "\\angle A+\\angle B+\\angle C=180^\\circ",
+              "fallback": "∠A + ∠B + ∠C = 180°"
+            },
+            ", the symbol ∠ means “angle” and ° means “degrees”. The 3 interior (inside) angles of any triangle always add up to ",
+            {
+              "latex": "180^\\circ",
+              "fallback": "180°"
+            },
+            "."
+          ]
         }
       },
       {
@@ -346,7 +358,14 @@ const entries=[
           "display": true
         },
         "reasonMath": {
-          "en": "The four-sided shapes in S (square, rectangle, and rhombus) each have an interior-angle sum of 360°, while a circle has no polygon vertex angles."
+          "en": [
+            "The four-sided shapes in S (square, rectangle, and rhombus) each have an interior-angle sum of ",
+            {
+              "latex": "360^\\circ",
+              "fallback": "360°"
+            },
+            ", while a circle has no polygon vertex angles."
+          ]
         }
       },
       {
@@ -385,13 +404,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"
@@ -492,13 +511,13 @@ const entries=[
       "enPdfPages": [
         18
       ],
-      "taPrintedPage": 13,
-      "taPdfPage": 19,
+      "taPrintedPage": 14,
+      "taPdfPage": 20,
       "taPrintedPages": [
-        13
+        14
       ],
       "taPdfPages": [
-        19
+        20
       ],
       "tamilReview": "deferred",
       "tamilEditorial": "deferred"

@@ -15,8 +15,8 @@ assert.equal(manifest.batch,'q5(iii)-q6(iv)');
 assert.equal(manifest.release,'english-release-candidate');
 assert.equal(manifest.english.printedPage,12);
 assert.equal(manifest.english.pdfPage,18);
-assert.equal(manifest.tamil.printedPage,13);
-assert.equal(manifest.tamil.pdfPage,19);
+assert.deepEqual(manifest.tamil.printedPages,[13,14]);
+assert.deepEqual(manifest.tamil.pdfPages,[19,20]);
 assert.equal(manifest.tamil.translationReview,'deferred');
 assert.equal(manifest.parts.length,5);
 assert.equal(html.split('g9-ch1-ex1-2-q5-iii-q6-en.js').length-1,1,'Student Q5(iii)-Q6 module must be loaded once');
@@ -65,6 +65,9 @@ for(const m of manifest.parts){
   assert(!q.q.ta,'No invented Tamil text');
   assert.match(q.label.ta,/English only; Tamil review pending/);
   assert.equal(q.translationReview,'pending');
+  const pageIndex=manifest.questions.indexOf(m.question);
+  assert.equal(q.sourceFidelity.taPdfPage,manifest.tamil.pdfPages[pageIndex]);
+  assert.equal(q.sourceFidelity.taPrintedPage,manifest.tamil.printedPages[pageIndex]);
   assert.equal(q.steps.length,cand.steps.length,'Preserved step count '+m.id);
   assert.equal(fallback(q.questionMath.en),q.q.en,'Exact accessible question fallback '+m.id);
   assert.equal(fallback(q.answerMath),q.answer,'Exact accessible answer fallback '+m.id);
@@ -97,6 +100,8 @@ assert(q5iii.steps[2].en.includes('∩')&&q5iii.steps[2].en.includes('intersecti
 
 const q6iii=items.find(x=>x.id==='g9-ch1-ex1.2-q6-iii');
 assert(q6iii.steps[0].en.includes('∠')&&q6iii.steps[0].en.includes('°'),'Q6(iii) explains angle ∠ and degree ° symbols');
+assert.deepEqual(Array.from(q6iii.steps[0].reasonMath.en.filter(part=>part.latex),part=>part.fallback),['∠A + ∠B + ∠C = 180°','180°']);
+assert(q6iii.steps[1].reasonMath.en.some(part=>part.latex==='360^\\circ'),'The degree value uses the same notation in prose and working');
 
 const q6iv=items.find(x=>x.id==='g9-ch1-ex1.2-q6-iv');
 assert(q6iv.steps[2].en.includes('∅')&&q6iv.steps[2].en.includes('empty'),'Q6(iv) explains empty set symbol ∅');
