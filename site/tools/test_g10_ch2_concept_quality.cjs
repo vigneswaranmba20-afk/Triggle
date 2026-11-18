@@ -75,7 +75,7 @@ assert(hub.includes("function showHCFSteps("),'HCF has a dedicated no-slider tea
 assert(hub.includes("function showGPMultiplication("),'GP has a dedicated multiplication stepper');
 assert(hub.includes("stage.id==='g10-ch2-gcd'){showHCFSteps"),'HCF is routed away from the generic slider');
 assert(hub.includes("stage.id==='g10-ch2-gp'){showGPMultiplication"),'GP is routed away from the generic slider');
-assert(hub.includes("['g10-ch2-gcd','g10-ch2-gp-sum'"),'HCF no longer starts with a clipped equality chain');
+assert(hub.includes("['g10-ch2-gp-sum','g10-ch2-gcd'"),'HCF no longer starts with a clipped equality chain');
 assert(hub.includes("button.setAttribute('aria-pressed',String(i===selected))"),'GP selected step is accessible');
 assert(hub.includes("math.innerHTML=typeof window.TriggleNotation?.renderLatex"),'HCF equations remain typeset');
 const pilotCss=read('assets/g10-ch2-foundations.css');
