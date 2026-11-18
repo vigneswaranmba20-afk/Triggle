@@ -48703,11 +48703,21 @@ const texts={
     },
     " constant term has power zero."
   ],
-  "Read the signed number multiplying x. The constant 4 stands on its own.": [
+  "Read the signed number multiplying x. The coefficient of x is −3. The constant 4 stands on its own.": [
     "Read the signed number multiplying ",
     {
       "latex": "x",
       "fallback": "x"
+    },
+    ". The coefficient of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " is ",
+    {
+      "latex": "- 3",
+      "fallback": "−3"
     },
     ". The constant ",
     {
@@ -48739,15 +48749,25 @@ const texts={
     },
     "."
   ],
-  "Read the signed number multiplying x. Keep the minus sign in front of the square root.": [
+  "Read the signed number multiplying x. The coefficient of x is −√7. Keep the minus sign in front of the square root.": [
     "Read the signed number multiplying ",
     {
       "latex": "x",
       "fallback": "x"
     },
+    ". The coefficient of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " is ",
+    {
+      "latex": "- \\sqrt{7}",
+      "fallback": "−√7"
+    },
     ". Keep the minus sign in front of the square root."
   ],
-  "Write −x as negative one times x, then read the coefficient.": [
+  "Write −x as negative one times x. The coefficient of x is −1.": [
     "Write ",
     {
       "latex": "- x",
@@ -48758,13 +48778,33 @@ const texts={
       "latex": "x",
       "fallback": "x"
     },
-    ", then read the coefficient."
+    ". The coefficient of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " is ",
+    {
+      "latex": "- 1",
+      "fallback": "−1"
+    },
+    "."
   ],
-  "Read the number multiplying x. The constant 0.5 stands on its own.": [
+  "Read the number multiplying x. The coefficient of x is √2. The constant 0.5 stands on its own.": [
     "Read the number multiplying ",
     {
       "latex": "x",
       "fallback": "x"
+    },
+    ". The coefficient of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " is ",
+    {
+      "latex": "\\sqrt{2}",
+      "fallback": "√2"
     },
     ". The constant ",
     {
@@ -48773,11 +48813,21 @@ const texts={
     },
     " stands on its own."
   ],
-  "Read the signed number multiplying x. Keep the minus sign with the fraction.": [
+  "Read the signed number multiplying x. The coefficient of x is −7/2. Keep the minus sign with the fraction.": [
     "Read the signed number multiplying ",
     {
       "latex": "x",
       "fallback": "x"
+    },
+    ". The coefficient of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " is ",
+    {
+      "latex": "\\dfrac{- 7}{2}",
+      "fallback": "−7/2"
     },
     ". Keep the minus sign with the fraction."
   ],
