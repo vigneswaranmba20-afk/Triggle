@@ -176,9 +176,109 @@
     draw();
   }
 
+
+  // Student Psychology Lab: these concept-specific interactions make the reasoning
+  // visible rather than asking students to interpret a number-selection slider.
+  function showHCFSteps(host,lang){
+    const ta=lang==='ta',copy=ta?{
+      title:'60 மற்றும் 32-இன் மீ.பொ.வ காண்போம்',
+      definition:'மீ.பொ.வ என்பது இரு எண்களையும் மீதமின்றி வகுக்கும் மிகப் பெரிய நேர்ம முழு எண்.',
+      steps:['60-ஐ 32-ஆல் வகுக்கவும்','32-ஐ 28-ஆல் வகுக்கவும்','28-ஐ 4-ஆல் வகுக்கவும்'],
+      remainder:['மீதி: 28','மீதி: 4','மீதி: 0 — இங்கே நிறுத்தவும்'],
+      answer:'மீ.பொ.வ (60, 32) = 4',
+      why:'பூச்சியமல்லாத கடைசி மீதி 4.'
+    }:{
+      title:'Find the HCF of 60 and 32',
+      definition:'HCF means highest common factor: the largest positive whole number that divides both numbers exactly.',
+      steps:['Divide 60 by 32','Divide 32 by 28','Divide 28 by 4'],
+      remainder:['Remainder: 28','Remainder: 4','Remainder: 0 — stop here'],
+      answer:'HCF(60, 32) = 4',
+      why:'The last nonzero remainder is 4.'
+    };
+    host.className='g10ch2-visual g10ch2-hcf-steps';
+    host.setAttribute('role','group');host.setAttribute('aria-label',copy.title);
+    const title=document.createElement('h5');title.className='g10ch2-hcf-title';title.textContent=copy.title;
+    const definition=document.createElement('p');definition.className='g10ch2-hcf-definition';definition.textContent=copy.definition;
+    host.append(title,definition);
+    const equations=[
+      {latex:'60=32\\times1+28',fallback:'60 = 32 × 1 + 28'},
+      {latex:'32=28\\times1+4',fallback:'32 = 28 × 1 + 4'},
+      {latex:'28=4\\times7+0',fallback:'28 = 4 × 7 + 0'}
+    ];
+    equations.forEach((value,i)=>{
+      const step=document.createElement('section');step.className='g10ch2-hcf-step';step.dataset.hcfStep=String(i+1);
+      const label=document.createElement('p');label.className='g10ch2-hcf-label';
+      label.textContent=(ta?'படி ':'Step ')+(i+1)+' — '+copy.steps[i];
+      const math=document.createElement('div');math.className='g10ch2-hcf-equation';
+      math.innerHTML=typeof window.TriggleNotation?.renderLatex==='function'
+        ?window.TriggleNotation.renderLatex(value.latex,{displayMode:true,fallback:value.fallback}):e(value.fallback);
+      const note=document.createElement('p');note.className='g10ch2-hcf-remainder';note.textContent=copy.remainder[i];
+      step.append(label,math,note);host.append(step);
+    });
+    const answer=document.createElement('p');answer.className='g10ch2-hcf-answer';
+    const strong=document.createElement('strong');strong.textContent=copy.answer;
+    answer.append(strong,document.createTextNode(' — '+copy.why));host.append(answer);
+  }
+
+  function showGPMultiplication(host,lang,values){
+    if(!Array.isArray(values)||values.length<2)return;
+    const ratio=values[1]/values[0];
+    if(!Number.isFinite(ratio)||!values.every((v,i)=>i===0||v===values[i-1]*ratio))return;
+    const ta=lang==='ta',copy=ta?{
+      title:'பெருக்குத்தொடர் எப்படி வளர்கிறது?',
+      instruction:'ஒவ்வொரு உறுப்பையும் '+ratio+'-ஆல் பெருக்குங்கள்.',
+      term:'உறுப்பு',start:'இதுவே தொடக்க உறுப்பு.',
+      explain:'முந்தைய உறுப்பை '+ratio+'-ஆல் பெருக்குங்கள்.',
+      previous:'முந்தைய படி',next:'அடுத்த படி'
+    }:{
+      title:'See how a G.P. grows',
+      instruction:'Each term is multiplied by '+ratio+'.',
+      term:'Term',start:'This is our starting value.',
+      explain:'Multiply the previous term by '+ratio+'.',
+      previous:'Previous',next:'Next step'
+    };
+    host.className='g10ch2-visual g10ch2-gp-steps';
+    host.setAttribute('role','group');host.setAttribute('aria-label',copy.title);
+    const title=document.createElement('h5');title.className='g10ch2-gp-title';title.textContent=copy.title;
+    const instruction=document.createElement('p');instruction.className='g10ch2-gp-instruction';instruction.textContent=copy.instruction;
+    const terms=document.createElement('div');terms.className='g10ch2-gp-terms';terms.dataset.gpTermChoices='';
+    const buttons=values.map((value,i)=>{
+      const button=document.createElement('button');button.type='button';button.className='g10ch2-gp-term';
+      const label=document.createElement('small');label.textContent=copy.term+' '+(i+1);
+      const number=document.createElement('strong');number.textContent=String(value);
+      button.append(label,number);
+      button.setAttribute('aria-label',copy.term+' '+(i+1)+': '+value);
+      button.addEventListener('click',()=>{selected=i;paint();});
+      terms.append(button);return button;
+    });
+    const explanation=document.createElement('div');explanation.className='g10ch2-gp-explanation';
+    const equation=document.createElement('strong');equation.className='g10ch2-gp-equation';
+    const note=document.createElement('p');note.className='g10ch2-gp-note';note.setAttribute('role','status');note.setAttribute('aria-live','polite');
+    explanation.append(equation,note);
+    const actions=document.createElement('div');actions.className='g10ch2-gp-actions';
+    const previous=document.createElement('button');previous.type='button';previous.textContent='‹ '+copy.previous;
+    const next=document.createElement('button');next.type='button';next.textContent=copy.next+' ›';
+    actions.append(previous,next);host.append(title,instruction,terms,explanation,actions);
+    let selected=1; // Show the mathematical operation immediately.
+    function paint(){
+      buttons.forEach((button,i)=>{
+        button.classList.toggle('is-selected',i===selected);
+        button.setAttribute('aria-pressed',String(i===selected));
+      });
+      equation.textContent=selected===0?String(values[0]):values[selected-1]+' × '+ratio+' = '+values[selected];
+      note.textContent=selected===0?copy.start:copy.explain;
+      previous.disabled=selected===0;next.disabled=selected===values.length-1;
+    }
+    previous.addEventListener('click',()=>{if(selected>0){selected--;paint();}});
+    next.addEventListener('click',()=>{if(selected<values.length-1){selected++;paint();}});
+    paint();
+  }
+
   function showG10Ch2Visual(stage,host,lang){
     const v=stage.visual;if(!v||!host)return;
     if(window.TriggleG10ConceptLabs?.mount(stage,host,lang))return;
+    if(stage.id==='g10-ch2-gcd'){showHCFSteps(host,lang);return;}
+    if(stage.id==='g10-ch2-gp'){showGPMultiplication(host,lang,v.values);return;}
     if(stage.id==='g10-ch2-ap-sum'){showAPSumPairing(host,lang);return;}
     if(stage.id==='g10-ch2-gp-sum'&&window.TriggleGPSumLab){window.TriggleGPSumLab.mount(host,lang);return;}
     const ta=lang==='ta',caption=ta?'நீங்களே மாற்றிப் பாருங்கள்':'Change the value and observe';
@@ -339,7 +439,7 @@
       if(notify)onConcept?.(i);
       const stage=stages[i],choices=Array.isArray(stage.choices)?stage.choices:[];
       panel.innerHTML='<div class="sp2-concept-heading" tabindex="-1"><h4>'+e((i+1)+'. '+pick(stage.title))+'</h4></div>'+
-       (['g10-ch2-gp-sum','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
+       (['g10-ch2-gcd','g10-ch2-gp-sum','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
        '<div class="sp2-formula" role="group" aria-label="'+e(ta?'கணிதக் கருத்து':'Mathematical idea')+'">'+
        (stage.math?.latex?window.TriggleNotation.renderLatex(stage.math.latex,{displayMode:true,fallback:stage.math.fallback||pick(stage.rule)}):typeset(pick(stage.rule)))+'</div>')+
        (stage.visual?'<div data-g10ch2-visual></div>':'')+
