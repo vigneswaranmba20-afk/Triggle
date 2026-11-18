@@ -69,8 +69,12 @@ const g9AlgebraSource=require('../../docs/curriculum/grade-9/candidates/g9-ch3-e
 const g9AlgebraQ3Q4Source=require('../../docs/curriculum/grade-9/candidates/g9-ch3-ex3-1-q3-q4-english-9.json');
 const g9AlgebraQ5Q9Source=require('../../docs/curriculum/grade-9/candidates/g9-ch3-ex3-1-q5-q9-english-11.json');
 const g9AlgebraRows=[...g9AlgebraSource.rows,...g9AlgebraQ3Q4Source.rows,...g9AlgebraQ5Q9Source.rows];
-const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id)];
-assert.equal(approvedG9Ids.length,65);
+const g9Ex32Batch=require('../../docs/curriculum/grade-9/batches/g9-ch3-ex3-2-english.json');
+const g9Ex32ById=new Map(g9Ex32Batch.records.map(record=>[record.id,record]));
+const g9Ex32NewIds=g9Ex32Batch.records.map(record=>record.id).filter(id=>!Object.hasOwn(preserved.sha256,id));
+assert.equal(g9Ex32NewIds.length,19);
+const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds];
+assert.equal(approvedG9Ids.length,84);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
@@ -85,7 +89,10 @@ for(const [grade,data] of Object.entries(classes)){
  assert.equal(JSON.stringify(currentIds.slice(baselineIds.length)),JSON.stringify(grade==='10'?approvedNewIds:grade==='9'?approvedG9Ids:[]),'Only source-aligned Grade 9 Q1/Q2/Q5(iii)-Q6 and reviewed Grade 10 additions allowed');
  for(const item of data.items){
   const hash=crypto.createHash('sha256').update(JSON.stringify(item)).digest('hex');
-  if(Object.hasOwn(preserved.sha256,item.id)){
+  if(grade==='9'&&g9Ex32ById.has(item.id)){
+   const approved=g9Ex32ById.get(item.id);
+   assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exercise 3.2 matches source-audited batch '+item.id);
+  }else if(Object.hasOwn(preserved.sha256,item.id)){
    assert.equal(hash,preserved.sha256[item.id],'Entire original question, mathematical working, notation, answer and metadata: '+item.id);
   }else{
    const approvedG9=grade==='9'&&approvedG9Ids.includes(item.id);
@@ -179,7 +186,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,776);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,795);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');
@@ -192,4 +199,4 @@ for(const file of ['g12-explain-modes.js','g12-explain-modes.css','matrix-pilot.
 assert.ok(sw.includes('./data/problem-difficulty.js'));
 assert.ok(html.indexOf('data/problem-difficulty.js')<html.indexOf('assets/app.js'));
 assert.doesNotMatch(app,/localStorage\.clear|removeItem/,'Student progress is never cleared');
-console.log('PASS 568 original records and order byte-preserved, thirty-four Grade 9 Exercise 1.2 plus nine Exercise 2.2, ten Exercise 2.3 modular parts, seven recovered and eleven Statistics Grade 10 source-bound records, 609 explicit difficulties, 88 reviewed classifications retained, no explanation switches, offline metadata.');
+console.log('PASS original ID order, preserved records and source-audited additions, '+count+' explicit difficulties, '+reviewed+' retained classifications, single solutions and offline metadata.');
