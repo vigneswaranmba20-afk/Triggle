@@ -1108,21 +1108,25 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "ஓர் எண்ணை எத்தனை முறை காரணியாகப் பயன்படுத்த வேண்டும் என்பதை அடுக்கு காட்டுகிறது. வர்க்கம் காண ஒரே எண்ணை இரண்டு காரணிகளாகவும், கனம் காண மூன்று காரணிகளாகவும் பெருக்கவும். பிறகு கிடைத்த மதிப்புகளைக் கூட்டவும்."
       },
       "rule": {
-        "en": "Sₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2",
-        "ta": "Sₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2"
+        "en": "Tₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2",
+        "ta": "Tₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2"
       },
       "math": {
-        "latex": "\\begin{aligned}S_n&=\\sum_{k=1}^{n}k=1+2+\\cdots+n\\\\&=\\frac{n(n+1)}{2}\\end{aligned}",
-        "fallback": "Sₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2"
+        "latex": "\\begin{aligned}T_n&=\\sum_{k=1}^{n}k=1+2+\\cdots+n\\\\&=\\frac{n(n+1)}{2}\\end{aligned}",
+        "fallback": "Tₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2"
       },
       "lesson": {
         "bridgeTitle": {
           "en": "Start with the A.P. sum",
           "ta": "கூட்டுத் தொடர்வரிசையின் கூடுதலிலிருந்து தொடங்குவோம்"
         },
+        "bridgeLink": {
+          "en": "Review how an A.P. sum pairs its terms",
+          "ta": "கூட்டுத்தொடர் வரிசையின் உறுப்புகளை இணைத்துக் கூட்டும் முறையைப் பார்க்கவும்"
+        },
         "notation": {
-          "en": "Sₙ means the sum of the first n terms. The symbol ∑ means “add”. Here k takes each value from 1 to n.",
-          "ta": "Sₙ என்பது முதல் n உறுப்புகளின் கூடுதல். ∑ என்பது கூட்டலைக் குறிக்கும். இங்கு k என்பது 1 முதல் n வரையிலான ஒவ்வோர் எண்ணையும் குறிக்கும்."
+          "en": "The term count n is a positive whole number. Sₙ means the sum of the first n terms, and Tₙ is specifically the sum of the natural numbers from 1 to n. The symbol ∑ means “add” as k runs through the positions from 1 to n.",
+          "ta": "உறுப்புகளின் எண்ணிக்கை n ஒரு நேர்ம முழு எண். Sₙ என்பது முதல் n உறுப்புகளின் கூடுதல். Tₙ என்பது குறிப்பாக 1 முதல் n வரையிலான இயல் எண்களின் கூடுதல். ∑ என்பது k, 1 முதல் n வரையிலான இடங்களை எடுக்கும்போது கூட்டுவதைக் குறிக்கிறது."
         },
         "powersMath": {
           "latex": "2^2=2\\times2,\\quad 2^3=2\\times2\\times2",
@@ -1203,6 +1207,10 @@ window.TRIGGLE_G10_CH2_PATH={
             "latex": "\\begin{aligned}&1^3+2^3+\\cdots+n^3\\\\&\\quad=(1+2+\\cdots+n)^2\\\\&\\quad=\\left(\\frac{n(n+1)}{2}\\right)^2\\end{aligned}",
             "fallback": "1³ + 2³ + ⋯ + n³ = (1 + 2 + ⋯ + n)² = {[n × (n + 1)] ÷ 2}²"
           },
+          "contrast": {
+            "en": "For the first three numbers, squaring before adding gives 14. Adding before squaring gives 36, the sum of the cubes.",
+            "ta": "முதல் மூன்று எண்களை வர்க்கப்படுத்திப் பிறகு கூட்டினால் 14 கிடைக்கும். முதலில் கூட்டிப் பிறகு வர்க்கப்படுத்தினால் கனங்களின் கூடுதலான 36 கிடைக்கும்."
+          },
           "proofTitle": {
             "en": "Why does the cubes rule work?",
             "ta": "கனங்களின் கூடுதலுக்கான சூத்திரம் எப்படி கிடைக்கிறது?"
@@ -1250,8 +1258,12 @@ window.TRIGGLE_G10_CH2_PATH={
             "ta": "தொடர் 1-க்குப் பிறகு தொடங்கும்போது"
           },
           "intro": {
-            "en": "Find the sum from 1 through the last number. Subtract the extra terms through the number just before the start. For squares from 5 to 10, use the squares rule up to 10 and again up to 4.",
-            "ta": "முதலில் 1 முதல் கடைசி எண் வரை கூடுதலைக் காணுங்கள். பிறகு தொடக்க எண்ணுக்கு முந்தைய எண் வரையிலான கூடுதலைக் கழியுங்கள். 5 முதல் 10 வரையிலான வர்க்கங்களின் கூடுதலைக் காண, வர்க்கச் சூத்திரத்தை ஒருமுறை 10 வரையிலும் மறுமுறை 4 வரையிலும் பயன்படுத்துங்கள்."
+            "en": "For squares from m to n, subtract the squares before m from the sum through n. When m is 1, there are no earlier squares to subtract. From 5 to 10, subtract the sum through 4 from the sum through 10.",
+            "ta": "m முதல் n வரையிலான வர்க்கங்களின் கூடுதலைக் காண, n வரையிலான வர்க்கங்களின் கூடுதலிலிருந்து m-க்கு முந்தைய வர்க்கங்களின் கூடுதலைக் கழியுங்கள். m என்பது 1 எனில் கழிக்க முந்தைய வர்க்கங்கள் இல்லை. 5 முதல் 10 வரை காண, 10 வரையிலான கூடுதலிலிருந்து 4 வரையிலான கூடுதலைக் கழியுங்கள்."
+          },
+          "generalMath": {
+            "latex": "\\begin{aligned}m^2+\\cdots+n^2&=S_n-S_{m-1}\\\\1&\\le m\\le n,\\quad S_0=0\\end{aligned}",
+            "fallback": "m² + ⋯ + n² = Sₙ − Sₘ₋₁, with 1 ≤ m ≤ n and S₀ = 0."
           },
           "math": {
             "latex": "\\begin{aligned}&5^2+6^2+\\cdots+10^2=S_{10}-S_4\\\\&=\\frac{10\\times11\\times21}{6}-\\frac{4\\times5\\times9}{6}\\\\&=385-30=355\\end{aligned}",

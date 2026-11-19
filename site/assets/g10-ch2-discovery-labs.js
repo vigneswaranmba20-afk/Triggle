@@ -199,7 +199,7 @@
    return figure;
  }
  function special(host,t,stage,lang){
-   const {bridgeTitle,notation,powersMath,odd,squares,cubes,range}=stage.lesson;
+   const {bridgeTitle,bridgeLink,notation,powersMath,odd,squares,cubes,range}=stage.lesson;
    const pick=value=>value[lang==='ta'?'ta':'en'];
    const paragraph=value=>make('p','',pick(value));
    const equation=({latex,fallback})=>{
@@ -214,6 +214,10 @@
    };
    const demo=make('div');
    specialDemo(demo,t.special);
+   const bridge=paragraph(stage.idea);
+   const prerequisite=make('a','g10ch2-special-prerequisite',pick(bridgeLink));
+   prerequisite.href='?class=10&chapter=g10-ch2&section=concepts&concept=10';
+   bridge.append(' ',prerequisite,'.');
    const oddSum=make('details','g10ch2-special-odd');
    oddSum.append(make('summary','',pick(odd.title)),paragraph(odd.idea),equation(odd.math));
    const proof=make('details','g10ch2-special-proof');
@@ -224,14 +228,15 @@
      paragraph(cubes.proofCancel),equation(cubes.cancelMath),paragraph(cubes.proofEnd));
    host.className='g10ch2-special';
    host.append(
-     section(bridgeTitle,paragraph(stage.idea),equation(stage.math),paragraph(notation),
+     section(bridgeTitle,bridge,equation(stage.math),paragraph(notation),
        paragraph(stage.example),equation(powersMath)),
      demo,
      oddSum,
      section(squares.title,paragraph(squares.intro),squaresDiagram(squares,pick),
        equation(squares.exampleMath),paragraph(squares.general),equation(squares.math)),
-     section(cubes.title,paragraph(cubes.intro),equation(cubes.math),proof),
-     section(range.title,paragraph(range.intro),equation(range.math))
+     section(cubes.title,paragraph(cubes.intro),equation(cubes.math),paragraph(cubes.contrast),proof),
+     section(range.title,paragraph(range.intro),equation(range.generalMath),equation(range.math)),
+     make('small','sp2-stage-reference',(lang==='ta'?'பாடநூல் பகுதி ':'Textbook section ')+stage.section)
    );
    return true;
  }

@@ -165,7 +165,10 @@ async function verifySpecialSeries(page,language,width){
  assert(await identities.first().isVisible(),'Keyboard opens the cube derivation');
  assert((await texSource(identities.nth(2))).includes('T_k^2-T_{k-1}^2'));
  assert((await texSource(identities.last())).includes('T_3^2-T_0^2'));
- assert((await texSource(lesson.locator('.g10ch2-special-section').last())).includes('385-30=355'));
+ const range=lesson.locator('.g10ch2-special-section').last().locator('.g10ch2-special-math');
+ assert((await texSource(range.first())).includes('S_n-S_{m-1}'),'Shifted ranges use the preceding endpoint');
+ assert((await texSource(range.last())).includes('385-30=355'));
+ assert.match(await lesson.locator('.sp2-stage-reference').innerText(),ta?/பாடநூல் பகுதி 2\.11/:/Textbook section 2\.11/);
  await assertSpecialMathFits(page,width,language);
  await summary.press('Enter');
  assert(await identities.first().isHidden());
@@ -211,6 +214,10 @@ async function verifySpecialOffline(browser,base){
   await demo.getByRole('button',{name:'கனங்கள்'}).click();
   assert.match(await demo.getByRole('status').textContent(),/100$/);
   assert.equal(await page.locator('[data-math-error]').count(),0,'KaTeX and Tamil lesson run from offline assets');
+  await page.locator('.g10ch2-special-prerequisite').click();
+  assert.equal(new URL(page.url()).searchParams.get('concept'),'10');
+  await page.locator('.g10ch2-pairing').waitFor({state:'visible'});
+  assert.equal(await page.locator('html').getAttribute('lang'),'ta','Prerequisite opens offline in the student’s language');
  }finally{await context.close();}
 }
 
