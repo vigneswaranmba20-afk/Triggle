@@ -90,6 +90,18 @@ assert.match(learningUI,/bindFoundation\(stage\)/,'concept beats respond to taps
 assert.match(learningUI,/data-foundation-step/,'step selector is keyboard-operable');
 assert.match(learningUI,/slider\(zoomLabel,1,3,1,1/,'successive-magnification demonstration');
 assert.match(learningUI,/k\*k/,'surds square-factor diagram uses a true square arrangement');
+
+assert.doesNotMatch(learningUI,/slider\(t\.factor/,'surds start with a clear visual and tap choices, not a slider');
+assert.match(learningUI,/rnlab-surd-question/,'surds explain the question before any action');
+assert.match(learningUI,/rnlab-surd-leftover-card/,'leftover factor is visually separate from perfect-square grid');
+assert.match(learningUI,/Perfect square/,'perfect-square factor is explicitly named');
+const surdCss=read('assets/chapter-hub.css');
+assert.match(surdCss,/\.rnlab-surd-factors/,'surds use a readable mobile factor diagram');
+for(const side of [2,3,4]){
+ const radicand=2*side*side;
+ assert.ok(Math.abs(Math.sqrt(radicand)-side*Math.sqrt(2))<1e-12,'square-factor model is exact for √'+radicand);
+}
+
 assert.match(learningCSS,/\.rnlab \.rnlab-foundation-equation/,'rendered equations have scoped mobile typography');
 // Independent numerical checks for the concepts in the visible foundation ladder.
 assert.ok(1/2 < 7/12 && 7/12 < 2/3);
