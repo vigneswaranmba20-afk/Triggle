@@ -1,0 +1,351 @@
+/* Grade 10 Chapter 3 Algebra — Interactive Concept Labs & Schema Extensions.
+   Harmonizes with Bond Light surface tokens, zero network requests, 320px-safe. */
+.chapter-hub[data-hub-section="concepts"]:has(.g10ch3-lab) .sp2-detail-view .sp2-formula{
+  background:var(--bond-tint,#F3F0E9);
+  color:var(--bond-graphite,#181B20);
+  border:1px solid var(--bond-border,#D7D4CC);
+  border-radius:14px;
+  margin:8px 0 14px;
+  padding:12px 10px;
+  overflow-x:auto;
+}
+.g10ch3-tamil-badge{
+  margin:0 0 10px;
+  padding:8px 12px;
+  border-radius:10px;
+  background:#FFF7EA;
+  border:1px solid #E3C996;
+  color:#5B4116;
+  font-size:12.5px;
+  line-height:1.45;
+  font-weight:650;
+}
+.g10ch3-lab{
+  background:#FFFFFF;
+  border:1px solid var(--bond-border,#D7D4CC);
+  border-radius:16px;
+  padding:14px;
+  margin:10px 0 16px;
+  min-width:0;
+  box-shadow:0 2px 10px rgba(24,27,32,.04);
+}
+.g10ch3-lab-title{
+  margin:0 0 10px;
+  font-size:14.5px;
+  line-height:1.4;
+  font-weight:750;
+  color:var(--bond-graphite,#181B20);
+}
+.g10ch3-tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:0 0 10px;
+}
+.g10ch3-tab,.g10ch3-chip-toggle,.g10ch3-btn{
+  box-sizing:border-box;
+  min-height:44px;
+  min-width:44px;
+  padding:8px 12px;
+  border-radius:10px;
+  border:1px solid var(--bond-border,#D7D4CC);
+  background:#FFFFFF;
+  color:var(--bond-graphite,#181B20);
+  font:inherit;
+  font-size:13px;
+  font-weight:700;
+  line-height:1.3;
+  cursor:pointer;
+  text-align:center;
+  transition:background-color .14s ease,border-color .14s ease;
+}
+.g10ch3-tab[aria-pressed="true"],.g10ch3-chip-toggle[aria-pressed="true"]{
+  background:var(--bond-selection,#F6EDE7);
+  border-color:var(--bond-burgundy,#6E2933);
+  color:var(--bond-burgundy,#6E2933);
+  box-shadow:inset 0 0 0 1px var(--bond-burgundy,#6E2933);
+}
+.g10ch3-chip-toggle{
+  width:100%;
+  margin-top:8px;
+  text-align:left;
+  background:#FAF9F6;
+}
+.g10ch3-btn-primary{
+  background:var(--bond-graphite,#181B20);
+  border-color:var(--bond-graphite,#181B20);
+  color:#FFFFFF;
+}
+.g10ch3-btn:disabled{opacity:.45;cursor:default}
+.g10ch3-step-badge{
+  margin:2px 0 8px;
+  font-size:12.5px;
+  font-weight:750;
+  color:var(--bond-burgundy,#6E2933);
+}
+.g10ch3-math-box{
+  background:#FAF9F6;
+  border:1px solid #E5E1D8;
+  border-radius:12px;
+  padding:10px 8px;
+  margin:8px 0;
+  overflow-x:auto;
+  overflow-y:hidden;
+  max-width:100%;
+  color:var(--bond-graphite,#181B20);
+  text-align:center;
+}
+.g10ch3-math-box .katex-display{margin:.2em 0}
+.g10ch3-note{
+  margin:8px 0 0;
+  font-size:13.5px!important;
+  line-height:1.55!important;
+  color:#2E3640!important;
+}
+.g10ch3-note.is-danger{
+  color:#7A1D2B!important;
+  font-weight:650;
+}
+.g10ch3-callout{
+  margin:8px 0 0;
+  padding:9px 11px;
+  border-radius:10px;
+  background:#F6EDE7;
+  border-left:3px solid var(--bond-burgundy,#6E2933);
+  font-size:13px;
+  line-height:1.5;
+  color:var(--bond-graphite,#181B20);
+}
+.g10ch3-step-nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  margin-top:10px;
+}
+.g10ch3-progress{
+  font-size:12px;
+  font-weight:700;
+  color:var(--bond-muted,#525B62);
+  white-space:nowrap;
+}
+.g10ch3-svg-card{
+  background:#FCFBF8;
+  border:1px solid #E5E1D8;
+  border-radius:12px;
+  padding:8px;
+  margin:8px 0;
+}
+.g10ch3-svg{
+  display:block;
+  width:100%;
+  max-width:340px;
+  height:auto;
+  margin:0 auto;
+}
+.g10ch3-factor-grid{
+  display:grid;
+  gap:4px;
+  margin:8px 0;
+  min-width:0;
+}
+.g10ch3-fg-row{
+  display:grid;
+  grid-template-columns:52px repeat(4,minmax(0,1fr));
+  gap:4px;
+  align-items:center;
+  text-align:center;
+  font-size:11.5px;
+  font-variant-numeric:tabular-nums;
+}
+.g10ch3-fg-row>*{
+  min-width:0;
+  padding:7px 2px;
+  border-radius:8px;
+  background:#FAF9F6;
+  border:1px solid #E6E3DC;
+  overflow-wrap:break-word;
+}
+.g10ch3-fg-row>:first-child{
+  white-space:nowrap;
+}
+.g10ch3-fg-row.is-head>*{
+  background:transparent;
+  border:0;
+  font-size:10.5px;
+  font-weight:700;
+  color:var(--bond-muted,#525B62);
+  padding:2px 1px;
+}
+@media (max-width:400px){
+  .chapter-hub[data-hub-section="concepts"]:has(.g10ch3-lab) .katex-display{
+    font-size:0.86em;
+    margin:0.18em 0;
+  }
+  .chapter-hub[data-hub-section="concepts"]:has(.g10ch3-lab) .sp2-detail-view .sp2-formula,
+  .g10ch3-math-box{
+    padding:9px 6px;
+  }
+  .g10ch3-fg-row{
+    grid-template-columns:46px repeat(4,minmax(0,1fr));
+    font-size:10.5px;
+    gap:3px;
+  }
+}
+.g10ch3-fg-row.is-result.is-min>*{background:#E8F4EF;border-color:#9ACAB9;color:#125445;font-weight:750}
+.g10ch3-fg-row.is-result.is-max>*{background:#F6EDE7;border-color:#D8B3A9;color:#6E2933;font-weight:750}
+.g10ch3-fg-row.is-result.is-sum>*{background:#EDF1FA;border-color:#AEBEE2;color:#233D75;font-weight:750}
+.g10ch3-card-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+  margin:6px 0;
+}
+.g10ch3-mini-card{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  padding:9px 10px;
+  border-radius:10px;
+  background:#FAF9F6;
+  border:1px solid #E5E1D8;
+  font-size:12.5px;
+}
+.g10ch3-mini-card strong{color:var(--bond-burgundy,#6E2933);font-size:13px}
+.g10ch3-mat-grid{
+  display:grid;
+  gap:6px;
+  max-width:210px;
+  margin:6px auto;
+  padding:8px 10px;
+  border-left:2.5px solid var(--bond-graphite,#181B20);
+  border-right:2.5px solid var(--bond-graphite,#181B20);
+  border-radius:12px;
+  background:#FAF9F6;
+}
+.g10ch3-mat-grid.is-compact{
+  max-width:none;
+  margin:2px 0;
+  padding:6px 8px;
+  gap:5px;
+}
+.g10ch3-mat-cell,.g10ch3-mat-static{
+  display:grid;
+  place-items:center;
+  min-width:44px;
+  min-height:44px;
+  border-radius:9px;
+  font-size:15px;
+  font-weight:750;
+  font-variant-numeric:tabular-nums;
+}
+.g10ch3-mat-static{
+  min-width:34px;
+  min-height:36px;
+  background:#FFFFFF;
+  border:1px solid #E2DFD7;
+  color:var(--bond-graphite,#181B20);
+}
+.g10ch3-mat-static.is-hi{
+  background:#E8F4EF;
+  border-color:#166353;
+  color:#125445;
+}
+.g10ch3-mat-cell{
+  border:1px solid var(--bond-border,#D7D4CC);
+  background:#FFFFFF;
+  color:var(--bond-graphite,#181B20);
+  cursor:pointer;
+}
+.g10ch3-mat-cell.is-cross{background:#F8F4EE}
+.g10ch3-mat-cell.is-selected{
+  background:var(--bond-selection,#F6EDE7);
+  border:2px solid var(--bond-burgundy,#6E2933);
+  color:var(--bond-burgundy,#6E2933);
+}
+.g10ch3-op-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin:8px 0;
+}
+.g10ch3-op-mat{display:flex;flex-direction:column;align-items:center;gap:3px}
+.g10ch3-op-lbl{font-size:11px;font-weight:750;color:var(--bond-muted,#525B62)}
+.g10ch3-op-sym{font-size:18px;font-weight:750;color:var(--bond-graphite,#181B20);padding-top:14px}
+.g10ch3-subprompt{margin:2px 0 6px;font-size:12.5px;color:var(--bond-muted,#525B62);text-align:center}
+
+/* Worked demo + collapsible "Understand the idea" + related textbook links */
+.chapter-hub[data-hub-section="concepts"]:has(.g10ch3-lab) .sp2-example-math{
+  margin:6px 0 8px;
+  padding:8px 8px;
+  border-radius:10px;
+  background:#FAF9F6;
+  border:1px solid #E5E1D8;
+  overflow-x:auto;
+}
+.g10ch3-deep-dive{
+  margin:12px 0;
+  border:1px solid var(--bond-border,#D7D4CC);
+  border-radius:13px;
+  background:#FCFBF8;
+}
+.g10ch3-deep-dive summary{
+  min-height:44px;
+  display:flex;
+  align-items:center;
+  padding:10px 14px;
+  font-size:14px;
+  font-weight:750;
+  color:var(--bond-burgundy,#6E2933);
+  cursor:pointer;
+  list-style:none;
+}
+.g10ch3-deep-dive summary::before{
+  content:'▸ ';
+  margin-right:7px;
+  transition:transform .15s ease;
+}
+.g10ch3-deep-dive[open] summary::before{content:'▾ '}
+.g10ch3-deep-dive summary::-webkit-details-marker{display:none}
+.g10ch3-deep-list{
+  margin:0;
+  padding:0 16px 14px 30px;
+  display:grid;
+  gap:8px;
+  font-size:13.5px;
+  line-height:1.58;
+  color:#2D3540;
+}
+.g10ch3-exercise-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:14px 0;
+}
+.g10ch3-exercise-row .g10ch2-practice-link{
+  margin:0;
+  flex:1 1 200px;
+}
+.g10ch3-exercise-note{
+  margin:12px 0;
+  font-size:12.5px;
+  color:var(--bond-muted,#525B62);
+}
+
+/* Focus visibility & narrow Android portrait screens */
+.g10ch3-tab:focus-visible,.g10ch3-chip-toggle:focus-visible,.g10ch3-btn:focus-visible,.g10ch3-mat-cell:focus-visible,.g10ch3-deep-dive summary:focus-visible{
+  outline:3px solid var(--bond-burgundy,#6E2933);
+  outline-offset:2px;
+}
+@media(max-width:430px){
+  .g10ch3-lab{padding:11px 10px}
+  .g10ch3-tab{font-size:12.5px;padding:8px 9px}
+  .g10ch3-fg-row{grid-template-columns:34px repeat(4,minmax(0,1fr));font-size:11px;gap:3px}
+  .g10ch3-fg-row.is-head>*{font-size:10px}
+}
+@media(max-width:340px){
+  .g10ch3-fg-row{grid-template-columns:30px repeat(4,minmax(0,1fr));font-size:10px;gap:2px}
+  .g10ch3-card-grid{grid-template-columns:minmax(0,1fr)}
+}

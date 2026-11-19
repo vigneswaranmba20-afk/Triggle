@@ -278,6 +278,7 @@
   function showG10Ch2Visual(stage,host,lang){
     const v=stage.visual;if(!v||!host)return;
     if(window.TriggleG10ConceptLabs?.mount(stage,host,lang))return;
+    if(window.TriggleG10Ch3Labs?.mount(stage,host,lang))return;
     if(stage.id==='g10-ch2-gcd'){showHCFSteps(host,lang);return;}
     if(stage.id==='g10-ch2-gp'){showGPMultiplication(host,lang,v.values);return;}
     if(stage.id==='g10-ch2-ap-sum'){showAPSumPairing(host,lang);return;}
@@ -459,7 +460,15 @@
       if(i<0||i>=stages.length)return;active=i;root.dataset.view='lesson';indexView.hidden=true;detailView.hidden=false;
       if(notify)onConcept?.(i);
       const stage=stages[i],choices=Array.isArray(stage.choices)?stage.choices:[];
+      const isCh3=String(stage.id||'').startsWith('g10-ch3-');
+      const deepItems=stage.deepDive?(stage.deepDive.points?.[lang]||stage.deepDive.points?.en||[]):[];
+      const tamilDraftNote=isCh3&&ta
+        ?'<p class="g10ch3-tamil-badge" role="note">தமிழ் வரைவு · 2025 பாடநூல் சொற்களுடன் உருவாக்கப்பட்டது (ஆசிரியர் மீளாய்வு நிலுவையில்)</p>':'';
+      const deepDiveHtml=deepItems.length
+        ?'<details class="g10ch3-deep-dive"><summary>'+e(pick(stage.deepDive.title))+'</summary><ul class="g10ch3-deep-list">'+
+          deepItems.map(item=>'<li>'+typeset(item)+'</li>').join('')+'</ul></details>':'';
       panel.innerHTML='<div class="sp2-concept-heading" tabindex="-1"><h4>'+e((i+1)+'. '+pick(stage.title))+'</h4></div>'+
+       tamilDraftNote+
        (['g10-ch2-gp-sum','g10-ch2-gcd','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
        '<div class="sp2-formula" role="group" aria-label="'+e(ta?'கணிதக் கருத்து':'Mathematical idea')+'">'+
        (stage.math?.latex?window.TriggleNotation.renderLatex(stage.math.latex,{displayMode:true,fallback:stage.math.fallback||pick(stage.rule)}):typeset(pick(stage.rule)))+'</div>')+
@@ -467,8 +476,10 @@
        (['g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
        '<div class="sp2-lesson-note" aria-label="'+e(ta?'கருத்து விளக்கம்':'Concept explanation')+'">'+
        '<p class="sp2-idea">'+typeset(pick(stage.idea))+'</p>'+
-       '<p class="sp2-example">'+typeset(pick(stage.example))+'</p><small class="sp2-stage-reference">'+
-       e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+'</small></div>')+
+       '<p class="sp2-example">'+typeset(pick(stage.example))+'</p>'+
+       (stage.exampleMath?'<div class="sp2-example-math">'+displayMath(stage.exampleMath)+'</div>':'')+
+       '<small class="sp2-stage-reference">'+e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+'</small></div>')+
+       deepDiveHtml+
        (choices.length?'<div class="sp2-recall"><h5>'+e(ta?'நீங்களே முயற்சிக்கவும்':'Try it yourself')+'</h5>'+
        '<p>'+typeset(pick(stage.question))+'</p>'+
        (stage.questionMath?'<div>'+displayMath(stage.questionMath)+'</div>':'')+
@@ -479,10 +490,25 @@
       if(stage.visual)showG10Ch2Visual(stage,panel.querySelector('[data-g10ch2-visual]'),lang);
       if(stage.video)attachStageVideo(panel,stage,lang);
       const related=stage.practiceId&&chapterQuestions.find(q=>q.id===stage.practiceId);
+      const secondary=stage.secondaryPracticeId&&chapterQuestions.find(q=>q.id===stage.secondaryPracticeId);
       if(related&&typeof onQuestion==='function'){
-        const button=document.createElement('button');button.type='button';
-        button.className='g10ch2-practice-link';button.textContent=ta?'பாடநூல் பயிற்சியைத் தீர்ப்போம் →':'Try the related textbook exercise →';
-        button.onclick=()=>onQuestion(related);panel.append(button);
+        if(isCh3){
+          const row=document.createElement('div');row.className='g10ch3-exercise-row';
+          [related,secondary].filter(Boolean).forEach(qItem=>{
+            const button=document.createElement('button');button.type='button';button.className='g10ch2-practice-link';
+            button.textContent=ta?'பாடநூல் பயிற்சி '+qItem.exercise+'-ஐத் தீர்ப்போம் →':'Try Exercise '+qItem.exercise+' in Triggle →';
+            button.onclick=()=>onQuestion(qItem);row.append(button);
+          });
+          panel.append(row);
+        }else{
+          const button=document.createElement('button');button.type='button';
+          button.className='g10ch2-practice-link';button.textContent=ta?'பாடநூல் பயிற்சியைத் தீர்ப்போம் →':'Try the related textbook exercise →';
+          button.onclick=()=>onQuestion(related);panel.append(button);
+        }
+      }else if(isCh3&&stage.relatedExercise){
+        const ref=document.createElement('p');ref.className='g10ch3-exercise-note';
+        ref.textContent=(ta?'தொடர்புடைய பாடநூல் பயிற்சி: பயிற்சி ':'Related textbook exercises: Exercise ')+stage.relatedExercise+(ta?' (விரைவில் இணைக்கப்படும்)':' (exercise items coming soon)');
+        panel.append(ref);
       }
       const holder=panel.querySelector('[data-answers]');if(holder){
         const whyButton=panel.querySelector('[data-why]');
@@ -490,7 +516,10 @@
         const response=panel.querySelector('[data-why-response]');
         choices.forEach((choice,j)=>{
           const button=document.createElement('button');button.type='button';button.dataset.choice=String(j);
-          button.innerHTML=typeset(pick(choice));button.setAttribute('aria-label',pick(choice));
+          button.innerHTML=choice?.math?.latex
+            ?window.TriggleNotation.renderLatex(choice.math.latex,{displayMode:false,fallback:choice.math.fallback||pick(choice)})
+            :typeset(pick(choice));
+          button.setAttribute('aria-label',pick(choice));
           button.setAttribute('aria-pressed','false');
           button.addEventListener('click',()=>{
             holder.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
@@ -505,11 +534,13 @@
           if(response.hidden){
             const explanation=typeset(pick(stage.why));
             response.innerHTML=stage.whyMath?explanation+displayMath(stage.whyMath):explanation;
+            window.TriggleNotation?.prepare?.(response);
           }
           response.hidden=!response.hidden;
           whyButton.setAttribute('aria-expanded',String(!response.hidden));
         };
       }
+      window.TriggleNotation?.prepare?.(panel);
       update();
       if(focus){root.scrollIntoView({block:'start',behavior:'auto'});panel.querySelector('.sp2-concept-heading')?.focus({preventScroll:true});}
     }
@@ -530,10 +561,10 @@
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
     const sets=categorized(questions); // Examples stay archived in source, outside student navigation.
     const matrixConcepts=chapter.id==='g12-ch1'&&lang==='en'&&window.TriggleMatrixConcepts;
-    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
+    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const kinds=activityEntries.length?[...baseKinds,'activities']:baseKinds;
-    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(matrixConcepts||chapter.id==='g10-ch2')?0:stages.length,activities:activityEntries.length};
+    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3')?0:stages.length,activities:activityEntries.length};
     const symbols={concepts:'◇',examples:'∑',exercises:'✎',quizzes:'✓',activities:'💡'};
     const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0,activities:counts.activities>0};
     const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes,activities:t.activities})[kind];
@@ -631,8 +662,8 @@
         // No chapter title, marketing paragraph, progress count or second navigation row.
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
-        }else if(chapter.id==='g9-ch9'||chapter.id==='g10-ch2'){
-          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,sets.exercises,chapter.id==='g10-ch2');
+        }else if(chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'){
+          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,sets.exercises,chapter.id==='g10-ch2'||chapter.id==='g10-ch3');
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }
