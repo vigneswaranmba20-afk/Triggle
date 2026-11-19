@@ -487,6 +487,7 @@
    // The layout read starts loading any math fonts this question newly uses.
    document.fonts?.ready.then(prepareLessonMath);
   });
+  if(grade!==9)document.fonts?.ready.then(prepareLessonMath);
  }
  document.fonts?.addEventListener('loadingdone',()=>{
   if(!$('lessonCard').hidden)prepareLessonMath();

@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 3,
+  "exercises": [
+    "3.10",
+    "3.11",
+    "3.12"
+  ],
+  "edition": "TN SCERT 2025 revised English and Tamil",
+  "textbook": "Class 10 Mathematics, Chapter 3 Algebra — Quadratic Equations (Factorization, Completing the Square, Formula Method, and Word Problems)",
+  "originalPdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+  "tamilPdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+  "sourcePages": {
+    "printed": [
+      111,
+      114,
+      116,
+      117
+    ],
+    "pdf": [
+      117,
+      120,
+      122,
+      123
+    ],
+    "tamilPrinted": [
+      113,
+      116,
+      118,
+      119
+    ],
+    "tamilPdf": [
+      119,
+      122,
+      124,
+      125
+    ],
+    "answerAppendixPrinted": [
+      338
+    ],
+    "answerAppendixPdf": [
+      344
+    ],
+    "tamilAnswerAppendixPrinted": [
+      352
+    ],
+    "tamilAnswerAppendixPdf": [
+      358
+    ]
+  },
+  "pageImageSha256": {
+    "en-pdf-2.png": "7fabf5d5c17f7cdb1663a8d177ca89b1c20533e83236809ba02bad12c9403103",
+    "en-pdf-117.png": "a208302ab68d1b40eaf89669c01f3cd05c2c76dd140bcf1e8aba2059ac3000de",
+    "en-pdf-120.png": "739302dfb331b23b4d78ade673a31e7524a66352505f817be86c1a62736b01a4",
+    "en-pdf-122.png": "b459df9f1cd4b5d9d1b31353b8ef9e1008fd5120f0ff9cd7023176c194f4cdc1",
+    "en-pdf-123.png": "40c949af5012556f3ca0e9dfabd0b4cb5362275b40f09248b4e93184d31ea50e",
+    "en-pdf-344.png": "e5fc96c76587c657139baaaf2789ffbcdc68b822f7919cd05b59b24361286bc",
+    "ta-pdf-2.png": "54581ff73079cce156c815eeac1d94c76f6905e541508bbc8fc23bdf9e2a035c",
+    "ta-pdf-119.png": "9fb8cfd0eaa356ebe34b4f0e2fa7e96842cd169d063940a7fb6acbd6c5cf7826",
+    "ta-pdf-122.png": "21ab0abb9ac123f9b6ad3e3122a289ce3b2a129182cc1ab89c200d8f831a4319",
+    "ta-pdf-124.png": "6e85cf25d6fc40094fdf8326557fb252ce0a5571faee647f313fd56504946046",
+    "ta-pdf-125.png": "d0e939350d53ed963865db986961725ac94d36c71462015d3adf0e8526f3f80c",
+    "ta-pdf-358.png": "86d0932d5e7e1e399f9d65336e9c5bbfa501579c84532c0279cef50902a1ae91"
+  },
+  "reviewMethod": "Visually inspected rendered page images of printed pp. 111, 114, 116, 117 (PDF pp. 117, 120, 122, 123) and Answer Appendix printed p. 338 (PDF p. 344) from the 2025 English textbook, together with printed pp. 113, 116, 118, 119 (PDF pp. 119, 122, 124, 125) and Answer Appendix printed p. 352 (PDF p. 358) from the 2025 Tamil textbook, against all 22 independently solved student records across Exercises 3.10-3.12.",
+  "sourceLanguages": {
+    "english": "source-image checked",
+    "tamil": "source-image checked for question/part parity; Tamil student lesson editorial review pending"
+  },
+  "teacherReview": "not performed",
+  "chapterCompletion": false,
+  "exerciseBreakdown": {
+    "3.10": {
+      "numberedQuestions": 2,
+      "uniqueSubpartTasks": 6,
+      "newStudentRecords": 6,
+      "totalStudentRecords": 6
+    },
+    "3.11": {
+      "numberedQuestions": 3,
+      "uniqueSubpartTasks": 7,
+      "newStudentRecords": 7,
+      "totalStudentRecords": 7
+    },
+    "3.12": {
+      "numberedQuestions": 9,
+      "uniqueSubpartTasks": 9,
+      "newStudentRecords": 9,
+      "totalStudentRecords": 9,
+      "note": "Ex 3.12 Tamil textbook spans PDF pp. 124-125 (printed pp. 118-119); TEXTBOOK_SPEC updated from [124] to [124, 125]. Ex 3.12 Q7 preserves verbatim textbook wording (\"is been played\", \"singers voice\"). Original SVG diagrams authored for Q2, Q5, Q7, Q8, and Q9."
+    }
+  },
+  "numberedQuestions": 14,
+  "uniqueSubpartTasks": 22,
+  "existingStudentRecords": 0,
+  "newStudentRecords": 22,
+  "totalStudentRecords": 22,
+  "tasks": [
+    {
+      "id": "c10-3-ex3-10-q1-i",
+      "exercise": "3.10",
+      "label": "Exercise 3.10 · Q1(i)",
+      "question": "1. Solve the following quadratic equations by factorization method\n(i) 4x² − 7x − 2 = 0",
+      "answer": "−1/4, 2",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q1(i); printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-10-q1-ii",
+      "exercise": "3.10",
+      "label": "Exercise 3.10 · Q1(ii)",
+      "question": "1. Solve the following quadratic equations by factorization method\n(ii) 3(p² − 6) = p(p + 5)",
+      "answer": "−2, 9/2",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q1(ii); printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-10-q1-iii",
+      "exercise": "3.10",
+      "label": "Exercise 3.10 · Q1(iii)",
+      "question": "1. Solve the following quadratic equations by factorization method\n(iii) √(a(a − 7)) = 3√2",
+      "answer": "−2, 9",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q1(iii); printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-10-q1-iv",
+      "exercise": "3.10",
+      "label": "Exercise 3.10 · Q1(iv)",
+      "question": "1. Solve the following quadratic equations by factorization method\n(iv) √2 x² + 7x + 5√2 = 0",
+      "answer": "−√2, −5/√2",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q1(iv); printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-10-q1-v",
+      "exercise": "3.10",
+      "label": "Exercise 3.10 · Q1(v)",
+      "question": "1. Solve the following quadratic equations by factorization method\n(v) 2x² − x + 1/8 = 0",
+      "answer": "1/4, 1/4",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q1(v); printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-10-q2",
+      "exercise": "3.10",
+      "label": "Exercise 3.10 · Q2",
+      "question": "2. The number of volleyball games that must be scheduled in a league with n teams is given by G(n) = (n² − n)/2 where each team plays with every other team exactly once. A league schedules 15 games. How many teams are in the league?",
+      "answer": "6",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q2; printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-11-q1-i",
+      "exercise": "3.11",
+      "label": "Exercise 3.11 · Q1(i)",
+      "question": "1. Solve the following quadratic equations by completing the square method\n(i) 9x² − 12x + 4 = 0",
+      "answer": "2/3, 2/3",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.11 Q1(i); printed p. 114, PDF p. 120; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-11-q1-ii",
+      "exercise": "3.11",
+      "label": "Exercise 3.11 · Q1(ii)",
+      "question": "1. Solve the following quadratic equations by completing the square method\n(ii) (5x + 7)/(x − 1) = 3x + 2",
+      "answer": "−1, 3",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.11 Q1(ii); printed p. 114, PDF p. 120; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-11-q2-i",
+      "exercise": "3.11",
+      "label": "Exercise 3.11 · Q2(i)",
+      "question": "2. Solve the following quadratic equations by formula method\n(i) 2x² − 5x + 2 = 0",
+      "answer": "2, 1/2",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.11 Q2(i); printed p. 114, PDF p. 120; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-11-q2-ii",
+      "exercise": "3.11",
+      "label": "Exercise 3.11 · Q2(ii)",
+      "question": "2. Solve the following quadratic equations by formula method\n(ii) √2 f² − 6f + 3√2 = 0",
+      "answer": "(3 + √3)/√2, (3 − √3)/√2",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.11 Q2(ii); printed p. 114, PDF p. 120; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-11-q2-iii",
+      "exercise": "3.11",
+      "label": "Exercise 3.11 · Q2(iii)",
+      "question": "2. Solve the following quadratic equations by formula method\n(iii) 3y² − 20y − 23 = 0",
+      "answer": "−1, 23/3",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.11 Q2(iii); printed p. 114, PDF p. 120; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-11-q2-iv",
+      "exercise": "3.11",
+      "label": "Exercise 3.11 · Q2(iv)",
+      "question": "2. Solve the following quadratic equations by formula method\n(iv) 36y² − 12ay + (a² − b²) = 0",
+      "answer": "(a + b)/6, (a − b)/6",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.11 Q2(iv); printed p. 114, PDF p. 120; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-11-q3",
+      "exercise": "3.11",
+      "label": "Exercise 3.11 · Q3",
+      "question": "3. A ball rolls down a slope and travels a distance d = t² − 0.75t feet in t seconds. Find the time when the distance travelled by the ball is 11.25 feet.",
+      "answer": "3.75 seconds",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.11 Q3; printed p. 114, PDF p. 120; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-12-q1",
+      "exercise": "3.12",
+      "label": "Exercise 3.12 · Q1",
+      "question": "1. If the difference between a number and its reciprocal is 24/5, find the number.",
+      "answer": "5, −1/5",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.12 Q1; printed p. 116, PDF p. 122; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-12-q2",
+      "exercise": "3.12",
+      "label": "Exercise 3.12 · Q2",
+      "question": "2. A garden measuring 12m by 16m is to have a pedestrian pathway that is ‘w’ meters wide installed all the way around so that it increases the total area to 285 m². What is the width of the pathway?",
+      "answer": "1.5 m",
+      "figureSrc": "./assets/grade10-ch3/ex3-12-q2-pathway.svg",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.12 Q2; printed p. 116, PDF p. 122; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-12-q3",
+      "exercise": "3.12",
+      "label": "Exercise 3.12 · Q3",
+      "question": "3. A bus covers a distance of 90 km at a uniform speed. Had the speed been 15 km/hour more it would have taken 30 minutes less for the journey. Find the original speed of the bus.",
+      "answer": "45 km/hr",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.12 Q3; printed p. 116, PDF p. 122; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-12-q4",
+      "exercise": "3.12",
+      "label": "Exercise 3.12 · Q4",
+      "question": "4. A girl is twice as old as her sister. Five years hence, the product of their ages (in years) will be 375. Find their present ages.",
+      "answer": "20 years, 10 years",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.12 Q4; printed p. 116, PDF p. 122; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-12-q5",
+      "exercise": "3.12",
+      "label": "Exercise 3.12 · Q5",
+      "question": "5. A pole has to be erected at a point on the boundary of a circular ground of diameter 20 m in such a way that the difference of its distances from two diametrically opposite fixed gates P and Q on the boundary is 4 m. Is it possible to do so? If answer is yes at what distance from the two gates should the pole be erected?",
+      "answer": "Yes, 12 m, 16 m",
+      "figureSrc": "./assets/grade10-ch3/ex3-12-q5-circle-gates.svg",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.12 Q5; printed p. 116, PDF p. 122; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-12-q6",
+      "exercise": "3.12",
+      "label": "Exercise 3.12 · Q6",
+      "question": "6. From a group of 2x² black bees , square root of half of the group went to a tree. Again eight-ninth of the bees went to the same tree. The remaining two got caught up in a fragrant lotus. How many bees were there in total?",
+      "answer": "72",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.12 Q6; printed p. 117, PDF p. 123; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-12-q7",
+      "exercise": "3.12",
+      "label": "Exercise 3.12 · Q7",
+      "question": "7. Music is been played in two opposite galleries with certain group of people. In the first gallery a group of 4 singers were singing and in the second gallery 9 singers were singing. The two galleries are separated by the distance of 70 m. Where should a person stand for hearing the same intensity of the singers voice? (Hint: The ratio of the sound intensity is equal to the square of the ratio of their corresponding distances).",
+      "answer": "28 m, 42 m",
+      "figureSrc": "./assets/grade10-ch3/ex3-12-q7-galleries.svg",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.12 Q7; printed p. 117, PDF p. 123; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-12-q8",
+      "exercise": "3.12",
+      "label": "Exercise 3.12 · Q8",
+      "question": "8. There is a square field whose side is 10 m. A square flower bed is prepared in its centre leaving a gravel path all round the flower bed. The total cost of laying the flower bed and gravelling the path at ₹3 and ₹4 per square metre respectively is ₹364. Find the width of the gravel path.",
+      "answer": "2 m",
+      "figureSrc": "./assets/grade10-ch3/ex3-12-q8-flowerbed.svg",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.12 Q8; printed p. 117, PDF p. 123; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-12-q9",
+      "exercise": "3.12",
+      "label": "Exercise 3.12 · Q9",
+      "question": "9. The hypotenuse of a right angled triangle is 25 cm and its perimeter 56 cm. Find the length of the smallest side.",
+      "answer": "7 cm",
+      "figureSrc": "./assets/grade10-ch3/ex3-12-q9-triangle.svg",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.12 Q9; printed p. 117, PDF p. 123; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    }
+  ]
+}
