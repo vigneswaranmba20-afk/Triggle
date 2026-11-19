@@ -120,6 +120,13 @@ def probe(path):
 
 
 def duration(path):
+    p = Path(path)
+    if p.suffix.lower() == '.wav':
+        try:
+            with wave.open(str(p), 'rb') as wf:
+                return wf.getnframes() / float(wf.getframerate())
+        except Exception:
+            pass
     return float(probe(path)['format']['duration'])
 
 
@@ -227,6 +234,8 @@ def gemini_audio(text, path, model, voice, api_key, delivery):
 
 
 def segment_audio(beat, lesson, audio_root, mode, existing_dir, api_key):
+    audio_root = Path(audio_root)
+    audio_root.mkdir(parents=True, exist_ok=True)
     model=lesson.get('voice',{}).get('model','gemini-3.1-flash-tts-preview')
     voice=lesson.get('voice',{}).get('name','Kore')
     delivery=lesson.get('voice',{}).get('delivery',DEFAULT_VOICE_DELIVERY)
