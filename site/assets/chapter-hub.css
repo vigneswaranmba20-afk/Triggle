@@ -642,7 +642,7 @@
 }
 .chapter-hub .rnlab .rnlab-surd-story{width:100%;min-width:0}
 .chapter-hub .rnlab .rnlab-surd-question{
-  margin:2px 0 4px;color:#27263f;font:800 clamp(17px,4.5vw,21px)/1.35 system-ui,sans-serif
+  width:100%;margin:2px 0 3px;color:#27263f;font:800 clamp(17px,4.5vw,21px)/1.35 system-ui,sans-serif
 }
 .chapter-hub .rnlab .rnlab-surd-lead{
   margin:0 0 12px;color:#4f4c62;font-size:14px;line-height:1.55

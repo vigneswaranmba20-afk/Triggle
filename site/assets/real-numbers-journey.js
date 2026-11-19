@@ -215,10 +215,14 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
   }else if(index===4){
     // A square-factor explanation must be readable before any interaction:
     // the purple tiles represent the perfect-square factor, NOT the entire radicand.
+    const switcher=panel.querySelector('[data-demo-controls]');
+    const question=document.createElement('h6');
+    question.className='rnlab-surd-question';
+    switcher.append(question);
     const hint=document.createElement('p');
     hint.className='rnlab-surd-try-label';
-    hint.textContent=ta?'வேறு வர்க்கமூலத்தைத் தொட்டுப் பாருங்கள்':'Tap an example to explore';
-    panel.querySelector('[data-demo-controls]').append(hint);
+    hint.textContent=ta?'வேறு வர்க்கமூலத்தைத் தொட்டுப் பாருங்கள்':'Choose an example to explore';
+    switcher.append(hint);
     controls(ta?'வர்க்கமூலத்தைத் தேர்ந்தெடுக்கவும்':'Choose a square root',[
       ['eight','√8'],['eighteen','√18'],['thirtytwo','√32']
     ],'eight',key=>{
@@ -226,6 +230,7 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
       const square=k*k,rad=2*square;
       const tiles=Array.from({length:k*k},()=>'<span class="rnlab-surd-tile" aria-hidden="true"></span>').join('');
       const intro=ta?'√'+rad+' ஐ எவ்வாறு எளிமைப்படுத்தலாம்?':'Why does √'+rad+' become '+k+'√2?';
+      question.textContent=intro;
       const squareCaption=ta?'நிறைவர்க்கம்':'Perfect square';
       const leftoverCaption=ta?'மீதமுள்ள காரணி':'Factor left over';
       const visualDescription=ta?
@@ -233,7 +238,6 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
         square+' unit squares form a '+k+' by '+k+' square. Multiply the '+square+' by the separate factor 2 to make '+rad+'.';
       visual.innerHTML=
         '<div class="rnlab-surd-story">'+
-          '<h6 class="rnlab-surd-question">'+esc(intro)+'</h6>'+
           '<p class="rnlab-surd-lead">'+esc(ta?'முதலில் உள்ளே இருக்கும் நிறைவர்க்கக் காரணியைக் கண்டுபிடி.':'First, find a perfect-square factor inside '+rad+'.')+'</p>'+
           '<div class="rnlab-surd-factors" role="group" aria-label="'+esc(visualDescription)+'">'+
             '<div class="rnlab-surd-square-card">'+
@@ -263,11 +267,8 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
           'Because √'+square+' = '+k+', '+k+' comes outside the root. The √2 stays inside.')+'</p>';
     });
     panel.querySelector('.rnlab-choices')?.classList.add('rnlab-surd-options');
-    // Put the complete worked explanation before the optional example picker.
-    // A first-time learner should not need to touch controls to discover the idea.
-    const examplePicker=panel.querySelector('[data-demo-controls]');
-    examplePicker.classList.add('rnlab-surd-examples-after');
-    output.after(examplePicker);
+    // Keep the example buttons directly below the question, above the diagram
+    // and worked steps. A learner should not need to scroll down to switch.
   }else if(index===5){
     const labelFor=rad=>ta?
       (rad===5?'1-ஐ (√5+2)-ஆல் வகுத்தல்':'3-ஐ (√7+2)-ஆல் வகுத்தல்'):

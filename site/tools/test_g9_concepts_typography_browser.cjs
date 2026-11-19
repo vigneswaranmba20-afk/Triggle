@@ -115,10 +115,14 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
     assert.equal(await page.locator('.rnlab-surd-equation').count(),3,'three visible math steps explain the surd');
     const firstImpressionOrder=await page.locator('[data-demo]').evaluate(d=>{
       const visual=d.querySelector('[data-demo-visual]'),answer=d.querySelector('[data-demo-output]'),picker=d.querySelector('[data-demo-controls]');
-      return !!(visual.compareDocumentPosition(answer)&Node.DOCUMENT_POSITION_FOLLOWING)&&
-        !!(answer.compareDocumentPosition(picker)&Node.DOCUMENT_POSITION_FOLLOWING);
+      const heading=d.querySelector('.rnlab-surd-question');
+      return !!(picker.compareDocumentPosition(visual)&Node.DOCUMENT_POSITION_FOLLOWING)&&
+        !!(visual.compareDocumentPosition(answer)&Node.DOCUMENT_POSITION_FOLLOWING)&&
+        !!heading&&picker.contains(heading);
     });
-    assert(firstImpressionOrder,'surds explain the full worked idea before optional example controls');
+    assert(firstImpressionOrder,'surds switcher follows the question before the diagram and worked steps');
+    const optionPosition=await page.locator('.rnlab-surd-options').boundingBox();
+    assert(optionPosition&&optionPosition.y<page.viewportSize().height-110,'the example buttons start in the first phone viewport');
     assert((await page.locator('.rnlab-surd-question').innerText()).includes('√8'),'first-glance question explains the diagram');
     assert((await page.locator('.rnlab-surd-description').innerText()).includes('8'),'square group links to the original radicand');
     await page.locator('[data-demo-mode="eighteen"]').click();
