@@ -271,6 +271,13 @@ async function main(){
     assert.equal(await button.nth(2).getAttribute('aria-pressed'),'true','Correct choice retains accessible selected state');
     assert(await page.locator('[data-back-index]').isVisible(),'Back to concepts remains visible');
     assert(await page.locator('[data-footer-next]').isVisible(),'One bottom Next control');
+    await page.locator('[data-footer-next]').click();
+    const headerGap=await page.locator('.sp2-concept-heading').evaluate(el=>({
+      top:el.getBoundingClientRect().top,
+      bottom:document.querySelector('.appbar')?.getBoundingClientRect().bottom||0
+    }));
+    assert(headerGap.top>=headerGap.bottom+12,'Next idea heading stays clear of the sticky app bar');
+
     await page.locator('[data-back-index]').click();
     await nav.nth(1).click();
     await page.locator('.sp2-answers button').first().click();

@@ -179,5 +179,9 @@
 }
 
 /* Mission 04: only Grade 10 Chapter 2 receives the sticky-header clearance. */
-.g10ch2-journey{scroll-margin-top:calc(var(--sticky-header-height, 76px) + 16px)}
-.g10ch2-journey .sp2-concept-heading{scroll-margin-top:calc(var(--sticky-header-height, 76px) + 16px)}
+.chapter-hub:has([data-g10ch2-visual]) .sp2-journey{
+  scroll-margin-top:calc(var(--sticky-header-height, 76px) + 16px)
+}
+.chapter-hub:has([data-g10ch2-visual]) .sp2-concept-heading{
+  scroll-margin-top:calc(var(--sticky-header-height, 76px) + 16px)
+}
