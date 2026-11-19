@@ -149,6 +149,16 @@ async function run(){
         await page.goto(base+'/index.html?class=10&chapter=g10-ch3&section=concepts&concept='+idx,{waitUntil:'load'});
         await page.locator('.g10ch3-lab').waitFor({state:'visible'});
         await assertNoOverflowAndValidMath(page,`EN ${width}px Concept ${c}`);
+        if(width===320){
+          const topCount=await page.locator('.g10ch3-lab > .g10ch3-tabs').first().locator('.g10ch3-tab').count().catch(()=>0);
+          for(let t=0;t<topCount;t++){
+            await page.locator('.g10ch3-lab > .g10ch3-tabs').first().locator('.g10ch3-tab').nth(t).click();
+            await assertNoOverflowAndValidMath(page,`EN 320px Concept ${c} tab ${t}`);
+          }
+          await page.locator('[data-answers] button').first().click();
+          await page.locator('[data-why]').click();
+          await assertNoOverflowAndValidMath(page,`EN 320px Concept ${c} why`);
+        }
         if(screenshotDir&&(width===320||width===393)){
           await page.screenshot({path:path.join(screenshotDir,`en-${width}-c${String(c).padStart(2,'0')}.png`),fullPage:true});
         }

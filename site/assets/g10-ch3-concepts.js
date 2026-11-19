@@ -69,9 +69,9 @@
       ],
       prev:'← முந்தையது',next:'அடுத்த படி →',replay:'மீண்டும் ↻',
       outcomes:[
-        {btn:'ஒரே தீர்வு',head:'ஒரே தீர்வு: வரிசை மூன்றடுக்கு (x, y, z)',desc:'மூன்று தளங்களும் ஒரே ஒரு பொதுப் புள்ளியில் சந்திக்கின்றன.',eq:'3z=12\\implies (x,y,z)=(2,-1,4)'},
-        {btn:'எண்ணற்ற தீர்வுகள் (0 = 0)',head:'எண்ணற்ற தீர்வுகள்: 0 = 0 (உண்மை)',desc:'நீக்கலின்போது 0 = 0 கிடைத்தால், தளங்கள் ஒரு பொதுக் கோட்டில் வெட்டுகின்றன அல்லது ஒன்றின் மீது ஒன்று அமைகின்றன.',eq:'0=0\\;(\\text{always true})\\implies\\text{infinitely many solutions}'},
-        {btn:'தீர்வு இல்லை (0 = k)',head:'தீர்வு இல்லை: 0 = 5 (முரண்பாடு)',desc:'நீக்கலின்போது 0 = 5 போன்ற சாத்தியமற்ற சமன்பாடு வந்தால், தளங்கள் அனைத்தும் ஒரே புள்ளியில் சந்திக்கவில்லை.',eq:'0=5\\;(\\text{impossible})\\implies\\text{no solution}'}
+        {btn:'ஒரே தீர்வு',head:'ஒரே தீர்வு: வரிசை மூன்றடுக்கு (x, y, z)',desc:'மூன்று தளங்களும் ஒரே ஒரு பொதுப் புள்ளியில் சந்திக்கின்றன.',eq:'\\begin{aligned}3z&=12\\\\\\implies (x,y,z)&=(2,-1,4)\\end{aligned}'},
+        {btn:'எண்ணற்ற தீர்வுகள் (0 = 0)',head:'எண்ணற்ற தீர்வுகள்: 0 = 0 (உண்மை)',desc:'நீக்கலின்போது 0 = 0 கிடைத்தால், தளங்கள் ஒரு பொதுக் கோட்டில் வெட்டுகின்றன அல்லது ஒன்றின் மீது ஒன்று அமைகின்றன.',eq:'\\begin{aligned}0&=0\\;(\\text{always true})\\\\&\\implies\\text{infinitely many solutions}\\end{aligned}'},
+        {btn:'தீர்வு இல்லை (0 = k)',head:'தீர்வு இல்லை: 0 = 5 (முரண்பாடு)',desc:'நீக்கலின்போது 0 = 5 போன்ற சாத்தியமற்ற சமன்பாடு வந்தால், தளங்கள் அனைத்தும் ஒரே புள்ளியில் சந்திக்கவில்லை.',eq:'\\begin{aligned}0&=5\\;(\\text{impossible})\\\\&\\implies\\text{no solution}\\end{aligned}'}
       ]
     }:{
       title:'Eliminate the same variable twice & geometric outcomes',
@@ -84,9 +84,9 @@
       ],
       prev:'← Previous',next:'Next step →',replay:'Replay ↻',
       outcomes:[
-        {btn:'Unique (x, y, z)',head:'Unique solution: ordered triple (x, y, z)',desc:'Three independent planes intersect at exactly one point in space.',eq:'3z=12\\implies (x,y,z)=(2,-1,4)'},
-        {btn:'Infinitely many (0 = 0)',head:'Infinitely many solutions: identity 0 = 0',desc:'When elimination leaves 0 = 0, the equations share a whole line (or plane) of solutions.',eq:'0=0\\;(\\text{identity})\\implies\\text{infinitely many solutions}'},
-        {btn:'No solution (0 = k)',head:'No solution: contradiction 0 = 5',desc:'When elimination gives an impossible statement like 0 = 5, at least two planes are parallel or inconsistent.',eq:'0=5\\;(\\text{contradiction})\\implies\\text{no solution}'}
+        {btn:'Unique (x, y, z)',head:'Unique solution: ordered triple (x, y, z)',desc:'Three independent planes intersect at exactly one point in space.',eq:'\\begin{aligned}3z&=12\\\\\\implies (x,y,z)&=(2,-1,4)\\end{aligned}'},
+        {btn:'Infinitely many (0 = 0)',head:'Infinitely many solutions: identity 0 = 0',desc:'When elimination leaves 0 = 0, the equations share a whole line (or plane) of solutions.',eq:'\\begin{aligned}0&=0\\;(\\text{identity})\\\\&\\implies\\text{infinitely many solutions}\\end{aligned}'},
+        {btn:'No solution (0 = k)',head:'No solution: contradiction 0 = 5',desc:'When elimination gives an impossible statement like 0 = 5, at least two planes are parallel or inconsistent.',eq:'\\begin{aligned}0&=5\\;(\\text{contradiction})\\\\&\\implies\\text{no solution}\\end{aligned}'}
       ]
     };
     host.append(el('h5','g10ch3-lab-title',copy.title));
@@ -159,8 +159,8 @@
       ],
       bodies:[
         {note:'படி 3 சமம்; தலையாயக் கெழு 2x³ ÷ x³ = 2. மீதி −5x² + 5x − 5 = −5(x² − x + 1).',eq:'\\begin{aligned}&2x^3-3x^2+3x-1\\\\&=(x^3+x^2-x+2)(2)\\\\&\\quad+\\underbrace{(-5)(x^2-x+1)}_{r_1(x)\\neq 0}\\end{aligned}',fb:'f(x) = g(x)(2) − 5(x² − x + 1)'},
-        {note:'−5 என்பது x இல்லாத பூச்சியமற்ற மாறிலி. இரு அசல் கோவைகளிலும் பொது எண் காரணி இல்லாததால் −5-ஐ விட்டுவிட்டு x² − x + 1-ஐ வகுத்தியாக எடுக்கிறோம்.',eq:'\\begin{aligned}r_1(x)&=-5(x^2-x+1)\\\\\\text{Omit }-5&\\implies\\text{next divisor }=x^2-x+1\\end{aligned}',fb:'Omit constant −5 → next divisor = x² − x + 1'},
-        {note:'இப்போது g(x) = x³ + x² − x + 2-ஐ x² − x + 1-ஆல் வகுக்க ஈவு (x + 2), மீதி 0. எனவே மீ.பெ.வ = x² − x + 1.',eq:'\\begin{aligned}x^3+x^2-x+2&=(x^2-x+1)(x+2)+0\\\\&\\implies\\gcd=x^2-x+1\\end{aligned}',fb:'g(x) = (x² − x + 1)(x + 2) + 0 ⇒ GCD = x² − x + 1'}
+        {note:'−5 என்பது x இல்லாத பூச்சியமற்ற மாறிலி. இரு அசல் கோவைகளிலும் பொது எண் காரணி இல்லாததால் −5-ஐ விட்டுவிட்டு x² − x + 1-ஐ வகுத்தியாக எடுக்கிறோம்.',eq:'\\begin{aligned}r_1(x)&=-5(x^2-x+1)\\\\\\text{Omit }-5&\\implies\\text{next divisor}\\\\&=x^2-x+1\\end{aligned}',fb:'Omit constant −5 → next divisor = x² − x + 1'},
+        {note:'இப்போது g(x) = x³ + x² − x + 2-ஐ x² − x + 1-ஆல் வகுக்க ஈவு (x + 2), மீதி 0. எனவே மீ.பெ.வ = x² − x + 1.',eq:'\\begin{aligned}&x^3+x^2-x+2\\\\&=(x^2-x+1)(x+2)+0\\\\&\\implies\\gcd=x^2-x+1\\end{aligned}',fb:'g(x) = (x² − x + 1)(x + 2) + 0 ⇒ GCD = x² − x + 1'}
       ],
       constToggle:'இரு அசல் கோவைகளிலும் பொது எண் காரணி இருந்தால் என்ன செய்வது?'
       ,constNote:'எடுத்துக்காட்டாக 6(...) மற்றும் 9(...) எனில், முதலில் gcd(6, 9) = 3 என்பதைத் தனியே எடுத்து, இறுதிப் பல்லுறுப்புக் காரணியுடன் 3-ஐப் பெருக்க வேண்டும்.'
@@ -169,8 +169,8 @@
       steps:['Step 1 · Divide f ÷ g','Step 2 · Drop constant −5','Step 3 · Divide g ÷ r₁'],
       bodies:[
         {note:'Both polynomials have degree 3; dividing 2x³ by x³ gives quotient 2 and remainder −5x² + 5x − 5 = −5(x² − x + 1).',eq:'\\begin{aligned}&2x^3-3x^2+3x-1\\\\&=(x^3+x^2-x+2)(2)\\\\&\\quad+\\underbrace{(-5)(x^2-x+1)}_{r_1(x)\\neq 0}\\end{aligned}',fb:'f(x) = g(x)(2) − 5(x² − x + 1)'},
-        {note:'−5 is a non-zero constant without x, and it does not divide g(x) = x³ + x² − x + 2. Drop −5 and use x² − x + 1 as the next divisor.',eq:'\\begin{aligned}r_1(x)&=-5(x^2-x+1)\\\\\\text{Drop }-5&\\implies\\text{next divisor }=x^2-x+1\\end{aligned}',fb:'Drop −5 → next divisor = x² − x + 1'},
-        {note:'Divide g(x) by x² − x + 1: quotient is x + 2 and remainder is 0! The last divisor x² − x + 1 is the GCD.',eq:'\\begin{aligned}x^3+x^2-x+2&=(x^2-x+1)(x+2)+0\\\\&\\implies\\gcd=x^2-x+1\\end{aligned}',fb:'GCD = x² − x + 1'}
+        {note:'−5 is a non-zero constant without x, and it does not divide g(x) = x³ + x² − x + 2. Drop −5 and use x² − x + 1 as the next divisor.',eq:'\\begin{aligned}r_1(x)&=-5(x^2-x+1)\\\\\\text{Drop }-5&\\implies\\text{next divisor}\\\\&=x^2-x+1\\end{aligned}',fb:'Drop −5 → next divisor = x² − x + 1'},
+        {note:'Divide g(x) by x² − x + 1: quotient is x + 2 and remainder is 0! The last divisor x² − x + 1 is the GCD.',eq:'\\begin{aligned}&x^3+x^2-x+2\\\\&=(x^2-x+1)(x+2)+0\\\\&\\implies\\gcd=x^2-x+1\\end{aligned}',fb:'GCD = x² − x + 1'}
       ],
       constToggle:'What if both starting polynomials share a numeric factor?',
       constNote:'Factor out numeric coefficients first! For instance, for 6(x³...) and 9(x³...), take gcd(6, 9) = 3 first and multiply 3 onto the final polynomial GCD.'
@@ -203,7 +203,7 @@
       out:[
         {vals:['2¹ = 2','3¹ = 3','(x−2)¹','(x+3)¹'],badge:'min',eq:'\\begin{aligned}\\gcd&=2^1\\cdot 3^1\\cdot(x-2)^1(x+3)^1\\\\&=6(x-2)(x+3)\\end{aligned}',fb:'GCD = 6(x − 2)(x + 3)',note:'மீ.பெ.வ: இரு கோவைகளிலும் பொதுவான சிறிய அடுக்குகளை மட்டுமே எடுக்கிறது.'},
         {vals:['2² = 4','3² = 9','(x−2)²','(x+3)³'],badge:'max',eq:'\\begin{aligned}\\operatorname{LCM}&=2^2\\cdot 3^2\\cdot(x-2)^2(x+3)^3\\\\&=36(x-2)^2(x+3)^3\\end{aligned}',fb:'LCM = 36(x − 2)²(x + 3)³',note:'மீ.சி.ம: ஒவ்வொரு காரணியின் உயர்ந்த அடுக்கையும் எடுத்துக்கொள்கிறது.'},
-        {vals:['2³ = 8','3³ = 27','(x−2)³','(x+3)⁴'],badge:'sum',eq:'\\begin{aligned}f\\cdot g&=12(x-2)^2(x+3)\\cdot 18(x-2)(x+3)^3\\\\&=216(x-2)^3(x+3)^4=\\operatorname{LCM}\\cdot\\gcd\\end{aligned}',fb:'f·g = 216(x−2)³(x+3)⁴ = LCM·GCD',note:'ஒவ்வொரு நெடுவரிசையிலும் min(a,b) + max(a,b) = a + b. (கவனம்: இது 2 கோவைகளுக்கு மட்டுமே; 3 கோவைகளுக்கு அல்ல!)'}
+        {vals:['2³ = 8','3³ = 27','(x−2)³','(x+3)⁴'],badge:'sum',eq:'\\begin{aligned}f\\cdot g&=12(x-2)^2(x+3)\\\\&\\quad\\times 18(x-2)(x+3)^3\\\\&=216(x-2)^3(x+3)^4\\\\&=\\operatorname{LCM}\\cdot\\gcd\\end{aligned}',fb:'f·g = 216(x−2)³(x+3)⁴ = LCM·GCD',note:'ஒவ்வொரு நெடுவரிசையிலும் min(a,b) + max(a,b) = a + b. (கவனம்: இது 2 கோவைகளுக்கு மட்டுமே; 3 கோவைகளுக்கு அல்ல!)'}
       ]
     }:{
       title:'Compare factor powers: GCD vs LCM & Product Law',
@@ -214,7 +214,7 @@
       out:[
         {vals:['2¹ = 2','3¹ = 3','(x−2)¹','(x+3)¹'],badge:'min',eq:'\\begin{aligned}\\gcd&=2^1\\cdot 3^1\\cdot(x-2)^1(x+3)^1\\\\&=6(x-2)(x+3)\\end{aligned}',fb:'GCD = 6(x − 2)(x + 3)',note:'GCD picks the LOWER power of each factor shared by both polynomials.'},
         {vals:['2² = 4','3² = 9','(x−2)²','(x+3)³'],badge:'max',eq:'\\begin{aligned}\\operatorname{LCM}&=2^2\\cdot 3^2\\cdot(x-2)^2(x+3)^3\\\\&=36(x-2)^2(x+3)^3\\end{aligned}',fb:'LCM = 36(x − 2)²(x + 3)³',note:'LCM picks the HIGHER power of every factor present in either polynomial.'},
-        {vals:['2³ = 8','3³ = 27','(x−2)³','(x+3)⁴'],badge:'sum',eq:'\\begin{aligned}f\\cdot g&=12(x-2)^2(x+3)\\cdot 18(x-2)(x+3)^3\\\\&=216(x-2)^3(x+3)^4=\\operatorname{LCM}\\cdot\\gcd\\end{aligned}',fb:'f · g = 216(x−2)³(x+3)⁴ = LCM · GCD',note:'In every column, min(a,b) + max(a,b) = a + b! Note: this product law holds for TWO polynomials only, not three.'}
+        {vals:['2³ = 8','3³ = 27','(x−2)³','(x+3)⁴'],badge:'sum',eq:'\\begin{aligned}f\\cdot g&=12(x-2)^2(x+3)\\\\&\\quad\\times 18(x-2)(x+3)^3\\\\&=216(x-2)^3(x+3)^4\\\\&=\\operatorname{LCM}\\cdot\\gcd\\end{aligned}',fb:'f · g = 216(x−2)³(x+3)⁴ = LCM · GCD',note:'In every column, min(a,b) + max(a,b) = a + b! Note: this product law holds for TWO polynomials only, not three.'}
       ]
     };
     host.append(el('h5','g10ch3-lab-title',copy.title));
@@ -292,17 +292,17 @@
       title:'நான்கு செயல்களின் விதியை மாற்றிக் காண்க',
       ops:['× பெருக்கல்','÷ வகுத்தல் (தலைகீழ்)','− கழித்தல் (அடைப்புக்குறி)'],
       data:[
-        {eq:'\\begin{aligned}&\\dfrac{x^2-4}{x+1}\\times\\dfrac{x+1}{x+2}\\\\&=\\dfrac{(x-2)\\cancel{(x+2)}}{\\cancel{x+1}}\\times\\dfrac{\\cancel{x+1}}{\\cancel{x+2}}=x-2\\end{aligned}',fb:'(x² − 4)/(x + 1) × (x + 1)/(x + 2) = x − 2',note:'முதலில் தொகுதி மற்றும் பகுதியைக் காரணிப்படுத்தி பொதுக் காரணிகளை மட்டும் நீக்கவும்.'},
-        {eq:'\\begin{aligned}&\\dfrac{x-1}{x+4}\\div\\dfrac{x^2-1}{x+4}\\\\&=\\dfrac{\\cancel{x-1}}{\\cancel{x+4}}\\times\\dfrac{\\cancel{x+4}}{\\cancel{(x-1)}(x+1)}=\\dfrac{1}{x+1}\\end{aligned}',fb:'Flip ONLY the second fraction: answer = 1/(x + 1)',note:'கவனம்: முதல் பின்னத்தைத் திருப்பக் கூடாது! இரண்டாவது பின்னத்தை (வகுத்தியை) மட்டும் தலைகீழாக மாற்றிப் பெருக்கவும்.'},
-        {eq:'\\begin{aligned}&\\dfrac{3x}{x^2-9}-\\dfrac{x-2}{x+3}\\\\&=\\dfrac{3x-(x-2)(x-3)}{(x-3)(x+3)}=\\dfrac{-x^2+8x-6}{(x-3)(x+3)}\\end{aligned}',fb:'Bracket the subtracted numerator: 3x − (x − 2)(x − 3)',note:'பகுதிகளின் மீ.சி.ம (x − 3)(x + 3) எடுத்த பின், கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் இட்டால் குறியீட்டுப் பிழை வராது.'}
+        {eq:'\\begin{aligned}&\\dfrac{x^2-4}{x+1}\\times\\dfrac{x+1}{x+2}\\\\&=\\dfrac{(x-2)\\cancel{(x+2)}}{\\cancel{x+1}}\\times\\dfrac{\\cancel{x+1}}{\\cancel{x+2}}\\\\&=x-2\\end{aligned}',fb:'(x² − 4)/(x + 1) × (x + 1)/(x + 2) = x − 2',note:'முதலில் தொகுதி மற்றும் பகுதியைக் காரணிப்படுத்தி பொதுக் காரணிகளை மட்டும் நீக்கவும்.'},
+        {eq:'\\begin{aligned}&\\dfrac{x-1}{x+4}\\div\\dfrac{x^2-1}{x+4}\\\\&=\\dfrac{\\cancel{x-1}}{\\cancel{x+4}}\\times\\dfrac{\\cancel{x+4}}{\\cancel{(x-1)}(x+1)}\\\\&=\\dfrac{1}{x+1}\\end{aligned}',fb:'Flip ONLY the second fraction: answer = 1/(x + 1)',note:'கவனம்: முதல் பின்னத்தைத் திருப்பக் கூடாது! இரண்டாவது பின்னத்தை (வகுத்தியை) மட்டும் தலைகீழாக மாற்றிப் பெருக்கவும்.'},
+        {eq:'\\begin{aligned}&\\dfrac{3x}{x^2-9}-\\dfrac{x-2}{x+3}\\\\&=\\dfrac{3x-(x-2)(x-3)}{(x-3)(x+3)}\\\\&=\\dfrac{-x^2+8x-6}{(x-3)(x+3)}\\end{aligned}',fb:'Bracket the subtracted numerator: 3x − (x − 2)(x − 3)',note:'பகுதிகளின் மீ.சி.ம (x − 3)(x + 3) எடுத்த பின், கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் இட்டால் குறியீட்டுப் பிழை வராது.'}
       ]
     }:{
       title:'Switch mechanisms across ×, ÷, and − of rational expressions',
       ops:['× Multiply','÷ Divide (Flip 2nd)','− Subtract (Bracket!)'],
       data:[
-        {eq:'\\begin{aligned}&\\dfrac{x^2-4}{x+1}\\times\\dfrac{x+1}{x+2}\\\\&=\\dfrac{(x-2)\\cancel{(x+2)}}{\\cancel{x+1}}\\times\\dfrac{\\cancel{x+1}}{\\cancel{x+2}}=x-2\\end{aligned}',fb:'(x² − 4)/(x + 1) × (x + 1)/(x + 2) = x − 2',note:'Factor every polynomial completely BEFORE cancelling any factor shared between numerator and denominator.'},
-        {eq:'\\begin{aligned}&\\dfrac{x-1}{x+4}\\div\\dfrac{x^2-1}{x+4}\\\\&=\\dfrac{\\cancel{x-1}}{\\cancel{x+4}}\\times\\dfrac{\\cancel{x+4}}{\\cancel{(x-1)}(x+1)}=\\dfrac{1}{x+1}\\end{aligned}',fb:'Flip ONLY the second fraction: answer = 1/(x + 1)',note:'Convert ÷ to × by flipping ONLY the second fraction (the divisor), then factor and cancel.'},
-        {eq:'\\begin{aligned}&\\dfrac{3x}{x^2-9}-\\dfrac{x-2}{x+3}\\\\&=\\dfrac{3x-(x-2)(x-3)}{(x-3)(x+3)}=\\dfrac{-x^2+8x-6}{(x-3)(x+3)}\\end{aligned}',fb:'Bracket the subtracted numerator: [3x − (x − 2)(x − 3)]/[(x − 3)(x + 3)]',note:'Find the LCM denominator (x − 3)(x + 3), then put parentheses around the entire subtracted product before expanding!'}
+        {eq:'\\begin{aligned}&\\dfrac{x^2-4}{x+1}\\times\\dfrac{x+1}{x+2}\\\\&=\\dfrac{(x-2)\\cancel{(x+2)}}{\\cancel{x+1}}\\times\\dfrac{\\cancel{x+1}}{\\cancel{x+2}}\\\\&=x-2\\end{aligned}',fb:'(x² − 4)/(x + 1) × (x + 1)/(x + 2) = x − 2',note:'Factor every polynomial completely BEFORE cancelling any factor shared between numerator and denominator.'},
+        {eq:'\\begin{aligned}&\\dfrac{x-1}{x+4}\\div\\dfrac{x^2-1}{x+4}\\\\&=\\dfrac{\\cancel{x-1}}{\\cancel{x+4}}\\times\\dfrac{\\cancel{x+4}}{\\cancel{(x-1)}(x+1)}\\\\&=\\dfrac{1}{x+1}\\end{aligned}',fb:'Flip ONLY the second fraction: answer = 1/(x + 1)',note:'Convert ÷ to × by flipping ONLY the second fraction (the divisor), then factor and cancel.'},
+        {eq:'\\begin{aligned}&\\dfrac{3x}{x^2-9}-\\dfrac{x-2}{x+3}\\\\&=\\dfrac{3x-(x-2)(x-3)}{(x-3)(x+3)}\\\\&=\\dfrac{-x^2+8x-6}{(x-3)(x+3)}\\end{aligned}',fb:'Bracket the subtracted numerator: [3x − (x − 2)(x − 3)]/[(x − 3)(x + 3)]',note:'Find the LCM denominator (x − 3)(x + 3), then put parentheses around the entire subtracted product before expanding!'}
       ]
     };
     host.append(el('h5','g10ch3-lab-title',copy.title));
@@ -328,9 +328,9 @@
         ['மட்டு |…|','வர்க்கமூலம் குறையற்றது → |4(x−2)²(x+1)|']
       ],
       divSteps:[
-        {lbl:'படி 1: முதல் உறுப்பு',eq:'\\begin{aligned}\\sqrt{9x^4}&=3x^2\\\\\\text{Remainder}&=-12x^3+10x^2-4x+1\\end{aligned}',fb:'First term 3x²; remainder −12x³ + 10x² − 4x + 1',note:'முதலில் இறங்கு வரிசையில் (x⁴, x³, x², x, மாறிலி) அமைக்கவும். முதல் உறுப்பு 9x⁴-இன் வர்க்கமூலம் 3x².'},
-        {lbl:'படி 2: ஈவை இருமடங்காக்கு',eq:'\\begin{aligned}2(3x^2)&=6x^2,\\quad\\dfrac{-12x^3}{6x^2}=-2x\\\\(-2x)(6x^2-2x)&=-12x^3+4x^2\\end{aligned}',fb:'Double 3x² → 6x²; next term −2x; remainder 6x² − 4x + 1',note:'தற்போதைய ஈவு 3x²-ஐ 2-ஆல் பெருக்கி 6x² ஆக்குகிறோம்! அடுத்த உறுப்பு −2x; கழித்தால் மீதி 6x² − 4x + 1.'},
-        {lbl:'படி 3: மீண்டும் இருமடங்காக்கு',eq:'\\begin{aligned}2(3x^2-2x)&=6x^2-4x,\\quad\\dfrac{6x^2}{6x^2}=+1\\\\\\text{Remainder}&=0\\implies|3x^2-2x+1|\\end{aligned}',fb:'Double → 6x² − 4x; next term +1; remainder 0 ⇒ |3x² − 2x + 1|',note:'இப்போது (3x² − 2x)-ஐ இருமடங்காக்க 6x² − 4x. +1 சேர்த்துக் கழித்தால் மீதி 0! விடை: |3x² − 2x + 1|.'}
+        {lbl:'படி 1: முதல் உறுப்பு',eq:'\\begin{aligned}\\sqrt{9x^4}&=3x^2\\\\\\text{Rem.}&=-12x^3+10x^2-4x+1\\end{aligned}',fb:'First term 3x²; remainder −12x³ + 10x² − 4x + 1',note:'முதலில் இறங்கு வரிசையில் (x⁴, x³, x², x, மாறிலி) அமைக்கவும். முதல் உறுப்பு 9x⁴-இன் வர்க்கமூலம் 3x².'},
+        {lbl:'படி 2: ஈவை இருமடங்காக்கு',eq:'\\begin{aligned}2(3x^2)&=6x^2,\\\\\\dfrac{-12x^3}{6x^2}&=-2x\\\\(-2x)(6x^2-2x)&=-12x^3+4x^2\\end{aligned}',fb:'Double 3x² → 6x²; next term −2x; remainder 6x² − 4x + 1',note:'தற்போதைய ஈவு 3x²-ஐ 2-ஆல் பெருக்கி 6x² ஆக்குகிறோம்! அடுத்த உறுப்பு −2x; கழித்தால் மீதி 6x² − 4x + 1.'},
+        {lbl:'படி 3: மீண்டும் இருமடங்காக்கு',eq:'\\begin{aligned}2(3x^2-2x)&=6x^2-4x,\\\\\\dfrac{6x^2}{6x^2}&=+1\\\\\\text{Rem.}=0&\\implies|3x^2-2x+1|\\end{aligned}',fb:'Double → 6x² − 4x; next term +1; remainder 0 ⇒ |3x² − 2x + 1|',note:'இப்போது (3x² − 2x)-ஐ இருமடங்காக்க 6x² − 4x. +1 சேர்த்துக் கழித்தால் மீதி 0! விடை: |3x² − 2x + 1|.'}
       ]
     }:{
       title:'Factorization (halve powers) vs Division (double the quotient)',
@@ -343,9 +343,9 @@
         ['Bars |…|','Non-negative root → |4(x−2)²(x+1)|']
       ],
       divSteps:[
-        {lbl:'Step 1 · Leading root',eq:'\\begin{aligned}\\sqrt{9x^4}&=3x^2\\\\\\text{Remainder}&=-12x^3+10x^2-4x+1\\end{aligned}',fb:'First term 3x²; remainder −12x³ + 10x² − 4x + 1',note:'Verify terms are in descending powers of x. Take √(9x⁴) = 3x² as the first term of the quotient, and subtract 9x⁴.'},
-        {lbl:'Step 2 · Double 3x²',eq:'\\begin{aligned}2(3x^2)&=6x^2,\\quad\\dfrac{-12x^3}{6x^2}=-2x\\\\(-2x)(6x^2-2x)&=-12x^3+4x^2\\end{aligned}',fb:'Double 3x² → 6x²; next quotient term −2x; remainder 6x² − 4x + 1',note:'Why double 3x² to 6x²? From (A+B)² = A² + (2A+B)B! Subtract (−2x)(6x² − 2x) to leave 6x² − 4x + 1.'},
-        {lbl:'Step 3 · Double 3x²−2x',eq:'\\begin{aligned}2(3x^2-2x)&=6x^2-4x,\\quad\\dfrac{6x^2}{6x^2}=+1\\\\\\text{Remainder}&=0\\implies|3x^2-2x+1|\\end{aligned}',fb:'Final quotient |3x² − 2x + 1|, remainder 0',note:'Double the current quotient again to 6x² − 4x; next term is +1. Subtract 1(6x² − 4x + 1) → remainder 0! Answer: |3x² − 2x + 1|.'}
+        {lbl:'Step 1 · Leading root',eq:'\\begin{aligned}\\sqrt{9x^4}&=3x^2\\\\\\text{Rem.}&=-12x^3+10x^2-4x+1\\end{aligned}',fb:'First term 3x²; remainder −12x³ + 10x² − 4x + 1',note:'Verify terms are in descending powers of x. Take √(9x⁴) = 3x² as the first term of the quotient, and subtract 9x⁴.'},
+        {lbl:'Step 2 · Double 3x²',eq:'\\begin{aligned}2(3x^2)&=6x^2,\\\\\\dfrac{-12x^3}{6x^2}&=-2x\\\\(-2x)(6x^2-2x)&=-12x^3+4x^2\\end{aligned}',fb:'Double 3x² → 6x²; next quotient term −2x; remainder 6x² − 4x + 1',note:'Why double 3x² to 6x²? From (A+B)² = A² + (2A+B)B! Subtract (−2x)(6x² − 2x) to leave 6x² − 4x + 1.'},
+        {lbl:'Step 3 · Double 3x²−2x',eq:'\\begin{aligned}2(3x^2-2x)&=6x^2-4x,\\\\\\dfrac{6x^2}{6x^2}&=+1\\\\\\text{Rem.}=0&\\implies|3x^2-2x+1|\\end{aligned}',fb:'Final quotient |3x² − 2x + 1|, remainder 0',note:'Double the current quotient again to 6x² − 4x; next term is +1. Subtract 1(6x² − 4x + 1) → remainder 0! Answer: |3x² − 2x + 1|.'}
       ]
     };
     host.append(el('h5','g10ch3-lab-title',copy.title));
@@ -524,7 +524,7 @@
         <text x="14" y="22" font-size="11" font-weight="750" fill="#181B20">y = x² − 4x + ${c}</text>
         <text x="14" y="38" font-size="11" font-weight="750" fill="${delta>0?'#166353':delta===0?'#8A6728':'#6E2933'}">Δ = ${delta}</text>
       </svg>`;
-      tex(mathBox,`\\Delta=(-4)^2-4(1)(${c})=16-${4*c}=${delta}`,`Δ = 16 − 4(${c}) = ${delta}`,true);
+      tex(mathBox,`\\begin{aligned}\\Delta&=(-4)^2-4(1)(${c})\\\\&=16-${4*c}=${delta}\\end{aligned}`,`Δ = 16 − 4(${c}) = ${delta}`,true);
       note.textContent=delta>0?copy.pos:delta===0?copy.zero:copy.neg;
     }
     paint();
@@ -538,7 +538,7 @@
         {lbl:'α² + β²',idEq:'\\begin{aligned}\\alpha^2+\\beta^2&=(\\alpha+\\beta)^2-2\\alpha\\beta\\\\&=5^2-2(6)=13\\end{aligned}',fb:'(5)² − 2(6) = 13',chk:'சரிபார்த்தல் (மூலங்கள் 3, 2): 3² + 2² = 9 + 4 = 13 ✓'},
         {lbl:'(α − β)²',idEq:'\\begin{aligned}(\\alpha-\\beta)^2&=(\\alpha+\\beta)^2-4\\alpha\\beta\\\\&=5^2-4(6)=1\\end{aligned}',fb:'(5)² − 4(6) = 1',chk:'சரிபார்த்தல் (மூலங்கள் 3, 2): (3 − 2)² = 1² = 1 ✓'},
         {lbl:'1/α + 1/β',idEq:'\\dfrac{1}{\\alpha}+\\dfrac{1}{\\beta}=\\dfrac{\\alpha+\\beta}{\\alpha\\beta}=\\dfrac{5}{6}',fb:'(α + β)/(αβ) = 5/6',chk:'சரிபார்த்தல் (மூலங்கள் 3, 2): 1/3 + 1/2 = 5/6 ✓'},
-        {lbl:'α³ + β³',idEq:'\\begin{aligned}\\alpha^3+\\beta^3&=(\\alpha+\\beta)^3-3\\alpha\\beta(\\alpha+\\beta)\\\\&=5^3-3(6)(5)=35\\end{aligned}',fb:'5³ − 3(6)(5) = 35',chk:'சரிபார்த்தல் (மூலங்கள் 3, 2): 3³ + 2³ = 27 + 8 = 35 ✓'}
+        {lbl:'α³ + β³',idEq:'\\begin{aligned}\\alpha^3+\\beta^3&=(\\alpha+\\beta)^3\\\\&\\quad-3\\alpha\\beta(\\alpha+\\beta)\\\\&=5^3-3(6)(5)=35\\end{aligned}',fb:'5³ − 3(6)(5) = 35',chk:'சரிபார்த்தல் (மூலங்கள் 3, 2): 3³ + 2³ = 27 + 8 = 35 ✓'}
       ]
     }:{
       title:'Rewrite using ONLY α + β = 5 and αβ = 6 for x² − 5x + 6 = 0',
@@ -546,7 +546,7 @@
         {lbl:'α² + β²',idEq:'\\begin{aligned}\\alpha^2+\\beta^2&=(\\alpha+\\beta)^2-2\\alpha\\beta\\\\&=5^2-2(6)=13\\end{aligned}',fb:'α² + β² = 5² − 2(6) = 13',chk:'Independent check with roots 3, 2: 3² + 2² = 9 + 4 = 13 ✓'},
         {lbl:'(α − β)²',idEq:'\\begin{aligned}(\\alpha-\\beta)^2&=(\\alpha+\\beta)^2-4\\alpha\\beta\\\\&=5^2-4(6)=1\\end{aligned}',fb:'(α − β)² = 5² − 4(6) = 1',chk:'Independent check with roots 3, 2: (3 − 2)² = 1² = 1 ✓'},
         {lbl:'1/α + 1/β',idEq:'\\dfrac{1}{\\alpha}+\\dfrac{1}{\\beta}=\\dfrac{\\alpha+\\beta}{\\alpha\\beta}=\\dfrac{5}{6}',fb:'1/α + 1/β = (α + β)/(αβ) = 5/6',chk:'Independent check with roots 3, 2: 1/3 + 1/2 = 5/6 ✓'},
-        {lbl:'α³ + β³',idEq:'\\begin{aligned}\\alpha^3+\\beta^3&=(\\alpha+\\beta)^3-3\\alpha\\beta(\\alpha+\\beta)\\\\&=5^3-3(6)(5)=35\\end{aligned}',fb:'α³ + β³ = 5³ − 3(6)(5) = 35',chk:'Independent check with roots 3, 2: 3³ + 2³ = 27 + 8 = 35 ✓'}
+        {lbl:'α³ + β³',idEq:'\\begin{aligned}\\alpha^3+\\beta^3&=(\\alpha+\\beta)^3\\\\&\\quad-3\\alpha\\beta(\\alpha+\\beta)\\\\&=5^3-3(6)(5)=35\\end{aligned}',fb:'α³ + β³ = 5³ − 3(6)(5) = 35',chk:'Independent check with roots 3, 2: 3³ + 2³ = 27 + 8 = 35 ✓'}
       ]
     };
     host.append(el('h5','g10ch3-lab-title',copy.title));
@@ -614,10 +614,10 @@
         <text x="${capX}" y="22" font-size="11" font-weight="750" fill="${direct?'#166353':'#6E2933'}">${direct?copy.dirLbl:copy.invLbl}</text>
       </svg>`;
       if(direct){
-        tex(mathBox,`\\dfrac{y}{x}=\\dfrac{${yVal}}{${xVal}}=2\\quad(\\text{constant }k=2)`, `y/x = ${yVal}/${xVal} = 2`,true);
+        tex(mathBox,`\\begin{aligned}\\dfrac{y}{x}&=\\dfrac{${yVal}}{${xVal}}=2\\\\\\text{constant }k&=2\\end{aligned}`,`y/x = ${yVal}/${xVal} = 2`,true);
         note.textContent=ta?`x = ${xVal} எனில் y = ${yVal}; விகிதம் y/x எப்போதும் 2 ஆகவும் கோடு (0, 0) வழியாகவும் செல்கிறது.`:`At x = ${xVal}, y = ${yVal}. Scaling x scales y identically; y/x = 2 stays constant and the line passes through (0, 0).`;
       }else{
-        tex(mathBox,`x\\cdot y=${xVal}\\times${yVal}=12\\quad(\\text{constant }k=12)`,`${xVal} × ${yVal} = 12`,true);
+        tex(mathBox,`\\begin{aligned}x\\cdot y&=${xVal}\\times${yVal}=12\\\\\\text{constant }k&=12\\end{aligned}`,`${xVal} × ${yVal} = 12`,true);
         note.textContent=ta?`x = ${xVal} எனில் y = ${yVal}; x அதிகரிக்கும்போது y குறைந்து பெருக்கல் x·y = 12 மாறாது.`:`At x = ${xVal}, y = ${yVal}. As x grows, y shrinks so their product xy = 12 stays invariant.`;
       }
     }

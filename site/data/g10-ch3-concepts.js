@@ -35,7 +35,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "ta": "இரு முறையும் ஒரே மாறியை ஏன் நீக்க வேண்டும் என்பதைப் பாருங்கள்: (1)+(2) மூலம் y நீங்கி 3x + 2z = 14 கிடைக்கும்; −2×(2)+(3) மூலமும் y நீங்கி −3x + z = −2 கிடைக்கும். இவ்விரண்டையும் கூட்ட z = 4 கிடைத்து, ஒரே தீர்வான வரிசை மூன்றடுக்கு (2, −1, 4) கிடைக்கும்."
       },
       "exampleMath": {
-        "latex": "\\begin{aligned}x+y+z&=5,\\\\2x-y+z&=9,\\quad x-2y+3z=16\\\\(1)+(2)&\\Rightarrow 3x+2z=14\\\\-2(2)+(3)&\\Rightarrow -3x+z=-2\\\\3z=12&\\Rightarrow (x,y,z)=(2,-1,4)\\end{aligned}",
+        "latex": "\\begin{aligned}x+y+z&=5,\\\\2x-y+z&=9,\\\\x-2y+3z&=16\\\\(1)+(2)&\\Rightarrow 3x+2z=14\\\\-2(2)+(3)&\\Rightarrow -3x+z=-2\\\\3z=12&\\Rightarrow (x,y,z)=(2,-1,4)\\end{aligned}",
         "fallback": "x+y+z=5, 2x−y+z=9, x−2y+3z=16 ⇒ z=4, x=2, y=−1"
       },
       "deepDive": {
@@ -188,7 +188,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "ta": "மீ.சி.ம: உயர்ந்த படிகள்; மீ.பெ.வ: பொதுவான குறைந்த படிகள்; f(x) × g(x) = மீ.சி.ம × மீ.பெ.வ"
       },
       "math": {
-        "latex": "\\begin{aligned}\\operatorname{LCM}(f,g)\\times\\operatorname{GCD}(f,g)&=f(x)\\cdot g(x)\\end{aligned}",
+        "latex": "\\begin{aligned}&\\operatorname{LCM}(f,g)\\times\\operatorname{GCD}(f,g)\\\\&=f(x)\\cdot g(x)\\end{aligned}",
         "fallback": "LCM(f(x), g(x)) × GCD(f(x), g(x)) = f(x) × g(x)"
       },
       "visual": { "kind": "ch3-lab", "id": "lcm-gcd" },
@@ -201,7 +201,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "ta": "12(x − 2)²(x + 3) மற்றும் 18(x − 2)(x + 3)³ ஆகியவற்றை ஒப்பிடுவோம். பொதுவான குறைந்த அடுக்குகள் மீ.பெ.வ = 6(x − 2)(x + 3); உயர்ந்த அடுக்குகள் மீ.சி.ம = 36(x − 2)²(x + 3)³. பெருக்கினால் f(x)·g(x) = மீ.சி.ம·மீ.பெ.வ = 216(x − 2)³(x + 3)⁴ எனச் சமமாகும்."
       },
       "exampleMath": {
-        "latex": "\\begin{aligned}\\gcd&=6(x-2)(x+3)\\\\\\operatorname{lcm}&=36(x-2)^2(x+3)^3\\\\f\\cdot g&=216(x-2)^3(x+3)^4=\\operatorname{lcm}\\cdot\\gcd\\end{aligned}",
+        "latex": "\\begin{aligned}\\gcd&=6(x-2)(x+3)\\\\\\operatorname{lcm}&=36(x-2)^2(x+3)^3\\\\f\\cdot g&=216(x-2)^3(x+3)^4\\\\&=\\operatorname{lcm}\\cdot\\gcd\\end{aligned}",
         "fallback": "GCD = 6(x−2)(x+3), LCM = 36(x−2)²(x+3)³ ⇒ f·g = LCM·GCD"
       },
       "deepDive": {
@@ -224,7 +224,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "ta": "இரு பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ = (x − 1) மற்றும் மீ.சி.ம = (x − 1)(x + 2)(x − 3). f(x) = (x − 1)(x + 2) எனில் g(x) யாது?"
       },
       "questionMath": {
-        "latex": "\\begin{aligned}g(x)&=\\dfrac{\\operatorname{LCM}\\times\\operatorname{GCD}}{f(x)}\\\\&=\\dfrac{(x-1)(x+2)(x-3)(x-1)}{(x-1)(x+2)}=\\;?\\end{aligned}",
+        "latex": "\\begin{aligned}g(x)&=\\dfrac{\\operatorname{LCM}\\times\\operatorname{GCD}}{f(x)}\\\\&=\\dfrac{(x-1)(x+2)(x-3)(x-1)}{(x-1)(x+2)}\\\\&=\\;?\\end{aligned}",
         "fallback": "g(x) = [(x − 1)(x + 2)(x − 3) · (x − 1)] ÷ [(x − 1)(x + 2)] = ?"
       },
       "choices": [
@@ -271,7 +271,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "ta": "p(x)/q(x), இங்கு q(x) ≠ 0; நீக்குவதற்கு முன் தொகுதி, பகுதியைக் காரணிப்படுத்தவும்"
       },
       "math": {
-        "latex": "\\begin{aligned}&\\dfrac{p(x)}{q(x)},\\quad q(x)\\neq 0\\\\&\\text{Excluded: solve }q(x)=0\\text{ in lowest form}\\end{aligned}",
+        "latex": "\\begin{aligned}&\\dfrac{p(x)}{q(x)},\\quad q(x)\\neq 0\\\\&\\text{Excluded: reduce first,}\\\\&\\text{then solve }q(x)=0\\end{aligned}",
         "fallback": "p(x)/q(x), q(x) ≠ 0; solve reduced q(x) = 0 for excluded values"
       },
       "visual": { "kind": "ch3-lab", "id": "rational-excluded" },
@@ -284,7 +284,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "ta": "(x² − 9)/(x² + 5x + 6)-ஐக் காரணிப்படுத்தினால் [(x−3)(x+3)] / [(x+2)(x+3)] = (x−3)/(x+2) கிடைக்கும். இங்கு x = 3 எனில் கோவையின் மதிப்பு 0 (செல்லுபடியாகும்); ஆனால் x = −2 எனில் பகுதி 0 ஆகி வரையறுக்கப்படாததால் −2 என்பது விலக்கப்பட்ட மதிப்பாகும்."
       },
       "exampleMath": {
-        "latex": "\\begin{aligned}\\dfrac{x^2-9}{x^2+5x+6}&=\\dfrac{(x-3)\\cancel{(x+3)}}{(x+2)\\cancel{(x+3)}}=\\dfrac{x-3}{x+2}\\\\x+2&=0\\implies\\text{excluded }x=-2\\end{aligned}",
+        "latex": "\\begin{aligned}&\\dfrac{x^2-9}{x^2+5x+6}\\\\&=\\dfrac{(x-3)\\cancel{(x+3)}}{(x+2)\\cancel{(x+3)}}\\\\&=\\dfrac{x-3}{x+2}\\\\x+2&=0\\implies\\text{excluded }x=-2\\end{aligned}",
         "fallback": "(x² − 9)/(x² + 5x + 6) = (x − 3)/(x + 2); excluded value: x = −2"
       },
       "deepDive": {
@@ -355,7 +355,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "ta": "பெருக்கல்: காரணிப்படுத்தி நீக்கு; வகுத்தல்: தலைகீழால் பெருக்கு; கூட்டல்/கழித்தல்: மீ.சி.ம பகுதி"
       },
       "math": {
-        "latex": "\\begin{aligned}\\dfrac{p}{q}\\div\\dfrac{r}{s}&=\\dfrac{p}{q}\\times\\dfrac{s}{r}\\\\\\dfrac{a}{m}-\\dfrac{b-c}{m}&=\\dfrac{a-(b-c)}{m}=\\dfrac{a-b+c}{m}\\end{aligned}",
+        "latex": "\\begin{aligned}\\dfrac{p}{q}\\div\\dfrac{r}{s}&=\\dfrac{p}{q}\\times\\dfrac{s}{r}\\\\\\dfrac{a}{m}-\\dfrac{b-c}{m}&=\\dfrac{a-(b-c)}{m}\\\\&=\\dfrac{a-b+c}{m}\\end{aligned}",
         "fallback": "(p/q) ÷ (r/s) = (p/q) × (s/r); subtraction puts brackets around the numerator: a − (b − c) = a − b + c"
       },
       "visual": { "kind": "ch3-lab", "id": "rational-ops" },
@@ -534,7 +534,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "ta": "மூலங்கள் α = −3, β = 4 எனில், கூடுதல் α + β = 1, பெருக்கற்பலன் αβ = −12. எனவே x² − (1)x + (−12) = x² − x − 12 = 0."
       },
       "exampleMath": {
-        "latex": "\\begin{aligned}(x-(-3))(x-4)&=x^2-(1)x+(-12)\\\\&=x^2-x-12=0\\end{aligned}",
+        "latex": "\\begin{aligned}(x-(-3))(x-4)&=0\\\\x^2-(1)x+(-12)&=0\\\\x^2-x-12&=0\\end{aligned}",
         "fallback": "(x + 3)(x − 4) = x² − x − 12 = 0"
       },
       "deepDive": {
@@ -948,7 +948,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "ta": "y = x² வரைபடத்திலிருந்து x² − x − 2 = 0-ஐத் தீர்க்கக் கழிக்கவும்: y = x + 2. இக்கோடு பரவளையத்தை (−1, 1) மற்றும் (2, 4) புள்ளிகளில் வெட்டும். வெட்டுப் புள்ளிகளின் x-மதிப்புகளான −1 மற்றும் 2 ஆகியவையே தீர்வுகள் (y-மதிப்புகளான 1, 4 அல்ல!)."
       },
       "exampleMath": {
-        "latex": "\\begin{aligned}y=x^2\\;&\\cap\\;(y=x+2)\\\\\\text{at }(-1,1)&\\text{ and }(2,4)\\implies x=-1,\\;2\\end{aligned}",
+        "latex": "\\begin{aligned}y&=x^2\\;\\cap\\;(y=x+2)\\\\&\\text{at }(-1,1)\\text{ and }(2,4)\\\\&\\implies x=-1,\\;2\\end{aligned}",
         "fallback": "Intersections (−1, 1) and (2, 4) ⇒ roots x = −1, 2"
       },
       "deepDive": {
