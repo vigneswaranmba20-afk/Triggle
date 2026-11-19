@@ -218,8 +218,8 @@ window.TRIGGLE_G10_CH2_PATH={
         ]
       },
       "whyMath": {
-        "latex": "\\begin{aligned}21&=15\\times1+6\\\\15&=6\\times2+3\\\\3&=15-2\\times6\\\\&=15-2(21-15)\\\\&=21(-2)+15(3)\\end{aligned}",
-        "fallback": "21 = 15 × 1 + 6. 15 = 6 × 2 + 3. 3 = 15 − 2 × 6 = 15 − 2(21 − 15) = 21(−2) + 15(3)."
+        "latex": "\\begin{aligned}21&=15\\times1+6\\\\15&=6\\times2+3\\\\3&=15-2\\times6\\\\&=15-2(21-15)\\\\&=15-2(21)+2(15)\\\\&=21(-2)+15(3)\\end{aligned}",
+        "fallback": "21 = 15 × 1 + 6. 15 = 6 × 2 + 3. 3 = 15 − 2 × 6 = 15 − 2(21 − 15) = 15 − 2(21) + 2(15) = 21(−2) + 15(3)."
       },
       "incorrectFeedback": [
         null,
@@ -288,7 +288,7 @@ window.TRIGGLE_G10_CH2_PATH={
       "visual": {
         "kind": "factors",
         "values": [
-          12,
+          8,
           18
         ]
       },
@@ -393,6 +393,10 @@ window.TRIGGLE_G10_CH2_PATH={
           "ta": "காலை 7 மணிக்குப் பின் 4 மணி நேரம் சென்றாலும் நண்பகல் ஆகவில்லை."
         }
       ],
+      "whyMath": {
+        "latex": "\\begin{aligned}100&=24(4)+4\\\\7+4&=11\\text{ a.m.}\\end{aligned}",
+        "fallback": "100 = 24 × 4 + 4; four hours after 7 a.m. is 11 a.m."
+      },
       "explainAfterAttempt": true
     },
     {
@@ -447,13 +451,11 @@ window.TRIGGLE_G10_CH2_PATH={
       },
       "visual": {
         "kind": "cycle",
-        "size": 5,
+        "size": 3,
         "values": [
           "0",
           "1",
-          "2",
-          "3",
-          "4"
+          "2"
         ]
       },
       "incorrectFeedback": [
@@ -778,6 +780,10 @@ window.TRIGGLE_G10_CH2_PATH={
           "ta": "40 என்பது பொது வித்தியாசத்தின் பத்து மடங்கு. முதல் உறுப்பிலிருந்து தொடங்கித் தேவையான படிகளை மட்டும் கூட்டுங்கள்."
         }
       ],
+      "whyMath": {
+        "latex": "a_{10}=3+(10-1)\\times4=3+9\\times4=39",
+        "fallback": "a₁₀ = 3 + (10 − 1) × 4 = 3 + 9 × 4 = 39"
+      },
       "explainAfterAttempt": true
     },
     {
@@ -856,6 +862,10 @@ window.TRIGGLE_G10_CH2_PATH={
           "ta": "கடைசி உறுப்பு 19. மூன்று சோடிகளுக்கும் பயன்படுத்துவதற்கு முன் முனைச் சோடியின் கூடுதலைச் சரிபாருங்கள்."
         }
       ],
+      "whyMath": {
+        "latex": "S_6=\\frac62(4+19)=3\\times23=69",
+        "fallback": "S₆ = (6 ÷ 2)(4 + 19) = 3 × 23 = 69"
+      },
       "explainAfterAttempt": true
     },
     {
@@ -1009,6 +1019,10 @@ window.TRIGGLE_G10_CH2_PATH={
           "ta": "கழிக்கப்படும் மூலக் கூடுதலில் முதல் உறுப்பு 1 உள்ளது. அதன் கழித்தல் குறியைக் கவனியுங்கள்."
         }
       ],
+      "whyMath": {
+        "latex": "\\begin{aligned}3S-S&=81-1=80\\\\2S&=80\\\\S&=40\\end{aligned}",
+        "fallback": "3S − S = 81 − 1 = 80; 2S = 80; S = 40"
+      },
       "explainAfterAttempt": true
     },
     {
@@ -1058,7 +1072,7 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "முதல் உறுப்பு 3. அடுத்த ஒவ்வோர் உறுப்பும் முந்தைய உறுப்பின் பாதி. இந்த மதிப்புகளை முடிவுறாத் தொடரின் கூடுதல் விதியில் பயன்படுத்துங்கள்."
       },
       "why": {
-        "en": "The ratio is one half, so the sum approaches 6. The formula requires the ratio to lie strictly between negative one and one.",
+        "en": "The ratio is one half. As n grows, rⁿ approaches 0, so Sₙ = a(1 − rⁿ)/(1 − r) approaches a/(1 − r) = 6. This works only when |r| < 1; outside that range partial sums may grow or oscillate without converging.",
         "ta": "பொது விகிதம் அரை. எனவே கூடுதல் 6-ஐ நெருங்குகிறது. இந்த விதியைப் பயன்படுத்த விகிதம் எதிர்மறை ஒன்றுக்கும் ஒன்றுக்கும் இடையில் இருக்க வேண்டும்."
       },
       "visual": {
@@ -1270,7 +1284,7 @@ window.TRIGGLE_G10_CH2_PATH={
             "ta": "m முதல் n வரையிலான வர்க்கங்களின் கூடுதலைக் காண, n வரையிலான வர்க்கங்களின் கூடுதலிலிருந்து m-க்கு முந்தைய வர்க்கங்களின் கூடுதலைக் கழியுங்கள். m என்பது 1 எனில் கழிக்க முந்தைய வர்க்கங்கள் இல்லை. 5 முதல் 10 வரை காண, 10 வரையிலான கூடுதலிலிருந்து 4 வரையிலான கூடுதலைக் கழியுங்கள்."
           },
           "generalMath": {
-            "latex": "\\begin{aligned}m^2+\\cdots+n^2&=S_n-S_{m-1}\\\\1&\\le m\\le n,\\quad S_0=0\\end{aligned}",
+            "latex": "\\begin{aligned}m^2+\\cdots+n^2&=S_n-S_{m-1}\\\\1&\\le m\\le n\\\\S_0&=0\\end{aligned}",
             "fallback": "m² + ⋯ + n² = Sₙ − Sₘ₋₁, with 1 ≤ m ≤ n and S₀ = 0."
           },
           "math": {

@@ -72,7 +72,7 @@
  .g10ch2-pairing{padding:11px 9px}
  .g10ch2-pairing-terms{gap:4px}
  .g10ch2-pairing-term{min-height:72px;padding:6px 1px 4px}
- .g10ch2-pairing-label{font-size:9px}
+ .g10ch2-pairing-label{font-size:11px;overflow-wrap:anywhere}
  .g10ch2-pairing-controls button{font-size:12px;padding:10px 8px}
 }
 
@@ -118,7 +118,7 @@
  .gp-lab-row{grid-template-columns:minmax(57px,auto) minmax(0,1fr);gap:5px}
  .gp-lab-cells{gap:3px}
  .gp-lab-term{min-height:43px;font-size:clamp(13px,3.8vw,17px)}
- .gp-lab-actions button{padding:8px 7px;font-size:11.5px}
+ .gp-lab-actions button{padding:8px 7px;font-size:13px}
 }
 @media(prefers-reduced-motion:reduce){.g10ch2-gp-lab *{animation:none!important;transition:none!important}}
 
@@ -176,4 +176,12 @@
 }
 @media(prefers-reduced-motion:reduce){
   .g10ch2-hcf-steps *,.g10ch2-gp-steps *{animation:none!important;transition:none!important}
+}
+
+/* Mission 04: only Grade 10 Chapter 2 receives the sticky-header clearance. */
+.chapter-hub:has([data-g10ch2-visual]) .sp2-journey{
+  scroll-margin-top:calc(var(--sticky-header-height, 76px) + 16px)
+}
+.chapter-hub:has([data-g10ch2-visual]) .sp2-concept-heading{
+  scroll-margin-top:calc(var(--sticky-header-height, 76px) + 16px)
 }

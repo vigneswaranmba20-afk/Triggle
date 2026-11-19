@@ -151,27 +151,35 @@ async function verifySpecialSeries(page,language,width){
  await assertSpecialMathFits(page,width,language);
  await odd.locator('summary').press('Enter');
 
+ const details=lesson.locator('.g10ch2-special-proof');
+ assert.equal(await details.count(),3,'Three optional proof sections');
+ const squaresProof=details.nth(0);
+ assert(await squaresProof.locator('.g10ch2-tri-grid').isHidden(),'Squares proof starts collapsed');
+ await squaresProof.locator('summary').press('Enter');
  const diagram=lesson.getByRole('img',{name:ta?/முக்கோணத்தின் மூன்று/:/Three rotations/});
  assert(await diagram.isVisible());
- assert.equal(await diagram.locator('rect').count(),24,'Six cells in each of four groups');
- const labels=await diagram.locator('[data-triangle]').evaluateAll(groups=>groups.map(group=>
-  [...group.querySelectorAll('[data-triangle-row]')].map(row=>[...row.querySelectorAll('text')].map(text=>text.textContent))));
+ assert.equal(await diagram.locator('.g10ch2-tri-cell').count(),24,'Six cells per triangle');
+ const labels=await diagram.locator('.g10ch2-tri-card').evaluateAll(cards=>cards.map(card=>
+  [...card.querySelectorAll('.g10ch2-tri-row')].map(row=>[...row.querySelectorAll('.g10ch2-tri-cell')].map(cell=>cell.textContent))));
  assert.deepEqual(labels,[
   [['1'],['2','2'],['3','3','3']],
   [['3'],['3','2'],['3','2','1']],
   [['3'],['2','3'],['1','2','3']],
   [['7'],['7','7'],['7','7','7']]
  ]);
- assert.match(await diagram.locator('desc').textContent(),ta?/முதல் முக்கோணம்/:/First triangle/);
- const proof=lesson.locator('.g10ch2-special-proof'),summary=proof.locator('summary');
+ assert.match(await diagram.getAttribute('aria-label'),ta?/முதல் முக்கோணம்/:/First triangle/);
+ assert.equal(await diagram.evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length),2,'Two-column mobile triangles');
+ assert(await diagram.locator('.g10ch2-tri-cell').first().evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=14));
+ const proof=details.nth(1),summary=proof.locator('summary');
  const identities=proof.locator('.g10ch2-special-math');
  assert(await identities.first().isHidden(),'Cube derivation is optional');
  await summary.press('Enter');
  assert(await identities.first().isVisible(),'Keyboard opens the cube derivation');
  assert((await texSource(identities.nth(2))).includes('T_k^2-T_{k-1}^2'));
  assert((await texSource(identities.last())).includes('T_3^2-T_0^2'));
- const range=lesson.locator('.g10ch2-special-section').last().locator('.g10ch2-special-math');
- assert((await texSource(range.first())).includes('S_n-S_{m-1}'),'Shifted ranges use the preceding endpoint');
+ const rangeProof=details.nth(2),range=rangeProof.locator('.g10ch2-special-math');
+ await rangeProof.locator('summary').press('Enter');
+ assert((await texSource(range.first())).includes('S_n-S_{m-1}'),'Shifted ranges preserve endpoints');
  assert((await texSource(range.last())).includes('385-30=355'));
  assert.match(await lesson.locator('.sp2-stage-reference').innerText(),ta?/பாடநூல் பகுதி 2\.11/:/Textbook section 2\.11/);
  await assertSpecialMathFits(page,width,language);
@@ -263,6 +271,13 @@ async function main(){
     assert.equal(await button.nth(2).getAttribute('aria-pressed'),'true','Correct choice retains accessible selected state');
     assert(await page.locator('[data-back-index]').isVisible(),'Back to concepts remains visible');
     assert(await page.locator('[data-footer-next]').isVisible(),'One bottom Next control');
+    await page.locator('[data-footer-next]').click();
+    const headerGap=await page.locator('.sp2-concept-heading').evaluate(el=>({
+      top:el.getBoundingClientRect().top,
+      bottom:document.querySelector('.appbar')?.getBoundingClientRect().bottom||0
+    }));
+    assert(headerGap.top>=headerGap.bottom+12,'Next idea heading stays clear of the sticky app bar');
+
     await page.locator('[data-back-index]').click();
     await nav.nth(1).click();
     await page.locator('.sp2-answers button').first().click();
@@ -279,12 +294,25 @@ async function main(){
     }
     assert.equal(await page.locator('[data-math-error]').count(),0,'HCF steps render without notation errors');
     await page.locator('[data-back-index]').click();
+    await nav.nth(3).click();
+    const factorButtons=page.locator('.g10ch2-factor-controls button');
+    assert.equal(await factorButtons.count(),2,'HCF and LCM use separate controls');
+    assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('HCF(8, 18) = 2¹ × 3⁰ = 2'),'HCF picks minimum exponents');
+    await factorButtons.nth(1).click();
+    assert.equal(await factorButtons.nth(1).getAttribute('aria-pressed'),'true');
+    assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('LCM(8, 18) = 2³ × 3² = 72'),'LCM picks maximum exponents');
+    assert.equal(await page.locator('.g10ch2-factor-power.is-picked').count(),2,'Both powers are highlighted');
+    await page.locator('[data-back-index]').click();
     await nav.nth(2).click();
     assert.equal(await page.locator('.sp2-formula').count(),0,'Do not reveal shortcut before discovery');
     const stepButtons=page.locator('.g10ch2-discovery-controls button');
-    assert.equal(await stepButtons.count(),2,'Student can step through backward substitution');
+    assert.equal(await stepButtons.count(),3,'Student has Previous, Next and Restart');
     assert((await page.locator('.g10ch2-discovery-progress').innerText()).includes('1'),'Starts with first division');
-    for(let step=0;step<5;step++)await stepButtons.nth(1).click();
+    for(let step=0;step<6;step++)await stepButtons.nth(1).click();
+    assert(await stepButtons.nth(1).isDisabled(),'Next stops on step 7');
+    await stepButtons.nth(2).click();
+    assert((await page.locator('.g10ch2-discovery-progress').innerText()).includes('1'),'Explicit Restart returns to step 1');
+    for(let step=0;step<6;step++)await stepButtons.nth(1).click();
     const expression=await page.locator('.g10ch2-discovery-math').innerText();
     assert(expression.includes('32')&&expression.includes('60'),'Backward substitution discovers original-number coefficients');
     assert(await page.locator('.g10ch2-discovery-complete').isVisible(),'Concluding reasoning only revealed after all steps');
@@ -323,8 +351,10 @@ async function main(){
     await page.locator('[data-back-index]').click();
     await page.locator('.sp2-nav-button').nth(5).click();
     const congruence=page.locator('[data-g10ch2-visual] input[type=range]');
-    assert.equal(await congruence.inputValue(),'14','Congruence starts at the teaching example');
-    assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('14 ≡ 4 (mod 5)'),'Congruence joins the remainder to its residue');
+    assert.deepEqual(await congruence.evaluateAll(nodes=>nodes.map(el=>el.value)),['17','5'],'Congruence matches the two-number mod-3 lesson');
+    assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('17 ≡ 5 (mod 3)'),'Matching remainders demonstrated');
+    await congruence.nth(0).fill('18');
+    assert(!(await page.locator('.g10ch2-visual-feedback').innerText()).includes('18 ≡ 5'),'Changed remainder is not congruent');
     await page.locator('[data-back-index]').click();
     await page.locator('.sp2-nav-button').nth(6).click();
     const position=page.locator('[data-g10ch2-visual] input[type=range]');
