@@ -10,7 +10,8 @@
       "appendix": {
         "printed": 340,
         "pdf": 346
-      }
+      },
+      "editionImprintPdfPage": 2
     },
     "ta": {
       "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
@@ -19,7 +20,8 @@
       "appendix": {
         "printed": 354,
         "pdf": 360
-      }
+      },
+      "editionImprintPdfPage": 2
     }
   },
   "tamilEditorial": "pending",
@@ -833,7 +835,8 @@
         "inTextbooks": false,
         "details": null
       },
-      "appendixAnswer": "Not a bisector"
+      "appendixAnswer": "Not a bisector",
+      "verificationNote": "Both appendices give “Not a bisector”. The ratios differ, and the printed lengths also imply AB + BC = AC, so the points are collinear."
     },
     {
       "id": "c10-4-ex4-2-q8-ii",

@@ -11,7 +11,8 @@
   </style>
   <rect width="320" height="230" rx="8" fill="#f8fafc"/>
   <polyline class="edge" points="92.984,18.458 28.000,197.000 256.000,197.000 92.984,18.458"/>
-<polyline class="accent" points="142.000,197.000 174.492,107.729"/>
+<path class="mark" d="M46 197 A18 18 0 0 0 34.156 180.086 M124 197 A18 18 0 0 1 148.156 180.086"/>
+  <polyline class="accent" points="142.000,197.000 174.492,107.729"/>
 <circle class="point" cx="92.984" cy="18.458" r="2.200"/><text x="87.984" y="8.458">A</text>
 <circle class="point" cx="28.000" cy="197.000" r="2.200"/><text x="17.000" y="216.000">B</text>
 <circle class="point" cx="256.000" cy="197.000" r="2.200"/><text x="261.000" y="214.000">C</text>

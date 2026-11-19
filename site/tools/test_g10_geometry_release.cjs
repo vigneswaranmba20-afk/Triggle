@@ -117,6 +117,11 @@ assert.equal(12 / 4, 12 / 6 + 1);
 answer(2, 5, '4 cm');
 assert.notEqual(1.5 * 10, 3.5 * 5);
 close(1.6 * 6, 2.4 * 4);
+assert.equal(5 + 1.5 + 3.5, 10, 'The printed lengths in 4.2 Q8(i) are collinear');
+answer(2, '8-i', 'cannot form a triangle');
+const [a8, b8, c8] = vertices(2, '8-ii');
+const [, d8] = vertices(2, '8-ii', 'accent');
+close(angle(a8, b8, d8), angle(a8, d8, c8), 0.001);
 for (const [pq, pr] of [[5, 12], [8, 3], [11, 11]]) {
   // A 45° ray from the right-angle vertex is y=x. Its intersection with
   // the hypotenuse x/pr + y/pq = 1 has x=y=pq*pr/(pq+pr).

@@ -1443,12 +1443,21 @@ const entries = [
       },
       {
         "en": "The fractions differ because 3 × 2 = 6 and 7 × 1 = 7. The condition required of an angle bisector fails."
+      },
+      {
+        "en": "The printed lengths also give AB + BC = AC. In a triangle, the sum of any two sides must exceed the third. Here A, B and C would lie on a straight line, so the measurements cannot form a triangle with an angle to bisect.",
+        "eq": "BC = 1.5 + 3.5 = 5 cm, so AB + BC = 5 + 5 = 10 cm = AC",
+        "math": {
+          "latex": "\\begin{aligned}BC&=1.5+3.5=5\\,\\text{cm}\\\\AB+BC&=5+5=10\\,\\text{cm}=AC\\end{aligned}",
+          "fallback": "BC = 1.5 + 3.5 = 5 cm, so AB + BC = 5 + 5 = 10 cm = AC",
+          "display": true
+        }
       }
     ],
-    "answer": "AD does not bisect ∠A.",
+    "answer": "The ratios fail the bisector test. The printed lengths cannot form a triangle.",
     "answerMath": {
-      "latex": "\\text{AD does not bisect }\\angle A.",
-      "fallback": "AD does not bisect ∠A.",
+      "latex": "\\begin{aligned}\\dfrac{BD}{DC}&\\ne\\dfrac{AB}{AC}\\\\\\text{A, B and C}&\\text{ are collinear.}\\end{aligned}",
+      "fallback": "The ratios fail the bisector test. The printed lengths cannot form a triangle.",
       "display": true
     },
     "kind": "textbook",
@@ -1465,11 +1474,11 @@ const entries = [
     },
     "figureSrc": "assets/grade10-geometry/ex4-2-q8-i.svg",
     "figureAlt": {
-      "en": "D is on BC. The drawing identifies the four segments to compare; it does not mark the two angles at A as equal."
+      "en": "Schematic showing the four segment labels to compare. The stated lengths are collinear, so the drawing only identifies the segments."
     },
     "figureCaption": {
-      "en": "Geometry figure",
-      "ta": "வடிவியல் படம்"
+      "en": "Segment labels only",
+      "ta": "பக்கங்களின் பெயர்கள்"
     }
   },
   {

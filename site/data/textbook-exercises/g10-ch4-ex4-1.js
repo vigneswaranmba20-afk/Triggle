@@ -46,7 +46,7 @@ const entries = [
     },
     "steps": [
       {
-        "en": "Find the complete sides from A by adding the smaller segments.",
+        "en": "This panel has no side labelled x. To check similarity, find the complete sides from A by adding the smaller segments.",
         "eq": "AB = 3 + 5 = 8, AC = 2 + 3½ = 11/2",
         "math": {
           "latex": "\\begin{aligned}AB&=3+5=8\\\\AC&=2+3\\tfrac12=\\tfrac{11}2\\end{aligned}",

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "bd0d7e16f53d2bac827b24179dc83c42b9bdc1a0",
-  "updatedAt": "2026-11-19T22:28:02+05:30",
+  "sourceCommit": "988e3cf0a5179ab94671b2a80ebbcf9980517ed5",
+  "updatedAt": "2026-11-19T19:00:02Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -72,8 +72,8 @@
     "site/data/textbook-exercises/g10-ch3-ex3-7-complete-en.js": "104ab03a8a2ebd8daa141d29e82044445ccaa81ae6d3c567dffa081a4c22dde7",
     "site/data/textbook-exercises/g10-ch3-ex3-8-complete-en.js": "6548c78eaa3c5343b560323e0333a5705c2f9f6b298df434980738677043c36b",
     "site/data/textbook-exercises/g10-ch3-ex3-9-complete-en.js": "6bc04f7fbc0d58ccb6d3b763944b857560fc750339f81176cb2ecd7ae4719cf1",
-    "site/data/textbook-exercises/g10-ch4-ex4-1.js": "f2f1179d7b1a56c3526bc326667fc519fcbd50eb3adf27c872145e0fab47f64e",
-    "site/data/textbook-exercises/g10-ch4-ex4-2.js": "a522fd9f2e5d020792d5a0cafd8a9da12827e8b72e03d5ec4e0cd519281942c0",
+    "site/data/textbook-exercises/g10-ch4-ex4-1.js": "aa72988800eaf356c016f3c22f3eaa2e382bab4606e4586872be9926ea4864c7",
+    "site/data/textbook-exercises/g10-ch4-ex4-2.js": "a00dc89e622c07ee84245aeb78fe0850f64e301a9cef41f2a8f0bf6d5e57009a",
     "site/data/textbook-exercises/g10-ch8-ex8-1-q11-q15-en.js": "5e1aa75fdeb63f043e4e867354b008c3ac6b666cfa1c1bb783020081207fe5e5",
     "site/data/textbook-exercises/g10-ch8-ex8-1-q5-q10-en.js": "428a4ccc1321082218d4ab692c0ff3cf6cda9e0b10391d09cc3eab87fbf6a36b",
     "site/data/textbook-exercises/g10-checkpoint-20261110-en.js": "30ec65b4e2f007ae25fcde957dd6bf933c5b9ea3c26536b827c835a15c20c309",
@@ -9564,7 +9564,7 @@
                   "url": "../index.html?class=10&question=c10-4-ex4-1-q1-i",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "4d95e2aace130662fefc83f749c9a814c9f4f2b6f09eddba239ef6f84cc05201",
+                  "recordSha256": "7fae77825e1425a29de5d15fc42554cdb2fd4d42964d9547be30b3a5d1e6fa3d",
                   "verified": false
                 },
                 {
@@ -9806,7 +9806,7 @@
                   "url": "../index.html?class=10&question=c10-4-ex4-2-q8-i",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "279830e929deb4dac12ef025bdaa5a534c22cbb01359a2e7c52f35be583c8200",
+                  "recordSha256": "ab0f08e5e2c880ad2b2c6c184d02b9b34cefe43c1a8cf19f602c90a257da208e",
                   "verified": false
                 },
                 {
