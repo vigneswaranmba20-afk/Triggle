@@ -16,12 +16,18 @@ const scripts=[...read('site/index.html').matchAll(/<script src="\.\/(data\/[^?"
 const context={window:{},console};vm.createContext(context);
 for(const file of scripts)vm.runInContext(read('site/'+file),context,{filename:file,timeout:10000});
 const runtime=context.window.TRIGGLE_CLASSES[10].items;
-const expected=new Set(ids);
+const enrichedGeometry=new Set(['c10-4-ex4-1-q1-i','c10-4-ex4-1-q1-ii']);
 let valid=0,formulaCount=0;
-for(const rec of sourceRecords){
- const actual=runtime.find(x=>x.id===rec.id);
- assert.ok(actual,'Lesson not registered: '+rec.id);
- assert.equal(JSON.stringify(actual),JSON.stringify(rec),'Authored module and source manifest match: '+rec.id);
+for(const original of sourceRecords){
+ const rec=runtime.find(x=>x.id===original.id);
+ assert.ok(rec,'Lesson not registered: '+original.id);
+ if(enrichedGeometry.has(rec.id)){
+  // The recovery test still verifies the original archive byte-for-byte.
+  assert.equal(rec.answer,original.answer,'Preserve the recovered answer: '+rec.id);
+  assert.equal(rec.sourceFidelity.status,'page-visual-checked');
+ }else{
+  assert.equal(JSON.stringify(rec),JSON.stringify(original),'Authored module and source manifest match: '+rec.id);
+ }
  assert.equal(rec.answerMath?.fallback,rec.answer,'Answer fallback exactly preserved: '+rec.id);
  assert.equal(typeof rec.answerMath?.latex,'string','Missing answer TeX '+rec.id);
  for(const [i,step] of rec.steps.entries()){
@@ -66,4 +72,4 @@ for(const name of ['g10-seven-recovery-20261113-en.js','g10-ch8-ex8-1-q5-q10-en.
  assert.ok(sw.includes(name),'Offline cache missing new module: '+name);
 }
 assert.ok(html.includes('math-typesetting.css?v=chatgpt-math-20261113'));
-console.log('PASS permanent ChatGPT math style: '+valid+' source-unchanged questions, '+formulaCount+' validated KaTeX steps, semantic stacked fractions/roots, readable answer fallbacks, offline assets and agent policy.');
+console.log('PASS permanent ChatGPT math style: '+valid+' source-checked questions, '+formulaCount+' validated KaTeX steps, semantic stacked fractions/roots, readable answer fallbacks, offline assets and agent policy.');

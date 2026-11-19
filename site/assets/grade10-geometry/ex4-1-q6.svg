@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 204" role="img">
+  <title>Similar triangles ACB and APQ</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="204" rx="8" fill="#f8fafc"/>
+  <polyline class="edge" points="162.000,99.000 60.223,55.969 113.677,181.024 162.000,99.000"/>
+<polyline class="accent" points="162.000,99.000 186.162,57.988 212.889,120.515 162.000,99.000"/>
+<circle class="point" cx="162.000" cy="99.000" r="2.200"/><text x="158.000" y="90.000">A</text>
+<circle class="point" cx="60.223" cy="55.969" r="2.200"/><text x="47.223" y="48.969">B</text>
+<circle class="point" cx="113.677" cy="181.024" r="2.200"/><text x="100.677" y="196.024">C</text>
+<circle class="point" cx="186.162" cy="57.988" r="2.200"/><text x="189.162" y="50.988">P</text>
+<circle class="point" cx="212.889" cy="120.515" r="2.200"/><text x="218.889" y="134.515">Q</text>
+</svg>

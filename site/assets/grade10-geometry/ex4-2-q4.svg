@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 196" role="img">
+  <title>Two parallels across triangles with common side AC</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="196" rx="8" fill="#f8fafc"/>
+  <polyline class="edge" points="29.000,103.000 139.000,32.000 281.000,103.000 155.000,169.000 29.000,103.000 281.000,103.000"/>
+<polyline class="accent" points="75.200,73.180 134.840,103.000 81.920,130.720"/>
+<circle class="point" cx="29.000" cy="103.000" r="2.200"/><text x="15.000" y="107.000">A</text>
+<circle class="point" cx="139.000" cy="32.000" r="2.200"/><text x="140.000" y="23.000">B</text>
+<circle class="point" cx="281.000" cy="103.000" r="2.200"/><text x="288.000" y="105.000">C</text>
+<circle class="point" cx="155.000" cy="169.000" r="2.200"/><text x="155.000" y="186.000">D</text>
+<circle class="point" cx="134.840" cy="103.000" r="2.200"/><text x="136.840" y="94.000">P</text>
+<circle class="point" cx="75.200" cy="73.180" r="2.200"/><text x="60.200" y="66.180">Q</text>
+<circle class="point" cx="81.920" cy="130.720" r="2.200"/><text x="69.920" y="146.720">R</text>
+</svg>

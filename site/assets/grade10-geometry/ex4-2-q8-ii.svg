@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 189" role="img">
+  <title>Segments used in the angle bisector test</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="189" rx="8" fill="#f8fafc"/>
+  <polyline class="edge" points="85,41.941 100,161 220,161 85,41.941"/>
+  <polyline class="accent" points="85,41.941 148,161"/>
+  <circle class="point" cx="85" cy="41.941" r="2.2"/><text x="81" y="34">A</text>
+  <circle class="point" cx="100" cy="161" r="2.2"/><text x="95" y="179">B</text>
+  <circle class="point" cx="220" cy="161" r="2.2"/><text x="216" y="179">C</text>
+  <circle class="point" cx="148" cy="161" r="2.2"/><text x="143" y="179">D</text>
+</svg>

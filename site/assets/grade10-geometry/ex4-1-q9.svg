@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 192" role="img">
+  <title>The height y at the crossing of the two lines</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="192" rx="8" fill="#f8fafc"/>
+  <polyline class="edge" points="36.000,159.000 36.000,39.000 275.000,159.000 36.000,159.000 275.000,99.000 275.000,159.000"/>
+<polyline class="accent" points="195.333,119.000 195.333,159.000"/>
+<polyline class="mark" points="36.000,150.000 45.000,150.000 45.000,159.000"/>
+<polyline class="mark" points="266.000,159.000 266.000,150.000 275.000,150.000"/>
+<polyline class="mark" points="195.333,150.000 204.333,150.000 204.333,159.000"/>
+<circle class="point" cx="36.000" cy="159.000" r="2.200"/><text x="31.000" y="179.000">A</text>
+<circle class="point" cx="195.333" cy="159.000" r="2.200"/><text x="190.333" y="179.000">B</text>
+<circle class="point" cx="275.000" cy="159.000" r="2.200"/><text x="272.000" y="179.000">C</text>
+<circle class="point" cx="36.000" cy="39.000" r="2.200"/><text x="32.000" y="31.000">P</text>
+<circle class="point" cx="195.333" cy="119.000" r="2.200"/><text x="199.333" y="112.000">Q</text>
+<circle class="point" cx="275.000" cy="99.000" r="2.200"/><text x="282.000" y="97.000">R</text>
+<text x="5.000" y="93.000">6 m</text>
+<text x="282.000" y="137.000">3 m</text>
+<text x="202.333" y="145.000">y</text>
+</svg>
