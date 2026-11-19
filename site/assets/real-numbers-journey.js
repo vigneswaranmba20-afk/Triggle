@@ -263,6 +263,11 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
           'Because √'+square+' = '+k+', '+k+' comes outside the root. The √2 stays inside.')+'</p>';
     });
     panel.querySelector('.rnlab-choices')?.classList.add('rnlab-surd-options');
+    // Put the complete worked explanation before the optional example picker.
+    // A first-time learner should not need to touch controls to discover the idea.
+    const examplePicker=panel.querySelector('[data-demo-controls]');
+    examplePicker.classList.add('rnlab-surd-examples-after');
+    output.after(examplePicker);
   }else if(index===5){
     const labelFor=rad=>ta?
       (rad===5?'1-ஐ (√5+2)-ஆல் வகுத்தல்':'3-ஐ (√7+2)-ஆல் வகுத்தல்'):
