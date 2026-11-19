@@ -213,18 +213,56 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
     controls(t.power,choices,'half',key=>{const map={'0':['1','4^0=1'],half:['2','4^(1/2)=√4=2'],'1':['4','4^1=4'],threehalf:['8','4^(3/2)=(√4)^3=8']};
       set('<div class="rnlab-big">'+map[key][0]+'</div>',map[key][1]);});
   }else if(index===4){
-    slider(t.factor,1,6,1,3,k=>{
-      const rad=2*k*k;
-      const side=25,offsetX=(330-k*side)/2,offsetY=15;
-      const tiles=Array.from({length:k*k},(_,i)=>{
-        const x=offsetX+(i%k)*side,y=offsetY+Math.floor(i/k)*side;
-        return '<rect x="'+x+'" y="'+y+'" width="'+side+'" height="'+side+'" stroke="#fff" stroke-width="1.6" fill="#9174c3"/>';
-      }).join('');
-      const title=ta?'ஒவ்வொரு சிறு சதுரத்தின் பரப்பளவு 2':'Each small square represents area 2';
-      set('<svg class="rnlab-line" viewBox="0 0 330 190" role="img" aria-label="'+esc('√'+rad+' = '+k+'√2')+'"><title>'+esc(title)+'</title>'+
-        tiles+'<text x="165" y="185" text-anchor="middle" font-size="16" fill="#504078" font-weight="700">'+esc(k+' × '+k+' squares · area '+rad)+'</text></svg>',
-        {latex:'\\sqrt{'+rad+'}=\\sqrt{'+k+'^2\\times2}='+k+'\\sqrt2',fallback:'√'+rad+' = √('+k+'²×2) = '+k+'√2'});
+    // A square-factor explanation must be readable before any interaction:
+    // the purple tiles represent the perfect-square factor, NOT the entire radicand.
+    const hint=document.createElement('p');
+    hint.className='rnlab-surd-try-label';
+    hint.textContent=ta?'வேறு வர்க்கமூலத்தைத் தொட்டுப் பாருங்கள்':'Tap an example to explore';
+    panel.querySelector('[data-demo-controls]').append(hint);
+    controls(ta?'வர்க்கமூலத்தைத் தேர்ந்தெடுக்கவும்':'Choose a square root',[
+      ['eight','√8'],['eighteen','√18'],['thirtytwo','√32']
+    ],'eight',key=>{
+      const k=({eight:2,eighteen:3,thirtytwo:4})[key];
+      const square=k*k,rad=2*square;
+      const tiles=Array.from({length:k*k},()=>'<span class="rnlab-surd-tile" aria-hidden="true"></span>').join('');
+      const intro=ta?'√'+rad+' ஐ எவ்வாறு எளிமைப்படுத்தலாம்?':'Why does √'+rad+' become '+k+'√2?';
+      const squareCaption=ta?'நிறைவர்க்கம்':'Perfect square';
+      const leftoverCaption=ta?'மீதமுள்ள காரணி':'Factor left over';
+      const visualDescription=ta?
+        square+' சிறிய ஓரலகுச் சதுரங்கள் '+k+' × '+k+' வடிவில் உள்ளன. '+square+'-ஐ 2-ஆல் பெருக்கினால் '+rad+' கிடைக்கும்.':
+        square+' unit squares form a '+k+' by '+k+' square. Multiply the '+square+' by the separate factor 2 to make '+rad+'.';
+      visual.innerHTML=
+        '<div class="rnlab-surd-story">'+
+          '<h6 class="rnlab-surd-question">'+esc(intro)+'</h6>'+
+          '<p class="rnlab-surd-lead">'+esc(ta?'முதலில் உள்ளே இருக்கும் நிறைவர்க்கக் காரணியைக் கண்டுபிடி.':'First, find a perfect-square factor inside '+rad+'.')+'</p>'+
+          '<div class="rnlab-surd-factors" role="group" aria-label="'+esc(visualDescription)+'">'+
+            '<div class="rnlab-surd-square-card">'+
+              '<div class="rnlab-surd-grid" style="--surd-k:'+k+'" aria-hidden="true">'+tiles+'</div>'+
+              '<strong>'+square+' = '+k+' × '+k+'</strong>'+
+              '<span class="rnlab-surd-factor-label">'+esc(squareCaption)+'</span>'+
+            '</div>'+
+            '<span class="rnlab-surd-times" aria-hidden="true">×</span>'+
+            '<div class="rnlab-surd-leftover-card">'+
+              '<strong>2</strong>'+
+              '<span class="rnlab-surd-factor-label">'+esc(leftoverCaption)+'</span>'+
+            '</div>'+
+          '</div>'+
+          '<p class="rnlab-surd-description">'+esc(visualDescription)+'</p>'+
+        '</div>';
+      const mathLine=(heading,latex,fallback,extra='')=>
+        '<div class="rnlab-surd-equation '+extra+'"><span>'+esc(heading)+'</span>'+
+          '<div class="rnlab-surd-math">'+notation({latex,fallback})+'</div></div>';
+      output.innerHTML='<div class="rnlab-surd-equations">'+
+        mathLine(ta?'எண்ணைப் பிரிப்போம்':'Split the number',rad+'='+square+'\\times2',rad+' = '+square+' × 2')+
+        mathLine(ta?'இரண்டின் வர்க்கமூலத்தையும் காண்போம்':'Take both square roots',
+          '\\sqrt{'+rad+'}=\\sqrt{'+square+'}\\times\\sqrt{2}','√'+rad+' = √'+square+' × √2')+
+        mathLine(ta?'இறுதி விடை':'So the answer is',
+          '\\sqrt{'+rad+'}='+k+'\\sqrt{2}','√'+rad+' = '+k+'√2','rnlab-surd-result')+
+        '</div><p class="rnlab-surd-conclusion">'+esc(ta?
+          '√'+square+' = '+k+'. எனவே '+k+' வெளியே வரும்; √2 மூலக்குறிக்குள் இருக்கும்.':
+          'Because √'+square+' = '+k+', '+k+' comes outside the root. The √2 stays inside.')+'</p>';
     });
+    panel.querySelector('.rnlab-choices')?.classList.add('rnlab-surd-options');
   }else if(index===5){
     const labelFor=rad=>ta?
       (rad===5?'1-ஐ (√5+2)-ஆல் வகுத்தல்':'3-ஐ (√7+2)-ஆல் வகுத்தல்'):
