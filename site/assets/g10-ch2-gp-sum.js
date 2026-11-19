@@ -109,7 +109,7 @@
       showMath(worked,latex,fallback);
       general.hidden=step!==4;
       if(step===4){
-        showMath(derivation,'(r-1)S_n=ar^n-a','(r − 1)Sₙ = arⁿ − a');
+        showMath(derivation,'\\begin{aligned}rS_n-S_n&=ar^n-a\\\\(r-1)S_n&=a(r^n-1)\\end{aligned}','rSₙ − Sₙ = arⁿ − a, so (r − 1)Sₙ = a(rⁿ − 1)');
         showMath(formula,'S_n=\\dfrac{a(r^n-1)}{r-1},\\quad r\\ne1','Sₙ = a(rⁿ − 1)/(r − 1), r ≠ 1');
       }
       note.textContent=t.notes[step];

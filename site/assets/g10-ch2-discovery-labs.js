@@ -2,15 +2,16 @@
    Self-contained, offline, bilingual, no autoplay and no external requests. */
 (()=>{'use strict';
  const translations={
-  en:{previous:'← Previous',next:'Next →',replay:'Replay ↻',step:'Step',of:'of',
+  en:{previous:'← Previous',next:'Next →',replay:'Replay ↻',step:'Step',of:'of',restart:'Restart',
    bezout:{title:'Find the HCF, then reverse the steps',notes:[
     'Divide 60 by 32. The remainder is 28.',
     'Continue: dividing 32 by 28 leaves 4.',
     'Now the remainder is zero. The last nonzero remainder, 4, is the HCF.',
     'Reverse the second division: write 4 using 32 and 28.',
     'From the first division, 28 = 60 − 32. Replace 28. Now only the original numbers remain.',
-    'Collect the 32s. This produces the two integer multipliers: x = 2 and y = −1.'
-   ],labels:['Divide','Continue','Stop','Reverse','Substitute','Collect'],conclusion:'We did not guess x and y: we found them by reversing Euclid’s divisions.'},
+    'Subtracting a bracket reverses both signs: 4 = 32 − 60 + 32.',
+     'Collect the two 32s: 4 = 32(2) + 60(−1). Verify: 64 − 60 = 4.'
+   ],labels:['Divide','Continue','Stop','Reverse','Substitute','Change signs','Check'],conclusion:'We did not guess x and y: we found them by reversing Euclid’s divisions.'},
    infinite:{title:'Can infinitely many pieces have a finite total?',ratio:'Common ratio',terms:'Terms shown',partial:'Sum so far',target:'Limit',missing:'Gap to limit',
     converges:'Each new piece shrinks; the sum approaches a fixed number.',
     alternating:'The signs alternate and the sum moves above and below its limit, but the gap shrinks.',
@@ -19,15 +20,16 @@
    special:{title:'Compare three sums',terms:'How many terms?',kind:'Type of terms',ordinary:'Natural numbers',squares:'Squares',cubes:'Cubes',sum:'Sum',
     meanings:['Add the natural numbers from 1 to n.','Square each number, then add the squares.','Cube each number, then add the cubes.']}
   },
-  ta:{previous:'← முந்தையது',next:'அடுத்து →',replay:'மீண்டும் ↻',step:'படி',of:'இல்',
+  ta:{previous:'← முந்தையது',next:'அடுத்து →',replay:'மீண்டும் ↻',step:'படி',of:'இல்',restart:'மீண்டும் தொடங்கு',
    bezout:{title:'மீ.பொ.வைக் கண்டு, படிகளைப் பின்னோக்கிச் செல்வோம்',notes:[
     '60-ஐ 32-ஆல் வகுக்கும்போது மீதி 28.',
     '32-ஐ 28-ஆல் வகுக்கும்போது மீதி 4.',
     'அடுத்த மீதி பூச்சியம். கடைசி பூச்சியமற்ற மீதி 4 தான் மீ.பொ.வ.',
     'இரண்டாவது வகுத்தலைப் பின்னோக்கி எழுதுங்கள்: 4-ஐ 32, 28 மூலம் எழுதலாம்.',
     'முதல் வகுத்தலின்படி 28 = 60 − 32. அதைப் பதிலிடுங்கள்.',
-    '32 உள்ள உறுப்புகளைச் சேர்க்கவும். x = 2, y = −1 கிடைக்கும்.'
-   ],labels:['வகுத்தல்','தொடர்ச்சி','முடிவு','பின்செல்','பதிலீடு','சேர்'],conclusion:'x, y-ஐ ஊகிக்கவில்லை; யூக்ளிட் வகுத்தல்களைப் பின்னோக்கி மாற்றிக் கண்டோம்.'},
+    'அடைப்புக்குறியை கழிக்கும்போது குறிகள் மாறும்: 4 = 32 − 60 + 32.',
+     'இரு 32 உறுப்புகளைச் சேர்த்து சரிபார்க்கவும்: 64 − 60 = 4.'
+   ],labels:['வகுத்தல்','தொடர்ச்சி','முடிவு','பின்செல்','பதிலீடு','குறி மாற்றம்','சரிபார்'],conclusion:'x, y-ஐ ஊகிக்கவில்லை; யூக்ளிட் வகுத்தல்களைப் பின்னோக்கி மாற்றிக் கண்டோம்.'},
    infinite:{title:'முடிவில்லா உறுப்புகளின் கூட்டுத்தொகை முடிவுடையதா?',ratio:'பொது விகிதம்',terms:'காட்டும் உறுப்புகள்',partial:'இதுவரை கூட்டுத்தொகை',target:'எல்லை மதிப்பு',missing:'எல்லைக்கான இடைவெளி',
     converges:'ஒவ்வொரு புதிய உறுப்பும் சிறிதாகிறது; கூட்டுத்தொகை ஒரு நிலையான மதிப்பை நெருங்கும்.',
     alternating:'குறியீடுகள் மாறுகின்றன; கூட்டுத்தொகை எல்லை மதிப்பைச் சுற்றி மாறினாலும் இடைவெளி குறைகிறது.',
@@ -50,27 +52,35 @@
    return {text:String(rounded),approximate};
  }
  function bezout(host,t){const copy=t.bezout;heading(host,copy.title);
-   const trail=make('div','g10ch2-discovery-trail');const formula=make('div','g10ch2-discovery-math');
-   const note=make('p','g10ch2-discovery-note');note.setAttribute('role','status');note.setAttribute('aria-live','polite');
-   const complete=make('p','g10ch2-discovery-complete',copy.conclusion);complete.hidden=true;
-   const controls=make('div','g10ch2-discovery-controls');const prev=make('button','',t.previous);
-   const progress=make('span','g10ch2-discovery-progress');const next=make('button');
-   prev.type=next.type='button';controls.append(prev,progress,next);host.append(trail,formula,note,complete,controls);
-   const equations=[
-    ['60=32(1)+28','60 = 32 × 1 + 28'],
-    ['32=28(1)+4','32 = 28 × 1 + 4'],
-    ['28=4(7)+0','28 = 4 × 7 + 0'],
-    ['4=32-28','4 = 32 − 28'],
-    ['4=32-(60-32)','4 = 32 − (60 − 32)'],
-    ['4=32(2)+60(-1)','4 = 32(2) + 60(−1)']
-   ];let step=0;
-   function draw(){trail.replaceChildren();copy.labels.forEach((text,i)=>{
-     if(i>step)return;const chip=make('span','g10ch2-discovery-chip'+(i===step?' is-active':''),(i+1)+'. '+text);trail.append(chip);
-   });math(formula,...equations[step]);note.textContent=copy.notes[step];progress.textContent=t.step+' '+(step+1)+' '+t.of+' 6';
-     prev.disabled=step===0;next.textContent=step===5?t.replay:t.next;complete.hidden=step!==5;}
-   prev.addEventListener('click',()=>{step=Math.max(0,step-1);draw();});
-   next.addEventListener('click',()=>{step=(step+1)%6;draw();});draw();return true;}
- function geometricPartial(a,r,n){if(!Number.isFinite(a)||!Number.isFinite(r)||!Number.isInteger(n)||n<1||n>100)throw new RangeError('Invalid geometric series');
+    const trail=make('div','g10ch2-discovery-trail'),formula=make('div','g10ch2-discovery-math');
+    const note=make('p','g10ch2-discovery-note');note.setAttribute('role','status');note.setAttribute('aria-live','polite');
+    const complete=make('p','g10ch2-discovery-complete',copy.conclusion);complete.hidden=true;
+    const controls=make('div','g10ch2-discovery-controls'),prev=make('button','',t.previous);
+    const progress=make('span','g10ch2-discovery-progress'),next=make('button','',t.next),restart=make('button','',t.restart);
+    prev.type=next.type=restart.type='button';controls.append(prev,progress,next,restart);
+    host.append(trail,formula,note,complete,controls);
+    const equations=[
+      ['60=32(1)+28','60 = 32 × 1 + 28'],
+      ['32=28(1)+4','32 = 28 × 1 + 4'],
+      ['28=4(7)+0','28 = 4 × 7 + 0'],
+      ['4=32-28','4 = 32 − 28'],
+      ['4=32-(60-32)','4 = 32 − (60 − 32)'],
+      ['4=32-60+32','4 = 32 − 60 + 32'],
+      ['4=32(2)+60(-1)=64-60','4 = 32(2) + 60(−1) = 64 − 60 = 4']
+    ];let step=0;
+    function draw(){
+      trail.replaceChildren();
+      copy.labels.forEach((text,i)=>{if(i<=step)trail.append(make('span','g10ch2-discovery-chip'+(i===step?' is-active':''),(i+1)+'. '+text));});
+      math(formula,...equations[step]);note.textContent=copy.notes[step];
+      progress.textContent=t.step+' '+(step+1)+' '+t.of+' '+equations.length;
+      prev.disabled=step===0;next.disabled=step===equations.length-1;
+      next.textContent=step===equations.length-1?t.step+' '+equations.length+'/'+equations.length:t.next;
+      restart.hidden=step!==equations.length-1;complete.hidden=step!==equations.length-1;
+    }
+    prev.addEventListener('click',()=>{step=Math.max(0,step-1);draw();});
+    next.addEventListener('click',()=>{step=Math.min(equations.length-1,step+1);draw();});
+    restart.addEventListener('click',()=>{step=0;draw();});draw();return true;}
+  function geometricPartial(a,r,n){if(!Number.isFinite(a)||!Number.isFinite(r)||!Number.isInteger(n)||n<1||n>100)throw new RangeError('Invalid geometric series');
    return r===1?a*n:a*(1-Math.pow(r,n))/(1-r);}
  function infinite(host,t,stage){const copy=t.infinite;heading(host,copy.title);
    const label=make('p','g10ch2-discovery-label',copy.ratio);const choices=make('div','g10ch2-discovery-choices');
@@ -85,11 +95,20 @@
    track.setAttribute('role','img');const filled=make('div','g10ch2-discovery-filled');track.append(filled);
    const feedback=make('p','g10ch2-discovery-note');feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');
    const insight=make('p','g10ch2-discovery-subnote',copy.insight);
+    const ratioPower=make('p','g10ch2-discovery-power');ratioPower.setAttribute('aria-live','polite');
+    const bridge=make('div','g10ch2-discovery-bridge');
+    const bridgeNote=make('p','g10ch2-discovery-subnote',t===translations.en?'In the finite sum, a is the first term, r is the ratio, n is the term count, and Sₙ is the sum. If |r| < 1, multiplying by r repeatedly makes rⁿ approach zero.':'முதல் உறுப்பு a, பொது விகிதம் r, உறுப்புகளின் எண்ணிக்கை n; |r| < 1 எனில் rⁿ பூச்சியத்தை நெருங்கும்.');
+    const bridgeFormula=make('div','g10ch2-discovery-math');
+    math(bridgeFormula,'S_n=\\frac{a(1-r^n)}{1-r}\\xrightarrow[|r|<1]{n\\to\\infty}\\frac{a}{1-r}','Sₙ = a(1 − rⁿ)/(1 − r) → a/(1 − r), when |r| < 1');
+    bridge.append(bridgeNote,bridgeFormula);
    const rule=make('div','g10ch2-discovery-math');
    math(rule,stage.math.latex,stage.math.fallback);
-   host.append(label,choices,row,formula,track,feedback,insight,rule);
+   host.append(label,choices,row,formula,ratioPower,track,feedback,bridge,insight,rule);
    function draw(){buttons.forEach((b,i)=>b.setAttribute('aria-pressed',String(options[i].r===ratio)));count.textContent=String(n);
      const partial=geometricPartial(1,ratio,n),converges=Math.abs(ratio)<1,target=converges?1/(1-ratio):null;
+      const power=Math.pow(ratio,n),powerLabel=displayNumber(power);
+      ratioPower.textContent='r^'+n+' = '+(powerLabel.approximate?'≈ ':'')+powerLabel.text+(converges?' → 0 as n increases':ratio===1?' (stays 1)':' (does not approach 0)');
+      bridge.hidden=!converges;
      const shown=displayNumber(partial);
      const describe=value=>{const display=displayNumber(value);return (display.approximate?'≈ ':'')+display.text;};
      math(formula,'S_{'+n+'}'+(shown.approximate?'\\approx ':'=')+shown.text,'S'+n+(shown.approximate?' ≈ ':' = ')+shown.text);
@@ -169,36 +188,29 @@
    return node;
  }
  function squaresDiagram(copy,pick){
-   const rows=squareTriangleRows(3);
-   const groups=pick(copy.diagramGroups);
-   const triangles=[0,1,2].map(i=>rows.map(row=>row.map(cell=>cell[i])));
-   triangles.push(rows.map(row=>row.map(cell=>cell.reduce((sum,value)=>sum+value,0))));
-   const descId='g10ch2-special-diagram-description';
-   const svg=svgNode('svg',{viewBox:'0 0 270 88',role:'img',
-     'aria-label':pick(copy.diagramLabel),'aria-describedby':descId});
-   const descriptions=triangles.map((triangle,i)=>groups[i]+'. '+pick(copy.diagramRows)+' '+
-     triangle.map(row=>row.join(', ')).join('. ')+'.');
-   svg.append(svgNode('desc',{id:descId},descriptions.join(' ')));
-   triangles.forEach((triangle,i)=>{
-     const group=svgNode('g',{'data-triangle':i});
-     triangle.forEach((row,r)=>{
-       const rowGroup=svgNode('g',{'data-triangle-row':r+1});
-       row.forEach((value,c)=>{
-         const x=32+68*i+20*(c-r/2);
-         const y=17+27*r;
-         rowGroup.append(svgNode('rect',{x:x-9,y:y-9,width:18,height:18,rx:4}),
-           svgNode('text',{x,y},value));
-       });
-       group.append(rowGroup);
-     });
-     svg.append(group);
-   });
-   ['+','+','='].forEach((sign,i)=>svg.append(svgNode('text',{x:66+68*i,y:44},sign)));
-   const figure=make('figure','g10ch2-special-diagram');
-   figure.append(svg,make('figcaption','',pick(copy.caption)));
-   return figure;
- }
- function special(host,t,stage,lang){
+    const rows=squareTriangleRows(3),groups=pick(copy.diagramGroups);
+    const triangles=[0,1,2].map(i=>rows.map(row=>row.map(cell=>cell[i])));
+    triangles.push(rows.map(row=>row.map(cell=>cell.reduce((sum,value)=>sum+value,0))));
+    const figure=make('figure','g10ch2-special-diagram');
+    const grid=make('div','g10ch2-tri-grid');
+    grid.setAttribute('role','img');
+    grid.setAttribute('aria-label',pick(copy.diagramLabel)+'. '+triangles.map((tri,i)=>
+      groups[i]+': '+tri.map(row=>row.join(', ')).join('; ')).join('. '));
+    triangles.forEach((triangle,i)=>{
+      const card=make('div','g10ch2-tri-card'+(i===3?' is-total':''));
+      card.append(make('strong','g10ch2-tri-title',groups[i]));
+      const body=make('div','g10ch2-tri-rows');
+      triangle.forEach(row=>{
+        const line=make('div','g10ch2-tri-row');
+        row.forEach(value=>line.append(make('span','g10ch2-tri-cell',String(value))));
+        body.append(line);
+      });
+      card.append(body);grid.append(card);
+    });
+    figure.append(grid,make('figcaption','',pick(copy.caption)));
+    return figure;
+  }
+  function special(host,t,stage,lang){
    const {bridgeTitle,bridgeLink,notationTitle,notation,sigmaMath,powersMath,odd,squares,cubes,range}=stage.lesson;
    const pick=value=>value[lang==='ta'?'ta':'en'];
    const paragraph=value=>make('p','',pick(value));
@@ -227,20 +239,90 @@
      paragraph(cubes.proofIdentity),equation(cubes.identityMath),
      paragraph(cubes.proofCancel),equation(cubes.cancelMath),paragraph(cubes.proofEnd));
    host.className='g10ch2-special';
-   host.append(
-     section(bridgeTitle,bridge,equation(stage.math)),
-     demo,
-     section(notationTitle,paragraph(notation),equation(sigmaMath),paragraph(stage.example),equation(powersMath)),
-     oddSum,
-     section(squares.title,paragraph(squares.intro),squaresDiagram(squares,pick),
-       equation(squares.exampleMath),paragraph(squares.general),equation(squares.math)),
-     section(cubes.title,paragraph(cubes.intro),equation(cubes.math),paragraph(cubes.contrast),proof),
-     section(range.title,paragraph(range.intro),equation(range.generalMath),equation(range.math)),
-     make('small','sp2-stage-reference',(lang==='ta'?'பாடநூல் பகுதி ':'Textbook section ')+stage.section)
-   );
-   return true;
+    const squaresProof=make('details','g10ch2-special-proof');
+    squaresProof.append(make('summary','',pick(squares.title)),
+      paragraph(squares.intro),squaresDiagram(squares,pick),equation(squares.exampleMath),
+      paragraph(squares.general),equation(squares.math));
+    const rangeProof=make('details','g10ch2-special-proof');
+    rangeProof.append(make('summary','',pick(range.title)),paragraph(range.intro),
+      equation(range.generalMath),equation(range.math));
+    const formulaTitle=lang==='ta'?'மூன்று கூடுதல் சூத்திரங்கள்':'Three useful sum formulas';
+    host.append(
+      section(bridgeTitle,bridge),
+      demo,
+      section(notationTitle,paragraph(notation),equation(sigmaMath),paragraph(stage.example),equation(powersMath)),
+      section({en:formulaTitle,ta:formulaTitle},equation(stage.math),equation(squares.math),equation(cubes.math),
+        paragraph(cubes.contrast)),
+      squaresProof,proof,rangeProof,oddSum,
+      make('small','sp2-stage-reference',(lang==='ta'?'பாடநூல் பகுதி ':'Textbook section ')+stage.section)
+    );
+    return true;
  }
- function mount(stage,host,lang){if(!host)return false;const t=translations[lang==='ta'?'ta':'en'];
+ 
+ function congruence(host,t){
+   const ta=t===translations.ta;
+   heading(host,ta?'இரண்டு எண்களின் ஒரே மீதி':'Compare two remainders');
+   const controls=make('div','g10ch2-congruence-controls'),scene=make('div','g10ch2-scene');
+   const feedback=make('p','g10ch2-visual-feedback');
+   feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');
+   let a=17,b=5;
+   const add=(name,value,onChange)=>{
+     const label=make('label','g10ch2-congruence-control');
+     const title=make('span','',name+': '+value),input=make('input');
+     input.type='range';input.min='0';input.max='30';input.step='1';input.value=String(value);
+     input.setAttribute('aria-label',name);input.addEventListener('input',()=>{
+       title.textContent=name+': '+input.value;onChange(Number(input.value));draw();
+     });
+     label.append(title,input);controls.append(label);
+   };
+   add(ta?'முதல் எண்':'First number',a,x=>{a=x;});
+   add(ta?'இரண்டாம் எண்':'Second number',b,x=>{b=x;});
+   host.append(controls,scene,feedback);
+   function draw(){
+     const rA=a%3,rB=b%3;scene.replaceChildren();
+     for(let rem=0;rem<3;rem++){
+       const nums=[rA===rem?a:null,rB===rem?b:null].filter(x=>x!==null);
+       const marker=make('span','g10ch2-chip'+(nums.length?' is-selected':''),rem+(nums.length?' ← '+nums.join(', '):''));
+       marker.setAttribute('aria-label',(ta?'மீதி ':'Remainder ')+rem+': '+(nums.join(', ')||'none'));scene.append(marker);
+     }
+     feedback.textContent=a+' = 3 × '+Math.floor(a/3)+' + '+rA+'; '+b+' = 3 × '+Math.floor(b/3)+' + '+rB+
+       (rA===rB?'. '+a+' ≡ '+b+' (mod 3); '+(a-b)+' = 3 × '+((a-b)/3):
+        (ta?'. மீதிகள் வேறுபடுகின்றன.':'. Different remainders: not congruent modulo 3.'));
+   }
+   draw();return true;
+ }
+ function factors(host,t){
+   const ta=t===translations.ta;
+   heading(host,ta?'பகா காரணிகளை ஒப்பிடுங்கள்':'Compare prime powers');
+   const controls=make('div','g10ch2-factor-controls'),scene=make('div','g10ch2-scene');
+   const feedback=make('p','g10ch2-visual-feedback');feedback.setAttribute('role','status');
+   let mode='hcf';
+   const hcf=make('button','',ta?'மீ.பொ.வ (சிறிய அடுக்கு)':'HCF (smallest powers)');
+   const lcm=make('button','',ta?'மீ.பொ.ம (பெரிய அடுக்கு)':'LCM (largest powers)');
+   hcf.type=lcm.type='button';controls.append(hcf,lcm);host.append(controls,scene,feedback);
+   const card=(number,two,three,pickTwo,pickThree)=>{
+     const row=make('div','g10ch2-factor-expression');
+     row.append(make('strong','',number+' = '),
+       make('span','g10ch2-factor-power'+(pickTwo?' is-picked':''),two),' × ',
+       make('span','g10ch2-factor-power'+(pickThree?' is-picked':''),three));
+     return row;
+   };
+   function draw(){
+     hcf.setAttribute('aria-pressed',String(mode==='hcf'));
+     lcm.setAttribute('aria-pressed',String(mode==='lcm'));
+     scene.replaceChildren(
+       card('8','2³','3⁰',mode==='lcm',mode==='hcf'),
+       card('18','2¹','3²',mode==='hcf',mode==='lcm'),
+       make('p','g10ch2-factor-legend',ta?'3⁰ = 1; 8-இல் காரணி 3 இல்லை.':'3⁰ = 1 because 8 has no factor of 3.'));
+     feedback.textContent=mode==='hcf'?'HCF(8, 18) = 2¹ × 3⁰ = 2':'LCM(8, 18) = 2³ × 3² = 72';
+   }
+   hcf.addEventListener('click',()=>{mode='hcf';draw();});
+   lcm.addEventListener('click',()=>{mode='lcm';draw();});
+   draw();return true;
+ }
+function mount(stage,host,lang){if(!host)return false;const t=translations[lang==='ta'?'ta':'en'];
+   if(stage?.id==='g10-ch2-primes')return factors(host,t);
+   if(stage?.id==='g10-ch2-congruence')return congruence(host,t);
    if(stage?.id==='g10-ch2-bezout')return bezout(host,t);
    if(stage?.id==='g10-ch2-gp-infinite')return infinite(host,t,stage);
    if(stage?.id==='g10-ch2-special'&&stage.lesson)return special(host,t,stage,lang);

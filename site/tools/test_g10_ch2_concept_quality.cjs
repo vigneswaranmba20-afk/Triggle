@@ -66,8 +66,8 @@ const hub=read('assets/chapter-hub.js');
 assert(hub.includes("v.kind==='sequence'"),'Student sees the one-based sequence visual instead of an empty stage');
 assert(hub.includes("v.values[n-1]"),'Sequence visual indexes from the first term');
 assert(hub.includes("stage.id==='g10-ch2-modulo'?45"),'Clock launches the taught 45-day example');
-assert(hub.includes("stage.id==='g10-ch2-congruence'?14"),'Congruence launches the 14 modulo 5 transfer');
-assert(hub.includes("n+' ≡ '+mark"),'Congruence exposes its equivalent residue');
+assert(js.includes("if(stage?.id==='g10-ch2-congruence')return congruence(host,t)"),'Congruence uses an isolated two-number mod-3 lab');
+assert(js.includes('function congruence(host,t)'),'Congruence compares both residues and their difference');
 
 // Student Psychology Lab regression checks: make the meaning visible, not a slider.
 // These preserve the independent textbook questions and fifteen lesson IDs.
