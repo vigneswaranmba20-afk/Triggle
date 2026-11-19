@@ -4716,6 +4716,144 @@ const metadata={
       "level": "difficult",
       "basis": "Formulate and solve a rational equation for fruit prices per kg and compute the weight of each fruit bought.",
       "review": "implementation-audit"
+    },
+    "c10-3-ex3-7-q1-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Cancel monomial powers in numerator and denominator and take the square root with absolute value bars.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-7-q1-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Recognize quadratic perfect squares with radical and fractional coefficients in numerator and denominator.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-7-q1-iii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Combine repeated denominator binomial factors, cancel common powers, and apply square root exponent halving.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-7-q2-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Direct application of (a + b)² identity to extract the square root with modulus bars.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-7-q2-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Match a six-term quadratic to (a + b + c)² by determining the negative cross-term variable.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-7-q2-iii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor three quadratic trinomials into paired linear factors before extracting the square root.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-7-q2-iv": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Clear rational coefficients from three quadratics, factor each integer polynomial, and extract the paired square root.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-8-q1-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Standard polynomial long division for square root of a degree-4 polynomial.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-8-q1-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Reorder polynomial terms in descending degree before applying polynomial square-root division.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-8-q1-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Polynomial square-root division with missing odd-degree terms handled via zero placeholders.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-8-q1-iv": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Multi-step polynomial square-root division with larger coefficients and negative middle/constant terms.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-8-q2-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Use division method on a degree-4 polynomial with unknown trailing coefficients and equate remainder to zero.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-8-q2-ii": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Rearrange polynomial in ascending order because unknowns sit on highest-degree terms before applying division.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-8-q3-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Apply division method and match negative linear coefficient −mx with zero remainder.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-8-q3-ii": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Determine unknown middle coefficients m and n in a perfect-square quartic via division method.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-9-q1-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Direct substitution of sum and product of roots into x² − (sum)x + product = 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-9-q1-ii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Substitute fractional sum of roots and clear denominator to obtain integer coefficients.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-9-q1-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Handle negative fractional sum and negative product in x² − (α + β)x + αβ = 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-9-q1-iv": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Form a quadratic equation from symbolic algebraic expressions for sum and product of roots.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-9-q2-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Read coefficients a, b, c directly and evaluate −b/a and c/a.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-9-q2-ii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Recognize missing constant term c = 0 before computing −b/a and c/a.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-9-q2-iii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Clear fractional denominators to write 3 + 1/a = 10/a² in standard quadratic form before finding sum and product.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-9-q2-iv": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Identify negative coefficients b = −1, c = −4 and evaluate −b/a and c/a carefully.",
+      "review": "implementation-audit"
     }
   },
   "solutionReviews": {

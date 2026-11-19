@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 3,
+  "exercises": [
+    "3.7",
+    "3.8",
+    "3.9"
+  ],
+  "edition": "TN SCERT 2025 revised English and Tamil",
+  "textbook": "Class 10 Mathematics, Chapter 3 Algebra — Square Root of Polynomials and Rational Expressions, Formation and Roots of Quadratic Equations",
+  "originalPdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+  "tamilPdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+  "sourcePages": {
+    "printed": [
+      105,
+      106,
+      109
+    ],
+    "pdf": [
+      111,
+      112,
+      115
+    ],
+    "tamilPrinted": [
+      107,
+      108,
+      111
+    ],
+    "tamilPdf": [
+      113,
+      114,
+      117
+    ],
+    "answerAppendixPrinted": [
+      338
+    ],
+    "answerAppendixPdf": [
+      344
+    ],
+    "tamilAnswerAppendixPrinted": [
+      352
+    ],
+    "tamilAnswerAppendixPdf": [
+      358
+    ]
+  },
+  "pageImageSha256": {
+    "en-pdf-2.png": "7fabf5d5c17f7cdb1663a8d177ca89b1c20533e83236809ba02bad12c9403103",
+    "en-pdf-111.png": "53c845d67627950ae7a8229e54c85bb54f07ee13f793d6d155b423cd2da9296b",
+    "en-pdf-112.png": "1da19a1f45a16b622e230977090502bb128e654b00dd2cce3ca1a5b8ca127666",
+    "en-pdf-115.png": "aff1c5f4bc3dc0e050a9f18352de3454a1030603f26e986196a82977f1d02fd8",
+    "en-pdf-344.png": "e5fc96c76587c657139baaaf2789ffbcdc68b822f7919cd05b59b24361286bc",
+    "ta-pdf-2.png": "54581ff73079cce156c815eeac1d94c76f6905e541508bbc8fc23bdf9e2a035c",
+    "ta-pdf-113.png": "8c1dfdbfba976113eefe4df0bc05c65439dea5964d6e127fd3ee2deccc58e52c",
+    "ta-pdf-114.png": "f87347ee2e487ec4fb10b783c237961cf816189a9acf47dd21b584980a1d3d75",
+    "ta-pdf-117.png": "5de94158c72824b6a76c28b5bd591f875e0726e1dac0f3be3996000a688e8387",
+    "ta-pdf-358.png": "86d0932d5e7e1e399f9d65336e9c5bbfa501579c84532c0279cef50902a1ae91"
+  },
+  "reviewMethod": "Visually inspected rendered page images of printed pp. 105, 106, 109 (PDF pp. 111, 112, 115) and Answer Appendix printed p. 338 (PDF p. 344) from the 2025 English textbook, together with printed pp. 107, 108, 111 (PDF pp. 113, 114, 117) and Answer Appendix printed p. 352 (PDF p. 358) from the 2025 Tamil textbook, against all 23 independently solved student records across Exercises 3.7-3.9.",
+  "sourceLanguages": {
+    "english": "source-image checked",
+    "tamil": "source-image checked for question/part parity; Tamil student lesson editorial review pending"
+  },
+  "teacherReview": "not performed",
+  "chapterCompletion": false,
+  "exerciseBreakdown": {
+    "3.7": {
+      "numberedQuestions": 2,
+      "uniqueSubpartTasks": 7,
+      "newStudentRecords": 7,
+      "totalStudentRecords": 7,
+      "note": "In the 2025 English (printed p. 105, PDF p. 111) and Tamil (printed p. 107, PDF p. 113) textbooks and Answer Appendices (printed p. 338/352), Exercise 3.7 Q2 has 4 subparts: Q2(i)-Q2(iv). Subpart Q2(v) does not exist. TEXTBOOK_SPEC has been updated from the unverified 5-part estimate to the exact 4-part textbook count (23 total tasks across 7 numbered questions in Exercises 3.7-3.9)."
+    },
+    "3.8": {
+      "numberedQuestions": 3,
+      "uniqueSubpartTasks": 8,
+      "newStudentRecords": 8,
+      "totalStudentRecords": 8,
+      "note": "All 3 questions (8 tasks) lie on English printed p. 106 (PDF p. 112) and Tamil printed p. 108 (PDF p. 114; TEXTBOOK_SPEC corrected from PDF p. 115). Printed English Q3 has a typographical spelling \"sqaures\", rendered cleanly as \"squares\"."
+    },
+    "3.9": {
+      "numberedQuestions": 2,
+      "uniqueSubpartTasks": 8,
+      "newStudentRecords": 8,
+      "totalStudentRecords": 8
+    }
+  },
+  "numberedQuestions": 7,
+  "uniqueSubpartTasks": 23,
+  "existingStudentRecords": 0,
+  "newStudentRecords": 23,
+  "totalStudentRecords": 23,
+  "tasks": [
+    {
+      "id": "c10-3-ex3-7-q1-i",
+      "exercise": "3.7",
+      "label": "Exercise 3.7 · Q1(i)",
+      "question": "1. Find the square root of the following rational expressions.\n(i) (400x⁴y¹²z¹⁶)/(100x⁸y⁴z⁴)",
+      "answer": "2 |y⁴z⁶ / x²|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.7 Q1(i); printed p. 105, PDF p. 111; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-7-q1-ii",
+      "exercise": "3.7",
+      "label": "Exercise 3.7 · Q1(ii)",
+      "question": "1. Find the square root of the following rational expressions.\n(ii) (7x² + 2√14 x + 2) / (x² − (1/2)x + 1/16)",
+      "answer": "4 |(√7 x + √2)/(4x − 1)|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.7 Q1(ii); printed p. 105, PDF p. 111; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-7-q1-iii",
+      "exercise": "3.7",
+      "label": "Exercise 3.7 · Q1(iii)",
+      "question": "1. Find the square root of the following rational expressions.\n(iii) [121(a + b)⁸(x + y)⁸(b − c)⁸] / [81(b − c)⁴(a − b)¹²(b − c)⁴]",
+      "answer": "(11/9) |(a + b)⁴(x + y)⁴ / (a − b)⁶|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.7 Q1(iii); printed p. 105, PDF p. 111; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-7-q2-i",
+      "exercise": "3.7",
+      "label": "Exercise 3.7 · Q2(i)",
+      "question": "2. Find the square root of the following\n(i) 4x² + 20x + 25",
+      "answer": "|2x + 5|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.7 Q2(i); printed p. 105, PDF p. 111; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-7-q2-ii",
+      "exercise": "3.7",
+      "label": "Exercise 3.7 · Q2(ii)",
+      "question": "2. Find the square root of the following\n(ii) 9x² − 24xy + 30xz − 40yz + 25z² + 16y²",
+      "answer": "|3x − 4y + 5z|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.7 Q2(ii); printed p. 105, PDF p. 111; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-7-q2-iii",
+      "exercise": "3.7",
+      "label": "Exercise 3.7 · Q2(iii)",
+      "question": "2. Find the square root of the following\n(iii) (4x² − 9x + 2)(7x² − 13x − 2)(28x² − 3x − 1)",
+      "answer": "|(x − 2)(7x + 1)(4x − 1)|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.7 Q2(iii); printed p. 105, PDF p. 111; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-7-q2-iv",
+      "exercise": "3.7",
+      "label": "Exercise 3.7 · Q2(iv)",
+      "question": "2. Find the square root of the following\n(iv) (2x² + (17/6)x + 1)((3/2)x² + 4x + 2)((4/3)x² + (11/3)x + 2)",
+      "answer": "(1/6)|(4x + 3)(3x + 2)(x + 2)|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.7 Q2(iv); printed p. 105, PDF p. 111; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-8-q1-i",
+      "exercise": "3.8",
+      "label": "Exercise 3.8 · Q1(i)",
+      "question": "1. Find the square root of the following polynomials by division method\n(i) x⁴ − 12x³ + 42x² − 36x + 9",
+      "answer": "|x² − 6x + 3|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.8 Q1(i); printed p. 106, PDF p. 112; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-8-q1-ii",
+      "exercise": "3.8",
+      "label": "Exercise 3.8 · Q1(ii)",
+      "question": "1. Find the square root of the following polynomials by division method\n(ii) 37x² − 28x³ + 4x⁴ + 42x + 9",
+      "answer": "|2x² − 7x − 3|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.8 Q1(ii); printed p. 106, PDF p. 112; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-8-q1-iii",
+      "exercise": "3.8",
+      "label": "Exercise 3.8 · Q1(iii)",
+      "question": "1. Find the square root of the following polynomials by division method\n(iii) 16x⁴ + 8x² + 1",
+      "answer": "|4x² + 1|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.8 Q1(iii); printed p. 106, PDF p. 112; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-8-q1-iv",
+      "exercise": "3.8",
+      "label": "Exercise 3.8 · Q1(iv)",
+      "question": "1. Find the square root of the following polynomials by division method\n(iv) 121x⁴ − 198x³ − 183x² + 216x + 144",
+      "answer": "|11x² − 9x − 12|",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.8 Q1(iv); printed p. 106, PDF p. 112; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-8-q2-i",
+      "exercise": "3.8",
+      "label": "Exercise 3.8 · Q2(i)",
+      "question": "2. Find the values of a and b if the following polynomials are perfect squares\n(i) 4x⁴ − 12x³ + 37x² + bx + a",
+      "answer": "a = 49, b = −42",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.8 Q2(i); printed p. 106, PDF p. 112; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-8-q2-ii",
+      "exercise": "3.8",
+      "label": "Exercise 3.8 · Q2(ii)",
+      "question": "2. Find the values of a and b if the following polynomials are perfect squares\n(ii) ax⁴ + bx³ + 361x² + 220x + 100",
+      "answer": "a = 144, b = 264",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.8 Q2(ii); printed p. 106, PDF p. 112; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-8-q3-i",
+      "exercise": "3.8",
+      "label": "Exercise 3.8 · Q3(i)",
+      "question": "3. Find the values of m and n if the following polynomials are perfect squares\n(i) 36x⁴ − 60x³ + 61x² − mx + n",
+      "answer": "m = 30, n = 9",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.8 Q3(i); printed p. 106, PDF p. 112; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-8-q3-ii",
+      "exercise": "3.8",
+      "label": "Exercise 3.8 · Q3(ii)",
+      "question": "3. Find the values of m and n if the following polynomials are perfect squares\n(ii) x⁴ − 8x³ + mx² + nx + 16",
+      "answer": "m = 24, n = −32",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.8 Q3(ii); printed p. 106, PDF p. 112; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-9-q1-i",
+      "exercise": "3.9",
+      "label": "Exercise 3.9 · Q1(i)",
+      "question": "1. Determine the quadratic equations, whose sum and product of roots are\n(i) −9, 20",
+      "answer": "x² + 9x + 20 = 0",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.9 Q1(i); printed p. 109, PDF p. 115; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-9-q1-ii",
+      "exercise": "3.9",
+      "label": "Exercise 3.9 · Q1(ii)",
+      "question": "1. Determine the quadratic equations, whose sum and product of roots are\n(ii) 5/3, 4",
+      "answer": "3x² − 5x + 12 = 0",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.9 Q1(ii); printed p. 109, PDF p. 115; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-9-q1-iii",
+      "exercise": "3.9",
+      "label": "Exercise 3.9 · Q1(iii)",
+      "question": "1. Determine the quadratic equations, whose sum and product of roots are\n(iii) −3/2, −1",
+      "answer": "2x² + 3x − 2 = 0",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.9 Q1(iii); printed p. 109, PDF p. 115; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-9-q1-iv",
+      "exercise": "3.9",
+      "label": "Exercise 3.9 · Q1(iv)",
+      "question": "1. Determine the quadratic equations, whose sum and product of roots are\n(iv) −(2 − a)², (a + 5)²",
+      "answer": "x² + (2 − a)²x + (a + 5)² = 0",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.9 Q1(iv); printed p. 109, PDF p. 115; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-9-q2-i",
+      "exercise": "3.9",
+      "label": "Exercise 3.9 · Q2(i)",
+      "question": "2. Find the sum and product of the roots for each of the following quadratic equations\n(i) x² + 3x − 28 = 0",
+      "answer": "−3, −28",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.9 Q2(i); printed p. 109, PDF p. 115; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-9-q2-ii",
+      "exercise": "3.9",
+      "label": "Exercise 3.9 · Q2(ii)",
+      "question": "2. Find the sum and product of the roots for each of the following quadratic equations\n(ii) x² + 3x = 0",
+      "answer": "−3, 0",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.9 Q2(ii); printed p. 109, PDF p. 115; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-9-q2-iii",
+      "exercise": "3.9",
+      "label": "Exercise 3.9 · Q2(iii)",
+      "question": "2. Find the sum and product of the roots for each of the following quadratic equations\n(iii) 3 + 1/a = 10/a²",
+      "answer": "−1/3, −10/3",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.9 Q2(iii); printed p. 109, PDF p. 115; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-9-q2-iv",
+      "exercise": "3.9",
+      "label": "Exercise 3.9 · Q2(iv)",
+      "question": "2. Find the sum and product of the roots for each of the following quadratic equations\n(iv) 3y² − y − 4 = 0",
+      "answer": "1/3, −4/3",
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.9 Q2(iv); printed p. 109, PDF p. 115; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    }
+  ]
+}
