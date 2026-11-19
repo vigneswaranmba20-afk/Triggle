@@ -4854,6 +4854,138 @@ const metadata={
       "level": "easy",
       "basis": "Identify negative coefficients b = −1, c = −4 and evaluate −b/a and c/a carefully.",
       "review": "implementation-audit"
+    },
+    "c10-3-ex3-10-q1-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Split the middle term of 4x² − 7x − 2 = 0 with a × c = −8 and factor by grouping.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-10-q1-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Expand both sides of 3(p² − 6) = p(p + 5), rearrange with careful signs, and factor.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-10-q1-iii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Square √(a(a − 7)) = 3√2, factor the quadratic, and verify both roots in the original radical equation.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-10-q1-iv": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Split the middle term of √2 x² + 7x + 5√2 = 0 and factor out irrational common factors cleanly.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-10-q1-v": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Clear the fraction 1/8 by multiplying by 8 and factor the repeated-root perfect square trinomial.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-10-q2": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Solve G(n) = (n² − n)/2 = 15 for positive integer team count and reject the negative root.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-11-q1-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Normalize leading coefficient 9 to 1 and complete the square for 9x² − 12x + 4 = 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-11-q1-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Clear denominator (x − 1) with x ≠ 1, reduce to standard form, and complete the square.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-11-q2-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Substitute coefficients with b = −5 carefully into the quadratic formula.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-11-q2-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Apply the quadratic formula with irrational coefficients √2 and 3√2 and simplify the radical quotient.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-11-q2-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Handle −4ac with c = −23 inside the discriminant and simplify fractions.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-11-q2-iv": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Solve a literal-coefficient quadratic equation cleanly via discriminant cancellation 144a² − 144a² + 144b².",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-11-q3": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Convert decimals in t² − 0.75t = 11.25 to integers, apply the formula, and keep positive time t > 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-12-q1": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Translate reciprocal difference into x − 1/x = 24/5, clear denominators, and factor.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-12-q2": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Model uniform 2w border additions in (12 + 2w)(16 + 2w) = 285 and reject negative width.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-12-q3": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Convert 30 minutes to 1/2 hour in a rational time-difference equation and reject negative speed.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-12-q4": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Express ages five years hence as (x + 5)(2x + 5) = 375 and solve for positive present ages.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-12-q5": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Use semicircle right angle, Pythagoras theorem x² + (x + 4)² = 20², and discriminant check for feasibility.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-12-q6": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Translate √(2x²/2) + (8/9)(2x²) + 2 = 2x² and remember to report 2x² rather than x alone.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-12-q7": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Form the sound-intensity distance ratio 4/9 = x²/(70 − x)² and verify position lies in (0, 70).",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-12-q8": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Model inner square (10 − 2w)², outer path cost ₹364, and reject w = 8 > 5.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-12-q9": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Use perimeter 56 cm to express legs x and 31 − x, apply Pythagoras theorem, and select the smallest side.",
+      "review": "implementation-audit"
     }
   },
   "solutionReviews": {
