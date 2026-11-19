@@ -120,6 +120,14 @@ def probe(path):
 
 
 def duration(path):
+    # Read ordinary PCM WAV locally. Only the final MP4 requires FFprobe.
+    # This also keeps narration-cache tests genuinely offline on minimal CI runners.
+    if Path(path).suffix.lower() == '.wav':
+        try:
+            with wave.open(str(path), 'rb') as wav:
+                return wav.getnframes() / wav.getframerate()
+        except (wave.Error, EOFError):
+            pass  # Less common WAV formats still use the FFprobe fallback.
     return float(probe(path)['format']['duration'])
 
 
@@ -227,6 +235,9 @@ def gemini_audio(text, path, model, voice, api_key, delivery):
 
 
 def segment_audio(beat, lesson, audio_root, mode, existing_dir, api_key):
+    # Standalone external-WAV calls must not assume render() created the cache.
+    audio_root = Path(audio_root)
+    audio_root.mkdir(parents=True, exist_ok=True)
     model=lesson.get('voice',{}).get('model','gemini-3.1-flash-tts-preview')
     voice=lesson.get('voice',{}).get('name','Kore')
     delivery=lesson.get('voice',{}).get('delivery',DEFAULT_VOICE_DELIVERY)
