@@ -1,0 +1,33 @@
+name: VER Triggle one-time full source backup
+on:
+  push:
+    branches:
+      - backup/secure-snapshot-2026-11-19
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout complete Git history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Package source, complete Git history and checksums
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p backup
+          git fetch --all --tags --prune
+          git archive --format=zip --output=backup/Triggle-source-main-2d519657.zip 2d519657cdb09e479ceb8181d905119220d7101c
+          git bundle create backup/Triggle-git-history-2026-11-19.bundle --all
+          (cd backup && sha256sum Triggle-source-main-2d519657.zip Triggle-git-history-2026-11-19.bundle > SHA256SUMS.txt)
+          git bundle verify backup/Triggle-git-history-2026-11-19.bundle
+      - name: Upload secure-backup transfer package
+        uses: actions/upload-artifact@v4
+        with:
+          name: VER-Triggle-source-full-2026-11-19
+          path: backup/*
+          retention-days: 7
+          if-no-files-found: error
