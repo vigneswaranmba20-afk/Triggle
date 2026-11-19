@@ -473,9 +473,9 @@
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
-  // Language switching and navigation replace formula nodes. Set their keyboard state
-  // immediately and refresh it if fonts or viewport reflows change measured widths.
-  prepareLessonMath();
+  // Language switching and navigation replace formula nodes. Set Grade 9 keyboard state
+  // immediately and refresh all grades when layout, fonts, or viewport widths settle.
+  if(grade===9)prepareLessonMath();
   if(lessonMathObserver){
    for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
     lessonMathObserver.observe(formula);
