@@ -4986,6 +4986,144 @@ const metadata={
       "level": "medium",
       "basis": "Use perimeter 56 cm to express legs x and 31 − x, apply Pythagoras theorem, and select the smallest side.",
       "review": "implementation-audit"
+    },
+    "c10-3-ex3-13-q1-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Direct evaluation of discriminant Δ = b² − 4ac with integer coefficients.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-13-q1-ii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Direct evaluation of discriminant Δ = b² − 4ac handling negative b and c signs.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-13-q1-iii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Evaluate Δ = b² − 4ac with irrational radical coefficients √2 and 3√2.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-13-q1-iv": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Square −6√2 accurately inside Δ = b² − 4ac to verify Δ = 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-13-q1-v": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Relabel quadratic coefficients A, B, C to avoid symbol collision and simplify literal Δ = B² − 4AC.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-13-q2-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Set Δ = 0 to form a quadratic equation in k, factor, and check 5k − 6 ≠ 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-13-q2-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Expand (6k + 2)² − 64k = 0, factor, and check k ≠ 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-13-q3": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Prove b, a, c are in A.P. by expanding Δ = 0 and completing ((b + c) − 2a)² = 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-13-q4": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Show Δ = 36[(a + b)² + (a − b)²] > 0 using non-negativity of real squares and a − b ≠ 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-13-q5": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Expand literal discriminant, cancel b²c², and factor a(a³ + b³ + c³ − 3abc) = 0.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q1-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Combine fractions over 3αβ and apply α² + β² = (α + β)² − 2αβ.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q1-ii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Combine reciprocals over (αβ)² in terms of α + β and αβ.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q1-iii": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Expand (3α − 1)(3β − 1) and factor −3 from −3α − 3β.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q1-iv": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Combine fractions over αβ and rewrite α² + β² + 3(α + β) using α + β and αβ.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q2-i": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Extract α + β and αβ from 2x² − 7x + 5 = 0 and evaluate (α + β)/(αβ).",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q2-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Express α/β + β/α via α + β and αβ and simplify the compound fraction.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q2-iii": {
+      "grade": 10,
+      "level": "difficult",
+      "basis": "Expand both numerator and denominator of (α + 2)/(β + 2) + (β + 2)/(α + 2) in symmetric sums and reduce.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q3-i": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Compute new sum α² + β² and product (αβ)² from x² + 6x − 4 = 0 to construct the quadratic equation.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q3-ii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Compute new sum 2/α + 2/β and product 4/(αβ) to construct the quadratic equation.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q3-iii": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Factor α²β + β²α = αβ(α + β), compute (αβ)³, and construct the quadratic equation.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q4": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Use (β − α)² = (α + β)² − 4αβ with α + β = −a/7 and αβ = 2/7 to solve a² = 225.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q5": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Represent roots as α and 2α, solve 2α² = 32 for both signs ±4, and compute a = 6α.",
+      "review": "implementation-audit"
+    },
+    "c10-3-ex3-14-q6": {
+      "grade": 10,
+      "level": "medium",
+      "basis": "Represent real roots as α and α², obtain α = 3 from α³ = 27, and evaluate k = −3(α + α²).",
+      "review": "implementation-audit"
     }
   },
   "solutionReviews": {

@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 3,
+  "exercises": [
+    "3.13",
+    "3.14"
+  ],
+  "edition": "TN SCERT 2025 revised English and Tamil",
+  "textbook": "Class 10 Mathematics, Chapter 3 Algebra — Quadratic Equations (Nature of Roots and Relation between Roots and Coefficients)",
+  "originalPdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+  "tamilPdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+  "sourcePages": {
+    "printed": [
+      119,
+      122
+    ],
+    "pdf": [
+      125,
+      128
+    ],
+    "tamilPrinted": [
+      121,
+      124
+    ],
+    "tamilPdf": [
+      127,
+      130
+    ],
+    "answerAppendixPrinted": [
+      338,
+      339
+    ],
+    "answerAppendixPdf": [
+      344,
+      345
+    ],
+    "tamilAnswerAppendixPrinted": [
+      352,
+      353
+    ],
+    "tamilAnswerAppendixPdf": [
+      358,
+      359
+    ]
+  },
+  "pageImageSha256": {
+    "en-pdf-2.png": "2346d7f55d7602554c6072cc4e0971dceaf9734919d70c7f3f187f263b26aa74",
+    "en-pdf-125.png": "2e93c91bff4eabe72df8097ef002392e8d03fd3e0d89c14f6144917077512da0",
+    "en-pdf-128.png": "853735ccbb9c62dc3e570b06bc4919406b072f847d646f5d9a9b870762b9fc0d",
+    "en-pdf-344.png": "d47c3466063a725d652fc1d8f93d0efe0f03f79a8f41ec092731f72f2ffb640d",
+    "en-pdf-345.png": "648a49ab420aef8ffe07484379a60869b732f467ded56cac795028c301216809",
+    "ta-pdf-2.png": "91fa5887459b63f16a4a6e9e753ce3ada7fba123fe9b10fe31ebb22df70809ad",
+    "ta-pdf-127.png": "0a30e23bbd772f7f05114c8fc9c7bb83019bf2f6a1a68c16eddeff31aa038043",
+    "ta-pdf-130.png": "284266451979314733741e340de02b0a7f88d5a75f76c2ae1e801749c42692fd",
+    "ta-pdf-358.png": "698d211ed89f6e953a1287a04413cf2d15df9c862d6b832b1e597bc1a8df7e45",
+    "ta-pdf-359.png": "90050fe113ebde368479bc21655415d1899dc3d5f8de74eff99c60ae73754403"
+  },
+  "reviewMethod": "Visually inspected rendered page images of printed pp. 119, 122 (PDF pp. 125, 128) and Answer Appendix printed pp. 338–339 (PDF pp. 344–345) from the 2025 English textbook, together with printed pp. 121, 124 (PDF pp. 127, 130) and Answer Appendix printed pp. 352–353 (PDF pp. 358–359) from the 2025 Tamil textbook, against all 23 independently solved student records across Exercises 3.13–3.14.",
+  "sourceLanguages": {
+    "english": "source-image checked",
+    "tamil": "source-image checked for question/part parity; Tamil student lesson editorial review pending"
+  },
+  "teacherReview": "not performed",
+  "chapterCompletion": false,
+  "exerciseBreakdown": {
+    "3.13": {
+      "numberedQuestions": 5,
+      "uniqueSubpartTasks": 10,
+      "newStudentRecords": 10,
+      "totalStudentRecords": 10
+    },
+    "3.14": {
+      "numberedQuestions": 6,
+      "uniqueSubpartTasks": 13,
+      "newStudentRecords": 13,
+      "totalStudentRecords": 13,
+      "note": "Ex 3.14 Q1 preserves verbatim textbook wording (\"each of the following expression\")."
+    }
+  },
+  "numberedQuestions": 11,
+  "uniqueSubpartTasks": 23,
+  "existingStudentRecords": 0,
+  "newStudentRecords": 23,
+  "totalStudentRecords": 23,
+  "tasks": [
+    {
+      "id": "c10-3-ex3-13-q1-i",
+      "exercise": "3.13",
+      "label": "Exercise 3.13 · Q1(i)",
+      "question": "1. Determine the nature of the roots for the following quadratic equations\n(i) 15x² + 11x + 2 = 0",
+      "answer": "Real and unequal",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.13 Q1(i); printed p. 119, PDF p. 125; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-13-q1-ii",
+      "exercise": "3.13",
+      "label": "Exercise 3.13 · Q1(ii)",
+      "question": "1. Determine the nature of the roots for the following quadratic equations\n(ii) x² − x − 1 = 0",
+      "answer": "Real and unequal",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.13 Q1(ii); printed p. 119, PDF p. 125; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-13-q1-iii",
+      "exercise": "3.13",
+      "label": "Exercise 3.13 · Q1(iii)",
+      "question": "1. Determine the nature of the roots for the following quadratic equations\n(iii) √2 t² − 3t + 3√2 = 0",
+      "answer": "Not real",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.13 Q1(iii); printed p. 119, PDF p. 125; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-13-q1-iv",
+      "exercise": "3.13",
+      "label": "Exercise 3.13 · Q1(iv)",
+      "question": "1. Determine the nature of the roots for the following quadratic equations\n(iv) 9y² − 6√2 y + 2 = 0",
+      "answer": "Real and equal",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.13 Q1(iv); printed p. 119, PDF p. 125; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-13-q1-v",
+      "exercise": "3.13",
+      "label": "Exercise 3.13 · Q1(v)",
+      "question": "1. Determine the nature of the roots for the following quadratic equations\n(v) 9a²b²x² − 24abcdx + 16c²d² = 0, a ≠ 0, b ≠ 0",
+      "answer": "Real and equal",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.13 Q1(v); printed p. 119, PDF p. 125; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-13-q2-i",
+      "exercise": "3.13",
+      "label": "Exercise 3.13 · Q2(i)",
+      "question": "2. Find the value(s) of ‘k’ for which the roots of the following equations are real and equal.\n(i) (5k − 6)x² + 2kx + 1 = 0",
+      "answer": "2, 3",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.13 Q2(i); printed p. 119, PDF p. 125; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-13-q2-ii",
+      "exercise": "3.13",
+      "label": "Exercise 3.13 · Q2(ii)",
+      "question": "2. Find the value(s) of ‘k’ for which the roots of the following equations are real and equal.\n(ii) kx² + (6k + 2)x + 16 = 0",
+      "answer": "1, 1/9",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.13 Q2(ii); printed p. 119, PDF p. 125; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-13-q3",
+      "exercise": "3.13",
+      "label": "Exercise 3.13 · Q3",
+      "question": "3. If the roots of (a − b)x² + (b − c)x + (c − a) = 0 are real and equal, then prove that b, a, c are in arithmetic progression.",
+      "answer": "Hence proved: b, a, c are in arithmetic progression.",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.13 Q3; printed p. 119, PDF p. 125; source image checked (proof question; no Appendix entry).",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-13-q4",
+      "exercise": "3.13",
+      "label": "Exercise 3.13 · Q4",
+      "question": "4. If a, b are real then show that the roots of the equation (a − b)x² − 6(a + b)x − 9(a − b) = 0 are real and unequal.",
+      "answer": "Hence proved: the roots are real and unequal.",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.13 Q4; printed p. 119, PDF p. 125; source image checked (proof question; no Appendix entry).",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-13-q5",
+      "exercise": "3.13",
+      "label": "Exercise 3.13 · Q5",
+      "question": "5. If the roots of the equation (c² − ab)x² − 2(a² − bc)x + b² − ac = 0 are real and equal prove that either a = 0 (or) a³ + b³ + c³ = 3abc",
+      "answer": "Hence proved: either a = 0 or a³ + b³ + c³ = 3abc.",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.13 Q5; printed p. 119, PDF p. 125; source image checked (proof question; no Appendix entry).",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q1-i",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q1(i)",
+      "question": "1. Write each of the following expression in terms of α + β and αβ.\n(i) α/(3β) + β/(3α)",
+      "answer": "((α + β)² − 2αβ)/(3αβ)",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q1(i); printed p. 122, PDF p. 128; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q1-ii",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q1(ii)",
+      "question": "1. Write each of the following expression in terms of α + β and αβ.\n(ii) 1/(α²β) + 1/(β²α)",
+      "answer": "(α + β)/(αβ)²",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q1(ii); printed p. 122, PDF p. 128; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q1-iii",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q1(iii)",
+      "question": "1. Write each of the following expression in terms of α + β and αβ.\n(iii) (3α − 1)(3β − 1)",
+      "answer": "9αβ − 3(α + β) + 1",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q1(iii); printed p. 122, PDF p. 128; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q1-iv",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q1(iv)",
+      "question": "1. Write each of the following expression in terms of α + β and αβ.\n(iv) (α + 3)/β + (β + 3)/α",
+      "answer": "((α + β)² − 2αβ + 3(α + β))/(αβ)",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q1(iv); printed p. 122, PDF p. 128; Answer Appendix printed p. 339, PDF p. 345; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q2-i",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q2(i)",
+      "question": "2. The roots of the equation 2x² − 7x + 5 = 0 are α and β. Without solving for the roots, find\n(i) 1/α + 1/β",
+      "answer": "7/5",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q2(i); printed p. 122, PDF p. 128; Answer Appendix printed p. 339, PDF p. 345; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q2-ii",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q2(ii)",
+      "question": "2. The roots of the equation 2x² − 7x + 5 = 0 are α and β. Without solving for the roots, find\n(ii) α/β + β/α",
+      "answer": "29/10",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q2(ii); printed p. 122, PDF p. 128; Answer Appendix printed p. 339, PDF p. 345; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q2-iii",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q2(iii)",
+      "question": "2. The roots of the equation 2x² − 7x + 5 = 0 are α and β. Without solving for the roots, find\n(iii) (α + 2)/(β + 2) + (β + 2)/(α + 2)",
+      "answer": "13/6",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q2(iii); printed p. 122, PDF p. 128; Answer Appendix printed p. 339, PDF p. 345; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q3-i",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q3(i)",
+      "question": "3. The roots of the equation x² + 6x − 4 = 0 are α, β. Find the quadratic equation whose roots are\n(i) α² and β²",
+      "answer": "x² − 44x + 16 = 0",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q3(i); printed p. 122, PDF p. 128; Answer Appendix printed p. 339, PDF p. 345; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q3-ii",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q3(ii)",
+      "question": "3. The roots of the equation x² + 6x − 4 = 0 are α, β. Find the quadratic equation whose roots are\n(ii) 2/α and 2/β",
+      "answer": "x² − 3x − 1 = 0",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q3(ii); printed p. 122, PDF p. 128; Answer Appendix printed p. 339, PDF p. 345; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q3-iii",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q3(iii)",
+      "question": "3. The roots of the equation x² + 6x − 4 = 0 are α, β. Find the quadratic equation whose roots are\n(iii) α²β and β²α",
+      "answer": "x² − 24x − 64 = 0",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q3(iii); printed p. 122, PDF p. 128; Answer Appendix printed p. 339, PDF p. 345; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q4",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q4",
+      "question": "4. If α, β are the roots of 7x² + ax + 2 = 0 and if β − α = −13/7. Find the values of a.",
+      "answer": "−15, 15",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q4; printed p. 122, PDF p. 128; Answer Appendix printed p. 339, PDF p. 345; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q5",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q5",
+      "question": "5. If one root of the equation 2y² − ay + 64 = 0 is twice the other then find the values of a.",
+      "answer": "−24, 24",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q5; printed p. 122, PDF p. 128; Answer Appendix printed p. 339, PDF p. 345; source image checked.",
+      "state": "new source-image-checked student record"
+    },
+    {
+      "id": "c10-3-ex3-14-q6",
+      "exercise": "3.14",
+      "label": "Exercise 3.14 · Q6",
+      "question": "6. If one root of the equation 3x² + kx + 81 = 0 (having real roots) is the square of the other then find k.",
+      "answer": "−36",
+      "figureSrc": null,
+      "sourceReference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.14 Q6; printed p. 122, PDF p. 128; Answer Appendix printed p. 339, PDF p. 345; source image checked.",
+      "state": "new source-image-checked student record"
+    }
+  ]
+}
