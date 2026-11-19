@@ -4,6 +4,7 @@
   'use strict';
   const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const typeset=s=>window.TriggleNotation?.render(s)||e(s);
+  const displayMath=value=>window.TriggleNotation?.renderLatex?.(value.latex,{displayMode:true,fallback:value.fallback})||e(value.fallback);
   const texts={
     en:{
       eyebrow:'YOUR CHAPTER',choose:'Choose a section',
@@ -99,7 +100,7 @@
         'ஒவ்வொன்றாகக் கூட்டாமல், முதல் உறுப்பையும் கடைசி உறுப்பையும் இணைத்துப் பாருங்கள்.',
         'முதல் உறுப்பும் கடைசி உறுப்பும்: 1 + 5 = 6.',
         'அடுத்த இரு முனை உறுப்புகளும்: 2 + 4 = 6. இரண்டு ஜோடிகளும் சமம்!',
-        'நடுவில் 3 மீதமுள்ளது. 6 + 6 + 3 = 15. தொகையை முன்னும் பின்னும் எழுதிக் கூட்டினால் இருமுறை எண்ணுகிறோம். அதனால்தான் சூத்திரத்தில் 2-ஆல் வகுக்கிறோம்.'
+        'நடு உறுப்பு 3. ஆகவே கூடுதல் 15. வரிசையைத் திருப்பி எழுதி அசல் வரிசையுடன் கூட்டினால், நடுச் சோடியின் கூடுதலும் 6. இரு வரிகளால் கூடுதலை இருமுறை எண்ணுகிறோம். விதியில் n உறுப்புகளின் எண்ணிக்கை, a முதல் உறுப்பு, ℓ கடைசி உறுப்பு.'
       ],
       previous:'முந்தைய படி',next:'அடுத்த படி',replay:'மீண்டும் பார்',step:'படி',
       of:'இல்',formula:'சூத்திரம்'
@@ -110,7 +111,7 @@
         'Instead of adding one by one, pair the terms at opposite ends.',
         'The first and last terms make one pair: 1 + 5 = 6.',
         'The next pair is 2 + 4 = 6. Both pairs have the same sum!',
-        'The middle term is 3. So 6 + 6 + 3 = 15. Writing the sum forwards and backwards counts it twice. That is why the formula divides by 2.'
+        'The middle term is 3, so the sum is 15. Add a reversed copy and even the middle pair gives 6. The two rows count the sum twice. In the rule, n counts terms, a is first and ℓ is last.'
       ],
       previous:'Previous step',next:'Next step',replay:'Replay',step:'Step',
       of:'of',formula:'Formula'
@@ -146,7 +147,7 @@
     controls.append(previous,progress,next);
     host.append(title,list,explanation,controls);
     const equations=['1+2+3+4+5','1+5=6','2+4=6','6+6+3=15'];
-    const formula='S_5=\\frac{5}{2}(1+5)=15';
+    const formula=String.raw`\begin{aligned}S_n&=\frac n2(a+\ell)\\S_5&=\frac52(1+5)=15\end{aligned}`;
     const showMath=(element,latex,fallback)=>{
       element.innerHTML=typeof window.TriggleNotation?.renderLatex==='function'?
         window.TriggleNotation.renderLatex(latex,{displayMode:true,fallback}):e(fallback);
@@ -165,7 +166,7 @@
       });
       showMath(math,equations[step],equations[step]);
       extra.hidden=step!==3;
-      if(step===3)showMath(extra,formula,'S₅ = 5/2 × (1 + 5) = 15');
+      if(step===3)showMath(extra,formula,'Sₙ = n/2 × (a + ℓ). S₅ = 5/2 × (1 + 5) = 15.');
       note.textContent=copy.notes[step];
       progress.textContent=copy.step+' '+(step+1)+' '+copy.of+' 4';
       previous.disabled=step===0;
@@ -281,11 +282,18 @@
     if(stage.id==='g10-ch2-gp'){showGPMultiplication(host,lang,v.values);return;}
     if(stage.id==='g10-ch2-ap-sum'){showAPSumPairing(host,lang);return;}
     if(stage.id==='g10-ch2-gp-sum'&&window.TriggleGPSumLab){window.TriggleGPSumLab.mount(host,lang);return;}
-    const ta=lang==='ta',caption=ta?'நீங்களே மாற்றிப் பாருங்கள்':'Change the value and observe';
+    const ta=lang==='ta';
+    const captions={
+      groups:ta?'மொத்தப் பொருள்கள்':'Total objects',
+      cycle:stage.id==='g10-ch2-modulo'?(ta?'செவ்வாயிலிருந்து கடந்த நாட்கள்':'Days after Tuesday'):(ta?'5-ஆல் வகுக்கும் எண்':'Number to divide by 5'),
+      sequence:ta?'உறுப்பின் இடம்':'Term position',
+      factors:ta?'பகா காரணிகளை ஒப்பிடுங்கள்':'Compare the prime factors'
+    };
+    const caption=captions[v.kind]||(ta?'நீங்களே மாற்றிப் பாருங்கள்':'Change the value and observe');
     host.className='g10ch2-visual';host.setAttribute('role','group');host.setAttribute('aria-label',caption);
     const title=document.createElement('p');title.className='g10ch2-visual-title';title.textContent=caption;
     const scene=document.createElement('div');scene.className='g10ch2-scene';
-    const feedback=document.createElement('p');feedback.className='g10ch2-visual-feedback';feedback.setAttribute('aria-live','polite');
+    const feedback=document.createElement('p');feedback.className='g10ch2-visual-feedback';feedback.setAttribute('role','status');
     host.append(title,scene,feedback);
     const chip=(value,selected=false)=>{
       const node=document.createElement('span');node.className='g10ch2-chip'+(selected?' is-selected':'');
@@ -297,7 +305,7 @@
       input.addEventListener('input',()=>update(Number(input.value)));host.insertBefore(input,feedback);update(first);
     };
     if(v.kind==='groups'){
-      control(10,30,17,n=>{
+      control(10,35,v.total,n=>{
         scene.replaceChildren();
         const q=Math.floor(n/v.size),r=n%v.size;
         for(let i=0;i<q;i++){
@@ -315,14 +323,15 @@
         feedback.textContent=(ta?'உறுப்பு ':'Term ')+n+' = '+v.values[n-1];
       });
     }else if(v.kind==='cycle'){
+      const values=Array.isArray(v.values)?v.values:v.values[lang];
       control(0,45,Number.isInteger(v.initial)?v.initial:(stage.id==='g10-ch2-modulo'?45:stage.id==='g10-ch2-congruence'?14:3),n=>{
         scene.replaceChildren();const mark=n%v.size;
-        v.values.forEach((value,i)=>scene.append(chip(value,i===mark)));
+        values.forEach((value,i)=>scene.append(chip(value,i===mark)));
         const division=n+' = '+v.size+' × '+Math.floor(n/v.size)+' + '+mark;
         if(stage.id==='g10-ch2-congruence'){
           feedback.textContent=division+'; '+n+' ≡ '+mark+' (mod '+v.size+')';
         }else{
-          feedback.textContent=division+'; '+(ta?'நாள் '+n+' கழித்து: ':'After '+n+' days: ')+v.values[mark];
+          feedback.textContent=division+'. '+(ta?n+' நாட்களுக்குப் பிறகு: ':'After '+n+' days: ')+values[mark];
         }
       });
     }else if(v.kind==='sequence'){
@@ -333,11 +342,23 @@
           term.setAttribute('aria-label',(ta?'உறுப்பு ':'Term ')+(i+1)+': '+value);
           scene.append(term);
         });
-        feedback.textContent=(ta?'உறுப்பு ':'Term ')+n+' = '+v.values[n-1];
+        const current=v.values[n-1],previous=v.values[n-2];
+        let explanation=(ta?'உறுப்பு ':'Term ')+n+' = '+current;
+        if(stage.id==='g10-ch2-recursive'){
+          explanation+=n<=2?(ta?'. இது ஒரு தொடக்க உறுப்பு.':'. This is a starting term.'):
+            '. '+v.values[n-3]+' + '+previous+' = '+current;
+        }else if(stage.id==='g10-ch2-ap'&&n>1){
+          explanation+='. '+current+' − '+previous+' = '+(current-previous);
+        }else if(stage.id==='g10-ch2-ap-nth'){
+          const jumps=n-1,first=v.values[0],difference=v.values[1]-first;
+          explanation+=ta?'. படிகளின் எண்ணிக்கை: '+jumps:'. Jumps from the first term: '+jumps;
+          explanation+='. '+first+' + '+jumps+' × '+difference+' = '+current;
+        }
+        feedback.textContent=explanation;
       });
     }else if(v.kind==='factors'){
       scene.append(chip('12 = 2 × 2 × 3'),chip('18 = 2 × 3 × 3'));
-      feedback.textContent=ta?'மீ.பொ.வ = 6; மீ.சி.ம = 36':'HCF = 6; LCM = 36';
+      feedback.textContent=ta?'மீ.பொ.வ-க்கு இரு எண்களிலும் உள்ள காரணிகளை எடுங்கள். மீ.பொ.ம-க்கு ஒவ்வோர் எண்ணையும் உருவாக்கப் போதுமான காரணிகளை எடுங்கள்.':'The HCF uses the factors shared by both numbers. The LCM uses enough of each factor to make either number.';
     }else if(v.kind==='bars'){
       scene.append(chip('+32'),chip('+32'),chip('−60'),chip('= 4',true));
       feedback.textContent=ta?'64 − 60 = 4; முதலில் பொருள் புரியட்டும்':'64 − 60 = 4. Understand this before reversing the algorithm.';
@@ -398,7 +419,6 @@
 
   function mountStageJourney(container,stages,lang,initialConcept,onConcept,onQuestion=null,chapterQuestions=[],hasTopNext=false){
     const ta=lang==='ta',pick=value=>typeof value==='string'?value:(value?.[lang]||value?.en||'');
-    const displayMath=value=>window.TriggleNotation?.renderLatex?.(value.latex,{displayMode:true,fallback:value.fallback})||e(value.fallback);
     const back=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
     const nextLabel=ta?'அடுத்த கருத்து':'Next idea';
     const prevLabel=ta?'முந்தைய கருத்து':'Previous idea';
@@ -673,22 +693,27 @@
         stages.forEach((stage,index)=>{
           const article=document.createElement('article');article.className='hub-quiz-question';
           const h=document.createElement('h4');h.innerHTML=e((index+1)+'. ')+chapterTypeset(text(stage.question));article.append(h);
+          if(stage.questionMath)h.insertAdjacentHTML('afterend',displayMath(stage.questionMath));
           const answers=document.createElement('div');answers.className='hub-quiz-answers';answers.setAttribute('role','group');
           answers.setAttribute('aria-label',text(stage.question));
           const feedback=document.createElement('p');feedback.setAttribute('aria-live','polite');feedback.className='hub-quiz-feedback';
+          const worked=document.createElement('div');worked.hidden=Boolean(stage.explainAfterAttempt);
+          worked.innerHTML='<p>'+chapterTypeset(text(stage.why))+'</p>'+(stage.whyMath?displayMath(stage.whyMath):'');
           let wrongAttempts=0;
           stage.choices.forEach((choice,i)=>{
             const button=document.createElement('button');button.type='button';button.innerHTML=chapterTypeset(text(choice));if(grade===9)button.setAttribute('aria-label',text(choice));
             button.addEventListener('click',()=>{
               answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+              worked.hidden=false;
               const right=i===stage.correct;
               if(right){feedback.textContent=t.correct;correct.add(stage.id);update();}
-              else{wrongAttempts++;const clue=wrongAttempts===2?' '+text(stage.hint):wrongAttempts>=3?' '+text(stage.why):'';feedback.innerHTML=e(t.incorrect)+(clue?' '+chapterTypeset(clue.trim()):'');}
+              else{wrongAttempts++;const clue=stage.incorrectFeedback?.[i]?text(stage.incorrectFeedback[i]):wrongAttempts===2?text(stage.hint):wrongAttempts>=3?text(stage.why):'';feedback.innerHTML=e(t.incorrect)+(clue?' '+chapterTypeset(clue):'');}
             });
             answers.append(button);
           });
           const details=document.createElement('details');details.className='hub-quiz-help';
-          details.innerHTML='<summary>'+e(t.hint)+'</summary><p>'+chapterTypeset(text(stage.hint))+'</p><p>'+chapterTypeset(text(stage.why))+'</p>';
+          details.innerHTML='<summary>'+e(t.hint)+'</summary><p>'+chapterTypeset(text(stage.hint))+'</p>';
+          details.append(worked);
           article.append(answers,details,feedback);panel.append(article);
         });
         update();

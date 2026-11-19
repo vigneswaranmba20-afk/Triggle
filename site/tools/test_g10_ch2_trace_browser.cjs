@@ -4,6 +4,67 @@
 const assert=require('node:assert/strict'),{chromium}=require('playwright'),{server,launchOptions}=require('./dashboard_test_support.cjs');
 
 const texSource=locator=>locator.locator('annotation[encoding="application/x-tex"]').textContent();
+
+async function verifyConceptChecks(page,width,language){
+ const nav=page.locator('.sp2-nav-button');
+ const answerPositions=[2,0,0,1,2,0,2,1,0,0,1,1,1,1,2];
+ for(const [i,correct] of answerPositions.entries()){
+  await nav.nth(i).click();
+  const panel=page.locator('.sp2-panel');
+  const answers=panel.locator('[data-answers] button');
+  const why=panel.locator('[data-why]'),response=panel.locator('[data-why-response]');
+  const feedback=panel.locator('[data-feedback]');
+  const label='Concept '+(i+1)+', '+language+', '+width+'px';
+  assert(await why.isDisabled(),label+' waits for an attempt');
+  await panel.locator('[data-hint]').click();
+  assert(await why.isDisabled(),label+' still waits after a hint');
+  const clues=[];
+  for(let j=0;j<3;j++){
+   if(j===correct)continue;
+   await answers.nth(j).press('Enter');
+   assert.equal(await answers.nth(j).getAttribute('aria-pressed'),'true',label+' keeps selection');
+   assert(await response.isHidden(),label+' gives feedback before working');
+   clues.push(await feedback.innerText());
+  }
+  assert.notEqual(clues[0],clues[1],label+' addresses the two misconceptions separately');
+  await answers.nth(correct).press('Enter');
+  assert.match(await feedback.innerText(),language==='ta'?/சரி!/:/Correct!/,label+' grades the intended answer');
+  await why.press('Enter');
+  assert(await response.isVisible(),label+' explains the answer after an attempt');
+  const layout=await panel.evaluate(async panel=>{
+   await document.fonts.ready;
+   const visible=node=>node.getClientRects().length>0;
+   const targets=[...panel.querySelectorAll('button,input[type=range],summary')].filter(visible);
+   const formulas=[...panel.querySelectorAll('.triggle-tex-display')].filter(visible);
+   return {pageWidth:document.documentElement.scrollWidth,language:document.documentElement.lang,
+    smallTargets:targets.filter(node=>node.offsetWidth<44||node.offsetHeight<44).map(node=>node.textContent),
+    wideFormulas:formulas.filter(node=>node.scrollWidth>node.clientWidth+1).map(node=>node.dataset.mathFallback),
+    mathErrors:panel.querySelectorAll('[data-math-error]').length};
+  });
+  assert(layout.pageWidth<=width+1,label+' has no page overflow');
+  assert.equal(layout.language,language,label+' has the correct document language');
+  assert.deepEqual(layout.smallTargets,[],label+' has 44px touch targets');
+  assert.deepEqual(layout.wideFormulas,[],label+' has no equation overflow');
+  assert.equal(layout.mathErrors,0,label+' renders all authored TeX, including worked feedback');
+  await page.locator('[data-back-index]').click();
+ }
+}
+
+async function verifyQuizSection(page,base,language){
+ await page.goto(base+'/index.html?class=10&chapter=g10-ch2&section=quizzes');
+ const questions=page.locator('.hub-quiz-question');
+ assert.equal(await questions.count(),15);
+ const sequence=questions.nth(6);
+ assert.equal(await texSource(sequence.locator(':scope > .triggle-tex-display')),'a_n=2n+1');
+ const help=sequence.locator('details');
+ await help.locator('summary').press('Enter');
+ assert(await help.locator('.triggle-tex-display').isHidden());
+ await sequence.locator('.hub-quiz-answers button').first().press('Enter');
+ assert.match(await sequence.locator('.hub-quiz-feedback').innerText(),language==='ta'?/6 என்பது இடம்/:/Six is the position/);
+ assert(await help.locator('.triggle-tex-display').isVisible());
+ assert.equal(await texSource(help),'a_6=2\\times6+1=13');
+}
+
 async function assertSpecialMathFits(page,width,language){
  await page.evaluate(async()=>{await document.fonts.ready;});
  const layout=await page.locator('.sp2-panel').evaluate(panel=>({
@@ -31,6 +92,11 @@ async function verifySpecialSeries(page,language,width){
  const formula=demo.locator('.g10ch2-discovery-math');
  const answers=page.locator('.sp2-answers button');
  const response=page.locator('[data-why-response]'),why=page.locator('[data-why]'),feedback=page.locator('[data-feedback]');
+ const firstMode=await modes.first().boundingBox();
+ assert(firstMode.y+firstMode.height<=704,'The Special Series mode control fits in the first 704px at '+width+'px ('+language+')');
+ const prerequisite=lesson.locator('.g10ch2-special-prerequisite');
+ assert(await prerequisite.evaluate(link=>getComputedStyle(link).textDecorationLine.includes('underline')),
+  'The in-text prerequisite link looks actionable');
  assert.deepEqual(await modes.allTextContents(),ta?['இயல் எண்கள்','வர்க்கங்கள்','கனங்கள்']:['Natural numbers','Squares','Cubes']);
  assert.equal(await modes.nth(1).getAttribute('aria-pressed'),'true','Squares demonstration starts selected');
  assert.equal(await slider.inputValue(),'4');
@@ -78,6 +144,13 @@ async function verifySpecialSeries(page,language,width){
  assert(await why.isDisabled());
  assert.equal(await response.textContent(),'','Moving demonstration controls cannot populate the answer');
 
+ const odd=lesson.locator('.g10ch2-special-odd');
+ assert(await odd.locator('.katex').isHidden(),'Odd-number derivation is optional');
+ await odd.locator('summary').press('Enter');
+ assert.match(await texSource(odd),/S_4&=1\+3\+5\+7=16/);
+ await assertSpecialMathFits(page,width,language);
+ await odd.locator('summary').press('Enter');
+
  const diagram=lesson.getByRole('img',{name:ta?/முக்கோணத்தின் மூன்று/:/Three rotations/});
  assert(await diagram.isVisible());
  assert.equal(await diagram.locator('rect').count(),24,'Six cells in each of four groups');
@@ -97,7 +170,10 @@ async function verifySpecialSeries(page,language,width){
  assert(await identities.first().isVisible(),'Keyboard opens the cube derivation');
  assert((await texSource(identities.nth(2))).includes('T_k^2-T_{k-1}^2'));
  assert((await texSource(identities.last())).includes('T_3^2-T_0^2'));
- assert((await texSource(lesson.locator('.g10ch2-special-section').last())).includes('385-30=355'));
+ const range=lesson.locator('.g10ch2-special-section').last().locator('.g10ch2-special-math');
+ assert((await texSource(range.first())).includes('S_n-S_{m-1}'),'Shifted ranges use the preceding endpoint');
+ assert((await texSource(range.last())).includes('385-30=355'));
+ assert.match(await lesson.locator('.sp2-stage-reference').innerText(),ta?/பாடநூல் பகுதி 2\.11/:/Textbook section 2\.11/);
  await assertSpecialMathFits(page,width,language);
  await summary.press('Enter');
  assert(await identities.first().isHidden());
@@ -125,7 +201,7 @@ async function verifySpecialOffline(browser,base){
  const context=await browser.newContext({viewport:{width:320,height:852},isMobile:true,hasTouch:true});
  try{
   const page=await context.newPage();
-  const oldCache='triggle-g9-math-first-student-lab-hcf-gp-20261118-g9-lesson-read-g9ex32';
+  const oldCache='triggle-g9-math-first-student-lab-hcf-gp-20261118-g9-lesson-read-special-series-g9ex32';
   await page.goto(base+'/grades.html');
   await page.evaluate(async cacheName=>{
    const cache=await caches.open(cacheName);
@@ -143,6 +219,10 @@ async function verifySpecialOffline(browser,base){
   await demo.getByRole('button',{name:'கனங்கள்'}).click();
   assert.match(await demo.getByRole('status').textContent(),/100$/);
   assert.equal(await page.locator('[data-math-error]').count(),0,'KaTeX and Tamil lesson run from offline assets');
+  await page.locator('.g10ch2-special-prerequisite').click();
+  assert.equal(new URL(page.url()).searchParams.get('concept'),'10');
+  await page.locator('.g10ch2-pairing').waitFor({state:'visible'});
+  assert.equal(await page.locator('html').getAttribute('lang'),'ta','Prerequisite opens offline in the student’s language');
  }finally{await context.close();}
 }
 
@@ -168,6 +248,7 @@ async function main(){
     assert.equal(await page.locator('[data-g10ch2-visual] input[type=range]').count(),1);
     assert.equal(await page.locator('[data-math-error]').count(),0,'KaTeX does not silently fail');
     const group=page.locator('[data-g10ch2-visual] input[type=range]');
+    assert.equal(await group.inputValue(),'34','Division opens on the taught example');
     await group.fill('23');
     const message=await page.locator('.g10ch2-visual-feedback').innerText();
     assert(message.includes('23 = 5 × 4 + 3'),'Remainder manipulative validates actual division: '+message);
@@ -236,10 +317,13 @@ async function main(){
     const clock=page.locator('[data-g10ch2-visual] input[type=range]');
     assert.equal(await clock.inputValue(),'45','Clock starts at its 45-day example');
     assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('45 = 7 × 6 + 3'),'Clock makes the full-cycle division visible');
+    assert.equal(await page.locator('.g10ch2-chip.is-selected').innerText(),language==='ta'?'வெள்ளி':'Friday');
+    await clock.press('Home');
+    assert.equal(await page.locator('.g10ch2-chip.is-selected').innerText(),language==='ta'?'செவ்வாய்':'Tuesday');
     await page.locator('[data-back-index]').click();
     await page.locator('.sp2-nav-button').nth(5).click();
     const congruence=page.locator('[data-g10ch2-visual] input[type=range]');
-    assert.equal(await congruence.inputValue(),'14','Congruence starts at its quiz example');
+    assert.equal(await congruence.inputValue(),'14','Congruence starts at the teaching example');
     assert((await page.locator('.g10ch2-visual-feedback').innerText()).includes('14 ≡ 4 (mod 5)'),'Congruence joins the remainder to its residue');
     await page.locator('[data-back-index]').click();
     await page.locator('.sp2-nav-button').nth(6).click();
@@ -284,11 +368,17 @@ async function main(){
     await page.locator('.g10ch2-discovery-range-row input').fill('6');
     assert((await page.locator('.g10ch2-discovery-note').innerText()).includes('0.65625'),'Negative-ratio partial sum');
     assert(await page.locator('.g10ch2-discovery-track').isHidden(),'No deceptive progress bar for oscillation');
+    await ratios.nth(2).click();
+    assert.match(await texSource(page.locator('.g10ch2-discovery-math').first()),/\\approx/,'A rounded partial sum uses approximate equality');
+    assert.match(await texSource(page.locator('.g10ch2-discovery-math').last()),/S_\{\\infty\}/,'An exact limit rule is available before the check');
     assert.equal(await page.locator('[data-math-error]').count(),0);
     await page.locator('[data-back-index]').click();
     await page.locator('.sp2-nav-button').nth(14).click();
     assert.equal(new URL(page.url()).searchParams.get('concept'),'14','Concept 15 retains its direct URL');
     await verifySpecialSeries(page,language,width);
+    await page.goto(url);
+    await verifyConceptChecks(page,width,language);
+    if(width===320)await verifyQuizSection(page,app.base,language);
    }
    assert.deepEqual(errors,[],'No uncaught JavaScript exceptions at '+width);
    await context.close();

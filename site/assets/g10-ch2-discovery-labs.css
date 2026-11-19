@@ -16,6 +16,7 @@
 .g10ch2-discovery-progress{font:600 12px/1.4 system-ui,sans-serif;color:#596576;white-space:nowrap}
 .g10ch2-discovery-label{font:650 13px/1.4 system-ui,sans-serif;color:#394356;margin:6px 0}
 .g10ch2-discovery-choices{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.g10ch2-discovery-choices button{min-width:44px}
 .g10ch2-discovery-choices button[aria-pressed=true]{background:#742B46;border-color:#742B46;color:#FFF}
 .g10ch2-discovery-range-row{display:flex;align-items:center;gap:10px;margin:10px 0 12px}
 .g10ch2-discovery-range-row label{font:600 13px/1.4 system-ui,sans-serif;flex:0 0 auto;color:#384458}
@@ -31,6 +32,8 @@
 .g10ch2-special-section + .g10ch2-special-section{padding-top:14px;border-top:1px solid #D9DEE7}
 .g10ch2-special-section .g10ch2-discovery-title{margin-bottom:8px}
 .g10ch2-special-section p,.g10ch2-special-diagram figcaption{margin:8px 0;color:#374357;font-size:14px;line-height:1.65}
+.g10ch2-special a.g10ch2-special-prerequisite{color:#473D91;text-decoration:underline;text-underline-offset:.15em}
+.g10ch2-special-prerequisite:focus-visible{outline:3px solid #8F6ED0;outline-offset:2px}
 .g10ch2-special-math{min-width:0;color:#253043}
 .g10ch2-special-math .triggle-tex-display{margin:.15em 0}
 .g10ch2-special .g10ch2-discovery-chip .triggle-tex{padding:0}
@@ -45,6 +48,6 @@
 .g10ch2-special-diagram text{
   fill:#253043;font:700 13px system-ui,sans-serif;text-anchor:middle;dominant-baseline:central
 }
-.g10ch2-special-proof{margin-top:8px;padding:0 8px;border:1px solid #D9DEE7;border-radius:10px;background:#FCFCFD}
-.g10ch2-special-proof summary{min-height:44px;padding:10px 2px;box-sizing:border-box;color:#253043;font-weight:700;cursor:pointer}
-.g10ch2-special-proof summary:focus-visible{outline:3px solid #8F6ED0;outline-offset:2px}
+.g10ch2-special :is(.g10ch2-special-proof,.g10ch2-special-odd){margin-top:8px;padding:0 8px;border:1px solid #D9DEE7;border-radius:10px;background:#FCFCFD}
+.g10ch2-special summary{min-height:44px;padding:10px 2px;box-sizing:border-box;color:#253043;font-weight:700;cursor:pointer}
+.g10ch2-special summary:focus-visible{outline:3px solid #8F6ED0;outline-offset:2px}
