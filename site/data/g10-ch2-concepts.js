@@ -1100,8 +1100,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "சிறப்புத் தொடர்கள்: எண்கள், வர்க்கங்கள், கனங்கள்"
       },
       "idea": {
-        "en": "The natural numbers form an arithmetic progression (A.P.) with common difference 1. The A.P. sum is the number of terms times the average of the first and last terms. Here there are n terms, from 1 to n, so that average is (1 + n) ÷ 2.",
-        "ta": "இயல் எண்கள் 1 என்ற பொது வேறுபாடு கொண்ட கூட்டுத் தொடர்வரிசையாக (A.P.) அமைகின்றன. முதல் மற்றும் கடைசி உறுப்புகளின் சராசரியை உறுப்புகளின் எண்ணிக்கையால் பெருக்கினால் கூடுதல் கிடைக்கும். 1 முதல் n வரை n உறுப்புகள் உள்ளன. முதல், கடைசி உறுப்புகளின் சராசரி (1 + n) ÷ 2."
+        "en": "The first n natural numbers form an A.P. Their sum, Tₙ, is n times the average of the first and last terms, 1 and n.",
+        "ta": "முதல் n இயல் எண்கள் ஒரு கூட்டுத்தொடர் வரிசை. முதல் உறுப்பு 1, கடைசி உறுப்பு n. அவற்றின் சராசரியை n-ஆல் பெருக்கினால் கூடுதல் Tₙ கிடைக்கும்."
       },
       "example": {
         "en": "An exponent tells you how many copies of a number to multiply. For squares, use two copies of each number. For cubes, use three. Then add the results.",
@@ -1112,7 +1112,7 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "Tₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2"
       },
       "math": {
-        "latex": "\\begin{aligned}T_n&=\\sum_{k=1}^{n}k=1+2+\\cdots+n\\\\&=\\frac{n(n+1)}{2}\\end{aligned}",
+        "latex": "\\begin{aligned}T_n&=1+2+\\cdots+n\\\\&=\\frac{n(n+1)}{2}\\end{aligned}",
         "fallback": "Tₙ = 1 + 2 + ⋯ + n = [n × (n + 1)] ÷ 2"
       },
       "lesson": {
@@ -1122,11 +1122,19 @@ window.TRIGGLE_G10_CH2_PATH={
         },
         "bridgeLink": {
           "en": "Review how an A.P. sum pairs its terms",
-          "ta": "கூட்டுத்தொடர் வரிசையின் உறுப்புகளை இணைத்துக் கூட்டும் முறையைப் பார்க்கவும்"
+          "ta": "கூட்டுத்தொடர் கூடுதல் முறையை மீள்பார்க்கவும்"
+        },
+        "notationTitle": {
+          "en": "Read the symbols",
+          "ta": "குறியீடுகளின் பொருள்"
         },
         "notation": {
           "en": "The term count n is a positive whole number. Sₙ means the sum of the first n terms, and Tₙ is specifically the sum of the natural numbers from 1 to n. The symbol ∑ means “add” as k runs through the positions from 1 to n.",
-          "ta": "உறுப்புகளின் எண்ணிக்கை n ஒரு நேர்ம முழு எண். Sₙ என்பது முதல் n உறுப்புகளின் கூடுதல். Tₙ என்பது குறிப்பாக 1 முதல் n வரையிலான இயல் எண்களின் கூடுதல். ∑ என்பது k, 1 முதல் n வரையிலான இடங்களை எடுக்கும்போது கூட்டுவதைக் குறிக்கிறது."
+          "ta": "உறுப்புகளின் எண்ணிக்கை n ஒரு நேர்ம முழு எண். Sₙ என்பது முதல் n உறுப்புகளின் கூடுதல். Tₙ என்பது குறிப்பாக 1 முதல் n வரையிலான இயல் எண்களின் கூடுதல். k என்பது 1 முதல் n வரையிலான இடங்களைக் குறிக்கும். ∑ என்பது அந்த உறுப்புகளையெல்லாம் கூட்ட வேண்டும் என்பதைக் குறிக்கும்."
+        },
+        "sigmaMath": {
+          "latex": "\\sum_{k=1}^{n}k=1+2+\\cdots+n=T_n",
+          "fallback": "The sum of k from 1 through n is 1 + 2 + ⋯ + n, or Tₙ."
         },
         "powersMath": {
           "latex": "2^2=2\\times2,\\quad 2^3=2\\times2\\times2",

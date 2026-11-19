@@ -92,6 +92,8 @@ async function verifySpecialSeries(page,language,width){
  const formula=demo.locator('.g10ch2-discovery-math');
  const answers=page.locator('.sp2-answers button');
  const response=page.locator('[data-why-response]'),why=page.locator('[data-why]'),feedback=page.locator('[data-feedback]');
+ const firstMode=await modes.first().boundingBox();
+ assert(firstMode.y+firstMode.height<=704,'The Special Series mode control fits in the first 704px at '+width+'px ('+language+')');
  assert.deepEqual(await modes.allTextContents(),ta?['இயல் எண்கள்','வர்க்கங்கள்','கனங்கள்']:['Natural numbers','Squares','Cubes']);
  assert.equal(await modes.nth(1).getAttribute('aria-pressed'),'true','Squares demonstration starts selected');
  assert.equal(await slider.inputValue(),'4');
