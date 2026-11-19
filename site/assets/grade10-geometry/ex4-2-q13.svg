@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 246" role="img">
+  <title>Triangle PQR from a base, angle and altitude</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="246" rx="8" fill="#f8fafc"/>
+  <circle class="guide" cx="160.000" cy="121.000" r="101.000"/>
+<polyline class="guide" points="160.000,222.000 160.000,20.000"/>
+<polyline class="guide" points="72.531,171.500 160.000,121.000"/>
+<polyline class="guide" points="59.000,50.390 261.000,50.390"/>
+<polyline class="accent" points="87.784,50.390 87.784,171.500"/>
+<polyline class="mark" points="87.784,164.500 94.784,164.500 94.784,171.500"/>
+<polyline class="edge" points="72.531,171.500 247.469,171.500 87.784,50.390 72.531,171.500"/>
+<circle class="point" cx="72.531" cy="171.500" r="2.200"/><text x="58.531" y="189.500">Q</text>
+<circle class="point" cx="247.469" cy="171.500" r="2.200"/><text x="252.469" y="188.500">R</text>
+<circle class="point" cx="87.784" cy="50.390" r="2.200"/><text x="75.784" y="42.390">P</text>
+<circle class="point" cx="160.000" cy="121.000" r="2.200"/><text x="166.000" y="116.000">O</text>
+<circle class="point" cx="87.784" cy="171.500" r="2.200"/><text x="80.784" y="188.500">H</text>
+</svg>

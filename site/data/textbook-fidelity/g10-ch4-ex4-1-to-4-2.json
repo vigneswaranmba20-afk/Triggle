@@ -1,0 +1,1110 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 4,
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "appendix": {
+        "printed": 340,
+        "pdf": 346
+      }
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "appendix": {
+        "printed": 354,
+        "pdf": 360
+      }
+    }
+  },
+  "tamilEditorial": "pending",
+  "baselineCommit": "bd0d7e16f53d2bac827b24179dc83c42b9bdc1a0",
+  "items": [
+    {
+      "id": "c10-4-ex4-1-q1-i",
+      "exercise": "4.1",
+      "questionNumber": 1,
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "printed": 170,
+          "pdf": 176
+        },
+        "ta": {
+          "printed": 175,
+          "pdf": 181
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. In the given triangles, check which triangles are similar? Also find the value of x.\n(i)",
+        "ta": "1. கீழே கொடுக்கப்பட்டவற்றில் எந்த முக்கோணங்கள் வடிவொத்தவை என்பதைச் சோதிக்கவும் மேலும் x –யின் மதிப்பு காண்க.\n(i)"
+      },
+      "wasAvailableOnMain": true,
+      "figure": {
+        "inTextbooks": true,
+        "details": "E lies on AC and D lies on AB. AE = 2, EC = 3½, AD = 3 and DB = 5. No side is marked x in this panel."
+      },
+      "appendixAnswer": "Not similar"
+    },
+    {
+      "id": "c10-4-ex4-1-q1-ii",
+      "exercise": "4.1",
+      "questionNumber": 1,
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "printed": 170,
+          "pdf": 176
+        },
+        "ta": {
+          "printed": 175,
+          "pdf": 181
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. In the given triangles, check which triangles are similar? Also find the value of x.\n(ii)",
+        "ta": "1. கீழே கொடுக்கப்பட்டவற்றில் எந்த முக்கோணங்கள் வடிவொத்தவை என்பதைச் சோதிக்கவும் மேலும் x –யின் மதிப்பு காண்க.\n(ii)"
+      },
+      "wasAvailableOnMain": true,
+      "figure": {
+        "inTextbooks": true,
+        "details": "Q lies on BC and P lies on AC. AB = 5, BQ = QC = 3, ∠ABC = 70°, ∠BQP = 110° and PQ = x."
+      },
+      "appendixAnswer": "Similar, 2.5"
+    },
+    {
+      "id": "c10-4-ex4-1-q2",
+      "exercise": "4.1",
+      "questionNumber": 2,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 170,
+          "pdf": 176
+        },
+        "ta": {
+          "printed": 175,
+          "pdf": 181
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. A girl looks the reflection of the top of the lamp post on the mirror which is 6.6 m away from the foot of the lamppost. The girl whose height is 1.25 m is standing 2.5 m away from the mirror. Assuming the mirror is placed on the ground facing the sky and the girl, mirror and the lamppost are in a same line, find the height of the lamp post.",
+        "ta": "2. ஒரு பெண் விளக்கு கம்பத்தின் அடியிலிருந்து 6.6 மீ தொலைவிலுள்ள கண்ணாடியில் விளக்கு கம்ப உச்சியின் பிரதிபலிப்பைக் காண்கிறாள். 1.25 மீ உயரமுள்ள அப்பெண் கண்ணாடியிலிருந்து 2.5 மீ தொலைவில் நிற்கிறாள். கண்ணாடியானது வானத்தை நோக்கி வைக்கப்பட்டுள்ளது. அப்பெண், கண்ணாடி மற்றும் விளக்கு கம்பம் ஆகியவை எல்லாம் ஒரே நேர்க்கோட்டில் அமைவதாக எடுத்துக் கொண்டால், விளக்குக் கம்பத்தின் உயரத்தைக் காண்க."
+      },
+      "wasAvailableOnMain": true,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": "3.3 m"
+    },
+    {
+      "id": "c10-4-ex4-1-q3",
+      "exercise": "4.1",
+      "questionNumber": 3,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 170,
+          "pdf": 176
+        },
+        "ta": {
+          "printed": 175,
+          "pdf": 181
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. A vertical stick of length 6 m casts a shadow 400 cm long on the ground and at the same time a tower casts a shadow 28 m long. Using similarity, find the height of the tower.",
+        "ta": "3. 6 மீ உயரமுள்ள செங்குத்தாக நிற்கும் கம்பமானது தரையில் 400 செ.மீ நீளமுள்ள நிழலை ஏற்படுத்துகிறது. ஒரு கோபுரமானது 28 மீ நீளமுள்ள நிழலை ஏற்படுத்துகிறது. கம்பம் மற்றும் கோபுரம் ஒரே நேர்கோட்டில் அமைவதாகக் கருதி வடிவொத்த தன்மையைப் பயன்படுத்தி, கோபுரத்தின் உயரம் காண்க."
+      },
+      "wasAvailableOnMain": true,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": "42 m"
+    },
+    {
+      "id": "c10-4-ex4-1-q4",
+      "exercise": "4.1",
+      "questionNumber": 4,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 170,
+          "pdf": 176
+        },
+        "ta": {
+          "printed": 175,
+          "pdf": 181
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. Two triangles QPR and QSR, right angled at P and S respectively are drawn on the same base QR and on the same side of QR. If PR and SQ intersect at T, prove that PT × TR = ST × TQ.",
+        "ta": "4. QR ஐ அடிப்பக்கமாகக் கொண்ட இரு முக்கோணங்கள் QPR மற்றும் QSR –யின் புள்ளிகள் P மற்றும் S –யில் செங்கோணங்களாக அமைந்துள்ளன. இரு முக்கோணங்களும் QR-யின் ஒரே பக்கத்தில் அமைந்துள்ளன. PR மற்றும் SQ என்ற பக்கங்கள் T என்ற புள்ளியில் சந்திக்கின்றன எனில், PT × TR = ST × TQ என நிறுவுக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-1-q5",
+      "exercise": "4.1",
+      "questionNumber": 5,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 170,
+          "pdf": 176
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. In the adjacent figure, △ABC is right angled at C and DE ⟂ AB. Prove that △ABC ∼ △ADE and hence find the lengths of AE and DE.",
+        "ta": "5. கொடுக்கப்பட்ட படத்தில், C -ஐ செங்கோணமாகக் கொண்ட △ABC -யில் DE ⟂ AB எனில் △ABC ∼ △ADE என நிரூபிக்க. மேலும் AE மற்றும் DE ஆகியவற்றின் நீளங்களைக் காண்க."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "D is between A and C. AD = 3, DC = 2 and BC = 12. E lies on AB with DE perpendicular to AB."
+      },
+      "appendixAnswer": "15/13, 36/13"
+    },
+    {
+      "id": "c10-4-ex4-1-q6",
+      "exercise": "4.1",
+      "questionNumber": 6,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 170,
+          "pdf": 176
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. In the adjacent figure, △ACB ∼ △APQ. If BC = 8 cm, PQ = 4 cm, BA = 6.5 cm and AP = 2.8 cm, find CA and AQ.",
+        "ta": "6. கொடுக்கப்பட்ட படத்தில், △ACB ∼ △APQ. BC = 8 செ.மீ, PQ = 4 செ.மீ, BA = 6.5 செ.மீ மற்றும் AP = 2.8 செ.மீ எனில், CA மற்றும் AQ –யின் மதிப்பைக் காண்க."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "The triangles meet at A. B, A, Q lie on one line and C, A, P on another."
+      },
+      "appendixAnswer": "5.6 cm, 3.25 cm"
+    },
+    {
+      "id": "c10-4-ex4-1-q7-i",
+      "exercise": "4.1",
+      "questionNumber": 7,
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "printed": 171,
+          "pdf": 177
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. If figure OPRQ is a square and ∠MLN = 90°. Prove that\n(i) △LOP ∼ △QMO",
+        "ta": "7. கொடுக்கப்பட்ட படத்தில் OPRQ ஆனது சதுரம் மற்றும் ∠MLN = 90° எனில், கீழ்க்காண்பனவற்றை நிரூபிக்கவும்.\n(i) △LOP ∼ △QMO"
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "The square OPRQ sits inside triangle MLN. O lies on LM, P on LN, and M, Q, R, N are collinear."
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-1-q7-ii",
+      "exercise": "4.1",
+      "questionNumber": 7,
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "printed": 171,
+          "pdf": 177
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. If figure OPRQ is a square and ∠MLN = 90°. Prove that\n(ii) △LOP ∼ △RPN",
+        "ta": "7. கொடுக்கப்பட்ட படத்தில் OPRQ ஆனது சதுரம் மற்றும் ∠MLN = 90° எனில், கீழ்க்காண்பனவற்றை நிரூபிக்கவும்.\n(ii) △LOP ∼ △RPN"
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "The square OPRQ sits inside triangle MLN. O lies on LM, P on LN, and M, Q, R, N are collinear."
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-1-q7-iii",
+      "exercise": "4.1",
+      "questionNumber": 7,
+      "part": "iii",
+      "sourcePages": {
+        "en": {
+          "printed": 171,
+          "pdf": 177
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. If figure OPRQ is a square and ∠MLN = 90°. Prove that\n(iii) △QMO ∼ △RPN",
+        "ta": "7. கொடுக்கப்பட்ட படத்தில் OPRQ ஆனது சதுரம் மற்றும் ∠MLN = 90° எனில், கீழ்க்காண்பனவற்றை நிரூபிக்கவும்.\n(iii) △QMO ∼ △RPN"
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "The square OPRQ sits inside triangle MLN. O lies on LM, P on LN, and M, Q, R, N are collinear."
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-1-q7-iv",
+      "exercise": "4.1",
+      "questionNumber": 7,
+      "part": "iv",
+      "sourcePages": {
+        "en": {
+          "printed": 171,
+          "pdf": 177
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. If figure OPRQ is a square and ∠MLN = 90°. Prove that\n(iv) QR² = MQ × RN",
+        "ta": "7. கொடுக்கப்பட்ட படத்தில் OPRQ ஆனது சதுரம் மற்றும் ∠MLN = 90° எனில், கீழ்க்காண்பனவற்றை நிரூபிக்கவும்.\n(iv) QR² = MQ × RN"
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "The square OPRQ sits inside triangle MLN. The base segments on either side of the square are MQ and RN."
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-1-q8",
+      "exercise": "4.1",
+      "questionNumber": 8,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 171,
+          "pdf": 177
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "8. If △ABC ∼ △DEF such that area of △ABC is 9cm² and the area of △DEF is 16cm² and BC = 2.1 cm. Find the length of EF.",
+        "ta": "8. △ABC ∼ △DEF -ல், △ABC -யின் பரப்பு 9 செ.மீ², △DEF -யின் பரப்பு 16 செ.மீ² மற்றும் BC = 2.1 செ.மீ எனில், EF -யின் நீளம் காண்க."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": "2.8 cm"
+    },
+    {
+      "id": "c10-4-ex4-1-q9",
+      "exercise": "4.1",
+      "questionNumber": 9,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 171,
+          "pdf": 177
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "9. Two vertical poles of heights 6 m and 3 m are erected above a horizontal ground AC. Find the value of y.",
+        "ta": "9. 6 மீ மற்றும் 3 மீ உயரமுள்ள இரண்டு செங்குத்தான தூண்கள் AC என்ற தரையின் மேல் படத்தில் காட்டியுள்ளவாறு ஊன்றப்பட்டுள்ளது எனில், y -யின் மதிப்பு காண்க."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "AP = 6 m and CR = 3 m are vertical poles. PC and AR cross at Q. B is directly below Q on AC and QB = y."
+      },
+      "appendixAnswer": "2 m"
+    },
+    {
+      "id": "c10-4-ex4-1-q10",
+      "exercise": "4.1",
+      "questionNumber": 10,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 171,
+          "pdf": 177
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "10. Construct a triangle similar to a given triangle PQR with its sides equal to 2/3 of the corresponding sides of the triangle PQR (scale factor 2/3 < 1).",
+        "ta": "10. கொடுக்கப்பட்ட முக்கோணம் PQR –யின் ஒத்த பக்கங்களின் விகிதம் 2/3 என அமையுமாறு ஒரு வடிவொத்த முக்கோணம் வரைக. (அளவு காரணி 2/3 < 1)"
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-1-q11",
+      "exercise": "4.1",
+      "questionNumber": 11,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 171,
+          "pdf": 177
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "11. Construct a triangle similar to a given triangle LMN with its sides equal to 4/5 of the corresponding sides of the triangle LMN (scale factor 4/5 < 1).",
+        "ta": "11. கொடுக்கப்பட்ட முக்கோணம் LMN-ன் ஒத்த பக்கங்களின் விகிதம் 4/5 என அமையுமாறு ஒரு வடிவொத்த முக்கோணம் வரைக. (அளவு காரணி 4/5 < 1)"
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-1-q12",
+      "exercise": "4.1",
+      "questionNumber": 12,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 171,
+          "pdf": 177
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "12. Construct a triangle similar to a given triangle ABC with its sides equal to 6/5 of the corresponding sides of the triangle ABC (scale factor 6/5 > 1).",
+        "ta": "12. கொடுக்கப்பட்ட முக்கோணம் ABC -யின் ஒத்த பக்கங்களின் விகிதம் 6/5 என அமையுமாறு ஒரு வடிவொத்த முக்கோணம் வரைக. (அளவு காரணி 6/5 > 1)"
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-1-q13",
+      "exercise": "4.1",
+      "questionNumber": 13,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 171,
+          "pdf": 177
+        },
+        "ta": {
+          "printed": 176,
+          "pdf": 182
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "13. Construct a triangle similar to a given triangle PQR with its sides equal to 7/3 of the corresponding sides of the triangle PQR (scale factor 7/3 > 1).",
+        "ta": "13. கொடுக்கப்பட்ட முக்கோணம் PQR-ன் ஒத்த பக்கங்களின் விகிதம் 7/3 என்றவாறு ஒரு வடிவொத்த முக்கோணம் வரைக. (அளவு காரணி 7/3 > 1)"
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q1-i",
+      "exercise": "4.2",
+      "questionNumber": 1,
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "printed": 181,
+          "pdf": 187
+        },
+        "ta": {
+          "printed": 187,
+          "pdf": 193
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. In △ABC, D and E are points on the sides AB and AC respectively such that DE ∥ BC\n(i) If AD/DB = 3/4 and AC = 15 cm find AE.",
+        "ta": "1. △ABC யின் பக்கங்கள் AB மற்றும் AC -யின் மீதுள்ள புள்ளிகள் முறையே D மற்றும் E ஆனது DE ∥ BC என்றவாறு அமைந்துள்ளது.\n(i) AD/DB = 3/4 மற்றும் AC = 15 செ.மீ எனில் AE -யின் மதிப்பு காண்க."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": "6.43 cm"
+    },
+    {
+      "id": "c10-4-ex4-2-q1-ii",
+      "exercise": "4.2",
+      "questionNumber": 1,
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "printed": 181,
+          "pdf": 187
+        },
+        "ta": {
+          "printed": 187,
+          "pdf": 193
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. In △ABC, D and E are points on the sides AB and AC respectively such that DE ∥ BC\n(ii) If AD = 8x − 7, DB = 5x − 3, AE = 4x − 3 and EC = 3x − 1, find the value of x.",
+        "ta": "1. △ABC யின் பக்கங்கள் AB மற்றும் AC -யின் மீதுள்ள புள்ளிகள் முறையே D மற்றும் E ஆனது DE ∥ BC என்றவாறு அமைந்துள்ளது.\n(ii) AD = 8x − 7, DB = 5x − 3, AE = 4x − 3 மற்றும் EC = 3x − 1 எனில், x -ன் மதிப்பு காண்க."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": "1"
+    },
+    {
+      "id": "c10-4-ex4-2-q2",
+      "exercise": "4.2",
+      "questionNumber": 2,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. ABCD is a trapezium in which AB ∥ DC and P,Q are points on AD and BC respectively, such that PQ ∥ DC if PD = 18 cm, BQ = 35 cm and QC = 15 cm, find AD.",
+        "ta": "2. ABCD என்ற ஒரு சரிவகத்தில் AB ∥ DC மற்றும் P, Q என்பன முறையே பக்கங்கள் AD மற்றும் BC –யின் மீது அமைந்துள்ள புள்ளிகள் ஆகும். மேலும் PQ ∥ DC, PD = 18 செ.மீ, BQ = 35 செ.மீ மற்றும் QC = 15 செ.மீ எனில், AD காண்க."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": "60 cm"
+    },
+    {
+      "id": "c10-4-ex4-2-q3",
+      "exercise": "4.2",
+      "questionNumber": 3,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. In △ABC, D and E are points on the sides AB and AC respectively. Show that DE ∥ BC if AB = 12 cm, AD = 8 cm, AE = 12 cm and AC = 18 cm.",
+        "ta": "3. △ABC -யில் D மற்றும் E என்ற புள்ளிகள் முறையே பக்கங்கள் AB மற்றும் AC ஆகியவற்றின் மீது அமைந்துள்ளன. AB = 12 செ.மீ, AD = 8 செ.மீ, AE = 12 செ.மீ மற்றும் AC = 18 செ.மீ எனில் DE ∥ BC என நிறுவுக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q4-i",
+      "exercise": "4.2",
+      "questionNumber": 4,
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. In fig. if PQ ∥ BC and PR ∥ CD prove that\n(i) AR/AD = AQ/AB",
+        "ta": "4. படத்தில் PQ ∥ BC மற்றும் PR ∥ CD எனில்\n(i) AR/AD = AQ/AB என நிறுவுக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "AC is the common side of triangles ABC and ACD. P is on AC, Q on AB and R on AD. PQ is parallel to BC and PR to CD."
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q4-ii",
+      "exercise": "4.2",
+      "questionNumber": 4,
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. In fig. if PQ ∥ BC and PR ∥ CD prove that\n(ii) QB/AQ = DR/AR.",
+        "ta": "4. படத்தில் PQ ∥ BC மற்றும் PR ∥ CD எனில்\n(ii) QB/AQ = DR/AR என நிறுவுக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "AC is the common side of triangles ABC and ACD. P is on AC, Q on AB and R on AD. PQ is parallel to BC and PR to CD."
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q5",
+      "exercise": "4.2",
+      "questionNumber": 5,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. Rhombus PQRB is inscribed in △ABC such that ∠B is one of its angle. P, Q and R lie on AB, AC and BC respectively. If AB = 12 cm and BC = 6 cm, find the sides PQ, RB of the rhombus.",
+        "ta": "5. △ABC -யின் உள்ளே ∠B ஐ ஒரு கோணமாகக் கொண்ட சாய்சதுரம் PQRB அமைந்துள்ளது. P, Q மற்றும் R என்பன முறையே பக்கங்கள் AB, AC மற்றும் BC மீது அமைந்துள்ள புள்ளிகள் ஆகும். AB = 12 செ.மீ மற்றும் BC = 6 செ.மீ எனில், சாய்சதுரத்தின் பக்கங்கள் PQ, RB -யைக் காண்க."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": "4 cm, 4 cm"
+    },
+    {
+      "id": "c10-4-ex4-2-q6",
+      "exercise": "4.2",
+      "questionNumber": 6,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. In trapezium ABCD, AB ∥ DC, E and F are points on non-parallel sides AD and BC respectively, such that EF ∥ AB. Show that AE/ED = BF/FC.",
+        "ta": "6. சரிவகம் ABCD-யில் AB ∥ DC, E மற்றும் F என்பன முறையே இணையற்ற பக்கங்கள் AD மற்றும் BC -ன் மீது அமைந்துள்ள புள்ளிகள், மேலும் EF ∥ AB என அமைந்தால் AE/ED = BF/FC என நிறுவுக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q7",
+      "exercise": "4.2",
+      "questionNumber": 7,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. In figure DE ∥ BC and CD ∥ EF. Prove that AD² = AB × AF.",
+        "ta": "7. படத்தில் DE ∥ BC மற்றும் CD ∥ EF எனில் AD² = AB × AF என நிறுவுக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "A, F, D, B lie in that order on the left side. E lies on AC. DE is parallel to BC, and FE is parallel to DC."
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q8-i",
+      "exercise": "4.2",
+      "questionNumber": 8,
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "8. Check whether AD is bisector of ∠A of △ABC in each of the following\n(i) AB = 5 cm, AC = 10 cm, BD = 1.5 cm and CD = 3.5 cm.",
+        "ta": "8. பின்வருவனவற்றுள் △ABC -யில் AD ஆனது ∠A-யின் இருசமவெட்டி ஆகுமா எனச் சோதிக்கவும்.\n(i) AB = 5 செ.மீ, AC = 10 செ.மீ, BD = 1.5 செ.மீ மற்றும் CD = 3.5 செ.மீ."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": "Not a bisector"
+    },
+    {
+      "id": "c10-4-ex4-2-q8-ii",
+      "exercise": "4.2",
+      "questionNumber": 8,
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "8. Check whether AD is bisector of ∠A of △ABC in each of the following\n(ii) AB = 4 cm, AC = 6 cm, BD = 1.6 cm and CD = 2.4 cm.",
+        "ta": "8. பின்வருவனவற்றுள் △ABC -யில் AD ஆனது ∠A-யின் இருசமவெட்டி ஆகுமா எனச் சோதிக்கவும்.\n(ii) AB = 4 செ.மீ, AC = 6 செ.மீ, BD = 1.6 செ.மீ மற்றும் CD = 2.4 செ.மீ."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": "Bisector"
+    },
+    {
+      "id": "c10-4-ex4-2-q9",
+      "exercise": "4.2",
+      "questionNumber": 9,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "9. In figure ∠QPR = 90°, PS is its bisector.\nIf ST ⟂ PR, prove that ST × (PQ + PR) = PQ × PR.",
+        "ta": "9. படத்தில், ∠QPR = 90°, PS ஆனது ∠P -யின் இருசமவெட்டி மேலும், ST ⟂ PR எனில், ST × (PQ + PR) = PQ × PR என நிறுவுக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": true,
+        "details": "P is the right-angle vertex. The bisector PS meets QR at S. T is the foot of the perpendicular from S to PR."
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q10",
+      "exercise": "4.2",
+      "questionNumber": 10,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "10. ABCD is a quadrilateral in which AB = AD, the bisector of ∠BAC and ∠CAD intersect the sides BC and CD at the points E and F respectively. Prove that EF ∥ BD.",
+        "ta": "10. நாற்கரம் ABCD-யில் AB = AD, ∠BAC மற்றும் ∠CAD -யின் கோண இருசமவெட்டிகள் BC மற்றும் CD ஆகிய பக்கங்களை முறையே E மற்றும் F என்ற புள்ளிகளில் சந்திக்கின்றன எனில், EF ∥ BD என நிறுவுக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q11",
+      "exercise": "4.2",
+      "questionNumber": 11,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "11. Construct a △PQR which the base PQ = 4.5 cm, ∠R = 35° and the median RG from R to PQ is 6 cm.",
+        "ta": "11. PQ = 4.5 செ.மீ, ∠R = 35° மற்றும் உச்சி R–யிலிருந்து வரையப்பட்ட நடுக்கோட்டின் நீளம் RG = 6 செ.மீ என அமையுமாறு △PQR வரைக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q12",
+      "exercise": "4.2",
+      "questionNumber": 12,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "12. Construct a △PQR in which QR = 5 cm, ∠P = 40° and the median PG from P to QR is 4.4 cm. Find the length of the altitude from P to QR.",
+        "ta": "12. QR = 5 செ.மீ, ∠P = 40° மற்றும் உச்சி P –யிலிருந்து QR-க்கு வரையப்பட்ட நடுக்கோட்டின் நீளம் PG = 4.4 செ.மீ என இருக்கும்படி △PQR வரைக. மேலும் P-யிலிருந்து QR-க்கு வரையப்பட்ட குத்துக்கோட்டின் நீளம் காண்க."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": "2.1 cm",
+      "verificationNote": "Both appendices print 2.1 cm. The stated measurements imply about 2.20 cm, verified by two independent calculations."
+    },
+    {
+      "id": "c10-4-ex4-2-q13",
+      "exercise": "4.2",
+      "questionNumber": 13,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 188,
+          "pdf": 194
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "13. Construct a △PQR such that QR = 6.5 cm, ∠P = 60° and the altitude from P to QR is of length 4.5 cm.",
+        "ta": "13. QR = 6.5 செ.மீ, ∠P = 60° மற்றும் உச்சி P –யிலிருந்து QR-க்கு வரையப்பட்ட குத்துக்கோட்டின் நீளம் 4.5 செ.மீ உடைய △PQR வரைக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q14",
+      "exercise": "4.2",
+      "questionNumber": 14,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 182,
+          "pdf": 188
+        },
+        "ta": {
+          "printed": 189,
+          "pdf": 195
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "14. Construct a △ABC such that AB = 5.5 cm, ∠C = 25° and the altitude from C to AB is 4 cm.",
+        "ta": "14. AB = 5.5 செ.மீ, ∠C = 25° மற்றும் உச்சி C –யிலிருந்து AB-க்கு வரையப்பட்ட குத்துக்கோட்டின் நீளம் 4 செ.மீ உடைய △ABC வரைக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q15",
+      "exercise": "4.2",
+      "questionNumber": 15,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 183,
+          "pdf": 189
+        },
+        "ta": {
+          "printed": 189,
+          "pdf": 195
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "15. Draw a triangle ABC of base BC = 5.6 cm, ∠A = 40° and the bisector of ∠A meets BC at D such that CD = 4 cm.",
+        "ta": "15. அடிப்பக்கம் BC = 5.6 செ.மீ, ∠A = 40° மற்றும் ∠A-யின் இருசமவெட்டியானது அடிப்பக்கம் BC-ஐ CD = 4 செ.மீ என D-யில் சந்திக்குமாறு அமையும்படி முக்கோணம் ABC வரைக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    },
+    {
+      "id": "c10-4-ex4-2-q16",
+      "exercise": "4.2",
+      "questionNumber": 16,
+      "part": null,
+      "sourcePages": {
+        "en": {
+          "printed": 183,
+          "pdf": 189
+        },
+        "ta": {
+          "printed": 189,
+          "pdf": 195
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "16. Draw △PQR such that PQ = 6.8 cm, vertical angle is 50° and the bisector of the vertical angle meets the base at D where PD = 5.2 cm.",
+        "ta": "16. PQ = 6.8 செ.மீ, உச்சிக்கோணம் 50° மற்றும் உச்சிக்கோணத்தின் இருசமவெட்டியானது அடிப்பக்கத்தை PD = 5.2 செ.மீ என D-யில் சந்திக்குமாறு அமையும்படி △PQR வரைக."
+      },
+      "wasAvailableOnMain": false,
+      "figure": {
+        "inTextbooks": false,
+        "details": null
+      },
+      "appendixAnswer": null
+    }
+  ]
+}

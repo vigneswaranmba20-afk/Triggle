@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 189" role="img">
+  <title>Segments used in the angle bisector test</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="189" rx="8" fill="#f8fafc"/>
+  <polyline class="edge" points="119.000,29.000 39.000,153.000 270.000,153.000 119.000,29.000"/>
+<polyline class="accent" points="119.000,29.000 108.300,153.000"/>
+<circle class="point" cx="119.000" cy="29.000" r="2.200"/><text x="116.000" y="20.000">A</text>
+<circle class="point" cx="39.000" cy="153.000" r="2.200"/><text x="34.000" y="168.000">B</text>
+<circle class="point" cx="270.000" cy="153.000" r="2.200"/><text x="273.000" y="168.000">C</text>
+<circle class="point" cx="108.300" cy="153.000" r="2.200"/><text x="104.300" y="169.000">D</text>
+  <text x="10.000" y="181.000">Not to scale</text>
+</svg>

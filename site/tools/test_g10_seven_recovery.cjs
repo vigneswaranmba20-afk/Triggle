@@ -14,6 +14,9 @@ const recoveryModule='data/textbook-exercises/g10-seven-recovery-20261113-en.js'
 assert.equal(scripts.filter(s=>s===recoveryModule).length,1,'Recovery JS loads exactly once');
 const ctx={window:{},console};
 vm.createContext(ctx);
+const enriched = new Set(['c10-4-ex4-1-q1-i','c10-4-ex4-1-q1-ii']);
+const archive = {window:{TRIGGLE_CLASSES:{10:{items:[]}},TRIGGLE_CURRICULUM:{grades:[{grade:10,chapters:[3,4,6,8].map(number=>({number,textbookQuestionIds:[]}))}]}}};
+vm.runInNewContext(read('site/'+recoveryModule),archive,{filename:recoveryModule});
 for(const file of scripts)vm.runInContext(read('site/'+file),ctx,{filename:file,timeout:10000});
 const all=ctx.window.TRIGGLE_CLASSES[10].items;
 assert.equal(new Set(all.map(x=>x.id)).size,all.length,'Every student record has a unique ID');
@@ -21,7 +24,14 @@ const chapters=ctx.window.TRIGGLE_CURRICULUM.grades.find(g=>g.grade===10).chapte
 for(const r of manifest.records){
  const actual=all.find(x=>x.id===r.id);
  assert.ok(actual,'Missing recovery question in app: '+r.id);
- assert.equal(JSON.stringify(actual),JSON.stringify(r),'Manifest and rendered record are identical: '+r.id);
+ const original=archive.window.TRIGGLE_CLASSES[10].items.find(item=>item.id===r.id);
+ assert.equal(JSON.stringify(original),JSON.stringify(r),'Keep the recovery archive intact: '+r.id);
+ if(enriched.has(r.id)){
+  assert.equal(actual.answer,r.answer,'Keep the verified result when enriching Geometry: '+r.id);
+  assert.equal(actual.sourceFidelity.status,'page-visual-checked');
+ }else{
+  assert.equal(JSON.stringify(actual),JSON.stringify(r),'Manifest and rendered record are identical: '+r.id);
+ }
  const chapter=chapters.find(c=>String(c.number)===r.chapter);
  assert.equal(chapter.textbookQuestionIds.filter(id=>id===r.id).length,1,'Chapter navigation exactly once: '+r.id);
  const meta=ctx.window.TriggleDifficulty.get(actual);

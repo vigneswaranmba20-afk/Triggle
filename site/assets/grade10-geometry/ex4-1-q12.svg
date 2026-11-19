@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 192" role="img">
+  <title>ABC scaled by 6/5</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="192" rx="8" fill="#f8fafc"/>
+  <polyline class="edge" points="35.000,118.000 241.667,118.000 132.133,44.667 35.000,118.000"/>
+<polyline class="accent" points="35.000,118.000 283.000,118.000 151.560,30.000 35.000,118.000"/>
+<polyline class="guide" points="35.000,118.000 230.940,164.560"/>
+<polyline class="guide" points="198.283,156.800 241.667,118.000"/>
+<polyline class="guide" points="230.940,164.560 283.000,118.000"/>
+<circle class="point" cx="35.000" cy="118.000" r="2.200"/><text x="19.000" y="122.000">B</text>
+<circle class="point" cx="132.133" cy="44.667" r="2.200"/><text x="126.133" y="35.667">A</text>
+<circle class="point" cx="241.667" cy="118.000" r="2.200"/><text x="237.667" y="109.000">C</text>
+<circle class="point" cx="151.560" cy="30.000" r="2.200"/><text x="145.560" y="20.000">A′</text>
+<circle class="point" cx="283.000" cy="118.000" r="2.200"/><text x="287.000" y="109.000">C′</text>
+<circle class="point" cx="198.283" cy="156.800" r="2.200"/><text x="192.283" y="176.800">X5</text>
+<circle class="point" cx="230.940" cy="164.560" r="2.200"/><text x="224.940" y="184.560">X6</text>
+<circle class="point" cx="67.657" cy="125.760" r="2.100"/><circle class="point" cx="100.313" cy="133.520" r="2.100"/><circle class="point" cx="132.970" cy="141.280" r="2.100"/><circle class="point" cx="165.627" cy="149.040" r="2.100"/><circle class="point" cx="198.283" cy="156.800" r="2.100"/><circle class="point" cx="230.940" cy="164.560" r="2.100"/>
+</svg>
