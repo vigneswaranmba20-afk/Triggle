@@ -21,19 +21,19 @@
     "unitExercises": 8,
     "totalExerciseSections": 69,
     "numberedQuestions": 664,
-    "subpartTasks": 940,
-    "studentRecords": 320,
+    "subpartTasks": 939,
+    "studentRecords": 343,
     "questionsByStatus": {
-      "COMPLETE": 228,
+      "COMPLETE": 235,
       "PARTIAL": 16,
-      "MISSING": 419,
+      "MISSING": 412,
       "DUPLICATE": 0,
       "BLOCKED": 1
     },
     "tasksByStatus": {
-      "COMPLETE": 362,
+      "COMPLETE": 385,
       "PARTIAL": 17,
-      "MISSING": 560,
+      "MISSING": 536,
       "DUPLICATE": 0,
       "BLOCKED": 1
     }
@@ -95,18 +95,18 @@
       },
       "exerciseCount": 21,
       "numberedQuestions": 140,
-      "subpartTasks": 239,
+      "subpartTasks": 238,
       "questionsByStatus": {
-        "COMPLETE": 26,
+        "COMPLETE": 33,
         "PARTIAL": 0,
-        "MISSING": 114,
+        "MISSING": 107,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "tasksByStatus": {
-        "COMPLETE": 58,
+        "COMPLETE": 81,
         "PARTIAL": 0,
-        "MISSING": 181,
+        "MISSING": 157,
         "DUPLICATE": 0,
         "BLOCKED": 0
       }
@@ -6049,97 +6049,103 @@
         ]
       },
       "numberedQuestionCount": 2,
-      "subpartTaskCount": 8,
+      "subpartTaskCount": 7,
       "questionsByStatus": {
-        "COMPLETE": 0,
+        "COMPLETE": 2,
         "PARTIAL": 0,
-        "MISSING": 2,
+        "MISSING": 0,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "tasksByStatus": {
-        "COMPLETE": 0,
+        "COMPLETE": 7,
         "PARTIAL": 0,
-        "MISSING": 8,
+        "MISSING": 0,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "questions": [
         {
           "question": "1",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 3,
           "tasks": [
             {
               "part": "i",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-7-q1-i"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "ii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-7-q1-ii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "iii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-7-q1-iii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "2",
-          "status": "MISSING",
-          "partCount": 5,
+          "status": "COMPLETE",
+          "partCount": 4,
           "tasks": [
             {
               "part": "i",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-7-q2-i"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "ii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-7-q2-ii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "iii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-7-q2-iii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "iv",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
-            },
-            {
-              "part": "v",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-7-q2-iv"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         }
@@ -6154,116 +6160,130 @@
       "exercise": "3.8",
       "sourcePages": {
         "enPdf": [
-          112,
-          113
+          112
         ],
         "enPrinted": [
-          106,
-          107
+          106
         ],
         "taPdf": [
-          115
+          114
         ]
       },
       "numberedQuestionCount": 3,
       "subpartTaskCount": 8,
       "questionsByStatus": {
-        "COMPLETE": 0,
+        "COMPLETE": 3,
         "PARTIAL": 0,
-        "MISSING": 3,
+        "MISSING": 0,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "tasksByStatus": {
-        "COMPLETE": 0,
+        "COMPLETE": 8,
         "PARTIAL": 0,
-        "MISSING": 8,
+        "MISSING": 0,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "questions": [
         {
           "question": "1",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 4,
           "tasks": [
             {
               "part": "i",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-8-q1-i"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "ii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-8-q1-ii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "iii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-8-q1-iii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "iv",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-8-q1-iv"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "2",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 2,
           "tasks": [
             {
               "part": "i",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-8-q2-i"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "ii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-8-q2-ii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "3",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 2,
           "tasks": [
             {
               "part": "i",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-8-q3-i"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "ii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-8-q3-ii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         }
@@ -6290,95 +6310,111 @@
       "numberedQuestionCount": 2,
       "subpartTaskCount": 8,
       "questionsByStatus": {
-        "COMPLETE": 0,
+        "COMPLETE": 2,
         "PARTIAL": 0,
-        "MISSING": 2,
+        "MISSING": 0,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "tasksByStatus": {
-        "COMPLETE": 0,
+        "COMPLETE": 8,
         "PARTIAL": 0,
-        "MISSING": 8,
+        "MISSING": 0,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "questions": [
         {
           "question": "1",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 4,
           "tasks": [
             {
               "part": "i",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-9-q1-i"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "ii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-9-q1-ii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "iii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-9-q1-iii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "iv",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-9-q1-iv"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "2",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 4,
           "tasks": [
             {
               "part": "i",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-9-q2-i"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "ii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-9-q2-ii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "iii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-9-q2-iii"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "iv",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-3-ex3-9-q2-iv"
+              ],
+              "sourceVerificationStatus": "source-image-checked; independently solved; Tamil editorial pending",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         }

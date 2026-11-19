@@ -473,26 +473,23 @@
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
-  if(grade===9){
-   // Language switching replaces the formula nodes. Set their keyboard state
-   // immediately and refresh it if Android reflows after loading web fonts.
-   prepareLessonMath();
-   if(lessonMathObserver){
-    for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
-     lessonMathObserver.observe(formula);
-     if(formula.firstElementChild)lessonMathObserver.observe(formula.firstElementChild);
-    }
+  // Language switching and navigation replace formula nodes. Set Grade 9 keyboard state
+  // immediately and refresh all grades when layout, fonts, or viewport widths settle.
+  if(grade===9)prepareLessonMath();
+  if(lessonMathObserver){
+   for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
+    lessonMathObserver.observe(formula);
+    if(formula.firstElementChild)lessonMathObserver.observe(formula.firstElementChild);
    }
   }
   requestAnimationFrame(()=>{
    prepareLessonMath();
    // The layout read starts loading any math fonts this question newly uses.
-   if(grade===9)document.fonts?.ready.then(prepareLessonMath);
+   document.fonts?.ready.then(prepareLessonMath);
   });
-  if(grade!==9)document.fonts?.ready.then(prepareLessonMath);
  }
  document.fonts?.addEventListener('loadingdone',()=>{
-  if(grade===9&&!$('lessonCard').hidden)prepareLessonMath();
+  if(!$('lessonCard').hidden)prepareLessonMath();
  });
  function isQuestionFigure(item){
   if(item.figureSrc)return true;
@@ -662,7 +659,7 @@
   if(e.key==='Escape'&&drawerOpen){closeDrawer();return}
   if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&e.target.tagName!=='INPUT'&&e.target.tagName!=='TEXTAREA'){e.preventDefault();openDrawer();$('search').focus();return}
   if(drawerOpen&&e.key==='Tab'){const focusable=[...$('sidebar').querySelectorAll('button:not([disabled]),input:not([disabled]),a[href],summary')].filter(el=>el.getClientRects().length);if(focusable.length){const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
-  if(e.target.matches('input,textarea,select,button')||(grade===9&&e.target.closest('.triggle-tex[tabindex="0"]'))||$('figureDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
+  if(e.target.matches('input,textarea,select,button')||e.target.closest('.triggle-tex[tabindex="0"]')||$('figureDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
   if(e.key==='ArrowRight'){e.preventDefault();navMove(1)}else if(e.key==='ArrowLeft'){e.preventDefault();navMove(-1)}
  });
  window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams,g=Number(p.get('class'));grade=classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});
