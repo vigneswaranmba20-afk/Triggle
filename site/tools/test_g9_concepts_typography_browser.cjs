@@ -113,6 +113,12 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
     assert.equal(await page.locator('.rnlab-surd-tile').count(),4,'√8 starts with a 2×2 perfect-square factor');
     assert.equal(await page.locator('.sp2-panel input[type=range]').count(),0,'surds no longer depend on an unexplained slider');
     assert.equal(await page.locator('.rnlab-surd-equation').count(),3,'three visible math steps explain the surd');
+    const firstImpressionOrder=await page.locator('[data-demo]').evaluate(d=>{
+      const visual=d.querySelector('[data-demo-visual]'),answer=d.querySelector('[data-demo-output]'),picker=d.querySelector('[data-demo-controls]');
+      return !!(visual.compareDocumentPosition(answer)&Node.DOCUMENT_POSITION_FOLLOWING)&&
+        !!(answer.compareDocumentPosition(picker)&Node.DOCUMENT_POSITION_FOLLOWING);
+    });
+    assert(firstImpressionOrder,'surds explain the full worked idea before optional example controls');
     assert((await page.locator('.rnlab-surd-question').innerText()).includes('√8'),'first-glance question explains the diagram');
     assert((await page.locator('.rnlab-surd-description').innerText()).includes('8'),'square group links to the original radicand');
     await page.locator('[data-demo-mode="eighteen"]').click();
