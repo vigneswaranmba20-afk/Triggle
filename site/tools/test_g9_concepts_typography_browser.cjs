@@ -109,7 +109,26 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
      await zoom.evaluate(el=>{el.value='3';el.dispatchEvent(new Event('input',{bubbles:true}));});
      assert((await page.locator('[data-demo-output]').innerText()).includes('1.414'),'zoom to third decimal works');
    }
-   if(index===4)assert.equal(await page.locator('[data-demo-visual] svg rect').count(),9,'surds visualize a 3×3 square factor');
+   if(index===4){
+    assert.equal(await page.locator('.rnlab-surd-tile').count(),4,'√8 starts with a 2×2 perfect-square factor');
+    assert.equal(await page.locator('.sp2-panel input[type=range]').count(),0,'surds no longer depend on an unexplained slider');
+    assert.equal(await page.locator('.rnlab-surd-equation').count(),3,'three visible math steps explain the surd');
+    const firstImpressionOrder=await page.locator('[data-demo]').evaluate(d=>{
+      const visual=d.querySelector('[data-demo-visual]'),answer=d.querySelector('[data-demo-output]'),picker=d.querySelector('[data-demo-controls]');
+      return !!(visual.compareDocumentPosition(answer)&Node.DOCUMENT_POSITION_FOLLOWING)&&
+        !!(answer.compareDocumentPosition(picker)&Node.DOCUMENT_POSITION_FOLLOWING);
+    });
+    assert(firstImpressionOrder,'surds explain the full worked idea before optional example controls');
+    assert((await page.locator('.rnlab-surd-question').innerText()).includes('√8'),'first-glance question explains the diagram');
+    assert((await page.locator('.rnlab-surd-description').innerText()).includes('8'),'square group links to the original radicand');
+    await page.locator('[data-demo-mode="eighteen"]').click();
+    assert.equal(await page.locator('.rnlab-surd-tile').count(),9,'√18 has a 3×3 perfect-square factor');
+    await page.locator('[data-demo-mode="thirtytwo"]').click();
+    assert.equal(await page.locator('.rnlab-surd-tile').count(),16,'√32 has a 4×4 perfect-square factor');
+    await page.locator('[data-demo-mode="eight"]').click();
+    assert.equal(await page.locator('.rnlab-surd-tile').count(),4,'tapping back to √8 restores its model');
+    await check('surds visual and math '+lang+' '+width);
+   }
   }
   if(chapter===1){
    assert.equal(await page.locator('.sp2-explanation').count(),1,'Textbook meaning is available on demand');

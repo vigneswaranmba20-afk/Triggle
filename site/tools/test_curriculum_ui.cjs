@@ -844,9 +844,16 @@ async function main() {
       assert.equal(await lab.locator('[data-answers] button').nth(1).locator('math msqrt').count(),1,
         'A standalone √39 remains a standalone square root');
 
-      await lab.locator('input[type="range"]').evaluate(input=>{input.value='4';input.dispatchEvent(new Event('input',{bubbles:true}));});
-      assert.equal(await lab.locator('[data-demo-output] math msqrt').count(),3,'√32, √(4²×2) and √2 must use real radical notation');
-      assert.equal((await lab.locator('[data-demo-output] math msqrt').last().textContent()).trim(),'2');
+      // The surds concept now starts with a full worked example and uses tap choices,
+      // not a factor slider. Preserve true radical notation and the original quiz.
+      assert.equal(await lab.locator('input[type="range"]').count(),0,'No unexplained slider in surds');
+      assert.equal(await lab.locator('.rnlab-surd-tile').count(),4,'√8 begins with a 2×2 perfect square');
+      assert.equal(await lab.locator('.rnlab-surd-equation').count(),3,'The algebra explains each step');
+      await lab.locator('[data-demo-mode="thirtytwo"]').click();
+      assert.equal(await lab.locator('.rnlab-surd-tile').count(),16,'√32 shows its 4×4 square factor');
+      assert.equal(await lab.locator('.rnlab-surd-result math msqrt').count(),2,'√32 and √2 retain genuine radical symbols');
+      assert.equal(await lab.locator('.rnlab-surd-result .triggle-tex').getAttribute('data-math-fallback'),'√32 = 4√2','The simplified result remains accessible');
+      assert.match(await lab.locator('.rnlab-surd-conclusion').innerText(),/comes outside the root/i,'Tell the beginner why the factor moves outside');
       await lab.locator('[data-back-index]').click();await lab.locator('[data-nav] [data-index="5"]').click();
       assert.equal(await lab.locator('[data-demo-controls] math mfrac').count(),2,
         'Both rationalisation choices must use real stacked fraction bars');

@@ -627,3 +627,82 @@
 .chapter-hub[data-hub-section="concepts"] .sp2-top-next{display:inline-flex;align-items:center;justify-content:flex-end;min-height:44px;min-width:0;padding:8px 3px;border:0;background:transparent;color:#792b45;font:800 14px/1.4 system-ui,sans-serif;cursor:pointer;text-align:right}
 .chapter-hub[data-hub-section="concepts"] .sp2-top-next:focus-visible{outline:3px solid #9470de;outline-offset:2px;border-radius:7px}
 @media(max-width:355px){.chapter-hub[data-hub-section="concepts"] .sp2-detail-navigation{flex-wrap:nowrap;gap:5px}.chapter-hub[data-hub-section="concepts"] .sp2-top-next,.chapter-hub[data-hub-section="concepts"] .sp2-back-index{font-size:12px}}
+
+
+/* Grade 9 · Surds: first-glance explanation, not an unexplained slider.
+   The grid shows only the perfect-square factor, and ×2 is a separate factor. */
+.chapter-hub .rnlab .rnlab-surd-try-label{
+  width:100%;margin:0 0 3px;color:#524d65;font-size:13px;font-weight:700;line-height:1.5
+}
+.chapter-hub .rnlab .rnlab-surd-options{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%
+}
+.chapter-hub .rnlab .rnlab-surd-options .rnlab-choice{
+  min-height:48px;white-space:normal;font-size:15px;padding:8px 5px
+}
+.chapter-hub .rnlab .rnlab-surd-story{width:100%;min-width:0}
+.chapter-hub .rnlab .rnlab-surd-question{
+  margin:2px 0 4px;color:#27263f;font:800 clamp(17px,4.5vw,21px)/1.35 system-ui,sans-serif
+}
+.chapter-hub .rnlab .rnlab-surd-lead{
+  margin:0 0 12px;color:#4f4c62;font-size:14px;line-height:1.55
+}
+.chapter-hub .rnlab .rnlab-surd-factors{
+  display:grid;grid-template-columns:minmax(0,1fr) 23px minmax(0,.72fr);
+  align-items:center;gap:7px;width:100%;min-width:0
+}
+.chapter-hub .rnlab .rnlab-surd-square-card,
+.chapter-hub .rnlab .rnlab-surd-leftover-card{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;min-width:0;min-height:153px;padding:10px 5px;border-radius:15px;
+  border:1px solid #e3dbea;background:#fff
+}
+.chapter-hub .rnlab .rnlab-surd-square-card{background:#f5f1fc}
+.chapter-hub .rnlab .rnlab-surd-leftover-card{background:#fff7ec;border-color:#f0deca}
+.chapter-hub .rnlab .rnlab-surd-grid{
+  display:grid;grid-template-columns:repeat(var(--surd-k),1fr);
+  gap:3px;width:min(104px,100%);aspect-ratio:1
+}
+.chapter-hub .rnlab .rnlab-surd-tile{display:block;min-width:0;background:#8b72bc;border-radius:2px}
+.chapter-hub .rnlab .rnlab-surd-square-card strong{
+  font-size:clamp(12px,3.5vw,15px);color:#403468;text-align:center
+}
+.chapter-hub .rnlab .rnlab-surd-leftover-card strong{
+  font-size:42px;line-height:1.2;color:#9a5424
+}
+.chapter-hub .rnlab .rnlab-surd-factor-label{
+  font-size:clamp(10px,2.7vw,12px);line-height:1.35;font-weight:750;text-align:center;
+  color:#514869
+}
+.chapter-hub .rnlab .rnlab-surd-times{
+  text-align:center;color:#474055;font-size:25px;font-weight:750
+}
+.chapter-hub .rnlab .rnlab-surd-description{
+  margin:11px 0 3px;color:#5b566c;font-size:13px;line-height:1.55
+}
+.chapter-hub .rnlab .sp2-demo-output:has(.rnlab-surd-equations){
+  overflow:visible;white-space:normal;margin-top:11px!important
+}
+.chapter-hub .rnlab .rnlab-surd-equations{display:grid;gap:8px;width:100%}
+.chapter-hub .rnlab .rnlab-surd-equation{
+  padding:10px 12px;border:1px solid #e8e3ee;border-radius:12px;background:#fff;min-width:0
+}
+.chapter-hub .rnlab .rnlab-surd-equation>span{
+  display:block;margin-bottom:4px;font-size:12px;line-height:1.4;font-weight:740;color:#5e5870
+}
+.chapter-hub .rnlab .rnlab-surd-math{
+  font-size:clamp(17px,4.4vw,21px);line-height:1.75;color:#312b50;
+  max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin
+}
+.chapter-hub .rnlab .rnlab-surd-result{background:#edf7f0;border-color:#c8e3d1}
+.chapter-hub .rnlab .rnlab-surd-result .rnlab-surd-math{font-weight:800;color:#24634a}
+.chapter-hub .rnlab .rnlab-surd-conclusion{
+  margin:9px 1px 2px;color:#3a3b52;font-size:14px;line-height:1.55
+}
+@media(max-width:355px){
+  .chapter-hub .rnlab .rnlab-surd-factors{grid-template-columns:minmax(0,1fr) 18px minmax(0,.8fr);gap:4px}
+  .chapter-hub .rnlab .rnlab-surd-square-card,
+  .chapter-hub .rnlab .rnlab-surd-leftover-card{min-height:130px;padding:8px 4px}
+  .chapter-hub .rnlab .rnlab-surd-grid{width:min(82px,100%)}
+  .chapter-hub .rnlab .rnlab-surd-math{font-size:16px}
+}
