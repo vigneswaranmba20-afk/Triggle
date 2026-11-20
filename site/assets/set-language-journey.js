@@ -165,16 +165,82 @@
         };
         setDemo('empty',options,(key,update)=>update(key,values[key]));
       }else if(stage.visual==='venn'){
+        // AUD01-01: the lesson itself must contain a working, five-operation Venn
+        // diagram. Do not rely on the optional full-size Phase 2 lab.
+        const universe=[1,2,3,4,5,6,7],A=new Set([1,2,3,5]),B=new Set([3,4,5,6]);
         const controls=panel.querySelector('[data-demo-controls]');
-        controls.innerHTML=btn(t.tryVenn,'go');
-        controls.querySelector('button').addEventListener('click',()=>{
-          let target=out.querySelector('[data-venn-lab]');
-          if(!target){target=document.createElement('div');target.dataset.vennLab='';out.append(target);window.TriggleLab?.mount(target,chapter,lang);}
-          target.scrollIntoView({behavior:'auto',block:'nearest'});
-          target.setAttribute('tabindex','-1');
-          target.focus({preventScroll:true});
-        });
-        panel.querySelector('[data-demo-output]').innerHTML=htmlMath({latex:'\\begin{gathered}A\\cap B=\\{3,5\\}\\\\A\\cup B=\\{1,2,3,4,5,6\\}\\end{gathered}',fallback:'A ∩ B = {3, 5}; A ∪ B = {1, 2, 3, 4, 5, 6}'});
+        const operations=[
+          {key:'union',latex:'A\\cup B',symbol:'A ∪ B',regions:['a','both','b'],has:n=>A.has(n)||B.has(n),
+            en:'Union includes each member of A or B once.',ta:'சேர்ப்பு: A அல்லது B-இல் உள்ள உறுப்புகள் அனைத்தும் ஒருமுறை மட்டும்.'},
+          {key:'intersection',latex:'A\\cap B',symbol:'A ∩ B',regions:['both'],has:n=>A.has(n)&&B.has(n),
+            en:'Intersection keeps only the common members.',ta:'வெட்டு: இரண்டு கணங்களிலும் உள்ள பொதுவான உறுப்புகள் மட்டும்.'},
+          {key:'difference',latex:'A\\setminus B',symbol:'A − B',regions:['a'],has:n=>A.has(n)&&!B.has(n),
+            en:'Difference keeps members in A but not B.',ta:'வித்தியாசம்: A-இல் இருந்து B-இல் இல்லாத உறுப்புகள்.'},
+          {key:'complement',latex:'A^{\\prime}',symbol:'A′',regions:['b','outside'],has:n=>!A.has(n),
+            en:'The complement of A is everything in U that is not in A.',ta:'A-இன் நிரப்புக் கணம்: U-இல் இருந்து A-இல் இல்லாத உறுப்புகள்.'},
+          {key:'symmetric',latex:'A\\triangle B',symbol:'A Δ B',regions:['a','b'],has:n=>A.has(n)!==B.has(n),
+            en:'Symmetric difference keeps members in exactly one of the two sets.',ta:'சமச்சீர் வித்தியாசம்: இரண்டில் ஒன்றில் மட்டும் உள்ள உறுப்புகள்.'}
+        ];
+        controls.classList.add('sp2-venn-controls');
+        controls.setAttribute('role','group');
+        controls.setAttribute('aria-label',lang==='ta'?'கணச் செயல்பாடுகளைத் தேர்க':'Choose a set operation');
+        controls.innerHTML=operations.map(op=>btn({latex:op.latex,fallback:op.symbol},op.key)).join('');
+        const given='<div class="sp2-venn-defs"><p>'+
+          htmlMath({latex:'U=\\{1,2,3,4,5,6,7\\}',fallback:'U = {1, 2, 3, 4, 5, 6, 7}'})+
+          ' · '+htmlMath({latex:'A=\\{1,2,3,5\\}',fallback:'A = {1, 2, 3, 5}'})+
+          ' · '+htmlMath({latex:'B=\\{3,4,5,6\\}',fallback:'B = {3, 4, 5, 6}'})+'</p>'+
+          '<p>'+esc(lang==='ta'
+            ?'U என்பது அனைத்துக் கணம். A′ என்பது U-இல் இருந்து A-இல் இல்லாத எண்கள்.'
+            :'U is the universal set (all seven numbers). A′ means every number in U that is not in A.')+'</p></div>';
+        controls.insertAdjacentHTML('beforebegin',given);
+        const description=lang==='ta'
+          ?'A மட்டும்: 1, 2. இரண்டிலும்: 3, 5. B மட்டும்: 4, 6. இரண்டிற்கும் வெளியே: 7.'
+          :'A only: 1, 2. In both: 3, 5. B only: 4, 6. Outside both: 7.';
+        const graphic=[
+          '<svg class="sp2-venn-svg" viewBox="0 0 420 235" role="img" aria-labelledby="sp2-venn-title sp2-venn-desc">',
+          '<title id="sp2-venn-title">'+esc(lang==='ta'?'இரு கணங்களின் வென் படம்':'Interactive two-set Venn diagram')+'</title>',
+          '<desc id="sp2-venn-desc">'+esc(description)+'</desc>',
+          '<defs>',
+          '<mask id="sp2-venn-not-b" maskUnits="userSpaceOnUse"><rect width="420" height="235" fill="#fff"/><circle cx="238" cy="112" r="76" fill="#000"/></mask>',
+          '<mask id="sp2-venn-not-a" maskUnits="userSpaceOnUse"><rect width="420" height="235" fill="#fff"/><circle cx="166" cy="112" r="76" fill="#000"/></mask>',
+          '<mask id="sp2-venn-outside-mask" maskUnits="userSpaceOnUse"><rect width="420" height="235" fill="#fff"/><circle cx="166" cy="112" r="76" fill="#000"/><circle cx="238" cy="112" r="76" fill="#000"/></mask>',
+          '<clipPath id="sp2-venn-clip-b"><circle cx="238" cy="112" r="76"/></clipPath>',
+          '</defs>',
+          '<rect x="10" y="13" width="400" height="208" rx="11" fill="#fbf9ff" stroke="#d6cde5" stroke-width="2"/>',
+          '<rect data-venn-region="outside" x="10" y="13" width="400" height="208" rx="11" mask="url(#sp2-venn-outside-mask)" fill="#fbf9ff"/>',
+          '<circle data-venn-region="a" cx="166" cy="112" r="76" mask="url(#sp2-venn-not-b)" fill="#fff"/>',
+          '<circle data-venn-region="b" cx="238" cy="112" r="76" mask="url(#sp2-venn-not-a)" fill="#fff"/>',
+          '<circle data-venn-region="both" cx="166" cy="112" r="76" clip-path="url(#sp2-venn-clip-b)" fill="#fff"/>',
+          '<circle cx="166" cy="112" r="76" fill="none" stroke="#846cae" stroke-width="2.5"/>',
+          '<circle cx="238" cy="112" r="76" fill="none" stroke="#479276" stroke-width="2.5"/>',
+          '<g fill="#332b48" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle">',
+          '<text x="33" y="39" font-weight="750">U</text><text x="128" y="75" font-weight="750">A</text>',
+          '<text x="278" y="75" font-weight="750">B</text><text x="123" y="120">1, 2</text>',
+          '<text x="202" y="120" font-weight="750">3, 5</text><text x="281" y="120">4, 6</text>',
+          '<text x="368" y="190">7</text></g></svg>'
+        ].join('');
+        controls.insertAdjacentHTML('afterend',graphic);
+        out.querySelector('[data-demo-output]').insertAdjacentHTML(
+          'afterend','<p class="sp2-venn-explain" data-venn-explain></p>');
+        function chooseVenn(key){
+          const op=operations.find(item=>item.key===key);
+          if(!op)return;
+          controls.querySelectorAll('button').forEach(button=>
+            button.setAttribute('aria-pressed',String(button.dataset.demoMode===key)));
+          out.querySelectorAll('[data-venn-region]').forEach(region=>{
+            const selected=op.regions.includes(region.dataset.vennRegion);
+            region.setAttribute('fill',selected?'#c4ecd9':(region.dataset.vennRegion==='outside'?'#fbf9ff':'#fff'));
+          });
+          const members=universe.filter(op.has);
+          out.querySelector('[data-demo-output]').innerHTML=htmlMath({
+            latex:op.latex+'=\\{'+members.join(',')+'\\}',
+            fallback:op.symbol+' = {'+members.join(', ')+ '}'
+          });
+          out.querySelector('[data-venn-explain]').textContent=lang==='ta'?op.ta:op.en;
+        }
+        controls.querySelectorAll('button').forEach(button=>
+          button.addEventListener('click',()=>chooseVenn(button.dataset.demoMode)));
+        chooseVenn('intersection');
       }else if(stage.visual==='properties'){
         const options=lang==='ta'
           ?[['பரிமாற்று','commutative'],['சேர்ப்பு','associative'],['பங்கீட்டு','distributive']]
@@ -287,7 +353,7 @@
       if(notify&&typeof onConcept==='function')onConcept(index);
       const stage=book.stages[index];
       const demoTitle=({membership:t.membership,forms:t.forms,types:t.types,
-        venn:t.tryVenn,properties:t.properties,demorgan:t.law,count:t.count})[stage.visual]||t.select;
+        venn:(lang==='ta'?'வென் படத்தில் செயல்பாடுகளை ஆராய்க':'Explore the Venn diagram'),properties:t.properties,demorgan:t.law,count:t.count})[stage.visual]||t.select;
       // Keep the textbook rule unchanged; only its mobile presentation uses
       // aligned two-line KaTeX to avoid a clipped long equation.
       const visibleRule=stage.visual==='count'
