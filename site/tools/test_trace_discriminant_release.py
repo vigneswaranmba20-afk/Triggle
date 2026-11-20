@@ -95,7 +95,11 @@ class DiscriminantReleaseTests(unittest.TestCase):
         if "&discriminant-fola=4c692aa7" in released_html:
             self.assertEqual(html2,released_html)
         if "-"+TAG in released_sw:
-            self.assertEqual(sw2,released_sw)
+            # Later audit/PWA revisions can appear after the original video tag.
+            # Require exact same remaining cache text, marker once, and old suffix.
+            self.assertEqual(sw2.count("-"+TAG),1)
+            self.assertEqual(released_sw.count("-"+TAG),1)
+            self.assertEqual(sw2.replace("-"+TAG,"",1),released_sw.replace("-"+TAG,"",1))
 
     def test_combined_release_never_changes_unrelated_files(self):
         with tempfile.TemporaryDirectory() as tmp:

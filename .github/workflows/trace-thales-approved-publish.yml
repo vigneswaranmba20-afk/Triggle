@@ -1,0 +1,146 @@
+name: TRACE approved Thales Fola — exact blob to R2, gated student-site PR
+
+# This uses GitHub's temporary Git blob staging, never public third-party URLs.
+# Upload is paid-AI-free, hash-locked, and allowed only after owner approval on #297.
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trace-thales-fola-owner-publication-20261120
+  cancel-in-progress: false
+
+jobs:
+  stage-video-and-prepare-site-pr:
+    if: ${{ github.event.issue.number == 297 && !github.event.issue.pull_request && github.event.comment.user.login == 'vigneswaranmba20-afk' && contains(github.event.comment.body, 'TRACE_PUBLISH_THALES_FOLA_20261120') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      EXPECTED_GIT_BLOB: 6796a6edda4f940b9852e7e8c4929382e7eb3d0e
+      EXPECTED_SHA256: 2c07afb76d30e65c707b0df1e56a2aa99bbfc8d092efa949ec91d920d898f201
+      EXPECTED_BYTES: '1734325'
+      LESSON: g10-ch4-bpt-thales
+      VIDEO: build/trace-video/thales-approved.mp4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Require owner marker and merged video-engineering branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' "$COMMENT_BODY" | grep -xF 'TRACE_PUBLISH_THALES_FOLA_20261120'
+          test "$(gh api "repos/${GITHUB_REPOSITORY}/pulls/298" --jq '.merged')" = true
+          test -f site/video-factory/lessons/g10-ch4-bpt-thales.json
+          python3 site/tools/test_trace_thales_video.py
+          python3 site/tools/test_trace_thales_release.py
+          python3 site/tools/trace_video_factory.py self-test --lesson "$LESSON"
+          node --check site/assets/chapter-hub.js
+          unset GEMINI_API_KEY GOOGLE_API_KEY OPENAI_API_KEY
+          echo 'PASS source and math gates with no model API calls'
+
+      - name: Download only the owner-approved Git blob (not arbitrary media URL)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$(dirname "$VIDEO")"
+          gh api "repos/${GITHUB_REPOSITORY}/git/blobs/${EXPECTED_GIT_BLOB}" \
+            --jq '.content' | base64 --decode > "$VIDEO"
+          test "$(stat -c %s "$VIDEO")" = "$EXPECTED_BYTES"
+          echo "${EXPECTED_SHA256}  ${VIDEO}" | sha256sum --check -
+          echo 'PASS exactly the owner-reviewed 1,734,325-byte Thales Fola MP4 retrieved'
+
+      - name: Verify media streams, precise runtime, and complete decode
+        run: |
+          set -euo pipefail
+          if ! command -v ffprobe >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -qq -y ffmpeg
+          fi
+          python3 - <<'PY'
+          import json,os,subprocess
+          source=os.environ['VIDEO']
+          info=json.loads(subprocess.check_output([
+            'ffprobe','-v','error','-show_entries',
+            'format=duration,size:stream=codec_name,codec_type,width,height,r_frame_rate',
+            '-of','json',source
+          ]))
+          assert int(info['format']['size'])==1734325
+          assert abs(float(info['format']['duration'])-99.854333)<0.06
+          assert any(s.get('codec_name')=='h264' and s.get('width')==720 and
+                     s.get('height')==1280 and s.get('r_frame_rate')=='12/1'
+                     for s in info['streams'])
+          assert any(s.get('codec_name')=='aac' and s.get('codec_type')=='audio'
+                     for s in info['streams'])
+          print('PASS H.264/AAC portrait 720x1280, 12fps, 99.854 sec')
+          PY
+          ffmpeg -hide_banner -loglevel error -i "$VIDEO" -f null -
+          echo 'PASS full audio and video decode'
+
+      - name: Upload immutable MP4 to existing Cloudflare R2 and verify public bytes
+        id: stage
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+        run: |
+          set -euo pipefail
+          for v in R2_ACCOUNT_ID R2_BUCKET R2_PUBLIC_BASE_URL AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY; do
+            test -n "${!v}" || { echo "Missing Cloudflare R2 secret ${v}"; exit 1; }
+          done
+          [[ "${R2_ACCOUNT_ID}" =~ ^[a-f0-9]{32}$ ]]
+          PUBLIC="${R2_PUBLIC_BASE_URL%/}"
+          test "$PUBLIC" = 'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev'
+          if ! command -v aws >/dev/null; then python3 -m pip install -q awscli; fi
+          KEY="trace-videos/${LESSON}/${EXPECTED_SHA256}.mp4"
+          ENDPOINT="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+          aws --endpoint-url "$ENDPOINT" s3 cp "$VIDEO" "s3://${R2_BUCKET}/${KEY}" \
+            --content-type video/mp4 --no-progress
+          BYTES="$(aws --endpoint-url "$ENDPOINT" s3api head-object \
+            --bucket "$R2_BUCKET" --key "$KEY" --query ContentLength --output text)"
+          test "$BYTES" = "$EXPECTED_BYTES"
+          URL="$PUBLIC/$KEY"
+          curl --fail --silent --show-error --location --retry 2 \
+            --max-time 75 --range 0-1023 "$URL" -o /tmp/thales-r2-prefix
+          cmp -n 1024 "$VIDEO" /tmp/thales-r2-prefix
+          printf 'public_url=%s\n' "$URL" >> "$GITHUB_OUTPUT"
+          echo 'PASS exact approved video staged to public R2 and verified by byte range'
+
+      - name: Make isolated Grade 10 Chapter 4 release branch
+        env:
+          PUBLIC_URL: ${{ steps.stage.outputs.public_url }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 site/tools/trace_thales_release.py register --url "$PUBLIC_URL"
+          node site/tools/build_project_status.cjs
+          BRANCH="video/thales-fola-approved-${GITHUB_RUN_ID}"
+          git switch -c "$BRANCH"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/data/g10-ch4-concepts.js site/index.html site/service-worker.js site/data/project-status.json
+          git diff --cached --quiet && { echo 'Refusing empty site-release branch'; exit 1; }
+          git commit -m 'Publish approved Fola Thales video for Grade 10 concept'
+          git push origin "$BRANCH"
+          {
+            echo '## Thales release staged; website PR still required'
+            echo
+            echo "Release branch: \`$BRANCH\`"
+            echo
+            echo "Immutable video: $PUBLIC_URL"
+            echo
+            echo "MP4 SHA-256: \`$EXPECTED_SHA256\`"
+            echo
+            echo 'Cloudflare delivery checked. Site deployment NOT claimed.'
+            echo 'Next: open branch PR using connected GitHub account, run normal quality gate, and verify live Pages.'
+          } >> "$GITHUB_STEP_SUMMARY"
