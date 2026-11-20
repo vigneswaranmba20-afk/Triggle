@@ -56,7 +56,7 @@
  // current exercise by activeList(), consistently for all Classes 9–12.
  const textbookExerciseList=chapter=>{
    const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
-   const sourceBatches=(grade===10&&['2','4'].includes(String(chapter?.number)))||(grade===9&&['1','3'].includes(String(chapter?.number)));
+   const sourceBatches=(grade===10&&['2','4','6'].includes(String(chapter?.number)))||(grade===9&&['1','3'].includes(String(chapter?.number)));
    if(!sourceBatches)return items;
    // Source-verified Grade 9 and Grade 10 exercise parts
    // arrive in independent batches. Sort only their navigation lists, preserving

@@ -1,0 +1,530 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 6,
+  "exercise": "6.1",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "methodology": "Visually inspected rendered 2025 English PDF pages 255–256 (printed pp. 249–250) and 2025 Tamil PDF page 264 (printed p. 258). Exercise 6.1 Q2(i) remains served by preserved source-verified record c10-6-ex6-1-q2-i in g10-seven-recovery-20261113-en.js.",
+  "status": "page-visual-checked",
+  "tamilEditorial": "pending",
+  "preservedCompleteIds": [
+    "c10-6-ex6-1-q2-i"
+  ],
+  "items": [
+    {
+      "id": "c10-6-ex6-1-q1-i",
+      "exercise": "6.1",
+      "questionNumber": 1,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "1. Prove the following identities.\n(i) cot θ + tan θ = sec θ cosec θ",
+        "ta": "1. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(i) cot θ + tan θ = sec θ cosec θ"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 249,
+          "pdf": 255
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q1-ii",
+      "exercise": "6.1",
+      "questionNumber": 1,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "1. Prove the following identities.\n(ii) tan⁴θ + tan²θ = sec⁴θ − sec²θ",
+        "ta": "1. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(ii) tan⁴θ + tan²θ = sec⁴θ − sec²θ"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 249,
+          "pdf": 255
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q2-ii",
+      "exercise": "6.1",
+      "questionNumber": 2,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "2. Prove the following identities.\n(ii) cos θ / (1 + sin θ) = sec θ − tan θ",
+        "ta": "2. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(ii) cos θ / (1 + sin θ) = sec θ − tan θ"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 249,
+          "pdf": 255
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q3-i",
+      "exercise": "6.1",
+      "questionNumber": 3,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "3. Prove the following identities.\n(i) √((1 + sin θ)/(1 − sin θ)) = sec θ + tan θ",
+        "ta": "3. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(i) √((1 + sin θ)/(1 − sin θ)) = sec θ + tan θ"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q3-ii",
+      "exercise": "6.1",
+      "questionNumber": 3,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "3. Prove the following identities.\n(ii) √((1 + sin θ)/(1 − sin θ)) + √((1 − sin θ)/(1 + sin θ)) = 2 sec θ",
+        "ta": "3. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(ii) √((1 + sin θ)/(1 − sin θ)) + √((1 − sin θ)/(1 + sin θ)) = 2 sec θ"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q4-i",
+      "exercise": "6.1",
+      "questionNumber": 4,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "4. Prove the following identities.\n(i) sec⁶θ = tan⁶θ + 3 tan²θ sec²θ + 1",
+        "ta": "4. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(i) sec⁶θ = tan⁶θ + 3 tan²θ sec²θ + 1"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q4-ii",
+      "exercise": "6.1",
+      "questionNumber": 4,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "4. Prove the following identities.\n(ii) (sin θ + sec θ)² + (cos θ + cosec θ)² = 1 + (sec θ + cosec θ)²",
+        "ta": "4. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(ii) (sin θ + sec θ)² + (cos θ + cosec θ)² = 1 + (sec θ + cosec θ)²"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q5-i",
+      "exercise": "6.1",
+      "questionNumber": 5,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "5. Prove the following identities.\n(i) sec⁴θ(1 − sin⁴θ) − 2 tan²θ = 1",
+        "ta": "5. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(i) sec⁴θ(1 − sin⁴θ) − 2 tan²θ = 1"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q5-ii",
+      "exercise": "6.1",
+      "questionNumber": 5,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "5. Prove the following identities.\n(ii) (cot θ − cos θ)/(cot θ + cos θ) = (cosec θ − 1)/(cosec θ + 1)",
+        "ta": "5. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(ii) (cot θ − cos θ)/(cot θ + cos θ) = (cosec θ − 1)/(cosec θ + 1)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q6-i",
+      "exercise": "6.1",
+      "questionNumber": 6,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "6. Prove the following identities.\n(i) (sin A − sin B)/(cos A + cos B) + (cos A − cos B)/(sin A + sin B) = 0",
+        "ta": "6. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(i) (sin A − sin B)/(cos A + cos B) + (cos A − cos B)/(sin A + sin B) = 0"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q6-ii",
+      "exercise": "6.1",
+      "questionNumber": 6,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "6. Prove the following identities.\n(ii) (sin³A + cos³A)/(sin A + cos A) + (sin³A − cos³A)/(sin A − cos A) = 2",
+        "ta": "6. பின்வரும் முற்றொருமைகளை நிரூபிக்கவும்.\n(ii) (sin³A + cos³A)/(sin A + cos A) + (sin³A − cos³A)/(sin A − cos A) = 2"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q7-i",
+      "exercise": "6.1",
+      "questionNumber": 7,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "7. (i) If sin θ + cos θ = √3, then prove that tan θ + cot θ = 1.",
+        "ta": "7. (i) sin θ + cos θ = √3 எனில், tan θ + cot θ = 1 என்பதை நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q7-ii",
+      "exercise": "6.1",
+      "questionNumber": 7,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "7. (ii) If √3 sin θ − cos θ = 0, then show that tan 3θ = (3 tan θ − tan³θ)/(1 − 3 tan²θ)",
+        "ta": "7. (ii) √3 sin θ − cos θ = 0 எனில், tan 3θ = (3 tan θ − tan³θ)/(1 − 3 tan²θ) எனக் நிறுவுக."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q8-i",
+      "exercise": "6.1",
+      "questionNumber": 8,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "8. (i) If cos α / cos β = m and cos α / sin β = n, then prove that (m² + n²)cos²β = n²",
+        "ta": "8. (i) cos α / cos β = m மற்றும் cos α / sin β = n , எனக் கொண்டு (m² + n²)cos²β = n² என்பதை நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q8-ii",
+      "exercise": "6.1",
+      "questionNumber": 8,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "8. (ii) If cot θ + tan θ = x and sec θ − cos θ = y, then prove that (x²y)^(2/3) − (xy²)^(2/3) = 1",
+        "ta": "8. (ii) cot θ + tan θ = x மற்றும் sec θ − cos θ = y எனில், (x²y)^(2/3) − (xy²)^(2/3) = 1 என்பதை நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q9-i",
+      "exercise": "6.1",
+      "questionNumber": 9,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "9. (i) If sin θ + cos θ = p and sec θ + cosec θ = q, then prove that q(p² − 1) = 2p",
+        "ta": "9. (i) sin θ + cos θ = p மற்றும் sec θ + cosec θ = q எனில், q(p² − 1) = 2p என்பதை நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q9-ii",
+      "exercise": "6.1",
+      "questionNumber": 9,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "9. (ii) If sin θ(1 + sin²θ) = cos²θ, then prove that cos⁶θ − 4 cos⁴θ + 8 cos²θ = 4",
+        "ta": "9. (ii) sin θ(1 + sin²θ) = cos²θ எனில், cos⁶θ − 4 cos⁴θ + 8 cos²θ = 4 என்பதை நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q10",
+      "exercise": "6.1",
+      "questionNumber": 10,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "10. If cos θ / (1 + sin θ) = 1/a, then prove that (a² − 1)/(a² + 1) = sin θ",
+        "ta": "10. cos θ / (1 + sin θ) = 1/a எனில், (a² − 1)/(a² + 1) = sin θ என்பதை நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 250,
+          "pdf": 256
+        },
+        "ta": {
+          "printed": 258,
+          "pdf": 264
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      }
+    }
+  ]
+}

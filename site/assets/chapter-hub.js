@@ -77,9 +77,11 @@
   // "Exercises" is strictly for available textbook-labelled questions.
   // Preserve Triggle practice in its underlying records, never insert it ahead
   // of Exercise N.1 Question 1 or pretend it is an official textbook exercise.
-  const textbookExercises=questions=>questions.filter(q=>
-    q.kind!=='practice'&&/^(?:Exercise|Unit Exercise)\b/i.test(q.label?.en||'')
-  );
+  const textbookExercises=questions=>{
+    const items=questions.filter(q=>q.kind!=='practice'&&/^(?:Exercise|Unit Exercise)\b/i.test(q.label?.en||''));
+    const canonicalLabels=new Set(items.filter(q=>!/^c10-6-6-/.test(q.id)).map(q=>String(q.label?.en||'')));
+    return items.filter(q=>!/^c10-6-6-/.test(q.id)||!canonicalLabels.has(String(q.label?.en||'')));
+  };
   const categorized=questions=>({
     examples:questions.filter(q=>/^\s*Example\b/i.test(q.label?.en||'')),
     exercises:textbookExercises(questions)
