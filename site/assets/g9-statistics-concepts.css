@@ -1,0 +1,121 @@
+/* Statistics activities sit inside the shared Bond Light concept journey. */
+.statistics-studio {
+  color: var(--bond-charcoal, #241e26);
+  line-height: 1.55;
+}
+
+.statistics-studio p {
+  margin: 8px 0;
+}
+
+.statistics-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.statistics-studio [hidden] {
+  display: none;
+}
+
+.statistics-options button,
+.statistics-exercise {
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #a99a9e;
+  border-radius: 8px;
+  background: white;
+  color: #3c2b33;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.statistics-options button[aria-pressed="true"] {
+  background: #792b45;
+  border-color: #792b45;
+  color: white;
+}
+
+.statistics-studio :is(button, summary):focus-visible {
+  outline: 3px solid #792b45;
+  outline-offset: 2px;
+}
+
+.statistics-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.statistics-table caption {
+  padding: 4px 0;
+  text-align: left;
+  font-weight: 700;
+}
+
+.statistics-table :is(th, td) {
+  padding: 5px;
+  border-bottom: 1px solid #d2c7cb;
+  text-align: left;
+}
+
+.statistics-tiles,
+.statistics-bars {
+  list-style: none;
+  margin: 8px 0;
+  padding: 0;
+}
+
+.statistics-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.statistics-tiles li,
+.statistics-bars li {
+  padding: 5px 8px;
+  border: 1px solid #d2c7cb;
+  border-radius: 6px;
+}
+
+.statistics-studio .statistics-highlight {
+  background: #f7e7ec;
+  font-weight: 700;
+}
+
+.statistics-bars li {
+  display: grid;
+  grid-template-columns: minmax(65px, 1.1fr) minmax(40px, 1fr) 1.5ch;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.statistics-bars meter {
+  width: 100%;
+}
+
+.statistics-studio details {
+  border-block: 1px solid #d2c7cb;
+  margin: 12px 0;
+}
+
+.statistics-studio summary {
+  min-height: 44px;
+  padding: 10px 2px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.statistics-answers {
+  display: grid;
+}
+
+.statistics-answers button {
+  text-align: left;
+}
