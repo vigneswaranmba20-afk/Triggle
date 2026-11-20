@@ -31,7 +31,7 @@ def validated_url(url):
 
 def register_concept(source, url):
     validated_url(url)
-    if re.search(r'["\\\']video["\\\']\\s*:', source[source.index('"id": "'+LESSON+'"'):][:180]):
+    if '"video"' in source[source.index('"id": "'+LESSON+'"'):][:180]:
         raise ValueError("Target already contains a video reference; manual reconciliation required")
     header = '"id": "' + LESSON + '",'
     if source.count(header) != 1:
@@ -56,7 +56,7 @@ def bump_player(source):
     needle = './assets/chapter-hub.js?v='
     if source.count(needle)!=1:
         raise ValueError("Chapter hub loader changed; refuse ambiguous update")
-    pattern=r'(<script src="\\./assets/chapter-hub\\.js\\?v=[^"]+)("></script>)'
+    pattern=r'(<script src="\./assets/chapter-hub\.js\?v=[^"]+)("></script>)'
     result,n=re.subn(pattern,lambda m:m.group(1)+'&discriminant-fola=4c692aa7'+m.group(2),source)
     if n!=1:
         raise ValueError("Failed to bump chapter hub resource URL")
@@ -64,7 +64,7 @@ def bump_player(source):
 
 
 def bump_sw(source):
-    pattern = r"^(const CACHE=')([^'\\r\\n]+)(';)"
+    pattern = r"^(const CACHE=')([^'\r\n]+)(';)"
     result,n=re.subn(pattern,lambda m:m.group(1)+m.group(2)+'-'+TAG+m.group(3),source,count=1)
     if n!=1:
         raise ValueError("Service worker cache declaration changed")
