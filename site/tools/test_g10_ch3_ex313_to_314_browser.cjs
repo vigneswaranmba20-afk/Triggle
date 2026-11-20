@@ -51,7 +51,10 @@ async function swipeUp(cdp,x,start,end){
     await page.goto(app.base+'/index.html?class=10&question='+id,{waitUntil:'domcontentloaded'});
     await page.locator('#stepsList .structured-equation .triggle-tex').first().waitFor({state:'visible'});
     await page.evaluate(()=>document.fonts.ready);
-    await page.waitForTimeout(40);
+    // Wait until fonts and layout settle; preserve required keyboard scrolling for wide maths.
+    await page.waitForFunction(() => [...document.querySelectorAll('#lessonCard .triggle-tex')]
+      .every(el => el.scrollWidth <= el.clientWidth + 1 || el.tabIndex === 0),
+      null, {timeout: 1800, polling: 'raf'});
     const check=await page.evaluate(id=>{
      const item=window.TRIGGLE_CLASSES?.[10]?.items.find(x=>x.id===id);
      const whole=document.querySelector('#lessonCard');

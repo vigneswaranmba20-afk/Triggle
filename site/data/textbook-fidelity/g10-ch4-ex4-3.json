@@ -1,0 +1,253 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 4,
+  "exercise": "4.3",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "methodology": "2025 PDF extracted text checked for bilingual question wording, page sequence and appendix answers; public 2020 PDF text corroborated the numerical and proof expressions. Figure designs are geometric redrawings, not verified page-image replicas.",
+  "status": "question-text-and-answer-key-checked; visual figure comparison pending",
+  "tamilEditorial": "pending",
+  "items": [
+    {
+      "id": "c10-4-ex4-3-q1",
+      "exercise": "4.3",
+      "number": 1,
+      "textbookPrompt": {
+        "en": "1. A man goes 18 m due east and then 24 m due north. Find the distance of his current position from the starting point?",
+        "ta": "1. ஒரு மனிதன் 18 மீ கிழக்கே சென்று பின்னர் 24 மீ வடக்கே செல்கிறான். தொடக்க நிலையிலிருந்து அவர் இருக்கும் தொலைவைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 187,
+          "pdf": 193
+        },
+        "ta": {
+          "printed": 193,
+          "pdf": 199
+        }
+      },
+      "visualStatus": {
+        "en": "not-page-image-verified",
+        "ta": "not-page-image-verified"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": "30 m",
+      "authoredAnswer": "30 m"
+    },
+    {
+      "id": "c10-4-ex4-3-q2",
+      "exercise": "4.3",
+      "number": 2,
+      "textbookPrompt": {
+        "en": "2. There are two paths that one can choose to go from Sarah’s house to James house. One way is to take C street, and the other way requires to take B street and then A street. How much shorter is the direct path along C street? (Using figure).",
+        "ta": "2. சாராவின் வீட்டிலிருந்து ஜேம்ஸின் வீட்டிற்குச் செல்ல இரண்டு வழிகள் உள்ளன. ஒரு வழி ‘C’ என்ற தெரு வழியாகச் செல்வதாகும். மற்றொரு வழி B மற்றும் A ஆகிய தெருக்கள் வழியாகச் செல்வதாகும். நேரடி பாதை C வழி செல்லும்போது தொலைவு எவ்வளவு குறையும்? (படத்தைப் பயன்படுத்துக)."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 187,
+          "pdf": 193
+        },
+        "ta": {
+          "printed": 193,
+          "pdf": 199
+        }
+      },
+      "visualStatus": {
+        "en": "not-page-image-verified",
+        "ta": "not-page-image-verified"
+      },
+      "figure": {
+        "inTextbooks": true,
+        "asset": "assets/grade10-geometry/ex4-3-q2.svg"
+      },
+      "appendixAnswer": "1 mile",
+      "authoredAnswer": "1 mile shorter"
+    },
+    {
+      "id": "c10-4-ex4-3-q3",
+      "exercise": "4.3",
+      "number": 3,
+      "textbookPrompt": {
+        "en": "3. To get from point A to point B you must avoid walking through a pond. You must walk 34 m south and 41 m east. To the nearest meter, how many meters would be saved if it were possible to make a way through the pond?",
+        "ta": "3. A என்ற புள்ளியில் இருந்து B என்ற புள்ளிக்குச் செல்வதற்கு ஒரு குளம் வழியாக நடந்து செல்ல வேண்டும். குளம் வழியே செல்வதைத் தவிர்க்க 34 மீ தெற்கேயும், 41 மீ கிழக்கு நோக்கியும் நடக்க வேண்டும். குளம் வழியாகச் செல்வதற்குப் பாதை அமைத்து அப்பாதை வழியே சென்றால் எவ்வளவு மீட்டர் தொலைவு சேமிக்கப்படும்?"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 187,
+          "pdf": 193
+        },
+        "ta": {
+          "printed": 193,
+          "pdf": 199
+        }
+      },
+      "visualStatus": {
+        "en": "not-page-image-verified",
+        "ta": "not-page-image-verified"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": "21.74 m",
+      "authoredAnswer": "21.74 m saved (about 22 m to the nearest metre)"
+    },
+    {
+      "id": "c10-4-ex4-3-q4",
+      "exercise": "4.3",
+      "number": 4,
+      "textbookPrompt": {
+        "en": "4. In the rectangle WXYZ, XY + YZ = 17 cm, and XZ + YW = 26 cm. Calculate the length and breadth of the rectangle?",
+        "ta": "4. WXYZ என்ற செவ்வகத்தில், XY + YZ = 17 செ.மீ மற்றும் XZ + YW = 26 செ.மீ எனில் செவ்வகத்தின் நீளம் மற்றும் அகலத்தைக் கணக்கிடுக."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 187,
+          "pdf": 193
+        },
+        "ta": {
+          "printed": 193,
+          "pdf": 199
+        }
+      },
+      "visualStatus": {
+        "en": "not-page-image-verified",
+        "ta": "not-page-image-verified"
+      },
+      "figure": {
+        "inTextbooks": true,
+        "asset": "assets/grade10-geometry/ex4-3-q4.svg"
+      },
+      "appendixAnswer": "12 cm, 5 cm",
+      "authoredAnswer": "Length = 12 cm; breadth = 5 cm"
+    },
+    {
+      "id": "c10-4-ex4-3-q5",
+      "exercise": "4.3",
+      "number": 5,
+      "textbookPrompt": {
+        "en": "5. The hypotenuse of a right triangle is 6 m more than twice of the shortest side. If the third side is 2 m less than the hypotenuse, find the sides of the triangle.",
+        "ta": "5. ஒரு செங்கோண முக்கோணத்தின் கர்ணம் சிறிய பக்கத்தின் 2 மடங்கை விட 6 மீ அதிகம். மேலும் மூன்றாவது பக்கமானது கர்ணத்தை விட 2 மீ குறைவு எனில், முக்கோணத்தின் பக்கங்களைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 187,
+          "pdf": 193
+        },
+        "ta": {
+          "printed": 193,
+          "pdf": 199
+        }
+      },
+      "visualStatus": {
+        "en": "not-page-image-verified",
+        "ta": "not-page-image-verified"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": "10 m, 24 m, 26 m",
+      "authoredAnswer": "10 m, 24 m, 26 m"
+    },
+    {
+      "id": "c10-4-ex4-3-q6",
+      "exercise": "4.3",
+      "number": 6,
+      "textbookPrompt": {
+        "en": "6. 5 m long ladder is placed leaning towards a vertical wall such that it reaches the wall at a point 4 m high. If the foot of the ladder is moved 1.6 m towards the wall, then find the distance by which the top of the ladder would slide upwards on the wall.",
+        "ta": "6. 5 மீ நீளமுள்ள ஓர் ஏணியானது ஒரு செங்குத்து சுவர் மீது சாய்த்து வைக்கப்படுகிறது. ஏணியின் மேல் முனை சுவரை 4 மீ உயரத்தில் தொடுகிறது. ஏணியின் கீழ்முனை சுவரை நோக்கி 1.6 மீ நகர்த்தப்படும்போது, ஏணியின் மேல்முனை சுவரில் எவ்வளவு தொலைவு மேல்நோக்கி நகரும் எனக் கண்டுபிடி."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 188,
+          "pdf": 194
+        },
+        "ta": {
+          "printed": 194,
+          "pdf": 200
+        }
+      },
+      "visualStatus": {
+        "en": "not-page-image-verified",
+        "ta": "not-page-image-verified"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": "0.8 m",
+      "authoredAnswer": "0.8 m upward"
+    },
+    {
+      "id": "c10-4-ex4-3-q7",
+      "exercise": "4.3",
+      "number": 7,
+      "textbookPrompt": {
+        "en": "7. The perpendicular PS on the base QR of a △PQR intersects QR at S, such that QS = 3 SR. Prove that 2PQ² = 2PR² + QR².",
+        "ta": "7. △PQR-இல் அடிப்பக்கம் QR-க்கு செங்குத்தாக உள்ள PS ஆனது QR-ஐ S-இல் சந்திக்கிறது. மேலும் QS = 3SR எனில், 2PQ² = 2PR² + QR² என நிறுவுக."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 188,
+          "pdf": 194
+        },
+        "ta": {
+          "printed": 194,
+          "pdf": 200
+        }
+      },
+      "visualStatus": {
+        "en": "not-page-image-verified",
+        "ta": "not-page-image-verified"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": null,
+      "authoredAnswer": "Proved: 2PQ² = 2PR² + QR²"
+    },
+    {
+      "id": "c10-4-ex4-3-q8",
+      "exercise": "4.3",
+      "number": 8,
+      "textbookPrompt": {
+        "en": "8. In the adjacent figure, ABC is a right angled triangle with right angle at B and points D, E trisect BC. Prove that 8AE² = 3AC² + 5AD².",
+        "ta": "8. படத்தில், செங்கோண முக்கோணம் ABC-இல் கோணம் B ஆனது செங்கோணம் மற்றும் D, E என்ற புள்ளிகள் பக்கம் BC-ஐ மூன்று சமபகுதிகளாக பிரிக்கிறது எனில், 8AE² = 3AC² + 5AD² என நிறுவுக."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 188,
+          "pdf": 194
+        },
+        "ta": {
+          "printed": 194,
+          "pdf": 200
+        }
+      },
+      "visualStatus": {
+        "en": "not-page-image-verified",
+        "ta": "not-page-image-verified"
+      },
+      "figure": {
+        "inTextbooks": true,
+        "asset": "assets/grade10-geometry/ex4-3-q8.svg"
+      },
+      "appendixAnswer": null,
+      "authoredAnswer": "Proved: 8AE² = 3AC² + 5AD²"
+    }
+  ]
+}
