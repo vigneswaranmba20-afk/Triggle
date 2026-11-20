@@ -5262,7 +5262,25 @@ const metadata={
     "c10-5-unit-q7": {"grade":10,"level":"medium","basis":"Build linear price-demand equation from (14, 980) and (16, 1220) to predict at ₹17.","review":"2025-textbook-unit5-source-audit"},
     "c10-5-unit-q8": {"grade":10,"level":"difficult","basis":"Find perpendicular foot M(1, 2) on x + 3y = 7 and double via midpoint to get (−1, −4).","review":"2025-textbook-unit5-source-audit"},
     "c10-5-unit-q9": {"grade":10,"level":"medium","basis":"Find intersection (1/13, 5/13) and impose equal intercepts x + y = a.","review":"2025-textbook-unit5-source-audit"},
-    "c10-5-unit-q10": {"grade":10,"level":"difficult","basis":"Find intersection (−1/17, 22/17) and perpendicular path 7x + 6y + k = 0 to target line.","review":"2025-textbook-unit5-source-audit"}
+    "c10-5-unit-q10": {"grade":10,"level":"difficult","basis":"Find intersection (−1/17, 22/17) and perpendicular path 7x + 6y + k = 0 to target line.","review":"2025-textbook-unit5-source-audit"},
+    "c10-6-ex6-1-q1-i": {"grade":10,"level":"easy","basis":"Convert cot θ and tan θ to sin θ and cos θ and apply sin²θ + cos²θ = 1.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q1-ii": {"grade":10,"level":"easy","basis":"Factor tan²θ and substitute 1 + tan²θ = sec²θ twice.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q2-ii": {"grade":10,"level":"easy","basis":"Multiply by conjugate (1 − sin θ) and simplify using cos²θ = 1 − sin²θ.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q3-i": {"grade":10,"level":"medium","basis":"Rationalise inside the radical by (1 + sin θ) to extract (1 + sin θ)/cos θ.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q3-ii": {"grade":10,"level":"medium","basis":"Rationalise both conjugate radicals over cos θ so ±tan θ terms cancel.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q4-i": {"grade":10,"level":"medium","basis":"Cube sec²θ − tan²θ = 1 and simplify the middle factor.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q4-ii": {"grade":10,"level":"medium","basis":"Expand both squares, group sin²θ + cos²θ = 1, and recognise 2 sec θ cosec θ.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q5-i": {"grade":10,"level":"medium","basis":"Factor 1 − sin⁴θ = cos²θ(1 + sin²θ) and combine with −2 tan²θ.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q5-ii": {"grade":10,"level":"easy","basis":"Factor common cos θ from numerator and denominator of (cot θ ∓ cos θ).","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q6-i": {"grade":10,"level":"medium","basis":"Cross-multiply fractions using (a − b)(a + b) = a² − b² to get 1 − 1 = 0.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q6-ii": {"grade":10,"level":"medium","basis":"Factor sin³A ± cos³A via sum and difference of cubes and cancel denominators.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q7-i": {"grade":10,"level":"medium","basis":"Square sin θ + cos θ = √3 to obtain sin θ cos θ = 1 and substitute into tan θ + cot θ.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q7-ii": {"grade":10,"level":"medium","basis":"Solve tan θ = 1/√3 giving θ = 30° and show both sides are not defined at 3θ = 90°.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q8-i": {"grade":10,"level":"medium","basis":"Substitute m and n in (m² + n²)cos²β and apply sin²β + cos²β = 1.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q8-ii": {"grade":10,"level":"difficult","basis":"Simplify x = sec θ cosec θ and y = sin²θ/cos θ so (x²y)^(2/3) − (xy²)^(2/3) = sec²θ − tan²θ = 1.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q9-i": {"grade":10,"level":"medium","basis":"Express p² − 1 = 2 sin θ cos θ and q = p/(sin θ cos θ) to obtain q(p² − 1) = 2p.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q9-ii": {"grade":10,"level":"difficult","basis":"Convert sin²θ to 1 − cos²θ, square both sides, and expand to the degree-6 cosine polynomial.","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-1-q10": {"grade":10,"level":"medium","basis":"Write a² = (1 + sin θ)/(1 − sin θ) from a = (1 + sin θ)/cos θ and simplify (a² − 1)/(a² + 1).","review":"2025-textbook-ex61-source-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
