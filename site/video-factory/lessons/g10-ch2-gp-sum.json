@@ -7,8 +7,9 @@
   "title": "Why a geometric series cancels itself",
   "subtitle": "Geometric Series · Grade 10",
   "voice": {
-    "model": "gemini-3.1-flash-tts-preview",
-    "name": "Kore"
+    "model": "gemini-3.8-flash-tts",
+    "name": "Fola",
+    "delivery": "Friendly, warm, encouraging mathematics teacher; expressive but never theatrical. Natural neutral English, unhurried and conversational, with gentle pauses after numbers and mathematical reasoning. No background music."
   },
   "beats": [
     {
