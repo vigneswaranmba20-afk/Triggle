@@ -128,6 +128,19 @@ close(ev.thetaDeg,45);close(ev.totalHeight,6.8);
 const dp=M.depression(50*Math.sqrt(3),30);
 close(dp.dist,150);close(dp.wrongWallDist,50);
 
+// Gemini Neon AUD05-01: at 45°, the complementary wall angle equals the horizon angle.
+// Never show a mathematically false inequality; the reference line, not the number, is wrong.
+const depressionLabSource=read('assets/g10-ch6-concepts.js');
+assert(!depressionLabSource.includes('≠ ${angle}°!'),'AUD05-01: false wall/horizon inequality must not return');
+assert(depressionLabSource.includes('Wall angle = ${90-angle}° (from vertical)'),
+  'AUD05-01: distinguish the vertical wall angle from the horizontal depression angle');
+assert(depressionLabSource.includes('Coincides at }45^'),
+  'AUD05-01: 45-degree numerical coincidence must be explained');
+for(const angle of [20,30,40,45,50,60,70]){
+  const complement=90-angle;
+  assert.equal(complement===angle,angle===45,'Complement equals depression only at 45 degrees');
+}
+
 // Two-triangle heights & boats
 const dh=M.combinedTwoTriangles('deck-hill',40,60,30);
 close(dh.x,40*Math.sqrt(3));close(dh.total,160);
