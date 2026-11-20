@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "chapter": 1,
+  "exercise": "1.3",
+  "question": "3",
+  "id": "g12-c1-ex1.3-q3",
+  "medium": "en",
+  "status": "draft_math_checked_source_image_pending",
+  "publishable": false,
+  "source": {
+    "title": "Tamil Nadu SCERT Mathematics Higher Secondary Second Year Volume I revised 2025",
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "printedPage": null,
+    "exerciseHeading": "EXERCISE 1.3",
+    "extraction": "Google Drive PDF text layer; original page image not reviewed",
+    "fidelity": "pending"
+  },
+  "questionTextExtracted": "A man is appointed in a job with a monthly salary of certain amount and a fixed amount of annual increment. If his salary was ₹19,800 per month at the end of the first month after 3 years of service and ₹23,400 per month at the end of the first month after 9 years of service, find his starting salary and his annual increment. (Use matrix inversion method to solve the problem.)",
+  "questionTextExactCertified": false,
+  "variables": {
+    "startingMonthlySalary": "s",
+    "annualIncrement": "d"
+  },
+  "equations": [
+    "s + 3d = 19800",
+    "s + 9d = 23400"
+  ],
+  "steps": [
+    "Let s be the starting monthly salary in rupees and d the fixed annual increment in rupees.",
+    "After three years, s + 3d = 19,800. After nine years, s + 9d = 23,400.",
+    "Write the equations in matrix form: [[1,3],[1,9]] × [s,d]ᵀ = [19800,23400]ᵀ.",
+    "The coefficient matrix has determinant 1×9 − 1×3 = 6, so its inverse exists.",
+    "Its inverse is (1/6) × [[9,−3],[−1,1]].",
+    "Multiplying by the salary vector gives s = (9×19800 − 3×23400)/6 = 18,000 and d = (−19800 + 23400)/6 = 600.",
+    "Check: 18,000 + 3×600 = 19,800 and 18,000 + 9×600 = 23,400."
+  ],
+  "answer": {
+    "startingMonthlySalaryINR": 18000,
+    "annualIncrementINR": 600
+  },
+  "validation": {
+    "method": "SymPy solve and determinant, independently executed 2026-11-09",
+    "determinant": 6,
+    "equationsSatisfied": true
+  },
+  "tamil": {
+    "status": "pending_source_and_editorial_review"
+  },
+  "figuresPending": 0,
+  "releaseBlockers": [
+    "Verify original printed question page image and wording before source certification",
+    "Run repository required CI before publishing",
+    "Check duplicate IDs against full Grade 12 inventory"
+  ]
+}

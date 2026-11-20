@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "exercise": "1.8",
+  "question": "20",
+  "date": "2026-11-10",
+  "source": {
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "printedPage": 50,
+    "textLayerInspected": true,
+    "pageImageInspected": false
+  },
+  "status": "conditional-mathematical-audit-not-source-certified",
+  "sourceTextExtractedReadableStatements": [
+    "(i) Adjoint of a symmetric matrix is also a symmetric matrix.",
+    "(ii) Adjoint of a diagonal matrix is also a diagonal matrix."
+  ],
+  "statementIII": "Uncertified: exponent on scalar in adjugate identity is corrupted in extraction.",
+  "statementIV": "Uncertified: matrix identity corrupted in extraction.",
+  "proofs": [
+    {
+      "statement": "i",
+      "reasoning": [
+        "Let A be symmetric: A^T=A.",
+        "The adjugate satisfies adj(A^T)=adj(A)^T for every square matrix.",
+        "Therefore adj(A)^T=adj(A^T)=adj(A), so adj(A) is symmetric."
+      ],
+      "result": true
+    },
+    {
+      "statement": "ii",
+      "reasoning": [
+        "For diagonal A, each off-diagonal cofactor is zero, because the corresponding minor has a zero row or column.",
+        "Thus the cofactor matrix and its transpose adj(A) are diagonal."
+      ],
+      "result": true
+    }
+  ],
+  "verification": {
+    "method": "symbolic matrix identities; statements (i),(ii) valid for square matrices, including singular cases",
+    "exactQuestionCertified": false,
+    "certifiedNewQuestions": 0,
+    "certifiedNewSubparts": 0,
+    "publishedSolutions": 0,
+    "tamilCertified": 0,
+    "duplicateIdCheck": "identifier g12-ex1.8-q20 already inventoried; this file is audit only, not a second registered question",
+    "mandatoryCI": "not run; unpublished audit"
+  },
+  "publicationAllowed": false,
+  "nextBatch": "Inspect page 50 image and answer appendix to certify statements (iii),(iv) and four options; only then produce full Q20 answer."
+}

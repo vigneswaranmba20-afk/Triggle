@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Triggle Grade 12 — Inverse method laboratory</title>
+<style>body{font:1rem/1.6 system-ui,sans-serif;max-width:760px;margin:auto;padding:1rem;background:#f4f8fb;color:#18313b}main{background:white;padding:1.5rem;border-radius:1rem}label{display:inline-block;margin:.5rem}input{width:4.5rem;font:inherit;padding:.4rem}button{font:inherit;padding:.6rem;border:2px solid #176a75;background:white;border-radius:.5rem}button:focus-visible,input:focus-visible{outline:3px solid #e69b21;outline-offset:2px}output{display:block;white-space:pre-wrap;margin-top:1rem;background:#edf6f8;padding:1rem}small{color:#435d66}</style></head><body><main>
+<h1>Inverse matrix method / நேர்மாறு அணி முறை</h1>
+<p>This is a <strong>supplementary practice calculator</strong>, not a transcription or completed answer for Exercise 1.1 Q2(i). Its textbook matrix entries are still awaiting visual source verification.</p>
+<p lang="ta">இது கூடுதல் பயிற்சிக்கான கணிப்பான் மட்டுமே. பயிற்சி 1.1 வினா 2(i)-இன் பாடநூல் அணியைப் படத்துடன் சரிபார்த்த பிறகே அசல் வினா மற்றும் விடை வெளியிடப்படும்.</p>
+<form id="matrix-form"><fieldset><legend>Enter your own 2×2 matrix / 2×2 அணியை உள்ளிடுக</legend>
+<label>a <input id="a" type="number" step="1" value="2" required></label>
+<label>b <input id="b" type="number" step="1" value="1" required></label>
+<label>c <input id="c" type="number" step="1" value="3" required></label>
+<label>d <input id="d" type="number" step="1" value="2" required></label></fieldset>
+<button type="submit">Explain inverse / நேர்மாறை விளக்குக</button></form>
+<output id="result" aria-live="polite"></output>
+<p><small>2025 revised English Volume I, printed p.15/PDF p.23; Tamil Volume I, printed p.16/PDF p.24. These pages establish the next exercise location only, not the matrix used in this supplementary calculator. Tamil human editorial review pending.</small></p>
+</main><script>
+'use strict';
+function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){const r=a%b;a=b;b=r;}return a||1;}
+function fraction(n,d){if(d<0){n=-n;d=-d;}const g=gcd(n,d);return d/g===1?String(n/g):n/g+'/'+d/g;}
+function inverseSteps(a,b,c,d){
+ if(![a,b,c,d].every(Number.isSafeInteger))return 'Enter safe integers / முழு எண்களை உள்ளிடுக';
+ const ad=a*d, bc=b*c;
+ if(!Number.isSafeInteger(ad)||!Number.isSafeInteger(bc))return 'Integer overflow: use smaller entries. / சிறிய முழு எண்களை உள்ளிடுக.';
+ const det=ad-bc;
+ if(!Number.isSafeInteger(det))return 'Integer overflow: use smaller entries. / சிறிய முழு எண்களை உள்ளிடுக.';
+ const prefix='A = ['+a+' '+b+'; '+c+' '+d+']\ndet(A) = ('+a+' × '+d+') − ('+b+' × '+c+') = '+det+'\nஅணிக்கோவை det(A) = '+det+'\n';
+ if(det===0)return prefix+'det(A)=0, so A is singular and has no inverse.\n|A|=0; நேர்மாறு அணி இல்லை.';
+ const adj=[d,-b,-c,a];
+ return prefix+'adj(A) = ['+adj[0]+' '+adj[1]+'; '+adj[2]+' '+adj[3]+']\nA⁻¹ = adj(A)/det(A) = ['+adj.map(v=>fraction(v,det)).join(' ').replace(/^([^ ]+) ([^ ]+) ([^ ]+) ([^ ]+)$/,'$1 $2; $3 $4')+']\nCheck: A × adj(A) = ['+det+' 0; 0 '+det+'] = det(A)I₂.\nCheck: adj(A) × A = ['+det+' 0; 0 '+det+'] = det(A)I₂.\nTherefore A × A⁻¹ = A⁻¹ × A = I₂.\nசரிபார்ப்பு: A × adj(A) = adj(A) × A = det(A)I₂.\nஎனவே A × A⁻¹ = A⁻¹ × A = I₂.';
+}
+document.getElementById('matrix-form').addEventListener('submit',e=>{e.preventDefault();const raw=['a','b','c','d'].map(id=>document.getElementById(id).value.trim());if(raw.some(value=>value===''||!/^[+-]?\d+$/.test(value))){document.getElementById('result').textContent='Enter four whole-number entries / நான்கு முழு எண்களை உள்ளிடுக.';return;}const values=raw.map(Number);document.getElementById('result').textContent=inverseSteps(...values);});
+</script></body></html>
