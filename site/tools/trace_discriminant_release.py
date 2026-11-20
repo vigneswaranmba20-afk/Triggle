@@ -73,12 +73,14 @@ def bump_player(source):
 
 
 def bump_sw(source):
-    pattern = r"^(const CACHE=')([^'\r\n]+)(';)"
-    result,n=re.subn(pattern,lambda m:m.group(1)+m.group(2)+'-'+TAG+m.group(3),source,count=1)
+    # Keep the established Grade 9 and G.P. cache suffix intact: earlier
+    # chapter gates deliberately require it at the very end of CACHE.
+    suffix = '-gpfola-v2-fa50e19c-g9ex32'
+    pattern = r"^(const CACHE=')([^'\r\n]*?)(-gpfola-v2-fa50e19c-g9ex32)(';)"
+    result,n=re.subn(pattern,lambda m:m.group(1)+m.group(2)+'-'+TAG+m.group(3)+m.group(4),source,count=1)
     if n!=1:
-        raise ValueError("Service worker cache declaration changed")
+        raise ValueError("Service worker cache signature changed; manual reconciliation required")
     return result
-
 
 def update_site(root,url):
     root=Path(root)

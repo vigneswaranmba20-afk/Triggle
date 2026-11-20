@@ -14,6 +14,30 @@ from trace_discriminant_release import (
 )
 PUBLIC_URL="https://"+PUBLIC_HOST+OBJECT_PATH
 
+def prerelease_text(rel):
+    """Construct a pristine fixture from either pre- or post-release sources.
+
+    Exact approved tokens only: never strip unrelated chapter changes.
+    Also assert already-released sources still have precisely the approved URL.
+    """
+    source=(ROOT/rel).read_text(encoding="utf-8")
+    if rel=="site/data/g10-ch3-concepts.js":
+        marker='\n      "video": {"src": "'+PUBLIC_URL+'", "language": "en", "durationSeconds": 152.44},'
+        if '"id": "'+LESSON+'",\n      "video": ' in source:
+            assert source.count(marker)==1, "Only exact approved Discriminant media may be present"
+            source=source.replace(marker,'',1)
+    elif rel=="site/index.html":
+        marker='&discriminant-fola=4c692aa7'
+        if marker in source:
+            assert source.count(marker)==2, "Both concept and player cache-bust tokens are required"
+            source=source.replace(marker,'')
+    elif rel=="site/service-worker.js":
+        marker='-'+TAG
+        if marker in source:
+            assert source.count(marker)==1, "One exact service-worker revision required"
+            source=source.replace(marker,'',1)
+    return source
+
 
 class DiscriminantReleaseTests(unittest.TestCase):
     def test_pinned_media_fingerprint_and_url(self):
@@ -32,8 +56,11 @@ class DiscriminantReleaseTests(unittest.TestCase):
 
     def test_only_discriminant_concept_receives_media(self):
         path=ROOT/"site/data/g10-ch3-concepts.js"
-        original=path.read_text(encoding="utf-8")
+        original=prerelease_text("site/data/g10-ch3-concepts.js")
         updated=register_concept(original,PUBLIC_URL)
+        current=path.read_text(encoding="utf-8")
+        if '"video": ' in current[current.index('"id": "'+LESSON+'"'):][:180]:
+            self.assertEqual(current,updated)
         expected='"id": "'+LESSON+'",\n      "video": '
         self.assertIn(expected,updated)
         self.assertIn('"durationSeconds": 152.44',updated)
@@ -52,16 +79,23 @@ class DiscriminantReleaseTests(unittest.TestCase):
         self.assertIn("url.protocol!=='https:'",player)
 
     def test_loader_and_sw_bump_are_isolated(self):
-        html=(ROOT/"site/index.html").read_text(encoding="utf-8")
-        sw=(ROOT/"site/service-worker.js").read_text(encoding="utf-8")
+        html=prerelease_text("site/index.html")
+        sw=prerelease_text("site/service-worker.js")
         html2=bump_player(bump_loader(html))
         sw2=bump_sw(sw)
         self.assertIn("&discriminant-fola=4c692aa7",html2)
         self.assertIn("g10-ch3-concepts.js?v=g10-ch3-concepts-20261119-1&discriminant-fola=4c692aa7",html2)
         self.assertIn("-"+TAG,sw2)
         self.assertIn("gpfola-v2-fa50e19c",sw2)
+        self.assertRegex(sw2, r"^const CACHE='triggle-[^']+-gpfola-v2-fa50e19c-g9ex32'")
         self.assertIn("g10geom-ex43",sw2)
         self.assertNotEqual(html,html2)
+        released_html=(ROOT/"site/index.html").read_text(encoding="utf-8")
+        released_sw=(ROOT/"site/service-worker.js").read_text(encoding="utf-8")
+        if "&discriminant-fola=4c692aa7" in released_html:
+            self.assertEqual(html2,released_html)
+        if "-"+TAG in released_sw:
+            self.assertEqual(sw2,released_sw)
 
     def test_combined_release_never_changes_unrelated_files(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -69,7 +103,7 @@ class DiscriminantReleaseTests(unittest.TestCase):
             for rel in ("site/data/g10-ch3-concepts.js","site/index.html","site/service-worker.js"):
                 dest=root/rel
                 dest.parent.mkdir(parents=True,exist_ok=True)
-                dest.write_bytes((ROOT/rel).read_bytes())
+                dest.write_text(prerelease_text(rel),encoding="utf-8")
             before={p:p.read_bytes() for p in root.rglob("*") if p.is_file()}
             changed=update_site(root,PUBLIC_URL)
             self.assertEqual(set(changed),set(
