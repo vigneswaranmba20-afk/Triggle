@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "b012b10655cdb273c30c582c36d6e7380e53e826",
-  "updatedAt": "2026-11-20T13:32:34+00:00",
+  "sourceCommit": "b2444ac7cd2fb62131d5ff76e348a695e3db5193",
+  "updatedAt": "2026-11-20T19:15:41+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -27,7 +27,7 @@
     "site/data/g10-ch2-concepts.js": "177b89ba3d4873436848e72ea3dc8d6aa479767f2e49f6ef9a747bf513f212d6",
     "site/data/g10-ch2-teaching-bridges.js": "4a968e6a6b1eeb90908670f83b3407cc9217116425d55e7071325cf4992d6b7e",
     "site/data/g10-ch3-concepts.js": "afb35fc167c809d8867d989d3fe03a9fc191df68b397c03170a5b759d0b0fe3e",
-    "site/data/g10-ch4-concepts.js": "bf4acd546e0a0562bbb523910da9e3a303a06745db699c0fe93b12472314a78d",
+    "site/data/g10-ch4-concepts.js": "c1000a61c306ab7ad3b5dd9e496997d3ee39cdb98423b8973adc9f094f2a5419",
     "site/data/g10-ch5-concepts.js": "396d00c0841797a1d8859690eeab7623a6ffb9a670bf0d6b303a8663c7ee9d18",
     "site/data/g10-ch6-concepts.js": "40d4fc35a81f06b8beedd11ceed7d426f36446c837086d4e902f97b61837e5f7",
     "site/data/g9-clear-math.js": "e3e81e52c17d560a24e642ff69cd7ba35037336891b9b89bedcba3f889ff8f59",
@@ -131,7 +131,7 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9.js": "ed93ba751d971497a7143086e80e307c035724d9ec062d26343a088416369d85",
-    "site/index.html": "b05c11fb535bb1a47a52c8bfc24c1fac2f6ec138ce2e024348a7a1bdd6a9fb63",
+    "site/index.html": "a1ee5bb01973c9adb8650bcdf4a6e5c9ea1f30f97f677a09db2fb22d3b60967f",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
