@@ -112,7 +112,7 @@ for(const key of ["'union'","'intersection'","'difference'","'complement'","'sym
   assert(engine.includes("key:"+key),'The '+key+' operation has a real control');
 assert(engine.includes('min-height')===false || engine.includes('sp2-venn-controls'),
   'Operation controls are distinct from existing lesson controls');
-assert(source.includes('A Δ B')&&source.includes('A′'),
+assert(engine.includes('A Δ B')&&engine.includes('A′'),
   'Complement and symmetric difference must be explicitly taught before paper practice');
 const u=[1,2,3,4,5,6,7],left=new Set([1,2,3,5]),right=new Set([3,4,5,6]);
 const stringify=rule=>'{'+u.filter(rule).join(', ')+'}';
