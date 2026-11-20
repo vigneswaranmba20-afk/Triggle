@@ -127,4 +127,22 @@ assert.match(venCss,/\.sp2-venn-controls button\{[^}]*min-height:44px/s,
 assert.match(venCss,/\.sp2-venn-svg\{[^}]*width:100%/s,
   'The inline diagram must fit narrow mobile screens');
 
+
+// AUD01-02: first-screen cardinality context, correct numerical notation,
+// complete three-set bridge, and a safely formatted sum of four regions.
+assert(engine.includes('sp2-count-givens')&&engine.includes("'n(U)=30','n(A)=14','n(B)=11'"),
+ 'All given group sizes appear before the overlap control');
+assert(engine.includes('n(A\\\\cup B)=14+11-')&&
+       engine.includes('n((A\\\\cup B)^{\\\\prime})=30-'),
+ 'Both languages must write n(set) = number, never set = number');
+assert(!engine.includes("latex:'A\\\\text{ or }B="),
+ 'Legacy set-equals-number notation is not permitted');
+assert(engine.includes('sp2-count-three-bridge')&&engine.includes('n(A\\\\cup B\\\\cup C)'),
+ 'Three-set inclusion-exclusion is explained before the second practice item');
+assert(engine.includes("latex:'8+6+5+11=30'"),
+ 'Reasoning uses explicit mathematical sum rather than malformed 11sum text');
+assert.equal(14+11-6,19);
+assert.equal(30-19,11);
+assert.equal(21+18+17-7-6-5+2,40);
+
 console.log('PASS: seven bilingual Grade 9 sections, page crosswalk, arithmetic, offline delivery and staged advanced reasoning');
