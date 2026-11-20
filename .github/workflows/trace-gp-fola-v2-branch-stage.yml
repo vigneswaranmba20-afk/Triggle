@@ -1,0 +1,94 @@
+name: TRACE G.P. Fola v2 exact reviewed media — R2 stage only
+on:
+  push:
+    branches:
+      - video/gp-fola-v2-exact-stage-20261120
+    paths:
+      - build/trace-video/staged/g10-ch2-gp-sum-fola-v2.mp4
+      - .github/workflows/trace-gp-fola-v2-branch-stage.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trace-gp-fola-v2-exact-stage
+  cancel-in-progress: false
+
+jobs:
+  stage:
+    name: Verify owner-reviewed SHA and stage immutable R2 asset
+    if: ${{ github.repository == 'vigneswaranmba20-afk/Triggle' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      LESSON: g10-ch2-gp-sum
+      MP4: build/trace-video/staged/g10-ch2-gp-sum-fola-v2.mp4
+      SHA: fa50e19cc4795e55839fedd37a9cb49bff499bbf05ad7ffc6d2772ef9f981977
+      BYTES: '2725750'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify exact approved media and preserve the existing live lesson
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s "$MP4"
+          echo "$SHA  $MP4" | sha256sum -c -
+          test "$(stat -c %s "$MP4")" = "$BYTES"
+          grep -q 'b89073380f066247805c5b1ba5def43522c6424c36d731bc26973120c5438ab3.mp4' site/data/g10-ch2-concepts.js
+          sudo apt-get update -qq
+          sudo apt-get install -qq -y ffmpeg
+          python3 - <<'PY'
+          import json,os,subprocess
+          path=os.environ["MP4"]
+          obj=json.loads(subprocess.check_output([
+              "ffprobe","-v","error","-show_entries",
+              "format=duration,size:stream=codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels",
+              "-of","json",path]))
+          assert int(obj["format"]["size"])==int(os.environ["BYTES"])
+          assert abs(float(obj["format"]["duration"])-108.62)<.15
+          assert any(s.get("codec_type")=="video" and s.get("codec_name")=="h264"
+              and s.get("width")==720 and s.get("height")==1280
+              and s.get("r_frame_rate")=="12/1" for s in obj["streams"])
+          assert any(s.get("codec_type")=="audio" and s.get("codec_name")=="aac"
+              and s.get("channels")==1 for s in obj["streams"])
+          print("PASS: exact reviewed 108.62-second nine-scene video")
+          PY
+          ffmpeg -hide_banner -loglevel error -i "$MP4" -f null -
+
+      - name: Upload immutable Cloudflare R2 key, verify HEAD and public byte range
+        shell: bash
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+        run: |
+          set -euo pipefail
+          for v in R2_ACCOUNT_ID R2_BUCKET R2_PUBLIC_BASE_URL AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY; do
+            test -n "${!v}" || { echo "Missing preconfigured R2 secret: ${v}"; exit 1; }
+          done
+          [[ "${R2_ACCOUNT_ID}" =~ ^[0-9a-f]{32}$ ]]
+          [[ "${R2_PUBLIC_BASE_URL}" == https://* ]]
+          if ! command -v aws >/dev/null; then python3 -m pip install --quiet awscli; fi
+          KEY="trace-videos/${LESSON}/${SHA}.mp4"
+          ENDPOINT="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+          aws --endpoint-url "$ENDPOINT" s3 cp "$MP4" "s3://${R2_BUCKET}/${KEY}" --content-type video/mp4 --no-progress
+          OBJECT_BYTES="$(aws --endpoint-url "$ENDPOINT" s3api head-object --bucket "$R2_BUCKET" --key "$KEY" --query ContentLength --output text)"
+          test "$OBJECT_BYTES" = "$BYTES"
+          URL="${R2_PUBLIC_BASE_URL%/}/${KEY}"
+          curl --fail --silent --show-error --location --retry 2 --max-time 90 --range 0-1023 "$URL" -o /tmp/gp-reviewed-v2-public-range
+          cmp -n 1024 "$MP4" /tmp/gp-reviewed-v2-public-range
+          {
+            echo '### Reviewed G.P. Fola v2 staged — NOT LIVE'
+            echo ''
+            echo "SHA-256: \`$SHA\`"
+            echo ''
+            echo "Staged video URL: $URL"
+            echo ''
+            echo 'Existing 93-second student-facing video was not changed.'
+            echo 'No Gemini or OpenAI model API calls were made.'
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo 'PASS exact owner-reviewed MP4 staged to Cloudflare R2; live Triggle unchanged.'
