@@ -181,13 +181,57 @@ def build_speech_prompt(text, delivery=DEFAULT_VOICE_DELIVERY):
             + delivery + " Do not read instructions. Spoken passage:\n" + text)
 
 
+def _tts_request(text, model, voice, delivery):
+    """Gemini 3.8 uses the Interactions API; legacy models keep their old API.
+
+    The 3.8 model treats the text as a *verbatim* transcript, so style belongs
+    in speech metadata. Do not include narration directions in spoken text.
+    """
+    build_speech_prompt(text, delivery)  # Validate before entering either provider path.
+    if model.startswith('gemini-3.8-'):
+        payload = {
+          'model': model,
+          'store': False,
+          'input': [{
+            'type': 'user_input',
+            'content': [{
+              'type': 'text', 'text': text,
+              'annotations': [{'type':'speech_metadata', 'style': delivery}]
+            }]
+          }],
+          'response_format': {'type':'audio', 'mime_type':'audio/wav'},
+          'generation_config': {'speech_config': [{'voice':voice}]}
+        }
+        return 'https://generativelanguage.googleapis.com/v1beta/interactions',payload
+    prompt = build_speech_prompt(text, delivery)
+    payload = {'contents':[{'parts':[{'text':prompt}]}],
+      'generationConfig': {'responseModalities':['AUDIO'],
+        'speechConfig': {'voiceConfig': {'prebuiltVoiceConfig':{'voiceName':voice}}}}}
+    return ('https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent',payload)
+
+
+def _tts_audio_payload(result,model):
+    """Extract only base64 audio from well-formed provider responses."""
+    if model.startswith('gemini-3.8-'):
+        if result.get('status') != 'completed':
+            raise RuntimeError('Gemini Interactions audio response did not complete')
+        for step in reversed(result.get('steps', [])):
+            if step.get('type') != 'model_output':
+                continue
+            for part in step.get('content', []):
+                if part.get('type') == 'audio' and isinstance(part.get('data'), str):
+                    return {'data':part['data'], 'mimeType':part.get('mime_type','audio/wav')}
+        raise RuntimeError('Gemini Interactions returned no audio')
+    parts=result['candidates'][0]['content']['parts']
+    audio=next((part['inlineData'] for part in parts if 'inlineData' in part),None)
+    if audio is None: raise RuntimeError('Gemini returned no audio')
+    return audio
+
+
+
 def gemini_audio(text, path, model, voice, api_key, delivery):
     global LAST_GEMINI_REQUEST_AT
-    prompt = build_speech_prompt(text, delivery)
-    payload = {"contents":[{"parts":[{"text":prompt}]}],
-      "generationConfig":{"responseModalities":["AUDIO"],
-        "speechConfig":{"voiceConfig":{"prebuiltVoiceConfig":{"voiceName":voice}}}}}
-    url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent'
+    url, payload = _tts_request(text, model, voice, delivery)
     raw = json.dumps(payload).encode('utf8')
     last_status = None
     max_attempts = 4
@@ -202,9 +246,7 @@ def gemini_audio(text, path, model, voice, api_key, delivery):
             request = urllib.request.Request(url, raw, headers={'Content-Type':'application/json','x-goog-api-key':api_key}, method='POST')
             with urllib.request.urlopen(request, timeout=160) as response:
                 result = json.load(response)
-            parts = result['candidates'][0]['content']['parts']
-            audio = next((p['inlineData'] for p in parts if 'inlineData' in p), None)
-            if not audio: raise RuntimeError('TTS returned no audio data')
+            audio = _tts_audio_payload(result, model)
             data = base64.b64decode(audio['data'], validate=True)
             mime = audio.get('mimeType', 'audio/L16').lower()
             if len(data) < 2400: raise RuntimeError('Generated audio unexpectedly short')
