@@ -1,0 +1,275 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 5,
+  "exercise": "5.1",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "methodology": "Visually inspected rendered 2025 English PDF pages 217–218 (printed pp. 211–212) and Answer Appendix PDF page 346 (printed p. 340), plus 2025 Tamil PDF pages 224–225 (printed pp. 218–219) and Answer Appendix PDF pages 360–361 (printed pp. 354–355). Coordinate diagrams in site/assets/grade10-ch5/ are original accessible vector SVG constructions.",
+  "status": "page-visual-checked",
+  "tamilEditorial": "pending",
+  "items": [
+    {
+      "id": "c10-5-ex5-1-q1-i",
+      "exercise": "5.1",
+      "questionNumber": 1,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "1. Find the area of the triangle formed by the points\n(i) (1, −1), (−4, 6) and (−3, −5)",
+        "ta": "1. கீழ்க்காணும் புள்ளிகளால் அமைக்கப்படும் முக்கோணத்தின் பரப்பு காண்க.\n(i) (1, −1), (−4, 6) மற்றும் (−3, −5)"
+      },
+      "sourcePages": { "en": { "printed": 211, "pdf": 217 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "24 sq. units", "ta": "24 ச. அ" }
+    },
+    {
+      "id": "c10-5-ex5-1-q1-ii",
+      "exercise": "5.1",
+      "questionNumber": 1,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "1. Find the area of the triangle formed by the points\n(ii) (−10, −4), (−8, −1) and (−3, −5)",
+        "ta": "1. கீழ்க்காணும் புள்ளிகளால் அமைக்கப்படும் முக்கோணத்தின் பரப்பு காண்க.\n(ii) (−10, −4), (−8, −1) மற்றும் (−3, −5)"
+      },
+      "sourcePages": { "en": { "printed": 211, "pdf": 217 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "11.5 sq. units", "ta": "11.5 ச. அ" }
+    },
+    {
+      "id": "c10-5-ex5-1-q2-i",
+      "exercise": "5.1",
+      "questionNumber": 2,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "2. Determine whether the sets of points are collinear?\n(i) (−1/2, 3), (−5, 6) and (−8, 8)",
+        "ta": "2. கீழ்க்காணும் புள்ளிகள் ஒரே நேர்க்கோட்டில் அமையுமா எனத் தீர்மானிக்கவும்.\n(i) (−1/2, 3), (−5, 6) மற்றும் (−8, 8)"
+      },
+      "sourcePages": { "en": { "printed": 211, "pdf": 217 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "collinear", "ta": "ஒரு கோடமை" }
+    },
+    {
+      "id": "c10-5-ex5-1-q2-ii",
+      "exercise": "5.1",
+      "questionNumber": 2,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "2. Determine whether the sets of points are collinear?\n(ii) (a, b+c), (b, c+a) and (c, a+b)",
+        "ta": "2. கீழ்க்காணும் புள்ளிகள் ஒரே நேர்க்கோட்டில் அமையுமா எனத் தீர்மானிக்கவும்.\n(ii) (a, b+c), (b, c+a) மற்றும் (c, a+b)"
+      },
+      "sourcePages": { "en": { "printed": 211, "pdf": 217 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "collinear", "ta": "ஒரு கோடமை" }
+    },
+    {
+      "id": "c10-5-ex5-1-q3-i",
+      "exercise": "5.1",
+      "questionNumber": 3,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "3. Vertices of given triangles are taken in order and their areas are provided aside. In each case, find the value of ‘p’.\n(i) Vertices: (0, 0), (p, 8), (6, 2); Area (sq.units): 20",
+        "ta": "3. வரிசையில் அமைந்த முக்கோணத்தின் முனைப் புள்ளிகளும், அதன் பரப்பளவுகளும் அட்டவணையில் கொடுக்கப்பட்டுள்ளன. ‘p’-யின் மதிப்பைக் காண்க.\n(i) முனைப் புள்ளிகள்: (0, 0), (p, 8), (6, 2); பரப்பு (சதுர அலகில்): 20"
+      },
+      "sourcePages": { "en": { "printed": 211, "pdf": 217 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "44", "ta": "44" }
+    },
+    {
+      "id": "c10-5-ex5-1-q3-ii",
+      "exercise": "5.1",
+      "questionNumber": 3,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "3. Vertices of given triangles are taken in order and their areas are provided aside. In each case, find the value of ‘p’.\n(ii) Vertices: (p, p), (5, 6), (5, −2); Area (sq.units): 32",
+        "ta": "3. வரிசையில் அமைந்த முக்கோணத்தின் முனைப் புள்ளிகளும், அதன் பரப்பளவுகளும் அட்டவணையில் கொடுக்கப்பட்டுள்ளன. ‘p’-யின் மதிப்பைக் காண்க.\n(ii) முனைப் புள்ளிகள்: (p, p), (5, 6), (5, −2); பரப்பு (சதுர அலகில்): 32"
+      },
+      "sourcePages": { "en": { "printed": 211, "pdf": 217 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "13", "ta": "13" }
+    },
+    {
+      "id": "c10-5-ex5-1-q4-i",
+      "exercise": "5.1",
+      "questionNumber": 4,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "4. In each of the following, find the value of ‘a’ for which the given points are collinear.\n(i) (2, 3), (4, a) and (6, −3)",
+        "ta": "4. கொடுக்கப்பட்ட புள்ளிகள் ஒரு கோட்டில் அமைந்தவை எனில், ‘a’-யின் மதிப்பைக் காண்க.\n(i) (2, 3), (4, a) மற்றும் (6, −3)"
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "0", "ta": "0" }
+    },
+    {
+      "id": "c10-5-ex5-1-q4-ii",
+      "exercise": "5.1",
+      "questionNumber": 4,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "4. In each of the following, find the value of ‘a’ for which the given points are collinear.\n(ii) (a, 2−2a), (−a+1, 2a) and (−4−a, 6−2a)",
+        "ta": "4. கொடுக்கப்பட்ட புள்ளிகள் ஒரு கோட்டில் அமைந்தவை எனில், ‘a’-யின் மதிப்பைக் காண்க.\n(ii) (a, 2−2a), (−a+1, 2a) மற்றும் (−4−a, 6−2a)"
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "1/2 or −1", "ta": "1/2 அல்லது −1" }
+    },
+    {
+      "id": "c10-5-ex5-1-q5-i",
+      "exercise": "5.1",
+      "questionNumber": 5,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "5. Find the area of the quadrilateral whose vertices are at\n(i) (−9, −2), (−8, −4), (2, 2) and (1, −3)",
+        "ta": "5. கொடுக்கப்பட்ட புள்ளிகளை முனைகளாகக் கொண்ட நாற்கரத்தின் பரப்பைக் காண்க.\n(i) (−9, −2), (−8, −4), (2, 2) மற்றும் (1, −3)"
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": "assets/grade10-ch5/ex5-1-q5-i.svg" },
+      "appendixAnswer": { "en": "35 sq. units", "ta": "35 ச. அ" }
+    },
+    {
+      "id": "c10-5-ex5-1-q5-ii",
+      "exercise": "5.1",
+      "questionNumber": 5,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "5. Find the area of the quadrilateral whose vertices are at\n(ii) (−9, 0), (−8, 6), (−1, −2) and (−6, −3)",
+        "ta": "5. கொடுக்கப்பட்ட புள்ளிகளை முனைகளாகக் கொண்ட நாற்கரத்தின் பரப்பைக் காண்க.\n(ii) (−9, 0), (−8, 6), (−1, −2) மற்றும் (−6, −3)"
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": "assets/grade10-ch5/ex5-1-q5-ii.svg" },
+      "appendixAnswer": { "en": "34 sq. units", "ta": "34 ச. அ" }
+    },
+    {
+      "id": "c10-5-ex5-1-q6",
+      "exercise": "5.1",
+      "questionNumber": 6,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "6. Find the value of k, if the area of a quadrilateral is 28 sq.units, whose vertices are taken in the order (−4, −2), (−3, k), (3, −2) and (2, 3)",
+        "ta": "6. (−4, −2), (−3, k), (3, −2) மற்றும் (2, 3) ஆகிய முனைகளை வரிசையாகக் கொண்ட நாற்கரத்தின் பரப்பு 28 ச. அலகுகள் எனில், k-யின் மதிப்புக் காண்க."
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "−5", "ta": "−5" }
+    },
+    {
+      "id": "c10-5-ex5-1-q7",
+      "exercise": "5.1",
+      "questionNumber": 7,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "7. If the points A(−3, 9), B(a, b) and C(4, −5) are collinear and if a + b = 1, then find a and b.",
+        "ta": "7. A(−3, 9), B(a, b) மற்றும் C(4, −5) என்பன ஒரு கோடமைந்த புள்ளிகள் மற்றும் a + b = 1 எனில், a மற்றும் b-யின் மதிப்பைக் காண்க."
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "2, −1", "ta": "2, −1" }
+    },
+    {
+      "id": "c10-5-ex5-1-q8",
+      "exercise": "5.1",
+      "questionNumber": 8,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "8. Let P(11, 7), Q(13.5, 4) and R(9.5, 4) be the midpoints of the sides AB, BC and AC respectively of ΔABC. Find the coordinates of the vertices A, B and C. Hence find the area of ΔABC and compare this with area of ΔPQR.",
+        "ta": "8. ΔABC-யின் பக்கங்கள் AB, BC மற்றும் AC ஆகியவற்றின் நடுப்புள்ளிகள் முறையே P(11, 7), Q(13.5, 4) மற்றும் R(9.5, 4) என்க. முக்கோணத்தின் முனைப் புள்ளிகள் A, B மற்றும் C காண்க. மேலும், ΔABC-யின் பரப்பை ΔPQR-யின் பரப்புடன் ஒப்பிடுக."
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 218, "pdf": 224 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": "assets/grade10-ch5/ex5-1-q8.svg" },
+      "appendixAnswer": { "en": "24 sq. units, area(ΔABC) = 4 × area(ΔPQR)", "ta": "24 ச.அ, ΔABC-யின் பரப்பு = 4 × (ΔPQR)-யின் பரப்பு" }
+    },
+    {
+      "id": "c10-5-ex5-1-q9",
+      "exercise": "5.1",
+      "questionNumber": 9,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "9. In the figure, the quadrilateral swimming pool shown is surrounded by concrete patio. Find the area of the patio.",
+        "ta": "9. நாற்கர வடிவ நீச்சல் குளத்தின் கான்கிரீட் உள்முற்றமானது படத்தில் காட்டியுள்ளபடி அமைக்கப்பட்டுள்ளது எனில், உள்முற்றத்தின் பரப்பு காண்க."
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 219, "pdf": 225 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": true, "asset": "assets/grade10-ch5/ex5-1-q9.svg" },
+      "appendixAnswer": { "en": "122 sq.units", "ta": "122 ச. அ" }
+    },
+    {
+      "id": "c10-5-ex5-1-q10",
+      "exercise": "5.1",
+      "questionNumber": 10,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "10. A triangular shaped glass with vertices at A(−5, −4), B(1, 6) and C(7, −4) has to be painted. If one bucket of paint covers 6 square feet, how many buckets of paint will be required to paint the whole glass, if only one coat of paint is applied.",
+        "ta": "10. A(−5, −4), B(1, 6) மற்றும் C(7, −4) ஆகியவற்றை முனைப் புள்ளிகளாகக் கொண்ட முக்கோண வடிவக் கண்ணாடிக்கு வர்ணம் பூசப்படுகிறது. 6 சதுர அடி பரப்புக்கு வர்ணம் பூச ஒரு வாளி தேவைப்படுகிறது எனில் கண்ணாடியின் முழுப் பகுதியையும் ஒரு முறை வர்ணம் பூச எத்தனை வாளிகள் தேவைப்படும்?."
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 219, "pdf": 225 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "10 cans", "ta": "10 வாளி" }
+    },
+    {
+      "id": "c10-5-ex5-1-q11-i",
+      "exercise": "5.1",
+      "questionNumber": 11,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "11. In the figure, find the area of\n(i) triangle AGF",
+        "ta": "11. படத்தைப் பயன்படுத்திப் பரப்பைக் காண்க.\n(i) முக்கோணம் AGF"
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 219, "pdf": 225 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": true, "asset": "assets/grade10-ch5/ex5-1-q11-i.svg" },
+      "appendixAnswer": { "en": "3.75 sq. units", "ta": "3.75 ச. அ" }
+    },
+    {
+      "id": "c10-5-ex5-1-q11-ii",
+      "exercise": "5.1",
+      "questionNumber": 11,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "11. In the figure, find the area of\n(ii) triangle FED",
+        "ta": "11. படத்தைப் பயன்படுத்திப் பரப்பைக் காண்க.\n(ii) முக்கோணம் FED"
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 219, "pdf": 225 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": true, "asset": "assets/grade10-ch5/ex5-1-q11-ii.svg" },
+      "appendixAnswer": { "en": "3 sq. units", "ta": "3 ச. அ" }
+    },
+    {
+      "id": "c10-5-ex5-1-q11-iii",
+      "exercise": "5.1",
+      "questionNumber": 11,
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "11. In the figure, find the area of\n(iii) quadrilateral BCEG.",
+        "ta": "11. படத்தைப் பயன்படுத்திப் பரப்பைக் காண்க.\n(iii) நாற்கரம் BCEG."
+      },
+      "sourcePages": { "en": { "printed": 212, "pdf": 218 }, "ta": { "printed": 219, "pdf": 225 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": true, "asset": "assets/grade10-ch5/ex5-1-q11-iii.svg" },
+      "appendixAnswer": { "en": "13.88 sq. units", "ta": "13.88 ச. அ" }
+    }
+  ]
+}

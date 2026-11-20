@@ -5165,7 +5165,25 @@ const metadata={
     "c10-4-ex4-3-q5": {"grade":10,"level":"medium","basis":"Translate side-length relationships into a quadratic equation, factor it and reject the negative root.","review":"2025-textbook-ex43-source-audit"},
     "c10-4-ex4-3-q6": {"grade":10,"level":"medium","basis":"Solve two right triangles before and after shifting the ladder foot toward the wall.","review":"2025-textbook-ex43-source-audit"},
     "c10-4-ex4-3-q7": {"grade":10,"level":"difficult","basis":"Prove the altitude identity by applying Pythagoras to triangles PQS and PRS, then substitute QS=3 SR.","review":"2025-textbook-ex43-source-audit"},
-    "c10-4-ex4-3-q8": {"grade":10,"level":"difficult","basis":"Prove the trisected-side identity by expressing three squared hypotenuses in terms of AB² and a common segment.","review":"2025-textbook-ex43-source-audit"}
+    "c10-4-ex4-3-q8": {"grade":10,"level":"difficult","basis":"Prove the trisected-side identity by expressing three squared hypotenuses in terms of AB² and a common segment.","review":"2025-textbook-ex43-source-audit"},
+    "c10-5-ex5-1-q1-i": {"grade":10,"level":"easy","basis":"Direct substitution of three given points into the coordinate triangle area formula.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q1-ii": {"grade":10,"level":"easy","basis":"Direct substitution of negative coordinate vertices into the triangle area formula.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q2-i": {"grade":10,"level":"easy","basis":"Check collinearity by verifying that the coordinate triangle area evaluates to zero.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q2-ii": {"grade":10,"level":"medium","basis":"Expand symbolic coordinate products and verify identical terms cancel to area zero.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q3-i": {"grade":10,"level":"easy","basis":"Equate the oriented triangle area expression to 20 and solve the resulting linear equation.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q3-ii": {"grade":10,"level":"medium","basis":"Evaluate the oriented area formula with (p,p) equal to 32 and solve for p.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q4-i": {"grade":10,"level":"easy","basis":"Set triangle area with unknown coordinate a to zero and solve the linear equation.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q4-ii": {"grade":10,"level":"difficult","basis":"Expand symbolic collinearity equation into a quadratic in a and factor to recover both roots.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q5-i": {"grade":10,"level":"medium","basis":"Plot vertices to establish counterclockwise boundary order, then apply the 4-vertex area formula.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q5-ii": {"grade":10,"level":"medium","basis":"Order four vertices counterclockwise from their coordinates and evaluate the quadrilateral area.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q6": {"grade":10,"level":"medium","basis":"Set the 4-vertex shoelace determinant for ordered vertices equal to 56 and solve for k.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q7": {"grade":10,"level":"medium","basis":"Derive 2a+b=3 from zero triangle area and solve simultaneously with a+b=1.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q8": {"grade":10,"level":"difficult","basis":"Recover triangle vertices from three midpoint equations, compute ΔABC and ΔPQR areas, and verify ratio 4.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q9": {"grade":10,"level":"medium","basis":"Compute outer and inner quadrilateral areas from figure coordinates and subtract.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q10": {"grade":10,"level":"easy","basis":"Find triangular glass area and divide by 6 sq. ft per bucket.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q11-i": {"grade":10,"level":"medium","basis":"Read polygon coordinates A, G, F from the figure and compute triangle area.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q11-ii": {"grade":10,"level":"medium","basis":"Read coordinates F, E, D from the figure and compute triangle area.","review":"2025-textbook-ex51-source-audit"},
+    "c10-5-ex5-1-q11-iii": {"grade":10,"level":"medium","basis":"Read coordinates B, C, E, G counterclockwise from the figure and compute quadrilateral area.","review":"2025-textbook-ex51-source-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
