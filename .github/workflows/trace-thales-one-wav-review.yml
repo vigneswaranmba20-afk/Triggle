@@ -62,8 +62,11 @@ jobs:
           python-version: '3.12'
       - name: Install offline frame/rendering dependencies (no AI API)
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -qq -y ffmpeg fonts-dejavu-core
+          # Hosted Ubuntu commonly has ffmpeg/DejaVu already; avoid slow apt updates.
+          if ! command -v ffmpeg >/dev/null || ! test -r /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf; then
+            sudo apt-get update -qq
+            sudo apt-get install -qq -y ffmpeg fonts-dejavu-core
+          fi
           python3 -m pip install -r site/video-factory/requirements.txt
       - name: Render nine geometric story scenes on narrow Android viewport
         run: |
@@ -119,8 +122,11 @@ jobs:
             --lesson "$LESSON" --url "$WAV_URL" --output "$WAV_DIR"
       - name: Install offline renderer
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -qq -y ffmpeg fonts-dejavu-core
+          # Hosted Ubuntu commonly has ffmpeg/DejaVu already; avoid slow apt updates.
+          if ! command -v ffmpeg >/dev/null || ! test -r /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf; then
+            sudo apt-get update -qq
+            sudo apt-get install -qq -y ffmpeg fonts-dejavu-core
+          fi
           python3 -m pip install -r site/video-factory/requirements.txt
       - name: Render exact Thales geometry with real recorded speech
         run: |
