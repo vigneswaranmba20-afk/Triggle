@@ -435,7 +435,8 @@
       '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+e(ta?'கருத்துகளுக்கான வழிசெலுத்தல்':'Concept navigation')+'">'+
       '<button type="button" class="sp2-footer-prev" data-footer-prev>← '+e(prevLabel)+'</button>'+
       '<button type="button" class="sp2-footer-next" data-footer-next></button></nav></div>';
-    const probability=stages[0]?.id==='probability-1'&&stages[0].lesson&&window.TriggleProbabilityConcepts;
+    const probabilityLessons=stages[0]?.id==='probability-1'&&window.TRIGGLE_PROB_LESSONS;
+    const probability=probabilityLessons?.length===stages.length&&window.TriggleProbabilityConcepts;
     container.append(root);
     const nav=root.querySelector('[data-nav]'),panel=root.querySelector('[data-panel]');
     const indexView=root.querySelector('[data-index-view]'),detailView=root.querySelector('[data-detail-view]');
@@ -443,7 +444,7 @@
     stages.forEach((stage,i)=>{
       const button=document.createElement('button');button.type='button';button.className='sp2-nav-button';button.dataset.index=String(i);
       if(probability)button.lang='en';
-      button.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+e(probability?stage.lesson.heading:pick(stage.title))+
+      button.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+e(probability?probabilityLessons[i].heading:pick(stage.title))+
         '</span><span class="sp2-done-mark" aria-hidden="true"></span>';button.addEventListener('click',()=>show(i,true));nav.append(button);
     });
     function update(){
@@ -469,7 +470,7 @@
       const isCh3=stageId.startsWith('g10-ch3-');
       const isStudio6=stageId.startsWith('g10-ch4-')||stageId.startsWith('g10-ch5-')||stageId.startsWith('g10-ch6-');
       if(probability){
-        probability.mount(panel,stage,i,lang);
+        probability.mount(panel,stage.section,probabilityLessons[i],i,lang);
       }else if(isStudio6){
         const labEngine=stageId.startsWith('g10-ch5-')?window.TriggleG10Ch5Labs:stageId.startsWith('g10-ch6-')?window.TriggleG10Ch6Labs:window.TriggleG10Ch4Labs;
         const labels=ta?{

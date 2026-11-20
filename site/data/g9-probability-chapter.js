@@ -262,7 +262,7 @@ window.TRIGGLE_PROB_PATH={chapterId:'g9-ch9',stages:[
 // The chapter quizzes above retain their original wording and order.
 const math = (latex, fallback) => ({latex, fallback, display: true});
 const tex = String.raw;
-const lessons = [
+window.TRIGGLE_PROB_LESSONS = [
   {
     heading: 'Probability measures chance',
     intro: 'A library’s lucky dip has four identical envelopes. Each is equally likely to be picked. Three contain a star and one contains a moon.',
@@ -367,7 +367,6 @@ const lessons = [
 ];
 window.TRIGGLE_PROB_PATH.stages.forEach((stage, i) => {
   stage.page.ta = [307, 309, 311, 312, 316][i];
-  stage.lesson = lessons[i];
 });
 
 const base=window.TRIGGLE_TEXTBOOK_TASKS||{};
