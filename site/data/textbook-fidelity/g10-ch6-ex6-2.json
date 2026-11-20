@@ -1,0 +1,247 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 6,
+  "exercise": "6.2",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "methodology": "Visually inspected rendered 2025 English PDF pp. 263–264 (printed pp. 257–258) and Answer Appendix p. 347, plus 2025 Tamil PDF pp. 271–272 (printed pp. 265–266) and Answer Appendix p. 361.",
+  "status": "page-visual-checked",
+  "tamilEditorial": "pending",
+  "items": [
+    {
+      "id": "c10-6-ex6-2-q1",
+      "exercise": "6.2",
+      "questionNumber": 1,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "1. Find the angle of elevation of the top of a tower from a point on the ground, which is 30 m away from the foot of a tower of height 10√3 m.",
+        "ta": "1. 10√3 மீ உயரமுள்ள கோபுரத்தின் அடியிலிருந்து 30 மீ தொலைவில் தரையில் உள்ள ஒரு புள்ளியிலிருந்து கோபுரத்தின் உச்சியின் ஏற்றக்கோணத்தைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 257,
+          "pdf": 263
+        },
+        "ta": {
+          "printed": 265,
+          "pdf": 271
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-2-q1.svg"
+      },
+      "appendixAnswer": {
+        "en": "30°",
+        "ta": "30°"
+      }
+    },
+    {
+      "id": "c10-6-ex6-2-q2",
+      "exercise": "6.2",
+      "questionNumber": 2,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "2. A road is flanked on either side by continuous rows of houses of height 4√3 m with no space in between them. A pedestrian is standing on the median of the road facing a row house. The angle of elevation from the pedestrian to the top of the house is 30°. Find the width of the road.",
+        "ta": "2. ஒரு சாலையின் இருபுறமும் இடைவெளியே இல்லாமல் வரிசையாக வீடுகள் தொடர்ச்சியாக உள்ளன. அவற்றின் உயரம் 4√3 மீ. பாதசாரி ஒருவர் சாலையின் மையப் பகுதியில் நின்றுகொண்டு வரிசையாக உள்ள வீடுகளை நோக்குகிறார். 30° ஏற்றக்கோணத்தில் பாதசாரி வீட்டின் உச்சியை நோக்குகிறார் எனில், சாலையின் அகலத்தைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 257,
+          "pdf": 263
+        },
+        "ta": {
+          "printed": 265,
+          "pdf": 271
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-2-q2.svg"
+      },
+      "appendixAnswer": {
+        "en": "24 m",
+        "ta": "24 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-2-q3",
+      "exercise": "6.2",
+      "questionNumber": 3,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "3. To a man standing outside his house, the angles of elevation of the top and bottom of a window are 60° and 45° respectively. If the height of the man is 180 cm and if he is 5 m away from the wall, what is the height of the window? (√3 = 1.732)",
+        "ta": "3. ஒருவர் அவருடைய வீட்டிற்கு வெளியில் நின்றுகொண்டு ஒரு ஜன்னலின் உச்சி மற்றும் அடி ஆகியவற்றை முறையே 60° மற்றும் 45° ஆகிய ஏற்றக்கோணங்களில் காண்கிறார். அவரின் உயரம் 180 செ.மீ. மேலும் வீட்டிலிருந்து 5 மீ தொலைவில் அவர் உள்ளார் எனில், ஜன்னலின் உயரத்தைக் காண்க (√3 = 1.732)."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 257,
+          "pdf": 263
+        },
+        "ta": {
+          "printed": 266,
+          "pdf": 272
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-2-q3.svg"
+      },
+      "appendixAnswer": {
+        "en": "3.66 m",
+        "ta": "3.66 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-2-q4",
+      "exercise": "6.2",
+      "questionNumber": 4,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "4. A statue 1.6 m tall stands on the top of a pedestal. From a point on the ground, the angle of elevation of the top of the statue is 60° and from the same point the angle of elevation of the top of the pedestal is 40°. Find the height of the pedestal. (tan 40° = 0.8391, √3 = 1.732)",
+        "ta": "4. 1.6 மீ உயரமுள்ள சிலை ஒன்று பீடத்தின் மேல் அமைந்துள்ளது. தரையிலுள்ள ஒரு புள்ளியிலிருந்து 60° ஏற்றக்கோணத்தில் சிலையின் உச்சி அமைந்துள்ளது. மேலும் அதே புள்ளியிலிருந்து பீடத்தின் உச்சியானது 40° ஏற்றக்கோணத்தில் உள்ளது எனில், பீடத்தின் உயரத்தைக் காண்க. (tan 40° = 0.8391, √3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 257,
+          "pdf": 263
+        },
+        "ta": {
+          "printed": 266,
+          "pdf": 272
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-2-q4.svg"
+      },
+      "appendixAnswer": {
+        "en": "1.5 m",
+        "ta": "1.5 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-2-q5-i",
+      "exercise": "6.2",
+      "questionNumber": 5,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "5. A flag pole of height ‘h’ metres is on the top of the hemispherical dome of radius ‘r’ metres. A man is standing 7 m away from the dome. Seeing the top of the pole at an angle 45° and moving 5 m away from the dome and seeing the bottom of the pole at an angle 30°. Find\n(i) the height of the pole (√3 = 1.732)",
+        "ta": "5. ‘r’ மீ ஆரம் கொண்ட அரைக் கோளக் குவிமாடத்தின் மீது ‘h’ மீ உயரமுள்ள ஒரு கொடிக்கம்பம் நிற்கிறது. குவிமாடத்தின் அடியிலிருந்து 7 மீ தொலைவில் ஒருவர் நிற்கிறார். அவர் கொடிக்கம்பத்தின் உச்சியை 45° ஏற்றக் கோணத்திலும் நிற்குமிடத்திலிருந்து மேலும் 5 மீ தொலைவு விலகிச் சென்று கொடிக்கம்பத்தின் அடியை 30° ஏற்றக் கோணத்திலும் பார்க்கிறார் எனில், (i) கொடிக்கம்பத்தின் உயரம் (√3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 257,
+          "pdf": 263
+        },
+        "ta": {
+          "printed": 266,
+          "pdf": 272
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": true,
+        "asset": "assets/grade10-ch6/ex6-2-q5.svg"
+      },
+      "appendixAnswer": {
+        "en": "7 m",
+        "ta": "7 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-2-q5-ii",
+      "exercise": "6.2",
+      "questionNumber": 5,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "5. A flag pole of height ‘h’ metres is on the top of the hemispherical dome of radius ‘r’ metres. A man is standing 7 m away from the dome. Seeing the top of the pole at an angle 45° and moving 5 m away from the dome and seeing the bottom of the pole at an angle 30°. Find\n(ii) radius of the dome. (√3 = 1.732)",
+        "ta": "5. ‘r’ மீ ஆரம் கொண்ட அரைக் கோளக் குவிமாடத்தின் மீது ‘h’ மீ உயரமுள்ள ஒரு கொடிக்கம்பம் நிற்கிறது. குவிமாடத்தின் அடியிலிருந்து 7 மீ தொலைவில் ஒருவர் நிற்கிறார். அவர் கொடிக்கம்பத்தின் உச்சியை 45° ஏற்றக் கோணத்திலும் நிற்குமிடத்திலிருந்து மேலும் 5 மீ தொலைவு விலகிச் சென்று கொடிக்கம்பத்தின் அடியை 30° ஏற்றக் கோணத்திலும் பார்க்கிறார் எனில், (ii) அரைக் கோளக் குவிமாடத்தின் ஆரம் ஆகியவற்றைக் காண்க. (√3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 257,
+          "pdf": 263
+        },
+        "ta": {
+          "printed": 266,
+          "pdf": 272
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": true,
+        "asset": "assets/grade10-ch6/ex6-2-q5.svg"
+      },
+      "appendixAnswer": {
+        "en": "16.39 m",
+        "ta": "16.39 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-2-q6",
+      "exercise": "6.2",
+      "questionNumber": 6,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "6. The top of a 15 m high tower makes an angle of elevation of 60° with the bottom of an electronic pole and angle of elevation of 30° with the top of the pole. What is the height of the electric pole?",
+        "ta": "6. 15 மீ உயரமுள்ள ஒரு கோபுரம் உள்ளது. ஒரு மின் கம்பத்தின் அடி மற்றும் உச்சியிலிருந்து கோபுரத்தின் உச்சியை முறையே 60°, 30° என்ற ஏற்றக்கோணங்களில் பார்த்தால் மின் கம்பத்தின் உயரத்தைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 258,
+          "pdf": 264
+        },
+        "ta": {
+          "printed": 266,
+          "pdf": 272
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-2-q6.svg"
+      },
+      "appendixAnswer": {
+        "en": "10 m",
+        "ta": "10 மீ"
+      }
+    }
+  ]
+}

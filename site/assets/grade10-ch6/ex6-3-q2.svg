@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Two buildings 70 m apart with 45 degrees depression for Exercise 6.3 Q2</title>
+  <desc id="desc">Second building is 120 m tall and first building roof is at 45 degrees depression across 70 m gap.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="28" y1="190" x2="292" y2="190" stroke="#525B62" stroke-width="1.5"/>
+  <rect x="64" y="120" width="26" height="70" fill="#E6EFEA" stroke="#181B20" stroke-width="1.6"/>
+  <rect x="226" y="44" width="26" height="146" fill="#E6EFEA" stroke="#181B20" stroke-width="1.6"/>
+  <line x1="150" y1="44" x2="226" y2="44" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="90" y1="120" x2="226" y2="120" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="226" y1="44" x2="90" y2="120" stroke="#6E2933" stroke-width="2"/>
+  <text x="184" y="57" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6E2933">45°</text>
+  <text x="130" y="114" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6E2933">45°</text>
+  <text x="158" y="182" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">70 m</text>
+  <text x="258" y="122" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#181B20">120 m</text>
+  <text x="58" y="158" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="end" fill="#166353">h</text>
+</svg>

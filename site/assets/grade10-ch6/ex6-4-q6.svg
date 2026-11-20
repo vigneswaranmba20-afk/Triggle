@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Three villagers across valley diagram for Exercise 6.4 Q6</title>
+  <desc id="desc">Villager B lies horizontally 8 km from A at depression 20 degrees from A, and 12 km from C at elevation 30 degrees to C.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="36" y1="124" x2="148" y2="124" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="36" y1="168" x2="284" y2="168" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="36" y1="124" x2="148" y2="168" stroke="#6E2933" stroke-width="2"/>
+  <line x1="148" y1="168" x2="280" y2="52" stroke="#166353" stroke-width="2"/>
+  <line x1="280" y1="52" x2="280" y2="168" stroke="#181B20" stroke-width="1.6"/>
+  <line x1="148" y1="124" x2="148" y2="168" stroke="#181B20" stroke-width="1.6"/>
+  <circle cx="36" cy="124" r="4" fill="#181B20"/>
+  <circle cx="148" cy="168" r="4" fill="#6E2933"/>
+  <circle cx="280" cy="52" r="4" fill="#166353"/>
+  <text x="30" y="114" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#181B20">A</text>
+  <text x="148" y="184" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#6E2933">B</text>
+  <text x="284" y="46" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#166353">C</text>
+  <text x="72" y="138" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6E2933">20°</text>
+  <text x="184" y="160" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#166353">30°</text>
+  <text x="92" y="198" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">8 km</text>
+  <text x="214" y="198" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">12 km</text>
+</svg>

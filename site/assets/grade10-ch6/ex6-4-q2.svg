@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Ship and hill diagram for Exercise 6.4 Q2</title>
+  <desc id="desc">Observer on ship deck 40 m above sea sees top of hill at 60 degrees elevation and base of hill at 30 degrees depression.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="26" y1="188" x2="294" y2="188" stroke="#1F6FEB" stroke-width="1.6"/>
+  <line x1="72" y1="188" x2="72" y2="148" stroke="#181B20" stroke-width="3"/>
+  <line x1="236" y1="188" x2="236" y2="38" stroke="#166353" stroke-width="3"/>
+  <line x1="72" y1="148" x2="236" y2="148" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="72" y1="148" x2="236" y2="38" stroke="#6E2933" stroke-width="2"/>
+  <line x1="72" y1="148" x2="236" y2="188" stroke="#6E2933" stroke-width="2"/>
+  <path d="M108,148 A36,36 0 0,0 101,128" fill="none" stroke="#6E2933" stroke-width="1.4"/>
+  <path d="M112,148 A40,40 0 0,1 110,158" fill="none" stroke="#166353" stroke-width="1.4"/>
+  <text x="116" y="138" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#6E2933">60°</text>
+  <text x="118" y="164" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#166353">30°</text>
+  <text x="58" y="172" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="end" fill="#181B20">40 m</text>
+  <text x="244" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#181B20">40 m</text>
+  <text x="244" y="96" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#166353">h</text>
+  <text x="154" y="206" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">Distance d</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Cloud and lake reflection diagram for Exercise 6.4 Q3</title>
+  <desc id="desc">Observation point h metres above lake surface views cloud at angle theta1 above horizontal and reflection at depth h+x at angle theta2 below horizontal.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="28" y1="114" x2="292" y2="114" stroke="#1F6FEB" stroke-width="1.6"/>
+  <line x1="74" y1="114" x2="74" y2="90" stroke="#181B20" stroke-width="2.5"/>
+  <line x1="74" y1="90" x2="236" y2="90" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="236" y1="30" x2="236" y2="198" stroke="#166353" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="236" cy="30" r="5" fill="#166353"/>
+  <circle cx="236" cy="198" r="5" fill="#525B62"/>
+  <line x1="74" y1="90" x2="236" y2="30" stroke="#6E2933" stroke-width="2"/>
+  <line x1="74" y1="90" x2="236" y2="198" stroke="#6E2933" stroke-width="2"/>
+  <text x="116" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#6E2933">θ₁</text>
+  <text x="116" y="106" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#6E2933">θ₂</text>
+  <text x="64" y="106" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="end" fill="#181B20">h</text>
+  <text x="246" y="34" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#166353">Cloud C (h+x)</text>
+  <text x="246" y="200" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#525B62">Image C'</text>
+  <text x="148" y="128" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#1F6FEB">Lake level</text>
+</svg>

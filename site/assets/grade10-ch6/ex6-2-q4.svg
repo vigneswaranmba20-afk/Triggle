@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Statue 1.6 m tall standing on a pedestal for Exercise 6.2 Q4</title>
+  <desc id="desc">Point on ground sees top of pedestal at 40 degrees and top of 1.6 m statue at 60 degrees.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="30" y1="188" x2="290" y2="188" stroke="#525B62" stroke-width="1.5"/>
+  <line x1="238" y1="108" x2="238" y2="188" stroke="#181B20" stroke-width="3"/>
+  <line x1="238" y1="36" x2="238" y2="108" stroke="#6E2933" stroke-width="3"/>
+  <line x1="64" y1="188" x2="238" y2="108" stroke="#166353" stroke-width="1.8"/>
+  <line x1="64" y1="188" x2="238" y2="36" stroke="#6E2933" stroke-width="1.8"/>
+  <text x="122" y="180" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#166353">40°</text>
+  <text x="104" y="148" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6E2933">60°</text>
+  <text x="246" y="75" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#6E2933">1.6 m (Statue)</text>
+  <text x="246" y="152" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#181B20">h (Pedestal)</text>
+  <text x="151" y="204" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#525B62">d</text>
+</svg>
