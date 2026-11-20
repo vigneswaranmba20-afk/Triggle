@@ -13,6 +13,7 @@ from trace_video_factory import DISC_ORDER, load_lesson, validate_lesson
 from trace_discriminant_artwork import (
     Image, artwork, discriminant, example_c, real_roots,
 )
+from trace_video_recording_sheet import sheet
 
 
 class DiscriminantVideoTest(unittest.TestCase):
@@ -74,6 +75,12 @@ class DiscriminantVideoTest(unittest.TestCase):
             changed(wrong)
             with self.subTest(changed=changed),self.assertRaises(ValueError):
                 validate_lesson(wrong)
+
+    def test_recording_sheet_matches_exact_source_narration(self):
+        path=ROOT / 'docs' / 'trace' / 'DISCRIMINANT_FOLA_RECORDING_SHEET.md'
+        self.assertEqual(path.read_text(encoding='utf-8'),sheet(self.lesson))
+        for beat in self.lesson['beats']:
+            self.assertIn('`'+beat['id']+'.wav`',sheet(self.lesson))
 
     def test_previous_gp_and_ap_lessons_untouched(self):
         self.assertEqual(load_lesson("g10-ch2-gp-sum")["visual"]["template"],"gp-sum-cancel-v1")
