@@ -571,10 +571,22 @@ const entries = [
     },
     "questionMath": {
       "en": [
-        "7. The perpendicular PS on the base QR of a △PQR intersects QR at S, such that QS = 3 SR. Prove that 2PQ² = 2PR² + QR²."
+        "7. The perpendicular PS on the base QR of a △PQR intersects QR at S, such that QS = 3 SR. Prove that ",
+        {
+          "latex": "2PQ^2=2PR^2+QR^2",
+          "fallback": "2PQ² = 2PR² + QR²",
+          "display": false
+        },
+        "."
       ],
       "ta": [
-        "7. △PQR-இல் அடிப்பக்கம் QR-க்கு செங்குத்தாக உள்ள PS ஆனது QR-ஐ S-இல் சந்திக்கிறது. மேலும் QS = 3SR எனில், 2PQ² = 2PR² + QR² என நிறுவுக."
+        "7. △PQR-இல் அடிப்பக்கம் QR-க்கு செங்குத்தாக உள்ள PS ஆனது QR-ஐ S-இல் சந்திக்கிறது. மேலும் QS = 3SR எனில், ",
+        {
+          "latex": "2PQ^2=2PR^2+QR^2",
+          "fallback": "2PQ² = 2PR² + QR²",
+          "display": false
+        },
+        " என நிறுவுக."
       ]
     },
     "steps": [
@@ -665,10 +677,22 @@ const entries = [
     },
     "questionMath": {
       "en": [
-        "8. In the adjacent figure, ABC is a right angled triangle with right angle at B and points D, E trisect BC. Prove that 8AE² = 3AC² + 5AD²."
+        "8. In the adjacent figure, ABC is a right angled triangle with right angle at B and points D, E trisect BC. Prove that ",
+        {
+          "latex": "8AE^2=3AC^2+5AD^2",
+          "fallback": "8AE² = 3AC² + 5AD²",
+          "display": false
+        },
+        "."
       ],
       "ta": [
-        "8. படத்தில், செங்கோண முக்கோணம் ABC-இல் கோணம் B ஆனது செங்கோணம் மற்றும் D, E என்ற புள்ளிகள் பக்கம் BC-ஐ மூன்று சமபகுதிகளாக பிரிக்கிறது எனில், 8AE² = 3AC² + 5AD² என நிறுவுக."
+        "8. படத்தில், செங்கோண முக்கோணம் ABC-இல் கோணம் B ஆனது செங்கோணம் மற்றும் D, E என்ற புள்ளிகள் பக்கம் BC-ஐ மூன்று சமபகுதிகளாக பிரிக்கிறது எனில், ",
+        {
+          "latex": "8AE^2=3AC^2+5AD^2",
+          "fallback": "8AE² = 3AC² + 5AD²",
+          "display": false
+        },
+        " என நிறுவுக."
       ]
     },
     "steps": [
