@@ -6,7 +6,12 @@ legible at 360×640. All displayed root/discriminant values are calculated.
 No network/API calls, no student-facing release from this module.
 """
 import math
-from PIL import Image, ImageDraw, ImageFont
+
+# Pure mathematical QA runs in npm test without Pillow; only rendering needs it.
+try:
+    from PIL import Image, ImageDraw, ImageFont
+except ImportError:
+    Image = ImageDraw = ImageFont = None
 
 PAL = {
     "bg": "#FAF8F5", "paper": "#FFFFFF", "ink": "#172337",
@@ -72,6 +77,8 @@ def artwork(spec, beat, fraction, index, total, w, h, demo):
         raise ValueError("Unknown discriminant scene: " + str(scene))
     if h * 9 != w * 16:
         raise ValueError("Discriminant artwork requires 9:16 portrait")
+    if Image is None:
+        raise RuntimeError("Install the local Pillow renderer before drawing frames")
     visual = spec["visual"]
     a = visual["example"]["a"]
     b = visual["example"]["b"]
