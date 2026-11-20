@@ -115,6 +115,7 @@ async function run(){
       assert.match(await mediaDialog.locator('video').getAttribute('src'),
         /\/g10-ch4-bpt-thales\/2c07afb76d30e65c707b0df1e56a2aa99bbfc8d092efa949ec91d920d898f201\.mp4$/);
       await mediaDialog.locator('.sp2-concept-video-close').click();
+      await mediaDialog.waitFor({state:'detached'});
       assert.equal(await page.locator('dialog.sp2-concept-video-dialog').count(),0,'Closing video restores lesson');
 
       // Try it yourself: wrong -> Hint -> right -> Why
