@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "runDate": "2026-11-10",
+  "kind": "grade10_ex1_4_duplicate_draft_reconciliation",
+  "source": {
+    "englishDriveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "tamilDriveFileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+    "edition": "2025 revised",
+    "originalPageImageVerified": false
+  },
+  "exercise": "1.4",
+  "inventory": {
+    "questionStems": 12,
+    "provisionalAtomicSlots": 32,
+    "sourceCertifiedQuestionStems": 0,
+    "sourceCertifiedAtomicSlots": 0,
+    "figuresPending": [
+      "Q1(i–iv), Fig.1.39"
+    ],
+    "verifiedExerciseDenominator": null
+  },
+  "reconciliation": {
+    "question": "Q12",
+    "subparts": [
+      "i",
+      "ii",
+      "iii",
+      "iv",
+      "v"
+    ],
+    "existingDrafts": [
+      "docs/grade-10/ex1.4-q12-english-solution-drafts-2026-11-09.json",
+      "docs/grade-10/ex1.4-q12-temperature-five-subparts-draft-2026-11-10.json"
+    ],
+    "semanticDuplicateSubparts": 5,
+    "idFormatMismatch": {
+      "earlier": "g10-ch1-ex1-4-q12i",
+      "later": "g10-ch1-ex1-4-q12-i"
+    },
+    "canonicalProvisionalIds": [
+      "g10-ch1-ex1-4-q12i",
+      "g10-ch1-ex1-4-q12ii",
+      "g10-ch1-ex1-4-q12iii",
+      "g10-ch1-ex1-4-q12iv",
+      "g10-ch1-ex1-4-q12v"
+    ],
+    "mathematicalCrossCheck": {
+      "fahrenheitAtC0": 32,
+      "fahrenheitAtC28": 82.4,
+      "fahrenheitAtCMinus10": 14,
+      "celsiusAtF212": 100,
+      "equalTemperature": -40,
+      "passed": true
+    },
+    "action": "Treat the two files as alternative drafts for the same five atomic textbook slots, not ten distinct solutions; do not register both. Certify page image and reconcile into one canonical source-exact record before publication."
+  },
+  "coverageDelta": {
+    "newSourceCertifiedQuestions": 0,
+    "newSourceCertifiedSubparts": 0,
+    "newPublishedSolutions": 0,
+    "newTamilSolutions": 0
+  },
+  "ci": "not_run",
+  "merge": "not_attempted",
+  "deployment": "not_verified",
+  "next": "Verify printed page 25 image; reconcile Q12 duplicate drafts, then source-check Q5-Q7; avoid modifying shared registration until branch divergence and CI are resolved."
+}

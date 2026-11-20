@@ -1,0 +1,24 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const q = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/textbook-exercises/g10-ch1-ex1-2-q4ii-source-pending.json'),'utf8'));
+assert.equal(q.id,'g10-ch1-ex1-2-q4ii');
+assert.equal(q.grade,10);
+assert.equal(q.exercise,'1.2');
+assert.equal(q.source.english.driveFileId,'13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of');
+assert.equal(q.source.english.pageImageVerified,false);
+assert.equal(q.source.english.exactQuestionVerified,false);
+assert.equal(q.review.englishExactQuestionVerified,false);
+assert.equal(q.review.tamilVerified,false);
+assert.equal(q.review.merged,false);
+assert.equal(q.review.deployed,false);
+assert.equal(q.review.liveVerified,false);
+const expected=[];
+for(let x=1;x<10;x++){const y=x+3;if(y<10)expected.push([x,y]);}
+assert.deepEqual(q.pairs,expected);
+assert.equal(expected.length,6);
+assert.equal(new Set(q.pairs.map(JSON.stringify)).size,6);
+assert.ok(q.stepsEnglish.length>=6);
+assert.ok(q.stepsEnglish.every(Boolean));
+console.log('PASS Grade 10 Exercise 1.2 Q4(ii): six distinct ordered pairs; source-image pending and not released');

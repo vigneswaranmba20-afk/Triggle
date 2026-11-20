@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-1-q7i",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.1",
+  "question": "7",
+  "subpart": "i",
+  "kind": "source-pending mathematical draft; NOT textbook-exact student-facing content",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "printedPage": 6,
+      "pdfPage": 12,
+      "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of"
+    },
+    "tamil": {
+      "printedPage": 6,
+      "pdfPage": 12,
+      "driveFileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC"
+    },
+    "manifest": "docs/reference-library/2025-user-textbook-manifest.json",
+    "fidelity": {
+      "englishExactQuestionVerified": false,
+      "tamilExactQuestionVerified": false,
+      "englishPageImageVerified": false,
+      "tamilPageImageVerified": false,
+      "reason": "PDF extraction loses parentheses, multiplication signs and set intersections; page images not verified. No exact question text is supplied."
+    }
+  },
+  "review": {
+    "sourceVerified": false,
+    "mathVerified": true,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  },
+  "sourceExtractedSetDefinitions": {
+    "A": "natural numbers less than 8",
+    "B": "prime numbers less than 8",
+    "C": "even prime number"
+  },
+  "provisionalIdentity": "(A∩B)×C = (A×C)∩(B×C)",
+  "provisionalIdentityRequiresPageImageConfirmation": true,
+  "stepsEnglish": [
+    {
+      "explanation": "List natural numbers below eight.",
+      "equation": "A={1,2,3,4,5,6,7}"
+    },
+    {
+      "explanation": "List primes below eight. A prime has exactly two positive divisors.",
+      "equation": "B={2,3,5,7}"
+    },
+    {
+      "explanation": "Two is the only even prime.",
+      "equation": "C={2}"
+    },
+    {
+      "explanation": "Every member of B also belongs to A.",
+      "equation": "A∩B={2,3,5,7}"
+    },
+    {
+      "explanation": "Pair each member of A∩B with the only member of C.",
+      "equation": "(A∩B)×C={(2,2),(3,2),(5,2),(7,2)}"
+    },
+    {
+      "explanation": "A×C has seven pairs, while B×C has four. Their intersection keeps precisely the four common pairs.",
+      "equation": "(A×C)∩(B×C)={(2,2),(3,2),(5,2),(7,2)}"
+    },
+    {
+      "explanation": "The two enumerated sets agree, establishing the provisional identity for these sets.",
+      "equation": "(A∩B)×C=(A×C)∩(B×C)"
+    }
+  ],
+  "answers": {
+    "A": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "B": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "C": [
+      2
+    ],
+    "AintersectionB": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "left": [
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        7,
+        2
+      ]
+    ],
+    "right": [
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        7,
+        2
+      ]
+    ]
+  },
+  "tamilStepsStatus": "not drafted; verify Tamil source and terminology first"
+}

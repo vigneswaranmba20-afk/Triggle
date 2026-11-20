@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-1-q4",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.1",
+  "question": "4",
+  "subpart": null,
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "tamil": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "manifest": "docs/reference-library/2025-user-textbook-manifest.json",
+    "verificationNote": "English and Tamil 2025 revised Exercise 1.1 Q4, printed page 6: A={5,6}, B={4,5,6}, C={5,6,7}. Mathematical glyph layout independently checked by set identity."
+  },
+  "review": {
+    "sourceVerified": true,
+    "mathVerified": true,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  },
+  "title": {
+    "en": "Verify a Cartesian-product intersection identity",
+    "ta": "கார்டீசியன் பெருக்கல்களின் வெட்டுக் கணச் சமன்பாட்டைச் சரிபார்த்தல்"
+  },
+  "questionParaphrase": {
+    "en": "For A={5,6}, B={4,5,6}, C={5,6,7}, show that A×A=(B×B)∩(C×C).",
+    "ta": "A={5,6}, B={4,5,6}, C={5,6,7} எனில் A×A=(B×B)∩(C×C) என்பதை நிரூபிக்கவும்."
+  },
+  "steps": [
+    {
+      "en": "Find the elements common to B and C. These are exactly the elements of A.",
+      "ta": "B மற்றும் C கணங்களில் பொதுவாக உள்ள உறுப்புகளைக் காண்க. அவையே A கணத்தின் உறுப்புகள்.",
+      "equation": "B ∩ C = {5,6} = A"
+    },
+    {
+      "en": "Form A×A by choosing each coordinate independently from A.",
+      "ta": "இரு இடங்களுக்கும் A-இலிருந்து உறுப்புகளைத் தேர்ந்தெடுத்து A×A-ஐ அமைக்கவும்.",
+      "equation": "A × A = {(5,5),(5,6),(6,5),(6,6)}"
+    },
+    {
+      "en": "A pair belongs to both B×B and C×C exactly when both coordinates belong to both B and C.",
+      "ta": "ஒரு வரிசைச் சோடி B×B மற்றும் C×C இரண்டிலும் இருக்க வேண்டுமெனில் அதன் இரு உறுப்புகளும் B மற்றும் C இரண்டிலும் இருக்க வேண்டும்.",
+      "equation": "(B × B) ∩ (C × C) = (B ∩ C) × (B ∩ C)"
+    },
+    {
+      "en": "Substitute B∩C=A and compare all four pairs on both sides.",
+      "ta": "B∩C=A எனப் பதிலிட்டு, இருபுறங்களிலும் உள்ள நான்கு வரிசைச் சோடிகளையும் ஒப்பிட்டுச் சரிபார்க்கவும்.",
+      "equation": "(B × B) ∩ (C × C) = {(5,5),(5,6),(6,5),(6,6)} = A × A"
+    }
+  ],
+  "answers": {
+    "A": [
+      5,
+      6
+    ],
+    "B": [
+      4,
+      5,
+      6
+    ],
+    "C": [
+      5,
+      6,
+      7
+    ],
+    "AxA": [
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "BxB": [
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "CxC": [
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        7,
+        7
+      ]
+    ],
+    "intersection": [
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        6,
+        6
+      ]
+    ]
+  },
+  "misconception": {
+    "en": "The intersection keeps only ordered pairs present in both products; matching just one coordinate is not enough.",
+    "ta": "வெட்டுக் கணத்தில் இரு பெருக்கல்களிலும் உள்ள வரிசைச் சோடிகள் மட்டுமே இடம்பெறும்; ஓர் உறுப்பு மட்டும் பொருந்துவது போதாது."
+  }
+}

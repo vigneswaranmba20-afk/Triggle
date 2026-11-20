@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.4",
+  "date": "2026-11-10",
+  "kind": "unpublished_content_readiness_register",
+  "source": {
+    "englishDriveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "tamilDriveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+    "edition": "2025 revised",
+    "printedPages": [
+      24,
+      25
+    ],
+    "pageImagesVerified": false
+  },
+  "inventory": {
+    "provisionalQuestionStems": 12,
+    "provisionalAtomicSubparts": 32,
+    "uniqueCanonicalIds": 32,
+    "sourceCertifiedQuestionStems": 0,
+    "sourceCertifiedAtomicSubparts": 0,
+    "studentFacingNewSolutions": 0,
+    "verifiedExerciseDenominator": null,
+    "figuresPending": [
+      "Q1(i-iv) Fig.1.39"
+    ]
+  },
+  "draftCoverage": {
+    "q3": [
+      "i",
+      "ii",
+      "iii"
+    ],
+    "q4": [
+      "whole question"
+    ],
+    "q7": [
+      "i conditional mathematical draft",
+      "ii notation ambiguity audit only"
+    ],
+    "q8": [
+      "whole question"
+    ],
+    "q12": [
+      "i",
+      "ii",
+      "iii",
+      "iv",
+      "v"
+    ]
+  },
+  "duplicateReconciliation": {
+    "q12": "Two draft files represent the same five slots, not ten; canonical IDs omit separator before Roman subpart.",
+    "sourceFiles": [
+      "docs/grade-10/ex1.4-q12-english-solution-drafts-2026-11-09.json",
+      "docs/grade-10/ex1.4-q12-temperature-five-subparts-draft-2026-11-10.json"
+    ]
+  },
+  "independentMathChecks": {
+    "formula": "F=9*C/5+32 (conditional on source image)",
+    "forward": [
+      {
+        "C": 0,
+        "F": 32
+      },
+      {
+        "C": 28,
+        "F": 82.4
+      },
+      {
+        "C": -10,
+        "F": 14
+      }
+    ],
+    "inverse": {
+      "F": 212,
+      "C": 100
+    },
+    "fixedPoint": {
+      "C": -40,
+      "F": -40
+    },
+    "passed": true
+  },
+  "blockingIssues": [
+    "Source page images for pp.24-25 not inspected; notation and exact wording uncertified.",
+    "Q7(ii) extracted fraction/exponent ambiguous; cannot choose one expression.",
+    "Grade-specific branch diverges from main; mandatory CI and safe merge unresolved."
+  ],
+  "release": {
+    "publish": false,
+    "merge": false,
+    "deployVerified": false,
+    "tamilEditorialCertified": false
+  },
+  "nextBatch": [
+    "Visually inspect original textbook PDF pp.30-31 (printed pp.24-25).",
+    "Certify Q12 and Q7 exact text, resolve Q1 graph, then register only source-exact worked solutions.",
+    "Reconcile main branch changes and mandatory CI before any merge."
+  ]
+}

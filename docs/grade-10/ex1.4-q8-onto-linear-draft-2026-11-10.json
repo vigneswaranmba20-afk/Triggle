@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.4",
+  "question": 8,
+  "kind": "unpublished_conditional_english_solution_draft",
+  "source": {
+    "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "edition": "2025 revised",
+    "printedPage": 25,
+    "extractedText": "Let A = {-1,1} and B = {0,2}. If the function f:A→B defined by f(x)=ax+b is an onto function, find a and b.",
+    "originalPageImageVerified": false,
+    "exactWordingCertified": false,
+    "notationReconstructionPending": true
+  },
+  "id": "g10-ch1-ex1-4-q8",
+  "steps": [
+    "The domain has two elements, -1 and 1, and the codomain has two elements, 0 and 2.",
+    "Because the function is onto, its two outputs must be 0 and 2, in some order.",
+    "Case 1: f(-1)=0 and f(1)=2. Thus -a+b=0 and a+b=2.",
+    "Adding the equations gives 2b=2, so b=1. Then a=1.",
+    "Case 2: f(-1)=2 and f(1)=0. Thus -a+b=2 and a+b=0.",
+    "Adding gives 2b=2, so b=1. Then a=-1.",
+    "Both cases map the two distinct inputs to both codomain elements. Therefore (a,b)=(1,1) or (-1,1)."
+  ],
+  "answer": [
+    {
+      "a": 1,
+      "b": 1
+    },
+    {
+      "a": -1,
+      "b": 1
+    }
+  ],
+  "validation": {
+    "cases": [
+      {
+        "a": 1,
+        "b": 1,
+        "outputs": [
+          0,
+          2
+        ]
+      },
+      {
+        "a": -1,
+        "b": 1,
+        "outputs": [
+          2,
+          0
+        ]
+      }
+    ],
+    "independentExhaustiveIntegerCheck": "all integer a,b in [-10,10] tested for image set {0,2}",
+    "sourceFidelity": "pending_original_page_image",
+    "published": false
+  },
+  "certification": {
+    "newSourceCertifiedQuestions": 0,
+    "newSourceCertifiedSubparts": 0,
+    "newPublishedSolutions": 0,
+    "tamil": "pending_editorial_review"
+  },
+  "next": "Verify printed page 25 original image to confirm A, B and f(x); retain draft until source and required CI pass."
+}

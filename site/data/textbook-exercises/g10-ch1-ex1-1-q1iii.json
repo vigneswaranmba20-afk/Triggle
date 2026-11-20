@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-1-q1iii",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.1",
+  "question": "1",
+  "subpart": "iii",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "tamil": {
+      "printedPage": 6,
+      "pdfPage": 12
+    },
+    "manifest": "docs/reference-library/2025-user-textbook-manifest.json",
+    "verificationNote": "Visually checked English and Tamil 2025 revised PDF page 12: A={m,n}; B=empty set (printed phi). Faithful original restatement."
+  },
+  "review": {
+    "sourceVerified": true,
+    "mathVerified": true,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  },
+  "title": {
+    "en": "Cartesian products with the empty set",
+    "ta": "வெற்றுக் கணத்துடன் கார்டீசியன் பெருக்கல்"
+  },
+  "questionParaphrase": {
+    "en": "For A = {m, n} and B = ∅, determine A × B, A × A and B × A.",
+    "ta": "A = {m, n}, B = ∅ எனில் A × B, A × A மற்றும் B × A ஆகியவற்றைக் காண்க."
+  },
+  "steps": [
+    {
+      "en": "A has two distinct elements m and n. B is the empty set, so it has no elements to use as a second coordinate.",
+      "ta": "A கணத்தில் m, n என்ற இரு வெவ்வேறு உறுப்புகள் உள்ளன. B வெற்றுக் கணம் என்பதால் இரண்டாம் உறுப்பாகத் தேர்ந்தெடுக்க எந்த உறுப்பும் இல்லை.",
+      "equation": "A = {m, n}, B = ∅; n(A) = 2, n(B) = 0"
+    },
+    {
+      "en": "Every pair in A × B must have its second coordinate in B. Since B is empty, no such pair exists.",
+      "ta": "A × B இல் உள்ள ஒவ்வொரு வரிசைச் சோடியின் இரண்டாம் உறுப்பு B இல் இருக்க வேண்டும். B வெற்றுக் கணம் என்பதால் அத்தகைய சோடி எதுவும் இல்லை.",
+      "equation": "A × B = ∅"
+    },
+    {
+      "en": "For A × A, choose each of m and n as the first coordinate and pair it with both m and n as the second coordinate.",
+      "ta": "A × A இல் முதல் உறுப்பாக m, n ஆகியவற்றை ஒவ்வொன்றாகத் தேர்ந்தெடுத்து, இரண்டாம் உறுப்பாக m, n இரண்டுடனும் இணைக்க வேண்டும்.",
+      "equation": "A × A = {(m,m), (m,n), (n,m), (n,n)}"
+    },
+    {
+      "en": "Every pair in B × A would need a first coordinate from B. There are none. Check the counts: 2×0=0, 2×2=4, and 0×2=0.",
+      "ta": "B × A இல் முதல் உறுப்பு B இலிருந்து வர வேண்டும். அங்கு உறுப்புகள் இல்லை. சோடிகளின் எண்ணிக்கை: 2×0=0, 2×2=4, 0×2=0 எனச் சரிபார்க்கலாம்.",
+      "equation": "B × A = ∅; n(A × B)=0, n(A × A)=4, n(B × A)=0"
+    }
+  ],
+  "answers": {
+    "AxB": [],
+    "AxA": [
+      [
+        "m",
+        "m"
+      ],
+      [
+        "m",
+        "n"
+      ],
+      [
+        "n",
+        "m"
+      ],
+      [
+        "n",
+        "n"
+      ]
+    ],
+    "BxA": []
+  },
+  "misconception": {
+    "en": "The Cartesian product with an empty set is empty, not a set containing an empty ordered pair.",
+    "ta": "வெற்றுக் கணத்துடனான கார்டீசியன் பெருக்கல் வெற்றுக் கணமே; அது ஒரு வெற்று வரிசைச் சோடியைக் கொண்ட கணம் அல்ல."
+  }
+}
