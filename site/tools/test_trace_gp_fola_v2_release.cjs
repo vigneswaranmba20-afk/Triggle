@@ -18,5 +18,5 @@ assert.equal((gp.match(/"video"/g)||[]).length,1,'Exactly one video reference');
 const index=read('site/index.html');
 assert.match(index,/g10-ch2-concepts\.js\?v=gp-fola-fa50e19c-20261120/);
 const sw=read('site/service-worker.js');
-assert.match(sw,/const CACHE='triggle-[^']+-gpfola-v2-fa50e19c'/);
+assert.match(sw,/const CACHE='triggle-[^']+-gpfola-v2-fa50e19c-g9ex32'/);
 console.log('PASS G.P. Fola v2 immutable URL, runtime, single reference, HTML revision and PWA cache');
