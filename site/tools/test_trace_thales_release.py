@@ -67,6 +67,9 @@ class ThalesReleaseTests(unittest.TestCase):
         for required in ("video.controls=true","video.playsInline=true","video.preload='none'","url.protocol!=='https:'"):
             self.assertIn(required,player)
         self.assertIn("pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev",player)
+        self.assertIn("const anchor=panel.querySelector('.g10ch4-studio')",player)
+        self.assertEqual(player.count("if(stage.video)attachStageVideo(panel,stage,lang);"),2)
+        self.assertIn(".sp2-concept-heading",player)
 
     def test_cache_bumps_do_not_break_older_chapter_suffix(self):
         html=pristine(RELS[1]);sw=pristine(RELS[2])
