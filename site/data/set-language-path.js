@@ -189,12 +189,12 @@ window.TRIGGLE_SET_PATH = {
         "ta": "சேர்ப்பு, வெட்டு, நிரப்புக் கணம்"
       },
       "idea": {
-        "en": "A ∪ B keeps members in either set; A ∩ B keeps common members; A − B keeps only A members. A′ means all members of U not in A. A Δ B means members in exactly one of A and B.",
-        "ta": "A ∪ B என்பது இரண்டில் ஒன்றிலாவது உள்ள உறுப்புகள்; A ∩ B என்பது பொதுவான உறுப்புகள்; A − B என்பது A-இல் மட்டும் உள்ள உறுப்புகள். A′ என்பது U-இல் உள்ள, A-இல் இல்லாத உறுப்புகள். A Δ B என்பது இரண்டில் ஒன்றில் மட்டும் உள்ள உறுப்புகள்."
+        "en": "A ∪ B keeps every member in either set. A ∩ B keeps only common members. A − B keeps members only in A.",
+        "ta": "A ∪ B என்பது இரண்டில் ஏதாவது ஒன்றில் உள்ள உறுப்புகள். A ∩ B என்பது பொதுவான உறுப்புகள். A − B என்பது A-இல் மட்டும் உள்ள உறுப்புகள்."
       },
       "example": {
-        "en": "A={1,2,3,5}, B={3,4,5,6}, U={1,2,3,4,5,6,7}. The common members are 3 and 5. Explore their regions in the diagram above.",
-        "ta": "A={1,2,3,5}, B={3,4,5,6}, U={1,2,3,4,5,6,7}. இரண்டிலும் உள்ள உறுப்புகள் 3, 5. மேலுள்ள வென் படத்தில் ஆராய்க."
+        "en": "A={1,2,3,5}, B={3,4,5,6}. The common members are 3 and 5. Explore these same sets in the interactive Venn lab below.",
+        "ta": "A={1,2,3,5}, B={3,4,5,6}. இரண்டிலும் உள்ள உறுப்புகள் 3, 5. கீழுள்ள வென் ஆய்வகத்தில் ஆராய்க."
       },
       "rule": "A ∩ B = {3, 5}",
       "visual": "venn",
