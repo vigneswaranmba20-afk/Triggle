@@ -22,8 +22,10 @@ import urllib.request
 import wave
 
 SCENES = {"intro", "sequence", "outer-pair", "inner-pair", "middle", "formula", "apply", "practice", "answer",
-          "gp-intro", "gp-pattern", "gp-name", "gp-double", "gp-align", "gp-cancel", "gp-rule", "gp-practice", "gp-answer"}
+          "gp-intro", "gp-pattern", "gp-name", "gp-double", "gp-align", "gp-cancel", "gp-rule", "gp-practice", "gp-answer",
+          "disc-intro", "disc-roots", "disc-slider", "disc-two", "disc-touch", "disc-none", "disc-rule", "disc-practice", "disc-answer"}
 GP_ORDER = ["gp-intro","gp-pattern","gp-name","gp-double","gp-align","gp-cancel","gp-rule","gp-practice","gp-answer"]
+DISC_ORDER = ["disc-intro","disc-roots","disc-slider","disc-two","disc-touch","disc-none","disc-rule","disc-practice","disc-answer"]
 ROOT = Path(__file__).resolve().parents[2]
 PALETTE = {"bg":"#FAF8F5", "ink":"#172337", "sub":"#5B6776", "maroon":"#80324A", "gold":"#C5A371", "surface":"#FFFFFF", "line":"#E8E2DA", "soft":"#F1ECE6"}
 FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
@@ -106,6 +108,24 @@ def validate_lesson(spec):
         if 'pause' not in beats[-2]['narration'].lower():
             raise ValueError('G.P. practice must allow a real pause before answer')
         # No arbitrary textbook question is transcribed. This is original Triggle practice.
+    elif visual.get('template')=='discriminant-parabola-v1':
+        if spec['id']!='g10-ch3-discriminant' or scenes!=DISC_ORDER:
+            raise ValueError('Discriminant requires nine ordered concept scenes')
+        if visual.get('example') != {'a':1,'b':-4,'cValues':[3,4,5]}:
+            raise ValueError('Quadratic curve and audio must match the source-verified example')
+        if visual.get('practice') != {'a':2,'b':-6,'c':5}:
+            raise ValueError('Discriminant student challenge must match source and exact math')
+        a,b=visual['example']['a'],visual['example']['b']
+        discriminants=[b*b-4*a*c for c in visual['example']['cValues']]
+        if discriminants!=[4,0,-4] or visual['practice']['b']**2 - 4*visual['practice']['a']*visual['practice']['c']!=-4:
+            raise ValueError('Invalid discriminant arithmetic')
+        if 'pause' not in beats[-2]['narration'].lower():
+            raise ValueError('Discriminant practice needs a pause before reveal')
+        early=' '.join(beat['narration'].lower() for beat in beats[:-1])
+        if any(phrase in early for phrase in ('negative four', 'minus four equals', 'delta is minus four')):
+            raise ValueError('Practice discriminant revealed before the answer scene')
+        if 'negative four' not in beats[-1]['narration'].lower():
+            raise ValueError('Last scene must reveal the verified student answer')
     else:
         raise ValueError('Unsupported visual template')
     return spec
@@ -305,6 +325,9 @@ def artwork(spec, beat, fraction, index, total, w, h, demo):
     if spec.get('visual',{}).get('template')=='gp-sum-cancel-v1':
         from trace_gp_artwork import artwork as gp_artwork
         return gp_artwork(spec,beat,fraction,index,total,w,h,demo)
+    if spec.get('visual',{}).get('template')=='discriminant-parabola-v1':
+        from trace_discriminant_artwork import artwork as disc_artwork
+        return disc_artwork(spec,beat,fraction,index,total,w,h,demo)
     from PIL import Image, ImageDraw, ImageFont
     im=Image.new('RGB',(w,h),PALETTE['bg'])
     d=ImageDraw.Draw(im)
@@ -472,11 +495,10 @@ def render(args):
 
 def self_test(lesson):
     x=load_lesson(lesson)
-    gp=x.get('visual',{}).get('template')=='gp-sum-cancel-v1'
-    assert x['beats'][0]['scene']==('gp-intro' if gp else 'intro')
-    assert x['beats'][-1]['scene']==('gp-answer' if gp else 'answer')
-    assert x['beats'][-2]['scene']==('gp-practice' if gp else 'practice')
-    bad=json.loads(json.dumps(x));bad['beats'][-1]['scene']='gp-practice' if gp else 'practice'
+    template=x.get('visual',{}).get('template')
+    order=GP_ORDER if template=='gp-sum-cancel-v1' else (DISC_ORDER if template=='discriminant-parabola-v1' else ['intro','sequence','outer-pair','inner-pair','middle','formula','apply','practice','answer'])
+    assert [beat['scene'] for beat in x['beats']]==order
+    bad=json.loads(json.dumps(x));bad['beats'][-1]['scene']=order[-2]
     try:validate_lesson(bad)
     except ValueError:pass
     else:raise AssertionError('Lost exercise order guard')
