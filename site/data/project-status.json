@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "6872bd3e73f4d2bbef60d003e7360b556f4d71f5",
-  "updatedAt": "2026-11-20T07:50:56+05:30",
+  "sourceCommit": "e0b42651fff2c87c872586ab636b84a856d8edc4",
+  "updatedAt": "2026-11-20T08:55:44+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -75,7 +75,7 @@
     "site/data/textbook-exercises/g10-ch3-ex3-9-complete-en.js": "6bc04f7fbc0d58ccb6d3b763944b857560fc750339f81176cb2ecd7ae4719cf1",
     "site/data/textbook-exercises/g10-ch4-ex4-1.js": "aa72988800eaf356c016f3c22f3eaa2e382bab4606e4586872be9926ea4864c7",
     "site/data/textbook-exercises/g10-ch4-ex4-2.js": "a00dc89e622c07ee84245aeb78fe0850f64e301a9cef41f2a8f0bf6d5e57009a",
-    "site/data/textbook-exercises/g10-ch4-ex4-3.js": "7e6d8d42a752460d66b2b8de3c90d09e2498dc6ff26f8da4a209719cb077a4fd",
+    "site/data/textbook-exercises/g10-ch4-ex4-3.js": "287ad86d5ee07c138befa8c8c254d038e7b1b87b6f7ea10bf0e4323c203725e5",
     "site/data/textbook-exercises/g10-ch8-ex8-1-q11-q15-en.js": "5e1aa75fdeb63f043e4e867354b008c3ac6b666cfa1c1bb783020081207fe5e5",
     "site/data/textbook-exercises/g10-ch8-ex8-1-q5-q10-en.js": "428a4ccc1321082218d4ab692c0ff3cf6cda9e0b10391d09cc3eab87fbf6a36b",
     "site/data/textbook-exercises/g10-checkpoint-20261110-en.js": "30ec65b4e2f007ae25fcde957dd6bf933c5b9ea3c26536b827c835a15c20c309",
@@ -9978,7 +9978,7 @@
                   "url": "../index.html?class=10&question=c10-4-ex4-3-q7",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "dd3c48bd450d02098575e270e13a7962321bccbeeae525ff3a3dd14a917af749",
+                  "recordSha256": "dc731269a0c7ee6c0a5b0bbda0e232d0a01e61a3d712b9a816c54dc0ad441eec",
                   "verified": false
                 },
                 {
@@ -9987,7 +9987,7 @@
                   "url": "../index.html?class=10&question=c10-4-ex4-3-q8",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "cf5cfbfdee6e9ff3f7d33a9f3c48be27cc15e61219b71664732a1ef3928105b8",
+                  "recordSha256": "2312c9d04879145b2eae4dba6bcf8e0f33ca0e39c7213a74975eedeb64c6c6f4",
                   "verified": false
                 }
               ],
