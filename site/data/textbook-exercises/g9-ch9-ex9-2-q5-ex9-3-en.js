@@ -42,6 +42,11 @@
         "eq": "P(only part time) = [[860|1500]] = [[43|75]]"
       },
       {
+        "en": "If part-time maids includes families who also employ full-time maids, add the disjoint categories: 860 only-part-time families and 250 both-types families. This inclusive interpretation differs from the printed answer key for part (ii).",
+        "ta": "English explanation (Tamil version pending): If part-time maids includes families who also employ full-time maids, add 860 only-part-time and 250 both-types families. This is an alternative interpretation, not the printed answer key.",
+        "eq": "P(part time including both) = [[860 + 250|1500]] = [[1110|1500]] = [[37|50]]"
+      },
+      {
         "en": "Find households without maids by subtracting the recorded households from all surveyed households.",
         "ta": "English explanation (Tamil version pending): Find households without maids by subtracting the recorded households from all surveyed households.",
         "eq": "No maids = 1500 − 1480 = 20"
