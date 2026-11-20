@@ -193,7 +193,7 @@
       '<details class="probability-detail"><summary>Understand the idea</summary><div data-probability-reason></div></details>' +
       '<section class="sp2-recall" aria-labelledby="probability-practice-title">' +
       '<h5 id="probability-practice-title">Try it yourself</h5><p data-probability-question></p>' +
-      '<div class="probability-controls probability-answers" role="group" aria-label="Answer choices"></div>' +
+      '<div class="probability-controls probability-answers" data-answers role="group" aria-label="Answer choices"></div>' +
       '<div class="probability-feedback" role="status" aria-atomic="true"></div></section></div>';
     panel.querySelector('h4').textContent = section + ' ' + lesson.heading;
     panel.querySelector('[data-probability-intro]').textContent = lesson.intro;

@@ -587,7 +587,7 @@
         panel.append(ref);
       }
       }
-      const holder=panel.querySelector('[data-answers]');if(holder){
+      const holder=probability?null:panel.querySelector('[data-answers]');if(holder){
         const whyButton=panel.querySelector('[data-why]');
         const feedback=panel.querySelector('[data-feedback]');
         const response=panel.querySelector('[data-why-response]');
