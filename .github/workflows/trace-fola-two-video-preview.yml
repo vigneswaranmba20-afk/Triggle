@@ -1,0 +1,100 @@
+name: TRACE Fola — two lesson review videos
+
+on:
+  push:
+    branches:
+      - feature/trace-fola-revoice-20261117
+    paths:
+      - .github/workflows/trace-fola-two-video-preview.yml
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trace-fola-review-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  render-two-fola-previews:
+    name: Fola preview · ${{ matrix.lesson }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        lesson: [g10-ch2-gp-sum]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install offline video renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -qq -y ffmpeg fonts-dejavu-core
+          python -m pip install -r site/video-factory/requirements.txt
+      - name: Validate Fola voice routing and exact maths
+        shell: bash
+        run: |
+          python3 site/tools/test_trace_fola_voice.py
+          python3 site/tools/trace_video_factory.py self-test --lesson '${{ matrix.lesson }}'
+      - name: Confirm Gemini API secret exists without printing it
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo 'No GEMINI_API_KEY configured: cannot synthesize Fola previews.' >&2
+            exit 1
+          fi
+      - name: Restore safely cached generated Fola beats
+        uses: actions/cache/restore@v4
+        with:
+          path: build/trace-video/voice-cache
+          key: fola-20261117-${{ runner.os }}-${{ matrix.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            fola-20261117-${{ runner.os }}-${{ matrix.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-
+      - name: Render full-quality 720x1280 narrated lesson
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VIDEO_LESSON: ${{ matrix.lesson }}
+        run: |
+          python3 site/tools/trace_video_factory.py render \
+            --lesson "$VIDEO_LESSON" --mode gemini --width 720 --height 1280 \
+            --fps 12 --output build/trace-video/preview \
+            --cache build/trace-video/voice-cache
+      - name: Preserve generated beats on this unique attempt even after a provider failure
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: build/trace-video/voice-cache
+          key: fola-20261117-${{ runner.os }}-${{ matrix.lesson }}-${{ hashFiles('site/video-factory/lessons/*.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Save review SHA and audio provenance
+        if: success()
+        env:
+          VIDEO_LESSON: ${{ matrix.lesson }}
+        run: |
+          python3 - <<'PY'
+          import os,json
+          from pathlib import Path
+          path=Path('build/trace-video/preview/result.json')
+          r=json.loads(path.read_text())
+          assert r['mode']=='gemini' and r['lessonId']==os.environ['VIDEO_LESSON']
+          assert r['width']==720 and r['height']==1280 and r['publishable']
+          summary=(f"## Fola review: {r['lessonId']}\n\n"
+                   f"Portrait: {r['width']}x{r['height']} · Runtime: {r['durationSeconds']:.1f}s\n\n"
+                   f"Exact video SHA-256: {r['sha256']}\n\n"
+                   "Review narration and equation timing before updating live videos.\n")
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out: out.write(summary)
+          PY
+      - name: Upload Fola preview MP4 (never auto-publish)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-video-${{ matrix.lesson }}-gemini-${{ github.run_id }}
+          path: |
+            build/trace-video/preview/*.mp4
+            build/trace-video/preview/result.json
+          if-no-files-found: error
+          retention-days: 7

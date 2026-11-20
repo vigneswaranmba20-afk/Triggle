@@ -156,57 +156,95 @@ def gemini_error_status(exc):
     return f'HTTP {code} {status}'
 
 
-def gemini_audio(text, path, model, voice, api_key):
-    global LAST_GEMINI_REQUEST_AT
+def _tts_request(text, model, voice, style):
+    """Gemini 3.8 uses the Interactions API; legacy models keep their old API.
+
+    The 3.8 model treats the text as a *verbatim* transcript, so style belongs
+    in speech metadata. Do not include narration directions in spoken text.
+    """
+    if model.startswith('gemini-3.8-'):
+        payload = {
+          'model': model,
+          'store': False,
+          'input': [{
+            'type': 'user_input',
+            'content': [{
+              'type': 'text', 'text': text,
+              'annotations': [{'type':'speech_metadata', 'style': style}]
+            }]
+          }],
+          'response_format': {'type':'audio', 'mime_type':'audio/wav'},
+          'generation_config': {'speech_config': [{'voice':voice}]}
+        }
+        return 'https://generativelanguage.googleapis.com/v1beta/interactions',payload
     prompt = ("Synthesize exactly the following spoken lesson passage. "
               "Warm, calm, natural teacher voice with gentle Indian English pronunciation. "
               "Unhurried but not unnaturally stretched. No background music. "
               "Do not read instructions. Spoken passage:\n" + text)
-    payload = {"contents":[{"parts":[{"text":prompt}]}],
-      "generationConfig":{"responseModalities":["AUDIO"],
-        "speechConfig":{"voiceConfig":{"prebuiltVoiceConfig":{"voiceName":voice}}}}}
-    url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent'
-    raw = json.dumps(payload).encode('utf8')
-    last_status = None
-    max_attempts = 4
+    payload = {'contents':[{'parts':[{'text':prompt}]}],
+      'generationConfig': {'responseModalities':['AUDIO'],
+        'speechConfig': {'voiceConfig': {'prebuiltVoiceConfig':{'voiceName':voice}}}}}
+    return ('https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent',payload)
+
+
+def _tts_audio_payload(result,model):
+    """Extract only base64 audio from well-formed provider responses."""
+    if model.startswith('gemini-3.8-'):
+        if result.get('status') != 'completed':
+            raise RuntimeError('Gemini Interactions audio response did not complete')
+        for step in reversed(result.get('steps', [])):
+            if step.get('type') != 'model_output':
+                continue
+            for part in step.get('content', []):
+                if part.get('type') == 'audio' and isinstance(part.get('data'), str):
+                    return {'data':part['data'], 'mimeType':part.get('mime_type','audio/wav')}
+        raise RuntimeError('Gemini Interactions returned no audio')
+    parts=result['candidates'][0]['content']['parts']
+    audio=next((part['inlineData'] for part in parts if 'inlineData' in part),None)
+    if audio is None: raise RuntimeError('Gemini returned no audio')
+    return audio
+
+
+def gemini_audio(text, path, model, voice, api_key, style=None):
+    global LAST_GEMINI_REQUEST_AT
+    if style is None:
+        style='Friendly, warm and patient maths teacher; natural, clear, unhurried, conversational English.'
+    url,payload=_tts_request(text,model,voice,style)
+    raw=json.dumps(payload).encode('utf8')
+    last_status=None
+    max_attempts=4
     for attempt in range(max_attempts):
-        # Preview models have relatively tight RPM quotas. Space out distinct
-        # requests without slowing down audio previously restored from cache.
-        remaining = 10.0 - (time.monotonic() - LAST_GEMINI_REQUEST_AT)
-        if remaining > 0:
-            time.sleep(remaining)
+        remaining=10.0-(time.monotonic()-LAST_GEMINI_REQUEST_AT)
+        if remaining>0: time.sleep(remaining)
         LAST_GEMINI_REQUEST_AT=time.monotonic()
         try:
-            request = urllib.request.Request(url, raw, headers={'Content-Type':'application/json','x-goog-api-key':api_key}, method='POST')
-            with urllib.request.urlopen(request, timeout=160) as response:
-                result = json.load(response)
-            parts = result['candidates'][0]['content']['parts']
-            audio = next((p['inlineData'] for p in parts if 'inlineData' in p), None)
-            if not audio: raise RuntimeError('TTS returned no audio data')
-            data = base64.b64decode(audio['data'], validate=True)
-            mime = audio.get('mimeType', 'audio/L16').lower()
-            if len(data) < 2400: raise RuntimeError('Generated audio unexpectedly short')
-            if data[:4] == b'RIFF':
+            request=urllib.request.Request(url,raw,headers={'Content-Type':'application/json','x-goog-api-key':api_key},method='POST')
+            with urllib.request.urlopen(request,timeout=160) as response:
+                result=json.load(response)
+            audio=_tts_audio_payload(result,model)
+            data=base64.b64decode(audio['data'],validate=True)
+            mime=audio.get('mimeType','audio/wav').lower()
+            if len(data)<2400:raise RuntimeError('Generated audio unexpectedly short')
+            if data[:4]==b'RIFF':
                 path.write_bytes(data)
             elif 'l16' in mime or 'pcm' in mime:
                 with wave.open(str(path),'wb') as wf:
                     wf.setnchannels(1);wf.setsampwidth(2);wf.setframerate(24000);wf.writeframes(data)
             else:
-                raise RuntimeError('Unsupported TTS audio format: ' + mime)
-            if duration(path) < .5: raise RuntimeError('TTS segment unexpectedly short')
+                raise RuntimeError('Unsupported TTS audio format: '+mime)
+            if duration(path)<.5:raise RuntimeError('TTS segment unexpectedly short')
             return
-        except (urllib.error.HTTPError, urllib.error.URLError, ValueError, KeyError, RuntimeError) as exc:
-            last_status = gemini_error_status(exc)
-            code = getattr(exc,'code',None)
-            if isinstance(exc, urllib.error.HTTPError) and code not in (429,500,502,503,504):
+        except (urllib.error.HTTPError,urllib.error.URLError,ValueError,KeyError,RuntimeError) as exc:
+            last_status=gemini_error_status(exc)
+            code=getattr(exc,'code',None)
+            if isinstance(exc,urllib.error.HTTPError) and code not in (429,500,502,503,504):
                 raise RuntimeError(f'Gemini TTS non-retryable {last_status}; check your API project settings') from None
             print(f'TRACE narration attempt {attempt+1}/{max_attempts} failed: {last_status}',flush=True)
-            if attempt < max_attempts - 1:
-                # Bounded exponential-ish delay; do not hammer a rate-limited API.
+            if attempt<max_attempts-1:
                 backoff=(8,22,45)[attempt]
-                if isinstance(exc, urllib.error.HTTPError):
+                if isinstance(exc,urllib.error.HTTPError):
                     retry_after=exc.headers.get('Retry-After','')
-                    if retry_after.isdigit(): backoff=max(backoff,min(90,int(retry_after)))
+                    if retry_after.isdigit():backoff=max(backoff,min(90,int(retry_after)))
                 print(f'Retrying only the unfinished narration beat after {backoff}s',flush=True)
                 time.sleep(backoff)
     raise RuntimeError(f'Gemini TTS stopped after {max_attempts} attempts ({last_status}); check AI Studio quotas/billing and rerun with unchanged cache_revision to resume generated beats')
@@ -215,7 +253,8 @@ def gemini_audio(text, path, model, voice, api_key):
 def segment_audio(beat, lesson, audio_root, mode, existing_dir, api_key):
     model=lesson.get('voice',{}).get('model','gemini-3.1-flash-tts-preview')
     voice=lesson.get('voice',{}).get('name','Kore')
-    digest=hashlib.sha256(json.dumps([model,voice,beat['narration']],ensure_ascii=False).encode()).hexdigest()[:20]
+    style=lesson.get('voice',{}).get('style','Friendly, warm and patient maths teacher; natural, clear, unhurried, conversational English.')
+    digest=hashlib.sha256(json.dumps([model,voice,style,beat['narration']],ensure_ascii=False).encode()).hexdigest()[:20]
     dest = audio_root/(beat['id']+'-'+digest+'.wav')
     if mode == 'demo':
         if not dest.exists(): demo_audio(dest)
@@ -226,7 +265,7 @@ def segment_audio(beat, lesson, audio_root, mode, existing_dir, api_key):
     elif mode == 'gemini':
         if not dest.exists():
             if not api_key: raise RuntimeError('GEMINI_API_KEY is required for gemini mode; never print it')
-            gemini_audio(beat['narration'],dest,model,voice,api_key)
+            gemini_audio(beat['narration'],dest,model,voice,api_key,style)
     else: raise ValueError('Unsupported narration mode')
     if duration(dest)<.5 or duration(dest)>95: raise ValueError('Narration beat duration outside safe range')
     return dest
