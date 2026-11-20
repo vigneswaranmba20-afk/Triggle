@@ -366,7 +366,10 @@
         '<details class="sp2-explanation"><summary>'+esc(t.understand)+'</summary>'+
         '<div class="sp2-explanation-body">'+
         '<p class="sp2-idea">'+htmlMath(pick(stage.idea,lang))+'</p>'+
-        '<p class="sp2-example">'+htmlMath(pick(stage.example,lang))+'</p>'+
+        '<p class="sp2-example">'+htmlMath(stage.visual==='venn'
+          ?pick(stage.example,lang).replace(lang==='ta'?'கீழுள்ள வென் ஆய்வகத்தில் ஆராய்க.':'Explore these same sets in the interactive Venn lab below.',
+            lang==='ta'?'மேலுள்ள வென் படத்தை ஆராய்க.':'Explore the Venn diagram above.')
+          :pick(stage.example,lang))+'</p>'+
         '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(visibleRule)+'</div></div></details>'+
         '<div class="sp2-recall"><h5>'+esc(stage.visual==='membership'?t.detective:t.try)+'</h5>'+
         '<p class="sp2-concept-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p>'+
