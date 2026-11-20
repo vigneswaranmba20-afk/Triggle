@@ -5280,7 +5280,20 @@ const metadata={
     "c10-6-ex6-1-q8-ii": {"grade":10,"level":"difficult","basis":"Simplify x = sec θ cosec θ and y = sin²θ/cos θ so (x²y)^(2/3) − (xy²)^(2/3) = sec²θ − tan²θ = 1.","review":"2025-textbook-ex61-source-audit"},
     "c10-6-ex6-1-q9-i": {"grade":10,"level":"medium","basis":"Express p² − 1 = 2 sin θ cos θ and q = p/(sin θ cos θ) to obtain q(p² − 1) = 2p.","review":"2025-textbook-ex61-source-audit"},
     "c10-6-ex6-1-q9-ii": {"grade":10,"level":"difficult","basis":"Convert sin²θ to 1 − cos²θ, square both sides, and expand to the degree-6 cosine polynomial.","review":"2025-textbook-ex61-source-audit"},
-    "c10-6-ex6-1-q10": {"grade":10,"level":"medium","basis":"Write a² = (1 + sin θ)/(1 − sin θ) from a = (1 + sin θ)/cos θ and simplify (a² − 1)/(a² + 1).","review":"2025-textbook-ex61-source-audit"}
+    "c10-6-ex6-1-q10": {"grade":10,"level":"medium","basis":"Write a² = (1 + sin θ)/(1 − sin θ) from a = (1 + sin θ)/cos θ and simplify (a² − 1)/(a² + 1).","review":"2025-textbook-ex61-source-audit"},
+    "c10-6-ex6-2-q1": {"grade":10,"level":"easy","basis":"Use tan θ = 10√3 / 30 = 1/√3 to get 30°.","review":"2025-textbook-ex62-source-audit"},
+    "c10-6-ex6-2-q2": {"grade":10,"level":"easy","basis":"Compute half road width 4√3 / tan 30° = 12 m and double to 24 m.","review":"2025-textbook-ex62-source-audit"},
+    "c10-6-ex6-2-q3": {"grade":10,"level":"medium","basis":"Subtract 5 tan 45° from 5 tan 60° above eye level to find window height 3.66 m.","review":"2025-textbook-ex62-source-audit"},
+    "c10-6-ex6-2-q4": {"grade":10,"level":"medium","basis":"Equate distance d = h/tan 40° = (h + 1.6)/tan 60° and solve pedestal height.","review":"2025-textbook-ex62-source-audit"},
+    "c10-6-ex6-2-q5-i": {"grade":10,"level":"medium","basis":"Use tan 45° = (r + h)/(r + 7) = 1 to cancel dome radius r directly and get h = 7 m.","review":"2025-textbook-ex62-source-audit"},
+    "c10-6-ex6-2-q5-ii": {"grade":10,"level":"difficult","basis":"Solve tan 30° = r/(r + 12) by rationalising 12/(√3 − 1) to find r ≈ 16.39 m.","review":"2025-textbook-ex62-source-audit"},
+    "c10-6-ex6-2-q6": {"grade":10,"level":"medium","basis":"Find distance 15/√3 = 5√3 m and subtract 5√3·tan 30° = 5 m from 15 m tower.","review":"2025-textbook-ex62-source-audit"},
+    "c10-6-ex6-3-q1": {"grade":10,"level":"easy","basis":"Convert 30° depression to ground elevation 30° and compute 50√3·√3 = 150 m.","review":"2025-textbook-ex63-source-audit"},
+    "c10-6-ex6-3-q2": {"grade":10,"level":"easy","basis":"Compute vertical drop 70 tan 45° = 70 m below 120 m roof to get 50 m.","review":"2025-textbook-ex63-source-audit"},
+    "c10-6-ex6-3-q3": {"grade":10,"level":"medium","basis":"Find gap 60/√3 m then subtract drop d tan 38° from 60 m to get 32.93 m.","review":"2025-textbook-ex63-source-audit"},
+    "c10-6-ex6-3-q4": {"grade":10,"level":"medium","basis":"Subtract same-side ship distances 1800√3 − 600√3 = 1200√3 = 2078.4 m.","review":"2025-textbook-ex63-source-audit"},
+    "c10-6-ex6-3-q5": {"grade":10,"level":"medium","basis":"Add opposite-side ship distances h√3 + h/√3 = 4h/√3 m.","review":"2025-textbook-ex63-source-audit"},
+    "c10-6-ex6-3-q6": {"grade":10,"level":"medium","basis":"Compute lift heights 90 ft and 30 ft from 30√3 ft away and divide 60 ft drop by 2 min.","review":"2025-textbook-ex63-source-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."

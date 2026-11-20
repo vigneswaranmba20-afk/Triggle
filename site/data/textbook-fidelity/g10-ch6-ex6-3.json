@@ -1,0 +1,215 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 6,
+  "exercise": "6.3",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "methodology": "Visually inspected rendered 2025 English PDF p. 267 (printed p. 261) and Answer Appendix p. 347, plus 2025 Tamil PDF p. 275 (printed p. 269) and Answer Appendix p. 362.",
+  "status": "page-visual-checked",
+  "tamilEditorial": "pending",
+  "items": [
+    {
+      "id": "c10-6-ex6-3-q1",
+      "exercise": "6.3",
+      "questionNumber": 1,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "1. From the top of a rock 50√3 m high, the angle of depression of a car on the ground is observed to be 30°. Find the distance of the car from the rock.",
+        "ta": "1. 50√3 மீ உயரமுள்ள ஒரு பாறையின் உச்சியிலிருந்து 30° இறக்கக்கோணத்தில் தரையிலுள்ள மகிழுந்து ஒன்று பார்க்கப்படுகிறது எனில், மகிழுந்திற்கும் பாறைக்கும் இடையேயுள்ள தொலைவைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 261,
+          "pdf": 267
+        },
+        "ta": {
+          "printed": 269,
+          "pdf": 275
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-3-q1.svg"
+      },
+      "appendixAnswer": {
+        "en": "150 m",
+        "ta": "150 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-3-q2",
+      "exercise": "6.3",
+      "questionNumber": 2,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "2. The horizontal distance between two buildings is 70 m. The angle of depression of the top of the first building when seen from the top of the second building is 45°. If the height of the second building is 120 m, find the height of the first building.",
+        "ta": "2. இரண்டு கட்டடங்களுக்கு இடைப்பட்ட கிடைமட்டத் தொலைவு 70 மீ ஆகும். இரண்டாவது கட்டடத்தின் உச்சியிலிருந்து முதல் கட்டடத்தின் உச்சிக்கு உள்ள இறக்கக்கோணம் 45° ஆகும். இரண்டாவது கட்டடத்தின் உயரம் 120 மீ எனில் முதல் கட்டடத்தின் உயரத்தைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 261,
+          "pdf": 267
+        },
+        "ta": {
+          "printed": 269,
+          "pdf": 275
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-3-q2.svg"
+      },
+      "appendixAnswer": {
+        "en": "50 m",
+        "ta": "50 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-3-q3",
+      "exercise": "6.3",
+      "questionNumber": 3,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "3. From the top of the tower 60 m high the angles of depression of the top and bottom of a vertical lamp post are observed to be 38° and 60° respectively. Find the height of the lamp post. (tan 38° = 0.7813, √3 = 1.732)",
+        "ta": "3. 60 மீ உயரமுள்ள கோபுரத்தின் உச்சியிலிருந்து செங்குத்தாக உள்ள ஒரு விளக்குக் கம்பத்தின் உச்சி மற்றும் அடியின் இறக்கக்கோணங்கள் முறையே 38° மற்றும் 60° எனில், விளக்குக் கம்பத்தின் உயரத்தைக் காண்க. (tan 38° = 0.7813, √3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 261,
+          "pdf": 267
+        },
+        "ta": {
+          "printed": 269,
+          "pdf": 275
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-3-q3.svg"
+      },
+      "appendixAnswer": {
+        "en": "32.93 m",
+        "ta": "32.93 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-3-q4",
+      "exercise": "6.3",
+      "questionNumber": 4,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "4. An aeroplane at an altitude of 1800 m finds that two boats are sailing towards it in the same direction. The angles of depression of the boats as observed from the aeroplane are 60° and 30° respectively. Find the distance between the two boats. (√3 = 1.732)",
+        "ta": "4. 1800 மீ உயரத்தில் பறக்கும் ஒரு விமானத்திலிருந்து ஒரே திசையில் விமானத்தை நோக்கிச் செல்லும் இரு படகுகள் பார்க்கப்படுகிறது. விமானத்திலிருந்து இரு படகுகளை முறையே 60° மற்றும் 30° இறக்கக்கோணங்களில் உற்று நோக்கினால், இரண்டு படகுகளுக்கும் இடைப்பட்டத் தொலைவைக் காண்க. (√3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 261,
+          "pdf": 267
+        },
+        "ta": {
+          "printed": 269,
+          "pdf": 275
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-3-q4.svg"
+      },
+      "appendixAnswer": {
+        "en": "2078.4 m",
+        "ta": "2078.4 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-3-q5",
+      "exercise": "6.3",
+      "questionNumber": 5,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "5. From the top of a lighthouse, the angle of depression of two ships on the opposite sides of it are observed to be 30° and 60°. If the height of the lighthouse is h meters and the line joining the ships passes through the foot of the lighthouse, show that the distance between the ships is 4h/√3 m.",
+        "ta": "5. ஒரு கலங்கரை விளக்கத்தின் உச்சியிலிருந்து எதிரெதிர் பக்கங்களில் உள்ள இரண்டு கப்பல்கள் 30° மற்றும் 60° இறக்கக்கோணத்தில் பார்க்கப்படுகின்றன. கலங்கரை விளக்கத்தின் உயரம் h மீ. இரு கப்பல்கள் மற்றும் கலங்கரை விளக்கத்தின் அடிப்பகுதி ஆகியவை ஒரே நேர்க்கோட்டில் அமைகின்றன எனில், இரண்டு கப்பல்களுக்கு இடைப்பட்ட தொலைவு 4h/√3 மீ என நிரூபிக்க."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 261,
+          "pdf": 267
+        },
+        "ta": {
+          "printed": 269,
+          "pdf": 275
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-3-q5.svg"
+      },
+      "appendixAnswer": {
+        "en": "4h/√3 m",
+        "ta": "4h/√3 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-3-q6",
+      "exercise": "6.3",
+      "questionNumber": 6,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "6. A lift in a building of height 90 feet with transparent glass walls is descending from the top of the building. At the top of the building, the angle of depression to a fountain in the garden is 60°. Two minutes later, the angle of depression reduces to 30°. If the fountain is 30√3 feet from the entrance of the lift, find the speed of the lift which is descending.",
+        "ta": "6. 90 அடி உயரமுள்ள கட்டடத்தின் மேலிருந்து ஒளி ஊடுருவும் கண்ணாடிச் சுவர் கொண்ட மின் தூக்கியானது கீழ் நோக்கி வருகிறது. கட்டடத்தின் உச்சியில் மின் தூக்கி இருக்கும்போது பூந்தோட்டத்தில் உள்ள ஒரு நீரூற்றின் இறக்கக்கோணம் 60° ஆகும். இரண்டு நிமிடம் கழித்து அதன் இறக்கக்கோணம் 30° ஆக குறைகிறது. மின்தூக்கியின் நுழைவு வாயிலிலிருந்து நீரூற்று 30√3 அடி தொலைவில் உள்ளது எனில் மின்தூக்கி கீழே வரும் வேகத்தைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 261,
+          "pdf": 267
+        },
+        "ta": {
+          "printed": 269,
+          "pdf": 275
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-3-q6.svg"
+      },
+      "appendixAnswer": {
+        "en": "30 Feet / m",
+        "ta": "30 அடி/நிமிடம்"
+      }
+    }
+  ]
+}

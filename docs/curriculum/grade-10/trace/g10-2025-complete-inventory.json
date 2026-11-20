@@ -22,18 +22,18 @@
     "totalExerciseSections": 69,
     "numberedQuestions": 664,
     "subpartTasks": 939,
-    "studentRecords": 543,
+    "studentRecords": 556,
     "questionsByStatus": {
-      "COMPLETE": 360,
-      "PARTIAL": 33,
-      "MISSING": 270,
+      "COMPLETE": 372,
+      "PARTIAL": 27,
+      "MISSING": 264,
       "DUPLICATE": 0,
       "BLOCKED": 1
     },
     "tasksByStatus": {
-      "COMPLETE": 565,
-      "PARTIAL": 39,
-      "MISSING": 334,
+      "COMPLETE": 579,
+      "PARTIAL": 33,
+      "MISSING": 326,
       "DUPLICATE": 0,
       "BLOCKED": 1
     }
@@ -169,16 +169,16 @@
       "numberedQuestions": 52,
       "subpartTasks": 70,
       "questionsByStatus": {
-        "COMPLETE": 10,
-        "PARTIAL": 14,
-        "MISSING": 28,
+        "COMPLETE": 22,
+        "PARTIAL": 8,
+        "MISSING": 22,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "tasksByStatus": {
-        "COMPLETE": 19,
-        "PARTIAL": 14,
-        "MISSING": 37,
+        "COMPLETE": 33,
+        "PARTIAL": 8,
+        "MISSING": 29,
         "DUPLICATE": 0,
         "BLOCKED": 0
       }
@@ -12699,124 +12699,129 @@
       "numberedQuestionCount": 6,
       "subpartTaskCount": 7,
       "questionsByStatus": {
-        "COMPLETE": 0,
-        "PARTIAL": 3,
-        "MISSING": 3,
+        "COMPLETE": 6,
+        "PARTIAL": 0,
+        "MISSING": 0,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "tasksByStatus": {
-        "COMPLETE": 0,
-        "PARTIAL": 3,
-        "MISSING": 4,
+        "COMPLETE": 7,
+        "PARTIAL": 0,
+        "MISSING": 0,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "questions": [
         {
           "question": "1",
-          "status": "PARTIAL",
+          "status": "COMPLETE",
           "partCount": 1,
           "tasks": [
             {
               "part": "whole",
-              "status": "PARTIAL",
+              "status": "COMPLETE",
               "studentRecordIds": [
-                "c10-6-6-2-4"
+                "c10-6-ex6-2-q1"
               ],
-              "sourceVerificationStatus": "legacy-paraphrased-prompt",
-              "mathematicalValidationStatus": "verified-legacy",
-              "deploymentStatus": "merged-and-deployed-baseline",
-              "note": "Legacy paraphrased prompt requires exact 2025 textbook replacement"
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "2",
-          "status": "PARTIAL",
+          "status": "COMPLETE",
           "partCount": 1,
           "tasks": [
             {
               "part": "whole",
-              "status": "PARTIAL",
+              "status": "COMPLETE",
               "studentRecordIds": [
-                "c10-6-6-2-5"
+                "c10-6-ex6-2-q2"
               ],
-              "sourceVerificationStatus": "legacy-paraphrased-prompt",
-              "mathematicalValidationStatus": "verified-legacy",
-              "deploymentStatus": "merged-and-deployed-baseline",
-              "note": "Legacy paraphrased prompt requires exact 2025 textbook replacement"
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "3",
-          "status": "PARTIAL",
+          "status": "COMPLETE",
           "partCount": 1,
           "tasks": [
             {
               "part": "whole",
-              "status": "PARTIAL",
+              "status": "COMPLETE",
               "studentRecordIds": [
-                "c10-6-6-2-6"
+                "c10-6-ex6-2-q3"
               ],
-              "sourceVerificationStatus": "legacy-paraphrased-prompt",
-              "mathematicalValidationStatus": "verified-legacy",
-              "deploymentStatus": "merged-and-deployed-baseline",
-              "note": "Legacy paraphrased prompt requires exact 2025 textbook replacement"
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "4",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 1,
           "tasks": [
             {
               "part": "whole",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-6-ex6-2-q4"
+              ],
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "5",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 2,
           "tasks": [
             {
               "part": "i",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-6-ex6-2-q5-i"
+              ],
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "ii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-6-ex6-2-q5-ii"
+              ],
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "6",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 1,
           "tasks": [
             {
               "part": "whole",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-6-ex6-2-q6"
+              ],
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         }
@@ -12843,124 +12848,129 @@
       "numberedQuestionCount": 6,
       "subpartTaskCount": 7,
       "questionsByStatus": {
-        "COMPLETE": 0,
-        "PARTIAL": 3,
-        "MISSING": 3,
+        "COMPLETE": 6,
+        "PARTIAL": 0,
+        "MISSING": 0,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "tasksByStatus": {
-        "COMPLETE": 0,
-        "PARTIAL": 3,
-        "MISSING": 4,
+        "COMPLETE": 7,
+        "PARTIAL": 0,
+        "MISSING": 0,
         "DUPLICATE": 0,
         "BLOCKED": 0
       },
       "questions": [
         {
           "question": "1",
-          "status": "PARTIAL",
+          "status": "COMPLETE",
           "partCount": 1,
           "tasks": [
             {
               "part": "whole",
-              "status": "PARTIAL",
+              "status": "COMPLETE",
               "studentRecordIds": [
-                "c10-6-6-3-7"
+                "c10-6-ex6-3-q1"
               ],
-              "sourceVerificationStatus": "legacy-paraphrased-prompt",
-              "mathematicalValidationStatus": "verified-legacy",
-              "deploymentStatus": "merged-and-deployed-baseline",
-              "note": "Legacy paraphrased prompt requires exact 2025 textbook replacement"
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "2",
-          "status": "PARTIAL",
+          "status": "COMPLETE",
           "partCount": 1,
           "tasks": [
             {
               "part": "whole",
-              "status": "PARTIAL",
+              "status": "COMPLETE",
               "studentRecordIds": [
-                "c10-6-6-3-8"
+                "c10-6-ex6-3-q2"
               ],
-              "sourceVerificationStatus": "legacy-paraphrased-prompt",
-              "mathematicalValidationStatus": "verified-legacy",
-              "deploymentStatus": "merged-and-deployed-baseline",
-              "note": "Legacy paraphrased prompt requires exact 2025 textbook replacement"
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "3",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 1,
           "tasks": [
             {
               "part": "whole",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-6-ex6-3-q3"
+              ],
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "4",
-          "status": "PARTIAL",
+          "status": "COMPLETE",
           "partCount": 1,
           "tasks": [
             {
               "part": "whole",
-              "status": "PARTIAL",
+              "status": "COMPLETE",
               "studentRecordIds": [
-                "c10-6-6-3-9"
+                "c10-6-ex6-3-q4"
               ],
-              "sourceVerificationStatus": "legacy-paraphrased-prompt",
-              "mathematicalValidationStatus": "verified-legacy",
-              "deploymentStatus": "merged-and-deployed-baseline",
-              "note": "Legacy paraphrased prompt requires exact 2025 textbook replacement"
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "5",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 2,
           "tasks": [
             {
               "part": "i",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-6-ex6-3-q5"
+              ],
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             },
             {
               "part": "ii",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-6-ex6-3-q5"
+              ],
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         },
         {
           "question": "6",
-          "status": "MISSING",
+          "status": "COMPLETE",
           "partCount": 1,
           "tasks": [
             {
               "part": "whole",
-              "status": "MISSING",
-              "studentRecordIds": [],
-              "sourceVerificationStatus": "textbook-heading-and-page-located",
-              "mathematicalValidationStatus": "pending",
-              "deploymentStatus": "not-implemented"
+              "status": "COMPLETE",
+              "studentRecordIds": [
+                "c10-6-ex6-3-q6"
+              ],
+              "sourceVerificationStatus": "source-verified-2025",
+              "mathematicalValidationStatus": "independently-verified",
+              "deploymentStatus": "merged-and-deployed-baseline"
             }
           ]
         }

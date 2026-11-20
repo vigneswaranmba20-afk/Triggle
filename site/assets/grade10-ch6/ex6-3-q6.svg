@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Descending glass lift in 90 ft building seeing fountain at 60 and 30 degrees for Exercise 6.3 Q6</title>
+  <desc id="desc">Lift descends from 90 ft top to 30 ft in 2 minutes as depression angle to fountain 30 root 3 ft away goes from 60 to 30 degrees.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="28" y1="190" x2="292" y2="190" stroke="#525B62" stroke-width="1.5"/>
+  <line x1="78" y1="36" x2="78" y2="190" stroke="#181B20" stroke-width="2.6"/>
+  <line x1="78" y1="36" x2="236" y2="36" stroke="#525B62" stroke-width="1.1" stroke-dasharray="3,2"/>
+  <line x1="78" y1="138" x2="236" y2="138" stroke="#525B62" stroke-width="1.1" stroke-dasharray="3,2"/>
+  <line x1="78" y1="36" x2="250" y2="190" stroke="#6E2933" stroke-width="1.8"/>
+  <line x1="78" y1="138" x2="250" y2="190" stroke="#166353" stroke-width="1.8"/>
+  <circle cx="78" cy="36" r="3.4" fill="#6E2933"/>
+  <circle cx="78" cy="138" r="3.4" fill="#166353"/>
+  <circle cx="250" cy="190" r="3.4" fill="#181B20"/>
+  <text x="70" y="88" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="end" fill="#6E2933">90 ft</text>
+  <text x="70" y="166" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="end" fill="#166353">30 ft</text>
+  <text x="164" y="205" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#181B20">30√3 ft</text>
+  <text x="118" y="49" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#6E2933">60°</text>
+  <text x="128" y="150" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#166353">30°</text>
+</svg>
