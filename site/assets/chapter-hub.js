@@ -379,7 +379,7 @@
   // Do not probe the remote R2 asset on concept open: avoid wasting mobile data
   // and avoid holding up navigation/browser tests when the CDN is slow.
   function attachStageVideo(panel,stage,lang){
-    if(!['g10-ch2-ap-sum','g10-ch2-gp-sum'].includes(stage?.id)||!stage.video?.src)return;
+    if(!['g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant'].includes(stage?.id)||!stage.video?.src)return;
     let url;try{url=new URL(stage.video.src,document.baseURI);}catch{return;}
     if(url.protocol!=='https:'||!url.pathname.toLowerCase().endsWith('.mp4'))return;
     if(url.origin!==location.origin&&url.hostname!=='pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev')return;
@@ -395,8 +395,11 @@
       const header=document.createElement('div');header.className='sp2-concept-video-heading';
       const title=document.createElement('h3');title.id='triggle-'+stage.id+'-video-title';
       const gp=stage.id==='g10-ch2-gp-sum';
-       title.textContent=ta?(gp?'பெருக்குத்தொடரின் கூட்டுத்தொகை — நீக்கும் முறை':'கூட்டுத்தொடர் தொகை — இணைத்துக் கூட்டுதல்'):
-         (gp?'Geometric series — discover cancellation':'Arithmetic progression — pairing the ends');
+       const discriminant=stage.id==='g10-ch3-discriminant';
+       title.textContent=discriminant
+         ?(ta?'தன்மைக்காட்டி — மூலங்களின் தன்மை (ஆங்கிலக் குரல்)':'The discriminant — nature of roots')
+         :(ta?(gp?'பெருக்குத்தொடரின் கூட்டுத்தொகை — நீக்கும் முறை':'கூட்டுத்தொடர் தொகை — இணைத்துக் கூட்டுதல்'):
+           (gp?'Geometric series — discover cancellation':'Arithmetic progression — pairing the ends'));
       const close=document.createElement('button');close.type='button';close.className='sp2-concept-video-close';
       close.textContent=ta?'✕ மூடு':'✕ Close';close.setAttribute('aria-label',ta?'காணொளியை மூடு':'Close visual lesson');
       header.append(title,close);
