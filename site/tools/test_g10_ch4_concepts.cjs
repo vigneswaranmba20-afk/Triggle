@@ -188,7 +188,7 @@ assert(sw.includes('./assets/g10-ch4-concepts.css'));
 assert(sw.includes('./data/g10-ch4-concepts.js'));
 assert(sw.includes('./assets/g10-ch4-concepts.js'));
 assert(hub.includes("chapter.id==='g10-ch4'"));
-assert(hub.includes('TriggleG10Ch4Labs?.mount'));
+assert(hub.includes('TriggleG10Ch4Labs')&&hub.includes('labEngine?.mount'));
 assert(disc.includes("id==='g10-ch4'"));
 assert(app.includes("chapter.id==='g10-ch4'"));
 
