@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapterId": "g11-ch1",
+  "chapterTitle": "Sets, Relations and Functions",
+  "exercise": "1.1",
+  "sourceAccess": "2025 user-uploaded English and Tamil Volume I PDFs inspected",
+  "questions": [
+    {
+      "id": "g11-ch1-ex1.1-q1-i",
+      "exercise": "1.1",
+      "question": 1,
+      "subpart": "i",
+      "prompt": {
+        "en": "List the natural-number primes whose squares are below 121.",
+        "ta": "121-ஐ விடக் குறைவான வர்க்கமுடைய இயல் எண் பகா எண்களைப் பட்டியலிடுக."
+      },
+      "steps": {
+        "en": [
+          "For a natural number, x²<121 means x<11.",
+          "The primes below 11 are 2, 3, 5 and 7; 1 is not prime.",
+          "Check: 2²=4, 3²=9, 5²=25 and 7²=49, all below 121."
+        ],
+        "ta": [
+          "இயல் எண் x-க்கு x²<121 எனில் x<11.",
+          "11-க்குக் குறைவான பகா எண்கள் 2, 3, 5, 7; 1 பகா எண் அல்ல.",
+          "சரிபார்ப்பு: 2²=4, 3²=9, 5²=25, 7²=49 அனைத்தும் 121-ஐ விடக் குறைவு."
+        ]
+      },
+      "answer": {
+        "en": "{2, 3, 5, 7}",
+        "ta": "{2, 3, 5, 7}"
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 9
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 17
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I",
+          "2025 Tamil Volume I"
+        ]
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    },
+    {
+      "id": "g11-ch1-ex1.1-q1-ii",
+      "exercise": "1.1",
+      "question": 1,
+      "subpart": "ii",
+      "prompt": {
+        "en": "List the positive roots of (x−1)(x+1)(x²−1)=0.",
+        "ta": "(x−1)(x+1)(x²−1)=0 என்ற சமன்பாட்டின் மிகை வேர்களைப் பட்டியலிடுக."
+      },
+      "steps": {
+        "en": [
+          "Factor x²−1=(x−1)(x+1), so the product is (x−1)²(x+1)².",
+          "By the zero-product property, x=1 or x=−1.",
+          "Only 1 is positive; substituting x=1 makes the product zero."
+        ],
+        "ta": [
+          "x²−1=(x−1)(x+1); எனவே பெருக்கற்பலன் (x−1)²(x+1)².",
+          "பூச்சியப் பெருக்கல் விதியின்படி x=1 அல்லது x=−1.",
+          "1 மட்டுமே மிகை எண்; x=1-ஐப் பிரதியிட்டால் பெருக்கற்பலன் பூச்சியம்."
+        ]
+      },
+      "answer": {
+        "en": "{1}",
+        "ta": "{1}"
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 9
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 17
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I",
+          "2025 Tamil Volume I"
+        ]
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    },
+    {
+      "id": "g11-ch1-ex1.1-q1-iii",
+      "exercise": "1.1",
+      "question": 1,
+      "subpart": "iii",
+      "prompt": {
+        "en": "List the natural numbers satisfying 4x+9<52.",
+        "ta": "4x+9<52-ஐ நிறைவு செய்யும் இயல் எண்களைப் பட்டியலிடுக."
+      },
+      "steps": {
+        "en": [
+          "Subtract 9: 4x<43.",
+          "Divide by positive 4: x<43/4=10.75.",
+          "Thus the natural numbers are 1 through 10; x=10 gives 49<52 and x=11 gives 53>52."
+        ],
+        "ta": [
+          "9-ஐக் கழிக்க: 4x<43.",
+          "நேர்ம எண் 4-ஆல் வகுக்க: x<43/4=10.75.",
+          "எனவே இயல் எண்கள் 1 முதல் 10 வரை; x=10 எனில் 49<52, x=11 எனில் 53>52."
+        ]
+      },
+      "answer": {
+        "en": "{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}",
+        "ta": "{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}"
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 9
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 17
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I",
+          "2025 Tamil Volume I"
+        ]
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    },
+    {
+      "id": "g11-ch1-ex1.1-q1-iv",
+      "exercise": "1.1",
+      "question": 1,
+      "subpart": "iv",
+      "prompt": {
+        "en": "List real solutions of (x−4)/(x+2)=3, excluding x=−2.",
+        "ta": "x≠−2 என்ற நிபந்தனையில் (x−4)/(x+2)=3 சமன்பாட்டின் மெய் தீர்வுகளைப் பட்டியலிடுக."
+      },
+      "steps": {
+        "en": [
+          "Require x≠−2 so the denominator is nonzero.",
+          "Multiply both sides by x+2: x−4=3x+6, hence −10=2x.",
+          "x=−5 is allowed and (−5−4)/(−5+2)=−9/−3=3."
+        ],
+        "ta": [
+          "பகுதி பூச்சியமாகாமல் இருக்க x≠−2 தேவை.",
+          "இருபுறமும் x+2-ஆல் பெருக்க: x−4=3x+6; ஆகவே −10=2x.",
+          "x=−5 அனுமதிக்கப்படுகிறது; (−5−4)/(−5+2)=−9/−3=3."
+        ]
+      },
+      "answer": {
+        "en": "{−5}",
+        "ta": "{−5}"
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 9
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 17
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I",
+          "2025 Tamil Volume I"
+        ]
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    }
+  ]
+}

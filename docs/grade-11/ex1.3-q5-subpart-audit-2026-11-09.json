@@ -1,0 +1,106 @@
+{
+  "schema": "triggle.grade11.exercise-answer-key-subparts-audit.v1",
+  "grade": 11,
+  "chapter": 1,
+  "exercise": "1.3",
+  "question": 5,
+  "created": "2026-11-09",
+  "source": {
+    "driveFileId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "edition": "2025 revised",
+    "section": "Answers appendix, printed page 290",
+    "questionPageImageVerified": false
+  },
+  "answerKeySubpartCount": 4,
+  "entries": [
+    {
+      "id": "g11-ch1-ex1.3-q5-i",
+      "answer": "{(1,a),(2,a),(3,a),(4,a)}",
+      "verification": "All four domain elements have exactly one image; constant mapping is a function."
+    },
+    {
+      "id": "g11-ch1-ex1.3-q5-ii",
+      "answer": "not possible",
+      "verification": "Answer-key claim only; original condition not yet verified."
+    },
+    {
+      "id": "g11-ch1-ex1.3-q5-iii",
+      "answer": "not possible",
+      "verification": "Answer-key claim only; original condition not yet verified."
+    },
+    {
+      "id": "g11-ch1-ex1.3-q5-iv",
+      "answer": "{(1,a),(2,b),(3,c),(4,d)}",
+      "verification": "All four domain elements map to distinct codomain elements; bijective if codomain is exactly {a,b,c,d}."
+    }
+  ],
+  "checks": {
+    "uniqueIds": true,
+    "constantMappingWellDefined": true,
+    "identityMappingBijectiveUnderStatedCodomain": true,
+    "originalQuestionConditionsVerified": false,
+    "sourceExactWordingVerified": false
+  },
+  "newCertifiedQuestions": 0,
+  "newCertifiedSubparts": 0,
+  "newPublishedSolutions": 0,
+  "completeExerciseDenominator": null,
+  "studentFacing": false,
+  "status": "unpublished-answer-key-audit",
+  "blockers": [
+    "Question-page image and exact conditions for parts (i)-(iv) not yet verified.",
+    "Do not infer mathematical impossibility for (ii) or (iii) from answer key alone.",
+    "Tamil terminology not editorially certified."
+  ],
+  "next": "Inspect original Exercise 1.3 Q5 question page image, certify all four prompts and produce checked English solutions.",
+  "latestReconciliation": {
+    "date": "2026-11-09",
+    "scope": "Grade 11 only",
+    "sourceFilesLocated": {
+      "englishVolume1": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+      "tamilVolume1": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A"
+    },
+    "exercise11RegisteredDataFilesObserved": 12,
+    "exercise13Q5AnswerKeySubparts": 4,
+    "independentFiniteMappingChecks": {
+      "partI": {
+        "domain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "uniqueDomainCount": 4,
+        "distinctImages": 1,
+        "isFunction": true,
+        "isInjective": false
+      },
+      "partIV": {
+        "domain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "uniqueDomainCount": 4,
+        "distinctImages": 4,
+        "isFunction": true,
+        "isInjective": true,
+        "surjectiveOnlyIfCodomainExactly": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      }
+    },
+    "sourcePageImageCheckedThisBatch": false,
+    "originalWordingCertifiedThisBatch": 0,
+    "solutionsCertifiedThisBatch": 0,
+    "tamilCertifiedThisBatch": 0,
+    "completeExerciseQuestionDenominator": null,
+    "completeExerciseSubpartDenominator": null,
+    "publicationGate": "BLOCKED: original Q5 image not verified; branch diverged from main; CI not established",
+    "nextBatch": "Verify original printed question page for Exercise 1.3 Q5(i–iv) before producing student-facing solutions; reconcile branch with current main."
+  }
+}

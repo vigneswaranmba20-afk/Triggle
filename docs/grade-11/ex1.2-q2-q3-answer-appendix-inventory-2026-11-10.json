@@ -1,0 +1,94 @@
+{
+  "schema": "triggle.grade11.ex1.2-q2-q3-appendix-inventory.v1",
+  "grade": 11,
+  "exercise": "1.2",
+  "source": {
+    "fileId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "edition": "2025 revised",
+    "volume": "English I",
+    "printedAnswerPage": 290,
+    "questionPageImageVerified": false,
+    "answerPageImageVerified": false
+  },
+  "entries": [
+    {
+      "question": 2,
+      "parts": [
+        {
+          "part": "i",
+          "answerKeyExtract": "(c, c) and (d, d)"
+        },
+        {
+          "part": "ii",
+          "answerKeyExtract": "(c, a)"
+        },
+        {
+          "part": "iii",
+          "answerKeyExtract": "nothing to include"
+        },
+        {
+          "part": "iv",
+          "answerKeyExtract": "(c, c), (d, d), (c, a) to be included"
+        }
+      ]
+    },
+    {
+      "question": 3,
+      "parts": [
+        {
+          "part": "i",
+          "answerKeyExtract": "(c, c)"
+        },
+        {
+          "part": "ii",
+          "answerKeyExtract": "(c, a)"
+        },
+        {
+          "part": "iii",
+          "answerKeyExtract": "nothing"
+        },
+        {
+          "part": "iv",
+          "answerKeyExtract": "(c, c) and (c, a)"
+        }
+      ]
+    }
+  ],
+  "uniqueProvisionalIds": [
+    "g11-ch1-ex1.2-q2-i",
+    "g11-ch1-ex1.2-q2-ii",
+    "g11-ch1-ex1.2-q2-iii",
+    "g11-ch1-ex1.2-q2-iv",
+    "g11-ch1-ex1.2-q3-i",
+    "g11-ch1-ex1.2-q3-ii",
+    "g11-ch1-ex1.2-q3-iii",
+    "g11-ch1-ex1.2-q3-iv"
+  ],
+  "verification": {
+    "duplicateIds": "PASS",
+    "appendixEntries": 8,
+    "answerSetUnionQ2": [
+      "(c, c)",
+      "(d, d)",
+      "(c, a)"
+    ],
+    "answerSetUnionQ3": [
+      "(c, c)",
+      "(c, a)"
+    ],
+    "sourceFidelity": "text-layer only; diagram and original question unverified",
+    "mathematicalCorrectness": "not independently certifiable without original relation diagrams/questions",
+    "publicationAllowed": false
+  },
+  "coverage": {
+    "newVerifiedQuestionStems": 0,
+    "newVerifiedSubparts": 0,
+    "newStudentFacingSolutions": 0,
+    "newTamilSolutions": 0,
+    "provisionalQuestionStems": 2,
+    "provisionalSubparts": 8,
+    "exerciseQuestionDenominator": null,
+    "exerciseSubpartDenominator": null
+  },
+  "next": "Inspect original Exercise 1.2 Q2–Q3 question and answer pages visually; verify diagrams and exact instructions, then calculate all requested relation closures independently before producing English solutions."
+}

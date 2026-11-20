@@ -1,0 +1,31 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const html=fs.readFileSync(path.resolve(__dirname,'../grade-11/cartesian-intersection-lab.html'),'utf8');
+assert.match(html,/Supplementary practice only/);
+assert.match(html,/NOT a textbook-exact question/);
+assert.match(html,/Tamil editorial review pending/);
+assert.match(html,/தமிழ் ஆசிரியர் மதிப்பாய்வு நிலுவையில் உள்ளது/);
+assert.match(html,/English printed p\.7 \/ PDF p\.15/);
+assert.match(html,/Tamil printed p\.10 \/ PDF p\.18/);
+assert.match(html,/Original page-image verification is pending/);
+assert.match(html,/aria-live="polite"/);
+assert.match(html,/aria-pressed="false"/);
+assert.match(html,/function parse\(id\)/);
+assert.match(html,/new Set\(items\).size!==items.length/);
+assert.match(html,/function product\(a,b\)/);
+assert.match(html,/function calculate\(\)/);
+assert.doesNotMatch(html,/https?:\/\/[^\s"']+\.js/);
+const product=(a,b)=>a.flatMap(x=>b.map(y=>JSON.stringify([x,y])));
+const sets=Array.from({length:16},(_,mask)=>[0,1,2,3].filter(x=>mask&(1<<x)));
+let checked=0;
+for(const a of sets)for(const b of sets){
+ const lhs=new Set(product(a,b).filter(p=>new Set(product(b,a)).has(p)));
+ const shared=a.filter(x=>b.includes(x));
+ const rhs=new Set(product(shared,shared));
+ assert.deepEqual([...lhs].sort(),[...rhs].sort());
+ checked++;
+}
+assert.equal(checked,256);
+console.log('PASS Grade 11 bilingual supplementary Cartesian intersection lab: source-safety, accessibility, 256 mathematical cases');
