@@ -485,6 +485,7 @@ window.TRIGGLE_G10_CH4_PATH={
     },
     {
       "id": "g10-ch4-bpt-thales",
+      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch4-bpt-thales/2c07afb76d30e65c707b0df1e56a2aa99bbfc8d092efa949ec91d920d898f201.mp4", "language": "en", "durationSeconds": 99.85},
       "section": "4.3.1 · Theorem 1",
       "title": {
         "en": "Basic Proportionality Theorem (Thales Theorem)",
