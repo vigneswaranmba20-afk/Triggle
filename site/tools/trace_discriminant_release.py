@@ -45,19 +45,28 @@ def register_concept(source, url):
 
 
 def bump_loader(source):
-    # Preserve all unrelated chapter loaders, query flags, and textbook exercises.
-    needle = './data/g10-ch3-concepts.js?v=g10-ch3-concepts-20261119-1'
-    if source.count(needle) != 1:
-        raise ValueError("Ch3 data loader revision changed; refuse unsafe cache patch")
-    return source.replace(needle, needle+'&discriminant-fola=4c692aa7', 1)
-
+    # Append the release token to the existing Ch3 loader, without discarding
+    # unrelated curriculum/geometry query revisions.
+    pattern=r'(<script src="\./data/g10-ch3-concepts\.js\?v=[^"]+)("></script>)'
+    def replace(match):
+        if '&discriminant-fola=' in match.group(1):
+            raise ValueError("Discriminant loader already released")
+        return match.group(1)+'&discriminant-fola=4c692aa7'+match.group(2)
+    result,n=re.subn(pattern,replace,source)
+    if n!=1:
+        raise ValueError("Cannot uniquely identify Grade 10 Chapter 3 loader")
+    return result
 
 def bump_player(source):
     needle = './assets/chapter-hub.js?v='
     if source.count(needle)!=1:
         raise ValueError("Chapter hub loader changed; refuse ambiguous update")
     pattern=r'(<script src="\./assets/chapter-hub\.js\?v=[^"]+)("></script>)'
-    result,n=re.subn(pattern,lambda m:m.group(1)+'&discriminant-fola=4c692aa7'+m.group(2),source)
+    def replace(match):
+        if '&discriminant-fola=' in match.group(1):
+            raise ValueError('Discriminant player already released')
+        return match.group(1)+'&discriminant-fola=4c692aa7'+match.group(2)
+    result,n=re.subn(pattern,replace,source)
     if n!=1:
         raise ValueError("Failed to bump chapter hub resource URL")
     return result
