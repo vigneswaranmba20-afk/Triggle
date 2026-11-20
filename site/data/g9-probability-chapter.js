@@ -258,6 +258,118 @@ window.TRIGGLE_PROB_PATH={chapterId:'g9-ch9',stages:[
     }
   }
 ]};
+
+// The chapter quizzes above retain their original wording and order.
+const math = (latex, fallback) => ({latex, fallback, display: true});
+const tex = String.raw;
+const lessons = [
+  {
+    heading: 'Probability measures chance',
+    intro: 'A library’s lucky dip has four identical envelopes. Each is equally likely to be picked. Three contain a star and one contains a moon.',
+    detail: [
+      'Probability is a number that tells how likely something is to happen. An event is what you are looking for, such as picking a star.',
+      'In the rule below, E names any event and P(E) means its probability. The symbol ≤ means “is less than or equal to”. Both endpoints are allowed. Percent means “out of 100”, so certainty is 100%.'
+    ],
+    math: math(tex`0 \le P(E) \le 1`, '0 ≤ P(E) ≤ 1'),
+    conclusion: 'A probability closer to 1 means a greater chance. Even a very likely event can fail to happen.',
+    mistake: 'A zero chance means the event is impossible in the setup. Zero is a valid probability.',
+    question: 'A tide forecast says there is a 90% chance that a beach path will flood this evening. What can you conclude?',
+    choices: ['Flooding is certain.', 'Flooding is likely, and the path could stay dry.', 'Flooding and staying dry have equal chances.'],
+    correct: 1,
+    feedback: [
+      'Certainty would require 100%.',
+      '90% means 90 out of 100 on the chance scale. There is still a 10% chance the path stays dry.',
+      'Equal chances would put both events at 50%.'
+    ]
+  },
+  {
+    heading: 'Trials, outcomes and sample spaces',
+    intro: 'A robot sends two flashes. Each flash can be red (R) or blue (B). Read the letters in flash order.',
+    detail: [
+      'A random experiment has an uncertain result even under the same conditions. A deterministic experiment gives a predictable result under the same conditions, like counting the corners of a square.',
+      'One run of the experiment is a trial. Here, one trial gives two flashes. The complete result, like red then blue, is one outcome, also called a sample point.',
+      'Matching each first colour with each second colour gives every ordered result. The sample space S is the set of all possible outcomes. Braces enclose the members of a set. The notation n(S) counts its members.',
+      'An event E is a subset of S, meaning all its members come from S. A simple event has one outcome. A compound event has more than one. An event can also cover every outcome or be empty.'
+    ],
+    math: math(tex`\begin{aligned} S &= \{\mathrm{RR},\mathrm{RB},\mathrm{BR},\mathrm{BB}\} \\ n(S) &= 4 \end{aligned}`, 'S = {RR, RB, BR, BB}. S has four outcomes.'),
+    conclusion: 'The robot can send four different signals. Exactly one blue matches two of them.',
+    mistake: 'Red then blue and blue then red are different outcomes because the order of the flashes is recorded.',
+    question: 'A game records a jump or a slide, then a bell rings or stays silent. Which list includes every outcome?',
+    choices: ['Jump with bell, slide in silence', 'Jump, slide, bell, silence', 'Jump with bell, jump in silence, slide with bell, slide in silence'],
+    correct: 2,
+    feedback: [
+      'The bell can also stay silent after a jump or ring after a slide.',
+      'Each outcome must record both the move and the sound result.',
+      'Each of the two moves can be paired with each of the two bell results. That gives four complete outcomes.'
+    ]
+  },
+  {
+    heading: 'Classical probability',
+    intro: 'A fair six-sided die picks the page of a puzzle. Each face has the same chance. Choose a rule. Ticks mark the matching faces.',
+    detail: [
+      'Multiples of 3 are numbers you get by multiplying 3 by a whole number. Classical probability works from the setup before you run the experiment. Use this counting rule when each outcome being counted has the same chance.',
+      'S is the sample space, the set of all possible results. E names the event and P(E) means its chance. A favourable outcome is any result that matches E. The notation n(E) counts matching outcomes and n(S) counts all possible outcomes.'
+    ],
+    math: math(tex`P(E)=\dfrac{n(E)}{n(S)}`, 'The probability of E is the number of outcomes in E divided by the number of outcomes in S.'),
+    conclusion: 'Count the matching faces for the top of the fraction. All six faces stay in the bottom, whichever rule you choose.',
+    mistake: 'Two labels do not guarantee equal chances. On a spinner with one wide region and one narrow region, each colour is a label but the wider region can have a greater chance.',
+    question: 'A bag holds three identical-size gold tokens and one silver token. One token is picked fairly. What is the probability of gold?',
+    choices: ['One half', 'Three quarters', 'One quarter'],
+    correct: 1,
+    feedback: [
+      'There are two colours. Count the four equally likely tokens to find their chances.',
+      'Three of the four equally likely tokens are gold, so the chance of gold is three quarters.',
+      'One token out of four is silver. Gold accounts for the other three tokens.'
+    ],
+    practiceMath: math(tex`\dfrac{3}{4}`, 'Three quarters')
+  },
+  {
+    heading: 'Empirical probability',
+    intro: 'Toss a simulated fair coin. Both heads and tails have the same chance. Compare the share of heads you see with the coin’s 50% chance.',
+    detail: [
+      'Empirical means based on results that were observed. Relative frequency is the share of trials in which the chosen event happened.',
+      'Here E is the event “heads”. Let r count heads and n count all tosses. The estimate uses the fraction below after at least one toss. The number of heads can be zero or as high as the total number of tosses, so the fraction lies between zero and one.',
+      'The theoretical chance comes from the fair-coin model. The relative frequency comes from this run. With more tosses under the same conditions, estimates typically become more stable. The gap can still grow from one batch to the next.'
+    ],
+    math: math(tex`\dfrac{r}{n}`, 'Number of times the event occurred divided by the number of trials.'),
+    conclusion: 'Use the observed fraction to estimate the chance. Two runs of the same experiment can give different estimates.',
+    mistake: 'Zero heads in a short run means no heads were observed. Heads are still possible on the next toss.',
+    question: 'A seed tray has 20 seeds. After one week, 15 have sprouted. Which claim does this observation support?',
+    choices: ['Exactly 15 seeds must sprout in every tray of 20.', 'A new seed has a 100% chance of sprouting.', 'Three quarters of this tray sprouted. That can estimate the chance under similar conditions.'],
+    correct: 2,
+    feedback: [
+      'The fraction describes this tray. Another tray can give a different result.',
+      'Five of the twenty seeds did not sprout in this tray.',
+      'Count 15 sprouted seeds out of all 20. That is three quarters of this tray, an estimate for similar conditions.'
+    ],
+    practiceMath: math(tex`\dfrac{15}{20}=\dfrac{3}{4}`, 'Fifteen out of twenty is three quarters.')
+  },
+  {
+    heading: 'Types of events',
+    intro: 'Draw one of four equally likely museum tickets numbered 1 to 4. Compare two ticket rules by seeing which tickets match each one.',
+    detail: [
+      'A sure event matches every ticket. An impossible event matches none. Equally likely events have the same probability, even if they match different tickets.',
+      'Mutually exclusive events share no outcome, so both cannot happen in one draw. Exhaustive events cover all possible outcomes, so at least one must happen.',
+      'A complement contains every outcome outside E. The textbook writes it as E′ (read “E prime”) or Eᶜ. Each outcome is in exactly one of E and its complement. P means probability and + means add.'
+    ],
+    math: math(tex`P(E)+P(E')=1`, 'The probabilities of an event and its complement add to 1.'),
+    conclusion: 'The complement gets whatever chance is left after accounting for the original event.',
+    mistake: 'Ticket 1 and ticket 2 are mutually exclusive, but tickets 3 and 4 remain possible. For complements, the two groups must cover the whole sample space.',
+    question: 'A bus arrives early, on time or late. Which event is the complement of “late”?',
+    choices: ['Early only', 'On time only', 'Early or on time'],
+    correct: 2,
+    feedback: [
+      'An on-time bus is also outside the event “late”.',
+      'An early bus is also outside the event “late”.',
+      'Early and on time together cover every possible arrival outside “late”.'
+    ]
+  }
+];
+window.TRIGGLE_PROB_PATH.stages.forEach((stage, i) => {
+  stage.page.ta = [307, 309, 311, 312, 316][i];
+  stage.lesson = lessons[i];
+});
+
 const base=window.TRIGGLE_TEXTBOOK_TASKS||{};
 window.TRIGGLE_TEXTBOOK_TASKS={...base,'g9-ch9':[
   {

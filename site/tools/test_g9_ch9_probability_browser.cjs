@@ -16,6 +16,156 @@ async function gotoWithControls(page,...args){
   return response;
 }
 
+async function checkConcepts(browser, base) {
+ const route = base + '/index.html?class=9&chapter=g9-ch9&section=concepts';
+ const shots = process.env.PROBABILITY_SCREENSHOTS;
+ if (shots) await fs.mkdir(shots, {recursive: true});
+ const practiceAnswers = [1, 2, 1, 2, 2];
+ for (const width of [320, 360, 393, 430, 390, 412]) {
+  const ctx = await browser.newContext({viewport: {width, height: 700}, hasTouch: true, isMobile: true});
+  try {
+   // A controlled sequence verifies the UI without expecting a random run to hit 50%.
+   await ctx.addInitScript(() => {
+    let calls = 0;
+    Math.random = () => calls++ === 0 ? 0.1 : 0.9;
+   });
+   const page = await ctx.newPage();
+   const errors = [];
+   page.on('pageerror', error => errors.push(error.message));
+   await page.goto(base + '/index.html?class=9&chapter=g9-ch9');
+   await page.locator('button[data-hub-section="concepts"]').click();
+   const journey = page.locator('.sp2-simple-journey');
+   const index = journey.locator('[data-index-view]');
+   const lesson = page.locator('.probability-lesson');
+   await index.waitFor({state: 'visible'});
+   assert.equal(await index.locator('button').count(), 5);
+   assert.equal(await page.locator('.hub-back-menu').isVisible(), true);
+   assert.equal(await page.locator('[data-adaptive-dock]').isVisible(), false);
+   assert.equal(await page.getByRole('button', {name: /Worked Examples/}).count(), 0);
+   if (shots) await page.screenshot({path: path.join(shots, width + '-index.png')});
+
+   for (const lang of ['en', 'ta']) {
+    for (let i = 0; i < 5; i++) {
+     await page.goto(route + '&concept=' + i);
+     await page.locator(lang === 'en' ? '#langEn' : '#langTa').click();
+     await lesson.waitFor({state: 'visible'});
+     assert.equal(await page.locator('html').getAttribute('lang'), lang);
+     assert.equal(await lesson.getAttribute('lang'), 'en');
+     assert.equal(await page.locator('.probability-language').isVisible(), lang === 'ta');
+     assert.equal(await index.isVisible(), false);
+     assert.equal(await page.locator('.hub-back-menu').isVisible(), false);
+     assert.equal(await page.locator('[data-back-index]').isVisible(), true);
+     assert.equal(await page.locator('[data-top-next]').count(), 0);
+     assert.equal(await page.locator('[data-adaptive-dock]').isVisible(), true);
+     assert.match(await journey.locator('h4').innerText(), new RegExp('^9\\.' + (i + 1) + ' '));
+
+     const controls = lesson.locator('.probability-demo button');
+     assert.ok(await controls.count() >= 2);
+     const lastControl = await controls.last().boundingBox();
+     const visual = await lesson.locator('.probability-outcomes, .probability-comparison').boundingBox();
+     assert.ok(lastControl.y + lastControl.height <= visual.y, 'Controls are above the visual');
+     assert.ok(lastControl.y + lastControl.height < 700, 'Controls fit in the first viewport at ' + width);
+     assert.ok(await controls.evaluateAll(nodes => nodes.every(node => node.offsetHeight >= 44 && node.offsetWidth >= 44)));
+     if (shots) await page.screenshot({path: path.join(shots, width + '-' + lang + '-9.' + (i + 1) + '.png')});
+
+     const result = lesson.locator('.probability-result');
+     if (i === 0) {
+      assert.equal(await lesson.locator('.probability-match').count(), 3);
+      await controls.nth(1).focus();
+      await page.keyboard.press('Enter');
+      assert.equal(await lesson.locator('.probability-match').count(), 0);
+      assert.match(await result.innerText(), /sun is impossible/);
+      await controls.nth(2).tap();
+      assert.equal(await lesson.locator('.probability-match').count(), 4);
+     } else if (i === 1) {
+      assert.deepEqual(await lesson.locator('.probability-outcomes li').allTextContents(), ['RR', 'RB', 'BR', 'BB']);
+      await controls.nth(1).tap();
+      assert.deepEqual(await lesson.locator('.probability-match').allTextContents(), ['RB ✓', 'BR ✓']);
+      assert.match(await result.innerText(), /which flash is blue/);
+     } else if (i === 2) {
+      assert.equal(await lesson.locator('.probability-match').count(), 3);
+      await controls.nth(1).tap();
+      assert.deepEqual(await lesson.locator('.probability-match').allTextContents(), ['3 ✓', '6 ✓']);
+      assert.match(await result.innerText(), /one-third/);
+     } else if (i === 3) {
+      assert.equal(await result.locator('math').count(), 0, 'No fraction with zero trials');
+      await controls.first().tap();
+      assert.match(await result.innerText(), /1 head in 1 toss, above/);
+      await controls.nth(1).tap();
+      assert.match(await result.innerText(), /1 head in 21 tosses, below/);
+      assert.equal(await lesson.locator('meter').last().evaluate(el => el.value), 1 / 21);
+      await controls.last().tap();
+      assert.match(await result.innerText(), /start counting/);
+      assert.equal(await lesson.locator('meter').last().isVisible(), false);
+      await controls.first().tap();
+      assert.match(await result.innerText(), /0 heads in 1 toss, below/);
+     } else {
+      const membership = lesson.locator('.probability-outcomes li');
+      assert.deepEqual(await membership.allTextContents(), ['1 · A', '2 · A', '3 · A', '4 · A']);
+      await controls.nth(1).tap();
+      assert.equal(await lesson.locator('[data-matches="Neither"]').count(), 2);
+      await controls.nth(2).tap();
+      assert.equal(await lesson.locator('[data-matches="Neither"]').count(), 0);
+      assert.match(await result.innerText(), /exactly one rule/);
+      await controls.last().tap();
+      assert.match(await result.innerText(), /Ticket 4 matches both/);
+      assert.equal(await lesson.locator('[data-matches="A and B"]').innerText(), '4 · A and B');
+     }
+     const detail = lesson.locator('details');
+     assert.equal(await detail.getAttribute('open'), null);
+     await detail.locator('summary').tap();
+     const math = detail.locator('math');
+     assert.equal(await math.count(), 1);
+     assert.equal(await lesson.locator('.math-fallback').count(), 0);
+     await page.evaluate(() => document.fonts.ready);
+     assert.ok(await lesson.locator('.triggle-tex').evaluateAll(nodes => nodes.every(node => node.scrollWidth <= node.clientWidth + 1)), 'KaTeX fits at ' + width + ' for concept ' + (i + 1));
+     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'Page fits at ' + width);
+     const choices = lesson.locator('.probability-answers button');
+     await choices.first().tap();
+     assert.match(await lesson.locator('.probability-feedback').innerText(), /^Try again/);
+     await choices.nth(practiceAnswers[i]).tap();
+     assert.match(await lesson.locator('.probability-feedback').innerText(), /^Correct/);
+    }
+   }
+
+   await page.goto(route + '&concept=99');
+   assert.equal(await index.isVisible(), true, 'Out-of-range route falls back to the index');
+   await index.locator('button').first().tap();
+   assert.equal(new URL(page.url()).searchParams.get('concept'), '0');
+   assert.equal(await journey.locator('[data-footer-prev]').isDisabled(), true);
+   await journey.locator('[data-footer-next]').tap();
+   assert.equal(new URL(page.url()).searchParams.get('concept'), '1');
+   await page.goBack();
+   assert.match(await journey.locator('h4').innerText(), /^9\.1/);
+   await journey.locator('[data-back-index]').tap();
+   await index.locator('button').last().tap();
+   await journey.locator('[data-footer-next]').tap();
+   assert.equal(await index.isVisible(), true);
+   assert.equal(new URL(page.url()).searchParams.has('concept'), false);
+   assert.deepEqual(errors, [], 'No page errors at ' + width);
+  } finally {
+   await ctx.close();
+  }
+ }
+
+ const ctx = await browser.newContext({viewport: {width: 360, height: 700}});
+ try {
+  const page = await ctx.newPage();
+  await page.goto(route);
+  await page.waitForFunction(() => navigator.serviceWorker.controller);
+  await ctx.setOffline(true);
+  await page.goto(route + '&concept=3');
+  const lesson = page.locator('.probability-lesson');
+  await lesson.locator('.probability-demo button').nth(1).click();
+  assert.equal(await lesson.locator('.probability-result math mfrac').count(), 1);
+  await page.locator('[data-footer-next]').click();
+  assert.match(await lesson.locator('.probability-result').innerText(), /sure.*impossible/);
+ } finally {
+  await ctx.close();
+ }
+ console.log('PASS: five Probability concept lessons, both language shells, mobile layouts, navigation, touch, keyboard, independent practice, KaTeX and offline use.');
+}
+
 async function main(){
  const server=http.createServer(async(req,res)=>{
   try{
@@ -23,7 +173,7 @@ async function main(){
    const file=path.resolve(root,'.'+(pathname.endsWith('/')?pathname+'index.html':pathname));
    if(!file.startsWith(root+path.sep))throw Error('Unsafe path');
    const b=await fs.readFile(file);
-   res.writeHead(200,{'content-type':path.extname(file)==='.js'?'application/javascript':path.extname(file)==='.css'?'text/css':'text/html','cache-control':'no-store'});res.end(b);
+   res.writeHead(200,{'content-type':({'.js':'application/javascript','.css':'text/css','.woff2':'font/woff2','.woff':'font/woff','.svg':'image/svg+xml'}[path.extname(file)]||'text/html'),'cache-control':'no-store'});res.end(b);
   }catch{res.writeHead(404);res.end();}
  });
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
@@ -75,6 +225,7 @@ async function main(){
    assert.deepEqual(errors,[],'Browser JS errors at '+width);
    await ctx.close();
   }
+  await checkConcepts(browser, base);
   console.log('PASS: Grade 9 Probability Exercise 9.1 Q4/Q6 and range quiz in English and Tamil UI at 320/390/1280 px.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
