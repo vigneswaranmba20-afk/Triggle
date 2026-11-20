@@ -5317,7 +5317,20 @@ const metadata={
     "c10-6-ex6-5-q12": {"grade":10,"level":"easy","basis":"Subtract 45° shadow (60 m) from 30° shadow (60√3 m): 60(1.732 − 1) = 43.92 m.","review":"2025-textbook-ex65-source-audit"},
     "c10-6-ex6-5-q13": {"grade":10,"level":"medium","basis":"Solve H = d√3 and H − 20 = d/√3 simultaneously to get d = 10√3 m and H = 30 m.","review":"2025-textbook-ex65-source-audit"},
     "c10-6-ex6-5-q14": {"grade":10,"level":"medium","basis":"Multiply complementary ratios tan θ = 4h/x and tan(90°−θ) = 2h/x to get 8h²/x² = 1.","review":"2025-textbook-ex65-source-audit"},
-    "c10-6-ex6-5-q15": {"grade":10,"level":"difficult","basis":"Apply Exercise 6.4 Q3 formula with θ₁ = β and θ₂ = 45° (tan 45° = 1).","review":"2025-textbook-ex65-source-audit"}
+    "c10-6-ex6-5-q15": {"grade":10,"level":"difficult","basis":"Apply Exercise 6.4 Q3 formula with θ₁ = β and θ₂ = 45° (tan 45° = 1).","review":"2025-textbook-ex65-source-audit"},
+    "c10-6-unit-q1-i": {"grade":10,"level":"medium","basis":"Combine fractions over (1 + sin A)(1 + sec A) so (sec²A − 1) and (sin²A − 1) cancel to 1 − 1 = 0.","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q1-ii": {"grade":10,"level":"easy","basis":"Replace tan²θ + 1 with 1/cos²θ and tan²θ with sin²θ/cos²θ, cancel cos²θ, then convert sin²θ to 1 − cos²θ.","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q2": {"grade":10,"level":"medium","basis":"Group (1 + sin θ) as A, expand (A ∓ cos θ)², apply sin²θ + cos²θ = 1, and cancel 2(1 + sin θ).","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q3": {"grade":10,"level":"medium","basis":"Substitute y cos θ = x sin θ into x sin³θ + (y cos θ)cos²θ to obtain x = cos θ and y = sin θ.","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q4": {"grade":10,"level":"medium","basis":"Add squares of (a cos θ − b sin θ) and (a sin θ + b cos θ) to cancel cross terms and obtain a² + b².","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q5": {"grade":10,"level":"medium","basis":"Find horizontal distance travelled 80(√3 − 1) = 58.56 m and divide by 2 seconds.","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q6": {"grade":10,"level":"difficult","basis":"Compute 600/0.7536 − 600/1.3270 ≈ 344.03 m distance travelled and divide by 175 m/s.","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q7-i": {"grade":10,"level":"medium","basis":"Convert 35° West of North into 55° above West line and compute 30 sin 55° = 24.58 km.","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q7-ii": {"grade":10,"level":"medium","basis":"Adjacent leg along West axis at 55° gives 30 cos 55° = 17.21 km.","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q7-iii": {"grade":10,"level":"medium","basis":"Bearing 48° East of North leaves 42° above East horizontal, so North component = 32 sin 42° = 21.41 km.","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q7-iv": {"grade":10,"level":"medium","basis":"Adjacent leg along East axis at 42° gives 32 cos 42° = 23.78 km.","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q8": {"grade":10,"level":"medium","basis":"Equate total distance h/√3 + h = 200(√3 + 1)/√3 to cancel (√3 + 1)/√3 and obtain h = 200 m.","review":"2025-textbook-unit6-source-audit"},
+    "c10-6-unit-q9": {"grade":10,"level":"medium","basis":"Add upper section 35 tan 24° and lower section 35 tan 34° across 35 m street width to get 39.19 m.","review":"2025-textbook-unit6-source-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."

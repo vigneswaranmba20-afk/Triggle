@@ -1,0 +1,420 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 6,
+  "exercise": "6.unit",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "methodology": "Visually inspected rendered 2025 English PDF p. 273 (printed p. 267) and Answer Appendix p. 347, plus 2025 Tamil PDF p. 281 (printed p. 275) and Answer Appendix p. 362.",
+  "status": "page-visual-checked",
+  "tamilEditorial": "pending",
+  "items": [
+    {
+      "id": "c10-6-unit-q1-i",
+      "exercise": "6.unit",
+      "questionNumber": 1,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "1. Prove that (i) cot² A ((sec A − 1) / (1 + sin A)) + sec² A ((sin A − 1) / (1 + sec A)) = 0",
+        "ta": "1. நிரூபிக்கவும் (i) cot² A ((sec A − 1) / (1 + sin A)) + sec² A ((sin A − 1) / (1 + sec A)) = 0"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "Proof (= 0)",
+        "ta": "நிரூபணம் (= 0)"
+      }
+    },
+    {
+      "id": "c10-6-unit-q1-ii",
+      "exercise": "6.unit",
+      "questionNumber": 1,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "1. Prove that (ii) (tan² θ − 1) / (tan² θ + 1) = 1 − 2 cos² θ",
+        "ta": "1. நிரூபிக்கவும் (ii) (tan² θ − 1) / (tan² θ + 1) = 1 − 2 cos² θ"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "Proof (= 1 − 2 cos² θ)",
+        "ta": "நிரூபணம் (= 1 − 2 cos² θ)"
+      }
+    },
+    {
+      "id": "c10-6-unit-q2",
+      "exercise": "6.unit",
+      "questionNumber": 2,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "2. Prove that ((1 + sin θ − cos θ) / (1 + sin θ + cos θ))² = (1 − cos θ) / (1 + cos θ)",
+        "ta": "2. ((1 + sin θ − cos θ) / (1 + sin θ + cos θ))² = (1 − cos θ) / (1 + cos θ) என்பதை நிரூபிக்கவும்"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "Proof ((1 − cos θ) / (1 + cos θ))",
+        "ta": "நிரூபணம் ((1 − cos θ) / (1 + cos θ))"
+      }
+    },
+    {
+      "id": "c10-6-unit-q3",
+      "exercise": "6.unit",
+      "questionNumber": 3,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "3. If x sin³ θ + y cos³ θ = sin θ cos θ and x sin θ = y cos θ, then prove that x² + y² = 1.",
+        "ta": "3. x sin³ θ + y cos³ θ = sin θ cos θ மற்றும் x sin θ = y cos θ எனில் x² + y² = 1 என நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "Proof (x² + y² = 1)",
+        "ta": "நிரூபணம் (x² + y² = 1)"
+      }
+    },
+    {
+      "id": "c10-6-unit-q4",
+      "exercise": "6.unit",
+      "questionNumber": 4,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "4. If a cos θ − b sin θ = c, then prove that (a sin θ + b cos θ) = ±√(a² + b² − c²).",
+        "ta": "4. a cos θ − b sin θ = c எனில் (a sin θ + b cos θ) = ±√(a² + b² − c²) என நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "Proof (±√(a² + b² − c²))",
+        "ta": "நிரூபணம் (±√(a² + b² − c²))"
+      }
+    },
+    {
+      "id": "c10-6-unit-q5",
+      "exercise": "6.unit",
+      "questionNumber": 5,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "5. A bird is sitting on the top of a 80 m high tree. From a point on the ground, the angle of elevation of the bird is 45°. The bird flies away horizontally in such away that it remained at a constant height from the ground. After 2 seconds, the angle of elevation of the bird from the same point is 30°. Determine the speed at which the bird flies. (√3 = 1.732)",
+        "ta": "5. 80 மீ உயரமுள்ள மரத்தின் உச்சியில் ஒரு பறவை இருக்கிறது. தரையில் உள்ள ஒரு புள்ளியிலிருந்து பறவையின் ஏற்றக்கோணம் 45°. பறவை ஒரே உயரத்தில் கிடைமட்டத்தில் பறந்து செல்கிறது. 2 வினாடிகள் கழித்து அதே புள்ளியிலிருந்து பறவையின் ஏற்றக்கோணம் 30° எனில், பறவை பறக்கும் வேகத்தினைக் காண்க. (√3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-unit-q5.svg"
+      },
+      "appendixAnswer": {
+        "en": "29.28 m/s",
+        "ta": "29.28 மீ/நொ"
+      }
+    },
+    {
+      "id": "c10-6-unit-q6",
+      "exercise": "6.unit",
+      "questionNumber": 6,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "6. An aeroplane is flying parallel to the Earth’s surface at a speed of 175 m/sec and at a height of 600 m. The angle of elevation of the aeroplane from a point on the Earth’s surface is 37°. After what period of time does the angle of elevation increase to 53°? (tan 53° = 1.3270, tan 37° = 0.7536)",
+        "ta": "6. விமானம் ஒன்று புவிப் பரப்பிற்கு இணையாக 600 மீ உயரத்தில் 175 மீ/வி வேகத்தில் செல்கிறது. புவியின் மீது ஒரு புள்ளியிலிருந்து விமானத்திற்கு உள்ள ஏற்றக்கோணம் 37° ஆகும். அதே புள்ளியிலிருந்து ஏற்றக்கோணம் 53°-க்கு அதிகரிக்க எவ்வளவு நேரம் தேவைப்படும்? (tan 53° = 1.3270, tan 37° = 0.7536)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-unit-q6.svg"
+      },
+      "appendixAnswer": {
+        "en": "1.97 seconds (approx)",
+        "ta": "1.97 நொடிகள் (தோராயமாக)"
+      },
+      "textbookTypoNote": "2025 Tamil PDF p. 281 Q6 renders a font-encoding glitch \"37ϒ\" for 37°; transcribed cleanly as 37°."
+    },
+    {
+      "id": "c10-6-unit-q7-i",
+      "exercise": "6.unit",
+      "questionNumber": 7,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "7. A bird is flying from A towards B at an angle of 35°, a point 30 km away from A. At B it changes its course of flight and heads towards C on a bearing of 48° and distance 32 km away.\n(i) How far is B to the North of A?\n(sin 55° = 0.8192, cos 55° = 0.5736, sin 42° = 0.6691, cos 42° = 0.7431)",
+        "ta": "7. ஒரு பறவை A என்ற இடத்திலிருந்து 30 கி.மீ தொலைவில் B என்ற இடத்திற்கு 35° கோணத்தில் பறக்கிறது. B-ல் 48° கோணத்திலிருந்து விலகி 32 கி.மீ தொலைவில் உள்ள C என்ற இடத்திற்குச் செல்கிறது,\n(i) A -ன் வடக்குப் புறமாக B-ன் தொலைவு எவ்வளவு?\n(sin 55° = 0.8192, cos 55° = 0.5736, sin 42° = 0.6691, cos 42° = 0.7431)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-unit-q7.svg"
+      },
+      "appendixAnswer": {
+        "en": "24.58 km(approx)",
+        "ta": "24.58 கி. மீ(தோராயமாக)"
+      }
+    },
+    {
+      "id": "c10-6-unit-q7-ii",
+      "exercise": "6.unit",
+      "questionNumber": 7,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "7. A bird is flying from A towards B at an angle of 35°, a point 30 km away from A. At B it changes its course of flight and heads towards C on a bearing of 48° and distance 32 km away.\n(ii) How far is B to the West of A?\n(sin 55° = 0.8192, cos 55° = 0.5736, sin 42° = 0.6691, cos 42° = 0.7431)",
+        "ta": "7. ஒரு பறவை A என்ற இடத்திலிருந்து 30 கி.மீ தொலைவில் B என்ற இடத்திற்கு 35° கோணத்தில் பறக்கிறது. B-ல் 48° கோணத்திலிருந்து விலகி 32 கி.மீ தொலைவில் உள்ள C என்ற இடத்திற்குச் செல்கிறது,\n(ii) A -ன் மேற்குப் புறமாக B-ன் தொலைவு எவ்வளவு?\n(sin 55° = 0.8192, cos 55° = 0.5736, sin 42° = 0.6691, cos 42° = 0.7431)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-unit-q7.svg"
+      },
+      "appendixAnswer": {
+        "en": "17.21 km (approx)",
+        "ta": "17.21 கி. மீ (தோராயமாக)"
+      }
+    },
+    {
+      "id": "c10-6-unit-q7-iii",
+      "exercise": "6.unit",
+      "questionNumber": 7,
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "7. A bird is flying from A towards B at an angle of 35°, a point 30 km away from A. At B it changes its course of flight and heads towards C on a bearing of 48° and distance 32 km away.\n(iii) How far is C to the North of B?\n(sin 55° = 0.8192, cos 55° = 0.5736, sin 42° = 0.6691, cos 42° = 0.7431)",
+        "ta": "7. ஒரு பறவை A என்ற இடத்திலிருந்து 30 கி.மீ தொலைவில் B என்ற இடத்திற்கு 35° கோணத்தில் பறக்கிறது. B-ல் 48° கோணத்திலிருந்து விலகி 32 கி.மீ தொலைவில் உள்ள C என்ற இடத்திற்குச் செல்கிறது,\n(iii) B -ன் வடக்குப் புறமாக C-ன் தொலைவு எவ்வளவு?\n(sin 55° = 0.8192, cos 55° = 0.5736, sin 42° = 0.6691, cos 42° = 0.7431)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-unit-q7.svg"
+      },
+      "appendixAnswer": {
+        "en": "21.41 km (approx)",
+        "ta": "21.41 கி. மீ (தோராயமாக)"
+      }
+    },
+    {
+      "id": "c10-6-unit-q7-iv",
+      "exercise": "6.unit",
+      "questionNumber": 7,
+      "part": "iv",
+      "textbookPrompt": {
+        "en": "7. A bird is flying from A towards B at an angle of 35°, a point 30 km away from A. At B it changes its course of flight and heads towards C on a bearing of 48° and distance 32 km away.\n(iv) How far is C to the East of B?\n(sin 55° = 0.8192, cos 55° = 0.5736, sin 42° = 0.6691, cos 42° = 0.7431)",
+        "ta": "7. ஒரு பறவை A என்ற இடத்திலிருந்து 30 கி.மீ தொலைவில் B என்ற இடத்திற்கு 35° கோணத்தில் பறக்கிறது. B-ல் 48° கோணத்திலிருந்து விலகி 32 கி.மீ தொலைவில் உள்ள C என்ற இடத்திற்குச் செல்கிறது,\n(iv) B -ன் கிழக்குப் புறமாக C-ன் தொலைவு எவ்வளவு?\n(sin 55° = 0.8192, cos 55° = 0.5736, sin 42° = 0.6691, cos 42° = 0.7431)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-unit-q7.svg"
+      },
+      "appendixAnswer": {
+        "en": "23.78 km (approx)",
+        "ta": "23.78 கி. மீ (தோராயமாக)"
+      }
+    },
+    {
+      "id": "c10-6-unit-q8",
+      "exercise": "6.unit",
+      "questionNumber": 8,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "8. Two ships are sailing in the sea on either side of the lighthouse. The angles of depression of two ships as observed from the top of the lighthouse are 60° and 45° respectively. If the distance between the ships is 200((√3 + 1) / √3) metres, find the height of the lighthouse.",
+        "ta": "8. கலங்கரை விளக்கம் இருக்கும் இடத்திலிருந்து கடலில் எதிரெதிர் திசையில் இரு கப்பல்கள் பயணம் செய்கின்றன. கலங்கரை விளக்கத்தின் உச்சியிலிருந்து இரு கப்பல்களின் இறக்கக்கோணங்கள் முறையே 60° மற்றும் 45°. கப்பல்களுக்கு இடையே உள்ள தொலைவு 200((√3 + 1) / √3) மீ எனில், கலங்கரை விளக்கத்தின் உயரம் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-unit-q8.svg"
+      },
+      "appendixAnswer": {
+        "en": "200 m",
+        "ta": "200 மீ"
+      }
+    },
+    {
+      "id": "c10-6-unit-q9",
+      "exercise": "6.unit",
+      "questionNumber": 9,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "9. A building and a statue are in opposite side of a street from each other 35 m apart. From a point on the roof of building the angle of elevation of the top of statue is 24° and the angle of depression of base of the statue is 34°. Find the height of the statue. (tan 24° = 0.4452, tan 34° = 0.6745)",
+        "ta": "9. ஒரு தெருவில் கட்டடமும், சிலையும் எதிரெதிர்த் திசையில் 35 மீ இடைவெளியில் அமைந்துள்ளன. கட்டடத்தின் உச்சியிலிருந்து, சிலை உச்சியின் ஏற்றக்கோணம் 24° மற்றும் சிலை அடியின் இறக்கக்கோணம் 34° எனில், சிலையின் உயரம் என்ன? (tan 24° = 0.4452, tan 34° = 0.6745)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 275,
+          "pdf": 281
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-unit-q9.svg"
+      },
+      "appendixAnswer": {
+        "en": "39.19 m",
+        "ta": "39.19 மீ"
+      }
+    }
+  ]
+}
