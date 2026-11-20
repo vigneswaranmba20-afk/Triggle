@@ -99,6 +99,24 @@ async function run(){
       assert.equal(await page.locator('.sp2-journey').getAttribute('data-view'),'lesson');
       assert.match(await page.locator('.sp2-concept-heading h4').innerText(),/^5\./);
 
+      // Video must be visible in the Geometry Studio, not merely in the underlying lesson data.
+      // Opening it verifies the accessible on-demand HTML5 player without requesting audio on page load.
+      const watch=page.locator('.sp2-concept-video-button');
+      assert.equal(await watch.count(),1,'Thales has exactly one visible Watch button');
+      assert.equal(await watch.isVisible(),true,'Thales Watch button visible on first lesson screen');
+      assert.match(await watch.innerText(),/Watch video explanation.*1:40/);
+      assert.equal(await page.locator('.sp2-concept-heading + .sp2-concept-video-button').count(),1,
+        'Watch video sits immediately below the concept title, above six lesson cards');
+      await watch.click();
+      const mediaDialog=page.locator('dialog.sp2-concept-video-dialog');
+      await mediaDialog.waitFor({state:'visible'});
+      assert.equal(await mediaDialog.locator('video').evaluate(el=>el.controls&&el.playsInline&&el.preload==='none'),true,
+        'Video player supports native controls, inline playback and no eager loading');
+      assert.match(await mediaDialog.locator('video').getAttribute('src'),
+        /\/g10-ch4-bpt-thales\/2c07afb76d30e65c707b0df1e56a2aa99bbfc8d092efa949ec91d920d898f201\.mp4$/);
+      await mediaDialog.locator('.sp2-concept-video-close').click();
+      assert.equal(await page.locator('dialog.sp2-concept-video-dialog').count(),0,'Closing video restores lesson');
+
       // Try it yourself: wrong -> Hint -> right -> Why
       const whyBtn=page.locator('[data-why]');
       assert.equal(await whyBtn.isDisabled(),true,'Why disabled before attempt');
@@ -268,6 +286,11 @@ async function run(){
         await page.goto(base+'/index.html?class=10&chapter=g10-ch4&section=concepts&concept='+idx,{waitUntil:'load'});
         await page.locator('.g10ch4-tamil-badge').waitFor({state:'visible'});
         assert.match(await page.locator('.g10ch4-tamil-badge').innerText(),/ஆசிரியர் மீளாய்வு நிலுவையில்/);
+        if(idx===4){
+          const tamilWatch=page.locator('.sp2-concept-video-button');
+          assert.equal(await tamilWatch.count(),1,'Tamil Thales concept offers Fola video');
+          assert.match(await tamilWatch.innerText(),/ஆங்கிலக் குரல்/);
+        }
         await assertStudioAndLayout(page,`TA ${width}px Concept ${idx+1}`);
       }
       await ctx.close();
