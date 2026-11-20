@@ -255,8 +255,8 @@
     const note=el('p','g10ch4-drag-note',ta?'A, B (அல்லது C) புள்ளிகளை இழுத்து ஆயத்தொலைவுகளை மாற்றலாம்.':'Drag points A, B (or C) directly on the coordinate plane.');
     const readout=el('div','g10ch4-readout');
     const chips=makeChips([
-      {label:ta?'உதாரணம் (2,4),(8,10) அளவில்':'Reset A(−4,−1), B(4,3)',action:()=>{A=[-4,-1];B=[4,3];C=[0,-3];paint();}},
-      {label:'3-4-5 Right Grid',action:()=>{A=[-2,-2];B=[2,1];C=[2,-2];paint();}}
+      {label:ta?'மீட்டமை A(−4,−1), B(4,3)':'Reset A(−4,−1), B(4,3)',action:()=>{A=[-4,-1];B=[4,3];C=[0,-3];paint();}},
+      {label:ta?'3-4-5 செங்கோண கட்டம்':'3-4-5 Right Grid',action:()=>{A=[-2,-2];B=[2,1];C=[2,-2];paint();}}
     ],()=>{},ta?'முன்னமைவுகள்':'Grid presets');
     host.append(tabs.bar,ratioRow.row,svg,note,readout,chips);
 

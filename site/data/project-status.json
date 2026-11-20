@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "1eebb7282f06772ebb7ec2a537231b69e7e35d83",
-  "updatedAt": "2026-11-20T12:29:48+05:30",
+  "sourceCommit": "c32230d63c06a963b44407a8134e7003648a3593",
+  "updatedAt": "2026-11-20T08:54:41+00:00",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -35,6 +35,7 @@
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "9a0843a303be9d4ac547a825478a0ddd3e21f3952dafefa16e248fe9f23aaaac",
     "site/data/math-layout/g10-ch2-ch8-chatgpt-20261113.js": "7c9e63f5a069dc5658601181f5d6b1df16ec9d0d457e21964fb2b24ec291d134",
+    "site/data/math-layout/g10-ch2-fractions-20261120.js": "cc57f9e5b1784ef2c72961d1200e774234982a0d9abbf3711a902bb4ace92358",
     "site/data/problem-difficulty.js": "416644625f59e0ad19afc043ad39f7e3e9f3c1c3b719371241dd21e3539e910c",
     "site/data/real-numbers/g9-ch2-concepts.js": "ccccf6be7165344c5337aecff4120c8763b55481b516fd22a63fe57d4c958564",
     "site/data/real-numbers/g9-ch2-core.js": "aa11da8281a83d1eec91f1f42205f35a3e023f95bea0ebf72168acb33f903279",
@@ -124,7 +125,7 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9.js": "ed93ba751d971497a7143086e80e307c035724d9ec062d26343a088416369d85",
-    "site/index.html": "2081c2cbca01e8b9d4946829732e93ea1a57e6e1f60ac9f4f4a657f34a16e8fa",
+    "site/index.html": "32697802e341af9ce581001e6da388e62e97f28912cc66dc70d1e0fec53641f3",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {

@@ -404,7 +404,7 @@
   const chapter1Math=window.TriggleChapter1Math?.getStep?.(current,index);
   if(chapter1Math)s={...s,math:chapter1Math};
   if(!s.math&&!isGeometryExercise(current)){
-   const remainingMath=window.TriggleG10RemainingMath?.getStep?.(current,index);
+   const remainingMath=window.TriggleG10RemainingMath?.getStep?.(current,index)||window.TriggleG10Ch2FractionMath?.getStep?.(current,index);
    if(remainingMath)s={...s,math:remainingMath};
   }
   const li=document.createElement('li');li.className='worked-step';
@@ -471,7 +471,7 @@
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
   const grade9Answer=window.TriggleG9Math?.get(current)?.answerMath;
-  const answerMath=(grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||window.TriggleG10RemainingMath?.getAnswer?.(current);
+  const answerMath=(grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getAnswer?.(current))||window.TriggleG10Ch2FractionMath?.getAnswer?.(current);
   const canGrid=!answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
@@ -593,7 +593,7 @@
   $('gradeTotal').textContent=list.length+' '+ui('lessons');$('questionLabel').textContent=labelForGroup(current.exercise).toUpperCase();$('itemPosition').textContent=num(position)+' / '+num(list.length);
   $('questionTitle').textContent=tr(current.topic);$('questionHead').textContent=tr(current.label);
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
-  const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||window.TriggleG10RemainingMath?.getQuestion?.(current,lang);
+  const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
   $('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));$('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
