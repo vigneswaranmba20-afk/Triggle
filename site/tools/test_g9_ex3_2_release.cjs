@@ -69,7 +69,8 @@ for (const asset of [batch.module, 'data/why-step-g9-ex3-2.js']) {
   assert.equal(html.split(asset).length - 1, 1);
   assert.ok(sw.includes("'./" + asset + "'"));
 }
-assert.match(sw, /const CACHE='[^']*-g9ex32'/);
+// Keep Grade 9's cache marker while permitting later concept/video cache revisions.
+assert.match(sw, /const CACHE='[^']*-g9ex32(?:-[^']+)?'/);
 const context = vm.createContext({window: {katex}});
 for (const file of ['assets/math-notation.js', 'data/problem-difficulty.js', 'data/g9-clear-math.js']) {
   vm.runInContext(readSite(file), context);
