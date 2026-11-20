@@ -60,6 +60,7 @@ class DiscriminantReleaseTests(unittest.TestCase):
         self.assertIn("g10-ch3-concepts.js?v=g10-ch3-concepts-20261119-1&discriminant-fola=4c692aa7",html2)
         self.assertIn("-"+TAG,sw2)
         self.assertIn("gpfola-v2-fa50e19c",sw2)
+        self.assertRegex(sw2, r"^const CACHE='triggle-[^']+-gpfola-v2-fa50e19c-g9ex32'")
         self.assertIn("g10geom-ex43",sw2)
         self.assertNotEqual(html,html2)
 
