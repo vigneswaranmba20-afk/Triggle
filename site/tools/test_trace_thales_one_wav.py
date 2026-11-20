@@ -12,6 +12,7 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/"site"/"tools"))
 from trace_single_wav_import import import_recording
 from trace_video_factory import load_lesson
+from trace_one_wav_recording_sheet import guide
 
 
 def make_fixture(filename, missing=False, extra=False, rate=16000):
@@ -51,6 +52,15 @@ class ThalesOneWavTest(unittest.TestCase):
             self.assertTrue(all((dest/name).is_file() for name in expected))
             with self.assertRaises(ValueError):
                 import_recording(source,dest,lesson["id"])
+
+    def test_one_copy_recording_sheet_has_exact_narration(self):
+        spec=load_lesson("g10-ch4-bpt-thales")
+        source=(ROOT/"docs/trace/THALES_ONE_SHOT_FOLA_RECORDING_SHEET.md")
+        content=source.read_text(encoding="utf8")
+        self.assertEqual(content,guide(spec))
+        self.assertEqual(content.count(" — followed by a 2.5–3 s silent separator"),8)
+        self.assertIn("only within account limits",content)
+        self.assertIn("private review MP4",content)
 
     def test_missing_and_extra_gap_refuse_to_guess(self):
         for missing,extra,found in ((True,False,7),(False,True,9)):
