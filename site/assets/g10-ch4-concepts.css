@@ -351,6 +351,6 @@
 }
 @media(max-width:400px){
   .g10ch4-card{padding:10px 8px}
-  .g10ch4-studio .katex-display{font-size:0.84em;margin:0.15em 0}
+  .g10ch4-studio .katex-display{font-size:0.78em;margin:0.15em 0}
   .g10ch4-tab,.g10ch4-chip-btn{font-size:12px;padding:8px 9px}
 }

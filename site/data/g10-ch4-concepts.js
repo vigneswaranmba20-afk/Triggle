@@ -662,7 +662,7 @@ window.TRIGGLE_G10_CH4_PATH={
           },
           {
             "title": { "en": "2. Equate both ratios and add 1", "ta": "2. இரு விகிதங்களையும் சமப்படுத்தி 1 கூட்டுக" },
-            "math": { "latex": "\\begin{aligned}\\dfrac{AE}{EC}&=\\dfrac{AF}{FC}\\\\\\dfrac{AE}{EC}+1&=\\dfrac{AF}{FC}+1\\implies\\dfrac{AC}{EC}=\\dfrac{AC}{FC}\\end{aligned}", "fallback": "AE/EC = AF/FC gives AC/EC = AC/FC" },
+            "math": { "latex": "\\begin{aligned}\\dfrac{AE}{EC}&=\\dfrac{AF}{FC}\\\\\\dfrac{AE}{EC}+1&=\\dfrac{AF}{FC}+1\\\\\\text{So }\\dfrac{AC}{EC}&=\\dfrac{AC}{FC}\\end{aligned}", "fallback": "AE/EC = AF/FC gives AC/EC = AC/FC" },
             "reason": {
               "en": "Adding 1 turns AE + EC and AF + FC both into the full side AC.",
               "ta": "இருபுறமும் 1 கூட்ட, AE + EC மற்றும் AF + FC ஆகிய இரண்டும் முழுப் பக்கம் AC ஆக மாறும்."
@@ -670,7 +670,7 @@ window.TRIGGLE_G10_CH4_PATH={
           },
           {
             "title": { "en": "3. Cancelling AC forces E = F", "ta": "3. AC-ஐ நீக்க E = F கிடைக்கிறது" },
-            "math": { "latex": "\\begin{aligned}EC=FC&\\text{ on segment }AC\\\\&\\implies E=F\\text{ so }DE\\parallel BC\\end{aligned}", "fallback": "EC = FC on AC forces E = F, so DE ∥ BC" },
+            "math": { "latex": "\\begin{aligned}EC&=FC\\text{ on }AC\\\\\\text{so point }E&=\\text{point }F\\\\\\text{hence }DE&\\parallel BC\\end{aligned}", "fallback": "EC = FC on AC forces E = F, so DE ∥ BC" },
             "reason": {
               "en": "Two points on the same side AC at the exact same distance from C must be the same point, so DE coincides with the parallel DF.",
               "ta": "AC-இன் மேல் C-யிலிருந்து ஒரே தொலைவில் உள்ள இரு புள்ளிகள் ஒன்றே என்பதால் DE மற்றும் DF ஒரே கோடாகும்; ஆகவே DE ∥ BC."
@@ -1027,7 +1027,7 @@ window.TRIGGLE_G10_CH4_PATH={
           },
           {
             "title": { "en": "3. Bisector passes through minor-arc midpoint I", "ta": "3. கோண இருசமவெட்டி கீழ்வில்லின் நடுப்புள்ளி I வழியே செல்லும்" },
-            "math": { "latex": "\\widehat{QI}=\\widehat{IR}\\implies\\angle QPI=\\angle IPR=\\dfrac{\\theta}{2}", "fallback": "arc QI = arc IR gives ∠QPI = ∠IPR = θ/2" },
+            "math": { "latex": "\\begin{aligned}\\widehat{QI}&=\\widehat{IR}\\\\\\text{so }\\angle QPI&=\\angle IPR=\\dfrac{\\theta}{2}\\end{aligned}", "fallback": "arc QI = arc IR gives ∠QPI = ∠IPR = θ/2" },
             "reason": {
               "en": "Equal lower arcs QI and IR subtend equal half-angles θ/2 at P, so ray ID automatically locates the exact vertex P.",
               "ta": "சம வில்கள் QI, IR என்பன P-இல் சம அரைக் கோணங்களைத் (θ/2) தாங்குவதால், ID கோடு சரியாக P-ஐ வெட்டும்."
@@ -1069,7 +1069,7 @@ window.TRIGGLE_G10_CH4_PATH={
         "ta": "QR-இன் செங்குத்து இருசமவெட்டி கீழ் வில்லை நடுப்புள்ளி I-இல் வெட்டுவதால் வில் QI = வில் IR. சம வில்கள் P-இல் சம கோணங்களைத் தாங்குவதால் ID கோடு ∠P-இன் இருசமவெட்டியாகிறது."
       },
       "whyMath": {
-        "latex": "\\begin{aligned}\\widehat{QI}&=\\widehat{IR}\\implies\\angle QPI=\\angle IPR\\\\&\\text{(bisector }PD\\text{ passes through }I\\text{)}\\end{aligned}",
+        "latex": "\\begin{aligned}\\widehat{QI}&=\\widehat{IR}\\\\\\text{so }\\angle QPI&=\\angle IPR\\\\&\\text{(bisector }PD\\text{ passes through }I\\text{)}\\end{aligned}",
         "fallback": "arc QI = arc IR ⇒ ∠QPI = ∠IPR (bisector passes through I)"
       },
       "explainAfterAttempt": true,
