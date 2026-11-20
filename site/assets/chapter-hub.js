@@ -424,7 +424,7 @@
     });
   }
 
-  function mountStageJourney(container,stages,lang,initialConcept,onConcept,onQuestion=null,chapterQuestions=[],hasTopNext=false){
+  function mountStageJourney(container,stages,lang,initialConcept,onConcept,onQuestion=null,chapterQuestions=[],hasTopNext=false,statistics=null){
     const ta=lang==='ta',pick=value=>typeof value==='string'?value:(value?.[lang]||value?.en||'');
     const back=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
     const nextLabel=ta?'அடுத்த கருத்து':'Next idea';
@@ -472,7 +472,9 @@
       const stageId=String(stage.id||'');
       const isCh3=stageId.startsWith('g10-ch3-');
       const isStudio6=stageId.startsWith('g10-ch4-')||stageId.startsWith('g10-ch5-')||stageId.startsWith('g10-ch6-');
-      if(probability){
+      if(statistics){
+        statistics.mount(panel,stage,i,lang,chapterQuestions,onQuestion);
+      }else if(probability){
         probability.mount(panel,stage.section,probabilityLessons[i],i,lang);
       }else if(isStudio6){
         const labEngine=stageId.startsWith('g10-ch5-')?window.TriggleG10Ch5Labs:stageId.startsWith('g10-ch6-')?window.TriggleG10Ch6Labs:window.TriggleG10Ch4Labs;
@@ -590,7 +592,7 @@
         panel.append(ref);
       }
       }
-      const holder=probability?null:panel.querySelector('[data-answers]');if(holder){
+      const holder=probability||statistics?null:panel.querySelector('[data-answers]');if(holder){
         const whyButton=panel.querySelector('[data-why]');
         const feedback=panel.querySelector('[data-feedback]');
         const response=panel.querySelector('[data-why-response]');
@@ -641,10 +643,11 @@
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
     const sets=categorized(questions); // Examples stay archived in source, outside student navigation.
     const matrixConcepts=chapter.id==='g12-ch1'&&lang==='en'&&window.TriggleMatrixConcepts;
-    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):chapter.id==='g10-ch4'?(window.TRIGGLE_G10_CH4_PATH?.stages||[]):chapter.id==='g10-ch5'?(window.TRIGGLE_G10_CH5_PATH?.stages||[]):chapter.id==='g10-ch6'?(window.TRIGGLE_G10_CH6_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
+    const statistics=chapter.id==='g9-ch8'&&window.TriggleStatisticsConcepts;
+    const stages=statistics?(window.TRIGGLE_STATISTICS_LESSONS||[]):chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):chapter.id==='g10-ch4'?(window.TRIGGLE_G10_CH4_PATH?.stages||[]):chapter.id==='g10-ch5'?(window.TRIGGLE_G10_CH5_PATH?.stages||[]):chapter.id==='g10-ch6'?(window.TRIGGLE_G10_CH6_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
-    const kinds=activityEntries.length?[...baseKinds,'activities']:baseKinds;
-    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6')?0:stages.length,activities:activityEntries.length};
+    const kinds=statistics?['concepts','exercises']:activityEntries.length?[...baseKinds,'activities']:baseKinds;
+    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(statistics||matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6')?0:stages.length,activities:activityEntries.length};
     const symbols={concepts:'◇',examples:'∑',exercises:'✎',quizzes:'✓',activities:'💡'};
     const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0,activities:counts.activities>0};
     const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes,activities:t.activities})[kind];
@@ -742,9 +745,9 @@
         // No chapter title, marketing paragraph, progress count or second navigation row.
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
-        }else if(chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'){
+        }else if(statistics||chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'){
           const stageQuestions=questions.filter(q=>!/^\s*Example\b/i.test(q.label?.en||''));
-          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,stageQuestions,chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6');
+          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,stageQuestions,chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6',statistics);
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }
@@ -794,7 +797,7 @@
       }
     }
     if(section==='quizzes'){
-      if(!stages.length){
+      if(!stages.length||statistics){
         info(t.noQuiz);
       }else{
         const status=document.createElement('p');status.className='hub-quiz-progress';

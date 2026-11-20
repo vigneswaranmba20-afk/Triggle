@@ -66,6 +66,7 @@
     const interactiveCount=id=>{
       const stages=id==='g9-ch1'&&window.TriggleSetJourney?window.TRIGGLE_SET_PATH?.stages:
         id==='g9-ch2'&&window.TriggleRealJourney?window.TRIGGLE_REAL_PATH?.stages:
+        id==='g9-ch8'&&window.TriggleStatisticsConcepts?window.TRIGGLE_STATISTICS_LESSONS:
         id==='g10-ch3'&&window.TriggleG10Ch3Labs?window.TRIGGLE_G10_CH3_PATH?.stages:
         id==='g10-ch4'&&window.TriggleG10Ch4Labs?window.TRIGGLE_G10_CH4_PATH?.stages:
         id==='g10-ch5'&&window.TriggleG10Ch5Labs?window.TRIGGLE_G10_CH5_PATH?.stages:

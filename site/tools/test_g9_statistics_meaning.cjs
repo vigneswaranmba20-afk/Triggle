@@ -91,3 +91,49 @@ assert.equal(20 + (8 / (8 + 12)) * 10, 24);
 assert.equal(54.5 + (4 / (4 + 6)) * 10, 58.5);
 
 console.log('PASS Grade 9 Statistics: 30 source locators, six worked explanations and answers, and rendered bilingual fallback parity.');
+
+// The concept studio is independent of the exercise typography compiler.
+const lessonWindow = {TriggleNotation: {render: () => { throw Error('Unit test attempted a browser render'); }}};
+for (const file of ['data/g9-statistics-concepts.js', 'assets/g9-statistics-concepts.js']) {
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, '..', file), 'utf8'), {window: lessonWindow});
+}
+const lessons = lessonWindow.TRIGGLE_STATISTICS_LESSONS;
+const {frequency, summarize, groupedMedian, groupedMode} = lessonWindow.TriggleStatisticsConcepts;
+const plain = value => JSON.parse(JSON.stringify(value));
+assert.deepEqual(Array.from(lessons, x => x.section), ['8.1', '8.2', '8.3', '8.4', '8.5', '8.6']);
+const katex = require('../assets/vendor/katex/katex.min.js');
+for (const stage of lessons) {
+  assert.ok(byId.has(stage.exercise), stage.exercise);
+  for (const view of stage.views) {
+    if (view.exercise) assert.ok(byId.has(view.exercise), view.exercise);
+    const practice = view.practice || stage.practice;
+    assert.ok(practice.choices[practice.correct], stage.id);
+    assert.equal(practice.feedback.length, practice.choices.length);
+    if (view.formula) assert.match(katex.renderToString(view.formula.latex, {strict:'error', throwOnError:true}), /<math/);
+  }
+}
+for (const [set, mean, median, modes] of [
+  [[], null, null, []],
+  [[0], 0, 0, []],
+  [[-7, 0, 2, -7, 0], -2.4, 0, [-7, 0]],
+  [[11, 3, 7, 2], 5.75, 5, []],
+  [[12, 4, 9, 6], 7.75, 7.5, []],
+  [[4, 4, 7, 11, 11, 11], 8, 9, [11]],
+  [[2, 3, 3, 4, 41], 10.6, 3, [3]]
+]) {
+  const data = summarize(frequency(set));
+  assert.equal(data.mean, mean);
+  assert.equal(data.median, median);
+  assert.deepEqual(plain(data.modes), modes);
+  assert.equal(data.count, set.length);
+}
+assert.deepEqual(plain(summarize([[4,2],[7,1],[11,3]]).cumulative), [2,3,6]);
+assert.equal(groupedMedian([2,5,3]).value, 16);
+assert.equal(groupedMedian([5,2,3]).value, 10);
+assert.ok(Math.abs(groupedMedian([3,6,2]).value - 85 / 6) < 1e-12);
+assert.equal(groupedMedian([0,0,0]), null);
+assert.equal(groupedMode([2,5,3]).value, 16);
+assert.equal(groupedMode([3,5,2]).value, 14);
+assert.equal(groupedMode([2,5,5]), null);
+assert.equal(groupedMode([6,5,4]), null);
+console.log('PASS Statistics concepts: six sections, valid KaTeX, practice and exercise links, odd/even and grouped boundary cases.');
