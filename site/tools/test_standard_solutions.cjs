@@ -134,10 +134,13 @@ const ex314Records=ex314Context.window.TRIGGLE_CLASSES[10].items;
 const ex314Ids=ex314Records.map(r=>r.id);
 assert.equal(ex314Records.length,13,'Thirteen source-reviewed Exercise 3.14 parts');
 const geometry=require('../data/textbook-fidelity/g10-ch4-ex4-1-to-4-2.json');
-const geometryById=new Map(geometry.items.map(item=>[item.id,item]));
+const geometryEx43=require('../data/textbook-fidelity/g10-ch4-ex4-3.json');
+const geometryById=new Map([...geometry.items,...geometryEx43.items].map(item=>[item.id,item]));
 const geometryNewIds=geometry.items.filter(item=>!item.wasAvailableOnMain).map(item=>item.id);
 assert.equal(geometryNewIds.length,32);
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds];
+const geometryEx43NewIds=geometryEx43.items.map(item=>item.id);
+assert.equal(geometryEx43NewIds.length,8,'Eight source-indexed Ex4.3 tasks');
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -165,7 +168,7 @@ let count=0,reviewed=0;
 for(const [grade,data] of Object.entries(classes)){
  const baselineIds=preserved.grades[grade],currentIds=data.items.map(item=>item.id);
  assert.equal(JSON.stringify(currentIds.slice(0,baselineIds.length)),JSON.stringify(baselineIds),'Original 568 IDs/order preserved as the exact prefix');
- assert.equal(JSON.stringify(currentIds.slice(baselineIds.length)),JSON.stringify(grade==='10'?approvedNewIds:grade==='9'?approvedG9Ids:[]),'Only source-aligned Grade 9 Q1/Q2/Q5(iii)-Q6 and reviewed Grade 10 additions allowed');
+ assert.equal(JSON.stringify(currentIds.slice(baselineIds.length)),JSON.stringify(grade==='10'?approvedNewIds:grade==='9'?approvedG9Ids:[]),'Only source-aligned, evidence-indexed Grade 9/10 additions allowed');
  for(const item of data.items){
   const hash=crypto.createHash('sha256').update(JSON.stringify(item)).digest('hex');
   if(grade==='10'&&geometryById.has(item.id)){
@@ -271,7 +274,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,933+geometryNewIds.length);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,933+geometryNewIds.length+geometryEx43NewIds.length);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');
