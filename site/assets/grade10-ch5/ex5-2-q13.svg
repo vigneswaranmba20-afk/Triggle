@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Midpoint parallelogram PQRS inside quadrilateral ABCD for Exercise 5.2 Q13</title>
+  <desc id="desc">Outer quadrilateral A(-4,-2), B(5,-1), C(6,5), D(-7,6) with midpoints P(0.5,-1.5), Q(5.5,2), R(-0.5,5.5), S(-5.5,2) forming parallelogram PQRS.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="42.4" y1="20.1" x2="42.4" y2="199.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="75.1" y1="20.1" x2="75.1" y2="199.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="107.8" y1="20.1" x2="107.8" y2="199.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="140.5" y1="20.1" x2="140.5" y2="199.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="173.2" y1="20.1" x2="173.2" y2="199.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="205.9" y1="20.1" x2="205.9" y2="199.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="238.6" y1="20.1" x2="238.6" y2="199.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="271.3" y1="20.1" x2="271.3" y2="199.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="304" y1="20.1" x2="304" y2="199.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="26.0" y1="175.4" x2="304.0" y2="175.4" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="26.0" y1="142.7" x2="304.0" y2="142.7" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="26.0" y1="110" x2="304.0" y2="110" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="26.0" y1="77.3" x2="304.0" y2="77.3" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="26.0" y1="44.6" x2="304.0" y2="44.6" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="22.0" y1="142.7" x2="308.0" y2="142.7" stroke="#525B62" stroke-width="1.2"/>
+  <line x1="173.2" y1="16.1" x2="173.2" y2="203.9" stroke="#525B62" stroke-width="1.2"/>
+  <polygon points="107.8,175.4 254.9,159.1 271.3,60.9 58.7,44.6" fill="#94A3B8" fill-opacity="0.14" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round"/>
+  <polygon points="181.4,167.2 263.1,110 165,52.8 83.2,110" fill="#166353" fill-opacity="0.24" stroke="#166353" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="107.8" cy="175.4" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="103.8" y="185.4" font-family="system-ui,sans-serif" font-size="8.5" font-weight="700" text-anchor="end" fill="#181B20">A(-4,-2)</text>
+  <circle cx="254.9" cy="159.1" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="258.9" y="169.1" font-family="system-ui,sans-serif" font-size="8.5" font-weight="700" text-anchor="start" fill="#181B20">B(5,-1)</text>
+  <circle cx="271.3" cy="60.9" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="275.3" y="55.9" font-family="system-ui,sans-serif" font-size="8.5" font-weight="700" text-anchor="start" fill="#181B20">C(6,5)</text>
+  <circle cx="58.7" cy="44.6" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="62.7" y="39.6" font-family="system-ui,sans-serif" font-size="8.5" font-weight="700" text-anchor="start" fill="#181B20">D(-7,6)</text>
+  <circle cx="181.4" cy="167.2" r="3.4" fill="#166353" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="186.4" y="178.2" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#166353">P</text>
+  <circle cx="263.1" cy="110" r="3.4" fill="#166353" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="269.1" y="113" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#166353">Q</text>
+  <circle cx="165" cy="52.8" r="3.4" fill="#166353" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="170" y="46.8" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#166353">R</text>
+  <circle cx="83.2" cy="110" r="3.4" fill="#166353" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="77.2" y="113" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="end" fill="#166353">S</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Least-time perpendicular path from line intersection for Unit Exercise 5 Q10</title>
+  <desc id="desc">From the junction of 2x-3y+4=0 and 3x+4y-5=0 at (-1/17, 22/17), the shortest path meets 6x-7y+8=0 at right angles.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="26.0" y1="22.9" x2="26.0" y2="197.1" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="93.0" y1="22.9" x2="93.0" y2="197.1" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="160.0" y1="22.9" x2="160.0" y2="197.1" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="227.0" y1="22.9" x2="227.0" y2="197.1" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="294.0" y1="22.9" x2="294.0" y2="197.1" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="26.0" y1="197.1" x2="294.0" y2="197.1" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="26.0" y1="130.1" x2="294.0" y2="130.1" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="26.0" y1="63.1" x2="294.0" y2="63.1" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="160.0" y1="18.9" x2="160.0" y2="201.1" stroke="#525B62" stroke-width="1.2"/>
+  <line x1="22.0" y1="197.1" x2="298.0" y2="197.1" stroke="#525B62" stroke-width="1.2"/>
+  <line x1="59.5" y1="174.8" x2="260.5" y2="40.8" stroke="#9BA3AA" stroke-width="1.3"/>
+  <line x1="59.5" y1="38.0" x2="260.5" y2="188.7" stroke="#9BA3AA" stroke-width="1.3"/>
+  <line x1="59.5" y1="206.7" x2="260.5" y2="34.4" stroke="#166353" stroke-width="2"/>
+  <line x1="156.1" y1="110.4" x2="162.7" y2="118.2" stroke="#6E2933" stroke-width="2.2"/>
+  <circle cx="156.1" cy="110.4" r="3.4" fill="#6E2933" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="150.1" y="104.4" font-family="system-ui,sans-serif" font-size="8.6" font-weight="700" text-anchor="end" fill="#6E2933">Crossing (-1/17, 22/17)</text>
+  <text x="203.5" y="59.8" font-family="system-ui,sans-serif" font-size="8.4" font-weight="700" text-anchor="start" fill="#166353">6x-7y+8=0</text>
+  <text x="173.4" y="146.8" font-family="system-ui,sans-serif" font-size="8.4" font-weight="700" text-anchor="start" fill="#6E2933">Perpendicular path</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Trapezium ABCD with parallel bases AB and CD for Exercise 5.2 Q12</title>
+  <desc id="desc">Points A(3,-4), B(9,-4), C(5,-7), D(7,-7) where AB and CD have slope 0 while BC and AD are non-parallel.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="42.3" y1="18.0" x2="42.3" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="73" y1="18.0" x2="73" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="103.7" y1="18.0" x2="103.7" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="134.3" y1="18.0" x2="134.3" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="165" y1="18.0" x2="165" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="195.7" y1="18.0" x2="195.7" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="226.3" y1="18.0" x2="226.3" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="257" y1="18.0" x2="257" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="287.7" y1="18.0" x2="287.7" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="27.0" y1="186.7" x2="303.0" y2="186.7" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="27.0" y1="156" x2="303.0" y2="156" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="27.0" y1="125.3" x2="303.0" y2="125.3" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="27.0" y1="94.7" x2="303.0" y2="94.7" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="27.0" y1="64" x2="303.0" y2="64" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="27.0" y1="33.3" x2="303.0" y2="33.3" stroke="#E3E2DA" stroke-width="1"/>
+  <polygon points="73,64 257,64 195.7,156 134.3,156" fill="#D97706" fill-opacity="0.22" stroke="#B45309" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="73" cy="64" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="69" y="58" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#181B20">A(3,-4)</text>
+  <circle cx="257" cy="64" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="261" y="58" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="end" fill="#181B20">B(9,-4)</text>
+  <circle cx="195.7" cy="156" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="200.7" y="166" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#181B20">D(7,-7)</text>
+  <circle cx="134.3" cy="156" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="129.3" y="166" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="end" fill="#181B20">C(5,-7)</text>
+</svg>
