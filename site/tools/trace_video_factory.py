@@ -120,6 +120,14 @@ def probe(path):
 
 
 def duration(path):
+    # Read ordinary PCM WAV locally. Only the final MP4 requires FFprobe.
+    # This also keeps narration-cache tests genuinely offline on minimal CI runners.
+    if Path(path).suffix.lower() == '.wav':
+        try:
+            with wave.open(str(path), 'rb') as wav:
+                return wav.getnframes() / wav.getframerate()
+        except (wave.Error, EOFError):
+            pass  # Less common WAV formats still use the FFprobe fallback.
     return float(probe(path)['format']['duration'])
 
 
@@ -156,12 +164,26 @@ def gemini_error_status(exc):
     return f'HTTP {code} {status}'
 
 
-def gemini_audio(text, path, model, voice, api_key):
+DEFAULT_VOICE_DELIVERY = (
+    "Warm, calm, natural teacher voice in clear, neutral international English. "
+    "Speak at a relaxed pace, with short pauses around equations and mathematical terms. "
+    "Avoid an exaggerated or forced regional accent. No background music."
+)
+
+
+def build_speech_prompt(text, delivery=DEFAULT_VOICE_DELIVERY):
+    """Keep narration instructions explicit, auditable and independent of TTS provider."""
+    if not isinstance(delivery, str) or not 20 <= len(delivery) <= 600:
+        raise ValueError('Voice delivery description must be 20-600 characters')
+    if not isinstance(text, str) or not text.strip():
+        raise ValueError('Narration passage is required')
+    return ("Synthesize exactly the following spoken lesson passage. "
+            + delivery + " Do not read instructions. Spoken passage:\n" + text)
+
+
+def gemini_audio(text, path, model, voice, api_key, delivery):
     global LAST_GEMINI_REQUEST_AT
-    prompt = ("Synthesize exactly the following spoken lesson passage. "
-              "Warm, calm, natural teacher voice with gentle Indian English pronunciation. "
-              "Unhurried but not unnaturally stretched. No background music. "
-              "Do not read instructions. Spoken passage:\n" + text)
+    prompt = build_speech_prompt(text, delivery)
     payload = {"contents":[{"parts":[{"text":prompt}]}],
       "generationConfig":{"responseModalities":["AUDIO"],
         "speechConfig":{"voiceConfig":{"prebuiltVoiceConfig":{"voiceName":voice}}}}}
@@ -213,9 +235,14 @@ def gemini_audio(text, path, model, voice, api_key):
 
 
 def segment_audio(beat, lesson, audio_root, mode, existing_dir, api_key):
+    # Standalone external-WAV calls must not assume render() created the cache.
+    audio_root = Path(audio_root)
+    audio_root.mkdir(parents=True, exist_ok=True)
     model=lesson.get('voice',{}).get('model','gemini-3.1-flash-tts-preview')
     voice=lesson.get('voice',{}).get('name','Kore')
-    digest=hashlib.sha256(json.dumps([model,voice,beat['narration']],ensure_ascii=False).encode()).hexdigest()[:20]
+    delivery=lesson.get('voice',{}).get('delivery',DEFAULT_VOICE_DELIVERY)
+    # Delivery changes must invalidate previously cached (possibly accent-mismatched) WAVs.
+    digest=hashlib.sha256(json.dumps([model,voice,delivery,beat['narration']],ensure_ascii=False).encode()).hexdigest()[:20]
     dest = audio_root/(beat['id']+'-'+digest+'.wav')
     if mode == 'demo':
         if not dest.exists(): demo_audio(dest)
@@ -226,7 +253,7 @@ def segment_audio(beat, lesson, audio_root, mode, existing_dir, api_key):
     elif mode == 'gemini':
         if not dest.exists():
             if not api_key: raise RuntimeError('GEMINI_API_KEY is required for gemini mode; never print it')
-            gemini_audio(beat['narration'],dest,model,voice,api_key)
+            gemini_audio(beat['narration'],dest,model,voice,api_key,delivery)
     else: raise ValueError('Unsupported narration mode')
     if duration(dest)<.5 or duration(dest)>95: raise ValueError('Narration beat duration outside safe range')
     return dest
