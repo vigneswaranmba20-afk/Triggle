@@ -1125,37 +1125,47 @@ async function main() {
       await page.locator('#search').fill('');
       assert.equal(await page.locator('#exerciseList [data-chapter-id]').count(), 9);
     });
-    await check('Phase 2 bilingual Set Language micro-lab works without leaving the chapter', async () => {
+    await check('Inline five-operation Venn lesson works in English and Tamil without leaving the chapter', async () => {
       const page = await visit(await context(320), '/index.html?class=9&chapter=g9-ch1');
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
-      await selectSetIdea(page.locator('.sp2-journey'),3);
-      assert.equal(await page.locator('#chapterOverview .p2-lab').count(),0,'Venn lab must open only when requested');
-      await page.locator('.sp2-journey [data-demo-mode="go"]').click();
-      const lab = page.locator('#chapterOverview .p2-lab');
-      await lab.waitFor({ state:'visible' });
-      assert.equal(await lab.locator('[data-result-set]').innerText(), '{1, 2, 3, 4, 5, 6}');
-      await lab.locator('[data-op="intersection"]').click();
-      assert.equal(await lab.locator('[data-result-set]').innerText(), '{3, 5}');
-      assert.equal(await lab.locator('[data-op="intersection"]').getAttribute('aria-pressed'), 'true');
-      await lab.locator('[data-choice="0"]').click();
-      assert.ok((await lab.locator('[data-feedback]').innerText()).includes('Try again'));
-      await lab.locator('[data-hint]').click();
-      assert.ok((await lab.locator('[data-feedback]').innerText()).includes('middle'));
-      await lab.locator('[data-choice="1"]').click();
-      assert.ok((await lab.locator('[data-feedback]').innerText()).includes('Correct'));
-      await lab.locator('.p2-deeper summary').click();
-      for(let i=0;i<4;i++) await lab.locator('[data-next-reason]').click();
-      assert.equal(await lab.locator('[data-reasoning] li').count(), 4);
-      assert.ok((await lab.locator('[data-reasoning]').innerText()).includes('20 − 16 = 4'));
-      assert.equal(await lab.locator('[data-next-reason]').isVisible(), false);
+      await selectSetIdea(page.locator('.sp2-journey'), 3);
+      const lesson = page.locator('.sp2-journey');
+      const diagram = lesson.locator('.sp2-venn-svg');
+      await diagram.waitFor({state:'visible'});
+      assert.equal(await diagram.getAttribute('role'),'img','Inline diagram is accessible');
+      assert.equal(await diagram.locator('desc').count(),1,'Region descriptions survive for screen readers');
+      assert.equal(await lesson.locator('.sp2-venn-controls button').count(),5,'Five operations are on the same lesson');
+      const cases = [
+        ['union', '{1,2,3,4,5,6}', ['a','both','b']],
+        ['intersection','{3,5}',['both']],
+        ['difference','{1,2}',['a']],
+        ['complement','{4,6,7}',['b','outside']],
+        ['symmetric','{1,2,4,6}',['a','b']]
+      ];
+      for(const [key,expected,active] of cases){
+        await lesson.locator('[data-demo-mode="'+key+'"]').click();
+        const output=(await lesson.locator('[data-demo-output]').innerText()).replace(/\\s+/g,'');
+        assert.ok(output.includes(expected),key+' has exact numeric members: '+output);
+        const fills=await diagram.locator('[data-venn-region]').evaluateAll(nodes=>
+          Object.fromEntries(nodes.map(el=>[el.dataset.vennRegion,el.getAttribute('fill')])));
+        for(const [region,fill] of Object.entries(fills))
+          assert.equal(fill,active.includes(region)?'#c4ecd9':(region==='outside'?'#fbf9ff':'#fff'),key+' region '+region);
+      }
+      assert.equal(await page.locator('#chapterOverview .p2-lab').count(),0,'No duplicate standalone Venn lab');
+      const quiz = lesson.locator('.sp2-panel > .sp2-recall');
+      await quiz.locator('[data-choice="1"]').click();
+      assert.ok((await quiz.locator('[data-feedback]').innerText()).includes('Not yet'));
+      await quiz.locator('[data-hint]').click();
+      assert.ok((await quiz.locator('[data-feedback]').innerText()).includes('Intersection'));
+      await quiz.locator('[data-choice="0"]').click();
+      assert.ok((await quiz.locator('[data-feedback]').innerText()).includes('You got it'));
       await page.locator('#langTa').click();
-      await selectSetIdea(page.locator('.sp2-journey'),3);
-      await page.locator('.sp2-journey [data-demo-mode="go"]').click();
-      await lab.waitFor({state:'visible'});
-      assert.ok((await lab.locator('h3').first().innerText()).includes('கண மொழி'));
-      await lab.locator('[data-op="difference"]').click();
-      assert.equal(await lab.locator('[data-result-set]').innerText(), '{1, 2}');
-      await noOverflow(page,'Tamil micro-lab at 320px');
+      await diagram.waitFor({state:'visible'});
+      await lesson.locator('[data-demo-mode="complement"]').click();
+      const tamilAnswer=(await lesson.locator('[data-demo-output]').innerText()).replace(/\\s+/g,'');
+      assert.ok(tamilAnswer.includes('{4,6,7}'),'Tamil complement is correct');
+      assert.ok((await lesson.locator('[data-venn-explain]').innerText()).includes('நிரப்புக்'),'Tamil explanation is visible');
+      await noOverflow(page,'Tamil inline Venn at 320px');
     });
     await check('Grouped square-bracket exponents are visibly attached to their closing bracket', async () => {
       const page = await visit(await context(390), '/index.html?class=9&chapter=g9-ch1');
