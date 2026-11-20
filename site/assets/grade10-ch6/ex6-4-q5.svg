@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Apartment and lamp post diagram for Exercise 6.4 Q5</title>
+  <desc id="desc">From top of 66 m apartment, top of lamp post has elevation 60 degrees and bottom of lamp post has depression 30 degrees.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="26" y1="188" x2="294" y2="188" stroke="#525B62" stroke-width="1.5"/>
+  <rect x="64" y="128" width="16" height="60" fill="#E6EFEA" stroke="#181B20" stroke-width="1.8"/>
+  <line x1="238" y1="188" x2="238" y2="34" stroke="#166353" stroke-width="3"/>
+  <line x1="80" y1="128" x2="238" y2="128" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="80" y1="128" x2="238" y2="34" stroke="#6E2933" stroke-width="2"/>
+  <line x1="80" y1="128" x2="238" y2="188" stroke="#6E2933" stroke-width="2"/>
+  <text x="116" y="118" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#6E2933">60°</text>
+  <text x="118" y="143" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#166353">30°</text>
+  <text x="56" y="162" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="end" fill="#181B20">66 m</text>
+  <text x="246" y="162" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#181B20">66 m</text>
+  <text x="246" y="82" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#166353">198 m</text>
+  <text x="158" y="205" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">114.31 m</text>
+</svg>
