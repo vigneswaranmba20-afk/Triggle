@@ -30,7 +30,7 @@ class VoicePackImportTests(unittest.TestCase):
                     target.setnchannels(1)
                     target.setsampwidth(2)
                     target.setframerate(24000)
-                    target.writeframes(b"\\0\\0" * 24000)
+                    target.writeframes(bytes(24000 * 2))
                 filename = folder + name + ".wav"
                 bundle.write(audio, filename)
             if extra:
