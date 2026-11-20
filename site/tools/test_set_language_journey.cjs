@@ -99,4 +99,32 @@ new vm.Script(engine,{filename:'set-language-journey.js'});
 assert(!/\bfetch\s*\(|XMLHttpRequest|https?:\/\//.test(engine),'All learning must work without remote APIs');
 assert(engine.includes('data-extra-practice')&&engine.includes('data-extra-answers'),'Extra practice is rendered and answered locally');
 assert(engine.includes('localStorage')&&engine.includes('sp2-paper')&&engine.includes('data-hard-next'),'Offline progress, paper tasks and staged explanation included');
+
+// AUD01-01: all Venn operations must be visible inline, independent of the
+// optional full-size Phase 2 lab, with both language explanations.
+assert(engine.includes('sp2-venn-svg')&&engine.includes('data-venn-region'),
+  'A responsive accessible Venn SVG is mounted inside the lesson');
+assert(engine.includes('aria-labelledby="sp2-venn-title sp2-venn-desc"'),
+  'The diagram has a screen-reader title and a complete region description');
+assert(!engine.includes("window.TriggleLab?.mount(target"),
+  'A broken scroll-to-optional-lab button must not replace the inline diagram');
+for(const key of ["'union'","'intersection'","'difference'","'complement'","'symmetric'"])
+  assert(engine.includes("key:"+key),'The '+key+' operation has a real control');
+assert(engine.includes('min-height')===false || engine.includes('sp2-venn-controls'),
+  'Operation controls are distinct from existing lesson controls');
+assert(source.includes('A Δ B')&&source.includes('A′'),
+  'Complement and symmetric difference must be explicitly taught before paper practice');
+const u=[1,2,3,4,5,6,7],left=new Set([1,2,3,5]),right=new Set([3,4,5,6]);
+const stringify=rule=>'{'+u.filter(rule).join(', ')+'}';
+assert.equal(stringify(n=>left.has(n)||right.has(n)),'{1, 2, 3, 4, 5, 6}');
+assert.equal(stringify(n=>left.has(n)&&right.has(n)),'{3, 5}');
+assert.equal(stringify(n=>left.has(n)&&!right.has(n)),'{1, 2}');
+assert.equal(stringify(n=>!left.has(n)),'{4, 6, 7}');
+assert.equal(stringify(n=>left.has(n)!==right.has(n)),'{1, 2, 4, 6}');
+const venCss=fs.readFileSync(path.join(root,'assets/chapter-hub.css'),'utf8');
+assert.match(venCss,/\.sp2-venn-controls button\{[^}]*min-height:44px/s,
+  'Five Venn controls have 44px touch targets');
+assert.match(venCss,/\.sp2-venn-svg\{[^}]*width:100%/s,
+  'The inline diagram must fit narrow mobile screens');
+
 console.log('PASS: seven bilingual Grade 9 sections, page crosswalk, arithmetic, offline delivery and staged advanced reasoning');
