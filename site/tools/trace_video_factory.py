@@ -23,9 +23,11 @@ import wave
 
 SCENES = {"intro", "sequence", "outer-pair", "inner-pair", "middle", "formula", "apply", "practice", "answer",
           "gp-intro", "gp-pattern", "gp-name", "gp-double", "gp-align", "gp-cancel", "gp-rule", "gp-practice", "gp-answer",
-          "disc-intro", "disc-roots", "disc-slider", "disc-two", "disc-touch", "disc-none", "disc-rule", "disc-practice", "disc-answer"}
+          "disc-intro", "disc-roots", "disc-slider", "disc-two", "disc-touch", "disc-none", "disc-rule", "disc-practice", "disc-answer",
+          "bpt-hook", "bpt-points", "bpt-slide", "bpt-rule", "bpt-angles", "bpt-proof", "bpt-example", "bpt-practice", "bpt-answer"}
 GP_ORDER = ["gp-intro","gp-pattern","gp-name","gp-double","gp-align","gp-cancel","gp-rule","gp-practice","gp-answer"]
 DISC_ORDER = ["disc-intro","disc-roots","disc-slider","disc-two","disc-touch","disc-none","disc-rule","disc-practice","disc-answer"]
+THALES_ORDER = ["bpt-hook","bpt-points","bpt-slide","bpt-rule","bpt-angles","bpt-proof","bpt-example","bpt-practice","bpt-answer"]
 ROOT = Path(__file__).resolve().parents[2]
 PALETTE = {"bg":"#FAF8F5", "ink":"#172337", "sub":"#5B6776", "maroon":"#80324A", "gold":"#C5A371", "surface":"#FFFFFF", "line":"#E8E2DA", "soft":"#F1ECE6"}
 FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
@@ -126,6 +128,29 @@ def validate_lesson(spec):
             raise ValueError('Practice discriminant revealed before the answer scene')
         if 'negative four' not in beats[-1]['narration'].lower():
             raise ValueError('Last scene must reveal the verified student answer')
+    elif visual.get('template')=='triangle-parallel-proportion-v1':
+        if spec['id']!='g10-ch4-bpt-thales' or scenes!=THALES_ORDER:
+            raise ValueError('Thales must have nine source-locked scenes in order')
+        if visual.get('triangle') != {'A':[360,432],'B':[140,850],'C':[580,850]}:
+            raise ValueError('Thales geometry must match source-locked non-degenerate triangle')
+        if visual.get('example') != {'AD':3,'DB':5,'AC':16}:
+            raise ValueError('Thales example values changed without independent source audit')
+        if visual.get('practice') != {'AD':4,'DB':6,'AC':20}:
+            raise ValueError('Thales original practice values changed')
+        from trace_thales_artwork import lengths, parallel_segments
+        x=lengths(3,5,16); p=lengths(4,6,20)
+        if (x['AB'], x['AE'], x['EC'])!=(8,6,10) or (p['AB'],p['AE'],p['EC'])!=(10,8,12):
+            raise ValueError('Thales example or practice fails exact fraction arithmetic')
+        a,b,c,d,e=parallel_segments(visual['triangle'], 3/8)
+        if (b[0]-a[0])*(c[1]-a[1])==(c[0]-a[0])*(b[1]-a[1]):
+            raise ValueError('Thales triangle is degenerate')
+        if 'pause' not in beats[-2]['narration'].lower():
+            raise ValueError('Thales practice needs a deliberate pause before answer reveal')
+        if any(v in beats[-2]['narration'].lower() for v in ('equals eight','is eight','ae equals eight','e c is twelve')):
+            raise ValueError('Thales practice narration revealed its answer too early')
+        if 'eight' not in beats[-1]['narration'].lower() or 'twelve' not in beats[-1]['narration'].lower():
+            raise ValueError('Thales final scene must state the checked answer and verification')
+        # This concept teaches parallel cuts, not textbook exercise solutions.
     else:
         raise ValueError('Unsupported visual template')
     return spec
@@ -328,6 +353,9 @@ def artwork(spec, beat, fraction, index, total, w, h, demo):
     if spec.get('visual',{}).get('template')=='discriminant-parabola-v1':
         from trace_discriminant_artwork import artwork as disc_artwork
         return disc_artwork(spec,beat,fraction,index,total,w,h,demo)
+    if spec.get('visual',{}).get('template')=='triangle-parallel-proportion-v1':
+        from trace_thales_artwork import artwork as thales_artwork
+        return thales_artwork(spec,beat,fraction,index,total,w,h,demo)
     from PIL import Image, ImageDraw, ImageFont
     im=Image.new('RGB',(w,h),PALETTE['bg'])
     d=ImageDraw.Draw(im)
@@ -496,7 +524,10 @@ def render(args):
 def self_test(lesson):
     x=load_lesson(lesson)
     template=x.get('visual',{}).get('template')
-    order=GP_ORDER if template=='gp-sum-cancel-v1' else (DISC_ORDER if template=='discriminant-parabola-v1' else ['intro','sequence','outer-pair','inner-pair','middle','formula','apply','practice','answer'])
+    order=(GP_ORDER if template=='gp-sum-cancel-v1' else
+           DISC_ORDER if template=='discriminant-parabola-v1' else
+           THALES_ORDER if template=='triangle-parallel-proportion-v1' else
+           ['intro','sequence','outer-pair','inner-pair','middle','formula','apply','practice','answer'])
     assert [beat['scene'] for beat in x['beats']]==order
     bad=json.loads(json.dumps(x));bad['beats'][-1]['scene']=order[-2]
     try:validate_lesson(bad)
