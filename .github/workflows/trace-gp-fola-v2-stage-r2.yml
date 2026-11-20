@@ -1,0 +1,116 @@
+name: TRACE G.P. Fola v2 — stage exact reviewed MP4 to R2
+
+# Triggered ONLY by owner's deliberate issue #285 comment with an MP4 attachment.
+# Immutable R2 staging only. No student-facing update or model API calls.
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trace-gp-reviewed-v2-staging
+  cancel-in-progress: false
+
+jobs:
+  stage-reviewed-asset:
+    name: Verify exact MP4 and stage immutable R2 object
+    if: ${{ github.event.issue.number == 285 && github.event.comment.user.login == 'vigneswaranmba20-afk' && !github.event.issue.pull_request && contains(github.event.comment.body, 'TRACE_STAGE_GP_V2') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      LESSON: g10-ch2-gp-sum
+      VIDEO_SHA256: fa50e19cc4795e55839fedd37a9cb49bff499bbf05ad7ffc6d2772ef9f981977
+      VIDEO_SIZE: '2725750'
+      COMMENT_BODY: ${{ github.event.comment.body }}
+    steps:
+      - name: Confirm owner-uploaded GitHub attachment and download with no model calls
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os,re
+          from urllib.parse import urlsplit
+          body=os.environ["COMMENT_BODY"]
+          if not re.search(r'(?m)^TRACE_STAGE_GP_V2\s*$',body):
+              raise SystemExit("Marker must be on its own line")
+          urls=re.findall(r'https://github\.com/user-attachments/(?:files|assets)/[A-Za-z0-9_-]+(?:/[A-Za-z0-9._%-]+)?',body)
+          if len(urls)!=1:
+              raise SystemExit("Exactly one GitHub MP4 attachment URL required")
+          url=urls[0]
+          p=urlsplit(url)
+          if p.scheme!="https" or p.hostname!="github.com" or p.username or p.password or p.port:
+              raise SystemExit("Invalid attachment URL")
+          with open("/tmp/trace-gp-attachment-url","w") as file:
+              file.write(url)
+          print("Owner comment accepted: one GitHub media attachment, no API key required")
+          PY
+          mkdir -p build/trace-video/release-candidate
+          curl --fail --show-error --silent --location --retry 2 \
+            --proto '=https' --proto-redir '=https' --max-redirs 6 \
+            --max-time 180 --max-filesize 8000000 \
+            "$(cat /tmp/trace-gp-attachment-url)" \
+            -o build/trace-video/release-candidate/gp-fola-reviewed-v2.mp4
+
+      - name: Validate exact owner-reviewed bytes, codecs and duration
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILE=build/trace-video/release-candidate/gp-fola-reviewed-v2.mp4
+          echo "${VIDEO_SHA256}  ${FILE}" | sha256sum -c -
+          test "$(stat -c %s "$FILE")" = "$VIDEO_SIZE"
+          sudo apt-get update -qq
+          sudo apt-get install -qq -y ffmpeg
+          python3 - <<'PY'
+          import json, subprocess
+          file="build/trace-video/release-candidate/gp-fola-reviewed-v2.mp4"
+          raw=subprocess.check_output(["ffprobe","-v","error","-show_entries",
+              "stream=codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels:format=duration,size",
+              "-of","json",file])
+          info=json.loads(raw)
+          assert abs(float(info["format"]["duration"])-108.62)<0.15
+          assert int(info["format"]["size"])==2725750
+          assert any(s.get("codec_type")=="video" and s.get("codec_name")=="h264"
+              and s.get("width")==720 and s.get("height")==1280
+              and s.get("r_frame_rate")=="12/1" for s in info["streams"])
+          assert any(s.get("codec_type")=="audio" and s.get("codec_name")=="aac"
+              and s.get("channels")==1 for s in info["streams"])
+          print("PASS exact immutable review MP4: 9 scenes, H264/AAC, 108.62s")
+          PY
+          ffmpeg -hide_banner -loglevel error -i "$FILE" -f null -
+
+      - name: Stage immutable video on existing Cloudflare R2
+        shell: bash
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+        run: |
+          set -euo pipefail
+          for v in R2_ACCOUNT_ID R2_BUCKET R2_PUBLIC_BASE_URL AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY; do
+            test -n "${!v}" || { echo "Missing configured R2 secret: ${v}"; exit 1; }
+          done
+          [[ "${R2_ACCOUNT_ID}" =~ ^[0-9a-f]{32}$ ]]
+          [[ "${R2_PUBLIC_BASE_URL}" == https://* ]]
+          if ! command -v aws >/dev/null; then python3 -m pip install --quiet awscli; fi
+          FILE=build/trace-video/release-candidate/gp-fola-reviewed-v2.mp4
+          KEY="trace-videos/${LESSON}/${VIDEO_SHA256}.mp4"
+          ENDPOINT="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+          aws --endpoint-url "$ENDPOINT" s3 cp "$FILE" "s3://${R2_BUCKET}/${KEY}" \
+            --content-type video/mp4 --no-progress
+          LENGTH="$(aws --endpoint-url "$ENDPOINT" s3api head-object \
+            --bucket "$R2_BUCKET" --key "$KEY" --query ContentLength --output text)"
+          test "$LENGTH" = "$VIDEO_SIZE"
+          URL="${R2_PUBLIC_BASE_URL%/}/${KEY}"
+          curl --fail --silent --show-error --location --retry 2 --max-time 90 \
+            --range 0-1023 "$URL" -o /tmp/trace-gp-public-prefix
+          cmp -n 1024 "$FILE" /tmp/trace-gp-public-prefix
+          printf '### G.P. Fola v2 staged — NOT live\n\n' >> "$GITHUB_STEP_SUMMARY"
+          printf 'Verified SHA-256: `%s`\n\n' "$VIDEO_SHA256" >> "$GITHUB_STEP_SUMMARY"
+          printf 'R2 URL: %s\n\n' "$URL" >> "$GITHUB_STEP_SUMMARY"
+          printf 'Existing 93-second live video remains unchanged.\n' >> "$GITHUB_STEP_SUMMARY"
+          echo "PASS: exact reviewed video staged, range-GET checked, live student app unchanged"
