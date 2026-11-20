@@ -26,7 +26,11 @@
       extra:'Try a second practice question',reason:'Show the reasoning',top:'Back to learning path',
       previousIdea:'Previous idea',nextIdea:'Next idea',backConcepts:'Back to concepts',position:(n,total)=>'Idea '+n+' of '+total,
       navTip:'Choose one of seven numbered ideas. The question appears directly above its answers and scrolls naturally.',
-       questionLabel:'CURRENT QUESTION',nextPage:'Next page',backChapter:'Back to Chapter 1',sliderTip:'Drag left or right (or use arrow keys) to change how many students are in BOTH groups. Tap − or + to change one student at a time. Watch the numbers and equation update.',sliderFormula:(both,union,neither)=>[{latex:'A\\text{ or }B=14+11-'+both+'='+union,fallback:`A or B = 14 + 11 − ${both} = ${union}`},'. ',{latex:'\\text{Neither}=30-'+union+'='+neither,fallback:`Neither = 30 − ${union} = ${neither}`},'. The overlap was counted twice, so subtract it once.']},
+       questionLabel:'CURRENT QUESTION',nextPage:'Next page',backChapter:'Back to Chapter 1',sliderTip:'Drag left or right (or use arrow keys) to change how many students are in BOTH groups. Tap − or + to change one student at a time. Watch the numbers and equation update.',sliderFormula:(both,union,neither)=>({
+ union:{latex:'n(A\\cup B)=14+11-'+both+'='+union,fallback:'n(A ∪ B) = 14 + 11 − '+both+' = '+union},
+ neither:{latex:'n((A\\cup B)^{\\prime})=30-'+union+'='+neither,fallback:'n((A ∪ B)′) = 30 − '+union+' = '+neither},
+ note:'The overlap was counted twice, so subtract it once.'
+})},
     ta:{label:'சிறிய கற்றல் பாதை',title:'கண மொழியை ஒவ்வொரு கருத்தாகக் கற்போம்',
       intro:'2025 பாடநூலை அடிப்படையாகக் கொண்ட ஏழு சிறு ஆராய்ச்சிகள். ஒன்றைத் தேர்ந்து முயலுங்கள்; பிறகு தாளில் பயிற்சி செய்யுங்கள்.',
       state:'இந்த சாதனத்தில் சரிபார்த்த கருத்துகள்',learned:'கற்றவை',source:'பாடநூல் பகுதி',enPage:'ஆங்கிலம் பக்கம்',taPage:'தமிழ் பக்கம்',
@@ -43,7 +47,11 @@
       extra:'இன்னொரு பயிற்சி வினா',reason:'காரணத்தைப் பார்க்க',top:'கற்றல் பாதைக்குத் திரும்புக',
       previousIdea:'முந்தைய கருத்து',nextIdea:'அடுத்த கருத்து',backConcepts:'கருத்துகளுக்குத் திரும்பு',position:(n,total)=>total+' இல் கருத்து '+n,
       navTip:'எண்ணிடப்பட்ட ஏழு கருத்துகளில் ஒன்றைத் தேர்ந்தெடுக்கவும். ஒவ்வொரு வினாவும் விடைத்தேர்வுகளுக்கு மேலே தோன்றும்; பக்கத்துடன் இயல்பாக நகரும்.',
-       questionLabel:'தற்போதைய வினா',nextPage:'அடுத்த பக்கம்',backChapter:'அத்தியாயம் 1-க்குத் திரும்பு',sliderTip:'இரு குழுக்களிலும் உள்ள மாணவர்களின் எண்ணிக்கையை மாற்ற ஸ்லைடரை இடம் அல்லது வலமாக நகர்த்துங்கள் (அல்லது அம்பு விசைகளைப் பயன்படுத்துங்கள்). − அல்லது + பொத்தானைத் தொட்டு ஒரு மாணவராக மாற்றலாம். எண்ணிக்கையும் கணக்கும் மாறுவதைக் கவனியுங்கள்.',sliderFormula:(both,union,neither)=>[{latex:'A',fallback:'A'},' அல்லது ',{latex:'B',fallback:'B'},' = ',{latex:'14+11-'+both+'='+union,fallback:`14 + 11 − ${both} = ${union}`},'. எதுவுமில்லை = ',{latex:'30-'+union+'='+neither,fallback:`30 − ${union} = ${neither}`},'. பொதுவானவர்கள் இரு குழுக்களிலும் எண்ணப்படுவதால் ஒருமுறை கழிக்க வேண்டும்.']}
+       questionLabel:'தற்போதைய வினா',nextPage:'அடுத்த பக்கம்',backChapter:'அத்தியாயம் 1-க்குத் திரும்பு',sliderTip:'இரு குழுக்களிலும் உள்ள மாணவர்களின் எண்ணிக்கையை மாற்ற ஸ்லைடரை இடம் அல்லது வலமாக நகர்த்துங்கள் (அல்லது அம்பு விசைகளைப் பயன்படுத்துங்கள்). − அல்லது + பொத்தானைத் தொட்டு ஒரு மாணவராக மாற்றலாம். எண்ணிக்கையும் கணக்கும் மாறுவதைக் கவனியுங்கள்.',sliderFormula:(both,union,neither)=>({
+ union:{latex:'n(A\\cup B)=14+11-'+both+'='+union,fallback:'n(A ∪ B) = 14 + 11 − '+both+' = '+union},
+ neither:{latex:'n((A\\cup B)^{\\prime})=30-'+union+'='+neither,fallback:'n((A ∪ B)′) = 30 − '+union+' = '+neither},
+ note:'பொதுவானவர்களை இருமுறை எண்ணியதால் ஒருமுறை கழிக்க வேண்டும்.'
+})}
   };
   function load(){
     try{
@@ -261,6 +269,12 @@
       }else if(stage.visual==='count'){
         const controls=panel.querySelector('[data-demo-controls]');
         const id='sp2-overlap-control';
+        controls.insertAdjacentHTML('beforebegin',
+          '<div class="sp2-count-givens" role="group" aria-label="'+
+          esc(lang==='ta'?'கொடுக்கப்பட்ட எண்ணிக்கைகள்':'Given set sizes')+'">'+
+          ['n(U)=30','n(A)=14','n(B)=11'].map(expression=>
+            '<span>'+htmlMath({latex:expression,fallback:expression})+'</span>').join('')+
+          '</div>');
         controls.innerHTML='<label class="sp2-range-label" for="'+id+'">'+esc(t.overlap)+
           ' <output data-overlap-count>6</output></label>'+
           '<p class="sp2-slider-guide">'+esc(t.sliderTip)+'</p>'+
@@ -275,7 +289,11 @@
         const update=()=>{
           const both=Number(input.value),union=25-both;
           controls.querySelector('[data-overlap-count]').textContent=String(both);
-           controls.querySelector('[data-slider-formula]').innerHTML=htmlMath(t.sliderFormula(both,union,30-union));
+           const formula=t.sliderFormula(both,union,30-union);
+          controls.querySelector('[data-slider-formula]').innerHTML=
+            '<span class="sp2-count-equation">'+htmlMath(formula.union)+'</span>'+
+            '<span class="sp2-count-equation">'+htmlMath(formula.neither)+'</span>'+
+            '<span class="sp2-count-note">'+esc(formula.note)+'</span>';
            input.setAttribute('aria-valuetext',String(both)+' · '+t.overlap);
            decrease.disabled=both===0;
            increase.disabled=both===11;
