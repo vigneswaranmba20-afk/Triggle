@@ -559,12 +559,12 @@ function mount(stage,host,lang){
         <text x="${xA+6}" y="${yB+14}" font-size="11" font-weight="700" fill="#1E5248">A</text>
         <text x="${xB+30}" y="${yC+13}" font-size="11" font-weight="700" fill="#6E2933">${angle}°</text>
         ${showTrap
-          ?`<text x="${xB+5}" y="${yC+38}" font-size="11" font-weight="700" fill="#7A1D2B">90°−θ=${90-angle}° ≠ ${angle}°!</text>`
+          ?`<text x="${xB+5}" y="${yC+38}" font-size="10.5" font-weight="700" fill="#7A1D2B">Wall angle = ${90-angle}° (from vertical)</text>`
           :`<text x="${xA-38}" y="${yB-8}" font-size="11" font-weight="700" fill="#1E5248">∠CAB=${angle}°</text>`}
         <text x="${xB-26}" y="${yC+pxH/2}" font-size="10.5" font-weight="700" fill="#181B20">${height}m</text>
       </svg>`;
       readout.innerHTML=showTrap
-        ?tex(`\\text{Wall trap: }h\\tan ${angle}^\\circ=${fmt(dep.wrongWallDist,1)}\\text{ m}\\;(\\text{Wrong!})`,true)
+        ?tex(`\\text{Wall-angle shortcut: }h\\tan ${angle}^\\circ=${fmt(dep.wrongWallDist,1)}\\text{ m}\\;(${angle===45?'\\text{Coincides at }45^\\circ\\text{ only; use horizon angle}':'\\text{Not the horizon-angle method}'})`,true)
         :tex(`\\begin{aligned}&\\angle XCA=\\angle CAB=${angle}^\\circ\\\\&d=\\dfrac{${height}}{\\tan ${angle}^\\circ}=${fmt(dep.dist,1)}\\text{ m}\\end{aligned}`,true);
     };
     makeSlider(controls,ta?'இறக்கக்கோணம் θ':'Depression angle θ',20,70,5,angle,'°',v=>{angle=v;draw();});
