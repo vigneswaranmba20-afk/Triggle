@@ -390,7 +390,9 @@
     const seconds=Math.round(Number(stage.video.durationSeconds)||0);
     const durationLabel=seconds?Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0'):'';
     button.textContent=ta?'▶ காணொளி விளக்கம் · ஆங்கிலக் குரல்':'▶ Watch video explanation'+(durationLabel?' · '+durationLabel:'');
-    const anchor=panel.querySelector('.sp2-recall') || panel.querySelector('.sp2-lesson-note');
+    // Six-card Geometry Studio renders separately from the older Ch2/Ch3 concept branch.
+    // Keep the optional Watch button near the title, above the six concept cards.
+    const anchor=panel.querySelector('.g10ch4-studio') || panel.querySelector('.sp2-recall') || panel.querySelector('.sp2-lesson-note');
     if(anchor)anchor.before(button);else panel.append(button);
     button.addEventListener('click',()=>{
       const dialog=document.createElement('dialog');dialog.className='sp2-concept-video-dialog';
@@ -525,6 +527,7 @@
           '<section class="g10ch4-card" aria-label="'+e(labels.s6)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">6</span><h5 class="g10ch4-card-kicker">'+e(labels.s6)+'</h5></div>'+
           '<p class="g10ch4-connect-note">'+typeset(pick(stage.connect))+'</p><div class="g10ch4-exercise-row" data-g10ch4-connect></div></section>'+
           '</div>';
+        if(stage.video)attachStageVideo(panel,stage,lang);
         labEngine?.renderGlance(stage,panel.querySelector('[data-g10ch4-glance]'),lang);
         labEngine?.mount(stage,panel.querySelector('[data-g10ch4-visual]'),lang);
         const connectRow=panel.querySelector('[data-g10ch4-connect]');
