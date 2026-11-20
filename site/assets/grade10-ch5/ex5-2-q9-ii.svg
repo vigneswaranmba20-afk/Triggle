@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Right-angled triangle LMN with right angle at N(3,14) for Exercise 5.2 Q9(ii)</title>
+  <desc id="desc">Triangle L(0,5), M(9,12), N(3,14) where slope of LN is 3 and slope of MN is -1/3, forming a right angle at N.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="97.8" y1="18.0" x2="97.8" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="126.1" y1="18.0" x2="126.1" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="154.4" y1="18.0" x2="154.4" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="182.7" y1="18.0" x2="182.7" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="211" y1="18.0" x2="211" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="239.3" y1="18.0" x2="239.3" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="76.5" y1="187.8" x2="253.5" y2="187.8" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="76.5" y1="159.5" x2="253.5" y2="159.5" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="76.5" y1="131.2" x2="253.5" y2="131.2" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="76.5" y1="102.9" x2="253.5" y2="102.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="76.5" y1="74.6" x2="253.5" y2="74.6" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="76.5" y1="46.3" x2="253.5" y2="46.3" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="76.5" y1="18" x2="253.5" y2="18" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="97.8" y1="14.0" x2="97.8" y2="206.0" stroke="#525B62" stroke-width="1.2"/>
+  <polygon points="97.8,173.7 225.2,74.6 140.2,46.3" fill="#2563EB" fill-opacity="0.2" stroke="#2563EB" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="97.8" cy="173.7" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="102.8" y="177.7" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#181B20">L(0,5)</text>
+  <circle cx="225.2" cy="74.6" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="229.2" y="84.6" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="end" fill="#181B20">M(9,12)</text>
+  <circle cx="140.2" cy="46.3" r="3.4" fill="#6E2933" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="145.2" y="41.3" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#6E2933">N(3,14) 90°</text>
+</svg>

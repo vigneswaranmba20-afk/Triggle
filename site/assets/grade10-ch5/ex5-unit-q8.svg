@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Reflection image of (3,8) across mirror line x+3y=7 for Unit Exercise 5 Q8</title>
+  <desc id="desc">Point (3,8) reflects perpendicularly through midpoint M(1,2) on line x + 3y = 7 to image (-1,-4).</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="81.1" y1="18.0" x2="81.1" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="94.3" y1="18.0" x2="94.3" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="107.4" y1="18.0" x2="107.4" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="120.6" y1="18.0" x2="120.6" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="133.7" y1="18.0" x2="133.7" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="146.9" y1="18.0" x2="146.9" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="160.0" y1="18.0" x2="160.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="173.1" y1="18.0" x2="173.1" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="186.3" y1="18.0" x2="186.3" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="199.4" y1="18.0" x2="199.4" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="212.6" y1="18.0" x2="212.6" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="225.7" y1="18.0" x2="225.7" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="238.9" y1="18.0" x2="238.9" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="81.1" y1="188.9" x2="238.9" y2="188.9" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="81.1" y1="162.6" x2="238.9" y2="162.6" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="81.1" y1="136.3" x2="238.9" y2="136.3" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="81.1" y1="110.0" x2="238.9" y2="110.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="81.1" y1="83.7" x2="238.9" y2="83.7" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="81.1" y1="57.4" x2="238.9" y2="57.4" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="81.1" y1="31.1" x2="238.9" y2="31.1" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="133.7" y1="14.0" x2="133.7" y2="206.0" stroke="#525B62" stroke-width="1.2"/>
+  <line x1="77.1" y1="136.3" x2="242.9" y2="136.3" stroke="#525B62" stroke-width="1.2"/>
+  <line x1="81.1" y1="88.1" x2="225.7" y2="136.3" stroke="#166353" stroke-width="2"/>
+  <line x1="173.1" y1="31.1" x2="120.6" y2="188.9" stroke="#6E2933" stroke-width="1.8" stroke-dasharray="4,2"/>
+  <circle cx="173.1" cy="31.1" r="3.4" fill="#181B20" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="179.1" y="34.1" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#181B20">P(3,8)</text>
+  <circle cx="146.9" cy="110.0" r="3.2" fill="#166353" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="152.9" y="105.0" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="start" fill="#166353">M(1,2)</text>
+  <circle cx="120.6" cy="188.9" r="3.4" fill="#6E2933" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="126.6" y="191.9" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#6E2933">Image (-1,-4)</text>
+  <text x="202.1" y="121.8" font-family="system-ui,sans-serif" font-size="8.6" font-weight="700" text-anchor="middle" fill="#166353">Mirror x+3y=7</text>
+</svg>

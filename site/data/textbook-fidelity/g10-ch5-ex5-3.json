@@ -1,0 +1,265 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 5,
+  "exercise": "5.3",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "methodology": "Visually inspected rendered 2025 English PDF pages 235–236 (printed pp. 229–230) and Answer Appendix PDF pp. 346–347 (printed pp. 340–341), plus 2025 Tamil PDF pages 242–243 (printed pp. 236–237) and Answer Appendix PDF page 361 (printed p. 355).",
+  "status": "page-visual-checked",
+  "tamilEditorial": "pending",
+  "items": [
+    {
+      "id": "c10-5-ex5-3-q1-i", "exercise": "5.3", "questionNumber": 1, "part": "i",
+      "textbookPrompt": {
+        "en": "1. Find the equation of a straight line passing through the mid-point of a line segment joining the points (1, −5), (4, 2) and parallel to\n(i) X axis",
+        "ta": "1. (1, −5) மற்றும் (4, 2) என்ற புள்ளிகளை இணைக்கும் கோட்டுத்துண்டின் நடுப்புள்ளி வழியாகச் செல்வதும், கீழ்க்காண்பனவற்றிற்கு இணையானதுமான நேர்க்கோட்டின் சமன்பாட்டைக் காண்க.\n(i) X அச்சு"
+      },
+      "sourcePages": { "en": { "printed": 229, "pdf": 235 }, "ta": { "printed": 236, "pdf": 242 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "2y + 3 = 0", "ta": "2y + 3 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q1-ii", "exercise": "5.3", "questionNumber": 1, "part": "ii",
+      "textbookPrompt": {
+        "en": "1. Find the equation of a straight line passing through the mid-point of a line segment joining the points (1, −5), (4, 2) and parallel to\n(ii) Y axis",
+        "ta": "1. (1, −5) மற்றும் (4, 2) என்ற புள்ளிகளை இணைக்கும் கோட்டுத்துண்டின் நடுப்புள்ளி வழியாகச் செல்வதும், கீழ்க்காண்பனவற்றிற்கு இணையானதுமான நேர்க்கோட்டின் சமன்பாட்டைக் காண்க.\n(ii) Y அச்சு"
+      },
+      "sourcePages": { "en": { "printed": 229, "pdf": 235 }, "ta": { "printed": 236, "pdf": 242 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "2x − 5 = 0", "ta": "2x − 5 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q2", "exercise": "5.3", "questionNumber": 2, "part": "whole",
+      "textbookPrompt": {
+        "en": "2. The equation of a straight line is 2(x − y) + 5 = 0. Find its slope, inclination and intercept on the Y axis.",
+        "ta": "2. 2(x − y) + 5 = 0 என்ற நேர்க்கோட்டு சமன்பாட்டின் சாய்வு, சாய்வு கோணம் மற்றும் y-வெட்டுத்துண்டு ஆகியவற்றைக் காண்க."
+      },
+      "sourcePages": { "en": { "printed": 229, "pdf": 235 }, "ta": { "printed": 236, "pdf": 242 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "1, 45°, 5/2", "ta": "1, 45°, 5/2" }
+    },
+    {
+      "id": "c10-5-ex5-3-q3", "exercise": "5.3", "questionNumber": 3, "part": "whole",
+      "textbookPrompt": {
+        "en": "3. Find the equation of a line whose inclination is 30° and making an intercept −3 on the Y axis.",
+        "ta": "3. சாய்வு கோணம் 30° மற்றும் y-வெட்டுத்துண்டு −3 ஆகியவற்றைக் கொண்ட நேர்க்கோட்டின் சமன்பாட்டைக் காண்க."
+      },
+      "sourcePages": { "en": { "printed": 229, "pdf": 235 }, "ta": { "printed": 236, "pdf": 242 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "x − √3y − 3√3 = 0", "ta": "x − √3y − 3√3 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q4", "exercise": "5.3", "questionNumber": 4, "part": "whole",
+      "textbookPrompt": {
+        "en": "4. Find the slope and y intercept of √3x + (1 − √3)y = 3.",
+        "ta": "4. √3x + (1 − √3)y = 3 என்ற நேர்க்கோட்டு சமன்பாட்டின் சாய்வு, y-வெட்டுத்துண்டு ஆகியவற்றைக் காண்க."
+      },
+      "sourcePages": { "en": { "printed": 229, "pdf": 235 }, "ta": { "printed": 236, "pdf": 242 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "(√3 + 3)/2, (3 + 3√3)/(−2)", "ta": "(√3 + 3)/2, (3 + 3√3)/(−2)" }
+    },
+    {
+      "id": "c10-5-ex5-3-q5", "exercise": "5.3", "questionNumber": 5, "part": "whole",
+      "textbookPrompt": {
+        "en": "5. Find the value of ‘a’, if the line through (−2, 3) and (8, 5) is perpendicular to y = ax + 2",
+        "ta": "5. (−2, 3) மற்றும் (8, 5) என்ற புள்ளிகள் வழிச் செல்லும் கோடானது, y = ax + 2 என்ற நேர்க்கோட்டிற்குச் செங்குத்தானது எனில், ‘a’-யின் மதிப்பு காண்க."
+      },
+      "sourcePages": { "en": { "printed": 229, "pdf": 235 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "−5", "ta": "−5" }
+    },
+    {
+      "id": "c10-5-ex5-3-q6", "exercise": "5.3", "questionNumber": 6, "part": "whole",
+      "textbookPrompt": {
+        "en": "6. The hill in the form of a right triangle has its foot at (19, 3). The inclination of the hill to the ground is 45°. Find the equation of the hill joining the foot and top.",
+        "ta": "6. (19, 3) என்ற புள்ளியை அடியாகக் கொண்ட குன்றானது செங்கோண முக்கோண வடிவில் உள்ளது. தரையுடன் குன்று ஏற்படுத்தும் சாய்வுக் கோணம் 45° எனில், குன்றின் அடி மற்றும் உச்சியை இணைக்கும் கோட்டின் சமன்பாட்டைக் காண்க."
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "x − y − 16 = 0", "ta": "x − y − 16 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q7-i", "exercise": "5.3", "questionNumber": 7, "part": "i",
+      "textbookPrompt": {
+        "en": "7. Find the equation of a line through the given pair of points\n(i) (2, 2/3) and (−1/2, −2)",
+        "ta": "7. கொடுக்கப்பட்ட இரு புள்ளிகள் வழிச் செல்லும் நேர்க்கோட்டின் சமன்பாட்டைக் காண்க.\n(i) (2, 2/3) மற்றும் (−1/2, −2)"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "16x − 15y − 22 = 0", "ta": "16x − 15y − 22 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q7-ii", "exercise": "5.3", "questionNumber": 7, "part": "ii",
+      "textbookPrompt": {
+        "en": "7. Find the equation of a line through the given pair of points\n(ii) (2, 3) and (−7, −1)",
+        "ta": "7. கொடுக்கப்பட்ட இரு புள்ளிகள் வழிச் செல்லும் நேர்க்கோட்டின் சமன்பாட்டைக் காண்க.\n(ii) (2, 3) மற்றும் (−7, −1)"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "4x − 9y + 19 = 0", "ta": "4x − 9y + 19 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q8", "exercise": "5.3", "questionNumber": 8, "part": "whole",
+      "textbookPrompt": {
+        "en": "8. A cat is located at the point (−6, −4) in xy plane. A bottle of milk is kept at (5, 11). The cat wish to consume the milk travelling through shortest possible distance. Find the equation of the path it needs to take its milk.",
+        "ta": "8. ஒரு பூனை xy-தளத்தில் (−6, −4) என்ற புள்ளியில் உள்ளது. (5, 11) என்ற புள்ளியில் ஒரு பால் புட்டி வைக்கப்பட்டுள்ளது. பூனை மிகக் குறுகிய தூரம் பயணித்துப் பால் அருந்த விரும்புகிறது எனில், பாலைப் பருகுவதற்குத் தேவையான பாதையின் சமன்பாட்டைக் காண்க."
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": "assets/grade10-ch5/ex5-3-q8.svg" },
+      "appendixAnswer": { "en": "15x − 11y + 46 = 0", "ta": "15x − 11y + 46 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q9-i", "exercise": "5.3", "questionNumber": 9, "part": "i",
+      "textbookPrompt": {
+        "en": "9. If the vertices of a ΔABC are A(6, 2), B(−5, −1) and C(1, 9); through the vertex A\n(i) find the equation of median",
+        "ta": "9. A(6, 2), B(−5, −1) மற்றும் C(1, 9)-ஐ முனைகளாகக் கொண்ட ΔABC-யின் முனை A-யிலிருந்து வரையப்படும்\n(i) நடுக்கோட்டின் சமன்பாட்டைக் காண்க"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": "assets/grade10-ch5/ex5-3-q9.svg" },
+      "appendixAnswer": { "en": "x + 4y − 14 = 0", "ta": "x + 4y − 14 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q9-ii", "exercise": "5.3", "questionNumber": 9, "part": "ii",
+      "textbookPrompt": {
+        "en": "9. If the vertices of a ΔABC are A(6, 2), B(−5, −1) and C(1, 9); through the vertex A\n(ii) find the equation of altitude",
+        "ta": "9. A(6, 2), B(−5, −1) மற்றும் C(1, 9)-ஐ முனைகளாகக் கொண்ட ΔABC-யின் முனை A-யிலிருந்து வரையப்படும்\n(ii) குத்துக் கோட்டின் சமன்பாட்டைக் காண்க."
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": "assets/grade10-ch5/ex5-3-q9.svg" },
+      "appendixAnswer": { "en": "3x + 5y − 28 = 0", "ta": "3x + 5y − 28 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q10", "exercise": "5.3", "questionNumber": 10, "part": "whole",
+      "textbookPrompt": {
+        "en": "10. Find the equation of a straight line which has slope −5/4 and passing through the point (−1, 2).",
+        "ta": "10. (−1, 2) என்ற புள்ளி வழி செல்வதும், சாய்வு −5/4 உடையதுமான நேர்க்கோட்டின் சமன்பாட்டைக் காண்க."
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "5x + 4y − 3 = 0", "ta": "5x + 4y − 3 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q11-i", "exercise": "5.3", "questionNumber": 11, "part": "i",
+      "textbookPrompt": {
+        "en": "11. You are downloading a song. The percent y (in decimal form) of mega bytes remaining to get downloaded in x seconds is given by y = −0.1x + 1.\n(i) find the total MB of the song.",
+        "ta": "11. நீங்கள் ஒரு பாடலைப் பதிவிறக்கம் செய்யும்போது, x வினாடிகளுக்குப் பிறகு பதிவிறக்கம் செய்யவேண்டிய மீதமுள்ள பாடலின் சதவீதம் (மெகா பைட்டில்) y-ஆனது (தசமத்தில்) y = −0.1x + 1 என்ற சமன்பாட்டின் மூலம் குறிக்கப்பட்டால்,\n(i) பாடலின் மொத்த MB அளவைக் காண்க."
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "1", "ta": "1" }
+    },
+    {
+      "id": "c10-5-ex5-3-q11-ii", "exercise": "5.3", "questionNumber": 11, "part": "ii",
+      "textbookPrompt": {
+        "en": "11. You are downloading a song. The percent y (in decimal form) of mega bytes remaining to get downloaded in x seconds is given by y = −0.1x + 1.\n(ii) after how many seconds will 75% of the song gets downloaded?",
+        "ta": "11. நீங்கள் ஒரு பாடலைப் பதிவிறக்கம் செய்யும்போது, x வினாடிகளுக்குப் பிறகு பதிவிறக்கம் செய்யவேண்டிய மீதமுள்ள பாடலின் சதவீதம் (மெகா பைட்டில்) y-ஆனது (தசமத்தில்) y = −0.1x + 1 என்ற சமன்பாட்டின் மூலம் குறிக்கப்பட்டால்,\n(ii) 75% பாடலைப் பதிவிறக்கம் செய்ய எவ்வளவு வினாடிகள் ஆகும்?"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "7.5 seconds", "ta": "7.5 நொடிகள்" }
+    },
+    {
+      "id": "c10-5-ex5-3-q11-iii", "exercise": "5.3", "questionNumber": 11, "part": "iii",
+      "textbookPrompt": {
+        "en": "11. You are downloading a song. The percent y (in decimal form) of mega bytes remaining to get downloaded in x seconds is given by y = −0.1x + 1.\n(iii) after how many seconds the song will be downloaded completely?",
+        "ta": "11. நீங்கள் ஒரு பாடலைப் பதிவிறக்கம் செய்யும்போது, x வினாடிகளுக்குப் பிறகு பதிவிறக்கம் செய்யவேண்டிய மீதமுள்ள பாடலின் சதவீதம் (மெகா பைட்டில்) y-ஆனது (தசமத்தில்) y = −0.1x + 1 என்ற சமன்பாட்டின் மூலம் குறிக்கப்பட்டால்,\n(iii) எத்தனை வினாடிகள் கழித்துப் பாடல் முழுமையாகப் பதிவிறக்கம் செய்யப்படும்?"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "10 seconds", "ta": "10 நொடிகள்" }
+    },
+    {
+      "id": "c10-5-ex5-3-q12-i", "exercise": "5.3", "questionNumber": 12, "part": "i",
+      "textbookPrompt": {
+        "en": "12. Find the equation of a line whose intercepts on the x and y axes are given below.\n(i) 4, −6",
+        "ta": "12. கீழே கொடுக்கப்பட்டுள்ள x, y வெட்டுத்துண்டுகளைக் கொண்ட நேர்க்கோடுகளின் சமன்பாடுகளைக் காண்க\n(i) 4, −6"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "3x − 2y − 12 = 0", "ta": "3x − 2y − 12 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q12-ii", "exercise": "5.3", "questionNumber": 12, "part": "ii",
+      "textbookPrompt": {
+        "en": "12. Find the equation of a line whose intercepts on the x and y axes are given below.\n(ii) −5, 3/4",
+        "ta": "12. கீழே கொடுக்கப்பட்டுள்ள x, y வெட்டுத்துண்டுகளைக் கொண்ட நேர்க்கோடுகளின் சமன்பாடுகளைக் காண்க\n(ii) −5, 3/4"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "3x − 20y + 15 = 0", "ta": "3x − 20y + 15 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q13-i", "exercise": "5.3", "questionNumber": 13, "part": "i",
+      "textbookPrompt": {
+        "en": "13. Find the intercepts made by the following lines on the coordinate axes.\n(i) 3x − 2y − 6 = 0",
+        "ta": "13. கொடுக்கப்பட்ட நேர்க்கோடுகளின் சமன்பாட்டிலிருந்து ஆய அச்சுகளின் மேல் ஏற்படுத்தும் வெட்டுத்துண்டுகளைக் காண்க.\n(i) 3x − 2y − 6 = 0"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "2, −3", "ta": "2, −3" }
+    },
+    {
+      "id": "c10-5-ex5-3-q13-ii", "exercise": "5.3", "questionNumber": 13, "part": "ii",
+      "textbookPrompt": {
+        "en": "13. Find the intercepts made by the following lines on the coordinate axes.\n(ii) 4x + 3y + 12 = 0",
+        "ta": "13. கொடுக்கப்பட்ட நேர்க்கோடுகளின் சமன்பாட்டிலிருந்து ஆய அச்சுகளின் மேல் ஏற்படுத்தும் வெட்டுத்துண்டுகளைக் காண்க.\n(ii) 4x + 3y + 12 = 0"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "−3, −4", "ta": "−3, −4" }
+    },
+    {
+      "id": "c10-5-ex5-3-q14-i", "exercise": "5.3", "questionNumber": 14, "part": "i",
+      "textbookPrompt": {
+        "en": "14. Find the equation of a straight line\n(i) passing through (1, −4) and has intercepts which are in the ratio 2:5",
+        "ta": "14. நேர்க்கோட்டின் சமன்பாட்டினைக் காண்க.\n(i) (1, −4) என்ற புள்ளி வழிச் செல்வதும், வெட்டுத்துண்டுகளின் விகிதம் 2:5"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "5x + 2y + 3 = 0", "ta": "5x + 2y + 3 = 0" }
+    },
+    {
+      "id": "c10-5-ex5-3-q14-ii", "exercise": "5.3", "questionNumber": 14, "part": "ii",
+      "textbookPrompt": {
+        "en": "14. Find the equation of a straight line\n(ii) passing through (−8, 4) and making equal intercepts on the coordinate axes",
+        "ta": "14. நேர்க்கோட்டின் சமன்பாட்டினைக் காண்க.\n(ii) (−8, 4) என்ற புள்ளி வழிச் செல்வதும், ஆய அச்சுகளின் வெட்டுத் துண்டுகள் சமம்"
+      },
+      "sourcePages": { "en": { "printed": 230, "pdf": 236 }, "ta": { "printed": 237, "pdf": 243 } },
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "figure": { "inTextbooks": false, "asset": null },
+      "appendixAnswer": { "en": "x + y + 4 = 0", "ta": "x + y + 4 = 0" }
+    }
+  ]
+}
