@@ -438,13 +438,16 @@
       '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+e(ta?'கருத்துகளுக்கான வழிசெலுத்தல்':'Concept navigation')+'">'+
       '<button type="button" class="sp2-footer-prev" data-footer-prev>← '+e(prevLabel)+'</button>'+
       '<button type="button" class="sp2-footer-next" data-footer-next></button></nav></div>';
+    const probabilityLessons=stages[0]?.id==='probability-1'&&window.TRIGGLE_PROB_LESSONS;
+    const probability=probabilityLessons?.length===stages.length&&window.TriggleProbabilityConcepts;
     container.append(root);
     const nav=root.querySelector('[data-nav]'),panel=root.querySelector('[data-panel]');
     const indexView=root.querySelector('[data-index-view]'),detailView=root.querySelector('[data-detail-view]');
     let active=-1;
     stages.forEach((stage,i)=>{
       const button=document.createElement('button');button.type='button';button.className='sp2-nav-button';button.dataset.index=String(i);
-      button.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+e(pick(stage.title))+
+      if(probability)button.lang='en';
+      button.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+e(probability?probabilityLessons[i].heading:pick(stage.title))+
         '</span><span class="sp2-done-mark" aria-hidden="true"></span>';button.addEventListener('click',()=>show(i,true));nav.append(button);
     });
     function update(){
@@ -469,7 +472,9 @@
       const stageId=String(stage.id||'');
       const isCh3=stageId.startsWith('g10-ch3-');
       const isStudio6=stageId.startsWith('g10-ch4-')||stageId.startsWith('g10-ch5-')||stageId.startsWith('g10-ch6-');
-      if(isStudio6){
+      if(probability){
+        probability.mount(panel,stage.section,probabilityLessons[i],i,lang);
+      }else if(isStudio6){
         const labEngine=stageId.startsWith('g10-ch5-')?window.TriggleG10Ch5Labs:stageId.startsWith('g10-ch6-')?window.TriggleG10Ch6Labs:window.TriggleG10Ch4Labs;
         const labels=ta?{
           badge:'தமிழ் வரைவு · 2025 பாடநூல் கலைச்சொற்களுடன் உருவாக்கப்பட்டது (ஆசிரியர் மீளாய்வு நிலுவையில்)',
@@ -585,7 +590,7 @@
         panel.append(ref);
       }
       }
-      const holder=panel.querySelector('[data-answers]');if(holder){
+      const holder=probability?null:panel.querySelector('[data-answers]');if(holder){
         const whyButton=panel.querySelector('[data-why]');
         const feedback=panel.querySelector('[data-feedback]');
         const response=panel.querySelector('[data-why-response]');
