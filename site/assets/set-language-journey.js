@@ -377,6 +377,24 @@
       const visibleRule=stage.visual==='count'
         ? {latex:String.raw`\begin{aligned}n(A\cup B)&=n(A)+n(B)\\&\quad-n(A\cap B)\end{aligned}`,fallback:stage.rule}
         : stage.rule;
+      const threeSetBridge=stage.visual==='count'
+        ? '<div class="sp2-count-three-bridge">'+
+          '<strong>'+esc(lang==='ta'?'மூன்று கணங்களைக் கணக்கிடுதல்':'Now count three sets')+'</strong>'+
+          '<p>'+esc(lang==='ta'
+            ?'மூன்று கணங்களின் எண்ணிக்கைகளைக் கூட்டி, இரண்டிரண்டு பொதுவான எண்ணிக்கைகளைக் கழித்து, மூன்றிலும் உள்ள எண்ணிக்கையை ஒருமுறை மீண்டும் சேர்க்கவும்.'
+            :'Add the three set sizes, subtract each pairwise overlap, then add the triple overlap back once.')+'</p>'+
+          '<div class="sp2-three-set-math" tabindex="0">'+htmlMath({
+             latex:'\\begin{aligned}n(A\\cup B\\cup C)&=n(A)+n(B)+n(C)\\\\&\\quad-n(A\\cap B)-n(B\\cap C)\\\\&\\quad-n(A\\cap C)+n(A\\cap B\\cap C)\\end{aligned}',
+             fallback:'n(A ∪ B ∪ C) = n(A) + n(B) + n(C) − n(A ∩ B) − n(B ∩ C) − n(A ∩ C) + n(A ∩ B ∩ C)'
+           })+'</div></div>'
+        : '';
+      // Retain the underlying learning source while avoiding the old "11sum"
+      // typography collision caused by compiling dense numeric prose.
+      const whyContent=stage.visual==='count'
+        ? (lang==='ta'
+          ? ['குறைந்தது ஒரு விளையாட்டு: ',{latex:'14+11-6=19',fallback:'14 + 11 − 6 = 19'},'. எதுவுமில்லை: ',{latex:'30-19=11',fallback:'30 − 19 = 11'},'. சரிபார்ப்பு: ',{latex:'8+6+5+11=30',fallback:'8 + 6 + 5 + 11 = 30'},'.']
+          : ['At least one game: ',{latex:'14+11-6=19',fallback:'14 + 11 − 6 = 19'},'. Neither game: ',{latex:'30-19=11',fallback:'30 − 19 = 11'},'. Check the four regions: ',{latex:'8+6+5+11=30',fallback:'8 + 6 + 5 + 11 = 30'},'.'])
+        : pick(stage.why,lang);
       panel.innerHTML=
         '<div class="sp2-concept-heading" tabindex="-1">'+
          '<h4>'+esc((index+1)+'. '+pick(stage.title,lang))+'</h4></div>'+
@@ -388,14 +406,14 @@
           ?pick(stage.example,lang).replace(lang==='ta'?'கீழுள்ள வென் ஆய்வகத்தில் ஆராய்க.':'Explore these same sets in the interactive Venn lab below.',
             lang==='ta'?'மேலுள்ள வென் படத்தை ஆராய்க.':'Explore the Venn diagram above.')
           :pick(stage.example,lang))+'</p>'+
-        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(visibleRule)+'</div></div></details>'+
+        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(visibleRule)+'</div>'+threeSetBridge+'</div></details>'+
         '<div class="sp2-recall"><h5>'+esc(stage.visual==='membership'?t.detective:t.try)+'</h5>'+
         '<p class="sp2-concept-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p>'+
         '<div class="sp2-answers" data-answers role="group" aria-label="'+esc(pick(stage.question,lang))+'"></div>'+
         '<div class="sp2-recall-actions"><button type="button" data-hint>'+esc(t.hint)+
         '</button><button type="button" data-why-button>'+esc(t.why)+'</button></div>'+
         '<p data-feedback role="status" aria-live="polite"></p>'+
-        '<div class="sp2-why" data-why hidden>'+htmlMath(pick(stage.why,lang))+'</div></div>'+
+        '<div class="sp2-why" data-why hidden>'+htmlMath(whyContent)+'</div></div>'+
         '<details class="sp2-paper"><summary>✎ '+esc(t.paper)+'</summary>'+
         '<p>'+htmlMath(pick(stage.paper,lang))+'</p></details>'+
         '<div data-extra-practice></div>'+ (stage.id==='cardinality'?'<div data-hard></div>':'')+
