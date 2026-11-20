@@ -141,6 +141,17 @@ for(const angle of [20,30,40,45,50,60,70]){
   assert.equal(complement===angle,angle===45,'Complement equals depression only at 45 degrees');
 }
 
+// AUD05-01: every Discover trigonometric ratio must identify its angle.
+for(const fragment of [
+  String.raw`\\operatorname{cosec} ${focusDeg}^\\circ=`,
+  String.raw`\\sec ${focusDeg}^\\circ=`,
+  String.raw`\\sec ${theta}^\\circ\\cdot\\cos ${theta}^\\circ=1`,
+  String.raw`\\operatorname{cosec} ${theta}^\\circ\\cdot\\sin ${theta}^\\circ=1`,
+  String.raw`\\cot\\theta+\\tan\\theta=`
+]){
+  assert(depressionLabSource.includes(fragment),'AUD05-01 missing angle argument: '+fragment);
+}
+
 // Two-triangle heights & boats
 const dh=M.combinedTwoTriangles('deck-hill',40,60,30);
 close(dh.x,40*Math.sqrt(3));close(dh.total,160);
