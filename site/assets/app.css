@@ -1077,3 +1077,12 @@ body.textbook-reader .all-chapters-button{
 .exercise-index-link[hidden]{display:none!important}
 .exercise-index-link:focus-visible{outline:3px solid #7c64af;outline-offset:2px}
 @media(max-width:430px){body.textbook-reader .question-exercise-path{gap:5px}body.textbook-reader .exercise-index-link{font-size:12px;min-height:38px;padding:6px 8px}body.textbook-reader .question-top{align-items:flex-start}body.textbook-reader .lesson-progress{padding-top:8px}}
+
+/* Reuse the reader’s navigation buttons in the Geometry question header. */
+.question-top-nav:not([hidden]){display:flex;flex:none;gap:5px}
+body.textbook-reader .question-top-nav .page-button{min-width:44px;min-height:44px;padding:6px;font-size:18px}
+.question-top-nav .page-button:disabled{opacity:.45;cursor:default}
+.lesson-card:has(.question-top-nav:not([hidden])) .figure-button{min-width:44px;min-height:44px}
+.lesson-card:has(.question-top-nav:not([hidden])) .inline-figure-open{flex-direction:column;align-items:center}
+.lesson-card:has(.question-top-nav:not([hidden])) .inline-figure-visual{width:min(100%,320px)}
+.lesson-card:has(.question-top-nav:not([hidden])) .inline-figure-action{flex:none;max-width:none}

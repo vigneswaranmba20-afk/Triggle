@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 246" role="img">
+  <title>Triangle RPQ from a base, angle and median</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="246" rx="8" fill="#f8fafc"/>
+  <circle class="guide" cx="160.000" cy="80.322" r="60.322"/>
+<polyline class="guide" points="160.000,140.644 160.000,20.000"/>
+<polyline class="guide" points="125.401,129.735 160.000,80.322"/>
+<circle class="guide" cx="160.000" cy="129.735" r="92.265"/>
+<polyline class="accent" points="160.000,129.735 104.928,55.709"/>
+<polyline class="edge" points="125.401,129.735 194.599,129.735 104.928,55.709 125.401,129.735"/>
+<circle class="point" cx="125.401" cy="129.735" r="2.200"/><text x="111.401" y="147.735">P</text>
+<circle class="point" cx="194.599" cy="129.735" r="2.200"/><text x="199.599" y="146.735">Q</text>
+<circle class="point" cx="104.928" cy="55.709" r="2.200"/><text x="92.928" y="47.709">R</text>
+<circle class="point" cx="160.000" cy="80.322" r="2.200"/><text x="166.000" y="75.322">O</text>
+<circle class="point" cx="160.000" cy="129.735" r="2.200"/><text x="165.000" y="121.735">G</text>
+</svg>

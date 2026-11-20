@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 191" role="img">
+  <title>Two successive parallels in triangle ABC</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="191" rx="8" fill="#f8fafc"/>
+  <polyline class="edge" points="150.000,27.000 42.000,163.000 277.000,163.000 150.000,27.000"/>
+<polyline class="accent" points="79.800,115.400 232.550,115.400"/>
+<polyline class="accent" points="104.370,84.460 232.550,115.400"/>
+<polyline class="edge" points="79.800,115.400 277.000,163.000"/>
+<circle class="point" cx="150.000" cy="27.000" r="2.200"/><text x="146.000" y="17.000">A</text>
+<circle class="point" cx="42.000" cy="163.000" r="2.200"/><text x="39.000" y="181.000">B</text>
+<circle class="point" cx="277.000" cy="163.000" r="2.200"/><text x="279.000" y="181.000">C</text>
+<circle class="point" cx="79.800" cy="115.400" r="2.200"/><text x="61.800" y="116.400">D</text>
+<circle class="point" cx="232.550" cy="115.400" r="2.200"/><text x="239.550" y="116.400">E</text>
+<circle class="point" cx="104.370" cy="84.460" r="2.200"/><text x="87.370" y="84.460">F</text>
+</svg>
