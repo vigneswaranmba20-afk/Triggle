@@ -13,7 +13,8 @@ class GeometricVideoTest(unittest.TestCase):
         spec=load_lesson("g10-ch2-gp-sum")
         self.assertEqual(len(spec["beats"]),9)
         self.assertEqual([b["scene"] for b in spec["beats"]],GP_ORDER)
-        self.assertEqual(spec["voice"]["name"],"Kore")
+        self.assertEqual(spec["voice"]["name"],"Fola")
+        self.assertEqual(spec["voice"]["model"],"gemini-3.8-flash-tts")
         self.assertEqual(spec["visual"]["template"],"gp-sum-cancel-v1")
         for values,r in [(spec["visual"]["exampleTerms"],2),(spec["visual"]["practiceTerms"],3)]:
             self.assertEqual(values,[r**i for i in range(4)])
