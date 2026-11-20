@@ -39,7 +39,10 @@ for(const label of ['Descriptive Form','Roster Form','Set-Builder Form'])assert(
 assert(file.includes('data-slider-formula')&&file.includes('aria-valuetext'),'Overlap slider explains its result accessibly');
 assert(file.includes('data-overlap-decrease')&&file.includes('data-overlap-increase'),'Slider has precise accessible step buttons');
 assert(file.includes('both===0')&&file.includes('both===11'),'Slider buttons respect the valid 0–11 overlap bounds');
-assert(file.includes('window.TriggleLab?.mount(target,chapter,lang)'),'Venn lab is shown when requested');
+assert(file.includes('sp2-venn-svg')&&file.includes('data-venn-region'),'Venn diagram is rendered directly within the concepts lesson');
+assert(file.includes('chooseVenn(\'intersection\')'),'The interactive diagram initializes with a readable highlighted region');
+assert(file.includes("key:'union'")&&file.includes("key:'intersection'")&&file.includes("key:'difference'")&&file.includes("key:'complement'")&&file.includes("key:'symmetric'"),'All five set operations are reachable without a scroll-only placeholder');
+assert(!file.includes('window.TriggleLab?.mount(target,chapter,lang)'),'The old disconnected Venn lab action must stay removed');
 const hub=read('assets/chapter-hub.js');new vm.Script(hub);
 assert(hub.includes('window.TriggleTextbookActivities.mount(panel,chapter,lang)'));
 assert(hub.includes("section==='activities'"),'Thinking Corners are a dedicated chapter section');
