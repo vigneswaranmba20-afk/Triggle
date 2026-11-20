@@ -1,0 +1,379 @@
+{
+  "schemaVersion": 1,
+  "mission": "VER Triggle — MISSION AF-01",
+  "checkpoint": {
+    "baselineCommit": "c32230d63c06a963b44407a8134e7003648a3593",
+    "branch": "audit-fix/mission-af01-quality-and-a11y-20261120",
+    "lastAuditTimestampUtc": "2026-11-20T09:44:00Z",
+    "idempotentRunCount": 1,
+    "status": "VERIFIED",
+    "livePagesVerifiedAtBaseline": {
+      "url": "https://vigneswaranmba20-afk.github.io/Triggle/",
+      "httpStatus": 200,
+      "siteIndexByteExactWithBaseline": true
+    },
+    "browserVerification": {
+      "viewports": ["320x720", "360x780", "390x844", "640x360"],
+      "languages": ["en", "ta"],
+      "routesChecked": 120,
+      "jsErrors": 0,
+      "overflowCount": 0,
+      "status": "PASSED"
+    }
+  },
+  "externalAuditDeduplication": [
+    {
+      "externalId": "AUD01-01",
+      "source": "Open PR #280",
+      "signature": "neon:g9-ch1-venn-five-operations",
+      "grade": 9,
+      "chapter": 1,
+      "status": "OPEN_EXTERNAL",
+      "note": "Active concurrent PR #280; excluded from AF-01 edits to enforce parallel development protection."
+    },
+    {
+      "externalId": "AUD01-02",
+      "source": "Open PR #283",
+      "signature": "neon:g9-ch1-cardinality-three-set-bridge",
+      "grade": 9,
+      "chapter": 1,
+      "status": "OPEN_EXTERNAL",
+      "note": "Active concurrent PR #283 touching site/assets/set-language-journey.js; avoided to prevent merge conflicts."
+    },
+    {
+      "externalId": "ISSUE-246",
+      "source": "Issue #246 / PR #247",
+      "signature": "github:g9-ch2-ex2-4-exercise-completion",
+      "grade": 9,
+      "chapter": 2,
+      "status": "OPEN_EXTERNAL",
+      "note": "Active concurrent curriculum PR #247 for Grade 9 Exercise 2.4; left untouched."
+    }
+  ],
+  "findings": [
+    {
+      "id": "AF01-01",
+      "signature": "math-notation:g10-ch2-plain-slash-fractions",
+      "grade": 10,
+      "chapter": 2,
+      "page": "site/index.html?class=10&chapter=g10-ch2",
+      "component": "site/data/math-layout/g10-ch2-fractions-20261120.js, site/assets/app.js",
+      "description": "16 Grade 10 Chapter 2 textbook exercise records (30 step/answer expressions across Ex 2.4, 2.5, 2.6, 2.7, and 2.8) rendered raw slash fractions such as 1/3, 4/25, and 63/11 instead of ChatGPT-style KaTeX stacked fractions (\\dfrac).",
+      "reproductionSteps": [
+        "Open Grade 10 Chapter 2 exercises such as c10-2-ex2-4-q1, c10-2-ex2-5-q1-ii, c10-2-ex2-6-q7, c10-2-ex2-7-q1-iv, and c10-2-ex2-8-q5.",
+        "Inspect the rendered step formulas and final answer cards."
+      ],
+      "expectedBehavior": "Every fractional mathematical step and final answer renders withKaTeX \\dfrac stacked fractions while keeping exact SHA-pinned source fallback text.",
+      "actualBehavior": "16 records (21 steps and 9 final answers; 30 expressions total) had no math/answerMath override and fell back to plain slash strings.",
+      "severity": 4,
+      "studentImpact": 5,
+      "frequency": 5,
+      "confidence": 5,
+      "priorityScore": 500,
+      "evidence": {
+        "baselineMissingCount": 30,
+        "postFixRemainingG10SlashFractions": 0,
+        "sampleIds": ["c10-2-ex2-4-q1", "c10-2-ex2-5-q1-ii", "c10-2-ex2-6-q7", "c10-2-ex2-7-q1-iv", "c10-2-ex2-8-q4", "c10-2-ex2-8-q5"]
+      },
+      "proposedRemediation": "Add read-only TriggleG10Ch2FractionMath presentation overlay in site/data/math-layout/g10-ch2-fractions-20261120.js without mutating SHA-pinned source records, wire it into app.js getStep/getAnswer, include it in index.html and service-worker.js CORE.",
+      "status": "VERIFIED",
+      "relatedCommitOrPr": "audit-fix/mission-af01-quality-and-a11y-20261120"
+    },
+    {
+      "id": "AF01-02",
+      "signature": "mobile-usability:appbar-lang-en-button-sub24px",
+      "grade": "9-12",
+      "chapter": "shared",
+      "page": "site/index.html",
+      "component": "site/assets/app.css (.lang-switch button)",
+      "description": "Under @media(max-width:430px), the EN button inside .lang-switch measured 23.9px wide at 320x720 mobile viewport, below the 24x24 CSS pixel minimum touch-target threshold.",
+      "reproductionSteps": [
+        "Open site/index.html at 320x720 mobile viewport.",
+        "Measure #langEn boundingClientRect width and height."
+      ],
+      "expectedBehavior": "Both EN and தமிழ் toggle buttons have bounding boxes >= 24x24 CSS pixels.",
+      "actualBehavior": "#langEn measured 23.9px width (< 24px).",
+      "severity": 4,
+      "studentImpact": 4,
+      "frequency": 5,
+      "confidence": 5,
+      "priorityScore": 400,
+      "evidence": {
+        "beforeWidthPx": 23.9
+      },
+      "proposedRemediation": "Set min-width:28px;min-height:34px on .lang-switch button inside @media(max-width:430px) in site/assets/app.css.",
+      "status": "VERIFIED",
+      "relatedCommitOrPr": "audit-fix/mission-af01-quality-and-a11y-20261120"
+    },
+    {
+      "id": "AF01-03",
+      "signature": "mobile-usability:g9-ch2-pitfall-summary-sub24px",
+      "grade": 9,
+      "chapter": 2,
+      "page": "site/index.html?class=9&chapter=g9-ch2&section=concepts",
+      "component": "site/assets/living-concepts.css (.chapter-hub .rnlab-pitfall summary)",
+      "description": "Inside Grade 9 Chapter 2 Real Numbers interactive concept cards, the collapsible 'Avoid this mistake' (<details class='rnlab-pitfall'><summary>) button measured 22px tall on mobile viewports, below the 24px minimum target size.",
+      "reproductionSteps": [
+        "Open Grade 9 Chapter 2 Concept 0 on a 320x720 or 360x780 viewport.",
+        "Inspect boundingClientRect().height of .chapter-hub .rnlab-pitfall summary."
+      ],
+      "expectedBehavior": "Collapsible pitfall summary control renders >= 44px touch height with readable padding.",
+      "actualBehavior": "Rendered height was 22px (< 24px minimum).",
+      "severity": 4,
+      "studentImpact": 4,
+      "frequency": 4,
+      "confidence": 5,
+      "priorityScore": 320,
+      "evidence": {
+        "beforeHeightPx": 22
+      },
+      "proposedRemediation": "Style .chapter-hub .rnlab-pitfall and .chapter-hub .rnlab-pitfall summary in site/assets/living-concepts.css with min-height:45px;padding:11px 14px;display:flex;align-items:center.",
+      "status": "VERIFIED",
+      "relatedCommitOrPr": "audit-fix/mission-af01-quality-and-a11y-20261120"
+    },
+    {
+      "id": "AF01-04",
+      "signature": "accessibility:bond-light-muted-label-contrast-below-aa",
+      "grade": "9-12",
+      "chapter": "shared",
+      "page": "site/index.html",
+      "component": "site/assets/bond-light.css (.page-status, .crumb-link span, .hub-section-arrow)",
+      "description": "Status and breadcrumb text (.page-status #9995a6 = 2.92:1, .crumb-link span #a59cbc = 2.42:1, .hub-section-arrow #a69abf = 2.63:1) inherited low-contrast lavender-gray colors from paper-indigo.css on #FFFFFF background, failing WCAG 2.2 AA 4.5:1 text contrast.",
+      "reproductionSteps": [
+        "Open site/index.html on Grade 9 or Grade 10 chapter/exercise views.",
+        "Measure computed foreground color and WCAG contrast ratio against #FFFFFF for #pageStatus, .crumb-link span, and .hub-section-arrow."
+      ],
+      "expectedBehavior": "All muted secondary labels and navigation cues achieve >= 4.5:1 contrast on light surfaces.",
+      "actualBehavior": "Contrast ratios ranged from 2.42:1 to 2.92:1.",
+      "severity": 4,
+      "studentImpact": 4,
+      "frequency": 5,
+      "confidence": 5,
+      "priorityScore": 400,
+      "evidence": {
+        "beforeRatios": {
+          "pageStatus": 2.92,
+          "crumbLinkSpan": 2.42,
+          "hubSectionArrow": 2.63
+        },
+        "targetToken": "#525B62 (6.87:1)"
+      },
+      "proposedRemediation": "Override .page-status, .crumb-link span, .hub-section-arrow color to var(--bond-muted) (#525B62, 6.87:1) in site/assets/bond-light.css without touching layout properties forbidden by test_bond_light_theme.cjs.",
+      "status": "VERIFIED",
+      "relatedCommitOrPr": "audit-fix/mission-af01-quality-and-a11y-20261120"
+    },
+    {
+      "id": "AF01-05",
+      "signature": "mobile-usability:class9-classic-grade-entry-sub24px",
+      "grade": 9,
+      "chapter": "shared",
+      "page": "site/class9-classic.html",
+      "component": "site/class9-classic.html (.grade-entry)",
+      "description": "The .grade-entry navigation link in class9-classic.html measured 20px height at mobile viewports, below the 24px minimum target size.",
+      "reproductionSteps": [
+        "Open site/class9-classic.html at 320x720 viewport.",
+        "Measure boundingClientRect().height of a.grade-entry."
+      ],
+      "expectedBehavior": "Link target height >= 24px.",
+      "actualBehavior": "Height was 20px.",
+      "severity": 3,
+      "studentImpact": 3,
+      "frequency": 3,
+      "confidence": 5,
+      "priorityScore": 135,
+      "evidence": {
+        "beforeHeightPx": 20
+      },
+      "proposedRemediation": "Set display:inline-flex;align-items:center;min-height:28px on .grade-entry in site/class9-classic.html once legacy preservation baseline authorizes updating class9-classic.html.",
+      "status": "BLOCKED",
+      "blockedReason": "site/class9-classic.html is SHA-256 locked by validate_curriculum.cjs ('Preserved content changed: class9-classic.html'); reverted to baseline to preserve passing preservation gate.",
+      "relatedCommitOrPr": "audit-fix/mission-af01-quality-and-a11y-20261120"
+    },
+    {
+      "id": "AF01-06",
+      "signature": "bilingual:g10-ch5-concept1-reset-and-grid-label-ta",
+      "grade": 10,
+      "chapter": 5,
+      "page": "site/index.html?class=10&chapter=g10-ch5&section=concepts&concept=0",
+      "component": "site/assets/g10-ch5-concepts.js",
+      "description": "In Tamil mode for Grade 10 Chapter 5 Concept 1 (Coordinate Geometry), the reset chip displayed the wrong point coordinates ('உதாரணம் (2,4),(8,10) அளவில்' instead of resetting A(-4,-1), B(4,3)), and the preset chip '3-4-5 Right Grid' remained untranslated in English.",
+      "reproductionSteps": [
+        "Open site/index.html?class=10&chapter=g10-ch5&section=concepts&concept=0.",
+        "Switch language toggle to தமிழ் (#langTa) and inspect interactive preset chips."
+      ],
+      "expectedBehavior": "Reset chip references A(-4,-1), B(4,3) in Tamil and preset chip displays Tamil text ('3-4-5 செங்கோண கட்டம்').",
+      "actualBehavior": "Reset chip quoted (2,4),(8,10) and preset chip stayed English ('3-4-5 Right Grid').",
+      "severity": 3,
+      "studentImpact": 4,
+      "frequency": 3,
+      "confidence": 5,
+      "priorityScore": 180,
+      "evidence": {
+        "beforeResetTa": "உதாரணம் (2,4),(8,10) அளவில்",
+        "beforeGridLabel": "3-4-5 Right Grid"
+      },
+      "proposedRemediation": "Update chip labels in site/assets/g10-ch5-concepts.js to 'மீட்டமை A(−4,−1), B(4,3)' and ta?'3-4-5 செங்கோண கட்டம்':'3-4-5 Right Grid'.",
+      "status": "VERIFIED",
+      "relatedCommitOrPr": "audit-fix/mission-af01-quality-and-a11y-20261120"
+    },
+    {
+      "id": "AF01-07",
+      "signature": "stability:app-geometry-missing-guard-on-rem-math-answer-and-question",
+      "grade": 10,
+      "chapter": 4,
+      "page": "site/index.html?class=10&chapter=g10-ch4",
+      "component": "site/assets/app.js (render, buildStep, TriggleG10RemainingMath)",
+      "description": "site/assets/app.js guarded TriggleG10RemainingMath?.getStep with !isGeometryExercise(current) but omitted the same guard before TriggleG10RemainingMath?.getAnswer and .getQuestion, exposing Grade 10 Chapter 4 Geometry items (such as c10-4-ex4-1-q1-i, q1-ii, q2) to stale overlay lookups and potential anchor/length crashes.",
+      "reproductionSteps": [
+        "Inspect app.js call sites for TriggleG10RemainingMath?.getAnswer and .getQuestion versus .getStep.",
+        "Evaluate Chapter 4 Geometry records matching legacy IDs in g10-ch2-ch8-chatgpt-20261113.js."
+      ],
+      "expectedBehavior": "Geometry exercises skip TriggleG10RemainingMath consistently across question, step, and answer rendering.",
+      "actualBehavior": "Only getStep checked !isGeometryExercise(current); getAnswer and getQuestion lacked the guard.",
+      "severity": 4,
+      "studentImpact": 4,
+      "frequency": 3,
+      "confidence": 5,
+      "priorityScore": 240,
+      "evidence": {
+        "guardedIds": ["c10-4-ex4-1-q1-i", "c10-4-ex4-1-q1-ii", "c10-4-ex4-1-q2"]
+      },
+      "proposedRemediation": "Add !isGeometryExercise(current) guard before TriggleG10RemainingMath?.getAnswer and .getQuestion in site/assets/app.js.",
+      "status": "VERIFIED",
+      "relatedCommitOrPr": "audit-fix/mission-af01-quality-and-a11y-20261120"
+    },
+    {
+      "id": "AF01-08",
+      "signature": "mobile-usability:playground-ranger-slider-sub24px",
+      "grade": "9-12",
+      "chapter": "shared",
+      "page": "site/playground.html",
+      "component": "site/playground.html (.ranger)",
+      "description": "Range slider controls (.ranger) in playground.html rendered at 11px-12px height on mobile viewports, below the 24px minimum touch target height.",
+      "reproductionSteps": [
+        "Open site/playground.html at 320x720 viewport.",
+        "Measure boundingClientRect().height on input.ranger elements."
+      ],
+      "expectedBehavior": "Slider touch target height >= 24px while keeping thin visual track appearance.",
+      "actualBehavior": "Height measured 11px-12px.",
+      "severity": 3,
+      "studentImpact": 3,
+      "frequency": 3,
+      "confidence": 5,
+      "priorityScore": 135,
+      "evidence": {
+        "beforeHeightPx": 12
+      },
+      "proposedRemediation": "Increase .ranger height to 28px with vertical padding:8px 0 and background-clip:content-box in site/playground.html once legacy preservation baseline authorizes updating playground.html.",
+      "status": "BLOCKED",
+      "blockedReason": "site/playground.html is SHA-256 locked by validate_curriculum.cjs ('Preserved content changed: playground.html'); reverted to baseline to preserve passing preservation gate.",
+      "relatedCommitOrPr": "audit-fix/mission-af01-quality-and-a11y-20261120"
+    },
+    {
+      "id": "AF01-09",
+      "signature": "accessibility:brand-gold-dot-missing-aria-hidden",
+      "grade": "9-12",
+      "chapter": "shared",
+      "page": "site/index.html",
+      "component": "site/index.html (.side-brand .gold, .brand-mobile .gold)",
+      "description": "The decorative period span (<span class='gold'>.</span>) in the sidebar brand link and mobile header brand was exposed to assistive technology instead of being marked aria-hidden='true' like the adjacent logo glyph.",
+      "reproductionSteps": [
+        "Inspect .side-brand and .brand-mobile markup in site/index.html."
+      ],
+      "expectedBehavior": "Decorative punctuation mark uses aria-hidden='true' so screen readers announce 'Triggle' cleanly.",
+      "actualBehavior": "Both <span class='gold'>.</span> elements lacked aria-hidden='true'.",
+      "severity": 2,
+      "studentImpact": 3,
+      "frequency": 5,
+      "confidence": 5,
+      "priorityScore": 150,
+      "evidence": {
+        "linesInIndexHtml": [22, 36]
+      },
+      "proposedRemediation": "Add aria-hidden='true' to both <span class='gold'>.</span> brand accents in site/index.html.",
+      "status": "VERIFIED",
+      "relatedCommitOrPr": "audit-fix/mission-af01-quality-and-a11y-20261120"
+    },
+    {
+      "id": "AF01-10",
+      "signature": "bilingual:tamil-textbook-question-and-solution-translation-gap",
+      "grade": "9-10",
+      "chapter": "multiple",
+      "page": "site/index.html (lang=ta)",
+      "component": "site/data/textbook-exercises/*.js",
+      "description": "85 of 406 active Grade 9 exercises (20.9%) and 355 of 431 active Grade 10 exercises (82.4%) lack Tamil (q.ta / steps[].ta) translations and fall back to English wording in Tamil mode.",
+      "reproductionSteps": [
+        "Open Grade 9 or Grade 10 exercises such as g10-ch2 Ex 2.4+ in Tamil mode (#langTa).",
+        "Inspect q.ta and step explanation text."
+      ],
+      "expectedBehavior": "All Grade 9-10 exercises carry verified Tamil-medium wording matching the prescribed 2025 Tamil Nadu textbook.",
+      "actualBehavior": "440 active exercises across Grades 9-10 display English wording when Tamil mode is active.",
+      "severity": 4,
+      "studentImpact": 5,
+      "frequency": 5,
+      "confidence": 5,
+      "priorityScore": 500,
+      "evidence": {
+        "grade9ActiveCount": 406,
+        "grade9MissingTaCount": 85,
+        "grade10ActiveCount": 431,
+        "grade10MissingTaCount": 355
+      },
+      "proposedRemediation": "Translate exercises strictly against the user's connected 2025 Tamil-medium textbook PDFs in Google Drive with bilingual human/source verification.",
+      "status": "BLOCKED",
+      "blockedReason": "Prescribed 2025 Tamil-medium textbook PDFs are hosted in Google Drive outside this VM and AGENTS.md strictly forbids fabricating unreviewed Tamil translations.",
+      "relatedCommitOrPr": "audit-fix/mission-af01-quality-and-a11y-20261120"
+    },
+    {
+      "id": "AF01-11",
+      "signature": "math-notation:g9-remaining-plain-slash-fractions-batch2",
+      "grade": 9,
+      "chapter": "2,3,4,7,8,9",
+      "page": "site/index.html?class=9",
+      "component": "site/data/real-numbers/*, site/data/textbook-exercises/g9-*, site/data/class-9.js",
+      "description": "122 step equations and final answers in Grade 9 (Ch 2: 103, Ch 3: 1, Ch 4: 3, Ch 7: 10, Ch 8: 3, Ch 9: 2) still render plain slash fractions (e.g., 11/3, -7/11, 2/7) without KaTeX \\dfrac layout.",
+      "reproductionSteps": [
+        "Run site/tools/audit_af01.cjs to scan Grade 9 non-example items lacking s.math/TriggleG9Math for \\d+/\\d+."
+      ],
+      "expectedBehavior": "All Grade 9 fractional steps and answers use ChatGPT-style KaTeX \\dfrac notation.",
+      "actualBehavior": "122 expressions in Grade 9 remain plain slash fractions (queued for Batch 2 after Grade 10 reaches 0).",
+      "severity": 3,
+      "studentImpact": 4,
+      "frequency": 4,
+      "confidence": 5,
+      "priorityScore": 240,
+      "evidence": {
+        "remainingG9SlashFractions": 122
+      },
+      "proposedRemediation": "Add a read-only Grade 9 fraction math-layout overlay in Batch 2 matching TriggleG10Ch2FractionMath so SHA-preserved Grade 9 source files remain untouched.",
+      "status": "CONFIRMED",
+      "relatedCommitOrPr": "queued-batch-2"
+    }
+  ],
+  "recurringPatterns": [
+    {
+      "patternId": "PAT-01",
+      "title": "Read-only math overlay required when source records are SHA-pinned",
+      "rootCause": "New curriculum batches preserve SHA-256 checksums via docs/standard-solution-preservation.json or g10-ch2-source-gate.json, causing plain slash fractions in older steps/answers to persist if not layered cleanly.",
+      "preventiveRule": "Always ship structured KaTeX overrides in site/data/math-layout/ with exact fallback strings and guard geometry/chapter IDs explicitly; run site/tools/audit_af01.cjs --check to enforce 0 unrendered slash fractions."
+    },
+    {
+      "patternId": "PAT-02",
+      "title": "Layer stylesheet overrides causing sub-4.5:1 muted text contrast",
+      "rootCause": "paper-indigo.css lavender muted hex values (#9995a6, #a59cbc, #a69abf) leak through bond-light.css on selectors not listed in bond-light.css.",
+      "preventiveRule": "Every new secondary label selector added in app.css/chapter-hub.css must inherit or override to var(--bond-muted) (#525B62, 6.87:1) without touching layout properties in bond-light.css."
+    },
+    {
+      "patternId": "PAT-03",
+      "title": "Compact mobile controls dipping under 24x24 CSS px",
+      "rootCause": "Mobile media queries or native range/details summaries without explicit min-width/min-height drop to 11px-23.9px hit boxes.",
+      "preventiveRule": "Validate bounding boxes >= 24x24px at 320px width in headless Chromium for buttons, links, summaries, and range inputs."
+    },
+    {
+      "patternId": "PAT-04",
+      "title": "Unsafe shared lookup hooks across chapter schema migrations",
+      "rootCause": "app.js called TriggleG10RemainingMath?.getStep with !isGeometryExercise(current) while omitting the same guard on getAnswer and getQuestion.",
+      "preventiveRule": "Any chapter-specific bypass guard in app.js must wrap all three hooks (getQuestion, getStep, getAnswer) symmetrically."
+    }
+  ]
+}

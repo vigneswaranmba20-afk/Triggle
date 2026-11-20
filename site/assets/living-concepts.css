@@ -72,10 +72,15 @@
   margin:7px 0 12px;padding:0;border:1px solid #e5deec;border-radius:13px;
   background:#fff;overflow:hidden
 }
-.chapter-hub .sp2-explanation summary{
-  min-height:45px;padding:11px 14px;cursor:pointer;
+.chapter-hub .sp2-explanation summary,
+.chapter-hub .rnlab-pitfall summary{
+  min-height:45px;padding:11px 14px;cursor:pointer;display:flex;align-items:center;
   font:750 13px/1.5 system-ui,sans-serif;color:#5a4c78
 }
+.chapter-hub .rnlab-pitfall{
+  margin:10px 0 4px;border:1px solid #e5deec;border-radius:13px;background:#fff;overflow:hidden
+}
+.chapter-hub .rnlab-pitfall p{margin:0;padding:0 14px 12px}
 .chapter-hub .sp2-explanation-body{padding:0 13px 13px}
 .chapter-hub .sp2-journey .lc-hide-original{display:none}
 @media (prefers-reduced-motion:no-preference){
