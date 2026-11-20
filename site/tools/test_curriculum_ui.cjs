@@ -1259,13 +1259,19 @@ async function main() {
       await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
       const journey=page.locator('.sp2-journey');
       await journey.waitFor({state:'visible'});
-      assert.equal(await journey.locator('.p2-lab').count(),0,'Lab must stay optional even offline');
+      assert.equal(await journey.locator('.p2-lab').count(),0,'No redundant full-size Venn lab is mounted offline');
       await selectSetIdea(journey,3);
-      await journey.locator('[data-demo-mode="go"]').click();
-      const lab=journey.locator('.p2-lab');
-      await lab.waitFor({state:'visible'});
-      await lab.locator('[data-op="neither"]').click();
-      assert.equal(await lab.locator('[data-result-set]').innerText(),'{7, 8}');
+      const venn=journey.locator('.sp2-venn-svg');
+      await venn.waitFor({state:'visible'});
+      assert.equal(await journey.locator('.sp2-venn-controls button').count(),5,'All five operations work offline');
+      await journey.locator('[data-demo-mode="complement"]').click();
+      assert.ok((await journey.locator('[data-demo-output]').innerText()).replace(/\\s+/g,'').includes('{4,6,7}'),
+        'Complement lists exactly the members outside A, even offline');
+      assert.equal(await venn.locator('[data-venn-region="outside"]').getAttribute('fill'),'#c4ecd9',
+        'Outside region shades correctly without network');
+      await journey.locator('[data-demo-mode="symmetric"]').click();
+      assert.ok((await journey.locator('[data-demo-output]').innerText()).replace(/\\s+/g,'').includes('{1,2,4,6}'),
+        'Symmetric difference also works offline');
       await selectSetIdea(journey,6);
       assert.ok((await sourceText(journey.locator('.sp2-formula'))).includes('n(A ∪ B)'));
       await ctx.setOffline(false);
