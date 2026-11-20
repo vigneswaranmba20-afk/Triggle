@@ -1,0 +1,112 @@
+name: TRACE discriminant — ONE continuous Fola WAV to MP4
+
+# New one-shot alternative. Existing nine-WAV ZIP workflow remains available.
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'site/tools/trace_single_wav_import.py'
+      - 'site/tools/test_trace_single_wav_import.py'
+      - '.github/workflows/trace-discriminant-one-wav-review.yml'
+      - 'docs/trace/DISCRIMINANT_ONE_SHOT_FOLA.md'
+      - 'package.json'
+  workflow_dispatch:
+    inputs:
+      single_wav_url:
+        description: 'GitHub issue attachment URL for ONE continuous nine-beat 16-bit PCM WAV'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trace-discriminant-one-wav-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  split-qa:
+    name: Test single-WAV safety and nine-scene boundaries
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run zero-API splitter regressions and exact discriminant mathematics
+        run: |
+          unset GEMINI_API_KEY GOOGLE_API_KEY OPENAI_API_KEY
+          python3 site/tools/test_trace_single_wav_import.py
+          python3 site/tools/test_trace_voice_pack_import.py
+          python3 site/tools/test_trace_discriminant_video.py
+          python3 site/tools/trace_video_factory.py self-test --lesson g10-ch3-discriminant
+
+  review-mp4:
+    name: One original WAV → nine exact beats → 720p narrated review
+    if: github.event_name == 'workflow_dispatch' && github.actor == 'vigneswaranmba20-afk'
+    needs: split-qa
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      LESSON: g10-ch3-discriminant
+      SINGLE_WAV_URL: ${{ inputs.single_wav_url }}
+      WAV_DIR: build/trace-video/discriminant-one-wav-beats
+      OUTPUT_DIR: build/trace-video/discriminant-one-wav-review
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import ONE externally recorded WAV and split at eight verified long gaps
+        run: |
+          unset GEMINI_API_KEY GOOGLE_API_KEY OPENAI_API_KEY
+          python3 site/tools/trace_single_wav_import.py \
+            --lesson "$LESSON" --url "$SINGLE_WAV_URL" --output "$WAV_DIR"
+      - name: Install offline animation renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -qq -y ffmpeg fonts-dejavu-core
+          python3 -m pip install -r site/video-factory/requirements.txt
+      - name: Reuse existing nine-scene mathematics animation and synchronized MP4 render
+        run: |
+          unset GEMINI_API_KEY GOOGLE_API_KEY OPENAI_API_KEY
+          python3 site/tools/trace_video_factory.py render \
+            --lesson "$LESSON" --mode existing --existing-dir "$WAV_DIR" \
+            --width 720 --height 1280 --fps 12 \
+            --cache build/trace-video/disc-one-shot-render-cache \
+            --output "$OUTPUT_DIR"
+      - name: Verify genuinely split narration, audio/video format, and review-only release gate
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          output=Path(os.environ['OUTPUT_DIR'])
+          voices=Path(os.environ['WAV_DIR'])
+          render=json.loads((output/'result.json').read_text())
+          manifest=json.loads((voices/'voice-pack-manifest.json').read_text())
+          assert manifest['source']=='one-user-supplied-continuous-WAV'
+          assert manifest['alignmentMethod']=='eight-verified-long-silence-separators'
+          assert len(manifest['detectedSeparatorSeconds'])==8
+          assert len(manifest['beats'])==len(render['beats'])==9
+          assert manifest['noModelApiCalls'] and manifest['reviewRequired']
+          assert manifest['releaseApproved'] is False
+          assert render['lessonId']=='g10-ch3-discriminant'
+          assert render['mode']=='existing' and render['reviewRequired']
+          assert render['width']==720 and render['height']==1280
+          assert (output/render['videoFile']).stat().st_size>50000
+          print('PASS: one WAV -> 9 narrated scenes -> review-only MP4; manual listening approval required')
+          PY
+      - name: Upload private seven-day review artifact (NO Cloudflare or live website update)
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-discriminant-one-shot-review-${{ github.run_id }}
+          path: |
+            build/trace-video/discriminant-one-wav-review/*.mp4
+            build/trace-video/discriminant-one-wav-review/result.json
+            build/trace-video/discriminant-one-wav-beats/voice-pack-manifest.json
+          retention-days: 7
+          if-no-files-found: error
+      - name: Keep the release boundary explicit
+        run: |
+          echo 'ONE Fola WAV became nine synchronized visual scenes. This is a PRIVATE REVIEW-ONLY artifact.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No model API calls or website publication. Check every spoken scene and graph on Android before separate approval.' >> "$GITHUB_STEP_SUMMARY"
