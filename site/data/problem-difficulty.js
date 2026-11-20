@@ -5156,8 +5156,7 @@ const metadata={
       "level": "medium",
       "basis": "Represent real roots as α and α², obtain α = 3 from α³ = 27, and evaluate k = −3(α + α²).",
       "review": "implementation-audit"
-    }
-,
+    },
     "c10-4-ex4-3-q1": {"grade":10,"level":"easy","basis":"Use perpendicular east/north distances as legs of a right triangle and take their hypotenuse.","review":"2025-textbook-ex43-source-audit"},
     "c10-4-ex4-3-q2": {"grade":10,"level":"easy","basis":"Compare the sum of the two perpendicular street lengths with their direct Pythagorean diagonal.","review":"2025-textbook-ex43-source-audit"},
     "c10-4-ex4-3-q3": {"grade":10,"level":"medium","basis":"Calculate the direct pond crossing with the Pythagoras theorem and reconcile two-decimal textbook answer with nearest-metre wording.","review":"2025-textbook-ex43-source-audit"},
