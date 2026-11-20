@@ -5157,6 +5157,15 @@ const metadata={
       "basis": "Represent real roots as α and α², obtain α = 3 from α³ = 27, and evaluate k = −3(α + α²).",
       "review": "implementation-audit"
     }
+,
+    "c10-4-ex4-3-q1": {"grade":10,"level":"easy","basis":"Use perpendicular east/north distances as legs of a right triangle and take their hypotenuse.","review":"2025-textbook-ex43-source-audit"},
+    "c10-4-ex4-3-q2": {"grade":10,"level":"easy","basis":"Compare the sum of the two perpendicular street lengths with their direct Pythagorean diagonal.","review":"2025-textbook-ex43-source-audit"},
+    "c10-4-ex4-3-q3": {"grade":10,"level":"medium","basis":"Calculate the direct pond crossing with the Pythagoras theorem and reconcile two-decimal textbook answer with nearest-metre wording.","review":"2025-textbook-ex43-source-audit"},
+    "c10-4-ex4-3-q4": {"grade":10,"level":"medium","basis":"Use equal diagonals, a+b=17 and Pythagoras to solve rectangle length and breadth.","review":"2025-textbook-ex43-source-audit"},
+    "c10-4-ex4-3-q5": {"grade":10,"level":"medium","basis":"Translate side-length relationships into a quadratic equation, factor it and reject the negative root.","review":"2025-textbook-ex43-source-audit"},
+    "c10-4-ex4-3-q6": {"grade":10,"level":"medium","basis":"Solve two right triangles before and after shifting the ladder foot toward the wall.","review":"2025-textbook-ex43-source-audit"},
+    "c10-4-ex4-3-q7": {"grade":10,"level":"difficult","basis":"Prove the altitude identity by applying Pythagoras to triangles PQS and PRS, then substitute QS=3 SR.","review":"2025-textbook-ex43-source-audit"},
+    "c10-4-ex4-3-q8": {"grade":10,"level":"difficult","basis":"Prove the trisected-side identity by expressing three squared hypotenuses in terms of AB² and a common segment.","review":"2025-textbook-ex43-source-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
