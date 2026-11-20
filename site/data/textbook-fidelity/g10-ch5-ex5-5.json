@@ -1,0 +1,503 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 5,
+  "exercise": "5.5",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "methodology": "Visually inspected rendered 2025 English PDF pages 241–242 (printed pp. 235–236) and Answer Appendix PDF p. 347 (printed p. 341), plus 2025 Tamil PDF pages 249–250 (printed pp. 243–244) and Answer Appendix PDF p. 361 (printed p. 355).",
+  "status": "page-visual-checked",
+  "tamilEditorial": "pending",
+  "items": [
+    {
+      "id": "c10-5-ex5-5-q1",
+      "exercise": "5.5",
+      "questionNumber": 1,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "1. The area of triangle formed by the points (−5,0) , (0,−5) and (5,0) is\n(A) 0 sq.units   (B) 25 sq.units   (C) 5 sq.units   (D) none of these",
+        "ta": "1. (−5,0) , (0,−5) மற்றும் (5,0) ஆகிய புள்ளிகளால் அமைக்கப்படும் முக்கோணத்தின் பரப்பு\n(அ) 0 ச.அலகுகள்   (ஆ) 25 ச.அலகுகள்   (இ) 5 ச.அலகுகள்   (ஈ) எதுவுமில்லை"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 235,
+          "pdf": 241
+        },
+        "ta": {
+          "printed": 243,
+          "pdf": 249
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q2",
+      "exercise": "5.5",
+      "questionNumber": 2,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "2. A man walks near a wall, such that the distance between him and the wall is 10 units. Consider the wall to be the Y axis. The path travelled by the man is\n(A) x = 10   (B) y = 10   (C) x = 0   (D) y = 0",
+        "ta": "2. ஒரு சுவரின் அருகே நடந்து சென்று கொண்டிருக்கும் ஒரு நபருக்கும் சுவருக்கும் இடையே உள்ள தூரம் 10 அலகுகள். சுவரை Y-அச்சாகக் கருதினால், அந்த நபர் செல்லும் பாதை என்பது\n(அ) x = 10   (ஆ) y = 10   (இ) x = 0   (ஈ) y = 0"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 235,
+          "pdf": 241
+        },
+        "ta": {
+          "printed": 243,
+          "pdf": 249
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(A)",
+        "ta": "(அ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q3",
+      "exercise": "5.5",
+      "questionNumber": 3,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "3. The straight line given by the equation x = 11 is\n(A) parallel to X axis   (B) parallel to Y axis\n(C) passing through the origin   (D) passing through the point (0,11)",
+        "ta": "3. x = 11 எனக் கொடுக்கப்பட்ட நேர்க்கோட்டின் சமன்பாடானது\n(அ) X -அச்சுக்கு இணை   (ஆ) Y -அச்சுக்கு இணை\n(இ) ஆதிப் புள்ளி வழிச் செல்லும்   (ஈ) (0,11) என்ற புள்ளி வழிச் செல்லும்"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 235,
+          "pdf": 241
+        },
+        "ta": {
+          "printed": 243,
+          "pdf": 249
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q4",
+      "exercise": "5.5",
+      "questionNumber": 4,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "4. If (5,7), (3,p) and (6,6) are collinear, then the value of p is\n(A) 3   (B) 6   (C) 9   (D) 12",
+        "ta": "4. (5,7), (3,p) மற்றும் (6,6) என்பன ஒரு கோடமைந்தவை எனில், p-யின் மதிப்பு\n(அ) 3   (ஆ) 6   (இ) 9   (ஈ) 12"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 243,
+          "pdf": 249
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(C)",
+        "ta": "(இ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q5",
+      "exercise": "5.5",
+      "questionNumber": 5,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "5. The point of intersection of 3x − y = 4 and x + y = 8 is\n(A) (5,3)   (B) (2,4)   (C) (3,5)   (D) (4,4)",
+        "ta": "5. 3x − y = 4 மற்றும் x + y = 8 ஆகிய நேர்க்கோடுகள் சந்திக்கும் புள்ளி\n(அ) (5,3)   (ஆ) (2,4)   (இ) (3,5)   (ஈ) (4,4)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 243,
+          "pdf": 249
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(C)",
+        "ta": "(இ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q6",
+      "exercise": "5.5",
+      "questionNumber": 6,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "6. The slope of the line joining (12,3) , (4,a) is 1/8. The value of ‘a’ is\n(A) 1   (B) 4   (C) −5   (D) 2",
+        "ta": "6. (12,3) , (4,a) என்ற புள்ளிகளை இணைக்கும் கோட்டின் சாய்வு 1/8 எனில், ‘a’-யின் மதிப்பு.\n(அ) 1   (ஆ) 4   (இ) −5   (ஈ) 2"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 243,
+          "pdf": 249
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(D)",
+        "ta": "(ஈ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q7",
+      "exercise": "5.5",
+      "questionNumber": 7,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "7. The slope of the line which is perpendicular to a line joining the points (0,0) and (−8,8) is\n(A) −1   (B) 1   (C) 1/3   (D) −8",
+        "ta": "7. (0,0) மற்றும் (−8,8) என்ற புள்ளிகளை இணைக்கும் கோட்டிற்குச் செங்குத்தான கோட்டின் சாய்வு\n(அ) −1   (ஆ) 1   (இ) 1/3   (ஈ) −8"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 243,
+          "pdf": 249
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q8",
+      "exercise": "5.5",
+      "questionNumber": 8,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "8. If slope of the line PQ is 1/√3 then slope of the perpendicular bisector of PQ is\n(A) √3   (B) −√3   (C) 1/√3   (D) 0",
+        "ta": "8. கோட்டுத்துண்டு PQ-யின் சாய்வு 1/√3 எனில், PQ-க்கு செங்குத்தான இரு சம வெட்டியின் சாய்வு\n(அ) √3   (ஆ) −√3   (இ) 1/√3   (ஈ) 0"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 243,
+          "pdf": 249
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q9",
+      "exercise": "5.5",
+      "questionNumber": 9,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "9. If A is a point on the Y axis whose ordinate is 8 and B is a point on the X axis whose abscissae is 5 then the equation of the line AB is\n(A) 8x + 5y = 40   (B) 8x − 5y = 40   (C) x = 8   (D) y = 5",
+        "ta": "9. Y அச்சில் அமையும் புள்ளி A -யின் செங்குத்துத் தொலைவு 8 மற்றும் X அச்சில் அமையும் புள்ளி B-யின் கிடைமட்டத் தொலைவு 5 எனில், AB என்ற நேர்க்கோட்டின் சமன்பாடு\n(அ) 8x + 5y = 40   (ஆ) 8x − 5y = 40   (இ) x = 8   (ஈ) y = 5"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 244,
+          "pdf": 250
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(A)",
+        "ta": "(அ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q10",
+      "exercise": "5.5",
+      "questionNumber": 10,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "10. The equation of a line passing through the origin and perpendicular to the line 7x − 3y + 4 = 0 is\n(A) 7x − 3y + 4 = 0   (B) 3x − 7y + 4 = 0   (C) 3x + 7y = 0   (D) 7x − 3y = 0",
+        "ta": "10. 7x − 3y + 4 = 0 என்ற நேர்க்கோட்டிற்குச் செங்குத்தாகவும், ஆதிப்புள்ளி வழிச் செல்லும் நேர்க்கோட்டின் சமன்பாடு\n(அ) 7x − 3y + 4 = 0   (ஆ) 3x − 7y + 4 = 0   (இ) 3x + 7y = 0   (ஈ) 7x − 3y = 0"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 244,
+          "pdf": 250
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(C)",
+        "ta": "(இ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q11",
+      "exercise": "5.5",
+      "questionNumber": 11,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "11. Consider four straight lines\n(i) l₁; 3y = 4x + 5   (ii) l₂; 4y = 3x − 1   (iii) l₃; 4y + 3x = 7   (iv) l₄; 4x + 3y = 2\nWhich of the following statement is true ?\n(A) l₁ and l₂ are perpendicular   (B) l₁ and l₄ are parallel\n(C) l₂ and l₄ are perpendicular   (D) l₂ and l₃ are parallel",
+        "ta": "11. (i) l₁; 3y = 4x + 5   (ii) l₂; 4y = 3x − 1   (iii) l₃; 4y + 3x = 7   (iv) l₄; 4x + 3y = 2\nஎனக் கொடுக்கப்பட்ட நான்கு நேர்க்கோடுகளுக்குக் கீழ்க்காணும் கூற்றுகளில் எது உண்மை\n(அ) l₁ மற்றும் l₂ செங்குத்தானவை   (ஆ) l₁ மற்றும் l₄ இணையானவை\n(இ) l₂ மற்றும் l₄ செங்குத்தானவை   (ஈ) l₂ மற்றும் l₃ இணையானவை"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 244,
+          "pdf": 250
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(C)",
+        "ta": "(இ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q12",
+      "exercise": "5.5",
+      "questionNumber": 12,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "12. A straight line has equation 8y = 4x + 21. Which of the following is true\n(A) The slope is 0.5 and the y intercept is 2.6\n(B) The slope is 5 and the y intercept is 1.6\n(C) The slope is 0.5 and the y intercept is 1.6\n(D) The slope is 5 and the y intercept is 2.6",
+        "ta": "12. 8y = 4x + 21 என்ற நேர்க்கோட்டின் சமன்பாட்டிற்குக் கீழ்க்காணபனவற்றில் எது உண்மை\n(அ) சாய்வு 0.5 மற்றும் y வெட்டுத்துண்டு 2.6\n(ஆ) சாய்வு 5 மற்றும் y வெட்டுத்துண்டு 1.6\n(இ) சாய்வு 0.5 மற்றும் y வெட்டுத்துண்டு 1.6\n(ஈ) சாய்வு 5 மற்றும் y வெட்டுத்துண்டு 2.6"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 244,
+          "pdf": 250
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(A)",
+        "ta": "(அ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q13",
+      "exercise": "5.5",
+      "questionNumber": 13,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "13. When proving that a quadrilateral is a trapezium, it is necessary to show\n(A) Two sides are parallel.   (B) Two parallel and two non-parallel sides.\n(C) Opposite sides are parallel.   (D) All sides are of equal length.",
+        "ta": "13. ஒரு நாற்கரமானது ஒரு சரிவகமாக அமையத் தேவையான நிபந்தனை\n(அ) இரு பக்கங்கள் இணை.   (ஆ) இரு பக்கங்கள் இணை மற்றும் இரு பக்கங்கள் இணையற்றவை.\n(இ) எதிரெதிர் பக்கங்கள் இணை.   (ஈ) அனைத்துப் பக்கங்களும் சமம்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 244,
+          "pdf": 250
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q14",
+      "exercise": "5.5",
+      "questionNumber": 14,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "14. When proving that a quadrilateral is a parallelogram by using slopes you must find\n(A) The slopes of two sides   (B) The slopes of two pair of opposite sides\n(C) The lengths of all sides   (D) Both the lengths and slopes of two sides",
+        "ta": "14. சாய்வைப் பயன்படுத்தி நாற்கரமானது ஓர் இணைகரமாக உள்ளது எனக் கூற நாம் காண வேண்டியவை\n(அ) இரு பக்கங்களின் சாய்வுகள்   (ஆ) இரு சோடி எதிர் பக்கங்களின் சாய்வுகள்\n(இ) அனைத்துப் பக்கங்களின் நீளங்கள்   (ஈ) இரு பக்கங்களின் சாய்வுகள் மற்றும் நீளங்கள்"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 244,
+          "pdf": 250
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q15",
+      "exercise": "5.5",
+      "questionNumber": 15,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "15. (2, 1) is the point of intersection of two lines.\n(A) x − y − 3 = 0; 3x − y − 7 = 0   (B) x + y = 3; 3x + y = 7\n(C) 3x + y = 3; x + y = 7   (D) x + 3y − 3 = 0; x − y − 7 = 0",
+        "ta": "15. (2, 1) ஐ சந்திப்புப் புள்ளியாகக் கொண்ட இரு நேர்க்கோடுகள்\n(அ) x − y − 3 = 0; 3x − y − 7 = 0   (ஆ) x + y = 3; 3x + y = 7\n(இ) 3x + y = 3; x + y = 7   (ஈ) x + 3y − 3 = 0; x − y − 7 = 0"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 236,
+          "pdf": 242
+        },
+        "ta": {
+          "printed": 244,
+          "pdf": 250
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": null
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    }
+  ]
+}
