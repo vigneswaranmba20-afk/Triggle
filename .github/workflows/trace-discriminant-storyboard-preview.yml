@@ -1,0 +1,74 @@
+name: TRACE discriminant — no-API storyboard QA
+
+# Visual engineering preview only. Synthetic sound is intentionally NOT a lesson.
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'site/tools/trace_video_factory.py'
+      - 'site/tools/trace_discriminant_artwork.py'
+      - 'site/tools/test_trace_discriminant_video.py'
+      - 'site/tools/trace_video_recording_sheet.py'
+      - 'site/video-factory/lessons/g10-ch3-discriminant.json'
+      - 'docs/trace/DISCRIMINANT_FOLA_RECORDING_SHEET.md'
+      - '.github/workflows/trace-discriminant-storyboard-preview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-nine-scene-storyboard:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify source mathematics and nine exact narration beats, offline
+        run: |
+          unset GEMINI_API_KEY GOOGLE_API_KEY OPENAI_API_KEY
+          python3 site/tools/test_trace_discriminant_video.py
+          python3 site/tools/trace_video_factory.py self-test --lesson g10-ch3-discriminant
+          python3 site/tools/trace_video_recording_sheet.py --lesson g10-ch3-discriminant --output docs/trace/DISCRIMINANT_FOLA_RECORDING_SHEET.md --check
+      - name: Install local mathematics renderer (no model API)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -qq -y ffmpeg fonts-dejavu-core
+          python3 -m pip install -r site/video-factory/requirements.txt
+      - name: Render and verify 360px storyboard demo
+        run: |
+          unset GEMINI_API_KEY GOOGLE_API_KEY OPENAI_API_KEY
+          python3 site/tools/test_trace_discriminant_video.py
+          python3 site/tools/trace_video_factory.py render \
+            --lesson g10-ch3-discriminant --mode demo \
+            --width 360 --height 640 --fps 8 \
+            --cache build/trace-video/disc-tech-cache \
+            --output build/trace-video/disc-tech-qa
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('build/trace-video/disc-tech-qa')
+          meta=json.loads((p/'result.json').read_text())
+          assert meta['lessonId']=='g10-ch3-discriminant'
+          assert meta['mode']=='demo' and meta['reviewRequired']
+          assert meta['publishable'] is False
+          assert meta['width']==360 and meta['height']==640
+          assert len(meta['beats'])==9
+          assert (p/meta['videoFile']).stat().st_size>50000
+          print('PASS: nine visually verified demo scenes, never publishable')
+          PY
+      - name: Store labelled technical storyboard artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: discriminant-storyboard-technical-demo-${{ github.run_id }}
+          path: |
+            build/trace-video/disc-tech-qa/*.mp4
+            build/trace-video/disc-tech-qa/result.json
+          if-no-files-found: error
+          retention-days: 7
+      - name: State release limitation clearly
+        run: |
+          echo 'Nine-scene discriminant visual preview passed; placeholder audio only.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'NOT final narration or approval; zero Gemini/OpenAI API calls; no publish.' >> "$GITHUB_STEP_SUMMARY"
