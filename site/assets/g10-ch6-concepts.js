@@ -267,7 +267,7 @@ function mount(stage,host,lang){
         [ta?'கர்ணம்':'Hypotenuse',fmt(r.hyp,2)],
         ['tan = Opp/Adj',fmt(t,3)]
       ]);
-      readout.innerHTML=tex(`\\begin{aligned}&\\sin ${focusDeg}^\\circ=\\dfrac{${fmt(opp,2)}}{${fmt(r.hyp,2)}}=${fmt(s,3)},\\;\\operatorname{cosec}=${fmt(1/s,3)}\\\\&\\cos ${focusDeg}^\\circ=\\dfrac{${fmt(adj,2)}}{${fmt(r.hyp,2)}}=${fmt(c,3)},\\;\\sec=${fmt(1/c,3)}\\end{aligned}`,true,`sin ${focusDeg}°=${fmt(s,3)}, cos=${fmt(c,3)}`);
+      readout.innerHTML=tex(`\\begin{aligned}&\\sin ${focusDeg}^\\circ=\\dfrac{${fmt(opp,2)}}{${fmt(r.hyp,2)}}=${fmt(s,3)},\\;\\operatorname{cosec} ${focusDeg}^\\circ=${fmt(1/s,3)}\\\\&\\cos ${focusDeg}^\\circ=\\dfrac{${fmt(adj,2)}}{${fmt(r.hyp,2)}}=${fmt(c,3)},\\;\\sec ${focusDeg}^\\circ=${fmt(1/c,3)}\\end{aligned}`,true,`sin ${focusDeg}°=${fmt(s,3)}, cos=${fmt(c,3)}`);
     };
     b1.onclick=()=>{flipCorner=false;draw();};
     b2.onclick=()=>{flipCorner=true;draw();};
@@ -305,7 +305,7 @@ function mount(stage,host,lang){
       </svg>`;
       readout.innerHTML=mode==='quotient'
         ?tex(`\\begin{aligned}&\\tan ${theta}^\\circ=\\dfrac{\\sin ${theta}^\\circ}{\\cos ${theta}^\\circ}=\\dfrac{${fmt(s,3)}}{${fmt(c,3)}}=${fmt(t,3)}\\\\&\\cot ${theta}^\\circ=\\dfrac{\\cos ${theta}^\\circ}{\\sin ${theta}^\\circ}=${fmt(1/t,3)},\\;\\tan\\cdot\\cot=1\\end{aligned}`,true)
-        :tex(`\\begin{aligned}&\\sec ${theta}^\\circ=\\dfrac{1}{\\cos ${theta}^\\circ}=${fmt(1/c,3)},\\;\\sec\\cdot\\cos=1\\\\&\\operatorname{cosec} ${theta}^\\circ=\\dfrac{1}{\\sin ${theta}^\\circ}=${fmt(1/s,3)},\\;\\operatorname{cosec}\\cdot\\sin=1\\end{aligned}`,true);
+        :tex(`\\begin{aligned}&\\sec ${theta}^\\circ=\\dfrac{1}{\\cos ${theta}^\\circ}=${fmt(1/c,3)},\\;\\sec ${theta}^\\circ\\cdot\\cos ${theta}^\\circ=1\\\\&\\operatorname{cosec} ${theta}^\\circ=\\dfrac{1}{\\sin ${theta}^\\circ}=${fmt(1/s,3)},\\;\\operatorname{cosec} ${theta}^\\circ\\cdot\\sin ${theta}^\\circ=1\\end{aligned}`,true);
     };
     makeSlider(controls,ta?'கோணம் θ':'Angle θ',15,75,1,theta,'°',v=>{theta=v;draw();});
     draw();
@@ -472,7 +472,7 @@ function mount(stage,host,lang){
       let lhs=0,rhs=0,eq='';
       if(strat==='sin-cos'){
         lhs=idn.cot+idn.t;rhs=idn.sec*idn.csc;
-        eq=`\\begin{aligned}&\\text{cot}+\\tan=\\dfrac{\\cos^2\\theta+\\sin^2\\theta}{\\sin\\theta\\cos\\theta}\\\\&=\\sec\\theta\\operatorname{cosec}\\theta\\end{aligned}`;
+        eq=`\\begin{aligned}&\\cot\\theta+\\tan\\theta=\\dfrac{\\cos^2\\theta+\\sin^2\\theta}{\\sin\\theta\\cos\\theta}\\\\&=\\sec\\theta\\operatorname{cosec}\\theta\\end{aligned}`;
       }else if(strat==='factor'){
         lhs=Math.pow(idn.t,4)+idn.t*idn.t;rhs=Math.pow(idn.sec,4)-idn.sec*idn.sec;
         eq=`\\begin{aligned}&\\tan^2\\theta(\\tan^2\\theta+1)=(\\sec^2\\theta-1)\\sec^2\\theta\\\\&=\\sec^4\\theta-\\sec^2\\theta\\end{aligned}`;
