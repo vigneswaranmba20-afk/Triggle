@@ -1,0 +1,44 @@
+name: TRACE G.P. Fola v2 site status regeneration (one-off branch)
+on:
+  push:
+    branches: [feature/trace-gp-fola-v2-video-release-20261120]
+    paths:
+      - site/data/g10-ch2-concepts.js
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gp-fola-v2-status-refresh
+  cancel-in-progress: false
+
+jobs:
+  status:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Rebuild public status projection from verified student sources
+        run: |
+          npm ci
+          node site/tools/build_project_status.cjs
+          node site/tools/test_trace_gp_fola_v2_release.cjs
+      - name: Commit regenerated status to feature branch only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add site/data/project-status.json
+          if git diff --cached --quiet; then
+            echo 'Status already current'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Regenerate project status for reviewed G.P. Fola v2 video'
+          git push origin HEAD:feature/trace-gp-fola-v2-video-release-20261120
