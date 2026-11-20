@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch4-bpt-thales",
+  "class": 10,
+  "chapter": "4",
+  "language": "en",
+  "title": "Why parallel lines divide a triangle proportionally",
+  "subtitle": "Basic Proportionality Theorem · Grade 10",
+  "voice": {
+    "model": "gemini-flash-tts-in-studio-if-free",
+    "name": "Fola",
+    "delivery": "Warm, clear, unhurried mathematics teacher. Read mathematical letters separately, allow time to see each segment, no music or dramatic expressions. For one-take recording, deliberately leave at least two seconds of silence between each scene."
+  },
+  "beats": [
+    {
+      "id": "parallel-line-mystery",
+      "scene": "bpt-hook",
+      "narration": "Can one straight line divide two different sides of a triangle in exactly the same proportion? Watch this line move.",
+      "holdAfter": 1.3
+    },
+    {
+      "id": "meet-the-triangle",
+      "scene": "bpt-points",
+      "narration": "This is triangle A B C. D lies on side A B, and E lies on side A C. The short line D E runs parallel to the base B C.",
+      "holdAfter": 1.4
+    },
+    {
+      "id": "slide-the-line",
+      "scene": "bpt-slide",
+      "narration": "Slide D E upward while keeping it parallel to B C. Both cut points move, but their positions stay linked.",
+      "holdAfter": 1.5
+    },
+    {
+      "id": "matching-ratios",
+      "scene": "bpt-rule",
+      "narration": "The top piece A D divided by the bottom piece D B equals A E divided by E C. Each side compares top with bottom.",
+      "holdAfter": 1.7
+    },
+    {
+      "id": "matching-angles",
+      "scene": "bpt-angles",
+      "narration": "Parallel lines make corresponding angles equal. So the little triangle A D E has the same angles as the whole triangle A B C.",
+      "holdAfter": 1.5
+    },
+    {
+      "id": "discover-the-proof",
+      "scene": "bpt-proof",
+      "narration": "Similar triangles give A D over A B equals A E over A C. Subtract the top pieces from the whole sides to obtain the same top-to-bottom ratio.",
+      "holdAfter": 1.7
+    },
+    {
+      "id": "three-five-sixteen",
+      "scene": "bpt-example",
+      "narration": "If A D is three, D B is five, and the full side A C is sixteen, then A B is eight. A E is three eighths of sixteen, which is six.",
+      "holdAfter": 1.8
+    },
+    {
+      "id": "practice-pause",
+      "scene": "bpt-practice",
+      "narration": "Your turn. A D is four, D B is six, and A C is twenty. How long is A E? Pause and try it before the answer appears.",
+      "holdAfter": 5
+    },
+    {
+      "id": "verify-both-sides",
+      "scene": "bpt-answer",
+      "narration": "A B equals ten. So A E is four tenths of twenty, which is eight. E C is twelve. Four divided by six equals eight divided by twelve. The ratios match.",
+      "holdAfter": 2.2
+    }
+  ],
+  "visual": {
+    "template": "triangle-parallel-proportion-v1",
+    "unit": "THALES · PARALLEL LINES",
+    "triangle": {
+      "A": [
+        360,
+        432
+      ],
+      "B": [
+        140,
+        850
+      ],
+      "C": [
+        580,
+        850
+      ]
+    },
+    "example": {
+      "AD": 3,
+      "DB": 5,
+      "AC": 16
+    },
+    "practice": {
+      "AD": 4,
+      "DB": 6,
+      "AC": 20
+    }
+  }
+}
