@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "988e3cf0a5179ab94671b2a80ebbcf9980517ed5",
-  "updatedAt": "2026-11-19T19:00:02Z",
+  "sourceCommit": "78ecdaf48b9f66d165c6e7fda8b12126b9e12e63",
+  "updatedAt": "2026-11-20T01:33:57+00:00",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -27,6 +27,7 @@
     "site/data/g10-ch2-concepts.js": "2fcef9ea328f4c51751cec6be90f480bbb743e699a558635f652ec715ded9970",
     "site/data/g10-ch2-teaching-bridges.js": "4a968e6a6b1eeb90908670f83b3407cc9217116425d55e7071325cf4992d6b7e",
     "site/data/g10-ch3-concepts.js": "d97550f11b2f0fbd83e7e231f549206d6e4ef255481a58a00d55659c34a92af1",
+    "site/data/g10-ch4-concepts.js": "bf4acd546e0a0562bbb523910da9e3a303a06745db699c0fe93b12472314a78d",
     "site/data/g9-clear-math.js": "e3e81e52c17d560a24e642ff69cd7ba35037336891b9b89bedcba3f889ff8f59",
     "site/data/g9-probability-chapter.js": "ac0d6e411f114e481386f714b0d83fca323977f199298feb93c6dd3db62de602",
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
@@ -120,7 +121,7 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9.js": "ed93ba751d971497a7143086e80e307c035724d9ec062d26343a088416369d85",
-    "site/index.html": "7e0bc2d50ca46079c4b07d9575cb2d060233578290dedb5988551afc6ece9c74",
+    "site/index.html": "38a772e3a2b989d184acefa2854f438364a74c0330f4ff63143020371eb7b1cf",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {

@@ -461,6 +461,72 @@
       if(notify)onConcept?.(i);
       const stage=stages[i],choices=Array.isArray(stage.choices)?stage.choices:[];
       const isCh3=String(stage.id||'').startsWith('g10-ch3-');
+      const isCh4=String(stage.id||'').startsWith('g10-ch4-');
+      if(isCh4){
+        const labels=ta?{
+          badge:'தமிழ் வரைவு · 2025 பாடநூல் கலைச்சொற்களுடன் உருவாக்கப்பட்டது (ஆசிரியர் மீளாய்வு நிலுவையில்)',
+          s1:'முதல் பார்வை',s2:'கண்டுபிடியுங்கள்',s3:'புரிந்துகொள்ளுங்கள்',s4:'ஏன் இது உண்மை?',s5:'நீங்களே முயற்சிக்கவும்',s6:'பாடநூலுடன் இணைப்பு',
+          ref:'பாடநூல் பகுதி ',tryBtn:(q)=>'பாடநூல் '+pick(q.label)+' →',
+          upcoming:(ex)=>'தொடர்புடைய பாடநூல் பயிற்சி: பயிற்சி '+ex+' (விரைவில் இணைக்கப்படும்)'
+        }:{
+          s1:'First glance',s2:'Discover',s3:'Understand',s4:'Why it works',s5:'Try it yourself',s6:'Connect',
+          ref:'Textbook section ',tryBtn:(q)=>'Solve '+pick(q.label)+' →',
+          upcoming:(ex)=>'Related textbook exercises: Exercise '+ex+' (coming soon in Exercises)'
+        };
+        const ruleHtml=stage.math?.latex?window.TriggleNotation.renderLatex(stage.math.latex,{displayMode:true,fallback:stage.math.fallback||pick(stage.rule)}):typeset(pick(stage.rule));
+        const symbolsHtml=(stage.understand?.symbols||[]).map(item=>{
+          const sym=item.symbol?.latex?window.TriggleNotation.renderLatex(item.symbol.latex,{displayMode:false,fallback:item.symbol.fallback}):e(item.symbol?.fallback||'');
+          return '<li class="g10ch4-symbol-item"><span class="g10ch4-symbol-badge">'+sym+'</span><p class="g10ch4-symbol-meaning">'+typeset(item[lang]||item.en)+'</p></li>';
+        }).join('');
+        const proofHtml=(stage.proof?.steps||[]).map(st=>{
+          const eq=st.math?.latex?displayMath(st.math):'';
+          return '<li class="g10ch4-proof-step"><h6 class="g10ch4-proof-title">'+e(pick(st.title))+'</h6>'+
+            (eq?'<div class="g10ch4-proof-math">'+eq+'</div>':'')+
+            '<p class="g10ch4-proof-reason">'+typeset(pick(st.reason))+'</p></li>';
+        }).join('');
+        panel.innerHTML='<div class="sp2-concept-heading" tabindex="-1"><h4>'+e((i+1)+'. '+pick(stage.title))+'</h4></div>'+
+          '<div class="g10ch4-studio">'+
+          (ta?'<p class="g10ch4-tamil-badge" role="note">'+e(labels.badge)+'</p>':'')+
+          '<section class="g10ch4-card" aria-label="'+e(labels.s1)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">1</span><h5 class="g10ch4-card-kicker">'+e(labels.s1)+'</h5></div>'+
+          '<p class="g10ch4-glance-text">'+typeset(pick(stage.firstGlance))+'</p>'+
+          '<div class="g10ch4-glance-visual" data-g10ch4-glance></div>'+
+          '<div class="g10ch4-formula" role="group" aria-label="'+e(ta?'முக்கிய விதி':'Key rule')+'">'+ruleHtml+'</div></section>'+
+          '<section class="g10ch4-card" aria-label="'+e(labels.s2)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">2</span><h5 class="g10ch4-card-kicker">'+e(labels.s2)+'</h5></div>'+
+          '<div data-g10ch4-visual></div></section>'+
+          '<section class="g10ch4-card" aria-label="'+e(labels.s3)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">3</span><h5 class="g10ch4-card-kicker">'+e(labels.s3)+'</h5></div>'+
+          '<p class="g10ch4-intro">'+typeset(pick(stage.understand?.intro))+'</p>'+
+          '<ul class="g10ch4-symbol-list">'+symbolsHtml+'</ul>'+
+          (stage.understand?.watchOut?'<p class="g10ch4-watchout">'+typeset(pick(stage.understand.watchOut))+'</p>':'')+
+          '<small class="sp2-stage-reference">'+e(labels.ref)+e(stage.section||'')+'</small></section>'+
+          '<section class="g10ch4-card" aria-label="'+e(labels.s4)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">4</span><h5 class="g10ch4-card-kicker">'+e(labels.s4)+'</h5></div>'+
+          '<ol class="g10ch4-proof-list">'+proofHtml+'</ol></section>'+
+          '<section class="g10ch4-card" aria-label="'+e(labels.s5)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">5</span><h5 class="g10ch4-card-kicker">'+e(labels.s5)+'</h5></div>'+
+          '<div class="sp2-recall"><p>'+typeset(pick(stage.question))+'</p>'+
+          (stage.questionMath?'<div>'+displayMath(stage.questionMath)+'</div>':'')+
+          '<div class="sp2-answers" data-answers role="group" aria-label="'+e(pick(stage.question))+'"></div>'+
+          '<div class="sp2-recall-actions"><button type="button" data-hint>'+e(ta?'குறிப்பு':'Hint')+'</button>'+
+          '<button type="button" data-why aria-expanded="false"'+(stage.explainAfterAttempt?' disabled':'')+'>'+e(ta?'விளக்கம்':'Why?')+'</button></div>'+
+          '<p data-feedback role="status" aria-live="polite"></p><div class="sp2-why" data-why-response hidden></div></div></section>'+
+          '<section class="g10ch4-card" aria-label="'+e(labels.s6)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">6</span><h5 class="g10ch4-card-kicker">'+e(labels.s6)+'</h5></div>'+
+          '<p class="g10ch4-connect-note">'+typeset(pick(stage.connect))+'</p><div class="g10ch4-exercise-row" data-g10ch4-connect></div></section>'+
+          '</div>';
+        window.TriggleG10Ch4Labs?.renderGlance(stage,panel.querySelector('[data-g10ch4-glance]'),lang);
+        window.TriggleG10Ch4Labs?.mount(stage,panel.querySelector('[data-g10ch4-visual]'),lang);
+        const connectRow=panel.querySelector('[data-g10ch4-connect]');
+        const linked=[stage.practiceId,stage.secondaryPracticeId,stage.tertiaryPracticeId]
+          .map(id=>id&&chapterQuestions.find(q=>q.id===id)).filter(Boolean);
+        if(linked.length&&typeof onQuestion==='function'){
+          linked.forEach(qItem=>{
+            const button=document.createElement('button');button.type='button';button.className='g10ch2-practice-link';
+            button.textContent=labels.tryBtn(qItem);
+            button.onclick=()=>onQuestion(qItem);connectRow.append(button);
+          });
+        }else if(stage.relatedExercise){
+          const p=document.createElement('p');p.className='g10ch4-exercise-upcoming';
+          p.textContent=labels.upcoming(stage.relatedExercise);
+          connectRow.append(p);
+        }
+      }else{
       const deepItems=stage.deepDive?(stage.deepDive.points?.[lang]||stage.deepDive.points?.en||[]):[];
       const tamilDraftNote=isCh3&&ta
         ?'<p class="g10ch3-tamil-badge" role="note">தமிழ் வரைவு · 2025 பாடநூல் சொற்களுடன் உருவாக்கப்பட்டது (ஆசிரியர் மீளாய்வு நிலுவையில்)</p>':'';
@@ -509,6 +575,7 @@
         const ref=document.createElement('p');ref.className='g10ch3-exercise-note';
         ref.textContent=(ta?'தொடர்புடைய பாடநூல் பயிற்சி: பயிற்சி ':'Related textbook exercises: Exercise ')+stage.relatedExercise+(ta?' (விரைவில் இணைக்கப்படும்)':' (exercise items coming soon)');
         panel.append(ref);
+      }
       }
       const holder=panel.querySelector('[data-answers]');if(holder){
         const whyButton=panel.querySelector('[data-why]');
@@ -561,10 +628,10 @@
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
     const sets=categorized(questions); // Examples stay archived in source, outside student navigation.
     const matrixConcepts=chapter.id==='g12-ch1'&&lang==='en'&&window.TriggleMatrixConcepts;
-    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
+    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):chapter.id==='g10-ch4'?(window.TRIGGLE_G10_CH4_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const kinds=activityEntries.length?[...baseKinds,'activities']:baseKinds;
-    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3')?0:stages.length,activities:activityEntries.length};
+    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4')?0:stages.length,activities:activityEntries.length};
     const symbols={concepts:'◇',examples:'∑',exercises:'✎',quizzes:'✓',activities:'💡'};
     const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0,activities:counts.activities>0};
     const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes,activities:t.activities})[kind];
@@ -662,8 +729,8 @@
         // No chapter title, marketing paragraph, progress count or second navigation row.
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
-        }else if(chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'){
-          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,sets.exercises,chapter.id==='g10-ch2'||chapter.id==='g10-ch3');
+        }else if(chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'){
+          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,sets.exercises,chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4');
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }
