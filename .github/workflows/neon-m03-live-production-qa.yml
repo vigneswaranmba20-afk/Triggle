@@ -1,0 +1,44 @@
+name: NEON Mission 03 live production P0 evidence
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/neon-m03-live-production-qa.yml'
+      - 'site/tools/test_neon_m03_live_browser.cjs'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/neon-m03-live-production-qa.yml'
+      - 'site/tools/test_neon_m03_live_browser.cjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live-p0-browser:
+    name: Direct GitHub Pages P0 smoke (320/390/412 EN/TA)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Install headless Chromium
+        run: npx playwright install --with-deps --only-shell chromium
+      - name: Independently visit published GitHub Pages, never localhost
+        env:
+          CHROMIUM_PATH: ''
+          TRIGGLE_LIVE_BASE: https://vigneswaranmba20-afk.github.io/Triggle/site/index.html
+        run: node site/tools/test_neon_m03_live_browser.cjs
+      - name: Upload live screenshot evidence and manifest, including on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: neon-m03-live-p0-evidence
+          path: screenshots/neon-m03-live-p0/
+          if-no-files-found: warn
+          retention-days: 14
