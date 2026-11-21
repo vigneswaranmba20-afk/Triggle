@@ -36,7 +36,12 @@ for(let n=1;n<=5;n++){
 assert.equal(record.get('g9-ch9-ex9.1-q9').answer,'[[3|4]]');
 assert.equal(record.get('g9-ch9-ex9.2-q3').answer,'x = [[15|8]]');
 assert.equal(record.get('g9-ch9-example-9.4').answer,'[[9|100]] = 0.09');
-assert.equal(record.get('g9-ch9-ex9.2-q5').answer.includes('[[43|75]]'),true);
+const probQ5=record.get('g9-ch9-ex9.2-q5');
+assert.equal(probQ5.answer.includes('[[43|75]]'),true);
+assert.equal(probQ5.sourceFidelity.taPdfPage,325,'Tamil PDF anchor must match printed p.319');
+assert.deepEqual(Array.from(probQ5.sourceFidelity.taPdfPageRange),[324,325],'Retain both pages spanned by Q5');
+assert.deepEqual(Array.from(probQ5.sourceFidelity.taPrintedPageRange),[318,319]);
+assert.equal(probQ5.sourceFidelity.tamilEditorial,'pending','No fake Tamil editorial approval');
 for(const i of [9,10]){
  const d=record.get('g9-ch9-ex9.1-q'+i).diagram;
  assert.equal(d.kind,'unitcircle');assert.equal(d.probabilitySpinner,true);assert.deepEqual(Array.from(d.sectors),[1,2,3,4,5,6,7,8]);
