@@ -55,7 +55,8 @@ async function checkConcepts(browser, base) {
      assert.equal(await index.isVisible(), false);
      assert.equal(await page.locator('.hub-back-menu').isVisible(), false);
      assert.equal(await page.locator('[data-back-index]').isVisible(), true);
-     assert.equal(await page.locator('[data-top-next]').count(), 0);
+     assert.equal(await page.locator('[data-top-next]').count(), 1);
+     assert.equal(await page.locator('[data-top-next]').isVisible(), true);
      assert.equal(await page.locator('[data-adaptive-dock]').isVisible(), true);
      assert.match(await journey.locator('h4').innerText(), new RegExp('^9\\.' + (i + 1) + ' '));
 
@@ -133,6 +134,10 @@ async function checkConcepts(browser, base) {
    await index.locator('button').first().tap();
    assert.equal(new URL(page.url()).searchParams.get('concept'), '0');
    assert.equal(await journey.locator('[data-footer-prev]').isDisabled(), true);
+   await journey.locator('[data-top-next]').tap();
+   assert.equal(new URL(page.url()).searchParams.get('concept'), '1');
+   await page.goBack();
+   assert.match(await journey.locator('h4').innerText(), /^9\.1/);
    await journey.locator('[data-footer-next]').tap();
    assert.equal(new URL(page.url()).searchParams.get('concept'), '1');
    await page.goBack();
