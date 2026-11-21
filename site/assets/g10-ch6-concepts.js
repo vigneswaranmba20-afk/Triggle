@@ -267,7 +267,7 @@ function mount(stage,host,lang){
         [ta?'கர்ணம்':'Hypotenuse',fmt(r.hyp,2)],
         ['tan = Opp/Adj',fmt(t,3)]
       ]);
-      readout.innerHTML=tex(`\\begin{aligned}&\\sin ${focusDeg}^\\circ=\\dfrac{${fmt(opp,2)}}{${fmt(r.hyp,2)}}=${fmt(s,3)},\\;\\operatorname{cosec} ${focusDeg}^\\circ=${fmt(1/s,3)}\\\\&\\cos ${focusDeg}^\\circ=\\dfrac{${fmt(adj,2)}}{${fmt(r.hyp,2)}}=${fmt(c,3)},\\;\\sec ${focusDeg}^\\circ=${fmt(1/c,3)}\\end{aligned}`,true,`sin ${focusDeg}°=${fmt(s,3)}, cos=${fmt(c,3)}`);
+      readout.innerHTML=tex(`\\begin{aligned}&\\sin ${focusDeg}^\\circ=\\dfrac{${fmt(opp,2)}}{${fmt(r.hyp,2)}}=${fmt(s,3)}\\\\&\\operatorname{cosec} ${focusDeg}^\\circ=${fmt(1/s,3)}\\\\&\\cos ${focusDeg}^\\circ=\\dfrac{${fmt(adj,2)}}{${fmt(r.hyp,2)}}=${fmt(c,3)}\\\\&\\sec ${focusDeg}^\\circ=${fmt(1/c,3)}\\end{aligned}`,true,`sin ${focusDeg}°=${fmt(s,3)}, cos=${fmt(c,3)}`);
     };
     b1.onclick=()=>{flipCorner=false;draw();};
     b2.onclick=()=>{flipCorner=true;draw();};
@@ -304,8 +304,8 @@ function mount(stage,host,lang){
         <text x="${xO+18}" y="${yM-7}" font-size="11" font-weight="700" fill="#181B20">${theta}°</text>
       </svg>`;
       readout.innerHTML=mode==='quotient'
-        ?tex(`\\begin{aligned}&\\tan ${theta}^\\circ=\\dfrac{\\sin ${theta}^\\circ}{\\cos ${theta}^\\circ}=\\dfrac{${fmt(s,3)}}{${fmt(c,3)}}=${fmt(t,3)}\\\\&\\cot ${theta}^\\circ=\\dfrac{\\cos ${theta}^\\circ}{\\sin ${theta}^\\circ}=${fmt(1/t,3)},\\;\\tan\\cdot\\cot=1\\end{aligned}`,true)
-        :tex(`\\begin{aligned}&\\sec ${theta}^\\circ=\\dfrac{1}{\\cos ${theta}^\\circ}=${fmt(1/c,3)},\\;\\sec ${theta}^\\circ\\cdot\\cos ${theta}^\\circ=1\\\\&\\operatorname{cosec} ${theta}^\\circ=\\dfrac{1}{\\sin ${theta}^\\circ}=${fmt(1/s,3)},\\;\\operatorname{cosec} ${theta}^\\circ\\cdot\\sin ${theta}^\\circ=1\\end{aligned}`,true);
+        ?tex(`\\begin{aligned}&\\tan ${theta}^\\circ=\\dfrac{\\sin ${theta}^\\circ}{\\cos ${theta}^\\circ}=\\dfrac{${fmt(s,3)}}{${fmt(c,3)}}=${fmt(t,3)}\\\\&\\cot ${theta}^\\circ=\\dfrac{\\cos ${theta}^\\circ}{\\sin ${theta}^\\circ}=${fmt(1/t,3)},\\\\&\\tan ${theta}^\\circ\\cdot\\cot ${theta}^\\circ=1\\end{aligned}`,true)
+        :tex(`\\begin{aligned}&\\sec ${theta}^\\circ=\\dfrac{1}{\\cos ${theta}^\\circ}=${fmt(1/c,3)},\\\\&\\sec ${theta}^\\circ\\cdot\\cos ${theta}^\\circ=1\\\\&\\operatorname{cosec} ${theta}^\\circ=\\dfrac{1}{\\sin ${theta}^\\circ}=${fmt(1/s,3)},\\\\&\\operatorname{cosec} ${theta}^\\circ\\cdot\\sin ${theta}^\\circ=1\\end{aligned}`,true);
     };
     makeSlider(controls,ta?'கோணம் θ':'Angle θ',15,75,1,theta,'°',v=>{theta=v;draw();});
     draw();
