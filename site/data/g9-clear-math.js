@@ -39375,8 +39375,8 @@ const texts={
     "latex": "4 \\in A;\\quad 5 \\notin A",
     "fallback": "4 ∈ A ; 5 ∉ A"
   },
-  "Even natural numbers less than 10": [
-    "Even natural numbers less than ",
+  "Even natural numbers less than 10": [
+    "Even natural numbers less than ",
     {
       "latex": "10",
       "fallback": "10"
@@ -40123,12 +40123,17 @@ const texts={
     },
     "-இல் உள்ள அனைத்து உறுப்புகளையும் நீக்குங்கள்."
   ],
-  "A ∪ B={1,2,3,4}. U leaves exactly {5,6}. The same result comes from A′ ∩ B′.": [
+  "A ∪ B={1,2,3,4}. Removing A ∪ B from U leaves exactly {5,6}. The same result comes from A′ ∩ B′.": [
     {
       "latex": "A \\cup B = \\left\\{1, 2, 3, 4\\right\\}",
       "fallback": "A ∪ B={1,2,3,4}"
     },
-    ". ",
+    ". Removing ",
+    {
+      "latex": "A \\cup B",
+      "fallback": "A ∪ B"
+    },
+    " from ",
     {
       "latex": "U",
       "fallback": "U"

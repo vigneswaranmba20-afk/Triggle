@@ -72,11 +72,11 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 308,
       "enPrintedPage": 302,
-      "taPdfPage": 335,
+      "taPdfPage": 325,
       "taPrintedPage": 319,
       "tamilEditorial": "pending",
       "notes": [
-        "Table layout must be checked against original page image",
+        "Survey values visually checked in English printed p. 302 (PDF 308) and Tamil printed p. 318 (PDF 324). The Tamil prompt continues on printed p. 319 (PDF 325).",
         "Printed part (ii) answer 43/75 counts only-part-time families; alternative broad interpretation 37/50 requires explicit clarification"
       ]
     }
