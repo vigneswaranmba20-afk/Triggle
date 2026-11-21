@@ -42,15 +42,15 @@ The connected audit workbook also has a later Grade 10 Chapter 8 audit. Its entr
 
 ## Recovered release regressions
 
-PR #321’s first required run exposed a lost static Venn default contract. A subsequent run exposed duplicate Sets explanation disclosures in the typography suite. Both behaviors were restored in the application, and the original checks remained intact. The most recent candidate, [7997280](https://github.com/vigneswaranmba20-afk/Triggle/commit/7997280dd1838fafc47e07795801ffb94726b145), also corrects the five Probability concept count in the menus. [First gate](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/44871414749) · [Browser shard](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/44872114317/job/136748990949)
+PR #321’s first required run exposed a lost static Venn default contract. A subsequent run exposed duplicate Sets explanation disclosures in the typography suite. Both behaviors were restored in the application, and the original checks remained intact. The most recent candidate, [7997280](https://github.com/vigneswaranmba20-afk/Triggle/commit/7997280dd1838fafc47e07795801ffb94726b145), also corrects the five Probability concept count in the menus. [Current required run](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/44873156250). [First gate](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/44871414749) · [Browser shard](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/44872114317/job/136748990949)
 
 ## Scorecard
 
 | Measure | Count or status |
 |---|---|
 | Total original findings | 46 |
-| Closed and live-verified | 28 |
-| Fixed but awaiting live verification | 10 |
+| Closed and live-verified | 29 |
+| Fixed but awaiting live verification | 9 |
 | Open or blocked | 8 |
 | Critical regressions | 0 confirmed in executed checks |
 | Required tests passed | PRs #283 and #315 2/2 required gates. PR #321 verification in progress. |
