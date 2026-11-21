@@ -45,7 +45,7 @@
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  const plainMath=value=>Array.isArray(value)?value.map(plainMath).join(''):(value?.fallback??value);
  const isGeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3'].includes(item.exercise);
- const englishInTamilReader=text=>grade===9&&lang==='ta'&&/[a-z]{2}/i.test(text)&&!/\p{Script=Tamil}/u.test(text);
+ const englishInTamilReader=text=>lang==='ta'&&/[a-z]{2}/i.test(text)&&!/\p{Script=Tamil}/u.test(text);
  function math(str){
   // Local typesetting: accessible group exponents and no cloud requests.
   const alignCoefficientPowers=grade===10&&String(selectedChapter()?.number)==='2';
@@ -251,18 +251,21 @@
      const meta=document.createElement('small');
      const interactiveStages=chapter.id==='g9-ch1'?window.TRIGGLE_SET_PATH?.stages:
        chapter.id==='g9-ch2'?window.TRIGGLE_REAL_PATH?.stages:
+       chapter.id==='g9-ch9'?window.TRIGGLE_PROBABILITY_CHAPTER:
+       chapter.id==='g10-ch2'?window.TRIGGLE_G10_CH2_PATH?.stages:
        chapter.id==='g10-ch3'?window.TRIGGLE_G10_CH3_PATH?.stages:
        chapter.id==='g10-ch4'?window.TRIGGLE_G10_CH4_PATH?.stages:
        chapter.id==='g10-ch5'?window.TRIGGLE_G10_CH5_PATH?.stages:
        chapter.id==='g10-ch6'?window.TRIGGLE_G10_CH6_PATH?.stages:
        chapter.id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:null;
      const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
-     const practiceCount=all.length;
-     const grade9Journey=chapter.id==='g9-ch1'||chapter.id==='g9-ch2';
+     const visibleExercises=window.TriggleChapterHub?.textbookExercises?window.TriggleChapterHub.textbookExercises(all):all;
+     const practiceCount=visibleExercises.length;
+     const grade9Journey=chapter.id==='g9-ch1'||chapter.id==='g9-ch2'||chapter.id==='g9-ch9';
      meta.textContent=grade9Journey
        ?(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+
          (lang==='ta'?practiceCount+' பயிற்சி வினாக்கள்':practiceCount+' exercise/practice questions')
-       :(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+all.length+' '+ui('existingQuestions');
+       :(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+practiceCount+' '+ui('existingQuestions');
      button.append(title,meta);button.onclick=()=>selectChapter(chapter);section.append(button);
      if(selected&&!query){
        const quick=document.createElement('div');quick.className='sidebar-chapter-sections';
