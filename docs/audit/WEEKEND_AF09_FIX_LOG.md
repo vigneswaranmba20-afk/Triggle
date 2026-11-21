@@ -23,7 +23,7 @@
 | **AUD01-02** | P1 High | G9 Sets cardinality notation & `"11sum"` (`concept=6`) | `PR_OPEN_ON_GITHUB` | `PR #283` (targets `#280`) | Rebase onto `main` after `#280` lands |
 | **AUD01-03** | P1 High | G9 Sets distributive-law visual verification (`concept=4`) | `TRIAGED_OPEN` | — | Ledger exported; queued after `#280`/`#283` merge |
 | **AUD01-04** | P1 High | G9 Sets Tamil webfont & toggle state (`concept=0-6`) | `TRIAGED_OPEN` | — | Check Noto Sans Tamil fallback / font loading |
-| **AUD01-05** | P1 High | G9 Sets power-set / proper-subset bridge (`concept=2`) | **PR_GREEN_CI** | `PR #312` (`43367b4`) | `Triggle quality gate` + Chromium mobile PASS; needs merge of `main` (`#318`) then squash-merge |
+| **AUD01-05** | P1 High | G9 Sets power-set / proper-subset bridge (`concept=2`) | **MERGED_AWAITING_LIVE** | `PR #312` (`805ab3b`) | `Triggle quality gate` + Chromium mobile PASS; squash-merged into `main` |
 | **AUD01-06** | P2 Med | G9 Sets De Morgan difference & SVG collisions (`concept=5`) | `TRIAGED_OPEN` | — | Queued for Batch 4 after `#280` |
 | **AUD01-07** | P2 Med | G9 Sets `\mathbb{N}`, `∈`, `:` clarity (`concept=1`) | `TRIAGED_OPEN` | — | Queued for Batch 4 |
 | **AUD01-08** | P2 Med | G9 Sets mismatched chip typography & orphan wrap (`concept=0`) | `TRIAGED_OPEN` | — | Queued for Batch 4 |
