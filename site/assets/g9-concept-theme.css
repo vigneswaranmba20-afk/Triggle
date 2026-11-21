@@ -125,6 +125,70 @@
   font-weight: 700;
 }
 
+/* NEON M02 P1: Keep Sets' long Tamil top controls side by side.
+   Restrict this compact treatment to the Sets lesson (not Grade 10 nav). */
+.chapter-hub[data-grade="9"][data-hub-section="concepts"] .g9-set-journey .sp2-detail-navigation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  align-items: center;
+  column-gap: 5px;
+}
+.chapter-hub[data-grade="9"][data-hub-section="concepts"] .g9-set-journey .sp2-detail-navigation :is(.sp2-back-index, .sp2-top-next) {
+  box-sizing: border-box;
+  min-width: 0;
+  padding-inline: 0;
+  font-size: clamp(11px, 3.05vw, 13px);
+  letter-spacing: normal;
+  white-space: nowrap;
+}
+
+/* NEON M02 P1: Flex summaries suppress the platform disclosure marker.
+   Provide an explicit accessible visual affordance without changing details. */
+.chapter-hub[data-grade="9"][data-hub-section="concepts"] :is(
+  details.sp2-explanation,
+  details.rnlab-pitfall
+) > summary {
+  list-style: none;
+  gap: .45rem;
+  cursor: pointer;
+}
+.chapter-hub[data-grade="9"][data-hub-section="concepts"] :is(
+  details.sp2-explanation,
+  details.rnlab-pitfall
+) > summary::-webkit-details-marker {
+  display: none;
+}
+.chapter-hub[data-grade="9"][data-hub-section="concepts"] :is(
+  details.sp2-explanation,
+  details.rnlab-pitfall
+) > summary::before {
+  content: '▸';
+  display: inline-block;
+  flex: none;
+  color: var(--g9-ui-selected-border);
+  font-size: 1.12em;
+  line-height: 1;
+  transform-origin: center;
+  transition: transform .15s ease;
+}
+.chapter-hub[data-grade="9"][data-hub-section="concepts"] :is(
+  details.sp2-explanation,
+  details.rnlab-pitfall
+)[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+/* NEON M02 P2: Outcome displays must not look like another row of controls.
+   Preserve semantic A/B colours and all clickable button styles. */
+.chapter-hub[data-grade="9"][data-hub-section="concepts"] .probability-demo .probability-outcomes {
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--g9-ui-lab-border);
+}
+.chapter-hub[data-grade="9"][data-hub-section="concepts"] .probability-demo .probability-outcomes li {
+  border-radius: 8px;
+}
+
 /* Text on SVG strokes remains readable without altering plot semantics. */
 .chapter-hub[data-grade="9"][data-hub-section="concepts"] :is(
   .rnlab-line text,
@@ -171,7 +235,9 @@
   .chapter-hub[data-grade="9"][data-hub-section="concepts"] :is(
     .lc-node,
     .lc-d-member,
-    .g9m-quad-half
+    .g9m-quad-half,
+    details.sp2-explanation > summary::before,
+    details.rnlab-pitfall > summary::before
   ) {
     transition: none !important;
   }
