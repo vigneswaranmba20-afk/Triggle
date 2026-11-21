@@ -512,7 +512,7 @@ window.TRIGGLE_G10_CH5_PATH={
         ]
       },
       "question": {
-        "en": "Find the slope of the line passing through (−6, 1) and (−3, 2) — and what angle does a slope of 1 correspond to?",
+        "en": "Find the slope of the line passing through (−6, 1) and (−3, 2).",
         "ta": "(−6, 1) மற்றும் (−3, 2) வழிச் செல்லும் கோட்டின் சாய்வு என்ன?"
       },
       "questionMath": {
@@ -541,7 +541,7 @@ window.TRIGGLE_G10_CH5_PATH={
         }
       ],
       "why": {
-        "en": "m = (2 − 1)/(−3 − (−6)) = 1/3. (And whenever m = 1, tan θ = 1 gives θ = 45°.)",
+        "en": "m = (2 − 1)/(−3 − (−6)) = 1/3.",
         "ta": "m = (2 − 1)/(−3 − (−6)) = 1/3."
       },
       "whyMath": {
@@ -1150,7 +1150,7 @@ window.TRIGGLE_G10_CH5_PATH={
             }
           },
           {
-            "title": { "en": "2. Divide by b (assuming b ≠ 0) and match y = mx + l", "ta": "2. b-ஆல் வகுத்து y = mx + l உடன் ஒப்பிடுக" },
+            "title": { "en": "2. Divide by b (assuming b ≠ 0) and match y = mx + c", "ta": "2. b-ஆல் வகுத்து y = mx + c உடன் ஒப்பிடுக" },
             "math": { "latex": "\\begin{aligned}y&=-\\dfrac{a}{b}x-\\dfrac{c}{b}\\\\\\implies m&=-\\dfrac{a}{b},\\;y\\text{-int}=-\\dfrac{c}{b}\\end{aligned}", "fallback": "y = (−a/b)x − c/b gives slope m = −a/b and y-intercept −c/b" },
             "reason": {
               "en": "Comparing directly with Slope-Intercept form extracts both slope and y-intercept in one step.",
@@ -1189,8 +1189,8 @@ window.TRIGGLE_G10_CH5_PATH={
         }
       ],
       "why": {
-        "en": "Here a = 8, b = −7, c = 6. Moving −7y gives 7y = 8x + 6, so y = (8/7)x + 6/7: slope m = 8/7 and y-intercept c = 6/7.",
-        "ta": "7y = 8x + 6 என்பதால் y = (8/7)x + 6/7; எனவே சாய்வு m = 8/7, y-வெட்டுத்துண்டு c = 6/7."
+        "en": "With general-form coefficients a = 8, b = −7, C = 6, moving −7y gives 7y = 8x + 6, so y = (8/7)x + 6/7: slope m = 8/7 and y-intercept c = 6/7.",
+        "ta": "a = 8, b = −7, மாறிலி C = 6; 7y = 8x + 6 என்பதால் y = (8/7)x + 6/7; எனவே சாய்வு m = 8/7, y-வெட்டுத்துண்டு c = 6/7."
       },
       "whyMath": {
         "latex": "7y=8x+6\\implies y=\\dfrac{8}{7}x+\\dfrac{6}{7}",
@@ -1253,8 +1253,8 @@ window.TRIGGLE_G10_CH5_PATH={
             "title": { "en": "1. Verify perpendicularity of bx − ay + k = 0", "ta": "1. bx − ay + k = 0 செங்குத்தானதா எனச் சோதிக்க" },
             "math": { "latex": "\\begin{aligned}m_1\\cdot m_2&=\\left(-\\dfrac{a}{b}\\right)\\left(-\\dfrac{b}{-a}\\right)\\\\&=\\left(-\\dfrac{a}{b}\\right)\\left(\\dfrac{b}{a}\\right)=-1\\end{aligned}", "fallback": "(−a/b)(b/a) = −1" },
             "reason": {
-              "en": "The slope of ax + by + c = 0 is −a/b and the slope of bx − ay + k = 0 is b/a; their product is −1, even when a or b is 0 (vertical ⊥ horizontal).",
-              "ta": "இரு சாய்வுகளின் பெருக்கற்பலன் (−a/b)(b/a) = −1; மேலும் a = 0 அல்லது b = 0 எனும்போதும் கிடைமட்ட–செங்குத்து நிலை தானாகவே பொருந்தும்."
+              "en": "When a ≠ 0 and b ≠ 0, the slope of ax + by + c = 0 is −a/b and that of bx − ay + k = 0 is b/a, so m₁·m₂ = −1. When a = 0 or b = 0 (horizontal vs. vertical), a₁a₂ + b₁b₂ = ab − ba = 0 proves perpendicularity directly without dividing by zero.",
+              "ta": "a ≠ 0 மற்றும் b ≠ 0 எனில் (−a/b)(b/a) = −1; மேலும் a = 0 அல்லது b = 0 எனும்போது சுழியால் வகுக்காமல் a₁a₂ + b₁b₂ = ab − ba = 0 நேரடியாகச் செங்குத்தை நிரூபிக்கிறது."
             }
           },
           {

@@ -39477,6 +39477,68 @@ const texts={
     },
     " நாட்களைக் கொண்ட மாதங்களின் கணத்தைச் சொற்களாலும் பட்டியல் முறையாலும் எழுதுக."
   ],
+  "Distinct members determine a set's size. The empty set has zero members, a singleton has one, and subsets contain only members of a larger set. A power set P(A) collects every subset of A, including the empty set and A itself. For A={a,b}, P(A)={∅,{a},{b},{a,b}}: 4 subsets. Each of m elements is either included or excluded, so n(P(A))=2^m; proper subsets exclude A itself, leaving 2^m−1. Disjoint sets have no common elements; overlapping sets share at least one.": [
+    "Distinct members determine a set's size. The empty set has zero members, a singleton has one, and subsets contain only members of a larger set. A power set ",
+    {
+      "latex": "P\\left(A\\right)",
+      "fallback": "P(A)"
+    },
+    " collects every subset of A, including the empty set and A itself. For ",
+    {
+      "latex": "A = \\left\\{a, b\\right\\}",
+      "fallback": "A={a,b}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "P\\left(A\\right) = \\left\\{\\varnothing, \\left\\{a\\right\\}, \\left\\{b\\right\\}, \\left\\{a, b\\right\\}\\right\\} : 4",
+      "fallback": "P(A)={∅,{a},{b},{a,b}}: 4"
+    },
+    " subsets. Each of ",
+    {
+      "latex": "\\mathrm{m}",
+      "fallback": "m"
+    },
+    " elements is either included or excluded, so ",
+    {
+      "latex": "n \\left(P\\left(A\\right)\\right) = 2^{m}",
+      "fallback": "n(P(A))=2^m"
+    },
+    "; proper subsets exclude A itself, leaving ",
+    {
+      "latex": "2^{m} - 1",
+      "fallback": "2^m−1"
+    },
+    ". Disjoint sets have no common elements; overlapping sets share at least one."
+  ],
+  "ஒரு கணத்தின் தனித்த உறுப்புகளே அதன் ஆதி எண்ணை நிர்ணயிக்கின்றன. வெற்றுக் கணத்தில் உறுப்புகள் இல்லை; ஓருறுப்புக் கணத்தில் ஒன்று மட்டுமே இருக்கும். A={a,b} எனில் அதன் எல்லா உட்கணங்களின் கணம் P(A)={∅,{a},{b},{a,b}} ஆகும். m உறுப்புகள் உள்ள கணத்திற்கு 2^m உட்கணங்களும், கணத்தையே நீக்கினால் 2^m−1 தகு உட்கணங்களும் உள்ளன. பொதுவான உறுப்புகள் இல்லாதவை வெட்டாக் கணங்கள்; பொதுவான உறுப்புகள் உள்ளவை ஒன்றையொன்று வெட்டும் கணங்கள்.": [
+    "ஒரு கணத்தின் தனித்த உறுப்புகளே அதன் ஆதி எண்ணை நிர்ணயிக்கின்றன. வெற்றுக் கணத்தில் உறுப்புகள் இல்லை; ஓருறுப்புக் கணத்தில் ஒன்று மட்டுமே இருக்கும். ",
+    {
+      "latex": "A = \\left\\{a, b\\right\\}",
+      "fallback": "A={a,b}"
+    },
+    " எனில் அதன் எல்லா உட்கணங்களின் கணம் ",
+    {
+      "latex": "P\\left(A\\right) = \\left\\{\\varnothing, \\left\\{a\\right\\}, \\left\\{b\\right\\}, \\left\\{a, b\\right\\}\\right\\}",
+      "fallback": "P(A)={∅,{a},{b},{a,b}}"
+    },
+    " ஆகும். ",
+    {
+      "latex": "\\mathrm{m}",
+      "fallback": "m"
+    },
+    " உறுப்புகள் உள்ள கணத்திற்கு ",
+    {
+      "latex": "2^{m}",
+      "fallback": "2^m"
+    },
+    " உட்கணங்களும், கணத்தையே நீக்கினால் ",
+    {
+      "latex": "2^{m} - 1",
+      "fallback": "2^m−1"
+    },
+    " தகு உட்கணங்களும் உள்ளன. பொதுவான உறுப்புகள் இல்லாதவை வெட்டாக் கணங்கள்; பொதுவான உறுப்புகள் உள்ளவை ஒன்றையொன்று வெட்டும் கணங்கள்."
+  ],
   "P = {a, a, b} is the same set as {a, b}, so n(P)=2; {a} is a proper subset of P.": [
     {
       "latex": "P = \\left\\{a, a, b\\right\\}",
@@ -41541,7 +41603,7 @@ const texts={
     },
     "."
   ],
-  "There are four ordered outcomes, not three, because HT and TH are distinct.": [
+  "There are four ordered outcomes, not three, because HT and TH are distinct. By the same rule, rolling two dice gives 6 × 6 = 36 ordered pairs because (1, 3) and (3, 1) are different outcomes.": [
     "There are four ordered outcomes, not three, because ",
     {
       "latex": "HT",
@@ -41552,9 +41614,24 @@ const texts={
       "latex": "TH",
       "fallback": "TH"
     },
-    " are distinct."
+    " are distinct. By the same rule, rolling two dice gives ",
+    {
+      "latex": "6 \\times 6 = 36",
+      "fallback": "6 × 6 = 36"
+    },
+    " ordered pairs because ",
+    {
+      "latex": "\\left(1, 3\\right)",
+      "fallback": "(1, 3)"
+    },
+    " and ",
+    {
+      "latex": "\\left(3, 1\\right)",
+      "fallback": "(3, 1)"
+    },
+    " are different outcomes."
   ],
-  "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because HT and TH are distinct.": [
+  "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because HT and TH are distinct. Rolling two dice gives 6 × 6 = 36 ordered pairs because (1, 3) and (3, 1) are different outcomes.": [
     "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because ",
     {
       "latex": "HT",
@@ -41565,7 +41642,22 @@ const texts={
       "latex": "TH",
       "fallback": "TH"
     },
-    " are distinct."
+    " are distinct. Rolling two dice gives ",
+    {
+      "latex": "6 \\times 6 = 36",
+      "fallback": "6 × 6 = 36"
+    },
+    " ordered pairs because ",
+    {
+      "latex": "\\left(1, 3\\right)",
+      "fallback": "(1, 3)"
+    },
+    " and ",
+    {
+      "latex": "\\left(3, 1\\right)",
+      "fallback": "(3, 1)"
+    },
+    " are different outcomes."
   ],
   "probability-3": [
     "probability",
