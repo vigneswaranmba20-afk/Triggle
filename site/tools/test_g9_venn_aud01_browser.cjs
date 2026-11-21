@@ -81,7 +81,8 @@ const operations=[
     await page.goto(app.base+'/index.html?class=9&chapter=g9-ch1&section=concepts&concept=5');
     await page.locator(lang==='ta'?'#langTa':'#langEn').click();
     const difference=page.locator('[data-set-difference]');
-    await difference.locator('summary').click();
+    await page.locator('.sp2-explanation > summary').click();
+    assert(await difference.isVisible(),'Set-difference bridge is in Understand the idea');
     const formulas=(await difference.locator('p .katex-mathml math').allTextContents()).join(' ').replace(/\s+/g,'');
     assert(formulas.includes('(A−B)∩(A−C)={1}'),'Removing the union keeps only 1');
     assert(formulas.includes('(A−B)∪(A−C)={1,2,3}'),'Removing the intersection keeps all three');

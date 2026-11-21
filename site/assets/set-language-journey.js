@@ -319,18 +319,17 @@
           intersection:{"latex": "\\begin{aligned}(A\\cap B)^{\\prime}&=A^{\\prime}\\cup B^{\\prime}\\\\&=\\{1,2,4,5,6\\}\\end{aligned}", "fallback": "(A ∩ B)′ = A′ ∪ B′ = {1, 2, 4, 5, 6}"}
         };
         setDemo('union',options,(key,update)=>update(key,values[key]));
-        const difference=document.createElement('details');
-        difference.className='sp2-explanation';
+        const difference=document.createElement('section');
         difference.dataset.setDifference='';
         const differenceTitle=lang==='ta'?'கண வித்தியாசத்திற்கான டி மார்கன் விதிகள்':'De Morgan’s laws for set difference';
         const differenceIdea=lang==='ta'
           ?'கண வித்தியாசம் A − B என்பது A-இல் இருந்து B-இல் உள்ளவற்றை நீக்குவதாகும். சேர்ப்பை நீக்கினால் இரண்டிலும் இல்லாத உறுப்புகள் மட்டுமே மீதமிருக்கும். வெட்டை நீக்கினால் இரண்டில் ஒன்றிலாவது இல்லாத உறுப்புகள் மீதமிருக்கும்.'
           :'Set difference A − B keeps members of A outside B. Removing a union keeps members outside both sets. Removing an intersection keeps members outside at least one of the two sets.';
-        difference.innerHTML='<summary>'+esc(differenceTitle)+'</summary><p>'+esc(differenceIdea)+'</p>'+
+        difference.innerHTML='<h5>'+esc(differenceTitle)+'</h5><p>'+esc(differenceIdea)+'</p>'+
           '<p>'+htmlMath({latex:'A=\\{1,2,3\\},\\ B=\\{3,4\\},\\ C=\\{2,4,5\\}',fallback:'A = {1, 2, 3}, B = {3, 4}, C = {2, 4, 5}'})+'</p>'+
           '<p>'+htmlMath({latex:'\\begin{aligned}A-(B\\cup C)&=(A-B)\\cap(A-C)\\\\&=\\{1\\}\\end{aligned}',fallback:'A − (B ∪ C) = (A − B) ∩ (A − C) = {1}'})+'</p>'+
           '<p>'+htmlMath({latex:'\\begin{aligned}A-(B\\cap C)&=(A-B)\\cup(A-C)\\\\&=\\{1,2,3\\}\\end{aligned}',fallback:'A − (B ∩ C) = (A − B) ∪ (A − C) = {1, 2, 3}'})+'</p>';
-        out.after(difference);
+        panel.querySelector('.sp2-explanation-body').append(difference);
       }else if(stage.visual==='count'){
         const controls=panel.querySelector('[data-demo-controls]');
         const id='sp2-overlap-control';
