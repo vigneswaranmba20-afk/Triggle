@@ -725,7 +725,7 @@
       // Keep honest editorial status visible, without pushing the section cards
       // below a second introduction and a large callout.
       const metadata=document.createElement('p');metadata.className='hub-stage-note';
-      metadata.textContent=grade9Pilot?t.learningStatus:t.sectionStatus;
+      metadata.textContent=grade9Pilot?t.learningStatus:((stages.length>0&&available.exercises)?t.learningStatus:t.sectionStatus);
       root.append(metadata);
       const footer=document.createElement('div');footer.className='hub-footer';
       footer.append(mk('ⓘ '+t.resources,()=>onSection('sources'),'hub-resource-link'));
@@ -855,7 +855,9 @@
         const source=sources.find(s=>s.id===ref.sourceId);
         if(!source)continue;
         const entry=document.createElement('div');entry.className='hub-source';
-        const a=document.createElement('a');a.textContent=source.title+' · '+(source.medium==='ta'?'தமிழ்':'English');
+        const latinGrade=grade===9?'Standard Nine Mathematics':grade===10?'Standard Ten Mathematics':grade===11?'Higher Secondary First Year Mathematics':'Higher Secondary Second Year Mathematics';
+        const titleLabel=source.medium==='ta'?`${source.title} (${latinGrade})`:source.title;
+        const a=document.createElement('a');a.textContent=titleLabel+' · '+(source.medium==='ta'?'தமிழ் (Tamil)':'English');
         if(/^https?:\/\//.test(source.url)){a.href=source.url;a.target='_blank';a.rel='noopener noreferrer';}
         else a.removeAttribute('href');
         const p=document.createElement('p');p.textContent=ref.locator||'';entry.append(a,p);panel.append(entry);

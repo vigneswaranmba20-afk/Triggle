@@ -41612,7 +41612,7 @@ const texts={
     },
     "."
   ],
-  "There are four ordered outcomes, not three, because HT and TH are distinct.": [
+  "There are four ordered outcomes, not three, because HT and TH are distinct. By the same rule, rolling two dice gives 6 × 6 = 36 ordered pairs because (1, 3) and (3, 1) are different outcomes.": [
     "There are four ordered outcomes, not three, because ",
     {
       "latex": "HT",
@@ -41623,9 +41623,24 @@ const texts={
       "latex": "TH",
       "fallback": "TH"
     },
-    " are distinct."
+    " are distinct. By the same rule, rolling two dice gives ",
+    {
+      "latex": "6 \\times 6 = 36",
+      "fallback": "6 × 6 = 36"
+    },
+    " ordered pairs because ",
+    {
+      "latex": "\\left(1, 3\\right)",
+      "fallback": "(1, 3)"
+    },
+    " and ",
+    {
+      "latex": "\\left(3, 1\\right)",
+      "fallback": "(3, 1)"
+    },
+    " are different outcomes."
   ],
-  "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because HT and TH are distinct.": [
+  "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because HT and TH are distinct. Rolling two dice gives 6 × 6 = 36 ordered pairs because (1, 3) and (3, 1) are different outcomes.": [
     "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because ",
     {
       "latex": "HT",
@@ -41636,7 +41651,22 @@ const texts={
       "latex": "TH",
       "fallback": "TH"
     },
-    " are distinct."
+    " are distinct. Rolling two dice gives ",
+    {
+      "latex": "6 \\times 6 = 36",
+      "fallback": "6 × 6 = 36"
+    },
+    " ordered pairs because ",
+    {
+      "latex": "\\left(1, 3\\right)",
+      "fallback": "(1, 3)"
+    },
+    " and ",
+    {
+      "latex": "\\left(3, 1\\right)",
+      "fallback": "(3, 1)"
+    },
+    " are different outcomes."
   ],
   "g9-ch9-ex9.1-q4": [
     {

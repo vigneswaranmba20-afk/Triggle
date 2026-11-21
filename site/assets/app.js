@@ -45,7 +45,7 @@
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  const plainMath=value=>Array.isArray(value)?value.map(plainMath).join(''):(value?.fallback??value);
  const isGeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3'].includes(item.exercise);
- const englishInTamilReader=text=>grade===9&&lang==='ta'&&/[a-z]{2}/i.test(text)&&!/\p{Script=Tamil}/u.test(text);
+ const englishInTamilReader=text=>lang==='ta'&&/[a-z]{2}/i.test(text)&&!/\p{Script=Tamil}/u.test(text);
  function math(str){
   // Local typesetting: accessible group exponents and no cloud requests.
   const alignCoefficientPowers=grade===10&&String(selectedChapter()?.number)==='2';
@@ -251,18 +251,21 @@
      const meta=document.createElement('small');
      const interactiveStages=chapter.id==='g9-ch1'?window.TRIGGLE_SET_PATH?.stages:
        chapter.id==='g9-ch2'?window.TRIGGLE_REAL_PATH?.stages:
+       chapter.id==='g9-ch9'?window.TRIGGLE_PROBABILITY_CHAPTER:
+       chapter.id==='g10-ch2'?window.TRIGGLE_G10_CH2_PATH?.stages:
        chapter.id==='g10-ch3'?window.TRIGGLE_G10_CH3_PATH?.stages:
        chapter.id==='g10-ch4'?window.TRIGGLE_G10_CH4_PATH?.stages:
        chapter.id==='g10-ch5'?window.TRIGGLE_G10_CH5_PATH?.stages:
        chapter.id==='g10-ch6'?window.TRIGGLE_G10_CH6_PATH?.stages:
        chapter.id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:null;
      const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
-     const practiceCount=all.length;
-     const grade9Journey=chapter.id==='g9-ch1'||chapter.id==='g9-ch2';
+     const visibleExercises=window.TriggleChapterHub?.textbookExercises?window.TriggleChapterHub.textbookExercises(all):all;
+     const practiceCount=visibleExercises.length;
+     const grade9Journey=chapter.id==='g9-ch1'||chapter.id==='g9-ch2'||chapter.id==='g9-ch9';
      meta.textContent=grade9Journey
        ?(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+
          (lang==='ta'?practiceCount+' பயிற்சி வினாக்கள்':practiceCount+' exercise/practice questions')
-       :(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+all.length+' '+ui('existingQuestions');
+       :(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+practiceCount+' '+ui('existingQuestions');
      button.append(title,meta);button.onclick=()=>selectChapter(chapter);section.append(button);
      if(selected&&!query){
        const quick=document.createElement('div');quick.className='sidebar-chapter-sections';
@@ -498,14 +501,27 @@
  document.fonts?.addEventListener('loadingdone',()=>{
   if(!$('lessonCard').hidden)prepareLessonMath();
  });
+ const ch1SvgFigures={
+  'c10-1-1-2-q4':{src:'./assets/grade10-ch1/ex1-2-q4.svg',alt:'Arrow diagrams and coordinate plots for Exercise 1.2 Q4',caption:'Original arrow diagram and plot representing relations in Exercise 1.2 Q4.'},
+  'c10-1-1-2-q5':{src:'./assets/grade10-ch1/ex1-2-q5.svg',alt:'Arrow diagram mapping salaries to employees in Exercise 1.2 Q5',caption:'Original arrow diagram showing the salary-to-employee relation in Exercise 1.2 Q5.'},
+  'c10-1-1-3-q4':{src:'./assets/grade10-ch1/figure1-16.svg',alt:'Piecewise linear graph of y = f(x) passing through (0, 9), (4, 3), (7, 6) and (10, 0)',caption:'Original diagram replacing Fig. 1.16 for Exercise 1.3 Q4.'},
+  'c10-1-1-3-q7':{src:'./assets/grade10-ch1/figure1-17.svg',alt:'Open cuboid tray folded from a 24 cm square with x by x corner cut-outs',caption:'Original diagram replacing Fig. 1.17 for Exercise 1.3 Q7.'},
+  'c10-1-1-3-q10':{src:'./assets/grade10-ch1/ex1-3-q10.svg',alt:'Data table and linear plot y = 0.9x + 24.5 for forehand length vs height',caption:'Original data table and linear plot for Exercise 1.3 Q10.'},
+  'c10-1-1-4-q1':{src:'./assets/grade10-ch1/figure1-4-graphs.svg',alt:'Four vertical line test graphs (i) through (iv) in Exercise 1.4 Q1',caption:'Original vertical-line-test graphs replacing Fig. 1.4 graphs for Exercise 1.4 Q1.'},
+  'c10-1-1-4-q2':{src:'./assets/grade10-ch1/ex1-4-q2.svg',alt:'Arrow diagram and graph of f(x) = x/2 - 1 from A to B with 9 unmapped',caption:'Original arrow diagram and plot for Exercise 1.4 Q2.'},
+  'c10-1-1-4-q3':{src:'./assets/grade10-ch1/ex1-4-q3.svg',alt:'Many-to-one arrow diagram and graph for f = {(1,2),(2,2),(3,2),(4,3),(5,4)}',caption:'Original arrow diagram and graph for Exercise 1.4 Q3.'}
+ };
+ const resolveFigureSpec=item=>item&&ch1SvgFigures[item.id]
+  ?{src:ch1SvgFigures[item.id].src,alt:{en:ch1SvgFigures[item.id].alt},caption:{en:ch1SvgFigures[item.id].caption}}
+  :(item?.figureSrc?{src:item.figureSrc,alt:item.figureAlt,caption:item.figureCaption}:null);
  function isQuestionFigure(item){
-  if(item.figureSrc)return true;
+  if(resolveFigureSpec(item))return true;
   // The Figure button already opens a full Venn: no duplicate mini preview.
   if(window.TriggleSetVenn?.supports(item))return false;
   return !!(item.diagram && typeof item.diagram==='object' && /\b(diagram|figure|labelled|labeled)\b/i.test(item.q?.en||''));
  }
  function hasUsefulFigure(item){
-  if(item.figureSrc)return true;
+  if(resolveFigureSpec(item))return true;
   if(window.TriggleSetVenn?.supports(item))return true;
   const d=item.diagram;if(!d)return false;
   if(isQuestionFigure(item))return true;
@@ -516,18 +532,20 @@
   return ['triangle','two-triangles','two-right','kite','tree','unitcircle','complement-pairs','tower','circle','wave','inverse','real-number-line','real-number-arrows'].includes(kind);
  }
  function textbookFigureImage(item,maxHeight){
-  const alt=tr(item.figureAlt)||tr(item.label)+' textbook figure';
-  return '<img src="'+esc(encodeURI(item.figureSrc))+'" alt="'+esc(alt)+'" style="display:block;max-width:100%;max-height:'+maxHeight+'vh;width:auto;height:auto;margin:auto;object-fit:contain">';
+  const spec=resolveFigureSpec(item);
+  const alt=tr(spec?.alt)||tr(item.label)+' textbook figure';
+  return '<img src="'+esc(encodeURI(spec?.src||''))+'" alt="'+esc(alt)+'" style="display:block;max-width:100%;max-height:'+maxHeight+'vh;width:auto;height:auto;margin:auto;object-fit:contain">';
  }
  function renderInlineFigure(){
    const figure=$('inlineFigure');const yes=isQuestionFigure(current);
    figure.hidden=!yes; if(!yes)return;
    const aligned=window.TriggleSetVenn?.render(current,lang);
-   const svg=current.figureSrc?textbookFigureImage(current,66):(aligned?.html||window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)}));
+   const figSpec=resolveFigureSpec(current);
+   const svg=figSpec?textbookFigureImage(current,66):(aligned?.html||window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)}));
    $('inlineFigureVisual').innerHTML=svg;
    const d=current.diagram;
    const measures=d?.kind==='triangle'?((lang==='ta'?'எதிர்ப்பக்கம் ':'Opposite ')+d.opp+' · '+(lang==='ta'?'அடுத்துள்ள பக்கம் ':'Adjacent ')+d.adj+' · '+(lang==='ta'?'கர்ணம் ':'Hypotenuse ')+d.hyp+'. '):'';
-   $('inlineFigureCaption').textContent=current.figureSrc?(tr(current.figureCaption)||'2025 Tamil Nadu Mathematics textbook figure.'):(aligned?.caption||(measures+ui('inlineFigureNote')));
+   $('inlineFigureCaption').textContent=figSpec?(tr(figSpec.caption)||'2025 Tamil Nadu Mathematics textbook figure.'):(aligned?.caption||(measures+ui('inlineFigureNote')));
  }
  function renderText(){
   // Icon-only controls on narrow readers still have full bilingual names.
@@ -636,10 +654,11 @@
  function showDiagram(){
   if(!hasUsefulFigure(current))return;
   const context={item:current,lang,renderText:tr};
-  let graphic=current.figureSrc?{html:textbookFigureImage(current,78),caption:tr(current.figureCaption)||'2025 textbook figure.'}:(window.TriggleSetVenn?.render(current,lang)||window.TriggleConcept?.render(context));
+  const figSpec=resolveFigureSpec(current);
+  let graphic=figSpec?{html:textbookFigureImage(current,78),caption:tr(figSpec.caption)||'2025 textbook figure.'}:(window.TriggleSetVenn?.render(current,lang)||window.TriggleConcept?.render(context));
   if(!graphic){let svg='';if(current.diagram&&typeof current.diagram==='object')svg=window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});else svg=window.TriggleDraw.drawSimple(current.diagram||'identity');graphic={html:svg,caption:lang==='ta'?'படம் விளக்கத்திற்காக மட்டுமே; அளவுப்படி இல்லாமல் இருக்கலாம்.':'Original conceptual illustration; not necessarily drawn to scale.'}}
   $('diagramContent').innerHTML=graphic.html;
-  $('visualTitle').textContent=tr(current.figureCaption)||tr(current.title);
+  $('visualTitle').textContent=tr(figSpec?.caption)||tr(current.title);
   // Same final answer inside glass viewer lets students compare regions to result.
   $('diagramCompareAnswer').innerHTML=$('answerText').innerHTML;
   $('diagramCompareLabel').textContent=ui('finalAnswer');
