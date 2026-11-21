@@ -153,7 +153,7 @@ function renderGlance(stage,host,lang){
       <rect x="18" y="20" width="96" height="30" rx="8" fill="#F3EFE8" stroke="#6E2933" stroke-width="1.5"/>
       <text x="66" y="39" font-size="10.5" font-weight="700" text-anchor="middle" fill="#6E2933">sin θ, cos θ</text>
       <rect x="146" y="20" width="96" height="30" rx="8" fill="#EFF8F4" stroke="#1E5248" stroke-width="1.5"/>
-      <text x="194" y="39" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">1 ∓ sin θ</text>
+      <text x="194" y="39" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">1 ± sin θ</text>
       <rect x="64" y="64" width="132" height="30" rx="8" fill="#FAF9F6" stroke="#181B20" stroke-width="1.5"/>
       <text x="130" y="83" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">LHS → Step → RHS</text>
     </svg>`,
@@ -459,7 +459,7 @@ function mount(stage,host,lang){
     const btns=[
       ['sin-cos',ta?'sin/cos மாற்றம்':'To sin & cos'],
       ['factor',ta?'காரணிப்படுத்தல்':'Factor powers'],
-      ['conj',ta?'இணை எண்':'Conjugate 1∓sin θ']
+      ['conj',ta?'இணை எண்':'Conjugate 1 ± sin θ']
     ].map(([k,lbl])=>{
       const b=el('button','g10ch4-tab',lbl);b.type='button';
       b.onclick=()=>{strat=k;draw();};tabs.append(b);return[k,b];
