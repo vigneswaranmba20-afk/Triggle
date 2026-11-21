@@ -36,22 +36,22 @@ PR #283 source review used the Grade 9 2025 English printed pp. 29 and 32 (PDF 3
 
 A separate Probability Q5 source citation discrepancy remains. English PDF 308 and Tamil PDFs 324–325 show the 860/370/250 table and question. The current record uses Tamil PDF 335, an answer page from another chapter. Automatic review declined updating the preservation-fixture hash. The canonical question data and preservation guard remain intact.
 
-The connected audit workbook also has a later Grade 10 Chapter 8 audit. Its entries are outside the specified historical 46. The missing Chapter 1 and Chapter 8 concept pathways remain an original P0 curriculum gap. Remaining P1 work includes the interactive Trigonometry SVG collision inventory. P2 work includes the remaining Algebra and Coordinate Geometry page locators, consistent recurring-decimal notation, the scientific-notation addition rule, and the Chapter 1 semantic table. The ledger identifies further per-route live checks on merged changes. [Original audit workbook](https://docs.google.com/spreadsheets/d/1jWqBgH2k2zQHEe3_JlgUHE2QXMx0d67X0W2RuEt2n6U/edit#gid=0)
+The connected audit workbook also has a later Grade 10 Chapter 8 audit. Its entries are outside the specified historical 46. The missing Chapter 1 and Chapter 8 concept pathways remain an original P0 curriculum gap. The remaining original P0 scope includes the two absent curriculum pathways and the missing semantic Relations and Functions table. P1 work includes the remaining Trigonometry concept SVG collision inventory and the centroid’s treatment of negative addends and rounded coordinates. P2 work includes the remaining Algebra and Coordinate Geometry page locators, consistent recurring-decimal notation, the scientific-notation addition rule, and the Chapter 1 semantic table. The ledger identifies further per-route live checks on merged changes. [Original audit workbook](https://docs.google.com/spreadsheets/d/1jWqBgH2k2zQHEe3_JlgUHE2QXMx0d67X0W2RuEt2n6U/edit#gid=0)
 
 [Production Sets Venn](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&chapter=g9-ch1&section=concepts&concept=3) · [Cardinality](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&chapter=g9-ch1&section=concepts&concept=6) · [Probability](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&chapter=g9-ch9&section=concepts&concept=1) · [Mensuration](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&chapter=g9-ch7&section=concepts&concept=0) · [Trigonometry quotient lab](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&chapter=g10-ch6&section=concepts&concept=1)
 
 ## Recovered release regressions
 
-PR #321’s first required run exposed a lost static Venn default contract. A subsequent run exposed duplicate Sets explanation disclosures in the typography suite. Both behaviors were restored in the application, and the original checks remained intact. The most recent candidate also corrects the five Probability concept count in the menus. [First gate](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/44871414749) · [Browser shard](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/44872114317/job/136748990949)
+PR #321’s first required run exposed a lost static Venn default contract. A subsequent run exposed duplicate Sets explanation disclosures in the typography suite. Both behaviors were restored in the application, and the original checks remained intact. The most recent candidate, [7997280](https://github.com/vigneswaranmba20-afk/Triggle/commit/7997280dd1838fafc47e07795801ffb94726b145), also corrects the five Probability concept count in the menus. [First gate](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/44871414749) · [Browser shard](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/44872114317/job/136748990949)
 
 ## Scorecard
 
 | Measure | Count or status |
 |---|---|
 | Total original findings | 46 |
-| Closed and live-verified | 25 |
-| Fixed but awaiting live verification | 14 |
-| Open or blocked | 7 |
+| Closed and live-verified | 28 |
+| Fixed but awaiting live verification | 10 |
+| Open or blocked | 8 |
 | Critical regressions | 0 confirmed in executed checks |
 | Required tests passed | PRs #283 and #315 2/2 required gates. PR #321 verification in progress. |
 | Open audit PRs remaining | 1, PR #321. Both recovered PRs merged. |
