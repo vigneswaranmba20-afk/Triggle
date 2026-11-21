@@ -38994,7 +38994,7 @@ const texts={
     "fallback": "4^0"
   },
   "4^(1/2)": {
-    "latex": "4^{\\dfrac{1}{2}}",
+    "latex": "4^{\\frac{1}{2}}",
     "fallback": "4^(1/2)"
   },
   "4^1": {
@@ -39002,7 +39002,7 @@ const texts={
     "fallback": "4^1"
   },
   "4^(3/2)": {
-    "latex": "4^{\\dfrac{3}{2}}",
+    "latex": "4^{\\frac{3}{2}}",
     "fallback": "4^(3/2)"
   },
   "4^0=1": {
@@ -39010,7 +39010,7 @@ const texts={
     "fallback": "4^0=1"
   },
   "4^(1/2)=√4=2": {
-    "latex": "4^{\\dfrac{1}{2}} = \\sqrt{4} = 2",
+    "latex": "4^{\\frac{1}{2}} = \\sqrt{4} = 2",
     "fallback": "4^(1/2)=√4=2"
   },
   "4^1=4": {
@@ -39018,7 +39018,7 @@ const texts={
     "fallback": "4^1=4"
   },
   "4^(3/2)=(√4)^3=8": {
-    "latex": "4^{\\dfrac{3}{2}} = \\left(\\sqrt{4}\\right)^{3} = 8",
+    "latex": "4^{\\frac{3}{2}} = \\left(\\sqrt{4}\\right)^{3} = 8",
     "fallback": "4^(3/2)=(√4)^3=8"
   },
   "√25": {
@@ -42452,25 +42452,15 @@ const texts={
   ],
   "64^(−2/3)=[[1|(∛64)²]]=[[1|16]].": [
     {
-      "latex": "64^{\\dfrac{- 2}{3}} = \\dfrac{1}{\\left(\\sqrt[3]{64}\\right)^{2}} = \\dfrac{1}{16}",
+      "latex": "64^{\\frac{- 2}{3}} = \\dfrac{1}{\\left(\\sqrt[3]{64}\\right)^{2}} = \\dfrac{1}{16}",
       "fallback": "64^(−2/3)=[[1|(∛64)²]]=[[1|16]]"
     },
     "."
   ],
   "a^(m/n)=(ⁿ√a)^m; a^(−k)=[[1|aᵏ]] for a≠0.": [
     {
-      "latex": "a^{\\dfrac{\\mathrm{m}}{n}}",
-      "fallback": "a^(m/n)"
-    },
-    "=(ⁿ",
-    {
-      "latex": "\\sqrt{a}",
-      "fallback": "√a"
-    },
-    ")^",
-    {
-      "latex": "\\mathrm{m};\\quad a^{- k} = \\dfrac{1}{a^{k}}",
-      "fallback": "m; a^(−k)=[[1|aᵏ]]"
+      "latex": "a^{\\frac{m}{n}} = \\left(\\sqrt[n]{a}\\right)^{m};\\quad a^{- k} = \\dfrac{1}{a^{k}}",
+      "fallback": "a^(m/n)=(ⁿ√a)^m; a^(−k)=[[1|aᵏ]]"
     },
     " for ",
     {
@@ -42481,18 +42471,8 @@ const texts={
   ],
   "a^(m/n)=(ⁿ√a)^m; a≠0 எனில் a^(−k)=[[1|aᵏ]].": [
     {
-      "latex": "a^{\\dfrac{\\mathrm{m}}{n}}",
-      "fallback": "a^(m/n)"
-    },
-    "=(ⁿ",
-    {
-      "latex": "\\sqrt{a}",
-      "fallback": "√a"
-    },
-    ")^",
-    {
-      "latex": "\\mathrm{m};\\quad a \\ne 0",
-      "fallback": "m; a≠0"
+      "latex": "a^{\\frac{m}{n}} = \\left(\\sqrt[n]{a}\\right)^{m};\\quad a \\ne 0",
+      "fallback": "a^(m/n)=(ⁿ√a)^m; a≠0"
     },
     " எனில் ",
     {
@@ -42504,14 +42484,14 @@ const texts={
   "What is 81^(1/4)?": [
     "What is ",
     {
-      "latex": "81^{\\dfrac{1}{4}}",
+      "latex": "81^{\\frac{1}{4}}",
       "fallback": "81^(1/4)"
     },
     "?"
   ],
   "81^(1/4) இன் மதிப்பு என்ன?": [
     {
-      "latex": "81^{\\dfrac{1}{4}}",
+      "latex": "81^{\\frac{1}{4}}",
       "fallback": "81^(1/4)"
     },
     " இன் மதிப்பு என்ன?"
@@ -42588,7 +42568,7 @@ const texts={
   ],
   "a√m+b√m=(a+b)√m.": [
     {
-      "latex": "a\\,\\sqrt{\\mathrm{m}} + b\\,\\sqrt{\\mathrm{m}} = \\left(a + b\\right)\\,\\sqrt{\\mathrm{m}}",
+      "latex": "a\\,\\sqrt{m} + b\\,\\sqrt{m} = \\left(a + b\\right)\\,\\sqrt{m}",
       "fallback": "a√m+b√m=(a+b)√m"
     },
     "."
@@ -48596,7 +48576,7 @@ const texts={
     },
     " = {red, blue, yellow} itself, which is why the number of proper subsets is always ",
     {
-      "latex": "2^{\\mathrm{m}} - 1",
+      "latex": "2^{m} - 1",
       "fallback": "2^m − 1"
     },
     "."
@@ -49262,12 +49242,12 @@ const texts={
   "By the distributive law, every term of the first polynomial multiplies every term of the second polynomial, adding exponents of like bases (x^m · x^n = x^(m+n)) before collecting like terms.": [
     "By the distributive law, every term of the first polynomial multiplies every term of the second polynomial, adding exponents of like bases (",
     {
-      "latex": "x^{\\mathrm{m}}",
+      "latex": "x^{m}",
       "fallback": "x^m"
     },
     " · ",
     {
-      "latex": "x^{n} = x^{\\mathrm{m} + n}",
+      "latex": "x^{n} = x^{m + n}",
       "fallback": "x^n = x^(m+n)"
     },
     ") before collecting like terms."
