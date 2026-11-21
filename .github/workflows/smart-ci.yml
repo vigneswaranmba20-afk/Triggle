@@ -109,9 +109,12 @@ jobs:
             *) echo "Unknown risk tier: $TEST_TIER" >&2; exit 1 ;;
           esac
 
+  # These independently safe checks start as soon as the risk tier is known.
+  # The final quality job still requires core + browser + security to pass;
+  # no failing or skipped mandatory result can reach publish.
   focused-browser:
     name: Change-specific Chromium mobile checks
-    needs: [plan, core]
+    needs: [plan]
     if: needs.plan.outputs.tier != 'major'
     runs-on: ubuntu-24.04
     timeout-minutes: 22
@@ -173,7 +176,7 @@ jobs:
 
   full-browser:
     name: Full Chromium/WebKit regression - shard ${{ matrix.shard }}
-    needs: [plan, core]
+    needs: [plan]
     if: needs.plan.outputs.tier == 'major'
     runs-on: ubuntu-24.04
     timeout-minutes: 35
@@ -224,7 +227,7 @@ jobs:
 
   security:
     name: Firestore security on major changes
-    needs: [plan, core]
+    needs: [plan]
     if: needs.plan.outputs.tier == 'major'
     runs-on: ubuntu-24.04
     timeout-minutes: 15
