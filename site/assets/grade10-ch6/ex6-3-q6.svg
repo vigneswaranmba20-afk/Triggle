@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Descending glass lift in 90 ft building seeing fountain at 60 and 30 degrees for Exercise 6.3 Q6</title>
+  <desc id="desc">Lift descends from 90 ft top to 30 ft in 2 minutes as depression angle to fountain 30 root 3 ft away goes from 60 to 30 degrees.</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="28" y1="190" x2="292" y2="190" stroke="#525B62" stroke-width="1.5"/>
+  <line x1="78" y1="36" x2="78" y2="190" stroke="#181B20" stroke-width="2.6"/>
+  <line x1="78" y1="36" x2="246" y2="36" stroke="#525B62" stroke-width="1.1" stroke-dasharray="3,2"/>
+  <line x1="78" y1="138" x2="246" y2="138" stroke="#525B62" stroke-width="1.1" stroke-dasharray="3,2"/>
+  <line x1="78" y1="36" x2="250" y2="190" stroke="#6E2933" stroke-width="1.8"/>
+  <line x1="78" y1="138" x2="250" y2="190" stroke="#166353" stroke-width="1.8"/>
+  <circle cx="78" cy="36" r="3.4" fill="#6E2933"/>
+  <circle cx="78" cy="138" r="3.4" fill="#166353"/>
+  <circle cx="250" cy="190" r="3.4" fill="#181B20"/>
+  <path d="M114.0,36.0 A36,36 0 0,1 104.8,60.0" fill="none" stroke="#6E2933" stroke-width="1.3"/>
+  <path d="M124.0,138.0 A46,46 0 0,1 122.0,151.3" fill="none" stroke="#166353" stroke-width="1.3"/>
+  <text x="62" y="87" transform="rotate(-90 62 87)" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#6E2933">90 ft (top)</text>
+  <text x="62" y="164" transform="rotate(-90 62 164)" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">30 ft</text>
+  <text x="164" y="206" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#181B20">30√3 ft</text>
+  <text x="124" y="52" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#6E2933">60°</text>
+  <text x="146" y="153" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#166353">30°</text>
+</svg>

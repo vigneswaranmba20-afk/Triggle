@@ -3,7 +3,9 @@
 const assert = require('node:assert/strict');
 const {chromium} = require('playwright');
 const {server, launchOptions} = require('./dashboard_test_support.cjs');
-const {items} = require('../data/textbook-fidelity/g10-ch4-ex4-1-to-4-2.json');
+const {items: previousItems} = require('../data/textbook-fidelity/g10-ch4-ex4-1-to-4-2.json');
+const {items: newItems} = require('../data/textbook-fidelity/g10-ch4-ex4-3.json');
+const items = [...previousItems,...newItems];
 
 const recoveredText = locator => locator.evaluate(element => {
   const clone = element.cloneNode(true);
@@ -60,7 +62,7 @@ async function checkLayout(page, id, width) {
       const page = await context.newPage();
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
-      for (const exercise of ['4.1','4.2']) {
+      for (const exercise of ['4.1','4.2','4.3']) {
         const group = items.filter(item => item.exercise === exercise);
         await page.goto(app.base + '/index.html?class=10&chapter=g10-ch4');
         await page.locator('.hub-section-card[data-hub-section="exercises"]').tap();
@@ -84,11 +86,13 @@ async function checkLayout(page, id, width) {
             assert.equal(new URL(page.url()).searchParams.get('question'), group[1].id);
             await page.locator('#questionTopPrevious').tap();
             assert.equal(new URL(page.url()).searchParams.get('question'), id);
-            await page.locator('#figureBtn').tap();
-            assert.ok(await page.locator('#figureDialog').isVisible());
-            await page.locator('#diagramContent img').evaluate(img => img.decode());
-            await page.locator('#closeDiagram').tap();
-            assert.ok(!await page.locator('#figureDialog').isVisible());
+            if (item.figure.inTextbooks) {
+              await page.locator('#figureBtn').tap();
+              assert.ok(await page.locator('#figureDialog').isVisible());
+              await page.locator('#diagramContent img').evaluate(img => img.decode());
+              await page.locator('#closeDiagram').tap();
+              assert.ok(!await page.locator('#figureDialog').isVisible());
+            }
           }
           if (i === 1) {
             await page.locator('#previous').tap();
@@ -107,7 +111,7 @@ async function checkLayout(page, id, width) {
       }
       assert.deepEqual(errors, []);
       await context.close();
-      console.log(`PASS ${width}px touch layout, bilingual prompts, KaTeX, figures and both navigation positions for all 36 tasks.`);
+      console.log(`PASS ${width}px touch layout, bilingual prompts, KaTeX, figures and both navigation positions for all 44 tasks.`);
     }
 
     const savedId = 'c10-4-ex4-1-q2';
@@ -143,7 +147,7 @@ async function checkLayout(page, id, width) {
     assert.equal(await plain.locator('#questionText').textContent(), textbookPrompt.en);
     assert.match(await plain.locator('#stepsList .final-answer-step .math-fallback').textContent(), /2.20 cm/);
     await fallback.close();
-    console.log('PASS all 36 direct routes offline, prior progress retained, and readable equation fallback.');
+    console.log('PASS all 44 direct routes offline, prior progress retained, and readable equation fallback.');
   } finally {
     if (browser) await browser.close();
     await app.close();

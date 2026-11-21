@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Apartment and cell phone tower diagram for Exercise 6.4 Q4</title>
+  <desc id="desc">From foot of 50 m apartment tower top has 60 degrees elevation; from top of apartment tower foot has 30 degrees depression.</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="26" y1="188" x2="294" y2="188" stroke="#525B62" stroke-width="1.5"/>
+  <rect x="64" y="130" width="16" height="58" fill="#E6EFEA" stroke="#181B20" stroke-width="1.8"/>
+  <line x1="242" y1="188" x2="242" y2="32" stroke="#166353" stroke-width="3"/>
+  <line x1="80" y1="130" x2="242" y2="130" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="80" y1="188" x2="242" y2="32" stroke="#6E2933" stroke-width="2"/>
+  <line x1="80" y1="130" x2="242" y2="188" stroke="#166353" stroke-width="1.8"/>
+  <path d="M118.0,130.0 A38,38 0 0,1 115.8,142.8" fill="none" stroke="#166353" stroke-width="1.4"/>
+  <path d="M114.0,188.0 A34,34 0 0,0 104.5,164.4" fill="none" stroke="#6E2933" stroke-width="1.4"/>
+  <text x="158" y="145" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#166353">30° (dep)</text>
+  <text x="124" y="179" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#6E2933">60°</text>
+  <text x="48" y="159" transform="rotate(-90 48 159)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">50 m</text>
+  <text x="260" y="110" transform="rotate(-90 260 110)" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">H = ?</text>
+  <text x="161" y="206" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">d = 50√3 m</text>
+</svg>

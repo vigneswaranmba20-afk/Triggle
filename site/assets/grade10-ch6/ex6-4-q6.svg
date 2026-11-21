@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Three villagers across valley diagram for Exercise 6.4 Q6</title>
+  <desc id="desc">Villager B lies horizontally 8 km from A at depression 20 degrees from A, and 12 km from C at elevation 30 degrees to C.</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="36" y1="116" x2="152" y2="116" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="36" y1="170" x2="284" y2="170" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="36" y1="116" x2="152" y2="170" stroke="#6E2933" stroke-width="2"/>
+  <line x1="152" y1="170" x2="280" y2="48" stroke="#166353" stroke-width="2"/>
+  <line x1="280" y1="48" x2="280" y2="170" stroke="#181B20" stroke-width="1.6"/>
+  <line x1="152" y1="116" x2="152" y2="170" stroke="#181B20" stroke-width="1.6"/>
+  <circle cx="36" cy="116" r="4" fill="#181B20"/>
+  <circle cx="152" cy="170" r="4" fill="#6E2933"/>
+  <circle cx="280" cy="48" r="4" fill="#166353"/>
+  <path d="M78.0,116.0 A42,42 0 0,1 74.1,133.7" fill="none" stroke="#6E2933" stroke-width="1.3"/>
+  <path d="M188.0,170.0 A36,36 0 0,0 178.1,145.2" fill="none" stroke="#166353" stroke-width="1.3"/>
+  <text x="26" y="106" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">A</text>
+  <text x="152" y="185" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#6E2933">B</text>
+  <text x="286" y="42" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="start" fill="#166353">C</text>
+  <text x="96" y="132" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#6E2933">20°</text>
+  <text x="202" y="160" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#166353">30°</text>
+  <text x="94" y="198" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">8 km</text>
+  <text x="216" y="198" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">12 km</text>
+</svg>

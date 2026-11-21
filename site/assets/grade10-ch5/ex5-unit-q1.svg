@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Midpoint rhombus ABCD inside rectangle PQRS for Unit Exercise 5 Q1</title>
+  <desc id="desc">Rectangle P(-1,-1), Q(-1,4), R(5,4), S(5,-1) with side midpoints A, B, C, D forming rhombus ABCD.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="45.0" y1="18.0" x2="45.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="68.0" y1="18.0" x2="68.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="91.0" y1="18.0" x2="91.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="114.0" y1="18.0" x2="114.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="137.0" y1="18.0" x2="137.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="160.0" y1="18.0" x2="160.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="183.0" y1="18.0" x2="183.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="206.0" y1="18.0" x2="206.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="229.0" y1="18.0" x2="229.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="252.0" y1="18.0" x2="252.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="275.0" y1="18.0" x2="275.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="45.0" y1="190.5" x2="275.0" y2="190.5" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="45.0" y1="167.5" x2="275.0" y2="167.5" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="45.0" y1="144.5" x2="275.0" y2="144.5" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="45.0" y1="121.5" x2="275.0" y2="121.5" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="45.0" y1="98.5" x2="275.0" y2="98.5" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="45.0" y1="75.5" x2="275.0" y2="75.5" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="45.0" y1="52.5" x2="275.0" y2="52.5" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="45.0" y1="29.5" x2="275.0" y2="29.5" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="114.0" y1="14.0" x2="114.0" y2="206.0" stroke="#525B62" stroke-width="1.2"/>
+  <line x1="41.0" y1="144.5" x2="279.0" y2="144.5" stroke="#525B62" stroke-width="1.2"/>
+  <polygon points="91.0,167.5 91.0,52.5 229.0,52.5 229.0,167.5" fill="none" stroke="#181B20" stroke-width="1.8"/>
+  <polygon points="91.0,110.0 160.0,52.5 229.0,110.0 160.0,167.5" fill="#E6EFEA" fill-opacity="0.6" stroke="#166353" stroke-width="2"/>
+  <line x1="91.0" y1="110.0" x2="229.0" y2="110.0" stroke="#6E2933" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <line x1="160.0" y1="52.5" x2="160.0" y2="167.5" stroke="#6E2933" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <circle cx="91.0" cy="167.5" r="2.8" fill="#181B20"/><text x="87.0" y="178.5" font-family="system-ui,sans-serif" font-size="8.6" font-weight="700" text-anchor="end" fill="#181B20">P(-1,-1)</text>
+  <circle cx="91.0" cy="52.5" r="2.8" fill="#181B20"/><text x="87.0" y="47.5" font-family="system-ui,sans-serif" font-size="8.6" font-weight="700" text-anchor="end" fill="#181B20">Q(-1,4)</text>
+  <circle cx="229.0" cy="52.5" r="2.8" fill="#181B20"/><text x="233.0" y="47.5" font-family="system-ui,sans-serif" font-size="8.6" font-weight="700" text-anchor="start" fill="#181B20">R(5,4)</text>
+  <circle cx="229.0" cy="167.5" r="2.8" fill="#181B20"/><text x="233.0" y="178.5" font-family="system-ui,sans-serif" font-size="8.6" font-weight="700" text-anchor="start" fill="#181B20">S(5,-1)</text>
+  <circle cx="91.0" cy="110.0" r="3.2" fill="#166353"/><text x="86.0" y="113.0" font-family="system-ui,sans-serif" font-size="8.8" font-weight="700" text-anchor="end" fill="#166353">A</text>
+  <circle cx="160.0" cy="52.5" r="3.2" fill="#166353"/><text x="160.0" y="46.5" font-family="system-ui,sans-serif" font-size="8.8" font-weight="700" text-anchor="middle" fill="#166353">B(2,4)</text>
+  <circle cx="229.0" cy="110.0" r="3.2" fill="#166353"/><text x="235.0" y="113.0" font-family="system-ui,sans-serif" font-size="8.8" font-weight="700" text-anchor="start" fill="#166353">C</text>
+  <circle cx="160.0" cy="167.5" r="3.2" fill="#166353"/><text x="160.0" y="179.5" font-family="system-ui,sans-serif" font-size="8.8" font-weight="700" text-anchor="middle" fill="#166353">D(2,-1)</text>
+</svg>

@@ -1,0 +1,311 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 6,
+  "exercise": "6.4",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "methodology": "Visually inspected rendered 2025 English PDF pp. 270–271 (printed pp. 264–265) and Answer Appendix p. 347, plus 2025 Tamil PDF pp. 278–279 (printed pp. 272–273) and Answer Appendix p. 362.",
+  "status": "page-visual-checked",
+  "tamilEditorial": "pending",
+  "items": [
+    {
+      "id": "c10-6-ex6-4-q1",
+      "exercise": "6.4",
+      "questionNumber": 1,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "1. From the top of a tree of height 13 m the angle of elevation and depression of the top and bottom of another tree are 45° and 30° respectively. Find the height of the second tree. (√3 = 1.732)",
+        "ta": "1. 13 மீ உயரமுள்ள ஒரு மரத்தின் உச்சியிலிருந்து மற்றொரு மரத்தின் உச்சி மற்றும் அடியின் ஏற்றக்கோணம் மற்றும் இறக்கக்கோணம் முறையே 45° மற்றும் 30° எனில், இரண்டாவது மரத்தின் உயரத்தைக் காண்க. (√3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 264,
+          "pdf": 270
+        },
+        "ta": {
+          "printed": 272,
+          "pdf": 278
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-4-q1.svg"
+      },
+      "appendixAnswer": {
+        "en": "35.52 m",
+        "ta": "35.52 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-4-q2",
+      "exercise": "6.4",
+      "questionNumber": 2,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "2. A man is standing on the deck of a ship, which is 40 m above water level. He observes the angle of elevation of the top of a hill as 60° and the angle of depression of the base of the hill as 30°. Calculate the distance of the hill from the ship and the height of the hill. (√3 = 1.732)",
+        "ta": "2. கடலின் நீர் மட்டத்திலிருந்து 40 மீட்டருக்கு மேலே உள்ள ஒரு கப்பலின் மேல் பகுதியில் நின்று கொண்டிருக்கிற ஒருவர், குன்றின் உச்சியை 60° ஏற்றக்கோணத்திலும் அடிப்பகுதியை 30° இறக்கக்கோணத்திலும் காண்கிறார் எனில், கப்பலிலிருந்து குன்றுக்கு உள்ள தொலைவையும், குன்றின் உயரத்தையும் காண்க. (√3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 272,
+          "pdf": 278
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-4-q2.svg"
+      },
+      "appendixAnswer": {
+        "en": "69.28 m, 160 m",
+        "ta": "69.28 மீ, 160 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-4-q3",
+      "exercise": "6.4",
+      "questionNumber": 3,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "3. If the angle of elevation of a cloud from a point ‘h’ metres above a lake is θ1 and the angle of depression of its reflection in the lake is θ2. Prove that the height that the cloud is located from the ground is h(tan θ1 + tan θ2) / (tan θ2 − tan θ1).",
+        "ta": "3. ஏரியின் நீர் மட்டத்திலிருந்து h மீ உயரத்திலுள்ள ஒரு புள்ளியிலிருந்து ஒரு மேகத்தின் ஏற்றக்கோணம் θ1 மற்றும் ஏரி நீரில் விழும் மேகப் பிம்பத்தின் இறக்கக்கோணம் θ2 எனில், தரையிலிருந்து மேகத்தின் உயரம் h(tan θ1 + tan θ2)/(tan θ2 − tan θ1) என நிரூபிக்கவும்"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 272,
+          "pdf": 278
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-4-q3.svg"
+      },
+      "appendixAnswer": {
+        "en": "Proof (identity)",
+        "ta": "நிரூபணம்"
+      }
+    },
+    {
+      "id": "c10-6-ex6-4-q4",
+      "exercise": "6.4",
+      "questionNumber": 4,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "4. The angle of elevation of the top of a cell phone tower from the foot of a high apartment is 60° and the angle of depression of the foot of the tower from the top of the apartment is 30°. If the height of the apartment is 50 m, find the height of the cell phone tower. According to radiations control norms, the minimum height of a cell phone tower should be 120 m. State if the height of the above mentioned cell phone tower meets the radiation norms.",
+        "ta": "4. உயரமான அடுக்குமாடிக் குடியிருப்பின் அடியிலிருந்து அலைபேசி கோபுர உச்சியின் ஏற்றக்கோணம் 60° மற்றும் குடியிருப்பின் உச்சியிலிருந்து கோபுர அடியின் இறக்கக்கோணம் 30° ஆகும். அடுக்குமாடி குடியிருப்பின் உயரம் 50 மீ எனில் அலைபேசிக் கோபுரத்தின் உயரத்தைக் காண்க. கதிர்வீச்சுக் கட்டுப்பாடு விதியின்படி அலைபேசிக் கோபுரத்தின் குறைந்தபட்ச உயரம் 120 மீ இருக்க வேண்டும். மேற்கண்ட அலைக்கோபுரம் இந்தக் கட்டுப்பாட்டிற்கு உட்படுகிறதா?"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 273,
+          "pdf": 279
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-4-q4.svg"
+      },
+      "appendixAnswer": {
+        "en": "150 m, yes",
+        "ta": "150 மீ, ஆம்"
+      }
+    },
+    {
+      "id": "c10-6-ex6-4-q5-i",
+      "exercise": "6.4",
+      "questionNumber": 5,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "5. The angles of elevation and depression of the top and bottom of a lamp post from the top of a 66 m high apartment are 60° and 30° respectively. Find\n(i) The height of the lamp post.",
+        "ta": "5. 66 மீ உயரமான அடுக்குமாடிக் குடியிருப்பின் உச்சியிலிருந்து ஒரு விளக்குக் கம்பத்தின் உச்சி மற்றும் அடியின் ஏற்றக்கோணம் மற்றும் இறக்கக்கோணம் முறையே 60°, 30° எனில் பின்வருவனவற்றைக் காண்க.\n(i) விளக்குக் கம்பத்தின் உயரம்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 273,
+          "pdf": 279
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-4-q5.svg"
+      },
+      "appendixAnswer": {
+        "en": "264 m",
+        "ta": "264 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-4-q5-ii",
+      "exercise": "6.4",
+      "questionNumber": 5,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "5. The angles of elevation and depression of the top and bottom of a lamp post from the top of a 66 m high apartment are 60° and 30° respectively. Find\n(ii) The difference between height of the lamp post and the apartment.",
+        "ta": "5. 66 மீ உயரமான அடுக்குமாடிக் குடியிருப்பின் உச்சியிலிருந்து ஒரு விளக்குக் கம்பத்தின் உச்சி மற்றும் அடியின் ஏற்றக்கோணம் மற்றும் இறக்கக்கோணம் முறையே 60°, 30° எனில் பின்வருவனவற்றைக் காண்க.\n(ii) விளக்குக் கம்ப உயரத்திற்கும் அடுக்குமாடியின் உயரத்திற்கும் இடையேயுள்ள வித்தியாசம்."
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 273,
+          "pdf": 279
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-4-q5.svg"
+      },
+      "appendixAnswer": {
+        "en": "198 m",
+        "ta": "198 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-4-q5-iii",
+      "exercise": "6.4",
+      "questionNumber": 5,
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "5. The angles of elevation and depression of the top and bottom of a lamp post from the top of a 66 m high apartment are 60° and 30° respectively. Find\n(iii) The distance between the lamp post and the apartment. (√3 = 1.732)",
+        "ta": "5. 66 மீ உயரமான அடுக்குமாடிக் குடியிருப்பின் உச்சியிலிருந்து ஒரு விளக்குக் கம்பத்தின் உச்சி மற்றும் அடியின் ஏற்றக்கோணம் மற்றும் இறக்கக்கோணம் முறையே 60°, 30° எனில் பின்வருவனவற்றைக் காண்க.\n(iii) விளக்குக் கம்பத்திற்கும் அடுக்குமாடிக்கும் இடையே உள்ள தொலைவு. (√3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 273,
+          "pdf": 279
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": false,
+        "asset": "assets/grade10-ch6/ex6-4-q5.svg"
+      },
+      "appendixAnswer": {
+        "en": "114.31 m",
+        "ta": "114.31 மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-4-q6-i",
+      "exercise": "6.4",
+      "questionNumber": 6,
+      "part": "i",
+      "textbookPrompt": {
+        "en": "6. Three villagers A, B and C can see each other using telescope across a valley. The horizontal distance between A and B is 8 km and the horizontal distance between B and C is 12 km. The angle of depression of B from A is 20° and the angle of elevation of C from B is 30°. Calculate : (i) the vertical height between A and B. (tan 20° = 0.3640, √3 = 1.732)",
+        "ta": "6. A, B மற்றும் C என்ற மூன்று கிராமவாசிகள் ஒரு பள்ளத்தாக்கில் ஒருவருக்கொருவர் தொலைநோக்கியில் பார்க்குமாறு உள்ளனர். A-க்கும், B-க்கும் இடைப்பட்ட கிடைமட்டத் தொலைவு 8 கி.மீ மற்றும் B-க்கும், C-க்கும் இடைப்பட்ட கிடைமட்டத் தொலைவு 12 கி.மீ. A-லிருந்து B-க்கு உள்ள இறக்கக்கோணம் 20° மற்றும் B-லிருந்து C-க்கு உள்ள ஏற்றக்கோணம் 30° எனில் பின்வருவனவற்றைக் கணக்கிடுக. (i) A-க்கும் B-க்கும் இடையேயுள்ள செங்குத்து உயரம். (tan 20° = 0.3640, √3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 273,
+          "pdf": 279
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": true,
+        "asset": "assets/grade10-ch6/ex6-4-q6.svg"
+      },
+      "appendixAnswer": {
+        "en": "2.91 km",
+        "ta": "2.91 கி.மீ"
+      }
+    },
+    {
+      "id": "c10-6-ex6-4-q6-ii",
+      "exercise": "6.4",
+      "questionNumber": 6,
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "6. Three villagers A, B and C can see each other using telescope across a valley. The horizontal distance between A and B is 8 km and the horizontal distance between B and C is 12 km. The angle of depression of B from A is 20° and the angle of elevation of C from B is 30°. Calculate : (ii) the vertical height between B and C. (tan 20° = 0.3640, √3 = 1.732)",
+        "ta": "6. A, B மற்றும் C என்ற மூன்று கிராமவாசிகள் ஒரு பள்ளத்தாக்கில் ஒருவருக்கொருவர் தொலைநோக்கியில் பார்க்குமாறு உள்ளனர். A-க்கும், B-க்கும் இடைப்பட்ட கிடைமட்டத் தொலைவு 8 கி.மீ மற்றும் B-க்கும், C-க்கும் இடைப்பட்ட கிடைமட்டத் தொலைவு 12 கி.மீ. A-லிருந்து B-க்கு உள்ள இறக்கக்கோணம் 20° மற்றும் B-லிருந்து C-க்கு உள்ள ஏற்றக்கோணம் 30° எனில் பின்வருவனவற்றைக் கணக்கிடுக. (ii) B-க்கும் C-க்கும் இடையேயுள்ள செங்குத்து உயரம். (tan 20° = 0.3640, √3 = 1.732)"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 273,
+          "pdf": 279
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figure": {
+        "inTextbooks": true,
+        "asset": "assets/grade10-ch6/ex6-4-q6.svg"
+      },
+      "appendixAnswer": {
+        "en": "6.93 km",
+        "ta": "6.93 கி.மீ"
+      }
+    }
+  ]
+}

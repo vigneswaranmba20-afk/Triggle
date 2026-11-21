@@ -1,0 +1,152 @@
+/* Probability concept lessons use the existing Bond Light shell and journey. */
+.probability-lesson {
+  color: var(--ink, #241e26);
+  line-height: 1.55;
+}
+
+.probability-lesson p,
+.probability-language {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.probability-demo {
+  display: grid;
+  gap: 9px;
+}
+
+.probability-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.probability-controls button {
+  min-height: 44px;
+  min-width: 44px;
+  max-width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #a99a9e;
+  border-radius: 8px;
+  background: #fff;
+  color: #3c2b33;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.probability-controls button[aria-pressed="true"] {
+  border-color: #792b45;
+  background: #792b45;
+  color: #fff;
+}
+
+.probability-outcomes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3.8rem, 1fr));
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.probability-outcomes li {
+  display: grid;
+  place-content: center;
+  grid-auto-flow: column;
+  gap: 4px;
+  min-height: 43px;
+  padding: 4px;
+  border: 1px solid #d2c7cb;
+  border-radius: 7px;
+  background: #fff;
+  color: #3c2b33;
+  text-align: center;
+  font-size: 0.94rem;
+}
+
+.probability-outcomes .probability-match,
+.probability-outcomes [data-matches="A"] {
+  border-color: #792b45;
+  background: #f7e7ec;
+  font-weight: 700;
+}
+
+.probability-outcomes [data-matches="B"] {
+  border-color: #326458;
+  background: #e7f4ee;
+  font-weight: 700;
+}
+
+.probability-outcomes [data-matches="A and B"] {
+  border-color: #483a61;
+  background: #eee8f7;
+  font-weight: 700;
+}
+
+.probability-comparison {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(50px, 1fr);
+  align-items: center;
+  gap: 4px 10px;
+  margin: 0;
+}
+
+.probability-comparison dd {
+  margin: 0;
+}
+
+.probability-comparison meter {
+  width: 100%;
+  height: 16px;
+}
+
+.probability-result {
+  margin-top: 8px;
+}
+
+.probability-detail {
+  border-block: 1px solid #d2c7cb;
+  margin: 14px 0;
+}
+
+.probability-detail summary {
+  min-height: 44px;
+  padding: 10px 4px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.probability-detail summary:focus-visible,
+.probability-controls button:focus-visible {
+  outline: 3px solid #792b45;
+  outline-offset: 2px;
+}
+
+.probability-lesson .probability-answers {
+  display: grid;
+}
+
+.probability-answers button {
+  text-align: left;
+}
+
+.probability-feedback:not(:empty) {
+  margin-top: 10px;
+  font-weight: 650;
+}
+
+.probability-lesson .probability-feedback p {
+  margin: 4px 0 0;
+  font-weight: 400;
+}
+
+.probability-event-pairs .probability-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.probability-demo .probability-event-key {
+  margin: 0;
+}

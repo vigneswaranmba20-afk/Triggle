@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Two trees diagram for Exercise 6.4 Q1</title>
+  <desc id="desc">Tree 1 of height 13 m facing taller Tree 2 across horizontal gap x; elevation 45 degrees to top and depression 30 degrees to bottom.</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="28" y1="190" x2="292" y2="190" stroke="#525B62" stroke-width="1.5"/>
+  <line x1="76" y1="190" x2="76" y2="120" stroke="#181B20" stroke-width="3"/>
+  <line x1="234" y1="190" x2="234" y2="36" stroke="#166353" stroke-width="3"/>
+  <line x1="76" y1="120" x2="234" y2="120" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="76" y1="120" x2="234" y2="36" stroke="#6E2933" stroke-width="2"/>
+  <line x1="76" y1="120" x2="234" y2="190" stroke="#6E2933" stroke-width="2"/>
+  <path d="M116.0,120.0 A40,40 0 0,0 111.3,101.2" fill="none" stroke="#6E2933" stroke-width="1.4"/>
+  <path d="M120.0,120.0 A44,44 0 0,1 116.2,137.8" fill="none" stroke="#166353" stroke-width="1.4"/>
+  <text x="132" y="112" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#6E2933">45°</text>
+  <text x="148" y="136" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#166353">30°</text>
+  <text x="60" y="155" transform="rotate(-90 60 155)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">13 m</text>
+  <text x="250" y="155" transform="rotate(-90 250 155)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">13 m</text>
+  <text x="250" y="78" transform="rotate(-90 250 78)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">h</text>
+  <text x="155" y="206" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#525B62">x = 13√3 m</text>
+</svg>

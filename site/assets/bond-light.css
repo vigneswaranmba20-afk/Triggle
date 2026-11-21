@@ -226,6 +226,7 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
 .page-button.next, .step-primary, .discover-feature button {
   background: var(--bond-graphite); border-color: var(--bond-graphite); color: #FFFFFF;
 }
+.page-status, .crumb-link span, .hub-section-arrow { color: var(--bond-muted); }
 .page-track span { background: var(--bond-burgundy); }
 .answer-box, .lesson-card .answer-box {
   background: #EFF8F4; border-color: #BEDFD2;

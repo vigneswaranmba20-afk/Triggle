@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Ship and hill diagram for Exercise 6.4 Q2</title>
+  <desc id="desc">Observer on ship deck 40 m above sea sees top of hill at 60 degrees elevation and base of hill at 30 degrees depression.</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="24" y1="188" x2="296" y2="188" stroke="#1F6FEB" stroke-width="1.6"/>
+  <line x1="72" y1="188" x2="72" y2="132" stroke="#181B20" stroke-width="3"/>
+  <line x1="236" y1="188" x2="236" y2="34" stroke="#166353" stroke-width="3"/>
+  <line x1="72" y1="132" x2="236" y2="132" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="72" y1="132" x2="236" y2="34" stroke="#6E2933" stroke-width="2"/>
+  <line x1="72" y1="132" x2="236" y2="188" stroke="#6E2933" stroke-width="2"/>
+  <path d="M110.0,132.0 A38,38 0 0,0 104.6,112.5" fill="none" stroke="#6E2933" stroke-width="1.4"/>
+  <path d="M118.0,132.0 A46,46 0 0,1 115.5,146.8" fill="none" stroke="#166353" stroke-width="1.4"/>
+  <text x="124" y="122" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#6E2933">60°</text>
+  <text x="152" y="146" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#166353">30°</text>
+  <text x="55" y="160" transform="rotate(-90 55 160)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">40 m</text>
+  <text x="252" y="160" transform="rotate(-90 252 160)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">40 m</text>
+  <text x="252" y="83" transform="rotate(-90 252 83)" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">h</text>
+  <text x="154" y="206" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">Distance d</text>
+</svg>

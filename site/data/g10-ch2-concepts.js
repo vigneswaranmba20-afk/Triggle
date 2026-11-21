@@ -947,9 +947,9 @@ window.TRIGGLE_G10_CH2_PATH={
     {
       "id": "g10-ch2-gp-sum",
       "video": {
-        "src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-gp-sum/b89073380f066247805c5b1ba5def43522c6424c36d731bc26973120c5438ab3.mp4",
+        "src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-gp-sum/fa50e19cc4795e55839fedd37a9cb49bff499bbf05ad7ffc6d2772ef9f981977.mp4",
         "language": "en",
-        "durationSeconds": 93
+        "durationSeconds": 108.62
       },
       "section": "2.10",
       "title": {

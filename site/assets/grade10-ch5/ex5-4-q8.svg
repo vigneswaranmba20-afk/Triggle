@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Perpendicular bisector of AB for Exercise 5.4 Q8</title>
+  <desc id="desc">Segment joining A(-4,2) and B(6,-4) bisected perpendicularly at M(1,-1) by line 5x - 3y - 8 = 0.</desc>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <line x1="31.2" y1="18.0" x2="31.2" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="49.6" y1="18.0" x2="49.6" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="68.0" y1="18.0" x2="68.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="86.4" y1="18.0" x2="86.4" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="104.8" y1="18.0" x2="104.8" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="123.2" y1="18.0" x2="123.2" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="141.6" y1="18.0" x2="141.6" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="160.0" y1="18.0" x2="160.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="178.4" y1="18.0" x2="178.4" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="196.8" y1="18.0" x2="196.8" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="215.2" y1="18.0" x2="215.2" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="233.6" y1="18.0" x2="233.6" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="252.0" y1="18.0" x2="252.0" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="270.4" y1="18.0" x2="270.4" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="288.8" y1="18.0" x2="288.8" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="202.0" x2="288.8" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="183.6" x2="288.8" y2="183.6" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="165.2" x2="288.8" y2="165.2" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="146.8" x2="288.8" y2="146.8" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="128.4" x2="288.8" y2="128.4" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="110.0" x2="288.8" y2="110.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="91.6" x2="288.8" y2="91.6" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="73.2" x2="288.8" y2="73.2" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="54.8" x2="288.8" y2="54.8" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="36.4" x2="288.8" y2="36.4" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="31.2" y1="18.0" x2="288.8" y2="18.0" stroke="#E3E2DA" stroke-width="1"/>
+  <line x1="141.6" y1="14.0" x2="141.6" y2="206.0" stroke="#525B62" stroke-width="1.2"/>
+  <line x1="27.2" y1="91.6" x2="292.8" y2="91.6" stroke="#525B62" stroke-width="1.2"/>
+  <line x1="68.0" y1="54.8" x2="252.0" y2="165.2" stroke="#181B20" stroke-width="2"/>
+  <line x1="115.8" y1="183.6" x2="204.2" y2="36.4" stroke="#6E2933" stroke-width="2" stroke-dasharray="4,2"/>
+  <circle cx="68.0" cy="54.8" r="3.4" fill="#166353" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="68.0" y="46.8" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#166353">A(-4,2)</text>
+  <circle cx="252.0" cy="165.2" r="3.4" fill="#166353" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="252.0" y="178.2" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="middle" fill="#166353">B(6,-4)</text>
+  <circle cx="160.0" cy="110.0" r="3.4" fill="#6E2933" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="167.0" y="114.0" font-family="system-ui,sans-serif" font-size="9.2" font-weight="700" text-anchor="start" fill="#6E2933">M(1,-1)</text>
+  <text x="209.2" y="40.4" font-family="system-ui,sans-serif" font-size="8.5" font-weight="700" text-anchor="start" fill="#6E2933">5x-3y-8=0</text>
+</svg>

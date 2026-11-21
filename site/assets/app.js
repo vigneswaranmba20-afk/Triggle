@@ -44,7 +44,7 @@
  const mobile=matchMedia('(max-width:800px)');
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  const plainMath=value=>Array.isArray(value)?value.map(plainMath).join(''):(value?.fallback??value);
- const isGeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2'].includes(item.exercise);
+ const isGeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3'].includes(item.exercise);
  const englishInTamilReader=text=>grade===9&&lang==='ta'&&/[a-z]{2}/i.test(text)&&!/\p{Script=Tamil}/u.test(text);
  function math(str){
   // Local typesetting: accessible group exponents and no cloud requests.
@@ -56,7 +56,7 @@
  // current exercise by activeList(), consistently for all Classes 9–12.
  const textbookExerciseList=chapter=>{
    const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
-   const sourceBatches=(grade===10&&['2','4'].includes(String(chapter?.number)))||(grade===9&&['1','3'].includes(String(chapter?.number)));
+   const sourceBatches=(grade===10&&['2','4','6'].includes(String(chapter?.number)))||(grade===9&&['1','3'].includes(String(chapter?.number)));
    if(!sourceBatches)return items;
    // Source-verified Grade 9 and Grade 10 exercise parts
    // arrive in independent batches. Sort only their navigation lists, preserving
@@ -252,6 +252,9 @@
      const interactiveStages=chapter.id==='g9-ch1'?window.TRIGGLE_SET_PATH?.stages:
        chapter.id==='g9-ch2'?window.TRIGGLE_REAL_PATH?.stages:
        chapter.id==='g10-ch3'?window.TRIGGLE_G10_CH3_PATH?.stages:
+       chapter.id==='g10-ch4'?window.TRIGGLE_G10_CH4_PATH?.stages:
+       chapter.id==='g10-ch5'?window.TRIGGLE_G10_CH5_PATH?.stages:
+       chapter.id==='g10-ch6'?window.TRIGGLE_G10_CH6_PATH?.stages:
        chapter.id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:null;
      const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
      const practiceCount=all.length;
@@ -401,7 +404,7 @@
   const chapter1Math=window.TriggleChapter1Math?.getStep?.(current,index);
   if(chapter1Math)s={...s,math:chapter1Math};
   if(!s.math&&!isGeometryExercise(current)){
-   const remainingMath=window.TriggleG10RemainingMath?.getStep?.(current,index);
+   const remainingMath=window.TriggleG10RemainingMath?.getStep?.(current,index)||window.TriggleG10Ch2FractionMath?.getStep?.(current,index);
    if(remainingMath)s={...s,math:remainingMath};
   }
   const li=document.createElement('li');li.className='worked-step';
@@ -468,7 +471,7 @@
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
   const grade9Answer=window.TriggleG9Math?.get(current)?.answerMath;
-  const answerMath=(grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||window.TriggleG10RemainingMath?.getAnswer?.(current);
+  const answerMath=(grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getAnswer?.(current))||window.TriggleG10Ch2FractionMath?.getAnswer?.(current);
   const canGrid=!answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
@@ -590,7 +593,7 @@
   $('gradeTotal').textContent=list.length+' '+ui('lessons');$('questionLabel').textContent=labelForGroup(current.exercise).toUpperCase();$('itemPosition').textContent=num(position)+' / '+num(list.length);
   $('questionTitle').textContent=tr(current.topic);$('questionHead').textContent=tr(current.label);
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
-  const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||window.TriggleG10RemainingMath?.getQuestion?.(current,lang);
+  const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
   $('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));$('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';

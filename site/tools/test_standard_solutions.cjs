@@ -134,10 +134,61 @@ const ex314Records=ex314Context.window.TRIGGLE_CLASSES[10].items;
 const ex314Ids=ex314Records.map(r=>r.id);
 assert.equal(ex314Records.length,13,'Thirteen source-reviewed Exercise 3.14 parts');
 const geometry=require('../data/textbook-fidelity/g10-ch4-ex4-1-to-4-2.json');
-const geometryById=new Map(geometry.items.map(item=>[item.id,item]));
+const geometryEx43=require('../data/textbook-fidelity/g10-ch4-ex4-3.json');
+const geometryById=new Map([...geometry.items,...geometryEx43.items].map(item=>[item.id,item]));
 const geometryNewIds=geometry.items.filter(item=>!item.wasAvailableOnMain).map(item=>item.id);
 assert.equal(geometryNewIds.length,32);
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds];
+const geometryEx43NewIds=geometryEx43.items.map(item=>item.id);
+assert.equal(geometryEx43NewIds.length,8,'Eight source-indexed Ex4.3 tasks');
+const ch5Ex51=require('../data/textbook-fidelity/g10-ch5-ex5-1.json');
+const ch5Ex51ById=new Map(ch5Ex51.items.map(item=>[item.id,item]));
+const ch5Ex51NewIds=ch5Ex51.items.map(item=>item.id);
+assert.equal(ch5Ex51NewIds.length,18,'Eighteen source-indexed Ch5 Ex5.1 tasks');
+const ch5Ex52=require('../data/textbook-fidelity/g10-ch5-ex5-2.json');
+const ch5Ex52ById=new Map(ch5Ex52.items.map(item=>[item.id,item]));
+const ch5Ex52NewIds=ch5Ex52.items.map(item=>item.id);
+assert.equal(ch5Ex52NewIds.length,17,'Seventeen source-indexed Ch5 Ex5.2 tasks');
+const ch5Ex53=require('../data/textbook-fidelity/g10-ch5-ex5-3.json');
+const ch5Ex53ById=new Map(ch5Ex53.items.map(item=>[item.id,item]));
+const ch5Ex53NewIds=ch5Ex53.items.map(item=>item.id);
+assert.equal(ch5Ex53NewIds.length,22,'Twenty-two source-indexed Ch5 Ex5.3 tasks');
+const ch5Ex54=require('../data/textbook-fidelity/g10-ch5-ex5-4.json');
+const ch5Ex54ById=new Map(ch5Ex54.items.map(item=>[item.id,item]));
+const ch5Ex54NewIds=ch5Ex54.items.map(item=>item.id);
+assert.equal(ch5Ex54NewIds.length,15,'Fifteen source-indexed Ch5 Ex5.4 tasks');
+const ch5Ex55=require('../data/textbook-fidelity/g10-ch5-ex5-5.json');
+const ch5Ex55ById=new Map(ch5Ex55.items.map(item=>[item.id,item]));
+const ch5Ex55NewIds=ch5Ex55.items.map(item=>item.id);
+assert.equal(ch5Ex55NewIds.length,15,'Fifteen source-indexed Ch5 Ex5.5 MCQs');
+const ch5Unit=require('../data/textbook-fidelity/g10-ch5-ex5-unit.json');
+const ch5UnitById=new Map(ch5Unit.items.map(item=>[item.id,item]));
+const ch5UnitNewIds=ch5Unit.items.map(item=>item.id);
+assert.equal(ch5UnitNewIds.length,10,'Ten source-indexed Ch5 Unit Ex5 questions');
+const ch6Ex61=require('../data/textbook-fidelity/g10-ch6-ex6-1.json');
+const ch6Ex61ById=new Map(ch6Ex61.items.map(item=>[item.id,item]));
+const ch6Ex61NewIds=ch6Ex61.items.map(item=>item.id);
+assert.equal(ch6Ex61NewIds.length,18,'Eighteen new source-indexed Ch6 Ex6.1 tasks (+1 preserved Q2(i))');
+const ch6Ex62=require('../data/textbook-fidelity/g10-ch6-ex6-2.json');
+const ch6Ex62ById=new Map(ch6Ex62.items.map(item=>[item.id,item]));
+const ch6Ex62NewIds=ch6Ex62.items.map(item=>item.id);
+assert.equal(ch6Ex62NewIds.length,7,'Seven source-indexed Ch6 Ex6.2 tasks');
+const ch6Ex63=require('../data/textbook-fidelity/g10-ch6-ex6-3.json');
+const ch6Ex63ById=new Map(ch6Ex63.items.map(item=>[item.id,item]));
+const ch6Ex63NewIds=ch6Ex63.items.map(item=>item.id);
+assert.equal(ch6Ex63NewIds.length,6,'Six source-indexed Ch6 Ex6.3 questions');
+const ch6Ex64=require('../data/textbook-fidelity/g10-ch6-ex6-4.json');
+const ch6Ex64ById=new Map(ch6Ex64.items.map(item=>[item.id,item]));
+const ch6Ex64NewIds=ch6Ex64.items.map(item=>item.id);
+assert.equal(ch6Ex64NewIds.length,9,'Nine source-indexed Ch6 Ex6.4 tasks');
+const ch6Ex65=require('../data/textbook-fidelity/g10-ch6-ex6-5.json');
+const ch6Ex65ById=new Map(ch6Ex65.items.map(item=>[item.id,item]));
+const ch6Ex65NewIds=ch6Ex65.items.map(item=>item.id);
+assert.equal(ch6Ex65NewIds.length,15,'Fifteen source-indexed Ch6 Ex6.5 MCQs');
+const ch6Unit=require('../data/textbook-fidelity/g10-ch6-ex6-unit.json');
+const ch6UnitById=new Map(ch6Unit.items.map(item=>[item.id,item]));
+const ch6UnitNewIds=ch6Unit.items.map(item=>item.id);
+assert.equal(ch6UnitNewIds.length,13,'Thirteen source-indexed Ch6 Unit Ex6 tasks');
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -165,13 +216,73 @@ let count=0,reviewed=0;
 for(const [grade,data] of Object.entries(classes)){
  const baselineIds=preserved.grades[grade],currentIds=data.items.map(item=>item.id);
  assert.equal(JSON.stringify(currentIds.slice(0,baselineIds.length)),JSON.stringify(baselineIds),'Original 568 IDs/order preserved as the exact prefix');
- assert.equal(JSON.stringify(currentIds.slice(baselineIds.length)),JSON.stringify(grade==='10'?approvedNewIds:grade==='9'?approvedG9Ids:[]),'Only source-aligned Grade 9 Q1/Q2/Q5(iii)-Q6 and reviewed Grade 10 additions allowed');
+ assert.equal(JSON.stringify(currentIds.slice(baselineIds.length)),JSON.stringify(grade==='10'?approvedNewIds:grade==='9'?approvedG9Ids:[]),'Only source-aligned, evidence-indexed Grade 9/10 additions allowed');
  for(const item of data.items){
   const hash=crypto.createHash('sha256').update(JSON.stringify(item)).digest('hex');
   if(grade==='10'&&geometryById.has(item.id)){
    const evidence=geometryById.get(item.id);
    assert.equal(item.q.en,evidence.textbookPrompt.en,'Geometry English source fidelity '+item.id);
    assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Geometry Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch5Ex51ById.has(item.id)){
+   const evidence=ch5Ex51ById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch5 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch5 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch5Ex52ById.has(item.id)){
+   const evidence=ch5Ex52ById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch5 Ex5.2 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch5 Ex5.2 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch5Ex53ById.has(item.id)){
+   const evidence=ch5Ex53ById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch5 Ex5.3 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch5 Ex5.3 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch5Ex54ById.has(item.id)){
+   const evidence=ch5Ex54ById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch5 Ex5.4 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch5 Ex5.4 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch5Ex55ById.has(item.id)){
+   const evidence=ch5Ex55ById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch5 Ex5.5 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch5 Ex5.5 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch5UnitById.has(item.id)){
+   const evidence=ch5UnitById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch5 Unit Ex5 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch5 Unit Ex5 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch6Ex61ById.has(item.id)){
+   const evidence=ch6Ex61ById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch6 Ex6.1 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch6 Ex6.1 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch6Ex62ById.has(item.id)){
+   const evidence=ch6Ex62ById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch6 Ex6.2 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch6 Ex6.2 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch6Ex63ById.has(item.id)){
+   const evidence=ch6Ex63ById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch6 Ex6.3 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch6 Ex6.3 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch6Ex64ById.has(item.id)){
+   const evidence=ch6Ex64ById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch6 Ex6.4 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch6 Ex6.4 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch6Ex65ById.has(item.id)){
+   const evidence=ch6Ex65ById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch6 Ex6.5 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch6 Ex6.5 Tamil source fidelity '+item.id);
+   assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch6UnitById.has(item.id)){
+   const evidence=ch6UnitById.get(item.id);
+   assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch6 Unit Ex6 English source fidelity '+item.id);
+   assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch6 Unit Ex6 Tamil source fidelity '+item.id);
    assert.equal(item.translationReview,'pending');
   }else if(grade==='9'&&g9Ex32ById.has(item.id)){
    const approved=g9Ex32ById.get(item.id);
@@ -271,7 +382,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,933+geometryNewIds.length);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,933+geometryNewIds.length+geometryEx43NewIds.length+ch5Ex51NewIds.length+ch5Ex52NewIds.length+ch5Ex53NewIds.length+ch5Ex54NewIds.length+ch5Ex55NewIds.length+ch5UnitNewIds.length+ch6Ex61NewIds.length+ch6Ex62NewIds.length+ch6Ex63NewIds.length+ch6Ex64NewIds.length+ch6Ex65NewIds.length+ch6UnitNewIds.length);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');

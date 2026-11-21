@@ -1,0 +1,187 @@
+name: TRACE G.P. — capped Fola review preview
+
+# Deliberately manual-only. An audit (default) never calls Gemini.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'audit = offline checks only; generate = potentially billed Gemini TTS'
+        type: choice
+        required: true
+        default: audit
+        options:
+          - audit
+          - generate
+      through_beat:
+        description: 'Generate no more than 3 new narration beats per run. Advance 3, 6, 9.'
+        type: choice
+        required: true
+        default: '3'
+        options:
+          - '3'
+          - '6'
+          - '9'
+      approve_paid_tts:
+        description: 'I approve potentially billable Gemini API use for at most 3 new beats'
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trace-gp-fola-manual-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  audit-or-review:
+    name: G.P. voice audit or capped preview
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      LESSON: g10-ch2-gp-sum
+      CACHE_DIR: build/trace-video/gp-fola-cache
+      TARGET_BEATS: ${{ inputs.through_beat }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Offline Fola configuration, narration and exact maths checks
+        run: |
+          python3 site/tools/test_trace_voice_policy.py
+          python3 site/tools/test_trace_fola_voice.py
+          python3 site/tools/test_trace_gp_video.py
+          python3 site/tools/trace_video_factory.py self-test --lesson "$LESSON"
+
+      - name: Confirm explicit provider-cost approval
+        if: ${{ inputs.mode == 'generate' }}
+        env:
+          CONSENT: ${{ inputs.approve_paid_tts }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ "$CONSENT" != 'true' ]; then
+            echo 'Paid Gemini TTS is blocked: enable approve_paid_tts manually.' >&2
+            exit 1
+          fi
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo 'GEMINI_API_KEY is not configured. No request was sent.' >&2
+            exit 1
+          fi
+
+      - name: Restore previous matching narration WAVs
+        if: ${{ inputs.mode == 'generate' }}
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ env.CACHE_DIR }}
+          key: trace-gp-fola-v1-${{ hashFiles('site/video-factory/lessons/g10-ch2-gp-sum.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            trace-gp-fola-v1-${{ hashFiles('site/video-factory/lessons/g10-ch2-gp-sum.json') }}-
+
+      - name: Bound the maximum number of new API-generated beats
+        if: ${{ inputs.mode == 'generate' }}
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import sys
+          import wave
+
+          sys.path.insert(0, str(Path('site/tools').resolve()))
+          from trace_video_factory import DEFAULT_VOICE_DELIVERY, load_lesson
+
+          spec = load_lesson(os.environ['LESSON'])
+          target = int(os.environ['TARGET_BEATS'])
+          if target not in (3, 6, 9):
+              raise SystemExit('Choose target beat 3, 6 or 9')
+          if spec['voice'].get('name') != 'Fola' or spec['voice'].get('model') != 'gemini-3.8-flash-tts':
+              raise SystemExit('Lesson is not configured for approved Fola; no API calls')
+          cache = Path(os.environ['CACHE_DIR'])
+          cache.mkdir(parents=True, exist_ok=True)
+          voice = spec['voice']
+          pending = []
+          for beat in spec['beats'][:target]:
+              payload = [voice['model'], voice['name'],
+                         voice.get('delivery', DEFAULT_VOICE_DELIVERY),
+                         beat['narration']]
+              digest = hashlib.sha256(json.dumps(payload, ensure_ascii=False).encode()).hexdigest()[:20]
+              path = cache / (beat['id'] + '-' + digest + '.wav')
+              if not path.exists():
+                  pending.append(beat['id'])
+                  continue
+              try:
+                  with wave.open(str(path), 'rb') as item:
+                      seconds = item.getnframes() / item.getframerate()
+                      if not (0.5 <= seconds <= 95):
+                          raise ValueError('duration outside accepted range')
+              except (wave.Error, ValueError, ZeroDivisionError, EOFError) as exc:
+                  raise SystemExit('Invalid cached WAV for ' + beat['id'] + '; no API calls: ' + type(exc).__name__)
+          print('Ready for through-beat', target,
+                '| valid prior beats:', target-len(pending),
+                '| new billable beats at most:', len(pending),
+                '| missing:', ','.join(pending) or 'none')
+          if len(pending) > 3:
+              raise SystemExit('Cost guard: more than 3 new beats needed. Start at 3, then 6, then 9, preserving the cache.')
+          PY
+
+      - name: Install portrait renderer only for explicitly approved generation
+        if: ${{ inputs.mode == 'generate' }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -qq -y ffmpeg fonts-dejavu-core
+          python3 -m pip install -r site/video-factory/requirements.txt
+
+      - name: Render review-only G.P. preview with cached narration
+        if: ${{ inputs.mode == 'generate' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python3 site/tools/trace_video_factory.py render \
+            --lesson "$LESSON" --mode gemini \
+            --limit-beats "$TARGET_BEATS" \
+            --width 720 --height 1280 --fps 12 \
+            --cache "$CACHE_DIR" \
+            --output build/trace-video/gp-fola-review
+
+      # These independent saves are deliberate: a prior failed run lost its cache
+      # after an HTTP 429, leaving no trustworthy way to reuse completed audio.
+      - name: Save new narration under a unique collision-free cache key
+        if: ${{ always() && inputs.mode == 'generate' }}
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ env.CACHE_DIR }}
+          key: trace-gp-fola-v1-${{ hashFiles('site/video-factory/lessons/g10-ch2-gp-sum.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Preserve completed WAV beats even if the API hits a quota
+        if: ${{ always() && inputs.mode == 'generate' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-gp-fola-wavs-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ env.CACHE_DIR }}/*.wav
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Upload private review MP4 and provenance (never auto-publish)
+        if: ${{ success() && inputs.mode == 'generate' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-gp-fola-review-${{ inputs.through_beat }}-${{ github.run_id }}
+          path: |
+            build/trace-video/gp-fola-review/*.mp4
+            build/trace-video/gp-fola-review/result.json
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Explain review-only status
+        if: ${{ success() }}
+        run: |
+          if [ "${{ inputs.mode }}" = audit ]; then
+            echo 'Offline audit complete; zero Gemini API requests.' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Review artifact only. No R2 upload, public URL, or live Triggle update.' >> "$GITHUB_STEP_SUMMARY"
+            echo 'Check voice, arithmetic, equation timing and mobile readability before any release.' >> "$GITHUB_STEP_SUMMARY"
+          fi

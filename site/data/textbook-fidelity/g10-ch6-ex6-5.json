@@ -1,0 +1,444 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 6,
+  "exercise": "6.5",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "methodology": "Visually inspected rendered 2025 English PDF pp. 271–273 (printed pp. 265–267) and Answer Appendix p. 347, plus 2025 Tamil PDF pp. 279–280 (printed pp. 273–274) and Answer Appendix p. 362.",
+  "status": "page-visual-checked",
+  "tamilEditorial": "pending",
+  "items": [
+    {
+      "id": "c10-6-ex6-5-q1",
+      "exercise": "6.5",
+      "questionNumber": 1,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "1. The value of sin² θ + 1/(1 + tan² θ) is equal to\n(A) tan² θ   (B) 1   (C) cot² θ   (D) 0",
+        "ta": "1. sin² θ + 1/(1 + tan² θ) -ன் மதிப்பு\n(அ) tan² θ   (ஆ) 1   (இ) cot² θ   (ஈ) 0"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 273,
+          "pdf": 279
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q2",
+      "exercise": "6.5",
+      "questionNumber": 2,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "2. tan θ cosec² θ − tan θ is equal to\n(A) sec θ   (B) cot² θ   (C) sin θ   (D) cot θ",
+        "ta": "2. tan θ cosec² θ − tan θ -ன் மதிப்பு\n(அ) sec θ   (ஆ) cot² θ   (இ) sin θ   (ஈ) cot θ"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 273,
+          "pdf": 279
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(D)",
+        "ta": "(ஈ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q3",
+      "exercise": "6.5",
+      "questionNumber": 3,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "3. If (sin α + cosec α)² + (cos α + sec α)² = k + tan² α + cot² α, then the value of k is equal to\n(A) 9   (B) 7   (C) 5   (D) 3",
+        "ta": "3. (sin α + cosec α)² + (cos α + sec α)² = k + tan² α + cot² α எனில் k -ன் மதிப்பு\n(அ) 9   (ஆ) 7   (இ) 5   (ஈ) 3"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 265,
+          "pdf": 271
+        },
+        "ta": {
+          "printed": 273,
+          "pdf": 279
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q4",
+      "exercise": "6.5",
+      "questionNumber": 4,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "4. If sin θ + cos θ = a and sec θ + cosec θ = b, then the value of b(a² − 1) is equal to\n(A) 2a   (B) 3a   (C) 0   (D) 2ab",
+        "ta": "4. sin θ + cos θ = a மற்றும் sec θ + cosec θ = b எனில் b(a² − 1) -ன் மதிப்பு\n(அ) 2a   (ஆ) 3a   (இ) 0   (ஈ) 2ab"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 273,
+          "pdf": 279
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(A)",
+        "ta": "(அ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q5",
+      "exercise": "6.5",
+      "questionNumber": 5,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "5. If 5x = sec θ and 5/y = tan θ, then x² − 1/y² is equal to\n(A) 25   (B) 1/25   (C) 5   (D) 1",
+        "ta": "5. 5x = sec θ மற்றும் 5/y = tan θ எனில் x² − 1/y² -ன் மதிப்பு\n(அ) 25   (ஆ) 1/25   (இ) 5   (ஈ) 1"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q6",
+      "exercise": "6.5",
+      "questionNumber": 6,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "6. If sin θ = cos θ, then 2 tan² θ + sin² θ − 1 is equal to\n(A) −3/2   (B) 3/2   (C) 2/3   (D) −2/3",
+        "ta": "6. sin θ = cos θ எனில் 2 tan² θ + sin² θ − 1 -ன் மதிப்பு\n(அ) −3/2   (ஆ) 3/2   (இ) 2/3   (ஈ) −2/3"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q7",
+      "exercise": "6.5",
+      "questionNumber": 7,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "7. If x = a tan θ and y = b sec θ then\n(A) y²/b² − x²/a² = 1   (B) x²/a² − y²/b² = 1   (C) x²/a² + y²/b² = 1   (D) x²/a² − y²/b² = 0",
+        "ta": "7. x = a tan θ மற்றும் y = b sec θ எனில்\n(அ) y²/b² − x²/a² = 1   (ஆ) x²/a² − y²/b² = 1   (இ) x²/a² + y²/b² = 1   (ஈ) x²/a² − y²/b² = 0"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(A)",
+        "ta": "(அ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q8",
+      "exercise": "6.5",
+      "questionNumber": 8,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "8. (1 + tan θ + sec θ)(1 + cot θ − cosec θ) is equal to\n(A) 0   (B) 1   (C) 2   (D) −1",
+        "ta": "8. (1 + tan θ + sec θ)(1 + cot θ − cosec θ) -ன் மதிப்பு\n(அ) 0   (ஆ) 1   (இ) 2   (ஈ) −1"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(C)",
+        "ta": "(இ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q9",
+      "exercise": "6.5",
+      "questionNumber": 9,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "9. a cot θ + b cosec θ = p and b cot θ + a cosec θ = q then p² − q² is equal to\n(A) a² − b²   (B) b² − a²   (C) a² + b²   (D) b − a",
+        "ta": "9. a cot θ + b cosec θ = p மற்றும் b cot θ + a cosec θ = q எனில் p² − q² -ன் மதிப்பு\n(அ) a² − b²   (ஆ) b² − a²   (இ) a² + b²   (ஈ) b − a"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q10",
+      "exercise": "6.5",
+      "questionNumber": 10,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "10. If the ratio of the height of a tower and the length of its shadow is √3 : 1, then the angle of elevation of the sun has measure\n(A) 45°   (B) 30°   (C) 90°   (D) 60°",
+        "ta": "10. ஒரு கோபுரத்தின் உயரத்திற்கும் அதன் நிழலின் நீளத்திற்கும் உள்ள விகிதம் √3 : 1, எனில் சூரியனைக் காணும் ஏற்றக்கோண அளவானது\n(அ) 45°   (ஆ) 30°   (இ) 90°   (ஈ) 60°"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(D)",
+        "ta": "(ஈ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q11",
+      "exercise": "6.5",
+      "questionNumber": 11,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "11. The electric pole subtends an angle of 30° at a point on the same level as its foot. At a second point ‘b’ metres above the first, the depression of the foot of the pole is 60°. The height of the pole (in metres) is equal to\n(A) √3 b   (B) b/3   (C) b/2   (D) b/√3",
+        "ta": "11. ஒரு மின் கம்பமானது அதன் அடியில் சமதளப் பரப்பில் உள்ள ஒரு புள்ளியில் 30° கோணத்தை ஏற்படுத்துகிறது. முதல் புள்ளிக்கு ‘b’ மீ உயரத்தில் உள்ள இரண்டாவது புள்ளியிலிருந்து மின்கம்பத்தின் அடிக்கு இறக்கக்கோணம் 60° எனில் மின் கம்பத்தின் உயரமானது (மீட்டரில்)\n(அ) √3 b   (ஆ) b/3   (இ) b/2   (ஈ) b/√3"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q12",
+      "exercise": "6.5",
+      "questionNumber": 12,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "12. A tower is 60 m heigh. Its shadow reduces by x metres when the angle of elevation of the sun increases from 30° to 45° then x is equal to\n(A) 41.92 m   (B) 43.92 m   (C) 43 m   (D) 45.6 m",
+        "ta": "12. ஒரு கோபுரத்தின் உயரம் 60 மீ ஆகும். சூரியனை காணும் ஏற்றக்கோணம் 30°-லிருந்து 45° ஆக உயரும்போது கோபுரத்தின் நிழலானது x மீ குறைகிறது எனில், x-ன் மதிப்பு\n(அ) 41.92 மீ   (ஆ) 43.92 மீ   (இ) 43 மீ   (ஈ) 45.6 மீ"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      },
+      "textbookTypoNote": "2025 English PDF p. 272 prints \"heigh\" instead of \"high\"; preserved verbatim in textbookPrompt.en."
+    },
+    {
+      "id": "c10-6-ex6-5-q13",
+      "exercise": "6.5",
+      "questionNumber": 13,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "13. The angle of depression of the top and bottom of 20 m tall building from the top of a multistoried building are 30° and 60° respectively. The height of the multistoried building and the distance between two buildings (in metres) is\n(A) 20, 10√3   (B) 30, 5√3   (C) 20, 10   (D) 30, 10√3",
+        "ta": "13. பல அடுக்குக் கட்டடத்தின் உச்சியிலிருந்து 20 மீ உயரமுள்ள கட்டடத்தின் உச்சி, அடி ஆகியவற்றின் இறக்கக்கோணங்கள் முறையே 30° மற்றும் 60° எனில் பல அடுக்குக் கட்டடத்தின் உயரம் மற்றும் இரு கட்டடங்களுக்கு இடையேயுள்ள தொலைவானது (மீட்டரில்)\n(அ) 20, 10√3   (ஆ) 30, 5√3   (இ) 20, 10   (ஈ) 30, 10√3"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(D)",
+        "ta": "(ஈ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q14",
+      "exercise": "6.5",
+      "questionNumber": 14,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "14. Two persons are standing ‘x’ metres apart from each other and the height of the first person is double that of the other. If from the middle point of the line joining their feet an observer finds the angular elevations of their tops to be complementary, then the height of the shorter person (in metres) is\n(A) √2 x   (B) x / (2√2)   (C) x / √2   (D) 2x",
+        "ta": "14. இரண்டு நபர்களுக்கு இடைப்பட்ட தொலைவு x மீ ஆகும். முதல் நபரின் உயரமானது இரண்டாவது நபரின் உயரத்தைப் போல இரு மடங்காக உள்ளது. அவர்களுக்கு இடைப்பட்ட தொலைவு நேர்கோட்டின் மையப் புள்ளியிலிருந்து இரு நபர்களின் உச்சியின் ஏற்றக் கோணங்கள் நிரப்புக்கோணங்கள் எனில், குட்டையாக உள்ள நபரின் உயரம் (மீட்டரில்) காண்க.\n(அ) √2 x   (ஆ) x / (2√2)   (இ) x / √2   (ஈ) 2x"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 266,
+          "pdf": 272
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(B)",
+        "ta": "(ஆ)"
+      }
+    },
+    {
+      "id": "c10-6-ex6-5-q15",
+      "exercise": "6.5",
+      "questionNumber": 15,
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "15. The angle of elevation of a cloud from a point h metres above a lake is β. The angle of depression of its reflection in the lake is 45°. The height of location of the cloud from the lake is\n(A) h(1 + tan β) / (1 − tan β)   (B) h(1 − tan β) / (1 + tan β)   (C) h tan(45° − β)   (D) none of these",
+        "ta": "15. ஓர் ஏரியின் மேலே h மீ உயரத்தில் உள்ள ஒரு புள்ளியிலிருந்து மேகத்திற்கு உள்ள ஏற்றக்கோணம் β. மேக பிம்பத்தின் இறக்கக்கோணம் 45° எனில், ஏரியில் இருந்து மேகத்திற்கு உள்ள உயரமானது (மீட்டரில்)\n(அ) h(1 + tan β) / (1 − tan β)   (ஆ) h(1 − tan β) / (1 + tan β)   (இ) h tan(45° − β)   (ஈ) இவை ஒன்றும் இல்லை"
+      },
+      "sourcePages": {
+        "en": {
+          "printed": 267,
+          "pdf": 273
+        },
+        "ta": {
+          "printed": 274,
+          "pdf": 280
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "appendixAnswer": {
+        "en": "(A)",
+        "ta": "(அ)"
+      }
+    }
+  ]
+}

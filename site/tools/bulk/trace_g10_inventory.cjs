@@ -264,11 +264,13 @@ function buildInventory({ root = ROOT, deploymentStatus = 'merged-and-deployed-b
         const blockKey = `${qNum}/${part}`;
         const blockedReason = spec.blockedTasks?.[blockKey] || spec.blockedTasks?.[`${qNum}/whole`] || null;
 
-        // Find matching runtime item(s)
-        const partMatches = matches.filter(m =>
+        // Find matching runtime item(s); canonical 2025 records supersede legacy paraphrased records
+        const allPartMatches = matches.filter(m =>
           m.loc.coveredParts.includes(part) ||
           (m.loc.coveredParts.includes('whole') && matches.length === 1)
         );
+        const canonicalPartMatches = allPartMatches.filter(m => !isLegacyParaphrased(m.item));
+        const partMatches = canonicalPartMatches.length > 0 ? canonicalPartMatches : allPartMatches;
 
         let status = 'MISSING';
         let matchedIds = partMatches.map(m => m.item.id);
