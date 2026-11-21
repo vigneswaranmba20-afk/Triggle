@@ -175,9 +175,18 @@
         cell.dataset.matches = inA && inB ? 'A and B' : inA ? 'A' : inB ? 'B' : 'Neither';
         cell.textContent = (i + 1) + ' · ' + cell.dataset.matches;
       });
-      showResult(result, tex`P(A)=\dfrac{${a.length}}{4},\quad P(B)=\dfrac{${b.length}}{4}`,
-        'Chance of A is ' + a.length + ' out of 4. Chance of B is ' + b.length + ' out of 4.',
-        summary);
+      const unionCount = new Set([...a, ...b]).size;
+      const overlapCount = a.filter(v => b.includes(v)).length;
+      const formula = tex`\begin{aligned}
+        P(A)&=\dfrac{${a.length}}{4},\quad P(B)=\dfrac{${b.length}}{4} \\
+        P(A\text{ or }B)&=\dfrac{${unionCount}}{4}${overlapCount ? tex`\neq\dfrac{${a.length}+${b.length}}{4}` : ''}
+      \end{aligned}`;
+      const unionNote = overlapCount
+        ? ' Shared outcome (' + overlapCount + ') is counted once, so P(A or B) = ' + unionCount + '/4 instead of ' + (a.length + b.length) + '/4.'
+        : ' Since they do not overlap, P(A or B) = ' + a.length + '/4 + ' + b.length + '/4 = ' + unionCount + '/4.';
+      showResult(result, formula,
+        'Chance of A is ' + a.length + ' out of 4. Chance of B is ' + b.length + ' out of 4. Chance of A or B is ' + unionCount + ' out of 4.',
+        summary + unionNote);
     });
     host.append(key, grid);
   }

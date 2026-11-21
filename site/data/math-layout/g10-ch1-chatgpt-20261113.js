@@ -286,10 +286,10 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "(i) Not a relation",
-      "(ii) not a relation",
-      "(iii) relation",
-      "(iv) not a relation."
+      "\\text{(i) Not a relation}",
+      "\\text{(ii) not a relation}",
+      "\\text{(iii) relation}",
+      "\\text{(iv) not a relation.}"
     ]
   },
   "c10-1-1-2-q2": {
@@ -350,15 +350,15 @@ const LAYOUT={
     ],
     "answer": [
       "(i) \\{(2,1),(4,2)\\}",
-      "arrow connections 2\\rightarrow 1, 4\\rightarrow 2",
-      "\\begin{aligned}&\\text{graph points} (2,1),(4,2). (ii) \\{(1,4), (2,5), (3,6)\\\\&\\quad (4,7), (5,8), (6,9)\\}\\end{aligned}",
+      "\\text{arrow connections } 2\\rightarrow 1, 4\\rightarrow 2",
+      "\\begin{aligned}&\\text{graph points }(2,1),(4,2).\\text{ (ii) }\\{(1,4), (2,5), (3,6)\\\\&\\quad (4,7), (5,8), (6,9)\\}\\end{aligned}",
       "\\text{matching arrows and plotted points.}"
     ]
   },
   "c10-1-1-2-q5": {
     "steps": [
       [
-        "(salary, employee)"
+        "(\\text{salary}, \\text{employee})"
       ],
       [
         "10000\\rightarrow A_{1},A_{2},A_{3},A_{4},A_{5}",
@@ -410,7 +410,7 @@ const LAYOUT={
         "R=\\{(3,10),(4,17),(6,37),(8,65)\\}"
       ],
       [
-        "R:X\\rightarrow \\mathbb{N} is a function."
+        "R:X\\rightarrow \\mathbb{N}\\text{ is a function.}"
       ]
     ],
     "answer": [
@@ -529,7 +529,7 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "V(x)=x(24-2x)^{2}=4x^{3}-96x^{2}+576x cm^{3} (0<x<12)."
+      "V(x)=x(24-2x)^{2}=4x^{3}-96x^{2}+576x\\,\\mathrm{cm}^{3}\\;(0<x<12)."
     ]
   },
   "c10-1-1-3-q8": {
@@ -557,14 +557,14 @@ const LAYOUT={
         "d=vt"
       ],
       [
-        "d(t)=500t km"
+        "d(t)=500t\\,\\mathrm{km}"
       ],
       [
         "t\\ge 0"
       ]
     ],
     "answer": [
-      "d(t)=500t km (t\\ge 0)."
+      "d(t)=500t\\,\\mathrm{km}\\;(t\\ge 0)."
     ]
   },
   "c10-1-1-3-q10": {
@@ -584,7 +584,7 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "(i) Yes. (ii) a=0.9, b=24.5",
+      "\\text{(i) Yes. (ii) }a=0.9, b=24.5",
       "y=0.9x+24.5."
     ]
   },
@@ -594,23 +594,23 @@ const LAYOUT={
         "\\text{One x-value must never have two y-values.}"
       ],
       [
-        "(i) Not a function."
+        "\\text{(i) Not a function.}"
       ],
       [
-        "(ii) Function."
+        "\\text{(ii) Function.}"
       ],
       [
-        "(iii) Not a function."
+        "\\text{(iii) Not a function.}"
       ],
       [
-        "(iv) Function."
+        "\\text{(iv) Function.}"
       ]
     ],
     "answer": [
-      "(i) Not a \\text{function}",
-      "(ii) \\text{function}",
-      "(iii) not a \\text{function}",
-      "(iv) function."
+      "\\text{(i) Not a function}",
+      "\\text{(ii) function}",
+      "\\text{(iii) not a function}",
+      "\\text{(iv) function.}"
     ]
   },
   "c10-1-1-4-q2": {
@@ -661,7 +661,7 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "Arrows 1\\rightarrow 2,2\\rightarrow 2,3\\rightarrow 2,4\\rightarrow 3,5\\rightarrow 4",
+      "\\text{Arrows }1\\rightarrow 2,2\\rightarrow 2,3\\rightarrow 2,4\\rightarrow 3,5\\rightarrow 4",
       "\\text{table} x:1,2,3,4,5",
       "f(x):2,2,2,3,4",
       "\\text{graph points as given.}"
@@ -693,7 +693,7 @@ const LAYOUT={
         "(m-n)(m+n+1)=0"
       ],
       [
-        "m=n \\Rightarrow  f is one-one."
+        "m=n \\Rightarrow  f\\text{ is one-one.}"
       ]
     ],
     "answer": [
@@ -717,7 +717,7 @@ const LAYOUT={
     ],
     "answer": [
       "(i) \\text{Range}=\\{1,8,27,64\\}",
-      "(ii) one-one into function."
+      "\\text{(ii) one-one into function.}"
     ]
   },
   "c10-1-1-4-q7": {
@@ -729,16 +729,16 @@ const LAYOUT={
         "f\\left(\\dfrac{y-1}{2}\\right)=y\\Rightarrow\\text{one-to-one and onto}"
       ],
       [
-        "f(1)=f(-1)=-1 \\Rightarrow  not one-one"
+        "f(1)=f(-1)=-1 \\Rightarrow \\text{not one-one}"
       ],
       [
-        "(ii) Not onto",
+        "\\text{(ii) Not onto}",
         "\\text{not bijective.}"
       ]
     ],
     "answer": [
-      "(i) Bijective",
-      "(ii) not bijective."
+      "\\text{(i) Bijective}",
+      "\\text{(ii) not bijective.}"
     ]
   },
   "c10-1-1-4-q8": {
@@ -750,12 +750,12 @@ const LAYOUT={
         "(-a+b)+(a+b)=0+2 \\Rightarrow  2b=2 \\Rightarrow  b=1"
       ],
       [
-        "-a+1=0 and a+1=2 \\Rightarrow  a=1",
-        "or -a+1=2 and a+1=0 \\Rightarrow  a=-1"
+        "-a+1=0\\text{ and }a+1=2 \\Rightarrow  a=1",
+        "\\text{or }-a+1=2\\text{ and }a+1=0 \\Rightarrow  a=-1"
       ]
     ],
     "answer": [
-      "a=1 or -1",
+      "a=1\\text{ or }-1",
       "b=1."
     ]
   },
@@ -826,11 +826,11 @@ const LAYOUT={
         "S(t_{2})-S(t_{1})=(t_{2}-t_{1})\\left[\\dfrac12g(t_{2}+t_{1})+a\\right]"
       ],
       [
-        "t_{2}>t_{1} \\Rightarrow  S(t_{2})>S(t_{1}) \\Rightarrow  one-one"
+        "t_{2}>t_{1} \\Rightarrow  S(t_{2})>S(t_{1}) \\Rightarrow \\text{one-one}"
       ]
     ],
     "answer": [
-      "Yes, for physical time t\\ge 0 and g>0 the \\text{function} is one-one."
+      "\\text{Yes, for physical time }t\\ge 0\\text{ and }g>0\\text{ the function is one-one.}"
     ]
   },
   "c10-1-1-4-q12": {
@@ -959,13 +959,13 @@ const LAYOUT={
         "f(g(x))=2(x^{2})+1=2x^{2}+1"
       ],
       [
-        "Range(f\\circ g)=\\{2x^{2}+1:x\\in \\mathbb{N}\\}"
+        "\\text{Range}(f\\circ g)=\\{2x^{2}+1:x\\in \\mathbb{N}\\}"
       ],
       [
         "g(f(x))=(2x+1)^{2}"
       ],
       [
-        "Range(g\\circ f)=\\{(2x+1)^{2}:x\\in \\mathbb{N}\\}"
+        "\\text{Range}(g\\circ f)=\\{(2x+1)^{2}:x\\in \\mathbb{N}\\}"
       ],
       [
         "\\text{Use the intended compatible natural-number domains.}"
@@ -1014,7 +1014,7 @@ const LAYOUT={
     "answer": [
       "\\text{f is one-one}",
       "\\text{g is not one-one}",
-      "f\\circ g(x)=x^{20} is not one-one."
+      "f\\circ g(x)=x^{20}\\text{ is not one-one.}"
     ]
   },
   "c10-1-1-5-q8": {
@@ -1033,9 +1033,9 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "(i) Both=3x^{2}",
-      "(ii) both=(2x+8)^{2}",
-      "(iii) both=(3x-5)^{2}-4."
+      "\\text{(i) Both}=3x^{2}",
+      "\\text{(ii) both}=(2x+8)^{2}",
+      "\\text{(iii) both}=(3x-5)^{2}-4."
     ]
   },
   "c10-1-1-5-q9": {
@@ -1071,7 +1071,7 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "C(t)=3t satisfies superposition",
+      "C(t)=3t\\text{ satisfies superposition}",
       "\\text{it is linear.}"
     ]
   },
@@ -1226,7 +1226,7 @@ const LAYOUT={
   "c10-1-1-6-q12": {
     "steps": [
       [
-        "Range(g)=\\{2,0,4\\}"
+        "\\text{Range}(g)=\\{2,0,4\\}"
       ],
       [
         "f(2)=0",
@@ -1234,7 +1234,7 @@ const LAYOUT={
         "f(4)=2"
       ],
       [
-        "Range(f\\circ g)=\\{0,1,2\\} \\Rightarrow  (D)"
+        "\\text{Range}(f\\circ g)=\\{0,1,2\\} \\Rightarrow  \\text{(D)}"
       ]
     ],
     "answer": [
@@ -1248,7 +1248,7 @@ const LAYOUT={
       ],
       [
         "[f(x)f(y)]^{2}-[f(xy)]^{2}=x^{2}+y^{2}\\ge 0",
-        "\\text{both sides} nonnegative \\Rightarrow  (C)"
+        "\\text{both sides nonnegative} \\Rightarrow  \\text{(C)}"
       ]
     ],
     "answer": [
@@ -1275,11 +1275,11 @@ const LAYOUT={
         "(x-1)^{3}=x^{3}-3x^{2}+3x-1"
       ],
       [
-        "f(x)=6x^{2}+2 \\Rightarrow  quadratic \\Rightarrow  (D)"
+        "f(x)=6x^{2}+2 \\Rightarrow \\text{quadratic} \\Rightarrow  \\text{(D)}"
       ]
     ],
     "answer": [
-      "(D) quadratic"
+      "\\text{(D) quadratic}"
     ]
   },
   "c10-1-1-unit-q1": {
@@ -1316,7 +1316,7 @@ const LAYOUT={
     ],
     "answer": [
       "A=\\{-1,0,1\\}",
-      "\\begin{aligned}&\\text{remaining} pairs=\\{(-1,-1), (-1,1), (0,-1)\\\\&\\quad (0,0), (1,-1), (1,0)\\\\&\\quad (1,1)\\}.\\end{aligned}"
+      "\\begin{aligned}&\\text{remaining pairs}=\\{(-1,-1), (-1,1), (0,-1)\\\\&\\quad (0,0), (1,-1), (1,0)\\\\&\\quad (1,1)\\}.\\end{aligned}"
     ]
   },
   "c10-1-1-unit-q3": {
@@ -1407,7 +1407,7 @@ const LAYOUT={
   "c10-1-1-unit-q7": {
     "steps": [
       [
-        "A\\subseteq B and C\\subseteq D"
+        "A\\subseteq B\\text{ and }C\\subseteq D"
       ],
       [
         "A\\times C=\\{(1,5),(1,6),(2,5),(2,6)\\}"
@@ -1472,7 +1472,7 @@ const LAYOUT={
         "x-2\\ge 0 \\Rightarrow  x\\ge 2"
       ],
       [
-        "Domain(h)=\\mathbb{R}"
+        "\\text{Domain}(h)=\\mathbb{R}"
       ]
     ],
     "answer": [

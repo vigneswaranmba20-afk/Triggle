@@ -17,14 +17,16 @@
   const typeset = (source, body) => '<math' + xml + ' aria-label="' + esc(source) + '">' + body + '</math>';
   // Keep radicands inside MathML, including products and common powers.
   function simpleMath(value) {
-    const parts = String(value).match(/\d+(?:\.\d+)?|[a-zA-Z]+|[⁰¹²³⁴⁵⁶⁷⁸⁹ᵏ]|[^\s]/gu) || [];
+    const parts = String(value).match(/\d+(?:\.\d+)?|[a-zA-Z\u0370-\u03FF]+|[⁰¹²³⁴⁵⁶⁷⁸⁹ᵏ]|[^\s]/gu) || [];
+    const basePart = /^(?:\d+(?:\.\d+)?|[a-zA-Z\u0370-\u03FF]+)$/;
     let body = '';
     for(let i=0;i<parts.length;i++) {
       const part=parts[i], next=parts[i+1];
-      if(/[⁰¹²³⁴⁵⁶⁷⁸⁹ᵏ]/u.test(next||'') && next.length===1 && /^(?:\d+(?:\.\d+)?|[a-zA-Z]+)$/.test(part)) {
-        body+='<msup>'+symbol(part)+symbol(exponents[next])+'</msup>';i++;continue;
+      if(/[⁰¹²³⁴⁵⁶⁷⁸⁹ᵏ]/u.test(next||'') && next.length===1 && (basePart.test(part)||part===')'||part===']')) {
+        const baseNode=basePart.test(part)?symbol(part):'<mo>'+esc(part)+'</mo>';
+        body+='<msup>'+baseNode+symbol(exponents[next])+'</msup>';i++;continue;
       }
-      body += /^(?:\d+(?:\.\d+)?|[a-zA-Z]+)$/.test(part) ? symbol(part) : '<mo>'+esc(part)+'</mo>';
+      body += basePart.test(part) ? symbol(part) : '<mo>'+esc(part)+'</mo>';
     }
     return '<mrow>'+body+'</mrow>';
   }
@@ -75,6 +77,27 @@
     // Legacy authored [[numerator|denominator]] markup: stacked fraction.
     s=s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g,(_full,n,d)=>stash(
       '<span class="frac"><span>'+render(n)+'</span><span>'+render(d)+'</span></span>'));
+    // A baseline coefficient must be distinct from a root's *raised* index.
+    // Render 5√3 as one MathML expression with both symbols sharing a
+    // baseline and a real thin space between them (also for a√b, −2∛5).
+    // Parse radicals before math-group-power so √((α + β)² − 4αβ) captures the
+    // full radicand instead of stashing (α + β)² inside aria-label.
+    s=s.replace(/(^|[^a-zA-Z0-9⁰¹²³⁴⁵⁶⁷⁸⁹ᵏⁿ])([−-]?(?:\d+(?:\.\d+)?|[a-zA-Z]))\s*([²³⁴⁵⁶⁷⁸⁹ⁿ]?√|∛|∜)(\((?:[^()\n]|\([^()\n]*\)){1,120}\)|[a-zA-Z]+|\d+(?:\.\d+)?)/gu,
+      (whole,prefix,coefficient,root,raw)=>{
+        const index=root==='∛'?'3':root==='∜'?'4':root.length>1?(exponents[root[0]]||'n'):null;
+        const radicand=simpleMath(raw[0]==='('?raw.slice(1,-1):raw);
+        const radical=index?'<mroot>'+radicand+symbol(index)+'</mroot>':'<msqrt>'+radicand+'</msqrt>';
+        const formula=whole.slice(prefix.length);
+        return prefix+stash(typeset(formula,'<mrow>'+signed(coefficient)+
+          '<mspace width="0.18em"/>'+radical+'</mrow>'));
+      });
+    // Indexed roots: ³√2, ⁵√3, ⁿ√a; and standalone Unicode ∛, ∜.
+    s=s.replace(/([²³⁴⁵⁶⁷⁸⁹ⁿ])√(\((?:[^()\n]|\([^()\n]*\)){1,120}\)|[a-zA-Z]+|\d+(?:\.\d+)?)/gu,
+      (whole,index,raw)=>stash(typeset(whole,'<mroot>'+simpleMath(raw[0]==='('?raw.slice(1,-1):raw)+symbol(exponents[index]||'n')+'</mroot>')));
+    s=s.replace(/([∛∜])(\((?:[^()\n]|\([^()\n]*\)){1,120}\)|[a-zA-Z]+|\d+(?:\.\d+)?)/gu,
+      (whole,root,raw)=>stash(typeset(whole,'<mroot>'+simpleMath(raw[0]==='('?raw.slice(1,-1):raw)+symbol(root==='∛'?'3':'4')+'</mroot>')));
+    s=s.replace(/√(\((?:[^()\n]|\([^()\n]*\)){1,120}\)|[a-zA-Z]+|\d+(?:\.\d+)?)/gu,
+      (whole,raw)=>stash(typeset(whole,'<msqrt>'+simpleMath(raw[0]==='('?raw.slice(1,-1):raw)+'</msqrt>')));
     // Keep group powers attached, even when the group contains a radical.
     s=s.replace(/(\[[^\[\]\n]{1,100}\]|\([^()\n]{1,100}\)|\{[^{}\n]{1,100}\})([⁰¹²³⁴⁵⁶⁷⁸⁹]|\^[a-zA-Z0-9−-]+)/g,
       (_full,group,p)=>stash('<span class="math-group-power" role="math"><span class="math-group">'+
@@ -100,25 +123,6 @@
       (whole,base,p)=>stash(typeset(whole,'<msup>'+symbol(base)+signed(p)+'</msup>')));
     s=s.replace(/([a-zA-Z]|\d+(?:\.\d+)?)\^([−-]?[a-zA-Z0-9]+)/g,
       (whole,base,p)=>stash(typeset(whole,'<msup>'+symbol(base)+signed(p)+'</msup>')));
-    // A baseline coefficient must be distinct from a root's *raised* index.
-    // Render 5√3 as one MathML expression with both symbols sharing a
-    // baseline and a real thin space between them (also for a√b, −2∛5).
-    s=s.replace(/(^|[^a-zA-Z0-9⁰¹²³⁴⁵⁶⁷⁸⁹ᵏⁿ])([−-]?(?:\d+(?:\.\d+)?|[a-zA-Z]))\s*([²³⁴⁵⁶⁷⁸⁹ⁿ]?√|∛|∜)(\([^()\n]{1,100}\)|[a-zA-Z]+|\d+(?:\.\d+)?)/gu,
-      (whole,prefix,coefficient,root,raw)=>{
-        const index=root==='∛'?'3':root==='∜'?'4':root.length>1?(exponents[root[0]]||'n'):null;
-        const radicand=simpleMath(raw[0]==='('?raw.slice(1,-1):raw);
-        const radical=index?'<mroot>'+radicand+symbol(index)+'</mroot>':'<msqrt>'+radicand+'</msqrt>';
-        const formula=whole.slice(prefix.length);
-        return prefix+stash(typeset(formula,'<mrow>'+signed(coefficient)+
-          '<mspace width="0.18em"/>'+radical+'</mrow>'));
-      });
-    // Indexed roots: ³√2, ⁵√3, ⁿ√a; and standalone Unicode ∛, ∜.
-    s=s.replace(/([²³⁴⁵⁶⁷⁸⁹ⁿ])√(\([^()\n]{1,100}\)|[a-zA-Z]+|\d+(?:\.\d+)?)/gu,
-      (whole,index,raw)=>stash(typeset(whole,'<mroot>'+simpleMath(raw[0]==='('?raw.slice(1,-1):raw)+symbol(exponents[index]||'n')+'</mroot>')));
-    s=s.replace(/([∛∜])(\([^()\n]{1,100}\)|[a-zA-Z]+|\d+(?:\.\d+)?)/gu,
-      (whole,root,raw)=>stash(typeset(whole,'<mroot>'+simpleMath(raw[0]==='('?raw.slice(1,-1):raw)+symbol(root==='∛'?'3':'4')+'</mroot>')));
-    s=s.replace(/√(\([^()\n]{1,100}\)|[a-zA-Z]+|\d+(?:\.\d+)?)/gu,
-      (whole,raw)=>stash(typeset(whole,'<msqrt>'+simpleMath(raw[0]==='('?raw.slice(1,-1):raw)+'</msqrt>')));
     // Pair a base and its superscript into one semantic MathML expression.
     // Standalone <sup> nodes become separate flex items in maths buttons and
     // may appear as baseline text (e.g. "x 2 = 25" instead of x² = 25).
