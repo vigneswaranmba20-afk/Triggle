@@ -54,7 +54,7 @@ async function main(){
    assert.equal(await p.locator('.sp2-demo').count(),1,'Mathematical demo stays intact');
    assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).backgroundColor),graphite,'Real Numbers Next is indigo');
    assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).color),white,'Next label stays readable');
-   assert.equal(await p.locator('.sp2-demo').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Demo uses white paper');
+   assert.equal(await p.locator('.sp2-demo').evaluate(el=>getComputedStyle(el).backgroundColor),'rgba(122, 140, 167, 0.055)','Grade 9 demo uses Mensuration-inspired soft-tinted learning surface');
    await p.locator('#langTa').click();
    assert(await p.locator('.sp2-concept-heading').innerText().then(t=>/[\u0B80-\u0BFF]/.test(t)),'Tamil math lesson stays visible');
    assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).backgroundColor),graphite,'Tamil Next uses same color');
