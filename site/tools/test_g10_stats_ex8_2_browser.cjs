@@ -22,14 +22,14 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
       steps:document.querySelectorAll('#stepsList .worked-step:not(.final-answer-step)').length,expected:r.steps.length,
       reg:ch.textbookQuestionIds.includes(id),katex:k.length,
       clipped:k.filter(e=>{const b=e.getBoundingClientRect();return b.width>0&&b.right>innerWidth+1&&!e.closest('[tabindex],.katex-display')}).length,
-      width:document.documentElement.scrollWidth,vw:innerWidth,diff:document.querySelector('#difficultyIndicator')?.dataset.level,tableRows:document.querySelectorAll('#questionText .triggle-data-table tbody tr').length};
+      width:document.documentElement.scrollWidth,vw:innerWidth,diff:document.querySelector('#difficultyIndicator')?.dataset.level,tableRows:document.querySelectorAll('#questionText .triggle-data-table tbody tr').length,stepsText:document.querySelector('#stepsList').textContent};
     },id);
     assert.ok(s.text.includes(String(n)+'.'),id);assert.ok(s.answer.trim(),'answer '+id);
     assert.equal(s.steps,s.expected);assert.ok(s.reg);assert.ok(s.katex>=s.expected,'KaTeX rendered '+id);
     assert.equal(s.clipped,0,'clipped KaTeX '+JSON.stringify(s));assert.ok(s.width<=s.vw+1,'overflow '+JSON.stringify(s));
     assert.equal(s.diff,n<=3?'easy':'medium');
     if(n===8)assert.equal(s.tableRows,3,'Q8 source table must render as a native accessible table');
-    if(n===6)assert.ok(s.answer.includes('10.07')&&s.answer.includes('10.06'),'explain exact vs textbook rounding');
+    if(n===6)assert.ok(s.stepsText.includes('10.07')&&s.stepsText.includes('10.06'),'explain exact vs textbook rounding');
    }
   }
   // Regression: neighbouring Chapter 8 records still render
