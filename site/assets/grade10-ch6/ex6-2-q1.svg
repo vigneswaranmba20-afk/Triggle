@@ -1,14 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
   <title id="t">Right triangle for Exercise 6.2 Q1</title>
   <desc id="desc">Tower of height 10 root 3 metres viewed at angle theta from 30 metres away on level ground.</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
   <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
-  <line x1="36" y1="184" x2="284" y2="184" stroke="#525B62" stroke-width="1.5"/>
-  <polygon points="70,184 248,184 248,74" fill="#E6EFEA" fill-opacity="0.6" stroke="#181B20" stroke-width="1.8"/>
-  <rect x="236" y="172" width="12" height="12" fill="none" stroke="#181B20" stroke-width="1.2"/>
-  <line x1="70" y1="184" x2="248" y2="74" stroke="#6E2933" stroke-width="2"/>
-  <path d="M108,184 A38,38 0 0,0 102,164" fill="none" stroke="#6E2933" stroke-width="1.6"/>
-  <text x="114" y="176" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#6E2933">θ = ?</text>
-  <text x="159" y="201" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">30 m</text>
-  <text x="255" y="132" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#166353">10√3 m</text>
-  <text x="148" y="118" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="end" fill="#6E2933">Line of sight</text>
+  <line x1="32" y1="184" x2="288" y2="184" stroke="#525B62" stroke-width="1.5"/>
+  <polygon points="66,184 246,184 246,72" fill="#E6EFEA" fill-opacity="0.6" stroke="#181B20" stroke-width="1.8"/>
+  <rect x="234" y="172" width="12" height="12" fill="none" stroke="#181B20" stroke-width="1.2"/>
+  <line x1="66" y1="184" x2="246" y2="72" stroke="#6E2933" stroke-width="2"/>
+  <path d="M100.0,184.0 A34,34 0 0,0 94.9,166.0" fill="none" stroke="#6E2933" stroke-width="1.5"/>
+  <text x="108" y="177" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="start" fill="#6E2933">θ = ?</text>
+  <text x="156" y="202" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">30 m</text>
+  <text x="264" y="128" transform="rotate(-90 264 128)" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">10√3 m</text>
+  <text x="145.5" y="119.2" transform="rotate(-31.9 145.5 119.2)" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#6E2933">Line of sight</text>
 </svg>

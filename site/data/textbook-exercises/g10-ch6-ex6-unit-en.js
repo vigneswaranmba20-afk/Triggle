@@ -199,19 +199,28 @@ const entries = [
     },
     "steps": [
       {
-        "en": "Quick Solution Plan: Group A = 1 + sin θ so the fraction becomes (A − cos θ)² / (A + cos θ)². Expanding both squares and using sin²θ + cos²θ = 1 turns top and bottom into 2(1 + sin θ)(1 ∓ cos θ), cancelling 2(1 + sin θ).",
-        "eq": "(1 + sin θ ∓ cos θ)² = 2(1 + sin θ)(1 ∓ cos θ)",
+        "en": "Quick Solution Plan: Group A = 1 + sin θ so the numerator becomes (A − cos θ)². Expanding and replacing sin²θ + cos²θ = 1 factors the numerator as 2(1 + sin θ)(1 − cos θ).",
+        "eq": "(1 + sin θ − cos θ)² = 2(1 + sin θ)(1 − cos θ)",
         "math": {
-          "latex": "\\begin{aligned} (1 + \\sin\\theta \\mp \\cos\\theta)^2 &= (1 + \\sin\\theta)^2 \\mp 2\\cos\\theta(1 + \\sin\\theta) + \\cos^2\\theta \\\\[4pt] &= 1 + 2\\sin\\theta + (\\sin^2\\theta + \\cos^2\\theta) \\mp 2\\cos\\theta(1 + \\sin\\theta) \\\\[4pt] &= 2(1 + \\sin\\theta) \\mp 2\\cos\\theta(1 + \\sin\\theta) = 2(1 + \\sin\\theta)(1 \\mp \\cos\\theta) \\end{aligned}",
-          "fallback": "(1 + sin θ ∓ cos θ)² = 2(1 + sin θ)(1 ∓ cos θ)",
+          "latex": "\\begin{aligned} &\\text{Numerator } (1 + \\sin\\theta - \\cos\\theta)^2 \\\\[4pt] &= (1 + \\sin\\theta)^2 - 2\\cos\\theta(1 + \\sin\\theta) \\\\[2pt] &\\quad + \\cos^2\\theta \\\\[4pt] &= 1 + 2\\sin\\theta + (\\sin^2\\theta + \\cos^2\\theta) \\\\[2pt] &\\quad - 2\\cos\\theta(1 + \\sin\\theta) \\\\[4pt] &= 2(1 + \\sin\\theta) - 2\\cos\\theta(1 + \\sin\\theta) \\\\[4pt] &= 2(1 + \\sin\\theta)(1 - \\cos\\theta) \\end{aligned}",
+          "fallback": "(1 + sin θ − cos θ)² = 2(1 + sin θ)(1 − cos θ)",
           "display": true
         }
       },
       {
-        "en": "Understand Deeply — Now divide the numerator by the denominator: the common factor 2(1 + sin θ) cancels directly, leaving (1 − cos θ) / (1 + cos θ).",
+        "en": "Understand Deeply — Apply the same expansion to the denominator (1 + sin θ + cos θ)², grouping sin²θ + cos²θ = 1 and factoring out 2(1 + sin θ) to obtain 2(1 + sin θ)(1 + cos θ).",
+        "eq": "(1 + sin θ + cos θ)² = 2(1 + sin θ)(1 + cos θ)",
+        "math": {
+          "latex": "\\begin{aligned} &\\text{Denominator } (1 + \\sin\\theta + \\cos\\theta)^2 \\\\[4pt] &= (1 + \\sin\\theta)^2 + 2\\cos\\theta(1 + \\sin\\theta) \\\\[2pt] &\\quad + \\cos^2\\theta \\\\[4pt] &= 2(1 + \\sin\\theta) + 2\\cos\\theta(1 + \\sin\\theta) \\\\[4pt] &= 2(1 + \\sin\\theta)(1 + \\cos\\theta) \\end{aligned}",
+          "fallback": "(1 + sin θ + cos θ)² = 2(1 + sin θ)(1 + cos θ)",
+          "display": true
+        }
+      },
+      {
+        "en": "Divide the factored numerator by the factored denominator: the common factor 2(1 + sin θ) cancels directly, leaving (1 − cos θ) / (1 + cos θ).",
         "eq": "LHS = (1 − cos θ) / (1 + cos θ)",
         "math": {
-          "latex": "\\text{LHS} = \\dfrac{2(1 + \\sin\\theta)(1 - \\cos\\theta)}{2(1 + \\sin\\theta)(1 + \\cos\\theta)} = \\dfrac{1 - \\cos\\theta}{1 + \\cos\\theta} = \\text{RHS}",
+          "latex": "\\begin{aligned} \\text{LHS} &= \\dfrac{2(1 + \\sin\\theta)(1 - \\cos\\theta)}{2(1 + \\sin\\theta)(1 + \\cos\\theta)} \\\\[6pt] &= \\dfrac{1 - \\cos\\theta}{1 + \\cos\\theta} = \\text{RHS} \\end{aligned}",
           "fallback": "LHS = (1 − cos θ) / (1 + cos θ)",
           "display": true
         }

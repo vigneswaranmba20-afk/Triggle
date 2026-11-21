@@ -1,13 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
   <title id="t">Car viewed from top of 50 root 3 m rock at 30 degrees depression for Exercise 6.3 Q1</title>
   <desc id="desc">Angle of depression 30 degrees from rock height 50 root 3 m equals alternate elevation 30 degrees at car.</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
   <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
   <line x1="28" y1="186" x2="292" y2="186" stroke="#525B62" stroke-width="1.5"/>
   <polygon points="74,64 74,186 254,186" fill="#E6EFEA" fill-opacity="0.6" stroke="#181B20" stroke-width="1.8"/>
-  <line x1="74" y1="64" x2="180" y2="64" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <rect x="74" y="174" width="12" height="12" fill="none" stroke="#181B20" stroke-width="1.2"/>
+  <line x1="74" y1="64" x2="184" y2="64" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3,2"/>
   <line x1="74" y1="64" x2="254" y2="186" stroke="#6E2933" stroke-width="2"/>
-  <text x="114" y="78" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6E2933">30°</text>
-  <text x="210" y="180" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6E2933">30°</text>
-  <text x="66" y="128" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="end" fill="#166353">50√3 m</text>
-  <text x="164" y="202" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">d = ?</text>
+  <path d="M112.0,64.0 A38,38 0 0,1 105.5,85.3" fill="none" stroke="#6E2933" stroke-width="1.4"/>
+  <path d="M216.0,186.0 A38,38 0 0,1 222.5,164.7" fill="none" stroke="#6E2933" stroke-width="1.4"/>
+  <text x="124" y="79" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#6E2933">30°</text>
+  <text x="206" y="178" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="end" fill="#6E2933">30°</text>
+  <text x="58" y="125" transform="rotate(-90 58 125)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">50√3 m</text>
+  <text x="164" y="203" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">d = ?</text>
 </svg>
