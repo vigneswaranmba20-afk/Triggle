@@ -16,6 +16,11 @@ const journey=fs.readFileSync(path.join(__dirname, '../assets/set-language-journ
 assert.match(journey, /data-index-view/, 'Concepts must open on an index page');
 assert.match(journey, /data-detail-view/, 'Each idea has its own detail view');
 assert.match(journey, /data-back-index/, 'Lesson has a Back to concepts button');
+assert.match(journey, /data-top-next/, 'Set Language exposes Next idea at top');
+assert.match(journey, /\[data-footer-next\], \[data-top-next\]/, 'Set Language top and bottom navigation share one action');
+const realJourney=fs.readFileSync(path.join(__dirname, '../assets/real-numbers-journey.js'), 'utf8');
+assert.match(realJourney, /data-top-next/, 'Real Numbers exposes Next idea at top');
+assert.match(realJourney, /\[data-footer-next\], \[data-top-next\]/, 'Real Numbers top and bottom navigation share one action');
 assert.match(journey, /initialConcept=null,onConcept=null/, 'Deep links and language switch must preserve the selected idea');
 assert.doesNotMatch(journey, /data-idea-picker/, 'No dropdown or carousel picker in lessons');
 assert.match(css, /\.sp2-detail-view\[hidden\]\{display:none!important\}/, 'Inactive lesson view must be hidden');

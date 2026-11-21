@@ -36,7 +36,7 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
  root.innerHTML='<div class="sp2-index-view" data-index-view>'+
    '<nav class="sp2-nav" data-nav role="group" aria-label="'+esc(ta?'ஒரு கருத்தைத் தேர்ந்தெடுக்கவும்':'Choose a concept')+'"></nav></div>'+
    '<div class="sp2-detail-view" data-detail-view hidden>'+
-   '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+esc(backLabel)+'</button></div>'+
+   '<div class="sp2-detail-navigation"><button type="button" class="sp2-back-index" data-back-index>← '+esc(backLabel)+'</button><button type="button" class="sp2-top-next" data-top-next></button></div>'+
    '<div class="sp2-panel" data-panel></div>'+
    '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+esc(ta?'கருத்துகளுக்கிடையே நகர்க':'Move between concepts')+'">'+
    '<button type="button" class="sp2-footer-prev" data-footer-prev>← '+esc(t.previousIdea)+'</button>'+
@@ -63,6 +63,9 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
   const next=root.querySelector('[data-footer-next]');
   next.textContent=active===path.stages.length-1?backLabel+' →':t.nextIdea+' →';
   next.classList.toggle('is-return',active===path.stages.length-1);
+  const topNext=root.querySelector('[data-top-next]');
+  topNext.textContent=next.textContent;
+  topNext.classList.toggle('is-return',active===path.stages.length-1);
  }
  function showIndex(focus=false,notify=true){
   active=-1;root.dataset.view='index';indexView.hidden=false;detailView.hidden=true;update();
@@ -71,7 +74,7 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
  }
  root.querySelector('[data-back-index]').addEventListener('click',()=>showIndex(true));
  root.querySelector('[data-footer-prev]').addEventListener('click',()=>show(active-1,true));
- root.querySelector('[data-footer-next]').addEventListener('click',()=>{
+ for(const button of root.querySelectorAll('[data-footer-next], [data-top-next]'))button.addEventListener('click',()=>{
   if(active===path.stages.length-1){showIndex(true);return;}
   show(active+1,true);
  });
