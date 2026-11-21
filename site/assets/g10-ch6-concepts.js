@@ -153,7 +153,7 @@ function renderGlance(stage,host,lang){
       <rect x="18" y="20" width="96" height="30" rx="8" fill="#F3EFE8" stroke="#6E2933" stroke-width="1.5"/>
       <text x="66" y="39" font-size="10.5" font-weight="700" text-anchor="middle" fill="#6E2933">sin θ, cos θ</text>
       <rect x="146" y="20" width="96" height="30" rx="8" fill="#EFF8F4" stroke="#1E5248" stroke-width="1.5"/>
-      <text x="194" y="39" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">1 ∓ sin θ</text>
+      <text x="194" y="39" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">1 ± sin θ</text>
       <rect x="64" y="64" width="132" height="30" rx="8" fill="#FAF9F6" stroke="#181B20" stroke-width="1.5"/>
       <text x="130" y="83" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">LHS → Step → RHS</text>
     </svg>`,
@@ -267,7 +267,7 @@ function mount(stage,host,lang){
         [ta?'கர்ணம்':'Hypotenuse',fmt(r.hyp,2)],
         ['tan = Opp/Adj',fmt(t,3)]
       ]);
-      readout.innerHTML=tex(`\\begin{aligned}&\\sin ${focusDeg}^\\circ=\\dfrac{${fmt(opp,2)}}{${fmt(r.hyp,2)}}=${fmt(s,3)},\\;\\operatorname{cosec}=${fmt(1/s,3)}\\\\&\\cos ${focusDeg}^\\circ=\\dfrac{${fmt(adj,2)}}{${fmt(r.hyp,2)}}=${fmt(c,3)},\\;\\sec=${fmt(1/c,3)}\\end{aligned}`,true,`sin ${focusDeg}°=${fmt(s,3)}, cos=${fmt(c,3)}`);
+      readout.innerHTML=tex(`\\begin{aligned}&\\sin ${focusDeg}^\\circ=\\dfrac{${fmt(opp,2)}}{${fmt(r.hyp,2)}}=${fmt(s,3)}\\\\&\\operatorname{cosec} ${focusDeg}^\\circ=${fmt(1/s,3)}\\\\&\\cos ${focusDeg}^\\circ=\\dfrac{${fmt(adj,2)}}{${fmt(r.hyp,2)}}=${fmt(c,3)}\\\\&\\sec ${focusDeg}^\\circ=${fmt(1/c,3)}\\end{aligned}`,true,`sin ${focusDeg}°=${fmt(s,3)}, cos=${fmt(c,3)}`);
     };
     b1.onclick=()=>{flipCorner=false;draw();};
     b2.onclick=()=>{flipCorner=true;draw();};
@@ -304,8 +304,8 @@ function mount(stage,host,lang){
         <text x="${xO+18}" y="${yM-7}" font-size="11" font-weight="700" fill="#181B20">${theta}°</text>
       </svg>`;
       readout.innerHTML=mode==='quotient'
-        ?tex(`\\begin{aligned}&\\tan ${theta}^\\circ=\\dfrac{\\sin ${theta}^\\circ}{\\cos ${theta}^\\circ}=\\dfrac{${fmt(s,3)}}{${fmt(c,3)}}=${fmt(t,3)}\\\\&\\cot ${theta}^\\circ=\\dfrac{\\cos ${theta}^\\circ}{\\sin ${theta}^\\circ}=${fmt(1/t,3)},\\;\\tan\\cdot\\cot=1\\end{aligned}`,true)
-        :tex(`\\begin{aligned}&\\sec ${theta}^\\circ=\\dfrac{1}{\\cos ${theta}^\\circ}=${fmt(1/c,3)},\\;\\sec\\cdot\\cos=1\\\\&\\operatorname{cosec} ${theta}^\\circ=\\dfrac{1}{\\sin ${theta}^\\circ}=${fmt(1/s,3)},\\;\\operatorname{cosec}\\cdot\\sin=1\\end{aligned}`,true);
+        ?tex(`\\begin{aligned}&\\tan ${theta}^\\circ=\\dfrac{\\sin ${theta}^\\circ}{\\cos ${theta}^\\circ}=\\dfrac{${fmt(s,3)}}{${fmt(c,3)}}=${fmt(t,3)}\\\\&\\cot ${theta}^\\circ=\\dfrac{\\cos ${theta}^\\circ}{\\sin ${theta}^\\circ}=${fmt(1/t,3)},\\\\&\\tan ${theta}^\\circ\\cdot\\cot ${theta}^\\circ=1\\end{aligned}`,true)
+        :tex(`\\begin{aligned}&\\sec ${theta}^\\circ=\\dfrac{1}{\\cos ${theta}^\\circ}=${fmt(1/c,3)},\\\\&\\sec ${theta}^\\circ\\cdot\\cos ${theta}^\\circ=1\\\\&\\operatorname{cosec} ${theta}^\\circ=\\dfrac{1}{\\sin ${theta}^\\circ}=${fmt(1/s,3)},\\\\&\\operatorname{cosec} ${theta}^\\circ\\cdot\\sin ${theta}^\\circ=1\\end{aligned}`,true);
     };
     makeSlider(controls,ta?'கோணம் θ':'Angle θ',15,75,1,theta,'°',v=>{theta=v;draw();});
     draw();
@@ -459,7 +459,7 @@ function mount(stage,host,lang){
     const btns=[
       ['sin-cos',ta?'sin/cos மாற்றம்':'To sin & cos'],
       ['factor',ta?'காரணிப்படுத்தல்':'Factor powers'],
-      ['conj',ta?'இணை எண்':'Conjugate 1∓sin θ']
+      ['conj',ta?'இணை எண்':'Conjugate 1 ± sin θ']
     ].map(([k,lbl])=>{
       const b=el('button','g10ch4-tab',lbl);b.type='button';
       b.onclick=()=>{strat=k;draw();};tabs.append(b);return[k,b];
@@ -472,7 +472,7 @@ function mount(stage,host,lang){
       let lhs=0,rhs=0,eq='';
       if(strat==='sin-cos'){
         lhs=idn.cot+idn.t;rhs=idn.sec*idn.csc;
-        eq=`\\begin{aligned}&\\text{cot}+\\tan=\\dfrac{\\cos^2\\theta+\\sin^2\\theta}{\\sin\\theta\\cos\\theta}\\\\&=\\sec\\theta\\operatorname{cosec}\\theta\\end{aligned}`;
+        eq=`\\begin{aligned}&\\cot\\theta+\\tan\\theta=\\dfrac{\\cos^2\\theta+\\sin^2\\theta}{\\sin\\theta\\cos\\theta}\\\\&=\\sec\\theta\\operatorname{cosec}\\theta\\end{aligned}`;
       }else if(strat==='factor'){
         lhs=Math.pow(idn.t,4)+idn.t*idn.t;rhs=Math.pow(idn.sec,4)-idn.sec*idn.sec;
         eq=`\\begin{aligned}&\\tan^2\\theta(\\tan^2\\theta+1)=(\\sec^2\\theta-1)\\sec^2\\theta\\\\&=\\sec^4\\theta-\\sec^2\\theta\\end{aligned}`;
@@ -559,12 +559,12 @@ function mount(stage,host,lang){
         <text x="${xA+6}" y="${yB+14}" font-size="11" font-weight="700" fill="#1E5248">A</text>
         <text x="${xB+30}" y="${yC+13}" font-size="11" font-weight="700" fill="#6E2933">${angle}°</text>
         ${showTrap
-          ?`<text x="${xB+5}" y="${yC+38}" font-size="11" font-weight="700" fill="#7A1D2B">90°−θ=${90-angle}° ≠ ${angle}°!</text>`
+          ?`<text x="${xB+5}" y="${yC+38}" font-size="10.5" font-weight="700" fill="#7A1D2B">Wall angle = ${90-angle}° (from vertical)</text>`
           :`<text x="${xA-38}" y="${yB-8}" font-size="11" font-weight="700" fill="#1E5248">∠CAB=${angle}°</text>`}
         <text x="${xB-26}" y="${yC+pxH/2}" font-size="10.5" font-weight="700" fill="#181B20">${height}m</text>
       </svg>`;
       readout.innerHTML=showTrap
-        ?tex(`\\text{Wall trap: }h\\tan ${angle}^\\circ=${fmt(dep.wrongWallDist,1)}\\text{ m}\\;(\\text{Wrong!})`,true)
+        ?tex(`\\text{Wall-angle shortcut: }h\\tan ${angle}^\\circ=${fmt(dep.wrongWallDist,1)}\\text{ m}\\;(${angle===45?'\\text{Coincides at }45^\\circ\\text{ only; use horizon angle}':'\\text{Not the horizon-angle method}'})`,true)
         :tex(`\\begin{aligned}&\\angle XCA=\\angle CAB=${angle}^\\circ\\\\&d=\\dfrac{${height}}{\\tan ${angle}^\\circ}=${fmt(dep.dist,1)}\\text{ m}\\end{aligned}`,true);
     };
     makeSlider(controls,ta?'இறக்கக்கோணம் θ':'Depression angle θ',20,70,5,angle,'°',v=>{angle=v;draw();});

@@ -14,12 +14,13 @@ const words={
 };
 const load=()=>{try{const a=JSON.parse(localStorage.getItem(KEY)||'[]');return new Set(Array.isArray(a)?a.filter(id=>path.stages.some(s=>s.id===id)):[])}catch{return new Set()}};
 const save=done=>{try{localStorage.setItem(KEY,JSON.stringify([...done]))}catch{}};
-function numberLine(min,max,points,ta){
+function numberLine(min,max,points,ta,divisions=4){
  const x=v=>40+520*(v-min)/(max-min),y=82;
  let out='<svg class="rnlab-line" viewBox="0 0 600 166" role="img" aria-label="'+esc(ta?'எண்கோடு':'Number line')+'"><title>'+esc(ta?'எண்கோடு':'Number line')+'</title>'+
    '<line x1="38" y1="'+y+'" x2="564" y2="'+y+'" stroke="#697aa0" stroke-width="2.5"/><path d="M558 76L566 82L558 88" stroke="#697aa0" stroke-width="2" fill="none"/>';
- for(let i=0;i<=4;i++){const n=min+(max-min)*i/4;const precision=(max-min)<.01?4:(max-min)<.1?3:(max-min)<1?2:1;out+='<line x1="'+x(n)+'" y1="'+(y-6)+'" x2="'+x(n)+'" y2="'+(y+6)+'" stroke="#697aa0"/>'+
-   '<text x="'+x(n)+'" y="113" fill="#5c5b73" font-size="14" text-anchor="middle">'+esc(Number(n.toFixed(precision)).toFixed(precision))+'</text>';}
+ const labelEvery=divisions===10?2:1;
+ for(let i=0;i<=divisions;i++){const n=min+(max-min)*i/divisions;const precision=(max-min)<.01?4:(max-min)<.1?3:(max-min)<1?2:1;const major=i%labelEvery===0||i===5;out+='<line x1="'+x(n)+'" y1="'+(y-(major?7:4))+'" x2="'+x(n)+'" y2="'+(y+(major?7:4))+'" stroke="#697aa0"/>'+
+   (i%labelEvery===0?'<text x="'+x(n)+'" y="113" fill="#5c5b73" font-size="13" text-anchor="middle">'+esc(Number(n.toFixed(precision)).toFixed(precision))+'</text>':'');}
  points.forEach((p,i)=>{const px=x(p.value);out+='<line x1="'+px+'" y1="'+(y-29)+'" x2="'+px+'" y2="'+y+'" stroke="'+(i===0?'#bf467d':'#527ab2')+'" stroke-width="3"/>'+
   '<circle cx="'+px+'" cy="'+y+'" r="5" fill="'+(i===0?'#bf467d':'#527ab2')+'"/>'+
   '<text x="'+px+'" y="'+(i===0?'32':i%2?'49':'16')+'" font-weight="750" font-size="15" text-anchor="middle" fill="#5c3272">'+esc(p.label)+'</text>';});
@@ -190,25 +191,26 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
   const visual=panel.querySelector('[data-demo-visual]'),output=panel.querySelector('[data-demo-output]');
   const set=(html,answer)=>{visual.innerHTML=html;output.innerHTML=notation(answer);};
   if(index===0){
-    slider(t.move,1,19,1,10,n=>{const numerator=60+n,value=numerator/120;
+    const gcd=(a,b)=>b?gcd(b,a%b):a;
+    slider(t.move,1,19,1,10,n=>{const numerator=60+n,value=numerator/120,g=gcd(numerator,120),rn=numerator/g,rd=120/g;
       set(numberLine(.5,2/3,[{value,label:numerator+'/120'},{value:.5,label:'1/2'},{value:2/3,label:'2/3'}],ta),
-       {latex:'\\dfrac12 < '+(n===10?'\\underbrace{\\dfrac{'+numerator+'}{120}}_{=\\,\\dfrac7{12}}':'\\dfrac{'+numerator+'}{120}')+' < \\dfrac23',fallback:'1/2 < '+numerator+'/120 < 2/3'+(n===10?'  =  7/12':'')});
+       {latex:'\\dfrac12 < '+(g>1?'\\underbrace{\\dfrac{'+numerator+'}{120}}_{=\\,\\dfrac{'+rn+'}{'+rd+'}}':'\\dfrac{'+numerator+'}{120}')+' < \\dfrac23',fallback:'1/2 < '+numerator+'/120 < 2/3'+(g>1?'  =  '+rn+'/'+rd:'')});
     });
   }else if(index===1){
     const options=[['term','1/8'],['repeat','1/3'],['root','√2'],['nonrepeat','0.1010010001…']];
     controls(t.category,options,'root',mode=>{
-     const d={term:['0.125',ta?'முடிவுறும் தசமம் · விகிதமுறு':'Terminating · rational'],
-       repeat:['0.3333…',ta?'மீளும் தசமம் · விகிதமுறு':'Repeating · rational'],
-       root:['1.41421356…',ta?'மீளாத தசமம் · விகிதமுறா':'Non-repeating · irrational'],
-       nonrepeat:['0.1010010001…',ta?'மீளாத தசமம் · விகிதமுறா':'Non-repeating · irrational']};
-     set('<div class="rnlab-big">'+esc(d[mode][0])+'</div>',d[mode][1]);
+     const d={term:[esc('0.125'),ta?'முடிவுறும் தசமம் · விகிதமுறு (பகுதி 2³)':'Terminating · rational (denominator 8 = 2³)'],
+       repeat:[notation({latex:'0.\\overline{3}',fallback:'0.3̄'}),ta?'மீளும் தசமம் (அலகு நீளம் 1) · விகிதமுறு':'Repeating (period 1) · rational (3 ∉ {2, 5})'],
+       root:[esc('1.41421356…'),ta?'மீளாத தசமம் · விகிதமுறா':'Non-repeating · irrational'],
+       nonrepeat:[esc('0.1010010001…'),ta?'மீளாத தசமம் · விகிதமுறா':'Non-repeating · irrational']};
+     set('<div class="rnlab-big">'+d[mode][0]+'</div>',d[mode][1]);
     });
   }else if(index===2){
     const zoomLabel=ta?'தசம இடங்களைப் பெரிதாக்குக':'Zoom into decimal places';
     slider(zoomLabel,1,3,1,1,n=>{
       const scale=Math.pow(10,n),base=Math.floor(Math.sqrt(2)*scale)/scale,high=(Math.floor(Math.sqrt(2)*scale)+1)/scale;
       const lo=base.toFixed(n),hi=high.toFixed(n);
-      set(numberLine(base,high,[{value:Math.sqrt(2),label:'√2'}],ta),
+      set(numberLine(base,high,[{value:Math.sqrt(2),label:'√2'}],ta,10),
         {latex:lo+' < \\sqrt{2} < '+hi,fallback:lo+' < √2 < '+hi});
     });
   }else if(index===3){

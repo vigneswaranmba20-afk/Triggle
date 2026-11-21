@@ -1,19 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
   <title id="t">Cloud and lake reflection diagram for Exercise 6.4 Q3</title>
   <desc id="desc">Observation point h metres above lake surface views cloud at angle theta1 above horizontal and reflection at depth h+x at angle theta2 below horizontal.</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
   <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
-  <line x1="28" y1="114" x2="292" y2="114" stroke="#1F6FEB" stroke-width="1.6"/>
-  <line x1="74" y1="114" x2="74" y2="90" stroke="#181B20" stroke-width="2.5"/>
-  <line x1="74" y1="90" x2="236" y2="90" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
-  <line x1="236" y1="30" x2="236" y2="198" stroke="#166353" stroke-width="2" stroke-dasharray="3 3"/>
-  <circle cx="236" cy="30" r="5" fill="#166353"/>
-  <circle cx="236" cy="198" r="5" fill="#525B62"/>
-  <line x1="74" y1="90" x2="236" y2="30" stroke="#6E2933" stroke-width="2"/>
-  <line x1="74" y1="90" x2="236" y2="198" stroke="#6E2933" stroke-width="2"/>
-  <text x="116" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#6E2933">θ₁</text>
-  <text x="116" y="106" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#6E2933">θ₂</text>
-  <text x="64" y="106" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="end" fill="#181B20">h</text>
-  <text x="246" y="34" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#166353">Cloud C (h+x)</text>
-  <text x="246" y="200" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#525B62">Image C'</text>
-  <text x="148" y="128" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#1F6FEB">Lake level</text>
+  <line x1="24" y1="114" x2="288" y2="114" stroke="#1F6FEB" stroke-width="1.6"/>
+  <line x1="70" y1="114" x2="70" y2="86" stroke="#181B20" stroke-width="2.5"/>
+  <line x1="70" y1="86" x2="210" y2="86" stroke="#525B62" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="210" y1="30" x2="210" y2="196" stroke="#166353" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="210" cy="30" r="5" fill="#166353"/>
+  <circle cx="210" cy="196" r="5" fill="#525B62"/>
+  <line x1="70" y1="86" x2="210" y2="30" stroke="#6E2933" stroke-width="2"/>
+  <line x1="70" y1="86" x2="210" y2="196" stroke="#6E2933" stroke-width="2"/>
+  <path d="M116.0,86.0 A46,46 0 0,0 112.7,68.9" fill="none" stroke="#6E2933" stroke-width="1.3"/>
+  <path d="M104.0,86.0 A34,34 0 0,1 96.7,107.0" fill="none" stroke="#166353" stroke-width="1.3"/>
+  <text x="132" y="79" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#6E2933">θ₁</text>
+  <text x="118" y="102" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#166353">θ₂</text>
+  <text x="55" y="100" transform="rotate(-90 55 100)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">h</text>
+  <text x="220" y="34" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#166353">Cloud C (h+x)</text>
+  <text x="220" y="198" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#525B62">Image C'</text>
+  <text x="168" y="129" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#1F6FEB">Lake level</text>
 </svg>

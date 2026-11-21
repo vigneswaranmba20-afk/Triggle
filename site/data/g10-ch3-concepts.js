@@ -459,7 +459,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "points": {
           "en": [
             "Why double the quotient in long division? Look at (A + B)² = A² + (2A + B)B. After subtracting A², the next slice we remove is (2A + B) × B — literally twice the quotient so far plus the new term B, all multiplied by B!",
-            "Always check power order first: if a term is out of order (or a power is missing, insert 0x³ etc.), reorder in descending powers before starting division.",
+            "Always check power order first: if a term is out of order (or a power is missing, insert 0x³ etc.), reorder in descending powers before starting division — just like polynomial GCD/Remainder steps where each subtraction must cancel the leading term until the final remainder reaches 0.",
             "Finding unknown constants a and b in a perfect-square polynomial: carry out the division until the final remainder, then equate both remaining terms to 0."
           ],
           "ta": [
@@ -697,8 +697,8 @@ window.TRIGGLE_G10_CH3_PATH={
         "ta": "இருபடிச் சூத்திரத்தில் உள்ள √(b² − 4ac) பகுதியே மூலங்களின் வகையைத் தீர்மானிப்பதால், Δ = b² − 4ac (டெல்டா) என்பது 'தன்மைக்காட்டி' எனப்படுகிறது. √Δ மிகை எனில் இரு வெவ்வேறு மெய் மூலங்கள், 0 எனில் சம மூலங்கள், குறை எனில் மெய் மூலங்கள் இல்லை."
       },
       "example": {
-        "en": "In y = x² − 4x + c, raising c shifts the parabola upward: at c = 3, Δ = 4 > 0 gives two x-intercepts; at c = 4, Δ = 0 touches the x-axis at one vertex (2, 0); at c = 5, Δ = −4 < 0 lifts the entire parabola above the x-axis with no real roots.",
-        "ta": "y = x² − 4x + c பரவளையத்தில் c மதிப்பை உயர்த்தும்போது அது மேல்நோக்கி நகரும்: c = 3 எனில் Δ = 4 > 0 (இரு வெட்டுப் புள்ளிகள்); c = 4 எனில் Δ = 0 (ஒரே தொடு புள்ளி); c = 5 எனில் Δ = −4 < 0 (x-அச்சை வெட்டாது)."
+        "en": "In y = x² − 4x + c, raising c shifts the parabola upward: at c = 3, Δ = 4 > 0 is a perfect square, giving rational unequal roots (1, 3); at c = 2, Δ = 8 > 0 is not a perfect square, giving irrational roots; at c = 4, Δ = 0 touches (2, 0) (equal); at c = 5, Δ = −4 < 0 gives no real roots.",
+        "ta": "y = x² − 4x + c பரவளையத்தில்: c = 3 எனில் Δ = 4 > 0 முழு வர்க்கம் என்பதால் விகிதமுறு வெவ்வேறு மூலங்கள் (1, 3); c = 2 எனில் Δ = 8 > 0 முழு வர்க்கம் அல்லாததால் விகிதமுறா மூலங்கள்; c = 4 எனில் Δ = 0 (சம மூலங்கள்); c = 5 எனில் Δ = −4 < 0 (மெய் மூலங்கள் இல்லை)."
       },
       "exampleMath": {
         "latex": "\\begin{aligned}x^2-4x+4&=0\\\\\\Delta=(-4)^2-4(1)(4)&=0\\\\\\implies\\text{equal }(x&=2)\\end{aligned}",
@@ -709,10 +709,12 @@ window.TRIGGLE_G10_CH3_PATH={
         "points": {
           "en": [
             "Why must coefficients a, b, c be real (a ≠ 0)? The test 'Δ < 0 means no real roots' relies on a real number squared never being negative.",
+            "Splitting the Δ > 0 case (when a, b, c are rational, TN p. 119): if Δ > 0 is a perfect square (such as Δ = 4 or 16 in x² − 4x + c), √Δ is rational so the two unequal roots are rational; if Δ > 0 is not a perfect square (such as Δ = 8), √Δ stays a surd so the roots are irrational.",
             "When a problem says 'has real roots' (without saying unequal), include BOTH Δ > 0 and Δ = 0, i.e., Δ ≥ 0.",
             "Always rearrange into standard form ax² + bx + c = 0 before reading a, b, c — watch the signs of b and c!"
           ],
           "ta": [
+            "a, b, c விகிதமுறு எண்களாக இருந்து Δ > 0 முழு வர்க்கமாக (எ.கா. 4, 16) இருந்தால் மூலங்கள் விகிதமுறு எண்களாகவும், முழு வர்க்கமாக இல்லாவிட்டால் (எ.கா. 8) விகிதமுறா எண்களாகவும் இருக்கும்.",
             "மெய் மூலங்கள் (real roots) என்று மட்டும் கேட்டால் Δ > 0 மற்றும் Δ = 0 ஆகிய இரண்டையும் சேர்த்து Δ ≥ 0 என எடுக்க வேண்டும்.",
             "a, b, c மதிப்புகளை எடுக்கும் முன் சமன்பாடு ax² + bx + c = 0 என்ற திட்ட வடிவில் உள்ளதா என்பதையும் குறிகளையும் சரிபார்க்கவும்."
           ]
@@ -1124,12 +1126,12 @@ window.TRIGGLE_G10_CH3_PATH={
           "en": [
             "Why doesn't matrix multiplication work element-by-element? Matrices represent linear transformations (e.g. rotations, systems of equations, computer graphics projections); multiplying AB composes two transformations one after the other.",
             "Important matrix surprises compared to ordinary numbers: (1) AB ≠ BA in general; (2) AB = O does NOT force A = O or B = O! Try multiplying [[1, 0], [0, 0]] by [[0, 0], [2, 0]] — you get the zero matrix from two non-zero matrices.",
-            "Check transpose of a product: (AB)ᵀ = BᵀAᵀ (order reverses when transposing!)."
+            "Check matrix distributivity and transpose reversal: A(B + C) = AB + AC and (A + B)C = AC + BC always hold whenever sizes match, and transposing a product reverses the order: (AB)ᵀ = BᵀAᵀ (for (p×n)·(n×q)ᵀ = (q×p))."
           ],
           "ta": [
             "அணிப் பெருக்கல் ஏன் உறுப்புக்கு உறுப்பு அல்ல? அணிகள் நேரியல் உருமாற்றங்களையும் சமன்பாட்டுத் தொகுப்புகளையும் குறிப்பதால், நிரை × நிரல் பெருக்கல் இரு செயல்பாடுகளை இணைக்கிறது.",
             "சாதாரண எண்களிலிருந்து மாறுபட்ட இரு பண்புகள்: (1) பொதுவாக AB ≠ BA; (2) A ≠ O, B ≠ O ஆக இருந்தாலும் AB = O வரலாம்!",
-            "நிரை நிரல் மாற்றின் பெருக்கல் விதி: (AB)ᵀ = BᵀAᵀ (வரிசை தலைகீழாகும்)."
+            "பங்கீட்டுப் பண்பும் நிரை நிரல் மாற்றின் பெருக்கல் விதியும்: A(B + C) = AB + AC, (A + B)C = AC + BC, மற்றும் (AB)ᵀ = BᵀAᵀ (பெருக்கலில் வரிசை தலைகீழாகும்)."
           ]
         }
       },

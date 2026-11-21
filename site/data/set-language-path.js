@@ -136,8 +136,8 @@ window.TRIGGLE_SET_PATH = {
         "ta": "கண வகைகள், உட்கணம், ஆதி எண்"
       },
       "idea": {
-        "en": "Distinct members determine a set's size. The empty set has zero members, a singleton has one, and subsets contain only members of a larger set.",
-        "ta": "ஒரு கணத்தின் தனித்த உறுப்புகளே அதன் ஆதி எண்ணை நிர்ணயிக்கின்றன. வெற்றுக் கணத்தில் உறுப்புகள் இல்லை; ஓருறுப்புக் கணத்தில் ஒன்று மட்டுமே இருக்கும்."
+        "en": "Distinct members determine a set's size. The empty set has zero members, a singleton has one, and subsets contain only members of a larger set. A power set P(A) collects every subset of A, including the empty set and A itself. For A={a,b}, P(A)={∅,{a},{b},{a,b}}: 4 subsets. Each of m elements is either included or excluded, so n(P(A))=2^m; proper subsets exclude A itself, leaving 2^m−1. Disjoint sets have no common elements; overlapping sets share at least one.",
+        "ta": "ஒரு கணத்தின் தனித்த உறுப்புகளே அதன் ஆதி எண்ணை நிர்ணயிக்கின்றன. வெற்றுக் கணத்தில் உறுப்புகள் இல்லை; ஓருறுப்புக் கணத்தில் ஒன்று மட்டுமே இருக்கும். A={a,b} எனில் அதன் எல்லா உட்கணங்களின் கணம் P(A)={∅,{a},{b},{a,b}} ஆகும். m உறுப்புகள் உள்ள கணத்திற்கு 2^m உட்கணங்களும், கணத்தையே நீக்கினால் 2^m−1 தகு உட்கணங்களும் உள்ளன. பொதுவான உறுப்புகள் இல்லாதவை வெட்டாக் கணங்கள்; பொதுவான உறுப்புகள் உள்ளவை ஒன்றையொன்று வெட்டும் கணங்கள்."
       },
       "example": {
         "en": "P = {a, a, b} is the same set as {a, b}, so n(P)=2; {a} is a proper subset of P.",

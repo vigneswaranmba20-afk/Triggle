@@ -85,10 +85,11 @@
     const {grid, cells} = outcomeGrid(signals);
     grid.setAttribute('aria-label', 'All four ordered signals');
     const events = [
-      [[], tex`S=\{\mathrm{RR},\mathrm{RB},\mathrm{BR},\mathrm{BB}\}`, 'The sample space contains RR, RB, BR and BB.', 'S is the whole sample space. Each pair is one complete outcome.'],
-      [[1, 2], tex`E=\{\mathrm{RB},\mathrm{BR}\}`, 'The event has outcomes RB and BR.', 'The event E matches both marked signals. They differ in which flash is blue.']
+      [[], tex`S=\{\mathrm{RR},\mathrm{RB},\mathrm{BR},\mathrm{BB}\}`, 'The sample space contains RR, RB, BR and BB.', 'S is the whole sample space. Each pair is one complete outcome (ordered pairs also give n(S)=6×6=36 for two dice).'],
+      [[1, 2], tex`E=\{\mathrm{RB},\mathrm{BR}\}`, 'The event has outcomes RB and BR.', 'The event E matches both marked signals. They differ in which flash is blue.'],
+      [[1, 2, 3], tex`\begin{aligned}E&=\{\mathrm{RB},\mathrm{BR},\mathrm{BB}\}\\P(E)&=\dfrac{3}{4}\end{aligned}`, 'Three out of four signals have at least one blue.', 'Order matters: RB, BR, and BB all count (3/4), just like HH, HT, TH for two coins.']
     ];
-    select(host, 'View possible signals', ['All signals', 'Exactly one blue'], index => {
+    select(host, 'View possible signals', ['All signals', 'Exactly one blue', 'At least one blue'], index => {
       const [matches, latex, fallback, summary] = events[index];
       mark(cells, matches);
       showResult(result, latex, fallback, summary);
@@ -101,9 +102,10 @@
     grid.setAttribute('aria-label', 'All six die faces');
     const events = [
       [[3, 4, 5], tex`\dfrac{3}{6}=\dfrac{1}{2}`, 'Three out of six is one half.', 'Three faces match. There is a one-half chance of a page above 3.'],
-      [[2, 5], tex`\dfrac{2}{6}=\dfrac{1}{3}`, 'Two out of six is one third.', 'Only 3 and 6 match. There is a one-third chance of a multiple of 3.']
+      [[2, 5], tex`\dfrac{2}{6}=\dfrac{1}{3}`, 'Two out of six is one third.', 'Only 3 and 6 match. There is a one-third chance of a multiple of 3.'],
+      [[1, 2, 4], tex`\{2,3,5\},\;P=\dfrac{3}{6}=\dfrac{1}{2}`, 'Three out of six faces (2, 3, 5) are prime.', 'Primes on a die are {2, 3, 5}: 1 is neither prime nor composite.']
     ];
-    select(host, 'Which pages count?', ['Above 3', 'Multiples of 3'], index => {
+    select(host, 'Which pages count?', ['Above 3', 'Multiples of 3', 'Prime numbers'], index => {
       const [matches, latex, fallback, summary] = events[index];
       mark(cells, matches);
       showResult(result, latex, fallback, summary);
@@ -150,7 +152,7 @@
       observedLabel.textContent = 'Observed · awaiting tosses';
       result.textContent = 'Toss the coin to start counting heads.';
     });
-    controls.append(button('Toss once', () => run(1)), button('Toss 20', () => run(20)), reset);
+    controls.append(button('Toss once', () => run(1)), button('Toss 20', () => run(20)), button('Toss 100', () => run(100)), reset);
     host.append(controls, comparisons);
     result.textContent = 'Toss the coin to start counting heads.';
   }
@@ -175,9 +177,18 @@
         cell.dataset.matches = inA && inB ? 'A and B' : inA ? 'A' : inB ? 'B' : 'Neither';
         cell.textContent = (i + 1) + ' · ' + cell.dataset.matches;
       });
-      showResult(result, tex`P(A)=\dfrac{${a.length}}{4},\quad P(B)=\dfrac{${b.length}}{4}`,
-        'Chance of A is ' + a.length + ' out of 4. Chance of B is ' + b.length + ' out of 4.',
-        summary);
+      const unionCount = new Set([...a, ...b]).size;
+      const overlapCount = a.filter(v => b.includes(v)).length;
+      const formula = tex`\begin{aligned}
+        P(A)&=\dfrac{${a.length}}{4},\quad P(B)=\dfrac{${b.length}}{4} \\
+        P(A\text{ or }B)&=\dfrac{${unionCount}}{4}${overlapCount ? tex`\neq\dfrac{${a.length}+${b.length}}{4}` : ''}
+      \end{aligned}`;
+      const unionNote = overlapCount
+        ? ' Shared outcome (' + overlapCount + ') is counted once, so P(A or B) = ' + unionCount + '/4 instead of ' + (a.length + b.length) + '/4.'
+        : ' Since they do not overlap, P(A or B) = ' + a.length + '/4 + ' + b.length + '/4 = ' + unionCount + '/4.';
+      showResult(result, formula,
+        'Chance of A is ' + a.length + ' out of 4. Chance of B is ' + b.length + ' out of 4. Chance of A or B is ' + unionCount + ' out of 4.',
+        summary + unionNote);
     });
     host.append(key, grid);
   }

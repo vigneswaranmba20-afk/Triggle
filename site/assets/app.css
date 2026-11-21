@@ -432,7 +432,8 @@
 .sp2-recall{padding:14px 0;border-top:1px solid #eee9f3;margin-top:18px}
 .sp2-recall>p{margin:7px 0 12px}
 .sp2-answers{display:flex;gap:7px;flex-wrap:wrap}
-.sp2-answers button{flex:1 1 135px;text-align:left}
+.sp2-answers button{flex:1 1 200px;min-width:0;text-align:left;overflow:visible;white-space:normal;overflow-wrap:anywhere}
+.sp2-answers button .triggle-math,.sp2-answers button .katex,.sp2-answers button .katex-html{max-width:100%;overflow:visible;white-space:normal}
 .sp2-recall-actions{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0}
 .sp2-recall-actions button{background:#fbf9ff;font-size:12px;min-height:42px}
 .sp2-why{background:#f7f3fc;padding:11px 12px;border-left:3px solid #9a80ca;border-radius:6px;font-size:13px;line-height:1.7;overflow-wrap:anywhere;color:#51446e}
@@ -517,6 +518,8 @@
 
 /* Textbook-quality math notation; native browser MathML avoids a network dependency. */
 .triggle-math{display:inline-block;vertical-align:middle;font-size:1em;font-weight:normal;line-height:1.25;white-space:nowrap}
+.triggle-math mi{text-transform:none;font-family:'KaTeX_Math','KaTeX_Main',Georgia,'Times New Roman',serif;font-style:italic}
+.triggle-math mn{font-family:'KaTeX_Main',Georgia,'Times New Roman',serif;font-style:normal}
 .frac{vertical-align:middle}
 .frac>span{display:block;max-width:100%}
 .rnlab .sp2-formula{line-height:2.05;overflow-x:auto;overflow-y:visible}
@@ -1087,3 +1090,12 @@ body.textbook-reader .question-top-nav .page-button{min-width:44px;min-height:44
 .lesson-card:has(.question-top-nav:not([hidden])) .inline-figure-open{flex-direction:column;align-items:center}
 .lesson-card:has(.question-top-nav:not([hidden])) .inline-figure-visual{width:min(100%,320px)}
 .lesson-card:has(.question-top-nav:not([hidden])) .inline-figure-action{flex:none;max-width:none}
+.triggle-table-wrap{margin:12px 0;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #dfd7c8;border-radius:12px;background:#fffdfa}
+.triggle-data-table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.35;text-align:center;color:#272434}
+.triggle-data-table th,.triggle-data-table td{padding:9px 8px;border-bottom:1px solid #ece5d8;border-right:1px solid #ece5d8;word-break:normal;overflow-wrap:normal}
+.triggle-data-table th:last-child,.triggle-data-table td:last-child{border-right:0}
+.triggle-data-table tr:last-child th,.triggle-data-table tr:last-child td{border-bottom:0}
+.triggle-data-table thead th{background:#f5f0ff;color:#3c2a69;font-weight:750}
+.triggle-data-table tbody th[scope="row"]{text-align:left;font-weight:700;background:#faf7f0;color:#3b354b}
+.triggle-data-table tbody td{white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(max-width:430px){.triggle-data-table{font-size:12px}.triggle-data-table th,.triggle-data-table td{padding:7px 5px}}

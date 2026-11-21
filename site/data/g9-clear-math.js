@@ -31564,10 +31564,10 @@ const records=[
           "latex": "3",
           "fallback": "3"
         },
-        " of them are ",
+        " of them are Red, ",
         {
-          "latex": "\\text{Red}, 5",
-          "fallback": "Red, 5"
+          "latex": "5",
+          "fallback": "5"
         },
         " of them are Blue and the remaining are Green then, what is the probability of picking out (i) a Blue ball, (ii) a Red ball and (iii) a Green ball?"
       ],
@@ -31582,10 +31582,10 @@ const records=[
           "latex": "3",
           "fallback": "3"
         },
-        " of them are ",
+        " of them are Red, ",
         {
-          "latex": "\\text{Red}, 5",
-          "fallback": "Red, 5"
+          "latex": "5",
+          "fallback": "5"
         },
         " of them are Blue and the remaining are Green then, what is the probability of picking out (i) a Blue ball, (ii) a Red ball and (iii) a Green ball?"
       ]
@@ -31956,48 +31956,28 @@ const records=[
       "en": [
         "A manufacturer tested ",
         {
-          "latex": "7000 LED",
-          "fallback": "7000 LED"
+          "latex": "7000",
+          "fallback": "7000"
         },
-        " lights at random and found that ",
+        " LED lights at random and found that ",
         {
           "latex": "25",
           "fallback": "25"
         },
-        " of them were defective. If a ",
-        {
-          "latex": "LED",
-          "fallback": "LED"
-        },
-        " light is selected at random, what is the probability that the selected ",
-        {
-          "latex": "LED",
-          "fallback": "LED"
-        },
-        " light is a defective one."
+        " of them were defective. If a LED light is selected at random, what is the probability that the selected LED light is a defective one."
       ],
       "ta": [
         "English-language question; Tamil version pending. A manufacturer tested ",
         {
-          "latex": "7000 LED",
-          "fallback": "7000 LED"
+          "latex": "7000",
+          "fallback": "7000"
         },
-        " lights at random and found that ",
+        " LED lights at random and found that ",
         {
           "latex": "25",
           "fallback": "25"
         },
-        " of them were defective. If a ",
-        {
-          "latex": "LED",
-          "fallback": "LED"
-        },
-        " light is selected at random, what is the probability that the selected ",
-        {
-          "latex": "LED",
-          "fallback": "LED"
-        },
-        " light is a defective one."
+        " of them were defective. If a LED light is selected at random, what is the probability that the selected LED light is a defective one."
       ]
     },
     "answerMath": {
@@ -32700,10 +32680,10 @@ const records=[
             },
             " families. The wording is ambiguous because the ",
             {
-              "latex": "250'",
-              "fallback": "250 '"
+              "latex": "250",
+              "fallback": "250"
             },
-            "Both' families also employ part-time maids."
+            " 'Both' families also employ part-time maids."
           ],
           "ta": [
             "English explanation (Tamil version pending): For part-time maids, the printed answer key uses the 'Only part time' category; use ",
@@ -32713,10 +32693,53 @@ const records=[
             },
             " families. The wording is ambiguous because the ",
             {
-              "latex": "250'",
-              "fallback": "250 '"
+              "latex": "250",
+              "fallback": "250"
             },
-            "Both' families also employ part-time maids."
+            " 'Both' families also employ part-time maids."
+          ]
+        }
+      },
+      {
+        "math": [
+          {
+            "latex": "P\\left(\\text{part time or both}\\right)",
+            "fallback": "P(part time or both)",
+            "display": true
+          },
+          "; = ",
+          {
+            "latex": "\\begin{aligned}&\\dfrac{860 + 250}{1500} = \\dfrac{1110}{1500}  \\\\ &= \\dfrac{37}{50}\\end{aligned}",
+            "fallback": "[[860 + 250|1500]] = [[1110|1500]] = [[37|50]]",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "If part-time maids includes families who also employ full-time maids, add the disjoint categories: ",
+            {
+              "latex": "860",
+              "fallback": "860"
+            },
+            " only-part-time families and ",
+            {
+              "latex": "250",
+              "fallback": "250"
+            },
+            " both-types families. This inclusive interpretation differs from the printed answer key for part (ii)."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): If part-time maids includes families who also employ full-time maids, add ",
+            {
+              "latex": "860",
+              "fallback": "860"
+            },
+            " only-part-time and ",
+            {
+              "latex": "250",
+              "fallback": "250"
+            },
+            " both-types families. This is an alternative interpretation, not the printed answer key."
           ]
         }
       },
@@ -38994,7 +39017,7 @@ const texts={
     "fallback": "4^0"
   },
   "4^(1/2)": {
-    "latex": "4^{\\dfrac{1}{2}}",
+    "latex": "4^{\\frac{1}{2}}",
     "fallback": "4^(1/2)"
   },
   "4^1": {
@@ -39002,7 +39025,7 @@ const texts={
     "fallback": "4^1"
   },
   "4^(3/2)": {
-    "latex": "4^{\\dfrac{3}{2}}",
+    "latex": "4^{\\frac{3}{2}}",
     "fallback": "4^(3/2)"
   },
   "4^0=1": {
@@ -39010,7 +39033,7 @@ const texts={
     "fallback": "4^0=1"
   },
   "4^(1/2)=√4=2": {
-    "latex": "4^{\\dfrac{1}{2}} = \\sqrt{4} = 2",
+    "latex": "4^{\\frac{1}{2}} = \\sqrt{4} = 2",
     "fallback": "4^(1/2)=√4=2"
   },
   "4^1=4": {
@@ -39018,7 +39041,7 @@ const texts={
     "fallback": "4^1=4"
   },
   "4^(3/2)=(√4)^3=8": {
-    "latex": "4^{\\dfrac{3}{2}} = \\left(\\sqrt{4}\\right)^{3} = 8",
+    "latex": "4^{\\frac{3}{2}} = \\left(\\sqrt{4}\\right)^{3} = 8",
     "fallback": "4^(3/2)=(√4)^3=8"
   },
   "√25": {
@@ -39453,6 +39476,68 @@ const texts={
       "fallback": "30"
     },
     " நாட்களைக் கொண்ட மாதங்களின் கணத்தைச் சொற்களாலும் பட்டியல் முறையாலும் எழுதுக."
+  ],
+  "Distinct members determine a set's size. The empty set has zero members, a singleton has one, and subsets contain only members of a larger set. A power set P(A) collects every subset of A, including the empty set and A itself. For A={a,b}, P(A)={∅,{a},{b},{a,b}}: 4 subsets. Each of m elements is either included or excluded, so n(P(A))=2^m; proper subsets exclude A itself, leaving 2^m−1. Disjoint sets have no common elements; overlapping sets share at least one.": [
+    "Distinct members determine a set's size. The empty set has zero members, a singleton has one, and subsets contain only members of a larger set. A power set ",
+    {
+      "latex": "P\\left(A\\right)",
+      "fallback": "P(A)"
+    },
+    " collects every subset of A, including the empty set and A itself. For ",
+    {
+      "latex": "A = \\left\\{a, b\\right\\}",
+      "fallback": "A={a,b}"
+    },
+    ",",
+    " ",
+    {
+      "latex": "P\\left(A\\right) = \\left\\{\\varnothing, \\left\\{a\\right\\}, \\left\\{b\\right\\}, \\left\\{a, b\\right\\}\\right\\} : 4",
+      "fallback": "P(A)={∅,{a},{b},{a,b}}: 4"
+    },
+    " subsets. Each of ",
+    {
+      "latex": "\\mathrm{m}",
+      "fallback": "m"
+    },
+    " elements is either included or excluded, so ",
+    {
+      "latex": "n \\left(P\\left(A\\right)\\right) = 2^{m}",
+      "fallback": "n(P(A))=2^m"
+    },
+    "; proper subsets exclude A itself, leaving ",
+    {
+      "latex": "2^{m} - 1",
+      "fallback": "2^m−1"
+    },
+    ". Disjoint sets have no common elements; overlapping sets share at least one."
+  ],
+  "ஒரு கணத்தின் தனித்த உறுப்புகளே அதன் ஆதி எண்ணை நிர்ணயிக்கின்றன. வெற்றுக் கணத்தில் உறுப்புகள் இல்லை; ஓருறுப்புக் கணத்தில் ஒன்று மட்டுமே இருக்கும். A={a,b} எனில் அதன் எல்லா உட்கணங்களின் கணம் P(A)={∅,{a},{b},{a,b}} ஆகும். m உறுப்புகள் உள்ள கணத்திற்கு 2^m உட்கணங்களும், கணத்தையே நீக்கினால் 2^m−1 தகு உட்கணங்களும் உள்ளன. பொதுவான உறுப்புகள் இல்லாதவை வெட்டாக் கணங்கள்; பொதுவான உறுப்புகள் உள்ளவை ஒன்றையொன்று வெட்டும் கணங்கள்.": [
+    "ஒரு கணத்தின் தனித்த உறுப்புகளே அதன் ஆதி எண்ணை நிர்ணயிக்கின்றன. வெற்றுக் கணத்தில் உறுப்புகள் இல்லை; ஓருறுப்புக் கணத்தில் ஒன்று மட்டுமே இருக்கும். ",
+    {
+      "latex": "A = \\left\\{a, b\\right\\}",
+      "fallback": "A={a,b}"
+    },
+    " எனில் அதன் எல்லா உட்கணங்களின் கணம் ",
+    {
+      "latex": "P\\left(A\\right) = \\left\\{\\varnothing, \\left\\{a\\right\\}, \\left\\{b\\right\\}, \\left\\{a, b\\right\\}\\right\\}",
+      "fallback": "P(A)={∅,{a},{b},{a,b}}"
+    },
+    " ஆகும். ",
+    {
+      "latex": "\\mathrm{m}",
+      "fallback": "m"
+    },
+    " உறுப்புகள் உள்ள கணத்திற்கு ",
+    {
+      "latex": "2^{m}",
+      "fallback": "2^m"
+    },
+    " உட்கணங்களும், கணத்தையே நீக்கினால் ",
+    {
+      "latex": "2^{m} - 1",
+      "fallback": "2^m−1"
+    },
+    " தகு உட்கணங்களும் உள்ளன. பொதுவான உறுப்புகள் இல்லாதவை வெட்டாக் கணங்கள்; பொதுவான உறுப்புகள் உள்ளவை ஒன்றையொன்று வெட்டும் கணங்கள்."
   ],
   "P = {a, a, b} is the same set as {a, b}, so n(P)=2; {a} is a proper subset of P.": [
     {
@@ -41343,6 +41428,38 @@ const texts={
     },
     "."
   ],
+  "g9-ch9-ex9.1-q1": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 1",
+      "fallback": "9.1-q1"
+    }
+  ],
+  "g9-ch9-ex9.1-q3": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 3",
+      "fallback": "9.1-q3"
+    }
+  ],
   "probability-2": [
     "probability",
     {
@@ -41518,7 +41635,7 @@ const texts={
     },
     "."
   ],
-  "There are four ordered outcomes, not three, because HT and TH are distinct.": [
+  "There are four ordered outcomes, not three, because HT and TH are distinct. By the same rule, rolling two dice gives 6 × 6 = 36 ordered pairs because (1, 3) and (3, 1) are different outcomes.": [
     "There are four ordered outcomes, not three, because ",
     {
       "latex": "HT",
@@ -41529,9 +41646,24 @@ const texts={
       "latex": "TH",
       "fallback": "TH"
     },
-    " are distinct."
+    " are distinct. By the same rule, rolling two dice gives ",
+    {
+      "latex": "6 \\times 6 = 36",
+      "fallback": "6 × 6 = 36"
+    },
+    " ordered pairs because ",
+    {
+      "latex": "\\left(1, 3\\right)",
+      "fallback": "(1, 3)"
+    },
+    " and ",
+    {
+      "latex": "\\left(3, 1\\right)",
+      "fallback": "(3, 1)"
+    },
+    " are different outcomes."
   ],
-  "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because HT and TH are distinct.": [
+  "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because HT and TH are distinct. Rolling two dice gives 6 × 6 = 36 ordered pairs because (1, 3) and (3, 1) are different outcomes.": [
     "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because ",
     {
       "latex": "HT",
@@ -41542,7 +41674,54 @@ const texts={
       "latex": "TH",
       "fallback": "TH"
     },
-    " are distinct."
+    " are distinct. Rolling two dice gives ",
+    {
+      "latex": "6 \\times 6 = 36",
+      "fallback": "6 × 6 = 36"
+    },
+    " ordered pairs because ",
+    {
+      "latex": "\\left(1, 3\\right)",
+      "fallback": "(1, 3)"
+    },
+    " and ",
+    {
+      "latex": "\\left(3, 1\\right)",
+      "fallback": "(3, 1)"
+    },
+    " are different outcomes."
+  ],
+  "g9-ch9-ex9.1-q4": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 4",
+      "fallback": "9.1-q4"
+    }
+  ],
+  "g9-ch9-ex9.1-q6": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 6",
+      "fallback": "9.1-q6"
+    }
   ],
   "probability-3": [
     "probability",
@@ -41673,6 +41852,38 @@ const texts={
       "fallback": "6 = 1/2"
     },
     "."
+  ],
+  "g9-ch9-ex9.2-q1": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.2 - q 1",
+      "fallback": "9.2-q1"
+    }
+  ],
+  "g9-ch9-ex9.2-q2": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.2 - q 2",
+      "fallback": "9.2-q2"
+    }
   ],
   "probability-4": [
     "probability",
@@ -41810,6 +42021,38 @@ const texts={
       "fallback": "10/200=1/20=0.05"
     },
     "."
+  ],
+  "g9-ch9-ex9.1-q9": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 9",
+      "fallback": "9.1-q9"
+    }
+  ],
+  "g9-ch9-ex9.1-q10": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 10",
+      "fallback": "9.1-q10"
+    }
   ],
   "probability-5": [
     "probability",
@@ -41958,6 +42201,38 @@ const texts={
       "fallback": "P(not E)=1−0.4=0.6"
     },
     "."
+  ],
+  "g9-ch9-ex9.2-q4": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.2 - q 4",
+      "fallback": "9.2-q4"
+    }
+  ],
+  "g9-ch9-ex9.2-q5": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.2 - q 5",
+      "fallback": "9.2-q5"
+    }
   ],
   "g9-ch2": [
     {
@@ -42452,25 +42727,15 @@ const texts={
   ],
   "64^(−2/3)=[[1|(∛64)²]]=[[1|16]].": [
     {
-      "latex": "64^{\\dfrac{- 2}{3}} = \\dfrac{1}{\\left(\\sqrt[3]{64}\\right)^{2}} = \\dfrac{1}{16}",
+      "latex": "64^{\\frac{- 2}{3}} = \\dfrac{1}{\\left(\\sqrt[3]{64}\\right)^{2}} = \\dfrac{1}{16}",
       "fallback": "64^(−2/3)=[[1|(∛64)²]]=[[1|16]]"
     },
     "."
   ],
   "a^(m/n)=(ⁿ√a)^m; a^(−k)=[[1|aᵏ]] for a≠0.": [
     {
-      "latex": "a^{\\dfrac{\\mathrm{m}}{n}}",
-      "fallback": "a^(m/n)"
-    },
-    "=(ⁿ",
-    {
-      "latex": "\\sqrt{a}",
-      "fallback": "√a"
-    },
-    ")^",
-    {
-      "latex": "\\mathrm{m};\\quad a^{- k} = \\dfrac{1}{a^{k}}",
-      "fallback": "m; a^(−k)=[[1|aᵏ]]"
+      "latex": "a^{\\frac{m}{n}} = \\left(\\sqrt[n]{a}\\right)^{m};\\quad a^{- k} = \\dfrac{1}{a^{k}}",
+      "fallback": "a^(m/n)=(ⁿ√a)^m; a^(−k)=[[1|aᵏ]]"
     },
     " for ",
     {
@@ -42481,18 +42746,8 @@ const texts={
   ],
   "a^(m/n)=(ⁿ√a)^m; a≠0 எனில் a^(−k)=[[1|aᵏ]].": [
     {
-      "latex": "a^{\\dfrac{\\mathrm{m}}{n}}",
-      "fallback": "a^(m/n)"
-    },
-    "=(ⁿ",
-    {
-      "latex": "\\sqrt{a}",
-      "fallback": "√a"
-    },
-    ")^",
-    {
-      "latex": "\\mathrm{m};\\quad a \\ne 0",
-      "fallback": "m; a≠0"
+      "latex": "a^{\\frac{m}{n}} = \\left(\\sqrt[n]{a}\\right)^{m};\\quad a \\ne 0",
+      "fallback": "a^(m/n)=(ⁿ√a)^m; a≠0"
     },
     " எனில் ",
     {
@@ -42504,14 +42759,14 @@ const texts={
   "What is 81^(1/4)?": [
     "What is ",
     {
-      "latex": "81^{\\dfrac{1}{4}}",
+      "latex": "81^{\\frac{1}{4}}",
       "fallback": "81^(1/4)"
     },
     "?"
   ],
   "81^(1/4) இன் மதிப்பு என்ன?": [
     {
-      "latex": "81^{\\dfrac{1}{4}}",
+      "latex": "81^{\\frac{1}{4}}",
       "fallback": "81^(1/4)"
     },
     " இன் மதிப்பு என்ன?"
@@ -42588,7 +42843,7 @@ const texts={
   ],
   "a√m+b√m=(a+b)√m.": [
     {
-      "latex": "a\\,\\sqrt{\\mathrm{m}} + b\\,\\sqrt{\\mathrm{m}} = \\left(a + b\\right)\\,\\sqrt{\\mathrm{m}}",
+      "latex": "a\\,\\sqrt{m} + b\\,\\sqrt{m} = \\left(a + b\\right)\\,\\sqrt{m}",
       "fallback": "a√m+b√m=(a+b)√m"
     },
     "."
@@ -48596,7 +48851,7 @@ const texts={
     },
     " = {red, blue, yellow} itself, which is why the number of proper subsets is always ",
     {
-      "latex": "2^{\\mathrm{m}} - 1",
+      "latex": "2^{m} - 1",
       "fallback": "2^m − 1"
     },
     "."
@@ -49262,12 +49517,12 @@ const texts={
   "By the distributive law, every term of the first polynomial multiplies every term of the second polynomial, adding exponents of like bases (x^m · x^n = x^(m+n)) before collecting like terms.": [
     "By the distributive law, every term of the first polynomial multiplies every term of the second polynomial, adding exponents of like bases (",
     {
-      "latex": "x^{\\mathrm{m}}",
+      "latex": "x^{m}",
       "fallback": "x^m"
     },
     " · ",
     {
-      "latex": "x^{n} = x^{\\mathrm{m} + n}",
+      "latex": "x^{n} = x^{m + n}",
       "fallback": "x^n = x^(m+n)"
     },
     ") before collecting like terms."

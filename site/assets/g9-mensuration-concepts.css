@@ -1,0 +1,41 @@
+/* Grade 9 Mensuration — focused, touch-first, offline-ready learning lab. */
+.g9m-lab{max-width:100%;min-width:0;margin:0 auto 1rem;padding:clamp(.8rem,3vw,1.1rem);border:1px solid rgba(88,103,126,.23);border-radius:18px;background:rgba(122,140,167,.055)}
+.g9m-instruction{font-size:1rem;line-height:1.55;margin:0 0 .8rem;color:inherit}
+.g9m-choices{display:flex;flex-wrap:wrap;gap:.55rem}
+.g9m-choices button{appearance:none;min-width:66px;min-height:46px;display:inline-flex;justify-content:center;align-items:center;cursor:pointer;border-radius:13px;padding:.55rem .9rem;font:inherit;font-weight:700;line-height:1.25;border:1px solid rgba(68,82,113,.35);background:var(--card,#fff);color:var(--ink,#263345)}
+.g9m-choices button[aria-pressed="true"]{border-color:#a04e50;box-shadow:inset 0 0 0 1px #a04e50;background:rgba(160,78,80,.09)}
+.g9m-choices button:focus-visible{outline:3px solid #ad5a58;outline-offset:2px}
+.g9m-diagram{min-height:160px;max-width:340px;margin:.3rem auto .2rem;display:grid;place-items:center}
+.g9m-triangle{width:100%;height:auto;overflow:visible}
+.g9m-edges{fill:none;stroke:#8a5350;stroke-width:3;stroke-linejoin:round}
+.g9m-side-labels{font-size:15px;font-weight:700;text-anchor:middle;fill:currentColor;paint-order:stroke;stroke:var(--card,#fff);stroke-width:5px;stroke-linejoin:round}
+.g9m-vertices{font-size:13px;font-weight:650;fill:currentColor}
+.g9m-impossible{font-size:.97rem;line-height:1.6;text-align:center;padding:1.2rem .75rem;margin:0}
+.g9m-result{min-height:2.8rem;font-size:.98rem;line-height:1.65;font-weight:650;padding:.75rem .85rem;border-radius:12px;background:rgba(126,139,160,.1);overflow-wrap:anywhere}
+@media(max-width:350px){.g9m-choices{gap:.4rem}.g9m-choices button{min-width:59px;padding:.55rem}.g9m-lab{padding:.7rem}}
+@media(prefers-reduced-motion:reduce){.g9m-lab *{scroll-behavior:auto}}
+
+/* 7.3 area split: large labels with halos, never buried under the diagonal. */
+.g9m-quad-svg,.g9m-net-svg{width:100%;height:auto;display:block}
+.g9m-quad-svg .g9m-quad-outline{fill:rgba(147,90,86,.06);stroke:#88504c;stroke-width:3;stroke-linejoin:round}
+.g9m-quad-svg .g9m-quad-half{fill:rgba(177,81,77,.28);stroke:none;opacity:.14;transition:opacity .15s ease}
+.g9m-quad-svg .g9m-quad-half.is-active{opacity:1}
+.g9m-quad-svg .g9m-quad-diagonal{stroke:#665d57;stroke-width:2;stroke-dasharray:5 4}
+.g9m-quad-svg .g9m-quad-labels{font-weight:700;font-size:13px;text-anchor:middle;fill:currentColor;paint-order:stroke;stroke:var(--card,#fff);stroke-width:5px;stroke-linejoin:round}
+/* 7.4 exact six-face unfolded net; faded excluded top and bottom. */
+.g9m-net-svg .g9m-net-face rect{stroke:#775a4e;stroke-width:1.7;fill:#ecd4b9}
+.g9m-net-svg .g9m-net-face:nth-child(odd) rect{fill:#e5c3a2}
+.g9m-net-svg .g9m-net-face.is-muted rect{fill:#e6e9ee;stroke:#9ca3ad;stroke-dasharray:3 3}
+.g9m-net-svg .g9m-net-face text{font-size:12px;font-weight:700;fill:#372b28;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:2.5px}
+.g9m-net-svg .g9m-net-face.is-muted text{fill:#6d737c}
+.g9m-choices + .g9m-choices{margin-top:.65rem}
+.g9m-layers{display:grid;gap:.55rem;padding:1rem .45rem;justify-content:center;overflow:visible}
+.g9m-layer{display:flex;align-items:center;gap:.75rem}
+.g9m-layer-name{font-size:.9rem;min-width:4rem;font-weight:650}
+.g9m-cubes{display:grid;gap:3px}
+.g9m-unit-cube{display:block;width:100%;aspect-ratio:1;background:#e9c7a6;border:1.5px solid #8d6150;border-radius:3px;box-shadow:inset 1px 1px 0 rgba(255,255,255,.6)}
+.g9m-layer:nth-child(even) .g9m-unit-cube{background:#cfb5b0}
+@media(max-width:350px){.g9m-layer{gap:.5rem}.g9m-layer-name{min-width:3.5rem;font-size:.82rem}}
+@media(prefers-reduced-motion:reduce){.g9m-quad-svg .g9m-quad-half{transition:none}}
+
+.g9m-tamil-badge{margin:.35rem 0 .65rem;color:inherit;opacity:.8;font-size:.85rem;line-height:1.45;max-width:65ch}

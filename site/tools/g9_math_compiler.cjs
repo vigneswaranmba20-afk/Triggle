@@ -10,19 +10,20 @@ const functions=new Set(['sin','cos','tan','sec','cosec','cot','deg']);
 const labels=new Set(['LHS','RHS','TSA','LSA','CF','Mean','Median','Mode','mean','median','mode','Sum','sum','Total','Area','Cost','Base','Side','Volume','Number','Opposite','Adjacent','Hypotenuse','Green','Blue','Red','Goals','Vwall','Vbrick','Vcube','Vcuboid','height','base','breadth','length','cost','Angles','Answer','Unshaded','Diagonal','Wall','Ceiling','total','brick','wall','sides','Unknown','Modes','Maximum','chord','cf','triangle','parallelogram']);
 const units=new Set(['cm','mm','kg','km','m','litres']);
 const products=new Set(['ab','bh','lb','lh','fx','fd','fu','xy','ax','cx','dx','acx']);
+const proseAcronyms=new Set(['LED','TV','AM','PM','INR','USA','UK']);
 const word=t=>/^[A-Za-z]+$/.test(t);
-const identifier=t=>/^[A-Za-z]$/.test(t)||/^[A-Z]{2,4}$/.test(t)||functions.has(t)||labels.has(t)||units.has(t)||products.has(t);
+const identifier=t=>!proseAcronyms.has(t)&&(/^[A-Za-z]$/.test(t)||/^[A-Z]{2,4}$/.test(t)||functions.has(t)||labels.has(t)||units.has(t)||products.has(t));
 const lex=source=>[...source.matchAll(/\[\[|\]\]|\.{3}|\d{1,3}(?:,\d{3})+(?!\d)|\d+(?:\.\d+)?|[A-Za-z]+|_+|[⁰¹²³⁴⁵⁶⁷⁸⁹⁻ⁿᵏ]+|[₀₁₂₃₄₅₆₇₈₉ᵢ]+|\s+|./gu)].map(m=>({text:m[0],start:m.index,end:m.index+m[0].length}));
 const textLatex=s=>'\\text{'+s.replace(/[\\{}%&#_$]/g,c=>'\\'+c)+'}';
 const allowed=t=>/^\s+$/.test(t)||/^\d/.test(t)||identifier(t)||Object.hasOwn(ops,t)||['[[',']]','|','(',')','[',']','{','}','√','∛','∜','+','-','/','^','=','<','>',',',':',';',"'",'±','̄'].includes(t)||/^_+$/.test(t)||/^[⁰¹²³⁴⁵⁶⁷⁸⁹⁻ⁿᵏ₀₁₂₃₄₅₆₇₈₉ᵢ]+$/u.test(t);
 function expression(source,{display=false,variables=[]}={}){
- const tokenData=lex(source).filter(t=>!/^\s+$/.test(t.text)),ts=tokenData.map(t=>t.text==='∣'?'|':t.text);let at=0;
+ const tokenData=lex(source).filter(t=>!/^\s+$/.test(t.text)),ts=tokenData.map(t=>t.text==='∣'?'|':t.text);let at=0,expDepth=0,rootDepth=0;
  const slice=(a,b)=>source.slice(tokenData[a]?.start??source.length,tokenData[b-1]?.end??source.length);
  const peek=()=>ts[at],take=()=>ts[at++],expect=t=>{if(take()!==t)throw Error('Expected '+t+' in '+source);};
  const isSuper=t=>/^[⁰¹²³⁴⁵⁶⁷⁸⁹⁻ⁿᵏ]+$/u.test(t||'');
  const node=(latex,kind='atom')=>({latex,kind});
- const isUnit=t=>units.has(t)&&!variables.includes(t);
- const begins=t=>t&&((identifier(t)&&!isUnit(t))||/^\d/.test(t)||/^_+$/.test(t)||['(','[','{','[[','√','∛','∜','π','θ','φ','α','β','Σ','σ','μ','ℕ','ℤ','∅','∠','Δ','∣'].includes(t));
+ const isUnit=t=>expDepth===0&&rootDepth===0&&units.has(t)&&!variables.includes(t);
+ const begins=t=>t&&((identifier(t)&&!isUnit(t))||/^\d/.test(t)||/^_+$/.test(t)||['(','[','{','[[','√','∛','∜','π','θ','φ','α','β','Σ','σ','μ','ℕ','ℤ','∅','∠','Δ','∣'].includes(t)||(isSuper(t)&&ts[at+1]==='√'));
  function atom(){
   const t=take();if(!t)throw Error('Missing operand');
   if(t==='[['){
@@ -38,10 +39,15 @@ function expression(source,{display=false,variables=[]}={}){
    return node('\\left'+(t==='{'?'\\{':t)+inner.latex+'\\right'+(close==='}'?'\\}':close),'group');
   }
   if(t==='|'||t==='∣'){const body=sequence(t);expect(t);return node('\\left|'+body.latex+'\\right|','group');}
-  if(['√','∛','∜'].includes(t)){
-   const base=power();let body=base.latex;
+  if(['√','∛','∜'].includes(t)||(isSuper(t)&&peek()==='√')){
+   let index=t==='∛'?'3':t==='∜'?'4':'';
+   if(isSuper(t)){index=[...t].map(c=>supers[c]).join('');expect('√');}
+   rootDepth++;
+   let base;
+   try{base=power();}finally{rootDepth--;}
+   let body=base.latex;
    if(base.kind==='group'&&(body.startsWith('\\left(')||body.startsWith('\\left[')))body=body.slice(6,-7);
-   return node('\\sqrt'+(t==='∛'?'[3]':t==='∜'?'[4]':'')+'{'+body+'}','root');
+   return node('\\sqrt'+(index?'['+index+']':'')+'{'+body+'}','root');
   }
   if(t==='∠'||t==='Δ'){return node(ops[t]+' '+atom().latex);}
   if(t==='P'&&peek()==='('){take();const start=at;let depth=0;while(at<ts.length){if(peek()==='(')depth++;if(peek()===')'){if(depth===0)break;depth--;}take();}const body=slice(start,at);expect(')');let latex;try{latex=expression(body,{variables}).latex;}catch{latex=textLatex(body);}return node('P\\left('+latex+'\\right)');}
@@ -61,9 +67,14 @@ function expression(source,{display=false,variables=[]}={}){
   throw Error('Unsupported atom '+t);
  }
  function power(){let base=atom();
-  while(isSuper(peek())||/^[₀₁₂₃₄₅₆₇₈₉ᵢ]+$/u.test(peek()||'')||peek()==='^'||peek()==='°'||peek()==="'"||peek()==='′'||peek()==='̄'){
+  while(isSuper(peek())||/^[₀₁₂₃₄₅₆₇₈₉ᵢ]+$/u.test(peek()||'')||peek()==='^'||peek()==='°'||((peek()==="'"||peek()==='′')&&at>0&&tokenData[at].start===tokenData[at-1].end)||peek()==='̄'){
    const t=take();let suffix;
-   if(t==='^'){if(peek()==='('){take();suffix='^{'+sequence(')').latex+'}';expect(')');}else suffix='^{'+unary().latex+'}';}
+   if(t==='^'){
+    expDepth++;
+    try{
+     if(peek()==='('){take();suffix='^{'+sequence(')').latex+'}';expect(')');}else suffix='^{'+unary().latex+'}';
+    }finally{expDepth--;}
+   }
    else if(t==='̄'){base=node('\\bar{'+base.latex+'}',base.kind);continue;}
    else if(t==='°')suffix='^{\\circ}';
    else if(t==="'"||t==='′')suffix="'";
@@ -74,7 +85,7 @@ function expression(source,{display=false,variables=[]}={}){
  }
  function unary(){if(['+','-','−','–','±','≈'].includes(peek())){const t=take();return node((ops[t]|| (t==='±'?'\\pm':t))+' '+unary().latex);}return power();}
  function juxtapose(){let v=unary();while(begins(peek())){if(v.kind==='number'&&/^\d/.test(peek()))throw Error('Adjacent data values retain their source spacing');const r=unary();v=node(v.latex+(['unit','root'].includes(r.kind)?'\\,':' ')+r.latex,'product');}return v;}
- function product(){let v=juxtapose();while(['/','×','÷'].includes(peek())){const t=take(),r=juxtapose();v=t==='/'?node('\\dfrac{'+v.latex+'}{'+r.latex+'}','fraction'):node(v.latex+' '+ops[t]+' '+r.latex);}while(isUnit(peek())){const unit=power();v=node(v.latex+'\\,'+unit.latex,'quantity');}return v;}
+ function product(){let v=juxtapose();while(['/','×','÷'].includes(peek())){const t=take(),r=juxtapose();v=t==='/'?node((expDepth>0?'\\frac{':'\\dfrac{')+v.latex+'}{'+r.latex+'}','fraction'):node(v.latex+' '+ops[t]+' '+r.latex);}while(isUnit(peek())){const unit=power();v=node(v.latex+'\\,'+unit.latex,'quantity');}return v;}
  function sum(){let v=product();while(['+','-','−','–','±','∪','∩'].includes(peek())){const t=take();v=node(v.latex+' '+(ops[t]||(t==='±'?'\\pm':t))+' '+product().latex);}return v;}
  function relation(){let v=sum();while(['=','<','>','≤','≥','≠','≈','⇒','∈','∉','⊂','⊆','≅'].includes(peek())){const t=take();v=node(v.latex+' '+(ops[t]||t)+' '+sum().latex);}return v;}
  function sequence(stop){let v=relation();while(peek()&&peek()!==stop&&[',',':',';'].includes(peek())){const t=take();v=node(v.latex+(t===','?', ':t===';'?';\\quad ':' : ')+relation().latex);}if(peek()==='…'||peek()==='...'){v=node(v.latex+'\\ldots');take();}return v;}
@@ -147,6 +158,7 @@ function rich(source,{display=false,variables=[]}={}){
    if(/[A-Za-z]{2,}/.test(raw)&&!/[0-9=+−–×÷/<>∈∉∪∩√∠Δ²³Σ°₀₁₂₃₄₅₆₇₈₉]/.test(raw)&&!/^[A-Za-z]\(/.test(raw)&&! /\b(?:sin|cos|tan|sec|cosec|cot|deg)\b/.test(raw)&&!products.has(raw)&&!/^\d/.test(raw)&&!/^[A-Z]{2,4}$/.test(raw))continue;
    // A bare prose word/number is not a product; only variables, mathematical
    // symbols and complete numeric tokens are eligible as isolated anchors.
+   if(/^[A-Za-z]+\s*,\s*\d+(?:\.\d+)?$/.test(raw)&&!/[=+−–×÷/<>∈∉∪∩√^]/.test(raw))continue;
    if(word(raw)&&raw.length>1&&!/^[A-Z]{2,4}$/.test(raw))continue;
    try{
     const value=expression(raw,{display:display&&raw.length>12,variables});
