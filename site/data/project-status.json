@@ -30,7 +30,7 @@
     "site/data/g10-ch4-concepts.js": "c1000a61c306ab7ad3b5dd9e496997d3ee39cdb98423b8973adc9f094f2a5419",
     "site/data/g10-ch5-concepts.js": "96d2c88e5a0b7c9e03c5bc3ea6441d4ab83895132eba528457223ad8fa8e1834",
     "site/data/g10-ch6-concepts.js": "8d608f647c8e853e5227c48225eedf283875b4417b6ff421d9966f3303f6c378",
-    "site/data/g9-clear-math.js": "754876c344099b07d9ab5770fff26a312e9a3654c16dc6f7799eae78216f9962",
+    "site/data/g9-clear-math.js": "e3042ca3397b841bcc19714791eab544ca78a03d896a78cfcb9eee1d91cb31e0",
     "site/data/g9-probability-chapter.js": "5b9ee457150461a7ce46f3b2e9ede7c7d1234dfa8e751b05ff71d22e4245ca79",
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "7e58dd71cc02b5d2a32aac0bc620f081b5aeed9f9370512cca19202470fe9392",
@@ -124,7 +124,7 @@
     "site/data/textbook-exercises/g9-ch9-ex9-1-en.js": "d8e32f6b7b271f0a37f1c3b0f2359d1f71ffb20a34ee9c9d13d388c4c453c419",
     "site/data/textbook-exercises/g9-ch9-ex9-1-q9-q10-and-examples-en.js": "6168d85551b403bdc7ca694a8c2dd82e2db2436f13ceb799997aeb4e06f6cde2",
     "site/data/textbook-exercises/g9-ch9-ex9-2-en.js": "56f5ccd3160a545a45523ee1f01a728b87dcf81eb407bdd35cb5cc864c1222d8",
-    "site/data/textbook-exercises/g9-ch9-ex9-2-q5-ex9-3-en.js": "a2111946d5f04081223b3d79c5c40cc6196585729e0a3572978ac36c7ce0266a",
+    "site/data/textbook-exercises/g9-ch9-ex9-2-q5-ex9-3-en.js": "1851cf864ec2f40e60c7ea1139c8e8f9ff6786e0b98189163c8af2f281d1a50d",
     "site/data/why-step-g10-coverage.js": "2489a6adf7429905ddfc1c25c581cbe98c4b823f3cbef3dc053d7e088dd85a33",
     "site/data/why-step-g10-ex2-3.js": "6a58b8243fc411e725a83a87a22b5f64ddfe84589f828428d38866f153e0f914",
     "site/data/why-step-g10.js": "0294380d9b5a3751ca952a101ab166155034210c0670c09e3bdc173e7c5f9f1a",
@@ -4952,7 +4952,7 @@
                   "url": "../index.html?class=9&question=g9-ch9-ex9.2-q5",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "39ab2ddc8c4fd7ad75efbabf7b80c5c523f37b2102faa29920ce1f26b3dd1d46",
+                  "recordSha256": "5767983e037ade2ddb8ad967109081f474bdae53ed34c88d957f9c507bafc0bd",
                   "verified": false
                 }
               ],

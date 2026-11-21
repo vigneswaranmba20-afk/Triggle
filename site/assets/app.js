@@ -612,7 +612,28 @@
   $('questionTitle').textContent=tr(current.topic);$('questionHead').textContent=tr(current.label);
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
   const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
-  $('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));$('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
+  const renderDataTableHtml=dt=>{
+    if(!dt||!Array.isArray(dt.headers)||!Array.isArray(dt.rows))return '';
+    const ths=dt.headers.map(h=>'<th scope="col">'+esc(h)+' </th>').join('');
+    const trs=dt.rows.map(r=>'<tr>'+r.map((cell,c)=>{const body=/^\d+(?:\.\d+)?$/.test(String(cell).trim())?math({latex:String(cell).trim(),fallback:String(cell).trim()}):esc(cell);return c===0?'<th scope="row">'+body+' </th>':'<td>'+body+' </td>';}).join('')+'</tr>').join('');
+    return '<div class="triggle-table-wrap"><table class="triggle-data-table"'+(dt.caption?' aria-label="'+esc(dt.caption)+'"':'')+'><thead><tr>'+ths+'</tr></thead><tbody>'+trs+'</tbody></table></div> ';
+  };
+  $('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));
+  if(current.dataTable){
+    const tableHtml=renderDataTableHtml(current.dataTable);
+    const rawQ=tr(current.q);
+    if(current.dataTable.replaceRegex){
+      const rx=new RegExp(current.dataTable.replaceRegex);
+      if(rx.test(rawQ)){
+        const [before='',after='']=rawQ.split(rx);
+        const rawParts=questionMath?.[lang]||questionMath?.en;
+        $('questionText').innerHTML=Array.isArray(rawParts)
+          ?math(rawParts).replace(/Type of maids[\s\S]*?(?=A family is selected)/i,tableHtml)
+          :math(before)+tableHtml+math(after);
+      }else{$('questionText').innerHTML+=tableHtml;}
+    }else{$('questionText').innerHTML+=tableHtml;}
+  }
+  $('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
 
