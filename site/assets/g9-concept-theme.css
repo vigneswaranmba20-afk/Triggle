@@ -231,6 +231,35 @@
     padding: .5rem .65rem;
   }
 }
+/* NEON M03 / Issue #324: 320px Tamil navigation and word-safe probability labels.
+   Keep Grade 9 concept scope only; 390px stays on the existing one-row layout. */
+@media (max-width: 340px) {
+  .chapter-hub[data-grade="9"][data-hub-section="concepts"] .g9-set-journey .sp2-detail-navigation {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 12px;
+  }
+  .chapter-hub[data-grade="9"][data-hub-section="concepts"] .g9-set-journey .sp2-detail-navigation :is(.sp2-back-index, .sp2-top-next) {
+    min-width: 0;
+    padding-inline: 2px;
+    font-size: 11px;
+    line-height: 1.35;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  .chapter-hub[data-grade="9"][data-hub-section="concepts"] .g9-set-journey .sp2-top-next {
+    justify-self: end;
+    text-align: right;
+  }
+  .chapter-hub[data-grade="9"][data-hub-section="concepts"] .probability-event-pairs .probability-controls > button {
+    min-height: 46px;
+    padding-inline: .35rem;
+    font-size: .8rem;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .chapter-hub[data-grade="9"][data-hub-section="concepts"] :is(
     .lc-node,
