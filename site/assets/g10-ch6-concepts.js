@@ -242,7 +242,8 @@ function mount(stage,host,lang){
       b2.setAttribute('aria-pressed',String(flipCorner));
       const focusDeg=flipCorner?(90-theta):theta;
       const r=math.trigRatios(theta,scale);
-      const base=135*scale,rise=Math.min(130,base*tanD(theta));
+      const pixelsPerUnit=10.4;
+      const base=pixelsPerUnit*r.adj,rise=pixelsPerUnit*r.opp;
       const xO=54,yM=170,xM=xO+base,yP=yM-rise;
       svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 320 200" role="img" aria-label="Right triangle OMP">
         <polygon points="${xO},${yM} ${xM},${yM} ${xM},${yP}" fill="#F3EFE8" stroke="#181B20" stroke-width="2.2"/>

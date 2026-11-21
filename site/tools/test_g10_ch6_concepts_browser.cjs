@@ -128,6 +128,18 @@ async function run(){
       await page.locator('.g10ch4-tab').nth(1).click();
       const after1=(await page.locator('.g10ch4-readout').innerText()).replace(/[\s\u200b]+/g,'');
       assert.notEqual(after1,before1,'Switching focused acute angle updates trig readout');
+      const focusAngle=page.locator('input[aria-label="Angle θ"]');
+      for(const degrees of [15,45,75]){
+        await focusAngle.evaluate((slider,degrees)=>{
+          slider.value=String(degrees);
+          slider.dispatchEvent(new Event('input',{bubbles:true}));
+        },degrees);
+        const points=await page.locator('svg[aria-label="Right triangle OMP"] polygon').getAttribute('points');
+        const [o,m,p]=points.trim().split(/\s+/).map(point=>point.split(',').map(Number));
+        const drawnDegrees=Math.atan2(m[1]-p[1],m[0]-o[0])*180/Math.PI;
+        assert(Math.abs(drawnDegrees-degrees)<1e-9,'The drawn angle matches the selected angle at '+degrees+'°');
+      }
+
 
       // AUD05-03: use exact symbolic ratios, and mark displayed decimals as rounded.
       await page.goto(base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=1',{waitUntil:'load'});
