@@ -49,7 +49,7 @@ window.TRIGGLE_SET_PATH = {
           "ta": "அழகான எண்கள் அனைத்தும்"
         },
         {
-          "en": "Even natural numbers less than 10",
+          "en": "Even natural numbers less than 10",
           "ta": "10-ஐ விடச் சிறிய இரட்டைப்படை இயல் எண்கள்"
         },
         {
@@ -328,7 +328,7 @@ window.TRIGGLE_SET_PATH = {
         "ta": "அனைத்துக் கணத்திலிருந்து A அல்லது B-இல் உள்ள அனைத்து உறுப்புகளையும் நீக்குங்கள்."
       },
       "why": {
-        "en": "A ∪ B={1,2,3,4}. U leaves exactly {5,6}. The same result comes from A′ ∩ B′.",
+        "en": "A ∪ B={1,2,3,4}. Removing A ∪ B from U leaves exactly {5,6}. The same result comes from A′ ∩ B′.",
         "ta": "A ∪ B={1,2,3,4}. அனைத்துக் கணத்தில் மீதமிருப்பவை {5,6}. A′ ∩ B′-இலும் அவையே கிடைக்கின்றன."
       },
       "paper": {

@@ -12,6 +12,7 @@ window.TRIGGLE_G10_CH6_PATH={
     {
       "id": "g10-ch6-trig-ratios",
       "section": "6.1",
+      "page": { "en": "240", "ta": "248" },
       "title": {
         "en": "Six trigonometric ratios in a right triangle",
         "ta": "செங்கோண முக்கோணத்தில் ஆறு முக்கோணவியல் விகிதங்கள்"
@@ -126,6 +127,7 @@ window.TRIGGLE_G10_CH6_PATH={
     {
       "id": "g10-ch6-quotient-reciprocal",
       "section": "6.1",
+      "page": { "en": "240", "ta": "248" },
       "title": {
         "en": "Quotient and reciprocal links between the six ratios",
         "ta": "விகிதங்களுக்கு இடையேயான ஈவு மற்றும் தலைகீழ் தொடர்புகள்"
@@ -241,6 +243,7 @@ window.TRIGGLE_G10_CH6_PATH={
     {
       "id": "g10-ch6-complementary-angles",
       "section": "6.1",
+      "page": { "en": "240–241", "ta": "248–249" },
       "title": {
         "en": "Trigonometric ratios of complementary angles (90° − θ)",
         "ta": "நிரப்புக் கோணங்களின் முக்கோணவியல் விகிதங்கள் (90° − θ)"
@@ -355,6 +358,7 @@ window.TRIGGLE_G10_CH6_PATH={
     {
       "id": "g10-ch6-standard-angles",
       "section": "6.1",
+      "page": { "en": "241", "ta": "249–250" },
       "title": {
         "en": "Exact ratios for standard angles 0°, 30°, 45°, 60°, 90°",
         "ta": "0°, 30°, 45°, 60°, 90° சிறப்புக் கோணங்களின் துல்லிய விகிதங்கள்"
@@ -470,6 +474,7 @@ window.TRIGGLE_G10_CH6_PATH={
     {
       "id": "g10-ch6-identity-sin-cos",
       "section": "6.2",
+      "page": { "en": "242", "ta": "250" },
       "title": {
         "en": "First fundamental identity: sin²θ + cos²θ = 1",
         "ta": "முதல் அடிப்படை முற்றொருமை: sin²θ + cos²θ = 1"
@@ -580,6 +585,7 @@ window.TRIGGLE_G10_CH6_PATH={
     {
       "id": "g10-ch6-identity-sec-cosec",
       "section": "6.2",
+      "page": { "en": "242–243", "ta": "250–251" },
       "title": {
         "en": "Secant-tangent and cosecant-cotangent Pythagorean identities",
         "ta": "sec²θ = 1 + tan²θ மற்றும் cosec²θ = 1 + cot²θ முற்றொருமைகள்"
@@ -695,6 +701,7 @@ window.TRIGGLE_G10_CH6_PATH={
     {
       "id": "g10-ch6-proving-identities",
       "section": "6.2",
+      "page": { "en": "243–244", "ta": "251–252" },
       "title": {
         "en": "Toolkit for proving trigonometric identities",
         "ta": "முக்கோணவியல் முற்றொருமைகளை நிரூபிப்பதற்கான வழிமுறைகள்"
@@ -806,21 +813,22 @@ window.TRIGGLE_G10_CH6_PATH={
     {
       "id": "g10-ch6-angle-elevation",
       "section": "6.3.1",
+      "page": { "en": "250–252", "ta": "258–261" },
       "title": {
         "en": "Line of sight, clinometer and angle of elevation",
         "ta": "பார்வைக்கோடு, சாய்வுமானி மற்றும் ஏற்றக்கோணம்"
       },
       "firstGlance": {
-        "en": "Looking upward from eye level tilts your line of sight above the horizontal; that upward tilt is the angle of elevation, and tan θ connects vertical height directly to horizontal distance.",
-        "ta": "கிடைநிலைக் கோட்டிற்கு மேலே உள்ள ஒரு பொருளைப் பார்க்கும்போது பார்வைக்கோட்டிற்கும் கிடைநிலைக்கும் இடையே அமையும் கோணமே ஏற்றக்கோணம் ஆகும்."
+        "en": "The line of sight makes the elevation angle θ with the horizontal. Let H be the target height above ground, e the observer’s eye height and d the horizontal distance. At a fixed height, moving closer increases θ.",
+        "ta": "பார்வைக்கோட்டிற்கும் கிடைநிலைக் கோட்டிற்கும் இடையே உள்ள ஏற்றக்கோணம் θ. தரையிலிருந்து பொருளின் உயரம் H, கண் மட்ட உயரம் e, கிடைமட்டத் தொலைவு d. உயரம் மாறாதபோது அருகே சென்றால் θ அதிகரிக்கும்."
       },
       "rule": {
         "en": "tan θ = (Height above eye level) / (Horizontal distance); moving closer or taller target increases θ",
         "ta": "tan θ = (கண் மட்டத்திற்கு மேலுள்ள உயரம்) / (கிடைமட்டத் தொலைவு); அருகே செல்லும்போது θ அதிகரிக்கும்"
       },
       "math": {
-        "latex": "\\begin{aligned}&\\tan\\theta=\\dfrac{\\text{Rise above eye}}{\\text{Horizontal dist.}}\\\\&d_2<d_1\\implies\\beta>\\alpha\\\\&h_1>h_2\\implies\\alpha>\\beta\\end{aligned}",
-        "fallback": "tan θ = (Height above eye level)/(Horizontal distance); d₂ < d₁ implies β > α"
+        "latex": "\\tan\\theta=\\dfrac{H-e}{d}",
+        "fallback": "tan θ = (H − e) ÷ d"
       },
       "glanceVisual": "angle-elevation",
       "visual": { "kind": "ch6-lab", "id": "angle-elevation" },
@@ -922,6 +930,7 @@ window.TRIGGLE_G10_CH6_PATH={
     {
       "id": "g10-ch6-angle-depression",
       "section": "6.3.2",
+      "page": { "en": "258", "ta": "266" },
       "title": {
         "en": "Angle of depression and alternate interior angle equality",
         "ta": "இறக்கக்கோணம் மற்றும் ஒன்றுவிட்ட உள்கோணங்களின் சமத்துவம்"
@@ -1033,6 +1042,7 @@ window.TRIGGLE_G10_CH6_PATH={
     {
       "id": "g10-ch6-combined-elevation-depression",
       "section": "6.3.3",
+      "page": { "en": "262–263", "ta": "269–270" },
       "title": {
         "en": "Two-triangle heights and combined elevation & depression",
         "ta": "இரு செங்கோண முக்கோணங்கள் — ஏற்றமும் இறக்கமும் இணைந்த கணக்குகள்"
@@ -1100,42 +1110,64 @@ window.TRIGGLE_G10_CH6_PATH={
         ]
       },
       "question": {
-        "en": "From a deck 40 m above sea level, a hilltop appears at 60° angle of elevation and the base of the hill appears at 30° angle of depression. What is the total height of the hill above sea level?",
-        "ta": "கடல் மட்டத்திலிருந்து 40 மீ உயரக் கப்பல் தளத்திலிருந்து, குன்றின் உச்சி 60° ஏற்றக்கோணத்திலும் குன்றின் அடி 30° இறக்கக்கோணத்திலும் தெரிகிறது. குன்றின் மொத்த உயரம் என்ன?"
+        "en": "From a deck 24 m above sea level, the angle of elevation of a hilltop is 60°, and the angle of depression of the hill’s base is 30°. Find the horizontal distance to the hill and its total height above sea level.",
+        "ta": "கடல் மட்டத்திலிருந்து 24 மீ உயரமுள்ள கப்பல் தளத்திலிருந்து, குன்றின் உச்சியின் ஏற்றக்கோணம் 60°, அடியின் இறக்கக்கோணம் 30°. குன்றுக்கான கிடைமட்டத் தொலைவையும் கடல் மட்டத்திலிருந்து அதன் மொத்த உயரத்தையும் காண்க."
       },
       "questionMath": {
-        "latex": "h_1=40\\text{ m},\\;\\beta=30^\\circ,\\;\\alpha=60^\\circ",
-        "fallback": "h₁ = 40 m, β = 30°, α = 60°"
+        "latex": "h_1=24\\,\\mathrm{m},\\quad\\beta=30^\\circ,\\quad\\alpha=60^\\circ",
+        "fallback": "h₁ = 24 m, β = 30°, α = 60°"
       },
       "choices": [
-        { "en": "120 m", "ta": "120 மீ" },
-        { "en": "160 m", "ta": "160 மீ" },
-        { "en": "40√3 m", "ta": "40√3 மீ" }
+        {
+          "en": "Horizontal distance 24√3 m, total height 72 m",
+          "ta": "கிடைமட்டத் தொலைவு 24√3 மீ, மொத்த உயரம் 72 மீ",
+          "math": {
+            "latex": "x=24\\sqrt{3}\\,\\mathrm{m},\\quad H=72\\,\\mathrm{m}",
+            "fallback": "x = 24√3 m, H = 72 m"
+          }
+        },
+        {
+          "en": "Horizontal distance 24√3 m, total height 96 m",
+          "ta": "கிடைமட்டத் தொலைவு 24√3 மீ, மொத்த உயரம் 96 மீ",
+          "math": {
+            "latex": "x=24\\sqrt{3}\\,\\mathrm{m},\\quad H=96\\,\\mathrm{m}",
+            "fallback": "x = 24√3 m, H = 96 m"
+          }
+        },
+        {
+          "en": "Horizontal distance 24 m, total height 96 m",
+          "ta": "கிடைமட்டத் தொலைவு 24 மீ, மொத்த உயரம் 96 மீ",
+          "math": {
+            "latex": "x=24\\,\\mathrm{m},\\quad H=96\\,\\mathrm{m}",
+            "fallback": "x = 24 m, H = 96 m"
+          }
+        }
       ],
       "correct": 1,
       "hint": {
-        "en": "Lower triangle: x = 40 / tan 30° = 40√3 m. Upper triangle: above-deck height h₂ = x tan 60° = (40√3)(√3) = 120 m. Now add the 40 m deck!",
-        "ta": "கீழ் முக்கோணம்: x = 40√3 மீ. மேல் முக்கோணம்: h₂ = 40√3 × √3 = 120 மீ. இப்போது கப்பல் தள உயரம் 40 மீ-ஐக் கூட்டுங்கள்!"
+        "en": "Use the lower triangle first. The 24 m deck height is opposite the 30° angle, and the horizontal distance x is adjacent. Use the same x in the upper triangle.",
+        "ta": "முதலில் கீழ் முக்கோணத்தைப் பயன்படுத்துக. 30° கோணத்திற்கு எதிர்ப்பக்கம் 24 மீ தள உயரம்; அடுத்துள்ள பக்கம் கிடைமட்டத் தொலைவு x. மேல் முக்கோணத்திலும் அதே x-ஐப் பயன்படுத்துக."
       },
       "incorrectFeedback": [
         {
-          "en": "120 m is ONLY the upper section of the hill above the 40 m ship deck! Add the lower 40 m to measure from sea level.",
-          "ta": "120 மீ என்பது 40 மீ கப்பல் தளத்திற்கு மேலுள்ள உயரம் மட்டுமே! கடல் மட்டத்திலிருந்து அளக்க 40 மீ-ஐக் கூட்ட வேண்டும்."
+          "en": "The 72 m rise starts at deck level. Include the deck height to measure from sea level.",
+          "ta": "72 மீ என்பது கப்பல் தளத்திற்கு மேலுள்ள உயரம். கடல் மட்டத்திலிருந்து அளக்கத் தளத்தின் உயரத்தையும் சேர்க்கவும்."
         },
         null,
         {
-          "en": "40√3 m is the horizontal distance x between the ship and the hill, not the hill's height.",
-          "ta": "40√3 மீ என்பது கப்பலுக்கும் குன்றுக்கும் இடையேயான கிடைமட்டத் தொலைவு x ஆகும்; உயரம் அல்ல."
+          "en": "The deck height is vertical. Find the horizontal distance using the tangent of the depression angle.",
+          "ta": "தள உயரம் செங்குத்தானது. இறக்கக்கோணத்தின் டேஞ்சன்ட் விகிதத்தைக் கொண்டு கிடைமட்டத் தொலைவைக் காண்க."
         }
       ],
       "why": {
-        "en": "From the depression triangle, distance x = 40 / tan 30° = 40√3 m. From the elevation triangle, upper height h₂ = 40√3 × tan 60° = 120 m. Total hill height = 40 + 120 = 160 m.",
-        "ta": "கிடைமட்டத் தொலைவு x = 40√3 மீ. மேல் உயரம் h₂ = (40√3)(√3) = 120 மீ. குன்றின் மொத்த உயரம் = 40 + 120 = 160 மீ."
+        "en": "The lower triangle gives the shared horizontal distance. Multiply it by the tangent of the elevation angle to find the rise above the deck, then add the deck height.",
+        "ta": "கீழ் முக்கோணத்திலிருந்து பொது கிடைமட்டத் தொலைவு கிடைக்கும். இதை ஏற்றக்கோணத்தின் டேஞ்சன்ட் விகிதத்தால் பெருக்கித் தளத்திற்கு மேலுள்ள உயரத்தைக் காண்க. பிறகு தள உயரத்தைச் சேர்க்கவும்."
       },
       "whyMath": {
-        "latex": "\\begin{aligned}&x=40\\sqrt{3}\\text{ m}\\\\&H=40+(40\\sqrt{3})\\sqrt{3}=40+120=160\\text{ m}\\end{aligned}",
-        "fallback": "x = 40√3 m; H = 40 + 40√3·√3 = 160 m"
-      },
+        "latex": "\\begin{aligned}&x=\\dfrac{24}{\\tan 30^\\circ}=24\\sqrt{3}\\,\\mathrm{m}\\\\&h_2=(24\\sqrt{3})\\tan 60^\\circ=72\\,\\mathrm{m}\\\\&H=24+72=96\\,\\mathrm{m}\\end{aligned}",
+        "fallback": "x = 24 ÷ tan 30° = 24√3 m, h₂ = 72 m, H = 24 + 72 = 96 m."
+      }
+,
       "explainAfterAttempt": true,
       "connect": {
         "en": "Directly models Exercise 6.4 Q1 (two trees), Q2 (hill from ship deck), and Q4 (apartment to tower) plus two-boat Exercise 6.3 Q4.",

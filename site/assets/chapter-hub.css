@@ -731,3 +731,16 @@
 .chapter-hub .sp2-count-three-bridge p{font-size:12px!important;line-height:1.5;margin:5px 0}
 .chapter-hub .sp2-three-set-math{font-size:clamp(11px,3.1vw,14px);max-width:100%;overflow-x:auto;scrollbar-width:thin;padding:7px 1px}
 .chapter-hub .sp2-three-set-math:focus-visible{outline:2px solid #7960ad;outline-offset:2px}
+
+
+/* Render Tamil in the Sets lessons even when the device lacks a Tamil font. */
+@font-face{
+  font-family:"Triggle Noto Sans Tamil";
+  src:url("./vendor/noto-sans-tamil/tamil.woff2") format("woff2");
+  font-weight:400 900;
+  font-style:normal;
+  font-display:swap;
+  unicode-range:U+0964-0965,U+0B82-0BFA,U+200C-200D,U+20B9,U+25CC;
+}
+html[lang="ta"] .chapter-hub .g9-set-journey{font-family:"Triggle Noto Sans Tamil",system-ui,sans-serif}
+html[lang="ta"] .chapter-hub .g9-set-journey :is(button,summary){font-family:inherit}

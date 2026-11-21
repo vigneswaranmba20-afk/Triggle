@@ -254,11 +254,12 @@ function mount(stage,host,lang){
         <text x="${xM+6}" y="${yP+4}" font-size="12" font-weight="700" fill="#181B20">P</text>
         <text x="${xO+16}" y="${yM-8}" font-size="11.5" font-weight="700" fill="${!flipCorner?'#6E2933':'#525B62'}">${theta}°</text>
         <text x="${xM-32}" y="${yP+24}" font-size="11.5" font-weight="700" fill="${flipCorner?'#6E2933':'#525B62'}">${90-theta}°</text>
-        <text x="${(xO+xM)/2}" y="${yM+18}" font-size="11" font-weight="700" text-anchor="middle" fill="${flipCorner?'#8C3B2B':'#1E5248'}">OM=${fmt(r.adj,2)}</text>
-        <text x="${xM+8}" y="${(yM+yP)/2}" font-size="11" font-weight="700" fill="${flipCorner?'#1E5248':'#8C3B2B'}">MP=${fmt(r.opp,2)}</text>
+        <text x="${(xO+xM)/2}" y="${yM+18}" font-size="11" font-weight="700" text-anchor="middle" fill="${flipCorner?'#8C3B2B':'#1E5248'}">OM ≈ ${fmt(r.adj,2)}</text>
+        <text x="${xM+8}" y="${(yM+yP)/2}" font-size="11" font-weight="700" fill="${flipCorner?'#1E5248':'#8C3B2B'}">MP ≈ ${fmt(r.opp,2)}</text>
         <text x="${(xO+xM)/2-14}" y="${(yM+yP)/2-8}" font-size="11" font-weight="700" fill="#525B62">OP=${fmt(r.hyp,2)}</text>
       </svg>`;
       const opp=flipCorner?r.adj:r.opp,adj=flipCorner?r.opp:r.adj;
+      const oppSide=flipCorner?'OM':'MP',adjSide=flipCorner?'MP':'OM';
       const s=opp/r.hyp,c=adj/r.hyp,t=opp/adj;
       metrics.replaceChildren();
       makeMetrics(metrics,[
@@ -267,7 +268,7 @@ function mount(stage,host,lang){
         [ta?'கர்ணம்':'Hypotenuse',fmt(r.hyp,2)],
         ['tan = Opp/Adj',fmt(t,3)]
       ]);
-      readout.innerHTML=tex(`\\begin{aligned}&\\sin ${focusDeg}^\\circ=\\dfrac{${fmt(opp,2)}}{${fmt(r.hyp,2)}}=${fmt(s,3)}\\\\&\\operatorname{cosec} ${focusDeg}^\\circ=${fmt(1/s,3)}\\\\&\\cos ${focusDeg}^\\circ=\\dfrac{${fmt(adj,2)}}{${fmt(r.hyp,2)}}=${fmt(c,3)}\\\\&\\sec ${focusDeg}^\\circ=${fmt(1/c,3)}\\end{aligned}`,true,`sin ${focusDeg}°=${fmt(s,3)}, cos=${fmt(c,3)}`);
+      readout.innerHTML=tex(`\\begin{aligned}&\\sin ${focusDeg}^\\circ=\\dfrac{${oppSide}}{OP}\\approx ${fmt(s,3)}\\\\&\\operatorname{cosec} ${focusDeg}^\\circ=\\dfrac{OP}{${oppSide}}\\approx ${fmt(1/s,3)}\\\\&\\cos ${focusDeg}^\\circ=\\dfrac{${adjSide}}{OP}\\approx ${fmt(c,3)}\\\\&\\sec ${focusDeg}^\\circ=\\dfrac{OP}{${adjSide}}\\approx ${fmt(1/c,3)}\\end{aligned}`,true,`sin ${focusDeg}° ≈ ${fmt(s,3)}, cos ≈ ${fmt(c,3)}`);
     };
     b1.onclick=()=>{flipCorner=false;draw();};
     b2.onclick=()=>{flipCorner=true;draw();};
@@ -298,14 +299,14 @@ function mount(stage,host,lang){
       const xO=55,yM=165,W=170*c,H=170*s;
       svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Unit hypotenuse triangle">
         <polygon points="${xO},${yM} ${xO+W},${yM} ${xO+W},${yM-H}" fill="#EFF8F4" stroke="#1E5248" stroke-width="2.2"/>
-        <text x="${xO+W/2}" y="${yM+16}" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1E5248">cos ${theta}° = ${fmt(c,3)}</text>
-        <text x="${xO+W+8}" y="${yM-H/2}" font-size="11.5" font-weight="700" fill="#6E2933">sin ${theta}° = ${fmt(s,3)}</text>
+        <text x="${xO+W/2}" y="${yM+16}" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1E5248">cos ${theta}° ≈ ${fmt(c,3)}</text>
+        <text x="${xO+W+8}" y="${yM-H/2}" font-size="11.5" font-weight="700" fill="#6E2933">sin ${theta}° ≈ ${fmt(s,3)}</text>
         <text x="${xO+W/2-22}" y="${yM-H/2-10}" font-size="11.5" font-weight="700" fill="#181B20">OP = 1</text>
         <text x="${xO+18}" y="${yM-7}" font-size="11" font-weight="700" fill="#181B20">${theta}°</text>
       </svg>`;
       readout.innerHTML=mode==='quotient'
-        ?tex(`\\begin{aligned}&\\tan ${theta}^\\circ=\\dfrac{\\sin ${theta}^\\circ}{\\cos ${theta}^\\circ}=\\dfrac{${fmt(s,3)}}{${fmt(c,3)}}=${fmt(t,3)}\\\\&\\cot ${theta}^\\circ=\\dfrac{\\cos ${theta}^\\circ}{\\sin ${theta}^\\circ}=${fmt(1/t,3)},\\\\&\\tan ${theta}^\\circ\\cdot\\cot ${theta}^\\circ=1\\end{aligned}`,true)
-        :tex(`\\begin{aligned}&\\sec ${theta}^\\circ=\\dfrac{1}{\\cos ${theta}^\\circ}=${fmt(1/c,3)},\\\\&\\sec ${theta}^\\circ\\cdot\\cos ${theta}^\\circ=1\\\\&\\operatorname{cosec} ${theta}^\\circ=\\dfrac{1}{\\sin ${theta}^\\circ}=${fmt(1/s,3)},\\\\&\\operatorname{cosec} ${theta}^\\circ\\cdot\\sin ${theta}^\\circ=1\\end{aligned}`,true);
+        ?tex(`\\begin{aligned}&\\tan ${theta}^\\circ=\\dfrac{\\sin ${theta}^\\circ}{\\cos ${theta}^\\circ}\\approx ${fmt(t,3)}\\\\&\\cot ${theta}^\\circ=\\dfrac{\\cos ${theta}^\\circ}{\\sin ${theta}^\\circ}\\approx ${fmt(1/t,3)},\\\\&\\tan ${theta}^\\circ\\cdot\\cot ${theta}^\\circ=1\\end{aligned}`,true)
+        :tex(`\\begin{aligned}&\\sec ${theta}^\\circ=\\dfrac{1}{\\cos ${theta}^\\circ}\\approx ${fmt(1/c,3)},\\\\&\\sec ${theta}^\\circ\\cdot\\cos ${theta}^\\circ=1\\\\&\\operatorname{cosec} ${theta}^\\circ=\\dfrac{1}{\\sin ${theta}^\\circ}\\approx ${fmt(1/s,3)},\\\\&\\operatorname{cosec} ${theta}^\\circ\\cdot\\sin ${theta}^\\circ=1\\end{aligned}`,true);
     };
     makeSlider(controls,ta?'கோணம் θ':'Angle θ',15,75,1,theta,'°',v=>{theta=v;draw();});
     draw();
@@ -339,9 +340,9 @@ function mount(stage,host,lang){
         <text x="${qx+6}" y="${qy-4}" font-size="11" font-weight="700" fill="#181B20">Q</text>
         <text x="${cx-14}" y="${qy+4}" font-size="11" font-weight="700" fill="#1E5248">R</text>
         <text x="${(cx+qx)/2}" y="${cy+14}" font-size="10.5" text-anchor="middle" fill="#6E2933">${fmt(c.cosT,2)}</text>
-        <text x="${(cx+qx)/2}" y="${qy-6}" font-size="10.5" text-anchor="middle" fill="#1E5248">RQ=${fmt(c.sinC,2)}</text>
+        <text x="${(cx+qx)/2}" y="${qy-6}" font-size="10.5" text-anchor="middle" fill="#1E5248">RQ ≈ ${fmt(c.sinC,2)}</text>
       </svg>`;
-      readout.innerHTML=tex(`\\begin{aligned}&\\sin(${c.comp}^\\circ)=\\cos(${theta}^\\circ)=${fmt(c.cosT,3)}\\\\&\\cos(${c.comp}^\\circ)=\\sin(${theta}^\\circ)=${fmt(c.sinT,3)}\\end{aligned}`,true);
+      readout.innerHTML=tex(`\\begin{aligned}&\\sin(${c.comp}^\\circ)=\\cos(${theta}^\\circ)\\approx ${fmt(c.cosT,3)}\\\\&\\cos(${c.comp}^\\circ)=\\sin(${theta}^\\circ)\\approx ${fmt(c.sinT,3)}\\end{aligned}`,true);
     };
     const slider=makeSlider(controls,ta?'கோணம் θ':'Angle θ',10,80,1,theta,'°',v=>{theta=v;draw();});
     draw();
@@ -405,14 +406,14 @@ function mount(stage,host,lang){
         <polygon points="${xO},${yM} ${xO+w},${yM} ${xO+w},${yM-h}" fill="#FAF9F6" stroke="#181B20" stroke-width="2"/>
         <rect x="${xO}" y="${yM}" width="${w}" height="${Math.max(10,w*0.52)}" fill="#DCEEE8" stroke="#1E5248" stroke-width="1.5"/>
         <rect x="${xO+w}" y="${yM-h}" width="${Math.max(10,h*0.8)}" height="${h}" fill="#F8E7E9" stroke="#6E2933" stroke-width="1.5"/>
-        <text x="${xO+w/2}" y="${yM+24}" font-size="11" font-weight="700" text-anchor="middle" fill="#1E5248">cos²θ=${fmt(c2,2)}</text>
-        <text x="${xO+w+44}" y="${yM-h/2+4}" font-size="11" font-weight="700" text-anchor="middle" fill="#6E2933">sin²θ=${fmt(s2,2)}</text>
+        <text x="${xO+w/2}" y="${yM+24}" font-size="11" font-weight="700" text-anchor="middle" fill="#1E5248">cos²θ ≈ ${fmt(c2,2)}</text>
+        <text x="${xO+w+44}" y="${yM-h/2+4}" font-size="11" font-weight="700" text-anchor="middle" fill="#6E2933">sin²θ ≈ ${fmt(s2,2)}</text>
         <text x="${xO+w/2-18}" y="${yM-h/2-6}" font-size="11" font-weight="700" fill="#181B20">1</text>
         <rect x="28" y="168" width="${254*s2}" height="14" fill="#6E2933" rx="2"/>
         <rect x="${28+254*s2}" y="168" width="${254*c2}" height="14" fill="#1E5248" rx="2"/>
-        <text x="155" y="163" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">sin²θ (${fmt(s2,3)}) + cos²θ (${fmt(c2,3)}) = 1.000</text>
+        <text x="155" y="163" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">sin²θ + cos²θ = 1</text>
       </svg>`;
-      readout.innerHTML=tex(`\\sin^2 ${theta}^\\circ+\\cos^2 ${theta}^\\circ=${fmt(s2,3)}+${fmt(c2,3)}=1`,true);
+      readout.innerHTML=tex(`\\sin^2 ${theta}^\\circ+\\cos^2 ${theta}^\\circ=1`,true);
     };
     makeSlider(controls,ta?'கோணம் θ':'Angle θ',10,80,1,theta,'°',v=>{theta=v;draw();});
     draw();
@@ -439,13 +440,13 @@ function mount(stage,host,lang){
       const xO=55,yM=165;
       svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Scaled identity triangle">
         <polygon points="${xO},${yM} ${xO+base},${yM} ${xO+base},${yM-rise}" fill="#F3EFE8" stroke="#6E2933" stroke-width="2.2"/>
-        <text x="${xO+base/2}" y="${yM+16}" font-size="11" font-weight="700" text-anchor="middle" fill="#1E5248">${mode==='sec'?'Adj/Adj = 1':`cot ${theta}° = ${fmt(idn.cot,2)}`}</text>
-        <text x="${xO+base+8}" y="${yM-rise/2}" font-size="11" font-weight="700" fill="#8C3B2B">${mode==='sec'?`tan ${theta}°=${fmt(idn.t,2)}`:'Opp/Opp = 1'}</text>
-        <text x="${xO+base/2-26}" y="${yM-rise/2-8}" font-size="11" font-weight="700" fill="#6E2933">${mode==='sec'?`sec ${theta}°=${fmt(idn.sec,2)}`:`cosec ${theta}°=${fmt(idn.csc,2)}`}</text>
+        <text x="${xO+base/2}" y="${yM+16}" font-size="11" font-weight="700" text-anchor="middle" fill="#1E5248">${mode==='sec'?'Adj/Adj = 1':`cot ${theta}° ≈ ${fmt(idn.cot,2)}`}</text>
+        <text x="${xO+base+8}" y="${yM-rise/2}" font-size="11" font-weight="700" fill="#8C3B2B">${mode==='sec'?`tan ${theta}° ≈ ${fmt(idn.t,2)}`:'Opp/Opp = 1'}</text>
+        <text x="${xO+base/2-26}" y="${yM-rise/2-8}" font-size="11" font-weight="700" fill="#6E2933">${mode==='sec'?`sec ${theta}° ≈ ${fmt(idn.sec,2)}`:`cosec ${theta}° ≈ ${fmt(idn.csc,2)}`}</text>
       </svg>`;
       readout.innerHTML=mode==='sec'
-        ?tex(`\\begin{aligned}&1+\\tan^2 ${theta}^\\circ=1+${fmt(idn.t*idn.t,3)}=${fmt(idn.id2Left,3)}\\\\&\\sec^2 ${theta}^\\circ=${fmt(idn.id2Right,3)}\\;(\\text{Match!})\\end{aligned}`,true)
-        :tex(`\\begin{aligned}&1+\\cot^2 ${theta}^\\circ=1+${fmt(idn.cot*idn.cot,3)}=${fmt(idn.id3Left,3)}\\\\&\\operatorname{cosec}^2 ${theta}^\\circ=${fmt(idn.id3Right,3)}\\;(\\text{Match!})\\end{aligned}`,true);
+        ?tex(`\\begin{aligned}&1+\\tan^2 ${theta}^\\circ=\\sec^2 ${theta}^\\circ\\approx ${fmt(idn.id2Left,3)}\\end{aligned}`,true)
+        :tex(`\\begin{aligned}&1+\\cot^2 ${theta}^\\circ=\\operatorname{cosec}^2 ${theta}^\\circ\\approx ${fmt(idn.id3Left,3)}\\end{aligned}`,true);
     };
     makeSlider(controls,ta?'கோணம் θ':'Angle θ',20,70,1,theta,'°',v=>{theta=v;draw();});
     draw();
@@ -518,7 +519,7 @@ function mount(stage,host,lang){
         <line x1="${xObs}" y1="${yEye}" x2="${xT}" y2="${yTop}" stroke="#6E2933" stroke-width="2.2"/>
         <circle cx="${xObs}" cy="${yEye}" r="4" fill="#181B20"/>
         ${eye>0?`<line x1="${xObs}" y1="${yEye}" x2="${xObs}" y2="${yBase}" stroke="#181B20" stroke-width="2.5"/><text x="${xObs-10}" y="${(yEye+yBase)/2}" font-size="9.5" fill="#181B20">1.8</text>`:''}
-        <text x="${xObs+26}" y="${yEye-6}" font-size="11" font-weight="700" fill="#6E2933">θ=${fmt(ev.thetaDeg,1)}°</text>
+        <text x="${xObs+26}" y="${yEye-6}" font-size="11" font-weight="700" fill="#6E2933">θ ≈ ${fmt(ev.thetaDeg,1)}°</text>
         <text x="${(xObs+xT)/2}" y="${yBase+14}" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">d = ${dist} m</text>
         <text x="${xT+25}" y="${(yTop+yBase)/2}" font-size="10.5" font-weight="700" fill="#6E2933">${fmt(ev.totalHeight,1)}m</text>
       </svg>`;
@@ -564,8 +565,8 @@ function mount(stage,host,lang){
         <text x="${xB-26}" y="${yC+pxH/2}" font-size="10.5" font-weight="700" fill="#181B20">${height}m</text>
       </svg>`;
       readout.innerHTML=showTrap
-        ?tex(`\\text{Wall-angle shortcut: }h\\tan ${angle}^\\circ=${fmt(dep.wrongWallDist,1)}\\text{ m}\\;(${angle===45?'\\text{Coincides at }45^\\circ\\text{ only; use horizon angle}':'\\text{Not the horizon-angle method}'})`,true)
-        :tex(`\\begin{aligned}&\\angle XCA=\\angle CAB=${angle}^\\circ\\\\&d=\\dfrac{${height}}{\\tan ${angle}^\\circ}=${fmt(dep.dist,1)}\\text{ m}\\end{aligned}`,true);
+        ?tex(`\\text{Wall-angle shortcut: }h\\tan ${angle}^\\circ\\approx ${fmt(dep.wrongWallDist,1)}\\text{ m}\\;(${angle===45?'\\text{Coincides at }45^\\circ\\text{ only; use horizon angle}':'\\text{Not the horizon-angle method}'})`,true)
+        :tex(`\\begin{aligned}&\\angle XCA=\\angle CAB=${angle}^\\circ\\\\&d=\\dfrac{${height}}{\\tan ${angle}^\\circ}\\approx ${fmt(dep.dist,1)}\\text{ m}\\end{aligned}`,true);
     };
     makeSlider(controls,ta?'இறக்கக்கோணம் θ':'Depression angle θ',20,70,5,angle,'°',v=>{angle=v;draw();});
     makeSlider(controls,ta?'பாறை / கோபுர உயரம் h':'Cliff height h (m)',15,60,5,height,' m',v=>{height=v;draw();});
@@ -601,12 +602,12 @@ function mount(stage,host,lang){
         <line x1="66" y1="114" x2="234" y2="114" stroke="#181B20" stroke-width="1.6" stroke-dasharray="4 3"/>
         <line x1="66" y1="114" x2="234" y2="26" stroke="#6E2933" stroke-width="2.2"/>
         <line x1="66" y1="114" x2="234" y2="168" stroke="#1E5248" stroke-width="2.2"/>
-        <text x="150" y="110" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">x=${fmt(res.x,1)} m</text>
+        <text x="150" y="110" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">x ≈ ${fmt(res.x,1)} m</text>
         <text x="102" y="106" font-size="10.5" font-weight="700" fill="#6E2933">α=${alpha}°</text>
         <text x="102" y="130" font-size="10.5" font-weight="700" fill="#1E5248">β=${beta}°</text>
         <text x="30" y="146" font-size="10" font-weight="700" fill="#181B20">${h1}m</text>
       </svg>`;
-      readout.innerHTML=tex(`\\begin{aligned}&x=\\dfrac{${h1}}{\\tan ${beta}^\\circ}=${fmt(res.x,1)}\\text{ m}\\\\&H=${h1}+x\\tan ${alpha}^\\circ=${fmt(res.total,1)}\\text{ m}\\end{aligned}`,true);
+      readout.innerHTML=tex(`\\begin{aligned}&x=\\dfrac{${h1}}{\\tan ${beta}^\\circ}\\approx ${fmt(res.x,1)}\\text{ m}\\\\&H=${h1}+x\\tan ${alpha}^\\circ\\approx ${fmt(res.total,1)}\\text{ m}\\end{aligned}`,true);
     }else if(mode==='two-same'){
       svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Two boats same side">
         <line x1="20" y1="162" x2="290" y2="162" stroke="#1E5248" stroke-width="1.6"/>
@@ -614,9 +615,9 @@ function mount(stage,host,lang){
         <line x1="58" y1="42" x2="142" y2="162" stroke="#6E2933" stroke-width="2"/>
         <line x1="58" y1="42" x2="262" y2="162" stroke="#1E5248" stroke-width="2"/>
         <circle cx="142" cy="162" r="4" fill="#6E2933"/><circle cx="262" cy="162" r="4" fill="#1E5248"/>
-        <text x="202" y="176" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">Gap d=${fmt(res.gap,1)} m</text>
+        <text x="202" y="176" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">Gap d ≈ ${fmt(res.gap,1)} m</text>
       </svg>`;
-      readout.innerHTML=tex(`\\begin{aligned}&x_1=${fmt(res.xFar,1)}\\text{ m},\\;x_2=${fmt(res.xNear,1)}\\text{ m}\\\\&\\text{Gap}=x_1-x_2=${fmt(res.gap,1)}\\text{ m}\\end{aligned}`,true);
+      readout.innerHTML=tex(`\\begin{aligned}&x_1\\approx ${fmt(res.xFar,1)}\\text{ m},\\;x_2\\approx ${fmt(res.xNear,1)}\\text{ m}\\\\&\\text{Gap}=x_1-x_2\\approx ${fmt(res.gap,1)}\\text{ m}\\end{aligned}`,true);
     }else{
       svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Two ships opposite sides">
         <line x1="20" y1="162" x2="290" y2="162" stroke="#1E5248" stroke-width="1.6"/>
@@ -624,9 +625,9 @@ function mount(stage,host,lang){
         <line x1="155" y1="42" x2="46" y2="162" stroke="#6E2933" stroke-width="2"/>
         <line x1="155" y1="42" x2="264" y2="162" stroke="#1E5248" stroke-width="2"/>
         <circle cx="46" cy="162" r="4" fill="#6E2933"/><circle cx="264" cy="162" r="4" fill="#1E5248"/>
-        <text x="155" y="178" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">Total = x₁ + x₂ = ${fmt(res.gap,1)} m</text>
+        <text x="155" y="178" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">Total = x₁ + x₂ ≈ ${fmt(res.gap,1)} m</text>
       </svg>`;
-      readout.innerHTML=tex(`\\begin{aligned}&x_1=${fmt(res.xLeft,1)}\\text{ m},\\;x_2=${fmt(res.xRight,1)}\\text{ m}\\\\&\\text{Gap}=x_1+x_2=${fmt(res.gap,1)}\\text{ m}\\end{aligned}`,true);
+      readout.innerHTML=tex(`\\begin{aligned}&x_1\\approx ${fmt(res.xLeft,1)}\\text{ m},\\;x_2\\approx ${fmt(res.xRight,1)}\\text{ m}\\\\&\\text{Gap}=x_1+x_2\\approx ${fmt(res.gap,1)}\\text{ m}\\end{aligned}`,true);
     }
   };
   makeSlider(controls,ta?'மேல் / அருகில் கோணம் α':'Angle α',30,75,5,alpha,'°',v=>{alpha=v;draw();});

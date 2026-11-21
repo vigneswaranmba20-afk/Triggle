@@ -50,6 +50,59 @@ const operations=[
     await page.keyboard.press('Enter');
     assert.equal(await page.locator('[data-demo-mode="intersection"]').getAttribute('aria-pressed'),'true');
     assert.equal(await page.locator('[data-math-error]').count(),0,'No math rendering errors');
+    await page.goto(app.base+'/index.html?class=9&chapter=g9-ch1&section=concepts&concept=4');
+    await page.locator(lang==='ta'?'#langTa':'#langEn').click();
+    const distributiveSVG=page.locator('svg[aria-labelledby="sp2-distributive-title sp2-distributive-desc"]');
+    assert.equal(await distributiveSVG.isVisible(),false,'Commutative mode starts without the distributive diagram');
+    for(const [key,mode,members] of [['distributive','intersection',['2']],['distributive-union','union',['1','2','3']]]){
+     await page.locator('[data-demo-mode="'+key+'"]').click();
+     assert(await distributiveSVG.isVisible(),'Diagram is visible for '+key);
+     const selected=await distributiveSVG.evaluate((node,mode)=>{
+      const regions={};
+      for(const letter of ['a','b']){
+       regions[letter]=node.querySelector('#sp2-distributive-'+letter+' circle');
+      }
+      regions.c=node.querySelector('g[stroke] circle:last-child');
+      return [...node.querySelectorAll('text')].filter(label=>/^\d+$/.test(label.textContent)).filter(label=>{
+       const point=new DOMPoint(Number(label.getAttribute('x')),Number(label.getAttribute('y')));
+       const [a,b,c]=['a','b','c'].map(letter=>regions[letter].isPointInFill(point));
+       return mode==='intersection'?a&&(b||c):a||(b&&c);
+      }).map(label=>label.textContent);
+     },mode);
+     assert.deepEqual(selected,members,'Actual member positions represent '+key);
+     assert((await page.locator('[data-demo-output]').innerText()).replace(/\s+/g,'').includes('{'+members.join(',')+'}'));
+     assert.equal(await distributiveSVG.locator('[data-distributive="'+mode+'"]').isVisible(),true);
+     assert.equal(await distributiveSVG.locator('[data-distributive]:not([data-distributive="'+mode+'"])').isVisible(),false);
+     assert((await distributiveSVG.locator('desc').textContent()).length>15);
+     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Responsive distributive diagram');
+    }
+    assert.equal(await page.locator('[data-demo] .sp2-count-givens > span').count(),3,'All three sets appear before choosing a law');
+    await page.goto(app.base+'/index.html?class=9&chapter=g9-ch1&section=concepts&concept=5');
+    await page.locator(lang==='ta'?'#langTa':'#langEn').click();
+    const difference=page.locator('[data-set-difference]');
+    await difference.locator('summary').click();
+    const formulas=(await difference.locator('p .katex-mathml math').allTextContents()).join(' ').replace(/\s+/g,'');
+    assert(formulas.includes('(A−B)∩(A−C)={1}'),'Removing the union keeps only 1');
+    assert(formulas.includes('(A−B)∪(A−C)={1,2,3}'),'Removing the intersection keeps all three');
+    await page.goto(app.base+'/index.html?class=9&chapter=g9-ch1&section=concepts&concept=0');
+    const memberButtons=page.locator('[data-demo-controls] button');
+    assert.equal(await memberButtons.locator('.katex').count(),5,'Every membership chip uses the same math font');
+    await page.locator('[data-demo-mode="3"]').click();
+    await page.locator('#langTa').click();
+    assert.equal(await page.locator('html').getAttribute('lang'),'ta');
+    assert.equal(await page.locator('[data-demo-mode="3"]').getAttribute('aria-pressed'),'true','Tamil keeps the selected member');
+    const tamilFont=await page.evaluate(async()=>await document.fonts.load('700 16px "Triggle Noto Sans Tamil"','அ'));
+    assert(tamilFont.length>0,'Tamil font is locally loadable');
+    await page.locator('#langEn').click();
+    assert.equal(await page.locator('[data-demo-mode="3"]').getAttribute('aria-pressed'),'true','English keeps the selected member');
+    await page.goto(app.base+'/index.html?class=9&chapter=g9-ch1&section=concepts&concept=1');
+    await page.locator('[data-demo-mode="builder"]').click();
+    const symbols=page.locator('[data-demo] .sp2-venn-explain');
+    assert.match(await symbols.innerText(),/ℕ.*natural numbers.*belongs to.*such that/);
+    assert.equal(await page.locator('[data-demo-output] mi[mathvariant="double-struck"]').textContent(),'N','MathML encodes blackboard-bold N');
+    assert(await page.locator('[data-demo-output] .katex-html .mathbb').isVisible(),'The displayed KaTeX glyph is also blackboard-bold');
+
+
    }
   }
   assert.deepEqual(errors,[],'No browser JS errors');

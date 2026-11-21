@@ -129,6 +129,19 @@ async function run(){
       const after1=(await page.locator('.g10ch4-readout').innerText()).replace(/[\s\u200b]+/g,'');
       assert.notEqual(after1,before1,'Switching focused acute angle updates trig readout');
 
+      // AUD05-03: use exact symbolic ratios, and mark displayed decimals as rounded.
+      await page.goto(base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=1',{waitUntil:'load'});
+      const trigReadout=page.locator('.g10ch4-readout .katex-mathml math');
+      const operators=await trigReadout.locator('mo').allTextContents();
+      assert(operators.includes('=')&&operators.includes('≈'),'Exact quotient and rounded values use distinct operators');
+      const angle=35*Math.PI/180;
+      const [tangent,cotangent]=[Math.tan(angle),1/Math.tan(angle)].map(n=>String(Number(n.toFixed(3))));
+      const quotient=await trigReadout.locator('mfrac').first().textContent();
+      assert.match(quotient,/sin.*35.*cos.*35/u,'The exact fraction keeps sine and cosine');
+      const values=await trigReadout.locator('mn').allTextContents();
+      assert(values.includes(tangent),'Tangent uses the unrounded quotient');
+      assert(values.includes(cotangent),'Cotangent uses the unrounded quotient');
+
       // Concept 4: 90° standard angle shows undef.
       await page.goto(base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=3',{waitUntil:'load'});
       await page.locator('.g10ch4-chip-btn').nth(4).click();
@@ -141,6 +154,14 @@ async function run(){
 
       // Concept 10: Try It Yourself Hint + wrong + correct + Why?
       await page.goto(base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=9',{waitUntil:'load'});
+
+      const practice=page.locator('.sp2-answers button');
+      const sharedDistance=24/Math.tan(Math.PI/6);
+      const totalHeight=24+sharedDistance*Math.tan(Math.PI/3);
+      assert(Math.abs(sharedDistance-24*Math.sqrt(3))<1e-9);
+      assert(Math.abs(totalHeight-96)<1e-9);
+      assert.equal(await practice.nth(1).getAttribute('aria-label'),'Horizontal distance 24√3 m, total height '+Math.round(totalHeight)+' m');
+      assert.match(await page.locator('.g10ch4-readout').innerText(),/160/,'Default discovery keeps its distinct height');
       const whyBtn=page.locator('[data-why]');
       assert.equal(await whyBtn.isDisabled(),true);
       await page.locator('[data-hint]').click();
