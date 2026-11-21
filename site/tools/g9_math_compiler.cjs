@@ -10,8 +10,9 @@ const functions=new Set(['sin','cos','tan','sec','cosec','cot','deg']);
 const labels=new Set(['LHS','RHS','TSA','LSA','CF','Mean','Median','Mode','mean','median','mode','Sum','sum','Total','Area','Cost','Base','Side','Volume','Number','Opposite','Adjacent','Hypotenuse','Green','Blue','Red','Goals','Vwall','Vbrick','Vcube','Vcuboid','height','base','breadth','length','cost','Angles','Answer','Unshaded','Diagonal','Wall','Ceiling','total','brick','wall','sides','Unknown','Modes','Maximum','chord','cf','triangle','parallelogram']);
 const units=new Set(['cm','mm','kg','km','m','litres']);
 const products=new Set(['ab','bh','lb','lh','fx','fd','fu','xy','ax','cx','dx','acx']);
+const proseAcronyms=new Set(['LED','TV','AM','PM','INR','USA','UK']);
 const word=t=>/^[A-Za-z]+$/.test(t);
-const identifier=t=>/^[A-Za-z]$/.test(t)||/^[A-Z]{2,4}$/.test(t)||functions.has(t)||labels.has(t)||units.has(t)||products.has(t);
+const identifier=t=>!proseAcronyms.has(t)&&(/^[A-Za-z]$/.test(t)||/^[A-Z]{2,4}$/.test(t)||functions.has(t)||labels.has(t)||units.has(t)||products.has(t));
 const lex=source=>[...source.matchAll(/\[\[|\]\]|\.{3}|\d{1,3}(?:,\d{3})+(?!\d)|\d+(?:\.\d+)?|[A-Za-z]+|_+|[⁰¹²³⁴⁵⁶⁷⁸⁹⁻ⁿᵏ]+|[₀₁₂₃₄₅₆₇₈₉ᵢ]+|\s+|./gu)].map(m=>({text:m[0],start:m.index,end:m.index+m[0].length}));
 const textLatex=s=>'\\text{'+s.replace(/[\\{}%&#_$]/g,c=>'\\'+c)+'}';
 const allowed=t=>/^\s+$/.test(t)||/^\d/.test(t)||identifier(t)||Object.hasOwn(ops,t)||['[[',']]','|','(',')','[',']','{','}','√','∛','∜','+','-','/','^','=','<','>',',',':',';',"'",'±','̄'].includes(t)||/^_+$/.test(t)||/^[⁰¹²³⁴⁵⁶⁷⁸⁹⁻ⁿᵏ₀₁₂₃₄₅₆₇₈₉ᵢ]+$/u.test(t);
@@ -66,7 +67,7 @@ function expression(source,{display=false,variables=[]}={}){
   throw Error('Unsupported atom '+t);
  }
  function power(){let base=atom();
-  while(isSuper(peek())||/^[₀₁₂₃₄₅₆₇₈₉ᵢ]+$/u.test(peek()||'')||peek()==='^'||peek()==='°'||peek()==="'"||peek()==='′'||peek()==='̄'){
+  while(isSuper(peek())||/^[₀₁₂₃₄₅₆₇₈₉ᵢ]+$/u.test(peek()||'')||peek()==='^'||peek()==='°'||((peek()==="'"||peek()==='′')&&at>0&&tokenData[at].start===tokenData[at-1].end)||peek()==='̄'){
    const t=take();let suffix;
    if(t==='^'){
     expDepth++;
@@ -157,6 +158,7 @@ function rich(source,{display=false,variables=[]}={}){
    if(/[A-Za-z]{2,}/.test(raw)&&!/[0-9=+−–×÷/<>∈∉∪∩√∠Δ²³Σ°₀₁₂₃₄₅₆₇₈₉]/.test(raw)&&!/^[A-Za-z]\(/.test(raw)&&! /\b(?:sin|cos|tan|sec|cosec|cot|deg)\b/.test(raw)&&!products.has(raw)&&!/^\d/.test(raw)&&!/^[A-Z]{2,4}$/.test(raw))continue;
    // A bare prose word/number is not a product; only variables, mathematical
    // symbols and complete numeric tokens are eligible as isolated anchors.
+   if(/^[A-Za-z]+\s*,\s*\d+(?:\.\d+)?$/.test(raw)&&!/[=+−–×÷/<>∈∉∪∩√^]/.test(raw))continue;
    if(word(raw)&&raw.length>1&&!/^[A-Z]{2,4}$/.test(raw))continue;
    try{
     const value=expression(raw,{display:display&&raw.length>12,variables});

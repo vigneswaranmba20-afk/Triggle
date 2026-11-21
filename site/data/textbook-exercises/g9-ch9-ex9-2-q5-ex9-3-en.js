@@ -25,6 +25,12 @@
       "en": "1500 families were surveyed and following data was recorded about their maids at homes\nType of maids           Only part time    Only full time    Both\nNumber of families      860               370               250\nA family is selected at random. Find the probability that the family selected has\n(i)Both types of maids (ii)Part time maids (iii)No maids",
       "ta": "English-language question; Tamil version pending. 1500 families were surveyed and following data was recorded about their maids at homes\nType of maids           Only part time    Only full time    Both\nNumber of families      860               370               250\nA family is selected at random. Find the probability that the family selected has\n(i)Both types of maids (ii)Part time maids (iii)No maids"
     },
+    "dataTable": {
+      "caption": "Survey of maids employed by 1500 families",
+      "replaceRegex": "\\r?\\nType of maids[\\s\\S]*?250\\r?\\n",
+      "headers": ["Type of maids", "Only part time", "Only full time", "Both"],
+      "rows": [["Number of families", "860", "370", "250"]]
+    },
     "steps": [
       {
         "en": "The three recorded categories are mutually exclusive: only part time, only full time and both.",
@@ -44,7 +50,7 @@
       {
         "en": "If part-time maids includes families who also employ full-time maids, add the disjoint categories: 860 only-part-time families and 250 both-types families. This inclusive interpretation differs from the printed answer key for part (ii).",
         "ta": "English explanation (Tamil version pending): If part-time maids includes families who also employ full-time maids, add 860 only-part-time and 250 both-types families. This is an alternative interpretation, not the printed answer key.",
-        "eq": "P(part time including both) = [[860 + 250|1500]] = [[1110|1500]] = [[37|50]]"
+        "eq": "P(part time or both); = [[860 + 250|1500]] = [[1110|1500]] = [[37|50]]"
       },
       {
         "en": "Find households without maids by subtracting the recorded households from all surveyed households.",
