@@ -38,6 +38,6 @@ for(const r of manifest.records){
  assert.equal(JSON.stringify(items.find(x=>x.id===r.id)),JSON.stringify(r),'source/student parity '+r.id);
  assert.equal(ch8.textbookQuestionIds.filter(x=>x===r.id).length,1);
  assert.equal(ctx.window.TriggleDifficulty.get(items.find(x=>x.id===r.id)).grade,10);}
-assert.equal(items.filter(x=>x.exercise==='8.2'&&x.chapter==='8').length,3,'no duplicate or extra 8.2 records');
+assert.deepEqual(Array.from(items.filter(x=>x.exercise==='8.2'&&x.chapter==='8'),x=>x.id),Array.from({length:8},(_,i)=>'c10-8-ex8-2-q'+(i+1)),'one record for each Q1-Q8, no duplicates or gaps');
 for(const id of ['c10-8-ex8-1-q1-i','c10-8-ex8-1-q5','c10-8-ex8-1-q11','c10-8-ex8-1-q15'])assert.ok(items.some(x=>x.id===id),'preserved '+id);
 console.log('PASS G10 Ex8.2 Q1-Q3: exact wording, inventory numbers, independent maths, registration, parity');
