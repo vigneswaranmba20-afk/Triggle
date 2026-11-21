@@ -746,7 +746,7 @@
           window.TriggleRealJourney.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }else if(chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'){
           const stageQuestions=questions.filter(q=>!/^\s*Example\b/i.test(q.label?.en||''));
-          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,stageQuestions,chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6');
+          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,stageQuestions,chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6');
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }
