@@ -41405,6 +41405,38 @@ const texts={
     },
     "."
   ],
+  "g9-ch9-ex9.1-q1": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 1",
+      "fallback": "9.1-q1"
+    }
+  ],
+  "g9-ch9-ex9.1-q3": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 3",
+      "fallback": "9.1-q3"
+    }
+  ],
   "probability-2": [
     "probability",
     {
@@ -41636,6 +41668,38 @@ const texts={
     },
     " are different outcomes."
   ],
+  "g9-ch9-ex9.1-q4": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 4",
+      "fallback": "9.1-q4"
+    }
+  ],
+  "g9-ch9-ex9.1-q6": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 6",
+      "fallback": "9.1-q6"
+    }
+  ],
   "probability-3": [
     "probability",
     {
@@ -41765,6 +41829,38 @@ const texts={
       "fallback": "6 = 1/2"
     },
     "."
+  ],
+  "g9-ch9-ex9.2-q1": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.2 - q 1",
+      "fallback": "9.2-q1"
+    }
+  ],
+  "g9-ch9-ex9.2-q2": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.2 - q 2",
+      "fallback": "9.2-q2"
+    }
   ],
   "probability-4": [
     "probability",
@@ -41902,6 +41998,38 @@ const texts={
       "fallback": "10/200=1/20=0.05"
     },
     "."
+  ],
+  "g9-ch9-ex9.1-q9": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 9",
+      "fallback": "9.1-q9"
+    }
+  ],
+  "g9-ch9-ex9.1-q10": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.1 - q 10",
+      "fallback": "9.1-q10"
+    }
   ],
   "probability-5": [
     "probability",
@@ -42050,6 +42178,38 @@ const texts={
       "fallback": "P(not E)=1−0.4=0.6"
     },
     "."
+  ],
+  "g9-ch9-ex9.2-q4": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.2 - q 4",
+      "fallback": "9.2-q4"
+    }
+  ],
+  "g9-ch9-ex9.2-q5": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    "-ex",
+    {
+      "latex": "9.2 - q 5",
+      "fallback": "9.2-q5"
+    }
   ],
   "g9-ch2": [
     {
