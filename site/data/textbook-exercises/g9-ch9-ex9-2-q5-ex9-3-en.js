@@ -72,7 +72,9 @@
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 308,
       "enPrintedPage": 302,
-      "taPdfPage": 335,
+      "taPdfPage": 325,
+      "taPdfPageRange": [324, 325],
+      "taPrintedPageRange": [318, 319],
       "taPrintedPage": 319,
       "tamilEditorial": "pending",
       "notes": [
