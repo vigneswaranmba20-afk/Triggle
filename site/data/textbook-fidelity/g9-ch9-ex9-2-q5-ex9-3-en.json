@@ -20,7 +20,9 @@
       "answer": "(i) [[1|6]] ; (ii) [[43|75]] (textbook 'only part time' interpretation) ; (iii) [[1|75]]",
       "enPdfPage": 308,
       "enPrintedPage": 302,
-      "taPdfPage": 335,
+      "taPdfPage": 325,
+      "taPdfPageRange": [324, 325],
+      "taPrintedPageRange": [318, 319],
       "taPrintedPage": 319,
       "visualPending": true,
       "notes": [

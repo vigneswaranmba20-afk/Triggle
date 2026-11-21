@@ -126,7 +126,7 @@
     "site/data/textbook-exercises/g9-ch9-ex9-1-en.js": "d8e32f6b7b271f0a37f1c3b0f2359d1f71ffb20a34ee9c9d13d388c4c453c419",
     "site/data/textbook-exercises/g9-ch9-ex9-1-q9-q10-and-examples-en.js": "6168d85551b403bdc7ca694a8c2dd82e2db2436f13ceb799997aeb4e06f6cde2",
     "site/data/textbook-exercises/g9-ch9-ex9-2-en.js": "56f5ccd3160a545a45523ee1f01a728b87dcf81eb407bdd35cb5cc864c1222d8",
-    "site/data/textbook-exercises/g9-ch9-ex9-2-q5-ex9-3-en.js": "1851cf864ec2f40e60c7ea1139c8e8f9ff6786e0b98189163c8af2f281d1a50d",
+    "site/data/textbook-exercises/g9-ch9-ex9-2-q5-ex9-3-en.js": "c3510c13e6dd1adc5b72d9a118a56fe6486f575db10dea419b5c83d6b2587dfc",
     "site/data/why-step-g10-coverage.js": "2489a6adf7429905ddfc1c25c581cbe98c4b823f3cbef3dc053d7e088dd85a33",
     "site/data/why-step-g10-ex2-3.js": "6a58b8243fc411e725a83a87a22b5f64ddfe84589f828428d38866f153e0f914",
     "site/data/why-step-g10.js": "0294380d9b5a3751ca952a101ab166155034210c0670c09e3bdc173e7c5f9f1a",
@@ -4954,7 +4954,7 @@
                   "url": "../index.html?class=9&question=g9-ch9-ex9.2-q5",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "5767983e037ade2ddb8ad967109081f474bdae53ed34c88d957f9c507bafc0bd",
+                  "recordSha256": "76ffa3295ddd9897c8969a55c5e28fdaa70dbd227117b8b0a3298a971aea4720",
                   "verified": false
                 }
               ],
