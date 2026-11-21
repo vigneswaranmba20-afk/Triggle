@@ -263,7 +263,9 @@
         }
         controls.querySelectorAll('button').forEach(button=>
           button.addEventListener('click',()=>chooseVenn(button.dataset.demoMode)));
-        chooseVenn(selectedModes.get(stage.id)??'intersection');
+        const selected=selectedModes.get(stage.id);
+        if(selected)chooseVenn(selected);
+        else chooseVenn('intersection');
       }else if(stage.visual==='properties'){
         const options=lang==='ta'
           ?[['பரிமாற்று','commutative'],['சேர்ப்பு','associative'],['பங்கீட்டு ∩','distributive'],['பங்கீட்டு ∪','distributive-union']]
