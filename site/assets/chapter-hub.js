@@ -279,6 +279,7 @@
 
   function showG10Ch2Visual(stage,host,lang){
     const v=stage.visual;if(!v||!host)return;
+    if(window.TriggleG9MensurationLabs?.mount(stage,host,lang))return;
     if(window.TriggleG10ConceptLabs?.mount(stage,host,lang))return;
     if(window.TriggleG10Ch3Labs?.mount(stage,host,lang))return;
     if(stage.id==='g10-ch2-gcd'){showHCFSteps(host,lang);return;}
@@ -473,6 +474,7 @@
       const stage=stages[i],choices=Array.isArray(stage.choices)?stage.choices:[];
       const stageId=String(stage.id||'');
       const isCh3=stageId.startsWith('g10-ch3-');
+      const isG9Mensuration=stageId.startsWith('g9-ch7-');
       const isStudio6=stageId.startsWith('g10-ch4-')||stageId.startsWith('g10-ch5-')||stageId.startsWith('g10-ch6-');
       if(probability){
         probability.mount(panel,stage.section,probabilityLessons[i],i,lang);
@@ -559,17 +561,18 @@
         }
       }else{
       const deepItems=stage.deepDive?(stage.deepDive.points?.[lang]||stage.deepDive.points?.en||[]):[];
-      const tamilDraftNote=isCh3&&ta
-        ?'<p class="g10ch3-tamil-badge" role="note">தமிழ் வரைவு · 2025 பாடநூல் சொற்களுடன் உருவாக்கப்பட்டது (ஆசிரியர் மீளாய்வு நிலுவையில்)</p>':'';
+      const tamilDraftNote=(isCh3||isG9Mensuration)&&ta
+        ?'<p class="'+(isG9Mensuration?'g9m-tamil-badge':'g10ch3-tamil-badge')+'" role="note">தமிழ் வரைவு · 2025 பாடநூல் சொற்களுடன் உருவாக்கப்பட்டது (ஆசிரியர் மீளாய்வு நிலுவையில்)</p>':'';
       const deepDiveHtml=deepItems.length
         ?'<details class="g10ch3-deep-dive"><summary>'+e(pick(stage.deepDive.title))+'</summary><ul class="g10ch3-deep-list">'+
           deepItems.map(item=>'<li>'+typeset(item)+'</li>').join('')+'</ul></details>':'';
       panel.innerHTML='<div class="sp2-concept-heading" tabindex="-1"><h4>'+e((i+1)+'. '+pick(stage.title))+'</h4></div>'+
        tamilDraftNote+
+       (isG9Mensuration&&stage.visual?'<div data-g10ch2-visual></div>':'')+
        (['g10-ch2-gp-sum','g10-ch2-gcd','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
        '<div class="sp2-formula" role="group" aria-label="'+e(ta?'கணிதக் கருத்து':'Mathematical idea')+'">'+
        (stage.math?.latex?window.TriggleNotation.renderLatex(stage.math.latex,{displayMode:true,fallback:stage.math.fallback||pick(stage.rule)}):typeset(pick(stage.rule)))+'</div>')+
-       (stage.visual?'<div data-g10ch2-visual></div>':'')+
+       (stage.visual&&!isG9Mensuration?'<div data-g10ch2-visual></div>':'')+
        (['g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
        '<div class="sp2-lesson-note" aria-label="'+e(ta?'கருத்து விளக்கம்':'Concept explanation')+'">'+
        '<p class="sp2-idea">'+typeset(pick(stage.idea))+'</p>'+
@@ -659,7 +662,7 @@
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
     const sets=categorized(questions); // Examples stay archived in source, outside student navigation.
     const matrixConcepts=chapter.id==='g12-ch1'&&lang==='en'&&window.TriggleMatrixConcepts;
-    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):chapter.id==='g10-ch4'?(window.TRIGGLE_G10_CH4_PATH?.stages||[]):chapter.id==='g10-ch5'?(window.TRIGGLE_G10_CH5_PATH?.stages||[]):chapter.id==='g10-ch6'?(window.TRIGGLE_G10_CH6_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
+    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch7'?(window.TRIGGLE_MENSURATION_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):chapter.id==='g10-ch4'?(window.TRIGGLE_G10_CH4_PATH?.stages||[]):chapter.id==='g10-ch5'?(window.TRIGGLE_G10_CH5_PATH?.stages||[]):chapter.id==='g10-ch6'?(window.TRIGGLE_G10_CH6_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const kinds=activityEntries.length?[...baseKinds,'activities']:baseKinds;
     const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6')?0:stages.length,activities:activityEntries.length};
@@ -760,9 +763,9 @@
         // No chapter title, marketing paragraph, progress count or second navigation row.
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
-        }else if(chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'){
+        }else if(chapter.id==='g9-ch7'||chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'){
           const stageQuestions=questions.filter(q=>!/^\s*Example\b/i.test(q.label?.en||''));
-          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,stageQuestions,chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6');
+          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,stageQuestions,chapter.id==='g9-ch7'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6');
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }
