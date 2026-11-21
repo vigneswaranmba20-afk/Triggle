@@ -517,6 +517,8 @@
 
 /* Textbook-quality math notation; native browser MathML avoids a network dependency. */
 .triggle-math{display:inline-block;vertical-align:middle;font-size:1em;font-weight:normal;line-height:1.25;white-space:nowrap}
+.triggle-math mi{text-transform:none;font-family:'KaTeX_Math','KaTeX_Main',Georgia,'Times New Roman',serif;font-style:italic}
+.triggle-math mn{font-family:'KaTeX_Main',Georgia,'Times New Roman',serif;font-style:normal}
 .frac{vertical-align:middle}
 .frac>span{display:block;max-width:100%}
 .rnlab .sp2-formula{line-height:2.05;overflow-x:auto;overflow-y:visible}
