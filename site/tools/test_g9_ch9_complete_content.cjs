@@ -37,6 +37,10 @@ assert.equal(record.get('g9-ch9-ex9.1-q9').answer,'[[3|4]]');
 assert.equal(record.get('g9-ch9-ex9.2-q3').answer,'x = [[15|8]]');
 assert.equal(record.get('g9-ch9-example-9.4').answer,'[[9|100]] = 0.09');
 assert.equal(record.get('g9-ch9-ex9.2-q5').answer.includes('[[43|75]]'),true);
+const q5=record.get('g9-ch9-ex9.2-q5');
+assert.equal(q5.sourceFidelity.taPdfPage,325,'Tamil printed p. 319 / PDF p. 325: correct Q5 source');
+assert.equal(q5.sourceFidelity.taPrintedPage,319,'Preserve Tamil printed page');
+assert.match(q5.steps[3].eq,/37\|50/,'Inclusive alternative must remain explained');
 for(const i of [9,10]){
  const d=record.get('g9-ch9-ex9.1-q'+i).diagram;
  assert.equal(d.kind,'unitcircle');assert.equal(d.probabilitySpinner,true);assert.deepEqual(Array.from(d.sectors),[1,2,3,4,5,6,7,8]);
