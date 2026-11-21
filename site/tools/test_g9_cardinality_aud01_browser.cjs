@@ -17,8 +17,9 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     await page.locator(lang==='ta'?'#langTa':'#langEn').click();
     const givens=page.locator('.sp2-count-givens');
     await givens.waitFor({state:'visible'});
-    assert.equal(await givens.locator('span').count(),3,'Three given cardinalities');
-    const text=(await givens.innerText()).replace(/\s+/g,'');
+    assert.equal(await givens.locator('> span').count(),3,'Three given cardinalities');
+    const norm=s=>s.replace(/\s+/g,'').replace(/−/g,'-');
+    const text=norm(await givens.innerText());
     for(const expected of ['n(U)=30','n(A)=14','n(B)=11'])
       assert(text.includes(expected),'First glance contains '+expected+' at '+width+' '+lang+': '+text);
     assert.equal(await page.locator('#sp2-overlap-control').inputValue(),'6');
@@ -27,7 +28,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
         node.value=String(v);
         node.dispatchEvent(new Event('input',{bubbles:true}));
       },both);
-      const math=(await page.locator('[data-slider-formula]').innerText()).replace(/\s+/g,'');
+      const math=norm(await page.locator('[data-slider-formula]').innerText());
       assert(math.includes('n(A∪B)=14+11-'+both+'='+union),
         'Union cardinality formula '+width+' '+lang+': '+math);
       assert(math.includes('n((A∪B)′)=30-'+union+'='+neither)||
@@ -47,11 +48,11 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     const three=page.locator('.sp2-count-three-bridge');
     await three.waitFor({state:'visible'});
     assert.equal(await three.locator('.sp2-three-set-math').count(),1,'A dedicated three-set equation appears in Understand');
-    const mathematicalText=(await three.locator('.sp2-three-set-math').innerText()).replace(/\s+/g,'');
+    const mathematicalText=norm(await three.locator('.sp2-three-set-math').innerText());
     assert(mathematicalText.includes('n(A∪B∪C)'),'Three-set formula is mathematically named');
     assert(mathematicalText.includes('n(A∩B∩C)'),'The triple-overlap term is taught');
     await page.locator('[data-why-button]').click();
-    const why=(await page.locator('[data-why]').innerText()).replace(/\s+/g,'');
+    const why=norm(await page.locator('[data-why]').innerText());
     assert(!why.includes('11sum'),'No malformed 11sum token');
     assert(why.includes('8+6+5+11=30'),'Exact four-region verification');
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),
