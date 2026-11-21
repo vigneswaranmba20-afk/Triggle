@@ -23,6 +23,23 @@ const operations=[
     await page.locator(lang==='ta'?'#langTa':'#langEn').click();
     const svg=page.locator('.sp2-venn-svg');
     await svg.waitFor({state:'visible'});
+    // Mobile concept navigation must follow the lesson, not overlay its Venn diagram.
+    const footer=page.locator('.sp2-journey[data-view="lesson"] [data-adaptive-dock]');
+    const footerLayout=await footer.evaluate(node=>{
+     const panel=node.previousElementSibling;
+     return {
+      position:getComputedStyle(node).position,
+      followsPanel:panel?.classList.contains('sp2-panel'),
+      navTop:node.getBoundingClientRect().top,
+      panelBottom:panel?.getBoundingClientRect().bottom,
+      buttons:[...node.querySelectorAll('button')].map(button=>button.getBoundingClientRect().height)
+     };
+    });
+    assert.equal(footerLayout.position,'static','Footer must not float '+width+' '+lang);
+    assert(footerLayout.followsPanel,'Footer must follow lesson content');
+    assert(footerLayout.navTop>=footerLayout.panelBottom-1,'Footer starts after lesson '+width+' '+lang);
+    assert(footerLayout.buttons.length===2&&footerLayout.buttons.every(h=>h>=44),'Both footer actions remain tappable');
+    assert.equal(await page.locator('.sp2-detail-navigation [data-top-next]').count(),1,'Top Next idea remains');
     assert.equal(await svg.getAttribute('role'),'img','Accessible diagram '+lang);
     assert.equal(await svg.locator('desc').count(),1,'Region text equivalent');
     const definitions=await page.locator('.sp2-venn-defs').innerText();
