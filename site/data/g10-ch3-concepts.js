@@ -459,7 +459,7 @@ window.TRIGGLE_G10_CH3_PATH={
         "points": {
           "en": [
             "Why double the quotient in long division? Look at (A + B)² = A² + (2A + B)B. After subtracting A², the next slice we remove is (2A + B) × B — literally twice the quotient so far plus the new term B, all multiplied by B!",
-            "Always check power order first: if a term is out of order (or a power is missing, insert 0x³ etc.), reorder in descending powers before starting division.",
+            "Always check power order first: if a term is out of order (or a power is missing, insert 0x³ etc.), reorder in descending powers before starting division — just like polynomial GCD/Remainder steps where each subtraction must cancel the leading term until the final remainder reaches 0.",
             "Finding unknown constants a and b in a perfect-square polynomial: carry out the division until the final remainder, then equate both remaining terms to 0."
           ],
           "ta": [
@@ -1124,12 +1124,12 @@ window.TRIGGLE_G10_CH3_PATH={
           "en": [
             "Why doesn't matrix multiplication work element-by-element? Matrices represent linear transformations (e.g. rotations, systems of equations, computer graphics projections); multiplying AB composes two transformations one after the other.",
             "Important matrix surprises compared to ordinary numbers: (1) AB ≠ BA in general; (2) AB = O does NOT force A = O or B = O! Try multiplying [[1, 0], [0, 0]] by [[0, 0], [2, 0]] — you get the zero matrix from two non-zero matrices.",
-            "Check transpose of a product: (AB)ᵀ = BᵀAᵀ (order reverses when transposing!)."
+            "Check matrix distributivity and transpose reversal: A(B + C) = AB + AC and (A + B)C = AC + BC always hold whenever sizes match, and transposing a product reverses the order: (AB)ᵀ = BᵀAᵀ (for (p×n)·(n×q)ᵀ = (q×p))."
           ],
           "ta": [
             "அணிப் பெருக்கல் ஏன் உறுப்புக்கு உறுப்பு அல்ல? அணிகள் நேரியல் உருமாற்றங்களையும் சமன்பாட்டுத் தொகுப்புகளையும் குறிப்பதால், நிரை × நிரல் பெருக்கல் இரு செயல்பாடுகளை இணைக்கிறது.",
             "சாதாரண எண்களிலிருந்து மாறுபட்ட இரு பண்புகள்: (1) பொதுவாக AB ≠ BA; (2) A ≠ O, B ≠ O ஆக இருந்தாலும் AB = O வரலாம்!",
-            "நிரை நிரல் மாற்றின் பெருக்கல் விதி: (AB)ᵀ = BᵀAᵀ (வரிசை தலைகீழாகும்)."
+            "பங்கீட்டுப் பண்பும் நிரை நிரல் மாற்றின் பெருக்கல் விதியும்: A(B + C) = AB + AC, (A + B)C = AC + BC, மற்றும் (AB)ᵀ = BᵀAᵀ (பெருக்கலில் வரிசை தலைகீழாகும்)."
           ]
         }
       },

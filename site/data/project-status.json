@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "43367b4c613924d51da0f54c5bc7982e58b7310f",
-  "updatedAt": "2026-11-21T02:29:59+00:00",
+  "sourceCommit": "805ab3bec4e8370f8892f33d03908a0960761339",
+  "updatedAt": "2026-11-21T08:32:44+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -16,8 +16,7 @@
     "docs/curriculum/grade-12/checkpoint.json": "772892ef0d43333117cc49fb8fd21828b33ae3f73b1c70bea62b78078139bd43",
     "docs/curriculum/grade-9/batches/g9-ch3-ex3-2-english.json": "b5c8d23ea9129f7a902570293b2a6752b4c4fa39fd916b5d0ee0954e30ad2083",
     "docs/curriculum/grade-9/checkpoint.json": "796bbf1cf5efdd5810e39d08289d27eb8f6ad2847467131e4c8a276d5768e6a1",
-    "site/data/class-10-chapter-1.audit.json": "8f259327e163338c9f7ca01425fff4c3b3e66013c9733ba868553d48a1fb9cac",
-    "site/data/class-10-chapter-1.js": "b75b0003c00ef01bbf8036b24982f463e258ba1ba39af11cadb5eeab3e638f6c",
+    "site/data/class-10-chapter-1.js": "df89be4576a8ffc6922b2e9ec23f1fa571db7990496f05dac4163f77e1e29ee6",
     "site/data/class-10-ex1-1-2025.js": "eb28504809a557112251c883867b36eb996888b3dd56477f9b11144b33989f66",
     "site/data/class-10.js": "458954d73988b14b987f0a3abbfba88b097ab6bbfae064c92237cfec56994b7b",
     "site/data/class-11.js": "3a2dbc24d95e9117c32dab7e3e177f8952af819371671014dacb0601caff9fa7",
@@ -26,12 +25,12 @@
     "site/data/curriculum.js": "1d49b3c31bed70448d84d58e41e2019faeca9aaf5eec840065dedac421ee2827",
     "site/data/g10-ch2-concepts.js": "177b89ba3d4873436848e72ea3dc8d6aa479767f2e49f6ef9a747bf513f212d6",
     "site/data/g10-ch2-teaching-bridges.js": "4a968e6a6b1eeb90908670f83b3407cc9217116425d55e7071325cf4992d6b7e",
-    "site/data/g10-ch3-concepts.js": "afb35fc167c809d8867d989d3fe03a9fc191df68b397c03170a5b759d0b0fe3e",
+    "site/data/g10-ch3-concepts.js": "0006f11566b7a50136096e6816b1d5cd08ea36aa192aff6c297485d3b75e3283",
     "site/data/g10-ch4-concepts.js": "c1000a61c306ab7ad3b5dd9e496997d3ee39cdb98423b8973adc9f094f2a5419",
     "site/data/g10-ch5-concepts.js": "396d00c0841797a1d8859690eeab7623a6ffb9a670bf0d6b303a8663c7ee9d18",
     "site/data/g10-ch6-concepts.js": "8d608f647c8e853e5227c48225eedf283875b4417b6ff421d9966f3303f6c378",
-    "site/data/g9-clear-math.js": "dc559b15d03f80113ce2800692af2fe8c7266b1284d9da8be949397472cf7a92",
-    "site/data/g9-probability-chapter.js": "2a4487c15dabe4a1c921c77786d2787198342d1fbafc11b2d5443138a6921206",
+    "site/data/g9-clear-math.js": "fff5506ce29f57abc07984f066a9a7815a5cd94d26bdaa82b7781257c525c951",
+    "site/data/g9-probability-chapter.js": "86d4edd726ced3adde4f93e57c66c84e6f687f12776d464a2ae5ac08d439fe7a",
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "7e58dd71cc02b5d2a32aac0bc620f081b5aeed9f9370512cca19202470fe9392",
     "site/data/math-layout/g10-ch2-ch8-chatgpt-20261113.js": "7c9e63f5a069dc5658601181f5d6b1df16ec9d0d457e21964fb2b24ec291d134",
@@ -137,8 +136,7 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9.js": "ed93ba751d971497a7143086e80e307c035724d9ec062d26343a088416369d85",
-    "site/index.html": "e43994579531d2211995d5f9fd0b8848344d1541f3694d9e8d2e5034ac39dedf",
-    "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
+    "site/index.html": "e43994579531d2211995d5f9fd0b8848344d1541f3694d9e8d2e5034ac39dedf"
   },
   "policy": {
     "scope": "Textbook exercises only. Runtime availability is separate from source/math verification, deployment and private teacher approval.",
@@ -172,7 +170,7 @@
         "evidence": "docs/curriculum/grade-12/checkpoint.json"
       }
     ],
-    "recommendedActions": 108
+    "recommendedActions": 115
   },
   "grades": [
     {
@@ -5104,8 +5102,8 @@
     {
       "grade": 10,
       "totalChapters": 8,
-      "completedEnglishChapters": 1,
-      "partialChapters": 6,
+      "completedEnglishChapters": 0,
+      "partialChapters": 7,
       "pendingChapters": 1,
       "exerciseRecords": 593,
       "verifiedNumberedQuestions": 19,
@@ -5128,11 +5126,11 @@
           "number": "1",
           "title": "Relations and Functions",
           "exerciseRecords": 74,
-          "completeEnglish": true,
-          "completionBasis": "Accepted preserved Chapter 1 reference; full Tamil and teacher review pending.",
+          "completeEnglish": false,
+          "completionBasis": "Incomplete or denominator unknown",
           "verifiedNumberedQuestions": 0,
           "verifiedTasks": 0,
-          "totalNumberedQuestions": 69,
+          "totalNumberedQuestions": null,
           "totalTasks": null,
           "missingTasks": null,
           "coveragePercent": null,
@@ -5254,7 +5252,7 @@
               ],
               "verifiedNumberedQuestions": 0,
               "verifiedTasks": 0,
-              "totalNumberedQuestions": 7,
+              "totalNumberedQuestions": null,
               "totalTasks": null,
               "missingTasks": null,
               "tasks": [],
@@ -5262,7 +5260,7 @@
               "englishComplete": false,
               "tamilReview": "pending",
               "teacherApproval": "unknown (private)",
-              "status": "Awaiting teacher review",
+              "status": "Awaiting verification",
               "stages": {
                 "locallyCompleted": true,
                 "tested": false,
@@ -5272,8 +5270,7 @@
               },
               "sources": [],
               "evidence": [],
-              "deployment": null,
-              "referenceComplete": true
+              "deployment": null
             },
             {
               "id": "1.2",
@@ -5311,7 +5308,7 @@
                   "url": "../index.html?class=10&question=c10-1-1-2-q4",
                   "englishAvailable": true,
                   "tamilAvailable": false,
-                  "recordSha256": "8934f1986ee948478fc31d3c587a2f80125803f4ba1112196f5781bdd599fe12",
+                  "recordSha256": "c0916274a0adb3e63aca4d0696758f4fb107f4035809731c681f60d32821d2aa",
                   "verified": false
                 },
                 {
@@ -5320,13 +5317,13 @@
                   "url": "../index.html?class=10&question=c10-1-1-2-q5",
                   "englishAvailable": true,
                   "tamilAvailable": false,
-                  "recordSha256": "ece07d4351c2bb8dbad60cc930e5f9e78619217866b4acd3936dc61859016ec8",
+                  "recordSha256": "f47c474a9d2c0a8ef6578e2782ad5daffc2e9a6aeac9aef8c3954410afbce66b",
                   "verified": false
                 }
               ],
               "verifiedNumberedQuestions": 0,
               "verifiedTasks": 0,
-              "totalNumberedQuestions": 5,
+              "totalNumberedQuestions": null,
               "totalTasks": null,
               "missingTasks": null,
               "tasks": [],
@@ -5334,7 +5331,7 @@
               "englishComplete": false,
               "tamilReview": "pending",
               "teacherApproval": "unknown (private)",
-              "status": "Awaiting teacher review",
+              "status": "Awaiting verification",
               "stages": {
                 "locallyCompleted": true,
                 "tested": false,
@@ -5344,8 +5341,7 @@
               },
               "sources": [],
               "evidence": [],
-              "deployment": null,
-              "referenceComplete": true
+              "deployment": null
             },
             {
               "id": "1.3",
@@ -5383,7 +5379,7 @@
                   "url": "../index.html?class=10&question=c10-1-1-3-q4",
                   "englishAvailable": true,
                   "tamilAvailable": false,
-                  "recordSha256": "75d524ff16624abeb5b1959d7da94959e2849cf78179ac65ed8add26b4aea610",
+                  "recordSha256": "145e29f21b635459eb98b781980dc28214b20066de33c2f0309bdacc3df6f24c",
                   "verified": false
                 },
                 {
@@ -5410,7 +5406,7 @@
                   "url": "../index.html?class=10&question=c10-1-1-3-q7",
                   "englishAvailable": true,
                   "tamilAvailable": false,
-                  "recordSha256": "fe216a8878a46da599b1a31c3618dd8ad24bd632e29b9654e4899f44586eb65f",
+                  "recordSha256": "08108f03d214b4c465ccc5a5268dc841e234561bc96d068aac22cb8d25f9a9c5",
                   "verified": false
                 },
                 {
@@ -5437,13 +5433,13 @@
                   "url": "../index.html?class=10&question=c10-1-1-3-q10",
                   "englishAvailable": true,
                   "tamilAvailable": false,
-                  "recordSha256": "e976931fe58ea1701e30713444d2d0ff0bf4a40a894b955b51ad85e5950c7254",
+                  "recordSha256": "113d305472975103a3ce0ab9b8076c2fd1349bd09a0ce9107ecc676fe5cb9919",
                   "verified": false
                 }
               ],
               "verifiedNumberedQuestions": 0,
               "verifiedTasks": 0,
-              "totalNumberedQuestions": 10,
+              "totalNumberedQuestions": null,
               "totalTasks": null,
               "missingTasks": null,
               "tasks": [],
@@ -5451,7 +5447,7 @@
               "englishComplete": false,
               "tamilReview": "pending",
               "teacherApproval": "unknown (private)",
-              "status": "Awaiting teacher review",
+              "status": "Awaiting verification",
               "stages": {
                 "locallyCompleted": true,
                 "tested": false,
@@ -5461,8 +5457,7 @@
               },
               "sources": [],
               "evidence": [],
-              "deployment": null,
-              "referenceComplete": true
+              "deployment": null
             },
             {
               "id": "1.4",
@@ -5473,7 +5468,7 @@
                   "url": "../index.html?class=10&question=c10-1-1-4-q1",
                   "englishAvailable": true,
                   "tamilAvailable": false,
-                  "recordSha256": "10eaef15681c60152d83d149f8767fe7ffa55c99c6b60643e2d4446c5f1dd2ab",
+                  "recordSha256": "7261ebd8ae58111d0efa14f7e7dc33ecd5d8e27bde2e346bfeebe3cae0ff57ed",
                   "verified": false
                 },
                 {
@@ -5482,7 +5477,7 @@
                   "url": "../index.html?class=10&question=c10-1-1-4-q2",
                   "englishAvailable": true,
                   "tamilAvailable": false,
-                  "recordSha256": "854a97f40d1f91ee7c0b3f459c6e28dee28487745c5d17e4c8dbceff3075b2f8",
+                  "recordSha256": "087bb4b96381693ab2b440faacb1f4c3a586e26c3c15e798505ec793c86eb855",
                   "verified": false
                 },
                 {
@@ -5491,7 +5486,7 @@
                   "url": "../index.html?class=10&question=c10-1-1-4-q3",
                   "englishAvailable": true,
                   "tamilAvailable": false,
-                  "recordSha256": "6ddbe3022db5177820d5dd2e250c2b16b3efb3190a725d59834b283d662fa64b",
+                  "recordSha256": "ca781723f6e69ad53a30bfd041ddce8b1a064b9175aec3b829671fe2ba089bed",
                   "verified": false
                 },
                 {
@@ -5578,7 +5573,7 @@
               ],
               "verifiedNumberedQuestions": 0,
               "verifiedTasks": 0,
-              "totalNumberedQuestions": 12,
+              "totalNumberedQuestions": null,
               "totalTasks": null,
               "missingTasks": null,
               "tasks": [],
@@ -5586,7 +5581,7 @@
               "englishComplete": false,
               "tamilReview": "pending",
               "teacherApproval": "unknown (private)",
-              "status": "Awaiting teacher review",
+              "status": "Awaiting verification",
               "stages": {
                 "locallyCompleted": true,
                 "tested": false,
@@ -5596,8 +5591,7 @@
               },
               "sources": [],
               "evidence": [],
-              "deployment": null,
-              "referenceComplete": true
+              "deployment": null
             },
             {
               "id": "1.5",
@@ -5695,7 +5689,7 @@
               ],
               "verifiedNumberedQuestions": 0,
               "verifiedTasks": 0,
-              "totalNumberedQuestions": 10,
+              "totalNumberedQuestions": null,
               "totalTasks": null,
               "missingTasks": null,
               "tasks": [],
@@ -5703,7 +5697,7 @@
               "englishComplete": false,
               "tamilReview": "pending",
               "teacherApproval": "unknown (private)",
-              "status": "Awaiting teacher review",
+              "status": "Awaiting verification",
               "stages": {
                 "locallyCompleted": true,
                 "tested": false,
@@ -5713,8 +5707,7 @@
               },
               "sources": [],
               "evidence": [],
-              "deployment": null,
-              "referenceComplete": true
+              "deployment": null
             },
             {
               "id": "1.6",
@@ -5857,7 +5850,7 @@
               ],
               "verifiedNumberedQuestions": 0,
               "verifiedTasks": 0,
-              "totalNumberedQuestions": 15,
+              "totalNumberedQuestions": null,
               "totalTasks": null,
               "missingTasks": null,
               "tasks": [],
@@ -5865,7 +5858,7 @@
               "englishComplete": false,
               "tamilReview": "pending",
               "teacherApproval": "unknown (private)",
-              "status": "Awaiting teacher review",
+              "status": "Awaiting verification",
               "stages": {
                 "locallyCompleted": true,
                 "tested": false,
@@ -5875,8 +5868,7 @@
               },
               "sources": [],
               "evidence": [],
-              "deployment": null,
-              "referenceComplete": true
+              "deployment": null
             },
             {
               "id": "1.unit",
@@ -5974,7 +5966,7 @@
               ],
               "verifiedNumberedQuestions": 0,
               "verifiedTasks": 0,
-              "totalNumberedQuestions": 10,
+              "totalNumberedQuestions": null,
               "totalTasks": null,
               "missingTasks": null,
               "tasks": [],
@@ -5982,7 +5974,7 @@
               "englishComplete": false,
               "tamilReview": "pending",
               "teacherApproval": "unknown (private)",
-              "status": "Awaiting teacher review",
+              "status": "Awaiting verification",
               "stages": {
                 "locallyCompleted": true,
                 "tested": false,
@@ -5992,8 +5984,7 @@
               },
               "sources": [],
               "evidence": [],
-              "deployment": null,
-              "referenceComplete": true
+              "deployment": null
             }
           ],
           "evidence": [
@@ -15888,6 +15879,40 @@
       ]
     },
     {
+      "id": "g10-ch1-ex1.1",
+      "priority": 4,
+      "grade": 10,
+      "chapter": "1",
+      "exercise": "1.1",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [
+        "c10-1-ex1-1-q1-i",
+        "c10-1-ex1-1-q1-ii",
+        "c10-1-ex1-1-q1-iii",
+        "c10-1-ex1-1-q2",
+        "c10-1-ex1-1-q3",
+        "c10-1-ex1-1-q4",
+        "c10-1-ex1-1-q5",
+        "c10-1-ex1-1-q6-i",
+        "c10-1-ex1-1-q6-ii",
+        "c10-1-ex1-1-q6-iii",
+        "c10-1-ex1-1-q7-i",
+        "c10-1-ex1-1-q7-ii"
+      ],
+      "scope": [],
+      "status": "Awaiting verification",
+      "type": "Source reconciliation",
+      "reason": "Reconcile the earliest source-verified exercise gap before producing content.",
+      "dependencies": [
+        "Full question/subpart inventory and exact first missing question are not verified."
+      ],
+      "sources": [],
+      "sourcePages": null,
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
       "id": "g9-ch1-ex1.2",
       "priority": 4,
       "grade": 9,
@@ -15941,6 +15966,200 @@
       "sourcePages": null,
       "evidence": [
         "docs/curriculum/grade-9/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g10-ch1-ex1.2",
+      "priority": 4,
+      "grade": 10,
+      "chapter": "1",
+      "exercise": "1.2",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [
+        "c10-1-1-2-q1",
+        "c10-1-1-2-q2",
+        "c10-1-1-2-q3",
+        "c10-1-1-2-q4",
+        "c10-1-1-2-q5"
+      ],
+      "scope": [],
+      "status": "Awaiting verification",
+      "type": "Source reconciliation",
+      "reason": "Reconcile the earliest source-verified exercise gap before producing content.",
+      "dependencies": [
+        "Full question/subpart inventory and exact first missing question are not verified."
+      ],
+      "sources": [],
+      "sourcePages": null,
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g10-ch1-ex1.3",
+      "priority": 4,
+      "grade": 10,
+      "chapter": "1",
+      "exercise": "1.3",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [
+        "c10-1-1-3-q1",
+        "c10-1-1-3-q2",
+        "c10-1-1-3-q3",
+        "c10-1-1-3-q4",
+        "c10-1-1-3-q5",
+        "c10-1-1-3-q6",
+        "c10-1-1-3-q7",
+        "c10-1-1-3-q8",
+        "c10-1-1-3-q9",
+        "c10-1-1-3-q10"
+      ],
+      "scope": [],
+      "status": "Awaiting verification",
+      "type": "Source reconciliation",
+      "reason": "Reconcile the earliest source-verified exercise gap before producing content.",
+      "dependencies": [
+        "Full question/subpart inventory and exact first missing question are not verified."
+      ],
+      "sources": [],
+      "sourcePages": null,
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g10-ch1-ex1.4",
+      "priority": 4,
+      "grade": 10,
+      "chapter": "1",
+      "exercise": "1.4",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [
+        "c10-1-1-4-q1",
+        "c10-1-1-4-q2",
+        "c10-1-1-4-q3",
+        "c10-1-1-4-q4",
+        "c10-1-1-4-q5",
+        "c10-1-1-4-q6",
+        "c10-1-1-4-q7",
+        "c10-1-1-4-q8",
+        "c10-1-1-4-q9",
+        "c10-1-1-4-q10",
+        "c10-1-1-4-q11",
+        "c10-1-1-4-q12"
+      ],
+      "scope": [],
+      "status": "Awaiting verification",
+      "type": "Source reconciliation",
+      "reason": "Reconcile the earliest source-verified exercise gap before producing content.",
+      "dependencies": [
+        "Full question/subpart inventory and exact first missing question are not verified."
+      ],
+      "sources": [],
+      "sourcePages": null,
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g10-ch1-ex1.5",
+      "priority": 4,
+      "grade": 10,
+      "chapter": "1",
+      "exercise": "1.5",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [
+        "c10-1-1-5-q1",
+        "c10-1-1-5-q2",
+        "c10-1-1-5-q3",
+        "c10-1-1-5-q4",
+        "c10-1-1-5-q5",
+        "c10-1-1-5-q6",
+        "c10-1-1-5-q7",
+        "c10-1-1-5-q8",
+        "c10-1-1-5-q9",
+        "c10-1-1-5-q10"
+      ],
+      "scope": [],
+      "status": "Awaiting verification",
+      "type": "Source reconciliation",
+      "reason": "Reconcile the earliest source-verified exercise gap before producing content.",
+      "dependencies": [
+        "Full question/subpart inventory and exact first missing question are not verified."
+      ],
+      "sources": [],
+      "sourcePages": null,
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g10-ch1-ex1.6",
+      "priority": 4,
+      "grade": 10,
+      "chapter": "1",
+      "exercise": "1.6",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [
+        "c10-1-1-6-q1",
+        "c10-1-1-6-q2",
+        "c10-1-1-6-q3",
+        "c10-1-1-6-q4",
+        "c10-1-1-6-q5",
+        "c10-1-1-6-q6",
+        "c10-1-1-6-q7",
+        "c10-1-1-6-q8",
+        "c10-1-1-6-q9",
+        "c10-1-1-6-q10",
+        "c10-1-1-6-q11",
+        "c10-1-1-6-q12",
+        "c10-1-1-6-q13",
+        "c10-1-1-6-q14",
+        "c10-1-1-6-q15"
+      ],
+      "scope": [],
+      "status": "Awaiting verification",
+      "type": "Source reconciliation",
+      "reason": "Reconcile the earliest source-verified exercise gap before producing content.",
+      "dependencies": [
+        "Full question/subpart inventory and exact first missing question are not verified."
+      ],
+      "sources": [],
+      "sourcePages": null,
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g10-ch1-ex1.unit",
+      "priority": 4,
+      "grade": 10,
+      "chapter": "1",
+      "exercise": "1.unit",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [
+        "c10-1-1-unit-q1",
+        "c10-1-1-unit-q2",
+        "c10-1-1-unit-q3",
+        "c10-1-1-unit-q4",
+        "c10-1-1-unit-q5",
+        "c10-1-1-unit-q6",
+        "c10-1-1-unit-q7",
+        "c10-1-1-unit-q8",
+        "c10-1-1-unit-q9",
+        "c10-1-1-unit-q10"
+      ],
+      "scope": [],
+      "status": "Awaiting verification",
+      "type": "Source reconciliation",
+      "reason": "Reconcile the earliest source-verified exercise gap before producing content.",
+      "dependencies": [
+        "Full question/subpart inventory and exact first missing question are not verified."
+      ],
+      "sources": [],
+      "sourcePages": null,
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
       ]
     },
     {

@@ -476,6 +476,22 @@
       const isStudio6=stageId.startsWith('g10-ch4-')||stageId.startsWith('g10-ch5-')||stageId.startsWith('g10-ch6-');
       if(probability){
         probability.mount(panel,stage.section,probabilityLessons[i],i,lang);
+        const pageParts=[stage.section?'Section '+stage.section:'',stage.page?.en?'EN p.'+stage.page.en:'',stage.page?.ta?'TA p.'+stage.page.ta:''].filter(Boolean);
+        if(pageParts.length){
+          const cite=document.createElement('small');cite.className='sp2-stage-reference';
+          cite.textContent=(ta?'பாடநூல் ஆதாரம்: ':'Textbook source: ')+pageParts.join(' · ');
+          panel.append(cite);
+        }
+        const probLinked=[stage.practiceId,stage.secondaryPracticeId].map(id=>id&&chapterQuestions.find(q=>q.id===id)).filter(Boolean);
+        if(probLinked.length&&typeof onQuestion==='function'){
+          const row=document.createElement('div');row.className='g10ch3-exercise-row';
+          probLinked.forEach(qItem=>{
+            const b=document.createElement('button');b.type='button';b.className='g10ch2-practice-link';
+            b.textContent=(ta?'பயிற்சித் தீர்வு: ':'Try ')+pick(qItem.label)+' →';
+            b.onclick=()=>onQuestion(qItem);row.append(b);
+          });
+          panel.append(row);
+        }
       }else if(isStudio6){
         const labEngine=stageId.startsWith('g10-ch5-')?window.TriggleG10Ch5Labs:stageId.startsWith('g10-ch6-')?window.TriggleG10Ch6Labs:window.TriggleG10Ch4Labs;
         const labels=ta?{
@@ -559,7 +575,7 @@
        '<p class="sp2-idea">'+typeset(pick(stage.idea))+'</p>'+
        '<p class="sp2-example">'+typeset(pick(stage.example))+'</p>'+
        (stage.exampleMath?'<div class="sp2-example-math">'+displayMath(stage.exampleMath)+'</div>':'')+
-       '<small class="sp2-stage-reference">'+e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+'</small></div>')+
+       '<small class="sp2-stage-reference">'+e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+(stage.page?.en?' · EN p.'+e(stage.page.en):'')+(stage.page?.ta?' · TA p.'+e(stage.page.ta):'')+'</small></div>')+
        deepDiveHtml+
        (choices.length?'<div class="sp2-recall"><h5>'+e(ta?'நீங்களே முயற்சிக்கவும்':'Try it yourself')+'</h5>'+
        '<p>'+typeset(pick(stage.question))+'</p>'+
