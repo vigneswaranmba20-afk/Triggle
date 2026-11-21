@@ -1,0 +1,41 @@
+name: Grade 9 NEON independent visual QA evidence
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'site/assets/g9-concept-theme.css'
+      - 'site/assets/chapter-hub.js'
+      - 'site/index.html'
+      - 'site/tools/test_g9_neon_visual_qa_browser.cjs'
+      - '.github/workflows/g9-neon-visual-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  g9-neon-qa:
+    name: Grade 9 24-concept mobile bilingual evidence
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Install headless Chromium
+        run: npx playwright install --with-deps --only-shell chromium
+      - name: Sweep published Grade 9 concepts across EN/TA and 3 phone widths
+        env:
+          CHROMIUM_PATH: ''
+        run: node site/tools/test_g9_neon_visual_qa_browser.cjs
+      - name: Upload screenshots and machine-readable QA handoff for NEON
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grade9-neon-visual-evidence
+          path: screenshots/g9-neon-qa/
+          if-no-files-found: warn
+          retention-days: 14
