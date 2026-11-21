@@ -16,7 +16,10 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     const scroller=document.querySelector('.lesson-container');
     const footer=document.querySelector('.sp2-journey-footer');
     const r=footer.getBoundingClientRect(),c=scroller.getBoundingClientRect();
+    const panel=document.querySelector('.sp2-journey[data-view="lesson"] .sp2-panel');
     return {position:getComputedStyle(footer).position,top:r.top,bottom:r.bottom,
+     followsPanel:!!panel&&!!(panel.compareDocumentPosition(footer)&Node.DOCUMENT_POSITION_FOLLOWING),
+     panelBottom:panel?.getBoundingClientRect().bottom,
      scrollerTop:c.top,scrollerBottom:c.bottom,scrollTop:scroller.scrollTop,
      maxScroll:scroller.scrollHeight-scroller.clientHeight,
      nextCount:footer.querySelectorAll('[data-footer-next]').length,
@@ -25,14 +28,13 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
      pageOverflow:document.documentElement.scrollWidth>innerWidth+1};
    });
   }
-  async function dockAtBottom(label){
+  async function footerInFlow(label){
    const g=await geometry();
-   assert.equal(g.position,'sticky',label+' uses a single CSS sticky dock');
+   assert.equal(g.position,'static',label+' footer is part of the page, not sticky');
+   assert(g.followsPanel&&g.top>=g.panelBottom-1,label+' footer follows the entire lesson');
    assert.equal(g.nextCount,1,label+' has one Next button');
    assert(g.prevHeight>=48 && g.nextHeight>=48,label+' both buttons are touchable '+JSON.stringify(g));
    assert(!g.pageOverflow,label+' no horizontal overflow');
-   assert(g.bottom<=g.scrollerBottom+3&&g.bottom>=g.scrollerBottom-110,
-    label+' navigation stays near the bottom of the usable scrollport '+JSON.stringify(g));
    return g;
   }
   for(const width of [320,360,393,430]){
@@ -46,11 +48,14 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     const nextLabel=await page.locator('[data-footer-next]').innerText();
     assert(nextLabel.includes(lang==='ta'?'அடுத்த கருத்து':'Next idea'),
      'Next correctly says idea rather than page: '+JSON.stringify({lang,width,nextLabel,url:page.url()}));
-    const first=await dockAtBottom('start '+width+' '+lang);
+    await page.locator('.lesson-container').evaluate(el=>el.scrollTop=0);
+    const first=await footerInFlow('start '+width+' '+lang);
     assert(first.maxScroll>100,'Enough scrollable lesson content to validate dock behavior');
     await page.locator('.lesson-container').evaluate(el=>el.scrollTop=(el.scrollHeight-el.clientHeight)/2);
     await page.waitForTimeout(45);
-    await dockAtBottom('middle '+width+' '+lang);
+    const middle=await footerInFlow('middle '+width+' '+lang);
+    assert(middle.scrollTop>first.scrollTop+20,'Lesson scrolls forward '+width+' '+lang);
+    assert(middle.top<first.top-20,'Footer moves with page instead of floating '+width+' '+lang);
     if(width===360){
       const dir=path.resolve('screenshots/g9-adaptive-dock');
       await fs.mkdir(dir,{recursive:true});
