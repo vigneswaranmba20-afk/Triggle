@@ -603,7 +603,7 @@
     const trs=dt.rows.map((r,idx)=>'<tr>'+r.map((cell,c)=>c===0?'<th scope="row">'+esc(cell)+'</th>':'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('');
     return '<div class="triggle-table-wrap"><table class="triggle-data-table"'+(dt.caption?' aria-label="'+esc(dt.caption)+'"':'')+'><thead><tr>'+ths+'</tr></thead><tbody>'+trs+'</tbody></table></div>';
   };
-  let qHtml=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));
+  $('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));
   if(current.dataTable){
     const tableHtml=renderDataTableHtml(current.dataTable);
     const rawQ=tr(current.q);
@@ -612,13 +612,13 @@
       if(rx.test(rawQ)){
         const [before='',after='']=rawQ.split(rx);
         const rawParts=questionMath?.[lang]||questionMath?.en;
-        qHtml=Array.isArray(rawParts)
+        $('questionText').innerHTML=Array.isArray(rawParts)
           ?math(rawParts).replace(/Type of maids[\s\S]*?(?=A family is selected)/i,tableHtml)
           :math(before)+tableHtml+math(after);
-      }else{qHtml+=tableHtml;}
-    }else{qHtml+=tableHtml;}
+      }else{$('questionText').innerHTML+=tableHtml;}
+    }else{$('questionText').innerHTML+=tableHtml;}
   }
-  $('questionText').innerHTML=qHtml;$('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
+  $('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
 
