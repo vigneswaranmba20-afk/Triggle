@@ -82,6 +82,7 @@ CORE.push("./data/textbook-exercises/g10-ch2-trace-en.js");
 CORE.push("./data/math-layout/g10-ch1-chatgpt-20261113.js");
 CORE.push("./data/textbook-exercises/g10-seven-recovery-20261113-en.js");
 CORE.push("./data/textbook-exercises/g10-ch8-ex8-1-q5-q10-en.js");
+CORE.push("./data/textbook-exercises/g10-ch8-ex8-2-q1-q3-en.js");
 CORE.push("./data/textbook-exercises/g10-ch8-ex8-1-q11-q15-en.js");
 CORE.push("./assets/grade10-recovery/ex4-1-q1-i.svg","./assets/grade10-recovery/ex4-1-q1-ii.svg");
 CORE.push('./assets/g10-ch2-typography.css');
