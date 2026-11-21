@@ -41,4 +41,7 @@ const population=ctx.window.TriggleG9Math.get(load().find(q=>q.id==='g9-ch2-ex8-
 assert.match(population.steps[1].math.latex,/7\{,\}000\{,\}000\{,\}000/,'The complete seven-billion integer stays on one line');
 assert(!population.steps[1].math.latex.includes('gathered'),'Never split thousands into separate mathematical values');
 for(const q of load())validate(ctx.window.TriggleG9Math.get(q),q.id);
+assert(!JSON.stringify(rich("the 250 'Both' families")).includes("250'"),"Opening quote around 'Both' must not become 250 prime");
+assert(!JSON.stringify(rich('tested 7000 LED lights')).includes('7000 LED'),'"7000 LED" acronym stays prose outside math span');
+assert(!JSON.stringify(rich('3 of them are Red, 5 of them are Blue')).includes('Red, 5'),'"Red, 5" prose phrase does not merge into math');
 console.log('PASS Grade 9 compiler: grouping, membership, units, absolute values, probability labels, statistical bars, data spacing, alignment, escaping, and every compiled formula');

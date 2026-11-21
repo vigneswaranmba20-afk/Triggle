@@ -31564,10 +31564,10 @@ const records=[
           "latex": "3",
           "fallback": "3"
         },
-        " of them are ",
+        " of them are Red, ",
         {
-          "latex": "\\text{Red}, 5",
-          "fallback": "Red, 5"
+          "latex": "5",
+          "fallback": "5"
         },
         " of them are Blue and the remaining are Green then, what is the probability of picking out (i) a Blue ball, (ii) a Red ball and (iii) a Green ball?"
       ],
@@ -31582,10 +31582,10 @@ const records=[
           "latex": "3",
           "fallback": "3"
         },
-        " of them are ",
+        " of them are Red, ",
         {
-          "latex": "\\text{Red}, 5",
-          "fallback": "Red, 5"
+          "latex": "5",
+          "fallback": "5"
         },
         " of them are Blue and the remaining are Green then, what is the probability of picking out (i) a Blue ball, (ii) a Red ball and (iii) a Green ball?"
       ]
@@ -31956,48 +31956,28 @@ const records=[
       "en": [
         "A manufacturer tested ",
         {
-          "latex": "7000 LED",
-          "fallback": "7000 LED"
+          "latex": "7000",
+          "fallback": "7000"
         },
-        " lights at random and found that ",
+        " LED lights at random and found that ",
         {
           "latex": "25",
           "fallback": "25"
         },
-        " of them were defective. If a ",
-        {
-          "latex": "LED",
-          "fallback": "LED"
-        },
-        " light is selected at random, what is the probability that the selected ",
-        {
-          "latex": "LED",
-          "fallback": "LED"
-        },
-        " light is a defective one."
+        " of them were defective. If a LED light is selected at random, what is the probability that the selected LED light is a defective one."
       ],
       "ta": [
         "English-language question; Tamil version pending. A manufacturer tested ",
         {
-          "latex": "7000 LED",
-          "fallback": "7000 LED"
+          "latex": "7000",
+          "fallback": "7000"
         },
-        " lights at random and found that ",
+        " LED lights at random and found that ",
         {
           "latex": "25",
           "fallback": "25"
         },
-        " of them were defective. If a ",
-        {
-          "latex": "LED",
-          "fallback": "LED"
-        },
-        " light is selected at random, what is the probability that the selected ",
-        {
-          "latex": "LED",
-          "fallback": "LED"
-        },
-        " light is a defective one."
+        " of them were defective. If a LED light is selected at random, what is the probability that the selected LED light is a defective one."
       ]
     },
     "answerMath": {
@@ -32700,10 +32680,10 @@ const records=[
             },
             " families. The wording is ambiguous because the ",
             {
-              "latex": "250'",
-              "fallback": "250 '"
+              "latex": "250",
+              "fallback": "250"
             },
-            "Both' families also employ part-time maids."
+            " 'Both' families also employ part-time maids."
           ],
           "ta": [
             "English explanation (Tamil version pending): For part-time maids, the printed answer key uses the 'Only part time' category; use ",
@@ -32713,10 +32693,53 @@ const records=[
             },
             " families. The wording is ambiguous because the ",
             {
-              "latex": "250'",
-              "fallback": "250 '"
+              "latex": "250",
+              "fallback": "250"
             },
-            "Both' families also employ part-time maids."
+            " 'Both' families also employ part-time maids."
+          ]
+        }
+      },
+      {
+        "math": [
+          {
+            "latex": "P\\left(\\text{part time or both}\\right)",
+            "fallback": "P(part time or both)",
+            "display": true
+          },
+          "; = ",
+          {
+            "latex": "\\begin{aligned}&\\dfrac{860 + 250}{1500} = \\dfrac{1110}{1500}  \\\\ &= \\dfrac{37}{50}\\end{aligned}",
+            "fallback": "[[860 + 250|1500]] = [[1110|1500]] = [[37|50]]",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "If part-time maids includes families who also employ full-time maids, add the disjoint categories: ",
+            {
+              "latex": "860",
+              "fallback": "860"
+            },
+            " only-part-time families and ",
+            {
+              "latex": "250",
+              "fallback": "250"
+            },
+            " both-types families. This inclusive interpretation differs from the printed answer key for part (ii)."
+          ],
+          "ta": [
+            "English explanation (Tamil version pending): If part-time maids includes families who also employ full-time maids, add ",
+            {
+              "latex": "860",
+              "fallback": "860"
+            },
+            " only-part-time and ",
+            {
+              "latex": "250",
+              "fallback": "250"
+            },
+            " both-types families. This is an alternative interpretation, not the printed answer key."
           ]
         }
       },

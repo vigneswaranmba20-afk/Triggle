@@ -1090,3 +1090,12 @@ body.textbook-reader .question-top-nav .page-button{min-width:44px;min-height:44
 .lesson-card:has(.question-top-nav:not([hidden])) .inline-figure-open{flex-direction:column;align-items:center}
 .lesson-card:has(.question-top-nav:not([hidden])) .inline-figure-visual{width:min(100%,320px)}
 .lesson-card:has(.question-top-nav:not([hidden])) .inline-figure-action{flex:none;max-width:none}
+.triggle-table-wrap{margin:12px 0;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #dfd7c8;border-radius:12px;background:#fffdfa}
+.triggle-data-table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.35;text-align:center;color:#272434}
+.triggle-data-table th,.triggle-data-table td{padding:9px 8px;border-bottom:1px solid #ece5d8;border-right:1px solid #ece5d8;word-break:normal;overflow-wrap:normal}
+.triggle-data-table th:last-child,.triggle-data-table td:last-child{border-right:0}
+.triggle-data-table tr:last-child th,.triggle-data-table tr:last-child td{border-bottom:0}
+.triggle-data-table thead th{background:#f5f0ff;color:#3c2a69;font-weight:750}
+.triggle-data-table tbody th[scope="row"]{text-align:left;font-weight:700;background:#faf7f0;color:#3b354b}
+.triggle-data-table tbody td{white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(max-width:430px){.triggle-data-table{font-size:12px}.triggle-data-table th,.triggle-data-table td{padding:7px 5px}}
