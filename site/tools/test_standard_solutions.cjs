@@ -10,6 +10,8 @@ const recoveredBatch=require('../../docs/curriculum/grade-10/g10-seven-recovery-
 const recoveryIds=recoveredBatch.records.map(r=>r.id);
 const statisticsBatch=require('../../docs/curriculum/grade-10/g10-ch8-ex8-1-q5-q10-20261113.json');
 const statisticsIds=statisticsBatch.records.map(r=>r.id);
+const statisticsEx82Batch=require('../../docs/curriculum/grade-10/g10-ch8-ex8-2-q1-q3-20261121.json');
+const statisticsEx82Ids=statisticsEx82Batch.records.map(r=>r.id);
 const statisticsFollowup=require('../../docs/curriculum/grade-10/g10-ch8-ex8-1-q11-q15-20261113.json');
 const followupIds=statisticsFollowup.records.map(r=>r.id);
 assert.equal(statisticsIds.length,6);
@@ -188,7 +190,7 @@ const ch6Unit=require('../data/textbook-fidelity/g10-ch6-ex6-unit.json');
 const ch6UnitById=new Map(ch6Unit.items.map(item=>[item.id,item]));
 const ch6UnitNewIds=ch6Unit.items.map(item=>item.id);
 assert.equal(ch6UnitNewIds.length,13,'Thirteen source-indexed Ch6 Unit Ex6 tasks');
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds];
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -355,7 +357,7 @@ for(const [grade,data] of Object.entries(classes)){
        assert.equal(item.edition,'2025','TRACE source edition '+item.id);
        assert.equal(item.translationReview,'pending','Do not invent Tamil teacher approval '+item.id);
      }else{
-       const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id)||ex26Records.find(r=>r.id===item.id)||ex27Records.find(r=>r.id===item.id)||ex28Records.find(r=>r.id===item.id)||ex29Records.find(r=>r.id===item.id)||ex210UnitRecords.find(r=>r.id===item.id)||ex31Records.find(r=>r.id===item.id)||ex32Records.find(r=>r.id===item.id)||ex33Records.find(r=>r.id===item.id)||ex34Records.find(r=>r.id===item.id)||ex35Records.find(r=>r.id===item.id)||ex36Records.find(r=>r.id===item.id)||ex37Records.find(r=>r.id===item.id)||ex38Records.find(r=>r.id===item.id)||ex39Records.find(r=>r.id===item.id)||ex310Records.find(r=>r.id===item.id)||ex311Records.find(r=>r.id===item.id)||ex312Records.find(r=>r.id===item.id)||ex313Records.find(r=>r.id===item.id)||ex314Records.find(r=>r.id===item.id);
+       const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||statisticsEx82Batch.records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id)||ex26Records.find(r=>r.id===item.id)||ex27Records.find(r=>r.id===item.id)||ex28Records.find(r=>r.id===item.id)||ex29Records.find(r=>r.id===item.id)||ex210UnitRecords.find(r=>r.id===item.id)||ex31Records.find(r=>r.id===item.id)||ex32Records.find(r=>r.id===item.id)||ex33Records.find(r=>r.id===item.id)||ex34Records.find(r=>r.id===item.id)||ex35Records.find(r=>r.id===item.id)||ex36Records.find(r=>r.id===item.id)||ex37Records.find(r=>r.id===item.id)||ex38Records.find(r=>r.id===item.id)||ex39Records.find(r=>r.id===item.id)||ex310Records.find(r=>r.id===item.id)||ex311Records.find(r=>r.id===item.id)||ex312Records.find(r=>r.id===item.id)||ex313Records.find(r=>r.id===item.id)||ex314Records.find(r=>r.id===item.id);
        assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'New content exactly matches source-verified batch '+item.id);
      }
    }
@@ -382,7 +384,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,933+geometryNewIds.length+geometryEx43NewIds.length+ch5Ex51NewIds.length+ch5Ex52NewIds.length+ch5Ex53NewIds.length+ch5Ex54NewIds.length+ch5Ex55NewIds.length+ch5UnitNewIds.length+ch6Ex61NewIds.length+ch6Ex62NewIds.length+ch6Ex63NewIds.length+ch6Ex64NewIds.length+ch6Ex65NewIds.length+ch6UnitNewIds.length);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,933+geometryNewIds.length+geometryEx43NewIds.length+ch5Ex51NewIds.length+ch5Ex52NewIds.length+ch5Ex53NewIds.length+ch5Ex54NewIds.length+ch5Ex55NewIds.length+ch5UnitNewIds.length+ch6Ex61NewIds.length+ch6Ex62NewIds.length+ch6Ex63NewIds.length+ch6Ex64NewIds.length+ch6Ex65NewIds.length+ch6UnitNewIds.length+statisticsEx82Ids.length);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');

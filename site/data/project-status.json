@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "623c5504ff5c25018277e653c350360a9111cb88",
-  "updatedAt": "2026-11-21T05:56:00Z",
+  "sourceCommit": "0c87697b36dcc4cef4aec546cd75bd9b0606daa3",
+  "updatedAt": "2026-11-21T12:27:49+00:00",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -38,7 +38,7 @@
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "7e58dd71cc02b5d2a32aac0bc620f081b5aeed9f9370512cca19202470fe9392",
     "site/data/math-layout/g10-ch2-ch8-chatgpt-20261113.js": "7c9e63f5a069dc5658601181f5d6b1df16ec9d0d457e21964fb2b24ec291d134",
     "site/data/math-layout/g10-ch2-fractions-20261120.js": "cc57f9e5b1784ef2c72961d1200e774234982a0d9abbf3711a902bb4ace92358",
-    "site/data/problem-difficulty.js": "aee91d66b6ade4e393122dbddca3bdef8ad362bb265cfb4796a48d7d492f82e8",
+    "site/data/problem-difficulty.js": "d1cb5412fb1da075143737ffd6547f90469f8a00bc5d0c60db2bd611f0ff624e",
     "site/data/real-numbers/g9-ch2-concepts.js": "ccccf6be7165344c5337aecff4120c8763b55481b516fd22a63fe57d4c958564",
     "site/data/real-numbers/g9-ch2-core.js": "aa11da8281a83d1eec91f1f42205f35a3e023f95bea0ebf72168acb33f903279",
     "site/data/real-numbers/g9-ch2-examples-a.js": "b6f78eb165adfe7f63daa65a138d58d9ca44f2ea1a219513805355b6ea93e8d7",
@@ -95,6 +95,7 @@
     "site/data/textbook-exercises/g10-ch6-ex6-unit-en.js": "3e3a4e280be8b3da95796481d1e45b0a89ff8e8e9fd399dac2fd37d4aade5f98",
     "site/data/textbook-exercises/g10-ch8-ex8-1-q11-q15-en.js": "5e1aa75fdeb63f043e4e867354b008c3ac6b666cfa1c1bb783020081207fe5e5",
     "site/data/textbook-exercises/g10-ch8-ex8-1-q5-q10-en.js": "428a4ccc1321082218d4ab692c0ff3cf6cda9e0b10391d09cc3eab87fbf6a36b",
+    "site/data/textbook-exercises/g10-ch8-ex8-2-q1-q3-en.js": "180557c70d7fcafb042d5c4ebebf4bd541d1a9eecc261c2eece85073c3a9f6ab",
     "site/data/textbook-exercises/g10-checkpoint-20261110-en.js": "30ec65b4e2f007ae25fcde957dd6bf933c5b9ea3c26536b827c835a15c20c309",
     "site/data/textbook-exercises/g10-seven-recovery-20261113-en.js": "b3a704bf15e5c250c05318af8eb9c1fce16b55ec8c0dcf4977f76ce74ee3621b",
     "site/data/textbook-exercises/g12-ch1-ex1-1-en.js": "d979dd28edcd293771fcad174ade5ac4690781330306583cf437c025f617ed26",
@@ -139,7 +140,7 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9.js": "ed93ba751d971497a7143086e80e307c035724d9ec062d26343a088416369d85",
-    "site/index.html": "e40033cc04b37974ad5cd8103cf639dfcbaa2fcdd3e53beb58f2a144f1f4053f",
+    "site/index.html": "35338878a2cd0337041e4058a13d97e88880e938574da8c23e75faef9a43edea",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
@@ -174,7 +175,7 @@
         "evidence": "docs/curriculum/grade-12/checkpoint.json"
       }
     ],
-    "recommendedActions": 108
+    "recommendedActions": 109
   },
   "grades": [
     {
@@ -5109,7 +5110,7 @@
       "completedEnglishChapters": 1,
       "partialChapters": 6,
       "pendingChapters": 1,
-      "exerciseRecords": 593,
+      "exerciseRecords": 596,
       "verifiedNumberedQuestions": 19,
       "verifiedTasks": 22,
       "wholeGradeQuestionDenominator": null,
@@ -12059,7 +12060,7 @@
         {
           "number": "8",
           "title": "Statistics and Probability",
-          "exerciseRecords": 16,
+          "exerciseRecords": 19,
           "completeEnglish": false,
           "completionBasis": "Incomplete or denominator unknown",
           "verifiedNumberedQuestions": 0,
@@ -12217,6 +12218,59 @@
                   "englishAvailable": true,
                   "tamilAvailable": false,
                   "recordSha256": "3ba1b416d4730cad7110a31773674a739091339e089267f7d293723ed4f30e1c",
+                  "verified": false
+                }
+              ],
+              "verifiedNumberedQuestions": 0,
+              "verifiedTasks": 0,
+              "totalNumberedQuestions": null,
+              "totalTasks": null,
+              "missingTasks": null,
+              "tasks": [],
+              "nextMissing": null,
+              "englishComplete": false,
+              "tamilReview": "pending",
+              "teacherApproval": "unknown (private)",
+              "status": "Awaiting verification",
+              "stages": {
+                "locallyCompleted": true,
+                "tested": false,
+                "merged": false,
+                "deployed": false,
+                "teacherApproved": null
+              },
+              "sources": [],
+              "evidence": [],
+              "deployment": null
+            },
+            {
+              "id": "8.2",
+              "records": [
+                {
+                  "id": "c10-8-ex8-2-q1",
+                  "label": "Exercise 8.2 · Q1",
+                  "url": "../index.html?class=10&question=c10-8-ex8-2-q1",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "b9a6c3b560f594fc985a99552b0f5daa5a780475fa2fbf7a8f2cc74613438118",
+                  "verified": false
+                },
+                {
+                  "id": "c10-8-ex8-2-q2",
+                  "label": "Exercise 8.2 · Q2",
+                  "url": "../index.html?class=10&question=c10-8-ex8-2-q2",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "bbef84b722cd2cbd8b89b6e52a43ddd28dafca05f882483a9d6391587b03907f",
+                  "verified": false
+                },
+                {
+                  "id": "c10-8-ex8-2-q3",
+                  "label": "Exercise 8.2 · Q3",
+                  "url": "../index.html?class=10&question=c10-8-ex8-2-q3",
+                  "englishAvailable": true,
+                  "tamilAvailable": false,
+                  "recordSha256": "c992a2c4b4385d1bd904e0f85a95e8bd114b3d729d6f1aa4f12e73744cc6bcc6",
                   "verified": false
                 }
               ],
@@ -18424,6 +18478,31 @@
       "sourcePages": null,
       "evidence": [
         "docs/curriculum/grade-9/checkpoint.json"
+      ]
+    },
+    {
+      "id": "g10-ch8-ex8.2",
+      "priority": 4,
+      "grade": 10,
+      "chapter": "8",
+      "exercise": "8.2",
+      "startingQuestion": "Unknown — source inventory required",
+      "questionIds": [
+        "c10-8-ex8-2-q1",
+        "c10-8-ex8-2-q2",
+        "c10-8-ex8-2-q3"
+      ],
+      "scope": [],
+      "status": "Awaiting verification",
+      "type": "Source reconciliation",
+      "reason": "Reconcile the earliest source-verified exercise gap before producing content.",
+      "dependencies": [
+        "Full question/subpart inventory and exact first missing question are not verified."
+      ],
+      "sources": [],
+      "sourcePages": null,
+      "evidence": [
+        "docs/curriculum/grade-10/checkpoint.json"
       ]
     },
     {

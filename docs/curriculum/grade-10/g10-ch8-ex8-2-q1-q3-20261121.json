@@ -1,0 +1,273 @@
+{
+  "schema": 1,
+  "scope": "Grade 10 Chapter 8 Exercise 8.2 Q1-Q3 only; NOT the complete exercise",
+  "source": {
+    "en": {
+      "pdfPage": 322,
+      "printedPage": 316,
+      "visuallyChecked": true
+    },
+    "ta": {
+      "pdfPage": 331,
+      "printedPage": 325,
+      "visuallyChecked": false,
+      "note": "Numbers cross-checked via verified inventory only"
+    }
+  },
+  "tamilStatus": "pending",
+  "professionalReview": "not_claimed",
+  "records": [
+    {
+      "id": "c10-8-ex8-2-q1",
+      "classNum": 10,
+      "chapter": "8",
+      "exercise": "8.2",
+      "topic": {
+        "en": "Statistics and Probability"
+      },
+      "label": {
+        "en": "Exercise 8.2 · Q1",
+        "ta": "Exercise 8.2 · Q1 (English only; Tamil review pending)"
+      },
+      "title": {
+        "en": "Coefficient of variation from standard deviation and mean"
+      },
+      "q": {
+        "en": "1. The standard deviation and mean of a data are 6.5 and 12.5 respectively. Find the coefficient of variation."
+      },
+      "steps": [
+        {
+          "en": "Write what is given. Symbols: σ (sigma) is the standard deviation, which measures how spread out the data are; x̄ (x-bar) is the mean, the average value; C.V. is the coefficient of variation, which writes the spread as a percentage of the mean so that different data sets can be compared. Formula: C.V. = σ/x̄ × 100%.",
+          "eq": "σ = 6.5, x̄ = 12.5; C.V. = σ/x̄ × 100 %",
+          "math": {
+            "latex": "\\begin{aligned}\\sigma&=6.5,\\quad \\bar{x}=12.5\\\\\\text{C.V.}&=\\dfrac{\\sigma}{\\bar{x}}\\times100\\%\\end{aligned}",
+            "display": true,
+            "fallback": "σ = 6.5, x̄ = 12.5; C.V. = σ/x̄ × 100 %"
+          }
+        },
+        {
+          "en": "Substitute the two values into the formula.",
+          "eq": "C.V. = 6.5/12.5 × 100 %",
+          "math": {
+            "latex": "\\text{C.V.}=\\dfrac{6.5}{12.5}\\times100\\%",
+            "display": true,
+            "fallback": "C.V. = 6.5/12.5 × 100 %"
+          }
+        },
+        {
+          "en": "Clear the decimals by multiplying the top and bottom by 2: 6.5 × 2 = 13 and 12.5 × 2 = 25.",
+          "eq": "6.5/12.5 = 13/25",
+          "math": {
+            "latex": "\\dfrac{6.5}{12.5}=\\dfrac{13}{25}",
+            "display": true,
+            "fallback": "6.5/12.5 = 13/25"
+          }
+        },
+        {
+          "en": "Multiply by 100. Since 100 ÷ 25 = 4, the fraction becomes 13 × 4.",
+          "eq": "C.V. = 13/25 × 100 = 13 × 4 = 52 %",
+          "math": {
+            "latex": "\\begin{aligned}\\text{C.V.}&=\\dfrac{13}{25}\\times100\\\\&=13\\times4=52\\%\\end{aligned}",
+            "display": true,
+            "fallback": "C.V. = 13/25 × 100 = 13 × 4 = 52 %"
+          }
+        },
+        {
+          "en": "Check by reversing: 52 % of the mean should be the standard deviation: 0.52 × 12.5 = 6.5.",
+          "eq": "0.52 × 12.5 = 6.5 ✓",
+          "math": {
+            "latex": "0.52\\times12.5=6.5\\ \\checkmark",
+            "display": true,
+            "fallback": "0.52 × 12.5 = 6.5 ✓"
+          }
+        }
+      ],
+      "answer": "The coefficient of variation is 52 %.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English printed p. 316 / PDF p. 322 (page text and image checked); Tamil printed p. 325 / PDF p. 331 (numerical evidence from the verified source inventory docs/trace/source-inventories/g10-ch8-ex8-2.json). Tamil editorial approval and teacher review not claimed.",
+      "edition": "2025",
+      "translationReview": "pending",
+      "checkpoint": "2026-11-21",
+      "answerMath": {
+        "latex": "\\boxed{\\text{C.V.}=52\\%}",
+        "display": true,
+        "fallback": "The coefficient of variation is 52 %."
+      }
+    },
+    {
+      "id": "c10-8-ex8-2-q2",
+      "classNum": 10,
+      "chapter": "8",
+      "exercise": "8.2",
+      "topic": {
+        "en": "Statistics and Probability"
+      },
+      "label": {
+        "en": "Exercise 8.2 · Q2",
+        "ta": "Exercise 8.2 · Q2 (English only; Tamil review pending)"
+      },
+      "title": {
+        "en": "Mean from standard deviation and coefficient of variation"
+      },
+      "q": {
+        "en": "2. The standard deviation and coefficient of variation of a data are 1.2 and 25.6 respectively. Find the value of mean."
+      },
+      "steps": [
+        {
+          "en": "Write what is given. Symbols: σ (sigma) is the standard deviation, which measures how spread out the data are; x̄ (x-bar) is the mean, the average value; C.V. is the coefficient of variation, which writes the spread as a percentage of the mean so that different data sets can be compared. Formula: C.V. = σ/x̄ × 100%. Here the mean x̄ is unknown.",
+          "eq": "σ = 1.2, C.V. = 25.6 %; C.V. = σ/x̄ × 100 %",
+          "math": {
+            "latex": "\\begin{aligned}\\sigma&=1.2,\\quad \\text{C.V.}=25.6\\%\\\\\\text{C.V.}&=\\dfrac{\\sigma}{\\bar{x}}\\times100\\end{aligned}",
+            "display": true,
+            "fallback": "σ = 1.2, C.V. = 25.6 %; C.V. = σ/x̄ × 100 %"
+          }
+        },
+        {
+          "en": "Substitute the known values.",
+          "eq": "25.6 = 1.2/x̄ × 100",
+          "math": {
+            "latex": "25.6=\\dfrac{1.2}{\\bar{x}}\\times100",
+            "display": true,
+            "fallback": "25.6 = 1.2/x̄ × 100"
+          }
+        },
+        {
+          "en": "Multiply both sides by x̄ and divide both sides by 25.6 to get x̄ alone.",
+          "eq": "x̄ = 1.2 × 100/25.6",
+          "math": {
+            "latex": "\\bar{x}=\\dfrac{1.2\\times100}{25.6}",
+            "display": true,
+            "fallback": "x̄ = 1.2 × 100/25.6"
+          }
+        },
+        {
+          "en": "Simplify: 1.2 × 100 = 120. Multiply top and bottom by 10 to remove the decimal, then divide both by 16.",
+          "eq": "x̄ = 120/25.6 = 1200/256 = 75/16",
+          "math": {
+            "latex": "\\begin{aligned}\\bar{x}&=\\dfrac{120}{25.6}=\\dfrac{1200}{256}\\\\&=\\dfrac{75}{16}\\end{aligned}",
+            "display": true,
+            "fallback": "x̄ = 120/25.6 = 1200/256 = 75/16"
+          }
+        },
+        {
+          "en": "Write 75/16 as a decimal: 75 ÷ 16 = 4.6875.",
+          "eq": "x̄ = 4.6875",
+          "math": {
+            "latex": "\\bar{x}=4.6875",
+            "display": true,
+            "fallback": "x̄ = 4.6875"
+          }
+        },
+        {
+          "en": "Check: with this mean, C.V. = 1.2/4.6875 × 100 = 25.6 %.",
+          "eq": "1.2/4.6875 × 100 = 25.6 ✓",
+          "math": {
+            "latex": "\\dfrac{1.2}{4.6875}\\times100=25.6\\ \\checkmark",
+            "display": true,
+            "fallback": "1.2/4.6875 × 100 = 25.6 ✓"
+          }
+        }
+      ],
+      "answer": "The mean is 75/16 = 4.6875.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English printed p. 316 / PDF p. 322 (page text and image checked); Tamil printed p. 325 / PDF p. 331 (numerical evidence from the verified source inventory docs/trace/source-inventories/g10-ch8-ex8-2.json). Tamil editorial approval and teacher review not claimed.",
+      "edition": "2025",
+      "translationReview": "pending",
+      "checkpoint": "2026-11-21",
+      "answerMath": {
+        "latex": "\\boxed{\\bar{x}=\\dfrac{75}{16}=4.6875}",
+        "display": true,
+        "fallback": "The mean is 75/16 = 4.6875."
+      }
+    },
+    {
+      "id": "c10-8-ex8-2-q3",
+      "classNum": 10,
+      "chapter": "8",
+      "exercise": "8.2",
+      "topic": {
+        "en": "Statistics and Probability"
+      },
+      "label": {
+        "en": "Exercise 8.2 · Q3",
+        "ta": "Exercise 8.2 · Q3 (English only; Tamil review pending)"
+      },
+      "title": {
+        "en": "Standard deviation from mean and coefficient of variation"
+      },
+      "q": {
+        "en": "3. If the mean and coefficient of variation of a data are 15 and 48 respectively, then find the value of standard deviation."
+      },
+      "steps": [
+        {
+          "en": "Write what is given. Symbols: σ (sigma) is the standard deviation, which measures how spread out the data are; x̄ (x-bar) is the mean, the average value; C.V. is the coefficient of variation, which writes the spread as a percentage of the mean so that different data sets can be compared. Formula: C.V. = σ/x̄ × 100%. Here the standard deviation σ is unknown.",
+          "eq": "x̄ = 15, C.V. = 48 %; C.V. = σ/x̄ × 100 %",
+          "math": {
+            "latex": "\\begin{aligned}\\bar{x}&=15,\\quad \\text{C.V.}=48\\%\\\\\\text{C.V.}&=\\dfrac{\\sigma}{\\bar{x}}\\times100\\end{aligned}",
+            "display": true,
+            "fallback": "x̄ = 15, C.V. = 48 %; C.V. = σ/x̄ × 100 %"
+          }
+        },
+        {
+          "en": "Substitute the known values.",
+          "eq": "48 = σ/15 × 100",
+          "math": {
+            "latex": "48=\\dfrac{\\sigma}{15}\\times100",
+            "display": true,
+            "fallback": "48 = σ/15 × 100"
+          }
+        },
+        {
+          "en": "Multiply both sides by 15 and divide both sides by 100 to get σ alone.",
+          "eq": "σ = 48 × 15/100",
+          "math": {
+            "latex": "\\sigma=\\dfrac{48\\times15}{100}",
+            "display": true,
+            "fallback": "σ = 48 × 15/100"
+          }
+        },
+        {
+          "en": "Multiply: 48 × 15 = 720.",
+          "eq": "σ = 720/100",
+          "math": {
+            "latex": "\\sigma=\\dfrac{720}{100}",
+            "display": true,
+            "fallback": "σ = 720/100"
+          }
+        },
+        {
+          "en": "Divide: 720 ÷ 100 = 7.2.",
+          "eq": "σ = 7.2",
+          "math": {
+            "latex": "\\sigma=7.2",
+            "display": true,
+            "fallback": "σ = 7.2"
+          }
+        },
+        {
+          "en": "Check: C.V. = 7.2/15 × 100 = 0.48 × 100 = 48 %.",
+          "eq": "7.2/15 × 100 = 48 ✓",
+          "math": {
+            "latex": "\\dfrac{7.2}{15}\\times100=48\\ \\checkmark",
+            "display": true,
+            "fallback": "7.2/15 × 100 = 48 ✓"
+          }
+        }
+      ],
+      "answer": "The standard deviation is 7.2.",
+      "kind": "textbook",
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English printed p. 316 / PDF p. 322 (page text and image checked); Tamil printed p. 325 / PDF p. 331 (numerical evidence from the verified source inventory docs/trace/source-inventories/g10-ch8-ex8-2.json). Tamil editorial approval and teacher review not claimed.",
+      "edition": "2025",
+      "translationReview": "pending",
+      "checkpoint": "2026-11-21",
+      "answerMath": {
+        "latex": "\\boxed{\\sigma=7.2}",
+        "display": true,
+        "fallback": "The standard deviation is 7.2."
+      }
+    }
+  ]
+}

@@ -4044,6 +4044,24 @@ const metadata={
       "basis": "Prime-power LCM reasoning for the first ten natural numbers.",
       "review": "implementation-audit"
     },
+    "c10-8-ex8-2-q1": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "One-step substitution into the coefficient of variation formula",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-2-q2": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Rearranging C.V. = σ/x̄ × 100 to find the mean",
+      "review": "implementation-audit"
+    },
+    "c10-8-ex8-2-q3": {
+      "grade": 10,
+      "level": "easy",
+      "basis": "Rearranging C.V. = σ/x̄ × 100 to find the standard deviation",
+      "review": "implementation-audit"
+    },
     "c10-8-ex8-1-q11": {
       "grade": 10,
       "level": "medium",
