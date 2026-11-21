@@ -178,6 +178,15 @@
   align-items:center;
   margin:8px 0 4px;
 }
+.g10ch4-slider-row[hidden]{display:none}
+.g10ch4-slider-top{
+  grid-column:1 / -1;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+}
+.g10ch4-card,.sp2-concept-heading{scroll-margin-top:72px}
 .g10ch4-slider-label{
   grid-column:1 / -1;
   font-size:12.5px;

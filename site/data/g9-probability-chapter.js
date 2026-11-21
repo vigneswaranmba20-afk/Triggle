@@ -100,8 +100,8 @@ window.TRIGGLE_PROB_PATH={chapterId:'g9-ch9',stages:[
       "ta": "English version only — Tamil editorial content pending. List HH, HT, TH and TT."
     },
     "why": {
-      "en": "There are four ordered outcomes, not three, because HT and TH are distinct.",
-      "ta": "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because HT and TH are distinct."
+      "en": "There are four ordered outcomes, not three, because HT and TH are distinct. By the same rule, rolling two dice gives 6 × 6 = 36 ordered pairs because (1, 3) and (3, 1) are different outcomes.",
+      "ta": "English version only — Tamil editorial content pending. There are four ordered outcomes, not three, because HT and TH are distinct. Rolling two dice gives 6 × 6 = 36 ordered pairs because (1, 3) and (3, 1) are different outcomes."
     }
   },
   {

@@ -17,6 +17,14 @@
     const n=Math.abs(v)<1e-9?0:Number(v.toFixed(d));
     return n<0?`-${Math.abs(n)}`:`${n}`;
   };
+  const gcd=(a,b)=>{a=Math.abs(Math.round(a));b=Math.abs(Math.round(b));while(b){const t=a%b;a=b;b=t;}return a||1;};
+  const fracTex=(num,den)=>{
+    if(!Number.isFinite(num)||!Number.isFinite(den)||den===0)return '\\text{undef}';
+    if(num===0)return '0';
+    const sign=(num<0)!==(den<0)?'-':'';
+    const g=gcd(num,den),n=Math.abs(Math.round(num))/g,d=Math.abs(Math.round(den))/g;
+    return d===1?`${sign}${n}`:`${sign}\\dfrac{${n}}{${d}}`;
+  };
   const term=(coef,sym,first=false)=>{
     const n=Number(coef.toFixed(2));
     if(Math.abs(n)<1e-9)return '';
@@ -344,8 +352,9 @@
       drawHandle(sceneG,ax,ay,`A(${A[0]},${A[1]})`,'#6E2933','A');
       drawHandle(sceneG,bx,by,`B(${B[0]},${B[1]})`,'#1F5E72','B');
       drawHandle(sceneG,cx,cy,`C(${C[0]},${C[1]})`,'#3F5D3A','C');
-      const ord=res.isCCW?(ta?'இடஞ்சுழி (+)':'CCW (+)'):(res.collinear?(ta?'நேர்க்கோடு (0)':'Collinear (0)'):(ta?'வலஞ்சுழி (−)':'CW (−)'));
-      tex(readout,`\\begin{aligned}\\text{Signed }\\Delta&=${fmt(res.signed,2)}\\;(\\text{${ord}})\\\\\\text{Area}&=|\\Delta|=${fmt(res.area,2)}\\text{ sq. units}\\end{aligned}`,`Signed = ${fmt(res.signed)}, Area = ${fmt(res.area)} sq. units`);
+      const ord=res.isCCW?'CCW (+)':(res.collinear?'Collinear (0)':'CW (-)');
+      const ordFallback=res.isCCW?(ta?'இடஞ்சுழி (+)':'CCW (+)'):(res.collinear?(ta?'நேர்க்கோடு (0)':'Collinear (0)'):(ta?'வலஞ்சுழி (−)':'CW (−)'));
+      tex(readout,`\\begin{aligned}\\text{Signed }\\Delta&=${fmt(res.signed,2)}\\;(\\text{${ord}})\\\\\\text{Area}&=|\\Delta|=${fmt(res.area,2)}\\text{ sq. units}\\end{aligned}`,`Signed Δ = ${fmt(res.signed)} (${ordFallback}), Area = ${fmt(res.area)} sq. units`);
     }
 
     attachMultiDrag(svg,pt=>{
@@ -548,10 +557,11 @@
       }else if(Math.abs(s1.m)<1e-9){
         tex(readout,mode===0?'m_1=0,\\;m_2=0\\;(\\parallel)':'m_1=0\\perp\\text{vertical }L_2\\;(\\text{undef})','m₁ = 0');
       }else{
+        const m1Tex=fracTex(P[1],P[0]),m2Tex=mode===0?m1Tex:fracTex(-P[0],P[1]);
         const m1=s1.m,m2=mode===0?m1:-1/m1;
         tex(readout,mode===0
-          ?`m_1=${fmt(m1,2)},\\;m_2=${fmt(m2,2)}\\;(m_1=m_2)`
-          :`\\begin{aligned}m_1&=${fmt(m1,2)},\\;m_2=${fmt(m2,2)}\\\\m_1\\cdot m_2&=${fmt(m1*m2,2)}\\end{aligned}`,
+          ?`m_1=${m1Tex},\\;m_2=${m2Tex}\\;(m_1=m_2)`
+          :`\\begin{aligned}m_1&=${m1Tex},\\;m_2=${m2Tex}\\\\m_1\\cdot m_2&=${fmt(m1*m2,2)}\\end{aligned}`,
           `m₁ = ${fmt(m1,2)}, m₂ = ${fmt(m2,2)}`);
       }
     }
@@ -758,7 +768,8 @@
       if(info.vertical){
         tex(readout,`\\begin{aligned}${lhs}\\implies x&=${fmt(info.xInt,2)}\\\\\\text{Slope }m&=\\text{Undefined}\\end{aligned}`,`${lhs}: vertical line x=${fmt(info.xInt)}`);
       }else{
-        tex(readout,`\\begin{aligned}${lhs}\\\\m=-\\dfrac{${a}}{${b}}=${fmt(info.m,2)},&\\;y\\text{-int}=${fmt(info.yInt,2)}\\end{aligned}`,`${lhs}: m=${fmt(info.m)}, y-int=${fmt(info.yInt)}`);
+        const mTex=fracTex(-a,b),yIntTex=fracTex(-c,b);
+        tex(readout,`\\begin{aligned}${lhs}\\\\m=${mTex},&\\;y\\text{-int}=${yIntTex}\\end{aligned}`,`${lhs}: m=${fmt(info.m)}, y-int=${fmt(info.yInt)}`);
       }
     }
     paint();
@@ -774,7 +785,7 @@
     const gridG=svgEl('g'),sceneG=svgEl('g');pl.drawGrid(gridG);svg.append(gridG,sceneG);
 
     const tabs=makeTabs(
-      ta?['இணை ax+by+k=0','செங்குத்து bx−ay+k=0']:['Parallel (3x−2y+k=0)','Perpendicular (−2x−3y+k=0)'],
+      ta?['இணை (3x−2y+k=0)','செங்குத்து (2x+3y+k=0)']:['Parallel (3x−2y+k=0)','Perpendicular (2x+3y+k=0)'],
       1,idx=>{mode=idx;tabs.sync(idx);paint();},
       ta?'கோட்டுக் குடும்பம்':'Line family'
     );
@@ -786,14 +797,14 @@
       sceneG.replaceChildren();
       const seg1=pl.clipLine(a,b,c);
       if(seg1)sceneG.append(svgEl('line',{x1:pl.sx(seg1[0][0]),y1:pl.sy(seg1[0][1]),x2:pl.sx(seg1[1][0]),y2:pl.sy(seg1[1][1]),stroke:'#1F5E72','stroke-width':2.4}));
-      const a2=mode===0?a:b,b2=mode===0?b:-a;
+      const a2=mode===0?a:2,b2=mode===0?b:3;
       const seg2=pl.clipLine(a2,b2,k);
       if(seg2)sceneG.append(svgEl('line',{x1:pl.sx(seg2[0][0]),y1:pl.sy(seg2[0][1]),x2:pl.sx(seg2[1][0]),y2:pl.sy(seg2[1][1]),stroke:'#6E2933','stroke-width':2.4}));
       const rel=math.generalRelation(a,b,c,a2,b2,k);
       if(mode===0){
-        tex(readout,`\\begin{aligned}L_1:&\\;3x-2y+2=0\\\\L_2:&\\;3x-2y${k>=0?'+'+k:k}=0\\;(\\text{det}=${rel.det})\\end{aligned}`,`Parallel family: 3x − 2y + (${k}) = 0`);
+        tex(readout,`\\begin{aligned}L_1:&\\;3x-2y+2=0\\\\L_2:&\\;3x-2y${k>=0?'+'+k:k}=0\\\\a_1b_2-a_2b_1&=${rel.det}\\;(\\parallel)\\end{aligned}`,`Parallel family: 3x − 2y + (${k}) = 0 (a₁b₂ − a₂b₁ = ${rel.det})`);
       }else{
-        tex(readout,`\\begin{aligned}L_1:&\\;3x-2y+2=0\\\\L_2:&\\;2x+3y${-k>=0?'+'+(-k):-k}=0\\;(\\text{dot}=${rel.dot})\\end{aligned}`,`Perpendicular family: 2x + 3y + (${-k}) = 0 (dot=0)`);
+        tex(readout,`\\begin{aligned}L_1:&\\;3x-2y+2=0\\\\L_2:&\\;2x+3y${k>=0?'+'+k:k}=0\\\\a_1a_2+b_1b_2&=${rel.dot}\\;(\\perp)\\end{aligned}`,`Perpendicular family: 2x + 3y + (${k}) = 0 (a₁a₂ + b₁b₂ = ${rel.dot})`);
       }
     }
     paint();
