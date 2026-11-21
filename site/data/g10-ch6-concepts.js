@@ -704,8 +704,8 @@ window.TRIGGLE_G10_CH6_PATH={
         "ta": "இடது பக்கம் = வலது பக்கம் என நிரூபிக்க, சிக்கலான பக்கத்தை மட்டும் sin/cos மாற்றம், காரணிப்படுத்தல் அல்லது இணை எண்ணால் பெருக்கி எளிய பக்கத்திற்குச் சமமாக்கவும்."
       },
       "rule": {
-        "en": "Three core moves: (1) convert to sin θ, cos θ; (2) factor & swap identities; (3) multiply by conjugate (1 ∓ sin θ) or (1 ∓ cos θ)",
-        "ta": "மூன்று முக்கிய உத்திகள்: (1) sin θ, cos θ-ஆக மாற்றுக; (2) காரணிப்படுத்துக; (3) இணை எண்ணால் (1 ∓ sin θ) பெருக்குக"
+        "en": "Three core moves: (1) convert to sin θ, cos θ; (2) factor & swap identities; (3) multiply by conjugate (1 ± sin θ) or (1 ± cos θ)",
+        "ta": "மூன்று முக்கிய உத்திகள்: (1) sin θ, cos θ-ஆக மாற்றுக; (2) காரணிப்படுத்துக; (3) இணை எண்ணால் (1 ± sin θ) பெருக்குக"
       },
       "math": {
         "latex": "\\begin{aligned}&\\dfrac{\\cos\\theta}{1+\\sin\\theta}=\\dfrac{\\cos\\theta(1-\\sin\\theta)}{1-\\sin^2\\theta}\\\\&=\\dfrac{\\cos\\theta(1-\\sin\\theta)}{\\cos^2\\theta}=\\sec\\theta-\\tan\\theta\\end{aligned}",
@@ -720,13 +720,13 @@ window.TRIGGLE_G10_CH6_PATH={
         },
         "symbols": [
           {
-            "symbol": { "latex": "1\\mp\\sin\\theta", "fallback": "1 ∓ sin θ" },
-            "en": "Conjugate multiplier for denominators (1 ± sin θ): produces 1 − sin²θ = cos²θ cleanly.",
-            "ta": "பகுதியில் (1 ± sin θ) இருந்தால் அதன் இணை (1 ∓ sin θ)-ஆல் பெருக்க cos²θ கிடைக்கும்."
+            "symbol": { "latex": "1\\pm\\sin\\theta", "fallback": "1 ± sin θ" },
+            "en": "Conjugate pair (1 + sin θ) and (1 − sin θ): multiplying denominator (1 ± sin θ) by its conjugate partner produces 1 − sin²θ = cos²θ cleanly.",
+            "ta": "பகுதியில் (1 + sin θ) அல்லது (1 − sin θ) இருந்தால் அதன் இணை எண்ணால் பெருக்க cos²θ கிடைக்கும்."
           },
           {
             "symbol": { "latex": "a^3\\pm b^3", "fallback": "a³ ± b³" },
-            "en": "Algebraic identities (a²−b²), (a±b)², and a³±b³=(a±b)(a²∓ab+b²) appear throughout Exercise 6.1.",
+            "en": "Algebraic identities (a²−b²), (a±b)², a³+b³=(a+b)(a²−ab+b²), and a³−b³=(a−b)(a²+ab+b²) appear throughout Exercise 6.1.",
             "ta": "(a²−b²), (a±b)², a³±b³ போன்ற இயற்கணித முற்றொருமைகள் பயிற்சி 6.1-இல் அதிகம் பயன்படுகின்றன."
           }
         ],
