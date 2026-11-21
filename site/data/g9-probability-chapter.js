@@ -365,8 +365,11 @@ window.TRIGGLE_PROB_LESSONS = [
     ]
   }
 ];
+const probLinks=[['g9-ch9-ex9.1-q1','g9-ch9-ex9.1-q3'],['g9-ch9-ex9.1-q4','g9-ch9-ex9.1-q6'],['g9-ch9-ex9.2-q1','g9-ch9-ex9.2-q2'],['g9-ch9-ex9.1-q9','g9-ch9-ex9.1-q10'],['g9-ch9-ex9.2-q4','g9-ch9-ex9.2-q5']];
 window.TRIGGLE_PROB_PATH.stages.forEach((stage, i) => {
   stage.page.ta = [307, 309, 311, 312, 316][i];
+  stage.practiceId = probLinks[i][0];
+  stage.secondaryPracticeId = probLinks[i][1];
 });
 
 const base=window.TRIGGLE_TEXTBOOK_TASKS||{};

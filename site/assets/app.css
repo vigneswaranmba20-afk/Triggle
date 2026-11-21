@@ -432,7 +432,8 @@
 .sp2-recall{padding:14px 0;border-top:1px solid #eee9f3;margin-top:18px}
 .sp2-recall>p{margin:7px 0 12px}
 .sp2-answers{display:flex;gap:7px;flex-wrap:wrap}
-.sp2-answers button{flex:1 1 135px;text-align:left}
+.sp2-answers button{flex:1 1 200px;min-width:0;text-align:left;overflow:visible;white-space:normal;overflow-wrap:anywhere}
+.sp2-answers button .triggle-math,.sp2-answers button .katex,.sp2-answers button .katex-html{max-width:100%;overflow:visible;white-space:normal}
 .sp2-recall-actions{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0}
 .sp2-recall-actions button{background:#fbf9ff;font-size:12px;min-height:42px}
 .sp2-why{background:#f7f3fc;padding:11px 12px;border-left:3px solid #9a80ca;border-radius:6px;font-size:13px;line-height:1.7;overflow-wrap:anywhere;color:#51446e}

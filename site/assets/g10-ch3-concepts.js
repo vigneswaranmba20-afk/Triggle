@@ -106,14 +106,14 @@
         <polygon points="75,20 155,32 155,108 75,92" fill="rgba(22,99,83,0.16)" stroke="#166353" stroke-width="1.6"/>
         <polygon points="205,22 125,34 125,108 205,94" fill="rgba(110,41,51,0.15)" stroke="#6E2933" stroke-width="1.6"/>
         <circle cx="140" cy="83" r="5.5" fill="#6E2933" stroke="#fff" stroke-width="1.5"/>
-        <text x="150" y="79" font-size="11" font-weight="700" fill="#181B20">(2, −1, 4)</text>
+        <text x="150" y="75" font-size="11" font-weight="750" fill="#181B20" paint-order="stroke" stroke="#FCFBF8" stroke-width="3.5" stroke-linejoin="round">(2, −1, 4)</text>
       </svg>`,
       `<svg viewBox="0 0 280 128" class="g10ch3-svg" role="img" aria-label="Three planes meeting along a shared line">
         <polygon points="36,36 140,66 140,110 36,78" fill="rgba(44,75,139,0.14)" stroke="#2C4B8B" stroke-width="1.5"/>
         <polygon points="244,36 140,66 140,110 244,78" fill="rgba(22,99,83,0.15)" stroke="#166353" stroke-width="1.5"/>
         <polygon points="65,18 140,66 140,110 65,62" fill="rgba(183,146,83,0.18)" stroke="#8A6728" stroke-width="1.5"/>
         <line x1="140" y1="54" x2="140" y2="116" stroke="#6E2933" stroke-width="3"/>
-        <text x="148" y="54" font-size="11" font-weight="700" fill="#6E2933">0 = 0</text>
+        <text x="148" y="48" font-size="11" font-weight="750" fill="#6E2933" paint-order="stroke" stroke="#FCFBF8" stroke-width="3.5" stroke-linejoin="round">0 = 0</text>
       </svg>`,
       `<svg viewBox="0 0 280 128" class="g10ch3-svg" role="img" aria-label="Parallel planes never meeting at one point">
         <polygon points="50,36 220,24 245,42 75,54" fill="#F3F0E9" stroke="#181B20" stroke-width="1.5"/>
@@ -691,10 +691,10 @@
           <line x1="${mx(2)}" y1="${my(4)}" x2="${mx(2)}" y2="${my(0)}" stroke="#166353" stroke-width="1.8" stroke-dasharray="3 3"/>
           <circle cx="${mx(-1)}" cy="${my(1)}" r="4.5" fill="#166353" stroke="#fff" stroke-width="1.4"/>
           <circle cx="${mx(2)}" cy="${my(4)}" r="4.5" fill="#166353" stroke="#fff" stroke-width="1.4"/>
-          <text x="${mx(-1)-32}" y="${my(1)-8}" font-size="10.5" font-weight="750" fill="#181B20">(−1, 1)</text>
-          <text x="${mx(2)+7}" y="${my(4)+4}" font-size="10.5" font-weight="750" fill="#181B20">(2, 4)</text>
-          <text x="${mx(-1)-12}" y="${my(0)+14}" font-size="11" font-weight="800" fill="#166353">x=−1</text>
-          <text x="${mx(2)-10}" y="${my(0)+14}" font-size="11" font-weight="800" fill="#166353">x=2</text>
+          <text x="${mx(-1)+8}" y="${my(1)+4}" font-size="10.5" font-weight="750" fill="#181B20" paint-order="stroke" stroke="#FCFBF8" stroke-width="3.5" stroke-linejoin="round">(−1, 1)</text>
+          <text x="${mx(2)+7}" y="${my(4)+4}" font-size="10.5" font-weight="750" fill="#181B20" paint-order="stroke" stroke="#FCFBF8" stroke-width="3.5" stroke-linejoin="round">(2, 4)</text>
+          <text x="${mx(-1)-12}" y="${my(0)+15}" font-size="11" font-weight="800" fill="#166353" paint-order="stroke" stroke="#FCFBF8" stroke-width="3">x=−1</text>
+          <text x="${mx(2)-10}" y="${my(0)+15}" font-size="11" font-weight="800" fill="#166353" paint-order="stroke" stroke="#FCFBF8" stroke-width="3">x=2</text>
         </svg>`;
         tex(mathBox,'\\begin{aligned}y&=x^2-(x^2-x-2)=x+2\\\\&\\implies x=-1,\\;2\\end{aligned}','y = x + 2 intersects y = x² ⇒ x = −1, 2',true);
         note.textContent=copy.interNote;
