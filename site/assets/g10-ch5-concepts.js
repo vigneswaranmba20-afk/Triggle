@@ -240,7 +240,10 @@
     const wrap=svgEl('g',{'data-drag-handle':'true','data-handle':handleId,style:'cursor:grab'});
     wrap.append(svgEl('circle',{cx:x,cy:y,r:14,fill:'transparent'}));
     wrap.append(svgEl('circle',{cx:x,cy:y,r:6.2,fill:color,stroke:'#FFFFFF','stroke-width':2}));
-    wrap.append(svgEl('text',{x:x+8,y:y-7,fill:color,'font-size':10.5,'font-weight':800},label));
+    const nearRightEdge=x>g.ownerSVGElement.viewBox.baseVal.width-58;
+    wrap.append(svgEl('text',{x:x+(nearRightEdge?-11:11),y:y-9,'text-anchor':nearRightEdge?'end':'start',
+      fill:color,stroke:'#FDFCF9','stroke-width':3,'stroke-linejoin':'round','paint-order':'stroke',
+      'font-size':10.5,'font-weight':800},label));
     g.append(wrap);
   }
 

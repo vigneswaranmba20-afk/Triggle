@@ -5,6 +5,8 @@
   const book=window.TRIGGLE_SET_PATH;
   if(!book || book.chapterId!=='g9-ch1')return;
   const STORAGE='triggle.g9.set-path.v1';
+  const selectedModes=new Map();
+  let overlapCount=6;
   const pick=(v,l)=>typeof v==='string'?v:(v?.[l]||v?.en||'');
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const plain=s=>Array.isArray(s)?s.map(plain).join(''):typeof s==='object'?(s?.fallback||''):String(s??'');
@@ -67,7 +69,7 @@
     // alone selects a lesson, so browser navigation and language changes work.
     let active=-1;
     const root=document.createElement('section');
-    root.className='sp2-journey';
+    root.className='sp2-journey g9-set-journey';
     root.setAttribute('aria-label',t.select);
     root.innerHTML='<div class="sp2-index-view" data-index-view>'+
       '<p class="sp2-progress" role="status" aria-live="polite" data-progress></p>'+
@@ -133,18 +135,20 @@
       const controls=panel.querySelector('[data-demo-controls]');
       controls.innerHTML=options.map(([name,key])=>btn(name,key)).join('');
       controls.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>paint(button.dataset.demoMode,update)));
+      const stageId=book.stages[active].id;
       function update(key,value){
+        selectedModes.set(stageId,key);
         controls.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.demoMode===key)));
         panel.querySelector('[data-demo-output]').innerHTML=htmlMath(value);
       }
-      paint(state,update);
+      paint(selectedModes.get(stageId)??state,update);
       return update;
     }
     function demo(stage){
       const out=panel.querySelector('[data-demo]');
       if(!out)return;
       if(stage.visual==='membership'){
-        const options=[2,3,4,5,8].map(n=>[String(n),String(n)]);
+        const options=[2,3,4,5,8].map(n=>[{latex:String(n),fallback:String(n)},String(n)]);
         setDemo('2',options,(n,update)=>{
           const yes=[2,4,6,8].includes(Number(n));
           const fallback=n+(yes?' ∈ A':' ∉ A');
@@ -157,9 +161,16 @@
         const forms={
           description:lang==='ta'?'10-ஐ விடச் சிறிய நேர்ம இரட்டைப்படை முழு எண்களின் கணம்':'Positive even whole numbers less than 10',
           roster:{"latex": "E=\\{2,4,6,8\\}", "fallback": "E = {2, 4, 6, 8}"},
-          builder:{"latex": "\\begin{aligned}E=\\{x\\in N: {}&x<10,\\\\ &x\\text{ is even}\\}\\end{aligned}", "fallback": "E = {x ∈ N : x < 10, x is even}"}
+          builder:{"latex": "\\begin{aligned}E=\\{x\\in\\mathbb{N}: {}&x<10,\\\\ &x\\text{ is even}\\}\\end{aligned}", "fallback": "E = {x ∈ ℕ : x < 10, x is even}"}
         };
-        setDemo('roster',options,(key,update)=>update(key,forms[key]));
+        const symbols=document.createElement('p');
+        symbols.className='sp2-venn-explain';
+        symbols.textContent=lang==='ta'?'ℕ என்பது இயல் எண்களின் கணம். ∈ என்பது «உறுப்பு». : என்பது «என்ற நிபந்தனைக்குட்பட்டு».':'ℕ is the set of natural numbers. ∈ means “belongs to”. The colon means “such that”.';
+        out.querySelector('[data-demo-output]').before(symbols);
+        setDemo('roster',options,(key,update)=>{
+          symbols.hidden=key!=='builder';
+          update(key,forms[key]);
+        });
       }else if(stage.visual==='types'){
         const options=lang==='ta'
           ?[['வெற்று','empty'],['ஓருறுப்பு','single'],['முடிவுறு','finite'],['முடிவுறா','infinite'],['உட்கணம்','subset'],['சம / சமான','equivalent']]
@@ -236,6 +247,7 @@
         function chooseVenn(key){
           const op=operations.find(item=>item.key===key);
           if(!op)return;
+          selectedModes.set(stage.id,key);
           controls.querySelectorAll('button').forEach(button=>
             button.setAttribute('aria-pressed',String(button.dataset.demoMode===key)));
           out.querySelectorAll('[data-venn-region]').forEach(region=>{
@@ -251,17 +263,55 @@
         }
         controls.querySelectorAll('button').forEach(button=>
           button.addEventListener('click',()=>chooseVenn(button.dataset.demoMode)));
-        chooseVenn('intersection');
+        const selected=selectedModes.get(stage.id);
+        if(selected)chooseVenn(selected);
+        else chooseVenn('intersection');
       }else if(stage.visual==='properties'){
         const options=lang==='ta'
-          ?[['பரிமாற்று','commutative'],['சேர்ப்பு','associative'],['பங்கீட்டு','distributive']]
-          :[['Commutative','commutative'],['Associative','associative'],['Distributive','distributive']];
+          ?[['பரிமாற்று','commutative'],['சேர்ப்பு','associative'],['பங்கீட்டு ∩','distributive'],['பங்கீட்டு ∪','distributive-union']]
+          :[['Commutative','commutative'],['Associative','associative'],['Distributive ∩','distributive'],['Distributive ∪','distributive-union']];
         const values={
           commutative:{"latex": "\\begin{aligned}A\\cup B&=B\\cup A\\\\&=\\{1,2,3\\}\\end{aligned}", "fallback": "A ∪ B = B ∪ A = {1, 2, 3}"},
           associative:{"latex": "\\begin{aligned}(A\\cup B)\\cup C&=A\\cup(B\\cup C)\\\\&=\\{1,2,3,4\\}\\end{aligned}", "fallback": "(A ∪ B) ∪ C = A ∪ (B ∪ C) = {1, 2, 3, 4}"},
-          distributive:{"latex": "\\begin{aligned}A\\cap(B\\cup C)&=(A\\cap B)\\cup(A\\cap C)\\\\&=\\{2\\}\\end{aligned}", "fallback": "A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) = {2}"}
+          distributive:{"latex": "\\begin{aligned}A\\cap(B\\cup C)&=(A\\cap B)\\cup(A\\cap C)\\\\&=\\{2\\}\\end{aligned}", "fallback": "A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) = {2}"},
+          'distributive-union':{"latex": "\\begin{aligned}A\\cup(B\\cap C)&=(A\\cup B)\\cap(A\\cup C)\\\\&=\\{1,2,3\\}\\end{aligned}", "fallback": "A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) = {1, 2, 3}"}
         };
-        setDemo('commutative',options,(key,update)=>update(key,values[key]));
+        const details=lang==='ta'
+          ?{title:'கணச் செயல்களின் பண்புகளுக்கான வென் படம்',associative:'எந்த இரண்டு கணங்களை முதலில் சேர்த்தாலும் 1, 2, 3, 4 ஆகிய அனைத்து உறுப்புகளும் கிடைக்கும்.',intersection:'இரு பக்கங்களிலும் A-க்கும் B அல்லது C-க்கும் பொதுவான உறுப்பு 2 மட்டும்.',union:'இரு பக்கங்களிலும் A-இன் உறுப்புகள் 1, 2 மற்றும் B, C-க்குப் பொதுவான உறுப்பு 3 ஆகியவை உள்ளன.'}
+          :{title:'Venn diagram for set-operation rules',associative:'Grouping either pair first keeps all four members in the union.',intersection:'Both sides keep the members in A and also in B or C. Only 2 is shaded.',union:'Both sides keep members 1 and 2 from A and member 3 from the overlap of B and C.'};
+        const a='<circle cx="110" cy="85" r="78"/>',b='<circle cx="230" cy="85" r="78"/>',c='<circle cx="170" cy="165" r="78"/>';
+        const graphic=document.createElement('div');
+        graphic.hidden=true;
+        graphic.innerHTML=
+          '<svg class="sp2-venn-svg" viewBox="18 0 304 249" role="img" aria-labelledby="sp2-distributive-title sp2-distributive-desc">'+
+          '<title id="sp2-distributive-title">'+esc(details.title)+'</title><desc id="sp2-distributive-desc"></desc>'+
+          '<defs><clipPath id="sp2-distributive-a">'+a+'</clipPath><clipPath id="sp2-distributive-b">'+b+'</clipPath></defs>'+
+          '<g fill="#c4ecd9" data-distributive="associative">'+a+b+c+'</g>'+
+          '<g fill="#c4ecd9" data-distributive="intersection" clip-path="url(#sp2-distributive-a)">'+b+c+'</g>'+
+          '<g fill="#c4ecd9" data-distributive="union">'+a+'<g clip-path="url(#sp2-distributive-b)">'+c+'</g></g>'+
+          '<g fill="none" stroke="#514462" stroke-width="2">'+a+b+c+'</g>'+
+          '<g fill="#262137" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle">'+
+          '<text x="76" y="38">A</text><text x="264" y="38">B</text><text x="170" y="225">C</text>'+
+          '<text x="63" y="78">1</text><text x="170" y="62">2</text><text x="218" y="140">3</text><text x="174" y="196">4</text></g></svg>'+
+          '<p class="sp2-venn-explain"></p>';
+        const givens=document.createElement('div');
+        givens.className='sp2-count-givens';
+        givens.setAttribute('role','group');
+        givens.setAttribute('aria-label',lang==='ta'?'கொடுக்கப்பட்ட கணங்கள்':'Given sets');
+        givens.innerHTML=['A=\\{1,2\\}','B=\\{2,3\\}','C=\\{3,4\\}'].map(latex=>
+          '<span>'+htmlMath({latex,fallback:latex.replaceAll('\\','')})+'</span>').join('');
+        out.querySelector('[data-demo-controls]').before(givens);
+        const description=graphic.querySelector('desc'),caption=graphic.querySelector('p');
+        const shadings=graphic.querySelectorAll('[data-distributive]');
+        const diagramModes={associative:'associative',distributive:'intersection','distributive-union':'union'};
+        out.querySelector('[data-demo-output]').after(graphic);
+        setDemo('commutative',options,(key,update)=>{
+          update(key,values[key]);
+          const mode=diagramModes[key];
+          graphic.hidden=!mode;
+          shadings.forEach(group=>{group.style.display=group.dataset.distributive===mode?'':'none';});
+          description.textContent=caption.textContent=details[mode]||'';
+        });
       }else if(stage.visual==='demorgan'){
         const options=[[{latex:'(A\\cup B)^{\\prime}',fallback:'(A ∪ B)′'},'union'],[{latex:'(A\\cap B)^{\\prime}',fallback:'(A ∩ B)′'},'intersection']];
         const values={
@@ -269,6 +319,17 @@
           intersection:{"latex": "\\begin{aligned}(A\\cap B)^{\\prime}&=A^{\\prime}\\cup B^{\\prime}\\\\&=\\{1,2,4,5,6\\}\\end{aligned}", "fallback": "(A ∩ B)′ = A′ ∪ B′ = {1, 2, 4, 5, 6}"}
         };
         setDemo('union',options,(key,update)=>update(key,values[key]));
+        const difference=document.createElement('section');
+        difference.dataset.setDifference='';
+        const differenceTitle=lang==='ta'?'கண வித்தியாசத்திற்கான டி மார்கன் விதிகள்':'De Morgan’s laws for set difference';
+        const differenceIdea=lang==='ta'
+          ?'கண வித்தியாசம் A − B என்பது A-இல் இருந்து B-இல் உள்ளவற்றை நீக்குவதாகும். சேர்ப்பை நீக்கினால் இரண்டிலும் இல்லாத உறுப்புகள் மட்டுமே மீதமிருக்கும். வெட்டை நீக்கினால் இரண்டில் ஒன்றிலாவது இல்லாத உறுப்புகள் மீதமிருக்கும்.'
+          :'Set difference A − B keeps members of A outside B. Removing a union keeps members outside both sets. Removing an intersection keeps members outside at least one of the two sets.';
+        difference.innerHTML='<h5>'+esc(differenceTitle)+'</h5><p>'+esc(differenceIdea)+'</p>'+
+          '<p>'+htmlMath({latex:'A=\\{1,2,3\\},\\ B=\\{3,4\\},\\ C=\\{2,4,5\\}',fallback:'A = {1, 2, 3}, B = {3, 4}, C = {2, 4, 5}'})+'</p>'+
+          '<p>'+htmlMath({latex:'\\begin{aligned}A-(B\\cup C)&=(A-B)\\cap(A-C)\\\\&=\\{1\\}\\end{aligned}',fallback:'A − (B ∪ C) = (A − B) ∩ (A − C) = {1}'})+'</p>'+
+          '<p>'+htmlMath({latex:'\\begin{aligned}A-(B\\cap C)&=(A-B)\\cup(A-C)\\\\&=\\{1,2,3\\}\\end{aligned}',fallback:'A − (B ∩ C) = (A − B) ∪ (A − C) = {1, 2, 3}'})+'</p>';
+        panel.querySelector('.sp2-explanation-body').append(difference);
       }else if(stage.visual==='count'){
         const controls=panel.querySelector('[data-demo-controls]');
         const id='sp2-overlap-control';
@@ -287,10 +348,12 @@
            '<button type="button" data-overlap-increase aria-label="'+esc(lang==='ta'?'பொதுவான எண்ணிக்கையை ஒன்று அதிகரிக்கவும்':'Increase common members by one')+'">+</button></div>'+
            '<p class="sp2-slider-formula" data-slider-formula aria-live="polite"></p>';
         const input=controls.querySelector('input');
+        input.value=String(overlapCount);
         const decrease=controls.querySelector('[data-overlap-decrease]');
         const increase=controls.querySelector('[data-overlap-increase]');
         const update=()=>{
           const both=Number(input.value),union=25-both;
+          overlapCount=both;
           controls.querySelector('[data-overlap-count]').textContent=String(both);
            const formula=t.sliderFormula(both,union,30-union);
           controls.querySelector('[data-slider-formula]').innerHTML=

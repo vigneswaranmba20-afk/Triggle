@@ -33,6 +33,8 @@ async function checkConcepts(browser, base) {
    const errors = [];
    page.on('pageerror', error => errors.push(error.message));
    await page.goto(base + '/index.html?class=9&chapter=g9-ch9');
+   const chapterSummary=await page.locator('[data-chapter-id="g9-ch9"] small').textContent();
+   assert.match(chapterSummary,/5 interactive concepts.*25 exercise/, 'Sidebar uses the live probability concepts and exercise counts');
    await page.locator('button[data-hub-section="concepts"]').click();
    const journey = page.locator('.sp2-simple-journey');
    const index = journey.locator('[data-index-view]');
