@@ -251,7 +251,7 @@
      const meta=document.createElement('small');
      const interactiveStages=chapter.id==='g9-ch1'?window.TRIGGLE_SET_PATH?.stages:
        chapter.id==='g9-ch2'?window.TRIGGLE_REAL_PATH?.stages:
-       chapter.id==='g9-ch9'?window.TRIGGLE_PROBABILITY_CHAPTER:
+       chapter.id==='g9-ch9'?window.TRIGGLE_PROB_PATH?.stages:
        chapter.id==='g10-ch2'?window.TRIGGLE_G10_CH2_PATH?.stages:
        chapter.id==='g10-ch3'?window.TRIGGLE_G10_CH3_PATH?.stages:
        chapter.id==='g10-ch4'?window.TRIGGLE_G10_CH4_PATH?.stages:
