@@ -614,9 +614,9 @@
   const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
   const renderDataTableHtml=dt=>{
     if(!dt||!Array.isArray(dt.headers)||!Array.isArray(dt.rows))return '';
-    const ths=dt.headers.map(h=>'<th scope="col">'+esc(h)+'</th>').join('');
-    const trs=dt.rows.map((r,idx)=>'<tr>'+r.map((cell,c)=>c===0?'<th scope="row">'+esc(cell)+'</th>':'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('');
-    return '<div class="triggle-table-wrap"><table class="triggle-data-table"'+(dt.caption?' aria-label="'+esc(dt.caption)+'"':'')+'><thead><tr>'+ths+'</tr></thead><tbody>'+trs+'</tbody></table></div>';
+    const ths=dt.headers.map(h=>'<th scope="col">'+esc(h)+' </th>').join('');
+    const trs=dt.rows.map(r=>'<tr>'+r.map((cell,c)=>{const body=/^\d+(?:\.\d+)?$/.test(String(cell).trim())?math({latex:String(cell).trim(),fallback:String(cell).trim()}):esc(cell);return c===0?'<th scope="row">'+body+' </th>':'<td>'+body+' </td>';}).join('')+'</tr>').join('');
+    return '<div class="triggle-table-wrap"><table class="triggle-data-table"'+(dt.caption?' aria-label="'+esc(dt.caption)+'"':'')+'><thead><tr>'+ths+'</tr></thead><tbody>'+trs+'</tbody></table></div> ';
   };
   $('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));
   if(current.dataTable){
