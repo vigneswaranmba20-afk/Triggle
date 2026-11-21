@@ -68,7 +68,7 @@
       '<div class="sp2-detail-view" data-detail-view hidden>'+
       '<div class="sp2-detail-navigation">'+
       '<button type="button" class="sp2-back-index" data-back-index>'+esc('← '+t.backConcepts)+'</button>'+
-      '<span data-journey-index role="status" aria-live="polite"></span></div>'+
+      '<button type="button" class="sp2-top-next" data-top-next></button><span data-journey-index role="status" aria-live="polite"></span></div>'+
       '<div class="sp2-panel" data-panel></div>'+
       '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+esc(t.select)+'">'+
       '<button type="button" class="sp2-footer-prev" data-footer-prev>'+esc('← '+t.previousIdea)+'</button>'+
@@ -103,6 +103,9 @@
       root.querySelector('[data-footer-prev]').disabled=active===0;
        root.querySelector('[data-footer-next]').textContent=active===book.stages.length-1?t.backConcepts+' →':t.nextIdea+' →';
        root.querySelector('[data-footer-next]').classList.toggle('is-return',active===book.stages.length-1);
+       const topNext=root.querySelector('[data-top-next]');
+       topNext.textContent=root.querySelector('[data-footer-next]').textContent;
+       topNext.classList.toggle('is-return',active===book.stages.length-1);
     }
     book.stages.forEach((stage,i)=>{
       const button=document.createElement('button');
@@ -112,7 +115,7 @@
       nav.append(button);
     });
      root.querySelector('[data-footer-prev]').addEventListener('click',()=>show(active-1,true));
-     root.querySelector('[data-footer-next]').addEventListener('click',()=>{
+     for(const button of root.querySelectorAll('[data-footer-next], [data-top-next]'))button.addEventListener('click',()=>{
        if(active===book.stages.length-1){showIndex(true);return;}
        show(active+1,true);
      });
