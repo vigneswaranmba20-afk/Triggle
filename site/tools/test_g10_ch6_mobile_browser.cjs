@@ -138,7 +138,79 @@ const { loadRuntime } = require('./curriculum_bulk.cjs');
       await ctx.close();
     }
 
-    console.log('PASS Chapter 6 Mobile Chromium Verification (320/360/390/430px, EN & TA, 69 canonical items, 23 SVGs, 0 duplicates, 0 overflow, 0 errors).');
+    // 3. Verify USER-AF09-02: rendered Chromium oriented-OBB collision & clipping check across all 23 Ch 6 SVGs
+    {
+      const fs = require('node:fs');
+      const path = require('node:path');
+      const svgDir = path.resolve(__dirname, '../assets/grade10-ch6');
+      const svgFiles = fs.readdirSync(svgDir).filter(f => f.endsWith('.svg')).sort();
+      assert.equal(svgFiles.length, 23, 'Expected 23 Grade 10 Ch 6 SVGs');
+      const ctx = await browser.newContext({ viewport: { width: 420, height: 320 }, serviceWorkers: 'block' });
+      const page = await ctx.newPage();
+      for (const f of svgFiles) {
+        const svg = fs.readFileSync(path.join(svgDir, f), 'utf8');
+        await page.setContent(`<!doctype html><html><body style="margin:0;padding:8px;background:#fff">${svg}</body></html>`);
+        const issues = await page.evaluate(() => {
+          const s = document.querySelector('svg');
+          const vb = s.viewBox.baseVal;
+          const rootRect = s.getBoundingClientRect();
+          const texts = [...s.querySelectorAll('text')].map(t => {
+            const b = t.getBoundingClientRect();
+            const bb = t.getBBox();
+            const m = s.getScreenCTM().inverse().multiply(t.getScreenCTM());
+            const pt = (x, y) => { const p = s.createSVGPoint(); p.x = x; p.y = y; const tp = p.matrixTransform(m); return [tp.x, tp.y]; };
+            return {
+              text: t.textContent.trim(),
+              vx: (b.left - rootRect.left) * vb.width / rootRect.width,
+              vy: (b.top - rootRect.top) * vb.height / rootRect.height,
+              vw: b.width * vb.width / rootRect.width,
+              vh: b.height * vb.height / rootRect.height,
+              poly: [pt(bb.x, bb.y), pt(bb.x + bb.width, bb.y), pt(bb.x + bb.width, bb.y + bb.height), pt(bb.x, bb.y + bb.height)],
+            };
+          });
+          const pointInPoly = (px, py, poly) => {
+            let inside = false;
+            for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+              const xi = poly[i][0], yi = poly[i][1], xj = poly[j][0], yj = poly[j][1];
+              if (((yi > py) !== (yj > py)) && (px < (xj - xi) * (py - yi) / ((yj - yi) || 1e-9) + xi)) inside = !inside;
+            }
+            return inside;
+          };
+          const ptsList = [];
+          [...s.querySelectorAll('line, polyline, polygon, path, rect')].forEach((el, idx) => {
+            if (el.tagName.toLowerCase() === 'rect' && parseFloat(el.getAttribute('width')) >= 300) return;
+            const pts = [];
+            const len = el.getTotalLength ? el.getTotalLength() : 0;
+            if (len > 0) {
+              const n = Math.max(20, Math.ceil(len / 2));
+              for (let k = 0; k <= n; k++) { const p = el.getPointAtLength((len * k) / n); pts.push([p.x, p.y]); }
+              ptsList.push({ idx, tag: el.tagName, pts });
+            }
+          });
+          const errs = [];
+          for (const t of texts) {
+            const xs = t.poly.map(p => p[0]), ys = t.poly.map(p => p[1]);
+            if (Math.min(...xs) < 1.5 || Math.min(...ys) < 1.5 || Math.max(...xs) > vb.width - 1.5 || Math.max(...ys) > vb.height - 1.5) errs.push('CLIP:' + t.text);
+            for (const sh of ptsList) {
+              for (const [px, py] of sh.pts) {
+                if (pointInPoly(px, py, t.poly)) { errs.push('LINE_HIT:' + t.text + '~' + sh.tag + sh.idx); break; }
+              }
+            }
+          }
+          for (let i = 0; i < texts.length; i++) {
+            for (let j = i + 1; j < texts.length; j++) {
+              const a = texts[i], b = texts[j];
+              if (a.vx < b.vx + b.vw && a.vx + a.vw > b.vx && a.vy < b.vy + b.vh && a.vy + a.vh > b.vy) errs.push('TEXT_HIT:' + a.text + '~' + b.text);
+            }
+          }
+          return errs;
+        });
+        assert.deepEqual(issues, [], `${f} has SVG label collisions/clipping: ${issues.join(', ')}`);
+      }
+      await ctx.close();
+    }
+
+    console.log('PASS Chapter 6 Mobile Chromium Verification (320/360/390/430px, EN & TA, 69 canonical items, 23 SVGs with 0 OBB collisions, 0 duplicates, 0 overflow, 0 errors).');
   } finally {
     await browser.close();
     app.close();
