@@ -81,7 +81,7 @@ const entries=[
       "fallback": "The coefficient of variation is 180.28%."
     },
     "questionMath": {
-      "latex": "\\text{4. If }n=5,\\ \\bar{x}=6,\\ \\sum x^2=765,\\ \\text{calculate the coefficient of variation.}",
+      "latex": "\\text{4. If }n=5,\\ \\bar{x}=6,\\ \\sum x^2=765,\\ \\text{then calculate the coefficient of variation.}",
       "display": true,
       "fallback": "4. If n = 5, x̄ = 6, Σx² = 765, then calculate the coefficient of variation."
     }
