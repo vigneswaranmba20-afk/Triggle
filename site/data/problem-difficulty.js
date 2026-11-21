@@ -4056,6 +4056,11 @@ const metadata={
       "basis": "Rearranging C.V. = σ/x̄ × 100 to find the mean",
       "review": "implementation-audit"
     },
+    "c10-8-ex8-2-q4": {"grade":10,"level":"medium","basis":"Population variance from summary squares, exact radical and careful rounding","review":"implementation-audit"},
+    "c10-8-ex8-2-q5": {"grade":10,"level":"medium","basis":"Deviation-table arithmetic and population standard deviation","review":"implementation-audit"},
+    "c10-8-ex8-2-q6": {"grade":10,"level":"medium","basis":"Deviation-table arithmetic with explicit textbook rounding reconciliation","review":"implementation-audit"},
+    "c10-8-ex8-2-q7": {"grade":10,"level":"medium","basis":"Convert total marks to means before comparing relative spread","review":"implementation-audit"},
+    "c10-8-ex8-2-q8": {"grade":10,"level":"medium","basis":"Compare three ratios and interpret lower C.V. as more consistent","review":"implementation-audit"},
     "c10-8-ex8-2-q3": {
       "grade": 10,
       "level": "easy",
