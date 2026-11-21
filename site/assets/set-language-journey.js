@@ -275,8 +275,8 @@
           'distributive-union':{"latex": "\\begin{aligned}A\\cup(B\\cap C)&=(A\\cup B)\\cap(A\\cup C)\\\\&=\\{1,2,3\\}\\end{aligned}", "fallback": "A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) = {1, 2, 3}"}
         };
         const details=lang==='ta'
-          ?{title:'பங்கீட்டுப் பண்பின் வென் படம்',intersection:'இரு பக்கங்களிலும் A-க்கும் B அல்லது C-க்கும் பொதுவான உறுப்பு 2 மட்டும்.',union:'இரு பக்கங்களிலும் A-இன் உறுப்புகள் 1, 2 மற்றும் B, C-க்குப் பொதுவான உறுப்பு 3 ஆகியவை உள்ளன.'}
-          :{title:'Venn diagram for the distributive law',intersection:'Both sides keep the members in A and also in B or C. Only 2 is shaded.',union:'Both sides keep members 1 and 2 from A and member 3 from the overlap of B and C.'};
+          ?{title:'கணச் செயல்களின் பண்புகளுக்கான வென் படம்',associative:'எந்த இரண்டு கணங்களை முதலில் சேர்த்தாலும் 1, 2, 3, 4 ஆகிய அனைத்து உறுப்புகளும் கிடைக்கும்.',intersection:'இரு பக்கங்களிலும் A-க்கும் B அல்லது C-க்கும் பொதுவான உறுப்பு 2 மட்டும்.',union:'இரு பக்கங்களிலும் A-இன் உறுப்புகள் 1, 2 மற்றும் B, C-க்குப் பொதுவான உறுப்பு 3 ஆகியவை உள்ளன.'}
+          :{title:'Venn diagram for set-operation rules',associative:'Grouping either pair first keeps all four members in the union.',intersection:'Both sides keep the members in A and also in B or C. Only 2 is shaded.',union:'Both sides keep members 1 and 2 from A and member 3 from the overlap of B and C.'};
         const a='<circle cx="110" cy="85" r="78"/>',b='<circle cx="230" cy="85" r="78"/>',c='<circle cx="170" cy="165" r="78"/>';
         const graphic=document.createElement('div');
         graphic.hidden=true;
@@ -284,6 +284,7 @@
           '<svg class="sp2-venn-svg" viewBox="18 0 304 249" role="img" aria-labelledby="sp2-distributive-title sp2-distributive-desc">'+
           '<title id="sp2-distributive-title">'+esc(details.title)+'</title><desc id="sp2-distributive-desc"></desc>'+
           '<defs><clipPath id="sp2-distributive-a">'+a+'</clipPath><clipPath id="sp2-distributive-b">'+b+'</clipPath></defs>'+
+          '<g fill="#c4ecd9" data-distributive="associative">'+a+b+c+'</g>'+
           '<g fill="#c4ecd9" data-distributive="intersection" clip-path="url(#sp2-distributive-a)">'+b+c+'</g>'+
           '<g fill="#c4ecd9" data-distributive="union">'+a+'<g clip-path="url(#sp2-distributive-b)">'+c+'</g></g>'+
           '<g fill="none" stroke="#514462" stroke-width="2">'+a+b+c+'</g>'+
@@ -299,15 +300,15 @@
           '<span>'+htmlMath({latex,fallback:latex.replaceAll('\\','')})+'</span>').join('');
         out.querySelector('[data-demo-controls]').before(givens);
         const description=graphic.querySelector('desc'),caption=graphic.querySelector('p');
-        const intersection=graphic.querySelector('[data-distributive="intersection"]'),union=graphic.querySelector('[data-distributive="union"]');
+        const shadings=graphic.querySelectorAll('[data-distributive]');
+        const diagramModes={associative:'associative',distributive:'intersection','distributive-union':'union'};
         out.querySelector('[data-demo-output]').after(graphic);
         setDemo('commutative',options,(key,update)=>{
           update(key,values[key]);
-          const showIntersection=key==='distributive',showUnion=key==='distributive-union';
-          graphic.hidden=!showIntersection&&!showUnion;
-          intersection.style.display=showIntersection?'':'none';
-          union.style.display=showUnion?'':'none';
-          description.textContent=caption.textContent=showIntersection?details.intersection:details.union;
+          const mode=diagramModes[key];
+          graphic.hidden=!mode;
+          shadings.forEach(group=>{group.style.display=group.dataset.distributive===mode?'':'none';});
+          description.textContent=caption.textContent=details[mode]||'';
         });
       }else if(stage.visual==='demorgan'){
         const options=[[{latex:'(A\\cup B)^{\\prime}',fallback:'(A ∪ B)′'},'union'],[{latex:'(A\\cap B)^{\\prime}',fallback:'(A ∩ B)′'},'intersection']];

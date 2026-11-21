@@ -54,7 +54,7 @@ const operations=[
     await page.locator(lang==='ta'?'#langTa':'#langEn').click();
     const distributiveSVG=page.locator('svg[aria-labelledby="sp2-distributive-title sp2-distributive-desc"]');
     assert.equal(await distributiveSVG.isVisible(),false,'Commutative mode starts without the distributive diagram');
-    for(const [key,mode,members] of [['distributive','intersection',['2']],['distributive-union','union',['1','2','3']]]){
+    for(const [key,mode,members] of [['associative','associative',['1','2','3','4']],['distributive','intersection',['2']],['distributive-union','union',['1','2','3']]]){
      await page.locator('[data-demo-mode="'+key+'"]').click();
      assert(await distributiveSVG.isVisible(),'Diagram is visible for '+key);
      const selected=await distributiveSVG.evaluate((node,mode)=>{
@@ -66,13 +66,14 @@ const operations=[
       return [...node.querySelectorAll('text')].filter(label=>/^\d+$/.test(label.textContent)).filter(label=>{
        const point=new DOMPoint(Number(label.getAttribute('x')),Number(label.getAttribute('y')));
        const [a,b,c]=['a','b','c'].map(letter=>regions[letter].isPointInFill(point));
+       if(mode==='associative')return a||b||c;
        return mode==='intersection'?a&&(b||c):a||(b&&c);
       }).map(label=>label.textContent);
      },mode);
      assert.deepEqual(selected,members,'Actual member positions represent '+key);
      assert((await page.locator('[data-demo-output]').innerText()).replace(/\s+/g,'').includes('{'+members.join(',')+'}'));
      assert.equal(await distributiveSVG.locator('[data-distributive="'+mode+'"]').isVisible(),true);
-     assert.equal(await distributiveSVG.locator('[data-distributive]:not([data-distributive="'+mode+'"])').isVisible(),false);
+     for(const region of await distributiveSVG.locator('[data-distributive]:not([data-distributive="'+mode+'"])').all())assert.equal(await region.isVisible(),false);
      assert((await distributiveSVG.locator('desc').textContent()).length>15);
      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Responsive distributive diagram');
     }
