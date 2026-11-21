@@ -1,19 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
   <title id="t">Two-leg flight bearing diagram for Unit Exercise 6 Q7</title>
   <desc id="desc">Bird flies 30 km from A to B at 35 degrees West of North (55 degrees from W), then 32 km from B to C on bearing 48 degrees (42 degrees from E).</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
   <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
-  <line x1="120" y1="186" x2="220" y2="186" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3 3"/>
-  <line x1="176" y1="196" x2="176" y2="110" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3 3"/>
-  <line x1="118" y1="138" x2="118" y2="46" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3 3"/>
-  <line x1="118" y1="126" x2="230" y2="126" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3 3"/>
-  <line x1="176" y1="186" x2="118" y2="126" stroke="#6E2933" stroke-width="2.2"/>
-  <line x1="118" y1="126" x2="218" y2="54" stroke="#166353" stroke-width="2.2"/>
-  <circle cx="176" cy="186" r="4" fill="#181B20"/>
-  <circle cx="118" cy="126" r="4" fill="#6E2933"/>
-  <circle cx="218" cy="54" r="4" fill="#166353"/>
-  <text x="184" y="190" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#181B20">A</text>
-  <text x="104" y="128" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#6E2933">B</text>
-  <text x="225" y="56" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#166353">C</text>
-  <text x="155" y="148" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6E2933">30 km (55° N of W)</text>
-  <text x="172" y="88" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#166353">32 km (48° N of E / 42°)</text>
+  <line x1="68" y1="186" x2="210" y2="186" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <line x1="190" y1="198" x2="190" y2="122" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <line x1="128" y1="126" x2="128" y2="24" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <line x1="112" y1="110" x2="274" y2="110" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <line x1="190" y1="186" x2="128" y2="110" stroke="#6E2933" stroke-width="2.2"/>
+  <line x1="128" y1="110" x2="220" y2="34" stroke="#166353" stroke-width="2.2"/>
+  <circle cx="190" cy="186" r="4" fill="#181B20"/>
+  <circle cx="128" cy="110" r="4" fill="#6E2933"/>
+  <circle cx="220" cy="34" r="4" fill="#166353"/>
+  <path d="M164.0,186.0 A26,26 0 0,1 173.6,165.9" fill="none" stroke="#6E2933" stroke-width="1.3"/>
+  <path d="M190.0,150.0 A36,36 0 0,0 167.2,158.1" fill="none" stroke="#525B62" stroke-width="1.2" stroke-dasharray="2 2"/>
+  <path d="M160.0,110.0 A32,32 0 0,0 152.7,89.6" fill="none" stroke="#166353" stroke-width="1.3"/>
+  <path d="M128.0,84.0 A26,26 0 0,1 148.0,93.4" fill="none" stroke="#525B62" stroke-width="1.2" stroke-dasharray="2 2"/>
+  <text x="200" y="199" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="start" fill="#181B20">A</text>
+  <text x="112" y="114" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="end" fill="#6E2933">B</text>
+  <text x="230" y="38" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="start" fill="#166353">C</text>
+  <text x="199" y="126" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="start" fill="#525B62">N</text>
+  <text x="56" y="189" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="end" fill="#525B62">W</text>
+  <text x="128" y="16" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#525B62">N</text>
+  <text x="284" y="113" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="start" fill="#525B62">E</text>
+  <text x="152" y="178" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="end" fill="#6E2933">55°</text>
+  <text x="172" y="140" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#525B62">35°</text>
+  <text x="170" y="101" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="start" fill="#166353">42°</text>
+  <text x="142" y="74" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#525B62">48°</text>
+  <text x="137.9" y="147.5" transform="rotate(50.8 137.9 147.5)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#6E2933">30 km</text>
+  <text x="176.1" y="52.1" transform="rotate(-39.6 176.1 52.1)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">32 km</text>
 </svg>
