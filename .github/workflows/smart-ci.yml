@@ -260,9 +260,15 @@ jobs:
           set -euo pipefail
           test "$PLAN" = success && test "$CORE" = success || exit 1
           if [ "$TIER" = major ]; then
-            test "$FULL" = success && test "$SECURITY" = success && test "$FOCUSED" = skipped
+            if [[ "$FULL" != success || "$SECURITY" != success || "$FOCUSED" != skipped ]]; then
+              echo "FAIL: major quality gate (full=$FULL security=$SECURITY focused=$FOCUSED)" >&2
+              exit 1
+            fi
           else
-            test "$FOCUSED" = success && test "$FULL" = skipped && test "$SECURITY" = skipped
+            if [[ "$FOCUSED" != success || "$FULL" != skipped || "$SECURITY" != skipped ]]; then
+              echo "FAIL: $TIER quality gate (focused=$FOCUSED full=$FULL security=$SECURITY)" >&2
+              exit 1
+            fi
           fi
           echo "Passed Triggle $TIER quality gate."
 
