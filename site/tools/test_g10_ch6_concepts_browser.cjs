@@ -137,7 +137,7 @@ async function run(){
       // Concept 9: Trap button toggles wall-trap formula warning
       await page.goto(base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=8',{waitUntil:'load'});
       await page.locator('.g10ch4-chip-btn').nth(1).click();
-      assert.match((await page.locator('.g10ch4-readout').innerText()).replace(/[\s\u200b]+/g,' '),/Wrong!/);
+      assert.match((await page.locator('.g10ch4-readout').innerText()).replace(/[\s\u200b]+/g,' '),/Not the horizon-angle method/);
 
       // Concept 10: Try It Yourself Hint + wrong + correct + Why?
       await page.goto(base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=9',{waitUntil:'load'});
