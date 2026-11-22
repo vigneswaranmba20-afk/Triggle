@@ -137,7 +137,81 @@
         "cos C",
         "tan C",
         "cosec C"
-      ]
+      ],
+      "originalClassicRecord": {
+        "id": "exercise-6-1-q2",
+        "ref": "Exercise 6.1 · Q2",
+        "type": "6.1",
+        "title": "Two right triangles, six requested values",
+        "prompt": "In the figure, AB = 13, BD = 5, DC = 16 and AD is perpendicular to BC. Calculate the three ratios at B and the three at C.",
+        "steps": [
+          {
+            "why": "Apply Pythagoras in triangle ABD to find the common height AD.",
+            "eq": "AD = √(13² − 5²) = √144 = 12"
+          },
+          {
+            "why": "Find the hypotenuse AC of the second right triangle ADC.",
+            "eq": "AC = √(12² + 16²) = √400 = 20"
+          },
+          {
+            "why": "In triangle ABD, use opposite 12, adjacent 5, hypotenuse 13.",
+            "eq": "sin B = [[12|13]] ; sec B = [[13|5]] ; cot B = [[5|12]]"
+          },
+          {
+            "why": "In triangle ADC, use opposite 12, adjacent 16, hypotenuse 20.",
+            "eq": "cos C = [[16|20]] = [[4|5]] ; tan C = [[12|16]] = [[3|4]] ; cosec C = [[20|12]] = [[5|3]]"
+          }
+        ],
+        "demo": {
+          "kind": "two-triangles"
+        },
+        "page": 6,
+        "final": "sin B = [[12|13]] ; sec B = [[13|5]] ; cot B = [[5|12]] ; cos C = [[4|5]] ; tan C = [[3|4]] ; cosec C = [[5|3]]",
+        "promptTa": "படத்தில் AB = 13, BD = 5, DC = 16; AD ⟂ BC. B-இல் மூன்று விகிதங்களையும் C-இல் மூன்று விகிதங்களையும் காண்க.",
+        "stepsTa": [
+          "ABD முக்கோணத்தில் பிதாகரஸ் தேற்றத்தால் AD உயரத்தைக் காண்க.",
+          "ADC முக்கோணத்தின் AC கர்ணத்தைக் காண்க.",
+          "ABD-இல் எதிர்ப்பக்கம் 12, அடுத்துள்ள பக்கம் 5, கர்ணம் 13.",
+          "ADC-இல் எதிர்ப்பக்கம் 12, அடுத்துள்ள பக்கம் 16, கர்ணம் 20."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-1-q2",
+        "ref": "Exercise 6.1 · Q2",
+        "type": "6.1",
+        "title": "Two right triangles, six requested values",
+        "prompt": "From the given figure, find the values of:\n(i) sin B   (ii) sec B   (iii) cot B\n(iv) cos C   (v) tan C   (vi) cosec C.\nFigure: AB = 13, BD = 5, DC = 16; AD ⟂ BC.",
+        "steps": [
+          {
+            "why": "Apply Pythagoras in triangle ABD to find the common height AD.",
+            "eq": "AD = √(13² − 5²) = √144 = 12"
+          },
+          {
+            "why": "Find the hypotenuse AC of the second right triangle ADC.",
+            "eq": "AC = √(12² + 16²) = √400 = 20"
+          },
+          {
+            "why": "In triangle ABD, use opposite 12, adjacent 5, hypotenuse 13.",
+            "eq": "sin B = [[12|13]] ; sec B = [[13|5]] ; cot B = [[5|12]]"
+          },
+          {
+            "why": "In triangle ADC, use opposite 12, adjacent 16, hypotenuse 20.",
+            "eq": "cos C = [[16|20]] = [[4|5]] ; tan C = [[12|16]] = [[3|4]] ; cosec C = [[20|12]] = [[5|3]]"
+          }
+        ],
+        "demo": {
+          "kind": "two-triangles"
+        },
+        "page": 233,
+        "final": "sin B = [[12|13]] ; sec B = [[13|5]] ; cot B = [[5|12]] ; cos C = [[4|5]] ; tan C = [[3|4]] ; cosec C = [[5|3]]",
+        "promptTa": "படத்திலுள்ள மதிப்புகளைக் காண்க:\n(i) sin B   (ii) sec B   (iii) cot B\n(iv) cos C   (v) tan C   (vi) cosec C.\nAB = 13, BD = 5, DC = 16; AD ⟂ BC.",
+        "stepsTa": [
+          "ABD முக்கோணத்தில் பிதாகரஸ் தேற்றத்தால் AD உயரத்தைக் காண்க.",
+          "ADC முக்கோணத்தின் AC கர்ணத்தைக் காண்க.",
+          "ABD-இல் எதிர்ப்பக்கம் 12, அடுத்துள்ள பக்கம் 5, கர்ணம் 13.",
+          "ADC-இல் எதிர்ப்பக்கம் 12, அடுத்துள்ள பக்கம் 16, கர்ணம் 20."
+        ]
+      }
     },
     "c9-exercise-6-5-q1": {
       "originalRecordSha256": "d124282bd4caeff6572f453c30cb8641798367b03b063575f88bb01df834e87c",
@@ -246,7 +320,73 @@
         "sin90°",
         "cos90°"
       ],
-      "correctChoice": 1
+      "correctChoice": 1,
+      "originalClassicRecord": {
+        "id": "exercise-6-5-q1",
+        "ref": "Exercise 6.5 · Q1",
+        "type": "6.5",
+        "title": "Two half-value ratios",
+        "prompt": "For x = sin30° and y = cos60°, calculate x² + y².",
+        "steps": [
+          {
+            "why": "Both values are one half.",
+            "eq": "x = y = [[1|2]]"
+          },
+          {
+            "why": "Square and add.",
+            "eq": "x² + y² = [[1|4]] + [[1|4]] = [[1|2]]"
+          },
+          {
+            "why": "Select the option containing one half.",
+            "eq": "Answer = [[1|2]]"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 30
+        },
+        "page": 18,
+        "final": "[[1|2]]",
+        "promptTa": "x = sin30°, y = cos60° எனில் x² + y² காண்க.",
+        "stepsTa": [
+          "இரு மதிப்புகளும் 1/2.",
+          "வர்க்கப்படுத்திக் கூட்டுக.",
+          "1/2 உள்ள விடையைத் தேர்ந்தெடுக்கவும்."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-5-q1",
+        "ref": "Exercise 6.5 · Q1",
+        "type": "6.5",
+        "title": "Two half-value ratios",
+        "prompt": "For x = sin30° and y = cos60°, calculate x² + y². Select one:\n(1) [[1|2]]   (2) 0\n(3) sin90°   (4) cos90°",
+        "steps": [
+          {
+            "why": "Both values are one half.",
+            "eq": "x = y = [[1|2]]"
+          },
+          {
+            "why": "Square and add.",
+            "eq": "x² + y² = [[1|4]] + [[1|4]] = [[1|2]]"
+          },
+          {
+            "why": "Select the option containing one half.",
+            "eq": "Answer = [[1|2]]"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 30
+        },
+        "page": 245,
+        "final": "[[1|2]]",
+        "promptTa": "x = sin30°, y = cos60° எனில் x² + y² காண்க விருப்பங்கள்:\n(1) [[1|2]]   (2) 0\n(3) sin90°   (4) cos90°",
+        "stepsTa": [
+          "இரு மதிப்புகளும் 1/2.",
+          "வர்க்கப்படுத்திக் கூட்டுக.",
+          "1/2 உள்ள விடையைத் தேர்ந்தெடுக்கவும்."
+        ]
+      }
     },
     "c9-exercise-6-5-q2": {
       "originalRecordSha256": "e9e9efb4760d417a399a584db70d0283293b033522734804404f49af2b0adece",
@@ -355,7 +495,73 @@
         "90°",
         "1°"
       ],
-      "correctChoice": 2
+      "correctChoice": 2,
+      "originalClassicRecord": {
+        "id": "exercise-6-5-q2",
+        "ref": "Exercise 6.5 · Q2",
+        "type": "6.5",
+        "title": "Tangent equals complementary cotangent",
+        "prompt": "If tan θ = cot37°, determine the acute angle θ.",
+        "steps": [
+          {
+            "why": "Keep the given left-hand side, and replace cot37° by tangent of its complement.",
+            "eq": "tan θ = cot37° = tan(90° − 37°)"
+          },
+          {
+            "why": "Calculate the angle inside the tangent.",
+            "eq": "tan θ = tan53°"
+          },
+          {
+            "why": "For acute angles, equal tangent values give equal angles.",
+            "eq": "θ = 53°"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 53
+        },
+        "page": 18,
+        "final": "θ = 53°",
+        "promptTa": "tan θ = cot37° எனில் குறுங்கோணம் θ-ஐக் காண்க.",
+        "stepsTa": [
+          "இடப்பக்கத்தை அப்படியே வைத்து, cot37°-ஐ அதன் நிரப்புக் கோணத்தின் tan வடிவில் மாற்றுக.",
+          "tan-க்குள் உள்ள கோணத்தைக் கணக்கிடுக.",
+          "குறுங்கோணங்களில் tan மதிப்புகள் சமமெனில் கோணங்களும் சமம்."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-5-q2",
+        "ref": "Exercise 6.5 · Q2",
+        "type": "6.5",
+        "title": "Tangent equals complementary cotangent",
+        "prompt": "If tan θ = cot37°, determine the acute angle θ. Select one:\n(1) 37°   (2) 53°\n(3) 90°   (4) 1°",
+        "steps": [
+          {
+            "why": "Keep the given left-hand side, and replace cot37° by tangent of its complement.",
+            "eq": "tan θ = cot37° = tan(90° − 37°)"
+          },
+          {
+            "why": "Calculate the angle inside the tangent.",
+            "eq": "tan θ = tan53°"
+          },
+          {
+            "why": "For acute angles, equal tangent values give equal angles.",
+            "eq": "θ = 53°"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 53
+        },
+        "page": 245,
+        "final": "θ = 53°",
+        "promptTa": "tan θ = cot37° எனில் குறுங்கோணம் θ-ஐக் காண்க விருப்பங்கள்:\n(1) 37°   (2) 53°\n(3) 90°   (4) 1°",
+        "stepsTa": [
+          "இடப்பக்கத்தை அப்படியே வைத்து, cot37°-ஐ அதன் நிரப்புக் கோணத்தின் tan வடிவில் மாற்றுக.",
+          "tan-க்குள் உள்ள கோணத்தைக் கணக்கிடுக.",
+          "குறுங்கோணங்களில் tan மதிப்புகள் சமமெனில் கோணங்களும் சமம்."
+        ]
+      }
     },
     "c9-exercise-6-5-q3": {
       "originalRecordSha256": "5bf0ade43f0b10c691cd694b8eba9238568e77b0f5ff02c75875d2568805a3fd",
@@ -464,7 +670,73 @@
         "18°",
         "72°"
       ],
-      "correctChoice": 2
+      "correctChoice": 2,
+      "originalClassicRecord": {
+        "id": "exercise-6-5-q3",
+        "ref": "Exercise 6.5 · Q3",
+        "type": "6.5",
+        "title": "Product of two complementary tangents",
+        "prompt": "Evaluate tan72° × tan18°.",
+        "steps": [
+          {
+            "why": "The two angles in the question are complementary.",
+            "eq": "72° + 18° = 90°"
+          },
+          {
+            "why": "Use the complementary-angle identity on the FIRST factor.",
+            "eq": "tan72° = cot18°"
+          },
+          {
+            "why": "Replace only the first factor; keep tan18° second, exactly as the question does.",
+            "eq": "tan72° × tan18° = cot18° × tan18° = 1"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 18
+        },
+        "page": 18,
+        "final": "1",
+        "promptTa": "tan72° × tan18° மதிப்பைக் காண்க.",
+        "stepsTa": [
+          "கேள்வியில் உள்ள இரு கோணங்களும் நிரப்புக் கோணங்கள்.",
+          "முதல் காரணிக்கு மட்டும் நிரப்புக் கோண விதியைப் பயன்படுத்துக.",
+          "முதல் காரணியை மட்டும் மாற்றி, கேள்விபோல் tan18° இரண்டாவதாகவே இருக்கட்டும்."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-5-q3",
+        "ref": "Exercise 6.5 · Q3",
+        "type": "6.5",
+        "title": "Product of two complementary tangents",
+        "prompt": "Evaluate tan72° × tan18°. Select one:\n(1) 0   (2) 1\n(3) 18°   (4) 72°",
+        "steps": [
+          {
+            "why": "The two angles in the question are complementary.",
+            "eq": "72° + 18° = 90°"
+          },
+          {
+            "why": "Use the complementary-angle identity on the FIRST factor.",
+            "eq": "tan72° = cot18°"
+          },
+          {
+            "why": "Replace only the first factor; keep tan18° second, exactly as the question does.",
+            "eq": "tan72° × tan18° = cot18° × tan18° = 1"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 18
+        },
+        "page": 245,
+        "final": "1",
+        "promptTa": "tan72° × tan18° மதிப்பைக் காண்க விருப்பங்கள்:\n(1) 0   (2) 1\n(3) 18°   (4) 72°",
+        "stepsTa": [
+          "கேள்வியில் உள்ள இரு கோணங்களும் நிரப்புக் கோணங்கள்.",
+          "முதல் காரணிக்கு மட்டும் நிரப்புக் கோண விதியைப் பயன்படுத்துக.",
+          "முதல் காரணியை மட்டும் மாற்றி, கேள்விபோல் tan18° இரண்டாவதாகவே இருக்கட்டும்."
+        ]
+      }
     },
     "c9-exercise-6-5-q4": {
       "originalRecordSha256": "c38902f85bfad757eaee996625f367cdcc3987348bc37185d2f9e108933ceba3",
@@ -593,7 +865,93 @@
         "tan60°",
         "sin30°"
       ],
-      "correctChoice": 3
+      "correctChoice": 3,
+      "originalClassicRecord": {
+        "id": "exercise-6-5-q4",
+        "ref": "Exercise 6.5 · Q4",
+        "type": "6.5",
+        "title": "Simplify the doubled-tangent expression",
+        "prompt": "Find the trigonometric function matching [[2 tan30°|1 − tan²30°]].",
+        "steps": [
+          {
+            "why": "At 30°, tangent has the exact value 1/√3.",
+            "eq": "tan30° = [[1|√3]]"
+          },
+          {
+            "why": "Calculate the original numerator first.",
+            "eq": "2 tan30° = 2 × [[1|√3]] = [[2|√3]]"
+          },
+          {
+            "why": "Then calculate the original denominator.",
+            "eq": "1 − tan²30° = 1 − [[1|3]] = [[2|3]]"
+          },
+          {
+            "why": "Divide the numerator by the denominator.",
+            "eq": "[[2|√3]] ÷ [[2|3]] = [[2|√3]] × [[3|2]] = √3"
+          },
+          {
+            "why": "Recognize the trigonometric value asked for.",
+            "eq": "√3 = tan60°"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 30
+        },
+        "page": 18,
+        "final": "tan60° = √3",
+        "promptTa": "[[2 tan30°|1 − tan²30°]] எந்த முக்கோணவியல் விகிதத்திற்கு சமம்?",
+        "stepsTa": [
+          "tan30°-ன் துல்லிய மதிப்பு 1/√3.",
+          "முதலில் அசல் தொகுதியைக் கணக்கிடுக.",
+          "பிறகு அசல் பகுதியைக் கணக்கிடுக.",
+          "தொகுதியைப் பகுதியால் வகுக்கவும்.",
+          "கேட்டுள்ள முக்கோணவியல் விகிதத்தைக் கண்டறிக."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-5-q4",
+        "ref": "Exercise 6.5 · Q4",
+        "type": "6.5",
+        "title": "Simplify the doubled-tangent expression",
+        "prompt": "Find the trigonometric function matching [[2 tan30°|1 − tan²30°]]. Select one:\n(1) cos60°   (2) sin60°\n(3) tan60°   (4) sin30°",
+        "steps": [
+          {
+            "why": "At 30°, tangent has the exact value 1/√3.",
+            "eq": "tan30° = [[1|√3]]"
+          },
+          {
+            "why": "Calculate the original numerator first.",
+            "eq": "2 tan30° = 2 × [[1|√3]] = [[2|√3]]"
+          },
+          {
+            "why": "Then calculate the original denominator.",
+            "eq": "1 − tan²30° = 1 − [[1|3]] = [[2|3]]"
+          },
+          {
+            "why": "Divide the numerator by the denominator.",
+            "eq": "[[2|√3]] ÷ [[2|3]] = [[2|√3]] × [[3|2]] = √3"
+          },
+          {
+            "why": "Recognize the trigonometric value asked for.",
+            "eq": "√3 = tan60°"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 30
+        },
+        "page": 245,
+        "final": "tan60° = √3",
+        "promptTa": "[[2 tan30°|1 − tan²30°]] எந்த முக்கோணவியல் விகிதத்திற்கு சமம்? விருப்பங்கள்:\n(1) cos60°   (2) sin60°\n(3) tan60°   (4) sin30°",
+        "stepsTa": [
+          "tan30°-ன் துல்லிய மதிப்பு 1/√3.",
+          "முதலில் அசல் தொகுதியைக் கணக்கிடுக.",
+          "பிறகு அசல் பகுதியைக் கணக்கிடுக.",
+          "தொகுதியைப் பகுதியால் வகுக்கவும்.",
+          "கேட்டுள்ள முக்கோணவியல் விகிதத்தைக் கண்டறிக."
+        ]
+      }
     },
     "c9-exercise-6-5-q7": {
       "originalRecordSha256": "5f3ee53dc759962d1cbb88b51616c61dc7b4f067bab2b24e641927807f23c3dc",
@@ -702,7 +1060,73 @@
         "0",
         "[[1|2]]"
       ],
-      "correctChoice": 3
+      "correctChoice": 3,
+      "originalClassicRecord": {
+        "id": "exercise-6-5-q7",
+        "ref": "Exercise 6.5 · Q7",
+        "type": "6.5",
+        "title": "Zero from the tangent of 45°",
+        "prompt": "Evaluate [[1 − tan²45°|1 + tan²45°]].",
+        "steps": [
+          {
+            "why": "At 45°, tangent equals one.",
+            "eq": "tan45° = 1"
+          },
+          {
+            "why": "The numerator becomes zero and the denominator becomes two.",
+            "eq": "[[1 − 1²|1 + 1²]] = [[0|2]]"
+          },
+          {
+            "why": "Therefore the expression equals zero.",
+            "eq": "Answer = 0"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 45
+        },
+        "page": 19,
+        "final": "0",
+        "promptTa": "[[1 − tan²45°|1 + tan²45°]] மதிப்பைக் காண்க.",
+        "stepsTa": [
+          "45°-இல் tan மதிப்பு 1.",
+          "தொகுதி பூஜ்யம், பகுதி 2 ஆகிறது.",
+          "ஆகவே பின்னத்தின் மதிப்பு பூஜ்யம்."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-5-q7",
+        "ref": "Exercise 6.5 · Q7",
+        "type": "6.5",
+        "title": "Zero from the tangent of 45°",
+        "prompt": "Evaluate [[1 − tan²45°|1 + tan²45°]]. Select one:\n(1) 2   (2) 1\n(3) 0   (4) [[1|2]]",
+        "steps": [
+          {
+            "why": "At 45°, tangent equals one.",
+            "eq": "tan45° = 1"
+          },
+          {
+            "why": "The numerator becomes zero and the denominator becomes two.",
+            "eq": "[[1 − 1²|1 + 1²]] = [[0|2]]"
+          },
+          {
+            "why": "Therefore the expression equals zero.",
+            "eq": "Answer = 0"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 45
+        },
+        "page": 246,
+        "final": "0",
+        "promptTa": "[[1 − tan²45°|1 + tan²45°]] மதிப்பைக் காண்க விருப்பங்கள்:\n(1) 2   (2) 1\n(3) 0   (4) [[1|2]]",
+        "stepsTa": [
+          "45°-இல் tan மதிப்பு 1.",
+          "தொகுதி பூஜ்யம், பகுதி 2 ஆகிறது.",
+          "ஆகவே பின்னத்தின் மதிப்பு பூஜ்யம்."
+        ]
+      }
     },
     "c9-exercise-6-5-q8": {
       "originalRecordSha256": "b826f07b2a1205e3d815c23242821dcb75ca3e5c950eed667c0d86d5ef969b7b",
@@ -805,7 +1229,67 @@
         "2",
         "3"
       ],
-      "correctChoice": 1
+      "correctChoice": 1,
+      "originalClassicRecord": {
+        "id": "exercise-6-5-q8",
+        "ref": "Exercise 6.5 · Q8",
+        "type": "6.5",
+        "title": "Two cancelling complementary pairs",
+        "prompt": "Simplify cosec(70°+θ) − sec(20°−θ) + tan(65°+θ) − cot(25°−θ).",
+        "steps": [
+          {
+            "why": "The first two angles add to 90°, so the first two values are equal.",
+            "eq": "cosec(70°+θ) = sec(20°−θ)"
+          },
+          {
+            "why": "The third and fourth angles also add to 90°, so these values are equal.",
+            "eq": "tan(65°+θ) = cot(25°−θ)"
+          },
+          {
+            "why": "Subtract each equal pair in the same order as the question.",
+            "eq": "[cosec(70°+θ) − sec(20°−θ)] + [tan(65°+θ) − cot(25°−θ)] = 0 + 0 = 0"
+          }
+        ],
+        "demo": "",
+        "page": 19,
+        "final": "0",
+        "promptTa": "cosec(70°+θ) − sec(20°−θ) + tan(65°+θ) − cot(25°−θ) எளிமைப்படுத்துக.",
+        "stepsTa": [
+          "முதல் இரண்டு கோணங்கள் 90°-க்கு கூட்டுகின்றன; மதிப்புகள் சமம்.",
+          "மூன்றாம், நான்காம் கோணங்களும் 90°-க்கு கூட்டுகின்றன; இவையும் சமம்.",
+          "கேள்வியின் வரிசைப்படியே சமமான ஒவ்வொரு ஜோடியையும் கழிக்கவும்."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-5-q8",
+        "ref": "Exercise 6.5 · Q8",
+        "type": "6.5",
+        "title": "Two cancelling complementary pairs",
+        "prompt": "Simplify cosec(70°+θ) − sec(20°−θ) + tan(65°+θ) − cot(25°−θ). Select one:\n(1) 0   (2) 1\n(3) 2   (4) 3",
+        "steps": [
+          {
+            "why": "The first two angles add to 90°, so the first two values are equal.",
+            "eq": "cosec(70°+θ) = sec(20°−θ)"
+          },
+          {
+            "why": "The third and fourth angles also add to 90°, so these values are equal.",
+            "eq": "tan(65°+θ) = cot(25°−θ)"
+          },
+          {
+            "why": "Subtract each equal pair in the same order as the question.",
+            "eq": "[cosec(70°+θ) − sec(20°−θ)] + [tan(65°+θ) − cot(25°−θ)] = 0 + 0 = 0"
+          }
+        ],
+        "demo": "",
+        "page": 246,
+        "final": "0",
+        "promptTa": "cosec(70°+θ) − sec(20°−θ) + tan(65°+θ) − cot(25°−θ) எளிமைப்படுத்துக விருப்பங்கள்:\n(1) 0   (2) 1\n(3) 2   (4) 3",
+        "stepsTa": [
+          "முதல் இரண்டு கோணங்கள் 90°-க்கு கூட்டுகின்றன; மதிப்புகள் சமம்.",
+          "மூன்றாம், நான்காம் கோணங்களும் 90°-க்கு கூட்டுகின்றன; இவையும் சமம்.",
+          "கேள்வியின் வரிசைப்படியே சமமான ஒவ்வொரு ஜோடியையும் கழிக்கவும்."
+        ]
+      }
     },
     "c9-exercise-6-5-q9": {
       "originalRecordSha256": "be97faffa54366e7d2c00d6634beddbdcbe6558188cfa1b4079512396b8a14c6",
@@ -928,7 +1412,87 @@
         "2",
         "[[√3|2]]"
       ],
-      "correctChoice": 2
+      "correctChoice": 2,
+      "originalClassicRecord": {
+        "id": "exercise-6-5-q9",
+        "ref": "Exercise 6.5 · Q9",
+        "type": "6.5",
+        "title": "Pairing tangent values from 1° to 89°",
+        "prompt": "Evaluate tan1° × tan2° × ... × tan89°.",
+        "steps": [
+          {
+            "why": "Write the full product in its original ascending order.",
+            "eq": "tan1° × tan2° × ⋯ × tan88° × tan89°"
+          },
+          {
+            "why": "Multiplication lets us group the first and last factors, second and second-last, etc., without changing the result.",
+            "eq": "(tan1° × tan89°) × (tan2° × tan88°) × ⋯ × tan45°"
+          },
+          {
+            "why": "Each pair multiplies to 1 because its angles total 90°.",
+            "eq": "tanθ × tan(90°−θ) = 1"
+          },
+          {
+            "why": "The unmatched middle factor is also 1.",
+            "eq": "tan45° = 1"
+          },
+          {
+            "why": "Every factor group equals 1; therefore the product is 1.",
+            "eq": "Answer = 1"
+          }
+        ],
+        "demo": "",
+        "page": 19,
+        "final": "1",
+        "promptTa": "tan1° × tan2° × … × tan89° மதிப்பைக் காண்க.",
+        "stepsTa": [
+          "அசல் வரிசையில் எல்லா காரணிகளையும் கருதுக.",
+          "பெருக்கலில் முதல்–கடைசி, இரண்டாம்–கடைசிக்கு முந்தையது என ஜோடியாகத் தொகுக்கலாம்.",
+          "ஒவ்வொரு ஜோடியின் கோணங்கள் 90°-க்கு கூட்டுகின்றன; பெருக்கல் 1.",
+          "நடுவில் மீதமுள்ள காரணியும் 1.",
+          "அனைத்து ஜோடிகளும் 1 என்பதால் மொத்த பெருக்கல் 1."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-5-q9",
+        "ref": "Exercise 6.5 · Q9",
+        "type": "6.5",
+        "title": "Pairing tangent values from 1° to 89°",
+        "prompt": "Evaluate tan1° × tan2° × ... × tan89°. Select one:\n(1) 0   (2) 1\n(3) 2   (4) [[√3|2]]",
+        "steps": [
+          {
+            "why": "Write the full product in its original ascending order.",
+            "eq": "tan1° × tan2° × ⋯ × tan88° × tan89°"
+          },
+          {
+            "why": "Multiplication lets us group the first and last factors, second and second-last, etc., without changing the result.",
+            "eq": "(tan1° × tan89°) × (tan2° × tan88°) × ⋯ × tan45°"
+          },
+          {
+            "why": "Each pair multiplies to 1 because its angles total 90°.",
+            "eq": "tanθ × tan(90°−θ) = 1"
+          },
+          {
+            "why": "The unmatched middle factor is also 1.",
+            "eq": "tan45° = 1"
+          },
+          {
+            "why": "Every factor group equals 1; therefore the product is 1.",
+            "eq": "Answer = 1"
+          }
+        ],
+        "demo": "",
+        "page": 246,
+        "final": "1",
+        "promptTa": "tan1° × tan2° × … × tan89° மதிப்பைக் காண்க விருப்பங்கள்:\n(1) 0   (2) 1\n(3) 2   (4) [[√3|2]]",
+        "stepsTa": [
+          "அசல் வரிசையில் எல்லா காரணிகளையும் கருதுக.",
+          "பெருக்கலில் முதல்–கடைசி, இரண்டாம்–கடைசிக்கு முந்தையது என ஜோடியாகத் தொகுக்கலாம்.",
+          "ஒவ்வொரு ஜோடியின் கோணங்கள் 90°-க்கு கூட்டுகின்றன; பெருக்கல் 1.",
+          "நடுவில் மீதமுள்ள காரணியும் 1.",
+          "அனைத்து ஜோடிகளும் 1 என்பதால் மொத்த பெருக்கல் 1."
+        ]
+      }
     },
     "c9-exercise-6-5-q10": {
       "originalRecordSha256": "4f80e067e86f9e01c14f847623e9af5ff385e42005d752edf1bde2fe0ed42143",
@@ -1037,7 +1601,73 @@
         "30°",
         "60°"
       ],
-      "correctChoice": 2
+      "correctChoice": 2,
+      "originalClassicRecord": {
+        "id": "exercise-6-5-q10",
+        "ref": "Exercise 6.5 · Q10",
+        "type": "6.5",
+        "title": "Sum of two special angles",
+        "prompt": "Given sin α = [[1|2]] and cos β = [[1|2]], determine α+β for acute angles.",
+        "steps": [
+          {
+            "why": "Sine equals one half at 30° in the acute-angle range.",
+            "eq": "α = 30°"
+          },
+          {
+            "why": "Cosine equals one half at 60°.",
+            "eq": "β = 60°"
+          },
+          {
+            "why": "Their sum forms a right angle.",
+            "eq": "α + β = 90°"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 30
+        },
+        "page": 19,
+        "final": "α + β = 90°",
+        "promptTa": "sin α = [[1|2]], cos β = [[1|2]] எனில் குறுங்கோணங்களின் α+β காண்க.",
+        "stepsTa": [
+          "குறுங்கோணங்களில் sin = 1/2 ஆகும் கோணம் 30°.",
+          "cos = 1/2 ஆகும் கோணம் 60°.",
+          "இரண்டையும் கூட்டினால் செங்கோணம் கிடைக்கும்."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-5-q10",
+        "ref": "Exercise 6.5 · Q10",
+        "type": "6.5",
+        "title": "Sum of two special angles",
+        "prompt": "Given sin α = [[1|2]] and cos β = [[1|2]], determine α+β for acute angles. Select one:\n(1) 0°   (2) 90°\n(3) 30°   (4) 60°",
+        "steps": [
+          {
+            "why": "Sine equals one half at 30° in the acute-angle range.",
+            "eq": "α = 30°"
+          },
+          {
+            "why": "Cosine equals one half at 60°.",
+            "eq": "β = 60°"
+          },
+          {
+            "why": "Their sum forms a right angle.",
+            "eq": "α + β = 90°"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 30
+        },
+        "page": 246,
+        "final": "α + β = 90°",
+        "promptTa": "sin α = [[1|2]], cos β = [[1|2]] எனில் குறுங்கோணங்களின் α+β காண்க விருப்பங்கள்:\n(1) 0°   (2) 90°\n(3) 30°   (4) 60°",
+        "stepsTa": [
+          "குறுங்கோணங்களில் sin = 1/2 ஆகும் கோணம் 30°.",
+          "cos = 1/2 ஆகும் கோணம் 60°.",
+          "இரண்டையும் கூட்டினால் செங்கோணம் கிடைக்கும்."
+        ]
+      }
     }
   }
 }
