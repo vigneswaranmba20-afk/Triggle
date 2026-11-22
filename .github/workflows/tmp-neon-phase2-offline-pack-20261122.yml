@@ -73,21 +73,21 @@ jobs:
           missing=[p for p in must if p not in keep]
           if missing:raise SystemExit('Missing required audited files: '+str(missing))
           info=f'''TRIGGLE / G10 EX 7.1 Q6-Q10 / GEMINI NEON PHASE 2
-SOURCE SNAPSHOT SHA: {sha}
-BRANCH: feature/g10-ch7-ex71-q6-q10-conveyor-20261122
-PR: https://github.com/vigneswaranmba20-afk/Triggle/pull/338
-AUDIT SCOPE: Read-only, original math Source Phase 1 PASS.
-STILL BLOCKED: Independent Phase 2 UI & implementation inspection; DO NOT MERGE.
-CI: Previous full-green run 44978303435; later 44979999610 failed stale generated status.
-Source-derived status regenerated in this package and validation passed.
-To inspect locally: unzip, npm ci, npx playwright install --with-deps --only-shell chromium,
-then node site/tools/test_g10_ch7_ex71_q6_q10_draft.cjs and
-node site/tools/test_g10_ch7_ex71_q6_q10_mobile_browser.cjs .
-For browsers: no external services required after package dependencies installed.
-Note: video binaries and archive/PDF files excluded to fit <10MB; included source, SVGs,
-KaTeX runtime/assets, docs and key CI logs. Do not use deployed Pages for Q6-Q10:
-these questions are still unpublished.
-'''
+          SOURCE SNAPSHOT SHA: {sha}
+          BRANCH: feature/g10-ch7-ex71-q6-q10-conveyor-20261122
+          PR: https://github.com/vigneswaranmba20-afk/Triggle/pull/338
+          AUDIT SCOPE: Read-only, original math Source Phase 1 PASS.
+          STILL BLOCKED: Independent Phase 2 UI & implementation inspection; DO NOT MERGE.
+          CI: Previous full-green run 44978303435; later 44979999610 failed stale generated status.
+          Source-derived status regenerated in this package and validation passed.
+          To inspect locally: unzip, npm ci, npx playwright install --with-deps --only-shell chromium,
+          then node site/tools/test_g10_ch7_ex71_q6_q10_draft.cjs and
+          node site/tools/test_g10_ch7_ex71_q6_q10_mobile_browser.cjs .
+          For browsers: no external services required after package dependencies installed.
+          Note: video binaries and archive/PDF files excluded to fit <10MB; included source, SVGs,
+          KaTeX runtime/assets, docs and key CI logs. Do not use deployed Pages for Q6-Q10:
+          these questions are still unpublished.
+          '''
           with zipfile.ZipFile(dest,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=8) as z:
               z.writestr('NEON_READ_ME_FIRST.txt',info)
               for p in keep:z.write(root/p,arcname=p)
