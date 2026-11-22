@@ -68,4 +68,24 @@ const mean=total/n,weighted=rainfall.reduce((a,x,i)=>a+frequency[i]*(x-mean)**2,
 assert.equal(mean,56);assert.equal(weighted,241/4);
 assert.ok(Math.abs(weighted-(squareSum/n-mean**2))<1e-12);
 assert.equal(Math.round(Math.sqrt(weighted)*100)/100,7.76);
+
+// Neon AUD08-06: enforce consistent symbols and the n²−1 variance bridge.
+const auditedQ5=items.find(x=>x.id==='c10-8-ex8-1-q5');
+const auditedQ6=items.find(x=>x.id==='c10-8-ex8-1-q6');
+assert.ok(auditedQ5 && auditedQ6);
+const q5TeX=[...auditedQ5.steps.map(x=>x.math?.latex).filter(Boolean),auditedQ5.answerMath?.latex]
+ .filter(Boolean).join('\n');
+assert.equal(q5TeX.split('\\text{\\char"20B9}').length-1,6,'Every Q5 TeX currency symbol should be rupees');
+assert.ok(!q5TeX.includes('\\text{Rs.}'),'No Q5 MathML-style Rs. should remain');
+const varianceBridge=auditedQ6.steps.map(x=>x.en).join(' ');
+assert.ok(varianceBridge.includes('variance = (n²−1)/12'),'Explain uniform-population variance shortcut');
+assert.ok(varianceBridge.includes('twice'),'Make repetition of the full twelve-value cycle explicit');
+assert.ok(!varianceBridge.includes('unique values, not their frequency'),
+ 'Do not repeat the erroneous model claim: unequal frequencies can change variance');
+const repeatedWholeCycle=[...clock,...clock];
+assert.ok(Math.abs(exactVariance(clock)-exactVariance(repeatedWholeCycle))<1e-12,
+ 'Uniform repetition of the entire cycle must preserve variance');
+assert.ok(Math.abs(exactVariance(clock)-exactVariance([...clock,1]))>0.01,
+ 'Unequal repetition is not variance-invariant');
+
 console.log('PASS Grade 10 Statistics Exercise 8.1 Q5-Q10: six unique source-checked English lessons, transparent Tamil discrepancy, complete steps, arithmetic, navigation and offline cache.');
