@@ -1,0 +1,39 @@
+name: TEMP — reconcile G9 Ex6.4 and concurrent G10 public status
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/temp-g9-ex64-rebased-status.yml'
+permissions:
+  contents: write
+jobs:
+  status:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'audit-fix/g9-ex64-q2q3-rebased-20261122'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Project new G9 and concurrently merged G10 changes into public status
+        run: node site/tools/build_project_status.cjs
+      - name: Validate exact status, original source hashes and 404 Grade 9 count
+        run: |
+          node site/tools/test_project_status.cjs
+          node site/tools/test_standard_solutions.cjs
+          node site/tools/test_g9_clear_math.cjs
+          node site/tools/build_g9_math.cjs --check
+      - name: Commit only the derived public status file
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/data/project-status.json
+          test "$(git diff --cached --name-only)" = 'site/data/project-status.json'
+          git commit -m 'ci(status): combine independently tested G9 release with latest G10 changes'
+          git push origin HEAD:${{ github.head_ref }}
