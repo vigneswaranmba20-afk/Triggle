@@ -1,6 +1,6 @@
 'use strict';
 /* Chapter 7 Mensuration Exercise 7.1 Q6–Q10: fast change-specific mobile-browser smoke.
- * Source-fidelity and mathematics are checked separately by test_g10_ch7_ex71_pilot.cjs.
+ * Source-fidelity and mathematics are checked separately by test_g10_ch7_ex71_q6_q10_draft.cjs.
  */
 const assert=require('node:assert/strict');
 const {chromium}=require('playwright');
@@ -50,6 +50,6 @@ const ids=[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n);
    assert.deepEqual(missingAssets,[],'HTTP errors at '+width+'px: '+missingAssets.join('; '));
    await context.close();
   }
-  console.log('PASS G10 Mensuration 7.1 Q1–Q5 mobile: all 5 questions at 320/390/412px, KaTeX, diagram images, accessibility-oriented text, zero overflow/errors.');
+  console.log('PASS G10 Mensuration 7.1 Q6–Q10 mobile: all 5 questions at 320/390/412px, KaTeX, diagram images, accessibility-oriented text, zero overflow/errors.');
  }finally{if(browser)await browser.close();await app.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
