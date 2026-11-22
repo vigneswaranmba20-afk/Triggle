@@ -15,12 +15,25 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    await page.setViewportSize({width,height:844});
    for(const lang of ['en','ta']){
     for(const id of ids){
-     await page.goto(app.base+'/index.html?class=9&question='+id,{waitUntil:'domcontentloaded'});
+     await page.goto(app.base+'/index.html?class=9&question='+id,{waitUntil:'load'});
      await page.locator(lang==='ta'?'#langTa':'#langEn').click();
-     await page.waitForFunction((requested)=>{
-      const text=document.querySelector('#questionText')?.textContent||'';
-      return requested.endsWith('6-1-q2')?text.includes('cosec C'):text.includes('(1)')&&text.includes('(4)');
-     },id,{timeout:13000});
+     // KaTeX's accessible MathML separates function names and operands into
+     // adjacent nodes (e.g. "cosec" + "C").  Whitespace in textContent is
+     // not a stable rendering contract; preserve exact semantic identities.
+     try{
+      await page.waitForFunction(({requested,language})=>{
+       const question=document.querySelector('#questionText');
+       if(!question||document.documentElement.lang!==language)return false;
+       const text=question.textContent||'',compact=text.replace(/\\s+/g,'');
+       if(requested.endsWith('6-1-q2'))
+        return ['sinB','secB','cotB','cosC','tanC','cosecC'].every(r=>compact.includes(r));
+       return question.querySelectorAll('.g9-question-option').length===4
+        &&[1,2,3,4].every(n=>text.includes('('+n+')'));
+      },{requested:id,language:lang},{timeout:13000});
+     }catch(error){
+      const snapshot=await page.locator('#questionText').innerText().catch(()=>'<question unavailable>');
+      throw Error('AUD14-03 browser render '+id+' '+lang+' @'+width+': '+error.message+'; visible='+JSON.stringify(snapshot.slice(0,380)));
+     }
      const data=await page.evaluate(()=>({
       visible:!!(document.querySelector('#questionText')?.getBoundingClientRect().height),
       text:document.querySelector('#questionText')?.textContent||'',
@@ -30,9 +43,11 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
      assert(data.visible,'Readable question panel '+id+' '+lang+' @'+width);
      assert(data.scrollWidth<=data.viewport+3,'Horizontal overflow '+id+' '+lang+' @'+width);
      if(id==='c9-exercise-6-1-q2'){
-      for(const text of ['sin B','sec B','cot B','cos C','tan C','cosec C'])
-       assert(data.text.includes(text),'Missing exact source ratio '+text+' '+lang);
+      const compact=data.text.replace(/\s+/g,'');
+      for(const text of ['sinB','secB','cotB','cosC','tanC','cosecC'])
+       assert(compact.includes(text),'Missing rendered source ratio '+text+' '+lang);
      }else{
+      assert.equal(await page.locator('#questionText .g9-question-option').count(),4,'Four visible choice groups '+id+' '+lang);
       for(let n=1;n<=4;n++)assert(data.text.includes('('+n+')'),'Missing original MCQ choice '+n+' '+id+' '+lang);
       assert(data.text.includes('tan')||data.text.includes('cos')||data.text.includes('sin'),'Trigonometry source prompt visible '+id);
      }
