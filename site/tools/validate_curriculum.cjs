@@ -215,11 +215,31 @@ function validatePreservation(root = siteRoot) {
         preservedContent=Buffer.from(restored,'utf8');
       }
     }
+    if (relative==='class9-classic.html'){
+      const audit=JSON.parse(fs.readFileSync(path.resolve(root,'..','docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json'),'utf8'));
+      let classic=preservedContent.toString('utf8');
+      const match=classic.match(/const SOLUTIONS=(\[[^\n]+\]);/);
+      if(!match){errors.push('Classic reader solution inventory missing');}
+      else{
+        const rows=JSON.parse(match[1]);
+        if(JSON.stringify(rows)!==match[1])errors.push('Classic reader immutable array format changed');
+        for(const [id,correction] of Object.entries(audit.records)){
+          const classicId=id.slice(3);
+          const idx=rows.findIndex(row=>row.id===classicId);
+          if(idx<0||JSON.stringify(rows[idx])!==JSON.stringify(correction.correctedClassicRecord)){
+            errors.push('Unapproved classic-table solution change: '+id);continue;
+          }
+          rows[idx]=correction.originalClassicRecord;
+        }
+        classic=classic.replace(match[1],JSON.stringify(rows));
+        preservedContent=Buffer.from(classic,'utf8');
+      }
+    }
     if (entry.uiOnlyAdditions) {
       if (relative!=='class9-classic.html'||!Array.isArray(entry.uiOnlyAdditions)||!entry.uiOnlyAdditions.length) {
         errors.push('Invalid UI-only preservation additions: '+relative); continue;
       }
-      let original=content.toString('utf8');
+      let original=preservedContent.toString('utf8');
       for(const addition of entry.uiOnlyAdditions){
         if(typeof addition!=='string'||!addition||original.split(addition).length!==2){
           errors.push('Missing or repeated audited UI addition: '+relative); continue;
