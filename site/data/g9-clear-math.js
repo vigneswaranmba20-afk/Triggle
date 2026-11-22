@@ -145,47 +145,32 @@ const records=[
     "id": "c9-exercise-6-1-q2",
     "questionMath": {
       "en": [
-        "In the figure, ",
+        "From the given figure, find the values of:\n(i) ",
         {
-          "latex": "AB = 13",
-          "fallback": "AB = 13"
+          "latex": "\\sin B",
+          "fallback": "sin B"
         },
-        ",",
-        " ",
+        "   (ii) ",
         {
-          "latex": "BD = 5",
-          "fallback": "BD = 5"
+          "latex": "\\sec B",
+          "fallback": "sec B"
         },
-        ",",
-        " ",
+        "   (iii) ",
         {
-          "latex": "DC = 16",
-          "fallback": "DC = 16"
+          "latex": "\\cot B",
+          "fallback": "cot B"
         },
-        " and ",
+        "\n(iv) ",
         {
-          "latex": "AD",
-          "fallback": "AD"
+          "latex": "\\cos C \\left(v\\right) \\tan C",
+          "fallback": "cos C   (v) tan C"
         },
-        " is perpendicular to ",
+        "   (vi) ",
         {
-          "latex": "BC",
-          "fallback": "BC"
+          "latex": "\\operatorname{cosec} C",
+          "fallback": "cosec C"
         },
-        ". Calculate the three ratios at ",
-        {
-          "latex": "B",
-          "fallback": "B"
-        },
-        " and the three at ",
-        {
-          "latex": "C",
-          "fallback": "C"
-        },
-        "."
-      ],
-      "ta": [
-        "படத்தில் ",
+        ".\nFigure: ",
         {
           "latex": "AB = 13",
           "fallback": "AB = 13"
@@ -207,17 +192,57 @@ const records=[
           "latex": "BC",
           "fallback": "BC"
         },
-        ". ",
+        "."
+      ],
+      "ta": [
+        "படத்திலுள்ள மதிப்புகளைக் காண்க:\n(i) ",
         {
-          "latex": "B",
-          "fallback": "B"
+          "latex": "\\sin B",
+          "fallback": "sin B"
         },
-        "-இல் மூன்று விகிதங்களையும் ",
+        "   (ii) ",
         {
-          "latex": "C",
-          "fallback": "C"
+          "latex": "\\sec B",
+          "fallback": "sec B"
         },
-        "-இல் மூன்று விகிதங்களையும் காண்க."
+        "   (iii) ",
+        {
+          "latex": "\\cot B",
+          "fallback": "cot B"
+        },
+        "\n(iv) ",
+        {
+          "latex": "\\cos C \\left(v\\right) \\tan C",
+          "fallback": "cos C   (v) tan C"
+        },
+        "   (vi) ",
+        {
+          "latex": "\\operatorname{cosec} C",
+          "fallback": "cosec C"
+        },
+        ".\n",
+        {
+          "latex": "AB = 13",
+          "fallback": "AB = 13"
+        },
+        ",",
+        " ",
+        {
+          "latex": "BD = 5",
+          "fallback": "BD = 5"
+        },
+        ",",
+        " ",
+        {
+          "latex": "DC = 16;\\quad AD",
+          "fallback": "DC = 16; AD"
+        },
+        " ⟂ ",
+        {
+          "latex": "BC",
+          "fallback": "BC"
+        },
+        "."
       ]
     },
     "answerMath": {
@@ -4430,7 +4455,51 @@ const records=[
           "latex": "x^{2} + y^{2}",
           "fallback": "x² + y²"
         },
-        "."
+        ". Select one:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\dfrac{1}{2}",
+              "fallback": "[[1|2]]"
+            }
+          ],
+          "fallback": "(1) [[1|2]]"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(2) 0"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\sin 90^{\\circ}",
+              "fallback": "sin90°"
+            }
+          ],
+          "fallback": "(3) sin90°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\cos 90^{\\circ}",
+              "fallback": "cos90°"
+            }
+          ],
+          "fallback": "(4) cos90°"
+        }
       ],
       "ta": [
         {
@@ -4448,7 +4517,51 @@ const records=[
           "latex": "x^{2} + y^{2}",
           "fallback": "x² + y²"
         },
-        " காண்க."
+        " காண்க விருப்பங்கள்:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\dfrac{1}{2}",
+              "fallback": "[[1|2]]"
+            }
+          ],
+          "fallback": "(1) [[1|2]]"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(2) 0"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\sin 90^{\\circ}",
+              "fallback": "sin90°"
+            }
+          ],
+          "fallback": "(3) sin90°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\cos 90^{\\circ}",
+              "fallback": "cos90°"
+            }
+          ],
+          "fallback": "(4) cos90°"
+        }
       ]
     },
     "answerMath": {
@@ -4518,7 +4631,51 @@ const records=[
           "latex": "\\theta",
           "fallback": "θ"
         },
-        "."
+        ". Select one:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "37^{\\circ}",
+              "fallback": "37°"
+            }
+          ],
+          "fallback": "(1) 37°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "53^{\\circ}",
+              "fallback": "53°"
+            }
+          ],
+          "fallback": "(2) 53°"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "90^{\\circ}",
+              "fallback": "90°"
+            }
+          ],
+          "fallback": "(3) 90°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "1^{\\circ}",
+              "fallback": "1°"
+            }
+          ],
+          "fallback": "(4) 1°"
+        }
       ],
       "ta": [
         {
@@ -4530,7 +4687,51 @@ const records=[
           "latex": "\\theta",
           "fallback": "θ"
         },
-        "-ஐக் காண்க."
+        "-ஐக் காண்க விருப்பங்கள்:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "37^{\\circ}",
+              "fallback": "37°"
+            }
+          ],
+          "fallback": "(1) 37°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "53^{\\circ}",
+              "fallback": "53°"
+            }
+          ],
+          "fallback": "(2) 53°"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "90^{\\circ}",
+              "fallback": "90°"
+            }
+          ],
+          "fallback": "(3) 90°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "1^{\\circ}",
+              "fallback": "1°"
+            }
+          ],
+          "fallback": "(4) 1°"
+        }
       ]
     },
     "answerMath": {
@@ -4595,14 +4796,102 @@ const records=[
           "latex": "\\tan 72^{\\circ} \\times \\tan 18^{\\circ}",
           "fallback": "tan72° × tan18°"
         },
-        "."
+        ". Select one:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(1) 0"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(2) 1"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "18^{\\circ}",
+              "fallback": "18°"
+            }
+          ],
+          "fallback": "(3) 18°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "72^{\\circ}",
+              "fallback": "72°"
+            }
+          ],
+          "fallback": "(4) 72°"
+        }
       ],
       "ta": [
         {
           "latex": "\\tan 72^{\\circ} \\times \\tan 18^{\\circ}",
           "fallback": "tan72° × tan18°"
         },
-        " மதிப்பைக் காண்க."
+        " மதிப்பைக் காண்க விருப்பங்கள்:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(1) 0"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(2) 1"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "18^{\\circ}",
+              "fallback": "18°"
+            }
+          ],
+          "fallback": "(3) 18°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "72^{\\circ}",
+              "fallback": "72°"
+            }
+          ],
+          "fallback": "(4) 72°"
+        }
       ]
     },
     "answerMath": {
@@ -4668,14 +4957,102 @@ const records=[
           "latex": "\\dfrac{2 \\tan 30^{\\circ}}{1 - \\tan^{2} 30^{\\circ}}",
           "fallback": "[[2 tan30°|1 − tan²30°]]"
         },
-        "."
+        ". Select one:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\cos 60^{\\circ}",
+              "fallback": "cos60°"
+            }
+          ],
+          "fallback": "(1) cos60°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\sin 60^{\\circ}",
+              "fallback": "sin60°"
+            }
+          ],
+          "fallback": "(2) sin60°"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\tan 60^{\\circ}",
+              "fallback": "tan60°"
+            }
+          ],
+          "fallback": "(3) tan60°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\sin 30^{\\circ}",
+              "fallback": "sin30°"
+            }
+          ],
+          "fallback": "(4) sin30°"
+        }
       ],
       "ta": [
         {
           "latex": "\\dfrac{2 \\tan 30^{\\circ}}{1 - \\tan^{2} 30^{\\circ}}",
           "fallback": "[[2 tan30°|1 − tan²30°]]"
         },
-        " எந்த முக்கோணவியல் விகிதத்திற்கு சமம்?"
+        " எந்த முக்கோணவியல் விகிதத்திற்கு சமம்? விருப்பங்கள்:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "\\cos 60^{\\circ}",
+              "fallback": "cos60°"
+            }
+          ],
+          "fallback": "(1) cos60°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "\\sin 60^{\\circ}",
+              "fallback": "sin60°"
+            }
+          ],
+          "fallback": "(2) sin60°"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "\\tan 60^{\\circ}",
+              "fallback": "tan60°"
+            }
+          ],
+          "fallback": "(3) tan60°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\sin 30^{\\circ}",
+              "fallback": "sin30°"
+            }
+          ],
+          "fallback": "(4) sin30°"
+        }
       ]
     },
     "answerMath": {
@@ -4771,14 +5148,102 @@ const records=[
           "latex": "\\dfrac{1 - \\tan^{2} 45^{\\circ}}{1 + \\tan^{2} 45^{\\circ}}",
           "fallback": "[[1 − tan²45°|1 + tan²45°]]"
         },
-        "."
+        ". Select one:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            }
+          ],
+          "fallback": "(1) 2"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(2) 1"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(3) 0"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\dfrac{1}{2}",
+              "fallback": "[[1|2]]"
+            }
+          ],
+          "fallback": "(4) [[1|2]]"
+        }
       ],
       "ta": [
         {
           "latex": "\\dfrac{1 - \\tan^{2} 45^{\\circ}}{1 + \\tan^{2} 45^{\\circ}}",
           "fallback": "[[1 − tan²45°|1 + tan²45°]]"
         },
-        " மதிப்பைக் காண்க."
+        " மதிப்பைக் காண்க விருப்பங்கள்:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            }
+          ],
+          "fallback": "(1) 2"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(2) 1"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(3) 0"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\dfrac{1}{2}",
+              "fallback": "[[1|2]]"
+            }
+          ],
+          "fallback": "(4) [[1|2]]"
+        }
       ]
     },
     "answerMath": {
@@ -4853,14 +5318,102 @@ const records=[
           "latex": "\\operatorname{cosec} \\left(70^{\\circ} + \\theta\\right) - \\sec \\left(20^{\\circ} - \\theta\\right) + \\tan \\left(65^{\\circ} + \\theta\\right) - \\cot \\left(25^{\\circ} - \\theta\\right)",
           "fallback": "cosec(70°+θ) − sec(20°−θ) + tan(65°+θ) − cot(25°−θ)"
         },
-        "."
+        ". Select one:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(1) 0"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(2) 1"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            }
+          ],
+          "fallback": "(3) 2"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            }
+          ],
+          "fallback": "(4) 3"
+        }
       ],
       "ta": [
         {
           "latex": "\\operatorname{cosec} \\left(70^{\\circ} + \\theta\\right) - \\sec \\left(20^{\\circ} - \\theta\\right) + \\tan \\left(65^{\\circ} + \\theta\\right) - \\cot \\left(25^{\\circ} - \\theta\\right)",
           "fallback": "cosec(70°+θ) − sec(20°−θ) + tan(65°+θ) − cot(25°−θ)"
         },
-        " எளிமைப்படுத்துக."
+        " எளிமைப்படுத்துக விருப்பங்கள்:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(1) 0"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(2) 1"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            }
+          ],
+          "fallback": "(3) 2"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            }
+          ],
+          "fallback": "(4) 3"
+        }
       ]
     },
     "answerMath": {
@@ -4940,14 +5493,102 @@ const records=[
           "latex": "\\tan 1^{\\circ} \\times \\tan 2^{\\circ} \\times \\ldots \\times \\tan 89^{\\circ}",
           "fallback": "tan1° × tan2° × ... × tan89°"
         },
-        "."
+        ". Select one:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(1) 0"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(2) 1"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            }
+          ],
+          "fallback": "(3) 2"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\dfrac{\\sqrt{3}}{2}",
+              "fallback": "[[√3|2]]"
+            }
+          ],
+          "fallback": "(4) [[√3|2]]"
+        }
       ],
       "ta": [
         {
           "latex": "\\tan 1^{\\circ} \\times \\tan 2^{\\circ} \\times \\ldots \\times \\tan 89^{\\circ}",
           "fallback": "tan1° × tan2° × … × tan89°"
         },
-        " மதிப்பைக் காண்க."
+        " மதிப்பைக் காண்க விருப்பங்கள்:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            }
+          ],
+          "fallback": "(1) 0"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            }
+          ],
+          "fallback": "(2) 1"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            }
+          ],
+          "fallback": "(3) 2"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "\\dfrac{\\sqrt{3}}{2}",
+              "fallback": "[[√3|2]]"
+            }
+          ],
+          "fallback": "(4) [[√3|2]]"
+        }
       ]
     },
     "answerMath": {
@@ -5106,7 +5747,51 @@ const records=[
           "latex": "\\alpha + \\beta",
           "fallback": "α+β"
         },
-        " for acute angles."
+        " for acute angles. Select one:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0^{\\circ}",
+              "fallback": "0°"
+            }
+          ],
+          "fallback": "(1) 0°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "90^{\\circ}",
+              "fallback": "90°"
+            }
+          ],
+          "fallback": "(2) 90°"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "30^{\\circ}",
+              "fallback": "30°"
+            }
+          ],
+          "fallback": "(3) 30°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "60^{\\circ}",
+              "fallback": "60°"
+            }
+          ],
+          "fallback": "(4) 60°"
+        }
       ],
       "ta": [
         {
@@ -5118,7 +5803,51 @@ const records=[
           "latex": "\\alpha + \\beta",
           "fallback": "α+β"
         },
-        " காண்க."
+        " காண்க விருப்பங்கள்:\n",
+        "",
+        {
+          "questionOption": [
+            "(1) ",
+            {
+              "latex": "0^{\\circ}",
+              "fallback": "0°"
+            }
+          ],
+          "fallback": "(1) 0°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(2) ",
+            {
+              "latex": "90^{\\circ}",
+              "fallback": "90°"
+            }
+          ],
+          "fallback": "(2) 90°"
+        },
+        "\n",
+        {
+          "questionOption": [
+            "(3) ",
+            {
+              "latex": "30^{\\circ}",
+              "fallback": "30°"
+            }
+          ],
+          "fallback": "(3) 30°"
+        },
+        "   ",
+        {
+          "questionOption": [
+            "(4) ",
+            {
+              "latex": "60^{\\circ}",
+              "fallback": "60°"
+            }
+          ],
+          "fallback": "(4) 60°"
+        }
       ]
     },
     "answerMath": {
