@@ -25,6 +25,8 @@ jobs:
         run: node experiments/evolve/audit_fix_aud08_06.mjs --self-test
       - name: OIDC protocol safety tests (no live identity calls)
         run: node --test experiments/evolve/hf_oidc_auth_probe.test.mjs
+      - name: Approved inference one-shot safety tests
+        run: node --test experiments/evolve/hf_one_call_safety.test.mjs
       - name: Hand-authored offline proposal only
         run: node experiments/evolve/audit_fix_aud08_06.mjs --dry-run
       - name: Archive untrusted patch for independent review
@@ -74,6 +76,8 @@ jobs:
           node-version: '22'
       - name: Check maths and model response constraints
         run: node experiments/evolve/audit_fix_aud08_06.mjs --self-test
+      - name: Verify approval gate before any metered request
+        run: node --test experiments/evolve/hf_one_call_safety.test.mjs
       - name: Run exactly one approved metered Hugging Face request
         env:
           EVOLVE_HF_USERNAME: ${{ vars.EVOLVE_HF_USERNAME }}
