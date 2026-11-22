@@ -212,7 +212,9 @@ assert.equal(ch7BPassports.source.q10FigureInspected,true,'Frustum diagram dimen
 assert.equal(ch7BPassports.source.independentBlindAuditCompleted,true,'Require independently frozen Neon Phase 1 source/maths verification');
 assert.equal(ch7BPassports.independentAudit.phase1.status,'PASS');
 assert.equal(ch7BPassports.independentAudit.phase1.sourceUnblockAddendum.sha256,'54c1ffb7b66d0d721c5885953564c41de2002c010b6ce13a232c3553f6924745');
-assert.equal(ch7BPassports.independentAudit.phase2.status,'PENDING','Do not falsely certify Phase 2 UI audit');
+assert.equal(ch7BPassports.independentAudit.phase2.status,'CONDITIONAL_GO_REMEDIATION_IN_PROGRESS','Do not claim release-ready from conditional Phase 2 audit');
+assert.equal(ch7BPassports.independentAudit.phase2.reportSha256,'bd84ad87f1593d7ab4d1539710a89ba4876071005e760628df8b31c06b8c0079');
+assert.equal(ch7BPassports.releaseGates.merged,false,'Do not claim publication while draft');
 const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
