@@ -89,6 +89,7 @@ CORE.push("./assets/grade10-recovery/ex4-1-q1-i.svg","./assets/grade10-recovery/
 CORE.push('./assets/g10-ch2-typography.css');
 CORE.push('./data/why-step-g10.js','./data/why-step-g10-coverage.js','./assets/why-step-g10.js','./assets/why-step-g10.css');
 CORE.push('./data/why-step-g9.js','./assets/why-step-g9.js','./assets/why-step-g9.css','./data/why-step-g9-ex1-2-q1.js','./data/textbook-exercises/g9-ch1-ex1-2-q1-en.js','./data/textbook-exercises/g9-ch1-ex1-2-q2-en.js','./data/why-step-g9-ex1-2-q2.js','./data/textbook-exercises/g9-ch1-ex1-2-q5-iii-q6-en.js','./data/why-step-g9-ex1-2-q5-iii-q6.js');
+CORE.push('./data/textbook-exercises/g9-ch6-ex6-4-q2-q3-en.js');
 CORE.push('./data/textbook-exercises/g9-ch3-ex3-2-missing-en.js','./data/why-step-g9-ex3-2.js','./assets/grade9-ch3/figure-3-10.svg','./assets/grade9-ch3/figure-3-11.svg','./assets/grade9-ch3/figure-3-12.svg','./assets/grade9-ch3/figure-3-13.svg','./assets/grade9-ch3/figure-3-14.svg');
 CORE.push('./assets/g10-ch3-concepts.css','./data/g10-ch3-concepts.js','./assets/g10-ch3-concepts.js');
 CORE.push('./assets/g10-ch4-concepts.css','./data/g10-ch4-concepts.js','./assets/g10-ch4-concepts.js');
