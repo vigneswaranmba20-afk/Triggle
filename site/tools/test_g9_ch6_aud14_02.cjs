@@ -58,6 +58,19 @@ assert.notEqual(byId.get(ids[1]).answer,cosPrecise.toFixed(4),'Do not replace te
 assert.notEqual(byId.get(ids[5]).answer,tanPrecise.toFixed(4),'Do not replace textbook tangent with calculator rounding');
 assert.notEqual(2656+8,2648,'Cosine mean difference must be subtracted');
 assert.notEqual(27776-131,27907,'Tangent mean difference must be added');
+const classicText=read('site/class9-classic.html');
+const classicData=classicText.match(/const SOLUTIONS=(\[[^\n]+\]);/);
+assert.ok(classicData,'Classic 44-record reader remains present');
+const classicRows=JSON.parse(classicData[1]);
+assert.equal(classicRows.length,44);
+for(const id of ids){
+ const q=byId.get(id),classic=classicRows.find(row=>row.id===id.slice(3));
+ assert.ok(classic,'Classic reader exercise preserved: '+id);
+ assert.equal(classic.prompt,q.q.en,'Classic student question kept consistent: '+id);
+ assert.equal(classic.final,q.answer,'Classic final matches 2025 textbook answer: '+id);
+ assert.equal(JSON.stringify(classic.steps),JSON.stringify(q.steps.map(step=>({why:step.en,eq:step.eq}))),'Classic teaching matches new table steps: '+id);
+ assert.equal(JSON.stringify(classic.stepsTa),JSON.stringify(q.steps.map(step=>step.ta)),'Classic Tamil explanation follows source and remains editorial pending: '+id);
+}
 const why=read('site/data/why-step-g9.js');
 assert.match(why,/c9-exercise-6-4-q1-ii/);
 assert.match(why,/c9-exercise-6-4-q1-vi/);
