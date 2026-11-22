@@ -432,6 +432,15 @@ window.TRIGGLE_CURRICULUM = {
             "c9-exercise-6-5-q9",
             "c9-exercise-6-5-q10"
           ],
+          "textbookQuestionIds": [
+            "c9-exercise-6-4-q2-i",
+            "c9-exercise-6-4-q2-ii",
+            "c9-exercise-6-4-q2-iii",
+            "c9-exercise-6-4-q2-iv",
+            "c9-exercise-6-4-q2-v",
+            "c9-exercise-6-4-q3-i",
+            "c9-exercise-6-4-q3-ii"
+          ],
           "concepts": [],
           "prerequisites": [],
           "workedExamples": [],
