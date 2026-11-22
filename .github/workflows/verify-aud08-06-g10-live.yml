@@ -1,0 +1,22 @@
+name: Verify AUD08-06 Grade 10 live Pages asset
+on:
+  push:
+    branches: [verify/aud08-06-g10-live-20261122]
+    paths:
+      - site/tools/verify_aud08_06_live.cjs
+      - .github/workflows/verify-aud08-06-g10-live.yml
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify exact live Grade 10 JS bytes and source records
+        run: node site/tools/verify_aud08_06_live.cjs
