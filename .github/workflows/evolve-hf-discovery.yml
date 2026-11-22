@@ -1,0 +1,33 @@
+name: EVOLVE Hugging Face public catalog (no inference)
+on:
+  push:
+    branches:
+      - experiment/evolve-shadow-v1-20261122
+    paths:
+      - experiments/evolve/hf_catalog.mjs
+      - experiments/evolve/hf_catalog.test.mjs
+      - .github/workflows/evolve-hf-discovery.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  catalog-only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test experiments/evolve/hf_catalog.test.mjs
+      - run: node experiments/evolve/hf_catalog.mjs > "$RUNNER_TEMP/evolve-hf-public-catalog.json"
+      - name: Verify zero inference
+        run: |
+          node -e 'const r=require(process.env.RUNNER_TEMP+"/evolve-hf-public-catalog.json"); if(r.billedInferenceCalls!==0)process.exit(1); console.log("Read-only provider options:",r.optionCount)'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evolve-hf-public-catalog
+          path: ${{ runner.temp }}/evolve-hf-public-catalog.json
+          retention-days: 7
