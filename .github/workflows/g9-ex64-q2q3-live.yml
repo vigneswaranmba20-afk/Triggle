@@ -7,6 +7,8 @@ on:
       - 'site/tools/test_g9_ex64_q2_q3_browser.cjs'
       - 'site/data/textbook-exercises/g9-ch6-ex6-4-q2-q3-en.js'
       - 'site/data/g9-clear-math.js'
+  issue_comment:
+    types: [created]
   workflow_dispatch:
     inputs:
       production:
@@ -20,6 +22,7 @@ permissions:
 
 jobs:
   audit-42-states:
+    if: github.event_name != 'issue_comment' || (github.event.issue.number == 346 && github.event.comment.user.login == 'vigneswaranmba20-afk' && github.event.comment.body == '/verify-g9-ex64-q2-q3-live')
     name: G9 seven subparts x EN/TA x 320/390/430
     runs-on: ubuntu-24.04
     timeout-minutes: 25
@@ -35,7 +38,7 @@ jobs:
       - name: Check question, answer, English-only fallback, math and viewport for all 42 states
         env:
           CHROMIUM_PATH: ''
-          TRIGGLE_LIVE_BASE: ${{ github.event_name == 'workflow_dispatch' && inputs.production && 'https://vigneswaranmba20-afk.github.io/Triggle/site/index.html' || '' }}
+          TRIGGLE_LIVE_BASE: ${{ ((github.event_name == 'workflow_dispatch' && inputs.production) || github.event_name == 'issue_comment') && 'https://vigneswaranmba20-afk.github.io/Triggle/site/index.html' || '' }}
         run: node site/tools/test_g9_ex64_q2_q3_browser.cjs
       - name: Preserve screenshots and full results manifest even on failure
         if: always()
