@@ -30,7 +30,7 @@
   "records": [
     {
       "id": "c9-exercise-6-4-q2-i",
-      "label": "Exercise 6.4 · Q2(I)",
+      "label": "Exercise 6.4 · Q2(i)",
       "sourceStem": "Find the value of θ if",
       "sourcePart": "sin θ = 0.9975",
       "englishPrompt": "Find the value of θ if\n(i) sin θ = 0.9975",
@@ -64,7 +64,7 @@
     },
     {
       "id": "c9-exercise-6-4-q2-ii",
-      "label": "Exercise 6.4 · Q2(II)",
+      "label": "Exercise 6.4 · Q2(ii)",
       "sourceStem": "Find the value of θ if",
       "sourcePart": "cos θ = 0.6763",
       "englishPrompt": "Find the value of θ if\n(ii) cos θ = 0.6763",
@@ -89,7 +89,7 @@
     },
     {
       "id": "c9-exercise-6-4-q2-iii",
-      "label": "Exercise 6.4 · Q2(III)",
+      "label": "Exercise 6.4 · Q2(iii)",
       "sourceStem": "Find the value of θ if",
       "sourcePart": "tan θ = 0.0720",
       "englishPrompt": "Find the value of θ if\n(iii) tan θ = 0.0720",
@@ -114,7 +114,7 @@
     },
     {
       "id": "c9-exercise-6-4-q2-iv",
-      "label": "Exercise 6.4 · Q2(IV)",
+      "label": "Exercise 6.4 · Q2(iv)",
       "sourceStem": "Find the value of θ if",
       "sourcePart": "cos θ = 0.0410",
       "englishPrompt": "Find the value of θ if\n(iv) cos θ = 0.0410",
@@ -139,7 +139,7 @@
     },
     {
       "id": "c9-exercise-6-4-q2-v",
-      "label": "Exercise 6.4 · Q2(V)",
+      "label": "Exercise 6.4 · Q2(v)",
       "sourceStem": "Find the value of θ if",
       "sourcePart": "tan θ = 7.5958",
       "englishPrompt": "Find the value of θ if\n(v) tan θ = 7.5958",
@@ -164,7 +164,7 @@
     },
     {
       "id": "c9-exercise-6-4-q3-i",
-      "label": "Exercise 6.4 · Q3(I)",
+      "label": "Exercise 6.4 · Q3(i)",
       "sourceStem": "Find the value of the following:",
       "sourcePart": "sin 65°39′ + cos 24°57′ + tan 10°10′",
       "englishPrompt": "Find the value of the following:\n(i) sin 65°39′ + cos 24°57′ + tan 10°10′",
@@ -202,7 +202,7 @@
     },
     {
       "id": "c9-exercise-6-4-q3-ii",
-      "label": "Exercise 6.4 · Q3(II)",
+      "label": "Exercise 6.4 · Q3(ii)",
       "sourceStem": "Find the value of the following:",
       "sourcePart": "tan 70°58′ + cos 15°26′ − sin 84°59′",
       "englishPrompt": "Find the value of the following:\n(ii) tan 70°58′ + cos 15°26′ − sin 84°59′",
