@@ -37,8 +37,8 @@ for(const id of ids){
  assert.ok(classicRec,'Classic reader question still exists');
  assert.equal(classicRec.prompt,q.q.en);
  assert.equal(classicRec.final,q.answer);
- assert.deepEqual(classicRec.steps,q.steps.map(x=>({why:x.en,eq:x.eq})));
- assert.deepEqual(classicRec.stepsTa,q.steps.map(x=>x.ta));
+ assert.equal(JSON.stringify(classicRec.steps),JSON.stringify(q.steps.map(x=>({why:x.en,eq:x.eq}))),'Cross-context classic/modern equations');
+ assert.equal(JSON.stringify(classicRec.stepsTa),JSON.stringify(q.steps.map(x=>x.ta)),'Cross-context classic/modern Tamil explanations');
  assert.deepEqual(classicRec,proof.correctedClassicRecord);
 }
 const q4=all.find(x=>x.id===ids[0]),q5=all.find(x=>x.id===ids[1]),q6=all.find(x=>x.id===ids[2]);
