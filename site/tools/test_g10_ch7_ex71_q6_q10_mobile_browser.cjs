@@ -37,7 +37,7 @@ const ids=[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n);
     });
     assert.ok(state.question.length>35,id+' '+width+'px: missing question');
     assert.ok(state.answer.length>5,id+' '+width+'px: missing final answer');
-    assert.ok(state.steps>=4,id+' '+width+'px: incomplete typeset work');
+    assert.ok(state.steps>=4,id+' '+width+'px: incomplete typeset work ('+state.steps+' rendered; mathErrors='+state.errors+')');
     assert.ok(state.finalMath,id+' '+width+'px: final answer not typeset');
     assert.equal(state.errors,0,id+' '+width+'px: KaTeX error');
     if(id.endsWith('q10')){
