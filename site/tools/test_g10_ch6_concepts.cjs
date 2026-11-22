@@ -168,6 +168,6 @@ for(const asset of ['data/g10-ch6-concepts.js','assets/g10-ch6-concepts.js']){
   assert.equal(html.split(asset).length-1,1,'index.html must include '+asset+' once');
   assert(sw.includes("'./"+asset+"'"),'service-worker.js must precache '+asset);
 }
-assert.match(sw,/const CACHE='triggle-[^']+-gpfola-v2-fa50e19c-g9ex32-aud14-02-tables-20261122-q46-20261122-aud14-03-choices-20261122'/,'Preserve GP Fola and G9 Ex3.2 revisions plus audited G9 Ex6.4 offline refresh');
+assert.match(sw,/const CACHE='triggle-[^']+-gpfola-v2-fa50e19c-g9ex32-aud14-02-tables-20261122-q46-20261122-aud14-03-choices-20261122(?:-[^']+)?'/,'Preserve GP Fola and G9 audit markers across later cache revisions');
 
 console.log('PASS Grade 10 Chapter 6 Trigonometry Concepts: 10 bilingual 6-part stages, KaTeX, identities, heights/distances & offline checks');
