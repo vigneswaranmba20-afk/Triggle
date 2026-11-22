@@ -382,7 +382,7 @@
   // Do not probe the remote R2 asset on concept open: avoid wasting mobile data
   // and avoid holding up navigation/browser tests when the CDN is slow.
   function attachStageVideo(panel,stage,lang){
-    if(!['g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant','g10-ch4-bpt-thales'].includes(stage?.id)||!stage.video?.src)return;
+    if(!['g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant','g10-ch4-bpt-thales','g10-ch5-area-triangle'].includes(stage?.id)||!stage.video?.src)return;
     let url;try{url=new URL(stage.video.src,document.baseURI);}catch{return;}
     if(url.protocol!=='https:'||!url.pathname.toLowerCase().endsWith('.mp4'))return;
     if(url.origin!==location.origin&&url.hostname!=='pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev')return;
@@ -392,7 +392,10 @@
     const durationLabel=seconds?Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0'):'';
     button.textContent=ta?'▶ காணொளி விளக்கம் · ஆங்கிலக் குரல்':'▶ Watch video explanation'+(durationLabel?' · '+durationLabel:'');
     const anchor=panel.querySelector('.sp2-recall') || panel.querySelector('.sp2-lesson-note');
-    if(anchor)anchor.before(button);else panel.append(button);
+    const studioHeading=panel.querySelector('.g10ch4-studio')&&panel.querySelector('.sp2-concept-heading');
+    if(studioHeading)studioHeading.after(button);
+    else if(anchor)anchor.before(button);
+    else panel.append(button);
     button.addEventListener('click',()=>{
       const dialog=document.createElement('dialog');dialog.className='sp2-concept-video-dialog';
       const header=document.createElement('div');header.className='sp2-concept-video-heading';
@@ -400,7 +403,10 @@
       const gp=stage.id==='g10-ch2-gp-sum';
        const discriminant=stage.id==='g10-ch3-discriminant';
        const thales=stage.id==='g10-ch4-bpt-thales';
-       title.textContent=thales
+       const area=stage.id==='g10-ch5-area-triangle';
+       title.textContent=area
+         ?(ta?'ஆயத்தொலைவுகள் மூலம் முக்கோணத்தின் பரப்பு (ஆங்கிலக் குரல்)':'Area of a triangle from coordinates')
+         :thales
          ?(ta?'தேல்ஸ் தேற்றம் — அடிப்படை விகிதசமத் தேற்றம் (ஆங்கிலக் குரல்)':'Thales theorem — the proportionality of parallel lines')
          :(discriminant
            ?(ta?'தன்மைக்காட்டி — மூலங்களின் தன்மை (ஆங்கிலக் குரல்)':'The discriminant — nature of roots')
@@ -545,6 +551,7 @@
           '</div>';
         labEngine?.renderGlance(stage,panel.querySelector('[data-g10ch4-glance]'),lang);
         labEngine?.mount(stage,panel.querySelector('[data-g10ch4-visual]'),lang);
+        if(stage.video)attachStageVideo(panel,stage,lang);
         const connectRow=panel.querySelector('[data-g10ch4-connect]');
         const linked=[stage.practiceId,stage.secondaryPracticeId,stage.tertiaryPracticeId]
           .map(id=>id&&chapterQuestions.find(q=>q.id===id)).filter(Boolean);
