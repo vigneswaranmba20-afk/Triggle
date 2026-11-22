@@ -57,14 +57,18 @@ const entries=[
         }
       }
     ],
-    "answer": {
-      "en": "2, 5, 8, 11, …; all numbers n = 3k + 2, where k = 0, 1, 2, ….",
-      "ta": "2, 5, 8, 11, …; அதாவது k = 0, 1, 2, … என அமையும் n = 3k + 2 என்ற வடிவிலான அனைத்து எண்களும்."
-    },
+    "answer": "2, 5, 8, 11, …; all numbers n = 3k + 2, where k = 0, 1, 2, ….",
     "answerMath": {
-      "latex": "2, 5, 8, 11, \\dots \\quad (n = 3k + 2,\\; k = 0, 1, 2, \\dots)",
-      "display": false,
-      "fallback": "2, 5, 8, 11, … (n = 3k + 2, k = 0, 1, 2, …)"
+      "en": {
+        "latex": "2, 5, 8, 11, \\dots \\quad (n = 3k + 2,\\; k = 0, 1, 2, \\dots)",
+        "display": false,
+        "fallback": "2, 5, 8, 11, …; all numbers n = 3k + 2, where k = 0, 1, 2, …."
+      },
+      "ta": {
+        "latex": "2, 5, 8, 11, \\dots \\quad (n = 3k + 2,\\; k = 0, 1, 2, \\dots)",
+        "display": false,
+        "fallback": "2, 5, 8, 11, …; அதாவது k = 0, 1, 2, … என அமையும் n = 3k + 2 என்ற வடிவிலான அனைத்து எண்களும்."
+      }
     },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -73,7 +77,8 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-22",
     "tamilQuestionSourceVerified": true,
-    "tamilWorkedSolutionReview": "pending"
+    "tamilWorkedSolutionReview": "pending",
+    "answerTa": "2, 5, 8, 11, …; அதாவது k = 0, 1, 2, … என அமையும் n = 3k + 2 என்ற வடிவிலான அனைத்து எண்களும்."
   },
   {
     "id": "c10-2-ex2-1-q2",
@@ -128,14 +133,18 @@ const entries=[
         }
       }
     ],
-    "answer": {
-      "en": "25 completed rows; 7 flower pots are left over.",
-      "ta": "25 வரிசைகள் முழுமை பெறும்; 7 பூந்தொட்டிகள் மீதமிருக்கும்."
-    },
+    "answer": "25 completed rows; 7 flower pots are left over.",
     "answerMath": {
-      "latex": "25,\\; 7",
-      "display": false,
-      "fallback": "25, 7"
+      "en": {
+        "latex": "25,\\; 7",
+        "display": false,
+        "fallback": "25 completed rows; 7 flower pots are left over."
+      },
+      "ta": {
+        "latex": "25,\\; 7",
+        "display": false,
+        "fallback": "25 வரிசைகள் முழுமை பெறும்; 7 பூந்தொட்டிகள் மீதமிருக்கும்."
+      }
     },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -144,7 +153,8 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-22",
     "tamilQuestionSourceVerified": true,
-    "tamilWorkedSolutionReview": "pending"
+    "tamilWorkedSolutionReview": "pending",
+    "answerTa": "25 வரிசைகள் முழுமை பெறும்; 7 பூந்தொட்டிகள் மீதமிருக்கும்."
   },
   {
     "id": "c10-2-ex2-1-q3",
@@ -209,14 +219,18 @@ const entries=[
         }
       }
     ],
-    "answer": {
-      "en": "The product of any two consecutive positive integers is divisible by 2.",
-      "ta": "எந்த இரு தொடர்ச்சியான மிகை முழுக்களின் பெருக்கற்பலனும் 2 ஆல் வகுபடும் என நிறுவப்பட்டது."
-    },
+    "answer": "The product of any two consecutive positive integers is divisible by 2.",
     "answerMath": {
-      "latex": "2 \\mid n(n+1)",
-      "display": false,
-      "fallback": "2 divides n(n+1)"
+      "en": {
+        "latex": "2 \\mid n(n+1)",
+        "display": false,
+        "fallback": "The product of any two consecutive positive integers is divisible by 2."
+      },
+      "ta": {
+        "latex": "2 \\mid n(n+1)",
+        "display": false,
+        "fallback": "எந்த இரு தொடர்ச்சியான மிகை முழுக்களின் பெருக்கற்பலனும் 2 ஆல் வகுபடும் என நிறுவப்பட்டது."
+      }
     },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -225,7 +239,8 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-22",
     "tamilQuestionSourceVerified": true,
-    "tamilWorkedSolutionReview": "pending"
+    "tamilWorkedSolutionReview": "pending",
+    "answerTa": "எந்த இரு தொடர்ச்சியான மிகை முழுக்களின் பெருக்கற்பலனும் 2 ஆல் வகுபடும் என நிறுவப்பட்டது."
   },
   {
     "id": "c10-2-ex2-1-q4",
@@ -290,14 +305,18 @@ const entries=[
         }
       }
     ],
-    "answer": {
-      "en": "a+b+c = 13(p+q+r+2), so a+b+c is divisible by 13.",
-      "ta": "a + b + c = 13(p + q + r + 2) என்பதால், a + b + c ஆனது 13 ஆல் வகுபடும் என நிரூபிக்கப்பட்டது."
-    },
+    "answer": "a+b+c = 13(p+q+r+2), so a+b+c is divisible by 13.",
     "answerMath": {
-      "latex": "a + b + c = 13(p + q + r + 2)",
-      "display": false,
-      "fallback": "a+b+c = 13(p+q+r+2)"
+      "en": {
+        "latex": "a + b + c = 13(p + q + r + 2)",
+        "display": false,
+        "fallback": "a+b+c = 13(p+q+r+2), so a+b+c is divisible by 13."
+      },
+      "ta": {
+        "latex": "a + b + c = 13(p + q + r + 2)",
+        "display": false,
+        "fallback": "a + b + c = 13(p + q + r + 2) என்பதால், a + b + c ஆனது 13 ஆல் வகுபடும் என நிரூபிக்கப்பட்டது."
+      }
     },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -306,7 +325,8 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-22",
     "tamilQuestionSourceVerified": true,
-    "tamilWorkedSolutionReview": "pending"
+    "tamilWorkedSolutionReview": "pending",
+    "answerTa": "a + b + c = 13(p + q + r + 2) என்பதால், a + b + c ஆனது 13 ஆல் வகுபடும் என நிரூபிக்கப்பட்டது."
   },
   {
     "id": "c10-2-ex2-1-q5",
@@ -371,14 +391,18 @@ const entries=[
         }
       }
     ],
-    "answer": {
-      "en": "The remainder is 0 for an even integer and 1 for an odd integer.",
-      "ta": "இரட்டை முழுவின் வர்க்கத்திற்கு மீதி 0 ஆகவும், ஒற்றை முழுவின் வர்க்கத்திற்கு மீதி 1 ஆகவும் மட்டுமே கிடைக்கும் என நிறுவப்பட்டது."
-    },
+    "answer": "The remainder is 0 for an even integer and 1 for an odd integer.",
     "answerMath": {
-      "latex": "r \\in \\{0, 1\\}",
-      "display": false,
-      "fallback": "r ∈ {0, 1}"
+      "en": {
+        "latex": "r \\in \\{0, 1\\}",
+        "display": false,
+        "fallback": "The remainder is 0 for an even integer and 1 for an odd integer."
+      },
+      "ta": {
+        "latex": "r \\in \\{0, 1\\}",
+        "display": false,
+        "fallback": "இரட்டை முழுவின் வர்க்கத்திற்கு மீதி 0 ஆகவும், ஒற்றை முழுவின் வர்க்கத்திற்கு மீதி 1 ஆகவும் மட்டுமே கிடைக்கும் என நிறுவப்பட்டது."
+      }
     },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -387,7 +411,8 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-22",
     "tamilQuestionSourceVerified": true,
-    "tamilWorkedSolutionReview": "pending"
+    "tamilWorkedSolutionReview": "pending",
+    "answerTa": "இரட்டை முழுவின் வர்க்கத்திற்கு மீதி 0 ஆகவும், ஒற்றை முழுவின் வர்க்கத்திற்கு மீதி 1 ஆகவும் மட்டுமே கிடைக்கும் என நிறுவப்பட்டது."
   },
   {
     "id": "c10-2-ex2-1-q6",
@@ -492,14 +517,18 @@ const entries=[
         }
       }
     ],
-    "answer": {
-      "en": "(i) 4; (ii) 51; (iii) 144; (iv) 6.",
-      "ta": "(i) 4; (ii) 51; (iii) 144; (iv) 6."
-    },
+    "answer": "(i) 4; (ii) 51; (iii) 144; (iv) 6.",
     "answerMath": {
-      "latex": "\\text{(i) } 4;\\quad \\text{(ii) } 51;\\quad \\text{(iii) } 144;\\quad \\text{(iv) } 6",
-      "display": false,
-      "fallback": "(i) 4; (ii) 51; (iii) 144; (iv) 6."
+      "en": {
+        "latex": "\\text{(i) } 4;\\quad \\text{(ii) } 51;\\quad \\text{(iii) } 144;\\quad \\text{(iv) } 6",
+        "display": false,
+        "fallback": "(i) 4; (ii) 51; (iii) 144; (iv) 6."
+      },
+      "ta": {
+        "latex": "\\text{(i) } 4;\\quad \\text{(ii) } 51;\\quad \\text{(iii) } 144;\\quad \\text{(iv) } 6",
+        "display": false,
+        "fallback": "(i) 4; (ii) 51; (iii) 144; (iv) 6."
+      }
     },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -508,7 +537,8 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-22",
     "tamilQuestionSourceVerified": true,
-    "tamilWorkedSolutionReview": "pending"
+    "tamilWorkedSolutionReview": "pending",
+    "answerTa": "(i) 4; (ii) 51; (iii) 144; (iv) 6."
   },
   {
     "id": "c10-2-ex2-1-q7",
@@ -573,14 +603,18 @@ const entries=[
         }
       }
     ],
-    "answer": {
-      "en": "174.",
-      "ta": "174."
-    },
+    "answer": "174.",
     "answerMath": {
-      "latex": "174",
-      "display": false,
-      "fallback": "174"
+      "en": {
+        "latex": "174",
+        "display": false,
+        "fallback": "174."
+      },
+      "ta": {
+        "latex": "174",
+        "display": false,
+        "fallback": "174."
+      }
     },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -589,7 +623,8 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-22",
     "tamilQuestionSourceVerified": true,
-    "tamilWorkedSolutionReview": "pending"
+    "tamilWorkedSolutionReview": "pending",
+    "answerTa": "174."
   },
   {
     "id": "c10-2-ex2-1-q8",
@@ -654,14 +689,18 @@ const entries=[
         }
       }
     ],
-    "answer": {
-      "en": "d = 4; one solution is x = 2, y = −1.",
-      "ta": "d = 4; ஒரு தீர்வு x = 2, y = −1."
-    },
+    "answer": "d = 4; one solution is x = 2, y = −1.",
     "answerMath": {
-      "latex": "x = 2,\\; y = -1",
-      "display": false,
-      "fallback": "x = 2, y = −1"
+      "en": {
+        "latex": "x = 2,\\; y = -1",
+        "display": false,
+        "fallback": "d = 4; one solution is x = 2, y = −1."
+      },
+      "ta": {
+        "latex": "x = 2,\\; y = -1",
+        "display": false,
+        "fallback": "d = 4; ஒரு தீர்வு x = 2, y = −1."
+      }
     },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -670,7 +709,8 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-22",
     "tamilQuestionSourceVerified": true,
-    "tamilWorkedSolutionReview": "pending"
+    "tamilWorkedSolutionReview": "pending",
+    "answerTa": "d = 4; ஒரு தீர்வு x = 2, y = −1."
   },
   {
     "id": "c10-2-ex2-1-q9",
@@ -725,14 +765,18 @@ const entries=[
         }
       }
     ],
-    "answer": {
-      "en": "6.",
-      "ta": "6."
-    },
+    "answer": "6.",
     "answerMath": {
-      "latex": "6",
-      "display": false,
-      "fallback": "6"
+      "en": {
+        "latex": "6",
+        "display": false,
+        "fallback": "6."
+      },
+      "ta": {
+        "latex": "6",
+        "display": false,
+        "fallback": "6."
+      }
     },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -741,7 +785,8 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-22",
     "tamilQuestionSourceVerified": true,
-    "tamilWorkedSolutionReview": "pending"
+    "tamilWorkedSolutionReview": "pending",
+    "answerTa": "6."
   },
   {
     "id": "c10-2-ex2-1-q10",
@@ -806,14 +851,18 @@ const entries=[
         }
       }
     ],
-    "answer": {
-      "en": "Any two consecutive positive integers are coprime because their HCF is 1.",
-      "ta": "எந்த இரு அடுத்தடுத்த மிகை முழுக்களின் மீ.பொ.வ 1 என்பதால் அவை எப்போதும் சார்பகா எண்கள் ஆகும்."
-    },
+    "answer": "Any two consecutive positive integers are coprime because their HCF is 1.",
     "answerMath": {
-      "latex": "\\gcd(n, n+1) = 1",
-      "display": false,
-      "fallback": "HCF(n, n+1) = 1"
+      "en": {
+        "latex": "\\gcd(n, n+1) = 1",
+        "display": false,
+        "fallback": "Any two consecutive positive integers are coprime because their HCF is 1."
+      },
+      "ta": {
+        "latex": "\\gcd(n, n+1) = 1",
+        "display": false,
+        "fallback": "எந்த இரு அடுத்தடுத்த மிகை முழுக்களின் மீ.பொ.வ 1 என்பதால் அவை எப்போதும் சார்பகா எண்கள் ஆகும்."
+      }
     },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -822,7 +871,8 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-22",
     "tamilQuestionSourceVerified": true,
-    "tamilWorkedSolutionReview": "pending"
+    "tamilWorkedSolutionReview": "pending",
+    "answerTa": "எந்த இரு அடுத்தடுத்த மிகை முழுக்களின் மீ.பொ.வ 1 என்பதால் அவை எப்போதும் சார்பகா எண்கள் ஆகும்."
   }
 ];
 const stable=v=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])])):v;
