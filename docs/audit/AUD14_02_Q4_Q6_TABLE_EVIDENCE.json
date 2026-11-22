@@ -1,0 +1,601 @@
+{
+  "schemaVersion": 1,
+  "auditId": "AUD14-02-Q4-Q6",
+  "source": {
+    "english2025": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+    "exercisePrintedPage": 239,
+    "exercisePdfPage": 245,
+    "sineTablePrintedPage": 242,
+    "sineTablePdfPage": 248,
+    "cosineTablePrintedPage": 244,
+    "cosineTablePdfPage": 250,
+    "tangentTablePrintedPage": 246,
+    "tangentTablePdfPage": 252,
+    "answerKeyPrintedPage": 316,
+    "answerKeyPdfPage": 322
+  },
+  "sourceStatus": {
+    "exerciseImage": "passed",
+    "tableImages": "passed",
+    "answerKeyImage": "passed",
+    "independentArithmetic": "passed",
+    "tamilEditorial": "pending",
+    "productionLive": "pending"
+  },
+  "scope": "Finish AUD14-02 Grade 9 Ex6.4 Q4, Q5, Q6 table-method explanation while keeping original prompts, finals and 568-record immutable preservation baseline",
+  "notes": [
+    "Q4 exact four-figure table sin24°24′=0.4131 cos24°24′=0.9107: 50×product = 18.8105085 -> 18.81 cm².",
+    "Q5 inverse table cos36°48′=0.8007; subtract 4-minute mean difference 0.0007 gives cos36°52′≈0.8000, so θ≈36°52′.",
+    "Q6 tangent table tan42°00′=0.9004 -> 60×0.9004=54.024 -> 54.02 m.",
+    "No question IDs or final answers change. Original printed question prompts are preserved as supplied, though source page wording remains concise in app; Tamil teaching editorial pending."
+  ],
+  "records": {
+    "c9-exercise-6-4-q4": {
+      "originalRecordSha256": "3a13b04fd9c5b62b37bb4304bee630edb8da04487915647b96f4a7691976bd37",
+      "correctedRecordSha256": "aff0956ac82be2f9837fdd3e1c5a9c51a0e010d89f92278f852dc18ef5993abc",
+      "originalRecord": {
+        "id": "c9-exercise-6-4-q4",
+        "classNum": 9,
+        "chapter": "6",
+        "exercise": "6.4",
+        "topic": {
+          "en": "Trigonometry",
+          "ta": "முக்கோணவியல்"
+        },
+        "label": {
+          "en": "Exercise 6.4 · Q4",
+          "ta": "பயிற்சி 6.4 · வினா 4"
+        },
+        "title": {
+          "en": "Right-triangle area from hypotenuse and angle",
+          "ta": "Right-triangle area from hypotenuse and angle"
+        },
+        "q": {
+          "en": "The hypotenuse is 10 cm and an acute angle is 24°24′. Calculate the triangle’s area.",
+          "ta": "கர்ணம் 10 cm, ஒரு குறுங்கோணம் 24°24′ எனில் முக்கோணத்தின் பரப்பளவைக் காண்க."
+        },
+        "steps": [
+          {
+            "en": "Use the hypotenuse to find the base and the height.",
+            "ta": "கர்ணத்தைப் பயன்படுத்தி அடிப்பக்கம், உயரம் காண்க.",
+            "eq": "Base = 10 cos24°24′ ; height = 10 sin24°24′"
+          },
+          {
+            "en": "The triangle-area formula is one half times base times height.",
+            "ta": "முக்கோணப் பரப்பளவு = 1/2 × அடிப்பக்கம் × உயரம்.",
+            "eq": "Area = [[1|2]] × 10 cos24°24′ × 10 sin24°24′"
+          },
+          {
+            "en": "Evaluate with trigonometric-table approximations.",
+            "ta": "முக்கோணவியல் அட்டவணையின் தோராய மதிப்புகளைப் பயன்படுத்துக.",
+            "eq": "Area ≈ 18.81 cm²"
+          }
+        ],
+        "answer": "18.81 cm²",
+        "kind": "reference",
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "diagram": {
+          "kind": "triangle",
+          "opp": 4.131,
+          "adj": 9.105,
+          "hyp": "10 cm",
+          "angle": "24°24′"
+        },
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 18
+      },
+      "correctedRecord": {
+        "id": "c9-exercise-6-4-q4",
+        "classNum": 9,
+        "chapter": "6",
+        "exercise": "6.4",
+        "topic": {
+          "en": "Trigonometry",
+          "ta": "முக்கோணவியல்"
+        },
+        "label": {
+          "en": "Exercise 6.4 · Q4",
+          "ta": "பயிற்சி 6.4 · வினா 4"
+        },
+        "title": {
+          "en": "Right-triangle area from hypotenuse and angle",
+          "ta": "Right-triangle area from hypotenuse and angle"
+        },
+        "q": {
+          "en": "The hypotenuse is 10 cm and an acute angle is 24°24′. Calculate the triangle’s area.",
+          "ta": "கர்ணம் 10 cm, ஒரு குறுங்கோணம் 24°24′ எனில் முக்கோணத்தின் பரப்பளவைக் காண்க."
+        },
+        "steps": [
+          {
+            "en": "The adjacent side is the base and the opposite side is the height relative to 24°24′.",
+            "ta": "24°24′ கோணத்திற்கு அடுத்த பக்கம் அடிப்பக்கமும், எதிர்ப்பக்கம் உயரமும் ஆகும்.",
+            "eq": "base=10cos24°24′; height=10sin24°24′"
+          },
+          {
+            "en": "At 24°24′, the sine and cosine table columns give 0.4131 and 0.9107. No mean-difference correction is needed because 24′ is a printed six-minute column.",
+            "ta": "24°24′ வரிசை/நெடுவரிசையில் சைன் 0.4131, கோசைன் 0.9107 எனப் படிக்கவும். 24′ நேரடியாக அட்டவணையில் இருப்பதால் சராசரி வேறுபாடு வேண்டாம்.",
+            "eq": "sin24°24′≈0.4131; cos24°24′≈0.9107"
+          },
+          {
+            "en": "Area is half the product of the perpendicular sides. Substitute the four-figure table values and round to two decimal places.",
+            "ta": "செங்கோணப் பக்கங்களின் பெருக்கலின் பாதியே பரப்பளவு. அட்டவணை மதிப்புகளைப் பதிலிட்டு இரண்டு தசம இடங்களுக்கு வட்டமிடுக.",
+            "eq": "Area≈[[1|2]]×(10×0.4131)×(10×0.9107)=18.8105085≈18.81 cm²"
+          }
+        ],
+        "answer": "18.81 cm²",
+        "kind": "reference",
+        "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics, Exercise 6.4 printed p239 (PDF p245); four-figure trigonometric tables p242/244/246 (PDF p248/250/252), answer key p316 (PDF p322). Triggle table teaching original; Tamil pedagogical review pending.",
+        "diagram": {
+          "kind": "triangle",
+          "opp": 4.131,
+          "adj": 9.105,
+          "hyp": "10 cm",
+          "angle": "24°24′"
+        },
+        "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+        "page": 245
+      },
+      "unchangedEnglishQuestion": "The hypotenuse is 10 cm and an acute angle is 24°24′. Calculate the triangle’s area.",
+      "unchangedTamilQuestion": "கர்ணம் 10 cm, ஒரு குறுங்கோணம் 24°24′ எனில் முக்கோணத்தின் பரப்பளவைக் காண்க.",
+      "unchangedFinalAnswer": "18.81 cm²",
+      "originalClassicRecord": {
+        "id": "exercise-6-4-q4",
+        "ref": "Exercise 6.4 · Q4",
+        "type": "6.4",
+        "title": "Right-triangle area from hypotenuse and angle",
+        "prompt": "The hypotenuse is 10 cm and an acute angle is 24°24′. Calculate the triangle’s area.",
+        "steps": [
+          {
+            "why": "Use the hypotenuse to find the base and the height.",
+            "eq": "Base = 10 cos24°24′ ; height = 10 sin24°24′"
+          },
+          {
+            "why": "The triangle-area formula is one half times base times height.",
+            "eq": "Area = [[1|2]] × 10 cos24°24′ × 10 sin24°24′"
+          },
+          {
+            "why": "Evaluate with trigonometric-table approximations.",
+            "eq": "Area ≈ 18.81 cm²"
+          }
+        ],
+        "demo": {
+          "kind": "triangle",
+          "opp": 4.131,
+          "adj": 9.105,
+          "hyp": "10 cm",
+          "angle": "24°24′"
+        },
+        "page": 18,
+        "final": "18.81 cm²",
+        "promptTa": "கர்ணம் 10 cm, ஒரு குறுங்கோணம் 24°24′ எனில் முக்கோணத்தின் பரப்பளவைக் காண்க.",
+        "stepsTa": [
+          "கர்ணத்தைப் பயன்படுத்தி அடிப்பக்கம், உயரம் காண்க.",
+          "முக்கோணப் பரப்பளவு = 1/2 × அடிப்பக்கம் × உயரம்.",
+          "முக்கோணவியல் அட்டவணையின் தோராய மதிப்புகளைப் பயன்படுத்துக."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-4-q4",
+        "ref": "Exercise 6.4 · Q4",
+        "type": "6.4",
+        "title": "Right-triangle area from hypotenuse and angle",
+        "prompt": "The hypotenuse is 10 cm and an acute angle is 24°24′. Calculate the triangle’s area.",
+        "steps": [
+          {
+            "why": "The adjacent side is the base and the opposite side is the height relative to 24°24′.",
+            "eq": "base=10cos24°24′; height=10sin24°24′"
+          },
+          {
+            "why": "At 24°24′, the sine and cosine table columns give 0.4131 and 0.9107. No mean-difference correction is needed because 24′ is a printed six-minute column.",
+            "eq": "sin24°24′≈0.4131; cos24°24′≈0.9107"
+          },
+          {
+            "why": "Area is half the product of the perpendicular sides. Substitute the four-figure table values and round to two decimal places.",
+            "eq": "Area≈[[1|2]]×(10×0.4131)×(10×0.9107)=18.8105085≈18.81 cm²"
+          }
+        ],
+        "demo": {
+          "kind": "triangle",
+          "opp": 4.131,
+          "adj": 9.105,
+          "hyp": "10 cm",
+          "angle": "24°24′"
+        },
+        "page": 245,
+        "final": "18.81 cm²",
+        "promptTa": "கர்ணம் 10 cm, ஒரு குறுங்கோணம் 24°24′ எனில் முக்கோணத்தின் பரப்பளவைக் காண்க.",
+        "stepsTa": [
+          "24°24′ கோணத்திற்கு அடுத்த பக்கம் அடிப்பக்கமும், எதிர்ப்பக்கம் உயரமும் ஆகும்.",
+          "24°24′ வரிசை/நெடுவரிசையில் சைன் 0.4131, கோசைன் 0.9107 எனப் படிக்கவும். 24′ நேரடியாக அட்டவணையில் இருப்பதால் சராசரி வேறுபாடு வேண்டாம்.",
+          "செங்கோணப் பக்கங்களின் பெருக்கலின் பாதியே பரப்பளவு. அட்டவணை மதிப்புகளைப் பதிலிட்டு இரண்டு தசம இடங்களுக்கு வட்டமிடுக."
+        ]
+      }
+    },
+    "c9-exercise-6-4-q5": {
+      "originalRecordSha256": "dd4e108610ca9dbfaf98f958d8348bdf3bf313377b71df41dc15c7c55140e94f",
+      "correctedRecordSha256": "2e36309c1a7870b02624a3c0372373508ef96ebcdb25048880bb85b3759db752",
+      "originalRecord": {
+        "id": "c9-exercise-6-4-q5",
+        "classNum": 9,
+        "chapter": "6",
+        "exercise": "6.4",
+        "topic": {
+          "en": "Trigonometry",
+          "ta": "முக்கோணவியல்"
+        },
+        "label": {
+          "en": "Exercise 6.4 · Q5",
+          "ta": "பயிற்சி 6.4 · வினா 5"
+        },
+        "title": {
+          "en": "Angle of a ladder leaning against a wall",
+          "ta": "Angle of a ladder leaning against a wall"
+        },
+        "q": {
+          "en": "A 5 m ladder rests against a wall, with its foot 4 m from the wall. Find its angle to the ground.",
+          "ta": "5 m ஏணி சுவரில் சாய்கிறது. அதன் அடிப்பகுதி சுவரிலிருந்து 4 m தொலைவில் உள்ளது. தரையுடன் உருவாகும் கோணம் என்ன?"
+        },
+        "steps": [
+          {
+            "en": "Adjacent side = 4 m; hypotenuse = 5 m.",
+            "ta": "அடுத்துள்ள பக்கம் 4 m; கர்ணம் 5 m.",
+            "eq": "cos θ = [[4|5]] = 0.8"
+          },
+          {
+            "en": "Find the angle whose cosine is 0.8.",
+            "ta": "cos மதிப்பு 0.8 ஆக இருக்கும் கோணத்தைக் காண்க.",
+            "eq": "θ = cos⁻¹(0.8) ≈ 36.8699°"
+          },
+          {
+            "en": "Convert fractional degrees into minutes.",
+            "ta": "தசம டிகிரியை நிமிடங்களாக மாற்றுக.",
+            "eq": "0.8699 × 60 ≈ 52′"
+          },
+          {
+            "en": "Round to the nearest minute.",
+            "ta": "அருகிலுள்ள நிமிடத்திற்கு வட்டமிடுக.",
+            "eq": "θ ≈ 36°52′"
+          }
+        ],
+        "answer": "36°52′",
+        "kind": "reference",
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "diagram": {
+          "kind": "triangle",
+          "opp": 3,
+          "adj": 4,
+          "hyp": "5 m",
+          "angle": "θ"
+        },
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 18
+      },
+      "correctedRecord": {
+        "id": "c9-exercise-6-4-q5",
+        "classNum": 9,
+        "chapter": "6",
+        "exercise": "6.4",
+        "topic": {
+          "en": "Trigonometry",
+          "ta": "முக்கோணவியல்"
+        },
+        "label": {
+          "en": "Exercise 6.4 · Q5",
+          "ta": "பயிற்சி 6.4 · வினா 5"
+        },
+        "title": {
+          "en": "Angle of a ladder leaning against a wall",
+          "ta": "Angle of a ladder leaning against a wall"
+        },
+        "q": {
+          "en": "A 5 m ladder rests against a wall, with its foot 4 m from the wall. Find its angle to the ground.",
+          "ta": "5 m ஏணி சுவரில் சாய்கிறது. அதன் அடிப்பகுதி சுவரிலிருந்து 4 m தொலைவில் உள்ளது. தரையுடன் உருவாகும் கோணம் என்ன?"
+        },
+        "steps": [
+          {
+            "en": "The ground distance is the adjacent side (4 m), and the ladder is the hypotenuse (5 m).",
+            "ta": "தரைத் தொலைவு அடுத்த பக்கம் (4 மீ); ஏணி கர்ணம் (5 மீ).",
+            "eq": "cosθ=[[4|5]]=0.8000"
+          },
+          {
+            "en": "Find 0.8000 in the four-figure cosine table: the 36°48′ column reads 0.8007, slightly above the target.",
+            "ta": "கோசைன் அட்டவணையில் 0.8000-ஐத் தேடுக. 36°48′ நெடுவரிசையில் 0.8007 உள்ளது.",
+            "eq": "cos36°48′≈0.8007"
+          },
+          {
+            "en": "At 36°, the 4′ mean difference is 7 units in the fourth decimal place. Subtract 0.0007 because cosine decreases as the angle increases.",
+            "ta": "36° வரிசையில் 4′-க்கான சராசரி வேறுபாடு நான்காம் தசம இடத்தில் 7. கோணம் அதிகரிக்கக் கோசைன் குறைவதால் 0.0007 கழிக்கவும்.",
+            "eq": "cos36°52′≈0.8007−0.0007=0.8000"
+          },
+          {
+            "en": "Therefore the table angle whose cosine is 4/5 is approximately 36°52′; no calculator inverse-cosine step is needed.",
+            "ta": "எனவே cosθ=4/5 எனத் தரும் அட்டவணைக் கோணம் தோராயமாக 36°52′; கணிப்பான் தேவை இல்லை.",
+            "eq": "θ≈36°52′"
+          }
+        ],
+        "answer": "36°52′",
+        "kind": "reference",
+        "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics, Exercise 6.4 printed p239 (PDF p245); four-figure trigonometric tables p242/244/246 (PDF p248/250/252), answer key p316 (PDF p322). Triggle table teaching original; Tamil pedagogical review pending.",
+        "diagram": {
+          "kind": "triangle",
+          "opp": 3,
+          "adj": 4,
+          "hyp": "5 m",
+          "angle": "θ"
+        },
+        "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+        "page": 245
+      },
+      "unchangedEnglishQuestion": "A 5 m ladder rests against a wall, with its foot 4 m from the wall. Find its angle to the ground.",
+      "unchangedTamilQuestion": "5 m ஏணி சுவரில் சாய்கிறது. அதன் அடிப்பகுதி சுவரிலிருந்து 4 m தொலைவில் உள்ளது. தரையுடன் உருவாகும் கோணம் என்ன?",
+      "unchangedFinalAnswer": "36°52′",
+      "originalClassicRecord": {
+        "id": "exercise-6-4-q5",
+        "ref": "Exercise 6.4 · Q5",
+        "type": "6.4",
+        "title": "Angle of a ladder leaning against a wall",
+        "prompt": "A 5 m ladder rests against a wall, with its foot 4 m from the wall. Find its angle to the ground.",
+        "steps": [
+          {
+            "why": "Adjacent side = 4 m; hypotenuse = 5 m.",
+            "eq": "cos θ = [[4|5]] = 0.8"
+          },
+          {
+            "why": "Find the angle whose cosine is 0.8.",
+            "eq": "θ = cos⁻¹(0.8) ≈ 36.8699°"
+          },
+          {
+            "why": "Convert fractional degrees into minutes.",
+            "eq": "0.8699 × 60 ≈ 52′"
+          },
+          {
+            "why": "Round to the nearest minute.",
+            "eq": "θ ≈ 36°52′"
+          }
+        ],
+        "demo": {
+          "kind": "triangle",
+          "opp": 3,
+          "adj": 4,
+          "hyp": "5 m",
+          "angle": "θ"
+        },
+        "page": 18,
+        "final": "36°52′",
+        "promptTa": "5 m ஏணி சுவரில் சாய்கிறது. அதன் அடிப்பகுதி சுவரிலிருந்து 4 m தொலைவில் உள்ளது. தரையுடன் உருவாகும் கோணம் என்ன?",
+        "stepsTa": [
+          "அடுத்துள்ள பக்கம் 4 m; கர்ணம் 5 m.",
+          "cos மதிப்பு 0.8 ஆக இருக்கும் கோணத்தைக் காண்க.",
+          "தசம டிகிரியை நிமிடங்களாக மாற்றுக.",
+          "அருகிலுள்ள நிமிடத்திற்கு வட்டமிடுக."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-4-q5",
+        "ref": "Exercise 6.4 · Q5",
+        "type": "6.4",
+        "title": "Angle of a ladder leaning against a wall",
+        "prompt": "A 5 m ladder rests against a wall, with its foot 4 m from the wall. Find its angle to the ground.",
+        "steps": [
+          {
+            "why": "The ground distance is the adjacent side (4 m), and the ladder is the hypotenuse (5 m).",
+            "eq": "cosθ=[[4|5]]=0.8000"
+          },
+          {
+            "why": "Find 0.8000 in the four-figure cosine table: the 36°48′ column reads 0.8007, slightly above the target.",
+            "eq": "cos36°48′≈0.8007"
+          },
+          {
+            "why": "At 36°, the 4′ mean difference is 7 units in the fourth decimal place. Subtract 0.0007 because cosine decreases as the angle increases.",
+            "eq": "cos36°52′≈0.8007−0.0007=0.8000"
+          },
+          {
+            "why": "Therefore the table angle whose cosine is 4/5 is approximately 36°52′; no calculator inverse-cosine step is needed.",
+            "eq": "θ≈36°52′"
+          }
+        ],
+        "demo": {
+          "kind": "triangle",
+          "opp": 3,
+          "adj": 4,
+          "hyp": "5 m",
+          "angle": "θ"
+        },
+        "page": 245,
+        "final": "36°52′",
+        "promptTa": "5 m ஏணி சுவரில் சாய்கிறது. அதன் அடிப்பகுதி சுவரிலிருந்து 4 m தொலைவில் உள்ளது. தரையுடன் உருவாகும் கோணம் என்ன?",
+        "stepsTa": [
+          "தரைத் தொலைவு அடுத்த பக்கம் (4 மீ); ஏணி கர்ணம் (5 மீ).",
+          "கோசைன் அட்டவணையில் 0.8000-ஐத் தேடுக. 36°48′ நெடுவரிசையில் 0.8007 உள்ளது.",
+          "36° வரிசையில் 4′-க்கான சராசரி வேறுபாடு நான்காம் தசம இடத்தில் 7. கோணம் அதிகரிக்கக் கோசைன் குறைவதால் 0.0007 கழிக்கவும்.",
+          "எனவே cosθ=4/5 எனத் தரும் அட்டவணைக் கோணம் தோராயமாக 36°52′; கணிப்பான் தேவை இல்லை."
+        ]
+      }
+    },
+    "c9-exercise-6-4-q6": {
+      "originalRecordSha256": "fca8b1e8a425eca2c959f8804797a0ce5f0dca30e844067fc83b5f6f9099aaee",
+      "correctedRecordSha256": "c4ce814e8b26c1eb849933b0f1bc93bf702f001b86d6ed0bb6088fbe38c7b234",
+      "originalRecord": {
+        "id": "c9-exercise-6-4-q6",
+        "classNum": 9,
+        "chapter": "6",
+        "exercise": "6.4",
+        "topic": {
+          "en": "Trigonometry",
+          "ta": "முக்கோணவியல்"
+        },
+        "label": {
+          "en": "Exercise 6.4 · Q6",
+          "ta": "பயிற்சி 6.4 · வினா 6"
+        },
+        "title": {
+          "en": "Height of the tree from an elevation angle",
+          "ta": "Height of the tree from an elevation angle"
+        },
+        "q": {
+          "en": "From a point 60 m from the tree, the angle of elevation to its top is 42°. Find the height.",
+          "ta": "ஒரு மரத்திலிருந்து 60 m தொலைவில், அதன் உச்சிக்கான ஏற்றக் கோணம் 42° எனில் உயரத்தைக் காண்க."
+        },
+        "steps": [
+          {
+            "en": "The tree is opposite the 42° angle; the ground distance is adjacent.",
+            "ta": "42°-க்கு மர உயரம் எதிர்ப்பக்கம்; தரைத் தொலைவு அடுத்துள்ள பக்கம்.",
+            "eq": "tan42° = [[height|60]]"
+          },
+          {
+            "en": "Isolate the unknown height.",
+            "ta": "தெரியாத உயரத்தைத் தனியாகப் பெறுக.",
+            "eq": "height = 60 × tan42°"
+          },
+          {
+            "en": "Substitute tan42° ≈ 0.900404.",
+            "ta": "tan42° ≈ 0.900404 என்று பதிலிடுக.",
+            "eq": "height ≈ 60 × 0.900404"
+          },
+          {
+            "en": "Round to two decimals.",
+            "ta": "இரண்டு தசம இடங்களுக்கு வட்டமிடுக.",
+            "eq": "height ≈ 54.02 m"
+          }
+        ],
+        "answer": "54.02 m",
+        "kind": "reference",
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "diagram": {
+          "kind": "tree"
+        },
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 18
+      },
+      "correctedRecord": {
+        "id": "c9-exercise-6-4-q6",
+        "classNum": 9,
+        "chapter": "6",
+        "exercise": "6.4",
+        "topic": {
+          "en": "Trigonometry",
+          "ta": "முக்கோணவியல்"
+        },
+        "label": {
+          "en": "Exercise 6.4 · Q6",
+          "ta": "பயிற்சி 6.4 · வினா 6"
+        },
+        "title": {
+          "en": "Height of the tree from an elevation angle",
+          "ta": "Height of the tree from an elevation angle"
+        },
+        "q": {
+          "en": "From a point 60 m from the tree, the angle of elevation to its top is 42°. Find the height.",
+          "ta": "ஒரு மரத்திலிருந்து 60 m தொலைவில், அதன் உச்சிக்கான ஏற்றக் கோணம் 42° எனில் உயரத்தைக் காண்க."
+        },
+        "steps": [
+          {
+            "en": "The tree's height is opposite the 42° angle, and the 60 m ground distance is adjacent.",
+            "ta": "42° கோணத்திற்கு மர உயரம் எதிர்ப்பக்கம்; 60 மீ தரைத் தொலைவு அடுத்த பக்கம்.",
+            "eq": "tan42°=[[height|60]]"
+          },
+          {
+            "en": "Multiply both sides by 60 to isolate the height.",
+            "ta": "உயரத்தைத் தனியாகப் பெற இரண்டு பக்கங்களையும் 60-ஆல் பெருக்குக.",
+            "eq": "height=60×tan42°"
+          },
+          {
+            "en": "Read tan42°00′ directly from the tangent table, 42° row and 0′ column. There are no extra minutes to adjust.",
+            "ta": "டேன்ஜென்ட் அட்டவணையில் 42° வரிசை, 0′ நெடுவரிசையிலிருந்து நேரடியாகப் படிக்கவும். கூடுதல் நிமிடங்கள் இல்லை.",
+            "eq": "tan42°00′≈0.9004"
+          },
+          {
+            "en": "Multiply by 60 and round the measured height to two decimal places.",
+            "ta": "60-ஆல் பெருக்கி உயரத்தை இரண்டு தசம இடங்களுக்கு வட்டமிடுக.",
+            "eq": "height≈60×0.9004=54.024≈54.02 m"
+          }
+        ],
+        "answer": "54.02 m",
+        "kind": "reference",
+        "reference": "Tamil Nadu SCERT 2025 revised Grade 9 Mathematics, Exercise 6.4 printed p239 (PDF p245); four-figure trigonometric tables p242/244/246 (PDF p248/250/252), answer key p316 (PDF p322). Triggle table teaching original; Tamil pedagogical review pending.",
+        "diagram": {
+          "kind": "tree"
+        },
+        "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+        "page": 245
+      },
+      "unchangedEnglishQuestion": "From a point 60 m from the tree, the angle of elevation to its top is 42°. Find the height.",
+      "unchangedTamilQuestion": "ஒரு மரத்திலிருந்து 60 m தொலைவில், அதன் உச்சிக்கான ஏற்றக் கோணம் 42° எனில் உயரத்தைக் காண்க.",
+      "unchangedFinalAnswer": "54.02 m",
+      "originalClassicRecord": {
+        "id": "exercise-6-4-q6",
+        "ref": "Exercise 6.4 · Q6",
+        "type": "6.4",
+        "title": "Height of the tree from an elevation angle",
+        "prompt": "From a point 60 m from the tree, the angle of elevation to its top is 42°. Find the height.",
+        "steps": [
+          {
+            "why": "The tree is opposite the 42° angle; the ground distance is adjacent.",
+            "eq": "tan42° = [[height|60]]"
+          },
+          {
+            "why": "Isolate the unknown height.",
+            "eq": "height = 60 × tan42°"
+          },
+          {
+            "why": "Substitute tan42° ≈ 0.900404.",
+            "eq": "height ≈ 60 × 0.900404"
+          },
+          {
+            "why": "Round to two decimals.",
+            "eq": "height ≈ 54.02 m"
+          }
+        ],
+        "demo": {
+          "kind": "tree"
+        },
+        "page": 18,
+        "final": "54.02 m",
+        "promptTa": "ஒரு மரத்திலிருந்து 60 m தொலைவில், அதன் உச்சிக்கான ஏற்றக் கோணம் 42° எனில் உயரத்தைக் காண்க.",
+        "stepsTa": [
+          "42°-க்கு மர உயரம் எதிர்ப்பக்கம்; தரைத் தொலைவு அடுத்துள்ள பக்கம்.",
+          "தெரியாத உயரத்தைத் தனியாகப் பெறுக.",
+          "tan42° ≈ 0.900404 என்று பதிலிடுக.",
+          "இரண்டு தசம இடங்களுக்கு வட்டமிடுக."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-4-q6",
+        "ref": "Exercise 6.4 · Q6",
+        "type": "6.4",
+        "title": "Height of the tree from an elevation angle",
+        "prompt": "From a point 60 m from the tree, the angle of elevation to its top is 42°. Find the height.",
+        "steps": [
+          {
+            "why": "The tree's height is opposite the 42° angle, and the 60 m ground distance is adjacent.",
+            "eq": "tan42°=[[height|60]]"
+          },
+          {
+            "why": "Multiply both sides by 60 to isolate the height.",
+            "eq": "height=60×tan42°"
+          },
+          {
+            "why": "Read tan42°00′ directly from the tangent table, 42° row and 0′ column. There are no extra minutes to adjust.",
+            "eq": "tan42°00′≈0.9004"
+          },
+          {
+            "why": "Multiply by 60 and round the measured height to two decimal places.",
+            "eq": "height≈60×0.9004=54.024≈54.02 m"
+          }
+        ],
+        "demo": {
+          "kind": "tree"
+        },
+        "page": 245,
+        "final": "54.02 m",
+        "promptTa": "ஒரு மரத்திலிருந்து 60 m தொலைவில், அதன் உச்சிக்கான ஏற்றக் கோணம் 42° எனில் உயரத்தைக் காண்க.",
+        "stepsTa": [
+          "42° கோணத்திற்கு மர உயரம் எதிர்ப்பக்கம்; 60 மீ தரைத் தொலைவு அடுத்த பக்கம்.",
+          "உயரத்தைத் தனியாகப் பெற இரண்டு பக்கங்களையும் 60-ஆல் பெருக்குக.",
+          "டேன்ஜென்ட் அட்டவணையில் 42° வரிசை, 0′ நெடுவரிசையிலிருந்து நேரடியாகப் படிக்கவும். கூடுதல் நிமிடங்கள் இல்லை.",
+          "60-ஆல் பெருக்கி உயரத்தை இரண்டு தசம இடங்களுக்கு வட்டமிடுக."
+        ]
+      }
+    }
+  }
+}
