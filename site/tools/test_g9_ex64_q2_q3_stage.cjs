@@ -55,13 +55,20 @@ vm.runInNewContext(read('site/data/class-9.js'),ctx);
 const published=ctx.window.TRIGGLE_CLASSES[9].items;
 for(const id of expectedIds)assert(!published.some(q=>q.id===id),'STAGED ONLY: do not silently claim missing part is published '+id);
 assert.equal(published.length,53,'Original core Grade 9 source module remains unchanged');
+// A source module is insufficient unless all seven questions appear in the
+// curriculum exercise navigation, without altering the immutable legacy IDs.
+const catalogue={window:{}};
+vm.runInNewContext(read('site/data/curriculum.js'),catalogue);
+const ch6=catalogue.window.TRIGGLE_CURRICULUM.grades.find(g=>g.grade===9).chapters.find(c=>c.number===6);
+assert.deepEqual(Array.from(ch6.textbookQuestionIds||[]),expectedIds,'All seven textbook IDs in Grade 9 Chapter 6 catalogue');
+assert(!expectedIds.some(id=>ch6.legacyQuestionIds.includes(id)),'Never rewrite original legacy source mappings');
 const complete=require('./build_g9_math.cjs').load();
-assert.equal(complete.length,397,'Full assembled Grade 9 runtime inventory must remain unchanged during staging');
-for(const id of expectedIds)assert(!complete.some(q=>q.id===id),'Staging must not silently publish a missing exercise '+id);
+assert.equal(complete.length,404,'Seven approved records appended to assembled Grade 9 inventory');
+for(const id of expectedIds)assert(complete.some(q=>q.id===id),'Released English source must contain approved exercise '+id);
 // Negative control: the 2025 key for Q3(ii) is table-based; a precise
 // calculator expression has a different rounded result.
 const rad=(d,m)=>(d+m/60)*Math.PI/180;
 const calculator=Math.tan(rad(70,58))+Math.cos(rad(15,26))-Math.sin(rad(84,59));
 assert.equal(calculator.toFixed(4),'2.8665');
 assert.notEqual(calculator.toFixed(4),manifest.records[6].answer);
-console.log('PASS AUD14-02 staging: seven source-exact textbook prompts, immutable Grade 9 product inventory, five reverse-table checks, two four-figure sums, official answer key, Q2(i) ambiguity and negative calculator control. No student-facing integration claimed.');
+console.log('PASS AUD14-02 released source: seven source-exact textbook prompts, immutable Grade 9 core, five reverse-table checks, two school-table sums, official key and negative calculator control.');

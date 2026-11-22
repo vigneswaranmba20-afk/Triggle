@@ -2,15 +2,15 @@
   "generatedAt": "2026-11-17",
   "grade": 9,
   "source": "existing authored student-facing content",
-  "totalAuthored": 453,
-  "eligible": 378,
+  "totalAuthored": 460,
+  "eligible": 385,
   "byChapter": {
     "1": 65,
     "2": 121,
     "3": 37,
     "4": 12,
     "5": 9,
-    "6": 40,
+    "6": 47,
     "7": 37,
     "8": 31,
     "9": 26
@@ -18,7 +18,7 @@
   "byConcept": {
     "trigSides": 12,
     "pythagoras": 4,
-    "trigRatio": 25,
+    "trigRatio": 32,
     "reciprocal": 1,
     "union": 1,
     "radical": 6,
@@ -400,7 +400,7 @@
   "qualityReview": {
     "kind": "human-in-the-loop editorial static corrections",
     "scope": "all source-aligned question IDs plus targeted semantic corrections for radical arithmetic, exponent rules, repetition, cube/cuboid surface area, statistical mode, and diagram relevance",
-    "notes": "Kept 30 relevant conceptual figures; excluded generic illustrations for surface area, rounding, and chord cases where geometry could imply incorrect conditions. Textbook content and answers unchanged. New Ex1.2 Q1(i–v) bridges are English-only (Tamil editorial deferred), with five previously audited source parts and no generic figures. Four additional Grade 9 Ex1.2 Q2 source-backed English-only why-step explanations added; Tamil review deferred. Twenty English-only Grade 9 Exercise 1.2 source-backed parts from PRs #230 and #236 were integrated with exact source-pinned Why-step hints. Tamil review remains pending. Eleven image-verified Grade 9 Algebra Exercise 3.1 Q1/Q2 English parts, with official answer-key checked coefficients, are source-registered; Tamil and teacher review pending.",
+    "notes": "Kept 30 relevant conceptual figures; excluded generic illustrations for surface area, rounding, and chord cases where geometry could imply incorrect conditions. Textbook content and answers unchanged. New Ex1.2 Q1(i–v) bridges are English-only (Tamil editorial deferred), with five previously audited source parts and no generic figures. Four additional Grade 9 Ex1.2 Q2 source-backed English-only why-step explanations added; Tamil review deferred. Twenty English-only Grade 9 Exercise 1.2 source-backed parts from PRs #230 and #236 were integrated with exact source-pinned Why-step hints. Tamil review remains pending. Eleven image-verified Grade 9 Algebra Exercise 3.1 Q1/Q2 English parts, with official answer-key checked coefficients, are source-registered; Tamil and teacher review pending. Seven English-only 2025 Grade 9 trigonometry Exercise 6.4 Q2/Q3 source-pinned four-figure-table Why-step hints added; Tamil editorial verification remains pending.",
     "date": "2026-11-14",
     "tamil": "editorial pending"
   }

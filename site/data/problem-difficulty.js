@@ -11,6 +11,13 @@ const metadata={
     "difficult": "Complex reasoning, proof, case analysis, multi-stage calculations or advanced connections."
   },
   "entries": {
+    "c9-exercise-6-4-q2-i": {"grade":9,"level":"medium","basis":"Reverse a natural trigonometric table with six-minute columns and mean differences","review":"implementation-audit"},
+    "c9-exercise-6-4-q2-ii": {"grade":9,"level":"medium","basis":"Reverse a natural trigonometric table with six-minute columns and mean differences","review":"implementation-audit"},
+    "c9-exercise-6-4-q2-iii": {"grade":9,"level":"medium","basis":"Reverse a natural trigonometric table with six-minute columns and mean differences","review":"implementation-audit"},
+    "c9-exercise-6-4-q2-iv": {"grade":9,"level":"medium","basis":"Reverse a natural trigonometric table with six-minute columns and mean differences","review":"implementation-audit"},
+    "c9-exercise-6-4-q2-v": {"grade":9,"level":"medium","basis":"Reverse a natural trigonometric table with six-minute columns and mean differences","review":"implementation-audit"},
+    "c9-exercise-6-4-q3-i": {"grade":9,"level":"difficult","basis":"Evaluate a multi-term expression with prescribed four-figure trigonometric tables","review":"implementation-audit"},
+    "c9-exercise-6-4-q3-ii": {"grade":9,"level":"difficult","basis":"Evaluate a multi-term expression with prescribed four-figure trigonometric tables","review":"implementation-audit"},
     "c10-7-ex7-1-q1": {"grade":10,"level":"easy","basis":"Translate ratio and curved area into a positive scale factor","review":"implementation-audit"},
     "c10-7-ex7-1-q2": {"grade":10,"level":"medium","basis":"Recover radius from flat ends and height from curved area","review":"implementation-audit"},
     "c10-7-ex7-1-q3": {"grade":10,"level":"medium","basis":"Combine outer, inner and both annular end areas","review":"implementation-audit"},

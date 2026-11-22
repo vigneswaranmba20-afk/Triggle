@@ -242,8 +242,10 @@ const g9Ex32Batch=require('../../docs/curriculum/grade-9/batches/g9-ch3-ex3-2-en
 const g9Ex32ById=new Map(g9Ex32Batch.records.map(record=>[record.id,record]));
 const g9Ex32NewIds=g9Ex32Batch.records.map(record=>record.id).filter(id=>!Object.hasOwn(preserved.sha256,id));
 assert.equal(g9Ex32NewIds.length,19);
-const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds];
-assert.equal(approvedG9Ids.length,84);
+const g9Ex64Release=require('../../docs/audit/AUD14_02_EX64_Q2_Q3_RELEASE_EVIDENCE.json');
+const g9Ex64NewIds=Object.keys(g9Ex64Release.records);
+const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ex64NewIds];
+assert.equal(approvedG9Ids.length,91);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
@@ -337,6 +339,14 @@ for(const [grade,data] of Object.entries(classes)){
    assert.equal(item.translationReview,'pending');
    assert.equal(item.sourceFidelity?.status,'page-visual-checked');
    assert(!item.q.ta,'Do not manufacture unreviewed Tamil authored teaching copy '+item.id);
+  }else if(grade==='9'&&g9Ex64Release.records[item.id]){
+   const proof=g9Ex64Release.records[item.id];
+   assert.equal(hash,proof.sha256,'Source-pinned four-figure-table release '+item.id);
+   assert.equal(item.answer,proof.expectedFinalAnswer,'Official textbook table answer '+item.id);
+   assert(item.q.en.includes(proof.sourcePart),'2025 source prompt '+item.id);
+   assert.equal(item.translationReview,'pending');
+   assert.equal(item.releaseStatus,'english-preview');
+   assert(!item.q.ta,'Do not invent Tamil explanation '+item.id);
   }else if(grade==='9'&&g9Ex32ById.has(item.id)){
    const approved=g9Ex32ById.get(item.id);
    assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exercise 3.2 matches source-audited batch '+item.id);

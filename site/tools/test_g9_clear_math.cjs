@@ -25,9 +25,9 @@ function check(value,original,id){
   }
  }
 }
-const items=load();assert.equal(items.length,397);
-assert.equal(new Set(items.map(q=>q.id)).size,397,'Student-facing IDs must be unique');
-assert.equal(items.filter(q=>q.kind!=='practice').length,388);
+const items=load();assert.equal(items.length,404);
+assert.equal(new Set(items.map(q=>q.id)).size,404,'Student-facing IDs must be unique');
+assert.equal(items.filter(q=>q.kind!=='practice').length,395);
 // Pin order, question wording, answers, equations and all other reasons to
 // main at 31f4a4e, including the Algebra coefficient pilot. Approved changes:
 // the edited Statistics reasons, and AUD13-02's three independently checked
@@ -48,7 +48,9 @@ assert.match(q5.steps[3].eq,/37\|50/);
 // AUD14-02 restores the exact baseline projection only for this legacy whole-grade
 // hash check. The actual six corrected source records are separately pinned by
 // test_standard_solutions and test_g9_ch6_aud14_02; no check is weakened.
-const preservation=items.map(q=>{
+const newIds=new Set(['q2-i','q2-ii','q2-iii','q2-iv','q2-v','q3-i','q3-ii'].map(p=>'c9-exercise-6-4-'+p));
+assert.equal(JSON.stringify(items.slice(-7).map(q=>q.id)),JSON.stringify([...newIds]),'Only seven approved IDs appended');
+const preservation=items.filter(q=>!newIds.has(q.id)).map(q=>{
  const legacy=tableAudit.records[q.id]||tableFollowup.records[q.id];
  const questionOriginal=sourceChoices.records[q.id];
  const steps=legacy?.originalSteps||legacy?.originalRecord?.steps||q.steps;
@@ -58,7 +60,7 @@ const preservation=items.map(q=>{
 });
 console.log('AUD13-02 G9_GRADE_PRESERVATION_SHA256 '+createHash('sha256').update(JSON.stringify(preservation)).digest('hex'));
 assert.equal(createHash('sha256').update(JSON.stringify(preservation)).digest('hex'),'f95ac8ac02528ad9eb6aaefe52c5ca8692943f4b8e2880b773ee0849c6809d43');
-assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,56,12,9,40,37,31,26]);
+assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,56,12,9,47,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
 assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,54);
 let optionRecords=0;

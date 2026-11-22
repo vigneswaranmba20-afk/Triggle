@@ -40775,6 +40775,669 @@ const records=[
         }
       }
     ]
+  },
+  {
+    "id": "c9-exercise-6-4-q2-i",
+    "questionMath": {
+      "en": [
+        "Find the value of ",
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " if\n(i) ",
+        {
+          "latex": "\\sin \\theta = 0.9975",
+          "fallback": "sin θ = 0.9975"
+        }
+      ]
+    },
+    "answerMath": [
+      {
+        "latex": "85^{\\circ}",
+        "fallback": "85°"
+      },
+      {
+        "latex": "57'",
+        "fallback": "57′"
+      },
+      " or ",
+      {
+        "latex": "85^{\\circ}",
+        "fallback": "85°"
+      },
+      {
+        "latex": "58'",
+        "fallback": "58′"
+      },
+      " or ",
+      {
+        "latex": "85^{\\circ}",
+        "fallback": "85°"
+      },
+      {
+        "latex": "59'",
+        "fallback": "59′"
+      }
+    ],
+    "steps": [
+      {
+        "math": {
+          "latex": "\\sin \\theta = 0.9975",
+          "fallback": "sin θ = 0.9975",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "To reverse a sine table, find the value ",
+            {
+              "latex": "0.9975",
+              "fallback": "0.9975"
+            },
+            " in the natural sines table rather than using an inverse-sine calculator."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&\\sin 85^{\\circ} 54' \\approx 0.9974 \\\\ &MD \\left(3' - 5'\\right) \\approx 0.0001\\end{aligned}",
+          "fallback": "sin 85°54′ ≈ 0.9974; MD(3′–5′) ≈ 0.0001",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Near ",
+            {
+              "latex": "90^{\\circ}",
+              "fallback": "90°"
+            },
+            ", several adjacent one-minute entries round to the same four-figure value. The table gives ",
+            {
+              "latex": "0.9974",
+              "fallback": "0.9974"
+            },
+            " at ",
+            {
+              "latex": "85^{\\circ}",
+              "fallback": "85°"
+            },
+            {
+              "latex": "54'",
+              "fallback": "54′"
+            },
+            ". The prescribed mean difference for the remaining minutes is ",
+            {
+              "latex": "0.0001",
+              "fallback": "0.0001"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": [
+          {
+            "latex": "\\theta = 85^{\\circ}",
+            "fallback": "θ = 85°"
+          },
+          {
+            "latex": "57'",
+            "fallback": "57′"
+          },
+          " or ",
+          {
+            "latex": "85^{\\circ}",
+            "fallback": "85°"
+          },
+          {
+            "latex": "58'",
+            "fallback": "58′"
+          },
+          " or ",
+          {
+            "latex": "85^{\\circ}",
+            "fallback": "85°"
+          },
+          {
+            "latex": "59'",
+            "fallback": "59′"
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "Therefore ",
+            {
+              "latex": "85^{\\circ}",
+              "fallback": "85°"
+            },
+            {
+              "latex": "57', 85^{\\circ}",
+              "fallback": "57′, 85°"
+            },
+            {
+              "latex": "58'",
+              "fallback": "58′"
+            },
+            " and ",
+            {
+              "latex": "85^{\\circ}",
+              "fallback": "85°"
+            },
+            {
+              "latex": "59'",
+              "fallback": "59′"
+            },
+            " are all accepted by the prescribed four-figure table and official key. Do not claim a single exact angle."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c9-exercise-6-4-q2-ii",
+    "questionMath": {
+      "en": [
+        "Find the value of ",
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " if\n(ii) ",
+        {
+          "latex": "\\cos \\theta = 0.6763",
+          "fallback": "cos θ = 0.6763"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{gathered}47^{\\circ} \\\\ 27'\\end{gathered}",
+      "fallback": "47°27′",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\cos 47^{\\circ} 24' \\approx 0.6769",
+          "fallback": "cos 47°24′ ≈ 0.6769",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find the closest preceding six-minute column in the natural cosines table: ",
+            {
+              "latex": "\\cos 47^{\\circ} 24'",
+              "fallback": "cos 47°24′"
+            },
+            " is tabulated as ",
+            {
+              "latex": "0.6769",
+              "fallback": "0.6769"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "0.6769 - 0.0006 = 0.6763",
+          "fallback": "0.6769 − 0.0006 = 0.6763",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Cosine decreases as the acute angle grows. The extra ",
+            {
+              "latex": "3'",
+              "fallback": "3′"
+            },
+            " have mean difference ",
+            {
+              "latex": "0.0006",
+              "fallback": "0.0006"
+            },
+            ", which must be subtracted: ",
+            {
+              "latex": "0.6769 - 0.0006 = 0.6763",
+              "fallback": "0.6769 − 0.0006 = 0.6763"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{gathered}\\theta = 47^{\\circ} \\\\ 27'\\end{gathered}",
+          "fallback": "θ = 47°27′",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "The required angle is ",
+            {
+              "latex": "\\theta = 47^{\\circ}",
+              "fallback": "θ = 47°"
+            },
+            {
+              "latex": "27'",
+              "fallback": "27′"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c9-exercise-6-4-q2-iii",
+    "questionMath": {
+      "en": [
+        "Find the value of ",
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " if\n(iii) ",
+        {
+          "latex": "\\tan \\theta = 0.0720",
+          "fallback": "tan θ = 0.0720"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{gathered}4^{\\circ} \\\\ 7'\\end{gathered}",
+      "fallback": "4°7′",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\tan 4^{\\circ} 06' \\approx 0.0717",
+          "fallback": "tan 4°06′ ≈ 0.0717",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Look backwards through the natural tangents table. At ",
+            {
+              "latex": "4^{\\circ}",
+              "fallback": "4°"
+            },
+            {
+              "latex": "06'",
+              "fallback": "06′"
+            },
+            ", the four-figure value is ",
+            {
+              "latex": "0.0717",
+              "fallback": "0.0717"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "0.0717 + 0.0003 = 0.0720",
+          "fallback": "0.0717 + 0.0003 = 0.0720",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "One extra minute adds a mean difference ",
+            {
+              "latex": "0.0003 : 0.0717 + 0.0003 = 0.0720",
+              "fallback": "0.0003: 0.0717 + 0.0003 = 0.0720"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{gathered}\\theta = 4^{\\circ} \\\\ 7'\\end{gathered}",
+          "fallback": "θ = 4°7′",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Therefore ",
+            {
+              "latex": "\\theta = 4^{\\circ}",
+              "fallback": "θ = 4°"
+            },
+            {
+              "latex": "7'",
+              "fallback": "7′"
+            },
+            " (four degrees seven minutes), the angle whose tabulated tangent is ",
+            {
+              "latex": "0.0720",
+              "fallback": "0.0720"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c9-exercise-6-4-q2-iv",
+    "questionMath": {
+      "en": [
+        "Find the value of ",
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " if\n(iv) ",
+        {
+          "latex": "\\cos \\theta = 0.0410",
+          "fallback": "cos θ = 0.0410"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{gathered}87^{\\circ} \\\\ 39'\\end{gathered}",
+      "fallback": "87°39′",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\cos 87^{\\circ} 36' \\approx 0.0419",
+          "fallback": "cos 87°36′ ≈ 0.0419",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find ",
+            {
+              "latex": "0.0410",
+              "fallback": "0.0410"
+            },
+            " using the four-figure natural cosines table. The preceding six-minute column is ",
+            {
+              "latex": "87^{\\circ}",
+              "fallback": "87°"
+            },
+            {
+              "latex": "36'",
+              "fallback": "36′"
+            },
+            " with value ",
+            {
+              "latex": "0.0419",
+              "fallback": "0.0419"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "0.0419 - 0.0009 = 0.0410",
+          "fallback": "0.0419 − 0.0009 = 0.0410",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "For the remaining ",
+            {
+              "latex": "3'",
+              "fallback": "3′"
+            },
+            ", subtract the cosine mean difference ",
+            {
+              "latex": "0.0009 : 0.0419 - 0.0009 = 0.0410",
+              "fallback": "0.0009: 0.0419 − 0.0009 = 0.0410"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{gathered}\\theta = 87^{\\circ} \\\\ 39'\\end{gathered}",
+          "fallback": "θ = 87°39′",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Hence ",
+            {
+              "latex": "\\theta = 87^{\\circ}",
+              "fallback": "θ = 87°"
+            },
+            {
+              "latex": "39'",
+              "fallback": "39′"
+            },
+            ", giving the requested four-figure cosine value of ",
+            {
+              "latex": "0.0410",
+              "fallback": "0.0410"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c9-exercise-6-4-q2-v",
+    "questionMath": {
+      "en": [
+        "Find the value of ",
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " if\n(v) ",
+        {
+          "latex": "\\tan \\theta = 7.5958",
+          "fallback": "tan θ = 7.5958"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{gathered}82^{\\circ} \\\\ 30'\\end{gathered}",
+      "fallback": "82°30′",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\tan 82^{\\circ} 30' \\approx 7.5958",
+          "fallback": "tan 82°30′ ≈ 7.5958",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find ",
+            {
+              "latex": "7.5958",
+              "fallback": "7.5958"
+            },
+            " directly in the natural tangents table."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "MD \\left(0'\\right) = 0",
+          "fallback": "MD(0′) = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "It occurs at ",
+            {
+              "latex": "82^{\\circ}",
+              "fallback": "82°"
+            },
+            {
+              "latex": "30'",
+              "fallback": "30′"
+            },
+            ", exactly at a six-minute column. There is no leftover minute and no mean-difference adjustment."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{gathered}\\theta = 82^{\\circ} \\\\ 30'\\end{gathered}",
+          "fallback": "θ = 82°30′",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Therefore ",
+            {
+              "latex": "\\theta = 82^{\\circ}",
+              "fallback": "θ = 82°"
+            },
+            {
+              "latex": "30'",
+              "fallback": "30′"
+            },
+            ", read directly from the natural tangent table."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c9-exercise-6-4-q3-i",
+    "questionMath": {
+      "en": [
+        "Find the value of the following:\n(i) ",
+        {
+          "latex": "\\sin 65^{\\circ} 39' + \\cos 24^{\\circ} 57' + \\tan 10^{\\circ} 10'",
+          "fallback": "sin 65°39′ + cos 24°57′ + tan 10°10′"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "1.9970",
+      "fallback": "1.9970"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\sin 65^{\\circ} 39' \\approx 0.9111",
+          "fallback": "sin 65°39′ ≈ 0.9111",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Read the prescribed four-figure trigonometric tables, including mean differences where the minutes are not an exact six-minute column."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&\\cos 24^{\\circ} 57' \\approx 0.9066 \\\\ &\\tan 10^{\\circ} 10' \\approx 0.1793\\end{aligned}",
+          "fallback": "cos 24°57′ ≈ 0.9066; tan 10°10′ ≈ 0.1793",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "The tabulated values used in the textbook calculation are ",
+            {
+              "latex": "\\sin 65^{\\circ} 39' \\approx 0.9111, \\cos 24^{\\circ} 57' \\approx 0.9066",
+              "fallback": "sin 65°39′ ≈ 0.9111, cos 24°57′ ≈ 0.9066"
+            },
+            ", and ",
+            {
+              "latex": "\\tan 10^{\\circ} 10' \\approx 0.1793",
+              "fallback": "tan 10°10′ ≈ 0.1793"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "0.9111 + 0.9066 + 0.1793 = 1.9970",
+          "fallback": "0.9111 + 0.9066 + 0.1793 = 1.9970",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Add the three four-figure table values, not intermediate unrounded calculator values: ",
+            {
+              "latex": "0.9111 + 0.9066 + 0.1793 = 1.9970",
+              "fallback": "0.9111 + 0.9066 + 0.1793 = 1.9970"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c9-exercise-6-4-q3-ii",
+    "questionMath": {
+      "en": [
+        "Find the value of the following:\n(ii) ",
+        {
+          "latex": "\\tan 70^{\\circ} 58' + \\cos 15^{\\circ} 26' - \\sin 84^{\\circ} 59'",
+          "fallback": "tan 70°58′ + cos 15°26′ − sin 84°59′"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "2.8659",
+      "fallback": "2.8659"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\tan 70^{\\circ} 58' \\approx 2.8982",
+          "fallback": "tan 70°58′ ≈ 2.8982",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Use the prescribed four-figure tables and mean differences; do not silently replace a textbook table entry with an unrounded scientific-calculator value."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&\\cos 15^{\\circ} 26' \\approx 0.9639 \\\\ &\\sin 84^{\\circ} 59' \\approx 0.9962\\end{aligned}",
+          "fallback": "cos 15°26′ ≈ 0.9639; sin 84°59′ ≈ 0.9962",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "The values in the school-table solution are ",
+            {
+              "latex": "\\tan 70^{\\circ} 58' \\approx 2.8982, \\cos 15^{\\circ} 26' \\approx 0.9639",
+              "fallback": "tan 70°58′ ≈ 2.8982, cos 15°26′ ≈ 0.9639"
+            },
+            ", and ",
+            {
+              "latex": "\\sin 84^{\\circ} 59' \\approx 0.9962",
+              "fallback": "sin 84°59′ ≈ 0.9962"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "2.8982 + 0.9639 - 0.9962 = 2.8659",
+          "fallback": "2.8982 + 0.9639 − 0.9962 = 2.8659",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Apply the subtraction sign carefully: ",
+            {
+              "latex": "2.8982 + 0.9639 - 0.9962 = 3.8621 - 0.9962 = 2.8659",
+              "fallback": "2.8982 + 0.9639 − 0.9962 = 3.8621 − 0.9962 = 2.8659"
+            },
+            ". This is the textbook's stated table-method answer; higher-precision calculator evaluation differs."
+          ]
+        }
+      }
+    ]
   }
 ];
 const texts={
@@ -47647,6 +48310,117 @@ const texts={
     "latex": "2026 - 11 - 14 - g 9",
     "fallback": "2026-11-14-g9"
   },
+  "Near 90°, several adjacent one-minute entries round to the same four-figure value.": [
+    "Near ",
+    {
+      "latex": "90^{\\circ}",
+      "fallback": "90°"
+    },
+    ", several adjacent one-minute entries round to the same four-figure value."
+  ],
+  "One extra minute adds a mean difference 0.0003": [
+    "One extra minute adds a mean difference ",
+    {
+      "latex": "0.0003",
+      "fallback": "0.0003"
+    }
+  ],
+  "The natural tangent grows as the acute angle increases. At 4 degrees 6 minutes the table reads 0.0717; adding the single-minute mean difference 0.0003 gives the requested 0.0720.": [
+    "The natural tangent grows as the acute angle increases. At ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " degrees ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    " minutes the table reads ",
+    {
+      "latex": "0.0717",
+      "fallback": "0.0717"
+    },
+    "; adding the single-minute mean difference ",
+    {
+      "latex": "0.0003",
+      "fallback": "0.0003"
+    },
+    " gives the requested ",
+    {
+      "latex": "0.0720",
+      "fallback": "0.0720"
+    },
+    "."
+  ],
+  "For the remaining 3′, subtract the cosine mean difference 0.0009": [
+    "For the remaining ",
+    {
+      "latex": "3'",
+      "fallback": "3′"
+    },
+    ", subtract the cosine mean difference ",
+    {
+      "latex": "0.0009",
+      "fallback": "0.0009"
+    }
+  ],
+  "To reverse this cosine entry, use 87 degrees 36 minutes as the preceding table column. Cosine decreases with angle, so subtract the three-minute difference 0.0009 to reach 0.0410.": [
+    "To reverse this cosine entry, use ",
+    {
+      "latex": "87",
+      "fallback": "87"
+    },
+    " degrees ",
+    {
+      "latex": "36",
+      "fallback": "36"
+    },
+    " minutes as the preceding table column. Cosine decreases with angle, so subtract the three-minute difference ",
+    {
+      "latex": "0.0009",
+      "fallback": "0.0009"
+    },
+    " to reach ",
+    {
+      "latex": "0.0410",
+      "fallback": "0.0410"
+    },
+    "."
+  ],
+  "It occurs at 82°30′, exactly at a six-minute column.": [
+    "It occurs at ",
+    {
+      "latex": "82^{\\circ}",
+      "fallback": "82°"
+    },
+    {
+      "latex": "30'",
+      "fallback": "30′"
+    },
+    ", exactly at a six-minute column."
+  ],
+  "If the target tangent is printed exactly at a six-minute column, no mean difference is necessary. Read the angle directly as 82 degrees 30 minutes, rather than estimating a nearby calculator angle.": [
+    "If the target tangent is printed exactly at a six-minute column, no mean difference is necessary. Read the angle directly as ",
+    {
+      "latex": "82",
+      "fallback": "82"
+    },
+    " degrees ",
+    {
+      "latex": "30",
+      "fallback": "30"
+    },
+    " minutes, rather than estimating a nearby calculator angle."
+  ],
+  "The expression contains one subtraction. Read all three prescribed four-figure table values, add tangent and cosine, then subtract sine. This gives the school answer 2.8659, which differs from rounding a high-precision calculator result.": [
+    "The expression contains one subtraction. Read all three prescribed four-figure table values, add tangent and cosine, then subtract sine. This gives the school answer ",
+    {
+      "latex": "2.8659",
+      "fallback": "2.8659"
+    },
+    ", which differs from rounding a high-precision calculator result."
+  ],
   "At B, AC is opposite, AB is adjacent, and BC is the hypotenuse.": [
     "At ",
     {

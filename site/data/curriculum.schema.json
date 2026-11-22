@@ -459,6 +459,13 @@
           },
           "uniqueItems": true
         },
+        "textbookQuestionIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
         "concepts": {
           "type": "array",
           "items": {

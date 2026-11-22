@@ -64,6 +64,10 @@ function loadData(root = siteRoot) {
     const filename = `data/class-${grade}.js`;
     vm.runInContext(fs.readFileSync(path.join(root, filename), 'utf8'), sandbox, { filename, timeout: 1000 });
   }
+  // Source-reviewed English-only exercise subparts are appended to the student
+  // runtime rather than the immutable Grade 9 core module.
+  const auditedGrade9 = 'data/textbook-exercises/g9-ch6-ex6-4-q2-q3-en.js';
+  vm.runInContext(fs.readFileSync(path.join(root, auditedGrade9), 'utf8'), sandbox, { filename: auditedGrade9, timeout: 1000 });
   vm.runInContext(fs.readFileSync(path.join(root, 'data/curriculum.js'), 'utf8'), sandbox, { filename: 'curriculum.js', timeout: 1000 });
   return { curriculum: sandbox.window.TRIGGLE_CURRICULUM, classes: sandbox.window.TRIGGLE_CLASSES };
 }
@@ -137,6 +141,16 @@ function validateCurriculum(curriculum, classes) {
       if (!question || !question.classNum) errors.push(chapter.id + ': broken legacy question reference ' + id);
       else if (Number(question.classNum) !== grade.grade || Number(question.chapter) !== chapter.number) errors.push(chapter.id + ': legacy question belongs to a different grade/chapter: ' + id);
       if (mappedQuestions.has(id)) errors.push(chapter.id + ': legacy question mapped more than once: ' + id);
+      mappedQuestions.add(id);
+    }
+    // Separately added textbook exercise IDs must resolve in the assembled
+    // source and can never overlap an original legacy mapping.
+    for (const id of chapter.textbookQuestionIds || []) {
+      const question = questions.get(id);
+      if (!question || !question.classNum) errors.push(chapter.id + ': broken textbook question reference ' + id);
+      else if (Number(question.classNum) !== grade.grade || Number(question.chapter) !== chapter.number)
+        errors.push(chapter.id + ': textbook question belongs to a different grade/chapter: ' + id);
+      if (mappedQuestions.has(id)) errors.push(chapter.id + ': textbook question mapped more than once: ' + id);
       mappedQuestions.add(id);
     }
     for (const field of ['concepts', 'workedExamples', 'exercises', 'quizzes']) for (const record of chapter[field]) {

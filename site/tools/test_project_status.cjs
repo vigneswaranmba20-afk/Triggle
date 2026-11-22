@@ -16,6 +16,16 @@ for(const [label,stamp] of [['generated',generatedAt],['snapshot',snapshotAt]])
 assert(Date.parse(snapshotAt)<=Date.now()+60000,'Snapshot provenance timestamp is in the future');
 assert.deepEqual(manifest.grades.map(g=>g.totalChapters),[9,8,12,12]);
 for(const g of manifest.grades){assert.equal(g.completedEnglishChapters+g.partialChapters+g.pendingChapters,g.totalChapters);assert.equal(g.coveragePercent,null);assert.equal(g.wholeGradeTaskDenominator,null);}
+// AUD14-02: the seven published textbook parts must appear in the actual
+// chapter exercise inventory, not merely as directly addressable questions.
+const grade9=manifest.grades.find(g=>g.grade===9);
+const grade9Chapter6=grade9.chapters.find(c=>String(c.number)==='6');
+const exercise64=grade9Chapter6.exercises.find(e=>e.id==='6.4');
+const newG9Ids=['q2-i','q2-ii','q2-iii','q2-iv','q2-v','q3-i','q3-ii'].map(s=>'c9-exercise-6-4-'+s);
+assert.equal(grade9.exerciseRecords,395,'Grade 9 exercise inventory includes exactly seven new source parts');
+assert.equal(grade9Chapter6.exerciseRecords,47,'Grade 9 Chapter 6 inventory includes seven new source parts');
+assert.equal(exercise64.records.length,16,'Exercise 6.4 shows its original nine plus seven approved questions');
+for(const id of newG9Ids)assert(exercise64.records.some(r=>r.id===id),'Exercise 6.4 catalogue missing '+id);
 const twelveExercises=manifest.grades.find(g=>g.grade===12).chapters[0].exercises;
 const ex11=twelveExercises.find(e=>e.id==='1.1');
 // A changed module awaits a new live hash verification; retain all 21 source-verified tasks.
