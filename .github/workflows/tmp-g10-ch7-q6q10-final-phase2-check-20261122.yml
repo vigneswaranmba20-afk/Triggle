@@ -10,7 +10,6 @@ concurrency:
   cancel-in-progress: true
 jobs:
   validate-refresh:
-    if: github.event.head_commit.message == 'ci(g10): refresh Phase2 projection and run focused browser verification'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
