@@ -58,7 +58,8 @@ const CASES=[
       await page.evaluate(()=>document.fonts.ready);
       const state=await page.evaluate(()=>({
        language:document.documentElement.lang,
-       title:document.querySelector('#questionLabel')?.textContent||'',
+       title:document.querySelector('#questionHead')?.textContent||'',
+       pendingBadge:document.querySelector('#kindBadge')?.textContent||'',
        question:document.querySelector('#questionText')?.textContent||'',
        answer:document.querySelector('#stepsList .final-answer-step')?.textContent||'',
        steps:document.querySelectorAll('#stepsList .worked-step').length,
@@ -78,7 +79,10 @@ const CASES=[
       const compact=state.answer.replace(/\s+/g,'');
       const digits=part==='q2-i'?['85','57','58','59']:answer.match(/\d+/g)||[];
       for(const token of digits)assert(compact.includes(token),'Final answer token '+token+' for '+id);
-      if(lang==='ta')assert(state.title.includes('English only'),'Never claim source text was Tamil-translated');
+      if(lang==='ta'){
+       assert(state.title.includes('English only'),'New source label must disclose English-only status');
+       assert(state.pendingBadge.includes('தமிழ் மொழிபெயர்ப்பு நிலுவையில்'),'Tamil translation must be visibly marked pending');
+      }
       if(part==='q3-ii')assert(!compact.includes('2.8665'),'Do not replace the prescribed table answer with calculator value');
       row.passed=true;
       row.steps=state.steps;row.overflowPx=state.overflowPx;row.mathErrors=state.mathErrors;
