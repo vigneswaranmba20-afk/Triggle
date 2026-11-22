@@ -299,7 +299,7 @@ for(const [grade,data] of Object.entries(classes)){
    assert.equal(item.q.en,passport.englishQuestion,'Chapter 7 question matches archived English source text '+item.id);
    assert.equal(item.edition,'2025');
    assert.equal(item.translationReview,'pending');
-   assert.equal(item.sourceFidelity?.status,'text-layer-checked-page-image-pending');
+   assert.equal(item.sourceFidelity?.status,'page-visual-checked');
    assert(!item.q.ta,'Do not invent unreviewed Tamil teaching copy '+item.id);
   }else if(grade==='9'&&g9Ex32ById.has(item.id)){
    const approved=g9Ex32ById.get(item.id);
