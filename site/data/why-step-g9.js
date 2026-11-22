@@ -208,10 +208,10 @@
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-ii": {
-      "step": 1,
-      "expected": "Evaluate cosine, retaining extra digits before rounding.",
-      "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
-      "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
+      "step": 2,
+      "expected": "For cosine, subtract the three-minute mean difference",
+      "en": "The cosine column decreases as the angle increases. Start from the table value at 74°36′ and subtract the listed mean difference for three extra minutes. A calculator may round to a different fourth decimal.",
+      "ta": "கோணம் அதிகரிக்கும்போது கோசைன் மதிப்பு குறையும். 74°36′ அட்டவணை மதிப்பிலிருந்து 3′ சராசரி வேறுபாட்டைக் கழிக்க வேண்டும். கணிப்பான் தோராய மதிப்பு மாறலாம்.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-iii": {
@@ -236,10 +236,10 @@
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-vi": {
-      "step": 1,
-      "expected": "Evaluate tangent without rounding the angle first.",
-      "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
-      "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
+      "step": 3,
+      "expected": "Directly evaluating tangent with full angle precision",
+      "en": "The textbook answer key prints 2.7907, while direct full-precision tangent is approximately 2.7903. Never treat different approximations as identical. The actual tangent-table mean-difference row still needs independent checking.",
+      "ta": "பாடநூல் விடைக்குறிப்பில் 2.7907; நேரடிக் கணிப்பானில் சுமார் 2.7903. இவை சமமான நான்கு தசம மதிப்புகள் அல்ல. tan அட்டவணையைத் தனியாகச் சரிபார்க்க வேண்டும்.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q4": {
