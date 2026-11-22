@@ -68,42 +68,47 @@ jobs:
           unset GEMINI_API_KEY GOOGLE_API_KEY OPENAI_API_KEY
           python3 site/tools/test_trace_area_m06_release.py
           node --check site/assets/chapter-hub.js
-      - name: Download only one official GitHub issue MP4 attachment
+      - name: Require merged release engineering and exact owner approval marker
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(gh api "repos/${GITHUB_REPOSITORY}/pulls/352" --jq '.merged')" = true
+          python3 - <<'PY'
+          import os,re
+          marker='TRACE_PUBLISH_G10_AREA_M06_V2_20261122'
+          body=os.environ['APPROVAL_COMMENT']
+          if len(re.findall(r'(?m)^'+re.escape(marker)+r'\s*$',body))!=1:
+              raise SystemExit('Reject missing, duplicated, or embedded approval marker')
+          print('PASS explicit owner approval from Issue 351')
+          PY
+      - name: Checkout exact SHA-pinned owner-reviewed media staging
+        uses: actions/checkout@v4
+        with:
+          ref: ea6f1b1a29777b7fa88142601265dcb917bad59d
+          path: m06-approved-media
+          persist-credentials: false
+      - name: Reassemble exact 19 V2 chunks with no outside download
         run: |
           set -euo pipefail
           mkdir -p "$(dirname "$VIDEO")"
           python3 - <<'PY'
-          import os,re
+          import os
           from pathlib import Path
-          from urllib.parse import urlsplit
-          from urllib.request import Request,urlopen
-          marker='TRACE_PUBLISH_G10_AREA_M06_V2_20261122'
-          body=os.environ['APPROVAL_COMMENT']
-          if len(re.findall(r'(?m)^'+re.escape(marker)+r'\s*$',body)) != 1:
-              raise SystemExit('Owner marker must occur exactly once on its own line')
-          urls=re.findall(r'https://github\.com/user-attachments/(?:files|assets)/[A-Za-z0-9_-]+(?:/[A-Za-z0-9._%+-]+)?',body)
-          if len(urls)!=1:
-              raise SystemExit('Exactly one GitHub user-attachments V2 MP4 link is required')
-          source=urlsplit(urls[0])
-          if source.scheme!='https' or source.hostname!='github.com' or source.port or source.username or source.password:
-              raise SystemExit('Untrusted attachment URL')
-          target=Path(os.environ['VIDEO'])
-          total=0
-          with urlopen(Request(urls[0],headers={'User-Agent':'Triggle-TRACE-M06-reviewed-media/1'}), timeout=120) as response:
-              redirect=urlsplit(response.geturl())
-              host=(redirect.hostname or '').lower()
-              if redirect.scheme!='https' or not (host=='github.com' or host.endswith('.githubusercontent.com') or host.endswith('.amazonaws.com')):
-                  raise SystemExit('Untrusted attachment redirect')
-              with target.open('wb') as output:
-                  while True:
-                      chunk=response.read(1024*1024)
-                      if not chunk: break
-                      total+=len(chunk)
-                      if total>5_000_000:raise SystemExit('MP4 exceeds 5MB safety limit')
-                      output.write(chunk)
-          if total!=int(os.environ['EXPECTED_SIZE']):
-              raise SystemExit('Wrong V2 MP4 file size')
-          print('PASS owner attachment size:',total)
+          parts=Path("m06-approved-media/.trace-media-staging/m06-v2")
+          expected=[f"part-{i:02}.bin" for i in range(19)]
+          actual=sorted(p.name for p in parts.glob("*.bin"))
+          if actual!=expected:
+              raise SystemExit("Reject incomplete, extra, or reordered V2 staging parts")
+          with open(os.environ['VIDEO'],'wb') as output:
+              for i,name in enumerate(expected):
+                  data=(parts/name).read_bytes()
+                  if len(data)!=(180000 if i<18 else 101368):
+                      raise SystemExit(f"Incorrect staging part size: {name}")
+                  output.write(data)
+          if Path(os.environ['VIDEO']).stat().st_size!=int(os.environ['EXPECTED_SIZE']):
+              raise SystemExit("Incorrect reconstructed video size")
+          print('PASS 19 exact parts joined into approved V2 size')
           PY
       - name: Check precise SHA, H264/AAC, 9:16 portrait, duration and complete decode
         run: |
