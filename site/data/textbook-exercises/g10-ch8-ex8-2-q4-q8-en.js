@@ -9,17 +9,20 @@ const entries=[
     "chapter": "8",
     "exercise": "8.2",
     "topic": {
-      "en": "Statistics and Probability"
+      "en": "Statistics and Probability",
+      "ta": "புள்ளியியலும் நிகழ்தகவும்"
     },
     "label": {
       "en": "Exercise 8.2 · Q4",
-      "ta": "Exercise 8.2 · Q4 (English only; Tamil review pending)"
+      "ta": "பயிற்சி 8.2 · வினா 4"
     },
     "title": {
-      "en": "Variation from summary data"
+      "en": "Variation from summary data",
+      "ta": "தொகுக்கப்பட்ட தரவிலிருந்து மாறுபாட்டுக் கெழு"
     },
     "q": {
-      "en": "4. If n = 5, x̄ = 6, Σx² = 765, then calculate the coefficient of variation."
+      "en": "4. If n = 5, x̄ = 6, Σx² = 765, then calculate the coefficient of variation.",
+      "ta": "4. n = 5, x̄ = 6, Σx² = 765 எனில், மாறுபாட்டுக் கெழுவைக் காண்க."
     },
     "steps": [
       {
@@ -29,7 +32,8 @@ const entries=[
           "latex": "\\sigma^2=\\dfrac{\\sum x^2}{n}-\\bar{x}^{\\,2}",
           "display": true,
           "fallback": "n = 5; x̄ = 6; Σx² = 765; σ² = Σx²/n − x̄²"
-        }
+        },
+        "ta": "n என்பது மதிப்புகளின் எண்ணிக்கை; x̄ என்பது சராசரி; Σx² என்பது மதிப்புகளின் வர்க்கங்களின் கூடுதல். விலக்க வர்க்கச் சராசரிக்கான சூத்திரத்தைப் பயன்படுத்துக."
       },
       {
         "en": "Substitute the given data before taking the square root.",
@@ -38,7 +42,8 @@ const entries=[
           "latex": "\\sigma^2=\\dfrac{765}{5}-6^2=117",
           "display": true,
           "fallback": "σ² = 765/5 − 6² = 117"
-        }
+        },
+        "ta": "வர்க்கமூலம் காண்பதற்கு முன் கொடுக்கப்பட்ட மதிப்புகளைச் சூத்திரத்தில் பதிலிடுக."
       },
       {
         "en": "Standard deviation is the nonnegative square root of variance.",
@@ -47,7 +52,8 @@ const entries=[
           "latex": "\\sigma=\\sqrt{117}=3\\sqrt{13}",
           "display": true,
           "fallback": "σ = √117 = 3√13"
-        }
+        },
+        "ta": "திட்ட விலக்கம் என்பது விலக்க வர்க்கச் சராசரியின் எதிர்மறையற்ற வர்க்கமூலம்."
       },
       {
         "en": "The coefficient of variation is standard deviation divided by the mean, multiplied by 100%. Keep exact values until the end.",
@@ -56,7 +62,8 @@ const entries=[
           "latex": "\\text{C.V.}=\\dfrac{3\\sqrt{13}}{6}\\times100\\%=50\\sqrt{13}\\%",
           "display": true,
           "fallback": "C.V. = 3√13/6 × 100% = 50√13%"
-        }
+        },
+        "ta": "மாறுபாட்டுக் கெழு = (திட்ட விலக்கம் / சராசரி) × 100%. துல்லியமான மதிப்புகளை இறுதிவரை வைத்திருக்கவும்."
       },
       {
         "en": "Round once at the final step. A coefficient above 100% is possible when spread exceeds the mean.",
@@ -65,13 +72,17 @@ const entries=[
           "latex": "\\text{C.V.}\\approx180.28\\%",
           "display": true,
           "fallback": "C.V. ≈ 180.28%"
-        }
+        },
+        "ta": "இறுதியில் மட்டுமே தசமத்தைச் சுற்றுக. பரவல் சராசரியை விட அதிகமாக இருந்தால் மாறுபாட்டுக் கெழு 100%-ஐத் தாண்டலாம்."
       }
     ],
-    "answer": "The coefficient of variation is 180.28%.",
+    "answer": {
+      "en": "The coefficient of variation is 180.28%.",
+      "ta": "மாறுபாட்டுக் கெழு 180.28%."
+    },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-    "reference": "TN SCERT Grade 10 Mathematics revised 2025, English printed p.316 / PDF p.322, answer key printed p.342 / PDF p.348, visually inspected; Tamil printed pp.325-326 / PDF pp.331-332 visually inspected for source data and intent. Full Tamil editorial review pending.",
+    "reference": "TN SCERT Grade 10 Mathematics revised 2025, English printed p.316 / PDF p.322, answer key printed p.342 / PDF p.348, visually inspected; Tamil printed pp.325-326 / PDF pp.331-332 visually inspected for source data and intent. Full Tamil editorial review pending. Tamil question wording source-checked against revised 2025 printed pp.325-326; teacher/editorial verification of Tamil explanations pending.",
     "edition": "2025",
     "translationReview": "pending",
     "checkpoint": "2026-11-21",
@@ -84,7 +95,9 @@ const entries=[
       "latex": "\\text{4. If }n=5,\\ \\bar{x}=6,\\ \\sum x^2=765,\\ \\text{then calculate the coefficient of variation.}",
       "display": true,
       "fallback": "4. If n = 5, x̄ = 6, Σx² = 765, then calculate the coefficient of variation."
-    }
+    },
+    "tamilQuestionSourceVerified": true,
+    "tamilWorkedSolutionReview": "pending"
   },
   {
     "id": "c10-8-ex8-2-q5",
@@ -92,17 +105,20 @@ const entries=[
     "chapter": "8",
     "exercise": "8.2",
     "topic": {
-      "en": "Statistics and Probability"
+      "en": "Statistics and Probability",
+      "ta": "புள்ளியியலும் நிகழ்தகவும்"
     },
     "label": {
       "en": "Exercise 8.2 · Q5",
-      "ta": "Exercise 8.2 · Q5 (English only; Tamil review pending)"
+      "ta": "பயிற்சி 8.2 · வினா 5"
     },
     "title": {
-      "en": "Variation of six observations"
+      "en": "Variation of six observations",
+      "ta": "ஆறு மதிப்புகளின் மாறுபாட்டுக் கெழு"
     },
     "q": {
-      "en": "5. Find the coefficient of variation of 24, 26, 33, 37, 29, 31."
+      "en": "5. Find the coefficient of variation of 24, 26, 33, 37, 29, 31.",
+      "ta": "5. 24, 26, 33, 37, 29, 31 ஆகியவற்றின் மாறுபாட்டுக் கெழுவைக் காண்க."
     },
     "steps": [
       {
@@ -112,7 +128,8 @@ const entries=[
           "latex": "\\bar{x}=\\dfrac{24+26+33+37+29+31}{6}=30",
           "display": true,
           "fallback": "Σx = 180; n = 6; x̄ = 180/6 = 30"
-        }
+        },
+        "ta": "ஆறு மதிப்புகளையும் கூட்டுக. அவற்றின் கூடுதலை எண்ணிக்கை n-ஆல் வகுத்தால் சராசரி x̄ கிடைக்கும்."
       },
       {
         "en": "Subtract the mean 30 from each observation. The deviations d sum to zero.",
@@ -121,7 +138,8 @@ const entries=[
           "latex": "d_i=x_i-30:\\ -6,-4,3,7,-1,1;\\quad\\sum d_i=0",
           "display": true,
           "fallback": "d = −6, −4, 3, 7, −1, 1; Σd = 0"
-        }
+        },
+        "ta": "ஒவ்வொரு மதிப்பிலிருந்தும் சராசரி 30-ஐக் கழிக்கவும். கிடைக்கும் விலக்கங்களின் கூடுதல் பூச்சியம்."
       },
       {
         "en": "Square the deviations and add. For population standard deviation divide by n, not n−1.",
@@ -130,7 +148,8 @@ const entries=[
           "latex": "\\sum d_i^2=36+16+9+49+1+1=112",
           "display": true,
           "fallback": "Σd² = 36 + 16 + 9 + 49 + 1 + 1 = 112"
-        }
+        },
+        "ta": "விலக்கங்களை வர்க்கப்படுத்திக் கூட்டுக. இங்கு மொத்தத் தரவுக்கான திட்ட விலக்கம் காண n-ஆல் வகுக்க வேண்டும்; n−1-ஆல் அல்ல."
       },
       {
         "en": "The variance is the average squared deviation. Its positive square root is σ.",
@@ -139,7 +158,8 @@ const entries=[
           "latex": "\\sigma=\\sqrt{\\dfrac{112}{6}}=\\sqrt{\\dfrac{56}{3}}\\approx4.32049",
           "display": true,
           "fallback": "σ = √(112/6) = √(56/3) ≈ 4.32049"
-        }
+        },
+        "ta": "விலக்க வர்க்கச் சராசரி என்பது வர்க்க விலக்கங்களின் சராசரி. அதன் நேர்ம வர்க்கமூலம் σ."
       },
       {
         "en": "Divide standard deviation by the mean and multiply by 100%. This ratio is a percentage without units.",
@@ -148,13 +168,17 @@ const entries=[
           "latex": "\\text{C.V.}=\\dfrac{\\sqrt{56/3}}{30}\\times100\\%\\approx14.4\\%",
           "display": true,
           "fallback": "C.V. ≈ (4.32049/30) × 100% ≈ 14.4%"
-        }
+        },
+        "ta": "திட்ட விலக்கத்தைச் சராசரியால் வகுத்து 100%-ஆல் பெருக்குக. இந்தச் சதவீதத்திற்கு அலகு இல்லை."
       }
     ],
-    "answer": "The coefficient of variation is approximately 14.4%.",
+    "answer": {
+      "en": "The coefficient of variation is approximately 14.4%.",
+      "ta": "மாறுபாட்டுக் கெழு தோராயமாக 14.4%."
+    },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-    "reference": "TN SCERT Grade 10 Mathematics revised 2025, English printed p.316 / PDF p.322, answer key printed p.342 / PDF p.348, visually inspected; Tamil printed pp.325-326 / PDF pp.331-332 visually inspected for source data and intent. Full Tamil editorial review pending.",
+    "reference": "TN SCERT Grade 10 Mathematics revised 2025, English printed p.316 / PDF p.322, answer key printed p.342 / PDF p.348, visually inspected; Tamil printed pp.325-326 / PDF pp.331-332 visually inspected for source data and intent. Full Tamil editorial review pending. Tamil question wording source-checked against revised 2025 printed pp.325-326; teacher/editorial verification of Tamil explanations pending.",
     "edition": "2025",
     "translationReview": "pending",
     "checkpoint": "2026-11-21",
@@ -162,7 +186,9 @@ const entries=[
       "latex": "\\boxed{\\text{C.V.}\\approx14.4\\%}",
       "display": true,
       "fallback": "The coefficient of variation is approximately 14.4%."
-    }
+    },
+    "tamilQuestionSourceVerified": true,
+    "tamilWorkedSolutionReview": "pending"
   },
   {
     "id": "c10-8-ex8-2-q6",
@@ -170,17 +196,20 @@ const entries=[
     "chapter": "8",
     "exercise": "8.2",
     "topic": {
-      "en": "Statistics and Probability"
+      "en": "Statistics and Probability",
+      "ta": "புள்ளியியலும் நிகழ்தகவும்"
     },
     "label": {
       "en": "Exercise 8.2 · Q6",
-      "ta": "Exercise 8.2 · Q6 (English only; Tamil review pending)"
+      "ta": "பயிற்சி 8.2 · வினா 6"
     },
     "title": {
-      "en": "Variation in homework completion times"
+      "en": "Variation in homework completion times",
+      "ta": "வீட்டுப்பாட நேரங்களின் மாறுபாட்டுக் கெழு"
     },
     "q": {
-      "en": "6. The time taken (in minutes) to complete a homework by 8 students in a day are given by 38, 40, 47, 44, 46, 43, 49, 53. Find the coefficient of variation."
+      "en": "6. The time taken (in minutes) to complete a homework by 8 students in a day are given by 38, 40, 47, 44, 46, 43, 49, 53. Find the coefficient of variation.",
+      "ta": "6. 8 மாணவர்கள் ஒரு நாளில் வீட்டுப் பாடத்தை முடிப்பதற்கு எடுத்துக் கொள்ளும் கால அளவுகள் (நிமிடங்களில்) பின்வருமாறு கொடுக்கப்பட்டுள்ளன: 38, 40, 47, 44, 46, 43, 49, 53. இத்தரவின் மாறுபாட்டுக் கெழுவைக் காண்க."
     },
     "steps": [
       {
@@ -190,7 +219,8 @@ const entries=[
           "latex": "\\bar{x}=\\dfrac{360}{8}=45\\text{ minutes}",
           "display": true,
           "fallback": "Σx = 360; n = 8; x̄ = 45 minutes"
-        }
+        },
+        "ta": "மொத்தம் 8 நேர மதிப்புகள் உள்ளன. அவற்றைக் கூட்டி 8-ஆல் வகுத்து சராசரி x̄-ஐ நிமிடங்களில் காண்க."
       },
       {
         "en": "Subtract 45 from each value. The deviations must sum to zero.",
@@ -199,7 +229,8 @@ const entries=[
           "latex": "d_i:\\ -7,-5,2,-1,1,-2,4,8;\\quad\\sum d_i=0",
           "display": true,
           "fallback": "d = −7, −5, 2, −1, 1, −2, 4, 8; Σd = 0"
-        }
+        },
+        "ta": "ஒவ்வொரு நேரத்திலிருந்தும் 45-ஐக் கழிக்கவும். எல்லா விலக்கங்களின் கூடுதல் பூச்சியமாக இருக்க வேண்டும்."
       },
       {
         "en": "Add squared deviations and divide by the total number n=8 (population variance).",
@@ -208,7 +239,8 @@ const entries=[
           "latex": "\\sigma^2=\\dfrac{164}{8}=20.5",
           "display": true,
           "fallback": "Σd² = 164; σ² = 164/8 = 20.5"
-        }
+        },
+        "ta": "வர்க்க விலக்கங்களைக் கூட்டி மொத்த எண்ணிக்கை n = 8-ஆல் வகுக்கவும்."
       },
       {
         "en": "Keep σ = √20.5 unrounded to calculate an accurate coefficient of variation. Minutes cancel out.",
@@ -217,7 +249,8 @@ const entries=[
           "latex": "\\text{C.V.}=\\dfrac{\\sqrt{20.5}}{45}\\times100\\%\\approx10.06154\\%",
           "display": true,
           "fallback": "σ = √20.5 ≈ 4.52769; C.V. ≈ 10.06154%"
-        }
+        },
+        "ta": "மாறுபாட்டுக் கெழுவைத் துல்லியமாகக் கணக்கிட σ = √20.5-ஐச் சுற்றாமல் வைத்திருக்கவும். நிமிடம் என்ற அலகு ரத்தாகும்."
       },
       {
         "en": "Full-precision rounding gives 10.06%. The 2025 textbook key prints 10.07% because it first rounds σ to 4.53, then computes 4.53/45 × 100 ≈ 10.0667%. This difference is explained, not concealed.",
@@ -226,13 +259,17 @@ const entries=[
           "latex": "\\begin{aligned}\\text{Exact final rounding}&:\\ 10.06\\%\\\\\\text{Rounded }\\sigma=4.53&:\\ \\dfrac{4.53}{45}\\times100\\%\\approx10.07\\%\\end{aligned}",
           "display": true,
           "fallback": "Full precision → 10.06%; textbook's intermediate-rounding method → 10.07%"
-        }
+        },
+        "ta": "முழுத் துல்லியத்துடன் கணக்கிட்டால் 10.06%. 2025 பாடநூல் விடை 10.07%; அது σ-ஐ முதலில் 4.53 எனச் சுற்றி, (4.53/45) × 100 ≈ 10.0667% எனக் கணக்கிடுவதால் ஏற்படுகிறது. இரு விடைகளுக்குமான காரணம் விளக்கப்பட்டுள்ளது."
       }
     ],
-    "answer": "Textbook convention: 10.07%; retaining full precision until the final step gives 10.06%.",
+    "answer": {
+      "en": "Textbook convention: 10.07%; retaining full precision until the final step gives 10.06%.",
+      "ta": "பாடநூல் விடை 10.07%; முழுத் துல்லியத்துடன் இறுதியில் சுற்றினால் 10.06%."
+    },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-    "reference": "TN SCERT Grade 10 Mathematics revised 2025, English printed p.316 / PDF p.322, answer key printed p.342 / PDF p.348, visually inspected; Tamil printed pp.325-326 / PDF pp.331-332 visually inspected for source data and intent. Full Tamil editorial review pending.",
+    "reference": "TN SCERT Grade 10 Mathematics revised 2025, English printed p.316 / PDF p.322, answer key printed p.342 / PDF p.348, visually inspected; Tamil printed pp.325-326 / PDF pp.331-332 visually inspected for source data and intent. Full Tamil editorial review pending. Tamil question wording source-checked against revised 2025 printed pp.325-326; teacher/editorial verification of Tamil explanations pending.",
     "edition": "2025",
     "translationReview": "pending",
     "checkpoint": "2026-11-21",
@@ -240,7 +277,9 @@ const entries=[
       "latex": "\\boxed{\\text{C.V.}\\approx10.07\\%\\ \\text{(textbook rounding)}}",
       "display": true,
       "fallback": "Textbook convention: 10.07%; retaining full precision until the final step gives 10.06%."
-    }
+    },
+    "tamilQuestionSourceVerified": true,
+    "tamilWorkedSolutionReview": "pending"
   },
   {
     "id": "c10-8-ex8-2-q7",
@@ -248,17 +287,20 @@ const entries=[
     "chapter": "8",
     "exercise": "8.2",
     "topic": {
-      "en": "Statistics and Probability"
+      "en": "Statistics and Probability",
+      "ta": "புள்ளியியலும் நிகழ்தகவும்"
     },
     "label": {
       "en": "Exercise 8.2 · Q7",
-      "ta": "Exercise 8.2 · Q7 (English only; Tamil review pending)"
+      "ta": "பயிற்சி 8.2 · வினா 7"
     },
     "title": {
-      "en": "Comparing two students' consistency"
+      "en": "Comparing two students' consistency",
+      "ta": "இரு மாணவர்களின் மதிப்பெண் நிலைத்தன்மை"
     },
     "q": {
-      "en": "7. The total marks scored by two students Sathya and Vidhya in 5 subjects are 460 and 480 with standard deviation 4.6 and 2.4 respectively. Who is more consistent in performance?"
+      "en": "7. The total marks scored by two students Sathya and Vidhya in 5 subjects are 460 and 480 with standard deviation 4.6 and 2.4 respectively. Who is more consistent in performance?",
+      "ta": "7. சத்யா மற்றும் வித்யா இருவரும் 5 பாடங்களில் பெற்ற மொத்த மதிப்பெண்கள் முறையே 460 மற்றும் 480 ஆகும். மேலும், அவற்றின் திட்ட விலக்கங்கள் முறையே 4.6 மற்றும் 2.4 எனில், யாருடைய செயல்திறன் மிகுந்த நிலைத்தன்மை கொண்டது?"
     },
     "steps": [
       {
@@ -268,7 +310,8 @@ const entries=[
           "latex": "\\bar{x}_{S}=\\dfrac{460}{5}=92,\\quad\\bar{x}_{V}=\\dfrac{480}{5}=96",
           "display": true,
           "fallback": "Sathya mean = 460/5 = 92; Vidhya mean = 480/5 = 96"
-        }
+        },
+        "ta": "சராசரி என்பது மொத்த மதிப்பெண்களைப் பாடங்களின் எண்ணிக்கையால் வகுப்பதாகும்; மொத்த மதிப்பெண்களையே நேரடியாகச் சராசரியாகப் பயன்படுத்தக் கூடாது."
       },
       {
         "en": "Use each student's given standard deviation σ and the formula C.V. = (σ/mean) × 100%.",
@@ -277,7 +320,8 @@ const entries=[
           "latex": "\\text{C.V.}=\\dfrac{\\sigma}{\\bar{x}}\\times100\\%",
           "display": true,
           "fallback": "σS = 4.6, σV = 2.4; C.V. = σ/x̄ × 100%"
-        }
+        },
+        "ta": "ஒவ்வொரு மாணவருக்கும் கொடுக்கப்பட்ட திட்ட விலக்கம் σ மற்றும் C.V. = (σ/சராசரி) × 100% என்ற சூத்திரத்தைப் பயன்படுத்துக."
       },
       {
         "en": "Sathya's coefficient of variation is based on mean 92, not total 460.",
@@ -286,7 +330,8 @@ const entries=[
           "latex": "\\text{C.V.}_{S}=\\dfrac{4.6}{92}\\times100\\%=5\\%",
           "display": true,
           "fallback": "C.V. (Sathya) = 4.6/92 × 100% = 5%"
-        }
+        },
+        "ta": "சத்யாவின் மாறுபாட்டுக் கெழுவைக் காண சராசரி 92-ஐப் பயன்படுத்துக; மொத்தம் 460-ஐ அல்ல."
       },
       {
         "en": "Vidhya's coefficient of variation is based on mean 96, not total 480.",
@@ -295,7 +340,8 @@ const entries=[
           "latex": "\\text{C.V.}_{V}=\\dfrac{2.4}{96}\\times100\\%=2.5\\%",
           "display": true,
           "fallback": "C.V. (Vidhya) = 2.4/96 × 100% = 2.5%"
-        }
+        },
+        "ta": "வித்யாவின் மாறுபாட்டுக் கெழுவைக் காண சராசரி 96-ஐப் பயன்படுத்துக; மொத்தம் 480-ஐ அல்ல."
       },
       {
         "en": "The smaller C.V. indicates more consistent scores relative to the mean. Vidhya has the smaller C.V.",
@@ -304,21 +350,32 @@ const entries=[
           "latex": "2.5\\%<5\\%\\quad\\Longrightarrow\\quad\\text{Vidhya is more consistent}",
           "display": true,
           "fallback": "2.5% < 5% → Vidhya is more consistent"
-        }
+        },
+        "ta": "மாறுபாட்டுக் கெழு குறைவானவரின் மதிப்பெண்கள் சராசரியை ஒப்பிடும்போது அதிக நிலைத்தன்மை கொண்டவை. வித்யாவின் கெழு குறைவு."
       }
     ],
-    "answer": "Vidhya is more consistent in performance.",
+    "answer": {
+      "en": "Vidhya is more consistent in performance.",
+      "ta": "வித்யாவின் செயல்திறன் அதிக நிலைத்தன்மை கொண்டது."
+    },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-    "reference": "TN SCERT Grade 10 Mathematics revised 2025, English printed p.316 / PDF p.322, answer key printed p.342 / PDF p.348, visually inspected; Tamil printed pp.325-326 / PDF pp.331-332 visually inspected for source data and intent. Full Tamil editorial review pending.",
+    "reference": "TN SCERT Grade 10 Mathematics revised 2025, English printed p.316 / PDF p.322, answer key printed p.342 / PDF p.348, visually inspected; Tamil printed pp.325-326 / PDF pp.331-332 visually inspected for source data and intent. Full Tamil editorial review pending. Tamil question wording source-checked against revised 2025 printed pp.325-326; teacher/editorial verification of Tamil explanations pending.",
     "edition": "2025",
     "translationReview": "pending",
     "checkpoint": "2026-11-21",
     "answerMath": {
       "latex": "\\boxed{\\text{Vidhya is more consistent}}",
       "display": true,
-      "fallback": "Vidhya is more consistent in performance."
-    }
+      "fallback": "Vidhya is more consistent in performance.",
+      "ta": {
+        "latex": "\\boxed{\\text{வித்யா — அதிக நிலைத்தன்மை}}",
+        "display": true,
+        "fallback": "வித்யாவின் செயல்திறன் அதிக நிலைத்தன்மை கொண்டது."
+      }
+    },
+    "tamilQuestionSourceVerified": true,
+    "tamilWorkedSolutionReview": "pending"
   },
   {
     "id": "c10-8-ex8-2-q8",
@@ -326,17 +383,20 @@ const entries=[
     "chapter": "8",
     "exercise": "8.2",
     "topic": {
-      "en": "Statistics and Probability"
+      "en": "Statistics and Probability",
+      "ta": "புள்ளியியலும் நிகழ்தகவும்"
     },
     "label": {
       "en": "Exercise 8.2 · Q8",
-      "ta": "Exercise 8.2 · Q8 (English only; Tamil review pending)"
+      "ta": "பயிற்சி 8.2 · வினா 8"
     },
     "title": {
-      "en": "Comparing consistency across three subjects"
+      "en": "Comparing consistency across three subjects",
+      "ta": "மூன்று பாடங்களின் மதிப்பெண் நிலைத்தன்மை"
     },
     "q": {
-      "en": "8. The mean and standard deviation of marks obtained by 40 students of a class in three subjects Mathematics, Science and Social Science are given below. Which of the three subjects shows more consistent and which shows less consistent in marks?"
+      "en": "8. The mean and standard deviation of marks obtained by 40 students of a class in three subjects Mathematics, Science and Social Science are given below. Which of the three subjects shows more consistent and which shows less consistent in marks?",
+      "ta": "8. ஒரு வகுப்பில் உள்ள 40 மாணவர்கள், கணிதம், அறிவியல் மற்றும் சமூக அறிவியல் ஆகிய மூன்று பாடங்களில் பெற்ற மதிப்பெண்களின் சராசரி மற்றும் திட்ட விலக்கம் கீழே கொடுக்கப்பட்டுள்ளன. இந்த மூன்று பாடங்களில் எது அதிக நிலைத்தன்மை கொண்டது மற்றும் எது குறைந்த நிலைத்தன்மை கொண்டது?"
     },
     "steps": [
       {
@@ -346,7 +406,8 @@ const entries=[
           "latex": "\\text{C.V.}=\\dfrac{\\sigma}{\\bar{x}}\\times100\\%",
           "display": true,
           "fallback": "C.V. = σ/x̄ × 100%"
-        }
+        },
+        "ta": "அட்டவணையில் ஒவ்வொரு பாடத்திற்கும் சராசரி x̄ மற்றும் திட்ட விலக்கம் σ கொடுக்கப்பட்டுள்ளன. 40 மாணவர்களின் தகவல் ஏற்கெனவே இம்மதிப்புகளில் உள்ளது; மீண்டும் 40-ஆல் வகுக்க வேண்டாம்."
       },
       {
         "en": "Compute the coefficient of variation for Mathematics.",
@@ -355,7 +416,8 @@ const entries=[
           "latex": "\\text{C.V.}_{M}=\\dfrac{12}{56}\\times100\\%\\approx21.43\\%",
           "display": true,
           "fallback": "12/56 × 100% ≈ 21.43%"
-        }
+        },
+        "ta": "கணிதப் பாடத்திற்கான மாறுபாட்டுக் கெழுவைக் கணக்கிடுக."
       },
       {
         "en": "Compute the coefficient of variation for Science.",
@@ -364,7 +426,8 @@ const entries=[
           "latex": "\\text{C.V.}_{S}=\\dfrac{14}{65}\\times100\\%\\approx21.54\\%",
           "display": true,
           "fallback": "14/65 × 100% ≈ 21.54%"
-        }
+        },
+        "ta": "அறிவியல் பாடத்திற்கான மாறுபாட்டுக் கெழுவைக் கணக்கிடுக."
       },
       {
         "en": "Compute the coefficient of variation for Social Science.",
@@ -373,7 +436,8 @@ const entries=[
           "latex": "\\text{C.V.}_{SS}=\\dfrac{10}{60}\\times100\\%\\approx16.67\\%",
           "display": true,
           "fallback": "10/60 × 100% ≈ 16.67%"
-        }
+        },
+        "ta": "சமூக அறிவியல் பாடத்திற்கான மாறுபாட்டுக் கெழுவைக் கணக்கிடுக."
       },
       {
         "en": "The smallest C.V. means most consistent, and the largest means least consistent. Both textbook editions ask for the same comparison.",
@@ -382,20 +446,29 @@ const entries=[
           "latex": "16.67\\%<21.43\\%<21.54\\%",
           "display": true,
           "fallback": "16.67% < 21.43% < 21.54%; Social Science most, Science least"
-        }
+        },
+        "ta": "மிகக் குறைந்த C.V. அதிக நிலைத்தன்மையைக் குறிக்கும்; மிக அதிக C.V. குறைந்த நிலைத்தன்மையைக் குறிக்கும். இரு மொழிப் பாடநூல்களிலும் இதே ஒப்பீடுதான் கேட்கப்படுகிறது."
       }
     ],
-    "answer": "Social Science is most consistent and Science is least consistent.",
+    "answer": {
+      "en": "Social Science is most consistent and Science is least consistent.",
+      "ta": "சமூக அறிவியல் அதிக நிலைத்தன்மை கொண்டது; அறிவியல் குறைந்த நிலைத்தன்மை கொண்டது."
+    },
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-    "reference": "TN SCERT Grade 10 Mathematics revised 2025, English printed p.316 / PDF p.322, answer key printed p.342 / PDF p.348, visually inspected; Tamil printed pp.325-326 / PDF pp.331-332 visually inspected for source data and intent. Full Tamil editorial review pending.",
+    "reference": "TN SCERT Grade 10 Mathematics revised 2025, English printed p.316 / PDF p.322, answer key printed p.342 / PDF p.348, visually inspected; Tamil printed pp.325-326 / PDF pp.331-332 visually inspected for source data and intent. Full Tamil editorial review pending. Tamil question wording source-checked against revised 2025 printed pp.325-326; teacher/editorial verification of Tamil explanations pending.",
     "edition": "2025",
     "translationReview": "pending",
     "checkpoint": "2026-11-21",
     "answerMath": {
       "latex": "\\boxed{\\text{Most: Social Science; least: Science}}",
       "display": true,
-      "fallback": "Social Science is most consistent and Science is least consistent."
+      "fallback": "Social Science is most consistent and Science is least consistent.",
+      "ta": {
+        "latex": "\\boxed{\\text{சமூக அறிவியல்: அதிகம்; அறிவியல்: குறைவு}}",
+        "display": true,
+        "fallback": "சமூக அறிவியல் அதிக நிலைத்தன்மை கொண்டது; அறிவியல் குறைந்த நிலைத்தன்மை கொண்டது."
+      }
     },
     "dataTable": {
       "headers": [
@@ -421,8 +494,36 @@ const entries=[
         ]
       ],
       "caption": "Exercise 8.2 Q8 data for 40 students",
-      "replaceRegex": "(?=Which of the three subjects shows)"
-    }
+      "replaceRegex": "(?=Which of the three subjects shows)",
+      "ta": {
+        "headers": [
+          "பாடங்கள்",
+          "சராசரி",
+          "திட்ட விலக்கம்"
+        ],
+        "rows": [
+          [
+            "கணிதம்",
+            56,
+            12
+          ],
+          [
+            "அறிவியல்",
+            65,
+            14
+          ],
+          [
+            "சமூக அறிவியல்",
+            60,
+            10
+          ]
+        ],
+        "caption": "பயிற்சி 8.2 வினா 8: 40 மாணவர்களின் தரவு"
+      },
+      "replaceRegexTa": "(?=இந்த மூன்று பாடங்களில் எது அதிக)"
+    },
+    "tamilQuestionSourceVerified": true,
+    "tamilWorkedSolutionReview": "pending"
   }
 ];
 const ids=new Set(Object.values(window.TRIGGLE_CLASSES).flatMap(g=>g.items.map(q=>q.id)));
