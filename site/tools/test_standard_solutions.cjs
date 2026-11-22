@@ -7,6 +7,9 @@ const preserved=require('../../docs/standard-solution-preservation.json');
 const auditedG9Proofs=require('../../docs/audit/AUD13_02_CORRECTION_HASHES.json');
 const auditedG9TrigTable=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json');
 const auditedG9TrigQ46=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
+const auditedG9SourceChoices=require('../../docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json');
+assert.equal(auditedG9SourceChoices.auditId,'AUD14-03');
+assert.equal(Object.keys(auditedG9SourceChoices.records).length,9);
 assert.equal(auditedG9TrigQ46.auditId,'AUD14-02-Q4-Q6');
 assert.deepEqual(Object.keys(auditedG9TrigQ46.records).sort(),['q4','q5','q6'].map(x=>'c9-exercise-6-4-'+x));
 assert.equal(auditedG9TrigTable.auditId,'AUD14-02');
@@ -341,8 +344,17 @@ for(const [grade,data] of Object.entries(classes)){
    const correction=auditedG9Proofs.records[item.id];
    const trig=auditedG9TrigTable.records[item.id];
    const extended=auditedG9TrigQ46.records[item.id];
-   assert.ok([!!trig,!!correction,!!extended].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
-   if(extended){
+   const originalChoices=auditedG9SourceChoices.records[item.id];
+   assert.ok([!!trig,!!correction,!!extended,!!originalChoices].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
+   if(originalChoices){
+    assert.equal(originalChoices.originalRecordSha256,preserved.sha256[item.id],'Pre-existing immutable source hash '+item.id);
+    assert.equal(item.answer,originalChoices.originalFinalAnswer,'Original math answer unchanged '+item.id);
+    assert.equal(item.steps.length,originalChoices.originalSteps,'Original worked step count unchanged '+item.id);
+    assert.equal(JSON.stringify(item.steps),JSON.stringify(originalChoices.originalRecord.steps),'Worked solutions byte-for-byte preserved '+item.id);
+    assert.equal(item.q.en,originalChoices.correctedRecord.q.en,'2025 textbook source question '+item.id);
+    assert.equal(item.q.ta,originalChoices.correctedRecord.q.ta,'Bilingual question accessibility '+item.id);
+    assert.equal(hash,originalChoices.correctedRecordSha256,'Exact approved source question and choice correction '+item.id);
+   }else if(extended){
     assert.equal(extended.originalRecordSha256,preserved.sha256[item.id],'Immutable Q4–Q6 source baseline '+item.id);
     assert.equal(item.q.en,extended.unchangedEnglishQuestion,'Preserve Ex6.4 question '+item.id);
     assert.equal(item.q.ta,extended.unchangedTamilQuestion,'Preserve Ex6.4 Tamil question '+item.id);
