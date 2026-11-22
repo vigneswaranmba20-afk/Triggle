@@ -1,0 +1,6 @@
+One-use authorization for an isolated Hugging Face Pro model benchmark on five previously audited Triggle findings.
+Original repository main pinned: 8ca60d0aaaae07011017cb9f321713c141a48ba2
+Model: Qwen/Qwen3-Coder-30B-A3B-Instruct:amazon-bedrock
+Limit: at most five POST requests; no retries; estimated budget guard USD 0.05; proposals only; production writes disabled.
+Requires preflight, keyless HF OIDC identity, and immutable source checkout.
+Do not merge benchmark outputs without independent math, textbook, accessibility and CI review.
