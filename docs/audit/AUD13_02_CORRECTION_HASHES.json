@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "auditId": "AUD13-02",
+  "scope": "Grade 9 Chapter 5 Exercise 5.2 Q2/Q5/Q6 teaching-only correction, current English source strings unchanged",
+  "baselinePreservationCommit": "c15bc7ebc34835b916fcad3ba73b78c42e8c7218",
+  "evidence": "Neon TRACE Audit Accelerator Mission 01, 2026-11-22: independent geometry proof checks, source-image verification not claimed",
+  "gates": {
+    "math": "independently checked by the new test_g9_ch5_aud13_02.cjs oracle",
+    "englishSourceImage": "pending",
+    "tamilEditorial": "pending",
+    "livePages": "pending"
+  },
+  "records": {
+    "g9-ch5-ex5.2-q2": {
+      "originalRecordSha256": "6cae42267f75ec81b3e181eabe9348a275f1d01d0d23a41ad4f2401401bf77e7",
+      "correctedRecordSha256": "39017d2e59b38ca5273148b8e8f2cd27739e434813bb8dba81b5c9e35db6daef",
+      "unchangedEnglishQuestion": "Determine whether the given set of points in each case are collinear or not.\n(i) (7,–2),(5,1),(3,4) (ii) (a,–2), (a,3), (a,0)",
+      "unchangedTamilFallback": "English-language question; Tamil version not changed. Determine whether the given set of points in each case are collinear or not.\n(i) (7,–2),(5,1),(3,4) (ii) (a,–2), (a,3), (a,0)",
+      "unchangedFinalAnswer": "(i) Collinear; (ii) Collinear"
+    },
+    "g9-ch5-ex5.2-q5": {
+      "originalRecordSha256": "a456dbc96b7bc6c29e3d75a3947440a4960c3d56797774100e23cc08439e0a81",
+      "correctedRecordSha256": "a4ac2321df49505170f51d2c6fa60b187d3d401aa1517d768ece112465d1e99b",
+      "unchangedEnglishQuestion": "Show that the following points taken in order form the vertices of a parallelogram.\n(i) A(–3, 1), B(–6, –7), C(3, –9), D(6, –1) (ii) A (–7, –3), B(5,10), C(15,8), D(3, –5)",
+      "unchangedTamilFallback": "English-language question; Tamil version not changed. Show that the following points taken in order form the vertices of a parallelogram.\n(i) A(–3, 1), B(–6, –7), C(3, –9), D(6, –1) (ii) A (–7, –3), B(5,10), C(15,8), D(3, –5)",
+      "unchangedFinalAnswer": "(i) Parallelogram; (ii) Parallelogram"
+    },
+    "g9-ch5-ex5.2-q6": {
+      "originalRecordSha256": "f0bc5cdf93c0fe572ff8cdb0513120d41111dab8e58eed63e20c272d75be3ddc",
+      "correctedRecordSha256": "4b171aeb0b99ad7ebe2a6d9af3fc53f0c2bf2e572205d5e805a6dad5029774ef",
+      "unchangedEnglishQuestion": "Verify that the following points taken in order form the vertices of a rhombus.\n(i) A(3,–2), B (7,6),C (–1,2), D (–5, –6) (ii) A (1,1), B(2,1),C (2,2), D(1,2)",
+      "unchangedTamilFallback": "English-language question; Tamil version not changed. Verify that the following points taken in order form the vertices of a rhombus.\n(i) A(3,–2), B (7,6),C (–1,2), D (–5, –6) (ii) A (1,1), B(2,1),C (2,2), D(1,2)",
+      "unchangedFinalAnswer": "(i) Rhombus, side 4√5; (ii) Rhombus (a square), side 1"
+    }
+  }
+}
