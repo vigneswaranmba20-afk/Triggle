@@ -42,7 +42,7 @@ const ids=[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n);
     assert.ok(state.finalMath,id+' '+width+'px: final answer not typeset');
     assert.equal(state.errors,0,id+' '+width+'px: KaTeX error');
     assert.deepEqual(state.clippedEquations,[],id+' '+width+'px: equations extend beyond their reading column');
-    if(id.endsWith('q9')||id.endsWith('q10'))assert.ok(state.answer.includes('₹'),id+' '+width+'px: rupee glyph replaced by INR in final answer');
+    if(id.endsWith('q9')||id.endsWith('q10'))assert.ok(state.answer.includes('Rs.'),id+' '+width+'px: KaTeX-safe rupee abbreviation missing');
     if(id.endsWith('q10')){
      assert.ok(state.image&&state.image.ok,id+' '+width+'px: figure broken');
      assert.ok(state.image.src.includes('grade10-ch7'),id+' '+width+'px: unrelated figure');
