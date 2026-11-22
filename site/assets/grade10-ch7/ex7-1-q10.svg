@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" role="img" aria-labelledby="title desc">
+<title id="title">Frustum lampshade: top radius 6 cm, bottom radius 12 cm, perpendicular height 8 cm</title>
+<desc id="desc">An original schematic, not the textbook photograph. The sloping outer frustum wall and circular top are painted. The lower opening is unpainted. The radius difference is 6 cm, and the slant height is 10 cm.</desc>
+<rect width="660" height="420" rx="20" fill="#fcfaf6"/>
+<g font-family="system-ui,Arial,sans-serif" fill="#173750">
+<text x="330" y="35" font-size="24" text-anchor="middle" font-weight="750">Paint the outside and the top</text>
+</g>
+<path d="M207 112 L100 305 Q300 371 500 305 L393 112 Z" fill="#dbeaf3" stroke="#236180" stroke-width="3" stroke-linejoin="round"/>
+<ellipse cx="300" cy="305" rx="200" ry="42" fill="none" stroke="#3b6881" stroke-width="2.8" stroke-dasharray="7 6"/>
+<ellipse cx="300" cy="112" rx="93" ry="23" fill="#f7dfaa" stroke="#236180" stroke-width="3"/>
+<path d="M300 112 V305" fill="none" stroke="#885e80" stroke-width="3" stroke-dasharray="8 6"/>
+<path d="M300 290 H315 V305" fill="none" stroke="#885e80" stroke-width="2"/>
+<g fill="none" stroke="#5a7891" stroke-width="2" stroke-linecap="round">
+<path d="M392 100 L455 73 H475"/>
+<path d="M480 313 L519 333 H535"/>
+<path d="M133 236 L96 219 H84"/>
+</g>
+<g font-family="system-ui,Arial,sans-serif" fill="#173750" font-weight="700">
+<rect x="459" y="43" width="170" height="42" rx="11" fill="#ffffff" stroke="#dce7ec"/>
+<text x="472" y="70" font-size="21">r = 6 cm</text>
+<rect x="492" y="326" width="157" height="43" rx="11" fill="#ffffff" stroke="#dce7ec"/>
+<text x="504" y="354" font-size="21">R = 12 cm</text>
+<rect x="318" y="186" width="140" height="42" rx="11" fill="#ffffff" stroke="#dce7ec"/>
+<text x="333" y="213" font-size="21">h = 8 cm</text>
+<rect x="12" y="170" width="128" height="40" rx="10" fill="#ffffff" stroke="#dce7ec"/>
+<text x="25" y="197" font-size="18">Outer wall</text>
+<text x="300" y="82" font-size="20" text-anchor="middle">Top disk</text>
+<text x="330" y="400" font-size="19" text-anchor="middle">Unpainted bottom opening</text>
+</g></svg>
