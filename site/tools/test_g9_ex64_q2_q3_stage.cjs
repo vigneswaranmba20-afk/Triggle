@@ -55,6 +55,9 @@ vm.runInNewContext(read('site/data/class-9.js'),ctx);
 const published=ctx.window.TRIGGLE_CLASSES[9].items;
 for(const id of expectedIds)assert(!published.some(q=>q.id===id),'STAGED ONLY: do not silently claim missing part is published '+id);
 assert.equal(published.length,53,'Original core Grade 9 source module remains unchanged');
+const complete=require('./build_g9_math.cjs').load();
+assert.equal(complete.length,397,'Full assembled Grade 9 runtime inventory must remain unchanged during staging');
+for(const id of expectedIds)assert(!complete.some(q=>q.id===id),'Staging must not silently publish a missing exercise '+id);
 // Negative control: the 2025 key for Q3(ii) is table-based; a precise
 // calculator expression has a different rounded result.
 const rad=(d,m)=>(d+m/60)*Math.PI/180;
