@@ -15,7 +15,7 @@ for(let i=0;i<records.length;i++){
  assert(ref,'inventory record missing');
  assert(r.steps.length>=5,'full solution missing '+r.id);
  assert(r.answerMath?.latex?.includes('boxed'),'math answer '+r.id);
- assert(!r.q.ta && r.translationReview==='pending','Do not claim Tamil approval');
+ assert(r.q.ta&&/\p{Script=Tamil}/u.test(r.q.ta),'Tamil question present');assert(r.answer.ta&&/\p{Script=Tamil}/u.test(r.answer.ta),'Tamil answer present');assert(r.translationReview==='pending'&&r.tamilWorkedSolutionReview==='pending','Do not claim editorial approval');
  assert(r.reference.includes('English printed p.316'),'source proof '+r.id);
  for(const v of ref.numericalEvidenceBothMediums){
    const rowData=JSON.stringify([r.q.en,r.dataTable?.rows]);
@@ -23,11 +23,14 @@ for(let i=0;i<records.length;i++){
  }
  for(const st of r.steps){
    assert(st.math?.latex&&st.math.fallback===st.eq&&st.en,'step/fallback '+r.id);
+   assert(st.ta&&/\p{Script=Tamil}/u.test(st.ta),'Tamil worked-step missing '+r.id);
  }
 }
 assert.match(records[0].questionMath.latex,/\\bar\{x\}/);
 assert.deepEqual(records[4].dataTable.rows,[['Mathematics',56,12],['Science',65,14],['Social Science',60,10]]);
 assert.equal(records[4].dataTable.headers.join(','),'Subject,Mean,SD');
+assert.deepEqual(records[4].dataTable.ta.rows,[['கணிதம்',56,12],['அறிவியல்',65,14],['சமூக அறிவியல்',60,10]]);
+assert(new RegExp(records[4].dataTable.replaceRegexTa).test(records[4].q.ta));
 assert(new RegExp(records[4].dataTable.replaceRegex).test(records[4].q.en));
 const mean=data=>data.reduce((a,b)=>a+b,0)/data.length;
 const varPop=data=>{const m=mean(data);return data.reduce((acc,x)=>acc+(x-m)**2,0)/data.length;};

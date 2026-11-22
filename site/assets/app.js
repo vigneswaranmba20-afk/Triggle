@@ -474,7 +474,8 @@
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
   const grade9Answer=window.TriggleG9Math?.get(current)?.answerMath;
-  const answerMath=(grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getAnswer?.(current))||window.TriggleG10Ch2FractionMath?.getAnswer?.(current);
+  const possibleAnswerMath=(grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getAnswer?.(current))||window.TriggleG10Ch2FractionMath?.getAnswer?.(current);
+  const answerMath=possibleAnswerMath?.[lang]||possibleAnswerMath?.en||possibleAnswerMath;
   const canGrid=!answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
@@ -613,17 +614,22 @@
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
   const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
   const renderDataTableHtml=dt=>{
+    if(lang==='ta'&&dt?.ta)dt={...dt,...dt.ta};
     if(!dt||!Array.isArray(dt.headers)||!Array.isArray(dt.rows))return '';
     const ths=dt.headers.map(h=>'<th scope="col">'+esc(h)+' </th>').join('');
     const trs=dt.rows.map(r=>'<tr>'+r.map((cell,c)=>{const body=/^\d+(?:\.\d+)?$/.test(String(cell).trim())?math({latex:String(cell).trim(),fallback:String(cell).trim()}):esc(cell);return c===0?'<th scope="row">'+body+' </th>':'<td>'+body+' </td>';}).join('')+'</tr>').join('');
     return '<div class="triggle-table-wrap"><table class="triggle-data-table"'+(dt.caption?' aria-label="'+esc(dt.caption)+'"':'')+'><thead><tr>'+ths+'</tr></thead><tbody>'+trs+'</tbody></table></div> ';
   };
-  $('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));
+  const ex82TamilPrompt=lang==='ta'&&grade===10&&current.chapter==='8'&&current.exercise==='8.2'&&!!current.q?.ta;
+  // Ex8.2's source-verified Tamil text takes precedence over its English-only
+  // authored questionMath; equations in the worked solution remain unchanged.
+  $('questionText').innerHTML=ex82TamilPrompt?math(current.q.ta):(workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q)));
   if(current.dataTable){
     const tableHtml=renderDataTableHtml(current.dataTable);
     const rawQ=tr(current.q);
-    if(current.dataTable.replaceRegex){
-      const rx=new RegExp(current.dataTable.replaceRegex);
+    const tableSplit=lang==='ta'&&current.dataTable.replaceRegexTa?current.dataTable.replaceRegexTa:current.dataTable.replaceRegex;
+    if(tableSplit){
+      const rx=new RegExp(tableSplit);
       if(rx.test(rawQ)){
         const [before='',after='']=rawQ.split(rx);
         const rawParts=questionMath?.[lang]||questionMath?.en;
@@ -634,6 +640,7 @@
     }else{$('questionText').innerHTML+=tableHtml;}
   }
   $('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
+  if(lang==='ta'&&!current.q?.ta)$('kindBadge').textContent+=' · தமிழ் மொழிபெயர்ப்பு நிலுவையில்';
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
 

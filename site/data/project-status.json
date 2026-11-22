@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "bf08fdfc1bf30eba9f04e5060920072e4e12c9c1",
-  "updatedAt": "2026-11-21T22:48:04+05:30",
+  "sourceCommit": "7f295782ee2a6f45bfdc756b1cccc5a40475a65d",
+  "updatedAt": "2026-11-22T05:59:21+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -95,8 +95,8 @@
     "site/data/textbook-exercises/g10-ch6-ex6-unit-en.js": "3e3a4e280be8b3da95796481d1e45b0a89ff8e8e9fd399dac2fd37d4aade5f98",
     "site/data/textbook-exercises/g10-ch8-ex8-1-q11-q15-en.js": "5e1aa75fdeb63f043e4e867354b008c3ac6b666cfa1c1bb783020081207fe5e5",
     "site/data/textbook-exercises/g10-ch8-ex8-1-q5-q10-en.js": "428a4ccc1321082218d4ab692c0ff3cf6cda9e0b10391d09cc3eab87fbf6a36b",
-    "site/data/textbook-exercises/g10-ch8-ex8-2-q1-q3-en.js": "180557c70d7fcafb042d5c4ebebf4bd541d1a9eecc261c2eece85073c3a9f6ab",
-    "site/data/textbook-exercises/g10-ch8-ex8-2-q4-q8-en.js": "e96bb034b36051dcbaad8ba123201db25bece4391d437647d0271cedf1601809",
+    "site/data/textbook-exercises/g10-ch8-ex8-2-q1-q3-en.js": "45f4ffb5f8fd6713222b9b34dbfdc564769f7e59f1dc27cefa468e82a522bae1",
+    "site/data/textbook-exercises/g10-ch8-ex8-2-q4-q8-en.js": "e6f984d09a65f37c3e8cf7905c536f2bfd5d059167fbd7093e65679d965645fe",
     "site/data/textbook-exercises/g10-checkpoint-20261110-en.js": "30ec65b4e2f007ae25fcde957dd6bf933c5b9ea3c26536b827c835a15c20c309",
     "site/data/textbook-exercises/g10-seven-recovery-20261113-en.js": "b3a704bf15e5c250c05318af8eb9c1fce16b55ec8c0dcf4977f76ce74ee3621b",
     "site/data/textbook-exercises/g12-ch1-ex1-1-en.js": "d979dd28edcd293771fcad174ade5ac4690781330306583cf437c025f617ed26",
@@ -141,7 +141,7 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9.js": "ed93ba751d971497a7143086e80e307c035724d9ec062d26343a088416369d85",
-    "site/index.html": "b1d00268fb2472761362d0c80bc6f800a53983dd7ef61a891d165f532c9154a9",
+    "site/index.html": "6a3301e55b8c5b11e004c16d243fe3c3547de659d4c380c12cecc12eb2d65325",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
@@ -12252,8 +12252,8 @@
                   "label": "Exercise 8.2 · Q1",
                   "url": "../index.html?class=10&question=c10-8-ex8-2-q1",
                   "englishAvailable": true,
-                  "tamilAvailable": false,
-                  "recordSha256": "b9a6c3b560f594fc985a99552b0f5daa5a780475fa2fbf7a8f2cc74613438118",
+                  "tamilAvailable": true,
+                  "recordSha256": "62e820f402b05221ddb749535abbb9944d85677f5c538163888e448953c3f16f",
                   "verified": false
                 },
                 {
@@ -12261,8 +12261,8 @@
                   "label": "Exercise 8.2 · Q2",
                   "url": "../index.html?class=10&question=c10-8-ex8-2-q2",
                   "englishAvailable": true,
-                  "tamilAvailable": false,
-                  "recordSha256": "bbef84b722cd2cbd8b89b6e52a43ddd28dafca05f882483a9d6391587b03907f",
+                  "tamilAvailable": true,
+                  "recordSha256": "8eddb83a0da16f12445afea93917b88cc539ffda5504758c711f7cff351c09f0",
                   "verified": false
                 },
                 {
@@ -12270,8 +12270,8 @@
                   "label": "Exercise 8.2 · Q3",
                   "url": "../index.html?class=10&question=c10-8-ex8-2-q3",
                   "englishAvailable": true,
-                  "tamilAvailable": false,
-                  "recordSha256": "c992a2c4b4385d1bd904e0f85a95e8bd114b3d729d6f1aa4f12e73744cc6bcc6",
+                  "tamilAvailable": true,
+                  "recordSha256": "52176148ce09a58f541a47572184851d7328189586d2065168a99787611e11f8",
                   "verified": false
                 },
                 {
@@ -12279,8 +12279,8 @@
                   "label": "Exercise 8.2 · Q4",
                   "url": "../index.html?class=10&question=c10-8-ex8-2-q4",
                   "englishAvailable": true,
-                  "tamilAvailable": false,
-                  "recordSha256": "3fc9ec160229ef98c7018bc00185ddd800ce4ebb659504efc7dadbdece8f36eb",
+                  "tamilAvailable": true,
+                  "recordSha256": "78be016b2727d9b0d8063f4aedf47b6d1d30d89c7b07e59aedee8a66c9ecddb2",
                   "verified": false
                 },
                 {
@@ -12288,8 +12288,8 @@
                   "label": "Exercise 8.2 · Q5",
                   "url": "../index.html?class=10&question=c10-8-ex8-2-q5",
                   "englishAvailable": true,
-                  "tamilAvailable": false,
-                  "recordSha256": "5801ff67bc040f369c1055257adc400e6bb5e6bc4b47b926a5fc8f6be3d51c83",
+                  "tamilAvailable": true,
+                  "recordSha256": "3e9e2cdab25744302ff6b575e85ac210eb97fea2b5cf6f4b111068259979b822",
                   "verified": false
                 },
                 {
@@ -12297,8 +12297,8 @@
                   "label": "Exercise 8.2 · Q6",
                   "url": "../index.html?class=10&question=c10-8-ex8-2-q6",
                   "englishAvailable": true,
-                  "tamilAvailable": false,
-                  "recordSha256": "53d747ef0cfe791dbff319c5ba6cb354bd969b1739e911ba33615c892d4c6753",
+                  "tamilAvailable": true,
+                  "recordSha256": "fdb63415bad24a6e1549ca8f8871b9d78609872d2d82f52c6770f2180a67622b",
                   "verified": false
                 },
                 {
@@ -12306,8 +12306,8 @@
                   "label": "Exercise 8.2 · Q7",
                   "url": "../index.html?class=10&question=c10-8-ex8-2-q7",
                   "englishAvailable": true,
-                  "tamilAvailable": false,
-                  "recordSha256": "5a4a1db15b68909de79918fb2fa8ec375164561a08426250138dd551dcbc21bf",
+                  "tamilAvailable": true,
+                  "recordSha256": "98d23f0f1d8dd4d955f5285d12029126d6c4f5b814e23c7df8bba6f821678640",
                   "verified": false
                 },
                 {
@@ -12315,8 +12315,8 @@
                   "label": "Exercise 8.2 · Q8",
                   "url": "../index.html?class=10&question=c10-8-ex8-2-q8",
                   "englishAvailable": true,
-                  "tamilAvailable": false,
-                  "recordSha256": "a3651651052611b424d1c67490de46055289a2a4201dc7a9dc12460f22330773",
+                  "tamilAvailable": true,
+                  "recordSha256": "efa646a3031590d211d4be459796244df61c2aa84150834c57d4b23dfa00c744",
                   "verified": false
                 }
               ],

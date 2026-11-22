@@ -10,11 +10,12 @@ const exact={
  3:'3. If the mean and coefficient of variation of a data are 15 and 48 respectively, then find the value of standard deviation.'};
 assert.deepEqual(manifest.records.map(r=>r.id),[1,2,3].map(n=>'c10-8-ex8-2-q'+n));
 for(const r of manifest.records){const n=+r.id.slice(-1);
- assert.equal(r.q.en,exact[n]);assert.equal(r.q.ta,undefined);assert.equal(r.translationReview,'pending');
+ assert.equal(r.q.en,exact[n]);assert.match(r.q.ta,/\p{Script=Tamil}/u,'Tamil source wording present');assert.equal(r.translationReview,'pending');assert.equal(r.tamilQuestionSourceVerified,true);assert.equal(r.tamilWorkedSolutionReview,'pending');
  assert.match(r.reference,/printed p\. 316 \/ PDF p\. 322/);assert.match(r.reference,/printed p\. 325 \/ PDF p\. 331/);
  const invQ=inv.questions.find(x=>x.question===String(n));
  for(const v of invQ.numericalEvidenceBothMediums)assert.ok(r.q.en.includes(String(v)),'inventory number '+v+' in Q'+n);
  assert.ok(r.steps.length>=5);assert.ok(r.answer&&r.answerMath.latex.includes('boxed'));
+ assert(r.steps.every(s=>s.ta&&/\p{Script=Tamil}/u.test(s.ta)),'Tamil explanation for each step');assert.match(r.answer.ta,/\p{Script=Tamil}/u);
  for(const s of r.steps){assert.equal(s.math.fallback,s.eq);assert.ok(s.math.latex&&s.en);}
  assert.ok(r.steps[0].en.includes('σ')&&r.steps[0].en.includes('C.V.'),'symbols explained');}
 // 2. Independent verification: exact integer arithmetic (decimals scaled by 10 or 100)
@@ -24,7 +25,7 @@ assert.equal((48*15)/100,7.2);                       // Q3
 // reverse checks: recompute C.V. from the answers and compare with the givens
 const cv=(sd,m)=>Math.round(sd/m*100*1e9)/1e9;
 assert.equal(cv(6.5,12.5),52);assert.equal(cv(1.2,4.6875),25.6);assert.equal(cv(7.2,15),48);
-for(const [i,t] of [[0,/52 %/],[1,/75\/16 = 4\.6875/],[2,/7\.2/]])assert.match(manifest.records[i].answer,t);
+for(const [i,t] of [[0,/52 %/],[1,/75\/16 = 4\.6875/],[2,/7\.2/]])assert.match(manifest.records[i].answer.en,t);
 // 3. Registration, navigation and preservation
 const html=read('site/index.html'),cache=read('site/service-worker.js'),mod='data/textbook-exercises/g10-ch8-ex8-2-q1-q3-en.js';
 const scripts=[...html.matchAll(/<script src="\.\/(data\/[^?"']+)(?:\?[^"']*)?"[^>]*><\/script>/g)].map(m=>m[1]);

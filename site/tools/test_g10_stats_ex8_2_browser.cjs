@@ -32,6 +32,46 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     if(n===6)assert.ok(s.stepsText.includes('10.07')&&s.stepsText.includes('10.06'),'explain exact vs textbook rounding');
    }
   }
+
+  // Source-verified Tamil edition: every Ex8.2 prompt and worked explanation
+  // remains in Tamil at all supported Android widths. No English-only label.
+  await page.goto(app.base+'/index.html?class=10&question=c10-8-ex8-2-q4');
+  await page.locator('#langTa').click();
+  assert.equal(await page.locator('#langTa').getAttribute('aria-pressed'),'true');
+  for(const width of [320,360,390,412]){
+   await page.setViewportSize({width,height:780});
+   for(const n of [1,2,3,4,5,6,7,8]){
+    const id='c10-8-ex8-2-q'+n;
+    await page.goto(app.base+'/index.html?class=10&question='+id);
+    await page.locator('#stepsList .worked-step').first().waitFor();
+    const s=await page.evaluate(id=>{
+     const r=window.TRIGGLE_CLASSES[10].items.find(x=>x.id===id);
+     return {question:document.querySelector('#questionText').textContent,
+      steps:[...document.querySelectorAll('#stepsList .worked-step:not(.final-answer-step) .step-reason')].map(el=>el.textContent),
+      answer:document.querySelector('#answerText').textContent,
+      table:document.querySelector('#questionText .triggle-data-table')?.textContent||'',
+      width:document.documentElement.scrollWidth,vw:innerWidth,
+      badge:document.querySelector('#kindBadge').textContent,expected:r.steps.length};
+    },id);
+    assert.ok(/\p{Script=Tamil}/u.test(s.question),'Tamil textbook prompt '+id);
+    assert.equal(s.steps.length,s.expected,'Tamil step count '+id);
+    assert.ok(s.steps.every(t=>/\p{Script=Tamil}/u.test(t)),'Tamil explanatory steps '+id);
+    assert.ok(!s.badge.includes('மொழிபெயர்ப்பு நிலுவையில்'),'Tamil question does exist '+id);
+    assert.ok(s.width<=s.vw+1,'Tamil page overflow '+id+' '+JSON.stringify(s));
+    if(n===7)assert.ok(s.answer.includes('வித்யா'),'Tamil student comparison answer');
+    if(n===8){
+      for(const word of ['கணிதம்','அறிவியல்','சமூக அறிவியல்','திட்ட விலக்கம்'])assert.ok(s.table.includes(word),'Tamil Q8 source table '+word);
+      assert.equal(await page.locator('#questionText .triggle-data-table tbody tr').count(),3);
+      assert.ok(/\p{Script=Tamil}/u.test(s.answer),'Tamil Q8 final answer');
+    }
+   }
+  }
+  // English fallback is clearly labelled wherever Tamil is not yet available.
+  await page.goto(app.base+'/index.html?class=10&question=c10-8-ex8-1-q11');
+  await page.locator('#stepsList .worked-step').first().waitFor();
+  assert.ok((await page.locator('#kindBadge').textContent()).includes('தமிழ் மொழிபெயர்ப்பு நிலுவையில்'),'Missing Tamil must be labelled as English fallback');
+  await page.locator('#langEn').click();
+
   // Regression: neighbouring Chapter 8 records still render
   for(const id of ['c10-8-ex8-1-q11','c10-8-ex8-1-q5']){
    await page.goto(app.base+'/index.html?class=10&question='+id);await page.locator('#stepsList .worked-step').first().waitFor();}
