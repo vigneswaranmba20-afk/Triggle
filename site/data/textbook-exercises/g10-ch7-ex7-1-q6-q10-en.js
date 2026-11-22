@@ -367,7 +367,7 @@ const entries=[
     },
     "steps": [
       {
-        "en": "Read the attached textbook figure carefully. The top radius is 6 cm, the bottom radius is 12 cm and the vertical height is 8 cm. These labels represent radii, not diameters.",
+        "en": "Read our labelled diagram, redrawn from the verified 2025 textbook figure. The top radius is 6 cm, the bottom radius is 12 cm and the vertical height is 8 cm. The two horizontal measurements are radii, not diameters.",
         "eq": "r = 6 cm, R = 12 cm, h = 8 cm",
         "math": {
           "latex": "r=6\\,\\mathrm{cm},\\quad R=12\\,\\mathrm{cm},\\quad h=8\\,\\mathrm{cm}",
