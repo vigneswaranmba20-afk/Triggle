@@ -6,6 +6,9 @@ const {TRIGGLE_CLASSES:classes,TriggleDifficulty:registry}=ctx.window;
 const preserved=require('../../docs/standard-solution-preservation.json');
 const auditedG9Proofs=require('../../docs/audit/AUD13_02_CORRECTION_HASHES.json');
 const auditedG9TrigTable=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json');
+const auditedG9TrigQ46=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
+assert.equal(auditedG9TrigQ46.auditId,'AUD14-02-Q4-Q6');
+assert.deepEqual(Object.keys(auditedG9TrigQ46.records).sort(),['q4','q5','q6'].map(x=>'c9-exercise-6-4-'+x));
 assert.equal(auditedG9TrigTable.auditId,'AUD14-02');
 assert.deepEqual(Object.keys(auditedG9TrigTable.records).sort(),['i','ii','iii','iv','v','vi'].map(n=>'c9-exercise-6-4-q1-'+n).sort());
 assert.equal(auditedG9Proofs.auditId,'AUD13-02');
@@ -337,8 +340,18 @@ for(const [grade,data] of Object.entries(classes)){
   }else if(Object.hasOwn(preserved.sha256,item.id)){
    const correction=auditedG9Proofs.records[item.id];
    const trig=auditedG9TrigTable.records[item.id];
-   assert.ok(!(trig&&correction),'No overlapping audited exceptions '+item.id);
-   if(trig){
+   const extended=auditedG9TrigQ46.records[item.id];
+   assert.ok([!!trig,!!correction,!!extended].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
+   if(extended){
+    assert.equal(extended.originalRecordSha256,preserved.sha256[item.id],'Immutable Q4–Q6 source baseline '+item.id);
+    assert.equal(item.q.en,extended.unchangedEnglishQuestion,'Preserve Ex6.4 question '+item.id);
+    assert.equal(item.q.ta,extended.unchangedTamilQuestion,'Preserve Ex6.4 Tamil question '+item.id);
+    assert.equal(item.answer,extended.unchangedFinalAnswer,'Preserve official 2025 final answer '+item.id);
+    assert.equal(item.kind,'reference','Textbook exercise classification preserved '+item.id);
+    assert.equal(item.steps.length,extended.originalRecord.steps.length,'Original teaching-step count retained '+item.id);
+    assert.equal(item.source,auditedG9TrigQ46.source.english2025,'Required 2025 primary edition provenance '+item.id);
+    assert.equal(hash,extended.correctedRecordSha256,'Exact source-audited Q4–Q6 solution hash '+item.id);
+   }else if(trig){
     // Preserve the original 568-record baseline; only the six source-verified
     // Grade 9 four-figure-table teaching records may take corrected hashes.
     assert.equal(trig.originalRecordSha256,preserved.sha256[item.id],'Immutable table source baseline '+item.id);
