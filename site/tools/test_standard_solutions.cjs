@@ -239,6 +239,12 @@ assert(!approvedNewIds.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.match(preserved.baselineCommit,/^[a-f0-9]{40}$/);
 const old={window:{}};vm.runInNewContext(fs.readFileSync('docs/history/discontinued-explanation-modes/g12-explanation-catalog.js','utf8'),old);
+// AUD13-02 one-shot integrity reconciliation: keep the legacy baseline intact.
+for(const id of ['g9-ch5-ex5.2-q2','g9-ch5-ex5.2-q5','g9-ch5-ex5.2-q6']){
+ const rec=classes[9].items.find(r=>r.id===id);
+ assert.ok(rec,'Missing correction evidence record '+id);
+ console.log('AUD13-02 CORRECTED_RECORD_SHA '+id+' '+crypto.createHash('sha256').update(JSON.stringify(rec)).digest('hex'));
+}
 let count=0,reviewed=0;
 for(const [grade,data] of Object.entries(classes)){
  const baselineIds=preserved.grades[grade],currentIds=data.items.map(item=>item.id);
