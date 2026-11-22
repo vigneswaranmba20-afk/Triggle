@@ -25,7 +25,14 @@ const grade=sandbox.window.TRIGGLE_CLASSES[10],chapter=sandbox.window.TRIGGLE_CU
 const ids=manifest.records.map(r=>r.id);
 assert.deepEqual(ids,[1,2,3,4,5].map(n=>'c10-7-ex7-1-q'+n));
 assert.equal(new Set(grade.items.map(r=>r.id)).size,grade.items.length,'no duplicate Grade 10 IDs');
-assert.equal(manifest.source.pageImagesVerified,false,'image evidence must not be claimed without audit');
+assert.equal(manifest.source.pageImagesVerified,true,'both 2025 textbook page images must have verified evidence');
+assert.equal(manifest.source.visualVerification.checkedDate,'2026-11-22');
+assert.deepEqual(manifest.source.visualVerification.sourceDocumentsOriginalBytes,{english:42992798,tamil:43173836});
+assert.equal(manifest.independentMathAudit.q1to5MathPassed,true);
+assert.equal(manifest.independentMathAudit.sourcePageImagesNotInspectedByNeon,true,'preserve original frozen Neon limitation');
+assert.equal(manifest.independentMathAudit.fileSha256.length,64,'original independent audit report digest');
+assert.equal(manifest.source.english.answerAppendix.pdfPage,347);
+assert.equal(manifest.source.tamil.answerAppendix.pdfPage,362);
 assert.equal(manifest.source.tamilWorkedSolutionsApproved,false,'no unreviewed Tamil approval');
 for(const passport of manifest.records){
   const entry=grade.items.find(r=>r.id===passport.id);
@@ -38,7 +45,9 @@ for(const passport of manifest.records){
     assert.ok(step.math&&typeof step.math.latex==='string'&&step.math.latex.length>4,'math markup for '+passport.id);
     assert.ok(step.math.fallback,'accessible formula fallback '+passport.id);
   }
-  assert.equal(entry.sourceFidelity.status,'text-layer-checked-page-image-pending');
+  assert.equal(entry.sourceFidelity.status,'page-visual-checked');
+  assert.equal(passport.mathVerification.neonBlindMath,'pass');
+  assert.equal(passport.mathVerification.visualAnswerKeyPage,'verified');
   assert.equal(entry.sourceFidelity.sourcePdfPage.en,288);
   assert.equal(entry.sourceFidelity.sourcePdfPage.ta,296);
   assert.equal(entry.translationReview,'pending');
