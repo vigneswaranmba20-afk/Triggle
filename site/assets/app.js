@@ -620,7 +620,10 @@
     const trs=dt.rows.map(r=>'<tr>'+r.map((cell,c)=>{const body=/^\d+(?:\.\d+)?$/.test(String(cell).trim())?math({latex:String(cell).trim(),fallback:String(cell).trim()}):esc(cell);return c===0?'<th scope="row">'+body+' </th>':'<td>'+body+' </td>';}).join('')+'</tr>').join('');
     return '<div class="triggle-table-wrap"><table class="triggle-data-table"'+(dt.caption?' aria-label="'+esc(dt.caption)+'"':'')+'><thead><tr>'+ths+'</tr></thead><tbody>'+trs+'</tbody></table></div> ';
   };
-  $('questionText').innerHTML=workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q));
+  const ex82TamilPrompt=lang==='ta'&&grade===10&&current.chapter==='8'&&current.exercise==='8.2'&&!!current.q?.ta;
+  // Ex8.2's source-verified Tamil text takes precedence over its English-only
+  // authored questionMath; equations in the worked solution remain unchanged.
+  $('questionText').innerHTML=ex82TamilPrompt?math(current.q.ta):(workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q)));
   if(current.dataTable){
     const tableHtml=renderDataTableHtml(current.dataTable);
     const rawQ=tr(current.q);
