@@ -203,7 +203,14 @@ assert.equal(ch7PilotPassports.source.tamil.answerAppendix.pdfPage,362,'Tamil so
 assert.equal(ch7PilotPassports.independentMathAudit.q1to5MathPassed,true,'Frozen Neon blind mathematical verification');
 assert.equal(ch7PilotPassports.independentMathAudit.sourcePageImagesNotInspectedByNeon,true,'Do not retroactively attribute page inspection to Neon');
 assert.equal(ch7PilotPassports.source.tamilWorkedSolutionsApproved,false,'Tamil lesson review remains pending');
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds];
+const ch7BPassports=require('../../docs/curriculum/grade-10/g10-ch7-ex7-1-q6-q10-passports-20261122.json');
+const ch7BById=new Map(ch7BPassports.records.map(record=>[record.id,record]));
+const ch7BIds=ch7BPassports.records.map(record=>record.id);
+assert.deepEqual(ch7BIds,[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n),'Five source-indexed Q6-Q10 records');
+assert.equal(ch7BPassports.source.questionPageImagesInspected,true,'Q6-Q10 official source page-images reviewed');
+assert.equal(ch7BPassports.source.q10FigureInspected,true,'Frustum diagram dimensions verified from original image');
+assert.equal(typeof ch7BPassports.source.independentBlindAuditCompleted,'boolean','Never imply missing Neon audit');
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -306,6 +313,13 @@ for(const [grade,data] of Object.entries(classes)){
    assert.equal(item.translationReview,'pending');
    assert.equal(item.sourceFidelity?.status,'page-visual-checked');
    assert(!item.q.ta,'Do not invent unreviewed Tamil teaching copy '+item.id);
+  }else if(grade==='10'&&ch7BById.has(item.id)){
+   const passport=ch7BById.get(item.id);
+   assert.equal(item.q.en,passport.englishQuestion,'G10 2025 Mensuration 7.1 Q6-Q10 English source fidelity '+item.id);
+   assert.equal(item.edition,'2025');
+   assert.equal(item.translationReview,'pending');
+   assert.equal(item.sourceFidelity?.status,'page-visual-checked');
+   assert(!item.q.ta,'Do not manufacture unreviewed Tamil authored teaching copy '+item.id);
   }else if(grade==='9'&&g9Ex32ById.has(item.id)){
    const approved=g9Ex32ById.get(item.id);
    assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exercise 3.2 matches source-audited batch '+item.id);
