@@ -24,24 +24,39 @@ const entries=[
     },
     "steps": [
       {
-        "en": "Three points are collinear when they lie on the same straight line.",
-        "ta": "English explanation (Tamil unchanged): Three points are collinear when they lie on the same straight line.",
-        "eq": "Compare slopes or a common coordinate"
+        "en": "For any two points, use the Class 9 distance formula to find the length between them.",
+        "ta": "English explanation (Tamil unchanged): For any two points, use the Class 9 distance formula to find the length between them.",
+        "eq": "PQ=√((x₂−x₁)²+(y₂−y₁)²)"
       },
       {
-        "en": "For part (i), equal changes in x give equal changes in y.",
-        "ta": "English explanation (Tamil unchanged): For part (i), equal changes in x give equal changes in y.",
-        "eq": "(5−7,1−(−2))=(−2,3); (3−5,4−1)=(−2,3)"
+        "en": "Part (i): find the distance from A(7,−2) to B(5,1).",
+        "ta": "English explanation (Tamil unchanged): Part (i): find the distance from A(7,−2) to B(5,1).",
+        "eq": "AB=√((5−7)²+(1−(−2))²)=√(4+9)=√13"
       },
       {
-        "en": "The direction vectors match; all three points lie on one line.",
-        "ta": "English explanation (Tamil unchanged): The direction vectors match; all three points lie on one line.",
-        "eq": "(i) Collinear"
+        "en": "Find the distance from B(5,1) to C(3,4).",
+        "ta": "English explanation (Tamil unchanged): Find the distance from B(5,1) to C(3,4).",
+        "eq": "BC=√((3−5)²+(4−1)²)=√(4+9)=√13"
       },
       {
-        "en": "In part (ii), all x-coordinates equal a, so the three points lie on the vertical line x=a.",
-        "ta": "English explanation (Tamil unchanged): In part (ii), all x-coordinates equal a, so the three points lie on the vertical line x=a.",
-        "eq": "(ii) Collinear (x=a)"
+        "en": "Now measure the full distance from A to C.",
+        "ta": "English explanation (Tamil unchanged): Now measure the full distance from A to C.",
+        "eq": "AC=√((3−7)²+(4−(−2))²)=√(16+36)=2√13"
+      },
+      {
+        "en": "Since AB + BC = AC, B lies on the segment AC. The three points are collinear.",
+        "ta": "English explanation (Tamil unchanged): Since AB + BC = AC, B lies on the segment AC. The three points are collinear.",
+        "eq": "√13+√13=2√13=AC; (i) Collinear"
+      },
+      {
+        "en": "Part (ii): all three points have x-coordinate a. The vertical distances are AB = 5, BC = 3 and CA = 2.",
+        "ta": "English explanation (Tamil unchanged): Part (ii): all three points have x-coordinate a. The vertical distances are AB = 5, BC = 3 and CA = 2.",
+        "eq": "AB=|3−(−2)|=5; BC=|0−3|=3; CA=|−2−0|=2"
+      },
+      {
+        "en": "Since BC + CA = AB, C is between B and A on the line x = a. These points are also collinear.",
+        "ta": "English explanation (Tamil unchanged): Since BC + CA = AB, C is between B and A on the line x = a. These points are also collinear.",
+        "eq": "3+2=5=AB; (ii) Collinear"
       }
     ],
     "answer": "(i) Collinear; (ii) Collinear",
@@ -147,29 +162,49 @@ const entries=[
     },
     "steps": [
       {
-        "en": "Opposite sides of a quadrilateral are equal and parallel if their direction vectors match.",
-        "ta": "English explanation (Tamil unchanged): Opposite sides of a quadrilateral are equal and parallel if their direction vectors match.",
-        "eq": "AB=C−D and BC=D−A"
+        "en": "Use the Class 9 distance formula. If both pairs of opposite sides of a non-degenerate quadrilateral have equal lengths, it is a parallelogram.",
+        "ta": "English explanation (Tamil unchanged): Use the Class 9 distance formula. If both pairs of opposite sides of a non-degenerate quadrilateral have equal lengths, it is a parallelogram.",
+        "eq": "PQ²=(x₂−x₁)²+(y₂−y₁)²"
       },
       {
-        "en": "Part (i): find the vectors of both opposite pairs.",
-        "ta": "English explanation (Tamil unchanged): Part (i): find the vectors of both opposite pairs.",
-        "eq": "AB=(−3,−8)=DC; BC=(9,−2)=AD"
+        "en": "Part (i): find the squared length of AB.",
+        "ta": "English explanation (Tamil unchanged): Part (i): find the squared length of AB.",
+        "eq": "AB²=(−6−(−3))²+(−7−1)²=9+64=73"
       },
       {
-        "en": "Both pairs agree, so the first set of points is a parallelogram.",
-        "ta": "English explanation (Tamil unchanged): Both pairs agree, so the first set of points is a parallelogram.",
-        "eq": "(i) Parallelogram"
+        "en": "Find the squared length of the opposite side CD.",
+        "ta": "English explanation (Tamil unchanged): Find the squared length of the opposite side CD.",
+        "eq": "CD²=(6−3)²+(−1−(−9))²=9+64=73"
       },
       {
-        "en": "Part (ii): repeat using the second set.",
-        "ta": "English explanation (Tamil unchanged): Part (ii): repeat using the second set.",
-        "eq": "AB=(12,13)=DC; BC=(10,−2)=AD"
+        "en": "Find the squared length of BC.",
+        "ta": "English explanation (Tamil unchanged): Find the squared length of BC.",
+        "eq": "BC²=(3−(−6))²+(−9−(−7))²=81+4=85"
       },
       {
-        "en": "Again both pairs agree.",
-        "ta": "English explanation (Tamil unchanged): Again both pairs agree.",
-        "eq": "(ii) Parallelogram"
+        "en": "Find the squared length of the opposite side DA.",
+        "ta": "English explanation (Tamil unchanged): Find the squared length of the opposite side DA.",
+        "eq": "DA²=(−3−6)²+(1−(−1))²=81+4=85"
+      },
+      {
+        "en": "Both opposite side pairs are equal, so the first quadrilateral is a parallelogram.",
+        "ta": "English explanation (Tamil unchanged): Both opposite side pairs are equal, so the first quadrilateral is a parallelogram.",
+        "eq": "AB=CD=√73; BC=DA=√85; (i) Parallelogram"
+      },
+      {
+        "en": "Part (ii): calculate AB and CD with the same distance formula.",
+        "ta": "English explanation (Tamil unchanged): Part (ii): calculate AB and CD with the same distance formula.",
+        "eq": "AB²=CD²=12²+13²=313"
+      },
+      {
+        "en": "Calculate the other opposite pair, BC and DA.",
+        "ta": "English explanation (Tamil unchanged): Calculate the other opposite pair, BC and DA.",
+        "eq": "BC²=DA²=10²+(−2)²=104"
+      },
+      {
+        "en": "Again both opposite side pairs are equal. No direction vectors are needed.",
+        "ta": "English explanation (Tamil unchanged): Again both opposite side pairs are equal. No direction vectors are needed.",
+        "eq": "AB=CD=√313; BC=DA=2√26; (ii) Parallelogram"
       }
     ],
     "answer": "(i) Parallelogram; (ii) Parallelogram",
@@ -211,29 +246,54 @@ const entries=[
     },
     "steps": [
       {
-        "en": "A quadrilateral is a rhombus when all four sides have the same positive length.",
-        "ta": "English explanation (Tamil unchanged): A quadrilateral is a rhombus when all four sides have the same positive length.",
-        "eq": "Compare AB², BC², CD², DA²"
+        "en": "A rhombus has four equal side lengths. Use the Class 9 distance formula to check each pair of neighboring vertices.",
+        "ta": "English explanation (Tamil unchanged): A rhombus has four equal side lengths. Use the Class 9 distance formula to check each pair of neighboring vertices.",
+        "eq": "PQ²=(x₂−x₁)²+(y₂−y₁)²"
       },
       {
-        "en": "For part (i), compute the squared distances.",
-        "ta": "English explanation (Tamil unchanged): For part (i), compute the squared distances.",
-        "eq": "AB²=4²+8²=80; BC²=8²+4²=80; CD²=4²+8²=80; DA²=8²+4²=80"
+        "en": "Part (i): find the first two squared side lengths.",
+        "ta": "English explanation (Tamil unchanged): Part (i): find the first two squared side lengths.",
+        "eq": "AB²=4²+8²=80; BC²=(−8)²+(−4)²=80"
       },
       {
-        "en": "All four sides therefore have length √80=4√5.",
-        "ta": "English explanation (Tamil unchanged): All four sides therefore have length √80=4√5.",
-        "eq": "(i) Rhombus; each side=4√5"
+        "en": "Find the remaining two squared side lengths.",
+        "ta": "English explanation (Tamil unchanged): Find the remaining two squared side lengths.",
+        "eq": "CD²=(−4)²+(−8)²=80; DA²=8²+4²=80"
       },
       {
-        "en": "For part (ii), consecutive vertices are one unit apart.",
-        "ta": "English explanation (Tamil unchanged): For part (ii), consecutive vertices are one unit apart.",
+        "en": "All four sides measure √80 = 4√5, so the first quadrilateral is a rhombus.",
+        "ta": "English explanation (Tamil unchanged): All four sides measure √80 = 4√5, so the first quadrilateral is a rhombus.",
+        "eq": "AB=BC=CD=DA=√80=4√5"
+      },
+      {
+        "en": "To check whether this rhombus is also a square, measure diagonal AC.",
+        "ta": "English explanation (Tamil unchanged): To check whether this rhombus is also a square, measure diagonal AC.",
+        "eq": "AC=√((−1−3)²+(2−(−2))²)=4√2"
+      },
+      {
+        "en": "Measure the other diagonal BD.",
+        "ta": "English explanation (Tamil unchanged): Measure the other diagonal BD.",
+        "eq": "BD=√((−5−7)²+(−6−6)²)=12√2"
+      },
+      {
+        "en": "The diagonals have different lengths. Therefore, part (i) is a rhombus but not a square.",
+        "ta": "English explanation (Tamil unchanged): The diagonals have different lengths. Therefore, part (i) is a rhombus but not a square.",
+        "eq": "AC≠BD; (i) Rhombus, not square"
+      },
+      {
+        "en": "Part (ii): the four neighboring point pairs are each exactly 1 unit apart.",
+        "ta": "English explanation (Tamil unchanged): Part (ii): the four neighboring point pairs are each exactly 1 unit apart.",
         "eq": "AB²=BC²=CD²=DA²=1"
       },
       {
-        "en": "A square is also a rhombus because its four sides are equal.",
-        "ta": "English explanation (Tamil unchanged): A square is also a rhombus because its four sides are equal.",
-        "eq": "(ii) Rhombus (a square)"
+        "en": "The diagonals are equal in this case.",
+        "ta": "English explanation (Tamil unchanged): The diagonals are equal in this case.",
+        "eq": "AC=√((2−1)²+(2−1)²)=√2; BD=√((1−2)²+(2−1)²)=√2"
+      },
+      {
+        "en": "Also, AB is horizontal and BC is vertical, so they meet at 90°. Thus this rhombus is a square.",
+        "ta": "English explanation (Tamil unchanged): Also, AB is horizontal and BC is vertical, so they meet at 90°. Thus this rhombus is a square.",
+        "eq": "AB⊥BC; (ii) Rhombus (also a square)"
       }
     ],
     "answer": "(i) Rhombus, side 4√5; (ii) Rhombus (a square), side 1",
