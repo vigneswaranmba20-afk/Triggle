@@ -189,7 +189,7 @@ function validatePreservation(root = siteRoot) {
     // Classic-reader additions are audited UI only. Removing these exact new
     // fragments must recover every byte of the original preserved page.
     let preservedContent=content;
-    if (relative==='data/class-9.js') {
+    if (root===siteRoot && relative==='data/class-9.js') {
       // AUD14-02: preserve the exact whole-file historic SHA without approving
       // arbitrary mutations. Each of six changes must match an audited hash,
       // and reversing those changes must reproduce the legacy file byte-for-byte.
@@ -215,7 +215,7 @@ function validatePreservation(root = siteRoot) {
         preservedContent=Buffer.from(restored,'utf8');
       }
     }
-    if (relative==='class9-classic.html'){
+    if (root===siteRoot && relative==='class9-classic.html'){
       const audit=JSON.parse(fs.readFileSync(path.resolve(root,'..','docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json'),'utf8'));
       let classic=preservedContent.toString('utf8');
       const match=classic.match(/const SOLUTIONS=(\[[^\n]+\]);/);
