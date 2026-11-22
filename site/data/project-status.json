@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "740f1ae438ed0828b6df08860ed278038402c6b4",
-  "updatedAt": "2026-11-22T05:20:53Z",
+  "sourceCommit": "0132a57cfa6c0338517e43266257529f8ec115ab",
+  "updatedAt": "2026-11-22T05:34:20Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -30,7 +30,7 @@
     "site/data/g10-ch4-concepts.js": "c1000a61c306ab7ad3b5dd9e496997d3ee39cdb98423b8973adc9f094f2a5419",
     "site/data/g10-ch5-concepts.js": "96d2c88e5a0b7c9e03c5bc3ea6441d4ab83895132eba528457223ad8fa8e1834",
     "site/data/g10-ch6-concepts.js": "fe53a40acdd58d6bae587a20bc19a091de17adc0e403f1c73ab5760671ebf36f",
-    "site/data/g9-clear-math.js": "fc9c07f0098be211f57a8b519b64c88b6b60f9ccddfe12dd0ec1460d33a0824d",
+    "site/data/g9-clear-math.js": "277134f4ef16a93e1790392984ee37bf26f28b5cc409d86f5489fce613b29055",
     "site/data/g9-mensuration-chapter.js": "509a8967476ef4023f043286e4a7ef373951e2039902692a6468147f46cc8c28",
     "site/data/g9-mensuration-remaining.js": "f720a1272691e653343bf8cc23e9876947079b15e631fb18a36974f8453cd8dc",
     "site/data/g9-probability-chapter.js": "5b9ee457150461a7ce46f3b2e9ede7c7d1234dfa8e751b05ff71d22e4245ca79",
