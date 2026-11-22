@@ -3925,42 +3925,107 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{aligned}&\\text{Base} = 10 \\cos 24^{\\circ} 24' \\\\ &\\text{height} = 10 \\sin 24^{\\circ} 24'\\end{aligned}",
-          "fallback": "Base = 10 cos24°24′ ; height = 10 sin24°24′",
+          "latex": "\\begin{aligned}&\\text{base} = 10 \\cos 24^{\\circ} 24' \\\\ &\\text{height} = 10 \\sin 24^{\\circ} 24'\\end{aligned}",
+          "fallback": "base=10cos24°24′; height=10sin24°24′",
           "display": true
         },
         "reasonMath": {
-          "en": "Use the hypotenuse to find the base and the height.",
-          "ta": "கர்ணத்தைப் பயன்படுத்தி அடிப்பக்கம், உயரம் காண்க."
-        }
-      },
-      {
-        "math": {
-          "latex": "\\text{Area} = \\dfrac{1}{2} \\times 10 \\cos 24^{\\circ} 24' \\times 10 \\sin 24^{\\circ} 24'",
-          "fallback": "Area = [[1|2]] × 10 cos24°24′ × 10 sin24°24′",
-          "display": true
-        },
-        "reasonMath": {
-          "en": "The triangle-area formula is one half times base times height.",
-          "ta": [
-            "முக்கோணப் பரப்பளவு = ",
+          "en": [
+            "The adjacent side is the base and the opposite side is the height relative to ",
             {
-              "latex": "\\dfrac{1}{2}",
-              "fallback": "1/2"
+              "latex": "24^{\\circ}",
+              "fallback": "24°"
             },
-            " × அடிப்பக்கம் × உயரம்."
+            {
+              "latex": "24'",
+              "fallback": "24′"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "24^{\\circ}",
+              "fallback": "24°"
+            },
+            {
+              "latex": "24'",
+              "fallback": "24′"
+            },
+            " கோணத்திற்கு அடுத்த பக்கம் அடிப்பக்கமும், எதிர்ப்பக்கம் உயரமும் ஆகும்."
           ]
         }
       },
       {
         "math": {
-          "latex": "\\text{Area} \\approx 18.81\\,\\mathrm{cm}^{2}",
-          "fallback": "Area ≈ 18.81 cm²",
+          "latex": "\\begin{aligned}&\\sin 24^{\\circ} 24' \\approx 0.4131 \\\\ &\\cos 24^{\\circ} 24' \\approx 0.9107\\end{aligned}",
+          "fallback": "sin24°24′≈0.4131; cos24°24′≈0.9107",
           "display": true
         },
         "reasonMath": {
-          "en": "Evaluate with trigonometric-table approximations.",
-          "ta": "முக்கோணவியல் அட்டவணையின் தோராய மதிப்புகளைப் பயன்படுத்துக."
+          "en": [
+            "At ",
+            {
+              "latex": "24^{\\circ}",
+              "fallback": "24°"
+            },
+            {
+              "latex": "24'",
+              "fallback": "24′"
+            },
+            ", the sine and cosine table columns give ",
+            {
+              "latex": "0.4131",
+              "fallback": "0.4131"
+            },
+            " and ",
+            {
+              "latex": "0.9107",
+              "fallback": "0.9107"
+            },
+            ". No mean-difference correction is needed because ",
+            {
+              "latex": "24'",
+              "fallback": "24′"
+            },
+            " is a printed six-minute column."
+          ],
+          "ta": [
+            {
+              "latex": "24^{\\circ}",
+              "fallback": "24°"
+            },
+            {
+              "latex": "24'",
+              "fallback": "24′"
+            },
+            " வரிசை/நெடுவரிசையில் சைன் ",
+            {
+              "latex": "0.4131",
+              "fallback": "0.4131"
+            },
+            ", கோசைன் ",
+            {
+              "latex": "0.9107",
+              "fallback": "0.9107"
+            },
+            " எனப் படிக்கவும். ",
+            {
+              "latex": "24'",
+              "fallback": "24′"
+            },
+            " நேரடியாக அட்டவணையில் இருப்பதால் சராசரி வேறுபாடு வேண்டாம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Area} \\approx \\dfrac{1}{2} \\times \\left(10 \\times 0.4131\\right) \\times \\left(10 \\times 0.9107\\right) = 18.8105085 \\approx 18.81\\,\\mathrm{cm}^{2}",
+          "fallback": "Area≈[[1|2]]×(10×0.4131)×(10×0.9107)=18.8105085≈18.81 cm²",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Area is half the product of the perpendicular sides. Substitute the four-figure table values and round to two decimal places.",
+          "ta": "செங்கோணப் பக்கங்களின் பெருக்கலின் பாதியே பரப்பளவு. அட்டவணை மதிப்புகளைப் பதிலிட்டு இரண்டு தசம இடங்களுக்கு வட்டமிடுக."
         }
       }
     ]
@@ -4001,84 +4066,187 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{aligned}&\\cos \\theta = \\dfrac{4}{5}  \\\\ &= 0.8\\end{aligned}",
-          "fallback": "cos θ = [[4|5]] = 0.8",
+          "latex": "\\begin{aligned}&\\cos \\theta = \\dfrac{4}{5}  \\\\ &= 0.8000\\end{aligned}",
+          "fallback": "cosθ=[[4|5]]=0.8000",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "Adjacent side = ",
+            "The ground distance is the adjacent side ",
             {
-              "latex": "4\\,\\mathrm{m}",
-              "fallback": "4 m"
+              "latex": "\\left(4\\,\\mathrm{m}\\right)",
+              "fallback": "(4 m)"
             },
-            "; hypotenuse = ",
+            ", and the ladder is the hypotenuse ",
             {
-              "latex": "5\\,\\mathrm{m}",
-              "fallback": "5 m"
+              "latex": "\\left(5\\,\\mathrm{m}\\right)",
+              "fallback": "(5 m)"
             },
             "."
           ],
           "ta": [
-            "அடுத்துள்ள பக்கம் ",
+            "தரைத் தொலைவு அடுத்த பக்கம் (",
             {
-              "latex": "4\\,\\mathrm{m}",
-              "fallback": "4 m"
+              "latex": "4",
+              "fallback": "4"
             },
-            "; கர்ணம் ",
+            " மீ); ஏணி கர்ணம் (",
             {
-              "latex": "5\\,\\mathrm{m}",
-              "fallback": "5 m"
+              "latex": "5",
+              "fallback": "5"
             },
-            "."
+            " மீ)."
           ]
         }
       },
       {
         "math": {
-          "latex": "\\theta = \\cos^{-1} \\left(0.8\\right) \\approx 36.8699^{\\circ}",
-          "fallback": "θ = cos⁻¹(0.8) ≈ 36.8699°",
+          "latex": "\\cos 36^{\\circ} 48' \\approx 0.8007",
+          "fallback": "cos36°48′≈0.8007",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "Find the angle whose cosine is ",
+            "Find ",
             {
-              "latex": "0.8",
-              "fallback": "0.8"
+              "latex": "0.8000",
+              "fallback": "0.8000"
             },
-            "."
+            " in the four-figure cosine table: the ",
+            {
+              "latex": "36^{\\circ}",
+              "fallback": "36°"
+            },
+            {
+              "latex": "48'",
+              "fallback": "48′"
+            },
+            " column reads ",
+            {
+              "latex": "0.8007",
+              "fallback": "0.8007"
+            },
+            ", slightly above the target."
           ],
           "ta": [
-            "cos மதிப்பு ",
+            "கோசைன் அட்டவணையில் ",
             {
-              "latex": "0.8",
-              "fallback": "0.8"
+              "latex": "0.8000",
+              "fallback": "0.8000"
             },
-            " ஆக இருக்கும் கோணத்தைக் காண்க."
+            "-ஐத் தேடுக. ",
+            {
+              "latex": "36^{\\circ}",
+              "fallback": "36°"
+            },
+            {
+              "latex": "48'",
+              "fallback": "48′"
+            },
+            " நெடுவரிசையில் ",
+            {
+              "latex": "0.8007",
+              "fallback": "0.8007"
+            },
+            " உள்ளது."
           ]
         }
       },
       {
         "math": {
-          "latex": "0.8699 \\times 60 \\approx 52'",
-          "fallback": "0.8699 × 60 ≈ 52′",
+          "latex": "\\cos 36^{\\circ} 52' \\approx 0.8007 - 0.0007 = 0.8000",
+          "fallback": "cos36°52′≈0.8007−0.0007=0.8000",
           "display": true
         },
         "reasonMath": {
-          "en": "Convert fractional degrees into minutes.",
-          "ta": "தசம டிகிரியை நிமிடங்களாக மாற்றுக."
+          "en": [
+            "At ",
+            {
+              "latex": "36^{\\circ}",
+              "fallback": "36°"
+            },
+            ", the ",
+            {
+              "latex": "4' \\text{mean}",
+              "fallback": "4′ mean"
+            },
+            " difference is ",
+            {
+              "latex": "7",
+              "fallback": "7"
+            },
+            " units in the fourth decimal place. Subtract ",
+            {
+              "latex": "0.0007",
+              "fallback": "0.0007"
+            },
+            " because cosine decreases as the angle increases."
+          ],
+          "ta": [
+            {
+              "latex": "36^{\\circ}",
+              "fallback": "36°"
+            },
+            " வரிசையில் ",
+            {
+              "latex": "4'",
+              "fallback": "4′"
+            },
+            "-க்கான சராசரி வேறுபாடு நான்காம் தசம இடத்தில் ",
+            {
+              "latex": "7",
+              "fallback": "7"
+            },
+            ". கோணம் அதிகரிக்கக் கோசைன் குறைவதால் ",
+            {
+              "latex": "0.0007",
+              "fallback": "0.0007"
+            },
+            " கழிக்கவும்."
+          ]
         }
       },
       {
         "math": {
           "latex": "\\begin{gathered}\\theta \\approx 36^{\\circ} \\\\ 52'\\end{gathered}",
-          "fallback": "θ ≈ 36°52′",
+          "fallback": "θ≈36°52′",
           "display": true
         },
         "reasonMath": {
-          "en": "Round to the nearest minute.",
-          "ta": "அருகிலுள்ள நிமிடத்திற்கு வட்டமிடுக."
+          "en": [
+            "Therefore the table angle whose cosine is ",
+            {
+              "latex": "\\dfrac{4}{5}",
+              "fallback": "4/5"
+            },
+            " is approximately ",
+            {
+              "latex": "36^{\\circ}",
+              "fallback": "36°"
+            },
+            {
+              "latex": "52'",
+              "fallback": "52′"
+            },
+            "; no calculator inverse-cosine step is needed."
+          ],
+          "ta": [
+            "எனவே ",
+            {
+              "latex": "\\cos \\theta = \\dfrac{4}{5}",
+              "fallback": "cosθ=4/5"
+            },
+            " எனத் தரும் அட்டவணைக் கோணம் தோராயமாக ",
+            {
+              "latex": "36^{\\circ}",
+              "fallback": "36°"
+            },
+            {
+              "latex": "52'",
+              "fallback": "52′"
+            },
+            "; கணிப்பான் தேவை இல்லை."
+          ]
         }
       }
     ]
@@ -4121,71 +4289,124 @@ const records=[
       {
         "math": {
           "latex": "\\tan 42^{\\circ} = \\dfrac{\\text{height}}{60}",
-          "fallback": "tan42° = [[height|60]]",
+          "fallback": "tan42°=[[height|60]]",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "The tree is opposite the ",
+            "The tree's height is opposite the ",
             {
               "latex": "42^{\\circ}",
               "fallback": "42°"
             },
-            " angle; the ground distance is adjacent."
+            " angle, and the ",
+            {
+              "latex": "60\\,\\mathrm{m}",
+              "fallback": "60 m"
+            },
+            " ground distance is adjacent."
           ],
           "ta": [
             {
               "latex": "42^{\\circ}",
               "fallback": "42°"
             },
-            "-க்கு மர உயரம் எதிர்ப்பக்கம்; தரைத் தொலைவு அடுத்துள்ள பக்கம்."
+            " கோணத்திற்கு மர உயரம் எதிர்ப்பக்கம்; ",
+            {
+              "latex": "60",
+              "fallback": "60"
+            },
+            " மீ தரைத் தொலைவு அடுத்த பக்கம்."
           ]
         }
       },
       {
         "math": {
           "latex": "\\text{height} = 60 \\times \\tan 42^{\\circ}",
-          "fallback": "height = 60 × tan42°",
-          "display": true
-        },
-        "reasonMath": {
-          "en": "Isolate the unknown height.",
-          "ta": "தெரியாத உயரத்தைத் தனியாகப் பெறுக."
-        }
-      },
-      {
-        "math": {
-          "latex": "\\text{height} \\approx 60 \\times 0.900404",
-          "fallback": "height ≈ 60 × 0.900404",
+          "fallback": "height=60×tan42°",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "Substitute ",
+            "Multiply both sides by ",
             {
-              "latex": "\\tan 42^{\\circ} \\approx 0.900404",
-              "fallback": "tan42° ≈ 0.900404"
+              "latex": "60",
+              "fallback": "60"
             },
-            "."
+            " to isolate the height."
           ],
           "ta": [
+            "உயரத்தைத் தனியாகப் பெற இரண்டு பக்கங்களையும் ",
             {
-              "latex": "\\tan 42^{\\circ} \\approx 0.900404",
-              "fallback": "tan42° ≈ 0.900404"
+              "latex": "60",
+              "fallback": "60"
             },
-            " என்று பதிலிடுக."
+            "-ஆல் பெருக்குக."
           ]
         }
       },
       {
         "math": {
-          "latex": "\\text{height} \\approx 54.02\\,\\mathrm{m}",
-          "fallback": "height ≈ 54.02 m",
+          "latex": "\\tan 42^{\\circ} 00' \\approx 0.9004",
+          "fallback": "tan42°00′≈0.9004",
           "display": true
         },
         "reasonMath": {
-          "en": "Round to two decimals.",
-          "ta": "இரண்டு தசம இடங்களுக்கு வட்டமிடுக."
+          "en": [
+            "Read ",
+            {
+              "latex": "\\tan 42^{\\circ} 00'",
+              "fallback": "tan42°00′"
+            },
+            " directly from the tangent table, ",
+            {
+              "latex": "42^{\\circ}",
+              "fallback": "42°"
+            },
+            " row and ",
+            {
+              "latex": "0'",
+              "fallback": "0′"
+            },
+            " column. There are no extra minutes to adjust."
+          ],
+          "ta": [
+            "டேன்ஜென்ட் அட்டவணையில் ",
+            {
+              "latex": "42^{\\circ}",
+              "fallback": "42°"
+            },
+            " வரிசை, ",
+            {
+              "latex": "0'",
+              "fallback": "0′"
+            },
+            " நெடுவரிசையிலிருந்து நேரடியாகப் படிக்கவும். கூடுதல் நிமிடங்கள் இல்லை."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{height} \\approx 60 \\times 0.9004 = 54.024 \\approx 54.02\\,\\mathrm{m}",
+          "fallback": "height≈60×0.9004=54.024≈54.02 m",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Multiply by ",
+            {
+              "latex": "60",
+              "fallback": "60"
+            },
+            " and round the measured height to two decimal places."
+          ],
+          "ta": [
+            {
+              "latex": "60",
+              "fallback": "60"
+            },
+            "-ஆல் பெருக்கி உயரத்தை இரண்டு தசம இடங்களுக்கு வட்டமிடுக."
+          ]
         }
       }
     ]
@@ -47234,26 +47455,185 @@ const texts={
     },
     " கிடைக்கும்."
   ],
-  "Adjacent side = 4 m; hypotenuse = 5 m.": [
-    "Adjacent side = ",
+  "At 24°24′, the sine and cosine table columns give 0.4131 and 0.9107. No mean-difference correction is needed because 24′ is a printed six-minute column.": [
+    "At ",
     {
-      "latex": "4\\,\\mathrm{m}",
-      "fallback": "4 m"
+      "latex": "24^{\\circ}",
+      "fallback": "24°"
     },
-    "; hypotenuse = ",
     {
-      "latex": "5\\,\\mathrm{m}",
-      "fallback": "5 m"
+      "latex": "24'",
+      "fallback": "24′"
+    },
+    ", the sine and cosine table columns give ",
+    {
+      "latex": "0.4131",
+      "fallback": "0.4131"
+    },
+    " and ",
+    {
+      "latex": "0.9107",
+      "fallback": "0.9107"
+    },
+    ". No mean-difference correction is needed because ",
+    {
+      "latex": "24'",
+      "fallback": "24′"
+    },
+    " is a printed six-minute column."
+  ],
+  "The 24′ column already exists in both four-figure tables; reading sine and cosine directly avoids calculator drift. The area is half the product of their corresponding sides.": [
+    "The ",
+    {
+      "latex": "24'",
+      "fallback": "24′"
+    },
+    " column already exists in both four-figure tables; reading sine and cosine directly avoids calculator drift. The area is half the product of their corresponding sides."
+  ],
+  "சைன் மற்றும் கோசைன் அட்டவணைகளில் 24′ நெடுவரிசை நேரடியாக உள்ளது; சராசரி வேறுபாடு தேவையில்லை. பரப்பளவு செங்கோணப் பக்கங்களின் பெருக்கலின் பாதி.": [
+    "சைன் மற்றும் கோசைன் அட்டவணைகளில் ",
+    {
+      "latex": "24'",
+      "fallback": "24′"
+    },
+    " நெடுவரிசை நேரடியாக உள்ளது; சராசரி வேறுபாடு தேவையில்லை. பரப்பளவு செங்கோணப் பக்கங்களின் பெருக்கலின் பாதி."
+  ],
+  "At 36°, the 4′ mean difference is 7 units in the fourth decimal place. Subtract 0.0007 because cosine decreases as the angle increases.": [
+    "At ",
+    {
+      "latex": "36^{\\circ}",
+      "fallback": "36°"
+    },
+    ", the ",
+    {
+      "latex": "4' \\text{mean}",
+      "fallback": "4′ mean"
+    },
+    " difference is ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    " units in the fourth decimal place. Subtract ",
+    {
+      "latex": "0.0007",
+      "fallback": "0.0007"
+    },
+    " because cosine decreases as the angle increases."
+  ],
+  "Since cosine decreases as an angle increases, subtract 0.0007 (the 4′ mean difference in the 36° row) from the 36°48′ table value 0.8007.": [
+    "Since cosine decreases as an angle increases, subtract ",
+    {
+      "latex": "0.0007",
+      "fallback": "0.0007"
+    },
+    " (the ",
+    {
+      "latex": "4' \\text{mean}",
+      "fallback": "4′ mean"
+    },
+    " difference in the ",
+    {
+      "latex": "36^{\\circ}",
+      "fallback": "36°"
+    },
+    " row) from the ",
+    {
+      "latex": "36^{\\circ}",
+      "fallback": "36°"
+    },
+    {
+      "latex": "48'",
+      "fallback": "48′"
+    },
+    " table value ",
+    {
+      "latex": "0.8007",
+      "fallback": "0.8007"
     },
     "."
   ],
-  "The tree is opposite the 42° angle; the ground distance is adjacent.": [
-    "The tree is opposite the ",
+  "கோணம் அதிகரிக்கும் போது கோசைன் குறையும். 36°48′ அட்டவணை மதிப்பு 0.8007-இலிருந்து 4′-க்கான 0.0007-ஐக் கழிக்கவும்.": [
+    "கோணம் அதிகரிக்கும் போது கோசைன் குறையும். ",
+    {
+      "latex": "36^{\\circ}",
+      "fallback": "36°"
+    },
+    {
+      "latex": "48'",
+      "fallback": "48′"
+    },
+    " அட்டவணை மதிப்பு ",
+    {
+      "latex": "0.8007",
+      "fallback": "0.8007"
+    },
+    "-இலிருந்து ",
+    {
+      "latex": "4'",
+      "fallback": "4′"
+    },
+    "-க்கான ",
+    {
+      "latex": "0.0007",
+      "fallback": "0.0007"
+    },
+    "-ஐக் கழிக்கவும்."
+  ],
+  "Read tan42°00′ directly from the tangent table, 42° row and 0′ column. There are no extra minutes to adjust.": [
+    "Read ",
+    {
+      "latex": "\\tan 42^{\\circ} 00'",
+      "fallback": "tan42°00′"
+    },
+    " directly from the tangent table, ",
     {
       "latex": "42^{\\circ}",
       "fallback": "42°"
     },
-    " angle; the ground distance is adjacent."
+    " row and ",
+    {
+      "latex": "0'",
+      "fallback": "0′"
+    },
+    " column. There are no extra minutes to adjust."
+  ],
+  "42°00′ is an exact table column. Read tan42° = 0.9004 at 0′; there is no need to interpolate or calculate tangent to extra digits.": [
+    {
+      "latex": "42^{\\circ}",
+      "fallback": "42°"
+    },
+    {
+      "latex": "00'",
+      "fallback": "00′"
+    },
+    " is an exact table column. Read ",
+    {
+      "latex": "\\tan 42^{\\circ} = 0.9004",
+      "fallback": "tan42° = 0.9004"
+    },
+    " at ",
+    {
+      "latex": "0'",
+      "fallback": "0′"
+    },
+    "; there is no need to interpolate or calculate tangent to extra digits."
+  ],
+  "42°00′ என்பது அட்டவணையின் நேரடி நெடுவரிசை. tan42° = 0.9004 எனப் படிக்கவும்; இடைமதிப்பீடு தேவையில்லை.": [
+    {
+      "latex": "42^{\\circ}",
+      "fallback": "42°"
+    },
+    {
+      "latex": "00'",
+      "fallback": "00′"
+    },
+    " என்பது அட்டவணையின் நேரடி நெடுவரிசை. ",
+    {
+      "latex": "\\tan 42^{\\circ} = 0.9004",
+      "fallback": "tan42° = 0.9004"
+    },
+    " எனப் படிக்கவும்; இடைமதிப்பீடு தேவையில்லை."
   ],
   "Keep the given left-hand side, and replace cot37° by tangent of its complement.": [
     "Keep the given left-hand side, and replace ",
