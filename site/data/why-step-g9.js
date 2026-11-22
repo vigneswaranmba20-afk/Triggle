@@ -243,10 +243,10 @@
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q4": {
-      "step": 0,
-      "expected": "Use the hypotenuse to find the base and the height.",
-      "en": "Opposite and adjacent sides are named relative to the marked angle; the hypotenuse is always opposite the right angle. Identify them before forming ratios.",
-      "ta": "எதிர்ப்பக்கம், அடுத்த பக்கம் ஆகியவை குறிக்கப்பட்ட கோணத்தைப் பொறுத்தவை. கர்ணம் எப்போதும் செங்கோணத்திற்கு எதிரே இருக்கும். விகிதம் காணும்முன் பக்கங்களை அறியவும்.",
+      "step": 1,
+      "expected": "At 24°24′, the sine and cosine table columns give 0.4131 and 0.9107. No mean-difference correction is needed because 24′ is a printed six-minute column.",
+      "en": "The 24′ column already exists in both four-figure tables; reading sine and cosine directly avoids calculator drift. The area is half the product of their corresponding sides.",
+      "ta": "சைன் மற்றும் கோசைன் அட்டவணைகளில் 24′ நெடுவரிசை நேரடியாக உள்ளது; சராசரி வேறுபாடு தேவையில்லை. பரப்பளவு செங்கோணப் பக்கங்களின் பெருக்கலின் பாதி.",
       "concept": "trigSides",
       "diagram": {
         "type": "triangle",
@@ -254,10 +254,10 @@
       }
     },
     "c9-exercise-6-4-q5": {
-      "step": 0,
-      "expected": "Adjacent side = 4 m; hypotenuse = 5 m.",
-      "en": "Opposite and adjacent sides are named relative to the marked angle; the hypotenuse is always opposite the right angle. Identify them before forming ratios.",
-      "ta": "எதிர்ப்பக்கம், அடுத்த பக்கம் ஆகியவை குறிக்கப்பட்ட கோணத்தைப் பொறுத்தவை. கர்ணம் எப்போதும் செங்கோணத்திற்கு எதிரே இருக்கும். விகிதம் காணும்முன் பக்கங்களை அறியவும்.",
+      "step": 2,
+      "expected": "At 36°, the 4′ mean difference is 7 units in the fourth decimal place. Subtract 0.0007 because cosine decreases as the angle increases.",
+      "en": "Since cosine decreases as an angle increases, subtract 0.0007 (the 4′ mean difference in the 36° row) from the 36°48′ table value 0.8007.",
+      "ta": "கோணம் அதிகரிக்கும் போது கோசைன் குறையும். 36°48′ அட்டவணை மதிப்பு 0.8007-இலிருந்து 4′-க்கான 0.0007-ஐக் கழிக்கவும்.",
       "concept": "trigSides",
       "diagram": {
         "type": "triangle",
@@ -265,10 +265,10 @@
       }
     },
     "c9-exercise-6-4-q6": {
-      "step": 0,
-      "expected": "The tree is opposite the 42° angle; the ground distance is adjacent.",
-      "en": "Opposite and adjacent sides are named relative to the marked angle; the hypotenuse is always opposite the right angle. Identify them before forming ratios.",
-      "ta": "எதிர்ப்பக்கம், அடுத்த பக்கம் ஆகியவை குறிக்கப்பட்ட கோணத்தைப் பொறுத்தவை. கர்ணம் எப்போதும் செங்கோணத்திற்கு எதிரே இருக்கும். விகிதம் காணும்முன் பக்கங்களை அறியவும்.",
+      "step": 2,
+      "expected": "Read tan42°00′ directly from the tangent table, 42° row and 0′ column. There are no extra minutes to adjust.",
+      "en": "42°00′ is an exact table column. Read tan42° = 0.9004 at 0′; there is no need to interpolate or calculate tangent to extra digits.",
+      "ta": "42°00′ என்பது அட்டவணையின் நேரடி நெடுவரிசை. tan42° = 0.9004 எனப் படிக்கவும்; இடைமதிப்பீடு தேவையில்லை.",
       "concept": "trigSides",
       "diagram": {
         "type": "triangle",

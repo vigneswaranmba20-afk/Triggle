@@ -20,7 +20,7 @@ HOST="pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev"
 OBJECT_PATH=f"/trace-videos/{LESSON}/{APPROVED_SHA}.mp4"
 PUBLIC_URL="https://"+HOST+OBJECT_PATH
 TAG="thales-fola-2c07afb7-20261120"
-CACHE_SUFFIX="-gpfola-v2-fa50e19c-g9ex32-aud14-02-tables-20261122"
+CACHE_SUFFIX="-gpfola-v2-fa50e19c-g9ex32-aud14-02-tables-20261122-q46-20261122"
 
 
 def validate_url(url):

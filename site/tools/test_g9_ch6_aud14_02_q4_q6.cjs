@@ -1,0 +1,61 @@
+'use strict';
+/* AUD14-02 Q4–Q6: independently check official SCERT 2025 four-figure
+ * table arithmetic and both Grade 9 readers. Do not change source questions
+ * or legacy preservation hashes. Tamil editorial remains pending. */
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+const crypto=require('node:crypto');
+const root=path.resolve(__dirname,'../..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const evidence=JSON.parse(read('docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json'));
+const baseline=JSON.parse(read('docs/standard-solution-preservation.json'));
+const ctx={window:{}};vm.runInNewContext(read('site/data/class-9.js'),ctx);
+const all=ctx.window.TRIGGLE_CLASSES[9].items,ids=['q4','q5','q6'].map(x=>'c9-exercise-6-4-'+x);
+assert.equal(evidence.auditId,'AUD14-02-Q4-Q6');
+assert.deepEqual(Object.keys(evidence.records).sort(),[...ids].sort());
+assert.equal(evidence.sourceStatus.exerciseImage,'passed');
+assert.equal(evidence.sourceStatus.tableImages,'passed');
+assert.equal(evidence.sourceStatus.answerKeyImage,'passed');
+assert.equal(evidence.sourceStatus.tamilEditorial,'pending');
+const classicHTML=read('site/class9-classic.html');
+const classicMatch=classicHTML.match(/const SOLUTIONS=(\[[^\n]+\]);/);
+assert.ok(classicMatch,'Original classic reader still present');
+const classic=JSON.parse(classicMatch[1]);assert.equal(classic.length,44);
+for(const id of ids){
+ const q=all.find(x=>x.id===id),proof=evidence.records[id];
+ assert(q&&proof,'Existing source question and 2025 evidence required '+id);
+ assert.equal(q.q.en,proof.unchangedEnglishQuestion);
+ assert.equal(q.q.ta,proof.unchangedTamilQuestion);
+ assert.equal(q.answer,proof.unchangedFinalAnswer);
+ assert.equal(q.kind,'reference');
+ assert.equal(q.exercise,'6.4');
+ assert.equal(q.source,evidence.source.english2025);
+ assert.equal(q.steps.length,proof.originalRecord.steps.length);
+ assert.equal(proof.originalRecordSha256,baseline.sha256[id],'Original immutable grade 9 baseline');
+ assert.equal(crypto.createHash('sha256').update(JSON.stringify(q)).digest('hex'),proof.correctedRecordSha256,'Narrow audited corrected record');
+ assert.ok(q.steps.every(step=>step.en&&step.ta&&step.eq),'All three language/notation fields populated');
+ const classicRec=classic.find(x=>x.id===id.slice(3));
+ assert.ok(classicRec,'Classic reader question still exists');
+ assert.equal(classicRec.prompt,q.q.en);
+ assert.equal(classicRec.final,q.answer);
+ assert.equal(JSON.stringify(classicRec.steps),JSON.stringify(q.steps.map(x=>({why:x.en,eq:x.eq}))),'Cross-context classic/modern equations');
+ assert.equal(JSON.stringify(classicRec.stepsTa),JSON.stringify(q.steps.map(x=>x.ta)),'Cross-context classic/modern Tamil explanations');
+ assert.deepEqual(classicRec,proof.correctedClassicRecord);
+}
+const q4=all.find(x=>x.id===ids[0]),q5=all.find(x=>x.id===ids[1]),q6=all.find(x=>x.id===ids[2]);
+const area=0.5*(10*0.4131)*(10*0.9107);
+assert.equal(area.toFixed(2),'18.81');
+assert.equal(q4.answer,'18.81 cm²');
+assert.match(q4.steps[1].eq,/0\.4131/);assert.match(q4.steps[1].eq,/0\.9107/);
+assert.match(q4.steps[2].eq,/18\.8105085/);
+assert.equal((8007-7)/10000,0.8);
+assert.equal(q5.answer,'36°52′');
+assert.match(q5.steps[1].eq,/36°48′/);
+assert.match(q5.steps[2].eq,/0\.8007−0\.0007=0\.8000/);
+assert(!q5.steps.some(x=>/cos⁻¹|36\.8699|0\.8699/.test(x.eq)),'Do not teach calculator inverse-cosine rounding');
+assert.equal((60*0.9004).toFixed(2),'54.02');
+assert.equal(q6.answer,'54.02 m');
+assert.match(q6.steps[2].eq,/tan42°00′≈0\.9004/);
+assert(!q6.steps.some(x=>/0\.900404/.test(x.eq)),'Do not present calculator precision as table lookup');
+assert.ok(read('site/service-worker.js').includes('./data/class-9.js'),'Offline file retained');
+assert.ok(read('site/index.html').includes('data/class-9.js'),'Mobile reader source retained');
+console.log('PASS AUD14-02 Q4–Q6: exact prescribed 2025 table values, independent arithmetic, classic parity, immutable sources and calculator-method negative controls.');
