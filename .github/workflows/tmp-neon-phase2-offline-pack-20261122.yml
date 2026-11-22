@@ -37,9 +37,9 @@ jobs:
           mkdir -p /tmp/neon-phase2-evidence
           gh api "repos/$GITHUB_REPOSITORY/actions/runs/44978303435/jobs?per_page=100" > /tmp/neon-phase2-evidence/previous-green-quality-jobs.json
           gh api "repos/$GITHUB_REPOSITORY/actions/runs/44979999610/jobs?per_page=100" > /tmp/neon-phase2-evidence/stale-snapshot-failure-jobs.json
-          gh api "repos/$GITHUB_REPOSITORY/actions/jobs/137073133934/logs" > /tmp/neon-phase2-evidence/previous-green-core.log
-          gh api "repos/$GITHUB_REPOSITORY/actions/jobs/137073133938/logs" > /tmp/neon-phase2-evidence/previous-green-browser-shard1.log
-          gh api "repos/$GITHUB_REPOSITORY/actions/jobs/137078358365/logs" > /tmp/neon-phase2-evidence/recent-stale-snapshot-failure.log
+          gh api --allow-escape-sequences "repos/$GITHUB_REPOSITORY/actions/jobs/137073133934/logs" > /tmp/neon-phase2-evidence/previous-green-core.log
+          gh api --allow-escape-sequences "repos/$GITHUB_REPOSITORY/actions/jobs/137073133938/logs" > /tmp/neon-phase2-evidence/previous-green-browser-shard1.log
+          gh api --allow-escape-sequences "repos/$GITHUB_REPOSITORY/actions/jobs/137078358365/logs" > /tmp/neon-phase2-evidence/recent-stale-snapshot-failure.log
       - name: Assemble reproducible under-10-MB offline ZIP
         run: |
           python3 - <<'PY'
