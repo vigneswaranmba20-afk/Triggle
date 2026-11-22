@@ -149,6 +149,6 @@ for(const asset of ['data/g10-ch5-concepts.js','assets/g10-ch5-concepts.js']){
   assert.equal(html.split(asset).length-1,1,'index.html must include '+asset+' once');
   assert(sw.includes("'./"+asset+"'"),'service-worker.js must precache '+asset);
 }
-assert.match(sw,/const CACHE='[^']*-g9ex32'/,'Preserve SW cache version check');
+assert.match(sw,/const CACHE='[^']*-g9ex32-aud14-02-tables-20261122'/,'Preserve G9 Ex3.2 SW revision and require audited Ex6.4 offline cache update');
 
 console.log('PASS Grade 10 Chapter 5 Coordinate Geometry Concepts: 12 bilingual 6-part stages, KaTeX, coordinate math, degeneracy & offline checks');
