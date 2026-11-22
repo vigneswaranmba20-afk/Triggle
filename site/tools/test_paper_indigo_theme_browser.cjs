@@ -14,6 +14,13 @@ async function visit(page,url){
  const r=await page.goto(url);
  assert.ok(r?.ok(),'HTTP page must load: '+url);
  await page.locator('.appbar').waitFor({state:'visible'});
+ // Wait for the actual Bond-light CSS before asserting computed colors.
+ // Network timing can leave the active button transparent for a frame.
+ await page.locator('link[href*="bond-light.css"]').evaluate(el=>new Promise((resolve,reject)=>{
+   if(el.sheet)return resolve();
+   el.addEventListener('load',resolve,{once:true});
+   el.addEventListener('error',()=>reject(Error('Theme stylesheet did not load')),{once:true});
+ }));
  const l=await label(page);
  assert.deepEqual(l,{paper,ink:'rgb(24, 27, 32)',accent:'#181B20'},'Bond light student shell');
  assert.equal(await page.locator('.appbar').evaluate(el=>getComputedStyle(el).backgroundColor),white,'White app bar across all routes');
@@ -21,11 +28,7 @@ async function visit(page,url){
  assert.equal(await page.locator('.appbar .basics-link').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Home button is white');
  assert.equal(await page.locator('.appbar .lang-switch').evaluate(el=>getComputedStyle(el).backgroundColor),tint,'Language toggle has light ivory background');
  assert.equal(await page.locator('.appbar .lang-switch button.active').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Selected language has white background');
- await page.locator('link[href*="bond-light.css"]').evaluate(el=>new Promise((resolve,reject)=>{
-   if(el.sheet)return resolve();
-   el.addEventListener('load',resolve,{once:true});
-   el.addEventListener('error',()=>reject(Error('Theme stylesheet did not load')),{once:true});
- }));
+
  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
  assert.ok(overflow<=1,'No horizontal scroll: '+overflow+' '+url);
 }
