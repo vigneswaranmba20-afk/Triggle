@@ -202,44 +202,44 @@
     },
     "c9-exercise-6-4-q1-i": {
       "step": 1,
-      "expected": "Find the sine at that angle with the table or calculator.",
-      "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
-      "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
+      "expected": "At 49° and the 0′ column, read the four-place sine value directly.",
+      "en": "The sine table is arranged by degrees in rows and multiples of six angular minutes in columns. At 0′ there is no mean-difference adjustment.",
+      "ta": "sine அட்டவணையின் வரிசை டிகிரியையும் நிரல் ஆறு நிமிட இடைவெளியையும் குறிக்கிறது. 0′ என்பதால் பொது வித்தியாசத் திருத்தம் தேவையில்லை.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-ii": {
       "step": 1,
-      "expected": "Evaluate cosine, retaining extra digits before rounding.",
-      "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
-      "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
+      "expected": "Read the 74° row and 36′ column of the cosine table.",
+      "en": "Choose 74°36′ first. Then move forward 3′ using the mean difference; cosine decreases as the angle increases, so subtract 0.0008 rather than round a calculator value.",
+      "ta": "முதலில் 74°36′ மதிப்பை வாசிக்கவும். மேலும் 3′-க்கு பொது வித்தியாசத்தைச் சரிசெய்யவும். கோணம் அதிகரிக்கும்போது cosine குறைவதால் 0.0008-ஐக் கழிக்கவும்.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-iii": {
       "step": 1,
-      "expected": "Evaluate tangent without rounding the angle first.",
-      "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
-      "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
+      "expected": "Read the tangent entry at 54°24′.",
+      "en": "For 54°26′, start with 54°24′ in the tangent table and add the 2′ mean difference. Tangent increases with the acute angle.",
+      "ta": "54°26′-க்கு 54°24′ அட்டவணை மதிப்பிலிருந்து தொடங்கி, 2′-க்கான பொது வித்தியாசத்தை கூட்டவும். குறுங்கோணம் அதிகரிக்கும்போது tangent அதிகரிக்கும்.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-iv": {
       "step": 1,
-      "expected": "Calculate sine before rounding.",
-      "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
-      "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
+      "expected": "Read the four-place sine entry for 21°18′.",
+      "en": "For sine 21°21′, look up the 21°18′ column and add the 3′ mean difference. The four-place table answer is 0.3641.",
+      "ta": "sin21°21′-க்கு முதலில் 21°18′ மதிப்பை வாசித்து 3′-க்கான பொது வித்தியாசத்தைக் கூட்டவும். அட்டவணை விடை 0.3641.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-v": {
       "step": 1,
-      "expected": "Calculate cosine before rounding.",
-      "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
-      "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
+      "expected": "Look up cosine for 33°48′ in the four-figure table.",
+      "en": "For cosine 33°53′, begin with the 33°48′ column and subtract the mean difference for the remaining 5′.",
+      "ta": "cos33°53′-க்கு 33°48′ மதிப்பைப் பெற்று மீதமுள்ள 5′-க்கான பொது வித்தியாசத்தைக் கழிக்கவும்.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q1-vi": {
       "step": 1,
-      "expected": "Evaluate tangent without rounding the angle first.",
-      "en": "Sine compares opposite with hypotenuse; cosine compares adjacent with hypotenuse; tangent compares opposite with adjacent. The angle determines the naming.",
-      "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
+      "expected": "Read the tangent table at 70°12′.",
+      "en": "For 70°17′, start at 70°12′ and add 5′ of mean difference, 0.0131. This gives the prescribed four-figure-table answer 2.7907, not the calculator-rounded 2.7903.",
+      "ta": "70°17′-க்கு 70°12′ மதிப்புடன் 5′ பொது வித்தியாசம் 0.0131-ஐக் கூட்டினால் அட்டவணை விடை 2.7907 கிடைக்கும். கணிப்பான் தோராயமான 2.7903 வேறு.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q4": {

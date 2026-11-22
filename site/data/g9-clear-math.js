@@ -3083,32 +3083,54 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "The given angle contains ",
+            "Identify the sine-table row at exactly ",
             {
               "latex": "49",
               "fallback": "49"
             },
-            " degrees and zero extra minutes."
+            " degrees; there are no extra angular minutes."
           ],
           "ta": [
-            "கொடுக்கப்பட்ட கோணம் ",
             {
-              "latex": "49",
-              "fallback": "49"
+              "latex": "49^{\\circ}",
+              "fallback": "49°"
             },
-            " டிகிரி, கூடுதல் நிமிடங்கள் இல்லை."
+            " கோணத்திற்கான sine அட்டவணை வரிசையைத் தேர்ந்தெடுக்கவும்; கூடுதல் நிமிடங்கள் இல்லை."
           ]
         }
       },
       {
         "math": {
-          "latex": "\\sin 49^{\\circ} \\approx 0.75470958",
-          "fallback": "sin49° ≈ 0.75470958",
+          "latex": "\\sin 49^{\\circ} 00' \\approx 0.7547",
+          "fallback": "sin49°00′ ≈ 0.7547",
           "display": true
         },
         "reasonMath": {
-          "en": "Find the sine at that angle with the table or calculator.",
-          "ta": "அட்டவணை அல்லது கணிப்பான் மூலம் sin மதிப்பைப் பெறுக."
+          "en": [
+            "At ",
+            {
+              "latex": "49^{\\circ}",
+              "fallback": "49°"
+            },
+            " and the ",
+            {
+              "latex": "0'",
+              "fallback": "0′"
+            },
+            " column, read the four-place sine value directly."
+          ],
+          "ta": [
+            {
+              "latex": "49^{\\circ}",
+              "fallback": "49°"
+            },
+            " வரிசை மற்றும் ",
+            {
+              "latex": "0'",
+              "fallback": "0′"
+            },
+            " நிரலில் sine மதிப்பை நேரடியாக வாசிக்கவும்."
+          ]
         }
       },
       {
@@ -3118,8 +3140,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Round to four decimal places.",
-          "ta": "நான்கு தசம இடங்களுக்கு வட்டமிடுக."
+          "en": "No mean-difference adjustment is needed because the minutes are zero.",
+          "ta": "நிமிடங்கள் பூஜ்யம் என்பதால் பொது வித்தியாசத்தைச் சேர்க்கவோ கழிக்கவோ தேவையில்லை."
         }
       }
     ]
@@ -3144,67 +3166,158 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "0.2647",
-      "fallback": "0.2647"
+      "latex": "0.2648",
+      "fallback": "0.2648"
     },
     "steps": [
       {
         "math": {
-          "latex": "\\begin{aligned}&\\theta = 74^{\\circ} + \\dfrac{39}{60}^{\\circ}  \\\\ &= 74.65^{\\circ}\\end{aligned}",
-          "fallback": "θ = 74° + [[39|60]]° = 74.65°",
+          "latex": "\\begin{gathered}74^{\\circ} \\\\ 39' = 74^{\\circ} \\\\ 36' + 3'\\end{gathered}",
+          "fallback": "74°39′ = 74°36′ + 3′",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "Convert ",
+            "For a four-figure cosine table, express ",
             {
-              "latex": "39",
-              "fallback": "39"
+              "latex": "39'",
+              "fallback": "39′"
             },
-            " angular minutes into degrees."
+            " as the ",
+            {
+              "latex": "36'",
+              "fallback": "36′"
+            },
+            " column plus ",
+            {
+              "latex": "3'",
+              "fallback": "3′"
+            },
+            "."
           ],
           "ta": [
+            "நான்கு தசம இடக் cosine அட்டவணையில் ",
             {
-              "latex": "39",
-              "fallback": "39"
+              "latex": "39' = 36' + 3'",
+              "fallback": "39′ = 36′ + 3′"
             },
-            " கோண நிமிடங்களை டிகிரியாக மாற்றுக."
+            " எனப் பிரிக்கவும்."
           ]
         }
       },
       {
         "math": {
-          "latex": "\\cos 74.65^{\\circ} \\approx 0.2647146845",
-          "fallback": "cos74.65° ≈ 0.2647146845",
-          "display": true
-        },
-        "reasonMath": {
-          "en": "Evaluate cosine, retaining extra digits before rounding.",
-          "ta": "வட்டமிடுவதற்கு முன் கூடுதல் தசம இலக்கங்களுடன் cos-ஐக் கணக்கிடுக."
-        }
-      },
-      {
-        "math": {
-          "latex": "\\cos 74^{\\circ} 39' \\approx 0.2647",
-          "fallback": "cos74°39′ ≈ 0.2647",
+          "latex": "\\cos 74^{\\circ} 36' \\approx 0.2656",
+          "fallback": "cos74°36′ ≈ 0.2656",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "Round to four decimal places: the fifth decimal is ",
+            "Read the ",
             {
-              "latex": "1",
-              "fallback": "1"
+              "latex": "74^{\\circ}",
+              "fallback": "74°"
             },
-            "."
+            " row and ",
+            {
+              "latex": "36'",
+              "fallback": "36′"
+            },
+            " column of the cosine table."
           ],
           "ta": [
-            "ஐந்தாவது தசம இலக்கம் ",
+            "cosine அட்டவணையின் ",
             {
-              "latex": "1",
-              "fallback": "1"
+              "latex": "74^{\\circ}",
+              "fallback": "74°"
             },
-            "; நான்கு இடங்களுக்கு வட்டமிடுக."
+            " வரிசை, ",
+            {
+              "latex": "36'",
+              "fallback": "36′"
+            },
+            " நிரலில் உள்ள மதிப்பை வாசிக்கவும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\cos 74^{\\circ} 39' \\approx 0.2656 - 0.0008 = 0.2648",
+          "fallback": "cos74°39′ ≈ 0.2656 − 0.0008 = 0.2648",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "The ",
+            {
+              "latex": "3' \\text{mean}",
+              "fallback": "3′ mean"
+            },
+            " difference is ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " units in the fourth decimal place. Subtract it for cosine."
+          ],
+          "ta": [
+            {
+              "latex": "3'",
+              "fallback": "3′"
+            },
+            "-க்கான பொது வித்தியாசம் நான்காவது தசம இடத்தில் ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " அலகுகள்; cosine-க்கு அதைக் கழிக்கவும்."
+          ]
+        }
+      },
+      {
+        "math": [
+          "Table answer: ",
+          {
+            "latex": "\\cos 74^{\\circ} 39' \\approx 0.2648",
+            "fallback": "cos74°39′ ≈ 0.2648",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "The ",
+            {
+              "latex": "2025",
+              "fallback": "2025"
+            },
+            " textbook table answer is ",
+            {
+              "latex": "0.2648",
+              "fallback": "0.2648"
+            },
+            ". A calculator gives about ",
+            {
+              "latex": "0.2647",
+              "fallback": "0.2647"
+            },
+            "; this is a different approximation, not the requested table method."
+          ],
+          "ta": [
+            {
+              "latex": "2025",
+              "fallback": "2025"
+            },
+            " பாடநூல் அட்டவணை விடை ",
+            {
+              "latex": "0.2648",
+              "fallback": "0.2648"
+            },
+            ". கணிப்பானில் சுமார் ",
+            {
+              "latex": "0.2647",
+              "fallback": "0.2647"
+            },
+            " கிடைக்கும்; இங்கு அட்டவணை முறையைப் பயன்படுத்த வேண்டும்."
           ]
         }
       }
@@ -3236,35 +3349,97 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{gathered}\\begin{aligned}&\\theta = 54^{\\circ} + \\dfrac{26}{60}^{\\circ}  \\\\ &= 54.433333\\ldots\\end{aligned} \\\\ ^{\\circ}\\end{gathered}",
-          "fallback": "θ = 54° + [[26|60]]° = 54.433333…°",
+          "latex": "\\begin{gathered}54^{\\circ} \\\\ 26' = 54^{\\circ} \\\\ 24' + 2'\\end{gathered}",
+          "fallback": "54°26′ = 54°24′ + 2′",
           "display": true
         },
         "reasonMath": {
-          "en": "Convert the minutes into a fraction of a degree.",
-          "ta": "நிமிடங்களை டிகிரியின் பின்னமாக மாற்றுக."
+          "en": [
+            "Find the nearest lower six-minute table column: ",
+            {
+              "latex": "26' = 24' + 2'",
+              "fallback": "26′ = 24′ + 2′"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "26' = 24' + 2'",
+              "fallback": "26′ = 24′ + 2′"
+            },
+            " எனப் பிரித்து, அட்டவணையில் ",
+            {
+              "latex": "24'",
+              "fallback": "24′"
+            },
+            " நிரலைத் தேர்ந்தெடுக்கவும்."
+          ]
         }
       },
       {
         "math": {
-          "latex": "\\tan 54^{\\circ} 26' \\approx 1.3985034441",
-          "fallback": "tan54°26′ ≈ 1.3985034441",
+          "latex": "\\tan 54^{\\circ} 24' \\approx 1.3968",
+          "fallback": "tan54°24′ ≈ 1.3968",
           "display": true
         },
         "reasonMath": {
-          "en": "Evaluate tangent without rounding the angle first.",
-          "ta": "கோணத்தை முன்கூட்டியே வட்டமிடாமல் tan-ஐக் கணக்கிடுக."
+          "en": [
+            "Read the tangent entry at ",
+            {
+              "latex": "54^{\\circ}",
+              "fallback": "54°"
+            },
+            {
+              "latex": "24'",
+              "fallback": "24′"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "54^{\\circ}",
+              "fallback": "54°"
+            },
+            {
+              "latex": "24'",
+              "fallback": "24′"
+            },
+            "-க்கான tangent அட்டவணை மதிப்பை வாசிக்கவும்."
+          ]
         }
       },
       {
         "math": {
-          "latex": "\\tan 54^{\\circ} 26' \\approx 1.3985",
-          "fallback": "tan54°26′ ≈ 1.3985",
+          "latex": "\\tan 54^{\\circ} 26' \\approx 1.3968 + 0.0017 = 1.3985",
+          "fallback": "tan54°26′ ≈ 1.3968 + 0.0017 = 1.3985",
           "display": true
         },
         "reasonMath": {
-          "en": "Four decimal places require looking at the fifth digit.",
-          "ta": "ஐந்தாவது இலக்கத்தைப் பார்த்து நான்கு தசம இடங்களுக்கு வட்டமிடுக."
+          "en": [
+            "Add the ",
+            {
+              "latex": "2'",
+              "fallback": "2′"
+            },
+            " tangent mean difference, ",
+            {
+              "latex": "17",
+              "fallback": "17"
+            },
+            " units in the fourth decimal place."
+          ],
+          "ta": [
+            {
+              "latex": "2'",
+              "fallback": "2′"
+            },
+            "-க்கான tangent பொது வித்தியாசம் ",
+            {
+              "latex": "0.0017",
+              "fallback": "0.0017"
+            },
+            "; அதைக் கூட்டவும்."
+          ]
         }
       }
     ]
@@ -3295,48 +3470,111 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{aligned}&\\theta = 21^{\\circ} + \\dfrac{21}{60}^{\\circ}  \\\\ &= 21.35^{\\circ}\\end{aligned}",
-          "fallback": "θ = 21° + [[21|60]]° = 21.35°",
-          "display": true
-        },
-        "reasonMath": {
-          "en": "Convert angular minutes into degrees.",
-          "ta": "கோண நிமிடங்களை டிகிரியாக மாற்றுக."
-        }
-      },
-      {
-        "math": {
-          "latex": "\\sin 21^{\\circ} 21' \\approx 0.3640641460",
-          "fallback": "sin21°21′ ≈ 0.3640641460",
-          "display": true
-        },
-        "reasonMath": {
-          "en": "Calculate sine before rounding.",
-          "ta": "வட்டமிடுவதற்கு முன் sin-ஐக் கணக்கிடுக."
-        }
-      },
-      {
-        "math": {
-          "latex": "\\sin 21^{\\circ} 21' \\approx 0.3641",
-          "fallback": "sin21°21′ ≈ 0.3641",
+          "latex": "\\begin{gathered}21^{\\circ} \\\\ 21' = 21^{\\circ} \\\\ 18' + 3'\\end{gathered}",
+          "fallback": "21°21′ = 21°18′ + 3′",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "The fifth decimal digit is ",
+            "Locate ",
             {
-              "latex": "6",
-              "fallback": "6"
+              "latex": "21^{\\circ}",
+              "fallback": "21°"
             },
-            ", so round the fourth decimal up."
+            {
+              "latex": "18'",
+              "fallback": "18′"
+            },
+            " in the sine table; the required angle has ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " extra minutes."
           ],
           "ta": [
-            "ஐந்தாவது தசம இலக்கம் ",
+            "sine அட்டவணையில் ",
             {
-              "latex": "6",
-              "fallback": "6"
+              "latex": "21^{\\circ}",
+              "fallback": "21°"
             },
-            "; எனவே நான்காவது இலக்கத்தை உயர்த்துக."
+            {
+              "latex": "18'",
+              "fallback": "18′"
+            },
+            " மதிப்பைக் காண்க; மேலும் ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " நிமிடங்கள் சேர வேண்டும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\sin 21^{\\circ} 18' \\approx 0.3633",
+          "fallback": "sin21°18′ ≈ 0.3633",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Read the four-place sine entry for ",
+            {
+              "latex": "21^{\\circ}",
+              "fallback": "21°"
+            },
+            {
+              "latex": "18'",
+              "fallback": "18′"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "21^{\\circ}",
+              "fallback": "21°"
+            },
+            {
+              "latex": "18'",
+              "fallback": "18′"
+            },
+            "-க்கான நான்கு தசம sine மதிப்பை வாசிக்கவும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\sin 21^{\\circ} 21' \\approx 0.3633 + 0.0008 = 0.3641",
+          "fallback": "sin21°21′ ≈ 0.3633 + 0.0008 = 0.3641",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "For sine, add the ",
+            {
+              "latex": "3' \\text{mean}",
+              "fallback": "3′ mean"
+            },
+            " difference of ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " fourth-decimal units."
+          ],
+          "ta": [
+            "sine-க்கு ",
+            {
+              "latex": "3'",
+              "fallback": "3′"
+            },
+            "-இன் பொது வித்தியாசம் ",
+            {
+              "latex": "0.0008",
+              "fallback": "0.0008"
+            },
+            "-ஐக் கூட்டவும்."
           ]
         }
       }
@@ -3368,48 +3606,99 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{gathered}\\begin{aligned}&\\theta = 33^{\\circ} + \\dfrac{53}{60}^{\\circ}  \\\\ &= 33.883333\\ldots\\end{aligned} \\\\ ^{\\circ}\\end{gathered}",
-          "fallback": "θ = 33° + [[53|60]]° = 33.883333…°",
-          "display": true
-        },
-        "reasonMath": {
-          "en": "Convert angular minutes into degrees.",
-          "ta": "கோண நிமிடங்களை டிகிரியாக மாற்றுக."
-        }
-      },
-      {
-        "math": {
-          "latex": "\\cos 33^{\\circ} 53' \\approx 0.8301744915",
-          "fallback": "cos33°53′ ≈ 0.8301744915",
-          "display": true
-        },
-        "reasonMath": {
-          "en": "Calculate cosine before rounding.",
-          "ta": "வட்டமிடுவதற்கு முன் cos-ஐக் கணக்கிடுக."
-        }
-      },
-      {
-        "math": {
-          "latex": "\\cos 33^{\\circ} 53' \\approx 0.8302",
-          "fallback": "cos33°53′ ≈ 0.8302",
+          "latex": "\\begin{gathered}33^{\\circ} \\\\ 53' = 33^{\\circ} \\\\ 48' + 5'\\end{gathered}",
+          "fallback": "33°53′ = 33°48′ + 5′",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "The fifth decimal digit is ",
+            "Break ",
             {
-              "latex": "7",
-              "fallback": "7"
+              "latex": "53'",
+              "fallback": "53′"
             },
-            ", so round the fourth decimal up."
+            " into the ",
+            {
+              "latex": "48'",
+              "fallback": "48′"
+            },
+            " table column plus ",
+            {
+              "latex": "5'",
+              "fallback": "5′"
+            },
+            "."
           ],
           "ta": [
-            "ஐந்தாவது தசம இலக்கம் ",
             {
-              "latex": "7",
-              "fallback": "7"
+              "latex": "53' = 48' + 5'",
+              "fallback": "53′ = 48′ + 5′"
             },
-            "; எனவே நான்காவது இலக்கத்தை உயர்த்துக."
+            " எனப் பிரிக்கவும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\cos 33^{\\circ} 48' \\approx 0.8310",
+          "fallback": "cos33°48′ ≈ 0.8310",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Look up cosine for ",
+            {
+              "latex": "33^{\\circ}",
+              "fallback": "33°"
+            },
+            {
+              "latex": "48'",
+              "fallback": "48′"
+            },
+            " in the four-figure table."
+          ],
+          "ta": [
+            "அட்டவணையில் ",
+            {
+              "latex": "\\cos 33^{\\circ} 48'",
+              "fallback": "cos33°48′"
+            },
+            " மதிப்பை வாசிக்கவும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\cos 33^{\\circ} 53' \\approx 0.8310 - 0.0008 = 0.8302",
+          "fallback": "cos33°53′ ≈ 0.8310 − 0.0008 = 0.8302",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Subtract the ",
+            {
+              "latex": "5'",
+              "fallback": "5′"
+            },
+            " cosine mean difference of ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " units in the fourth decimal place."
+          ],
+          "ta": [
+            "cosine-க்கு ",
+            {
+              "latex": "5'",
+              "fallback": "5′"
+            },
+            " பொது வித்தியாசமான ",
+            {
+              "latex": "0.0008",
+              "fallback": "0.0008"
+            },
+            "-ஐக் கழிக்கவும்."
           ]
         }
       }
@@ -3435,54 +3724,172 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "2.7903",
-      "fallback": "2.7903"
+      "latex": "2.7907",
+      "fallback": "2.7907"
     },
     "steps": [
       {
         "math": {
-          "latex": "\\begin{gathered}\\begin{aligned}&\\theta = 70^{\\circ} + \\dfrac{17}{60}^{\\circ}  \\\\ &= 70.283333\\ldots\\end{aligned} \\\\ ^{\\circ}\\end{gathered}",
-          "fallback": "θ = 70° + [[17|60]]° = 70.283333…°",
+          "latex": "\\begin{gathered}70^{\\circ} \\\\ 17' = 70^{\\circ} \\\\ 12' + 5'\\end{gathered}",
+          "fallback": "70°17′ = 70°12′ + 5′",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "Convert ",
+            "For ",
             {
-              "latex": "17",
-              "fallback": "17"
+              "latex": "70^{\\circ}",
+              "fallback": "70°"
             },
-            " minutes to degrees."
+            {
+              "latex": "17'",
+              "fallback": "17′"
+            },
+            ", use the tangent-table column at ",
+            {
+              "latex": "70^{\\circ}",
+              "fallback": "70°"
+            },
+            {
+              "latex": "12'",
+              "fallback": "12′"
+            },
+            " and keep ",
+            {
+              "latex": "5'",
+              "fallback": "5′"
+            },
+            " as the remainder."
           ],
           "ta": [
             {
-              "latex": "17",
-              "fallback": "17"
+              "latex": "70^{\\circ}",
+              "fallback": "70°"
             },
-            " நிமிடங்களை டிகிரியாக மாற்றுக."
+            {
+              "latex": "17' = 70^{\\circ}",
+              "fallback": "17′ = 70°"
+            },
+            {
+              "latex": "12' + 5'",
+              "fallback": "12′ + 5′"
+            },
+            " எனப் பிரித்து tangent அட்டவணையைப் பயன்படுத்தவும்."
           ]
         }
       },
       {
         "math": {
-          "latex": "\\tan 70^{\\circ} 17' \\approx 2.7903338772",
-          "fallback": "tan70°17′ ≈ 2.7903338772",
+          "latex": "\\tan 70^{\\circ} 12' \\approx 2.7776",
+          "fallback": "tan70°12′ ≈ 2.7776",
           "display": true
         },
         "reasonMath": {
-          "en": "Evaluate tangent without rounding the angle first.",
-          "ta": "கோணத்தை முன்கூட்டியே வட்டமிடாமல் tan-ஐக் கணக்கிடுக."
+          "en": [
+            "Read the tangent table at ",
+            {
+              "latex": "70^{\\circ}",
+              "fallback": "70°"
+            },
+            {
+              "latex": "12'",
+              "fallback": "12′"
+            },
+            "."
+          ],
+          "ta": [
+            "அட்டவணையில் ",
+            {
+              "latex": "70^{\\circ}",
+              "fallback": "70°"
+            },
+            {
+              "latex": "12'",
+              "fallback": "12′"
+            },
+            "-க்கான tangent மதிப்பை வாசிக்கவும்."
+          ]
         }
       },
       {
         "math": {
-          "latex": "\\tan 70^{\\circ} 17' \\approx 2.7903",
-          "fallback": "tan70°17′ ≈ 2.7903",
+          "latex": "\\tan 70^{\\circ} 17' \\approx 2.7776 + 0.0131 = 2.7907",
+          "fallback": "tan70°17′ ≈ 2.7776 + 0.0131 = 2.7907",
           "display": true
         },
         "reasonMath": {
-          "en": "Round to four decimal places.",
-          "ta": "நான்கு தசம இடங்களுக்கு வட்டமிடுக."
+          "en": [
+            "Add the ",
+            {
+              "latex": "5'",
+              "fallback": "5′"
+            },
+            " tangent mean difference: ",
+            {
+              "latex": "131",
+              "fallback": "131"
+            },
+            " units of the fourth decimal place."
+          ],
+          "ta": [
+            {
+              "latex": "5'",
+              "fallback": "5′"
+            },
+            "-க்கான tangent பொது வித்தியாசம் நான்காவது தசம இடத்தில் ",
+            {
+              "latex": "131",
+              "fallback": "131"
+            },
+            " அலகுகள்; அதைக் கூட்டவும்."
+          ]
+        }
+      },
+      {
+        "math": [
+          "Table answer: ",
+          {
+            "latex": "\\tan 70^{\\circ} 17' \\approx 2.7907",
+            "fallback": "tan70°17′ ≈ 2.7907",
+            "display": true
+          }
+        ],
+        "reasonMath": {
+          "en": [
+            "The ",
+            {
+              "latex": "2025",
+              "fallback": "2025"
+            },
+            " textbook table answer is ",
+            {
+              "latex": "2.7907",
+              "fallback": "2.7907"
+            },
+            ". A calculator gives about ",
+            {
+              "latex": "2.7903",
+              "fallback": "2.7903"
+            },
+            "; the exercise requires table interpolation rather than calculator rounding."
+          ],
+          "ta": [
+            {
+              "latex": "2025",
+              "fallback": "2025"
+            },
+            " பாடநூல் அட்டவணை விடை ",
+            {
+              "latex": "2.7907",
+              "fallback": "2.7907"
+            },
+            ". கணிப்பானில் சுமார் ",
+            {
+              "latex": "2.7903",
+              "fallback": "2.7903"
+            },
+            " கிடைக்கும்; இந்தப் பயிற்சிக்கு அட்டவணை முறையே பொருத்தமானது."
+          ]
         }
       }
     ]
@@ -46504,6 +46911,376 @@ const texts={
       "latex": "\\sin \\left(90^{\\circ} - \\theta\\right)",
       "fallback": "sin(90°−θ)"
     }
+  ],
+  "At 49° and the 0′ column, read the four-place sine value directly.": [
+    "At ",
+    {
+      "latex": "49^{\\circ}",
+      "fallback": "49°"
+    },
+    " and the ",
+    {
+      "latex": "0'",
+      "fallback": "0′"
+    },
+    " column, read the four-place sine value directly."
+  ],
+  "The sine table is arranged by degrees in rows and multiples of six angular minutes in columns. At 0′ there is no mean-difference adjustment.": [
+    "The sine table is arranged by degrees in rows and multiples of six angular minutes in columns. At ",
+    {
+      "latex": "0'",
+      "fallback": "0′"
+    },
+    " there is no mean-difference adjustment."
+  ],
+  "sine அட்டவணையின் வரிசை டிகிரியையும் நிரல் ஆறு நிமிட இடைவெளியையும் குறிக்கிறது. 0′ என்பதால் பொது வித்தியாசத் திருத்தம் தேவையில்லை.": [
+    "sine அட்டவணையின் வரிசை டிகிரியையும் நிரல் ஆறு நிமிட இடைவெளியையும் குறிக்கிறது. ",
+    {
+      "latex": "0'",
+      "fallback": "0′"
+    },
+    " என்பதால் பொது வித்தியாசத் திருத்தம் தேவையில்லை."
+  ],
+  "Read the 74° row and 36′ column of the cosine table.": [
+    "Read the ",
+    {
+      "latex": "74^{\\circ}",
+      "fallback": "74°"
+    },
+    " row and ",
+    {
+      "latex": "36'",
+      "fallback": "36′"
+    },
+    " column of the cosine table."
+  ],
+  "Choose 74°36′ first. Then move forward 3′ using the mean difference; cosine decreases as the angle increases, so subtract 0.0008 rather than round a calculator value.": [
+    "Choose ",
+    {
+      "latex": "74^{\\circ}",
+      "fallback": "74°"
+    },
+    {
+      "latex": "36'",
+      "fallback": "36′"
+    },
+    " first. Then move forward ",
+    {
+      "latex": "3'",
+      "fallback": "3′"
+    },
+    " using the mean difference; cosine decreases as the angle increases, so subtract ",
+    {
+      "latex": "0.0008",
+      "fallback": "0.0008"
+    },
+    " rather than round a calculator value."
+  ],
+  "முதலில் 74°36′ மதிப்பை வாசிக்கவும். மேலும் 3′-க்கு பொது வித்தியாசத்தைச் சரிசெய்யவும். கோணம் அதிகரிக்கும்போது cosine குறைவதால் 0.0008-ஐக் கழிக்கவும்.": [
+    "முதலில் ",
+    {
+      "latex": "74^{\\circ}",
+      "fallback": "74°"
+    },
+    {
+      "latex": "36'",
+      "fallback": "36′"
+    },
+    " மதிப்பை வாசிக்கவும். மேலும் ",
+    {
+      "latex": "3'",
+      "fallback": "3′"
+    },
+    "-க்கு பொது வித்தியாசத்தைச் சரிசெய்யவும். கோணம் அதிகரிக்கும்போது cosine குறைவதால் ",
+    {
+      "latex": "0.0008",
+      "fallback": "0.0008"
+    },
+    "-ஐக் கழிக்கவும்."
+  ],
+  "Read the tangent entry at 54°24′.": [
+    "Read the tangent entry at ",
+    {
+      "latex": "54^{\\circ}",
+      "fallback": "54°"
+    },
+    {
+      "latex": "24'",
+      "fallback": "24′"
+    },
+    "."
+  ],
+  "For 54°26′, start with 54°24′ in the tangent table and add the 2′ mean difference. Tangent increases with the acute angle.": [
+    "For ",
+    {
+      "latex": "54^{\\circ}",
+      "fallback": "54°"
+    },
+    {
+      "latex": "26'",
+      "fallback": "26′"
+    },
+    ", start with ",
+    {
+      "latex": "54^{\\circ}",
+      "fallback": "54°"
+    },
+    {
+      "latex": "24'",
+      "fallback": "24′"
+    },
+    " in the tangent table and add the ",
+    {
+      "latex": "2' \\text{mean}",
+      "fallback": "2′ mean"
+    },
+    " difference. Tangent increases with the acute angle."
+  ],
+  "54°26′-க்கு 54°24′ அட்டவணை மதிப்பிலிருந்து தொடங்கி, 2′-க்கான பொது வித்தியாசத்தை கூட்டவும். குறுங்கோணம் அதிகரிக்கும்போது tangent அதிகரிக்கும்.": [
+    {
+      "latex": "54^{\\circ}",
+      "fallback": "54°"
+    },
+    {
+      "latex": "26'",
+      "fallback": "26′"
+    },
+    "-க்கு ",
+    {
+      "latex": "54^{\\circ}",
+      "fallback": "54°"
+    },
+    {
+      "latex": "24'",
+      "fallback": "24′"
+    },
+    " அட்டவணை மதிப்பிலிருந்து தொடங்கி, ",
+    {
+      "latex": "2'",
+      "fallback": "2′"
+    },
+    "-க்கான பொது வித்தியாசத்தை கூட்டவும். குறுங்கோணம் அதிகரிக்கும்போது tangent அதிகரிக்கும்."
+  ],
+  "Read the four-place sine entry for 21°18′.": [
+    "Read the four-place sine entry for ",
+    {
+      "latex": "21^{\\circ}",
+      "fallback": "21°"
+    },
+    {
+      "latex": "18'",
+      "fallback": "18′"
+    },
+    "."
+  ],
+  "For sine 21°21′, look up the 21°18′ column and add the 3′ mean difference. The four-place table answer is 0.3641.": [
+    "For sine ",
+    {
+      "latex": "21^{\\circ}",
+      "fallback": "21°"
+    },
+    {
+      "latex": "21'",
+      "fallback": "21′"
+    },
+    ", look up the ",
+    {
+      "latex": "21^{\\circ}",
+      "fallback": "21°"
+    },
+    {
+      "latex": "18'",
+      "fallback": "18′"
+    },
+    " column and add the ",
+    {
+      "latex": "3' \\text{mean}",
+      "fallback": "3′ mean"
+    },
+    " difference. The four-place table answer is ",
+    {
+      "latex": "0.3641",
+      "fallback": "0.3641"
+    },
+    "."
+  ],
+  "sin21°21′-க்கு முதலில் 21°18′ மதிப்பை வாசித்து 3′-க்கான பொது வித்தியாசத்தைக் கூட்டவும். அட்டவணை விடை 0.3641.": [
+    {
+      "latex": "\\sin 21^{\\circ} 21'",
+      "fallback": "sin21°21′"
+    },
+    "-க்கு முதலில் ",
+    {
+      "latex": "21^{\\circ}",
+      "fallback": "21°"
+    },
+    {
+      "latex": "18'",
+      "fallback": "18′"
+    },
+    " மதிப்பை வாசித்து ",
+    {
+      "latex": "3'",
+      "fallback": "3′"
+    },
+    "-க்கான பொது வித்தியாசத்தைக் கூட்டவும். அட்டவணை விடை ",
+    {
+      "latex": "0.3641",
+      "fallback": "0.3641"
+    },
+    "."
+  ],
+  "Look up cosine for 33°48′ in the four-figure table.": [
+    "Look up cosine for ",
+    {
+      "latex": "33^{\\circ}",
+      "fallback": "33°"
+    },
+    {
+      "latex": "48'",
+      "fallback": "48′"
+    },
+    " in the four-figure table."
+  ],
+  "For cosine 33°53′, begin with the 33°48′ column and subtract the mean difference for the remaining 5′.": [
+    "For cosine ",
+    {
+      "latex": "33^{\\circ}",
+      "fallback": "33°"
+    },
+    {
+      "latex": "53'",
+      "fallback": "53′"
+    },
+    ", begin with the ",
+    {
+      "latex": "33^{\\circ}",
+      "fallback": "33°"
+    },
+    {
+      "latex": "48'",
+      "fallback": "48′"
+    },
+    " column and subtract the mean difference for the remaining ",
+    {
+      "latex": "5'",
+      "fallback": "5′"
+    },
+    "."
+  ],
+  "cos33°53′-க்கு 33°48′ மதிப்பைப் பெற்று மீதமுள்ள 5′-க்கான பொது வித்தியாசத்தைக் கழிக்கவும்.": [
+    {
+      "latex": "\\cos 33^{\\circ} 53'",
+      "fallback": "cos33°53′"
+    },
+    "-க்கு ",
+    {
+      "latex": "33^{\\circ}",
+      "fallback": "33°"
+    },
+    {
+      "latex": "48'",
+      "fallback": "48′"
+    },
+    " மதிப்பைப் பெற்று மீதமுள்ள ",
+    {
+      "latex": "5'",
+      "fallback": "5′"
+    },
+    "-க்கான பொது வித்தியாசத்தைக் கழிக்கவும்."
+  ],
+  "Read the tangent table at 70°12′.": [
+    "Read the tangent table at ",
+    {
+      "latex": "70^{\\circ}",
+      "fallback": "70°"
+    },
+    {
+      "latex": "12'",
+      "fallback": "12′"
+    },
+    "."
+  ],
+  "For 70°17′, start at 70°12′ and add 5′ of mean difference, 0.0131. This gives the prescribed four-figure-table answer 2.7907, not the calculator-rounded 2.7903.": [
+    "For ",
+    {
+      "latex": "70^{\\circ}",
+      "fallback": "70°"
+    },
+    {
+      "latex": "17'",
+      "fallback": "17′"
+    },
+    ", start at ",
+    {
+      "latex": "70^{\\circ}",
+      "fallback": "70°"
+    },
+    {
+      "latex": "12'",
+      "fallback": "12′"
+    },
+    " and add ",
+    {
+      "latex": "5'",
+      "fallback": "5′"
+    },
+    " of mean difference, ",
+    {
+      "latex": "0.0131",
+      "fallback": "0.0131"
+    },
+    ". This gives the prescribed four-figure-table answer ",
+    {
+      "latex": "2.7907",
+      "fallback": "2.7907"
+    },
+    ", not the calculator-rounded ",
+    {
+      "latex": "2.7903",
+      "fallback": "2.7903"
+    },
+    "."
+  ],
+  "70°17′-க்கு 70°12′ மதிப்புடன் 5′ பொது வித்தியாசம் 0.0131-ஐக் கூட்டினால் அட்டவணை விடை 2.7907 கிடைக்கும். கணிப்பான் தோராயமான 2.7903 வேறு.": [
+    {
+      "latex": "70^{\\circ}",
+      "fallback": "70°"
+    },
+    {
+      "latex": "17'",
+      "fallback": "17′"
+    },
+    "-க்கு ",
+    {
+      "latex": "70^{\\circ}",
+      "fallback": "70°"
+    },
+    {
+      "latex": "12'",
+      "fallback": "12′"
+    },
+    " மதிப்புடன் ",
+    {
+      "latex": "5'",
+      "fallback": "5′"
+    },
+    " பொது வித்தியாசம் ",
+    {
+      "latex": "0.0131",
+      "fallback": "0.0131"
+    },
+    "-ஐக் கூட்டினால் அட்டவணை விடை ",
+    {
+      "latex": "2.7907",
+      "fallback": "2.7907"
+    },
+    " கிடைக்கும். கணிப்பான் தோராயமான ",
+    {
+      "latex": "2.7903",
+      "fallback": "2.7903"
+    },
+    " வேறு."
   ],
   "Adjacent side = 4 m; hypotenuse = 5 m.": [
     "Adjacent side = ",

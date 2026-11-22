@@ -1,0 +1,63 @@
+name: AUD14-02 — one-shot regenerate Grade 9 table-method projection
+on:
+  push:
+    branches:
+      - audit-fix/g9-ex64-table-method-aud14-02-20261122
+    paths:
+      - site/data/class-9.js
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    if: github.repository == 'vigneswaranmba20-afk/Triggle'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit-fix/g9-ex64-table-method-aud14-02-20261122
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Generate Grade 9 presentation and curriculum snapshot
+        run: |
+          set -euo pipefail
+          node site/tools/build_g9_math.cjs
+          node site/tools/build_project_status.cjs
+      - name: Compute new record hashes for the scoped six-record preservation exception
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs=require('node:fs'),crypto=require('node:crypto');
+          const content=fs.readFileSync('site/data/class-9.js','utf8');
+          for(const suffix of ['i','ii','iii','iv','v','vi']){
+            const id='c9-exercise-6-4-q1-'+suffix;
+            const start=content.indexOf('{"id":"'+id+'"'),end=content.indexOf(',{"id":"',start+5);
+            if(start<0||end<0)throw Error('missing '+id);
+            const rec=JSON.parse(content.slice(start,end));
+            const hash=crypto.createHash('sha256').update(JSON.stringify(rec)).digest('hex');
+            console.log('AUD14-02_CORRECTED_RECORD_SHA '+id+' '+hash+' final='+rec.answer);
+          }
+          NODE
+      - name: Commit only generated artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/data/g9-clear-math.js site/data/project-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'build(aud14-02): synchronize canonical Grade 9 math and status'
+            git push origin HEAD:audit-fix/g9-ex64-table-method-aud14-02-20261122
+          fi
+      - name: Verify deterministic regeneration
+        run: |
+          node site/tools/build_g9_math.cjs --check
+          node site/tools/build_project_status.cjs --check

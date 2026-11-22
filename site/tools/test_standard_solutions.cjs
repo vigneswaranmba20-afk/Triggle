@@ -5,6 +5,9 @@ for(const m of html.matchAll(/<script src="\.\/(data\/[^?\"]+)[^\"]*"/g))vm.runI
 const {TRIGGLE_CLASSES:classes,TriggleDifficulty:registry}=ctx.window;
 const preserved=require('../../docs/standard-solution-preservation.json');
 const auditedG9Proofs=require('../../docs/audit/AUD13_02_CORRECTION_HASHES.json');
+const auditedG9Tables=require('../../docs/audit/AUD14_02_CORRECTION_HASHES.json');
+assert.equal(auditedG9Tables.auditId,'AUD14-02');
+assert.deepEqual(Object.keys(auditedG9Tables.records).sort(),['i','ii','iii','iv','v','vi'].map(x=>'c9-exercise-6-4-q1-'+x).sort());
 assert.equal(auditedG9Proofs.auditId,'AUD13-02');
 assert.deepEqual(Object.keys(auditedG9Proofs.records).sort(),['g9-ch5-ex5.2-q2','g9-ch5-ex5.2-q5','g9-ch5-ex5.2-q6']);
 const approvedBatch=require('../../docs/curriculum/grade-10/batches/g10-ch2-ex2-2.json');
@@ -340,6 +343,18 @@ for(const [grade,data] of Object.entries(classes)){
     assert.equal(item.q.ta,correction.unchangedTamilFallback,'Original Tamil fallback preserved '+item.id);
     assert.equal(item.answer,correction.unchangedFinalAnswer,'Original final answer preserved '+item.id);
     assert.equal(hash,correction.correctedRecordSha256,'Exact independently checked proof amendment '+item.id);
+   }else if(auditedG9Tables.records[item.id]){
+    // Six approved four-figure-table corrections, independently cross-checked
+    // against 2025 printed English/Tamil answers. Original 568-hash baseline
+    // stays immutable, and every prompt remains byte-identical.
+    const table=auditedG9Tables.records[item.id];
+    assert.equal(grade,'9','Table exception only applies to Grade 9');
+    assert.equal(table.originalRecordSha256,preserved.sha256[item.id],'Untouched original Grade 9 table baseline '+item.id);
+    assert.equal(item.q.en,table.unchangedEnglishQuestion,'Original English exercise prompt '+item.id);
+    assert.equal(item.q.ta,table.unchangedTamilQuestion,'Original Tamil exercise prompt '+item.id);
+    assert.equal(item.answer,table.correctedFinalAnswer,'2025 table answer key '+item.id);
+    assert.equal(item.kind,table.unchangedKind,'Preserve exercise classification '+item.id);
+    assert.equal(hash,table.correctedRecordSha256,'Exactly scoped verified table-method record '+item.id);
    }else{
     assert.equal(hash,preserved.sha256[item.id],'Entire original question, mathematical working, notation, answer and metadata: '+item.id);
    }
