@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 // NEON AUD08-06 => controlled Hugging Face proposal only. Never deploys.
+// ONE-TIME USER AUTHORIZATION: one paid model request on 2026-11-22; no retries, no deployment.
 import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
