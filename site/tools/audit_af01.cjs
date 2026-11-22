@@ -218,7 +218,12 @@ function buildChapterScorecards(win, staticChecks) {
           }
           if (mathSpec) {
             const htmlOut = renderMath(mathSpec);
-            if (htmlOut.includes('data-math-error') || /FRAC|undefined/.test(mathSpec.latex || '')) katexErr++;
+            if (htmlOut.includes('data-math-error') || /FRAC|undefined/.test(mathSpec.latex || '')) {
+              katexErr++;
+              if (process.argv.includes('--check')) {
+                console.error('[AF01 KaTeX] invalid step:', it.id, 'step', i, JSON.stringify(mathSpec.latex || mathSpec).slice(0,240));
+              }
+            }
           } else if (/\d+\/\d+/.test(s.eq || '')) {
             slashUnconverted++;
           }
