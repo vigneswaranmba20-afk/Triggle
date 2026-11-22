@@ -218,7 +218,12 @@ function buildChapterScorecards(win, staticChecks) {
           }
           if (mathSpec) {
             const htmlOut = renderMath(mathSpec);
-            if (htmlOut.includes('data-math-error') || /FRAC|undefined/.test(mathSpec.latex || '')) katexErr++;
+            if (htmlOut.includes('data-math-error') || /FRAC|undefined/.test(mathSpec.latex || '')) {
+              katexErr++;
+              if (process.argv.includes('--check')) {
+                console.error('[AF01 KaTeX] invalid step:', it.id, 'step', i, JSON.stringify(mathSpec.latex || mathSpec).slice(0,240));
+              }
+            }
           } else if (/\d+\/\d+/.test(s.eq || '')) {
             slashUnconverted++;
           }
@@ -231,8 +236,41 @@ function buildChapterScorecards(win, staticChecks) {
           ansSpec = g9m?.getAnswer?.(it) || null;
         }
         if (ansSpec) {
-          const htmlOut = renderMath(ansSpec);
-          if (htmlOut.includes('data-math-error') || /FRAC|undefined/.test(ansSpec.latex || '')) katexErr++;
+          // Valid answerMath formats:
+          //   {latex,display,fallback}                         (original)
+          //   {latex,display,fallback,ta:{latex,...}}          (legacy EN + Tamil)
+          //   {en:{latex,...},ta:{latex,...}}                 (new bilingual)
+          // The root latex is the English formula in legacy records. Validate it
+          // and the localized child; do not incorrectly demand an 'en' sibling.
+          const structured = typeof ansSpec === 'object' && !Array.isArray(ansSpec);
+          const rootLatex = structured && typeof ansSpec.latex === 'string';
+          const hasEnglish = structured && Object.hasOwn(ansSpec, 'en');
+          const hasTamil = structured && Object.hasOwn(ansSpec, 'ta');
+          const bilingual = hasEnglish || hasTamil;
+          const variants = rootLatex
+            ? [ansSpec, ...(hasTamil ? [ansSpec.ta] : [])]
+            : bilingual
+              ? ['en', 'ta'].filter(locale => Object.hasOwn(ansSpec, locale)).map(locale => ansSpec[locale])
+              : [ansSpec];
+          if (!variants.length || (bilingual && !rootLatex && !hasEnglish)) {
+            katexErr++;
+            if (process.argv.includes('--check')) console.error('[AF01 KaTeX] missing English formula:', it.id, JSON.stringify(ansSpec).slice(0,240));
+          }
+          for (const spec of variants) {
+            if (!spec || (typeof spec === 'object' && !Array.isArray(spec) && typeof spec.latex !== 'string')) {
+              katexErr++;
+              if (process.argv.includes('--check')) console.error('[AF01 KaTeX] unsupported answer shape:', it.id, JSON.stringify(spec).slice(0,240));
+              continue;
+            }
+            const htmlOut = renderMath(spec);
+            if (htmlOut.includes('data-math-error') || /FRAC|undefined/.test(spec.latex || '')) {
+              katexErr++;
+              if (process.argv.includes('--check')) {
+                const locale = bilingual ? (ansSpec.en === spec ? 'en' : 'ta') : 'single';
+                console.error('[AF01 KaTeX] invalid answer:', it.id, locale, JSON.stringify(spec.latex || spec).slice(0,240));
+              }
+            }
+          }
         } else if (typeof it.answer === 'string' && /\d+\/\d+/.test(it.answer)) {
           slashUnconverted++;
         }

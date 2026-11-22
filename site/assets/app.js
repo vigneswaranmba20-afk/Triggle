@@ -435,7 +435,7 @@
   const title=document.createElement('strong');title.className='final-answer-label';
   title.textContent=ui('finalAnswer');
   const result=document.createElement('div');result.className='final-answer-value';
-  if(englishInTamilReader(tr(current.answer)))result.lang='en';
+  if(englishInTamilReader(tr(lang==='ta'&&current.answerTa?current.answerTa:current.answer)))result.lang='en';
   result.classList.toggle('answer-grid',answer.classList.contains('answer-grid'));
   result.classList.toggle('answer-grid-many',answer.classList.contains('answer-grid-many'));
   result.innerHTML=answer.innerHTML;
@@ -472,7 +472,7 @@
    intro.append(title,p,formula);ul.append(intro);
   }
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
-  const localizedAnswer=tr(current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
+  const localizedAnswer=tr(lang==='ta'&&current.answerTa?current.answerTa:current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
   const grade9Answer=window.TriggleG9Math?.get(current)?.answerMath;
   const possibleAnswerMath=(grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getAnswer?.(current))||window.TriggleG10Ch2FractionMath?.getAnswer?.(current);
   const answerMath=possibleAnswerMath?.[lang]||possibleAnswerMath?.en||possibleAnswerMath;

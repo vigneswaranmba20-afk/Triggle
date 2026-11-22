@@ -128,6 +128,6 @@ assert.ok(ch5Concepts.includes('மீட்டமை A(−4,−1), B(4,3)'), 'A
 assert.ok(ch5Concepts.includes("'3-4-5 செங்கோண கட்டம்'"), 'AF01-06 Tamil grid chip translation must be present');
 
 // 5. Run audit_af01.cjs --check to guarantee continuous pipeline & zero Grade 10 plain slash fractions
-cp.execFileSync(process.execPath, [path.join(__dirname, 'audit_af01.cjs'), '--check'], { cwd: repoRoot, stdio: 'pipe' });
+cp.execFileSync(process.execPath, [path.join(__dirname, 'audit_af01.cjs'), '--check'], { cwd: repoRoot, stdio: 'inherit' });
 
 console.log(`PASS AF-01 remediations: ${stepCount} steps + ${answerCount} answers (${stackedFractionNodes} stacked fractions, SHA-256 preserved), geometry guards, WCAG targets/contrast, Tamil Ch 5 parity, and audit_af01 --check.`);

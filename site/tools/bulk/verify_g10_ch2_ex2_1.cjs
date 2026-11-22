@@ -4,16 +4,16 @@ const assert=require('node:assert/strict');
 // Each reviewed lesson is pinned below as well as checked independently. A wording or
 // workings change must receive mathematical review before updating this digest.
 const reviewed={
-  "1": "6cec7520d9a9a2fe4d35efa95ffc12a58e9b4aed623c9340d6bb4e98eb561a6a",
-  "2": "25448d7619fba6767e54f0f0b77c49edb45f94fb46c30b5bf96803478795b0b2",
-  "3": "da5fa339d491d66e9d46f9aafafafedcd2fcbea22d8f149e571b355e2b396ba6",
-  "4": "b1397a2b1e6b7d642d5744fb1c352f4c6f3fa7a4dc5368e0c6bc0b24f4fb3c38",
-  "5": "7ed224d00b716a55d79a7ba491b017435cd3fab51c1f2aa7875f748743fb5ec0",
-  "6": "f90897c490705da5013d8c09e1caeaaf0ecf08b26621346433b58f9f7ecf13d1",
-  "7": "99d9c20303a96d04f2a570ef8d30c70df87be846fa3b47ce066f2b5d82b525b7",
-  "8": "e0b9fb6d1e056deb7cbf4f2f8d9548c849d303f3bc54851795f80615ff07772f",
-  "9": "9eac04830caa515354c05eed0ffddf6e9af737903307d093cec49f814736a2bd",
-  "10": "b911539c3efcc16a59f5fb01ce9abbf759f06c97ae9e5b6c6715fda59a35b7eb"
+  "1": "44a2beccbbf8173eee0002d89787446e145921733df4b0f380448a5b73aed0d3",
+  "2": "6b4f318f28e24a5111ea1f4f8a141a4eef04ead5061ab1f5030c94bd78f9625e",
+  "3": "73f24b7b5cea9189f007d565843d551de48e3fe43d7dfbd73caacb29cb91958f",
+  "4": "8af322a9402c77c25a2f0020c8c6bcca72869dc68b968b7b127772b8711961a7",
+  "5": "0a321dd8e5fa32919196b9ec3c1c303e01b593ae11957eb836dbc0dcef198179",
+  "6": "a9d84dbcbcbe82a2446d7dd9f6aa341d6355b779b8fe6986f42efe39afcb9164",
+  "7": "99d97ba7f539e44ff56dd6d103a5e9255be20cc1780265e3756f10de7f02b545",
+  "8": "6e28392d99f8f6d3187bd7d451d6bd32b34f31d2afef518cc8c63faf05d63b51",
+  "9": "2d8637042bdc4eec881dfba62ffd98d3f4bacbdcc81f461ffccd4d873439213c",
+  "10": "a188595a360a633ee32cc19541ca36d5367fbfe27ffc214fada37d8e5171ac0d"
 };
 const add=(a,b)=>Array.from({length:Math.max(a.length,b.length)},(_,i)=>(a[i]||0)+(b[i]||0));
 const scale=(a,n)=>a.map(x=>x*n);

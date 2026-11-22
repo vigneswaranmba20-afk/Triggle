@@ -21,7 +21,7 @@ async function main(){
  let browser;
  try{
   browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),args:['--no-sandbox']});
-  for(const width of [320,390,1280]){
+  for(const width of [320,360,390,412,1280]){
    const ctx=await browser.newContext({viewport:{width,height:850},serviceWorkers:'block'});
    const page=await ctx.newPage(),errors=[],missing=[];
    page.on('pageerror',error=>errors.push(error.message));
@@ -62,7 +62,10 @@ async function main(){
    await page.locator('#previous').click();
    assert.equal(new URL(page.url()).searchParams.get('question'),batch.records.at(-2).id);
    await page.locator('#langTa').click();
-   assert.match(await page.locator('#questionHead').innerText(),/English.*pending/i,'Tamil switch identifies pending content');
+   assert.equal(await page.locator('#questionHead').innerText(),batch.records.at(-2).label.ta,'Tamil switch displays the verified Tamil label');
+   assert.equal(await page.locator('#questionText').innerText(),batch.records.at(-2).q.ta,'Tamil switch displays the verified Tamil textbook question');
+   await page.locator('#langEn').click();
+   assert.equal(await page.locator('#questionText').innerText(),batch.records.at(-2).q.en,'Switching back restores the English textbook question');
    assert.deepEqual(errors,[],'No browser errors');assert.deepEqual(missing,[],'No missing content or assets');
    await ctx.close();
   }
