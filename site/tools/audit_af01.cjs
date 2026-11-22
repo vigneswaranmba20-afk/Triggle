@@ -243,10 +243,14 @@ function buildChapterScorecards(win, staticChecks) {
           const variants = bilingual
             ? ['en', 'ta'].filter(locale => Object.hasOwn(ansSpec, locale)).map(locale => ansSpec[locale])
             : [ansSpec];
-          if (!variants.length || (bilingual && !ansSpec.en)) katexErr++;
+          if (!variants.length || (bilingual && !ansSpec.en)) {
+            katexErr++;
+            if (process.argv.includes('--check')) console.error('[AF01 KaTeX] missing answer locale:', it.id, JSON.stringify(ansSpec).slice(0,240));
+          }
           for (const spec of variants) {
             if (!spec || (typeof spec === 'object' && !Array.isArray(spec) && typeof spec.latex !== 'string')) {
               katexErr++;
+              if (process.argv.includes('--check')) console.error('[AF01 KaTeX] unsupported answer shape:', it.id, JSON.stringify(spec).slice(0,240));
               continue;
             }
             const htmlOut = renderMath(spec);
