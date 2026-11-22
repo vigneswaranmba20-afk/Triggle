@@ -71,6 +71,14 @@ assert.match(q10.steps.at(-1).en,/one-paise difference/,'teach 2025 textbook rou
 const svg=read('site/'+q10.figureSrc);
 assert.match(svg,/<svg\s/);assert.match(svg,/<title\b/);assert.match(svg,/<desc\b/);
 assert.ok(!/<script\b/i.test(svg),'no executable script in SVG');
+assert.match(svg,/id="upper-radius" d="M300 122 H394"/,'Top 6cm radius must visibly span centre to upper rim');
+assert.match(svg,/id="lower-radius" d="M300 307 H490"/,'Bottom 12cm radius must visibly span centre to lower rim');
+assert.match(svg,/id="vertical-height" d="M300 142 V297"/,'Vertical height axis must be explicit');
+assert.match(svg,/A190 38 0 0 0 490 307/,'Front bottom curve must share the same ellipse as opening');
+assert.match(svg,/A190 38 0 0 1 490 307/,'Back bottom curve must share the same ellipse as opening');
+assert.match(svg,/ℓ = 10 cm/,'Slant height must be visible, not just in accessibility text');
+assert.match(svg,/<rect x="316" y="201" width="100"/,'The height label must not reach the right frustum wall');
+assert.doesNotMatch(svg,/x="318" y="186" width="140"/,'Old label-wall collision must never return');
 const pi=22/7;const close=(a,b)=>Math.abs(a-b)<1e-10;
 const slant6=Math.hypot(5,12);assert.equal(slant6,13);assert.ok(close(5720/(pi*5*slant6),28));
 const ratio=(Math.sqrt(10))/(9*Math.sqrt(2));assert.ok(close(ratio,Math.sqrt(5)/9));
