@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "mission": "TRIGGLE-X-G10-CH7-EX71-Q6-Q10",
+  "grade": 10,
+  "chapter": 7,
+  "exercise": "7.1",
+  "status": "author-draft-awaiting-Neon-blind-audit",
+  "languagePolicy": "english-first; complete Tamil teaching translation pending",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfQuestionPage": 288,
+      "printedQuestionPage": 282,
+      "pdfAnswerPage": 347,
+      "printedAnswerPage": 341
+    },
+    "tamil": {
+      "id": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfQuestionPage": 296,
+      "printedQuestionPage": 290,
+      "pdfAnswerPage": 362,
+      "printedAnswerPage": 356
+    },
+    "questionPageImagesInspected": true,
+    "answerKeyPageImagesInspected": true,
+    "q10FigureInspected": true,
+    "independentBlindAuditCompleted": false,
+    "sourceFigureNote": "The textbook photograph shows upper and lower radii 6 cm and 12 cm and vertical height 8 cm. The student-facing SVG is an original clarifying schematic."
+  },
+  "records": [
+    {
+      "id": "c10-7-ex7-1-q6",
+      "expected": "28 birthday caps",
+      "inputs": [
+        "5720 cm² paper",
+        "radius 5 cm",
+        "vertical height 12 cm"
+      ],
+      "independentOracle": "ℓ=13 cm; per cap CSA=65π cm²; N=5720/(65π)=28",
+      "risks": [
+        "cap base mistakenly included",
+        "slant mistaken for vertical height"
+      ]
+    },
+    {
+      "id": "c10-7-ex7-1-q7",
+      "expected": "√5 : 9",
+      "inputs": [
+        "radius ratio 1:3",
+        "equal heights",
+        "height three times smaller radius"
+      ],
+      "independentOracle": "r1=x,r2=3x,h=3x; l1=x√10,l2=3x√2; πr1l1:πr2l2=√5:9",
+      "risks": [
+        "radical lost by PDF text extraction",
+        "ratio incorrectly 5:9",
+        "same height != same slant height"
+      ]
+    },
+    {
+      "id": "c10-7-ex7-1-q8",
+      "expected": "56.25% increase",
+      "inputs": [
+        "sphere radius +25%"
+      ],
+      "independentOracle": "A ∝ r², area factor 1.25²=1.5625",
+      "risks": [
+        "area incorrectly increases 25%",
+        "confuse total percentage 156.25 with increase 56.25"
+      ]
+    },
+    {
+      "id": "c10-7-ex7-1-q9",
+      "expected": "₹302.72",
+      "inputs": [
+        "inner diameter 20 cm",
+        "outer diameter 28 cm",
+        "₹0.14 per cm²"
+      ],
+      "independentOracle": "r=10,R=14; painted curved inside + outside + annular rim=688π cm²; cost=0.14*688*22/7=302.72",
+      "risks": [
+        "diameter vs radius",
+        "missing inner hemisphere",
+        "missing rim annulus"
+      ]
+    },
+    {
+      "id": "c10-7-ex7-1-q10",
+      "expected": "₹1357.72 (textbook intermediate rounding)",
+      "inputs": [
+        "upper radius 6 cm",
+        "lower radius 12 cm",
+        "vertical height 8 cm",
+        "₹2/cm²",
+        "paint exterior + top"
+      ],
+      "independentOracle": "l=sqrt(8²+(12−6)²)=10; painted area π(R+r)l+πr²=216π=678.857... -> 678.86 cm²; cost 2*678.86=₹1357.72",
+      "specialRounding": "If you keep exact area until final rounding, price is ₹1357.71; 2025 printed key uses area rounded first. Explicitly teach the one-paise difference.",
+      "risks": [
+        "figure 6 and 12 are radii, not diameters",
+        "including open bottom or inside",
+        "rounding order one-paise discrepancy",
+        "top not included"
+      ]
+    }
+  ]
+}
