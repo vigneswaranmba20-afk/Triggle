@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "auditId": "AUD14-02",
+  "scope": "Grade 9 Exercise 6.4 Q1(i)–(vi): textbook four-figure trigonometric table and mean differences",
+  "source": {
+    "english2025": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+    "tamil2025": "https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view",
+    "englishExercisePrintedPage": 239,
+    "englishExercisePdfPage": 245,
+    "englishAnswerPrintedPage": 316,
+    "englishAnswerPdfPage": 322,
+    "tamilAnswerPrintedPage": 332,
+    "tamilAnswerPdfPage": 338
+  },
+  "method": "For 0°,6°,12°,18°...54° columns: find the previous 6-minute angle, read four decimal places, add mean differences for sine/tangent or subtract for cosine. The textbook's rounded-table answer can differ from rounding a high-precision calculator.",
+  "gates": {
+    "englishExercisePageImage": "passed",
+    "englishAndTamilAnswerPageImages": "passed",
+    "independentTableArithmetic": "passed",
+    "tamilExplanationEditorial": "pending",
+    "livePages": "pending"
+  },
+  "notes": [
+    "The 2025 official English textbook pp.236–237 explicitly prescribes 6-minute columns and mean differences and prints tan70°12′=2.7776 in Example 6.13.",
+    "The answer key explicitly prints 0.2648 and 2.7907; calculator values 0.2647 and 2.7903 must not displace the prescribed table method.",
+    "A corrected record hashes exception is allowed only for these six IDs; the immutable 568-record preservation baseline remains untouched."
+  ],
+  "records": {
+    "c9-exercise-6-4-q1-i": {
+      "originalRecordSha256": "962b4a3a9b020eb471ff509c2eb56d7dcc97aadc59612833be7badf3aee056e2",
+      "correctedRecordSha256": "2126179e237abec35c91e8cb2afd87c3b07aeb7595b1b3a2539bcde790887a1a",
+      "unchangedEnglishQuestion": "Look up or calculate sin49° to four decimal places.",
+      "unchangedTamilQuestion": "sin49° மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+      "originalFinalAnswer": "0.7547",
+      "correctedFinalAnswer": "0.7547",
+      "tableBaseAngle": "49°00′",
+      "extraMinutes": "0′",
+      "tableBaseValue": "0.7547",
+      "meanDifference": "0.0000",
+      "calculatedTableValue": "0.7547"
+    },
+    "c9-exercise-6-4-q1-ii": {
+      "originalRecordSha256": "4b16217070db706daaa7a3ab9517d8cf8978cf8635c7dfa492fc62239ba6d096",
+      "correctedRecordSha256": "2cdaa2dbcd5a973bc9c06a056ecfb2b2b1b2876cbf5c818c5e108f56baa3b958",
+      "unchangedEnglishQuestion": "Evaluate cos74°39′ to four decimal places.",
+      "unchangedTamilQuestion": "cos74°39′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+      "originalFinalAnswer": "0.2647",
+      "correctedFinalAnswer": "0.2648",
+      "tableBaseAngle": "74°36′",
+      "extraMinutes": "3′",
+      "tableBaseValue": "0.2656",
+      "meanDifference": "−0.0008",
+      "calculatedTableValue": "0.2648"
+    },
+    "c9-exercise-6-4-q1-iii": {
+      "originalRecordSha256": "b113b045d45a2ac99621e21b6587af40974f6979ce172e2d25b74d7a148ffae9",
+      "correctedRecordSha256": "9f22fd585922e5c91138f1e38254c32e18e9ccb8b33e8d45f66edc49a3ffc689",
+      "unchangedEnglishQuestion": "Find tan54°26′, reporting four decimal places.",
+      "unchangedTamilQuestion": "tan54°26′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+      "originalFinalAnswer": "1.3985",
+      "correctedFinalAnswer": "1.3985",
+      "tableBaseAngle": "54°24′",
+      "extraMinutes": "2′",
+      "tableBaseValue": "1.3968",
+      "meanDifference": "+0.0017",
+      "calculatedTableValue": "1.3985"
+    },
+    "c9-exercise-6-4-q1-iv": {
+      "originalRecordSha256": "3fb93385c4a9dd00813f990b541ec1b69c8decfb316603ee0ad33d70d36caef5",
+      "correctedRecordSha256": "ce98d03ae9fcc0a05e898ba9f96a18bccdd57691be1be6f6ef07d7a0a24d1f87",
+      "unchangedEnglishQuestion": "Find sin21°21′ to four decimal places.",
+      "unchangedTamilQuestion": "sin21°21′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+      "originalFinalAnswer": "0.3641",
+      "correctedFinalAnswer": "0.3641",
+      "tableBaseAngle": "21°18′",
+      "extraMinutes": "3′",
+      "tableBaseValue": "0.3633",
+      "meanDifference": "+0.0008",
+      "calculatedTableValue": "0.3641"
+    },
+    "c9-exercise-6-4-q1-v": {
+      "originalRecordSha256": "7a0d503d40cddee371eb2a4ce5bce191da3e5085bca3711f7f9ab3ea4b9927d8",
+      "correctedRecordSha256": "c3a247d12a5a8f9dd3deb31d545ae9913fb0cd20a7ab5ab8d2adebc9ad26b48e",
+      "unchangedEnglishQuestion": "Find cos33°53′ to four decimal places.",
+      "unchangedTamilQuestion": "cos33°53′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+      "originalFinalAnswer": "0.8302",
+      "correctedFinalAnswer": "0.8302",
+      "tableBaseAngle": "33°48′",
+      "extraMinutes": "5′",
+      "tableBaseValue": "0.8310",
+      "meanDifference": "−0.0008",
+      "calculatedTableValue": "0.8302"
+    },
+    "c9-exercise-6-4-q1-vi": {
+      "originalRecordSha256": "27dbb1ffc03734b8cc268f07fcb5131ce7919f6088197690d8f342c8133eb299",
+      "correctedRecordSha256": "652002511fbd181b9aec3d32eb834bcbd9672ecea496a9e0c584349ce54c4f53",
+      "unchangedEnglishQuestion": "Find tan70°17′ to four decimal places.",
+      "unchangedTamilQuestion": "tan70°17′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+      "originalFinalAnswer": "2.7903",
+      "correctedFinalAnswer": "2.7907",
+      "tableBaseAngle": "70°12′",
+      "extraMinutes": "5′",
+      "tableBaseValue": "2.7776",
+      "meanDifference": "+0.0131",
+      "calculatedTableValue": "2.7907"
+    }
+  }
+}
