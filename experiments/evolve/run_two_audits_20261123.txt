@@ -1,0 +1,5 @@
+One-time approval to rerun AUD09-04 and AUD10-03 only with source-field quote grounding and safe-target validation.
+Source baseline: 8ca60d0aaaae07011017cb9f321713c141a48ba2
+Model: Qwen/Qwen3-Coder-30B-A3B-Instruct:amazon-bedrock
+No retries; at most two metered requests; estimated USD $0.02 guard; no source changes, no publishing, no merge.
+Must pass zero-cost seven-test evidence gate before inference.
