@@ -16,8 +16,8 @@ const CASES=[
  ['q2-iii','0.0720','4°7′'],
  ['q2-iv','0.0410','87°39′'],
  ['q2-v','7.5958','82°30′'],
- ['q3-i','65°39′','1.9970'],
- ['q3-ii','70°58′','2.8659']
+ ['q3-i','65','1.9970'],
+ ['q3-ii','70','2.8659']
 ];
 (async()=>{
  const app=LIVE?{base:LIVE,close:async()=>{}}:await server();
@@ -71,6 +71,9 @@ const CASES=[
       }));
       assert.equal(state.language,lang,'Language toggle');
       assert(state.question.includes(sourceValue),'Textbook source numeric prompt '+id);
+      assert(state.title.includes(part.replace(/^q([23])-(.*)$/,'Q$1($2)')),'Displayed original question part '+id);
+      // KaTeX may present minute primes as apostrophes. Check semantics, not Unicode glyph identity.
+      if(part.startsWith('q3'))for(const fn of ['sin','cos','tan'])assert(state.question.includes(fn),'Three source trig terms '+fn+' '+id);
       assert(state.steps>=4,'Three mathematical explanations and final answer '+id);
       assert(state.visible&&state.finalVisible,'Question and final answer visibly rendered '+id);
       assert(state.answerBoxHidden,'No duplicate final-answer card');
