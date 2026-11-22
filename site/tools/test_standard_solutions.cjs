@@ -5,6 +5,9 @@ for(const m of html.matchAll(/<script src="\.\/(data\/[^?\"]+)[^\"]*"/g))vm.runI
 const {TRIGGLE_CLASSES:classes,TriggleDifficulty:registry}=ctx.window;
 const preserved=require('../../docs/standard-solution-preservation.json');
 const auditedG9Proofs=require('../../docs/audit/AUD13_02_CORRECTION_HASHES.json');
+const auditedG9TrigTable=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json');
+assert.equal(auditedG9TrigTable.auditId,'AUD14-02');
+assert.deepEqual(Object.keys(auditedG9TrigTable.records).sort(),['i','ii','iii','iv','v','vi'].map(n=>'c9-exercise-6-4-q1-'+n).sort());
 assert.equal(auditedG9Proofs.auditId,'AUD13-02');
 assert.deepEqual(Object.keys(auditedG9Proofs.records).sort(),['g9-ch5-ex5.2-q2','g9-ch5-ex5.2-q5','g9-ch5-ex5.2-q6']);
 const approvedBatch=require('../../docs/curriculum/grade-10/batches/g10-ch2-ex2-2.json');
@@ -333,7 +336,20 @@ for(const [grade,data] of Object.entries(classes)){
    assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exercise 3.2 matches source-audited batch '+item.id);
   }else if(Object.hasOwn(preserved.sha256,item.id)){
    const correction=auditedG9Proofs.records[item.id];
-   if(correction){
+   const trig=auditedG9TrigTable.records[item.id];
+   assert.ok(!(trig&&correction),'No overlapping audited exceptions '+item.id);
+   if(trig){
+    // Preserve the original 568-record baseline; only the six source-verified
+    // Grade 9 four-figure-table teaching records may take corrected hashes.
+    assert.equal(trig.originalRecordSha256,preserved.sha256[item.id],'Immutable table source baseline '+item.id);
+    assert.equal(item.q.en,trig.unchangedEnglishQuestion,'Original English question retained '+item.id);
+    assert.equal(item.q.ta,trig.unchangedTamilQuestion,'Original Tamil question retained '+item.id);
+    assert.equal(item.kind,'reference','Exercise item type unchanged '+item.id);
+    assert.equal(item.steps.length,3,'Exactly three Grade 9 table-teaching steps '+item.id);
+    assert.equal(item.answer,trig.correctedFinalAnswer,'Source-key table answer '+item.id);
+    assert.equal(item.source,auditedG9TrigTable.source.english2025,'Prescribed 2025 SCERT book '+item.id);
+    assert.equal(hash,trig.correctedRecordSha256,'Exact audited table-method record '+item.id);
+   }else if(correction){
     // Scoped math-only exception: NEVER rewrite the 568-entry preservation baseline.
     assert.equal(correction.originalRecordSha256,preserved.sha256[item.id],'Immutable source baseline for '+item.id);
     assert.equal(item.q.en,correction.unchangedEnglishQuestion,'Original textbook prompt preserved '+item.id);

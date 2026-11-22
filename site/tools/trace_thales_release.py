@@ -20,7 +20,7 @@ HOST="pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev"
 OBJECT_PATH=f"/trace-videos/{LESSON}/{APPROVED_SHA}.mp4"
 PUBLIC_URL="https://"+HOST+OBJECT_PATH
 TAG="thales-fola-2c07afb7-20261120"
-CACHE_SUFFIX="-gpfola-v2-fa50e19c-g9ex32"
+CACHE_SUFFIX="-gpfola-v2-fa50e19c-g9ex32-aud14-02-tables-20261122"
 
 
 def validate_url(url):
@@ -68,7 +68,7 @@ def _bump_script(text,name):
 
 
 def bump_sw(text):
-    # Existing Grade 9/G.P. tests require this exact suffix; retain it.
+    # Retain the G.P./Grade 9 cache prefix and the audited AUD14-02 PWA refresh.
     pattern=r"^(const CACHE=')([^'\r\n]*?)("+re.escape(CACHE_SUFFIX)+r")(';)"
     def replace(m):
         if TAG in m.group(2):
