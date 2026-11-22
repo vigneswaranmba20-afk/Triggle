@@ -29,7 +29,7 @@ export function tokenExchangeRequest(idToken,username){
   subject_token:idToken,resource:username
  };
 }
-export async function probe(e=process.env, http=fetch){
+export async function acquireAccessToken(e=process.env, http=fetch){
  preflight(e);
  const url=new URL(e.ACTIONS_ID_TOKEN_REQUEST_URL);
  url.searchParams.set('audience',AUDIENCE);
@@ -50,9 +50,13 @@ export async function probe(e=process.env, http=fetch){
  if(typeof out?.access_token!=='string'||out.access_token.length<10||
    !(Number(out.expires_in)>0 && Number(out.expires_in)<=3600))
   throw Error('Hugging Face returned an invalid short-lived token');
- // No Hugging Face model inference is performed and tokens never leave memory.
- return {ok:true,expiresWithinMinutes:Math.ceil(Number(out.expires_in)/60),inferenceCalls:0,
-  githubWritePermissions:0, tokenLogged:false,tokenPersisted:false};
+ // Only the calling process receives the short-lived access token.
+ return {accessToken:out.access_token,expiresWithinMinutes:Math.ceil(Number(out.expires_in)/60)};
+}
+export async function probe(e=process.env,http=fetch){
+ const token=await acquireAccessToken(e,http);
+ return {ok:true,expiresWithinMinutes:token.expiresWithinMinutes,inferenceCalls:0,
+  githubWritePermissions:0,tokenLogged:false,tokenPersisted:false};
 }
 async function main(){
  if(process.argv.length!==3||process.argv[2]!=='--probe')throw Error('Only --probe mode available: no inference');

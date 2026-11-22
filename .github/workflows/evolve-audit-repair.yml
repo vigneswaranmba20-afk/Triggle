@@ -55,3 +55,38 @@ jobs:
         env:
           EVOLVE_HF_USERNAME: ${{ vars.EVOLVE_HF_USERNAME }}
         run: node experiments/evolve/hf_oidc_auth_probe.mjs --probe
+
+  one-model-audit-trial:
+    # A uniquely named one-shot head commit opts in; normal branch pushes never infer.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/experiment/evolve-shadow-v1-20261122' && github.event.head_commit.message == 'EVOLVE_ONE_CALL_APPROVED_20261122_QWEN3_CODER' && vars.EVOLVE_HF_USERNAME != ''
+    runs-on: ubuntu-24.04
+    environment: evolve-hf-lab
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check maths and model response constraints
+        run: node experiments/evolve/audit_fix_aud08_06.mjs --self-test
+      - name: Run exactly one approved metered Hugging Face request
+        env:
+          EVOLVE_HF_USERNAME: ${{ vars.EVOLVE_HF_USERNAME }}
+          HF_MODEL: Qwen/Qwen3-Coder-30B-A3B-Instruct:amazon-bedrock
+          HF_INFER_APPROVED: EVOLVE-AUD08-06-ONE-CALL-20261122
+        run: node experiments/evolve/audit_fix_aud08_06.mjs --infer-once
+      - name: Archive model result without production write
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evolve-aud08-06-real-model-trial
+          path: |
+            ${{ runner.temp }}/evolve-aud08-06-proposed.js
+            ${{ runner.temp }}/evolve-aud08-06-evidence.json
+          if-no-files-found: ignore
+          retention-days: 7
