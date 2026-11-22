@@ -16,6 +16,8 @@ permissions:
   contents: read
 jobs:
   propose:
+    # Only this branch may enter evolve-hf-lab; configure its branch restriction in GitHub Settings.
+    environment: evolve-hf-lab
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
