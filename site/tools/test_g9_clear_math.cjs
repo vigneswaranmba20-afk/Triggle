@@ -41,6 +41,7 @@ assert.equal(q5.steps.length,6,'Ex 9.2 Q5 retains 5 canonical steps plus AUD06-0
 assert.match(q5.steps[3].eq,/37\|50/);
 const preservation=items.map(q=>[q.id,q.chapter,q.exercise,q.kind,q.q,q.answer,
  q.steps.filter((_,idx)=>!(q.id==='g9-ch9-ex9.2-q5'&&idx===3)).map(({en,ta,eq},index)=>revisedReasons[q.id]?.includes(index)?[null,null,eq]:[en,ta,eq])]);
+console.log('AUD13-02 G9_GRADE_PRESERVATION_SHA256 '+createHash('sha256').update(JSON.stringify(preservation)).digest('hex'));
 assert.equal(createHash('sha256').update(JSON.stringify(preservation)).digest('hex'),'b928be2ec7f64f89aea3313e212a0347e3d459bacea9a162df7fd9fdca8ebbfe');
 assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,56,12,9,40,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
