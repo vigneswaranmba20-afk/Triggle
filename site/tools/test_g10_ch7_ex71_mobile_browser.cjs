@@ -1,0 +1,55 @@
+'use strict';
+/* Chapter 7 Mensuration Exercise 7.1 Q1–Q5: fast change-specific mobile-browser smoke.
+ * Source-fidelity and mathematics are checked separately by test_g10_ch7_ex71_pilot.cjs.
+ */
+const assert=require('node:assert/strict');
+const {chromium}=require('playwright');
+const {server,launchOptions}=require('./dashboard_test_support.cjs');
+const ids=[1,2,3,4,5].map(n=>'c10-7-ex7-1-q'+n);
+(async()=>{
+ const app=await server();let browser;
+ try {
+  browser=await chromium.launch(launchOptions());
+  for(const width of [320,390,412]){
+   const context=await browser.newContext({viewport:{width,height:820},isMobile:true,hasTouch:true,serviceWorkers:'block',reducedMotion:'reduce'});
+   const page=await context.newPage();
+   const pageErrors=[];const missingAssets=[];
+   page.on('pageerror',e=>pageErrors.push(e.message));
+   page.on('response',r=>{if(r.status()>=400&&!r.url().endsWith('/favicon.ico'))missingAssets.push(r.status()+' '+r.url());});
+   for(const id of ids){
+    await page.goto(app.base+'/index.html?class=10&question='+id,{waitUntil:'load'});
+    await page.locator('#lessonCard:not([hidden])').waitFor({timeout:7000});
+    await page.locator('#stepsList .katex').first().waitFor({state:'visible',timeout:7000});
+    await page.evaluate(()=>document.fonts.ready);
+    const state=await page.evaluate(()=>{
+     const lesson=document.querySelector('#lessonCard');
+     const img=lesson?.querySelector('img');
+     return {
+      question:(document.querySelector('#questionText')?.innerText||'').trim(),
+      answer:(document.querySelector('#answerText')?.innerText||'').trim(),
+      steps:lesson?.querySelectorAll('#stepsList .katex').length||0,
+      finalMath:!!lesson?.querySelector('#answerText .katex'),
+      errors:lesson?.querySelectorAll('.katex-error,[data-math-error]').length||0,
+      image:img?{src:img.getAttribute('src'),ok:img.complete&&img.naturalWidth>0}:null,
+      viewportW:window.innerWidth,
+      documentW:document.documentElement.scrollWidth,
+     };
+    });
+    assert.ok(state.question.length>35,id+' '+width+'px: missing question');
+    assert.ok(state.answer.length>5,id+' '+width+'px: missing final answer');
+    assert.ok(state.steps>=4,id+' '+width+'px: incomplete typeset work');
+    assert.ok(state.finalMath,id+' '+width+'px: final answer not typeset');
+    assert.equal(state.errors,0,id+' '+width+'px: KaTeX error');
+    if(id.endsWith('q4')||id.endsWith('q5')){
+     assert.ok(state.image&&state.image.ok,id+' '+width+'px: figure broken');
+     assert.ok(state.image.src.includes('grade10-ch7'),id+' '+width+'px: unrelated figure');
+    }
+    assert.ok(state.documentW<=state.viewportW+1,id+' '+width+'px: horizontal overflow '+state.documentW+' > '+state.viewportW);
+   }
+   assert.deepEqual(pageErrors,[],'JS errors at '+width+'px: '+pageErrors.join('; '));
+   assert.deepEqual(missingAssets,[],'HTTP errors at '+width+'px: '+missingAssets.join('; '));
+   await context.close();
+  }
+  console.log('PASS G10 Mensuration 7.1 Q1–Q5 mobile: all 5 questions at 320/390/412px, KaTeX, diagram images, accessibility-oriented text, zero overflow/errors.');
+ }finally{if(browser)await browser.close();await app.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

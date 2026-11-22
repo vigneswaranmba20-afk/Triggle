@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "mission": "TRIGGLE-X-G10-CH7-EX71-PILOT-01",
+  "grade": 10,
+  "chapter": 7,
+  "exercise": "7.1",
+  "status": "math-dual-verified-and-source-page-visual-checked-pending-live-ui-release",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "fileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "printedPage": 282,
+      "pdfPage": 288,
+      "answerAppendix": {
+        "printedPage": 341,
+        "pdfPage": 347
+      }
+    },
+    "tamil": {
+      "fileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "printedPage": 290,
+      "pdfPage": 296,
+      "answerAppendix": {
+        "printedPage": 356,
+        "pdfPage": 362
+      }
+    },
+    "englishTextLayerChecked": true,
+    "tamilTextLayerChecked": true,
+    "pageImagesVerified": true,
+    "tamilWorkedSolutionsApproved": false,
+    "notes": "Neon's frozen blind report mathematically passed all 5 but could not inspect PDF images. ChatGPT separately retrieved original PDF bytes, rendered and visually inspected all four relevant question/answer pages, resolving the remaining image-source uncertainties. Tamil authored teaching copy still awaits editorial review.",
+    "visualVerification": {
+      "checkedDate": "2026-11-22",
+      "evidence": "Original 2025 English and Tamil PDF pages were rendered directly and visually inspected. EN Exercise PDF 288, EN answers PDF 347; TA Exercise PDF 296, TA answers PDF 362.",
+      "observations": [
+        "Q1–Q5 are text-only and do not reference textbook figures",
+        "Q2 1848 sq.cm confirmed in both languages",
+        "Q3 Tamil answer appendix visibly prints 2992 ச.செ.மீ",
+        "Q4 both answer keys say cone rotated about PQ has greater surface area",
+        "Q5 Tamil answer appendix visibly prints 18.25 மீ"
+      ],
+      "sourceDocumentsOriginalBytes": {
+        "english": 42992798,
+        "tamil": 43173836
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "c10-7-ex7-1-q1",
+      "englishQuestion": "1. The radius and height of a cylinder are in the ratio 5:7 and its curved surface area is 5500 sq.cm. Find its radius and height.",
+      "numbers": [
+        "5:7",
+        "5500 sq.cm"
+      ],
+      "expected": "r=25 cm; h=35 cm",
+      "risks": [
+        "area units",
+        "ratio scale factor",
+        "π convention"
+      ],
+      "mathVerification": {
+        "neonBlindMath": "pass",
+        "chatgptIndependentCode": "pass",
+        "sourceAnswerKey": "visually-confirmed-2025",
+        "visualQuestionPage": "verified",
+        "visualAnswerKeyPage": "verified"
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q2",
+      "englishQuestion": "2. A solid iron cylinder has total surface area of 1848 sq.cm. Its curved surface area is five – sixth of its total surface area. Find the radius and height of the iron cylinder.",
+      "numbers": [
+        "1848 sq.cm",
+        "five-sixths"
+      ],
+      "expected": "r=7 cm; h=35 cm",
+      "risks": [
+        "CSA versus TSA",
+        "circular ends",
+        "π convention"
+      ],
+      "mathVerification": {
+        "neonBlindMath": "pass",
+        "chatgptIndependentCode": "pass",
+        "sourceAnswerKey": "visually-confirmed-2025",
+        "visualQuestionPage": "verified",
+        "visualAnswerKeyPage": "verified"
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q3",
+      "englishQuestion": "3. The external radius and the length of a hollow wooden log are 16 cm and 13 cm respectively. If its thickness is 4 cm then find its T.S.A.",
+      "numbers": [
+        "outer radius 16 cm",
+        "height 13 cm",
+        "wall thickness 4 cm"
+      ],
+      "expected": "TSA=2992 cm²",
+      "risks": [
+        "inner curved surface",
+        "both annular ends",
+        "radius versus diameter"
+      ],
+      "mathVerification": {
+        "neonBlindMath": "pass",
+        "chatgptIndependentCode": "pass",
+        "sourceAnswerKey": "visually-confirmed-2025",
+        "visualQuestionPage": "verified",
+        "visualAnswerKeyPage": "verified"
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q4",
+      "englishQuestion": "4. A right angled triangle PQR where ∠Q = 90° is rotated about QR and PQ as central axes. If QR = 16 cm and PR = 20 cm, compare the curved surface areas of the right circular cones so formed by the triangle.",
+      "numbers": [
+        "∠Q=90°",
+        "QR=16 cm",
+        "PR=20 cm"
+      ],
+      "expected": "PQ-axis cone has larger CSA; QR-axis:PQ-axis=3:4",
+      "risks": [
+        "rotation changes base radius",
+        "slant height invariant",
+        "image label fidelity"
+      ],
+      "mathVerification": {
+        "neonBlindMath": "pass",
+        "chatgptIndependentCode": "pass",
+        "sourceAnswerKey": "visually-confirmed-2025",
+        "visualQuestionPage": "verified",
+        "visualAnswerKeyPage": "verified"
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q5",
+      "englishQuestion": "5. 4 persons live in a conical tent whose slant height is 19 m. If each person require 22 m² of the floor area, then find the height of the tent.",
+      "numbers": [
+        "4 people",
+        "19 m slant height",
+        "22 m² per person"
+      ],
+      "expected": "h=√333 m≈18.25 m",
+      "risks": [
+        "base floor vs curved area",
+        "slant vs vertical height",
+        "rounding"
+      ],
+      "mathVerification": {
+        "neonBlindMath": "pass",
+        "chatgptIndependentCode": "pass",
+        "sourceAnswerKey": "visually-confirmed-2025",
+        "visualQuestionPage": "verified",
+        "visualAnswerKeyPage": "verified"
+      }
+    }
+  ],
+  "independentMathAudit": {
+    "provider": "Gemini Neon",
+    "dateFrozen": "2026-11-22",
+    "fileName": "G10 Ch7 Ex7 1 Q1 To Q5 Frozen Blind Audit Report (1).md",
+    "fileSha256": "3eece3ae93c638944539d094ddd61fdda1f9d65e0c7fd9d40156f0b67d01351e",
+    "scope": "Strict Phase 1 blind independent solution, without GitHub PR or ChatGPT answers",
+    "q1to5MathPassed": true,
+    "textbookKeyMatched": true,
+    "sourcePageImagesNotInspectedByNeon": true
+  }
+}

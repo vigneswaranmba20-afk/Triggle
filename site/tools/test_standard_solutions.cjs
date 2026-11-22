@@ -193,7 +193,17 @@ const ch6Unit=require('../data/textbook-fidelity/g10-ch6-ex6-unit.json');
 const ch6UnitById=new Map(ch6Unit.items.map(item=>[item.id,item]));
 const ch6UnitNewIds=ch6Unit.items.map(item=>item.id);
 assert.equal(ch6UnitNewIds.length,13,'Thirteen source-indexed Ch6 Unit Ex6 tasks');
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds];
+const ch7PilotPassports=require('../../docs/curriculum/grade-10/g10-ch7-ex7-1-pilot-passports-20261122.json');
+const ch7PilotById=new Map(ch7PilotPassports.records.map(record=>[record.id,record]));
+const ch7PilotIds=ch7PilotPassports.records.map(record=>record.id);
+assert.equal(ch7PilotIds.length,5,'Five source-passport-indexed Chapter 7 pilot records');
+assert.equal(ch7PilotPassports.source.pageImagesVerified,true,'Require documented 2025 source page-image verification');
+assert.equal(ch7PilotPassports.source.english.answerAppendix.pdfPage,347,'English source answer page evidence');
+assert.equal(ch7PilotPassports.source.tamil.answerAppendix.pdfPage,362,'Tamil source answer page evidence');
+assert.equal(ch7PilotPassports.independentMathAudit.q1to5MathPassed,true,'Frozen Neon blind mathematical verification');
+assert.equal(ch7PilotPassports.independentMathAudit.sourcePageImagesNotInspectedByNeon,true,'Do not retroactively attribute page inspection to Neon');
+assert.equal(ch7PilotPassports.source.tamilWorkedSolutionsApproved,false,'Tamil lesson review remains pending');
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -289,6 +299,13 @@ for(const [grade,data] of Object.entries(classes)){
    assert.equal(item.q.en,evidence.textbookPrompt.en,'Ch6 Unit Ex6 English source fidelity '+item.id);
    assert.equal(item.q.ta,evidence.textbookPrompt.ta,'Ch6 Unit Ex6 Tamil source fidelity '+item.id);
    assert.equal(item.translationReview,'pending');
+  }else if(grade==='10'&&ch7PilotById.has(item.id)){
+   const passport=ch7PilotById.get(item.id);
+   assert.equal(item.q.en,passport.englishQuestion,'Chapter 7 question matches archived English source text '+item.id);
+   assert.equal(item.edition,'2025');
+   assert.equal(item.translationReview,'pending');
+   assert.equal(item.sourceFidelity?.status,'page-visual-checked');
+   assert(!item.q.ta,'Do not invent unreviewed Tamil teaching copy '+item.id);
   }else if(grade==='9'&&g9Ex32ById.has(item.id)){
    const approved=g9Ex32ById.get(item.id);
    assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exercise 3.2 matches source-audited batch '+item.id);
@@ -387,7 +404,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,933+geometryNewIds.length+geometryEx43NewIds.length+ch5Ex51NewIds.length+ch5Ex52NewIds.length+ch5Ex53NewIds.length+ch5Ex54NewIds.length+ch5Ex55NewIds.length+ch5UnitNewIds.length+ch6Ex61NewIds.length+ch6Ex62NewIds.length+ch6Ex63NewIds.length+ch6Ex64NewIds.length+ch6Ex65NewIds.length+ch6UnitNewIds.length+statisticsEx82Ids.length);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,933+geometryNewIds.length+geometryEx43NewIds.length+ch5Ex51NewIds.length+ch5Ex52NewIds.length+ch5Ex53NewIds.length+ch5Ex54NewIds.length+ch5Ex55NewIds.length+ch5UnitNewIds.length+ch6Ex61NewIds.length+ch6Ex62NewIds.length+ch6Ex63NewIds.length+ch6Ex64NewIds.length+ch6Ex65NewIds.length+ch6UnitNewIds.length+statisticsEx82Ids.length+ch7PilotIds.length);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');
