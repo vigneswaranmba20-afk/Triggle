@@ -21,7 +21,7 @@ async function main(){
  let browser;
  try{
   browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),args:['--no-sandbox']});
-  for(const width of [320,390,1280]){
+  for(const width of [320,360,390,412,1280]){
    const ctx=await browser.newContext({viewport:{width,height:850},serviceWorkers:'block'});
    const page=await ctx.newPage(),errors=[],missing=[];
    page.on('pageerror',error=>errors.push(error.message));
