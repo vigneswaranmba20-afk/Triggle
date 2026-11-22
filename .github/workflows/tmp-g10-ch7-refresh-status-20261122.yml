@@ -1,0 +1,34 @@
+name: Temporary G10 Ch7 status projection regeneration
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  regenerate:
+    if: github.event_name == 'pull_request' && github.head_ref == 'feature/g10-ch7-ex71-pilot-dual-audit-20261122'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Regenerate allowlisted public curriculum status
+        run: npm run status:build
+      - name: Commit projection on feature branch only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/project-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(g10): refresh source-derived project status after page audit"
+            git push origin HEAD:feature/g10-ch7-ex71-pilot-dual-audit-20261122
+          fi
