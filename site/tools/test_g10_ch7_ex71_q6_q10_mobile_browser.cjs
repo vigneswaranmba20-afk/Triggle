@@ -30,6 +30,7 @@ const ids=[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n);
       steps:lesson?.querySelectorAll('#stepsList .katex').length||0,
       finalMath:!!lesson?.querySelector('#answerText .katex'),
       errors:lesson?.querySelectorAll('.katex-error,[data-math-error]').length||0,
+      clippedEquations:[...lesson.querySelectorAll('#stepsList .katex')].map((el,index)=>({index,right:el.getBoundingClientRect().right})).filter(el=>el.right>document.querySelector('#stepsList').getBoundingClientRect().right+4),
       image:img?{src:img.getAttribute('src'),ok:img.complete&&img.naturalWidth>0}:null,
       viewportW:window.innerWidth,
       documentW:document.documentElement.scrollWidth,
@@ -40,6 +41,8 @@ const ids=[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n);
     assert.ok(state.steps>=4,id+' '+width+'px: incomplete typeset work ('+state.steps+' rendered; mathErrors='+state.errors+')');
     assert.ok(state.finalMath,id+' '+width+'px: final answer not typeset');
     assert.equal(state.errors,0,id+' '+width+'px: KaTeX error');
+    assert.deepEqual(state.clippedEquations,[],id+' '+width+'px: equations extend beyond their reading column');
+    if(id.endsWith('q9')||id.endsWith('q10'))assert.ok(state.answer.includes('₹'),id+' '+width+'px: rupee glyph replaced by INR in final answer');
     if(id.endsWith('q10')){
      assert.ok(state.image&&state.image.ok,id+' '+width+'px: figure broken');
      assert.ok(state.image.src.includes('grade10-ch7'),id+' '+width+'px: unrelated figure');
