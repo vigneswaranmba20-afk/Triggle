@@ -101,6 +101,7 @@ jobs:
             index.html
             service-worker.js
             data/class-9.js
+            data/textbook-exercises/g9-ch6-ex6-4-q2-q3-en.js
             data/g9-clear-math.js
             assets/app.js
           )
@@ -117,7 +118,7 @@ jobs:
               fi
             done
             if (( matching )); then
-              echo "PASS: Pages HTML, SW, G9 question data/math layout, and app JS match tested commit $GITHUB_SHA"
+              echo "PASS: Pages HTML, SW, G9 source/exercise extension/math layout, and app JS match tested commit $GITHUB_SHA"
               exit 0
             fi
             sleep 10
