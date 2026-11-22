@@ -38,7 +38,7 @@ for(const c of CASES){
 }
 test('AUD09-04: model cannot rewrite accessible fallback under any target',async()=>{
  const c=CASES[0],p=await packed(c),x=good(c,p);
- const wrong={...x,proposedTarget:'questionMath.en[2].fallback',proposedAction:'Replace the fallback text with LaTeX superscripts for prettier rendering.'};
+ const wrong={...x,proposedTarget:'questionMath.en[5].fallback',proposedAction:'Replace the fallback text with LaTeX superscripts for prettier rendering.'};
  const verdict=validateProposal(wrong,c,p);
  assert.equal(verdict.accepted,false);
  assert.ok(verdict.failures.includes('forbidden-change-target'));
@@ -46,7 +46,7 @@ test('AUD09-04: model cannot rewrite accessible fallback under any target',async
 });
 test('AUD09-04: model must quote target prose, not an unrelated field',async()=>{
  const c=CASES[0],p=await packed(c),x=good(c,p);
- const bad={...x,evidence:[{field:'questionMath.en[2].fallback',quote:'x^(b−c) × y^(c−a) × z^(a−b) = 1.'}]};
+ const bad={...x,evidence:[{field:'questionMath.en[5].fallback',quote:'x^(b−c) × y^(c−a) × z^(a−b) = 1.'}]};
  assert.ok(validateProposal(bad,c,p).failures.includes('no-evidence-in-proposed-target'));
 });
 test('AUD10-03: impossible triple-underscore quote is rejected',async()=>{
