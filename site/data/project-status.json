@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "0487aebbda8dab143103ef15e18085aa04f0035b",
-  "updatedAt": "2026-11-22T14:35:42+05:30",
+  "sourceCommit": "7e9744b191bdaaf620fcbc3dd6bea5e3f2595908",
+  "updatedAt": "2026-11-22T16:38:20+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -30,7 +30,7 @@
     "site/data/g10-ch4-concepts.js": "c1000a61c306ab7ad3b5dd9e496997d3ee39cdb98423b8973adc9f094f2a5419",
     "site/data/g10-ch5-concepts.js": "4b03935c845e37127c0e92259e23d97b67cca281f063876deccab6b966c7db8d",
     "site/data/g10-ch6-concepts.js": "fe53a40acdd58d6bae587a20bc19a091de17adc0e403f1c73ab5760671ebf36f",
-    "site/data/g9-clear-math.js": "6093569ed7ed5b4a27c3e3da9d9784a9dfb1bd82690814abefc37c9fa2c09772",
+    "site/data/g9-clear-math.js": "eb5518d3bf40f0a2a5c919cab02c119adc85a2d09ba1bc1c6bf4f61ad0795e50",
     "site/data/g9-mensuration-chapter.js": "509a8967476ef4023f043286e4a7ef373951e2039902692a6468147f46cc8c28",
     "site/data/g9-mensuration-remaining.js": "f720a1272691e653343bf8cc23e9876947079b15e631fb18a36974f8453cd8dc",
     "site/data/g9-probability-chapter.js": "5b9ee457150461a7ce46f3b2e9ede7c7d1234dfa8e751b05ff71d22e4245ca79",
@@ -38,7 +38,7 @@
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "7e58dd71cc02b5d2a32aac0bc620f081b5aeed9f9370512cca19202470fe9392",
     "site/data/math-layout/g10-ch2-ch8-chatgpt-20261113.js": "7c9e63f5a069dc5658601181f5d6b1df16ec9d0d457e21964fb2b24ec291d134",
     "site/data/math-layout/g10-ch2-fractions-20261120.js": "cc57f9e5b1784ef2c72961d1200e774234982a0d9abbf3711a902bb4ace92358",
-    "site/data/problem-difficulty.js": "cd81605057245e11aee8a70a52968daed30b7aa2ccfbe5efbeaf1ad5a0f3c11a",
+    "site/data/problem-difficulty.js": "a349a628ad55da5fc47fdc1f80f13481fdd2f245ba0ac408f4cb6f962a2fc302",
     "site/data/real-numbers/g9-ch2-concepts.js": "ccccf6be7165344c5337aecff4120c8763b55481b516fd22a63fe57d4c958564",
     "site/data/real-numbers/g9-ch2-core.js": "aa11da8281a83d1eec91f1f42205f35a3e023f95bea0ebf72168acb33f903279",
     "site/data/real-numbers/g9-ch2-examples-a.js": "b6f78eb165adfe7f63daa65a138d58d9ca44f2ea1a219513805355b6ea93e8d7",
@@ -119,6 +119,7 @@
     "site/data/textbook-exercises/g9-ch4-ex4-2-en.js": "cb6c8505d5ac540d228f75a6095ca173be13935d1137d939a48630d05e826adf",
     "site/data/textbook-exercises/g9-ch4-ex4-3-en.js": "50f1ab8b6f7845d322690cff0672d0ba38062b33bdc03150d6d1c8fb6cb30dde",
     "site/data/textbook-exercises/g9-ch5-ex5-2-en.js": "09433295d5890d199a8c9be6128fce5905f042ff695d46d4f0f3f507e2951df2",
+    "site/data/textbook-exercises/g9-ch6-ex6-4-q2-q3-en.js": "f653bec45edf278c0cbfdb2ae1c21f158f9bacbad384fdfe320ddf551ef35458",
     "site/data/textbook-exercises/g9-ch7-ex7-1-en.js": "60900b13454aad3808d432ed5fec5ed280215a0de37ff30f8240b1b6e5c844f7",
     "site/data/textbook-exercises/g9-ch7-ex7-2-en.js": "bd3e6a2856b0cd7a789c10b67e40bc01ea4c00a01f773a54ff7a249ac1140868",
     "site/data/textbook-exercises/g9-ch7-ex7-3-en.js": "4eec3ff6ea59b3bc0d40c3f86734ed8bae44c96dbb617cf85d4e69dd41a9cd3c",
@@ -142,8 +143,8 @@
     "site/data/why-step-g9-ex3-1-q1-q2.js": "d3b15fc309303bcd35bcd684704b093c12c4865dd7ffa31291c516a480e47e37",
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
-    "site/data/why-step-g9.js": "3a1483f36e10b596f8b549c5e2d844eb5c439a70f1fcaf63bbae03b990823ce2",
-    "site/index.html": "70009927b5a34ca409b774dd80a0f66f059321154c553317729c69d7397413a5",
+    "site/data/why-step-g9.js": "5c0b88abd665d77d1f5b8cbb3e57e4204dbb89783040ff4b48d5814cb650d758",
+    "site/index.html": "0557fc11a24714eff72ee99d694df1a03211ed5bc9b3d741a79d000bed79ee02",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
