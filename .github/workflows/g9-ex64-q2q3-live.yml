@@ -1,0 +1,47 @@
+name: Grade 9 Ex6.4 — seven source-pinned questions, mobile and live fidelity
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/g9-ex64-q2q3-live.yml'
+      - 'site/tools/test_g9_ex64_q2_q3_browser.cjs'
+      - 'site/data/textbook-exercises/g9-ch6-ex6-4-q2-q3-en.js'
+      - 'site/data/g9-clear-math.js'
+  workflow_dispatch:
+    inputs:
+      production:
+        description: 'Test actual GitHub Pages after merge and quality-gated publish'
+        type: boolean
+        required: true
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  audit-42-states:
+    name: G9 seven subparts x EN/TA x 320/390/430
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Install Chromium for real student-page rendering
+        run: npx playwright install --with-deps --only-shell chromium
+      - name: Check question, answer, English-only fallback, math and viewport for all 42 states
+        env:
+          CHROMIUM_PATH: ''
+          TRIGGLE_LIVE_BASE: ${{ github.event_name == 'workflow_dispatch' && inputs.production && 'https://vigneswaranmba20-afk.github.io/Triggle/site/index.html' || '' }}
+        run: node site/tools/test_g9_ex64_q2_q3_browser.cjs
+      - name: Preserve screenshots and full results manifest even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: g9-ex64-seven-mobile-audit-${{ github.run_id }}
+          path: screenshots/g9-ex64-q2q3/
+          retention-days: 14
+          if-no-files-found: warn
