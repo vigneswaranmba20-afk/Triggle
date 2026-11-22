@@ -151,7 +151,7 @@ jobs:
           curl --fail --silent --show-error --location --retry 2 --max-time 90 \
             --range 0-1023 --dump-header /tmp/m06-r2-header.txt "$URL" -o /tmp/m06-r2-prefix
           cmp -n 1024 "$VIDEO" /tmp/m06-r2-prefix
-          grep -Eq '^HTTP/[0-9.]+ 206 ' /tmp/m06-r2-header.txt || {
+          grep -Eq '^HTTP/[0-9.]+ 206([[:space:]]|$)' /tmp/m06-r2-header.txt || {
             echo 'R2 endpoint did not confirm partial-content range playback'; exit 1; }
           echo "public_url=$URL" >> "$GITHUB_OUTPUT"
           echo 'PASS exact immutable approved MP4 on R2 and browser byte-range response'
