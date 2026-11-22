@@ -198,6 +198,25 @@ function validatePreservation(root = siteRoot) {
         errors.push('AUD14-02 corrections evidence absent or incomplete');
       }else{
         let restored=content.toString('utf8');
+        // AUD14-02 Q4–Q6: reverse only precisely preapproved, hash-pinned
+        // record transformations before the older six-part Q1 reversal.
+        const followup=JSON.parse(fs.readFileSync(path.resolve(root,'..','docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json'),'utf8'));
+        if(followup.auditId!=='AUD14-02-Q4-Q6'||Object.keys(followup.records).length!==3){
+          errors.push('AUD14-02 Q4–Q6 evidence absent or incomplete');
+        }else for(const [id,proof] of Object.entries(followup.records)){
+          const start=restored.indexOf('{"id":"'+id+'"');
+          const end=start>=0?restored.indexOf('},{"id":',start+1):-1;
+          if(start<0||end<0){errors.push('Missing Q4–Q6 source-isolated record '+id);continue;}
+          let current;
+          try{current=JSON.parse(restored.slice(start,end+1));}
+          catch{errors.push('Unparseable Q4–Q6 source record '+id);continue;}
+          const beforeHash=crypto.createHash('sha256').update(JSON.stringify(proof.originalRecord)).digest('hex');
+          const afterHash=crypto.createHash('sha256').update(JSON.stringify(current)).digest('hex');
+          if(beforeHash!==proof.originalRecordSha256||afterHash!==proof.correctedRecordSha256){
+            errors.push('Unapproved Q4–Q6 record amendment '+id);continue;
+          }
+          restored=restored.slice(0,start)+JSON.stringify(proof.originalRecord)+restored.slice(end+1);
+        }
         for(const [id,correction] of Object.entries(audit.records)){
           const start=restored.indexOf('{"id":"'+id+'"');
           const end=start>=0?restored.indexOf('},{"id":',start+1):-1;
@@ -223,6 +242,16 @@ function validatePreservation(root = siteRoot) {
       else{
         const rows=JSON.parse(match[1]);
         if(JSON.stringify(rows)!==match[1])errors.push('Classic reader immutable array format changed');
+        const followup=JSON.parse(fs.readFileSync(path.resolve(root,'..','docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json'),'utf8'));
+        if(followup.auditId!=='AUD14-02-Q4-Q6'||Object.keys(followup.records).length!==3){
+          errors.push('AUD14-02 Q4–Q6 classic evidence incomplete');
+        }else for(const [id,proof] of Object.entries(followup.records)){
+          const idx=rows.findIndex(row=>row.id===id.slice(3));
+          if(idx<0||JSON.stringify(rows[idx])!==JSON.stringify(proof.correctedClassicRecord)){
+            errors.push('Unapproved Q4–Q6 classic solution amendment '+id);continue;
+          }
+          rows[idx]=proof.originalClassicRecord;
+        }
         for(const [id,correction] of Object.entries(audit.records)){
           const classicId=id.slice(3);
           const idx=rows.findIndex(row=>row.id===classicId);
