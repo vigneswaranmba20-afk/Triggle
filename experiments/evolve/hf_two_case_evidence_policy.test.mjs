@@ -66,3 +66,14 @@ test('model may not claim that its patch already deployed',async()=>{
  const c=CASES[0],p=await packed(c),x=good(c,p);
  assert.ok(validateProposal({...x,state:'deployed',proposedAction:'Changes deployed after tests passed.'},c,p).failures.length>=2);
 });
+
+test('AUD09-04: suggestive language in rationale cannot smuggle fallback rewrite',async()=>{
+ const c=CASES[0],p=await packed(c),x=good(c,p);
+ const bad={...x,rationale:'The formatted LaTeX is already correct. The fallback should match this style for consistency.'};
+ assert.ok(validateProposal(bad,c,p).failures.includes('fallback-formatting-misconception'));
+});
+test('AUD10-03: explicit no edit with needs-browser evidence remains acceptable',async()=>{
+ const c=CASES[1],p=await packed(c),x=good(c,p);
+ const conservative={...x,proposedAction:'no edit'};
+ assert.deepEqual(validateProposal(conservative,c,p),{accepted:true,failures:[]});
+});
