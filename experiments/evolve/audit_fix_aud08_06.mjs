@@ -7,7 +7,7 @@ const file='site/data/textbook-exercises/g10-ch8-ex8-1-q5-q10-en.js';
 const a='"id": "c10-8-ex8-1-q5"',b='"id": "c10-8-ex8-1-q6"',c='"id": "c10-8-ex8-1-q7"';
 const oldCurrency='\\\\text{Rs.}',newCurrency='\\\\text{₹}';
 const oldExplanation='Use population variance = mean square minus square of the mean.';
-const fixture={findingId:'AUD08-06',currencyLatex:newCurrency,explanation:'A 12-hour clock has values 1 through 12, repeated twice in a day. Repeating the observations does not change their variance; calculate it as the mean square minus the square of the mean.'};
+const fixture={findingId:'AUD08-06',currencyLatex:newCurrency,explanation:'A 12-hour clock has values 1 through 12, repeated twice in a day. Repeating the observations does not change their variance. Calculate it as the mean square minus the square of the mean.'};
 export function patchSource(source,proposal){
  if(!proposal||proposal.findingId!=='AUD08-06'||proposal.currencyLatex!==newCurrency)throw Error('Reject: proposal outside audit allowlist');
  const value=proposal.explanation;
