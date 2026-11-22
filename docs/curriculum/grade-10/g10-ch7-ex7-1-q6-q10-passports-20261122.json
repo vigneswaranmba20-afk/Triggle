@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "mission": "TRIGGLE-X-G10-CH7-EX71-Q6-Q10",
+  "grade": 10,
+  "chapter": 7,
+  "exercise": "7.1",
+  "status": "neon-phase1-verified-phase2-conditional-go-remediation-in-progress",
+  "languagePolicy": "english-first; complete Tamil teaching translation pending",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "id": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfQuestionPage": 288,
+      "printedQuestionPage": 282,
+      "pdfAnswerPage": 347,
+      "printedAnswerPage": 341
+    },
+    "tamil": {
+      "id": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfQuestionPage": 296,
+      "printedQuestionPage": 290,
+      "pdfAnswerPage": 362,
+      "printedAnswerPage": 356
+    },
+    "questionPageImagesInspected": true,
+    "answerKeyPageImagesInspected": true,
+    "q10FigureInspected": true,
+    "independentBlindAuditCompleted": true,
+    "sourceFigureNote": "The textbook photograph shows upper and lower radii 6 cm and 12 cm and vertical height 8 cm. The student-facing SVG is an original clarifying schematic."
+  },
+  "records": [
+    {
+      "id": "c10-7-ex7-1-q6",
+      "expected": "28 birthday caps",
+      "inputs": [
+        "5720 cm² paper",
+        "radius 5 cm",
+        "vertical height 12 cm"
+      ],
+      "independentOracle": "ℓ=13 cm; per cap CSA=65π cm²; N=5720/(65π)=28",
+      "risks": [
+        "cap base mistakenly included",
+        "slant mistaken for vertical height"
+      ],
+      "englishQuestion": "6. A girl wishes to prepare birthday caps in the form of right circular cones for her birthday party, using a sheet of paper whose area is 5720 cm², how many caps can be made with radius 5 cm and height 12 cm."
+    },
+    {
+      "id": "c10-7-ex7-1-q7",
+      "expected": "√5 : 9",
+      "inputs": [
+        "radius ratio 1:3",
+        "equal heights",
+        "height three times smaller radius"
+      ],
+      "independentOracle": "r1=x,r2=3x,h=3x; l1=x√10,l2=3x√2; πr1l1:πr2l2=√5:9",
+      "risks": [
+        "radical lost by PDF text extraction",
+        "ratio incorrectly 5:9",
+        "same height != same slant height"
+      ],
+      "englishQuestion": "7. The ratio of the radii of two right circular cones of same height is 1:3. Find the ratio of their curved surface area when the height of each cone is 3 times the radius of the smaller cone."
+    },
+    {
+      "id": "c10-7-ex7-1-q8",
+      "expected": "56.25% increase",
+      "inputs": [
+        "sphere radius +25%"
+      ],
+      "independentOracle": "A ∝ r², area factor 1.25²=1.5625",
+      "risks": [
+        "area incorrectly increases 25%",
+        "confuse total percentage 156.25 with increase 56.25"
+      ],
+      "englishQuestion": "8. The radius of a sphere increases by 25%. Find the percentage increase in its surface area."
+    },
+    {
+      "id": "c10-7-ex7-1-q9",
+      "expected": "₹302.72",
+      "inputs": [
+        "inner diameter 20 cm",
+        "outer diameter 28 cm",
+        "₹0.14 per cm²"
+      ],
+      "independentOracle": "r=10,R=14; painted curved inside + outside + annular rim=688π cm²; cost=0.14*688*22/7=302.72",
+      "risks": [
+        "diameter vs radius",
+        "missing inner hemisphere",
+        "missing rim annulus"
+      ],
+      "englishQuestion": "9. The internal and external diameters of a hollow hemispherical vessel are 20 cm and 28 cm respectively. Find the cost to paint the vessel all over at ₹0.14 per cm²."
+    },
+    {
+      "id": "c10-7-ex7-1-q10",
+      "expected": "₹1357.72 (textbook intermediate rounding)",
+      "inputs": [
+        "upper radius 6 cm",
+        "lower radius 12 cm",
+        "vertical height 8 cm",
+        "₹2/cm²",
+        "paint exterior + top"
+      ],
+      "independentOracle": "l=sqrt(8²+(12−6)²)=10; painted area π(R+r)l+πr²=216π=678.857... -> 678.86 cm²; cost 2*678.86=₹1357.72",
+      "specialRounding": "If you keep exact area until final rounding, price is ₹1357.71; 2025 printed key uses area rounded first. Explicitly teach the one-paise difference.",
+      "risks": [
+        "figure 6 and 12 are radii, not diameters",
+        "including open bottom or inside",
+        "rounding order one-paise discrepancy",
+        "top not included"
+      ],
+      "englishQuestion": "10. The frustum shaped outer portion of the table lamp has to be painted including the top part. Find the total cost of painting the lamp if the cost of painting 1 sq.cm is ₹2."
+    }
+  ],
+  "independentAudit": {
+    "provider": "Gemini Neon",
+    "phase1": {
+      "status": "PASS",
+      "blindIntegrityReported": true,
+      "originalFrozenReport": {
+        "filename": "Neon Grade10 Ch7 Ex7 1 Q6 Q10 Phase1 Blind Report.md",
+        "status": "BLOCKED (2025 source PDFs unavailable)",
+        "preservedUnchanged": true
+      },
+      "sourceUnblockAddendum": {
+        "filename": "Neon Grade10 Ch7 Ex7 1 Q6 Q10 Phase1 Source Unblock Addendum.md",
+        "sha256": "54c1ffb7b66d0d721c5885953564c41de2002c010b6ce13a232c3553f6924745",
+        "bytes": 15257,
+        "inspectedSourcePack": "Four official 2025 PDF pages (EN questions and key, Tamil questions and key), Q10 photo crops",
+        "mathematicalAnswersVerified": 5,
+        "bilingualSourceRecordsVerified": 5,
+        "originalQ10FigureVerified": 1,
+        "originalQ10RadiiCm": {
+          "top": 6,
+          "bottom": 12
+        },
+        "originalQ10VerticalHeightCm": 8,
+        "textbookRoundingConvention": "216π cm² = 4752/7 ≈ 678.86 cm²; 678.86 × ₹2 = ₹1357.72; exact-unrounded final cost rounds to ₹1357.71."
+      }
+    },
+    "phase2": {
+      "status": "CONDITIONAL_GO_REMEDIATION_IN_PROGRESS",
+      "neonStudentFacingReviewCompleted": true,
+      "userReportFilename": "Neon G10 Ch7 Ex71 Q6 Q10 Phase2 Complete Audit Report.md",
+      "reportSha256": "bd84ad87f1593d7ab4d1539710a89ba4876071005e760628df8b31c06b8c0079",
+      "reportBytes": 21980,
+      "auditSourceSnapshot": "517c93023404d5750a8a60adb3794bbe4cee188f",
+      "findings": {
+        "high": [
+          "PHASE2-HIGH-01 final-current-head GitHub quality gate required",
+          "PHASE2-HIGH-02 Q10 SVG wall collision, ellipse and radius segment repair"
+        ],
+        "medium": [
+          "PHASE2-MED-01 KaTeX Rs. versus textbook ₹ (fallback and question retain ₹)",
+          "PHASE2-MED-02 320px 160px illustration squeeze",
+          "PHASE2-MED-03 interactive browser navigation, Tamil switch and dock clearance"
+        ],
+        "low": [
+          "PHASE2-LOW-01 intermediate arithmetic opportunities",
+          "PHASE2-LOW-02 upright cm² formatting in bold questions"
+        ]
+      },
+      "remediation": {
+        "svgGeometry": "code updated, awaiting fresh CI visual review",
+        "narrowMobileFigure": "targeted CSS updated, awaiting fresh CI viewport check",
+        "interactiveCoverage": "targeted Playwright expanded, awaiting fresh CI",
+        "currency": "Rs. in KaTeX with ₹ in source and fallback retained; non-blocking contrast disclosed",
+        "fullCI": "PENDING"
+      },
+      "deviceWidthsPx": [
+        320,
+        390,
+        412
+      ],
+      "declaration": "Neon visually checked prior 15 screenshots and source, but did not itself run a live browser; our expanded interactive tests require independent CI execution."
+    },
+    "auditNote": "The original Phase 1 addendum is immutable source evidence; its hypothetical wrong-diameter mutation quotes ≈₹539.71, which differs from direct calculation ≈₹539.70 with true pi, or ≈₹539.92 with pi=22/7. This does not affect the correct Q10 answer; ask reviewer to note it separately in Phase 2, without editing frozen Phase 1."
+  },
+  "releaseGates": {
+    "phase1NeonMathAndSource": "PASS",
+    "phase2NeonReadOnlyUI": "CONDITIONAL_GO_REMEDIATION_IN_PROGRESS",
+    "githubRiskBasedFullCi": "PENDING after high-priority Phase 2 code fixes",
+    "tamilAuthoredLessonReview": "PENDING",
+    "merged": false,
+    "liveVerified": false
+  }
+}
