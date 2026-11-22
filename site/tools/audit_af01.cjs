@@ -231,8 +231,22 @@ function buildChapterScorecards(win, staticChecks) {
           ansSpec = g9m?.getAnswer?.(it) || null;
         }
         if (ansSpec) {
-          const htmlOut = renderMath(ansSpec);
-          if (htmlOut.includes('data-math-error') || /FRAC|undefined/.test(ansSpec.latex || '')) katexErr++;
+          // A localized answerMath is {en:{latex,...},ta:{latex,...}}.
+          // Validate each displayed language rather than sending the wrapper to KaTeX.
+          const bilingual = typeof ansSpec === 'object' && !Array.isArray(ansSpec) &&
+            (Object.hasOwn(ansSpec, 'en') || Object.hasOwn(ansSpec, 'ta'));
+          const variants = bilingual
+            ? ['en', 'ta'].filter(locale => Object.hasOwn(ansSpec, locale)).map(locale => ansSpec[locale])
+            : [ansSpec];
+          if (!variants.length || (bilingual && !ansSpec.en)) katexErr++;
+          for (const spec of variants) {
+            if (!spec || (typeof spec === 'object' && !Array.isArray(spec) && typeof spec.latex !== 'string')) {
+              katexErr++;
+              continue;
+            }
+            const htmlOut = renderMath(spec);
+            if (htmlOut.includes('data-math-error') || /FRAC|undefined/.test(spec.latex || '')) katexErr++;
+          }
         } else if (typeof it.answer === 'string' && /\d+\/\d+/.test(it.answer)) {
           slashUnconverted++;
         }
