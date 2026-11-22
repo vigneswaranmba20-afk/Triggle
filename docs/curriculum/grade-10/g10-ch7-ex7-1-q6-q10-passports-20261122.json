@@ -4,7 +4,7 @@
   "grade": 10,
   "chapter": 7,
   "exercise": "7.1",
-  "status": "author-draft-awaiting-Neon-blind-audit",
+  "status": "neon-phase1-verified-phase2-readonly-ui-audit-pending",
   "languagePolicy": "english-first; complete Tamil teaching translation pending",
   "source": {
     "edition": "2025 revised",
@@ -25,7 +25,7 @@
     "questionPageImagesInspected": true,
     "answerKeyPageImagesInspected": true,
     "q10FigureInspected": true,
-    "independentBlindAuditCompleted": false,
+    "independentBlindAuditCompleted": true,
     "sourceFigureNote": "The textbook photograph shows upper and lower radii 6 cm and 12 cm and vertical height 8 cm. The student-facing SVG is an original clarifying schematic."
   },
   "records": [
@@ -109,5 +109,51 @@
       ],
       "englishQuestion": "10. The frustum shaped outer portion of the table lamp has to be painted including the top part. Find the total cost of painting the lamp if the cost of painting 1 sq.cm is ₹2."
     }
-  ]
+  ],
+  "independentAudit": {
+    "provider": "Gemini Neon",
+    "phase1": {
+      "status": "PASS",
+      "blindIntegrityReported": true,
+      "originalFrozenReport": {
+        "filename": "Neon Grade10 Ch7 Ex7 1 Q6 Q10 Phase1 Blind Report.md",
+        "status": "BLOCKED (2025 source PDFs unavailable)",
+        "preservedUnchanged": true
+      },
+      "sourceUnblockAddendum": {
+        "filename": "Neon Grade10 Ch7 Ex7 1 Q6 Q10 Phase1 Source Unblock Addendum.md",
+        "sha256": "54c1ffb7b66d0d721c5885953564c41de2002c010b6ce13a232c3553f6924745",
+        "bytes": 15257,
+        "inspectedSourcePack": "Four official 2025 PDF pages (EN questions and key, Tamil questions and key), Q10 photo crops",
+        "mathematicalAnswersVerified": 5,
+        "bilingualSourceRecordsVerified": 5,
+        "originalQ10FigureVerified": 1,
+        "originalQ10RadiiCm": {
+          "top": 6,
+          "bottom": 12
+        },
+        "originalQ10VerticalHeightCm": 8,
+        "textbookRoundingConvention": "216π cm² = 4752/7 ≈ 678.86 cm²; 678.86 × ₹2 = ₹1357.72; exact-unrounded final cost rounds to ₹1357.71."
+      }
+    },
+    "phase2": {
+      "status": "PENDING",
+      "neonStudentFacingReviewCompleted": false,
+      "deviceWidthsPx": [
+        320,
+        390,
+        412
+      ],
+      "target": "PR #338 — code + browser visual QA"
+    },
+    "auditNote": "The original Phase 1 addendum is immutable source evidence; its hypothetical wrong-diameter mutation quotes ≈₹539.71, which differs from direct calculation ≈₹539.70 with true pi, or ≈₹539.92 with pi=22/7. This does not affect the correct Q10 answer; ask reviewer to note it separately in Phase 2, without editing frozen Phase 1."
+  },
+  "releaseGates": {
+    "phase1NeonMathAndSource": "PASS",
+    "phase2NeonReadOnlyUI": "PENDING",
+    "githubRiskBasedFullCi": "PASSED at prior head b9e56d95; rerun required after manifest/test edits",
+    "tamilAuthoredLessonReview": "PENDING",
+    "merged": false,
+    "liveVerified": false
+  }
 }
