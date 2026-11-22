@@ -1602,8 +1602,8 @@
       "concept": "pythagoras"
     },
     "g9-ch5-ex5.2-q2": {
-      "step": 3,
-      "expected": "In part (ii), all x-coordinates equal a, so the three points lie on the vertical",
+      "step": 5,
+      "expected": "Part (ii): all three points have x-coordinate a.",
       "en": "An ordered pair lists horizontal position first, then vertical position. Negative values go left or down respectively; do not swap the coordinates.",
       "ta": "வரிசைச் சோடியில் முதலில் கிடைமட்ட இடமும் பின்னர் செங்குத்து இடமும் வரும். எதிர்ம மதிப்புகள் முறையே இடப்பக்கம் அல்லது கீழ்ப்பக்கம் செல்லும்.",
       "concept": "coordinates",
@@ -1625,9 +1625,9 @@
     },
     "g9-ch5-ex5.2-q5": {
       "step": 0,
-      "expected": "Opposite sides of a quadrilateral are equal and parallel if their direction vect",
-      "en": "Opposite sides of a parallelogram must be equal and parallel. Compare both horizontal and vertical changes for opposite sides; matching direction vectors certify this.",
-      "ta": "இணைகரத்தின் எதிர்பக்கங்கள் சமமாகவும் இணையாகவும் இருக்க வேண்டும். இரு எதிர்பக்கங்களின் கிடைமட்ட, செங்குத்து மாற்றங்களை ஒப்பிடவும்.",
+      "expected": "Use the Class 9 distance formula.",
+      "en": "The distance formula uses horizontal and vertical differences to find a side length. Compare opposite pairs: AB = CD and BC = DA prove that the quadrilateral is a parallelogram.",
+      "ta": "தொலைவுச் சூத்திரம் மூலம் எதிர்ப்பக்கங்களின் நீளங்களை ஒப்பிடவும். AB = CD மற்றும் BC = DA என்றால் இரு ஜோடி எதிர்ப்பக்கங்களும் சமம்; ஆகவே இது ஓர் இணைகரம்.",
       "concept": "coordinates",
       "diagram": {
         "type": "coordinates",
@@ -1636,7 +1636,7 @@
     },
     "g9-ch5-ex5.2-q6": {
       "step": 1,
-      "expected": "For part (i), compute the squared distances.",
+      "expected": "Part (i): find the first two squared side lengths.",
       "en": "The horizontal and vertical changes form the two legs of a right triangle. Use Pythagoras to calculate the straight-line distance.",
       "ta": "கிடைமட்ட, செங்குத்து மாற்றங்கள் செங்கோண முக்கோணத்தின் இரு பக்கங்களாகும். பிதாகரஸ் தேற்றத்தால் நேர்கோட்டுத் தொலைவை காணலாம்.",
       "concept": "distance",
