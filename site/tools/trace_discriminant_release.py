@@ -73,14 +73,20 @@ def bump_player(source):
 
 
 def bump_sw(source):
-    # Keep the established Grade 9 and G.P. cache suffix intact: earlier
-    # chapter gates deliberately require it at the very end of CACHE.
-    suffix = '-gpfola-v2-fa50e19c-g9ex32'
-    pattern = r"^(const CACHE=')([^'\r\n]*?)(-gpfola-v2-fa50e19c-g9ex32)(';)"
-    result,n=re.subn(pattern,lambda m:m.group(1)+m.group(2)+'-'+TAG+m.group(3)+m.group(4),source,count=1)
-    if n!=1:
-        raise ValueError("Service worker cache signature changed; manual reconciliation required")
-    return result
+    """Preserve later audit/PWA suffixes while replaying the approved old release.
+
+    The first release put the token before -gpfola-v2... . Newer curriculum
+    releases added further suffixes, so requiring that marker at end is stale.
+    The current published token may already sit earlier in the same CACHE line:
+    never alter it without an explicit release review.
+    """
+    suffix='-gpfola-v2-fa50e19c-g9ex32'
+    first,sep,tail=source.partition('\n')
+    if not sep or not first.startswith("const CACHE='") or not first.endswith("';"):
+        raise ValueError("Unexpected service worker cache declaration")
+    if first.count(suffix)!=1 or ('-'+TAG) in first:
+        raise ValueError("Service worker cache marker missing or already released")
+    return first.replace(suffix,'-'+TAG+suffix,1)+sep+tail
 
 def update_site(root,url):
     root=Path(root)
