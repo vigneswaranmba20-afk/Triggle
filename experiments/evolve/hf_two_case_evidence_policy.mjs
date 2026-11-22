@@ -100,7 +100,7 @@ export function validateProposal(candidate,c,p){
   }
  }
  for(const k of ['proposedAction','rationale','verification']){
-  if(typeof candidate[k]!=='string'||candidate[k].length<12||candidate[k].length>1400)
+  if(typeof candidate[k]!=='string'||(candidate[k].length<12&&!(k==='proposedAction'&&candidate.proposedTarget==='none'&&candidate[k]==='no edit'))||candidate[k].length>1400)
    failures.push('invalid-'+k);
  }
  const action=String(candidate.proposedAction||'');
@@ -111,6 +111,8 @@ export function validateProposal(candidate,c,p){
   if(/(?:change|convert|replace|write|edit|modify|fix|use)[^.!?]{0,100}\b(?:fallback|questionMath)\b/i.test(action)
     ||/(?:fallback|questionMath)[^.!?]{0,100}(?:change|convert|replace|edit|modify|fix)/i.test(action))
    failures.push('tries-to-break-accessible-fallback');
+  if(/fallback[^.!?]{0,100}(?:should match|should use|should be formatted|should be changed|should be replaced|needs changing)/i.test(String(candidate.rationale||'')+' '+String(candidate.verification||'')))
+   failures.push('fallback-formatting-misconception');
   if(candidate.proposedTarget==='steps[2].en'&&
      !candidate.evidence?.some(e=>e.field==='steps[2].en'))failures.push('no-evidence-in-proposed-target');
  }
