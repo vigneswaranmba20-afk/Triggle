@@ -1,0 +1,59 @@
+name: TRACE Audit Accelerator — Wave 1 live screening
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/audit-wave1-live.yml'
+      - 'site/tools/test_audit_wave1_live_browser.cjs'
+      - 'docs/audit/WEEKEND_AF09_FIX_LOG.md'
+      - 'docs/audit/TRACE_AUDIT_WAVE1.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live-screening:
+    name: Historical repairs smoke — shard ${{ matrix.shard }}/4
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Install headless Chromium
+        run: npx playwright install --with-deps --only-shell chromium
+      - name: Inspect actual published Pages, not localhost
+        env:
+          AUDIT_SHARD_INDEX: ${{ matrix.shard }}
+          AUDIT_SHARD_TOTAL: '4'
+          TRIGGLE_LIVE_BASE: https://vigneswaranmba20-afk.github.io/Triggle/site/index.html
+          CHROMIUM_PATH: ''
+        run: node site/tools/test_audit_wave1_live_browser.cjs
+      - name: Preserve per-ID triage manifest and viewport screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-wave1-screening-shard-${{ matrix.shard }}
+          path: screenshots/audit-wave1/shard-${{ matrix.shard }}/
+          retention-days: 14
+          if-no-files-found: warn
+
+  screening-summary:
+    name: All four screening shards completed
+    needs: live-screening
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Require all shards green
+        env:
+          SHARD_RESULT: ${{ needs.live-screening.result }}
+        run: test "$SHARD_RESULT" = success
