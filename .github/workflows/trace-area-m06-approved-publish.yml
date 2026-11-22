@@ -111,6 +111,14 @@ jobs:
               raise SystemExit("Incorrect reconstructed video size")
           print('PASS 19 exact parts joined into approved V2 size')
           PY
+      - name: Install FFmpeg and FFprobe when missing on Ubuntu runner
+        run: |
+          set -euo pipefail
+          if ! command -v ffprobe >/dev/null || ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -qq -y ffmpeg
+          fi
+          ffprobe -version | head -1
       - name: Check precise SHA, H264/AAC, 9:16 portrait, duration and complete decode
         run: |
           set -euo pipefail
