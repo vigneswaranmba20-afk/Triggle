@@ -55,6 +55,13 @@ vm.runInNewContext(read('site/data/class-9.js'),ctx);
 const published=ctx.window.TRIGGLE_CLASSES[9].items;
 for(const id of expectedIds)assert(!published.some(q=>q.id===id),'STAGED ONLY: do not silently claim missing part is published '+id);
 assert.equal(published.length,53,'Original core Grade 9 source module remains unchanged');
+// A source module is insufficient unless all seven questions appear in the
+// curriculum exercise navigation, without altering the immutable legacy IDs.
+const catalogue={window:{}};
+vm.runInNewContext(read('site/data/curriculum.js'),catalogue);
+const ch6=catalogue.window.TRIGGLE_CURRICULUM.grades.find(g=>g.grade===9).chapters.find(c=>c.number===6);
+assert.deepEqual(Array.from(ch6.textbookQuestionIds||[]),expectedIds,'All seven textbook IDs in Grade 9 Chapter 6 catalogue');
+assert(!expectedIds.some(id=>ch6.legacyQuestionIds.includes(id)),'Never rewrite original legacy source mappings');
 const complete=require('./build_g9_math.cjs').load();
 assert.equal(complete.length,404,'Seven approved records appended to assembled Grade 9 inventory');
 for(const id of expectedIds)assert(complete.some(q=>q.id===id),'Released English source must contain approved exercise '+id);
