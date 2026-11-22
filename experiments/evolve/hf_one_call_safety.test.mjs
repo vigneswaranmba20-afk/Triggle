@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 test('one-shot job gated by exact explicit user approval commit message',async()=>{
  const w=await readFile('.github/workflows/evolve-audit-repair.yml','utf8');
- assert.ok(w.includes("github.event.head_commit.message == 'EVOLVE_ONE_CALL_APPROVED_20261122_QWEN3_CODER'"));
+ assert.ok(w.includes("github.event.head_commit.message == 'EVOLVE_POSTSUB_APPROVED_20261122_QWEN3_CODER'"));
  assert.ok(w.includes('environment: evolve-hf-lab'));
  assert.ok(w.includes('contents: read'));
  assert.ok(!w.includes('contents: write'));
