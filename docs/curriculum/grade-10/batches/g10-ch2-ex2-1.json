@@ -7,7 +7,7 @@
   "module": "data/textbook-exercises/g10-ch2-ex2-1-en.js",
   "languageCoverage": {
     "en": "source-image-verified",
-    "ta": "pending; matching source inspected, no Tamil question or solution transcribed"
+    "ta": "2025 textbook-page verified; 10 proposed Tamil records; independent live QA pending"
   },
   "sources": [
     {
@@ -35,7 +35,7 @@
       "verification": "verified",
       "imprintPdfPage": 2,
       "imprintVisualChecked": true,
-      "scope": "Source counterpart inspected only; Tamil publication and terminology review pending."
+      "scope": "Exercise 2.1 textbook wording visually verified; Tamil worked solutions require UI/editorial checks"
     }
   ],
   "inventory": {
@@ -309,38 +309,70 @@
       "chapter": "2",
       "exercise": "2.1",
       "topic": {
-        "en": "Numbers and Sequences"
+        "en": "Numbers and Sequences",
+        "ta": "எண்களும் தொடர்வரிசைகளும்"
       },
       "label": {
         "en": "Exercise 2.1 · Q1",
-        "ta": "Exercise 2.1 · Q1 (English only; Tamil pending)"
+        "ta": "பயிற்சி 2.1 · வினா 1"
       },
       "title": {
-        "en": "Integers with remainder 2"
+        "en": "Integers with remainder 2",
+        "ta": "மீதி 2 தரும் மிகை முழுக்கள்"
       },
       "q": {
-        "en": "Find all positive integers, when divided by 3 leaves remainder 2."
+        "en": "Find all positive integers, when divided by 3 leaves remainder 2.",
+        "ta": "3 ஆல் வகுக்கும் போது மீதி 2 -ஐத் தரக்கூடிய அனைத்து மிகை முழுக்களையும் காண்க."
       },
       "steps": [
         {
           "en": "Use the division algorithm. A remainder of 2 on division by 3 means the integer is 3 times its quotient plus 2.",
-          "eq": "n = 3k + 2"
+          "ta": "யூக்ளிடின் வகுத்தல் துணைத் தேற்றத்தைப் பயன்படுத்துக. ஒரு மிகை முழுவை 3 ஆல் வகுக்கும்போது மீதி 2 கிடைக்கிறது என்றால், அந்த எண் ஈவின் 3 மடங்குடன் 2 கூட்டிய வடிவில் இருக்கும்.",
+          "eq": "n = 3k + 2",
+          "math": {
+            "latex": "n = 3k + 2",
+            "display": true,
+            "fallback": "n = 3k + 2"
+          }
         },
         {
           "en": "Because n is positive, the integer quotient k starts at 0. Use k = 0, 1, 2, 3 and continue.",
-          "eq": "k = 0, 1, 2, 3, … ⇒ n = 2, 5, 8, 11, …"
+          "ta": "n ஒரு மிகை முழு என்பதால், ஈவு k ஆனது 0-லிருந்து தொடங்கும் முழு எண் ஆகும். k = 0, 1, 2, 3, … எனப் பிரதியிடவும்.",
+          "eq": "k = 0, 1, 2, 3, … ⇒ n = 2, 5, 8, 11, …",
+          "math": {
+            "latex": "k = 0, 1, 2, 3, \\dots \\Rightarrow n = 2, 5, 8, 11, \\dots",
+            "display": true,
+            "fallback": "k = 0, 1, 2, 3, … ⇒ n = 2, 5, 8, 11, …"
+          }
         },
         {
           "en": "Conversely, every number of this form is positive and leaves remainder 2, which is smaller than the divisor 3.",
-          "eq": "n = 3k + 2, where k is an integer and k ≥ 0"
+          "ta": "மறுதலையாக, இந்த வடிவில் உள்ள ஒவ்வொரு எண்ணும் மிகை முழுவாகும்; மேலும் வகுக்கும் எண் 3-ஐ விடச் சிறிய மீதி 2-ஐத் தரும்.",
+          "eq": "n = 3k + 2, where k is an integer and k ≥ 0",
+          "math": {
+            "latex": "n = 3k + 2,\\; k \\in \\mathbb{Z},\\; k \\ge 0",
+            "display": true,
+            "fallback": "n = 3k + 2, where k is an integer and k ≥ 0"
+          }
         }
       ],
-      "answer": "2, 5, 8, 11, …; all numbers n = 3k + 2, where k = 0, 1, 2, ….",
+      "answer": {
+        "en": "2, 5, 8, 11, …; all numbers n = 3k + 2, where k = 0, 1, 2, ….",
+        "ta": "2, 5, 8, 11, …; அதாவது k = 0, 1, 2, … என அமையும் n = 3k + 2 என்ற வடிவிலான அனைத்து எண்களும்."
+      },
+      "answerMath": {
+        "latex": "2, 5, 8, 11, \\dots \\quad (n = 3k + 2,\\; k = 0, 1, 2, \\dots)",
+        "display": false,
+        "fallback": "2, 5, 8, 11, … (n = 3k + 2, k = 0, 1, 2, …)"
+      },
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q1; printed p. 42, PDF p. 48.",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition Ch 2 Ex 2.1 Q1 (printed p. 42, PDF p. 48; Answers p. 336, PDF p. 342) and 2025 revised Tamil edition Ch 2 பயிற்சி 2.1 Q1 (printed p. 43, PDF p. 49; விடைகள் p. 349, PDF p. 355); Tamil question visually verified from rendered page image; worked solution review pending.",
       "edition": "2025",
-      "translationReview": "pending"
+      "translationReview": "pending",
+      "checkpoint": "2026-11-22",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending"
     },
     {
       "id": "c10-2-ex2-1-q2",
@@ -348,38 +380,70 @@
       "chapter": "2",
       "exercise": "2.1",
       "topic": {
-        "en": "Numbers and Sequences"
+        "en": "Numbers and Sequences",
+        "ta": "எண்களும் தொடர்வரிசைகளும்"
       },
       "label": {
         "en": "Exercise 2.1 · Q2",
-        "ta": "Exercise 2.1 · Q2 (English only; Tamil pending)"
+        "ta": "பயிற்சி 2.1 · வினா 2"
       },
       "title": {
-        "en": "Rows of flower pots"
+        "en": "Rows of flower pots",
+        "ta": "பூந்தொட்டிகளின் வரிசைகள்"
       },
       "q": {
-        "en": "A man has 532 flower pots. He wants to arrange them in rows such that each row contains 21 flower pots. Find the number of completed rows and how many flower pots are left over."
+        "en": "A man has 532 flower pots. He wants to arrange them in rows such that each row contains 21 flower pots. Find the number of completed rows and how many flower pots are left over.",
+        "ta": "ஒரு நபரிடம் 532 பூந்தொட்டிகள் உள்ளன. அவர் வரிசைக்கு 21 பூந்தொட்டிகள் வீதம் அடுக்க விரும்பினார். எத்தனை வரிசைகள் முழுமை பெறும் எனவும் மற்றும் எத்தனை பூந்தொட்டிகள் மீதமிருக்கும் எனவும் காண்க."
       },
       "steps": [
         {
           "en": "Divide the total number of flower pots by the number required in each row.",
-          "eq": "532 = 21 × 25 + 7"
+          "ta": "மொத்த பூந்தொட்டிகளின் எண்ணிக்கையான 532-ஐ ஒரு வரிசையில் உள்ள 21 பூந்தொட்டிகளால் யூக்ளிடின் வகுத்தல் துணைத் தேற்றப்படி வகுக்கவும்.",
+          "eq": "532 = 21 × 25 + 7",
+          "math": {
+            "latex": "532 = 21 \\times 25 + 7",
+            "display": true,
+            "fallback": "532 = 21 × 25 + 7"
+          }
         },
         {
           "en": "The quotient counts complete rows, so 25 rows each contain 21 pots.",
-          "eq": "21 × 25 = 525"
+          "ta": "ஈவு 25 என்பது முழுமை பெற்ற வரிசைகளின் எண்ணிக்கையைக் குறிக்கும்; அதாவது 25 வரிசைகளில் தலா 21 பூந்தொட்டிகள் இருக்கும்.",
+          "eq": "21 × 25 = 525",
+          "math": {
+            "latex": "21 \\times 25 = 525",
+            "display": true,
+            "fallback": "21 × 25 = 525"
+          }
         },
         {
           "en": "Subtract the pots already arranged. Seven cannot fill another row of 21.",
-          "eq": "532 − 525 = 7; 0 ≤ 7 < 21"
+          "ta": "அடுக்கப்பட்ட 525 பூந்தொட்டிகளை மொத்த எண்ணிக்கையிலிருந்து கழிக்கவும். மீதமுள்ள 7 பூந்தொட்டிகள் 21-ஐ விடக் குறைவு என்பதால் மற்றொரு வரிசையை நிறைவு செய்ய முடியாது.",
+          "eq": "532 − 525 = 7; 0 ≤ 7 < 21",
+          "math": {
+            "latex": "532 - 525 = 7,\\quad 0 \\le 7 < 21",
+            "display": true,
+            "fallback": "532 − 525 = 7; 0 ≤ 7 < 21"
+          }
         }
       ],
-      "answer": "25 completed rows; 7 flower pots are left over.",
+      "answer": {
+        "en": "25 completed rows; 7 flower pots are left over.",
+        "ta": "25 வரிசைகள் முழுமை பெறும்; 7 பூந்தொட்டிகள் மீதமிருக்கும்."
+      },
+      "answerMath": {
+        "latex": "25,\\; 7",
+        "display": false,
+        "fallback": "25, 7"
+      },
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q2; printed p. 42, PDF p. 48.",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition Ch 2 Ex 2.1 Q2 (printed p. 42, PDF p. 48; Answers p. 336, PDF p. 342) and 2025 revised Tamil edition Ch 2 பயிற்சி 2.1 Q2 (printed p. 43, PDF p. 49; விடைகள் p. 349, PDF p. 355); Tamil question visually verified from rendered page image; worked solution review pending.",
       "edition": "2025",
-      "translationReview": "pending"
+      "translationReview": "pending",
+      "checkpoint": "2026-11-22",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending"
     },
     {
       "id": "c10-2-ex2-1-q3",
@@ -387,42 +451,80 @@
       "chapter": "2",
       "exercise": "2.1",
       "topic": {
-        "en": "Numbers and Sequences"
+        "en": "Numbers and Sequences",
+        "ta": "எண்களும் தொடர்வரிசைகளும்"
       },
       "label": {
         "en": "Exercise 2.1 · Q3",
-        "ta": "Exercise 2.1 · Q3 (English only; Tamil pending)"
+        "ta": "பயிற்சி 2.1 · வினா 3"
       },
       "title": {
-        "en": "Product of consecutive integers"
+        "en": "Product of consecutive integers",
+        "ta": "தொடர்ச்சியான இரு மிகை முழுக்களின் பெருக்கற்பலன்"
       },
       "q": {
-        "en": "Prove that the product of two consecutive positive integers is divisible by 2."
+        "en": "Prove that the product of two consecutive positive integers is divisible by 2.",
+        "ta": "தொடர்ச்சியான இரு மிகை முழுக்களின் பெருக்கற்பலன் 2 ஆல் வகுபடும் என நிறுவுக."
       },
       "steps": [
         {
           "en": "Let the consecutive positive integers be n and n+1. Every integer is either even or odd.",
-          "eq": "n = 2k or n = 2k + 1"
+          "ta": "தொடர்ச்சியான இரு மிகை முழுக்களை n மற்றும் n+1 என்க. எந்தவொரு முழுவும் இரட்டை எண் அல்லது ஒற்றை எண்ணாக மட்டுமே இருக்கும்.",
+          "eq": "n = 2k or n = 2k + 1",
+          "math": {
+            "latex": "n = 2k \\;\\text{or}\\; n = 2k + 1",
+            "display": true,
+            "fallback": "n = 2k or n = 2k + 1"
+          }
         },
         {
           "en": "If n is even, it already contributes a factor of 2 to the product.",
-          "eq": "n(n+1) = (2k)(2k+1) = 2[k(2k+1)]"
+          "ta": "நிலை 1: n இரட்டை எண் (n = 2k) எனில், பெருக்கற்பலனில் 2 ஒரு காரணியாக நேரடியாக அமையும்.",
+          "eq": "n(n+1) = (2k)(2k+1) = 2[k(2k+1)]",
+          "math": {
+            "latex": "n(n+1) = (2k)(2k+1) = 2\\,[k(2k+1)]",
+            "display": true,
+            "fallback": "n(n+1) = (2k)(2k+1) = 2[k(2k+1)]"
+          }
         },
         {
           "en": "If n is odd, the next integer is even and contributes a factor of 2.",
-          "eq": "n(n+1) = (2k+1)(2k+2) = 2[(2k+1)(k+1)]"
+          "ta": "நிலை 2: n ஒற்றை எண் (n = 2k + 1) எனில், அடுத்த முழுவான n + 1 = 2k + 2 இரட்டை எண்ணாக இருப்பதால் 2 ஒரு காரணியாக அமையும்.",
+          "eq": "n(n+1) = (2k+1)(2k+2) = 2[(2k+1)(k+1)]",
+          "math": {
+            "latex": "n(n+1) = (2k+1)(2k+2) = 2\\,[(2k+1)(k+1)]",
+            "display": true,
+            "fallback": "n(n+1) = (2k+1)(2k+2) = 2[(2k+1)(k+1)]"
+          }
         },
         {
           "en": "In both cases the bracket is an integer. Thus the product is divisible by 2.",
-          "eq": "2 divides n(n+1)"
+          "ta": "இரு நிலைகளிலும் அடைப்புக்குறிக்குள் உள்ள மதிப்பு ஒரு முழு ஆகும். எனவே பெருக்கற்பலன் n(n+1) ஆனது 2 ஆல் வகுபடும்.",
+          "eq": "2 divides n(n+1)",
+          "math": {
+            "latex": "2 \\mid n(n+1)",
+            "display": true,
+            "fallback": "2 divides n(n+1)"
+          }
         }
       ],
-      "answer": "The product of any two consecutive positive integers is divisible by 2.",
+      "answer": {
+        "en": "The product of any two consecutive positive integers is divisible by 2.",
+        "ta": "எந்த இரு தொடர்ச்சியான மிகை முழுக்களின் பெருக்கற்பலனும் 2 ஆல் வகுபடும் என நிறுவப்பட்டது."
+      },
+      "answerMath": {
+        "latex": "2 \\mid n(n+1)",
+        "display": false,
+        "fallback": "2 divides n(n+1)"
+      },
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q3; printed p. 43, PDF p. 49.",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition Ch 2 Ex 2.1 Q3 (printed p. 43, PDF p. 49) and 2025 revised Tamil edition Ch 2 பயிற்சி 2.1 Q3 (printed p. 43, PDF p. 49); proof item (no appendix entry); Tamil question visually verified from rendered page image; worked solution review pending.",
       "edition": "2025",
-      "translationReview": "pending"
+      "translationReview": "pending",
+      "checkpoint": "2026-11-22",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending"
     },
     {
       "id": "c10-2-ex2-1-q4",
@@ -430,42 +532,80 @@
       "chapter": "2",
       "exercise": "2.1",
       "topic": {
-        "en": "Numbers and Sequences"
+        "en": "Numbers and Sequences",
+        "ta": "எண்களும் தொடர்வரிசைகளும்"
       },
       "label": {
         "en": "Exercise 2.1 · Q4",
-        "ta": "Exercise 2.1 · Q4 (English only; Tamil pending)"
+        "ta": "பயிற்சி 2.1 · வினா 4"
       },
       "title": {
-        "en": "Sum of three remainders"
+        "en": "Sum of three remainders",
+        "ta": "மூன்று மீதிகளின் கூடுதல்"
       },
       "q": {
-        "en": "When the positive integers a, b and c are divided by 13, the respective remainders are 9,7 and 10. Show that a+b+c is divisible by 13."
+        "en": "When the positive integers a, b and c are divided by 13, the respective remainders are 9,7 and 10. Show that a+b+c is divisible by 13.",
+        "ta": "a, b மற்றும் c என்ற மிகை முழுக்களை 13 ஆல் வகுக்கும்போது கிடைக்கும் மீதிகள் முறையே 9, 7 மற்றும் 10 எனில் a+b+c ஆனது 13 ஆல் வகுபடும் என நிரூபி."
       },
       "steps": [
         {
           "en": "Write each positive integer using its quotient and the stated remainder. The quotients p, q and r are nonnegative integers.",
-          "eq": "a = 13p + 9; b = 13q + 7; c = 13r + 10"
+          "ta": "யூக்ளிடின் வகுத்தல் துணைத் தேற்றப்படி, கொடுக்கப்பட்ட மீதிகளைக் கொண்டு a, b, c ஆகியவற்றை எழுதவும். இங்கு ஈவுகள் p, q, r என்பன குறையற்ற முழுக்கள் ஆகும்.",
+          "eq": "a = 13p + 9; b = 13q + 7; c = 13r + 10",
+          "math": {
+            "latex": "a = 13p + 9,\\quad b = 13q + 7,\\quad c = 13r + 10",
+            "display": true,
+            "fallback": "a = 13p + 9; b = 13q + 7; c = 13r + 10"
+          }
         },
         {
           "en": "Add the three expressions and combine their remainders.",
-          "eq": "a+b+c = 13(p+q+r) + (9+7+10)"
+          "ta": "மூன்று சமன்பாடுகளையும் கூட்டி, 13-ன் மடங்குகளையும் மீதிகளையும் தனித்தனியாகச் சேர்க்கவும்.",
+          "eq": "a+b+c = 13(p+q+r) + (9+7+10)",
+          "math": {
+            "latex": "a + b + c = 13(p + q + r) + (9 + 7 + 10)",
+            "display": true,
+            "fallback": "a+b+c = 13(p+q+r) + (9+7+10)"
+          }
         },
         {
           "en": "The remainders sum to 26, which is itself a multiple of 13.",
-          "eq": "a+b+c = 13(p+q+r) + 26 = 13(p+q+r+2)"
+          "ta": "மீதிகளின் கூடுதல் 26 ஆகும்; இது 13 × 2 என்பதால் 13-ன் மடங்காகும். எனவே 13-ஐப் பொதுக் காரணியாக எடுக்கவும்.",
+          "eq": "a+b+c = 13(p+q+r) + 26 = 13(p+q+r+2)",
+          "math": {
+            "latex": "a + b + c = 13(p + q + r) + 26 = 13(p + q + r + 2)",
+            "display": true,
+            "fallback": "a+b+c = 13(p+q+r) + 26 = 13(p+q+r+2)"
+          }
         },
         {
           "en": "Since p+q+r+2 is an integer, the sum is divisible by 13.",
-          "eq": "13 divides a+b+c"
+          "ta": "p + q + r + 2 என்பது ஒரு முழு என்பதால், a + b + c ஆனது 13 ஆல் வகுபடும்.",
+          "eq": "13 divides a+b+c",
+          "math": {
+            "latex": "13 \\mid (a + b + c)",
+            "display": true,
+            "fallback": "13 divides a+b+c"
+          }
         }
       ],
-      "answer": "a+b+c = 13(p+q+r+2), so a+b+c is divisible by 13.",
+      "answer": {
+        "en": "a+b+c = 13(p+q+r+2), so a+b+c is divisible by 13.",
+        "ta": "a + b + c = 13(p + q + r + 2) என்பதால், a + b + c ஆனது 13 ஆல் வகுபடும் என நிரூபிக்கப்பட்டது."
+      },
+      "answerMath": {
+        "latex": "a + b + c = 13(p + q + r + 2)",
+        "display": false,
+        "fallback": "a+b+c = 13(p+q+r+2)"
+      },
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q4; printed p. 43, PDF p. 49.",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition Ch 2 Ex 2.1 Q4 (printed p. 43, PDF p. 49) and 2025 revised Tamil edition Ch 2 பயிற்சி 2.1 Q4 (printed p. 43, PDF p. 49); proof item (no appendix entry); Tamil question visually verified from rendered page image; worked solution review pending.",
       "edition": "2025",
-      "translationReview": "pending"
+      "translationReview": "pending",
+      "checkpoint": "2026-11-22",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending"
     },
     {
       "id": "c10-2-ex2-1-q5",
@@ -473,42 +613,80 @@
       "chapter": "2",
       "exercise": "2.1",
       "topic": {
-        "en": "Numbers and Sequences"
+        "en": "Numbers and Sequences",
+        "ta": "எண்களும் தொடர்வரிசைகளும்"
       },
       "label": {
         "en": "Exercise 2.1 · Q5",
-        "ta": "Exercise 2.1 · Q5 (English only; Tamil pending)"
+        "ta": "பயிற்சி 2.1 · வினா 5"
       },
       "title": {
-        "en": "Remainder of an integer square"
+        "en": "Remainder of an integer square",
+        "ta": "ஒரு முழுவின் வர்க்கத்தை 4 ஆல் வகுக்கும்போது கிடைக்கும் மீதி"
       },
       "q": {
-        "en": "Prove that square of any integer leaves the remainder either 0 or 1 when divided by 4."
+        "en": "Prove that square of any integer leaves the remainder either 0 or 1 when divided by 4.",
+        "ta": "எந்த மிகை முழுவின் வர்க்கத்தையும் 4 ஆல் வகுக்கும்போது மீதி 0 அல்லது 1 மட்டுமே கிடைக்கும் என நிறுவுக."
       },
       "steps": [
         {
           "en": "Every integer n, including a negative integer or zero, is even or odd. Write it in one of these two forms with integer k.",
-          "eq": "n = 2k or n = 2k + 1"
+          "ta": "எந்தவொரு முழு n (மிகை முழு உட்பட, பூச்சியம் மற்றும் குறை முழுக்களும்) இரட்டை எண் அல்லது ஒற்றை எண்ணாக இருக்கும். k ஒரு முழு எனில், n-ஐ இந்த இரு வடிவங்களில் ஒன்றாக எழுதலாம்.",
+          "eq": "n = 2k or n = 2k + 1",
+          "math": {
+            "latex": "n = 2k \\;\\text{or}\\; n = 2k + 1",
+            "display": true,
+            "fallback": "n = 2k or n = 2k + 1"
+          }
         },
         {
           "en": "If n is even, square its expression. It is exactly a multiple of 4.",
-          "eq": "n² = (2k)² = 4k²"
+          "ta": "நிலை 1: n இரட்டை எண் (n = 2k) எனில், அதன் வர்க்கம் 4-ன் சரியான மடங்காகும்; எனவே 4 ஆல் வகுக்கும்போது மீதி 0 கிடைக்கும்.",
+          "eq": "n² = (2k)² = 4k²",
+          "math": {
+            "latex": "n^2 = (2k)^2 = 4k^2",
+            "display": true,
+            "fallback": "n² = (2k)² = 4k²"
+          }
         },
         {
           "en": "If n is odd, expand its square and separate a multiple of 4.",
-          "eq": "n² = (2k+1)² = 4k²+4k+1 = 4(k²+k)+1"
+          "ta": "நிலை 2: n ஒற்றை எண் (n = 2k + 1) எனில், அதன் வர்க்கத்தை விரித்து 4-ன் மடங்கைப் பிரித்து எழுதவும்; இங்கு 4 ஆல் வகுக்கும்போது மீதி 1 கிடைக்கும்.",
+          "eq": "n² = (2k+1)² = 4k²+4k+1 = 4(k²+k)+1",
+          "math": {
+            "latex": "n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 4(k^2 + k) + 1",
+            "display": true,
+            "fallback": "n² = (2k+1)² = 4k²+4k+1 = 4(k²+k)+1"
+          }
         },
         {
           "en": "Both cases cover every integer. The possible remainders 0 and 1 are each between 0 and 3.",
-          "eq": "n² has remainder 0 or 1 when divided by 4"
+          "ta": "இந்த இரு நிலைகளும் அனைத்து முழுக்களையும் (மற்றும் குறிப்பாக அனைத்து மிகை முழுக்களையும்) உள்ளடக்கும். சாத்தியமான மீதிகள் 0 மற்றும் 1 ஆகிய இரண்டும் 0 முதல் 3 வரை உள்ளன.",
+          "eq": "n² has remainder 0 or 1 when divided by 4",
+          "math": {
+            "latex": "n^2 \\equiv 0 \\text{or} 1 \\pmod{4}",
+            "display": true,
+            "fallback": "n² has remainder 0 or 1 when divided by 4"
+          }
         }
       ],
-      "answer": "The remainder is 0 for an even integer and 1 for an odd integer.",
+      "answer": {
+        "en": "The remainder is 0 for an even integer and 1 for an odd integer.",
+        "ta": "இரட்டை முழுவின் வர்க்கத்திற்கு மீதி 0 ஆகவும், ஒற்றை முழுவின் வர்க்கத்திற்கு மீதி 1 ஆகவும் மட்டுமே கிடைக்கும் என நிறுவப்பட்டது."
+      },
+      "answerMath": {
+        "latex": "r \\in \\{0, 1\\}",
+        "display": false,
+        "fallback": "r ∈ {0, 1}"
+      },
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q5; printed p. 43, PDF p. 49.",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition Ch 2 Ex 2.1 Q5 (printed p. 43, PDF p. 49; wording: 'any integer') and 2025 revised Tamil edition Ch 2 பயிற்சி 2.1 Q5 (printed p. 43, PDF p. 49; wording: 'எந்த மிகை முழுவின்' = any positive integer); proof item (no appendix entry); Tamil question visually verified from rendered page image; worked solution review pending.",
       "edition": "2025",
-      "translationReview": "pending"
+      "translationReview": "pending",
+      "checkpoint": "2026-11-22",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending"
     },
     {
       "id": "c10-2-ex2-1-q6",
@@ -516,58 +694,120 @@
       "chapter": "2",
       "exercise": "2.1",
       "topic": {
-        "en": "Numbers and Sequences"
+        "en": "Numbers and Sequences",
+        "ta": "எண்களும் தொடர்வரிசைகளும்"
       },
       "label": {
         "en": "Exercise 2.1 · Q6",
-        "ta": "Exercise 2.1 · Q6 (English only; Tamil pending)"
+        "ta": "பயிற்சி 2.1 · வினா 6"
       },
       "title": {
-        "en": "HCF by Euclid’s Division Algorithm"
+        "en": "HCF by Euclid's Division Algorithm",
+        "ta": "யூக்ளிடின் வகுத்தல் வழிமுறை மூலம் மீ.பொ.வ காணுதல்"
       },
       "q": {
-        "en": "Use Euclid’s Division Algorithm to find the Highest Common Factor (HCF) of (i) 340 and 412 (ii) 867 and 255 (iii)10224 and 9648 (iv) 84, 90 and 120"
+        "en": "Use Euclid’s Division Algorithm to find the Highest Common Factor (HCF) of (i) 340 and 412 (ii) 867 and 255 (iii)10224 and 9648 (iv) 84, 90 and 120",
+        "ta": "யூக்ளிடின் வகுத்தல் வழிமுறையைப் பயன்படுத்திப் பின்வருவனவற்றின் மீ.பொ.வ காண்க. (i) 340 மற்றும் 412 (ii) 867 மற்றும் 255 (iii) 10224 மற்றும் 9648 (iv) 84, 90 மற்றும் 120"
       },
       "steps": [
         {
           "en": "In each pair, repeatedly divide the larger number by the smaller. Replace the pair by the divisor and remainder until the remainder is zero. The last nonzero remainder is the HCF.",
-          "eq": "HCF(a,b) = HCF(b,r), where a = bq+r and 0 ≤ r < b"
+          "ta": "ஒவ்வொரு சோடியிலும் பெரிய எண்ணைச் சிறிய எண்ணால் தொடர்ந்து வகுக்கவும். மீதி பூச்சியம் வரும் வரை, வகுக்கும் எண்ணையும் மீதியையும் புதிய சோடியாக மாற்றித் தொடரவும். கடைசி பூச்சியமற்ற மீதியே (அல்லது கடைசி வகுத்தியே) மீ.பொ.வ ஆகும்.",
+          "eq": "HCF(a,b) = HCF(b,r), where a = bq+r and 0 ≤ r < b",
+          "math": {
+            "latex": "\\gcd(a,b) = \\gcd(b,r),\\; a = bq + r,\\; 0 \\le r < b",
+            "display": true,
+            "fallback": "HCF(a,b) = HCF(b,r), where a = bq+r and 0 ≤ r < b"
+          }
         },
         {
           "en": "For (i), start with 412 and 340 and continue the divisions.",
-          "eq": "412 = 340 × 1 + 72; 340 = 72 × 4 + 52; 72 = 52 × 1 + 20"
+          "ta": "(i) 412 மற்றும் 340 ஆகியவற்றில் தொடங்கி யூக்ளிடின் வகுத்தல் வழிமுறையைத் தொடர்ந்து பயன்படுத்தவும்.",
+          "eq": "412 = 340 × 1 + 72; 340 = 72 × 4 + 52; 72 = 52 × 1 + 20",
+          "math": {
+            "latex": "412 = 340 \\times 1 + 72;\\; 340 = 72 \\times 4 + 52;\\; 72 = 52 \\times 1 + 20",
+            "display": true,
+            "fallback": "412 = 340 × 1 + 72; 340 = 72 × 4 + 52; 72 = 52 × 1 + 20"
+          }
         },
         {
           "en": "Finish (i). The last nonzero remainder is 4.",
-          "eq": "52 = 20 × 2 + 12; 20 = 12 × 1 + 8; 12 = 8 × 1 + 4; 8 = 4 × 2 + 0"
+          "ta": "(i)-ஐ நிறைவு செய்யவும். கடைசி பூச்சியமற்ற மீதி 4 என்பதால், 340 மற்றும் 412-ன் மீ.பொ.வ = 4.",
+          "eq": "52 = 20 × 2 + 12; 20 = 12 × 1 + 8; 12 = 8 × 1 + 4; 8 = 4 × 2 + 0",
+          "math": {
+            "latex": "52 = 20 \\times 2 + 12;\\; 20 = 12 \\times 1 + 8;\\; 12 = 8 \\times 1 + 4;\\; 8 = 4 \\times 2 + 0",
+            "display": true,
+            "fallback": "52 = 20 × 2 + 12; 20 = 12 × 1 + 8; 12 = 8 × 1 + 4; 8 = 4 × 2 + 0"
+          }
         },
         {
           "en": "For (ii), the last nonzero remainder is 51.",
-          "eq": "867 = 255 × 3 + 102; 255 = 102 × 2 + 51; 102 = 51 × 2 + 0"
+          "ta": "(ii) 867 மற்றும் 255-க்கு வகுத்தல் வழிமுறையைப் பயன்படுத்த, கடைசி பூச்சியமற்ற மீதி 51 கிடைக்கும்; எனவே மீ.பொ.வ = 51.",
+          "eq": "867 = 255 × 3 + 102; 255 = 102 × 2 + 51; 102 = 51 × 2 + 0",
+          "math": {
+            "latex": "867 = 255 \\times 3 + 102;\\; 255 = 102 \\times 2 + 51;\\; 102 = 51 \\times 2 + 0",
+            "display": true,
+            "fallback": "867 = 255 × 3 + 102; 255 = 102 × 2 + 51; 102 = 51 × 2 + 0"
+          }
         },
         {
           "en": "For (iii), first divide 10224 by 9648, then repeat with the remainders.",
-          "eq": "10224 = 9648 × 1 + 576; 9648 = 576 × 16 + 432"
+          "ta": "(iii) முதலில் 10224-ஐ 9648 ஆல் வகுத்து, பின்னர் கிடைக்கும் மீதிகளுடன் தொடரவும்.",
+          "eq": "10224 = 9648 × 1 + 576; 9648 = 576 × 16 + 432",
+          "math": {
+            "latex": "10224 = 9648 \\times 1 + 576;\\; 9648 = 576 \\times 16 + 432",
+            "display": true,
+            "fallback": "10224 = 9648 × 1 + 576; 9648 = 576 × 16 + 432"
+          }
         },
         {
           "en": "Finish (iii). The last nonzero remainder is 144.",
-          "eq": "576 = 432 × 1 + 144; 432 = 144 × 3 + 0"
+          "ta": "(iii)-ஐ நிறைவு செய்யவும். கடைசி பூச்சியமற்ற மீதி 144 என்பதால், 10224 மற்றும் 9648-ன் மீ.பொ.வ = 144.",
+          "eq": "576 = 432 × 1 + 144; 432 = 144 × 3 + 0",
+          "math": {
+            "latex": "576 = 432 \\times 1 + 144;\\; 432 = 144 \\times 3 + 0",
+            "display": true,
+            "fallback": "576 = 432 × 1 + 144; 432 = 144 × 3 + 0"
+          }
         },
         {
           "en": "For (iv), first find the HCF of 84 and 90.",
-          "eq": "90 = 84 × 1 + 6; 84 = 6 × 14 + 0"
+          "ta": "(iv) மூன்று எண்களுக்கு, முதலில் 84 மற்றும் 90 ஆகியவற்றின் மீ.பொ.வ-வைக் காணவும்; அது 6 ஆகும்.",
+          "eq": "90 = 84 × 1 + 6; 84 = 6 × 14 + 0",
+          "math": {
+            "latex": "90 = 84 \\times 1 + 6;\\; 84 = 6 \\times 14 + 0",
+            "display": true,
+            "fallback": "90 = 84 × 1 + 6; 84 = 6 × 14 + 0"
+          }
         },
         {
           "en": "Now find the HCF of this result and 120. Thus the HCF of all three numbers is 6.",
-          "eq": "120 = 6 × 20 + 0; HCF(84,90,120) = 6"
+          "ta": "இப்போது கிடைத்த 6 மற்றும் 120 ஆகியவற்றின் மீ.பொ.வ காணவும். எனவே 84, 90 மற்றும் 120-ன் மீ.பொ.வ = 6.",
+          "eq": "120 = 6 × 20 + 0; HCF(84,90,120) = 6",
+          "math": {
+            "latex": "120 = 6 \\times 20 + 0;\\; \\gcd(84, 90, 120) = 6",
+            "display": true,
+            "fallback": "120 = 6 × 20 + 0; HCF(84,90,120) = 6"
+          }
         }
       ],
-      "answer": "(i) 4; (ii) 51; (iii) 144; (iv) 6.",
+      "answer": {
+        "en": "(i) 4; (ii) 51; (iii) 144; (iv) 6.",
+        "ta": "(i) 4; (ii) 51; (iii) 144; (iv) 6."
+      },
+      "answerMath": {
+        "latex": "\\text{(i) } 4;\\quad \\text{(ii) } 51;\\quad \\text{(iii) } 144;\\quad \\text{(iv) } 6",
+        "display": false,
+        "fallback": "(i) 4; (ii) 51; (iii) 144; (iv) 6."
+      },
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q6; printed p. 43, PDF p. 49.",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition Ch 2 Ex 2.1 Q6(i)–(iv) (printed p. 43, PDF p. 49; Answers p. 336, PDF p. 342) and 2025 revised Tamil edition Ch 2 பயிற்சி 2.1 Q6(i)–(iv) (printed p. 43, PDF p. 49; விடைகள் p. 349, PDF p. 355); Tamil question visually verified from rendered page image; worked solution review pending.",
       "edition": "2025",
-      "translationReview": "pending"
+      "translationReview": "pending",
+      "checkpoint": "2026-11-22",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending"
     },
     {
       "id": "c10-2-ex2-1-q7",
@@ -575,42 +815,80 @@
       "chapter": "2",
       "exercise": "2.1",
       "topic": {
-        "en": "Numbers and Sequences"
+        "en": "Numbers and Sequences",
+        "ta": "எண்களும் தொடர்வரிசைகளும்"
       },
       "label": {
         "en": "Exercise 2.1 · Q7",
-        "ta": "Exercise 2.1 · Q7 (English only; Tamil pending)"
+        "ta": "பயிற்சி 2.1 · வினா 7"
       },
       "title": {
-        "en": "Largest divisor with a fixed remainder"
+        "en": "Largest divisor with a fixed remainder",
+        "ta": "சம மீதி தரும் மிகப்பெரிய வகுத்தி"
       },
       "q": {
-        "en": "Find the largest number which divides 1230 and 1926 leaving remainder 12 in each case."
+        "en": "Find the largest number which divides 1230 and 1926 leaving remainder 12 in each case.",
+        "ta": "1230 மற்றும் 1926 ஆகிய எண்களை வகுக்கும்போது மீதி 12 -ஐத் தரக்கூடிய மிகப்பெரிய எண்ணைக் காண்க."
       },
       "steps": [
         {
           "en": "If a number divides each original number leaving remainder 12, it divides each number after subtracting 12.",
-          "eq": "1230−12 = 1218; 1926−12 = 1914"
+          "ta": "ஒரு எண் 1230 மற்றும் 1926 ஆகியவற்றை வகுக்கும்போது மீதி 12-ஐத் தருமானால், அந்த இரு எண்களிலிருந்தும் 12-ஐக் கழித்த பிறகு கிடைக்கும் எண்களை மீதியின்றி வகுக்கும்.",
+          "eq": "1230−12 = 1218; 1926−12 = 1914",
+          "math": {
+            "latex": "1230 - 12 = 1218,\\quad 1926 - 12 = 1914",
+            "display": true,
+            "fallback": "1230−12 = 1218; 1926−12 = 1914"
+          }
         },
         {
           "en": "Find the HCF of these two differences by Euclid’s Division Algorithm.",
-          "eq": "1914 = 1218 × 1 + 696; 1218 = 696 × 1 + 522"
+          "ta": "யூக்ளிடின் வகுத்தல் வழிமுறையைப் பயன்படுத்தி 1218 மற்றும் 1914 ஆகியவற்றின் மீ.பொ.வ காணவும்.",
+          "eq": "1914 = 1218 × 1 + 696; 1218 = 696 × 1 + 522",
+          "math": {
+            "latex": "1914 = 1218 \\times 1 + 696;\\quad 1218 = 696 \\times 1 + 522",
+            "display": true,
+            "fallback": "1914 = 1218 × 1 + 696; 1218 = 696 × 1 + 522"
+          }
         },
         {
           "en": "Continue until the remainder is zero. The HCF is 174.",
-          "eq": "696 = 522 × 1 + 174; 522 = 174 × 3 + 0"
+          "ta": "மீதி பூச்சியம் வரும் வரை தொடரவும். கடைசி பூச்சியமற்ற மீதி 174 என்பதால் மீ.பொ.வ = 174.",
+          "eq": "696 = 522 × 1 + 174; 522 = 174 × 3 + 0",
+          "math": {
+            "latex": "696 = 522 \\times 1 + 174;\\quad 522 = 174 \\times 3 + 0",
+            "display": true,
+            "fallback": "696 = 522 × 1 + 174; 522 = 174 × 3 + 0"
+          }
         },
         {
           "en": "Every valid divisor is a common divisor of the differences, so none exceeds their HCF. Check that 174 itself leaves remainder 12 in both original numbers.",
-          "eq": "1230 = 174 × 7 + 12; 1926 = 174 × 11 + 12; 12 < 174"
+          "ta": "பொருத்தமான ஒவ்வொரு வகுத்தியும் 1218 மற்றும் 1914-ன் பொது வகுத்தியாக இருப்பதால், 174-ஐ விடப் பெரிய எண் இருக்க முடியாது. 174 ஆல் வகுக்கும்போது இரு எண்களிலும் மீதி 12 கிடைப்பதைச் சரிபார்க்கவும்.",
+          "eq": "1230 = 174 × 7 + 12; 1926 = 174 × 11 + 12; 12 < 174",
+          "math": {
+            "latex": "1230 = 174 \\times 7 + 12;\\; 1926 = 174 \\times 11 + 12;\\; 12 < 174",
+            "display": true,
+            "fallback": "1230 = 174 × 7 + 12; 1926 = 174 × 11 + 12; 12 < 174"
+          }
         }
       ],
-      "answer": "174.",
+      "answer": {
+        "en": "174.",
+        "ta": "174."
+      },
+      "answerMath": {
+        "latex": "174",
+        "display": false,
+        "fallback": "174"
+      },
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q7; printed p. 43, PDF p. 49.",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition Ch 2 Ex 2.1 Q7 (printed p. 43, PDF p. 49; Answers p. 336, PDF p. 342) and 2025 revised Tamil edition Ch 2 பயிற்சி 2.1 Q7 (printed p. 43, PDF p. 49; விடைகள் p. 349, PDF p. 355); Tamil question visually verified from rendered page image; worked solution review pending.",
       "edition": "2025",
-      "translationReview": "pending"
+      "translationReview": "pending",
+      "checkpoint": "2026-11-22",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending"
     },
     {
       "id": "c10-2-ex2-1-q8",
@@ -618,42 +896,80 @@
       "chapter": "2",
       "exercise": "2.1",
       "topic": {
-        "en": "Numbers and Sequences"
+        "en": "Numbers and Sequences",
+        "ta": "எண்களும் தொடர்வரிசைகளும்"
       },
       "label": {
         "en": "Exercise 2.1 · Q8",
-        "ta": "Exercise 2.1 · Q8 (English only; Tamil pending)"
+        "ta": "பயிற்சி 2.1 · வினா 8"
       },
       "title": {
-        "en": "Express the HCF as a linear combination"
+        "en": "Express the HCF as a linear combination",
+        "ta": "மீ.பொ.வ-வை நேரிய சேர்க்கையாக எழுதுதல்"
       },
       "q": {
-        "en": "If d is the Highest Common Factor of 32 and 60, find x and y satisfying d = 32x + 60y."
+        "en": "If d is the Highest Common Factor of 32 and 60, find x and y satisfying d = 32x + 60y.",
+        "ta": "32 மற்றும் 60 ஆகியவற்றின் மீப்பெரு பொது வகுத்தி d என்க. d = 32x + 60y எனில் x மற்றும் y என்ற முழுக்களைக் காண்க."
       },
       "steps": [
         {
           "en": "Find d using Euclid’s Division Algorithm. The last nonzero remainder is 4.",
-          "eq": "60 = 32 × 1 + 28; 32 = 28 × 1 + 4; 28 = 4 × 7 + 0"
+          "ta": "யூக்ளிடின் வகுத்தல் வழிமுறையைப் பயன்படுத்தி 32 மற்றும் 60-ன் மீ.பொ.வ (d) காணவும். கடைசி பூச்சியமற்ற மீதி 4 ஆகும்.",
+          "eq": "60 = 32 × 1 + 28; 32 = 28 × 1 + 4; 28 = 4 × 7 + 0",
+          "math": {
+            "latex": "60 = 32 \\times 1 + 28;\\; 32 = 28 \\times 1 + 4;\\; 28 = 4 \\times 7 + 0",
+            "display": true,
+            "fallback": "60 = 32 × 1 + 28; 32 = 28 × 1 + 4; 28 = 4 × 7 + 0"
+          }
         },
         {
           "en": "Work backwards to express the remainder 4 in terms of 32 and 28.",
-          "eq": "d = 4 = 32 − 28"
+          "ta": "பின்நோக்கிப் பிரதியிட்டு, மீதி 4-ஐ 32 மற்றும் 28 ஆகியவற்றின் வித்தியாசமாக எழுதவும்.",
+          "eq": "d = 4 = 32 − 28",
+          "math": {
+            "latex": "d = 4 = 32 - 28",
+            "display": true,
+            "fallback": "d = 4 = 32 − 28"
+          }
         },
         {
           "en": "Replace 28 by 60−32 and collect multiples of the original numbers.",
-          "eq": "4 = 32 − (60−32) = 2 × 32 − 60"
+          "ta": "முதல் சமன்பாட்டிலிருந்து 28 = 60 − 32 எனப் பிரதியிட்டு, 32 மற்றும் 60-ன் மடங்குகளைத் தொகுக்கவும்.",
+          "eq": "4 = 32 − (60−32) = 2 × 32 − 60",
+          "math": {
+            "latex": "4 = 32 - (60 - 32) = 32(2) + 60(-1)",
+            "display": true,
+            "fallback": "4 = 32 − (60−32) = 2 × 32 − 60"
+          }
         },
         {
           "en": "Compare with d=32x+60y. This supplies one integer pair; substitute it to check.",
-          "eq": "x = 2, y = −1; 32 × 2 + 60 × (−1) = 64−60 = 4"
+          "ta": "இதை d = 32x + 60y உடன் ஒப்பிட, x = 2 மற்றும் y = −1 எனக் கிடைக்கும். பிரதியிட்டுச் சரிபார்க்கவும்.",
+          "eq": "x = 2, y = −1; 32 × 2 + 60 × (−1) = 64−60 = 4",
+          "math": {
+            "latex": "x = 2,\\; y = -1;\\quad 32(2) + 60(-1) = 64 - 60 = 4",
+            "display": true,
+            "fallback": "x = 2, y = −1; 32 × 2 + 60 × (−1) = 64−60 = 4"
+          }
         }
       ],
-      "answer": "d = 4; one solution is x = 2, y = −1.",
+      "answer": {
+        "en": "d = 4; one solution is x = 2, y = −1.",
+        "ta": "d = 4; ஒரு தீர்வு x = 2, y = −1."
+      },
+      "answerMath": {
+        "latex": "x = 2,\\; y = -1",
+        "display": false,
+        "fallback": "x = 2, y = −1"
+      },
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q8; printed p. 43, PDF p. 49.",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition Ch 2 Ex 2.1 Q8 (printed p. 43, PDF p. 49; Answers p. 336, PDF p. 342) and 2025 revised Tamil edition Ch 2 பயிற்சி 2.1 Q8 (printed p. 43, PDF p. 49; விடைகள் p. 349, PDF p. 355); Tamil question visually verified from rendered page image; worked solution review pending.",
       "edition": "2025",
-      "translationReview": "pending"
+      "translationReview": "pending",
+      "checkpoint": "2026-11-22",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending"
     },
     {
       "id": "c10-2-ex2-1-q9",
@@ -661,38 +977,70 @@
       "chapter": "2",
       "exercise": "2.1",
       "topic": {
-        "en": "Numbers and Sequences"
+        "en": "Numbers and Sequences",
+        "ta": "எண்களும் தொடர்வரிசைகளும்"
       },
       "label": {
         "en": "Exercise 2.1 · Q9",
-        "ta": "Exercise 2.1 · Q9 (English only; Tamil pending)"
+        "ta": "பயிற்சி 2.1 · வினா 9"
       },
       "title": {
-        "en": "Find a smaller-division remainder"
+        "en": "Find a smaller-division remainder",
+        "ta": "சிறிய வகுத்தியால் வகுக்கும்போது கிடைக்கும் மீதி"
       },
       "q": {
-        "en": "A positive integer when divided by 88 gives the remainder 61. What will be the remainder when the same number is divided by 11?"
+        "en": "A positive integer when divided by 88 gives the remainder 61. What will be the remainder when the same number is divided by 11?",
+        "ta": "ஒரு மிகை முழுவை 88 ஆல் வகுக்கும்போது மீதி 61 கிடைக்கிறது. அதே மிகை முழுவை 11 ஆல் வகுக்கும்போது கிடைக்கும் மீதியைக் காண்க."
       },
       "steps": [
         {
           "en": "Use the division algorithm for the original number n. Its quotient k is a nonnegative integer.",
-          "eq": "n = 88k + 61"
+          "ta": "அந்த மிகை முழுவை n என்க. யூக்ளிடின் வகுத்தல் துணைத் தேற்றப்படி n = 88k + 61 என எழுதலாம்; இங்கு k ஒரு குறையற்ற முழு ஆகும்.",
+          "eq": "n = 88k + 61",
+          "math": {
+            "latex": "n = 88k + 61",
+            "display": true,
+            "fallback": "n = 88k + 61"
+          }
         },
         {
           "en": "Both 88 and the largest multiple of 11 below 61 can be grouped as multiples of 11.",
-          "eq": "88 = 11 × 8; 61 = 11 × 5 + 6"
+          "ta": "88 என்பது 11-ன் மடங்கு (88 = 11 × 8). மேலும் 61-ஐ 11 ஆல் வகுத்து 61 = 11 × 5 + 6 எனப் பிரித்து எழுதவும்.",
+          "eq": "88 = 11 × 8; 61 = 11 × 5 + 6",
+          "math": {
+            "latex": "88 = 11 \\times 8;\\quad 61 = 11 \\times 5 + 6",
+            "display": true,
+            "fallback": "88 = 11 × 8; 61 = 11 × 5 + 6"
+          }
         },
         {
           "en": "Rewrite n as a multiple of 11 plus a valid remainder.",
-          "eq": "n = 11(8k+5) + 6; 0 ≤ 6 < 11"
+          "ta": "11-ஐப் பொதுக் காரணியாக எடுத்து n-ஐ எழுதவும். 0 ≤ 6 < 11 என்பதால், 11 ஆல் வகுக்கும்போது கிடைக்கும் மீதி 6 ஆகும்.",
+          "eq": "n = 11(8k+5) + 6; 0 ≤ 6 < 11",
+          "math": {
+            "latex": "n = 11(8k + 5) + 6,\\quad 0 \\le 6 < 11",
+            "display": true,
+            "fallback": "n = 11(8k+5) + 6; 0 ≤ 6 < 11"
+          }
         }
       ],
-      "answer": "6.",
+      "answer": {
+        "en": "6.",
+        "ta": "6."
+      },
+      "answerMath": {
+        "latex": "6",
+        "display": false,
+        "fallback": "6"
+      },
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q9; printed p. 43, PDF p. 49.",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition Ch 2 Ex 2.1 Q9 (printed p. 43, PDF p. 49; Answers p. 336, PDF p. 342) and 2025 revised Tamil edition Ch 2 பயிற்சி 2.1 Q9 (printed p. 43, PDF p. 49; விடைகள் p. 349, PDF p. 355); Tamil question visually verified from rendered page image; worked solution review pending.",
       "edition": "2025",
-      "translationReview": "pending"
+      "translationReview": "pending",
+      "checkpoint": "2026-11-22",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending"
     },
     {
       "id": "c10-2-ex2-1-q10",
@@ -700,42 +1048,80 @@
       "chapter": "2",
       "exercise": "2.1",
       "topic": {
-        "en": "Numbers and Sequences"
+        "en": "Numbers and Sequences",
+        "ta": "எண்களும் தொடர்வரிசைகளும்"
       },
       "label": {
         "en": "Exercise 2.1 · Q10",
-        "ta": "Exercise 2.1 · Q10 (English only; Tamil pending)"
+        "ta": "பயிற்சி 2.1 · வினா 10"
       },
       "title": {
-        "en": "Consecutive integers are coprime"
+        "en": "Consecutive integers are coprime",
+        "ta": "அடுத்தடுத்த மிகை முழுக்கள் சார்பகா எண்கள்"
       },
       "q": {
-        "en": "Prove that two consecutive positive integers are always coprime."
+        "en": "Prove that two consecutive positive integers are always coprime.",
+        "ta": "எந்த இரு அடுத்தடுத்த மிகை முழுக்கள் சார்பகா எண்கள் என நிறுவுக."
       },
       "steps": [
         {
           "en": "Let the consecutive positive integers be n and n+1. Let d be their greatest positive common divisor.",
-          "eq": "d divides n and d divides n+1"
+          "ta": "அடுத்தடுத்த இரு மிகை முழுக்களை n மற்றும் n+1 என்க. அவற்றின் மீப்பெரு பொது வகுத்தி (மீ.பொ.வ) d என்க.",
+          "eq": "d divides n and d divides n+1",
+          "math": {
+            "latex": "d \\mid n \\;\\text{and}\\; d \\mid (n+1)",
+            "display": true,
+            "fallback": "d divides n and d divides n+1"
+          }
         },
         {
           "en": "A common divisor divides the difference of the two numbers.",
-          "eq": "d divides (n+1)−n = 1"
+          "ta": "இரு எண்களின் பொது வகுத்தி அவற்றின் வித்தியாசத்தையும் வகுக்கும்.",
+          "eq": "d divides (n+1)−n = 1",
+          "math": {
+            "latex": "d \\mid [(n+1) - n] \\Rightarrow d \\mid 1",
+            "display": true,
+            "fallback": "d divides (n+1)−n = 1"
+          }
         },
         {
           "en": "The only positive divisor of 1 is 1. Thus the HCF is 1, including when n=1.",
-          "eq": "d = 1; HCF(n,n+1) = 1"
+          "ta": "1-ன் ஒரே மிகை வகுத்தி 1 மட்டுமே. எனவே n = 1 ஆக இருக்கும்போதும் உட்பட, மீ.பொ.வ = 1 ஆகும்.",
+          "eq": "d = 1; HCF(n,n+1) = 1",
+          "math": {
+            "latex": "d = 1 \\Rightarrow \\gcd(n, n+1) = 1",
+            "display": true,
+            "fallback": "d = 1; HCF(n,n+1) = 1"
+          }
         },
         {
           "en": "Positive integers whose HCF is 1 are coprime. Therefore every pair of consecutive positive integers is coprime.",
-          "eq": "n and n+1 are coprime"
+          "ta": "இரு மிகை முழுக்களின் மீ.பொ.வ 1 எனில் அவை சார்பகா எண்கள் ஆகும். எனவே எந்த இரு அடுத்தடுத்த மிகை முழுக்களும் சார்பகா எண்கள் என நிறுவப்பட்டது.",
+          "eq": "n and n+1 are coprime",
+          "math": {
+            "latex": "\\gcd(n, n+1) = 1",
+            "display": true,
+            "fallback": "n and n+1 are coprime"
+          }
         }
       ],
-      "answer": "Any two consecutive positive integers are coprime because their HCF is 1.",
+      "answer": {
+        "en": "Any two consecutive positive integers are coprime because their HCF is 1.",
+        "ta": "எந்த இரு அடுத்தடுத்த மிகை முழுக்களின் மீ.பொ.வ 1 என்பதால் அவை எப்போதும் சார்பகா எண்கள் ஆகும்."
+      },
+      "answerMath": {
+        "latex": "\\gcd(n, n+1) = 1",
+        "display": false,
+        "fallback": "HCF(n, n+1) = 1"
+      },
       "kind": "textbook",
       "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.1 Q10; printed p. 43, PDF p. 49.",
+      "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition Ch 2 Ex 2.1 Q10 (printed p. 43, PDF p. 49) and 2025 revised Tamil edition Ch 2 பயிற்சி 2.1 Q10 (printed p. 43, PDF p. 49); proof item (no appendix entry); Tamil question visually verified from rendered page image; worked solution review pending.",
       "edition": "2025",
-      "translationReview": "pending"
+      "translationReview": "pending",
+      "checkpoint": "2026-11-22",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending"
     }
   ],
   "mapping": [
@@ -748,16 +1134,25 @@
       ],
       "sourceId": "tn-g10-en-2025-owner",
       "sourceText": {
-        "en": "Find all positive integers, when divided by 3 leaves remainder 2."
+        "en": "Find all positive integers, when divided by 3 leaves remainder 2.",
+        "ta": "3 ஆல் வகுக்கும் போது மீதி 2 -ஐத் தரக்கூடிய அனைத்து மிகை முழுக்களையும் காண்க."
       },
       "visualChecked": {
-        "en": true
+        "en": true,
+        "ta": true
       },
       "printedPages": [
         42
       ],
       "pdfPages": [
         48
+      ],
+      "tamilSourceId": "tn-g10-ta-2025-owner",
+      "tamilPrintedPages": [
+        43
+      ],
+      "tamilPdfPages": [
+        49
       ]
     },
     {
@@ -769,16 +1164,25 @@
       ],
       "sourceId": "tn-g10-en-2025-owner",
       "sourceText": {
-        "en": "A man has 532 flower pots. He wants to arrange them in rows such that each row contains 21 flower pots. Find the number of completed rows and how many flower pots are left over."
+        "en": "A man has 532 flower pots. He wants to arrange them in rows such that each row contains 21 flower pots. Find the number of completed rows and how many flower pots are left over.",
+        "ta": "ஒரு நபரிடம் 532 பூந்தொட்டிகள் உள்ளன. அவர் வரிசைக்கு 21 பூந்தொட்டிகள் வீதம் அடுக்க விரும்பினார். எத்தனை வரிசைகள் முழுமை பெறும் எனவும் மற்றும் எத்தனை பூந்தொட்டிகள் மீதமிருக்கும் எனவும் காண்க."
       },
       "visualChecked": {
-        "en": true
+        "en": true,
+        "ta": true
       },
       "printedPages": [
         42
       ],
       "pdfPages": [
         48
+      ],
+      "tamilSourceId": "tn-g10-ta-2025-owner",
+      "tamilPrintedPages": [
+        43
+      ],
+      "tamilPdfPages": [
+        49
       ]
     },
     {
@@ -790,15 +1194,24 @@
       ],
       "sourceId": "tn-g10-en-2025-owner",
       "sourceText": {
-        "en": "Prove that the product of two consecutive positive integers is divisible by 2."
+        "en": "Prove that the product of two consecutive positive integers is divisible by 2.",
+        "ta": "தொடர்ச்சியான இரு மிகை முழுக்களின் பெருக்கற்பலன் 2 ஆல் வகுபடும் என நிறுவுக."
       },
       "visualChecked": {
-        "en": true
+        "en": true,
+        "ta": true
       },
       "printedPages": [
         43
       ],
       "pdfPages": [
+        49
+      ],
+      "tamilSourceId": "tn-g10-ta-2025-owner",
+      "tamilPrintedPages": [
+        43
+      ],
+      "tamilPdfPages": [
         49
       ]
     },
@@ -811,15 +1224,24 @@
       ],
       "sourceId": "tn-g10-en-2025-owner",
       "sourceText": {
-        "en": "When the positive integers a, b and c are divided by 13, the respective remainders are 9,7 and 10. Show that a+b+c is divisible by 13."
+        "en": "When the positive integers a, b and c are divided by 13, the respective remainders are 9,7 and 10. Show that a+b+c is divisible by 13.",
+        "ta": "a, b மற்றும் c என்ற மிகை முழுக்களை 13 ஆல் வகுக்கும்போது கிடைக்கும் மீதிகள் முறையே 9, 7 மற்றும் 10 எனில் a+b+c ஆனது 13 ஆல் வகுபடும் என நிரூபி."
       },
       "visualChecked": {
-        "en": true
+        "en": true,
+        "ta": true
       },
       "printedPages": [
         43
       ],
       "pdfPages": [
+        49
+      ],
+      "tamilSourceId": "tn-g10-ta-2025-owner",
+      "tamilPrintedPages": [
+        43
+      ],
+      "tamilPdfPages": [
         49
       ]
     },
@@ -832,15 +1254,24 @@
       ],
       "sourceId": "tn-g10-en-2025-owner",
       "sourceText": {
-        "en": "Prove that square of any integer leaves the remainder either 0 or 1 when divided by 4."
+        "en": "Prove that square of any integer leaves the remainder either 0 or 1 when divided by 4.",
+        "ta": "எந்த மிகை முழுவின் வர்க்கத்தையும் 4 ஆல் வகுக்கும்போது மீதி 0 அல்லது 1 மட்டுமே கிடைக்கும் என நிறுவுக."
       },
       "visualChecked": {
-        "en": true
+        "en": true,
+        "ta": true
       },
       "printedPages": [
         43
       ],
       "pdfPages": [
+        49
+      ],
+      "tamilSourceId": "tn-g10-ta-2025-owner",
+      "tamilPrintedPages": [
+        43
+      ],
+      "tamilPdfPages": [
         49
       ]
     },
@@ -856,15 +1287,24 @@
       ],
       "sourceId": "tn-g10-en-2025-owner",
       "sourceText": {
-        "en": "Use Euclid’s Division Algorithm to find the Highest Common Factor (HCF) of (i) 340 and 412 (ii) 867 and 255 (iii)10224 and 9648 (iv) 84, 90 and 120"
+        "en": "Use Euclid’s Division Algorithm to find the Highest Common Factor (HCF) of (i) 340 and 412 (ii) 867 and 255 (iii)10224 and 9648 (iv) 84, 90 and 120",
+        "ta": "யூக்ளிடின் வகுத்தல் வழிமுறையைப் பயன்படுத்திப் பின்வருவனவற்றின் மீ.பொ.வ காண்க. (i) 340 மற்றும் 412 (ii) 867 மற்றும் 255 (iii) 10224 மற்றும் 9648 (iv) 84, 90 மற்றும் 120"
       },
       "visualChecked": {
-        "en": true
+        "en": true,
+        "ta": true
       },
       "printedPages": [
         43
       ],
       "pdfPages": [
+        49
+      ],
+      "tamilSourceId": "tn-g10-ta-2025-owner",
+      "tamilPrintedPages": [
+        43
+      ],
+      "tamilPdfPages": [
         49
       ]
     },
@@ -877,15 +1317,24 @@
       ],
       "sourceId": "tn-g10-en-2025-owner",
       "sourceText": {
-        "en": "Find the largest number which divides 1230 and 1926 leaving remainder 12 in each case."
+        "en": "Find the largest number which divides 1230 and 1926 leaving remainder 12 in each case.",
+        "ta": "1230 மற்றும் 1926 ஆகிய எண்களை வகுக்கும்போது மீதி 12 -ஐத் தரக்கூடிய மிகப்பெரிய எண்ணைக் காண்க."
       },
       "visualChecked": {
-        "en": true
+        "en": true,
+        "ta": true
       },
       "printedPages": [
         43
       ],
       "pdfPages": [
+        49
+      ],
+      "tamilSourceId": "tn-g10-ta-2025-owner",
+      "tamilPrintedPages": [
+        43
+      ],
+      "tamilPdfPages": [
         49
       ]
     },
@@ -898,15 +1347,24 @@
       ],
       "sourceId": "tn-g10-en-2025-owner",
       "sourceText": {
-        "en": "If d is the Highest Common Factor of 32 and 60, find x and y satisfying d = 32x + 60y."
+        "en": "If d is the Highest Common Factor of 32 and 60, find x and y satisfying d = 32x + 60y.",
+        "ta": "32 மற்றும் 60 ஆகியவற்றின் மீப்பெரு பொது வகுத்தி d என்க. d = 32x + 60y எனில் x மற்றும் y என்ற முழுக்களைக் காண்க."
       },
       "visualChecked": {
-        "en": true
+        "en": true,
+        "ta": true
       },
       "printedPages": [
         43
       ],
       "pdfPages": [
+        49
+      ],
+      "tamilSourceId": "tn-g10-ta-2025-owner",
+      "tamilPrintedPages": [
+        43
+      ],
+      "tamilPdfPages": [
         49
       ]
     },
@@ -919,15 +1377,24 @@
       ],
       "sourceId": "tn-g10-en-2025-owner",
       "sourceText": {
-        "en": "A positive integer when divided by 88 gives the remainder 61. What will be the remainder when the same number is divided by 11?"
+        "en": "A positive integer when divided by 88 gives the remainder 61. What will be the remainder when the same number is divided by 11?",
+        "ta": "ஒரு மிகை முழுவை 88 ஆல் வகுக்கும்போது மீதி 61 கிடைக்கிறது. அதே மிகை முழுவை 11 ஆல் வகுக்கும்போது கிடைக்கும் மீதியைக் காண்க."
       },
       "visualChecked": {
-        "en": true
+        "en": true,
+        "ta": true
       },
       "printedPages": [
         43
       ],
       "pdfPages": [
+        49
+      ],
+      "tamilSourceId": "tn-g10-ta-2025-owner",
+      "tamilPrintedPages": [
+        43
+      ],
+      "tamilPdfPages": [
         49
       ]
     },
@@ -940,15 +1407,24 @@
       ],
       "sourceId": "tn-g10-en-2025-owner",
       "sourceText": {
-        "en": "Prove that two consecutive positive integers are always coprime."
+        "en": "Prove that two consecutive positive integers are always coprime.",
+        "ta": "எந்த இரு அடுத்தடுத்த மிகை முழுக்கள் சார்பகா எண்கள் என நிறுவுக."
       },
       "visualChecked": {
-        "en": true
+        "en": true,
+        "ta": true
       },
       "printedPages": [
         43
       ],
       "pdfPages": [
+        49
+      ],
+      "tamilSourceId": "tn-g10-ta-2025-owner",
+      "tamilPrintedPages": [
+        43
+      ],
+      "tamilPdfPages": [
         49
       ]
     }
@@ -957,7 +1433,7 @@
     "script": "site/tools/bulk/verify_g10_ch2_ex2_1.cjs"
   },
   "sourceReview": {
-    "reviewedAt": "2026-11-10",
+    "reviewedAt": "2026-11-22",
     "method": "PDF page images directly inspected after pdftotext extraction; math symbols, wording and enumeration compared to images. Layout whitespace normalized; question wording and original punctuation retained.",
     "english": {
       "printedPages": [
@@ -978,8 +1454,8 @@
         49
       ],
       "visualChecked": true,
-      "publication": "pending",
-      "note": "Q5 Tamil asks positive integers; English asks any integer. English solution proves the stronger English statement. No Tamil wording or lesson is manufactured."
+      "publication": "draft PR: independent CI and UI QA pending",
+      "note": "2025 Tamil printed p43 visually verified; Q5 positive integer Tamil wording preserved versus English all integers; proof covers all integers."
     },
     "answerKey": {
       "printedPages": [
@@ -1015,5 +1491,5 @@
     "blocked": [],
     "tamilPending": true
   },
-  "tamilStatus": "pending"
+  "tamilStatus": "source-verified"
 }
