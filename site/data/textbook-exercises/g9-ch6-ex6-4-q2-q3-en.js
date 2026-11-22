@@ -27,7 +27,7 @@ const entries=[
         "eq": "sin θ = 0.9975"
       },
       {
-        "en": "Near 90°, several adjacent one-minute entries round to the same four-figure value. The table gives 0.9974 at 85°54′ and a 0.0001 mean difference for the small remaining minutes.",
+        "en": "Near 90°, several adjacent one-minute entries round to the same four-figure value. The table gives 0.9974 at 85°54′. The prescribed mean difference for the remaining minutes is 0.0001.",
         "eq": "sin 85°54′ ≈ 0.9974; MD(3′–5′) ≈ 0.0001"
       },
       {
