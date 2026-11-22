@@ -245,7 +245,13 @@ function buildChapterScorecards(win, staticChecks) {
               continue;
             }
             const htmlOut = renderMath(spec);
-            if (htmlOut.includes('data-math-error') || /FRAC|undefined/.test(spec.latex || '')) katexErr++;
+            if (htmlOut.includes('data-math-error') || /FRAC|undefined/.test(spec.latex || '')) {
+              katexErr++;
+              if (process.argv.includes('--check')) {
+                const locale = bilingual ? (ansSpec.en === spec ? 'en' : 'ta') : 'single';
+                console.error('[AF01 KaTeX] invalid answer:', it.id, locale, JSON.stringify(spec.latex || spec).slice(0,240));
+              }
+            }
           }
         } else if (typeof it.answer === 'string' && /\d+\/\d+/.test(it.answer)) {
           slashUnconverted++;
