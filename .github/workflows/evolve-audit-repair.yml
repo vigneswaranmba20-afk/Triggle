@@ -1,0 +1,47 @@
+name: EVOLVE Neon audit repair — proposals only
+on:
+  push:
+    branches: [experiment/evolve-shadow-v1-20261122]
+    paths:
+      - experiments/evolve/audit_fix_aud08_06.mjs
+      - .github/workflows/evolve-audit-repair.yml
+  workflow_dispatch:
+    inputs:
+      enable_inference:
+        description: Explicitly approve ONE Hugging Face model call after checking billing
+        required: true
+        default: false
+        type: boolean
+permissions:
+  contents: read
+jobs:
+  propose:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node experiments/evolve/audit_fix_aud08_06.mjs --self-test
+      - name: Dry-run without HF token or model call
+        if: github.event_name == 'push' || inputs.enable_inference != true
+        run: node experiments/evolve/audit_fix_aud08_06.mjs --dry-run
+      - name: Explicitly approved single HF model call
+        if: github.event_name == 'workflow_dispatch' && inputs.enable_inference == true
+        env:
+          HF_INFER_APPROVED: 'yes'
+          HF_MODEL: 'microsoft/phi-4:deepinfra'
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: node experiments/evolve/audit_fix_aud08_06.mjs --infer-once
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evolve-aud08-06-unreviewed-patch
+          path: |
+            ${{ runner.temp }}/evolve-aud08-06-proposed.js
+            ${{ runner.temp }}/evolve-aud08-06-evidence.json
+          if-no-files-found: ignore
+          retention-days: 7
