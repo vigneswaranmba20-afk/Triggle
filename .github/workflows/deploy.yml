@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write
   pages: write
+  actions: read
   id-token: write
 
 concurrency:
@@ -85,6 +86,28 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: _pages
+
+      # GitHub's artifact listing can lag the successful upload, causing deploy-pages
+      # to see zero artifacts; failed-job reruns may create duplicate names.
+      # On a fresh workflow run, verify a single indexed Pages artifact before deploy.
+      - name: Wait for Pages artifact indexing
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 12); do
+            count=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" \
+              --jq '[.artifacts[] | select(.name == "github-pages" and .expired == false)] | length')
+            if [[ "$count" == "1" ]]; then
+              echo "PASS: exactly one GitHub Pages artifact indexed"
+              exit 0
+            fi
+            echo "::notice::Indexed Pages artifacts: $count (attempt $attempt/12)"
+            sleep 5
+          done
+          echo "::error::Pages artifact indexing did not settle to exactly one item" >&2
+          exit 1
 
       - name: Publish website
         id: deployment

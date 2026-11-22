@@ -282,5 +282,6 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     permissions:
       contents: write
+      actions: read
       pages: write
       id-token: write
