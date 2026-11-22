@@ -7,6 +7,48 @@
     "ta": "editorial-pending"
   },
   "hints": {
+    "c9-exercise-6-4-q2-i": {
+      "step": 1,
+      "expected": "Near 90°, several adjacent one-minute entries round to the same four-figure value.",
+      "en": "Near ninety degrees, sine changes very slowly. The school table can round several adjacent minute angles to the same four-figure value. Keep every angle accepted by the textbook answer key instead of choosing one calculator answer.",
+      "concept": "trigRatio"
+    },
+    "c9-exercise-6-4-q2-ii": {
+      "step": 1,
+      "expected": "Cosine decreases as the acute angle grows.",
+      "en": "Natural cosines decrease as the angle increases between zero and ninety degrees. Start from the preceding six-minute column and subtract the mean difference for the three leftover minutes.",
+      "concept": "trigRatio"
+    },
+    "c9-exercise-6-4-q2-iii": {
+      "step": 1,
+      "expected": "One extra minute adds a mean difference 0.0003",
+      "en": "The natural tangent grows as the acute angle increases. At 4 degrees 6 minutes the table reads 0.0717; adding the single-minute mean difference 0.0003 gives the requested 0.0720.",
+      "concept": "trigRatio"
+    },
+    "c9-exercise-6-4-q2-iv": {
+      "step": 1,
+      "expected": "For the remaining 3′, subtract the cosine mean difference 0.0009",
+      "en": "To reverse this cosine entry, use 87 degrees 36 minutes as the preceding table column. Cosine decreases with angle, so subtract the three-minute difference 0.0009 to reach 0.0410.",
+      "concept": "trigRatio"
+    },
+    "c9-exercise-6-4-q2-v": {
+      "step": 1,
+      "expected": "It occurs at 82°30′, exactly at a six-minute column.",
+      "en": "If the target tangent is printed exactly at a six-minute column, no mean difference is necessary. Read the angle directly as 82 degrees 30 minutes, rather than estimating a nearby calculator angle.",
+      "concept": "trigRatio"
+    },
+    "c9-exercise-6-4-q3-i": {
+      "step": 1,
+      "expected": "The tabulated values used in the textbook calculation are",
+      "en": "Read each trigonometric value separately from the school's four-figure table, applying minute adjustments before adding. Keep four decimal places in each tabulated value so the final sum follows the textbook's method.",
+      "concept": "trigRatio"
+    },
+    "c9-exercise-6-4-q3-ii": {
+      "step": 1,
+      "expected": "The values in the school-table solution are",
+      "en": "The expression contains one subtraction. Read all three prescribed four-figure table values, add tangent and cosine, then subtract sine. This gives the school answer 2.8659, which differs from rounding a high-precision calculator result.",
+      "concept": "trigRatio"
+    },
     "c9-exercise-6-1-q1": {
       "step": 0,
       "expected": "At B, AC is opposite, AB is adjacent, and BC is the hypotenuse.",
