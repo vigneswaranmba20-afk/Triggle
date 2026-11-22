@@ -6,7 +6,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path');
 const text=fs.readFileSync(path.join(__dirname,'../data/class-9.js'),'utf8');
 const expected=[
-  ['i','0.7547',49,0,0.7547,0,1],
+  ['i','0.7547',49,0,0.7547,0,3],
   ['ii','0.2648',74,39,0.2656,-0.0008,4],
   ['iii','1.3985',54,26,1.3968,0.0017,3],
   ['iv','0.3641',21,21,0.3633,0.0008,3],
