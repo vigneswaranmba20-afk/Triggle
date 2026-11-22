@@ -48278,13 +48278,47 @@ const texts={
     },
     "."
   ],
-  "In part (ii), all x-coordinates equal a, so the three points lie on the vertical": [
-    "In part (ii), all ",
+  "Part (ii): all three points have x-coordinate a.": [
+    "Part (ii): all three points have ",
     {
       "latex": "x",
       "fallback": "x"
     },
-    "-coordinates equal a, so the three points lie on the vertical"
+    "-coordinate a."
+  ],
+  "Use the Class 9 distance formula.": [
+    "Use the Class ",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    " distance formula."
+  ],
+  "The distance formula uses horizontal and vertical differences to find a side length. Compare opposite pairs: AB = CD and BC = DA prove that the quadrilateral is a parallelogram.": [
+    "The distance formula uses horizontal and vertical differences to find a side length. Compare opposite pairs: ",
+    {
+      "latex": "AB = CD",
+      "fallback": "AB = CD"
+    },
+    " and ",
+    {
+      "latex": "BC = DA",
+      "fallback": "BC = DA"
+    },
+    " prove that the quadrilateral is a parallelogram."
+  ],
+  "தொலைவுச் சூத்திரம் மூலம் எதிர்ப்பக்கங்களின் நீளங்களை ஒப்பிடவும். AB = CD மற்றும் BC = DA என்றால் இரு ஜோடி எதிர்ப்பக்கங்களும் சமம்; ஆகவே இது ஓர் இணைகரம்.": [
+    "தொலைவுச் சூத்திரம் மூலம் எதிர்ப்பக்கங்களின் நீளங்களை ஒப்பிடவும். ",
+    {
+      "latex": "AB = CD",
+      "fallback": "AB = CD"
+    },
+    " மற்றும் ",
+    {
+      "latex": "BC = DA",
+      "fallback": "BC = DA"
+    },
+    " என்றால் இரு ஜோடி எதிர்ப்பக்கங்களும் சமம்; ஆகவே இது ஓர் இணைகரம்."
   ],
   "Apply the distance formula to B(1,3).": [
     "Apply the distance formula to ",
