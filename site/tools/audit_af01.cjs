@@ -236,16 +236,25 @@ function buildChapterScorecards(win, staticChecks) {
           ansSpec = g9m?.getAnswer?.(it) || null;
         }
         if (ansSpec) {
-          // A localized answerMath is {en:{latex,...},ta:{latex,...}}.
-          // Validate each displayed language rather than sending the wrapper to KaTeX.
-          const bilingual = typeof ansSpec === 'object' && !Array.isArray(ansSpec) &&
-            (Object.hasOwn(ansSpec, 'en') || Object.hasOwn(ansSpec, 'ta'));
-          const variants = bilingual
-            ? ['en', 'ta'].filter(locale => Object.hasOwn(ansSpec, locale)).map(locale => ansSpec[locale])
-            : [ansSpec];
-          if (!variants.length || (bilingual && !ansSpec.en)) {
+          // Valid answerMath formats:
+          //   {latex,display,fallback}                         (original)
+          //   {latex,display,fallback,ta:{latex,...}}          (legacy EN + Tamil)
+          //   {en:{latex,...},ta:{latex,...}}                 (new bilingual)
+          // The root latex is the English formula in legacy records. Validate it
+          // and the localized child; do not incorrectly demand an 'en' sibling.
+          const structured = typeof ansSpec === 'object' && !Array.isArray(ansSpec);
+          const rootLatex = structured && typeof ansSpec.latex === 'string';
+          const hasEnglish = structured && Object.hasOwn(ansSpec, 'en');
+          const hasTamil = structured && Object.hasOwn(ansSpec, 'ta');
+          const bilingual = hasEnglish || hasTamil;
+          const variants = rootLatex
+            ? [ansSpec, ...(hasTamil ? [ansSpec.ta] : [])]
+            : bilingual
+              ? ['en', 'ta'].filter(locale => Object.hasOwn(ansSpec, locale)).map(locale => ansSpec[locale])
+              : [ansSpec];
+          if (!variants.length || (bilingual && !rootLatex && !hasEnglish)) {
             katexErr++;
-            if (process.argv.includes('--check')) console.error('[AF01 KaTeX] missing answer locale:', it.id, JSON.stringify(ansSpec).slice(0,240));
+            if (process.argv.includes('--check')) console.error('[AF01 KaTeX] missing English formula:', it.id, JSON.stringify(ansSpec).slice(0,240));
           }
           for (const spec of variants) {
             if (!spec || (typeof spec === 'object' && !Array.isArray(spec) && typeof spec.latex !== 'string')) {
