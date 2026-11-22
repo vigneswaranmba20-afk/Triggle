@@ -4,24 +4,47 @@
   "grade": 10,
   "chapter": 7,
   "exercise": "7.1",
-  "status": "author-draft-pending-independent-audit",
+  "status": "math-dual-verified-and-source-page-visual-checked-pending-live-ui-release",
   "source": {
     "edition": "2025 revised",
     "english": {
       "fileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
       "printedPage": 282,
-      "pdfPage": 288
+      "pdfPage": 288,
+      "answerAppendix": {
+        "printedPage": 341,
+        "pdfPage": 347
+      }
     },
     "tamil": {
       "fileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
       "printedPage": 290,
-      "pdfPage": 296
+      "pdfPage": 296,
+      "answerAppendix": {
+        "printedPage": 356,
+        "pdfPage": 362
+      }
     },
     "englishTextLayerChecked": true,
     "tamilTextLayerChecked": true,
-    "pageImagesVerified": false,
+    "pageImagesVerified": true,
     "tamilWorkedSolutionsApproved": false,
-    "notes": "Both source text layers were compared for numerical data and numbering. Image/figure verification and complete Tamil editorial review are pending. No visual-verification claim is made."
+    "notes": "Neon's frozen blind report mathematically passed all 5 but could not inspect PDF images. ChatGPT separately retrieved original PDF bytes, rendered and visually inspected all four relevant question/answer pages, resolving the remaining image-source uncertainties. Tamil authored teaching copy still awaits editorial review.",
+    "visualVerification": {
+      "checkedDate": "2026-11-22",
+      "evidence": "Original 2025 English and Tamil PDF pages were rendered directly and visually inspected. EN Exercise PDF 288, EN answers PDF 347; TA Exercise PDF 296, TA answers PDF 362.",
+      "observations": [
+        "Q1–Q5 are text-only and do not reference textbook figures",
+        "Q2 1848 sq.cm confirmed in both languages",
+        "Q3 Tamil answer appendix visibly prints 2992 ச.செ.மீ",
+        "Q4 both answer keys say cone rotated about PQ has greater surface area",
+        "Q5 Tamil answer appendix visibly prints 18.25 மீ"
+      ],
+      "sourceDocumentsOriginalBytes": {
+        "english": 42992798,
+        "tamil": 43173836
+      }
+    }
   },
   "records": [
     {
@@ -36,7 +59,14 @@
         "area units",
         "ratio scale factor",
         "π convention"
-      ]
+      ],
+      "mathVerification": {
+        "neonBlindMath": "pass",
+        "chatgptIndependentCode": "pass",
+        "sourceAnswerKey": "visually-confirmed-2025",
+        "visualQuestionPage": "verified",
+        "visualAnswerKeyPage": "verified"
+      }
     },
     {
       "id": "c10-7-ex7-1-q2",
@@ -50,7 +80,14 @@
         "CSA versus TSA",
         "circular ends",
         "π convention"
-      ]
+      ],
+      "mathVerification": {
+        "neonBlindMath": "pass",
+        "chatgptIndependentCode": "pass",
+        "sourceAnswerKey": "visually-confirmed-2025",
+        "visualQuestionPage": "verified",
+        "visualAnswerKeyPage": "verified"
+      }
     },
     {
       "id": "c10-7-ex7-1-q3",
@@ -65,7 +102,14 @@
         "inner curved surface",
         "both annular ends",
         "radius versus diameter"
-      ]
+      ],
+      "mathVerification": {
+        "neonBlindMath": "pass",
+        "chatgptIndependentCode": "pass",
+        "sourceAnswerKey": "visually-confirmed-2025",
+        "visualQuestionPage": "verified",
+        "visualAnswerKeyPage": "verified"
+      }
     },
     {
       "id": "c10-7-ex7-1-q4",
@@ -80,7 +124,14 @@
         "rotation changes base radius",
         "slant height invariant",
         "image label fidelity"
-      ]
+      ],
+      "mathVerification": {
+        "neonBlindMath": "pass",
+        "chatgptIndependentCode": "pass",
+        "sourceAnswerKey": "visually-confirmed-2025",
+        "visualQuestionPage": "verified",
+        "visualAnswerKeyPage": "verified"
+      }
     },
     {
       "id": "c10-7-ex7-1-q5",
@@ -95,7 +146,24 @@
         "base floor vs curved area",
         "slant vs vertical height",
         "rounding"
-      ]
+      ],
+      "mathVerification": {
+        "neonBlindMath": "pass",
+        "chatgptIndependentCode": "pass",
+        "sourceAnswerKey": "visually-confirmed-2025",
+        "visualQuestionPage": "verified",
+        "visualAnswerKeyPage": "verified"
+      }
     }
-  ]
+  ],
+  "independentMathAudit": {
+    "provider": "Gemini Neon",
+    "dateFrozen": "2026-11-22",
+    "fileName": "G10 Ch7 Ex7 1 Q1 To Q5 Frozen Blind Audit Report (1).md",
+    "fileSha256": "3eece3ae93c638944539d094ddd61fdda1f9d65e0c7fd9d40156f0b67d01351e",
+    "scope": "Strict Phase 1 blind independent solution, without GitHub PR or ChatGPT answers",
+    "q1to5MathPassed": true,
+    "textbookKeyMatched": true,
+    "sourcePageImagesNotInspectedByNeon": true
+  }
 }
