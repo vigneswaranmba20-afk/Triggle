@@ -1,0 +1,31 @@
+name: EVOLVE Triggle model landscape (read only)
+on:
+  push:
+    branches: [experiment/evolve-shadow-v1-20261122]
+    paths:
+      - experiments/evolve/model_landscape.mjs
+      - experiments/evolve/model_landscape.test.mjs
+      - .github/workflows/evolve-model-landscape.yml
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Static scanner safety tests
+        run: node --test experiments/evolve/model_landscape.test.mjs
+      - name: Discover models without authentication or billing
+        run: node experiments/evolve/model_landscape.mjs
+      - name: Archive machine-readable inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: evolve-model-landscape-public
+          path: ${{ runner.temp }}/evolve-model-landscape.json
+          retention-days: 14
