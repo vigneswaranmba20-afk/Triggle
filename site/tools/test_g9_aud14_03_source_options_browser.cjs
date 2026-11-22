@@ -12,6 +12,7 @@ const OUT=path.resolve('screenshots/aud14-03-live');
  const app=LIVE_BASE?{base:LIVE_BASE,close:async()=>{}}:await server();
  const browser=await chromium.launch(launchOptions());
  const evidence=[];
+ let sourceMatched=false;
  const ids=['c9-exercise-6-1-q2',...['q1','q2','q3','q4','q7','q8','q9','q10'].map(s=>'c9-exercise-6-5-'+s)];
  try{
   const context=await browser.newContext({viewport:{width:390,height:844},serviceWorkers:'block'});
@@ -22,6 +23,7 @@ const OUT=path.resolve('screenshots/aud14-03-live');
    assert(published.ok(),'Published Grade 9 source must return HTTP 200');
    const expected=await fs.readFile(path.resolve(__dirname,'../data/class-9.js'));
    assert((await published.body()).equals(expected),'Published Grade 9 source bytes must match tested checkout');
+   sourceMatched=true;
   }
   page.on('pageerror',e=>errors.push(e.message));
   for(const width of [320,390,430]){
@@ -45,6 +47,10 @@ const OUT=path.resolve('screenshots/aud14-03-live');
         &&[1,2,3,4].every(n=>text.includes('('+n+')'));
       },{requested:id,language:lang},{timeout:13000});
      }catch(error){
+      if(LIVE_BASE){
+       evidence.push({id,language:lang,width,passed:false,error:error.message});
+       await page.screenshot({path:path.join(OUT,id+'-'+lang+'-'+width+'-FAIL.png'),fullPage:false}).catch(()=>{});
+      }
       const snapshot=await page.locator('#questionText').innerText().catch(()=>'<question unavailable>');
       throw Error('AUD14-03 browser render '+id+' '+lang+' @'+width+': '+error.message+'; visible='+JSON.stringify(snapshot.slice(0,380)));
      }
@@ -77,7 +83,7 @@ const OUT=path.resolve('screenshots/aud14-03-live');
   assert.equal(evidence.length,LIVE_BASE?54:0,'All 54 live-origin cases recorded');
   console.log('PASS AUD14-03 '+(LIVE_BASE?'LIVE GitHub Pages':'local')+' browser: 54 Grade 9 EN/TA mobile question/option scenarios; no missing options, labelled ratios, runtime exception or global overflow.');
  }finally{
-  if(LIVE_BASE)await fs.writeFile(path.join(OUT,'evidence.json'),JSON.stringify({release:process.env.GITHUB_SHA||'unknown',origin:LIVE_BASE,scenarioCount:evidence.length,expected:54,coverage:'G9 Ex6.1 Q2 plus eight published Ex6.5 MCQs x 2 languages x 3 mobile widths',productionSourceMatched:true,results:evidence},null,2));
+  if(LIVE_BASE)await fs.writeFile(path.join(OUT,'evidence.json'),JSON.stringify({release:process.env.GITHUB_SHA||'unknown',origin:LIVE_BASE,scenarioCount:evidence.length,expected:54,coverage:'G9 Ex6.1 Q2 plus eight published Ex6.5 MCQs x 2 languages x 3 mobile widths',productionSourceMatched:sourceMatched,results:evidence},null,2));
   await browser.close();await app.close();
  }
 })().catch(e=>{console.error(e);process.exit(1)});
