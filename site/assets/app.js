@@ -490,6 +490,11 @@
    for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
     lessonMathObserver.observe(formula);
     if(formula.firstElementChild)lessonMathObserver.observe(formula.firstElementChild);
+    // KaTeX glyph widths can change after fonts settle without resizing the
+    // outer formula box. Observe the painted glyph layer too, so formulas
+    // that newly overflow immediately become keyboard-scrollable.
+    const glyphs=formula.querySelector('.katex-html');
+    if(glyphs)lessonMathObserver.observe(glyphs);
    }
   }
   requestAnimationFrame(()=>{
