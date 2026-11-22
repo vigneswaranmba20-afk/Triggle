@@ -202,8 +202,8 @@ const entries=[
         "eq": "BC²=DA²=10²+(−2)²=104"
       },
       {
-        "en": "Again both opposite side pairs are equal. No direction vectors are needed.",
-        "ta": "English explanation (Tamil unchanged): Again both opposite side pairs are equal. No direction vectors are needed.",
+        "en": "Again both pairs of opposite sides are equal; the second quadrilateral is a parallelogram.",
+        "ta": "English explanation (Tamil unchanged): Again both pairs of opposite sides are equal; the second quadrilateral is a parallelogram.",
         "eq": "AB=CD=√313; BC=DA=2√26; (ii) Parallelogram"
       }
     ],
