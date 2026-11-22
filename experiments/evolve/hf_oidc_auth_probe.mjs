@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
  * EVOLVE OIDC account identity proof. Zero model calls.
+ * Account CI/CD identity configured: trigger auth-only probe from the isolated branch.
  * GitHub Actions -> OIDC -> Hugging Face user-scoped, short-lived token.
  * The exchanged access token and GitHub ID token never enter logs or artifacts.
  */
