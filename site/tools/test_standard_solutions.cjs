@@ -197,7 +197,12 @@ const ch7PilotPassports=require('../../docs/curriculum/grade-10/g10-ch7-ex7-1-pi
 const ch7PilotById=new Map(ch7PilotPassports.records.map(record=>[record.id,record]));
 const ch7PilotIds=ch7PilotPassports.records.map(record=>record.id);
 assert.equal(ch7PilotIds.length,5,'Five source-passport-indexed Chapter 7 pilot records');
-assert.equal(ch7PilotPassports.source.pageImagesVerified,false,'No false page-image certification');
+assert.equal(ch7PilotPassports.source.pageImagesVerified,true,'Require documented 2025 source page-image verification');
+assert.equal(ch7PilotPassports.source.english.answerAppendix.pdfPage,347,'English source answer page evidence');
+assert.equal(ch7PilotPassports.source.tamil.answerAppendix.pdfPage,362,'Tamil source answer page evidence');
+assert.equal(ch7PilotPassports.independentMathAudit.q1to5MathPassed,true,'Frozen Neon blind mathematical verification');
+assert.equal(ch7PilotPassports.independentMathAudit.sourcePageImagesNotInspectedByNeon,true,'Do not retroactively attribute page inspection to Neon');
+assert.equal(ch7PilotPassports.source.tamilWorkedSolutionsApproved,false,'Tamil lesson review remains pending');
 const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
