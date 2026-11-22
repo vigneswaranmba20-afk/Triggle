@@ -1,7 +1,7 @@
 name: AUD14-03 one-shot Grade 9 source-choice projection
 on:
   pull_request:
-    types: [ready_for_review]
+    types: [ready_for_review, synchronize]
     branches: [main]
 permissions:
   contents: write
