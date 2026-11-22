@@ -1,0 +1,27 @@
+name: G10 wide formula focus timing diagnostic
+on:
+  push:
+    branches: [experiment/g10-wide-formula-focus-diagnostic-20261122]
+    paths:
+      - site/tools/probe_g10_ch3_overflow_focus.cjs
+      - .github/workflows/g10-wide-formula-focus-diagnostic.yml
+permissions:
+  contents: read
+jobs:
+  timing-probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps --only-shell chromium
+      - name: Probe focus and geometry at 320, 393 and 430 px
+        run: node site/tools/probe_g10_ch3_overflow_focus.cjs
+      - name: Rerun exact failing browser test in isolation
+        run: node site/tools/test_g10_ch3_ex37_to_39_browser.cjs
