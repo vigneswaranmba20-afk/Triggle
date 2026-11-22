@@ -1,0 +1,242 @@
+{
+  "auditId": "AUD14-02-FOLLOWUP-EX6.4-Q2-Q3",
+  "status": "STAGED_SOURCE_AND_ARITHMETIC_ONLY_NOT_STUDENT_PUBLISHED",
+  "edition": "2025 English revised",
+  "grade": 9,
+  "chapter": 6,
+  "exercise": "6.4",
+  "count": 7,
+  "source": {
+    "englishPrimary": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view",
+    "olderMatchingPage": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+    "printedPage": 239,
+    "olderChapterPdfZeroIndexedPage": 17,
+    "officialAnswerKeyPrintedPage": 316
+  },
+  "gates": {
+    "englishQuestionPageImage": "visually-verified",
+    "englishAnswerKey": "verified",
+    "tamilEditorial": "pending",
+    "productionIntegration": "not-started",
+    "liveBrowser": "not-run"
+  },
+  "constraints": [
+    "Use textbook four-figure tables and 6-minute column / 1–5 minute mean-difference arithmetic",
+    "Do not replace the Q3(ii) prescribed table result with direct-calculator rounding",
+    "Do not collapse Q2(i) into a unique inverse-sine answer",
+    "Do not modify the original 568-question immutable preservation baseline",
+    "Preserve all original student-facing records until a separate production release passes every quality gate"
+  ],
+  "records": [
+    {
+      "id": "c9-exercise-6-4-q2-i",
+      "label": "Exercise 6.4 · Q2(i)",
+      "sourceStem": "Find the value of θ if",
+      "sourcePart": "sin θ = 0.9975",
+      "englishPrompt": "Find the value of θ if\n(i) sin θ = 0.9975",
+      "answer": "85°57′ or 85°58′ or 85°59′",
+      "stepsEnglish": [
+        "To reverse a sine table, find the value 0.9975 in the natural sines table rather than using an inverse-sine calculator.",
+        "Near 90°, several adjacent one-minute entries round to the same four-figure value. The table gives 0.9974 at 85°54′ and a 0.0001 mean difference for the small remaining minutes.",
+        "Therefore 85°57′, 85°58′ and 85°59′ are all accepted by the prescribed four-figure table and official key. Do not claim a single exact angle."
+      ],
+      "languageStatus": {
+        "englishSource": "verified-by-printed-page",
+        "tamilEditorial": "pending"
+      },
+      "table": {
+        "baseAngle": "85°54′",
+        "baseInteger": 9974,
+        "adjustmentInteger": 1,
+        "targetInteger": 9975,
+        "kind": "natural-sines",
+        "multipleAcceptedMinutes": [
+          57,
+          58,
+          59
+        ]
+      },
+      "acceptedAnswers": [
+        "85°57′",
+        "85°58′",
+        "85°59′"
+      ]
+    },
+    {
+      "id": "c9-exercise-6-4-q2-ii",
+      "label": "Exercise 6.4 · Q2(ii)",
+      "sourceStem": "Find the value of θ if",
+      "sourcePart": "cos θ = 0.6763",
+      "englishPrompt": "Find the value of θ if\n(ii) cos θ = 0.6763",
+      "answer": "47°27′",
+      "stepsEnglish": [
+        "Find the closest preceding six-minute column in the natural cosines table: cos 47°24′ is tabulated as 0.6769.",
+        "Cosine decreases as the acute angle grows. The extra 3′ have mean difference 0.0006, which must be subtracted: 0.6769 − 0.0006 = 0.6763.",
+        "The required angle is θ = 47°27′."
+      ],
+      "languageStatus": {
+        "englishSource": "verified-by-printed-page",
+        "tamilEditorial": "pending"
+      },
+      "table": {
+        "baseAngle": "47°24′",
+        "baseInteger": 6769,
+        "adjustmentInteger": -6,
+        "targetInteger": 6763,
+        "kind": "natural-cosines",
+        "minutes": 3
+      }
+    },
+    {
+      "id": "c9-exercise-6-4-q2-iii",
+      "label": "Exercise 6.4 · Q2(iii)",
+      "sourceStem": "Find the value of θ if",
+      "sourcePart": "tan θ = 0.0720",
+      "englishPrompt": "Find the value of θ if\n(iii) tan θ = 0.0720",
+      "answer": "4°7′",
+      "stepsEnglish": [
+        "Look backwards through the natural tangents table. At 4°06′, the four-figure value is 0.0717.",
+        "One extra minute adds a mean difference 0.0003: 0.0717 + 0.0003 = 0.0720.",
+        "Therefore θ = 4°7′ (four degrees seven minutes), the angle whose tabulated tangent is 0.0720."
+      ],
+      "languageStatus": {
+        "englishSource": "verified-by-printed-page",
+        "tamilEditorial": "pending"
+      },
+      "table": {
+        "baseAngle": "4°06′",
+        "baseInteger": 717,
+        "adjustmentInteger": 3,
+        "targetInteger": 720,
+        "kind": "natural-tangents",
+        "minutes": 1
+      }
+    },
+    {
+      "id": "c9-exercise-6-4-q2-iv",
+      "label": "Exercise 6.4 · Q2(iv)",
+      "sourceStem": "Find the value of θ if",
+      "sourcePart": "cos θ = 0.0410",
+      "englishPrompt": "Find the value of θ if\n(iv) cos θ = 0.0410",
+      "answer": "87°39′",
+      "stepsEnglish": [
+        "Find 0.0410 using the four-figure natural cosines table. The preceding six-minute column is 87°36′ with value 0.0419.",
+        "For the remaining 3′, subtract the cosine mean difference 0.0009: 0.0419 − 0.0009 = 0.0410.",
+        "Hence θ = 87°39′, giving the requested four-figure cosine value of 0.0410."
+      ],
+      "languageStatus": {
+        "englishSource": "verified-by-printed-page",
+        "tamilEditorial": "pending"
+      },
+      "table": {
+        "baseAngle": "87°36′",
+        "baseInteger": 419,
+        "adjustmentInteger": -9,
+        "targetInteger": 410,
+        "kind": "natural-cosines",
+        "minutes": 3
+      }
+    },
+    {
+      "id": "c9-exercise-6-4-q2-v",
+      "label": "Exercise 6.4 · Q2(v)",
+      "sourceStem": "Find the value of θ if",
+      "sourcePart": "tan θ = 7.5958",
+      "englishPrompt": "Find the value of θ if\n(v) tan θ = 7.5958",
+      "answer": "82°30′",
+      "stepsEnglish": [
+        "Find 7.5958 directly in the natural tangents table.",
+        "It occurs at 82°30′, exactly at a six-minute column. There is no leftover minute and no mean-difference adjustment.",
+        "Therefore θ = 82°30′, read directly from the natural tangent table."
+      ],
+      "languageStatus": {
+        "englishSource": "verified-by-printed-page",
+        "tamilEditorial": "pending"
+      },
+      "table": {
+        "baseAngle": "82°30′",
+        "baseInteger": 75958,
+        "adjustmentInteger": 0,
+        "targetInteger": 75958,
+        "kind": "natural-tangents",
+        "minutes": 0
+      }
+    },
+    {
+      "id": "c9-exercise-6-4-q3-i",
+      "label": "Exercise 6.4 · Q3(i)",
+      "sourceStem": "Find the value of the following:",
+      "sourcePart": "sin 65°39′ + cos 24°57′ + tan 10°10′",
+      "englishPrompt": "Find the value of the following:\n(i) sin 65°39′ + cos 24°57′ + tan 10°10′",
+      "answer": "1.9970",
+      "stepsEnglish": [
+        "Read the prescribed four-figure trigonometric tables, including mean differences where the minutes are not an exact six-minute column.",
+        "The tabulated values used in the textbook calculation are sin 65°39′ ≈ 0.9111, cos 24°57′ ≈ 0.9066, and tan 10°10′ ≈ 0.1793.",
+        "Add the three four-figure table values, not intermediate unrounded calculator values: 0.9111 + 0.9066 + 0.1793 = 1.9970."
+      ],
+      "languageStatus": {
+        "englishSource": "verified-by-printed-page",
+        "tamilEditorial": "pending"
+      },
+      "tableTerms": [
+        {
+          "function": "sin",
+          "angle": "65°39′",
+          "integer": 9111,
+          "sign": 1
+        },
+        {
+          "function": "cos",
+          "angle": "24°57′",
+          "integer": 9066,
+          "sign": 1
+        },
+        {
+          "function": "tan",
+          "angle": "10°10′",
+          "integer": 1793,
+          "sign": 1
+        }
+      ],
+      "expectedTotalInteger": 19970
+    },
+    {
+      "id": "c9-exercise-6-4-q3-ii",
+      "label": "Exercise 6.4 · Q3(ii)",
+      "sourceStem": "Find the value of the following:",
+      "sourcePart": "tan 70°58′ + cos 15°26′ − sin 84°59′",
+      "englishPrompt": "Find the value of the following:\n(ii) tan 70°58′ + cos 15°26′ − sin 84°59′",
+      "answer": "2.8659",
+      "stepsEnglish": [
+        "Use the prescribed four-figure tables and mean differences; do not silently replace a textbook table entry with an unrounded scientific-calculator value.",
+        "The values in the school-table solution are tan 70°58′ ≈ 2.8982, cos 15°26′ ≈ 0.9639, and sin 84°59′ ≈ 0.9962.",
+        "Apply the subtraction sign carefully: 2.8982 + 0.9639 − 0.9962 = 3.8621 − 0.9962 = 2.8659. This is the textbook's stated table-method answer; higher-precision calculator evaluation differs."
+      ],
+      "languageStatus": {
+        "englishSource": "verified-by-printed-page",
+        "tamilEditorial": "pending"
+      },
+      "tableTerms": [
+        {
+          "function": "tan",
+          "angle": "70°58′",
+          "integer": 28982,
+          "sign": 1
+        },
+        {
+          "function": "cos",
+          "angle": "15°26′",
+          "integer": 9639,
+          "sign": 1
+        },
+        {
+          "function": "sin",
+          "angle": "84°59′",
+          "integer": 9962,
+          "sign": -1
+        }
+      ],
+      "expectedTotalInteger": 28659
+    }
+  ]
+}
