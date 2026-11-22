@@ -24,7 +24,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
       await page.waitForFunction(({requested,language})=>{
        const question=document.querySelector('#questionText');
        if(!question||document.documentElement.lang!==language)return false;
-       const text=question.textContent||'',compact=text.replace(/\\s+/g,'');
+       const text=question.textContent||'',compact=text.replace(/\s+/g,'');
        if(requested.endsWith('6-1-q2'))
         return ['sinB','secB','cotB','cosC','tanC','cosecC'].every(r=>compact.includes(r));
        return question.querySelectorAll('.g9-question-option').length===4
