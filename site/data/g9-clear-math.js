@@ -48310,6 +48310,117 @@ const texts={
     "latex": "2026 - 11 - 14 - g 9",
     "fallback": "2026-11-14-g9"
   },
+  "Near 90°, several adjacent one-minute entries round to the same four-figure value.": [
+    "Near ",
+    {
+      "latex": "90^{\\circ}",
+      "fallback": "90°"
+    },
+    ", several adjacent one-minute entries round to the same four-figure value."
+  ],
+  "One extra minute adds a mean difference 0.0003": [
+    "One extra minute adds a mean difference ",
+    {
+      "latex": "0.0003",
+      "fallback": "0.0003"
+    }
+  ],
+  "The natural tangent grows as the acute angle increases. At 4 degrees 6 minutes the table reads 0.0717; adding the single-minute mean difference 0.0003 gives the requested 0.0720.": [
+    "The natural tangent grows as the acute angle increases. At ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " degrees ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    " minutes the table reads ",
+    {
+      "latex": "0.0717",
+      "fallback": "0.0717"
+    },
+    "; adding the single-minute mean difference ",
+    {
+      "latex": "0.0003",
+      "fallback": "0.0003"
+    },
+    " gives the requested ",
+    {
+      "latex": "0.0720",
+      "fallback": "0.0720"
+    },
+    "."
+  ],
+  "For the remaining 3′, subtract the cosine mean difference 0.0009": [
+    "For the remaining ",
+    {
+      "latex": "3'",
+      "fallback": "3′"
+    },
+    ", subtract the cosine mean difference ",
+    {
+      "latex": "0.0009",
+      "fallback": "0.0009"
+    }
+  ],
+  "To reverse this cosine entry, use 87 degrees 36 minutes as the preceding table column. Cosine decreases with angle, so subtract the three-minute difference 0.0009 to reach 0.0410.": [
+    "To reverse this cosine entry, use ",
+    {
+      "latex": "87",
+      "fallback": "87"
+    },
+    " degrees ",
+    {
+      "latex": "36",
+      "fallback": "36"
+    },
+    " minutes as the preceding table column. Cosine decreases with angle, so subtract the three-minute difference ",
+    {
+      "latex": "0.0009",
+      "fallback": "0.0009"
+    },
+    " to reach ",
+    {
+      "latex": "0.0410",
+      "fallback": "0.0410"
+    },
+    "."
+  ],
+  "It occurs at 82°30′, exactly at a six-minute column.": [
+    "It occurs at ",
+    {
+      "latex": "82^{\\circ}",
+      "fallback": "82°"
+    },
+    {
+      "latex": "30'",
+      "fallback": "30′"
+    },
+    ", exactly at a six-minute column."
+  ],
+  "If the target tangent is printed exactly at a six-minute column, no mean difference is necessary. Read the angle directly as 82 degrees 30 minutes, rather than estimating a nearby calculator angle.": [
+    "If the target tangent is printed exactly at a six-minute column, no mean difference is necessary. Read the angle directly as ",
+    {
+      "latex": "82",
+      "fallback": "82"
+    },
+    " degrees ",
+    {
+      "latex": "30",
+      "fallback": "30"
+    },
+    " minutes, rather than estimating a nearby calculator angle."
+  ],
+  "The expression contains one subtraction. Read all three prescribed four-figure table values, add tangent and cosine, then subtract sine. This gives the school answer 2.8659, which differs from rounding a high-precision calculator result.": [
+    "The expression contains one subtraction. Read all three prescribed four-figure table values, add tangent and cosine, then subtract sine. This gives the school answer ",
+    {
+      "latex": "2.8659",
+      "fallback": "2.8659"
+    },
+    ", which differs from rounding a high-precision calculator result."
+  ],
   "At B, AC is opposite, AB is adjacent, and BC is the hypotenuse.": [
     "At ",
     {
