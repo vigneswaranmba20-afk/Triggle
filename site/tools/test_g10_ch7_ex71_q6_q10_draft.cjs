@@ -41,6 +41,7 @@ for(const p of manifest.records){
   assert.ok(step.en.length>=28&&step.eq&&step.math?.latex&&step.math?.fallback,'accessible worked line in '+p.id);
  }
  assert.ok(e.answerMath?.latex&&e.answerMath?.fallback,'typeset final answer for '+p.id);
+ assert.ok(!e.answerMath.latex.includes('₹')&&!e.steps.some(x=>x.math.latex.includes('₹')),'KaTeX-safe currency syntax '+p.id);
  assert.ok(ch.textbookQuestionIds.includes(p.id),'chapter navigation includes '+p.id);
  const diff=sandbox.window.TriggleDifficulty.get(e);
  assert.ok(diff&&['easy','medium','difficult'].includes(diff.level)&&diff.grade===10,'difficulty record for '+p.id);
