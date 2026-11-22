@@ -23,7 +23,8 @@
   "notes": [
     "The 2025 official English textbook pp.236–237 explicitly prescribes 6-minute columns and mean differences and prints tan70°12′=2.7776 in Example 6.13.",
     "The answer key explicitly prints 0.2648 and 2.7907; calculator values 0.2647 and 2.7903 must not displace the prescribed table method.",
-    "A corrected record hashes exception is allowed only for these six IDs; the immutable 568-record preservation baseline remains untouched."
+    "A corrected record hashes exception is allowed only for these six IDs; the immutable 568-record preservation baseline remains untouched.",
+    "Original teaching-step triples are stored per record only for the frozen 397-item whole-grade presentation integrity comparison, while current six corrected records are independently hash-pinned. This avoids rewriting the historical grade fingerprint."
   ],
   "records": {
     "c9-exercise-6-4-q1-i": {
@@ -37,7 +38,24 @@
       "extraMinutes": "0′",
       "tableBaseValue": "0.7547",
       "meanDifference": "0.0000",
-      "calculatedTableValue": "0.7547"
+      "calculatedTableValue": "0.7547",
+      "originalSteps": [
+        {
+          "en": "The given angle contains 49 degrees and zero extra minutes.",
+          "ta": "கொடுக்கப்பட்ட கோணம் 49 டிகிரி, கூடுதல் நிமிடங்கள் இல்லை.",
+          "eq": "θ = 49°00′"
+        },
+        {
+          "en": "Find the sine at that angle with the table or calculator.",
+          "ta": "அட்டவணை அல்லது கணிப்பான் மூலம் sin மதிப்பைப் பெறுக.",
+          "eq": "sin49° ≈ 0.75470958"
+        },
+        {
+          "en": "Round to four decimal places.",
+          "ta": "நான்கு தசம இடங்களுக்கு வட்டமிடுக.",
+          "eq": "sin49° ≈ 0.7547"
+        }
+      ]
     },
     "c9-exercise-6-4-q1-ii": {
       "originalRecordSha256": "4b16217070db706daaa7a3ab9517d8cf8978cf8635c7dfa492fc62239ba6d096",
@@ -50,7 +68,24 @@
       "extraMinutes": "3′",
       "tableBaseValue": "0.2656",
       "meanDifference": "−0.0008",
-      "calculatedTableValue": "0.2648"
+      "calculatedTableValue": "0.2648",
+      "originalSteps": [
+        {
+          "en": "Convert 39 angular minutes into degrees.",
+          "ta": "39 கோண நிமிடங்களை டிகிரியாக மாற்றுக.",
+          "eq": "θ = 74° + [[39|60]]° = 74.65°"
+        },
+        {
+          "en": "Evaluate cosine, retaining extra digits before rounding.",
+          "ta": "வட்டமிடுவதற்கு முன் கூடுதல் தசம இலக்கங்களுடன் cos-ஐக் கணக்கிடுக.",
+          "eq": "cos74.65° ≈ 0.2647146845"
+        },
+        {
+          "en": "Round to four decimal places: the fifth decimal is 1.",
+          "ta": "ஐந்தாவது தசம இலக்கம் 1; நான்கு இடங்களுக்கு வட்டமிடுக.",
+          "eq": "cos74°39′ ≈ 0.2647"
+        }
+      ]
     },
     "c9-exercise-6-4-q1-iii": {
       "originalRecordSha256": "b113b045d45a2ac99621e21b6587af40974f6979ce172e2d25b74d7a148ffae9",
@@ -63,7 +98,24 @@
       "extraMinutes": "2′",
       "tableBaseValue": "1.3968",
       "meanDifference": "+0.0017",
-      "calculatedTableValue": "1.3985"
+      "calculatedTableValue": "1.3985",
+      "originalSteps": [
+        {
+          "en": "Convert the minutes into a fraction of a degree.",
+          "ta": "நிமிடங்களை டிகிரியின் பின்னமாக மாற்றுக.",
+          "eq": "θ = 54° + [[26|60]]° = 54.433333…°"
+        },
+        {
+          "en": "Evaluate tangent without rounding the angle first.",
+          "ta": "கோணத்தை முன்கூட்டியே வட்டமிடாமல் tan-ஐக் கணக்கிடுக.",
+          "eq": "tan54°26′ ≈ 1.3985034441"
+        },
+        {
+          "en": "Four decimal places require looking at the fifth digit.",
+          "ta": "ஐந்தாவது இலக்கத்தைப் பார்த்து நான்கு தசம இடங்களுக்கு வட்டமிடுக.",
+          "eq": "tan54°26′ ≈ 1.3985"
+        }
+      ]
     },
     "c9-exercise-6-4-q1-iv": {
       "originalRecordSha256": "3fb93385c4a9dd00813f990b541ec1b69c8decfb316603ee0ad33d70d36caef5",
@@ -76,7 +128,24 @@
       "extraMinutes": "3′",
       "tableBaseValue": "0.3633",
       "meanDifference": "+0.0008",
-      "calculatedTableValue": "0.3641"
+      "calculatedTableValue": "0.3641",
+      "originalSteps": [
+        {
+          "en": "Convert angular minutes into degrees.",
+          "ta": "கோண நிமிடங்களை டிகிரியாக மாற்றுக.",
+          "eq": "θ = 21° + [[21|60]]° = 21.35°"
+        },
+        {
+          "en": "Calculate sine before rounding.",
+          "ta": "வட்டமிடுவதற்கு முன் sin-ஐக் கணக்கிடுக.",
+          "eq": "sin21°21′ ≈ 0.3640641460"
+        },
+        {
+          "en": "The fifth decimal digit is 6, so round the fourth decimal up.",
+          "ta": "ஐந்தாவது தசம இலக்கம் 6; எனவே நான்காவது இலக்கத்தை உயர்த்துக.",
+          "eq": "sin21°21′ ≈ 0.3641"
+        }
+      ]
     },
     "c9-exercise-6-4-q1-v": {
       "originalRecordSha256": "7a0d503d40cddee371eb2a4ce5bce191da3e5085bca3711f7f9ab3ea4b9927d8",
@@ -89,7 +158,24 @@
       "extraMinutes": "5′",
       "tableBaseValue": "0.8310",
       "meanDifference": "−0.0008",
-      "calculatedTableValue": "0.8302"
+      "calculatedTableValue": "0.8302",
+      "originalSteps": [
+        {
+          "en": "Convert angular minutes into degrees.",
+          "ta": "கோண நிமிடங்களை டிகிரியாக மாற்றுக.",
+          "eq": "θ = 33° + [[53|60]]° = 33.883333…°"
+        },
+        {
+          "en": "Calculate cosine before rounding.",
+          "ta": "வட்டமிடுவதற்கு முன் cos-ஐக் கணக்கிடுக.",
+          "eq": "cos33°53′ ≈ 0.8301744915"
+        },
+        {
+          "en": "The fifth decimal digit is 7, so round the fourth decimal up.",
+          "ta": "ஐந்தாவது தசம இலக்கம் 7; எனவே நான்காவது இலக்கத்தை உயர்த்துக.",
+          "eq": "cos33°53′ ≈ 0.8302"
+        }
+      ]
     },
     "c9-exercise-6-4-q1-vi": {
       "originalRecordSha256": "27dbb1ffc03734b8cc268f07fcb5131ce7919f6088197690d8f342c8133eb299",
@@ -102,7 +188,24 @@
       "extraMinutes": "5′",
       "tableBaseValue": "2.7776",
       "meanDifference": "+0.0131",
-      "calculatedTableValue": "2.7907"
+      "calculatedTableValue": "2.7907",
+      "originalSteps": [
+        {
+          "en": "Convert 17 minutes to degrees.",
+          "ta": "17 நிமிடங்களை டிகிரியாக மாற்றுக.",
+          "eq": "θ = 70° + [[17|60]]° = 70.283333…°"
+        },
+        {
+          "en": "Evaluate tangent without rounding the angle first.",
+          "ta": "கோணத்தை முன்கூட்டியே வட்டமிடாமல் tan-ஐக் கணக்கிடுக.",
+          "eq": "tan70°17′ ≈ 2.7903338772"
+        },
+        {
+          "en": "Round to four decimal places.",
+          "ta": "நான்கு தசம இடங்களுக்கு வட்டமிடுக.",
+          "eq": "tan70°17′ ≈ 2.7903"
+        }
+      ]
     }
   }
 }
