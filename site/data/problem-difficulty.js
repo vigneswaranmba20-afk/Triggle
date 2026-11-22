@@ -11,6 +11,11 @@ const metadata={
     "difficult": "Complex reasoning, proof, case analysis, multi-stage calculations or advanced connections."
   },
   "entries": {
+    "c10-7-ex7-1-q1": {"grade":10,"level":"easy","basis":"Translate ratio and curved area into a positive scale factor","review":"implementation-audit"},
+    "c10-7-ex7-1-q2": {"grade":10,"level":"medium","basis":"Recover radius from flat ends and height from curved area","review":"implementation-audit"},
+    "c10-7-ex7-1-q3": {"grade":10,"level":"medium","basis":"Combine outer, inner and both annular end areas","review":"implementation-audit"},
+    "c10-7-ex7-1-q4": {"grade":10,"level":"medium","basis":"Use Pythagoras and compare two rotation axes","review":"implementation-audit"},
+    "c10-7-ex7-1-q5": {"grade":10,"level":"medium","basis":"Convert floor requirement to radius, then use cone Pythagoras","review":"implementation-audit"},
     "c10-4-ex4-1-q4": {"grade": 10, "level": "medium", "basis": "Prove the product of segments", "review": "implementation-audit"},
     "c10-4-ex4-1-q5": {"grade": 10, "level": "medium", "basis": "Use a right triangle inside another", "review": "implementation-audit"},
     "c10-4-ex4-1-q6": {"grade": 10, "level": "easy", "basis": "Pair the matching sides", "review": "implementation-audit"},
