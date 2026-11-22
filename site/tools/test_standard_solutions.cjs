@@ -16,6 +16,24 @@ assert.equal(auditedG9TrigTable.auditId,'AUD14-02');
 assert.deepEqual(Object.keys(auditedG9TrigTable.records).sort(),['i','ii','iii','iv','v','vi'].map(n=>'c9-exercise-6-4-q1-'+n).sort());
 assert.equal(auditedG9Proofs.auditId,'AUD13-02');
 assert.deepEqual(Object.keys(auditedG9Proofs.records).sort(),['g9-ch5-ex5.2-q2','g9-ch5-ex5.2-q5','g9-ch5-ex5.2-q6']);
+const m04Batch=require('../../docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json');
+const m04ById=new Map(m04Batch.records.map(record=>[record.id,record]));
+assert.equal(m04ById.size,10,'Exactly 10 independently reviewed Mission M04 records');
+// Frozen English-only projections from the original immutable 2025-pilot baseline.
+// Reviewers may add source-verified Tamil fields but must not rewrite English content.
+const m04EnglishFingerprints={
+  "c10-2-ex2-1-q1": "78da6f889b0fad9de22194b0ec45dd3cc239b2c0b2838d8fc79450fc82ed20d8",
+  "c10-2-ex2-1-q2": "6215b1b7834ca05fcd40681372e65e1da4adb00c197416c47a10710815564eaa",
+  "c10-2-ex2-1-q3": "e16dcb579c7f42413d0f3fabd93dcfcc1a9d35caa85fd4686457b71e5a4f3ac4",
+  "c10-2-ex2-1-q4": "0728f6834e826ea20372acd94f9e7ae0780cabbfafda78140471b886741d6cbe",
+  "c10-2-ex2-1-q5": "b6aa438449e2dd254a81a1783ed0253e774311bbf13072057a596e4eceba063c",
+  "c10-2-ex2-1-q6": "a699b7f76caadb48f164d9aabfb46d28d77f148fbca08a6fd5c97c18fa4e69dc",
+  "c10-2-ex2-1-q7": "c728874001eb9e910c0358d4246fccdd1c0ec8e6862a2ef05810e33a13b92990",
+  "c10-2-ex2-1-q8": "c0fd2121834656ddf53f9fc4a6d27ed2036ba3415f184b86aead82e322b39567",
+  "c10-2-ex2-1-q9": "8d75bc5353fbebeb86789bb568215759200fa827e240ce9439344844c13c5075",
+  "c10-2-ex2-1-q10": "6e357e7d5f35eafbd682ca20e0e35eecc1461363b65903816c92a34dc68cfd44"
+};
+const m04EnglishProjection=record=>({id:record.id,classNum:record.classNum,chapter:record.chapter,exercise:record.exercise,topic:record.topic?.en,label:record.label?.en,title:record.title?.en,q:record.q?.en,steps:record.steps?.map(step=>({en:step.en,eq:step.eq})),answer:record.answer});
 const approvedBatch=require('../../docs/curriculum/grade-10/batches/g10-ch2-ex2-2.json');
 const approvedEx22=['1','2','3','4','5','6','7','8','9'].map(n=>'c10-2-ex2-2-q'+n);
 const recoveredBatch=require('../../docs/curriculum/grade-10/g10-seven-recovery-20261113.json');
@@ -350,6 +368,20 @@ for(const [grade,data] of Object.entries(classes)){
   }else if(grade==='9'&&g9Ex32ById.has(item.id)){
    const approved=g9Ex32ById.get(item.id);
    assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exercise 3.2 matches source-audited batch '+item.id);
+  }else if(grade==='10'&&m04ById.has(item.id)){
+    // Approved bilingual extension of the existing immutable Exercise 2.1 source.
+    // Original English question, title, working and answer remain pinned independently.
+    const approved=m04ById.get(item.id);
+    const evidence=m04Batch.mapping.find(row=>row.recordId===item.id);
+    assert(Object.hasOwn(preserved.sha256,item.id),'M04 extension must refer to an original preserved ID '+item.id);
+    assert(evidence&&evidence.visualChecked?.en===true&&evidence.visualChecked?.ta===true,'EN/TA page-image source evidence '+item.id);
+    assert.equal(item.q.en,evidence.sourceText.en,'Immutable 2025 English textbook question '+item.id);
+    assert.equal(item.q.ta,evidence.sourceText.ta,'Verified Tamil textbook question '+item.id);
+    const englishDigest=crypto.createHash('sha256').update(JSON.stringify(m04EnglishProjection(item))).digest('hex');
+    assert.equal(englishDigest,m04EnglishFingerprints[item.id],'M04 original English content preservation '+item.id);
+    assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exact independently checked M04 bilingual record '+item.id);
+    assert.equal(item.translationReview,'pending','Do not claim Tamil editorial signoff '+item.id);
+    assert.equal(item.tamilWorkedSolutionReview,'pending','Do not claim Tamil solution signoff '+item.id);
   }else if(Object.hasOwn(preserved.sha256,item.id)){
    const correction=auditedG9Proofs.records[item.id];
    const trig=auditedG9TrigTable.records[item.id];
