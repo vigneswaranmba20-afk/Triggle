@@ -102,12 +102,10 @@ class AreaVideoReleaseTests(unittest.TestCase):
             changed=update_site(root,PUBLIC_URL)
             self.assertEqual(set(changed),set(PATHS))
             self.assertTrue(all(p.read_bytes()!=old for p,old in before.items()))
+            released={p:p.read_bytes() for p in before}
             with self.assertRaises(ValueError):update_site(root,PUBLIC_URL)
             # A failed second release cannot partially alter any of the three files.
-            self.assertEqual(
-                {p:p.read_bytes() for p in before},
-                {p:p.read_bytes() for p in before},
-            )
+            self.assertEqual({p:p.read_bytes() for p in before},released)
 
 
 if __name__=="__main__":unittest.main()
