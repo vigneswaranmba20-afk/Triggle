@@ -7,7 +7,7 @@ export const MODEL='Qwen/Qwen3-Coder-30B-A3B-Instruct:amazon-bedrock';
 export const CASES=Object.freeze([
  {id:'AUD09-04',file:'site/data/textbook-exercises/g10-ch2-ex2-7-gp-missing-en.js',
   recordId:'c10-2-ex2-7-q12',reportedLiteral:'x^(b−c)',
-  fields:['q.en','questionMath.en[2].latex','questionMath.en[2].fallback','steps[2].en','steps[2].eq','steps[2].math.latex','steps[2].math.fallback','answerMath.latex'],
+  fields:['q.en','questionMath.en[5].latex','questionMath.en[5].fallback','steps[2].en','steps[2].eq','steps[2].math.latex','steps[2].math.fallback','answerMath.latex'],
   allowedTargets:['none','steps[2].en']},
  {id:'AUD10-03',file:'site/data/textbook-exercises/g9-ch7-ex7-4-en.js',
   recordId:'g9-ch7-ex7.4-q10',reportedLiteral:'V___brick',
