@@ -428,7 +428,7 @@ const entries=[
       "ta": "பயிற்சி 2.1 · வினா 6"
     },
     "title": {
-      "en": "HCF by Euclid's Division Algorithm",
+      "en": "HCF by Euclid’s Division Algorithm",
       "ta": "யூக்ளிடின் வகுத்தல் வழிமுறை மூலம் மீ.பொ.வ காணுதல்"
     },
     "q": {
