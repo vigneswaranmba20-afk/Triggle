@@ -10,7 +10,7 @@ const oldCurrency='\\\\text{Rs.}',newCurrency='\\\\text{₹}';
 const oldExplanation='Use population variance = mean square minus square of the mean.';
 const fixture={findingId:'AUD08-06',currencyLatex:newCurrency,explanation:'A 12-hour clock has values 1 through 12, repeated twice in a day. Repeating the observations does not change their variance. Calculate it as the mean square minus the square of the mean.'};
 export function patchSource(source,proposal){
- if(!proposal||proposal.findingId!=='AUD08-06'||proposal.currencyLatex!==newCurrency)throw Error('Reject: proposal outside audit allowlist');
+ if(!proposal||proposal.findingId!=='AUD08-06'||![newCurrency,newCurrency.slice(1)].includes(proposal.currencyLatex))throw Error('Reject: proposal outside audit allowlist');
  const value=proposal.explanation;
  if(typeof value!=='string'||value.length<95||value.length>350||!value.includes('12')||!/\btwice\b/i.test(value)||!/\bvariance\b/i.test(value)||/[\r\n<>;$]/.test(value))throw Error('Reject: explanation constraints');
  const x=source.indexOf(a),y=source.indexOf(b),z=source.indexOf(c);
