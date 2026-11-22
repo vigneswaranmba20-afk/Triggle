@@ -4,6 +4,9 @@ const read=p=>fs.readFileSync('site/'+p,'utf8'),html=read('index.html'),ctx={win
 for(const m of html.matchAll(/<script src="\.\/(data\/[^?\"]+)[^\"]*"/g))vm.runInNewContext(read(m[1]),ctx,{filename:m[1]});
 const {TRIGGLE_CLASSES:classes,TriggleDifficulty:registry}=ctx.window;
 const preserved=require('../../docs/standard-solution-preservation.json');
+const auditedG9Proofs=require('../../docs/audit/AUD13_02_CORRECTION_HASHES.json');
+assert.equal(auditedG9Proofs.auditId,'AUD13-02');
+assert.deepEqual(Object.keys(auditedG9Proofs.records).sort(),['g9-ch5-ex5.2-q2','g9-ch5-ex5.2-q5','g9-ch5-ex5.2-q6']);
 const approvedBatch=require('../../docs/curriculum/grade-10/batches/g10-ch2-ex2-2.json');
 const approvedEx22=['1','2','3','4','5','6','7','8','9'].map(n=>'c10-2-ex2-2-q'+n);
 const recoveredBatch=require('../../docs/curriculum/grade-10/g10-seven-recovery-20261113.json');
@@ -329,7 +332,17 @@ for(const [grade,data] of Object.entries(classes)){
    const approved=g9Ex32ById.get(item.id);
    assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exercise 3.2 matches source-audited batch '+item.id);
   }else if(Object.hasOwn(preserved.sha256,item.id)){
-   assert.equal(hash,preserved.sha256[item.id],'Entire original question, mathematical working, notation, answer and metadata: '+item.id);
+   const correction=auditedG9Proofs.records[item.id];
+   if(correction){
+    // Scoped math-only exception: NEVER rewrite the 568-entry preservation baseline.
+    assert.equal(correction.originalRecordSha256,preserved.sha256[item.id],'Immutable source baseline for '+item.id);
+    assert.equal(item.q.en,correction.unchangedEnglishQuestion,'Original textbook prompt preserved '+item.id);
+    assert.equal(item.q.ta,correction.unchangedTamilFallback,'Original Tamil fallback preserved '+item.id);
+    assert.equal(item.answer,correction.unchangedFinalAnswer,'Original final answer preserved '+item.id);
+    assert.equal(hash,correction.correctedRecordSha256,'Exact independently checked proof amendment '+item.id);
+   }else{
+    assert.equal(hash,preserved.sha256[item.id],'Entire original question, mathematical working, notation, answer and metadata: '+item.id);
+   }
   }else{
    const approvedG9=grade==='9'&&approvedG9Ids.includes(item.id);
    const approvedG10=grade==='10'&&approvedNewIds.includes(item.id);

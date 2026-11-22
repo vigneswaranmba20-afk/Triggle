@@ -20352,88 +20352,264 @@ const records=[
     "answerMath": "(i) Collinear; (ii) Collinear",
     "steps": [
       {
-        "math": "Compare slopes or a common coordinate",
-        "reasonMath": {
-          "en": "Three points are collinear when they lie on the same straight line.",
-          "ta": "English explanation (Tamil unchanged): Three points are collinear when they lie on the same straight line."
-        }
-      },
-      {
         "math": {
-          "latex": "\\begin{aligned}&\\left(5 - 7, 1 - \\left(- 2\\right)\\right) = \\left(- 2, 3\\right) \\\\ &\\left(3 - 5, 4 - 1\\right) = \\left(- 2, 3\\right)\\end{aligned}",
-          "fallback": "(5−7,1−(−2))=(−2,3); (3−5,4−1)=(−2,3)",
+          "latex": "PQ = \\sqrt{\\left(x_{2} - x_{1}\\right)^{2} + \\left(y_{2} - y_{1}\\right)^{2}}",
+          "fallback": "PQ=√((x₂−x₁)²+(y₂−y₁)²)",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "For part (i), equal changes in ",
+            "For any two points, use the Class ",
             {
-              "latex": "x",
-              "fallback": "x"
+              "latex": "9",
+              "fallback": "9"
             },
-            " give equal changes in ",
+            " distance formula to find the length between them."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): For any two points, use the Class ",
             {
-              "latex": "y",
-              "fallback": "y"
+              "latex": "9",
+              "fallback": "9"
+            },
+            " distance formula to find the length between them."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&AB = \\sqrt{\\left(5 - 7\\right)^{2} + \\left(1 - \\left(- 2\\right)\\right)^{2}}  \\\\ &= \\sqrt{4 + 9}  \\\\ &= \\sqrt{13}\\end{aligned}",
+          "fallback": "AB=√((5−7)²+(1−(−2))²)=√(4+9)=√13",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Part (i): find the distance from ",
+            {
+              "latex": "A \\left(7, - 2\\right)",
+              "fallback": "A(7,−2)"
+            },
+            " to ",
+            {
+              "latex": "B \\left(5, 1\\right)",
+              "fallback": "B(5,1)"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): For part (i), equal changes in ",
+            "English explanation (Tamil unchanged): Part (i): find the distance from ",
             {
-              "latex": "x",
-              "fallback": "x"
+              "latex": "A \\left(7, - 2\\right)",
+              "fallback": "A(7,−2)"
             },
-            " give equal changes in ",
+            " to ",
             {
-              "latex": "y",
-              "fallback": "y"
+              "latex": "B \\left(5, 1\\right)",
+              "fallback": "B(5,1)"
             },
             "."
           ]
         }
       },
       {
-        "math": "(i) Collinear",
-        "reasonMath": {
-          "en": "The direction vectors match; all three points lie on one line.",
-          "ta": "English explanation (Tamil unchanged): The direction vectors match; all three points lie on one line."
-        }
-      },
-      {
-        "math": [
-          "(ii) Collinear ",
-          {
-            "latex": "\\left(x = a\\right)",
-            "fallback": "(x=a)"
-          }
-        ],
+        "math": {
+          "latex": "\\begin{aligned}&BC = \\sqrt{\\left(3 - 5\\right)^{2} + \\left(4 - 1\\right)^{2}}  \\\\ &= \\sqrt{4 + 9}  \\\\ &= \\sqrt{13}\\end{aligned}",
+          "fallback": "BC=√((3−5)²+(4−1)²)=√(4+9)=√13",
+          "display": true
+        },
         "reasonMath": {
           "en": [
-            "In part (ii), all ",
+            "Find the distance from ",
             {
-              "latex": "x",
-              "fallback": "x"
+              "latex": "B \\left(5, 1\\right)",
+              "fallback": "B(5,1)"
             },
-            "-coordinates equal a, so the three points lie on the vertical line ",
+            " to ",
             {
-              "latex": "x = a",
-              "fallback": "x=a"
+              "latex": "C \\left(3, 4\\right)",
+              "fallback": "C(3,4)"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): In part (ii), all ",
+            "English explanation (Tamil unchanged): Find the distance from ",
+            {
+              "latex": "B \\left(5, 1\\right)",
+              "fallback": "B(5,1)"
+            },
+            " to ",
+            {
+              "latex": "C \\left(3, 4\\right)",
+              "fallback": "C(3,4)"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&AC = \\sqrt{\\left(3 - 7\\right)^{2} + \\left(4 - \\left(- 2\\right)\\right)^{2}}  \\\\ &= \\sqrt{16 + 36}  \\\\ &= 2\\,\\sqrt{13}\\end{aligned}",
+          "fallback": "AC=√((3−7)²+(4−(−2))²)=√(16+36)=2√13",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Now measure the full distance from A to ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            "."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Now measure the full distance from A to ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": [
+          {
+            "latex": "\\begin{aligned}&\\sqrt{13} + \\sqrt{13} = 2\\ \\\\ &\\sqrt{13} = AC \\\\ &\\left(i\\right)\\end{aligned}",
+            "fallback": "√13+√13=2√13=AC; (i)",
+            "display": true
+          },
+          " Collinear"
+        ],
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "AB + BC = AC, B",
+              "fallback": "AB + BC = AC, B"
+            },
+            " lies on the segment ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            ". The three points are collinear."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Since ",
+            {
+              "latex": "AB + BC = AC, B",
+              "fallback": "AB + BC = AC, B"
+            },
+            " lies on the segment ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            ". The three points are collinear."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&AB = \\left|3 - \\left(- 2\\right)\\right|  \\\\ &= 5 \\\\ &BC = \\left|0 - 3\\right|  \\\\ &= 3 \\\\ &CA = \\left|- 2 - 0\\right|  \\\\ &= 2\\end{aligned}",
+          "fallback": "AB=|3−(−2)|=5; BC=|0−3|=3; CA=|−2−0|=2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Part (ii): all three points have ",
             {
               "latex": "x",
               "fallback": "x"
             },
-            "-coordinates equal a, so the three points lie on the vertical line ",
+            "-coordinate a. The vertical distances are ",
             {
-              "latex": "x = a",
-              "fallback": "x=a"
+              "latex": "AB = 5",
+              "fallback": "AB = 5"
+            },
+            ",",
+            " ",
+            {
+              "latex": "BC = 3",
+              "fallback": "BC = 3"
+            },
+            " and ",
+            {
+              "latex": "CA = 2",
+              "fallback": "CA = 2"
             },
             "."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Part (ii): all three points have ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinate a. The vertical distances are ",
+            {
+              "latex": "AB = 5",
+              "fallback": "AB = 5"
+            },
+            ",",
+            " ",
+            {
+              "latex": "BC = 3",
+              "fallback": "BC = 3"
+            },
+            " and ",
+            {
+              "latex": "CA = 2",
+              "fallback": "CA = 2"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": [
+          {
+            "latex": "3 + 2 = 5 = AB",
+            "fallback": "3+2=5=AB"
+          },
+          "; (ii) Collinear"
+        ],
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "BC + CA = AB, C",
+              "fallback": "BC + CA = AB, C"
+            },
+            " is between ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " and A on the line ",
+            {
+              "latex": "x = a",
+              "fallback": "x = a"
+            },
+            ". These points are also collinear."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Since ",
+            {
+              "latex": "BC + CA = AB, C",
+              "fallback": "BC + CA = AB, C"
+            },
+            " is between ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " and A on the line ",
+            {
+              "latex": "x = a",
+              "fallback": "x = a"
+            },
+            ". These points are also collinear."
           ]
         }
       }
@@ -20602,56 +20778,226 @@ const records=[
     "answerMath": "(i) Parallelogram; (ii) Parallelogram",
     "steps": [
       {
+        "math": {
+          "latex": "PQ^{2} = \\left(x_{2} - x_{1}\\right)^{2} + \\left(y_{2} - y_{1}\\right)^{2}",
+          "fallback": "PQ²=(x₂−x₁)²+(y₂−y₁)²",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Use the Class ",
+            {
+              "latex": "9",
+              "fallback": "9"
+            },
+            " distance formula. If both pairs of opposite sides of a non-degenerate quadrilateral have equal lengths, it is a parallelogram."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Use the Class ",
+            {
+              "latex": "9",
+              "fallback": "9"
+            },
+            " distance formula. If both pairs of opposite sides of a non-degenerate quadrilateral have equal lengths, it is a parallelogram."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&AB^{2} = \\left(- 6 - \\left(- 3\\right)\\right)^{2} + \\left(- 7 - 1\\right)^{2}  \\\\ &= 9 + 64  \\\\ &= 73\\end{aligned}",
+          "fallback": "AB²=(−6−(−3))²+(−7−1)²=9+64=73",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Part (i): find the squared length of ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            "."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Part (i): find the squared length of ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&CD^{2} = \\left(6 - 3\\right)^{2} + \\left(- 1 - \\left(- 9\\right)\\right)^{2}  \\\\ &= 9 + 64  \\\\ &= 73\\end{aligned}",
+          "fallback": "CD²=(6−3)²+(−1−(−9))²=9+64=73",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find the squared length of the opposite side ",
+            {
+              "latex": "CD",
+              "fallback": "CD"
+            },
+            "."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Find the squared length of the opposite side ",
+            {
+              "latex": "CD",
+              "fallback": "CD"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&BC^{2} = \\left(3 - \\left(- 6\\right)\\right)^{2} + \\left(- 9 - \\left(- 7\\right)\\right)^{2}  \\\\ &= 81 + 4  \\\\ &= 85\\end{aligned}",
+          "fallback": "BC²=(3−(−6))²+(−9−(−7))²=81+4=85",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find the squared length of ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            "."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Find the squared length of ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&DA^{2} = \\left(- 3 - 6\\right)^{2} + \\left(1 - \\left(- 1\\right)\\right)^{2}  \\\\ &= 81 + 4  \\\\ &= 85\\end{aligned}",
+          "fallback": "DA²=(−3−6)²+(1−(−1))²=81+4=85",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find the squared length of the opposite side ",
+            {
+              "latex": "DA",
+              "fallback": "DA"
+            },
+            "."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Find the squared length of the opposite side ",
+            {
+              "latex": "DA",
+              "fallback": "DA"
+            },
+            "."
+          ]
+        }
+      },
+      {
         "math": [
           {
-            "latex": "AB = C - D",
-            "fallback": "AB=C−D"
+            "latex": "\\begin{aligned}&AB = CD  \\\\ &= \\sqrt{73} \\\\ &BC = DA  \\\\ &= \\sqrt{85} \\\\ &\\left(i\\right)\\end{aligned}",
+            "fallback": "AB=CD=√73; BC=DA=√85; (i)",
+            "display": true
           },
-          " and ",
-          {
-            "latex": "BC = D - A",
-            "fallback": "BC=D−A"
-          }
+          " Parallelogram"
         ],
         "reasonMath": {
-          "en": "Opposite sides of a quadrilateral are equal and parallel if their direction vectors match.",
-          "ta": "English explanation (Tamil unchanged): Opposite sides of a quadrilateral are equal and parallel if their direction vectors match."
+          "en": "Both opposite side pairs are equal, so the first quadrilateral is a parallelogram.",
+          "ta": "English explanation (Tamil unchanged): Both opposite side pairs are equal, so the first quadrilateral is a parallelogram."
         }
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&AB = \\left(- 3, - 8\\right)  \\\\ &= DC \\\\ &BC = \\left(9, - 2\\right)  \\\\ &= AD\\end{aligned}",
-          "fallback": "AB=(−3,−8)=DC; BC=(9,−2)=AD",
+          "latex": "\\begin{aligned}&AB^{2} = CD^{2}  \\\\ &= 12^{2} + 13^{2}  \\\\ &= 313\\end{aligned}",
+          "fallback": "AB²=CD²=12²+13²=313",
           "display": true
         },
         "reasonMath": {
-          "en": "Part (i): find the vectors of both opposite pairs.",
-          "ta": "English explanation (Tamil unchanged): Part (i): find the vectors of both opposite pairs."
-        }
-      },
-      {
-        "math": "(i) Parallelogram",
-        "reasonMath": {
-          "en": "Both pairs agree, so the first set of points is a parallelogram.",
-          "ta": "English explanation (Tamil unchanged): Both pairs agree, so the first set of points is a parallelogram."
+          "en": [
+            "Part (ii): calculate ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " and ",
+            {
+              "latex": "CD",
+              "fallback": "CD"
+            },
+            " with the same distance formula."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Part (ii): calculate ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " and ",
+            {
+              "latex": "CD",
+              "fallback": "CD"
+            },
+            " with the same distance formula."
+          ]
         }
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&AB = \\left(12, 13\\right)  \\\\ &= DC \\\\ &BC = \\left(10, - 2\\right)  \\\\ &= AD\\end{aligned}",
-          "fallback": "AB=(12,13)=DC; BC=(10,−2)=AD",
+          "latex": "\\begin{aligned}&BC^{2} = DA^{2}  \\\\ &= 10^{2} + \\left(- 2\\right)^{2}  \\\\ &= 104\\end{aligned}",
+          "fallback": "BC²=DA²=10²+(−2)²=104",
           "display": true
         },
         "reasonMath": {
-          "en": "Part (ii): repeat using the second set.",
-          "ta": "English explanation (Tamil unchanged): Part (ii): repeat using the second set."
+          "en": [
+            "Calculate the other opposite pair, ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            " and ",
+            {
+              "latex": "DA",
+              "fallback": "DA"
+            },
+            "."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Calculate the other opposite pair, ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            " and ",
+            {
+              "latex": "DA",
+              "fallback": "DA"
+            },
+            "."
+          ]
         }
       },
       {
-        "math": "(ii) Parallelogram",
+        "math": [
+          {
+            "latex": "\\begin{aligned}&AB = CD  \\\\ &= \\sqrt{313} \\\\ &BC = DA  \\\\ &= 2\\,\\sqrt{26}\\end{aligned}",
+            "fallback": "AB=CD=√313; BC=DA=2√26",
+            "display": true
+          },
+          "; (ii) Parallelogram"
+        ],
         "reasonMath": {
-          "en": "Again both pairs agree.",
-          "ta": "English explanation (Tamil unchanged): Again both pairs agree."
+          "en": "Again both pairs of opposite sides are equal; the second quadrilateral is a parallelogram.",
+          "ta": "English explanation (Tamil unchanged): Again both pairs of opposite sides are equal; the second quadrilateral is a parallelogram."
         }
       }
     ]
@@ -20698,55 +21044,146 @@ const records=[
     ],
     "steps": [
       {
-        "math": [
-          "Compare ",
-          {
-            "latex": "AB^{2}, BC^{2}, CD^{2}, DA^{2}",
-            "fallback": "AB², BC², CD², DA²",
-            "display": true
-          }
-        ],
+        "math": {
+          "latex": "PQ^{2} = \\left(x_{2} - x_{1}\\right)^{2} + \\left(y_{2} - y_{1}\\right)^{2}",
+          "fallback": "PQ²=(x₂−x₁)²+(y₂−y₁)²",
+          "display": true
+        },
         "reasonMath": {
-          "en": "A quadrilateral is a rhombus when all four sides have the same positive length.",
-          "ta": "English explanation (Tamil unchanged): A quadrilateral is a rhombus when all four sides have the same positive length."
+          "en": [
+            "A rhombus has four equal side lengths. Use the Class ",
+            {
+              "latex": "9",
+              "fallback": "9"
+            },
+            " distance formula to check each pair of neighboring vertices."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): A rhombus has four equal side lengths. Use the Class ",
+            {
+              "latex": "9",
+              "fallback": "9"
+            },
+            " distance formula to check each pair of neighboring vertices."
+          ]
         }
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&AB^{2} = 4^{2} + 8^{2}  \\\\ &= 80 \\\\ &BC^{2} = 8^{2} + 4^{2}  \\\\ &= 80 \\\\ &CD^{2} = 4^{2} + 8^{2}  \\\\ &= 80 \\\\ &DA^{2} = 8^{2} + 4^{2}  \\\\ &= 80\\end{aligned}",
-          "fallback": "AB²=4²+8²=80; BC²=8²+4²=80; CD²=4²+8²=80; DA²=8²+4²=80",
+          "latex": "\\begin{aligned}&AB^{2} = 4^{2} + 8^{2}  \\\\ &= 80 \\\\ &BC^{2} = \\left(- 8\\right)^{2} + \\left(- 4\\right)^{2}  \\\\ &= 80\\end{aligned}",
+          "fallback": "AB²=4²+8²=80; BC²=(−8)²+(−4)²=80",
           "display": true
         },
         "reasonMath": {
-          "en": "For part (i), compute the squared distances.",
-          "ta": "English explanation (Tamil unchanged): For part (i), compute the squared distances."
+          "en": "Part (i): find the first two squared side lengths.",
+          "ta": "English explanation (Tamil unchanged): Part (i): find the first two squared side lengths."
         }
       },
       {
-        "math": [
-          "(i) Rhombus; each side=",
-          {
-            "latex": "4\\,\\sqrt{5}",
-            "fallback": "4√5"
-          }
-        ],
+        "math": {
+          "latex": "\\begin{aligned}&CD^{2} = \\left(- 4\\right)^{2} + \\left(- 8\\right)^{2}  \\\\ &= 80 \\\\ &DA^{2} = 8^{2} + 4^{2}  \\\\ &= 80\\end{aligned}",
+          "fallback": "CD²=(−4)²+(−8)²=80; DA²=8²+4²=80",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Find the remaining two squared side lengths.",
+          "ta": "English explanation (Tamil unchanged): Find the remaining two squared side lengths."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&AB = BC  \\\\ &= CD  \\\\ &= DA  \\\\ &= \\sqrt{80}  \\\\ &= 4\\,\\sqrt{5}\\end{aligned}",
+          "fallback": "AB=BC=CD=DA=√80=4√5",
+          "display": true
+        },
         "reasonMath": {
           "en": [
-            "All four sides therefore have ",
+            "All four sides measure ",
             {
-              "latex": "\\text{length}\\,\\sqrt{80} = 4\\,\\sqrt{5}",
-              "fallback": "length √80=4√5"
+              "latex": "\\sqrt{80} = 4\\,\\sqrt{5}",
+              "fallback": "√80 = 4√5"
+            },
+            ", so the first quadrilateral is a rhombus."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): All four sides measure ",
+            {
+              "latex": "\\sqrt{80} = 4\\,\\sqrt{5}",
+              "fallback": "√80 = 4√5"
+            },
+            ", so the first quadrilateral is a rhombus."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&AC = \\sqrt{\\left(- 1 - 3\\right)^{2} + \\left(2 - \\left(- 2\\right)\\right)^{2}}  \\\\ &= 4\\,\\sqrt{2}\\end{aligned}",
+          "fallback": "AC=√((−1−3)²+(2−(−2))²)=4√2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "To check whether this rhombus is also a square, measure diagonal ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
             },
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): All four sides therefore have ",
+            "English explanation (Tamil unchanged): To check whether this rhombus is also a square, measure diagonal ",
             {
-              "latex": "\\text{length}\\,\\sqrt{80} = 4\\,\\sqrt{5}",
-              "fallback": "length √80=4√5"
+              "latex": "AC",
+              "fallback": "AC"
             },
             "."
           ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}&BD = \\sqrt{\\left(- 5 - 7\\right)^{2} + \\left(- 6 - 6\\right)^{2}}  \\\\ &= 12\\,\\sqrt{2}\\end{aligned}",
+          "fallback": "BD=√((−5−7)²+(−6−6)²)=12√2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Measure the other diagonal ",
+            {
+              "latex": "BD",
+              "fallback": "BD"
+            },
+            "."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Measure the other diagonal ",
+            {
+              "latex": "BD",
+              "fallback": "BD"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": [
+          {
+            "latex": "AC",
+            "fallback": "AC"
+          },
+          {
+            "latex": "\\ne",
+            "fallback": "≠"
+          },
+          {
+            "latex": "BD",
+            "fallback": "BD"
+          },
+          "; (i) Rhombus, not square"
+        ],
+        "reasonMath": {
+          "en": "The diagonals have different lengths. Therefore, part (i) is a rhombus but not a square.",
+          "ta": "English explanation (Tamil unchanged): The diagonals have different lengths. Therefore, part (i) is a rhombus but not a square."
         }
       },
       {
@@ -20756,15 +21193,85 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "For part (ii), consecutive vertices are one unit apart.",
-          "ta": "English explanation (Tamil unchanged): For part (ii), consecutive vertices are one unit apart."
+          "en": [
+            "Part (ii): the four neighboring point pairs are each exactly ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " unit apart."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Part (ii): the four neighboring point pairs are each exactly ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " unit apart."
+          ]
         }
       },
       {
-        "math": "(ii) Rhombus (a square)",
+        "math": {
+          "latex": "\\begin{aligned}&AC = \\sqrt{\\left(2 - 1\\right)^{2} + \\left(2 - 1\\right)^{2}}  \\\\ &= \\sqrt{2} \\\\ &BD = \\sqrt{\\left(1 - 2\\right)^{2} + \\left(2 - 1\\right)^{2}}  \\\\ &= \\sqrt{2}\\end{aligned}",
+          "fallback": "AC=√((2−1)²+(2−1)²)=√2; BD=√((1−2)²+(2−1)²)=√2",
+          "display": true
+        },
         "reasonMath": {
-          "en": "A square is also a rhombus because its four sides are equal.",
-          "ta": "English explanation (Tamil unchanged): A square is also a rhombus because its four sides are equal."
+          "en": "The diagonals are equal in this case.",
+          "ta": "English explanation (Tamil unchanged): The diagonals are equal in this case."
+        }
+      },
+      {
+        "math": [
+          {
+            "latex": "AB",
+            "fallback": "AB"
+          },
+          "⊥",
+          {
+            "latex": "BC",
+            "fallback": "BC"
+          },
+          "; (ii) Rhombus (also a square)"
+        ],
+        "reasonMath": {
+          "en": [
+            "Also, ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " is horizontal and ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            " is vertical, so they meet at ",
+            {
+              "latex": "90^{\\circ}",
+              "fallback": "90°"
+            },
+            ". Thus this rhombus is a square."
+          ],
+          "ta": [
+            "English explanation (Tamil unchanged): Also, ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " is horizontal and ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            " is vertical, so they meet at ",
+            {
+              "latex": "90^{\\circ}",
+              "fallback": "90°"
+            },
+            ". Thus this rhombus is a square."
+          ]
         }
       }
     ]
@@ -47771,13 +48278,47 @@ const texts={
     },
     "."
   ],
-  "In part (ii), all x-coordinates equal a, so the three points lie on the vertical": [
-    "In part (ii), all ",
+  "Part (ii): all three points have x-coordinate a.": [
+    "Part (ii): all three points have ",
     {
       "latex": "x",
       "fallback": "x"
     },
-    "-coordinates equal a, so the three points lie on the vertical"
+    "-coordinate a."
+  ],
+  "Use the Class 9 distance formula.": [
+    "Use the Class ",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    " distance formula."
+  ],
+  "The distance formula uses horizontal and vertical differences to find a side length. Compare opposite pairs: AB = CD and BC = DA prove that the quadrilateral is a parallelogram.": [
+    "The distance formula uses horizontal and vertical differences to find a side length. Compare opposite pairs: ",
+    {
+      "latex": "AB = CD",
+      "fallback": "AB = CD"
+    },
+    " and ",
+    {
+      "latex": "BC = DA",
+      "fallback": "BC = DA"
+    },
+    " prove that the quadrilateral is a parallelogram."
+  ],
+  "தொலைவுச் சூத்திரம் மூலம் எதிர்ப்பக்கங்களின் நீளங்களை ஒப்பிடவும். AB = CD மற்றும் BC = DA என்றால் இரு ஜோடி எதிர்ப்பக்கங்களும் சமம்; ஆகவே இது ஓர் இணைகரம்.": [
+    "தொலைவுச் சூத்திரம் மூலம் எதிர்ப்பக்கங்களின் நீளங்களை ஒப்பிடவும். ",
+    {
+      "latex": "AB = CD",
+      "fallback": "AB = CD"
+    },
+    " மற்றும் ",
+    {
+      "latex": "BC = DA",
+      "fallback": "BC = DA"
+    },
+    " என்றால் இரு ஜோடி எதிர்ப்பக்கங்களும் சமம்; ஆகவே இது ஓர் இணைகரம்."
   ],
   "Apply the distance formula to B(1,3).": [
     "Apply the distance formula to ",

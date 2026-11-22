@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "d22de70c55fb908eb5584182e78bddcb7948e30f",
-  "updatedAt": "2026-11-22T09:19:00+05:30",
+  "sourceCommit": "0132a57cfa6c0338517e43266257529f8ec115ab",
+  "updatedAt": "2026-11-22T05:34:20Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "a20f19eaa02f4a6a9f0352d642a35bd8d3716233555636a561e70d8422b63b97",
@@ -30,7 +30,7 @@
     "site/data/g10-ch4-concepts.js": "c1000a61c306ab7ad3b5dd9e496997d3ee39cdb98423b8973adc9f094f2a5419",
     "site/data/g10-ch5-concepts.js": "96d2c88e5a0b7c9e03c5bc3ea6441d4ab83895132eba528457223ad8fa8e1834",
     "site/data/g10-ch6-concepts.js": "fe53a40acdd58d6bae587a20bc19a091de17adc0e403f1c73ab5760671ebf36f",
-    "site/data/g9-clear-math.js": "600c32b3d5cb2339f0537111ded30795bef305f29a3f7a306915c861af516799",
+    "site/data/g9-clear-math.js": "277134f4ef16a93e1790392984ee37bf26f28b5cc409d86f5489fce613b29055",
     "site/data/g9-mensuration-chapter.js": "509a8967476ef4023f043286e4a7ef373951e2039902692a6468147f46cc8c28",
     "site/data/g9-mensuration-remaining.js": "f720a1272691e653343bf8cc23e9876947079b15e631fb18a36974f8453cd8dc",
     "site/data/g9-probability-chapter.js": "5b9ee457150461a7ce46f3b2e9ede7c7d1234dfa8e751b05ff71d22e4245ca79",
@@ -118,7 +118,7 @@
     "site/data/textbook-exercises/g9-ch4-ex4-1-q2-q4-en.js": "8dd13609b698e2c220841c1d5165a2a42d466e13e6500b796849e9fa08d54d33",
     "site/data/textbook-exercises/g9-ch4-ex4-2-en.js": "cb6c8505d5ac540d228f75a6095ca173be13935d1137d939a48630d05e826adf",
     "site/data/textbook-exercises/g9-ch4-ex4-3-en.js": "50f1ab8b6f7845d322690cff0672d0ba38062b33bdc03150d6d1c8fb6cb30dde",
-    "site/data/textbook-exercises/g9-ch5-ex5-2-en.js": "e669e61061f6243af699f4257a760cf48b5af7175f9c673f471d151570cd8935",
+    "site/data/textbook-exercises/g9-ch5-ex5-2-en.js": "09433295d5890d199a8c9be6128fce5905f042ff695d46d4f0f3f507e2951df2",
     "site/data/textbook-exercises/g9-ch7-ex7-1-en.js": "60900b13454aad3808d432ed5fec5ed280215a0de37ff30f8240b1b6e5c844f7",
     "site/data/textbook-exercises/g9-ch7-ex7-2-en.js": "bd3e6a2856b0cd7a789c10b67e40bc01ea4c00a01f773a54ff7a249ac1140868",
     "site/data/textbook-exercises/g9-ch7-ex7-3-en.js": "4eec3ff6ea59b3bc0d40c3f86734ed8bae44c96dbb617cf85d4e69dd41a9cd3c",
@@ -142,7 +142,7 @@
     "site/data/why-step-g9-ex3-1-q1-q2.js": "d3b15fc309303bcd35bcd684704b093c12c4865dd7ffa31291c516a480e47e37",
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
-    "site/data/why-step-g9.js": "ed93ba751d971497a7143086e80e307c035724d9ec062d26343a088416369d85",
+    "site/data/why-step-g9.js": "718185e53bf41e21d5724dc9acbacdb6ace6e64c1e2996d099030f10232a1e25",
     "site/index.html": "6b66c0a8d6e5260022f1cda04d6e9354bd438de0cfb8f655dd0e1aae8b17d8d7",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
@@ -3332,7 +3332,7 @@
                   "url": "../index.html?class=9&question=g9-ch5-ex5.2-q2",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "57ad94586b15eefc581217556ca86c4780c9cdd046e3fd87b437282e6d2e46c4",
+                  "recordSha256": "fb3d2b4f6f9e32db685d09520ddeca61613ba9369c680de7c542650dc758a418",
                   "verified": false
                 },
                 {
@@ -3350,7 +3350,7 @@
                   "url": "../index.html?class=9&question=g9-ch5-ex5.2-q5",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "2c2a877f2a04a5b32d491b4b2a89c6e53f82c830d338df782e62f200d5b473bf",
+                  "recordSha256": "b306ee55cde91e8d45f6354eb6490669216085aaa0690632372e3954b278cdcd",
                   "verified": false
                 },
                 {
@@ -3359,7 +3359,7 @@
                   "url": "../index.html?class=9&question=g9-ch5-ex5.2-q6",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "fb61c37d0636698c6bb7c86af728e4eb8bd295572a63dea422508aa89ad84729",
+                  "recordSha256": "8cdeafe758756e131ba62e0dd0cc6f168cf2142337ed196f73201aca3b0d6f5e",
                   "verified": false
                 },
                 {
