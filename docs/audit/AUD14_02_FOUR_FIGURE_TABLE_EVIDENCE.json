@@ -104,6 +104,72 @@
         },
         "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
         "page": 18
+      },
+      "originalClassicRecord": {
+        "id": "exercise-6-4-q1-i",
+        "ref": "Exercise 6.4 · Q1(i)",
+        "type": "6.4",
+        "title": "Find sine of 49°",
+        "prompt": "Look up or calculate sin49° to four decimal places.",
+        "steps": [
+          {
+            "why": "The given angle contains 49 degrees and zero extra minutes.",
+            "eq": "θ = 49°00′"
+          },
+          {
+            "why": "Find the sine at that angle with the table or calculator.",
+            "eq": "sin49° ≈ 0.75470958"
+          },
+          {
+            "why": "Round to four decimal places.",
+            "eq": "sin49° ≈ 0.7547"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 49
+        },
+        "page": 18,
+        "final": "0.7547",
+        "promptTa": "sin49° மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "கொடுக்கப்பட்ட கோணம் 49 டிகிரி, கூடுதல் நிமிடங்கள் இல்லை.",
+          "அட்டவணை அல்லது கணிப்பான் மூலம் sin மதிப்பைப் பெறுக.",
+          "நான்கு தசம இடங்களுக்கு வட்டமிடுக."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-4-q1-i",
+        "ref": "Exercise 6.4 · Q1(i)",
+        "type": "6.4",
+        "title": "Find sine of 49°",
+        "prompt": "Look up or calculate sin49° to four decimal places.",
+        "steps": [
+          {
+            "why": "Locate the 49° row and the 0′ column in the sine table.",
+            "eq": "49°=49°00′"
+          },
+          {
+            "why": "Read the four-figure value directly. No extra minutes remain.",
+            "eq": "sin49°00′=0.7547"
+          },
+          {
+            "why": "The 0′ column needs no mean-difference adjustment.",
+            "eq": "sin49°=0.7547"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 49
+        },
+        "page": 245,
+        "final": "0.7547",
+        "promptTa": "sin49° மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "சைன் அட்டவணையில் 49° வரிசையையும் 0′ நெடுவரிசையையும் காண்க.",
+          "நான்கு தசம மதிப்பை நேரடியாகப் படிக்கவும்; கூடுதல் நிமிடங்கள் இல்லை.",
+          "0′ என்பதால் சராசரி வேறுபாட்டுத் திருத்தம் தேவையில்லை."
+        ]
       }
     },
     "c9-exercise-6-4-q1-ii": {
@@ -182,6 +248,72 @@
         },
         "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
         "page": 18
+      },
+      "originalClassicRecord": {
+        "id": "exercise-6-4-q1-ii",
+        "ref": "Exercise 6.4 · Q1(ii)",
+        "type": "6.4",
+        "title": "Find cosine of 74°39′",
+        "prompt": "Evaluate cos74°39′ to four decimal places.",
+        "steps": [
+          {
+            "why": "Convert 39 angular minutes into degrees.",
+            "eq": "θ = 74° + [[39|60]]° = 74.65°"
+          },
+          {
+            "why": "Evaluate cosine, retaining extra digits before rounding.",
+            "eq": "cos74.65° ≈ 0.2647146845"
+          },
+          {
+            "why": "Round to four decimal places: the fifth decimal is 1.",
+            "eq": "cos74°39′ ≈ 0.2647"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 74.65
+        },
+        "page": 18,
+        "final": "0.2647",
+        "promptTa": "cos74°39′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "39 கோண நிமிடங்களை டிகிரியாக மாற்றுக.",
+          "வட்டமிடுவதற்கு முன் கூடுதல் தசம இலக்கங்களுடன் cos-ஐக் கணக்கிடுக.",
+          "ஐந்தாவது தசம இலக்கம் 1; நான்கு இடங்களுக்கு வட்டமிடுக."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-4-q1-ii",
+        "ref": "Exercise 6.4 · Q1(ii)",
+        "type": "6.4",
+        "title": "Find cosine of 74°39′",
+        "prompt": "Evaluate cos74°39′ to four decimal places.",
+        "steps": [
+          {
+            "why": "Split 74°39′ into the preceding 6-minute table column and 3 extra minutes.",
+            "eq": "74°39′=74°36′+3′"
+          },
+          {
+            "why": "From the four-figure cosine table read 0.2656 at 74°36′. For 3′ the mean difference is 0.0008, and cosine requires subtraction.",
+            "eq": "cos74°36′=0.2656; MD(3′)=0.0008"
+          },
+          {
+            "why": "Subtract the mean difference for the textbook table answer. Direct calculator rounding instead gives 0.2647; do not confuse the two methods.",
+            "eq": "cos74°39′≈0.2656−0.0008=0.2648"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 74.65
+        },
+        "page": 245,
+        "final": "0.2648",
+        "promptTa": "cos74°39′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "74°39′ கோணத்தை அட்டவணையின் 74°36′ நெடுவரிசை மற்றும் கூடுதல் 3′ எனப் பிரிக்கவும்.",
+          "கோசைன் அட்டவணையில் cos74°36′ = 0.2656. கூடுதல் 3′-க்கான சராசரி வேறுபாடு 0.0008; கோசைனுக்கு இதைக் கழிக்கவும்.",
+          "அட்டவணை விடைக்கு சராசரி வேறுபாட்டைக் கழிக்கவும். கணிப்பானில் 0.2647 எனக் கிடைப்பது வேறு கணக்கீட்டு முறை."
+        ]
       }
     },
     "c9-exercise-6-4-q1-iii": {
@@ -260,6 +392,72 @@
         },
         "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
         "page": 18
+      },
+      "originalClassicRecord": {
+        "id": "exercise-6-4-q1-iii",
+        "ref": "Exercise 6.4 · Q1(iii)",
+        "type": "6.4",
+        "title": "Find tangent of 54°26′",
+        "prompt": "Find tan54°26′, reporting four decimal places.",
+        "steps": [
+          {
+            "why": "Convert the minutes into a fraction of a degree.",
+            "eq": "θ = 54° + [[26|60]]° = 54.433333…°"
+          },
+          {
+            "why": "Evaluate tangent without rounding the angle first.",
+            "eq": "tan54°26′ ≈ 1.3985034441"
+          },
+          {
+            "why": "Four decimal places require looking at the fifth digit.",
+            "eq": "tan54°26′ ≈ 1.3985"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 54.4333
+        },
+        "page": 18,
+        "final": "1.3985",
+        "promptTa": "tan54°26′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "நிமிடங்களை டிகிரியின் பின்னமாக மாற்றுக.",
+          "கோணத்தை முன்கூட்டியே வட்டமிடாமல் tan-ஐக் கணக்கிடுக.",
+          "ஐந்தாவது இலக்கத்தைப் பார்த்து நான்கு தசம இடங்களுக்கு வட்டமிடுக."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-4-q1-iii",
+        "ref": "Exercise 6.4 · Q1(iii)",
+        "type": "6.4",
+        "title": "Find tangent of 54°26′",
+        "prompt": "Find tan54°26′, reporting four decimal places.",
+        "steps": [
+          {
+            "why": "Use the preceding tangent-table column 54°24′ and keep the remaining 2′.",
+            "eq": "54°26′=54°24′+2′"
+          },
+          {
+            "why": "Read tan54°24′ as 1.3968. For the remaining 2′, the mean-difference adjustment is 0.0017.",
+            "eq": "tan54°24′=1.3968; MD(2′)=0.0017"
+          },
+          {
+            "why": "Add the mean difference because tangent increases with the angle.",
+            "eq": "tan54°26′≈1.3968+0.0017=1.3985"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 54.4333
+        },
+        "page": 245,
+        "final": "1.3985",
+        "promptTa": "tan54°26′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "டேன்ஜென்ட் அட்டவணையில் முந்தைய 54°24′ நெடுவரிசையை எடுத்துக் கொண்டு மீதமுள்ள 2′-ஐக் குறிக்கவும்.",
+          "tan54°24′ அட்டவணை மதிப்பு 1.3968. மீதமுள்ள 2′-க்கான சராசரி வேறுபாடு 0.0017.",
+          "கோணம் அதிகரிக்கும்போது டேன்ஜென்ட் அதிகரிப்பதால் சராசரி வேறுபாட்டைக் கூட்டவும்."
+        ]
       }
     },
     "c9-exercise-6-4-q1-iv": {
@@ -338,6 +536,72 @@
         },
         "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
         "page": 18
+      },
+      "originalClassicRecord": {
+        "id": "exercise-6-4-q1-iv",
+        "ref": "Exercise 6.4 · Q1(iv)",
+        "type": "6.4",
+        "title": "Find sine of 21°21′",
+        "prompt": "Find sin21°21′ to four decimal places.",
+        "steps": [
+          {
+            "why": "Convert angular minutes into degrees.",
+            "eq": "θ = 21° + [[21|60]]° = 21.35°"
+          },
+          {
+            "why": "Calculate sine before rounding.",
+            "eq": "sin21°21′ ≈ 0.3640641460"
+          },
+          {
+            "why": "The fifth decimal digit is 6, so round the fourth decimal up.",
+            "eq": "sin21°21′ ≈ 0.3641"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 21.35
+        },
+        "page": 18,
+        "final": "0.3641",
+        "promptTa": "sin21°21′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "கோண நிமிடங்களை டிகிரியாக மாற்றுக.",
+          "வட்டமிடுவதற்கு முன் sin-ஐக் கணக்கிடுக.",
+          "ஐந்தாவது தசம இலக்கம் 6; எனவே நான்காவது இலக்கத்தை உயர்த்துக."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-4-q1-iv",
+        "ref": "Exercise 6.4 · Q1(iv)",
+        "type": "6.4",
+        "title": "Find sine of 21°21′",
+        "prompt": "Find sin21°21′ to four decimal places.",
+        "steps": [
+          {
+            "why": "The preceding 6-minute sine-table column is 21°18′, with 3′ remaining.",
+            "eq": "21°21′=21°18′+3′"
+          },
+          {
+            "why": "Read sin21°18′ as 0.3633 and the 3′ mean difference as 0.0008.",
+            "eq": "sin21°18′=0.3633; MD(3′)=0.0008"
+          },
+          {
+            "why": "Add the mean difference for sine to reach the table answer.",
+            "eq": "sin21°21′≈0.3633+0.0008=0.3641"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 21.35
+        },
+        "page": 245,
+        "final": "0.3641",
+        "promptTa": "sin21°21′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "சைன் அட்டவணையின் முந்தைய 6 நிமிட நெடுவரிசை 21°18′; மீதம் 3′.",
+          "sin21°18′ மதிப்பு 0.3633; கூடுதல் 3′-க்கான சராசரி வேறுபாடு 0.0008.",
+          "சைன் மதிப்புக்கு சராசரி வேறுபாட்டைக் கூட்டி அட்டவணை விடையைப் பெறுக."
+        ]
       }
     },
     "c9-exercise-6-4-q1-v": {
@@ -416,6 +680,72 @@
         },
         "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
         "page": 18
+      },
+      "originalClassicRecord": {
+        "id": "exercise-6-4-q1-v",
+        "ref": "Exercise 6.4 · Q1(v)",
+        "type": "6.4",
+        "title": "Find cosine of 33°53′",
+        "prompt": "Find cos33°53′ to four decimal places.",
+        "steps": [
+          {
+            "why": "Convert angular minutes into degrees.",
+            "eq": "θ = 33° + [[53|60]]° = 33.883333…°"
+          },
+          {
+            "why": "Calculate cosine before rounding.",
+            "eq": "cos33°53′ ≈ 0.8301744915"
+          },
+          {
+            "why": "The fifth decimal digit is 7, so round the fourth decimal up.",
+            "eq": "cos33°53′ ≈ 0.8302"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 33.8833
+        },
+        "page": 18,
+        "final": "0.8302",
+        "promptTa": "cos33°53′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "கோண நிமிடங்களை டிகிரியாக மாற்றுக.",
+          "வட்டமிடுவதற்கு முன் cos-ஐக் கணக்கிடுக.",
+          "ஐந்தாவது தசம இலக்கம் 7; எனவே நான்காவது இலக்கத்தை உயர்த்துக."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-4-q1-v",
+        "ref": "Exercise 6.4 · Q1(v)",
+        "type": "6.4",
+        "title": "Find cosine of 33°53′",
+        "prompt": "Find cos33°53′ to four decimal places.",
+        "steps": [
+          {
+            "why": "Use the preceding cosine-table column 33°48′ and the remaining 5′.",
+            "eq": "33°53′=33°48′+5′"
+          },
+          {
+            "why": "Read cos33°48′ as 0.8310. The 5′ mean difference is 0.0008.",
+            "eq": "cos33°48′=0.8310; MD(5′)=0.0008"
+          },
+          {
+            "why": "Subtract the mean difference for cosine to get the table value.",
+            "eq": "cos33°53′≈0.8310−0.0008=0.8302"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 33.8833
+        },
+        "page": 245,
+        "final": "0.8302",
+        "promptTa": "cos33°53′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "கோசைன் அட்டவணையின் 33°48′ நெடுவரிசையையும் மீதமுள்ள 5′-ஐயும் எடுத்துக்கொள்ளவும்.",
+          "cos33°48′ அட்டவணை மதிப்பு 0.8310. கூடுதல் 5′-க்கான சராசரி வேறுபாடு 0.0008.",
+          "கோசைன் மதிப்பிலிருந்து சராசரி வேறுபாட்டைக் கழித்து அட்டவணை விடையைப் பெறுக."
+        ]
       }
     },
     "c9-exercise-6-4-q1-vi": {
@@ -494,6 +824,72 @@
         },
         "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
         "page": 18
+      },
+      "originalClassicRecord": {
+        "id": "exercise-6-4-q1-vi",
+        "ref": "Exercise 6.4 · Q1(vi)",
+        "type": "6.4",
+        "title": "Find tangent of 70°17′",
+        "prompt": "Find tan70°17′ to four decimal places.",
+        "steps": [
+          {
+            "why": "Convert 17 minutes to degrees.",
+            "eq": "θ = 70° + [[17|60]]° = 70.283333…°"
+          },
+          {
+            "why": "Evaluate tangent without rounding the angle first.",
+            "eq": "tan70°17′ ≈ 2.7903338772"
+          },
+          {
+            "why": "Round to four decimal places.",
+            "eq": "tan70°17′ ≈ 2.7903"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 70.2833
+        },
+        "page": 18,
+        "final": "2.7903",
+        "promptTa": "tan70°17′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "17 நிமிடங்களை டிகிரியாக மாற்றுக.",
+          "கோணத்தை முன்கூட்டியே வட்டமிடாமல் tan-ஐக் கணக்கிடுக.",
+          "நான்கு தசம இடங்களுக்கு வட்டமிடுக."
+        ]
+      },
+      "correctedClassicRecord": {
+        "id": "exercise-6-4-q1-vi",
+        "ref": "Exercise 6.4 · Q1(vi)",
+        "type": "6.4",
+        "title": "Find tangent of 70°17′",
+        "prompt": "Find tan70°17′ to four decimal places.",
+        "steps": [
+          {
+            "why": "Use the preceding 6-minute tangent-table column: 70°17′ = 70°12′ + 5′.",
+            "eq": "70°17′=70°12′+5′"
+          },
+          {
+            "why": "The textbook example gives tan70°12′ = 2.7776. The 5′ mean difference is 0.0131; tangent requires addition.",
+            "eq": "tan70°12′=2.7776; MD(5′)=0.0131"
+          },
+          {
+            "why": "Add the table mean difference. The direct-calculator result rounds to 2.7903, but the prescribed table method gives 2.7907.",
+            "eq": "tan70°17′≈2.7776+0.0131=2.7907"
+          }
+        ],
+        "demo": {
+          "kind": "unitcircle",
+          "angle": 70.2833
+        },
+        "page": 245,
+        "final": "2.7907",
+        "promptTa": "tan70°17′ மதிப்பை நான்கு தசம இடங்களுக்கு காண்க.",
+        "stepsTa": [
+          "70°17′ = 70°12′ + 5′. டேன்ஜென்ட் அட்டவணையில் முந்தைய 70°12′ நெடுவரிசையைப் பயன்படுத்தவும்.",
+          "பாடநூல் எடுத்துக்காட்டில் tan70°12′ = 2.7776. கூடுதல் 5′-க்கான சராசரி வேறுபாடு 0.0131; டேன்ஜென்டுக்கு அதைக் கூட்டவும்.",
+          "அட்டவணை சராசரி வேறுபாட்டைக் கூட்டவும். கணிப்பானில் 2.7903 வரலாம்; பாடநூலின் அட்டவணை முறை 2.7907 தருகிறது."
+        ]
       }
     }
   }
