@@ -1,0 +1,40 @@
+name: Temporary Mensuration Q6-Q10 Phase 1 source-status refresh
+on:
+  push:
+    branches:
+      - feature/g10-ch7-ex71-q6-q10-conveyor-20261122
+permissions:
+  contents: write
+concurrency:
+  group: g10-q6-q10-phase1-status-refresh
+  cancel-in-progress: false
+jobs:
+  refresh-once:
+    if: github.event.head_commit.message == 'ci(g10): one-shot Phase 1 status regeneration after Neon source audit'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Regenerate only source-derived curriculum projection
+        run: |
+          npm run status:build
+          npm run status:check
+          node site/tools/test_g10_ch7_ex71_q6_q10_draft.cjs
+      - name: Commit projection and remove this one-shot workflow
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/project-status.json
+          git rm -- .github/workflows/tmp-g10-ch7-neon-phase1-status-20261122.yml
+          git diff --cached --check
+          git commit -m "chore(g10): sync Neon Phase 1 source-derived curriculum status"
+          git push origin HEAD:feature/g10-ch7-ex71-q6-q10-conveyor-20261122
