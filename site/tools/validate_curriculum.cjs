@@ -189,6 +189,32 @@ function validatePreservation(root = siteRoot) {
     // Classic-reader additions are audited UI only. Removing these exact new
     // fragments must recover every byte of the original preserved page.
     let preservedContent=content;
+    if (relative==='data/class-9.js') {
+      // AUD14-02: preserve the exact whole-file historic SHA without approving
+      // arbitrary mutations. Each of six changes must match an audited hash,
+      // and reversing those changes must reproduce the legacy file byte-for-byte.
+      const audit=JSON.parse(fs.readFileSync(path.resolve(root,'..','docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json'),'utf8'));
+      if(audit.auditId!=='AUD14-02'||Object.keys(audit.records).length!==6){
+        errors.push('AUD14-02 corrections evidence absent or incomplete');
+      }else{
+        let restored=content.toString('utf8');
+        for(const [id,correction] of Object.entries(audit.records)){
+          const start=restored.indexOf('{"id":"'+id+'"');
+          const end=start>=0?restored.indexOf('},{"id":',start+1):-1;
+          if(start<0||end<0){errors.push('Missing source-isolated AUD14-02 record: '+id);continue;}
+          let current;
+          try{current=JSON.parse(restored.slice(start,end+1));}
+          catch{errors.push('Unparseable AUD14-02 record: '+id);continue;}
+          const currentHash=crypto.createHash('sha256').update(JSON.stringify(current)).digest('hex');
+          const oldHash=crypto.createHash('sha256').update(JSON.stringify(correction.originalRecord)).digest('hex');
+          if(currentHash!==correction.correctedRecordSha256||oldHash!==correction.originalRecordSha256){
+            errors.push('Unapproved AUD14-02 record content: '+id);continue;
+          }
+          restored=restored.slice(0,start)+JSON.stringify(correction.originalRecord)+restored.slice(end+1);
+        }
+        preservedContent=Buffer.from(restored,'utf8');
+      }
+    }
     if (entry.uiOnlyAdditions) {
       if (relative!=='class9-classic.html'||!Array.isArray(entry.uiOnlyAdditions)||!entry.uiOnlyAdditions.length) {
         errors.push('Invalid UI-only preservation additions: '+relative); continue;
