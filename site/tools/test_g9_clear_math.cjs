@@ -5,6 +5,7 @@ const {load,build,expression,rich}=require('./build_g9_math.cjs');
 const katex=require('../assets/vendor/katex/katex.min.js');
 const tableAudit=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json');
 const tableFollowup=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
+const sourceChoices=require('../../docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json');
 const root=path.resolve(__dirname,'..'),read=file=>fs.readFileSync(path.join(root,file),'utf8');
 assert.equal(read('data/g9-clear-math.js'),build(),'Reproducible presentation must track canonical content');
 const ctx={window:{katex}};vm.createContext(ctx);
@@ -49,9 +50,10 @@ assert.match(q5.steps[3].eq,/37\|50/);
 // test_standard_solutions and test_g9_ch6_aud14_02; no check is weakened.
 const preservation=items.map(q=>{
  const legacy=tableAudit.records[q.id]||tableFollowup.records[q.id];
+ const questionOriginal=sourceChoices.records[q.id];
  const steps=legacy?.originalSteps||legacy?.originalRecord?.steps||q.steps;
  const answer=legacy?(legacy.originalFinalAnswer||legacy.unchangedFinalAnswer):q.answer;
- return [q.id,q.chapter,q.exercise,q.kind,q.q,answer,
+ return [q.id,q.chapter,q.exercise,q.kind,questionOriginal?.originalRecord?.q||q.q,answer,
   steps.filter((_,idx)=>!(q.id==='g9-ch9-ex9.2-q5'&&idx===3)).map(({en,ta,eq},index)=>revisedReasons[q.id]?.includes(index)?[null,null,eq]:[en,ta,eq])];
 });
 console.log('AUD13-02 G9_GRADE_PRESERVATION_SHA256 '+createHash('sha256').update(JSON.stringify(preservation)).digest('hex'));
@@ -75,7 +77,19 @@ for(const q of items){
  }
  assert.equal(JSON.stringify(q),before,'Canonical question object is never mutated');
 }
-assert.equal(optionRecords,50);
+// The 2025 English Exercise 6.5 original (1)–(4) choices are now visibly
+ // restored on eight published MCQ records, in addition to the 50 prior
+ // fully structured Grade 9 question-option records.
+ const newlyRestored=['q1','q2','q3','q4','q7','q8','q9','q10'].map(id=>'c9-exercise-6-5-'+id);
+ for(const id of newlyRestored){
+  const q=items.find(x=>x.id===id),present=get(q);
+  assert(q&&present,'Original 2025 MCQ record preserved '+id);
+  for(const lang of ['en','ta']){
+   const choices=present.questionMath[lang].filter(x=>x?.questionOption);
+   assert.equal(choices.length,4,'2025 Grade 9 four-option source math layout '+id+' '+lang);
+  }
+ }
+ assert.equal(optionRecords,50+newlyRestored.length,'Only eight original textbook choice sets added to the existing 50');
 assert.match(get(items.find(q=>q.id==='g9-ch2-ex2-q4-i')).steps[1].math.latex,/\\Rightarrow.*\\Rightarrow/);
 assert.match(get(items.find(q=>q.id==='g9-ch4-ex4.2-q1')).steps[2].math.latex,/\\Rightarrow/);
 assert(formulas>3800,'Full question, explanation, working and answer coverage');
