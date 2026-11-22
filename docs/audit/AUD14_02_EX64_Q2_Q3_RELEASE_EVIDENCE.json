@@ -13,7 +13,7 @@
     "c9-exercise-6-4-q2-i": {
       "sourcePart": "sin θ = 0.9975",
       "expectedFinalAnswer": "85°57′ or 85°58′ or 85°59′",
-      "sha256": "6dbe521f67855a0519c8dc6e17de60cfb8c213c167ea7b7c374c075781e61b25"
+      "sha256": "a10cc1a7c2be118de884de4e7fe1397dedcf5b005ed8eac6fbf983dcfd146cc3"
     },
     "c9-exercise-6-4-q2-ii": {
       "sourcePart": "cos θ = 0.6763",

@@ -40865,12 +40865,12 @@ const records=[
               "latex": "54'",
               "fallback": "54′"
             },
-            " and ",
+            ". The prescribed mean difference for the remaining minutes is ",
             {
-              "latex": "a 0.0001 \\text{mean}",
-              "fallback": "a 0.0001 mean"
+              "latex": "0.0001",
+              "fallback": "0.0001"
             },
-            " difference for the small remaining minutes."
+            "."
           ]
         }
       },
