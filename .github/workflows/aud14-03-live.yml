@@ -1,0 +1,40 @@
+name: AUD14-03 — published Grade 9 source and mobile browser signoff
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/aud14-03-live.yml'
+      - 'site/tools/test_g9_aud14_03_source_options_browser.cjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live-g9-source-and-render:
+    name: Live Ex6.1 Q2 + eight Ex6.5 MCQs (54 mobile states)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Install headless Chromium
+        run: npx playwright install --with-deps --only-shell chromium
+      - name: Assert published Grade 9 source bytes and 54 real student-browser states
+        env:
+          TRIGGLE_LIVE_BASE: https://vigneswaranmba20-afk.github.io/Triggle/site/index.html
+          CHROMIUM_PATH: ''
+        run: node site/tools/test_g9_aud14_03_source_options_browser.cjs
+      - name: Preserve viewport screenshots and per-case manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aud14-03-live-rendered-evidence
+          path: screenshots/aud14-03-live/
+          if-no-files-found: warn
+          retention-days: 14
