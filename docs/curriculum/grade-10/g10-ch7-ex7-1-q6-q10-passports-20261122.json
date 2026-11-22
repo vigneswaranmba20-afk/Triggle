@@ -4,7 +4,7 @@
   "grade": 10,
   "chapter": 7,
   "exercise": "7.1",
-  "status": "neon-phase1-verified-phase2-readonly-ui-audit-pending",
+  "status": "neon-phase1-verified-phase2-conditional-go-remediation-in-progress",
   "languagePolicy": "english-first; complete Tamil teaching translation pending",
   "source": {
     "edition": "2025 revised",
@@ -137,21 +137,47 @@
       }
     },
     "phase2": {
-      "status": "PENDING",
-      "neonStudentFacingReviewCompleted": false,
+      "status": "CONDITIONAL_GO_REMEDIATION_IN_PROGRESS",
+      "neonStudentFacingReviewCompleted": true,
+      "userReportFilename": "Neon G10 Ch7 Ex71 Q6 Q10 Phase2 Complete Audit Report.md",
+      "reportSha256": "bd84ad87f1593d7ab4d1539710a89ba4876071005e760628df8b31c06b8c0079",
+      "reportBytes": 21980,
+      "auditSourceSnapshot": "517c93023404d5750a8a60adb3794bbe4cee188f",
+      "findings": {
+        "high": [
+          "PHASE2-HIGH-01 final-current-head GitHub quality gate required",
+          "PHASE2-HIGH-02 Q10 SVG wall collision, ellipse and radius segment repair"
+        ],
+        "medium": [
+          "PHASE2-MED-01 KaTeX Rs. versus textbook ₹ (fallback and question retain ₹)",
+          "PHASE2-MED-02 320px 160px illustration squeeze",
+          "PHASE2-MED-03 interactive browser navigation, Tamil switch and dock clearance"
+        ],
+        "low": [
+          "PHASE2-LOW-01 intermediate arithmetic opportunities",
+          "PHASE2-LOW-02 upright cm² formatting in bold questions"
+        ]
+      },
+      "remediation": {
+        "svgGeometry": "code updated, awaiting fresh CI visual review",
+        "narrowMobileFigure": "targeted CSS updated, awaiting fresh CI viewport check",
+        "interactiveCoverage": "targeted Playwright expanded, awaiting fresh CI",
+        "currency": "Rs. in KaTeX with ₹ in source and fallback retained; non-blocking contrast disclosed",
+        "fullCI": "PENDING"
+      },
       "deviceWidthsPx": [
         320,
         390,
         412
       ],
-      "target": "PR #338 — code + browser visual QA"
+      "declaration": "Neon visually checked prior 15 screenshots and source, but did not itself run a live browser; our expanded interactive tests require independent CI execution."
     },
     "auditNote": "The original Phase 1 addendum is immutable source evidence; its hypothetical wrong-diameter mutation quotes ≈₹539.71, which differs from direct calculation ≈₹539.70 with true pi, or ≈₹539.92 with pi=22/7. This does not affect the correct Q10 answer; ask reviewer to note it separately in Phase 2, without editing frozen Phase 1."
   },
   "releaseGates": {
     "phase1NeonMathAndSource": "PASS",
-    "phase2NeonReadOnlyUI": "PENDING",
-    "githubRiskBasedFullCi": "PASSED at prior head b9e56d95; rerun required after manifest/test edits",
+    "phase2NeonReadOnlyUI": "CONDITIONAL_GO_REMEDIATION_IN_PROGRESS",
+    "githubRiskBasedFullCi": "PENDING after high-priority Phase 2 code fixes",
     "tamilAuthoredLessonReview": "PENDING",
     "merged": false,
     "liveVerified": false
