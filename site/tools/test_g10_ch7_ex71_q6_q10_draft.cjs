@@ -49,16 +49,16 @@ for(const p of manifest.records){
   assert.ok(step.en.length>=28&&step.eq&&step.math?.latex&&step.math?.fallback,'accessible worked line in '+p.id);
  }
  assert.ok(e.answerMath?.latex&&e.answerMath?.fallback,'typeset final answer for '+p.id);
- // KaTeX: ₹ is valid in \text{} only; reject unescaped currency in math mode.
+ // Site KaTeX cannot reliably display Unicode ₹. Render Rs. in math and preserve ₹ in plain answer.
  const formulas=[e.answerMath.latex,...e.steps.map(x=>x.math.latex)];
- assert.ok(formulas.every(x=>!x.replaceAll('\\text{₹}','').includes('₹')),'No raw ₹ in math mode '+p.id);
+ assert.ok(formulas.every(x=>!x.includes('₹')),'Safe KaTeX currency syntax '+p.id);
  const katex=require('../assets/vendor/katex/katex.min.js');
  for(const formula of formulas){
-  assert.doesNotThrow(()=>katex.renderToString(formula,{throwOnError:true,strict:'ignore'}),'KaTeX parses '+p.id);
+  assert.doesNotThrow(()=>katex.renderToString(formula,{throwOnError:true,strict:'error'}),'All maths parses in KaTeX '+p.id);
  }
  if(p.id.endsWith('q9')||p.id.endsWith('q10')){
-  assert.ok(e.answerMath.latex.includes('\\text{₹}'),'Student-visible ₹ in KaTeX text mode '+p.id);
-  assert.ok(katex.renderToString(e.answerMath.latex,{throwOnError:true,strict:'ignore'}).includes('₹'),'Rupee glyph in math HTML');
+  assert.ok(e.answerMath.latex.includes('\\text{Rs.}'),'Student-readable rupee abbreviation '+p.id);
+  assert.ok(e.answerMath.fallback.includes('₹')&&e.answer.includes('₹'),'Keep ₹ in accessible plain text '+p.id);
  }
  assert.ok(ch.textbookQuestionIds.includes(p.id),'chapter navigation includes '+p.id);
  const diff=sandbox.window.TriggleDifficulty.get(e);
