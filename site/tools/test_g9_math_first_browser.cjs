@@ -226,6 +226,36 @@ async function scrollFormula(page, base) {
   assert.equal(await formula.getAttribute('aria-label'), null, 'Rotation removes unnecessary tab stops');
 }
 
+async function glyphWidthReflow(page, base) {
+  // Regression: KaTeX glyph width may change after its parent was measured,
+  // especially on mobile font load. That must refresh keyboard scrollability.
+  await load(page, base, coordinates);
+  const formulas = page.locator(formulaSelector);
+  const index = await formulas.evaluateAll(items => items.findIndex(el =>
+    el.clientWidth > 50 && !!el.querySelector('.katex-html')));
+  assert(index >= 0, 'A visible formula with KaTeX glyphs exists');
+  const formula = formulas.nth(index);
+  await formula.evaluate(el => {
+    const glyphs = el.querySelector('.katex-html');
+    glyphs.style.minWidth = (el.clientWidth + 140) + 'px';
+  });
+  try {
+    await page.waitForFunction(i => {
+      const el=document.querySelectorAll('#questionText .triggle-tex, #stepsList .triggle-tex')[i];
+      return !!el && el.scrollWidth > el.clientWidth + 15 && el.tabIndex === 0
+        && el.getAttribute('role') === 'group'
+        && el.getAttribute('aria-label') === 'Scrollable mathematical expression';
+    }, index, { timeout: 6000 });
+  } finally {
+    await formula.evaluate(el => el.querySelector('.katex-html')?.style.removeProperty('min-width'));
+  }
+  // After restoring natural width, every actually overflowing expression
+  // remains keyboard reachable; a fitting expression may lose its tab stop.
+  await page.waitForFunction(() => [...document.querySelectorAll(
+    '#questionText .triggle-tex, #stepsList .triggle-tex'
+  )].every(el => el.scrollWidth <= el.clientWidth + 1 || el.tabIndex === 0));
+}
+
 async function offline(browser, base) {
   const context = await browser.newContext({ viewport: { width: 393, height: 852 } });
   try {
@@ -274,6 +304,7 @@ async function rendererFallback(browser, base) {
           await setLanguageAndStatistics(page, app.base);
         }
         if (width === 320) await scrollFormula(page, app.base);
+        if (width === 430) await glyphWidthReflow(page, app.base);
         if (width === 393) await navigation(page, app.base);
       } finally { await context.close(); }
     }
