@@ -38,7 +38,12 @@
       if(typeof value!=='string'||value.length>12000||!window.katex)throw Error('Unavailable renderer');
       const html=window.katex.renderToString(value, {
         displayMode, output:'htmlAndMathml', throwOnError:true, trust:false,
-        strict:'error', maxExpand:200, maxSize:20, macros:{}
+        // KaTeX lacks bundled font metrics for the Indian rupee glyph. Permit
+        // only that exact currency symbol in authored text; all other Unicode
+        // warnings/errors retain strict mode and trust remains disabled.
+        strict:(code,_message,token) =>
+          (code==='unknownSymbol'||code==='symbolNotInFont') && token?.text==='₹' ? 'ignore' : 'error',
+        maxExpand:200, maxSize:20, macros:{}
       });
       // KaTeX represents denied trust commands as red source text, without
       // throwing. Treat that result as a failure so commands never reach pupils.
