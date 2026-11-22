@@ -149,6 +149,35 @@ jobs:
           retention-days: 7
 
 
+
+  two-audit-evidence-preflight:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/experiment/evolve-shadow-v1-20261122'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          path: lab
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          ref: 8ca60d0aaaae07011017cb9f321713c141a48ba2
+          path: source
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check source evidence contract without API inference
+        env:
+          TRIGGLE_SOURCE_ROOT: ${{ github.workspace }}/source
+        run: |
+          node --check lab/experiments/evolve/hf_two_case_evidence_policy.mjs
+          node --check lab/experiments/evolve/hf_two_case_evidence_trial.mjs
+          node --test lab/experiments/evolve/hf_two_case_evidence_policy.test.mjs
+          node lab/experiments/evolve/hf_two_case_evidence_trial.mjs --preflight
+
   two-audit-evidence-rerun:
     # One-run user-authorized rerun; no open-ended scheduler.
     if: github.event_name == 'push' && github.ref == 'refs/heads/experiment/evolve-shadow-v1-20261122' && github.event.head_commit.message == 'EVOLVE_HF_TWO_AUDITS_APPROVED_20261123' && vars.EVOLVE_HF_USERNAME != ''
