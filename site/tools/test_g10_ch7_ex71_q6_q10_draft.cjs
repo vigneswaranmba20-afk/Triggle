@@ -1,6 +1,6 @@
 'use strict';
 /* Draft-stage independent math oracle and source-passport regression — Grade 10 Ex 7.1 Q6–Q10.
- * Does not claim Gemini Neon blind audit. Release remains gated on its frozen report.
+ * Neon Phase 1 blind source and math audit passed; Phase 2 UI review is still a required release gate.
  */
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
@@ -27,7 +27,15 @@ assert.equal(g.items.filter(x=>x.chapter==='7'&&x.exercise==='7.1'&&x.kind==='te
 assert.equal(manifest.source.questionPageImagesInspected,true);
 assert.equal(manifest.source.answerKeyPageImagesInspected,true);
 assert.equal(manifest.source.q10FigureInspected,true);
-assert.equal(manifest.source.independentBlindAuditCompleted,false,'never falsely mark Neon audit as completed');
+assert.equal(manifest.source.independentBlindAuditCompleted,true,'Phase 1 independently verified after frozen Neon source addendum');
+assert.equal(manifest.independentAudit.phase1.status,'PASS','require 5/5 blind original source/maths pass');
+assert.equal(manifest.independentAudit.phase1.sourceUnblockAddendum.sha256,'54c1ffb7b66d0d721c5885953564c41de2002c010b6ce13a232c3553f6924745','immutable Phase 1 addendum hash');
+assert.equal(manifest.independentAudit.phase1.sourceUnblockAddendum.mathematicalAnswersVerified,5);
+assert.equal(manifest.independentAudit.phase1.sourceUnblockAddendum.bilingualSourceRecordsVerified,5);
+assert.equal(manifest.independentAudit.phase1.sourceUnblockAddendum.originalQ10FigureVerified,1);
+assert.equal(manifest.independentAudit.phase2.neonStudentFacingReviewCompleted,false,'do not conflate source audit and student-facing UI audit');
+assert.equal(manifest.independentAudit.phase2.status,'PENDING','Phase 2 remains a required release gate');
+assert.equal(manifest.releaseGates.merged,false,'never mark draft as released');
 for(const p of manifest.records){
  const e=g.items.find(x=>x.id===p.id);assert.ok(e,'missing '+p.id);
  assert.equal(e.q.en,p.englishQuestion,'exact 2025 English source text for '+p.id);
@@ -71,4 +79,4 @@ assert.ok(!close(5/9,ratio),'missing radical must fail');
 assert.notEqual((1.25-1)*100,56.25,'linear sphere area scaling must fail');
 assert.ok(!close((area9-pi*(14**2-10**2))*0.14,302.72),'omitted vessel rim must fail');
 assert.ok(!close((area10+pi*12**2)*2,1357.72),'painting bottom must fail');
-console.log('PASS G10 Ch7 Ex7.1 Q6–Q10 draft source/Math: 5 records, 10/10 chapter questions, exact radical/rounding, page-image evidence, accessibility, offline cache, 5 mutations. Neon blind audit remains pending.');
+console.log('PASS G10 Ch7 Ex7.1 Q6–Q10 draft source/Math: 5 records, 10/10 chapter questions, exact radical/rounding, page-image evidence, accessibility, offline cache, 5 mutations. Neon Phase 1 PASS independently; read-only Phase 2 remains pending.');
