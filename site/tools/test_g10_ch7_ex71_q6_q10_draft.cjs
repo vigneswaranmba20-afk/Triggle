@@ -33,8 +33,10 @@ assert.equal(manifest.independentAudit.phase1.sourceUnblockAddendum.sha256,'54c1
 assert.equal(manifest.independentAudit.phase1.sourceUnblockAddendum.mathematicalAnswersVerified,5);
 assert.equal(manifest.independentAudit.phase1.sourceUnblockAddendum.bilingualSourceRecordsVerified,5);
 assert.equal(manifest.independentAudit.phase1.sourceUnblockAddendum.originalQ10FigureVerified,1);
-assert.equal(manifest.independentAudit.phase2.neonStudentFacingReviewCompleted,false,'do not conflate source audit and student-facing UI audit');
-assert.equal(manifest.independentAudit.phase2.status,'PENDING','Phase 2 remains a required release gate');
+assert.equal(manifest.independentAudit.phase2.neonStudentFacingReviewCompleted,true,'Neon Phase 2 reviewed source and prior screenshots');
+assert.equal(manifest.independentAudit.phase2.status,'CONDITIONAL_GO_REMEDIATION_IN_PROGRESS','High-priority remediations must be completed before release');
+assert.equal(manifest.independentAudit.phase2.reportSha256,'bd84ad87f1593d7ab4d1539710a89ba4876071005e760628df8b31c06b8c0079','preserve original Neon Phase 2 report hash');
+assert.equal(manifest.independentAudit.phase2.remediation.fullCI,'PENDING','do not falsely claim final CI clearance');
 assert.equal(manifest.releaseGates.merged,false,'never mark draft as released');
 for(const p of manifest.records){
  const e=g.items.find(x=>x.id===p.id);assert.ok(e,'missing '+p.id);
@@ -97,4 +99,4 @@ assert.ok(!close(5/9,ratio),'missing radical must fail');
 assert.notEqual((1.25-1)*100,56.25,'linear sphere area scaling must fail');
 assert.ok(!close((area9-pi*(14**2-10**2))*0.14,302.72),'omitted vessel rim must fail');
 assert.ok(!close((area10+pi*12**2)*2,1357.72),'painting bottom must fail');
-console.log('PASS G10 Ch7 Ex7.1 Q6–Q10 draft source/Math: 5 records, 10/10 chapter questions, exact radical/rounding, page-image evidence, accessibility, offline cache, 5 mutations. Neon Phase 1 PASS independently; read-only Phase 2 remains pending.');
+console.log('PASS G10 Ch7 Ex7.1 Q6–Q10 draft source/Math: 5 records, 10/10 chapter questions, exact radical/rounding, page-image evidence, accessibility, offline cache, 5 mutations. Neon Phase 1 PASS; Phase 2 CONDITIONAL GO with remediation gates still open.');
