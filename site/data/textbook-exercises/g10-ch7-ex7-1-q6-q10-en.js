@@ -317,7 +317,7 @@ const entries=[
         "en": "Multiply the full painted area by the stated rate of ₹0.14 for every square centimetre.",
         "eq": "Cost = 0.14×688×(22/7) = ₹302.72",
         "math": {
-          "latex": "\\begin{aligned}C&=0.14\\times688\\times\\frac{22}{7}\\\\&=\\text{₹}\\,302.72\\end{aligned}",
+          "latex": "\\begin{aligned}C&=0.14\\times688\\times\\frac{22}{7}\\\\&=\\text{Rs.}\\,302.72\\end{aligned}",
           "fallback": "Cost = 0.14×688×(22/7) = ₹302.72",
           "display": true
         }
@@ -325,7 +325,7 @@ const entries=[
     ],
     "answer": "Total painting cost = ₹302.72.",
     "answerMath": {
-      "latex": "\\boxed{\\text{₹}\\,302.72}",
+      "latex": "\\boxed{\\text{Rs.}\\,302.72}",
       "fallback": "Total painting cost = ₹302.72.",
       "display": true
     }
@@ -415,7 +415,7 @@ const entries=[
         "en": "Multiply the rounded painted area by ₹2 per cm². This gives the printed textbook answer. Keeping all digits until the very end would instead round to ₹1357.71; the one-paise difference is a rounding-order choice, not a new formula.",
         "eq": "Cost = 678.86×₹2 = ₹1357.72",
         "math": {
-          "latex": "\\begin{aligned}C&=678.86\\times2\\\\&=\\text{₹}\\,1357.72\\end{aligned}",
+          "latex": "\\begin{aligned}C&=678.86\\times2\\\\&=\\text{Rs.}\\,1357.72\\end{aligned}",
           "fallback": "Cost = 678.86×₹2 = ₹1357.72",
           "display": true
         }
@@ -423,7 +423,7 @@ const entries=[
     ],
     "answer": "Total cost = ₹1357.72 (using the textbook's intermediate-area rounding).",
     "answerMath": {
-      "latex": "\\boxed{\\text{₹}\\,1357.72}",
+      "latex": "\\boxed{\\text{Rs.}\\,1357.72}",
       "fallback": "Cost = ₹1357.72 (textbook rounding).",
       "display": true
     },
