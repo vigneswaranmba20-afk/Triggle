@@ -73,7 +73,6 @@ export function promptFor(c,p){
   'Give 1 to 2 evidence quotes; no quoting the audit or invented LaTeX rendering. Select "none" when no source edit is supported.',
   'AUDIT_ID '+c.id,
   'REPORTED_LITERAL '+JSON.stringify(p.reportedLiteral),
-  'OBSERVED_LITERAL_PRESENT_IN_RECORD '+JSON.stringify(p.reportedLiteralPresentInRecord),
   'ALLOWED_PROPOSED_TARGETS '+JSON.stringify(c.allowedTargets),
   'SOURCE_SHA '+p.sourceSha,
   'SOURCE_FILE '+p.file,
