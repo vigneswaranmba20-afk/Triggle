@@ -6,6 +6,10 @@ on:
       - experiments/evolve/audit_fix_aud08_06.mjs
       - experiments/evolve/hf_oidc_auth_probe.mjs
       - experiments/evolve/hf_oidc_auth_probe.test.mjs
+      - experiments/evolve/hf_two_case_evidence_policy.mjs
+      - experiments/evolve/hf_two_case_evidence_policy.test.mjs
+      - experiments/evolve/hf_two_case_evidence_trial.mjs
+      - experiments/evolve/run_two_audits_20261123.txt
       - experiments/evolve/hf_five_audit_benchmark.mjs
       - experiments/evolve/run_five_audits_20261123.txt
       - .github/workflows/evolve-audit-repair.yml
@@ -141,5 +145,59 @@ jobs:
         with:
           name: evolve-hf-pro-five-audit-proposals
           path: ${{ runner.temp }}/evolve-five-audit-benchmark.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+
+  two-audit-evidence-rerun:
+    # One-run user-authorized rerun; no open-ended scheduler.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/experiment/evolve-shadow-v1-20261122' && github.event.head_commit.message == 'EVOLVE_HF_TWO_AUDITS_APPROVED_20261123' && vars.EVOLVE_HF_USERNAME != ''
+    runs-on: ubuntu-24.04
+    environment: evolve-hf-lab
+    timeout-minutes: 12
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout experiment (without persistent write token)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          path: lab
+      - name: Checkout immutable main source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          ref: 8ca60d0aaaae07011017cb9f321713c141a48ba2
+          path: source
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run deterministic evidence and hallucination guard tests
+        env:
+          TRIGGLE_SOURCE_ROOT: ${{ github.workspace }}/source
+        run: |
+          test "$(git -C source rev-parse HEAD)" = '8ca60d0aaaae07011017cb9f321713c141a48ba2'
+          node --test lab/experiments/evolve/hf_two_case_evidence_policy.test.mjs
+          node lab/experiments/evolve/hf_two_case_evidence_trial.mjs --preflight
+      - name: Exactly two OIDC-authorized Hugging Face inference calls
+        env:
+          TRIGGLE_SOURCE_ROOT: ${{ github.workspace }}/source
+          TRIGGLE_SOURCE_SHA: 8ca60d0aaaae07011017cb9f321713c141a48ba2
+          EVOLVE_HF_USERNAME: ${{ vars.EVOLVE_HF_USERNAME }}
+          HF_MODEL: Qwen/Qwen3-Coder-30B-A3B-Instruct:amazon-bedrock
+          HF_INFER_APPROVED: EVOLVE-HF-TWO-RETRY-20261123
+        run: node lab/experiments/evolve/hf_two_case_evidence_trial.mjs --infer-once
+      - name: Verify immutable source checkout remains unmodified
+        if: always()
+        run: |
+          git -C source diff --exit-code
+          git -C lab diff --exit-code
+      - name: Archive model outputs and explicit rejection reasons
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evolve-hf-two-case-grounded-rerun
+          path: ${{ runner.temp }}/evolve-two-case-evidence.json
           if-no-files-found: ignore
           retention-days: 7
