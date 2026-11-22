@@ -47,11 +47,11 @@ for(const original of sourceRecords){
  valid++;
 }
 // Audit AUD08-06: real rupee TeX must render into accessible MathML.
-const rupeeRendered=render({latex:'\\\\text{₹}2700',display:true,fallback:'₹2700'});
+const rupeeRendered=render({latex:String.raw`\text{\char"20B9}2700`,display:true,fallback:'₹2700'});
 assert.ok(rupeeRendered.includes('<math'),'Indian rupee must retain accessible MathML');
 assert.ok(rupeeRendered.includes('₹'),'Rupee symbol must remain student-visible');
 assert.ok(!rupeeRendered.includes('data-math-error'),'Rupee must not invoke maths fallback');
-const unknownSymbol=render({latex:'\\\\text{❖}',display:true,fallback:'not supported'});
+const unknownSymbol=render({latex:String.raw`\text{❖}`,display:true,fallback:'not supported'});
 assert.ok(unknownSymbol.includes('data-math-error'),'Unapproved Unicode symbols remain invalid');
 const byId=id=>sourceRecords.find(x=>x.id===id),p4=byId('c10-8-ex8-1-q4'),p5=byId('c10-8-ex8-1-q5');
 for(const record of [p4,p5]){

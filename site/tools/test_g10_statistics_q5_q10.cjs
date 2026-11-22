@@ -75,7 +75,7 @@ const auditedQ6=items.find(x=>x.id==='c10-8-ex8-1-q6');
 assert.ok(auditedQ5 && auditedQ6);
 const q5TeX=[...auditedQ5.steps.map(x=>x.math?.latex).filter(Boolean),auditedQ5.answerMath?.latex]
  .filter(Boolean).join('\n');
-assert.equal(q5TeX.split('\\text{₹}').length-1,6,'Every Q5 TeX currency symbol should be rupees');
+assert.equal(q5TeX.split('\\text{\\char"20B9}').length-1,6,'Every Q5 TeX currency symbol should be rupees');
 assert.ok(!q5TeX.includes('\\text{Rs.}'),'No Q5 MathML-style Rs. should remain');
 const varianceBridge=auditedQ6.steps.map(x=>x.en).join(' ');
 assert.ok(varianceBridge.includes('variance = (n²−1)/12'),'Explain uniform-population variance shortcut');
