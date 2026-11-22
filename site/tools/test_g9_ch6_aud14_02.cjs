@@ -46,7 +46,7 @@ for(const id of ids){
  assert.ok(q.steps[1].eq.includes(record.tableBaseValue),'Table entry appears in explanation '+id);
  if(part!=='i'){
   assert.match(q.steps[1].eq,/MD\(/,'Mean difference explicit '+id);
-  assert.ok(q.steps[1].eq.includes(record.meanDifference.replace(/[+-]/g,'')),'Correct mean difference shown '+id);
+  assert.ok(q.steps[1].eq.includes(record.meanDifference.replace(/[+\-−]/g,'')),'Correct mean difference shown '+id);
   assert.ok(q.steps[2].eq.includes(q.answer),'Final calculation explicitly shown '+id);
  }
 }
