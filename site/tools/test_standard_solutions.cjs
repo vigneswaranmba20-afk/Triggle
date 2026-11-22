@@ -418,7 +418,7 @@ for(const record of classicRecords){
  assert.equal(item.answer,record.final,'Classic final answer matches canonical answer');
 }
 assert.ok(classic.includes('id="classicDifficulty"')&&classic.includes('./data/problem-difficulty.js'));
-assert.equal(count,933+geometryNewIds.length+geometryEx43NewIds.length+ch5Ex51NewIds.length+ch5Ex52NewIds.length+ch5Ex53NewIds.length+ch5Ex54NewIds.length+ch5Ex55NewIds.length+ch5UnitNewIds.length+ch6Ex61NewIds.length+ch6Ex62NewIds.length+ch6Ex63NewIds.length+ch6Ex64NewIds.length+ch6Ex65NewIds.length+ch6UnitNewIds.length+statisticsEx82Ids.length+ch7PilotIds.length);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
+assert.equal(count,933+geometryNewIds.length+geometryEx43NewIds.length+ch5Ex51NewIds.length+ch5Ex52NewIds.length+ch5Ex53NewIds.length+ch5Ex54NewIds.length+ch5Ex55NewIds.length+ch5UnitNewIds.length+ch6Ex61NewIds.length+ch6Ex62NewIds.length+ch6Ex63NewIds.length+ch6Ex64NewIds.length+ch6Ex65NewIds.length+ch6UnitNewIds.length+statisticsEx82Ids.length+ch7PilotIds.length+ch7BIds.length);assert.equal(reviewed,88);assert.equal(Object.keys(registry.entries).length,count);
 assert.equal(registry.get({id:'unavailable',classNum:12}),null);
 assert.equal(registry.get({id:classes[12].items[0].id,classNum:11}),null);
 assert.ok(registry.solutionReviews['g12-ch1-ex1.1-q8'],'Flag cofactor completeness for review');
