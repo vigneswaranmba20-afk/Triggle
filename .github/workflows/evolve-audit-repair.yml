@@ -60,7 +60,7 @@ jobs:
 
   one-model-audit-trial:
     # A uniquely named one-shot head commit opts in; normal branch pushes never infer.
-    if: github.event_name == 'push' && github.ref == 'refs/heads/experiment/evolve-shadow-v1-20261122' && github.event.head_commit.message == 'EVOLVE_ONE_CALL_APPROVED_20261122_QWEN3_CODER' && vars.EVOLVE_HF_USERNAME != ''
+    if: github.event_name == 'push' && github.ref == 'refs/heads/experiment/evolve-shadow-v1-20261122' && github.event.head_commit.message == 'EVOLVE_POSTSUB_APPROVED_20261122_QWEN3_CODER' && vars.EVOLVE_HF_USERNAME != ''
     runs-on: ubuntu-24.04
     environment: evolve-hf-lab
     timeout-minutes: 5
