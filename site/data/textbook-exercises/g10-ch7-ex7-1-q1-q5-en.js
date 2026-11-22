@@ -1,4 +1,4 @@
-/* Grade 10 Mensuration 2025: Ex 7.1 Q1–Q5 pilot. EN/TA source text layers compared; page-image and Tamil editorial audits pending. */
+/* Grade 10 Mensuration 2025: Ex 7.1 Q1–Q5 pilot. 2025 English/Tamil question and answer pages visually checked; Tamil authored teaching review still pending. */
 (()=>{'use strict';
 const entries=[
   {
@@ -14,7 +14,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "translationReview": "pending",
     "sourceFidelity": {
-      "status": "text-layer-checked-page-image-pending",
+      "status": "page-visual-checked",
       "sourcePdfPage": {
         "en": 288,
         "ta": 296
@@ -24,7 +24,7 @@ const entries=[
         "ta": 290
       }
     },
-    "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both language text layers compared; page-image and Tamil editorial review pending.",
+    "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
     "id": "c10-7-ex7-1-q1",
     "label": {
       "en": "Exercise 7.1 · Q1",
@@ -94,7 +94,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "translationReview": "pending",
     "sourceFidelity": {
-      "status": "text-layer-checked-page-image-pending",
+      "status": "page-visual-checked",
       "sourcePdfPage": {
         "en": 288,
         "ta": 296
@@ -104,7 +104,7 @@ const entries=[
         "ta": 290
       }
     },
-    "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both language text layers compared; page-image and Tamil editorial review pending.",
+    "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
     "id": "c10-7-ex7-1-q2",
     "label": {
       "en": "Exercise 7.1 · Q2",
@@ -183,7 +183,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "translationReview": "pending",
     "sourceFidelity": {
-      "status": "text-layer-checked-page-image-pending",
+      "status": "page-visual-checked",
       "sourcePdfPage": {
         "en": 288,
         "ta": 296
@@ -193,7 +193,7 @@ const entries=[
         "ta": 290
       }
     },
-    "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both language text layers compared; page-image and Tamil editorial review pending.",
+    "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
     "id": "c10-7-ex7-1-q3",
     "label": {
       "en": "Exercise 7.1 · Q3",
@@ -263,7 +263,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "translationReview": "pending",
     "sourceFidelity": {
-      "status": "text-layer-checked-page-image-pending",
+      "status": "page-visual-checked",
       "sourcePdfPage": {
         "en": 288,
         "ta": 296
@@ -273,7 +273,7 @@ const entries=[
         "ta": 290
       }
     },
-    "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both language text layers compared; page-image and Tamil editorial review pending.",
+    "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
     "id": "c10-7-ex7-1-q4",
     "label": {
       "en": "Exercise 7.1 · Q4",
@@ -359,7 +359,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "translationReview": "pending",
     "sourceFidelity": {
-      "status": "text-layer-checked-page-image-pending",
+      "status": "page-visual-checked",
       "sourcePdfPage": {
         "en": 288,
         "ta": 296
@@ -369,7 +369,7 @@ const entries=[
         "ta": 290
       }
     },
-    "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both language text layers compared; page-image and Tamil editorial review pending.",
+    "reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
     "id": "c10-7-ex7-1-q5",
     "label": {
       "en": "Exercise 7.1 · Q5",
