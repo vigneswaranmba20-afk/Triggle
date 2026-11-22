@@ -125,6 +125,7 @@ window.TRIGGLE_G10_CH5_PATH={
     },
     {
       "id": "g10-ch5-area-triangle",
+      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch5-area-triangle/7b0eac211cb97175a46f335ad339a3fb91c7649124fd4021143cbc08b68575ec.mp4", "language": "en", "durationSeconds": 109.6},
       "section": "5.2",
       "title": {
         "en": "Area of a triangle from coordinates",
