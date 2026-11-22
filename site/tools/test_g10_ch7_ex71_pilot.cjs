@@ -72,7 +72,7 @@ assert.equal(q3(16,16-4,13),2992);
 const pq=Math.sqrt(20**2-16**2);
 assert.equal(pq,12);
 const rotatedQR=pi*pq*20,rotatedPQ=pi*16*20;
-assert.equal(rotatedQR/rotatedPQ,3/4);
+assert.ok(Math.abs(rotatedQR/rotatedPQ-3/4)<1e-12,'rotated-area ratio should be 3:4');
 assert.ok(rotatedPQ>rotatedQR);
 const floorArea=4*22,rsq=floorArea/pi;
 assert.equal(rsq,28);
