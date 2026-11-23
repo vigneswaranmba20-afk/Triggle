@@ -50,6 +50,9 @@ async function main(){
         assert.equal(await media.evaluate(v=>v.controls),true);
         assert.match(await media.getAttribute('src'),/triggle-g9-distance-formula-en\.mp4$/);
         await dialog.locator('.sp2-concept-video-close').tap();
+        // dialog.close() emits its close event asynchronously. Wait for the app's
+        // event-driven media teardown instead of asserting within the same tick.
+        await dialog.waitFor({state:'detached',timeout:2500});
         assert.equal(await page.locator('.sp2-concept-video-dialog').count(),0,'Dialog and media source disposed');
         await page.locator('.sp2-answers button').first().tap();
         assert.match(await page.locator('[data-feedback]').innerText(),/Correct/);
