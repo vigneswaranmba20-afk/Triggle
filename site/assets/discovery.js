@@ -63,7 +63,7 @@
     const grades=curriculum.grades;
     // Show current priorities without deleting legacy curriculum or direct links.
     const visibleGrades=grades.filter(g=>g.grade===9||g.grade===10);
-    const chapters=grades.flatMap(g=>g.chapters.map(c=>({grade:g.grade,chapter:c})));
+    const chapters=visibleGrades.flatMap(g=>g.chapters.map(c=>({grade:g.grade,chapter:c})));
     // Only advertise a lab when both its lesson data and interactive viewer are loaded.
     const interactiveCount=id=>{
       const stages=id==='g9-ch1'&&window.TriggleSetJourney?window.TRIGGLE_SET_PATH?.stages:
@@ -87,7 +87,7 @@
         '<span class="discover-card-arrow" aria-hidden="true">↗</span></button>';
     }
     function jumpOptions(selectedGrade){
-      return '<option value="">'+escapeHtml(t.choose)+'</option>'+grades.filter(g=>!selectedGrade||selectedGrade===g.grade)
+      return '<option value="">'+escapeHtml(t.choose)+'</option>'+visibleGrades.filter(g=>!selectedGrade||selectedGrade===g.grade)
         .map(g=>'<optgroup label="'+escapeHtml(t.class)+' '+g.grade+'">'+g.chapters.map(c=>
           '<option value="'+escapeHtml(c.id)+'">'+escapeHtml(t.chapter)+' '+c.number+' · '+escapeHtml(tr(c.title))+'</option>'
         ).join('')+'</optgroup>').join('');
@@ -123,7 +123,7 @@
         '<div class="discover-grade-grid">'+visibleGrades.map(gradeCard).join('')+'</div></section>'+
         '</div>';
     }else{
-      const g=grades.find(x=>x.grade===grade)||grades[0];
+      const g=visibleGrades.find(x=>x.grade===grade)||visibleGrades[0];
       // Chapter-first directory: a single compact, interactive heading followed
       // immediately by Chapter 1. Class switching expands in document flow.
       body='<header class="discover-class-header">'+
