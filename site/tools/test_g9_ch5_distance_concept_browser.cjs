@@ -48,7 +48,7 @@ async function main(){
         assert.equal(await media.getAttribute('preload'),'none','Do not prefetch media before explicit play');
         assert.equal(await media.evaluate(v=>v.paused),true,'No autoplay');
         assert.equal(await media.evaluate(v=>v.controls),true);
-        assert.match(await media.getAttribute('src'),/triggle-g9-distance-formula-en\.mp4$/);
+        assert.equal(await media.getAttribute('src'),'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g9-ch5-distance-formula/8ada907f59bf11788bad196fc8e3ec876de4bc5d98caef53fa50368d78277323.mp4','Player must request Cloudflare R2 directly');
         await dialog.locator('.sp2-concept-video-close').tap();
         // dialog.close() emits its close event asynchronously. Wait for the app's
         // event-driven media teardown instead of asserting within the same tick.
