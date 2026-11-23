@@ -25,7 +25,7 @@ async function main(){
   try {
     browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),args:['--no-sandbox']});
     for(const width of [320,360,390,412]){
-      const context=await browser.newContext({viewport:{width,height:700},hasTouch:true,isMobile:true,serviceWorkers:'block'});
+      const context=await browser.newContext({viewport:{width,height:width===320?568:700},hasTouch:true,isMobile:true,serviceWorkers:'block'});
       const page=await context.newPage();
       const errors=[];
       page.on('pageerror',e=>errors.push(e.message));
@@ -46,7 +46,7 @@ async function main(){
           nodes=>nodes.every(n=>n.getBoundingClientRect().height>=44&&n.getBoundingClientRect().width>=44)),'Touch targets >=44 CSS px');
         assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No EN overflow at '+width);
         const lastBadge=await page.locator('.g9a-powers .g9a-chip').last().boundingBox();
-        assert.ok(lastBadge && lastBadge.y+lastBadge.height<=700,'Core idea fits the first 700px at '+width);
+        assert.ok(lastBadge && lastBadge.y+lastBadge.height<=(width===320?568:700),'Core idea fits first viewport; width='+width+' bottom='+(lastBadge?Math.round(lastBadge.y+lastBadge.height):'none'));
         await page.locator('.g9a-choices button').nth(1).tap();
         assert.match(await page.locator('.g9a-verdict').innerText(),/exponent −1/);
         assert.equal(await page.locator('.g9a-invalid').count(),1);
