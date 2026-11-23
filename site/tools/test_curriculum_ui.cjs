@@ -357,6 +357,8 @@ async function main() {
         await page.locator('#discoveryView').waitFor({state:'visible'});
         assert.equal(await page.locator('#lessonCard').isVisible(),false,'Home must not open an unrelated question');
         assert.match(await page.locator('#homeBtn').innerText(), /Home/);
+         assert.deepEqual(await page.locator('#sideClasses button b').allTextContents(),['9','10'],'Sidebar contains only active grades');
+         assert.deepEqual(await page.locator('#classDock button strong').allTextContents(),['9','10'],'Grade dock contains only active grades');
         assert.deepEqual(await page.locator('.discover-grade-grid [data-grade]').evaluateAll(nodes=>nodes.map(n=>Number(n.dataset.grade))),[9,10]);
         assert.equal(await page.locator('a[href="./playground.html"]').count(),0,'Retire all Trigonometry Basics shortcuts');
         assert.equal(await page.locator('.discover-home-minimal > section').count(),2,
