@@ -94,7 +94,7 @@ async function main(){
    await page.locator('#crumb .crumb-link').nth(1).click();
    assert.equal(await page.locator('#pathDialog').evaluate(el=>el.open),true,'Chapter picker remains accessible');
    await page.locator('#pathClose').click();
-   for(const [grade,id] of [[9,'g9-ch9-ex9.1-q4'],[11,'c11-3-3-1-1'],[12,'c12-4-4-1-1']]){
+   for(const [grade,id] of [[9,'g9-ch9-ex9.1-q4'],[10,'c10-1-1-2-q5']]){
     await page.goto(base+'/index.html?class='+grade+'&question='+id);
     await page.locator('#stepsList .final-answer-step').waitFor({state:'visible'});
     assert.equal(await page.locator('#allChaptersButton').isVisible(),false,'Simplified navigation, Grade '+grade);
@@ -106,7 +106,7 @@ async function main(){
    assert.deepEqual(errors,[],'No browser exceptions at '+width);
    await ctx.close();
   }
-  console.log('PASS adaptive reader across Grades 9–12: long question, full steps, one scroll, compact dock, question jump, Tamil, screenshots.');
+  console.log('PASS adaptive reader across active Grades 9–10: long question, full steps, one scroll, compact dock, question jump, Tamil, screenshots.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
