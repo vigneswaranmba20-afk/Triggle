@@ -107,188 +107,20 @@ async function main() {
     await page.locator('#chapterOverview').waitFor({ state: 'visible' });
   }
   try {
-    for(const width of [320,390,1280]){
-      await check('Class 12 visual lesson opens full-screen on one tap and resets after close at '+width+'px',async()=>{
-        const ctx=await context(width);
-        // Deterministic browser test: local reviewed WebM is the backup if R2 cannot be reached.
-        await ctx.route('https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/**',route=>route.abort());
-        const page=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-2');
-        const button=page.locator('#visualLessonBtn');
-        await button.waitFor({state:'visible'});
-        assert.equal(await page.locator('#quickSteps').isVisible(),true,'Written quick solution first');
-        assert.equal(await page.locator('#answerBox').isVisible(),false,'Separate answer card removed');
-        assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Answer highlighted at the end of How it works');
-        assert.equal(await page.locator('#vlInlinePanel').count(),0,'No inline player should require scrolling');
-        assert.equal(await page.locator('#vlFullscreen').count(),0,'No redundant fullscreen button');
-        assert.equal(await page.locator('#tabQuick').count(),0,'Redundant Quick solution button removed');
-        assert.equal(await page.locator('#quickSteps').isVisible(),true,'Complete Quick solution remains visible');
-        assert.match(await button.innerText(),/Check out the video explanation/);
-        assert.equal(await button.getAttribute('aria-haspopup'),'dialog');
-        if(width<=390){
-          assert.equal(await page.locator('#focusNavToggle').isVisible(),false,
-            'The reader no longer needs a floating navigation close X');
-          assert.equal(await page.locator('#questionNavDock').isVisible(),true,
-            'Question navigation remains visible while the video action is available');
-        }
-        await button.click();
-        const viewer=page.locator('#visualLessonDialog');
-        await viewer.waitFor({state:'visible'});
-        const original='Find x in −3π ≤ x ≤ 3π for which sin x = −1.';
-        assert.equal((await page.locator('#vlQuestion').innerText()).trim(),original,
-          'Full, exact textbook question appears above the video');
-        assert.equal((await page.locator('#vlQuestionSummary').textContent()).trim(),'Full question');
-        assert.equal(await page.locator('#vlQuestionDetails').isVisible(),true,
-          'Question is always visible, not collapsed behind a disclosure');
-        const layout=await page.evaluate(()=>{
-          const q=document.querySelector('#vlQuestionDetails').getBoundingClientRect();
-          const player=document.querySelector('#vlVideoWrap').getBoundingClientRect();
-          return {qTop:q.top,qBottom:q.bottom,qRight:q.right,
-            playerTop:player.top,playerHeight:player.height,
-            viewportWidth:innerWidth,viewportHeight:innerHeight};
-        });
-        assert.ok(layout.qBottom<=layout.playerTop+1,
-          'The full question must appear directly before the video');
-        assert.ok(layout.qTop>=0&&layout.qBottom<layout.viewportHeight&&layout.qRight<=layout.viewportWidth+1,
-          'Question must be visible without scrolling or horizontal clipping');
-        assert.ok(layout.playerHeight>140,'Video should retain useful height below the question');
-        assert.equal(await page.locator('#vlDownloadHelp').isVisible(),false,
-          'Do not show download instructions when R2 downloads are disabled');
-        const bounds=await viewer.evaluate(el=>({left:el.getBoundingClientRect().left,top:el.getBoundingClientRect().top,width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height,vw:innerWidth,vh:innerHeight}));
-        assert.ok(bounds.left>=-1&&bounds.left<=1 && bounds.top>=-1&&bounds.top<=1,'Dialog starts at viewport origin');
-        assert.ok(bounds.width>=bounds.vw-2 && bounds.height>=bounds.vh-2,'Dialog fills viewport without a second fullscreen tap');
-        assert.equal(await page.locator('#vlVideo').isVisible(),true,'Viewer shows native video');
-        assert.equal(await page.locator('#vlDriveFrame').isVisible(),false,'Drive is not used for the R2 lesson');
-        const sources=await page.locator('#vlVideo').evaluate(el=>({
-          mp4:el.querySelector('source[type^="video/mp4"]')?.src,
-          webm:el.querySelector('source[type^="video/webm"]')?.src,
-          paused:el.paused,autoplay:el.autoplay,preload:el.preload
-        }));
-        assert.equal(sources.mp4,'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/triggle-class12-ex4-1-q1-ii%20(1).mp4');
-        assert.match(sources.webm,/\/videos\/triggle-class12-ex4-1-q1-ii\.webm$/);
-        assert.equal(sources.autoplay,false,'Do not autoplay with sound');
-        assert.equal(sources.preload,'none');
-        const closeColor=await page.locator('#vlClose').evaluate(el=>getComputedStyle(el).color);
-        assert.equal(closeColor,'rgb(171, 23, 61)','Close action must be cherry-red');
-        if(width===390){
-          await page.evaluate(async()=>{
-            const el=document.getElementById('vlVideo');
-            el.muted=true;
-            await el.play();
-          });
-          await page.waitForFunction(()=>document.getElementById('vlVideo').currentTime>0.25,null,{timeout:15000});
-          assert.match(await page.locator('#vlVideo').evaluate(el=>el.currentSrc),/\.webm$/,'R2 network failure should play local WebM backup');
-        }
-        await page.locator('#vlClose').click();
-        await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
-        assert.equal(await button.isVisible(),true,'Return to the original question CTA');
-        assert.match(await button.innerText(),/Check out the video explanation/);
-        assert.equal(await page.locator('#vlMp4Source').getAttribute('src'),null,'Close unloads media');
-        await button.click();
-        await viewer.waitFor({state:'visible'});
-        await page.locator('#vlClose').click();
-        await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
-        await noOverflow(page,'full-screen lesson after close at '+width+'px');
-        await gotoWithControls(page,url+'/index.html?class=12&question=c12-4-4-1-1');
-        await page.waitForFunction(()=>window.TriggleVisualPlayer?.status.questionId===null);
-        assert.equal(await page.locator('#visualLessonBtn').isVisible(),false,'Video does not leak to other questions');
-      });
-    }
-    await check('R2 videos use the same instant full-viewport player on mobile',async()=>{
-      const ctx=await context(390);
-      const origin='https://videos.triggle.example';
-      await ctx.route('**/data/video-lessons.json',route=>route.fulfill({
-        status:200,contentType:'application/json',body:JSON.stringify({lessons:[{
-          ...require('../data/video-lessons.json').lessons[0],
-          provider:'cloudflare-r2',video:origin+'/grade-12/chapter-4/q1-ii/en.mp4',
-          webm:origin+'/grade-12/chapter-4/q1-ii/en.webm',downloadAllowed:false
-        }]})
-      }));
-      await ctx.route(origin+'/**',route=>route.abort());
-      const page=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-2');
-      await page.locator('#visualLessonBtn').waitFor({state:'visible'});
-      assert.equal(await page.locator('#quickSteps').isVisible(),true);
-      await page.locator('#visualLessonBtn').click();
-      await page.locator('#visualLessonDialog').waitFor({state:'visible'});
-      const src=await page.locator('#vlVideo').evaluate(el=>({
-        mp4:el.querySelector('source[type^="video/mp4"]')?.src,
-        webm:el.querySelector('source[type^="video/webm"]')?.src
-      }));
-      assert.equal(src.mp4,origin+'/grade-12/chapter-4/q1-ii/en.mp4');
-      assert.equal(src.webm,origin+'/grade-12/chapter-4/q1-ii/en.webm');
-      assert.equal(await page.locator('#vlDownload').isVisible(),false,'No cross-origin download promise');
-      await page.locator('#vlClose').click();
-      await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
-      assert.match(await page.locator('#visualLessonBtn').innerText(),/Check out the video explanation/);
-    });
-    await check('Tamil lesson action opens full-screen and returns to Tamil label',async()=>{
-      const page=await visit(await context(390),'/index.html?class=12&question=c12-4-4-1-2');
-      await page.locator('#visualLessonBtn').waitFor({state:'visible'});
-      await page.locator('#langTa').click();
-      assert.match(await page.locator('#visualLessonBtn').innerText(),/காணொளி/);
-      await page.locator('#visualLessonBtn').click();
-      await page.locator('#visualLessonDialog').waitFor({state:'visible'});
-      assert.match(await page.locator('#vlCloseLabel').innerText(),/கேள்விக்குத் திரும்பு/);
-      assert.equal((await page.locator('#vlQuestionSummary').textContent()).trim(),'முழுக் கேள்வி');
-      assert.equal((await page.locator('#vlQuestion').innerText()).trim(),
-        '−3π ≤ x ≤ 3π வரம்பில் sin x = −1 ஆகும் x மதிப்புகளைக் காண்க.',
-        'Tamil interface shows the exact Tamil version of the textbook question');
-      await page.locator('#vlClose').click();
-      await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
-      assert.match(await page.locator('#visualLessonBtn').innerText(),/காணொளி/);
-    });
-    await check('Google Drive lesson preview is safe, mobile friendly and question-specific',async()=>{
-      const ctx=await context(390);
-      const fileId='1A2bC3dE4fG5hI6jK7lM8nO9pQ';
-      await ctx.route('**/data/video-lessons.json',route=>route.fulfill({
-        status:200,contentType:'application/json',body:JSON.stringify({schemaVersion:1,lessons:[
-          {questionId:'c12-4-4-1-2',status:'ready',provider:'google-drive',fileId,
-           language:'en',class:12,exercise:'4.1',question:'Q1(ii)',
-           title:{en:'Solving sine x equals negative one',ta:'சைன் கோணத் தீர்வுகள்'}}
-        ]})
-      }));
-      await ctx.route('https://drive.google.com/**',route=>route.fulfill({
-        status:200,contentType:'text/html',body:'<!doctype html><title>Drive preview fixture</title>'
-      }));
-      const page=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-2');
-      await page.locator('#visualLessonBtn').waitFor({state:'visible'});
-      assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),null,
-        'Drive must not load in background without a click');
-      await page.locator('#visualLessonBtn').click();
-      await page.locator('#visualLessonDialog').waitFor({state:'visible'});
-      assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),
-        'https://drive.google.com/file/d/'+fileId+'/preview');
-      assert.equal(await page.locator('#vlDriveFrame').isVisible(),true);
-      assert.equal((await page.locator('#vlQuestion').innerText()).trim(),
-        'Find x in −3π ≤ x ≤ 3π for which sin x = −1.',
-        'Legacy Drive lessons also show the exact question above the video');
-      assert.equal(await page.locator('#vlVideo').isVisible(),false);
-      assert.equal(await page.locator('#vlSpeed').isVisible(),false,
-        'Drive embeds have their own controls');
-      assert.equal(await page.locator('#vlFullscreen').isVisible(),false);
-      assert.equal(await page.locator('#vlDownload').getAttribute('href'),
-        'https://drive.google.com/file/d/'+fileId+'/view');
-      assert.match(await page.locator('#vlDownload').innerText(),/Open in Google Drive/);
-      await noOverflow(page,'Drive preview on Android phone');
-      await page.locator('#vlClose').click();
-      await page.waitForFunction(()=>!document.querySelector('#visualLessonDialog').open);
-      assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),null,
-        'Drive playback must stop when leaving lesson dialog');
-      const unrelated=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-1');
-      await unrelated.waitForTimeout(250);
-      assert.equal(await unrelated.locator('#visualLessonBtn').isVisible(),false,
-        'A video for Q1(ii) must not appear on Q1(i)');
-    });
-    await check('Unverified Google Drive file IDs never enable visual playback',async()=>{
-      const ctx=await context(390);
-      await ctx.route('**/data/video-lessons.json',route=>route.fulfill({
-        status:200,contentType:'application/json',body:JSON.stringify({lessons:[
-          {questionId:'c12-4-4-1-2',status:'ready',provider:'google-drive',fileId:'../../invalid',language:'en'}
-        ]})
-      }));
-      const page=await visit(ctx,'/index.html?class=12&question=c12-4-4-1-2');
-      await page.waitForTimeout(300);
-      assert.equal(await page.locator('#visualLessonBtn').isVisible(),false);
-      assert.equal(await page.locator('#vlDriveFrame').getAttribute('src'),null);
+    await check('Retired Grade 11/12 URLs return to the active 9–10 home',async()=>{
+      const page=await visit(await context(390));
+      for(const route of [
+        '/index.html?class=11','/index.html?class=12&chapter=g12-ch1',
+        '/index.html?class=9&chapter=g11-ch2','/index.html?question=c12-4-4-1-2',
+        '/matrix-pilot.html','/grades-legacy.html?class=11','/grades.html?class=12'
+      ]){
+        await gotoWithControls(page,url+route);
+        await page.waitForFunction(()=>!new URL(location.href).searchParams.has('class')&&!new URL(location.href).searchParams.has('chapter')&&!new URL(location.href).searchParams.has('question'));
+        assert.equal(await page.locator('.discover-grade-grid [data-grade]').count(),2,route);
+        assert.equal(await page.locator('#lessonCard').isVisible(),false,route);
+      }
+      await page.evaluate(()=>{history.pushState(null,'','?class=12&chapter=g12-ch1');dispatchEvent(new PopStateEvent('popstate'))});
+      assert.equal(new URL(page.url()).searchParams.has('class'),false,'Browser history cannot re-open Grade 12');
     });
     // Adaptive reader: Previous/Next remain reachable while the whole page scrolls.
     for(const width of [320,390]){
@@ -519,12 +351,12 @@ async function main() {
       });
     }
     await check('Chapter-first class directory translates and offers accessible keyboard navigation',async()=>{
-      const page=await visit(await context(390),'/index.html?class=11&browse=chapters');
-      assert.match(await page.locator('.discover-class-header h1').innerText(),/Class 11 Mathematics/);
-      assert.match(await page.locator('.discover-class-count').innerText(),/12 chapters/);
+      const page=await visit(await context(390),'/index.html?class=9&browse=chapters');
+      assert.match(await page.locator('.discover-class-header h1').innerText(),/Class 9 Mathematics/);
+      assert.match(await page.locator('.discover-class-count').innerText(),/9 chapters/);
       await page.locator('#langTa').click();
-      assert.match(await page.locator('.discover-class-header h1').innerText(),/வகுப்பு 11 கணிதம்/);
-      assert.match(await page.locator('.discover-class-count').innerText(),/12 அத்தியாயங்கள்/);
+      assert.match(await page.locator('.discover-class-header h1').innerText(),/வகுப்பு 9 கணிதம்/);
+      assert.match(await page.locator('.discover-class-count').innerText(),/9 அத்தியாயங்கள்/);
       assert.equal(await page.locator('.discover-directory-summary').count(),0);
       await page.locator('.discover-class-switch').focus();
       await page.keyboard.press('Enter');
@@ -957,15 +789,12 @@ async function main() {
       assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
       await ctx.setOffline(false);
     });
-    await check('41 mapped chapters remain accessible while only Grades 9 and 10 appear in menus', async () => {
+    await check('Only 17 active chapters are reachable through student grade navigation', async () => {
       const page = await visit(await context(1280));
-      const expected = {9:9, 10:8, 11:12, 12:12};
+      const expected = {9:9, 10:8};
       let total = 0;
       for (const [grade, amount] of Object.entries(expected)) {
-        if(Number(grade)<=10)
-           await page.locator('#sideClasses button').filter({ has: page.locator('b', { hasText: grade }) }).click();
-         else
-           await gotoWithControls(page,url+'/index.html?class='+grade+'&browse=chapters');
+        await page.locator('#sideClasses button').filter({ has: page.locator('b', { hasText: grade }) }).click();
         assert.equal(await page.locator('#exerciseList [data-chapter-id]').count(), amount, `Grade ${grade} chapter count`);
         const chapters = await page.evaluate(g => window.TRIGGLE_CURRICULUM.grades.find(row => row.grade === Number(g)).chapters.map(ch => ({ id:ch.id, title:ch.title.en })), grade);
         for (const chapter of chapters) {
@@ -975,77 +804,26 @@ async function main() {
         }
         total += amount;
       }
-      assert.equal(total, 41);
+      assert.equal(total, 17);
       assert.equal(await page.evaluate(() => window.TRIGGLE_CURRICULUM.grades.flatMap(g => g.chapters).filter(c => c.status === 'published').length), 0);
     });
-    for (const width of [320, 390, 1280]) {
-      await check(`empty chapters, Tamil, navigation history and responsive layout at ${width}px`, async () => {
-        const page = await visit(await context(width), '/index.html?class=11&chapter=g11-ch1');
-        await page.locator('#chapterOverview').waitFor({ state: 'visible' });
-        assert.equal(await page.locator('#lessonCard').isVisible(), false);
-        assert.equal(await page.locator('#classicLink').isVisible(), false, 'Class 9 classic interface stays hidden on Grade 11 overview');
-        assert.equal(await page.locator('#visualLessonAction').isVisible(), false);
-        assert.equal(await page.locator('#markDone').isVisible(), false);
-        assert.match(await page.locator('#chapterOverview').innerText(), /under development/);
-        await noOverflow(page, `${width}px English overview`);
-        await page.keyboard.press('ArrowRight');
-        assert.equal(new URL(page.url()).searchParams.get('chapter'), 'g11-ch1', 'Question shortcuts do not navigate a planned chapter');
-        // The chapter title is intentionally NOT duplicated as a second breadcrumb.
-        // Students return to all chapters with one prominent Back action.
-        assert.equal(await page.locator('#crumb button').count(),1,'Class switcher is the only chapter-menu crumb');
-        await page.locator('.hub-back-class').click();
-        assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters','Back opens the same-grade chapter directory');
-        assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),12);
-        await page.goBack();
+    for(const width of [320,390,1280]){
+      await check('Active grade chapter navigation and Tamil at '+width+'px',async()=>{
+        const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch1');
         await page.locator('#chapterOverview').waitFor({state:'visible'});
-        await page.locator('#crumb button').first().click();
-        assert.equal(await page.locator('#pathDialog').evaluate(el => el.open), true);
-        assert.equal(await page.locator('#pathOptions .path-option').count(),4,'Class switcher shows four grades');
-        await page.keyboard.press('Escape');
-        assert.equal(await page.locator('#pathDialog').evaluate(el => el.open), false);
         await page.locator('#langTa').click();
-        assert.equal(await page.locator('html').getAttribute('lang'), 'ta');
-        assert.match(await page.locator('#chapterOverview').innerText(), /[\u0B80-\u0BFF]/);
-        assert.doesNotMatch(await page.locator('#chapterOverview').innerText(), /Planned|Worked examples|Prerequisites|Quizzes|Terminology/);
-        await noOverflow(page, `${width}px Tamil overview`);
-        if (width < 430) {
-          const browse = await page.locator('#browseBtn').boundingBox();
-          const basics = await page.locator('.basics-link').boundingBox();
-          assert.ok(browse && basics, 'Both header links remain visible');
-          const overlapX = Math.min(browse.x + browse.width, basics.x + basics.width) - Math.max(browse.x, basics.x);
-          const overlapY = Math.min(browse.y + browse.height, basics.y + basics.height) - Math.max(browse.y, basics.y);
-          assert.ok(overlapX <= 1 || overlapY <= 1, `${width}px Tamil header controls must not overlap`);
-          for (const selector of ['#browseBtn', '.basics-link']) {
-            const fits = await page.locator(selector).evaluate(el => el.scrollWidth <= el.clientWidth + 1);
-            assert.ok(fits, `${width}px ${selector} text must fit its control`);
-          }
-        }
-        if (process.env.TRIGGLE_SCREENSHOTS_DIR) {
-          await fs.mkdir(process.env.TRIGGLE_SCREENSHOTS_DIR, { recursive:true });
-          await page.screenshot({ path:path.join(process.env.TRIGGLE_SCREENSHOTS_DIR, `curriculum-${width}-ta.png`), fullPage:true });
-        }
-        await selectChapter(page, 'g11-ch2');
-        assert.equal(new URL(page.url()).searchParams.get('chapter'), 'g11-ch2');
+        assert.equal(await page.locator('html').getAttribute('lang'),'ta');
+        assert.equal(await page.locator('#chapterOverview').isVisible(),true);
+        await noOverflow(page,'Active Grade 9 Tamil chapter');
+        await page.locator('.hub-back-class').click();
+        assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
+        assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
         await page.goBack();
-        await page.waitForFunction(() => new URL(location.href).searchParams.get('chapter') === 'g11-ch1');
-        await page.reload();
-        assert.equal(await page.locator('#chapterOverview').isVisible(), true);
-        assert.equal(await page.locator('html').getAttribute('lang'), 'ta');
-        await noOverflow(page, `${width}px restored overview`);
-        await gotoWithControls(page,url + '/index.html?class=9&question=c9-exercise-6-1-q1');
-        await page.locator('#lessonCard').waitFor({ state: 'visible' });
-        await noOverflow(page, `${width}px retained Tamil exercise`);
-        await selectChapter(page, 'g9-ch6');
-        assert.equal(await page.locator('.hub-section-card[data-hub-section="examples"]').count(),0);
-        await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
-        await page.locator('.hub-exercise-link').first().click();
-        assert.match(await page.locator('#questionHead').innerText(),/(?:Exercise|பயிற்சி) 6\.1/);
-        assert.equal(await page.locator('#lessonCard').isVisible(), true);
-        await noOverflow(page, `${width}px exercise from chapter`);
-        await page.close();
+        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch1');
+        assert.equal(await page.locator('#chapterOverview').isVisible(),true);
       });
     }
-    await check('all 105 legacy deep links retain questions and working solutions', async () => {
+    await check('Active-grade legacy deep links retain questions and working solutions', async () => {
       const ctx = await context(1280);
       const page = await visit(ctx);
       // The immutable baseline identifies legacy questions exactly. New bulk
@@ -1060,7 +838,7 @@ async function main() {
       })), expected);
       assert.equal(links.length, 105);
       const archivedExamples=links.filter(link=>/(?:^|[-_])examples?(?:[-_]|$)/i.test(link.id));
-      const available=links.filter(link=>!archivedExamples.includes(link));
+      const available=links.filter(link=>Number(link.grade)<=10&&!archivedExamples.includes(link));
       assert.ok(archivedExamples.length>0&&archivedExamples.every(link=>!link.present),
         'Archived worked-example IDs are absent from the student reader');
       assert.ok(available.every(link=>link.present),'Legacy exercises remain in the reader');
@@ -1075,9 +853,9 @@ async function main() {
       }
       await page.close();
     });
-    await check('No Worked Examples in Grades 9–12, English/Tamil or old links',async()=>{
+    await check('No Worked Examples in active Grades 9–10, English/Tamil or old links',async()=>{
       const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch1');
-      for(const [grade,chapter] of [[9,'g9-ch1'],[10,'g10-ch1'],[11,'g11-ch1'],[12,'g12-ch1']]){
+      for(const [grade,chapter] of [[9,'g9-ch1'],[10,'g10-ch1']]){
         await gotoWithControls(page,url+'/index.html?class='+grade+'&chapter='+chapter);
         for(const language of ['en','ta']){
           await page.locator(language==='en'?'#langEn':'#langTa').click();
@@ -1283,7 +1061,7 @@ async function main() {
     });
     await check('service worker caches curriculum and supports an offline chapter reload', async () => {
       const ctx = await context(390, 'allow');
-      const page = await visit(ctx, '/index.html?class=12&chapter=g12-ch12');
+      const page = await visit(ctx, '/index.html?class=10&chapter=g10-ch8');
       await page.evaluate(async () => { await navigator.serviceWorker.ready; });
       await page.reload();
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
@@ -1296,7 +1074,7 @@ async function main() {
       await ctx.setOffline(true);
       await page.reload();
       await page.locator('#chapterOverview').waitFor({ state:'visible' });
-      assert.equal(new URL(page.url()).searchParams.get('chapter'), 'g12-ch12');
+      assert.equal(new URL(page.url()).searchParams.get('chapter'), 'g10-ch8');
       await noOverflow(page, 'offline mobile chapter');
       await ctx.setOffline(false);
     });
