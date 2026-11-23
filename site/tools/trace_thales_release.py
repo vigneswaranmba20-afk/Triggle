@@ -68,16 +68,18 @@ def _bump_script(text,name):
 
 
 def bump_sw(text):
-    # Retain the G.P./Grade 9 cache prefix and the audited AUD14-02 PWA refresh.
-    pattern=r"^(const CACHE=')([^'\r\n]*?)("+re.escape(CACHE_SUFFIX)+r")(';)"
-    def replace(m):
-        if TAG in m.group(2):
-            raise ValueError("Thales cache revision already recorded")
-        return m.group(1)+m.group(2)+"-"+TAG+m.group(3)+m.group(4)
-    updated,n=re.subn(pattern,replace,text,count=1)
-    if n!=1:
-        raise ValueError("Service-worker cache suffix unexpectedly changed")
-    return updated
+    """Replay the exact approved cache marker without assuming it is the last tag.
+
+    Existing historical cache suffix must still be present exactly once. The
+    only permitted change is insertion of the exact immutable Thales tag;
+    later independent PWA revisions remain byte-for-byte unchanged.
+    """
+    first,sep,tail=text.partition("\n")
+    if not sep or not first.startswith("const CACHE='") or not first.endswith("';"):
+        raise ValueError("Unexpected service-worker cache declaration")
+    if first.count(CACHE_SUFFIX)!=1 or "-"+TAG in first:
+        raise ValueError("Service-worker cache suffix missing, duplicated or already released")
+    return first.replace(CACHE_SUFFIX, "-"+TAG+CACHE_SUFFIX, 1)+sep+tail
 
 
 def update_site(root,url):
