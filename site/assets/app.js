@@ -8,6 +8,9 @@
  Object.assign(dictionary.ta,{backAllChapters:'அனைத்து அத்தியாயங்களுக்கும் திரும்பு',searchOptional:'தேடல் (விருப்பப்படி)',browse:'அத்தியாயங்கள்',exploreExercise:'அத்தியாயங்களும் பகுதிகளும்',search:'அத்தியாயம், பயிற்சி, வினாவைத் தேட…',chapter:'அத்தியாயம்',chapters:'அத்தியாயங்கள்',overview:'அத்தியாயக் கண்ணோட்டம்',planned:'திட்டமிடப்பட்டுள்ளது',drafting:'எழுதப்படுகிறது',review:'மீளாய்வில் உள்ளது',published:'வெளியிடப்பட்டது',existingQuestions:'ஏற்கெனவே உள்ள வினாக்கள்',chapterNotComplete:'ஏற்கெனவே உள்ள வினாக்களைப் பயிற்சி செய்யலாம். வினாக்கள் இருப்பதால் மட்டும் இந்த அத்தியாயம் முழுமையானது அல்லது மீளாய்வு செய்யப்பட்டது என்று பொருளல்ல.',contentPlanned:'முழு அத்தியாய உள்ளடக்கம் திட்டமிடப்பட்டுள்ளது. கற்றல் பகுதிகள் எழுதப்பட்டு மீளாய்வு செய்யப்பட்டதும் இங்கே இடம்பெறும்.',noQuestions:'இந்த அத்தியாயத்திற்கான வினாக்கள் திட்டமிடப்பட்டுள்ளன.',terminologyPending:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட வேண்டும்.',terminologyVerified:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட்டுள்ளன.',concepts:'கருத்துகள்',prerequisites:'முன்தேவைகள்',workedExamples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'குறுவினாத் தேர்வுகள்',unitExercise:'தொகுப்புப் பயிற்சி',chooseLanguage:'மொழி',closeNavigation:'வழிசெலுத்தலை மூடு',navigationLabel:'வகுப்பு, அத்தியாயம் மற்றும் பயிற்சி வழிசெலுத்தல்',searchLabel:'அத்தியாயங்களையும் வினாக்களையும் தேடுக',visualMathematics:'காட்சி வழிக் கணிதம்',textbookReferences:'பாடநூல் குறிப்புகள்',edition:'பதிப்பு',locator:'பாடநூலில் உள்ள இடம்',englishMedium:'ஆங்கிலவழி',tamilMedium:'தமிழ்வழி',archivedReference:'காப்பகப் பாடநூல் குறிப்புகள்; உங்கள் பள்ளி பரிந்துரைக்கும் பதிப்புடன் ஒப்பிடுங்கள்.',figureLabel:'பொருத்தமான கணிதப் படத்தைத் திற',completeSolution:'தீர்வு விளக்கம்',workedSolution:'தீர்வு விளக்கம்',navigateQuestions:'வினாக்களுக்குச் செல்லவும்',switchClass:'வகுப்பை மாற்றவும்',diagramDialog:'கணிதப் படம்',reviewState:'மீளாய்வு நிலை',unreviewed:'மீளாய்வு செய்யப்படவில்லை',in_review:'மீளாய்வில் உள்ளது',approved:'ஏற்கப்பட்டது',home:'முகப்பு',browse:'தலைப்பைத் தேடுக'});
  const ui=k=>dictionary[lang][k]||dictionary.en[k]||k;
  const classes=window.TRIGGLE_CLASSES||{};
+ // Public student routes are restricted until the revised higher-grade syllabus arrives.
+ const publicGrade=g=>Number(g)===9||Number(g)===10;
+ const restrictedRoute=p=>(p.has('class')&&!publicGrade(p.get('class')))||/^g1[12]-/.test(p.get('chapter')||'')||/^(?:c1[12]|g1[12])-/.test(p.get('question')||'');
  // Preserve source records while showing exercise questions, not worked examples.
  const isWorkedExample=item=>item?.kind==='textbook-example'||
    /(?:^|[-_])(?:worked[-_])?examples?(?:[-_]|$)/i.test(item?.id||'')||
@@ -29,8 +32,10 @@
  // Resume across grades uses the most recently opened lesson, not grade order.
  let lastOpened=load('triggle.lastOpened.v1',null);
  let lang='en';try{const saved=localStorage.getItem('triggle-language');if(saved==='ta'||saved==='"ta"')lang='ta'}catch{}
- const url=new URL(location.href), requested=Number(url.searchParams.get('class'));
- let grade=classes[requested]?requested:9;
+ const url=new URL(location.href);
+ if(restrictedRoute(url.searchParams)){history.replaceState(null,'',location.pathname);url.search='';}
+ const requested=Number(url.searchParams.get('class'));
+ let grade=publicGrade(requested)&&classes[requested]?requested:9;
  let current=classes[grade].items.find(x=>x.id===url.searchParams.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];
  let chapterOverview=url.searchParams.has('question')?null:chapterList().find(c=>c.id===url.searchParams.get('chapter'))||null;
  let homeView=!url.searchParams.has('class')&&!url.searchParams.has('question')&&!url.searchParams.has('chapter');
@@ -127,7 +132,7 @@
    $('discoveryView').focus({preventScroll:true});
  }
  function changeGrade(g){
-   g=Number(g);if(!classes[g])return;
+   g=Number(g);if(!publicGrade(g)||!classes[g])return;
    grade=g;homeView=false;classIndex=true;chapterOverview=null;chapterSection=null;conceptIndex=null;questionOrigin=null;
    current=classes[g].items.find(x=>x.id===lastByGrade[g])||classes[g].items[0];
    $('search').value='';updateUrl();render();closeDrawer();resetScroll();
@@ -158,12 +163,12 @@
    $('chapterOverview').focus({preventScroll:true});
  }
  function openChapterFor(g,chapter){
-   if(!classes[g])return;
+   if(!publicGrade(g)||!classes[g])return;
    grade=g;current=classes[g].items.find(x=>x.id===lastByGrade[g])||classes[g].items[0];
    selectChapter(chapter);
  }
  function openQuestionFor(g,item){
-   if(!classes[g])return;
+   if(!publicGrade(g)||!classes[g])return;
    grade=g;homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;questionOrigin=null;current=item;
    updateUrl();remember();render();closeDrawer();resetScroll();
    $('lessonCard').focus({preventScroll:true});
@@ -734,6 +739,6 @@
   if(e.target.matches('input,textarea,select,button')||e.target.closest('.triggle-tex[tabindex="0"]')||$('figureDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
   if(e.key==='ArrowRight'){e.preventDefault();navMove(1)}else if(e.key==='ArrowLeft'){e.preventDefault();navMove(-1)}
  });
- window.addEventListener('popstate',()=>{const p=new URL(location.href).searchParams,g=Number(p.get('class'));grade=classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});
+ window.addEventListener('popstate',()=>{let p=new URL(location.href).searchParams;if(restrictedRoute(p)){history.replaceState(null,'',location.pathname);p=new URL(location.href).searchParams;}const g=Number(p.get('class'));grade=publicGrade(g)&&classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});
  mobile.addEventListener('change',onBreakpoint);onBreakpoint();remember();updateUrl(true);render();
 })();
