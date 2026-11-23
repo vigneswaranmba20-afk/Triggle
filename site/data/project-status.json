@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "14b02b612423bfaefd7b1e2d285815f7954a7f25",
-  "updatedAt": "2026-11-23T04:55:16Z",
+  "sourceCommit": "f7abb67a7411999f46f0689ff2b031fddebab872",
+  "updatedAt": "2026-11-23T08:11:31Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -31,6 +31,7 @@
     "site/data/g10-ch5-concepts.js": "4b03935c845e37127c0e92259e23d97b67cca281f063876deccab6b966c7db8d",
     "site/data/g10-ch6-concepts.js": "fe53a40acdd58d6bae587a20bc19a091de17adc0e403f1c73ab5760671ebf36f",
     "site/data/g9-algebra-chapter.js": "63bdd314c52b309eaa6952f57f70fb1587c611caedd94ff9bf592c9455974455",
+    "site/data/g9-ch5-distance-concept.js": "ed27e094388776cbf0befbe75ca49c05f27b11cb30eb8684fc17187a5504315a",
     "site/data/g9-clear-math.js": "6b2fb822d4bec117e3beef8a864a8a69588acdbd646ec18f6c895c5ec0d5e6a8",
     "site/data/g9-mensuration-chapter.js": "509a8967476ef4023f043286e4a7ef373951e2039902692a6468147f46cc8c28",
     "site/data/g9-mensuration-remaining.js": "f720a1272691e653343bf8cc23e9876947079b15e631fb18a36974f8453cd8dc",
@@ -151,7 +152,7 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9.js": "5c0b88abd665d77d1f5b8cbb3e57e4204dbb89783040ff4b48d5814cb650d758",
-    "site/index.html": "9f553b4b1807843705b52846b47fcf6dc9a89d9b69b3bd036ee08f8ab4b3351e",
+    "site/index.html": "1802f024f67d8e98e5ae035397ea3bf44a44c0d1c9e3d53ef499a6bbbd404255",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {

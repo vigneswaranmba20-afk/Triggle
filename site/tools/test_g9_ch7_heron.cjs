@@ -61,7 +61,7 @@ const hub=load('assets/chapter-hub.js'),html=load('index.html'),sw=load('service
 assert.match(hub,/chapter\.id==='g9-ch7'\?\(window\.TRIGGLE_MENSURATION_PATH\?\.stages\|\|\[\]\)/);
 assert.match(hub,/TriggleG9MensurationLabs\?\.mount\(stage,host,lang\)/);
 assert.match(hub,/chapter\.id==='g9-ch7'\|\|chapter\.id==='g9-ch9'/);
-assert.match(hub,/stageQuestions,chapter\.id==='g9-ch7'/);
+assert.match(hub,/stageQuestions,chapter\.id==='g9-ch5'\|\|chapter\.id==='g9-ch7'/,'Ch5 addition must preserve Ch7 top Next control');
 for(const p of ['data/g9-mensuration-chapter.js','data/g9-mensuration-remaining.js','assets/g9-mensuration-remaining.js','assets/g9-mensuration-concepts.css']){
   assert.ok(html.includes(p),'missing HTML asset '+p);
   assert.ok(sw.includes('./'+p),'missing offline asset '+p);
