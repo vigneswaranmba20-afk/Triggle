@@ -8,14 +8,15 @@ const records=load(),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.
 const normalize=s=>String(s??'').replace(/\s+/g,' ').trim();
 async function inspect(page,q,lang){
  const state=await page.evaluate(({q,lang})=>{
-  const p=window.TriggleG9Math.get(q);
+  const override=window.TriggleG9Ch5Overrides?.get(q.id)||null;
+  const p=override||window.TriggleG9Math.get(q)||q;
   const count=v=>Array.isArray(v)?v.reduce((n,x)=>n+count(x),0):v?.questionOption?count(v.questionOption):v?.latex?1:0;
   const fallback=selector=>{const el=document.querySelector(selector)?.cloneNode(true);if(!el)return null;
    el.querySelectorAll('.triggle-tex').forEach(math=>math.replaceWith(document.createTextNode(math.dataset.mathFallback)));
    el.querySelectorAll('math.triggle-math[aria-label]').forEach(math=>math.replaceWith(document.createTextNode(math.getAttribute('aria-label'))));
    const raised={'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹','n':'ⁿ','k':'ᵏ'};
    el.querySelectorAll('sup').forEach(sup=>sup.replaceWith(document.createTextNode([...sup.textContent].map(c=>raised[c]||c).join(''))));
-   el.querySelectorAll('details').forEach(d=>d.remove());return el.textContent;
+   el.querySelectorAll('details,.triggle-mcq-choices,.triggle-mcq-feedback').forEach(d=>d.remove());return el.textContent;
   };
   const hint=document.querySelector('details.why-step-g9')?window.TriggleWhyStepG9.hints[q.id]:null;
   const expected=count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null)+count(p.questionMath[lang]||p.questionMath.en)+count(p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s)=>n+count(s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);
@@ -43,15 +44,16 @@ async function inspect(page,q,lang){
    errors:document.querySelectorAll('[data-math-error]').length,
    question:fallback('#questionText'),answer:fallback('.final-answer-value'),
    steps:[...document.querySelectorAll('#stepsList li.worked-step:not(.final-answer-step)')].map((li,i)=>({reason:fallback('#stepsList li.worked-step:nth-child('+(i+1)+') .step-reason'),eq:fallback('#stepsList li.worked-step:nth-child('+(i+1)+') .step-equation')})),
-   formulas};
+   formulas,override};
  },{q,lang});
+ const refQ=state.override||q;
  const label=q.id+' '+lang+' '+state.width;
  assert.equal(state.errors,0,label+' no renderer fallback');
  assert.equal(state.rendered,state.expected,label+' every authored formula renders exactly once');
- assert.equal(normalize(state.question),normalize(q.q[lang]||q.q.en),label+' question wording');
- assert.equal(normalize(state.answer),normalize(q.answer?.[lang]||q.answer),label+' final answer');
- assert.equal(state.steps.length,q.steps.length,label+' all steps retained');
- state.steps.forEach((s,i)=>{assert.equal(normalize(s.reason),normalize(q.steps[i][lang]||q.steps[i].en),label+' reason '+i);assert.equal(normalize(s.eq),normalize(q.steps[i].eq),label+' equation '+i);});
+ assert.equal(normalize(state.question),normalize(refQ.q[lang]||refQ.q.en),label+' question wording');
+ assert.equal(normalize(state.answer),normalize(refQ.answer?.[lang]||(lang==='ta'&&refQ.chapter==='5'?refQ.answerTa:null)||refQ.answer),label+' final answer');
+ assert.equal(state.steps.length,refQ.steps.length,label+' all steps retained');
+ state.steps.forEach((s,i)=>{assert.equal(normalize(s.reason),normalize(refQ.steps[i][lang]||refQ.steps[i].en),label+' reason '+i);assert.equal(normalize(s.eq),normalize(refQ.steps[i].eq),label+' equation '+i);});
  assert.equal(state.width,page.viewportSize().width,label+' viewport stays at its requested mobile width');
  assert(state.pageWidth<=state.width+1,label+' no page overflow');
  for(const f of state.formulas){
