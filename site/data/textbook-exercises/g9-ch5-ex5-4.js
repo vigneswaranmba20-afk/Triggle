@@ -35,7 +35,7 @@
     steps,
     answer: ansEn,
     answerTa: ansTa,
-    answerMath: tex(ansLatex, ansEn, true),
+    answerMath: { en: tex(ansLatex, ansEn, true), ta: tex(ansLatex, ansTa, true) },
     sourceFidelity: {
       status: 'page-visual-checked',
       sourcePdfPage: { en: 220, ta: 234 },

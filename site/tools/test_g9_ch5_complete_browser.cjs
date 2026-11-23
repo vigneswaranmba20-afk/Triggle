@@ -85,7 +85,7 @@ function startServer() {
       assert.equal(katexErrors, 0, `Zero KaTeX errors at ${width}px`);
 
       if (width === 390) {
-        const shotDir = '/home/antigravity/mission_pack/screenshots';
+        const shotDir = process.env.TRIGGLE_SHOT_DIR || path.join(__dirname, '../../screenshots');
         fs.mkdirSync(shotDir, { recursive: true });
         await page.goto(`${baseUrl}?class=9&question=g9-ch5-ex5.1-q2`, { waitUntil: 'networkidle' });
         await page.screenshot({ path: path.join(shotDir, 'g9-ch5-ex51-q2-en-390.png'), fullPage: true });

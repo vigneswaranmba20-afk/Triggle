@@ -69,7 +69,7 @@ let optionRecords=0;
 for(const q of items){
  const before=JSON.stringify(q),p=get(q);assert(p,q.id);assert.equal(p.steps.length,q.steps.length);
  for(const lang of ['en','ta'])check(p.questionMath[lang]||p.questionMath.en,q.q[lang]||q.q.en,q.id+' '+lang);
- if(typeof q.answer==='object')for(const lang of ['en','ta'])check(p.answerMath[lang],q.answer[lang],q.id+' answer '+lang);
+ if(typeof q.answer==='object'||p.answerMath?.en){check(p.answerMath.en,q.answer?.en||q.answer,q.id+' answer en');if(p.answerMath.ta)check(p.answerMath.ta,q.answer?.ta||q.answerTa||q.answer,q.id+' answer ta');}
  else check(p.answerMath,q.answer,q.id+' answer');
  q.steps.forEach((s,i)=>{if(s.eq!==undefined)check(p.steps[i].math,s.eq,q.id+' step '+i);for(const lang of ['en','ta'])check(p.steps[i].reasonMath[lang]||p.steps[i].reasonMath.en,s[lang]||s.en,q.id+' reason '+i+' '+lang);});
  if(Array.isArray(p.questionMath.en)&&p.questionMath.en.some(part=>part?.questionOption)){

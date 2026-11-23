@@ -37,7 +37,7 @@
     steps,
     answer: ansEn,
     answerTa: ansTa,
-    answerMath: tex(ansLatex, ansEn, true),
+    answerMath: { en: tex(ansLatex, ansEn, true), ta: tex(ansLatex, ansTa, true) },
     sourceFidelity: {
       status: 'page-visual-checked',
       sourcePdfPage: { en: extra.enPdf || 209, ta: extra.taPdf || 222 },
@@ -235,8 +235,8 @@
       ['5. பின்வரும் புள்ளிகள் வரிசைப்படி எடுத்துக்கொள்ளப்பட்டால், அது ஓர் இணைகரத்தை அமைக்கும் என நிறுவுக.\n(i) ', tex('A(-3,1), B(-6,-7), C(3,-9), D(6,-1)', 'A(−3, 1), B(−6, −7), C(3, −9), D(6, −1)'), '   (ii) ', tex('A(-7,-3), B(5,10), C(15,8), D(3,-5)', 'A(−7, −3), B(5, 10), C(15, 8), D(3, −5)')],
       [
         step(
-          'In a parallelogram ABCD, both pairs of opposite sides are equal: AB = CD and BC = DA.',
-          'ஒரு நாற்கரம் ABCD இணைகரமாக இருக்க, அதன் எதிர்ப்பக்கங்கள் சமமாக இருக்க வேண்டும்: AB = CD மற்றும் BC = DA.',
+          'Use the Class 9 distance formula. In a parallelogram ABCD, both pairs of opposite sides are equal: AB = CD and BC = DA.',
+          'தொலைவு வாய்ப்பாட்டைப் பயன்படுத்துவோம். ஒரு நாற்கரம் ABCD இணைகரமாக இருக்க, அதன் எதிர்ப்பக்கங்கள் சமமாக இருக்க வேண்டும்: AB = CD மற்றும் BC = DA.',
           'AB = CD and BC = DA',
           'AB = CD \\quad\\text{and}\\quad BC = DA'
         ),
@@ -350,7 +350,7 @@
       'கிடை மற்றும் செங்குத்து அச்சுத்தொலைவு சமமான புள்ளி',
       '8. The abscissa of a point A is equal to its ordinate, and its distance from the point B(1, 3) is 10 units, What are the coordinates of A?',
       '8. புள்ளி A இன் x அச்சுத் தொலைவு அதன் y அச்சுத் தொலைவிற்குச் சமம். மேலும், B(1, 3) என்ற புள்ளியிலிருந்து அப்புள்ளி A ஆனது 10 அலகு தொலைவில் இருக்கிறது. எனில் A இன் அச்சுத் தொலைவுகளைக் காண்க.',
-      ['8. The abscissa of a point A is equal to its ordinate, and its distance from the point ', tex('B(1, 3)', 'B(1, 3)'), ' is 10 units. What are the coordinates of A?'],
+      ['8. The abscissa of a point A is equal to its ordinate, and its distance from the point ', tex('B(1, 3)', 'B(1, 3)'), ' is 10 units, What are the coordinates of A?'],
       ['8. புள்ளி A இன் x அச்சுத் தொலைவு அதன் y அச்சுத் தொலைவிற்குச் சமம். மேலும், ', tex('B(1, 3)', 'B(1, 3)'), ' என்ற புள்ளியிலிருந்து அப்புள்ளி A ஆனது 10 அலகு தொலைவில் இருக்கிறது. எனில் A இன் அச்சுத் தொலைவுகளைக் காண்க.'],
       [
         step(

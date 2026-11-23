@@ -54928,9 +54928,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\begin{aligned}P(-7,6)&=\\text{II},\\; Q(7,-2)=\\text{IV}\\\\R(-6,-7)&=\\text{III},\\; S(3,5)=\\text{I},\\; T(3,9)=\\text{I}\\end{aligned}",
-      "fallback": "P(−7, 6) = II Quadrant; Q(7, −2) = IV Quadrant; R(−6, −7) = III Quadrant; S(3, 5) = I Quadrant; T(3, 9) = I Quadrant",
-      "display": true
+      "en": {
+        "latex": "\\begin{aligned}P(-7,6)&=\\text{II},\\; Q(7,-2)=\\text{IV}\\\\R(-6,-7)&=\\text{III},\\; S(3,5)=\\text{I},\\; T(3,9)=\\text{I}\\end{aligned}",
+        "fallback": "P(−7, 6) = II Quadrant; Q(7, −2) = IV Quadrant; R(−6, −7) = III Quadrant; S(3, 5) = I Quadrant; T(3, 9) = I Quadrant",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\begin{aligned}P(-7,6)&=\\text{II},\\; Q(7,-2)=\\text{IV}\\\\R(-6,-7)&=\\text{III},\\; S(3,5)=\\text{I},\\; T(3,9)=\\text{I}\\end{aligned}",
+        "fallback": "P(−7, 6) = காற்பகுதி II; Q(7, −2) = காற்பகுதி IV; R(−6, −7) = காற்பகுதி III; S(3, 5) = காற்பகுதி I; T(3, 9) = காற்பகுதி I",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -55555,9 +55562,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}",
-      "fallback": "(i) Straight line parallel to x-axis; (ii) Straight line which lies on y-axis",
-      "display": true
+      "en": {
+        "latex": "\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}",
+        "fallback": "(i) Straight line parallel to x-axis; (ii) Straight line which lies on y-axis",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}",
+        "fallback": "(i) x-அச்சிற்கு இணையான நேர்க்கோடு; (ii) y-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -55711,9 +55725,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(i) Square};\\quad \\text{(ii) Trapezium}",
-      "fallback": "(i) Square; (ii) Trapezium",
-      "display": true
+      "en": {
+        "latex": "\\text{(i) Square};\\quad \\text{(ii) Trapezium}",
+        "fallback": "(i) Square; (ii) Trapezium",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\text{(i) Square};\\quad \\text{(ii) Trapezium}",
+        "fallback": "(i) சதுரம்; (ii) சரிவகம்",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -55894,9 +55915,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\begin{aligned}\\text{(i) }\\sqrt{10},&\\quad \\text{(ii) }2\\sqrt{26}\\\\\\text{(iii) }c-a,&\\quad \\text{(iv) }13\\end{aligned}",
-      "fallback": "(i) √10 units; (ii) 2√26 units; (iii) |c − a| (c − a); (iv) 13 units",
-      "display": true
+      "en": {
+        "latex": "\\begin{aligned}\\text{(i) }\\sqrt{10},&\\quad \\text{(ii) }2\\sqrt{26}\\\\\\text{(iii) }c-a,&\\quad \\text{(iv) }13\\end{aligned}",
+        "fallback": "(i) √10 units; (ii) 2√26 units; (iii) |c − a| (c − a); (iv) 13 units",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\begin{aligned}\\text{(i) }\\sqrt{10},&\\quad \\text{(ii) }2\\sqrt{26}\\\\\\text{(iii) }c-a,&\\quad \\text{(iv) }13\\end{aligned}",
+        "fallback": "(i) √10 அலகுகள்; (ii) 2√26 அலகுகள்; (iii) |c − a| (c − a); (iv) 13 அலகுகள்",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -56185,9 +56213,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(i) }AB=BC=CA=4\\sqrt{2};\\quad \\text{(ii) }AB=BC=CA=2",
-      "fallback": "(i) Equilateral (side 4√2); (ii) Equilateral (side 2)",
-      "display": true
+      "en": {
+        "latex": "\\text{(i) }AB=BC=CA=4\\sqrt{2};\\quad \\text{(ii) }AB=BC=CA=2",
+        "fallback": "(i) Equilateral (side 4√2); (ii) Equilateral (side 2)",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\text{(i) }AB=BC=CA=4\\sqrt{2};\\quad \\text{(ii) }AB=BC=CA=2",
+        "fallback": "(i) சமபக்க முக்கோணம் (பக்கம் 4√2); (ii) சமபக்க முக்கோணம் (பக்கம் 2)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -56401,9 +56436,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "P(2, 0)",
-      "fallback": "P(2, 0)",
-      "display": true
+      "en": {
+        "latex": "P(2, 0)",
+        "fallback": "P(2, 0)",
+        "display": true
+      },
+      "ta": {
+        "latex": "P(2, 0)",
+        "fallback": "P(2, 0)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -56588,9 +56630,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "(30,0),(-30,0),(0,30),(0,-30);\\quad d = 30\\sqrt{2}\\text{ units}",
-      "fallback": "Axes points: (30, 0), (−30, 0), (0, 30), (0, −30); distance between adjacent points = 30√2 units (opposite = 60 units)",
-      "display": true
+      "en": {
+        "latex": "(30,0),(-30,0),(0,30),(0,-30);\\quad d = 30\\sqrt{2}\\text{ units}",
+        "fallback": "Axes points: (30, 0), (−30, 0), (0, 30), (0, −30); distance between adjacent points = 30√2 units (opposite = 60 units)",
+        "display": true
+      },
+      "ta": {
+        "latex": "(30,0),(-30,0),(0,30),(0,-30);\\quad d = 30\\sqrt{2}\\text{ units}",
+        "fallback": "வெட்டுப் புள்ளிகள்: (30, 0), (−30, 0), (0, 30), (0, −30); அடுத்துள்ள இரு புள்ளிகளின் தொலைவு = 30√2 அலகுகள் (எதிரெதிர் = 60 அலகுகள்)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -56764,9 +56813,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\begin{aligned}\\text{(i) }(-4,-1),&\\quad\\text{(ii) }(0,-1)\\\\\\text{(iii) }(a+b,a),&\\quad\\text{(iv) }(1,-1)\\end{aligned}",
-      "fallback": "(i) (−4, −1); (ii) (0, −1); (iii) (a + b, a); (iv) (1, −1)",
-      "display": true
+      "en": {
+        "latex": "\\begin{aligned}\\text{(i) }(-4,-1),&\\quad\\text{(ii) }(0,-1)\\\\\\text{(iii) }(a+b,a),&\\quad\\text{(iv) }(1,-1)\\end{aligned}",
+        "fallback": "(i) (−4, −1); (ii) (0, −1); (iii) (a + b, a); (iv) (1, −1)",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\begin{aligned}\\text{(i) }(-4,-1),&\\quad\\text{(ii) }(0,-1)\\\\\\text{(iii) }(a+b,a),&\\quad\\text{(iv) }(1,-1)\\end{aligned}",
+        "fallback": "(i) (−4, −1); (ii) (0, −1); (iii) (a + b, a); (iv) (1, −1)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -57015,9 +57071,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "(-5, -3)",
-      "fallback": "(−5, −3)",
-      "display": true
+      "en": {
+        "latex": "(-5, -3)",
+        "fallback": "(−5, −3)",
+        "display": true
+      },
+      "ta": {
+        "latex": "(-5, -3)",
+        "fallback": "(−5, −3)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -57177,9 +57240,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "p = -15",
-      "fallback": "p = −15",
-      "display": true
+      "en": {
+        "latex": "p = -15",
+        "fallback": "p = −15",
+        "display": true
+      },
+      "ta": {
+        "latex": "p = -15",
+        "fallback": "p = −15",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -57313,9 +57383,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "(9,3),\\;(-5,5)\\text{ and }(1,1)",
-      "fallback": "(9, 3), (−5, 5) and (1, 1)",
-      "display": true
+      "en": {
+        "latex": "(9,3),\\;(-5,5)\\text{ and }(1,1)",
+        "fallback": "(9, 3), (−5, 5) and (1, 1)",
+        "display": true
+      },
+      "ta": {
+        "latex": "(9,3),\\;(-5,5)\\text{ and }(1,1)",
+        "fallback": "(9, 3), (−5, 5) மற்றும் (1, 1)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -57571,9 +57648,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\left(\\dfrac{9}{2},\\; \\dfrac{3}{2}\\right)",
-      "fallback": "(9/2, 3/2)",
-      "display": true
+      "en": {
+        "latex": "\\left(\\dfrac{9}{2},\\; \\dfrac{3}{2}\\right)",
+        "fallback": "(9/2, 3/2)",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\left(\\dfrac{9}{2},\\; \\dfrac{3}{2}\\right)",
+        "fallback": "(9/2, 3/2)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -57729,9 +57813,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "D(1, 8)",
-      "fallback": "D(1, 8)",
-      "display": true
+      "en": {
+        "latex": "D(1, 8)",
+        "fallback": "D(1, 8)",
+        "display": true
+      },
+      "ta": {
+        "latex": "D(1, 8)",
+        "fallback": "D(1, 8)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -57896,9 +57987,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Mid}(AC)=\\text{Mid}(BD)=\\left(-1,\\dfrac{15}{2}\\right)\\implies\\text{Parallelogram}",
-      "fallback": "Proved: D(−2, 8) and diagonals AC, BD bisect each other at (−1, 15/2), so ABCD is a parallelogram",
-      "display": true
+      "en": {
+        "latex": "\\text{Mid}(AC)=\\text{Mid}(BD)=\\left(-1,\\dfrac{15}{2}\\right)\\implies\\text{Parallelogram}",
+        "fallback": "Proved: D(−2, 8) and diagonals AC, BD bisect each other at (−1, 15/2), so ABCD is a parallelogram",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\text{Mid}(AC)=\\text{Mid}(BD)=\\left(-1,\\dfrac{15}{2}\\right)\\implies\\text{Parallelogram}",
+        "fallback": "நிறுவப்பட்டது: D(−2, 8); AC மற்றும் BD-இன் நடுப்புள்ளி (−1, 15/2) சமம் என்பதால் ABCD ஓர் இணைகரம்",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -58098,9 +58196,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "MA = MB = MC = \\sqrt{13}",
-      "fallback": "Proved: M(0, 0) satisfies MA = MB = MC = √13",
-      "display": true
+      "en": {
+        "latex": "MA = MB = MC = \\sqrt{13}",
+        "fallback": "Proved: M(0, 0) satisfies MA = MB = MC = √13",
+        "display": true
+      },
+      "ta": {
+        "latex": "MA = MB = MC = \\sqrt{13}",
+        "fallback": "நிறுவப்பட்டது: M(0, 0) உச்சிகளிலிருந்து √13 அலகு சம தொலைவில் உள்ளது",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -58279,9 +58384,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "(7, 3)",
-      "fallback": "(7, 3)",
-      "display": true
+      "en": {
+        "latex": "(7, 3)",
+        "fallback": "(7, 3)",
+        "display": true
+      },
+      "ta": {
+        "latex": "(7, 3)",
+        "fallback": "(7, 3)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -58450,9 +58562,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "5:2",
-      "fallback": "5:2",
-      "display": true
+      "en": {
+        "latex": "5:2",
+        "fallback": "5:2",
+        "display": true
+      },
+      "ta": {
+        "latex": "5:2",
+        "fallback": "5:2",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -58616,9 +58735,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "(3, 4)",
-      "fallback": "(3, 4)",
-      "display": true
+      "en": {
+        "latex": "(3, 4)",
+        "fallback": "(3, 4)",
+        "display": true
+      },
+      "ta": {
+        "latex": "(3, 4)",
+        "fallback": "(3, 4)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -58742,9 +58868,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "(-2, 3),\\; (1, 0)",
-      "fallback": "(−2, 3), (1, 0)",
-      "display": true
+      "en": {
+        "latex": "(-2, 3),\\; (1, 0)",
+        "fallback": "(−2, 3), (1, 0)",
+        "display": true
+      },
+      "ta": {
+        "latex": "(-2, 3),\\; (1, 0)",
+        "fallback": "(−2, 3), (1, 0)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -58997,9 +59130,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\left(\\dfrac{19}{2},\\; \\dfrac{13}{2}\\right),\\; \\left(-\\dfrac{9}{2},\\; -\\dfrac{15}{2}\\right)",
-      "fallback": "(19/2, 13/2), (−9/2, −15/2)",
-      "display": true
+      "en": {
+        "latex": "\\left(\\dfrac{19}{2},\\; \\dfrac{13}{2}\\right),\\; \\left(-\\dfrac{9}{2},\\; -\\dfrac{15}{2}\\right)",
+        "fallback": "(19/2, 13/2), (−9/2, −15/2)",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\left(\\dfrac{19}{2},\\; \\dfrac{13}{2}\\right),\\; \\left(-\\dfrac{9}{2},\\; -\\dfrac{15}{2}\\right)",
+        "fallback": "(19/2, 13/2), (−9/2, −15/2)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -59284,9 +59424,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "AB:BC = 1:2 \\implies \\text{Collinear}",
-      "fallback": "Proved: B divides AC internally in the ratio 1:2, so A, B, C are collinear",
-      "display": true
+      "en": {
+        "latex": "AB:BC = 1:2 \\implies \\text{Collinear}",
+        "fallback": "Proved: B divides AC internally in the ratio 1:2, so A, B, C are collinear",
+        "display": true
+      },
+      "ta": {
+        "latex": "AB:BC = 1:2 \\implies \\text{Collinear}",
+        "fallback": "நிறுவப்பட்டது: B ஆனது AC-ஐ 1:2 விகிதத்தில் பிரிப்பதால் A, B, C ஒரே கோட்டில் அமையும்",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -59530,9 +59677,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "C(3, 2)",
-      "fallback": "C(3, 2)",
-      "display": true
+      "en": {
+        "latex": "C(3, 2)",
+        "fallback": "C(3, 2)",
+        "display": true
+      },
+      "ta": {
+        "latex": "C(3, 2)",
+        "fallback": "C(3, 2)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -59735,9 +59889,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(i) }(2,-3);\\quad \\text{(ii) }\\left(\\dfrac{-8}{3},\\; \\dfrac{-11}{3}\\right)",
-      "fallback": "(i) (2, −3); (ii) (−8/3, −11/3)",
-      "display": true
+      "en": {
+        "latex": "\\text{(i) }(2,-3);\\quad \\text{(ii) }\\left(\\dfrac{-8}{3},\\; \\dfrac{-11}{3}\\right)",
+        "fallback": "(i) (2, −3); (ii) (−8/3, −11/3)",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\text{(i) }(2,-3);\\quad \\text{(ii) }\\left(\\dfrac{-8}{3},\\; \\dfrac{-11}{3}\\right)",
+        "fallback": "(i) (2, −3); (ii) (−8/3, −11/3)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -59868,9 +60029,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "(4, -6)",
-      "fallback": "(4, −6)",
-      "display": true
+      "en": {
+        "latex": "(4, -6)",
+        "fallback": "(4, −6)",
+        "display": true
+      },
+      "ta": {
+        "latex": "(4, -6)",
+        "fallback": "(4, −6)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -60005,9 +60173,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "5\\text{ units}",
-      "fallback": "5 units",
-      "display": true
+      "en": {
+        "latex": "5\\text{ units}",
+        "fallback": "5 units",
+        "display": true
+      },
+      "ta": {
+        "latex": "5\\text{ units}",
+        "fallback": "5 அலகுகள்",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -60157,9 +60332,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "20",
-      "fallback": "20",
-      "display": true
+      "en": {
+        "latex": "20",
+        "fallback": "20",
+        "display": true
+      },
+      "ta": {
+        "latex": "20",
+        "fallback": "20",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -60313,9 +60495,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "3\\sqrt{\\dfrac{5}{2}}\\text{ units}",
-      "fallback": "3√(5/2) units (or (3√10)/2 units)",
-      "display": true
+      "en": {
+        "latex": "3\\sqrt{\\dfrac{5}{2}}\\text{ units}",
+        "fallback": "3√(5/2) units (or (3√10)/2 units)",
+        "display": true
+      },
+      "ta": {
+        "latex": "3\\sqrt{\\dfrac{5}{2}}\\text{ units}",
+        "fallback": "3√(5/2) அலகுகள் (அல்லது (3√10)/2 அலகுகள்)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -60525,9 +60714,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "(1, 0)",
-      "fallback": "(1, 0)",
-      "display": true
+      "en": {
+        "latex": "(1, 0)",
+        "fallback": "(1, 0)",
+        "display": true
+      },
+      "ta": {
+        "latex": "(1, 0)",
+        "fallback": "(1, 0)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -60673,9 +60869,16 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "(5, -2)",
-      "fallback": "(5, −2)",
-      "display": true
+      "en": {
+        "latex": "(5, -2)",
+        "fallback": "(5, −2)",
+        "display": true
+      },
+      "ta": {
+        "latex": "(5, -2)",
+        "fallback": "(5, −2)",
+        "display": true
+      }
     },
     "steps": [
       {
@@ -60732,8 +60935,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(3) on }x\\text{-axis}",
-      "fallback": "(3) on x-axis"
+      "en": {
+        "latex": "\\text{(3) on }x\\text{-axis}",
+        "fallback": "(3) on x-axis"
+      },
+      "ta": {
+        "latex": "\\text{(3) on }x\\text{-axis}",
+        "fallback": "(3) x-அச்சின் மீது"
+      }
     },
     "steps": [
       {
@@ -60823,8 +61032,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(3) II and IV}",
-      "fallback": "(3) II and IV quadrant respectively"
+      "en": {
+        "latex": "\\text{(3) II and IV}",
+        "fallback": "(3) II and IV quadrant respectively"
+      },
+      "ta": {
+        "latex": "\\text{(3) II and IV}",
+        "fallback": "(3) முறையே II, IV காற்பகுதியில்"
+      }
     },
     "steps": [
       {
@@ -60913,8 +61128,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(3) Trapezium}",
-      "fallback": "(3) Trapezium"
+      "en": {
+        "latex": "\\text{(3) Trapezium}",
+        "fallback": "(3) Trapezium"
+      },
+      "ta": {
+        "latex": "\\text{(3) Trapezium}",
+        "fallback": "(3) சரிவகம்"
+      }
     },
     "steps": [
       {
@@ -61044,8 +61265,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(2) }Q\\text{ and }R",
-      "fallback": "(2) Q and R"
+      "en": {
+        "latex": "\\text{(2) }Q\\text{ and }R",
+        "fallback": "(2) Q and R"
+      },
+      "ta": {
+        "latex": "\\text{(2) }Q\\text{ and }R",
+        "fallback": "(2) Q மற்றும் R"
+      }
     },
     "steps": [
       {
@@ -61096,8 +61323,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(2) }(0, 4)",
-      "fallback": "(2) (0, 4)"
+      "en": {
+        "latex": "\\text{(2) }(0, 4)",
+        "fallback": "(2) (0, 4)"
+      },
+      "ta": {
+        "latex": "\\text{(2) }(0, 4)",
+        "fallback": "(2) (0, 4)"
+      }
     },
     "steps": [
       {
@@ -61188,8 +61421,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(4) }\\sqrt{2}",
-      "fallback": "(4) √2"
+      "en": {
+        "latex": "\\text{(4) }\\sqrt{2}",
+        "fallback": "(4) √2"
+      },
+      "ta": {
+        "latex": "\\text{(4) }\\sqrt{2}",
+        "fallback": "(4) √2"
+      }
     },
     "steps": [
       {
@@ -61248,8 +61487,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(3) }3",
-      "fallback": "(3) 3"
+      "en": {
+        "latex": "\\text{(3) }3",
+        "fallback": "(3) 3"
+      },
+      "ta": {
+        "latex": "\\text{(3) }3",
+        "fallback": "(3) 3"
+      }
     },
     "steps": [
       {
@@ -61334,8 +61579,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(3) }(3, 6)",
-      "fallback": "(3) (3, 6)"
+      "en": {
+        "latex": "\\text{(3) }(3, 6)",
+        "fallback": "(3) (3, 6)"
+      },
+      "ta": {
+        "latex": "\\text{(3) }(3, 6)",
+        "fallback": "(3) (3, 6)"
+      }
     },
     "steps": [
       {
@@ -61406,8 +61657,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(3) Null set}",
-      "fallback": "(3) Null set"
+      "en": {
+        "latex": "\\text{(3) Null set}",
+        "fallback": "(3) Null set"
+      },
+      "ta": {
+        "latex": "\\text{(3) Null set}",
+        "fallback": "(3) வெற்றுக் கணம்"
+      }
     },
     "steps": [
       {
@@ -61498,8 +61755,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(3) }\\sqrt{26}",
-      "fallback": "(3) √26"
+      "en": {
+        "latex": "\\text{(3) }\\sqrt{26}",
+        "fallback": "(3) √26"
+      },
+      "ta": {
+        "latex": "\\text{(3) }\\sqrt{26}",
+        "fallback": "(3) √26"
+      }
     },
     "steps": [
       {
@@ -61590,8 +61853,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(4) }(4, 6)",
-      "fallback": "(4) (4, 6)"
+      "en": {
+        "latex": "\\text{(4) }(4, 6)",
+        "fallback": "(4) (4, 6)"
+      },
+      "ta": {
+        "latex": "\\text{(4) }(4, 6)",
+        "fallback": "(4) (4, 6)"
+      }
     },
     "steps": [
       {
@@ -61670,8 +61939,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(1) }(-9, 7)",
-      "fallback": "(1) (−9, 7)"
+      "en": {
+        "latex": "\\text{(1) }(-9, 7)",
+        "fallback": "(1) (−9, 7)"
+      },
+      "ta": {
+        "latex": "\\text{(1) }(-9, 7)",
+        "fallback": "(1) (−9, 7)"
+      }
     },
     "steps": [
       {
@@ -61772,8 +62047,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(3) }1:3",
-      "fallback": "(3) 1:3"
+      "en": {
+        "latex": "\\text{(3) }1:3",
+        "fallback": "(3) 1:3"
+      },
+      "ta": {
+        "latex": "\\text{(3) }1:3",
+        "fallback": "(3) 1:3"
+      }
     },
     "steps": [
       {
@@ -61854,8 +62135,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(4) }(-9, 0)",
-      "fallback": "(4) (−9, 0)"
+      "en": {
+        "latex": "\\text{(4) }(-9, 0)",
+        "fallback": "(4) (−9, 0)"
+      },
+      "ta": {
+        "latex": "\\text{(4) }(-9, 0)",
+        "fallback": "(4) (−9, 0)"
+      }
     },
     "steps": [
       {
@@ -61954,8 +62241,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(2) }-b_1:b_2",
-      "fallback": "(2) −b₁ : b₂"
+      "en": {
+        "latex": "\\text{(2) }-b_1:b_2",
+        "fallback": "(2) −b₁ : b₂"
+      },
+      "ta": {
+        "latex": "\\text{(2) }-b_1:b_2",
+        "fallback": "(2) −b₁ : b₂"
+      }
     },
     "steps": [
       {
@@ -62065,8 +62358,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(3) }4:7",
-      "fallback": "(3) 4:7"
+      "en": {
+        "latex": "\\text{(3) }4:7",
+        "fallback": "(3) 4:7"
+      },
+      "ta": {
+        "latex": "\\text{(3) }4:7",
+        "fallback": "(3) 4:7"
+      }
     },
     "steps": [
       {
@@ -62167,8 +62466,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(2) }(4,0),\\;(2,8)",
-      "fallback": "(2) (4, 0), (2, 8)"
+      "en": {
+        "latex": "\\text{(2) }(4,0),\\;(2,8)",
+        "fallback": "(2) (4, 0), (2, 8)"
+      },
+      "ta": {
+        "latex": "\\text{(2) }(4,0),\\;(2,8)",
+        "fallback": "(2) (4, 0), (2, 8)"
+      }
     },
     "steps": [
       {
@@ -62253,8 +62558,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(2) }(-2a, -b)",
-      "fallback": "(2) (−2a, −b)"
+      "en": {
+        "latex": "\\text{(2) }(-2a, -b)",
+        "fallback": "(2) (−2a, −b)"
+      },
+      "ta": {
+        "latex": "\\text{(2) }(-2a, -b)",
+        "fallback": "(2) (−2a, −b)"
+      }
     },
     "steps": [
       {
@@ -62313,8 +62624,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(4) }5:2",
-      "fallback": "(4) 5:2"
+      "en": {
+        "latex": "\\text{(4) }5:2",
+        "fallback": "(4) 5:2"
+      },
+      "ta": {
+        "latex": "\\text{(4) }5:2",
+        "fallback": "(4) 5:2"
+      }
     },
     "steps": [
       {
@@ -62404,8 +62721,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{(2) }5",
-      "fallback": "(2) 5"
+      "en": {
+        "latex": "\\text{(2) }5",
+        "fallback": "(2) 5"
+      },
+      "ta": {
+        "latex": "\\text{(2) }5",
+        "fallback": "(2) 5"
+      }
     },
     "steps": [
       {

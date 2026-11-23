@@ -76,7 +76,10 @@
       ],
       answer: 'P(−7, 6) = II Quadrant; Q(7, −2) = IV Quadrant; R(−6, −7) = III Quadrant; S(3, 5) = I Quadrant; T(3, 9) = I Quadrant',
       answerTa: 'P(−7, 6) = காற்பகுதி II; Q(7, −2) = காற்பகுதி IV; R(−6, −7) = காற்பகுதி III; S(3, 5) = காற்பகுதி I; T(3, 9) = காற்பகுதி I',
-      answerMath: tex('\\begin{aligned}P(-7,6)&=\\text{II},\\; Q(7,-2)=\\text{IV}\\\\R(-6,-7)&=\\text{III},\\; S(3,5)=\\text{I},\\; T(3,9)=\\text{I}\\end{aligned}', 'P(−7, 6) = II Quadrant; Q(7, −2) = IV Quadrant; R(−6, −7) = III Quadrant; S(3, 5) = I Quadrant; T(3, 9) = I Quadrant', true),
+      answerMath: {
+        en: tex('\\begin{aligned}P(-7,6)&=\\text{II},\\; Q(7,-2)=\\text{IV}\\\\R(-6,-7)&=\\text{III},\\; S(3,5)=\\text{I},\\; T(3,9)=\\text{I}\\end{aligned}', 'P(−7, 6) = II Quadrant; Q(7, −2) = IV Quadrant; R(−6, −7) = III Quadrant; S(3, 5) = I Quadrant; T(3, 9) = I Quadrant', true),
+        ta: tex('\\begin{aligned}P(-7,6)&=\\text{II},\\; Q(7,-2)=\\text{IV}\\\\R(-6,-7)&=\\text{III},\\; S(3,5)=\\text{I},\\; T(3,9)=\\text{I}\\end{aligned}', 'P(−7, 6) = காற்பகுதி II; Q(7, −2) = காற்பகுதி IV; R(−6, −7) = காற்பகுதி III; S(3, 5) = காற்பகுதி I; T(3, 9) = காற்பகுதி I', true)
+      },
       sourceFidelity: {
         status: 'page-visual-checked',
         sourcePdfPage: { en: 198, ta: 211 },
@@ -200,7 +203,10 @@
       ],
       answer: '(i) Straight line parallel to x-axis; (ii) Straight line which lies on y-axis',
       answerTa: '(i) x-அச்சிற்கு இணையான நேர்க்கோடு; (ii) y-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு',
-      answerMath: tex('\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}', '(i) Straight line parallel to x-axis; (ii) Straight line which lies on y-axis', true),
+      answerMath: {
+        en: tex('\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}', '(i) Straight line parallel to x-axis; (ii) Straight line which lies on y-axis', true),
+        ta: tex('\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}', '(i) x-அச்சிற்கு இணையான நேர்க்கோடு; (ii) y-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு', true)
+      },
       sourceFidelity: {
         status: 'page-visual-checked',
         sourcePdfPage: { en: 199, ta: 212 },
@@ -264,7 +270,10 @@
       ],
       answer: '(i) Square; (ii) Trapezium',
       answerTa: '(i) சதுரம்; (ii) சரிவகம்',
-      answerMath: tex('\\text{(i) Square};\\quad \\text{(ii) Trapezium}', '(i) Square; (ii) Trapezium', true),
+      answerMath: {
+        en: tex('\\text{(i) Square};\\quad \\text{(ii) Trapezium}', '(i) Square; (ii) Trapezium', true),
+        ta: tex('\\text{(i) Square};\\quad \\text{(ii) Trapezium}', '(i) சதுரம்; (ii) சரிவகம்', true)
+      },
       sourceFidelity: {
         status: 'page-visual-checked',
         sourcePdfPage: { en: 199, ta: 212 },
