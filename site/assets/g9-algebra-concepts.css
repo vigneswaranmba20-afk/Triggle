@@ -1,0 +1,137 @@
+/* Grade 9 Chapter 3 only: no shared theme or navigation overrides. */
+.chapter-hub[data-grade="9"][data-hub-section="concepts"] .g9a-lab {
+  margin: 4px 0 12px;
+  padding: 12px;
+  background: rgba(122,140,167,.055);
+  border: 1px solid rgba(100,116,143,.2);
+  border-radius: 18px;
+  min-width: 0;
+}
+.g9a-rule {
+  margin: 0 0 10px;
+  font-size: .94rem;
+  line-height: 1.35;
+  font-weight: 650;
+  color: #453d3b;
+}
+.g9a-choices {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 5px;
+  min-width: 0;
+}
+.g9a-option {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 48px;
+  padding: 6px 3px;
+  font-size: clamp(.76rem,2.8vw,.94rem);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  border: 1px solid #cfc8c3;
+  border-radius: 12px;
+  color: #48292c;
+  background: #fff;
+  cursor: pointer;
+}
+.g9a-option[aria-pressed="true"] {
+  background: #f8e4e2;
+  border: 2px solid #883b46;
+  color: #6e2637;
+}
+.g9a-option:focus-visible,.g9a-answer-options button:focus-visible {
+  outline: 3px solid #92505d;
+  outline-offset: 2px;
+}
+.g9a-stage {
+  min-width: 0;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #e3deda;
+  border-radius: 13px;
+  background: #fff;
+}
+.g9a-expression {
+  min-width: 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.g9a-rewrite {
+  margin: 3px 0;
+  font-size: .87rem;
+  text-align: center;
+}
+.g9a-expression .katex-display { margin: .25em 0; }
+.g9a-expression .triggle-tex,.g9a-rewrite .triggle-tex {max-width:100%;}
+.g9a-powers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 9px 0;
+}
+.g9a-chip {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  gap: 5px;
+  padding: 5px 7px;
+  border: 1px solid #d3dfd8;
+  border-radius: 10px;
+  background: #f6faf7;
+  color: #234f3c;
+  font-size: .78rem;
+  line-height: 1.35;
+  white-space: normal;
+}
+.g9a-chip.g9a-invalid {border-color:#e8c9c9;background:#fff4f3;color:#762c38;}
+.g9a-icon {font-weight:800;}
+.g9a-verdict {
+  margin: 0;
+  font-size: .87rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #284a3e;
+}
+.g9a-verdict.g9a-incorrect {color:#74343b;}
+.g9a-practice {margin: 12px 0;}
+.g9a-practice h5 {margin: 0 0 5px;font-size: 1rem;}
+.g9a-small {margin: 0 0 9px;font-size: .89rem;}
+.g9a-transfer {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #e2dada;
+  border-radius: 12px;
+  background: rgba(255,255,255,.8);
+  min-width: 0;
+}
+.g9a-transfer-math {margin:0 0 7px;min-width:0;font-size:1rem;}
+.g9a-answer-options {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+.g9a-answer-options button {
+  min-width:0;
+  min-height:46px;
+  padding:7px;
+  border:1px solid #d6c4c4;
+  background:#fff;
+  border-radius:10px;
+  color:#48292c;
+  line-height:1.35;
+  font-size:.86rem;
+  cursor:pointer;
+}
+.g9a-answer-options button[aria-pressed="true"] {border:2px solid #883b46;background:#f8e4e2;font-weight:700;}
+.g9a-feedback {margin:7px 0 0;font-size:.87rem;color:#275143;line-height:1.4;}
+.g9a-feedback.g9a-incorrect {color:#74343b;}
+.g9a-feedback:empty {display:none;}
+.g9a-deep {margin:10px 0;border:1px solid #e2d9db;border-radius:12px;padding:10px 12px;font-size:.9rem;}
+.g9a-deep summary {font-weight:650;cursor:pointer;}
+.g9a-deep li {margin:8px 0;line-height:1.5;}
+.g9a-source,.g9a-review {display:block;margin:8px 0;font-size:.74rem;color:#6d6464;line-height:1.45;}
+@media (max-width:360px) {
+  .chapter-hub[data-grade="9"][data-hub-section="concepts"] .g9a-lab{padding:9px;}
+  .g9a-stage{padding:8px;}
+  .g9a-chip{font-size:.75rem;}
+  .g9a-option{font-size:.78rem;}
+}
+@media (prefers-reduced-motion:reduce) {
+  .g9a-option,.g9a-answer-options button {transition:none!important;}
+}
