@@ -63,7 +63,7 @@ const ch6=catalogue.window.TRIGGLE_CURRICULUM.grades.find(g=>g.grade===9).chapte
 assert.deepEqual(Array.from(ch6.textbookQuestionIds||[]),expectedIds,'All seven textbook IDs in Grade 9 Chapter 6 catalogue');
 assert(!expectedIds.some(id=>ch6.legacyQuestionIds.includes(id)),'Never rewrite original legacy source mappings');
 const complete=require('./build_g9_math.cjs').load();
-assert.equal(complete.length,574,'Seven approved records appended to assembled Grade 9 inventory');
+assert.equal(complete.length,624,'Approved Ch6 (7) and Ch5 (50) records appended to assembled Grade 9 inventory');
 for(const id of expectedIds)assert(complete.some(q=>q.id===id),'Released English source must contain approved exercise '+id);
 // Negative control: the 2025 key for Q3(ii) is table-based; a precise
 // calculator expression has a different rounded result.

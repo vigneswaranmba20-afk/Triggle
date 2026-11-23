@@ -1117,3 +1117,11 @@ body.textbook-reader .question-top-nav .page-button{min-width:44px;min-height:44
     flex:none;max-width:100%;width:100%;text-align:center;font-size:11px;
   }
 }
+.triggle-mcq-choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:12px}
+.triggle-mcq-btn{min-height:44px;padding:10px 12px;border:1px solid #d5d0c5;border-radius:10px;background:#faf8f4;color:#1d2b3a;font:inherit;text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s}
+.triggle-mcq-btn:hover,.triggle-mcq-btn:focus-visible{border-color:#264653;background:#f0f4f8;outline:2px solid #264653;outline-offset:1px}
+.triggle-mcq-btn.is-correct{border-color:#1b7a43;background:#edf8f1;color:#124e2b;font-weight:600}
+.triggle-mcq-btn.is-wrong{border-color:#b42318;background:#fef3f2;color:#7a1810}
+.triggle-mcq-feedback{margin:8px 0 0;font-size:0.92rem;font-weight:600}
+.triggle-mcq-feedback.is-correct{color:#1b7a43}
+.triggle-mcq-feedback.is-wrong{color:#b42318}

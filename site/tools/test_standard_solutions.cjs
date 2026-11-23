@@ -270,8 +270,10 @@ const g9Ex64Release=require('../../docs/audit/AUD14_02_EX64_Q2_Q3_RELEASE_EVIDEN
 const g9Ex64NewIds=Object.keys(g9Ex64Release.records);
 const g9Ch3CompleteNewIds=classes[9].items.filter(it=>/^g9-ch3-ex3\.(?:[3-9]|1[0-5])\b/.test(it.id)).map(it=>it.id);
 assert.equal(g9Ch3CompleteNewIds.length,170,'170 new G9 Ch3 Ex 3.3–3.15 records');
-const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds];
-assert.equal(approvedG9Ids.length,261);
+const g9Ch5CompleteNewIds=classes[9].items.filter(it=>/^g9-ch5-ex5\.[1-6]\b/.test(it.id)&&!Object.hasOwn(preserved.sha256,it.id)).map(it=>it.id);
+assert.equal(g9Ch5CompleteNewIds.length,50,'50 new G9 Ch5 Ex 5.1–5.6 records');
+const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds,...g9Ch5CompleteNewIds];
+assert.equal(approvedG9Ids.length,311);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
@@ -488,9 +490,9 @@ for(const [grade,data] of Object.entries(classes)){
        }
        assert.equal(item.releaseStatus,'english-preview');
        assert(!item.q.ta,'Do not invent Tamil '+item.id);
-     }else if(g9Ch3CompleteNewIds.includes(item.id)){
-       assert.ok(item.q?.en&&item.q?.ta,'G9 Ch3 bilingual prompt '+item.id);
-       assert.ok(item.steps.length>=1&&item.steps.every(s=>s.en&&s.ta&&s.math?.latex),'G9 Ch3 bilingual steps '+item.id);
+     }else if(g9Ch3CompleteNewIds.includes(item.id)||g9Ch5CompleteNewIds.includes(item.id)){
+       assert.ok(item.q?.en&&item.q?.ta,'G9 bilingual prompt '+item.id);
+       assert.ok(item.steps.length>=1&&item.steps.every(s=>s.en&&s.ta&&s.math?.latex),'G9 bilingual steps '+item.id);
        assert.equal(item.releaseStatus,'bilingual-2025-source-checked');
      }else{
        const source=g9Q2Fidelity.parts.find(p=>p.id===item.id)||g9Q5Q6Fidelity.parts.find(p=>p.id===item.id)||g9Q7Q10Fidelity.parts.find(p=>p.id===item.id);

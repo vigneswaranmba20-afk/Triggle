@@ -79,7 +79,9 @@
    const chapter=chapterForItem(current),exercises=textbookExerciseList(chapter);
    if(exercises.some(item=>item.id===current.id)){
      // The selected exercise is a self-contained learning path in every grade.
-     return exercises.filter(item=>item.exercise===current.exercise);
+     const list=exercises.filter(item=>item.exercise===current.exercise);
+     if(chapter?.id==='g9-ch5')return [...list].sort((a,b)=>parseInt(String(a.id).match(/q(\d+)/)?.[1]||'0',10)-parseInt(String(b.id).match(/q(\d+)/)?.[1]||'0',10));
+     return list;
    }
    // Legacy practice is also kept inside its own exercise when possible.
    const local=classes[grade].items.filter(item=>item.chapter===current.chapter&&item.exercise===current.exercise);
@@ -574,7 +576,7 @@
      openGrade:changeGrade,openChapter:openChapterFor,openQuestion:openQuestionFor,goHome
    });
  }
- function render(){renderText();renderGrades();
+ function render(){if(current&&window.TriggleG9Ch5Overrides?.has(current.id))current=window.TriggleG9Ch5Overrides.get(current.id);renderText();renderGrades();
     // Chapter-only typography: follow lesson, chapter hub, browser back, language and grade switching.
     const typographyChapter=homeView||classIndex?null:(chapterOverview?.number??chapterForItem(current)?.number);
     document.body.classList.toggle('g10-ch2-type',grade===10&&String(typographyChapter)==='2');
@@ -635,6 +637,26 @@
   // Ex8.2's source-verified Tamil text takes precedence over its English-only
   // authored questionMath; equations in the worked solution remain unchanged.
   $('questionText').innerHTML=ex82TamilPrompt?math(current.q.ta):(workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q)));
+  if(Array.isArray(current.choices)&&typeof current.correctIndex==='number'){
+    const mcqWrap=document.createElement('div');mcqWrap.className='triggle-mcq-choices';mcqWrap.setAttribute('role','group');
+    mcqWrap.setAttribute('aria-label',lang==='ta'?'விருப்பங்களைத் தேர்ந்தெடுக்கவும்':'Choose an option');
+    const feedback=document.createElement('p');feedback.className='triggle-mcq-feedback';feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');
+    current.choices.forEach((choice,idx)=>{
+      const btn=document.createElement('button');btn.type='button';btn.className='triggle-mcq-btn';
+      btn.setAttribute('aria-pressed','false');
+      btn.innerHTML=math(choice[lang]||choice.en||'');
+      btn.addEventListener('click',()=>{
+        mcqWrap.querySelectorAll('.triggle-mcq-btn').forEach(b=>{b.setAttribute('aria-pressed','false');b.classList.remove('is-correct','is-wrong');});
+        btn.setAttribute('aria-pressed','true');
+        const ok=idx===current.correctIndex;
+        btn.classList.add(ok?'is-correct':'is-wrong');
+        feedback.textContent=ok?(lang==='ta'?'✓ சரியான விடை! கீழே உள்ள தீர்வைப் பார்க்கவும்.':'✓ Correct! See the worked solution below.'):(lang==='ta'?'✗ மீண்டும் முயற்சிக்கவும் அல்லது கீழே உள்ள தீர்வைப் பார்க்கவும்.':'✗ Try again or check the worked solution below.');
+        feedback.className='triggle-mcq-feedback '+(ok?'is-correct':'is-wrong');
+      });
+      mcqWrap.append(btn);
+    });
+    $('questionText').append(mcqWrap,feedback);
+  }
   if(current.dataTable){
     const tableHtml=renderDataTableHtml(current.dataTable);
     const rawQ=tr(current.q);

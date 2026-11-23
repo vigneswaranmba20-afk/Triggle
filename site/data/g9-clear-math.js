@@ -54908,6 +54908,7532 @@ const records=[
         }
       }
     ]
+  },
+  {
+    "id": "g9-ch5-ex5.1-q1",
+    "questionMath": {
+      "en": [
+        "1. Plot the following points in the coordinate system and identify the quadrants\n",
+        {
+          "latex": "P(-7,6),\\; Q(7,-2),\\; R(-6,-7),\\; S(3,5)\\text{ and }T(3,9)",
+          "fallback": "P(−7, 6), Q(7, −2), R(−6, −7), S(3, 5) and T(3, 9)"
+        }
+      ],
+      "ta": [
+        "1. பின்வரும் புள்ளிகளை ஆய அச்சு வடிவத்தில் குறித்து அது எந்தக் காற்பகுதியில் அமைகிறது எனக் காண்க.\n",
+        {
+          "latex": "P(-7,6),\\; Q(7,-2),\\; R(-6,-7),\\; S(3,5)\\text{ மற்றும் }T(3,9)",
+          "fallback": "P(−7, 6), Q(7, −2), R(−6, −7), S(3, 5) மற்றும் T(3, 9)"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{aligned}P(-7,6)&=\\text{II},\\; Q(7,-2)=\\text{IV}\\\\R(-6,-7)&=\\text{III},\\; S(3,5)=\\text{I},\\; T(3,9)=\\text{I}\\end{aligned}",
+      "fallback": "P(−7, 6) = II Quadrant; Q(7, −2) = IV Quadrant; R(−6, −7) = III Quadrant; S(3, 5) = I Quadrant; T(3, 9) = I Quadrant",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\text{I}:(+,+),\\quad \\text{II}:(-,+)\\\\\\text{III}:(-,-),\\quad \\text{IV}:(+,-)\\end{aligned}",
+          "fallback": "I:(+,+), II:(−,+), III:(−,−), IV:(+,−)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Recall the sign rules of the four quadrants: I is (+, +), ",
+            {
+              "latex": "II",
+              "fallback": "II"
+            },
+            " is (−, +), ",
+            {
+              "latex": "III",
+              "fallback": "III"
+            },
+            " is (−, −), and ",
+            {
+              "latex": "IV",
+              "fallback": "IV"
+            },
+            " is (+, −), where the first number is the ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinate (abscissa) and the second is the ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinate (ordinate)."
+          ],
+          "ta": [
+            "நான்கு காற்பகுதிகளின் குறிகள்: I (+, +), ",
+            {
+              "latex": "II",
+              "fallback": "II"
+            },
+            " (−, +), ",
+            {
+              "latex": "III",
+              "fallback": "III"
+            },
+            " (−, −), ",
+            {
+              "latex": "IV",
+              "fallback": "IV"
+            },
+            " (+, −). முதல் எண் ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-ஆயத்தொலைவு (கிடை அச்சுத் தொலைவு); இரண்டாவது எண் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-ஆயத்தொலைவு (செங்குத்து அச்சுத் தொலைவு)."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}P(-7,6)&\\rightarrow \\text{II Quadrant}\\\\Q(7,-2)&\\rightarrow \\text{IV Quadrant}\\end{aligned}",
+          "fallback": "P(-7,6) ∈ II; Q(7,-2) ∈ IV",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "For ",
+            {
+              "latex": "P\\left(- 7, 6\\right) : x = - 7 < 0",
+              "fallback": "P(−7, 6): x = −7 < 0"
+            },
+            " and ",
+            {
+              "latex": "y = 6 > 0",
+              "fallback": "y = 6 > 0"
+            },
+            " (left ",
+            {
+              "latex": "7",
+              "fallback": "7"
+            },
+            ", up ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            ") → ",
+            {
+              "latex": "II",
+              "fallback": "II"
+            },
+            " Quadrant. For ",
+            {
+              "latex": "Q \\left(7, - 2\\right) : x = 7 > 0",
+              "fallback": "Q(7, −2): x = 7 > 0"
+            },
+            " and ",
+            {
+              "latex": "y = - 2 < 0",
+              "fallback": "y = −2 < 0"
+            },
+            " (right ",
+            {
+              "latex": "7",
+              "fallback": "7"
+            },
+            ", down ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            ") → ",
+            {
+              "latex": "IV",
+              "fallback": "IV"
+            },
+            " Quadrant."
+          ],
+          "ta": [
+            {
+              "latex": "P\\left(- 7, 6\\right) : x < 0, y > 0",
+              "fallback": "P(−7, 6): x < 0, y > 0"
+            },
+            " (இடதுபுறம் ",
+            {
+              "latex": "7",
+              "fallback": "7"
+            },
+            ", மேல் ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            ") → காற்பகுதி ",
+            {
+              "latex": "II",
+              "fallback": "II"
+            },
+            ". ",
+            {
+              "latex": "Q \\left(7, - 2\\right) : x > 0, y < 0",
+              "fallback": "Q(7, −2): x > 0, y < 0"
+            },
+            " (வலதுபுறம் ",
+            {
+              "latex": "7",
+              "fallback": "7"
+            },
+            ", கீழ் ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            ") → காற்பகுதி ",
+            {
+              "latex": "IV",
+              "fallback": "IV"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}R(-6,-7)&\\rightarrow \\text{III Quadrant}\\\\S(3,5),\\; T(3,9)&\\rightarrow \\text{I Quadrant}\\end{aligned}",
+          "fallback": "R(-6,-7) ∈ III; S(3,5), T(3,9) ∈ I",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "For ",
+            {
+              "latex": "R \\left(- 6, - 7\\right)",
+              "fallback": "R(−6, −7)"
+            },
+            ": both coordinates are negative ",
+            {
+              "latex": "\\left(x < 0, y < 0\\right)",
+              "fallback": "(x < 0, y < 0)"
+            },
+            " → ",
+            {
+              "latex": "III",
+              "fallback": "III"
+            },
+            " Quadrant. For ",
+            {
+              "latex": "S \\left(3, 5\\right)",
+              "fallback": "S(3, 5)"
+            },
+            " and ",
+            {
+              "latex": "T \\left(3, 9\\right)",
+              "fallback": "T(3, 9)"
+            },
+            ": both coordinates are positive ",
+            {
+              "latex": "\\left(x > 0, y > 0\\right)",
+              "fallback": "(x > 0, y > 0)"
+            },
+            " → I Quadrant."
+          ],
+          "ta": [
+            {
+              "latex": "R \\left(- 6, - 7\\right)",
+              "fallback": "R(−6, −7)"
+            },
+            ": இரு ஆயத்தொலைவுகளும் குறை ",
+            {
+              "latex": "\\left(x < 0, y < 0\\right)",
+              "fallback": "(x < 0, y < 0)"
+            },
+            " → காற்பகுதி ",
+            {
+              "latex": "III",
+              "fallback": "III"
+            },
+            ". ",
+            {
+              "latex": "S \\left(3, 5\\right), T \\left(3, 9\\right)",
+              "fallback": "S(3, 5), T(3, 9)"
+            },
+            ": இரு ஆயத்தொலைவுகளும் மிகை ",
+            {
+              "latex": "\\left(x > 0, y > 0\\right)",
+              "fallback": "(x > 0, y > 0)"
+            },
+            " → காற்பகுதி I."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.1-q2",
+    "questionMath": {
+      "en": [
+        "2. Write down the abscissa and ordinate of the following from fig 5.11.\n(i) P   (ii) Q   (iii) R   (iv) S"
+      ],
+      "ta": [
+        "2. அருகில் உள்ள படம் 5.11 இல் தரப்பட்டுள்ள கார்ட்டீசியன் தளத்தில் இருந்து, பின்வரும் புள்ளிகளின் கிடை அச்சுத் தொலைவு மற்றும் செங்குத்து அச்சுத் தொலைவை எழுதுக.\n(i) P   (ii) Q   (iii) R   (iv) S"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{aligned}\\text{(i) }P(-4,4),\\quad \\text{(ii) }Q(3,3)\\\\\\text{(iii) }R(4,-2),\\quad \\text{(iv) }S(-5,-3)\\end{aligned}",
+      "fallback": "(i) P = (−4, 4); (ii) Q = (3, 3); (iii) R = (4, −2); (iv) S = (−5, −3)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{Point} = (x\\text{-abscissa},\\; y\\text{-ordinate})",
+          "fallback": "Point = (abscissa x, ordinate y)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "To read a point ",
+            {
+              "latex": "\\left(x, y\\right)",
+              "fallback": "(x, y)"
+            },
+            " from the graph, move vertically to the ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            },
+            "-axis to read the abscissa (",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinate) and horizontally to the ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            "-axis to read the ordinate (",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinate)."
+          ],
+          "ta": [
+            "வரைபடத்தில் ஒரு புள்ளி ",
+            {
+              "latex": "\\left(x, y\\right)",
+              "fallback": "(x, y)"
+            },
+            "-ஐப் படிக்க, ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            },
+            "-அச்சை நோக்கிச் செங்குத்தாகச் சென்று கிடை அச்சுத் தொலைவையும் ",
+            {
+              "latex": "\\left(x\\right), Y",
+              "fallback": "(x), Y"
+            },
+            "-அச்சை நோக்கிக் கிடைமட்டமாகச் சென்று செங்குத்து அச்சுத் தொலைவையும் ",
+            {
+              "latex": "\\left(y\\right)",
+              "fallback": "(y)"
+            },
+            " காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\text{(i) }P&=(-4,4)\\;\\Rightarrow x=-4,\\;y=4\\\\\\text{(ii) }Q&=(3,3)\\;\\Rightarrow x=3,\\;y=3\\end{aligned}",
+          "fallback": "(i) P=(−4,4); (ii) Q=(3,3)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(i) From ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            ", moving down meets ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            },
+            "-axis at ",
+            {
+              "latex": "- 4",
+              "fallback": "−4"
+            },
+            " and moving right meets ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            "-axis at ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " → ",
+            {
+              "latex": "P = \\left(- 4, 4\\right)",
+              "fallback": "P = (−4, 4)"
+            },
+            " (abscissa ",
+            {
+              "latex": "- 4",
+              "fallback": "−4"
+            },
+            ", ordinate ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            "). (ii) From ",
+            {
+              "latex": "Q, X",
+              "fallback": "Q, X"
+            },
+            "-axis is ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " and ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            "-axis is ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " → ",
+            {
+              "latex": "Q = \\left(3, 3\\right)",
+              "fallback": "Q = (3, 3)"
+            },
+            "."
+          ],
+          "ta": [
+            "(i) ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            "-லிருந்து ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            },
+            "-அச்சில் ",
+            {
+              "latex": "- 4",
+              "fallback": "−4"
+            },
+            " மற்றும் ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            "-அச்சில் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " கிடைக்கிறது → ",
+            {
+              "latex": "P = \\left(- 4, 4\\right)",
+              "fallback": "P = (−4, 4)"
+            },
+            " (கிடை ",
+            {
+              "latex": "- 4",
+              "fallback": "−4"
+            },
+            ", செங்குத்து ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            "). (ii) ",
+            {
+              "latex": "Q",
+              "fallback": "Q"
+            },
+            "-விற்கு ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            },
+            "-அச்சில் ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " மற்றும் ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            "-அச்சில் ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " → ",
+            {
+              "latex": "Q = \\left(3, 3\\right)",
+              "fallback": "Q = (3, 3)"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\text{(iii) }R&=(4,-2)\\;\\Rightarrow x=4,\\;y=-2\\\\\\text{(iv) }S&=(-5,-3)\\;\\Rightarrow x=-5,\\;y=-3\\end{aligned}",
+          "fallback": "(iii) R=(4,−2); (iv) S=(−5,−3)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(iii) From ",
+            {
+              "latex": "R, X",
+              "fallback": "R, X"
+            },
+            "-axis is ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " and ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            "-axis is ",
+            {
+              "latex": "- 2",
+              "fallback": "−2"
+            },
+            " → ",
+            {
+              "latex": "R = \\left(4, - 2\\right)",
+              "fallback": "R = (4, −2)"
+            },
+            ". (iv) From ",
+            {
+              "latex": "S, X",
+              "fallback": "S, X"
+            },
+            "-axis is ",
+            {
+              "latex": "- 5",
+              "fallback": "−5"
+            },
+            " and ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            "-axis is ",
+            {
+              "latex": "- 3",
+              "fallback": "−3"
+            },
+            " → ",
+            {
+              "latex": "S = \\left(- 5, - 3\\right)",
+              "fallback": "S = (−5, −3)"
+            },
+            "."
+          ],
+          "ta": [
+            "(iii) ",
+            {
+              "latex": "R",
+              "fallback": "R"
+            },
+            "-லிருந்து ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            },
+            "-அச்சில் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " மற்றும் ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            "-அச்சில் ",
+            {
+              "latex": "- 2",
+              "fallback": "−2"
+            },
+            " → ",
+            {
+              "latex": "R = \\left(4, - 2\\right)",
+              "fallback": "R = (4, −2)"
+            },
+            ". (iv) ",
+            {
+              "latex": "S",
+              "fallback": "S"
+            },
+            "-லிருந்து ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            },
+            "-அச்சில் ",
+            {
+              "latex": "- 5",
+              "fallback": "−5"
+            },
+            " மற்றும் ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            "-அச்சில் ",
+            {
+              "latex": "- 3",
+              "fallback": "−3"
+            },
+            " → ",
+            {
+              "latex": "S = \\left(- 5, - 3\\right)",
+              "fallback": "S = (−5, −3)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.1-q3",
+    "questionMath": {
+      "en": [
+        "3. Plot the following points in the coordinate plane and join them. What is your conclusion about the resulting figure?\n(i) ",
+        {
+          "latex": "(-5,3),\\;(-1,3),\\;(0,3),\\;(5,3)",
+          "fallback": "(−5, 3) (−1, 3) (0, 3) (5, 3)"
+        },
+        "   (ii) ",
+        {
+          "latex": "(0,-4),\\;(0,-2),\\;(0,4),\\;(0,5)",
+          "fallback": "(0, −4) (0, −2) (0, 4) (0, 5)"
+        }
+      ],
+      "ta": [
+        "3. பின்வரும் புள்ளிகளை வரைபடத்தாளில் குறித்து அவற்றை இணைக்கவும், கிடைக்கும் வடிவத்தைப் பற்றி தங்களின் கருத்தைக் கூறுக.\n(i) ",
+        {
+          "latex": "(-5,3),\\;(-1,3),\\;(0,3),\\;(5,3)",
+          "fallback": "(−5, 3) (−1, 3) (0, 3) (5, 3)"
+        },
+        "   (ii) ",
+        {
+          "latex": "(0,-4),\\;(0,-2),\\;(0,4),\\;(0,5)",
+          "fallback": "(0, −4) (0, −2) (0, 4) (0, 5)"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}",
+      "fallback": "(i) Straight line parallel to x-axis; (ii) Straight line which lies on y-axis",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y = 3 \\;(\\text{constant}) \\implies \\text{Straight line parallel to }x\\text{-axis}",
+          "fallback": "y = 3 for all points ⇒ straight line parallel to x-axis",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(i) In ",
+            {
+              "latex": "\\left(- 5, 3\\right), \\left(- 1, 3\\right), \\left(0, 3\\right), \\left(5, 3\\right)",
+              "fallback": "(−5, 3), (−1, 3), (0, 3), (5, 3)"
+            },
+            ", every point has the same ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinate ",
+            {
+              "latex": "y = 3",
+              "fallback": "y = 3"
+            },
+            ", which is ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " units above the ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-axis."
+          ],
+          "ta": [
+            "(i) ",
+            {
+              "latex": "\\left(- 5, 3\\right), \\left(- 1, 3\\right), \\left(0, 3\\right), \\left(5, 3\\right)",
+              "fallback": "(−5, 3), (−1, 3), (0, 3), (5, 3)"
+            },
+            " ஆகிய அனைத்துப் புள்ளிகளிலும் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-ஆயத்தொலைவு ",
+            {
+              "latex": "y = 3",
+              "fallback": "y = 3"
+            },
+            " எனச் சமமாக உள்ளது (",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-அச்சிற்கு ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " அலகுகள் மேல்)."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 0 \\;(\\text{for all points}) \\implies \\text{Straight line lying on }y\\text{-axis}",
+          "fallback": "x = 0 for all points ⇒ straight line lying on y-axis",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(ii) In ",
+            {
+              "latex": "\\left(0, - 4\\right), \\left(0, - 2\\right), \\left(0, 4\\right), \\left(0, 5\\right)",
+              "fallback": "(0, −4), (0, −2), (0, 4), (0, 5)"
+            },
+            ", every point has ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinate ",
+            {
+              "latex": "x = 0",
+              "fallback": "x = 0"
+            },
+            ", so every point lies directly on the ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-axis."
+          ],
+          "ta": [
+            "(ii) ",
+            {
+              "latex": "\\left(0, - 4\\right), \\left(0, - 2\\right), \\left(0, 4\\right), \\left(0, 5\\right)",
+              "fallback": "(0, −4), (0, −2), (0, 4), (0, 5)"
+            },
+            " ஆகிய அனைத்துப் புள்ளிகளிலும் ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-ஆயத்தொலைவு ",
+            {
+              "latex": "x = 0",
+              "fallback": "x = 0"
+            },
+            " ஆகும்; எனவே அவை அனைத்தும் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-அச்சின் மேல் அமைந்துள்ளன."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.1-q4",
+    "questionMath": {
+      "en": [
+        "4. Plot the following points in the coordinate plane. Join them in order. What type of geometrical shape is formed?\n(i) ",
+        {
+          "latex": "(0,0),\\;(-4,0),\\;(-4,-4),\\;(0,-4)",
+          "fallback": "(0, 0) (−4, 0) (−4, −4) (0, −4)"
+        },
+        "   (ii) ",
+        {
+          "latex": "(-3,3),\\;(2,3),\\;(-6,-1),\\;(5,-1)",
+          "fallback": "(−3, 3) (2, 3) (−6, −1) (5, −1)"
+        }
+      ],
+      "ta": [
+        "4. பின்வரும் புள்ளிகளை ஆயத்தொலைத் தளத்தில் குறித்து, வரிசைப்படி அவற்றை இணைக்கவும். எந்த வகையான வடிவியல் உருவம் கிடைக்கும்?\n(i) ",
+        {
+          "latex": "(0,0),\\;(-4,0),\\;(-4,-4),\\;(0,-4)",
+          "fallback": "(0, 0) (−4, 0) (−4, −4) (0, −4)"
+        },
+        "   (ii) ",
+        {
+          "latex": "(-3,3),\\;(2,3),\\;(-6,-1),\\;(5,-1)",
+          "fallback": "(−3, 3) (2, 3) (−6, −1) (5, −1)"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(i) Square};\\quad \\text{(ii) Trapezium}",
+      "fallback": "(i) Square; (ii) Trapezium",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{All 4 sides}=4\\text{ units},\\;\\text{angles}=90^\\circ \\implies \\text{Square}",
+          "fallback": "All 4 sides = 4 units, angles = 90° ⇒ Square",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(i) Joining ",
+            {
+              "latex": "\\left(0, 0\\right)",
+              "fallback": "(0,0)"
+            },
+            " → ",
+            {
+              "latex": "\\left(- 4, 0\\right)",
+              "fallback": "(−4,0)"
+            },
+            " → ",
+            {
+              "latex": "\\left(- 4, - 4\\right)",
+              "fallback": "(−4,−4)"
+            },
+            " → ",
+            {
+              "latex": "\\left(0, - 4\\right)",
+              "fallback": "(0,−4)"
+            },
+            " → ",
+            {
+              "latex": "\\left(0, 0\\right)",
+              "fallback": "(0,0)"
+            },
+            " gives two horizontal sides of ",
+            {
+              "latex": "\\text{length} 4",
+              "fallback": "length 4"
+            },
+            " and two vertical sides of ",
+            {
+              "latex": "\\text{length} 4",
+              "fallback": "length 4"
+            },
+            " meeting at ",
+            {
+              "latex": "90^{\\circ}",
+              "fallback": "90°"
+            },
+            " angles. Hence it is a square."
+          ],
+          "ta": [
+            "(i) ",
+            {
+              "latex": "\\left(0, 0\\right)",
+              "fallback": "(0,0)"
+            },
+            " → ",
+            {
+              "latex": "\\left(- 4, 0\\right)",
+              "fallback": "(−4,0)"
+            },
+            " → ",
+            {
+              "latex": "\\left(- 4, - 4\\right)",
+              "fallback": "(−4,−4)"
+            },
+            " → ",
+            {
+              "latex": "\\left(0, - 4\\right)",
+              "fallback": "(0,−4)"
+            },
+            " → ",
+            {
+              "latex": "\\left(0, 0\\right)",
+              "fallback": "(0,0)"
+            },
+            " என இணைக்கும்போது, ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " அலகு நீளமுள்ள செங்குத்து மற்றும் கிடைமட்டப் பக்கங்கள் ",
+            {
+              "latex": "90^{\\circ}",
+              "fallback": "90°"
+            },
+            " கோணத்தில் வெட்டுகின்றன. எனவே இது ஒரு சதுரம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{One pair of opposite sides parallel } (y=3 \\parallel y=-1) \\implies \\text{Trapezium}",
+          "fallback": "y=3 ∥ y=−1, lengths 5 ≠ 11 ⇒ Trapezium",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(ii) Points ",
+            {
+              "latex": "\\left(- 3, 3\\right)",
+              "fallback": "(−3, 3)"
+            },
+            " and ",
+            {
+              "latex": "\\left(2, 3\\right)",
+              "fallback": "(2, 3)"
+            },
+            " lie on the horizontal line ",
+            {
+              "latex": "y = 3 \\left(\\text{length} 5\\right)",
+              "fallback": "y = 3 (length 5)"
+            },
+            ". Points ",
+            {
+              "latex": "\\left(- 6, - 1\\right)",
+              "fallback": "(−6, −1)"
+            },
+            " and ",
+            {
+              "latex": "\\left(5, - 1\\right)",
+              "fallback": "(5, −1)"
+            },
+            " lie on the horizontal line ",
+            {
+              "latex": "y = - 1 \\left(\\text{length} 11\\right)",
+              "fallback": "y = −1 (length 11)"
+            },
+            ". Since one pair of opposite sides is parallel with unequal lengths, the quadrilateral is a trapezium."
+          ],
+          "ta": [
+            "(ii) ",
+            {
+              "latex": "\\left(- 3, 3\\right), \\left(2, 3\\right)",
+              "fallback": "(−3, 3), (2, 3)"
+            },
+            " ஆகியவை ",
+            {
+              "latex": "y = 3",
+              "fallback": "y = 3"
+            },
+            " என்ற கிடைமட்டக் கோட்டிலும் (நீளம் ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            "), ",
+            {
+              "latex": "\\left(- 6, - 1\\right), \\left(5, - 1\\right)",
+              "fallback": "(−6, −1), (5, −1)"
+            },
+            " ஆகியவை ",
+            {
+              "latex": "y = - 1",
+              "fallback": "y = −1"
+            },
+            " என்ற கிடைமட்டக் கோட்டிலும் (நீளம் ",
+            {
+              "latex": "11",
+              "fallback": "11"
+            },
+            ") உள்ளன. ஒரு சோடி எதிர்ப்பக்கங்கள் இணையாகவும் சமமற்ற நீளமாகவும் உள்ளதால் இது ஒரு சரிவகம்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.2-q1",
+    "questionMath": {
+      "en": [
+        "1. Find the distance between the following pairs of points.\n(i) (1, 2) and (4, 3)   (ii) (3, 4) and (−7, 2)\n(iii) (a, b) and (c, b)   (iv) (3, −9) and (−2, 3)"
+      ],
+      "ta": [
+        "1. கீழ்க்காணும் புள்ளிகளுக்கு இடையே உள்ள தொலைவைக் காண்க.\n(i) (1, 2) மற்றும் (4, 3)   (ii) (3, 4) மற்றும் (−7, 2)\n(iii) (a, b) மற்றும் (c, b)   (iv) (3, −9) மற்றும் (−2, 3)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{aligned}\\text{(i) }\\sqrt{10},&\\quad \\text{(ii) }2\\sqrt{26}\\\\\\text{(iii) }c-a,&\\quad \\text{(iv) }13\\end{aligned}",
+      "fallback": "(i) √10 units; (ii) 2√26 units; (iii) |c − a| (c − a); (iv) 13 units",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "d = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}",
+          "fallback": "d = √((x₂ − x₁)² + (y₂ − y₁)²)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Use the distance formula ",
+            {
+              "latex": "d = \\sqrt{\\left(x_{2} - x_{1}\\right)^{2} + \\left(y_{2} - y_{1}\\right)^{2}}",
+              "fallback": "d = √[(x₂ − x₁)² + (y₂ − y₁)²]"
+            },
+            "."
+          ],
+          "ta": [
+            "இரு புள்ளிகளுக்கு இடையேயான தொலைவு வாய்ப்பாடு ",
+            {
+              "latex": "d = \\sqrt{\\left(x_{2} - x_{1}\\right)^{2} + \\left(y_{2} - y_{1}\\right)^{2}}",
+              "fallback": "d = √[(x₂ − x₁)² + (y₂ − y₁)²]"
+            },
+            "-ஐப் பயன்படுத்துவோம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "d_1 = \\sqrt{(4-1)^2+(3-2)^2} = \\sqrt{3^2+1^2} = \\sqrt{10}\\text{ units}",
+          "fallback": "d₁ = √((4−1)² + (3−2)²) = √(9 + 1) = √10 units",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(i) Between ",
+            {
+              "latex": "\\left(1, 2\\right)",
+              "fallback": "(1, 2)"
+            },
+            " and ",
+            {
+              "latex": "\\left(4, 3\\right)",
+              "fallback": "(4, 3)"
+            },
+            ": subtract ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinates ",
+            {
+              "latex": "\\left(4 - 1 = 3\\right)",
+              "fallback": "(4 − 1 = 3)"
+            },
+            " and ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinates ",
+            {
+              "latex": "\\left(3 - 2 = 1\\right)",
+              "fallback": "(3 − 2 = 1)"
+            },
+            "."
+          ],
+          "ta": [
+            "(i) ",
+            {
+              "latex": "\\left(1, 2\\right)",
+              "fallback": "(1, 2)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\left(4, 3\\right) : x",
+              "fallback": "(4, 3): x"
+            },
+            "-வேறுபாடு ",
+            {
+              "latex": "4 - 1 = 3, y",
+              "fallback": "4 − 1 = 3, y"
+            },
+            "-வேறுபாடு ",
+            {
+              "latex": "3 - 2 = 1",
+              "fallback": "3 − 2 = 1"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "d_2 = \\sqrt{(-7-3)^2+(2-4)^2} = \\sqrt{100+4} = \\sqrt{104} = 2\\sqrt{26}\\text{ units}",
+          "fallback": "d₂ = √((−7−3)² + (2−4)²) = √104 = 2√26 units",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(ii) Between ",
+            {
+              "latex": "\\left(3, 4\\right)",
+              "fallback": "(3, 4)"
+            },
+            " and ",
+            {
+              "latex": "\\left(- 7, 2\\right)",
+              "fallback": "(−7, 2)"
+            },
+            ": compute ",
+            {
+              "latex": "\\left(- 7 - 3\\right)^{2} + \\left(2 - 4\\right)^{2} = 100 + 4 = 104 = 4 \\times 26",
+              "fallback": "(−7 − 3)² + (2 − 4)² = 100 + 4 = 104 = 4 × 26"
+            },
+            "."
+          ],
+          "ta": [
+            "(ii) ",
+            {
+              "latex": "\\left(3, 4\\right)",
+              "fallback": "(3, 4)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\left(- 7, 2\\right) : \\left(- 7 - 3\\right)^{2} + \\left(2 - 4\\right)^{2} = 100 + 4 = 104 = 4 \\times 26",
+              "fallback": "(−7, 2): (−7 − 3)² + (2 − 4)² = 100 + 4 = 104 = 4 × 26"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "d_3 = \\sqrt{(c-a)^2+(b-b)^2} = |c-a| \\;(= c-a\\text{ when }c\\ge a)",
+          "fallback": "d₃ = √((c−a)² + (b−b)²) = |c − a| (= c − a)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(iii) Between ",
+            {
+              "latex": "\\left(a, b\\right)",
+              "fallback": "(a, b)"
+            },
+            " and ",
+            {
+              "latex": "\\left(c, b\\right)",
+              "fallback": "(c, b)"
+            },
+            ": both ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinates equal ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            ", so ",
+            {
+              "latex": "y_{2} - y_{1} = 0",
+              "fallback": "y₂ − y₁ = 0"
+            },
+            " and distance is ",
+            {
+              "latex": "\\left|c - a\\right|",
+              "fallback": "|c − a|"
+            },
+            " (written ",
+            {
+              "latex": "c - a",
+              "fallback": "c − a"
+            },
+            " in the textbook key when ",
+            {
+              "latex": "c \\ge a",
+              "fallback": "c ≥ a"
+            },
+            ")."
+          ],
+          "ta": [
+            "(iii) ",
+            {
+              "latex": "\\left(a, b\\right)",
+              "fallback": "(a, b)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\left(c, b\\right) : y",
+              "fallback": "(c, b): y"
+            },
+            "-ஆயத்தொலைவுகள் சமம் ",
+            {
+              "latex": "\\left(b - b = 0\\right)",
+              "fallback": "(b − b = 0)"
+            },
+            " என்பதால் தொலைவு ",
+            {
+              "latex": "\\left|c - a\\right|",
+              "fallback": "|c − a|"
+            },
+            " (",
+            {
+              "latex": "c \\ge a",
+              "fallback": "c ≥ a"
+            },
+            " எனில் ",
+            {
+              "latex": "c - a",
+              "fallback": "c − a"
+            },
+            ")."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "d_4 = \\sqrt{(-2-3)^2+(3-(-9))^2} = \\sqrt{25+144} = \\sqrt{169} = 13\\text{ units}",
+          "fallback": "d₄ = √((−2−3)² + (3+9)²) = √169 = 13 units",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(iv) Between ",
+            {
+              "latex": "\\left(3, - 9\\right)",
+              "fallback": "(3, −9)"
+            },
+            " and ",
+            {
+              "latex": "\\left(- 2, 3\\right)",
+              "fallback": "(−2, 3)"
+            },
+            ": compute ",
+            {
+              "latex": "\\left(- 2 - 3\\right)^{2} + \\left(3 - \\left(- 9\\right)\\right)^{2} = \\left(- 5\\right)^{2} + 12^{2} = 25 + 144 = 169",
+              "fallback": "(−2 − 3)² + (3 − (−9))² = (−5)² + 12² = 25 + 144 = 169"
+            },
+            "."
+          ],
+          "ta": [
+            "(iv) ",
+            {
+              "latex": "\\left(3, - 9\\right)",
+              "fallback": "(3, −9)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\left(- 2, 3\\right) : \\left(- 2 - 3\\right)^{2} + \\left(3 - \\left(- 9\\right)\\right)^{2} = \\left(- 5\\right)^{2} + 12^{2} = 25 + 144 = 169",
+              "fallback": "(−2, 3): (−2 − 3)² + (3 − (−9))² = (−5)² + 12² = 25 + 144 = 169"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.2-q4",
+    "questionMath": {
+      "en": [
+        "4. Show that the following points taken in order form an equilateral triangle in each case.\n(i) ",
+        {
+          "latex": "A(2,2),\\;B(-2,-2),\\;C(-2\\sqrt{3},2\\sqrt{3})",
+          "fallback": "A(2, 2), B(−2, −2), C(−2√3, 2√3)"
+        },
+        "   (ii) ",
+        {
+          "latex": "A(\\sqrt{3},2),\\;B(0,1),\\;C(0,3)",
+          "fallback": "A(√3, 2), B(0, 1), C(0, 3)"
+        }
+      ],
+      "ta": [
+        "4. பின்வரும் புள்ளிகள் வரிசைப்படி எடுத்துக்கொள்ளப்பட்டால், அது ஒரு சமபக்க முக்கோணத்தை அமைக்கும் என நிறுவுக.\n(i) ",
+        {
+          "latex": "A(2,2),\\;B(-2,-2),\\;C(-2\\sqrt{3},2\\sqrt{3})",
+          "fallback": "A(2, 2), B(−2, −2), C(−2√3, 2√3)"
+        },
+        "   (ii) ",
+        {
+          "latex": "A(\\sqrt{3},2),\\;B(0,1),\\;C(0,3)",
+          "fallback": "A(√3, 2), B(0, 1), C(0, 3)"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(i) }AB=BC=CA=4\\sqrt{2};\\quad \\text{(ii) }AB=BC=CA=2",
+      "fallback": "(i) Equilateral (side 4√2); (ii) Equilateral (side 2)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}AB&=\\sqrt{(-2-2)^2+(-2-2)^2}=\\sqrt{16+16}=4\\sqrt{2}\\\\BC&=\\sqrt{(-2\\sqrt{3}+2)^2+(2\\sqrt{3}+2)^2}=\\sqrt{16+16}=4\\sqrt{2}\\\\CA&=\\sqrt{(2+2\\sqrt{3})^2+(2-2\\sqrt{3})^2}=\\sqrt{16+16}=4\\sqrt{2}\\end{aligned}",
+          "fallback": "AB = BC = CA = √32 = 4√2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(i) Find ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            ", ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            ", and ",
+            {
+              "latex": "CA",
+              "fallback": "CA"
+            },
+            " for ",
+            {
+              "latex": "A \\left(2, 2\\right), B \\left(- 2, - 2\\right), C \\left(- 2\\,\\sqrt{3}, 2\\,\\sqrt{3}\\right)",
+              "fallback": "A(2, 2), B(−2, −2), C(−2√3, 2√3)"
+            },
+            ". Note that ",
+            {
+              "latex": "\\left(2 + 2\\,\\sqrt{3}\\right)^{2} + \\left(2 - 2\\,\\sqrt{3}\\right)^{2} = \\left(4 + 8\\,\\sqrt{3} + 12\\right) + \\left(4 - 8\\,\\sqrt{3} + 12\\right) = 32",
+              "fallback": "(2 + 2√3)² + (2 − 2√3)² = (4 + 8√3 + 12) + (4 − 8√3 + 12) = 32"
+            },
+            "."
+          ],
+          "ta": [
+            "(i) ",
+            {
+              "latex": "A \\left(2, 2\\right), B \\left(- 2, - 2\\right), C \\left(- 2\\,\\sqrt{3}, 2\\,\\sqrt{3}\\right)",
+              "fallback": "A(2, 2), B(−2, −2), C(−2√3, 2√3)"
+            },
+            " புள்ளிகளுக்கு ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            ", ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            ", ",
+            {
+              "latex": "CA",
+              "fallback": "CA"
+            },
+            " காண்போம். ",
+            {
+              "latex": "\\left(2 + 2\\,\\sqrt{3}\\right)^{2} + \\left(2 - 2\\,\\sqrt{3}\\right)^{2} = 16 + 16 = 32",
+              "fallback": "(2 + 2√3)² + (2 − 2√3)² = 16 + 16 = 32"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "AB = BC = CA = 4\\sqrt{2} \\implies \\text{Equilateral triangle}",
+          "fallback": "AB = BC = CA ⇒ Equilateral",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "AB = BC = CA = 4\\,\\sqrt{2}",
+              "fallback": "AB = BC = CA = 4√2"
+            },
+            ", the triangle in (i) is equilateral."
+          ],
+          "ta": [
+            {
+              "latex": "AB = BC = CA = 4\\,\\sqrt{2}",
+              "fallback": "AB = BC = CA = 4√2"
+            },
+            " என்பதால், (i) ஒரு சமபக்க முக்கோணம் ஆகும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}AB&=\\sqrt{(0-\\sqrt{3})^2+(1-2)^2}=\\sqrt{3+1}=2\\\\BC&=\\sqrt{(0-0)^2+(3-1)^2}=\\sqrt{0+4}=2\\\\CA&=\\sqrt{(\\sqrt{3}-0)^2+(2-3)^2}=\\sqrt{3+1}=2\\end{aligned}",
+          "fallback": "AB = 2, BC = 2, CA = 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(ii) Find ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            ", ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            ", and ",
+            {
+              "latex": "CA",
+              "fallback": "CA"
+            },
+            " for ",
+            {
+              "latex": "A \\left(\\sqrt{3}, 2\\right), B \\left(0, 1\\right), C \\left(0, 3\\right)",
+              "fallback": "A(√3, 2), B(0, 1), C(0, 3)"
+            },
+            "."
+          ],
+          "ta": [
+            "(ii) ",
+            {
+              "latex": "A \\left(\\sqrt{3}, 2\\right), B \\left(0, 1\\right), C \\left(0, 3\\right)",
+              "fallback": "A(√3, 2), B(0, 1), C(0, 3)"
+            },
+            " புள்ளிகளுக்கு ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            ", ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            ", ",
+            {
+              "latex": "CA",
+              "fallback": "CA"
+            },
+            " காண்போம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "AB = BC = CA = 2 \\implies \\text{Equilateral triangle}",
+          "fallback": "AB = BC = CA = 2 ⇒ Equilateral",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "AB = BC = CA = 2",
+              "fallback": "AB = BC = CA = 2"
+            },
+            ", the triangle in (ii) is also equilateral."
+          ],
+          "ta": [
+            {
+              "latex": "AB = BC = CA = 2",
+              "fallback": "AB = BC = CA = 2"
+            },
+            " என்பதால், (ii) ஒரு சமபக்க முக்கோணம் ஆகும்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.2-q10",
+    "questionMath": {
+      "en": [
+        "10. Let ",
+        {
+          "latex": "A(2, 3)",
+          "fallback": "A(2, 3)"
+        },
+        " and ",
+        {
+          "latex": "B(2, -4)",
+          "fallback": "B(2, −4)"
+        },
+        " be two points. If P lies on the x-axis, such that ",
+        {
+          "latex": "AP = \\dfrac{3}{7}AB",
+          "fallback": "AP = (3/7) AB"
+        },
+        ", find the coordinates of P."
+      ],
+      "ta": [
+        "10. புள்ளிகள் ",
+        {
+          "latex": "A(2, 3)",
+          "fallback": "A(2, 3)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B(2, -4)",
+          "fallback": "B(2, −4)"
+        },
+        " என்க. x அச்சின் மீது அமைந்துள்ள புள்ளி P ஆனது ",
+        {
+          "latex": "AP = \\dfrac{3}{7}AB",
+          "fallback": "AP = (3/7) AB"
+        },
+        " என்ற வகையில் அமைந்துள்ளது எனில், புள்ளி P இன் அச்சுத் தொலைவைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "P(2, 0)",
+      "fallback": "P(2, 0)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "P = (x, 0)",
+          "fallback": "P = (x, 0)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " lies on the ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-axis, its ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinate is ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            ", so let ",
+            {
+              "latex": "P = \\left(x, 0\\right)",
+              "fallback": "P = (x, 0)"
+            },
+            "."
+          ],
+          "ta": [
+            "புள்ளி ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " ஆனது ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-அச்சின் மீது உள்ளதால் அதன் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-ஆயத்தொலைவு ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            "; எனவே ",
+            {
+              "latex": "P = \\left(x, 0\\right)",
+              "fallback": "P = (x, 0)"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "AB = \\sqrt{(2-2)^2+(-4-3)^2} = \\sqrt{49} = 7",
+          "fallback": "AB = √((2−2)² + (−4−3)²) = 7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " using the distance formula: both ",
+            {
+              "latex": "A \\left(2, 3\\right)",
+              "fallback": "A(2, 3)"
+            },
+            " and ",
+            {
+              "latex": "B \\left(2, - 4\\right)",
+              "fallback": "B(2, −4)"
+            },
+            " have ",
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            ", so ",
+            {
+              "latex": "AB = 7",
+              "fallback": "AB = 7"
+            },
+            " units."
+          ],
+          "ta": [
+            {
+              "latex": "A \\left(2, 3\\right)",
+              "fallback": "A(2, 3)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "B \\left(2, - 4\\right)",
+              "fallback": "B(2, −4)"
+            },
+            " ஆகிய இரு புள்ளிகளிலும் ",
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            " என்பதால் ",
+            {
+              "latex": "AB = 7",
+              "fallback": "AB = 7"
+            },
+            " அலகுகள்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}AP &= \\dfrac{3}{7}\\times 7 = 3\\\\(x-2)^2+(0-3)^2 &= 3^2 = 9\\\\(x-2)^2 &= 0 \\implies x = 2\\end{aligned}",
+          "fallback": "(x−2)² + (0−3)² = 9 ⇒ (x−2)² + 9 = 9 ⇒ (x−2)² = 0 ⇒ x = 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Given ",
+            {
+              "latex": "AP = \\left(\\dfrac{3}{7}\\right) AB = \\left(\\dfrac{3}{7}\\right) \\left(7\\right) = 3",
+              "fallback": "AP = (3/7) AB = (3/7)(7) = 3"
+            },
+            ". Use the distance formula for ",
+            {
+              "latex": "AP^{2} = 9",
+              "fallback": "AP² = 9"
+            },
+            "."
+          ],
+          "ta": [
+            "கொடுக்கப்பட்டது ",
+            {
+              "latex": "AP = \\left(\\dfrac{3}{7}\\right) AB = \\left(\\dfrac{3}{7}\\right) \\left(7\\right) = 3",
+              "fallback": "AP = (3/7) AB = (3/7)(7) = 3"
+            },
+            ". ",
+            {
+              "latex": "AP^{2} = 9",
+              "fallback": "AP² = 9"
+            },
+            " எனப் பிரதியிடுவோம்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.2-q12",
+    "questionMath": {
+      "en": [
+        "12. The radius of a circle with centre at origin is ",
+        {
+          "latex": "30",
+          "fallback": "30"
+        },
+        " units. Write the coordinates of the points where the circle intersects the axes. Find the distance between any two such points."
+      ],
+      "ta": [
+        "12. ஆதிப் புள்ளியை மையமாக உடைய வட்டத்தின் ஆரம் ",
+        {
+          "latex": "30",
+          "fallback": "30"
+        },
+        " அலகுகள். அந்த வட்டம் ஆய அச்சுகளை வெட்டும் புள்ளிகளைக் காண்க. இவ்வாறான எந்த இரு புள்ளிகளுக்கும் இடையே உள்ள தொலைவைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "(30,0),(-30,0),(0,30),(0,-30);\\quad d = 30\\sqrt{2}\\text{ units}",
+      "fallback": "Axes points: (30, 0), (−30, 0), (0, 30), (0, −30); distance between adjacent points = 30√2 units (opposite = 60 units)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{Axis points: }(30,0),\\;(-30,0),\\;(0,30),\\;(0,-30)",
+          "fallback": "Intersections: (30, 0), (−30, 0), (0, 30), (0, −30)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "A circle with centre ",
+            {
+              "latex": "O \\left(0, 0\\right)",
+              "fallback": "O(0, 0)"
+            },
+            " and radius ",
+            {
+              "latex": "30",
+              "fallback": "30"
+            },
+            " intersects the ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-axis ",
+            {
+              "latex": "\\left(y = 0\\right)",
+              "fallback": "(y = 0)"
+            },
+            " at ",
+            {
+              "latex": "\\left(\\pm 30, 0\\right)",
+              "fallback": "(±30, 0)"
+            },
+            " and the ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-axis ",
+            {
+              "latex": "\\left(x = 0\\right)",
+              "fallback": "(x = 0)"
+            },
+            " at ",
+            {
+              "latex": "\\left(0, \\pm 30\\right)",
+              "fallback": "(0, ±30)"
+            },
+            "."
+          ],
+          "ta": [
+            "மையம் ",
+            {
+              "latex": "O \\left(0, 0\\right)",
+              "fallback": "O(0, 0)"
+            },
+            ", ஆரம் ",
+            {
+              "latex": "30",
+              "fallback": "30"
+            },
+            " உடைய வட்டம் ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-அச்சை ",
+            {
+              "latex": "\\left(30, 0\\right), \\left(- 30, 0\\right)",
+              "fallback": "(30, 0), (−30, 0)"
+            },
+            " ஆகிய புள்ளிகளிலும், ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-அச்சை ",
+            {
+              "latex": "\\left(0, 30\\right), \\left(0, - 30\\right)",
+              "fallback": "(0, 30), (0, −30)"
+            },
+            " ஆகிய புள்ளிகளிலும் வெட்டும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "d_{\\text{adj}} = \\sqrt{(-30)^2+30^2} = \\sqrt{1800} = 30\\sqrt{2}\\text{ units}",
+          "fallback": "Adjacent distance = 30√2 units (opposite = 60 units)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Distance between any two adjacent axis-intersection points (on different axes, ",
+            {
+              "latex": "e",
+              "fallback": "e"
+            },
+            ".",
+            {
+              "latex": "g",
+              "fallback": "g"
+            },
+            ". ",
+            {
+              "latex": "\\left(30, 0\\right)",
+              "fallback": "(30, 0)"
+            },
+            " and ",
+            {
+              "latex": "\\left(0, 30\\right)",
+              "fallback": "(0, 30)"
+            },
+            "): ",
+            {
+              "latex": "\\sqrt{\\left(0 - 30\\right)^{2} + \\left(30 - 0\\right)^{2}} = \\sqrt{900 + 900} = 30\\,\\sqrt{2}",
+              "fallback": "√((0 − 30)² + (30 − 0)²) = √(900 + 900) = 30√2"
+            },
+            " units. (Opposite points on the same axis are a diameter ",
+            {
+              "latex": "60",
+              "fallback": "60"
+            },
+            " units apart.)"
+          ],
+          "ta": [
+            "அடுத்துள்ள இரு வெட்டுப் புள்ளிகளுக்கு (எ.கா. ",
+            {
+              "latex": "\\left(30, 0\\right)",
+              "fallback": "(30, 0)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\left(0, 30\\right)",
+              "fallback": "(0, 30)"
+            },
+            ") இடையேயான தொலைவு: ",
+            {
+              "latex": "\\sqrt{\\left(0 - 30\\right)^{2} + \\left(30 - 0\\right)^{2}} = \\sqrt{1800} = 30\\,\\sqrt{2}",
+              "fallback": "√((0 − 30)² + (30 − 0)²) = √1800 = 30√2"
+            },
+            " அலகுகள். (ஒரே அச்சின் எதிரெதிர் புள்ளிகளுக்கு இடைப்பட்ட தொலைவு விட்டம் = ",
+            {
+              "latex": "60",
+              "fallback": "60"
+            },
+            " அலகுகள்.)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.3-q1",
+    "questionMath": {
+      "en": [
+        "1. Find the mid-points of the line segment joining the points\n(i) (−2, 3) and (−6, −5)   (ii) (8, −2) and (−8, 0)\n(iii) (a, b) and (a + 2b, 2a − b)   (iv) ",
+        {
+          "latex": "\\left(\\dfrac{1}{2}, -\\dfrac{3}{7}\\right)\\text{ and }\\left(\\dfrac{3}{2}, \\dfrac{-11}{7}\\right)",
+          "fallback": "(1/2, −3/7) and (3/2, −11/7)"
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காணும் புள்ளிகளை இணைத்து உருவாகும் கோட்டுத் துண்டின் நடுப்புள்ளிகளைக் காண்க.\n(i) (−2, 3) மற்றும் (−6, −5)   (ii) (8, −2) மற்றும் (−8, 0)\n(iii) (a, b) மற்றும் (a + 2b, 2a − b)   (iv) ",
+        {
+          "latex": "\\left(\\dfrac{1}{2}, -\\dfrac{3}{7}\\right)\\text{ மற்றும் }\\left(\\dfrac{3}{2}, \\dfrac{-11}{7}\\right)",
+          "fallback": "(1/2, −3/7) மற்றும் (3/2, −11/7)"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\begin{aligned}\\text{(i) }(-4,-1),&\\quad\\text{(ii) }(0,-1)\\\\\\text{(iii) }(a+b,a),&\\quad\\text{(iv) }(1,-1)\\end{aligned}",
+      "fallback": "(i) (−4, −1); (ii) (0, −1); (iii) (a + b, a); (iv) (1, −1)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "M = \\left(\\dfrac{x_1+x_2}{2},\\; \\dfrac{y_1+y_2}{2}\\right)",
+          "fallback": "M = ((x₁ + x₂)/2, (y₁ + y₂)/2)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Use the mid-point formula ",
+            {
+              "latex": "M = \\left(\\dfrac{\\left(x_{1} + x_{2}\\right)}{2}, \\dfrac{\\left(y_{1} + y_{2}\\right)}{2}\\right)",
+              "fallback": "M = ((x₁ + x₂)/2, (y₁ + y₂)/2)"
+            },
+            "."
+          ],
+          "ta": [
+            "நடுப்புள்ளி வாய்ப்பாடு ",
+            {
+              "latex": "M = \\left(\\dfrac{\\left(x_{1} + x_{2}\\right)}{2}, \\dfrac{\\left(y_{1} + y_{2}\\right)}{2}\\right)",
+              "fallback": "M = ((x₁ + x₂)/2, (y₁ + y₂)/2)"
+            },
+            "-ஐப் பயன்படுத்துவோம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "M_1 = \\left(\\dfrac{-2+(-6)}{2},\\; \\dfrac{3+(-5)}{2}\\right) = \\left(\\dfrac{-8}{2},\\; \\dfrac{-2}{2}\\right) = (-4,-1)",
+          "fallback": "M₁ = (−4, −1)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(i) Average the coordinates of ",
+            {
+              "latex": "\\left(- 2, 3\\right)",
+              "fallback": "(−2, 3)"
+            },
+            " and ",
+            {
+              "latex": "\\left(- 6, - 5\\right) : x = \\dfrac{\\left(- 2 - 6\\right)}{2} = - 4",
+              "fallback": "(−6, −5): x = (−2 − 6)/2 = −4"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y = \\dfrac{\\left(3 - 5\\right)}{2} = - 1",
+              "fallback": "y = (3 − 5)/2 = −1"
+            },
+            "."
+          ],
+          "ta": [
+            "(i) ",
+            {
+              "latex": "\\left(- 2, 3\\right)",
+              "fallback": "(−2, 3)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\left(- 6, - 5\\right) : x = \\dfrac{\\left(- 2 - 6\\right)}{2} = - 4",
+              "fallback": "(−6, −5): x = (−2 − 6)/2 = −4"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y = \\dfrac{\\left(3 - 5\\right)}{2} = - 1",
+              "fallback": "y = (3 − 5)/2 = −1"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "M_2 = \\left(\\dfrac{8+(-8)}{2},\\; \\dfrac{-2+0}{2}\\right) = (0,-1)",
+          "fallback": "M₂ = (0, −1)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(ii) Average ",
+            {
+              "latex": "\\left(8, - 2\\right)",
+              "fallback": "(8, −2)"
+            },
+            " and ",
+            {
+              "latex": "\\left(- 8, 0\\right) : x = \\dfrac{\\left(8 - 8\\right)}{2} = 0",
+              "fallback": "(−8, 0): x = (8 − 8)/2 = 0"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y = \\dfrac{\\left(- 2 + 0\\right)}{2} = - 1",
+              "fallback": "y = (−2 + 0)/2 = −1"
+            },
+            "."
+          ],
+          "ta": [
+            "(ii) ",
+            {
+              "latex": "\\left(8, - 2\\right)",
+              "fallback": "(8, −2)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\left(- 8, 0\\right) : x = \\dfrac{\\left(8 - 8\\right)}{2} = 0",
+              "fallback": "(−8, 0): x = (8 − 8)/2 = 0"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y = \\dfrac{\\left(- 2 + 0\\right)}{2} = - 1",
+              "fallback": "y = (−2 + 0)/2 = −1"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "M_3 = \\left(\\dfrac{a+a+2b}{2},\\; \\dfrac{b+2a-b}{2}\\right) = \\left(\\dfrac{2a+2b}{2},\\; \\dfrac{2a}{2}\\right) = (a+b,\\; a)",
+          "fallback": "M₃ = (a + b, a)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(iii) Average ",
+            {
+              "latex": "\\left(a, b\\right)",
+              "fallback": "(a, b)"
+            },
+            " and ",
+            {
+              "latex": "\\left(a + 2 b, 2 a - b\\right) : x = \\dfrac{\\left(2 a + 2 b\\right)}{2} = a + b",
+              "fallback": "(a + 2b, 2a − b): x = (2a + 2b)/2 = a + b"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y = \\dfrac{2 a}{2} = a",
+              "fallback": "y = 2a/2 = a"
+            },
+            "."
+          ],
+          "ta": [
+            "(iii) ",
+            {
+              "latex": "\\left(a, b\\right)",
+              "fallback": "(a, b)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\left(a + 2 b, 2 a - b\\right) : x = \\dfrac{\\left(2 a + 2 b\\right)}{2} = a + b",
+              "fallback": "(a + 2b, 2a − b): x = (2a + 2b)/2 = a + b"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y = \\dfrac{2 a}{2} = a",
+              "fallback": "y = 2a/2 = a"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "M_4 = \\left(\\dfrac{\\frac{1}{2}+\\frac{3}{2}}{2},\\; \\dfrac{-\\frac{3}{7}+\\frac{-11}{7}}{2}\\right) = \\left(\\dfrac{2}{2},\\; \\dfrac{-2}{2}\\right) = (1,-1)",
+          "fallback": "M₄ = (1, −1)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(iv) Average ",
+            {
+              "latex": "\\left(\\dfrac{1}{2}, \\dfrac{- 3}{7}\\right)",
+              "fallback": "(1/2, −3/7)"
+            },
+            " and ",
+            {
+              "latex": "\\left(\\dfrac{3}{2}, \\dfrac{- 11}{7}\\right) : x = \\dfrac{\\left(\\dfrac{4}{2}\\right)}{2} = 1",
+              "fallback": "(3/2, −11/7): x = (4/2)/2 = 1"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y = \\dfrac{\\left(\\dfrac{- 14}{7}\\right)}{2} = - 1",
+              "fallback": "y = (−14/7)/2 = −1"
+            },
+            "."
+          ],
+          "ta": [
+            "(iv) ",
+            {
+              "latex": "\\left(\\dfrac{1}{2}, \\dfrac{- 3}{7}\\right)",
+              "fallback": "(1/2, −3/7)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\left(\\dfrac{3}{2}, \\dfrac{- 11}{7}\\right) : x = \\dfrac{\\left(\\dfrac{4}{2}\\right)}{2} = 1",
+              "fallback": "(3/2, −11/7): x = (4/2)/2 = 1"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y = \\dfrac{\\left(\\dfrac{- 14}{7}\\right)}{2} = - 1",
+              "fallback": "y = (−14/7)/2 = −1"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.3-q2",
+    "questionMath": {
+      "en": [
+        "2. The centre of a circle is ",
+        {
+          "latex": "(-4, 2)",
+          "fallback": "(−4, 2)"
+        },
+        ". If one end of the diameter of the circle is ",
+        {
+          "latex": "(-3, 7)",
+          "fallback": "(−3, 7)"
+        },
+        ", then find the other end."
+      ],
+      "ta": [
+        "2. ஒரு வட்டத்தின் மையம் ",
+        {
+          "latex": "(-4, 2)",
+          "fallback": "(−4, 2)"
+        },
+        ". அந்த வட்டத்தில் ",
+        {
+          "latex": "(-3, 7)",
+          "fallback": "(−3, 7)"
+        },
+        " என்பது விட்டத்தின் ஒரு முனை எனில், மற்றொரு முனையைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "(-5, -3)",
+      "fallback": "(−5, −3)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\left(\\dfrac{-3+x}{2},\\; \\dfrac{7+y}{2}\\right) = (-4, 2)",
+          "fallback": "C(−4, 2) = mid-point of A(−3, 7) and B(x, y)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "The centre ",
+            {
+              "latex": "C \\left(- 4, 2\\right)",
+              "fallback": "C(−4, 2)"
+            },
+            " is the mid-point of the diameter joining ",
+            {
+              "latex": "A \\left(- 3, 7\\right)",
+              "fallback": "A(−3, 7)"
+            },
+            " and the unknown end ",
+            {
+              "latex": "B \\left(x, y\\right)",
+              "fallback": "B(x, y)"
+            },
+            "."
+          ],
+          "ta": [
+            "வட்டத்தின் மையம் ",
+            {
+              "latex": "C \\left(- 4, 2\\right)",
+              "fallback": "C(−4, 2)"
+            },
+            " என்பது ",
+            {
+              "latex": "A \\left(- 3, 7\\right)",
+              "fallback": "A(−3, 7)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "B \\left(x, y\\right)",
+              "fallback": "B(x, y)"
+            },
+            " முனைகளை இணைக்கும் விட்டத்தின் நடுப்புள்ளியாகும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\dfrac{-3+x}{2}&=-4 &\\quad \\dfrac{7+y}{2}&=2\\\\-3+x&=-8 &\\quad 7+y&=4\\\\x&=-5 &\\quad y&=-3\\end{aligned}",
+          "fallback": "x = −5, y = −3 ⇒ B = (−5, −3)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Equate ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinates and ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinates separately and solve for ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " and ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " மற்றும் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " ஆயத்தொலைவுகளைத் தனித்தனியே சமப்படுத்தி ",
+            {
+              "latex": "x, y",
+              "fallback": "x, y"
+            },
+            " மதிப்புகளைக் காண்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.3-q3",
+    "questionMath": {
+      "en": [
+        "3. If the mid-point ",
+        {
+          "latex": "(x, y)",
+          "fallback": "(x, y)"
+        },
+        " of the line joining ",
+        {
+          "latex": "(3, 4)",
+          "fallback": "(3, 4)"
+        },
+        " and ",
+        {
+          "latex": "(p, 7)",
+          "fallback": "(p, 7)"
+        },
+        " lies on ",
+        {
+          "latex": "2x + 2y + 1 = 0",
+          "fallback": "2x + 2y + 1 = 0"
+        },
+        ", then what will be the value of ",
+        {
+          "latex": "p",
+          "fallback": "p"
+        },
+        "?"
+      ],
+      "ta": [
+        "3. ",
+        {
+          "latex": "(3, 4)",
+          "fallback": "(3, 4)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(p, 7)",
+          "fallback": "(p, 7)"
+        },
+        "-ஐ இணைக்கும் கோட்டுத்துண்டின் நடுப்புள்ளி ",
+        {
+          "latex": "(x, y)",
+          "fallback": "(x, y)"
+        },
+        " ஆனது ",
+        {
+          "latex": "2x + 2y + 1 = 0",
+          "fallback": "2x + 2y + 1 = 0"
+        },
+        "-இன் மேல் அமைந்துள்ளது எனில், ",
+        {
+          "latex": "p",
+          "fallback": "p"
+        },
+        "-இன் மதிப்பு காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "p = -15",
+      "fallback": "p = −15",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(x, y) = \\left(\\dfrac{3+p}{2},\\; \\dfrac{4+7}{2}\\right) = \\left(\\dfrac{3+p}{2},\\; \\dfrac{11}{2}\\right)",
+          "fallback": "x = (3 + p)/2, y = (4 + 7)/2 = 11/2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find the mid-point ",
+            {
+              "latex": "\\left(x, y\\right)",
+              "fallback": "(x, y)"
+            },
+            " of ",
+            {
+              "latex": "\\left(3, 4\\right)",
+              "fallback": "(3, 4)"
+            },
+            " and ",
+            {
+              "latex": "\\left(p, 7\\right)",
+              "fallback": "(p, 7)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(3, 4\\right)",
+              "fallback": "(3, 4)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\left(p, 7\\right)",
+              "fallback": "(p, 7)"
+            },
+            " ஆகியவற்றின் நடுப்புள்ளி ",
+            {
+              "latex": "\\left(x, y\\right)",
+              "fallback": "(x, y)"
+            },
+            "-ஐக் காண்போம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}2\\left(\\dfrac{3+p}{2}\\right)+2\\left(\\dfrac{11}{2}\\right)+1 &= 0\\\\(3+p)+11+1 &= 0\\\\p+15 &= 0 \\implies p = -15\\end{aligned}",
+          "fallback": "2((3+p)/2) + 2(11/2) + 1 = 0 ⇒ (3 + p) + 11 + 1 = 0 ⇒ p = −15",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "\\left(x, y\\right)",
+              "fallback": "(x, y)"
+            },
+            " lies on ",
+            {
+              "latex": "2 x + 2 y + 1 = 0",
+              "fallback": "2x + 2y + 1 = 0"
+            },
+            ", substitute ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " and ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " into the line equation."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(x, y\\right)",
+              "fallback": "(x, y)"
+            },
+            " ஆனது ",
+            {
+              "latex": "2 x + 2 y + 1 = 0",
+              "fallback": "2x + 2y + 1 = 0"
+            },
+            "-இன் மேல் உள்ளதால், ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " மற்றும் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-ஐச் சமன்பாட்டில் பிரதியிடுவோம்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.3-q4",
+    "questionMath": {
+      "en": [
+        "4. The mid-point of the sides of a triangle are ",
+        {
+          "latex": "(2, 4), (-2, 3)",
+          "fallback": "(2, 4), (−2, 3)"
+        },
+        " and ",
+        {
+          "latex": "(5, 2)",
+          "fallback": "(5, 2)"
+        },
+        ". Find the coordinates of the vertices of the triangle."
+      ],
+      "ta": [
+        "4. ஒரு முக்கோணத்தின் பக்கங்களின் நடுப்புள்ளிகள் ",
+        {
+          "latex": "(2, 4), (-2, 3)",
+          "fallback": "(2, 4), (−2, 3)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(5, 2)",
+          "fallback": "(5, 2)"
+        },
+        " எனில் அந்த முக்கோணத்தின் முனைகளின் ஆயத்தொலைவுகளைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "(9,3),\\;(-5,5)\\text{ and }(1,1)",
+      "fallback": "(9, 3), (−5, 5) and (1, 1)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}x_1+x_2&=4,\\; x_2+x_3=-4,\\; x_3+x_1=10\\\\y_1+y_2&=8,\\; y_2+y_3=6,\\; y_3+y_1=4\\end{aligned}",
+          "fallback": "x₁+x₂=4, x₂+x₃=−4, x₃+x₁=10; y₁+y₂=8, y₂+y₃=6, y₃+y₁=4",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Let the vertices be ",
+            {
+              "latex": "A \\left(x_{1}, y_{1}\\right), B \\left(x_{2}, y_{2}\\right), C \\left(x_{3}, y_{3}\\right)",
+              "fallback": "A(x₁, y₁), B(x₂, y₂), C(x₃, y₃)"
+            },
+            ", with mid-points ",
+            {
+              "latex": "D \\left(2, 4\\right)",
+              "fallback": "D(2, 4)"
+            },
+            " of ",
+            {
+              "latex": "AB, E \\left(- 2, 3\\right)",
+              "fallback": "AB, E(−2, 3)"
+            },
+            " of ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            ", and ",
+            {
+              "latex": "F \\left(5, 2\\right)",
+              "fallback": "F(5, 2)"
+            },
+            " of ",
+            {
+              "latex": "CA",
+              "fallback": "CA"
+            },
+            "."
+          ],
+          "ta": [
+            "முக்கோணத்தின் உச்சிகள் ",
+            {
+              "latex": "A \\left(x_{1}, y_{1}\\right), B \\left(x_{2}, y_{2}\\right), C \\left(x_{3}, y_{3}\\right)",
+              "fallback": "A(x₁, y₁), B(x₂, y₂), C(x₃, y₃)"
+            },
+            " என்க. ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            "-இன் நடுப்புள்ளி ",
+            {
+              "latex": "D \\left(2, 4\\right), BC",
+              "fallback": "D(2, 4), BC"
+            },
+            "-இன் நடுப்புள்ளி ",
+            {
+              "latex": "E \\left(- 2, 3\\right), CA",
+              "fallback": "E(−2, 3), CA"
+            },
+            "-இன் நடுப்புள்ளி ",
+            {
+              "latex": "F \\left(5, 2\\right)",
+              "fallback": "F(5, 2)"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}x_1+x_2+x_3 &= 5\\\\x_1 &= 5-(-4)=9,\\; x_2=5-10=-5,\\; x_3=5-4=1\\end{aligned}",
+          "fallback": "x₁ = 5−(−4) = 9, x₂ = 5−10 = −5, x₃ = 5−4 = 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Add all three ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-equations: ",
+            {
+              "latex": "2 \\left(x_{1} + x_{2} + x_{3}\\right) = 4 - 4 + 10 = 10 \\Rightarrow x_{1} + x_{2} + x_{3} = 5",
+              "fallback": "2(x₁ + x₂ + x₃) = 4 − 4 + 10 = 10 ⇒ x₁ + x₂ + x₃ = 5"
+            },
+            ". Subtract each pair to find ",
+            {
+              "latex": "x_{1}, x_{2}, x_{3}",
+              "fallback": "x₁, x₂, x₃"
+            },
+            "."
+          ],
+          "ta": [
+            "மூன்று ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-சமன்பாடுகளையும் கூட்ட: ",
+            {
+              "latex": "2 \\left(x_{1} + x_{2} + x_{3}\\right) = 10 \\Rightarrow x_{1} + x_{2} + x_{3} = 5",
+              "fallback": "2(x₁ + x₂ + x₃) = 10 ⇒ x₁ + x₂ + x₃ = 5"
+            },
+            ". இதிலிருந்து ",
+            {
+              "latex": "x_{1}, x_{2}, x_{3}",
+              "fallback": "x₁, x₂, x₃"
+            },
+            " காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}y_1+y_2+y_3 &= 9\\\\y_1 &= 9-6=3,\\; y_2=9-4=5,\\; y_3=9-8=1\\end{aligned}",
+          "fallback": "y₁ = 9−6 = 3, y₂ = 9−4 = 5, y₃ = 9−8 = 1 ⇒ A(9,3), B(−5,5), C(1,1)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Similarly, ",
+            {
+              "latex": "2 \\left(y_{1} + y_{2} + y_{3}\\right) = 8 + 6 + 4 = 18 \\Rightarrow y_{1} + y_{2} + y_{3} = 9",
+              "fallback": "2(y₁ + y₂ + y₃) = 8 + 6 + 4 = 18 ⇒ y₁ + y₂ + y₃ = 9"
+            },
+            ". Subtract each pair to find ",
+            {
+              "latex": "y_{1}, y_{2}, y_{3}",
+              "fallback": "y₁, y₂, y₃"
+            },
+            "."
+          ],
+          "ta": [
+            "இதேபோல், ",
+            {
+              "latex": "2 \\left(y_{1} + y_{2} + y_{3}\\right) = 18 \\Rightarrow y_{1} + y_{2} + y_{3} = 9",
+              "fallback": "2(y₁ + y₂ + y₃) = 18 ⇒ y₁ + y₂ + y₃ = 9"
+            },
+            ". இதிலிருந்து ",
+            {
+              "latex": "y_{1}, y_{2}, y_{3}",
+              "fallback": "y₁, y₂, y₃"
+            },
+            " காண்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.3-q5",
+    "questionMath": {
+      "en": [
+        "5. ",
+        {
+          "latex": "O(0, 0)",
+          "fallback": "O(0, 0)"
+        },
+        " is the centre of a circle whose one chord is ",
+        {
+          "latex": "AB",
+          "fallback": "AB"
+        },
+        ", where the points ",
+        {
+          "latex": "A",
+          "fallback": "A"
+        },
+        " and ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " are ",
+        {
+          "latex": "(8, 6)",
+          "fallback": "(8, 6)"
+        },
+        " and ",
+        {
+          "latex": "(10, 0)",
+          "fallback": "(10, 0)"
+        },
+        " respectively. ",
+        {
+          "latex": "OD",
+          "fallback": "OD"
+        },
+        " is the perpendicular from the centre to the chord ",
+        {
+          "latex": "AB",
+          "fallback": "AB"
+        },
+        ". Find the coordinates of the mid-point of ",
+        {
+          "latex": "OD",
+          "fallback": "OD"
+        },
+        "."
+      ],
+      "ta": [
+        "5. ",
+        {
+          "latex": "AB",
+          "fallback": "AB"
+        },
+        " ஐ ஒரு நாணாக உடைய வட்டத்தின் மையம் ",
+        {
+          "latex": "O(0, 0)",
+          "fallback": "O(0, 0)"
+        },
+        ". இங்கு, புள்ளிகள் ",
+        {
+          "latex": "A",
+          "fallback": "A"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " முறையே ",
+        {
+          "latex": "(8, 6)",
+          "fallback": "(8, 6)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(10, 0)",
+          "fallback": "(10, 0)"
+        },
+        " ஆகும். வட்டத்தின் மையத்திலிருந்து நாண் ",
+        {
+          "latex": "AB",
+          "fallback": "AB"
+        },
+        "-க்கு வரையப்படும் செங்குத்து ",
+        {
+          "latex": "OD",
+          "fallback": "OD"
+        },
+        " எனில், ",
+        {
+          "latex": "OD",
+          "fallback": "OD"
+        },
+        "-இன் மையப்புள்ளியின் ஆயத் தொலைவுகளைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "\\left(\\dfrac{9}{2},\\; \\dfrac{3}{2}\\right)",
+      "fallback": "(9/2, 3/2)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "D = \\left(\\dfrac{8+10}{2},\\; \\dfrac{6+0}{2}\\right) = (9, 3)",
+          "fallback": "D = mid-point of A(8, 6) and B(10, 0) = (9, 3)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "A perpendicular drawn from the centre of a circle to a chord bisects the chord. Therefore, ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " is the mid-point of ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            "."
+          ],
+          "ta": [
+            "வட்டத்தின் மையத்திலிருந்து ஒரு நாணுக்கு வரையப்படும் செங்குத்து அந்த நாணை இருசமக் கூறிடும். எனவே ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " என்பது ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            "-இன் நடுப்புள்ளியாகும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "M = \\left(\\dfrac{0+9}{2},\\; \\dfrac{0+3}{2}\\right) = \\left(\\dfrac{9}{2},\\; \\dfrac{3}{2}\\right)",
+          "fallback": "M = ((0+9)/2, (0+3)/2) = (9/2, 3/2)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Now find the mid-point ",
+            {
+              "latex": "M",
+              "fallback": "M"
+            },
+            " of ",
+            {
+              "latex": "OD",
+              "fallback": "OD"
+            },
+            " joining ",
+            {
+              "latex": "O \\left(0, 0\\right)",
+              "fallback": "O(0, 0)"
+            },
+            " and ",
+            {
+              "latex": "D \\left(9, 3\\right)",
+              "fallback": "D(9, 3)"
+            },
+            "."
+          ],
+          "ta": [
+            "இப்போது ",
+            {
+              "latex": "O \\left(0, 0\\right)",
+              "fallback": "O(0, 0)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "D \\left(9, 3\\right)",
+              "fallback": "D(9, 3)"
+            },
+            "-ஐ இணைக்கும் ",
+            {
+              "latex": "OD",
+              "fallback": "OD"
+            },
+            "-இன் மையப்புள்ளி ",
+            {
+              "latex": "M",
+              "fallback": "M"
+            },
+            "-ஐக் காண்போம்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.3-q6",
+    "questionMath": {
+      "en": [
+        "6. The points ",
+        {
+          "latex": "A(-5, 4), B(-1, -2)",
+          "fallback": "A(−5, 4), B(−1, −2)"
+        },
+        " and ",
+        {
+          "latex": "C(5, 2)",
+          "fallback": "C(5, 2)"
+        },
+        " are the vertices of an isosceles right-angled triangle where the right angle is at ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        ". Find the coordinates of ",
+        {
+          "latex": "D",
+          "fallback": "D"
+        },
+        " so that ",
+        {
+          "latex": "ABCD",
+          "fallback": "ABCD"
+        },
+        " is a square."
+      ],
+      "ta": [
+        "6. புள்ளிகள் ",
+        {
+          "latex": "A(-5, 4), B(-1, -2)",
+          "fallback": "A(−5, 4), B(−1, −2)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "C(5, 2)",
+          "fallback": "C(5, 2)"
+        },
+        " என்பன இரு சமபக்கச் செங்கோண முக்கோணத்தின் உச்சிகள், இதில் ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " இல் செங்கோணம் அமைந்துள்ளது. மேலும் ",
+        {
+          "latex": "ABCD",
+          "fallback": "ABCD"
+        },
+        " ஒரு சதுரம் எனில் ",
+        {
+          "latex": "D",
+          "fallback": "D"
+        },
+        "-இன் ஆயத்தொலைவுகளைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "D(1, 8)",
+      "fallback": "D(1, 8)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{Mid-point of }AC = \\text{Mid-point of }BD",
+          "fallback": "Mid-point of AC = Mid-point of BD",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "In a square ",
+            {
+              "latex": "ABCD",
+              "fallback": "ABCD"
+            },
+            ", the diagonals ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            " and ",
+            {
+              "latex": "BD",
+              "fallback": "BD"
+            },
+            " bisect each other, so their mid-points coincide."
+          ],
+          "ta": [
+            "சதுரம் ",
+            {
+              "latex": "ABCD",
+              "fallback": "ABCD"
+            },
+            "-இல் மூலைவிட்டங்கள் ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            " மற்றும் ",
+            {
+              "latex": "BD",
+              "fallback": "BD"
+            },
+            " ஒன்றையொன்று இருசமக் கூறிடும்; எனவே அவற்றின் நடுப்புள்ளிகள் சமம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\left(\\dfrac{-5+5}{2},\\; \\dfrac{4+2}{2}\\right) &= \\left(\\dfrac{-1+x}{2},\\; \\dfrac{-2+y}{2}\\right)\\\\-1+x &= 0 \\implies x = 1\\\\-2+y &= 6 \\implies y = 8\\end{aligned}",
+          "fallback": "((−5+5)/2, (4+2)/2) = ((−1+x)/2, (−2+y)/2) ⇒ (0, 3) = ((−1+x)/2, (−2+y)/2)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Let ",
+            {
+              "latex": "D = \\left(x, y\\right)",
+              "fallback": "D = (x, y)"
+            },
+            ". Equate the mid-point of ",
+            {
+              "latex": "A \\left(- 5, 4\\right), C \\left(5, 2\\right)",
+              "fallback": "A(−5, 4), C(5, 2)"
+            },
+            " with the mid-point of ",
+            {
+              "latex": "B \\left(- 1, - 2\\right), D \\left(x, y\\right)",
+              "fallback": "B(−1, −2), D(x, y)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "D = \\left(x, y\\right)",
+              "fallback": "D = (x, y)"
+            },
+            " என்க. ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            "-இன் நடுப்புள்ளியையும் ",
+            {
+              "latex": "BD",
+              "fallback": "BD"
+            },
+            "-இன் நடுப்புள்ளியையும் சமப்படுத்துவோம்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.3-q7",
+    "questionMath": {
+      "en": [
+        "7. The points ",
+        {
+          "latex": "A(-3, 6), B(0, 7)",
+          "fallback": "A(−3, 6), B(0, 7)"
+        },
+        " and ",
+        {
+          "latex": "C(1, 9)",
+          "fallback": "C(1, 9)"
+        },
+        " are the mid-points of the sides ",
+        {
+          "latex": "DE, EF",
+          "fallback": "DE, EF"
+        },
+        " and ",
+        {
+          "latex": "FD",
+          "fallback": "FD"
+        },
+        " of a triangle ",
+        {
+          "latex": "DEF",
+          "fallback": "DEF"
+        },
+        ". Show that the quadrilateral ",
+        {
+          "latex": "ABCD",
+          "fallback": "ABCD"
+        },
+        " is a parallelogram."
+      ],
+      "ta": [
+        "7. முக்கோணம் ",
+        {
+          "latex": "DEF",
+          "fallback": "DEF"
+        },
+        "-இன் பக்கங்கள் ",
+        {
+          "latex": "DE, EF",
+          "fallback": "DE, EF"
+        },
+        " மற்றும் ",
+        {
+          "latex": "FD",
+          "fallback": "FD"
+        },
+        "-களின் நடுப்புள்ளிகள் முறையே ",
+        {
+          "latex": "A(-3, 6), B(0, 7)",
+          "fallback": "A(−3, 6), B(0, 7)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "C(1, 9)",
+          "fallback": "C(1, 9)"
+        },
+        " எனில், நாற்கரம் ",
+        {
+          "latex": "ABCD",
+          "fallback": "ABCD"
+        },
+        " ஓர் இணைகரம் என நிறுவுக."
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{Mid}(AC)=\\text{Mid}(BD)=\\left(-1,\\dfrac{15}{2}\\right)\\implies\\text{Parallelogram}",
+      "fallback": "Proved: D(−2, 8) and diagonals AC, BD bisect each other at (−1, 15/2), so ABCD is a parallelogram",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}x_1 &= (-3)+1-0 = -2\\\\y_1 &= 6+9-7 = 8 \\implies D(-2, 8)\\end{aligned}",
+          "fallback": "D = A + C − B = (−3 + 1 − 0, 6 + 9 − 7) = (−2, 8)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "First find vertex ",
+            {
+              "latex": "D \\left(x_{1}, y_{1}\\right)",
+              "fallback": "D(x₁, y₁)"
+            },
+            " of △",
+            {
+              "latex": "DEF",
+              "fallback": "DEF"
+            },
+            " from the side mid-points ",
+            {
+              "latex": "A \\left(- 3, 6\\right)",
+              "fallback": "A(−3, 6)"
+            },
+            " of ",
+            {
+              "latex": "DE, B \\left(0, 7\\right)",
+              "fallback": "DE, B(0, 7)"
+            },
+            " of ",
+            {
+              "latex": "EF",
+              "fallback": "EF"
+            },
+            ", and ",
+            {
+              "latex": "C \\left(1, 9\\right)",
+              "fallback": "C(1, 9)"
+            },
+            " of ",
+            {
+              "latex": "FD",
+              "fallback": "FD"
+            },
+            "."
+          ],
+          "ta": [
+            "முக்கோணம் ",
+            {
+              "latex": "DEF",
+              "fallback": "DEF"
+            },
+            "-இன் பக்க நடுப்புள்ளிகள் ",
+            {
+              "latex": "A \\left(- 3, 6\\right), B \\left(0, 7\\right), C \\left(1, 9\\right)",
+              "fallback": "A(−3, 6), B(0, 7), C(1, 9)"
+            },
+            "-லிருந்து உச்சி ",
+            {
+              "latex": "D \\left(x_{1}, y_{1}\\right)",
+              "fallback": "D(x₁, y₁)"
+            },
+            "-ஐக் காண்போம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\text{Mid}(AC) &= \\left(\\dfrac{-3+1}{2},\\; \\dfrac{6+9}{2}\\right) = \\left(-1,\\; \\dfrac{15}{2}\\right)\\\\\\text{Mid}(BD) &= \\left(\\dfrac{0+(-2)}{2},\\; \\dfrac{7+8}{2}\\right) = \\left(-1,\\; \\dfrac{15}{2}\\right)\\end{aligned}",
+          "fallback": "Mid(AC) = (−1, 15/2); Mid(BD) = (−1, 15/2)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "To show ",
+            {
+              "latex": "ABCD",
+              "fallback": "ABCD"
+            },
+            " is a parallelogram, check that the diagonals ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            " and ",
+            {
+              "latex": "BD",
+              "fallback": "BD"
+            },
+            " have the same mid-point."
+          ],
+          "ta": [
+            {
+              "latex": "ABCD",
+              "fallback": "ABCD"
+            },
+            " ஒரு இணைகரம் எனக் காட்ட, மூலைவிட்டங்கள் ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            " மற்றும் ",
+            {
+              "latex": "BD",
+              "fallback": "BD"
+            },
+            "-இன் நடுப்புள்ளிகள் சமம் எனக் காண்போம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Mid}(AC)=\\text{Mid}(BD) \\implies ABCD\\text{ is a parallelogram}",
+          "fallback": "Mid(AC) = Mid(BD) ⇒ ABCD is a parallelogram",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Since the diagonals ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            " and ",
+            {
+              "latex": "BD",
+              "fallback": "BD"
+            },
+            " bisect each other at ",
+            {
+              "latex": "\\left(- 1, \\dfrac{15}{2}\\right), ABCD",
+              "fallback": "(−1, 15/2), ABCD"
+            },
+            " is a parallelogram."
+          ],
+          "ta": [
+            "மூலைவிட்டங்கள் ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            " மற்றும் ",
+            {
+              "latex": "BD \\left(- 1, \\dfrac{15}{2}\\right)",
+              "fallback": "BD (−1, 15/2)"
+            },
+            " என்ற புள்ளியில் ஒன்றையொன்று இருசமக் கூறிடுவதால், ",
+            {
+              "latex": "ABCD",
+              "fallback": "ABCD"
+            },
+            " ஓர் இணைகரம் ஆகும்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.3-q8",
+    "questionMath": {
+      "en": [
+        "8. ",
+        {
+          "latex": "A(-3, 2), B(3, 2)",
+          "fallback": "A(−3, 2), B(3, 2)"
+        },
+        " and ",
+        {
+          "latex": "C(-3, -2)",
+          "fallback": "C(−3, −2)"
+        },
+        " are the vertices of the right triangle, right angled at ",
+        {
+          "latex": "A",
+          "fallback": "A"
+        },
+        ". Show that the mid-point of the hypotenuse is equidistant from the vertices."
+      ],
+      "ta": [
+        "8. ",
+        {
+          "latex": "A(-3, 2), B(3, 2)",
+          "fallback": "A(−3, 2), B(3, 2)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "C(-3, -2)",
+          "fallback": "C(−3, −2)"
+        },
+        " என்பன ",
+        {
+          "latex": "A",
+          "fallback": "A"
+        },
+        "-இல் செங்கோணத்தைக் கொண்டுள்ள செங்கோண முக்கோணத்தின் உச்சிகள் எனில், கர்ணத்தின் நடுப்புள்ளியானது உச்சிகளிலிருந்து சமத் தொலைவில் உள்ளது என்பதை நிறுவுக."
+      ]
+    },
+    "answerMath": {
+      "latex": "MA = MB = MC = \\sqrt{13}",
+      "fallback": "Proved: M(0, 0) satisfies MA = MB = MC = √13",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "M = \\left(\\dfrac{3+(-3)}{2},\\; \\dfrac{2+(-2)}{2}\\right) = (0, 0)",
+          "fallback": "M = ((3−3)/2, (2−2)/2) = (0, 0)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Since the right angle is at A, the hypotenuse is ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            ". Find the mid-point ",
+            {
+              "latex": "M",
+              "fallback": "M"
+            },
+            " of ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            " joining ",
+            {
+              "latex": "B \\left(3, 2\\right)",
+              "fallback": "B(3, 2)"
+            },
+            " and ",
+            {
+              "latex": "C \\left(- 3, - 2\\right)",
+              "fallback": "C(−3, −2)"
+            },
+            "."
+          ],
+          "ta": [
+            "செங்கோணம் A-இல் உள்ளதால் கர்ணம் ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            " ஆகும். ",
+            {
+              "latex": "B \\left(3, 2\\right)",
+              "fallback": "B(3, 2)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "C \\left(- 3, - 2\\right)",
+              "fallback": "C(−3, −2)"
+            },
+            "-இன் நடுப்புள்ளி ",
+            {
+              "latex": "M",
+              "fallback": "M"
+            },
+            "-ஐக் காண்போம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}MA &= \\sqrt{(-3-0)^2+(2-0)^2} = \\sqrt{9+4} = \\sqrt{13}\\\\MB &= \\sqrt{(3-0)^2+(2-0)^2} = \\sqrt{9+4} = \\sqrt{13}\\\\MC &= \\sqrt{(-3-0)^2+(-2-0)^2} = \\sqrt{9+4} = \\sqrt{13}\\end{aligned}",
+          "fallback": "MA = √13, MB = √13, MC = √13",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Compute the distances ",
+            {
+              "latex": "MA",
+              "fallback": "MA"
+            },
+            ", ",
+            {
+              "latex": "MB",
+              "fallback": "MB"
+            },
+            ", and ",
+            {
+              "latex": "MC",
+              "fallback": "MC"
+            },
+            " using the distance formula."
+          ],
+          "ta": [
+            {
+              "latex": "M \\left(0, 0\\right)",
+              "fallback": "M(0, 0)"
+            },
+            "-லிருந்து ",
+            {
+              "latex": "A, B, C",
+              "fallback": "A, B, C"
+            },
+            " ஆகிய உச்சிகளுக்கு உள்ள தொலைவுகளைக் காண்போம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "MA = MB = MC = \\sqrt{13}",
+          "fallback": "MA = MB = MC = √13 ⇒ Equidistant",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "MA = MB = MC = \\sqrt{13}",
+              "fallback": "MA = MB = MC = √13"
+            },
+            ", the mid-point ",
+            {
+              "latex": "M \\left(0, 0\\right)",
+              "fallback": "M(0, 0)"
+            },
+            " of the hypotenuse is equidistant from all three vertices."
+          ],
+          "ta": [
+            {
+              "latex": "MA = MB = MC = \\sqrt{13}",
+              "fallback": "MA = MB = MC = √13"
+            },
+            " என்பதால், கர்ணத்தின் நடுப்புள்ளி ",
+            {
+              "latex": "M \\left(0, 0\\right)",
+              "fallback": "M(0, 0)"
+            },
+            " மூன்று உச்சிகளிலிருந்தும் சமத் தொலைவில் உள்ளது."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.4-q1",
+    "questionMath": {
+      "en": [
+        "1. Find the coordinates of the point which divides the line segment joining the points ",
+        {
+          "latex": "A(4, -3)",
+          "fallback": "A(4, −3)"
+        },
+        " and ",
+        {
+          "latex": "B(9, 7)",
+          "fallback": "B(9, 7)"
+        },
+        " in the ratio ",
+        {
+          "latex": "3:2",
+          "fallback": "3:2"
+        },
+        "."
+      ],
+      "ta": [
+        "1. ",
+        {
+          "latex": "A(4, -3)",
+          "fallback": "A(4, −3)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B(9, 7)",
+          "fallback": "B(9, 7)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத்துண்டை ",
+        {
+          "latex": "3:2",
+          "fallback": "3:2"
+        },
+        " என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கும் புள்ளியின் ஆயத் தொலைவுகளைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "(7, 3)",
+      "fallback": "(7, 3)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "P\\left(\\dfrac{mx_2+nx_1}{m+n},\\; \\dfrac{my_2+ny_1}{m+n}\\right)",
+          "fallback": "P = ((mx₂ + nx₁)/(m+n), (my₂ + ny₁)/(m+n))",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Use the section formula for internal division in the ratio ",
+            {
+              "latex": "\\mathrm{m} : n = 3 : 2",
+              "fallback": "m : n = 3 : 2"
+            },
+            " with ",
+            {
+              "latex": "A \\left(4, - 3\\right)",
+              "fallback": "A(4, −3)"
+            },
+            " and ",
+            {
+              "latex": "B \\left(9, 7\\right)",
+              "fallback": "B(9, 7)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\mathrm{m} : n = 3 : 2",
+              "fallback": "m : n = 3 : 2"
+            },
+            " என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கும் பிரிவுச் சூத்திரத்தை ",
+            {
+              "latex": "A \\left(4, - 3\\right), B \\left(9, 7\\right)",
+              "fallback": "A(4, −3), B(9, 7)"
+            },
+            " புள்ளிகளுக்குப் பயன்படுத்துவோம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "P = \\left(\\dfrac{3(9)+2(4)}{3+2},\\; \\dfrac{3(7)+2(-3)}{3+2}\\right) = \\left(\\dfrac{35}{5},\\; \\dfrac{15}{5}\\right) = (7, 3)",
+          "fallback": "P = ((27+8)/5, (21−6)/5) = (35/5, 15/5) = (7, 3)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x_{1} = 4",
+              "fallback": "x₁ = 4"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y_{1} = - 3",
+              "fallback": "y₁ = −3"
+            },
+            ",",
+            " ",
+            {
+              "latex": "x_{2} = 9",
+              "fallback": "x₂ = 9"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y_{2} = 7",
+              "fallback": "y₂ = 7"
+            },
+            ",",
+            " ",
+            {
+              "latex": "\\mathrm{m} = 3",
+              "fallback": "m = 3"
+            },
+            ",",
+            " ",
+            {
+              "latex": "n = 2",
+              "fallback": "n = 2"
+            },
+            " and simplify."
+          ],
+          "ta": [
+            {
+              "latex": "x_{1} = 4",
+              "fallback": "x₁ = 4"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y_{1} = - 3",
+              "fallback": "y₁ = −3"
+            },
+            ",",
+            " ",
+            {
+              "latex": "x_{2} = 9",
+              "fallback": "x₂ = 9"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y_{2} = 7",
+              "fallback": "y₂ = 7"
+            },
+            ",",
+            " ",
+            {
+              "latex": "\\mathrm{m} = 3",
+              "fallback": "m = 3"
+            },
+            ",",
+            " ",
+            {
+              "latex": "n = 2",
+              "fallback": "n = 2"
+            },
+            " எனப் பிரதியிட்டுச் சுருக்குக."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.4-q2",
+    "questionMath": {
+      "en": [
+        "2. In what ratio does the point ",
+        {
+          "latex": "P(2, -5)",
+          "fallback": "P(2, −5)"
+        },
+        " divide the line segment joining ",
+        {
+          "latex": "A(-3, 5)",
+          "fallback": "A(−3, 5)"
+        },
+        " and ",
+        {
+          "latex": "B(4, -9)",
+          "fallback": "B(4, −9)"
+        },
+        "."
+      ],
+      "ta": [
+        "2. ",
+        {
+          "latex": "A(-3, 5)",
+          "fallback": "A(−3, 5)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B(4, -9)",
+          "fallback": "B(4, −9)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத்துண்டைப் புள்ளி ",
+        {
+          "latex": "P(2, -5)",
+          "fallback": "P(2, −5)"
+        },
+        " என்ன விகிதத்தில் பிரிக்கும்?"
+      ]
+    },
+    "answerMath": {
+      "latex": "5:2",
+      "fallback": "5:2",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\dfrac{m(4)+n(-3)}{m+n} &= 2\\\\4m-3n &= 2m+2n\\\\2m &= 5n \\implies \\dfrac{m}{n} = \\dfrac{5}{2}\\end{aligned}",
+          "fallback": "(4m − 3n)/(m + n) = 2 ⇒ 4m − 3n = 2m + 2n ⇒ 2m = 5n ⇒ m : n = 5 : 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Let ",
+            {
+              "latex": "P\\left(2, - 5\\right)",
+              "fallback": "P(2, −5)"
+            },
+            " divide ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " in the ratio ",
+            {
+              "latex": "\\mathrm{m} : n",
+              "fallback": "m : n"
+            },
+            ". By the section formula, equate the ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinate to ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "P\\left(2, - 5\\right)",
+              "fallback": "P(2, −5)"
+            },
+            " ஆனது ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            "-ஐ ",
+            {
+              "latex": "\\mathrm{m} : n",
+              "fallback": "m : n"
+            },
+            " என்ற விகிதத்தில் பிரிக்கிறது என்க. பிரிவுச் சூத்திரத்தில் ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-ஆயத்தொலைவை ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "-க்குச் சமப்படுத்துவோம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = \\dfrac{5(-9)+2(5)}{5+2} = \\dfrac{-35}{7} = -5 \\;(\\text{verified}) \\implies 5:2",
+          "fallback": "y = (−45 + 10)/7 = −5 (verified); ratio = 5 : 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Verify with the ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinate: ",
+            {
+              "latex": "\\dfrac{\\left(5 \\left(- 9\\right) + 2 \\left(5\\right)\\right)}{\\left(5 + 2\\right)} = \\dfrac{\\left(- 45 + 10\\right)}{7} = \\dfrac{- 35}{7} = - 5",
+              "fallback": "(5(−9) + 2(5))/(5 + 2) = (−45 + 10)/7 = −35/7 = −5"
+            },
+            ", which matches ",
+            {
+              "latex": "P\\left(2, - 5\\right)",
+              "fallback": "P(2, −5)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-ஆயத்தொலைவைச் சரிபார்க்க: ",
+            {
+              "latex": "\\dfrac{\\left(5 \\left(- 9\\right) + 2 \\left(5\\right)\\right)}{\\left(5 + 2\\right)} = \\dfrac{- 35}{7} = - 5",
+              "fallback": "(5(−9) + 2(5))/(5 + 2) = −35/7 = −5"
+            },
+            ", இது ",
+            {
+              "latex": "P\\left(2, - 5\\right)",
+              "fallback": "P(2, −5)"
+            },
+            "-உடன் பொருந்துகிறது."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.4-q3",
+    "questionMath": {
+      "en": [
+        "3. Find the coordinates of a point ",
+        {
+          "latex": "P",
+          "fallback": "P"
+        },
+        " on the line segment joining ",
+        {
+          "latex": "A(1, 2)",
+          "fallback": "A(1, 2)"
+        },
+        " and ",
+        {
+          "latex": "B(6, 7)",
+          "fallback": "B(6, 7)"
+        },
+        " in such a way that ",
+        {
+          "latex": "AP = \\dfrac{2}{5}AB",
+          "fallback": "AP = (2/5) AB"
+        },
+        "."
+      ],
+      "ta": [
+        "3. ",
+        {
+          "latex": "A(1, 2)",
+          "fallback": "A(1, 2)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B(6, 7)",
+          "fallback": "B(6, 7)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத்துண்டில் ",
+        {
+          "latex": "AP = \\dfrac{2}{5}AB",
+          "fallback": "AP = (2/5) AB"
+        },
+        " என்றவாறு அமையும் புள்ளி ",
+        {
+          "latex": "P",
+          "fallback": "P"
+        },
+        "-இன் ஆயத் தொலைவுகளைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "(3, 4)",
+      "fallback": "(3, 4)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "PB = AB - \\dfrac{2}{5}AB = \\dfrac{3}{5}AB \\implies AP:PB = 2:3",
+          "fallback": "AP : PB = 2 : 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "AP = \\left(\\dfrac{2}{5}\\right) AB",
+              "fallback": "AP = (2/5) AB"
+            },
+            " and ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " lies on segment ",
+            {
+              "latex": "AB, PB = AB - AP = \\left(\\dfrac{3}{5}\\right) AB",
+              "fallback": "AB, PB = AB − AP = (3/5) AB"
+            },
+            ". Therefore, ",
+            {
+              "latex": "AP : PB = 2 : 3",
+              "fallback": "AP : PB = 2 : 3"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "AP = \\left(\\dfrac{2}{5}\\right) AB",
+              "fallback": "AP = (2/5) AB"
+            },
+            " என்பதால் ",
+            {
+              "latex": "PB = AB - AP = \\left(\\dfrac{3}{5}\\right) AB",
+              "fallback": "PB = AB − AP = (3/5) AB"
+            },
+            ". ஆகவே ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " ஆனது ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            "-ஐ ",
+            {
+              "latex": "AP : PB = 2 : 3",
+              "fallback": "AP : PB = 2 : 3"
+            },
+            " என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கிறது."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "P = \\left(\\dfrac{2(6)+3(1)}{2+3},\\; \\dfrac{2(7)+3(2)}{2+3}\\right) = \\left(\\dfrac{15}{5},\\; \\dfrac{20}{5}\\right) = (3, 4)",
+          "fallback": "P = ((2×6 + 3×1)/5, (2×7 + 3×2)/5) = (15/5, 20/5) = (3, 4)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Apply the section formula with ",
+            {
+              "latex": "\\mathrm{m} = 2, n = 3, A \\left(1, 2\\right)",
+              "fallback": "m = 2, n = 3, A(1, 2)"
+            },
+            ", and ",
+            {
+              "latex": "B \\left(6, 7\\right)",
+              "fallback": "B(6, 7)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\mathrm{m} = 2, n = 3, A \\left(1, 2\\right), B \\left(6, 7\\right)",
+              "fallback": "m = 2, n = 3, A(1, 2), B(6, 7)"
+            },
+            " ஆகியவற்றைப் பிரிவுச் சூத்திரத்தில் பிரதியிடுவோம்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.4-q4",
+    "questionMath": {
+      "en": [
+        "4. Find the coordinates of the points of trisection of the line segment joining the points ",
+        {
+          "latex": "A(-5, 6)",
+          "fallback": "A(−5, 6)"
+        },
+        " and ",
+        {
+          "latex": "B(4, -3)",
+          "fallback": "B(4, −3)"
+        },
+        "."
+      ],
+      "ta": [
+        "4. ",
+        {
+          "latex": "A(-5, 6)",
+          "fallback": "A(−5, 6)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B(4, -3)",
+          "fallback": "B(4, −3)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத்துண்டை மூன்று சமப் பாகங்களாகப் பிரிக்கும் புள்ளிகளின் ஆயத் தொலைவுகளைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "(-2, 3),\\; (1, 0)",
+      "fallback": "(−2, 3), (1, 0)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "AP:PB = 1:2,\\qquad AQ:QB = 2:1",
+          "fallback": "P divides AB in 1:2; Q divides AB in 2:1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Let ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " and ",
+            {
+              "latex": "Q",
+              "fallback": "Q"
+            },
+            " be the points of trisection of ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " so that ",
+            {
+              "latex": "AP = PQ = QB",
+              "fallback": "AP = PQ = QB"
+            },
+            ". Then ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " divides ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " in the ratio ",
+            {
+              "latex": "1 : 2",
+              "fallback": "1 : 2"
+            },
+            ", and ",
+            {
+              "latex": "Q",
+              "fallback": "Q"
+            },
+            " divides ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " in the ratio ",
+            {
+              "latex": "2 : 1",
+              "fallback": "2 : 1"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " மற்றும் ",
+            {
+              "latex": "Q",
+              "fallback": "Q"
+            },
+            " ஆகியவை ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            "-ஐ மூன்று சமபாகங்களாக்கும் புள்ளிகள் என்க ",
+            {
+              "latex": "\\left(AP = PQ = QB\\right)",
+              "fallback": "(AP = PQ = QB)"
+            },
+            ". எனவே ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " ஆனது ",
+            {
+              "latex": "1 : 2",
+              "fallback": "1 : 2"
+            },
+            " விகிதத்திலும், ",
+            {
+              "latex": "Q",
+              "fallback": "Q"
+            },
+            " ஆனது ",
+            {
+              "latex": "2 : 1",
+              "fallback": "2 : 1"
+            },
+            " விகிதத்திலும் பிரிக்கும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "P = \\left(\\dfrac{1(4)+2(-5)}{1+2},\\; \\dfrac{1(-3)+2(6)}{1+2}\\right) = \\left(\\dfrac{-6}{3},\\; \\dfrac{9}{3}\\right) = (-2, 3)",
+          "fallback": "P = ((1×4 + 2×(−5))/3, (1×(−3) + 2×6)/3) = (−6/3, 9/3) = (−2, 3)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " using ratio ",
+            {
+              "latex": "1 : 2",
+              "fallback": "1 : 2"
+            },
+            " for ",
+            {
+              "latex": "A \\left(- 5, 6\\right)",
+              "fallback": "A(−5, 6)"
+            },
+            " and ",
+            {
+              "latex": "B \\left(4, - 3\\right)",
+              "fallback": "B(4, −3)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "A \\left(- 5, 6\\right)",
+              "fallback": "A(−5, 6)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "B \\left(4, - 3\\right)",
+              "fallback": "B(4, −3)"
+            },
+            "-ஐ ",
+            {
+              "latex": "1 : 2",
+              "fallback": "1 : 2"
+            },
+            " விகிதத்தில் பிரிக்கும் புள்ளி ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            "-ஐக் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "Q = \\left(\\dfrac{2(4)+1(-5)}{2+1},\\; \\dfrac{2(-3)+1(6)}{2+1}\\right) = \\left(\\dfrac{3}{3},\\; \\dfrac{0}{3}\\right) = (1, 0)",
+          "fallback": "Q = ((2×4 + 1×(−5))/3, (2×(−3) + 1×6)/3) = (3/3, 0/3) = (1, 0)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find ",
+            {
+              "latex": "Q",
+              "fallback": "Q"
+            },
+            " using ratio ",
+            {
+              "latex": "2 : 1",
+              "fallback": "2 : 1"
+            },
+            " (or as the mid-point of ",
+            {
+              "latex": "P\\left(- 2, 3\\right)",
+              "fallback": "P(−2, 3)"
+            },
+            " and ",
+            {
+              "latex": "B \\left(4, - 3\\right)",
+              "fallback": "B(4, −3)"
+            },
+            ")."
+          ],
+          "ta": [
+            {
+              "latex": "2 : 1",
+              "fallback": "2 : 1"
+            },
+            " விகிதத்தில் பிரிக்கும் புள்ளி ",
+            {
+              "latex": "Q",
+              "fallback": "Q"
+            },
+            "-ஐக் காண்க (அல்லது ",
+            {
+              "latex": "P\\left(- 2, 3\\right), B \\left(4, - 3\\right)",
+              "fallback": "P(−2, 3), B(4, −3)"
+            },
+            "-இன் நடுப்புள்ளி)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.4-q5",
+    "questionMath": {
+      "en": [
+        "5. The line segment joining ",
+        {
+          "latex": "A(6, 3)",
+          "fallback": "A(6, 3)"
+        },
+        " and ",
+        {
+          "latex": "B(-1, -4)",
+          "fallback": "B(−1, −4)"
+        },
+        " is doubled in length by adding half of ",
+        {
+          "latex": "AB",
+          "fallback": "AB"
+        },
+        " to each end. Find the coordinates of the new end points."
+      ],
+      "ta": [
+        "5. ",
+        {
+          "latex": "A(6, 3)",
+          "fallback": "A(6, 3)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B(-1, -4)",
+          "fallback": "B(−1, −4)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத்துண்டானது, ",
+        {
+          "latex": "AB",
+          "fallback": "AB"
+        },
+        "-இன் நீளத்தில் பாதி அளவினை இரு முனைகளிலும் இணைத்து இரு மடங்காக ஆக்கப்படுகிறது எனில் புதிய முனைகளின் ஆயத்தொலைவுகளைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "\\left(\\dfrac{19}{2},\\; \\dfrac{13}{2}\\right),\\; \\left(-\\dfrac{9}{2},\\; -\\dfrac{15}{2}\\right)",
+      "fallback": "(19/2, 13/2), (−9/2, −15/2)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "PA:AB = 1:2 \\quad\\text{and}\\quad AB:BQ = 2:1",
+          "fallback": "PA : AB = 1 : 2 and AB : BQ = 2 : 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Let ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " and ",
+            {
+              "latex": "Q",
+              "fallback": "Q"
+            },
+            " be the new endpoints beyond A and ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " respectively, so ",
+            {
+              "latex": "PA = \\left(\\dfrac{1}{2}\\right) AB",
+              "fallback": "PA = (1/2)AB"
+            },
+            " and ",
+            {
+              "latex": "BQ = \\left(\\dfrac{1}{2}\\right) AB",
+              "fallback": "BQ = (1/2)AB"
+            },
+            ". Note that ",
+            {
+              "latex": "M",
+              "fallback": "M"
+            },
+            ", the mid-point of ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            ", is ",
+            {
+              "latex": "\\left(\\dfrac{\\left(6 - 1\\right)}{2}, \\dfrac{\\left(3 - 4\\right)}{2}\\right) = \\left(\\dfrac{5}{2}, \\dfrac{- 1}{2}\\right)",
+              "fallback": "((6−1)/2, (3−4)/2) = (5/2, −1/2)"
+            },
+            ", and A is the mid-point of ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " and ",
+            {
+              "latex": "M",
+              "fallback": "M"
+            },
+            "? Wait: ",
+            {
+              "latex": "PA",
+              "fallback": "PA"
+            },
+            " = AM = ",
+            {
+              "latex": "MB = BQ = \\left(\\dfrac{1}{2}\\right) AB",
+              "fallback": "MB = BQ = (1/2)AB"
+            },
+            "."
+          ],
+          "ta": [
+            "புதிய முனைகள் ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " (A-க்கு அப்பால்) மற்றும் ",
+            {
+              "latex": "Q",
+              "fallback": "Q"
+            },
+            " (",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            "-க்கு அப்பால்) என்க. இங்கு ",
+            {
+              "latex": "PA = BQ = \\left(\\dfrac{1}{2}\\right) AB",
+              "fallback": "PA = BQ = (1/2) AB"
+            },
+            ". ஆகவே ",
+            {
+              "latex": "P - A - B",
+              "fallback": "P–A–B"
+            },
+            " வரிசையில் A என்பது ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " மற்றும் ",
+            {
+              "latex": "M",
+              "fallback": "M"
+            },
+            "-இன் நடுப்புள்ளியல்ல; ",
+            {
+              "latex": "PA : AB = 1 : 2",
+              "fallback": "PA : AB = 1 : 2"
+            },
+            " என்பதால் A என்பது ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " மற்றும் ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            "-ஐ ",
+            {
+              "latex": "1 : 2",
+              "fallback": "1 : 2"
+            },
+            " விகிதத்தில் பிரிக்கும்!"
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\dfrac{1(-1)+2x_1}{3}&=6 \\implies 2x_1=19 \\implies x_1=\\dfrac{19}{2}\\\\\\dfrac{1(-4)+2y_1}{3}&=3 \\implies 2y_1=13 \\implies y_1=\\dfrac{13}{2}\\end{aligned}",
+          "fallback": "(1(−1) + 2x₁)/3 = 6 ⇒ x₁ = 19/2; (1(−4) + 2y₁)/3 = 3 ⇒ y₁ = 13/2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "A \\left(6, 3\\right)",
+              "fallback": "A(6, 3)"
+            },
+            " divides ",
+            {
+              "latex": "PB",
+              "fallback": "PB"
+            },
+            " in the ratio ",
+            {
+              "latex": "1 : 2",
+              "fallback": "1 : 2"
+            },
+            ", find ",
+            {
+              "latex": "P\\left(x_{1}, y_{1}\\right)",
+              "fallback": "P(x₁, y₁)"
+            },
+            " using the section formula."
+          ],
+          "ta": [
+            {
+              "latex": "A \\left(6, 3\\right)",
+              "fallback": "A(6, 3)"
+            },
+            " என்பது ",
+            {
+              "latex": "P\\left(x_{1}, y_{1}\\right)",
+              "fallback": "P(x₁, y₁)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "B \\left(- 1, - 4\\right)",
+              "fallback": "B(−1, −4)"
+            },
+            "-ஐ ",
+            {
+              "latex": "1 : 2",
+              "fallback": "1 : 2"
+            },
+            " விகிதத்தில் பிரிப்பதால் ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            "-ஐக் காண்போம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\dfrac{2x_2+1(6)}{3}&=-1 \\implies 2x_2=-9 \\implies x_2=-\\dfrac{9}{2}\\\\\\dfrac{2y_2+1(3)}{3}&=-4 \\implies 2y_2=-15 \\implies y_2=-\\dfrac{15}{2}\\end{aligned}",
+          "fallback": "(2x₂ + 1(6))/3 = −1 ⇒ x₂ = −9/2; (2y₂ + 1(3))/3 = −4 ⇒ y₂ = −15/2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Similarly, ",
+            {
+              "latex": "B \\left(- 1, - 4\\right)",
+              "fallback": "B(−1, −4)"
+            },
+            " divides ",
+            {
+              "latex": "AQ",
+              "fallback": "AQ"
+            },
+            " in the ratio ",
+            {
+              "latex": "2 : 1",
+              "fallback": "2 : 1"
+            },
+            ", so find ",
+            {
+              "latex": "Q \\left(x_{2}, y_{2}\\right)",
+              "fallback": "Q(x₂, y₂)"
+            },
+            "."
+          ],
+          "ta": [
+            "இதேபோல், ",
+            {
+              "latex": "B \\left(- 1, - 4\\right)",
+              "fallback": "B(−1, −4)"
+            },
+            " என்பது ",
+            {
+              "latex": "A \\left(6, 3\\right)",
+              "fallback": "A(6, 3)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "Q \\left(x_{2}, y_{2}\\right)",
+              "fallback": "Q(x₂, y₂)"
+            },
+            "-ஐ ",
+            {
+              "latex": "2 : 1",
+              "fallback": "2 : 1"
+            },
+            " விகிதத்தில் பிரிப்பதால் ",
+            {
+              "latex": "Q",
+              "fallback": "Q"
+            },
+            "-ஐக் காண்போம்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.4-q6",
+    "questionMath": {
+      "en": [
+        "6. Using section formula, show that the points ",
+        {
+          "latex": "A(7, -5), B(9, -3)",
+          "fallback": "A(7, −5), B(9, −3)"
+        },
+        " and ",
+        {
+          "latex": "C(13, 1)",
+          "fallback": "C(13, 1)"
+        },
+        " are collinear."
+      ],
+      "ta": [
+        "6. பிரிவுச் சூத்திரத்தைப் பயன்படுத்திப் புள்ளிகள் ",
+        {
+          "latex": "A(7, -5), B(9, -3)",
+          "fallback": "A(7, −5), B(9, −3)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "C(13, 1)",
+          "fallback": "C(13, 1)"
+        },
+        " ஆகியன ஒரே கோட்டில் அமையும் என நிரூபிக்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "AB:BC = 1:2 \\implies \\text{Collinear}",
+      "fallback": "Proved: B divides AC internally in the ratio 1:2, so A, B, C are collinear",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\dfrac{k(13)+1(7)}{k+1}=9 \\implies 13k+7=9k+9 \\implies 4k=2 \\implies k=\\dfrac{1}{2}",
+          "fallback": "(13k + 7)/(k + 1) = 9 ⇒ 13k + 7 = 9k + 9 ⇒ 4k = 2 ⇒ k = 1/2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Assume ",
+            {
+              "latex": "B \\left(9, - 3\\right)",
+              "fallback": "B(9, −3)"
+            },
+            " divides the segment joining ",
+            {
+              "latex": "A \\left(7, - 5\\right)",
+              "fallback": "A(7, −5)"
+            },
+            " and ",
+            {
+              "latex": "C \\left(13, 1\\right)",
+              "fallback": "C(13, 1)"
+            },
+            " in the ratio ",
+            {
+              "latex": "k : 1",
+              "fallback": "k : 1"
+            },
+            ". Find ",
+            {
+              "latex": "k",
+              "fallback": "k"
+            },
+            " from the ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinate."
+          ],
+          "ta": [
+            {
+              "latex": "A \\left(7, - 5\\right)",
+              "fallback": "A(7, −5)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "C \\left(13, 1\\right)",
+              "fallback": "C(13, 1)"
+            },
+            "-ஐ இணைக்கும் கோட்டுத்துண்டை ",
+            {
+              "latex": "B \\left(9, - 3\\right)",
+              "fallback": "B(9, −3)"
+            },
+            " ஆனது ",
+            {
+              "latex": "k : 1",
+              "fallback": "k : 1"
+            },
+            " என்ற விகிதத்தில் பிரிக்கிறது எனக் கருதி ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-ஆயத்தொலைவிலிருந்து ",
+            {
+              "latex": "k",
+              "fallback": "k"
+            },
+            " காண்போம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = \\dfrac{\\frac{1}{2}(1)+1(-5)}{\\frac{1}{2}+1} = \\dfrac{-9/2}{3/2} = -3 \\implies \\text{A, B, C are collinear}",
+          "fallback": "y = −3 (matches B); ratio 1:2 ⇒ A, B, C are collinear",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "k = \\dfrac{1}{2}",
+              "fallback": "k = 1/2"
+            },
+            " into the ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinate formula: ",
+            {
+              "latex": "\\dfrac{\\left(\\left(\\dfrac{1}{2}\\right) \\left(1\\right) + 1 \\left(- 5\\right)\\right)}{\\left(\\dfrac{1}{2} + 1\\right)} = \\dfrac{\\left(\\dfrac{- 9}{2}\\right)}{\\left(\\dfrac{3}{2}\\right)} = - 3",
+              "fallback": "((1/2)(1) + 1(−5)) / (1/2 + 1) = (−9/2) / (3/2) = −3"
+            },
+            ", which equals the ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinate of ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "k = \\dfrac{1}{2}",
+              "fallback": "k = 1/2"
+            },
+            "-ஐ ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-ஆயத்தொலைவில் பிரதியிட: ",
+            {
+              "latex": "\\dfrac{\\left(\\left(\\dfrac{1}{2}\\right) \\left(1\\right) + \\left(- 5\\right)\\right)}{\\left(\\dfrac{3}{2}\\right)} = - 3",
+              "fallback": "((1/2)(1) + (−5))/(3/2) = −3"
+            },
+            ", இது ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            "-இன் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-ஆயத்தொலைவிற்குச் சமம்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.4-q7",
+    "questionMath": {
+      "en": [
+        "7. A line segment ",
+        {
+          "latex": "AB",
+          "fallback": "AB"
+        },
+        " is increased along its length by ",
+        {
+          "latex": "25\\%",
+          "fallback": "25%"
+        },
+        " by producing it to ",
+        {
+          "latex": "C",
+          "fallback": "C"
+        },
+        " on the side of ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        ". If ",
+        {
+          "latex": "A",
+          "fallback": "A"
+        },
+        " and ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " have the coordinates ",
+        {
+          "latex": "(-2, -3)",
+          "fallback": "(−2, −3)"
+        },
+        " and ",
+        {
+          "latex": "(2, 1)",
+          "fallback": "(2, 1)"
+        },
+        " respectively, then find the coordinates of ",
+        {
+          "latex": "C",
+          "fallback": "C"
+        },
+        "."
+      ],
+      "ta": [
+        "7. கோட்டுத்துண்டு ",
+        {
+          "latex": "AB",
+          "fallback": "AB"
+        },
+        " ஆனது முனை ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " இலிருந்து ",
+        {
+          "latex": "C",
+          "fallback": "C"
+        },
+        " இக்கு அதன் நீளம் ",
+        {
+          "latex": "25\\%",
+          "fallback": "25%"
+        },
+        " அதிகரிக்குமாறு நீட்டப்படுகிறது. புள்ளிகள் ",
+        {
+          "latex": "A",
+          "fallback": "A"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " இன் ஆயத் தொலைவுகள் முறையே ",
+        {
+          "latex": "(-2, -3)",
+          "fallback": "(−2, −3)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(2, 1)",
+          "fallback": "(2, 1)"
+        },
+        " எனில் ",
+        {
+          "latex": "C",
+          "fallback": "C"
+        },
+        " இன் ஆயத்தொலைவுகளைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "C(3, 2)",
+      "fallback": "C(3, 2)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "BC = \\dfrac{25}{100}AB = \\dfrac{1}{4}AB \\implies AB:BC = 4:1",
+          "fallback": "BC = 0.25 AB = (1/4)AB ⇒ AB : BC = 4 : 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " is increased by ",
+            {
+              "latex": "25",
+              "fallback": "25"
+            },
+            "% beyond ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " to ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            ", so ",
+            {
+              "latex": "BC = 25",
+              "fallback": "BC = 25"
+            },
+            "% of ",
+            {
+              "latex": "AB = \\left(\\dfrac{1}{4}\\right) AB",
+              "fallback": "AB = (1/4) AB"
+            },
+            ". Hence ",
+            {
+              "latex": "AB : BC = 4 : 1",
+              "fallback": "AB : BC = 4 : 1"
+            },
+            ", meaning ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " divides ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            " internally in the ratio ",
+            {
+              "latex": "4 : 1",
+              "fallback": "4 : 1"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            "-இன் நீளம் ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            "-க்கு அப்பால் ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            " வரை ",
+            {
+              "latex": "25",
+              "fallback": "25"
+            },
+            "% அதிகரிக்கிறது; எனவே ",
+            {
+              "latex": "BC = \\left(\\dfrac{25}{100}\\right) AB = \\left(\\dfrac{1}{4}\\right) AB",
+              "fallback": "BC = (25/100) AB = (1/4) AB"
+            },
+            ". ஆகவே ",
+            {
+              "latex": "AB : BC = 4 : 1",
+              "fallback": "AB : BC = 4 : 1"
+            },
+            ", அதாவது ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " ஆனது ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            "-ஐ ",
+            {
+              "latex": "4 : 1",
+              "fallback": "4 : 1"
+            },
+            " விகிதத்தில் உட்புறமாகப் பிரிக்கிறது."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\left(\\dfrac{4x+1(-2)}{4+1},\\; \\dfrac{4y+1(-3)}{4+1}\\right) &= (2, 1)\\\\4x-2 = 10 \\implies x &= 3\\\\4y-3 = 5 \\implies y &= 2 \\implies C(3, 2)\\end{aligned}",
+          "fallback": "(4x − 2)/5 = 2 ⇒ x = 3; (4y − 3)/5 = 1 ⇒ y = 2 ⇒ C(3, 2)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Let ",
+            {
+              "latex": "C = \\left(x, y\\right)",
+              "fallback": "C = (x, y)"
+            },
+            ". Using the section formula for ",
+            {
+              "latex": "B \\left(2, 1\\right)",
+              "fallback": "B(2, 1)"
+            },
+            " dividing ",
+            {
+              "latex": "A \\left(- 2, - 3\\right)",
+              "fallback": "A(−2, −3)"
+            },
+            " and ",
+            {
+              "latex": "C \\left(x, y\\right)",
+              "fallback": "C(x, y)"
+            },
+            " in ratio ",
+            {
+              "latex": "4 : 1",
+              "fallback": "4 : 1"
+            },
+            ", solve for ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " and ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "C = \\left(x, y\\right)",
+              "fallback": "C = (x, y)"
+            },
+            " என்க. ",
+            {
+              "latex": "B \\left(2, 1\\right)",
+              "fallback": "B(2, 1)"
+            },
+            " என்பது ",
+            {
+              "latex": "A \\left(- 2, - 3\\right)",
+              "fallback": "A(−2, −3)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "C \\left(x, y\\right)",
+              "fallback": "C(x, y)"
+            },
+            "-ஐ ",
+            {
+              "latex": "4 : 1",
+              "fallback": "4 : 1"
+            },
+            " விகிதத்தில் பிரிப்பதால் பிரிவுச் சூத்திரத்தில் பிரதியிட்டு ",
+            {
+              "latex": "x, y",
+              "fallback": "x, y"
+            },
+            " காண்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.5-q1",
+    "questionMath": {
+      "en": [
+        "1. Find the centroid of the triangle whose vertices are\n(i) (2, −4), (−3, −7) and (7, 2)   (ii) (−5, −5), (1, −4) and (−4, −2)"
+      ],
+      "ta": [
+        "1. பின்வரும் புள்ளிகளை முனைப் புள்ளிகளாகக் கொண்ட முக்கோணத்தின் நடுக்கோட்டு மையம் காண்க.\n(i) (2, −4), (−3, −7) மற்றும் (7, 2)   (ii) (−5, −5), (1, −4) மற்றும் (−4, −2)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(i) }(2,-3);\\quad \\text{(ii) }\\left(\\dfrac{-8}{3},\\; \\dfrac{-11}{3}\\right)",
+      "fallback": "(i) (2, −3); (ii) (−8/3, −11/3)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "G = \\left(\\dfrac{x_1+x_2+x_3}{3},\\; \\dfrac{y_1+y_2+y_3}{3}\\right)",
+          "fallback": "G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Use the centroid formula ",
+            {
+              "latex": "G = \\left(\\dfrac{\\left(x_{1} + x_{2} + x_{3}\\right)}{3}, \\dfrac{\\left(y_{1} + y_{2} + y_{3}\\right)}{3}\\right)",
+              "fallback": "G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3)"
+            },
+            "."
+          ],
+          "ta": [
+            "நடுக்கோட்டு மையம் ",
+            {
+              "latex": "G = \\left(\\dfrac{\\left(x_{1} + x_{2} + x_{3}\\right)}{3}, \\dfrac{\\left(y_{1} + y_{2} + y_{3}\\right)}{3}\\right)",
+              "fallback": "G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3)"
+            },
+            " என்ற சூத்திரத்தைப் பயன்படுத்துவோம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "G_1 = \\left(\\dfrac{2+(-3)+7}{3},\\; \\dfrac{-4+(-7)+2}{3}\\right) = \\left(\\dfrac{6}{3},\\; \\dfrac{-9}{3}\\right) = (2, -3)",
+          "fallback": "G₁ = ((2 − 3 + 7)/3, (−4 − 7 + 2)/3) = (6/3, −9/3) = (2, −3)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(i) Substitute ",
+            {
+              "latex": "\\left(2, - 4\\right), \\left(- 3, - 7\\right)",
+              "fallback": "(2, −4), (−3, −7)"
+            },
+            ", and ",
+            {
+              "latex": "\\left(7, 2\\right)",
+              "fallback": "(7, 2)"
+            },
+            "."
+          ],
+          "ta": [
+            "(i) ",
+            {
+              "latex": "\\left(2, - 4\\right), \\left(- 3, - 7\\right), \\left(7, 2\\right)",
+              "fallback": "(2, −4), (−3, −7), (7, 2)"
+            },
+            " ஆகியவற்றைப் பிரதியிடுக."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "G_2 = \\left(\\dfrac{-5+1+(-4)}{3},\\; \\dfrac{-5+(-4)+(-2)}{3}\\right) = \\left(\\dfrac{-8}{3},\\; \\dfrac{-11}{3}\\right)",
+          "fallback": "G₂ = ((−5 + 1 − 4)/3, (−5 − 4 − 2)/3) = (−8/3, −11/3)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "(ii) Substitute ",
+            {
+              "latex": "\\left(- 5, - 5\\right), \\left(1, - 4\\right)",
+              "fallback": "(−5, −5), (1, −4)"
+            },
+            ", and ",
+            {
+              "latex": "\\left(- 4, - 2\\right)",
+              "fallback": "(−4, −2)"
+            },
+            "."
+          ],
+          "ta": [
+            "(ii) ",
+            {
+              "latex": "\\left(- 5, - 5\\right), \\left(1, - 4\\right), \\left(- 4, - 2\\right)",
+              "fallback": "(−5, −5), (1, −4), (−4, −2)"
+            },
+            " ஆகியவற்றைப் பிரதியிடுக."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.5-q2",
+    "questionMath": {
+      "en": [
+        "2. If the centroid of a triangle is at ",
+        {
+          "latex": "(4, -2)",
+          "fallback": "(4, −2)"
+        },
+        " and two of its vertices are ",
+        {
+          "latex": "(3, -2)",
+          "fallback": "(3, −2)"
+        },
+        " and ",
+        {
+          "latex": "(5, 2)",
+          "fallback": "(5, 2)"
+        },
+        " then find the third vertex of the triangle."
+      ],
+      "ta": [
+        "2. ஒரு முக்கோணத்தின் நடுக்கோட்டு மையம் ",
+        {
+          "latex": "(4, -2)",
+          "fallback": "(4, −2)"
+        },
+        " மற்றும் அதன் இரு முனைப்புள்ளிகள் ",
+        {
+          "latex": "(3, -2)",
+          "fallback": "(3, −2)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(5, 2)",
+          "fallback": "(5, 2)"
+        },
+        " எனில் மூன்றாவது முனைப் புள்ளியைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "(4, -6)",
+      "fallback": "(4, −6)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\left(\\dfrac{3+5+x}{3},\\; \\dfrac{-2+2+y}{3}\\right) = (4, -2)",
+          "fallback": "((3 + 5 + x)/3, (−2 + 2 + y)/3) = (4, −2)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Let the third vertex be ",
+            {
+              "latex": "C \\left(x, y\\right)",
+              "fallback": "C(x, y)"
+            },
+            ". Equate the centroid of ",
+            {
+              "latex": "\\left(3, - 2\\right), \\left(5, 2\\right)",
+              "fallback": "(3, −2), (5, 2)"
+            },
+            ", and ",
+            {
+              "latex": "\\left(x, y\\right)",
+              "fallback": "(x, y)"
+            },
+            " to ",
+            {
+              "latex": "\\left(4, - 2\\right)",
+              "fallback": "(4, −2)"
+            },
+            "."
+          ],
+          "ta": [
+            "மூன்றாவது முனைப்புள்ளி ",
+            {
+              "latex": "C \\left(x, y\\right)",
+              "fallback": "C(x, y)"
+            },
+            " என்க. ",
+            {
+              "latex": "\\left(3, - 2\\right), \\left(5, 2\\right), \\left(x, y\\right)",
+              "fallback": "(3, −2), (5, 2), (x, y)"
+            },
+            " ஆகியவற்றின் நடுக்கோட்டு மையத்தை ",
+            {
+              "latex": "\\left(4, - 2\\right)",
+              "fallback": "(4, −2)"
+            },
+            "-க்குச் சமப்படுத்துவோம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\dfrac{8+x}{3}&=4 \\implies x=12-8=4\\\\\\dfrac{y}{3}&=-2 \\implies y=-6\\end{aligned}",
+          "fallback": "8 + x = 12 ⇒ x = 4; 0 + y = −6 ⇒ y = −6 ⇒ C(4, −6)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Solve each coordinate equation for ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " and ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " மற்றும் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " சமன்பாடுகளைத் தீர்த்து ",
+            {
+              "latex": "x, y",
+              "fallback": "x, y"
+            },
+            " மதிப்புகளைக் காண்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.5-q3",
+    "questionMath": {
+      "en": [
+        "3. Find the length of median through ",
+        {
+          "latex": "A",
+          "fallback": "A"
+        },
+        " of a triangle whose vertices are ",
+        {
+          "latex": "A(-1, 3), B(1, -1)",
+          "fallback": "A(−1, 3), B(1, −1)"
+        },
+        " and ",
+        {
+          "latex": "C(5, 1)",
+          "fallback": "C(5, 1)"
+        },
+        "."
+      ],
+      "ta": [
+        "3. ",
+        {
+          "latex": "A(-1, 3), B(1, -1)",
+          "fallback": "A(−1, 3), B(1, −1)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "C(5, 1)",
+          "fallback": "C(5, 1)"
+        },
+        " ஆகியன ஒரு முக்கோணத்தின் முனைப்புள்ளிகள் எனில் ",
+        {
+          "latex": "A",
+          "fallback": "A"
+        },
+        " வழியே செல்லக் கூடிய நடுக்கோட்டின் நீளத்தைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "5\\text{ units}",
+      "fallback": "5 units",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "D = \\left(\\dfrac{1+5}{2},\\; \\dfrac{-1+1}{2}\\right) = (3, 0)",
+          "fallback": "D = mid-point of B(1, −1) and C(5, 1) = (3, 0)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "The median through A joins vertex ",
+            {
+              "latex": "A \\left(- 1, 3\\right)",
+              "fallback": "A(−1, 3)"
+            },
+            " to the mid-point ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " of the opposite side ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            "."
+          ],
+          "ta": [
+            "A வழியே செல்லும் நடுக்கோடு ",
+            {
+              "latex": "AD",
+              "fallback": "AD"
+            },
+            ", உச்சி ",
+            {
+              "latex": "A \\left(- 1, 3\\right)",
+              "fallback": "A(−1, 3)"
+            },
+            "-ஐயும் எதிர்ப்பக்கம் ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            "-இன் நடுப்புள்ளி ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            "-ஐயும் இணைக்கும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "AD = \\sqrt{(3-(-1))^2+(0-3)^2} = \\sqrt{4^2+(-3)^2} = \\sqrt{25} = 5\\text{ units}",
+          "fallback": "AD = √((3 − (−1))² + (0 − 3)²) = √(16 + 9) = √25 = 5 units",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find the length ",
+            {
+              "latex": "AD",
+              "fallback": "AD"
+            },
+            " using the distance formula between ",
+            {
+              "latex": "A \\left(- 1, 3\\right)",
+              "fallback": "A(−1, 3)"
+            },
+            " and ",
+            {
+              "latex": "D \\left(3, 0\\right)",
+              "fallback": "D(3, 0)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "A \\left(- 1, 3\\right)",
+              "fallback": "A(−1, 3)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "D \\left(3, 0\\right)",
+              "fallback": "D(3, 0)"
+            },
+            " இடையே தொலைவு வாய்ப்பாட்டைப் பயன்படுத்தி ",
+            {
+              "latex": "AD",
+              "fallback": "AD"
+            },
+            "-இன் நீளம் காண்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.5-q4",
+    "questionMath": {
+      "en": [
+        "4. The vertices of a triangle are ",
+        {
+          "latex": "(1, 2), (h, -3)",
+          "fallback": "(1, 2), (h, −3)"
+        },
+        " and ",
+        {
+          "latex": "(-4, k)",
+          "fallback": "(−4, k)"
+        },
+        ". If the centroid of the triangle is at the point ",
+        {
+          "latex": "(5, -1)",
+          "fallback": "(5, −1)"
+        },
+        " then find the value of ",
+        {
+          "latex": "\\sqrt{(h+k)^2+(h+3k)^2}",
+          "fallback": "√((h + k)² + (h + 3k)²)"
+        },
+        "."
+      ],
+      "ta": [
+        "4. ",
+        {
+          "latex": "(1, 2), (h, -3)",
+          "fallback": "(1, 2), (h, −3)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(-4, k)",
+          "fallback": "(−4, k)"
+        },
+        " ஆகியன ஒரு முக்கோணத்தின் முனைப்புள்ளிகள். மேலும் புள்ளி ",
+        {
+          "latex": "(5, -1)",
+          "fallback": "(5, −1)"
+        },
+        " ஆனது அந்த முக்கோணத்தின் நடுக்கோட்டு மையம் எனில், ",
+        {
+          "latex": "\\sqrt{(h+k)^2+(h+3k)^2}",
+          "fallback": "√((h + k)² + (h + 3k)²)"
+        },
+        " இன் மதிப்பைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "20",
+      "fallback": "20",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\dfrac{1+h-4}{3}&=5 \\implies h-3=15 \\implies h=18\\\\\\dfrac{2-3+k}{3}&=-1 \\implies k-1=-3 \\implies k=-2\\end{aligned}",
+          "fallback": "h = 18, k = −2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Equate the centroid of ",
+            {
+              "latex": "\\left(1, 2\\right), \\left(h, - 3\\right), \\left(- 4, k\\right)",
+              "fallback": "(1, 2), (h, −3), (−4, k)"
+            },
+            " to ",
+            {
+              "latex": "\\left(5, - 1\\right)",
+              "fallback": "(5, −1)"
+            },
+            " to find ",
+            {
+              "latex": "h",
+              "fallback": "h"
+            },
+            " and ",
+            {
+              "latex": "k",
+              "fallback": "k"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(1, 2\\right), \\left(h, - 3\\right), \\left(- 4, k\\right)",
+              "fallback": "(1, 2), (h, −3), (−4, k)"
+            },
+            " ஆகியவற்றின் நடுக்கோட்டு மையத்தை ",
+            {
+              "latex": "\\left(5, - 1\\right)",
+              "fallback": "(5, −1)"
+            },
+            "-க்குச் சமப்படுத்தி ",
+            {
+              "latex": "h",
+              "fallback": "h"
+            },
+            " மற்றும் ",
+            {
+              "latex": "k",
+              "fallback": "k"
+            },
+            " காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\sqrt{(16)^2+(12)^2} = \\sqrt{256+144} = \\sqrt{400} = 20",
+          "fallback": "√(16² + 12²) = √(256 + 144) = √400 = 20",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Compute ",
+            {
+              "latex": "h + k = 18 + \\left(- 2\\right) = 16",
+              "fallback": "h + k = 18 + (−2) = 16"
+            },
+            " and ",
+            {
+              "latex": "h + 3 k = 18 + 3 \\left(- 2\\right) = 12",
+              "fallback": "h + 3k = 18 + 3(−2) = 12"
+            },
+            ", then substitute into ",
+            {
+              "latex": "\\sqrt{\\left(h + k\\right)^{2} + \\left(h + 3 k\\right)^{2}}",
+              "fallback": "√((h + k)² + (h + 3k)²)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "h + k = 16",
+              "fallback": "h + k = 16"
+            },
+            " மற்றும் ",
+            {
+              "latex": "h + 3 k = 12",
+              "fallback": "h + 3k = 12"
+            },
+            " எனக் கணக்கிட்டு ",
+            {
+              "latex": "\\sqrt{\\left(h + k\\right)^{2} + \\left(h + 3 k\\right)^{2}}",
+              "fallback": "√((h + k)² + (h + 3k)²)"
+            },
+            "-இல் பிரதியிடவும்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.5-q5",
+    "questionMath": {
+      "en": [
+        "5. Orthocentre and centroid of a triangle are ",
+        {
+          "latex": "A(-3, 5)",
+          "fallback": "A(−3, 5)"
+        },
+        " and ",
+        {
+          "latex": "B(3, 3)",
+          "fallback": "B(3, 3)"
+        },
+        " respectively. If ",
+        {
+          "latex": "C",
+          "fallback": "C"
+        },
+        " is the circumcentre and ",
+        {
+          "latex": "AC",
+          "fallback": "AC"
+        },
+        " is the diameter of this circle, then find the radius of the circle."
+      ],
+      "ta": [
+        "5. ",
+        {
+          "latex": "A(-3, 5)",
+          "fallback": "A(−3, 5)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B(3, 3)",
+          "fallback": "B(3, 3)"
+        },
+        " ஆகியன முறையே ஒரு முக்கோணத்தின் செங்கோட்டு மையம் மற்றும் நடுக்கோட்டு மையம் ஆகும். ",
+        {
+          "latex": "C",
+          "fallback": "C"
+        },
+        " ஆனது இந்த முக்கோணத்தின் சுற்று வட்ட மையம் எனில், கோட்டுத் துண்டு ",
+        {
+          "latex": "AC",
+          "fallback": "AC"
+        },
+        " ஐ விட்டமாகக் கொண்ட வட்டத்தின் ஆரம் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "3\\sqrt{\\dfrac{5}{2}}\\text{ units}",
+      "fallback": "3√(5/2) units (or (3√10)/2 units)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "AB:BC = 2:1",
+          "fallback": "B(3, 3) divides AC in 2 : 1",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "On the Euler line of a triangle, the centroid ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " divides the segment joining orthocentre A and circumcentre ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            " internally in the ratio ",
+            {
+              "latex": "2 : 1 \\left(AB : BC = 2 : 1\\right)",
+              "fallback": "2 : 1 (AB : BC = 2 : 1)"
+            },
+            "."
+          ],
+          "ta": [
+            "ஒரு முக்கோணத்தின் ஆய்லரின் கோட்டில், நடுக்கோட்டு மையம் ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " ஆனது செங்கோட்டு மையம் A மற்றும் சுற்றுவட்ட மையம் ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            "-ஐ இணைக்கும் கோட்டுத்துண்டை ",
+            {
+              "latex": "2 : 1",
+              "fallback": "2 : 1"
+            },
+            " என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\dfrac{2x+1(-3)}{3}&=3 \\implies 2x-3=9 \\implies x=6\\\\\\dfrac{2y+1(5)}{3}&=3 \\implies 2y+5=9 \\implies y=2 \\implies C(6,2)\\end{aligned}",
+          "fallback": "C = (6, 2)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Let ",
+            {
+              "latex": "C = \\left(x, y\\right)",
+              "fallback": "C = (x, y)"
+            },
+            ". Use the section formula with ",
+            {
+              "latex": "A \\left(- 3, 5\\right), C \\left(x, y\\right)",
+              "fallback": "A(−3, 5), C(x, y)"
+            },
+            ", and ratio ",
+            {
+              "latex": "2 : 1",
+              "fallback": "2 : 1"
+            },
+            " to find ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "C = \\left(x, y\\right)",
+              "fallback": "C = (x, y)"
+            },
+            " என்க. பிரிவுச் சூத்திரத்தில் ",
+            {
+              "latex": "A \\left(- 3, 5\\right), B \\left(3, 3\\right)",
+              "fallback": "A(−3, 5), B(3, 3)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "2 : 1",
+              "fallback": "2 : 1"
+            },
+            " விகிதம் பிரதியிட்டு ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            "-ஐக் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}AC &= \\sqrt{(6-(-3))^2+(2-5)^2} = \\sqrt{81+9} = \\sqrt{90} = 3\\sqrt{10}\\\\r &= \\dfrac{AC}{2} = \\dfrac{3\\sqrt{10}}{2} = 3\\sqrt{\\dfrac{5}{2}}\\text{ units}\\end{aligned}",
+          "fallback": "AC = √(9² + (−3)²) = √90 = 3√10; Radius = (3√10)/2 = 3√(5/2) units",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Find the diameter ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            " using the distance formula, then divide by ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " to get the radius."
+          ],
+          "ta": [
+            "தொலைவு வாய்ப்பாட்டால் விட்டம் ",
+            {
+              "latex": "AC",
+              "fallback": "AC"
+            },
+            "-ஐக் கண்டு, அதை ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "-ஆல் வகுத்து ஆரம் காண்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.5-q6",
+    "questionMath": {
+      "en": [
+        "6. ",
+        {
+          "latex": "ABC",
+          "fallback": "ABC"
+        },
+        " is a triangle whose vertices are ",
+        {
+          "latex": "A(3, 4), B(-2, -1)",
+          "fallback": "A(3, 4), B(−2, −1)"
+        },
+        " and ",
+        {
+          "latex": "C(5, 3)",
+          "fallback": "C(5, 3)"
+        },
+        ". If ",
+        {
+          "latex": "G",
+          "fallback": "G"
+        },
+        " is the centroid and ",
+        {
+          "latex": "BDCG",
+          "fallback": "BDCG"
+        },
+        " is a parallelogram then find the coordinates of the vertex ",
+        {
+          "latex": "D",
+          "fallback": "D"
+        },
+        "."
+      ],
+      "ta": [
+        "6. ",
+        {
+          "latex": "A(3, 4), B(-2, -1)",
+          "fallback": "A(3, 4), B(−2, −1)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "C(5, 3)",
+          "fallback": "C(5, 3)"
+        },
+        " என்பன முக்கோணம் ",
+        {
+          "latex": "ABC",
+          "fallback": "ABC"
+        },
+        "-இன் முனைப் புள்ளிகள். ",
+        {
+          "latex": "G",
+          "fallback": "G"
+        },
+        " ஆனது அதன் நடுக்கோட்டு மையம் மற்றும் ",
+        {
+          "latex": "BDCG",
+          "fallback": "BDCG"
+        },
+        " ஆனது ஓர் இணைகரம் எனில் முனைப்புள்ளி ",
+        {
+          "latex": "D",
+          "fallback": "D"
+        },
+        "-இன் ஆயத் தொலைவுகளைக் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "(1, 0)",
+      "fallback": "(1, 0)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "G = \\left(\\dfrac{3+(-2)+5}{3},\\; \\dfrac{4+(-1)+3}{3}\\right) = (2, 2)",
+          "fallback": "G = ((3 − 2 + 5)/3, (4 − 1 + 3)/3) = (6/3, 6/3) = (2, 2)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "First find the centroid ",
+            {
+              "latex": "G",
+              "fallback": "G"
+            },
+            " of △",
+            {
+              "latex": "ABC",
+              "fallback": "ABC"
+            },
+            " with vertices ",
+            {
+              "latex": "A \\left(3, 4\\right), B \\left(- 2, - 1\\right), C \\left(5, 3\\right)",
+              "fallback": "A(3, 4), B(−2, −1), C(5, 3)"
+            },
+            "."
+          ],
+          "ta": [
+            "முதலில் ",
+            {
+              "latex": "A \\left(3, 4\\right), B \\left(- 2, - 1\\right), C \\left(5, 3\\right)",
+              "fallback": "A(3, 4), B(−2, −1), C(5, 3)"
+            },
+            " முனைகளைக் கொண்ட △",
+            {
+              "latex": "ABC",
+              "fallback": "ABC"
+            },
+            "-இன் நடுக்கோட்டு மையம் ",
+            {
+              "latex": "G",
+              "fallback": "G"
+            },
+            "-ஐக் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\left(\\dfrac{-2+5}{2},\\; \\dfrac{-1+3}{2}\\right) &= \\left(\\dfrac{x+2}{2},\\; \\dfrac{y+2}{2}\\right)\\\\x+2 = 3 \\implies x &= 1\\\\y+2 = 2 \\implies y &= 0 \\implies D(1, 0)\\end{aligned}",
+          "fallback": "((−2+5)/2, (−1+3)/2) = ((x+2)/2, (y+2)/2) ⇒ x = 1, y = 0 ⇒ D(1, 0)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "In parallelogram ",
+            {
+              "latex": "BDCG",
+              "fallback": "BDCG"
+            },
+            ", the diagonals ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            " and ",
+            {
+              "latex": "DG",
+              "fallback": "DG"
+            },
+            " bisect each other, so Mid-point of ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            " = Mid-point of ",
+            {
+              "latex": "DG",
+              "fallback": "DG"
+            },
+            ". Let ",
+            {
+              "latex": "D = \\left(x, y\\right)",
+              "fallback": "D = (x, y)"
+            },
+            "."
+          ],
+          "ta": [
+            "இணைகரம் ",
+            {
+              "latex": "BDCG",
+              "fallback": "BDCG"
+            },
+            "-இல் மூலைவிட்டங்கள் ",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            " மற்றும் ",
+            {
+              "latex": "DG",
+              "fallback": "DG"
+            },
+            " ஒன்றையொன்று இருசமக் கூறிடும். ",
+            {
+              "latex": "D = \\left(x, y\\right)",
+              "fallback": "D = (x, y)"
+            },
+            " என்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.5-q7",
+    "questionMath": {
+      "en": [
+        "7. If ",
+        {
+          "latex": "\\left(\\dfrac{3}{2}, 5\\right),\\; \\left(7, \\dfrac{-9}{2}\\right)",
+          "fallback": "(3/2, 5), (7, −9/2)"
+        },
+        " and ",
+        {
+          "latex": "\\left(\\dfrac{13}{2}, \\dfrac{-13}{2}\\right)",
+          "fallback": "(13/2, −13/2)"
+        },
+        " are mid-points of the sides of a triangle, then find the centroid of the triangle."
+      ],
+      "ta": [
+        "7. முக்கோணத்தின் பக்கங்களின் நடுப்புள்ளிகள் ",
+        {
+          "latex": "\\left(\\dfrac{3}{2}, 5\\right),\\; \\left(7, \\dfrac{-9}{2}\\right)",
+          "fallback": "(3/2, 5), (7, −9/2)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "\\left(\\dfrac{13}{2}, \\dfrac{-13}{2}\\right)",
+          "fallback": "(13/2, −13/2)"
+        },
+        " எனில் அந்த முக்கோணத்தின் நடுக்கோட்டு மையம் காண்க."
+      ]
+    },
+    "answerMath": {
+      "latex": "(5, -2)",
+      "fallback": "(5, −2)",
+      "display": true
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "G = \\left(\\dfrac{x_D+x_E+x_F}{3},\\; \\dfrac{y_D+y_E+y_F}{3}\\right)",
+          "fallback": "G = centroid of mid-points D, E, F",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The centroid of a triangle coincides with the centroid of the triangle formed by joining the mid-points of its three sides.",
+          "ta": "ஒரு முக்கோணத்தின் நடுக்கோட்டு மையமும், அதன் பக்கங்களின் நடுப்புள்ளிகளை இணைத்து உருவாகும் முக்கோணத்தின் நடுக்கோட்டு மையமும் ஒன்றே."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{aligned}x &= \\dfrac{\\frac{3}{2}+7+\\frac{13}{2}}{3} = \\dfrac{8+7}{3} = \\dfrac{15}{3} = 5\\\\y &= \\dfrac{5-\\frac{9}{2}-\\frac{13}{2}}{3} = \\dfrac{5-11}{3} = \\dfrac{-6}{3} = -2\\end{aligned}",
+          "fallback": "x = (3/2 + 7 + 13/2)/3 = 15/3 = 5; y = (5 − 9/2 − 13/2)/3 = −6/3 = −2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Average the three mid-points ",
+            {
+              "latex": "\\left(\\dfrac{3}{2}, 5\\right), \\left(7, \\dfrac{- 9}{2}\\right)",
+              "fallback": "(3/2, 5), (7, −9/2)"
+            },
+            ", and ",
+            {
+              "latex": "\\left(\\dfrac{13}{2}, \\dfrac{- 13}{2}\\right)",
+              "fallback": "(13/2, −13/2)"
+            },
+            "."
+          ],
+          "ta": [
+            "மூன்று நடுப்புள்ளிகள் ",
+            {
+              "latex": "\\left(\\dfrac{3}{2}, 5\\right), \\left(7, \\dfrac{- 9}{2}\\right), \\left(\\dfrac{13}{2}, \\dfrac{- 13}{2}\\right)",
+              "fallback": "(3/2, 5), (7, −9/2), (13/2, −13/2)"
+            },
+            " ஆகியவற்றின் சராசரியைக் காண்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q1",
+    "questionMath": {
+      "en": [
+        "1. If the y-coordinate of a point is zero, then the point always lies ______\n(1) in the I quadrant   (2) in the II quadrant   (3) on x-axis   (4) on y-axis"
+      ],
+      "ta": [
+        "1. ஒரு புள்ளியின் y-அச்சுத் தொலைவு பூச்சியம் எனில் அது எப்பொழுதும் ______ அமையும்\n(1) முதலாம் காற்பகுதியில்   (2) இரண்டாம் காற்பகுதியில்   (3) x-அச்சின் மீது   (4) y-அச்சின் மீது"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(3) on }x\\text{-axis}",
+      "fallback": "(3) on x-axis"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y=0 \\implies (x,0)\\text{ lies on the }x\\text{-axis}",
+          "fallback": "y = 0 ⇒ point (x, 0) lies on the x-axis",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Every point on the ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-axis has the form ",
+            {
+              "latex": "\\left(x, 0\\right)",
+              "fallback": "(x, 0)"
+            },
+            ", so its ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinate is ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            ". Correct option: (3)."
+          ],
+          "ta": [
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-அச்சின் மீதுள்ள ஒவ்வொரு புள்ளியும் ",
+            {
+              "latex": "\\left(x, 0\\right)",
+              "fallback": "(x, 0)"
+            },
+            " என்ற வடிவில் இருக்கும்; எனவே ",
+            {
+              "latex": "y = 0",
+              "fallback": "y = 0"
+            },
+            " எனில் புள்ளி ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-அச்சின் மீது அமையும். சரியான விடை: (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q2",
+    "questionMath": {
+      "en": [
+        "2. The points ",
+        {
+          "latex": "(-5, 2)",
+          "fallback": "(−5, 2)"
+        },
+        " and ",
+        {
+          "latex": "(2, -5)",
+          "fallback": "(2, −5)"
+        },
+        " lie in the ______\n(1) same quadrant   (2) II and III quadrant respectively   (3) II and IV quadrant respectively   (4) IV and II quadrant respectively"
+      ],
+      "ta": [
+        "2. ",
+        {
+          "latex": "(-5, 2)",
+          "fallback": "(−5, 2)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(2, -5)",
+          "fallback": "(2, −5)"
+        },
+        " என்ற புள்ளிகள் ______ அமையும்\n(1) ஒரே காற்பகுதியில்   (2) முறையே II, III காற்பகுதியில்   (3) முறையே II, IV காற்பகுதியில்   (4) முறையே IV, II காற்பகுதியில்"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(3) II and IV}",
+      "fallback": "(3) II and IV quadrant respectively"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(-5,2)\\in\\text{II},\\quad (2,-5)\\in\\text{IV}",
+          "fallback": "(−5, 2) ∈ II; (2, −5) ∈ IV",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            {
+              "latex": "\\left(- 5, 2\\right)",
+              "fallback": "(−5, 2)"
+            },
+            " has signs (−, +) → ",
+            {
+              "latex": "II",
+              "fallback": "II"
+            },
+            " quadrant; ",
+            {
+              "latex": "\\left(2, - 5\\right)",
+              "fallback": "(2, −5)"
+            },
+            " has signs (+, −) → ",
+            {
+              "latex": "IV",
+              "fallback": "IV"
+            },
+            " quadrant. Correct option: (3)."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(- 5, 2\\right)",
+              "fallback": "(−5, 2)"
+            },
+            " என்பது (−, +) குறியுடன் ",
+            {
+              "latex": "II",
+              "fallback": "II"
+            },
+            " காற்பகுதியிலும், ",
+            {
+              "latex": "\\left(2, - 5\\right)",
+              "fallback": "(2, −5)"
+            },
+            " என்பது (+, −) குறியுடன் ",
+            {
+              "latex": "IV",
+              "fallback": "IV"
+            },
+            " காற்பகுதியிலும் அமையும். சரியான விடை: (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q3",
+    "questionMath": {
+      "en": [
+        "3. On plotting the points ",
+        {
+          "latex": "O(0,0), A(3,-4), B(3,4)",
+          "fallback": "O(0, 0), A(3, −4), B(3, 4)"
+        },
+        " and ",
+        {
+          "latex": "C(0, 4)",
+          "fallback": "C(0, 4)"
+        },
+        " and joining OA, AB, BC and CO, which of the following figure is obtained?\n(1) Square   (2) Rectangle   (3) Trapezium   (4) Rhombus"
+      ],
+      "ta": [
+        "3. புள்ளிகள் ",
+        {
+          "latex": "O(0,0), A(3,-4), B(3,4)",
+          "fallback": "O(0, 0), A(3, −4), B(3, 4)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "C(0, 4)",
+          "fallback": "C(0, 4)"
+        },
+        " ஐக் குறித்து அவற்றை OA, AB, BC மற்றும் CO என இணைத்தால் கிடைக்கும் உருவம் ______.\n(1) சதுரம்   (2) செவ்வகம்   (3) சரிவகம்   (4) சாய்சதுரம்"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(3) Trapezium}",
+      "fallback": "(3) Trapezium"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "CO \\parallel AB,\\; CO=4\\ne 8=AB \\implies \\text{Trapezium}",
+          "fallback": "CO ∥ AB (4 ≠ 8) ⇒ Trapezium",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            {
+              "latex": "CO",
+              "fallback": "CO"
+            },
+            " lies on ",
+            {
+              "latex": "x = 0 \\left(\\text{length} 4\\right)",
+              "fallback": "x = 0 (length 4)"
+            },
+            " and ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " lies on ",
+            {
+              "latex": "x = 3 \\left(\\text{length} 8\\right)",
+              "fallback": "x = 3 (length 8)"
+            },
+            ". Since ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " ∥ ",
+            {
+              "latex": "CO",
+              "fallback": "CO"
+            },
+            " with unequal lengths (and ",
+            {
+              "latex": "OA = 5",
+              "fallback": "OA = 5"
+            },
+            ",",
+            " ",
+            {
+              "latex": "BC = 3",
+              "fallback": "BC = 3"
+            },
+            " are not parallel), ",
+            {
+              "latex": "OABC",
+              "fallback": "OABC"
+            },
+            " is a trapezium. Correct option: (3)."
+          ],
+          "ta": [
+            {
+              "latex": "CO",
+              "fallback": "CO"
+            },
+            " (",
+            {
+              "latex": "x = 0",
+              "fallback": "x = 0"
+            },
+            ", நீளம் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            ") மற்றும் ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " (",
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            ", நீளம் ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            ") ஆகிய இரண்டும் செங்குத்துப் பக்கங்களாக இணையாக உள்ளன (நீளம் சமமல்ல). எனவே ",
+            {
+              "latex": "OABC",
+              "fallback": "OABC"
+            },
+            " ஒரு சரிவகம். சரியான விடை: (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q4",
+    "questionMath": {
+      "en": [
+        "4. If ",
+        {
+          "latex": "P(-1,1), Q(3,-4), R(1,-1), S(-2,-3)",
+          "fallback": "P(−1, 1), Q(3, −4), R(1, −1), S(−2, −3)"
+        },
+        " and ",
+        {
+          "latex": "T(-4,4)",
+          "fallback": "T(−4, 4)"
+        },
+        " are plotted on a graph paper, then the points in the fourth quadrant are ______\n(1) P and T   (2) Q and R   (3) only S   (4) P and Q"
+      ],
+      "ta": [
+        "4. புள்ளிகள் ",
+        {
+          "latex": "P(-1,1), Q(3,-4), R(1,-1), S(-2,-3)",
+          "fallback": "P(−1, 1), Q(3, −4), R(1, −1), S(−2, −3)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "T(-4,4)",
+          "fallback": "T(−4, 4)"
+        },
+        " என்பன ஒரு வரைபடத் தாளில் குறிக்கப்பட்டால் நான்காவது காற்பகுதியில் அமையும் புள்ளிகள் ______\n(1) P மற்றும் T   (2) Q மற்றும் R   (3) S மட்டும்   (4) P மற்றும் Q"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(2) }Q\\text{ and }R",
+      "fallback": "(2) Q and R"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "Q(3,-4),\\; R(1,-1)\\in\\text{IV}",
+          "fallback": "Q(3, −4), R(1, −1) have (+, −)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Fourth quadrant points have (+, −) signs: ",
+            {
+              "latex": "Q \\left(3, - 4\\right)",
+              "fallback": "Q(3, −4)"
+            },
+            " and ",
+            {
+              "latex": "R \\left(1, - 1\\right)",
+              "fallback": "R(1, −1)"
+            },
+            ". Correct option: (2)."
+          ],
+          "ta": [
+            "நான்காவது காற்பகுதியில் (+, −) குறிகள் இருக்கும்: ",
+            {
+              "latex": "Q \\left(3, - 4\\right)",
+              "fallback": "Q(3, −4)"
+            },
+            " மற்றும் ",
+            {
+              "latex": "R \\left(1, - 1\\right)",
+              "fallback": "R(1, −1)"
+            },
+            ". சரியான விடை: (2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q5",
+    "questionMath": {
+      "en": [
+        "5. The point whose ordinate is 4 and which lies on the y-axis is ______\n(1) (4, 0)   (2) (0, 4)   (3) (1, 4)   (4) (4, 2)"
+      ],
+      "ta": [
+        "5. ஒரு புள்ளியின் y அச்சுத் தொலைவு 4 மற்றும் அப்புள்ளி y அச்சில் அமைந்தால் அப்புள்ளி ______ ஆகும்\n(1) (4, 0)   (2) (0, 4)   (3) (1, 4)   (4) (4, 2)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(2) }(0, 4)",
+      "fallback": "(2) (0, 4)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(0, 4)",
+          "fallback": "x = 0, y = 4 ⇒ (0, 4)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Any point on the ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-axis has ",
+            {
+              "latex": "x = 0",
+              "fallback": "x = 0"
+            },
+            ", and its ordinate is ",
+            {
+              "latex": "y = 4",
+              "fallback": "y = 4"
+            },
+            ", so the point is ",
+            {
+              "latex": "\\left(0, 4\\right)",
+              "fallback": "(0, 4)"
+            },
+            ". Correct option: (2)."
+          ],
+          "ta": [
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-அச்சின் மீதுள்ள புள்ளியில் ",
+            {
+              "latex": "x = 0",
+              "fallback": "x = 0"
+            },
+            ",",
+            " ",
+            {
+              "latex": "y = 4",
+              "fallback": "y = 4"
+            },
+            " என்பதால் புள்ளி ",
+            {
+              "latex": "\\left(0, 4\\right)",
+              "fallback": "(0, 4)"
+            },
+            " ஆகும். சரியான விடை: (2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q6",
+    "questionMath": {
+      "en": [
+        "6. The distance between the two points ",
+        {
+          "latex": "(2, 3)",
+          "fallback": "(2, 3)"
+        },
+        " and ",
+        {
+          "latex": "(1, 4)",
+          "fallback": "(1, 4)"
+        },
+        " is ______\n(1) 2   (2) √56   (3) √10   (4) √2"
+      ],
+      "ta": [
+        "6. ",
+        {
+          "latex": "(2, 3)",
+          "fallback": "(2, 3)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(1, 4)",
+          "fallback": "(1, 4)"
+        },
+        " என்ற புள்ளிகளுக்கு இடையே உள்ள தொலைவு ______\n(1) 2   (2) √56   (3) √10   (4) √2"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(4) }\\sqrt{2}",
+      "fallback": "(4) √2"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "d = \\sqrt{(1-2)^2+(4-3)^2} = \\sqrt{1+1} = \\sqrt{2}",
+          "fallback": "d = √((1−2)² + (4−3)²) = √2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            {
+              "latex": "d = \\sqrt{\\left(1 - 2\\right)^{2} + \\left(4 - 3\\right)^{2}} = \\sqrt{1 + 1} = \\sqrt{2}",
+              "fallback": "d = √((1 − 2)² + (4 − 3)²) = √(1 + 1) = √2"
+            },
+            ". Correct option: (4)."
+          ],
+          "ta": [
+            {
+              "latex": "d = \\sqrt{\\left(1 - 2\\right)^{2} + \\left(4 - 3\\right)^{2}} = \\sqrt{1 + 1} = \\sqrt{2}",
+              "fallback": "d = √((1 − 2)² + (4 − 3)²) = √(1 + 1) = √2"
+            },
+            ". சரியான விடை: (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q7",
+    "questionMath": {
+      "en": [
+        "7. If the points ",
+        {
+          "latex": "A(2, 0), B(-6, 0), C(3, a-3)",
+          "fallback": "A(2, 0), B(−6, 0), C(3, a − 3)"
+        },
+        " lie on the x-axis then the value of ",
+        {
+          "latex": "a",
+          "fallback": "a"
+        },
+        " is ______\n(1) 0   (2) 2   (3) 3   (4) −6"
+      ],
+      "ta": [
+        "7. புள்ளிகள் ",
+        {
+          "latex": "A(2, 0), B(-6, 0), C(3, a-3)",
+          "fallback": "A(2, 0), B(−6, 0), C(3, a − 3)"
+        },
+        " ஆனது x-அச்சின் மீது அமைந்தால் ",
+        {
+          "latex": "a",
+          "fallback": "a"
+        },
+        " இன் மதிப்பு ______\n(1) 0   (2) 2   (3) 3   (4) −6"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(3) }3",
+      "fallback": "(3) 3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a - 3 = 0 \\implies a = 3",
+          "fallback": "a − 3 = 0 ⇒ a = 3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "C \\left(3, a - 3\\right)",
+              "fallback": "C(3, a − 3)"
+            },
+            " lies on the ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-axis, its ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-coordinate is ",
+            {
+              "latex": "0 : a - 3 = 0 \\Rightarrow a = 3",
+              "fallback": "0: a − 3 = 0 ⇒ a = 3"
+            },
+            ". Correct option: (3)."
+          ],
+          "ta": [
+            {
+              "latex": "C \\left(3, a - 3\\right)",
+              "fallback": "C(3, a − 3)"
+            },
+            " ஆனது ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-அச்சின் மீது உள்ளதால் ",
+            {
+              "latex": "y = 0 \\Rightarrow a - 3 = 0 \\Rightarrow a = 3",
+              "fallback": "y = 0 ⇒ a − 3 = 0 ⇒ a = 3"
+            },
+            ". சரியான விடை: (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q8",
+    "questionMath": {
+      "en": [
+        "8. If ",
+        {
+          "latex": "(x+2, 4) = (5, y-2)",
+          "fallback": "(x + 2, 4) = (5, y − 2)"
+        },
+        ", then the coordinates ",
+        {
+          "latex": "(x, y)",
+          "fallback": "(x, y)"
+        },
+        " are ______\n(1) (7, 12)   (2) (6, 3)   (3) (3, 6)   (4) (2, 1)"
+      ],
+      "ta": [
+        "8. ",
+        {
+          "latex": "(x+2, 4) = (5, y-2)",
+          "fallback": "(x + 2, 4) = (5, y − 2)"
+        },
+        " எனில், ",
+        {
+          "latex": "(x, y)",
+          "fallback": "(x, y)"
+        },
+        " இன் மதிப்பு ______\n(1) (7, 12)   (2) (6, 3)   (3) (3, 6)   (4) (2, 1)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(3) }(3, 6)",
+      "fallback": "(3) (3, 6)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x+2=5 \\implies x=3;\\quad y-2=4 \\implies y=6",
+          "fallback": "x = 3, y = 6 ⇒ (3, 6)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Equating corresponding coordinates: ",
+            {
+              "latex": "x + 2 = 5 \\Rightarrow x = 3",
+              "fallback": "x + 2 = 5 ⇒ x = 3"
+            },
+            " and ",
+            {
+              "latex": "4 = y - 2 \\Rightarrow y = 6",
+              "fallback": "4 = y − 2 ⇒ y = 6"
+            },
+            ". Correct option: (3)."
+          ],
+          "ta": [
+            "ஒத்த ஆயத்தொலைவுகளைச் சமப்படுத்த: ",
+            {
+              "latex": "x + 2 = 5 \\Rightarrow x = 3",
+              "fallback": "x + 2 = 5 ⇒ x = 3"
+            },
+            " மற்றும் ",
+            {
+              "latex": "4 = y - 2 \\Rightarrow y = 6",
+              "fallback": "4 = y − 2 ⇒ y = 6"
+            },
+            ". சரியான விடை: (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q9",
+    "questionMath": {
+      "en": [
+        "9. If ",
+        {
+          "latex": "Q_1, Q_2, Q_3, Q_4",
+          "fallback": "Q₁, Q₂, Q₃, Q₄"
+        },
+        " are the quadrants in a Cartesian plane then ",
+        {
+          "latex": "Q_2 \\cap Q_3",
+          "fallback": "Q₂ ∩ Q₃"
+        },
+        " is ______\n(1) Q₁ ∪ Q₂   (2) Q₂ ∪ Q₃   (3) Null set   (4) Negative x-axis."
+      ],
+      "ta": [
+        "9. ",
+        {
+          "latex": "Q_1, Q_2, Q_3, Q_4",
+          "fallback": "Q₁, Q₂, Q₃, Q₄"
+        },
+        " என்பன கார்ட்டீசியன் தளத்தின் நான்கு காற்பகுதிகள் எனில், ",
+        {
+          "latex": "Q_2 \\cap Q_3",
+          "fallback": "Q₂ ∩ Q₃"
+        },
+        " என்பது ______\n(1) Q₁ ∪ Q₂   (2) Q₂ ∪ Q₃   (3) வெற்றுக் கணம்   (4) x-அச்சின் குறைப் பகுதி."
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(3) Null set}",
+      "fallback": "(3) Null set"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "Q_2 \\cap Q_3 = \\varnothing\\;(\\text{Null set})",
+          "fallback": "Q₂ ∩ Q₃ = ∅ (Null set)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "The four quadrants are open regions that exclude the coordinate axes. Points in ",
+            {
+              "latex": "Q_{2}",
+              "fallback": "Q₂"
+            },
+            " have ",
+            {
+              "latex": "y > 0",
+              "fallback": "y > 0"
+            },
+            " while points in ",
+            {
+              "latex": "Q_{3}",
+              "fallback": "Q₃"
+            },
+            " have ",
+            {
+              "latex": "y < 0",
+              "fallback": "y < 0"
+            },
+            ", so they share no common points: ",
+            {
+              "latex": "Q_{2} \\cap Q_{3} = \\varnothing",
+              "fallback": "Q₂ ∩ Q₃ = ∅"
+            },
+            " (Null set). Correct option: (3)."
+          ],
+          "ta": [
+            "நான்கு காற்பகுதிகளும் அச்சுகளை உள்ளடக்காத தனித்தனிப் பகுதிகளாகும். ",
+            {
+              "latex": "Q_{2}",
+              "fallback": "Q₂"
+            },
+            "-இல் ",
+            {
+              "latex": "y > 0",
+              "fallback": "y > 0"
+            },
+            " மற்றும் ",
+            {
+              "latex": "Q_{3}",
+              "fallback": "Q₃"
+            },
+            "-இல் ",
+            {
+              "latex": "y < 0",
+              "fallback": "y < 0"
+            },
+            " என்பதால் பொதுப் புள்ளிகள் இல்லை: ",
+            {
+              "latex": "Q_{2} \\cap Q_{3} = \\varnothing",
+              "fallback": "Q₂ ∩ Q₃ = ∅"
+            },
+            " (வெற்றுக் கணம்). சரியான விடை: (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q10",
+    "questionMath": {
+      "en": [
+        "10. The distance between the point ",
+        {
+          "latex": "(5, -1)",
+          "fallback": "(5, −1)"
+        },
+        " and the origin is ______\n(1) √24   (2) √37   (3) √26   (4) √17"
+      ],
+      "ta": [
+        "10. ",
+        {
+          "latex": "(5, -1)",
+          "fallback": "(5, −1)"
+        },
+        " என்ற புள்ளிக்கும் ஆதிப் புள்ளிக்கும் இடையே உள்ள தொலைவு ______\n(1) √24   (2) √37   (3) √26   (4) √17"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(3) }\\sqrt{26}",
+      "fallback": "(3) √26"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "d = \\sqrt{5^2+(-1)^2} = \\sqrt{26}",
+          "fallback": "d = √(5² + (−1)²) = √26",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Distance from origin ",
+            {
+              "latex": "\\left(0, 0\\right)",
+              "fallback": "(0, 0)"
+            },
+            " to ",
+            {
+              "latex": "\\left(5, - 1\\right)",
+              "fallback": "(5, −1)"
+            },
+            " is ",
+            {
+              "latex": "\\sqrt{5^{2} + \\left(- 1\\right)^{2}} = \\sqrt{25 + 1} = \\sqrt{26}",
+              "fallback": "√(5² + (−1)²) = √(25 + 1) = √26"
+            },
+            ". Correct option: (3)."
+          ],
+          "ta": [
+            "ஆதிப்புள்ளி ",
+            {
+              "latex": "\\left(0, 0\\right)",
+              "fallback": "(0, 0)"
+            },
+            "-லிருந்து ",
+            {
+              "latex": "\\left(5, - 1\\right)",
+              "fallback": "(5, −1)"
+            },
+            "-க்கு உள்ள தொலைவு ",
+            {
+              "latex": "\\sqrt{5^{2} + \\left(- 1\\right)^{2}} = \\sqrt{26}",
+              "fallback": "√(5² + (−1)²) = √26"
+            },
+            ". சரியான விடை: (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q11",
+    "questionMath": {
+      "en": [
+        "11. The coordinates of the point C dividing the line segment joining the points ",
+        {
+          "latex": "P(2, 4)",
+          "fallback": "P(2, 4)"
+        },
+        " and ",
+        {
+          "latex": "Q(5, 7)",
+          "fallback": "Q(5, 7)"
+        },
+        " internally in the ratio ",
+        {
+          "latex": "2:1",
+          "fallback": "2:1"
+        },
+        " is\n(1) (7/2, 11/2)   (2) (3, 5)   (3) (4, 4)   (4) (4, 6)"
+      ],
+      "ta": [
+        "11. ",
+        {
+          "latex": "P(2, 4)",
+          "fallback": "P(2, 4)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "Q(5, 7)",
+          "fallback": "Q(5, 7)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத் துண்டை ",
+        {
+          "latex": "2:1",
+          "fallback": "2:1"
+        },
+        " என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கும் புள்ளி C-இன் ஆயத்தொலைவுகள்\n(1) (7/2, 11/2)   (2) (3, 5)   (3) (4, 4)   (4) (4, 6)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(4) }(4, 6)",
+      "fallback": "(4) (4, 6)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "C = \\left(\\dfrac{2(5)+1(2)}{3},\\; \\dfrac{2(7)+1(4)}{3}\\right) = (4, 6)",
+          "fallback": "C = (4, 6)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            {
+              "latex": "C = \\left(\\dfrac{\\left(2 \\times 5 + 1 \\times 2\\right)}{3}, \\dfrac{\\left(2 \\times 7 + 1 \\times 4\\right)}{3}\\right) = \\left(\\dfrac{12}{3}, \\dfrac{18}{3}\\right) = \\left(4, 6\\right)",
+              "fallback": "C = ((2×5 + 1×2)/3, (2×7 + 1×4)/3) = (12/3, 18/3) = (4, 6)"
+            },
+            ". Correct option: (4)."
+          ],
+          "ta": [
+            {
+              "latex": "C = \\left(\\dfrac{\\left(2 \\times 5 + 1 \\times 2\\right)}{3}, \\dfrac{\\left(2 \\times 7 + 1 \\times 4\\right)}{3}\\right) = \\left(\\dfrac{12}{3}, \\dfrac{18}{3}\\right) = \\left(4, 6\\right)",
+              "fallback": "C = ((2×5 + 1×2)/3, (2×7 + 1×4)/3) = (12/3, 18/3) = (4, 6)"
+            },
+            ". சரியான விடை: (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q12",
+    "questionMath": {
+      "en": [
+        "12. If ",
+        {
+          "latex": "P\\left(\\dfrac{a}{3}, \\dfrac{b}{2}\\right)",
+          "fallback": "P(a/3, b/2)"
+        },
+        " is the mid-point of the line segment joining ",
+        {
+          "latex": "A(-4, 3)",
+          "fallback": "A(−4, 3)"
+        },
+        " and ",
+        {
+          "latex": "B(-2, 4)",
+          "fallback": "B(−2, 4)"
+        },
+        " then ",
+        {
+          "latex": "(a, b)",
+          "fallback": "(a, b)"
+        },
+        " is\n(1) (−9, 7)   (2) (−3, 7/2)   (3) (9, −7)   (4) (3, −7/2)"
+      ],
+      "ta": [
+        "12. ",
+        {
+          "latex": "A(-4, 3)",
+          "fallback": "A(−4, 3)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B(-2, 4)",
+          "fallback": "B(−2, 4)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத்துண்டின் நடுப்புள்ளி ",
+        {
+          "latex": "P\\left(\\dfrac{a}{3}, \\dfrac{b}{2}\\right)",
+          "fallback": "P(a/3, b/2)"
+        },
+        " எனில் ",
+        {
+          "latex": "(a, b)",
+          "fallback": "(a, b)"
+        },
+        " ஆனது\n(1) (−9, 7)   (2) (−3, 7/2)   (3) (9, −7)   (4) (3, −7/2)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(1) }(-9, 7)",
+      "fallback": "(1) (−9, 7)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\dfrac{a}{3}=-3\\implies a=-9,\\quad \\dfrac{b}{2}=\\dfrac{7}{2}\\implies b=7",
+          "fallback": "a/3 = −3 ⇒ a = −9; b/2 = 7/2 ⇒ b = 7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Mid-point of ",
+            {
+              "latex": "\\left(- 4, 3\\right)",
+              "fallback": "(−4, 3)"
+            },
+            " and ",
+            {
+              "latex": "\\left(- 2, 4\\right)",
+              "fallback": "(−2, 4)"
+            },
+            " is ",
+            {
+              "latex": "\\left(- 3, \\dfrac{7}{2}\\right)",
+              "fallback": "(−3, 7/2)"
+            },
+            ". Equating ",
+            {
+              "latex": "\\dfrac{a}{3} = - 3 \\Rightarrow a = - 9",
+              "fallback": "a/3 = −3 ⇒ a = −9"
+            },
+            ", and ",
+            {
+              "latex": "\\dfrac{b}{2} = \\dfrac{7}{2} \\Rightarrow b = 7",
+              "fallback": "b/2 = 7/2 ⇒ b = 7"
+            },
+            ". Correct option: (1)."
+          ],
+          "ta": [
+            "நடுப்புள்ளி ",
+            {
+              "latex": "\\left(- 3, \\dfrac{7}{2}\\right)",
+              "fallback": "(−3, 7/2)"
+            },
+            ". எனவே ",
+            {
+              "latex": "\\dfrac{a}{3} = - 3 \\Rightarrow a = - 9",
+              "fallback": "a/3 = −3 ⇒ a = −9"
+            },
+            ", மற்றும் ",
+            {
+              "latex": "\\dfrac{b}{2} = \\dfrac{7}{2} \\Rightarrow b = 7",
+              "fallback": "b/2 = 7/2 ⇒ b = 7"
+            },
+            ". சரியான விடை: (1)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q13",
+    "questionMath": {
+      "en": [
+        "13. In what ratio does the point ",
+        {
+          "latex": "Q(1, 6)",
+          "fallback": "Q(1, 6)"
+        },
+        " divide the line segment joining the points ",
+        {
+          "latex": "P(2, 7)",
+          "fallback": "P(2, 7)"
+        },
+        " and ",
+        {
+          "latex": "R(-2, 3)",
+          "fallback": "R(−2, 3)"
+        },
+        "\n(1) 1:2   (2) 2:1   (3) 1:3   (4) 3:1"
+      ],
+      "ta": [
+        "13. ",
+        {
+          "latex": "P(2, 7)",
+          "fallback": "P(2, 7)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "R(-2, 3)",
+          "fallback": "R(−2, 3)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத் துண்டை ",
+        {
+          "latex": "Q(1, 6)",
+          "fallback": "Q(1, 6)"
+        },
+        " என்ற புள்ளியானது என்ன விகிதத்தில் பிரிக்கும்?\n(1) 1:2   (2) 2:1   (3) 1:3   (4) 3:1"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(3) }1:3",
+      "fallback": "(3) 1:3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\dfrac{-2k+2}{k+1}=1 \\implies 3k=1 \\implies k=\\dfrac{1}{3}\\;(1:3)",
+          "fallback": "(−2k + 2)/(k + 1) = 1 ⇒ 1:3",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Let ratio be ",
+            {
+              "latex": "k : 1",
+              "fallback": "k : 1"
+            },
+            ". Equate ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinate: ",
+            {
+              "latex": "\\dfrac{\\left(- 2 k + 2\\right)}{\\left(k + 1\\right)} = 1 \\Rightarrow - 2 k + 2 = k + 1 \\Rightarrow 3 k = 1 \\Rightarrow k = \\dfrac{1}{3}",
+              "fallback": "(−2k + 2)/(k + 1) = 1 ⇒ −2k + 2 = k + 1 ⇒ 3k = 1 ⇒ k = 1/3"
+            },
+            " (ratio ",
+            {
+              "latex": "1 : 3",
+              "fallback": "1:3"
+            },
+            "). Correct option: (3)."
+          ],
+          "ta": [
+            "விகிதம் ",
+            {
+              "latex": "k : 1",
+              "fallback": "k : 1"
+            },
+            " என்க. ",
+            {
+              "latex": "\\dfrac{\\left(- 2 k + 2\\right)}{\\left(k + 1\\right)} = 1 \\Rightarrow 3 k = 1 \\Rightarrow k = \\dfrac{1}{3 \\left(1 : 3\\right)}",
+              "fallback": "(−2k + 2)/(k + 1) = 1 ⇒ 3k = 1 ⇒ k = 1/3 (1:3)"
+            },
+            ". சரியான விடை: (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q14",
+    "questionMath": {
+      "en": [
+        "14. If the coordinates of one end of a diameter of a circle is ",
+        {
+          "latex": "(3, 4)",
+          "fallback": "(3, 4)"
+        },
+        " and the coordinates of its centre is ",
+        {
+          "latex": "(-3, 2)",
+          "fallback": "(−3, 2)"
+        },
+        ", then the coordinate of the other end of the diameter is\n(1) (0, −3)   (2) (0, 9)   (3) (3, 0)   (4) (−9, 0)"
+      ],
+      "ta": [
+        "14. ",
+        {
+          "latex": "(-3, 2)",
+          "fallback": "(−3, 2)"
+        },
+        " என்ற புள்ளியை மையமாகக் கொண்ட வட்டத்தில் ",
+        {
+          "latex": "(3, 4)",
+          "fallback": "(3, 4)"
+        },
+        " ஐ ஒரு முனையாகக் கொண்ட விட்டத்தின் மற்றொரு முனையைக் காண்க\n(1) (0, −3)   (2) (0, 9)   (3) (3, 0)   (4) (−9, 0)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(4) }(-9, 0)",
+      "fallback": "(4) (−9, 0)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\dfrac{3+x}{2}=-3\\implies x=-9,\\quad \\dfrac{4+y}{2}=2\\implies y=0",
+          "fallback": "(3+x)/2 = −3 ⇒ x = −9; (4+y)/2 = 2 ⇒ y = 0",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Other end = ",
+            {
+              "latex": "\\left(2 \\left(- 3\\right) - 3, 2 \\left(2\\right) - 4\\right) = \\left(- 9, 0\\right)",
+              "fallback": "(2(−3) − 3, 2(2) − 4) = (−9, 0)"
+            },
+            ". Correct option: (4)."
+          ],
+          "ta": [
+            "மற்றொரு முனை = ",
+            {
+              "latex": "\\left(2 \\left(- 3\\right) - 3, 2 \\left(2\\right) - 4\\right) = \\left(- 9, 0\\right)",
+              "fallback": "(2(−3) − 3, 2(2) − 4) = (−9, 0)"
+            },
+            ". சரியான விடை: (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q15",
+    "questionMath": {
+      "en": [
+        "15. The ratio in which the x-axis divides the line segment joining the points ",
+        {
+          "latex": "A(a_1, b_1)",
+          "fallback": "A(a₁, b₁)"
+        },
+        " and ",
+        {
+          "latex": "B(a_2, b_2)",
+          "fallback": "B(a₂, b₂)"
+        },
+        " is\n(1) ",
+        {
+          "latex": "b_1 : b_2",
+          "fallback": "b₁ : b₂"
+        },
+        "   (2) ",
+        {
+          "latex": "-b_1 : b_2",
+          "fallback": "−b₁ : b₂"
+        },
+        "   (3) ",
+        {
+          "latex": "a_1 : a_2",
+          "fallback": "a₁ : a₂"
+        },
+        "   (4) ",
+        {
+          "latex": "-a_1 : a_2",
+          "fallback": "−a₁ : a₂"
+        }
+      ],
+      "ta": [
+        "15. ",
+        {
+          "latex": "A(a_1, b_1)",
+          "fallback": "A(a₁, b₁)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B(a_2, b_2)",
+          "fallback": "B(a₂, b₂)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத் துண்டை X-அச்சு எந்த விகிதத்தில் பிரிக்கும்?\n(1) ",
+        {
+          "latex": "b_1 : b_2",
+          "fallback": "b₁ : b₂"
+        },
+        "   (2) ",
+        {
+          "latex": "-b_1 : b_2",
+          "fallback": "−b₁ : b₂"
+        },
+        "   (3) ",
+        {
+          "latex": "a_1 : a_2",
+          "fallback": "a₁ : a₂"
+        },
+        "   (4) ",
+        {
+          "latex": "-a_1 : a_2",
+          "fallback": "−a₁ : a₂"
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(2) }-b_1:b_2",
+      "fallback": "(2) −b₁ : b₂"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "kb_2+b_1=0 \\implies k = -\\dfrac{b_1}{b_2} \\implies -b_1:b_2",
+          "fallback": "kb₂ + b₁ = 0 ⇒ k = −b₁/b₂ ⇒ −b₁ : b₂",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "On the ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-axis, ",
+            {
+              "latex": "y = 0",
+              "fallback": "y = 0"
+            },
+            ". Let the ratio be ",
+            {
+              "latex": "k : 1",
+              "fallback": "k : 1"
+            },
+            ", so ",
+            {
+              "latex": "\\dfrac{\\left(k b_{2} + b_{1}\\right)}{\\left(k + 1\\right)} = 0 \\Rightarrow k = \\dfrac{- b_{1}}{b_{2}}, i",
+              "fallback": "(k b₂ + b₁)/(k + 1) = 0 ⇒ k = −b₁/b₂, i"
+            },
+            ".",
+            {
+              "latex": "e",
+              "fallback": "e"
+            },
+            "., ",
+            {
+              "latex": "- b_{1} : b_{2}",
+              "fallback": "−b₁ : b₂"
+            },
+            ". Correct option: (2)."
+          ],
+          "ta": [
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-அச்சில் ",
+            {
+              "latex": "y = 0",
+              "fallback": "y = 0"
+            },
+            ". விகிதம் ",
+            {
+              "latex": "k : 1",
+              "fallback": "k : 1"
+            },
+            " எனில் (kb₂ ",
+            {
+              "latex": "+ b_{1}",
+              "fallback": "+ b₁"
+            },
+            ")/",
+            {
+              "latex": "\\left(k + 1\\right) = 0 \\Rightarrow k = \\dfrac{- b_{1}}{b_{2}}",
+              "fallback": "(k + 1) = 0 ⇒ k = −b₁/b₂"
+            },
+            ", அதாவது ",
+            {
+              "latex": "- b_{1} : b_{2}",
+              "fallback": "−b₁ : b₂"
+            },
+            ". சரியான விடை: (2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q16",
+    "questionMath": {
+      "en": [
+        "16. The ratio in which the x-axis divides the line segment joining the points ",
+        {
+          "latex": "(6, 4)",
+          "fallback": "(6, 4)"
+        },
+        " and ",
+        {
+          "latex": "(1, -7)",
+          "fallback": "(1, −7)"
+        },
+        " is\n(1) 2:3   (2) 3:4   (3) 4:7   (4) 4:3"
+      ],
+      "ta": [
+        "16. ",
+        {
+          "latex": "(6, 4)",
+          "fallback": "(6, 4)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(1, -7)",
+          "fallback": "(1, −7)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத் துண்டை X-அச்சு எந்த விகிதத்தில் பிரிக்கும்?\n(1) 2:3   (2) 3:4   (3) 4:7   (4) 4:3"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(3) }4:7",
+      "fallback": "(3) 4:7"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "k = -\\dfrac{4}{-7} = \\dfrac{4}{7} \\implies 4:7",
+          "fallback": "k = −4/(−7) = 4/7 ⇒ 4:7",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Ratio = ",
+            {
+              "latex": "- y_{1} : y_{2} = - 4 : \\left(- 7\\right) = 4 : 7",
+              "fallback": "−y₁ : y₂ = −4 : (−7) = 4 : 7"
+            },
+            ". Correct option: (3)."
+          ],
+          "ta": [
+            "விகிதம் = ",
+            {
+              "latex": "- y_{1} : y_{2} = - 4 : \\left(- 7\\right) = 4 : 7",
+              "fallback": "−y₁ : y₂ = −4 : (−7) = 4 : 7"
+            },
+            ". சரியான விடை: (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q17",
+    "questionMath": {
+      "en": [
+        "17. If the coordinates of the mid-points of the sides ",
+        {
+          "latex": "AB, BC",
+          "fallback": "AB, BC"
+        },
+        " and ",
+        {
+          "latex": "CA",
+          "fallback": "CA"
+        },
+        " of a triangle are ",
+        {
+          "latex": "(3, 4), (1, 1)",
+          "fallback": "(3, 4), (1, 1)"
+        },
+        " and ",
+        {
+          "latex": "(2, -3)",
+          "fallback": "(2, −3)"
+        },
+        " respectively, then the vertices ",
+        {
+          "latex": "A",
+          "fallback": "A"
+        },
+        " and ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " of the triangle are\n(1) (3, 2), (2, 4)   (2) (4, 0), (2, 8)   (3) (3, 4), (2, 0)   (4) (4, 3), (2, 4)"
+      ],
+      "ta": [
+        "17. ஒரு முக்கோணத்தின் பக்கங்கள் ",
+        {
+          "latex": "AB, BC",
+          "fallback": "AB, BC"
+        },
+        " மற்றும் ",
+        {
+          "latex": "CA",
+          "fallback": "CA"
+        },
+        " ஆகியவற்றின் நடுப் புள்ளிகளின் ஆயத் தொலைவுகள் முறையே ",
+        {
+          "latex": "(3, 4), (1, 1)",
+          "fallback": "(3, 4), (1, 1)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(2, -3)",
+          "fallback": "(2, −3)"
+        },
+        " எனில் ",
+        {
+          "latex": "A",
+          "fallback": "A"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " இன் ஆயத்தொலைவுகள் யாவை?\n(1) (3, 2), (2, 4)   (2) (4, 0), (2, 8)   (3) (3, 4), (2, 0)   (4) (4, 3), (2, 4)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(2) }(4,0),\\;(2,8)",
+      "fallback": "(2) (4, 0), (2, 8)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}A &= (3+2-1,\\; 4-3-1) = (4, 0)\\\\B &= (3+1-2,\\; 4+1+3) = (2, 8)\\end{aligned}",
+          "fallback": "A = (4, 0), B = (2, 8)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "A = mid(",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            ") + mid(",
+            {
+              "latex": "CA",
+              "fallback": "CA"
+            },
+            ") − mid",
+            {
+              "latex": "\\left(BC\\right) = \\left(3 + 2 - 1, 4 - 3 - 1\\right) = \\left(4, 0\\right);\\quad B",
+              "fallback": "(BC) = (3 + 2 − 1, 4 − 3 − 1) = (4, 0); B"
+            },
+            " = mid(",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            ") + mid(",
+            {
+              "latex": "BC",
+              "fallback": "BC"
+            },
+            ") − mid",
+            {
+              "latex": "\\left(CA\\right) = \\left(3 + 1 - 2, 4 + 1 + 3\\right) = \\left(2, 8\\right)",
+              "fallback": "(CA) = (3 + 1 − 2, 4 + 1 + 3) = (2, 8)"
+            },
+            ". Correct option: (2)."
+          ],
+          "ta": [
+            {
+              "latex": "A = \\left(3 + 2 - 1, 4 - 3 - 1\\right) = \\left(4, 0\\right);\\quad B = \\left(3 + 1 - 2, 4 + 1 + 3\\right) = \\left(2, 8\\right)",
+              "fallback": "A = (3 + 2 − 1, 4 − 3 − 1) = (4, 0); B = (3 + 1 − 2, 4 + 1 + 3) = (2, 8)"
+            },
+            ". சரியான விடை: (2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q18",
+    "questionMath": {
+      "en": [
+        "18. The mid-point of the line joining ",
+        {
+          "latex": "(-a, 2b)",
+          "fallback": "(−a, 2b)"
+        },
+        " and ",
+        {
+          "latex": "(-3a, -4b)",
+          "fallback": "(−3a, −4b)"
+        },
+        " is\n(1) (2a, 3b)   (2) (−2a, −b)   (3) (2a, b)   (4) (−2a, −3b)"
+      ],
+      "ta": [
+        "18. ",
+        {
+          "latex": "(-a, 2b)",
+          "fallback": "(−a, 2b)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(-3a, -4b)",
+          "fallback": "(−3a, −4b)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத்துண்டின் நடுப் புள்ளியானது\n(1) (2a, 3b)   (2) (−2a, −b)   (3) (2a, b)   (4) (−2a, −3b)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(2) }(-2a, -b)",
+      "fallback": "(2) (−2a, −b)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "M = \\left(\\dfrac{-4a}{2},\\; \\dfrac{-2b}{2}\\right) = (-2a, -b)",
+          "fallback": "M = (−2a, −b)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            {
+              "latex": "M = \\left(\\dfrac{\\left(- a - 3 a\\right)}{2}, \\dfrac{\\left(2 b - 4 b\\right)}{2}\\right) = \\left(\\dfrac{- 4 a}{2}, \\dfrac{- 2 b}{2}\\right) = \\left(- 2 a, - b\\right)",
+              "fallback": "M = ((−a − 3a)/2, (2b − 4b)/2) = (−4a/2, −2b/2) = (−2a, −b)"
+            },
+            ". Correct option: (2)."
+          ],
+          "ta": [
+            {
+              "latex": "M = \\left(\\dfrac{\\left(- a - 3 a\\right)}{2}, \\dfrac{\\left(2 b - 4 b\\right)}{2}\\right) = \\left(- 2 a, - b\\right)",
+              "fallback": "M = ((−a − 3a)/2, (2b − 4b)/2) = (−2a, −b)"
+            },
+            ". சரியான விடை: (2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q19",
+    "questionMath": {
+      "en": [
+        "19. In what ratio does the y-axis divides the line joining the points ",
+        {
+          "latex": "(-5, 1)",
+          "fallback": "(−5, 1)"
+        },
+        " and ",
+        {
+          "latex": "(2, 3)",
+          "fallback": "(2, 3)"
+        },
+        " internally\n(1) 1:3   (2) 2:5   (3) 3:1   (4) 5:2"
+      ],
+      "ta": [
+        "19. ",
+        {
+          "latex": "(-5, 1)",
+          "fallback": "(−5, 1)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(2, 3)",
+          "fallback": "(2, 3)"
+        },
+        " ஆகிய புள்ளிகளை இணைக்கும் கோட்டை Y-அச்சு உட்புறமாக என்ன விகிதத்தில் பிரிக்கும்?\n(1) 1:3   (2) 2:5   (3) 3:1   (4) 5:2"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(4) }5:2",
+      "fallback": "(4) 5:2"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2k-5=0 \\implies k = \\dfrac{5}{2} \\implies 5:2",
+          "fallback": "2k − 5 = 0 ⇒ k = 5/2 ⇒ 5:2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "On the ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-axis, ",
+            {
+              "latex": "x = 0",
+              "fallback": "x = 0"
+            },
+            ". Let the ratio be ",
+            {
+              "latex": "k : 1 : \\dfrac{\\left(2 k - 5\\right)}{\\left(k + 1\\right)} = 0 \\Rightarrow k = \\dfrac{5}{2} \\Rightarrow 5 : 2",
+              "fallback": "k : 1: (2k − 5)/(k + 1) = 0 ⇒ k = 5/2 ⇒ 5 : 2"
+            },
+            ". Correct option: (4)."
+          ],
+          "ta": [
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            "-அச்சில் ",
+            {
+              "latex": "x = 0",
+              "fallback": "x = 0"
+            },
+            ". ",
+            {
+              "latex": "\\dfrac{\\left(2 k - 5\\right)}{\\left(k + 1\\right)} = 0 \\Rightarrow k = \\dfrac{5}{2} \\Rightarrow 5 : 2",
+              "fallback": "(2k − 5)/(k + 1) = 0 ⇒ k = 5/2 ⇒ 5 : 2"
+            },
+            ". சரியான விடை: (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch5-ex5.6-q20",
+    "questionMath": {
+      "en": [
+        "20. If ",
+        {
+          "latex": "(1, -2), (3, 6), (x, 10)",
+          "fallback": "(1, −2), (3, 6), (x, 10)"
+        },
+        " and ",
+        {
+          "latex": "(3, 2)",
+          "fallback": "(3, 2)"
+        },
+        " are the vertices of the parallelogram taken in order, then the value of ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " is\n(1) 6   (2) 5   (3) 4   (4) 3"
+      ],
+      "ta": [
+        "20. ",
+        {
+          "latex": "(1, -2), (3, 6), (x, 10)",
+          "fallback": "(1, −2), (3, 6), (x, 10)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "(3, 2)",
+          "fallback": "(3, 2)"
+        },
+        " ஆகியன ஓர் இணைகரத்தின் வரிசையாக எடுக்கப்பட்ட முனைப் புள்ளிகள் எனில், ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் மதிப்பானது\n(1) 6   (2) 5   (3) 4   (4) 3"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\text{(2) }5",
+      "fallback": "(2) 5"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\dfrac{1+x}{2} = \\dfrac{3+3}{2} \\implies 1+x=6 \\implies x=5",
+          "fallback": "1 + x = 3 + 3 ⇒ x = 5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Diagonals bisect each other: ",
+            {
+              "latex": "\\dfrac{\\left(1 + x\\right)}{2} = \\dfrac{\\left(3 + 3\\right)}{2} \\Rightarrow 1 + x = 6 \\Rightarrow x = 5",
+              "fallback": "(1 + x)/2 = (3 + 3)/2 ⇒ 1 + x = 6 ⇒ x = 5"
+            },
+            ". Correct option: (2)."
+          ],
+          "ta": [
+            "மூலைவிட்டங்கள் ஒன்றையொன்று இருசமக் கூறிடும்: ",
+            {
+              "latex": "\\dfrac{\\left(1 + x\\right)}{2} = \\dfrac{\\left(3 + 3\\right)}{2} \\Rightarrow x = 5",
+              "fallback": "(1 + x)/2 = (3 + 3)/2 ⇒ x = 5"
+            },
+            ". சரியான விடை: (2)."
+          ]
+        }
+      }
+    ]
   }
 ];
 const texts={
@@ -74849,6 +82375,4460 @@ const texts={
     {
       "latex": "x^{2} - y^{2}",
       "fallback": "x² − y²"
+    },
+    ")"
+  ],
+  "Recall the sign rules of the four quadrants: I is (+, +), II is (−, +), III is (−, −), and IV is (+, −), where the first number is the x-coordinate (abscissa) and the second is the y-coordinate (ordinate).": [
+    "Recall the sign rules of the four quadrants: I is (+, +), ",
+    {
+      "latex": "II",
+      "fallback": "II"
+    },
+    " is (−, +), ",
+    {
+      "latex": "III",
+      "fallback": "III"
+    },
+    " is (−, −), and ",
+    {
+      "latex": "IV",
+      "fallback": "IV"
+    },
+    " is (+, −), where the first number is the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-coordinate (abscissa) and the second is the ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate (ordinate)."
+  ],
+  "Recall the sign rules of the four quadrants: I is (+, +), II is (−, +), III is (−, −), and IV is (+, −), where the first number is the x-coordinate (abscissa) and the second is the y-coordinate (ordinate). (Plot points and identify quadrants: P(−7, 6) = II Quadrant; Q(7, −2) = IV Quadrant; R(−6, −7) = III Quadrant; S(3, 5) = I Quadrant; T(3, 9) = I Quadrant)": [
+    "Recall the sign rules of the four quadrants: I is (+, +), ",
+    {
+      "latex": "II",
+      "fallback": "II"
+    },
+    " is (−, +), ",
+    {
+      "latex": "III",
+      "fallback": "III"
+    },
+    " is (−, −), and ",
+    {
+      "latex": "IV",
+      "fallback": "IV"
+    },
+    " is (+, −), where the first number is the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-coordinate (abscissa) and the second is the ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate (ordinate). (Plot points and identify quadrants: ",
+    {
+      "latex": "P\\left(- 7, 6\\right) = II",
+      "fallback": "P(−7, 6) = II"
+    },
+    " Quadrant; ",
+    {
+      "latex": "Q \\left(7, - 2\\right) = IV",
+      "fallback": "Q(7, −2) = IV"
+    },
+    " Quadrant; ",
+    {
+      "latex": "R \\left(- 6, - 7\\right) = III",
+      "fallback": "R(−6, −7) = III"
+    },
+    " Quadrant; ",
+    {
+      "latex": "S \\left(3, 5\\right) = I",
+      "fallback": "S(3, 5) = I"
+    },
+    " Quadrant; ",
+    {
+      "latex": "T \\left(3, 9\\right) = I",
+      "fallback": "T(3, 9) = I"
+    },
+    " Quadrant)"
+  ],
+  "நான்கு காற்பகுதிகளின் குறிகள்: I (+, +), II (−, +), III (−, −), IV (+, −). முதல் எண் x-ஆயத்தொலைவு (கிடை அச்சுத் தொலைவு); இரண்டாவது எண் y-ஆயத்தொலைவு (செங்குத்து அச்சுத் தொலைவு). (புள்ளிகளைக் குறித்து காற்பகுதிகளைக் கண்டறிதல்: P(−7, 6) = காற்பகுதி II; Q(7, −2) = காற்பகுதி IV; R(−6, −7) = காற்பகுதி III; S(3, 5) = காற்பகுதி I; T(3, 9) = காற்பகுதி I)": [
+    "நான்கு காற்பகுதிகளின் குறிகள்: I (+, +), ",
+    {
+      "latex": "II",
+      "fallback": "II"
+    },
+    " (−, +), ",
+    {
+      "latex": "III",
+      "fallback": "III"
+    },
+    " (−, −), ",
+    {
+      "latex": "IV",
+      "fallback": "IV"
+    },
+    " (+, −). முதல் எண் ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-ஆயத்தொலைவு (கிடை அச்சுத் தொலைவு); இரண்டாவது எண் ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-ஆயத்தொலைவு (செங்குத்து அச்சுத் தொலைவு). (புள்ளிகளைக் குறித்து காற்பகுதிகளைக் கண்டறிதல்: ",
+    {
+      "latex": "P\\left(- 7, 6\\right)",
+      "fallback": "P(−7, 6)"
+    },
+    " = காற்பகுதி ",
+    {
+      "latex": "II;\\quad Q \\left(7, - 2\\right)",
+      "fallback": "II; Q(7, −2)"
+    },
+    " = காற்பகுதி ",
+    {
+      "latex": "IV;\\quad R \\left(- 6, - 7\\right)",
+      "fallback": "IV; R(−6, −7)"
+    },
+    " = காற்பகுதி ",
+    {
+      "latex": "III;\\quad S \\left(3, 5\\right)",
+      "fallback": "III; S(3, 5)"
+    },
+    " = காற்பகுதி ",
+    {
+      "latex": "I;\\quad T \\left(3, 9\\right)",
+      "fallback": "I; T(3, 9)"
+    },
+    " = காற்பகுதி I)"
+  ],
+  "To read a point (x, y) from the graph, move vertically to the X-axis to read the abscissa (x-coordinate) and horizontally to the Y-axis to read the ordinate (y-coordinate).": [
+    "To read a point ",
+    {
+      "latex": "\\left(x, y\\right)",
+      "fallback": "(x, y)"
+    },
+    " from the graph, move vertically to the ",
+    {
+      "latex": "X",
+      "fallback": "X"
+    },
+    "-axis to read the abscissa (",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-coordinate) and horizontally to the ",
+    {
+      "latex": "Y",
+      "fallback": "Y"
+    },
+    "-axis to read the ordinate (",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate)."
+  ],
+  "To read a point (x, y) from the graph, move vertically to the X-axis to read the abscissa (x-coordinate) and horizontally to the Y-axis to read the ordinate (y-coordinate). (Read abscissa and ordinate from Fig. 5.11: (i) P = (−4, 4); (ii) Q = (3, 3); (iii) R = (4, −2); (iv) S = (−5, −3))": [
+    "To read a point ",
+    {
+      "latex": "\\left(x, y\\right)",
+      "fallback": "(x, y)"
+    },
+    " from the graph, move vertically to the ",
+    {
+      "latex": "X",
+      "fallback": "X"
+    },
+    "-axis to read the abscissa (",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-coordinate) and horizontally to the ",
+    {
+      "latex": "Y",
+      "fallback": "Y"
+    },
+    "-axis to read the ordinate (",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate). (Read abscissa and ordinate from Fig. ",
+    {
+      "latex": "5.11 : \\left(i\\right) P = \\left(- 4, 4\\right)",
+      "fallback": "5.11: (i) P = (−4, 4)"
+    },
+    "; (ii) ",
+    {
+      "latex": "Q = \\left(3, 3\\right)",
+      "fallback": "Q = (3, 3)"
+    },
+    "; (iii) ",
+    {
+      "latex": "R = \\left(4, - 2\\right)",
+      "fallback": "R = (4, −2)"
+    },
+    "; (iv) ",
+    {
+      "latex": "S = \\left(- 5, - 3\\right)",
+      "fallback": "S = (−5, −3)"
+    },
+    ")"
+  ],
+  "வரைபடத்தில் ஒரு புள்ளி (x, y)-ஐப் படிக்க, X-அச்சை நோக்கிச் செங்குத்தாகச் சென்று கிடை அச்சுத் தொலைவையும் (x), Y-அச்சை நோக்கிக் கிடைமட்டமாகச் சென்று செங்குத்து அச்சுத் தொலைவையும் (y) காண்க. (படம் 5.11-இலிருந்து ஆயத்தொலைவுகளைக் காணுதல்: (i) P = (−4, 4); (ii) Q = (3, 3); (iii) R = (4, −2); (iv) S = (−5, −3))": [
+    "வரைபடத்தில் ஒரு புள்ளி ",
+    {
+      "latex": "\\left(x, y\\right)",
+      "fallback": "(x, y)"
+    },
+    "-ஐப் படிக்க, ",
+    {
+      "latex": "X",
+      "fallback": "X"
+    },
+    "-அச்சை நோக்கிச் செங்குத்தாகச் சென்று கிடை அச்சுத் தொலைவையும் ",
+    {
+      "latex": "\\left(x\\right), Y",
+      "fallback": "(x), Y"
+    },
+    "-அச்சை நோக்கிக் கிடைமட்டமாகச் சென்று செங்குத்து அச்சுத் தொலைவையும் ",
+    {
+      "latex": "\\left(y\\right)",
+      "fallback": "(y)"
+    },
+    " காண்க. (படம் ",
+    {
+      "latex": "5.11",
+      "fallback": "5.11"
+    },
+    "-இலிருந்து ஆயத்தொலைவுகளைக் காணுதல்: (i) ",
+    {
+      "latex": "P = \\left(- 4, 4\\right)",
+      "fallback": "P = (−4, 4)"
+    },
+    "; (ii) ",
+    {
+      "latex": "Q = \\left(3, 3\\right)",
+      "fallback": "Q = (3, 3)"
+    },
+    "; (iii) ",
+    {
+      "latex": "R = \\left(4, - 2\\right)",
+      "fallback": "R = (4, −2)"
+    },
+    "; (iv) ",
+    {
+      "latex": "S = \\left(- 5, - 3\\right)",
+      "fallback": "S = (−5, −3)"
+    },
+    ")"
+  ],
+  "(i) In (−5, 3), (−1, 3), (0, 3), (5, 3), every point has the same y-coordinate y = 3, which is 3 units above the x-axis.": [
+    "(i) In ",
+    {
+      "latex": "\\left(- 5, 3\\right), \\left(- 1, 3\\right), \\left(0, 3\\right), \\left(5, 3\\right)",
+      "fallback": "(−5, 3), (−1, 3), (0, 3), (5, 3)"
+    },
+    ", every point has the same ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate ",
+    {
+      "latex": "y = 3",
+      "fallback": "y = 3"
+    },
+    ", which is ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " units above the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis."
+  ],
+  "(i) In (−5, 3), (−1, 3), (0, 3), (5, 3), every point has the same y-coordinate y = 3, which is 3 units above the x-axis. (Plot points and identify resulting lines: (i) Straight line parallel to x-axis; (ii) Straight line which lies on y-axis)": [
+    "(i) In ",
+    {
+      "latex": "\\left(- 5, 3\\right), \\left(- 1, 3\\right), \\left(0, 3\\right), \\left(5, 3\\right)",
+      "fallback": "(−5, 3), (−1, 3), (0, 3), (5, 3)"
+    },
+    ", every point has the same ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate ",
+    {
+      "latex": "y = 3",
+      "fallback": "y = 3"
+    },
+    ", which is ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " units above the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis. (Plot points and identify resulting lines: (i) Straight line parallel to ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis; (ii) Straight line which lies on ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-axis)"
+  ],
+  "(i) (−5, 3), (−1, 3), (0, 3), (5, 3) ஆகிய அனைத்துப் புள்ளிகளிலும் y-ஆயத்தொலைவு y = 3 எனச் சமமாக உள்ளது (x-அச்சிற்கு 3 அலகுகள் மேல்). (புள்ளிகளைக் குறித்து இணைத்து கிடைக்கும் கோட்டைக் காணுதல்: (i) x-அச்சிற்கு இணையான நேர்க்கோடு; (ii) y-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு)": [
+    "(i) ",
+    {
+      "latex": "\\left(- 5, 3\\right), \\left(- 1, 3\\right), \\left(0, 3\\right), \\left(5, 3\\right)",
+      "fallback": "(−5, 3), (−1, 3), (0, 3), (5, 3)"
+    },
+    " ஆகிய அனைத்துப் புள்ளிகளிலும் ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-ஆயத்தொலைவு ",
+    {
+      "latex": "y = 3",
+      "fallback": "y = 3"
+    },
+    " எனச் சமமாக உள்ளது (",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சிற்கு ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " அலகுகள் மேல்). (புள்ளிகளைக் குறித்து இணைத்து கிடைக்கும் கோட்டைக் காணுதல்: (i) ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சிற்கு இணையான நேர்க்கோடு; (ii) ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு)"
+  ],
+  "(i) Joining (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) gives two horizontal sides of length 4 and two vertical sides of length 4 meeting at 90° angles. Hence it is a square.": [
+    "(i) Joining ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0,0)"
+    },
+    " → ",
+    {
+      "latex": "\\left(- 4, 0\\right)",
+      "fallback": "(−4,0)"
+    },
+    " → ",
+    {
+      "latex": "\\left(- 4, - 4\\right)",
+      "fallback": "(−4,−4)"
+    },
+    " → ",
+    {
+      "latex": "\\left(0, - 4\\right)",
+      "fallback": "(0,−4)"
+    },
+    " → ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0,0)"
+    },
+    " gives two horizontal sides of ",
+    {
+      "latex": "\\text{length} 4",
+      "fallback": "length 4"
+    },
+    " and two vertical sides of ",
+    {
+      "latex": "\\text{length} 4",
+      "fallback": "length 4"
+    },
+    " meeting at ",
+    {
+      "latex": "90^{\\circ}",
+      "fallback": "90°"
+    },
+    " angles. Hence it is a square."
+  ],
+  "(i) Joining (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) gives two horizontal sides of length 4 and two vertical sides of length 4 meeting at 90° angles. Hence it is a square. (Identify shapes formed by plotted points: (i) Square; (ii) Trapezium)": [
+    "(i) Joining ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0,0)"
+    },
+    " → ",
+    {
+      "latex": "\\left(- 4, 0\\right)",
+      "fallback": "(−4,0)"
+    },
+    " → ",
+    {
+      "latex": "\\left(- 4, - 4\\right)",
+      "fallback": "(−4,−4)"
+    },
+    " → ",
+    {
+      "latex": "\\left(0, - 4\\right)",
+      "fallback": "(0,−4)"
+    },
+    " → ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0,0)"
+    },
+    " gives two horizontal sides of ",
+    {
+      "latex": "\\text{length} 4",
+      "fallback": "length 4"
+    },
+    " and two vertical sides of ",
+    {
+      "latex": "\\text{length} 4",
+      "fallback": "length 4"
+    },
+    " meeting at ",
+    {
+      "latex": "90^{\\circ}",
+      "fallback": "90°"
+    },
+    " angles. Hence it is a square. (Identify shapes formed by plotted points: (i) Square; (ii) Trapezium)"
+  ],
+  "(i) (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) என இணைக்கும்போது, 4 அலகு நீளமுள்ள செங்குத்து மற்றும் கிடைமட்டப் பக்கங்கள் 90° கோணத்தில் வெட்டுகின்றன. எனவே இது ஒரு சதுரம். (புள்ளிகளை இணைத்து உருவாகும் வடிவத்தைக் காணுதல்: (i) சதுரம்; (ii) சரிவகம்)": [
+    "(i) ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0,0)"
+    },
+    " → ",
+    {
+      "latex": "\\left(- 4, 0\\right)",
+      "fallback": "(−4,0)"
+    },
+    " → ",
+    {
+      "latex": "\\left(- 4, - 4\\right)",
+      "fallback": "(−4,−4)"
+    },
+    " → ",
+    {
+      "latex": "\\left(0, - 4\\right)",
+      "fallback": "(0,−4)"
+    },
+    " → ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0,0)"
+    },
+    " என இணைக்கும்போது, ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " அலகு நீளமுள்ள செங்குத்து மற்றும் கிடைமட்டப் பக்கங்கள் ",
+    {
+      "latex": "90^{\\circ}",
+      "fallback": "90°"
+    },
+    " கோணத்தில் வெட்டுகின்றன. எனவே இது ஒரு சதுரம். (புள்ளிகளை இணைத்து உருவாகும் வடிவத்தைக் காணுதல்: (i) சதுரம்; (ii) சரிவகம்)"
+  ],
+  "Use the distance formula d = √[(x₂ − x₁)² + (y₂ − y₁)²].": [
+    "Use the distance formula ",
+    {
+      "latex": "d = \\sqrt{\\left(x_{2} - x_{1}\\right)^{2} + \\left(y_{2} - y_{1}\\right)^{2}}",
+      "fallback": "d = √[(x₂ − x₁)² + (y₂ − y₁)²]"
+    },
+    "."
+  ],
+  "Use the distance formula d = √[(x₂ − x₁)² + (y₂ − y₁)²]. (Distance between pairs of points: (i) √10 units; (ii) 2√26 units; (iii) |c − a| (c − a); (iv) 13 units)": [
+    "Use the distance formula ",
+    {
+      "latex": "d = \\sqrt{\\left(x_{2} - x_{1}\\right)^{2} + \\left(y_{2} - y_{1}\\right)^{2}}",
+      "fallback": "d = √[(x₂ − x₁)² + (y₂ − y₁)²]"
+    },
+    ". (Distance between pairs of points: (i) ",
+    {
+      "latex": "\\sqrt{10}",
+      "fallback": "√10"
+    },
+    " units; (ii) ",
+    {
+      "latex": "2\\,\\sqrt{26}",
+      "fallback": "2√26"
+    },
+    " units; (iii) ",
+    {
+      "latex": "\\left|c - a\\right| \\left(c - a\\right)",
+      "fallback": "|c − a| (c − a)"
+    },
+    "; (iv) ",
+    {
+      "latex": "13",
+      "fallback": "13"
+    },
+    " units)"
+  ],
+  "இரு புள்ளிகளுக்கு இடையேயான தொலைவு வாய்ப்பாடு d = √[(x₂ − x₁)² + (y₂ − y₁)²]-ஐப் பயன்படுத்துவோம். (இரு புள்ளிகளுக்கு இடையேயான தொலைவு: (i) √10 அலகுகள்; (ii) 2√26 அலகுகள்; (iii) |c − a| (c − a); (iv) 13 அலகுகள்)": [
+    "இரு புள்ளிகளுக்கு இடையேயான தொலைவு வாய்ப்பாடு ",
+    {
+      "latex": "d = \\sqrt{\\left(x_{2} - x_{1}\\right)^{2} + \\left(y_{2} - y_{1}\\right)^{2}}",
+      "fallback": "d = √[(x₂ − x₁)² + (y₂ − y₁)²]"
+    },
+    "-ஐப் பயன்படுத்துவோம். (இரு புள்ளிகளுக்கு இடையேயான தொலைவு: (i) ",
+    {
+      "latex": "\\sqrt{10}",
+      "fallback": "√10"
+    },
+    " அலகுகள்; (ii) ",
+    {
+      "latex": "2\\,\\sqrt{26}",
+      "fallback": "2√26"
+    },
+    " அலகுகள்; (iii) ",
+    {
+      "latex": "\\left|c - a\\right| \\left(c - a\\right)",
+      "fallback": "|c − a| (c − a)"
+    },
+    "; (iv) ",
+    {
+      "latex": "13",
+      "fallback": "13"
+    },
+    " அலகுகள்)"
+  ],
+  "(i) Find AB, BC, and CA for A(2, 2), B(−2, −2), C(−2√3, 2√3). Note that (2 + 2√3)² + (2 − 2√3)² = (4 + 8√3 + 12) + (4 − 8√3 + 12) = 32.": [
+    "(i) Find ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    ", ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    ", and ",
+    {
+      "latex": "CA",
+      "fallback": "CA"
+    },
+    " for ",
+    {
+      "latex": "A \\left(2, 2\\right), B \\left(- 2, - 2\\right), C \\left(- 2\\,\\sqrt{3}, 2\\,\\sqrt{3}\\right)",
+      "fallback": "A(2, 2), B(−2, −2), C(−2√3, 2√3)"
+    },
+    ". Note that ",
+    {
+      "latex": "\\left(2 + 2\\,\\sqrt{3}\\right)^{2} + \\left(2 - 2\\,\\sqrt{3}\\right)^{2} = \\left(4 + 8\\,\\sqrt{3} + 12\\right) + \\left(4 - 8\\,\\sqrt{3} + 12\\right) = 32",
+      "fallback": "(2 + 2√3)² + (2 − 2√3)² = (4 + 8√3 + 12) + (4 − 8√3 + 12) = 32"
+    },
+    "."
+  ],
+  "(i) Find AB, BC, and CA for A(2, 2), B(−2, −2), C(−2√3, 2√3). Note that (2 + 2√3)² + (2 − 2√3)² = (4 + 8√3 + 12) + (4 − 8√3 + 12) = 32. (Verify equilateral triangles: (i) Equilateral (side 4√2); (ii) Equilateral (side 2))": [
+    "(i) Find ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    ", ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    ", and ",
+    {
+      "latex": "CA",
+      "fallback": "CA"
+    },
+    " for ",
+    {
+      "latex": "A \\left(2, 2\\right), B \\left(- 2, - 2\\right), C \\left(- 2\\,\\sqrt{3}, 2\\,\\sqrt{3}\\right)",
+      "fallback": "A(2, 2), B(−2, −2), C(−2√3, 2√3)"
+    },
+    ". Note that ",
+    {
+      "latex": "\\left(2 + 2\\,\\sqrt{3}\\right)^{2} + \\left(2 - 2\\,\\sqrt{3}\\right)^{2} = \\left(4 + 8\\,\\sqrt{3} + 12\\right) + \\left(4 - 8\\,\\sqrt{3} + 12\\right) = 32",
+      "fallback": "(2 + 2√3)² + (2 − 2√3)² = (4 + 8√3 + 12) + (4 − 8√3 + 12) = 32"
+    },
+    ". (Verify equilateral triangles: (i) Equilateral (side ",
+    {
+      "latex": "4\\,\\sqrt{2}",
+      "fallback": "4√2"
+    },
+    "); (ii) Equilateral (side ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "))"
+  ],
+  "(i) A(2, 2), B(−2, −2), C(−2√3, 2√3) புள்ளிகளுக்கு AB, BC, CA காண்போம். (2 + 2√3)² + (2 − 2√3)² = 16 + 16 = 32. (சமபக்க முக்கோணத்தை நிறுவுதல்: (i) சமபக்க முக்கோணம் (பக்கம் 4√2); (ii) சமபக்க முக்கோணம் (பக்கம் 2))": [
+    "(i) ",
+    {
+      "latex": "A \\left(2, 2\\right), B \\left(- 2, - 2\\right), C \\left(- 2\\,\\sqrt{3}, 2\\,\\sqrt{3}\\right)",
+      "fallback": "A(2, 2), B(−2, −2), C(−2√3, 2√3)"
+    },
+    " புள்ளிகளுக்கு ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    ", ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    ", ",
+    {
+      "latex": "CA",
+      "fallback": "CA"
+    },
+    " காண்போம். ",
+    {
+      "latex": "\\left(2 + 2\\,\\sqrt{3}\\right)^{2} + \\left(2 - 2\\,\\sqrt{3}\\right)^{2} = 16 + 16 = 32",
+      "fallback": "(2 + 2√3)² + (2 − 2√3)² = 16 + 16 = 32"
+    },
+    ". (சமபக்க முக்கோணத்தை நிறுவுதல்: (i) சமபக்க முக்கோணம் (பக்கம் ",
+    {
+      "latex": "4\\,\\sqrt{2}",
+      "fallback": "4√2"
+    },
+    "); (ii) சமபக்க முக்கோணம் (பக்கம் ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "))"
+  ],
+  "Since P lies on the x-axis, its y-coordinate is 0, so let P = (x, 0).": [
+    "Since ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " lies on the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis, its ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate is ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ", so let ",
+    {
+      "latex": "P = \\left(x, 0\\right)",
+      "fallback": "P = (x, 0)"
+    },
+    "."
+  ],
+  "Since P lies on the x-axis, its y-coordinate is 0, so let P = (x, 0). (Point P on x-axis with AP = (3/7) AB: P(2, 0))": [
+    "Since ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " lies on the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis, its ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate is ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ", so let ",
+    {
+      "latex": "P = \\left(x, 0\\right)",
+      "fallback": "P = (x, 0)"
+    },
+    ". (Point ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " on ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis with ",
+    {
+      "latex": "AP = \\left(\\dfrac{3}{7}\\right) AB : P\\left(2, 0\\right)",
+      "fallback": "AP = (3/7) AB: P(2, 0)"
+    },
+    ")"
+  ],
+  "புள்ளி P ஆனது x-அச்சின் மீது உள்ளதால் அதன் y-ஆயத்தொலைவு 0; எனவே P = (x, 0) என்க. (x-அச்சின் மீது AP = (3/7) AB என்ற புள்ளி P: P(2, 0))": [
+    "புள்ளி ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " ஆனது ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சின் மீது உள்ளதால் அதன் ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-ஆயத்தொலைவு ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    "; எனவே ",
+    {
+      "latex": "P = \\left(x, 0\\right)",
+      "fallback": "P = (x, 0)"
+    },
+    " என்க. (",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சின் மீது ",
+    {
+      "latex": "AP = \\left(\\dfrac{3}{7}\\right) AB",
+      "fallback": "AP = (3/7) AB"
+    },
+    " என்ற புள்ளி ",
+    {
+      "latex": "P : P\\left(2, 0\\right)",
+      "fallback": "P: P(2, 0)"
+    },
+    ")"
+  ],
+  "A circle with centre O(0, 0) and radius 30 intersects the x-axis (y = 0) at (±30, 0) and the y-axis (x = 0) at (0, ±30).": [
+    "A circle with centre ",
+    {
+      "latex": "O \\left(0, 0\\right)",
+      "fallback": "O(0, 0)"
+    },
+    " and radius ",
+    {
+      "latex": "30",
+      "fallback": "30"
+    },
+    " intersects the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis ",
+    {
+      "latex": "\\left(y = 0\\right)",
+      "fallback": "(y = 0)"
+    },
+    " at ",
+    {
+      "latex": "\\left(\\pm 30, 0\\right)",
+      "fallback": "(±30, 0)"
+    },
+    " and the ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-axis ",
+    {
+      "latex": "\\left(x = 0\\right)",
+      "fallback": "(x = 0)"
+    },
+    " at ",
+    {
+      "latex": "\\left(0, \\pm 30\\right)",
+      "fallback": "(0, ±30)"
+    },
+    "."
+  ],
+  "A circle with centre O(0, 0) and radius 30 intersects the x-axis (y = 0) at (±30, 0) and the y-axis (x = 0) at (0, ±30). (Circle intersections with coordinate axes: Axes points: (30, 0), (−30, 0), (0, 30), (0, −30); distance between adjacent points = 30√2 units (opposite = 60 units))": [
+    "A circle with centre ",
+    {
+      "latex": "O \\left(0, 0\\right)",
+      "fallback": "O(0, 0)"
+    },
+    " and radius ",
+    {
+      "latex": "30",
+      "fallback": "30"
+    },
+    " intersects the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis ",
+    {
+      "latex": "\\left(y = 0\\right)",
+      "fallback": "(y = 0)"
+    },
+    " at ",
+    {
+      "latex": "\\left(\\pm 30, 0\\right)",
+      "fallback": "(±30, 0)"
+    },
+    " and the ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-axis ",
+    {
+      "latex": "\\left(x = 0\\right)",
+      "fallback": "(x = 0)"
+    },
+    " at ",
+    {
+      "latex": "\\left(0, \\pm 30\\right)",
+      "fallback": "(0, ±30)"
+    },
+    ". (Circle intersections with coordinate axes: Axes points: ",
+    {
+      "latex": "\\left(30, 0\\right), \\left(- 30, 0\\right), \\left(0, 30\\right), \\left(0, - 30\\right)",
+      "fallback": "(30, 0), (−30, 0), (0, 30), (0, −30)"
+    },
+    "; distance between adjacent points = ",
+    {
+      "latex": "30\\,\\sqrt{2}",
+      "fallback": "30√2"
+    },
+    " units (opposite = ",
+    {
+      "latex": "60",
+      "fallback": "60"
+    },
+    " units))"
+  ],
+  "மையம் O(0, 0), ஆரம் 30 உடைய வட்டம் x-அச்சை (30, 0), (−30, 0) ஆகிய புள்ளிகளிலும், y-அச்சை (0, 30), (0, −30) ஆகிய புள்ளிகளிலும் வெட்டும். (ஆய அச்சுகளை வெட்டும் வட்டப் புள்ளிகள்: வெட்டுப் புள்ளிகள்: (30, 0), (−30, 0), (0, 30), (0, −30); அடுத்துள்ள இரு புள்ளிகளின் தொலைவு = 30√2 அலகுகள் (எதிரெதிர் = 60 அலகுகள்))": [
+    "மையம் ",
+    {
+      "latex": "O \\left(0, 0\\right)",
+      "fallback": "O(0, 0)"
+    },
+    ", ஆரம் ",
+    {
+      "latex": "30",
+      "fallback": "30"
+    },
+    " உடைய வட்டம் ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சை ",
+    {
+      "latex": "\\left(30, 0\\right), \\left(- 30, 0\\right)",
+      "fallback": "(30, 0), (−30, 0)"
+    },
+    " ஆகிய புள்ளிகளிலும், ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-அச்சை ",
+    {
+      "latex": "\\left(0, 30\\right), \\left(0, - 30\\right)",
+      "fallback": "(0, 30), (0, −30)"
+    },
+    " ஆகிய புள்ளிகளிலும் வெட்டும். (ஆய அச்சுகளை வெட்டும் வட்டப் புள்ளிகள்: வெட்டுப் புள்ளிகள்: ",
+    {
+      "latex": "\\left(30, 0\\right), \\left(- 30, 0\\right), \\left(0, 30\\right), \\left(0, - 30\\right)",
+      "fallback": "(30, 0), (−30, 0), (0, 30), (0, −30)"
+    },
+    "; அடுத்துள்ள இரு புள்ளிகளின் தொலைவு = ",
+    {
+      "latex": "30\\,\\sqrt{2}",
+      "fallback": "30√2"
+    },
+    " அலகுகள் (எதிரெதிர் = ",
+    {
+      "latex": "60",
+      "fallback": "60"
+    },
+    " அலகுகள்))"
+  ],
+  "Use the mid-point formula M = ((x₁ + x₂)/2, (y₁ + y₂)/2).": [
+    "Use the mid-point formula ",
+    {
+      "latex": "M = \\left(\\dfrac{\\left(x_{1} + x_{2}\\right)}{2}, \\dfrac{\\left(y_{1} + y_{2}\\right)}{2}\\right)",
+      "fallback": "M = ((x₁ + x₂)/2, (y₁ + y₂)/2)"
+    },
+    "."
+  ],
+  "Use the mid-point formula M = ((x₁ + x₂)/2, (y₁ + y₂)/2). (Mid-points of four line segments: (i) (−4, −1); (ii) (0, −1); (iii) (a + b, a); (iv) (1, −1))": [
+    "Use the mid-point formula ",
+    {
+      "latex": "M = \\left(\\dfrac{\\left(x_{1} + x_{2}\\right)}{2}, \\dfrac{\\left(y_{1} + y_{2}\\right)}{2}\\right)",
+      "fallback": "M = ((x₁ + x₂)/2, (y₁ + y₂)/2)"
+    },
+    ". (Mid-points of four line segments: (i) ",
+    {
+      "latex": "\\left(- 4, - 1\\right)",
+      "fallback": "(−4, −1)"
+    },
+    "; (ii) ",
+    {
+      "latex": "\\left(0, - 1\\right)",
+      "fallback": "(0, −1)"
+    },
+    "; (iii) ",
+    {
+      "latex": "\\left(a + b, a\\right)",
+      "fallback": "(a + b, a)"
+    },
+    "; (iv) ",
+    {
+      "latex": "\\left(1, - 1\\right)",
+      "fallback": "(1, −1)"
+    },
+    ")"
+  ],
+  "நடுப்புள்ளி வாய்ப்பாடு M = ((x₁ + x₂)/2, (y₁ + y₂)/2)-ஐப் பயன்படுத்துவோம். (நான்கு கோட்டுத்துண்டுகளின் நடுப்புள்ளிகள்: (i) (−4, −1); (ii) (0, −1); (iii) (a + b, a); (iv) (1, −1))": [
+    "நடுப்புள்ளி வாய்ப்பாடு ",
+    {
+      "latex": "M = \\left(\\dfrac{\\left(x_{1} + x_{2}\\right)}{2}, \\dfrac{\\left(y_{1} + y_{2}\\right)}{2}\\right)",
+      "fallback": "M = ((x₁ + x₂)/2, (y₁ + y₂)/2)"
+    },
+    "-ஐப் பயன்படுத்துவோம். (நான்கு கோட்டுத்துண்டுகளின் நடுப்புள்ளிகள்: (i) ",
+    {
+      "latex": "\\left(- 4, - 1\\right)",
+      "fallback": "(−4, −1)"
+    },
+    "; (ii) ",
+    {
+      "latex": "\\left(0, - 1\\right)",
+      "fallback": "(0, −1)"
+    },
+    "; (iii) ",
+    {
+      "latex": "\\left(a + b, a\\right)",
+      "fallback": "(a + b, a)"
+    },
+    "; (iv) ",
+    {
+      "latex": "\\left(1, - 1\\right)",
+      "fallback": "(1, −1)"
+    },
+    ")"
+  ],
+  "The centre C(−4, 2) is the mid-point of the diameter joining A(−3, 7) and the unknown end B(x, y).": [
+    "The centre ",
+    {
+      "latex": "C \\left(- 4, 2\\right)",
+      "fallback": "C(−4, 2)"
+    },
+    " is the mid-point of the diameter joining ",
+    {
+      "latex": "A \\left(- 3, 7\\right)",
+      "fallback": "A(−3, 7)"
+    },
+    " and the unknown end ",
+    {
+      "latex": "B \\left(x, y\\right)",
+      "fallback": "B(x, y)"
+    },
+    "."
+  ],
+  "The centre C(−4, 2) is the mid-point of the diameter joining A(−3, 7) and the unknown end B(x, y). (Find the other end of a diameter: (−5, −3))": [
+    "The centre ",
+    {
+      "latex": "C \\left(- 4, 2\\right)",
+      "fallback": "C(−4, 2)"
+    },
+    " is the mid-point of the diameter joining ",
+    {
+      "latex": "A \\left(- 3, 7\\right)",
+      "fallback": "A(−3, 7)"
+    },
+    " and the unknown end ",
+    {
+      "latex": "B \\left(x, y\\right)",
+      "fallback": "B(x, y)"
+    },
+    ". (Find the other end of a diameter: ",
+    {
+      "latex": "\\left(- 5, - 3\\right)",
+      "fallback": "(−5, −3)"
+    },
+    ")"
+  ],
+  "வட்டத்தின் மையம் C(−4, 2) என்பது A(−3, 7) மற்றும் B(x, y) முனைகளை இணைக்கும் விட்டத்தின் நடுப்புள்ளியாகும். (விட்டத்தின் மற்றொரு முனையைக் காணுதல்: (−5, −3))": [
+    "வட்டத்தின் மையம் ",
+    {
+      "latex": "C \\left(- 4, 2\\right)",
+      "fallback": "C(−4, 2)"
+    },
+    " என்பது ",
+    {
+      "latex": "A \\left(- 3, 7\\right)",
+      "fallback": "A(−3, 7)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "B \\left(x, y\\right)",
+      "fallback": "B(x, y)"
+    },
+    " முனைகளை இணைக்கும் விட்டத்தின் நடுப்புள்ளியாகும். (விட்டத்தின் மற்றொரு முனையைக் காணுதல்: ",
+    {
+      "latex": "\\left(- 5, - 3\\right)",
+      "fallback": "(−5, −3)"
+    },
+    ")"
+  ],
+  "Find the mid-point (x, y) of (3, 4) and (p, 7).": [
+    "Find the mid-point ",
+    {
+      "latex": "\\left(x, y\\right)",
+      "fallback": "(x, y)"
+    },
+    " of ",
+    {
+      "latex": "\\left(3, 4\\right)",
+      "fallback": "(3, 4)"
+    },
+    " and ",
+    {
+      "latex": "\\left(p, 7\\right)",
+      "fallback": "(p, 7)"
+    },
+    "."
+  ],
+  "Find the mid-point (x, y) of (3, 4) and (p, 7). (Mid-point lying on a given line: p = −15)": [
+    "Find the mid-point ",
+    {
+      "latex": "\\left(x, y\\right)",
+      "fallback": "(x, y)"
+    },
+    " of ",
+    {
+      "latex": "\\left(3, 4\\right)",
+      "fallback": "(3, 4)"
+    },
+    " and ",
+    {
+      "latex": "\\left(p, 7\\right)",
+      "fallback": "(p, 7)"
+    },
+    ". (Mid-point lying on a given line: ",
+    {
+      "latex": "p = - 15",
+      "fallback": "p = −15"
+    },
+    ")"
+  ],
+  "(3, 4) மற்றும் (p, 7) ஆகியவற்றின் நடுப்புள்ளி (x, y)-ஐக் காண்போம். (கொடுக்கப்பட்ட கோட்டின் மேல் அமையும் நடுப்புள்ளி: p = −15)": [
+    {
+      "latex": "\\left(3, 4\\right)",
+      "fallback": "(3, 4)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\left(p, 7\\right)",
+      "fallback": "(p, 7)"
+    },
+    " ஆகியவற்றின் நடுப்புள்ளி ",
+    {
+      "latex": "\\left(x, y\\right)",
+      "fallback": "(x, y)"
+    },
+    "-ஐக் காண்போம். (கொடுக்கப்பட்ட கோட்டின் மேல் அமையும் நடுப்புள்ளி: ",
+    {
+      "latex": "p = - 15",
+      "fallback": "p = −15"
+    },
+    ")"
+  ],
+  "Let the vertices be A(x₁, y₁), B(x₂, y₂), C(x₃, y₃), with mid-points D(2, 4) of AB, E(−2, 3) of BC, and F(5, 2) of CA.": [
+    "Let the vertices be ",
+    {
+      "latex": "A \\left(x_{1}, y_{1}\\right), B \\left(x_{2}, y_{2}\\right), C \\left(x_{3}, y_{3}\\right)",
+      "fallback": "A(x₁, y₁), B(x₂, y₂), C(x₃, y₃)"
+    },
+    ", with mid-points ",
+    {
+      "latex": "D \\left(2, 4\\right)",
+      "fallback": "D(2, 4)"
+    },
+    " of ",
+    {
+      "latex": "AB, E \\left(- 2, 3\\right)",
+      "fallback": "AB, E(−2, 3)"
+    },
+    " of ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    ", and ",
+    {
+      "latex": "F \\left(5, 2\\right)",
+      "fallback": "F(5, 2)"
+    },
+    " of ",
+    {
+      "latex": "CA",
+      "fallback": "CA"
+    },
+    "."
+  ],
+  "Let the vertices be A(x₁, y₁), B(x₂, y₂), C(x₃, y₃), with mid-points D(2, 4) of AB, E(−2, 3) of BC, and F(5, 2) of CA. (Find triangle vertices from side mid-points: (9, 3), (−5, 5) and (1, 1))": [
+    "Let the vertices be ",
+    {
+      "latex": "A \\left(x_{1}, y_{1}\\right), B \\left(x_{2}, y_{2}\\right), C \\left(x_{3}, y_{3}\\right)",
+      "fallback": "A(x₁, y₁), B(x₂, y₂), C(x₃, y₃)"
+    },
+    ", with mid-points ",
+    {
+      "latex": "D \\left(2, 4\\right)",
+      "fallback": "D(2, 4)"
+    },
+    " of ",
+    {
+      "latex": "AB, E \\left(- 2, 3\\right)",
+      "fallback": "AB, E(−2, 3)"
+    },
+    " of ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    ", and ",
+    {
+      "latex": "F \\left(5, 2\\right)",
+      "fallback": "F(5, 2)"
+    },
+    " of ",
+    {
+      "latex": "CA",
+      "fallback": "CA"
+    },
+    ". (Find triangle vertices from side mid-points: ",
+    {
+      "latex": "\\left(9, 3\\right), \\left(- 5, 5\\right)",
+      "fallback": "(9, 3), (−5, 5)"
+    },
+    " and ",
+    {
+      "latex": "\\left(1, 1\\right)",
+      "fallback": "(1, 1)"
+    },
+    ")"
+  ],
+  "முக்கோணத்தின் உச்சிகள் A(x₁, y₁), B(x₂, y₂), C(x₃, y₃) என்க. AB-இன் நடுப்புள்ளி D(2, 4), BC-இன் நடுப்புள்ளி E(−2, 3), CA-இன் நடுப்புள்ளி F(5, 2) என்க. (பக்கங்களின் நடுப்புள்ளிகளிலிருந்து முக்கோண உச்சிகளைக் காணுதல்: (9, 3), (−5, 5) மற்றும் (1, 1))": [
+    "முக்கோணத்தின் உச்சிகள் ",
+    {
+      "latex": "A \\left(x_{1}, y_{1}\\right), B \\left(x_{2}, y_{2}\\right), C \\left(x_{3}, y_{3}\\right)",
+      "fallback": "A(x₁, y₁), B(x₂, y₂), C(x₃, y₃)"
+    },
+    " என்க. ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    "-இன் நடுப்புள்ளி ",
+    {
+      "latex": "D \\left(2, 4\\right), BC",
+      "fallback": "D(2, 4), BC"
+    },
+    "-இன் நடுப்புள்ளி ",
+    {
+      "latex": "E \\left(- 2, 3\\right), CA",
+      "fallback": "E(−2, 3), CA"
+    },
+    "-இன் நடுப்புள்ளி ",
+    {
+      "latex": "F \\left(5, 2\\right)",
+      "fallback": "F(5, 2)"
+    },
+    " என்க. (பக்கங்களின் நடுப்புள்ளிகளிலிருந்து முக்கோண உச்சிகளைக் காணுதல்: ",
+    {
+      "latex": "\\left(9, 3\\right), \\left(- 5, 5\\right)",
+      "fallback": "(9, 3), (−5, 5)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\left(1, 1\\right)",
+      "fallback": "(1, 1)"
+    },
+    ")"
+  ],
+  "A perpendicular drawn from the centre of a circle to a chord bisects the chord. Therefore, D is the mid-point of AB.": [
+    "A perpendicular drawn from the centre of a circle to a chord bisects the chord. Therefore, ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " is the mid-point of ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    "."
+  ],
+  "A perpendicular drawn from the centre of a circle to a chord bisects the chord. Therefore, D is the mid-point of AB. (Mid-point of perpendicular OD from centre to chord: (9/2, 3/2))": [
+    "A perpendicular drawn from the centre of a circle to a chord bisects the chord. Therefore, ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " is the mid-point of ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    ". (Mid-point of perpendicular ",
+    {
+      "latex": "OD",
+      "fallback": "OD"
+    },
+    " from centre to ",
+    {
+      "latex": "\\text{chord} : \\left(\\dfrac{9}{2}, \\dfrac{3}{2}\\right)",
+      "fallback": "chord: (9/2, 3/2)"
+    },
+    ")"
+  ],
+  "வட்டத்தின் மையத்திலிருந்து ஒரு நாணுக்கு வரையப்படும் செங்குத்து அந்த நாணை இருசமக் கூறிடும். எனவே D என்பது AB-இன் நடுப்புள்ளியாகும். (நாணுக்கு வரையப்பட்ட செங்குத்து OD-இன் மையப்புள்ளி: (9/2, 3/2))": [
+    "வட்டத்தின் மையத்திலிருந்து ஒரு நாணுக்கு வரையப்படும் செங்குத்து அந்த நாணை இருசமக் கூறிடும். எனவே ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " என்பது ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    "-இன் நடுப்புள்ளியாகும். (நாணுக்கு வரையப்பட்ட செங்குத்து ",
+    {
+      "latex": "OD",
+      "fallback": "OD"
+    },
+    "-இன் மையப்புள்ளி: ",
+    {
+      "latex": "\\left(\\dfrac{9}{2}, \\dfrac{3}{2}\\right)",
+      "fallback": "(9/2, 3/2)"
+    },
+    ")"
+  ],
+  "In a square ABCD, the diagonals AC and BD bisect each other, so their mid-points coincide.": [
+    "In a square ",
+    {
+      "latex": "ABCD",
+      "fallback": "ABCD"
+    },
+    ", the diagonals ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    " and ",
+    {
+      "latex": "BD",
+      "fallback": "BD"
+    },
+    " bisect each other, so their mid-points coincide."
+  ],
+  "In a square ABCD, the diagonals AC and BD bisect each other, so their mid-points coincide. (Fourth vertex D of a square ABCD: D(1, 8))": [
+    "In a square ",
+    {
+      "latex": "ABCD",
+      "fallback": "ABCD"
+    },
+    ", the diagonals ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    " and ",
+    {
+      "latex": "BD",
+      "fallback": "BD"
+    },
+    " bisect each other, so their mid-points coincide. (Fourth vertex ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " of a square ",
+    {
+      "latex": "ABCD : D \\left(1, 8\\right)",
+      "fallback": "ABCD: D(1, 8)"
+    },
+    ")"
+  ],
+  "சதுரம் ABCD-இல் மூலைவிட்டங்கள் AC மற்றும் BD ஒன்றையொன்று இருசமக் கூறிடும்; எனவே அவற்றின் நடுப்புள்ளிகள் சமம். (சதுரம் ABCD-இன் நான்காவது உச்சி D: D(1, 8))": [
+    "சதுரம் ",
+    {
+      "latex": "ABCD",
+      "fallback": "ABCD"
+    },
+    "-இல் மூலைவிட்டங்கள் ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    " மற்றும் ",
+    {
+      "latex": "BD",
+      "fallback": "BD"
+    },
+    " ஒன்றையொன்று இருசமக் கூறிடும்; எனவே அவற்றின் நடுப்புள்ளிகள் சமம். (சதுரம் ",
+    {
+      "latex": "ABCD",
+      "fallback": "ABCD"
+    },
+    "-இன் நான்காவது உச்சி ",
+    {
+      "latex": "D : D \\left(1, 8\\right)",
+      "fallback": "D: D(1, 8)"
+    },
+    ")"
+  ],
+  "First find vertex D(x₁, y₁) of △DEF from the side mid-points A(−3, 6) of DE, B(0, 7) of EF, and C(1, 9) of FD.": [
+    "First find vertex ",
+    {
+      "latex": "D \\left(x_{1}, y_{1}\\right)",
+      "fallback": "D(x₁, y₁)"
+    },
+    " of △",
+    {
+      "latex": "DEF",
+      "fallback": "DEF"
+    },
+    " from the side mid-points ",
+    {
+      "latex": "A \\left(- 3, 6\\right)",
+      "fallback": "A(−3, 6)"
+    },
+    " of ",
+    {
+      "latex": "DE, B \\left(0, 7\\right)",
+      "fallback": "DE, B(0, 7)"
+    },
+    " of ",
+    {
+      "latex": "EF",
+      "fallback": "EF"
+    },
+    ", and ",
+    {
+      "latex": "C \\left(1, 9\\right)",
+      "fallback": "C(1, 9)"
+    },
+    " of ",
+    {
+      "latex": "FD",
+      "fallback": "FD"
+    },
+    "."
+  ],
+  "First find vertex D(x₁, y₁) of △DEF from the side mid-points A(−3, 6) of DE, B(0, 7) of EF, and C(1, 9) of FD. (Mid-point quadrilateral proof (parallelogram): Proved: D(−2, 8) and diagonals AC, BD bisect each other at (−1, 15/2), so ABCD is a parallelogram)": [
+    "First find vertex ",
+    {
+      "latex": "D \\left(x_{1}, y_{1}\\right)",
+      "fallback": "D(x₁, y₁)"
+    },
+    " of △",
+    {
+      "latex": "DEF",
+      "fallback": "DEF"
+    },
+    " from the side mid-points ",
+    {
+      "latex": "A \\left(- 3, 6\\right)",
+      "fallback": "A(−3, 6)"
+    },
+    " of ",
+    {
+      "latex": "DE, B \\left(0, 7\\right)",
+      "fallback": "DE, B(0, 7)"
+    },
+    " of ",
+    {
+      "latex": "EF",
+      "fallback": "EF"
+    },
+    ", and ",
+    {
+      "latex": "C \\left(1, 9\\right)",
+      "fallback": "C(1, 9)"
+    },
+    " of ",
+    {
+      "latex": "FD",
+      "fallback": "FD"
+    },
+    ". (Mid-point quadrilateral proof (parallelogram): Proved: ",
+    {
+      "latex": "D \\left(- 2, 8\\right)",
+      "fallback": "D(−2, 8)"
+    },
+    " and diagonals ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    ", ",
+    {
+      "latex": "BD",
+      "fallback": "BD"
+    },
+    " bisect each other at ",
+    {
+      "latex": "\\left(- 1, \\dfrac{15}{2}\\right)",
+      "fallback": "(−1, 15/2)"
+    },
+    ", so ",
+    {
+      "latex": "ABCD",
+      "fallback": "ABCD"
+    },
+    " is a parallelogram)"
+  ],
+  "முக்கோணம் DEF-இன் பக்க நடுப்புள்ளிகள் A(−3, 6), B(0, 7), C(1, 9)-லிருந்து உச்சி D(x₁, y₁)-ஐக் காண்போம். (நடுப்புள்ளி நாற்கரம் ஒரு இணைகரம் என நிறுவுதல்: நிறுவப்பட்டது: D(−2, 8); AC மற்றும் BD-இன் நடுப்புள்ளி (−1, 15/2) சமம் என்பதால் ABCD ஓர் இணைகரம்)": [
+    "முக்கோணம் ",
+    {
+      "latex": "DEF",
+      "fallback": "DEF"
+    },
+    "-இன் பக்க நடுப்புள்ளிகள் ",
+    {
+      "latex": "A \\left(- 3, 6\\right), B \\left(0, 7\\right), C \\left(1, 9\\right)",
+      "fallback": "A(−3, 6), B(0, 7), C(1, 9)"
+    },
+    "-லிருந்து உச்சி ",
+    {
+      "latex": "D \\left(x_{1}, y_{1}\\right)",
+      "fallback": "D(x₁, y₁)"
+    },
+    "-ஐக் காண்போம். (நடுப்புள்ளி நாற்கரம் ஒரு இணைகரம் என நிறுவுதல்: நிறுவப்பட்டது: ",
+    {
+      "latex": "D \\left(- 2, 8\\right);\\quad AC",
+      "fallback": "D(−2, 8); AC"
+    },
+    " மற்றும் ",
+    {
+      "latex": "BD",
+      "fallback": "BD"
+    },
+    "-இன் நடுப்புள்ளி ",
+    {
+      "latex": "\\left(- 1, \\dfrac{15}{2}\\right)",
+      "fallback": "(−1, 15/2)"
+    },
+    " சமம் என்பதால் ",
+    {
+      "latex": "ABCD",
+      "fallback": "ABCD"
+    },
+    " ஓர் இணைகரம்)"
+  ],
+  "Since the right angle is at A, the hypotenuse is BC. Find the mid-point M of BC joining B(3, 2) and C(−3, −2).": [
+    "Since the right angle is at A, the hypotenuse is ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    ". Find the mid-point ",
+    {
+      "latex": "M",
+      "fallback": "M"
+    },
+    " of ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    " joining ",
+    {
+      "latex": "B \\left(3, 2\\right)",
+      "fallback": "B(3, 2)"
+    },
+    " and ",
+    {
+      "latex": "C \\left(- 3, - 2\\right)",
+      "fallback": "C(−3, −2)"
+    },
+    "."
+  ],
+  "Since the right angle is at A, the hypotenuse is BC. Find the mid-point M of BC joining B(3, 2) and C(−3, −2). (Hypotenuse mid-point equidistant from vertices: Proved: M(0, 0) satisfies MA = MB = MC = √13)": [
+    "Since the right angle is at A, the hypotenuse is ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    ". Find the mid-point ",
+    {
+      "latex": "M",
+      "fallback": "M"
+    },
+    " of ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    " joining ",
+    {
+      "latex": "B \\left(3, 2\\right)",
+      "fallback": "B(3, 2)"
+    },
+    " and ",
+    {
+      "latex": "C \\left(- 3, - 2\\right)",
+      "fallback": "C(−3, −2)"
+    },
+    ". (Hypotenuse mid-point equidistant from vertices: Proved: ",
+    {
+      "latex": "M \\left(0, 0\\right)",
+      "fallback": "M(0, 0)"
+    },
+    " satisfies ",
+    {
+      "latex": "MA = MB = MC = \\sqrt{13}",
+      "fallback": "MA = MB = MC = √13"
+    },
+    ")"
+  ],
+  "செங்கோணம் A-இல் உள்ளதால் கர்ணம் BC ஆகும். B(3, 2) மற்றும் C(−3, −2)-இன் நடுப்புள்ளி M-ஐக் காண்போம். (கர்ணத்தின் நடுப்புள்ளி உச்சிகளிலிருந்து சம தொலைவில் உள்ளது: நிறுவப்பட்டது: M(0, 0) உச்சிகளிலிருந்து √13 அலகு சம தொலைவில் உள்ளது)": [
+    "செங்கோணம் A-இல் உள்ளதால் கர்ணம் ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    " ஆகும். ",
+    {
+      "latex": "B \\left(3, 2\\right)",
+      "fallback": "B(3, 2)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "C \\left(- 3, - 2\\right)",
+      "fallback": "C(−3, −2)"
+    },
+    "-இன் நடுப்புள்ளி ",
+    {
+      "latex": "M",
+      "fallback": "M"
+    },
+    "-ஐக் காண்போம். (கர்ணத்தின் நடுப்புள்ளி உச்சிகளிலிருந்து சம தொலைவில் உள்ளது: நிறுவப்பட்டது: ",
+    {
+      "latex": "M \\left(0, 0\\right)",
+      "fallback": "M(0, 0)"
+    },
+    " உச்சிகளிலிருந்து ",
+    {
+      "latex": "\\sqrt{13}",
+      "fallback": "√13"
+    },
+    " அலகு சம தொலைவில் உள்ளது)"
+  ],
+  "Use the section formula for internal division in the ratio m : n = 3 : 2 with A(4, −3) and B(9, 7).": [
+    "Use the section formula for internal division in the ratio ",
+    {
+      "latex": "\\mathrm{m} : n = 3 : 2",
+      "fallback": "m : n = 3 : 2"
+    },
+    " with ",
+    {
+      "latex": "A \\left(4, - 3\\right)",
+      "fallback": "A(4, −3)"
+    },
+    " and ",
+    {
+      "latex": "B \\left(9, 7\\right)",
+      "fallback": "B(9, 7)"
+    },
+    "."
+  ],
+  "Use the section formula for internal division in the ratio m : n = 3 : 2 with A(4, −3) and B(9, 7). (Internal division in ratio 3:2: (7, 3))": [
+    "Use the section formula for internal division in the ratio ",
+    {
+      "latex": "\\mathrm{m} : n = 3 : 2",
+      "fallback": "m : n = 3 : 2"
+    },
+    " with ",
+    {
+      "latex": "A \\left(4, - 3\\right)",
+      "fallback": "A(4, −3)"
+    },
+    " and ",
+    {
+      "latex": "B \\left(9, 7\\right)",
+      "fallback": "B(9, 7)"
+    },
+    ". (Internal division in ratio ",
+    {
+      "latex": "3 : 2 : \\left(7, 3\\right)",
+      "fallback": "3:2: (7, 3)"
+    },
+    ")"
+  ],
+  "m : n = 3 : 2 என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கும் பிரிவுச் சூத்திரத்தை A(4, −3), B(9, 7) புள்ளிகளுக்குப் பயன்படுத்துவோம். (3:2 என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கும் புள்ளி: (7, 3))": [
+    {
+      "latex": "\\mathrm{m} : n = 3 : 2",
+      "fallback": "m : n = 3 : 2"
+    },
+    " என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கும் பிரிவுச் சூத்திரத்தை ",
+    {
+      "latex": "A \\left(4, - 3\\right), B \\left(9, 7\\right)",
+      "fallback": "A(4, −3), B(9, 7)"
+    },
+    " புள்ளிகளுக்குப் பயன்படுத்துவோம். (",
+    {
+      "latex": "3 : 2",
+      "fallback": "3:2"
+    },
+    " என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கும் புள்ளி: ",
+    {
+      "latex": "\\left(7, 3\\right)",
+      "fallback": "(7, 3)"
+    },
+    ")"
+  ],
+  "Let P(2, −5) divide AB in the ratio m : n. By the section formula, equate the x-coordinate to 2.": [
+    "Let ",
+    {
+      "latex": "P\\left(2, - 5\\right)",
+      "fallback": "P(2, −5)"
+    },
+    " divide ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " in the ratio ",
+    {
+      "latex": "\\mathrm{m} : n",
+      "fallback": "m : n"
+    },
+    ". By the section formula, equate the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-coordinate to ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "."
+  ],
+  "Let P(2, −5) divide AB in the ratio m : n. By the section formula, equate the x-coordinate to 2. (Find internal division ratio: 5:2)": [
+    "Let ",
+    {
+      "latex": "P\\left(2, - 5\\right)",
+      "fallback": "P(2, −5)"
+    },
+    " divide ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " in the ratio ",
+    {
+      "latex": "\\mathrm{m} : n",
+      "fallback": "m : n"
+    },
+    ". By the section formula, equate the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-coordinate to ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ". (Find internal division ratio: ",
+    {
+      "latex": "5 : 2",
+      "fallback": "5:2"
+    },
+    ")"
+  ],
+  "P(2, −5) ஆனது AB-ஐ m : n என்ற விகிதத்தில் பிரிக்கிறது என்க. பிரிவுச் சூத்திரத்தில் x-ஆயத்தொலைவை 2-க்குச் சமப்படுத்துவோம். (உட்புறப் பிரிவு விகிதத்தைக் காணுதல்: 5:2)": [
+    {
+      "latex": "P\\left(2, - 5\\right)",
+      "fallback": "P(2, −5)"
+    },
+    " ஆனது ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    "-ஐ ",
+    {
+      "latex": "\\mathrm{m} : n",
+      "fallback": "m : n"
+    },
+    " என்ற விகிதத்தில் பிரிக்கிறது என்க. பிரிவுச் சூத்திரத்தில் ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-ஆயத்தொலைவை ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-க்குச் சமப்படுத்துவோம். (உட்புறப் பிரிவு விகிதத்தைக் காணுதல்: ",
+    {
+      "latex": "5 : 2",
+      "fallback": "5:2"
+    },
+    ")"
+  ],
+  "Since AP = (2/5) AB and P lies on segment AB, PB = AB − AP = (3/5) AB. Therefore, AP : PB = 2 : 3.": [
+    "Since ",
+    {
+      "latex": "AP = \\left(\\dfrac{2}{5}\\right) AB",
+      "fallback": "AP = (2/5) AB"
+    },
+    " and ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " lies on segment ",
+    {
+      "latex": "AB, PB = AB - AP = \\left(\\dfrac{3}{5}\\right) AB",
+      "fallback": "AB, PB = AB − AP = (3/5) AB"
+    },
+    ". Therefore, ",
+    {
+      "latex": "AP : PB = 2 : 3",
+      "fallback": "AP : PB = 2 : 3"
+    },
+    "."
+  ],
+  "Since AP = (2/5) AB and P lies on segment AB, PB = AB − AP = (3/5) AB. Therefore, AP : PB = 2 : 3. (Point P on AB with AP = (2/5) AB: (3, 4))": [
+    "Since ",
+    {
+      "latex": "AP = \\left(\\dfrac{2}{5}\\right) AB",
+      "fallback": "AP = (2/5) AB"
+    },
+    " and ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " lies on segment ",
+    {
+      "latex": "AB, PB = AB - AP = \\left(\\dfrac{3}{5}\\right) AB",
+      "fallback": "AB, PB = AB − AP = (3/5) AB"
+    },
+    ". Therefore, ",
+    {
+      "latex": "AP : PB = 2 : 3",
+      "fallback": "AP : PB = 2 : 3"
+    },
+    ". (Point ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " on ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " with ",
+    {
+      "latex": "AP = \\left(\\dfrac{2}{5}\\right) AB : \\left(3, 4\\right)",
+      "fallback": "AP = (2/5) AB: (3, 4)"
+    },
+    ")"
+  ],
+  "AP = (2/5) AB என்பதால் PB = AB − AP = (3/5) AB. ஆகவே P ஆனது AB-ஐ AP : PB = 2 : 3 என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கிறது. (AP = (2/5) AB என்ற வகையில் புள்ளி P காணுதல்: (3, 4))": [
+    {
+      "latex": "AP = \\left(\\dfrac{2}{5}\\right) AB",
+      "fallback": "AP = (2/5) AB"
+    },
+    " என்பதால் ",
+    {
+      "latex": "PB = AB - AP = \\left(\\dfrac{3}{5}\\right) AB",
+      "fallback": "PB = AB − AP = (3/5) AB"
+    },
+    ". ஆகவே ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " ஆனது ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    "-ஐ ",
+    {
+      "latex": "AP : PB = 2 : 3",
+      "fallback": "AP : PB = 2 : 3"
+    },
+    " என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கிறது. (",
+    {
+      "latex": "AP = \\left(\\dfrac{2}{5}\\right) AB",
+      "fallback": "AP = (2/5) AB"
+    },
+    " என்ற வகையில் புள்ளி ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " காணுதல்: ",
+    {
+      "latex": "\\left(3, 4\\right)",
+      "fallback": "(3, 4)"
+    },
+    ")"
+  ],
+  "Let P and Q be the points of trisection of AB so that AP = PQ = QB. Then P divides AB in the ratio 1 : 2, and Q divides AB in the ratio 2 : 1.": [
+    "Let ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " and ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " be the points of trisection of ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " so that ",
+    {
+      "latex": "AP = PQ = QB",
+      "fallback": "AP = PQ = QB"
+    },
+    ". Then ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " divides ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " in the ratio ",
+    {
+      "latex": "1 : 2",
+      "fallback": "1 : 2"
+    },
+    ", and ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " divides ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " in the ratio ",
+    {
+      "latex": "2 : 1",
+      "fallback": "2 : 1"
+    },
+    "."
+  ],
+  "Let P and Q be the points of trisection of AB so that AP = PQ = QB. Then P divides AB in the ratio 1 : 2, and Q divides AB in the ratio 2 : 1. (Points of trisection of a line segment: (−2, 3), (1, 0))": [
+    "Let ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " and ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " be the points of trisection of ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " so that ",
+    {
+      "latex": "AP = PQ = QB",
+      "fallback": "AP = PQ = QB"
+    },
+    ". Then ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " divides ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " in the ratio ",
+    {
+      "latex": "1 : 2",
+      "fallback": "1 : 2"
+    },
+    ", and ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " divides ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " in the ratio ",
+    {
+      "latex": "2 : 1",
+      "fallback": "2 : 1"
+    },
+    ". (Points of trisection of a line segment: ",
+    {
+      "latex": "\\left(- 2, 3\\right), \\left(1, 0\\right)",
+      "fallback": "(−2, 3), (1, 0)"
+    },
+    ")"
+  ],
+  "P மற்றும் Q ஆகியவை AB-ஐ மூன்று சமபாகங்களாக்கும் புள்ளிகள் என்க (AP = PQ = QB). எனவே P ஆனது 1 : 2 விகிதத்திலும், Q ஆனது 2 : 1 விகிதத்திலும் பிரிக்கும். (கோட்டுத்துண்டை மூன்று சமபாகங்களாகப் பிரிக்கும் புள்ளிகள்: (−2, 3), (1, 0))": [
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " மற்றும் ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " ஆகியவை ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    "-ஐ மூன்று சமபாகங்களாக்கும் புள்ளிகள் என்க ",
+    {
+      "latex": "\\left(AP = PQ = QB\\right)",
+      "fallback": "(AP = PQ = QB)"
+    },
+    ". எனவே ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " ஆனது ",
+    {
+      "latex": "1 : 2",
+      "fallback": "1 : 2"
+    },
+    " விகிதத்திலும், ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " ஆனது ",
+    {
+      "latex": "2 : 1",
+      "fallback": "2 : 1"
+    },
+    " விகிதத்திலும் பிரிக்கும். (கோட்டுத்துண்டை மூன்று சமபாகங்களாகப் பிரிக்கும் புள்ளிகள்: ",
+    {
+      "latex": "\\left(- 2, 3\\right), \\left(1, 0\\right)",
+      "fallback": "(−2, 3), (1, 0)"
+    },
+    ")"
+  ],
+  "Let P and Q be the new endpoints beyond A and B respectively, so PA = (1/2)AB and BQ = (1/2)AB. Note that M, the mid-point of AB, is ((6−1)/2, (3−4)/2) = (5/2, −1/2), and A is the mid-point of P and M? Wait: PA = AM = MB = BQ = (1/2)AB.": [
+    "Let ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " and ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " be the new endpoints beyond A and ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " respectively, so ",
+    {
+      "latex": "PA = \\left(\\dfrac{1}{2}\\right) AB",
+      "fallback": "PA = (1/2)AB"
+    },
+    " and ",
+    {
+      "latex": "BQ = \\left(\\dfrac{1}{2}\\right) AB",
+      "fallback": "BQ = (1/2)AB"
+    },
+    ". Note that ",
+    {
+      "latex": "M",
+      "fallback": "M"
+    },
+    ", the mid-point of ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    ", is ",
+    {
+      "latex": "\\left(\\dfrac{\\left(6 - 1\\right)}{2}, \\dfrac{\\left(3 - 4\\right)}{2}\\right) = \\left(\\dfrac{5}{2}, \\dfrac{- 1}{2}\\right)",
+      "fallback": "((6−1)/2, (3−4)/2) = (5/2, −1/2)"
+    },
+    ", and A is the mid-point of ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " and ",
+    {
+      "latex": "M",
+      "fallback": "M"
+    },
+    "? Wait: ",
+    {
+      "latex": "PA",
+      "fallback": "PA"
+    },
+    " = AM = ",
+    {
+      "latex": "MB = BQ = \\left(\\dfrac{1}{2}\\right) AB",
+      "fallback": "MB = BQ = (1/2)AB"
+    },
+    "."
+  ],
+  "Let P and Q be the new endpoints beyond A and B respectively, so PA = (1/2)AB and BQ = (1/2)AB. Note that M, the mid-point of AB, is ((6−1)/2, (3−4)/2) = (5/2, −1/2), and A is the mid-point of P and M? Wait: PA = AM = MB = BQ = (1/2)AB. (Extend segment by half its length at each end: (19/2, 13/2), (−9/2, −15/2))": [
+    "Let ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " and ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " be the new endpoints beyond A and ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " respectively, so ",
+    {
+      "latex": "PA = \\left(\\dfrac{1}{2}\\right) AB",
+      "fallback": "PA = (1/2)AB"
+    },
+    " and ",
+    {
+      "latex": "BQ = \\left(\\dfrac{1}{2}\\right) AB",
+      "fallback": "BQ = (1/2)AB"
+    },
+    ". Note that ",
+    {
+      "latex": "M",
+      "fallback": "M"
+    },
+    ", the mid-point of ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    ", is ",
+    {
+      "latex": "\\left(\\dfrac{\\left(6 - 1\\right)}{2}, \\dfrac{\\left(3 - 4\\right)}{2}\\right) = \\left(\\dfrac{5}{2}, \\dfrac{- 1}{2}\\right)",
+      "fallback": "((6−1)/2, (3−4)/2) = (5/2, −1/2)"
+    },
+    ", and A is the mid-point of ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " and ",
+    {
+      "latex": "M",
+      "fallback": "M"
+    },
+    "? Wait: ",
+    {
+      "latex": "PA",
+      "fallback": "PA"
+    },
+    " = AM = ",
+    {
+      "latex": "MB = BQ = \\left(\\dfrac{1}{2}\\right) AB",
+      "fallback": "MB = BQ = (1/2)AB"
+    },
+    ". (Extend segment by half its length at each end: ",
+    {
+      "latex": "\\left(\\dfrac{19}{2}, \\dfrac{13}{2}\\right), \\left(\\dfrac{- 9}{2}, \\dfrac{- 15}{2}\\right)",
+      "fallback": "(19/2, 13/2), (−9/2, −15/2)"
+    },
+    ")"
+  ],
+  "புதிய முனைகள் P (A-க்கு அப்பால்) மற்றும் Q (B-க்கு அப்பால்) என்க. இங்கு PA = BQ = (1/2) AB. ஆகவே P–A–B வரிசையில் A என்பது P மற்றும் M-இன் நடுப்புள்ளியல்ல; PA : AB = 1 : 2 என்பதால் A என்பது P மற்றும் B-ஐ 1 : 2 விகிதத்தில் பிரிக்கும்! (கோட்டுத்துண்டின் இரு முனைகளிலும் பாதி அளவு நீட்டுதல்: (19/2, 13/2), (−9/2, −15/2))": [
+    "புதிய முனைகள் ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " (A-க்கு அப்பால்) மற்றும் ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " (",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    "-க்கு அப்பால்) என்க. இங்கு ",
+    {
+      "latex": "PA = BQ = \\left(\\dfrac{1}{2}\\right) AB",
+      "fallback": "PA = BQ = (1/2) AB"
+    },
+    ". ஆகவே ",
+    {
+      "latex": "P - A - B",
+      "fallback": "P–A–B"
+    },
+    " வரிசையில் A என்பது ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " மற்றும் ",
+    {
+      "latex": "M",
+      "fallback": "M"
+    },
+    "-இன் நடுப்புள்ளியல்ல; ",
+    {
+      "latex": "PA : AB = 1 : 2",
+      "fallback": "PA : AB = 1 : 2"
+    },
+    " என்பதால் A என்பது ",
+    {
+      "latex": "P",
+      "fallback": "P"
+    },
+    " மற்றும் ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    "-ஐ ",
+    {
+      "latex": "1 : 2",
+      "fallback": "1 : 2"
+    },
+    " விகிதத்தில் பிரிக்கும்! (கோட்டுத்துண்டின் இரு முனைகளிலும் பாதி அளவு நீட்டுதல்: ",
+    {
+      "latex": "\\left(\\dfrac{19}{2}, \\dfrac{13}{2}\\right), \\left(\\dfrac{- 9}{2}, \\dfrac{- 15}{2}\\right)",
+      "fallback": "(19/2, 13/2), (−9/2, −15/2)"
+    },
+    ")"
+  ],
+  "Assume B(9, −3) divides the segment joining A(7, −5) and C(13, 1) in the ratio k : 1. Find k from the x-coordinate.": [
+    "Assume ",
+    {
+      "latex": "B \\left(9, - 3\\right)",
+      "fallback": "B(9, −3)"
+    },
+    " divides the segment joining ",
+    {
+      "latex": "A \\left(7, - 5\\right)",
+      "fallback": "A(7, −5)"
+    },
+    " and ",
+    {
+      "latex": "C \\left(13, 1\\right)",
+      "fallback": "C(13, 1)"
+    },
+    " in the ratio ",
+    {
+      "latex": "k : 1",
+      "fallback": "k : 1"
+    },
+    ". Find ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    " from the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-coordinate."
+  ],
+  "Assume B(9, −3) divides the segment joining A(7, −5) and C(13, 1) in the ratio k : 1. Find k from the x-coordinate. (Show collinearity using section formula: Proved: B divides AC internally in the ratio 1:2, so A, B, C are collinear)": [
+    "Assume ",
+    {
+      "latex": "B \\left(9, - 3\\right)",
+      "fallback": "B(9, −3)"
+    },
+    " divides the segment joining ",
+    {
+      "latex": "A \\left(7, - 5\\right)",
+      "fallback": "A(7, −5)"
+    },
+    " and ",
+    {
+      "latex": "C \\left(13, 1\\right)",
+      "fallback": "C(13, 1)"
+    },
+    " in the ratio ",
+    {
+      "latex": "k : 1",
+      "fallback": "k : 1"
+    },
+    ". Find ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    " from the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-coordinate. (Show collinearity using section formula: Proved: ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " divides ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    " internally in the ratio ",
+    {
+      "latex": "1 : 2",
+      "fallback": "1:2"
+    },
+    ", so ",
+    {
+      "latex": "A, B, C",
+      "fallback": "A, B, C"
+    },
+    " are collinear)"
+  ],
+  "A(7, −5) மற்றும் C(13, 1)-ஐ இணைக்கும் கோட்டுத்துண்டை B(9, −3) ஆனது k : 1 என்ற விகிதத்தில் பிரிக்கிறது எனக் கருதி x-ஆயத்தொலைவிலிருந்து k காண்போம். (பிரிவுச் சூத்திரத்தைப் பயன்படுத்தி ஒரு கோடமையும் புள்ளிகள் என நிறுவுதல்: நிறுவப்பட்டது: B ஆனது AC-ஐ 1:2 விகிதத்தில் பிரிப்பதால் A, B, C ஒரே கோட்டில் அமையும்)": [
+    {
+      "latex": "A \\left(7, - 5\\right)",
+      "fallback": "A(7, −5)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "C \\left(13, 1\\right)",
+      "fallback": "C(13, 1)"
+    },
+    "-ஐ இணைக்கும் கோட்டுத்துண்டை ",
+    {
+      "latex": "B \\left(9, - 3\\right)",
+      "fallback": "B(9, −3)"
+    },
+    " ஆனது ",
+    {
+      "latex": "k : 1",
+      "fallback": "k : 1"
+    },
+    " என்ற விகிதத்தில் பிரிக்கிறது எனக் கருதி ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-ஆயத்தொலைவிலிருந்து ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    " காண்போம். (பிரிவுச் சூத்திரத்தைப் பயன்படுத்தி ஒரு கோடமையும் புள்ளிகள் என நிறுவுதல்: நிறுவப்பட்டது: ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " ஆனது ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    "-ஐ ",
+    {
+      "latex": "1 : 2",
+      "fallback": "1:2"
+    },
+    " விகிதத்தில் பிரிப்பதால் ",
+    {
+      "latex": "A, B, C",
+      "fallback": "A, B, C"
+    },
+    " ஒரே கோட்டில் அமையும்)"
+  ],
+  "AB is increased by 25% beyond B to C, so BC = 25% of AB = (1/4) AB. Hence AB : BC = 4 : 1, meaning B divides AC internally in the ratio 4 : 1.": [
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " is increased by ",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    "% beyond ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " to ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    ", so ",
+    {
+      "latex": "BC = 25",
+      "fallback": "BC = 25"
+    },
+    "% of ",
+    {
+      "latex": "AB = \\left(\\dfrac{1}{4}\\right) AB",
+      "fallback": "AB = (1/4) AB"
+    },
+    ". Hence ",
+    {
+      "latex": "AB : BC = 4 : 1",
+      "fallback": "AB : BC = 4 : 1"
+    },
+    ", meaning ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " divides ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    " internally in the ratio ",
+    {
+      "latex": "4 : 1",
+      "fallback": "4 : 1"
+    },
+    "."
+  ],
+  "AB is increased by 25% beyond B to C, so BC = 25% of AB = (1/4) AB. Hence AB : BC = 4 : 1, meaning B divides AC internally in the ratio 4 : 1. (25% extension of a line segment: C(3, 2))": [
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " is increased by ",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    "% beyond ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " to ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    ", so ",
+    {
+      "latex": "BC = 25",
+      "fallback": "BC = 25"
+    },
+    "% of ",
+    {
+      "latex": "AB = \\left(\\dfrac{1}{4}\\right) AB",
+      "fallback": "AB = (1/4) AB"
+    },
+    ". Hence ",
+    {
+      "latex": "AB : BC = 4 : 1",
+      "fallback": "AB : BC = 4 : 1"
+    },
+    ", meaning ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " divides ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    " internally in the ratio ",
+    {
+      "latex": "4 : 1",
+      "fallback": "4 : 1"
+    },
+    ". (",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    "% extension of a line segment: ",
+    {
+      "latex": "C \\left(3, 2\\right)",
+      "fallback": "C(3, 2)"
+    },
+    ")"
+  ],
+  "AB-இன் நீளம் B-க்கு அப்பால் C வரை 25% அதிகரிக்கிறது; எனவே BC = (25/100) AB = (1/4) AB. ஆகவே AB : BC = 4 : 1, அதாவது B ஆனது AC-ஐ 4 : 1 விகிதத்தில் உட்புறமாகப் பிரிக்கிறது. (கோட்டுத்துண்டை 25% நீட்டுதல்: C(3, 2))": [
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    "-இன் நீளம் ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    "-க்கு அப்பால் ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " வரை ",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    "% அதிகரிக்கிறது; எனவே ",
+    {
+      "latex": "BC = \\left(\\dfrac{25}{100}\\right) AB = \\left(\\dfrac{1}{4}\\right) AB",
+      "fallback": "BC = (25/100) AB = (1/4) AB"
+    },
+    ". ஆகவே ",
+    {
+      "latex": "AB : BC = 4 : 1",
+      "fallback": "AB : BC = 4 : 1"
+    },
+    ", அதாவது ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " ஆனது ",
+    {
+      "latex": "AC",
+      "fallback": "AC"
+    },
+    "-ஐ ",
+    {
+      "latex": "4 : 1",
+      "fallback": "4 : 1"
+    },
+    " விகிதத்தில் உட்புறமாகப் பிரிக்கிறது. (கோட்டுத்துண்டை ",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    "% நீட்டுதல்: ",
+    {
+      "latex": "C \\left(3, 2\\right)",
+      "fallback": "C(3, 2)"
+    },
+    ")"
+  ],
+  "Use the centroid formula G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3).": [
+    "Use the centroid formula ",
+    {
+      "latex": "G = \\left(\\dfrac{\\left(x_{1} + x_{2} + x_{3}\\right)}{3}, \\dfrac{\\left(y_{1} + y_{2} + y_{3}\\right)}{3}\\right)",
+      "fallback": "G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3)"
+    },
+    "."
+  ],
+  "Use the centroid formula G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3). (Centroids of two triangles: (i) (2, −3); (ii) (−8/3, −11/3))": [
+    "Use the centroid formula ",
+    {
+      "latex": "G = \\left(\\dfrac{\\left(x_{1} + x_{2} + x_{3}\\right)}{3}, \\dfrac{\\left(y_{1} + y_{2} + y_{3}\\right)}{3}\\right)",
+      "fallback": "G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3)"
+    },
+    ". (Centroids of two triangles: (i) ",
+    {
+      "latex": "\\left(2, - 3\\right)",
+      "fallback": "(2, −3)"
+    },
+    "; (ii) ",
+    {
+      "latex": "\\left(\\dfrac{- 8}{3}, \\dfrac{- 11}{3}\\right)",
+      "fallback": "(−8/3, −11/3)"
+    },
+    ")"
+  ],
+  "நடுக்கோட்டு மையம் G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3) என்ற சூத்திரத்தைப் பயன்படுத்துவோம். (இரு முக்கோணங்களின் நடுக்கோட்டு மையங்கள்: (i) (2, −3); (ii) (−8/3, −11/3))": [
+    "நடுக்கோட்டு மையம் ",
+    {
+      "latex": "G = \\left(\\dfrac{\\left(x_{1} + x_{2} + x_{3}\\right)}{3}, \\dfrac{\\left(y_{1} + y_{2} + y_{3}\\right)}{3}\\right)",
+      "fallback": "G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3)"
+    },
+    " என்ற சூத்திரத்தைப் பயன்படுத்துவோம். (இரு முக்கோணங்களின் நடுக்கோட்டு மையங்கள்: (i) ",
+    {
+      "latex": "\\left(2, - 3\\right)",
+      "fallback": "(2, −3)"
+    },
+    "; (ii) ",
+    {
+      "latex": "\\left(\\dfrac{- 8}{3}, \\dfrac{- 11}{3}\\right)",
+      "fallback": "(−8/3, −11/3)"
+    },
+    ")"
+  ],
+  "Let the third vertex be C(x, y). Equate the centroid of (3, −2), (5, 2), and (x, y) to (4, −2).": [
+    "Let the third vertex be ",
+    {
+      "latex": "C \\left(x, y\\right)",
+      "fallback": "C(x, y)"
+    },
+    ". Equate the centroid of ",
+    {
+      "latex": "\\left(3, - 2\\right), \\left(5, 2\\right)",
+      "fallback": "(3, −2), (5, 2)"
+    },
+    ", and ",
+    {
+      "latex": "\\left(x, y\\right)",
+      "fallback": "(x, y)"
+    },
+    " to ",
+    {
+      "latex": "\\left(4, - 2\\right)",
+      "fallback": "(4, −2)"
+    },
+    "."
+  ],
+  "Let the third vertex be C(x, y). Equate the centroid of (3, −2), (5, 2), and (x, y) to (4, −2). (Find third vertex using centroid: (4, −6))": [
+    "Let the third vertex be ",
+    {
+      "latex": "C \\left(x, y\\right)",
+      "fallback": "C(x, y)"
+    },
+    ". Equate the centroid of ",
+    {
+      "latex": "\\left(3, - 2\\right), \\left(5, 2\\right)",
+      "fallback": "(3, −2), (5, 2)"
+    },
+    ", and ",
+    {
+      "latex": "\\left(x, y\\right)",
+      "fallback": "(x, y)"
+    },
+    " to ",
+    {
+      "latex": "\\left(4, - 2\\right)",
+      "fallback": "(4, −2)"
+    },
+    ". (Find third vertex using centroid: ",
+    {
+      "latex": "\\left(4, - 6\\right)",
+      "fallback": "(4, −6)"
+    },
+    ")"
+  ],
+  "மூன்றாவது முனைப்புள்ளி C(x, y) என்க. (3, −2), (5, 2), (x, y) ஆகியவற்றின் நடுக்கோட்டு மையத்தை (4, −2)-க்குச் சமப்படுத்துவோம். (நடுக்கோட்டு மையத்திலிருந்து மூன்றாவது உச்சியைக் காணுதல்: (4, −6))": [
+    "மூன்றாவது முனைப்புள்ளி ",
+    {
+      "latex": "C \\left(x, y\\right)",
+      "fallback": "C(x, y)"
+    },
+    " என்க. ",
+    {
+      "latex": "\\left(3, - 2\\right), \\left(5, 2\\right), \\left(x, y\\right)",
+      "fallback": "(3, −2), (5, 2), (x, y)"
+    },
+    " ஆகியவற்றின் நடுக்கோட்டு மையத்தை ",
+    {
+      "latex": "\\left(4, - 2\\right)",
+      "fallback": "(4, −2)"
+    },
+    "-க்குச் சமப்படுத்துவோம். (நடுக்கோட்டு மையத்திலிருந்து மூன்றாவது உச்சியைக் காணுதல்: ",
+    {
+      "latex": "\\left(4, - 6\\right)",
+      "fallback": "(4, −6)"
+    },
+    ")"
+  ],
+  "The median through A joins vertex A(−1, 3) to the mid-point D of the opposite side BC.": [
+    "The median through A joins vertex ",
+    {
+      "latex": "A \\left(- 1, 3\\right)",
+      "fallback": "A(−1, 3)"
+    },
+    " to the mid-point ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " of the opposite side ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    "."
+  ],
+  "The median through A joins vertex A(−1, 3) to the mid-point D of the opposite side BC. (Length of median through A: 5 units)": [
+    "The median through A joins vertex ",
+    {
+      "latex": "A \\left(- 1, 3\\right)",
+      "fallback": "A(−1, 3)"
+    },
+    " to the mid-point ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " of the opposite side ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    ". (Length of median through ",
+    {
+      "latex": "A : 5",
+      "fallback": "A: 5"
+    },
+    " units)"
+  ],
+  "A வழியே செல்லும் நடுக்கோடு AD, உச்சி A(−1, 3)-ஐயும் எதிர்ப்பக்கம் BC-இன் நடுப்புள்ளி D-ஐயும் இணைக்கும். (உச்சி A வழியே செல்லும் நடுக்கோட்டின் நீளம்: 5 அலகுகள்)": [
+    "A வழியே செல்லும் நடுக்கோடு ",
+    {
+      "latex": "AD",
+      "fallback": "AD"
+    },
+    ", உச்சி ",
+    {
+      "latex": "A \\left(- 1, 3\\right)",
+      "fallback": "A(−1, 3)"
+    },
+    "-ஐயும் எதிர்ப்பக்கம் ",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    "-இன் நடுப்புள்ளி ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    "-ஐயும் இணைக்கும். (உச்சி A வழியே செல்லும் நடுக்கோட்டின் நீளம்: ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " அலகுகள்)"
+  ],
+  "Equate the centroid of (1, 2), (h, −3), (−4, k) to (5, −1) to find h and k.": [
+    "Equate the centroid of ",
+    {
+      "latex": "\\left(1, 2\\right), \\left(h, - 3\\right), \\left(- 4, k\\right)",
+      "fallback": "(1, 2), (h, −3), (−4, k)"
+    },
+    " to ",
+    {
+      "latex": "\\left(5, - 1\\right)",
+      "fallback": "(5, −1)"
+    },
+    " to find ",
+    {
+      "latex": "h",
+      "fallback": "h"
+    },
+    " and ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    "."
+  ],
+  "Equate the centroid of (1, 2), (h, −3), (−4, k) to (5, −1) to find h and k. (Centroid algebra with unknown h and k: 20)": [
+    "Equate the centroid of ",
+    {
+      "latex": "\\left(1, 2\\right), \\left(h, - 3\\right), \\left(- 4, k\\right)",
+      "fallback": "(1, 2), (h, −3), (−4, k)"
+    },
+    " to ",
+    {
+      "latex": "\\left(5, - 1\\right)",
+      "fallback": "(5, −1)"
+    },
+    " to find ",
+    {
+      "latex": "h",
+      "fallback": "h"
+    },
+    " and ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    ". (Centroid algebra with unknown ",
+    {
+      "latex": "h",
+      "fallback": "h"
+    },
+    " and ",
+    {
+      "latex": "k : 20",
+      "fallback": "k: 20"
+    },
+    ")"
+  ],
+  "(1, 2), (h, −3), (−4, k) ஆகியவற்றின் நடுக்கோட்டு மையத்தை (5, −1)-க்குச் சமப்படுத்தி h மற்றும் k காண்க. (நடுக்கோட்டு மையம் கொண்டு h, k மதிப்பு காணுதல்: 20)": [
+    {
+      "latex": "\\left(1, 2\\right), \\left(h, - 3\\right), \\left(- 4, k\\right)",
+      "fallback": "(1, 2), (h, −3), (−4, k)"
+    },
+    " ஆகியவற்றின் நடுக்கோட்டு மையத்தை ",
+    {
+      "latex": "\\left(5, - 1\\right)",
+      "fallback": "(5, −1)"
+    },
+    "-க்குச் சமப்படுத்தி ",
+    {
+      "latex": "h",
+      "fallback": "h"
+    },
+    " மற்றும் ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    " காண்க. (நடுக்கோட்டு மையம் கொண்டு ",
+    {
+      "latex": "h, k",
+      "fallback": "h, k"
+    },
+    " மதிப்பு காணுதல்: ",
+    {
+      "latex": "20",
+      "fallback": "20"
+    },
+    ")"
+  ],
+  "On the Euler line of a triangle, the centroid B divides the segment joining orthocentre A and circumcentre C internally in the ratio 2 : 1 (AB : BC = 2 : 1).": [
+    "On the Euler line of a triangle, the centroid ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " divides the segment joining orthocentre A and circumcentre ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " internally in the ratio ",
+    {
+      "latex": "2 : 1 \\left(AB : BC = 2 : 1\\right)",
+      "fallback": "2 : 1 (AB : BC = 2 : 1)"
+    },
+    "."
+  ],
+  "On the Euler line of a triangle, the centroid B divides the segment joining orthocentre A and circumcentre C internally in the ratio 2 : 1 (AB : BC = 2 : 1). (Orthocentre, centroid and circumcentre (Euler line): 3√(5/2) units (or (3√10)/2 units))": [
+    "On the Euler line of a triangle, the centroid ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " divides the segment joining orthocentre A and circumcentre ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " internally in the ratio ",
+    {
+      "latex": "2 : 1 \\left(AB : BC = 2 : 1\\right)",
+      "fallback": "2 : 1 (AB : BC = 2 : 1)"
+    },
+    ". (Orthocentre, centroid and circumcentre (Euler line): ",
+    {
+      "latex": "3\\,\\sqrt{\\dfrac{5}{2}}",
+      "fallback": "3√(5/2)"
+    },
+    " units (or ",
+    {
+      "latex": "\\dfrac{\\left(3\\,\\sqrt{10}\\right)}{2}",
+      "fallback": "(3√10)/2"
+    },
+    " units))"
+  ],
+  "ஒரு முக்கோணத்தின் ஆய்லரின் கோட்டில், நடுக்கோட்டு மையம் B ஆனது செங்கோட்டு மையம் A மற்றும் சுற்றுவட்ட மையம் C-ஐ இணைக்கும் கோட்டுத்துண்டை 2 : 1 என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கும். (செங்கோட்டு மையம், நடுக்கோட்டு மையம், சுற்றுவட்ட மையம்: 3√(5/2) அலகுகள் (அல்லது (3√10)/2 அலகுகள்))": [
+    "ஒரு முக்கோணத்தின் ஆய்லரின் கோட்டில், நடுக்கோட்டு மையம் ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " ஆனது செங்கோட்டு மையம் A மற்றும் சுற்றுவட்ட மையம் ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    "-ஐ இணைக்கும் கோட்டுத்துண்டை ",
+    {
+      "latex": "2 : 1",
+      "fallback": "2 : 1"
+    },
+    " என்ற விகிதத்தில் உட்புறமாகப் பிரிக்கும். (செங்கோட்டு மையம், நடுக்கோட்டு மையம், சுற்றுவட்ட மையம்: ",
+    {
+      "latex": "3\\,\\sqrt{\\dfrac{5}{2}}",
+      "fallback": "3√(5/2)"
+    },
+    " அலகுகள் (அல்லது ",
+    {
+      "latex": "\\dfrac{\\left(3\\,\\sqrt{10}\\right)}{2}",
+      "fallback": "(3√10)/2"
+    },
+    " அலகுகள்))"
+  ],
+  "First find the centroid G of △ABC with vertices A(3, 4), B(−2, −1), C(5, 3).": [
+    "First find the centroid ",
+    {
+      "latex": "G",
+      "fallback": "G"
+    },
+    " of △",
+    {
+      "latex": "ABC",
+      "fallback": "ABC"
+    },
+    " with vertices ",
+    {
+      "latex": "A \\left(3, 4\\right), B \\left(- 2, - 1\\right), C \\left(5, 3\\right)",
+      "fallback": "A(3, 4), B(−2, −1), C(5, 3)"
+    },
+    "."
+  ],
+  "First find the centroid G of △ABC with vertices A(3, 4), B(−2, −1), C(5, 3). (Fourth vertex D of parallelogram BDCG: (1, 0))": [
+    "First find the centroid ",
+    {
+      "latex": "G",
+      "fallback": "G"
+    },
+    " of △",
+    {
+      "latex": "ABC",
+      "fallback": "ABC"
+    },
+    " with vertices ",
+    {
+      "latex": "A \\left(3, 4\\right), B \\left(- 2, - 1\\right), C \\left(5, 3\\right)",
+      "fallback": "A(3, 4), B(−2, −1), C(5, 3)"
+    },
+    ". (Fourth vertex ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " of ",
+    {
+      "latex": "\\text{parallelogram} BDCG : \\left(1, 0\\right)",
+      "fallback": "parallelogram BDCG: (1, 0)"
+    },
+    ")"
+  ],
+  "முதலில் A(3, 4), B(−2, −1), C(5, 3) முனைகளைக் கொண்ட △ABC-இன் நடுக்கோட்டு மையம் G-ஐக் காண்க. (இணைகரம் BDCG-இன் முனைப்புள்ளி D காணுதல்: (1, 0))": [
+    "முதலில் ",
+    {
+      "latex": "A \\left(3, 4\\right), B \\left(- 2, - 1\\right), C \\left(5, 3\\right)",
+      "fallback": "A(3, 4), B(−2, −1), C(5, 3)"
+    },
+    " முனைகளைக் கொண்ட △",
+    {
+      "latex": "ABC",
+      "fallback": "ABC"
+    },
+    "-இன் நடுக்கோட்டு மையம் ",
+    {
+      "latex": "G",
+      "fallback": "G"
+    },
+    "-ஐக் காண்க. (இணைகரம் ",
+    {
+      "latex": "BDCG",
+      "fallback": "BDCG"
+    },
+    "-இன் முனைப்புள்ளி ",
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " காணுதல்: ",
+    {
+      "latex": "\\left(1, 0\\right)",
+      "fallback": "(1, 0)"
+    },
+    ")"
+  ],
+  "The centroid of a triangle coincides with the centroid of the triangle formed by joining the mid-points of its three sides. (Centroid from side mid-points of a triangle: (5, −2))": [
+    "The centroid of a triangle coincides with the centroid of the triangle formed by joining the mid-points of its three sides. (Centroid from side mid-points of ",
+    {
+      "latex": "a \\text{triangle} : \\left(5, - 2\\right)",
+      "fallback": "a triangle: (5, −2)"
+    },
+    ")"
+  ],
+  "ஒரு முக்கோணத்தின் நடுக்கோட்டு மையமும், அதன் பக்கங்களின் நடுப்புள்ளிகளை இணைத்து உருவாகும் முக்கோணத்தின் நடுக்கோட்டு மையமும் ஒன்றே. (பக்கங்களின் நடுப்புள்ளிகளிலிருந்து நடுக்கோட்டு மையம் காணுதல்: (5, −2))": [
+    "ஒரு முக்கோணத்தின் நடுக்கோட்டு மையமும், அதன் பக்கங்களின் நடுப்புள்ளிகளை இணைத்து உருவாகும் முக்கோணத்தின் நடுக்கோட்டு மையமும் ஒன்றே. (பக்கங்களின் நடுப்புள்ளிகளிலிருந்து நடுக்கோட்டு மையம் காணுதல்: ",
+    {
+      "latex": "\\left(5, - 2\\right)",
+      "fallback": "(5, −2)"
+    },
+    ")"
+  ],
+  "Every point on the x-axis has the form (x, 0), so its y-coordinate is 0. Correct option: (3).": [
+    "Every point on the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis has the form ",
+    {
+      "latex": "\\left(x, 0\\right)",
+      "fallback": "(x, 0)"
+    },
+    ", so its ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate is ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ". Correct option: (3)."
+  ],
+  "Every point on the x-axis has the form (x, 0), so its y-coordinate is 0. Correct option: (3). (Point with y-coordinate zero: (3) on x-axis)": [
+    "Every point on the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis has the form ",
+    {
+      "latex": "\\left(x, 0\\right)",
+      "fallback": "(x, 0)"
+    },
+    ", so its ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate is ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ". Correct option: (3). (Point with ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate zero: (3) on ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis)"
+  ],
+  "x-அச்சின் மீதுள்ள ஒவ்வொரு புள்ளியும் (x, 0) என்ற வடிவில் இருக்கும்; எனவே y = 0 எனில் புள்ளி x-அச்சின் மீது அமையும். சரியான விடை: (3). (y-ஆயத்தொலைவு பூச்சியம் எனில் புள்ளி: (3) x-அச்சின் மீது)": [
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சின் மீதுள்ள ஒவ்வொரு புள்ளியும் ",
+    {
+      "latex": "\\left(x, 0\\right)",
+      "fallback": "(x, 0)"
+    },
+    " என்ற வடிவில் இருக்கும்; எனவே ",
+    {
+      "latex": "y = 0",
+      "fallback": "y = 0"
+    },
+    " எனில் புள்ளி ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சின் மீது அமையும். சரியான விடை: (3). (",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-ஆயத்தொலைவு பூச்சியம் எனில் புள்ளி: (3) ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சின் மீது)"
+  ],
+  "(−5, 2) has signs (−, +) → II quadrant; (2, −5) has signs (+, −) → IV quadrant. Correct option: (3).": [
+    {
+      "latex": "\\left(- 5, 2\\right)",
+      "fallback": "(−5, 2)"
+    },
+    " has signs (−, +) → ",
+    {
+      "latex": "II",
+      "fallback": "II"
+    },
+    " quadrant; ",
+    {
+      "latex": "\\left(2, - 5\\right)",
+      "fallback": "(2, −5)"
+    },
+    " has signs (+, −) → ",
+    {
+      "latex": "IV",
+      "fallback": "IV"
+    },
+    " quadrant. Correct option: (3)."
+  ],
+  "(−5, 2) has signs (−, +) → II quadrant; (2, −5) has signs (+, −) → IV quadrant. Correct option: (3). (Quadrants of (−5, 2) and (2, −5): (3) II and IV quadrant respectively)": [
+    {
+      "latex": "\\left(- 5, 2\\right)",
+      "fallback": "(−5, 2)"
+    },
+    " has signs (−, +) → ",
+    {
+      "latex": "II",
+      "fallback": "II"
+    },
+    " quadrant; ",
+    {
+      "latex": "\\left(2, - 5\\right)",
+      "fallback": "(2, −5)"
+    },
+    " has signs (+, −) → ",
+    {
+      "latex": "IV",
+      "fallback": "IV"
+    },
+    " quadrant. Correct option: (3). (Quadrants of ",
+    {
+      "latex": "\\left(- 5, 2\\right)",
+      "fallback": "(−5, 2)"
+    },
+    " and ",
+    {
+      "latex": "\\left(2, - 5\\right) : \\left(3\\right) II",
+      "fallback": "(2, −5): (3) II"
+    },
+    " and ",
+    {
+      "latex": "IV",
+      "fallback": "IV"
+    },
+    " quadrant respectively)"
+  ],
+  "(−5, 2) என்பது (−, +) குறியுடன் II காற்பகுதியிலும், (2, −5) என்பது (+, −) குறியுடன் IV காற்பகுதியிலும் அமையும். சரியான விடை: (3). ((−5, 2) மற்றும் (2, −5) அமையும் காற்பகுதிகள்: (3) முறையே II, IV காற்பகுதியில்)": [
+    {
+      "latex": "\\left(- 5, 2\\right)",
+      "fallback": "(−5, 2)"
+    },
+    " என்பது (−, +) குறியுடன் ",
+    {
+      "latex": "II",
+      "fallback": "II"
+    },
+    " காற்பகுதியிலும், ",
+    {
+      "latex": "\\left(2, - 5\\right)",
+      "fallback": "(2, −5)"
+    },
+    " என்பது (+, −) குறியுடன் ",
+    {
+      "latex": "IV",
+      "fallback": "IV"
+    },
+    " காற்பகுதியிலும் அமையும். சரியான விடை: (3). (",
+    {
+      "latex": "\\left(- 5, 2\\right)",
+      "fallback": "(−5, 2)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\left(2, - 5\\right)",
+      "fallback": "(2, −5)"
+    },
+    " அமையும் காற்பகுதிகள்: (3) முறையே ",
+    {
+      "latex": "II",
+      "fallback": "II"
+    },
+    ", ",
+    {
+      "latex": "IV",
+      "fallback": "IV"
+    },
+    " காற்பகுதியில்)"
+  ],
+  "CO lies on x = 0 (length 4) and AB lies on x = 3 (length 8). Since AB ∥ CO with unequal lengths (and OA = 5, BC = 3 are not parallel), OABC is a trapezium. Correct option: (3).": [
+    {
+      "latex": "CO",
+      "fallback": "CO"
+    },
+    " lies on ",
+    {
+      "latex": "x = 0 \\left(\\text{length} 4\\right)",
+      "fallback": "x = 0 (length 4)"
+    },
+    " and ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " lies on ",
+    {
+      "latex": "x = 3 \\left(\\text{length} 8\\right)",
+      "fallback": "x = 3 (length 8)"
+    },
+    ". Since ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " ∥ ",
+    {
+      "latex": "CO",
+      "fallback": "CO"
+    },
+    " with unequal lengths (and ",
+    {
+      "latex": "OA = 5",
+      "fallback": "OA = 5"
+    },
+    ",",
+    " ",
+    {
+      "latex": "BC = 3",
+      "fallback": "BC = 3"
+    },
+    " are not parallel), ",
+    {
+      "latex": "OABC",
+      "fallback": "OABC"
+    },
+    " is a trapezium. Correct option: (3)."
+  ],
+  "CO lies on x = 0 (length 4) and AB lies on x = 3 (length 8). Since AB ∥ CO with unequal lengths (and OA = 5, BC = 3 are not parallel), OABC is a trapezium. Correct option: (3). (Shape formed by O(0,0), A(3,−4), B(3,4), C(0,4): (3) Trapezium)": [
+    {
+      "latex": "CO",
+      "fallback": "CO"
+    },
+    " lies on ",
+    {
+      "latex": "x = 0 \\left(\\text{length} 4\\right)",
+      "fallback": "x = 0 (length 4)"
+    },
+    " and ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " lies on ",
+    {
+      "latex": "x = 3 \\left(\\text{length} 8\\right)",
+      "fallback": "x = 3 (length 8)"
+    },
+    ". Since ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " ∥ ",
+    {
+      "latex": "CO",
+      "fallback": "CO"
+    },
+    " with unequal lengths (and ",
+    {
+      "latex": "OA = 5",
+      "fallback": "OA = 5"
+    },
+    ",",
+    " ",
+    {
+      "latex": "BC = 3",
+      "fallback": "BC = 3"
+    },
+    " are not parallel), ",
+    {
+      "latex": "OABC",
+      "fallback": "OABC"
+    },
+    " is a trapezium. Correct option: (3). (Shape formed by ",
+    {
+      "latex": "O \\left(0, 0\\right), A \\left(3, - 4\\right), B \\left(3, 4\\right), C \\left(0, 4\\right) : \\left(3\\right)",
+      "fallback": "O(0,0), A(3,−4), B(3,4), C(0,4): (3)"
+    },
+    " Trapezium)"
+  ],
+  "CO (x = 0, நீளம் 4) மற்றும் AB (x = 3, நீளம் 8) ஆகிய இரண்டும் செங்குத்துப் பக்கங்களாக இணையாக உள்ளன (நீளம் சமமல்ல). எனவே OABC ஒரு சரிவகம். சரியான விடை: (3). (O, A, B, C புள்ளிகளால் உருவாகும் வடிவம்: (3) சரிவகம்)": [
+    {
+      "latex": "CO",
+      "fallback": "CO"
+    },
+    " (",
+    {
+      "latex": "x = 0",
+      "fallback": "x = 0"
+    },
+    ", நீளம் ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    ") மற்றும் ",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    " (",
+    {
+      "latex": "x = 3",
+      "fallback": "x = 3"
+    },
+    ", நீளம் ",
+    {
+      "latex": "8",
+      "fallback": "8"
+    },
+    ") ஆகிய இரண்டும் செங்குத்துப் பக்கங்களாக இணையாக உள்ளன (நீளம் சமமல்ல). எனவே ",
+    {
+      "latex": "OABC",
+      "fallback": "OABC"
+    },
+    " ஒரு சரிவகம். சரியான விடை: (3). (",
+    {
+      "latex": "O, A, B, C",
+      "fallback": "O, A, B, C"
+    },
+    " புள்ளிகளால் உருவாகும் வடிவம்: (3) சரிவகம்)"
+  ],
+  "Fourth quadrant points have (+, −) signs: Q(3, −4) and R(1, −1). Correct option: (2).": [
+    "Fourth quadrant points have (+, −) signs: ",
+    {
+      "latex": "Q \\left(3, - 4\\right)",
+      "fallback": "Q(3, −4)"
+    },
+    " and ",
+    {
+      "latex": "R \\left(1, - 1\\right)",
+      "fallback": "R(1, −1)"
+    },
+    ". Correct option: (2)."
+  ],
+  "Fourth quadrant points have (+, −) signs: Q(3, −4) and R(1, −1). Correct option: (2). (Points in the fourth quadrant: (2) Q and R)": [
+    "Fourth quadrant points have (+, −) signs: ",
+    {
+      "latex": "Q \\left(3, - 4\\right)",
+      "fallback": "Q(3, −4)"
+    },
+    " and ",
+    {
+      "latex": "R \\left(1, - 1\\right)",
+      "fallback": "R(1, −1)"
+    },
+    ". Correct option: (2). (Points in the fourth quadrant: (2) ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " and ",
+    {
+      "latex": "R",
+      "fallback": "R"
+    },
+    ")"
+  ],
+  "நான்காவது காற்பகுதியில் (+, −) குறிகள் இருக்கும்: Q(3, −4) மற்றும் R(1, −1). சரியான விடை: (2). (நான்காவது காற்பகுதியில் அமையும் புள்ளிகள்: (2) Q மற்றும் R)": [
+    "நான்காவது காற்பகுதியில் (+, −) குறிகள் இருக்கும்: ",
+    {
+      "latex": "Q \\left(3, - 4\\right)",
+      "fallback": "Q(3, −4)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "R \\left(1, - 1\\right)",
+      "fallback": "R(1, −1)"
+    },
+    ". சரியான விடை: (2). (நான்காவது காற்பகுதியில் அமையும் புள்ளிகள்: (2) ",
+    {
+      "latex": "Q",
+      "fallback": "Q"
+    },
+    " மற்றும் ",
+    {
+      "latex": "R",
+      "fallback": "R"
+    },
+    ")"
+  ],
+  "Any point on the y-axis has x = 0, and its ordinate is y = 4, so the point is (0, 4). Correct option: (2).": [
+    "Any point on the ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-axis has ",
+    {
+      "latex": "x = 0",
+      "fallback": "x = 0"
+    },
+    ", and its ordinate is ",
+    {
+      "latex": "y = 4",
+      "fallback": "y = 4"
+    },
+    ", so the point is ",
+    {
+      "latex": "\\left(0, 4\\right)",
+      "fallback": "(0, 4)"
+    },
+    ". Correct option: (2)."
+  ],
+  "Any point on the y-axis has x = 0, and its ordinate is y = 4, so the point is (0, 4). Correct option: (2). (Point with ordinate 4 on the y-axis: (2) (0, 4))": [
+    "Any point on the ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-axis has ",
+    {
+      "latex": "x = 0",
+      "fallback": "x = 0"
+    },
+    ", and its ordinate is ",
+    {
+      "latex": "y = 4",
+      "fallback": "y = 4"
+    },
+    ", so the point is ",
+    {
+      "latex": "\\left(0, 4\\right)",
+      "fallback": "(0, 4)"
+    },
+    ". Correct option: (2). (Point with ordinate ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " on the ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-axis: (2) ",
+    {
+      "latex": "\\left(0, 4\\right)",
+      "fallback": "(0, 4)"
+    },
+    ")"
+  ],
+  "y-அச்சின் மீதுள்ள புள்ளியில் x = 0, y = 4 என்பதால் புள்ளி (0, 4) ஆகும். சரியான விடை: (2). (y-அச்சில் அமையும் புள்ளி: (2) (0, 4))": [
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-அச்சின் மீதுள்ள புள்ளியில் ",
+    {
+      "latex": "x = 0",
+      "fallback": "x = 0"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 4",
+      "fallback": "y = 4"
+    },
+    " என்பதால் புள்ளி ",
+    {
+      "latex": "\\left(0, 4\\right)",
+      "fallback": "(0, 4)"
+    },
+    " ஆகும். சரியான விடை: (2). (",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-அச்சில் அமையும் புள்ளி: (2) ",
+    {
+      "latex": "\\left(0, 4\\right)",
+      "fallback": "(0, 4)"
+    },
+    ")"
+  ],
+  "d = √((1 − 2)² + (4 − 3)²) = √(1 + 1) = √2. Correct option: (4).": [
+    {
+      "latex": "d = \\sqrt{\\left(1 - 2\\right)^{2} + \\left(4 - 3\\right)^{2}} = \\sqrt{1 + 1} = \\sqrt{2}",
+      "fallback": "d = √((1 − 2)² + (4 − 3)²) = √(1 + 1) = √2"
+    },
+    ". Correct option: (4)."
+  ],
+  "d = √((1 − 2)² + (4 − 3)²) = √(1 + 1) = √2. Correct option: (4). (Distance between (2, 3) and (1, 4): (4) √2)": [
+    {
+      "latex": "d = \\sqrt{\\left(1 - 2\\right)^{2} + \\left(4 - 3\\right)^{2}} = \\sqrt{1 + 1} = \\sqrt{2}",
+      "fallback": "d = √((1 − 2)² + (4 − 3)²) = √(1 + 1) = √2"
+    },
+    ". Correct option: (4). (Distance between ",
+    {
+      "latex": "\\left(2, 3\\right)",
+      "fallback": "(2, 3)"
+    },
+    " and ",
+    {
+      "latex": "\\left(1, 4\\right) : \\left(4\\right)\\,\\sqrt{2}",
+      "fallback": "(1, 4): (4) √2"
+    },
+    ")"
+  ],
+  "d = √((1 − 2)² + (4 − 3)²) = √(1 + 1) = √2. சரியான விடை: (4). ((2, 3) மற்றும் (1, 4) இடையே தொலைவு: (4) √2)": [
+    {
+      "latex": "d = \\sqrt{\\left(1 - 2\\right)^{2} + \\left(4 - 3\\right)^{2}} = \\sqrt{1 + 1} = \\sqrt{2}",
+      "fallback": "d = √((1 − 2)² + (4 − 3)²) = √(1 + 1) = √2"
+    },
+    ". சரியான விடை: (4). (",
+    {
+      "latex": "\\left(2, 3\\right)",
+      "fallback": "(2, 3)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\left(1, 4\\right)",
+      "fallback": "(1, 4)"
+    },
+    " இடையே தொலைவு: (4) ",
+    {
+      "latex": "\\sqrt{2}",
+      "fallback": "√2"
+    },
+    ")"
+  ],
+  "Since C(3, a − 3) lies on the x-axis, its y-coordinate is 0: a − 3 = 0 ⇒ a = 3. Correct option: (3).": [
+    "Since ",
+    {
+      "latex": "C \\left(3, a - 3\\right)",
+      "fallback": "C(3, a − 3)"
+    },
+    " lies on the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis, its ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate is ",
+    {
+      "latex": "0 : a - 3 = 0 \\Rightarrow a = 3",
+      "fallback": "0: a − 3 = 0 ⇒ a = 3"
+    },
+    ". Correct option: (3)."
+  ],
+  "Since C(3, a − 3) lies on the x-axis, its y-coordinate is 0: a − 3 = 0 ⇒ a = 3. Correct option: (3). (Points on x-axis and value of a: (3) 3)": [
+    "Since ",
+    {
+      "latex": "C \\left(3, a - 3\\right)",
+      "fallback": "C(3, a − 3)"
+    },
+    " lies on the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis, its ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-coordinate is ",
+    {
+      "latex": "0 : a - 3 = 0 \\Rightarrow a = 3",
+      "fallback": "0: a − 3 = 0 ⇒ a = 3"
+    },
+    ". Correct option: (3). (Points on ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis and value of ",
+    {
+      "latex": "a : \\left(3\\right) 3",
+      "fallback": "a: (3) 3"
+    },
+    ")"
+  ],
+  "C(3, a − 3) ஆனது x-அச்சின் மீது உள்ளதால் y = 0 ⇒ a − 3 = 0 ⇒ a = 3. சரியான விடை: (3). (x-அச்சில் அமையும் புள்ளியும் a மதிப்பும்: (3) 3)": [
+    {
+      "latex": "C \\left(3, a - 3\\right)",
+      "fallback": "C(3, a − 3)"
+    },
+    " ஆனது ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சின் மீது உள்ளதால் ",
+    {
+      "latex": "y = 0 \\Rightarrow a - 3 = 0 \\Rightarrow a = 3",
+      "fallback": "y = 0 ⇒ a − 3 = 0 ⇒ a = 3"
+    },
+    ". சரியான விடை: (3). (",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சில் அமையும் புள்ளியும் a மதிப்பும்: (3) ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    ")"
+  ],
+  "Equating corresponding coordinates: x + 2 = 5 ⇒ x = 3 and 4 = y − 2 ⇒ y = 6. Correct option: (3).": [
+    "Equating corresponding coordinates: ",
+    {
+      "latex": "x + 2 = 5 \\Rightarrow x = 3",
+      "fallback": "x + 2 = 5 ⇒ x = 3"
+    },
+    " and ",
+    {
+      "latex": "4 = y - 2 \\Rightarrow y = 6",
+      "fallback": "4 = y − 2 ⇒ y = 6"
+    },
+    ". Correct option: (3)."
+  ],
+  "Equating corresponding coordinates: x + 2 = 5 ⇒ x = 3 and 4 = y − 2 ⇒ y = 6. Correct option: (3). (Equality of ordered pairs: (3) (3, 6))": [
+    "Equating corresponding coordinates: ",
+    {
+      "latex": "x + 2 = 5 \\Rightarrow x = 3",
+      "fallback": "x + 2 = 5 ⇒ x = 3"
+    },
+    " and ",
+    {
+      "latex": "4 = y - 2 \\Rightarrow y = 6",
+      "fallback": "4 = y − 2 ⇒ y = 6"
+    },
+    ". Correct option: (3). (Equality of ordered pairs: (3) ",
+    {
+      "latex": "\\left(3, 6\\right)",
+      "fallback": "(3, 6)"
+    },
+    ")"
+  ],
+  "ஒத்த ஆயத்தொலைவுகளைச் சமப்படுத்த: x + 2 = 5 ⇒ x = 3 மற்றும் 4 = y − 2 ⇒ y = 6. சரியான விடை: (3). (வரிசைச் சோடிகளின் சமத்துவம்: (3) (3, 6))": [
+    "ஒத்த ஆயத்தொலைவுகளைச் சமப்படுத்த: ",
+    {
+      "latex": "x + 2 = 5 \\Rightarrow x = 3",
+      "fallback": "x + 2 = 5 ⇒ x = 3"
+    },
+    " மற்றும் ",
+    {
+      "latex": "4 = y - 2 \\Rightarrow y = 6",
+      "fallback": "4 = y − 2 ⇒ y = 6"
+    },
+    ". சரியான விடை: (3). (வரிசைச் சோடிகளின் சமத்துவம்: (3) ",
+    {
+      "latex": "\\left(3, 6\\right)",
+      "fallback": "(3, 6)"
+    },
+    ")"
+  ],
+  "The four quadrants are open regions that exclude the coordinate axes. Points in Q₂ have y > 0 while points in Q₃ have y < 0, so they share no common points: Q₂ ∩ Q₃ = ∅ (Null set). Correct option: (3).": [
+    "The four quadrants are open regions that exclude the coordinate axes. Points in ",
+    {
+      "latex": "Q_{2}",
+      "fallback": "Q₂"
+    },
+    " have ",
+    {
+      "latex": "y > 0",
+      "fallback": "y > 0"
+    },
+    " while points in ",
+    {
+      "latex": "Q_{3}",
+      "fallback": "Q₃"
+    },
+    " have ",
+    {
+      "latex": "y < 0",
+      "fallback": "y < 0"
+    },
+    ", so they share no common points: ",
+    {
+      "latex": "Q_{2} \\cap Q_{3} = \\varnothing",
+      "fallback": "Q₂ ∩ Q₃ = ∅"
+    },
+    " (Null set). Correct option: (3)."
+  ],
+  "The four quadrants are open regions that exclude the coordinate axes. Points in Q₂ have y > 0 while points in Q₃ have y < 0, so they share no common points: Q₂ ∩ Q₃ = ∅ (Null set). Correct option: (3). (Intersection of quadrants Q₂ ∩ Q₃: (3) Null set)": [
+    "The four quadrants are open regions that exclude the coordinate axes. Points in ",
+    {
+      "latex": "Q_{2}",
+      "fallback": "Q₂"
+    },
+    " have ",
+    {
+      "latex": "y > 0",
+      "fallback": "y > 0"
+    },
+    " while points in ",
+    {
+      "latex": "Q_{3}",
+      "fallback": "Q₃"
+    },
+    " have ",
+    {
+      "latex": "y < 0",
+      "fallback": "y < 0"
+    },
+    ", so they share no common points: ",
+    {
+      "latex": "Q_{2} \\cap Q_{3} = \\varnothing",
+      "fallback": "Q₂ ∩ Q₃ = ∅"
+    },
+    " (Null set). Correct option: (3). (Intersection of quadrants ",
+    {
+      "latex": "Q_{2} \\cap Q_{3} : \\left(3\\right)",
+      "fallback": "Q₂ ∩ Q₃: (3)"
+    },
+    " Null set)"
+  ],
+  "நான்கு காற்பகுதிகளும் அச்சுகளை உள்ளடக்காத தனித்தனிப் பகுதிகளாகும். Q₂-இல் y > 0 மற்றும் Q₃-இல் y < 0 என்பதால் பொதுப் புள்ளிகள் இல்லை: Q₂ ∩ Q₃ = ∅ (வெற்றுக் கணம்). சரியான விடை: (3). (காற்பகுதிகள் Q₂ ∩ Q₃: (3) வெற்றுக் கணம்)": [
+    "நான்கு காற்பகுதிகளும் அச்சுகளை உள்ளடக்காத தனித்தனிப் பகுதிகளாகும். ",
+    {
+      "latex": "Q_{2}",
+      "fallback": "Q₂"
+    },
+    "-இல் ",
+    {
+      "latex": "y > 0",
+      "fallback": "y > 0"
+    },
+    " மற்றும் ",
+    {
+      "latex": "Q_{3}",
+      "fallback": "Q₃"
+    },
+    "-இல் ",
+    {
+      "latex": "y < 0",
+      "fallback": "y < 0"
+    },
+    " என்பதால் பொதுப் புள்ளிகள் இல்லை: ",
+    {
+      "latex": "Q_{2} \\cap Q_{3} = \\varnothing",
+      "fallback": "Q₂ ∩ Q₃ = ∅"
+    },
+    " (வெற்றுக் கணம்). சரியான விடை: (3). (காற்பகுதிகள் ",
+    {
+      "latex": "Q_{2} \\cap Q_{3} : \\left(3\\right)",
+      "fallback": "Q₂ ∩ Q₃: (3)"
+    },
+    " வெற்றுக் கணம்)"
+  ],
+  "Distance from origin (0, 0) to (5, −1) is √(5² + (−1)²) = √(25 + 1) = √26. Correct option: (3).": [
+    "Distance from origin ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0, 0)"
+    },
+    " to ",
+    {
+      "latex": "\\left(5, - 1\\right)",
+      "fallback": "(5, −1)"
+    },
+    " is ",
+    {
+      "latex": "\\sqrt{5^{2} + \\left(- 1\\right)^{2}} = \\sqrt{25 + 1} = \\sqrt{26}",
+      "fallback": "√(5² + (−1)²) = √(25 + 1) = √26"
+    },
+    ". Correct option: (3)."
+  ],
+  "Distance from origin (0, 0) to (5, −1) is √(5² + (−1)²) = √(25 + 1) = √26. Correct option: (3). (Distance from origin to (5, −1): (3) √26)": [
+    "Distance from origin ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0, 0)"
+    },
+    " to ",
+    {
+      "latex": "\\left(5, - 1\\right)",
+      "fallback": "(5, −1)"
+    },
+    " is ",
+    {
+      "latex": "\\sqrt{5^{2} + \\left(- 1\\right)^{2}} = \\sqrt{25 + 1} = \\sqrt{26}",
+      "fallback": "√(5² + (−1)²) = √(25 + 1) = √26"
+    },
+    ". Correct option: (3). (Distance from origin to ",
+    {
+      "latex": "\\left(5, - 1\\right) : \\left(3\\right)\\,\\sqrt{26}",
+      "fallback": "(5, −1): (3) √26"
+    },
+    ")"
+  ],
+  "ஆதிப்புள்ளி (0, 0)-லிருந்து (5, −1)-க்கு உள்ள தொலைவு √(5² + (−1)²) = √26. சரியான விடை: (3). (ஆதிப்புள்ளியிலிருந்து (5, −1) தொலைவு: (3) √26)": [
+    "ஆதிப்புள்ளி ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0, 0)"
+    },
+    "-லிருந்து ",
+    {
+      "latex": "\\left(5, - 1\\right)",
+      "fallback": "(5, −1)"
+    },
+    "-க்கு உள்ள தொலைவு ",
+    {
+      "latex": "\\sqrt{5^{2} + \\left(- 1\\right)^{2}} = \\sqrt{26}",
+      "fallback": "√(5² + (−1)²) = √26"
+    },
+    ". சரியான விடை: (3). (ஆதிப்புள்ளியிலிருந்து ",
+    {
+      "latex": "\\left(5, - 1\\right)",
+      "fallback": "(5, −1)"
+    },
+    " தொலைவு: (3) ",
+    {
+      "latex": "\\sqrt{26}",
+      "fallback": "√26"
+    },
+    ")"
+  ],
+  "C = ((2×5 + 1×2)/3, (2×7 + 1×4)/3) = (12/3, 18/3) = (4, 6). Correct option: (4).": [
+    {
+      "latex": "C = \\left(\\dfrac{\\left(2 \\times 5 + 1 \\times 2\\right)}{3}, \\dfrac{\\left(2 \\times 7 + 1 \\times 4\\right)}{3}\\right) = \\left(\\dfrac{12}{3}, \\dfrac{18}{3}\\right) = \\left(4, 6\\right)",
+      "fallback": "C = ((2×5 + 1×2)/3, (2×7 + 1×4)/3) = (12/3, 18/3) = (4, 6)"
+    },
+    ". Correct option: (4)."
+  ],
+  "C = ((2×5 + 1×2)/3, (2×7 + 1×4)/3) = (12/3, 18/3) = (4, 6). Correct option: (4). (Section formula in ratio 2:1: (4) (4, 6))": [
+    {
+      "latex": "C = \\left(\\dfrac{\\left(2 \\times 5 + 1 \\times 2\\right)}{3}, \\dfrac{\\left(2 \\times 7 + 1 \\times 4\\right)}{3}\\right) = \\left(\\dfrac{12}{3}, \\dfrac{18}{3}\\right) = \\left(4, 6\\right)",
+      "fallback": "C = ((2×5 + 1×2)/3, (2×7 + 1×4)/3) = (12/3, 18/3) = (4, 6)"
+    },
+    ". Correct option: (4). (Section formula in ratio ",
+    {
+      "latex": "2 : 1 : \\left(4\\right) \\left(4, 6\\right)",
+      "fallback": "2:1: (4) (4, 6)"
+    },
+    ")"
+  ],
+  "C = ((2×5 + 1×2)/3, (2×7 + 1×4)/3) = (12/3, 18/3) = (4, 6). சரியான விடை: (4). (2:1 விகிதத்தில் பிரிக்கும் புள்ளி: (4) (4, 6))": [
+    {
+      "latex": "C = \\left(\\dfrac{\\left(2 \\times 5 + 1 \\times 2\\right)}{3}, \\dfrac{\\left(2 \\times 7 + 1 \\times 4\\right)}{3}\\right) = \\left(\\dfrac{12}{3}, \\dfrac{18}{3}\\right) = \\left(4, 6\\right)",
+      "fallback": "C = ((2×5 + 1×2)/3, (2×7 + 1×4)/3) = (12/3, 18/3) = (4, 6)"
+    },
+    ". சரியான விடை: (4). (",
+    {
+      "latex": "2 : 1",
+      "fallback": "2:1"
+    },
+    " விகிதத்தில் பிரிக்கும் புள்ளி: (4) ",
+    {
+      "latex": "\\left(4, 6\\right)",
+      "fallback": "(4, 6)"
+    },
+    ")"
+  ],
+  "Mid-point of (−4, 3) and (−2, 4) is (−3, 7/2). Equating a/3 = −3 ⇒ a = −9, and b/2 = 7/2 ⇒ b = 7. Correct option: (1).": [
+    "Mid-point of ",
+    {
+      "latex": "\\left(- 4, 3\\right)",
+      "fallback": "(−4, 3)"
+    },
+    " and ",
+    {
+      "latex": "\\left(- 2, 4\\right)",
+      "fallback": "(−2, 4)"
+    },
+    " is ",
+    {
+      "latex": "\\left(- 3, \\dfrac{7}{2}\\right)",
+      "fallback": "(−3, 7/2)"
+    },
+    ". Equating ",
+    {
+      "latex": "\\dfrac{a}{3} = - 3 \\Rightarrow a = - 9",
+      "fallback": "a/3 = −3 ⇒ a = −9"
+    },
+    ", and ",
+    {
+      "latex": "\\dfrac{b}{2} = \\dfrac{7}{2} \\Rightarrow b = 7",
+      "fallback": "b/2 = 7/2 ⇒ b = 7"
+    },
+    ". Correct option: (1)."
+  ],
+  "Mid-point of (−4, 3) and (−2, 4) is (−3, 7/2). Equating a/3 = −3 ⇒ a = −9, and b/2 = 7/2 ⇒ b = 7. Correct option: (1). (Mid-point with algebraic parameters (a/3, b/2): (1) (−9, 7))": [
+    "Mid-point of ",
+    {
+      "latex": "\\left(- 4, 3\\right)",
+      "fallback": "(−4, 3)"
+    },
+    " and ",
+    {
+      "latex": "\\left(- 2, 4\\right)",
+      "fallback": "(−2, 4)"
+    },
+    " is ",
+    {
+      "latex": "\\left(- 3, \\dfrac{7}{2}\\right)",
+      "fallback": "(−3, 7/2)"
+    },
+    ". Equating ",
+    {
+      "latex": "\\dfrac{a}{3} = - 3 \\Rightarrow a = - 9",
+      "fallback": "a/3 = −3 ⇒ a = −9"
+    },
+    ", and ",
+    {
+      "latex": "\\dfrac{b}{2} = \\dfrac{7}{2} \\Rightarrow b = 7",
+      "fallback": "b/2 = 7/2 ⇒ b = 7"
+    },
+    ". Correct option: (1). (Mid-point with algebraic parameters ",
+    {
+      "latex": "\\left(\\dfrac{a}{3}, \\dfrac{b}{2}\\right) : \\left(1\\right) \\left(- 9, 7\\right)",
+      "fallback": "(a/3, b/2): (1) (−9, 7)"
+    },
+    ")"
+  ],
+  "நடுப்புள்ளி (−3, 7/2). எனவே a/3 = −3 ⇒ a = −9, மற்றும் b/2 = 7/2 ⇒ b = 7. சரியான விடை: (1). (நடுப்புள்ளியிலிருந்து (a, b) காணுதல்: (1) (−9, 7))": [
+    "நடுப்புள்ளி ",
+    {
+      "latex": "\\left(- 3, \\dfrac{7}{2}\\right)",
+      "fallback": "(−3, 7/2)"
+    },
+    ". எனவே ",
+    {
+      "latex": "\\dfrac{a}{3} = - 3 \\Rightarrow a = - 9",
+      "fallback": "a/3 = −3 ⇒ a = −9"
+    },
+    ", மற்றும் ",
+    {
+      "latex": "\\dfrac{b}{2} = \\dfrac{7}{2} \\Rightarrow b = 7",
+      "fallback": "b/2 = 7/2 ⇒ b = 7"
+    },
+    ". சரியான விடை: (1). (நடுப்புள்ளியிலிருந்து ",
+    {
+      "latex": "\\left(a, b\\right)",
+      "fallback": "(a, b)"
+    },
+    " காணுதல்: (1) ",
+    {
+      "latex": "\\left(- 9, 7\\right)",
+      "fallback": "(−9, 7)"
+    },
+    ")"
+  ],
+  "Let ratio be k : 1. Equate x-coordinate: (−2k + 2)/(k + 1) = 1 ⇒ −2k + 2 = k + 1 ⇒ 3k = 1 ⇒ k = 1/3 (ratio 1:3). Correct option: (3).": [
+    "Let ratio be ",
+    {
+      "latex": "k : 1",
+      "fallback": "k : 1"
+    },
+    ". Equate ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-coordinate: ",
+    {
+      "latex": "\\dfrac{\\left(- 2 k + 2\\right)}{\\left(k + 1\\right)} = 1 \\Rightarrow - 2 k + 2 = k + 1 \\Rightarrow 3 k = 1 \\Rightarrow k = \\dfrac{1}{3}",
+      "fallback": "(−2k + 2)/(k + 1) = 1 ⇒ −2k + 2 = k + 1 ⇒ 3k = 1 ⇒ k = 1/3"
+    },
+    " (ratio ",
+    {
+      "latex": "1 : 3",
+      "fallback": "1:3"
+    },
+    "). Correct option: (3)."
+  ],
+  "Let ratio be k : 1. Equate x-coordinate: (−2k + 2)/(k + 1) = 1 ⇒ −2k + 2 = k + 1 ⇒ 3k = 1 ⇒ k = 1/3 (ratio 1:3). Correct option: (3). (Ratio in which Q(1, 6) divides PR: (3) 1:3)": [
+    "Let ratio be ",
+    {
+      "latex": "k : 1",
+      "fallback": "k : 1"
+    },
+    ". Equate ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-coordinate: ",
+    {
+      "latex": "\\dfrac{\\left(- 2 k + 2\\right)}{\\left(k + 1\\right)} = 1 \\Rightarrow - 2 k + 2 = k + 1 \\Rightarrow 3 k = 1 \\Rightarrow k = \\dfrac{1}{3}",
+      "fallback": "(−2k + 2)/(k + 1) = 1 ⇒ −2k + 2 = k + 1 ⇒ 3k = 1 ⇒ k = 1/3"
+    },
+    " (ratio ",
+    {
+      "latex": "1 : 3",
+      "fallback": "1:3"
+    },
+    "). Correct option: (3). (Ratio in which ",
+    {
+      "latex": "Q \\left(1, 6\\right)",
+      "fallback": "Q(1, 6)"
+    },
+    " divides ",
+    {
+      "latex": "PR : \\left(3\\right) 1 : 3",
+      "fallback": "PR: (3) 1:3"
+    },
+    ")"
+  ],
+  "விகிதம் k : 1 என்க. (−2k + 2)/(k + 1) = 1 ⇒ 3k = 1 ⇒ k = 1/3 (1:3). சரியான விடை: (3). (Q(1, 6) பிரிக்கும் விகிதம்: (3) 1:3)": [
+    "விகிதம் ",
+    {
+      "latex": "k : 1",
+      "fallback": "k : 1"
+    },
+    " என்க. ",
+    {
+      "latex": "\\dfrac{\\left(- 2 k + 2\\right)}{\\left(k + 1\\right)} = 1 \\Rightarrow 3 k = 1 \\Rightarrow k = \\dfrac{1}{3 \\left(1 : 3\\right)}",
+      "fallback": "(−2k + 2)/(k + 1) = 1 ⇒ 3k = 1 ⇒ k = 1/3 (1:3)"
+    },
+    ". சரியான விடை: (3). (",
+    {
+      "latex": "Q \\left(1, 6\\right)",
+      "fallback": "Q(1, 6)"
+    },
+    " பிரிக்கும் விகிதம்: (3) ",
+    {
+      "latex": "1 : 3",
+      "fallback": "1:3"
+    },
+    ")"
+  ],
+  "Other end = (2(−3) − 3, 2(2) − 4) = (−9, 0). Correct option: (4).": [
+    "Other end = ",
+    {
+      "latex": "\\left(2 \\left(- 3\\right) - 3, 2 \\left(2\\right) - 4\\right) = \\left(- 9, 0\\right)",
+      "fallback": "(2(−3) − 3, 2(2) − 4) = (−9, 0)"
+    },
+    ". Correct option: (4)."
+  ],
+  "Other end = (2(−3) − 3, 2(2) − 4) = (−9, 0). Correct option: (4). (Other end of circle diameter: (4) (−9, 0))": [
+    "Other end = ",
+    {
+      "latex": "\\left(2 \\left(- 3\\right) - 3, 2 \\left(2\\right) - 4\\right) = \\left(- 9, 0\\right)",
+      "fallback": "(2(−3) − 3, 2(2) − 4) = (−9, 0)"
+    },
+    ". Correct option: (4). (Other end of circle diameter: (4) ",
+    {
+      "latex": "\\left(- 9, 0\\right)",
+      "fallback": "(−9, 0)"
+    },
+    ")"
+  ],
+  "மற்றொரு முனை = (2(−3) − 3, 2(2) − 4) = (−9, 0). சரியான விடை: (4). (விட்டத்தின் மற்றொரு முனை: (4) (−9, 0))": [
+    "மற்றொரு முனை = ",
+    {
+      "latex": "\\left(2 \\left(- 3\\right) - 3, 2 \\left(2\\right) - 4\\right) = \\left(- 9, 0\\right)",
+      "fallback": "(2(−3) − 3, 2(2) − 4) = (−9, 0)"
+    },
+    ". சரியான விடை: (4). (விட்டத்தின் மற்றொரு முனை: (4) ",
+    {
+      "latex": "\\left(- 9, 0\\right)",
+      "fallback": "(−9, 0)"
+    },
+    ")"
+  ],
+  "On the x-axis, y = 0. Let the ratio be k : 1, so (k b₂ + b₁)/(k + 1) = 0 ⇒ k = −b₁/b₂, i.e., −b₁ : b₂. Correct option: (2).": [
+    "On the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis, ",
+    {
+      "latex": "y = 0",
+      "fallback": "y = 0"
+    },
+    ". Let the ratio be ",
+    {
+      "latex": "k : 1",
+      "fallback": "k : 1"
+    },
+    ", so ",
+    {
+      "latex": "\\dfrac{\\left(k b_{2} + b_{1}\\right)}{\\left(k + 1\\right)} = 0 \\Rightarrow k = \\dfrac{- b_{1}}{b_{2}}, i",
+      "fallback": "(k b₂ + b₁)/(k + 1) = 0 ⇒ k = −b₁/b₂, i"
+    },
+    ".",
+    {
+      "latex": "e",
+      "fallback": "e"
+    },
+    "., ",
+    {
+      "latex": "- b_{1} : b_{2}",
+      "fallback": "−b₁ : b₂"
+    },
+    ". Correct option: (2)."
+  ],
+  "On the x-axis, y = 0. Let the ratio be k : 1, so (k b₂ + b₁)/(k + 1) = 0 ⇒ k = −b₁/b₂, i.e., −b₁ : b₂. Correct option: (2). (Symbolic ratio of x-axis division: (2) −b₁ : b₂)": [
+    "On the ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis, ",
+    {
+      "latex": "y = 0",
+      "fallback": "y = 0"
+    },
+    ". Let the ratio be ",
+    {
+      "latex": "k : 1",
+      "fallback": "k : 1"
+    },
+    ", so ",
+    {
+      "latex": "\\dfrac{\\left(k b_{2} + b_{1}\\right)}{\\left(k + 1\\right)} = 0 \\Rightarrow k = \\dfrac{- b_{1}}{b_{2}}, i",
+      "fallback": "(k b₂ + b₁)/(k + 1) = 0 ⇒ k = −b₁/b₂, i"
+    },
+    ".",
+    {
+      "latex": "e",
+      "fallback": "e"
+    },
+    "., ",
+    {
+      "latex": "- b_{1} : b_{2}",
+      "fallback": "−b₁ : b₂"
+    },
+    ". Correct option: (2). (Symbolic ratio of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis division: (2) ",
+    {
+      "latex": "- b_{1} : b_{2}",
+      "fallback": "−b₁ : b₂"
+    },
+    ")"
+  ],
+  "x-அச்சில் y = 0. விகிதம் k : 1 எனில் (kb₂ + b₁)/(k + 1) = 0 ⇒ k = −b₁/b₂, அதாவது −b₁ : b₂. சரியான விடை: (2). (x-அச்சு பிரிக்கும் விகிதம் (குறியீட்டு வடிவம்): (2) −b₁ : b₂)": [
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சில் ",
+    {
+      "latex": "y = 0",
+      "fallback": "y = 0"
+    },
+    ". விகிதம் ",
+    {
+      "latex": "k : 1",
+      "fallback": "k : 1"
+    },
+    " எனில் (kb₂ ",
+    {
+      "latex": "+ b_{1}",
+      "fallback": "+ b₁"
+    },
+    ")/",
+    {
+      "latex": "\\left(k + 1\\right) = 0 \\Rightarrow k = \\dfrac{- b_{1}}{b_{2}}",
+      "fallback": "(k + 1) = 0 ⇒ k = −b₁/b₂"
+    },
+    ", அதாவது ",
+    {
+      "latex": "- b_{1} : b_{2}",
+      "fallback": "−b₁ : b₂"
+    },
+    ". சரியான விடை: (2). (",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சு பிரிக்கும் விகிதம் (குறியீட்டு வடிவம்): (2) ",
+    {
+      "latex": "- b_{1} : b_{2}",
+      "fallback": "−b₁ : b₂"
+    },
+    ")"
+  ],
+  "Ratio = −y₁ : y₂ = −4 : (−7) = 4 : 7. Correct option: (3).": [
+    "Ratio = ",
+    {
+      "latex": "- y_{1} : y_{2} = - 4 : \\left(- 7\\right) = 4 : 7",
+      "fallback": "−y₁ : y₂ = −4 : (−7) = 4 : 7"
+    },
+    ". Correct option: (3)."
+  ],
+  "Ratio = −y₁ : y₂ = −4 : (−7) = 4 : 7. Correct option: (3). (Ratio in which x-axis divides (6, 4) and (1, −7): (3) 4:7)": [
+    "Ratio = ",
+    {
+      "latex": "- y_{1} : y_{2} = - 4 : \\left(- 7\\right) = 4 : 7",
+      "fallback": "−y₁ : y₂ = −4 : (−7) = 4 : 7"
+    },
+    ". Correct option: (3). (Ratio in which ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-axis divides ",
+    {
+      "latex": "\\left(6, 4\\right)",
+      "fallback": "(6, 4)"
+    },
+    " and ",
+    {
+      "latex": "\\left(1, - 7\\right) : \\left(3\\right) 4 : 7",
+      "fallback": "(1, −7): (3) 4:7"
+    },
+    ")"
+  ],
+  "விகிதம் = −y₁ : y₂ = −4 : (−7) = 4 : 7. சரியான விடை: (3). (x-அச்சு (6, 4) மற்றும் (1, −7)-ஐ பிரிக்கும் விகிதம்: (3) 4:7)": [
+    "விகிதம் = ",
+    {
+      "latex": "- y_{1} : y_{2} = - 4 : \\left(- 7\\right) = 4 : 7",
+      "fallback": "−y₁ : y₂ = −4 : (−7) = 4 : 7"
+    },
+    ". சரியான விடை: (3). (",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சு ",
+    {
+      "latex": "\\left(6, 4\\right)",
+      "fallback": "(6, 4)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\left(1, - 7\\right)",
+      "fallback": "(1, −7)"
+    },
+    "-ஐ பிரிக்கும் விகிதம்: (3) ",
+    {
+      "latex": "4 : 7",
+      "fallback": "4:7"
+    },
+    ")"
+  ],
+  "A = mid(AB) + mid(CA) − mid(BC) = (3 + 2 − 1, 4 − 3 − 1) = (4, 0); B = mid(AB) + mid(BC) − mid(CA) = (3 + 1 − 2, 4 + 1 + 3) = (2, 8). Correct option: (2).": [
+    "A = mid(",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    ") + mid(",
+    {
+      "latex": "CA",
+      "fallback": "CA"
+    },
+    ") − mid",
+    {
+      "latex": "\\left(BC\\right) = \\left(3 + 2 - 1, 4 - 3 - 1\\right) = \\left(4, 0\\right);\\quad B",
+      "fallback": "(BC) = (3 + 2 − 1, 4 − 3 − 1) = (4, 0); B"
+    },
+    " = mid(",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    ") + mid(",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    ") − mid",
+    {
+      "latex": "\\left(CA\\right) = \\left(3 + 1 - 2, 4 + 1 + 3\\right) = \\left(2, 8\\right)",
+      "fallback": "(CA) = (3 + 1 − 2, 4 + 1 + 3) = (2, 8)"
+    },
+    ". Correct option: (2)."
+  ],
+  "A = mid(AB) + mid(CA) − mid(BC) = (3 + 2 − 1, 4 − 3 − 1) = (4, 0); B = mid(AB) + mid(BC) − mid(CA) = (3 + 1 − 2, 4 + 1 + 3) = (2, 8). Correct option: (2). (Vertices A and B from side mid-points: (2) (4, 0), (2, 8))": [
+    "A = mid(",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    ") + mid(",
+    {
+      "latex": "CA",
+      "fallback": "CA"
+    },
+    ") − mid",
+    {
+      "latex": "\\left(BC\\right) = \\left(3 + 2 - 1, 4 - 3 - 1\\right) = \\left(4, 0\\right);\\quad B",
+      "fallback": "(BC) = (3 + 2 − 1, 4 − 3 − 1) = (4, 0); B"
+    },
+    " = mid(",
+    {
+      "latex": "AB",
+      "fallback": "AB"
+    },
+    ") + mid(",
+    {
+      "latex": "BC",
+      "fallback": "BC"
+    },
+    ") − mid",
+    {
+      "latex": "\\left(CA\\right) = \\left(3 + 1 - 2, 4 + 1 + 3\\right) = \\left(2, 8\\right)",
+      "fallback": "(CA) = (3 + 1 − 2, 4 + 1 + 3) = (2, 8)"
+    },
+    ". Correct option: (2). (Vertices A and ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    " from side mid-points: (2) ",
+    {
+      "latex": "\\left(4, 0\\right), \\left(2, 8\\right)",
+      "fallback": "(4, 0), (2, 8)"
+    },
+    ")"
+  ],
+  "A = (3 + 2 − 1, 4 − 3 − 1) = (4, 0); B = (3 + 1 − 2, 4 + 1 + 3) = (2, 8). சரியான விடை: (2). (பக்க நடுப்புள்ளிகளிலிருந்து உச்சிகள் A, B: (2) (4, 0), (2, 8))": [
+    {
+      "latex": "A = \\left(3 + 2 - 1, 4 - 3 - 1\\right) = \\left(4, 0\\right);\\quad B = \\left(3 + 1 - 2, 4 + 1 + 3\\right) = \\left(2, 8\\right)",
+      "fallback": "A = (3 + 2 − 1, 4 − 3 − 1) = (4, 0); B = (3 + 1 − 2, 4 + 1 + 3) = (2, 8)"
+    },
+    ". சரியான விடை: (2). (பக்க நடுப்புள்ளிகளிலிருந்து உச்சிகள் ",
+    {
+      "latex": "A, B : \\left(2\\right) \\left(4, 0\\right), \\left(2, 8\\right)",
+      "fallback": "A, B: (2) (4, 0), (2, 8)"
+    },
+    ")"
+  ],
+  "M = ((−a − 3a)/2, (2b − 4b)/2) = (−4a/2, −2b/2) = (−2a, −b). Correct option: (2).": [
+    {
+      "latex": "M = \\left(\\dfrac{\\left(- a - 3 a\\right)}{2}, \\dfrac{\\left(2 b - 4 b\\right)}{2}\\right) = \\left(\\dfrac{- 4 a}{2}, \\dfrac{- 2 b}{2}\\right) = \\left(- 2 a, - b\\right)",
+      "fallback": "M = ((−a − 3a)/2, (2b − 4b)/2) = (−4a/2, −2b/2) = (−2a, −b)"
+    },
+    ". Correct option: (2)."
+  ],
+  "M = ((−a − 3a)/2, (2b − 4b)/2) = (−4a/2, −2b/2) = (−2a, −b). Correct option: (2). (Mid-point of (−a, 2b) and (−3a, −4b): (2) (−2a, −b))": [
+    {
+      "latex": "M = \\left(\\dfrac{\\left(- a - 3 a\\right)}{2}, \\dfrac{\\left(2 b - 4 b\\right)}{2}\\right) = \\left(\\dfrac{- 4 a}{2}, \\dfrac{- 2 b}{2}\\right) = \\left(- 2 a, - b\\right)",
+      "fallback": "M = ((−a − 3a)/2, (2b − 4b)/2) = (−4a/2, −2b/2) = (−2a, −b)"
+    },
+    ". Correct option: (2). (Mid-point of ",
+    {
+      "latex": "\\left(- a, 2 b\\right)",
+      "fallback": "(−a, 2b)"
+    },
+    " and ",
+    {
+      "latex": "\\left(- 3 a, - 4 b\\right) : \\left(2\\right) \\left(- 2 a, - b\\right)",
+      "fallback": "(−3a, −4b): (2) (−2a, −b)"
+    },
+    ")"
+  ],
+  "M = ((−a − 3a)/2, (2b − 4b)/2) = (−2a, −b). சரியான விடை: (2). ((−a, 2b) மற்றும் (−3a, −4b)-இன் நடுப்புள்ளி: (2) (−2a, −b))": [
+    {
+      "latex": "M = \\left(\\dfrac{\\left(- a - 3 a\\right)}{2}, \\dfrac{\\left(2 b - 4 b\\right)}{2}\\right) = \\left(- 2 a, - b\\right)",
+      "fallback": "M = ((−a − 3a)/2, (2b − 4b)/2) = (−2a, −b)"
+    },
+    ". சரியான விடை: (2). (",
+    {
+      "latex": "\\left(- a, 2 b\\right)",
+      "fallback": "(−a, 2b)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\left(- 3 a, - 4 b\\right)",
+      "fallback": "(−3a, −4b)"
+    },
+    "-இன் நடுப்புள்ளி: (2) ",
+    {
+      "latex": "\\left(- 2 a, - b\\right)",
+      "fallback": "(−2a, −b)"
+    },
+    ")"
+  ],
+  "On the y-axis, x = 0. Let the ratio be k : 1: (2k − 5)/(k + 1) = 0 ⇒ k = 5/2 ⇒ 5 : 2. Correct option: (4).": [
+    "On the ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-axis, ",
+    {
+      "latex": "x = 0",
+      "fallback": "x = 0"
+    },
+    ". Let the ratio be ",
+    {
+      "latex": "k : 1 : \\dfrac{\\left(2 k - 5\\right)}{\\left(k + 1\\right)} = 0 \\Rightarrow k = \\dfrac{5}{2} \\Rightarrow 5 : 2",
+      "fallback": "k : 1: (2k − 5)/(k + 1) = 0 ⇒ k = 5/2 ⇒ 5 : 2"
+    },
+    ". Correct option: (4)."
+  ],
+  "On the y-axis, x = 0. Let the ratio be k : 1: (2k − 5)/(k + 1) = 0 ⇒ k = 5/2 ⇒ 5 : 2. Correct option: (4). (Ratio in which y-axis divides (−5, 1) and (2, 3): (4) 5:2)": [
+    "On the ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-axis, ",
+    {
+      "latex": "x = 0",
+      "fallback": "x = 0"
+    },
+    ". Let the ratio be ",
+    {
+      "latex": "k : 1 : \\dfrac{\\left(2 k - 5\\right)}{\\left(k + 1\\right)} = 0 \\Rightarrow k = \\dfrac{5}{2} \\Rightarrow 5 : 2",
+      "fallback": "k : 1: (2k − 5)/(k + 1) = 0 ⇒ k = 5/2 ⇒ 5 : 2"
+    },
+    ". Correct option: (4). (Ratio in which ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-axis divides ",
+    {
+      "latex": "\\left(- 5, 1\\right)",
+      "fallback": "(−5, 1)"
+    },
+    " and ",
+    {
+      "latex": "\\left(2, 3\\right) : \\left(4\\right) 5 : 2",
+      "fallback": "(2, 3): (4) 5:2"
+    },
+    ")"
+  ],
+  "Y-அச்சில் x = 0. (2k − 5)/(k + 1) = 0 ⇒ k = 5/2 ⇒ 5 : 2. சரியான விடை: (4). (y-அச்சு பிரிக்கும் விகிதம்: (4) 5:2)": [
+    {
+      "latex": "Y",
+      "fallback": "Y"
+    },
+    "-அச்சில் ",
+    {
+      "latex": "x = 0",
+      "fallback": "x = 0"
+    },
+    ". ",
+    {
+      "latex": "\\dfrac{\\left(2 k - 5\\right)}{\\left(k + 1\\right)} = 0 \\Rightarrow k = \\dfrac{5}{2} \\Rightarrow 5 : 2",
+      "fallback": "(2k − 5)/(k + 1) = 0 ⇒ k = 5/2 ⇒ 5 : 2"
+    },
+    ". சரியான விடை: (4). (",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "-அச்சு பிரிக்கும் விகிதம்: (4) ",
+    {
+      "latex": "5 : 2",
+      "fallback": "5:2"
+    },
+    ")"
+  ],
+  "Diagonals bisect each other: (1 + x)/2 = (3 + 3)/2 ⇒ 1 + x = 6 ⇒ x = 5. Correct option: (2).": [
+    "Diagonals bisect each other: ",
+    {
+      "latex": "\\dfrac{\\left(1 + x\\right)}{2} = \\dfrac{\\left(3 + 3\\right)}{2} \\Rightarrow 1 + x = 6 \\Rightarrow x = 5",
+      "fallback": "(1 + x)/2 = (3 + 3)/2 ⇒ 1 + x = 6 ⇒ x = 5"
+    },
+    ". Correct option: (2)."
+  ],
+  "Diagonals bisect each other: (1 + x)/2 = (3 + 3)/2 ⇒ 1 + x = 6 ⇒ x = 5. Correct option: (2). (Find x for vertices of a parallelogram: (2) 5)": [
+    "Diagonals bisect each other: ",
+    {
+      "latex": "\\dfrac{\\left(1 + x\\right)}{2} = \\dfrac{\\left(3 + 3\\right)}{2} \\Rightarrow 1 + x = 6 \\Rightarrow x = 5",
+      "fallback": "(1 + x)/2 = (3 + 3)/2 ⇒ 1 + x = 6 ⇒ x = 5"
+    },
+    ". Correct option: (2). (Find ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " for vertices of ",
+    {
+      "latex": "a \\text{parallelogram} : \\left(2\\right) 5",
+      "fallback": "a parallelogram: (2) 5"
+    },
+    ")"
+  ],
+  "மூலைவிட்டங்கள் ஒன்றையொன்று இருசமக் கூறிடும்: (1 + x)/2 = (3 + 3)/2 ⇒ x = 5. சரியான விடை: (2). (இணைகரத்தின் உச்சிகளில் x-இன் மதிப்பு: (2) 5)": [
+    "மூலைவிட்டங்கள் ஒன்றையொன்று இருசமக் கூறிடும்: ",
+    {
+      "latex": "\\dfrac{\\left(1 + x\\right)}{2} = \\dfrac{\\left(3 + 3\\right)}{2} \\Rightarrow x = 5",
+      "fallback": "(1 + x)/2 = (3 + 3)/2 ⇒ x = 5"
+    },
+    ". சரியான விடை: (2). (இணைகரத்தின் உச்சிகளில் ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-இன் மதிப்பு: (2) ",
+    {
+      "latex": "5",
+      "fallback": "5"
     },
     ")"
   ]
