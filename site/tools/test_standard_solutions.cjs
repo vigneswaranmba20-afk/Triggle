@@ -245,7 +245,13 @@ assert.equal(ch7BPassports.independentAudit.phase1.sourceUnblockAddendum.sha256,
 assert.equal(ch7BPassports.independentAudit.phase2.status,'CONDITIONAL_GO_REMEDIATION_IN_PROGRESS','Do not claim release-ready from conditional Phase 2 audit');
 assert.equal(ch7BPassports.independentAudit.phase2.reportSha256,'bd84ad87f1593d7ab4d1539710a89ba4876071005e760628df8b31c06b8c0079');
 assert.equal(ch7BPassports.releaseGates.merged,false,'Do not claim publication while draft');
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds];
+const ch7Ex72Inv=require('../../docs/trace/source-inventories/g10-ch7-ex7-2.json');
+assert.equal(ch7Ex72Inv.questionParts,10,'Ten source-indexed Ch7 Ex7.2 parts');
+const ch7Ex72Ids=ch7Ex72Inv.questions.map(q=>'c10-7-ex7-2-q'+q.question);
+const ch7Ex73Inv=require('../../docs/trace/source-inventories/g10-ch7-ex7-3.json');
+assert.equal(ch7Ex73Inv.questionParts,9,'Nine source-indexed Ch7 Ex7.3 parts');
+const ch7Ex73Ids=ch7Ex73Inv.questions.flatMap(q=>q.parts.length===1&&q.parts[0]==='whole'?['c10-7-ex7-3-q'+q.question]:q.parts.map(p=>'c10-7-ex7-3-q'+q.question+'-'+p));
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds,...ch7Ex72Ids,...ch7Ex73Ids];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -359,6 +365,12 @@ for(const [grade,data] of Object.entries(classes)){
    assert.equal(item.translationReview,'pending');
    assert.equal(item.sourceFidelity?.status,'page-visual-checked');
    assert(!item.q.ta,'Do not manufacture unreviewed Tamil authored teaching copy '+item.id);
+  }else if(grade==='10'&&(ch7Ex72Ids.includes(item.id)||ch7Ex73Ids.includes(item.id))){
+   assert.equal(item.edition,'2025');
+   assert.equal(item.sourceFidelity?.status,'page-visual-checked');
+   assert.equal(item.translationReview,'2025-tamil-pdf-checked-teacher-review-pending');
+   assert.ok(item.q?.en&&item.q?.ta,'Bilingual 2025 source question '+item.id);
+   assert.ok(item.answer&&item.answerTa,'Bilingual answer '+item.id);
   }else if(grade==='9'&&g9Ex64Release.records[item.id]){
    const proof=g9Ex64Release.records[item.id];
    assert.equal(hash,proof.sha256,'Source-pinned four-figure-table release '+item.id);

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 440" role="img" aria-labelledby="title desc">
+<title id="title">Cubical block of side 7 cm surmounted by a hemisphere</title>
+<desc id="desc">A cube with edge length 7 cm has a hemisphere of diameter 7 cm (radius 3.5 cm) sitting on its top square face. The circular base of the hemisphere covers part of the top face, while the curved dome adds 2πr² to the exposed surface area.</desc>
+<rect width="660" height="440" rx="18" fill="#fcfaf6"/>
+<text x="330" y="34" font-family="system-ui,Arial,sans-serif" font-size="22" text-anchor="middle" font-weight="700" fill="#173750">Cube (7 cm) topped by a hemisphere (r = 3.5 cm)</text>
+
+<!-- Cube faces (front, right side, top) -->
+<!-- Front face: (180,210) to (360,210) to (360,380) to (180,380) -->
+<polygon points="180,210 360,210 360,380 180,380" fill="#dbeaf3" stroke="#236180" stroke-width="3" stroke-linejoin="round"/>
+<!-- Right face: (360,210) to (445,155) to (445,325) to (360,380) -->
+<polygon points="360,210 445,155 445,325 360,380" fill="#bfd9ea" stroke="#236180" stroke-width="3" stroke-linejoin="round"/>
+<!-- Top face: (180,210) to (265,155) to (445,155) to (360,210) -->
+<polygon points="180,210 265,155 445,155 360,210" fill="#eef6fb" stroke="#236180" stroke-width="3" stroke-linejoin="round"/>
+
+<!-- Circular base of hemisphere sitting centered on top face (center ~ (312.5, 182.5)) -->
+<ellipse cx="312.5" cy="182.5" rx="88" ry="26" fill="#e6cfa0" fill-opacity="0.55" stroke="#456e83" stroke-width="2" stroke-dasharray="6 5"/>
+
+<!-- Hemisphere dome rising from the circular base -->
+<path d="M224.5 182.5 A88 86 0 0 1 400.5 182.5 A88 26 0 0 1 224.5 182.5 Z" fill="#f7dfaa" stroke="#236180" stroke-width="3" stroke-linejoin="round"/>
+<!-- Highlight arc on dome -->
+<path d="M248 158 A68 64 0 0 1 312 114" fill="none" stroke="#fff9eb" stroke-width="3.5" stroke-linecap="round"/>
+
+<!-- Radius indicator on hemisphere base -->
+<path d="M312.5 182.5 H400.5" stroke="#bf6d30" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="312.5" cy="182.5" r="4.5" fill="#bf6d30"/>
+<circle cx="400.5" cy="182.5" r="4.5" fill="#bf6d30"/>
+
+<!-- Cube edge dimension bar (bottom) -->
+<g stroke="#456e83" stroke-width="2">
+  <path d="M180 398 H360"/>
+  <path d="M180 391 V405 M360 391 V405"/>
+</g>
+<!-- Cube height dimension bar (left) -->
+<g stroke="#456e83" stroke-width="2">
+  <path d="M156 210 V380"/>
+  <path d="M149 210 H163 M149 380 H163"/>
+</g>
+
+<!-- Callout leaders -->
+<g stroke="#657f97" stroke-width="2" fill="none" stroke-linecap="round">
+  <path d="M376 132 L444 96 H456"/>
+  <path d="M362 182 L448 214 H460"/>
+</g>
+
+<!-- Labels -->
+<g font-family="system-ui,Arial,sans-serif" fill="#173750" font-weight="700">
+  <rect x="458" y="76" width="176" height="38" rx="10" fill="#fff" stroke="#dce7ec"/>
+  <text x="546" y="101" font-size="18" text-anchor="middle">Dome CSA = 2πr²</text>
+
+  <rect x="462" y="194" width="176" height="38" rx="10" fill="#fff" stroke="#dce7ec"/>
+  <text x="550" y="219" font-size="18" text-anchor="middle" fill="#bf6d30">r = 3.5 cm (d = 7)</text>
+
+  <rect x="26" y="276" width="116" height="38" rx="10" fill="#fff" stroke="#dce7ec"/>
+  <text x="84" y="301" font-size="18" text-anchor="middle">a = 7 cm</text>
+
+  <rect x="216" y="405" width="108" height="30" rx="8" fill="#fff" stroke="#dce7ec"/>
+  <text x="270" y="426" font-size="17" text-anchor="middle">7 cm</text>
+</g>
+</svg>
