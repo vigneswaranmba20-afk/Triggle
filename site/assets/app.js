@@ -221,7 +221,7 @@
    list.scrollTop=0;
    dialog.showModal();
  }
- function renderGrades(){const data=[{num:9,icon:'◈'},{num:10,icon:'◈'},{num:11,icon:'◈'},{num:12,icon:'◈'}];
+ function renderGrades(){const data=[{num:9,icon:'◈'},{num:10,icon:'◈'}];
   for(const type of ['side','dock']){
    const where=$(type==='side'?'sideClasses':'classDock');where.replaceChildren();
    for(const g of data){const b=document.createElement('button');b.type='button';b.className=type==='side'?'side-grade':'dock-grade';b.classList.toggle('active',!homeView&&grade===g.num);b.setAttribute('aria-pressed',String(!homeView&&grade===g.num));b.setAttribute('aria-label',ui('class')+' '+g.num);b.innerHTML=type==='side'?'<span>'+ui('class')+'</span><b>'+g.num+'</b>':'<strong>'+g.num+'</strong><span>'+ui('class')+'</span>';b.addEventListener('click',()=>changeGrade(g.num));where.append(b);}
