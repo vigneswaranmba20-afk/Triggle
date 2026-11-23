@@ -8,7 +8,7 @@ for(const file of scripts)vm.runInContext(read(file),context,{filename:file,time
 const lessons=new Map(context.window.TRIGGLE_CLASSES[10].items.map(item=>[item.id,item]));
 const hints=context.window.TriggleWhyStepG10.hints,ids=Object.keys(hints);
 assert.ok(lessons.size>=136,'Grade 10 baseline authored catalogue');
-assert.equal(ids.length,145,'Eight source-bound Exercise 2.3 bridges plus the reviewed Grade 10 baseline');
+assert.equal(ids.length,268,'123 Chapter 3 Algebra bridges plus eight Exercise 2.3 bridges and the reviewed Grade 10 baseline');
 const pages=['data/why-step-g10.js','data/why-step-g10-coverage.js','assets/why-step-g10.js','assets/why-step-g10.css'];
 for(const asset of pages){assert.ok(html.includes('./'+asset),'HTML missing '+asset);assert.ok(sw.includes('./'+asset),'Offline cache missing '+asset);}
 assert.ok(html.indexOf('data/why-step-g10.js')<html.indexOf('data/why-step-g10-coverage.js'),'Base must load before extension');

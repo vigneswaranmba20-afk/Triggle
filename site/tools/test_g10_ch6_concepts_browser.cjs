@@ -35,9 +35,31 @@ async function assertStudioAndLayout(page,label){
       return{cls:b.className,w:Math.round(r.width),h:Math.round(r.height)};
     }).filter(b=>b.h>0&&(b.h<40||b.w<40));
     const svgs=[...document.querySelectorAll('.g10ch4-studio svg')].map(s=>s.getBoundingClientRect()).filter(r=>r.width>40&&r.height>40);
-    return{docOverflow,clipped,smallButtons,svgCount:svgs.length};
+    const refText=document.querySelector('.sp2-stage-reference')?.textContent||'';
+    const svgIssues=[];
+    for(const svg of [...document.querySelectorAll('.g10ch4-lab svg, .g10ch4-glance-visual svg')].filter(s=>!s.closest('.katex'))){
+      const sr=svg.getBoundingClientRect();
+      const texts=[...svg.querySelectorAll('text')].filter(t=>t.textContent.trim().length>0);
+      for(const t of texts){
+        const r=t.getBoundingClientRect();
+        if(r.width>0&&(r.left<sr.left-2||r.right>sr.right+2||r.top<sr.top-2||r.bottom>sr.bottom+2)){
+          svgIssues.push({type:'clip',text:t.textContent.trim()});
+        }
+      }
+      for(let i=0;i<texts.length;i++){
+        for(let j=i+1;j<texts.length;j++){
+          const a=texts[i].getBoundingClientRect(),b=texts[j].getBoundingClientRect();
+          const ox=Math.min(a.right,b.right)-Math.max(a.left,b.left);
+          const oy=Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top);
+          if(ox>3&&oy>3)svgIssues.push({type:'overlap',a:texts[i].textContent.trim(),b:texts[j].textContent.trim()});
+        }
+      }
+    }
+    return{docOverflow,clipped,smallButtons,svgCount:svgs.length,refText,svgIssues};
   });
   assert.equal(metrics.docOverflow,0,`${label}: horizontal overflow ${metrics.docOverflow}px`);
+  assert(metrics.refText.includes('EN p.')&&metrics.refText.includes('TA p.'),`${label}: missing 2025 EN/TA page citation: ${metrics.refText}`);
+  assert.deepEqual(metrics.svgIssues,[],`${label}: SVG collision/clipping issues: ${JSON.stringify(metrics.svgIssues)}`);
   assert.deepEqual(metrics.clipped,[],`${label}: clipped display formulas: ${JSON.stringify(metrics.clipped)}`);
   assert.deepEqual(metrics.smallButtons,[],`${label}: sub-40px touch controls: ${JSON.stringify(metrics.smallButtons)}`);
   assert(metrics.svgCount>=1,`${label}: expected rendered SVGs`);

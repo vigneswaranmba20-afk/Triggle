@@ -488,7 +488,7 @@ window.TRIGGLE_G10_CH6_PATH={
         "ta": "sin²θ + cos²θ = 1; எனவே sin²θ = 1 − cos²θ மற்றும் cos²θ = 1 − sin²θ"
       },
       "math": {
-        "latex": "\\begin{aligned}&\\sin^2\\theta+\\cos^2\\theta=1\\\\&\\sin^2\\theta=1-\\cos^2\\theta,\\quad \\cos^2\\theta=1-\\sin^2\\theta\\end{aligned}",
+        "latex": "\\begin{aligned}&\\sin^2\\theta+\\cos^2\\theta=1\\\\&\\sin^2\\theta=1-\\cos^2\\theta,\\\\&\\cos^2\\theta=1-\\sin^2\\theta\\end{aligned}",
         "fallback": "sin²θ + cos²θ = 1; sin²θ = 1 − cos²θ; cos²θ = 1 − sin²θ"
       },
       "glanceVisual": "identity-sin-cos",

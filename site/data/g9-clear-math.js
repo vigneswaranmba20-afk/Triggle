@@ -162,8 +162,13 @@ const records=[
         },
         "\n(iv) ",
         {
-          "latex": "\\cos C \\left(v\\right) \\tan C",
-          "fallback": "cos C   (v) tan C"
+          "latex": "\\cos C",
+          "fallback": "cos C"
+        },
+        "   (v) ",
+        {
+          "latex": "\\tan C",
+          "fallback": "tan C"
         },
         "   (vi) ",
         {
@@ -184,13 +189,8 @@ const records=[
         ",",
         " ",
         {
-          "latex": "DC = 16;\\quad AD",
-          "fallback": "DC = 16; AD"
-        },
-        " ⟂ ",
-        {
-          "latex": "BC",
-          "fallback": "BC"
+          "latex": "DC = 16;\\quad AD \\perp BC",
+          "fallback": "DC = 16; AD ⟂ BC"
         },
         "."
       ],
@@ -212,8 +212,13 @@ const records=[
         },
         "\n(iv) ",
         {
-          "latex": "\\cos C \\left(v\\right) \\tan C",
-          "fallback": "cos C   (v) tan C"
+          "latex": "\\cos C",
+          "fallback": "cos C"
+        },
+        "   (v) ",
+        {
+          "latex": "\\tan C",
+          "fallback": "tan C"
         },
         "   (vi) ",
         {
@@ -234,13 +239,8 @@ const records=[
         ",",
         " ",
         {
-          "latex": "DC = 16;\\quad AD",
-          "fallback": "DC = 16; AD"
-        },
-        " ⟂ ",
-        {
-          "latex": "BC",
-          "fallback": "BC"
+          "latex": "DC = 16;\\quad AD \\perp BC",
+          "fallback": "DC = 16; AD ⟂ BC"
         },
         "."
       ]
@@ -590,10 +590,10 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Cosine is adjacent over hypotenuse. ",
+            "Cosine is adjacent over hypotenuse. A ",
             {
-              "latex": "A 3 - 4 - 5",
-              "fallback": "A 3–4–5"
+              "latex": "3 - 4 - 5",
+              "fallback": "3–4–5"
             },
             " right triangle has opposite side ",
             {
@@ -3102,9 +3102,8 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{gathered}49^{\\circ} = 49^{\\circ} \\\\ 00'\\end{gathered}",
-          "fallback": "49°=49°00′",
-          "display": true
+          "latex": "49^{\\circ} = 49^{\\circ}\\,00'",
+          "fallback": "49°=49°00′"
         },
         "reasonMath": {
           "en": [
@@ -3137,7 +3136,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\sin 49^{\\circ} 00' = 0.7547",
+          "latex": "\\sin 49^{\\circ}\\,00' = 0.7547",
           "fallback": "sin49°00′=0.7547",
           "display": true
         },
@@ -3178,14 +3177,14 @@ const records=[
       "en": [
         "Evaluate ",
         {
-          "latex": "\\cos 74^{\\circ} 39'",
+          "latex": "\\cos 74^{\\circ}\\,39'",
           "fallback": "cos74°39′"
         },
         " to four decimal places."
       ],
       "ta": [
         {
-          "latex": "\\cos 74^{\\circ} 39'",
+          "latex": "\\cos 74^{\\circ}\\,39'",
           "fallback": "cos74°39′"
         },
         " மதிப்பை நான்கு தசம இடங்களுக்கு காண்க."
@@ -3198,7 +3197,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{gathered}74^{\\circ} \\\\ 39' = 74^{\\circ} \\\\ 36' + 3'\\end{gathered}",
+          "latex": "74^{\\circ}\\,39' = 74^{\\circ}\\,36' + 3'",
           "fallback": "74°39′=74°36′+3′",
           "display": true
         },
@@ -3206,12 +3205,8 @@ const records=[
           "en": [
             "Split ",
             {
-              "latex": "74^{\\circ}",
-              "fallback": "74°"
-            },
-            {
-              "latex": "39'",
-              "fallback": "39′"
+              "latex": "74^{\\circ}\\,39'",
+              "fallback": "74°39′"
             },
             " into the preceding ",
             {
@@ -3227,21 +3222,13 @@ const records=[
           ],
           "ta": [
             {
-              "latex": "74^{\\circ}",
-              "fallback": "74°"
-            },
-            {
-              "latex": "39'",
-              "fallback": "39′"
+              "latex": "74^{\\circ}\\,39'",
+              "fallback": "74°39′"
             },
             " கோணத்தை அட்டவணையின் ",
             {
-              "latex": "74^{\\circ}",
-              "fallback": "74°"
-            },
-            {
-              "latex": "36'",
-              "fallback": "36′"
+              "latex": "74^{\\circ}\\,36'",
+              "fallback": "74°36′"
             },
             " நெடுவரிசை மற்றும் கூடுதல் ",
             {
@@ -3254,7 +3241,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\cos 74^{\\circ} 36' = 0.2656 \\\\ &MD \\left(3'\\right) = 0.0008\\end{aligned}",
+          "latex": "\\begin{aligned}&\\cos 74^{\\circ}\\,36' = 0.2656 \\\\ &MD \\left(3'\\right) = 0.0008\\end{aligned}",
           "fallback": "cos74°36′=0.2656; MD(3′)=0.0008",
           "display": true
         },
@@ -3267,12 +3254,8 @@ const records=[
             },
             " at ",
             {
-              "latex": "74^{\\circ}",
-              "fallback": "74°"
-            },
-            {
-              "latex": "36'",
-              "fallback": "36′"
+              "latex": "74^{\\circ}\\,36'",
+              "fallback": "74°36′"
             },
             ". For ",
             {
@@ -3289,7 +3272,7 @@ const records=[
           "ta": [
             "கோசைன் அட்டவணையில் ",
             {
-              "latex": "\\cos 74^{\\circ} 36' = 0.2656",
+              "latex": "\\cos 74^{\\circ}\\,36' = 0.2656",
               "fallback": "cos74°36′ = 0.2656"
             },
             ". கூடுதல் ",
@@ -3308,7 +3291,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\cos 74^{\\circ} 39' \\approx 0.2656 - 0.0008 = 0.2648",
+          "latex": "\\cos 74^{\\circ}\\,39' \\approx 0.2656 - 0.0008 = 0.2648",
           "fallback": "cos74°39′≈0.2656−0.0008=0.2648",
           "display": true
         },
@@ -3339,14 +3322,14 @@ const records=[
       "en": [
         "Find ",
         {
-          "latex": "\\tan 54^{\\circ} 26'",
+          "latex": "\\tan 54^{\\circ}\\,26'",
           "fallback": "tan54°26′"
         },
         ", reporting four decimal places."
       ],
       "ta": [
         {
-          "latex": "\\tan 54^{\\circ} 26'",
+          "latex": "\\tan 54^{\\circ}\\,26'",
           "fallback": "tan54°26′"
         },
         " மதிப்பை நான்கு தசம இடங்களுக்கு காண்க."
@@ -3359,7 +3342,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{gathered}54^{\\circ} \\\\ 26' = 54^{\\circ} \\\\ 24' + 2'\\end{gathered}",
+          "latex": "54^{\\circ}\\,26' = 54^{\\circ}\\,24' + 2'",
           "fallback": "54°26′=54°24′+2′",
           "display": true
         },
@@ -3367,12 +3350,8 @@ const records=[
           "en": [
             "Use the preceding tangent-table column ",
             {
-              "latex": "54^{\\circ}",
-              "fallback": "54°"
-            },
-            {
-              "latex": "24'",
-              "fallback": "24′"
+              "latex": "54^{\\circ}\\,24'",
+              "fallback": "54°24′"
             },
             " and keep the remaining ",
             {
@@ -3384,12 +3363,8 @@ const records=[
           "ta": [
             "டேன்ஜென்ட் அட்டவணையில் முந்தைய ",
             {
-              "latex": "54^{\\circ}",
-              "fallback": "54°"
-            },
-            {
-              "latex": "24'",
-              "fallback": "24′"
+              "latex": "54^{\\circ}\\,24'",
+              "fallback": "54°24′"
             },
             " நெடுவரிசையை எடுத்துக் கொண்டு மீதமுள்ள ",
             {
@@ -3402,7 +3377,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\tan 54^{\\circ} 24' = 1.3968 \\\\ &MD \\left(2'\\right) = 0.0017\\end{aligned}",
+          "latex": "\\begin{aligned}&\\tan 54^{\\circ}\\,24' = 1.3968 \\\\ &MD \\left(2'\\right) = 0.0017\\end{aligned}",
           "fallback": "tan54°24′=1.3968; MD(2′)=0.0017",
           "display": true
         },
@@ -3410,7 +3385,7 @@ const records=[
           "en": [
             "Read ",
             {
-              "latex": "\\tan 54^{\\circ} 24'",
+              "latex": "\\tan 54^{\\circ}\\,24'",
               "fallback": "tan54°24′"
             },
             " as ",
@@ -3432,7 +3407,7 @@ const records=[
           ],
           "ta": [
             {
-              "latex": "\\tan 54^{\\circ} 24'",
+              "latex": "\\tan 54^{\\circ}\\,24'",
               "fallback": "tan54°24′"
             },
             " அட்டவணை மதிப்பு ",
@@ -3456,7 +3431,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\tan 54^{\\circ} 26' \\approx 1.3968 + 0.0017 = 1.3985",
+          "latex": "\\tan 54^{\\circ}\\,26' \\approx 1.3968 + 0.0017 = 1.3985",
           "fallback": "tan54°26′≈1.3968+0.0017=1.3985",
           "display": true
         },
@@ -3473,14 +3448,14 @@ const records=[
       "en": [
         "Find ",
         {
-          "latex": "\\sin 21^{\\circ} 21'",
+          "latex": "\\sin 21^{\\circ}\\,21'",
           "fallback": "sin21°21′"
         },
         " to four decimal places."
       ],
       "ta": [
         {
-          "latex": "\\sin 21^{\\circ} 21'",
+          "latex": "\\sin 21^{\\circ}\\,21'",
           "fallback": "sin21°21′"
         },
         " மதிப்பை நான்கு தசம இடங்களுக்கு காண்க."
@@ -3493,7 +3468,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{gathered}21^{\\circ} \\\\ 21' = 21^{\\circ} \\\\ 18' + 3'\\end{gathered}",
+          "latex": "21^{\\circ}\\,21' = 21^{\\circ}\\,18' + 3'",
           "fallback": "21°21′=21°18′+3′",
           "display": true
         },
@@ -3506,12 +3481,8 @@ const records=[
             },
             "-minute sine-table column is ",
             {
-              "latex": "21^{\\circ}",
-              "fallback": "21°"
-            },
-            {
-              "latex": "18'",
-              "fallback": "18′"
+              "latex": "21^{\\circ}\\,18'",
+              "fallback": "21°18′"
             },
             ", with ",
             {
@@ -3528,12 +3499,8 @@ const records=[
             },
             " நிமிட நெடுவரிசை ",
             {
-              "latex": "21^{\\circ}",
-              "fallback": "21°"
-            },
-            {
-              "latex": "18'",
-              "fallback": "18′"
+              "latex": "21^{\\circ}\\,18'",
+              "fallback": "21°18′"
             },
             "; மீதம் ",
             {
@@ -3546,7 +3513,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\sin 21^{\\circ} 18' = 0.3633 \\\\ &MD \\left(3'\\right) = 0.0008\\end{aligned}",
+          "latex": "\\begin{aligned}&\\sin 21^{\\circ}\\,18' = 0.3633 \\\\ &MD \\left(3'\\right) = 0.0008\\end{aligned}",
           "fallback": "sin21°18′=0.3633; MD(3′)=0.0008",
           "display": true
         },
@@ -3554,7 +3521,7 @@ const records=[
           "en": [
             "Read ",
             {
-              "latex": "\\sin 21^{\\circ} 18'",
+              "latex": "\\sin 21^{\\circ}\\,18'",
               "fallback": "sin21°18′"
             },
             " as ",
@@ -3564,10 +3531,10 @@ const records=[
             },
             " and the ",
             {
-              "latex": "3' \\text{mean}",
-              "fallback": "3′ mean"
+              "latex": "3'",
+              "fallback": "3′"
             },
-            " difference as ",
+            " mean difference as ",
             {
               "latex": "0.0008",
               "fallback": "0.0008"
@@ -3576,7 +3543,7 @@ const records=[
           ],
           "ta": [
             {
-              "latex": "\\sin 21^{\\circ} 18'",
+              "latex": "\\sin 21^{\\circ}\\,18'",
               "fallback": "sin21°18′"
             },
             " மதிப்பு ",
@@ -3600,7 +3567,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\sin 21^{\\circ} 21' \\approx 0.3633 + 0.0008 = 0.3641",
+          "latex": "\\sin 21^{\\circ}\\,21' \\approx 0.3633 + 0.0008 = 0.3641",
           "fallback": "sin21°21′≈0.3633+0.0008=0.3641",
           "display": true
         },
@@ -3617,14 +3584,14 @@ const records=[
       "en": [
         "Find ",
         {
-          "latex": "\\cos 33^{\\circ} 53'",
+          "latex": "\\cos 33^{\\circ}\\,53'",
           "fallback": "cos33°53′"
         },
         " to four decimal places."
       ],
       "ta": [
         {
-          "latex": "\\cos 33^{\\circ} 53'",
+          "latex": "\\cos 33^{\\circ}\\,53'",
           "fallback": "cos33°53′"
         },
         " மதிப்பை நான்கு தசம இடங்களுக்கு காண்க."
@@ -3637,7 +3604,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{gathered}33^{\\circ} \\\\ 53' = 33^{\\circ} \\\\ 48' + 5'\\end{gathered}",
+          "latex": "33^{\\circ}\\,53' = 33^{\\circ}\\,48' + 5'",
           "fallback": "33°53′=33°48′+5′",
           "display": true
         },
@@ -3645,12 +3612,8 @@ const records=[
           "en": [
             "Use the preceding cosine-table column ",
             {
-              "latex": "33^{\\circ}",
-              "fallback": "33°"
-            },
-            {
-              "latex": "48'",
-              "fallback": "48′"
+              "latex": "33^{\\circ}\\,48'",
+              "fallback": "33°48′"
             },
             " and the remaining ",
             {
@@ -3662,12 +3625,8 @@ const records=[
           "ta": [
             "கோசைன் அட்டவணையின் ",
             {
-              "latex": "33^{\\circ}",
-              "fallback": "33°"
-            },
-            {
-              "latex": "48'",
-              "fallback": "48′"
+              "latex": "33^{\\circ}\\,48'",
+              "fallback": "33°48′"
             },
             " நெடுவரிசையையும் மீதமுள்ள ",
             {
@@ -3680,7 +3639,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\cos 33^{\\circ} 48' = 0.8310 \\\\ &MD \\left(5'\\right) = 0.0008\\end{aligned}",
+          "latex": "\\begin{aligned}&\\cos 33^{\\circ}\\,48' = 0.8310 \\\\ &MD \\left(5'\\right) = 0.0008\\end{aligned}",
           "fallback": "cos33°48′=0.8310; MD(5′)=0.0008",
           "display": true
         },
@@ -3688,7 +3647,7 @@ const records=[
           "en": [
             "Read ",
             {
-              "latex": "\\cos 33^{\\circ} 48'",
+              "latex": "\\cos 33^{\\circ}\\,48'",
               "fallback": "cos33°48′"
             },
             " as ",
@@ -3698,10 +3657,10 @@ const records=[
             },
             ". The ",
             {
-              "latex": "5' \\text{mean}",
-              "fallback": "5′ mean"
+              "latex": "5'",
+              "fallback": "5′"
             },
-            " difference is ",
+            " mean difference is ",
             {
               "latex": "0.0008",
               "fallback": "0.0008"
@@ -3710,7 +3669,7 @@ const records=[
           ],
           "ta": [
             {
-              "latex": "\\cos 33^{\\circ} 48'",
+              "latex": "\\cos 33^{\\circ}\\,48'",
               "fallback": "cos33°48′"
             },
             " அட்டவணை மதிப்பு ",
@@ -3734,7 +3693,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\cos 33^{\\circ} 53' \\approx 0.8310 - 0.0008 = 0.8302",
+          "latex": "\\cos 33^{\\circ}\\,53' \\approx 0.8310 - 0.0008 = 0.8302",
           "fallback": "cos33°53′≈0.8310−0.0008=0.8302",
           "display": true
         },
@@ -3751,14 +3710,14 @@ const records=[
       "en": [
         "Find ",
         {
-          "latex": "\\tan 70^{\\circ} 17'",
+          "latex": "\\tan 70^{\\circ}\\,17'",
           "fallback": "tan70°17′"
         },
         " to four decimal places."
       ],
       "ta": [
         {
-          "latex": "\\tan 70^{\\circ} 17'",
+          "latex": "\\tan 70^{\\circ}\\,17'",
           "fallback": "tan70°17′"
         },
         " மதிப்பை நான்கு தசம இடங்களுக்கு காண்க."
@@ -3771,7 +3730,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{gathered}70^{\\circ} \\\\ 17' = 70^{\\circ} \\\\ 12' + 5'\\end{gathered}",
+          "latex": "70^{\\circ}\\,17' = 70^{\\circ}\\,12' + 5'",
           "fallback": "70°17′=70°12′+5′",
           "display": true
         },
@@ -3784,40 +3743,20 @@ const records=[
             },
             "-minute tangent-table column: ",
             {
-              "latex": "70^{\\circ}",
-              "fallback": "70°"
-            },
-            {
-              "latex": "17' = 70^{\\circ}",
-              "fallback": "17′ = 70°"
-            },
-            {
-              "latex": "12' + 5'",
-              "fallback": "12′ + 5′"
+              "latex": "70^{\\circ}\\,17' = 70^{\\circ}\\,12' + 5'",
+              "fallback": "70°17′ = 70°12′ + 5′"
             },
             "."
           ],
           "ta": [
             {
-              "latex": "70^{\\circ}",
-              "fallback": "70°"
-            },
-            {
-              "latex": "17' = 70^{\\circ}",
-              "fallback": "17′ = 70°"
-            },
-            {
-              "latex": "12' + 5'",
-              "fallback": "12′ + 5′"
+              "latex": "70^{\\circ}\\,17' = 70^{\\circ}\\,12' + 5'",
+              "fallback": "70°17′ = 70°12′ + 5′"
             },
             ". டேன்ஜென்ட் அட்டவணையில் முந்தைய ",
             {
-              "latex": "70^{\\circ}",
-              "fallback": "70°"
-            },
-            {
-              "latex": "12'",
-              "fallback": "12′"
+              "latex": "70^{\\circ}\\,12'",
+              "fallback": "70°12′"
             },
             " நெடுவரிசையைப் பயன்படுத்தவும்."
           ]
@@ -3825,7 +3764,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\tan 70^{\\circ} 12' = 2.7776 \\\\ &MD \\left(5'\\right) = 0.0131\\end{aligned}",
+          "latex": "\\begin{aligned}&\\tan 70^{\\circ}\\,12' = 2.7776 \\\\ &MD \\left(5'\\right) = 0.0131\\end{aligned}",
           "fallback": "tan70°12′=2.7776; MD(5′)=0.0131",
           "display": true
         },
@@ -3833,15 +3772,15 @@ const records=[
           "en": [
             "The textbook example gives ",
             {
-              "latex": "\\tan 70^{\\circ} 12' = 2.7776",
+              "latex": "\\tan 70^{\\circ}\\,12' = 2.7776",
               "fallback": "tan70°12′ = 2.7776"
             },
             ". The ",
             {
-              "latex": "5' \\text{mean}",
-              "fallback": "5′ mean"
+              "latex": "5'",
+              "fallback": "5′"
             },
-            " difference is ",
+            " mean difference is ",
             {
               "latex": "0.0131",
               "fallback": "0.0131"
@@ -3851,7 +3790,7 @@ const records=[
           "ta": [
             "பாடநூல் எடுத்துக்காட்டில் ",
             {
-              "latex": "\\tan 70^{\\circ} 12' = 2.7776",
+              "latex": "\\tan 70^{\\circ}\\,12' = 2.7776",
               "fallback": "tan70°12′ = 2.7776"
             },
             ". கூடுதல் ",
@@ -3870,7 +3809,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\tan 70^{\\circ} 17' \\approx 2.7776 + 0.0131 = 2.7907",
+          "latex": "\\tan 70^{\\circ}\\,17' \\approx 2.7776 + 0.0131 = 2.7907",
           "fallback": "tan70°17′≈2.7776+0.0131=2.7907",
           "display": true
         },
@@ -3916,12 +3855,8 @@ const records=[
         },
         " and an acute angle is ",
         {
-          "latex": "24^{\\circ}",
-          "fallback": "24°"
-        },
-        {
-          "latex": "24'",
-          "fallback": "24′"
+          "latex": "24^{\\circ}\\,24'",
+          "fallback": "24°24′"
         },
         ". Calculate the triangle’s area."
       ],
@@ -3933,12 +3868,8 @@ const records=[
         },
         ", ஒரு குறுங்கோணம் ",
         {
-          "latex": "24^{\\circ}",
-          "fallback": "24°"
-        },
-        {
-          "latex": "24'",
-          "fallback": "24′"
+          "latex": "24^{\\circ}\\,24'",
+          "fallback": "24°24′"
         },
         " எனில் முக்கோணத்தின் பரப்பளவைக் காண்க."
       ]
@@ -3950,7 +3881,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{aligned}&\\text{base} = 10 \\cos 24^{\\circ} 24' \\\\ &\\text{height} = 10 \\sin 24^{\\circ} 24'\\end{aligned}",
+          "latex": "\\begin{aligned}&\\text{base} = 10 \\cos 24^{\\circ}\\,24' \\\\ &\\text{height} = 10 \\sin 24^{\\circ}\\,24'\\end{aligned}",
           "fallback": "base=10cos24°24′; height=10sin24°24′",
           "display": true
         },
@@ -3958,23 +3889,15 @@ const records=[
           "en": [
             "The adjacent side is the base and the opposite side is the height relative to ",
             {
-              "latex": "24^{\\circ}",
-              "fallback": "24°"
-            },
-            {
-              "latex": "24'",
-              "fallback": "24′"
+              "latex": "24^{\\circ}\\,24'",
+              "fallback": "24°24′"
             },
             "."
           ],
           "ta": [
             {
-              "latex": "24^{\\circ}",
-              "fallback": "24°"
-            },
-            {
-              "latex": "24'",
-              "fallback": "24′"
+              "latex": "24^{\\circ}\\,24'",
+              "fallback": "24°24′"
             },
             " கோணத்திற்கு அடுத்த பக்கம் அடிப்பக்கமும், எதிர்ப்பக்கம் உயரமும் ஆகும்."
           ]
@@ -3982,7 +3905,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\sin 24^{\\circ} 24' \\approx 0.4131 \\\\ &\\cos 24^{\\circ} 24' \\approx 0.9107\\end{aligned}",
+          "latex": "\\begin{aligned}&\\sin 24^{\\circ}\\,24' \\approx 0.4131 \\\\ &\\cos 24^{\\circ}\\,24' \\approx 0.9107\\end{aligned}",
           "fallback": "sin24°24′≈0.4131; cos24°24′≈0.9107",
           "display": true
         },
@@ -3990,12 +3913,8 @@ const records=[
           "en": [
             "At ",
             {
-              "latex": "24^{\\circ}",
-              "fallback": "24°"
-            },
-            {
-              "latex": "24'",
-              "fallback": "24′"
+              "latex": "24^{\\circ}\\,24'",
+              "fallback": "24°24′"
             },
             ", the sine and cosine table columns give ",
             {
@@ -4016,12 +3935,8 @@ const records=[
           ],
           "ta": [
             {
-              "latex": "24^{\\circ}",
-              "fallback": "24°"
-            },
-            {
-              "latex": "24'",
-              "fallback": "24′"
+              "latex": "24^{\\circ}\\,24'",
+              "fallback": "24°24′"
             },
             " வரிசை/நெடுவரிசையில் சைன் ",
             {
@@ -4059,9 +3974,10 @@ const records=[
     "id": "c9-exercise-6-4-q5",
     "questionMath": {
       "en": [
+        "A ",
         {
-          "latex": "A 5\\,\\mathrm{m}",
-          "fallback": "A 5 m"
+          "latex": "5\\,\\mathrm{m}",
+          "fallback": "5 m"
         },
         " ladder rests against a wall, with its foot ",
         {
@@ -4084,9 +4000,8 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\begin{gathered}36^{\\circ} \\\\ 52'\\end{gathered}",
-      "fallback": "36°52′",
-      "display": true
+      "latex": "36^{\\circ}\\,52'",
+      "fallback": "36°52′"
     },
     "steps": [
       {
@@ -4126,7 +4041,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\cos 36^{\\circ} 48' \\approx 0.8007",
+          "latex": "\\cos 36^{\\circ}\\,48' \\approx 0.8007",
           "fallback": "cos36°48′≈0.8007",
           "display": true
         },
@@ -4139,12 +4054,8 @@ const records=[
             },
             " in the four-figure cosine table: the ",
             {
-              "latex": "36^{\\circ}",
-              "fallback": "36°"
-            },
-            {
-              "latex": "48'",
-              "fallback": "48′"
+              "latex": "36^{\\circ}\\,48'",
+              "fallback": "36°48′"
             },
             " column reads ",
             {
@@ -4161,12 +4072,8 @@ const records=[
             },
             "-ஐத் தேடுக. ",
             {
-              "latex": "36^{\\circ}",
-              "fallback": "36°"
-            },
-            {
-              "latex": "48'",
-              "fallback": "48′"
+              "latex": "36^{\\circ}\\,48'",
+              "fallback": "36°48′"
             },
             " நெடுவரிசையில் ",
             {
@@ -4179,7 +4086,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\cos 36^{\\circ} 52' \\approx 0.8007 - 0.0007 = 0.8000",
+          "latex": "\\cos 36^{\\circ}\\,52' \\approx 0.8007 - 0.0007 = 0.8000",
           "fallback": "cos36°52′≈0.8007−0.0007=0.8000",
           "display": true
         },
@@ -4192,10 +4099,10 @@ const records=[
             },
             ", the ",
             {
-              "latex": "4' \\text{mean}",
-              "fallback": "4′ mean"
+              "latex": "4'",
+              "fallback": "4′"
             },
-            " difference is ",
+            " mean difference is ",
             {
               "latex": "7",
               "fallback": "7"
@@ -4233,9 +4140,8 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{gathered}\\theta \\approx 36^{\\circ} \\\\ 52'\\end{gathered}",
-          "fallback": "θ≈36°52′",
-          "display": true
+          "latex": "\\theta \\approx 36^{\\circ}\\,52'",
+          "fallback": "θ≈36°52′"
         },
         "reasonMath": {
           "en": [
@@ -4246,12 +4152,8 @@ const records=[
             },
             " is approximately ",
             {
-              "latex": "36^{\\circ}",
-              "fallback": "36°"
-            },
-            {
-              "latex": "52'",
-              "fallback": "52′"
+              "latex": "36^{\\circ}\\,52'",
+              "fallback": "36°52′"
             },
             "; no calculator inverse-cosine step is needed."
           ],
@@ -4263,12 +4165,8 @@ const records=[
             },
             " எனத் தரும் அட்டவணைக் கோணம் தோராயமாக ",
             {
-              "latex": "36^{\\circ}",
-              "fallback": "36°"
-            },
-            {
-              "latex": "52'",
-              "fallback": "52′"
+              "latex": "36^{\\circ}\\,52'",
+              "fallback": "36°52′"
             },
             "; கணிப்பான் தேவை இல்லை."
           ]
@@ -4372,7 +4270,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\tan 42^{\\circ} 00' \\approx 0.9004",
+          "latex": "\\tan 42^{\\circ}\\,00' \\approx 0.9004",
           "fallback": "tan42°00′≈0.9004",
           "display": true
         },
@@ -4380,7 +4278,7 @@ const records=[
           "en": [
             "Read ",
             {
-              "latex": "\\tan 42^{\\circ} 00'",
+              "latex": "\\tan 42^{\\circ}\\,00'",
               "fallback": "tan42°00′"
             },
             " directly from the tangent table, ",
@@ -19948,12 +19846,7 @@ const records=[
           "latex": "\\left(3 x + 2\\right)",
           "fallback": "(3x+2)"
         },
-        " units and it’",
-        {
-          "latex": "s",
-          "fallback": "s"
-        },
-        " breadth is ",
+        " units and it’s breadth is ",
         {
           "latex": "\\left(3 x - 2\\right)",
           "fallback": "(3x–2)"
@@ -19976,12 +19869,7 @@ const records=[
           "latex": "\\left(3 x + 2\\right)",
           "fallback": "(3x+2)"
         },
-        " units and it’",
-        {
-          "latex": "s",
-          "fallback": "s"
-        },
-        " breadth is ",
+        " units and it’s breadth is ",
         {
           "latex": "\\left(3 x - 2\\right)",
           "fallback": "(3x–2)"
@@ -21875,11 +21763,11 @@ const records=[
       {
         "math": [
           {
-            "latex": "\\begin{aligned}&\\sqrt{13} + \\sqrt{13} = 2\\ \\\\ &\\sqrt{13} = AC \\\\ &\\left(i\\right)\\end{aligned}",
-            "fallback": "√13+√13=2√13=AC; (i)",
+            "latex": "\\begin{aligned}&\\sqrt{13} + \\sqrt{13} = 2\\ \\\\ &\\sqrt{13} = AC\\end{aligned}",
+            "fallback": "√13+√13=2√13=AC",
             "display": true
           },
-          " Collinear"
+          "; (i) Collinear"
         ],
         "reasonMath": {
           "en": [
@@ -22306,11 +22194,11 @@ const records=[
       {
         "math": [
           {
-            "latex": "\\begin{aligned}&AB = CD  \\\\ &= \\sqrt{73} \\\\ &BC = DA  \\\\ &= \\sqrt{85} \\\\ &\\left(i\\right)\\end{aligned}",
-            "fallback": "AB=CD=√73; BC=DA=√85; (i)",
+            "latex": "\\begin{aligned}&AB = CD  \\\\ &= \\sqrt{73} \\\\ &BC = DA  \\\\ &= \\sqrt{85}\\end{aligned}",
+            "fallback": "AB=CD=√73; BC=DA=√85",
             "display": true
           },
-          " Parallelogram"
+          "; (i) Parallelogram"
         ],
         "reasonMath": {
           "en": "Both opposite side pairs are equal, so the first quadrilateral is a parallelogram.",
@@ -22629,7 +22517,10 @@ const records=[
             "latex": "AB",
             "fallback": "AB"
           },
-          "⊥",
+          {
+            "latex": "\\perp",
+            "fallback": "⊥"
+          },
           {
             "latex": "BC",
             "fallback": "BC"
@@ -36145,8 +36036,14 @@ const records=[
     "answerMath": [
       "Example questions: (1) ",
       {
-        "latex": "\\begin{aligned}&P\\left(\\text{even}\\right) = \\dfrac{1}{2} \\\\ &\\left(2\\right) P\\left(\\text{not prime}\\right) = \\dfrac{1}{2}\\end{aligned}",
-        "fallback": "P(even) = [[1|2]]; (2) P(not prime) = [[1|2]]",
+        "latex": "P\\left(\\text{even}\\right) = \\dfrac{1}{2}",
+        "fallback": "P(even) = [[1|2]]",
+        "display": true
+      },
+      "; (2) ",
+      {
+        "latex": "P\\left(\\text{not prime}\\right) = \\dfrac{1}{2}",
+        "fallback": "P(not prime) = [[1|2]]",
         "display": true
       }
     ],
@@ -38154,7 +38051,7 @@ const records=[
       "en": [
         "7. What should be added to ",
         {
-          "latex": "(2x^3+6x^2-5x+8)+P(x)=3x^3-2x^2+6x+15",
+          "latex": "2x^3+6x^2-5x+8\\text{ to get }3x^3-2x^2+6x+15\\text{ ?}",
           "fallback": "2x³ + 6x² − 5x + 8 to get 3x³ − 2x² + 6x + 15 ?"
         }
       ],
@@ -38209,7 +38106,7 @@ const records=[
       "en": [
         "8. What must be subtracted from ",
         {
-          "latex": "(2x^4+4x^2-3x+7)-P(x)=3x^3-x^2+2x+1",
+          "latex": "2x^4+4x^2-3x+7\\text{ to get }3x^3-x^2+2x+1\\text{ ?}",
           "fallback": "2x⁴ + 4x² − 3x + 7 to get 3x³ − x² + 2x + 1 ?"
         }
       ],
@@ -54264,30 +54161,18 @@ const records=[
     },
     "answerMath": [
       {
-        "latex": "85^{\\circ}",
-        "fallback": "85°"
-      },
-      {
-        "latex": "57'",
-        "fallback": "57′"
+        "latex": "85^{\\circ}\\,57'",
+        "fallback": "85°57′"
       },
       " or ",
       {
-        "latex": "85^{\\circ}",
-        "fallback": "85°"
-      },
-      {
-        "latex": "58'",
-        "fallback": "58′"
+        "latex": "85^{\\circ}\\,58'",
+        "fallback": "85°58′"
       },
       " or ",
       {
-        "latex": "85^{\\circ}",
-        "fallback": "85°"
-      },
-      {
-        "latex": "59'",
-        "fallback": "59′"
+        "latex": "85^{\\circ}\\,59'",
+        "fallback": "85°59′"
       }
     ],
     "steps": [
@@ -54310,7 +54195,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\sin 85^{\\circ} 54' \\approx 0.9974 \\\\ &MD \\left(3' - 5'\\right) \\approx 0.0001\\end{aligned}",
+          "latex": "\\begin{aligned}&\\sin 85^{\\circ}\\,54' \\approx 0.9974 \\\\ &MD \\left(3' - 5'\\right) \\approx 0.0001\\end{aligned}",
           "fallback": "sin 85°54′ ≈ 0.9974; MD(3′–5′) ≈ 0.0001",
           "display": true
         },
@@ -54328,12 +54213,8 @@ const records=[
             },
             " at ",
             {
-              "latex": "85^{\\circ}",
-              "fallback": "85°"
-            },
-            {
-              "latex": "54'",
-              "fallback": "54′"
+              "latex": "85^{\\circ}\\,54'",
+              "fallback": "85°54′"
             },
             ". The prescribed mean difference for the remaining minutes is ",
             {
@@ -54347,55 +54228,31 @@ const records=[
       {
         "math": [
           {
-            "latex": "\\theta = 85^{\\circ}",
-            "fallback": "θ = 85°"
-          },
-          {
-            "latex": "57'",
-            "fallback": "57′"
+            "latex": "\\theta = 85^{\\circ}\\,57'",
+            "fallback": "θ = 85°57′"
           },
           " or ",
           {
-            "latex": "85^{\\circ}",
-            "fallback": "85°"
-          },
-          {
-            "latex": "58'",
-            "fallback": "58′"
+            "latex": "85^{\\circ}\\,58'",
+            "fallback": "85°58′"
           },
           " or ",
           {
-            "latex": "85^{\\circ}",
-            "fallback": "85°"
-          },
-          {
-            "latex": "59'",
-            "fallback": "59′"
+            "latex": "85^{\\circ}\\,59'",
+            "fallback": "85°59′"
           }
         ],
         "reasonMath": {
           "en": [
             "Therefore ",
             {
-              "latex": "85^{\\circ}",
-              "fallback": "85°"
-            },
-            {
-              "latex": "57', 85^{\\circ}",
-              "fallback": "57′, 85°"
-            },
-            {
-              "latex": "58'",
-              "fallback": "58′"
+              "latex": "85^{\\circ}\\,57', 85^{\\circ}\\,58'",
+              "fallback": "85°57′, 85°58′"
             },
             " and ",
             {
-              "latex": "85^{\\circ}",
-              "fallback": "85°"
-            },
-            {
-              "latex": "59'",
-              "fallback": "59′"
+              "latex": "85^{\\circ}\\,59'",
+              "fallback": "85°59′"
             },
             " are all accepted by the prescribed four-figure table and official key. Do not claim a single exact angle."
           ]
@@ -54420,14 +54277,13 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\begin{gathered}47^{\\circ} \\\\ 27'\\end{gathered}",
-      "fallback": "47°27′",
-      "display": true
+      "latex": "47^{\\circ}\\,27'",
+      "fallback": "47°27′"
     },
     "steps": [
       {
         "math": {
-          "latex": "\\cos 47^{\\circ} 24' \\approx 0.6769",
+          "latex": "\\cos 47^{\\circ}\\,24' \\approx 0.6769",
           "fallback": "cos 47°24′ ≈ 0.6769",
           "display": true
         },
@@ -54435,7 +54291,7 @@ const records=[
           "en": [
             "Find the closest preceding six-minute column in the natural cosines table: ",
             {
-              "latex": "\\cos 47^{\\circ} 24'",
+              "latex": "\\cos 47^{\\circ}\\,24'",
               "fallback": "cos 47°24′"
             },
             " is tabulated as ",
@@ -54476,20 +54332,15 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{gathered}\\theta = 47^{\\circ} \\\\ 27'\\end{gathered}",
-          "fallback": "θ = 47°27′",
-          "display": true
+          "latex": "\\theta = 47^{\\circ}\\,27'",
+          "fallback": "θ = 47°27′"
         },
         "reasonMath": {
           "en": [
             "The required angle is ",
             {
-              "latex": "\\theta = 47^{\\circ}",
-              "fallback": "θ = 47°"
-            },
-            {
-              "latex": "27'",
-              "fallback": "27′"
+              "latex": "\\theta = 47^{\\circ}\\,27'",
+              "fallback": "θ = 47°27′"
             },
             "."
           ]
@@ -54514,14 +54365,13 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\begin{gathered}4^{\\circ} \\\\ 7'\\end{gathered}",
-      "fallback": "4°7′",
-      "display": true
+      "latex": "4^{\\circ}\\,7'",
+      "fallback": "4°7′"
     },
     "steps": [
       {
         "math": {
-          "latex": "\\tan 4^{\\circ} 06' \\approx 0.0717",
+          "latex": "\\tan 4^{\\circ}\\,06' \\approx 0.0717",
           "fallback": "tan 4°06′ ≈ 0.0717",
           "display": true
         },
@@ -54529,12 +54379,8 @@ const records=[
           "en": [
             "Look backwards through the natural tangents table. At ",
             {
-              "latex": "4^{\\circ}",
-              "fallback": "4°"
-            },
-            {
-              "latex": "06'",
-              "fallback": "06′"
+              "latex": "4^{\\circ}\\,06'",
+              "fallback": "4°06′"
             },
             ", the four-figure value is ",
             {
@@ -54564,20 +54410,15 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{gathered}\\theta = 4^{\\circ} \\\\ 7'\\end{gathered}",
-          "fallback": "θ = 4°7′",
-          "display": true
+          "latex": "\\theta = 4^{\\circ}\\,7'",
+          "fallback": "θ = 4°7′"
         },
         "reasonMath": {
           "en": [
             "Therefore ",
             {
-              "latex": "\\theta = 4^{\\circ}",
-              "fallback": "θ = 4°"
-            },
-            {
-              "latex": "7'",
-              "fallback": "7′"
+              "latex": "\\theta = 4^{\\circ}\\,7'",
+              "fallback": "θ = 4°7′"
             },
             " (four degrees seven minutes), the angle whose tabulated tangent is ",
             {
@@ -54607,14 +54448,13 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\begin{gathered}87^{\\circ} \\\\ 39'\\end{gathered}",
-      "fallback": "87°39′",
-      "display": true
+      "latex": "87^{\\circ}\\,39'",
+      "fallback": "87°39′"
     },
     "steps": [
       {
         "math": {
-          "latex": "\\cos 87^{\\circ} 36' \\approx 0.0419",
+          "latex": "\\cos 87^{\\circ}\\,36' \\approx 0.0419",
           "fallback": "cos 87°36′ ≈ 0.0419",
           "display": true
         },
@@ -54627,12 +54467,8 @@ const records=[
             },
             " using the four-figure natural cosines table. The preceding six-minute column is ",
             {
-              "latex": "87^{\\circ}",
-              "fallback": "87°"
-            },
-            {
-              "latex": "36'",
-              "fallback": "36′"
+              "latex": "87^{\\circ}\\,36'",
+              "fallback": "87°36′"
             },
             " with value ",
             {
@@ -54667,20 +54503,15 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{gathered}\\theta = 87^{\\circ} \\\\ 39'\\end{gathered}",
-          "fallback": "θ = 87°39′",
-          "display": true
+          "latex": "\\theta = 87^{\\circ}\\,39'",
+          "fallback": "θ = 87°39′"
         },
         "reasonMath": {
           "en": [
             "Hence ",
             {
-              "latex": "\\theta = 87^{\\circ}",
-              "fallback": "θ = 87°"
-            },
-            {
-              "latex": "39'",
-              "fallback": "39′"
+              "latex": "\\theta = 87^{\\circ}\\,39'",
+              "fallback": "θ = 87°39′"
             },
             ", giving the requested four-figure cosine value of ",
             {
@@ -54710,14 +54541,13 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\begin{gathered}82^{\\circ} \\\\ 30'\\end{gathered}",
-      "fallback": "82°30′",
-      "display": true
+      "latex": "82^{\\circ}\\,30'",
+      "fallback": "82°30′"
     },
     "steps": [
       {
         "math": {
-          "latex": "\\tan 82^{\\circ} 30' \\approx 7.5958",
+          "latex": "\\tan 82^{\\circ}\\,30' \\approx 7.5958",
           "fallback": "tan 82°30′ ≈ 7.5958",
           "display": true
         },
@@ -54741,12 +54571,8 @@ const records=[
           "en": [
             "It occurs at ",
             {
-              "latex": "82^{\\circ}",
-              "fallback": "82°"
-            },
-            {
-              "latex": "30'",
-              "fallback": "30′"
+              "latex": "82^{\\circ}\\,30'",
+              "fallback": "82°30′"
             },
             ", exactly at a six-minute column. There is no leftover minute and no mean-difference adjustment."
           ]
@@ -54754,20 +54580,15 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{gathered}\\theta = 82^{\\circ} \\\\ 30'\\end{gathered}",
-          "fallback": "θ = 82°30′",
-          "display": true
+          "latex": "\\theta = 82^{\\circ}\\,30'",
+          "fallback": "θ = 82°30′"
         },
         "reasonMath": {
           "en": [
             "Therefore ",
             {
-              "latex": "\\theta = 82^{\\circ}",
-              "fallback": "θ = 82°"
-            },
-            {
-              "latex": "30'",
-              "fallback": "30′"
+              "latex": "\\theta = 82^{\\circ}\\,30'",
+              "fallback": "θ = 82°30′"
             },
             ", read directly from the natural tangent table."
           ]
@@ -54781,7 +54602,7 @@ const records=[
       "en": [
         "Find the value of the following:\n(i) ",
         {
-          "latex": "\\sin 65^{\\circ} 39' + \\cos 24^{\\circ} 57' + \\tan 10^{\\circ} 10'",
+          "latex": "\\sin 65^{\\circ}\\,39' + \\cos 24^{\\circ}\\,57' + \\tan 10^{\\circ}\\,10'",
           "fallback": "sin 65°39′ + cos 24°57′ + tan 10°10′"
         }
       ]
@@ -54793,7 +54614,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\sin 65^{\\circ} 39' \\approx 0.9111",
+          "latex": "\\sin 65^{\\circ}\\,39' \\approx 0.9111",
           "fallback": "sin 65°39′ ≈ 0.9111",
           "display": true
         },
@@ -54803,7 +54624,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\cos 24^{\\circ} 57' \\approx 0.9066 \\\\ &\\tan 10^{\\circ} 10' \\approx 0.1793\\end{aligned}",
+          "latex": "\\begin{aligned}&\\cos 24^{\\circ}\\,57' \\approx 0.9066 \\\\ &\\tan 10^{\\circ}\\,10' \\approx 0.1793\\end{aligned}",
           "fallback": "cos 24°57′ ≈ 0.9066; tan 10°10′ ≈ 0.1793",
           "display": true
         },
@@ -54811,12 +54632,12 @@ const records=[
           "en": [
             "The tabulated values used in the textbook calculation are ",
             {
-              "latex": "\\sin 65^{\\circ} 39' \\approx 0.9111, \\cos 24^{\\circ} 57' \\approx 0.9066",
+              "latex": "\\sin 65^{\\circ}\\,39' \\approx 0.9111, \\cos 24^{\\circ}\\,57' \\approx 0.9066",
               "fallback": "sin 65°39′ ≈ 0.9111, cos 24°57′ ≈ 0.9066"
             },
             ", and ",
             {
-              "latex": "\\tan 10^{\\circ} 10' \\approx 0.1793",
+              "latex": "\\tan 10^{\\circ}\\,10' \\approx 0.1793",
               "fallback": "tan 10°10′ ≈ 0.1793"
             },
             "."
@@ -54848,7 +54669,7 @@ const records=[
       "en": [
         "Find the value of the following:\n(ii) ",
         {
-          "latex": "\\tan 70^{\\circ} 58' + \\cos 15^{\\circ} 26' - \\sin 84^{\\circ} 59'",
+          "latex": "\\tan 70^{\\circ}\\,58' + \\cos 15^{\\circ}\\,26' - \\sin 84^{\\circ}\\,59'",
           "fallback": "tan 70°58′ + cos 15°26′ − sin 84°59′"
         }
       ]
@@ -54860,7 +54681,7 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\tan 70^{\\circ} 58' \\approx 2.8982",
+          "latex": "\\tan 70^{\\circ}\\,58' \\approx 2.8982",
           "fallback": "tan 70°58′ ≈ 2.8982",
           "display": true
         },
@@ -54870,7 +54691,7 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\begin{aligned}&\\cos 15^{\\circ} 26' \\approx 0.9639 \\\\ &\\sin 84^{\\circ} 59' \\approx 0.9962\\end{aligned}",
+          "latex": "\\begin{aligned}&\\cos 15^{\\circ}\\,26' \\approx 0.9639 \\\\ &\\sin 84^{\\circ}\\,59' \\approx 0.9962\\end{aligned}",
           "fallback": "cos 15°26′ ≈ 0.9639; sin 84°59′ ≈ 0.9962",
           "display": true
         },
@@ -54878,12 +54699,12 @@ const records=[
           "en": [
             "The values in the school-table solution are ",
             {
-              "latex": "\\tan 70^{\\circ} 58' \\approx 2.8982, \\cos 15^{\\circ} 26' \\approx 0.9639",
+              "latex": "\\tan 70^{\\circ}\\,58' \\approx 2.8982, \\cos 15^{\\circ}\\,26' \\approx 0.9639",
               "fallback": "tan 70°58′ ≈ 2.8982, cos 15°26′ ≈ 0.9639"
             },
             ", and ",
             {
-              "latex": "\\sin 84^{\\circ} 59' \\approx 0.9962",
+              "latex": "\\sin 84^{\\circ}\\,59' \\approx 0.9962",
               "fallback": "sin 84°59′ ≈ 0.9962"
             },
             "."
@@ -56582,8 +56403,13 @@ const records=[
           "en": [
             "Given ",
             {
-              "latex": "AP = \\left(\\dfrac{3}{7}\\right) AB = \\left(\\dfrac{3}{7}\\right) \\left(7\\right) = 3",
-              "fallback": "AP = (3/7) AB = (3/7)(7) = 3"
+              "latex": "AP = \\left(\\dfrac{3}{7}\\right) AB = \\left(\\dfrac{3}{7}\\right)",
+              "fallback": "AP = (3/7) AB = (3/7)"
+            },
+            "(7) = ",
+            {
+              "latex": "3",
+              "fallback": "3"
             },
             ". Use the distance formula for ",
             {
@@ -56595,8 +56421,13 @@ const records=[
           "ta": [
             "கொடுக்கப்பட்டது ",
             {
-              "latex": "AP = \\left(\\dfrac{3}{7}\\right) AB = \\left(\\dfrac{3}{7}\\right) \\left(7\\right) = 3",
-              "fallback": "AP = (3/7) AB = (3/7)(7) = 3"
+              "latex": "AP = \\left(\\dfrac{3}{7}\\right) AB = \\left(\\dfrac{3}{7}\\right)",
+              "fallback": "AP = (3/7) AB = (3/7)"
+            },
+            "(7) = ",
+            {
+              "latex": "3",
+              "fallback": "3"
             },
             ". ",
             {
@@ -58651,10 +58482,15 @@ const records=[
               "latex": "y",
               "fallback": "y"
             },
-            "-coordinate: ",
+            "-coordinate: (",
             {
-              "latex": "\\dfrac{\\left(5 \\left(- 9\\right) + 2 \\left(5\\right)\\right)}{\\left(5 + 2\\right)} = \\dfrac{\\left(- 45 + 10\\right)}{7} = \\dfrac{- 35}{7} = - 5",
-              "fallback": "(5(−9) + 2(5))/(5 + 2) = (−45 + 10)/7 = −35/7 = −5"
+              "latex": "5 \\left(- 9\\right) + 2",
+              "fallback": "5(−9) + 2"
+            },
+            "(5))/",
+            {
+              "latex": "\\left(5 + 2\\right) = \\dfrac{\\left(- 45 + 10\\right)}{7} = \\dfrac{- 35}{7} = - 5",
+              "fallback": "(5 + 2) = (−45 + 10)/7 = −35/7 = −5"
             },
             ", which matches ",
             {
@@ -58668,10 +58504,15 @@ const records=[
               "latex": "y",
               "fallback": "y"
             },
-            "-ஆயத்தொலைவைச் சரிபார்க்க: ",
+            "-ஆயத்தொலைவைச் சரிபார்க்க: (",
             {
-              "latex": "\\dfrac{\\left(5 \\left(- 9\\right) + 2 \\left(5\\right)\\right)}{\\left(5 + 2\\right)} = \\dfrac{- 35}{7} = - 5",
-              "fallback": "(5(−9) + 2(5))/(5 + 2) = −35/7 = −5"
+              "latex": "5 \\left(- 9\\right) + 2",
+              "fallback": "5(−9) + 2"
+            },
+            "(5))/",
+            {
+              "latex": "\\left(5 + 2\\right) = \\dfrac{- 35}{7} = - 5",
+              "fallback": "(5 + 2) = −35/7 = −5"
             },
             ", இது ",
             {
@@ -59528,10 +59369,20 @@ const records=[
               "latex": "y",
               "fallback": "y"
             },
-            "-coordinate formula: ",
+            "-coordinate formula: (",
             {
-              "latex": "\\dfrac{\\left(\\left(\\dfrac{1}{2}\\right) \\left(1\\right) + 1 \\left(- 5\\right)\\right)}{\\left(\\dfrac{1}{2} + 1\\right)} = \\dfrac{\\left(\\dfrac{- 9}{2}\\right)}{\\left(\\dfrac{3}{2}\\right)} = - 3",
-              "fallback": "((1/2)(1) + 1(−5)) / (1/2 + 1) = (−9/2) / (3/2) = −3"
+              "latex": "\\left(\\dfrac{1}{2}\\right)",
+              "fallback": "(1/2)"
+            },
+            "(1) ",
+            {
+              "latex": "+ 1 \\left(- 5\\right)",
+              "fallback": "+ 1(−5)"
+            },
+            ") / ",
+            {
+              "latex": "\\left(\\dfrac{1}{2} + 1\\right) = \\dfrac{\\left(\\dfrac{- 9}{2}\\right)}{\\left(\\dfrac{3}{2}\\right)} = - 3",
+              "fallback": "(1/2 + 1) = (−9/2) / (3/2) = −3"
             },
             ", which equals the ",
             {
@@ -59555,10 +59406,20 @@ const records=[
               "latex": "y",
               "fallback": "y"
             },
-            "-ஆயத்தொலைவில் பிரதியிட: ",
+            "-ஆயத்தொலைவில் பிரதியிட: (",
             {
-              "latex": "\\dfrac{\\left(\\left(\\dfrac{1}{2}\\right) \\left(1\\right) + \\left(- 5\\right)\\right)}{\\left(\\dfrac{3}{2}\\right)} = - 3",
-              "fallback": "((1/2)(1) + (−5))/(3/2) = −3"
+              "latex": "\\left(\\dfrac{1}{2}\\right)",
+              "fallback": "(1/2)"
+            },
+            "(1) ",
+            {
+              "latex": "+ \\left(- 5\\right)",
+              "fallback": "+ (−5)"
+            },
+            ")/",
+            {
+              "latex": "\\left(\\dfrac{3}{2}\\right) = - 3",
+              "fallback": "(3/2) = −3"
             },
             ", இது ",
             {
@@ -62153,18 +62014,38 @@ const records=[
         },
         "reasonMath": {
           "en": [
-            "Other end = ",
+            "Other end = (",
             {
-              "latex": "\\left(2 \\left(- 3\\right) - 3, 2 \\left(2\\right) - 4\\right) = \\left(- 9, 0\\right)",
-              "fallback": "(2(−3) − 3, 2(2) − 4) = (−9, 0)"
+              "latex": "2 \\left(- 3\\right) - 3, 2",
+              "fallback": "2(−3) − 3, 2"
+            },
+            "(2) ",
+            {
+              "latex": "- 4",
+              "fallback": "− 4"
+            },
+            ") = ",
+            {
+              "latex": "\\left(- 9, 0\\right)",
+              "fallback": "(−9, 0)"
             },
             ". Correct option: (4)."
           ],
           "ta": [
-            "மற்றொரு முனை = ",
+            "மற்றொரு முனை = (",
             {
-              "latex": "\\left(2 \\left(- 3\\right) - 3, 2 \\left(2\\right) - 4\\right) = \\left(- 9, 0\\right)",
-              "fallback": "(2(−3) − 3, 2(2) − 4) = (−9, 0)"
+              "latex": "2 \\left(- 3\\right) - 3, 2",
+              "fallback": "2(−3) − 3, 2"
+            },
+            "(2) ",
+            {
+              "latex": "- 4",
+              "fallback": "− 4"
+            },
+            ") = ",
+            {
+              "latex": "\\left(- 9, 0\\right)",
+              "fallback": "(−9, 0)"
             },
             ". சரியான விடை: (4)."
           ]
@@ -69409,8 +69290,13 @@ const texts={
     },
     " (iv) ",
     {
-      "latex": "- 0.52 \\left(v\\right) 0",
-      "fallback": "−0.52 (v) 0"
+      "latex": "- 0.52",
+      "fallback": "−0.52"
+    },
+    " (v) ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     " (vi) ",
     {
@@ -69452,8 +69338,13 @@ const texts={
     },
     " (iv) ",
     {
-      "latex": "- 0.52 \\left(v\\right) 0",
-      "fallback": "−0.52 (v) 0"
+      "latex": "- 0.52",
+      "fallback": "−0.52"
+    },
+    " (v) ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     " (vi) ",
     {
@@ -69710,12 +69601,8 @@ const texts={
   "It occurs at 82°30′, exactly at a six-minute column.": [
     "It occurs at ",
     {
-      "latex": "82^{\\circ}",
-      "fallback": "82°"
-    },
-    {
-      "latex": "30'",
-      "fallback": "30′"
+      "latex": "82^{\\circ}\\,30'",
+      "fallback": "82°30′"
     },
     ", exactly at a six-minute column."
   ],
@@ -69785,10 +69672,10 @@ const texts={
     "."
   ],
   "Cosine is adjacent over hypotenuse. A 3–4–5 right triangle has opposite side 4.": [
-    "Cosine is adjacent over hypotenuse. ",
+    "Cosine is adjacent over hypotenuse. A ",
     {
-      "latex": "A 3 - 4 - 5",
-      "fallback": "A 3–4–5"
+      "latex": "3 - 4 - 5",
+      "fallback": "3–4–5"
     },
     " right triangle has opposite side ",
     {
@@ -69974,12 +69861,8 @@ const texts={
     },
     " at ",
     {
-      "latex": "74^{\\circ}",
-      "fallback": "74°"
-    },
-    {
-      "latex": "36'",
-      "fallback": "36′"
+      "latex": "74^{\\circ}\\,36'",
+      "fallback": "74°36′"
     },
     ". For ",
     {
@@ -69996,12 +69879,8 @@ const texts={
   "Use the value at 74°36′, the preceding six-minute column. Cosine decreases over the next 3′, so subtract the mean difference (8 in the fourth decimal place).": [
     "Use the value at ",
     {
-      "latex": "74^{\\circ}",
-      "fallback": "74°"
-    },
-    {
-      "latex": "36'",
-      "fallback": "36′"
+      "latex": "74^{\\circ}\\,36'",
+      "fallback": "74°36′"
     },
     ", the preceding six-minute column. Cosine decreases over the next ",
     {
@@ -70018,12 +69897,8 @@ const texts={
   "முந்தைய ஆறு நிமிட நெடுவரிசை 74°36′. அடுத்த 3′-இல் கோசைன் குறையும்; நான்காம் தசம இடத்தின் 8 அலகுகளைக் கழிக்கவும்.": [
     "முந்தைய ஆறு நிமிட நெடுவரிசை ",
     {
-      "latex": "74^{\\circ}",
-      "fallback": "74°"
-    },
-    {
-      "latex": "36'",
-      "fallback": "36′"
+      "latex": "74^{\\circ}\\,36'",
+      "fallback": "74°36′"
     },
     ". அடுத்த ",
     {
@@ -70040,7 +69915,7 @@ const texts={
   "Read tan54°24′ as 1.3968. For the remaining 2′, the mean-difference adjustment is 0.0017.": [
     "Read ",
     {
-      "latex": "\\tan 54^{\\circ} 24'",
+      "latex": "\\tan 54^{\\circ}\\,24'",
       "fallback": "tan54°24′"
     },
     " as ",
@@ -70063,19 +69938,15 @@ const texts={
   "Tangent increases with the angle. Read the 54°24′ column and add the 2′ mean difference; don't replace the table method with calculator rounding.": [
     "Tangent increases with the angle. Read the ",
     {
-      "latex": "54^{\\circ}",
-      "fallback": "54°"
-    },
-    {
-      "latex": "24'",
-      "fallback": "24′"
+      "latex": "54^{\\circ}\\,24'",
+      "fallback": "54°24′"
     },
     " column and add the ",
     {
-      "latex": "2' \\text{mean}",
-      "fallback": "2′ mean"
+      "latex": "2'",
+      "fallback": "2′"
     },
-    " difference; don'",
+    " mean difference; don'",
     {
       "latex": "t",
       "fallback": "t"
@@ -70085,12 +69956,8 @@ const texts={
   "கோணம் கூடும்போது டேன்ஜென்ட் கூடும். 54°24′ மதிப்புடன் 2′-க்கான சராசரி வேறுபாட்டைக் கூட்டவும்.": [
     "கோணம் கூடும்போது டேன்ஜென்ட் கூடும். ",
     {
-      "latex": "54^{\\circ}",
-      "fallback": "54°"
-    },
-    {
-      "latex": "24'",
-      "fallback": "24′"
+      "latex": "54^{\\circ}\\,24'",
+      "fallback": "54°24′"
     },
     " மதிப்புடன் ",
     {
@@ -70102,7 +69969,7 @@ const texts={
   "Read sin21°18′ as 0.3633 and the 3′ mean difference as 0.0008.": [
     "Read ",
     {
-      "latex": "\\sin 21^{\\circ} 18'",
+      "latex": "\\sin 21^{\\circ}\\,18'",
       "fallback": "sin21°18′"
     },
     " as ",
@@ -70112,10 +69979,10 @@ const texts={
     },
     " and the ",
     {
-      "latex": "3' \\text{mean}",
-      "fallback": "3′ mean"
+      "latex": "3'",
+      "fallback": "3′"
     },
-    " difference as ",
+    " mean difference as ",
     {
       "latex": "0.0008",
       "fallback": "0.0008"
@@ -70125,29 +69992,21 @@ const texts={
   "Sine increases with the angle. Start with 21°18′ and add the remaining 3′ mean difference.": [
     "Sine increases with the angle. Start with ",
     {
-      "latex": "21^{\\circ}",
-      "fallback": "21°"
-    },
-    {
-      "latex": "18'",
-      "fallback": "18′"
+      "latex": "21^{\\circ}\\,18'",
+      "fallback": "21°18′"
     },
     " and add the remaining ",
     {
-      "latex": "3' \\text{mean}",
-      "fallback": "3′ mean"
+      "latex": "3'",
+      "fallback": "3′"
     },
-    " difference."
+    " mean difference."
   ],
   "கோணம் கூடும்போது சைன் கூடும். 21°18′ அட்டவணை மதிப்புடன் கூடுதல் 3′-க்கான சராசரி வேறுபாட்டைக் கூட்டவும்.": [
     "கோணம் கூடும்போது சைன் கூடும். ",
     {
-      "latex": "21^{\\circ}",
-      "fallback": "21°"
-    },
-    {
-      "latex": "18'",
-      "fallback": "18′"
+      "latex": "21^{\\circ}\\,18'",
+      "fallback": "21°18′"
     },
     " அட்டவணை மதிப்புடன் கூடுதல் ",
     {
@@ -70159,7 +70018,7 @@ const texts={
   "Read cos33°48′ as 0.8310. The 5′ mean difference is 0.0008.": [
     "Read ",
     {
-      "latex": "\\cos 33^{\\circ} 48'",
+      "latex": "\\cos 33^{\\circ}\\,48'",
       "fallback": "cos33°48′"
     },
     " as ",
@@ -70169,10 +70028,10 @@ const texts={
     },
     ". The ",
     {
-      "latex": "5' \\text{mean}",
-      "fallback": "5′ mean"
+      "latex": "5'",
+      "fallback": "5′"
     },
-    " difference is ",
+    " mean difference is ",
     {
       "latex": "0.0008",
       "fallback": "0.0008"
@@ -70182,29 +70041,21 @@ const texts={
   "Cosine decreases with the angle. Use 33°48′ and subtract the 5′ mean difference.": [
     "Cosine decreases with the angle. Use ",
     {
-      "latex": "33^{\\circ}",
-      "fallback": "33°"
-    },
-    {
-      "latex": "48'",
-      "fallback": "48′"
+      "latex": "33^{\\circ}\\,48'",
+      "fallback": "33°48′"
     },
     " and subtract the ",
     {
-      "latex": "5' \\text{mean}",
-      "fallback": "5′ mean"
+      "latex": "5'",
+      "fallback": "5′"
     },
-    " difference."
+    " mean difference."
   ],
   "கோணம் கூடும்போது கோசைன் குறையும். 33°48′ அட்டவணை மதிப்பிலிருந்து 5′-க்கான சராசரி வேறுபாட்டைக் கழிக்கவும்.": [
     "கோணம் கூடும்போது கோசைன் குறையும். ",
     {
-      "latex": "33^{\\circ}",
-      "fallback": "33°"
-    },
-    {
-      "latex": "48'",
-      "fallback": "48′"
+      "latex": "33^{\\circ}\\,48'",
+      "fallback": "33°48′"
     },
     " அட்டவணை மதிப்பிலிருந்து ",
     {
@@ -70216,15 +70067,15 @@ const texts={
   "The textbook example gives tan70°12′ = 2.7776. The 5′ mean difference is 0.0131; tangent requires addition.": [
     "The textbook example gives ",
     {
-      "latex": "\\tan 70^{\\circ} 12' = 2.7776",
+      "latex": "\\tan 70^{\\circ}\\,12' = 2.7776",
       "fallback": "tan70°12′ = 2.7776"
     },
     ". The ",
     {
-      "latex": "5' \\text{mean}",
-      "fallback": "5′ mean"
+      "latex": "5'",
+      "fallback": "5′"
     },
-    " difference is ",
+    " mean difference is ",
     {
       "latex": "0.0131",
       "fallback": "0.0131"
@@ -70234,7 +70085,7 @@ const texts={
   "The textbook example explicitly gives tan70°12′ = 2.7776. For the extra 5′ add mean difference 0.0131 to obtain the answer key's 2.7907.": [
     "The textbook example explicitly gives ",
     {
-      "latex": "\\tan 70^{\\circ} 12' = 2.7776",
+      "latex": "\\tan 70^{\\circ}\\,12' = 2.7776",
       "fallback": "tan70°12′ = 2.7776"
     },
     ". For the extra ",
@@ -70257,7 +70108,7 @@ const texts={
   "பாடநூல் எடுத்துக்காட்டில் tan70°12′ = 2.7776. கூடுதல் 5′-க்கான 0.0131 சராசரி வேறுபாட்டைக் கூட்டினால் 2.7907 கிடைக்கும்.": [
     "பாடநூல் எடுத்துக்காட்டில் ",
     {
-      "latex": "\\tan 70^{\\circ} 12' = 2.7776",
+      "latex": "\\tan 70^{\\circ}\\,12' = 2.7776",
       "fallback": "tan70°12′ = 2.7776"
     },
     ". கூடுதல் ",
@@ -70280,12 +70131,8 @@ const texts={
   "At 24°24′, the sine and cosine table columns give 0.4131 and 0.9107. No mean-difference correction is needed because 24′ is a printed six-minute column.": [
     "At ",
     {
-      "latex": "24^{\\circ}",
-      "fallback": "24°"
-    },
-    {
-      "latex": "24'",
-      "fallback": "24′"
+      "latex": "24^{\\circ}\\,24'",
+      "fallback": "24°24′"
     },
     ", the sine and cosine table columns give ",
     {
@@ -70328,10 +70175,10 @@ const texts={
     },
     ", the ",
     {
-      "latex": "4' \\text{mean}",
-      "fallback": "4′ mean"
+      "latex": "4'",
+      "fallback": "4′"
     },
-    " difference is ",
+    " mean difference is ",
     {
       "latex": "7",
       "fallback": "7"
@@ -70351,22 +70198,18 @@ const texts={
     },
     " (the ",
     {
-      "latex": "4' \\text{mean}",
-      "fallback": "4′ mean"
+      "latex": "4'",
+      "fallback": "4′"
     },
-    " difference in the ",
+    " mean difference in the ",
     {
       "latex": "36^{\\circ}",
       "fallback": "36°"
     },
     " row) from the ",
     {
-      "latex": "36^{\\circ}",
-      "fallback": "36°"
-    },
-    {
-      "latex": "48'",
-      "fallback": "48′"
+      "latex": "36^{\\circ}\\,48'",
+      "fallback": "36°48′"
     },
     " table value ",
     {
@@ -70378,12 +70221,8 @@ const texts={
   "கோணம் அதிகரிக்கும் போது கோசைன் குறையும். 36°48′ அட்டவணை மதிப்பு 0.8007-இலிருந்து 4′-க்கான 0.0007-ஐக் கழிக்கவும்.": [
     "கோணம் அதிகரிக்கும் போது கோசைன் குறையும். ",
     {
-      "latex": "36^{\\circ}",
-      "fallback": "36°"
-    },
-    {
-      "latex": "48'",
-      "fallback": "48′"
+      "latex": "36^{\\circ}\\,48'",
+      "fallback": "36°48′"
     },
     " அட்டவணை மதிப்பு ",
     {
@@ -70405,7 +70244,7 @@ const texts={
   "Read tan42°00′ directly from the tangent table, 42° row and 0′ column. There are no extra minutes to adjust.": [
     "Read ",
     {
-      "latex": "\\tan 42^{\\circ} 00'",
+      "latex": "\\tan 42^{\\circ}\\,00'",
       "fallback": "tan42°00′"
     },
     " directly from the tangent table, ",
@@ -70422,12 +70261,8 @@ const texts={
   ],
   "42°00′ is an exact table column. Read tan42° = 0.9004 at 0′; there is no need to interpolate or calculate tangent to extra digits.": [
     {
-      "latex": "42^{\\circ}",
-      "fallback": "42°"
-    },
-    {
-      "latex": "00'",
-      "fallback": "00′"
+      "latex": "42^{\\circ}\\,00'",
+      "fallback": "42°00′"
     },
     " is an exact table column. Read ",
     {
@@ -70443,12 +70278,8 @@ const texts={
   ],
   "42°00′ என்பது அட்டவணையின் நேரடி நெடுவரிசை. tan42° = 0.9004 எனப் படிக்கவும்; இடைமதிப்பீடு தேவையில்லை.": [
     {
-      "latex": "42^{\\circ}",
-      "fallback": "42°"
-    },
-    {
-      "latex": "00'",
-      "fallback": "00′"
+      "latex": "42^{\\circ}\\,00'",
+      "fallback": "42°00′"
     },
     " என்பது அட்டவணையின் நேரடி நெடுவரிசை. ",
     {
@@ -71130,10 +70961,10 @@ const texts={
   "In -21.213(7), only the final 7 repeats: x = -21.213777... . The negative sign matters: 10000x - 1000x = -212137 + 21213 = -190924, so x = -47731/2250.": [
     "In ",
     {
-      "latex": "- 21.213 \\left(7\\right)",
-      "fallback": "-21.213(7)"
+      "latex": "- 21.213",
+      "fallback": "-21.213"
     },
-    ", only the final ",
+    "(7), only the final ",
     {
       "latex": "7",
       "fallback": "7"
@@ -74853,8 +74684,13 @@ const texts={
     },
     " exactly, remainder ",
     {
-      "latex": "p \\left(2\\right) = 0",
-      "fallback": "p(2) = 0"
+      "latex": "p",
+      "fallback": "p"
+    },
+    "(2) = ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     "."
   ],
@@ -74871,8 +74707,13 @@ const texts={
     },
     " exactly, remainder ",
     {
-      "latex": "p \\left(2\\right) = 0",
-      "fallback": "p(2) = 0"
+      "latex": "p",
+      "fallback": "p"
+    },
+    "(2) = ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     ". (Find ",
     {
@@ -74898,8 +74739,13 @@ const texts={
     },
     " மீதியின்றி வகுப்பதால் ",
     {
-      "latex": "p \\left(2\\right) = 0",
-      "fallback": "p(2) = 0"
+      "latex": "p",
+      "fallback": "p"
+    },
+    "(2) = ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     ". (",
     {
@@ -74965,18 +74811,18 @@ const texts={
   "By Factor Theorem, check p(1).": [
     "By Factor Theorem, check ",
     {
-      "latex": "p \\left(1\\right)",
-      "fallback": "p(1)"
+      "latex": "p",
+      "fallback": "p"
     },
-    "."
+    "(1)."
   ],
   "By Factor Theorem, check p(1). (Check if (x − 1) is a factor of x³ + 5x² − 10x + 4: Yes, (x − 1) is a factor)": [
     "By Factor Theorem, check ",
     {
-      "latex": "p \\left(1\\right)",
-      "fallback": "p(1)"
+      "latex": "p",
+      "fallback": "p"
     },
-    ". (Check if ",
+    "(1). (Check if ",
     {
       "latex": "\\left(x - 1\\right)",
       "fallback": "(x − 1)"
@@ -74996,10 +74842,10 @@ const texts={
   "காரணித் தேற்றப்படி p(1) காண்க. ((x − 1) காரணியா எனச் சரிபார்க்க: ஆம், (x − 1) ஒரு காரணி)": [
     "காரணித் தேற்றப்படி ",
     {
-      "latex": "p \\left(1\\right)",
-      "fallback": "p(1)"
+      "latex": "p",
+      "fallback": "p"
     },
-    " காண்க. (",
+    "(1) காண்க. (",
     {
       "latex": "\\left(x - 1\\right)",
       "fallback": "(x − 1)"
@@ -75014,18 +74860,18 @@ const texts={
   "Evaluate p(1).": [
     "Evaluate ",
     {
-      "latex": "p \\left(1\\right)",
-      "fallback": "p(1)"
+      "latex": "p",
+      "fallback": "p"
     },
-    "."
+    "(1)."
   ],
   "Evaluate p(1). (Check if (x − 1) is a factor of x⁴ + 5x² − 5x + 1: No, (x − 1) is not a factor)": [
     "Evaluate ",
     {
-      "latex": "p \\left(1\\right)",
-      "fallback": "p(1)"
+      "latex": "p",
+      "fallback": "p"
     },
-    ". (Check if ",
+    "(1). (Check if ",
     {
       "latex": "\\left(x - 1\\right)",
       "fallback": "(x − 1)"
@@ -75044,10 +74890,10 @@ const texts={
   ],
   "p(1) மதிப்பைக் காண்க. ((x − 1) காரணியா எனச் சரிபார்க்க: இல்லை, (x − 1) காரணி அல்ல)": [
     {
-      "latex": "p \\left(1\\right)",
-      "fallback": "p(1)"
+      "latex": "p",
+      "fallback": "p"
     },
-    " மதிப்பைக் காண்க. (",
+    "(1) மதிப்பைக் காண்க. (",
     {
       "latex": "\\left(x - 1\\right)",
       "fallback": "(x − 1)"
@@ -75062,10 +74908,10 @@ const texts={
   "Evaluate p(5) for divisor (x − 5).": [
     "Evaluate ",
     {
-      "latex": "p \\left(5\\right)",
-      "fallback": "p(5)"
+      "latex": "p",
+      "fallback": "p"
     },
-    " for divisor ",
+    "(5) for divisor ",
     {
       "latex": "\\left(x - 5\\right)",
       "fallback": "(x − 5)"
@@ -75075,10 +74921,10 @@ const texts={
   "Evaluate p(5) for divisor (x − 5). (Show that (x − 5) is a factor of 2x³ − 5x² − 28x + 15: (x − 5) is a factor (since p(5) = 0))": [
     "Evaluate ",
     {
-      "latex": "p \\left(5\\right)",
-      "fallback": "p(5)"
+      "latex": "p",
+      "fallback": "p"
     },
-    " for divisor ",
+    "(5) for divisor ",
     {
       "latex": "\\left(x - 5\\right)",
       "fallback": "(x − 5)"
@@ -75095,8 +74941,13 @@ const texts={
     },
     " is a factor (since ",
     {
-      "latex": "p \\left(5\\right) = 0",
-      "fallback": "p(5) = 0"
+      "latex": "p",
+      "fallback": "p"
+    },
+    "(5) = ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     "))"
   ],
@@ -75107,10 +74958,10 @@ const texts={
     },
     " எனப் பிரதியிட்டு ",
     {
-      "latex": "p \\left(5\\right)",
-      "fallback": "p(5)"
+      "latex": "p",
+      "fallback": "p"
     },
-    " காண்க. (",
+    "(5) காண்க. (",
     {
       "latex": "\\left(x - 5\\right)",
       "fallback": "(x − 5)"
@@ -75120,12 +74971,17 @@ const texts={
       "latex": "\\left(x - 5\\right)",
       "fallback": "(x − 5)"
     },
-    " ஒரு காரணி ",
+    " ஒரு காரணி (",
     {
-      "latex": "\\left(p \\left(5\\right) = 0\\right)",
-      "fallback": "(p(5) = 0)"
+      "latex": "p",
+      "fallback": "p"
     },
-    ")"
+    "(5) = ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    "))"
   ],
   "By Factor Theorem, p(−3) = 0.": [
     "By Factor Theorem, ",
@@ -75229,8 +75085,13 @@ const texts={
     },
     " காரணி என்பதால் ",
     {
-      "latex": "p \\left(2\\right) = 0",
-      "fallback": "p(2) = 0"
+      "latex": "p",
+      "fallback": "p"
+    },
+    "(2) = ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     ". (",
     {
@@ -75252,16 +75113,26 @@ const texts={
   "Zero remainder means p(1) = 0.": [
     "Zero remainder means ",
     {
-      "latex": "p \\left(1\\right) = 0",
-      "fallback": "p(1) = 0"
+      "latex": "p",
+      "fallback": "p"
+    },
+    "(1) = ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     "."
   ],
   "Zero remainder means p(1) = 0. (Find k when (x − 1) divides kx³ − 2x² + 25x − 26: k = 3)": [
     "Zero remainder means ",
     {
-      "latex": "p \\left(1\\right) = 0",
-      "fallback": "p(1) = 0"
+      "latex": "p",
+      "fallback": "p"
+    },
+    "(1) = ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     ". (Find ",
     {
@@ -75283,8 +75154,13 @@ const texts={
   "மீதியின்றி வகுப்பதால் p(1) = 0. ((x − 1) மீதியின்றி வகுத்தால் k காண்க: k = 3)": [
     "மீதியின்றி வகுப்பதால் ",
     {
-      "latex": "p \\left(1\\right) = 0",
-      "fallback": "p(1) = 0"
+      "latex": "p",
+      "fallback": "p"
+    },
+    "(1) = ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     ". (",
     {
@@ -81823,8 +81699,18 @@ const texts={
   "படிகள்: B(4) < A(5) < C(8) < D(12); விருப்பம் (4). (வினா 8 · படிகளின் ஏறு வரிசை: (4) B,A,C,D)": [
     "படிகள்: ",
     {
-      "latex": "B \\left(4\\right) < A \\left(5\\right) < C \\left(8\\right) < D \\left(12\\right)",
-      "fallback": "B(4) < A(5) < C(8) < D(12)"
+      "latex": "B",
+      "fallback": "B"
+    },
+    "(4) < A(5) < ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    "(8) < ",
+    {
+      "latex": "D \\left(12\\right)",
+      "fallback": "D(12)"
     },
     "; விருப்பம் (4). (வினா ",
     {
@@ -81848,8 +81734,13 @@ const texts={
   ],
   "p(a) = 0 எனில் (x − a) ஒரு காரணி; விருப்பம் (4). (வினா 9 · காரணித் தேற்றம்: (4) காரணி)": [
     {
-      "latex": "p \\left(a\\right) = 0",
-      "fallback": "p(a) = 0"
+      "latex": "p",
+      "fallback": "p"
+    },
+    "(a) = ",
+    {
+      "latex": "0",
+      "fallback": "0"
     },
     " எனில் ",
     {
@@ -81871,8 +81762,13 @@ const texts={
     },
     " · Zero of ",
     {
-      "latex": "\\left(2 - 3 x\\right) : \\dfrac{\\left(3\\right) 2}{3}",
-      "fallback": "(2 − 3x): (3) 2/3"
+      "latex": "\\left(2 - 3 x\\right)",
+      "fallback": "(2 − 3x)"
+    },
+    ": (3) ",
+    {
+      "latex": "\\dfrac{2}{3}",
+      "fallback": "2/3"
     },
     ")"
   ],
@@ -81956,8 +81852,13 @@ const texts={
     },
     " எனப் பிரதியிட ",
     {
-      "latex": "3 \\left(1\\right) - 3 = 0",
-      "fallback": "3(1) − 3 = 0"
+      "latex": "3",
+      "fallback": "3"
+    },
+    "(1) ",
+    {
+      "latex": "- 3 = 0",
+      "fallback": "− 3 = 0"
     },
     "; விருப்பம் (2). (வினா ",
     {
@@ -81989,10 +81890,10 @@ const texts={
     },
     " is factor: (3) ",
     {
-      "latex": "p \\left(3\\right)",
-      "fallback": "p(3)"
+      "latex": "p",
+      "fallback": "p"
     },
-    ")"
+    "(3))"
   ],
   "மீதித் தேற்றப்படி (x − 3)-ஆல் வகுக்க மீதி p(3); விருப்பம் (3). (வினா 12 · (x − 3) காரணி எனில் மீதி: (3) p(3))": [
     "மீதித் தேற்றப்படி ",
@@ -82002,10 +81903,10 @@ const texts={
     },
     "-ஆல் வகுக்க மீதி ",
     {
-      "latex": "p \\left(3\\right)",
-      "fallback": "p(3)"
+      "latex": "p",
+      "fallback": "p"
     },
-    "; விருப்பம் (3). (வினா ",
+    "(3); விருப்பம் (3). (வினா ",
     {
       "latex": "12",
       "fallback": "12"
@@ -82017,10 +81918,10 @@ const texts={
     },
     " காரணி எனில் மீதி: (3) ",
     {
-      "latex": "p \\left(3\\right)",
-      "fallback": "p(3)"
+      "latex": "p",
+      "fallback": "p"
     },
-    ")"
+    "(3))"
   ],
   "Standard sum of cubes identity; option (3). (MCQ 13 · Sum of cubes identity: (3) x³ + y³)": [
     "Standard sum of cubes identity; option (3). (",
@@ -82222,8 +82123,13 @@ const texts={
     },
     " · Solution of ",
     {
-      "latex": "2 x + 3 y = \\mathrm{m} : \\left(2\\right) - 2",
-      "fallback": "2x + 3y = m: (2) −2"
+      "latex": "2 x + 3 y = \\mathrm{m}",
+      "fallback": "2x + 3y = m"
+    },
+    ": (2) ",
+    {
+      "latex": "- 2",
+      "fallback": "−2"
     },
     ")"
   ],
@@ -82338,8 +82244,13 @@ const texts={
     },
     " · Solution of ",
     {
-      "latex": "2 x - y = 6 : \\left(2\\right) \\left(4, 2\\right)",
-      "fallback": "2x − y = 6: (2) (4, 2)"
+      "latex": "2 x - y = 6",
+      "fallback": "2x − y = 6"
+    },
+    ": (2) ",
+    {
+      "latex": "\\left(4, 2\\right)",
+      "fallback": "(4, 2)"
     },
     ")"
   ],
@@ -82356,8 +82267,13 @@ const texts={
     },
     " எனில் ",
     {
-      "latex": "2 \\left(4\\right) - 2 = 6",
-      "fallback": "2(4) − 2 = 6"
+      "latex": "2",
+      "fallback": "2"
+    },
+    "(4) ",
+    {
+      "latex": "- 2 = 6",
+      "fallback": "− 2 = 6"
     },
     "; விருப்பம் (2). (வினா ",
     {
@@ -82389,8 +82305,13 @@ const texts={
     },
     " from ",
     {
-      "latex": "\\left(2, 3\\right) : \\left(4\\right) 13",
-      "fallback": "(2, 3): (4) 13"
+      "latex": "\\left(2, 3\\right)",
+      "fallback": "(2, 3)"
+    },
+    ": (4) ",
+    {
+      "latex": "13",
+      "fallback": "13"
     },
     ")"
   ],
@@ -82668,8 +82589,13 @@ const texts={
     },
     " and ",
     {
-      "latex": "x^{2} - y^{2} : \\left(2\\right) x^{2} - y^{2}",
-      "fallback": "x² − y²: (2) x² − y²"
+      "latex": "x^{2} - y^{2}",
+      "fallback": "x² − y²"
+    },
+    ": (2) ",
+    {
+      "latex": "x^{2} - y^{2}",
+      "fallback": "x² − y²"
     },
     ")"
   ],
@@ -82891,8 +82817,13 @@ const texts={
     },
     "-coordinate). (Read abscissa and ordinate from Fig. ",
     {
-      "latex": "5.11 : \\left(i\\right) P = \\left(- 4, 4\\right)",
-      "fallback": "5.11: (i) P = (−4, 4)"
+      "latex": "5.11",
+      "fallback": "5.11"
+    },
+    ": (i) ",
+    {
+      "latex": "P = \\left(- 4, 4\\right)",
+      "fallback": "P = (−4, 4)"
     },
     "; (ii) ",
     {
@@ -85795,8 +85726,13 @@ const texts={
     },
     " and ",
     {
-      "latex": "\\left(2, - 5\\right) : \\left(3\\right) II",
-      "fallback": "(2, −5): (3) II"
+      "latex": "\\left(2, - 5\\right)",
+      "fallback": "(2, −5)"
+    },
+    ": (3) ",
+    {
+      "latex": "II",
+      "fallback": "II"
     },
     " and ",
     {
@@ -85943,10 +85879,10 @@ const texts={
     },
     " is a trapezium. Correct option: (3). (Shape formed by ",
     {
-      "latex": "O \\left(0, 0\\right), A \\left(3, - 4\\right), B \\left(3, 4\\right), C \\left(0, 4\\right) : \\left(3\\right)",
-      "fallback": "O(0,0), A(3,−4), B(3,4), C(0,4): (3)"
+      "latex": "O \\left(0, 0\\right), A \\left(3, - 4\\right), B \\left(3, 4\\right), C \\left(0, 4\\right)",
+      "fallback": "O(0,0), A(3,−4), B(3,4), C(0,4)"
     },
-    " Trapezium)"
+    ": (3) Trapezium)"
   ],
   "CO (x = 0, நீளம் 4) மற்றும் AB (x = 3, நீளம் 8) ஆகிய இரண்டும் செங்குத்துப் பக்கங்களாக இணையாக உள்ளன (நீளம் சமமல்ல). எனவே OABC ஒரு சரிவகம். சரியான விடை: (3). (O, A, B, C புள்ளிகளால் உருவாகும் வடிவம்: (3) சரிவகம்)": [
     {
@@ -86162,8 +86098,13 @@ const texts={
     },
     " and ",
     {
-      "latex": "\\left(1, 4\\right) : \\left(4\\right)\\,\\sqrt{2}",
-      "fallback": "(1, 4): (4) √2"
+      "latex": "\\left(1, 4\\right)",
+      "fallback": "(1, 4)"
+    },
+    ": (4) ",
+    {
+      "latex": "\\sqrt{2}",
+      "fallback": "√2"
     },
     ")"
   ],
@@ -86238,10 +86179,10 @@ const texts={
       "latex": "x",
       "fallback": "x"
     },
-    "-axis and value of ",
+    "-axis and value of a: (3) ",
     {
-      "latex": "a : \\left(3\\right) 3",
-      "fallback": "a: (3) 3"
+      "latex": "3",
+      "fallback": "3"
     },
     ")"
   ],
@@ -86377,10 +86318,10 @@ const texts={
     },
     " (Null set). Correct option: (3). (Intersection of quadrants ",
     {
-      "latex": "Q_{2} \\cap Q_{3} : \\left(3\\right)",
-      "fallback": "Q₂ ∩ Q₃: (3)"
+      "latex": "Q_{2} \\cap Q_{3}",
+      "fallback": "Q₂ ∩ Q₃"
     },
-    " Null set)"
+    ": (3) Null set)"
   ],
   "நான்கு காற்பகுதிகளும் அச்சுகளை உள்ளடக்காத தனித்தனிப் பகுதிகளாகும். Q₂-இல் y > 0 மற்றும் Q₃-இல் y < 0 என்பதால் பொதுப் புள்ளிகள் இல்லை: Q₂ ∩ Q₃ = ∅ (வெற்றுக் கணம்). சரியான விடை: (3). (காற்பகுதிகள் Q₂ ∩ Q₃: (3) வெற்றுக் கணம்)": [
     "நான்கு காற்பகுதிகளும் அச்சுகளை உள்ளடக்காத தனித்தனிப் பகுதிகளாகும். ",
@@ -86410,10 +86351,10 @@ const texts={
     },
     " (வெற்றுக் கணம்). சரியான விடை: (3). (காற்பகுதிகள் ",
     {
-      "latex": "Q_{2} \\cap Q_{3} : \\left(3\\right)",
-      "fallback": "Q₂ ∩ Q₃: (3)"
+      "latex": "Q_{2} \\cap Q_{3}",
+      "fallback": "Q₂ ∩ Q₃"
     },
-    " வெற்றுக் கணம்)"
+    ": (3) வெற்றுக் கணம்)"
   ],
   "Distance from origin (0, 0) to (5, −1) is √(5² + (−1)²) = √(25 + 1) = √26. Correct option: (3).": [
     "Distance from origin ",
@@ -86451,8 +86392,13 @@ const texts={
     },
     ". Correct option: (3). (Distance from origin to ",
     {
-      "latex": "\\left(5, - 1\\right) : \\left(3\\right)\\,\\sqrt{26}",
-      "fallback": "(5, −1): (3) √26"
+      "latex": "\\left(5, - 1\\right)",
+      "fallback": "(5, −1)"
+    },
+    ": (3) ",
+    {
+      "latex": "\\sqrt{26}",
+      "fallback": "√26"
     },
     ")"
   ],
@@ -86498,8 +86444,13 @@ const texts={
     },
     ". Correct option: (4). (Section formula in ratio ",
     {
-      "latex": "2 : 1 : \\left(4\\right) \\left(4, 6\\right)",
-      "fallback": "2:1: (4) (4, 6)"
+      "latex": "2 : 1",
+      "fallback": "2:1"
+    },
+    ": (4) ",
+    {
+      "latex": "\\left(4, 6\\right)",
+      "fallback": "(4, 6)"
     },
     ")"
   ],
@@ -86576,8 +86527,13 @@ const texts={
     },
     ". Correct option: (1). (Mid-point with algebraic parameters ",
     {
-      "latex": "\\left(\\dfrac{a}{3}, \\dfrac{b}{2}\\right) : \\left(1\\right) \\left(- 9, 7\\right)",
-      "fallback": "(a/3, b/2): (1) (−9, 7)"
+      "latex": "\\left(\\dfrac{a}{3}, \\dfrac{b}{2}\\right)",
+      "fallback": "(a/3, b/2)"
+    },
+    ": (1) ",
+    {
+      "latex": "\\left(- 9, 7\\right)",
+      "fallback": "(−9, 7)"
     },
     ")"
   ],
@@ -86660,8 +86616,13 @@ const texts={
     },
     " divides ",
     {
-      "latex": "PR : \\left(3\\right) 1 : 3",
-      "fallback": "PR: (3) 1:3"
+      "latex": "PR",
+      "fallback": "PR"
+    },
+    ": (3) ",
+    {
+      "latex": "1 : 3",
+      "fallback": "1:3"
     },
     ")"
   ],
@@ -86689,18 +86650,38 @@ const texts={
     ")"
   ],
   "Other end = (2(−3) − 3, 2(2) − 4) = (−9, 0). Correct option: (4).": [
-    "Other end = ",
+    "Other end = (",
     {
-      "latex": "\\left(2 \\left(- 3\\right) - 3, 2 \\left(2\\right) - 4\\right) = \\left(- 9, 0\\right)",
-      "fallback": "(2(−3) − 3, 2(2) − 4) = (−9, 0)"
+      "latex": "2 \\left(- 3\\right) - 3, 2",
+      "fallback": "2(−3) − 3, 2"
+    },
+    "(2) ",
+    {
+      "latex": "- 4",
+      "fallback": "− 4"
+    },
+    ") = ",
+    {
+      "latex": "\\left(- 9, 0\\right)",
+      "fallback": "(−9, 0)"
     },
     ". Correct option: (4)."
   ],
   "Other end = (2(−3) − 3, 2(2) − 4) = (−9, 0). Correct option: (4). (Other end of circle diameter: (4) (−9, 0))": [
-    "Other end = ",
+    "Other end = (",
     {
-      "latex": "\\left(2 \\left(- 3\\right) - 3, 2 \\left(2\\right) - 4\\right) = \\left(- 9, 0\\right)",
-      "fallback": "(2(−3) − 3, 2(2) − 4) = (−9, 0)"
+      "latex": "2 \\left(- 3\\right) - 3, 2",
+      "fallback": "2(−3) − 3, 2"
+    },
+    "(2) ",
+    {
+      "latex": "- 4",
+      "fallback": "− 4"
+    },
+    ") = ",
+    {
+      "latex": "\\left(- 9, 0\\right)",
+      "fallback": "(−9, 0)"
     },
     ". Correct option: (4). (Other end of circle diameter: (4) ",
     {
@@ -86710,10 +86691,20 @@ const texts={
     ")"
   ],
   "மற்றொரு முனை = (2(−3) − 3, 2(2) − 4) = (−9, 0). சரியான விடை: (4). (விட்டத்தின் மற்றொரு முனை: (4) (−9, 0))": [
-    "மற்றொரு முனை = ",
+    "மற்றொரு முனை = (",
     {
-      "latex": "\\left(2 \\left(- 3\\right) - 3, 2 \\left(2\\right) - 4\\right) = \\left(- 9, 0\\right)",
-      "fallback": "(2(−3) − 3, 2(2) − 4) = (−9, 0)"
+      "latex": "2 \\left(- 3\\right) - 3, 2",
+      "fallback": "2(−3) − 3, 2"
+    },
+    "(2) ",
+    {
+      "latex": "- 4",
+      "fallback": "− 4"
+    },
+    ") = ",
+    {
+      "latex": "\\left(- 9, 0\\right)",
+      "fallback": "(−9, 0)"
     },
     ". சரியான விடை: (4). (விட்டத்தின் மற்றொரு முனை: (4) ",
     {
@@ -86866,8 +86857,13 @@ const texts={
     },
     " and ",
     {
-      "latex": "\\left(1, - 7\\right) : \\left(3\\right) 4 : 7",
-      "fallback": "(1, −7): (3) 4:7"
+      "latex": "\\left(1, - 7\\right)",
+      "fallback": "(1, −7)"
+    },
+    ": (3) ",
+    {
+      "latex": "4 : 7",
+      "fallback": "4:7"
     },
     ")"
   ],
@@ -86982,8 +86978,13 @@ const texts={
     },
     ". சரியான விடை: (2). (பக்க நடுப்புள்ளிகளிலிருந்து உச்சிகள் ",
     {
-      "latex": "A, B : \\left(2\\right) \\left(4, 0\\right), \\left(2, 8\\right)",
-      "fallback": "A, B: (2) (4, 0), (2, 8)"
+      "latex": "A, B",
+      "fallback": "A, B"
+    },
+    ": (2) ",
+    {
+      "latex": "\\left(4, 0\\right), \\left(2, 8\\right)",
+      "fallback": "(4, 0), (2, 8)"
     },
     ")"
   ],
@@ -87006,8 +87007,13 @@ const texts={
     },
     " and ",
     {
-      "latex": "\\left(- 3 a, - 4 b\\right) : \\left(2\\right) \\left(- 2 a, - b\\right)",
-      "fallback": "(−3a, −4b): (2) (−2a, −b)"
+      "latex": "\\left(- 3 a, - 4 b\\right)",
+      "fallback": "(−3a, −4b)"
+    },
+    ": (2) ",
+    {
+      "latex": "\\left(- 2 a, - b\\right)",
+      "fallback": "(−2a, −b)"
     },
     ")"
   ],
@@ -87079,8 +87085,13 @@ const texts={
     },
     " and ",
     {
-      "latex": "\\left(2, 3\\right) : \\left(4\\right) 5 : 2",
-      "fallback": "(2, 3): (4) 5:2"
+      "latex": "\\left(2, 3\\right)",
+      "fallback": "(2, 3)"
+    },
+    ": (4) ",
+    {
+      "latex": "5 : 2",
+      "fallback": "5:2"
     },
     ")"
   ],
@@ -87130,10 +87141,10 @@ const texts={
       "latex": "x",
       "fallback": "x"
     },
-    " for vertices of ",
+    " for vertices of a parallelogram: (2) ",
     {
-      "latex": "a \\text{parallelogram} : \\left(2\\right) 5",
-      "fallback": "a parallelogram: (2) 5"
+      "latex": "5",
+      "fallback": "5"
     },
     ")"
   ],

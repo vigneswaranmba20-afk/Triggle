@@ -427,6 +427,8 @@ window.TRIGGLE_G10_CH3_PATH={
     },
     {
       "id": "g10-ch3-poly-sqrt",
+      "practiceId": "c10-3-ex3-7-q1-i",
+      "secondaryPracticeId": "c10-3-ex3-8-q1-i",
       "section": "3.5",
       "relatedExercise": "3.7–3.8",
       "title": {
@@ -510,6 +512,7 @@ window.TRIGGLE_G10_CH3_PATH={
     },
     {
       "id": "g10-ch3-quad-form",
+      "practiceId": "c10-3-ex3-9-q1-i",
       "section": "3.6.1–3.6.3",
       "relatedExercise": "3.9",
       "title": {
@@ -593,6 +596,9 @@ window.TRIGGLE_G10_CH3_PATH={
     },
     {
       "id": "g10-ch3-quad-solve",
+      "practiceId": "c10-3-ex3-10-q1-i",
+      "secondaryPracticeId": "c10-3-ex3-11-q1-i",
+      "tertiaryPracticeId": "c10-3-ex3-12-q1",
       "section": "3.6.4–3.6.5",
       "relatedExercise": "3.10–3.12",
       "title": {
@@ -679,6 +685,7 @@ window.TRIGGLE_G10_CH3_PATH={
       "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch3-discriminant/4c692aa75bad331a6d1f859f3c8be79da3d621af15259ac5e79ebadb79eef890.mp4", "language": "en", "durationSeconds": 152.44},
       "section": "3.6.6",
       "relatedExercise": "3.13",
+      "practiceId": "c10-3-ex3-13-q1-i",
       "title": {
         "en": "Nature of roots and the discriminant (Δ = b² − 4ac)",
         "ta": "தன்மைக்காட்டி (Δ = b² − 4ac) மற்றும் மூலங்களின் தன்மை"
@@ -761,6 +768,7 @@ window.TRIGGLE_G10_CH3_PATH={
     },
     {
       "id": "g10-ch3-roots-coeff",
+      "practiceId": "c10-3-ex3-14-q1-i",
       "section": "3.6.7",
       "relatedExercise": "3.14",
       "title": {

@@ -5,7 +5,7 @@
  */
 const supers={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','ⁿ':'n','ᵏ':'k'};
 const subs={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','ᵢ':'i'};
-const ops={'−':'-','–':'-','×':'\\times','÷':'\\div','≤':'\\le','≥':'\\ge','≠':'\\ne','≈':'\\approx','⇒':'\\Rightarrow','∈':'\\in','∉':'\\notin','∪':'\\cup','∩':'\\cap','⊂':'\\subset','⊆':'\\subseteq','∅':'\\varnothing','ℕ':'\\mathbb{N}','ℤ':'\\mathbb{Z}','π':'\\pi','θ':'\\theta','φ':'\\phi','α':'\\alpha','β':'\\beta','Σ':'\\sum','σ':'\\sigma','μ':'\\mu','∠':'\\angle','Δ':'\\triangle','≅':'\\cong','°':'^{\\circ}','…':'\\ldots','...':'\\ldots','′':"'",'∣':'|'};
+const ops={'−':'-','–':'-','×':'\\times','÷':'\\div','≤':'\\le','≥':'\\ge','≠':'\\ne','≈':'\\approx','⇒':'\\Rightarrow','∈':'\\in','∉':'\\notin','∪':'\\cup','∩':'\\cap','⊂':'\\subset','⊆':'\\subseteq','∅':'\\varnothing','ℕ':'\\mathbb{N}','ℤ':'\\mathbb{Z}','π':'\\pi','θ':'\\theta','φ':'\\phi','α':'\\alpha','β':'\\beta','Σ':'\\sum','σ':'\\sigma','μ':'\\mu','∠':'\\angle','Δ':'\\triangle','≅':'\\cong','⟂':'\\perp','⊥':'\\perp','°':'^{\\circ}','…':'\\ldots','...':'\\ldots','′':"'",'∣':'|'};
 const functions=new Set(['sin','cos','tan','sec','cosec','cot','deg']);
 const labels=new Set(['LHS','RHS','TSA','LSA','CF','Mean','Median','Mode','mean','median','mode','Sum','sum','Total','Area','Cost','Base','Side','Volume','Number','Opposite','Adjacent','Hypotenuse','Green','Blue','Red','Goals','Vwall','Vbrick','Vcube','Vcuboid','height','base','breadth','length','cost','Angles','Answer','Unshaded','Diagonal','Wall','Ceiling','total','brick','wall','sides','Unknown','Modes','Maximum','chord','cf','triangle','parallelogram']);
 const units=new Set(['cm','mm','kg','km','m','litres']);
@@ -56,7 +56,12 @@ function expression(source,{display=false,variables=[]}={}){
    let exponent='';if(isSuper(peek()))exponent='^{'+[...take()].map(c=>supers[c]).join('')+'}';
    const name=t==='cosec'?'\\operatorname{cosec}':t==='deg'?'\\operatorname{deg}':'\\'+t;
    // A function's argument is its following atom/power, not the entire sum.
-   return node(name+exponent+' '+power().latex,'function');
+   let arg=power();
+   if(arg.latex.endsWith('^{\\circ}')&&/^\d/.test(peek()||'')&&(ts[at+1]==='′'||ts[at+1]==="'")){
+    const mins=take(),prime=take();
+    arg=node(arg.latex+'\\,'+mins+(ops[prime]||prime),arg.kind);
+   }
+   return node(name+exponent+' '+arg.latex,'function');
   }
   if(/^\d/.test(t))return node(t.replaceAll(',','{,}'),'number');
   if(/^_+$/.test(t))return node('\\underline{\\phantom{000}}');
@@ -84,10 +89,10 @@ function expression(source,{display=false,variables=[]}={}){
   }return base;
  }
  function unary(){if(['+','-','−','–','±','≈'].includes(peek())){const t=take();return node((ops[t]|| (t==='±'?'\\pm':t))+' '+unary().latex);}return power();}
- function juxtapose(){let v=unary();while(begins(peek())){if(v.kind==='number'&&/^\d/.test(peek()))throw Error('Adjacent data values retain their source spacing');const r=unary();v=node(v.latex+(['unit','root'].includes(r.kind)?'\\,':' ')+r.latex,'product');}return v;}
+ function juxtapose(){let v=unary();while(begins(peek())){if(v.kind==='number'&&/^\d/.test(peek())){if(v.latex.endsWith('^{\\circ}')&&(ts[at+1]==='′'||ts[at+1]==="'")){const r=unary();v=node(v.latex+'\\,'+r.latex,'number');continue;}throw Error('Adjacent data values retain their source spacing');}if(v.latex.endsWith("'")&&peek()==='mean')throw Error('Prose word mean after arcminute');const r=unary();v=node(v.latex+(['unit','root'].includes(r.kind)?'\\,':' ')+r.latex,'product');}return v;}
  function product(){let v=juxtapose();while(['/','×','÷'].includes(peek())){const t=take(),r=juxtapose();v=t==='/'?node((expDepth>0?'\\frac{':'\\dfrac{')+v.latex+'}{'+r.latex+'}','fraction'):node(v.latex+' '+ops[t]+' '+r.latex);}while(isUnit(peek())){const unit=power();v=node(v.latex+'\\,'+unit.latex,'quantity');}return v;}
  function sum(){let v=product();while(['+','-','−','–','±','∪','∩'].includes(peek())){const t=take();v=node(v.latex+' '+(ops[t]||(t==='±'?'\\pm':t))+' '+product().latex);}return v;}
- function relation(){let v=sum();while(['=','<','>','≤','≥','≠','≈','⇒','∈','∉','⊂','⊆','≅'].includes(peek())){const t=take();v=node(v.latex+' '+(ops[t]||t)+' '+sum().latex);}return v;}
+ function relation(){let v=sum();while(['=','<','>','≤','≥','≠','≈','⇒','∈','∉','⊂','⊆','≅','⟂','⊥'].includes(peek())){const t=take();v=node(v.latex+' '+(ops[t]||t)+' '+sum().latex);}return v;}
  function sequence(stop){let v=relation();while(peek()&&peek()!==stop&&[',',':',';'].includes(peek())){const t=take();v=node(v.latex+(t===','?', ':t===';'?';\\quad ':' : ')+relation().latex);}if(peek()==='…'||peek()==='...'){v=node(v.latex+'\\ldots');take();}return v;}
  let latex=sequence().latex;if(at!==ts.length)throw Error('Unconsumed '+peek());
  // Break top-level equality chains and independent statements, never relations
@@ -150,11 +155,12 @@ function rich(source,{display=false,variables=[]}={}){
   if(!allowed(t.text)||/^\s+$/.test(t.text)||(t.text==='s'&&/[’']/.test(source[t.start-1]||'')&&/[A-Za-z]/.test(source[t.start-2]||''))){index++;continue;}
   // Find the longest valid bounded expression at this token. Failed enclosing
   // groups cannot swallow a smaller valid formula later in the same sentence.
-  let end=index,fractionDepth=0,eventDepth=0;while(end<ts.length){const token=ts[end].text;if(token==='[[')fractionDepth++;if(!fractionDepth&&!allowed(token)&&!eventDepth)break;if(token===']]')fractionDepth--;if(token==='P'&&ts[end+1]?.text==='(')eventDepth=1;else if(eventDepth&&token===')')eventDepth=0;if(/^\n/.test(token))break;end++;}
+  let end=index,fractionDepth=0,eventDepth=0;while(end<ts.length){const token=ts[end].text;if(token==='('&&!fractionDepth&&!eventDepth&&labels.test(source.slice(ts[end].start)))break;if(token==='[[')fractionDepth++;if(!fractionDepth&&!allowed(token)&&!eventDepth)break;if(token===']]')fractionDepth--;if(token==='P'&&ts[end+1]?.text==='(')eventDepth=1;else if(eventDepth&&token===')')eventDepth=0;if(/^\n/.test(token))break;end++;}
   let found;
   for(let j=end;j>index;j--){const raw=source.slice(t.start,ts[j-1].end).trimEnd();
    if(!raw||/[=+\-−–×÷/:;,]$/.test(raw))continue;
    if(/^[aAiI]$/.test(raw)&&raw!==source.trim())continue;
+   if(/^A\s+\d/.test(raw))continue;
    if(/[A-Za-z]{2,}/.test(raw)&&!/[0-9=+−–×÷/<>∈∉∪∩√∠Δ²³Σ°₀₁₂₃₄₅₆₇₈₉]/.test(raw)&&!/^[A-Za-z]\(/.test(raw)&&! /\b(?:sin|cos|tan|sec|cosec|cot|deg)\b/.test(raw)&&!products.has(raw)&&!/^\d/.test(raw)&&!/^[A-Z]{2,4}$/.test(raw))continue;
    // A bare prose word/number is not a product; only variables, mathematical
    // symbols and complete numeric tokens are eligible as isolated anchors.

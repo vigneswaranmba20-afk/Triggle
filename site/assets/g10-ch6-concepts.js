@@ -245,6 +245,11 @@ function mount(stage,host,lang){
       const pixelsPerUnit=10.4;
       const base=pixelsPerUnit*r.adj,rise=pixelsPerUnit*r.opp;
       const xO=54,yM=170,xM=xO+base,yP=yM-rise;
+      const len=Math.hypot(base,rise)||1;
+      const nx=-rise/len,ny=-base/len;
+      const hypX=(xO+xM)/2+nx*14,hypY=(yM+yP)/2+ny*14;
+      const oAngX=xO+(rise<30?10:16),oAngY=yM-(rise<30?16:7);
+      const pAngX=xM-(base<40?8:28),pAngY=yP+(base<40?-6:24);
       svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 320 200" role="img" aria-label="Right triangle OMP">
         <polygon points="${xO},${yM} ${xM},${yM} ${xM},${yP}" fill="#F3EFE8" stroke="#181B20" stroke-width="2.2"/>
         <path d="M${xM-12},${yM} L${xM-12},${yM-12} L${xM},${yM-12}" fill="none" stroke="#525B62" stroke-width="1.5"/>
@@ -252,12 +257,12 @@ function mount(stage,host,lang){
         <circle cx="${xM}" cy="${yP}" r="4.5" fill="${flipCorner?'#6E2933':'#525B62'}"/>
         <text x="${xO-14}" y="${yM+4}" font-size="12" font-weight="700" fill="#181B20">O</text>
         <text x="${xM+6}" y="${yM+4}" font-size="12" font-weight="700" fill="#181B20">M</text>
-        <text x="${xM+6}" y="${yP+4}" font-size="12" font-weight="700" fill="#181B20">P</text>
-        <text x="${xO+16}" y="${yM-8}" font-size="11.5" font-weight="700" fill="${!flipCorner?'#6E2933':'#525B62'}">${theta}°</text>
-        <text x="${xM-32}" y="${yP+24}" font-size="11.5" font-weight="700" fill="${flipCorner?'#6E2933':'#525B62'}">${90-theta}°</text>
+        <text x="${xM+6}" y="${yP-6}" font-size="12" font-weight="700" fill="#181B20">P</text>
+        <text x="${oAngX}" y="${oAngY}" font-size="11" font-weight="700" fill="${!flipCorner?'#6E2933':'#525B62'}" stroke="#FAF9F6" stroke-width="2.5" paint-order="stroke">${theta}°</text>
+        <text x="${pAngX}" y="${pAngY}" font-size="11" font-weight="700" text-anchor="${base<40?'end':'start'}" fill="${flipCorner?'#6E2933':'#525B62'}" stroke="#FAF9F6" stroke-width="2.5" paint-order="stroke">${90-theta}°</text>
         <text x="${(xO+xM)/2}" y="${yM+18}" font-size="11" font-weight="700" text-anchor="middle" fill="${flipCorner?'#8C3B2B':'#1E5248'}">OM ≈ ${fmt(r.adj,2)}</text>
-        <text x="${xM+8}" y="${(yM+yP)/2}" font-size="11" font-weight="700" fill="${flipCorner?'#1E5248':'#8C3B2B'}">MP ≈ ${fmt(r.opp,2)}</text>
-        <text x="${(xO+xM)/2-14}" y="${(yM+yP)/2-8}" font-size="11" font-weight="700" fill="#525B62">OP=${fmt(r.hyp,2)}</text>
+        <text x="${xM+8}" y="${(yM+yP)/2+4}" font-size="11" font-weight="700" fill="${flipCorner?'#1E5248':'#8C3B2B'}">MP ≈ ${fmt(r.opp,2)}</text>
+        <text x="${hypX}" y="${hypY}" font-size="11" font-weight="700" text-anchor="end" fill="#525B62" stroke="#FAF9F6" stroke-width="2.5" paint-order="stroke">OP=${fmt(r.hyp,2)}</text>
       </svg>`;
       const opp=flipCorner?r.adj:r.opp,adj=flipCorner?r.opp:r.adj;
       const oppSide=flipCorner?'OM':'MP',adjSide=flipCorner?'MP':'OM';
@@ -297,13 +302,13 @@ function mount(stage,host,lang){
     const draw=()=>{
       btns.forEach(([k,b])=>b.setAttribute('aria-pressed',String(k===mode)));
       const s=sinD(theta),c=cosD(theta),t=tanD(theta);
-      const xO=55,yM=165,W=170*c,H=170*s;
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Unit hypotenuse triangle">
+      const xO=38,yM=165,W=156*c,H=156*s;
+      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 326 190" role="img" aria-label="Unit hypotenuse triangle">
         <polygon points="${xO},${yM} ${xO+W},${yM} ${xO+W},${yM-H}" fill="#EFF8F4" stroke="#1E5248" stroke-width="2.2"/>
         <text x="${xO+W/2}" y="${yM+16}" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1E5248">cos ${theta}° ≈ ${fmt(c,3)}</text>
-        <text x="${xO+W+8}" y="${yM-H/2}" font-size="11.5" font-weight="700" fill="#6E2933">sin ${theta}° ≈ ${fmt(s,3)}</text>
-        <text x="${xO+W/2-22}" y="${yM-H/2-10}" font-size="11.5" font-weight="700" fill="#181B20">OP = 1</text>
-        <text x="${xO+18}" y="${yM-7}" font-size="11" font-weight="700" fill="#181B20">${theta}°</text>
+        <text x="${xO+W+8}" y="${yM-H/2+4}" font-size="11.5" font-weight="700" fill="#6E2933">sin ${theta}° ≈ ${fmt(s,3)}</text>
+        <text x="${xO+W/2-14}" y="${yM-H/2-12}" font-size="11.5" font-weight="700" text-anchor="end" fill="#181B20" stroke="#FAF9F6" stroke-width="2.5" paint-order="stroke">OP = 1</text>
+        <text x="${xO+18}" y="${yM-(H<45?15:7)}" font-size="11" font-weight="700" fill="#181B20" stroke="#FAF9F6" stroke-width="2.5" paint-order="stroke">${theta}°</text>
       </svg>`;
       readout.innerHTML=mode==='quotient'
         ?tex(`\\begin{aligned}&\\tan ${theta}^\\circ=\\dfrac{\\sin ${theta}^\\circ}{\\cos ${theta}^\\circ}\\approx ${fmt(t,3)}\\\\&\\cot ${theta}^\\circ=\\dfrac{\\cos ${theta}^\\circ}{\\sin ${theta}^\\circ}\\approx ${fmt(1/t,3)},\\\\&\\tan ${theta}^\\circ\\cdot\\cot ${theta}^\\circ=1\\end{aligned}`,true)
@@ -329,6 +334,7 @@ function mount(stage,host,lang){
       const c=math.complementary(theta);
       const R=120,cx=155,cy=160;
       const qx=cx+R*c.cosT,qy=cy-R*c.sinT;
+      const narrow=qx-cx<54;
       svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 185" role="img" aria-label="Complementary rectangle Fig 6.2">
         <path d="M${cx-R},${cy} A${R},${R} 0 0,1 ${cx+R},${cy}" fill="none" stroke="#B8B2A6" stroke-width="1.6"/>
         <line x1="${cx-R-10}" y1="${cy}" x2="${cx+R+10}" y2="${cy}" stroke="#525B62" stroke-width="1.4"/>
@@ -337,11 +343,11 @@ function mount(stage,host,lang){
         <polygon points="${cx},${cy} ${cx},${qy} ${qx},${qy}" fill="rgba(30,82,72,.12)" stroke="#1E5248" stroke-width="2"/>
         <circle cx="${qx}" cy="${qy}" r="5" fill="#6E2933"/>
         <text x="${cx-12}" y="${cy+14}" font-size="11" font-weight="700" fill="#181B20">O</text>
-        <text x="${qx-4}" y="${cy+14}" font-size="11" font-weight="700" fill="#6E2933">P</text>
-        <text x="${qx+6}" y="${qy-4}" font-size="11" font-weight="700" fill="#181B20">Q</text>
-        <text x="${cx-14}" y="${qy+4}" font-size="11" font-weight="700" fill="#1E5248">R</text>
-        <text x="${(cx+qx)/2}" y="${cy+14}" font-size="10.5" text-anchor="middle" fill="#6E2933">${fmt(c.cosT,2)}</text>
-        <text x="${(cx+qx)/2}" y="${qy-6}" font-size="10.5" text-anchor="middle" fill="#1E5248">RQ ≈ ${fmt(c.sinC,2)}</text>
+        <text x="${narrow?qx+8:qx-4}" y="${cy+14}" font-size="11" font-weight="700" fill="#6E2933">P</text>
+        <text x="${qx+8}" y="${narrow?qy+12:qy-4}" font-size="11" font-weight="700" fill="#181B20">Q</text>
+        <text x="${cx-14}" y="${narrow?qy+12:qy+4}" font-size="11" font-weight="700" fill="#1E5248">R</text>
+        <text x="${narrow?qx+24:(cx+qx)/2}" y="${cy+14}" font-size="10.5" text-anchor="${narrow?'start':'middle'}" fill="#6E2933">${fmt(c.cosT,2)}</text>
+        <text x="${narrow?qx+10:(cx+qx)/2}" y="${qy-8}" font-size="10.5" text-anchor="${narrow?'start':'middle'}" fill="#1E5248" stroke="#FAF9F6" stroke-width="2.5" paint-order="stroke">RQ ≈ ${fmt(c.sinC,2)}</text>
       </svg>`;
       readout.innerHTML=tex(`\\begin{aligned}&\\sin(${c.comp}^\\circ)=\\cos(${theta}^\\circ)\\approx ${fmt(c.cosT,3)}\\\\&\\cos(${c.comp}^\\circ)=\\sin(${theta}^\\circ)\\approx ${fmt(c.sinT,3)}\\end{aligned}`,true);
     };
@@ -557,6 +563,7 @@ function mount(stage,host,lang){
         <line x1="${xB}" y1="${yC}" x2="${xA}" y2="${yB}" stroke="#6E2933" stroke-width="2.2"/>
         <circle cx="${xA}" cy="${yB}" r="4.5" fill="#1E5248"/>
         <text x="${xB-4}" y="${yC-7}" font-size="11" font-weight="700" fill="#181B20">C</text>
+        <text x="${xA+27}" y="${yC+4}" font-size="11" font-weight="700" fill="#6E2933">X</text>
         <text x="${xB-10}" y="${yB+14}" font-size="11" font-weight="700" fill="#181B20">B</text>
         <text x="${xA+6}" y="${yB+14}" font-size="11" font-weight="700" fill="#1E5248">A</text>
         <text x="${xB+30}" y="${yC+13}" font-size="11" font-weight="700" fill="#6E2933">${angle}°</text>
@@ -603,10 +610,10 @@ function mount(stage,host,lang){
         <line x1="66" y1="114" x2="234" y2="114" stroke="#181B20" stroke-width="1.6" stroke-dasharray="4 3"/>
         <line x1="66" y1="114" x2="234" y2="26" stroke="#6E2933" stroke-width="2.2"/>
         <line x1="66" y1="114" x2="234" y2="168" stroke="#1E5248" stroke-width="2.2"/>
-        <text x="150" y="110" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">x ≈ ${fmt(res.x,1)} m</text>
-        <text x="102" y="106" font-size="10.5" font-weight="700" fill="#6E2933">α=${alpha}°</text>
-        <text x="102" y="130" font-size="10.5" font-weight="700" fill="#1E5248">β=${beta}°</text>
-        <text x="30" y="146" font-size="10" font-weight="700" fill="#181B20">${h1}m</text>
+        <text x="176" y="109" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20" stroke="#FAF9F6" stroke-width="2.5" paint-order="stroke">x ≈ ${fmt(res.x,1)} m</text>
+        <text x="92" y="106" font-size="10.5" font-weight="700" fill="#6E2933">α=${alpha}°</text>
+        <text x="92" y="130" font-size="10.5" font-weight="700" fill="#1E5248">β=${beta}°</text>
+        <text x="26" y="146" font-size="10" font-weight="700" fill="#181B20">${h1}m</text>
       </svg>`;
       readout.innerHTML=tex(`\\begin{aligned}&x=\\dfrac{${h1}}{\\tan ${beta}^\\circ}\\approx ${fmt(res.x,1)}\\text{ m}\\\\&H=${h1}+x\\tan ${alpha}^\\circ\\approx ${fmt(res.total,1)}\\text{ m}\\end{aligned}`,true);
     }else if(mode==='two-same'){
@@ -616,6 +623,9 @@ function mount(stage,host,lang){
         <line x1="58" y1="42" x2="142" y2="162" stroke="#6E2933" stroke-width="2"/>
         <line x1="58" y1="42" x2="262" y2="162" stroke="#1E5248" stroke-width="2"/>
         <circle cx="142" cy="162" r="4" fill="#6E2933"/><circle cx="262" cy="162" r="4" fill="#1E5248"/>
+        <text x="22" y="106" font-size="10" font-weight="700" fill="#181B20">${h1}m</text>
+        <text x="108" y="156" font-size="10" font-weight="700" fill="#6E2933">α=${alpha}°</text>
+        <text x="216" y="156" font-size="10" font-weight="700" fill="#1E5248">β=${beta}°</text>
         <text x="202" y="176" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">Gap d ≈ ${fmt(res.gap,1)} m</text>
       </svg>`;
       readout.innerHTML=tex(`\\begin{aligned}&x_1\\approx ${fmt(res.xFar,1)}\\text{ m},\\;x_2\\approx ${fmt(res.xNear,1)}\\text{ m}\\\\&\\text{Gap}=x_1-x_2\\approx ${fmt(res.gap,1)}\\text{ m}\\end{aligned}`,true);
@@ -626,6 +636,9 @@ function mount(stage,host,lang){
         <line x1="155" y1="42" x2="46" y2="162" stroke="#6E2933" stroke-width="2"/>
         <line x1="155" y1="42" x2="264" y2="162" stroke="#1E5248" stroke-width="2"/>
         <circle cx="46" cy="162" r="4" fill="#6E2933"/><circle cx="264" cy="162" r="4" fill="#1E5248"/>
+        <text x="155" y="34" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">${h1}m</text>
+        <text x="72" y="156" font-size="10" font-weight="700" fill="#6E2933">α=${alpha}°</text>
+        <text x="210" y="156" font-size="10" font-weight="700" fill="#1E5248">β=${beta}°</text>
         <text x="155" y="178" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">Total = x₁ + x₂ ≈ ${fmt(res.gap,1)} m</text>
       </svg>`;
       readout.innerHTML=tex(`\\begin{aligned}&x_1\\approx ${fmt(res.xLeft,1)}\\text{ m},\\;x_2\\approx ${fmt(res.xRight,1)}\\text{ m}\\\\&\\text{Gap}=x_1+x_2\\approx ${fmt(res.gap,1)}\\text{ m}\\end{aligned}`,true);

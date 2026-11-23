@@ -278,7 +278,8 @@ const more = [
       "fallback": "Four cubed is 64 cubic centimetres.",
       "display": true
     },
-    "practiceId": "g9-ch7-ex7.3-q1"
+    "practiceId": "g9-ch7-ex7.3-q1",
+    "secondaryPracticeId": "g9-ch7-ex7.4-q1"
   }
 ];
 window.TRIGGLE_MENSURATION_PATH=Object.freeze({...prior, stages:Object.freeze([...prior.stages,...more])});

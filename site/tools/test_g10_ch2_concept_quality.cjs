@@ -17,9 +17,20 @@ assert.deepEqual(exerciseLinks,{
  'g10-ch2-gcd':'c10-2-ex2-1-q6',
  'g10-ch2-bezout':'c10-2-ex2-1-q8',
  'g10-ch2-primes':'c10-2-ex2-2-q6',
+ 'g10-ch2-modulo':'c10-2-ex2-3-q5',
+ 'g10-ch2-congruence':'c10-2-ex2-3-q1',
+ 'g10-ch2-sequence':'c10-2-ex2-4-q2-i',
+ 'g10-ch2-recursive':'c10-2-ex2-4-q6',
+ 'g10-ch2-ap':'c10-2-ex2-5-q1-i',
+ 'g10-ch2-ap-nth':'c10-2-ex2-5-q4',
+ 'g10-ch2-ap-sum':'c10-2-ex2-6-q1',
+ 'g10-ch2-gp':'c10-2-ex2-7-q2',
+ 'g10-ch2-gp-sum':'c10-2-ex2-8-q1-i',
+ 'g10-ch2-gp-infinite':'c10-2-ex2-8-q2',
  'g10-ch2-special':'c10-2-ex2-9-q1-v'
-},'Retain the four prior exercise links and link shifted squares to the source-checked question');
+},'Link all 15 Chapter 2 concepts to source-checked exercises');
 for(const stage of stages){
+ assert(stage.page?.en&&stage.page?.ta,'2025 EN/TA page citation on '+stage.id);
  assert(stage.math.latex&&stage.math.fallback,'Structured mathematics + accessible fallback');
  for(const lang of ['en','ta'])for(const field of ['idea','example','rule','question','why','hint'])
   assert(stage[field]?.[lang]?.trim(),'Bilingual pedagogical field '+stage.id+' '+field+'.'+lang);

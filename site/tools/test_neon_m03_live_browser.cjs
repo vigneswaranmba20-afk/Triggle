@@ -71,12 +71,19 @@ function safe(s){return s.replace(/[^a-z0-9-]+/gi,'-');}
        await page.locator('.probability-demo button').last().click();
        assert.match(await page.locator('.probability-result').innerText(),/Ticket 4 matches both/i);
      }
-     const scroller=page.locator('.lesson-container');
      await page.screenshot({path:path.join(OUT,tag+'-top.png'),fullPage:true});
-     if(await scroller.count()){
-       await scroller.evaluate(node=>{node.scrollTop=Math.max(0,node.scrollHeight-node.clientHeight);});
-       await page.screenshot({path:path.join(OUT,tag+'-bottom.png'),fullPage:true});
+     await page.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight));
+     if(c.kind==='question'){
+       const dockGap=await page.evaluate(()=>{
+         const dock=document.querySelector('#questionNavDock:not([hidden])');
+         const steps=[...document.querySelectorAll('#stepsContainer .step-card')];
+         const lastStep=steps[steps.length-1];
+         if(!dock||!lastStep)return 999;
+         return dock.getBoundingClientRect().top-lastStep.getBoundingClientRect().bottom;
+       });
+       assert(dockGap>=12,'Bottom questionNavDock must not occlude final solution step at scroll bottom (gap='+Math.round(dockGap)+'px)');
      }
+     await page.screenshot({path:path.join(OUT,tag+'-bottom.png'),fullPage:false});
      entry.ok=true;entry.state=state;
     }catch(e){
      entry.error=String(e&&e.stack||e);

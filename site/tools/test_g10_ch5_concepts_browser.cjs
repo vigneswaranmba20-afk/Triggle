@@ -43,16 +43,31 @@ async function assertStudioAndLayout(page,ctxLabel){
       .filter(el=>{const r=el.getBoundingClientRect();return r.width>0&&r.height>0&&(r.height<43.5||r.width<43.5);})
       .map(el=>({text:el.textContent.trim(),w:Math.round(el.getBoundingClientRect().width),h:Math.round(el.getBoundingClientRect().height)}));
     const cards=document.querySelectorAll('.g10ch4-studio > .g10ch4-card').length;
+    const refText=document.querySelector('.sp2-stage-reference')?.textContent||'';
+    const svgCollisions=[];
+    for(const svg of [...document.querySelectorAll('.g10ch4-lab svg, .g10ch4-glance-visual svg')].filter(s=>!s.closest('.katex'))){
+      const texts=[...svg.querySelectorAll('text')].filter(t=>t.textContent.trim().length>0);
+      for(let i=0;i<texts.length;i++){
+        for(let j=i+1;j<texts.length;j++){
+          const a=texts[i].getBoundingClientRect(),b=texts[j].getBoundingClientRect();
+          const ox=Math.min(a.right,b.right)-Math.max(a.left,b.left);
+          const oy=Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top);
+          if(ox>3&&oy>3)svgCollisions.push({a:texts[i].textContent.trim(),b:texts[j].textContent.trim()});
+        }
+      }
+    }
     return {
       overflow:doc.scrollWidth-doc.clientWidth,
       scrollW:doc.scrollWidth,clientW:doc.clientWidth,
       mathErrors:errors,
       clippedTex,
       katexCount:document.querySelectorAll('.g10ch4-studio .katex').length,
-      svgs,smallButtons,cards
+      svgs,smallButtons,cards,refText,svgCollisions
     };
   });
   assert.equal(check.cards,6,`${ctxLabel}: expected all 6 mandatory concept cards`);
+  assert(check.refText.includes('EN p.')&&check.refText.includes('TA p.'),`${ctxLabel}: missing 2025 EN/TA page citation: ${check.refText}`);
+  assert.deepEqual(check.svgCollisions,[],`${ctxLabel}: SVG text collisions: ${JSON.stringify(check.svgCollisions)}`);
   assert(check.overflow<=1,`${ctxLabel}: horizontal overflow ${check.overflow}px (${check.scrollW} > ${check.clientW})`);
   assert.equal(check.mathErrors,0,`${ctxLabel}: KaTeX math errors detected`);
   assert.deepEqual(check.clippedTex,[],`${ctxLabel}: clipped display formulas: ${JSON.stringify(check.clippedTex)}`);
