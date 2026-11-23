@@ -277,8 +277,42 @@
     paint();
   }
 
+
+  // Compact, original point plot for the Grade 9 §5.3 distance concept.
+  // The three sides are exactly 3, 4 and 5 units; no scaled measurement
+  // or misleading drawn angle is used as a substitute for Pythagoras.
+  function showG9DistanceGrid(host,lang){
+    const ta=lang==='ta';
+    const grid=Array.from({length:8},(_,i)=>{
+      const x=48+27*i,y=190-27*i;
+      return '<path d="M'+x+' 14 V190 M48 '+y+' H264"/>';
+    }).join('');
+    host.className='g9-distance-lab';
+    host.setAttribute('role','group');
+    host.setAttribute('aria-label',ta?'ஆயத்தொலைவுப் புள்ளிகள் A(1,2), B(4,6) இடையேயான தொலைவு':'Distance between coordinate points A(1,2) and B(4,6)');
+    host.innerHTML='<svg viewBox="0 0 290 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="g9-distance-grid-title g9-distance-grid-desc">'+
+      '<title id="g9-distance-grid-title">'+(ta?'3, 4, 5 அலகுகள் கொண்ட செங்கோண முக்கோணம்':'Right triangle with sides 3, 4, 5 units')+'</title>'+
+      '<desc id="g9-distance-grid-desc">'+(ta?'A(1,2) முதல் C(4,2) வரை 3 அலகுகள்; C முதல் B(4,6) வரை 4 அலகுகள்; A முதல் B வரை 5 அலகுகள்.':'From A(1,2) to C(4,2) is 3 units; from C to B(4,6) is 4 units; the straight line AB is 5 units.')+'</desc>'+
+      '<rect x="0" y="0" width="290" height="225" rx="14" fill="#fafbfd"/>'+
+      '<g stroke="#dfe6ee" stroke-width=".85">'+grid+'</g>'+
+      '<g stroke="#66788a" stroke-width="1.5" stroke-linecap="round"><path d="M35 190 H271 M48 203 V10"/></g>'+
+      '<g fill="#56657a" font-size="10" font-family="system-ui,sans-serif"><text x="273" y="192">x</text><text x="51" y="12">y</text><text x="35" y="206">0</text><text x="72" y="206">1</text><text x="153" y="206">4</text><text x="28" y="139">2</text><text x="28" y="31">6</text></g>'+
+      '<path d="M75 136 H156" stroke="#a15354" stroke-width="3.5" stroke-linecap="round"/>'+
+      '<path d="M156 136 V28" stroke="#4a7695" stroke-width="3.5" stroke-linecap="round"/>'+
+      '<path d="M75 136 L156 28" stroke="#287b6e" stroke-width="4" stroke-linecap="round"/>'+
+      '<path d="M144 136 V124 H156" fill="none" stroke="#56657a" stroke-width="1.7"/>'+
+      '<g fill="#fff" stroke="#20324a" stroke-width="1.7"><circle cx="75" cy="136" r="4.2"/><circle cx="156" cy="28" r="4.2"/><circle cx="156" cy="136" r="3.6"/></g>'+
+      '<g font-family="system-ui,sans-serif" font-size="11" font-weight="650" fill="#233044">'+
+      '<text x="15" y="124">A(1,2)</text><text x="166" y="26">B(4,6)</text><text x="164" y="151">C</text>'+
+      '<text x="103" y="154" fill="#994a50">3 '+(ta?'அலகு':'units')+'</text>'+
+      '<text x="170" y="93" fill="#366788">4 '+(ta?'அலகு':'units')+'</text>'+
+      '<text x="57" y="79" fill="#196f64">5 '+(ta?'அலகு':'units')+'</text></g></svg>'+
+      '<p class="g9-distance-plot-note">'+(ta?'கிடைமட்டம் 3 + செங்குத்து 4; நேர்க்கோட்டுத் தொலைவு 5.':'Horizontal 3 + vertical 4; straight-line distance 5.')+'</p>';
+  }
+
   function showG10Ch2Visual(stage,host,lang){
     const v=stage.visual;if(!v||!host)return;
+    if(v.kind==='g9-distance-grid'){showG9DistanceGrid(host,lang);return;}
     if(window.TriggleG9MensurationLabs?.mount(stage,host,lang))return;
     if(window.TriggleG10ConceptLabs?.mount(stage,host,lang))return;
     if(window.TriggleG10Ch3Labs?.mount(stage,host,lang))return;
@@ -382,9 +416,11 @@
   // Do not probe the remote R2 asset on concept open: avoid wasting mobile data
   // and avoid holding up navigation/browser tests when the CDN is slow.
   function attachStageVideo(panel,stage,lang){
-    if(!['g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant','g10-ch4-bpt-thales','g10-ch5-area-triangle'].includes(stage?.id)||!stage.video?.src)return;
+    if(!['g9-ch5-distance-formula','g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant','g10-ch4-bpt-thales','g10-ch5-area-triangle'].includes(stage?.id)||!stage.video?.src)return;
     let url;try{url=new URL(stage.video.src,document.baseURI);}catch{return;}
-    if(url.protocol!=='https:'||!url.pathname.toLowerCase().endsWith('.mp4'))return;
+    // Live media requires HTTPS. Permit same-origin loopback HTTP in local browser tests only.
+    const loopback=location.origin===url.origin&&['localhost','127.0.0.1','[::1]'].includes(location.hostname);
+    if((url.protocol!=='https:'&&!(loopback&&url.protocol==='http:'))||!url.pathname.toLowerCase().endsWith('.mp4'))return;
     if(url.origin!==location.origin&&url.hostname!=='pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev')return;
     const ta=lang==='ta',button=document.createElement('button');
     button.type='button';button.className='sp2-concept-video-button';
@@ -404,7 +440,10 @@
        const discriminant=stage.id==='g10-ch3-discriminant';
        const thales=stage.id==='g10-ch4-bpt-thales';
        const area=stage.id==='g10-ch5-area-triangle';
-       title.textContent=area
+       const distance=stage.id==='g9-ch5-distance-formula';
+       title.textContent=distance
+         ?(ta?'இரு புள்ளிகளுக்கு இடையேயான தொலைவு (ஆங்கிலக் குரல்)':'Why the distance formula works')
+         :area
          ?(ta?'ஆயத்தொலைவுகள் மூலம் முக்கோணத்தின் பரப்பு (ஆங்கிலக் குரல்)':'Area of a triangle from coordinates')
          :thales
          ?(ta?'தேல்ஸ் தேற்றம் — அடிப்படை விகிதசமத் தேற்றம் (ஆங்கிலக் குரல்)':'Thales theorem — the proportionality of parallel lines')
@@ -672,7 +711,7 @@
     const text=obj=>typeof obj==='string'?obj:(obj?.[lang]||obj?.en||'');
     const sets=categorized(questions); // Examples stay archived in source, outside student navigation.
     const matrixConcepts=chapter.id==='g12-ch1'&&lang==='en'&&window.TriggleMatrixConcepts;
-    const stages=chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch7'?(window.TRIGGLE_MENSURATION_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):chapter.id==='g10-ch4'?(window.TRIGGLE_G10_CH4_PATH?.stages||[]):chapter.id==='g10-ch5'?(window.TRIGGLE_G10_CH5_PATH?.stages||[]):chapter.id==='g10-ch6'?(window.TRIGGLE_G10_CH6_PATH?.stages||[]):chapter.id==='g9-ch3'?(window.TRIGGLE_ALGEBRA_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
+    const stages=chapter.id==='g9-ch5'?(window.TRIGGLE_G9_CH5_PATH?.stages||[]):chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch7'?(window.TRIGGLE_MENSURATION_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):chapter.id==='g10-ch4'?(window.TRIGGLE_G10_CH4_PATH?.stages||[]):chapter.id==='g10-ch5'?(window.TRIGGLE_G10_CH5_PATH?.stages||[]):chapter.id==='g10-ch6'?(window.TRIGGLE_G10_CH6_PATH?.stages||[]):chapter.id==='g9-ch3'?(window.TRIGGLE_ALGEBRA_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[];
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const kinds=activityEntries.length?[...baseKinds,'activities']:baseKinds;
     const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'||chapter.id==='g9-ch3')?0:stages.length,activities:activityEntries.length};
@@ -774,9 +813,9 @@
         // No chapter title, marketing paragraph, progress count or second navigation row.
         if(chapter.id==='g9-ch2'&&window.TriggleRealJourney){
           window.TriggleRealJourney.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
-        }else if(chapter.id==='g9-ch7'||chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'||chapter.id==='g9-ch3'){
+        }else if(chapter.id==='g9-ch5'||chapter.id==='g9-ch7'||chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'||chapter.id==='g9-ch3'){
           const stageQuestions=questions.filter(q=>!/^\s*Example\b/i.test(q.label?.en||''));
-          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,stageQuestions,chapter.id==='g9-ch7'||chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'||chapter.id==='g9-ch3');
+          mountStageJourney(panel,stages,lang,initialConcept,opts.onConcept,onQuestion,stageQuestions,chapter.id==='g9-ch5'||chapter.id==='g9-ch7'||chapter.id==='g9-ch9'||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'||chapter.id==='g9-ch3');
         }else{
           window.TriggleSetJourney?.mount(panel,chapter,lang,()=>onSection(null),initialConcept,opts.onConcept);
         }
