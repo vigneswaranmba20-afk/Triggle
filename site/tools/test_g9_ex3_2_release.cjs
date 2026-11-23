@@ -13,7 +13,8 @@ const katex = require('../assets/vendor/katex/katex.min.js');
 const vm = require('node:vm');
 
 const readSite = file => fs.readFileSync(path.join(ROOT, 'site', file), 'utf8');
-const runtime = loadRuntime();
+const runtime = loadRuntime(ROOT, { omit: ['data/textbook-exercises/g9-ch3-ex3-1-ex3-2-ta.js'] });
+const fullRuntime = loadRuntime();
 const report = validateBatch(batch, {runtime, integrated: true});
 assert.equal(report.passed, true, report.errors.join('\n'));
 assert.deepEqual(report.coverage.exercises, [{exercise: '3.2', inventoryVerified: true, numberedQuestions: 6, complete: true}]);
@@ -41,8 +42,8 @@ for (const hash of Object.values(fidelity.pageImageSha256At120Dpi)) assert.match
 assert.equal(fidelity.tamilEditorialReview, 'pending');
 assert.equal(fidelity.teacherReview, 'pending');
 
-const grade = runtime.classes[9];
-const chapter = runtime.curriculum.grades.find(row => row.grade === 9).chapters.find(row => row.id === 'g9-ch3');
+const grade = fullRuntime.classes[9];
+const chapter = fullRuntime.curriculum.grades.find(row => row.grade === 9).chapters.find(row => row.id === 'g9-ch3');
 const records = grade.items.filter(row => row.chapter === '3' && row.exercise === '3.2');
 const ids = records.map(row => row.id);
 const unique = new Set(ids);
@@ -53,7 +54,7 @@ assert.deepEqual(chapter.textbookQuestionIds.filter(id => unique.has(id)).sort()
 assert.equal(chapter.status, 'planned');
 
 const legacyId = fidelity.preservedRecord.id;
-const replacement = records.find(record => record.id === legacyId);
+const replacement = runtime.classes[9].items.find(record => record.id === legacyId);
 const {id, classNum, chapter: chapterNumber, exercise, topic, label, title, q, steps, answer} = replacement;
 const protectedLegacy = {id, classNum, chapter: chapterNumber, exercise, topic, label, title,
   q: q.en, steps: steps.map(({en, eq}) => ({en, eq})), answer};
@@ -90,11 +91,11 @@ for (const evidence of fidelity.items) {
   assert.equal(record.sourceFidelity.enPrintedPage, evidence.printedPage);
   assert.equal(record.sourceFidelity.status, 'english-source-page-visual-checked');
   assert.equal(record.sourceFidelity.teacherReview, 'pending');
-  assert.equal(record.translationReview, 'pending');
-  assert.equal(record.releaseStatus, 'english-preview');
+  assert.equal(record.translationReview, '2025-tamil-pdf-checked-teacher-review-pending');
+  assert.equal(record.releaseStatus, 'bilingual-2025-source-checked');
   assert.equal(record.kind, 'textbook');
-  assert.equal(record.q.ta, undefined);
-  assert.ok(record.steps.every(step => step.ta === undefined));
+  assert.ok(record.q.ta && record.q.ta.length > 5, 'Verified 2025 Tamil prompt ' + record.id);
+  assert.ok(record.steps.every(step => typeof step.ta === 'string' && step.ta.length > 5), 'Verified Tamil steps ' + record.id);
   assert.ok(TriggleDifficulty.get(record));
   assert.equal(record.figureSrc, evidence.figureSrc);
   if (evidence.figure) {

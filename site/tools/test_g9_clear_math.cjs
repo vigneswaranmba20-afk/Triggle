@@ -25,9 +25,9 @@ function check(value,original,id){
   }
  }
 }
-const items=load();assert.equal(items.length,404);
-assert.equal(new Set(items.map(q=>q.id)).size,404,'Student-facing IDs must be unique');
-assert.equal(items.filter(q=>q.kind!=='practice').length,395);
+const items=load();assert.equal(items.length,574);
+assert.equal(new Set(items.map(q=>q.id)).size,574,'Student-facing IDs must be unique');
+assert.equal(items.filter(q=>q.kind!=='practice').length,565);
 // Pin order, question wording, answers, equations and all other reasons to
 // main at 31f4a4e, including the Algebra coefficient pilot. Approved changes:
 // the edited Statistics reasons, and AUD13-02's three independently checked
@@ -59,10 +59,10 @@ const preservation=items.filter(q=>!newIds.has(q.id)).map(q=>{
   steps.filter((_,idx)=>!(q.id==='g9-ch9-ex9.2-q5'&&idx===3)).map(({en,ta,eq},index)=>revisedReasons[q.id]?.includes(index)?[null,null,eq]:[en,ta,eq])];
 });
 console.log('AUD13-02 G9_GRADE_PRESERVATION_SHA256 '+createHash('sha256').update(JSON.stringify(preservation)).digest('hex'));
-assert.equal(createHash('sha256').update(JSON.stringify(preservation)).digest('hex'),'f95ac8ac02528ad9eb6aaefe52c5ca8692943f4b8e2880b773ee0849c6809d43');
-assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,56,12,9,47,37,31,26]);
+assert.equal(createHash('sha256').update(JSON.stringify(preservation)).digest('hex'),'b932038da4e548189a11c6e27ff471b1cf9022d92bba818aa5c0906bb1b91d9f');
+assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,226,12,9,47,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
-assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,54);
+assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,224);
 let optionRecords=0;
 for(const q of items){
  const before=JSON.stringify(q),p=get(q);assert(p,q.id);assert.equal(p.steps.length,q.steps.length);

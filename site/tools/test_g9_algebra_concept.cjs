@@ -10,11 +10,18 @@ const ctx={window:{}};
 vm.runInNewContext(data,ctx,{filename:'g9-algebra-chapter.js'});
 const p=ctx.window.TRIGGLE_ALGEBRA_PATH;
 assert.equal(p.chapterId,'g9-ch3');
-assert.equal(p.stages.length,1,'A pilot is not a claim of complete algebra coverage');
-assert.equal(p.stages[0].id,'g9-ch3-what-is-polynomial');
-assert.equal(p.stages[0].section,'3.2');
-assert.equal(p.stages[0].page.en,81);
-assert.equal(p.stages[0].page.ta,88);
+assert.equal(p.stages.length,10,'Complete §§3.1–3.8 concept stages');
+assert.equal(p.stages[1].id,'g9-ch3-what-is-polynomial');
+assert.equal(p.stages[1].section,'3.2');
+assert.equal(p.stages[1].page.en,81);
+assert.equal(p.stages[1].page.ta,88);
+for(const sec of ['3.1','3.2','3.3','3.4','3.5','3.6','3.7','3.8']){
+  assert.ok(p.stages.some(s=>String(s.section).startsWith(sec)),'Missing section '+sec);
+}
+for(const st of p.stages){
+  assert.ok(st.title?.en&&st.title?.ta,'Bilingual title '+st.id);
+  assert.ok(Array.isArray(st.relatedQuestionIds)&&st.relatedQuestionIds.length>=2,'Related questions '+st.id);
+}
 assert.match(p.review.tamil,/pending/);
 const js=fs.readFileSync(path.join(root,'assets/g9-algebra-concepts.js'),'utf8');
 const hub=fs.readFileSync(path.join(root,'assets/chapter-hub.js'),'utf8');

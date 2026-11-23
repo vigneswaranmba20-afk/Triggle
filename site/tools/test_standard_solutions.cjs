@@ -262,8 +262,10 @@ const g9Ex32NewIds=g9Ex32Batch.records.map(record=>record.id).filter(id=>!Object
 assert.equal(g9Ex32NewIds.length,19);
 const g9Ex64Release=require('../../docs/audit/AUD14_02_EX64_Q2_Q3_RELEASE_EVIDENCE.json');
 const g9Ex64NewIds=Object.keys(g9Ex64Release.records);
-const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ex64NewIds];
-assert.equal(approvedG9Ids.length,91);
+const g9Ch3CompleteNewIds=classes[9].items.filter(it=>/^g9-ch3-ex3\.(?:[3-9]|1[0-5])\b/.test(it.id)).map(it=>it.id);
+assert.equal(g9Ch3CompleteNewIds.length,170,'170 new G9 Ch3 Ex 3.3–3.15 records');
+const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds];
+assert.equal(approvedG9Ids.length,261);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
@@ -367,7 +369,10 @@ for(const [grade,data] of Object.entries(classes)){
    assert(!item.q.ta,'Do not invent Tamil explanation '+item.id);
   }else if(grade==='9'&&g9Ex32ById.has(item.id)){
    const approved=g9Ex32ById.get(item.id);
-   assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exercise 3.2 matches source-audited batch '+item.id);
+   assert.equal(crypto.createHash('sha256').update(JSON.stringify(m04EnglishProjection(item))).digest('hex'),
+     crypto.createHash('sha256').update(JSON.stringify(m04EnglishProjection(approved))).digest('hex'),
+     'Exercise 3.2 English content matches source-audited batch '+item.id);
+   assert.ok(item.q?.ta&&item.steps.every(s=>s.ta),'Exercise 3.2 has verified 2025 Tamil '+item.id);
   }else if(grade==='10'&&m04ById.has(item.id)){
     // Approved bilingual extension of the existing immutable Exercise 2.1 source.
     // Original English question, title, working and answer remain pinned independently.
@@ -453,9 +458,9 @@ for(const [grade,data] of Object.entries(classes)){
          assert.equal(item.steps[i].eq,row.steps[i].equation);
          assert.equal(item.steps[i].math?.latex,row.steps[i].mathLatex);
        }
-       assert.equal(item.releaseStatus,'english-preview');
-       assert.equal(item.translationReview,'pending');
-       assert(!item.q.ta,'Do not invent Tamil for Algebra '+item.id);
+       assert.equal(item.releaseStatus,'bilingual-2025-source-checked');
+       assert.equal(item.translationReview,'2025-tamil-pdf-checked-teacher-review-pending');
+       assert.ok(item.q.ta&&item.steps.every(s=>s.ta),'Verified 2025 Tamil for Algebra '+item.id);
      }else if(g9Batch1Fidelity.parts.some(p=>p.id===item.id)){
        const source=g9Candidates.rows.find(p=>p.id===item.id);
        const manifest=g9Batch1Fidelity.parts.find(p=>p.id===item.id);
@@ -471,6 +476,10 @@ for(const [grade,data] of Object.entries(classes)){
        }
        assert.equal(item.releaseStatus,'english-preview');
        assert(!item.q.ta,'Do not invent Tamil '+item.id);
+     }else if(g9Ch3CompleteNewIds.includes(item.id)){
+       assert.ok(item.q?.en&&item.q?.ta,'G9 Ch3 bilingual prompt '+item.id);
+       assert.ok(item.steps.length>=1&&item.steps.every(s=>s.en&&s.ta&&s.math?.latex),'G9 Ch3 bilingual steps '+item.id);
+       assert.equal(item.releaseStatus,'bilingual-2025-source-checked');
      }else{
        const source=g9Q2Fidelity.parts.find(p=>p.id===item.id)||g9Q5Q6Fidelity.parts.find(p=>p.id===item.id)||g9Q7Q10Fidelity.parts.find(p=>p.id===item.id);
        assert.ok(source,'Missing Grade 9 Exercise 1.2 source '+item.id);

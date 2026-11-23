@@ -98,37 +98,54 @@ async function checkEnglishExercise(page, base, id, verify) {
 
 async function coefficientConclusions(page, base) {
   for (const [part, pair] of coefficientPairs) {
-    await checkEnglishExercise(page, base, 'g9-ch3-ex3.1-q2-' + part, async name => {
-      const rows = page.locator('#stepsList > .worked-step:not(.final-answer-step)');
-      for (const [index, [value, mathText, structure]] of pair.entries()) {
-        const row = rows.nth(index + 1);
-        const reason = row.locator('.step-reason');
-        const term = index === 0 ? 'x²' : 'x';
-        assert(await reason.isVisible(), name + ' shows the conclusion in the worked solution');
-        const conclusion = await reason.evaluate(el => [...el.childNodes]
-          .map(node => node.dataset?.mathFallback || node.textContent).join(''));
-        assert(conclusion.includes(`The coefficient of ${term} is ${value}.`), name + ' explains ' + term);
-        if (part === 'iii' && index === 1) assert.match(conclusion, /negative one times x/);
-        if (part === 'v' && index === 0) assert.match(conclusion, /understood even when it is not written/);
-        const coefficient = await reason.locator('.triggle-tex').evaluateAll((elements, { value, structure }) => {
-          const el = elements.find(element => element.dataset.mathFallback === value &&
-            element.previousSibling?.textContent === ' is ');
-          if (!el) return null;
-          const semanticValue = el.querySelector('math semantics').firstElementChild;
-          const glyph = el.querySelector('.katex-html').getBoundingClientRect();
-          const box = el.getBoundingClientRect();
-          return {
-            value: semanticValue.textContent.replace(/\s+/g, ''),
-            structured: !structure || semanticValue.matches(structure) || !!semanticValue.querySelector(structure),
-            fits: glyph.x >= 0 && glyph.right <= innerWidth && (getComputedStyle(el).overflowY === 'visible' ||
-              glyph.y >= box.y - 1 && glyph.bottom <= box.bottom + 1),
-          };
-        }, { value, structure });
-        assert.deepEqual(coefficient, { value: mathText, structured: true, fits: true }, name + ' displays the signed value in MathML');
-        if (index === 0) assert(await reason.locator('math msup').count(), name + ' typesets the exponent');
-        assert((await row.locator('.step-equation math mo').allTextContents()).includes('⇒'), name + ' explains the arrow in the same row');
+    const id = 'g9-ch3-ex3.1-q2-' + part;
+    await load(page, base, id);
+    try {
+      for (const language of ['en', 'ta']) {
+        await page.locator(language === 'en' ? '#langEn' : '#langTa').click();
+        assert.equal(await page.locator('html').getAttribute('lang'), language);
+        if (language === 'ta') {
+          assert.equal(await page.locator('#questionText').getAttribute('lang'), null);
+          assert.match(await page.locator('#questionText').innerText(), /\p{Script=Tamil}/u);
+        }
+        assert.equal(await page.locator('[data-math-error]').count(), 0, id);
+        assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), id + ' fits the page');
+        const name = `${id} in ${language} at ${page.viewportSize().width}px`;
+        const rows = page.locator('#stepsList > .worked-step:not(.final-answer-step)');
+        for (const [index, [value, mathText, structure]] of pair.entries()) {
+          const row = rows.nth(index + 1);
+          const reason = row.locator('.step-reason');
+          const term = index === 0 ? 'x²' : 'x';
+          assert(await reason.isVisible(), name + ' shows the conclusion in the worked solution');
+          const conclusion = await reason.evaluate(el => [...el.childNodes]
+            .map(node => node.dataset?.mathFallback || node.textContent).join(''));
+          if (language === 'en') {
+            assert(conclusion.includes(`The coefficient of ${term} is ${value}.`), name + ' explains ' + term);
+            if (part === 'iii' && index === 1) assert.match(conclusion, /negative one times x/);
+            if (part === 'v' && index === 0) assert.match(conclusion, /understood even when it is not written/);
+            const coefficient = await reason.locator('.triggle-tex').evaluateAll((elements, { value, structure }) => {
+              const el = elements.find(element => element.dataset.mathFallback === value &&
+                element.previousSibling?.textContent === ' is ');
+              if (!el) return null;
+              const semanticValue = el.querySelector('math semantics').firstElementChild;
+              const glyph = el.querySelector('.katex-html').getBoundingClientRect();
+              const box = el.getBoundingClientRect();
+              return {
+                value: semanticValue.textContent.replace(/\s+/g, ''),
+                structured: !structure || semanticValue.matches(structure) || !!semanticValue.querySelector(structure),
+                fits: glyph.x >= 0 && glyph.right <= innerWidth && (getComputedStyle(el).overflowY === 'visible' ||
+                  glyph.y >= box.y - 1 && glyph.bottom <= box.bottom + 1),
+              };
+            }, { value, structure });
+            assert.deepEqual(coefficient, { value: mathText, structured: true, fits: true }, name + ' displays the signed value in MathML');
+          } else {
+            assert.match(conclusion, /\p{Script=Tamil}/u, name + ' displays Tamil explanation');
+          }
+          if (index === 0) assert(await reason.locator('math msup').count(), name + ' typesets the exponent');
+          assert((await row.locator('.step-equation math mo').allTextContents()).includes('⇒'), name + ' explains the arrow in the same row');
+        }
       }
-    });
+    } finally { await page.locator('#langEn').click(); }
   }
 }
 
@@ -181,7 +198,8 @@ async function navigation(page, base) {
   assert.equal(await page.locator('.final-answer-value .katex math').count(), 1);
   await page.locator('#langTa').click();
   assert.equal(await page.locator('html').getAttribute('lang'), 'ta');
-  assert.equal(await page.locator('#questionText').getAttribute('lang'), 'en');
+  assert.equal(await page.locator('#questionText').getAttribute('lang'), null);
+  assert.match(await page.locator('#questionText').innerText(), /\p{Script=Tamil}/u);
   await load(page, base, sets);
   assert.match(await page.locator('#questionText').innerText(), /\p{Script=Tamil}/u);
   await load(page, base, 'g9-ch2-ex3-q1-i');

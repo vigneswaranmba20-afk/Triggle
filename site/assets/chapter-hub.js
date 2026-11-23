@@ -447,7 +447,7 @@
       '<nav class="sp2-journey-footer" data-adaptive-dock aria-label="'+e(ta?'கருத்துகளுக்கான வழிசெலுத்தல்':'Concept navigation')+'">'+
       '<button type="button" class="sp2-footer-prev" data-footer-prev>← '+e(prevLabel)+'</button>'+
       '<button type="button" class="sp2-footer-next" data-footer-next></button></nav></div>';
-    const algebraPilot=stages[0]?.id==='g9-ch3-what-is-polynomial'&&window.TriggleG9AlgebraConcepts;
+    const algebraPilot=stages[0]?.id?.startsWith('g9-ch3-')&&window.TriggleG9AlgebraConcepts;
     const probabilityLessons=stages[0]?.id==='probability-1'&&window.TRIGGLE_PROB_LESSONS;
     const probability=probabilityLessons?.length===stages.length&&window.TriggleProbabilityConcepts;
     container.append(root);
@@ -484,7 +484,7 @@
       const isG9Mensuration=stageId.startsWith('g9-ch7-');
       const isStudio6=stageId.startsWith('g10-ch4-')||stageId.startsWith('g10-ch5-')||stageId.startsWith('g10-ch6-');
       if(algebraPilot){
-        algebraPilot.mount(panel,stage,lang);
+        algebraPilot.mount(panel,stage,lang,{onQuestion,chapterQuestions,index:i});
       }else if(probability){
         probability.mount(panel,stage.section,probabilityLessons[i],i,lang);
         const pageParts=[stage.section?'Section '+stage.section:'',stage.page?.en?'EN p.'+stage.page.en:'',stage.page?.ta?'TA p.'+stage.page.ta:''].filter(Boolean);

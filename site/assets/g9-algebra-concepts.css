@@ -135,3 +135,18 @@
 @media (prefers-reduced-motion:reduce) {
   .g9a-option,.g9a-answer-options button {transition:none!important;}
 }
+.g9a-rule-math {margin:0 0 10px;padding:8px 10px;background:#fff;border:1px solid #e3deda;border-radius:12px;overflow-x:auto;text-align:center;}
+.g9a-practice-links {margin:14px 0 8px;padding:12px;border:1px solid #e2d9db;border-radius:14px;background:#fcf9f8;}
+.g9a-practice-links h5 {margin:0 0 8px;font-size:.96rem;color:#48292c;}
+.g9a-practice-row {display:flex;flex-wrap:wrap;gap:8px;}
+.g9a-practice-btn {
+  min-height:44px;padding:8px 12px;border:1px solid #c999a0;border-radius:10px;
+  background:#fff;color:#6e2637;font-size:.86rem;font-weight:650;cursor:pointer;
+}
+.g9a-practice-btn:hover,.g9a-practice-btn:focus-visible {background:#f8e4e2;border-color:#883b46;outline:none;}
+.g9a-concept-return-wrap {margin:10px 0 6px;}
+.g9a-concept-return {
+  min-height:44px;padding:8px 12px;border:1px solid #d6c4c4;border-radius:10px;
+  background:#fcf9f8;color:#6e2637;font-size:.85rem;font-weight:650;cursor:pointer;text-align:left;
+}
+.g9a-concept-return:hover,.g9a-concept-return:focus-visible {background:#f8e4e2;border-color:#883b46;}

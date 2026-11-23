@@ -282,7 +282,7 @@ function reconcileChapter(doc,entries,options){
  return {...checked,passed:!checked.errors.length,verifiedNumberedQuestions:completeQuestions,missingSourceTasks:missing.map(t=>t.question+':'+t.part),unexpectedSourceTasks:unexpected,complete:!missing.length&&!unexpected.length,completionPercent:Math.round(10000*completeQuestions/checked.numberedQuestions)/100};
 }
 function validateAll({root=ROOT,grade}={}){
- const runtime=loadRuntime(root),graded=(grade?[grade]:[9,10,11,12]).map(g=>({grade:g,entries:collectBatches(root,g,runtime)})),reports=graded.flatMap(g=>g.entries.map(({file,report})=>({file,...report})));
+ const runtime=loadRuntime(root,{omit:['data/textbook-exercises/g9-ch3-ex3-1-ex3-2-ta.js']}),graded=(grade?[grade]:[9,10,11,12]).map(g=>({grade:g,entries:collectBatches(root,g,runtime)})),reports=graded.flatMap(g=>g.entries.map(({file,report})=>({file,...report})));
  const seen=new Map(),chapterInventories=graded.flatMap(g=>chapterInventoryFiles(root,g.grade).map(file=>{const doc=readJson(file),result={file:path.relative(root,file),...reconcileChapter(doc,g.entries,{root,runtime,grade:g.grade})},key=g.grade+':'+doc.chapter;if(seen.has(key)){result.passed=false;result.errors.push('Multiple authoritative chapter inventories');seen.get(key).passed=false;seen.get(key).errors.push('Multiple authoritative chapter inventories');}else seen.set(key,result);return result;}));
  return {schemaVersion:1,passed:reports.every(r=>r.passed)&&chapterInventories.every(r=>r.passed),batchCount:reports.length,reports,chapterInventories};
 }

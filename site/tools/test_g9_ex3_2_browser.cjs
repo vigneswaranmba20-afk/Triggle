@@ -114,8 +114,8 @@ async function checkGeometry(page, id) {
     await page.goto(route(q4.id));
     assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'), 'true');
     await page.locator('#langTa').click();
-    assert.match(await page.locator('#questionHead').textContent(), /English only/);
-    assert.equal(await recoveredText(page.locator('#questionText')), q4.q.en);
+    assert.match(await page.locator('#questionHead').textContent(), /பயிற்சி 3\.2/);
+    assert.match(await recoveredText(page.locator('#questionText')), /பல்லுறுப்புக் கோவைச் சமன்பாடுகளின் மூலங்கள்/);
     await page.locator('#langEn').click();
     await page.locator('#exerciseIndexLink').click();
     assert.equal(new URL(page.url()).searchParams.get('section'), 'exercises');
