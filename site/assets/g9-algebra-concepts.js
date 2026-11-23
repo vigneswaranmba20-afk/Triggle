@@ -20,21 +20,21 @@
   };
   const examples=[
     {
-      label:'3x² + 2x + 5',spoken:'three x squared plus two x plus five',
+      label:'3x² + 2x + 5',spoken:'three x squared plus two x plus five',spokenTa:'மூன்று எக்ஸ் வர்க்கம் கூட்டல் இரண்டு எக்ஸ் கூட்டல் ஐந்து',
       math:'3x^2+2x+5',rewrite:null,
       powers:[['3x²','2',true],['2x','1',true],['5','0',true]],
       en:'Polynomial. Every power of x is a whole number: 2, 1 and 0.',
       ta:'பல்லுறுப்புக் கோவை. x-இன் அடுக்குகள் 2, 1, 0 ஆகிய அனைத்தும் முழு எண்கள்.'
     },
     {
-      label:'x⁻¹ + 2',spoken:'x to the negative first power plus two',
+      label:'x⁻¹ + 2',spoken:'x to the negative first power plus two',spokenTa:'எக்ஸின் அடுக்கு குறை ஒன்று கூட்டல் இரண்டு',
       math:'x^{-1}+2',rewrite:null,
       powers:[['x⁻¹','−1',false],['2','0',true]],
       en:'Not a polynomial in x. The exponent −1 is negative, not a whole number.',
       ta:'x-இல் பல்லுறுப்புக் கோவை அல்ல. −1 என்பது முழு எண் அல்ல; அது குறை முழு.'
     },
     {
-      label:'√x + 1',spoken:'square root of x plus one',
+      label:'√x + 1',spoken:'square root of x plus one',spokenTa:'எக்ஸின் வர்க்கமூலம் கூட்டல் ஒன்று',
       math:'\\sqrt{x}+1',rewrite:'\\sqrt{x}=x^{\\frac{1}{2}}\\quad(x\\ge 0)',
       powers:[['√x','½',false],['1','0',true]],
       en:'Not a polynomial in x. The exponent ½ is a fraction, not a whole number.',
@@ -61,7 +61,7 @@
     panel.append(heading);
     const root=make('section','g9a-lab');
     root.setAttribute('aria-label',text('Polynomial powers highlighter','பல்லுறுப்புக் கோவையின் அடுக்குகளை அறிதல்',lang));
-    const rule=make('p','g9a-rule',text('Check the power of x: 0, 1, 2, 3, … are allowed.','x-இன் அடுக்கைச் சரிபார்: 0, 1, 2, 3, … ஆகியவை ஏற்கப்படும்.',lang));
+    const rule=make('p','g9a-rule',text('Every power of x must be a whole number: 0, 1, 2, 3, … .','x-இன் ஒவ்வோர் அடுக்கும் முழு எண்ணாக இருக்க வேண்டும்: 0, 1, 2, 3, … .',lang));
     root.append(rule);
     const group=make('div','g9a-choices');
     group.setAttribute('role','group');
@@ -69,7 +69,7 @@
     const buttons=examples.map((example,i)=>{
       const b=make('button','g9a-option',example.label);
       b.type='button';
-      b.setAttribute('aria-label',example.spoken);
+      b.setAttribute('aria-label',ta?example.spokenTa:example.spoken);
       b.addEventListener('click',()=>{memory.demo=i;draw();});
       group.append(b);return b;
     });
