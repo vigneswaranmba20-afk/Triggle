@@ -41,7 +41,10 @@ assert.ok(hub.includes('g9-distance-grid'),'Mathematically labelled SVG drawing'
 assert.ok(hub.includes("g9-ch5-distance-formula"),'Native lesson video support');
 assert.ok(css.includes('.g9-distance-lab'),'Mobile visual styling');
 const media=path.join(root,'videos/triggle-g9-distance-formula-en.mp4');
-assert.equal(stage.video.src,'./videos/triggle-g9-distance-formula-en.mp4');
+assert.equal(stage.video.src,'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g9-ch5-distance-formula/8ada907f59bf11788bad196fc8e3ec876de4bc5d98caef53fa50368d78277323.mp4', 'Playback must come from immutable Cloudflare R2 key, not GitHub Pages');
+assert.equal(stage.video.provider,'cloudflare-r2');
+assert.equal(lesson.approvedMedia.status,'hosted-in-cloudflare-r2');
+assert.equal(lesson.approvedMedia.sha256,'8ada907f59bf11788bad196fc8e3ec876de4bc5d98caef53fa50368d78277323');
 assert.equal(stage.video.durationSeconds,75.6);
 const stat=fs.statSync(media);
 assert.equal(stat.size,2031309,'Approved MP4 source byte count');
