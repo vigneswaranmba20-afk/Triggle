@@ -271,3 +271,23 @@
     transition: none !important;
   }
 }
+
+/* Grade 9 §5.3: quiet, mobile-first geometry plot.
+   SVG labels stay separate from the diagonal, axes and formula. */
+.chapter-hub[data-grade="9"][data-hub-section="concepts"] .g9-distance-lab{
+  box-sizing:border-box; max-width:480px; width:100%; margin:12px auto;
+  padding:10px 10px 6px; background:#fafbfd;
+  border:1px solid var(--g9-ui-lab-border,#d8dee7);
+  border-radius:16px; overflow:hidden;
+}
+.chapter-hub .g9-distance-lab svg{
+  display:block; width:100%; max-width:450px; height:auto; margin:auto;
+}
+.chapter-hub .g9-distance-lab .g9-distance-plot-note{
+  margin:3px auto 5px; padding:0 4px; text-align:center;
+  font-size:clamp(12px,2.7vw,14px); line-height:1.4; color:#536173;
+}
+@media(max-width:390px){
+  .chapter-hub .g9-distance-lab{padding:6px 5px 4px}
+  .chapter-hub .g9-distance-lab svg{min-width:0}
+}
