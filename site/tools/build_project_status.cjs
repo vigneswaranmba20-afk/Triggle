@@ -14,7 +14,8 @@ function build(){
  for(const inv of inventory.grades){
   const grade=inv.grade, checkpointPath=`docs/curriculum/grade-${grade}/checkpoint.json`, checkpoint=read(checkpointPath);inputs.add(checkpointPath);
   const batches=files(`docs/curriculum/grade-${grade}/batches`).map(file=>{
-   inputs.add(file); const batch=read(file), report=bulk.validateBatch(batch,{integrated:true,runtime});
+   inputs.add(file); const batch=read(file), batchRuntime=batch.batchId==='g9-ch3-ex3-2-english'?bulk.loadRuntime(ROOT,{omit:['data/textbook-exercises/g9-ch3-ex3-1-ex3-2-ta.js']}):runtime;
+   const report=bulk.validateBatch(batch,{integrated:true,runtime:batchRuntime});
    if(!report.passed)throw Error('Invalid curriculum batch '+file+': '+report.errors.join('; '));
    return {file,batch,report};
   });

@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": "3",
+  "chapterId": "g9-ch3",
+  "title": {
+    "en": "Algebra",
+    "ta": "இயற்கணிதம்"
+  },
+  "edition": "2025 revised Tamil Nadu State Board Class 9 Mathematics",
+  "sources": {
+    "en": {
+      "file": "G9_Algebra_English_2025_Chapter3.pdf",
+      "driveUrl": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
+      "fullBookSha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "chapterExtractSha256": "52eba3bd8c0ea093e1169315f7e4d73f5a0f42e0e001e42af06bb8b25123f088"
+    },
+    "ta": {
+      "file": "G9_Algebra_Tamil_2025_Chapter3.pdf",
+      "driveUrl": "https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view?usp=drivesdk",
+      "fullBookSha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "chapterExtractSha256": "ef574e4c4de0e5ab13c9c3368005adb0af8d0e194cbba99ebac517aff2f2e3ea"
+    }
+  },
+  "sections": [
+    { "section": "3.1", "title": { "en": "Introduction", "ta": "அறிமுகம்" }, "enExtractPages": [1, 3], "taExtractPages": [2, 4] },
+    { "section": "3.2", "title": { "en": "Polynomials", "ta": "பல்லுறுப்புக் கோவைகள்" }, "enExtractPages": [4, 15], "taExtractPages": [5, 17] },
+    { "section": "3.3", "title": { "en": "Remainder Theorem", "ta": "மீதித் தேற்றம்" }, "enExtractPages": [15, 20], "taExtractPages": [17, 22] },
+    { "section": "3.4", "title": { "en": "Algebraic Identities", "ta": "இயற்கணித முற்றொருமைகள்" }, "enExtractPages": [20, 25], "taExtractPages": [22, 27] },
+    { "section": "3.5", "title": { "en": "Factorisation", "ta": "காரணிப்படுத்துதல்" }, "enExtractPages": [25, 31], "taExtractPages": [27, 33] },
+    { "section": "3.6", "title": { "en": "Division of Polynomials", "ta": "பல்லுறுப்புக் கோவைகளின் வகுத்தல்" }, "enExtractPages": [31, 37], "taExtractPages": [33, 40] },
+    { "section": "3.7", "title": { "en": "Greatest Common Divisor (GCD)", "ta": "மீப்பெரு பொது வகுத்தி (மீ.பொ.வ)" }, "enExtractPages": [37, 39], "taExtractPages": [40, 42] },
+    { "section": "3.8", "title": { "en": "Linear Equation in Two Variables", "ta": "இரு மாறிகளில் அமைந்த நேரியச் சமன்பாடுகள்" }, "enExtractPages": [39, 59], "taExtractPages": [42, 63] }
+  ],
+  "exercises": [
+    {
+      "exercise": "3.1",
+      "section": "3.2",
+      "enExtractPages": [10, 11],
+      "taExtractPages": [11, 12],
+      "enPrintedPages": [87, 88],
+      "taPrintedPages": [94, 95],
+      "numberedQuestions": 12,
+      "totalRecords": 34,
+      "totalSubparts": 34,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii", "iv", "v", "vi"] },
+        { "q": 2, "parts": ["i", "ii", "iii", "iv", "v"] },
+        { "q": 3, "parts": ["i", "ii", "iii", "iv", "v"] },
+        { "q": 4, "parts": ["i", "ii", "iii", "iv"] },
+        { "q": 5, "parts": ["i", "ii", "iii"] },
+        { "q": 6, "parts": ["i", "ii", "iii"] },
+        { "q": 7, "parts": ["whole"] },
+        { "q": 8, "parts": ["whole"] },
+        { "q": 9, "parts": ["i", "ii", "iii"] },
+        { "q": 10, "parts": ["whole"] },
+        { "q": 11, "parts": ["whole"] },
+        { "q": 12, "parts": ["whole"] }
+      ],
+      "baselineStatus": "en_complete_34_ta_partial_3"
+    },
+    {
+      "exercise": "3.2",
+      "section": "3.2",
+      "enExtractPages": [14, 15],
+      "taExtractPages": [16],
+      "enPrintedPages": [91, 92],
+      "taPrintedPages": [99],
+      "numberedQuestions": 6,
+      "totalRecords": 20,
+      "totalSubparts": 23,
+      "figures": ["figure-3-10.svg", "figure-3-11.svg", "figure-3-12.svg", "figure-3-13.svg", "figure-3-14.svg"],
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii"] },
+        { "q": 2, "parts": ["whole"] },
+        { "q": 3, "parts": ["i", "ii", "iii", "iv", "v", "vi"] },
+        { "q": 4, "parts": ["i", "ii", "iii", "iv"], "groupedRecordId": "g9-ch3-ex3.2-q4" },
+        { "q": 5, "parts": ["i", "ii", "iii", "iv"] },
+        { "q": 6, "parts": ["i", "ii", "iii", "iv", "v"] }
+      ],
+      "baselineStatus": "en_complete_20_ta_missing"
+    },
+    {
+      "exercise": "3.3",
+      "section": "3.3",
+      "enExtractPages": [19, 20],
+      "taExtractPages": [21, 22],
+      "enPrintedPages": [96, 97],
+      "taPrintedPages": [104, 105],
+      "numberedQuestions": 12,
+      "totalRecords": 15,
+      "totalSubparts": 15,
+      "questions": [
+        { "q": 1, "parts": ["whole"] },
+        { "q": 2, "parts": ["i", "ii", "iii"] },
+        { "q": 3, "parts": ["whole"] },
+        { "q": 4, "parts": ["whole"] },
+        { "q": 5, "parts": ["whole"] },
+        { "q": 6, "parts": ["whole"] },
+        { "q": 7, "parts": ["i", "ii"] },
+        { "q": 8, "parts": ["whole"] },
+        { "q": 9, "parts": ["whole"] },
+        { "q": 10, "parts": ["whole"] },
+        { "q": 11, "parts": ["whole"] },
+        { "q": 12, "parts": ["whole"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.4",
+      "section": "3.4",
+      "enExtractPages": [24, 25],
+      "taExtractPages": [26, 27],
+      "enPrintedPages": [101, 102],
+      "taPrintedPages": [109, 110],
+      "numberedQuestions": 14,
+      "totalRecords": 25,
+      "totalSubparts": 25,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii", "iv"] },
+        { "q": 2, "parts": ["i", "ii"] },
+        { "q": 3, "parts": ["i", "ii", "iii", "iv"] },
+        { "q": 4, "parts": ["i", "ii"] },
+        { "q": 5, "parts": ["i", "ii"] },
+        { "q": 6, "parts": ["whole"] },
+        { "q": 7, "parts": ["whole"] },
+        { "q": 8, "parts": ["whole"] },
+        { "q": 9, "parts": ["whole"] },
+        { "q": 10, "parts": ["whole"] },
+        { "q": 11, "parts": ["whole"] },
+        { "q": 12, "parts": ["i", "ii"] },
+        { "q": 13, "parts": ["i", "ii"] },
+        { "q": 14, "parts": ["whole"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.5",
+      "section": "3.5",
+      "enExtractPages": [28],
+      "taExtractPages": [30],
+      "enPrintedPages": [105],
+      "taPrintedPages": [113],
+      "numberedQuestions": 5,
+      "totalRecords": 15,
+      "totalSubparts": 15,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii"] },
+        { "q": 2, "parts": ["i", "ii", "iii", "iv", "v", "vi"] },
+        { "q": 3, "parts": ["i", "ii"] },
+        { "q": 4, "parts": ["i", "ii", "iii"] },
+        { "q": 5, "parts": ["i", "ii"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.6",
+      "section": "3.5",
+      "enExtractPages": [30],
+      "taExtractPages": [33],
+      "enPrintedPages": [107],
+      "taPrintedPages": [116],
+      "numberedQuestions": 3,
+      "totalRecords": 18,
+      "totalSubparts": 18,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii", "iv", "v", "vi"] },
+        { "q": 2, "parts": ["i", "ii", "iii", "iv", "v", "vi"] },
+        { "q": 3, "parts": ["i", "ii", "iii", "iv", "v", "vi"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.7",
+      "section": "3.6",
+      "enExtractPages": [34, 35],
+      "taExtractPages": [37],
+      "enPrintedPages": [111, 112],
+      "taPrintedPages": [120],
+      "numberedQuestions": 7,
+      "totalRecords": 12,
+      "totalSubparts": 12,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii", "iv"] },
+        { "q": 2, "parts": ["whole"] },
+        { "q": 3, "parts": ["whole"] },
+        { "q": 4, "parts": ["whole"] },
+        { "q": 5, "parts": ["i", "ii", "iii"] },
+        { "q": 6, "parts": ["whole"] },
+        { "q": 7, "parts": ["whole"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.8",
+      "section": "3.6",
+      "enExtractPages": [37],
+      "taExtractPages": [40],
+      "enPrintedPages": [114],
+      "taPrintedPages": [123],
+      "numberedQuestions": 1,
+      "totalRecords": 6,
+      "totalSubparts": 6,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii", "iv", "v", "vi"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.9",
+      "section": "3.7",
+      "enExtractPages": [38],
+      "taExtractPages": [41],
+      "enPrintedPages": [115],
+      "taPrintedPages": [124],
+      "numberedQuestions": 2,
+      "totalRecords": 14,
+      "totalSubparts": 14,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"] },
+        { "q": 2, "parts": ["i", "ii", "iii", "iv", "v", "vi"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.10",
+      "section": "3.8",
+      "enExtractPages": [47],
+      "taExtractPages": [50],
+      "enPrintedPages": [124],
+      "taPrintedPages": [133],
+      "numberedQuestions": 3,
+      "totalRecords": 11,
+      "totalSubparts": 11,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii", "iv"] },
+        { "q": 2, "parts": ["i", "ii", "iii", "iv", "v", "vi"] },
+        { "q": 3, "parts": ["whole"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.11",
+      "section": "3.8",
+      "enExtractPages": [49],
+      "taExtractPages": [53],
+      "enPrintedPages": [126],
+      "taPrintedPages": [136],
+      "numberedQuestions": 3,
+      "totalRecords": 6,
+      "totalSubparts": 6,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii", "iv"] },
+        { "q": 2, "parts": ["whole"] },
+        { "q": 3, "parts": ["whole"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.12",
+      "section": "3.8",
+      "enExtractPages": [51],
+      "taExtractPages": [55],
+      "enPrintedPages": [128],
+      "taPrintedPages": [138],
+      "numberedQuestions": 3,
+      "totalRecords": 8,
+      "totalSubparts": 8,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii", "iv", "v", "vi"] },
+        { "q": 2, "parts": ["whole"] },
+        { "q": 3, "parts": ["whole"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.13",
+      "section": "3.8",
+      "enExtractPages": [54],
+      "taExtractPages": [57, 58],
+      "enPrintedPages": [131],
+      "taPrintedPages": [140, 141],
+      "numberedQuestions": 3,
+      "totalRecords": 5,
+      "totalSubparts": 5,
+      "questions": [
+        { "q": 1, "parts": ["i", "ii", "iii"] },
+        { "q": 2, "parts": ["whole"] },
+        { "q": 3, "parts": ["whole"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.14",
+      "section": "3.8",
+      "enExtractPages": [56],
+      "taExtractPages": [60, 61],
+      "enPrintedPages": [133],
+      "taPrintedPages": [143, 144],
+      "numberedQuestions": 6,
+      "totalRecords": 6,
+      "totalSubparts": 6,
+      "questions": [
+        { "q": 1, "parts": ["whole"] },
+        { "q": 2, "parts": ["whole"] },
+        { "q": 3, "parts": ["whole"] },
+        { "q": 4, "parts": ["whole"] },
+        { "q": 5, "parts": ["whole"] },
+        { "q": 6, "parts": ["whole"] }
+      ],
+      "baselineStatus": "missing"
+    },
+    {
+      "exercise": "3.15",
+      "section": "review",
+      "enExtractPages": [57, 58, 59],
+      "taExtractPages": [61, 62, 63],
+      "enPrintedPages": [134, 135, 136],
+      "taPrintedPages": [144, 145, 146],
+      "numberedQuestions": 29,
+      "totalRecords": 29,
+      "totalSubparts": 29,
+      "mcq": true,
+      "questions": [
+        { "q": 1, "parts": ["whole"] }, { "q": 2, "parts": ["whole"] }, { "q": 3, "parts": ["whole"] },
+        { "q": 4, "parts": ["whole"] }, { "q": 5, "parts": ["whole"] }, { "q": 6, "parts": ["whole"] },
+        { "q": 7, "parts": ["whole"] }, { "q": 8, "parts": ["whole"] }, { "q": 9, "parts": ["whole"] },
+        { "q": 10, "parts": ["whole"] }, { "q": 11, "parts": ["whole"] }, { "q": 12, "parts": ["whole"] },
+        { "q": 13, "parts": ["whole"] }, { "q": 14, "parts": ["whole"] }, { "q": 15, "parts": ["whole"] },
+        { "q": 16, "parts": ["whole"] }, { "q": 17, "parts": ["whole"] }, { "q": 18, "parts": ["whole"] },
+        { "q": 19, "parts": ["whole"] }, { "q": 20, "parts": ["whole"] }, { "q": 21, "parts": ["whole"] },
+        { "q": 22, "parts": ["whole"] }, { "q": 23, "parts": ["whole"] }, { "q": 24, "parts": ["whole"] },
+        { "q": 25, "parts": ["whole"] }, { "q": 26, "parts": ["whole"] }, { "q": 27, "parts": ["whole"] },
+        { "q": 28, "parts": ["whole"] }, { "q": 29, "parts": ["whole"] }
+      ],
+      "baselineStatus": "missing"
+    }
+  ],
+  "totals": {
+    "sections": 8,
+    "exercises": 15,
+    "numberedQuestions": 108,
+    "totalRecords": 224,
+    "totalSubparts": 227
+  }
+}

@@ -22,7 +22,7 @@ const grade9=manifest.grades.find(g=>g.grade===9);
 const grade9Chapter6=grade9.chapters.find(c=>String(c.number)==='6');
 const exercise64=grade9Chapter6.exercises.find(e=>e.id==='6.4');
 const newG9Ids=['q2-i','q2-ii','q2-iii','q2-iv','q2-v','q3-i','q3-ii'].map(s=>'c9-exercise-6-4-'+s);
-assert.equal(grade9.exerciseRecords,395,'Grade 9 exercise inventory includes exactly seven new source parts');
+assert.equal(grade9.exerciseRecords,565,'Grade 9 exercise inventory includes complete Ch3 (224) and seven new Ch6 source parts');
 assert.equal(grade9Chapter6.exerciseRecords,47,'Grade 9 Chapter 6 inventory includes seven new source parts');
 assert.equal(exercise64.records.length,16,'Exercise 6.4 shows its original nine plus seven approved questions');
 for(const id of newG9Ids)assert(exercise64.records.some(r=>r.id===id),'Exercise 6.4 catalogue missing '+id);

@@ -30,11 +30,11 @@ async function main(){
       const errors=[];
       page.on('pageerror',e=>errors.push(e.message));
       try{
-        const url=base+'/index.html?class=9&chapter=g9-ch3&section=concepts&concept=0';
+        const url=base+'/index.html?class=9&chapter=g9-ch3&section=concepts&concept=1';
         await page.goto(url);
         await page.locator('.g9a-lab').waitFor({state:'visible'});
         const journey=page.locator('.sp2-simple-journey');
-        assert.equal(await journey.locator('.sp2-nav-button').count(),1,'Only one pilot, no full chapter claim');
+        assert.equal(await journey.locator('.sp2-nav-button').count(),10,'All 10 §§3.1–3.8 concept stages');
         assert.equal(await page.locator('[data-top-next]').isVisible(),true);
         assert.equal(await page.locator('[data-back-index]').isVisible(),true);
         assert.equal(await page.locator('.hub-back-menu').isVisible(),false);
@@ -42,7 +42,7 @@ async function main(){
         assert.equal(await page.locator('.g9a-choices button').count(),3);
         assert.equal(await page.locator('.g9a-powers .g9a-valid').count(),3);
         assert.match(await page.locator('.g9a-verdict').innerText(),/Every power of x/);
-        assert.ok(await page.locator('.g9a-choices button, .g9a-answer-options button').evaluateAll(
+        assert.ok(await page.locator('.g9a-choices button, .g9a-answer-options button, .g9a-practice-btn').evaluateAll(
           nodes=>nodes.every(n=>n.getBoundingClientRect().height>=44&&n.getBoundingClientRect().width>=44)),'Touch targets >=44 CSS px');
         assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No EN overflow at '+width);
         const lastBadge=await page.locator('.g9a-powers .g9a-chip').last().boundingBox();
@@ -67,6 +67,7 @@ async function main(){
         assert.match(await transfer.nth(1).locator('.g9a-feedback').innerText(),/Negative and fractional coefficients/);
         await transfer.nth(2).locator('button').last().tap();
         assert.match(await transfer.nth(2).locator('.g9a-feedback').innerText(),/5x⁻¹/);
+        assert.ok(await page.locator('.g9a-practice-btn').count()>=2,'Practice this idea links present');
         await page.locator('#langTa').click();
         await page.locator('.g9a-lab').waitFor({state:'visible'});
         assert.equal(await page.locator('html').getAttribute('lang'),'ta');
@@ -77,8 +78,9 @@ async function main(){
         await page.locator('.g9a-deep summary').tap();
         assert.match(await page.locator('.g9a-deep').innerText(),/பூச்சிய/);
         assert.equal(await page.locator('.math-fallback[data-math-error="true"]').count(),0);
+        await page.goto(base+'/index.html?class=9&chapter=g9-ch3&section=concepts&concept=9');
         await page.locator('[data-top-next]').tap();
-        assert.equal(await page.locator('[data-index-view]').isVisible(),true,'Single lesson Next returns to index');
+        assert.equal(await page.locator('[data-index-view]').isVisible(),true,'Last lesson Next returns to index');
         await page.goto(base+'/index.html?class=9&chapter=g9-ch3&section=concepts&concept=99');
         assert.equal(await page.locator('[data-index-view]').isVisible(),true,'Invalid route returns to index');
         assert.deepEqual(errors,[],'No page errors at '+width);

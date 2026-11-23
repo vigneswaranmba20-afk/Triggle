@@ -20261,6 +20261,32 @@ const records=[
           "latex": "9 x - 4 = 0",
           "fallback": "9x – 4 = 0"
         }
+      ],
+      "ta": [
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". பல்லுறுப்புக் கோவைச் சமன்பாடுகளின் மூலங்கள் காண்க.\n(i) ",
+        {
+          "latex": "5 x - 6 = 0",
+          "fallback": "5x − 6 = 0"
+        },
+        "  (ii) ",
+        {
+          "latex": "x + 3 = 0",
+          "fallback": "x + 3 = 0"
+        },
+        "  (iii) ",
+        {
+          "latex": "10 x + 9 = 0",
+          "fallback": "10x + 9 = 0"
+        },
+        "  (iv) ",
+        {
+          "latex": "9 x - 4 = 0",
+          "fallback": "9x − 4 = 0"
+        }
       ]
     },
     "answerMath": {
@@ -20293,6 +20319,14 @@ const records=[
               "fallback": "x"
             },
             "."
+          ],
+          "ta": [
+            "(i) ",
+            {
+              "latex": "\\displaystyle 5 x - 6 = 0 \\Rightarrow 5 x = 6 \\Rightarrow x = \\frac{6}{5}",
+              "fallback": "5x − 6 = 0 ⇒ 5x = 6 ⇒ x = 6/5"
+            },
+            "."
           ]
         }
       },
@@ -20303,7 +20337,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Move the constant term in parts (i) and (ii)."
+          "en": "Move the constant term in parts (i) and (ii).",
+          "ta": [
+            "(ii) ",
+            {
+              "latex": "x + 3 = 0 \\Rightarrow x = - 3",
+              "fallback": "x + 3 = 0 ⇒ x = −3"
+            },
+            "."
+          ]
         }
       },
       {
@@ -20313,7 +20355,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Move the constant term and divide in parts (iii) and (iv)."
+          "en": "Move the constant term and divide in parts (iii) and (iv).",
+          "ta": [
+            "(iii) ",
+            {
+              "latex": "\\displaystyle 10 x + 9 = 0 \\Rightarrow 10 x = - 9 \\Rightarrow x = \\frac{- 9}{10}",
+              "fallback": "10x + 9 = 0 ⇒ 10x = −9 ⇒ x = −9/10"
+            },
+            "."
+          ]
         }
       },
       {
@@ -20323,7 +20373,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Each value makes its original left-hand side equal zero."
+          "en": "Each value makes its original left-hand side equal zero.",
+          "ta": [
+            "(iv) ",
+            {
+              "latex": "\\displaystyle 9 x - 4 = 0 \\Rightarrow 9 x = 4 \\Rightarrow x = \\frac{4}{9}",
+              "fallback": "9x − 4 = 0 ⇒ 9x = 4 ⇒ x = 4/9"
+            },
+            "."
+          ]
         }
       }
     ]
@@ -36204,6 +36262,14 @@ const records=[
           "fallback": "(i) 1/x² + 3x − 4",
           "display": true
         }
+      ],
+      "ta": [
+        "1. பின்வரும் கோவைகளில் எவை பல்லுறுப்புக் கோவைகளாகும்? பல்லுறுப்புக் கோவை இல்லை எனில், அதற்கான காரணம் கூறுக.\n",
+        {
+          "latex": "\\text{(i)}\\quad \\frac{1}{x^2}+3x-4",
+          "fallback": "(i) 1/x² + 3x − 4",
+          "display": true
+        }
       ]
     },
     "answerMath": {
@@ -36219,7 +36285,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A polynomial is a finite sum of terms with variables raised only to whole-number powers 0, 1, 2, and so on."
+          "en": "A polynomial is a finite sum of terms with variables raised only to whole-number powers 0, 1, 2, and so on.",
+          "ta": "1/x² என்பதை x⁻² என எழுதலாம் (x ≠ 0)."
         }
       },
       {
@@ -36229,7 +36296,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Rewrite the reciprocal as a negative power; dividing by x squared is the same as multiplying by x to the power minus two, wherever x is nonzero."
+          "en": "Rewrite the reciprocal as a negative power; dividing by x squared is the same as multiplying by x to the power minus two, wherever x is nonzero.",
+          "ta": "முதல் உறுப்பில் x-இன் அடுக்கு −2 ஆகும்; இது முழு எண் அல்ல (குறை முழு)."
         }
       },
       {
@@ -36239,7 +36307,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The exponent −2 is negative, so this expression is not a polynomial in x."
+          "en": "The exponent −2 is negative, so this expression is not a polynomial in x.",
+          "ta": "பல்லுறுப்புக் கோவையில் மாறியின் எல்லா அடுக்குகளும் முழு எண்களாக இருக்க வேண்டும்; எனவே இது பல்லுறுப்புக் கோவை அல்ல."
         }
       }
     ]
@@ -36249,6 +36318,14 @@ const records=[
     "questionMath": {
       "en": [
         "1. Which of the following expressions are polynomials? If not give reason:\n",
+        {
+          "latex": "\\text{(ii)}\\quad x^2(x-1)",
+          "fallback": "(ii) x²(x − 1)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வரும் கோவைகளில் எவை பல்லுறுப்புக் கோவைகளாகும்? பல்லுறுப்புக் கோவை இல்லை எனில், அதற்கான காரணம் கூறுக.\n",
         {
           "latex": "\\text{(ii)}\\quad x^2(x-1)",
           "fallback": "(ii) x²(x − 1)",
@@ -36269,7 +36346,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Multiply x squared by each term inside the bracket using the distributive law."
+          "en": "Multiply x squared by each term inside the bracket using the distributive law.",
+          "ta": "x²(x − 1) என்பதை விரித்து எழுத x³ − x² கிடைக்கும்."
         }
       },
       {
@@ -36279,7 +36357,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Add exponents when multiplying powers of the same base, giving x cubed minus x squared."
+          "en": "Add exponents when multiplying powers of the same base, giving x cubed minus x squared.",
+          "ta": "இங்கு x-இன் அடுக்குகள் 3 மற்றும் 2 ஆகிய இரண்டும் முழு எண்கள்."
         }
       },
       {
@@ -36289,7 +36368,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Both exponents 3 and 2 are nonnegative integers, so the expression is a polynomial of degree three."
+          "en": "Both exponents 3 and 2 are nonnegative integers, so the expression is a polynomial of degree three.",
+          "ta": "எனவே x²(x − 1) ஒரு பல்லுறுப்புக் கோவையாகும்."
         }
       }
     ]
@@ -36299,6 +36379,14 @@ const records=[
     "questionMath": {
       "en": [
         "1. Which of the following expressions are polynomials? If not give reason:\n",
+        {
+          "latex": "\\text{(iii)}\\quad \\frac{1}{x}(x+5)",
+          "fallback": "(iii) (1/x)(x + 5)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வரும் கோவைகளில் எவை பல்லுறுப்புக் கோவைகளாகும்? பல்லுறுப்புக் கோவை இல்லை எனில், அதற்கான காரணம் கூறுக.\n",
         {
           "latex": "\\text{(iii)}\\quad \\frac{1}{x}(x+5)",
           "fallback": "(iii) (1/x)(x + 5)",
@@ -36331,7 +36419,8 @@ const records=[
               "fallback": "(x + 5)"
             },
             "; the original expression requires x to be nonzero."
-          ]
+          ],
+          "ta": "x ≠ 0 எனில் (1/x)(x + 5) = 1 + 5/x = 1 + 5x⁻¹."
         }
       },
       {
@@ -36358,7 +36447,8 @@ const records=[
               "fallback": "−1"
             },
             "."
-          ]
+          ],
+          "ta": "இரண்டாவது உறுப்பில் x-இன் அடுக்கு −1 ஆகும்; இது முழு எண் அல்ல."
         }
       },
       {
@@ -36368,7 +36458,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A variable appearing with a negative exponent violates the polynomial definition, so the expression is not a polynomial."
+          "en": "A variable appearing with a negative exponent violates the polynomial definition, so the expression is not a polynomial.",
+          "ta": "எனவே (1/x)(x + 5) என்பது பல்லுறுப்புக் கோவை அல்ல."
         }
       }
     ]
@@ -36378,6 +36469,14 @@ const records=[
     "questionMath": {
       "en": [
         "1. Which of the following expressions are polynomials? If not give reason:\n",
+        {
+          "latex": "\\text{(iv)}\\quad \\frac{1}{x^{-2}}+\\frac{1}{x^{-1}}+7",
+          "fallback": "(iv) 1/x⁻² + 1/x⁻¹ + 7",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வரும் கோவைகளில் எவை பல்லுறுப்புக் கோவைகளாகும்? பல்லுறுப்புக் கோவை இல்லை எனில், அதற்கான காரணம் கூறுக.\n",
         {
           "latex": "\\text{(iv)}\\quad \\frac{1}{x^{-2}}+\\frac{1}{x^{-1}}+7",
           "fallback": "(iv) 1/x⁻² + 1/x⁻¹ + 7",
@@ -36398,7 +36497,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A negative exponent means a reciprocal; taking the reciprocal of x to the power −2 gives x squared, when x is nonzero."
+          "en": "A negative exponent means a reciprocal; taking the reciprocal of x to the power −2 gives x squared, when x is nonzero.",
+          "ta": "x ≠ 0 எனும்போது 1/x⁻² = x² மற்றும் 1/x⁻¹ = x ஆகும்."
         }
       },
       {
@@ -36408,7 +36508,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Similarly, the reciprocal of x to the power −1 equals x, so simplify both fractions before checking powers."
+          "en": "Similarly, the reciprocal of x to the power −1 equals x, so simplify both fractions before checking powers.",
+          "ta": "கோவை x² + x + 7 என மாறுகிறது; x-இன் அடுக்குகள் 2, 1, 0 முழு எண்கள்."
         }
       },
       {
@@ -36418,7 +36519,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The result x² + x + 7 has only nonnegative whole-number powers, which is the polynomial form listed in the textbook answer key. The unsimplified original expression remains undefined at x = 0."
+          "en": "The result x² + x + 7 has only nonnegative whole-number powers, which is the polynomial form listed in the textbook answer key. The unsimplified original expression remains undefined at x = 0.",
+          "ta": "எனவே x ≠ 0 என்ற நிபந்தனையில் சுருக்கியபின் இது ஒரு பல்லுறுப்புக் கோவையாகும்."
         }
       }
     ]
@@ -36428,6 +36530,14 @@ const records=[
     "questionMath": {
       "en": [
         "1. Which of the following expressions are polynomials? If not give reason:\n",
+        {
+          "latex": "\\text{(v)}\\quad \\sqrt5\\,x^2+\\sqrt3\\,x+\\sqrt2",
+          "fallback": "(v) √5 x² + √3 x + √2",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வரும் கோவைகளில் எவை பல்லுறுப்புக் கோவைகளாகும்? பல்லுறுப்புக் கோவை இல்லை எனில், அதற்கான காரணம் கூறுக.\n",
         {
           "latex": "\\text{(v)}\\quad \\sqrt5\\,x^2+\\sqrt3\\,x+\\sqrt2",
           "fallback": "(v) √5 x² + √3 x + √2",
@@ -36448,7 +36558,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The square roots of 5, 3, and 2 are real numbers, so they may be used as constant coefficients in a polynomial."
+          "en": "The square roots of 5, 3, and 2 are real numbers, so they may be used as constant coefficients in a polynomial.",
+          "ta": "√5, √3, √2 என்பன மாறிலி மெய்யெண் கெழுக்கள் ஆகும்; வர்க்கமூலம் மாறி x-இன் மீது இல்லை."
         }
       },
       {
@@ -36458,7 +36569,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The powers of x in the three terms are 2, 1, and 0; a constant term has power zero."
+          "en": "The powers of x in the three terms are 2, 1, and 0; a constant term has power zero.",
+          "ta": "மாறி x-இன் அடுக்குகள் 2, 1, 0 ஆகியவை முழு எண்கள்."
         }
       },
       {
@@ -36468,7 +36580,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "All variable exponents are nonnegative integers, so this is a polynomial of degree two."
+          "en": "All variable exponents are nonnegative integers, so this is a polynomial of degree two.",
+          "ta": "எனவே √5 x² + √3 x + √2 ஒரு பல்லுறுப்புக் கோவையாகும்."
         }
       }
     ]
@@ -36478,6 +36591,14 @@ const records=[
     "questionMath": {
       "en": [
         "1. Which of the following expressions are polynomials? If not give reason:\n",
+        {
+          "latex": "\\text{(vi)}\\quad m^2-\\sqrt[3]{m}+7m-10",
+          "fallback": "(vi) m² − ∛m + 7m − 10",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வரும் கோவைகளில் எவை பல்லுறுப்புக் கோவைகளாகும்? பல்லுறுப்புக் கோவை இல்லை எனில், அதற்கான காரணம் கூறுக.\n",
         {
           "latex": "\\text{(vi)}\\quad m^2-\\sqrt[3]{m}+7m-10",
           "fallback": "(vi) m² − ∛m + 7m − 10",
@@ -36498,7 +36619,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A cube root can be written as a fractional exponent one-third."
+          "en": "A cube root can be written as a fractional exponent one-third.",
+          "ta": "∛m என்பதை m¹⁄³ (m-இன் அடுக்கு 1/3) என எழுதலாம்."
         }
       },
       {
@@ -36508,7 +36630,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Rewrite the expression with that exponent to check whether each variable power is a whole number."
+          "en": "Rewrite the expression with that exponent to check whether each variable power is a whole number.",
+          "ta": "இங்கு மாறி m-இன் அடுக்கு 1/3 என்பது பின்னம்; முழு எண் அல்ல."
         }
       },
       {
@@ -36518,7 +36641,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "One-third is not a nonnegative integer, so the expression is not a polynomial in m."
+          "en": "One-third is not a nonnegative integer, so the expression is not a polynomial in m.",
+          "ta": "எனவே m² − ∛m + 7m − 10 என்பது பல்லுறுப்புக் கோவை அல்ல."
         }
       }
     ]
@@ -36538,6 +36662,14 @@ const records=[
           "fallback": "x"
         },
         " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(i)}\\quad 4+\\frac25x^2-3x",
+          "fallback": "(i) 4 + (2/5)x² − 3x",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வரும் ஒவ்வொரு பல்லுறுப்புக் கோவையிலும் x² மற்றும் x-இன் கெழுக்களைக் காண்க.\n",
         {
           "latex": "\\text{(i)}\\quad 4+\\frac25x^2-3x",
           "fallback": "(i) 4 + (2/5)x² − 3x",
@@ -36570,7 +36702,8 @@ const records=[
               "fallback": "x"
             },
             ". A coefficient is the number multiplying a variable term, including its sign."
-          ]
+          ],
+          "ta": "பல்லுறுப்புக் கோவை: 4 + (2/5)x² − 3x."
         }
       },
       {
@@ -36597,7 +36730,8 @@ const records=[
               "fallback": "2/5"
             },
             "."
-          ]
+          ],
+          "ta": "x² உறுப்பு +(2/5)x² என்பதால் x²-இன் கெழு 2/5 ஆகும்."
         }
       },
       {
@@ -36629,7 +36763,8 @@ const records=[
               "fallback": "4"
             },
             " stands on its own."
-          ]
+          ],
+          "ta": "x உறுப்பு −3x என்பதால் x-இன் கெழு −3 ஆகும்."
         }
       }
     ]
@@ -36649,6 +36784,14 @@ const records=[
           "fallback": "x"
         },
         " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(ii)}\\quad 6-2x^2+3x^3-\\sqrt7\\,x",
+          "fallback": "(ii) 6 − 2x² + 3x³ − √7 x",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வரும் ஒவ்வொரு பல்லுறுப்புக் கோவையிலும் x² மற்றும் x-இன் கெழுக்களைக் காண்க.\n",
         {
           "latex": "\\text{(ii)}\\quad 6-2x^2+3x^3-\\sqrt7\\,x",
           "fallback": "(ii) 6 − 2x² + 3x³ − √7 x",
@@ -36686,7 +36829,8 @@ const records=[
               "fallback": "x³"
             },
             " term are separate."
-          ]
+          ],
+          "ta": "பல்லுறுப்புக் கோவை: 6 − 2x² + 3x³ − √7 x."
         }
       },
       {
@@ -36713,7 +36857,8 @@ const records=[
               "fallback": "−2"
             },
             "."
-          ]
+          ],
+          "ta": "x² உறுப்பு −2x² என்பதால் x²-இன் கெழு −2 ஆகும்."
         }
       },
       {
@@ -36740,7 +36885,8 @@ const records=[
               "fallback": "−√7"
             },
             ". Keep the minus sign in front of the square root."
-          ]
+          ],
+          "ta": "x உறுப்பு −√7 x என்பதால் x-இன் கெழு −√7 ஆகும்."
         }
       }
     ]
@@ -36760,6 +36906,14 @@ const records=[
           "fallback": "x"
         },
         " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(iii)}\\quad \\pi x^2-x+2",
+          "fallback": "(iii) πx² − x + 2",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வரும் ஒவ்வொரு பல்லுறுப்புக் கோவையிலும் x² மற்றும் x-இன் கெழுக்களைக் காண்க.\n",
         {
           "latex": "\\text{(iii)}\\quad \\pi x^2-x+2",
           "fallback": "(iii) πx² − x + 2",
@@ -36792,7 +36946,8 @@ const records=[
               "fallback": "x"
             },
             ". Pi is a real number, so it can be a coefficient."
-          ]
+          ],
+          "ta": "பல்லுறுப்புக் கோவை: πx² − x + 2."
         }
       },
       {
@@ -36819,7 +36974,8 @@ const records=[
               "fallback": "π"
             },
             "."
-          ]
+          ],
+          "ta": "x² உறுப்பு πx² என்பதால் x²-இன் கெழு π ஆகும்."
         }
       },
       {
@@ -36851,7 +37007,8 @@ const records=[
               "fallback": "−1"
             },
             "."
-          ]
+          ],
+          "ta": "−x = −1·x என்பதால் x-இன் கெழு −1 ஆகும்."
         }
       }
     ]
@@ -36871,6 +37028,14 @@ const records=[
           "fallback": "x"
         },
         " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(iv)}\\quad \\sqrt3\\,x^2+\\sqrt2\\,x+0.5",
+          "fallback": "(iv) √3 x² + √2 x + 0.5",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வரும் ஒவ்வொரு பல்லுறுப்புக் கோவையிலும் x² மற்றும் x-இன் கெழுக்களைக் காண்க.\n",
         {
           "latex": "\\text{(iv)}\\quad \\sqrt3\\,x^2+\\sqrt2\\,x+0.5",
           "fallback": "(iv) √3 x² + √2 x + 0.5",
@@ -36903,7 +37068,8 @@ const records=[
               "fallback": "x"
             },
             ". The square roots are real numbers, so they can be coefficients."
-          ]
+          ],
+          "ta": "பல்லுறுப்புக் கோவை: √3 x² + √2 x + 0.5."
         }
       },
       {
@@ -36930,7 +37096,8 @@ const records=[
               "fallback": "√3"
             },
             "."
-          ]
+          ],
+          "ta": "x² உறுப்பு √3 x² என்பதால் x²-இன் கெழு √3 ஆகும்."
         }
       },
       {
@@ -36962,7 +37129,8 @@ const records=[
               "fallback": "0.5"
             },
             " stands on its own."
-          ]
+          ],
+          "ta": "x உறுப்பு √2 x என்பதால் x-இன் கெழு √2 ஆகும்."
         }
       }
     ]
@@ -36982,6 +37150,14 @@ const records=[
           "fallback": "x"
         },
         " in each of the following polynomials.\n",
+        {
+          "latex": "\\text{(v)}\\quad x^2-\\frac72x+8",
+          "fallback": "(v) x² − (7/2)x + 8",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வரும் ஒவ்வொரு பல்லுறுப்புக் கோவையிலும் x² மற்றும் x-இன் கெழுக்களைக் காண்க.\n",
         {
           "latex": "\\text{(v)}\\quad x^2-\\frac72x+8",
           "fallback": "(v) x² − (7/2)x + 8",
@@ -37019,7 +37195,8 @@ const records=[
               "fallback": "x²"
             },
             ", its coefficient is one."
-          ]
+          ],
+          "ta": "பல்லுறுப்புக் கோவை: x² − (7/2)x + 8."
         }
       },
       {
@@ -37052,7 +37229,8 @@ const records=[
               "fallback": "1"
             },
             " is understood even when it is not written."
-          ]
+          ],
+          "ta": "x² = 1·x² என்பதால் x²-இன் கெழு 1 ஆகும்."
         }
       },
       {
@@ -37079,7 +37257,8 @@ const records=[
               "fallback": "−7/2"
             },
             ". Keep the minus sign with the fraction."
-          ]
+          ],
+          "ta": "x உறுப்பு −(7/2)x என்பதால் x-இன் கெழு −7/2 ஆகும்."
         }
       }
     ]
@@ -37089,6 +37268,13 @@ const records=[
     "questionMath": {
       "en": [
         "3. Find the degree of the following polynomials.\n(i) ",
+        {
+          "latex": "1-\\sqrt2\\,y^2+y^7",
+          "fallback": "1 − √2 y² + y⁷"
+        }
+      ],
+      "ta": [
+        "3. பின்வரும் பல்லுறுப்புக் கோவைகளின் படியைக் காண்க.\n(i) ",
         {
           "latex": "1-\\sqrt2\\,y^2+y^7",
           "fallback": "1 − √2 y² + y⁷"
@@ -37108,7 +37294,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The degree of a polynomial is the largest exponent of its variable with a nonzero coefficient."
+          "en": "The degree of a polynomial is the largest exponent of its variable with a nonzero coefficient.",
+          "ta": "உறுப்புகள்: 1 (படி 0), −√2 y² (படி 2), y⁷ (படி 7)."
         }
       },
       {
@@ -37118,7 +37305,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The square-root two is a numerical coefficient and does not change the exponent on y."
+          "en": "The square-root two is a numerical coefficient and does not change the exponent on y.",
+          "ta": "மாறி y-இன் மிக உயர்ந்த அடுக்கு 7 ஆகும்."
         }
       },
       {
@@ -37128,7 +37316,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The highest power present is y⁷, so the degree is seven."
+          "en": "The highest power present is y⁷, so the degree is seven.",
+          "ta": "எனவே பல்லுறுப்புக் கோவையின் படி 7 ஆகும்."
         }
       }
     ]
@@ -37141,6 +37330,13 @@ const records=[
         {
           "latex": "\\frac{x^3-x^4+6x^6}{x^2}",
           "fallback": "(x³ − x⁴ + 6x⁶)/x²"
+        }
+      ],
+      "ta": [
+        "3. பின்வரும் பல்லுறுப்புக் கோவைகளின் படியைக் காண்க.\n(ii) ",
+        {
+          "latex": "\\frac{x^3-x^4+6x^6}{x^2}",
+          "fallback": "(x³ − x⁴ + 6x⁶) / x²"
         }
       ]
     },
@@ -37157,7 +37353,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Divide each term in the numerator by x squared; this calculation requires x to be nonzero."
+          "en": "Divide each term in the numerator by x squared; this calculation requires x to be nonzero.",
+          "ta": "x ≠ 0 எனும்போது ஒவ்வொரு உறுப்பையும் x²-ஆல் வகுக்கவும்."
         }
       },
       {
@@ -37167,7 +37364,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Subtract exponents on the same base to get the simplified polynomial expression."
+          "en": "Subtract exponents on the same base to get the simplified polynomial expression.",
+          "ta": "(x³ − x⁴ + 6x⁶)/x² = x − x² + 6x⁴."
         }
       },
       {
@@ -37177,7 +37375,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The largest exponent in the simplified polynomial is four. The original fractional expression is undefined at x = 0."
+          "en": "The largest exponent in the simplified polynomial is four. The original fractional expression is undefined at x = 0.",
+          "ta": "சுருக்கியபின் x-இன் மிக உயர்ந்த அடுக்கு 4; எனவே படி 4 ஆகும்."
         }
       }
     ]
@@ -37187,6 +37386,13 @@ const records=[
     "questionMath": {
       "en": [
         "3. Find the degree of the following polynomials.\n(iii) ",
+        {
+          "latex": "x^3(x^2+x)",
+          "fallback": "x³(x² + x)"
+        }
+      ],
+      "ta": [
+        "3. பின்வரும் பல்லுறுப்புக் கோவைகளின் படியைக் காண்க.\n(iii) ",
         {
           "latex": "x^3(x^2+x)",
           "fallback": "x³(x² + x)"
@@ -37206,7 +37412,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Distribute x cubed across both terms inside the bracket."
+          "en": "Distribute x cubed across both terms inside the bracket.",
+          "ta": "x³(x² + x) என்பதை விரித்தெழுத x⁵ + x⁴ கிடைக்கும்."
         }
       },
       {
@@ -37216,7 +37423,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "When multiplying the same variable, add exponents."
+          "en": "When multiplying the same variable, add exponents.",
+          "ta": "உறுப்புகளின் அடுக்குகள் 5 மற்றும் 4 ஆகும்."
         }
       },
       {
@@ -37226,7 +37434,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The highest exponent is five, so this is a fifth-degree polynomial."
+          "en": "The highest exponent is five, so this is a fifth-degree polynomial.",
+          "ta": "மிக உயர்ந்த அடுக்கு 5; எனவே படி 5 ஆகும்."
         }
       }
     ]
@@ -37236,6 +37445,13 @@ const records=[
     "questionMath": {
       "en": [
         "3. Find the degree of the following polynomials.\n(iv) ",
+        {
+          "latex": "3x^4+9x^2+27x^6",
+          "fallback": "3x⁴ + 9x² + 27x⁶"
+        }
+      ],
+      "ta": [
+        "3. பின்வரும் பல்லுறுப்புக் கோவைகளின் படியைக் காண்க.\n(iv) ",
         {
           "latex": "3x^4+9x^2+27x^6",
           "fallback": "3x⁴ + 9x² + 27x⁶"
@@ -37255,7 +37471,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A polynomial's degree comes from the greatest exponent after collecting any like terms."
+          "en": "A polynomial's degree comes from the greatest exponent after collecting any like terms.",
+          "ta": "உறுப்புகள்: 3x⁴ (படி 4), 9x² (படி 2), 27x⁶ (படி 6)."
         }
       },
       {
@@ -37265,7 +37482,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The coefficients 3, 9, and 27 are all nonzero, so none of these powers disappears."
+          "en": "The coefficients 3, 9, and 27 are all nonzero, so none of these powers disappears.",
+          "ta": "மாறி x-இன் மிக உயர்ந்த அடுக்கு 6 ஆகும்."
         }
       },
       {
@@ -37275,7 +37493,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The greatest exponent is six, so the degree is six."
+          "en": "The greatest exponent is six, so the degree is six.",
+          "ta": "எனவே பல்லுறுப்புக் கோவையின் படி 6 ஆகும்."
         }
       }
     ]
@@ -37288,6 +37507,13 @@ const records=[
         {
           "latex": "2\\sqrt5\\,p^4-\\frac{8p^3}{\\sqrt3}+\\frac{2p^2}{7}",
           "fallback": "2√5 p⁴ − (8p³)/√3 + (2p²)/7"
+        }
+      ],
+      "ta": [
+        "3. பின்வரும் பல்லுறுப்புக் கோவைகளின் படியைக் காண்க.\n(v) ",
+        {
+          "latex": "2\\sqrt5\\,p^4-\\frac{8p^3}{\\sqrt3}+\\frac{2p^2}{7}",
+          "fallback": "2√5 p⁴ − 8p³/√3 + 2p²/7"
         }
       ]
     },
@@ -37304,7 +37530,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The radicals and denominators are numbers only; they are coefficients, not powers of the variable p."
+          "en": "The radicals and denominators are numbers only; they are coefficients, not powers of the variable p.",
+          "ta": "மாறி p-இன் உறுப்புகள்: p⁴ (அடுக்கு 4), p³ (அடுக்கு 3), p² (அடுக்கு 2)."
         }
       },
       {
@@ -37314,7 +37541,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Read the variable exponents from the three nonzero terms."
+          "en": "Read the variable exponents from the three nonzero terms.",
+          "ta": "மிக உயர்ந்த அடுக்கு 4 ஆகும்."
         }
       },
       {
@@ -37324,7 +37552,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The largest exponent is four, therefore the polynomial has degree four."
+          "en": "The largest exponent is four, therefore the polynomial has degree four.",
+          "ta": "எனவே பல்லுறுப்புக் கோவையின் படி 4 ஆகும்."
         }
       }
     ]
@@ -37334,6 +37563,13 @@ const records=[
     "questionMath": {
       "en": [
         "4. Rewrite the following polynomial in standard form.\n(i) ",
+        {
+          "latex": "x-9+\\sqrt7\\,x^3+6x^2",
+          "fallback": "x − 9 + √7 x³ + 6x²"
+        }
+      ],
+      "ta": [
+        "4. பின்வரும் பல்லுறுப்புக் கோவைகளைத் திட்ட வடிவில் மாற்றி எழுதுக.\n(i) ",
         {
           "latex": "x-9+\\sqrt7\\,x^3+6x^2",
           "fallback": "x − 9 + √7 x³ + 6x²"
@@ -37353,7 +37589,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Standard form lists polynomial terms according to their powers, most commonly in descending order."
+          "en": "Standard form lists polynomial terms according to their powers, most commonly in descending order.",
+          "ta": "உறுப்புகளின் அடுக்குகள்: x (1), −9 (0), √7 x³ (3), 6x² (2)."
         }
       },
       {
@@ -37363,7 +37600,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Place the x-cubed term first, followed by x-squared, x, and the constant; keep each coefficient and sign."
+          "en": "Place the x-cubed term first, followed by x-squared, x, and the constant; keep each coefficient and sign.",
+          "ta": "இறங்கு வரிசை: √7 x³ + 6x² + x − 9."
         }
       },
       {
@@ -37373,7 +37611,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The textbook answer key also lists the same terms in ascending order, from constant to highest power."
+          "en": "The textbook answer key also lists the same terms in ascending order, from constant to highest power.",
+          "ta": "ஏறு வரிசை: −9 + x + 6x² + √7 x³."
         }
       }
     ]
@@ -37383,6 +37622,13 @@ const records=[
     "questionMath": {
       "en": [
         "4. Rewrite the following polynomial in standard form.\n(ii) ",
+        {
+          "latex": "\\sqrt2\\,x^2-\\frac72x^4+x-5x^3",
+          "fallback": "√2 x² − (7/2)x⁴ + x − 5x³"
+        }
+      ],
+      "ta": [
+        "4. பின்வரும் பல்லுறுப்புக் கோவைகளைத் திட்ட வடிவில் மாற்றி எழுதுக.\n(ii) ",
         {
           "latex": "\\sqrt2\\,x^2-\\frac72x^4+x-5x^3",
           "fallback": "√2 x² − (7/2)x⁴ + x − 5x³"
@@ -37402,7 +37648,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "List the powers present in the original polynomial: four, three, two, and one."
+          "en": "List the powers present in the original polynomial: four, three, two, and one.",
+          "ta": "உறுப்புகளின் அடுக்குகள்: √2 x² (2), −(7/2)x⁴ (4), x (1), −5x³ (3)."
         }
       },
       {
@@ -37412,7 +37659,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Keep each coefficient, including its minus sign, while arranging from greatest power to least."
+          "en": "Keep each coefficient, including its minus sign, while arranging from greatest power to least.",
+          "ta": "இறங்கு வரிசை: −(7/2)x⁴ − 5x³ + √2 x² + x."
         }
       },
       {
@@ -37422,7 +37670,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Reverse the sequence to write ascending order; no coefficients or exponents change."
+          "en": "Reverse the sequence to write ascending order; no coefficients or exponents change.",
+          "ta": "ஏறு வரிசை: x + √2 x² − 5x³ − (7/2)x⁴."
         }
       }
     ]
@@ -37432,6 +37681,13 @@ const records=[
     "questionMath": {
       "en": [
         "4. Rewrite the following polynomial in standard form.\n(iii) ",
+        {
+          "latex": "7x^3-\\frac65x^2+4x-1",
+          "fallback": "7x³ − (6/5)x² + 4x − 1"
+        }
+      ],
+      "ta": [
+        "4. பின்வரும் பல்லுறுப்புக் கோவைகளைத் திட்ட வடிவில் மாற்றி எழுதுக.\n(iii) ",
         {
           "latex": "7x^3-\\frac65x^2+4x-1",
           "fallback": "7x³ − (6/5)x² + 4x − 1"
@@ -37451,7 +37707,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The original polynomial already lists powers three, two, one, and zero in descending order."
+          "en": "The original polynomial already lists powers three, two, one, and zero in descending order.",
+          "ta": "உறுப்புகளின் அடுக்குகள்: 7x³ (3), −(6/5)x² (2), 4x (1), −1 (0)."
         }
       },
       {
@@ -37461,7 +37718,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "So its descending standard form is unchanged; preserve the negative fraction and constant."
+          "en": "So its descending standard form is unchanged; preserve the negative fraction and constant.",
+          "ta": "இது ஏற்கெனவே இறங்கு வரிசையில் உள்ளது: 7x³ − (6/5)x² + 4x − 1."
         }
       },
       {
@@ -37471,7 +37729,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "For ascending order, write the constant first and finish with the x-cubed term."
+          "en": "For ascending order, write the constant first and finish with the x-cubed term.",
+          "ta": "ஏறு வரிசை: −1 + 4x − (6/5)x² + 7x³."
         }
       }
     ]
@@ -37481,6 +37740,13 @@ const records=[
     "questionMath": {
       "en": [
         "4. Rewrite the following polynomial in standard form.\n(iv) ",
+        {
+          "latex": "y^2+\\sqrt5\\,y^3-11-\\frac73y+9y^4",
+          "fallback": "y² + √5 y³ − 11 − (7/3)y + 9y⁴"
+        }
+      ],
+      "ta": [
+        "4. பின்வரும் பல்லுறுப்புக் கோவைகளைத் திட்ட வடிவில் மாற்றி எழுதுக.\n(iv) ",
         {
           "latex": "y^2+\\sqrt5\\,y^3-11-\\frac73y+9y^4",
           "fallback": "y² + √5 y³ − 11 − (7/3)y + 9y⁴"
@@ -37500,7 +37766,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Identify all powers of y: four, three, two, one, and zero for the constant."
+          "en": "Identify all powers of y: four, three, two, one, and zero for the constant.",
+          "ta": "உறுப்புகளின் அடுக்குகள்: y² (2), √5 y³ (3), −11 (0), −(7/3)y (1), 9y⁴ (4)."
         }
       },
       {
@@ -37510,7 +37777,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Place the highest-degree term first; retain the minus sign in front of the y term and the constant."
+          "en": "Place the highest-degree term first; retain the minus sign in front of the y term and the constant.",
+          "ta": "இறங்கு வரிசை: 9y⁴ + √5 y³ + y² − (7/3)y − 11."
         }
       },
       {
@@ -37520,7 +37788,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The official appendix also gives the ascending version, beginning with the constant −11."
+          "en": "The official appendix also gives the ascending version, beginning with the constant −11.",
+          "ta": "ஏறு வரிசை: −11 − (7/3)y + y² + √5 y³ + 9y⁴."
         }
       }
     ]
@@ -37530,6 +37799,13 @@ const records=[
     "questionMath": {
       "en": [
         "5. Add the following polynomials and find the degree of the resultant polynomial.\n(i) ",
+        {
+          "latex": "p(x)=6x^2-7x+2,\\quad q(x)=6x^3-7x+15",
+          "fallback": "p(x) = 6x² − 7x + 2; q(x) = 6x³ − 7x + 15"
+        }
+      ],
+      "ta": [
+        "5. கீழ்க்காணும் பல்லுறுப்புக் கோவைகளைக் கூட்டுக. மேலும் கூட்டி வரும் பல்லுறுப்புக் கோவையின் படியைக் காண்க.\n(i) ",
         {
           "latex": "p(x)=6x^2-7x+2,\\quad q(x)=6x^3-7x+15",
           "fallback": "p(x) = 6x² − 7x + 2; q(x) = 6x³ − 7x + 15"
@@ -37549,7 +37825,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Write the sum p(x) + q(x) and group like powers of x in descending order from x³ down to the constant term."
+          "en": "Write the sum p(x) + q(x) and group like powers of x in descending order from x³ down to the constant term.",
+          "ta": "p(x) + q(x) = (6x² − 7x + 2) + (6x³ − 7x + 15)."
         }
       },
       {
@@ -37559,7 +37836,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Add the coefficients of the like terms: −7 − 7 = −14 for x, and 2 + 15 = 17 for the constant."
+          "en": "Add the coefficients of the like terms: −7 − 7 = −14 for x, and 2 + 15 = 17 for the constant.",
+          "ta": "ஒத்த உறுப்புகளை இணைக்க: 6x³ + 6x² + (−7x − 7x) + (2 + 15) = 6x³ + 6x² − 14x + 17."
         }
       },
       {
@@ -37569,7 +37847,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The highest power of x with a nonzero coefficient in the resultant polynomial is x³, so its degree is 3."
+          "en": "The highest power of x with a nonzero coefficient in the resultant polynomial is x³, so its degree is 3.",
+          "ta": "கூட்டி வரும் பல்லுறுப்புக் கோவையின் மிக உயர்ந்த அடுக்கு 3; எனவே படி 3 ஆகும்."
         }
       }
     ]
@@ -37579,6 +37858,13 @@ const records=[
     "questionMath": {
       "en": [
         "5. Add the following polynomials and find the degree of the resultant polynomial.\n(ii) ",
+        {
+          "latex": "h(x)=7x^3-6x+1,\\quad f(x)=7x^2+17x-9",
+          "fallback": "h(x) = 7x³ − 6x + 1; f(x) = 7x² + 17x − 9"
+        }
+      ],
+      "ta": [
+        "5. கீழ்க்காணும் பல்லுறுப்புக் கோவைகளைக் கூட்டுக. மேலும் கூட்டி வரும் பல்லுறுப்புக் கோவையின் படியைக் காண்க.\n(ii) ",
         {
           "latex": "h(x)=7x^3-6x+1,\\quad f(x)=7x^2+17x-9",
           "fallback": "h(x) = 7x³ − 6x + 1; f(x) = 7x² + 17x − 9"
@@ -37598,7 +37884,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Write the sum h(x) + f(x) and align like powers of x from highest to lowest."
+          "en": "Write the sum h(x) + f(x) and align like powers of x from highest to lowest.",
+          "ta": "h(x) + f(x) = (7x³ − 6x + 1) + (7x² + 17x − 9)."
         }
       },
       {
@@ -37608,7 +37895,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Combine the coefficients of like powers: −6 + 17 = 11 on x, and 1 − 9 = −8 for the constant term."
+          "en": "Combine the coefficients of like powers: −6 + 17 = 11 on x, and 1 − 9 = −8 for the constant term.",
+          "ta": "ஒத்த உறுப்புகளை இணைக்க: 7x³ + 7x² + (−6x + 17x) + (1 − 9) = 7x³ + 7x² + 11x − 8."
         }
       },
       {
@@ -37618,7 +37906,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The largest exponent of x in the resultant polynomial is 3, so the degree of the sum is 3."
+          "en": "The largest exponent of x in the resultant polynomial is 3, so the degree of the sum is 3.",
+          "ta": "மிக உயர்ந்த அடுக்கு 3; எனவே படி 3 ஆகும்."
         }
       }
     ]
@@ -37628,6 +37917,13 @@ const records=[
     "questionMath": {
       "en": [
         "5. Add the following polynomials and find the degree of the resultant polynomial.\n(iii) ",
+        {
+          "latex": "f(x)=16x^4-5x^2+9,\\quad g(x)=-6x^3+7x-15",
+          "fallback": "f(x) = 16x⁴ − 5x² + 9; g(x) = −6x³ + 7x − 15"
+        }
+      ],
+      "ta": [
+        "5. கீழ்க்காணும் பல்லுறுப்புக் கோவைகளைக் கூட்டுக. மேலும் கூட்டி வரும் பல்லுறுப்புக் கோவையின் படியைக் காண்க.\n(iii) ",
         {
           "latex": "f(x)=16x^4-5x^2+9,\\quad g(x)=-6x^3+7x-15",
           "fallback": "f(x) = 16x⁴ − 5x² + 9; g(x) = −6x³ + 7x − 15"
@@ -37647,7 +37943,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Write the sum f(x) + g(x) in descending powers of x and group the two constant terms together."
+          "en": "Write the sum f(x) + g(x) in descending powers of x and group the two constant terms together.",
+          "ta": "f(x) + g(x) = (16x⁴ − 5x² + 9) + (−6x³ + 7x − 15)."
         }
       },
       {
@@ -37657,7 +37954,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Simplify the constant terms 9 − 15 = −6; all variable powers 4, 3, 2, and 1 have distinct exponents."
+          "en": "Simplify the constant terms 9 − 15 = −6; all variable powers 4, 3, 2, and 1 have distinct exponents.",
+          "ta": "திட்ட வடிவில் இணைக்க: 16x⁴ − 6x³ − 5x² + 7x + (9 − 15) = 16x⁴ − 6x³ − 5x² + 7x − 6."
         }
       },
       {
@@ -37667,7 +37965,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The highest exponent with a nonzero coefficient is 4 on 16x⁴, so the resultant polynomial has degree 4."
+          "en": "The highest exponent with a nonzero coefficient is 4 on 16x⁴, so the resultant polynomial has degree 4.",
+          "ta": "மிக உயர்ந்த அடுக்கு 4; எனவே படி 4 ஆகும்."
         }
       }
     ]
@@ -37677,6 +37976,13 @@ const records=[
     "questionMath": {
       "en": [
         "6. Subtract the second polynomial from the first polynomial and find the degree of the resultant polynomial.\n(i) ",
+        {
+          "latex": "p(x)=7x^2+6x-1,\\quad q(x)=6x-9",
+          "fallback": "p(x) = 7x² + 6x − 1; q(x) = 6x − 9"
+        }
+      ],
+      "ta": [
+        "6. பின்வரும் பல்லுறுப்புக் கோவைகளைக் கழிக்க. மேலும் கழித்து வரும் பல்லுறுப்புக் கோவையின் படியைக் காண்க.\n(i) ",
         {
           "latex": "p(x)=7x^2+6x-1,\\quad q(x)=6x-9",
           "fallback": "p(x) = 7x² + 6x − 1; q(x) = 6x − 9"
@@ -37696,7 +38002,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Distribute the minus sign across every term of the second polynomial q(x) = 6x − 9."
+          "en": "Distribute the minus sign across every term of the second polynomial q(x) = 6x − 9.",
+          "ta": "p(x) − q(x) = (7x² + 6x − 1) − (6x − 9) = 7x² + 6x − 1 − 6x + 9."
         }
       },
       {
@@ -37706,7 +38013,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Group and combine like terms: 6x − 6x = 0x cancels out, and −1 + 9 = 8."
+          "en": "Group and combine like terms: 6x − 6x = 0x cancels out, and −1 + 9 = 8.",
+          "ta": "ஒத்த உறுப்புகளை இணைக்க: 7x² + (6x − 6x) + (−1 + 9) = 7x² + 8."
         }
       },
       {
@@ -37716,7 +38024,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The highest power of x remaining with a nonzero coefficient is x², so the degree is 2."
+          "en": "The highest power of x remaining with a nonzero coefficient is x², so the degree is 2.",
+          "ta": "மிக உயர்ந்த அடுக்கு 2; எனவே படி 2 ஆகும்."
         }
       }
     ]
@@ -37726,6 +38035,13 @@ const records=[
     "questionMath": {
       "en": [
         "6. Subtract the second polynomial from the first polynomial and find the degree of the resultant polynomial.\n(ii) ",
+        {
+          "latex": "f(y)=6y^2-7y+2,\\quad g(y)=7y+y^3",
+          "fallback": "f(y) = 6y² − 7y + 2; g(y) = 7y + y³"
+        }
+      ],
+      "ta": [
+        "6. பின்வரும் பல்லுறுப்புக் கோவைகளைக் கழிக்க. மேலும் கழித்து வரும் பல்லுறுப்புக் கோவையின் படியைக் காண்க.\n(ii) ",
         {
           "latex": "f(y)=6y^2-7y+2,\\quad g(y)=7y+y^3",
           "fallback": "f(y) = 6y² − 7y + 2; g(y) = 7y + y³"
@@ -37745,7 +38061,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Subtract g(y) from f(y) by changing the sign of every term in g(y) = 7y + y³."
+          "en": "Subtract g(y) from f(y) by changing the sign of every term in g(y) = 7y + y³.",
+          "ta": "f(y) − g(y) = (6y² − 7y + 2) − (7y + y³) = 6y² − 7y + 2 − 7y − y³."
         }
       },
       {
@@ -37755,7 +38072,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Arrange in descending powers of y and combine the linear terms −7y − 7y = −14y."
+          "en": "Arrange in descending powers of y and combine the linear terms −7y − 7y = −14y.",
+          "ta": "இறங்கு வரிசையில் இணைக்க: −y³ + 6y² − 14y + 2."
         }
       },
       {
@@ -37765,7 +38083,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The highest power of y with a nonzero coefficient is −y³, so the resultant polynomial has degree 3."
+          "en": "The highest power of y with a nonzero coefficient is −y³, so the resultant polynomial has degree 3.",
+          "ta": "மிக உயர்ந்த அடுக்கு 3; எனவே படி 3 ஆகும்."
         }
       }
     ]
@@ -37775,6 +38094,13 @@ const records=[
     "questionMath": {
       "en": [
         "6. Subtract the second polynomial from the first polynomial and find the degree of the resultant polynomial.\n(iii) ",
+        {
+          "latex": "h(z)=z^5-6z^4+z,\\quad f(z)=6z^2+10z-7",
+          "fallback": "h(z) = z⁵ − 6z⁴ + z; f(z) = 6z² + 10z − 7"
+        }
+      ],
+      "ta": [
+        "6. பின்வரும் பல்லுறுப்புக் கோவைகளைக் கழிக்க. மேலும் கழித்து வரும் பல்லுறுப்புக் கோவையின் படியைக் காண்க.\n(iii) ",
         {
           "latex": "h(z)=z^5-6z^4+z,\\quad f(z)=6z^2+10z-7",
           "fallback": "h(z) = z⁵ − 6z⁴ + z; f(z) = 6z² + 10z − 7"
@@ -37794,7 +38120,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Distribute the subtraction sign across all three terms of f(z) = 6z² + 10z − 7."
+          "en": "Distribute the subtraction sign across all three terms of f(z) = 6z² + 10z − 7.",
+          "ta": "h(z) − f(z) = (z⁵ − 6z⁴ + z) − (6z² + 10z − 7) = z⁵ − 6z⁴ + z − 6z² − 10z + 7."
         }
       },
       {
@@ -37804,7 +38131,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Combine the like linear terms z − 10z = −9z and write the polynomial in descending powers of z."
+          "en": "Combine the like linear terms z − 10z = −9z and write the polynomial in descending powers of z.",
+          "ta": "ஒத்த உறுப்புகளை இணைக்க: z⁵ − 6z⁴ − 6z² − 9z + 7."
         }
       },
       {
@@ -37814,7 +38142,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The largest exponent of z is 5 on the leading term z⁵, so the resultant polynomial has degree 5."
+          "en": "The largest exponent of z is 5 on the leading term z⁵, so the resultant polynomial has degree 5.",
+          "ta": "மிக உயர்ந்த அடுக்கு 5; எனவே படி 5 ஆகும்."
         }
       }
     ]
@@ -37828,6 +38157,9 @@ const records=[
           "latex": "(2x^3+6x^2-5x+8)+P(x)=3x^3-2x^2+6x+15",
           "fallback": "2x³ + 6x² − 5x + 8 to get 3x³ − 2x² + 6x + 15 ?"
         }
+      ],
+      "ta": [
+        "7. 2x³ + 6x² − 5x + 8 உடன் எந்தப் பல்லுறுப்புக் கோவையைக் கூட்ட 3x³ − 2x² + 6x + 15 கிடைக்கும்?"
       ]
     },
     "answerMath": {
@@ -37843,7 +38175,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Let P(x) be the required polynomial; to find what must be added, subtract the starting polynomial from the target polynomial."
+          "en": "Let P(x) be the required polynomial; to find what must be added, subtract the starting polynomial from the target polynomial.",
+          "ta": "தேவையான கோவை = (3x³ − 2x² + 6x + 15) − (2x³ + 6x² − 5x + 8)."
         }
       },
       {
@@ -37853,7 +38186,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Distribute the minus sign across the second bracket and group like powers of x together."
+          "en": "Distribute the minus sign across the second bracket and group like powers of x together.",
+          "ta": "குறிகளை மாற்ற: 3x³ − 2x² + 6x + 15 − 2x³ − 6x² + 5x − 8."
         }
       },
       {
@@ -37863,7 +38197,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Simplify each coefficient to obtain the polynomial that must be added."
+          "en": "Simplify each coefficient to obtain the polynomial that must be added.",
+          "ta": "ஒத்த உறுப்புகளை இணைக்க: x³ − 8x² + 11x + 7."
         }
       }
     ]
@@ -37877,6 +38212,9 @@ const records=[
           "latex": "(2x^4+4x^2-3x+7)-P(x)=3x^3-x^2+2x+1",
           "fallback": "2x⁴ + 4x² − 3x + 7 to get 3x³ − x² + 2x + 1 ?"
         }
+      ],
+      "ta": [
+        "8. 2x⁴ + 4x² − 3x + 7 இலிருந்து எந்தப் பல்லுறுப்புக் கோவையைக் கழிக்க 3x³ − x² + 2x + 1 கிடைக்கும்?"
       ]
     },
     "answerMath": {
@@ -37892,7 +38230,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "If A − P(x) = B, then P(x) = A − B; subtract the target polynomial from the starting polynomial."
+          "en": "If A − P(x) = B, then P(x) = A − B; subtract the target polynomial from the starting polynomial.",
+          "ta": "தேவையான கோவை = (2x⁴ + 4x² − 3x + 7) − (3x³ − x² + 2x + 1)."
         }
       },
       {
@@ -37902,7 +38241,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Distribute the minus sign and arrange terms in descending powers from x⁴ to the constant."
+          "en": "Distribute the minus sign and arrange terms in descending powers from x⁴ to the constant.",
+          "ta": "குறிகளை மாற்ற: 2x⁴ + 4x² − 3x + 7 − 3x³ + x² − 2x − 1."
         }
       },
       {
@@ -37912,7 +38252,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Combine the coefficients of like powers to get the polynomial that must be subtracted."
+          "en": "Combine the coefficients of like powers to get the polynomial that must be subtracted.",
+          "ta": "ஒத்த உறுப்புகளை இணைக்க: 2x⁴ − 3x³ + 5x² − 5x + 6."
         }
       }
     ]
@@ -37922,6 +38263,13 @@ const records=[
     "questionMath": {
       "en": [
         "9. Multiply the following polynomials and find the degree of the resultant polynomial:\n(i) ",
+        {
+          "latex": "p(x)=x^2-9,\\quad q(x)=6x^2+7x-2",
+          "fallback": "p(x) = x² − 9; q(x) = 6x² + 7x − 2"
+        }
+      ],
+      "ta": [
+        "9. பின்வரும் பல்லுறுப்புக் கோவைகளைப் பெருக்குக. பெருக்கி வரும் பல்லுறுப்புக் கோவையின் படியைக் காண்க:\n(i) ",
         {
           "latex": "p(x)=x^2-9,\\quad q(x)=6x^2+7x-2",
           "fallback": "p(x) = x² − 9; q(x) = 6x² + 7x − 2"
@@ -37941,7 +38289,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Distribute each term of p(x) = x² − 9 across the trinomial q(x) = 6x² + 7x − 2."
+          "en": "Distribute each term of p(x) = x² − 9 across the trinomial q(x) = 6x² + 7x − 2.",
+          "ta": "(x² − 9)(6x² + 7x − 2) = x²(6x² + 7x − 2) − 9(6x² + 7x − 2)."
         }
       },
       {
@@ -37951,7 +38300,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Expand both products and combine the like x² terms: −2x² − 54x² = −56x²."
+          "en": "Expand both products and combine the like x² terms: −2x² − 54x² = −56x².",
+          "ta": "விரித்தெழுத: 6x⁴ + 7x³ − 2x² − 54x² − 63x + 18 = 6x⁴ + 7x³ − 56x² − 63x + 18."
         }
       },
       {
@@ -37961,7 +38311,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The highest exponent of x in the product is 4 on 6x⁴, so the resultant polynomial has degree 4."
+          "en": "The highest exponent of x in the product is 4 on 6x⁴, so the resultant polynomial has degree 4.",
+          "ta": "மிக உயர்ந்த அடுக்கு 4; எனவே படி 4 ஆகும்."
         }
       }
     ]
@@ -37971,6 +38322,13 @@ const records=[
     "questionMath": {
       "en": [
         "9. Multiply the following polynomials and find the degree of the resultant polynomial:\n(ii) ",
+        {
+          "latex": "f(x)=7x+2,\\quad g(x)=15x-9",
+          "fallback": "f(x) = 7x + 2; g(x) = 15x − 9"
+        }
+      ],
+      "ta": [
+        "9. பின்வரும் பல்லுறுப்புக் கோவைகளைப் பெருக்குக. பெருக்கி வரும் பல்லுறுப்புக் கோவையின் படியைக் காண்க:\n(ii) ",
         {
           "latex": "f(x)=7x+2,\\quad g(x)=15x-9",
           "fallback": "f(x) = 7x + 2; g(x) = 15x − 9"
@@ -37990,7 +38348,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Multiply each term of f(x) = 7x + 2 by each term of g(x) = 15x − 9 using the distributive law."
+          "en": "Multiply each term of f(x) = 7x + 2 by each term of g(x) = 15x − 9 using the distributive law.",
+          "ta": "(7x + 2)(15x − 9) = 7x(15x − 9) + 2(15x − 9)."
         }
       },
       {
@@ -38000,7 +38359,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Combine the middle linear terms −63x + 30x = −33x."
+          "en": "Combine the middle linear terms −63x + 30x = −33x.",
+          "ta": "விரித்தெழுத: 105x² − 63x + 30x − 18 = 105x² − 33x − 18."
         }
       },
       {
@@ -38010,7 +38370,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The highest power of x in the expanded product is x², so the degree of the resultant polynomial is 2."
+          "en": "The highest power of x in the expanded product is x², so the degree of the resultant polynomial is 2.",
+          "ta": "மிக உயர்ந்த அடுக்கு 2; எனவே படி 2 ஆகும்."
         }
       }
     ]
@@ -38020,6 +38381,13 @@ const records=[
     "questionMath": {
       "en": [
         "9. Multiply the following polynomials and find the degree of the resultant polynomial:\n(iii) ",
+        {
+          "latex": "h(x)=6x^2-7x+1,\\quad f(x)=5x-7",
+          "fallback": "h(x) = 6x² − 7x + 1; f(x) = 5x − 7"
+        }
+      ],
+      "ta": [
+        "9. பின்வரும் பல்லுறுப்புக் கோவைகளைப் பெருக்குக. பெருக்கி வரும் பல்லுறுப்புக் கோவையின் படியைக் காண்க:\n(iii) ",
         {
           "latex": "h(x)=6x^2-7x+1,\\quad f(x)=5x-7",
           "fallback": "h(x) = 6x² − 7x + 1; f(x) = 5x − 7"
@@ -38039,7 +38407,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Distribute each term of h(x) = 6x² − 7x + 1 across f(x) = 5x − 7."
+          "en": "Distribute each term of h(x) = 6x² − 7x + 1 across f(x) = 5x − 7.",
+          "ta": "(6x² − 7x + 1)(5x − 7) = 6x²(5x − 7) − 7x(5x − 7) + 1(5x − 7)."
         }
       },
       {
@@ -38049,7 +38418,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Expand to 30x³ − 42x² − 35x² + 49x + 5x − 7 and combine like x² and x terms."
+          "en": "Expand to 30x³ − 42x² − 35x² + 49x + 5x − 7 and combine like x² and x terms.",
+          "ta": "விரித்தெழுத: 30x³ − 42x² − 35x² + 49x + 5x − 7 = 30x³ − 77x² + 54x − 7."
         }
       },
       {
@@ -38059,7 +38429,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The highest power of x in the product is 3 on 30x³, so the resultant polynomial has degree 3."
+          "en": "The highest power of x in the product is 3 on 30x³, so the resultant polynomial has degree 3.",
+          "ta": "மிக உயர்ந்த அடுக்கு 3; எனவே படி 3 ஆகும்."
         }
       }
     ]
@@ -39921,6 +40292,13 @@ const records=[
           "latex": "y=1",
           "fallback": "y = 1"
         }
+      ],
+      "ta": [
+        "1. f(y) = 6y − 3y² + 3 என்ற பல்லுறுப்புக் கோவையின் மதிப்பைக் காண்க.\n(i) ",
+        {
+          "latex": "y=1",
+          "fallback": "y = 1"
+        }
       ]
     },
     "answerMath": {
@@ -39936,7 +40314,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Replace every y with the given input. The notation f(y) means the output at that input."
+          "en": "Replace every y with the given input. The notation f(y) means the output at that input.",
+          "ta": "f(y) = 6y − 3y² + 3-இல் y = 1 எனப் பிரதியிட, f(1) = 6(1) − 3(1)² + 3."
         }
       },
       {
@@ -39946,7 +40325,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Evaluate the square and the multiplications before adding the terms."
+          "en": "Evaluate the square and the multiplications before adding the terms.",
+          "ta": "சுருக்க: 6 − 3 + 3 = 6."
         }
       }
     ]
@@ -39961,6 +40341,13 @@ const records=[
           "fallback": "f(y) = 6y − 3y² + 3"
         },
         " at\n(ii) ",
+        {
+          "latex": "y=-1",
+          "fallback": "y = −1"
+        }
+      ],
+      "ta": [
+        "1. f(y) = 6y − 3y² + 3 என்ற பல்லுறுப்புக் கோவையின் மதிப்பைக் காண்க.\n(ii) ",
         {
           "latex": "y=-1",
           "fallback": "y = −1"
@@ -39980,7 +40367,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Replace every y with the given input. The notation f(y) means the output at that input."
+          "en": "Replace every y with the given input. The notation f(y) means the output at that input.",
+          "ta": "f(−1) = 6(−1) − 3(−1)² + 3."
         }
       },
       {
@@ -39990,7 +40378,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Square the entire negative input first. The square is positive, and the coefficient of that square is negative."
+          "en": "Square the entire negative input first. The square is positive, and the coefficient of that square is negative.",
+          "ta": "(−1)² = 1 என்பதால் −6 − 3(1) + 3 = −6."
         }
       }
     ]
@@ -40005,6 +40394,13 @@ const records=[
           "fallback": "f(y) = 6y − 3y² + 3"
         },
         " at\n(iii) ",
+        {
+          "latex": "y=0",
+          "fallback": "y = 0"
+        }
+      ],
+      "ta": [
+        "1. f(y) = 6y − 3y² + 3 என்ற பல்லுறுப்புக் கோவையின் மதிப்பைக் காண்க.\n(iii) ",
         {
           "latex": "y=0",
           "fallback": "y = 0"
@@ -40024,7 +40420,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Replace every y with the given input. The notation f(y) means the output at that input."
+          "en": "Replace every y with the given input. The notation f(y) means the output at that input.",
+          "ta": "f(0) = 6(0) − 3(0)² + 3."
         }
       },
       {
@@ -40034,7 +40431,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Evaluate the square and the multiplications before adding the terms."
+          "en": "Evaluate the square and the multiplications before adding the terms.",
+          "ta": "0 − 0 + 3 = 3."
         }
       }
     ]
@@ -40054,6 +40452,9 @@ const records=[
           "fallback": "p(2√2)"
         },
         "."
+      ],
+      "ta": [
+        "2. p(x) = x² − 2√2 x + 1 எனில், p(2√2)-ஐக் காண்க."
       ]
     },
     "answerMath": {
@@ -40069,7 +40470,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Replace both occurrences of x with two times the square root of two."
+          "en": "Replace both occurrences of x with two times the square root of two.",
+          "ta": "x = 2√2 எனப் பிரதியிட: p(2√2) = (2√2)² − 2√2(2√2) + 1."
         }
       },
       {
@@ -40079,7 +40481,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Squaring two times the square root of two gives eight. The product in the second term is the same square."
+          "en": "Squaring two times the square root of two gives eight. The product in the second term is the same square.",
+          "ta": "(2√2)² = 4 × 2 = 8 மற்றும் 2√2 × 2√2 = 8."
         }
       },
       {
@@ -40089,7 +40492,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The two eights cancel, leaving the constant term."
+          "en": "The two eights cancel, leaving the constant term.",
+          "ta": "எனவே p(2√2) = 8 − 8 + 1 = 1."
         }
       }
     ]
@@ -40099,6 +40503,13 @@ const records=[
     "questionMath": {
       "en": [
         "3. Find the zeros of the polynomial in each of the following :\n(i) ",
+        {
+          "latex": "p(x)=x-3",
+          "fallback": "p(x) = x − 3"
+        }
+      ],
+      "ta": [
+        "3. கீழ்க்காணும் ஒவ்வொரு பல்லுறுப்புக் கோவையின் பூச்சியங்களைக் காண்க:\n(i) ",
         {
           "latex": "p(x)=x-3",
           "fallback": "p(x) = x − 3"
@@ -40118,7 +40529,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "ta": "பூச்சியம் காண p(x) = 0 என வைக்கவும்."
         }
       },
       {
@@ -40128,7 +40540,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Add three to both sides."
+          "en": "Add three to both sides.",
+          "ta": "x − 3 = 0."
         }
       },
       {
@@ -40138,7 +40551,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute the result to check that it gives zero."
+          "en": "Substitute the result to check that it gives zero.",
+          "ta": "எனவே x = 3 என்பது பூச்சியம் ஆகும்."
         }
       }
     ]
@@ -40148,6 +40562,13 @@ const records=[
     "questionMath": {
       "en": [
         "3. Find the zeros of the polynomial in each of the following :\n(ii) ",
+        {
+          "latex": "p(x)=2x+5",
+          "fallback": "p(x) = 2x + 5"
+        }
+      ],
+      "ta": [
+        "3. கீழ்க்காணும் ஒவ்வொரு பல்லுறுப்புக் கோவையின் பூச்சியங்களைக் காண்க:\n(ii) ",
         {
           "latex": "p(x)=2x+5",
           "fallback": "p(x) = 2x + 5"
@@ -40167,7 +40588,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "ta": "பூச்சியம் காண p(x) = 0 என வைக்கவும்."
         }
       },
       {
@@ -40177,7 +40599,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Subtract five from both sides."
+          "en": "Subtract five from both sides.",
+          "ta": "2x + 5 = 0."
         }
       },
       {
@@ -40187,7 +40610,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Divide both sides by two to get x on its own."
+          "en": "Divide both sides by two to get x on its own.",
+          "ta": "2x = −5."
         }
       },
       {
@@ -40197,7 +40621,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute the result to check that it gives zero."
+          "en": "Substitute the result to check that it gives zero.",
+          "ta": "எனவே x = −5/2 என்பது பூச்சியம் ஆகும்."
         }
       }
     ]
@@ -40207,6 +40632,13 @@ const records=[
     "questionMath": {
       "en": [
         "3. Find the zeros of the polynomial in each of the following :\n(iii) ",
+        {
+          "latex": "q(y)=2y-3",
+          "fallback": "q(y) = 2y − 3"
+        }
+      ],
+      "ta": [
+        "3. கீழ்க்காணும் ஒவ்வொரு பல்லுறுப்புக் கோவையின் பூச்சியங்களைக் காண்க:\n(iii) ",
         {
           "latex": "q(y)=2y-3",
           "fallback": "q(y) = 2y − 3"
@@ -40226,7 +40658,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "ta": "பூச்சியம் காண q(y) = 0 என வைக்கவும்."
         }
       },
       {
@@ -40236,7 +40669,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Add three to both sides."
+          "en": "Add three to both sides.",
+          "ta": "2y − 3 = 0."
         }
       },
       {
@@ -40246,7 +40680,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Divide both sides by two to get y on its own."
+          "en": "Divide both sides by two to get y on its own.",
+          "ta": "2y = 3."
         }
       },
       {
@@ -40256,7 +40691,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute the result to check that it gives zero."
+          "en": "Substitute the result to check that it gives zero.",
+          "ta": "எனவே y = 3/2 என்பது பூச்சியம் ஆகும்."
         }
       }
     ]
@@ -40266,6 +40702,13 @@ const records=[
     "questionMath": {
       "en": [
         "3. Find the zeros of the polynomial in each of the following :\n(iv) ",
+        {
+          "latex": "f(z)=8z",
+          "fallback": "f(z) = 8z"
+        }
+      ],
+      "ta": [
+        "3. கீழ்க்காணும் ஒவ்வொரு பல்லுறுப்புக் கோவையின் பூச்சியங்களைக் காண்க:\n(iv) ",
         {
           "latex": "f(z)=8z",
           "fallback": "f(z) = 8z"
@@ -40285,7 +40728,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "ta": "பூச்சியம் காண f(z) = 0 என வைக்கவும்."
         }
       },
       {
@@ -40295,7 +40739,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Divide both sides by eight."
+          "en": "Divide both sides by eight.",
+          "ta": "8z = 0."
         }
       },
       {
@@ -40305,7 +40750,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute the result to check that it gives zero."
+          "en": "Substitute the result to check that it gives zero.",
+          "ta": "8 ≠ 0 என்பதால் z = 0 என்பது பூச்சியம் ஆகும்."
         }
       }
     ]
@@ -40324,6 +40770,13 @@ const records=[
           "latex": "a\\ne 0",
           "fallback": "a ≠ 0"
         }
+      ],
+      "ta": [
+        "3. கீழ்க்காணும் ஒவ்வொரு பல்லுறுப்புக் கோவையின் பூச்சியங்களைக் காண்க:\n(v) ",
+        {
+          "latex": "a\\ne 0",
+          "fallback": "p(x) = ax இங்கு a ≠ 0"
+        }
       ]
     },
     "answerMath": {
@@ -40339,7 +40792,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "ta": "பூச்சியம் காண p(x) = 0 என வைக்கவும்."
         }
       },
       {
@@ -40349,7 +40803,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The coefficient a is nonzero, so divide both sides by a."
+          "en": "The coefficient a is nonzero, so divide both sides by a.",
+          "ta": "ax = 0."
         }
       },
       {
@@ -40359,7 +40814,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute the result to check that it gives zero."
+          "en": "Substitute the result to check that it gives zero.",
+          "ta": "a ≠ 0 என்பதால் இருபுறமும் a-ஆல் வகுக்க x = 0 கிடைக்கும்."
         }
       }
     ]
@@ -40383,6 +40839,13 @@ const records=[
           "latex": "a,b\\in\\mathbb{R}",
           "fallback": "a, b ∈ R"
         }
+      ],
+      "ta": [
+        "3. கீழ்க்காணும் ஒவ்வொரு பல்லுறுப்புக் கோவையின் பூச்சியங்களைக் காண்க:\n(vi) ",
+        {
+          "latex": "a,b\\in\\mathbb{R}",
+          "fallback": "h(x) = ax + b, a ≠ 0, a, b ∈ R"
+        }
       ]
     },
     "answerMath": {
@@ -40398,7 +40861,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero."
+          "en": "A zero is an input that gives an output of zero. Set the expression equal to zero.",
+          "ta": "பூச்சியம் காண h(x) = 0 என வைக்கவும்."
         }
       },
       {
@@ -40408,7 +40872,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Here a and b are real numbers. Subtract b from both sides."
+          "en": "Here a and b are real numbers. Subtract b from both sides.",
+          "ta": "ax + b = 0."
         }
       },
       {
@@ -40418,7 +40883,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The coefficient a is nonzero, so divide both sides by a."
+          "en": "The coefficient a is nonzero, so divide both sides by a.",
+          "ta": "ax = −b."
         }
       },
       {
@@ -40428,7 +40894,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute the result to check that it gives zero."
+          "en": "Substitute the result to check that it gives zero.",
+          "ta": "a ≠ 0 என்பதால் x = −b/a என்பது பூச்சியம் ஆகும்."
         }
       }
     ]
@@ -40447,6 +40914,13 @@ const records=[
           "latex": "x=\\dfrac12",
           "fallback": "x = 1/2"
         }
+      ],
+      "ta": [
+        "5. பின்வரும் பல்லுறுப்புக் கோவைகளுக்கு அவற்றிற்கு எதிரே குறிப்பிட்டுள்ளவை பூச்சியங்களா எனச் சரிபார்க்க.\n(i) ",
+        {
+          "latex": "x=\\dfrac12",
+          "fallback": "p(x) = 2x − 1, x = 1/2"
+        }
       ]
     },
     "answerMath": {
@@ -40462,7 +40936,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A proposed input is a zero if substituting it makes the polynomial equal to zero."
+          "en": "A proposed input is a zero if substituting it makes the polynomial equal to zero.",
+          "ta": "p(x) = 2x − 1-இல் x = 1/2 எனப் பிரதியிட: p(1/2) = 2(1/2) − 1."
         }
       },
       {
@@ -40472,7 +40947,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Two halves make one. Subtract one to get zero."
+          "en": "Two halves make one. Subtract one to get zero.",
+          "ta": "1 − 1 = 0; எனவே x = 1/2 என்பது பூச்சியமாகும்."
         }
       }
     ]
@@ -40491,6 +40967,13 @@ const records=[
           "latex": "x=1",
           "fallback": "x = 1"
         }
+      ],
+      "ta": [
+        "5. பின்வரும் பல்லுறுப்புக் கோவைகளுக்கு அவற்றிற்கு எதிரே குறிப்பிட்டுள்ளவை பூச்சியங்களா எனச் சரிபார்க்க.\n(ii) ",
+        {
+          "latex": "x=1",
+          "fallback": "p(x) = x³ − 1, x = 1"
+        }
       ]
     },
     "answerMath": {
@@ -40506,7 +40989,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute the proposed input for x."
+          "en": "Substitute the proposed input for x.",
+          "ta": "p(x) = x³ − 1-இல் x = 1 எனப் பிரதியிட: p(1) = 1³ − 1."
         }
       },
       {
@@ -40516,7 +41000,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The cube of one is one. The output is zero, so one is a zero."
+          "en": "The cube of one is one. The output is zero, so one is a zero.",
+          "ta": "1 − 1 = 0; எனவே x = 1 என்பது பூச்சியமாகும்."
         }
       }
     ]
@@ -40535,6 +41020,13 @@ const records=[
           "latex": "x=\\dfrac{-b}{a}",
           "fallback": "x = (−b)/a"
         }
+      ],
+      "ta": [
+        "5. பின்வரும் பல்லுறுப்புக் கோவைகளுக்கு அவற்றிற்கு எதிரே குறிப்பிட்டுள்ளவை பூச்சியங்களா எனச் சரிபார்க்க.\n(iii) ",
+        {
+          "latex": "x=\\dfrac{-b}{a}",
+          "fallback": "p(x) = ax + b, x = −b/a"
+        }
       ]
     },
     "answerMath": {
@@ -40550,7 +41042,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The proposed input has a in its denominator, so it is defined only when a is nonzero."
+          "en": "The proposed input has a in its denominator, so it is defined only when a is nonzero.",
+          "ta": "a ≠ 0 எனும்போது p(−b/a) = a(−b/a) + b."
         }
       },
       {
@@ -40560,7 +41053,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute the fraction for x. The factor a cancels with the nonzero denominator a."
+          "en": "Substitute the fraction for x. The factor a cancels with the nonzero denominator a.",
+          "ta": "−b + b = 0; எனவே x = −b/a என்பது பூச்சியமாகும்."
         }
       }
     ]
@@ -40584,6 +41078,13 @@ const records=[
           "latex": "x=-3",
           "fallback": "x = −3"
         }
+      ],
+      "ta": [
+        "5. பின்வரும் பல்லுறுப்புக் கோவைகளுக்கு அவற்றிற்கு எதிரே குறிப்பிட்டுள்ளவை பூச்சியங்களா எனச் சரிபார்க்க.\n(iv) ",
+        {
+          "latex": "x=-3",
+          "fallback": "p(x) = (x + 3)(x − 4), x = 4, x = −3"
+        }
       ]
     },
     "answerMath": {
@@ -40599,7 +41100,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute four. The second factor becomes zero, so the whole product is zero."
+          "en": "Substitute four. The second factor becomes zero, so the whole product is zero.",
+          "ta": "p(4) = (4 + 3)(4 − 4) = 7 × 0 = 0."
         }
       },
       {
@@ -40609,7 +41111,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute negative three. This time the first factor becomes zero."
+          "en": "Substitute negative three. This time the first factor becomes zero.",
+          "ta": "p(−3) = (−3 + 3)(−3 − 4) = 0 × (−7) = 0; எனவே இரண்டும் பூச்சியங்களாகும்."
         }
       }
     ]
@@ -40619,6 +41122,9 @@ const records=[
     "questionMath": {
       "en": [
         "6. Find the number of zeros of the following polynomials represented by their graphs.\n(i) Fig. 3.10"
+      ],
+      "ta": [
+        "6. பின்வரும் வரைபடங்களால் குறிக்கப்படும் பல்லுறுப்புக் கோவைகளின் பூச்சியங்களின் எண்ணிக்கையைக் காண்க.\n(i) படம் 3.10"
       ]
     },
     "answerMath": {
@@ -40634,12 +41140,21 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.",
+          "ta": "வளைவரை x-அச்சை இரண்டு வெவ்வேறு புள்ளிகளில் வெட்டுகிறது."
         }
       },
       {
         "reasonMath": {
-          "en": "The upward curve crosses the horizontal axis once on each side of the vertical axis."
+          "en": "The upward curve crosses the horizontal axis once on each side of the vertical axis.",
+          "ta": [
+            "எனவே பூச்சியங்களின் எண்ணிக்கை ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " ஆகும்."
+          ]
         }
       }
     ]
@@ -40649,6 +41164,9 @@ const records=[
     "questionMath": {
       "en": [
         "6. Find the number of zeros of the following polynomials represented by their graphs.\n(ii) Fig. 3.11"
+      ],
+      "ta": [
+        "6. பின்வரும் வரைபடங்களால் குறிக்கப்படும் பல்லுறுப்புக் கோவைகளின் பூச்சியங்களின் எண்ணிக்கையைக் காண்க.\n(ii) படம் 3.11"
       ]
     },
     "answerMath": {
@@ -40664,12 +41182,21 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.",
+          "ta": "வளைவரை x-அச்சை மூன்று வெவ்வேறு புள்ளிகளில் வெட்டுகிறது."
         }
       },
       {
         "reasonMath": {
-          "en": "The curve crosses the horizontal axis three times. The marked point on the vertical axis sits above the horizontal axis."
+          "en": "The curve crosses the horizontal axis three times. The marked point on the vertical axis sits above the horizontal axis.",
+          "ta": [
+            "எனவே பூச்சியங்களின் எண்ணிக்கை ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " ஆகும்."
+          ]
         }
       }
     ]
@@ -40679,6 +41206,9 @@ const records=[
     "questionMath": {
       "en": [
         "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iii) Fig. 3.12"
+      ],
+      "ta": [
+        "6. பின்வரும் வரைபடங்களால் குறிக்கப்படும் பல்லுறுப்புக் கோவைகளின் பூச்சியங்களின் எண்ணிக்கையைக் காண்க.\n(iii) படம் 3.12"
       ]
     },
     "answerMath": {
@@ -40694,12 +41224,21 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.",
+          "ta": "பரவளையம் x-அச்சிற்கு மேலேயே உள்ளது; x-அச்சை வெட்டவும் இல்லை, தொடவும் இல்லை."
         }
       },
       {
         "reasonMath": {
-          "en": "Even the lowest point of the curve is above the horizontal axis, so there is no meeting point."
+          "en": "Even the lowest point of the curve is above the horizontal axis, so there is no meeting point.",
+          "ta": [
+            "எனவே பூச்சியங்களின் எண்ணிக்கை ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            " ஆகும்."
+          ]
         }
       }
     ]
@@ -40709,6 +41248,9 @@ const records=[
     "questionMath": {
       "en": [
         "6. Find the number of zeros of the following polynomials represented by their graphs.\n(iv) Fig. 3.13"
+      ],
+      "ta": [
+        "6. பின்வரும் வரைபடங்களால் குறிக்கப்படும் பல்லுறுப்புக் கோவைகளின் பூச்சியங்களின் எண்ணிக்கையைக் காண்க.\n(iv) படம் 3.13"
       ]
     },
     "answerMath": {
@@ -40724,7 +41266,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.",
+          "ta": "வளைவரை x-அச்சை ஆதிப்புள்ளியில் (1 புள்ளியில்) மட்டுமே வெட்டுகிறது."
         }
       },
       {
@@ -40741,6 +41284,14 @@ const records=[
               "fallback": "x"
             },
             ". The textbook is counting its meetings with the horizontal axis."
+          ],
+          "ta": [
+            "எனவே பூச்சியங்களின் எண்ணிக்கை ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " ஆகும்."
           ]
         }
       }
@@ -40751,6 +41302,9 @@ const records=[
     "questionMath": {
       "en": [
         "6. Find the number of zeros of the following polynomials represented by their graphs.\n(v) Fig. 3.14"
+      ],
+      "ta": [
+        "6. பின்வரும் வரைபடங்களால் குறிக்கப்படும் பல்லுறுப்புக் கோவைகளின் பூச்சியங்களின் எண்ணிக்கையைக் காண்க.\n(v) படம் 3.14"
       ]
     },
     "answerMath": {
@@ -40766,12 +41320,12928 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero."
+          "en": "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.",
+          "ta": "பரவளையம் x-அச்சை ஒரே ஒரு புள்ளியில் தொட்டுச் செல்கிறது."
         }
       },
       {
         "reasonMath": {
-          "en": "The highest point of the downward curve touches the horizontal axis once. That point has height zero."
+          "en": "The highest point of the downward curve touches the horizontal axis once. That point has height zero.",
+          "ta": [
+            "எனவே பூச்சியங்களின் எண்ணிக்கை ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " ஆகும்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q1",
+    "questionMath": {
+      "en": [
+        "1. Check whether p(x) is a multiple of g(x) or not.\n",
+        {
+          "latex": "p(x) = x^3 - 5x^2 + 4x - 3,\\quad g(x) = x - 2",
+          "fallback": "p(x) = x³ − 5x² + 4x − 3; g(x) = x − 2",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "p(x) = x^3 - 5x^2 + 4x - 3,\\quad g(x) = x - 2",
+          "fallback": "1. p(x) = x³ − 5x² + 4x − 3 என்ற பல்லுறுப்புக் கோவை g(x) = x − 2 என்ற பல்லுறுப்புக் கோவையின் மடங்கா எனச் சரிபார்க்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{Not a multiple } (p(2) = -7 \\ne 0)}",
+      "fallback": "No, p(x) is not a multiple of g(x) (remainder = −7)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x - 2 = 0 \\implies x = 2",
+          "fallback": "x - 2 = 0 ⇒ x = 2"
+        },
+        "reasonMath": {
+          "en": [
+            "Set ",
+            {
+              "latex": "g \\left(x\\right) = 0",
+              "fallback": "g(x) = 0"
+            },
+            " to find the zero of the divisor ",
+            {
+              "latex": "x - 2",
+              "fallback": "x − 2"
+            },
+            "."
+          ],
+          "ta": [
+            "வகுத்தி ",
+            {
+              "latex": "g \\left(x\\right) = 0",
+              "fallback": "g(x) = 0"
+            },
+            " என வைத்து பூச்சியம் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p(2) = 8 - 20 + 8 - 3 = -7 \\ne 0",
+          "fallback": "p(2) = 2³ − 5(2)² + 4(2) − 3 = 8 − 20 + 8 − 3 = −7"
+        },
+        "reasonMath": {
+          "en": [
+            "By Remainder Theorem, evaluate ",
+            {
+              "latex": "p \\left(2\\right)",
+              "fallback": "p(2)"
+            },
+            "."
+          ],
+          "ta": [
+            "மீதித் தேற்றப்படி ",
+            {
+              "latex": "p \\left(2\\right)",
+              "fallback": "p(2)"
+            },
+            " மதிப்பைக் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p(2) \\ne 0 \\implies \\text{Not a multiple}",
+          "fallback": "p(2) ≠ 0 ⇒ Not a multiple"
+        },
+        "reasonMath": {
+          "en": [
+            "Since remainder ≠ 0, ",
+            {
+              "latex": "p \\left(x\\right)",
+              "fallback": "p(x)"
+            },
+            " is not a multiple of ",
+            {
+              "latex": "g \\left(x\\right)",
+              "fallback": "g(x)"
+            },
+            "."
+          ],
+          "ta": "மீதி பூச்சியமல்ல என்பதால் மடங்கல்ல."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q2-i",
+    "questionMath": {
+      "en": [
+        "2. By remainder theorem, find the remainder when p(x) is divided by g(x) where\n",
+        {
+          "latex": "p(x) = x^3 - 2x^2 - 4x - 1,\\quad g(x) = x + 1",
+          "fallback": "(i) p(x) = x³ − 2x² − 4x − 1; g(x) = x + 1",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. மீதித் தேற்றத்தைப் பயன்படுத்தி, p(x)-ஐ g(x)-ஆல் வகுக்கக் கிடைக்கும் மீதியைக் காண்க.\n",
+        {
+          "latex": "p(x) = x^3 - 2x^2 - 4x - 1,\\quad g(x) = x + 1",
+          "fallback": "(i) p(x) = x³ − 2x² − 4x − 1; g(x) = x + 1",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{0}",
+      "fallback": "Remainder = 0"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x + 1 = 0 \\implies x = -1",
+          "fallback": "x + 1 = 0 ⇒ x = −1"
+        },
+        "reasonMath": {
+          "en": [
+            "Find the zero of ",
+            {
+              "latex": "g \\left(x\\right) = x + 1",
+              "fallback": "g(x) = x + 1"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "g \\left(x\\right) = x + 1",
+              "fallback": "g(x) = x + 1"
+            },
+            "-இன் பூச்சியம் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p(-1) = (-1)^3 - 2(-1)^2 - 4(-1) - 1",
+          "fallback": "p(−1) = (−1)³ − 2(−1)² − 4(−1) − 1"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x = - 1",
+              "fallback": "x = −1"
+            },
+            " into ",
+            {
+              "latex": "p \\left(x\\right)",
+              "fallback": "p(x)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(x\\right)",
+              "fallback": "p(x)"
+            },
+            "-இல் ",
+            {
+              "latex": "x = - 1",
+              "fallback": "x = −1"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "-1 - 2 + 4 - 1 = 0",
+          "fallback": "= −1 − 2 + 4 − 1 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Simplify to get the remainder ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            "."
+          ],
+          "ta": [
+            "சுருக்கக் கிடைக்கும் மீதி ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q2-ii",
+    "questionMath": {
+      "en": [
+        "2. By remainder theorem, find the remainder when p(x) is divided by g(x) where\n",
+        {
+          "latex": "p(x) = 4x^3 - 12x^2 + 14x - 3,\\quad g(x) = 2x - 1",
+          "fallback": "(ii) p(x) = 4x³ − 12x² + 14x − 3; g(x) = 2x − 1",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. மீதித் தேற்றத்தைப் பயன்படுத்தி, p(x)-ஐ g(x)-ஆல் வகுக்கக் கிடைக்கும் மீதியைக் காண்க.\n",
+        {
+          "latex": "p(x) = 4x^3 - 12x^2 + 14x - 3,\\quad g(x) = 2x - 1",
+          "fallback": "(ii) p(x) = 4x³ − 12x² + 14x − 3; g(x) = 2x − 1",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\dfrac{3}{2}}",
+      "fallback": "Remainder = 3/2"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2x - 1 = 0 \\implies x = \\dfrac{1}{2}",
+          "fallback": "2x − 1 = 0 ⇒ x = 1/2"
+        },
+        "reasonMath": {
+          "en": [
+            "Find the zero of ",
+            {
+              "latex": "g \\left(x\\right) = 2 x - 1",
+              "fallback": "g(x) = 2x − 1"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "g \\left(x\\right) = 2 x - 1",
+              "fallback": "g(x) = 2x − 1"
+            },
+            "-இன் பூச்சியம் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p\\!\\left(\\dfrac{1}{2}\\right) = 4\\left(\\dfrac{1}{8}\\right) - 12\\left(\\dfrac{1}{4}\\right) + 14\\left(\\dfrac{1}{2}\\right) - 3",
+          "fallback": "p(1/2) = 4(1/2)³ − 12(1/2)² + 14(1/2) − 3"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "\\displaystyle x = \\frac{1}{2}",
+              "fallback": "x = 1/2"
+            },
+            " into ",
+            {
+              "latex": "p \\left(x\\right)",
+              "fallback": "p(x)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(x\\right)",
+              "fallback": "p(x)"
+            },
+            "-இல் ",
+            {
+              "latex": "\\displaystyle x = \\frac{1}{2}",
+              "fallback": "x = 1/2"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\dfrac{1}{2} - 3 + 7 - 3 = \\dfrac{3}{2}",
+          "fallback": "= 1/2 − 3 + 7 − 3 = 3/2"
+        },
+        "reasonMath": {
+          "en": [
+            "Combine terms to get remainder ",
+            {
+              "latex": "\\displaystyle \\frac{3}{2}",
+              "fallback": "3/2"
+            },
+            "."
+          ],
+          "ta": [
+            "சுருக்கக் கிடைக்கும் மீதி ",
+            {
+              "latex": "\\displaystyle \\frac{3}{2}",
+              "fallback": "3/2"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q2-iii",
+    "questionMath": {
+      "en": [
+        "2. By remainder theorem, find the remainder when p(x) is divided by g(x) where\n",
+        {
+          "latex": "p(x) = x^3 - 3x^2 + 4x + 50,\\quad g(x) = x - 3",
+          "fallback": "(iii) p(x) = x³ − 3x² + 4x + 50; g(x) = x − 3",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. மீதித் தேற்றத்தைப் பயன்படுத்தி, p(x)-ஐ g(x)-ஆல் வகுக்கக் கிடைக்கும் மீதியைக் காண்க.\n",
+        {
+          "latex": "p(x) = x^3 - 3x^2 + 4x + 50,\\quad g(x) = x - 3",
+          "fallback": "(iii) p(x) = x³ − 3x² + 4x + 50; g(x) = x − 3",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{62}",
+      "fallback": "Remainder = 62"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x - 3 = 0 \\implies x = 3",
+          "fallback": "x − 3 = 0 ⇒ x = 3"
+        },
+        "reasonMath": {
+          "en": [
+            "Find the zero of ",
+            {
+              "latex": "g \\left(x\\right) = x - 3",
+              "fallback": "g(x) = x − 3"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "g \\left(x\\right) = x - 3",
+              "fallback": "g(x) = x − 3"
+            },
+            "-இன் பூச்சியம் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p(3) = 27 - 27 + 12 + 50",
+          "fallback": "p(3) = 3³ − 3(3)² + 4(3) + 50"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            " into ",
+            {
+              "latex": "p \\left(x\\right)",
+              "fallback": "p(x)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(x\\right)",
+              "fallback": "p(x)"
+            },
+            "-இல் ",
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "62",
+          "fallback": "= 62"
+        },
+        "reasonMath": {
+          "en": [
+            "Simplify to get remainder ",
+            {
+              "latex": "62",
+              "fallback": "62"
+            },
+            "."
+          ],
+          "ta": [
+            "சுருக்கக் கிடைக்கும் மீதி ",
+            {
+              "latex": "62",
+              "fallback": "62"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q3",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "(3x^3 - 4x^2 + 7x - 5) \\div (x + 3)",
+          "fallback": "3. Find the remainder when 3x³ − 4x² + 7x − 5 is divided by (x + 3).",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "(3x^3 - 4x^2 + 7x - 5) \\div (x + 3)",
+          "fallback": "3. 3x³ − 4x² + 7x − 5 என்ற பல்லுறுப்புக் கோவையை (x + 3)-ஆல் வகுக்கக் கிடைக்கும் மீதியைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{-143}",
+      "fallback": "Remainder = −143"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x + 3 = 0 \\implies x = -3",
+          "fallback": "x + 3 = 0 ⇒ x = −3"
+        },
+        "reasonMath": {
+          "en": [
+            "Zero of ",
+            {
+              "latex": "\\left(x + 3\\right)",
+              "fallback": "(x + 3)"
+            },
+            " is ",
+            {
+              "latex": "x = - 3",
+              "fallback": "x = −3"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(x + 3\\right)",
+              "fallback": "(x + 3)"
+            },
+            "-இன் பூச்சியம் ",
+            {
+              "latex": "x = - 3",
+              "fallback": "x = −3"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p(-3) = 3(-27) - 4(9) + 7(-3) - 5",
+          "fallback": "p(−3) = 3(−3)³ − 4(−3)² + 7(−3) − 5"
+        },
+        "reasonMath": {
+          "en": [
+            "Evaluate ",
+            {
+              "latex": "p \\left(- 3\\right)",
+              "fallback": "p(−3)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(- 3\\right)",
+              "fallback": "p(−3)"
+            },
+            " மதிப்பைக் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "-81 - 36 - 21 - 5 = -143",
+          "fallback": "= −81 − 36 − 21 − 5 = −143"
+        },
+        "reasonMath": {
+          "en": "Add the terms carefully.",
+          "ta": [
+            "உறுப்புகளைக் கூட்ட மீதி ",
+            {
+              "latex": "- 143",
+              "fallback": "−143"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q4",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "(x^{2018} + 2018) \\div (x - 1)",
+          "fallback": "4. What is the remainder when x²⁰¹⁸ + 2018 is divided by x − 1?",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "(x^{2018} + 2018) \\div (x - 1)",
+          "fallback": "4. x²⁰¹⁸ + 2018 என்ற பல்லுறுப்புக் கோவையை x − 1-ஆல் வகுக்கக் கிடைக்கும் மீதியைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{2019}",
+      "fallback": "Remainder = 2019"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x - 1 = 0 \\implies x = 1",
+          "fallback": "x − 1 = 0 ⇒ x = 1"
+        },
+        "reasonMath": {
+          "en": [
+            "Zero of ",
+            {
+              "latex": "\\left(x - 1\\right)",
+              "fallback": "(x − 1)"
+            },
+            " is ",
+            {
+              "latex": "x = 1",
+              "fallback": "x = 1"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(x - 1\\right)",
+              "fallback": "(x − 1)"
+            },
+            "-இன் பூச்சியம் ",
+            {
+              "latex": "x = 1",
+              "fallback": "x = 1"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p(1) = 1^{2018} + 2018 = 2019",
+          "fallback": "p(1) = 1²⁰¹⁸ + 2018 = 1 + 2018 = 2019"
+        },
+        "reasonMath": {
+          "en": [
+            "Evaluate ",
+            {
+              "latex": "p \\left(1\\right)",
+              "fallback": "p(1)"
+            },
+            " since ",
+            {
+              "latex": "1^{2018} = 1",
+              "fallback": "1²⁰¹⁸ = 1"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "1^{2018} = 1",
+              "fallback": "1²⁰¹⁸ = 1"
+            },
+            " என்பதால் ",
+            {
+              "latex": "p \\left(1\\right) = 2019",
+              "fallback": "p(1) = 2019"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q5",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "p(x) = 2x^3 - kx^2 + 3x + 10,\\quad (x - 2) \\mid p(x)",
+          "fallback": "5. For what value of k is the polynomial p(x) = 2x³ − kx² + 3x + 10 exactly divisible by (x − 2)?",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "p(x) = 2x^3 - kx^2 + 3x + 10,\\quad (x - 2) \\mid p(x)",
+          "fallback": "5. p(x) = 2x³ − kx² + 3x + 10 என்ற பல்லுறுப்புக் கோவையை (x − 2)-ஆல் மீதியின்றி வகுத்தால் k-இன் மதிப்பைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{k = 8}",
+      "fallback": "k = 8"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(2) = 0",
+          "fallback": "p(2) = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "\\left(x - 2\\right)",
+              "fallback": "(x − 2)"
+            },
+            " divides ",
+            {
+              "latex": "p \\left(x\\right)",
+              "fallback": "p(x)"
+            },
+            " exactly, remainder ",
+            {
+              "latex": "p \\left(2\\right) = 0",
+              "fallback": "p(2) = 0"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(x - 2\\right)",
+              "fallback": "(x − 2)"
+            },
+            " மீதியின்றி வகுப்பதால் ",
+            {
+              "latex": "p \\left(2\\right) = 0",
+              "fallback": "p(2) = 0"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "16 - 4k + 6 + 10 = 0",
+          "fallback": "2(2)³ − k(2)² + 3(2) + 10 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "32 - 4k = 0 \\implies k = 8",
+          "fallback": "32 − 4k = 0 ⇒ k = 8"
+        },
+        "reasonMath": {
+          "en": [
+            "Solve for ",
+            {
+              "latex": "k",
+              "fallback": "k"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "k",
+              "fallback": "k"
+            },
+            "-இன் மதிப்பு காண்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q6",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "p(x) = 2x^3 + ax^2 + 4x - 12,\\; q(x) = x^3 + x^2 - 2x + a,\\; p(3) = q(3)",
+          "fallback": "6. If two polynomials 2x³ + ax² + 4x − 12 and x³ + x² − 2x + a leave the same remainder when divided by (x − 3), find the value of a and also find the remainder.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "p(x) = 2x^3 + ax^2 + 4x - 12,\\; q(x) = x^3 + x^2 - 2x + a,\\; p(3) = q(3)",
+          "fallback": "6. 2x³ + ax² + 4x − 12 மற்றும் x³ + x² − 2x + a என்ற இரு பல்லுறுப்புக் கோவைகளை (x − 3)-ஆல் வகுக்கக் கிடைக்கும் மீதிகள் சமமானால், a-இன் மதிப்பைக் காண்க. மேலும் அதன் மீதியைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{a = -3,\\; \\text{Remainder} = 27}",
+      "fallback": "a = −3; remainder = 27"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(3) = 54 + 9a",
+          "fallback": "p(3) = 2(27) + 9a + 12 − 12 = 54 + 9a"
+        },
+        "reasonMath": {
+          "en": [
+            "Find remainder of first polynomial at ",
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            "."
+          ],
+          "ta": [
+            "முதல் கோவைக்கு ",
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            "-இல் மீதி காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "q(3) = 30 + a",
+          "fallback": "q(3) = 27 + 9 − 6 + a = 30 + a"
+        },
+        "reasonMath": {
+          "en": [
+            "Find remainder of second polynomial at ",
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            "."
+          ],
+          "ta": [
+            "இரண்டாவது கோவைக்கு ",
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            "-இல் மீதி காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "8a = -24 \\implies a = -3",
+          "fallback": "54 + 9a = 30 + a ⇒ 8a = −24 ⇒ a = −3"
+        },
+        "reasonMath": {
+          "en": [
+            "Equate ",
+            {
+              "latex": "p \\left(3\\right) = q \\left(3\\right)",
+              "fallback": "p(3) = q(3)"
+            },
+            " and solve for a."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(3\\right) = q \\left(3\\right)",
+              "fallback": "p(3) = q(3)"
+            },
+            " எனச் சமப்படுத்தி a காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Remainder} = 27",
+          "fallback": "Remainder = 30 + (−3) = 27"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "a = - 3",
+              "fallback": "a = −3"
+            },
+            " to get the common remainder."
+          ],
+          "ta": [
+            {
+              "latex": "a = - 3",
+              "fallback": "a = −3"
+            },
+            " எனப் பிரதியிட மீதி ",
+            {
+              "latex": "27",
+              "fallback": "27"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q7-i",
+    "questionMath": {
+      "en": [
+        "7. Determine whether (x − 1) is a factor of the following polynomials:\n",
+        {
+          "latex": "p(x) = x^3 + 5x^2 - 10x + 4",
+          "fallback": "(i) x³ + 5x² − 10x + 4",
+          "display": true
+        }
+      ],
+      "ta": [
+        "7. கீழ்க்காணும் பல்லுறுப்புக் கோவைகளுக்கு (x − 1) என்பது காரணியா எனக் காண்க.\n",
+        {
+          "latex": "p(x) = x^3 + 5x^2 - 10x + 4",
+          "fallback": "(i) x³ + 5x² − 10x + 4",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{Yes, } (x - 1) \\text{ is a factor}}",
+      "fallback": "Yes, (x − 1) is a factor"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(1) = 1 + 5 - 10 + 4",
+          "fallback": "p(1) = 1³ + 5(1)² − 10(1) + 4"
+        },
+        "reasonMath": {
+          "en": [
+            "By Factor Theorem, check ",
+            {
+              "latex": "p \\left(1\\right)",
+              "fallback": "p(1)"
+            },
+            "."
+          ],
+          "ta": [
+            "காரணித் தேற்றப்படி ",
+            {
+              "latex": "p \\left(1\\right)",
+              "fallback": "p(1)"
+            },
+            " காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p(1) = 0",
+          "fallback": "= 0 ⇒ (x − 1) is a factor"
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "p \\left(1\\right) = 0",
+              "fallback": "p(1) = 0"
+            },
+            ", ",
+            {
+              "latex": "\\left(x - 1\\right)",
+              "fallback": "(x − 1)"
+            },
+            " is a factor."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(1\\right) = 0",
+              "fallback": "p(1) = 0"
+            },
+            " என்பதால் ",
+            {
+              "latex": "\\left(x - 1\\right)",
+              "fallback": "(x − 1)"
+            },
+            " ஒரு காரணி."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q7-ii",
+    "questionMath": {
+      "en": [
+        "7. Determine whether (x − 1) is a factor of the following polynomials:\n",
+        {
+          "latex": "p(x) = x^4 + 5x^2 - 5x + 1",
+          "fallback": "(ii) x⁴ + 5x² − 5x + 1",
+          "display": true
+        }
+      ],
+      "ta": [
+        "7. கீழ்க்காணும் பல்லுறுப்புக் கோவைகளுக்கு (x − 1) என்பது காரணியா எனக் காண்க.\n",
+        {
+          "latex": "p(x) = x^4 + 5x^2 - 5x + 1",
+          "fallback": "(ii) x⁴ + 5x² − 5x + 1",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{No, } p(1) = 2 \\ne 0}",
+      "fallback": "No, (x − 1) is not a factor"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(1) = 1 + 5 - 5 + 1",
+          "fallback": "p(1) = 1⁴ + 5(1)² − 5(1) + 1"
+        },
+        "reasonMath": {
+          "en": [
+            "Evaluate ",
+            {
+              "latex": "p \\left(1\\right)",
+              "fallback": "p(1)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(1\\right)",
+              "fallback": "p(1)"
+            },
+            " மதிப்பைக் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p(1) = 2 \\ne 0",
+          "fallback": "= 2 ≠ 0 ⇒ (x − 1) is not a factor"
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "p \\left(1\\right) \\ne 0",
+              "fallback": "p(1) ≠ 0"
+            },
+            ", ",
+            {
+              "latex": "\\left(x - 1\\right)",
+              "fallback": "(x − 1)"
+            },
+            " is not a factor."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(1\\right) \\ne 0",
+              "fallback": "p(1) ≠ 0"
+            },
+            " என்பதால் ",
+            {
+              "latex": "\\left(x - 1\\right)",
+              "fallback": "(x − 1)"
+            },
+            " காரணி அல்ல."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q8",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "p(x) = 2x^3 - 5x^2 - 28x + 15",
+          "fallback": "8. Using factor theorem, show that (x − 5) is a factor of the polynomial 2x³ − 5x² − 28x + 15.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "p(x) = 2x^3 - 5x^2 - 28x + 15",
+          "fallback": "8. காரணித் தேற்றத்தைப் பயன்படுத்தி 2x³ − 5x² − 28x + 15 என்ற பல்லுறுப்புக் கோவைக்கு (x − 5) என்பது ஒரு காரணி எனக் காட்டுக.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{p(5) = 0 \\implies (x - 5) \\text{ is a factor}}",
+      "fallback": "(x − 5) is a factor (since p(5) = 0)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(5) = 2(125) - 5(25) - 140 + 15",
+          "fallback": "p(5) = 2(5)³ − 5(5)² − 28(5) + 15"
+        },
+        "reasonMath": {
+          "en": [
+            "Evaluate ",
+            {
+              "latex": "p \\left(5\\right)",
+              "fallback": "p(5)"
+            },
+            " for divisor ",
+            {
+              "latex": "\\left(x - 5\\right)",
+              "fallback": "(x − 5)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 5",
+              "fallback": "x = 5"
+            },
+            " எனப் பிரதியிட்டு ",
+            {
+              "latex": "p \\left(5\\right)",
+              "fallback": "p(5)"
+            },
+            " காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "250 - 125 - 140 + 15 = 0",
+          "fallback": "= 250 − 125 − 140 + 15 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Simplify; ",
+            {
+              "latex": "p \\left(5\\right) = 0",
+              "fallback": "p(5) = 0"
+            },
+            " proves ",
+            {
+              "latex": "\\left(x - 5\\right)",
+              "fallback": "(x − 5)"
+            },
+            " is a factor."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(5\\right) = 0",
+              "fallback": "p(5) = 0"
+            },
+            " என்பதால் ",
+            {
+              "latex": "\\left(x - 5\\right)",
+              "fallback": "(x − 5)"
+            },
+            " ஒரு காரணி."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q9",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "p(x) = x^3 - 3x^2 - mx + 24,\\quad p(-3) = 0",
+          "fallback": "9. Determine the value of m, if (x + 3) is a factor of x³ − 3x² − mx + 24.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "p(x) = x^3 - 3x^2 - mx + 24,\\quad p(-3) = 0",
+          "fallback": "9. x³ − 3x² − mx + 24 என்ற பல்லுறுப்புக் கோவைக்கு (x + 3) என்பது ஒரு காரணி எனில், m-இன் மதிப்பைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{m = 10}",
+      "fallback": "m = 10"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(-3) = 0",
+          "fallback": "x + 3 = 0 ⇒ x = −3; p(−3) = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "By Factor Theorem, ",
+            {
+              "latex": "p \\left(- 3\\right) = 0",
+              "fallback": "p(−3) = 0"
+            },
+            "."
+          ],
+          "ta": [
+            "காரணித் தேற்றப்படி ",
+            {
+              "latex": "p \\left(- 3\\right) = 0",
+              "fallback": "p(−3) = 0"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "-27 - 27 + 3m + 24 = 0",
+          "fallback": "(−3)³ − 3(−3)² − m(−3) + 24 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x = - 3",
+              "fallback": "x = −3"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = - 3",
+              "fallback": "x = −3"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3m = 30 \\implies m = 10",
+          "fallback": "3m − 30 = 0 ⇒ m = 10"
+        },
+        "reasonMath": {
+          "en": [
+            "Solve for ",
+            {
+              "latex": "m",
+              "fallback": "m"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "m",
+              "fallback": "m"
+            },
+            " மதிப்பு காண்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q10",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "p(x) = ax^2 + 5x + b,\\quad p(2) = 0,\\; p\\!\\left(\\dfrac{1}{2}\\right) = 0",
+          "fallback": "10. If both (x − 2) and (x − 1/2) are the factors of ax² + 5x + b, then show that a = b.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "p(x) = ax^2 + 5x + b,\\quad p(2) = 0,\\; p\\!\\left(\\dfrac{1}{2}\\right) = 0",
+          "fallback": "10. ax² + 5x + b என்ற பல்லுறுப்புக் கோவைக்கு (x − 2) மற்றும் (x − 1/2) ஆகியவை காரணிகள் எனில், a = b எனக் காட்டுக.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{a = b}",
+      "fallback": "a = b (and a = b = −2)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "4a + 10 + b = 0",
+          "fallback": "p(2) = 0 ⇒ 4a + 10 + b = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Use factor ",
+            {
+              "latex": "\\left(x - 2\\right)",
+              "fallback": "(x − 2)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(x - 2\\right)",
+              "fallback": "(x − 2)"
+            },
+            " காரணி என்பதால் ",
+            {
+              "latex": "p \\left(2\\right) = 0",
+              "fallback": "p(2) = 0"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "a + 10 + 4b = 0",
+          "fallback": "p(1/2) = 0 ⇒ a/4 + 5/2 + b = 0 ⇒ a + 10 + 4b = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Use factor ",
+            {
+              "latex": "\\displaystyle \\left(x - \\frac{1}{2}\\right)",
+              "fallback": "(x − 1/2)"
+            },
+            " and multiply by ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle \\left(x - \\frac{1}{2}\\right)",
+              "fallback": "(x − 1/2)"
+            },
+            " காரணி என்பதால் ",
+            {
+              "latex": "\\displaystyle p \\left(\\frac{1}{2}\\right) = 0",
+              "fallback": "p(1/2) = 0"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3a = 3b \\implies a = b",
+          "fallback": "4a + b = a + 4b ⇒ 3a = 3b ⇒ a = b"
+        },
+        "reasonMath": {
+          "en": [
+            "Equate ",
+            {
+              "latex": "- 10 = 4 a + b = a + 4 b",
+              "fallback": "−10 = 4a + b = a + 4b"
+            },
+            " and simplify."
+          ],
+          "ta": [
+            "இரு சமன்பாடுகளையும் சமப்படுத்த ",
+            {
+              "latex": "a = b",
+              "fallback": "a = b"
+            },
+            " கிடைக்கும்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q11",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "p(x) = kx^3 - 2x^2 + 25x - 26,\\quad p(1) = 0",
+          "fallback": "11. If (x − 1) divides the polynomial kx³ − 2x² + 25x − 26 without remainder, then find the value of k.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "p(x) = kx^3 - 2x^2 + 25x - 26,\\quad p(1) = 0",
+          "fallback": "11. (x − 1) என்பது kx³ − 2x² + 25x − 26-ஐ மீதியின்றி வகுக்குமெனில் k-இன் மதிப்பைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{k = 3}",
+      "fallback": "k = 3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(1) = 0",
+          "fallback": "p(1) = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Zero remainder means ",
+            {
+              "latex": "p \\left(1\\right) = 0",
+              "fallback": "p(1) = 0"
+            },
+            "."
+          ],
+          "ta": [
+            "மீதியின்றி வகுப்பதால் ",
+            {
+              "latex": "p \\left(1\\right) = 0",
+              "fallback": "p(1) = 0"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "k - 2 + 25 - 26 = 0",
+          "fallback": "k(1)³ − 2(1)² + 25(1) − 26 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x = 1",
+              "fallback": "x = 1"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 1",
+              "fallback": "x = 1"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "k = 3",
+          "fallback": "k − 3 = 0 ⇒ k = 3"
+        },
+        "reasonMath": {
+          "en": [
+            "Solve for ",
+            {
+              "latex": "k",
+              "fallback": "k"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "k = 3",
+              "fallback": "k = 3"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.3-q12",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "A(x) = x^2 - 2x - 8",
+          "fallback": "12. Check if (x + 2) and (x − 4) are the sides of a rectangle whose area is x² − 2x − 8 by using factor theorem.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "A(x) = x^2 - 2x - 8",
+          "fallback": "12. x² − 2x − 8 என்பது ஒரு செவ்வகத்தின் பரப்பு எனில், (x + 2) மற்றும் (x − 4) என்பன அவற்றின் பக்கங்களா என்பதைக் காரணித் தேற்றத்தைப் பயன்படுத்திச் சரிபார்க்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x + 2) \\text{ and } (x - 4) \\text{ are factors}}",
+      "fallback": "Yes, (x + 2) and (x − 4) are the sides (for x > 4)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "A(-2) = 4 + 4 - 8 = 0",
+          "fallback": "A(−2) = (−2)² − 2(−2) − 8 = 4 + 4 − 8 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Check if ",
+            {
+              "latex": "\\left(x + 2\\right)",
+              "fallback": "(x + 2)"
+            },
+            " is a factor."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(x + 2\\right)",
+              "fallback": "(x + 2)"
+            },
+            " காரணியா எனச் சரிபார்க்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "A(4) = 16 - 8 - 8 = 0",
+          "fallback": "A(4) = 4² − 2(4) − 8 = 16 − 8 − 8 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Check if ",
+            {
+              "latex": "\\left(x - 4\\right)",
+              "fallback": "(x − 4)"
+            },
+            " is a factor."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(x - 4\\right)",
+              "fallback": "(x − 4)"
+            },
+            " காரணியா எனச் சரிபார்க்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x+2)(x-4) = x^2 - 2x - 8",
+          "fallback": "(x + 2)(x − 4) = x² − 2x − 8"
+        },
+        "reasonMath": {
+          "en": [
+            "Both are factors whose product equals the area (with ",
+            {
+              "latex": "x > 4",
+              "fallback": "x > 4"
+            },
+            " for positive lengths)."
+          ],
+          "ta": [
+            "இரண்டும் காரணிகள்; பெருக்கற்பலன் பரப்புக்குச் சமம் ",
+            {
+              "latex": "\\left(x > 4\\right)",
+              "fallback": "(x > 4)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Expand the following:\n",
+        {
+          "latex": "(x + 2y + 3z)^2",
+          "fallback": "(i) (x + 2y + 3z)²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றை விரிவாக்குக:\n",
+        {
+          "latex": "(x + 2y + 3z)^2",
+          "fallback": "(i) (x + 2y + 3z)²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x^2 + 4y^2 + 9z^2 + 4xy + 12yz + 6xz}",
+      "fallback": "x² + 4y² + 9z² + 4xy + 12yz + 6xz"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(a+b+c)^2 = a^2+b^2+c^2+2ab+2bc+2ca",
+          "fallback": "(a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca"
+        },
+        "reasonMath": {
+          "en": [
+            "Use the trinomial square identity with ",
+            {
+              "latex": "a = x",
+              "fallback": "a = x"
+            },
+            ", ",
+            {
+              "latex": "b = 2 y",
+              "fallback": "b = 2y"
+            },
+            ", ",
+            {
+              "latex": "c = 3 z",
+              "fallback": "c = 3z"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a = x",
+              "fallback": "a = x"
+            },
+            ", ",
+            {
+              "latex": "b = 2 y",
+              "fallback": "b = 2y"
+            },
+            ", ",
+            {
+              "latex": "c = 3 z",
+              "fallback": "c = 3z"
+            },
+            " என முற்றொருமையைப் பயன்படுத்த."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x^2 + 4y^2 + 9z^2 + 4xy + 12yz + 6xz",
+          "fallback": "= x² + (2y)² + (3z)² + 2(x)(2y) + 2(2y)(3z) + 2(3z)(x)"
+        },
+        "reasonMath": {
+          "en": "Substitute and expand.",
+          "ta": "பிரதியிட்டு விரித்தெழுத."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Expand the following:\n",
+        {
+          "latex": "(-p + 2q + 3r)^2",
+          "fallback": "(ii) (−p + 2q + 3r)²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றை விரிவாக்குக:\n",
+        {
+          "latex": "(-p + 2q + 3r)^2",
+          "fallback": "(ii) (−p + 2q + 3r)²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{p^2 + 4q^2 + 9r^2 - 4pq + 12qr - 6pr}",
+      "fallback": "p² + 4q² + 9r² − 4pq + 12qr − 6pr"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a = -p,\\; b = 2q,\\; c = 3r",
+          "fallback": "a = −p, b = 2q, c = 3r"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply ",
+            {
+              "latex": "\\left(a + b + c\\right)^{2}",
+              "fallback": "(a + b + c)²"
+            },
+            " keeping the minus sign on ",
+            {
+              "latex": "- p",
+              "fallback": "−p"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a = - p",
+              "fallback": "a = −p"
+            },
+            ", ",
+            {
+              "latex": "b = 2 q",
+              "fallback": "b = 2q"
+            },
+            ", ",
+            {
+              "latex": "c = 3 r",
+              "fallback": "c = 3r"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p^2 + 4q^2 + 9r^2 - 4pq + 12qr - 6pr",
+          "fallback": "= (−p)² + (2q)² + (3r)² + 2(−p)(2q) + 2(2q)(3r) + 2(3r)(−p)"
+        },
+        "reasonMath": {
+          "en": "Simplify each term.",
+          "ta": "சுருக்க."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Expand the following:\n",
+        {
+          "latex": "(2p + 3)(2p - 4)(2p - 5)",
+          "fallback": "(iii) (2p + 3)(2p − 4)(2p − 5)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றை விரிவாக்குக:\n",
+        {
+          "latex": "(2p + 3)(2p - 4)(2p - 5)",
+          "fallback": "(iii) (2p + 3)(2p − 4)(2p − 5)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{8p^3 - 24p^2 - 14p + 60}",
+      "fallback": "8p³ − 24p² − 14p + 60"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = 2p,\\; a=3,\\; b=-4,\\; c=-5",
+          "fallback": "(x + a)(x + b)(x + c) = x³ + (a+b+c)x² + (ab+bc+ca)x + abc"
+        },
+        "reasonMath": {
+          "en": [
+            "Use ",
+            {
+              "latex": "x = 2 p",
+              "fallback": "x = 2p"
+            },
+            ", ",
+            {
+              "latex": "a = 3",
+              "fallback": "a = 3"
+            },
+            ", ",
+            {
+              "latex": "b = - 4",
+              "fallback": "b = −4"
+            },
+            ", ",
+            {
+              "latex": "c = - 5",
+              "fallback": "c = −5"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 2 p",
+              "fallback": "x = 2p"
+            },
+            ", ",
+            {
+              "latex": "a = 3",
+              "fallback": "a = 3"
+            },
+            ", ",
+            {
+              "latex": "b = - 4",
+              "fallback": "b = −4"
+            },
+            ", ",
+            {
+              "latex": "c = - 5",
+              "fallback": "c = −5"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "8p^3 - 24p^2 - 14p + 60",
+          "fallback": "(2p)³ + (−6)(2p)² + (−12 + 20 − 15)(2p) + 3(−4)(−5)"
+        },
+        "reasonMath": {
+          "en": "Compute each coefficient.",
+          "ta": "ஒவ்வொரு கெழுவையும் கணக்கிட."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q1-iv",
+    "questionMath": {
+      "en": [
+        "1. Expand the following:\n",
+        {
+          "latex": "(3a + 1)(3a - 2)(3a + 4)",
+          "fallback": "(iv) (3a + 1)(3a − 2)(3a + 4)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றை விரிவாக்குக:\n",
+        {
+          "latex": "(3a + 1)(3a - 2)(3a + 4)",
+          "fallback": "(iv) (3a + 1)(3a − 2)(3a + 4)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{27a^3 + 27a^2 - 18a - 8}",
+      "fallback": "27a³ + 27a² − 18a − 8"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = 3a,\\; 1+(-2)+4=3,\\; (-2-8+4)=-6,\\; 1(-2)(4)=-8",
+          "fallback": "x = 3a, a₁ = 1, b₁ = −2, c₁ = 4"
+        },
+        "reasonMath": {
+          "en": "Apply (x+a₁)(x+b₁)(x+c₁).",
+          "ta": [
+            {
+              "latex": "x = 3 a",
+              "fallback": "x = 3a"
+            },
+            ", a₁=1, ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            "₁=−2, ",
+            {
+              "latex": "c",
+              "fallback": "c"
+            },
+            "₁=4 எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "27a^3 + 27a^2 - 18a - 8",
+          "fallback": "= (3a)³ + 3(3a)² − 6(3a) − 8 = 27a³ + 27a² − 18a − 8"
+        },
+        "reasonMath": {
+          "en": "Simplify.",
+          "ta": "சுருக்க."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q2-i",
+    "questionMath": {
+      "en": [
+        "2. Using algebraic identity, find the coefficients of x², x and constant term without actual expansion.\n",
+        {
+          "latex": "(x + 5)(x + 6)(x + 7)",
+          "fallback": "(i) (x + 5)(x + 6)(x + 7)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. முழுவதும் விரிவாக்காமல் x²-இன் கெழு, x-இன் கெழு மற்றும் மாறிலி உறுப்புகளை இயற்கணித முற்றொருமையைப் பயன்படுத்திக் காண்க.\n",
+        {
+          "latex": "(x + 5)(x + 6)(x + 7)",
+          "fallback": "(i) (x + 5)(x + 6)(x + 7)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{coeff}(x^2)=18,\\; \\text{coeff}(x)=107,\\; \\text{const}=210}",
+      "fallback": "x² coeff: 18; x coeff: 107; constant: 210"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "5 + 6 + 7 = 18",
+          "fallback": "coeff(x²) = a + b + c = 5 + 6 + 7 = 18"
+        },
+        "reasonMath": {
+          "en": [
+            "Sum of constants gives ",
+            {
+              "latex": "x^{2}",
+              "fallback": "x²"
+            },
+            " coefficient."
+          ],
+          "ta": [
+            {
+              "latex": "a + b + c",
+              "fallback": "a + b + c"
+            },
+            " என்பது ",
+            {
+              "latex": "x^{2}",
+              "fallback": "x²"
+            },
+            "-இன் கெழு."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "30 + 42 + 35 = 107",
+          "fallback": "coeff(x) = ab + bc + ca = 30 + 42 + 35 = 107"
+        },
+        "reasonMath": {
+          "en": [
+            "Sum of pairwise products gives ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " coefficient."
+          ],
+          "ta": [
+            "ab + bc + ca என்பது ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-இன் கெழு."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "5 \\times 6 \\times 7 = 210",
+          "fallback": "constant = abc = 5 × 6 × 7 = 210"
+        },
+        "reasonMath": {
+          "en": "Product gives the constant term.",
+          "ta": "abc என்பது மாறிலி உறுப்பு."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q2-ii",
+    "questionMath": {
+      "en": [
+        "2. Using algebraic identity, find the coefficients of x², x and constant term without actual expansion.\n",
+        {
+          "latex": "(2x + 3)(2x - 5)(2x - 6)",
+          "fallback": "(ii) (2x + 3)(2x − 5)(2x − 6)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. முழுவதும் விரிவாக்காமல் x²-இன் கெழு, x-இன் கெழு மற்றும் மாறிலி உறுப்புகளை இயற்கணித முற்றொருமையைப் பயன்படுத்திக் காண்க.\n",
+        {
+          "latex": "(2x + 3)(2x - 5)(2x - 6)",
+          "fallback": "(ii) (2x + 3)(2x − 5)(2x − 6)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{coeff}(x^2)=-32,\\; \\text{coeff}(x)=-6,\\; \\text{const}=90}",
+      "fallback": "x² coeff: −32; x coeff: −6; constant: 90"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a=3,\\; b=-5,\\; c=-6",
+          "fallback": "Let u = 2x: (u+3)(u−5)(u−6)"
+        },
+        "reasonMath": {
+          "en": [
+            "Identify ",
+            {
+              "latex": "a = 3",
+              "fallback": "a = 3"
+            },
+            ", ",
+            {
+              "latex": "b = - 5",
+              "fallback": "b = −5"
+            },
+            ", ",
+            {
+              "latex": "c = - 6",
+              "fallback": "c = −6"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "u = 2 x",
+              "fallback": "u = 2x"
+            },
+            " என்க; ",
+            {
+              "latex": "a = 3",
+              "fallback": "a=3"
+            },
+            ", ",
+            {
+              "latex": "b = - 5",
+              "fallback": "b=−5"
+            },
+            ", ",
+            {
+              "latex": "c = - 6",
+              "fallback": "c=−6"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(-8)(4) = -32",
+          "fallback": "coeff(x²) = (a+b+c)·2² = (−8)(4) = −32"
+        },
+        "reasonMath": {
+          "en": [
+            "Multiply ",
+            {
+              "latex": "\\left(a + b + c\\right)",
+              "fallback": "(a+b+c)"
+            },
+            " by ",
+            {
+              "latex": "2^{2} = 4",
+              "fallback": "2² = 4"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(a + b + c\\right) \\times 4 = - 32",
+              "fallback": "(a+b+c) × 4 = −32"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(-3)(2)=-6,\\; 3(-5)(-6)=90",
+          "fallback": "coeff(x) = (ab+bc+ca)·2 = (−15+30−18)(2) = −6; const = 3(−5)(−6) = 90"
+        },
+        "reasonMath": {
+          "en": [
+            "Multiply (ab+bc+ca) by ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "; constant = abc."
+          ],
+          "ta": "(ab+bc+ca) × 2 = −6; மாறிலி = 90."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q3-i",
+    "questionMath": {
+      "en": [
+        "3. If (x + a)(x + b)(x + c) = x³ + 14x² + 59x + 70, find the value of\n",
+        {
+          "latex": "(x+a)(x+b)(x+c) = x^3 + 14x^2 + 59x + 70",
+          "fallback": "(i) a + b + c",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. (x + a)(x + b)(x + c) = x³ + 14x² + 59x + 70 எனில், கீழ்க்காண்பனவற்றின் மதிப்பு காண்க.\n",
+        {
+          "latex": "(x+a)(x+b)(x+c) = x^3 + 14x^2 + 59x + 70",
+          "fallback": "(i) a + b + c",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{14}",
+      "fallback": "14"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a + b + c = 14",
+          "fallback": "(x+a)(x+b)(x+c) = x³ + (a+b+c)x² + (ab+bc+ca)x + abc"
+        },
+        "reasonMath": {
+          "en": [
+            "Compare coefficients of ",
+            {
+              "latex": "x^{2}",
+              "fallback": "x²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x^{2}",
+              "fallback": "x²"
+            },
+            "-இன் கெழுவை ஒப்பிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "14",
+          "fallback": "a + b + c = 14"
+        },
+        "reasonMath": {
+          "en": [
+            "Direct match with coefficient of ",
+            {
+              "latex": "x^{2}",
+              "fallback": "x²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x^{2}",
+              "fallback": "x²"
+            },
+            "-இன் கெழு ",
+            {
+              "latex": "14",
+              "fallback": "14"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q3-ii",
+    "questionMath": {
+      "en": [
+        "3. If (x + a)(x + b)(x + c) = x³ + 14x² + 59x + 70, find the value of\n",
+        {
+          "latex": "\\dfrac{1}{a} + \\dfrac{1}{b} + \\dfrac{1}{c}",
+          "fallback": "(ii) 1/a + 1/b + 1/c",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. (x + a)(x + b)(x + c) = x³ + 14x² + 59x + 70 எனில், கீழ்க்காண்பனவற்றின் மதிப்பு காண்க.\n",
+        {
+          "latex": "\\dfrac{1}{a} + \\dfrac{1}{b} + \\dfrac{1}{c}",
+          "fallback": "(ii) 1/a + 1/b + 1/c",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\dfrac{59}{70}}",
+      "fallback": "59/70"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "ab+bc+ca = 59,\\; abc = 70",
+          "fallback": "ab + bc + ca = 59, abc = 70"
+        },
+        "reasonMath": {
+          "en": [
+            "Read ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " coefficient and constant term."
+          ],
+          "ta": "ab + bc + ca = 59 மற்றும் abc = 70."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\dfrac{ab+bc+ca}{abc} = \\dfrac{59}{70}",
+          "fallback": "1/a + 1/b + 1/c = (bc + ca + ab)/(abc) = 59/70"
+        },
+        "reasonMath": {
+          "en": "Combine fractions over abc.",
+          "ta": [
+            "பொதுப் பகுதி abc எடுத்துக் கூட்ட ",
+            {
+              "latex": "\\displaystyle \\frac{59}{70}",
+              "fallback": "59/70"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q3-iii",
+    "questionMath": {
+      "en": [
+        "3. If (x + a)(x + b)(x + c) = x³ + 14x² + 59x + 70, find the value of\n",
+        {
+          "latex": "a^2 + b^2 + c^2",
+          "fallback": "(iii) a² + b² + c²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. (x + a)(x + b)(x + c) = x³ + 14x² + 59x + 70 எனில், கீழ்க்காண்பனவற்றின் மதிப்பு காண்க.\n",
+        {
+          "latex": "a^2 + b^2 + c^2",
+          "fallback": "(iii) a² + b² + c²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{78}",
+      "fallback": "78"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a^2+b^2+c^2 = (a+b+c)^2 - 2(ab+bc+ca)",
+          "fallback": "a² + b² + c² = (a + b + c)² − 2(ab + bc + ca)"
+        },
+        "reasonMath": {
+          "en": "Use the trinomial square identity.",
+          "ta": "முற்றொருமையைப் பயன்படுத்த."
+        }
+      },
+      {
+        "math": {
+          "latex": "196 - 118 = 78",
+          "fallback": "= 14² − 2(59) = 196 − 118 = 78"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "14",
+              "fallback": "14"
+            },
+            " and ",
+            {
+              "latex": "59",
+              "fallback": "59"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "14",
+              "fallback": "14"
+            },
+            " மற்றும் ",
+            {
+              "latex": "59",
+              "fallback": "59"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q3-iv",
+    "questionMath": {
+      "en": [
+        "3. If (x + a)(x + b)(x + c) = x³ + 14x² + 59x + 70, find the value of\n",
+        {
+          "latex": "\\dfrac{a}{bc} + \\dfrac{b}{ac} + \\dfrac{c}{ab}",
+          "fallback": "(iv) a/(bc) + b/(ac) + c/(ab)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. (x + a)(x + b)(x + c) = x³ + 14x² + 59x + 70 எனில், கீழ்க்காண்பனவற்றின் மதிப்பு காண்க.\n",
+        {
+          "latex": "\\dfrac{a}{bc} + \\dfrac{b}{ac} + \\dfrac{c}{ab}",
+          "fallback": "(iv) a/(bc) + b/(ac) + c/(ab)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\dfrac{39}{35}}",
+      "fallback": "39/35"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\dfrac{a^2+b^2+c^2}{abc}",
+          "fallback": "a/(bc) + b/(ac) + c/(ab) = (a² + b² + c²)/(abc)"
+        },
+        "reasonMath": {
+          "en": "Take common denominator abc.",
+          "ta": "பொதுப் பகுதி abc எடுக்க."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\dfrac{78}{70} = \\dfrac{39}{35}",
+          "fallback": "= 78/70 = 39/35"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "78",
+              "fallback": "78"
+            },
+            " and ",
+            {
+              "latex": "70",
+              "fallback": "70"
+            },
+            " and simplify."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle \\frac{78}{70} = \\frac{39}{35}",
+              "fallback": "78/70 = 39/35"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q4-i",
+    "questionMath": {
+      "en": [
+        "4. Expand:\n",
+        {
+          "latex": "(3a - 4b)^3",
+          "fallback": "(i) (3a − 4b)³",
+          "display": true
+        }
+      ],
+      "ta": [
+        "4. விரிவுபடுத்துக:\n",
+        {
+          "latex": "(3a - 4b)^3",
+          "fallback": "(i) (3a − 4b)³",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{27a^3 - 108a^2b + 144ab^2 - 64b^3}",
+      "fallback": "27a³ − 108a²b + 144ab² − 64b³"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(3a)^3 - 3(3a)^2(4b) + 3(3a)(4b)^2 - (4b)^3",
+          "fallback": "(x − y)³ = x³ − 3x²y + 3xy² − y³"
+        },
+        "reasonMath": {
+          "en": [
+            "Use ",
+            {
+              "latex": "x = 3 a",
+              "fallback": "x = 3a"
+            },
+            ", ",
+            {
+              "latex": "y = 4 b",
+              "fallback": "y = 4b"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 3 a",
+              "fallback": "x = 3a"
+            },
+            ", ",
+            {
+              "latex": "y = 4 b",
+              "fallback": "y = 4b"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "27a^3 - 108a^2b + 144ab^2 - 64b^3",
+          "fallback": "= 27a³ − 108a²b + 144ab² − 64b³"
+        },
+        "reasonMath": {
+          "en": "Simplify each term.",
+          "ta": "சுருக்க."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q4-ii",
+    "questionMath": {
+      "en": [
+        "4. Expand:\n",
+        {
+          "latex": "\\left(x + \\dfrac{1}{y}\\right)^3",
+          "fallback": "(ii) (x + 1/y)³",
+          "display": true
+        }
+      ],
+      "ta": [
+        "4. விரிவுபடுத்துக:\n",
+        {
+          "latex": "\\left(x + \\dfrac{1}{y}\\right)^3",
+          "fallback": "(ii) (x + 1/y)³",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x^3 + \\dfrac{3x^2}{y} + \\dfrac{3x}{y^2} + \\dfrac{1}{y^3}}",
+      "fallback": "x³ + 3x²/y + 3x/y² + 1/y³"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^3 + 3x^2\\left(\\dfrac{1}{y}\\right) + 3x\\left(\\dfrac{1}{y}\\right)^2 + \\left(\\dfrac{1}{y}\\right)^3",
+          "fallback": "(a + b)³ = a³ + 3a²b + 3ab² + b³"
+        },
+        "reasonMath": {
+          "en": [
+            "Use ",
+            {
+              "latex": "a = x",
+              "fallback": "a = x"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle b = \\frac{1}{y \\left(y \\ne 0\\right)}",
+              "fallback": "b = 1/y (y ≠ 0)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a = x",
+              "fallback": "a = x"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle b = \\frac{1}{y}",
+              "fallback": "b = 1/y"
+            },
+            " எனப் பிரதியிட ",
+            {
+              "latex": "\\left(y \\ne 0\\right)",
+              "fallback": "(y ≠ 0)"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x^3 + \\dfrac{3x^2}{y} + \\dfrac{3x}{y^2} + \\dfrac{1}{y^3}",
+          "fallback": "= x³ + 3x²/y + 3x/y² + 1/y³"
+        },
+        "reasonMath": {
+          "en": "Simplify.",
+          "ta": "சுருக்க."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q5-i",
+    "questionMath": {
+      "en": [
+        "5. Evaluate the following by using identities:\n",
+        {
+          "latex": "98^3",
+          "fallback": "(i) 98³",
+          "display": true
+        }
+      ],
+      "ta": [
+        "5. இயற்கணித முற்றொருமைகளைப் பயன்படுத்திப் பின்வருவனவற்றின் மதிப்பு காண்க.\n",
+        {
+          "latex": "98^3",
+          "fallback": "(i) 98³",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{941192}",
+      "fallback": "941192"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "98^3 = (100 - 2)^3",
+          "fallback": "98³ = (100 − 2)³"
+        },
+        "reasonMath": {
+          "en": [
+            "Rewrite ",
+            {
+              "latex": "98",
+              "fallback": "98"
+            },
+            " as ",
+            {
+              "latex": "100 - 2",
+              "fallback": "100 − 2"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "98 = 100 - 2",
+              "fallback": "98 = 100 − 2"
+            },
+            " என எழுதுக."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "1000000 - 60000 + 1200 - 8",
+          "fallback": "= 100³ − 3(100)²(2) + 3(100)(2)² − 2³"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply ",
+            {
+              "latex": "\\left(a - b\\right)^{3}",
+              "fallback": "(a − b)³"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(a - b\\right)^{3}",
+              "fallback": "(a − b)³"
+            },
+            " முற்றொருமையைப் பயன்படுத்த."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "941192",
+          "fallback": "= 941192"
+        },
+        "reasonMath": {
+          "en": "Compute final value.",
+          "ta": [
+            "சுருக்க ",
+            {
+              "latex": "941192",
+              "fallback": "941192"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q5-ii",
+    "questionMath": {
+      "en": [
+        "5. Evaluate the following by using identities:\n",
+        {
+          "latex": "1001^3",
+          "fallback": "(ii) 1001³",
+          "display": true
+        }
+      ],
+      "ta": [
+        "5. இயற்கணித முற்றொருமைகளைப் பயன்படுத்திப் பின்வருவனவற்றின் மதிப்பு காண்க.\n",
+        {
+          "latex": "1001^3",
+          "fallback": "(ii) 1001³",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{1003003001}",
+      "fallback": "1003003001"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "1001^3 = (1000 + 1)^3",
+          "fallback": "1001³ = (1000 + 1)³"
+        },
+        "reasonMath": {
+          "en": [
+            "Rewrite ",
+            {
+              "latex": "1001",
+              "fallback": "1001"
+            },
+            " as ",
+            {
+              "latex": "1000 + 1",
+              "fallback": "1000 + 1"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "1001 = 1000 + 1",
+              "fallback": "1001 = 1000 + 1"
+            },
+            " என எழுதுக."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "1000000000 + 3000000 + 3000 + 1 = 1003003001",
+          "fallback": "= 10⁹ + 3(10⁶) + 3(10³) + 1 = 1003003001"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply ",
+            {
+              "latex": "\\left(a + b\\right)^{3}",
+              "fallback": "(a + b)³"
+            },
+            " and add."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(a + b\\right)^{3}",
+              "fallback": "(a + b)³"
+            },
+            " முற்றொருமையைப் பயன்படுத்தி கூட்ட."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q6",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "x+y+z = 9,\\quad xy+yz+zx = 26",
+          "fallback": "6. If (x + y + z) = 9 and (xy + yz + zx) = 26, then find the value of x² + y² + z².",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "x+y+z = 9,\\quad xy+yz+zx = 26",
+          "fallback": "6. (x + y + z) = 9 மற்றும் (xy + yz + zx) = 26 எனில், x² + y² + z²-இன் மதிப்பைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{29}",
+      "fallback": "29"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(x+y+z)^2 - 2(xy+yz+zx)",
+          "fallback": "x² + y² + z² = (x + y + z)² − 2(xy + yz + zx)"
+        },
+        "reasonMath": {
+          "en": "Use the trinomial square identity.",
+          "ta": "முற்றொருமையைப் பயன்படுத்த."
+        }
+      },
+      {
+        "math": {
+          "latex": "81 - 52 = 29",
+          "fallback": "= 9² − 2(26) = 81 − 52 = 29"
+        },
+        "reasonMath": {
+          "en": "Substitute and subtract.",
+          "ta": [
+            {
+              "latex": "81 - 52 = 29",
+              "fallback": "81 − 52 = 29"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q7",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "3a + 4b = 10,\\quad ab = 2",
+          "fallback": "7. Find 27a³ + 64b³, if 3a + 4b = 10 and ab = 2.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "3a + 4b = 10,\\quad ab = 2",
+          "fallback": "7. 3a + 4b = 10 மற்றும் ab = 2 எனில், 27a³ + 64b³-இன் மதிப்பு காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{280}",
+      "fallback": "280"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(3a+4b)^3 - 36ab(3a+4b)",
+          "fallback": "27a³ + 64b³ = (3a)³ + (4b)³ = (3a + 4b)³ − 3(3a)(4b)(3a + 4b)"
+        },
+        "reasonMath": {
+          "en": [
+            "Use ",
+            {
+              "latex": "x^{3} + y^{3} = \\left(x + y\\right)^{3} - 3 xy \\left(x + y\\right)",
+              "fallback": "x³ + y³ = (x + y)³ − 3xy(x + y)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x^{3} + y^{3} = \\left(x + y\\right)^{3} - 3 xy \\left(x + y\\right)",
+              "fallback": "x³ + y³ = (x + y)³ − 3xy(x + y)"
+            },
+            " முற்றொருமையைப் பயன்படுத்த."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "1000 - 720 = 280",
+          "fallback": "= 10³ − 36(2)(10) = 1000 − 720 = 280"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "3 a + 4 b = 10",
+              "fallback": "3a + 4b = 10"
+            },
+            " and ",
+            {
+              "latex": "ab = 2",
+              "fallback": "ab = 2"
+            },
+            "."
+          ],
+          "ta": [
+            "பிரதியிட ",
+            {
+              "latex": "1000 - 720 = 280",
+              "fallback": "1000 − 720 = 280"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q8",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "x - y = 5,\\quad xy = 14",
+          "fallback": "8. Find x³ − y³, if x − y = 5 and xy = 14.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "x - y = 5,\\quad xy = 14",
+          "fallback": "8. x − y = 5 மற்றும் xy = 14 எனில், x³ − y³-இன் மதிப்பு காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{335}",
+      "fallback": "335"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(x-y)^3 + 3xy(x-y)",
+          "fallback": "x³ − y³ = (x − y)³ + 3xy(x − y)"
+        },
+        "reasonMath": {
+          "en": "Use cube difference identity.",
+          "ta": [
+            {
+              "latex": "x^{3} - y^{3} = \\left(x - y\\right)^{3} + 3 xy \\left(x - y\\right)",
+              "fallback": "x³ − y³ = (x − y)³ + 3xy(x − y)"
+            },
+            " முற்றொருமையைப் பயன்படுத்த."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "125 + 210 = 335",
+          "fallback": "= 5³ + 3(14)(5) = 125 + 210 = 335"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x - y = 5",
+              "fallback": "x − y = 5"
+            },
+            " and ",
+            {
+              "latex": "xy = 14",
+              "fallback": "xy = 14"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "125 + 210 = 335",
+              "fallback": "125 + 210 = 335"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q9",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "a + \\dfrac{1}{a} = 6",
+          "fallback": "9. If a + 1/a = 6, then find the value of a³ + 1/a³.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "a + \\dfrac{1}{a} = 6",
+          "fallback": "9. a + 1/a = 6 எனில், a³ + 1/a³-இன் மதிப்பு காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{198}",
+      "fallback": "198"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\left(a+\\dfrac{1}{a}\\right)^3 - 3\\left(a+\\dfrac{1}{a}\\right)",
+          "fallback": "a³ + 1/a³ = (a + 1/a)³ − 3(a + 1/a)"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply cube identity with ",
+            {
+              "latex": "x = a",
+              "fallback": "x = a"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle y = \\frac{1}{a}",
+              "fallback": "y = 1/a"
+            },
+            "."
+          ],
+          "ta": "முற்றொருமையைப் பயன்படுத்த."
+        }
+      },
+      {
+        "math": {
+          "latex": "216 - 18 = 198",
+          "fallback": "= 6³ − 3(6) = 216 − 18 = 198"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "\\displaystyle a + \\frac{1}{a} = 6",
+              "fallback": "a + 1/a = 6"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "216 - 18 = 198",
+              "fallback": "216 − 18 = 198"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q10",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "x^2 + \\dfrac{1}{x^2} = 23",
+          "fallback": "10. If x² + 1/x² = 23, then find the value of x + 1/x and x³ + 1/x³.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "x^2 + \\dfrac{1}{x^2} = 23",
+          "fallback": "10. x² + 1/x² = 23 எனில், x + 1/x மற்றும் x³ + 1/x³ ஆகியவற்றின் மதிப்புகளைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x + \\dfrac{1}{x} = \\pm 5,\\; x^3 + \\dfrac{1}{x^3} = \\pm 110}",
+      "fallback": "x + 1/x = ±5; x³ + 1/x³ = ±110"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\left(x+\\dfrac{1}{x}\\right)^2 = 25",
+          "fallback": "(x + 1/x)² = x² + 1/x² + 2 = 23 + 2 = 25"
+        },
+        "reasonMath": {
+          "en": [
+            "Square ",
+            {
+              "latex": "\\displaystyle \\left(x + \\frac{1}{x}\\right)",
+              "fallback": "(x + 1/x)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle \\left(x + \\frac{1}{x}\\right)^{2} = 23 + 2 = 25",
+              "fallback": "(x + 1/x)² = 23 + 2 = 25"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x+\\dfrac{1}{x} = \\pm 5",
+          "fallback": "x + 1/x = ±5"
+        },
+        "reasonMath": {
+          "en": [
+            "Take square root (both ",
+            {
+              "latex": "+ 5",
+              "fallback": "+5"
+            },
+            " and ",
+            {
+              "latex": "- 5",
+              "fallback": "−5"
+            },
+            " are valid)."
+          ],
+          "ta": [
+            "வர்க்கமூலம் காண ",
+            {
+              "latex": "\\pm 5",
+              "fallback": "±5"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x^3+\\dfrac{1}{x^3} = \\pm 110",
+          "fallback": "x³ + 1/x³ = (±5)³ − 3(±5) = ±(125 − 15) = ±110"
+        },
+        "reasonMath": {
+          "en": [
+            "Compute ",
+            {
+              "latex": "\\displaystyle x^{3} + \\frac{1}{x^{3}}",
+              "fallback": "x³ + 1/x³"
+            },
+            " for both signs."
+          ],
+          "ta": [
+            {
+              "latex": "\\pm 110",
+              "fallback": "±110"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q11",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "\\left(y - \\dfrac{1}{y}\\right)^3 = 27",
+          "fallback": "11. If (y − 1/y)³ = 27, then find the value of y³ − 1/y³.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\left(y - \\dfrac{1}{y}\\right)^3 = 27",
+          "fallback": "11. (y − 1/y)³ = 27 எனில், y³ − 1/y³-இன் மதிப்பு காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{36}",
+      "fallback": "36"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y - \\dfrac{1}{y} = 3",
+          "fallback": "y − 1/y = ∛27 = 3"
+        },
+        "reasonMath": {
+          "en": "Take cube root of both sides.",
+          "ta": [
+            "கனமூலம் எடுக்க ",
+            {
+              "latex": "\\displaystyle y - \\frac{1}{y} = 3",
+              "fallback": "y − 1/y = 3"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "27 + 9 = 36",
+          "fallback": "y³ − 1/y³ = (y − 1/y)³ + 3(y − 1/y) = 27 + 3(3) = 36"
+        },
+        "reasonMath": {
+          "en": "Apply cube difference identity.",
+          "ta": [
+            {
+              "latex": "27 + 9 = 36",
+              "fallback": "27 + 9 = 36"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q12-i",
+    "questionMath": {
+      "en": [
+        "12. Simplify:\n",
+        {
+          "latex": "(2a+3b+4c)(4a^2+9b^2+16c^2-6ab-12bc-8ca)",
+          "fallback": "(i) (2a + 3b + 4c)(4a² + 9b² + 16c² − 6ab − 12bc − 8ca)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "12. சுருக்குக:\n",
+        {
+          "latex": "(2a+3b+4c)(4a^2+9b^2+16c^2-6ab-12bc-8ca)",
+          "fallback": "(i) (2a + 3b + 4c)(4a² + 9b² + 16c² − 6ab − 12bc − 8ca)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{8a^3 + 27b^3 + 64c^3 - 72abc}",
+      "fallback": "8a³ + 27b³ + 64c³ − 72abc"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x=2a,\\; y=3b,\\; z=4c",
+          "fallback": "(x+y+z)(x²+y²+z²−xy−yz−zx) = x³ + y³ + z³ − 3xyz"
+        },
+        "reasonMath": {
+          "en": [
+            "Identify ",
+            {
+              "latex": "x = 2 a",
+              "fallback": "x = 2a"
+            },
+            ", ",
+            {
+              "latex": "y = 3 b",
+              "fallback": "y = 3b"
+            },
+            ", ",
+            {
+              "latex": "z = 4 c",
+              "fallback": "z = 4c"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 2 a",
+              "fallback": "x = 2a"
+            },
+            ", ",
+            {
+              "latex": "y = 3 b",
+              "fallback": "y = 3b"
+            },
+            ", ",
+            {
+              "latex": "z = 4 c",
+              "fallback": "z = 4c"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "8a^3 + 27b^3 + 64c^3 - 72abc",
+          "fallback": "= (2a)³ + (3b)³ + (4c)³ − 3(2a)(3b)(4c) = 8a³ + 27b³ + 64c³ − 72abc"
+        },
+        "reasonMath": {
+          "en": "Substitute and simplify.",
+          "ta": "பிரதியிட்டுச் சுருக்க."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q12-ii",
+    "questionMath": {
+      "en": [
+        "12. Simplify:\n",
+        {
+          "latex": "(x-2y+3z)(x^2+4y^2+9z^2+2xy+6yz-3xz)",
+          "fallback": "(ii) (x − 2y + 3z)(x² + 4y² + 9z² + 2xy + 6yz − 3xz)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "12. சுருக்குக:\n",
+        {
+          "latex": "(x-2y+3z)(x^2+4y^2+9z^2+2xy+6yz-3xz)",
+          "fallback": "(ii) (x − 2y + 3z)(x² + 4y² + 9z² + 2xy + 6yz − 3xz)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x^3 - 8y^3 + 27z^3 + 18xyz}",
+      "fallback": "x³ − 8y³ + 27z³ + 18xyz"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a=x,\\; b=-2y,\\; c=3z",
+          "fallback": "a = x, b = −2y, c = 3z"
+        },
+        "reasonMath": {
+          "en": "Apply (a+b+c)(a²+b²+c²−ab−bc−ca) = a³+b³+c³−3abc.",
+          "ta": [
+            {
+              "latex": "a = x",
+              "fallback": "a = x"
+            },
+            ", ",
+            {
+              "latex": "b = - 2 y",
+              "fallback": "b = −2y"
+            },
+            ", ",
+            {
+              "latex": "c = 3 z",
+              "fallback": "c = 3z"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x^3 - 8y^3 + 27z^3 + 18xyz",
+          "fallback": "= x³ + (−2y)³ + (3z)³ − 3(x)(−2y)(3z) = x³ − 8y³ + 27z³ + 18xyz"
+        },
+        "reasonMath": {
+          "en": [
+            "Watch the signs: ",
+            {
+              "latex": "- 3 \\left(- 2\\right) = + 6",
+              "fallback": "−3(−2) = +6"
+            },
+            "."
+          ],
+          "ta": [
+            "குறிகளைக் கவனிக்க: ",
+            {
+              "latex": "- 3 \\left(- 2\\right) = + 6",
+              "fallback": "−3(−2) = +6"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q13-i",
+    "questionMath": {
+      "en": [
+        "13. By using identity evaluate the following:\n",
+        {
+          "latex": "7^3 - 10^3 + 3^3",
+          "fallback": "(i) 7³ − 10³ + 3³",
+          "display": true
+        }
+      ],
+      "ta": [
+        "13. முற்றொருமைகளைப் பயன்படுத்தி மதிப்பு காண்க.\n",
+        {
+          "latex": "7^3 - 10^3 + 3^3",
+          "fallback": "(i) 7³ − 10³ + 3³",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{-630}",
+      "fallback": "−630"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a+b+c = 0",
+          "fallback": "a = 7, b = −10, c = 3; a + b + c = 7 − 10 + 3 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Check the sum ",
+            {
+              "latex": "a + b + c",
+              "fallback": "a + b + c"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a + b + c = 7 - 10 + 3 = 0",
+              "fallback": "a + b + c = 7 − 10 + 3 = 0"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3(7)(-10)(3) = -630",
+          "fallback": "a³ + b³ + c³ = 3abc = 3(7)(−10)(3) = −630"
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "a + b + c = 0",
+              "fallback": "a+b+c=0"
+            },
+            ", sum of cubes = 3abc."
+          ],
+          "ta": [
+            {
+              "latex": "a + b + c = 0",
+              "fallback": "a+b+c = 0"
+            },
+            " என்பதால் ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            "abc = −630."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q13-ii",
+    "questionMath": {
+      "en": [
+        "13. By using identity evaluate the following:\n",
+        {
+          "latex": "1 + \\dfrac{1}{8} - \\dfrac{27}{8}",
+          "fallback": "(ii) 1 + 1/8 − 27/8",
+          "display": true
+        }
+      ],
+      "ta": [
+        "13. முற்றொருமைகளைப் பயன்படுத்தி மதிப்பு காண்க.\n",
+        {
+          "latex": "1 + \\dfrac{1}{8} - \\dfrac{27}{8}",
+          "fallback": "(ii) 1 + 1/8 − 27/8",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{-\\dfrac{9}{4}}",
+      "fallback": "−9/4"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "1 + \\dfrac{1}{2} - \\dfrac{3}{2} = 0",
+          "fallback": "1³ + (1/2)³ + (−3/2)³; 1 + 1/2 − 3/2 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Write as cubes: ",
+            {
+              "latex": "a = 1",
+              "fallback": "a=1"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle b = \\frac{1}{2}",
+              "fallback": "b=1/2"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle c = \\frac{- 3}{2}",
+              "fallback": "c=−3/2"
+            },
+            "."
+          ],
+          "ta": [
+            "கனங்களாக எழுத: ",
+            {
+              "latex": "a = 1",
+              "fallback": "a=1"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle b = \\frac{1}{2}",
+              "fallback": "b=1/2"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle c = \\frac{- 3}{2}",
+              "fallback": "c=−3/2"
+            },
+            "; கூடுதல் ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3(1)\\left(\\dfrac{1}{2}\\right)\\left(-\\dfrac{3}{2}\\right) = -\\dfrac{9}{4}",
+          "fallback": "3abc = 3(1)(1/2)(−3/2) = −9/4"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply ",
+            {
+              "latex": "a^{3} + b^{3} + c^{3} = 3",
+              "fallback": "a³+b³+c³ = 3"
+            },
+            "abc."
+          ],
+          "ta": [
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            "abc = −9/4."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.4-q14",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "2x - 3y - 4z = 0",
+          "fallback": "14. If 2x − 3y − 4z = 0, then find 8x³ − 27y³ − 64z³.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "2x - 3y - 4z = 0",
+          "fallback": "14. 2x − 3y − 4z = 0 எனில், 8x³ − 27y³ − 64z³-ஐக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{72xyz}",
+      "fallback": "72xyz"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a+b+c = 0",
+          "fallback": "a = 2x, b = −3y, c = −4z; a + b + c = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Rewrite ",
+            {
+              "latex": "8 x^{3} - 27 y^{3} - 64 z^{3}",
+              "fallback": "8x³ − 27y³ − 64z³"
+            },
+            " as ",
+            {
+              "latex": "a^{3} + b^{3} + c^{3}",
+              "fallback": "a³ + b³ + c³"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a = 2 x",
+              "fallback": "a = 2x"
+            },
+            ", ",
+            {
+              "latex": "b = - 3 y",
+              "fallback": "b = −3y"
+            },
+            ", ",
+            {
+              "latex": "c = - 4 z",
+              "fallback": "c = −4z"
+            },
+            "; கூடுதல் ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3(2x)(-3y)(-4z) = 72xyz",
+          "fallback": "3abc = 3(2x)(−3y)(−4z) = 72xyz"
+        },
+        "reasonMath": {
+          "en": [
+            "Since ",
+            {
+              "latex": "a + b + c = 0",
+              "fallback": "a+b+c = 0"
+            },
+            ", result = 3abc = 72xyz."
+          ],
+          "ta": [
+            {
+              "latex": "3 \\left(2 x\\right) \\left(- 3 y\\right) \\left(- 4 z\\right) = 72",
+              "fallback": "3(2x)(−3y)(−4z) = 72"
+            },
+            "xyz."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Factorise the following expressions:\n",
+        {
+          "latex": "2a^2 + 4a^2b + 8a^2c",
+          "fallback": "(i) 2a² + 4a²b + 8a²c",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "2a^2 + 4a^2b + 8a^2c",
+          "fallback": "(i) 2a² + 4a²b + 8a²c",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{2a^2(1 + 2b + 4c)}",
+      "fallback": "2a²(1 + 2b + 4c)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{GCF} = 2a^2",
+          "fallback": "Common factor = 2a²"
+        },
+        "reasonMath": {
+          "en": "Identify the GCD of all three terms.",
+          "ta": [
+            "மூன்று உறுப்புகளின் பொதுக் காரணி ",
+            {
+              "latex": "2 a^{2}",
+              "fallback": "2a²"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "2a^2(1 + 2b + 4c)",
+          "fallback": "= 2a²(1 + 2b + 4c)"
+        },
+        "reasonMath": {
+          "en": [
+            "Factor out ",
+            {
+              "latex": "2 a^{2}",
+              "fallback": "2a²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "2 a^{2}",
+              "fallback": "2a²"
+            },
+            "-ஐ வெளியே எடுக்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Factorise the following expressions:\n",
+        {
+          "latex": "ab - ac - mb + mc",
+          "fallback": "(ii) ab − ac − mb + mc",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "ab - ac - mb + mc",
+          "fallback": "(ii) ab − ac − mb + mc",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(a - m)(b - c)}",
+      "fallback": "(a − m)(b − c)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a(b - c) - m(b - c)",
+          "fallback": "= a(b − c) − m(b − c)"
+        },
+        "reasonMath": {
+          "en": "Group in pairs and take common factors.",
+          "ta": "ஈரிணையாகப் பிரித்து பொதுக் காரணி எடுக்க."
+        }
+      },
+      {
+        "math": {
+          "latex": "(a - m)(b - c)",
+          "fallback": "= (a − m)(b − c)"
+        },
+        "reasonMath": {
+          "en": [
+            "Factor out ",
+            {
+              "latex": "\\left(b - c\\right)",
+              "fallback": "(b − c)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(b - c\\right)",
+              "fallback": "(b − c)"
+            },
+            "-ஐ வெளியே எடுக்க."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q2-i",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "x^2 + 4x + 4",
+          "fallback": "(i) x² + 4x + 4",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "x^2 + 4x + 4",
+          "fallback": "(i) x² + 4x + 4",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x + 2)^2}",
+      "fallback": "(x + 2)²"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^2 + 2(x)(2) + 2^2",
+          "fallback": "x² + 2(x)(2) + 2²"
+        },
+        "reasonMath": {
+          "en": [
+            "Match with ",
+            {
+              "latex": "a^{2} + 2 ab + b^{2}",
+              "fallback": "a² + 2ab + b²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a^{2} + 2 ab + b^{2}",
+              "fallback": "a² + 2ab + b²"
+            },
+            " வடிவில் எழுத."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x + 2)^2",
+          "fallback": "= (x + 2)²"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply ",
+            {
+              "latex": "\\left(a + b\\right)^{2}",
+              "fallback": "(a + b)²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(x + 2\\right)^{2}",
+              "fallback": "(x + 2)²"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q2-ii",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "3a^2 - 24ab + 48b^2",
+          "fallback": "(ii) 3a² − 24ab + 48b²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "3a^2 - 24ab + 48b^2",
+          "fallback": "(ii) 3a² − 24ab + 48b²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{3(a - 4b)^2}",
+      "fallback": "3(a − 4b)²"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "3(a^2 - 8ab + 16b^2)",
+          "fallback": "= 3(a² − 8ab + 16b²)"
+        },
+        "reasonMath": {
+          "en": [
+            "Take common factor ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " out first."
+          ],
+          "ta": [
+            "முதலில் ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            "-ஐப் பொதுவாக எடுக்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3(a - 4b)^2",
+          "fallback": "= 3(a − 4b)²"
+        },
+        "reasonMath": {
+          "en": [
+            "Recognize ",
+            {
+              "latex": "\\left(a - 4 b\\right)^{2}",
+              "fallback": "(a − 4b)²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a^{2} - 8 ab + 16 b^{2} = \\left(a - 4 b\\right)^{2}",
+              "fallback": "a² − 8ab + 16b² = (a − 4b)²"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q2-iii",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "x^5 - 16x",
+          "fallback": "(iii) x⁵ − 16x",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "x^5 - 16x",
+          "fallback": "(iii) x⁵ − 16x",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x(x^2 + 4)(x + 2)(x - 2)}",
+      "fallback": "x(x² + 4)(x + 2)(x − 2)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x(x^2 + 4)(x^2 - 4)",
+          "fallback": "= x(x⁴ − 16) = x((x²)² − 4²)"
+        },
+        "reasonMath": {
+          "en": [
+            "Factor out ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " and use difference of squares."
+          ],
+          "ta": [
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-ஐ வெளியே எடுத்து ",
+            {
+              "latex": "a^{2} - b^{2}",
+              "fallback": "a² − b²"
+            },
+            " பயன்படுத்த."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x(x^2 + 4)(x + 2)(x - 2)",
+          "fallback": "= x(x² + 4)(x + 2)(x − 2)"
+        },
+        "reasonMath": {
+          "en": [
+            "Factor ",
+            {
+              "latex": "x^{2} - 4 = \\left(x + 2\\right) \\left(x - 2\\right)",
+              "fallback": "x² − 4 = (x + 2)(x − 2)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x^{2} - 4 = \\left(x + 2\\right) \\left(x - 2\\right)",
+              "fallback": "x² − 4 = (x + 2)(x − 2)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q2-iv",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "m^2 + \\dfrac{1}{m^2} - 23",
+          "fallback": "(iv) m² + 1/m² − 23",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "m^2 + \\dfrac{1}{m^2} - 23",
+          "fallback": "(iv) m² + 1/m² − 23",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\left(m + \\dfrac{1}{m} + 5\\right)\\left(m + \\dfrac{1}{m} - 5\\right)}",
+      "fallback": "(m + 1/m + 5)(m + 1/m − 5)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\left(m + \\dfrac{1}{m}\\right)^2 - 5^2",
+          "fallback": "m² + 1/m² + 2 − 25 = (m + 1/m)² − 5²"
+        },
+        "reasonMath": {
+          "en": [
+            "Rewrite ",
+            {
+              "latex": "- 23",
+              "fallback": "−23"
+            },
+            " as ",
+            {
+              "latex": "+ 2 - 25",
+              "fallback": "+2 − 25"
+            },
+            " to complete the square."
+          ],
+          "ta": [
+            {
+              "latex": "- 23",
+              "fallback": "−23"
+            },
+            " என்பதை ",
+            {
+              "latex": "+ 2 - 25",
+              "fallback": "+2 − 25"
+            },
+            " என எழுத."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\left(m + \\dfrac{1}{m} + 5\\right)\\left(m + \\dfrac{1}{m} - 5\\right)",
+          "fallback": "= (m + 1/m + 5)(m + 1/m − 5)"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply ",
+            {
+              "latex": "a^{2} - b^{2} = \\left(a + b\\right) \\left(a - b\\right)",
+              "fallback": "a² − b² = (a + b)(a − b)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a^{2} - b^{2}",
+              "fallback": "a² − b²"
+            },
+            " முற்றொருமையைப் பயன்படுத்த."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q2-v",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "6 - 216x^2",
+          "fallback": "(v) 6 − 216x²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "6 - 216x^2",
+          "fallback": "(v) 6 − 216x²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{6(1 + 6x)(1 - 6x)}",
+      "fallback": "6(1 + 6x)(1 − 6x)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "6(1 - 36x^2)",
+          "fallback": "= 6(1 − 36x²) = 6(1² − (6x)²)"
+        },
+        "reasonMath": {
+          "en": [
+            "Take ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            " common and apply difference of squares."
+          ],
+          "ta": [
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            "-ஐ வெளியே எடுத்து ",
+            {
+              "latex": "a^{2} - b^{2}",
+              "fallback": "a² − b²"
+            },
+            " பயன்படுத்த."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "6(1 + 6x)(1 - 6x)",
+          "fallback": "= 6(1 + 6x)(1 − 6x)"
+        },
+        "reasonMath": {
+          "en": "Factorise completely.",
+          "ta": [
+            {
+              "latex": "6 \\left(1 + 6 x\\right) \\left(1 - 6 x\\right)",
+              "fallback": "6(1 + 6x)(1 − 6x)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q2-vi",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "a^2 + \\dfrac{1}{a^2} - 18",
+          "fallback": "(vi) a² + 1/a² − 18",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "a^2 + \\dfrac{1}{a^2} - 18",
+          "fallback": "(vi) a² + 1/a² − 18",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\left(a - \\dfrac{1}{a} + 4\\right)\\left(a - \\dfrac{1}{a} - 4\\right)}",
+      "fallback": "(a − 1/a + 4)(a − 1/a − 4)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\left(a - \\dfrac{1}{a}\\right)^2 - 4^2",
+          "fallback": "a² + 1/a² − 2 − 16 = (a − 1/a)² − 4²"
+        },
+        "reasonMath": {
+          "en": [
+            "Rewrite ",
+            {
+              "latex": "- 18",
+              "fallback": "−18"
+            },
+            " as ",
+            {
+              "latex": "- 2 - 16",
+              "fallback": "−2 − 16"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "- 18",
+              "fallback": "−18"
+            },
+            " என்பதை ",
+            {
+              "latex": "- 2 - 16",
+              "fallback": "−2 − 16"
+            },
+            " என எழுத."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\left(a - \\dfrac{1}{a} + 4\\right)\\left(a - \\dfrac{1}{a} - 4\\right)",
+          "fallback": "= (a − 1/a + 4)(a − 1/a − 4)"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply ",
+            {
+              "latex": "a^{2} - b^{2}",
+              "fallback": "a² − b²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a^{2} - b^{2}",
+              "fallback": "a² − b²"
+            },
+            " முற்றொருமையைப் பயன்படுத்த."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q3-i",
+    "questionMath": {
+      "en": [
+        "3. Factorise the following:\n",
+        {
+          "latex": "4x^2 + 9y^2 + 25z^2 + 12xy + 30yz + 20xz",
+          "fallback": "(i) 4x² + 9y² + 25z² + 12xy + 30yz + 20xz",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "4x^2 + 9y^2 + 25z^2 + 12xy + 30yz + 20xz",
+          "fallback": "(i) 4x² + 9y² + 25z² + 12xy + 30yz + 20xz",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(2x + 3y + 5z)^2}",
+      "fallback": "(2x + 3y + 5z)²"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(2x)^2 + (3y)^2 + (5z)^2 + 2(2x)(3y) + 2(3y)(5z) + 2(5z)(2x)",
+          "fallback": "= (2x)² + (3y)² + (5z)² + 2(2x)(3y) + 2(3y)(5z) + 2(5z)(2x)"
+        },
+        "reasonMath": {
+          "en": [
+            "Match with ",
+            {
+              "latex": "\\left(a + b + c\\right)^{2}",
+              "fallback": "(a + b + c)²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(a + b + c\\right)^{2}",
+              "fallback": "(a + b + c)²"
+            },
+            " வடிவில் எழுத."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(2x + 3y + 5z)^2",
+          "fallback": "= (2x + 3y + 5z)²"
+        },
+        "reasonMath": {
+          "en": "Write as a square.",
+          "ta": [
+            {
+              "latex": "\\left(2 x + 3 y + 5 z\\right)^{2}",
+              "fallback": "(2x + 3y + 5z)²"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q3-ii",
+    "questionMath": {
+      "en": [
+        "3. Factorise the following:\n",
+        {
+          "latex": "25x^2 + 4y^2 + 9z^2 - 20xy + 12yz - 30xz",
+          "fallback": "(ii) 25x² + 4y² + 9z² − 20xy + 12yz − 30xz",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "25x^2 + 4y^2 + 9z^2 - 20xy + 12yz - 30xz",
+          "fallback": "(ii) 25x² + 4y² + 9z² − 20xy + 12yz − 30xz",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(5x - 2y - 3z)^2}",
+      "fallback": "(−5x + 2y + 3z)² or (5x − 2y − 3z)²"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(-5x)^2 + (2y)^2 + (3z)^2 + 2(-5x)(2y) + 2(2y)(3z) + 2(3z)(-5x)",
+          "fallback": "yz term (+12yz) is positive while xy and xz are negative"
+        },
+        "reasonMath": {
+          "en": [
+            "So ",
+            {
+              "latex": "2 y",
+              "fallback": "2y"
+            },
+            " and ",
+            {
+              "latex": "3 z",
+              "fallback": "3z"
+            },
+            " share the same sign, opposite to ",
+            {
+              "latex": "5 x",
+              "fallback": "5x"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "12",
+              "fallback": "12"
+            },
+            "yz மிகை; ",
+            {
+              "latex": "xy",
+              "fallback": "xy"
+            },
+            ", xz குறை என்பதால் ",
+            {
+              "latex": "5 x",
+              "fallback": "5x"
+            },
+            " மட்டும் எதிர் குறி."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(5x - 2y - 3z)^2",
+          "fallback": "= (5x − 2y − 3z)²"
+        },
+        "reasonMath": {
+          "en": [
+            "Equivalently ",
+            {
+              "latex": "\\left(- 5 x + 2 y + 3 z\\right)^{2}",
+              "fallback": "(−5x + 2y + 3z)²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(5 x - 2 y - 3 z\\right)^{2}",
+              "fallback": "(5x − 2y − 3z)²"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q4-i",
+    "questionMath": {
+      "en": [
+        "4. Factorise the following:\n",
+        {
+          "latex": "8x^3 + 125y^3",
+          "fallback": "(i) 8x³ + 125y³",
+          "display": true
+        }
+      ],
+      "ta": [
+        "4. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "8x^3 + 125y^3",
+          "fallback": "(i) 8x³ + 125y³",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(2x + 5y)(4x^2 - 10xy + 25y^2)}",
+      "fallback": "(2x + 5y)(4x² − 10xy + 25y²)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(2x)^3 + (5y)^3",
+          "fallback": "= (2x)³ + (5y)³"
+        },
+        "reasonMath": {
+          "en": [
+            "Write as sum of cubes ",
+            {
+              "latex": "a^{3} + b^{3}",
+              "fallback": "a³ + b³"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\left(2 x\\right)^{3} + \\left(5 y\\right)^{3}",
+              "fallback": "(2x)³ + (5y)³"
+            },
+            " என எழுதுக."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(2x + 5y)(4x^2 - 10xy + 25y^2)",
+          "fallback": "= (2x + 5y)(4x² − 10xy + 25y²)"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply ",
+            {
+              "latex": "a^{3} + b^{3} = \\left(a + b\\right) \\left(a^{2} - ab + b^{2}\\right)",
+              "fallback": "a³ + b³ = (a + b)(a² − ab + b²)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a^{3} + b^{3}",
+              "fallback": "a³ + b³"
+            },
+            " முற்றொருமையைப் பயன்படுத்த."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q4-ii",
+    "questionMath": {
+      "en": [
+        "4. Factorise the following:\n",
+        {
+          "latex": "27x^3 - 8y^3",
+          "fallback": "(ii) 27x³ − 8y³",
+          "display": true
+        }
+      ],
+      "ta": [
+        "4. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "27x^3 - 8y^3",
+          "fallback": "(ii) 27x³ − 8y³",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(3x - 2y)(9x^2 + 6xy + 4y^2)}",
+      "fallback": "(3x − 2y)(9x² + 6xy + 4y²)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(3x)^3 - (2y)^3",
+          "fallback": "= (3x)³ − (2y)³"
+        },
+        "reasonMath": {
+          "en": "Write as difference of cubes.",
+          "ta": [
+            {
+              "latex": "\\left(3 x\\right)^{3} - \\left(2 y\\right)^{3}",
+              "fallback": "(3x)³ − (2y)³"
+            },
+            " என எழுதுக."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(3x - 2y)(9x^2 + 6xy + 4y^2)",
+          "fallback": "= (3x − 2y)(9x² + 6xy + 4y²)"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply ",
+            {
+              "latex": "a^{3} - b^{3} = \\left(a - b\\right) \\left(a^{2} + ab + b^{2}\\right)",
+              "fallback": "a³ − b³ = (a − b)(a² + ab + b²)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a^{3} - b^{3}",
+              "fallback": "a³ − b³"
+            },
+            " முற்றொருமையைப் பயன்படுத்த."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q4-iii",
+    "questionMath": {
+      "en": [
+        "4. Factorise the following:\n",
+        {
+          "latex": "a^6 - 64",
+          "fallback": "(iii) a⁶ − 64",
+          "display": true
+        }
+      ],
+      "ta": [
+        "4. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "a^6 - 64",
+          "fallback": "(iii) a⁶ − 64",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(a + 2)(a - 2)(a^2 - 2a + 4)(a^2 + 2a + 4)}",
+      "fallback": "(a + 2)(a − 2)(a² − 2a + 4)(a² + 2a + 4)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(a^3 + 8)(a^3 - 8)",
+          "fallback": "a⁶ − 64 = (a³)² − 8² = (a³ + 8)(a³ − 8)"
+        },
+        "reasonMath": {
+          "en": "Factor first as difference of squares.",
+          "ta": [
+            "முதலில் ",
+            {
+              "latex": "a^{2} - b^{2}",
+              "fallback": "a² − b²"
+            },
+            " மூலம் பிரிக்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(a+2)(a-2)(a^2-2a+4)(a^2+2a+4)",
+          "fallback": "= (a + 2)(a² − 2a + 4)(a − 2)(a² + 2a + 4)"
+        },
+        "reasonMath": {
+          "en": "Factor each cube sum/difference.",
+          "ta": "கன முற்றொருமைகளைப் பயன்படுத்த."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q5-i",
+    "questionMath": {
+      "en": [
+        "5. Factorise the following:\n",
+        {
+          "latex": "x^3 + 8y^3 + 6xy - 1",
+          "fallback": "(i) x³ + 8y³ + 6xy − 1",
+          "display": true
+        }
+      ],
+      "ta": [
+        "5. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "x^3 + 8y^3 + 6xy - 1",
+          "fallback": "(i) x³ + 8y³ + 6xy − 1",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x + 2y - 1)(x^2 + 4y^2 + 1 - 2xy + 2y + x)}",
+      "fallback": "(x + 2y − 1)(x² + 4y² + 1 − 2xy + 2y + x)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^3 + (2y)^3 + (-1)^3 - 3(x)(2y)(-1)",
+          "fallback": "x³ + (2y)³ + (−1)³ − 3(x)(2y)(−1)"
+        },
+        "reasonMath": {
+          "en": [
+            "Match with ",
+            {
+              "latex": "a^{3} + b^{3} + c^{3} - 3",
+              "fallback": "a³ + b³ + c³ − 3"
+            },
+            "abc where ",
+            {
+              "latex": "a = x",
+              "fallback": "a=x"
+            },
+            ", ",
+            {
+              "latex": "b = 2 y",
+              "fallback": "b=2y"
+            },
+            ", ",
+            {
+              "latex": "c = - 1",
+              "fallback": "c=−1"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a = x",
+              "fallback": "a=x"
+            },
+            ", ",
+            {
+              "latex": "b = 2 y",
+              "fallback": "b=2y"
+            },
+            ", ",
+            {
+              "latex": "c = - 1",
+              "fallback": "c=−1"
+            },
+            " எனக் கொள்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x + 2y - 1)(x^2 + 4y^2 + 1 - 2xy + 2y + x)",
+          "fallback": "= (x + 2y − 1)(x² + 4y² + 1 − 2xy + 2y + x)"
+        },
+        "reasonMath": {
+          "en": "Apply the 3-cube identity.",
+          "ta": "முற்றொருமையைப் பயன்படுத்த."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.5-q5-ii",
+    "questionMath": {
+      "en": [
+        "5. Factorise the following:\n",
+        {
+          "latex": "l^3 - 8m^3 - 27n^3 - 18lmn",
+          "fallback": "(ii) l³ − 8m³ − 27n³ − 18lmn",
+          "display": true
+        }
+      ],
+      "ta": [
+        "5. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "l^3 - 8m^3 - 27n^3 - 18lmn",
+          "fallback": "(ii) l³ − 8m³ − 27n³ − 18lmn",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(l - 2m - 3n)(l^2 + 4m^2 + 9n^2 + 2lm - 6mn + 3nl)}",
+      "fallback": "(l − 2m − 3n)(l² + 4m² + 9n² + 2lm − 6mn + 3nl)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "l^3 + (-2m)^3 + (-3n)^3 - 3(l)(-2m)(-3n)",
+          "fallback": "l³ + (−2m)³ + (−3n)³ − 3(l)(−2m)(−3n)"
+        },
+        "reasonMath": {
+          "en": [
+            "Identify ",
+            {
+              "latex": "a = l",
+              "fallback": "a = l"
+            },
+            ", ",
+            {
+              "latex": "b = - 2 m",
+              "fallback": "b = −2m"
+            },
+            ", ",
+            {
+              "latex": "c = - 3 n",
+              "fallback": "c = −3n"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a = l",
+              "fallback": "a = l"
+            },
+            ", ",
+            {
+              "latex": "b = - 2 m",
+              "fallback": "b = −2m"
+            },
+            ", ",
+            {
+              "latex": "c = - 3 n",
+              "fallback": "c = −3n"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(l - 2m - 3n)(l^2 + 4m^2 + 9n^2 + 2lm - 6mn + 3nl)",
+          "fallback": "= (l − 2m − 3n)(l² + 4m² + 9n² + 2lm − 6mn + 3nl)"
+        },
+        "reasonMath": {
+          "en": [
+            "Apply ",
+            {
+              "latex": "a^{3} + b^{3} + c^{3} - 3",
+              "fallback": "a³ + b³ + c³ − 3"
+            },
+            "abc."
+          ],
+          "ta": "முற்றொருமையைப் பயன்படுத்த."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Factorise the following:\n",
+        {
+          "latex": "x^2 + 10x + 24",
+          "fallback": "(i) x² + 10x + 24",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "x^2 + 10x + 24",
+          "fallback": "(i) x² + 10x + 24",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x + 4)(x + 6)}",
+      "fallback": "(x + 4)(x + 6)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^2 + 4x + 6x + 24",
+          "fallback": "Sum = 10, Product = 24 ⇒ 4 and 6"
+        },
+        "reasonMath": {
+          "en": [
+            "Split ",
+            {
+              "latex": "10 x = 4 x + 6 x",
+              "fallback": "10x = 4x + 6x"
+            },
+            "."
+          ],
+          "ta": [
+            "கூடுதல் ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            ", பெருக்கல் ",
+            {
+              "latex": "24",
+              "fallback": "24"
+            },
+            " தரும் எண்கள் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            ", ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x + 4)(x + 6)",
+          "fallback": "= x(x + 4) + 6(x + 4) = (x + 4)(x + 6)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            "குழுவாக்க ",
+            {
+              "latex": "\\left(x + 4\\right) \\left(x + 6\\right)",
+              "fallback": "(x + 4)(x + 6)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Factorise the following:\n",
+        {
+          "latex": "z^2 + 4z - 12",
+          "fallback": "(ii) z² + 4z − 12",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "z^2 + 4z - 12",
+          "fallback": "(ii) z² + 4z − 12",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(z + 6)(z - 2)}",
+      "fallback": "(z + 6)(z − 2)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "z^2 + 6z - 2z - 12",
+          "fallback": "Sum = 4, Product = −12 ⇒ 6 and −2"
+        },
+        "reasonMath": {
+          "en": [
+            "Split ",
+            {
+              "latex": "4 z = 6 z - 2 z",
+              "fallback": "4z = 6z − 2z"
+            },
+            "."
+          ],
+          "ta": [
+            "கூடுதல் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            ", பெருக்கல் ",
+            {
+              "latex": "- 12",
+              "fallback": "−12"
+            },
+            " தரும் எண்கள் ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            ", ",
+            {
+              "latex": "- 2",
+              "fallback": "−2"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(z + 6)(z - 2)",
+          "fallback": "= (z + 6)(z − 2)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            {
+              "latex": "\\left(z + 6\\right) \\left(z - 2\\right)",
+              "fallback": "(z + 6)(z − 2)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Factorise the following:\n",
+        {
+          "latex": "p^2 - 6p - 16",
+          "fallback": "(iii) p² − 6p − 16",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "p^2 - 6p - 16",
+          "fallback": "(iii) p² − 6p − 16",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(p - 8)(p + 2)}",
+      "fallback": "(p − 8)(p + 2)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p^2 - 8p + 2p - 16",
+          "fallback": "Sum = −6, Product = −16 ⇒ −8 and 2"
+        },
+        "reasonMath": {
+          "en": [
+            "Split ",
+            {
+              "latex": "- 6 p = - 8 p + 2 p",
+              "fallback": "−6p = −8p + 2p"
+            },
+            "."
+          ],
+          "ta": [
+            "கூடுதல் ",
+            {
+              "latex": "- 6",
+              "fallback": "−6"
+            },
+            ", பெருக்கல் ",
+            {
+              "latex": "- 16 \\Rightarrow - 8",
+              "fallback": "−16 ⇒ −8"
+            },
+            ", ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(p - 8)(p + 2)",
+          "fallback": "= (p − 8)(p + 2)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            {
+              "latex": "\\left(p - 8\\right) \\left(p + 2\\right)",
+              "fallback": "(p − 8)(p + 2)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q1-iv",
+    "questionMath": {
+      "en": [
+        "1. Factorise the following:\n",
+        {
+          "latex": "t^2 + 72 - 17t",
+          "fallback": "(iv) t² + 72 − 17t",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "t^2 + 72 - 17t",
+          "fallback": "(iv) t² + 72 − 17t",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(t - 8)(t - 9)}",
+      "fallback": "(t − 8)(t − 9)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "t^2 - 8t - 9t + 72",
+          "fallback": "t² − 17t + 72; Sum = −17, Product = 72 ⇒ −8, −9"
+        },
+        "reasonMath": {
+          "en": "Write in standard form first.",
+          "ta": [
+            "திட்ட வடிவில் எழுத ",
+            {
+              "latex": "t^{2} - 17 t + 72",
+              "fallback": "t² − 17t + 72"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(t - 8)(t - 9)",
+          "fallback": "= (t − 8)(t − 9)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            {
+              "latex": "\\left(t - 8\\right) \\left(t - 9\\right)",
+              "fallback": "(t − 8)(t − 9)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q1-v",
+    "questionMath": {
+      "en": [
+        "1. Factorise the following:\n",
+        {
+          "latex": "y^2 - 16y - 80",
+          "fallback": "(v) y² − 16y − 80",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "y^2 - 16y - 80",
+          "fallback": "(v) y² − 16y − 80",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(y - 20)(y + 4)}",
+      "fallback": "(y − 20)(y + 4)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y^2 - 20y + 4y - 80",
+          "fallback": "Sum = −16, Product = −80 ⇒ −20 and 4"
+        },
+        "reasonMath": {
+          "en": [
+            "Split ",
+            {
+              "latex": "- 16 y = - 20 y + 4 y",
+              "fallback": "−16y = −20y + 4y"
+            },
+            "."
+          ],
+          "ta": [
+            "கூடுதல் ",
+            {
+              "latex": "- 16",
+              "fallback": "−16"
+            },
+            ", பெருக்கல் ",
+            {
+              "latex": "- 80 \\Rightarrow - 20",
+              "fallback": "−80 ⇒ −20"
+            },
+            ", ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(y - 20)(y + 4)",
+          "fallback": "= (y − 20)(y + 4)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            {
+              "latex": "\\left(y - 20\\right) \\left(y + 4\\right)",
+              "fallback": "(y − 20)(y + 4)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q1-vi",
+    "questionMath": {
+      "en": [
+        "1. Factorise the following:\n",
+        {
+          "latex": "a^2 + 10a - 600",
+          "fallback": "(vi) a² + 10a − 600",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "a^2 + 10a - 600",
+          "fallback": "(vi) a² + 10a − 600",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(a + 30)(a - 20)}",
+      "fallback": "(a + 30)(a − 20)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a^2 + 30a - 20a - 600",
+          "fallback": "Sum = 10, Product = −600 ⇒ 30 and −20"
+        },
+        "reasonMath": {
+          "en": [
+            "Split ",
+            {
+              "latex": "10 a = 30 a - 20 a",
+              "fallback": "10a = 30a − 20a"
+            },
+            "."
+          ],
+          "ta": [
+            "கூடுதல் ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            ", பெருக்கல் ",
+            {
+              "latex": "- 600 \\Rightarrow 30",
+              "fallback": "−600 ⇒ 30"
+            },
+            ", ",
+            {
+              "latex": "- 20",
+              "fallback": "−20"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(a + 30)(a - 20)",
+          "fallback": "= (a + 30)(a − 20)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            {
+              "latex": "\\left(a + 30\\right) \\left(a - 20\\right)",
+              "fallback": "(a + 30)(a − 20)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q2-i",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "2a^2 + 9a + 10",
+          "fallback": "(i) 2a² + 9a + 10",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "2a^2 + 9a + 10",
+          "fallback": "(i) 2a² + 9a + 10",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(a + 2)(2a + 5)}",
+      "fallback": "(a + 2)(2a + 5)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2a^2 + 4a + 5a + 10",
+          "fallback": "ac = 20, b = 9 ⇒ 4 and 5"
+        },
+        "reasonMath": {
+          "en": [
+            "Split ",
+            {
+              "latex": "9 a = 4 a + 5 a",
+              "fallback": "9a = 4a + 5a"
+            },
+            "."
+          ],
+          "ta": [
+            "ac = 20, ",
+            {
+              "latex": "b = 9 \\Rightarrow 4",
+              "fallback": "b = 9 ⇒ 4"
+            },
+            ", ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(a + 2)(2a + 5)",
+          "fallback": "= 2a(a + 2) + 5(a + 2) = (a + 2)(2a + 5)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            {
+              "latex": "\\left(a + 2\\right) \\left(2 a + 5\\right)",
+              "fallback": "(a + 2)(2a + 5)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q2-ii",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "5x^2 - 29xy - 42y^2",
+          "fallback": "(ii) 5x² − 29xy − 42y²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "5x^2 - 29xy - 42y^2",
+          "fallback": "(ii) 5x² − 29xy − 42y²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x - 7y)(5x + 6y)}",
+      "fallback": "(x − 7y)(5x + 6y)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "5x^2 - 35xy + 6xy - 42y^2",
+          "fallback": "ac = −210, b = −29 ⇒ −35 and 6"
+        },
+        "reasonMath": {
+          "en": [
+            "Split ",
+            {
+              "latex": "- 29 xy = - 35 xy + 6 xy",
+              "fallback": "−29xy = −35xy + 6xy"
+            },
+            "."
+          ],
+          "ta": [
+            "ac = −210, ",
+            {
+              "latex": "b = - 29 \\Rightarrow - 35",
+              "fallback": "b = −29 ⇒ −35"
+            },
+            ", ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x - 7y)(5x + 6y)",
+          "fallback": "= 5x(x − 7y) + 6y(x − 7y) = (x − 7y)(5x + 6y)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            {
+              "latex": "\\left(x - 7 y\\right) \\left(5 x + 6 y\\right)",
+              "fallback": "(x − 7y)(5x + 6y)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q2-iii",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "9 - 18x + 8x^2",
+          "fallback": "(iii) 9 − 18x + 8x²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "9 - 18x + 8x^2",
+          "fallback": "(iii) 9 − 18x + 8x²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(2x - 3)(4x - 3)}",
+      "fallback": "(2x − 3)(4x − 3)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "8x^2 - 12x - 6x + 9",
+          "fallback": "8x² − 18x + 9; ac = 72, b = −18 ⇒ −12, −6"
+        },
+        "reasonMath": {
+          "en": "Write in standard form.",
+          "ta": [
+            "திட்ட வடிவில் எழுதுக: ",
+            {
+              "latex": "8 x^{2} - 18 x + 9",
+              "fallback": "8x² − 18x + 9"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(2x - 3)(4x - 3)",
+          "fallback": "= 4x(2x − 3) − 3(2x − 3) = (2x − 3)(4x − 3)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            {
+              "latex": "\\left(2 x - 3\\right) \\left(4 x - 3\\right)",
+              "fallback": "(2x − 3)(4x − 3)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q2-iv",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "6x^2 + 16xy + 8y^2",
+          "fallback": "(iv) 6x² + 16xy + 8y²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "6x^2 + 16xy + 8y^2",
+          "fallback": "(iv) 6x² + 16xy + 8y²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{2(3x + 2y)(x + 2y)}",
+      "fallback": "2(3x + 2y)(x + 2y)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2(3x^2 + 8xy + 4y^2)",
+          "fallback": "= 2(3x² + 8xy + 4y²)"
+        },
+        "reasonMath": {
+          "en": [
+            "Take common factor ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " out first."
+          ],
+          "ta": [
+            "முதலில் ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "-ஐப் பொதுவாக எடுக்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "2(3x + 2y)(x + 2y)",
+          "fallback": "= 2(3x² + 6xy + 2xy + 4y²) = 2(3x + 2y)(x + 2y)"
+        },
+        "reasonMath": {
+          "en": "Factorise the quadratic.",
+          "ta": [
+            {
+              "latex": "2 \\left(3 x + 2 y\\right) \\left(x + 2 y\\right)",
+              "fallback": "2(3x + 2y)(x + 2y)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q2-v",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "12x^2 + 36x^2y + 27y^2x^2",
+          "fallback": "(v) 12x² + 36x²y + 27y²x²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "12x^2 + 36x^2y + 27y^2x^2",
+          "fallback": "(v) 12x² + 36x²y + 27y²x²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{3x^2(2 + 3y)^2}",
+      "fallback": "3x²(2 + 3y)²"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "3x^2(4 + 12y + 9y^2)",
+          "fallback": "= 3x²(4 + 12y + 9y²)"
+        },
+        "reasonMath": {
+          "en": [
+            "Take common factor ",
+            {
+              "latex": "3 x^{2}",
+              "fallback": "3x²"
+            },
+            " out first."
+          ],
+          "ta": [
+            "பொதுக் காரணி ",
+            {
+              "latex": "3 x^{2}",
+              "fallback": "3x²"
+            },
+            "-ஐ வெளியே எடுக்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3x^2(2 + 3y)^2",
+          "fallback": "= 3x²(2 + 3y)²"
+        },
+        "reasonMath": {
+          "en": [
+            "Recognize ",
+            {
+              "latex": "\\left(2 + 3 y\\right)^{2}",
+              "fallback": "(2 + 3y)²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "3 x^{2} \\left(2 + 3 y\\right)^{2}",
+              "fallback": "3x²(2 + 3y)²"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q2-vi",
+    "questionMath": {
+      "en": [
+        "2. Factorise the following:\n",
+        {
+          "latex": "(a + b)^2 + 9(a + b) + 18",
+          "fallback": "(vi) (a + b)² + 9(a + b) + 18",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "(a + b)^2 + 9(a + b) + 18",
+          "fallback": "(vi) (a + b)² + 9(a + b) + 18",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(a + b + 3)(a + b + 6)}",
+      "fallback": "(a + b + 3)(a + b + 6)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(u + 3)(u + 6)",
+          "fallback": "Let u = a + b: u² + 9u + 18 = (u + 3)(u + 6)"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "u = a + b",
+              "fallback": "u = a + b"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "u = a + b",
+              "fallback": "u = a + b"
+            },
+            " எனக் கொள்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(a + b + 3)(a + b + 6)",
+          "fallback": "= (a + b + 3)(a + b + 6)"
+        },
+        "reasonMath": {
+          "en": [
+            "Replace ",
+            {
+              "latex": "u",
+              "fallback": "u"
+            },
+            " with ",
+            {
+              "latex": "a + b",
+              "fallback": "a + b"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "u = a + b",
+              "fallback": "u = a + b"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q3-i",
+    "questionMath": {
+      "en": [
+        "3. Factorise the following:\n",
+        {
+          "latex": "(p - q)^2 - 6(p - q) - 16",
+          "fallback": "(i) (p − q)² − 6(p − q) − 16",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "(p - q)^2 - 6(p - q) - 16",
+          "fallback": "(i) (p − q)² − 6(p − q) − 16",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(p - q - 8)(p - q + 2)}",
+      "fallback": "(p − q − 8)(p − q + 2)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(u - 8)(u + 2)",
+          "fallback": "Let u = p − q: u² − 6u − 16 = (u − 8)(u + 2)"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "u = p - q",
+              "fallback": "u = p − q"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "u = p - q",
+              "fallback": "u = p − q"
+            },
+            " எனக் கொள்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(p - q - 8)(p - q + 2)",
+          "fallback": "= (p − q − 8)(p − q + 2)"
+        },
+        "reasonMath": {
+          "en": [
+            "Replace ",
+            {
+              "latex": "u",
+              "fallback": "u"
+            },
+            " with ",
+            {
+              "latex": "p - q",
+              "fallback": "p − q"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "u = p - q",
+              "fallback": "u = p − q"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q3-ii",
+    "questionMath": {
+      "en": [
+        "3. Factorise the following:\n",
+        {
+          "latex": "m^2 + 2mn - 24n^2",
+          "fallback": "(ii) m² + 2mn − 24n²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "m^2 + 2mn - 24n^2",
+          "fallback": "(ii) m² + 2mn − 24n²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(m + 6n)(m - 4n)}",
+      "fallback": "(m + 6n)(m − 4n)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "m^2 + 6mn - 4mn - 24n^2",
+          "fallback": "Sum = 2, Product = −24 ⇒ 6 and −4"
+        },
+        "reasonMath": {
+          "en": [
+            "Split ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "mn = 6mn ",
+            {
+              "latex": "- 4",
+              "fallback": "− 4"
+            },
+            "mn."
+          ],
+          "ta": [
+            "கூடுதல் ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            ", பெருக்கல் ",
+            {
+              "latex": "- 24 \\Rightarrow 6",
+              "fallback": "−24 ⇒ 6"
+            },
+            ", ",
+            {
+              "latex": "- 4",
+              "fallback": "−4"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(m + 6n)(m - 4n)",
+          "fallback": "= (m + 6n)(m − 4n)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            {
+              "latex": "\\left(m + 6 n\\right) \\left(m - 4 n\\right)",
+              "fallback": "(m + 6n)(m − 4n)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q3-iii",
+    "questionMath": {
+      "en": [
+        "3. Factorise the following:\n",
+        {
+          "latex": "\\sqrt{5}\\,a^2 + 2a - 3\\sqrt{5}",
+          "fallback": "(iii) √5 a² + 2a − 3√5",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "\\sqrt{5}\\,a^2 + 2a - 3\\sqrt{5}",
+          "fallback": "(iii) √5 a² + 2a − 3√5",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(a + \\sqrt{5})(\\sqrt{5}\\,a - 3)}",
+      "fallback": "(a + √5)(√5 a − 3)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\sqrt{5}\\,a^2 + 5a - 3a - 3\\sqrt{5}",
+          "fallback": "ac = (√5)(−3√5) = −15, b = 2 ⇒ 5 and −3"
+        },
+        "reasonMath": {
+          "en": [
+            "Split ",
+            {
+              "latex": "2 a = 5 a - 3 a",
+              "fallback": "2a = 5a − 3a"
+            },
+            "."
+          ],
+          "ta": [
+            "ac = −15, ",
+            {
+              "latex": "b = 2 \\Rightarrow 5",
+              "fallback": "b = 2 ⇒ 5"
+            },
+            ", ",
+            {
+              "latex": "- 3",
+              "fallback": "−3"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(a + \\sqrt{5})(\\sqrt{5}\\,a - 3)",
+          "fallback": "= √5 a(a + √5) − 3(a + √5) = (a + √5)(√5 a − 3)"
+        },
+        "reasonMath": {
+          "en": [
+            "Note ",
+            {
+              "latex": "5 = \\sqrt{5}",
+              "fallback": "5 = √5"
+            },
+            "·",
+            {
+              "latex": "\\sqrt{5}",
+              "fallback": "√5"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "5 = \\sqrt{5}",
+              "fallback": "5 = √5"
+            },
+            "·",
+            {
+              "latex": "\\sqrt{5}",
+              "fallback": "√5"
+            },
+            " என்பதால் ",
+            {
+              "latex": "\\left(a + \\sqrt{5}\\right) \\left(\\sqrt{5} a - 3\\right)",
+              "fallback": "(a + √5)(√5 a − 3)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q3-iv",
+    "questionMath": {
+      "en": [
+        "3. Factorise the following:\n",
+        {
+          "latex": "a^4 - 3a^2 + 2",
+          "fallback": "(iv) a⁴ − 3a² + 2",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "a^4 - 3a^2 + 2",
+          "fallback": "(iv) a⁴ − 3a² + 2",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(a + 1)(a - 1)(a^2 - 2)}",
+      "fallback": "(a + 1)(a − 1)(a² − 2)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(a^2 - 1)(a^2 - 2)",
+          "fallback": "Let u = a²: u² − 3u + 2 = (u − 1)(u − 2) = (a² − 1)(a² − 2)"
+        },
+        "reasonMath": {
+          "en": [
+            "Factor in terms of ",
+            {
+              "latex": "a^{2}",
+              "fallback": "a²"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "u = a^{2}",
+              "fallback": "u = a²"
+            },
+            " எனக் கொண்டு காரணிப்படுத்த."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(a + 1)(a - 1)(a^2 - 2)",
+          "fallback": "= (a + 1)(a − 1)(a² − 2)"
+        },
+        "reasonMath": {
+          "en": [
+            "Factor ",
+            {
+              "latex": "a^{2} - 1 = \\left(a + 1\\right) \\left(a - 1\\right)",
+              "fallback": "a² − 1 = (a + 1)(a − 1)"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a^{2} - 1 = \\left(a + 1\\right) \\left(a - 1\\right)",
+              "fallback": "a² − 1 = (a + 1)(a − 1)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q3-v",
+    "questionMath": {
+      "en": [
+        "3. Factorise the following:\n",
+        {
+          "latex": "8m^3 - 2m^2n - 15mn^2",
+          "fallback": "(v) 8m³ − 2m²n − 15mn²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "8m^3 - 2m^2n - 15mn^2",
+          "fallback": "(v) 8m³ − 2m²n − 15mn²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{m(4m + 5n)(2m - 3n)}",
+      "fallback": "m(4m + 5n)(2m − 3n)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "m(8m^2 - 12mn + 10mn - 15n^2)",
+          "fallback": "= m(8m² − 2mn − 15n²)"
+        },
+        "reasonMath": {
+          "en": [
+            "Take ",
+            {
+              "latex": "m",
+              "fallback": "m"
+            },
+            " common; ac = −120, ",
+            {
+              "latex": "b = - 2 \\Rightarrow - 12",
+              "fallback": "b = −2 ⇒ −12"
+            },
+            ", ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "m",
+              "fallback": "m"
+            },
+            " பொதுக் காரணி; ac = −120, ",
+            {
+              "latex": "b = - 2 \\Rightarrow - 12",
+              "fallback": "b = −2 ⇒ −12"
+            },
+            ", ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "m(4m + 5n)(2m - 3n)",
+          "fallback": "= m(4m + 5n)(2m − 3n)"
+        },
+        "reasonMath": {
+          "en": "Group and factor.",
+          "ta": [
+            {
+              "latex": "m \\left(4 m + 5 n\\right) \\left(2 m - 3 n\\right)",
+              "fallback": "m(4m + 5n)(2m − 3n)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.6-q3-vi",
+    "questionMath": {
+      "en": [
+        "3. Factorise the following:\n",
+        {
+          "latex": "\\dfrac{1}{x^2} + \\dfrac{1}{y^2} + \\dfrac{2}{xy}",
+          "fallback": "(vi) 1/x² + 1/y² + 2/(xy)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "3. பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "\\dfrac{1}{x^2} + \\dfrac{1}{y^2} + \\dfrac{2}{xy}",
+          "fallback": "(vi) 1/x² + 1/y² + 2/(xy)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\left(\\dfrac{1}{x} + \\dfrac{1}{y}\\right)^2}",
+      "fallback": "(1/x + 1/y)²"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\left(\\dfrac{1}{x}\\right)^2 + 2\\left(\\dfrac{1}{x}\\right)\\left(\\dfrac{1}{y}\\right) + \\left(\\dfrac{1}{y}\\right)^2",
+          "fallback": "(1/x)² + 2(1/x)(1/y) + (1/y)²"
+        },
+        "reasonMath": {
+          "en": [
+            "Recognize ",
+            {
+              "latex": "a^{2} + 2 ab + b^{2}",
+              "fallback": "a² + 2ab + b²"
+            },
+            " with ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ", ",
+            {
+              "latex": "y \\ne 0",
+              "fallback": "y ≠ 0"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle a = \\frac{1}{x}",
+              "fallback": "a = 1/x"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle b = \\frac{1}{y}",
+              "fallback": "b = 1/y"
+            },
+            " எனக் கொள்க (x, y ≠ 0)."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\left(\\dfrac{1}{x} + \\dfrac{1}{y}\\right)^2",
+          "fallback": "= (1/x + 1/y)²"
+        },
+        "reasonMath": {
+          "en": "Write as square.",
+          "ta": [
+            {
+              "latex": "\\displaystyle \\left(\\frac{1}{x} + \\frac{1}{y}\\right)^{2}",
+              "fallback": "(1/x + 1/y)²"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Find the quotient and remainder of the following.\n",
+        {
+          "latex": "(4x^3 + 6x^2 - 23x + 18) \\div (x + 3)",
+          "fallback": "(i) (4x³ + 6x² − 23x + 18) ÷ (x + 3)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வரும் பல்லுறுப்புக் கோவைகளை வகுத்து ஈவு மற்றும் மீதியைக் காண்க.\n",
+        {
+          "latex": "(4x^3 + 6x^2 - 23x + 18) \\div (x + 3)",
+          "fallback": "(i) (4x³ + 6x² − 23x + 18) ÷ (x + 3)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{q(x) = 4x^2 - 6x - 5,\\; r = 33}",
+      "fallback": "Quotient: 4x² − 6x − 5; Remainder: 33"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = -3;\\; [4,\\; 6,\\; -23,\\; 18]",
+          "fallback": "Divisor zero: x + 3 = 0 ⇒ x = −3; coefficients: 4, 6, −23, 18"
+        },
+        "reasonMath": {
+          "en": [
+            "Set up synthetic division with ",
+            {
+              "latex": "x = - 3",
+              "fallback": "x = −3"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = - 3",
+              "fallback": "x = −3"
+            },
+            " கொண்டு தொகுமுறை வகுத்தல் அமைக்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "4,\\; -6,\\; -5 \\mid 33",
+          "fallback": "4, (6 − 12) = −6, (−23 + 18) = −5, (18 + 15) = 33"
+        },
+        "reasonMath": {
+          "en": [
+            "Bring down ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            ", multiply by ",
+            {
+              "latex": "- 3",
+              "fallback": "−3"
+            },
+            " and add down."
+          ],
+          "ta": [
+            "படிப்படியாக ",
+            {
+              "latex": "- 3",
+              "fallback": "−3"
+            },
+            "-ஆல் பெருக்கிக் கூட்ட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "q(x) = 4x^2 - 6x - 5,\\; r = 33",
+          "fallback": "Quotient = 4x² − 6x − 5, Remainder = 33"
+        },
+        "reasonMath": {
+          "en": [
+            "Read quotient of degree ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " and remainder."
+          ],
+          "ta": "ஈவு = 4x² − 6x − 5, மீதி = 33."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Find the quotient and remainder of the following.\n",
+        {
+          "latex": "(8y^3 - 16y^2 + 16y - 15) \\div (2y - 1)",
+          "fallback": "(ii) (8y³ − 16y² + 16y − 15) ÷ (2y − 1)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வரும் பல்லுறுப்புக் கோவைகளை வகுத்து ஈவு மற்றும் மீதியைக் காண்க.\n",
+        {
+          "latex": "(8y^3 - 16y^2 + 16y - 15) \\div (2y - 1)",
+          "fallback": "(ii) (8y³ − 16y² + 16y − 15) ÷ (2y − 1)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{q(y) = 4y^2 - 6y + 5,\\; r = -10}",
+      "fallback": "Quotient: 4y² − 6y + 5; Remainder: −10"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y = \\dfrac{1}{2};\\; [8,\\; -16,\\; 16,\\; -15]",
+          "fallback": "2y − 1 = 0 ⇒ y = 1/2; coefficients: 8, −16, 16, −15"
+        },
+        "reasonMath": {
+          "en": [
+            "Use ",
+            {
+              "latex": "\\displaystyle y = \\frac{1}{2}",
+              "fallback": "y = 1/2"
+            },
+            " in synthetic division."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle y = \\frac{1}{2}",
+              "fallback": "y = 1/2"
+            },
+            " கொண்டு தொகுமுறை வகுத்தல் செய்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "8,\\; -12,\\; 10 \\mid -10",
+          "fallback": "8, (−16 + 4) = −12, (16 − 6) = 10, (−15 + 5) = −10"
+        },
+        "reasonMath": {
+          "en": [
+            "Row yields ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            ", ",
+            {
+              "latex": "- 12",
+              "fallback": "−12"
+            },
+            ", ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            " and remainder ",
+            {
+              "latex": "- 10",
+              "fallback": "−10"
+            },
+            "."
+          ],
+          "ta": [
+            "கெழுக்கள் ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            ", ",
+            {
+              "latex": "- 12",
+              "fallback": "−12"
+            },
+            ", ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            " மற்றும் மீதி ",
+            {
+              "latex": "- 10",
+              "fallback": "−10"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "q(y) = 4y^2 - 6y + 5,\\; r = -10",
+          "fallback": "Divide quotient by 2: 4y² − 6y + 5; Remainder = −10"
+        },
+        "reasonMath": {
+          "en": [
+            "Because divisor is ",
+            {
+              "latex": "\\displaystyle 2 \\left(y - \\frac{1}{2}\\right)",
+              "fallback": "2(y − 1/2)"
+            },
+            ", divide quotient by ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "."
+          ],
+          "ta": [
+            "வகுத்தி ",
+            {
+              "latex": "2 y - 1",
+              "fallback": "2y−1"
+            },
+            " என்பதால் ஈவை ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "-ஆல் வகுக்க ",
+            {
+              "latex": "4 y^{2} - 6 y + 5",
+              "fallback": "4y² − 6y + 5"
+            },
+            "; மீதி = −10."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Find the quotient and remainder of the following.\n",
+        {
+          "latex": "(8x^3 - 1) \\div (2x - 1)",
+          "fallback": "(iii) (8x³ − 1) ÷ (2x − 1)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வரும் பல்லுறுப்புக் கோவைகளை வகுத்து ஈவு மற்றும் மீதியைக் காண்க.\n",
+        {
+          "latex": "(8x^3 - 1) \\div (2x - 1)",
+          "fallback": "(iii) (8x³ − 1) ÷ (2x − 1)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{q(x) = 4x^2 + 2x + 1,\\; r = 0}",
+      "fallback": "Quotient: 4x² + 2x + 1; Remainder: 0"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(2x - 1)(4x^2 + 2x + 1)",
+          "fallback": "8x³ − 1 = (2x)³ − 1³ = (2x − 1)(4x² + 2x + 1)"
+        },
+        "reasonMath": {
+          "en": [
+            "Factor using ",
+            {
+              "latex": "a^{3} - b^{3}",
+              "fallback": "a³ − b³"
+            },
+            " or use synthetic division with [8, ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            ", ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            ", −1] at ",
+            {
+              "latex": "\\displaystyle x = \\frac{1}{2}",
+              "fallback": "x = 1/2"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a^{3} - b^{3}",
+              "fallback": "a³ − b³"
+            },
+            " முற்றொருமை அல்லது தொகுமுறை வகுத்தல் மூலம்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "q(x) = 4x^2 + 2x + 1,\\; r = 0",
+          "fallback": "Quotient = 4x² + 2x + 1, Remainder = 0"
+        },
+        "reasonMath": {
+          "en": "Exact division.",
+          "ta": "ஈவு = 4x² + 2x + 1, மீதி = 0."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q1-iv",
+    "questionMath": {
+      "en": [
+        "1. Find the quotient and remainder of the following.\n",
+        {
+          "latex": "(-18z + 14z^2 + 24z^3 + 18) \\div (3z + 4)",
+          "fallback": "(iv) (−18z + 14z² + 24z³ + 18) ÷ (3z + 4)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பின்வரும் பல்லுறுப்புக் கோவைகளை வகுத்து ஈவு மற்றும் மீதியைக் காண்க.\n",
+        {
+          "latex": "(-18z + 14z^2 + 24z^3 + 18) \\div (3z + 4)",
+          "fallback": "(iv) (−18z + 14z² + 24z³ + 18) ÷ (3z + 4)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{q(z) = 8z^2 - 6z + 2,\\; r = 10}",
+      "fallback": "Quotient: 8z² − 6z + 2; Remainder: 10"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "24z^3 + 14z^2 - 18z + 18,\\; z = -\\dfrac{4}{3}",
+          "fallback": "Standard form: 24z³ + 14z² − 18z + 18; z = −4/3"
+        },
+        "reasonMath": {
+          "en": "Order terms in descending powers first.",
+          "ta": [
+            "திட்ட வடிவில் எழுதி ",
+            {
+              "latex": "\\displaystyle z = \\frac{- 4}{3}",
+              "fallback": "z = −4/3"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "24,\\; -18,\\; 6 \\mid 10",
+          "fallback": "24, (14 − 32) = −18, (−18 + 24) = 6, (18 − 8) = 10"
+        },
+        "reasonMath": {
+          "en": [
+            "Synthetic division gives [24, ",
+            {
+              "latex": "- 18",
+              "fallback": "−18"
+            },
+            ", 6] and remainder ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            "."
+          ],
+          "ta": [
+            "தொகுமுறை வகுத்தலில் ",
+            {
+              "latex": "24",
+              "fallback": "24"
+            },
+            ", ",
+            {
+              "latex": "- 18",
+              "fallback": "−18"
+            },
+            ", ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            " மற்றும் மீதி ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "q(z) = 8z^2 - 6z + 2,\\; r = 10",
+          "fallback": "Divide quotient by 3: 8z² − 6z + 2; Remainder = 10"
+        },
+        "reasonMath": {
+          "en": [
+            "Divide quotient by ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " (from 3z + 4)."
+          ],
+          "ta": [
+            "ஈவை ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            "-ஆல் வகுக்க ",
+            {
+              "latex": "8 z^{2} - 6 z + 2",
+              "fallback": "8z² − 6z + 2"
+            },
+            "; மீதி = 10."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q2",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "\\text{Length} = \\dfrac{x^2 + 7x + 12}{x + 3}",
+          "fallback": "2. The area of a rectangle is x² + 7x + 12. If its breadth is (x + 3), then find its length.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\text{Length} = \\dfrac{x^2 + 7x + 12}{x + 3}",
+          "fallback": "2. செவ்வகத்தின் பரப்பு x² + 7x + 12. அதன் அகலம் (x + 3) எனில், அதன் நீளம் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x + 4}",
+      "fallback": "x + 4"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^2 + 7x + 12 = (x + 3)(x + 4)",
+          "fallback": "x² + 7x + 12 = (x + 3)(x + 4)"
+        },
+        "reasonMath": {
+          "en": "Factorise the area.",
+          "ta": "பரப்பைக் காரணிப்படுத்தவும்."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Length} = x + 4",
+          "fallback": "Length = Area ÷ Breadth = x + 4 (for x ≠ −3)"
+        },
+        "reasonMath": {
+          "en": [
+            "Divide by ",
+            {
+              "latex": "\\left(x + 3\\right)",
+              "fallback": "(x + 3)"
+            },
+            "."
+          ],
+          "ta": "நீளம் = (x + 4) (x ≠ −3)."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q3",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "\\text{Height} = \\dfrac{25x^2 - 16}{5x + 4}",
+          "fallback": "3. The base of a parallelogram is (5x + 4). Find its height, if the area is 25x² − 16.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\text{Height} = \\dfrac{25x^2 - 16}{5x + 4}",
+          "fallback": "3. இணைகரத்தின் பரப்பு 25x² − 16. அதன் அடிப்பக்கம் (5x + 4) எனில், அதன் உயரம் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{5x - 4}",
+      "fallback": "5x − 4"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(5x + 4)(5x - 4)",
+          "fallback": "25x² − 16 = (5x)² − 4² = (5x + 4)(5x − 4)"
+        },
+        "reasonMath": {
+          "en": "Factorise using difference of squares.",
+          "ta": [
+            {
+              "latex": "a^{2} - b^{2}",
+              "fallback": "a² − b²"
+            },
+            " மூலம் காரணிப்படுத்தவும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Height} = 5x - 4",
+          "fallback": "Height = Area ÷ Base = 5x − 4 (for x ≠ −4/5)"
+        },
+        "reasonMath": {
+          "en": [
+            "Divide by ",
+            {
+              "latex": "\\left(5 x + 4\\right)",
+              "fallback": "(5x + 4)"
+            },
+            "."
+          ],
+          "ta": "உயரம் = 5x − 4."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q4",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "\\text{Mean} = \\dfrac{x^3 + 125}{x + 5}",
+          "fallback": "4. The sum of (x + 5) observations is (x³ + 125). Find the mean of the observations.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\text{Mean} = \\dfrac{x^3 + 125}{x + 5}",
+          "fallback": "4. (x + 5) விவரங்களின் கூடுதல் (x³ + 125) எனில், விவரங்களின் சராசரியைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x^2 - 5x + 25}",
+      "fallback": "x² − 5x + 25"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(x + 5)(x^2 - 5x + 25)",
+          "fallback": "x³ + 125 = x³ + 5³ = (x + 5)(x² − 5x + 25)"
+        },
+        "reasonMath": {
+          "en": [
+            "Factorise using ",
+            {
+              "latex": "a^{3} + b^{3}",
+              "fallback": "a³ + b³"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "a^{3} + b^{3}",
+              "fallback": "a³ + b³"
+            },
+            " முற்றொருமை மூலம் காரணிப்படுத்தவும்."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Mean} = x^2 - 5x + 25",
+          "fallback": "Mean = (x³ + 125)/(x + 5) = x² − 5x + 25 (for x ≠ −5)"
+        },
+        "reasonMath": {
+          "en": [
+            "Divide sum by count ",
+            {
+              "latex": "\\left(x + 5\\right)",
+              "fallback": "(x + 5)"
+            },
+            "."
+          ],
+          "ta": "சராசரி = x² − 5x + 25."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q5-i",
+    "questionMath": {
+      "en": [
+        "5. Find the quotient and remainder for the following using synthetic division:\n",
+        {
+          "latex": "(x^3 + x^2 - 7x - 3) \\div (x - 3)",
+          "fallback": "(i) (x³ + x² − 7x − 3) ÷ (x − 3)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "5. தொகுமுறை வகுத்தலைப் பயன்படுத்தி ஈவு மற்றும் மீதி காண்க:\n",
+        {
+          "latex": "(x^3 + x^2 - 7x - 3) \\div (x - 3)",
+          "fallback": "(i) (x³ + x² − 7x − 3) ÷ (x − 3)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{q(x) = x^2 + 4x + 5,\\; r = 12}",
+      "fallback": "Quotient: x² + 4x + 5; Remainder: 12"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = 3;\\; [1,\\; 1,\\; -7,\\; -3]",
+          "fallback": "x − 3 = 0 ⇒ x = 3; coefficients: 1, 1, −7, −3"
+        },
+        "reasonMath": {
+          "en": [
+            "Set up synthetic division with ",
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            " கொண்டு தொகுமுறை வகுத்தல் அமைக்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "1,\\; 4,\\; 5 \\mid 12",
+          "fallback": "1, (1 + 3) = 4, (−7 + 12) = 5, (−3 + 15) = 12"
+        },
+        "reasonMath": {
+          "en": [
+            "Multiply by ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " and add across."
+          ],
+          "ta": [
+            "படிப்படியாக ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            "-ஆல் பெருக்கிக் கூட்ட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "q(x) = x^2 + 4x + 5,\\; r = 12",
+          "fallback": "Quotient = x² + 4x + 5, Remainder = 12"
+        },
+        "reasonMath": {
+          "en": "Read quotient and remainder.",
+          "ta": "ஈவு = x² + 4x + 5, மீதி = 12."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q5-ii",
+    "questionMath": {
+      "en": [
+        "5. Find the quotient and remainder for the following using synthetic division:\n",
+        {
+          "latex": "(x^3 + 2x^2 - x - 4) \\div (x + 2)",
+          "fallback": "(ii) (x³ + 2x² − x − 4) ÷ (x + 2)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "5. தொகுமுறை வகுத்தலைப் பயன்படுத்தி ஈவு மற்றும் மீதி காண்க:\n",
+        {
+          "latex": "(x^3 + 2x^2 - x - 4) \\div (x + 2)",
+          "fallback": "(ii) (x³ + 2x² − x − 4) ÷ (x + 2)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{q(x) = x^2 - 1,\\; r = -2}",
+      "fallback": "Quotient: x² − 1; Remainder: −2"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = -2;\\; [1,\\; 2,\\; -1,\\; -4]",
+          "fallback": "x + 2 = 0 ⇒ x = −2; coefficients: 1, 2, −1, −4"
+        },
+        "reasonMath": {
+          "en": [
+            "Set up synthetic division with ",
+            {
+              "latex": "x = - 2",
+              "fallback": "x = −2"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = - 2",
+              "fallback": "x = −2"
+            },
+            " கொண்டு தொகுமுறை வகுத்தல் அமைக்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "1,\\; 0,\\; -1 \\mid -2",
+          "fallback": "1, (2 − 2) = 0, (−1 + 0) = −1, (−4 + 2) = −2"
+        },
+        "reasonMath": {
+          "en": "Compute synthetic row.",
+          "ta": [
+            "கெழுக்கள் ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            ", ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            ", ",
+            {
+              "latex": "- 1",
+              "fallback": "−1"
+            },
+            " மற்றும் மீதி ",
+            {
+              "latex": "- 2",
+              "fallback": "−2"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "q(x) = x^2 - 1,\\; r = -2",
+          "fallback": "Quotient = x² − 1, Remainder = −2"
+        },
+        "reasonMath": {
+          "en": "Read quotient and remainder.",
+          "ta": "ஈவு = x² − 1, மீதி = −2."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q5-iii",
+    "questionMath": {
+      "en": [
+        "5. Find the quotient and remainder for the following using synthetic division:\n",
+        {
+          "latex": "(8x^4 - 2x^2 + 6x + 5) \\div (4x + 1)",
+          "fallback": "(iii) (8x⁴ − 2x² + 6x + 5) ÷ (4x + 1)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "5. தொகுமுறை வகுத்தலைப் பயன்படுத்தி ஈவு மற்றும் மீதி காண்க:\n",
+        {
+          "latex": "(8x^4 - 2x^2 + 6x + 5) \\div (4x + 1)",
+          "fallback": "(iii) (8x⁴ − 2x² + 6x + 5) ÷ (4x + 1)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{q(x) = 2x^3 - \\dfrac{1}{2}x^2 - \\dfrac{3}{8}x + \\dfrac{51}{32},\\; r = \\dfrac{109}{32}}",
+      "fallback": "Quotient: 2x³ − (1/2)x² − (3/8)x + 51/32; Remainder: 109/32"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = -\\dfrac{1}{4};\\; [8,\\; 0,\\; -2,\\; 6,\\; 5]",
+          "fallback": "4x + 1 = 0 ⇒ x = −1/4; coefficients: 8, 0, −2, 6, 5"
+        },
+        "reasonMath": {
+          "en": [
+            "Insert ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            " for missing ",
+            {
+              "latex": "x^{3}",
+              "fallback": "x³"
+            },
+            " term."
+          ],
+          "ta": [
+            {
+              "latex": "x^{3}",
+              "fallback": "x³"
+            },
+            " உறுப்பு இல்லாததால் ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            " சேர்க்க: [8, ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            ", ",
+            {
+              "latex": "- 2",
+              "fallback": "−2"
+            },
+            ", ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            ", 5]."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "8,\\; -2,\\; -\\dfrac{3}{2},\\; \\dfrac{51}{8} \\mid \\dfrac{109}{32}",
+          "fallback": "8, −2, −3/2, 51/8, remainder = 5 − 51/32 = 109/32"
+        },
+        "reasonMath": {
+          "en": [
+            "Run synthetic division with ",
+            {
+              "latex": "\\displaystyle \\frac{- 1}{4}",
+              "fallback": "−1/4"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle \\frac{- 1}{4}",
+              "fallback": "−1/4"
+            },
+            " கொண்டு தொகுமுறை வகுத்தல் செய்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "q(x) = 2x^3 - \\dfrac{1}{2}x^2 - \\dfrac{3}{8}x + \\dfrac{51}{32},\\; r = \\dfrac{109}{32}",
+          "fallback": "Divide quotient by 4: 2x³ − (1/2)x² − (3/8)x + 51/32; Remainder = 109/32"
+        },
+        "reasonMath": {
+          "en": [
+            "Divide quotient by ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " (not the remainder)."
+          ],
+          "ta": [
+            "ஈவை மட்டும் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            "-ஆல் வகுக்கவும்; மீதி = 109/32."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q6",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "(8x^4 - 2x^2 + 6x - 7) \\div (2x + 1)",
+          "fallback": "6. If the quotient obtained on dividing (8x⁴ − 2x² + 6x − 7) by (2x + 1) is (4x³ + px² − qx + 3), then find p, q and also the remainder.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "(8x^4 - 2x^2 + 6x - 7) \\div (2x + 1)",
+          "fallback": "6. (8x⁴ − 2x² + 6x − 7)-ஐ (2x + 1)-ஆல் வகுக்கக் கிடைக்கும் ஈவு (4x³ + px² − qx + 3) எனில், p, q மற்றும் மீதியைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{p = -2,\\; q = 0,\\; r = -10}",
+      "fallback": "p = −2, q = 0; Remainder = −10"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = -\\dfrac{1}{2};\\; [8,\\; 0,\\; -2,\\; 6,\\; -7]",
+          "fallback": "2x + 1 = 0 ⇒ x = −1/2; coefficients: 8, 0, −2, 6, −7"
+        },
+        "reasonMath": {
+          "en": [
+            "Include ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            " for missing ",
+            {
+              "latex": "x^{3}",
+              "fallback": "x³"
+            },
+            "."
+          ],
+          "ta": [
+            "கெழுக்கள் ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            ", ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            ", ",
+            {
+              "latex": "- 2",
+              "fallback": "−2"
+            },
+            ", ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            ", ",
+            {
+              "latex": "- 7",
+              "fallback": "−7"
+            },
+            "; ",
+            {
+              "latex": "\\displaystyle x = \\frac{- 1}{2}",
+              "fallback": "x = −1/2"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "4x^3 - 2x^2 + 3,\\; r = -10",
+          "fallback": "8, −4, 0, 6 | −10 ⇒ quotient ÷ 2 = 4x³ − 2x² + 0x + 3, r = −10"
+        },
+        "reasonMath": {
+          "en": [
+            "Divide synthetic quotient [8, ",
+            {
+              "latex": "- 4",
+              "fallback": "−4"
+            },
+            ", ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            ", 6] by ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "."
+          ],
+          "ta": [
+            "ஈவை ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "-ஆல் வகுக்க ",
+            {
+              "latex": "4 x^{3} - 2 x^{2} + 3",
+              "fallback": "4x³ − 2x² + 3"
+            },
+            "; மீதி = −10."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p = -2,\\; q = 0,\\; r = -10",
+          "fallback": "Compare with 4x³ + px² − qx + 3 ⇒ p = −2, q = 0, remainder = −10"
+        },
+        "reasonMath": {
+          "en": "Match coefficients.",
+          "ta": [
+            "ஒப்பிட ",
+            {
+              "latex": "p = - 2",
+              "fallback": "p = −2"
+            },
+            ", ",
+            {
+              "latex": "q = 0",
+              "fallback": "q = 0"
+            },
+            ", மீதி = −10."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.7-q7",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "(3x^3 + 11x^2 + 34x + 106) \\div (x - 3)",
+          "fallback": "7. If the quotient obtained on dividing 3x³ + 11x² + 34x + 106 by x − 3 is 3x² + ax + b, then find a, b and also the remainder.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "(3x^3 + 11x^2 + 34x + 106) \\div (x - 3)",
+          "fallback": "7. 3x³ + 11x² + 34x + 106-ஐ x − 3-ஆல் வகுக்கக் கிடைக்கும் ஈவு 3x² + ax + b எனில், a, b மற்றும் மீதி ஆகியவற்றைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{a = 20,\\; b = 94,\\; r = 388}",
+      "fallback": "a = 20, b = 94; Remainder = 388"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = 3;\\; [3,\\; 11,\\; 34,\\; 106]",
+          "fallback": "x − 3 = 0 ⇒ x = 3; coefficients: 3, 11, 34, 106"
+        },
+        "reasonMath": {
+          "en": [
+            "Run synthetic division with ",
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            " கொண்டு தொகுமுறை வகுத்தல் செய்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3,\\; 20,\\; 94 \\mid 388",
+          "fallback": "3, (11 + 9) = 20, (34 + 60) = 94, (106 + 282) = 388"
+        },
+        "reasonMath": {
+          "en": "Compute each cell.",
+          "ta": [
+            "கெழுக்கள் ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            ", ",
+            {
+              "latex": "20",
+              "fallback": "20"
+            },
+            ", ",
+            {
+              "latex": "94",
+              "fallback": "94"
+            },
+            " மற்றும் மீதி ",
+            {
+              "latex": "388",
+              "fallback": "388"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "a = 20,\\; b = 94,\\; r = 388",
+          "fallback": "Compare with 3x² + ax + b ⇒ a = 20, b = 94, remainder = 388"
+        },
+        "reasonMath": {
+          "en": "Match coefficients.",
+          "ta": [
+            {
+              "latex": "a = 20",
+              "fallback": "a = 20"
+            },
+            ", ",
+            {
+              "latex": "b = 94",
+              "fallback": "b = 94"
+            },
+            ", மீதி = 388."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.8-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Factorise each of the following polynomials using synthetic division:\n",
+        {
+          "latex": "x^3 - 3x^2 - 10x + 24",
+          "fallback": "(i) x³ − 3x² − 10x + 24",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. தொகுமுறை வகுத்தல் முறையினைப் பயன்படுத்திப் பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "x^3 - 3x^2 - 10x + 24",
+          "fallback": "(i) x³ − 3x² − 10x + 24",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x - 2)(x - 4)(x + 3)}",
+      "fallback": "(x − 2)(x − 4)(x + 3)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(2) = 0 \\implies (x - 2) \\text{ is a factor}",
+          "fallback": "p(2) = 8 − 12 − 20 + 24 = 0 ⇒ (x − 2) is a factor"
+        },
+        "reasonMath": {
+          "en": [
+            "Test ",
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            " எனப் பிரதியிட ",
+            {
+              "latex": "p \\left(2\\right) = 0",
+              "fallback": "p(2) = 0"
+            },
+            "; எனவே ",
+            {
+              "latex": "\\left(x - 2\\right)",
+              "fallback": "(x − 2)"
+            },
+            " காரணி."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x^2 - x - 12 = (x - 4)(x + 3)",
+          "fallback": "Synthetic division by x = 2 gives quotient x² − x − 12"
+        },
+        "reasonMath": {
+          "en": [
+            "Divide [1, ",
+            {
+              "latex": "- 3",
+              "fallback": "−3"
+            },
+            ", ",
+            {
+              "latex": "- 10",
+              "fallback": "−10"
+            },
+            ", 24] by ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " → [1, ",
+            {
+              "latex": "- 1",
+              "fallback": "−1"
+            },
+            ", −12]."
+          ],
+          "ta": [
+            "தொகுமுறை வகுத்தலால் ஈவு ",
+            {
+              "latex": "x^{2} - x - 12",
+              "fallback": "x² − x − 12"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x - 2)(x - 4)(x + 3)",
+          "fallback": "= (x − 2)(x − 4)(x + 3)"
+        },
+        "reasonMath": {
+          "en": "Combine all three linear factors.",
+          "ta": [
+            {
+              "latex": "\\left(x - 2\\right) \\left(x - 4\\right) \\left(x + 3\\right)",
+              "fallback": "(x − 2)(x − 4)(x + 3)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.8-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Factorise each of the following polynomials using synthetic division:\n",
+        {
+          "latex": "2x^3 - 3x^2 - 3x + 2",
+          "fallback": "(ii) 2x³ − 3x² − 3x + 2",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. தொகுமுறை வகுத்தல் முறையினைப் பயன்படுத்திப் பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "2x^3 - 3x^2 - 3x + 2",
+          "fallback": "(ii) 2x³ − 3x² − 3x + 2",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x + 1)(x - 2)(2x - 1)}",
+      "fallback": "(x + 1)(x − 2)(2x − 1)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(-1) = 0 \\implies (x + 1) \\text{ is a factor}",
+          "fallback": "p(−1) = −2 − 3 + 3 + 2 = 0 ⇒ (x + 1) is a factor"
+        },
+        "reasonMath": {
+          "en": "Sum of even-power coeffs = −3 + 2 = −1; odd-power = 2 − 3 = −1.",
+          "ta": [
+            {
+              "latex": "p \\left(- 1\\right) = 0",
+              "fallback": "p(−1) = 0"
+            },
+            " என்பதால் ",
+            {
+              "latex": "\\left(x + 1\\right)",
+              "fallback": "(x + 1)"
+            },
+            " ஒரு காரணி."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "2x^2 - 5x + 2 = (x - 2)(2x - 1)",
+          "fallback": "Synthetic division by −1 gives 2x² − 5x + 2"
+        },
+        "reasonMath": {
+          "en": [
+            "Factorise ",
+            {
+              "latex": "2 x^{2} - 5 x + 2 = \\left(x - 2\\right) \\left(2 x - 1\\right)",
+              "fallback": "2x² − 5x + 2 = (x − 2)(2x − 1)"
+            },
+            "."
+          ],
+          "ta": [
+            "ஈவு ",
+            {
+              "latex": "2 x^{2} - 5 x + 2 = \\left(x - 2\\right) \\left(2 x - 1\\right)",
+              "fallback": "2x² − 5x + 2 = (x − 2)(2x − 1)"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x + 1)(x - 2)(2x - 1)",
+          "fallback": "= (x + 1)(x − 2)(2x − 1)"
+        },
+        "reasonMath": {
+          "en": "Write product of all factors.",
+          "ta": [
+            {
+              "latex": "\\left(x + 1\\right) \\left(x - 2\\right) \\left(2 x - 1\\right)",
+              "fallback": "(x + 1)(x − 2)(2x − 1)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.8-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Factorise each of the following polynomials using synthetic division:\n",
+        {
+          "latex": "4x^3 - 7x + 3",
+          "fallback": "(iii) −7x + 3 + 4x³",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. தொகுமுறை வகுத்தல் முறையினைப் பயன்படுத்திப் பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "4x^3 - 7x + 3",
+          "fallback": "(iii) −7x + 3 + 4x³",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x - 1)(2x - 1)(2x + 3)}",
+      "fallback": "(x − 1)(2x − 1)(2x + 3)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "4 + 0 - 7 + 3 = 0 \\implies (x - 1)",
+          "fallback": "Standard form: 4x³ + 0x² − 7x + 3; sum of coeffs = 4 − 7 + 3 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "So ",
+            {
+              "latex": "\\left(x - 1\\right)",
+              "fallback": "(x − 1)"
+            },
+            " is a factor."
+          ],
+          "ta": [
+            "கெழுக்களின் கூடுதல் ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            " என்பதால் ",
+            {
+              "latex": "\\left(x - 1\\right)",
+              "fallback": "(x − 1)"
+            },
+            " காரணி."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "4x^2 + 4x - 3 = (2x - 1)(2x + 3)",
+          "fallback": "Synthetic division by 1 gives 4x² + 4x − 3"
+        },
+        "reasonMath": {
+          "en": [
+            "Factorise ",
+            {
+              "latex": "4 x^{2} + 4 x - 3 = \\left(2 x - 1\\right) \\left(2 x + 3\\right)",
+              "fallback": "4x² + 4x − 3 = (2x − 1)(2x + 3)"
+            },
+            "."
+          ],
+          "ta": [
+            "ஈவு ",
+            {
+              "latex": "4 x^{2} + 4 x - 3 = \\left(2 x - 1\\right) \\left(2 x + 3\\right)",
+              "fallback": "4x² + 4x − 3 = (2x − 1)(2x + 3)"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x - 1)(2x - 1)(2x + 3)",
+          "fallback": "= (x − 1)(2x − 1)(2x + 3)"
+        },
+        "reasonMath": {
+          "en": "Complete factorisation.",
+          "ta": [
+            {
+              "latex": "\\left(x - 1\\right) \\left(2 x - 1\\right) \\left(2 x + 3\\right)",
+              "fallback": "(x − 1)(2x − 1)(2x + 3)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.8-q1-iv",
+    "questionMath": {
+      "en": [
+        "1. Factorise each of the following polynomials using synthetic division:\n",
+        {
+          "latex": "x^3 + x^2 - 14x - 24",
+          "fallback": "(iv) x³ + x² − 14x − 24",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. தொகுமுறை வகுத்தல் முறையினைப் பயன்படுத்திப் பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "x^3 + x^2 - 14x - 24",
+          "fallback": "(iv) x³ + x² − 14x − 24",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x + 2)(x + 3)(x - 4)}",
+      "fallback": "(x + 2)(x + 3)(x − 4)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(-2) = 0 \\implies (x + 2)",
+          "fallback": "p(−2) = −8 + 4 + 28 − 24 = 0 ⇒ (x + 2) is a factor"
+        },
+        "reasonMath": {
+          "en": [
+            "Test ",
+            {
+              "latex": "x = - 2",
+              "fallback": "x = −2"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(- 2\\right) = 0",
+              "fallback": "p(−2) = 0"
+            },
+            " என்பதால் ",
+            {
+              "latex": "\\left(x + 2\\right)",
+              "fallback": "(x + 2)"
+            },
+            " ஒரு காரணி."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x^2 - x - 12 = (x - 4)(x + 3)",
+          "fallback": "Synthetic division by −2 gives x² − x − 12 = (x − 4)(x + 3)"
+        },
+        "reasonMath": {
+          "en": "Factorise the quadratic quotient.",
+          "ta": [
+            "ஈவு ",
+            {
+              "latex": "x^{2} - x - 12 = \\left(x - 4\\right) \\left(x + 3\\right)",
+              "fallback": "x² − x − 12 = (x − 4)(x + 3)"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x + 2)(x + 3)(x - 4)",
+          "fallback": "= (x + 2)(x + 3)(x − 4)"
+        },
+        "reasonMath": {
+          "en": "Write all factors.",
+          "ta": [
+            {
+              "latex": "\\left(x + 2\\right) \\left(x + 3\\right) \\left(x - 4\\right)",
+              "fallback": "(x + 2)(x + 3)(x − 4)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.8-q1-v",
+    "questionMath": {
+      "en": [
+        "1. Factorise each of the following polynomials using synthetic division:\n",
+        {
+          "latex": "x^3 - 7x + 6",
+          "fallback": "(v) x³ − 7x + 6",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. தொகுமுறை வகுத்தல் முறையினைப் பயன்படுத்திப் பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "x^3 - 7x + 6",
+          "fallback": "(v) x³ − 7x + 6",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x - 1)(x - 2)(x + 3)}",
+      "fallback": "(x − 1)(x − 2)(x + 3)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(1) = 0 \\implies (x - 1)",
+          "fallback": "1 + 0 − 7 + 6 = 0 ⇒ (x − 1) is a factor"
+        },
+        "reasonMath": {
+          "en": [
+            "Standard form ",
+            {
+              "latex": "x^{3} + 0 x^{2} - 7 x + 6",
+              "fallback": "x³ + 0x² − 7x + 6"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x^{3} + 0 x^{2} - 7 x + 6",
+              "fallback": "x³ + 0x² − 7x + 6"
+            },
+            "; கெழுக்களின் கூடுதல் ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x^2 + x - 6 = (x - 2)(x + 3)",
+          "fallback": "Synthetic division by 1 gives x² + x − 6 = (x − 2)(x + 3)"
+        },
+        "reasonMath": {
+          "en": "Factorise the quadratic.",
+          "ta": [
+            "ஈவு ",
+            {
+              "latex": "x^{2} + x - 6 = \\left(x - 2\\right) \\left(x + 3\\right)",
+              "fallback": "x² + x − 6 = (x − 2)(x + 3)"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x - 1)(x - 2)(x + 3)",
+          "fallback": "= (x − 1)(x − 2)(x + 3)"
+        },
+        "reasonMath": {
+          "en": "Write all factors.",
+          "ta": [
+            {
+              "latex": "\\left(x - 1\\right) \\left(x - 2\\right) \\left(x + 3\\right)",
+              "fallback": "(x − 1)(x − 2)(x + 3)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.8-q1-vi",
+    "questionMath": {
+      "en": [
+        "1. Factorise each of the following polynomials using synthetic division:\n",
+        {
+          "latex": "x^3 - 10x^2 - x + 10",
+          "fallback": "(vi) x³ − 10x² − x + 10",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. தொகுமுறை வகுத்தல் முறையினைப் பயன்படுத்திப் பின்வருவனவற்றைக் காரணிப்படுத்துக:\n",
+        {
+          "latex": "x^3 - 10x^2 - x + 10",
+          "fallback": "(vi) x³ − 10x² − x + 10",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x - 1)(x + 1)(x - 10)}",
+      "fallback": "(x − 1)(x + 1)(x − 10)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(1) = 0 \\implies (x - 1)",
+          "fallback": "1 − 10 − 1 + 10 = 0 ⇒ (x − 1) is a factor"
+        },
+        "reasonMath": {
+          "en": [
+            "Sum of coefficients is ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            "."
+          ],
+          "ta": [
+            "கெழுக்களின் கூடுதல் ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            " என்பதால் ",
+            {
+              "latex": "\\left(x - 1\\right)",
+              "fallback": "(x − 1)"
+            },
+            " காரணி."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x^2 - 9x - 10 = (x + 1)(x - 10)",
+          "fallback": "Synthetic division by 1 gives x² − 9x − 10 = (x + 1)(x − 10)"
+        },
+        "reasonMath": {
+          "en": [
+            "Factorise ",
+            {
+              "latex": "x^{2} - 9 x - 10",
+              "fallback": "x² − 9x − 10"
+            },
+            "."
+          ],
+          "ta": [
+            "ஈவு ",
+            {
+              "latex": "x^{2} - 9 x - 10 = \\left(x + 1\\right) \\left(x - 10\\right)",
+              "fallback": "x² − 9x − 10 = (x + 1)(x − 10)"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x - 1)(x + 1)(x - 10)",
+          "fallback": "= (x − 1)(x + 1)(x − 10)"
+        },
+        "reasonMath": {
+          "en": "Write all factors.",
+          "ta": [
+            {
+              "latex": "\\left(x - 1\\right) \\left(x + 1\\right) \\left(x - 10\\right)",
+              "fallback": "(x − 1)(x + 1)(x − 10)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Find the GCD for the following:\n",
+        {
+          "latex": "p^5,\\; p^{11},\\; p^9",
+          "fallback": "(i) p⁵, p¹¹, p⁹",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "p^5,\\; p^{11},\\; p^9",
+          "fallback": "(i) p⁵, p¹¹, p⁹",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{p^5}",
+      "fallback": "p⁵"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\min(5, 11, 9) = 5",
+          "fallback": "Common base is p; exponents are 5, 11, 9"
+        },
+        "reasonMath": {
+          "en": "GCD takes the lowest common power.",
+          "ta": [
+            "பொது அடிமானம் ",
+            {
+              "latex": "p",
+              "fallback": "p"
+            },
+            "; மிகக் குறைந்த அடுக்கு ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p^5",
+          "fallback": "GCD = p⁵"
+        },
+        "reasonMath": {
+          "en": "Result.",
+          "ta": "மீ.பொ.வ = p⁵."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Find the GCD for the following:\n",
+        {
+          "latex": "4x^3,\\; y^3,\\; z^3",
+          "fallback": "(ii) 4x³, y³, z³",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "4x^3,\\; y^3,\\; z^3",
+          "fallback": "(ii) 4x³, y³, z³",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{1}",
+      "fallback": "1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{No common factor other than } 1",
+          "fallback": "No common numerical or variable factor across all three"
+        },
+        "reasonMath": {
+          "en": [
+            "GCD(4, ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            ", 1) = 1 and ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ", ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            ", ",
+            {
+              "latex": "z",
+              "fallback": "z"
+            },
+            " are distinct."
+          ],
+          "ta": "மூன்றிற்கும் பொதுக் காரணி இல்லை."
+        }
+      },
+      {
+        "math": {
+          "latex": "1",
+          "fallback": "GCD = 1"
+        },
+        "reasonMath": {
+          "en": "Result.",
+          "ta": "மீ.பொ.வ = 1."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Find the GCD for the following:\n",
+        {
+          "latex": "9a^2b^2c^3,\\; 15a^3b^2c^4",
+          "fallback": "(iii) 9a²b²c³, 15a³b²c⁴",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "9a^2b^2c^3,\\; 15a^3b^2c^4",
+          "fallback": "(iii) 9a²b²c³, 15a³b²c⁴",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{3a^2b^2c^3}",
+      "fallback": "3a²b²c³"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\gcd(9, 15) = 3",
+          "fallback": "GCD(9, 15) = 3"
+        },
+        "reasonMath": {
+          "en": "Numerical GCD.",
+          "ta": [
+            {
+              "latex": "9",
+              "fallback": "9"
+            },
+            " மற்றும் ",
+            {
+              "latex": "15",
+              "fallback": "15"
+            },
+            "-இன் மீ.பொ.வ ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3a^2b^2c^3",
+          "fallback": "Lowest powers: a², b², c³ ⇒ GCD = 3a²b²c³"
+        },
+        "reasonMath": {
+          "en": [
+            "Multiply by lowest powers of a, ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            ", ",
+            {
+              "latex": "c",
+              "fallback": "c"
+            },
+            "."
+          ],
+          "ta": [
+            "குறைந்த அடுக்குகளைப் பெருக்க ",
+            {
+              "latex": "3 a^{2} b^{2} c^{3}",
+              "fallback": "3a²b²c³"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q1-iv",
+    "questionMath": {
+      "en": [
+        "1. Find the GCD for the following:\n",
+        {
+          "latex": "64x^8,\\; 240x^6",
+          "fallback": "(iv) 64x⁸, 240x⁶",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "64x^8,\\; 240x^6",
+          "fallback": "(iv) 64x⁸, 240x⁶",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{16x^6}",
+      "fallback": "16x⁶"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\gcd(64, 240) = 16",
+          "fallback": "64 = 16 × 4, 240 = 16 × 15 ⇒ GCD(64, 240) = 16"
+        },
+        "reasonMath": {
+          "en": "Find numerical GCD.",
+          "ta": [
+            {
+              "latex": "64",
+              "fallback": "64"
+            },
+            " மற்றும் ",
+            {
+              "latex": "240",
+              "fallback": "240"
+            },
+            "-இன் மீ.பொ.வ ",
+            {
+              "latex": "16",
+              "fallback": "16"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "16x^6",
+          "fallback": "Lowest power of x is x⁶ ⇒ GCD = 16x⁶"
+        },
+        "reasonMath": {
+          "en": [
+            "Combine with ",
+            {
+              "latex": "x^{6}",
+              "fallback": "x⁶"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-இன் குறைந்த அடுக்கு ",
+            {
+              "latex": "x^{6}",
+              "fallback": "x⁶"
+            },
+            "; மீ.பொ.வ = 16x⁶."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q1-v",
+    "questionMath": {
+      "en": [
+        "1. Find the GCD for the following:\n",
+        {
+          "latex": "ab^2c^3,\\; a^2b^3c,\\; a^3bc^2",
+          "fallback": "(v) ab²c³, a²b³c, a³bc²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "ab^2c^3,\\; a^2b^3c,\\; a^3bc^2",
+          "fallback": "(v) ab²c³, a²b³c, a³bc²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{abc}",
+      "fallback": "abc"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a^1 b^1 c^1",
+          "fallback": "min power of a = 1, b = 1, c = 1"
+        },
+        "reasonMath": {
+          "en": "Take lowest exponent of each variable.",
+          "ta": [
+            "a, ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            ", ",
+            {
+              "latex": "c",
+              "fallback": "c"
+            },
+            " ஆகியவற்றின் குறைந்த அடுக்கு ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "abc",
+          "fallback": "GCD = abc"
+        },
+        "reasonMath": {
+          "en": "Result.",
+          "ta": "மீ.பொ.வ = abc."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q1-vi",
+    "questionMath": {
+      "en": [
+        "1. Find the GCD for the following:\n",
+        {
+          "latex": "35x^5y^3z^4,\\; 49x^2yz^3,\\; 14xy^2z^2",
+          "fallback": "(vi) 35x⁵y³z⁴, 49x²yz³, 14xy²z²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "35x^5y^3z^4,\\; 49x^2yz^3,\\; 14xy^2z^2",
+          "fallback": "(vi) 35x⁵y³z⁴, 49x²yz³, 14xy²z²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{7xyz^2}",
+      "fallback": "7xyz²"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\gcd(35, 49, 14) = 7",
+          "fallback": "GCD(35, 49, 14) = 7"
+        },
+        "reasonMath": {
+          "en": [
+            "All three are multiples of ",
+            {
+              "latex": "7",
+              "fallback": "7"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "35",
+              "fallback": "35"
+            },
+            ", ",
+            {
+              "latex": "49",
+              "fallback": "49"
+            },
+            ", ",
+            {
+              "latex": "14",
+              "fallback": "14"
+            },
+            "-இன் மீ.பொ.வ ",
+            {
+              "latex": "7",
+              "fallback": "7"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "7xyz^2",
+          "fallback": "Lowest powers: x¹, y¹, z² ⇒ GCD = 7xyz²"
+        },
+        "reasonMath": {
+          "en": "Combine with lowest variable powers.",
+          "ta": [
+            "குறைந்த அடுக்குகள் ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ", ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            ", ",
+            {
+              "latex": "z^{2}",
+              "fallback": "z²"
+            },
+            "; மீ.பொ.வ = 7xyz²."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q1-vii",
+    "questionMath": {
+      "en": [
+        "1. Find the GCD for the following:\n",
+        {
+          "latex": "25ab^3c,\\; 100a^2bc,\\; 125ab",
+          "fallback": "(vii) 25ab³c, 100a²bc, 125ab",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "25ab^3c,\\; 100a^2bc,\\; 125ab",
+          "fallback": "(vii) 25ab³c, 100a²bc, 125ab",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{25ab}",
+      "fallback": "25ab"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\gcd(25, 100, 125) = 25",
+          "fallback": "GCD(25, 100, 125) = 25"
+        },
+        "reasonMath": {
+          "en": [
+            "Numerical GCD is ",
+            {
+              "latex": "25",
+              "fallback": "25"
+            },
+            "."
+          ],
+          "ta": [
+            "எண்களின் மீ.பொ.வ ",
+            {
+              "latex": "25",
+              "fallback": "25"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "25ab",
+          "fallback": "c is absent in 125ab; lowest powers of a, b are 1, 1 ⇒ GCD = 25ab"
+        },
+        "reasonMath": {
+          "en": [
+            "Only a and ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            " are common to all three."
+          ],
+          "ta": [
+            "மூன்றாவது உறுப்பில் ",
+            {
+              "latex": "c",
+              "fallback": "c"
+            },
+            " இல்லை; எனவே மீ.பொ.வ = 25ab."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q1-viii",
+    "questionMath": {
+      "en": [
+        "1. Find the GCD for the following:\n",
+        {
+          "latex": "3abc,\\; 5xyz,\\; 7pqr",
+          "fallback": "(viii) 3abc, 5xyz, 7pqr",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "3abc,\\; 5xyz,\\; 7pqr",
+          "fallback": "(viii) 3abc, 5xyz, 7pqr",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{1}",
+      "fallback": "1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\gcd(3, 5, 7) = 1",
+          "fallback": "3, 5, 7 are primes and variables are all distinct"
+        },
+        "reasonMath": {
+          "en": [
+            "No common factor other than ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            "."
+          ],
+          "ta": [
+            "பொதுக் காரணி ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " மட்டுமே."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "1",
+          "fallback": "GCD = 1"
+        },
+        "reasonMath": {
+          "en": "Result.",
+          "ta": "மீ.பொ.வ = 1."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q2-i",
+    "questionMath": {
+      "en": [
+        "2. Find the GCD of the following:\n",
+        {
+          "latex": "(2x + 5),\\; (5x + 2)",
+          "fallback": "(i) (2x + 5), (5x + 2)",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "(2x + 5),\\; (5x + 2)",
+          "fallback": "(i) (2x + 5), (5x + 2)",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{1}",
+      "fallback": "1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{No common factor other than } 1",
+          "fallback": "(2x + 5) and (5x + 2) are distinct linear polynomials"
+        },
+        "reasonMath": {
+          "en": [
+            "They share no common factor other than ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            "."
+          ],
+          "ta": "பொதுக் காரணி இல்லை."
+        }
+      },
+      {
+        "math": {
+          "latex": "1",
+          "fallback": "GCD = 1"
+        },
+        "reasonMath": {
+          "en": "Result.",
+          "ta": "மீ.பொ.வ = 1."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q2-ii",
+    "questionMath": {
+      "en": [
+        "2. Find the GCD of the following:\n",
+        {
+          "latex": "a^{m+1},\\; a^{m+2},\\; a^{m+3}",
+          "fallback": "(ii) aᵐ⁺¹, aᵐ⁺², aᵐ⁺³",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "a^{m+1},\\; a^{m+2},\\; a^{m+3}",
+          "fallback": "(ii) aᵐ⁺¹, aᵐ⁺², aᵐ⁺³",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{a^{m+1}}",
+      "fallback": "aᵐ⁺¹"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a^{m+1}",
+          "fallback": "aᵐ⁺² = aᵐ⁺¹ · a, aᵐ⁺³ = aᵐ⁺¹ · a²"
+        },
+        "reasonMath": {
+          "en": [
+            "Lowest power of a is ",
+            {
+              "latex": "m + 1",
+              "fallback": "m + 1"
+            },
+            "."
+          ],
+          "ta": [
+            "மிகக் குறைந்த அடுக்கு ",
+            {
+              "latex": "m + 1",
+              "fallback": "m + 1"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "a^{m+1}",
+          "fallback": "GCD = aᵐ⁺¹"
+        },
+        "reasonMath": {
+          "en": "Result.",
+          "ta": "மீ.பொ.வ = aᵐ⁺¹."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q2-iii",
+    "questionMath": {
+      "en": [
+        "2. Find the GCD of the following:\n",
+        {
+          "latex": "2a^2 + a,\\; 4a^2 - 1",
+          "fallback": "(iii) 2a² + a, 4a² − 1",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "2a^2 + a,\\; 4a^2 - 1",
+          "fallback": "(iii) 2a² + a, 4a² − 1",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{2a + 1}",
+      "fallback": "2a + 1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a(2a+1),\\; (2a+1)(2a-1)",
+          "fallback": "2a² + a = a(2a + 1); 4a² − 1 = (2a + 1)(2a − 1)"
+        },
+        "reasonMath": {
+          "en": "Factorise both polynomials.",
+          "ta": "இரு கோவைகளையும் காரணிப்படுத்தவும்."
+        }
+      },
+      {
+        "math": {
+          "latex": "2a + 1",
+          "fallback": "GCD = 2a + 1"
+        },
+        "reasonMath": {
+          "en": [
+            "Common factor is ",
+            {
+              "latex": "\\left(2 a + 1\\right)",
+              "fallback": "(2a + 1)"
+            },
+            "."
+          ],
+          "ta": [
+            "பொதுக் காரணி ",
+            {
+              "latex": "\\left(2 a + 1\\right)",
+              "fallback": "(2a + 1)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q2-iv",
+    "questionMath": {
+      "en": [
+        "2. Find the GCD of the following:\n",
+        {
+          "latex": "3a^2,\\; 5b^3,\\; 7c^4",
+          "fallback": "(iv) 3a², 5b³, 7c⁴",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "3a^2,\\; 5b^3,\\; 7c^4",
+          "fallback": "(iv) 3a², 5b³, 7c⁴",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{1}",
+      "fallback": "1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "1",
+          "fallback": "GCD(3, 5, 7) = 1 and variables a, b, c are distinct"
+        },
+        "reasonMath": {
+          "en": [
+            "No common factor other than ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            "."
+          ],
+          "ta": [
+            "பொதுக் காரணி ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " மட்டுமே."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "1",
+          "fallback": "GCD = 1"
+        },
+        "reasonMath": {
+          "en": "Result.",
+          "ta": "மீ.பொ.வ = 1."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q2-v",
+    "questionMath": {
+      "en": [
+        "2. Find the GCD of the following:\n",
+        {
+          "latex": "x^4 - 1,\\; x^2 - 1",
+          "fallback": "(v) x⁴ − 1, x² − 1",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "x^4 - 1,\\; x^2 - 1",
+          "fallback": "(v) x⁴ − 1, x² − 1",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x^2 - 1}",
+      "fallback": "x² − 1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(x^2 + 1)(x^2 - 1)",
+          "fallback": "x⁴ − 1 = (x² + 1)(x² − 1)"
+        },
+        "reasonMath": {
+          "en": [
+            "Factorise ",
+            {
+              "latex": "x^{4} - 1",
+              "fallback": "x⁴ − 1"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x^{4} - 1 = \\left(x^{2} + 1\\right) \\left(x^{2} - 1\\right)",
+              "fallback": "x⁴ − 1 = (x² + 1)(x² − 1)"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x^2 - 1",
+          "fallback": "GCD(x⁴ − 1, x² − 1) = x² − 1"
+        },
+        "reasonMath": {
+          "en": [
+            "Common factor is ",
+            {
+              "latex": "x^{2} - 1 = \\left(x + 1\\right) \\left(x - 1\\right)",
+              "fallback": "x² − 1 = (x + 1)(x − 1)"
+            },
+            "."
+          ],
+          "ta": [
+            "பொதுக் காரணி ",
+            {
+              "latex": "x^{2} - 1",
+              "fallback": "x² − 1"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.9-q2-vi",
+    "questionMath": {
+      "en": [
+        "2. Find the GCD of the following:\n",
+        {
+          "latex": "a^3 - 9ax^2,\\; (a - 3x)^2",
+          "fallback": "(vi) a³ − 9ax², (a − 3x)²",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. கீழ்க்காண்பனவற்றிற்கு மீ.பொ.வ காண்க.\n",
+        {
+          "latex": "a^3 - 9ax^2,\\; (a - 3x)^2",
+          "fallback": "(vi) a³ − 9ax², (a − 3x)²",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{a - 3x}",
+      "fallback": "a − 3x"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a(a + 3x)(a - 3x)",
+          "fallback": "a³ − 9ax² = a(a² − 9x²) = a(a + 3x)(a − 3x)"
+        },
+        "reasonMath": {
+          "en": "Factorise first expression.",
+          "ta": "முதல் கோவையைக் காரணிப்படுத்தவும்."
+        }
+      },
+      {
+        "math": {
+          "latex": "a - 3x",
+          "fallback": "Common factor with (a − 3x)² is (a − 3x)"
+        },
+        "reasonMath": {
+          "en": [
+            "Lowest power of ",
+            {
+              "latex": "\\left(a - 3 x\\right)",
+              "fallback": "(a − 3x)"
+            },
+            " is ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            "."
+          ],
+          "ta": [
+            "பொதுக் காரணி ",
+            {
+              "latex": "\\left(a - 3 x\\right)",
+              "fallback": "(a − 3x)"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Draw the graph for the following\n",
+        {
+          "latex": "y = 2x",
+          "fallback": "(i) y = 2x",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பவற்றிற்கு வரைபடம் வரைக\n",
+        {
+          "latex": "y = 2x",
+          "fallback": "(i) y = 2x",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{Line through } (0,0),\\; (1,2),\\; (2,4)}",
+      "fallback": "Straight line through (−1, −2), (0, 0), (1, 2), (2, 4)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(-1,-2),\\; (0,0),\\; (1,2),\\; (2,4)",
+          "fallback": "x = −1 ⇒ y = −2; x = 0 ⇒ y = 0; x = 1 ⇒ y = 2; x = 2 ⇒ y = 4"
+        },
+        "reasonMath": {
+          "en": "Compute at least three ordered pairs.",
+          "ta": [
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-க்கு மதிப்புகள் கொடுத்து ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = 2x",
+          "fallback": "Plot the points and join with a straight line"
+        },
+        "reasonMath": {
+          "en": [
+            "The graph passes through the origin (0, 0) with slope ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "."
+          ],
+          "ta": "புள்ளிகளைக் குறித்து நேர்க்கோட்டால் இணைக்கவும்."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Draw the graph for the following\n",
+        {
+          "latex": "y = 4x - 1",
+          "fallback": "(ii) y = 4x − 1",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பவற்றிற்கு வரைபடம் வரைக\n",
+        {
+          "latex": "y = 4x - 1",
+          "fallback": "(ii) y = 4x − 1",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{Line through } (0,-1),\\; (1,3),\\; (2,7)}",
+      "fallback": "Straight line through (0, −1), (1, 3), (2, 7)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(0,-1),\\; (1,3),\\; (2,7)",
+          "fallback": "x = 0 ⇒ y = −1; x = 1 ⇒ y = 3; x = 2 ⇒ y = 7"
+        },
+        "reasonMath": {
+          "en": [
+            "Evaluate ",
+            {
+              "latex": "y = 4 x - 1",
+              "fallback": "y = 4x − 1"
+            },
+            " at ",
+            {
+              "latex": "x = 0",
+              "fallback": "x = 0"
+            },
+            ", ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            ", ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 0",
+              "fallback": "x = 0"
+            },
+            ", ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            ", ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " எனப் பிரதியிட."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = 4x - 1",
+          "fallback": "Plot and draw the straight line"
+        },
+        "reasonMath": {
+          "en": "Connect the collinear points.",
+          "ta": "புள்ளிகளை இணைத்து நேர்க்கோடு வரைக."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Draw the graph for the following\n",
+        {
+          "latex": "y = \\left(\\dfrac{3}{2}\\right)x + 3",
+          "fallback": "(iii) y = (3/2)x + 3",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பவற்றிற்கு வரைபடம் வரைக\n",
+        {
+          "latex": "y = \\left(\\dfrac{3}{2}\\right)x + 3",
+          "fallback": "(iii) y = (3/2)x + 3",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{Line through } (-2,0),\\; (0,3),\\; (2,6)}",
+      "fallback": "Straight line through (−2, 0), (0, 3), (2, 6)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(-2,0),\\; (0,3),\\; (2,6)",
+          "fallback": "Choose multiples of 2: x = −2 ⇒ y = 0; x = 0 ⇒ y = 3; x = 2 ⇒ y = 6"
+        },
+        "reasonMath": {
+          "en": [
+            "Pick even ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " values to get integer ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            "முழு எண் புள்ளிகள் பெற ",
+            {
+              "latex": "x = - 2",
+              "fallback": "x = −2"
+            },
+            ", ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            ", ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " எடுக்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = \\dfrac{3}{2}x + 3",
+          "fallback": "Plot and join with a straight line"
+        },
+        "reasonMath": {
+          "en": "The line cuts x-axis at (−2, 0) and y-axis at (0, 3).",
+          "ta": "புள்ளிகளை இணைக்க நேர்க்கோடு கிடைக்கும்."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q1-iv",
+    "questionMath": {
+      "en": [
+        "1. Draw the graph for the following\n",
+        {
+          "latex": "3x + 2y = 14",
+          "fallback": "(iv) 3x + 2y = 14",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. கீழ்க்காண்பவற்றிற்கு வரைபடம் வரைக\n",
+        {
+          "latex": "3x + 2y = 14",
+          "fallback": "(iv) 3x + 2y = 14",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{Line through } (0,7),\\; (2,4),\\; (4,1)}",
+      "fallback": "Straight line through (0, 7), (2, 4), (4, 1)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(0,7),\\; (2,4),\\; (4,1)",
+          "fallback": "y = (14 − 3x)/2; x = 0 ⇒ y = 7; x = 2 ⇒ y = 4; x = 4 ⇒ y = 1"
+        },
+        "reasonMath": {
+          "en": [
+            "Express ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " in terms of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle y = \\frac{\\left(14 - 3 x\\right)}{2}",
+              "fallback": "y = (14 − 3x)/2"
+            },
+            " என மாற்றிப் புள்ளிகள் காண்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3x + 2y = 14",
+          "fallback": "Plot and draw the straight line"
+        },
+        "reasonMath": {
+          "en": "Join the points.",
+          "ta": "புள்ளிகளை நேர்க்கோட்டால் இணைக்க."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q2-i",
+    "questionMath": {
+      "en": [
+        "2. Solve graphically\n",
+        {
+          "latex": "x + y = 7;\\quad x - y = 3",
+          "fallback": "(i) x + y = 7; x − y = 3",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. வரைபட முறையில் தீர்க்க\n",
+        {
+          "latex": "x + y = 7;\\quad x - y = 3",
+          "fallback": "(i) x + y = 7; x − y = 3",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x, y) = (5, 2)}",
+      "fallback": "(5, 2) i.e. x = 5, y = 2"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y = 7 - x",
+          "fallback": "x + y = 7 passes through (0, 7), (3, 4), (5, 2), (7, 0)"
+        },
+        "reasonMath": {
+          "en": [
+            "Tabulate points for line ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            "."
+          ],
+          "ta": "முதல் கோட்டின் புள்ளிகள் காண்க."
+        }
+      },
+      {
+        "math": {
+          "latex": "y = x - 3",
+          "fallback": "x − y = 3 passes through (0, −3), (3, 0), (5, 2), (6, 3)"
+        },
+        "reasonMath": {
+          "en": [
+            "Tabulate points for line ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "."
+          ],
+          "ta": "இரண்டாவது கோட்டின் புள்ளிகள் காண்க."
+        }
+      },
+      {
+        "math": {
+          "latex": "(5, 2)",
+          "fallback": "Lines intersect at (5, 2) ⇒ x = 5, y = 2"
+        },
+        "reasonMath": {
+          "en": [
+            "Check: ",
+            {
+              "latex": "5 + 2 = 7",
+              "fallback": "5 + 2 = 7"
+            },
+            " and ",
+            {
+              "latex": "5 - 2 = 3",
+              "fallback": "5 − 2 = 3"
+            },
+            "."
+          ],
+          "ta": [
+            "வெட்டும் புள்ளி (5, 2); ",
+            {
+              "latex": "x = 5",
+              "fallback": "x = 5"
+            },
+            ", ",
+            {
+              "latex": "y = 2",
+              "fallback": "y = 2"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q2-ii",
+    "questionMath": {
+      "en": [
+        "2. Solve graphically\n",
+        {
+          "latex": "3x + 2y = 4;\\quad 9x + 6y - 12 = 0",
+          "fallback": "(ii) 3x + 2y = 4; 9x + 6y − 12 = 0",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. வரைபட முறையில் தீர்க்க\n",
+        {
+          "latex": "3x + 2y = 4;\\quad 9x + 6y - 12 = 0",
+          "fallback": "(ii) 3x + 2y = 4; 9x + 6y − 12 = 0",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{Infinitely many solutions (coinciding lines)}}",
+      "fallback": "Infinitely many solutions (coinciding lines)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a_1/a_2 = b_1/b_2 = c_1/c_2 = 1/3",
+          "fallback": "9x + 6y − 12 = 0 ÷ 3 gives 3x + 2y = 4"
+        },
+        "reasonMath": {
+          "en": "Both equations represent the exact same line through (0, 2) and (2, −1).",
+          "ta": "இரு சமன்பாடுகளும் ஒரே கோட்டைக் குறிக்கின்றன."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{Infinitely many solutions}",
+          "fallback": "Lines coincide ⇒ infinitely many solutions"
+        },
+        "reasonMath": {
+          "en": [
+            "Every point on ",
+            {
+              "latex": "3 x + 2 y = 4",
+              "fallback": "3x + 2y = 4"
+            },
+            " is a solution."
+          ],
+          "ta": "ஒன்றிய கோடுகள் என்பதால் எண்ணற்ற தீர்வுகள்."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q2-iii",
+    "questionMath": {
+      "en": [
+        "2. Solve graphically\n",
+        {
+          "latex": "\\dfrac{x}{2} + \\dfrac{y}{4} = 1;\\quad \\dfrac{x}{2} + \\dfrac{y}{4} = 2",
+          "fallback": "(iii) x/2 + y/4 = 1; x/2 + y/4 = 2",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. வரைபட முறையில் தீர்க்க\n",
+        {
+          "latex": "\\dfrac{x}{2} + \\dfrac{y}{4} = 1;\\quad \\dfrac{x}{2} + \\dfrac{y}{4} = 2",
+          "fallback": "(iii) x/2 + y/4 = 1; x/2 + y/4 = 2",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{No solution (parallel lines)}}",
+      "fallback": "No solution (parallel lines)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2x + y = 4;\\; 2x + y = 8",
+          "fallback": "2x + y = 4 (through (0, 4), (2, 0)) and 2x + y = 8 (through (0, 8), (4, 0))"
+        },
+        "reasonMath": {
+          "en": [
+            "Clear denominators by multiplying by ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            "-ஆல் பெருக்க ",
+            {
+              "latex": "2 x + y = 4",
+              "fallback": "2x + y = 4"
+            },
+            " மற்றும் ",
+            {
+              "latex": "2 x + y = 8",
+              "fallback": "2x + y = 8"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\text{No solution}",
+          "fallback": "Lines are parallel (2/2 = 1/1 ≠ 4/8) ⇒ No solution"
+        },
+        "reasonMath": {
+          "en": "Parallel lines never intersect.",
+          "ta": "இணை கோடுகள் என்பதால் தீர்வு இல்லை."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q2-iv",
+    "questionMath": {
+      "en": [
+        "2. Solve graphically\n",
+        {
+          "latex": "x - y = 0;\\quad y + 3 = 0",
+          "fallback": "(iv) x − y = 0; y + 3 = 0",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. வரைபட முறையில் தீர்க்க\n",
+        {
+          "latex": "x - y = 0;\\quad y + 3 = 0",
+          "fallback": "(iv) x − y = 0; y + 3 = 0",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x, y) = (-3, -3)}",
+      "fallback": "(−3, −3) i.e. x = −3, y = −3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y = x",
+          "fallback": "y = x passes through (0, 0), (−3, −3), (3, 3)"
+        },
+        "reasonMath": {
+          "en": [
+            "Plot ",
+            {
+              "latex": "y = x",
+              "fallback": "y = x"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "y = x",
+              "fallback": "y = x"
+            },
+            " கோட்டை வரைக."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(x, y) = (-3, -3)",
+          "fallback": "y = −3 is a horizontal line; they intersect at (−3, −3)"
+        },
+        "reasonMath": {
+          "en": "Read intersection.",
+          "ta": "வெட்டும் புள்ளி (−3, −3)."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q2-v",
+    "questionMath": {
+      "en": [
+        "2. Solve graphically\n",
+        {
+          "latex": "y = 2x + 1;\\quad y + 3x - 6 = 0",
+          "fallback": "(v) y = 2x + 1; y + 3x − 6 = 0",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. வரைபட முறையில் தீர்க்க\n",
+        {
+          "latex": "y = 2x + 1;\\quad y + 3x - 6 = 0",
+          "fallback": "(v) y = 2x + 1; y + 3x − 6 = 0",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x, y) = (1, 3)}",
+      "fallback": "(1, 3) i.e. x = 1, y = 3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y = 2x + 1",
+          "fallback": "y = 2x + 1 passes through (0, 1), (1, 3), (2, 5)"
+        },
+        "reasonMath": {
+          "en": [
+            "Points for line ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            "."
+          ],
+          "ta": "முதல் கோடு: (0, 1), (1, 3), (2, 5)."
+        }
+      },
+      {
+        "math": {
+          "latex": "y = 6 - 3x",
+          "fallback": "y = 6 − 3x passes through (0, 6), (1, 3), (2, 0)"
+        },
+        "reasonMath": {
+          "en": [
+            "Points for line ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "."
+          ],
+          "ta": "இரண்டாவது கோடு: (0, 6), (1, 3), (2, 0)."
+        }
+      },
+      {
+        "math": {
+          "latex": "(1, 3)",
+          "fallback": "Lines intersect at (1, 3) ⇒ x = 1, y = 3"
+        },
+        "reasonMath": {
+          "en": [
+            "Check: ",
+            {
+              "latex": "3 = 2 \\left(1\\right) + 1",
+              "fallback": "3 = 2(1)+1"
+            },
+            " and ",
+            {
+              "latex": "3 + 3 - 6 = 0",
+              "fallback": "3+3−6=0"
+            },
+            "."
+          ],
+          "ta": "வெட்டும் புள்ளி (1, 3)."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q2-vi",
+    "questionMath": {
+      "en": [
+        "2. Solve graphically\n",
+        {
+          "latex": "x = -3;\\quad y = 3",
+          "fallback": "(vi) x = −3; y = 3",
+          "display": true
+        }
+      ],
+      "ta": [
+        "2. வரைபட முறையில் தீர்க்க\n",
+        {
+          "latex": "x = -3;\\quad y = 3",
+          "fallback": "(vi) x = −3; y = 3",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(x, y) = (-3, 3)}",
+      "fallback": "(−3, 3) i.e. x = −3, y = 3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "(x, y) = (-3, 3)",
+          "fallback": "x = −3 is a vertical line; y = 3 is a horizontal line"
+        },
+        "reasonMath": {
+          "en": "They meet perpendicularly at (−3, 3).",
+          "ta": [
+            {
+              "latex": "x = - 3",
+              "fallback": "x = −3"
+            },
+            " (குத்துக்கோடு), ",
+            {
+              "latex": "y = 3",
+              "fallback": "y = 3"
+            },
+            " (கிடைக்கோடு) வெட்டும் புள்ளி (−3, 3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.10-q3",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "x + y = 100;\\quad x - y = 50",
+          "fallback": "3. Two cars are 100 miles apart. If they drive towards each other they will meet in 1 hour. If they drive in the same direction they will meet in 2 hours. Find their speed by using graphical method.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "x + y = 100;\\quad x - y = 50",
+          "fallback": "3. இரண்டு மகிழுந்துகளுக்கு இடைப்பட்ட தொலைவு 100 மைல்கள். இரண்டும் ஒன்றையொன்று நோக்கிப் பயணித்தால் ஒரு மணி நேரத்தில் சந்தித்துக்கொள்ளும். இரண்டும் ஒரே திசையில் செல்லும்போது 2 மணி நேரத்தில் ஓரிடத்தில் சந்தித்து ஒன்றாகப் பயணிக்குமெனில், இரண்டு மகிழுந்துகளின் வேகங்களைக் (வரைபட முறையில்) கணக்கிடுக.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{75\\text{ mph},\\; 25\\text{ mph}}",
+      "fallback": "75 miles/hr and 25 miles/hr"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x + y = 100",
+          "fallback": "Let speeds be x and y mph (x > y). Towards each other: 1(x + y) = 100"
+        },
+        "reasonMath": {
+          "en": [
+            "Relative speed towards each other is ",
+            {
+              "latex": "x + y",
+              "fallback": "x + y"
+            },
+            "."
+          ],
+          "ta": [
+            "எதிர் திசை: ",
+            {
+              "latex": "x + y = 100",
+              "fallback": "x + y = 100"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x - y = 50",
+          "fallback": "Same direction in 2 hrs: 2(x − y) = 100 ⇒ x − y = 50"
+        },
+        "reasonMath": {
+          "en": [
+            "Relative speed in same direction is ",
+            {
+              "latex": "x - y",
+              "fallback": "x − y"
+            },
+            "."
+          ],
+          "ta": [
+            "ஒரே திசை: ",
+            {
+              "latex": "x - y = 50",
+              "fallback": "x − y = 50"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "(75, 25)",
+          "fallback": "Plotting both lines gives intersection (75, 25)"
+        },
+        "reasonMath": {
+          "en": [
+            "Speeds are ",
+            {
+              "latex": "75",
+              "fallback": "75"
+            },
+            " mph and ",
+            {
+              "latex": "25",
+              "fallback": "25"
+            },
+            " mph."
+          ],
+          "ta": [
+            "வெட்டும் புள்ளி (75, 25); வேகங்கள் ",
+            {
+              "latex": "75",
+              "fallback": "75"
+            },
+            ", ",
+            {
+              "latex": "25",
+              "fallback": "25"
+            },
+            " மைல்/மணி."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.11-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Solve, using the method of substitution\n",
+        {
+          "latex": "2x - 3y = 7;\\quad 5x + y = 9",
+          "fallback": "(i) 2x − 3y = 7; 5x + y = 9",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பிரதியிடல் முறையில் தீர்க்க.\n",
+        {
+          "latex": "2x - 3y = 7;\\quad 5x + y = 9",
+          "fallback": "(i) 2x − 3y = 7; 5x + y = 9",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 2,\\; y = -1}",
+      "fallback": "x = 2, y = −1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y = 9 - 5x",
+          "fallback": "From (2), y = 9 − 5x"
+        },
+        "reasonMath": {
+          "en": [
+            "Express ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " from ",
+            {
+              "latex": "5 x + y = 9",
+              "fallback": "5x + y = 9"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "5 x + y = 9",
+              "fallback": "5x + y = 9"
+            },
+            "-இலிருந்து ",
+            {
+              "latex": "y = 9 - 5 x",
+              "fallback": "y = 9 − 5x"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "17x = 34 \\implies x = 2",
+          "fallback": "2x − 3(9 − 5x) = 7 ⇒ 17x − 27 = 7 ⇒ 17x = 34 ⇒ x = 2"
+        },
+        "reasonMath": {
+          "en": "Substitute into (1) and solve.",
+          "ta": [
+            "முதல் சமன்பாட்டில் பிரதியிட ",
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = -1",
+          "fallback": "y = 9 − 5(2) = −1"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            " back."
+          ],
+          "ta": [
+            {
+              "latex": "y = 9 - 10 = - 1",
+              "fallback": "y = 9 − 10 = −1"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.11-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Solve, using the method of substitution\n",
+        {
+          "latex": "1.5x + 0.1y = 6.2;\\quad 3x - 0.4y = 11.2",
+          "fallback": "(ii) 1.5x + 0.1y = 6.2; 3x − 0.4y = 11.2",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பிரதியிடல் முறையில் தீர்க்க.\n",
+        {
+          "latex": "1.5x + 0.1y = 6.2;\\quad 3x - 0.4y = 11.2",
+          "fallback": "(ii) 1.5x + 0.1y = 6.2; 3x − 0.4y = 11.2",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 4,\\; y = 2}",
+      "fallback": "x = 4, y = 2"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y = 62 - 15x",
+          "fallback": "Multiply by 10: 15x + y = 62 ⇒ y = 62 − 15x"
+        },
+        "reasonMath": {
+          "en": "Clear decimals.",
+          "ta": [
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            "-ஆல் பெருக்க ",
+            {
+              "latex": "y = 62 - 15 x",
+              "fallback": "y = 62 − 15x"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "90x = 360 \\implies x = 4",
+          "fallback": "30x − 4(62 − 15x) = 112 ⇒ 90x = 360 ⇒ x = 4"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute into ",
+            {
+              "latex": "30 x - 4 y = 112",
+              "fallback": "30x − 4y = 112"
+            },
+            "."
+          ],
+          "ta": [
+            "இரண்டாம் சமன்பாட்டில் பிரதியிட ",
+            {
+              "latex": "x = 4",
+              "fallback": "x = 4"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = 2",
+          "fallback": "y = 62 − 15(4) = 2"
+        },
+        "reasonMath": {
+          "en": [
+            "Find ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "y = 62 - 60 = 2",
+              "fallback": "y = 62 − 60 = 2"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.11-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Solve, using the method of substitution\n",
+        {
+          "latex": "0.1x + 0.2y = 24;\\quad 3x - y = 20",
+          "fallback": "(iii) 10% of x + 20% of y = 24; 3x − y = 20",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பிரதியிடல் முறையில் தீர்க்க.\n",
+        {
+          "latex": "0.1x + 0.2y = 24;\\quad 3x - y = 20",
+          "fallback": "(iii) x-இன் 10% + y-இன் 20% = 24; 3x − y = 20",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 40,\\; y = 100}",
+      "fallback": "x = 40, y = 100"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x + 2y = 240,\\; y = 3x - 20",
+          "fallback": "x + 2y = 240; y = 3x − 20"
+        },
+        "reasonMath": {
+          "en": [
+            "Multiply first by ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            "; solve second for ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            "முதல் சமன்பாட்டை ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            "-ஆல் பெருக்க ",
+            {
+              "latex": "x + 2 y = 240",
+              "fallback": "x + 2y = 240"
+            },
+            "; ",
+            {
+              "latex": "y = 3 x - 20",
+              "fallback": "y = 3x − 20"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 40",
+          "fallback": "x + 2(3x − 20) = 240 ⇒ 7x = 280 ⇒ x = 40"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            "பிரதியிட ",
+            {
+              "latex": "7 x = 280 \\Rightarrow x = 40",
+              "fallback": "7x = 280 ⇒ x = 40"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = 100",
+          "fallback": "y = 3(40) − 20 = 100"
+        },
+        "reasonMath": {
+          "en": [
+            "Find ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "y = 120 - 20 = 100",
+              "fallback": "y = 120 − 20 = 100"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.11-q1-iv",
+    "questionMath": {
+      "en": [
+        "1. Solve, using the method of substitution\n",
+        {
+          "latex": "\\sqrt{2}\\,x - \\sqrt{3}\\,y = 1;\\quad \\sqrt{3}\\,x - \\sqrt{8}\\,y = 0",
+          "fallback": "(iv) √2 x − √3 y = 1; √3 x − √8 y = 0",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. பிரதியிடல் முறையில் தீர்க்க.\n",
+        {
+          "latex": "\\sqrt{2}\\,x - \\sqrt{3}\\,y = 1;\\quad \\sqrt{3}\\,x - \\sqrt{8}\\,y = 0",
+          "fallback": "(iv) √2 x − √3 y = 1; √3 x − √8 y = 0",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 2\\sqrt{2},\\; y = \\sqrt{3}}",
+      "fallback": "x = 2√2, y = √3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "y = \\dfrac{\\sqrt{3}}{\\sqrt{8}}\\,x",
+          "fallback": "From (2), y = (√3 / √8) x"
+        },
+        "reasonMath": {
+          "en": [
+            "Express ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " from ",
+            {
+              "latex": "\\sqrt{3} x = \\sqrt{8} y",
+              "fallback": "√3 x = √8 y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle y = \\left(\\frac{\\sqrt{3}}{\\sqrt{8}}\\right) x",
+              "fallback": "y = (√3 / √8)x"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 2\\sqrt{2}",
+          "fallback": "√2 x − √3 (√3 / √8) x = 1 ⇒ (4 − 3)x / √8 = 1 ⇒ x = √8 = 2√2"
+        },
+        "reasonMath": {
+          "en": "Substitute into (1).",
+          "ta": [
+            "பிரதியிட ",
+            {
+              "latex": "x = \\sqrt{8} = 2 \\sqrt{2}",
+              "fallback": "x = √8 = 2√2"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = \\sqrt{3}",
+          "fallback": "y = (√3 / √8)(√8) = √3"
+        },
+        "reasonMath": {
+          "en": [
+            "Find ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "y = \\sqrt{3}",
+              "fallback": "y = √3"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.11-q2",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "x = 3y;\\quad x + 5 = 2(y + 10)",
+          "fallback": "2. Raman’s age is three times the sum of the ages of his two sons. After 5 years his age will be twice the sum of the ages of his two sons. Find the age of Raman.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "x = 3y;\\quad x + 5 = 2(y + 10)",
+          "fallback": "2. இராமனின் வயது அவருடைய இரு மகன்களுடைய வயதுகளின் கூடுதலைப் போல் மூன்று மடங்காகும். ஐந்தாண்டுகள் கழித்து அவரின் வயது தனது மகன்களுடைய வயதுகளின் கூடுதலைப் போல் இரு மடங்காகும் எனில், இராமனின் தற்போதைய வயதைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{45\\text{ years}}",
+      "fallback": "45 years"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = 3y",
+          "fallback": "Let Raman’s age = x and sum of two sons’ ages = y. Then x = 3y"
+        },
+        "reasonMath": {
+          "en": "First condition.",
+          "ta": [
+            "இராமனின் வயது ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ", இரு மகன்களின் வயதுக் கூடுதல் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " என்க; ",
+            {
+              "latex": "x = 3 y",
+              "fallback": "x = 3y"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x + 5 = 2(y + 10)",
+          "fallback": "After 5 years: x + 5 = 2(y + 5 + 5) = 2(y + 10)"
+        },
+        "reasonMath": {
+          "en": [
+            "Each son ages ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " years, so their sum increases by ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            "."
+          ],
+          "ta": [
+            "இரு மகன்களுக்கும் ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " வயது கூடுவதால் கூடுதல் ",
+            {
+              "latex": "y + 10",
+              "fallback": "y + 10"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 45",
+          "fallback": "3y + 5 = 2y + 20 ⇒ y = 15 ⇒ x = 45"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x = 3 y",
+              "fallback": "x = 3y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "3 y + 5 = 2 y + 20 \\Rightarrow y = 15 \\Rightarrow x = 45",
+              "fallback": "3y + 5 = 2y + 20 ⇒ y = 15 ⇒ x = 45"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.11-q3",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "x + y = 13;\\quad (100y + x) - (100x + y) = 495",
+          "fallback": "3. The middle digit of a number between 100 and 1000 is zero and the sum of the other digit is 13. If the digits are reversed, the number so formed exceeds the original number by 495. Find the number.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "x + y = 13;\\quad (100y + x) - (100x + y) = 495",
+          "fallback": "3. 100 மற்றும் 1000-க்கு இடையே அமையும் ஒரு மூன்றிலக்க எண்ணின் நடு இலக்கம் பூச்சியமாகவும் மற்ற இரு இலக்கங்களின் கூடுதல் 13 ஆகவும் இருக்கின்றன. இலக்கங்களை இடம் மாற்றி அமைக்கும்போது கிடைக்கும் எண்ணானது, அந்த எண்ணை விட 495 அதிகம் எனில், அந்த எண்ணைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{409}",
+      "fallback": "409"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x + y = 13",
+          "fallback": "Original number = 100x + 0·10 + y = 100x + y; x + y = 13"
+        },
+        "reasonMath": {
+          "en": "Let hundreds digit = x, units digit = y.",
+          "ta": [
+            "நூறாம் இலக்கம் ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ", ஒன்றாம் இலக்கம் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y - x = 5",
+          "fallback": "99y − 99x = 495 ⇒ y − x = 5"
+        },
+        "reasonMath": {
+          "en": "From reversed − original = 495.",
+          "ta": [
+            {
+              "latex": "99 \\left(y - x\\right) = 495 \\Rightarrow y - x = 5",
+              "fallback": "99(y − x) = 495 ⇒ y − x = 5"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "409",
+          "fallback": "y = x + 5 ⇒ 2x + 5 = 13 ⇒ x = 4, y = 9 ⇒ Number = 409"
+        },
+        "reasonMath": {
+          "en": [
+            "Solve for ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " and ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 4",
+              "fallback": "x = 4"
+            },
+            ", ",
+            {
+              "latex": "y = 9",
+              "fallback": "y = 9"
+            },
+            "; எண் = 409."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.12-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Solve by the method of elimination\n",
+        {
+          "latex": "2x - y = 3;\\quad 3x + y = 7",
+          "fallback": "(i) 2x − y = 3; 3x + y = 7",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. நீக்கல் முறையில் தீர்வு காண்க\n",
+        {
+          "latex": "2x - y = 3;\\quad 3x + y = 7",
+          "fallback": "(i) 2x − y = 3; 3x + y = 7",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 2,\\; y = 1}",
+      "fallback": "x = 2, y = 1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "5x = 10 \\implies x = 2",
+          "fallback": "Add both equations: 5x = 10 ⇒ x = 2"
+        },
+        "reasonMath": {
+          "en": [
+            "Eliminate ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " by adding."
+          ],
+          "ta": [
+            "இரு சமன்பாடுகளையும் கூட்ட ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " நீங்கும்: ",
+            {
+              "latex": "5 x = 10",
+              "fallback": "5x = 10"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = 1",
+          "fallback": "3(2) + y = 7 ⇒ y = 1"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "y = 7 - 6 = 1",
+              "fallback": "y = 7 − 6 = 1"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.12-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Solve by the method of elimination\n",
+        {
+          "latex": "x - y = 5;\\quad 3x + 2y = 25",
+          "fallback": "(ii) x − y = 5; 3x + 2y = 25",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. நீக்கல் முறையில் தீர்வு காண்க\n",
+        {
+          "latex": "x - y = 5;\\quad 3x + 2y = 25",
+          "fallback": "(ii) x − y = 5; 3x + 2y = 25",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 7,\\; y = 2}",
+      "fallback": "x = 7, y = 2"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "5x = 35 \\implies x = 7",
+          "fallback": "Multiply (1) by 2: 2x − 2y = 10; add to (2): 5x = 35 ⇒ x = 7"
+        },
+        "reasonMath": {
+          "en": [
+            "Eliminate ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " by scaling (1)."
+          ],
+          "ta": [
+            "முதல் சமன்பாட்டை ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "-ஆல் பெருக்கிக் கூட்ட ",
+            {
+              "latex": "5 x = 35 \\Rightarrow x = 7",
+              "fallback": "5x = 35 ⇒ x = 7"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "y = 2",
+          "fallback": "7 − y = 5 ⇒ y = 2"
+        },
+        "reasonMath": {
+          "en": [
+            "Find ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "y = 2",
+              "fallback": "y = 2"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.12-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Solve by the method of elimination\n",
+        {
+          "latex": "\\dfrac{x}{10} + \\dfrac{y}{5} = 14;\\quad \\dfrac{x}{8} + \\dfrac{y}{6} = 15",
+          "fallback": "(iii) x/10 + y/5 = 14; x/8 + y/6 = 15",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. நீக்கல் முறையில் தீர்வு காண்க\n",
+        {
+          "latex": "\\dfrac{x}{10} + \\dfrac{y}{5} = 14;\\quad \\dfrac{x}{8} + \\dfrac{y}{6} = 15",
+          "fallback": "(iii) x/10 + y/5 = 14; x/8 + y/6 = 15",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 80,\\; y = 30}",
+      "fallback": "x = 80, y = 30"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x + 2y = 140;\\; 3x + 4y = 360",
+          "fallback": "x + 2y = 140 and 3x + 4y = 360"
+        },
+        "reasonMath": {
+          "en": "Clear fractions (×10 and ×24).",
+          "ta": [
+            "பின்னங்களை நீக்க ",
+            {
+              "latex": "x + 2 y = 140",
+              "fallback": "x + 2y = 140"
+            },
+            "; ",
+            {
+              "latex": "3 x + 4 y = 360",
+              "fallback": "3x + 4y = 360"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 80,\\; y = 30",
+          "fallback": "(3x + 4y) − 2(x + 2y) = 360 − 280 ⇒ x = 80; y = 30"
+        },
+        "reasonMath": {
+          "en": [
+            "Eliminate ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-ஐ நீக்க ",
+            {
+              "latex": "x = 80",
+              "fallback": "x = 80"
+            },
+            ", ",
+            {
+              "latex": "y = 30",
+              "fallback": "y = 30"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.12-q1-iv",
+    "questionMath": {
+      "en": [
+        "1. Solve by the method of elimination\n",
+        {
+          "latex": "3(2x + y) = 7xy;\\quad 3(x + 3y) = 11xy",
+          "fallback": "(iv) 3(2x + y) = 7xy; 3(x + 3y) = 11xy",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. நீக்கல் முறையில் தீர்வு காண்க\n",
+        {
+          "latex": "3(2x + y) = 7xy;\\quad 3(x + 3y) = 11xy",
+          "fallback": "(iv) 3(2x + y) = 7xy; 3(x + 3y) = 11xy",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{(1,\\; \\dfrac{3}{2}) \\text{ and } (0, 0)}",
+      "fallback": "(1, 3/2) and (0, 0)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "3u + 6v = 7;\\; 9u + 3v = 11",
+          "fallback": "Note (0, 0) satisfies both equations. For x, y ≠ 0, divide by xy:"
+        },
+        "reasonMath": {
+          "en": [
+            "Put ",
+            {
+              "latex": "\\displaystyle u = \\frac{1}{x}",
+              "fallback": "u = 1/x"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle v = \\frac{1}{y}",
+              "fallback": "v = 1/y"
+            },
+            ": ",
+            {
+              "latex": "3 u + 6 v = 7",
+              "fallback": "3u + 6v = 7"
+            },
+            " and ",
+            {
+              "latex": "9 u + 3 v = 11",
+              "fallback": "9u + 3v = 11"
+            },
+            "."
+          ],
+          "ta": [
+            "(0, 0) ஒரு தீர்வு. ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ", ",
+            {
+              "latex": "y \\ne 0",
+              "fallback": "y ≠ 0"
+            },
+            " எனில் ",
+            {
+              "latex": "\\displaystyle u = \\frac{1}{x}",
+              "fallback": "u = 1/x"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle v = \\frac{1}{y}",
+              "fallback": "v = 1/y"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 1,\\; y = \\dfrac{3}{2}",
+          "fallback": "18u + 6v = 22 ⇒ 15u = 15 ⇒ u = 1, v = 2/3 ⇒ x = 1, y = 3/2"
+        },
+        "reasonMath": {
+          "en": [
+            "Solve for ",
+            {
+              "latex": "u",
+              "fallback": "u"
+            },
+            ", ",
+            {
+              "latex": "v",
+              "fallback": "v"
+            },
+            " and invert."
+          ],
+          "ta": [
+            {
+              "latex": "u = 1",
+              "fallback": "u = 1"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle v = \\frac{2}{3} \\Rightarrow x = 1",
+              "fallback": "v = 2/3 ⇒ x = 1"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle y = \\frac{3}{2}",
+              "fallback": "y = 3/2"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.12-q1-v",
+    "questionMath": {
+      "en": [
+        "1. Solve by the method of elimination\n",
+        {
+          "latex": "\\dfrac{4}{x} + 5y = 7;\\quad \\dfrac{3}{x} + 4y = 5",
+          "fallback": "(v) 4/x + 5y = 7; 3/x + 4y = 5",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. நீக்கல் முறையில் தீர்வு காண்க\n",
+        {
+          "latex": "\\dfrac{4}{x} + 5y = 7;\\quad \\dfrac{3}{x} + 4y = 5",
+          "fallback": "(v) 4/x + 5y = 7; 3/x + 4y = 5",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = \\dfrac{1}{3},\\; y = -1}",
+      "fallback": "x = 1/3, y = −1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "4u + 5y = 7;\\; 3u + 4y = 5",
+          "fallback": "Let u = 1/x (x ≠ 0): 4u + 5y = 7; 3u + 4y = 5"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "\\displaystyle u = \\frac{1}{x}",
+              "fallback": "u = 1/x"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle u = \\frac{1}{x \\left(x \\ne 0\\right)}",
+              "fallback": "u = 1/x (x ≠ 0)"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = \\dfrac{1}{3},\\; y = -1",
+          "fallback": "16u + 20y = 28; 15u + 20y = 25 ⇒ u = 3 ⇒ x = 1/3, y = −1"
+        },
+        "reasonMath": {
+          "en": [
+            "Eliminate ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " to find ",
+            {
+              "latex": "u = 3",
+              "fallback": "u = 3"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-ஐ நீக்க ",
+            {
+              "latex": "\\displaystyle u = 3 \\Rightarrow x = \\frac{1}{3}",
+              "fallback": "u = 3 ⇒ x = 1/3"
+            },
+            ", ",
+            {
+              "latex": "y = - 1",
+              "fallback": "y = −1"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.12-q1-vi",
+    "questionMath": {
+      "en": [
+        "1. Solve by the method of elimination\n",
+        {
+          "latex": "13x + 11y = 70;\\quad 11x + 13y = 74",
+          "fallback": "(vi) 13x + 11y = 70; 11x + 13y = 74",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. நீக்கல் முறையில் தீர்வு காண்க\n",
+        {
+          "latex": "13x + 11y = 70;\\quad 11x + 13y = 74",
+          "fallback": "(vi) 13x + 11y = 70; 11x + 13y = 74",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 2,\\; y = 4}",
+      "fallback": "x = 2, y = 4"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x + y = 6;\\; x - y = -2",
+          "fallback": "Add: 24(x + y) = 144 ⇒ x + y = 6; Subtract: 2(x − y) = −4 ⇒ x − y = −2"
+        },
+        "reasonMath": {
+          "en": "Add and subtract the symmetric equations.",
+          "ta": [
+            "கூட்ட ",
+            {
+              "latex": "x + y = 6",
+              "fallback": "x + y = 6"
+            },
+            "; கழிக்க ",
+            {
+              "latex": "x - y = - 2",
+              "fallback": "x − y = −2"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 2,\\; y = 4",
+          "fallback": "Add both: 2x = 4 ⇒ x = 2, y = 4"
+        },
+        "reasonMath": {
+          "en": "Solve the simpler system.",
+          "ta": [
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            ", ",
+            {
+              "latex": "y = 4",
+              "fallback": "y = 4"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.12-q2",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "3x - 5y = 5000;\\quad 4x - 7y = 5000",
+          "fallback": "2. The monthly income of A and B are in the ratio 3:4 and their monthly expenditures are in the ratio 5:7. If each saves ₹5,000 per month, find the monthly income of each.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "3x - 5y = 5000;\\quad 4x - 7y = 5000",
+          "fallback": "2. A மற்றும் B ஆகியோரது மாத வருமானங்களின் விகிதம் 3:4 ஆகவும் அவர்களுடைய செலவுகளின் விகிதம் 5:7 ஆகவும் இருக்கின்றன. ஒவ்வொருவரும் மாதம் ₹5,000 சேமிக்கிறார்கள் எனில், அவர்களுடைய மாத வருமானத்தைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{A = \\text{Rs.\\,}30,000,\\; B = \\text{Rs.\\,}40,000}",
+      "fallback": "A: ₹30,000; B: ₹40,000"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "3x - 5y = 5000;\\; 4x - 7y = 5000",
+          "fallback": "Incomes: 3x, 4x; Expenditures: 5y, 7y ⇒ 3x − 5y = 5000; 4x − 7y = 5000"
+        },
+        "reasonMath": {
+          "en": "Income − Expenditure = Savings.",
+          "ta": "வருமானம் − செலவு = சேமிப்பு."
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 10000",
+          "fallback": "12x − 20y = 20000 and 12x − 21y = 15000 ⇒ y = 5000, x = 10000"
+        },
+        "reasonMath": {
+          "en": [
+            "Eliminate ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-ஐ நீக்க ",
+            {
+              "latex": "y = 5000",
+              "fallback": "y = 5000"
+            },
+            ", ",
+            {
+              "latex": "x = 10000",
+              "fallback": "x = 10000"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3x = \\text{Rs.\\,}30,000,\\; 4x = \\text{Rs.\\,}40,000",
+          "fallback": "Incomes: 3x = ₹30,000 and 4x = ₹40,000"
+        },
+        "reasonMath": {
+          "en": "Compute monthly incomes.",
+          "ta": [
+            "வருமானங்கள் ₹",
+            {
+              "latex": "30",
+              "fallback": "30"
+            },
+            ",",
+            {
+              "latex": "000",
+              "fallback": "000"
+            },
+            " மற்றும் ₹",
+            {
+              "latex": "40",
+              "fallback": "40"
+            },
+            ",",
+            {
+              "latex": "000",
+              "fallback": "000"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.12-q3",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "x - 5 = 7(y - 5);\\quad x + 5 = 4(y + 5)",
+          "fallback": "3. Five years ago, a man was seven times as old as his son, while five year hence, the man will be four times as old as his son. Find their present age.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "x - 5 = 7(y - 5);\\quad x + 5 = 4(y + 5)",
+          "fallback": "3. 5 வருடங்களுக்கு முன்பு, ஒருவருடைய வயதானது அவருடைய மகனின் வயதைப் போல் 7 மடங்காகும். 5 வருடங்கள் கழித்து அவருடைய வயதானது மகனின் வயதைப் போல் 4 மடங்காக இருக்கும் எனில், அவர்களுடைய தற்போதைய வயது என்ன?",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{Man} = 75,\\; \\text{Son} = 15}",
+      "fallback": "Man: 75 years; Son: 15 years"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x - 7y = -30;\\; x - 4y = 15",
+          "fallback": "x − 7y = −30 and x − 4y = 15"
+        },
+        "reasonMath": {
+          "en": [
+            "Set up equations from ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " years ago and ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " years hence."
+          ],
+          "ta": [
+            {
+              "latex": "x - 7 y = - 30",
+              "fallback": "x − 7y = −30"
+            },
+            "; ",
+            {
+              "latex": "x - 4 y = 15",
+              "fallback": "x − 4y = 15"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 75,\\; y = 15",
+          "fallback": "Subtract: 3y = 45 ⇒ y = 15; x = 75"
+        },
+        "reasonMath": {
+          "en": [
+            "Eliminate ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "."
+          ],
+          "ta": [
+            "கழிக்க ",
+            {
+              "latex": "3 y = 45 \\Rightarrow y = 15",
+              "fallback": "3y = 45 ⇒ y = 15"
+            },
+            ", ",
+            {
+              "latex": "x = 75",
+              "fallback": "x = 75"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.13-q1-i",
+    "questionMath": {
+      "en": [
+        "1. Solve by cross-multiplication method\n",
+        {
+          "latex": "8x - 3y - 12 = 0;\\quad 5x - 2y - 7 = 0",
+          "fallback": "(i) 8x − 3y = 12; 5x = 2y + 7",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. குறுக்குப் பெருக்கல் முறையைப் பயன்படுத்தித் தீர்க்க\n",
+        {
+          "latex": "8x - 3y - 12 = 0;\\quad 5x - 2y - 7 = 0",
+          "fallback": "(i) 8x − 3y = 12; 5x = 2y + 7",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 3,\\; y = 4}",
+      "fallback": "x = 3, y = 4"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "8x-3y-12=0,\\; 5x-2y-7=0",
+          "fallback": "8x − 3y − 12 = 0 and 5x − 2y − 7 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Write in standard form a₁",
+            {
+              "latex": "x + b",
+              "fallback": "x + b"
+            },
+            "₁",
+            {
+              "latex": "y + c",
+              "fallback": "y + c"
+            },
+            "₁ = 0."
+          ],
+          "ta": "திட்ட வடிவில் எழுத."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\dfrac{x}{-3} = \\dfrac{y}{-4} = \\dfrac{1}{-1}",
+          "fallback": "x / (21 − 24) = y / (−60 + 56) = 1 / (−16 + 15) ⇒ x/(−3) = y/(−4) = 1/(−1)"
+        },
+        "reasonMath": {
+          "en": "Apply cross-multiplication formula.",
+          "ta": "குறுக்குப் பெருக்கல் சூத்திரத்தைப் பயன்படுத்த."
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 3,\\; y = 4",
+          "fallback": "x = 3, y = 4"
+        },
+        "reasonMath": {
+          "en": [
+            "Solve for ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " and ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            ", ",
+            {
+              "latex": "y = 4",
+              "fallback": "y = 4"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.13-q1-ii",
+    "questionMath": {
+      "en": [
+        "1. Solve by cross-multiplication method\n",
+        {
+          "latex": "6x + 7y - 11 = 0;\\quad 5x + 2y - 13 = 0",
+          "fallback": "(ii) 6x + 7y − 11 = 0; 5x + 2y = 13",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. குறுக்குப் பெருக்கல் முறையைப் பயன்படுத்தித் தீர்க்க\n",
+        {
+          "latex": "6x + 7y - 11 = 0;\\quad 5x + 2y - 13 = 0",
+          "fallback": "(ii) 6x + 7y − 11 = 0; 5x + 2y = 13",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 3,\\; y = -1}",
+      "fallback": "x = 3, y = −1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "6x+7y-11=0,\\; 5x+2y-13=0",
+          "fallback": "6x + 7y − 11 = 0 and 5x + 2y − 13 = 0"
+        },
+        "reasonMath": {
+          "en": "Standard form.",
+          "ta": "திட்ட வடிவம்."
+        }
+      },
+      {
+        "math": {
+          "latex": "\\dfrac{x}{-69} = \\dfrac{y}{23} = \\dfrac{1}{-23}",
+          "fallback": "x / (−91 + 22) = y / (−55 + 78) = 1 / (12 − 35) ⇒ x/(−69) = y/23 = 1/(−23)"
+        },
+        "reasonMath": {
+          "en": "Cross-multiply.",
+          "ta": "குறுக்குப் பெருக்கல் செய்க."
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 3,\\; y = -1",
+          "fallback": "x = 3, y = −1"
+        },
+        "reasonMath": {
+          "en": [
+            "Solve for ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " and ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 3",
+              "fallback": "x = 3"
+            },
+            ", ",
+            {
+              "latex": "y = - 1",
+              "fallback": "y = −1"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.13-q1-iii",
+    "questionMath": {
+      "en": [
+        "1. Solve by cross-multiplication method\n",
+        {
+          "latex": "\\dfrac{2}{x} + \\dfrac{3}{y} - 5 = 0;\\quad \\dfrac{3}{x} - \\dfrac{1}{y} + 9 = 0",
+          "fallback": "(iii) 2/x + 3/y = 5; 3/x − 1/y + 9 = 0",
+          "display": true
+        }
+      ],
+      "ta": [
+        "1. குறுக்குப் பெருக்கல் முறையைப் பயன்படுத்தித் தீர்க்க\n",
+        {
+          "latex": "\\dfrac{2}{x} + \\dfrac{3}{y} - 5 = 0;\\quad \\dfrac{3}{x} - \\dfrac{1}{y} + 9 = 0",
+          "fallback": "(iii) 2/x + 3/y = 5; 3/x − 1/y + 9 = 0",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = -\\dfrac{1}{2},\\; y = \\dfrac{1}{3}}",
+      "fallback": "x = −1/2, y = 1/3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2u + 3v - 5 = 0;\\; 3u - v + 9 = 0",
+          "fallback": "Let u = 1/x, v = 1/y (x, y ≠ 0): 2u + 3v − 5 = 0; 3u − v + 9 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "u",
+              "fallback": "u"
+            },
+            ", ",
+            {
+              "latex": "v",
+              "fallback": "v"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle u = \\frac{1}{x}",
+              "fallback": "u = 1/x"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle v = \\frac{1}{y}",
+              "fallback": "v = 1/y"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\dfrac{u}{22} = \\dfrac{v}{-33} = \\dfrac{1}{-11}",
+          "fallback": "u / (27 − 5) = v / (−15 − 18) = 1 / (−2 − 9) ⇒ u/22 = v/(−33) = 1/(−11)"
+        },
+        "reasonMath": {
+          "en": "Cross-multiply.",
+          "ta": "குறுக்குப் பெருக்கல் செய்க."
+        }
+      },
+      {
+        "math": {
+          "latex": "x = -\\dfrac{1}{2},\\; y = \\dfrac{1}{3}",
+          "fallback": "u = −2, v = 3 ⇒ x = −1/2, y = 1/3"
+        },
+        "reasonMath": {
+          "en": [
+            "Invert to get ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ", ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle x = \\frac{- 1}{2}",
+              "fallback": "x = −1/2"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle y = \\frac{1}{3}",
+              "fallback": "y = 1/3"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.13-q2",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "x + y - 80 = 0;\\quad 2x + 5y - 220 = 0",
+          "fallback": "2. Akshaya has 2 rupee coins and 5 rupee coins in her purse. If in all she has 80 coins totalling ₹220, how many coins of each kind does she have.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "x + y - 80 = 0;\\quad 2x + 5y - 220 = 0",
+          "fallback": "2. அட்சயா தனது பணப்பையில் (purse) இரண்டு ரூபாய் நாணயங்களையும், ஐந்து ரூபாய் நாணயங்களையும் வைத்திருந்தாள். அவள் மொத்தமாக ₹220 மதிப்புடைய 80 நாணயங்களை வைத்திருந்தாள் எனில், ஒவ்வொன்றிலும் எத்தனை நாணயங்கள் வைத்திருந்தாள்.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{60\\text{ (Rs. 2)},\\; 20\\text{ (Rs. 5)}}",
+      "fallback": "60 two-rupee coins and 20 five-rupee coins"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x+y-80=0,\\; 2x+5y-220=0",
+          "fallback": "x + y − 80 = 0 and 2x + 5y − 220 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Let ₹",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " coins = x, ₹",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " coins = y."
+          ],
+          "ta": [
+            "₹",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " நாணயங்கள் ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            ", ₹",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " நாணயங்கள் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\dfrac{x}{180} = \\dfrac{y}{60} = \\dfrac{1}{3}",
+          "fallback": "x / (−220 + 400) = y / (−160 + 220) = 1 / (5 − 2) ⇒ x/180 = y/60 = 1/3"
+        },
+        "reasonMath": {
+          "en": "Apply cross-multiplication.",
+          "ta": "குறுக்குப் பெருக்கல் செய்க."
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 60,\\; y = 20",
+          "fallback": "x = 60, y = 20"
+        },
+        "reasonMath": {
+          "en": [
+            {
+              "latex": "60",
+              "fallback": "60"
+            },
+            " ₹",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " coins and ",
+            {
+              "latex": "20",
+              "fallback": "20"
+            },
+            " ₹",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " coins."
+          ],
+          "ta": [
+            {
+              "latex": "x = 60",
+              "fallback": "x = 60"
+            },
+            ", ",
+            {
+              "latex": "y = 20",
+              "fallback": "y = 20"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.13-q3",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "\\dfrac{24}{x} + \\dfrac{24}{y} = 1;\\quad \\dfrac{8}{x} + \\dfrac{18}{y} = \\dfrac{1}{2}",
+          "fallback": "3. It takes 24 hours to fill a swimming pool using two pipes. If the pipe of larger diameter is used for 8 hours and the pipe of the smaller diameter is used for 18 hours. Only half of the pool is filled. How long would each pipe take to fill the swimming pool.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\dfrac{24}{x} + \\dfrac{24}{y} = 1;\\quad \\dfrac{8}{x} + \\dfrac{18}{y} = \\dfrac{1}{2}",
+          "fallback": "3. இரு வெவ்வேறு அளவு விட்டமுடைய குழாய்கள் மூலம் ஒரு நீச்சல் குளத்தில் முழுமையாக நீர் நிரப்ப 24 மணி நேரம் ஆகும். அதிக விட்டமுடைய குழாயை 8 மணி நேரமும் குறைந்த விட்டமுடைய குழாயை 18 மணி நேரமும் பயன்படுத்தி நீர் நிரப்பினால் நீச்சல் குளத்தில் பாதி அளவு நீர் நிரம்பும் எனில், தனித்தனியாக அந்தக் குழாய்களைக் கொண்டு நீச்சல் குளம் முழுவதிலும் நீர் நிரப்ப ஆகும் கால அளவுகளைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 40\\text{ hrs},\\; y = 60\\text{ hrs}}",
+      "fallback": "Larger pipe: 40 hours; Smaller pipe: 60 hours"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "24u+24v-1=0,\\; 16u+36v-1=0",
+          "fallback": "Let u = 1/x, v = 1/y: 24u + 24v − 1 = 0 and 16u + 36v − 1 = 0"
+        },
+        "reasonMath": {
+          "en": "Work rates per hour.",
+          "ta": [
+            {
+              "latex": "\\displaystyle u = \\frac{1}{x}",
+              "fallback": "u = 1/x"
+            },
+            ", ",
+            {
+              "latex": "\\displaystyle v = \\frac{1}{y}",
+              "fallback": "v = 1/y"
+            },
+            " என்க."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\dfrac{u}{12} = \\dfrac{v}{8} = \\dfrac{1}{480}",
+          "fallback": "u / (−24 + 36) = v / (−16 + 24) = 1 / (864 − 384) ⇒ u/12 = v/8 = 1/480"
+        },
+        "reasonMath": {
+          "en": "Cross-multiply.",
+          "ta": "குறுக்குப் பெருக்கல் செய்க."
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 40,\\; y = 60",
+          "fallback": "u = 1/40, v = 1/60 ⇒ x = 40 hrs, y = 60 hrs"
+        },
+        "reasonMath": {
+          "en": "Invert rates to get fill times.",
+          "ta": [
+            {
+              "latex": "x = 40",
+              "fallback": "x = 40"
+            },
+            " மணி நேரம், ",
+            {
+              "latex": "y = 60",
+              "fallback": "y = 60"
+            },
+            " மணி நேரம்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.14-q1",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "(10x+y)+(10y+x)=110;\\quad (10x+y)-10 = 5(x+y)+4",
+          "fallback": "1. The sum of a two digit number and the number formed by interchanging the digits is 110. If 10 is subtracted from the first number, the new number is 4 more than 5 times the sums of the digits of the first number. Find the first number.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "(10x+y)+(10y+x)=110;\\quad (10x+y)-10 = 5(x+y)+4",
+          "fallback": "1. ஓர் ஈரிலக்க எண்ணையும் அதன் இலக்கங்களை மாற்றுவதால் கிடைக்கும் எண்ணையும் கூட்டினால் 110 கிடைக்கும். கொடுக்கப்பட்ட அந்த ஈரிலக்க எண்ணிலிருந்து 10-ஐக் கழித்தால் அது கொடுக்கப்பட்ட ஈரிலக்க எண்ணின் இலக்கங்களின் கூடுதலின் 5 மடங்கை விட 4 அதிகம் எனில், அந்த எண்ணைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{64}",
+      "fallback": "64"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x + y = 10",
+          "fallback": "11(x + y) = 110 ⇒ x + y = 10"
+        },
+        "reasonMath": {
+          "en": "First condition.",
+          "ta": [
+            "முதல் நிபந்தனை: ",
+            {
+              "latex": "x + y = 10",
+              "fallback": "x + y = 10"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "10x + y = 64",
+          "fallback": "10x + y − 10 = 5(10) + 4 = 54 ⇒ 10x + y = 64"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x + y = 10",
+              "fallback": "x + y = 10"
+            },
+            " into second condition."
+          ],
+          "ta": [
+            "இரண்டாம் நிபந்தனையில் ",
+            {
+              "latex": "x + y = 10",
+              "fallback": "x + y = 10"
+            },
+            " எனப் பிரதியிட ",
+            {
+              "latex": "10 x + y = 64",
+              "fallback": "10x + y = 64"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.14-q2",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "x + y = 12;\\quad \\dfrac{x}{y + 3} = \\dfrac{1}{2}",
+          "fallback": "2. The sum of the numerator and denominator of a fraction is 12. If the denominator is increased by 3, the fraction becomes 1/2. Find the fraction.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "x + y = 12;\\quad \\dfrac{x}{y + 3} = \\dfrac{1}{2}",
+          "fallback": "2. ஒரு பின்னத்தின் பகுதி மற்றும் தொகுதியின் கூடுதல் 12. அப்பின்னத்தின் பகுதியுடன் 3-ஐக் கூட்டினால் அதன் மதிப்பு 1/2 ஆகும் எனில், அப்பின்னத்தைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\dfrac{5}{7}}",
+      "fallback": "5/7"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x + y = 12;\\; 2x - y = 3",
+          "fallback": "x + y = 12 and 2x = y + 3 ⇒ 2x − y = 3"
+        },
+        "reasonMath": {
+          "en": "Form two linear equations.",
+          "ta": [
+            {
+              "latex": "x + y = 12",
+              "fallback": "x + y = 12"
+            },
+            " மற்றும் ",
+            {
+              "latex": "2 x - y = 3",
+              "fallback": "2x − y = 3"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\dfrac{5}{7}",
+          "fallback": "Add: 3x = 15 ⇒ x = 5, y = 7 ⇒ Fraction = 5/7"
+        },
+        "reasonMath": {
+          "en": [
+            "Solve and form ",
+            {
+              "latex": "\\displaystyle \\frac{x}{y}",
+              "fallback": "x/y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 5",
+              "fallback": "x = 5"
+            },
+            ", ",
+            {
+              "latex": "y = 7",
+              "fallback": "y = 7"
+            },
+            "; பின்னம் = 5/7."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.14-q3",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "\\angle A + \\angle C = 180^\\circ;\\quad \\angle B + \\angle D = 180^\\circ",
+          "fallback": "3. ABCD is a cyclic quadrilateral such that ∠A = (4y + 20)°, ∠B = (3y − 5)°, ∠C = (4x)° and ∠D = (7x + 5)°. Find the four angles.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\angle A + \\angle C = 180^\\circ;\\quad \\angle B + \\angle D = 180^\\circ",
+          "fallback": "3. ABCD என்ற வட்ட நாற்கரத்தில் ∠A = (4y + 20)°, ∠B = (3y − 5)°, ∠C = (4x)° மற்றும் ∠D = (7x + 5)° எனில், நான்கு கோணங்களையும் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\angle A=120^\\circ,\\; \\angle B=70^\\circ,\\; \\angle C=60^\\circ,\\; \\angle D=110^\\circ}",
+      "fallback": "∠A = 120°, ∠B = 70°, ∠C = 60°, ∠D = 110°"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x + y = 40;\\; 7x + 3y = 180",
+          "fallback": "Opposite angles of cyclic quad sum to 180°: x + y = 40; 7x + 3y = 180"
+        },
+        "reasonMath": {
+          "en": [
+            "Use ∠A + ∠",
+            {
+              "latex": "C = 180",
+              "fallback": "C = 180"
+            },
+            "° and ∠B + ∠",
+            {
+              "latex": "D = 180",
+              "fallback": "D = 180"
+            },
+            "°."
+          ],
+          "ta": [
+            "எதிர்க் கோணங்களின் கூடுதல் ",
+            {
+              "latex": "180",
+              "fallback": "180"
+            },
+            "°."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 15,\\; y = 25",
+          "fallback": "4x = 60 ⇒ x = 15, y = 25"
+        },
+        "reasonMath": {
+          "en": [
+            "Eliminate ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "-ஐ நீக்க ",
+            {
+              "latex": "x = 15",
+              "fallback": "x = 15"
+            },
+            ", ",
+            {
+              "latex": "y = 25",
+              "fallback": "y = 25"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "120^\\circ,\\; 70^\\circ,\\; 60^\\circ,\\; 110^\\circ",
+          "fallback": "∠A = 120°, ∠B = 70°, ∠C = 60°, ∠D = 110°"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " and ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " into each angle."
+          ],
+          "ta": [
+            "கோணங்கள்: ",
+            {
+              "latex": "120",
+              "fallback": "120"
+            },
+            "°, ",
+            {
+              "latex": "70",
+              "fallback": "70"
+            },
+            "°, ",
+            {
+              "latex": "60",
+              "fallback": "60"
+            },
+            "°, ",
+            {
+              "latex": "110",
+              "fallback": "110"
+            },
+            "°."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.14-q4",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "0.05x + 0.10y = 2000;\\quad 0.10x - 0.05y = 1500",
+          "fallback": "4. On selling a T.V. at 5% gain and a fridge at 10% gain, a shopkeeper gains ₹2000. But if he sells the T.V. at 10% gain and the fridge at 5% loss, he gains Rs.1500 on the transaction. Find the actual price of the T.V. and the fridge.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "0.05x + 0.10y = 2000;\\quad 0.10x - 0.05y = 1500",
+          "fallback": "4. ஒரு தொலைக்காட்சிப் பெட்டியை 5% இலாபத்திற்கும், ஒரு குளிர்சாதனப் பெட்டியை 10% இலாபத்திற்கும் விற்பதால் கடைக்காரருக்கு நிகர இலாபம் ₹2,000 கிடைக்கிறது. ஆனால் அவர் ஒரு தொலைக்காட்சிப் பெட்டியை 10% இலாபத்திற்கும், ஒரு குளிர்சாதனப் பெட்டியை 5% நட்டத்திற்கும் விற்பதால் அவரின் நிகர இலாபம் ₹1,500 கிடைக்கிறது எனில், தொலைக்காட்சிப் பெட்டி மற்றும் குளிர்சாதனப் பெட்டியின் சரியான விலைகளைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{TV} = \\text{Rs.\\,}20,000,\\; \\text{Fridge} = \\text{Rs.\\,}10,000}",
+      "fallback": "T.V.: ₹20,000; Fridge: ₹10,000"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x+2y=40000;\\; 2x-y=30000",
+          "fallback": "x + 2y = 40000 and 2x − y = 30000"
+        },
+        "reasonMath": {
+          "en": [
+            "Multiply both equations by ",
+            {
+              "latex": "20",
+              "fallback": "20"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "20",
+              "fallback": "20"
+            },
+            "-ஆல் பெருக்க ",
+            {
+              "latex": "x + 2 y = 40000",
+              "fallback": "x + 2y = 40000"
+            },
+            "; ",
+            {
+              "latex": "2 x - y = 30000",
+              "fallback": "2x − y = 30000"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 20000,\\; y = 10000",
+          "fallback": "5x = 100000 ⇒ x = ₹20,000, y = ₹10,000"
+        },
+        "reasonMath": {
+          "en": [
+            "Eliminate ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " = ₹",
+            {
+              "latex": "20",
+              "fallback": "20"
+            },
+            ",",
+            {
+              "latex": "000",
+              "fallback": "000"
+            },
+            ", ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " = ₹",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            ",",
+            {
+              "latex": "000",
+              "fallback": "000"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.14-q5",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "\\dfrac{x}{y} = \\dfrac{5}{6};\\quad \\dfrac{x - 8}{y - 8} = \\dfrac{4}{5}",
+          "fallback": "5. Two numbers are in the ratio 5 : 6. If 8 is subtracted from each of the numbers, the ratio becomes 4 : 5. Find the numbers.",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\dfrac{x}{y} = \\dfrac{5}{6};\\quad \\dfrac{x - 8}{y - 8} = \\dfrac{4}{5}",
+          "fallback": "5. இரு எண்கள் 5 : 6 என்ற விகிதத்தில் உள்ளன. அவை ஒவ்வொன்றிலிருந்தும் முறையே 8-ஐக் கழித்தால் அவற்றின் விகிதம் 4 : 5 என மாறும் எனில், அந்த எண்களைக் காண்க.",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{40,\\; 48}",
+      "fallback": "40 and 48"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "6x-5y=0;\\; 5x-4y=8",
+          "fallback": "6x − 5y = 0 and 5x − 4y = 8"
+        },
+        "reasonMath": {
+          "en": "Cross-multiply both proportions.",
+          "ta": [
+            "குறுக்குப் பெருக்கல்: ",
+            {
+              "latex": "6 x - 5 y = 0",
+              "fallback": "6x − 5y = 0"
+            },
+            "; ",
+            {
+              "latex": "5 x - 4 y = 8",
+              "fallback": "5x − 4y = 8"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 40,\\; y = 48",
+          "fallback": "25x − 24x = 40 ⇒ x = 40, y = 48"
+        },
+        "reasonMath": {
+          "en": [
+            "Eliminate ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "x = 40",
+              "fallback": "x = 40"
+            },
+            ", ",
+            {
+              "latex": "y = 48",
+              "fallback": "y = 48"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.14-q6",
+    "questionMath": {
+      "en": [
+        {
+          "latex": "\\dfrac{4}{x} + \\dfrac{4}{y} = \\dfrac{1}{3};\\quad \\dfrac{2}{x} + \\dfrac{5}{y} = \\dfrac{1}{4}",
+          "fallback": "6. 4 Indians and 4 Chinese can do a piece of work in 3 days. While 2 Indians and 5 Chinese can finish it in 4 days. How long would it take for 1 Indian to do it? How long would it take for 1 Chinese to do it?",
+          "display": true
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\dfrac{4}{x} + \\dfrac{4}{y} = \\dfrac{1}{3};\\quad \\dfrac{2}{x} + \\dfrac{5}{y} = \\dfrac{1}{4}",
+          "fallback": "6. 4 இந்தியர்கள் மற்றும் 4 சீனர்கள் சேர்ந்து 3 நாள்களில் ஒரு வேலையை முடிக்கிறார்கள். 2 இந்தியர்கள் மற்றும் 5 சீனர்கள் சேர்ந்து அதே வேலையை 4 நாள்களில் முடிக்கிறார்கள் எனில், இப்பணியைத் தனியாக ஒரு இந்தியர் எத்தனை நாள்களில் செய்வார்? ஒரு சீனர் தனியாக எத்தனை நாள்களில் செய்வார்?",
+          "display": true
+        }
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{x = 18\\text{ days},\\; y = 36\\text{ days}}",
+      "fallback": "1 Indian: 18 days; 1 Chinese: 36 days"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "4u+4v=\\dfrac{1}{3};\\; 2u+5v=\\dfrac{1}{4}",
+          "fallback": "Let u = 1/x, v = 1/y: 4u + 4v = 1/3; 2u + 5v = 1/4"
+        },
+        "reasonMath": {
+          "en": "Set up 1-day work equations.",
+          "ta": [
+            "ஒரு நாள் வேலை: ",
+            {
+              "latex": "\\displaystyle 4 u + 4 v = \\frac{1}{3}",
+              "fallback": "4u + 4v = 1/3"
+            },
+            "; ",
+            {
+              "latex": "\\displaystyle 2 u + 5 v = \\frac{1}{4}",
+              "fallback": "2u + 5v = 1/4"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "x = 18,\\; y = 36",
+          "fallback": "6v = 1/2 − 1/3 = 1/6 ⇒ v = 1/36 ⇒ y = 36; u = 1/18 ⇒ x = 18"
+        },
+        "reasonMath": {
+          "en": [
+            "Eliminate ",
+            {
+              "latex": "u",
+              "fallback": "u"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle v = \\frac{1}{36} \\Rightarrow y = 36",
+              "fallback": "v = 1/36 ⇒ y = 36"
+            },
+            "; ",
+            {
+              "latex": "\\displaystyle u = \\frac{1}{18} \\Rightarrow x = 18",
+              "fallback": "u = 1/18 ⇒ x = 18"
+            },
+            "."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q1",
+    "questionMath": {
+      "en": [
+        "1. If x³ + 6x² + kx + 6 is exactly divisible by (x + 2), then k = ?\n(1) −6  (2) −7  (3) −8  (4) 11"
+      ],
+      "ta": [
+        "1. x³ + 6x² + kx + 6 என்பது (x + 2)-ஆல் மீதியின்றி வகுபடும் எனில், k-இன் மதிப்பு என்ன?\n(1) −6  (2) −7  (3) −8  (4) 11"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(4) } 11}",
+      "fallback": "(4) 11"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(-2) = -8 + 24 - 2k + 6 = 0",
+          "fallback": "p(−2) = (−2)³ + 6(−2)² + k(−2) + 6 = 0"
+        },
+        "reasonMath": {
+          "en": [
+            "By Factor Theorem, ",
+            {
+              "latex": "p \\left(- 2\\right) = 0",
+              "fallback": "p(−2) = 0"
+            },
+            "."
+          ],
+          "ta": [
+            "காரணித் தேற்றப்படி ",
+            {
+              "latex": "p \\left(- 2\\right) = 0",
+              "fallback": "p(−2) = 0"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "k = 11",
+          "fallback": "22 − 2k = 0 ⇒ k = 11"
+        },
+        "reasonMath": {
+          "en": [
+            "Solve for ",
+            {
+              "latex": "k",
+              "fallback": "k"
+            },
+            "; option (4) is correct."
+          ],
+          "ta": [
+            {
+              "latex": "k = 11",
+              "fallback": "k = 11"
+            },
+            "; விருப்பம் (4) சரி."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q2",
+    "questionMath": {
+      "en": [
+        "2. The root of the polynomial equation 2x + 3 = 0 is\n(1) 1/3  (2) −1/3  (3) −3/2  (4) −2/3"
+      ],
+      "ta": [
+        "2. 2x + 3 = 0 என்ற பல்லுறுப்புக் கோவைச் சமன்பாட்டின் மூலம்\n(1) 1/3  (2) −1/3  (3) −3/2  (4) −2/3"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(3) } -\\dfrac{3}{2}}",
+      "fallback": "(3) −3/2"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = -\\dfrac{3}{2}",
+          "fallback": "2x + 3 = 0 ⇒ 2x = −3 ⇒ x = −3/2"
+        },
+        "reasonMath": {
+          "en": [
+            "Solve ",
+            {
+              "latex": "2 x + 3 = 0",
+              "fallback": "2x + 3 = 0"
+            },
+            "; option (3) is correct."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle 2 x = - 3 \\Rightarrow x = \\frac{- 3}{2}",
+              "fallback": "2x = −3 ⇒ x = −3/2"
+            },
+            "; விருப்பம் (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q3",
+    "questionMath": {
+      "en": [
+        "3. The type of the polynomial 4 − 3x³ is\n(1) constant polynomial  (2) linear polynomial  (3) quadratic polynomial  (4) cubic polynomial"
+      ],
+      "ta": [
+        "3. 4 − 3x³ என்ற பல்லுறுப்புக் கோவையின் வகை\n(1) மாறிலி பல்லுறுப்புக் கோவை  (2) ஒருபடி பல்லுறுப்புக் கோவை  (3) இருபடி பல்லுறுப்புக் கோவை  (4) முப்படி பல்லுறுப்புக் கோவை"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(4) cubic polynomial}}",
+      "fallback": "(4) cubic polynomial"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\deg(4 - 3x^3) = 3",
+          "fallback": "Degree of 4 − 3x³ is 3"
+        },
+        "reasonMath": {
+          "en": [
+            "Highest power of ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " is 3 ⇒ cubic polynomial; option (4)."
+          ],
+          "ta": [
+            "மிக உயர்ந்த அடுக்கு ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " என்பதால் முப்படி பல்லுறுப்புக் கோவை; விருப்பம் (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q4",
+    "questionMath": {
+      "en": [
+        "4. If x⁵¹ + 51 is divided by x + 1, then the remainder is\n(1) 0  (2) 1  (3) 49  (4) 50"
+      ],
+      "ta": [
+        "4. x⁵¹ + 51 என்பது x + 1-ஆல் வகுக்கப்பட்டால் கிடைக்கும் மீதி\n(1) 0  (2) 1  (3) 49  (4) 50"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(4) } 50}",
+      "fallback": "(4) 50"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(-1) = -1 + 51 = 50",
+          "fallback": "p(−1) = (−1)⁵¹ + 51 = −1 + 51 = 50"
+        },
+        "reasonMath": {
+          "en": [
+            {
+              "latex": "51",
+              "fallback": "51"
+            },
+            " is odd, so ",
+            {
+              "latex": "\\left(- 1\\right)^{51} = - 1",
+              "fallback": "(−1)⁵¹ = −1"
+            },
+            "; option (4)."
+          ],
+          "ta": [
+            {
+              "latex": "p \\left(- 1\\right) = - 1 + 51 = 50",
+              "fallback": "p(−1) = −1 + 51 = 50"
+            },
+            "; விருப்பம் (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q5",
+    "questionMath": {
+      "en": [
+        "5. The zero of the polynomial 2x + 5 is\n(1) 5/2  (2) −5/2  (3) 2/5  (4) −2/5"
+      ],
+      "ta": [
+        "5. 2x + 5 என்ற பல்லுறுப்புக் கோவையின் பூச்சியம்\n(1) 5/2  (2) −5/2  (3) 2/5  (4) −2/5"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(2) } -\\dfrac{5}{2}}",
+      "fallback": "(2) −5/2"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = -\\dfrac{5}{2}",
+          "fallback": "2x + 5 = 0 ⇒ x = −5/2"
+        },
+        "reasonMath": {
+          "en": [
+            "Set ",
+            {
+              "latex": "2 x + 5 = 0",
+              "fallback": "2x + 5 = 0"
+            },
+            "; option (2)."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle 2 x + 5 = 0 \\Rightarrow x = \\frac{- 5}{2}",
+              "fallback": "2x + 5 = 0 ⇒ x = −5/2"
+            },
+            "; விருப்பம் (2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q6",
+    "questionMath": {
+      "en": [
+        "6. The sum of the polynomials p(x) = x³ − x² − 2, q(x) = x² − 3x + 1\n(1) x³ − 3x − 1  (2) x³ + 2x² − 1  (3) x³ − 2x² − 3x  (4) x³ − 2x² + 3x − 1"
+      ],
+      "ta": [
+        "6. p(x) = x³ − x² − 2, q(x) = x² − 3x + 1 ஆகிய பல்லுறுப்புக் கோவைகளின் கூடுதல்\n(1) x³ − 3x − 1  (2) x³ + 2x² − 1  (3) x³ − 2x² − 3x  (4) x³ − 2x² + 3x − 1"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(1) } x^3 - 3x - 1}",
+      "fallback": "(1) x³ − 3x − 1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^3 - 3x - 1",
+          "fallback": "(x³ − x² − 2) + (x² − 3x + 1) = x³ − 3x − 1"
+        },
+        "reasonMath": {
+          "en": [
+            "The ",
+            {
+              "latex": "- x^{2}",
+              "fallback": "−x²"
+            },
+            " and ",
+            {
+              "latex": "+ x^{2}",
+              "fallback": "+x²"
+            },
+            " cancel; option (1)."
+          ],
+          "ta": [
+            {
+              "latex": "- x^{2}",
+              "fallback": "−x²"
+            },
+            " மற்றும் ",
+            {
+              "latex": "+ x^{2}",
+              "fallback": "+x²"
+            },
+            " நீங்கி ",
+            {
+              "latex": "x^{3} - 3 x - 1",
+              "fallback": "x³ − 3x − 1"
+            },
+            " கிடைக்கும்; விருப்பம் (1)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q7",
+    "questionMath": {
+      "en": [
+        "7. Degree of the polynomial (y³ − 2)(y³ + 1) is\n(1) 9  (2) 2  (3) 3  (4) 6"
+      ],
+      "ta": [
+        "7. (y³ − 2)(y³ + 1) என்ற பல்லுறுப்புக் கோவையின் படி\n(1) 9  (2) 2  (3) 3  (4) 6"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(4) } 6}",
+      "fallback": "(4) 6"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "3 + 3 = 6",
+          "fallback": "deg((y³ − 2)(y³ + 1)) = 3 + 3 = 6"
+        },
+        "reasonMath": {
+          "en": [
+            "Leading term is ",
+            {
+              "latex": "y^{3}",
+              "fallback": "y³"
+            },
+            " · ",
+            {
+              "latex": "y^{3} = y^{6}",
+              "fallback": "y³ = y⁶"
+            },
+            "; option (4)."
+          ],
+          "ta": [
+            "மிக உயர்ந்த அடுக்கு ",
+            {
+              "latex": "3 + 3 = 6",
+              "fallback": "3 + 3 = 6"
+            },
+            "; விருப்பம் (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q8",
+    "questionMath": {
+      "en": [
+        "8. Let the polynomials be (A) −13q⁵ + 4q² + 12q, (B) (x² + 4)(x² + 9), (C) 4q⁸ − q⁶ + q², (D) −(5/7)y¹² + y³ + y⁵. Then ascending order of their degree is\n(1) A,B,D,C  (2) A,B,C,D  (3) B,C,D,A  (4) B,A,C,D"
+      ],
+      "ta": [
+        "8. கீழ்க்காணும் பல்லுறுப்புக் கோவைகளின் படிகளின் ஏறு வரிசை (A) −13q⁵+4q²+12q, (B) (x²+4)(x²+9), (C) 4q⁸−q⁶+q², (D) −(5/7)y¹²+y³+y⁵\n(1) A,B,D,C  (2) A,B,C,D  (3) B,C,D,A  (4) B,A,C,D"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(4) B, A, C, D}}",
+      "fallback": "(4) B,A,C,D"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "4 < 5 < 8 < 12",
+          "fallback": "deg(B) = 4, deg(A) = 5, deg(C) = 8, deg(D) = 12"
+        },
+        "reasonMath": {
+          "en": [
+            "Order from smallest degree to largest: ",
+            {
+              "latex": "4 < 5 < 8 < 12",
+              "fallback": "4 < 5 < 8 < 12"
+            },
+            "; option (4)."
+          ],
+          "ta": [
+            "படிகள்: ",
+            {
+              "latex": "B \\left(4\\right) < A \\left(5\\right) < C \\left(8\\right) < D \\left(12\\right)",
+              "fallback": "B(4) < A(5) < C(8) < D(12)"
+            },
+            "; விருப்பம் (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q9",
+    "questionMath": {
+      "en": [
+        "9. If p(a) = 0 then (x − a) is a ________ of p(x)\n(1) divisor  (2) quotient  (3) remainder  (4) factor"
+      ],
+      "ta": [
+        "9. p(a) = 0 எனில், (x − a) என்பது p(x)-இன் ஒரு ________\n(1) வகுத்தி  (2) ஈவு  (3) மீதி  (4) காரணி"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(4) factor}}",
+      "fallback": "(4) factor"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "p(a)=0 \\implies (x-a)\\text{ is a factor}",
+          "fallback": "By Factor Theorem, p(a) = 0 ⇒ (x − a) is a factor"
+        },
+        "reasonMath": {
+          "en": "Option (4) is correct.",
+          "ta": [
+            {
+              "latex": "p \\left(a\\right) = 0",
+              "fallback": "p(a) = 0"
+            },
+            " எனில் ",
+            {
+              "latex": "\\left(x - a\\right)",
+              "fallback": "(x − a)"
+            },
+            " ஒரு காரணி; விருப்பம் (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q10",
+    "questionMath": {
+      "en": [
+        "10. Zeros of (2 − 3x) is ________\n(1) 3  (2) 2  (3) 2/3  (4) 3/2"
+      ],
+      "ta": [
+        "10. (2 − 3x)-இன் பூச்சியம் ________\n(1) 3  (2) 2  (3) 2/3  (4) 3/2"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(3) } \\dfrac{2}{3}}",
+      "fallback": "(3) 2/3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x = \\dfrac{2}{3}",
+          "fallback": "2 − 3x = 0 ⇒ 3x = 2 ⇒ x = 2/3"
+        },
+        "reasonMath": {
+          "en": "Option (3) is correct.",
+          "ta": [
+            {
+              "latex": "\\displaystyle 2 - 3 x = 0 \\Rightarrow x = \\frac{2}{3}",
+              "fallback": "2 − 3x = 0 ⇒ x = 2/3"
+            },
+            "; விருப்பம் (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q11",
+    "questionMath": {
+      "en": [
+        "11. Which of the following has x − 1 as a factor?\n(1) 2x − 1  (2) 3x − 3  (3) 4x − 3  (4) 3x − 4"
+      ],
+      "ta": [
+        "11. x − 1 என்பது ________-இன் ஒரு காரணி.\n(1) 2x − 1  (2) 3x − 3  (3) 4x − 3  (4) 3x − 4"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(2) } 3x - 3}",
+      "fallback": "(2) 3x − 3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "3(1) - 3 = 0",
+          "fallback": "3(1) − 3 = 0 ⇒ (x − 1) is a factor of 3x − 3"
+        },
+        "reasonMath": {
+          "en": [
+            "Test ",
+            {
+              "latex": "x = 1",
+              "fallback": "x = 1"
+            },
+            " in each choice; only ",
+            {
+              "latex": "3 x - 3 = 3 \\left(x - 1\\right)",
+              "fallback": "3x − 3 = 3(x − 1)"
+            },
+            " gives ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            "; option (2)."
+          ],
+          "ta": [
+            {
+              "latex": "x = 1",
+              "fallback": "x = 1"
+            },
+            " எனப் பிரதியிட ",
+            {
+              "latex": "3 \\left(1\\right) - 3 = 0",
+              "fallback": "3(1) − 3 = 0"
+            },
+            "; விருப்பம் (2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q12",
+    "questionMath": {
+      "en": [
+        "12. If x − 3 is a factor of p(x), then the remainder is\n(1) 3  (2) −3  (3) p(3)  (4) p(−3)"
+      ],
+      "ta": [
+        "12. x − 3 என்பது p(x)-இன் ஒரு காரணி எனில், மீதி ________\n(1) 3  (2) −3  (3) p(3)  (4) p(−3)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(3) } p(3)}",
+      "fallback": "(3) p(3)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{Remainder} = p(3)",
+          "fallback": "By Remainder Theorem, dividing p(x) by (x − 3) gives remainder p(3)"
+        },
+        "reasonMath": {
+          "en": "Option (3) is correct.",
+          "ta": [
+            "மீதித் தேற்றப்படி ",
+            {
+              "latex": "\\left(x - 3\\right)",
+              "fallback": "(x − 3)"
+            },
+            "-ஆல் வகுக்க மீதி ",
+            {
+              "latex": "p \\left(3\\right)",
+              "fallback": "p(3)"
+            },
+            "; விருப்பம் (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q13",
+    "questionMath": {
+      "en": [
+        "13. (x + y)(x² − xy + y²) is equal to\n(1) (x + y)³  (2) (x − y)³  (3) x³ + y³  (4) x³ − y³"
+      ],
+      "ta": [
+        "13. (x + y)(x² − xy + y²) = ________\n(1) (x + y)³  (2) (x − y)³  (3) x³ + y³  (4) x³ − y³"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(3) } x^3 + y^3}",
+      "fallback": "(3) x³ + y³"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^3 + y^3",
+          "fallback": "(x + y)(x² − xy + y²) = x³ + y³"
+        },
+        "reasonMath": {
+          "en": "Standard sum of cubes identity; option (3).",
+          "ta": [
+            {
+              "latex": "x^{3} + y^{3}",
+              "fallback": "x³ + y³"
+            },
+            " முற்றொருமை; விருப்பம் (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q14",
+    "questionMath": {
+      "en": [
+        "14. (a + b − c)² is equal to ________\n(1) (a − b + c)²  (2) (−a − b + c)²  (3) (a + b + c)²  (4) (a − b − c)²"
+      ],
+      "ta": [
+        "14. (a + b − c)² = ________\n(1) (a − b + c)²  (2) (−a − b + c)²  (3) (a + b + c)²  (4) (a − b − c)²"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(2) } (-a - b + c)^2}",
+      "fallback": "(2) (−a − b + c)²"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "[-(a+b-c)]^2 = (a+b-c)^2",
+          "fallback": "(−a − b + c)² = [−(a + b − c)]² = (a + b − c)²"
+        },
+        "reasonMath": {
+          "en": "Negating an expression does not change its square; option (2).",
+          "ta": "எதிர்க் கோவையின் வர்க்கம் சமம்; விருப்பம் (2)."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q15",
+    "questionMath": {
+      "en": [
+        "15. If (x + 5) and (x − 3) are the factors of ax² + bx + c, then values of a, b and c are\n(1) 1,2,3  (2) 1,2,15  (3) 1,2,−15  (4) 1,−2,15"
+      ],
+      "ta": [
+        "15. ax² + bx + c என்ற ஈருறுப்புக் கோவையின் காரணிகள் (x + 5) மற்றும் (x − 3) எனில், a, b மற்றும் c-இன் மதிப்புகள் ________\n(1) 1,2,3  (2) 1,2,15  (3) 1,2,−15  (4) 1,−2,15"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(3) } 1,\\; 2,\\; -15}",
+      "fallback": "(3) 1, 2, −15"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a=1,\\; b=2,\\; c=-15",
+          "fallback": "(x + 5)(x − 3) = x² + 2x − 15 ⇒ a = 1, b = 2, c = −15"
+        },
+        "reasonMath": {
+          "en": "Expand and compare; option (3).",
+          "ta": [
+            "விரித்தெழுத ",
+            {
+              "latex": "x^{2} + 2 x - 15 \\Rightarrow 1",
+              "fallback": "x² + 2x − 15 ⇒ 1"
+            },
+            ", ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            ", ",
+            {
+              "latex": "- 15",
+              "fallback": "−15"
+            },
+            "; விருப்பம் (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q16",
+    "questionMath": {
+      "en": [
+        "16. Cubic polynomial may have maximum of ________ linear factors\n(1) 1  (2) 2  (3) 3  (4) 4"
+      ],
+      "ta": [
+        "16. முப்படிப் பல்லுறுப்புக் கோவைக்கு அதிகபட்சம் ________ நேரிய காரணிகள் இருக்கலாம்.\n(1) 1  (2) 2  (3) 3  (4) 4"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(3) } 3}",
+      "fallback": "(3) 3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "3",
+          "fallback": "Degree 3 means at most 3 linear factors"
+        },
+        "reasonMath": {
+          "en": "Option (3) is correct.",
+          "ta": [
+            "படி ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " என்பதால் அதிகபட்சம் ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " நேரிய காரணிகள்; விருப்பம் (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q17",
+    "questionMath": {
+      "en": [
+        "17. Degree of the constant polynomial is ________\n(1) 3  (2) 2  (3) 1  (4) 0"
+      ],
+      "ta": [
+        "17. மாறிலிக் கோவையின் படி\n(1) 3  (2) 2  (3) 1  (4) 0"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(4) } 0}",
+      "fallback": "(4) 0"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "0",
+          "fallback": "A nonzero constant c = c·x⁰ has degree 0"
+        },
+        "reasonMath": {
+          "en": [
+            "Option (4) is correct (note: zero polynomial ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            " has undefined degree)."
+          ],
+          "ta": [
+            "பூச்சியமற்ற மாறிலிக் கோவையின் படி ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            "; விருப்பம் (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q18",
+    "questionMath": {
+      "en": [
+        "18. Find the value of m from the equation 2x + 3y = m. If its one solution is x = 2 and y = −2.\n(1) 2  (2) −2  (3) 10  (4) 0"
+      ],
+      "ta": [
+        "18. 2x + 3y = m என்ற சமன்பாட்டிற்கு x = 2, y = −2 என்பது ஒரு தீர்வு எனில், m-இன் மதிப்பு\n(1) 2  (2) −2  (3) 10  (4) 0"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(2) } -2}",
+      "fallback": "(2) −2"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "m = -2",
+          "fallback": "m = 2(2) + 3(−2) = 4 − 6 = −2"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute ",
+            {
+              "latex": "x = 2",
+              "fallback": "x = 2"
+            },
+            ", ",
+            {
+              "latex": "y = - 2",
+              "fallback": "y = −2"
+            },
+            "; option (2)."
+          ],
+          "ta": [
+            {
+              "latex": "m = 4 - 6 = - 2",
+              "fallback": "m = 4 − 6 = −2"
+            },
+            "; விருப்பம் (2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q19",
+    "questionMath": {
+      "en": [
+        "19. Which of the following is a linear equation\n(1) x + 1/x = 2  (2) x(x − 1) = 2  (3) 3x + 5 = 2/3  (4) x³ − x = 5"
+      ],
+      "ta": [
+        "19. கீழ்க்காண்பவற்றுள் எது நேரிய சமன்பாடு\n(1) x + 1/x = 2  (2) x(x − 1) = 2  (3) 3x + 5 = 2/3  (4) x³ − x = 5"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(3) } 3x + 5 = \\dfrac{2}{3}}",
+      "fallback": "(3) 3x + 5 = 2/3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "3x + 5 = \\dfrac{2}{3}",
+          "fallback": "3x + 5 = 2/3 has variable x with degree 1"
+        },
+        "reasonMath": {
+          "en": [
+            "All other options have ",
+            {
+              "latex": "x^{-1}",
+              "fallback": "x⁻¹"
+            },
+            ", ",
+            {
+              "latex": "x^{2}",
+              "fallback": "x²"
+            },
+            ", or ",
+            {
+              "latex": "x^{3}",
+              "fallback": "x³"
+            },
+            "; option (3)."
+          ],
+          "ta": [
+            {
+              "latex": "\\displaystyle 3 x + 5 = \\frac{2}{3}",
+              "fallback": "3x + 5 = 2/3"
+            },
+            " மட்டுமே படி ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " கொண்ட நேரிய சமன்பாடு; விருப்பம் (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q20",
+    "questionMath": {
+      "en": [
+        "20. Which of the following is a solution of the equation 2x − y = 6\n(1) (2, 4)  (2) (4, 2)  (3) (3, −1)  (4) (0, 6)"
+      ],
+      "ta": [
+        "20. கீழ்க்காண்பனவற்றில் 2x − y = 6-இன் தீர்வு எது?\n(1) (2, 4)  (2) (4, 2)  (3) (3, −1)  (4) (0, 6)"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(2) } (4, 2)}",
+      "fallback": "(2) (4, 2)"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "2(4) - 2 = 6",
+          "fallback": "2(4) − 2 = 8 − 2 = 6"
+        },
+        "reasonMath": {
+          "en": [
+            "Substitute (4, 2) into ",
+            {
+              "latex": "2 x - y = 6",
+              "fallback": "2x − y = 6"
+            },
+            "; option (2)."
+          ],
+          "ta": [
+            {
+              "latex": "x = 4",
+              "fallback": "x = 4"
+            },
+            ", ",
+            {
+              "latex": "y = 2",
+              "fallback": "y = 2"
+            },
+            " எனில் ",
+            {
+              "latex": "2 \\left(4\\right) - 2 = 6",
+              "fallback": "2(4) − 2 = 6"
+            },
+            "; விருப்பம் (2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q21",
+    "questionMath": {
+      "en": [
+        "21. If (2, 3) is a solution of linear equation 2x + 3y = k then, the value of k is\n(1) 12  (2) 6  (3) 0  (4) 13"
+      ],
+      "ta": [
+        "21. 2x + 3y = k என்பதன் தீர்வு (2, 3) எனில், k-இன் மதிப்பைக் காண்க.\n(1) 12  (2) 6  (3) 0  (4) 13"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(4) } 13}",
+      "fallback": "(4) 13"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "k = 13",
+          "fallback": "k = 2(2) + 3(3) = 4 + 9 = 13"
+        },
+        "reasonMath": {
+          "en": "Option (4) is correct.",
+          "ta": [
+            {
+              "latex": "k = 4 + 9 = 13",
+              "fallback": "k = 4 + 9 = 13"
+            },
+            "; விருப்பம் (4)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q22",
+    "questionMath": {
+      "en": [
+        "22. Which condition does not satisfy the linear equation ax + by + c = 0\n(1) a ≠ 0, b = 0  (2) a = 0, b ≠ 0  (3) a = 0, b = 0  (4) a ≠ 0, b ≠ 0"
+      ],
+      "ta": [
+        "22. ax + by + c = 0 என்ற சமன்பாட்டினை எந்த நிபந்தனை நிறைவு செய்யாது?\n(1) a ≠ 0, b = 0  (2) a = 0, b ≠ 0  (3) a = 0, b = 0  (4) a ≠ 0, b ≠ 0"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(3) } a = 0,\\; b = 0}",
+      "fallback": "(3) a = 0, b = 0"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "a = 0,\\; b = 0",
+          "fallback": "If a = 0 and b = 0, both variables vanish (c = 0 is not a linear equation)"
+        },
+        "reasonMath": {
+          "en": "Option (3) is correct.",
+          "ta": [
+            {
+              "latex": "a = 0",
+              "fallback": "a = 0"
+            },
+            ", ",
+            {
+              "latex": "b = 0",
+              "fallback": "b = 0"
+            },
+            " எனில் மாறிகள் இருக்காது; விருப்பம் (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q23",
+    "questionMath": {
+      "en": [
+        "23. Which of the following is not a linear equation in two variable\n(1) ax + by + c = 0  (2) 0x + 0y + c = 0  (3) 0x + by + c = 0  (4) ax + 0y + c = 0"
+      ],
+      "ta": [
+        "23. கீழ்க்காண்பனவற்றில் எது நேரிய சமன்பாடு அல்ல\n(1) ax + by + c = 0  (2) 0x + 0y + c = 0  (3) 0x + by + c = 0  (4) ax + 0y + c = 0"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(2) } 0x + 0y + c = 0}",
+      "fallback": "(2) 0x + 0y + c = 0"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "0x + 0y + c = 0",
+          "fallback": "0x + 0y + c = 0 has both variable coefficients equal to 0"
+        },
+        "reasonMath": {
+          "en": "Option (2) is correct.",
+          "ta": [
+            "இரு மாறிகளின் கெழுக்களும் ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            "; விருப்பம் (2)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q24",
+    "questionMath": {
+      "en": [
+        "24. The value of k for which the pair of linear equations 4x + 6y − 1 = 0 and 2x + ky − 7 = 0 represents parallel lines is\n(1) k = 3  (2) k = 2  (3) k = 4  (4) k = −3"
+      ],
+      "ta": [
+        "24. 4x + 6y − 1 = 0 மற்றும் 2x + ky − 7 = 0 ஆகியவை இணை கோடுகளாக அமையும் எனில், k-இன் மதிப்பு காண்க\n(1) k = 3  (2) k = 2  (3) k = 4  (4) k = −3"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(1) } k = 3}",
+      "fallback": "(1) k = 3"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "k = 3",
+          "fallback": "4/2 = 6/k ≠ (−1)/(−7) ⇒ 2 = 6/k ⇒ k = 3"
+        },
+        "reasonMath": {
+          "en": "Parallel lines require a₁/a₂ = b₁/b₂ ≠ c₁/c₂; option (1).",
+          "ta": [
+            {
+              "latex": "\\displaystyle \\frac{4}{2} = \\frac{6}{k} \\Rightarrow k = 3",
+              "fallback": "4/2 = 6/k ⇒ k = 3"
+            },
+            "; விருப்பம் (1)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q25",
+    "questionMath": {
+      "en": [
+        "25. A pair of linear equations has no solution then the graphical representation is\n(1) Intersecting lines  (2) Parallel lines  (3) Coinciding lines  (4) Perpendicular lines"
+      ],
+      "ta": [
+        "25. கீழ்க்காணும் நேரிய சமன்பாடுகளுக்கான வரைபடங்களில் எதற்குத் தீர்வு இல்லை?\n(1) வெட்டும் கோடுகள்  (2) இணை கோடுகள்  (3) ஒன்றிய கோடுகள்  (4) செங்குத்து கோடுகள்"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(2) Parallel lines}}",
+      "fallback": "(2) Parallel lines"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{Parallel lines}",
+          "fallback": "Parallel lines never intersect, so no solution"
+        },
+        "reasonMath": {
+          "en": "Option (2) shows parallel lines.",
+          "ta": "இணை கோடுகள் வெட்டிக்கொள்ளாது; விருப்பம் (2)."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q26",
+    "questionMath": {
+      "en": [
+        "26. If a₁/a₂ ≠ b₁/b₂ where a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0 then the given pair of linear equation has ________ solution(s)\n(1) no solution  (2) two solutions  (3) unique  (4) infinite"
+      ],
+      "ta": [
+        "26. a₁/a₂ ≠ b₁/b₂ எனில், இங்கு a₁x + b₁y + c₁ = 0 மற்றும் a₂x + b₂y + c₂ = 0 ஆகிய நேரிய சமன்பாடுகளுக்கு ________\n(1) தீர்வு இல்லை  (2) இரண்டு தீர்வுகள்  (3) ஒரு தீர்வு  (4) எண்ணற்ற தீர்வுகள்"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(3) unique}}",
+      "fallback": "(3) unique"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{Unique solution}",
+          "fallback": "a₁/a₂ ≠ b₁/b₂ ⇒ lines intersect at one point (unique solution)"
+        },
+        "reasonMath": {
+          "en": "Option (3) is correct.",
+          "ta": "வெட்டும் கோடுகள் ⇒ ஒரு தீர்வு; விருப்பம் (3)."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q27",
+    "questionMath": {
+      "en": [
+        "27. If a₁/a₂ = b₁/b₂ ≠ c₁/c₂ where a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0 then the given pair of linear equation has ________ solution(s)\n(1) no solution  (2) two solutions  (3) infinite  (4) unique"
+      ],
+      "ta": [
+        "27. a₁/a₂ = b₁/b₂ ≠ c₁/c₂ எனில், a₁x + b₁y + c₁ = 0 மற்றும் a₂x + b₂y + c₂ = 0 ஆகிய நேரிய சமன்பாடுகளுக்கு ________\n(1) தீர்வு இல்லை  (2) இரண்டு தீர்வுகள்  (3) ஒரு தீர்வு  (4) எண்ணற்ற தீர்வுகள்"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(1) no solution}}",
+      "fallback": "(1) no solution"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\text{No solution}",
+          "fallback": "a₁/a₂ = b₁/b₂ ≠ c₁/c₂ ⇒ parallel lines (no solution)"
+        },
+        "reasonMath": {
+          "en": "Option (1) is correct.",
+          "ta": "இணை கோடுகள் ⇒ தீர்வு இல்லை; விருப்பம் (1)."
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q28",
+    "questionMath": {
+      "en": [
+        "28. GCD of any two prime numbers is ________\n(1) −1  (2) 0  (3) 1  (4) 2"
+      ],
+      "ta": [
+        "28. இரண்டு பகா எண்களின் மீ.பொ.வ\n(1) −1  (2) 0  (3) 1  (4) 2"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(3) } 1}",
+      "fallback": "(3) 1"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "1",
+          "fallback": "Distinct primes share only 1 (and equal primes are not meant here; standard TN answer is 1)"
+        },
+        "reasonMath": {
+          "en": "Option (3) is correct.",
+          "ta": [
+            "பகா எண்களின் பொது வகுத்தி ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            "; விருப்பம் (3)."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "g9-ch3-ex3.15-q29",
+    "questionMath": {
+      "en": [
+        "29. The GCD of x⁴ − y⁴ and x² − y² is\n(1) x⁴ − y⁴  (2) x² − y²  (3) (x + y)²  (4) (x + y)⁴"
+      ],
+      "ta": [
+        "29. x⁴ − y⁴ மற்றும் x² − y²-இன் மீ.பொ.வ\n(1) x⁴ − y⁴  (2) x² − y²  (3) (x + y)²  (4) (x + y)⁴"
+      ]
+    },
+    "answerMath": {
+      "latex": "\\boxed{\\text{(2) } x^2 - y^2}",
+      "fallback": "(2) x² − y²"
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "x^2 - y^2",
+          "fallback": "x⁴ − y⁴ = (x² + y²)(x² − y²)"
+        },
+        "reasonMath": {
+          "en": [
+            "Common factor is ",
+            {
+              "latex": "x^{2} - y^{2}",
+              "fallback": "x² − y²"
+            },
+            "; option (2)."
+          ],
+          "ta": [
+            "பொதுக் காரணி ",
+            {
+              "latex": "x^{2} - y^{2}",
+              "fallback": "x² − y²"
+            },
+            "; விருப்பம் (2)."
+          ]
         }
       }
     ]
@@ -50816,6 +64286,18 @@ const texts={
     },
     "."
   ],
+  "p(x) = 0 சமன்பாட்டைத் தீர்க்கக் கிடைக்கும் x மதிப்புகளே மூலங்கள்.": [
+    {
+      "latex": "p \\left(x\\right) = 0",
+      "fallback": "p(x) = 0"
+    },
+    " சமன்பாட்டைத் தீர்க்கக் கிடைக்கும் ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " மதிப்புகளே மூலங்கள்."
+  ],
   "The three interior angles of a triangle add to 180°.": [
     "The three interior angles of a triangle add to ",
     {
@@ -52241,6 +65723,18 @@ const texts={
     },
     " is nonzero."
   ],
+  "1/x² = x⁻² என்பதில் அடுக்கு −2 குறை முழுவாக உள்ளதால் இது பல்லுறுப்புக் கோவை அல்ல.": [
+    {
+      "latex": "\\dfrac{1}{x^{2}} = x^{-2}",
+      "fallback": "1/x² = x⁻²"
+    },
+    " என்பதில் அடுக்கு ",
+    {
+      "latex": "- 2",
+      "fallback": "−2"
+    },
+    " குறை முழுவாக உள்ளதால் இது பல்லுறுப்புக் கோவை அல்ல."
+  ],
   "Add exponents when multiplying powers of the same base, giving x cubed minus x squared.": [
     "Add exponents when multiplying powers of the same base, giving ",
     {
@@ -52253,6 +65747,19 @@ const texts={
       "fallback": "x"
     },
     " squared."
+  ],
+  "விரித்தபின் x³ − x²-இன் அடுக்குகள் 3, 2 முழு எண்களாக உள்ளதால் இது பல்லுறுப்புக் கோவை.": [
+    "விரித்தபின் ",
+    {
+      "latex": "x^{3} - x^{2}",
+      "fallback": "x³ − x²"
+    },
+    "-இன் அடுக்குகள் ",
+    {
+      "latex": "3, 2",
+      "fallback": "3, 2"
+    },
+    " முழு எண்களாக உள்ளதால் இது பல்லுறுப்புக் கோவை."
   ],
   "Simplify x/x to one and rewrite 5/x with exponent −1.": [
     "Simplify ",
@@ -52271,6 +65778,14 @@ const texts={
       "fallback": "−1"
     },
     "."
+  ],
+  "சுருக்கியபின் 5/x = 5x⁻¹ எனக் குறை அடுக்கு வருவதால் இது பல்லுறுப்புக் கோவை அல்ல.": [
+    "சுருக்கியபின் ",
+    {
+      "latex": "\\dfrac{5}{x} = 5 x^{-1}",
+      "fallback": "5/x = 5x⁻¹"
+    },
+    " எனக் குறை அடுக்கு வருவதால் இது பல்லுறுப்புக் கோவை அல்ல."
   ],
   "Similarly, the reciprocal of x to the power −1 equals x, so simplify both fractions before checking powers.": [
     "Similarly, the reciprocal of ",
@@ -52298,6 +65813,18 @@ const texts={
     },
     "."
   ],
+  "1/x⁻² = x² மற்றும் 1/x⁻¹ = x என மாறுவதால் அடுக்குகள் முழு எண்களாகின்றன.": [
+    {
+      "latex": "\\dfrac{1}{x^{-2}} = x^{2}",
+      "fallback": "1/x⁻² = x²"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\dfrac{1}{x^{-1}} = x",
+      "fallback": "1/x⁻¹ = x"
+    },
+    " என மாறுவதால் அடுக்குகள் முழு எண்களாகின்றன."
+  ],
   "The powers of x in the three terms are 2, 1, and 0; a constant term has power zero.": [
     "The powers of ",
     {
@@ -52315,6 +65842,31 @@ const texts={
       "fallback": "0; a"
     },
     " constant term has power zero."
+  ],
+  "வர்க்கமூலம் கெழுக்களின் மீது மட்டுமே உள்ளது; x-இன் அடுக்குகள் 2, 1, 0 முழு எண்கள்.": [
+    "வர்க்கமூலம் கெழுக்களின் மீது மட்டுமே உள்ளது; ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-இன் அடுக்குகள் ",
+    {
+      "latex": "2, 1, 0",
+      "fallback": "2, 1, 0"
+    },
+    " முழு எண்கள்."
+  ],
+  "∛m = m¹⁄³ என்பதில் அடுக்கு 1/3 முழு எண் அல்லாததால் இது பல்லுறுப்புக் கோவை அல்ல.": [
+    {
+      "latex": "\\sqrt[3]{m} = \\mathrm{m}^{1}",
+      "fallback": "∛m = m¹"
+    },
+    "⁄³ என்பதில் அடுக்கு ",
+    {
+      "latex": "\\dfrac{1}{3}",
+      "fallback": "1/3"
+    },
+    " முழு எண் அல்லாததால் இது பல்லுறுப்புக் கோவை அல்ல."
   ],
   "Read the signed number multiplying x. The coefficient of x is −3. The constant 4 stands on its own.": [
     "Read the signed number multiplying ",
@@ -52362,6 +65914,19 @@ const texts={
     },
     "."
   ],
+  "உறுப்பின் முன்னால் உள்ள குறியையும் சேர்த்தே கெழுவை எழுத வேண்டும்: +2/5 மற்றும் −3.": [
+    "உறுப்பின் முன்னால் உள்ள குறியையும் சேர்த்தே கெழுவை எழுத வேண்டும்: ",
+    {
+      "latex": "\\dfrac{+ 2}{5}",
+      "fallback": "+2/5"
+    },
+    " மற்றும் ",
+    {
+      "latex": "- 3",
+      "fallback": "−3"
+    },
+    "."
+  ],
   "Read the signed number multiplying x. The coefficient of x is −√7. Keep the minus sign in front of the square root.": [
     "Read the signed number multiplying ",
     {
@@ -52379,6 +65944,38 @@ const texts={
       "fallback": "−√7"
     },
     ". Keep the minus sign in front of the square root."
+  ],
+  "3x³ என்பது x³ உறுப்பு; x²-இன் கெழு −2 மற்றும் x-இன் கெழு −√7.": [
+    {
+      "latex": "3 x^{3}",
+      "fallback": "3x³"
+    },
+    " என்பது ",
+    {
+      "latex": "x^{3}",
+      "fallback": "x³"
+    },
+    " உறுப்பு; ",
+    {
+      "latex": "x^{2}",
+      "fallback": "x²"
+    },
+    "-இன் கெழு ",
+    {
+      "latex": "- 2",
+      "fallback": "−2"
+    },
+    " மற்றும் ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-இன் கெழு ",
+    {
+      "latex": "- \\sqrt{7}",
+      "fallback": "−√7"
+    },
+    "."
   ],
   "Write −x as negative one times x. The coefficient of x is −1.": [
     "Write ",
@@ -52403,6 +66000,23 @@ const texts={
     },
     "."
   ],
+  "π ஒரு மெய்யெண் மாறிலி; −x என்பதன் கெழு −1 ஆகும்.": [
+    {
+      "latex": "\\pi",
+      "fallback": "π"
+    },
+    " ஒரு மெய்யெண் மாறிலி; ",
+    {
+      "latex": "- x",
+      "fallback": "−x"
+    },
+    " என்பதன் கெழு ",
+    {
+      "latex": "- 1",
+      "fallback": "−1"
+    },
+    " ஆகும்."
+  ],
   "Read the number multiplying x. The coefficient of x is √2. The constant 0.5 stands on its own.": [
     "Read the number multiplying ",
     {
@@ -52426,6 +66040,18 @@ const texts={
     },
     " stands on its own."
   ],
+  "√3 மற்றும் √2 ஆகியவை விகிதமுறா மெய்யெண் கெழுக்கள்.": [
+    {
+      "latex": "\\sqrt{3}",
+      "fallback": "√3"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\sqrt{2}",
+      "fallback": "√2"
+    },
+    " ஆகியவை விகிதமுறா மெய்யெண் கெழுக்கள்."
+  ],
   "Read the signed number multiplying x. The coefficient of x is −7/2. Keep the minus sign with the fraction.": [
     "Read the signed number multiplying ",
     {
@@ -52444,6 +66070,31 @@ const texts={
     },
     ". Keep the minus sign with the fraction."
   ],
+  "x²-க்கு முன் எண் இல்லாவிடில் கெழு 1; −(7/2)x-இன் கெழு −7/2.": [
+    {
+      "latex": "x^{2}",
+      "fallback": "x²"
+    },
+    "-க்கு முன் எண் இல்லாவிடில் கெழு ",
+    {
+      "latex": "1;\\quad - \\left(\\dfrac{7}{2}\\right) x",
+      "fallback": "1; −(7/2)x"
+    },
+    "-இன் கெழு ",
+    {
+      "latex": "\\dfrac{- 7}{2}",
+      "fallback": "−7/2"
+    },
+    "."
+  ],
+  "பூச்சியமற்ற கெழு கொண்ட மிக உயர்ந்த அடுக்கு 7.": [
+    "பூச்சியமற்ற கெழு கொண்ட மிக உயர்ந்த அடுக்கு ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    "."
+  ],
   "Divide each term in the numerator by x squared; this calculation requires x to be nonzero.": [
     "Divide each term in the numerator by ",
     {
@@ -52457,6 +66108,19 @@ const texts={
     },
     " to be nonzero."
   ],
+  "வகுத்தலை முதலில் சுருக்க வேண்டும்: x⁶/x² = x⁴ என்பதால் படி 4.": [
+    "வகுத்தலை முதலில் சுருக்க வேண்டும்: ",
+    {
+      "latex": "\\dfrac{x^{6}}{x^{2}} = x^{4}",
+      "fallback": "x⁶/x² = x⁴"
+    },
+    " என்பதால் படி ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    "."
+  ],
   "Distribute x cubed across both terms inside the bracket.": [
     "Distribute ",
     {
@@ -52465,6 +66129,31 @@ const texts={
     },
     " cubed across both terms inside the bracket."
   ],
+  "x³ · x² = x⁵ என்பதால் மிக உயர்ந்த அடுக்கு 5.": [
+    {
+      "latex": "x^{3}",
+      "fallback": "x³"
+    },
+    " · ",
+    {
+      "latex": "x^{2} = x^{5}",
+      "fallback": "x² = x⁵"
+    },
+    " என்பதால் மிக உயர்ந்த அடுக்கு ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    "."
+  ],
+  "உறுப்புகள் திட்ட வடிவில் இல்லாவிட்டாலும் மிக உயர்ந்த அடுக்கு 6.": [
+    "உறுப்புகள் திட்ட வடிவில் இல்லாவிட்டாலும் மிக உயர்ந்த அடுக்கு ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    "."
+  ],
   "The radicals and denominators are numbers only; they are coefficients, not powers of the variable p.": [
     "The radicals and denominators are numbers only; they are coefficients, not powers of the variable ",
     {
@@ -52472,6 +66161,18 @@ const texts={
       "fallback": "p"
     },
     "."
+  ],
+  "p⁴ உறுப்பின் அடுக்கு 4 மிக உயர்ந்ததாகும்.": [
+    {
+      "latex": "p^{4}",
+      "fallback": "p⁴"
+    },
+    " உறுப்பின் அடுக்கு ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " மிக உயர்ந்ததாகும்."
   ],
   "Place the x-cubed term first, followed by x-squared, x, and the constant; keep each coefficient and sign.": [
     "Place the ",
@@ -52491,6 +66192,14 @@ const texts={
     },
     ", and the constant; keep each coefficient and sign."
   ],
+  "அடுக்குகள் 3, 2, 1, 0 என இறங்கு வரிசையில் ஏற்கெனவே உள்ளன.": [
+    "அடுக்குகள் ",
+    {
+      "latex": "3, 2, 1, 0",
+      "fallback": "3, 2, 1, 0"
+    },
+    " என இறங்கு வரிசையில் ஏற்கெனவே உள்ளன."
+  ],
   "Place the highest-degree term first; retain the minus sign in front of the y term and the constant.": [
     "Place the highest-degree term first; retain the minus sign in front of the ",
     {
@@ -52498,6 +66207,29 @@ const texts={
       "fallback": "y"
     },
     " term and the constant."
+  ],
+  "அடுக்கு 4 முதல் 0 வரை (மற்றும் 0 முதல் 4 வரை) வரிசைப்படுத்தவும்.": [
+    "அடுக்கு ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " முதல் ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " வரை (மற்றும் ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " முதல் ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " வரை) வரிசைப்படுத்தவும்."
   ],
   "Write the sum p(x) + q(x) and group like powers of x in descending order from x³ down to the constant term.": [
     "Write the ",
@@ -52517,6 +66249,14 @@ const texts={
     },
     " down to the constant term."
   ],
+  "ஒத்த உறுப்புகளின் கெழுக்களை மட்டும் கூட்ட வேண்டும்: −7x − 7x = −14x.": [
+    "ஒத்த உறுப்புகளின் கெழுக்களை மட்டும் கூட்ட வேண்டும்: ",
+    {
+      "latex": "- 7 x - 7 x = - 14 x",
+      "fallback": "−7x − 7x = −14x"
+    },
+    "."
+  ],
   "Write the sum h(x) + f(x) and align like powers of x from highest to lowest.": [
     "Write the ",
     {
@@ -52529,6 +66269,18 @@ const texts={
       "fallback": "x"
     },
     " from highest to lowest."
+  ],
+  "−6x + 17x = 11x மற்றும் 1 − 9 = −8.": [
+    {
+      "latex": "- 6 x + 17 x = 11 x",
+      "fallback": "−6x + 17x = 11x"
+    },
+    " மற்றும் ",
+    {
+      "latex": "1 - 9 = - 8",
+      "fallback": "1 − 9 = −8"
+    },
+    "."
   ],
   "Write the sum f(x) + g(x) in descending powers of x and group the two constant terms together.": [
     "Write the ",
@@ -52543,6 +66295,19 @@ const texts={
     },
     " and group the two constant terms together."
   ],
+  "இல்லாத அடுக்குகளுக்கு 0 கருதி, ஒத்த உறுப்புகளை இணைக்க 16x⁴ − 6x³ − 5x² + 7x − 6 கிடைக்கும்.": [
+    "இல்லாத அடுக்குகளுக்கு ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " கருதி, ஒத்த உறுப்புகளை இணைக்க ",
+    {
+      "latex": "16 x^{4} - 6 x^{3} - 5 x^{2} + 7 x - 6",
+      "fallback": "16x⁴ − 6x³ − 5x² + 7x − 6"
+    },
+    " கிடைக்கும்."
+  ],
   "Distribute the minus sign across every term of the second polynomial q(x) = 6x − 9.": [
     "Distribute the minus sign across every term of the second polynomial ",
     {
@@ -52550,6 +66315,13 @@ const texts={
       "fallback": "q(x) = 6x − 9"
     },
     "."
+  ],
+  "−(6x − 9) = −6x + 9 எனக் குறியை மாற்றி கூட்ட வேண்டும்.": [
+    {
+      "latex": "- \\left(6 x - 9\\right) = - 6 x + 9",
+      "fallback": "−(6x − 9) = −6x + 9"
+    },
+    " எனக் குறியை மாற்றி கூட்ட வேண்டும்."
   ],
   "Subtract g(y) from f(y) by changing the sign of every term in g(y) = 7y + y³.": [
     "Subtract ",
@@ -52569,11 +66341,36 @@ const texts={
     },
     "."
   ],
+  "−(y³ + 7y) = −y³ − 7y என்பதால் −7y − 7y = −14y.": [
+    {
+      "latex": "- \\left(y^{3} + 7 y\\right) = - y^{3} - 7 y",
+      "fallback": "−(y³ + 7y) = −y³ − 7y"
+    },
+    " என்பதால் ",
+    {
+      "latex": "- 7 y - 7 y = - 14 y",
+      "fallback": "−7y − 7y = −14y"
+    },
+    "."
+  ],
   "Distribute the subtraction sign across all three terms of f(z) = 6z² + 10z − 7.": [
     "Distribute the subtraction sign across all three terms of ",
     {
       "latex": "f \\left(z\\right) = 6 z^{2} + 10 z - 7",
       "fallback": "f(z) = 6z² + 10z − 7"
+    },
+    "."
+  ],
+  "இரண்டாவது பல்லுறுப்புக் கோவையைக் கழிக்கும்போது அதன் ஒவ்வொரு உறுப்பின் குறியையும் மாற்றி ஒத்த உறுப்புகளைச் சேர்க்க வேண்டும்; z − 10z = −9z மற்றும் −(−7) = +7.": [
+    "இரண்டாவது பல்லுறுப்புக் கோவையைக் கழிக்கும்போது அதன் ஒவ்வொரு உறுப்பின் குறியையும் மாற்றி ஒத்த உறுப்புகளைச் சேர்க்க வேண்டும்; ",
+    {
+      "latex": "z - 10 z = - 9 z",
+      "fallback": "z − 10z = −9z"
+    },
+    " மற்றும் ",
+    {
+      "latex": "- \\left(- 7\\right) = + 7",
+      "fallback": "−(−7) = +7"
     },
     "."
   ],
@@ -52659,6 +66456,18 @@ const texts={
     },
     ": subtract the target polynomial from the starting polynomial."
   ],
+  "A − B = C எனில் கழிக்க வேண்டிய கோவை B = A − C ஆகும்; எனவே தொடக்கக் கோவையிலிருந்து இலக்குக் கோவையைக் கழிக்கவும்.": [
+    {
+      "latex": "A - B = C",
+      "fallback": "A − B = C"
+    },
+    " எனில் கழிக்க வேண்டிய கோவை ",
+    {
+      "latex": "B = A - C",
+      "fallback": "B = A − C"
+    },
+    " ஆகும்; எனவே தொடக்கக் கோவையிலிருந்து இலக்குக் கோவையைக் கழிக்கவும்."
+  ],
   "Distribute each term of p(x) = x² − 9 across the trinomial q(x) = 6x² + 7x − 2.": [
     "Distribute each term of ",
     {
@@ -52698,6 +66507,14 @@ const texts={
     },
     " using the distributive law."
   ],
+  "பங்கீட்டு விதியின்படி ஒவ்வொரு உறுப்பையும் பெருக்கி ஒத்த உறுப்புகளைச் சேர்க்க −63x + 30x = −33x கிடைக்கும்.": [
+    "பங்கீட்டு விதியின்படி ஒவ்வொரு உறுப்பையும் பெருக்கி ஒத்த உறுப்புகளைச் சேர்க்க ",
+    {
+      "latex": "- 63 x + 30 x = - 33 x",
+      "fallback": "−63x + 30x = −33x"
+    },
+    " கிடைக்கும்."
+  ],
   "Distribute each term of h(x) = 6x² − 7x + 1 across f(x) = 5x − 7.": [
     "Distribute each term of ",
     {
@@ -52710,6 +66527,38 @@ const texts={
       "fallback": "f(x) = 5x − 7"
     },
     "."
+  ],
+  "−42x² − 35x² = −77x² மற்றும் 49x + 5x = 54x.": [
+    {
+      "latex": "- 42 x^{2} - 35 x^{2} = - 77 x^{2}",
+      "fallback": "−42x² − 35x² = −77x²"
+    },
+    " மற்றும் ",
+    {
+      "latex": "49 x + 5 x = 54 x",
+      "fallback": "49x + 5x = 54x"
+    },
+    "."
+  ],
+  "குறை எண்ணை வர்க்கப்படுத்தும்போது (−1)² = +1 ஆகும்.": [
+    "குறை எண்ணை வர்க்கப்படுத்தும்போது ",
+    {
+      "latex": "\\left(- 1\\right)^{2} = + 1",
+      "fallback": "(−1)² = +1"
+    },
+    " ஆகும்."
+  ],
+  "(2√2)² = 8; முதல் இரு உறுப்புகளும் கழிபட்டு 1 மட்டும் கிடைக்கும்.": [
+    {
+      "latex": "\\left(2\\,\\sqrt{2}\\right)^{2} = 8",
+      "fallback": "(2√2)² = 8"
+    },
+    "; முதல் இரு உறுப்புகளும் கழிபட்டு ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " மட்டும் கிடைக்கும்."
   ],
   "The symbol ≠ means “is not equal to.” Dividing both sides by the same nonzero number preserves the equality and leaves just x on the left.": [
     "The symbol ",
@@ -52724,6 +66573,18 @@ const texts={
     },
     " on the left."
   ],
+  "a ≠ 0 எனும்போது a(−b/a) + b = −b + b = 0.": [
+    {
+      "latex": "a \\ne 0",
+      "fallback": "a ≠ 0"
+    },
+    " எனும்போது ",
+    {
+      "latex": "a \\left(\\dfrac{- b}{a}\\right) + b = - b + b = 0",
+      "fallback": "a(−b/a) + b = −b + b = 0"
+    },
+    "."
+  ],
   "Substitute the fraction for x. The factor a cancels with the nonzero denominator a.": [
     "Substitute the fraction for ",
     {
@@ -52731,6 +66592,19 @@ const texts={
       "fallback": "x"
     },
     ". The factor a cancels with the nonzero denominator a."
+  ],
+  "வகுத்தல் வரையறுக்கப்பட a ≠ 0 அவசியம்; அப்போது p(−b/a) = 0.": [
+    "வகுத்தல் வரையறுக்கப்பட ",
+    {
+      "latex": "a \\ne 0",
+      "fallback": "a ≠ 0"
+    },
+    " அவசியம்; அப்போது ",
+    {
+      "latex": "p \\left(\\dfrac{- b}{a}\\right) = 0",
+      "fallback": "p(−b/a) = 0"
+    },
+    "."
   ],
   "A zero occurs where the curve meets the horizontal x-axis. The height y at any point on that axis is zero.": [
     "A zero occurs where the curve meets the horizontal ",
@@ -52744,6 +66618,8239 @@ const texts={
       "fallback": "y"
     },
     " at any point on that axis is zero."
+  ],
+  "வளைவரை x-அச்சைத் தொட்டுச் செல்வதால் 1 பூச்சியம் உண்டு.": [
+    "வளைவரை ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-அச்சைத் தொட்டுச் செல்வதால் ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " பூச்சியம் உண்டு."
+  ],
+  "Set g(x) = 0 to find the zero of the divisor x − 2.": [
+    "Set ",
+    {
+      "latex": "g \\left(x\\right) = 0",
+      "fallback": "g(x) = 0"
+    },
+    " to find the zero of the divisor ",
+    {
+      "latex": "x - 2",
+      "fallback": "x − 2"
+    },
+    "."
+  ],
+  "Set g(x) = 0 to find the zero of the divisor x − 2. (Check if p(x) is a multiple of g(x): No, p(x) is not a multiple of g(x) (remainder = −7))": [
+    "Set ",
+    {
+      "latex": "g \\left(x\\right) = 0",
+      "fallback": "g(x) = 0"
+    },
+    " to find the zero of the divisor ",
+    {
+      "latex": "x - 2",
+      "fallback": "x − 2"
+    },
+    ". (Check if ",
+    {
+      "latex": "p \\left(x\\right)",
+      "fallback": "p(x)"
+    },
+    " is a multiple of ",
+    {
+      "latex": "g \\left(x\\right)",
+      "fallback": "g(x)"
+    },
+    ": No, ",
+    {
+      "latex": "p \\left(x\\right)",
+      "fallback": "p(x)"
+    },
+    " is not a multiple of ",
+    {
+      "latex": "g \\left(x\\right)",
+      "fallback": "g(x)"
+    },
+    " (remainder = ",
+    {
+      "latex": "- 7",
+      "fallback": "−7"
+    },
+    "))"
+  ],
+  "வகுத்தி g(x) = 0 என வைத்து பூச்சியம் காண்க. (p(x) என்பது g(x)-இன் மடங்கா எனச் சரிபார்த்தல்: இல்லை, p(x) என்பது g(x)-இன் மடங்கல்ல (மீதி = −7))": [
+    "வகுத்தி ",
+    {
+      "latex": "g \\left(x\\right) = 0",
+      "fallback": "g(x) = 0"
+    },
+    " என வைத்து பூச்சியம் காண்க. (",
+    {
+      "latex": "p \\left(x\\right)",
+      "fallback": "p(x)"
+    },
+    " என்பது ",
+    {
+      "latex": "g \\left(x\\right)",
+      "fallback": "g(x)"
+    },
+    "-இன் மடங்கா எனச் சரிபார்த்தல்: இல்லை, ",
+    {
+      "latex": "p \\left(x\\right)",
+      "fallback": "p(x)"
+    },
+    " என்பது ",
+    {
+      "latex": "g \\left(x\\right)",
+      "fallback": "g(x)"
+    },
+    "-இன் மடங்கல்ல (மீதி = ",
+    {
+      "latex": "- 7",
+      "fallback": "−7"
+    },
+    "))"
+  ],
+  "Find the zero of g(x) = x + 1.": [
+    "Find the zero of ",
+    {
+      "latex": "g \\left(x\\right) = x + 1",
+      "fallback": "g(x) = x + 1"
+    },
+    "."
+  ],
+  "Find the zero of g(x) = x + 1. (Find remainder when p(x) is divided by x + 1: Remainder = 0)": [
+    "Find the zero of ",
+    {
+      "latex": "g \\left(x\\right) = x + 1",
+      "fallback": "g(x) = x + 1"
+    },
+    ". (Find remainder when ",
+    {
+      "latex": "p \\left(x\\right)",
+      "fallback": "p(x)"
+    },
+    " is divided by ",
+    {
+      "latex": "x + 1",
+      "fallback": "x + 1"
+    },
+    ": Remainder = ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ")"
+  ],
+  "g(x) = x + 1-இன் பூச்சியம் காண்க. (மீதி காண்க: p(x) ÷ (x + 1): மீதி = 0)": [
+    {
+      "latex": "g \\left(x\\right) = x + 1",
+      "fallback": "g(x) = x + 1"
+    },
+    "-இன் பூச்சியம் காண்க. (மீதி காண்க: ",
+    {
+      "latex": "p \\left(x\\right) \\div \\left(x + 1\\right)",
+      "fallback": "p(x) ÷ (x + 1)"
+    },
+    ": மீதி = ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ")"
+  ],
+  "Find the zero of g(x) = 2x − 1.": [
+    "Find the zero of ",
+    {
+      "latex": "g \\left(x\\right) = 2 x - 1",
+      "fallback": "g(x) = 2x − 1"
+    },
+    "."
+  ],
+  "Find the zero of g(x) = 2x − 1. (Find remainder when p(x) is divided by 2x − 1: Remainder = 3/2)": [
+    "Find the zero of ",
+    {
+      "latex": "g \\left(x\\right) = 2 x - 1",
+      "fallback": "g(x) = 2x − 1"
+    },
+    ". (Find remainder when ",
+    {
+      "latex": "p \\left(x\\right)",
+      "fallback": "p(x)"
+    },
+    " is divided by ",
+    {
+      "latex": "2 x - 1",
+      "fallback": "2x − 1"
+    },
+    ": Remainder = ",
+    {
+      "latex": "\\dfrac{3}{2}",
+      "fallback": "3/2"
+    },
+    ")"
+  ],
+  "g(x) = 2x − 1-இன் பூச்சியம் காண்க. (மீதி காண்க: p(x) ÷ (2x − 1): மீதி = 3/2)": [
+    {
+      "latex": "g \\left(x\\right) = 2 x - 1",
+      "fallback": "g(x) = 2x − 1"
+    },
+    "-இன் பூச்சியம் காண்க. (மீதி காண்க: ",
+    {
+      "latex": "p \\left(x\\right) \\div \\left(2 x - 1\\right)",
+      "fallback": "p(x) ÷ (2x − 1)"
+    },
+    ": மீதி = ",
+    {
+      "latex": "\\dfrac{3}{2}",
+      "fallback": "3/2"
+    },
+    ")"
+  ],
+  "Find the zero of g(x) = x − 3.": [
+    "Find the zero of ",
+    {
+      "latex": "g \\left(x\\right) = x - 3",
+      "fallback": "g(x) = x − 3"
+    },
+    "."
+  ],
+  "Find the zero of g(x) = x − 3. (Find remainder when p(x) is divided by x − 3: Remainder = 62)": [
+    "Find the zero of ",
+    {
+      "latex": "g \\left(x\\right) = x - 3",
+      "fallback": "g(x) = x − 3"
+    },
+    ". (Find remainder when ",
+    {
+      "latex": "p \\left(x\\right)",
+      "fallback": "p(x)"
+    },
+    " is divided by ",
+    {
+      "latex": "x - 3",
+      "fallback": "x − 3"
+    },
+    ": Remainder = ",
+    {
+      "latex": "62",
+      "fallback": "62"
+    },
+    ")"
+  ],
+  "g(x) = x − 3-இன் பூச்சியம் காண்க. (மீதி காண்க: p(x) ÷ (x − 3): மீதி = 62)": [
+    {
+      "latex": "g \\left(x\\right) = x - 3",
+      "fallback": "g(x) = x − 3"
+    },
+    "-இன் பூச்சியம் காண்க. (மீதி காண்க: ",
+    {
+      "latex": "p \\left(x\\right) \\div \\left(x - 3\\right)",
+      "fallback": "p(x) ÷ (x − 3)"
+    },
+    ": மீதி = ",
+    {
+      "latex": "62",
+      "fallback": "62"
+    },
+    ")"
+  ],
+  "Zero of (x + 3) is x = −3.": [
+    "Zero of ",
+    {
+      "latex": "\\left(x + 3\\right)",
+      "fallback": "(x + 3)"
+    },
+    " is ",
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    "."
+  ],
+  "Zero of (x + 3) is x = −3. (Find remainder when 3x³ − 4x² + 7x − 5 is divided by (x + 3): Remainder = −143)": [
+    "Zero of ",
+    {
+      "latex": "\\left(x + 3\\right)",
+      "fallback": "(x + 3)"
+    },
+    " is ",
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    ". (Find remainder when ",
+    {
+      "latex": "3 x^{3} - 4 x^{2} + 7 x - 5",
+      "fallback": "3x³ − 4x² + 7x − 5"
+    },
+    " is divided by ",
+    {
+      "latex": "\\left(x + 3\\right)",
+      "fallback": "(x + 3)"
+    },
+    ": Remainder = ",
+    {
+      "latex": "- 143",
+      "fallback": "−143"
+    },
+    ")"
+  ],
+  "(x + 3)-இன் பூச்சியம் x = −3. ((x + 3)-ஆல் வகுக்கக் கிடைக்கும் மீதி: மீதி = −143)": [
+    {
+      "latex": "\\left(x + 3\\right)",
+      "fallback": "(x + 3)"
+    },
+    "-இன் பூச்சியம் ",
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    ". (",
+    {
+      "latex": "\\left(x + 3\\right)",
+      "fallback": "(x + 3)"
+    },
+    "-ஆல் வகுக்கக் கிடைக்கும் மீதி: மீதி = ",
+    {
+      "latex": "- 143",
+      "fallback": "−143"
+    },
+    ")"
+  ],
+  "Zero of (x − 1) is x = 1.": [
+    "Zero of ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " is ",
+    {
+      "latex": "x = 1",
+      "fallback": "x = 1"
+    },
+    "."
+  ],
+  "Zero of (x − 1) is x = 1. (Find remainder when x²⁰¹⁸ + 2018 is divided by (x − 1): Remainder = 2019)": [
+    "Zero of ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " is ",
+    {
+      "latex": "x = 1",
+      "fallback": "x = 1"
+    },
+    ". (Find remainder when ",
+    {
+      "latex": "x^{2018} + 2018",
+      "fallback": "x²⁰¹⁸ + 2018"
+    },
+    " is divided by ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    ": Remainder = ",
+    {
+      "latex": "2019",
+      "fallback": "2019"
+    },
+    ")"
+  ],
+  "(x − 1)-இன் பூச்சியம் x = 1. (x²⁰¹⁸ + 2018-ஐ (x − 1)-ஆல் வகுக்கக் கிடைக்கும் மீதி: மீதி = 2019)": [
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    "-இன் பூச்சியம் ",
+    {
+      "latex": "x = 1",
+      "fallback": "x = 1"
+    },
+    ". (",
+    {
+      "latex": "x^{2018} + 2018",
+      "fallback": "x²⁰¹⁸ + 2018"
+    },
+    "-ஐ ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    "-ஆல் வகுக்கக் கிடைக்கும் மீதி: மீதி = ",
+    {
+      "latex": "2019",
+      "fallback": "2019"
+    },
+    ")"
+  ],
+  "Since (x − 2) divides p(x) exactly, remainder p(2) = 0.": [
+    "Since ",
+    {
+      "latex": "\\left(x - 2\\right)",
+      "fallback": "(x − 2)"
+    },
+    " divides ",
+    {
+      "latex": "p \\left(x\\right)",
+      "fallback": "p(x)"
+    },
+    " exactly, remainder ",
+    {
+      "latex": "p \\left(2\\right) = 0",
+      "fallback": "p(2) = 0"
+    },
+    "."
+  ],
+  "Since (x − 2) divides p(x) exactly, remainder p(2) = 0. (Find k when p(x) is divisible by (x − 2): k = 8)": [
+    "Since ",
+    {
+      "latex": "\\left(x - 2\\right)",
+      "fallback": "(x − 2)"
+    },
+    " divides ",
+    {
+      "latex": "p \\left(x\\right)",
+      "fallback": "p(x)"
+    },
+    " exactly, remainder ",
+    {
+      "latex": "p \\left(2\\right) = 0",
+      "fallback": "p(2) = 0"
+    },
+    ". (Find ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    " when ",
+    {
+      "latex": "p \\left(x\\right)",
+      "fallback": "p(x)"
+    },
+    " is divisible by ",
+    {
+      "latex": "\\left(x - 2\\right) : k = 8",
+      "fallback": "(x − 2): k = 8"
+    },
+    ")"
+  ],
+  "(x − 2) மீதியின்றி வகுப்பதால் p(2) = 0. ((x − 2)-ஆல் மீதியின்றி வகுத்தால் k மதிப்பு காண்க: k = 8)": [
+    {
+      "latex": "\\left(x - 2\\right)",
+      "fallback": "(x − 2)"
+    },
+    " மீதியின்றி வகுப்பதால் ",
+    {
+      "latex": "p \\left(2\\right) = 0",
+      "fallback": "p(2) = 0"
+    },
+    ". (",
+    {
+      "latex": "\\left(x - 2\\right)",
+      "fallback": "(x − 2)"
+    },
+    "-ஆல் மீதியின்றி வகுத்தால் ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "k = 8",
+      "fallback": "k = 8"
+    },
+    ")"
+  ],
+  "Find remainder of first polynomial at x = 3.": [
+    "Find remainder of first polynomial at ",
+    {
+      "latex": "x = 3",
+      "fallback": "x = 3"
+    },
+    "."
+  ],
+  "Find remainder of first polynomial at x = 3. (Equal remainders when divided by (x − 3): a = −3; remainder = 27)": [
+    "Find remainder of first polynomial at ",
+    {
+      "latex": "x = 3",
+      "fallback": "x = 3"
+    },
+    ". (Equal remainders when divided by ",
+    {
+      "latex": "\\left(x - 3\\right) : a = - 3",
+      "fallback": "(x − 3): a = −3"
+    },
+    "; remainder = ",
+    {
+      "latex": "27",
+      "fallback": "27"
+    },
+    ")"
+  ],
+  "முதல் கோவைக்கு x = 3-இல் மீதி காண்க. (சம மீதிகள் எனில் a மற்றும் மீதி காண்க: a = −3; மீதி = 27)": [
+    "முதல் கோவைக்கு ",
+    {
+      "latex": "x = 3",
+      "fallback": "x = 3"
+    },
+    "-இல் மீதி காண்க. (சம மீதிகள் எனில் a மற்றும் மீதி காண்க: ",
+    {
+      "latex": "a = - 3",
+      "fallback": "a = −3"
+    },
+    "; மீதி = ",
+    {
+      "latex": "27",
+      "fallback": "27"
+    },
+    ")"
+  ],
+  "By Factor Theorem, check p(1).": [
+    "By Factor Theorem, check ",
+    {
+      "latex": "p \\left(1\\right)",
+      "fallback": "p(1)"
+    },
+    "."
+  ],
+  "By Factor Theorem, check p(1). (Check if (x − 1) is a factor of x³ + 5x² − 10x + 4: Yes, (x − 1) is a factor)": [
+    "By Factor Theorem, check ",
+    {
+      "latex": "p \\left(1\\right)",
+      "fallback": "p(1)"
+    },
+    ". (Check if ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " is a factor of ",
+    {
+      "latex": "x^{3} + 5 x^{2} - 10 x + 4",
+      "fallback": "x³ + 5x² − 10x + 4"
+    },
+    ": Yes, ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " is a factor)"
+  ],
+  "காரணித் தேற்றப்படி p(1) காண்க. ((x − 1) காரணியா எனச் சரிபார்க்க: ஆம், (x − 1) ஒரு காரணி)": [
+    "காரணித் தேற்றப்படி ",
+    {
+      "latex": "p \\left(1\\right)",
+      "fallback": "p(1)"
+    },
+    " காண்க. (",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " காரணியா எனச் சரிபார்க்க: ஆம், ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " ஒரு காரணி)"
+  ],
+  "Evaluate p(1).": [
+    "Evaluate ",
+    {
+      "latex": "p \\left(1\\right)",
+      "fallback": "p(1)"
+    },
+    "."
+  ],
+  "Evaluate p(1). (Check if (x − 1) is a factor of x⁴ + 5x² − 5x + 1: No, (x − 1) is not a factor)": [
+    "Evaluate ",
+    {
+      "latex": "p \\left(1\\right)",
+      "fallback": "p(1)"
+    },
+    ". (Check if ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " is a factor of ",
+    {
+      "latex": "x^{4} + 5 x^{2} - 5 x + 1",
+      "fallback": "x⁴ + 5x² − 5x + 1"
+    },
+    ": No, ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " is not a factor)"
+  ],
+  "p(1) மதிப்பைக் காண்க. ((x − 1) காரணியா எனச் சரிபார்க்க: இல்லை, (x − 1) காரணி அல்ல)": [
+    {
+      "latex": "p \\left(1\\right)",
+      "fallback": "p(1)"
+    },
+    " மதிப்பைக் காண்க. (",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " காரணியா எனச் சரிபார்க்க: இல்லை, ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " காரணி அல்ல)"
+  ],
+  "Evaluate p(5) for divisor (x − 5).": [
+    "Evaluate ",
+    {
+      "latex": "p \\left(5\\right)",
+      "fallback": "p(5)"
+    },
+    " for divisor ",
+    {
+      "latex": "\\left(x - 5\\right)",
+      "fallback": "(x − 5)"
+    },
+    "."
+  ],
+  "Evaluate p(5) for divisor (x − 5). (Show that (x − 5) is a factor of 2x³ − 5x² − 28x + 15: (x − 5) is a factor (since p(5) = 0))": [
+    "Evaluate ",
+    {
+      "latex": "p \\left(5\\right)",
+      "fallback": "p(5)"
+    },
+    " for divisor ",
+    {
+      "latex": "\\left(x - 5\\right)",
+      "fallback": "(x − 5)"
+    },
+    ". (Show that ",
+    {
+      "latex": "\\left(x - 5\\right)",
+      "fallback": "(x − 5)"
+    },
+    " is a factor of ",
+    {
+      "latex": "2 x^{3} - 5 x^{2} - 28 x + 15 : \\left(x - 5\\right)",
+      "fallback": "2x³ − 5x² − 28x + 15: (x − 5)"
+    },
+    " is a factor (since ",
+    {
+      "latex": "p \\left(5\\right) = 0",
+      "fallback": "p(5) = 0"
+    },
+    "))"
+  ],
+  "x = 5 எனப் பிரதியிட்டு p(5) காண்க. ((x − 5) ஒரு காரணி எனக் காட்டுக: (x − 5) ஒரு காரணி (p(5) = 0))": [
+    {
+      "latex": "x = 5",
+      "fallback": "x = 5"
+    },
+    " எனப் பிரதியிட்டு ",
+    {
+      "latex": "p \\left(5\\right)",
+      "fallback": "p(5)"
+    },
+    " காண்க. (",
+    {
+      "latex": "\\left(x - 5\\right)",
+      "fallback": "(x − 5)"
+    },
+    " ஒரு காரணி எனக் காட்டுக: ",
+    {
+      "latex": "\\left(x - 5\\right)",
+      "fallback": "(x − 5)"
+    },
+    " ஒரு காரணி ",
+    {
+      "latex": "\\left(p \\left(5\\right) = 0\\right)",
+      "fallback": "(p(5) = 0)"
+    },
+    ")"
+  ],
+  "By Factor Theorem, p(−3) = 0.": [
+    "By Factor Theorem, ",
+    {
+      "latex": "p \\left(- 3\\right) = 0",
+      "fallback": "p(−3) = 0"
+    },
+    "."
+  ],
+  "By Factor Theorem, p(−3) = 0. (Determine m if (x + 3) is a factor: m = 10)": [
+    "By Factor Theorem, ",
+    {
+      "latex": "p \\left(- 3\\right) = 0",
+      "fallback": "p(−3) = 0"
+    },
+    ". (Determine ",
+    {
+      "latex": "\\mathrm{m}",
+      "fallback": "m"
+    },
+    " if ",
+    {
+      "latex": "\\left(x + 3\\right)",
+      "fallback": "(x + 3)"
+    },
+    " is a factor: ",
+    {
+      "latex": "\\mathrm{m} = 10",
+      "fallback": "m = 10"
+    },
+    ")"
+  ],
+  "காரணித் தேற்றப்படி p(−3) = 0. ((x + 3) காரணி எனில் m மதிப்பு காண்க: m = 10)": [
+    "காரணித் தேற்றப்படி ",
+    {
+      "latex": "p \\left(- 3\\right) = 0",
+      "fallback": "p(−3) = 0"
+    },
+    ". (",
+    {
+      "latex": "\\left(x + 3\\right)",
+      "fallback": "(x + 3)"
+    },
+    " காரணி எனில் ",
+    {
+      "latex": "\\mathrm{m}",
+      "fallback": "m"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "\\mathrm{m} = 10",
+      "fallback": "m = 10"
+    },
+    ")"
+  ],
+  "Use factor (x − 2).": [
+    "Use factor ",
+    {
+      "latex": "\\left(x - 2\\right)",
+      "fallback": "(x − 2)"
+    },
+    "."
+  ],
+  "Use factor (x − 2). (Show that a = b when (x − 2) and (x − 1/2) are factors: a = b (and a = b = −2))": [
+    "Use factor ",
+    {
+      "latex": "\\left(x - 2\\right)",
+      "fallback": "(x − 2)"
+    },
+    ". (Show that ",
+    {
+      "latex": "a = b",
+      "fallback": "a = b"
+    },
+    " when ",
+    {
+      "latex": "\\left(x - 2\\right)",
+      "fallback": "(x − 2)"
+    },
+    " and ",
+    {
+      "latex": "\\left(x - \\dfrac{1}{2}\\right)",
+      "fallback": "(x − 1/2)"
+    },
+    " are factors: ",
+    {
+      "latex": "a = b",
+      "fallback": "a = b"
+    },
+    " (and ",
+    {
+      "latex": "a = b = - 2",
+      "fallback": "a = b = −2"
+    },
+    "))"
+  ],
+  "(x − 2) காரணி என்பதால் p(2) = 0. (a = b என நிறுவுக: a = b என நிரூபிக்கப்பட்டது (a = b = −2))": [
+    {
+      "latex": "\\left(x - 2\\right)",
+      "fallback": "(x − 2)"
+    },
+    " காரணி என்பதால் ",
+    {
+      "latex": "p \\left(2\\right) = 0",
+      "fallback": "p(2) = 0"
+    },
+    ". (",
+    {
+      "latex": "a = b",
+      "fallback": "a = b"
+    },
+    " என நிறுவுக: ",
+    {
+      "latex": "a = b",
+      "fallback": "a = b"
+    },
+    " என நிரூபிக்கப்பட்டது ",
+    {
+      "latex": "\\left(a = b = - 2\\right)",
+      "fallback": "(a = b = −2)"
+    },
+    ")"
+  ],
+  "Zero remainder means p(1) = 0.": [
+    "Zero remainder means ",
+    {
+      "latex": "p \\left(1\\right) = 0",
+      "fallback": "p(1) = 0"
+    },
+    "."
+  ],
+  "Zero remainder means p(1) = 0. (Find k when (x − 1) divides kx³ − 2x² + 25x − 26: k = 3)": [
+    "Zero remainder means ",
+    {
+      "latex": "p \\left(1\\right) = 0",
+      "fallback": "p(1) = 0"
+    },
+    ". (Find ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    " when ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " divides kx³ ",
+    {
+      "latex": "- 2 x^{2} + 25 x - 26 : k = 3",
+      "fallback": "− 2x² + 25x − 26: k = 3"
+    },
+    ")"
+  ],
+  "மீதியின்றி வகுப்பதால் p(1) = 0. ((x − 1) மீதியின்றி வகுத்தால் k காண்க: k = 3)": [
+    "மீதியின்றி வகுப்பதால் ",
+    {
+      "latex": "p \\left(1\\right) = 0",
+      "fallback": "p(1) = 0"
+    },
+    ". (",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " மீதியின்றி வகுத்தால் ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    " காண்க: ",
+    {
+      "latex": "k = 3",
+      "fallback": "k = 3"
+    },
+    ")"
+  ],
+  "Check if (x + 2) is a factor.": [
+    "Check if ",
+    {
+      "latex": "\\left(x + 2\\right)",
+      "fallback": "(x + 2)"
+    },
+    " is a factor."
+  ],
+  "Check if (x + 2) is a factor. (Check if (x + 2) and (x − 4) are sides of rectangle: Yes, (x + 2) and (x − 4) are the sides (for x > 4))": [
+    "Check if ",
+    {
+      "latex": "\\left(x + 2\\right)",
+      "fallback": "(x + 2)"
+    },
+    " is a factor. (Check if ",
+    {
+      "latex": "\\left(x + 2\\right)",
+      "fallback": "(x + 2)"
+    },
+    " and ",
+    {
+      "latex": "\\left(x - 4\\right)",
+      "fallback": "(x − 4)"
+    },
+    " are sides of rectangle: Yes, ",
+    {
+      "latex": "\\left(x + 2\\right)",
+      "fallback": "(x + 2)"
+    },
+    " and ",
+    {
+      "latex": "\\left(x - 4\\right)",
+      "fallback": "(x − 4)"
+    },
+    " are the sides (for ",
+    {
+      "latex": "x > 4",
+      "fallback": "x > 4"
+    },
+    "))"
+  ],
+  "(x + 2) காரணியா எனச் சரிபார்க்க. (செவ்வகத்தின் பக்கங்களா எனச் சரிபார்க்க: ஆம், (x + 2) மற்றும் (x − 4) பக்கங்கள் ஆகும் (x > 4))": [
+    {
+      "latex": "\\left(x + 2\\right)",
+      "fallback": "(x + 2)"
+    },
+    " காரணியா எனச் சரிபார்க்க. (செவ்வகத்தின் பக்கங்களா எனச் சரிபார்க்க: ஆம், ",
+    {
+      "latex": "\\left(x + 2\\right)",
+      "fallback": "(x + 2)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\left(x - 4\\right)",
+      "fallback": "(x − 4)"
+    },
+    " பக்கங்கள் ஆகும் ",
+    {
+      "latex": "\\left(x > 4\\right)",
+      "fallback": "(x > 4)"
+    },
+    ")"
+  ],
+  "Use the trinomial square identity with a = x, b = 2y, c = 3z.": [
+    "Use the trinomial square identity with ",
+    {
+      "latex": "a = x",
+      "fallback": "a = x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 2 y",
+      "fallback": "b = 2y"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = 3 z",
+      "fallback": "c = 3z"
+    },
+    "."
+  ],
+  "Use the trinomial square identity with a = x, b = 2y, c = 3z. (Expand (x + 2y + 3z)²: x² + 4y² + 9z² + 4xy + 12yz + 6xz)": [
+    "Use the trinomial square identity with ",
+    {
+      "latex": "a = x",
+      "fallback": "a = x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 2 y",
+      "fallback": "b = 2y"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = 3 z",
+      "fallback": "c = 3z"
+    },
+    ". (Expand ",
+    {
+      "latex": "\\left(x + 2 y + 3 z\\right)^{2} : x^{2} + 4 y^{2} + 9 z^{2} + 4 xy + 12",
+      "fallback": "(x + 2y + 3z)²: x² + 4y² + 9z² + 4xy + 12"
+    },
+    "yz ",
+    {
+      "latex": "+ 6",
+      "fallback": "+ 6"
+    },
+    "xz)"
+  ],
+  "a = x, b = 2y, c = 3z என முற்றொருமையைப் பயன்படுத்த. (விரிவாக்குக: (x + 2y + 3z)²: x² + 4y² + 9z² + 4xy + 12yz + 6xz)": [
+    {
+      "latex": "a = x",
+      "fallback": "a = x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 2 y",
+      "fallback": "b = 2y"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = 3 z",
+      "fallback": "c = 3z"
+    },
+    " என முற்றொருமையைப் பயன்படுத்த. (விரிவாக்குக: ",
+    {
+      "latex": "\\left(x + 2 y + 3 z\\right)^{2} : x^{2} + 4 y^{2} + 9 z^{2} + 4 xy + 12",
+      "fallback": "(x + 2y + 3z)²: x² + 4y² + 9z² + 4xy + 12"
+    },
+    "yz ",
+    {
+      "latex": "+ 6",
+      "fallback": "+ 6"
+    },
+    "xz)"
+  ],
+  "Apply (a + b + c)² keeping the minus sign on −p.": [
+    "Apply ",
+    {
+      "latex": "\\left(a + b + c\\right)^{2}",
+      "fallback": "(a + b + c)²"
+    },
+    " keeping the minus sign on ",
+    {
+      "latex": "- p",
+      "fallback": "−p"
+    },
+    "."
+  ],
+  "Apply (a + b + c)² keeping the minus sign on −p. (Expand (−p + 2q + 3r)²: p² + 4q² + 9r² − 4pq + 12qr − 6pr)": [
+    "Apply ",
+    {
+      "latex": "\\left(a + b + c\\right)^{2}",
+      "fallback": "(a + b + c)²"
+    },
+    " keeping the minus sign on ",
+    {
+      "latex": "- p",
+      "fallback": "−p"
+    },
+    ". (Expand ",
+    {
+      "latex": "\\left(- p + 2 q + 3 r\\right)^{2} : p^{2} + 4 q^{2} + 9 r^{2} - 4",
+      "fallback": "(−p + 2q + 3r)²: p² + 4q² + 9r² − 4"
+    },
+    "pq ",
+    {
+      "latex": "+ 12",
+      "fallback": "+ 12"
+    },
+    "qr ",
+    {
+      "latex": "- 6",
+      "fallback": "− 6"
+    },
+    "pr)"
+  ],
+  "a = −p, b = 2q, c = 3r எனப் பிரதியிட. (விரிவாக்குக: (−p + 2q + 3r)²: p² + 4q² + 9r² − 4pq + 12qr − 6pr)": [
+    {
+      "latex": "a = - p",
+      "fallback": "a = −p"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 2 q",
+      "fallback": "b = 2q"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = 3 r",
+      "fallback": "c = 3r"
+    },
+    " எனப் பிரதியிட. (விரிவாக்குக: ",
+    {
+      "latex": "\\left(- p + 2 q + 3 r\\right)^{2} : p^{2} + 4 q^{2} + 9 r^{2} - 4",
+      "fallback": "(−p + 2q + 3r)²: p² + 4q² + 9r² − 4"
+    },
+    "pq ",
+    {
+      "latex": "+ 12",
+      "fallback": "+ 12"
+    },
+    "qr ",
+    {
+      "latex": "- 6",
+      "fallback": "− 6"
+    },
+    "pr)"
+  ],
+  "Use x = 2p, a = 3, b = −4, c = −5.": [
+    "Use ",
+    {
+      "latex": "x = 2 p",
+      "fallback": "x = 2p"
+    },
+    ",",
+    " ",
+    {
+      "latex": "a = 3",
+      "fallback": "a = 3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 4",
+      "fallback": "b = −4"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 5",
+      "fallback": "c = −5"
+    },
+    "."
+  ],
+  "Use x = 2p, a = 3, b = −4, c = −5. (Expand (2p + 3)(2p − 4)(2p − 5): 8p³ − 24p² − 14p + 60)": [
+    "Use ",
+    {
+      "latex": "x = 2 p",
+      "fallback": "x = 2p"
+    },
+    ",",
+    " ",
+    {
+      "latex": "a = 3",
+      "fallback": "a = 3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 4",
+      "fallback": "b = −4"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 5",
+      "fallback": "c = −5"
+    },
+    ". (Expand ",
+    {
+      "latex": "\\left(2 p + 3\\right) \\left(2 p - 4\\right) \\left(2 p - 5\\right) : 8 p^{3} - 24 p^{2} - 14 p + 60",
+      "fallback": "(2p + 3)(2p − 4)(2p − 5): 8p³ − 24p² − 14p + 60"
+    },
+    ")"
+  ],
+  "x = 2p, a = 3, b = −4, c = −5 எனப் பிரதியிட. (விரிவாக்குக: (2p + 3)(2p − 4)(2p − 5): 8p³ − 24p² − 14p + 60)": [
+    {
+      "latex": "x = 2 p",
+      "fallback": "x = 2p"
+    },
+    ",",
+    " ",
+    {
+      "latex": "a = 3",
+      "fallback": "a = 3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 4",
+      "fallback": "b = −4"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 5",
+      "fallback": "c = −5"
+    },
+    " எனப் பிரதியிட. (விரிவாக்குக: ",
+    {
+      "latex": "\\left(2 p + 3\\right) \\left(2 p - 4\\right) \\left(2 p - 5\\right) : 8 p^{3} - 24 p^{2} - 14 p + 60",
+      "fallback": "(2p + 3)(2p − 4)(2p − 5): 8p³ − 24p² − 14p + 60"
+    },
+    ")"
+  ],
+  "Apply (x+a₁)(x+b₁)(x+c₁).": [
+    "Apply ",
+    {
+      "latex": "\\left(x + a_{1}\\right) \\left(x + b_{1}\\right) \\left(x + c_{1}\\right)",
+      "fallback": "(x+a₁)(x+b₁)(x+c₁)"
+    },
+    "."
+  ],
+  "Apply (x+a₁)(x+b₁)(x+c₁). (Expand (3a + 1)(3a − 2)(3a + 4): 27a³ + 27a² − 18a − 8)": [
+    "Apply ",
+    {
+      "latex": "\\left(x + a_{1}\\right) \\left(x + b_{1}\\right) \\left(x + c_{1}\\right)",
+      "fallback": "(x+a₁)(x+b₁)(x+c₁)"
+    },
+    ". (Expand ",
+    {
+      "latex": "\\left(3 a + 1\\right) \\left(3 a - 2\\right) \\left(3 a + 4\\right) : 27 a^{3} + 27 a^{2} - 18 a - 8",
+      "fallback": "(3a + 1)(3a − 2)(3a + 4): 27a³ + 27a² − 18a − 8"
+    },
+    ")"
+  ],
+  "x = 3a, a₁=1, b₁=−2, c₁=4 எனப் பிரதியிட. (விரிவாக்குக: (3a + 1)(3a − 2)(3a + 4): 27a³ + 27a² − 18a − 8)": [
+    {
+      "latex": "x = 3 a",
+      "fallback": "x = 3a"
+    },
+    ",",
+    " ",
+    {
+      "latex": "a_{1} = 1",
+      "fallback": "a₁=1"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b_{1} = - 2",
+      "fallback": "b₁=−2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c_{1} = 4",
+      "fallback": "c₁=4"
+    },
+    " எனப் பிரதியிட. (விரிவாக்குக: ",
+    {
+      "latex": "\\left(3 a + 1\\right) \\left(3 a - 2\\right) \\left(3 a + 4\\right) : 27 a^{3} + 27 a^{2} - 18 a - 8",
+      "fallback": "(3a + 1)(3a − 2)(3a + 4): 27a³ + 27a² − 18a − 8"
+    },
+    ")"
+  ],
+  "Sum of constants gives x² coefficient.": [
+    "Sum of constants gives ",
+    {
+      "latex": "x^{2}",
+      "fallback": "x²"
+    },
+    " coefficient."
+  ],
+  "Sum of constants gives x² coefficient. (Coefficients of (x + 5)(x + 6)(x + 7) without expansion: x² coeff: 18; x coeff: 107; constant: 210)": [
+    "Sum of constants gives ",
+    {
+      "latex": "x^{2}",
+      "fallback": "x²"
+    },
+    " coefficient. (Coefficients of ",
+    {
+      "latex": "\\left(x + 5\\right) \\left(x + 6\\right) \\left(x + 7\\right)",
+      "fallback": "(x + 5)(x + 6)(x + 7)"
+    },
+    " without expansion: ",
+    {
+      "latex": "x^{2}",
+      "fallback": "x²"
+    },
+    " coeff: ",
+    {
+      "latex": "18;\\quad x",
+      "fallback": "18; x"
+    },
+    " coeff: ",
+    {
+      "latex": "107",
+      "fallback": "107"
+    },
+    "; constant: ",
+    {
+      "latex": "210",
+      "fallback": "210"
+    },
+    ")"
+  ],
+  "a + b + c என்பது x²-இன் கெழு. (விரிவாக்காமல் கெழுக்கள் காண்க: (x+5)(x+6)(x+7): x² கெழு: 18; x கெழு: 107; மாறிலி: 210)": [
+    {
+      "latex": "a + b + c",
+      "fallback": "a + b + c"
+    },
+    " என்பது ",
+    {
+      "latex": "x^{2}",
+      "fallback": "x²"
+    },
+    "-இன் கெழு. (விரிவாக்காமல் கெழுக்கள் காண்க: ",
+    {
+      "latex": "\\left(x + 5\\right) \\left(x + 6\\right) \\left(x + 7\\right) : x^{2}",
+      "fallback": "(x+5)(x+6)(x+7): x²"
+    },
+    " கெழு: ",
+    {
+      "latex": "18;\\quad x",
+      "fallback": "18; x"
+    },
+    " கெழு: ",
+    {
+      "latex": "107",
+      "fallback": "107"
+    },
+    "; மாறிலி: ",
+    {
+      "latex": "210",
+      "fallback": "210"
+    },
+    ")"
+  ],
+  "Identify a = 3, b = −5, c = −6.": [
+    "Identify ",
+    {
+      "latex": "a = 3",
+      "fallback": "a = 3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 5",
+      "fallback": "b = −5"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 6",
+      "fallback": "c = −6"
+    },
+    "."
+  ],
+  "Identify a = 3, b = −5, c = −6. (Coefficients of (2x + 3)(2x − 5)(2x − 6) without expansion: x² coeff: −32; x coeff: −6; constant: 90)": [
+    "Identify ",
+    {
+      "latex": "a = 3",
+      "fallback": "a = 3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 5",
+      "fallback": "b = −5"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 6",
+      "fallback": "c = −6"
+    },
+    ". (Coefficients of ",
+    {
+      "latex": "\\left(2 x + 3\\right) \\left(2 x - 5\\right) \\left(2 x - 6\\right)",
+      "fallback": "(2x + 3)(2x − 5)(2x − 6)"
+    },
+    " without expansion: ",
+    {
+      "latex": "x^{2}",
+      "fallback": "x²"
+    },
+    " coeff: ",
+    {
+      "latex": "- 32;\\quad x",
+      "fallback": "−32; x"
+    },
+    " coeff: ",
+    {
+      "latex": "- 6",
+      "fallback": "−6"
+    },
+    "; constant: ",
+    {
+      "latex": "90",
+      "fallback": "90"
+    },
+    ")"
+  ],
+  "u = 2x என்க; a=3, b=−5, c=−6. (விரிவாக்காமல் கெழுக்கள் காண்க: (2x+3)(2x−5)(2x−6): x² கெழு: −32; x கெழு: −6; மாறிலி: 90)": [
+    {
+      "latex": "u = 2 x",
+      "fallback": "u = 2x"
+    },
+    " என்க; ",
+    {
+      "latex": "a = 3",
+      "fallback": "a=3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 5",
+      "fallback": "b=−5"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 6",
+      "fallback": "c=−6"
+    },
+    ". (விரிவாக்காமல் கெழுக்கள் காண்க: ",
+    {
+      "latex": "\\left(2 x + 3\\right) \\left(2 x - 5\\right) \\left(2 x - 6\\right) : x^{2}",
+      "fallback": "(2x+3)(2x−5)(2x−6): x²"
+    },
+    " கெழு: ",
+    {
+      "latex": "- 32;\\quad x",
+      "fallback": "−32; x"
+    },
+    " கெழு: ",
+    {
+      "latex": "- 6",
+      "fallback": "−6"
+    },
+    "; மாறிலி: ",
+    {
+      "latex": "90",
+      "fallback": "90"
+    },
+    ")"
+  ],
+  "Compare coefficients of x².": [
+    "Compare coefficients of ",
+    {
+      "latex": "x^{2}",
+      "fallback": "x²"
+    },
+    "."
+  ],
+  "Compare coefficients of x². (Find a + b + c: 14)": [
+    "Compare coefficients of ",
+    {
+      "latex": "x^{2}",
+      "fallback": "x²"
+    },
+    ". (Find ",
+    {
+      "latex": "a + b + c : 14",
+      "fallback": "a + b + c: 14"
+    },
+    ")"
+  ],
+  "x²-இன் கெழுவை ஒப்பிட. (a + b + c மதிப்பு காண்க: 14)": [
+    {
+      "latex": "x^{2}",
+      "fallback": "x²"
+    },
+    "-இன் கெழுவை ஒப்பிட. (",
+    {
+      "latex": "a + b + c",
+      "fallback": "a + b + c"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "14",
+      "fallback": "14"
+    },
+    ")"
+  ],
+  "Read x coefficient and constant term.": [
+    "Read ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " coefficient and constant term."
+  ],
+  "Read x coefficient and constant term. (Find 1/a + 1/b + 1/c: 59/70)": [
+    "Read ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " coefficient and constant term. (Find ",
+    {
+      "latex": "\\dfrac{1}{a} + \\dfrac{1}{b} + \\dfrac{1}{c} : \\dfrac{59}{70}",
+      "fallback": "1/a + 1/b + 1/c: 59/70"
+    },
+    ")"
+  ],
+  "ab + bc + ca = 59 மற்றும் abc = 70. (1/a + 1/b + 1/c மதிப்பு காண்க: 59/70)": [
+    "ab + bc + ca = ",
+    {
+      "latex": "59",
+      "fallback": "59"
+    },
+    " மற்றும் abc = ",
+    {
+      "latex": "70",
+      "fallback": "70"
+    },
+    ". (",
+    {
+      "latex": "\\dfrac{1}{a} + \\dfrac{1}{b} + \\dfrac{1}{c}",
+      "fallback": "1/a + 1/b + 1/c"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "\\dfrac{59}{70}",
+      "fallback": "59/70"
+    },
+    ")"
+  ],
+  "Use the trinomial square identity. (Find a² + b² + c²: 78)": [
+    "Use the trinomial square identity. (Find ",
+    {
+      "latex": "a^{2} + b^{2} + c^{2} : 78",
+      "fallback": "a² + b² + c²: 78"
+    },
+    ")"
+  ],
+  "முற்றொருமையைப் பயன்படுத்த. (a² + b² + c² மதிப்பு காண்க: 78)": [
+    "முற்றொருமையைப் பயன்படுத்த. (",
+    {
+      "latex": "a^{2} + b^{2} + c^{2}",
+      "fallback": "a² + b² + c²"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "78",
+      "fallback": "78"
+    },
+    ")"
+  ],
+  "Take common denominator abc. (Find a/(bc) + b/(ac) + c/(ab): 39/35)": [
+    "Take common denominator abc. (Find a/(bc) ",
+    {
+      "latex": "+ b",
+      "fallback": "+ b"
+    },
+    "/(ac) ",
+    {
+      "latex": "\\dfrac{+ c}{\\left(ab\\right)} : \\dfrac{39}{35}",
+      "fallback": "+ c/(ab): 39/35"
+    },
+    ")"
+  ],
+  "பொதுப் பகுதி abc எடுக்க. (a/(bc) + b/(ac) + c/(ab) மதிப்பு காண்க: 39/35)": [
+    "பொதுப் பகுதி abc எடுக்க. (a/(bc) ",
+    {
+      "latex": "+ b",
+      "fallback": "+ b"
+    },
+    "/(ac) ",
+    {
+      "latex": "\\dfrac{+ c}{\\left(ab\\right)}",
+      "fallback": "+ c/(ab)"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "\\dfrac{39}{35}",
+      "fallback": "39/35"
+    },
+    ")"
+  ],
+  "Use x = 3a, y = 4b.": [
+    "Use ",
+    {
+      "latex": "x = 3 a",
+      "fallback": "x = 3a"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 4 b",
+      "fallback": "y = 4b"
+    },
+    "."
+  ],
+  "Use x = 3a, y = 4b. (Expand (3a − 4b)³: 27a³ − 108a²b + 144ab² − 64b³)": [
+    "Use ",
+    {
+      "latex": "x = 3 a",
+      "fallback": "x = 3a"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 4 b",
+      "fallback": "y = 4b"
+    },
+    ". (Expand ",
+    {
+      "latex": "\\left(3 a - 4 b\\right)^{3} : 27 a^{3} - 108 a^{2} b + 144 ab^{2} - 64 b^{3}",
+      "fallback": "(3a − 4b)³: 27a³ − 108a²b + 144ab² − 64b³"
+    },
+    ")"
+  ],
+  "x = 3a, y = 4b எனப் பிரதியிட. (விரிவுபடுத்துக: (3a − 4b)³: 27a³ − 108a²b + 144ab² − 64b³)": [
+    {
+      "latex": "x = 3 a",
+      "fallback": "x = 3a"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 4 b",
+      "fallback": "y = 4b"
+    },
+    " எனப் பிரதியிட. (விரிவுபடுத்துக: ",
+    {
+      "latex": "\\left(3 a - 4 b\\right)^{3} : 27 a^{3} - 108 a^{2} b + 144 ab^{2} - 64 b^{3}",
+      "fallback": "(3a − 4b)³: 27a³ − 108a²b + 144ab² − 64b³"
+    },
+    ")"
+  ],
+  "Use a = x, b = 1/y (y ≠ 0).": [
+    "Use ",
+    {
+      "latex": "a = x",
+      "fallback": "a = x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = \\dfrac{1}{y \\left(y \\ne 0\\right)}",
+      "fallback": "b = 1/y (y ≠ 0)"
+    },
+    "."
+  ],
+  "Use a = x, b = 1/y (y ≠ 0). (Expand (x + 1/y)³: x³ + 3x²/y + 3x/y² + 1/y³)": [
+    "Use ",
+    {
+      "latex": "a = x",
+      "fallback": "a = x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = \\dfrac{1}{y \\left(y \\ne 0\\right)}",
+      "fallback": "b = 1/y (y ≠ 0)"
+    },
+    ". (Expand ",
+    {
+      "latex": "\\left(x + \\dfrac{1}{y}\\right)^{3} : x^{3} + \\dfrac{3 x^{2}}{y} + \\dfrac{3 x}{y^{2}} + \\dfrac{1}{y^{3}}",
+      "fallback": "(x + 1/y)³: x³ + 3x²/y + 3x/y² + 1/y³"
+    },
+    ")"
+  ],
+  "a = x, b = 1/y எனப் பிரதியிட (y ≠ 0). (விரிவுபடுத்துக: (x + 1/y)³: x³ + 3x²/y + 3x/y² + 1/y³)": [
+    {
+      "latex": "a = x",
+      "fallback": "a = x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = \\dfrac{1}{y}",
+      "fallback": "b = 1/y"
+    },
+    " எனப் பிரதியிட ",
+    {
+      "latex": "\\left(y \\ne 0\\right)",
+      "fallback": "(y ≠ 0)"
+    },
+    ". (விரிவுபடுத்துக: ",
+    {
+      "latex": "\\left(x + \\dfrac{1}{y}\\right)^{3} : x^{3} + \\dfrac{3 x^{2}}{y} + \\dfrac{3 x}{y^{2}} + \\dfrac{1}{y^{3}}",
+      "fallback": "(x + 1/y)³: x³ + 3x²/y + 3x/y² + 1/y³"
+    },
+    ")"
+  ],
+  "Rewrite 98 as 100 − 2.": [
+    "Rewrite ",
+    {
+      "latex": "98",
+      "fallback": "98"
+    },
+    " as ",
+    {
+      "latex": "100 - 2",
+      "fallback": "100 − 2"
+    },
+    "."
+  ],
+  "Rewrite 98 as 100 − 2. (Evaluate 98³ using identity: 941192)": [
+    "Rewrite ",
+    {
+      "latex": "98",
+      "fallback": "98"
+    },
+    " as ",
+    {
+      "latex": "100 - 2",
+      "fallback": "100 − 2"
+    },
+    ". (Evaluate ",
+    {
+      "latex": "98^{3}",
+      "fallback": "98³"
+    },
+    " using identity: ",
+    {
+      "latex": "941192",
+      "fallback": "941192"
+    },
+    ")"
+  ],
+  "98 = 100 − 2 என எழுதுக. (முற்றொருமை மூலம் 98³ காண்க: 941192)": [
+    {
+      "latex": "98 = 100 - 2",
+      "fallback": "98 = 100 − 2"
+    },
+    " என எழுதுக. (முற்றொருமை மூலம் ",
+    {
+      "latex": "98^{3}",
+      "fallback": "98³"
+    },
+    " காண்க: ",
+    {
+      "latex": "941192",
+      "fallback": "941192"
+    },
+    ")"
+  ],
+  "Rewrite 1001 as 1000 + 1.": [
+    "Rewrite ",
+    {
+      "latex": "1001",
+      "fallback": "1001"
+    },
+    " as ",
+    {
+      "latex": "1000 + 1",
+      "fallback": "1000 + 1"
+    },
+    "."
+  ],
+  "Rewrite 1001 as 1000 + 1. (Evaluate 1001³ using identity: 1003003001)": [
+    "Rewrite ",
+    {
+      "latex": "1001",
+      "fallback": "1001"
+    },
+    " as ",
+    {
+      "latex": "1000 + 1",
+      "fallback": "1000 + 1"
+    },
+    ". (Evaluate ",
+    {
+      "latex": "1001^{3}",
+      "fallback": "1001³"
+    },
+    " using identity: ",
+    {
+      "latex": "1003003001",
+      "fallback": "1003003001"
+    },
+    ")"
+  ],
+  "1001 = 1000 + 1 என எழுதுக. (முற்றொருமை மூலம் 1001³ காண்க: 1003003001)": [
+    {
+      "latex": "1001 = 1000 + 1",
+      "fallback": "1001 = 1000 + 1"
+    },
+    " என எழுதுக. (முற்றொருமை மூலம் ",
+    {
+      "latex": "1001^{3}",
+      "fallback": "1001³"
+    },
+    " காண்க: ",
+    {
+      "latex": "1003003001",
+      "fallback": "1003003001"
+    },
+    ")"
+  ],
+  "Use the trinomial square identity. (Find x² + y² + z²: 29)": [
+    "Use the trinomial square identity. (Find ",
+    {
+      "latex": "x^{2} + y^{2} + z^{2} : 29",
+      "fallback": "x² + y² + z²: 29"
+    },
+    ")"
+  ],
+  "முற்றொருமையைப் பயன்படுத்த. (x² + y² + z² மதிப்பு காண்க: 29)": [
+    "முற்றொருமையைப் பயன்படுத்த. (",
+    {
+      "latex": "x^{2} + y^{2} + z^{2}",
+      "fallback": "x² + y² + z²"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "29",
+      "fallback": "29"
+    },
+    ")"
+  ],
+  "Use x³ + y³ = (x + y)³ − 3xy(x + y).": [
+    "Use ",
+    {
+      "latex": "x^{3} + y^{3} = \\left(x + y\\right)^{3} - 3 xy \\left(x + y\\right)",
+      "fallback": "x³ + y³ = (x + y)³ − 3xy(x + y)"
+    },
+    "."
+  ],
+  "Use x³ + y³ = (x + y)³ − 3xy(x + y). (Find 27a³ + 64b³: 280)": [
+    "Use ",
+    {
+      "latex": "x^{3} + y^{3} = \\left(x + y\\right)^{3} - 3 xy \\left(x + y\\right)",
+      "fallback": "x³ + y³ = (x + y)³ − 3xy(x + y)"
+    },
+    ". (Find ",
+    {
+      "latex": "27 a^{3} + 64 b^{3} : 280",
+      "fallback": "27a³ + 64b³: 280"
+    },
+    ")"
+  ],
+  "x³ + y³ = (x + y)³ − 3xy(x + y) முற்றொருமையைப் பயன்படுத்த. (27a³ + 64b³ மதிப்பு காண்க: 280)": [
+    {
+      "latex": "x^{3} + y^{3} = \\left(x + y\\right)^{3} - 3 xy \\left(x + y\\right)",
+      "fallback": "x³ + y³ = (x + y)³ − 3xy(x + y)"
+    },
+    " முற்றொருமையைப் பயன்படுத்த. (",
+    {
+      "latex": "27 a^{3} + 64 b^{3}",
+      "fallback": "27a³ + 64b³"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "280",
+      "fallback": "280"
+    },
+    ")"
+  ],
+  "Use cube difference identity. (Find x³ − y³: 335)": [
+    "Use cube difference identity. (Find ",
+    {
+      "latex": "x^{3} - y^{3} : 335",
+      "fallback": "x³ − y³: 335"
+    },
+    ")"
+  ],
+  "x³ − y³ = (x − y)³ + 3xy(x − y) முற்றொருமையைப் பயன்படுத்த. (x³ − y³ மதிப்பு காண்க: 335)": [
+    {
+      "latex": "x^{3} - y^{3} = \\left(x - y\\right)^{3} + 3 xy \\left(x - y\\right)",
+      "fallback": "x³ − y³ = (x − y)³ + 3xy(x − y)"
+    },
+    " முற்றொருமையைப் பயன்படுத்த. (",
+    {
+      "latex": "x^{3} - y^{3}",
+      "fallback": "x³ − y³"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "335",
+      "fallback": "335"
+    },
+    ")"
+  ],
+  "Apply cube identity with x = a, y = 1/a.": [
+    "Apply cube identity with ",
+    {
+      "latex": "x = a",
+      "fallback": "x = a"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = \\dfrac{1}{a}",
+      "fallback": "y = 1/a"
+    },
+    "."
+  ],
+  "Apply cube identity with x = a, y = 1/a. (Find a³ + 1/a³: 198)": [
+    "Apply cube identity with ",
+    {
+      "latex": "x = a",
+      "fallback": "x = a"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = \\dfrac{1}{a}",
+      "fallback": "y = 1/a"
+    },
+    ". (Find ",
+    {
+      "latex": "a^{3} + \\dfrac{1}{a^{3}} : 198",
+      "fallback": "a³ + 1/a³: 198"
+    },
+    ")"
+  ],
+  "முற்றொருமையைப் பயன்படுத்த. (a³ + 1/a³ மதிப்பு காண்க: 198)": [
+    "முற்றொருமையைப் பயன்படுத்த. (",
+    {
+      "latex": "a^{3} + \\dfrac{1}{a^{3}}",
+      "fallback": "a³ + 1/a³"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "198",
+      "fallback": "198"
+    },
+    ")"
+  ],
+  "Square (x + 1/x).": [
+    "Square ",
+    {
+      "latex": "\\left(x + \\dfrac{1}{x}\\right)",
+      "fallback": "(x + 1/x)"
+    },
+    "."
+  ],
+  "Square (x + 1/x). (Find x + 1/x and x³ + 1/x³: x + 1/x = ±5; x³ + 1/x³ = ±110)": [
+    "Square ",
+    {
+      "latex": "\\left(x + \\dfrac{1}{x}\\right)",
+      "fallback": "(x + 1/x)"
+    },
+    ". (Find ",
+    {
+      "latex": "x + \\dfrac{1}{x}",
+      "fallback": "x + 1/x"
+    },
+    " and ",
+    {
+      "latex": "x^{3} + \\dfrac{1}{x^{3}} : x + \\dfrac{1}{x} = \\pm 5;\\quad x^{3} + \\dfrac{1}{x^{3}} = \\pm 110",
+      "fallback": "x³ + 1/x³: x + 1/x = ±5; x³ + 1/x³ = ±110"
+    },
+    ")"
+  ],
+  "(x + 1/x)² = 23 + 2 = 25. (x + 1/x மற்றும் x³ + 1/x³ காண்க: x + 1/x = ±5; x³ + 1/x³ = ±110)": [
+    {
+      "latex": "\\left(x + \\dfrac{1}{x}\\right)^{2} = 23 + 2 = 25",
+      "fallback": "(x + 1/x)² = 23 + 2 = 25"
+    },
+    ". (",
+    {
+      "latex": "x + \\dfrac{1}{x}",
+      "fallback": "x + 1/x"
+    },
+    " மற்றும் ",
+    {
+      "latex": "x^{3} + \\dfrac{1}{x^{3}}",
+      "fallback": "x³ + 1/x³"
+    },
+    " காண்க: ",
+    {
+      "latex": "x + \\dfrac{1}{x} = \\pm 5;\\quad x^{3} + \\dfrac{1}{x^{3}} = \\pm 110",
+      "fallback": "x + 1/x = ±5; x³ + 1/x³ = ±110"
+    },
+    ")"
+  ],
+  "Take cube root of both sides. (Find y³ − 1/y³: 36)": [
+    "Take cube root of both sides. (Find ",
+    {
+      "latex": "y^{3} - \\dfrac{1}{y^{3}} : 36",
+      "fallback": "y³ − 1/y³: 36"
+    },
+    ")"
+  ],
+  "கனமூலம் எடுக்க y − 1/y = 3. (y³ − 1/y³ மதிப்பு காண்க: 36)": [
+    "கனமூலம் எடுக்க ",
+    {
+      "latex": "y - \\dfrac{1}{y} = 3",
+      "fallback": "y − 1/y = 3"
+    },
+    ". (",
+    {
+      "latex": "y^{3} - \\dfrac{1}{y^{3}}",
+      "fallback": "y³ − 1/y³"
+    },
+    " மதிப்பு காண்க: ",
+    {
+      "latex": "36",
+      "fallback": "36"
+    },
+    ")"
+  ],
+  "Identify x = 2a, y = 3b, z = 4c.": [
+    "Identify ",
+    {
+      "latex": "x = 2 a",
+      "fallback": "x = 2a"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 3 b",
+      "fallback": "y = 3b"
+    },
+    ",",
+    " ",
+    {
+      "latex": "z = 4 c",
+      "fallback": "z = 4c"
+    },
+    "."
+  ],
+  "Identify x = 2a, y = 3b, z = 4c. (Simplify (2a+3b+4c)(4a²+9b²+16c²−6ab−12bc−8ca): 8a³ + 27b³ + 64c³ − 72abc)": [
+    "Identify ",
+    {
+      "latex": "x = 2 a",
+      "fallback": "x = 2a"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 3 b",
+      "fallback": "y = 3b"
+    },
+    ",",
+    " ",
+    {
+      "latex": "z = 4 c",
+      "fallback": "z = 4c"
+    },
+    ". (Simplify ",
+    {
+      "latex": "\\left(2 a + 3 b + 4 c\\right)",
+      "fallback": "(2a+3b+4c)"
+    },
+    "(",
+    {
+      "latex": "4 a^{2} + 9 b^{2} + 16 c^{2} - 6 ab - 12",
+      "fallback": "4a²+9b²+16c²−6ab−12"
+    },
+    "bc",
+    {
+      "latex": "- 8",
+      "fallback": "−8"
+    },
+    "ca): ",
+    {
+      "latex": "8 a^{3} + 27 b^{3} + 64 c^{3} - 72",
+      "fallback": "8a³ + 27b³ + 64c³ − 72"
+    },
+    "abc)"
+  ],
+  "x = 2a, y = 3b, z = 4c என்க. (சுருக்குக: (2a+3b+4c)(...): 8a³ + 27b³ + 64c³ − 72abc)": [
+    {
+      "latex": "x = 2 a",
+      "fallback": "x = 2a"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 3 b",
+      "fallback": "y = 3b"
+    },
+    ",",
+    " ",
+    {
+      "latex": "z = 4 c",
+      "fallback": "z = 4c"
+    },
+    " என்க. (சுருக்குக: ",
+    {
+      "latex": "\\left(2 a + 3 b + 4 c\\right) \\left(\\ldots\\right) : 8 a^{3} + 27 b^{3} + 64 c^{3} - 72",
+      "fallback": "(2a+3b+4c)(...): 8a³ + 27b³ + 64c³ − 72"
+    },
+    "abc)"
+  ],
+  "Apply (a+b+c)(a²+b²+c²−ab−bc−ca) = a³+b³+c³−3abc.": [
+    "Apply ",
+    {
+      "latex": "\\left(a + b + c\\right)",
+      "fallback": "(a+b+c)"
+    },
+    "(",
+    {
+      "latex": "a^{2} + b^{2} + c^{2} - ab",
+      "fallback": "a²+b²+c²−ab"
+    },
+    "−bc−ca) = ",
+    {
+      "latex": "a^{3} + b^{3} + c^{3} - 3",
+      "fallback": "a³+b³+c³−3"
+    },
+    "abc."
+  ],
+  "Apply (a+b+c)(a²+b²+c²−ab−bc−ca) = a³+b³+c³−3abc. (Simplify (x−2y+3z)(x²+4y²+9z²+2xy+6yz−3xz): x³ − 8y³ + 27z³ + 18xyz)": [
+    "Apply ",
+    {
+      "latex": "\\left(a + b + c\\right)",
+      "fallback": "(a+b+c)"
+    },
+    "(",
+    {
+      "latex": "a^{2} + b^{2} + c^{2} - ab",
+      "fallback": "a²+b²+c²−ab"
+    },
+    "−bc−ca) = ",
+    {
+      "latex": "a^{3} + b^{3} + c^{3} - 3",
+      "fallback": "a³+b³+c³−3"
+    },
+    "abc. (Simplify ",
+    {
+      "latex": "\\left(x - 2 y + 3 z\\right)",
+      "fallback": "(x−2y+3z)"
+    },
+    "(",
+    {
+      "latex": "x^{2} + 4 y^{2} + 9 z^{2} + 2 xy + 6",
+      "fallback": "x²+4y²+9z²+2xy+6"
+    },
+    "yz",
+    {
+      "latex": "- 3",
+      "fallback": "−3"
+    },
+    "xz): ",
+    {
+      "latex": "x^{3} - 8 y^{3} + 27 z^{3} + 18",
+      "fallback": "x³ − 8y³ + 27z³ + 18"
+    },
+    "xyz)"
+  ],
+  "a = x, b = −2y, c = 3z என்க. (சுருக்குக: (x−2y+3z)(...): x³ − 8y³ + 27z³ + 18xyz)": [
+    {
+      "latex": "a = x",
+      "fallback": "a = x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 2 y",
+      "fallback": "b = −2y"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = 3 z",
+      "fallback": "c = 3z"
+    },
+    " என்க. (சுருக்குக: ",
+    {
+      "latex": "\\left(x - 2 y + 3 z\\right) \\left(\\ldots\\right) : x^{3} - 8 y^{3} + 27 z^{3} + 18",
+      "fallback": "(x−2y+3z)(...): x³ − 8y³ + 27z³ + 18"
+    },
+    "xyz)"
+  ],
+  "Check the sum a + b + c.": [
+    "Check the ",
+    {
+      "latex": "\\text{sum} a + b + c",
+      "fallback": "sum a + b + c"
+    },
+    "."
+  ],
+  "Check the sum a + b + c. (Evaluate 7³ − 10³ + 3³ using identity: −630)": [
+    "Check the ",
+    {
+      "latex": "\\text{sum} a + b + c",
+      "fallback": "sum a + b + c"
+    },
+    ". (Evaluate ",
+    {
+      "latex": "7^{3} - 10^{3} + 3^{3}",
+      "fallback": "7³ − 10³ + 3³"
+    },
+    " using identity: ",
+    {
+      "latex": "- 630",
+      "fallback": "−630"
+    },
+    ")"
+  ],
+  "a + b + c = 7 − 10 + 3 = 0. (முற்றொருமை மூலம் 7³ − 10³ + 3³ காண்க: −630)": [
+    {
+      "latex": "a + b + c = 7 - 10 + 3 = 0",
+      "fallback": "a + b + c = 7 − 10 + 3 = 0"
+    },
+    ". (முற்றொருமை மூலம் ",
+    {
+      "latex": "7^{3} - 10^{3} + 3^{3}",
+      "fallback": "7³ − 10³ + 3³"
+    },
+    " காண்க: ",
+    {
+      "latex": "- 630",
+      "fallback": "−630"
+    },
+    ")"
+  ],
+  "Write as cubes: a=1, b=1/2, c=−3/2.": [
+    "Write as cubes: ",
+    {
+      "latex": "a = 1",
+      "fallback": "a=1"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = \\dfrac{1}{2}",
+      "fallback": "b=1/2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = \\dfrac{- 3}{2}",
+      "fallback": "c=−3/2"
+    },
+    "."
+  ],
+  "Write as cubes: a=1, b=1/2, c=−3/2. (Evaluate 1 + 1/8 − 27/8 using identity: −9/4)": [
+    "Write as cubes: ",
+    {
+      "latex": "a = 1",
+      "fallback": "a=1"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = \\dfrac{1}{2}",
+      "fallback": "b=1/2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = \\dfrac{- 3}{2}",
+      "fallback": "c=−3/2"
+    },
+    ". (Evaluate ",
+    {
+      "latex": "1 + \\dfrac{1}{8} - \\dfrac{27}{8}",
+      "fallback": "1 + 1/8 − 27/8"
+    },
+    " using identity: ",
+    {
+      "latex": "\\dfrac{- 9}{4}",
+      "fallback": "−9/4"
+    },
+    ")"
+  ],
+  "கனங்களாக எழுத: a=1, b=1/2, c=−3/2; கூடுதல் 0. (முற்றொருமை மூலம் 1 + 1/8 − 27/8 காண்க: −9/4)": [
+    "கனங்களாக எழுத: ",
+    {
+      "latex": "a = 1",
+      "fallback": "a=1"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = \\dfrac{1}{2}",
+      "fallback": "b=1/2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = \\dfrac{- 3}{2}",
+      "fallback": "c=−3/2"
+    },
+    "; கூடுதல் ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ". (முற்றொருமை மூலம் ",
+    {
+      "latex": "1 + \\dfrac{1}{8} - \\dfrac{27}{8}",
+      "fallback": "1 + 1/8 − 27/8"
+    },
+    " காண்க: ",
+    {
+      "latex": "\\dfrac{- 9}{4}",
+      "fallback": "−9/4"
+    },
+    ")"
+  ],
+  "Rewrite 8x³ − 27y³ − 64z³ as a³ + b³ + c³.": [
+    "Rewrite ",
+    {
+      "latex": "8 x^{3} - 27 y^{3} - 64 z^{3}",
+      "fallback": "8x³ − 27y³ − 64z³"
+    },
+    " as ",
+    {
+      "latex": "a^{3} + b^{3} + c^{3}",
+      "fallback": "a³ + b³ + c³"
+    },
+    "."
+  ],
+  "Rewrite 8x³ − 27y³ − 64z³ as a³ + b³ + c³. (Find 8x³ − 27y³ − 64z³ when 2x − 3y − 4z = 0: 72xyz)": [
+    "Rewrite ",
+    {
+      "latex": "8 x^{3} - 27 y^{3} - 64 z^{3}",
+      "fallback": "8x³ − 27y³ − 64z³"
+    },
+    " as ",
+    {
+      "latex": "a^{3} + b^{3} + c^{3}",
+      "fallback": "a³ + b³ + c³"
+    },
+    ". (Find ",
+    {
+      "latex": "8 x^{3} - 27 y^{3} - 64 z^{3}",
+      "fallback": "8x³ − 27y³ − 64z³"
+    },
+    " when ",
+    {
+      "latex": "2 x - 3 y - 4 z = 0 : 72",
+      "fallback": "2x − 3y − 4z = 0: 72"
+    },
+    "xyz)"
+  ],
+  "a = 2x, b = −3y, c = −4z; கூடுதல் 0. (2x − 3y − 4z = 0 எனில் 8x³ − 27y³ − 64z³ காண்க: 72xyz)": [
+    {
+      "latex": "a = 2 x",
+      "fallback": "a = 2x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 3 y",
+      "fallback": "b = −3y"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 4 z",
+      "fallback": "c = −4z"
+    },
+    "; கூடுதல் ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ". (",
+    {
+      "latex": "2 x - 3 y - 4 z = 0",
+      "fallback": "2x − 3y − 4z = 0"
+    },
+    " எனில் ",
+    {
+      "latex": "8 x^{3} - 27 y^{3} - 64 z^{3}",
+      "fallback": "8x³ − 27y³ − 64z³"
+    },
+    " காண்க: ",
+    {
+      "latex": "72",
+      "fallback": "72"
+    },
+    "xyz)"
+  ],
+  "Identify the GCD of all three terms.": [
+    "Identify the ",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of all three terms."
+  ],
+  "Identify the GCD of all three terms. (Factorise 2a² + 4a²b + 8a²c: 2a²(1 + 2b + 4c))": [
+    "Identify the ",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of all three terms. (Factorise ",
+    {
+      "latex": "2 a^{2} + 4 a^{2} b + 8 a^{2} c : 2 a^{2} \\left(1 + 2 b + 4 c\\right)",
+      "fallback": "2a² + 4a²b + 8a²c: 2a²(1 + 2b + 4c)"
+    },
+    ")"
+  ],
+  "மூன்று உறுப்புகளின் பொதுக் காரணி 2a². (காரணிப்படுத்துக: 2a² + 4a²b + 8a²c: 2a²(1 + 2b + 4c))": [
+    "மூன்று உறுப்புகளின் பொதுக் காரணி ",
+    {
+      "latex": "2 a^{2}",
+      "fallback": "2a²"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "2 a^{2} + 4 a^{2} b + 8 a^{2} c : 2 a^{2} \\left(1 + 2 b + 4 c\\right)",
+      "fallback": "2a² + 4a²b + 8a²c: 2a²(1 + 2b + 4c)"
+    },
+    ")"
+  ],
+  "Group in pairs and take common factors. (Factorise ab − ac − mb + mc: (a − m)(b − c))": [
+    "Group in pairs and take common factors. (Factorise ab − ac − mb + mc: ",
+    {
+      "latex": "\\left(a - \\mathrm{m}\\right) \\left(b - c\\right)",
+      "fallback": "(a − m)(b − c)"
+    },
+    ")"
+  ],
+  "ஈரிணையாகப் பிரித்து பொதுக் காரணி எடுக்க. (காரணிப்படுத்துக: ab − ac − mb + mc: (a − m)(b − c))": [
+    "ஈரிணையாகப் பிரித்து பொதுக் காரணி எடுக்க. (காரணிப்படுத்துக: ab − ac − mb + mc: ",
+    {
+      "latex": "\\left(a - \\mathrm{m}\\right) \\left(b - c\\right)",
+      "fallback": "(a − m)(b − c)"
+    },
+    ")"
+  ],
+  "Match with a² + 2ab + b².": [
+    "Match with ",
+    {
+      "latex": "a^{2} + 2 ab + b^{2}",
+      "fallback": "a² + 2ab + b²"
+    },
+    "."
+  ],
+  "Match with a² + 2ab + b². (Factorise x² + 4x + 4: (x + 2)²)": [
+    "Match with ",
+    {
+      "latex": "a^{2} + 2 ab + b^{2}",
+      "fallback": "a² + 2ab + b²"
+    },
+    ". (Factorise ",
+    {
+      "latex": "x^{2} + 4 x + 4 : \\left(x + 2\\right)^{2}",
+      "fallback": "x² + 4x + 4: (x + 2)²"
+    },
+    ")"
+  ],
+  "a² + 2ab + b² வடிவில் எழுத. (காரணிப்படுத்துக: x² + 4x + 4: (x + 2)²)": [
+    {
+      "latex": "a^{2} + 2 ab + b^{2}",
+      "fallback": "a² + 2ab + b²"
+    },
+    " வடிவில் எழுத. (காரணிப்படுத்துக: ",
+    {
+      "latex": "x^{2} + 4 x + 4 : \\left(x + 2\\right)^{2}",
+      "fallback": "x² + 4x + 4: (x + 2)²"
+    },
+    ")"
+  ],
+  "Take common factor 3 out first.": [
+    "Take common factor ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " out first."
+  ],
+  "Take common factor 3 out first. (Factorise 3a² − 24ab + 48b²: 3(a − 4b)²)": [
+    "Take common factor ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " out first. (Factorise ",
+    {
+      "latex": "3 a^{2} - 24 ab + 48 b^{2} : 3 \\left(a - 4 b\\right)^{2}",
+      "fallback": "3a² − 24ab + 48b²: 3(a − 4b)²"
+    },
+    ")"
+  ],
+  "முதலில் 3-ஐப் பொதுவாக எடுக்க. (காரணிப்படுத்துக: 3a² − 24ab + 48b²: 3(a − 4b)²)": [
+    "முதலில் ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    "-ஐப் பொதுவாக எடுக்க. (காரணிப்படுத்துக: ",
+    {
+      "latex": "3 a^{2} - 24 ab + 48 b^{2} : 3 \\left(a - 4 b\\right)^{2}",
+      "fallback": "3a² − 24ab + 48b²: 3(a − 4b)²"
+    },
+    ")"
+  ],
+  "Factor out x and use difference of squares.": [
+    "Factor out ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " and use difference of squares."
+  ],
+  "Factor out x and use difference of squares. (Factorise x⁵ − 16x: x(x² + 4)(x + 2)(x − 2))": [
+    "Factor out ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " and use difference of squares. (Factorise ",
+    {
+      "latex": "x^{5} - 16 x : x \\left(x^{2} + 4\\right) \\left(x + 2\\right) \\left(x - 2\\right)",
+      "fallback": "x⁵ − 16x: x(x² + 4)(x + 2)(x − 2)"
+    },
+    ")"
+  ],
+  "x-ஐ வெளியே எடுத்து a² − b² பயன்படுத்த. (காரணிப்படுத்துக: x⁵ − 16x: x(x² + 4)(x + 2)(x − 2))": [
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-ஐ வெளியே எடுத்து ",
+    {
+      "latex": "a^{2} - b^{2}",
+      "fallback": "a² − b²"
+    },
+    " பயன்படுத்த. (காரணிப்படுத்துக: ",
+    {
+      "latex": "x^{5} - 16 x : x \\left(x^{2} + 4\\right) \\left(x + 2\\right) \\left(x - 2\\right)",
+      "fallback": "x⁵ − 16x: x(x² + 4)(x + 2)(x − 2)"
+    },
+    ")"
+  ],
+  "Rewrite −23 as +2 − 25 to complete the square.": [
+    "Rewrite ",
+    {
+      "latex": "- 23",
+      "fallback": "−23"
+    },
+    " as ",
+    {
+      "latex": "+ 2 - 25",
+      "fallback": "+2 − 25"
+    },
+    " to complete the square."
+  ],
+  "Rewrite −23 as +2 − 25 to complete the square. (Factorise m² + 1/m² − 23: (m + 1/m + 5)(m + 1/m − 5))": [
+    "Rewrite ",
+    {
+      "latex": "- 23",
+      "fallback": "−23"
+    },
+    " as ",
+    {
+      "latex": "+ 2 - 25",
+      "fallback": "+2 − 25"
+    },
+    " to complete the square. (Factorise ",
+    {
+      "latex": "\\mathrm{m}^{2} + \\dfrac{1}{\\mathrm{m}^{2}} - 23 : \\left(\\mathrm{m} + \\dfrac{1}{\\mathrm{m}} + 5\\right) \\left(\\mathrm{m} + \\dfrac{1}{\\mathrm{m}} - 5\\right)",
+      "fallback": "m² + 1/m² − 23: (m + 1/m + 5)(m + 1/m − 5)"
+    },
+    ")"
+  ],
+  "−23 என்பதை +2 − 25 என எழுத. (காரணிப்படுத்துக: m² + 1/m² − 23: (m + 1/m + 5)(m + 1/m − 5))": [
+    {
+      "latex": "- 23",
+      "fallback": "−23"
+    },
+    " என்பதை ",
+    {
+      "latex": "+ 2 - 25",
+      "fallback": "+2 − 25"
+    },
+    " என எழுத. (காரணிப்படுத்துக: ",
+    {
+      "latex": "\\mathrm{m}^{2} + \\dfrac{1}{\\mathrm{m}^{2}} - 23 : \\left(\\mathrm{m} + \\dfrac{1}{\\mathrm{m}} + 5\\right) \\left(\\mathrm{m} + \\dfrac{1}{\\mathrm{m}} - 5\\right)",
+      "fallback": "m² + 1/m² − 23: (m + 1/m + 5)(m + 1/m − 5)"
+    },
+    ")"
+  ],
+  "Take 6 common and apply difference of squares.": [
+    "Take ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    " common and apply difference of squares."
+  ],
+  "Take 6 common and apply difference of squares. (Factorise 6 − 216x²: 6(1 + 6x)(1 − 6x))": [
+    "Take ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    " common and apply difference of squares. (Factorise ",
+    {
+      "latex": "6 - 216 x^{2} : 6 \\left(1 + 6 x\\right) \\left(1 - 6 x\\right)",
+      "fallback": "6 − 216x²: 6(1 + 6x)(1 − 6x)"
+    },
+    ")"
+  ],
+  "6-ஐ வெளியே எடுத்து a² − b² பயன்படுத்த. (காரணிப்படுத்துக: 6 − 216x²: 6(1 + 6x)(1 − 6x))": [
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    "-ஐ வெளியே எடுத்து ",
+    {
+      "latex": "a^{2} - b^{2}",
+      "fallback": "a² − b²"
+    },
+    " பயன்படுத்த. (காரணிப்படுத்துக: ",
+    {
+      "latex": "6 - 216 x^{2} : 6 \\left(1 + 6 x\\right) \\left(1 - 6 x\\right)",
+      "fallback": "6 − 216x²: 6(1 + 6x)(1 − 6x)"
+    },
+    ")"
+  ],
+  "Rewrite −18 as −2 − 16.": [
+    "Rewrite ",
+    {
+      "latex": "- 18",
+      "fallback": "−18"
+    },
+    " as ",
+    {
+      "latex": "- 2 - 16",
+      "fallback": "−2 − 16"
+    },
+    "."
+  ],
+  "Rewrite −18 as −2 − 16. (Factorise a² + 1/a² − 18: (a − 1/a + 4)(a − 1/a − 4))": [
+    "Rewrite ",
+    {
+      "latex": "- 18",
+      "fallback": "−18"
+    },
+    " as ",
+    {
+      "latex": "- 2 - 16",
+      "fallback": "−2 − 16"
+    },
+    ". (Factorise ",
+    {
+      "latex": "a^{2} + \\dfrac{1}{a^{2}} - 18 : \\left(a - \\dfrac{1}{a} + 4\\right) \\left(a - \\dfrac{1}{a} - 4\\right)",
+      "fallback": "a² + 1/a² − 18: (a − 1/a + 4)(a − 1/a − 4)"
+    },
+    ")"
+  ],
+  "−18 என்பதை −2 − 16 என எழுத. (காரணிப்படுத்துக: a² + 1/a² − 18: (a − 1/a + 4)(a − 1/a − 4))": [
+    {
+      "latex": "- 18",
+      "fallback": "−18"
+    },
+    " என்பதை ",
+    {
+      "latex": "- 2 - 16",
+      "fallback": "−2 − 16"
+    },
+    " என எழுத. (காரணிப்படுத்துக: ",
+    {
+      "latex": "a^{2} + \\dfrac{1}{a^{2}} - 18 : \\left(a - \\dfrac{1}{a} + 4\\right) \\left(a - \\dfrac{1}{a} - 4\\right)",
+      "fallback": "a² + 1/a² − 18: (a − 1/a + 4)(a − 1/a − 4)"
+    },
+    ")"
+  ],
+  "Match with (a + b + c)².": [
+    "Match with ",
+    {
+      "latex": "\\left(a + b + c\\right)^{2}",
+      "fallback": "(a + b + c)²"
+    },
+    "."
+  ],
+  "Match with (a + b + c)². (Factorise 4x² + 9y² + 25z² + 12xy + 30yz + 20xz: (2x + 3y + 5z)²)": [
+    "Match with ",
+    {
+      "latex": "\\left(a + b + c\\right)^{2}",
+      "fallback": "(a + b + c)²"
+    },
+    ". (Factorise ",
+    {
+      "latex": "4 x^{2} + 9 y^{2} + 25 z^{2} + 12 xy + 30",
+      "fallback": "4x² + 9y² + 25z² + 12xy + 30"
+    },
+    "yz ",
+    {
+      "latex": "+ 20",
+      "fallback": "+ 20"
+    },
+    "xz: ",
+    {
+      "latex": "\\left(2 x + 3 y + 5 z\\right)^{2}",
+      "fallback": "(2x + 3y + 5z)²"
+    },
+    ")"
+  ],
+  "(a + b + c)² வடிவில் எழுத. (காரணிப்படுத்துக: 4x²+9y²+25z²+12xy+30yz+20xz: (2x + 3y + 5z)²)": [
+    {
+      "latex": "\\left(a + b + c\\right)^{2}",
+      "fallback": "(a + b + c)²"
+    },
+    " வடிவில் எழுத. (காரணிப்படுத்துக: ",
+    {
+      "latex": "4 x^{2} + 9 y^{2} + 25 z^{2} + 12 xy + 30",
+      "fallback": "4x²+9y²+25z²+12xy+30"
+    },
+    "yz",
+    {
+      "latex": "+ 20",
+      "fallback": "+20"
+    },
+    "xz: ",
+    {
+      "latex": "\\left(2 x + 3 y + 5 z\\right)^{2}",
+      "fallback": "(2x + 3y + 5z)²"
+    },
+    ")"
+  ],
+  "So 2y and 3z share the same sign, opposite to 5x.": [
+    "So ",
+    {
+      "latex": "2 y",
+      "fallback": "2y"
+    },
+    " and ",
+    {
+      "latex": "3 z",
+      "fallback": "3z"
+    },
+    " share the same sign, opposite to ",
+    {
+      "latex": "5 x",
+      "fallback": "5x"
+    },
+    "."
+  ],
+  "So 2y and 3z share the same sign, opposite to 5x. (Factorise 25x² + 4y² + 9z² − 20xy + 12yz − 30xz: (−5x + 2y + 3z)² or (5x − 2y − 3z)²)": [
+    "So ",
+    {
+      "latex": "2 y",
+      "fallback": "2y"
+    },
+    " and ",
+    {
+      "latex": "3 z",
+      "fallback": "3z"
+    },
+    " share the same sign, opposite to ",
+    {
+      "latex": "5 x",
+      "fallback": "5x"
+    },
+    ". (Factorise ",
+    {
+      "latex": "25 x^{2} + 4 y^{2} + 9 z^{2} - 20 xy + 12",
+      "fallback": "25x² + 4y² + 9z² − 20xy + 12"
+    },
+    "yz ",
+    {
+      "latex": "- 30",
+      "fallback": "− 30"
+    },
+    "xz: ",
+    {
+      "latex": "\\left(- 5 x + 2 y + 3 z\\right)^{2}",
+      "fallback": "(−5x + 2y + 3z)²"
+    },
+    " or ",
+    {
+      "latex": "\\left(5 x - 2 y - 3 z\\right)^{2}",
+      "fallback": "(5x − 2y − 3z)²"
+    },
+    ")"
+  ],
+  "12yz மிகை; xy, xz குறை என்பதால் 5x மட்டும் எதிர் குறி. (காரணிப்படுத்துக: 25x²+4y²+9z²−20xy+12yz−30xz: (5x − 2y − 3z)²)": [
+    {
+      "latex": "12",
+      "fallback": "12"
+    },
+    "yz மிகை; xy, xz குறை என்பதால் ",
+    {
+      "latex": "5 x",
+      "fallback": "5x"
+    },
+    " மட்டும் எதிர் குறி. (காரணிப்படுத்துக: ",
+    {
+      "latex": "25 x^{2} + 4 y^{2} + 9 z^{2} - 20 xy + 12",
+      "fallback": "25x²+4y²+9z²−20xy+12"
+    },
+    "yz",
+    {
+      "latex": "- 30",
+      "fallback": "−30"
+    },
+    "xz: ",
+    {
+      "latex": "\\left(5 x - 2 y - 3 z\\right)^{2}",
+      "fallback": "(5x − 2y − 3z)²"
+    },
+    ")"
+  ],
+  "Write as sum of cubes a³ + b³.": [
+    "Write as sum of cubes ",
+    {
+      "latex": "a^{3} + b^{3}",
+      "fallback": "a³ + b³"
+    },
+    "."
+  ],
+  "Write as sum of cubes a³ + b³. (Factorise 8x³ + 125y³: (2x + 5y)(4x² − 10xy + 25y²))": [
+    "Write as sum of cubes ",
+    {
+      "latex": "a^{3} + b^{3}",
+      "fallback": "a³ + b³"
+    },
+    ". (Factorise ",
+    {
+      "latex": "8 x^{3} + 125 y^{3} : \\left(2 x + 5 y\\right) \\left(4 x^{2} - 10 xy + 25 y^{2}\\right)",
+      "fallback": "8x³ + 125y³: (2x + 5y)(4x² − 10xy + 25y²)"
+    },
+    ")"
+  ],
+  "(2x)³ + (5y)³ என எழுதுக. (காரணிப்படுத்துக: 8x³ + 125y³: (2x + 5y)(4x² − 10xy + 25y²))": [
+    {
+      "latex": "\\left(2 x\\right)^{3} + \\left(5 y\\right)^{3}",
+      "fallback": "(2x)³ + (5y)³"
+    },
+    " என எழுதுக. (காரணிப்படுத்துக: ",
+    {
+      "latex": "8 x^{3} + 125 y^{3} : \\left(2 x + 5 y\\right) \\left(4 x^{2} - 10 xy + 25 y^{2}\\right)",
+      "fallback": "8x³ + 125y³: (2x + 5y)(4x² − 10xy + 25y²)"
+    },
+    ")"
+  ],
+  "Write as difference of cubes. (Factorise 27x³ − 8y³: (3x − 2y)(9x² + 6xy + 4y²))": [
+    "Write as difference of cubes. (Factorise ",
+    {
+      "latex": "27 x^{3} - 8 y^{3} : \\left(3 x - 2 y\\right) \\left(9 x^{2} + 6 xy + 4 y^{2}\\right)",
+      "fallback": "27x³ − 8y³: (3x − 2y)(9x² + 6xy + 4y²)"
+    },
+    ")"
+  ],
+  "(3x)³ − (2y)³ என எழுதுக. (காரணிப்படுத்துக: 27x³ − 8y³: (3x − 2y)(9x² + 6xy + 4y²))": [
+    {
+      "latex": "\\left(3 x\\right)^{3} - \\left(2 y\\right)^{3}",
+      "fallback": "(3x)³ − (2y)³"
+    },
+    " என எழுதுக. (காரணிப்படுத்துக: ",
+    {
+      "latex": "27 x^{3} - 8 y^{3} : \\left(3 x - 2 y\\right) \\left(9 x^{2} + 6 xy + 4 y^{2}\\right)",
+      "fallback": "27x³ − 8y³: (3x − 2y)(9x² + 6xy + 4y²)"
+    },
+    ")"
+  ],
+  "Factor first as difference of squares. (Factorise a⁶ − 64: (a + 2)(a − 2)(a² − 2a + 4)(a² + 2a + 4))": [
+    "Factor first as difference of squares. (Factorise ",
+    {
+      "latex": "a^{6} - 64 : \\left(a + 2\\right) \\left(a - 2\\right) \\left(a^{2} - 2 a + 4\\right) \\left(a^{2} + 2 a + 4\\right)",
+      "fallback": "a⁶ − 64: (a + 2)(a − 2)(a² − 2a + 4)(a² + 2a + 4)"
+    },
+    ")"
+  ],
+  "முதலில் a² − b² மூலம் பிரிக்க. (காரணிப்படுத்துக: a⁶ − 64: (a + 2)(a − 2)(a² − 2a + 4)(a² + 2a + 4))": [
+    "முதலில் ",
+    {
+      "latex": "a^{2} - b^{2}",
+      "fallback": "a² − b²"
+    },
+    " மூலம் பிரிக்க. (காரணிப்படுத்துக: ",
+    {
+      "latex": "a^{6} - 64 : \\left(a + 2\\right) \\left(a - 2\\right) \\left(a^{2} - 2 a + 4\\right) \\left(a^{2} + 2 a + 4\\right)",
+      "fallback": "a⁶ − 64: (a + 2)(a − 2)(a² − 2a + 4)(a² + 2a + 4)"
+    },
+    ")"
+  ],
+  "Match with a³ + b³ + c³ − 3abc where a=x, b=2y, c=−1.": [
+    "Match with ",
+    {
+      "latex": "a^{3} + b^{3} + c^{3} - 3",
+      "fallback": "a³ + b³ + c³ − 3"
+    },
+    "abc where ",
+    {
+      "latex": "a = x",
+      "fallback": "a=x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 2 y",
+      "fallback": "b=2y"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 1",
+      "fallback": "c=−1"
+    },
+    "."
+  ],
+  "Match with a³ + b³ + c³ − 3abc where a=x, b=2y, c=−1. (Factorise x³ + 8y³ + 6xy − 1: (x + 2y − 1)(x² + 4y² + 1 − 2xy + 2y + x))": [
+    "Match with ",
+    {
+      "latex": "a^{3} + b^{3} + c^{3} - 3",
+      "fallback": "a³ + b³ + c³ − 3"
+    },
+    "abc where ",
+    {
+      "latex": "a = x",
+      "fallback": "a=x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 2 y",
+      "fallback": "b=2y"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 1",
+      "fallback": "c=−1"
+    },
+    ". (Factorise ",
+    {
+      "latex": "x^{3} + 8 y^{3} + 6 xy - 1 : \\left(x + 2 y - 1\\right) \\left(x^{2} + 4 y^{2} + 1 - 2 xy + 2 y + x\\right)",
+      "fallback": "x³ + 8y³ + 6xy − 1: (x + 2y − 1)(x² + 4y² + 1 − 2xy + 2y + x)"
+    },
+    ")"
+  ],
+  "a=x, b=2y, c=−1 எனக் கொள்க. (காரணிப்படுத்துக: x³ + 8y³ + 6xy − 1: (x + 2y − 1)(x² + 4y² + 1 − 2xy + 2y + x))": [
+    {
+      "latex": "a = x",
+      "fallback": "a=x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 2 y",
+      "fallback": "b=2y"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 1",
+      "fallback": "c=−1"
+    },
+    " எனக் கொள்க. (காரணிப்படுத்துக: ",
+    {
+      "latex": "x^{3} + 8 y^{3} + 6 xy - 1 : \\left(x + 2 y - 1\\right) \\left(x^{2} + 4 y^{2} + 1 - 2 xy + 2 y + x\\right)",
+      "fallback": "x³ + 8y³ + 6xy − 1: (x + 2y − 1)(x² + 4y² + 1 − 2xy + 2y + x)"
+    },
+    ")"
+  ],
+  "Identify a = l, b = −2m, c = −3n.": [
+    "Identify ",
+    {
+      "latex": "a = l",
+      "fallback": "a = l"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 2\\,\\mathrm{m}",
+      "fallback": "b = −2m"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 3 n",
+      "fallback": "c = −3n"
+    },
+    "."
+  ],
+  "Identify a = l, b = −2m, c = −3n. (Factorise l³ − 8m³ − 27n³ − 18lmn: (l − 2m − 3n)(l² + 4m² + 9n² + 2lm − 6mn + 3nl))": [
+    "Identify ",
+    {
+      "latex": "a = l",
+      "fallback": "a = l"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 2\\,\\mathrm{m}",
+      "fallback": "b = −2m"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 3 n",
+      "fallback": "c = −3n"
+    },
+    ". (Factorise ",
+    {
+      "latex": "l^{3} - 8\\,\\mathrm{m}^{3} - 27 n^{3} - 18",
+      "fallback": "l³ − 8m³ − 27n³ − 18"
+    },
+    "lmn: ",
+    {
+      "latex": "\\left(l - 2\\,\\mathrm{m} - 3 n\\right)",
+      "fallback": "(l − 2m − 3n)"
+    },
+    "(",
+    {
+      "latex": "l^{2} + 4\\,\\mathrm{m}^{2} + 9 n^{2} + 2",
+      "fallback": "l² + 4m² + 9n² + 2"
+    },
+    "lm ",
+    {
+      "latex": "- 6",
+      "fallback": "− 6"
+    },
+    "mn ",
+    {
+      "latex": "+ 3",
+      "fallback": "+ 3"
+    },
+    "nl))"
+  ],
+  "a = l, b = −2m, c = −3n என்க. (காரணிப்படுத்துக: l³ − 8m³ − 27n³ − 18lmn: (l − 2m − 3n)(l² + 4m² + 9n² + 2lm − 6mn + 3nl))": [
+    {
+      "latex": "a = l",
+      "fallback": "a = l"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = - 2\\,\\mathrm{m}",
+      "fallback": "b = −2m"
+    },
+    ",",
+    " ",
+    {
+      "latex": "c = - 3 n",
+      "fallback": "c = −3n"
+    },
+    " என்க. (காரணிப்படுத்துக: ",
+    {
+      "latex": "l^{3} - 8\\,\\mathrm{m}^{3} - 27 n^{3} - 18",
+      "fallback": "l³ − 8m³ − 27n³ − 18"
+    },
+    "lmn: ",
+    {
+      "latex": "\\left(l - 2\\,\\mathrm{m} - 3 n\\right)",
+      "fallback": "(l − 2m − 3n)"
+    },
+    "(",
+    {
+      "latex": "l^{2} + 4\\,\\mathrm{m}^{2} + 9 n^{2} + 2",
+      "fallback": "l² + 4m² + 9n² + 2"
+    },
+    "lm ",
+    {
+      "latex": "- 6",
+      "fallback": "− 6"
+    },
+    "mn ",
+    {
+      "latex": "+ 3",
+      "fallback": "+ 3"
+    },
+    "nl))"
+  ],
+  "Split 10x = 4x + 6x.": [
+    "Split ",
+    {
+      "latex": "10 x = 4 x + 6 x",
+      "fallback": "10x = 4x + 6x"
+    },
+    "."
+  ],
+  "Split 10x = 4x + 6x. (Factorise x² + 10x + 24: (x + 4)(x + 6))": [
+    "Split ",
+    {
+      "latex": "10 x = 4 x + 6 x",
+      "fallback": "10x = 4x + 6x"
+    },
+    ". (Factorise ",
+    {
+      "latex": "x^{2} + 10 x + 24 : \\left(x + 4\\right) \\left(x + 6\\right)",
+      "fallback": "x² + 10x + 24: (x + 4)(x + 6)"
+    },
+    ")"
+  ],
+  "கூடுதல் 10, பெருக்கல் 24 தரும் எண்கள் 4, 6. (காரணிப்படுத்துக: x² + 10x + 24: (x + 4)(x + 6))": [
+    "கூடுதல் ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    ", பெருக்கல் ",
+    {
+      "latex": "24",
+      "fallback": "24"
+    },
+    " தரும் எண்கள் ",
+    {
+      "latex": "4, 6",
+      "fallback": "4, 6"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "x^{2} + 10 x + 24 : \\left(x + 4\\right) \\left(x + 6\\right)",
+      "fallback": "x² + 10x + 24: (x + 4)(x + 6)"
+    },
+    ")"
+  ],
+  "Split 4z = 6z − 2z.": [
+    "Split ",
+    {
+      "latex": "4 z = 6 z - 2 z",
+      "fallback": "4z = 6z − 2z"
+    },
+    "."
+  ],
+  "Split 4z = 6z − 2z. (Factorise z² + 4z − 12: (z + 6)(z − 2))": [
+    "Split ",
+    {
+      "latex": "4 z = 6 z - 2 z",
+      "fallback": "4z = 6z − 2z"
+    },
+    ". (Factorise ",
+    {
+      "latex": "z^{2} + 4 z - 12 : \\left(z + 6\\right) \\left(z - 2\\right)",
+      "fallback": "z² + 4z − 12: (z + 6)(z − 2)"
+    },
+    ")"
+  ],
+  "கூடுதல் 4, பெருக்கல் −12 தரும் எண்கள் 6, −2. (காரணிப்படுத்துக: z² + 4z − 12: (z + 6)(z − 2))": [
+    "கூடுதல் ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    ", பெருக்கல் ",
+    {
+      "latex": "- 12",
+      "fallback": "−12"
+    },
+    " தரும் எண்கள் ",
+    {
+      "latex": "6, - 2",
+      "fallback": "6, −2"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "z^{2} + 4 z - 12 : \\left(z + 6\\right) \\left(z - 2\\right)",
+      "fallback": "z² + 4z − 12: (z + 6)(z − 2)"
+    },
+    ")"
+  ],
+  "Split −6p = −8p + 2p.": [
+    "Split ",
+    {
+      "latex": "- 6 p = - 8 p + 2 p",
+      "fallback": "−6p = −8p + 2p"
+    },
+    "."
+  ],
+  "Split −6p = −8p + 2p. (Factorise p² − 6p − 16: (p − 8)(p + 2))": [
+    "Split ",
+    {
+      "latex": "- 6 p = - 8 p + 2 p",
+      "fallback": "−6p = −8p + 2p"
+    },
+    ". (Factorise ",
+    {
+      "latex": "p^{2} - 6 p - 16 : \\left(p - 8\\right) \\left(p + 2\\right)",
+      "fallback": "p² − 6p − 16: (p − 8)(p + 2)"
+    },
+    ")"
+  ],
+  "கூடுதல் −6, பெருக்கல் −16 ⇒ −8, 2. (காரணிப்படுத்துக: p² − 6p − 16: (p − 8)(p + 2))": [
+    "கூடுதல் ",
+    {
+      "latex": "- 6",
+      "fallback": "−6"
+    },
+    ", பெருக்கல் ",
+    {
+      "latex": "- 16 \\Rightarrow - 8, 2",
+      "fallback": "−16 ⇒ −8, 2"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "p^{2} - 6 p - 16 : \\left(p - 8\\right) \\left(p + 2\\right)",
+      "fallback": "p² − 6p − 16: (p − 8)(p + 2)"
+    },
+    ")"
+  ],
+  "Write in standard form first. (Factorise t² + 72 − 17t: (t − 8)(t − 9))": [
+    "Write in standard form first. (Factorise ",
+    {
+      "latex": "t^{2} + 72 - 17 t : \\left(t - 8\\right) \\left(t - 9\\right)",
+      "fallback": "t² + 72 − 17t: (t − 8)(t − 9)"
+    },
+    ")"
+  ],
+  "திட்ட வடிவில் எழுத t² − 17t + 72. (காரணிப்படுத்துக: t² + 72 − 17t: (t − 8)(t − 9))": [
+    "திட்ட வடிவில் எழுத ",
+    {
+      "latex": "t^{2} - 17 t + 72",
+      "fallback": "t² − 17t + 72"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "t^{2} + 72 - 17 t : \\left(t - 8\\right) \\left(t - 9\\right)",
+      "fallback": "t² + 72 − 17t: (t − 8)(t − 9)"
+    },
+    ")"
+  ],
+  "Split −16y = −20y + 4y.": [
+    "Split ",
+    {
+      "latex": "- 16 y = - 20 y + 4 y",
+      "fallback": "−16y = −20y + 4y"
+    },
+    "."
+  ],
+  "Split −16y = −20y + 4y. (Factorise y² − 16y − 80: (y − 20)(y + 4))": [
+    "Split ",
+    {
+      "latex": "- 16 y = - 20 y + 4 y",
+      "fallback": "−16y = −20y + 4y"
+    },
+    ". (Factorise ",
+    {
+      "latex": "y^{2} - 16 y - 80 : \\left(y - 20\\right) \\left(y + 4\\right)",
+      "fallback": "y² − 16y − 80: (y − 20)(y + 4)"
+    },
+    ")"
+  ],
+  "கூடுதல் −16, பெருக்கல் −80 ⇒ −20, 4. (காரணிப்படுத்துக: y² − 16y − 80: (y − 20)(y + 4))": [
+    "கூடுதல் ",
+    {
+      "latex": "- 16",
+      "fallback": "−16"
+    },
+    ", பெருக்கல் ",
+    {
+      "latex": "- 80 \\Rightarrow - 20, 4",
+      "fallback": "−80 ⇒ −20, 4"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "y^{2} - 16 y - 80 : \\left(y - 20\\right) \\left(y + 4\\right)",
+      "fallback": "y² − 16y − 80: (y − 20)(y + 4)"
+    },
+    ")"
+  ],
+  "Split 10a = 30a − 20a.": [
+    "Split ",
+    {
+      "latex": "10 a = 30 a - 20 a",
+      "fallback": "10a = 30a − 20a"
+    },
+    "."
+  ],
+  "Split 10a = 30a − 20a. (Factorise a² + 10a − 600: (a + 30)(a − 20))": [
+    "Split ",
+    {
+      "latex": "10 a = 30 a - 20 a",
+      "fallback": "10a = 30a − 20a"
+    },
+    ". (Factorise ",
+    {
+      "latex": "a^{2} + 10 a - 600 : \\left(a + 30\\right) \\left(a - 20\\right)",
+      "fallback": "a² + 10a − 600: (a + 30)(a − 20)"
+    },
+    ")"
+  ],
+  "கூடுதல் 10, பெருக்கல் −600 ⇒ 30, −20. (காரணிப்படுத்துக: a² + 10a − 600: (a + 30)(a − 20))": [
+    "கூடுதல் ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    ", பெருக்கல் ",
+    {
+      "latex": "- 600 \\Rightarrow 30, - 20",
+      "fallback": "−600 ⇒ 30, −20"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "a^{2} + 10 a - 600 : \\left(a + 30\\right) \\left(a - 20\\right)",
+      "fallback": "a² + 10a − 600: (a + 30)(a − 20)"
+    },
+    ")"
+  ],
+  "Split 9a = 4a + 5a.": [
+    "Split ",
+    {
+      "latex": "9 a = 4 a + 5 a",
+      "fallback": "9a = 4a + 5a"
+    },
+    "."
+  ],
+  "Split 9a = 4a + 5a. (Factorise 2a² + 9a + 10: (a + 2)(2a + 5))": [
+    "Split ",
+    {
+      "latex": "9 a = 4 a + 5 a",
+      "fallback": "9a = 4a + 5a"
+    },
+    ". (Factorise ",
+    {
+      "latex": "2 a^{2} + 9 a + 10 : \\left(a + 2\\right) \\left(2 a + 5\\right)",
+      "fallback": "2a² + 9a + 10: (a + 2)(2a + 5)"
+    },
+    ")"
+  ],
+  "ac = 20, b = 9 ⇒ 4, 5. (காரணிப்படுத்துக: 2a² + 9a + 10: (a + 2)(2a + 5))": [
+    "ac = ",
+    {
+      "latex": "20, b = 9 \\Rightarrow 4, 5",
+      "fallback": "20, b = 9 ⇒ 4, 5"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "2 a^{2} + 9 a + 10 : \\left(a + 2\\right) \\left(2 a + 5\\right)",
+      "fallback": "2a² + 9a + 10: (a + 2)(2a + 5)"
+    },
+    ")"
+  ],
+  "Split −29xy = −35xy + 6xy.": [
+    "Split ",
+    {
+      "latex": "- 29 xy = - 35 xy + 6 xy",
+      "fallback": "−29xy = −35xy + 6xy"
+    },
+    "."
+  ],
+  "Split −29xy = −35xy + 6xy. (Factorise 5x² − 29xy − 42y²: (x − 7y)(5x + 6y))": [
+    "Split ",
+    {
+      "latex": "- 29 xy = - 35 xy + 6 xy",
+      "fallback": "−29xy = −35xy + 6xy"
+    },
+    ". (Factorise ",
+    {
+      "latex": "5 x^{2} - 29 xy - 42 y^{2} : \\left(x - 7 y\\right) \\left(5 x + 6 y\\right)",
+      "fallback": "5x² − 29xy − 42y²: (x − 7y)(5x + 6y)"
+    },
+    ")"
+  ],
+  "ac = −210, b = −29 ⇒ −35, 6. (காரணிப்படுத்துக: 5x² − 29xy − 42y²: (x − 7y)(5x + 6y))": [
+    "ac = ",
+    {
+      "latex": "- 210, b = - 29 \\Rightarrow - 35, 6",
+      "fallback": "−210, b = −29 ⇒ −35, 6"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "5 x^{2} - 29 xy - 42 y^{2} : \\left(x - 7 y\\right) \\left(5 x + 6 y\\right)",
+      "fallback": "5x² − 29xy − 42y²: (x − 7y)(5x + 6y)"
+    },
+    ")"
+  ],
+  "Write in standard form. (Factorise 9 − 18x + 8x²: (2x − 3)(4x − 3))": [
+    "Write in standard form. (Factorise ",
+    {
+      "latex": "9 - 18 x + 8 x^{2} : \\left(2 x - 3\\right) \\left(4 x - 3\\right)",
+      "fallback": "9 − 18x + 8x²: (2x − 3)(4x − 3)"
+    },
+    ")"
+  ],
+  "திட்ட வடிவில் எழுதுக: 8x² − 18x + 9. (காரணிப்படுத்துக: 9 − 18x + 8x²: (2x − 3)(4x − 3))": [
+    "திட்ட வடிவில் எழுதுக: ",
+    {
+      "latex": "8 x^{2} - 18 x + 9",
+      "fallback": "8x² − 18x + 9"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "9 - 18 x + 8 x^{2} : \\left(2 x - 3\\right) \\left(4 x - 3\\right)",
+      "fallback": "9 − 18x + 8x²: (2x − 3)(4x − 3)"
+    },
+    ")"
+  ],
+  "Take common factor 2 out first.": [
+    "Take common factor ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " out first."
+  ],
+  "Take common factor 2 out first. (Factorise 6x² + 16xy + 8y²: 2(3x + 2y)(x + 2y))": [
+    "Take common factor ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " out first. (Factorise ",
+    {
+      "latex": "6 x^{2} + 16 xy + 8 y^{2} : 2 \\left(3 x + 2 y\\right) \\left(x + 2 y\\right)",
+      "fallback": "6x² + 16xy + 8y²: 2(3x + 2y)(x + 2y)"
+    },
+    ")"
+  ],
+  "முதலில் 2-ஐப் பொதுவாக எடுக்க. (காரணிப்படுத்துக: 6x² + 16xy + 8y²: 2(3x + 2y)(x + 2y))": [
+    "முதலில் ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-ஐப் பொதுவாக எடுக்க. (காரணிப்படுத்துக: ",
+    {
+      "latex": "6 x^{2} + 16 xy + 8 y^{2} : 2 \\left(3 x + 2 y\\right) \\left(x + 2 y\\right)",
+      "fallback": "6x² + 16xy + 8y²: 2(3x + 2y)(x + 2y)"
+    },
+    ")"
+  ],
+  "Take common factor 3x² out first.": [
+    "Take common factor ",
+    {
+      "latex": "3 x^{2}",
+      "fallback": "3x²"
+    },
+    " out first."
+  ],
+  "Take common factor 3x² out first. (Factorise 12x² + 36x²y + 27y²x²: 3x²(2 + 3y)²)": [
+    "Take common factor ",
+    {
+      "latex": "3 x^{2}",
+      "fallback": "3x²"
+    },
+    " out first. (Factorise ",
+    {
+      "latex": "12 x^{2} + 36 x^{2} y + 27 y^{2} x^{2} : 3 x^{2} \\left(2 + 3 y\\right)^{2}",
+      "fallback": "12x² + 36x²y + 27y²x²: 3x²(2 + 3y)²"
+    },
+    ")"
+  ],
+  "பொதுக் காரணி 3x²-ஐ வெளியே எடுக்க. (காரணிப்படுத்துக: 12x² + 36x²y + 27y²x²: 3x²(2 + 3y)²)": [
+    "பொதுக் காரணி ",
+    {
+      "latex": "3 x^{2}",
+      "fallback": "3x²"
+    },
+    "-ஐ வெளியே எடுக்க. (காரணிப்படுத்துக: ",
+    {
+      "latex": "12 x^{2} + 36 x^{2} y + 27 y^{2} x^{2} : 3 x^{2} \\left(2 + 3 y\\right)^{2}",
+      "fallback": "12x² + 36x²y + 27y²x²: 3x²(2 + 3y)²"
+    },
+    ")"
+  ],
+  "Substitute u = a + b.": [
+    "Substitute ",
+    {
+      "latex": "u = a + b",
+      "fallback": "u = a + b"
+    },
+    "."
+  ],
+  "Substitute u = a + b. (Factorise (a + b)² + 9(a + b) + 18: (a + b + 3)(a + b + 6))": [
+    "Substitute ",
+    {
+      "latex": "u = a + b",
+      "fallback": "u = a + b"
+    },
+    ". (Factorise ",
+    {
+      "latex": "\\left(a + b\\right)^{2} + 9 \\left(a + b\\right) + 18 : \\left(a + b + 3\\right) \\left(a + b + 6\\right)",
+      "fallback": "(a + b)² + 9(a + b) + 18: (a + b + 3)(a + b + 6)"
+    },
+    ")"
+  ],
+  "u = a + b எனக் கொள்க. (காரணிப்படுத்துக: (a + b)² + 9(a + b) + 18: (a + b + 3)(a + b + 6))": [
+    {
+      "latex": "u = a + b",
+      "fallback": "u = a + b"
+    },
+    " எனக் கொள்க. (காரணிப்படுத்துக: ",
+    {
+      "latex": "\\left(a + b\\right)^{2} + 9 \\left(a + b\\right) + 18 : \\left(a + b + 3\\right) \\left(a + b + 6\\right)",
+      "fallback": "(a + b)² + 9(a + b) + 18: (a + b + 3)(a + b + 6)"
+    },
+    ")"
+  ],
+  "Substitute u = p − q.": [
+    "Substitute ",
+    {
+      "latex": "u = p - q",
+      "fallback": "u = p − q"
+    },
+    "."
+  ],
+  "Substitute u = p − q. (Factorise (p − q)² − 6(p − q) − 16: (p − q − 8)(p − q + 2))": [
+    "Substitute ",
+    {
+      "latex": "u = p - q",
+      "fallback": "u = p − q"
+    },
+    ". (Factorise ",
+    {
+      "latex": "\\left(p - q\\right)^{2} - 6 \\left(p - q\\right) - 16 : \\left(p - q - 8\\right) \\left(p - q + 2\\right)",
+      "fallback": "(p − q)² − 6(p − q) − 16: (p − q − 8)(p − q + 2)"
+    },
+    ")"
+  ],
+  "u = p − q எனக் கொள்க. (காரணிப்படுத்துக: (p − q)² − 6(p − q) − 16: (p − q − 8)(p − q + 2))": [
+    {
+      "latex": "u = p - q",
+      "fallback": "u = p − q"
+    },
+    " எனக் கொள்க. (காரணிப்படுத்துக: ",
+    {
+      "latex": "\\left(p - q\\right)^{2} - 6 \\left(p - q\\right) - 16 : \\left(p - q - 8\\right) \\left(p - q + 2\\right)",
+      "fallback": "(p − q)² − 6(p − q) − 16: (p − q − 8)(p − q + 2)"
+    },
+    ")"
+  ],
+  "Split 2mn = 6mn − 4mn.": [
+    "Split ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "mn = ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    "mn ",
+    {
+      "latex": "- 4",
+      "fallback": "− 4"
+    },
+    "mn."
+  ],
+  "Split 2mn = 6mn − 4mn. (Factorise m² + 2mn − 24n²: (m + 6n)(m − 4n))": [
+    "Split ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "mn = ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    "mn ",
+    {
+      "latex": "- 4",
+      "fallback": "− 4"
+    },
+    "mn. (Factorise ",
+    {
+      "latex": "\\mathrm{m}^{2} + 2",
+      "fallback": "m² + 2"
+    },
+    "mn ",
+    {
+      "latex": "- 24 n^{2} : \\left(\\mathrm{m} + 6 n\\right) \\left(\\mathrm{m} - 4 n\\right)",
+      "fallback": "− 24n²: (m + 6n)(m − 4n)"
+    },
+    ")"
+  ],
+  "கூடுதல் 2, பெருக்கல் −24 ⇒ 6, −4. (காரணிப்படுத்துக: m² + 2mn − 24n²: (m + 6n)(m − 4n))": [
+    "கூடுதல் ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    ", பெருக்கல் ",
+    {
+      "latex": "- 24 \\Rightarrow 6, - 4",
+      "fallback": "−24 ⇒ 6, −4"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "\\mathrm{m}^{2} + 2",
+      "fallback": "m² + 2"
+    },
+    "mn ",
+    {
+      "latex": "- 24 n^{2} : \\left(\\mathrm{m} + 6 n\\right) \\left(\\mathrm{m} - 4 n\\right)",
+      "fallback": "− 24n²: (m + 6n)(m − 4n)"
+    },
+    ")"
+  ],
+  "Split 2a = 5a − 3a.": [
+    "Split ",
+    {
+      "latex": "2 a = 5 a - 3 a",
+      "fallback": "2a = 5a − 3a"
+    },
+    "."
+  ],
+  "Split 2a = 5a − 3a. (Factorise √5 a² + 2a − 3√5: (a + √5)(√5 a − 3))": [
+    "Split ",
+    {
+      "latex": "2 a = 5 a - 3 a",
+      "fallback": "2a = 5a − 3a"
+    },
+    ". (Factorise ",
+    {
+      "latex": "\\sqrt{5} a^{2} + 2 a - 3\\,\\sqrt{5} : \\left(a + \\sqrt{5}\\right) \\left(\\sqrt{5} a - 3\\right)",
+      "fallback": "√5 a² + 2a − 3√5: (a + √5)(√5 a − 3)"
+    },
+    ")"
+  ],
+  "ac = −15, b = 2 ⇒ 5, −3. (காரணிப்படுத்துக: √5 a² + 2a − 3√5: (a + √5)(√5 a − 3))": [
+    "ac = ",
+    {
+      "latex": "- 15, b = 2 \\Rightarrow 5, - 3",
+      "fallback": "−15, b = 2 ⇒ 5, −3"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "\\sqrt{5} a^{2} + 2 a - 3\\,\\sqrt{5} : \\left(a + \\sqrt{5}\\right) \\left(\\sqrt{5} a - 3\\right)",
+      "fallback": "√5 a² + 2a − 3√5: (a + √5)(√5 a − 3)"
+    },
+    ")"
+  ],
+  "Factor in terms of a².": [
+    "Factor in terms of ",
+    {
+      "latex": "a^{2}",
+      "fallback": "a²"
+    },
+    "."
+  ],
+  "Factor in terms of a². (Factorise a⁴ − 3a² + 2: (a + 1)(a − 1)(a² − 2))": [
+    "Factor in terms of ",
+    {
+      "latex": "a^{2}",
+      "fallback": "a²"
+    },
+    ". (Factorise ",
+    {
+      "latex": "a^{4} - 3 a^{2} + 2 : \\left(a + 1\\right) \\left(a - 1\\right) \\left(a^{2} - 2\\right)",
+      "fallback": "a⁴ − 3a² + 2: (a + 1)(a − 1)(a² − 2)"
+    },
+    ")"
+  ],
+  "u = a² எனக் கொண்டு காரணிப்படுத்த. (காரணிப்படுத்துக: a⁴ − 3a² + 2: (a + 1)(a − 1)(a² − 2))": [
+    {
+      "latex": "u = a^{2}",
+      "fallback": "u = a²"
+    },
+    " எனக் கொண்டு காரணிப்படுத்த. (காரணிப்படுத்துக: ",
+    {
+      "latex": "a^{4} - 3 a^{2} + 2 : \\left(a + 1\\right) \\left(a - 1\\right) \\left(a^{2} - 2\\right)",
+      "fallback": "a⁴ − 3a² + 2: (a + 1)(a − 1)(a² − 2)"
+    },
+    ")"
+  ],
+  "Take m common; ac = −120, b = −2 ⇒ −12, 10.": [
+    "Take ",
+    {
+      "latex": "\\mathrm{m}",
+      "fallback": "m"
+    },
+    " common; ac = ",
+    {
+      "latex": "- 120, b = - 2 \\Rightarrow - 12, 10",
+      "fallback": "−120, b = −2 ⇒ −12, 10"
+    },
+    "."
+  ],
+  "Take m common; ac = −120, b = −2 ⇒ −12, 10. (Factorise 8m³ − 2m²n − 15mn²: m(4m + 5n)(2m − 3n))": [
+    "Take ",
+    {
+      "latex": "\\mathrm{m}",
+      "fallback": "m"
+    },
+    " common; ac = ",
+    {
+      "latex": "- 120, b = - 2 \\Rightarrow - 12, 10",
+      "fallback": "−120, b = −2 ⇒ −12, 10"
+    },
+    ". (Factorise ",
+    {
+      "latex": "8\\,\\mathrm{m}^{3} - 2\\,\\mathrm{m}^{2}",
+      "fallback": "8m³ − 2m²"
+    },
+    {
+      "latex": "n - 15",
+      "fallback": "n − 15"
+    },
+    "mn²: ",
+    {
+      "latex": "\\mathrm{m} \\left(4\\,\\mathrm{m} + 5 n\\right) \\left(2\\,\\mathrm{m} - 3 n\\right)",
+      "fallback": "m(4m + 5n)(2m − 3n)"
+    },
+    ")"
+  ],
+  "m பொதுக் காரணி; ac = −120, b = −2 ⇒ −12, 10. (காரணிப்படுத்துக: 8m³ − 2m²n − 15mn²: m(4m + 5n)(2m − 3n))": [
+    {
+      "latex": "\\mathrm{m}",
+      "fallback": "m"
+    },
+    " பொதுக் காரணி; ac = ",
+    {
+      "latex": "- 120, b = - 2 \\Rightarrow - 12, 10",
+      "fallback": "−120, b = −2 ⇒ −12, 10"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "8\\,\\mathrm{m}^{3} - 2\\,\\mathrm{m}^{2}",
+      "fallback": "8m³ − 2m²"
+    },
+    {
+      "latex": "n - 15",
+      "fallback": "n − 15"
+    },
+    "mn²: ",
+    {
+      "latex": "\\mathrm{m} \\left(4\\,\\mathrm{m} + 5 n\\right) \\left(2\\,\\mathrm{m} - 3 n\\right)",
+      "fallback": "m(4m + 5n)(2m − 3n)"
+    },
+    ")"
+  ],
+  "Recognize a² + 2ab + b² with x, y ≠ 0.": [
+    "Recognize ",
+    {
+      "latex": "a^{2} + 2 ab + b^{2}",
+      "fallback": "a² + 2ab + b²"
+    },
+    " with ",
+    {
+      "latex": "x, y \\ne 0",
+      "fallback": "x, y ≠ 0"
+    },
+    "."
+  ],
+  "Recognize a² + 2ab + b² with x, y ≠ 0. (Factorise 1/x² + 1/y² + 2/(xy): (1/x + 1/y)²)": [
+    "Recognize ",
+    {
+      "latex": "a^{2} + 2 ab + b^{2}",
+      "fallback": "a² + 2ab + b²"
+    },
+    " with ",
+    {
+      "latex": "x, y \\ne 0",
+      "fallback": "x, y ≠ 0"
+    },
+    ". (Factorise ",
+    {
+      "latex": "\\dfrac{1}{x^{2}} + \\dfrac{1}{y^{2}} + \\dfrac{2}{\\left(xy\\right)} : \\left(\\dfrac{1}{x} + \\dfrac{1}{y}\\right)^{2}",
+      "fallback": "1/x² + 1/y² + 2/(xy): (1/x + 1/y)²"
+    },
+    ")"
+  ],
+  "a = 1/x, b = 1/y எனக் கொள்க (x, y ≠ 0). (காரணிப்படுத்துக: 1/x² + 1/y² + 2/(xy): (1/x + 1/y)²)": [
+    {
+      "latex": "a = \\dfrac{1}{x}",
+      "fallback": "a = 1/x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = \\dfrac{1}{y}",
+      "fallback": "b = 1/y"
+    },
+    " எனக் கொள்க ",
+    {
+      "latex": "\\left(x, y \\ne 0\\right)",
+      "fallback": "(x, y ≠ 0)"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "\\dfrac{1}{x^{2}} + \\dfrac{1}{y^{2}} + \\dfrac{2}{\\left(xy\\right)} : \\left(\\dfrac{1}{x} + \\dfrac{1}{y}\\right)^{2}",
+      "fallback": "1/x² + 1/y² + 2/(xy): (1/x + 1/y)²"
+    },
+    ")"
+  ],
+  "Set up synthetic division with x = −3.": [
+    "Set up synthetic division with ",
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    "."
+  ],
+  "Set up synthetic division with x = −3. (Divide (4x³ + 6x² − 23x + 18) by (x + 3): Quotient: 4x² − 6x − 5; Remainder: 33)": [
+    "Set up synthetic division with ",
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    ". (Divide ",
+    {
+      "latex": "\\left(4 x^{3} + 6 x^{2} - 23 x + 18\\right)",
+      "fallback": "(4x³ + 6x² − 23x + 18)"
+    },
+    " by ",
+    {
+      "latex": "\\left(x + 3\\right)",
+      "fallback": "(x + 3)"
+    },
+    ": Quotient: ",
+    {
+      "latex": "4 x^{2} - 6 x - 5",
+      "fallback": "4x² − 6x − 5"
+    },
+    "; Remainder: ",
+    {
+      "latex": "33",
+      "fallback": "33"
+    },
+    ")"
+  ],
+  "x = −3 கொண்டு தொகுமுறை வகுத்தல் அமைக்க. ((4x³ + 6x² − 23x + 18) ÷ (x + 3): ஈவு: 4x² − 6x − 5; மீதி: 33)": [
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    " கொண்டு தொகுமுறை வகுத்தல் அமைக்க. (",
+    {
+      "latex": "\\left(4 x^{3} + 6 x^{2} - 23 x + 18\\right) \\div \\left(x + 3\\right)",
+      "fallback": "(4x³ + 6x² − 23x + 18) ÷ (x + 3)"
+    },
+    ": ஈவு: ",
+    {
+      "latex": "4 x^{2} - 6 x - 5",
+      "fallback": "4x² − 6x − 5"
+    },
+    "; மீதி: ",
+    {
+      "latex": "33",
+      "fallback": "33"
+    },
+    ")"
+  ],
+  "Use y = 1/2 in synthetic division.": [
+    "Use ",
+    {
+      "latex": "y = \\dfrac{1}{2}",
+      "fallback": "y = 1/2"
+    },
+    " in synthetic division."
+  ],
+  "Use y = 1/2 in synthetic division. (Divide (8y³ − 16y² + 16y − 15) by (2y − 1): Quotient: 4y² − 6y + 5; Remainder: −10)": [
+    "Use ",
+    {
+      "latex": "y = \\dfrac{1}{2}",
+      "fallback": "y = 1/2"
+    },
+    " in synthetic division. (Divide ",
+    {
+      "latex": "\\left(8 y^{3} - 16 y^{2} + 16 y - 15\\right)",
+      "fallback": "(8y³ − 16y² + 16y − 15)"
+    },
+    " by ",
+    {
+      "latex": "\\left(2 y - 1\\right)",
+      "fallback": "(2y − 1)"
+    },
+    ": Quotient: ",
+    {
+      "latex": "4 y^{2} - 6 y + 5",
+      "fallback": "4y² − 6y + 5"
+    },
+    "; Remainder: ",
+    {
+      "latex": "- 10",
+      "fallback": "−10"
+    },
+    ")"
+  ],
+  "y = 1/2 கொண்டு தொகுமுறை வகுத்தல் செய்க. ((8y³ − 16y² + 16y − 15) ÷ (2y − 1): ஈவு: 4y² − 6y + 5; மீதி: −10)": [
+    {
+      "latex": "y = \\dfrac{1}{2}",
+      "fallback": "y = 1/2"
+    },
+    " கொண்டு தொகுமுறை வகுத்தல் செய்க. (",
+    {
+      "latex": "\\left(8 y^{3} - 16 y^{2} + 16 y - 15\\right) \\div \\left(2 y - 1\\right)",
+      "fallback": "(8y³ − 16y² + 16y − 15) ÷ (2y − 1)"
+    },
+    ": ஈவு: ",
+    {
+      "latex": "4 y^{2} - 6 y + 5",
+      "fallback": "4y² − 6y + 5"
+    },
+    "; மீதி: ",
+    {
+      "latex": "- 10",
+      "fallback": "−10"
+    },
+    ")"
+  ],
+  "Factor using a³ − b³ or use synthetic division with [8, 0, 0, −1] at x = 1/2.": [
+    "Factor using ",
+    {
+      "latex": "a^{3} - b^{3}",
+      "fallback": "a³ − b³"
+    },
+    " or use synthetic division with ",
+    {
+      "latex": "\\left[8, 0, 0, - 1\\right]",
+      "fallback": "[8, 0, 0, −1]"
+    },
+    " at ",
+    {
+      "latex": "x = \\dfrac{1}{2}",
+      "fallback": "x = 1/2"
+    },
+    "."
+  ],
+  "Factor using a³ − b³ or use synthetic division with [8, 0, 0, −1] at x = 1/2. (Divide (8x³ − 1) by (2x − 1): Quotient: 4x² + 2x + 1; Remainder: 0)": [
+    "Factor using ",
+    {
+      "latex": "a^{3} - b^{3}",
+      "fallback": "a³ − b³"
+    },
+    " or use synthetic division with ",
+    {
+      "latex": "\\left[8, 0, 0, - 1\\right]",
+      "fallback": "[8, 0, 0, −1]"
+    },
+    " at ",
+    {
+      "latex": "x = \\dfrac{1}{2}",
+      "fallback": "x = 1/2"
+    },
+    ". (Divide ",
+    {
+      "latex": "\\left(8 x^{3} - 1\\right)",
+      "fallback": "(8x³ − 1)"
+    },
+    " by ",
+    {
+      "latex": "\\left(2 x - 1\\right)",
+      "fallback": "(2x − 1)"
+    },
+    ": Quotient: ",
+    {
+      "latex": "4 x^{2} + 2 x + 1",
+      "fallback": "4x² + 2x + 1"
+    },
+    "; Remainder: ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ")"
+  ],
+  "a³ − b³ முற்றொருமை அல்லது தொகுமுறை வகுத்தல் மூலம். ((8x³ − 1) ÷ (2x − 1): ஈவு: 4x² + 2x + 1; மீதி: 0)": [
+    {
+      "latex": "a^{3} - b^{3}",
+      "fallback": "a³ − b³"
+    },
+    " முற்றொருமை அல்லது தொகுமுறை வகுத்தல் மூலம். (",
+    {
+      "latex": "\\left(8 x^{3} - 1\\right) \\div \\left(2 x - 1\\right)",
+      "fallback": "(8x³ − 1) ÷ (2x − 1)"
+    },
+    ": ஈவு: ",
+    {
+      "latex": "4 x^{2} + 2 x + 1",
+      "fallback": "4x² + 2x + 1"
+    },
+    "; மீதி: ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ")"
+  ],
+  "Order terms in descending powers first. (Divide (−18z + 14z² + 24z³ + 18) by (3z + 4): Quotient: 8z² − 6z + 2; Remainder: 10)": [
+    "Order terms in descending powers first. (Divide ",
+    {
+      "latex": "\\left(- 18 z + 14 z^{2} + 24 z^{3} + 18\\right)",
+      "fallback": "(−18z + 14z² + 24z³ + 18)"
+    },
+    " by ",
+    {
+      "latex": "\\left(3 z + 4\\right)",
+      "fallback": "(3z + 4)"
+    },
+    ": Quotient: ",
+    {
+      "latex": "8 z^{2} - 6 z + 2",
+      "fallback": "8z² − 6z + 2"
+    },
+    "; Remainder: ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    ")"
+  ],
+  "திட்ட வடிவில் எழுதி z = −4/3 என்க. ((−18z + 14z² + 24z³ + 18) ÷ (3z + 4): ஈவு: 8z² − 6z + 2; மீதி: 10)": [
+    "திட்ட வடிவில் எழுதி ",
+    {
+      "latex": "z = \\dfrac{- 4}{3}",
+      "fallback": "z = −4/3"
+    },
+    " என்க. (",
+    {
+      "latex": "\\left(- 18 z + 14 z^{2} + 24 z^{3} + 18\\right) \\div \\left(3 z + 4\\right)",
+      "fallback": "(−18z + 14z² + 24z³ + 18) ÷ (3z + 4)"
+    },
+    ": ஈவு: ",
+    {
+      "latex": "8 z^{2} - 6 z + 2",
+      "fallback": "8z² − 6z + 2"
+    },
+    "; மீதி: ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    ")"
+  ],
+  "Factorise the area. (Length of rectangle given area and breadth: x + 4)": [
+    "Factorise the area. (Length of rectangle given area and ",
+    {
+      "latex": "\\text{breadth} : x + 4",
+      "fallback": "breadth: x + 4"
+    },
+    ")"
+  ],
+  "பரப்பைக் காரணிப்படுத்தவும். (செவ்வகத்தின் நீளம் காண்க: x + 4)": [
+    "பரப்பைக் காரணிப்படுத்தவும். (செவ்வகத்தின் நீளம் காண்க: ",
+    {
+      "latex": "x + 4",
+      "fallback": "x + 4"
+    },
+    ")"
+  ],
+  "Factorise using difference of squares. (Height of parallelogram given area and base: 5x − 4)": [
+    "Factorise using difference of squares. (Height of parallelogram given area and ",
+    {
+      "latex": "\\text{base} : 5 x - 4",
+      "fallback": "base: 5x − 4"
+    },
+    ")"
+  ],
+  "a² − b² மூலம் காரணிப்படுத்தவும். (இணைகரத்தின் உயரம் காண்க: 5x − 4)": [
+    {
+      "latex": "a^{2} - b^{2}",
+      "fallback": "a² − b²"
+    },
+    " மூலம் காரணிப்படுத்தவும். (இணைகரத்தின் உயரம் காண்க: ",
+    {
+      "latex": "5 x - 4",
+      "fallback": "5x − 4"
+    },
+    ")"
+  ],
+  "Factorise using a³ + b³.": [
+    "Factorise using ",
+    {
+      "latex": "a^{3} + b^{3}",
+      "fallback": "a³ + b³"
+    },
+    "."
+  ],
+  "Factorise using a³ + b³. (Mean of (x + 5) observations with sum (x³ + 125): x² − 5x + 25)": [
+    "Factorise using ",
+    {
+      "latex": "a^{3} + b^{3}",
+      "fallback": "a³ + b³"
+    },
+    ". (Mean of ",
+    {
+      "latex": "\\left(x + 5\\right)",
+      "fallback": "(x + 5)"
+    },
+    " observations with ",
+    {
+      "latex": "\\text{sum} \\left(x^{3} + 125\\right) : x^{2} - 5 x + 25",
+      "fallback": "sum (x³ + 125): x² − 5x + 25"
+    },
+    ")"
+  ],
+  "a³ + b³ முற்றொருமை மூலம் காரணிப்படுத்தவும். (விவரங்களின் சராசரி காண்க: x² − 5x + 25)": [
+    {
+      "latex": "a^{3} + b^{3}",
+      "fallback": "a³ + b³"
+    },
+    " முற்றொருமை மூலம் காரணிப்படுத்தவும். (விவரங்களின் சராசரி காண்க: ",
+    {
+      "latex": "x^{2} - 5 x + 25",
+      "fallback": "x² − 5x + 25"
+    },
+    ")"
+  ],
+  "Set up synthetic division with x = 3.": [
+    "Set up synthetic division with ",
+    {
+      "latex": "x = 3",
+      "fallback": "x = 3"
+    },
+    "."
+  ],
+  "Set up synthetic division with x = 3. (Synthetic division: (x³ + x² − 7x − 3) ÷ (x − 3): Quotient: x² + 4x + 5; Remainder: 12)": [
+    "Set up synthetic division with ",
+    {
+      "latex": "x = 3",
+      "fallback": "x = 3"
+    },
+    ". (Synthetic division: ",
+    {
+      "latex": "\\left(x^{3} + x^{2} - 7 x - 3\\right) \\div \\left(x - 3\\right)",
+      "fallback": "(x³ + x² − 7x − 3) ÷ (x − 3)"
+    },
+    ": Quotient: ",
+    {
+      "latex": "x^{2} + 4 x + 5",
+      "fallback": "x² + 4x + 5"
+    },
+    "; Remainder: ",
+    {
+      "latex": "12",
+      "fallback": "12"
+    },
+    ")"
+  ],
+  "x = 3 கொண்டு தொகுமுறை வகுத்தல் அமைக்க. (தொகுமுறை வகுத்தல்: (x³ + x² − 7x − 3) ÷ (x − 3): ஈவு: x² + 4x + 5; மீதி: 12)": [
+    {
+      "latex": "x = 3",
+      "fallback": "x = 3"
+    },
+    " கொண்டு தொகுமுறை வகுத்தல் அமைக்க. (தொகுமுறை வகுத்தல்: ",
+    {
+      "latex": "\\left(x^{3} + x^{2} - 7 x - 3\\right) \\div \\left(x - 3\\right)",
+      "fallback": "(x³ + x² − 7x − 3) ÷ (x − 3)"
+    },
+    ": ஈவு: ",
+    {
+      "latex": "x^{2} + 4 x + 5",
+      "fallback": "x² + 4x + 5"
+    },
+    "; மீதி: ",
+    {
+      "latex": "12",
+      "fallback": "12"
+    },
+    ")"
+  ],
+  "Set up synthetic division with x = −2.": [
+    "Set up synthetic division with ",
+    {
+      "latex": "x = - 2",
+      "fallback": "x = −2"
+    },
+    "."
+  ],
+  "Set up synthetic division with x = −2. (Synthetic division: (x³ + 2x² − x − 4) ÷ (x + 2): Quotient: x² − 1; Remainder: −2)": [
+    "Set up synthetic division with ",
+    {
+      "latex": "x = - 2",
+      "fallback": "x = −2"
+    },
+    ". (Synthetic division: ",
+    {
+      "latex": "\\left(x^{3} + 2 x^{2} - x - 4\\right) \\div \\left(x + 2\\right)",
+      "fallback": "(x³ + 2x² − x − 4) ÷ (x + 2)"
+    },
+    ": Quotient: ",
+    {
+      "latex": "x^{2} - 1",
+      "fallback": "x² − 1"
+    },
+    "; Remainder: ",
+    {
+      "latex": "- 2",
+      "fallback": "−2"
+    },
+    ")"
+  ],
+  "x = −2 கொண்டு தொகுமுறை வகுத்தல் அமைக்க. (தொகுமுறை வகுத்தல்: (x³ + 2x² − x − 4) ÷ (x + 2): ஈவு: x² − 1; மீதி: −2)": [
+    {
+      "latex": "x = - 2",
+      "fallback": "x = −2"
+    },
+    " கொண்டு தொகுமுறை வகுத்தல் அமைக்க. (தொகுமுறை வகுத்தல்: ",
+    {
+      "latex": "\\left(x^{3} + 2 x^{2} - x - 4\\right) \\div \\left(x + 2\\right)",
+      "fallback": "(x³ + 2x² − x − 4) ÷ (x + 2)"
+    },
+    ": ஈவு: ",
+    {
+      "latex": "x^{2} - 1",
+      "fallback": "x² − 1"
+    },
+    "; மீதி: ",
+    {
+      "latex": "- 2",
+      "fallback": "−2"
+    },
+    ")"
+  ],
+  "Insert 0 for missing x³ term.": [
+    "Insert ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " for missing ",
+    {
+      "latex": "x^{3}",
+      "fallback": "x³"
+    },
+    " term."
+  ],
+  "Insert 0 for missing x³ term. (Synthetic division: (8x⁴ − 2x² + 6x + 5) ÷ (4x + 1): Quotient: 2x³ − (1/2)x² − (3/8)x + 51/32; Remainder: 109/32)": [
+    "Insert ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " for missing ",
+    {
+      "latex": "x^{3}",
+      "fallback": "x³"
+    },
+    " term. (Synthetic division: ",
+    {
+      "latex": "\\left(8 x^{4} - 2 x^{2} + 6 x + 5\\right) \\div \\left(4 x + 1\\right)",
+      "fallback": "(8x⁴ − 2x² + 6x + 5) ÷ (4x + 1)"
+    },
+    ": Quotient: ",
+    {
+      "latex": "2 x^{3} - \\left(\\dfrac{1}{2}\\right) x^{2} - \\left(\\dfrac{3}{8}\\right) x + \\dfrac{51}{32}",
+      "fallback": "2x³ − (1/2)x² − (3/8)x + 51/32"
+    },
+    "; Remainder: ",
+    {
+      "latex": "\\dfrac{109}{32}",
+      "fallback": "109/32"
+    },
+    ")"
+  ],
+  "x³ உறுப்பு இல்லாததால் 0 சேர்க்க: [8, 0, −2, 6, 5]. (தொகுமுறை வகுத்தல்: (8x⁴ − 2x² + 6x + 5) ÷ (4x + 1): ஈவு: 2x³ − (1/2)x² − (3/8)x + 51/32; மீதி: 109/32)": [
+    {
+      "latex": "x^{3}",
+      "fallback": "x³"
+    },
+    " உறுப்பு இல்லாததால் ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " சேர்க்க: ",
+    {
+      "latex": "\\left[8, 0, - 2, 6, 5\\right]",
+      "fallback": "[8, 0, −2, 6, 5]"
+    },
+    ". (தொகுமுறை வகுத்தல்: ",
+    {
+      "latex": "\\left(8 x^{4} - 2 x^{2} + 6 x + 5\\right) \\div \\left(4 x + 1\\right)",
+      "fallback": "(8x⁴ − 2x² + 6x + 5) ÷ (4x + 1)"
+    },
+    ": ஈவு: ",
+    {
+      "latex": "2 x^{3} - \\left(\\dfrac{1}{2}\\right) x^{2} - \\left(\\dfrac{3}{8}\\right) x + \\dfrac{51}{32}",
+      "fallback": "2x³ − (1/2)x² − (3/8)x + 51/32"
+    },
+    "; மீதி: ",
+    {
+      "latex": "\\dfrac{109}{32}",
+      "fallback": "109/32"
+    },
+    ")"
+  ],
+  "Include 0 for missing x³.": [
+    "Include ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " for missing ",
+    {
+      "latex": "x^{3}",
+      "fallback": "x³"
+    },
+    "."
+  ],
+  "Include 0 for missing x³. (Find p, q and remainder on dividing 8x⁴ − 2x² + 6x − 7 by (2x + 1): p = −2, q = 0; Remainder = −10)": [
+    "Include ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " for missing ",
+    {
+      "latex": "x^{3}",
+      "fallback": "x³"
+    },
+    ". (Find ",
+    {
+      "latex": "p, q",
+      "fallback": "p, q"
+    },
+    " and remainder on dividing ",
+    {
+      "latex": "8 x^{4} - 2 x^{2} + 6 x - 7",
+      "fallback": "8x⁴ − 2x² + 6x − 7"
+    },
+    " by ",
+    {
+      "latex": "\\left(2 x + 1\\right) : p = - 2",
+      "fallback": "(2x + 1): p = −2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "q = 0",
+      "fallback": "q = 0"
+    },
+    "; Remainder = ",
+    {
+      "latex": "- 10",
+      "fallback": "−10"
+    },
+    ")"
+  ],
+  "கெழுக்கள் 8, 0, −2, 6, −7; x = −1/2. (p, q மற்றும் மீதி காண்க: p = −2, q = 0; மீதி = −10)": [
+    "கெழுக்கள் ",
+    {
+      "latex": "8, 0, - 2, 6, - 7;\\quad x = \\dfrac{- 1}{2}",
+      "fallback": "8, 0, −2, 6, −7; x = −1/2"
+    },
+    ". (",
+    {
+      "latex": "p, q",
+      "fallback": "p, q"
+    },
+    " மற்றும் மீதி காண்க: ",
+    {
+      "latex": "p = - 2",
+      "fallback": "p = −2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "q = 0",
+      "fallback": "q = 0"
+    },
+    "; மீதி = ",
+    {
+      "latex": "- 10",
+      "fallback": "−10"
+    },
+    ")"
+  ],
+  "Run synthetic division with x = 3.": [
+    "Run synthetic division with ",
+    {
+      "latex": "x = 3",
+      "fallback": "x = 3"
+    },
+    "."
+  ],
+  "Run synthetic division with x = 3. (Find a, b and remainder on dividing 3x³ + 11x² + 34x + 106 by (x − 3): a = 20, b = 94; Remainder = 388)": [
+    "Run synthetic division with ",
+    {
+      "latex": "x = 3",
+      "fallback": "x = 3"
+    },
+    ". (Find ",
+    {
+      "latex": "a, b",
+      "fallback": "a, b"
+    },
+    " and remainder on dividing ",
+    {
+      "latex": "3 x^{3} + 11 x^{2} + 34 x + 106",
+      "fallback": "3x³ + 11x² + 34x + 106"
+    },
+    " by ",
+    {
+      "latex": "\\left(x - 3\\right) : a = 20",
+      "fallback": "(x − 3): a = 20"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 94",
+      "fallback": "b = 94"
+    },
+    "; Remainder = ",
+    {
+      "latex": "388",
+      "fallback": "388"
+    },
+    ")"
+  ],
+  "x = 3 கொண்டு தொகுமுறை வகுத்தல் செய்க. (a, b மற்றும் மீதி காண்க: a = 20, b = 94; மீதி = 388)": [
+    {
+      "latex": "x = 3",
+      "fallback": "x = 3"
+    },
+    " கொண்டு தொகுமுறை வகுத்தல் செய்க. (",
+    {
+      "latex": "a, b",
+      "fallback": "a, b"
+    },
+    " மற்றும் மீதி காண்க: ",
+    {
+      "latex": "a = 20",
+      "fallback": "a = 20"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 94",
+      "fallback": "b = 94"
+    },
+    "; மீதி = ",
+    {
+      "latex": "388",
+      "fallback": "388"
+    },
+    ")"
+  ],
+  "Divide [1, −3, −10, 24] by 2 → [1, −1, −12].": [
+    "Divide ",
+    {
+      "latex": "\\left[1, - 3, - 10, 24\\right]",
+      "fallback": "[1, −3, −10, 24]"
+    },
+    " by ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " → ",
+    {
+      "latex": "\\left[1, - 1, - 12\\right]",
+      "fallback": "[1, −1, −12]"
+    },
+    "."
+  ],
+  "Divide [1, −3, −10, 24] by 2 → [1, −1, −12]. (Factorise x³ − 3x² − 10x + 24: (x − 2)(x − 4)(x + 3))": [
+    "Divide ",
+    {
+      "latex": "\\left[1, - 3, - 10, 24\\right]",
+      "fallback": "[1, −3, −10, 24]"
+    },
+    " by ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " → ",
+    {
+      "latex": "\\left[1, - 1, - 12\\right]",
+      "fallback": "[1, −1, −12]"
+    },
+    ". (Factorise ",
+    {
+      "latex": "x^{3} - 3 x^{2} - 10 x + 24 : \\left(x - 2\\right) \\left(x - 4\\right) \\left(x + 3\\right)",
+      "fallback": "x³ − 3x² − 10x + 24: (x − 2)(x − 4)(x + 3)"
+    },
+    ")"
+  ],
+  "தொகுமுறை வகுத்தலால் ஈவு x² − x − 12. (காரணிப்படுத்துக: x³ − 3x² − 10x + 24: (x − 2)(x − 4)(x + 3))": [
+    "தொகுமுறை வகுத்தலால் ஈவு ",
+    {
+      "latex": "x^{2} - x - 12",
+      "fallback": "x² − x − 12"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "x^{3} - 3 x^{2} - 10 x + 24 : \\left(x - 2\\right) \\left(x - 4\\right) \\left(x + 3\\right)",
+      "fallback": "x³ − 3x² − 10x + 24: (x − 2)(x − 4)(x + 3)"
+    },
+    ")"
+  ],
+  "Sum of even-power coeffs = −3 + 2 = −1; odd-power = 2 − 3 = −1.": [
+    "Sum of even-power coeffs = ",
+    {
+      "latex": "- 3 + 2 = - 1",
+      "fallback": "−3 + 2 = −1"
+    },
+    "; odd-power = ",
+    {
+      "latex": "2 - 3 = - 1",
+      "fallback": "2 − 3 = −1"
+    },
+    "."
+  ],
+  "Sum of even-power coeffs = −3 + 2 = −1; odd-power = 2 − 3 = −1. (Factorise 2x³ − 3x² − 3x + 2: (x + 1)(x − 2)(2x − 1))": [
+    "Sum of even-power coeffs = ",
+    {
+      "latex": "- 3 + 2 = - 1",
+      "fallback": "−3 + 2 = −1"
+    },
+    "; odd-power = ",
+    {
+      "latex": "2 - 3 = - 1",
+      "fallback": "2 − 3 = −1"
+    },
+    ". (Factorise ",
+    {
+      "latex": "2 x^{3} - 3 x^{2} - 3 x + 2 : \\left(x + 1\\right) \\left(x - 2\\right) \\left(2 x - 1\\right)",
+      "fallback": "2x³ − 3x² − 3x + 2: (x + 1)(x − 2)(2x − 1)"
+    },
+    ")"
+  ],
+  "p(−1) = 0 என்பதால் (x + 1) ஒரு காரணி. (காரணிப்படுத்துக: 2x³ − 3x² − 3x + 2: (x + 1)(x − 2)(2x − 1))": [
+    {
+      "latex": "p \\left(- 1\\right) = 0",
+      "fallback": "p(−1) = 0"
+    },
+    " என்பதால் ",
+    {
+      "latex": "\\left(x + 1\\right)",
+      "fallback": "(x + 1)"
+    },
+    " ஒரு காரணி. (காரணிப்படுத்துக: ",
+    {
+      "latex": "2 x^{3} - 3 x^{2} - 3 x + 2 : \\left(x + 1\\right) \\left(x - 2\\right) \\left(2 x - 1\\right)",
+      "fallback": "2x³ − 3x² − 3x + 2: (x + 1)(x − 2)(2x − 1)"
+    },
+    ")"
+  ],
+  "So (x − 1) is a factor.": [
+    "So ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " is a factor."
+  ],
+  "So (x − 1) is a factor. (Factorise −7x + 3 + 4x³: (x − 1)(2x − 1)(2x + 3))": [
+    "So ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " is a factor. (Factorise ",
+    {
+      "latex": "- 7 x + 3 + 4 x^{3} : \\left(x - 1\\right) \\left(2 x - 1\\right) \\left(2 x + 3\\right)",
+      "fallback": "−7x + 3 + 4x³: (x − 1)(2x − 1)(2x + 3)"
+    },
+    ")"
+  ],
+  "கெழுக்களின் கூடுதல் 0 என்பதால் (x − 1) காரணி. (காரணிப்படுத்துக: −7x + 3 + 4x³: (x − 1)(2x − 1)(2x + 3))": [
+    "கெழுக்களின் கூடுதல் ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " என்பதால் ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " காரணி. (காரணிப்படுத்துக: ",
+    {
+      "latex": "- 7 x + 3 + 4 x^{3} : \\left(x - 1\\right) \\left(2 x - 1\\right) \\left(2 x + 3\\right)",
+      "fallback": "−7x + 3 + 4x³: (x − 1)(2x − 1)(2x + 3)"
+    },
+    ")"
+  ],
+  "Factorise the quadratic quotient. (Factorise x³ + x² − 14x − 24: (x + 2)(x + 3)(x − 4))": [
+    "Factorise the quadratic quotient. (Factorise ",
+    {
+      "latex": "x^{3} + x^{2} - 14 x - 24 : \\left(x + 2\\right) \\left(x + 3\\right) \\left(x - 4\\right)",
+      "fallback": "x³ + x² − 14x − 24: (x + 2)(x + 3)(x − 4)"
+    },
+    ")"
+  ],
+  "ஈவு x² − x − 12 = (x − 4)(x + 3). (காரணிப்படுத்துக: x³ + x² − 14x − 24: (x + 2)(x + 3)(x − 4))": [
+    "ஈவு ",
+    {
+      "latex": "x^{2} - x - 12 = \\left(x - 4\\right) \\left(x + 3\\right)",
+      "fallback": "x² − x − 12 = (x − 4)(x + 3)"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "x^{3} + x^{2} - 14 x - 24 : \\left(x + 2\\right) \\left(x + 3\\right) \\left(x - 4\\right)",
+      "fallback": "x³ + x² − 14x − 24: (x + 2)(x + 3)(x − 4)"
+    },
+    ")"
+  ],
+  "Standard form x³ + 0x² − 7x + 6.": [
+    "Standard form ",
+    {
+      "latex": "x^{3} + 0 x^{2} - 7 x + 6",
+      "fallback": "x³ + 0x² − 7x + 6"
+    },
+    "."
+  ],
+  "Standard form x³ + 0x² − 7x + 6. (Factorise x³ − 7x + 6: (x − 1)(x − 2)(x + 3))": [
+    "Standard form ",
+    {
+      "latex": "x^{3} + 0 x^{2} - 7 x + 6",
+      "fallback": "x³ + 0x² − 7x + 6"
+    },
+    ". (Factorise ",
+    {
+      "latex": "x^{3} - 7 x + 6 : \\left(x - 1\\right) \\left(x - 2\\right) \\left(x + 3\\right)",
+      "fallback": "x³ − 7x + 6: (x − 1)(x − 2)(x + 3)"
+    },
+    ")"
+  ],
+  "x³ + 0x² − 7x + 6; கெழுக்களின் கூடுதல் 0. (காரணிப்படுத்துக: x³ − 7x + 6: (x − 1)(x − 2)(x + 3))": [
+    {
+      "latex": "x^{3} + 0 x^{2} - 7 x + 6",
+      "fallback": "x³ + 0x² − 7x + 6"
+    },
+    "; கெழுக்களின் கூடுதல் ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ". (காரணிப்படுத்துக: ",
+    {
+      "latex": "x^{3} - 7 x + 6 : \\left(x - 1\\right) \\left(x - 2\\right) \\left(x + 3\\right)",
+      "fallback": "x³ − 7x + 6: (x − 1)(x − 2)(x + 3)"
+    },
+    ")"
+  ],
+  "Sum of coefficients is 0.": [
+    "Sum of coefficients is ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    "."
+  ],
+  "Sum of coefficients is 0. (Factorise x³ − 10x² − x + 10: (x − 1)(x + 1)(x − 10))": [
+    "Sum of coefficients is ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ". (Factorise ",
+    {
+      "latex": "x^{3} - 10 x^{2} - x + 10 : \\left(x - 1\\right) \\left(x + 1\\right) \\left(x - 10\\right)",
+      "fallback": "x³ − 10x² − x + 10: (x − 1)(x + 1)(x − 10)"
+    },
+    ")"
+  ],
+  "கெழுக்களின் கூடுதல் 0 என்பதால் (x − 1) காரணி. (காரணிப்படுத்துக: x³ − 10x² − x + 10: (x − 1)(x + 1)(x − 10))": [
+    "கெழுக்களின் கூடுதல் ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " என்பதால் ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " காரணி. (காரணிப்படுத்துக: ",
+    {
+      "latex": "x^{3} - 10 x^{2} - x + 10 : \\left(x - 1\\right) \\left(x + 1\\right) \\left(x - 10\\right)",
+      "fallback": "x³ − 10x² − x + 10: (x − 1)(x + 1)(x − 10)"
+    },
+    ")"
+  ],
+  "GCD takes the lowest common power.": [
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " takes the lowest common power."
+  ],
+  "GCD takes the lowest common power. (GCD of p⁵, p¹¹, p⁹: p⁵)": [
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " takes the lowest common power. (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "p^{5}, p^{11}, p^{9} : p^{5}",
+      "fallback": "p⁵, p¹¹, p⁹: p⁵"
+    },
+    ")"
+  ],
+  "பொது அடிமானம் p; மிகக் குறைந்த அடுக்கு 5. (மீ.பொ.வ காண்க: p⁵, p¹¹, p⁹: p⁵)": [
+    "பொது அடிமானம் ",
+    {
+      "latex": "p",
+      "fallback": "p"
+    },
+    "; மிகக் குறைந்த அடுக்கு ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    ". (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "p^{5}, p^{11}, p^{9} : p^{5}",
+      "fallback": "p⁵, p¹¹, p⁹: p⁵"
+    },
+    ")"
+  ],
+  "GCD(4, 1, 1) = 1 and x, y, z are distinct.": [
+    {
+      "latex": "GCD \\left(4, 1, 1\\right) = 1",
+      "fallback": "GCD(4, 1, 1) = 1"
+    },
+    " and ",
+    {
+      "latex": "x, y, z",
+      "fallback": "x, y, z"
+    },
+    " are distinct."
+  ],
+  "GCD(4, 1, 1) = 1 and x, y, z are distinct. (GCD of 4x³, y³, z³: 1)": [
+    {
+      "latex": "GCD \\left(4, 1, 1\\right) = 1",
+      "fallback": "GCD(4, 1, 1) = 1"
+    },
+    " and ",
+    {
+      "latex": "x, y, z",
+      "fallback": "x, y, z"
+    },
+    " are distinct. (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "4 x^{3}, y^{3}, z^{3} : 1",
+      "fallback": "4x³, y³, z³: 1"
+    },
+    ")"
+  ],
+  "மூன்றிற்கும் பொதுக் காரணி இல்லை. (மீ.பொ.வ காண்க: 4x³, y³, z³: 1)": [
+    "மூன்றிற்கும் பொதுக் காரணி இல்லை. (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "4 x^{3}, y^{3}, z^{3} : 1",
+      "fallback": "4x³, y³, z³: 1"
+    },
+    ")"
+  ],
+  "Numerical GCD.": [
+    "Numerical ",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    "."
+  ],
+  "Numerical GCD. (GCD of 9a²b²c³, 15a³b²c⁴: 3a²b²c³)": [
+    "Numerical ",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    ". (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "9 a^{2} b^{2} c^{3}, 15 a^{3} b^{2} c^{4} : 3 a^{2} b^{2} c^{3}",
+      "fallback": "9a²b²c³, 15a³b²c⁴: 3a²b²c³"
+    },
+    ")"
+  ],
+  "9 மற்றும் 15-இன் மீ.பொ.வ 3. (மீ.பொ.வ காண்க: 9a²b²c³, 15a³b²c⁴: 3a²b²c³)": [
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    " மற்றும் ",
+    {
+      "latex": "15",
+      "fallback": "15"
+    },
+    "-இன் மீ.பொ.வ ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    ". (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "9 a^{2} b^{2} c^{3}, 15 a^{3} b^{2} c^{4} : 3 a^{2} b^{2} c^{3}",
+      "fallback": "9a²b²c³, 15a³b²c⁴: 3a²b²c³"
+    },
+    ")"
+  ],
+  "Find numerical GCD.": [
+    "Find numerical ",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    "."
+  ],
+  "Find numerical GCD. (GCD of 64x⁸, 240x⁶: 16x⁶)": [
+    "Find numerical ",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    ". (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "64 x^{8}, 240 x^{6} : 16 x^{6}",
+      "fallback": "64x⁸, 240x⁶: 16x⁶"
+    },
+    ")"
+  ],
+  "64 மற்றும் 240-இன் மீ.பொ.வ 16. (மீ.பொ.வ காண்க: 64x⁸, 240x⁶: 16x⁶)": [
+    {
+      "latex": "64",
+      "fallback": "64"
+    },
+    " மற்றும் ",
+    {
+      "latex": "240",
+      "fallback": "240"
+    },
+    "-இன் மீ.பொ.வ ",
+    {
+      "latex": "16",
+      "fallback": "16"
+    },
+    ". (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "64 x^{8}, 240 x^{6} : 16 x^{6}",
+      "fallback": "64x⁸, 240x⁶: 16x⁶"
+    },
+    ")"
+  ],
+  "Take lowest exponent of each variable. (GCD of ab²c³, a²b³c, a³bc²: abc)": [
+    "Take lowest exponent of each variable. (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "ab^{2} c^{3}, a^{2} b^{3} c, a^{3}",
+      "fallback": "ab²c³, a²b³c, a³"
+    },
+    "bc²: abc)"
+  ],
+  "a, b, c ஆகியவற்றின் குறைந்த அடுக்கு 1. (மீ.பொ.வ காண்க: ab²c³, a²b³c, a³bc²: abc)": [
+    {
+      "latex": "a, b, c",
+      "fallback": "a, b, c"
+    },
+    " ஆகியவற்றின் குறைந்த அடுக்கு ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ". (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "ab^{2} c^{3}, a^{2} b^{3} c, a^{3}",
+      "fallback": "ab²c³, a²b³c, a³"
+    },
+    "bc²: abc)"
+  ],
+  "All three are multiples of 7.": [
+    "All three are multiples of ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    "."
+  ],
+  "All three are multiples of 7. (GCD of 35x⁵y³z⁴, 49x²yz³, 14xy²z²: 7xyz²)": [
+    "All three are multiples of ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    ". (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "35 x^{5} y^{3} z^{4}, 49 x^{2}",
+      "fallback": "35x⁵y³z⁴, 49x²"
+    },
+    "yz³, ",
+    {
+      "latex": "14 xy^{2} z^{2} : 7",
+      "fallback": "14xy²z²: 7"
+    },
+    "xyz²)"
+  ],
+  "35, 49, 14-இன் மீ.பொ.வ 7. (மீ.பொ.வ காண்க: 35x⁵y³z⁴, 49x²yz³, 14xy²z²: 7xyz²)": [
+    {
+      "latex": "35, 49, 14",
+      "fallback": "35, 49, 14"
+    },
+    "-இன் மீ.பொ.வ ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    ". (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "35 x^{5} y^{3} z^{4}, 49 x^{2}",
+      "fallback": "35x⁵y³z⁴, 49x²"
+    },
+    "yz³, ",
+    {
+      "latex": "14 xy^{2} z^{2} : 7",
+      "fallback": "14xy²z²: 7"
+    },
+    "xyz²)"
+  ],
+  "Numerical GCD is 25.": [
+    "Numerical ",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " is ",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    "."
+  ],
+  "Numerical GCD is 25. (GCD of 25ab³c, 100a²bc, 125ab: 25ab)": [
+    "Numerical ",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " is ",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    ". (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "25 ab^{3} c, 100 a^{2}",
+      "fallback": "25ab³c, 100a²"
+    },
+    "bc, ",
+    {
+      "latex": "125 ab : 25 ab",
+      "fallback": "125ab: 25ab"
+    },
+    ")"
+  ],
+  "எண்களின் மீ.பொ.வ 25. (மீ.பொ.வ காண்க: 25ab³c, 100a²bc, 125ab: 25ab)": [
+    "எண்களின் மீ.பொ.வ ",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    ". (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "25 ab^{3} c, 100 a^{2}",
+      "fallback": "25ab³c, 100a²"
+    },
+    "bc, ",
+    {
+      "latex": "125 ab : 25 ab",
+      "fallback": "125ab: 25ab"
+    },
+    ")"
+  ],
+  "No common factor other than 1.": [
+    "No common factor other than ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "."
+  ],
+  "No common factor other than 1. (GCD of 3abc, 5xyz, 7pqr: 1)": [
+    "No common factor other than ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ". (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    "abc, ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    "xyz, ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    "pqr: ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ")"
+  ],
+  "பொதுக் காரணி 1 மட்டுமே. (மீ.பொ.வ காண்க: 3abc, 5xyz, 7pqr: 1)": [
+    "பொதுக் காரணி ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " மட்டுமே. (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    "abc, ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    "xyz, ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    "pqr: ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ")"
+  ],
+  "They share no common factor other than 1.": [
+    "They share no common factor other than ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "."
+  ],
+  "They share no common factor other than 1. (GCD of (2x + 5), (5x + 2): 1)": [
+    "They share no common factor other than ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ". (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "\\left(2 x + 5\\right), \\left(5 x + 2\\right) : 1",
+      "fallback": "(2x + 5), (5x + 2): 1"
+    },
+    ")"
+  ],
+  "பொதுக் காரணி இல்லை. (மீ.பொ.வ காண்க: (2x + 5), (5x + 2): 1)": [
+    "பொதுக் காரணி இல்லை. (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "\\left(2 x + 5\\right), \\left(5 x + 2\\right) : 1",
+      "fallback": "(2x + 5), (5x + 2): 1"
+    },
+    ")"
+  ],
+  "Lowest power of a is m + 1.": [
+    "Lowest power of a is ",
+    {
+      "latex": "\\mathrm{m} + 1",
+      "fallback": "m + 1"
+    },
+    "."
+  ],
+  "Lowest power of a is m + 1. (GCD of aᵐ⁺¹, aᵐ⁺², aᵐ⁺³: aᵐ⁺¹)": [
+    "Lowest power of a is ",
+    {
+      "latex": "\\mathrm{m} + 1",
+      "fallback": "m + 1"
+    },
+    ". (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of aᵐ⁺¹, aᵐ⁺², aᵐ⁺³: aᵐ⁺¹)"
+  ],
+  "மிகக் குறைந்த அடுக்கு m + 1. (மீ.பொ.வ காண்க: aᵐ⁺¹, aᵐ⁺², aᵐ⁺³: aᵐ⁺¹)": [
+    "மிகக் குறைந்த அடுக்கு ",
+    {
+      "latex": "\\mathrm{m} + 1",
+      "fallback": "m + 1"
+    },
+    ". (மீ.பொ.வ காண்க: aᵐ⁺¹, aᵐ⁺², aᵐ⁺³: aᵐ⁺¹)"
+  ],
+  "Factorise both polynomials. (GCD of 2a² + a, 4a² − 1: 2a + 1)": [
+    "Factorise both polynomials. (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "2 a^{2} + a, 4 a^{2} - 1 : 2 a + 1",
+      "fallback": "2a² + a, 4a² − 1: 2a + 1"
+    },
+    ")"
+  ],
+  "இரு கோவைகளையும் காரணிப்படுத்தவும். (மீ.பொ.வ காண்க: 2a² + a, 4a² − 1: 2a + 1)": [
+    "இரு கோவைகளையும் காரணிப்படுத்தவும். (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "2 a^{2} + a, 4 a^{2} - 1 : 2 a + 1",
+      "fallback": "2a² + a, 4a² − 1: 2a + 1"
+    },
+    ")"
+  ],
+  "No common factor other than 1. (GCD of 3a², 5b³, 7c⁴: 1)": [
+    "No common factor other than ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ". (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "3 a^{2}, 5 b^{3}, 7 c^{4} : 1",
+      "fallback": "3a², 5b³, 7c⁴: 1"
+    },
+    ")"
+  ],
+  "பொதுக் காரணி 1 மட்டுமே. (மீ.பொ.வ காண்க: 3a², 5b³, 7c⁴: 1)": [
+    "பொதுக் காரணி ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " மட்டுமே. (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "3 a^{2}, 5 b^{3}, 7 c^{4} : 1",
+      "fallback": "3a², 5b³, 7c⁴: 1"
+    },
+    ")"
+  ],
+  "Factorise x⁴ − 1.": [
+    "Factorise ",
+    {
+      "latex": "x^{4} - 1",
+      "fallback": "x⁴ − 1"
+    },
+    "."
+  ],
+  "Factorise x⁴ − 1. (GCD of x⁴ − 1, x² − 1: x² − 1)": [
+    "Factorise ",
+    {
+      "latex": "x^{4} - 1",
+      "fallback": "x⁴ − 1"
+    },
+    ". (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "x^{4} - 1, x^{2} - 1 : x^{2} - 1",
+      "fallback": "x⁴ − 1, x² − 1: x² − 1"
+    },
+    ")"
+  ],
+  "x⁴ − 1 = (x² + 1)(x² − 1). (மீ.பொ.வ காண்க: x⁴ − 1, x² − 1: x² − 1)": [
+    {
+      "latex": "x^{4} - 1 = \\left(x^{2} + 1\\right) \\left(x^{2} - 1\\right)",
+      "fallback": "x⁴ − 1 = (x² + 1)(x² − 1)"
+    },
+    ". (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "x^{4} - 1, x^{2} - 1 : x^{2} - 1",
+      "fallback": "x⁴ − 1, x² − 1: x² − 1"
+    },
+    ")"
+  ],
+  "Factorise first expression. (GCD of a³ − 9ax², (a − 3x)²: a − 3x)": [
+    "Factorise first expression. (",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "a^{3} - 9 ax^{2}, \\left(a - 3 x\\right)^{2} : a - 3 x",
+      "fallback": "a³ − 9ax², (a − 3x)²: a − 3x"
+    },
+    ")"
+  ],
+  "முதல் கோவையைக் காரணிப்படுத்தவும். (மீ.பொ.வ காண்க: a³ − 9ax², (a − 3x)²: a − 3x)": [
+    "முதல் கோவையைக் காரணிப்படுத்தவும். (மீ.பொ.வ காண்க: ",
+    {
+      "latex": "a^{3} - 9 ax^{2}, \\left(a - 3 x\\right)^{2} : a - 3 x",
+      "fallback": "a³ − 9ax², (a − 3x)²: a − 3x"
+    },
+    ")"
+  ],
+  "Compute at least three ordered pairs. (Draw the graph of y = 2x: Straight line through (−1, −2), (0, 0), (1, 2), (2, 4))": [
+    "Compute at least three ordered pairs. (Draw the graph of ",
+    {
+      "latex": "y = 2 x",
+      "fallback": "y = 2x"
+    },
+    ": Straight line through ",
+    {
+      "latex": "\\left(- 1, - 2\\right), \\left(0, 0\\right), \\left(1, 2\\right), \\left(2, 4\\right)",
+      "fallback": "(−1, −2), (0, 0), (1, 2), (2, 4)"
+    },
+    ")"
+  ],
+  "x-க்கு மதிப்புகள் கொடுத்து y காண்க. (வரைபடம் வரைக: y = 2x: (−1, −2), (0, 0), (1, 2), (2, 4) வழியே செல்லும் நேர்க்கோடு)": [
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-க்கு மதிப்புகள் கொடுத்து ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " காண்க. (வரைபடம் வரைக: ",
+    {
+      "latex": "y = 2 x : \\left(- 1, - 2\\right), \\left(0, 0\\right), \\left(1, 2\\right), \\left(2, 4\\right)",
+      "fallback": "y = 2x: (−1, −2), (0, 0), (1, 2), (2, 4)"
+    },
+    " வழியே செல்லும் நேர்க்கோடு)"
+  ],
+  "Evaluate y = 4x − 1 at x = 0, 1, 2.": [
+    "Evaluate ",
+    {
+      "latex": "y = 4 x - 1",
+      "fallback": "y = 4x − 1"
+    },
+    " at ",
+    {
+      "latex": "x = 0, 1, 2",
+      "fallback": "x = 0, 1, 2"
+    },
+    "."
+  ],
+  "Evaluate y = 4x − 1 at x = 0, 1, 2. (Draw the graph of y = 4x − 1: Straight line through (0, −1), (1, 3), (2, 7))": [
+    "Evaluate ",
+    {
+      "latex": "y = 4 x - 1",
+      "fallback": "y = 4x − 1"
+    },
+    " at ",
+    {
+      "latex": "x = 0, 1, 2",
+      "fallback": "x = 0, 1, 2"
+    },
+    ". (Draw the graph of ",
+    {
+      "latex": "y = 4 x - 1",
+      "fallback": "y = 4x − 1"
+    },
+    ": Straight line through ",
+    {
+      "latex": "\\left(0, - 1\\right), \\left(1, 3\\right), \\left(2, 7\\right)",
+      "fallback": "(0, −1), (1, 3), (2, 7)"
+    },
+    ")"
+  ],
+  "x = 0, 1, 2 எனப் பிரதியிட. (வரைபடம் வரைக: y = 4x − 1: (0, −1), (1, 3), (2, 7) வழியே செல்லும் நேர்க்கோடு)": [
+    {
+      "latex": "x = 0, 1, 2",
+      "fallback": "x = 0, 1, 2"
+    },
+    " எனப் பிரதியிட. (வரைபடம் வரைக: ",
+    {
+      "latex": "y = 4 x - 1 : \\left(0, - 1\\right), \\left(1, 3\\right), \\left(2, 7\\right)",
+      "fallback": "y = 4x − 1: (0, −1), (1, 3), (2, 7)"
+    },
+    " வழியே செல்லும் நேர்க்கோடு)"
+  ],
+  "Pick even x values to get integer y.": [
+    "Pick even ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " values to get integer ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "."
+  ],
+  "Pick even x values to get integer y. (Draw the graph of y = (3/2)x + 3: Straight line through (−2, 0), (0, 3), (2, 6))": [
+    "Pick even ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " values to get integer ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    ". (Draw the graph of ",
+    {
+      "latex": "y = \\left(\\dfrac{3}{2}\\right) x + 3",
+      "fallback": "y = (3/2)x + 3"
+    },
+    ": Straight line through ",
+    {
+      "latex": "\\left(- 2, 0\\right), \\left(0, 3\\right), \\left(2, 6\\right)",
+      "fallback": "(−2, 0), (0, 3), (2, 6)"
+    },
+    ")"
+  ],
+  "முழு எண் புள்ளிகள் பெற x = −2, 0, 2 எடுக்க. (வரைபடம் வரைக: y = (3/2)x + 3: (−2, 0), (0, 3), (2, 6) வழியே செல்லும் நேர்க்கோடு)": [
+    "முழு எண் புள்ளிகள் பெற ",
+    {
+      "latex": "x = - 2, 0, 2",
+      "fallback": "x = −2, 0, 2"
+    },
+    " எடுக்க. (வரைபடம் வரைக: ",
+    {
+      "latex": "y = \\left(\\dfrac{3}{2}\\right) x + 3 : \\left(- 2, 0\\right), \\left(0, 3\\right), \\left(2, 6\\right)",
+      "fallback": "y = (3/2)x + 3: (−2, 0), (0, 3), (2, 6)"
+    },
+    " வழியே செல்லும் நேர்க்கோடு)"
+  ],
+  "Express y in terms of x.": [
+    "Express ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " in terms of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "."
+  ],
+  "Express y in terms of x. (Draw the graph of 3x + 2y = 14: Straight line through (0, 7), (2, 4), (4, 1))": [
+    "Express ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " in terms of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ". (Draw the graph of ",
+    {
+      "latex": "3 x + 2 y = 14",
+      "fallback": "3x + 2y = 14"
+    },
+    ": Straight line through ",
+    {
+      "latex": "\\left(0, 7\\right), \\left(2, 4\\right), \\left(4, 1\\right)",
+      "fallback": "(0, 7), (2, 4), (4, 1)"
+    },
+    ")"
+  ],
+  "y = (14 − 3x)/2 என மாற்றிப் புள்ளிகள் காண்க. (வரைபடம் வரைக: 3x + 2y = 14: (0, 7), (2, 4), (4, 1) வழியே செல்லும் நேர்க்கோடு)": [
+    {
+      "latex": "y = \\dfrac{\\left(14 - 3 x\\right)}{2}",
+      "fallback": "y = (14 − 3x)/2"
+    },
+    " என மாற்றிப் புள்ளிகள் காண்க. (வரைபடம் வரைக: ",
+    {
+      "latex": "3 x + 2 y = 14 : \\left(0, 7\\right), \\left(2, 4\\right), \\left(4, 1\\right)",
+      "fallback": "3x + 2y = 14: (0, 7), (2, 4), (4, 1)"
+    },
+    " வழியே செல்லும் நேர்க்கோடு)"
+  ],
+  "Tabulate points for line 1.": [
+    "Tabulate points for line ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "."
+  ],
+  "Tabulate points for line 1. (Solve graphically: x + y = 7; x − y = 3: (5, 2) i.e. x = 5, y = 2)": [
+    "Tabulate points for line ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ". (Solve graphically: ",
+    {
+      "latex": "x + y = 7;\\quad x - y = 3 : \\left(5, 2\\right) i",
+      "fallback": "x + y = 7; x − y = 3: (5, 2) i"
+    },
+    ".",
+    {
+      "latex": "e",
+      "fallback": "e"
+    },
+    ". ",
+    {
+      "latex": "x = 5",
+      "fallback": "x = 5"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 2",
+      "fallback": "y = 2"
+    },
+    ")"
+  ],
+  "முதல் கோட்டின் புள்ளிகள் காண்க. (வரைபட முறையில் தீர்க்க: x + y = 7; x − y = 3: (5, 2) அதாவது x = 5, y = 2)": [
+    "முதல் கோட்டின் புள்ளிகள் காண்க. (வரைபட முறையில் தீர்க்க: ",
+    {
+      "latex": "x + y = 7;\\quad x - y = 3 : \\left(5, 2\\right)",
+      "fallback": "x + y = 7; x − y = 3: (5, 2)"
+    },
+    " அதாவது ",
+    {
+      "latex": "x = 5",
+      "fallback": "x = 5"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 2",
+      "fallback": "y = 2"
+    },
+    ")"
+  ],
+  "Both equations represent the exact same line through (0, 2) and (2, −1).": [
+    "Both equations represent the exact same line through ",
+    {
+      "latex": "\\left(0, 2\\right)",
+      "fallback": "(0, 2)"
+    },
+    " and ",
+    {
+      "latex": "\\left(2, - 1\\right)",
+      "fallback": "(2, −1)"
+    },
+    "."
+  ],
+  "Both equations represent the exact same line through (0, 2) and (2, −1). (Solve graphically: 3x + 2y = 4; 9x + 6y − 12 = 0: Infinitely many solutions (coinciding lines))": [
+    "Both equations represent the exact same line through ",
+    {
+      "latex": "\\left(0, 2\\right)",
+      "fallback": "(0, 2)"
+    },
+    " and ",
+    {
+      "latex": "\\left(2, - 1\\right)",
+      "fallback": "(2, −1)"
+    },
+    ". (Solve graphically: ",
+    {
+      "latex": "3 x + 2 y = 4;\\quad 9 x + 6 y - 12 = 0",
+      "fallback": "3x + 2y = 4; 9x + 6y − 12 = 0"
+    },
+    ": Infinitely many solutions (coinciding lines))"
+  ],
+  "இரு சமன்பாடுகளும் ஒரே கோட்டைக் குறிக்கின்றன. (வரைபட முறையில் தீர்க்க: 3x + 2y = 4; 9x + 6y − 12 = 0: எண்ணற்ற தீர்வுகள் (ஒன்றிய கோடுகள்))": [
+    "இரு சமன்பாடுகளும் ஒரே கோட்டைக் குறிக்கின்றன. (வரைபட முறையில் தீர்க்க: ",
+    {
+      "latex": "3 x + 2 y = 4;\\quad 9 x + 6 y - 12 = 0",
+      "fallback": "3x + 2y = 4; 9x + 6y − 12 = 0"
+    },
+    ": எண்ணற்ற தீர்வுகள் (ஒன்றிய கோடுகள்))"
+  ],
+  "Clear denominators by multiplying by 4.": [
+    "Clear denominators by multiplying by ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    "."
+  ],
+  "Clear denominators by multiplying by 4. (Solve graphically: x/2 + y/4 = 1; x/2 + y/4 = 2: No solution (parallel lines))": [
+    "Clear denominators by multiplying by ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    ". (Solve graphically: ",
+    {
+      "latex": "\\dfrac{x}{2} + \\dfrac{y}{4} = 1;\\quad \\dfrac{x}{2} + \\dfrac{y}{4} = 2",
+      "fallback": "x/2 + y/4 = 1; x/2 + y/4 = 2"
+    },
+    ": No solution (parallel lines))"
+  ],
+  "4-ஆல் பெருக்க 2x + y = 4 மற்றும் 2x + y = 8. (வரைபட முறையில் தீர்க்க: x/2 + y/4 = 1; x/2 + y/4 = 2: தீர்வு இல்லை (இணை கோடுகள்))": [
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    "-ஆல் பெருக்க ",
+    {
+      "latex": "2 x + y = 4",
+      "fallback": "2x + y = 4"
+    },
+    " மற்றும் ",
+    {
+      "latex": "2 x + y = 8",
+      "fallback": "2x + y = 8"
+    },
+    ". (வரைபட முறையில் தீர்க்க: ",
+    {
+      "latex": "\\dfrac{x}{2} + \\dfrac{y}{4} = 1;\\quad \\dfrac{x}{2} + \\dfrac{y}{4} = 2",
+      "fallback": "x/2 + y/4 = 1; x/2 + y/4 = 2"
+    },
+    ": தீர்வு இல்லை (இணை கோடுகள்))"
+  ],
+  "Read intersection. (Solve graphically: x − y = 0; y + 3 = 0: (−3, −3) i.e. x = −3, y = −3)": [
+    "Read intersection. (Solve graphically: ",
+    {
+      "latex": "x - y = 0;\\quad y + 3 = 0 : \\left(- 3, - 3\\right) i",
+      "fallback": "x − y = 0; y + 3 = 0: (−3, −3) i"
+    },
+    ".",
+    {
+      "latex": "e",
+      "fallback": "e"
+    },
+    ". ",
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = - 3",
+      "fallback": "y = −3"
+    },
+    ")"
+  ],
+  "வெட்டும் புள்ளி (−3, −3). (வரைபட முறையில் தீர்க்க: x − y = 0; y + 3 = 0: (−3, −3) அதாவது x = −3, y = −3)": [
+    "வெட்டும் புள்ளி ",
+    {
+      "latex": "\\left(- 3, - 3\\right)",
+      "fallback": "(−3, −3)"
+    },
+    ". (வரைபட முறையில் தீர்க்க: ",
+    {
+      "latex": "x - y = 0;\\quad y + 3 = 0 : \\left(- 3, - 3\\right)",
+      "fallback": "x − y = 0; y + 3 = 0: (−3, −3)"
+    },
+    " அதாவது ",
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = - 3",
+      "fallback": "y = −3"
+    },
+    ")"
+  ],
+  "Points for line 1.": [
+    "Points for line ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "."
+  ],
+  "Points for line 1. (Solve graphically: y = 2x + 1; y + 3x − 6 = 0: (1, 3) i.e. x = 1, y = 3)": [
+    "Points for line ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ". (Solve graphically: ",
+    {
+      "latex": "y = 2 x + 1;\\quad y + 3 x - 6 = 0 : \\left(1, 3\\right) i",
+      "fallback": "y = 2x + 1; y + 3x − 6 = 0: (1, 3) i"
+    },
+    ".",
+    {
+      "latex": "e",
+      "fallback": "e"
+    },
+    ". ",
+    {
+      "latex": "x = 1",
+      "fallback": "x = 1"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 3",
+      "fallback": "y = 3"
+    },
+    ")"
+  ],
+  "முதல் கோடு: (0, 1), (1, 3), (2, 5). (வரைபட முறையில் தீர்க்க: y = 2x + 1; y + 3x − 6 = 0: (1, 3) அதாவது x = 1, y = 3)": [
+    "முதல் கோடு: ",
+    {
+      "latex": "\\left(0, 1\\right), \\left(1, 3\\right), \\left(2, 5\\right)",
+      "fallback": "(0, 1), (1, 3), (2, 5)"
+    },
+    ". (வரைபட முறையில் தீர்க்க: ",
+    {
+      "latex": "y = 2 x + 1;\\quad y + 3 x - 6 = 0 : \\left(1, 3\\right)",
+      "fallback": "y = 2x + 1; y + 3x − 6 = 0: (1, 3)"
+    },
+    " அதாவது ",
+    {
+      "latex": "x = 1",
+      "fallback": "x = 1"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 3",
+      "fallback": "y = 3"
+    },
+    ")"
+  ],
+  "They meet perpendicularly at (−3, 3).": [
+    "They meet perpendicularly at ",
+    {
+      "latex": "\\left(- 3, 3\\right)",
+      "fallback": "(−3, 3)"
+    },
+    "."
+  ],
+  "They meet perpendicularly at (−3, 3). (Solve graphically: x = −3; y = 3: (−3, 3) i.e. x = −3, y = 3)": [
+    "They meet perpendicularly at ",
+    {
+      "latex": "\\left(- 3, 3\\right)",
+      "fallback": "(−3, 3)"
+    },
+    ". (Solve graphically: ",
+    {
+      "latex": "x = - 3;\\quad y = 3 : \\left(- 3, 3\\right) i",
+      "fallback": "x = −3; y = 3: (−3, 3) i"
+    },
+    ".",
+    {
+      "latex": "e",
+      "fallback": "e"
+    },
+    ". ",
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 3",
+      "fallback": "y = 3"
+    },
+    ")"
+  ],
+  "x = −3 (குத்துக்கோடு), y = 3 (கிடைக்கோடு) வெட்டும் புள்ளி (−3, 3). (வரைபட முறையில் தீர்க்க: x = −3; y = 3: (−3, 3) அதாவது x = −3, y = 3)": [
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    " (குத்துக்கோடு), ",
+    {
+      "latex": "y = 3",
+      "fallback": "y = 3"
+    },
+    " (கிடைக்கோடு) வெட்டும் புள்ளி ",
+    {
+      "latex": "\\left(- 3, 3\\right)",
+      "fallback": "(−3, 3)"
+    },
+    ". (வரைபட முறையில் தீர்க்க: ",
+    {
+      "latex": "x = - 3;\\quad y = 3 : \\left(- 3, 3\\right)",
+      "fallback": "x = −3; y = 3: (−3, 3)"
+    },
+    " அதாவது ",
+    {
+      "latex": "x = - 3",
+      "fallback": "x = −3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 3",
+      "fallback": "y = 3"
+    },
+    ")"
+  ],
+  "Relative speed towards each other is x + y.": [
+    "Relative speed towards each other is ",
+    {
+      "latex": "x + y",
+      "fallback": "x + y"
+    },
+    "."
+  ],
+  "Relative speed towards each other is x + y. (Speed of two cars by graphical method: 75 miles/hr and 25 miles/hr)": [
+    "Relative speed towards each other is ",
+    {
+      "latex": "x + y",
+      "fallback": "x + y"
+    },
+    ". (Speed of two cars by graphical method: ",
+    {
+      "latex": "75",
+      "fallback": "75"
+    },
+    " miles/hr and ",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    " miles/hr)"
+  ],
+  "எதிர் திசை: x + y = 100. (இரு மகிழுந்துகளின் வேகங்கள் காண்க: மணிக்கு 75 மைல்கள் மற்றும் 25 மைல்கள்)": [
+    "எதிர் திசை: ",
+    {
+      "latex": "x + y = 100",
+      "fallback": "x + y = 100"
+    },
+    ". (இரு மகிழுந்துகளின் வேகங்கள் காண்க: மணிக்கு ",
+    {
+      "latex": "75",
+      "fallback": "75"
+    },
+    " மைல்கள் மற்றும் ",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    " மைல்கள்)"
+  ],
+  "Express y from 5x + y = 9.": [
+    "Express ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " from ",
+    {
+      "latex": "5 x + y = 9",
+      "fallback": "5x + y = 9"
+    },
+    "."
+  ],
+  "Express y from 5x + y = 9. (Solve by substitution: 2x − 3y = 7; 5x + y = 9: x = 2, y = −1)": [
+    "Express ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " from ",
+    {
+      "latex": "5 x + y = 9",
+      "fallback": "5x + y = 9"
+    },
+    ". (Solve by substitution: ",
+    {
+      "latex": "2 x - 3 y = 7;\\quad 5 x + y = 9 : x = 2",
+      "fallback": "2x − 3y = 7; 5x + y = 9: x = 2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = - 1",
+      "fallback": "y = −1"
+    },
+    ")"
+  ],
+  "5x + y = 9-இலிருந்து y = 9 − 5x. (பிரதியிடல் முறையில் தீர்க்க: 2x−3y=7; 5x+y=9: x = 2, y = −1)": [
+    {
+      "latex": "5 x + y = 9",
+      "fallback": "5x + y = 9"
+    },
+    "-இலிருந்து ",
+    {
+      "latex": "y = 9 - 5 x",
+      "fallback": "y = 9 − 5x"
+    },
+    ". (பிரதியிடல் முறையில் தீர்க்க: ",
+    {
+      "latex": "2 x - 3 y = 7;\\quad 5 x + y = 9 : x = 2",
+      "fallback": "2x−3y=7; 5x+y=9: x = 2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = - 1",
+      "fallback": "y = −1"
+    },
+    ")"
+  ],
+  "Clear decimals. (Solve by substitution: 1.5x + 0.1y = 6.2; 3x − 0.4y = 11.2: x = 4, y = 2)": [
+    "Clear decimals. (Solve by substitution: ",
+    {
+      "latex": "1.5 x + 0.1 y = 6.2;\\quad 3 x - 0.4 y = 11.2 : x = 4",
+      "fallback": "1.5x + 0.1y = 6.2; 3x − 0.4y = 11.2: x = 4"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 2",
+      "fallback": "y = 2"
+    },
+    ")"
+  ],
+  "10-ஆல் பெருக்க y = 62 − 15x. (பிரதியிடல் முறையில் தீர்க்க: 1.5x+0.1y=6.2; 3x−0.4y=11.2: x = 4, y = 2)": [
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    "-ஆல் பெருக்க ",
+    {
+      "latex": "y = 62 - 15 x",
+      "fallback": "y = 62 − 15x"
+    },
+    ". (பிரதியிடல் முறையில் தீர்க்க: ",
+    {
+      "latex": "1.5 x + 0.1 y = 6.2;\\quad 3 x - 0.4 y = 11.2 : x = 4",
+      "fallback": "1.5x+0.1y=6.2; 3x−0.4y=11.2: x = 4"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 2",
+      "fallback": "y = 2"
+    },
+    ")"
+  ],
+  "Multiply first by 10; solve second for y.": [
+    "Multiply first by ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    "; solve second for ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "."
+  ],
+  "Multiply first by 10; solve second for y. (Solve by substitution: 10% of x + 20% of y = 24; 3x − y = 20: x = 40, y = 100)": [
+    "Multiply first by ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    "; solve second for ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    ". (Solve by substitution: ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    "% of ",
+    {
+      "latex": "x + 20",
+      "fallback": "x + 20"
+    },
+    "% of ",
+    {
+      "latex": "y = 24;\\quad 3 x - y = 20 : x = 40",
+      "fallback": "y = 24; 3x − y = 20: x = 40"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 100",
+      "fallback": "y = 100"
+    },
+    ")"
+  ],
+  "முதல் சமன்பாட்டை 10-ஆல் பெருக்க x + 2y = 240; y = 3x − 20. (பிரதியிடல் முறையில் தீர்க்க: x-இன் 10%+y-இன் 20%=24; 3x−y=20: x = 40, y = 100)": [
+    "முதல் சமன்பாட்டை ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    "-ஆல் பெருக்க ",
+    {
+      "latex": "x + 2 y = 240;\\quad y = 3 x - 20",
+      "fallback": "x + 2y = 240; y = 3x − 20"
+    },
+    ". (பிரதியிடல் முறையில் தீர்க்க: ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    "-இன் ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    "%",
+    {
+      "latex": "+ y",
+      "fallback": "+y"
+    },
+    "-இன் ",
+    {
+      "latex": "20",
+      "fallback": "20"
+    },
+    "%=",
+    {
+      "latex": "24;\\quad 3 x - y = 20 : x = 40",
+      "fallback": "24; 3x−y=20: x = 40"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 100",
+      "fallback": "y = 100"
+    },
+    ")"
+  ],
+  "Express y from √3 x = √8 y.": [
+    "Express ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " from ",
+    {
+      "latex": "\\sqrt{3} x = \\sqrt{8} y",
+      "fallback": "√3 x = √8 y"
+    },
+    "."
+  ],
+  "Express y from √3 x = √8 y. (Solve by substitution: √2 x − √3 y = 1; √3 x − √8 y = 0: x = 2√2, y = √3)": [
+    "Express ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " from ",
+    {
+      "latex": "\\sqrt{3} x = \\sqrt{8} y",
+      "fallback": "√3 x = √8 y"
+    },
+    ". (Solve by substitution: ",
+    {
+      "latex": "\\sqrt{2} x - \\sqrt{3} y = 1;\\quad \\sqrt{3} x - \\sqrt{8} y = 0 : x = 2\\,\\sqrt{2}",
+      "fallback": "√2 x − √3 y = 1; √3 x − √8 y = 0: x = 2√2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = \\sqrt{3}",
+      "fallback": "y = √3"
+    },
+    ")"
+  ],
+  "y = (√3 / √8)x. (பிரதியிடல் முறையில் தீர்க்க: √2 x − √3 y = 1; √3 x − √8 y = 0: x = 2√2, y = √3)": [
+    {
+      "latex": "y = \\left(\\dfrac{\\sqrt{3}}{\\sqrt{8}}\\right) x",
+      "fallback": "y = (√3 / √8)x"
+    },
+    ". (பிரதியிடல் முறையில் தீர்க்க: ",
+    {
+      "latex": "\\sqrt{2} x - \\sqrt{3} y = 1;\\quad \\sqrt{3} x - \\sqrt{8} y = 0 : x = 2\\,\\sqrt{2}",
+      "fallback": "√2 x − √3 y = 1; √3 x − √8 y = 0: x = 2√2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = \\sqrt{3}",
+      "fallback": "y = √3"
+    },
+    ")"
+  ],
+  "First condition. (Find Raman’s age: 45 years)": [
+    "First condition. (Find Raman’s age: ",
+    {
+      "latex": "45",
+      "fallback": "45"
+    },
+    " years)"
+  ],
+  "இராமனின் வயது x, இரு மகன்களின் வயதுக் கூடுதல் y என்க; x = 3y. (இராமனின் தற்போதைய வயது காண்க: 45 ஆண்டுகள்)": [
+    "இராமனின் வயது ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", இரு மகன்களின் வயதுக் கூடுதல் ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " என்க; ",
+    {
+      "latex": "x = 3 y",
+      "fallback": "x = 3y"
+    },
+    ". (இராமனின் தற்போதைய வயது காண்க: ",
+    {
+      "latex": "45",
+      "fallback": "45"
+    },
+    " ஆண்டுகள்)"
+  ],
+  "Let hundreds digit = x, units digit = y.": [
+    "Let hundreds digit = ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", units digit = ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "."
+  ],
+  "Let hundreds digit = x, units digit = y. (Find the three-digit number: 409)": [
+    "Let hundreds digit = ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", units digit = ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    ". (Find the three-digit number: ",
+    {
+      "latex": "409",
+      "fallback": "409"
+    },
+    ")"
+  ],
+  "நூறாம் இலக்கம் x, ஒன்றாம் இலக்கம் y என்க. (மூன்றிலக்க எண் காண்க: 409)": [
+    "நூறாம் இலக்கம் ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", ஒன்றாம் இலக்கம் ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " என்க. (மூன்றிலக்க எண் காண்க: ",
+    {
+      "latex": "409",
+      "fallback": "409"
+    },
+    ")"
+  ],
+  "Eliminate y by adding.": [
+    "Eliminate ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " by adding."
+  ],
+  "Eliminate y by adding. (Solve by elimination: 2x − y = 3; 3x + y = 7: x = 2, y = 1)": [
+    "Eliminate ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " by adding. (Solve by elimination: ",
+    {
+      "latex": "2 x - y = 3;\\quad 3 x + y = 7 : x = 2",
+      "fallback": "2x − y = 3; 3x + y = 7: x = 2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 1",
+      "fallback": "y = 1"
+    },
+    ")"
+  ],
+  "இரு சமன்பாடுகளையும் கூட்ட y நீங்கும்: 5x = 10. (நீக்கல் முறையில் தீர்க்க: 2x−y=3; 3x+y=7: x = 2, y = 1)": [
+    "இரு சமன்பாடுகளையும் கூட்ட ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " நீங்கும்: ",
+    {
+      "latex": "5 x = 10",
+      "fallback": "5x = 10"
+    },
+    ". (நீக்கல் முறையில் தீர்க்க: ",
+    {
+      "latex": "2 x - y = 3;\\quad 3 x + y = 7 : x = 2",
+      "fallback": "2x−y=3; 3x+y=7: x = 2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 1",
+      "fallback": "y = 1"
+    },
+    ")"
+  ],
+  "Eliminate y by scaling (1).": [
+    "Eliminate ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " by scaling (1)."
+  ],
+  "Eliminate y. (Solve by elimination: x − y = 5; 3x + 2y = 25: x = 7, y = 2)": [
+    "Eliminate ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    ". (Solve by elimination: ",
+    {
+      "latex": "x - y = 5;\\quad 3 x + 2 y = 25 : x = 7",
+      "fallback": "x − y = 5; 3x + 2y = 25: x = 7"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 2",
+      "fallback": "y = 2"
+    },
+    ")"
+  ],
+  "முதல் சமன்பாட்டை 2-ஆல் பெருக்கிக் கூட்ட 5x = 35 ⇒ x = 7. (நீக்கல் முறையில் தீர்க்க: x−y=5; 3x+2y=25: x = 7, y = 2)": [
+    "முதல் சமன்பாட்டை ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-ஆல் பெருக்கிக் கூட்ட ",
+    {
+      "latex": "5 x = 35 \\Rightarrow x = 7",
+      "fallback": "5x = 35 ⇒ x = 7"
+    },
+    ". (நீக்கல் முறையில் தீர்க்க: ",
+    {
+      "latex": "x - y = 5;\\quad 3 x + 2 y = 25 : x = 7",
+      "fallback": "x−y=5; 3x+2y=25: x = 7"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 2",
+      "fallback": "y = 2"
+    },
+    ")"
+  ],
+  "Clear fractions (×10 and ×24).": [
+    "Clear fractions (",
+    {
+      "latex": "\\times 10",
+      "fallback": "×10"
+    },
+    " and ",
+    {
+      "latex": "\\times 24",
+      "fallback": "×24"
+    },
+    ")."
+  ],
+  "Clear fractions (×10 and ×24). (Solve by elimination: x/10 + y/5 = 14; x/8 + y/6 = 15: x = 80, y = 30)": [
+    "Clear fractions (",
+    {
+      "latex": "\\times 10",
+      "fallback": "×10"
+    },
+    " and ",
+    {
+      "latex": "\\times 24",
+      "fallback": "×24"
+    },
+    "). (Solve by elimination: ",
+    {
+      "latex": "\\dfrac{x}{10} + \\dfrac{y}{5} = 14;\\quad \\dfrac{x}{8} + \\dfrac{y}{6} = 15 : x = 80",
+      "fallback": "x/10 + y/5 = 14; x/8 + y/6 = 15: x = 80"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 30",
+      "fallback": "y = 30"
+    },
+    ")"
+  ],
+  "பின்னங்களை நீக்க x + 2y = 140; 3x + 4y = 360. (நீக்கல் முறையில் தீர்க்க: x/10 + y/5 = 14; x/8 + y/6 = 15: x = 80, y = 30)": [
+    "பின்னங்களை நீக்க ",
+    {
+      "latex": "x + 2 y = 140;\\quad 3 x + 4 y = 360",
+      "fallback": "x + 2y = 140; 3x + 4y = 360"
+    },
+    ". (நீக்கல் முறையில் தீர்க்க: ",
+    {
+      "latex": "\\dfrac{x}{10} + \\dfrac{y}{5} = 14;\\quad \\dfrac{x}{8} + \\dfrac{y}{6} = 15 : x = 80",
+      "fallback": "x/10 + y/5 = 14; x/8 + y/6 = 15: x = 80"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 30",
+      "fallback": "y = 30"
+    },
+    ")"
+  ],
+  "Put u = 1/x, v = 1/y: 3u + 6v = 7 and 9u + 3v = 11.": [
+    "Put ",
+    {
+      "latex": "u = \\dfrac{1}{x}",
+      "fallback": "u = 1/x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "v = \\dfrac{1}{y} : 3 u + 6 v = 7",
+      "fallback": "v = 1/y: 3u + 6v = 7"
+    },
+    " and ",
+    {
+      "latex": "9 u + 3 v = 11",
+      "fallback": "9u + 3v = 11"
+    },
+    "."
+  ],
+  "Put u = 1/x, v = 1/y: 3u + 6v = 7 and 9u + 3v = 11. (Solve by elimination: 3(2x + y) = 7xy; 3(x + 3y) = 11xy: (1, 3/2) and (0, 0))": [
+    "Put ",
+    {
+      "latex": "u = \\dfrac{1}{x}",
+      "fallback": "u = 1/x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "v = \\dfrac{1}{y} : 3 u + 6 v = 7",
+      "fallback": "v = 1/y: 3u + 6v = 7"
+    },
+    " and ",
+    {
+      "latex": "9 u + 3 v = 11",
+      "fallback": "9u + 3v = 11"
+    },
+    ". (Solve by elimination: ",
+    {
+      "latex": "3 \\left(2 x + y\\right) = 7 xy;\\quad 3 \\left(x + 3 y\\right) = 11 xy : \\left(1, \\dfrac{3}{2}\\right)",
+      "fallback": "3(2x + y) = 7xy; 3(x + 3y) = 11xy: (1, 3/2)"
+    },
+    " and ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0, 0)"
+    },
+    ")"
+  ],
+  "(0, 0) ஒரு தீர்வு. x, y ≠ 0 எனில் u = 1/x, v = 1/y என்க. (நீக்கல் முறையில் தீர்க்க: 3(2x+y)=7xy; 3(x+3y)=11xy: (1, 3/2) மற்றும் (0, 0))": [
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0, 0)"
+    },
+    " ஒரு தீர்வு. ",
+    {
+      "latex": "x, y \\ne 0",
+      "fallback": "x, y ≠ 0"
+    },
+    " எனில் ",
+    {
+      "latex": "u = \\dfrac{1}{x}",
+      "fallback": "u = 1/x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "v = \\dfrac{1}{y}",
+      "fallback": "v = 1/y"
+    },
+    " என்க. (நீக்கல் முறையில் தீர்க்க: ",
+    {
+      "latex": "3 \\left(2 x + y\\right) = 7 xy;\\quad 3 \\left(x + 3 y\\right) = 11 xy : \\left(1, \\dfrac{3}{2}\\right)",
+      "fallback": "3(2x+y)=7xy; 3(x+3y)=11xy: (1, 3/2)"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\left(0, 0\\right)",
+      "fallback": "(0, 0)"
+    },
+    ")"
+  ],
+  "Substitute u = 1/x.": [
+    "Substitute ",
+    {
+      "latex": "u = \\dfrac{1}{x}",
+      "fallback": "u = 1/x"
+    },
+    "."
+  ],
+  "Substitute u = 1/x. (Solve by elimination: 4/x + 5y = 7; 3/x + 4y = 5: x = 1/3, y = −1)": [
+    "Substitute ",
+    {
+      "latex": "u = \\dfrac{1}{x}",
+      "fallback": "u = 1/x"
+    },
+    ". (Solve by elimination: ",
+    {
+      "latex": "\\dfrac{4}{x} + 5 y = 7;\\quad \\dfrac{3}{x} + 4 y = 5 : x = \\dfrac{1}{3}",
+      "fallback": "4/x + 5y = 7; 3/x + 4y = 5: x = 1/3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = - 1",
+      "fallback": "y = −1"
+    },
+    ")"
+  ],
+  "u = 1/x (x ≠ 0) என்க. (நீக்கல் முறையில் தீர்க்க: 4/x + 5y = 7; 3/x + 4y = 5: x = 1/3, y = −1)": [
+    {
+      "latex": "u = \\dfrac{1}{x \\left(x \\ne 0\\right)}",
+      "fallback": "u = 1/x (x ≠ 0)"
+    },
+    " என்க. (நீக்கல் முறையில் தீர்க்க: ",
+    {
+      "latex": "\\dfrac{4}{x} + 5 y = 7;\\quad \\dfrac{3}{x} + 4 y = 5 : x = \\dfrac{1}{3}",
+      "fallback": "4/x + 5y = 7; 3/x + 4y = 5: x = 1/3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = - 1",
+      "fallback": "y = −1"
+    },
+    ")"
+  ],
+  "Add and subtract the symmetric equations. (Solve by elimination: 13x + 11y = 70; 11x + 13y = 74: x = 2, y = 4)": [
+    "Add and subtract the symmetric equations. (Solve by elimination: ",
+    {
+      "latex": "13 x + 11 y = 70;\\quad 11 x + 13 y = 74 : x = 2",
+      "fallback": "13x + 11y = 70; 11x + 13y = 74: x = 2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 4",
+      "fallback": "y = 4"
+    },
+    ")"
+  ],
+  "கூட்ட x + y = 6; கழிக்க x − y = −2. (நீக்கல் முறையில் தீர்க்க: 13x+11y=70; 11x+13y=74: x = 2, y = 4)": [
+    "கூட்ட ",
+    {
+      "latex": "x + y = 6",
+      "fallback": "x + y = 6"
+    },
+    "; கழிக்க ",
+    {
+      "latex": "x - y = - 2",
+      "fallback": "x − y = −2"
+    },
+    ". (நீக்கல் முறையில் தீர்க்க: ",
+    {
+      "latex": "13 x + 11 y = 70;\\quad 11 x + 13 y = 74 : x = 2",
+      "fallback": "13x+11y=70; 11x+13y=74: x = 2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 4",
+      "fallback": "y = 4"
+    },
+    ")"
+  ],
+  "Income − Expenditure = Savings. (Monthly income of A and B: A: ₹30,000; B: ₹40,000)": [
+    "Income − Expenditure = Savings. (Monthly income of A and ",
+    {
+      "latex": "B : A",
+      "fallback": "B: A"
+    },
+    ": ₹",
+    {
+      "latex": "30{,}000;\\quad B",
+      "fallback": "30,000; B"
+    },
+    ": ₹",
+    {
+      "latex": "40{,}000",
+      "fallback": "40,000"
+    },
+    ")"
+  ],
+  "வருமானம் − செலவு = சேமிப்பு. (A மற்றும் B-இன் மாத வருமானம் காண்க: A: ₹30,000; B: ₹40,000)": [
+    "வருமானம் − செலவு = சேமிப்பு. (A மற்றும் ",
+    {
+      "latex": "B",
+      "fallback": "B"
+    },
+    "-இன் மாத வருமானம் காண்க: A: ₹",
+    {
+      "latex": "30{,}000;\\quad B",
+      "fallback": "30,000; B"
+    },
+    ": ₹",
+    {
+      "latex": "40{,}000",
+      "fallback": "40,000"
+    },
+    ")"
+  ],
+  "Set up equations from 5 years ago and 5 years hence.": [
+    "Set up equations from ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " years ago and ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " years hence."
+  ],
+  "Set up equations from 5 years ago and 5 years hence. (Present age of man and his son: Man: 75 years; Son: 15 years)": [
+    "Set up equations from ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " years ago and ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " years hence. (Present age of man and his son: Man: ",
+    {
+      "latex": "75",
+      "fallback": "75"
+    },
+    " years; Son: ",
+    {
+      "latex": "15",
+      "fallback": "15"
+    },
+    " years)"
+  ],
+  "x − 7y = −30; x − 4y = 15. (தந்தை மற்றும் மகனின் தற்போதைய வயது: தந்தை: 75 ஆண்டுகள்; மகன்: 15 ஆண்டுகள்)": [
+    {
+      "latex": "x - 7 y = - 30;\\quad x - 4 y = 15",
+      "fallback": "x − 7y = −30; x − 4y = 15"
+    },
+    ". (தந்தை மற்றும் மகனின் தற்போதைய வயது: தந்தை: ",
+    {
+      "latex": "75",
+      "fallback": "75"
+    },
+    " ஆண்டுகள்; மகன்: ",
+    {
+      "latex": "15",
+      "fallback": "15"
+    },
+    " ஆண்டுகள்)"
+  ],
+  "Write in standard form a₁x + b₁y + c₁ = 0.": [
+    "Write in standard form ",
+    {
+      "latex": "a_{1} x + b_{1} y + c_{1} = 0",
+      "fallback": "a₁x + b₁y + c₁ = 0"
+    },
+    "."
+  ],
+  "Write in standard form a₁x + b₁y + c₁ = 0. (Solve by cross-multiplication: 8x − 3y = 12; 5x = 2y + 7: x = 3, y = 4)": [
+    "Write in standard form ",
+    {
+      "latex": "a_{1} x + b_{1} y + c_{1} = 0",
+      "fallback": "a₁x + b₁y + c₁ = 0"
+    },
+    ". (Solve by cross-multiplication: ",
+    {
+      "latex": "8 x - 3 y = 12;\\quad 5 x = 2 y + 7 : x = 3",
+      "fallback": "8x − 3y = 12; 5x = 2y + 7: x = 3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 4",
+      "fallback": "y = 4"
+    },
+    ")"
+  ],
+  "திட்ட வடிவில் எழுத. (குறுக்குப் பெருக்கல் முறையில் தீர்க்க: 8x−3y=12; 5x=2y+7: x = 3, y = 4)": [
+    "திட்ட வடிவில் எழுத. (குறுக்குப் பெருக்கல் முறையில் தீர்க்க: ",
+    {
+      "latex": "8 x - 3 y = 12;\\quad 5 x = 2 y + 7 : x = 3",
+      "fallback": "8x−3y=12; 5x=2y+7: x = 3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 4",
+      "fallback": "y = 4"
+    },
+    ")"
+  ],
+  "Standard form. (Solve by cross-multiplication: 6x + 7y − 11 = 0; 5x + 2y = 13: x = 3, y = −1)": [
+    "Standard form. (Solve by cross-multiplication: ",
+    {
+      "latex": "6 x + 7 y - 11 = 0;\\quad 5 x + 2 y = 13 : x = 3",
+      "fallback": "6x + 7y − 11 = 0; 5x + 2y = 13: x = 3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = - 1",
+      "fallback": "y = −1"
+    },
+    ")"
+  ],
+  "திட்ட வடிவம். (குறுக்குப் பெருக்கல் முறையில் தீர்க்க: 6x+7y−11=0; 5x+2y=13: x = 3, y = −1)": [
+    "திட்ட வடிவம். (குறுக்குப் பெருக்கல் முறையில் தீர்க்க: ",
+    {
+      "latex": "6 x + 7 y - 11 = 0;\\quad 5 x + 2 y = 13 : x = 3",
+      "fallback": "6x+7y−11=0; 5x+2y=13: x = 3"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = - 1",
+      "fallback": "y = −1"
+    },
+    ")"
+  ],
+  "Substitute u, v.": [
+    "Substitute ",
+    {
+      "latex": "u, v",
+      "fallback": "u, v"
+    },
+    "."
+  ],
+  "Substitute u, v. (Solve by cross-multiplication: 2/x + 3/y = 5; 3/x − 1/y + 9 = 0: x = −1/2, y = 1/3)": [
+    "Substitute ",
+    {
+      "latex": "u, v",
+      "fallback": "u, v"
+    },
+    ". (Solve by cross-multiplication: ",
+    {
+      "latex": "\\dfrac{2}{x} + \\dfrac{3}{y} = 5;\\quad \\dfrac{3}{x} - \\dfrac{1}{y} + 9 = 0 : x = \\dfrac{- 1}{2}",
+      "fallback": "2/x + 3/y = 5; 3/x − 1/y + 9 = 0: x = −1/2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = \\dfrac{1}{3}",
+      "fallback": "y = 1/3"
+    },
+    ")"
+  ],
+  "u = 1/x, v = 1/y என்க. (குறுக்குப் பெருக்கல் முறையில் தீர்க்க: 2/x + 3/y = 5; 3/x − 1/y + 9 = 0: x = −1/2, y = 1/3)": [
+    {
+      "latex": "u = \\dfrac{1}{x}",
+      "fallback": "u = 1/x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "v = \\dfrac{1}{y}",
+      "fallback": "v = 1/y"
+    },
+    " என்க. (குறுக்குப் பெருக்கல் முறையில் தீர்க்க: ",
+    {
+      "latex": "\\dfrac{2}{x} + \\dfrac{3}{y} = 5;\\quad \\dfrac{3}{x} - \\dfrac{1}{y} + 9 = 0 : x = \\dfrac{- 1}{2}",
+      "fallback": "2/x + 3/y = 5; 3/x − 1/y + 9 = 0: x = −1/2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = \\dfrac{1}{3}",
+      "fallback": "y = 1/3"
+    },
+    ")"
+  ],
+  "Let ₹2 coins = x, ₹5 coins = y.": [
+    "Let ₹",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " coins = ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", ₹",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " coins = ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    "."
+  ],
+  "Let ₹2 coins = x, ₹5 coins = y. (Count ₹2 and ₹5 coins in Akshaya’s purse: 60 two-rupee coins and 20 five-rupee coins)": [
+    "Let ₹",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " coins = ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", ₹",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " coins = ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    ". (Count ₹",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " and ₹",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " coins in Akshaya’s purse: ",
+    {
+      "latex": "60",
+      "fallback": "60"
+    },
+    " two-rupee coins and ",
+    {
+      "latex": "20",
+      "fallback": "20"
+    },
+    " five-rupee coins)"
+  ],
+  "₹2 நாணயங்கள் x, ₹5 நாணயங்கள் y என்க. (₹2 மற்றும் ₹5 நாணயங்களின் எண்ணிக்கை: 60 இரண்டு ரூபாய் நாணயங்கள் மற்றும் 20 ஐந்து ரூபாய் நாணயங்கள்)": [
+    "₹",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " நாணயங்கள் ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    ", ₹",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " நாணயங்கள் ",
+    {
+      "latex": "y",
+      "fallback": "y"
+    },
+    " என்க. (₹",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " மற்றும் ₹",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " நாணயங்களின் எண்ணிக்கை: ",
+    {
+      "latex": "60",
+      "fallback": "60"
+    },
+    " இரண்டு ரூபாய் நாணயங்கள் மற்றும் ",
+    {
+      "latex": "20",
+      "fallback": "20"
+    },
+    " ஐந்து ரூபாய் நாணயங்கள்)"
+  ],
+  "Work rates per hour. (Time for each pipe to fill a swimming pool: Larger pipe: 40 hours; Smaller pipe: 60 hours)": [
+    "Work rates per hour. (Time for each pipe to fill a swimming pool: Larger pipe: ",
+    {
+      "latex": "40",
+      "fallback": "40"
+    },
+    " hours; Smaller pipe: ",
+    {
+      "latex": "60",
+      "fallback": "60"
+    },
+    " hours)"
+  ],
+  "u = 1/x, v = 1/y என்க. (குழாய்கள் நீச்சல் குளத்தை நிரப்பும் நேரம்: பெரிய குழாய்: 40 மணி நேரம்; சிறிய குழாய்: 60 மணி நேரம்)": [
+    {
+      "latex": "u = \\dfrac{1}{x}",
+      "fallback": "u = 1/x"
+    },
+    ",",
+    " ",
+    {
+      "latex": "v = \\dfrac{1}{y}",
+      "fallback": "v = 1/y"
+    },
+    " என்க. (குழாய்கள் நீச்சல் குளத்தை நிரப்பும் நேரம்: பெரிய குழாய்: ",
+    {
+      "latex": "40",
+      "fallback": "40"
+    },
+    " மணி நேரம்; சிறிய குழாய்: ",
+    {
+      "latex": "60",
+      "fallback": "60"
+    },
+    " மணி நேரம்)"
+  ],
+  "First condition. (Find the two-digit number: 64)": [
+    "First condition. (Find the two-digit number: ",
+    {
+      "latex": "64",
+      "fallback": "64"
+    },
+    ")"
+  ],
+  "முதல் நிபந்தனை: x + y = 10. (ஈரிலக்க எண் காண்க: 64)": [
+    "முதல் நிபந்தனை: ",
+    {
+      "latex": "x + y = 10",
+      "fallback": "x + y = 10"
+    },
+    ". (ஈரிலக்க எண் காண்க: ",
+    {
+      "latex": "64",
+      "fallback": "64"
+    },
+    ")"
+  ],
+  "Form two linear equations. (Find the fraction: 5/7)": [
+    "Form two linear equations. (Find the fraction: ",
+    {
+      "latex": "\\dfrac{5}{7}",
+      "fallback": "5/7"
+    },
+    ")"
+  ],
+  "x + y = 12 மற்றும் 2x − y = 3. (பின்னம் காண்க: 5/7)": [
+    {
+      "latex": "x + y = 12",
+      "fallback": "x + y = 12"
+    },
+    " மற்றும் ",
+    {
+      "latex": "2 x - y = 3",
+      "fallback": "2x − y = 3"
+    },
+    ". (பின்னம் காண்க: ",
+    {
+      "latex": "\\dfrac{5}{7}",
+      "fallback": "5/7"
+    },
+    ")"
+  ],
+  "Use ∠A + ∠C = 180° and ∠B + ∠D = 180°.": [
+    "Use ",
+    {
+      "latex": "\\angle A + \\angle C = 180^{\\circ}",
+      "fallback": "∠A + ∠C = 180°"
+    },
+    " and ",
+    {
+      "latex": "\\angle B + \\angle D = 180^{\\circ}",
+      "fallback": "∠B + ∠D = 180°"
+    },
+    "."
+  ],
+  "Use ∠A + ∠C = 180° and ∠B + ∠D = 180°. (Angles of cyclic quadrilateral ABCD: ∠A = 120°, ∠B = 70°, ∠C = 60°, ∠D = 110°)": [
+    "Use ",
+    {
+      "latex": "\\angle A + \\angle C = 180^{\\circ}",
+      "fallback": "∠A + ∠C = 180°"
+    },
+    " and ",
+    {
+      "latex": "\\angle B + \\angle D = 180^{\\circ}",
+      "fallback": "∠B + ∠D = 180°"
+    },
+    ". (Angles of cyclic quadrilateral ",
+    {
+      "latex": "ABCD : \\angle A = 120^{\\circ}",
+      "fallback": "ABCD: ∠A = 120°"
+    },
+    ",",
+    " ",
+    {
+      "latex": "\\angle B = 70^{\\circ}",
+      "fallback": "∠B = 70°"
+    },
+    ",",
+    " ",
+    {
+      "latex": "\\angle C = 60^{\\circ}",
+      "fallback": "∠C = 60°"
+    },
+    ",",
+    " ",
+    {
+      "latex": "\\angle D = 110^{\\circ}",
+      "fallback": "∠D = 110°"
+    },
+    ")"
+  ],
+  "எதிர்க் கோணங்களின் கூடுதல் 180°. (வட்ட நாற்கரம் ABCD-இன் கோணங்கள் காண்க: ∠A = 120°, ∠B = 70°, ∠C = 60°, ∠D = 110°)": [
+    "எதிர்க் கோணங்களின் கூடுதல் ",
+    {
+      "latex": "180^{\\circ}",
+      "fallback": "180°"
+    },
+    ". (வட்ட நாற்கரம் ",
+    {
+      "latex": "ABCD",
+      "fallback": "ABCD"
+    },
+    "-இன் கோணங்கள் காண்க: ",
+    {
+      "latex": "\\angle A = 120^{\\circ}",
+      "fallback": "∠A = 120°"
+    },
+    ",",
+    " ",
+    {
+      "latex": "\\angle B = 70^{\\circ}",
+      "fallback": "∠B = 70°"
+    },
+    ",",
+    " ",
+    {
+      "latex": "\\angle C = 60^{\\circ}",
+      "fallback": "∠C = 60°"
+    },
+    ",",
+    " ",
+    {
+      "latex": "\\angle D = 110^{\\circ}",
+      "fallback": "∠D = 110°"
+    },
+    ")"
+  ],
+  "Multiply both equations by 20.": [
+    "Multiply both equations by ",
+    {
+      "latex": "20",
+      "fallback": "20"
+    },
+    "."
+  ],
+  "Multiply both equations by 20. (Actual price of T.V. and fridge: T.V.: ₹20,000; Fridge: ₹10,000)": [
+    "Multiply both equations by ",
+    {
+      "latex": "20",
+      "fallback": "20"
+    },
+    ". (Actual price of ",
+    {
+      "latex": "T",
+      "fallback": "T"
+    },
+    ".",
+    {
+      "latex": "V",
+      "fallback": "V"
+    },
+    ". and fridge: ",
+    {
+      "latex": "T",
+      "fallback": "T"
+    },
+    ".",
+    {
+      "latex": "V",
+      "fallback": "V"
+    },
+    ".: ₹",
+    {
+      "latex": "20{,}000",
+      "fallback": "20,000"
+    },
+    "; Fridge: ₹",
+    {
+      "latex": "10{,}000",
+      "fallback": "10,000"
+    },
+    ")"
+  ],
+  "20-ஆல் பெருக்க x + 2y = 40000; 2x − y = 30000. (தொலைக்காட்சிப் பெட்டி மற்றும் குளிர்சாதனப் பெட்டியின் விலை: தொலைக்காட்சிப் பெட்டி: ₹20,000; குளிர்சாதனப் பெட்டி: ₹10,000)": [
+    {
+      "latex": "20",
+      "fallback": "20"
+    },
+    "-ஆல் பெருக்க ",
+    {
+      "latex": "x + 2 y = 40000;\\quad 2 x - y = 30000",
+      "fallback": "x + 2y = 40000; 2x − y = 30000"
+    },
+    ". (தொலைக்காட்சிப் பெட்டி மற்றும் குளிர்சாதனப் பெட்டியின் விலை: தொலைக்காட்சிப் பெட்டி: ₹",
+    {
+      "latex": "20{,}000",
+      "fallback": "20,000"
+    },
+    "; குளிர்சாதனப் பெட்டி: ₹",
+    {
+      "latex": "10{,}000",
+      "fallback": "10,000"
+    },
+    ")"
+  ],
+  "Cross-multiply both proportions. (Find two numbers in ratio 5:6: 40 and 48)": [
+    "Cross-multiply both proportions. (Find two numbers in ratio ",
+    {
+      "latex": "5 : 6 : 40",
+      "fallback": "5:6: 40"
+    },
+    " and ",
+    {
+      "latex": "48",
+      "fallback": "48"
+    },
+    ")"
+  ],
+  "குறுக்குப் பெருக்கல்: 6x − 5y = 0; 5x − 4y = 8. (5:6 விகிதத்தில் உள்ள இரு எண்கள் காண்க: 40 மற்றும் 48)": [
+    "குறுக்குப் பெருக்கல்: ",
+    {
+      "latex": "6 x - 5 y = 0;\\quad 5 x - 4 y = 8",
+      "fallback": "6x − 5y = 0; 5x − 4y = 8"
+    },
+    ". (",
+    {
+      "latex": "5 : 6",
+      "fallback": "5:6"
+    },
+    " விகிதத்தில் உள்ள இரு எண்கள் காண்க: ",
+    {
+      "latex": "40",
+      "fallback": "40"
+    },
+    " மற்றும் ",
+    {
+      "latex": "48",
+      "fallback": "48"
+    },
+    ")"
+  ],
+  "Set up 1-day work equations.": [
+    "Set up ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "-day work equations."
+  ],
+  "Set up 1-day work equations. (Days for 1 Indian or 1 Chinese alone to finish work: 1 Indian: 18 days; 1 Chinese: 36 days)": [
+    "Set up ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "-day work equations. (Days for ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " Indian or ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " Chinese alone to finish work: ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " Indian: ",
+    {
+      "latex": "18",
+      "fallback": "18"
+    },
+    " days; ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " Chinese: ",
+    {
+      "latex": "36",
+      "fallback": "36"
+    },
+    " days)"
+  ],
+  "ஒரு நாள் வேலை: 4u + 4v = 1/3; 2u + 5v = 1/4. (தனித்தனியாக வேலையை முடிக்கும் நாட்கள்: 1 இந்தியர்: 18 நாள்கள்; 1 சீனர்: 36 நாள்கள்)": [
+    "ஒரு நாள் வேலை: ",
+    {
+      "latex": "4 u + 4 v = \\dfrac{1}{3};\\quad 2 u + 5 v = \\dfrac{1}{4}",
+      "fallback": "4u + 4v = 1/3; 2u + 5v = 1/4"
+    },
+    ". (தனித்தனியாக வேலையை முடிக்கும் நாட்கள்: ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " இந்தியர்: ",
+    {
+      "latex": "18",
+      "fallback": "18"
+    },
+    " நாள்கள்; ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " சீனர்: ",
+    {
+      "latex": "36",
+      "fallback": "36"
+    },
+    " நாள்கள்)"
+  ],
+  "By Factor Theorem, p(−2) = 0.": [
+    "By Factor Theorem, ",
+    {
+      "latex": "p \\left(- 2\\right) = 0",
+      "fallback": "p(−2) = 0"
+    },
+    "."
+  ],
+  "By Factor Theorem, p(−2) = 0. (MCQ 1 · Factor Theorem: (4) 11)": [
+    "By Factor Theorem, ",
+    {
+      "latex": "p \\left(- 2\\right) = 0",
+      "fallback": "p(−2) = 0"
+    },
+    ". (",
+    {
+      "latex": "MCQ 1",
+      "fallback": "MCQ 1"
+    },
+    " · Factor Theorem: (4) ",
+    {
+      "latex": "11",
+      "fallback": "11"
+    },
+    ")"
+  ],
+  "காரணித் தேற்றப்படி p(−2) = 0. (வினா 1 · காரணித் தேற்றம்: (4) 11)": [
+    "காரணித் தேற்றப்படி ",
+    {
+      "latex": "p \\left(- 2\\right) = 0",
+      "fallback": "p(−2) = 0"
+    },
+    ". (வினா ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " · காரணித் தேற்றம்: (4) ",
+    {
+      "latex": "11",
+      "fallback": "11"
+    },
+    ")"
+  ],
+  "Solve 2x + 3 = 0; option (3) is correct.": [
+    "Solve ",
+    {
+      "latex": "2 x + 3 = 0",
+      "fallback": "2x + 3 = 0"
+    },
+    "; option (3) is correct."
+  ],
+  "Solve 2x + 3 = 0; option (3) is correct. (MCQ 2 · Root of polynomial equation: (3) −3/2)": [
+    "Solve ",
+    {
+      "latex": "2 x + 3 = 0",
+      "fallback": "2x + 3 = 0"
+    },
+    "; option (3) is correct. (",
+    {
+      "latex": "MCQ 2",
+      "fallback": "MCQ 2"
+    },
+    " · Root of polynomial equation: (3) ",
+    {
+      "latex": "\\dfrac{- 3}{2}",
+      "fallback": "−3/2"
+    },
+    ")"
+  ],
+  "2x = −3 ⇒ x = −3/2; விருப்பம் (3). (வினா 2 · பல்லுறுப்புக் கோவைச் சமன்பாட்டின் மூலம்: (3) −3/2)": [
+    {
+      "latex": "2 x = - 3 \\Rightarrow x = \\dfrac{- 3}{2}",
+      "fallback": "2x = −3 ⇒ x = −3/2"
+    },
+    "; விருப்பம் (3). (வினா ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " · பல்லுறுப்புக் கோவைச் சமன்பாட்டின் மூலம்: (3) ",
+    {
+      "latex": "\\dfrac{- 3}{2}",
+      "fallback": "−3/2"
+    },
+    ")"
+  ],
+  "Highest power of x is 3 ⇒ cubic polynomial; option (4).": [
+    "Highest power of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " is ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " ",
+    {
+      "latex": "\\Rightarrow",
+      "fallback": "⇒"
+    },
+    " cubic polynomial; option (4)."
+  ],
+  "Highest power of x is 3 ⇒ cubic polynomial; option (4). (MCQ 3 · Type of polynomial: (4) cubic polynomial)": [
+    "Highest power of ",
+    {
+      "latex": "x",
+      "fallback": "x"
+    },
+    " is ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " ",
+    {
+      "latex": "\\Rightarrow",
+      "fallback": "⇒"
+    },
+    " cubic polynomial; option (4). (",
+    {
+      "latex": "MCQ 3",
+      "fallback": "MCQ 3"
+    },
+    " · Type of polynomial: (4) cubic polynomial)"
+  ],
+  "மிக உயர்ந்த அடுக்கு 3 என்பதால் முப்படி பல்லுறுப்புக் கோவை; விருப்பம் (4). (வினா 3 · பல்லுறுப்புக் கோவையின் வகை: (4) முப்படி பல்லுறுப்புக் கோவை)": [
+    "மிக உயர்ந்த அடுக்கு ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " என்பதால் முப்படி பல்லுறுப்புக் கோவை; விருப்பம் (4). (வினா ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " · பல்லுறுப்புக் கோவையின் வகை: (4) முப்படி பல்லுறுப்புக் கோவை)"
+  ],
+  "51 is odd, so (−1)⁵¹ = −1; option (4).": [
+    {
+      "latex": "51",
+      "fallback": "51"
+    },
+    " is odd, so ",
+    {
+      "latex": "\\left(- 1\\right)^{51} = - 1",
+      "fallback": "(−1)⁵¹ = −1"
+    },
+    "; option (4)."
+  ],
+  "51 is odd, so (−1)⁵¹ = −1; option (4). (MCQ 4 · Remainder Theorem: (4) 50)": [
+    {
+      "latex": "51",
+      "fallback": "51"
+    },
+    " is odd, so ",
+    {
+      "latex": "\\left(- 1\\right)^{51} = - 1",
+      "fallback": "(−1)⁵¹ = −1"
+    },
+    "; option (4). (",
+    {
+      "latex": "MCQ 4",
+      "fallback": "MCQ 4"
+    },
+    " · Remainder Theorem: (4) ",
+    {
+      "latex": "50",
+      "fallback": "50"
+    },
+    ")"
+  ],
+  "p(−1) = −1 + 51 = 50; விருப்பம் (4). (வினா 4 · மீதித் தேற்றம்: (4) 50)": [
+    {
+      "latex": "p \\left(- 1\\right) = - 1 + 51 = 50",
+      "fallback": "p(−1) = −1 + 51 = 50"
+    },
+    "; விருப்பம் (4). (வினா ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " · மீதித் தேற்றம்: (4) ",
+    {
+      "latex": "50",
+      "fallback": "50"
+    },
+    ")"
+  ],
+  "Set 2x + 5 = 0; option (2).": [
+    "Set ",
+    {
+      "latex": "2 x + 5 = 0",
+      "fallback": "2x + 5 = 0"
+    },
+    "; option (2)."
+  ],
+  "Set 2x + 5 = 0; option (2). (MCQ 5 · Zero of polynomial: (2) −5/2)": [
+    "Set ",
+    {
+      "latex": "2 x + 5 = 0",
+      "fallback": "2x + 5 = 0"
+    },
+    "; option (2). (",
+    {
+      "latex": "MCQ 5",
+      "fallback": "MCQ 5"
+    },
+    " · Zero of polynomial: (2) ",
+    {
+      "latex": "\\dfrac{- 5}{2}",
+      "fallback": "−5/2"
+    },
+    ")"
+  ],
+  "2x + 5 = 0 ⇒ x = −5/2; விருப்பம் (2). (வினா 5 · பல்லுறுப்புக் கோவையின் பூச்சியம்: (2) −5/2)": [
+    {
+      "latex": "2 x + 5 = 0 \\Rightarrow x = \\dfrac{- 5}{2}",
+      "fallback": "2x + 5 = 0 ⇒ x = −5/2"
+    },
+    "; விருப்பம் (2). (வினா ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " · பல்லுறுப்புக் கோவையின் பூச்சியம்: (2) ",
+    {
+      "latex": "\\dfrac{- 5}{2}",
+      "fallback": "−5/2"
+    },
+    ")"
+  ],
+  "The −x² and +x² cancel; option (1).": [
+    "The ",
+    {
+      "latex": "- x^{2}",
+      "fallback": "−x²"
+    },
+    " and ",
+    {
+      "latex": "+ x^{2}",
+      "fallback": "+x²"
+    },
+    " cancel; option (1)."
+  ],
+  "The −x² and +x² cancel; option (1). (MCQ 6 · Sum of polynomials: (1) x³ − 3x − 1)": [
+    "The ",
+    {
+      "latex": "- x^{2}",
+      "fallback": "−x²"
+    },
+    " and ",
+    {
+      "latex": "+ x^{2}",
+      "fallback": "+x²"
+    },
+    " cancel; option (1). (",
+    {
+      "latex": "MCQ 6",
+      "fallback": "MCQ 6"
+    },
+    " · Sum of polynomials: (1) ",
+    {
+      "latex": "x^{3} - 3 x - 1",
+      "fallback": "x³ − 3x − 1"
+    },
+    ")"
+  ],
+  "−x² மற்றும் +x² நீங்கி x³ − 3x − 1 கிடைக்கும்; விருப்பம் (1). (வினா 6 · பல்லுறுப்புக் கோவைகளின் கூடுதல்: (1) x³ − 3x − 1)": [
+    {
+      "latex": "- x^{2}",
+      "fallback": "−x²"
+    },
+    " மற்றும் ",
+    {
+      "latex": "+ x^{2}",
+      "fallback": "+x²"
+    },
+    " நீங்கி ",
+    {
+      "latex": "x^{3} - 3 x - 1",
+      "fallback": "x³ − 3x − 1"
+    },
+    " கிடைக்கும்; விருப்பம் (1). (வினா ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    " · பல்லுறுப்புக் கோவைகளின் கூடுதல்: (1) ",
+    {
+      "latex": "x^{3} - 3 x - 1",
+      "fallback": "x³ − 3x − 1"
+    },
+    ")"
+  ],
+  "Leading term is y³ · y³ = y⁶; option (4).": [
+    "Leading term is ",
+    {
+      "latex": "y^{3}",
+      "fallback": "y³"
+    },
+    " · ",
+    {
+      "latex": "y^{3} = y^{6}",
+      "fallback": "y³ = y⁶"
+    },
+    "; option (4)."
+  ],
+  "Leading term is y³ · y³ = y⁶; option (4). (MCQ 7 · Degree of product: (4) 6)": [
+    "Leading term is ",
+    {
+      "latex": "y^{3}",
+      "fallback": "y³"
+    },
+    " · ",
+    {
+      "latex": "y^{3} = y^{6}",
+      "fallback": "y³ = y⁶"
+    },
+    "; option (4). (",
+    {
+      "latex": "MCQ 7",
+      "fallback": "MCQ 7"
+    },
+    " · Degree of product: (4) ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    ")"
+  ],
+  "மிக உயர்ந்த அடுக்கு 3 + 3 = 6; விருப்பம் (4). (வினா 7 · பெருக்கலின் படி: (4) 6)": [
+    "மிக உயர்ந்த அடுக்கு ",
+    {
+      "latex": "3 + 3 = 6",
+      "fallback": "3 + 3 = 6"
+    },
+    "; விருப்பம் (4). (வினா ",
+    {
+      "latex": "7",
+      "fallback": "7"
+    },
+    " · பெருக்கலின் படி: (4) ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    ")"
+  ],
+  "Order from smallest degree to largest: 4 < 5 < 8 < 12; option (4).": [
+    "Order from smallest degree to largest: ",
+    {
+      "latex": "4 < 5 < 8 < 12",
+      "fallback": "4 < 5 < 8 < 12"
+    },
+    "; option (4)."
+  ],
+  "Order from smallest degree to largest: 4 < 5 < 8 < 12; option (4). (MCQ 8 · Ascending order of degrees: (4) B,A,C,D)": [
+    "Order from smallest degree to largest: ",
+    {
+      "latex": "4 < 5 < 8 < 12",
+      "fallback": "4 < 5 < 8 < 12"
+    },
+    "; option (4). (",
+    {
+      "latex": "MCQ 8",
+      "fallback": "MCQ 8"
+    },
+    " · Ascending order of degrees: (4) ",
+    {
+      "latex": "B, A, C, D",
+      "fallback": "B,A,C,D"
+    },
+    ")"
+  ],
+  "படிகள்: B(4) < A(5) < C(8) < D(12); விருப்பம் (4). (வினா 8 · படிகளின் ஏறு வரிசை: (4) B,A,C,D)": [
+    "படிகள்: ",
+    {
+      "latex": "B \\left(4\\right) < A \\left(5\\right) < C \\left(8\\right) < D \\left(12\\right)",
+      "fallback": "B(4) < A(5) < C(8) < D(12)"
+    },
+    "; விருப்பம் (4). (வினா ",
+    {
+      "latex": "8",
+      "fallback": "8"
+    },
+    " · படிகளின் ஏறு வரிசை: (4) ",
+    {
+      "latex": "B, A, C, D",
+      "fallback": "B,A,C,D"
+    },
+    ")"
+  ],
+  "Option (4) is correct. (MCQ 9 · Factor Theorem definition: (4) factor)": [
+    "Option (4) is correct. (",
+    {
+      "latex": "MCQ 9",
+      "fallback": "MCQ 9"
+    },
+    " · Factor Theorem definition: (4) factor)"
+  ],
+  "p(a) = 0 எனில் (x − a) ஒரு காரணி; விருப்பம் (4). (வினா 9 · காரணித் தேற்றம்: (4) காரணி)": [
+    {
+      "latex": "p \\left(a\\right) = 0",
+      "fallback": "p(a) = 0"
+    },
+    " எனில் ",
+    {
+      "latex": "\\left(x - a\\right)",
+      "fallback": "(x − a)"
+    },
+    " ஒரு காரணி; விருப்பம் (4). (வினா ",
+    {
+      "latex": "9",
+      "fallback": "9"
+    },
+    " · காரணித் தேற்றம்: (4) காரணி)"
+  ],
+  "Option (3) is correct. (MCQ 10 · Zero of (2 − 3x): (3) 2/3)": [
+    "Option (3) is correct. (",
+    {
+      "latex": "MCQ 10",
+      "fallback": "MCQ 10"
+    },
+    " · Zero of ",
+    {
+      "latex": "\\left(2 - 3 x\\right) : \\dfrac{\\left(3\\right) 2}{3}",
+      "fallback": "(2 − 3x): (3) 2/3"
+    },
+    ")"
+  ],
+  "2 − 3x = 0 ⇒ x = 2/3; விருப்பம் (3). (வினா 10 · (2 − 3x)-இன் பூச்சியம்: (3) 2/3)": [
+    {
+      "latex": "2 - 3 x = 0 \\Rightarrow x = \\dfrac{2}{3}",
+      "fallback": "2 − 3x = 0 ⇒ x = 2/3"
+    },
+    "; விருப்பம் (3). (வினா ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    " · ",
+    {
+      "latex": "\\left(2 - 3 x\\right)",
+      "fallback": "(2 − 3x)"
+    },
+    "-இன் பூச்சியம்: (3) ",
+    {
+      "latex": "\\dfrac{2}{3}",
+      "fallback": "2/3"
+    },
+    ")"
+  ],
+  "Test x = 1 in each choice; only 3x − 3 = 3(x − 1) gives 0; option (2).": [
+    "Test ",
+    {
+      "latex": "x = 1",
+      "fallback": "x = 1"
+    },
+    " in each choice; only ",
+    {
+      "latex": "3 x - 3 = 3 \\left(x - 1\\right)",
+      "fallback": "3x − 3 = 3(x − 1)"
+    },
+    " gives ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    "; option (2)."
+  ],
+  "Test x = 1 in each choice; only 3x − 3 = 3(x − 1) gives 0; option (2). (MCQ 11 · Which has (x − 1) as factor: (2) 3x − 3)": [
+    "Test ",
+    {
+      "latex": "x = 1",
+      "fallback": "x = 1"
+    },
+    " in each choice; only ",
+    {
+      "latex": "3 x - 3 = 3 \\left(x - 1\\right)",
+      "fallback": "3x − 3 = 3(x − 1)"
+    },
+    " gives ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    "; option (2). (",
+    {
+      "latex": "MCQ 11",
+      "fallback": "MCQ 11"
+    },
+    " · Which has ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " as factor: (2) ",
+    {
+      "latex": "3 x - 3",
+      "fallback": "3x − 3"
+    },
+    ")"
+  ],
+  "x = 1 எனப் பிரதியிட 3(1) − 3 = 0; விருப்பம் (2). (வினா 11 · (x − 1) எதன் காரணி: (2) 3x − 3)": [
+    {
+      "latex": "x = 1",
+      "fallback": "x = 1"
+    },
+    " எனப் பிரதியிட ",
+    {
+      "latex": "3 \\left(1\\right) - 3 = 0",
+      "fallback": "3(1) − 3 = 0"
+    },
+    "; விருப்பம் (2). (வினா ",
+    {
+      "latex": "11",
+      "fallback": "11"
+    },
+    " · ",
+    {
+      "latex": "\\left(x - 1\\right)",
+      "fallback": "(x − 1)"
+    },
+    " எதன் காரணி: (2) ",
+    {
+      "latex": "3 x - 3",
+      "fallback": "3x − 3"
+    },
+    ")"
+  ],
+  "Option (3) is correct. (MCQ 12 · Remainder when (x − 3) is factor: (3) p(3))": [
+    "Option (3) is correct. (",
+    {
+      "latex": "MCQ 12",
+      "fallback": "MCQ 12"
+    },
+    " · Remainder when ",
+    {
+      "latex": "\\left(x - 3\\right)",
+      "fallback": "(x − 3)"
+    },
+    " is factor: (3) ",
+    {
+      "latex": "p \\left(3\\right)",
+      "fallback": "p(3)"
+    },
+    ")"
+  ],
+  "மீதித் தேற்றப்படி (x − 3)-ஆல் வகுக்க மீதி p(3); விருப்பம் (3). (வினா 12 · (x − 3) காரணி எனில் மீதி: (3) p(3))": [
+    "மீதித் தேற்றப்படி ",
+    {
+      "latex": "\\left(x - 3\\right)",
+      "fallback": "(x − 3)"
+    },
+    "-ஆல் வகுக்க மீதி ",
+    {
+      "latex": "p \\left(3\\right)",
+      "fallback": "p(3)"
+    },
+    "; விருப்பம் (3). (வினா ",
+    {
+      "latex": "12",
+      "fallback": "12"
+    },
+    " · ",
+    {
+      "latex": "\\left(x - 3\\right)",
+      "fallback": "(x − 3)"
+    },
+    " காரணி எனில் மீதி: (3) ",
+    {
+      "latex": "p \\left(3\\right)",
+      "fallback": "p(3)"
+    },
+    ")"
+  ],
+  "Standard sum of cubes identity; option (3). (MCQ 13 · Sum of cubes identity: (3) x³ + y³)": [
+    "Standard sum of cubes identity; option (3). (",
+    {
+      "latex": "MCQ 13",
+      "fallback": "MCQ 13"
+    },
+    " · Sum of cubes identity: (3) ",
+    {
+      "latex": "x^{3} + y^{3}",
+      "fallback": "x³ + y³"
+    },
+    ")"
+  ],
+  "x³ + y³ முற்றொருமை; விருப்பம் (3). (வினா 13 · கனங்களின் கூடுதல் முற்றொருமை: (3) x³ + y³)": [
+    {
+      "latex": "x^{3} + y^{3}",
+      "fallback": "x³ + y³"
+    },
+    " முற்றொருமை; விருப்பம் (3). (வினா ",
+    {
+      "latex": "13",
+      "fallback": "13"
+    },
+    " · கனங்களின் கூடுதல் முற்றொருமை: (3) ",
+    {
+      "latex": "x^{3} + y^{3}",
+      "fallback": "x³ + y³"
+    },
+    ")"
+  ],
+  "Negating an expression does not change its square; option (2). (MCQ 14 · Square of trinomial: (2) (−a − b + c)²)": [
+    "Negating an expression does not change its square; option (2). (",
+    {
+      "latex": "MCQ 14",
+      "fallback": "MCQ 14"
+    },
+    " · Square of trinomial: (2) ",
+    {
+      "latex": "\\left(- a - b + c\\right)^{2}",
+      "fallback": "(−a − b + c)²"
+    },
+    ")"
+  ],
+  "எதிர்க் கோவையின் வர்க்கம் சமம்; விருப்பம் (2). (வினா 14 · மூவுறுப்பு வர்க்கம்: (2) (−a − b + c)²)": [
+    "எதிர்க் கோவையின் வர்க்கம் சமம்; விருப்பம் (2). (வினா ",
+    {
+      "latex": "14",
+      "fallback": "14"
+    },
+    " · மூவுறுப்பு வர்க்கம்: (2) ",
+    {
+      "latex": "\\left(- a - b + c\\right)^{2}",
+      "fallback": "(−a − b + c)²"
+    },
+    ")"
+  ],
+  "Expand and compare; option (3). (MCQ 15 · Quadratic from factors: (3) 1, 2, −15)": [
+    "Expand and compare; option (3). (",
+    {
+      "latex": "MCQ 15",
+      "fallback": "MCQ 15"
+    },
+    " · Quadratic from factors: (3) ",
+    {
+      "latex": "1, 2, - 15",
+      "fallback": "1, 2, −15"
+    },
+    ")"
+  ],
+  "விரித்தெழுத x² + 2x − 15 ⇒ 1, 2, −15; விருப்பம் (3). (வினா 15 · காரணிகளிலிருந்து கெழுக்கள்: (3) 1, 2, −15)": [
+    "விரித்தெழுத ",
+    {
+      "latex": "x^{2} + 2 x - 15 \\Rightarrow 1, 2, - 15",
+      "fallback": "x² + 2x − 15 ⇒ 1, 2, −15"
+    },
+    "; விருப்பம் (3). (வினா ",
+    {
+      "latex": "15",
+      "fallback": "15"
+    },
+    " · காரணிகளிலிருந்து கெழுக்கள்: (3) ",
+    {
+      "latex": "1, 2, - 15",
+      "fallback": "1, 2, −15"
+    },
+    ")"
+  ],
+  "Option (3) is correct. (MCQ 16 · Linear factors of cubic: (3) 3)": [
+    "Option (3) is correct. (",
+    {
+      "latex": "MCQ 16",
+      "fallback": "MCQ 16"
+    },
+    " · Linear factors of cubic: (3) ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    ")"
+  ],
+  "படி 3 என்பதால் அதிகபட்சம் 3 நேரிய காரணிகள்; விருப்பம் (3). (வினா 16 · முப்படி கோவையின் நேரிய காரணிகள்: (3) 3)": [
+    "படி ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " என்பதால் அதிகபட்சம் ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " நேரிய காரணிகள்; விருப்பம் (3). (வினா ",
+    {
+      "latex": "16",
+      "fallback": "16"
+    },
+    " · முப்படி கோவையின் நேரிய காரணிகள்: (3) ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    ")"
+  ],
+  "Option (4) is correct (note: zero polynomial 0 has undefined degree).": [
+    "Option (4) is correct (note: zero polynomial ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " has undefined degree)."
+  ],
+  "Option (4) is correct (note: zero polynomial 0 has undefined degree). (MCQ 17 · Degree of constant polynomial: (4) 0)": [
+    "Option (4) is correct (note: zero polynomial ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    " has undefined degree). (",
+    {
+      "latex": "MCQ 17",
+      "fallback": "MCQ 17"
+    },
+    " · Degree of constant polynomial: (4) ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ")"
+  ],
+  "பூச்சியமற்ற மாறிலிக் கோவையின் படி 0; விருப்பம் (4). (வினா 17 · மாறிலிக் கோவையின் படி: (4) 0)": [
+    "பூச்சியமற்ற மாறிலிக் கோவையின் படி ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    "; விருப்பம் (4). (வினா ",
+    {
+      "latex": "17",
+      "fallback": "17"
+    },
+    " · மாறிலிக் கோவையின் படி: (4) ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    ")"
+  ],
+  "Substitute x = 2, y = −2; option (2).": [
+    "Substitute ",
+    {
+      "latex": "x = 2",
+      "fallback": "x = 2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = - 2",
+      "fallback": "y = −2"
+    },
+    "; option (2)."
+  ],
+  "Substitute x = 2, y = −2; option (2). (MCQ 18 · Solution of 2x + 3y = m: (2) −2)": [
+    "Substitute ",
+    {
+      "latex": "x = 2",
+      "fallback": "x = 2"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = - 2",
+      "fallback": "y = −2"
+    },
+    "; option (2). (",
+    {
+      "latex": "MCQ 18",
+      "fallback": "MCQ 18"
+    },
+    " · Solution of ",
+    {
+      "latex": "2 x + 3 y = \\mathrm{m} : \\left(2\\right) - 2",
+      "fallback": "2x + 3y = m: (2) −2"
+    },
+    ")"
+  ],
+  "m = 4 − 6 = −2; விருப்பம் (2). (வினா 18 · 2x + 3y = m தீர்வு: (2) −2)": [
+    {
+      "latex": "\\mathrm{m} = 4 - 6 = - 2",
+      "fallback": "m = 4 − 6 = −2"
+    },
+    "; விருப்பம் (2). (வினா ",
+    {
+      "latex": "18",
+      "fallback": "18"
+    },
+    " · ",
+    {
+      "latex": "2 x + 3 y = \\mathrm{m}",
+      "fallback": "2x + 3y = m"
+    },
+    " தீர்வு: (2) ",
+    {
+      "latex": "- 2",
+      "fallback": "−2"
+    },
+    ")"
+  ],
+  "All other options have x⁻¹, x², or x³; option (3).": [
+    "All other options have ",
+    {
+      "latex": "x^{-1}, x^{2}",
+      "fallback": "x⁻¹, x²"
+    },
+    ", or ",
+    {
+      "latex": "x^{3}",
+      "fallback": "x³"
+    },
+    "; option (3)."
+  ],
+  "All other options have x⁻¹, x², or x³; option (3). (MCQ 19 · Identify linear equation: (3) 3x + 5 = 2/3)": [
+    "All other options have ",
+    {
+      "latex": "x^{-1}, x^{2}",
+      "fallback": "x⁻¹, x²"
+    },
+    ", or ",
+    {
+      "latex": "x^{3}",
+      "fallback": "x³"
+    },
+    "; option (3). (",
+    {
+      "latex": "MCQ 19",
+      "fallback": "MCQ 19"
+    },
+    " · Identify linear equation: (3) ",
+    {
+      "latex": "3 x + 5 = \\dfrac{2}{3}",
+      "fallback": "3x + 5 = 2/3"
+    },
+    ")"
+  ],
+  "3x + 5 = 2/3 மட்டுமே படி 1 கொண்ட நேரிய சமன்பாடு; விருப்பம் (3). (வினா 19 · நேரிய சமன்பாட்டைக் கண்டறிக: (3) 3x + 5 = 2/3)": [
+    {
+      "latex": "3 x + 5 = \\dfrac{2}{3}",
+      "fallback": "3x + 5 = 2/3"
+    },
+    " மட்டுமே படி ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " கொண்ட நேரிய சமன்பாடு; விருப்பம் (3). (வினா ",
+    {
+      "latex": "19",
+      "fallback": "19"
+    },
+    " · நேரிய சமன்பாட்டைக் கண்டறிக: (3) ",
+    {
+      "latex": "3 x + 5 = \\dfrac{2}{3}",
+      "fallback": "3x + 5 = 2/3"
+    },
+    ")"
+  ],
+  "Substitute (4, 2) into 2x − y = 6; option (2).": [
+    "Substitute ",
+    {
+      "latex": "\\left(4, 2\\right)",
+      "fallback": "(4, 2)"
+    },
+    " into ",
+    {
+      "latex": "2 x - y = 6",
+      "fallback": "2x − y = 6"
+    },
+    "; option (2)."
+  ],
+  "Substitute (4, 2) into 2x − y = 6; option (2). (MCQ 20 · Solution of 2x − y = 6: (2) (4, 2))": [
+    "Substitute ",
+    {
+      "latex": "\\left(4, 2\\right)",
+      "fallback": "(4, 2)"
+    },
+    " into ",
+    {
+      "latex": "2 x - y = 6",
+      "fallback": "2x − y = 6"
+    },
+    "; option (2). (",
+    {
+      "latex": "MCQ 20",
+      "fallback": "MCQ 20"
+    },
+    " · Solution of ",
+    {
+      "latex": "2 x - y = 6 : \\left(2\\right) \\left(4, 2\\right)",
+      "fallback": "2x − y = 6: (2) (4, 2)"
+    },
+    ")"
+  ],
+  "x = 4, y = 2 எனில் 2(4) − 2 = 6; விருப்பம் (2). (வினா 20 · 2x − y = 6-இன் தீர்வு: (2) (4, 2))": [
+    {
+      "latex": "x = 4",
+      "fallback": "x = 4"
+    },
+    ",",
+    " ",
+    {
+      "latex": "y = 2",
+      "fallback": "y = 2"
+    },
+    " எனில் ",
+    {
+      "latex": "2 \\left(4\\right) - 2 = 6",
+      "fallback": "2(4) − 2 = 6"
+    },
+    "; விருப்பம் (2). (வினா ",
+    {
+      "latex": "20",
+      "fallback": "20"
+    },
+    " · ",
+    {
+      "latex": "2 x - y = 6",
+      "fallback": "2x − y = 6"
+    },
+    "-இன் தீர்வு: (2) ",
+    {
+      "latex": "\\left(4, 2\\right)",
+      "fallback": "(4, 2)"
+    },
+    ")"
+  ],
+  "Option (4) is correct. (MCQ 21 · Find k from (2, 3): (4) 13)": [
+    "Option (4) is correct. (",
+    {
+      "latex": "MCQ 21",
+      "fallback": "MCQ 21"
+    },
+    " · Find ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    " from ",
+    {
+      "latex": "\\left(2, 3\\right) : \\left(4\\right) 13",
+      "fallback": "(2, 3): (4) 13"
+    },
+    ")"
+  ],
+  "k = 4 + 9 = 13; விருப்பம் (4). (வினா 21 · (2, 3) தீர்வு எனில் k காண்க: (4) 13)": [
+    {
+      "latex": "k = 4 + 9 = 13",
+      "fallback": "k = 4 + 9 = 13"
+    },
+    "; விருப்பம் (4). (வினா ",
+    {
+      "latex": "21",
+      "fallback": "21"
+    },
+    " · ",
+    {
+      "latex": "\\left(2, 3\\right)",
+      "fallback": "(2, 3)"
+    },
+    " தீர்வு எனில் ",
+    {
+      "latex": "k",
+      "fallback": "k"
+    },
+    " காண்க: (4) ",
+    {
+      "latex": "13",
+      "fallback": "13"
+    },
+    ")"
+  ],
+  "Option (3) is correct. (MCQ 22 · Condition for linear equation: (3) a = 0, b = 0)": [
+    "Option (3) is correct. (",
+    {
+      "latex": "MCQ 22",
+      "fallback": "MCQ 22"
+    },
+    " · Condition for linear equation: (3) ",
+    {
+      "latex": "a = 0",
+      "fallback": "a = 0"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 0",
+      "fallback": "b = 0"
+    },
+    ")"
+  ],
+  "a = 0, b = 0 எனில் மாறிகள் இருக்காது; விருப்பம் (3). (வினா 22 · நேரிய சமன்பாட்டு நிபந்தனை: (3) a = 0, b = 0)": [
+    {
+      "latex": "a = 0",
+      "fallback": "a = 0"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 0",
+      "fallback": "b = 0"
+    },
+    " எனில் மாறிகள் இருக்காது; விருப்பம் (3). (வினா ",
+    {
+      "latex": "22",
+      "fallback": "22"
+    },
+    " · நேரிய சமன்பாட்டு நிபந்தனை: (3) ",
+    {
+      "latex": "a = 0",
+      "fallback": "a = 0"
+    },
+    ",",
+    " ",
+    {
+      "latex": "b = 0",
+      "fallback": "b = 0"
+    },
+    ")"
+  ],
+  "Option (2) is correct. (MCQ 23 · Not a linear equation in two variables: (2) 0x + 0y + c = 0)": [
+    "Option (2) is correct. (",
+    {
+      "latex": "MCQ 23",
+      "fallback": "MCQ 23"
+    },
+    " · Not a linear equation in two variables: (2) ",
+    {
+      "latex": "0 x + 0 y + c = 0",
+      "fallback": "0x + 0y + c = 0"
+    },
+    ")"
+  ],
+  "இரு மாறிகளின் கெழுக்களும் 0; விருப்பம் (2). (வினா 23 · இரு மாறிகளில் நேரிய சமன்பாடு அல்லாதது: (2) 0x + 0y + c = 0)": [
+    "இரு மாறிகளின் கெழுக்களும் ",
+    {
+      "latex": "0",
+      "fallback": "0"
+    },
+    "; விருப்பம் (2). (வினா ",
+    {
+      "latex": "23",
+      "fallback": "23"
+    },
+    " · இரு மாறிகளில் நேரிய சமன்பாடு அல்லாதது: (2) ",
+    {
+      "latex": "0 x + 0 y + c = 0",
+      "fallback": "0x + 0y + c = 0"
+    },
+    ")"
+  ],
+  "Parallel lines require a₁/a₂ = b₁/b₂ ≠ c₁/c₂; option (1).": [
+    "Parallel lines require ",
+    {
+      "latex": "\\dfrac{a_{1}}{a_{2}} = \\dfrac{b_{1}}{b_{2}} \\ne \\dfrac{c_{1}}{c_{2}}",
+      "fallback": "a₁/a₂ = b₁/b₂ ≠ c₁/c₂"
+    },
+    "; option (1)."
+  ],
+  "Parallel lines require a₁/a₂ = b₁/b₂ ≠ c₁/c₂; option (1). (MCQ 24 · Parallel lines condition: (1) k = 3)": [
+    "Parallel lines require ",
+    {
+      "latex": "\\dfrac{a_{1}}{a_{2}} = \\dfrac{b_{1}}{b_{2}} \\ne \\dfrac{c_{1}}{c_{2}}",
+      "fallback": "a₁/a₂ = b₁/b₂ ≠ c₁/c₂"
+    },
+    "; option (1). (",
+    {
+      "latex": "MCQ 24",
+      "fallback": "MCQ 24"
+    },
+    " · Parallel lines condition: (1) ",
+    {
+      "latex": "k = 3",
+      "fallback": "k = 3"
+    },
+    ")"
+  ],
+  "4/2 = 6/k ⇒ k = 3; விருப்பம் (1). (வினா 24 · இணை கோடுகள் நிபந்தனை: (1) k = 3)": [
+    {
+      "latex": "\\dfrac{4}{2} = \\dfrac{6}{k} \\Rightarrow k = 3",
+      "fallback": "4/2 = 6/k ⇒ k = 3"
+    },
+    "; விருப்பம் (1). (வினா ",
+    {
+      "latex": "24",
+      "fallback": "24"
+    },
+    " · இணை கோடுகள் நிபந்தனை: (1) ",
+    {
+      "latex": "k = 3",
+      "fallback": "k = 3"
+    },
+    ")"
+  ],
+  "Option (2) shows parallel lines. (MCQ 25 · Graph with no solution: (2) Parallel lines)": [
+    "Option (2) shows parallel lines. (",
+    {
+      "latex": "MCQ 25",
+      "fallback": "MCQ 25"
+    },
+    " · Graph with no solution: (2) Parallel lines)"
+  ],
+  "இணை கோடுகள் வெட்டிக்கொள்ளாது; விருப்பம் (2). (வினா 25 · தீர்வு இல்லாத வரைபடம்: (2) இணை கோடுகள்)": [
+    "இணை கோடுகள் வெட்டிக்கொள்ளாது; விருப்பம் (2). (வினா ",
+    {
+      "latex": "25",
+      "fallback": "25"
+    },
+    " · தீர்வு இல்லாத வரைபடம்: (2) இணை கோடுகள்)"
+  ],
+  "Option (3) is correct. (MCQ 26 · Unique solution ratio: (3) unique)": [
+    "Option (3) is correct. (",
+    {
+      "latex": "MCQ 26",
+      "fallback": "MCQ 26"
+    },
+    " · Unique solution ratio: (3) unique)"
+  ],
+  "வெட்டும் கோடுகள் ⇒ ஒரு தீர்வு; விருப்பம் (3). (வினா 26 · ஒரே தீர்வு விகிதம்: (3) ஒரு தீர்வு)": [
+    "வெட்டும் கோடுகள் ",
+    {
+      "latex": "\\Rightarrow",
+      "fallback": "⇒"
+    },
+    " ஒரு தீர்வு; விருப்பம் (3). (வினா ",
+    {
+      "latex": "26",
+      "fallback": "26"
+    },
+    " · ஒரே தீர்வு விகிதம்: (3) ஒரு தீர்வு)"
+  ],
+  "Option (1) is correct. (MCQ 27 · No solution ratio: (1) no solution)": [
+    "Option (1) is correct. (",
+    {
+      "latex": "MCQ 27",
+      "fallback": "MCQ 27"
+    },
+    " · No solution ratio: (1) no solution)"
+  ],
+  "இணை கோடுகள் ⇒ தீர்வு இல்லை; விருப்பம் (1). (வினா 27 · தீர்வு இல்லை விகிதம்: (1) தீர்வு இல்லை)": [
+    "இணை கோடுகள் ",
+    {
+      "latex": "\\Rightarrow",
+      "fallback": "⇒"
+    },
+    " தீர்வு இல்லை; விருப்பம் (1). (வினா ",
+    {
+      "latex": "27",
+      "fallback": "27"
+    },
+    " · தீர்வு இல்லை விகிதம்: (1) தீர்வு இல்லை)"
+  ],
+  "Option (3) is correct. (MCQ 28 · GCD of two primes: (3) 1)": [
+    "Option (3) is correct. (",
+    {
+      "latex": "MCQ 28",
+      "fallback": "MCQ 28"
+    },
+    " · ",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of two primes: (3) ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ")"
+  ],
+  "பகா எண்களின் பொது வகுத்தி 1; விருப்பம் (3). (வினா 28 · இரண்டு பகா எண்களின் மீ.பொ.வ: (3) 1)": [
+    "பகா எண்களின் பொது வகுத்தி ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "; விருப்பம் (3). (வினா ",
+    {
+      "latex": "28",
+      "fallback": "28"
+    },
+    " · இரண்டு பகா எண்களின் மீ.பொ.வ: (3) ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    ")"
+  ],
+  "Common factor is x² − y²; option (2).": [
+    "Common factor is ",
+    {
+      "latex": "x^{2} - y^{2}",
+      "fallback": "x² − y²"
+    },
+    "; option (2)."
+  ],
+  "Common factor is x² − y²; option (2). (MCQ 29 · GCD of x⁴ − y⁴ and x² − y²: (2) x² − y²)": [
+    "Common factor is ",
+    {
+      "latex": "x^{2} - y^{2}",
+      "fallback": "x² − y²"
+    },
+    "; option (2). (",
+    {
+      "latex": "MCQ 29",
+      "fallback": "MCQ 29"
+    },
+    " · ",
+    {
+      "latex": "GCD",
+      "fallback": "GCD"
+    },
+    " of ",
+    {
+      "latex": "x^{4} - y^{4}",
+      "fallback": "x⁴ − y⁴"
+    },
+    " and ",
+    {
+      "latex": "x^{2} - y^{2} : \\left(2\\right) x^{2} - y^{2}",
+      "fallback": "x² − y²: (2) x² − y²"
+    },
+    ")"
+  ],
+  "பொதுக் காரணி x² − y²; விருப்பம் (2). (வினா 29 · x⁴ − y⁴ மற்றும் x² − y² மீ.பொ.வ: (2) x² − y²)": [
+    "பொதுக் காரணி ",
+    {
+      "latex": "x^{2} - y^{2}",
+      "fallback": "x² − y²"
+    },
+    "; விருப்பம் (2). (வினா ",
+    {
+      "latex": "29",
+      "fallback": "29"
+    },
+    " · ",
+    {
+      "latex": "x^{4} - y^{4}",
+      "fallback": "x⁴ − y⁴"
+    },
+    " மற்றும் ",
+    {
+      "latex": "x^{2} - y^{2}",
+      "fallback": "x² − y²"
+    },
+    " மீ.பொ.வ: (2) ",
+    {
+      "latex": "x^{2} - y^{2}",
+      "fallback": "x² − y²"
+    },
+    ")"
   ]
 };
 const diagramLabels={"A":{"latex":"A","fallback":"A"},"B":{"latex":"B","fallback":"B"},"C":{"latex":"C","fallback":"C"},"D":{"latex":"D","fallback":"D"},"E":{"latex":"E","fallback":"E"},"F":{"latex":"F","fallback":"F"},"O":{"latex":"O","fallback":"O"},"P":{"latex":"P","fallback":"P"},"Q":{"latex":"Q","fallback":"Q"},"a":{"latex":"a","fallback":"a"},"b":{"latex":"b","fallback":"b"},"x":{"latex":"x","fallback":"x"},"y":{"latex":"y","fallback":"y"},"θ":{"latex":"\\theta","fallback":"θ"},"φ":{"latex":"\\phi","fallback":"φ"},"α":{"latex":"\\alpha","fallback":"α"},"β":{"latex":"\\beta","fallback":"β"},"√13":{"latex":"\\sqrt{13}","fallback":"√13"},"√5":{"latex":"\\sqrt{5}","fallback":"√5"},"√(a² + b²)":{"latex":"\\sqrt{a^{2} + b^{2}}","fallback":"√(a² + b²)"}};

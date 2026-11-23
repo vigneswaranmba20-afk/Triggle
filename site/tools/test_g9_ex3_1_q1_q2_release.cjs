@@ -39,27 +39,27 @@ for(const [index,row] of source.rows.entries()){
  assert.equal(item.answerMath.fallback,row.answer);
  assert.equal(item.answerMath.latex,row.answerMathLatex);
  assert.equal(item.steps.length,3);
- assert.equal(item.releaseStatus,'english-preview');
- assert(!item.q.ta,'No invented Tamil');
+ assert.equal(item.releaseStatus,'bilingual-2025-source-checked');
+ assert(item.q.ta&&item.q.ta.length>10,'Verified 2025 Tamil prompt '+row.id);
  for(let n=0;n<3;n++){
   assert.equal(item.steps[n].eq,row.steps[n].equation);
   assert.equal(item.steps[n].en,row.steps[n].reason);
+  assert.ok(item.steps[n].ta&&item.steps[n].ta.length>5,'Verified Tamil step '+row.id+'#'+n);
   assert.equal(item.steps[n].math.fallback,item.steps[n].eq);
  }
  if(row.question===2){
   assert.match(item.steps[1].en,/The coefficient of x² is /,'Explicit novice-facing conclusion for x²');
   assert.match(item.steps[2].en,/The coefficient of x is /,'Explicit novice-facing conclusion for x');
-  assert(!item.q.ta,'Do not invent Tamil translations for source-pending English lessons');
   assert.match(item.steps[1].math.latex,/\\Rightarrow/);
   assert.match(item.steps[2].math.latex,/\\Rightarrow/);
   assert.match(item.answerMath.latex,/^\\boxed\{/);
   assert.doesNotMatch(item.answerMath.latex,/a_\{/);
  }
  const hint=ctx.window.TriggleWhyStepG9.hints[row.id];
- assert(hint&&hint.en&&hint.en.length>60&&!hint.ta,'English-only Why explanation '+row.id);
+ assert(hint&&hint.en&&hint.en.length>60&&hint.ta&&hint.ta.length>15,'Bilingual Why explanation '+row.id);
  assert.equal(hint.expected,item.steps[hint.step].en);
  assert.equal(ctx.window.TriggleDifficulty.get(item)?.grade,9);
 }
 const app=read('site/assets/app.js');
 assert(app.includes("['1','3'].includes(String(chapter?.number))"),'Grade 9 Chapter 3 Next navigation must sort by question');
-console.log('PASS G9 Algebra Ex3.1: 11 visual-source-verified English parts, 33 complete steps, 11 Why hints, one-per-ID chapter navigation, offline assets and no invented Tamil.');
+console.log('PASS G9 Algebra Ex3.1: 11 visual-source-verified bilingual parts, 33 complete steps, 11 Why hints, one-per-ID chapter navigation and offline assets.');
