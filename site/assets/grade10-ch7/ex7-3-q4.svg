@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 440" role="img" aria-labelledby="title desc">
+<title id="title">Cone on a hemisphere placed inside a water-filled cylinder</title>
+<desc id="desc">A right circular cylinder of radius 6 cm and height 18 cm is filled with water. Inside it, touching the bottom, stands a solid made of a hemisphere of radius 6 cm topped by a cone of height 12 cm and radius 6 cm. The displaced water volume equals the sum of the cone and hemisphere volumes.</desc>
+<rect width="660" height="440" rx="18" fill="#fcfaf6"/>
+<text x="330" y="34" font-family="system-ui,Arial,sans-serif" font-size="22" text-anchor="middle" font-weight="700" fill="#173750">Displaced water = cone + hemisphere</text>
+
+<!-- Cylinder water body -->
+<path d="M190 92 V352 A100 22 0 0 0 390 352 V92 Z" fill="#dbeaf3" stroke="#236180" stroke-width="3" stroke-linejoin="round"/>
+<ellipse cx="290" cy="92" rx="100" ry="22" fill="#eef6fb" stroke="#236180" stroke-width="3"/>
+
+<!-- Hemisphere sitting at bottom of cylinder (y = 265 to y = 352, radius 100 in x, ~87 in y for visual balance) -->
+<path d="M190 265 A100 87 0 0 0 390 265 Z" fill="#89b8d8" stroke="#236180" stroke-width="2.5"/>
+<!-- Cone standing on hemisphere (apex at top center (290, 92), base at y = 265) -->
+<path d="M290 92 L190 265 A100 22 0 0 0 390 265 Z" fill="#f7dfaa" stroke="#236180" stroke-width="2.5" stroke-linejoin="round"/>
+<!-- Shared circular interface between cone and hemisphere -->
+<ellipse cx="290" cy="265" rx="100" ry="22" fill="none" stroke="#236180" stroke-width="2.5"/>
+<path d="M190 265 A100 22 0 0 1 390 265" fill="none" stroke="#456e83" stroke-width="2" stroke-dasharray="6 5"/>
+<!-- Bottom rim of cylinder -->
+<path d="M190 352 A100 22 0 0 0 390 352" fill="none" stroke="#236180" stroke-width="3"/>
+
+<!-- Center axis and radius line -->
+<path d="M290 92 V352" stroke="#885e80" stroke-width="2.5" stroke-dasharray="6 5" fill="none"/>
+<path d="M290 265 H390" stroke="#bf6d30" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="290" cy="265" r="4.5" fill="#bf6d30"/>
+<circle cx="390" cy="265" r="4.5" fill="#bf6d30"/>
+
+<!-- Right-side dimension bars: cone 12 cm, hemisphere 6 cm -->
+<g stroke="#456e83" stroke-width="2">
+  <path d="M412 92 V265"/>
+  <path d="M405 92 H419 M405 265 H419"/>
+  <path d="M412 265 V352"/>
+  <path d="M405 352 H419"/>
+</g>
+<!-- Left-side dimension bar: cylinder 18 cm -->
+<g stroke="#456e83" stroke-width="2">
+  <path d="M164 92 V352"/>
+  <path d="M157 92 H171 M157 352 H171"/>
+</g>
+<!-- Bottom radius callout -->
+<path d="M290 388 H390" stroke="#bf6d30" stroke-width="2.5"/>
+<path d="M290 381 V395 M390 381 V395" stroke="#bf6d30" stroke-width="2.5"/>
+
+<!-- Labels -->
+<g font-family="system-ui,Arial,sans-serif" fill="#173750" font-weight="700">
+  <rect x="26" y="198" width="124" height="38" rx="10" fill="#fff" stroke="#dce7ec"/>
+  <text x="88" y="223" font-size="18" text-anchor="middle">H = 18 cm</text>
+
+  <rect x="432" y="158" width="186" height="38" rx="10" fill="#fff" stroke="#dce7ec"/>
+  <text x="525" y="183" font-size="18" text-anchor="middle">Cone h = 12 cm</text>
+
+  <rect x="432" y="290" width="206" height="38" rx="10" fill="#fff" stroke="#dce7ec"/>
+  <text x="535" y="315" font-size="18" text-anchor="middle">Hemisphere r = 6 cm</text>
+
+  <rect x="275" y="398" width="130" height="34" rx="9" fill="#fff" stroke="#dce7ec"/>
+  <text x="340" y="421" font-size="18" text-anchor="middle" fill="#bf6d30">r = 6 cm</text>
+</g>
+</svg>
