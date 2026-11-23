@@ -15,7 +15,7 @@ window.TRIGGLE_G9_CH5_PATH={
     file:'Triggle_G9_Distance_Formula_Narrated_Corrected.mp4',
     durationSeconds:75.6,
     sha256:'8ada907f59bf11788bad196fc8e3ec876de4bc5d98caef53fa50368d78277323',
-    status:'awaiting-public-upload'
+    status:'hosted-in-repo'
   },
   stages:[{
     id:'g9-ch5-distance-formula',
@@ -35,6 +35,7 @@ window.TRIGGLE_G9_CH5_PATH={
       fallback:'d = √[(x₂ − x₁)² + (y₂ − y₁)²]'
     },
     visual:{kind:'g9-distance-grid'},
+    video:{src:'./videos/triggle-g9-distance-formula-en.mp4',durationSeconds:75.6,language:'en',provider:'github-pages'},
     idea:{
       en:'A straight line is the shortest path between two points on the plane. Moving across and then up forms a right triangle. The direct distance is its hypotenuse.',
       ta:'ஒரு தளத்தில் இரு புள்ளிகளுக்கு இடையேயான மிகக் குறுகிய பாதை அவற்றை இணைக்கும் நேர்க்கோடு. கிடைமட்டமாகவும் பின்னர் செங்குத்தாகவும் நகரும்போது ஒரு செங்கோண முக்கோணம் உருவாகிறது. நேர்க்கோட்டுத் தொலைவே அதன் கர்ணம்.'
