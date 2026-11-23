@@ -1433,7 +1433,7 @@ const entries=[
       "en": [
         "7. What should be added to ",
         {
-          "latex": "(2x^3+6x^2-5x+8)+P(x)=3x^3-2x^2+6x+15",
+          "latex": "2x^3+6x^2-5x+8\\text{ to get }3x^3-2x^2+6x+15\\text{ ?}",
           "fallback": "2x³ + 6x² − 5x + 8 to get 3x³ − 2x² + 6x + 15 ?"
         }
       ]
@@ -1527,7 +1527,7 @@ const entries=[
       "en": [
         "8. What must be subtracted from ",
         {
-          "latex": "(2x^4+4x^2-3x+7)-P(x)=3x^3-x^2+2x+1",
+          "latex": "2x^4+4x^2-3x+7\\text{ to get }3x^3-x^2+2x+1\\text{ ?}",
           "fallback": "2x⁴ + 4x² − 3x + 7 to get 3x³ − x² + 2x + 1 ?"
         }
       ]

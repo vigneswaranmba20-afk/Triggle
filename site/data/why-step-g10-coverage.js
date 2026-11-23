@@ -792,6 +792,744 @@ const additional={
     "expected": "Use (a + b)² = a² + b² + 2ab to find the product.",
     "en": "The given mean fixes the sum of the two missing observations; the variance fixes their sum of squares. Together these determine their product and a quadratic with those roots.",
     "ta": "கொடுக்கப்பட்ட சராசரி காணாத இரு மதிப்புகளின் கூட்டலைத் தரும்; மாறுபாடு அவற்றின் வர்க்கங்களின் கூட்டலைத் தரும். இவற்றிலிருந்து பெருக்கலும் வேர்களைக் கொண்ட இருபடிச் சமன்பாடும் கிடைக்கும்."
+  },
+  "c10-3-ex3-1-q2-i": {
+      "step": 0,
+      "expected": "Label the three linear equations as (1), (2), an",
+      "en": "Writing all three equations in aligned standard form ax + by + cz = d makes it easy to eliminate one variable across two distinct pairs of equations.",
+      "ta": "மூன்று சமன்பாடுகளையும் ax + by + cz = d என்ற திட்ட வடிவில் எழுதுவதால், இரு சமன்பாட்டுச் சோடிகளிலிருந்து ஒரு மாறியை எளிதாக நீக்க முடிகிறது."
+  },
+  "c10-3-ex3-1-q2-ii": {
+      "step": 0,
+      "expected": "Expand the first equation 2y + z = −3x + 3 and w",
+      "en": "Writing all three equations in aligned standard form ax + by + cz = d makes it easy to eliminate one variable across two distinct pairs of equations.",
+      "ta": "மூன்று சமன்பாடுகளையும் ax + by + cz = d என்ற திட்ட வடிவில் எழுதுவதால், இரு சமன்பாட்டுச் சோடிகளிலிருந்து ஒரு மாறியை எளிதாக நீக்க முடிகிறது."
+  },
+  "c10-3-ex3-1-q2-iii": {
+      "step": 0,
+      "expected": "Cross-multiply the first pair (y + z)/4 = (z + x",
+      "en": "Writing all three equations in aligned standard form ax + by + cz = d makes it easy to eliminate one variable across two distinct pairs of equations.",
+      "ta": "மூன்று சமன்பாடுகளையும் ax + by + cz = d என்ற திட்ட வடிவில் எழுதுவதால், இரு சமன்பாட்டுச் சோடிகளிலிருந்து ஒரு மாறியை எளிதாக நீக்க முடிகிறது."
+  },
+  "c10-3-ex3-1-q3": {
+      "step": 0,
+      "expected": "Let the present ages of Vani, her father, and he",
+      "en": "Writing all three equations in aligned standard form ax + by + cz = d makes it easy to eliminate one variable across two distinct pairs of equations.",
+      "ta": "மூன்று சமன்பாடுகளையும் ax + by + cz = d என்ற திட்ட வடிவில் எழுதுவதால், இரு சமன்பாட்டுச் சோடிகளிலிருந்து ஒரு மாறியை எளிதாக நீக்க முடிகிறது."
+  },
+  "c10-3-ex3-1-q4": {
+      "step": 0,
+      "expected": "Let the hundreds, tens, and units digits be x, y",
+      "en": "Writing all three equations in aligned standard form ax + by + cz = d makes it easy to eliminate one variable across two distinct pairs of equations.",
+      "ta": "மூன்று சமன்பாடுகளையும் ax + by + cz = d என்ற திட்ட வடிவில் எழுதுவதால், இரு சமன்பாட்டுச் சோடிகளிலிருந்து ஒரு மாறியை எளிதாக நீக்க முடிகிறது."
+  },
+  "c10-3-ex3-1-q5": {
+      "step": 0,
+      "expected": "Let x, y, and z be the numbers of ₹5, ₹10, and ₹",
+      "en": "Writing all three equations in aligned standard form ax + by + cz = d makes it easy to eliminate one variable across two distinct pairs of equations.",
+      "ta": "மூன்று சமன்பாடுகளையும் ax + by + cz = d என்ற திட்ட வடிவில் எழுதுவதால், இரு சமன்பாட்டுச் சோடிகளிலிருந்து ஒரு மாறியை எளிதாக நீக்க முடிகிறது."
+  },
+  "c10-3-ex3-2-q1-i": {
+      "step": 0,
+      "expected": "Let f(x) = x⁴ + 3x³ − x − 3 and g(x) = x³ + x² −",
+      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
+      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+  },
+  "c10-3-ex3-2-q1-ii": {
+      "step": 0,
+      "expected": "Let f(x) = x⁴ − 1 and g(x) = x³ − 11x² + x − 11.",
+      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
+      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+  },
+  "c10-3-ex3-2-q1-iii": {
+      "step": 0,
+      "expected": "Factor out the greatest common monomial factor f",
+      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
+      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+  },
+  "c10-3-ex3-2-q1-iv": {
+      "step": 0,
+      "expected": "Factor out the numerical coefficient 3 from the",
+      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
+      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+  },
+  "c10-3-ex3-2-q2-i": {
+      "step": 0,
+      "expected": "Find the Least Common Multiple (LCM) of the nume",
+      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
+      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+  },
+  "c10-3-ex3-2-q2-ii": {
+      "step": 0,
+      "expected": "Find the LCM of the numerical coefficients −9 an",
+      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
+      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+  },
+  "c10-3-ex3-2-q2-iii": {
+      "step": 0,
+      "expected": "Find the LCM of the numerical coefficients 16, −",
+      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
+      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+  },
+  "c10-3-ex3-2-q2-iv": {
+      "step": 0,
+      "expected": "Factorize the quadratic trinomial p² − 3p + 2 by",
+      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
+      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+  },
+  "c10-3-ex3-2-q2-v": {
+      "step": 0,
+      "expected": "Factorize the first quadratic 2x² − 5x − 3 by sp",
+      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
+      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+  },
+  "c10-3-ex3-2-q2-vi": {
+      "step": 0,
+      "expected": "Factor out x inside the first expression (2x² −",
+      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
+      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+  },
+  "c10-3-ex3-3-q1-i": {
+      "step": 0,
+      "expected": "Write the prime factorizations of the numerical",
+      "en": "Because f(x) × g(x) = LCM × GCD holds for any two polynomials, factoring both expressions completely lets us pair lowest powers for GCD and highest powers for LCM.",
+      "ta": "இரு பல்லுறுப்புக் கோவைகளுக்கு f(x) × g(x) = மீ.சி.ம × மீ.பெ.வ என்பதால், முழுமையாகக் காரணிப்படுத்தி குறைந்த அடுக்குகளால் மீ.பெ.வ-உம் உயர்ந்த அடுக்குகளால் மீ.சி.ம-உம் காணலாம்."
+  },
+  "c10-3-ex3-3-q1-ii": {
+      "step": 0,
+      "expected": "Factorize f(x) = (x³ − 1)(x + 1) using x³ − 1 =",
+      "en": "Because f(x) × g(x) = LCM × GCD holds for any two polynomials, factoring both expressions completely lets us pair lowest powers for GCD and highest powers for LCM.",
+      "ta": "இரு பல்லுறுப்புக் கோவைகளுக்கு f(x) × g(x) = மீ.சி.ம × மீ.பெ.வ என்பதால், முழுமையாகக் காரணிப்படுத்தி குறைந்த அடுக்குகளால் மீ.பெ.வ-உம் உயர்ந்த அடுக்குகளால் மீ.சி.ம-உம் காணலாம்."
+  },
+  "c10-3-ex3-3-q1-iii": {
+      "step": 0,
+      "expected": "Factor out the greatest common monomial factor f",
+      "en": "Because f(x) × g(x) = LCM × GCD holds for any two polynomials, factoring both expressions completely lets us pair lowest powers for GCD and highest powers for LCM.",
+      "ta": "இரு பல்லுறுப்புக் கோவைகளுக்கு f(x) × g(x) = மீ.சி.ம × மீ.பெ.வ என்பதால், முழுமையாகக் காரணிப்படுத்தி குறைந்த அடுக்குகளால் மீ.பெ.வ-உம் உயர்ந்த அடுக்குகளால் மீ.சி.ம-உம் காணலாம்."
+  },
+  "c10-3-ex3-3-q2-i": {
+      "step": 0,
+      "expected": "Factorize both quadratic polynomials f(a) = a² +",
+      "en": "Because f(x) × g(x) = LCM × GCD holds for any two polynomials, factoring both expressions completely lets us pair lowest powers for GCD and highest powers for LCM.",
+      "ta": "இரு பல்லுறுப்புக் கோவைகளுக்கு f(x) × g(x) = மீ.சி.ம × மீ.பெ.வ என்பதால், முழுமையாகக் காரணிப்படுத்தி குறைந்த அடுக்குகளால் மீ.பெ.வ-உம் உயர்ந்த அடுக்குகளால் மீ.சி.ம-உம் காணலாம்."
+  },
+  "c10-3-ex3-3-q2-ii": {
+      "step": 0,
+      "expected": "Factor out x from f(x) = x⁴ − 27a³x and apply th",
+      "en": "Because f(x) × g(x) = LCM × GCD holds for any two polynomials, factoring both expressions completely lets us pair lowest powers for GCD and highest powers for LCM.",
+      "ta": "இரு பல்லுறுப்புக் கோவைகளுக்கு f(x) × g(x) = மீ.சி.ம × மீ.பெ.வ என்பதால், முழுமையாகக் காரணிப்படுத்தி குறைந்த அடுக்குகளால் மீ.பெ.வ-உம் உயர்ந்த அடுக்குகளால் மீ.சி.ம-உம் காணலாம்."
+  },
+  "c10-3-ex3-3-q3-i": {
+      "step": 0,
+      "expected": "Factor out the highest power of x from each poly",
+      "en": "Because f(x) × g(x) = LCM × GCD holds for any two polynomials, factoring both expressions completely lets us pair lowest powers for GCD and highest powers for LCM.",
+      "ta": "இரு பல்லுறுப்புக் கோவைகளுக்கு f(x) × g(x) = மீ.சி.ம × மீ.பெ.வ என்பதால், முழுமையாகக் காரணிப்படுத்தி குறைந்த அடுக்குகளால் மீ.பெ.வ-உம் உயர்ந்த அடுக்குகளால் மீ.சி.ம-உம் காணலாம்."
+  },
+  "c10-3-ex3-3-q3-ii": {
+      "step": 0,
+      "expected": "Factorize x⁴ + x²y² + y⁴ by completing the squar",
+      "en": "Because f(x) × g(x) = LCM × GCD holds for any two polynomials, factoring both expressions completely lets us pair lowest powers for GCD and highest powers for LCM.",
+      "ta": "இரு பல்லுறுப்புக் கோவைகளுக்கு f(x) × g(x) = மீ.சி.ம × மீ.பெ.வ என்பதால், முழுமையாகக் காரணிப்படுத்தி குறைந்த அடுக்குகளால் மீ.பெ.வ-உம் உயர்ந்த அடுக்குகளால் மீ.சி.ம-உம் காணலாம்."
+  },
+  "c10-3-ex3-3-q4-i": {
+      "step": 0,
+      "expected": "Factorize p(x) = a² − 12a + 35 into (a − 7)(a −",
+      "en": "Because f(x) × g(x) = LCM × GCD holds for any two polynomials, factoring both expressions completely lets us pair lowest powers for GCD and highest powers for LCM.",
+      "ta": "இரு பல்லுறுப்புக் கோவைகளுக்கு f(x) × g(x) = மீ.சி.ம × மீ.பெ.வ என்பதால், முழுமையாகக் காரணிப்படுத்தி குறைந்த அடுக்குகளால் மீ.பெ.வ-உம் உயர்ந்த அடுக்குகளால் மீ.சி.ம-உம் காணலாம்."
+  },
+  "c10-3-ex3-3-q4-ii": {
+      "step": 0,
+      "expected": "Factorize x⁴ + x²y² + y⁴ into (x² + xy + y²)(x²",
+      "en": "Because f(x) × g(x) = LCM × GCD holds for any two polynomials, factoring both expressions completely lets us pair lowest powers for GCD and highest powers for LCM.",
+      "ta": "இரு பல்லுறுப்புக் கோவைகளுக்கு f(x) × g(x) = மீ.சி.ம × மீ.பெ.வ என்பதால், முழுமையாகக் காரணிப்படுத்தி குறைந்த அடுக்குகளால் மீ.பெ.வ-உம் உயர்ந்த அடுக்குகளால் மீ.சி.ம-உம் காணலாம்."
+  },
+  "c10-3-ex3-4-q1-i": {
+      "step": 0,
+      "expected": "Factorize the numerator x² − 1 using the differe",
+      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
+      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+  },
+  "c10-3-ex3-4-q1-ii": {
+      "step": 0,
+      "expected": "Factorize the numerator x² − 11x + 18 into (x −",
+      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
+      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+  },
+  "c10-3-ex3-4-q1-iii": {
+      "step": 0,
+      "expected": "Factor out 9x from the numerator 9x² + 81x and f",
+      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
+      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+  },
+  "c10-3-ex3-4-q1-iv": {
+      "step": 0,
+      "expected": "Factorize the numerator p² − 3p − 40 into (p − 8",
+      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
+      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+  },
+  "c10-3-ex3-4-q2-i": {
+      "step": 0,
+      "expected": "The rational expression y/(y² − 25) is already i",
+      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
+      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+  },
+  "c10-3-ex3-4-q2-ii": {
+      "step": 0,
+      "expected": "The rational expression t/(t² − 5t + 6) is in lo",
+      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
+      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+  },
+  "c10-3-ex3-4-q2-iii": {
+      "step": 0,
+      "expected": "First reduce the rational expression to its lowe",
+      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
+      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+  },
+  "c10-3-ex3-4-q2-iv": {
+      "step": 0,
+      "expected": "Factorize the numerator x³ − 27 = (x − 3)(x² + 3",
+      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
+      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+  },
+  "c10-3-ex3-5-q1-i": {
+      "step": 0,
+      "expected": "Multiply the numerators together and the denomin",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-5-q1-ii": {
+      "step": 0,
+      "expected": "Factorize both quadratic numerators: p² − 10p +",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-5-q1-iii": {
+      "step": 0,
+      "expected": "Factor out 4 from the denominator 4t − 8 and fac",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-5-q2-i": {
+      "step": 0,
+      "expected": "Factorize 9x² − 16y² = (3x)² − (4y)² as (3x + 4y",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-5-q2-ii": {
+      "step": 0,
+      "expected": "Factorize each polynomial: x³ − y³ = (x − y)(x²",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-5-q3-i": {
+      "step": 0,
+      "expected": "Rewrite division by the second fraction as multi",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-5-q3-ii": {
+      "step": 0,
+      "expected": "Convert division into multiplication by the reci",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-5-q3-iii": {
+      "step": 0,
+      "expected": "Multiply by the reciprocal of the second rationa",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-5-q3-iv": {
+      "step": 0,
+      "expected": "Multiply by the reciprocal of the divisor and fa",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-5-q4": {
+      "step": 0,
+      "expected": "Factorize and simplify x and y separately to the",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-5-q5": {
+      "step": 0,
+      "expected": "Write the given division relationship p(x) / q(x",
+      "en": "For multiplication and division of rational expressions, factor every polynomial first (and invert the divisor fraction when dividing) so shared factors cancel before expanding.",
+      "ta": "விகிதமுறு கோவைகளின் பெருக்கல் மற்றும் வகுத்தலில் முதலில் எல்லாக் கோவைகளையும் காரணிப்படுத்தி (வகுத்தலில் இரண்டாம் பின்னத்தைத் தலைகீழாக்கி) பொதுக் காரணிகளை நீக்க வேண்டும்."
+  },
+  "c10-3-ex3-6-q1-i": {
+      "step": 0,
+      "expected": "Since both rational expressions have the same de",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-6-q1-ii": {
+      "step": 0,
+      "expected": "Take the LCM of the denominators (x + 3)(x − 2)",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-6-q1-iii": {
+      "step": 0,
+      "expected": "Since y − x = −(x − y), rewrite the second fract",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-6-q2-i": {
+      "step": 0,
+      "expected": "Expand (2x + 1)(x − 2) = 2x² − 3x − 2 and subtra",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-6-q2-ii": {
+      "step": 0,
+      "expected": "Factorize x² − 1 as (x − 1)(x + 1) so that the c",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-6-q3": {
+      "step": 0,
+      "expected": "Write the subtraction with common denominator (x",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-6-q4": {
+      "step": 0,
+      "expected": "Let P be the required rational expression. Then",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-6-q5": {
+      "step": 0,
+      "expected": "First simplify the algebraic expression 1/(A − B",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-6-q6": {
+      "step": 0,
+      "expected": "Evaluate A + B, A − B, and A ÷ B from A = x/(x +",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-6-q7": {
+      "step": 0,
+      "expected": "Find the fraction of the work completed by each",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-6-q8": {
+      "step": 0,
+      "expected": "Let the price of bananas be ₹ x per kg; then the",
+      "en": "Adding or subtracting algebraic fractions requires a common LCM denominator; always enclose subtracted numerators in brackets so the minus sign distributes across every term.",
+      "ta": "இயற்கணிதப் பின்னங்களைக் கூட்டவோ கழிக்கவோ பொதுப் பகுதி (மீ.சி.ம) தேவை; கழிக்கப்படும் தொகுதியை அடைப்புக்குறிக்குள் எழுதுவதால் குறிப் பிழை தவிர்க்கப்படுகிறது."
+  },
+  "c10-3-ex3-7-q1-i": {
+      "step": 0,
+      "expected": "First divide the numerical coefficients (400 ÷ 1",
+      "en": "Taking the square root of a factored expression takes the square root of the numerical coefficient and halves every factor's exponent inside absolute-value bars |q(x)|.",
+      "ta": "காரணிப்படுத்தப்பட்ட கோவையின் வர்க்கமூலம் காண எண்களின் வர்க்கமூலத்தையும் ஒவ்வொரு காரணியின் அடுக்கின் பாதியையும் மட்டுக் குறியீடு |q(x)|-க்குள் எழுத வேண்டும்."
+  },
+  "c10-3-ex3-7-q1-ii": {
+      "step": 0,
+      "expected": "Factor the numerator using a² + 2ab + b² = (a +",
+      "en": "Taking the square root of a factored expression takes the square root of the numerical coefficient and halves every factor's exponent inside absolute-value bars |q(x)|.",
+      "ta": "காரணிப்படுத்தப்பட்ட கோவையின் வர்க்கமூலம் காண எண்களின் வர்க்கமூலத்தையும் ஒவ்வொரு காரணியின் அடுக்கின் பாதியையும் மட்டுக் குறியீடு |q(x)|-க்குள் எழுத வேண்டும்."
+  },
+  "c10-3-ex3-7-q1-iii": {
+      "step": 0,
+      "expected": "Notice that (b − c)⁴ appears twice in the denomi",
+      "en": "Taking the square root of a factored expression takes the square root of the numerical coefficient and halves every factor's exponent inside absolute-value bars |q(x)|.",
+      "ta": "காரணிப்படுத்தப்பட்ட கோவையின் வர்க்கமூலம் காண எண்களின் வர்க்கமூலத்தையும் ஒவ்வொரு காரணியின் அடுக்கின் பாதியையும் மட்டுக் குறியீடு |q(x)|-க்குள் எழுத வேண்டும்."
+  },
+  "c10-3-ex3-7-q2-i": {
+      "step": 0,
+      "expected": "Write the first and last terms as squares: 4x² =",
+      "en": "Taking the square root of a factored expression takes the square root of the numerical coefficient and halves every factor's exponent inside absolute-value bars |q(x)|.",
+      "ta": "காரணிப்படுத்தப்பட்ட கோவையின் வர்க்கமூலம் காண எண்களின் வர்க்கமூலத்தையும் ஒவ்வொரு காரணியின் அடுக்கின் பாதியையும் மட்டுக் குறியீடு |q(x)|-க்குள் எழுத வேண்டும்."
+  },
+  "c10-3-ex3-7-q2-ii": {
+      "step": 0,
+      "expected": "Group the three square terms together first: 9x²",
+      "en": "Taking the square root of a factored expression takes the square root of the numerical coefficient and halves every factor's exponent inside absolute-value bars |q(x)|.",
+      "ta": "காரணிப்படுத்தப்பட்ட கோவையின் வர்க்கமூலம் காண எண்களின் வர்க்கமூலத்தையும் ஒவ்வொரு காரணியின் அடுக்கின் பாதியையும் மட்டுக் குறியீடு |q(x)|-க்குள் எழுத வேண்டும்."
+  },
+  "c10-3-ex3-7-q2-iii": {
+      "step": 0,
+      "expected": "Factor each of the three quadratic polynomials b",
+      "en": "Taking the square root of a factored expression takes the square root of the numerical coefficient and halves every factor's exponent inside absolute-value bars |q(x)|.",
+      "ta": "காரணிப்படுத்தப்பட்ட கோவையின் வர்க்கமூலம் காண எண்களின் வர்க்கமூலத்தையும் ஒவ்வொரு காரணியின் அடுக்கின் பாதியையும் மட்டுக் குறியீடு |q(x)|-க்குள் எழுத வேண்டும்."
+  },
+  "c10-3-ex3-7-q2-iv": {
+      "step": 0,
+      "expected": "Clear the fractions inside each bracket by facto",
+      "en": "Taking the square root of a factored expression takes the square root of the numerical coefficient and halves every factor's exponent inside absolute-value bars |q(x)|.",
+      "ta": "காரணிப்படுத்தப்பட்ட கோவையின் வர்க்கமூலம் காண எண்களின் வர்க்கமூலத்தையும் ஒவ்வொரு காரணியின் அடுக்கின் பாதியையும் மட்டுக் குறியீடு |q(x)|-க்குள் எழுத வேண்டும்."
+  },
+  "c10-3-ex3-8-q1-i": {
+      "step": 0,
+      "expected": "The polynomial is already in descending powers o",
+      "en": "In the long-division square-root method, arrange powers in descending order (inserting 0 for missing powers) and double the current quotient at each stage to form the next trial divisor.",
+      "ta": "வகுத்தல் முறையில் வர்க்கமூலம் காண உறுப்புகளை இறங்கு வரிசையில் அமைத்து, ஒவ்வொரு படியிலும் ஈவை இருமடங்காக்கி அடுத்த வகுத்தியை உருவாக்க வேண்டும்."
+  },
+  "c10-3-ex3-8-q1-ii": {
+      "step": 0,
+      "expected": "The terms are out of order, so first rewrite the",
+      "en": "In the long-division square-root method, arrange powers in descending order (inserting 0 for missing powers) and double the current quotient at each stage to form the next trial divisor.",
+      "ta": "வகுத்தல் முறையில் வர்க்கமூலம் காண உறுப்புகளை இறங்கு வரிசையில் அமைத்து, ஒவ்வொரு படியிலும் ஈவை இருமடங்காக்கி அடுத்த வகுத்தியை உருவாக்க வேண்டும்."
+  },
+  "c10-3-ex3-8-q1-iii": {
+      "step": 0,
+      "expected": "Insert 0x³ and 0x as placeholders for the missin",
+      "en": "In the long-division square-root method, arrange powers in descending order (inserting 0 for missing powers) and double the current quotient at each stage to form the next trial divisor.",
+      "ta": "வகுத்தல் முறையில் வர்க்கமூலம் காண உறுப்புகளை இறங்கு வரிசையில் அமைத்து, ஒவ்வொரு படியிலும் ஈவை இருமடங்காக்கி அடுத்த வகுத்தியை உருவாக்க வேண்டும்."
+  },
+  "c10-3-ex3-8-q1-iv": {
+      "step": 0,
+      "expected": "The terms are already in descending powers of x.",
+      "en": "In the long-division square-root method, arrange powers in descending order (inserting 0 for missing powers) and double the current quotient at each stage to form the next trial divisor.",
+      "ta": "வகுத்தல் முறையில் வர்க்கமூலம் காண உறுப்புகளை இறங்கு வரிசையில் அமைத்து, ஒவ்வொரு படியிலும் ஈவை இருமடங்காக்கி அடுத்த வகுத்தியை உருவாக்க வேண்டும்."
+  },
+  "c10-3-ex3-8-q2-i": {
+      "step": 0,
+      "expected": "Apply the division method in descending powers o",
+      "en": "In the long-division square-root method, arrange powers in descending order (inserting 0 for missing powers) and double the current quotient at each stage to form the next trial divisor.",
+      "ta": "வகுத்தல் முறையில் வர்க்கமூலம் காண உறுப்புகளை இறங்கு வரிசையில் அமைத்து, ஒவ்வொரு படியிலும் ஈவை இருமடங்காக்கி அடுத்த வகுத்தியை உருவாக்க வேண்டும்."
+  },
+  "c10-3-ex3-8-q2-ii": {
+      "step": 0,
+      "expected": "Notice the unknown coefficients a and b are on t",
+      "en": "In the long-division square-root method, arrange powers in descending order (inserting 0 for missing powers) and double the current quotient at each stage to form the next trial divisor.",
+      "ta": "வகுத்தல் முறையில் வர்க்கமூலம் காண உறுப்புகளை இறங்கு வரிசையில் அமைத்து, ஒவ்வொரு படியிலும் ஈவை இருமடங்காக்கி அடுத்த வகுத்தியை உருவாக்க வேண்டும்."
+  },
+  "c10-3-ex3-8-q3-i": {
+      "step": 0,
+      "expected": "Use the division method in descending powers of",
+      "en": "In the long-division square-root method, arrange powers in descending order (inserting 0 for missing powers) and double the current quotient at each stage to form the next trial divisor.",
+      "ta": "வகுத்தல் முறையில் வர்க்கமூலம் காண உறுப்புகளை இறங்கு வரிசையில் அமைத்து, ஒவ்வொரு படியிலும் ஈவை இருமடங்காக்கி அடுத்த வகுத்தியை உருவாக்க வேண்டும்."
+  },
+  "c10-3-ex3-8-q3-ii": {
+      "step": 0,
+      "expected": "Begin the division method in descending powers o",
+      "en": "In the long-division square-root method, arrange powers in descending order (inserting 0 for missing powers) and double the current quotient at each stage to form the next trial divisor.",
+      "ta": "வகுத்தல் முறையில் வர்க்கமூலம் காண உறுப்புகளை இறங்கு வரிசையில் அமைத்து, ஒவ்வொரு படியிலும் ஈவை இருமடங்காக்கி அடுத்த வகுத்தியை உருவாக்க வேண்டும்."
+  },
+  "c10-3-ex3-9-q1-i": {
+      "step": 0,
+      "expected": "If α and β are the roots of a quadratic equation",
+      "en": "Every quadratic equation with roots α and β factors as k(x − α)(x − β) = 0, which expands to the standard template x² − (α + β)x + αβ = 0 with a minus sign before the sum of roots.",
+      "ta": "α, β மூலங்களைக் கொண்ட இருபடிச் சமன்பாடு (x − α)(x − β) = 0 என்பதால், விரிக்கும்போது மூலங்களின் கூடுதலுக்கு முன் கழித்தல் குறியுடன் x² − (α + β)x + αβ = 0 என அமையும்."
+  },
+  "c10-3-ex3-9-q1-ii": {
+      "step": 0,
+      "expected": "Substitute sum α + β = 5/3 and product αβ = 4 in",
+      "en": "Every quadratic equation with roots α and β factors as k(x − α)(x − β) = 0, which expands to the standard template x² − (α + β)x + αβ = 0 with a minus sign before the sum of roots.",
+      "ta": "α, β மூலங்களைக் கொண்ட இருபடிச் சமன்பாடு (x − α)(x − β) = 0 என்பதால், விரிக்கும்போது மூலங்களின் கூடுதலுக்கு முன் கழித்தல் குறியுடன் x² − (α + β)x + αβ = 0 என அமையும்."
+  },
+  "c10-3-ex3-9-q1-iii": {
+      "step": 0,
+      "expected": "Substitute sum α + β = −3/2 and product αβ = −1",
+      "en": "Every quadratic equation with roots α and β factors as k(x − α)(x − β) = 0, which expands to the standard template x² − (α + β)x + αβ = 0 with a minus sign before the sum of roots.",
+      "ta": "α, β மூலங்களைக் கொண்ட இருபடிச் சமன்பாடு (x − α)(x − β) = 0 என்பதால், விரிக்கும்போது மூலங்களின் கூடுதலுக்கு முன் கழித்தல் குறியுடன் x² − (α + β)x + αβ = 0 என அமையும்."
+  },
+  "c10-3-ex3-9-q1-iv": {
+      "step": 0,
+      "expected": "Use the standard formula x² − (Sum of roots)x +",
+      "en": "Every quadratic equation with roots α and β factors as k(x − α)(x − β) = 0, which expands to the standard template x² − (α + β)x + αβ = 0 with a minus sign before the sum of roots.",
+      "ta": "α, β மூலங்களைக் கொண்ட இருபடிச் சமன்பாடு (x − α)(x − β) = 0 என்பதால், விரிக்கும்போது மூலங்களின் கூடுதலுக்கு முன் கழித்தல் குறியுடன் x² − (α + β)x + αβ = 0 என அமையும்."
+  },
+  "c10-3-ex3-9-q2-i": {
+      "step": 0,
+      "expected": "Compare x² + 3x − 28 = 0 with the general quadra",
+      "en": "Every quadratic equation with roots α and β factors as k(x − α)(x − β) = 0, which expands to the standard template x² − (α + β)x + αβ = 0 with a minus sign before the sum of roots.",
+      "ta": "α, β மூலங்களைக் கொண்ட இருபடிச் சமன்பாடு (x − α)(x − β) = 0 என்பதால், விரிக்கும்போது மூலங்களின் கூடுதலுக்கு முன் கழித்தல் குறியுடன் x² − (α + β)x + αβ = 0 என அமையும்."
+  },
+  "c10-3-ex3-9-q2-ii": {
+      "step": 0,
+      "expected": "Rewrite x² + 3x = 0 as x² + 3x + 0 = 0 and compa",
+      "en": "Every quadratic equation with roots α and β factors as k(x − α)(x − β) = 0, which expands to the standard template x² − (α + β)x + αβ = 0 with a minus sign before the sum of roots.",
+      "ta": "α, β மூலங்களைக் கொண்ட இருபடிச் சமன்பாடு (x − α)(x − β) = 0 என்பதால், விரிக்கும்போது மூலங்களின் கூடுதலுக்கு முன் கழித்தல் குறியுடன் x² − (α + β)x + αβ = 0 என அமையும்."
+  },
+  "c10-3-ex3-9-q2-iii": {
+      "step": 0,
+      "expected": "First bring the equation to standard quadratic f",
+      "en": "Every quadratic equation with roots α and β factors as k(x − α)(x − β) = 0, which expands to the standard template x² − (α + β)x + αβ = 0 with a minus sign before the sum of roots.",
+      "ta": "α, β மூலங்களைக் கொண்ட இருபடிச் சமன்பாடு (x − α)(x − β) = 0 என்பதால், விரிக்கும்போது மூலங்களின் கூடுதலுக்கு முன் கழித்தல் குறியுடன் x² − (α + β)x + αβ = 0 என அமையும்."
+  },
+  "c10-3-ex3-9-q2-iv": {
+      "step": 0,
+      "expected": "Compare 3y² − y − 4 = 0 with ay² + by + c = 0. B",
+      "en": "Every quadratic equation with roots α and β factors as k(x − α)(x − β) = 0, which expands to the standard template x² − (α + β)x + αβ = 0 with a minus sign before the sum of roots.",
+      "ta": "α, β மூலங்களைக் கொண்ட இருபடிச் சமன்பாடு (x − α)(x − β) = 0 என்பதால், விரிக்கும்போது மூலங்களின் கூடுதலுக்கு முன் கழித்தல் குறியுடன் x² − (α + β)x + αβ = 0 என அமையும்."
+  },
+  "c10-3-ex3-10-q1-i": {
+      "step": 0,
+      "expected": "Compare 4x² − 7x − 2 = 0 with ax² + bx + c = 0.",
+      "en": "To solve ax² + bx + c = 0 by factorization, rewrite the middle term bx as two terms whose product equals ac and whose sum equals b, then factor by grouping.",
+      "ta": "ax² + bx + c = 0 என்பதைக் காரணிப்படுத்தித் தீர்க்க, பெருக்கினால் ac மற்றும் கூட்டினால் b வருமாறு நடு உறுப்பு bx-ஐப் பிரித்துப் பொதுக் காரணிகளை எடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-10-q1-ii": {
+      "step": 0,
+      "expected": "Expand both sides cleanly before moving terms: m",
+      "en": "To solve ax² + bx + c = 0 by factorization, rewrite the middle term bx as two terms whose product equals ac and whose sum equals b, then factor by grouping.",
+      "ta": "ax² + bx + c = 0 என்பதைக் காரணிப்படுத்தித் தீர்க்க, பெருக்கினால் ac மற்றும் கூட்டினால் b வருமாறு நடு உறுப்பு bx-ஐப் பிரித்துப் பொதுக் காரணிகளை எடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-10-q1-iii": {
+      "step": 0,
+      "expected": "For √(a(a − 7)) to be a real number, the express",
+      "en": "To solve ax² + bx + c = 0 by factorization, rewrite the middle term bx as two terms whose product equals ac and whose sum equals b, then factor by grouping.",
+      "ta": "ax² + bx + c = 0 என்பதைக் காரணிப்படுத்தித் தீர்க்க, பெருக்கினால் ac மற்றும் கூட்டினால் b வருமாறு நடு உறுப்பு bx-ஐப் பிரித்துப் பொதுக் காரணிகளை எடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-10-q1-iv": {
+      "step": 0,
+      "expected": "Multiply a = √2 and c = 5√2 carefully: √2 × √2 =",
+      "en": "To solve ax² + bx + c = 0 by factorization, rewrite the middle term bx as two terms whose product equals ac and whose sum equals b, then factor by grouping.",
+      "ta": "ax² + bx + c = 0 என்பதைக் காரணிப்படுத்தித் தீர்க்க, பெருக்கினால் ac மற்றும் கூட்டினால் b வருமாறு நடு உறுப்பு bx-ஐப் பிரித்துப் பொதுக் காரணிகளை எடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-10-q1-v": {
+      "step": 0,
+      "expected": "Clear the fraction 1/8 by multiplying EVERY term",
+      "en": "To solve ax² + bx + c = 0 by factorization, rewrite the middle term bx as two terms whose product equals ac and whose sum equals b, then factor by grouping.",
+      "ta": "ax² + bx + c = 0 என்பதைக் காரணிப்படுத்தித் தீர்க்க, பெருக்கினால் ac மற்றும் கூட்டினால் b வருமாறு நடு உறுப்பு bx-ஐப் பிரித்துப் பொதுக் காரணிகளை எடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-10-q2": {
+      "step": 0,
+      "expected": "Substitute G(n) = 15 into the given formula G(n)",
+      "en": "To solve ax² + bx + c = 0 by factorization, rewrite the middle term bx as two terms whose product equals ac and whose sum equals b, then factor by grouping.",
+      "ta": "ax² + bx + c = 0 என்பதைக் காரணிப்படுத்தித் தீர்க்க, பெருக்கினால் ac மற்றும் கூட்டினால் b வருமாறு நடு உறுப்பு bx-ஐப் பிரித்துப் பொதுக் காரணிகளை எடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-11-q1-i": {
+      "step": 0,
+      "expected": "To complete the square, first make the coefficie",
+      "en": "Completing the square requires the coefficient of x² to be 1 first (divide by a), so adding (b/2a)² to both sides turns the left side into an exact square (x + b/2a)².",
+      "ta": "வர்க்கப் பூர்த்தி முறையில் முதலில் x²-இன் கெழுவை 1 ஆக்க a-ஆல் வகுத்து, பின் இருபுறமும் (b/2a)² கூட்டினால் இடப்பக்கம் முழு வர்க்கமாக (x + b/2a)² மாறும்."
+  },
+  "c10-3-ex3-11-q1-ii": {
+      "step": 0,
+      "expected": "Note that x ≠ 1 so the denominator (x − 1) is ne",
+      "en": "Completing the square requires the coefficient of x² to be 1 first (divide by a), so adding (b/2a)² to both sides turns the left side into an exact square (x + b/2a)².",
+      "ta": "வர்க்கப் பூர்த்தி முறையில் முதலில் x²-இன் கெழுவை 1 ஆக்க a-ஆல் வகுத்து, பின் இருபுறமும் (b/2a)² கூட்டினால் இடப்பக்கம் முழு வர்க்கமாக (x + b/2a)² மாறும்."
+  },
+  "c10-3-ex3-11-q2-i": {
+      "step": 0,
+      "expected": "Compare 2x² − 5x + 2 = 0 with ax² + bx + c = 0.",
+      "en": "Completing the square requires the coefficient of x² to be 1 first (divide by a), so adding (b/2a)² to both sides turns the left side into an exact square (x + b/2a)².",
+      "ta": "வர்க்கப் பூர்த்தி முறையில் முதலில் x²-இன் கெழுவை 1 ஆக்க a-ஆல் வகுத்து, பின் இருபுறமும் (b/2a)² கூட்டினால் இடப்பக்கம் முழு வர்க்கமாக (x + b/2a)² மாறும்."
+  },
+  "c10-3-ex3-11-q2-ii": {
+      "step": 0,
+      "expected": "Compare √2 f² − 6f + 3√2 = 0 with af² + bf + c =",
+      "en": "Completing the square requires the coefficient of x² to be 1 first (divide by a), so adding (b/2a)² to both sides turns the left side into an exact square (x + b/2a)².",
+      "ta": "வர்க்கப் பூர்த்தி முறையில் முதலில் x²-இன் கெழுவை 1 ஆக்க a-ஆல் வகுத்து, பின் இருபுறமும் (b/2a)² கூட்டினால் இடப்பக்கம் முழு வர்க்கமாக (x + b/2a)² மாறும்."
+  },
+  "c10-3-ex3-11-q2-iii": {
+      "step": 0,
+      "expected": "Compare 3y² − 20y − 23 = 0 with ay² + by + c = 0",
+      "en": "Completing the square requires the coefficient of x² to be 1 first (divide by a), so adding (b/2a)² to both sides turns the left side into an exact square (x + b/2a)².",
+      "ta": "வர்க்கப் பூர்த்தி முறையில் முதலில் x²-இன் கெழுவை 1 ஆக்க a-ஆல் வகுத்து, பின் இருபுறமும் (b/2a)² கூட்டினால் இடப்பக்கம் முழு வர்க்கமாக (x + b/2a)² மாறும்."
+  },
+  "c10-3-ex3-11-q2-iv": {
+      "step": 0,
+      "expected": "Here the quadratic variable is y while a and b a",
+      "en": "Completing the square requires the coefficient of x² to be 1 first (divide by a), so adding (b/2a)² to both sides turns the left side into an exact square (x + b/2a)².",
+      "ta": "வர்க்கப் பூர்த்தி முறையில் முதலில் x²-இன் கெழுவை 1 ஆக்க a-ஆல் வகுத்து, பின் இருபுறமும் (b/2a)² கூட்டினால் இடப்பக்கம் முழு வர்க்கமாக (x + b/2a)² மாறும்."
+  },
+  "c10-3-ex3-11-q3": {
+      "step": 0,
+      "expected": "Substitute d = 11.25 into d = t² − 0.75t. To rem",
+      "en": "Completing the square requires the coefficient of x² to be 1 first (divide by a), so adding (b/2a)² to both sides turns the left side into an exact square (x + b/2a)².",
+      "ta": "வர்க்கப் பூர்த்தி முறையில் முதலில் x²-இன் கெழுவை 1 ஆக்க a-ஆல் வகுத்து, பின் இருபுறமும் (b/2a)² கூட்டினால் இடப்பக்கம் முழு வர்க்கமாக (x + b/2a)² மாறும்."
+  },
+  "c10-3-ex3-12-q1": {
+      "step": 0,
+      "expected": "Let the required non-zero number be x; its recip",
+      "en": "Translating the physical condition into a standard quadratic equation ax² + bx + c = 0 lets us find both algebraic roots and then check which root satisfies non-negative physical constraints.",
+      "ta": "கணக்கின் நிபந்தனையை ax² + bx + c = 0 என்ற இருபடிச் சமன்பாடாக மாற்றித் தீர்த்த பின், நீளம், வேகம், எண்ணிக்கை போன்றவை குறையாக இருக்காது என்ற நிபந்தனையால் தகுந்த மூலத்தைத் தேர்ந்தெடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-12-q2": {
+      "step": 0,
+      "expected": "Because the pathway goes all the way around (bot",
+      "en": "Translating the physical condition into a standard quadratic equation ax² + bx + c = 0 lets us find both algebraic roots and then check which root satisfies non-negative physical constraints.",
+      "ta": "கணக்கின் நிபந்தனையை ax² + bx + c = 0 என்ற இருபடிச் சமன்பாடாக மாற்றித் தீர்த்த பின், நீளம், வேகம், எண்ணிக்கை போன்றவை குறையாக இருக்காது என்ற நிபந்தனையால் தகுந்த மூலத்தைத் தேர்ந்தெடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-12-q3": {
+      "step": 0,
+      "expected": "Let the original speed be x km/hr (x > 0). Using",
+      "en": "Translating the physical condition into a standard quadratic equation ax² + bx + c = 0 lets us find both algebraic roots and then check which root satisfies non-negative physical constraints.",
+      "ta": "கணக்கின் நிபந்தனையை ax² + bx + c = 0 என்ற இருபடிச் சமன்பாடாக மாற்றித் தீர்த்த பின், நீளம், வேகம், எண்ணிக்கை போன்றவை குறையாக இருக்காது என்ற நிபந்தனையால் தகுந்த மூலத்தைத் தேர்ந்தெடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-12-q4": {
+      "step": 0,
+      "expected": "Let the sister’s present age be x years; then th",
+      "en": "Translating the physical condition into a standard quadratic equation ax² + bx + c = 0 lets us find both algebraic roots and then check which root satisfies non-negative physical constraints.",
+      "ta": "கணக்கின் நிபந்தனையை ax² + bx + c = 0 என்ற இருபடிச் சமன்பாடாக மாற்றித் தீர்த்த பின், நீளம், வேகம், எண்ணிக்கை போன்றவை குறையாக இருக்காது என்ற நிபந்தனையால் தகுந்த மூலத்தைத் தேர்ந்தெடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-12-q5": {
+      "step": 0,
+      "expected": "Let the pole be at point R on the circle boundar",
+      "en": "Translating the physical condition into a standard quadratic equation ax² + bx + c = 0 lets us find both algebraic roots and then check which root satisfies non-negative physical constraints.",
+      "ta": "கணக்கின் நிபந்தனையை ax² + bx + c = 0 என்ற இருபடிச் சமன்பாடாக மாற்றித் தீர்த்த பின், நீளம், வேகம், எண்ணிக்கை போன்றவை குறையாக இருக்காது என்ற நிபந்தனையால் தகுந்த மூலத்தைத் தேர்ந்தெடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-12-q6": {
+      "step": 0,
+      "expected": "Total number of bees = 2x² (with x > 0 as a posi",
+      "en": "Translating the physical condition into a standard quadratic equation ax² + bx + c = 0 lets us find both algebraic roots and then check which root satisfies non-negative physical constraints.",
+      "ta": "கணக்கின் நிபந்தனையை ax² + bx + c = 0 என்ற இருபடிச் சமன்பாடாக மாற்றித் தீர்த்த பின், நீளம், வேகம், எண்ணிக்கை போன்றவை குறையாக இருக்காது என்ற நிபந்தனையால் தகுந்த மூலத்தைத் தேர்ந்தெடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-12-q7": {
+      "step": 0,
+      "expected": "Let the person stand at a distance x m from the",
+      "en": "Translating the physical condition into a standard quadratic equation ax² + bx + c = 0 lets us find both algebraic roots and then check which root satisfies non-negative physical constraints.",
+      "ta": "கணக்கின் நிபந்தனையை ax² + bx + c = 0 என்ற இருபடிச் சமன்பாடாக மாற்றித் தீர்த்த பின், நீளம், வேகம், எண்ணிக்கை போன்றவை குறையாக இருக்காது என்ற நிபந்தனையால் தகுந்த மூலத்தைத் தேர்ந்தெடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-12-q8": {
+      "step": 0,
+      "expected": "Let the width of the gravel path be w m (with 0",
+      "en": "Translating the physical condition into a standard quadratic equation ax² + bx + c = 0 lets us find both algebraic roots and then check which root satisfies non-negative physical constraints.",
+      "ta": "கணக்கின் நிபந்தனையை ax² + bx + c = 0 என்ற இருபடிச் சமன்பாடாக மாற்றித் தீர்த்த பின், நீளம், வேகம், எண்ணிக்கை போன்றவை குறையாக இருக்காது என்ற நிபந்தனையால் தகுந்த மூலத்தைத் தேர்ந்தெடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-12-q9": {
+      "step": 0,
+      "expected": "Let one leg of the right triangle be x cm and th",
+      "en": "Translating the physical condition into a standard quadratic equation ax² + bx + c = 0 lets us find both algebraic roots and then check which root satisfies non-negative physical constraints.",
+      "ta": "கணக்கின் நிபந்தனையை ax² + bx + c = 0 என்ற இருபடிச் சமன்பாடாக மாற்றித் தீர்த்த பின், நீளம், வேகம், எண்ணிக்கை போன்றவை குறையாக இருக்காது என்ற நிபந்தனையால் தகுந்த மூலத்தைத் தேர்ந்தெடுக்க வேண்டும்."
+  },
+  "c10-3-ex3-13-q1-i": {
+      "step": 0,
+      "expected": "Compare the given equation 15x² + 11x + 2 = 0 wi",
+      "en": "Comparing with ax² + bx + c = 0 identifies coefficients a, b, c with their signs so the discriminant Δ = b² − 4ac immediately determines whether the roots are real and unequal, real and equal, or non-real.",
+      "ta": "ax² + bx + c = 0 உடன் ஒப்பிட்டு a, b, c மதிப்புகளைக் குறியுடன் எடுப்பதால் தன்மைக்காட்டி Δ = b² − 4ac மூலம் மூலங்களின் தன்மையை உடனடியாகத் தீர்மானிக்கலாம்."
+  },
+  "c10-3-ex3-13-q1-ii": {
+      "step": 0,
+      "expected": "Compare x² − x − 1 = 0 with the standard quadrat",
+      "en": "Comparing with ax² + bx + c = 0 identifies coefficients a, b, c with their signs so the discriminant Δ = b² − 4ac immediately determines whether the roots are real and unequal, real and equal, or non-real.",
+      "ta": "ax² + bx + c = 0 உடன் ஒப்பிட்டு a, b, c மதிப்புகளைக் குறியுடன் எடுப்பதால் தன்மைக்காட்டி Δ = b² − 4ac மூலம் மூலங்களின் தன்மையை உடனடியாகத் தீர்மானிக்கலாம்."
+  },
+  "c10-3-ex3-13-q1-iii": {
+      "step": 0,
+      "expected": "Compare √2 t² − 3t + 3√2 = 0 with the standard q",
+      "en": "Comparing with ax² + bx + c = 0 identifies coefficients a, b, c with their signs so the discriminant Δ = b² − 4ac immediately determines whether the roots are real and unequal, real and equal, or non-real.",
+      "ta": "ax² + bx + c = 0 உடன் ஒப்பிட்டு a, b, c மதிப்புகளைக் குறியுடன் எடுப்பதால் தன்மைக்காட்டி Δ = b² − 4ac மூலம் மூலங்களின் தன்மையை உடனடியாகத் தீர்மானிக்கலாம்."
+  },
+  "c10-3-ex3-13-q1-iv": {
+      "step": 0,
+      "expected": "Compare 9y² − 6√2 y + 2 = 0 with the standard qu",
+      "en": "Comparing with ax² + bx + c = 0 identifies coefficients a, b, c with their signs so the discriminant Δ = b² − 4ac immediately determines whether the roots are real and unequal, real and equal, or non-real.",
+      "ta": "ax² + bx + c = 0 உடன் ஒப்பிட்டு a, b, c மதிப்புகளைக் குறியுடன் எடுப்பதால் தன்மைக்காட்டி Δ = b² − 4ac மூலம் மூலங்களின் தன்மையை உடனடியாகத் தீர்மானிக்கலாம்."
+  },
+  "c10-3-ex3-13-q1-v": {
+      "step": 0,
+      "expected": "Because the letters a, b, c, d already appear in",
+      "en": "Comparing with ax² + bx + c = 0 identifies coefficients a, b, c with their signs so the discriminant Δ = b² − 4ac immediately determines whether the roots are real and unequal, real and equal, or non-real.",
+      "ta": "ax² + bx + c = 0 உடன் ஒப்பிட்டு a, b, c மதிப்புகளைக் குறியுடன் எடுப்பதால் தன்மைக்காட்டி Δ = b² − 4ac மூலம் மூலங்களின் தன்மையை உடனடியாகத் தீர்மானிக்கலாம்."
+  },
+  "c10-3-ex3-13-q2-i": {
+      "step": 0,
+      "expected": "Compare (5k − 6)x² + 2kx + 1 = 0 with the standa",
+      "en": "Comparing with ax² + bx + c = 0 identifies coefficients a, b, c with their signs so the discriminant Δ = b² − 4ac immediately determines whether the roots are real and unequal, real and equal, or non-real.",
+      "ta": "ax² + bx + c = 0 உடன் ஒப்பிட்டு a, b, c மதிப்புகளைக் குறியுடன் எடுப்பதால் தன்மைக்காட்டி Δ = b² − 4ac மூலம் மூலங்களின் தன்மையை உடனடியாகத் தீர்மானிக்கலாம்."
+  },
+  "c10-3-ex3-13-q2-ii": {
+      "step": 0,
+      "expected": "Compare kx² + (6k + 2)x + 16 = 0 with ax² + bx +",
+      "en": "Comparing with ax² + bx + c = 0 identifies coefficients a, b, c with their signs so the discriminant Δ = b² − 4ac immediately determines whether the roots are real and unequal, real and equal, or non-real.",
+      "ta": "ax² + bx + c = 0 உடன் ஒப்பிட்டு a, b, c மதிப்புகளைக் குறியுடன் எடுப்பதால் தன்மைக்காட்டி Δ = b² − 4ac மூலம் மூலங்களின் தன்மையை உடனடியாகத் தீர்மானிக்கலாம்."
+  },
+  "c10-3-ex3-13-q3": {
+      "step": 0,
+      "expected": "Because a, b, and c appear in the given equation",
+      "en": "Comparing with ax² + bx + c = 0 identifies coefficients a, b, c with their signs so the discriminant Δ = b² − 4ac immediately determines whether the roots are real and unequal, real and equal, or non-real.",
+      "ta": "ax² + bx + c = 0 உடன் ஒப்பிட்டு a, b, c மதிப்புகளைக் குறியுடன் எடுப்பதால் தன்மைக்காட்டி Δ = b² − 4ac மூலம் மூலங்களின் தன்மையை உடனடியாகத் தீர்மானிக்கலாம்."
+  },
+  "c10-3-ex3-13-q4": {
+      "step": 0,
+      "expected": "Use capital letters A, B, and C for the coeffici",
+      "en": "Comparing with ax² + bx + c = 0 identifies coefficients a, b, c with their signs so the discriminant Δ = b² − 4ac immediately determines whether the roots are real and unequal, real and equal, or non-real.",
+      "ta": "ax² + bx + c = 0 உடன் ஒப்பிட்டு a, b, c மதிப்புகளைக் குறியுடன் எடுப்பதால் தன்மைக்காட்டி Δ = b² − 4ac மூலம் மூலங்களின் தன்மையை உடனடியாகத் தீர்மானிக்கலாம்."
+  },
+  "c10-3-ex3-13-q5": {
+      "step": 0,
+      "expected": "Write the equation in standard quadratic form Ax",
+      "en": "Comparing with ax² + bx + c = 0 identifies coefficients a, b, c with their signs so the discriminant Δ = b² − 4ac immediately determines whether the roots are real and unequal, real and equal, or non-real.",
+      "ta": "ax² + bx + c = 0 உடன் ஒப்பிட்டு a, b, c மதிப்புகளைக் குறியுடன் எடுப்பதால் தன்மைக்காட்டி Δ = b² − 4ac மூலம் மூலங்களின் தன்மையை உடனடியாகத் தீர்மானிக்கலாம்."
+  },
+  "c10-3-ex3-14-q1-i": {
+      "step": 0,
+      "expected": "Here α and β represent the two roots of a quadra",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q1-ii": {
+      "step": 0,
+      "expected": "Here α and β are non-zero roots, α + β is the su",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q1-iii": {
+      "step": 0,
+      "expected": "Here α and β represent the two roots, α + β is t",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q1-iv": {
+      "step": 0,
+      "expected": "Here α and β are non-zero roots, α + β is the su",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q2-i": {
+      "step": 0,
+      "expected": "Compare 2x² − 7x + 5 = 0 with the standard quadr",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q2-ii": {
+      "step": 0,
+      "expected": "Compare 2x² − 7x + 5 = 0 with ax² + bx + c = 0 (",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q2-iii": {
+      "step": 0,
+      "expected": "From 2x² − 7x + 5 = 0 (with a = 2, b = −7, c = 5",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q3-i": {
+      "step": 0,
+      "expected": "Compare x² + 6x − 4 = 0 with ax² + bx + c = 0 (a",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q3-ii": {
+      "step": 0,
+      "expected": "From x² + 6x − 4 = 0 (with a = 1, b = 6, c = −4)",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q3-iii": {
+      "step": 0,
+      "expected": "From x² + 6x − 4 = 0 (with a = 1, b = 6, c = −4)",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q4": {
+      "step": 0,
+      "expected": "Because the letter a is the unknown coefficient",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q5": {
+      "step": 0,
+      "expected": "Write 2y² − ay + 64 = 0 in standard form Ay² + B",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
+  },
+  "c10-3-ex3-14-q6": {
+      "step": 0,
+      "expected": "Compare 3x² + kx + 81 = 0 with ax² + bx + c = 0",
+      "en": "By Vieta's formulas, α + β = −b/a and αβ = c/a; rewriting symmetric expressions like α² + β² = (α + β)² − 2αβ evaluates them directly from the coefficients without finding individual roots.",
+      "ta": "வியட்டாவின் சூத்திரப்படி α + β = −b/a மற்றும் αβ = c/a; எனவே α² + β² = (α + β)² − 2αβ போன்ற சமச்சீர் கோவைகளை மூலங்களைத் தனித்தனியே காணாமலேயே கெழுக்களிலிருந்து கணக்கிடலாம்."
   }
 };
 for(const [id,entry] of Object.entries(additional)){

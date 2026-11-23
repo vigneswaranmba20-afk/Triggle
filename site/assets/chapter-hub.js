@@ -578,7 +578,7 @@
           '<p class="g10ch4-intro">'+typeset(pick(stage.understand?.intro))+'</p>'+
           '<ul class="g10ch4-symbol-list">'+symbolsHtml+'</ul>'+
           (stage.understand?.watchOut?'<p class="g10ch4-watchout">'+typeset(pick(stage.understand.watchOut))+'</p>':'')+
-          '<small class="sp2-stage-reference">'+e(labels.ref)+e(stage.section||'')+'</small></section>'+
+          '<small class="sp2-stage-reference">'+e(labels.ref)+e(stage.section||'')+(stage.page?.en?' · EN p.'+e(stage.page.en):'')+(stage.page?.ta?' · TA p.'+e(stage.page.ta):'')+'</small></section>'+
           '<section class="g10ch4-card" aria-label="'+e(labels.s4)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">4</span><h5 class="g10ch4-card-kicker">'+e(labels.s4)+'</h5></div>'+
           '<ol class="g10ch4-proof-list">'+proofHtml+'</ol></section>'+
           '<section class="g10ch4-card" aria-label="'+e(labels.s5)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">5</span><h5 class="g10ch4-card-kicker">'+e(labels.s5)+'</h5></div>'+
@@ -622,12 +622,11 @@
        '<div class="sp2-formula" role="group" aria-label="'+e(ta?'கணிதக் கருத்து':'Mathematical idea')+'">'+
        (stage.math?.latex?window.TriggleNotation.renderLatex(stage.math.latex,{displayMode:true,fallback:stage.math.fallback||pick(stage.rule)}):typeset(pick(stage.rule)))+'</div>')+
        (stage.visual&&!isG9Mensuration?'<div data-g10ch2-visual></div>':'')+
-       (['g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch2-bezout','g10-ch2-gp-infinite','g10-ch2-special'].includes(stage.id)?'':
        '<div class="sp2-lesson-note" aria-label="'+e(ta?'கருத்து விளக்கம்':'Concept explanation')+'">'+
        '<p class="sp2-idea">'+typeset(pick(stage.idea))+'</p>'+
        '<p class="sp2-example">'+typeset(pick(stage.example))+'</p>'+
        (stage.exampleMath?'<div class="sp2-example-math">'+displayMath(stage.exampleMath)+'</div>':'')+
-       '<small class="sp2-stage-reference">'+e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+(stage.page?.en?' · EN p.'+e(stage.page.en):'')+(stage.page?.ta?' · TA p.'+e(stage.page.ta):'')+'</small></div>')+
+       '<small class="sp2-stage-reference">'+e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+(stage.page?.en?' · EN p.'+e(stage.page.en):'')+(stage.page?.ta?' · TA p.'+e(stage.page.ta):'')+'</small></div>'+
        deepDiveHtml+
        (choices.length?'<div class="sp2-recall"><h5>'+e(ta?'நீங்களே முயற்சிக்கவும்':'Try it yourself')+'</h5>'+
        '<p>'+typeset(pick(stage.question))+'</p>'+
@@ -640,19 +639,25 @@
       if(stage.video)attachStageVideo(panel,stage,lang);
       const related=stage.practiceId&&chapterQuestions.find(q=>q.id===stage.practiceId);
       const secondary=stage.secondaryPracticeId&&chapterQuestions.find(q=>q.id===stage.secondaryPracticeId);
+      const tertiary=stage.tertiaryPracticeId&&chapterQuestions.find(q=>q.id===stage.tertiaryPracticeId);
       if(related&&typeof onQuestion==='function'){
         if(isCh3){
           const row=document.createElement('div');row.className='g10ch3-exercise-row';
-          [related,secondary].filter(Boolean).forEach(qItem=>{
+          [related,secondary,tertiary].filter(Boolean).forEach(qItem=>{
             const button=document.createElement('button');button.type='button';button.className='g10ch2-practice-link';
             button.textContent=ta?'பாடநூல் பயிற்சி '+qItem.exercise+'-ஐத் தீர்ப்போம் →':'Try Exercise '+qItem.exercise+' in Triggle →';
             button.onclick=()=>onQuestion(qItem);row.append(button);
           });
           panel.append(row);
         }else{
-          const button=document.createElement('button');button.type='button';
-          button.className='g10ch2-practice-link';button.textContent=ta?'பாடநூல் பயிற்சியைத் தீர்ப்போம் →':'Try the related textbook exercise →';
-          button.onclick=()=>onQuestion(related);panel.append(button);
+          [related,secondary].filter(Boolean).forEach(qItem=>{
+            const button=document.createElement('button');button.type='button';
+            button.className='g10ch2-practice-link';
+            button.textContent=secondary
+              ?(ta?'பாடநூல் பயிற்சி '+qItem.exercise+'-ஐத் தீர்ப்போம் →':'Try Exercise '+qItem.exercise+' in Triggle →')
+              :(ta?'பாடநூல் பயிற்சியைத் தீர்ப்போம் →':'Try the related textbook exercise →');
+            button.onclick=()=>onQuestion(qItem);panel.append(button);
+          });
         }
       }else if(isCh3&&stage.relatedExercise){
         const ref=document.createElement('p');ref.className='g10ch3-exercise-note';

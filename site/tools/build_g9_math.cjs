@@ -114,7 +114,7 @@ function rich(source,{display=false}={}){
  const pushText=text=>{if(!text)return;if(typeof segments.at(-1)==='string')segments[segments.length-1]+=text;else segments.push(text);};
  while(index<tokens.length){
   const t=tokens[index];
-  if(!allowed(t.text)||protectedRanges.some(([a,b])=>t.start>=a&&t.start<b)){index++;continue;}
+  if(!allowed(t.text)||protectedRanges.some(([a,b])=>t.start>=a&&t.start<b)||(t.text==='s'&&/[’']/.test(source[t.start-1]||'')&&/[A-Za-z]/.test(source[t.start-2]||''))){index++;continue;}
   let end=index+1;
   while(end<tokens.length&&allowed(tokens[end].text)&&!protectedRanges.some(([a,b])=>tokens[end].start>=a&&tokens[end].start<b))end++;
   const a=t.start;let b=tokens[end-1].end,raw=source.slice(a,b),body=raw.trim();

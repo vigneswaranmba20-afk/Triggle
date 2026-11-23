@@ -241,7 +241,8 @@
     wrap.append(svgEl('circle',{cx:x,cy:y,r:14,fill:'transparent'}));
     wrap.append(svgEl('circle',{cx:x,cy:y,r:6.2,fill:color,stroke:'#FFFFFF','stroke-width':2}));
     const nearRightEdge=x>g.ownerSVGElement.viewBox.baseVal.width-58;
-    wrap.append(svgEl('text',{x:x+(nearRightEdge?-11:11),y:y-9,'text-anchor':nearRightEdge?'end':'start',
+    const nearXAxisTicks=y>=114&&y<=134;
+    wrap.append(svgEl('text',{x:x+(nearRightEdge?-11:11),y:y+(nearXAxisTicks?15:-9),'text-anchor':nearRightEdge?'end':'start',
       fill:color,stroke:'#FDFCF9','stroke-width':3,'stroke-linejoin':'round','paint-order':'stroke',
       'font-size':10.5,'font-weight':800},label));
     g.append(wrap);

@@ -339,7 +339,7 @@ const LAYOUT={
       [
         "2\\rightarrow 1",
         "4\\rightarrow 2",
-        "\\text{points} (2,1),(4,2)"
+        "\\text{points }(2,1),(4,2)"
       ],
       [
         "x=1,2,3,4,5,6"
@@ -369,7 +369,7 @@ const LAYOUT={
         "100000\\rightarrow E_{1},E_{2}"
       ],
       [
-        "5+4+3+2=14 \\text{ordered pairs}"
+        "5+4+3+2=14\\text{ ordered pairs}"
       ]
     ],
     "answer": [
@@ -638,7 +638,7 @@ const LAYOUT={
     ],
     "answer": [
       "\\begin{aligned}&\\text{Pairs}=\\{(2,0), (4,1), (6,2)\\\\&\\quad (10,4), (12,5)\\}\\end{aligned}",
-      "\\text{table} x:2,4,6,10,12",
+      "\\text{table }x:2,4,6,10,12",
       "f(x):0,1,2,4,5",
       "\\text{arrows and graph use the same five pairs.}"
     ]
@@ -662,7 +662,7 @@ const LAYOUT={
     ],
     "answer": [
       "\\text{Arrows }1\\rightarrow 2,2\\rightarrow 2,3\\rightarrow 2,4\\rightarrow 3,5\\rightarrow 4",
-      "\\text{table} x:1,2,3,4,5",
+      "\\text{table }x:1,2,3,4,5",
       "f(x):2,2,2,3,4",
       "\\text{graph points as given.}"
     ]
@@ -1194,7 +1194,7 @@ const LAYOUT={
       ]
     ],
     "answer": [
-      "(C) \\text{One-to-one} \\text{function}"
+      "(C) \\text{One-to-one function}"
     ]
   },
   "c10-1-1-6-q10": {
@@ -1466,7 +1466,7 @@ const LAYOUT={
         "x-9\\ne 0 \\Rightarrow  x\\ne 9"
       ],
       [
-        "4x^{2}+1\\ge 1>0 \\Rightarrow  \\text{domain} \\mathbb{R}"
+        "4x^{2}+1\\ge 1>0 \\Rightarrow  \\text{domain }\\mathbb{R}"
       ],
       [
         "x-2\\ge 0 \\Rightarrow  x\\ge 2"
@@ -1526,6 +1526,12 @@ const QUESTIONS={
       "f(x)=\\dfrac x2-1"
     ]
   ],
+  "c10-1-1-4-q9": [
+    [
+      "f(x)={x+2 if x>1; 2 if −1≤x≤1; x−1 if −3<x<−1}",
+      "f(x)=\\begin{cases}x+2,&x>1\\\\2,&-1\\le x\\le1\\\\x-1,&-3<x<-1\\end{cases}"
+    ]
+  ],
   "c10-1-1-4-q10": [
     [
       "f(x)={6x+1 if −5≤x<2; 5x²−1 if 2≤x<6; 3x−4 if 6≤x≤9}",
@@ -1562,6 +1568,16 @@ const QUESTIONS={
     [
       "g(x)=(x+1)/2",
       "g(x)=\\dfrac{x+1}2"
+    ]
+  ],
+  "c10-1-1-6-q7": [
+    [
+      "2^(mn)−1",
+      "2^{mn}-1"
+    ],
+    [
+      "2^(mn)",
+      "2^{mn}"
     ]
   ],
   "c10-1-1-6-q10": [

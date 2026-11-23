@@ -6,11 +6,12 @@
 (()=>{'use strict';
 window.TRIGGLE_G10_CH2_PATH={
   "chapterId": "g10-ch2",
-  "source": "Tamil Nadu Standard Ten Mathematics, revised 2025, Ch 2 pp. 37–82",
+  "source": "Tamil Nadu Standard Ten Mathematics, revised 2025, Ch 2 pp. 36–84 (EN) & pp. 37–85 (TA)",
   "tamilStatus": "draft, editorial review pending",
   "stages": [
     {
       "id": "g10-ch2-division",
+      "page": { "en": "37–39", "ta": "38–40" },
       "practiceId": "c10-2-ex2-1-q1",
       "section": "2.2",
       "title": {
@@ -83,6 +84,7 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-gcd",
+      "page": { "en": "39–43", "ta": "40–44" },
       "practiceId": "c10-2-ex2-1-q6",
       "section": "2.3",
       "title": {
@@ -160,6 +162,7 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-bezout",
+      "page": { "en": "40–43", "ta": "41–44" },
       "practiceId": "c10-2-ex2-1-q8",
       "section": "2.3",
       "title": {
@@ -236,6 +239,7 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-primes",
+      "page": { "en": "43–46", "ta": "44–47" },
       "practiceId": "c10-2-ex2-2-q6",
       "section": "2.4",
       "title": {
@@ -311,6 +315,8 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-modulo",
+      "practiceId": "c10-2-ex2-3-q5",
+      "page": { "en": "46–51", "ta": "47–52" },
       "section": "2.5",
       "title": {
         "en": "A clock is a number loop",
@@ -401,6 +407,8 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-congruence",
+      "practiceId": "c10-2-ex2-3-q1",
+      "page": { "en": "47–51", "ta": "48–52" },
       "section": "2.5",
       "title": {
         "en": "Same remainder means congruent",
@@ -477,6 +485,8 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-sequence",
+      "practiceId": "c10-2-ex2-4-q2-i",
+      "page": { "en": "52–55", "ta": "53–56" },
       "section": "2.6",
       "title": {
         "en": "A sequence is an ordered pattern",
@@ -557,6 +567,8 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-recursive",
+      "practiceId": "c10-2-ex2-4-q6",
+      "page": { "en": "54–55", "ta": "55–56" },
       "section": "2.6",
       "title": {
         "en": "A rule can refer to earlier terms",
@@ -635,6 +647,8 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-ap",
+      "practiceId": "c10-2-ex2-5-q1-i",
+      "page": { "en": "56–62", "ta": "57–63" },
       "section": "2.7",
       "title": {
         "en": "Arithmetic progression: add the same difference",
@@ -645,8 +659,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "கூட்டுத்தொடர் வரிசையில் (A.P.) அடுத்த உறுப்பிலிருந்து முந்தைய உறுப்பைக் கழியுங்கள். கிடைக்கும் பொது வித்தியாசம் d எப்போதும் ஒன்றே. அது நேர்மமாகவோ, பூச்சியமாகவோ, எதிர்மமாகவோ இருக்கலாம். விதியில் a என்பது முதல் உறுப்பு."
       },
       "example": {
-        "en": "9, 13, 17, 21 has a common difference of 4. The differences 4, 4, 4 confirm it.",
-        "ta": "9, 13, 17, 21-இல் பொதுவேறுபாடு 4. வேறுபாடுகள் 4, 4, 4 என்பதால் இது கூட்டுத்தொடர்."
+        "en": "9, 13, 17, 21 has a common difference of 4. When the sum of 3 consecutive A.P. terms is given, choose them symmetrically as a − d, a, a + d (or a − 3d, a − d, a + d, a + 3d for 4 terms) so d cancels immediately.",
+        "ta": "9, 13, 17, 21-இல் பொதுவேறுபாடு 4. கூட்டுத்தொடரின் 3 அடுத்தடுத்த உறுப்புகளின் கூடுதல் தரப்பட்டால் அவற்றை a − d, a, a + d (4 உறுப்புகளுக்கு a − 3d, a − d, a + d, a + 3d) எனத் தேர்ந்தெடுத்தால் d உடனடியாக நீங்கும்."
       },
       "rule": {
         "en": "a, a+d, a+2d, a+3d",
@@ -711,6 +725,8 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-ap-nth",
+      "practiceId": "c10-2-ex2-5-q4",
+      "page": { "en": "57–62", "ta": "58–63" },
       "section": "2.7",
       "title": {
         "en": "Find any A.P. term without writing every term",
@@ -788,6 +804,8 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-ap-sum",
+      "practiceId": "c10-2-ex2-6-q1",
+      "page": { "en": "62–66", "ta": "63–67" },
       "video": {
         "src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-ap-sum/c3d7df0a9e29b4bb59932525bb4b25be0e84f3c00651ef7dc10feb8042ce4188.mp4",
         "language": "en",
@@ -870,6 +888,8 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-gp",
+      "practiceId": "c10-2-ex2-7-q2",
+      "page": { "en": "67–72", "ta": "68–73" },
       "section": "2.9",
       "title": {
         "en": "Geometric progression: multiply by the same ratio",
@@ -880,8 +900,8 @@ window.TRIGGLE_G10_CH2_PATH={
         "ta": "பெருக்குத்தொடர் வரிசையில் (G.P.) அடுத்த உறுப்பைப் பெற அதே பூச்சியமல்லாத பொது விகிதம் r-ஆல் பெருக்குகிறோம். கூட்டுத்தொடர் வரிசையில் ஒரே வித்தியாசத்தைக் கூட்டுகிறோம். விதியில் a முதல் உறுப்பு, n இடம். முதல் உறுப்பிலிருந்து எத்தனை முறை பெருக்குகிறோம் என்பதை அடுக்கு குறிக்கிறது."
       },
       "example": {
-        "en": "3, 6, 12, 24 has common ratio 2, because each term is double the previous term.",
-        "ta": "3, 6, 12, 24-இன் பொதுவிகிதம் 2. ஒவ்வொரு உறுப்பும் முன் உறுப்பின் இருமடங்கு."
+        "en": "3, 6, 12, 24 has common ratio 2. When the product of 3 consecutive G.P. terms is given, choose them symmetrically as a/r, a, ar so the ratio r cancels immediately when multiplied.",
+        "ta": "3, 6, 12, 24-இன் பொதுவிகிதம் 2. பெருக்குத்தொடரின் 3 அடுத்தடுத்த உறுப்புகளின் பெருக்கற்பலன் தரப்பட்டால் அவற்றை a/r, a, ar எனத் தேர்ந்தெடுத்தால் பெருக்கும்போது r உடனடியாக நீங்கும்."
       },
       "rule": {
         "en": "aₙ = ar⁽ⁿ⁻¹⁾",
@@ -946,6 +966,8 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-gp-sum",
+      "practiceId": "c10-2-ex2-8-q1-i",
+      "page": { "en": "73–77", "ta": "74–78" },
       "video": {
         "src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch2-gp-sum/fa50e19cc4795e55839fedd37a9cb49bff499bbf05ad7ffc6d2772ef9f981977.mp4",
         "language": "en",
@@ -1027,6 +1049,8 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-gp-infinite",
+      "practiceId": "c10-2-ex2-8-q2",
+      "page": { "en": "75–77", "ta": "76–78" },
       "section": "2.10",
       "title": {
         "en": "When an infinite sum can be finite",
@@ -1107,6 +1131,7 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-special",
+      "page": { "en": "77–82", "ta": "78–83" },
       "practiceId": "c10-2-ex2-9-q1-v",
       "section": "2.11",
       "title": {

@@ -173,6 +173,26 @@ window.TRIGGLE_CURRICULUM = {
       "url": "https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view",
       "verification": "verified",
       "evidence": "2025 edition imprint, section/exercise numbering and matching Tamil terminology directly checked in connected Google Drive, 2026-11-08; independent complete Tamil editorial review remains pending."
+    },
+    {
+      "id": "tn-g10-en-2025-drive",
+      "publisher": "Tamil Nadu Textbook and Educational Services Corporation",
+      "title": "Standard Ten Mathematics (2025 Revised Edition)",
+      "medium": "en",
+      "edition": "Revised 2025",
+      "url": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "verification": "verified",
+      "evidence": "2025 edition imprint (PDF p. 2, SHA-256 602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d) and contents (PDF pp. 5–6) directly verified from connected Google Drive; independent teacher review pending."
+    },
+    {
+      "id": "tn-g10-ta-2025-drive",
+      "publisher": "Tamil Nadu Textbook and Educational Services Corporation",
+      "title": "பத்தாம் வகுப்பு கணிதம் (2025 திருத்திய பதிப்பு)",
+      "medium": "ta",
+      "edition": "Revised 2025",
+      "url": "https://drive.google.com/file/d/1l12138-f6mB32Br55-Zq-xm6jj144v0y/view",
+      "verification": "verified",
+      "evidence": "2025 edition imprint (PDF p. 2, SHA-256 6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f) and contents (PDF pp. 5–6) directly verified from connected Google Drive; independent Tamil editorial review pending."
     }
   ],
   "grades": [
@@ -191,12 +211,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g9-en-2019",
-              "locator": "Contents pp iii–iv; chapter 1, printed p1"
+              "sourceId": "tn-g9-en-2025-drive",
+              "locator": "Chapter 1 Set Language, printed pp. 1–40 (PDF pp. 7–46); Exercises 1.1–1.7"
             },
             {
-              "sourceId": "tn-g9-ta-2019",
-              "locator": "Contents pp iii–iv; chapter 1, printed p1"
+              "sourceId": "tn-g9-ta-2025-drive",
+              "locator": "அத்தியாயம் 1 கண மொழி, அச்சுப் பக்கங்கள் 1–42 (PDF pp. 7–48); பயிற்சிகள் 1.1–1.7"
             }
           ],
           "status": "planned",
@@ -265,12 +285,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g9-en-2019",
-              "locator": "Contents pp iii–iv; chapter 3, printed p78"
+              "sourceId": "tn-g9-en-2025-drive",
+              "locator": "Chapter 3 Algebra, printed pp. 78–137 (PDF pp. 84–143); Exercises 3.1–3.15"
             },
             {
-              "sourceId": "tn-g9-ta-2019",
-              "locator": "Contents pp iii–iv; chapter 3, printed p84"
+              "sourceId": "tn-g9-ta-2025-drive",
+              "locator": "அத்தியாயம் 3 இயற்கணிதம், அச்சுப் பக்கங்கள் 84–148 (PDF pp. 90–154); பயிற்சிகள் 3.1–3.15"
             }
           ],
           "status": "planned",
@@ -303,12 +323,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g9-en-2019",
-              "locator": "Contents pp iii–iv; chapter 4, printed p138"
+              "sourceId": "tn-g9-en-2025-drive",
+              "locator": "Chapter 4 Geometry, printed pp. 138–184 (PDF pp. 144–190); Exercises 4.1–4.7"
             },
             {
-              "sourceId": "tn-g9-ta-2019",
-              "locator": "Contents pp iii–iv; chapter 4, printed p149"
+              "sourceId": "tn-g9-ta-2025-drive",
+              "locator": "அத்தியாயம் 4 வடிவியல், அச்சுப் பக்கங்கள் 149–196 (PDF pp. 155–202); பயிற்சிகள் 4.1–4.7"
             }
           ],
           "status": "planned",
@@ -340,12 +360,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g9-en-2019",
-              "locator": "Contents pp iii–iv; chapter 5, printed p185"
+              "sourceId": "tn-g9-en-2025-drive",
+              "locator": "Chapter 5 Coordinate Geometry, printed pp. 185–221 (PDF pp. 191–227); Exercises 5.1–5.6"
             },
             {
-              "sourceId": "tn-g9-ta-2019",
-              "locator": "Contents pp iii–iv; chapter 5, printed p197"
+              "sourceId": "tn-g9-ta-2025-drive",
+              "locator": "அத்தியாயம் 5 ஆயத்தொலை வடிவியல், அச்சுப் பக்கங்கள் 197–235 (PDF pp. 203–241); பயிற்சிகள் 5.1–5.6"
             }
           ],
           "status": "planned",
@@ -377,12 +397,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g9-en-2019",
-              "locator": "Contents pp iii–iv; chapter 6, printed p222"
+              "sourceId": "tn-g9-en-2025-drive",
+              "locator": "Chapter 6 Trigonometry, printed pp. 222–247 (PDF pp. 228–253); Exercises 6.1–6.5"
             },
             {
-              "sourceId": "tn-g9-ta-2019",
-              "locator": "Contents pp iii–iv; chapter 6, printed p236"
+              "sourceId": "tn-g9-ta-2025-drive",
+              "locator": "அத்தியாயம் 6 முக்கோணவியல், அச்சுப் பக்கங்கள் 236–261 (PDF pp. 242–267); பயிற்சிகள் 6.1–6.5"
             }
           ],
           "status": "planned",
@@ -466,12 +486,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g9-en-2019",
-              "locator": "Contents pp iii–iv; chapter 7, printed p248"
+              "sourceId": "tn-g9-en-2025-drive",
+              "locator": "Chapter 7 Mensuration, printed pp. 248–265 (PDF pp. 254–271); Exercises 7.1–7.4"
             },
             {
-              "sourceId": "tn-g9-ta-2019",
-              "locator": "Contents pp iii–iv; chapter 7, printed p262"
+              "sourceId": "tn-g9-ta-2025-drive",
+              "locator": "அத்தியாயம் 7 அளவியல், அச்சுப் பக்கங்கள் 262–280 (PDF pp. 268–286); பயிற்சிகள் 7.1–7.4"
             }
           ],
           "status": "planned",
@@ -503,12 +523,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g9-en-2019",
-              "locator": "Contents pp iii–iv; chapter 8, printed p266"
+              "sourceId": "tn-g9-en-2025-drive",
+              "locator": "Chapter 8 Statistics, printed pp. 266–290 (PDF pp. 272–296); Exercises 8.1–8.4"
             },
             {
-              "sourceId": "tn-g9-ta-2019",
-              "locator": "Contents pp iii–iv; chapter 8, printed p281"
+              "sourceId": "tn-g9-ta-2025-drive",
+              "locator": "அத்தியாயம் 8 புள்ளியியல், அச்சுப் பக்கங்கள் 281–306 (PDF pp. 287–312); பயிற்சிகள் 8.1–8.4"
             }
           ],
           "status": "planned",
@@ -540,12 +560,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g9-en-2019",
-              "locator": "Contents pp iii–iv; chapter 9, printed p291"
+              "sourceId": "tn-g9-en-2025-drive",
+              "locator": "Chapter 9 Probability, printed pp. 291–305 (PDF pp. 297–311); Exercises 9.1–9.3"
             },
             {
-              "sourceId": "tn-g9-ta-2019",
-              "locator": "Contents pp iii–iv; chapter 9, printed p307"
+              "sourceId": "tn-g9-ta-2025-drive",
+              "locator": "அத்தியாயம் 9 நிகழ்தகவு, அச்சுப் பக்கங்கள் 307–322 (PDF pp. 313–328); பயிற்சிகள் 9.1–9.3"
             }
           ],
           "status": "planned",
@@ -582,12 +602,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g10-en-2019",
-              "locator": "Contents pp v–vi; chapter 1, printed p1"
+              "sourceId": "tn-g10-en-2025-drive",
+              "locator": "Chapter 1 Relations and Functions, printed pp. 1–35 (PDF pp. 9–43); Exercises 1.1–1.6 and Unit Exercise 1"
             },
             {
-              "sourceId": "tn-g10-ta-2020",
-              "locator": "Contents pp v–vi; chapter 1, printed p1"
+              "sourceId": "tn-g10-ta-2025-drive",
+              "locator": "அத்தியாயம் 1 உறவுகளும் சார்புகளும், அச்சுப் பக்கங்கள் 1–36 (PDF pp. 9–44); பயிற்சிகள் 1.1–1.6 மற்றும் அலகுப் பயிற்சி 1"
             }
           ],
           "status": "planned",
@@ -617,12 +637,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g10-en-2019",
-              "locator": "Contents pp v–vi; chapter 2, printed p37"
+              "sourceId": "tn-g10-en-2025-drive",
+              "locator": "Chapter 2 Numbers and Sequences, printed pp. 36–84 (PDF pp. 44–92); Exercises 2.1–2.10 and Unit Exercise 2"
             },
             {
-              "sourceId": "tn-g10-ta-2020",
-              "locator": "Contents pp v–vi; chapter 2, printed p37"
+              "sourceId": "tn-g10-ta-2025-drive",
+              "locator": "அத்தியாயம் 2 எண்களும் தொடர்வரிசைகளும், அச்சுப் பக்கங்கள் 37–85 (PDF pp. 45–93); பயிற்சிகள் 2.1–2.10 மற்றும் அலகுப் பயிற்சி 2"
             }
           ],
           "status": "planned",
@@ -654,12 +674,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g10-en-2019",
-              "locator": "Contents pp v–vi; chapter 3, printed p86"
+              "sourceId": "tn-g10-en-2025-drive",
+              "locator": "Chapter 3 Algebra, printed pp. 85–160 (PDF pp. 93–168); Exercises 3.1–3.20 and Unit Exercise 3"
             },
             {
-              "sourceId": "tn-g10-ta-2020",
-              "locator": "Contents pp v–vi; chapter 3, printed p86"
+              "sourceId": "tn-g10-ta-2025-drive",
+              "locator": "அத்தியாயம் 3 இயற்கணிதம், அச்சுப் பக்கங்கள் 86–164 (PDF pp. 94–172); பயிற்சிகள் 3.1–3.20 மற்றும் அலகுப் பயிற்சி 3"
             }
           ],
           "status": "planned",
@@ -691,12 +711,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g10-en-2019",
-              "locator": "Contents pp v–vi; chapter 4, printed p157"
+              "sourceId": "tn-g10-en-2025-drive",
+              "locator": "Chapter 4 Geometry, printed pp. 161–202 (PDF pp. 169–210); Exercises 4.1–4.5 and Unit Exercise 4"
             },
             {
-              "sourceId": "tn-g10-ta-2020",
-              "locator": "Contents pp v–vi; chapter 4, printed p165"
+              "sourceId": "tn-g10-ta-2025-drive",
+              "locator": "அத்தியாயம் 4 வடிவியல், அச்சுப் பக்கங்கள் 165–209 (PDF pp. 173–217); பயிற்சிகள் 4.1–4.5 மற்றும் அலகுப் பயிற்சி 4"
             }
           ],
           "status": "planned",
@@ -726,12 +746,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g10-en-2019",
-              "locator": "Contents pp v–vi; chapter 5, printed p200"
+              "sourceId": "tn-g10-en-2025-drive",
+              "locator": "Chapter 5 Coordinate Geometry, printed pp. 203–238 (PDF pp. 211–246); Exercises 5.1–5.5 and Unit Exercise 5"
             },
             {
-              "sourceId": "tn-g10-ta-2020",
-              "locator": "Contents pp v–vi; chapter 5, printed p210"
+              "sourceId": "tn-g10-ta-2025-drive",
+              "locator": "அத்தியாயம் 5 ஆயத்தொலை வடிவியல், அச்சுப் பக்கங்கள் 210–246 (PDF pp. 218–254); பயிற்சிகள் 5.1–5.5 மற்றும் அலகுப் பயிற்சி 5"
             }
           ],
           "status": "planned",
@@ -763,12 +783,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g10-en-2019",
-              "locator": "Contents pp v–vi; chapter 6, printed p237"
+              "sourceId": "tn-g10-en-2025-drive",
+              "locator": "Chapter 6 Trigonometry, printed pp. 239–268 (PDF pp. 247–276); Exercises 6.1–6.5 and Unit Exercise 6"
             },
             {
-              "sourceId": "tn-g10-ta-2020",
-              "locator": "Contents pp v–vi; chapter 6, printed p247"
+              "sourceId": "tn-g10-ta-2025-drive",
+              "locator": "அத்தியாயம் 6 முக்கோணவியல், அச்சுப் பக்கங்கள் 247–276 (PDF pp. 255–284); பயிற்சிகள் 6.1–6.5 மற்றும் அலகுப் பயிற்சி 6"
             }
           ],
           "status": "planned",
@@ -816,12 +836,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g10-en-2019",
-              "locator": "Contents pp v–vi; chapter 7, printed p267"
+              "sourceId": "tn-g10-en-2025-drive",
+              "locator": "Chapter 7 Mensuration, printed pp. 269–300 (PDF pp. 277–308); Exercises 7.1–7.5 and Unit Exercise 7"
             },
             {
-              "sourceId": "tn-g10-ta-2020",
-              "locator": "Contents pp v–vi; chapter 7, printed p277"
+              "sourceId": "tn-g10-ta-2025-drive",
+              "locator": "அத்தியாயம் 7 அளவியல், அச்சுப் பக்கங்கள் 277–308 (PDF pp. 285–316); பயிற்சிகள் 7.1–7.5 மற்றும் அலகுப் பயிற்சி 7"
             }
           ],
           "status": "planned",
@@ -851,12 +871,12 @@ window.TRIGGLE_CURRICULUM = {
           },
           "sourceRefs": [
             {
-              "sourceId": "tn-g10-en-2019",
-              "locator": "Contents pp v–vi; chapter 8, printed p300"
+              "sourceId": "tn-g10-en-2025-drive",
+              "locator": "Chapter 8 Statistics and Probability, printed pp. 301–335 (PDF pp. 309–343); Exercises 8.1–8.5 and Unit Exercise 8"
             },
             {
-              "sourceId": "tn-g10-ta-2020",
-              "locator": "Contents pp v–vi; chapter 8, printed p309"
+              "sourceId": "tn-g10-ta-2025-drive",
+              "locator": "அத்தியாயம் 8 புள்ளியியலும் நிகழ்தகவும், அச்சுப் பக்கங்கள் 309–345 (PDF pp. 317–353); பயிற்சிகள் 8.1–8.5 மற்றும் அலகுப் பயிற்சி 8"
             }
           ],
           "status": "planned",

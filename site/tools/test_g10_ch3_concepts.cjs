@@ -68,10 +68,13 @@ assert.deepEqual(correctCounts,[4,5,5],'Correct answers remain balanced across o
 /* Verify every linked textbook exercise ID exists in loaded Class 10 data */
 const runtime=loadRuntime();
 const g10Ids=new Set(runtime.classes[10].items.map(i=>i.id));
-const linked=[...pathData.stages.flatMap(s=>[s.practiceId,s.secondaryPracticeId].filter(Boolean))];
+const linked=[...pathData.stages.flatMap(s=>[s.practiceId,s.secondaryPracticeId,s.tertiaryPracticeId].filter(Boolean))];
 assert.deepEqual(linked,[
   'c10-3-ex3-1-q1-i','c10-3-ex3-2-q1-i','c10-3-ex3-3-q2-i',
-  'c10-3-ex3-4-q1-i','c10-3-ex3-5-q1-i','c10-3-ex3-6-q1-i'
+  'c10-3-ex3-4-q1-i','c10-3-ex3-5-q1-i','c10-3-ex3-6-q1-i',
+  'c10-3-ex3-7-q1-i','c10-3-ex3-8-q1-i','c10-3-ex3-9-q1-i',
+  'c10-3-ex3-10-q1-i','c10-3-ex3-11-q1-i','c10-3-ex3-12-q1',
+  'c10-3-ex3-13-q1-i','c10-3-ex3-14-q1-i'
 ]);
 for(const id of linked)assert(g10Ids.has(id),'Linked exercise ID missing: '+id);
 

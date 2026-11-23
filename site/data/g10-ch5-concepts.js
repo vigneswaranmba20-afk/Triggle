@@ -12,6 +12,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-distance-midpoint-centroid",
       "section": "5.1",
+      "page": { "en": "203–204", "ta": "210–211" },
       "title": {
         "en": "Distance, section, midpoint & centroid recall",
         "ta": "தொலைவு, பிரிவு, நடுப்புள்ளி மற்றும் நடுக்கோட்டு மையம்"
@@ -127,6 +128,7 @@ window.TRIGGLE_G10_CH5_PATH={
       "id": "g10-ch5-area-triangle",
       "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch5-area-triangle/7b0eac211cb97175a46f335ad339a3fb91c7649124fd4021143cbc08b68575ec.mp4", "language": "en", "durationSeconds": 109.6},
       "section": "5.2",
+      "page": { "en": "205–207", "ta": "212–214" },
       "title": {
         "en": "Area of a triangle from coordinates",
         "ta": "ஆயத்தொலைவுகளால் அமையும் முக்கோணத்தின் பரப்பு"
@@ -235,6 +237,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-collinearity",
       "section": "5.2.1",
+      "page": { "en": "206–207", "ta": "213–214" },
       "title": {
         "en": "Collinearity of three points",
         "ta": "மூன்று புள்ளிகள் ஒரே நேர்க்கோட்டில் அமைவதற்கான நிபந்தனை"
@@ -343,6 +346,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-area-quadrilateral",
       "section": "5.3",
+      "page": { "en": "207–211", "ta": "214–218" },
       "title": {
         "en": "Area of a quadrilateral & vertex order",
         "ta": "நாற்கரத்தின் பரப்பு மற்றும் முனை வரிசை"
@@ -451,6 +455,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-inclination-slope",
       "section": "5.4–5.4.1",
+      "page": { "en": "212–215", "ta": "219–222" },
       "title": {
         "en": "Inclination of a line & slope m = tan θ",
         "ta": "கோட்டின் சாய்வுக் கோணம் மற்றும் சாய்வு m = tan θ"
@@ -559,6 +564,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-parallel-perpendicular-slopes",
       "section": "5.4.2–5.4.3",
+      "page": { "en": "215–220", "ta": "222–227" },
       "title": {
         "en": "Slopes of parallel & perpendicular lines",
         "ta": "இணை மற்றும் செங்குத்துக் கோடுகளின் சாய்வுகள்"
@@ -667,6 +673,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-axes-and-parallel-lines",
       "section": "5.5.1–5.5.3",
+      "page": { "en": "221–223", "ta": "228–230" },
       "title": {
         "en": "Equations of axes & lines parallel to axes",
         "ta": "ஆய அச்சுகள் மற்றும் அச்சுகளுக்கு இணையான கோடுகள்"
@@ -775,6 +782,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-slope-intercept-form",
       "section": "5.5.4",
+      "page": { "en": "223–224", "ta": "230–231" },
       "title": {
         "en": "Slope-intercept form y = mx + c",
         "ta": "சாய்வு–வெட்டுத்துண்டு வடிவம் y = mx + c"
@@ -883,6 +891,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-point-slope-and-two-point",
       "section": "5.5.5–5.5.6",
+      "page": { "en": "224–226", "ta": "231–233" },
       "title": {
         "en": "Point-slope & two-point forms",
         "ta": "புள்ளி–சாய்வு மற்றும் இரு புள்ளி வடிவங்கள்"
@@ -991,6 +1000,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-intercept-form",
       "section": "5.5.7",
+      "page": { "en": "226–229", "ta": "233–236" },
       "title": {
         "en": "Intercept form x/a + y/b = 1",
         "ta": "வெட்டுத்துண்டு வடிவம் x/a + y/b = 1"
@@ -1099,6 +1109,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-general-form",
       "section": "5.6 & 5.6.3",
+      "page": { "en": "230–235", "ta": "237–243" },
       "title": {
         "en": "General form ax + by + c = 0 (slope & intercepts)",
         "ta": "நேர்க்கோட்டுச் சமன்பாட்டின் பொது வடிவம் ax + by + c = 0"
@@ -1207,6 +1218,7 @@ window.TRIGGLE_G10_CH5_PATH={
     {
       "id": "g10-ch5-parallel-perpendicular-general",
       "section": "5.6.1–5.6.2",
+      "page": { "en": "230–235", "ta": "237–243" },
       "title": {
         "en": "Parallel & perpendicular lines in general form",
         "ta": "பொது வடிவில் இணை மற்றும் செங்குத்துக் கோடுகள்"
