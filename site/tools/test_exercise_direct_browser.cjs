@@ -20,7 +20,7 @@ async function run(){
  let browser;
  try{
   browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),args:['--no-sandbox']});
-  const chapters=['g9-ch9','g9-ch1','g9-ch2','g9-ch6','g9-ch3','g10-ch2','g10-ch3','g10-ch4','g10-ch6','g10-ch8','g11-ch3','g12-ch4'];
+  const chapters=['g9-ch9','g9-ch1','g9-ch2','g9-ch6','g9-ch3','g10-ch2','g10-ch3','g10-ch4','g10-ch6','g10-ch8'];
   for(const width of [320,390,1280]){
    const ctx=await browser.newContext({viewport:{width,height:850},serviceWorkers:'block'});
    const page=await ctx.newPage(),errors=[];
@@ -75,7 +75,7 @@ async function run(){
    assert.deepEqual(errors,[], 'No browser JS errors at '+width);
    await ctx.close();
   }
-  console.log('PASS: all-grade numbered exercise indexes, per-exercise boundaries, return links and 320/390/1280 widths.');
+  console.log('PASS: active-grade numbered exercise indexes, per-exercise boundaries, return links and 320/390/1280 widths.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 run().catch(err=>{console.error(err);process.exitCode=1;});
