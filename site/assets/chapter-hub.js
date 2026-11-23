@@ -306,7 +306,7 @@
       '<text x="15" y="124">A(1,2)</text><text x="166" y="26">B(4,6)</text><text x="164" y="151">C</text>'+
       '<text x="103" y="154" fill="#994a50">3 '+(ta?'அலகு':'units')+'</text>'+
       '<text x="170" y="93" fill="#366788">4 '+(ta?'அலகு':'units')+'</text>'+
-      '<text x="83" y="70" fill="#196f64">5 '+(ta?'அலகு':'units')+'</text></g></svg>'+
+      '<text x="57" y="79" fill="#196f64">5 '+(ta?'அலகு':'units')+'</text></g></svg>'+
       '<p class="g9-distance-plot-note">'+(ta?'கிடைமட்டம் 3 + செங்குத்து 4; நேர்க்கோட்டுத் தொலைவு 5.':'Horizontal 3 + vertical 4; straight-line distance 5.')+'</p>';
   }
 
