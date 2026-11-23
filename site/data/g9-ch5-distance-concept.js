@@ -3,8 +3,8 @@
  * Tamil Nadu State Board Mathematics books: EN §5.3 p.193 ff;
  * Tamil §5.3 p.206 ff. The coordinate example and check are original.
  * Tamil professional editorial review remains pending.
- * The approved narrated MP4 is intentionally not linked until it exists
- * on publicly accessible media storage (never show a broken player).
+ * The approved narrated MP4 is streamed from the verified Cloudflare R2
+ * public endpoint. A local exact-hash original remains as release evidence.
  */
 (()=>{'use strict';
 window.TRIGGLE_G9_CH5_PATH={
@@ -15,7 +15,7 @@ window.TRIGGLE_G9_CH5_PATH={
     file:'Triggle_G9_Distance_Formula_Narrated_Corrected.mp4',
     durationSeconds:75.6,
     sha256:'8ada907f59bf11788bad196fc8e3ec876de4bc5d98caef53fa50368d78277323',
-    status:'hosted-in-repo'
+    status:'cloudflare-r2-verified'
   },
   stages:[{
     id:'g9-ch5-distance-formula',
@@ -35,7 +35,7 @@ window.TRIGGLE_G9_CH5_PATH={
       fallback:'d = √[(x₂ − x₁)² + (y₂ − y₁)²]'
     },
     visual:{kind:'g9-distance-grid'},
-    video:{src:'./videos/triggle-g9-distance-formula-en.mp4',durationSeconds:75.6,language:'en',provider:'github-pages'},
+    video:{src:'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g9-ch5-distance-formula/8ada907f59bf11788bad196fc8e3ec876de4bc5d98caef53fa50368d78277323.mp4',durationSeconds:75.6,language:'en',provider:'cloudflare-r2'},
     idea:{
       en:'A straight line is the shortest path between two points on the plane. Moving across and then up forms a right triangle. The direct distance is its hypotenuse.',
       ta:'ஒரு தளத்தில் இரு புள்ளிகளுக்கு இடையேயான மிகக் குறுகிய பாதை அவற்றை இணைக்கும் நேர்க்கோடு. கிடைமட்டமாகவும் பின்னர் செங்குத்தாகவும் நகரும்போது ஒரு செங்கோண முக்கோணம் உருவாகிறது. நேர்க்கோட்டுத் தொலைவே அதன் கர்ணம்.'

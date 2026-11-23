@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "f7abb67a7411999f46f0689ff2b031fddebab872",
-  "updatedAt": "2026-11-23T08:11:31Z",
+  "sourceCommit": "17e8197fc1d178dbdad1bb78e38ccd5a051b535d",
+  "updatedAt": "2026-11-23T08:45:29Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -31,7 +31,7 @@
     "site/data/g10-ch5-concepts.js": "4b03935c845e37127c0e92259e23d97b67cca281f063876deccab6b966c7db8d",
     "site/data/g10-ch6-concepts.js": "fe53a40acdd58d6bae587a20bc19a091de17adc0e403f1c73ab5760671ebf36f",
     "site/data/g9-algebra-chapter.js": "63bdd314c52b309eaa6952f57f70fb1587c611caedd94ff9bf592c9455974455",
-    "site/data/g9-ch5-distance-concept.js": "ed27e094388776cbf0befbe75ca49c05f27b11cb30eb8684fc17187a5504315a",
+    "site/data/g9-ch5-distance-concept.js": "5bdfb7d0428a56d2e47e55cc43fab31431090cd97d107e2f75ee97f7e667c8bc",
     "site/data/g9-clear-math.js": "6b2fb822d4bec117e3beef8a864a8a69588acdbd646ec18f6c895c5ec0d5e6a8",
     "site/data/g9-mensuration-chapter.js": "509a8967476ef4023f043286e4a7ef373951e2039902692a6468147f46cc8c28",
     "site/data/g9-mensuration-remaining.js": "f720a1272691e653343bf8cc23e9876947079b15e631fb18a36974f8453cd8dc",
