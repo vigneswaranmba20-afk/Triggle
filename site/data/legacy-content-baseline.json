@@ -162,13 +162,13 @@
       ]
     },
     "playground.html": {
-      "sha256": "6dad0c56861bea252e1feb4333015eee357bf7a626cbf6690ac1d2cd64e1635a"
+      "sha256": "9ac0b52c6514301a9db5143128f54ed9aea34bff5676ac868b90f650a1391b74"
     },
     "grades.html": {
-      "sha256": "b4c4d01aaabc89eb095dd51ad7c14336cc17abbc06a04a2377078dbee6fd9b6c"
+      "sha256": "d9f6787363b52ceadf4adc47cf6eb9e9ced963d8b1c4a63527fcf78faaef6ad4"
     },
     "grades-legacy.html": {
-      "sha256": "730c96de4e814fd604ddd1f12fe28ac4312795ad043b6cb84f8c68e089000d10"
+      "sha256": "0266ec08897ad2fe5f01d379ace2dfdffb039b81fe5f945c7efb8a345ed4b86c"
     }
   }
 }
