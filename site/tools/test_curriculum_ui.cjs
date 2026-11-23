@@ -503,7 +503,7 @@ async function main() {
         }
         await page.locator('.crumb-link').click();
         assert.equal(await page.locator('#pathDialog').isVisible(),true,'Class switcher must remain discoverable');
-        assert.equal(await page.locator('#pathOptions .path-option').count(),4);
+        assert.deepEqual(await page.locator('#pathOptions .path-option strong').allTextContents(),['Class 9','Class 10']);
         await page.locator('#pathClose').click();
         await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
         assert.equal(new URL(page.url()).searchParams.get('section'),'concepts');
