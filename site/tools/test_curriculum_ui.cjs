@@ -357,13 +357,13 @@ async function main() {
         await page.locator('#discoveryView').waitFor({state:'visible'});
         assert.equal(await page.locator('#lessonCard').isVisible(),false,'Home must not open an unrelated question');
         assert.match(await page.locator('#homeBtn').innerText(), /Home/);
-        assert.equal(await page.locator('.discover-grade-grid [data-grade]').count(),4);
+        assert.deepEqual(await page.locator('.discover-grade-grid [data-grade]').evaluateAll(nodes=>nodes.map(n=>Number(n.dataset.grade))),[9,10]);
         assert.equal(await page.locator('a[href="./playground.html"]').count(),0,'Retire all Trigonometry Basics shortcuts');
         assert.equal(await page.locator('.discover-home-minimal > section').count(),2,
           'Student home must contain only recent question and class chooser');
         assert.match(await page.locator('#discover-recent-title').innerText(),/Your last opened question/);
         assert.match(await page.locator('#discover-classes-title').innerText(),/Choose your class/);
-        assert.equal(await page.locator('.discover-grade-grid [data-grade]').count(),4);
+        assert.deepEqual(await page.locator('.discover-grade-grid [data-grade]').evaluateAll(nodes=>nodes.map(n=>Number(n.dataset.grade))),[9,10]);
         assert.equal(await page.locator('.discover-hero,.discover-access,.discover-feature,.discover-method,.discover-find,.discover-actions').count(),0,
           'Remove marketing, large welcome, search and extra blocks from home');
         await noOverflow(page,'Home '+width+'px');
@@ -469,7 +469,7 @@ async function main() {
         await noOverflow(page,'chapter-first directory at '+width+'px');
         await page.locator('.discover-class-switch').click();
         assert.equal(await page.locator('.discover-class-switch').getAttribute('aria-expanded'),'true');
-        assert.equal(await page.locator('.discover-class-options [data-grade]').count(),4);
+        assert.equal(await page.locator('.discover-class-options [data-grade]').count(),2);
         assert.equal(await page.locator('.discover-class-options [data-grade="9"]').getAttribute('aria-pressed'),'true');
         await page.locator('.discover-class-options [data-grade="10"]').click();
         assert.equal(new URL(page.url()).searchParams.get('class'),'10');
@@ -532,8 +532,8 @@ async function main() {
       assert.equal(await page.locator('.discover-class-options').isVisible(),false);
       assert.equal(await page.locator('.discover-class-switch').getAttribute('aria-expanded'),'false');
       await page.locator('.discover-class-switch').click();
-      await page.locator('.discover-class-options [data-grade="12"]').click();
-      assert.match(await page.locator('.discover-class-header h1').innerText(),/வகுப்பு 12 கணிதம்/);
+      await page.locator('.discover-class-options [data-grade="10"]').click();
+      assert.match(await page.locator('.discover-class-header h1').innerText(),/வகுப்பு 10 கணிதம்/);
       await noOverflow(page,'Tamil class directory and switcher');
     });
     await check('Grade 9 chapter directory accurately advertises interactive lessons in both languages',async()=>{
@@ -756,7 +756,7 @@ async function main() {
         assert.equal(await page.locator('.discover-change').count(),0,'No duplicate Change class navigation');
         assert.equal(await page.locator('.discover-directory-head').count(),0,'No oversized class introduction card');
         await page.locator('.discover-class-switch').click();
-        assert.equal(await page.locator('.discover-class-options [data-grade]').count(),4,'One-tap compact class switcher');
+        assert.equal(await page.locator('.discover-class-options [data-grade]').count(),2,'Two-grade compact class switcher');
         assert.equal(await page.locator('.discover-class-switch').getAttribute('aria-expanded'),'true');
         await page.locator('.discover-class-options [data-grade="9"]').click();
         await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
@@ -955,12 +955,15 @@ async function main() {
       assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
       await ctx.setOffline(false);
     });
-    await check('41 chapters appear across grades without publishing legacy question coverage', async () => {
+    await check('41 mapped chapters remain accessible while only Grades 9 and 10 appear in menus', async () => {
       const page = await visit(await context(1280));
       const expected = {9:9, 10:8, 11:12, 12:12};
       let total = 0;
       for (const [grade, amount] of Object.entries(expected)) {
-        await page.locator('#sideClasses button').filter({ has: page.locator('b', { hasText: grade }) }).click();
+        if(Number(grade)<=10)
+           await page.locator('#sideClasses button').filter({ has: page.locator('b', { hasText: grade }) }).click();
+         else
+           await gotoWithControls(page,url+'/index.html?class='+grade+'&browse=chapters');
         assert.equal(await page.locator('#exerciseList [data-chapter-id]').count(), amount, `Grade ${grade} chapter count`);
         const chapters = await page.evaluate(g => window.TRIGGLE_CURRICULUM.grades.find(row => row.grade === Number(g)).chapters.map(ch => ({ id:ch.id, title:ch.title.en })), grade);
         for (const chapter of chapters) {
