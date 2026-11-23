@@ -1,7 +1,7 @@
 {
   "name": "Triggle — Free Mathematics Learning Lab",
   "short_name": "Triggle",
-  "description": "Free bilingual Mathematics for Classes 9–12. Discover chapters, explore visual lessons and practise offline after first visit.",
+  "description": "Free bilingual Mathematics for Classes 9–10. Discover chapters, explore visual lessons and practise offline after first visit.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
