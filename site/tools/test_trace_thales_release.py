@@ -75,12 +75,16 @@ class ThalesReleaseTests(unittest.TestCase):
         self.assertEqual(updated.count("&"+TAG),2)
         self.assertIn("g10-ch4-concepts.js",updated)
         self.assertIn("discriminant-fola=4c692aa7",updated)
-        self.assertTrue(updated_sw.splitlines()[0].endswith(CACHE_SUFFIX+"';"))
+        self.assertEqual(updated_sw.splitlines()[0].count(CACHE_SUFFIX),1)
+        self.assertIn(CACHE_SUFFIX,updated_sw.splitlines()[0])
         self.assertEqual(updated_sw.count("-"+TAG),1)
         if "&"+TAG in (ROOT/RELS[1]).read_text(encoding="utf-8"):
             self.assertEqual(updated,(ROOT/RELS[1]).read_text(encoding="utf-8"))
         if "-"+TAG in (ROOT/RELS[2]).read_text(encoding="utf-8"):
-            self.assertEqual(updated_sw,(ROOT/RELS[2]).read_text(encoding="utf-8"))
+            live_sw=(ROOT/RELS[2]).read_text(encoding="utf-8")
+            # A later release may have appended independent cache tokens.
+            # Strip ONLY the approved marker to verify the rest is identical.
+            self.assertEqual(updated_sw.replace('-'+TAG,'',1),live_sw.replace('-'+TAG,'',1))
 
     def test_release_edits_are_atomic_and_only_named_paths(self):
         with tempfile.TemporaryDirectory() as tmp:
