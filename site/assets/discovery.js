@@ -6,7 +6,7 @@
   const words={
     en:{
       eyebrow:'WELCOME TO TRIGGLE',heading:'Maths should make sense.',
-      desc:'Explore one idea, see why it works, and solve the next problem yourself. Mathematics for Classes 9–12, in English and Tamil.',
+      desc:'Explore one idea, see why it works, and solve the next problem yourself. Mathematics for Classes 9–10, in English and Tamil.',
       start:'Start learning',continue:'Continue your question',discover:'Find a chapter',
       find:'Search by chapter or topic',findPlaceholder:'Try algebra, sets, கண மொழி...',
       quick:'Jump straight to a chapter',choose:'Choose a chapter…',
@@ -31,7 +31,7 @@
     },
     ta:{
       eyebrow:'டிரிகிளுக்கு நல்வரவு',heading:'கணிதம் எளிதாகப் புரியட்டும்.',
-      desc:'ஒரு கருத்தை ஆராய்ந்து, அது ஏன் சரி என்பதைப் புரிந்து, அடுத்த கணக்கை நீங்களே செய்யுங்கள். 9–12 வகுப்புகளுக்கான ஆங்கில, தமிழ்வழிக் கணிதம்.',
+      desc:'ஒரு கருத்தை ஆராய்ந்து, அது ஏன் சரி என்பதைப் புரிந்து, அடுத்த கணக்கை நீங்களே செய்யுங்கள். 9–10 வகுப்புகளுக்கான ஆங்கில, தமிழ்வழிக் கணிதம்.',
       start:'கற்கத் தொடங்கு',continue:'முந்தைய வினாவைத் தொடர்க',discover:'அத்தியாயத்தைத் தேடுக',
       find:'அத்தியாயம் அல்லது தலைப்பைத் தேடுக',findPlaceholder:'இயற்கணிதம், கண மொழி, trigonometry...',
       quick:'நேராக அத்தியாயத்திற்குச் செல்ல',choose:'அத்தியாயத்தைத் தேர்ந்தெடுக்கவும்…',
@@ -61,7 +61,9 @@
     const t=words[lang==='ta'?'ta':'en'];
     const tr=x=>typeof x==='string'?x:(x?.[lang]||x?.en||'');
     const grades=curriculum.grades;
-    const chapters=grades.flatMap(g=>g.chapters.map(c=>({grade:g.grade,chapter:c})));
+    // Show current priorities without deleting legacy curriculum or direct links.
+    const visibleGrades=grades.filter(g=>g.grade===9||g.grade===10);
+    const chapters=visibleGrades.flatMap(g=>g.chapters.map(c=>({grade:g.grade,chapter:c})));
     // Only advertise a lab when both its lesson data and interactive viewer are loaded.
     const interactiveCount=id=>{
       const stages=id==='g9-ch1'&&window.TriggleSetJourney?window.TRIGGLE_SET_PATH?.stages:
@@ -85,7 +87,7 @@
         '<span class="discover-card-arrow" aria-hidden="true">↗</span></button>';
     }
     function jumpOptions(selectedGrade){
-      return '<option value="">'+escapeHtml(t.choose)+'</option>'+grades.filter(g=>!selectedGrade||selectedGrade===g.grade)
+      return '<option value="">'+escapeHtml(t.choose)+'</option>'+visibleGrades.filter(g=>!selectedGrade||selectedGrade===g.grade)
         .map(g=>'<optgroup label="'+escapeHtml(t.class)+' '+g.grade+'">'+g.chapters.map(c=>
           '<option value="'+escapeHtml(c.id)+'">'+escapeHtml(t.chapter)+' '+c.number+' · '+escapeHtml(tr(c.title))+'</option>'
         ).join('')+'</optgroup>').join('');
@@ -101,10 +103,10 @@
       // Resume the most recently opened question, not the lowest class number.
       // For existing students, fall back to their previous per-class saved ID.
       const lastGrade=lastOpened&&Number(lastOpened.grade);
-      const lastItem=lastGrade&&classes[lastGrade]?.items.find(x=>x.id===lastOpened.questionId);
+      const lastItem=visibleGrades.some(g=>g.grade===lastGrade)&&classes[lastGrade]?.items.find(x=>x.id===lastOpened.questionId);
       const legacy=Object.entries(lastByGrade||{})
         .map(([g,id])=>({grade:Number(g),item:classes[g]?.items.find(x=>x.id===id)}))
-        .find(x=>x.item&&x.grade>=9&&x.grade<=12);
+        .find(x=>x.item&&visibleGrades.some(g=>g.grade===x.grade));
       const recent=lastItem?{grade:lastGrade,item:lastItem}:legacy;
       const recentCard=recent
         ?'<button type="button" class="discover-resume-card" data-question="'+escapeHtml(recent.item.id)+
@@ -118,10 +120,10 @@
         '<h1 id="discover-recent-title">'+escapeHtml(t.continueLabel)+'</h1>'+recentCard+'</section>'+
         '<section class="discover-home-classes" aria-labelledby="discover-classes-title">'+
         '<h2 id="discover-classes-title">'+escapeHtml(t.classes)+'</h2>'+
-        '<div class="discover-grade-grid">'+grades.map(gradeCard).join('')+'</div></section>'+
+        '<div class="discover-grade-grid">'+visibleGrades.map(gradeCard).join('')+'</div></section>'+
         '</div>';
     }else{
-      const g=grades.find(x=>x.grade===grade)||grades[0];
+      const g=visibleGrades.find(x=>x.grade===grade)||visibleGrades[0];
       // Chapter-first directory: a single compact, interactive heading followed
       // immediately by Chapter 1. Class switching expands in document flow.
       body='<header class="discover-class-header">'+
@@ -129,7 +131,7 @@
         escapeHtml(t.class)+' '+g.grade+' '+escapeHtml(t.mathematics)+' <span aria-hidden="true">⌄</span></button></h1>'+
         '<span class="discover-class-count">'+g.chapters.length+' '+escapeHtml(t.chapterCount)+'</span></header>'+
         '<div id="discover-class-options" class="discover-class-options" role="group" aria-label="'+escapeHtml(t.chooseClass)+'" hidden>'+
-        grades.map(option=>'<button type="button" class="discover-class-option'+(option.grade===g.grade?' is-current':'')+'" data-grade="'+option.grade+'" aria-pressed="'+(option.grade===g.grade)+'">'+escapeHtml(t.class)+' '+option.grade+'</button>').join('')+'</div>'+
+        visibleGrades.map(option=>'<button type="button" class="discover-class-option'+(option.grade===g.grade?' is-current':'')+'" data-grade="'+option.grade+'" aria-pressed="'+(option.grade===g.grade)+'">'+escapeHtml(t.class)+' '+option.grade+'</button>').join('')+'</div>'+
         '<section class="discover-directory-list" aria-label="'+escapeHtml(t.allChapters)+'">'+
         '<div class="discover-chapter-grid" data-chapter-grid>'+g.chapters.map(c=>chapterCard({grade:g.grade,chapter:c})).join('')+'</div></section>'+
         '<section class="discover-section discover-find"><label for="discover-search">'+escapeHtml(t.find)+'</label>'+

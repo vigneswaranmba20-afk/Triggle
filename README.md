@@ -1,8 +1,8 @@
 # Triggle
 
-Triggle — Mathematics Made Clear. Tamil Nadu State Board Grades 9–12, in English and Tamil.
+Triggle — Mathematics Made Clear. The public student site currently supports Tamil Nadu State Board Grades **9 and 10** in English and Tamil.
 
-The student interface for Grades 9–12 shows Exercises and Unit Exercises, not a separate Worked Examples section. Original authored example records remain archived in source for preservation. Each available exercise question has one standard worked solution and a compact Easy, Medium or Difficult indicator. Difficulty reflects mathematical demands and never hides required working. Explanation-mode switching is discontinued. See [the implementation audit and review notes](docs/STANDARD_SOLUTIONS_2026-11-11.md).
+Grades 11 and 12 are deferred while the new syllabus is pending (tentatively revisited around May 2027). Existing higher-grade source records remain in the repository for historical reference, but their student routes are disabled. The student interface for active Grades 9–10 shows Exercises and Unit Exercises, not a separate Worked Examples section. Original authored example records remain archived in source for preservation. Each available exercise question has one standard worked solution and a compact Easy, Medium or Difficult indicator. Difficulty reflects mathematical demands and never hides required working. Explanation-mode switching is discontinued. See [the implementation audit and review notes](docs/STANDARD_SOLUTIONS_2026-11-11.md).
 
 The editable GitHub Pages source is in `site/`. Work directly on these files; the historical ZIPs and root `index.html` are not the active deployment source.
 

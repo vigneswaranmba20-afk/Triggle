@@ -9,7 +9,8 @@ const lesson=JSON.parse(fs.readFileSync(path.join(root,'../docs/curriculum/grade
 assert.ok(lesson,'Existing source-verified Q8 must remain present');
 assert.match(lesson.q.en,/find A/i);
 assert.match(lesson.answer,/\u00b1\[\[6, 2, 1; 5, 2, 2; 6, 2, 3\]\]/);
-assert.ok(html.includes("location.replace('./index.html?class=12&question=g12-ch1-ex1.1-q8')"));
+assert.ok(html.includes("location.replace('./index.html')"),'Retired Grade 12 pilot sends students to the active site');
+assert.ok(!html.includes('class=12'),'No published Grade 12 deep link remains in pilot HTML');
 assert.ok(!/role="tab|data-mode|Detailed mode|Exam mode/.test(html));
 assert.ok(!fs.existsSync(path.join(root,'assets/matrix-pilot.js')));
 assert.ok(sw.includes("'./matrix-pilot.html'")&&!sw.includes('assets/matrix-pilot.js'));

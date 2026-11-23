@@ -34,7 +34,7 @@
 .discover-section-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
 .discover-section h2,.discover-feature h2{font-size:clamp(19px,2.8vw,24px);line-height:1.3;color:#34304d;letter-spacing:-.55px;margin:0 0 12px;font-weight:810}
 .discover-section-heading h2{margin:0}
-.discover-grade-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.discover-grade-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .discover-grade{position:relative;text-align:left;display:flex;flex-direction:column;gap:7px;min-width:0;min-height:146px;padding:18px 16px;border:1px solid #e5e1ec;border-radius:20px;background:#fff;color:#403857;box-shadow:0 6px 19px #352c5b0b;transition:box-shadow .18s,border-color .18s,transform .18s}
 .discover-grade:hover{transform:translateY(-3px);box-shadow:0 11px 24px #3d315a1a;border-color:#aaa0cf}
 .discover-grade-number{width:51px;height:51px;display:grid;place-items:center;border-radius:16px;background:#f1edff;color:#62549c;font-size:28px;font-weight:890;line-height:1}
@@ -237,7 +237,7 @@
  margin:0;padding:16px 18px;line-height:1.5;font-size:15px;
  background:#fff;color:#6c657b;border:1px solid #e4e0ec;border-radius:14px
 }
-.home-active .discover-grade-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.home-active .discover-grade-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .home-active .discover-grade{
  display:flex;align-items:flex-start;flex-direction:column;
  min-height:118px;padding:15px 17px;gap:9px;

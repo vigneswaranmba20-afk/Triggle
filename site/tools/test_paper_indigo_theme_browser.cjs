@@ -71,17 +71,9 @@ async function main(){
    await p.locator('.lesson-card').waitFor({state:'visible'});
    assert.equal(await p.locator('.lesson-card').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Class 10 exercise paper');
    assert(await p.locator('#questionText').innerText(),'Original mathematical question preserved');
-   await visit(p,base+'?class=12&chapter=g12-ch1&section=concepts');
-   await p.locator('#langEn').click(); // Grade 12 matrix scenes are currently published in English only.
-   await p.locator('.matrix-concepts [data-scene="0"]').waitFor({state:'visible'});
-   assert.equal(await p.locator('.matrix-concepts .mc-index button').first().evaluate(el=>getComputedStyle(el).backgroundColor),white,'Matrix index paper');
-   await p.locator('.matrix-concepts [data-scene="0"]').click();
-   assert.equal(await p.locator('.matrix-concepts .mc-primary').first().evaluate(el=>getComputedStyle(el).backgroundColor),graphite,'Matrix action uses indigo');
-   assert(await p.locator('.matrix-concepts .mc-stage').isVisible(),'Original matrix interaction present');
-   if(width===390)await p.screenshot({path:path.join(out,'g12-matrices-390.png'),fullPage:false});
    assert.deepEqual(errors,[],'No JS page exceptions at '+width+'px');
    await ctx.close();
-   console.log('PASS Bond-light white header, Tamil switch, Grade 10 chapter index + maths and Grade 12 interactions at '+width+'px');
+   console.log('PASS Bond-light white header, Tamil switch, Grade 10 chapter index + maths at '+width+'px');
   }
  }finally{await browser.close();await app.close();}
 }
