@@ -1,5 +1,12 @@
 # AI coding-agent guidance for Triggle
 
+## Active grade policy — 23 November 2026
+
+**Student-facing Triggle supports Grades 9 and 10 only.** Keep the Grade 11/12 class cards, switchers, direct chapter/question routes, old Grade 12 pilots and resume shortcuts unavailable in the public site. Do not create, audit for publication, or deploy new Grade 11/12 curriculum or video work during the current freeze. Preserve historical sources and their provenance for reference without treating them as approved future-syllabus content.
+
+The owner intends to revisit Grades 11 and 12 in roughly six months, using the **then-current new prescribed syllabus** as the source of truth, after its official release/verification. The date is an estimate, not an automatic unfreeze or a claim that the revised textbooks already exist. Grade 9/10 correctness and mobile usability remain the active priority.
+
+
 ## Standing mathematics-notation requirement (user directive, 2026-11-13)
 
 **ALWAYS use ChatGPT-style mathematical typesetting in every student-facing solution (Grades 9–12, English and Tamil).** Never publish new equations as long plain strings containing `2000/9`, `√351/8`, visually detached exponents, or slash fractions. Use the offline KaTeX renderer in `site/assets/math-notation.js` with **authored structured LaTeX** (`steps[].math`, `answerMath`, and `questionMath` when needed) for true stacked fractions (`\\dfrac`), radicals (`\\sqrt{...}`), powers and indices, aligned multi-line derivations (`aligned`), and readable mobile layouts. Preserve `eq`, `answer`, original source question wording and IDs as the accessible plain-text fallback. Never infer LaTeX from prose, change maths to improve appearance, or shorten working. Long derivations should break into legible aligned lines rather than requiring horizontal page scrolling. On phones, test real rendered KaTeX glyphs, clipping, focusable formula scrolling, and answer readability at 320/390/412px; test both language interfaces, offline assets, and source/answer parity. Follow `docs/CHATGPT_STYLE_MATH_NOTATION_STANDARD.md`; failures block release. Carry this forward to every future maths batch, not only the screenshots.
