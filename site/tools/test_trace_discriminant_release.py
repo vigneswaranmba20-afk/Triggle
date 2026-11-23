@@ -94,7 +94,12 @@ class DiscriminantReleaseTests(unittest.TestCase):
         released_html=(ROOT/"site/index.html").read_text(encoding="utf-8")
         released_sw=(ROOT/"site/service-worker.js").read_text(encoding="utf-8")
         if "&discriminant-fola=4c692aa7" in released_html:
-            self.assertEqual(html2,released_html)
+            token="&discriminant-fola=4c692aa7"
+            self.assertEqual(html2.count(token),2)
+            self.assertEqual(released_html.count(token),2)
+            # Newer chapter releases append cache-bust markers after this tag.
+            # Only the insertion position may vary; all other HTML must match.
+            self.assertEqual(html2.replace(token,""),released_html.replace(token,""))
         if "-"+TAG in released_sw:
             # Later audit/PWA revisions can appear after the original video tag.
             # Require exact same remaining cache text, marker once, and old suffix.
