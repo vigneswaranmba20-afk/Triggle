@@ -305,6 +305,13 @@ async function main() {
         assert.equal(await page.locator('.discover-class-switch').getAttribute('aria-expanded'),'true');
         assert.equal(await page.locator('.discover-class-options [data-grade]').count(),2);
         assert.equal(await page.locator('.discover-class-options [data-grade="9"]').getAttribute('aria-pressed'),'true');
+        await page.locator('.discover-class-options [data-grade="9"]').click();
+        await page.locator('.discover-chapter-grid [data-chapter="g9-ch1"]').click();
+        await page.locator('#crumb button').first().click();
+        assert.deepEqual(await page.locator('#pathOptions .path-option strong').allTextContents(),['Class 9','Class 10'],'Breadcrumb class picker cannot expose Grades 11/12');
+        await page.keyboard.press('Escape');
+        await page.locator('.hub-back-class').click();
+        await page.locator('.discover-class-switch').click();
         await page.locator('.discover-class-options [data-grade="10"]').click();
         assert.equal(new URL(page.url()).searchParams.get('class'),'10');
         assert.equal(new URL(page.url()).searchParams.get('browse'),'chapters');
