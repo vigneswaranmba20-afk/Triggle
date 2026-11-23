@@ -257,7 +257,8 @@
        chapter.id==='g10-ch4'?window.TRIGGLE_G10_CH4_PATH?.stages:
        chapter.id==='g10-ch5'?window.TRIGGLE_G10_CH5_PATH?.stages:
        chapter.id==='g10-ch6'?window.TRIGGLE_G10_CH6_PATH?.stages:
-       chapter.id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:null;
+       chapter.id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:
+       chapter.id==='g9-ch3'?window.TRIGGLE_ALGEBRA_PATH?.stages:null;
      const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
      const visibleExercises=window.TriggleChapterHub?.textbookExercises?window.TriggleChapterHub.textbookExercises(all):all;
      const practiceCount=visibleExercises.length;
