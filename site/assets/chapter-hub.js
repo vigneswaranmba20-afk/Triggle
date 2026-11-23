@@ -418,7 +418,9 @@
   function attachStageVideo(panel,stage,lang){
     if(!['g9-ch5-distance-formula','g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant','g10-ch4-bpt-thales','g10-ch5-area-triangle'].includes(stage?.id)||!stage.video?.src)return;
     let url;try{url=new URL(stage.video.src,document.baseURI);}catch{return;}
-    if(url.protocol!=='https:'||!url.pathname.toLowerCase().endsWith('.mp4'))return;
+    // Live media requires HTTPS. Permit same-origin loopback HTTP in local browser tests only.
+    const loopback=location.origin===url.origin&&['localhost','127.0.0.1','[::1]'].includes(location.hostname);
+    if((url.protocol!=='https:'&&!(loopback&&url.protocol==='http:'))||!url.pathname.toLowerCase().endsWith('.mp4'))return;
     if(url.origin!==location.origin&&url.hostname!=='pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev')return;
     const ta=lang==='ta',button=document.createElement('button');
     button.type='button';button.className='sp2-concept-video-button';
