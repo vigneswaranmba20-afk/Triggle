@@ -682,10 +682,10 @@ window.TRIGGLE_G10_CH3_PATH={
     },
     {
       "id": "g10-ch3-discriminant",
-      "practiceId": "c10-3-ex3-13-q1-i",
       "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch3-discriminant/4c692aa75bad331a6d1f859f3c8be79da3d621af15259ac5e79ebadb79eef890.mp4", "language": "en", "durationSeconds": 152.44},
       "section": "3.6.6",
       "relatedExercise": "3.13",
+      "practiceId": "c10-3-ex3-13-q1-i",
       "title": {
         "en": "Nature of roots and the discriminant (Δ = b² − 4ac)",
         "ta": "தன்மைக்காட்டி (Δ = b² − 4ac) மற்றும் மூலங்களின் தன்மை"
