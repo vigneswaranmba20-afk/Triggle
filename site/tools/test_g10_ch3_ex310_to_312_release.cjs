@@ -139,12 +139,12 @@ for(const f of moduleFiles){
   assert.throws(()=>vm.runInNewContext(fs.readFileSync('site/data/textbook-exercises/'+f,'utf8'),dupCtx,{timeout:5000}),/Duplicate Grade 10 Exercise 3\.1[0-2] student ID/);
 }
 
-// Verify TRACE Grade 10 inventory shows Exercises 3.10-3.12 100% complete and 939 total tasks:
+// Verify TRACE Grade 10 inventory shows Exercises 3.10-3.12 100% complete and 940 total tasks:
 const inv=buildInventory();
 assert.equal(inv.totals.numberedQuestions,664);
-assert.equal(inv.totals.subpartTasks,939);
+assert.equal(inv.totals.subpartTasks,940);
 assert(inv.totals.questionsByStatus.COMPLETE>=249,'Expected at least 249/664 complete numbered questions');
-assert(inv.totals.tasksByStatus.COMPLETE>=407,'Expected at least 407/939 complete subpart tasks');
+assert(inv.totals.tasksByStatus.COMPLETE>=407,'Expected at least 407/940 complete subpart tasks');
 assert(inv.chapterSummaries[2].questionsByStatus.COMPLETE>=47,'Chapter 3 has at least 47 complete numbered questions (Ex 3.1-3.12)');
 assert(inv.chapterSummaries[2].tasksByStatus.COMPLETE>=103,'Chapter 3 has at least 103 complete subpart tasks (Ex 3.1-3.12)');
 const ch3Ex=new Map(inv.exercises.filter(e=>e.chapter===3).map(e=>[e.exercise,e]));
@@ -153,4 +153,4 @@ for(const ex of ['3.10','3.11','3.12']){
   assert(rec&&rec.tasksByStatus.COMPLETE===rec.subpartTaskCount&&rec.tasksByStatus.MISSING===0&&rec.tasksByStatus.PARTIAL===0,'Exercise '+ex+' must be 100% complete in TRACE inventory');
 }
 
-console.log('PASS Grade 10 Ch 3 Exercises 3.10–3.12 release gate: 22/22 tasks across 14 numbered questions verified (KaTeX, source audit, 5 SVGs, math identities, duplicate guards, and TRACE inventory '+inv.totals.questionsByStatus.COMPLETE+'/664 questions, '+inv.totals.tasksByStatus.COMPLETE+'/939 tasks).');
+console.log('PASS Grade 10 Ch 3 Exercises 3.10–3.12 release gate: 22/22 tasks across 14 numbered questions verified (KaTeX, source audit, 5 SVGs, math identities, duplicate guards, and TRACE inventory '+inv.totals.questionsByStatus.COMPLETE+'/664 questions, '+inv.totals.tasksByStatus.COMPLETE+'/940 tasks).');

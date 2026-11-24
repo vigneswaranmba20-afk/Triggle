@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Inverse variation xy = 360 for participants x and rupee share y. Solid dots mark whole-number participant counts; dashed curve guides reading. (ii) 12 participants gives ₹30.">
+  <title>Ex 3.15 Q5: Participants vs Share (xy = 360)</title>
+  <defs>
+    <marker id="arrow-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-i" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrow-ii" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+  </defs>
+  <rect width="640" height="400" rx="14" fill="#f8fafc"/>
+  <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1e293b">Ex 3.15 Q5: Participants vs Share (xy = 360)</text>
+  <text x="616" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#475569" text-anchor="end">Dots: integer participants | Curve: guide xy = 360</text>
+  <g stroke="#e2e8f0" stroke-width="1">
+    <line x1="76.0" y1="48" x2="76.0" y2="342"/>
+    <line x1="151.4" y1="48" x2="151.4" y2="342"/>
+    <line x1="226.9" y1="48" x2="226.9" y2="342"/>
+    <line x1="302.3" y1="48" x2="302.3" y2="342"/>
+    <line x1="377.7" y1="48" x2="377.7" y2="342"/>
+    <line x1="453.1" y1="48" x2="453.1" y2="342"/>
+    <line x1="528.6" y1="48" x2="528.6" y2="342"/>
+    <line x1="604.0" y1="48" x2="604.0" y2="342"/>
+    <line x1="76" y1="342.0" x2="604" y2="342.0"/>
+    <line x1="76" y1="297.9" x2="604" y2="297.9"/>
+    <line x1="76" y1="253.8" x2="604" y2="253.8"/>
+    <line x1="76" y1="209.7" x2="604" y2="209.7"/>
+    <line x1="76" y1="165.6" x2="604" y2="165.6"/>
+    <line x1="76" y1="121.5" x2="604" y2="121.5"/>
+    <line x1="76" y1="77.4" x2="604" y2="77.4"/>
+  </g>
+  <g stroke="#334155" stroke-width="2">
+    <line x1="76" y1="342" x2="618" y2="342" marker-end="url(#arrow-axis)"/>
+    <line x1="76" y1="342" x2="76" y2="34" marker-end="url(#arrow-axis)"/>
+  </g>
+  <text x="66" y="358" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#334155" text-anchor="end">O</text>
+  <g font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">
+    <line x1="151.4" y1="342" x2="151.4" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="151.4" y="360" text-anchor="middle">2</text>
+    <line x1="226.9" y1="342" x2="226.9" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="226.9" y="360" text-anchor="middle">4</text>
+    <line x1="302.3" y1="342" x2="302.3" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="302.3" y="360" text-anchor="middle">6</text>
+    <line x1="377.7" y1="342" x2="377.7" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="377.7" y="360" text-anchor="middle">8</text>
+    <line x1="453.1" y1="342" x2="453.1" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="453.1" y="360" text-anchor="middle">10</text>
+    <line x1="528.6" y1="342" x2="528.6" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="528.6" y="360" text-anchor="middle">12</text>
+    <line x1="604.0" y1="342" x2="604.0" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="604.0" y="360" text-anchor="middle">14</text>
+    <line x1="71" y1="297.9" x2="76" y2="297.9" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="301.4" text-anchor="end">30</text>
+    <line x1="71" y1="253.8" x2="76" y2="253.8" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="257.3" text-anchor="end">60</text>
+    <line x1="71" y1="209.7" x2="76" y2="209.7" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="213.2" text-anchor="end">90</text>
+    <line x1="71" y1="165.6" x2="76" y2="165.6" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="169.1" text-anchor="end">120</text>
+    <line x1="71" y1="121.5" x2="76" y2="121.5" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="125.0" text-anchor="end">150</text>
+    <line x1="71" y1="77.4" x2="76" y2="77.4" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="80.9" text-anchor="end">180</text>
+  </g>
+  <text x="340" y="388" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">No. of participants (x, whole numbers)</text>
+  <text x="20" y="195" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle" transform="rotate(-90 20 195)">Amount per participant y (₹)</text>
+  <polyline fill="none" stroke="#6366f1" stroke-width="2" stroke-dasharray="6,4" points="147.7,63.5 157.1,95.9 166.5,121.5 175.9,142.3 185.4,159.5 194.8,174.0 204.2,186.4 213.7,197.0 223.1,206.3 232.5,214.5 241.9,221.7 251.4,228.2 260.8,234.0 270.2,239.2 279.7,244.0 289.1,248.3 298.5,252.3 307.9,256.0 317.4,259.3 326.8,262.4 336.2,265.3 345.7,268.0 355.1,270.5 364.5,272.8 373.9,275.0 383.4,277.1 392.8,279.0 402.2,280.8 411.7,282.5 421.1,284.2 430.5,285.7 439.9,287.2 449.4,288.5 458.8,289.9 468.2,291.1 477.7,292.3 487.1,293.4 496.5,294.5 505.9,295.6 515.4,296.6 524.8,297.5 534.2,298.4 543.7,299.3 553.1,300.2 562.5,301.0 571.9,301.8 581.4,302.5"/>
+  <line x1="528.6" y1="342" x2="528.6" y2="297.9" stroke="#059669" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arrow-ii)"/>
+  <line x1="528.6" y1="297.9" x2="76" y2="297.9" stroke="#059669" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arrow-ii)"/>
+  <circle cx="528.6" cy="297.9" r="5.5" fill="#059669" stroke="#fff" stroke-width="1.8"/>
+  <text x="534.6" y="287.9" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#059669" text-anchor="start">(ii) (12, 30)</text>
+  <rect x="504.6" y="346" width="48" height="16" rx="4" fill="#059669"/>
+  <text x="528.6" y="357.5" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">12</text>
+  <rect x="24" y="289.9" width="48" height="16" rx="4" fill="#059669"/>
+  <text x="48" y="301.4" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">30</text>
+  <circle cx="151.4" cy="77.4" r="4.5" fill="#4f46e5" stroke="#fff" stroke-width="1.5"/>
+  <text x="159.4" y="81.4" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="start">(2, 180)</text>
+  <circle cx="226.9" cy="209.7" r="4.5" fill="#4f46e5" stroke="#fff" stroke-width="1.5"/>
+  <text x="234.9" y="205.7" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="start">(4, 90)</text>
+  <circle cx="302.3" cy="253.8" r="4.5" fill="#4f46e5" stroke="#fff" stroke-width="1.5"/>
+  <text x="310.3" y="247.8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="start">(6, 60)</text>
+  <circle cx="377.7" cy="275.9" r="4.5" fill="#4f46e5" stroke="#fff" stroke-width="1.5"/>
+  <text x="385.7" y="269.9" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="start">(8, 45)</text>
+  <circle cx="453.1" cy="289.1" r="4.5" fill="#4f46e5" stroke="#fff" stroke-width="1.5"/>
+  <text x="459.1" y="279.1" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="start">(10, 36)</text>
+</svg>
