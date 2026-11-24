@@ -257,7 +257,7 @@
      button.setAttribute('aria-current',selected?'true':'false');
      const title=document.createElement('strong');title.textContent=ui('chapter')+' '+chapter.number+' · '+tr(chapter.title);
      const meta=document.createElement('small');
-     const interactiveStages=window.TriggleChapterHub?.grade9Stages(chapter.id)??(chapter.id==='g9-ch1'?window.TRIGGLE_SET_PATH?.stages:
+     const interactiveStages=window.TriggleChapterHub?.grade9Stages?.(chapter.id)??(chapter.id==='g9-ch1'?window.TRIGGLE_SET_PATH?.stages:
        chapter.id==='g9-ch2'?window.TRIGGLE_REAL_PATH?.stages:
        chapter.id==='g9-ch9'?window.TRIGGLE_PROB_PATH?.stages:
        chapter.id==='g10-ch2'?window.TRIGGLE_G10_CH2_PATH?.stages:
@@ -278,7 +278,7 @@
      if(selected&&!query){
        const quick=document.createElement('div');quick.className='sidebar-chapter-sections';
        const sections=['concepts','exercises'];
-       if(!window.TriggleChapterHub?.conceptChecksOnly(chapter.id))sections.push('quizzes');
+       if(!window.TriggleChapterHub?.conceptChecksOnly?.(chapter.id))sections.push('quizzes');
        if(window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]?.length)sections.push('activities');
        for(const key of sections){
          const direct=document.createElement('button');direct.type='button';direct.dataset.section=key;
