@@ -32,6 +32,13 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-3-q9');
    await page.locator('#next').click();
    assert.equal(new URL(page.url()).searchParams.get('question'),'c10-2-ex2-3-q10','Q9 advances to textbook Q10');
+   await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-3-q1-iv');
+   await page.locator('#langTa').click();
+   assert((await page.locator('#questionText').innerText()).includes('குறைந்தபட்ச மிகை முழு எண்'));
+   assert((await page.locator('.final-answer-value').innerText()).includes('x/7 ஒரு முழு எண்'));
+   await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-2-q8');
+   const answer=await page.locator('.final-answer-value').innerText();
+   assert(answer.includes('3647') && answer.includes('மிகச் சிறிய மிகை எண் 7'));
    assert.deepEqual(errors,[],'No page errors on '+width+'px');
    await context.close();
   }
