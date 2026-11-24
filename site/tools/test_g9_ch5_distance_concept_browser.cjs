@@ -31,7 +31,7 @@ async function main(){
         const url=base+'/index.html?class=9&chapter=g9-ch5&section=concepts&concept=0';
         await page.goto(url,{waitUntil:'load'});
         await page.locator('.g9-distance-lab svg').waitFor({state:'visible'});
-        assert.equal(await page.locator('.sp2-nav-button').count(),1,'One new concept, not entire chapter');
+        assert.equal(await page.locator('.sp2-nav-button').count(),7,'The distance bookmark opens inside the seven-lesson chapter');
         assert.equal(await page.locator('.sp2-formula .katex').count(),1,'Complete radical must use KaTeX');
         assert.equal(await page.locator('.sp2-formula .mord.sqrt').count()>0,true,'Square-root notation visible');
         assert.match(await page.locator('.g9-distance-lab').innerText(),/Horizontal 3/);

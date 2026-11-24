@@ -69,7 +69,7 @@ stages.forEach(s=>assert.ok(s.title.en&&s.title.ta&&s.idea.en&&s.idea.ta&&s.choi
 
 // Grade 9 Chapter 2 is a full concept-learning path, not eight answer-only flashcards.
 // Validate every English/Tamil foundation beat and its exact-display mathematics.
-const expectedSteps=[3,4,3,3,4,3,4,3];
+const expectedSteps=[3,5,3,3,5,3,4,3];
 stages.forEach((stage,i)=>{
  assert.equal(stage.foundation.length,expectedSteps[i],'complete foundational coverage for '+stage.id);
  assert.ok(stage.pitfall?.en&&stage.pitfall?.ta,'specific misconception for '+stage.id);
@@ -82,7 +82,7 @@ stages.forEach((stage,i)=>{
   assert.ok(beat.math?.latex&&beat.math?.fallback,'accessible authored mathematical display '+stage.id);
  }
 });
-assert.equal(stages[7].section,'2.8 · review','review is not mislabelled as section 2.9');
+assert.equal(stages[7].section,'2.1–2.8','review is not mislabelled as section 2.9');
 const learningUI=read('assets/real-numbers-journey.js');
 const learningCSS=read('assets/app.css');
 assert.match(learningUI,/function foundationMarkup\(stage\)/,'concept beats render in the lesson');

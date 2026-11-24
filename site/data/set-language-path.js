@@ -20,6 +20,7 @@ window.TRIGGLE_SET_PATH = {
   "stages": [
     {
       "id": "set",
+      "practiceId": "g9-ch1-ex1.1-q1-i",
       "section": "1.1–1.2",
       "page": {
         "en": 1,
@@ -30,8 +31,8 @@ window.TRIGGLE_SET_PATH = {
         "ta": "கணம் என்றால் என்ன?"
       },
       "idea": {
-        "en": "A set is a well-defined collection: for any object, we can decide whether it belongs.",
-        "ta": "ஒரு பொருள் உறுப்பா இல்லையா என்பதைத் தெளிவாகத் தீர்மானிக்கக்கூடிய தொகுப்பே கணம்."
+        "en": "Is a bicycle part of a collection of vehicles with exactly two wheels? A set is a collection with a clear membership rule. The same rule lets everyone decide whether an object belongs.",
+        "ta": "சரியாக இரண்டு சக்கரங்கள் கொண்ட வாகனங்களின் தொகுப்பில் மிதிவண்டி இருக்குமா? ஒரு பொருள் உறுப்பா இல்லையா என்பதை ஒரே விதியால் தெளிவாக முடிவு செய்ய முடிந்தால், அந்தத் தொகுப்பு ஒரு கணம்."
       },
       "example": {
         "en": "A = {2, 4, 6, 8}. Every listed number belongs to A; 5 does not.",
@@ -73,6 +74,7 @@ window.TRIGGLE_SET_PATH = {
     },
     {
       "id": "forms",
+      "practiceId": "g9-ch1-ex1.1-q4-i",
       "section": "1.3",
       "page": {
         "en": 3,
@@ -126,6 +128,7 @@ window.TRIGGLE_SET_PATH = {
     },
     {
       "id": "types",
+      "practiceId": "g9-ch1-ex1.2-q1-i",
       "section": "1.4",
       "page": {
         "en": 6,
@@ -242,8 +245,8 @@ window.TRIGGLE_SET_PATH = {
         "ta": "கணச் செயல்களின் பண்புகள்"
       },
       "idea": {
-        "en": "Commutative changes the order; associative changes the grouping; distributive connects union and intersection.",
-        "ta": "பரிமாற்றுப் பண்பில் வரிசை மாறும்; சேர்ப்புப் பண்பில் தொகுத்தல் மாறும்; பங்கீட்டுப் பண்பில் சேர்ப்பும் வெட்டும் தொடர்புபடுகின்றன."
+        "en": "Commutative changes the order and associative changes the grouping. Both work for union and intersection. The distributive laws connect the two operations. A union or intersection with the same set changes nothing. The empty set is the identity for union, and the universal set is the identity for intersection.",
+        "ta": "பரிமாற்றுப் பண்பில் வரிசை மாறும். சேர்ப்புப் பண்பில் தொகுக்கும் முறை மாறும். இவ்விரு பண்புகளும் சேர்ப்புக்கும் வெட்டுக்கும் பொருந்தும். பங்கீட்டுப் பண்பு இரு செயல்களையும் இணைக்கிறது. ஒரு கணத்தையே அதனுடன் சேர்த்தாலும் வெட்டினாலும் அதே கணம் கிடைக்கும். சேர்ப்பின் சமனி வெற்றுக்கணம். வெட்டின் சமனி அனைத்துக் கணம்."
       },
       "example": {
         "en": "Use A={1,2}, B={2,3}, C={3,4}. Choose a property to see both sides give the same set.",

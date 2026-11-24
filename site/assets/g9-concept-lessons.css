@@ -1,0 +1,78 @@
+.g9-investigation {
+  display: grid;
+  gap: .8rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.g9-investigation p {
+  margin: 0;
+}
+
+.g9-investigation fieldset {
+  min-inline-size: 0;
+  margin: 0;
+  padding: .75rem;
+  border: 1px solid var(--line, #d9dfeb);
+  border-radius: .75rem;
+}
+
+.g9-investigation legend {
+  max-inline-size: 100%;
+  padding-inline: .3rem;
+  font-weight: 700;
+}
+
+.g9-investigation .sp2-answers {
+  margin-block: .4rem;
+}
+
+.g9-investigation .sp2-answers button,
+.g9-investigation-reset {
+  min-height: 44px;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.g9-investigation-diagram svg {
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  height: auto;
+  margin: .5rem auto;
+}
+
+.g9-investigation-diagram table {
+  margin-block: .5rem;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.g9-investigation-diagram :is(th, td) {
+  padding: .25rem .1rem;
+  border: 1px solid var(--line, #d9dfeb);
+}
+
+.g9-investigation-result,
+.g9-investigation-feedback {
+  padding-block: .35rem;
+}
+
+.g9-investigation-math {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.g9-investigation-reset {
+  padding: .25rem .7rem;
+}
+
+.g9-investigation-more summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.g9-investigation-more p {
+  margin-block: .55rem;
+}

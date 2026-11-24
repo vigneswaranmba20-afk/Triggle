@@ -9,7 +9,7 @@
 (()=>{'use strict';
 window.TRIGGLE_G9_CH5_PATH={
   chapterId:'g9-ch5',
-  source:'2025 revised Tamil Nadu Standard Nine Mathematics, §5.3 — EN printed pp.193–197; TA printed pp.206–211',
+  source:'2025 revised Tamil Nadu Standard Nine Mathematics, §5.3 — EN printed pp.193–202 (PDF 199–208); TA printed pp.206–215 (PDF 212–221)',
   tamilStatus:'authored translation; independent editorial review pending',
   approvedMedia:{
     file:'Triggle_G9_Distance_Formula_Narrated_Corrected.mp4',
@@ -20,7 +20,7 @@ window.TRIGGLE_G9_CH5_PATH={
   stages:[{
     id:'g9-ch5-distance-formula',
     section:'5.3',
-    page:{en:'193–197',ta:'206–211'},
+    page:{en:'193–202',ta:'206–215'},
     practiceId:'g9-ch5-ex5.2-q2',
     title:{
       en:'Distance between two points',
@@ -54,14 +54,22 @@ window.TRIGGLE_G9_CH5_PATH={
         en:[
           'The x-values tell us how far apart the points are horizontally; the y-values tell us the vertical separation.',
           'A right triangle has horizontal leg |x₂ − x₁| and vertical leg |y₂ − y₁|. Squaring removes any minus signs.',
-          'Pythagoras gives d² = (x₂ − x₁)² + (y₂ − y₁)². Distance is non-negative, so take the positive square root.',
-          'If one coordinate is unchanged, this simplifies to the absolute difference of the other coordinates.'
+          'Pythagoras gives d² = (x₂ − x₁)² + (y₂ − y₁)². Distance is non-negative, so take the non-negative square root.',
+          'If one coordinate is unchanged, this simplifies to the absolute difference of the other coordinates. This also works for points on the same axis.',
+          'On a map, convert the grid distance using the map scale. If 1 grid unit represents 50 metres, multiply the distance in grid units by 50 to get metres.',
+          'Swapping the endpoints reverses the signs of the changes. Squaring them gives the same distance. The distance is zero exactly when the points coincide.',
+          'For three distinct points, add the two shorter distances. If their sum equals the longest distance, the points lie on one line. Otherwise, they form a triangle.',
+          'If the square of the longest side equals the sum of the squares of the other two sides, the triangle is right-angled opposite the longest side. Comparing side lengths can also show which sides of a figure are equal.'
         ],
         ta:[
           'x ஆயத்தொலைவுகளின் வேறுபாடு கிடைமட்ட இடைவெளியையும், y ஆயத்தொலைவுகளின் வேறுபாடு செங்குத்து இடைவெளியையும் காட்டுகின்றன.',
           'செங்கோண முக்கோணத்தின் இரு செங்குத்துப் பக்கங்கள் |x₂ − x₁| மற்றும் |y₂ − y₁|. வர்க்கம் செய்தால் எதிர்மறைக் குறிகள் நீங்குகின்றன.',
-          'பிதாகரஸ் தேற்றப்படி d² = (x₂ − x₁)² + (y₂ − y₁)². தொலைவு எதிர்மறையாக இருக்காது; ஆகவே நேர்ம வர்க்கமூலம் எடுக்க வேண்டும்.',
-          'இரு புள்ளிகளிலும் ஓர் ஆயத்தொலைவு சமமாக இருந்தால், மற்ற ஆயத்தொலைவுகளின் வேறுபாட்டின் மட்டு மதிப்பே தொலைவு.'
+          'பிதாகரஸ் தேற்றப்படி d² = (x₂ − x₁)² + (y₂ − y₁)². தொலைவு குறை எண்ணாக இருக்காது. எனவே குறையற்ற வர்க்கமூலத்தை எடுக்க வேண்டும்.',
+          'இரு புள்ளிகளிலும் ஓர் ஆயத்தொலைவு சமமாக இருந்தால், மற்ற ஆயத்தொலைவுகளின் வேறுபாட்டின் மட்டு மதிப்பே தொலைவு. ஒரே அச்சில் உள்ள புள்ளிகளுக்கும் இது பொருந்தும்.',
+          'வரைபடத்தின் தொலைவை அதன் அளவுத்திட்டத்தைப் பயன்படுத்தி மாற்றலாம். வரைபடத்தில் ஓர் அலகு 50 மீட்டரைக் குறித்தால், அலகுகளில் உள்ள தொலைவை 50-ஆல் பெருக்கினால் மீட்டரில் தொலைவு கிடைக்கும்.',
+          'முனைப்புள்ளிகளின் வரிசையை மாற்றினால் மாற்றங்களின் குறிகள் மாறும். அவற்றை வர்க்கம் செய்தால் அதே தொலைவு கிடைக்கும். இரு புள்ளிகளும் ஒரே இடத்தில் அமையும்போது மட்டுமே தொலைவு பூச்சியம்.',
+          'வெவ்வேறு மூன்று புள்ளிகளுக்கு இடையேயான தொலைவுகளில் சிறிய இரண்டைக் கூட்டுங்கள். அந்தக் கூடுதல் மிகப்பெரிய தொலைவுக்குச் சமமெனில் புள்ளிகள் ஒரே கோட்டில் அமையும். இல்லையெனில் அவை ஒரு முக்கோணத்தை உருவாக்கும்.',
+          'மிக நீளமான பக்கத்தின் வர்க்கம் மற்ற இரு பக்கங்களின் வர்க்கங்களின் கூடுதலுக்குச் சமமானால், மிக நீளமான பக்கத்தின் எதிரே செங்கோணம் அமையும். பக்கங்களின் நீளங்களை ஒப்பிட்டு ஒரு வடிவத்தின் எந்தப் பக்கங்கள் சமம் என்றும் காணலாம்.'
         ]
       }
     },

@@ -18,8 +18,8 @@ const more = [
       "ta": "ஒரு நாற்கரம் — இரண்டு முக்கோணங்கள்"
     },
     "idea": {
-      "en": "Draw one diagonal across a four-sided field. It makes two triangles, so the whole area is the sum of their areas.",
-      "ta": "நாற்கரத்தில் ஒரு மூலைவிட்டத்தை வரையவும். அது இரண்டு முக்கோணங்களாகப் பிரியும். மொத்தப் பரப்பளவு அவற்றின் பரப்பளவுகளின் கூடுதலாகும்."
+      "en": "Draw a diagonal that lies inside the four-sided field. It makes two triangles, so the whole area is the sum of their areas.",
+      "ta": "நாற்கரத்தின் உள்ளே அமையும் ஒரு மூலைவிட்டத்தை வரையவும். அது இரண்டு முக்கோணங்களாகப் பிரியும். மொத்தப் பரப்பளவு அவற்றின் பரப்பளவுகளின் கூடுதலாகும்."
     },
     "rule": {
       "en": "Use Heron’s formula for each triangle when its three side lengths are known, then add their areas.",
@@ -27,7 +27,9 @@ const more = [
     },
     "math": {
       "latex": "A_{\\text{quadrilateral}}=A_{\\triangle ABC}+A_{\\triangle ACD}",
+      "latexTa": "A_{\\text{நாற்கரம்}}=A_{\\triangle ABC}+A_{\\triangle ACD}",
       "fallback": "Whole area = area of first triangle + area of second triangle",
+      "fallbackTa": "நாற்கரத்தின் பரப்பு இரண்டு முக்கோணங்களின் பரப்புகளின் கூடுதல்.",
       "display": true
     },
     "visual": {
@@ -39,7 +41,9 @@ const more = [
     },
     "exampleMath": {
       "latex": "\\begin{aligned}s&=\\dfrac{5+5+8}{2}=9\\text{ cm}\\\\A_{\\triangle}&=\\sqrt{9(9-5)(9-5)(9-8)}\\\\&=12\\text{ cm}^{2}\\\\A_{\\text{whole}}&=12+12=24\\text{ cm}^{2}\\end{aligned}",
+      "latexTa": "\\begin{aligned}s&=\\dfrac{5+5+8}{2}=9\\text{ செ.மீ.}\\\\A_{\\triangle}&=\\sqrt{9(9-5)(9-5)(9-8)}\\\\&=12\\text{ செ.மீ.}^{2}\\\\A_{\\text{மொத்தம்}}&=12+12=24\\text{ செ.மீ.}^{2}\\end{aligned}",
       "fallback": "Each triangle area is 12 square centimetres, so the rhombus area is 24 square centimetres.",
+      "fallbackTa": "ஒவ்வொரு முக்கோணத்தின் பரப்பு 12 சதுர செ.மீ. மொத்தம் 24 சதுர செ.மீ.",
       "display": true
     },
     "deepDive": {
@@ -91,7 +95,9 @@ const more = [
     },
     "whyMath": {
       "latex": "\\begin{aligned}s&=18\\text{ cm}\\\\A_{\\triangle}&=\\sqrt{18\\cdot5\\cdot5\\cdot8}=60\\text{ cm}^{2}\\\\A_{\\text{whole}}&=2(60)=120\\text{ cm}^{2}\\end{aligned}",
+      "latexTa": "\\begin{aligned}s&=18\\text{ செ.மீ.}\\\\A_{\\triangle}&=\\sqrt{18\\cdot5\\cdot5\\cdot8}=60\\text{ செ.மீ.}^{2}\\\\A_{\\text{மொத்தம்}}&=2(60)=120\\text{ செ.மீ.}^{2}\\end{aligned}",
       "fallback": "One triangle 60 square centimetres; two triangles 120 square centimetres.",
+      "fallbackTa": "ஒரு முக்கோணத்தின் பரப்பு 60 சதுர செ.மீ. இரண்டின் பரப்பு 120 சதுர செ.மீ.",
       "display": true
     },
     "practiceId": "g9-ch7-ex7.1-q7"
@@ -117,7 +123,9 @@ const more = [
     },
     "math": {
       "latex": "\\begin{aligned}\\mathrm{TSA}_{\\text{cuboid}}&=2(lb+bh+lh)\\\\\\mathrm{LSA}_{\\text{cuboid}}&=2h(l+b)\\\\\\mathrm{TSA}_{\\text{cube}}&=6a^{2}\\\\\\mathrm{LSA}_{\\text{cube}}&=4a^{2}\\end{aligned}",
+      "latexTa": "\\begin{aligned}\\mathrm{TSA}_{\\text{கனசெவ்வகம்}}&=2(lb+bh+lh)\\\\\\mathrm{LSA}_{\\text{கனசெவ்வகம்}}&=2h(l+b)\\\\\\mathrm{TSA}_{\\text{கனசதுரம்}}&=6a^{2}\\\\\\mathrm{LSA}_{\\text{கனசதுரம்}}&=4a^{2}\\end{aligned}",
       "fallback": "Cuboid total = 2(lb+bh+lh); lateral = 2h(l+b); cube total = 6a²; lateral = 4a².",
+      "fallbackTa": "கனசெவ்வகம் மொத்தப் புறப்பரப்பு 2(lb+bh+lh), பக்கப்பரப்பு 2h(l+b). கனசதுரம் மொத்தப் புறப்பரப்பு 6a², பக்கப்பரப்பு 4a².",
       "display": true
     },
     "visual": {
@@ -129,7 +137,9 @@ const more = [
     },
     "exampleMath": {
       "latex": "\\begin{aligned}\\mathrm{TSA}&=2(12+8+6)=52\\text{ cm}^{2}\\\\\\mathrm{LSA}&=2(8+6)=28\\text{ cm}^{2}\\end{aligned}",
+      "latexTa": "\\begin{aligned}\\mathrm{TSA}&=2(12+8+6)=52\\text{ செ.மீ.}^{2}\\\\\\mathrm{LSA}&=2(8+6)=28\\text{ செ.மீ.}^{2}\\end{aligned}",
       "fallback": "All six faces = 52 square centimetres. Four walls = 28 square centimetres.",
+      "fallbackTa": "ஆறு முகங்களின் பரப்பளவு 52 சதுர செ.மீ. நான்கு பக்க முகங்களின் பரப்பளவு 28 சதுர செ.மீ.",
       "display": true
     },
     "deepDive": {
@@ -183,7 +193,9 @@ const more = [
     },
     "whyMath": {
       "latex": "\\mathrm{LSA}=2h(l+b)=2\\cdot2(5+4)=36\\text{ m}^{2}",
+      "latexTa": "\\mathrm{LSA}=2h(l+b)=2\\cdot2(5+4)=36\\text{ மீ.}^{2}",
       "fallback": "The four walls cover 36 square metres.",
+      "fallbackTa": "நான்கு சுவர்களின் பரப்பு 36 சதுர மீட்டர்.",
       "display": true
     },
     "practiceId": "g9-ch7-ex7.2-q1"
@@ -209,7 +221,9 @@ const more = [
     },
     "math": {
       "latex": "\\begin{aligned}V_{\\text{cuboid}}&=l\\times b\\times h\\\\V_{\\text{cube}}&=a^{3}\\end{aligned}",
+      "latexTa": "\\begin{aligned}V_{\\text{கனசெவ்வகம்}}&=l\\times b\\times h\\\\V_{\\text{கனசதுரம்}}&=a^{3}\\end{aligned}",
       "fallback": "Volume of a cuboid = length × breadth × height; cube = side cubed.",
+      "fallbackTa": "கனசெவ்வகத்தின் கனஅளவு நீளம் பெருக்கல் அகலம் பெருக்கல் உயரம். கனசதுரத்தின் கனஅளவு பக்கத்தின் மூன்றாம் அடுக்கு.",
       "display": true
     },
     "visual": {
@@ -221,7 +235,9 @@ const more = [
     },
     "exampleMath": {
       "latex": "\\begin{aligned}\\text{One layer}&=4\\times3=12\\\\\\text{Two layers}&=12\\times2=24\\text{ cm}^{3}\\end{aligned}",
+      "latexTa": "\\begin{aligned}\\text{ஓர் அடுக்கு}&=4\\times3=12\\\\\\text{இரு அடுக்குகள்}&=12\\times2=24\\text{ செ.மீ.}^{3}\\end{aligned}",
       "fallback": "Each layer has 12 cubes; 2 layers contain 24 unit cubes.",
+      "fallbackTa": "ஓர் அடுக்கில் 12 கன அலகுகள். இரு அடுக்குகளில் 24 கன அலகுகள்.",
       "display": true
     },
     "deepDive": {
@@ -275,7 +291,9 @@ const more = [
     },
     "whyMath": {
       "latex": "V=a^{3}=4\\times4\\times4=64\\text{ cm}^{3}",
+      "latexTa": "V=a^{3}=4\\times4\\times4=64\\text{ செ.மீ.}^{3}",
       "fallback": "Four cubed is 64 cubic centimetres.",
+      "fallbackTa": "நான்கின் மூன்றாம் அடுக்கு 64 கன செ.மீ.",
       "display": true
     },
     "practiceId": "g9-ch7-ex7.3-q1",
