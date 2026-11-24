@@ -16,6 +16,22 @@ const existing=eligible.filter(q=>q.exercise!=='3.2'||q.chapter!=='3'||q.id===le
 const optionalEx32=new Set(['q1-ii','q2','q3-vi','q5-iii','q6-v'].map(part=>'g9-ch3-ex3.2-'+part));
 const expectedIds=[...existing.map(q=>q.id),...optionalEx32];
 assert.deepEqual([...ids].sort(),expectedIds.sort(),'Preserve existing Why bridges and pin the five selected Exercise 3.2 hints');
+// AUD29-02: every new Chapter 5 disclosure must explain, rather than copy, the solution.
+const ch5New=Object.entries(hints).filter(([id,h])=>/^g9-ch5-ex5\\.[1-6]-q\\d+$/.test(id)&&['coordinates','distance','midpoint','section','centroid'].includes(h.concept)&&h.step===0);
+const aud29Ids=[...[1,2,3,4].map(q=>'5.1-q'+q),...[1,4,10,12].map(q=>'5.2-q'+q),...Array.from({length:8},(_,i)=>'5.3-q'+(i+1)),...Array.from({length:7},(_,i)=>'5.4-q'+(i+1)),...Array.from({length:7},(_,i)=>'5.5-q'+(i+1)),...Array.from({length:20},(_,i)=>'5.6-q'+(i+1))].map(x=>'g9-ch5-ex'+x);
+assert.equal(aud29Ids.length,50);
+for(const id of aud29Ids){
+ const h=hints[id],q=source.get(id);
+ assert.ok(q&&h&&ch5New.some(([key])=>key===id),'Concept bridge present '+id);
+ assert.ok(q.steps[h.step].en.includes(h.expected),'Source anchor preserved '+id);
+ assert.ok(!h.en.includes(h.expected),'Do not copy step into explanation '+id);
+ assert.ok(!h.ta.includes(q.steps[h.step].ta),'Do not copy Tamil step into explanation '+id);
+ assert.ok(!/correct option|correct answer|சரியான விடை/i.test(h.en+' '+h.ta),'No answer-option spoiler '+id);
+ assert.ok(/[\\u0B80-\\u0BFF]/u.test(h.ta),'Tamil explanatory text '+id);
+ for(const [lang,answer] of [['en',q.answer],['ta',q.answerTa]]) {
+  if(typeof answer==='string'&&answer.length>=12) assert.ok(!h[lang].includes(answer),'No full final answer pasted '+id+' '+lang);
+ }
+}
 const chapters=new Set();let countDiagrams=0;
 for(const id of ids){
  const q=source.get(id),h=hints[id];
