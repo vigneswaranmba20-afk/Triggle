@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "e1de0309288ada14897eb11b5f324b7882252a9e",
-  "updatedAt": "2026-11-24T11:26:59+05:30",
+  "sourceCommit": "151b1b8605c609428e251c866542328a8adac92b",
+  "updatedAt": "2026-11-24T13:22:37+05:30",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -32,10 +32,10 @@
     "site/data/g10-ch6-concepts.js": "bfd7bb85a4607c4cb71467e006dc161b4679f9f6e081c5ce57176728583b74fd",
     "site/data/g9-algebra-chapter.js": "63bdd314c52b309eaa6952f57f70fb1587c611caedd94ff9bf592c9455974455",
     "site/data/g9-ch5-distance-concept.js": "3154c8e0da99f96c745327d9d7ffde5cf8f1a042d1952fdd0da5e9785f8833c7",
-    "site/data/g9-clear-math.js": "7e5944738dc320141c05bfad27a42c37bcfb4801a9c44d4427dcd50aec683ba9",
+    "site/data/g9-clear-math.js": "8f210846d227cdac8dc038f8f0a8c3a1bb6bce7958b5335c213ab2238444f6f3",
     "site/data/g9-mensuration-chapter.js": "0f227dbd9717a4df7f87430035ce6ee19cbf62f02a226547f9f9db42c27160ee",
     "site/data/g9-mensuration-remaining.js": "777095314f54cde92f5c6abc567bb4231842cf94c1b9459206e5dedd7cf9b7c8",
-    "site/data/g9-probability-chapter.js": "5b9ee457150461a7ce46f3b2e9ede7c7d1234dfa8e751b05ff71d22e4245ca79",
+    "site/data/g9-probability-chapter.js": "c141f534ffa3b557a4d97a5bcd3b6057ac6c88967efc6856ca812a1e212a2dde",
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "7f74a9d8f2f0503b21e696a51731efab927d3009464c5e3713e861801b9aefd7",
     "site/data/math-layout/g10-ch2-ch8-chatgpt-20261113.js": "7c9e63f5a069dc5658601181f5d6b1df16ec9d0d457e21964fb2b24ec291d134",
@@ -161,7 +161,7 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9.js": "5c0b88abd665d77d1f5b8cbb3e57e4204dbb89783040ff4b48d5814cb650d758",
-    "site/index.html": "f0e016cac98aec44fa50a17ca6bb4bf501ad9b5d1552fe6bef2592b3b87af9ac",
+    "site/index.html": "c6bc2b19f5c0a5880d33bcce05ba8c272cf7d2fc06d581ce133b322a5f638427",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
