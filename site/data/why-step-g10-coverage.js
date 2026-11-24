@@ -861,15 +861,15 @@ const additional={
   },
   "c10-3-ex3-2-q2-ii": {
       "step": 0,
-      "expected": "Find the LCM of the numerical coefficients −9 an",
-      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
-      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+      "expected": "Since 9 = 3² and 12 = 2² × 3",
+      "en": "Use the greatest power of each prime that occurs in any coefficient. Their product is divisible by every given coefficient.",
+      "ta": "கெழுக்களில் இடம்பெறும் ஒவ்வொரு பகாக் காரணிக்கும் மிகப்பெரிய அடுக்கைத் தேர்ந்தெடுக்க. அவற்றின் பெருக்கற்பலன் ஒவ்வொரு கெழுவாலும் வகுபடும்."
   },
   "c10-3-ex3-2-q2-iii": {
       "step": 0,
-      "expected": "Find the LCM of the numerical coefficients 16, −",
-      "en": "In polynomial GCD or LCM, ordering terms in descending powers of x ensures each division or factorization step matches highest powers cleanly without missing zero-coefficient terms.",
-      "ta": "பல்லுறுப்புக் கோவைகளின் மீ.பெ.வ மற்றும் மீ.சி.ம காணும்போது இறங்கு வரிசையில் எழுதுவதால் வகுத்தல் மற்றும் காரணிப்படுத்தல் படிகள் துல்லியமாக அமையும்."
+      "expected": "Since 16 = 2⁴, 12 = 2² × 3 and 8 = 2³",
+      "en": "Use the greatest power of each prime that occurs in any coefficient. Their product is divisible by every given coefficient.",
+      "ta": "கெழுக்களில் இடம்பெறும் ஒவ்வொரு பகாக் காரணிக்கும் மிகப்பெரிய அடுக்கைத் தேர்ந்தெடுக்க. அவற்றின் பெருக்கற்பலன் ஒவ்வொரு கெழுவாலும் வகுபடும்."
   },
   "c10-3-ex3-2-q2-iv": {
       "step": 0,
