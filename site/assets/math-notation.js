@@ -141,11 +141,12 @@
     return s;
   }
   function prepare(root=document) {
+    const tamil=(root.closest?.('[lang]')?.lang||document.documentElement.lang)==='ta';
     root.querySelectorAll('.triggle-tex').forEach(el=>{
       if(el.scrollWidth>el.clientWidth+1){
         el.tabIndex=0;
         el.setAttribute('role','group');
-        el.setAttribute('aria-label','Scrollable mathematical expression');
+        el.setAttribute('aria-label',tamil?'உருட்டிப் பார்க்கக்கூடிய கணிதக் கோவை':'Scrollable mathematical expression');
       }else{
         el.removeAttribute('tabindex');el.removeAttribute('role');el.removeAttribute('aria-label');
       }

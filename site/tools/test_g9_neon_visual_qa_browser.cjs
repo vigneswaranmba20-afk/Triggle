@@ -66,12 +66,13 @@ const OUT=path.resolve('screenshots/g9-neon-qa');
                 assert(bounds.gap>=8,label+' Tamil 320px navigation gap: '+JSON.stringify(bounds));
               }
               if(chapter==='g9-ch9'&&i===4&&width===320){
-                const wordSafe=await hub.locator('.probability-event-pairs .probability-controls > button').evaluateAll(buttons=>
-                  buttons.filter(btn=>(btn.textContent||'').includes('Complements')).map(btn=>({
+                const complementLabel=lang==='ta'?'நிரப்பு நிகழ்ச்சிகள்':'Complements';
+                const wordSafe=await hub.locator('.probability-event-pairs .probability-controls > button').evaluateAll((buttons,text)=>
+                  buttons.filter(btn=>(btn.textContent||'').trim()===text).map(btn=>({
                     wrap:getComputedStyle(btn).overflowWrap,
                     wordBreak:getComputedStyle(btn).wordBreak,
                     height:btn.getBoundingClientRect().height
-                  })));
+                  })),complementLabel);
                 assert(wordSafe.length>=1,label+' Complements choice present');
                 assert(wordSafe.every(x=>x.wrap==='normal'&&x.wordBreak==='normal'&&x.height>=45.5),
                   label+' Complements must not split midword or shrink the touch target: '+JSON.stringify(wordSafe));

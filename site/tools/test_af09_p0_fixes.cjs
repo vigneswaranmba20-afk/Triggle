@@ -47,12 +47,12 @@ assert.equal(q81[1].latex, '81^{\\frac{1}{4}}');
 const surdAdd = g9Math.text('a√m+b√m=(a+b)√m.');
 assert.equal(surdAdd[0].latex, 'a\\,\\sqrt{m} + b\\,\\sqrt{m} = \\left(a + b\\right)\\,\\sqrt{m}');
 
-// 4. AUD06-02: Grade 9 Probability eventTypes widget explicitly contrasts P(A or B) for disjoint vs overlapping events
+// 4. AUD06-02: The Probability widget explains union counting for disjoint and overlapping events.
 const probUi = readSite('assets/g9-probability-concepts.js');
-assert.match(probUi, /P\(A\\text\{ or \}B\)/);
+assert.match(probUi, /P\(A\\cup B\)/);
 assert.ok(probUi.includes('Ticket 4 matches both'));
-assert.ok(probUi.includes('Shared outcome'));
-assert.ok(probUi.includes('Since they do not overlap'));
+assert.ok(probUi.includes('Count the shared ticket only once.'));
+assert.ok(probUi.includes('Add the two counts because the rules share no tickets.'));
 
 // 5. AUD07-04: G10 Ch1 KaTeX layout formulas wrap multi-word English prose and units cleanly
 const ch1MathSrc = readSite('data/math-layout/g10-ch1-chatgpt-20261113.js');
