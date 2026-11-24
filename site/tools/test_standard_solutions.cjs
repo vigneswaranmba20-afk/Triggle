@@ -437,7 +437,7 @@ for(const [grade,data] of Object.entries(classes)){
    const bilingualGeometry=g9BilingualGeometry.records[item.id];
    assert.ok([trig,correction,extended,originalChoices,bilingualGeometry].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
    const algebra=require('../data/textbook-fidelity/g9-ch3-ex3-1-q10-q12-bilingual.json').records[item.id];
-   if(grade==='9' && /^g9-ch(?:7-ex7\.[1-4]|8-ex8\.[1-4]|9-ex9\.1)-q\d+$/.test(item.id)){
+   if(grade==='9' && /^g9-ch(?:7-ex7\.[1-4]|8-ex8\.[1-4]|9-ex9\.[1-3])-q\d+$/.test(item.id)){
     const original=JSON.parse(JSON.stringify(item));
     original.q.ta='English-language question; Tamil version pending. '+item.q.en;
     for(const step of original.steps){
@@ -450,9 +450,17 @@ for(const [grade,data] of Object.entries(classes)){
     original.label.ta=item.label.en+' (English only)';
     original.title.ta=item.title.en+' (English only)';
     for(const step of original.steps){step.ta='English explanation (Tamil version pending): '+step.en;delete step.mathTa;}
+    if(item.id==='g9-ch9-ex9.2-q5'){delete original.dataTable.ta;delete original.dataTable.replaceRegexTa;}
     if(item.exercise==='7.3'){
      original.sourceFidelity.taPdfPage=294;
      delete original.sourceFidelity.taDriveId;
+    }else if(item.exercise==='9.2' || item.exercise==='9.3'){
+     const qNum=Number(item.id.split('-q')[1]);
+     const page=item.exercise==='9.3' ? (qNum<=7 ? 335 : 336) : [334,334,334,335,325][qNum-1];
+     original.sourceFidelity.taPdfPage=page;
+     original.sourceFidelity.taPrintedPage=page-(item.id==='g9-ch9-ex9.2-q5' ? 6 : 16);
+     delete original.sourceFidelity.taDriveId;
+     if(item.id==='g9-ch9-ex9.2-q5') original.steps[3].ta="English explanation (Tamil version pending): If part-time maids includes families who also employ full-time maids, add 860 only-part-time and 250 both-types families. This is an alternative interpretation, not the printed answer key.";
     }else if(item.exercise==='9.1'){
      original.sourceFidelity.taPdfPage+=10;
      delete original.sourceFidelity.taDriveId;
