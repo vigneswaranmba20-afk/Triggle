@@ -799,42 +799,42 @@ Batch,Order,Question ID,Typography changed,Prompt restored,Tamil baseline flag,L
 8,798,c10-2-ex2-9-q6,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
 8,799,c10-2-ex2-9-q7-i,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
 8,800,c10-2-ex2-9-q7-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
-9,801,c10-2-ex2-10-q1,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,802,c10-2-ex2-10-q2,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,803,c10-2-ex2-10-q3,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,804,c10-2-ex2-10-q4,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,805,c10-2-ex2-10-q5,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,806,c10-2-ex2-10-q6,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,807,c10-2-ex2-10-q7,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,808,c10-2-ex2-10-q8,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,809,c10-2-ex2-10-q9,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,810,c10-2-ex2-10-q10,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,811,c10-2-ex2-10-q11,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,812,c10-2-ex2-10-q12,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,813,c10-2-ex2-10-q13,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,814,c10-2-ex2-10-q14,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,815,c10-2-ex2-10-q15,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,816,c10-2-unit-q1,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-9,817,c10-2-unit-q2-i,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,818,c10-2-unit-q2-ii,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,819,c10-2-unit-q2-iii,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,820,c10-2-unit-q3,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,821,c10-2-unit-q4,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-9,822,c10-2-unit-q5,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-9,823,c10-2-unit-q6,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,824,c10-2-unit-q7,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-9,825,c10-2-unit-q8,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,826,c10-2-unit-q9,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-9,827,c10-2-unit-q10,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,828,c10-3-ex3-1-q1-i,0,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending,b9b1a071
-9,829,c10-3-ex3-1-q1-ii,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 against prescribed textbook",,pending,b9b1a071
-9,830,c10-3-ex3-1-q1-iii,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 against prescribed textbook",,pending,b9b1a071
-9,831,c10-3-ex3-1-q2-i,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,832,c10-3-ex3-1-q2-ii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,833,c10-3-ex3-1-q2-iii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-9,834,c10-3-ex3-1-q3,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-9,835,c10-3-ex3-1-q4,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-9,836,c10-3-ex3-1-q5,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
+9,801,c10-2-ex2-10-q1,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,802,c10-2-ex2-10-q2,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,803,c10-2-ex2-10-q3,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,804,c10-2-ex2-10-q4,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,805,c10-2-ex2-10-q5,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,806,c10-2-ex2-10-q6,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,807,c10-2-ex2-10-q7,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,808,c10-2-ex2-10-q8,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,809,c10-2-ex2-10-q9,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,810,c10-2-ex2-10-q10,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,811,c10-2-ex2-10-q11,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,812,c10-2-ex2-10-q12,1,Full four English choices restored from printed textbook; Tamil choices checked independently,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,813,c10-2-ex2-10-q13,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,814,c10-2-ex2-10-q14,1,Full four English choices restored from printed textbook; Tamil choices checked independently,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,815,c10-2-ex2-10-q15,1,,1,320 360 390,"Prescribed Tamil textbook printed pp82–83; all four choices, numbered explanations and answer label checked",,pending,b9b1a071
+9,816,c10-2-unit-q1,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,817,c10-2-unit-q2-i,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,818,c10-2-unit-q2-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,819,c10-2-unit-q2-iii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,820,c10-2-unit-q3,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,821,c10-2-unit-q4,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,822,c10-2-unit-q5,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,823,c10-2-unit-q6,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,824,c10-2-unit-q7,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,825,c10-2-unit-q8,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,826,c10-2-unit-q9,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed; real ratios ±√3 both satisfy second and sixth terms",,pending,b9b1a071
+9,827,c10-2-unit-q10,1,,1,320 360 390,"Prescribed Tamil textbook printed pp83–84; full unit question, numbered reasoning and answer reviewed",,pending,b9b1a071
+9,828,c10-3-ex3-1-q1-i,0,,1,320 360 390,"Prescribed Tamil textbook printed p94; original three-variable equations, all prose and answers checked",,pending,b9b1a071
+9,829,c10-3-ex3-1-q1-ii,0,,1,320 360 390,"Prescribed Tamil textbook printed p94; original three-variable equations, all prose and answers checked",,pending,b9b1a071
+9,830,c10-3-ex3-1-q1-iii,0,,1,320 360 390,"Prescribed Tamil textbook printed p94; original three-variable equations, all prose and answers checked",,pending,b9b1a071
+9,831,c10-3-ex3-1-q2-i,0,,1,320 360 390,"Prescribed Tamil textbook printed p94; original three-variable equations, all prose and answers checked",,pending,b9b1a071
+9,832,c10-3-ex3-1-q2-ii,0,,1,320 360 390,"Prescribed Tamil textbook printed p94; original three-variable equations, all prose and answers checked",,pending,b9b1a071
+9,833,c10-3-ex3-1-q2-iii,0,,1,320 360 390,"Prescribed Tamil textbook printed p94; original three-variable equations, all prose and answers checked",,pending,b9b1a071
+9,834,c10-3-ex3-1-q3,0,,1,320 360 390,"Prescribed Tamil textbook printed p94; original three-variable equations, all prose and answers checked",,pending,b9b1a071
+9,835,c10-3-ex3-1-q4,0,,1,320 360 390,"Prescribed Tamil textbook printed p94; original three-variable equations, all prose and answers checked",,pending,b9b1a071
+9,836,c10-3-ex3-1-q5,0,,1,320 360 390,"Prescribed Tamil textbook printed p94; original three-variable equations, all prose and answers checked",,pending,b9b1a071
 9,837,c10-3-ex3-2-q1-i,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
 9,838,c10-3-ex3-2-q1-ii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
 9,839,c10-3-ex3-2-q1-iii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
