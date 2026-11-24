@@ -108,7 +108,8 @@
     body.append(check);
 
     if (exercise && typeof onQuestion === 'function') {
-      const link = element('button', copy.exercise + ' ' + exercise.exercise + ' →', 'g10ch2-practice-link');
+      const medium = ta && !exercise.q?.ta ? ' (ஆங்கிலத்தில் மட்டும்)' : '';
+      const link = element('button', copy.exercise + ' ' + exercise.exercise + medium + ' →', 'g10ch2-practice-link');
       link.type = 'button';
       link.addEventListener('click', () => onQuestion(exercise));
       body.append(link);
