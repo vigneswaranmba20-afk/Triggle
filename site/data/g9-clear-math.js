@@ -41554,10 +41554,20 @@ const records=[
       ],
       "ta": [
         {
-          "latex": "p(x) = x^3 - 5x^2 + 4x - 3,\\quad g(x) = x - 2",
-          "fallback": "1. p(x) = x³ − 5x² + 4x − 3 என்ற பல்லுறுப்புக் கோவை g(x) = x − 2 என்ற பல்லுறுப்புக் கோவையின் மடங்கா எனச் சரிபார்க்க.",
-          "display": true
-        }
+          "latex": "1",
+          "fallback": "1"
+        },
+        ". ",
+        {
+          "latex": "p \\left(x\\right) = x^{3} - 5 x^{2} + 4 x - 3",
+          "fallback": "p(x) = x³ − 5x² + 4x − 3"
+        },
+        " என்ற பல்லுறுப்புக் கோவை ",
+        {
+          "latex": "g \\left(x\\right) = x - 2",
+          "fallback": "g(x) = x − 2"
+        },
+        " என்ற பல்லுறுப்புக் கோவையின் மடங்கா எனச் சரிபார்க்க."
       ]
     },
     "answerMath": {
@@ -41968,17 +41978,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "(3x^3 - 4x^2 + 7x - 5) \\div (x + 3)",
-          "fallback": "3. Find the remainder when 3x³ − 4x² + 7x − 5 is divided by (x + 3).",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". Find the remainder when ",
+        {
+          "latex": "3 x^{3} - 4 x^{2} + 7 x - 5",
+          "fallback": "3x³ − 4x² + 7x − 5"
+        },
+        " is divided by ",
+        {
+          "latex": "\\left(x + 3\\right)",
+          "fallback": "(x + 3)"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "(3x^3 - 4x^2 + 7x - 5) \\div (x + 3)",
-          "fallback": "3. 3x³ − 4x² + 7x − 5 என்ற பல்லுறுப்புக் கோவையை (x + 3)-ஆல் வகுக்கக் கிடைக்கும் மீதியைக் காண்க.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". ",
+        {
+          "latex": "3 x^{3} - 4 x^{2} + 7 x - 5",
+          "fallback": "3x³ − 4x² + 7x − 5"
+        },
+        " என்ற பல்லுறுப்புக் கோவையை ",
+        {
+          "latex": "\\left(x + 3\\right)",
+          "fallback": "(x + 3)"
+        },
+        "-ஆல் வகுக்கக் கிடைக்கும் மீதியைக் காண்க."
       ]
     },
     "answerMath": {
@@ -42066,17 +42096,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "(x^{2018} + 2018) \\div (x - 1)",
-          "fallback": "4. What is the remainder when x²⁰¹⁸ + 2018 is divided by x − 1?",
-          "display": true
-        }
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". What is the remainder when ",
+        {
+          "latex": "x^{2018} + 2018",
+          "fallback": "x²⁰¹⁸ + 2018"
+        },
+        " is divided by ",
+        {
+          "latex": "x - 1",
+          "fallback": "x − 1"
+        },
+        "?"
       ],
       "ta": [
         {
-          "latex": "(x^{2018} + 2018) \\div (x - 1)",
-          "fallback": "4. x²⁰¹⁸ + 2018 என்ற பல்லுறுப்புக் கோவையை x − 1-ஆல் வகுக்கக் கிடைக்கும் மீதியைக் காண்க.",
-          "display": true
-        }
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". ",
+        {
+          "latex": "x^{2018} + 2018",
+          "fallback": "x²⁰¹⁸ + 2018"
+        },
+        " என்ற பல்லுறுப்புக் கோவையை ",
+        {
+          "latex": "x - 1",
+          "fallback": "x − 1"
+        },
+        "-ஆல் வகுக்கக் கிடைக்கும் மீதியைக் காண்க."
       ]
     },
     "answerMath": {
@@ -42157,17 +42207,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "p(x) = 2x^3 - kx^2 + 3x + 10,\\quad (x - 2) \\mid p(x)",
-          "fallback": "5. For what value of k is the polynomial p(x) = 2x³ − kx² + 3x + 10 exactly divisible by (x − 2)?",
-          "display": true
-        }
+          "latex": "5",
+          "fallback": "5"
+        },
+        ". For what value of ",
+        {
+          "latex": "k",
+          "fallback": "k"
+        },
+        " is the polynomial p(x) = 2x³ − kx² + 3x + 10 exactly divisible by ",
+        {
+          "latex": "\\left(x - 2\\right)",
+          "fallback": "(x − 2)"
+        },
+        "?"
       ],
       "ta": [
         {
-          "latex": "p(x) = 2x^3 - kx^2 + 3x + 10,\\quad (x - 2) \\mid p(x)",
-          "fallback": "5. p(x) = 2x³ − kx² + 3x + 10 என்ற பல்லுறுப்புக் கோவையை (x − 2)-ஆல் மீதியின்றி வகுத்தால் k-இன் மதிப்பைக் காண்க.",
-          "display": true
-        }
+          "latex": "5",
+          "fallback": "5"
+        },
+        ". p(x) = 2x³ − kx² + 3x + 10 என்ற பல்லுறுப்புக் கோவையை ",
+        {
+          "latex": "\\left(x - 2\\right)",
+          "fallback": "(x − 2)"
+        },
+        "-ஆல் மீதியின்றி வகுத்தால் ",
+        {
+          "latex": "k",
+          "fallback": "k"
+        },
+        "-இன் மதிப்பைக் காண்க."
       ]
     },
     "answerMath": {
@@ -42266,17 +42336,47 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "p(x) = 2x^3 + ax^2 + 4x - 12,\\; q(x) = x^3 + x^2 - 2x + a,\\; p(3) = q(3)",
-          "fallback": "6. If two polynomials 2x³ + ax² + 4x − 12 and x³ + x² − 2x + a leave the same remainder when divided by (x − 3), find the value of a and also find the remainder.",
-          "display": true
-        }
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". If two polynomials ",
+        {
+          "latex": "2 x^{3} + ax^{2} + 4 x - 12",
+          "fallback": "2x³ + ax² + 4x − 12"
+        },
+        " and ",
+        {
+          "latex": "x^{3} + x^{2} - 2 x + a",
+          "fallback": "x³ + x² − 2x + a"
+        },
+        " leave the same remainder when divided by ",
+        {
+          "latex": "\\left(x - 3\\right)",
+          "fallback": "(x − 3)"
+        },
+        ", find the value of a and also find the remainder."
       ],
       "ta": [
         {
-          "latex": "p(x) = 2x^3 + ax^2 + 4x - 12,\\; q(x) = x^3 + x^2 - 2x + a,\\; p(3) = q(3)",
-          "fallback": "6. 2x³ + ax² + 4x − 12 மற்றும் x³ + x² − 2x + a என்ற இரு பல்லுறுப்புக் கோவைகளை (x − 3)-ஆல் வகுக்கக் கிடைக்கும் மீதிகள் சமமானால், a-இன் மதிப்பைக் காண்க. மேலும் அதன் மீதியைக் காண்க.",
-          "display": true
-        }
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". ",
+        {
+          "latex": "2 x^{3} + ax^{2} + 4 x - 12",
+          "fallback": "2x³ + ax² + 4x − 12"
+        },
+        " மற்றும் ",
+        {
+          "latex": "x^{3} + x^{2} - 2 x + a",
+          "fallback": "x³ + x² − 2x + a"
+        },
+        " என்ற இரு பல்லுறுப்புக் கோவைகளை ",
+        {
+          "latex": "\\left(x - 3\\right)",
+          "fallback": "(x − 3)"
+        },
+        "-ஆல் வகுக்கக் கிடைக்கும் மீதிகள் சமமானால், a-இன் மதிப்பைக் காண்க. மேலும் அதன் மீதியைக் காண்க."
       ]
     },
     "answerMath": {
@@ -42557,17 +42657,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "p(x) = 2x^3 - 5x^2 - 28x + 15",
-          "fallback": "8. Using factor theorem, show that (x − 5) is a factor of the polynomial 2x³ − 5x² − 28x + 15.",
-          "display": true
-        }
+          "latex": "8",
+          "fallback": "8"
+        },
+        ". Using factor theorem, show that ",
+        {
+          "latex": "\\left(x - 5\\right)",
+          "fallback": "(x − 5)"
+        },
+        " is a factor of the polynomial ",
+        {
+          "latex": "2 x^{3} - 5 x^{2} - 28 x + 15",
+          "fallback": "2x³ − 5x² − 28x + 15"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "p(x) = 2x^3 - 5x^2 - 28x + 15",
-          "fallback": "8. காரணித் தேற்றத்தைப் பயன்படுத்தி 2x³ − 5x² − 28x + 15 என்ற பல்லுறுப்புக் கோவைக்கு (x − 5) என்பது ஒரு காரணி எனக் காட்டுக.",
-          "display": true
-        }
+          "latex": "8",
+          "fallback": "8"
+        },
+        ". காரணித் தேற்றத்தைப் பயன்படுத்தி ",
+        {
+          "latex": "2 x^{3} - 5 x^{2} - 28 x + 15",
+          "fallback": "2x³ − 5x² − 28x + 15"
+        },
+        " என்ற பல்லுறுப்புக் கோவைக்கு ",
+        {
+          "latex": "\\left(x - 5\\right)",
+          "fallback": "(x − 5)"
+        },
+        " என்பது ஒரு காரணி எனக் காட்டுக."
       ]
     },
     "answerMath": {
@@ -42648,17 +42768,47 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "p(x) = x^3 - 3x^2 - mx + 24,\\quad p(-3) = 0",
-          "fallback": "9. Determine the value of m, if (x + 3) is a factor of x³ − 3x² − mx + 24.",
-          "display": true
-        }
+          "latex": "9",
+          "fallback": "9"
+        },
+        ". Determine the value of ",
+        {
+          "latex": "m",
+          "fallback": "m"
+        },
+        ", if ",
+        {
+          "latex": "\\left(x + 3\\right)",
+          "fallback": "(x + 3)"
+        },
+        " is a factor of x³ − 3x² − mx ",
+        {
+          "latex": "+ 24",
+          "fallback": "+ 24"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "p(x) = x^3 - 3x^2 - mx + 24,\\quad p(-3) = 0",
-          "fallback": "9. x³ − 3x² − mx + 24 என்ற பல்லுறுப்புக் கோவைக்கு (x + 3) என்பது ஒரு காரணி எனில், m-இன் மதிப்பைக் காண்க.",
-          "display": true
-        }
+          "latex": "9",
+          "fallback": "9"
+        },
+        ". x³ − 3x² − mx ",
+        {
+          "latex": "+ 24",
+          "fallback": "+ 24"
+        },
+        " என்ற பல்லுறுப்புக் கோவைக்கு ",
+        {
+          "latex": "\\left(x + 3\\right)",
+          "fallback": "(x + 3)"
+        },
+        " என்பது ஒரு காரணி எனில், ",
+        {
+          "latex": "m",
+          "fallback": "m"
+        },
+        "-இன் மதிப்பைக் காண்க."
       ]
     },
     "answerMath": {
@@ -42743,17 +42893,57 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "p(x) = ax^2 + 5x + b,\\quad p(2) = 0,\\; p\\!\\left(\\dfrac{1}{2}\\right) = 0",
-          "fallback": "10. If both (x − 2) and (x − 1/2) are the factors of ax² + 5x + b, then show that a = b.",
-          "display": true
-        }
+          "latex": "10",
+          "fallback": "10"
+        },
+        ". If both ",
+        {
+          "latex": "\\left(x - 2\\right)",
+          "fallback": "(x − 2)"
+        },
+        " and ",
+        {
+          "latex": "\\displaystyle \\left(x - \\frac{1}{2}\\right)",
+          "fallback": "(x − 1/2)"
+        },
+        " are the factors of ",
+        {
+          "latex": "ax^{2} + 5 x + b",
+          "fallback": "ax² + 5x + b"
+        },
+        ", then show that ",
+        {
+          "latex": "a = b",
+          "fallback": "a = b"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "p(x) = ax^2 + 5x + b,\\quad p(2) = 0,\\; p\\!\\left(\\dfrac{1}{2}\\right) = 0",
-          "fallback": "10. ax² + 5x + b என்ற பல்லுறுப்புக் கோவைக்கு (x − 2) மற்றும் (x − 1/2) ஆகியவை காரணிகள் எனில், a = b எனக் காட்டுக.",
-          "display": true
-        }
+          "latex": "10",
+          "fallback": "10"
+        },
+        ". ",
+        {
+          "latex": "ax^{2} + 5 x + b",
+          "fallback": "ax² + 5x + b"
+        },
+        " என்ற பல்லுறுப்புக் கோவைக்கு ",
+        {
+          "latex": "\\left(x - 2\\right)",
+          "fallback": "(x − 2)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "\\displaystyle \\left(x - \\frac{1}{2}\\right)",
+          "fallback": "(x − 1/2)"
+        },
+        " ஆகியவை காரணிகள் எனில், ",
+        {
+          "latex": "a = b",
+          "fallback": "a = b"
+        },
+        " எனக் காட்டுக."
       ]
     },
     "answerMath": {
@@ -42853,17 +43043,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "p(x) = kx^3 - 2x^2 + 25x - 26,\\quad p(1) = 0",
-          "fallback": "11. If (x − 1) divides the polynomial kx³ − 2x² + 25x − 26 without remainder, then find the value of k.",
-          "display": true
-        }
+          "latex": "11",
+          "fallback": "11"
+        },
+        ". If ",
+        {
+          "latex": "\\left(x - 1\\right)",
+          "fallback": "(x − 1)"
+        },
+        " divides the polynomial kx³ − 2x² + 25x − 26 without remainder, then find the value of ",
+        {
+          "latex": "k",
+          "fallback": "k"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "p(x) = kx^3 - 2x^2 + 25x - 26,\\quad p(1) = 0",
-          "fallback": "11. (x − 1) என்பது kx³ − 2x² + 25x − 26-ஐ மீதியின்றி வகுக்குமெனில் k-இன் மதிப்பைக் காண்க.",
-          "display": true
-        }
+          "latex": "11",
+          "fallback": "11"
+        },
+        ". ",
+        {
+          "latex": "\\left(x - 1\\right)",
+          "fallback": "(x − 1)"
+        },
+        " என்பது kx³ − 2x² + 25x − 26-ஐ மீதியின்றி வகுக்குமெனில் ",
+        {
+          "latex": "k",
+          "fallback": "k"
+        },
+        "-இன் மதிப்பைக் காண்க."
       ]
     },
     "answerMath": {
@@ -42948,17 +43158,47 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "A(x) = x^2 - 2x - 8",
-          "fallback": "12. Check if (x + 2) and (x − 4) are the sides of a rectangle whose area is x² − 2x − 8 by using factor theorem.",
-          "display": true
-        }
+          "latex": "12",
+          "fallback": "12"
+        },
+        ". Check if ",
+        {
+          "latex": "\\left(x + 2\\right)",
+          "fallback": "(x + 2)"
+        },
+        " and ",
+        {
+          "latex": "\\left(x - 4\\right)",
+          "fallback": "(x − 4)"
+        },
+        " are the sides of a rectangle whose area is ",
+        {
+          "latex": "x^{2} - 2 x - 8",
+          "fallback": "x² − 2x − 8"
+        },
+        " by using factor theorem."
       ],
       "ta": [
         {
-          "latex": "A(x) = x^2 - 2x - 8",
-          "fallback": "12. x² − 2x − 8 என்பது ஒரு செவ்வகத்தின் பரப்பு எனில், (x + 2) மற்றும் (x − 4) என்பன அவற்றின் பக்கங்களா என்பதைக் காரணித் தேற்றத்தைப் பயன்படுத்திச் சரிபார்க்க.",
-          "display": true
-        }
+          "latex": "12",
+          "fallback": "12"
+        },
+        ". ",
+        {
+          "latex": "x^{2} - 2 x - 8",
+          "fallback": "x² − 2x − 8"
+        },
+        " என்பது ஒரு செவ்வகத்தின் பரப்பு எனில், ",
+        {
+          "latex": "\\left(x + 2\\right)",
+          "fallback": "(x + 2)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "\\left(x - 4\\right)",
+          "fallback": "(x − 4)"
+        },
+        " என்பன அவற்றின் பக்கங்களா என்பதைக் காரணித் தேற்றத்தைப் பயன்படுத்திச் சரிபார்க்க."
       ]
     },
     "answerMath": {
@@ -44152,17 +44392,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "x+y+z = 9,\\quad xy+yz+zx = 26",
-          "fallback": "6. If (x + y + z) = 9 and (xy + yz + zx) = 26, then find the value of x² + y² + z².",
-          "display": true
-        }
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". If ",
+        {
+          "latex": "\\left(x + y + z\\right) = 9",
+          "fallback": "(x + y + z) = 9"
+        },
+        " and (xy + yz + zx) = 26, then find the value of ",
+        {
+          "latex": "x^{2} + y^{2} + z^{2}",
+          "fallback": "x² + y² + z²"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "x+y+z = 9,\\quad xy+yz+zx = 26",
-          "fallback": "6. (x + y + z) = 9 மற்றும் (xy + yz + zx) = 26 எனில், x² + y² + z²-இன் மதிப்பைக் காண்க.",
-          "display": true
-        }
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". ",
+        {
+          "latex": "\\left(x + y + z\\right) = 9",
+          "fallback": "(x + y + z) = 9"
+        },
+        " மற்றும் (xy + yz + zx) = 26 எனில், ",
+        {
+          "latex": "x^{2} + y^{2} + z^{2}",
+          "fallback": "x² + y² + z²"
+        },
+        "-இன் மதிப்பைக் காண்க."
       ]
     },
     "answerMath": {
@@ -44203,17 +44463,47 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "3a + 4b = 10,\\quad ab = 2",
-          "fallback": "7. Find 27a³ + 64b³, if 3a + 4b = 10 and ab = 2.",
-          "display": true
-        }
+          "latex": "7",
+          "fallback": "7"
+        },
+        ". Find ",
+        {
+          "latex": "27 a^{3} + 64 b^{3}",
+          "fallback": "27a³ + 64b³"
+        },
+        ", if ",
+        {
+          "latex": "3 a + 4 b = 10",
+          "fallback": "3a + 4b = 10"
+        },
+        " and ",
+        {
+          "latex": "ab = 2",
+          "fallback": "ab = 2"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "3a + 4b = 10,\\quad ab = 2",
-          "fallback": "7. 3a + 4b = 10 மற்றும் ab = 2 எனில், 27a³ + 64b³-இன் மதிப்பு காண்க.",
-          "display": true
-        }
+          "latex": "7",
+          "fallback": "7"
+        },
+        ". ",
+        {
+          "latex": "3 a + 4 b = 10",
+          "fallback": "3a + 4b = 10"
+        },
+        " மற்றும் ",
+        {
+          "latex": "ab = 2",
+          "fallback": "ab = 2"
+        },
+        " எனில், ",
+        {
+          "latex": "27 a^{3} + 64 b^{3}",
+          "fallback": "27a³ + 64b³"
+        },
+        "-இன் மதிப்பு காண்க."
       ]
     },
     "answerMath": {
@@ -44280,17 +44570,47 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "x - y = 5,\\quad xy = 14",
-          "fallback": "8. Find x³ − y³, if x − y = 5 and xy = 14.",
-          "display": true
-        }
+          "latex": "8",
+          "fallback": "8"
+        },
+        ". Find ",
+        {
+          "latex": "x^{3} - y^{3}",
+          "fallback": "x³ − y³"
+        },
+        ", if ",
+        {
+          "latex": "x - y = 5",
+          "fallback": "x − y = 5"
+        },
+        " and ",
+        {
+          "latex": "xy = 14",
+          "fallback": "xy = 14"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "x - y = 5,\\quad xy = 14",
-          "fallback": "8. x − y = 5 மற்றும் xy = 14 எனில், x³ − y³-இன் மதிப்பு காண்க.",
-          "display": true
-        }
+          "latex": "8",
+          "fallback": "8"
+        },
+        ". ",
+        {
+          "latex": "x - y = 5",
+          "fallback": "x − y = 5"
+        },
+        " மற்றும் ",
+        {
+          "latex": "xy = 14",
+          "fallback": "xy = 14"
+        },
+        " எனில், ",
+        {
+          "latex": "x^{3} - y^{3}",
+          "fallback": "x³ − y³"
+        },
+        "-இன் மதிப்பு காண்க."
       ]
     },
     "answerMath": {
@@ -44349,17 +44669,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "a + \\dfrac{1}{a} = 6",
-          "fallback": "9. If a + 1/a = 6, then find the value of a³ + 1/a³.",
-          "display": true
-        }
+          "latex": "9",
+          "fallback": "9"
+        },
+        ". If ",
+        {
+          "latex": "\\displaystyle a + \\frac{1}{a} = 6",
+          "fallback": "a + 1/a = 6"
+        },
+        ", then find the value of ",
+        {
+          "latex": "\\displaystyle a^{3} + \\frac{1}{a^{3}}",
+          "fallback": "a³ + 1/a³"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "a + \\dfrac{1}{a} = 6",
-          "fallback": "9. a + 1/a = 6 எனில், a³ + 1/a³-இன் மதிப்பு காண்க.",
-          "display": true
-        }
+          "latex": "9",
+          "fallback": "9"
+        },
+        ". ",
+        {
+          "latex": "\\displaystyle a + \\frac{1}{a} = 6",
+          "fallback": "a + 1/a = 6"
+        },
+        " எனில், ",
+        {
+          "latex": "\\displaystyle a^{3} + \\frac{1}{a^{3}}",
+          "fallback": "a³ + 1/a³"
+        },
+        "-இன் மதிப்பு காண்க."
       ]
     },
     "answerMath": {
@@ -44419,17 +44759,47 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "x^2 + \\dfrac{1}{x^2} = 23",
-          "fallback": "10. If x² + 1/x² = 23, then find the value of x + 1/x and x³ + 1/x³.",
-          "display": true
-        }
+          "latex": "10",
+          "fallback": "10"
+        },
+        ". If ",
+        {
+          "latex": "\\displaystyle x^{2} + \\frac{1}{x^{2}} = 23",
+          "fallback": "x² + 1/x² = 23"
+        },
+        ", then find the value of ",
+        {
+          "latex": "\\displaystyle x + \\frac{1}{x}",
+          "fallback": "x + 1/x"
+        },
+        " and ",
+        {
+          "latex": "\\displaystyle x^{3} + \\frac{1}{x^{3}}",
+          "fallback": "x³ + 1/x³"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "x^2 + \\dfrac{1}{x^2} = 23",
-          "fallback": "10. x² + 1/x² = 23 எனில், x + 1/x மற்றும் x³ + 1/x³ ஆகியவற்றின் மதிப்புகளைக் காண்க.",
-          "display": true
-        }
+          "latex": "10",
+          "fallback": "10"
+        },
+        ". ",
+        {
+          "latex": "\\displaystyle x^{2} + \\frac{1}{x^{2}} = 23",
+          "fallback": "x² + 1/x² = 23"
+        },
+        " எனில், ",
+        {
+          "latex": "\\displaystyle x + \\frac{1}{x}",
+          "fallback": "x + 1/x"
+        },
+        " மற்றும் ",
+        {
+          "latex": "\\displaystyle x^{3} + \\frac{1}{x^{3}}",
+          "fallback": "x³ + 1/x³"
+        },
+        " ஆகியவற்றின் மதிப்புகளைக் காண்க."
       ]
     },
     "answerMath": {
@@ -44519,17 +44889,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "\\left(y - \\dfrac{1}{y}\\right)^3 = 27",
-          "fallback": "11. If (y − 1/y)³ = 27, then find the value of y³ − 1/y³.",
-          "display": true
-        }
+          "latex": "11",
+          "fallback": "11"
+        },
+        ". If ",
+        {
+          "latex": "\\displaystyle \\left(y - \\frac{1}{y}\\right)^{3} = 27",
+          "fallback": "(y − 1/y)³ = 27"
+        },
+        ", then find the value of ",
+        {
+          "latex": "\\displaystyle y^{3} - \\frac{1}{y^{3}}",
+          "fallback": "y³ − 1/y³"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "\\left(y - \\dfrac{1}{y}\\right)^3 = 27",
-          "fallback": "11. (y − 1/y)³ = 27 எனில், y³ − 1/y³-இன் மதிப்பு காண்க.",
-          "display": true
-        }
+          "latex": "11",
+          "fallback": "11"
+        },
+        ". ",
+        {
+          "latex": "\\displaystyle \\left(y - \\frac{1}{y}\\right)^{3} = 27",
+          "fallback": "(y − 1/y)³ = 27"
+        },
+        " எனில், ",
+        {
+          "latex": "\\displaystyle y^{3} - \\frac{1}{y^{3}}",
+          "fallback": "y³ − 1/y³"
+        },
+        "-இன் மதிப்பு காண்க."
       ]
     },
     "answerMath": {
@@ -44911,17 +45301,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "2x - 3y - 4z = 0",
-          "fallback": "14. If 2x − 3y − 4z = 0, then find 8x³ − 27y³ − 64z³.",
-          "display": true
-        }
+          "latex": "14",
+          "fallback": "14"
+        },
+        ". If ",
+        {
+          "latex": "2 x - 3 y - 4 z = 0",
+          "fallback": "2x − 3y − 4z = 0"
+        },
+        ", then find ",
+        {
+          "latex": "8 x^{3} - 27 y^{3} - 64 z^{3}",
+          "fallback": "8x³ − 27y³ − 64z³"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "2x - 3y - 4z = 0",
-          "fallback": "14. 2x − 3y − 4z = 0 எனில், 8x³ − 27y³ − 64z³-ஐக் காண்க.",
-          "display": true
-        }
+          "latex": "14",
+          "fallback": "14"
+        },
+        ". ",
+        {
+          "latex": "2 x - 3 y - 4 z = 0",
+          "fallback": "2x − 3y − 4z = 0"
+        },
+        " எனில், ",
+        {
+          "latex": "8 x^{3} - 27 y^{3} - 64 z^{3}",
+          "fallback": "8x³ − 27y³ − 64z³"
+        },
+        "-ஐக் காண்க."
       ]
     },
     "answerMath": {
@@ -47919,17 +48329,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "\\text{Length} = \\dfrac{x^2 + 7x + 12}{x + 3}",
-          "fallback": "2. The area of a rectangle is x² + 7x + 12. If its breadth is (x + 3), then find its length.",
-          "display": true
-        }
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". The area of a rectangle is ",
+        {
+          "latex": "x^{2} + 7 x + 12",
+          "fallback": "x² + 7x + 12"
+        },
+        ". If its breadth is ",
+        {
+          "latex": "\\left(x + 3\\right)",
+          "fallback": "(x + 3)"
+        },
+        ", then find its length."
       ],
       "ta": [
         {
-          "latex": "\\text{Length} = \\dfrac{x^2 + 7x + 12}{x + 3}",
-          "fallback": "2. செவ்வகத்தின் பரப்பு x² + 7x + 12. அதன் அகலம் (x + 3) எனில், அதன் நீளம் காண்க.",
-          "display": true
-        }
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". செவ்வகத்தின் பரப்பு ",
+        {
+          "latex": "x^{2} + 7 x + 12",
+          "fallback": "x² + 7x + 12"
+        },
+        ". அதன் அகலம் ",
+        {
+          "latex": "\\left(x + 3\\right)",
+          "fallback": "(x + 3)"
+        },
+        " எனில், அதன் நீளம் காண்க."
       ]
     },
     "answerMath": {
@@ -47971,17 +48401,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "\\text{Height} = \\dfrac{25x^2 - 16}{5x + 4}",
-          "fallback": "3. The base of a parallelogram is (5x + 4). Find its height, if the area is 25x² − 16.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". The base of a parallelogram is ",
+        {
+          "latex": "\\left(5 x + 4\\right)",
+          "fallback": "(5x + 4)"
+        },
+        ". Find its height, if the area is ",
+        {
+          "latex": "25 x^{2} - 16",
+          "fallback": "25x² − 16"
+        },
+        "."
       ],
       "ta": [
         {
-          "latex": "\\text{Height} = \\dfrac{25x^2 - 16}{5x + 4}",
-          "fallback": "3. இணைகரத்தின் பரப்பு 25x² − 16. அதன் அடிப்பக்கம் (5x + 4) எனில், அதன் உயரம் காண்க.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". இணைகரத்தின் பரப்பு ",
+        {
+          "latex": "25 x^{2} - 16",
+          "fallback": "25x² − 16"
+        },
+        ". அதன் அடிப்பக்கம் ",
+        {
+          "latex": "\\left(5 x + 4\\right)",
+          "fallback": "(5x + 4)"
+        },
+        " எனில், அதன் உயரம் காண்க."
       ]
     },
     "answerMath": {
@@ -48029,17 +48479,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "\\text{Mean} = \\dfrac{x^3 + 125}{x + 5}",
-          "fallback": "4. The sum of (x + 5) observations is (x³ + 125). Find the mean of the observations.",
-          "display": true
-        }
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". The sum of ",
+        {
+          "latex": "\\left(x + 5\\right)",
+          "fallback": "(x + 5)"
+        },
+        " observations is ",
+        {
+          "latex": "\\left(x^{3} + 125\\right)",
+          "fallback": "(x³ + 125)"
+        },
+        ". Find the mean of the observations."
       ],
       "ta": [
         {
-          "latex": "\\text{Mean} = \\dfrac{x^3 + 125}{x + 5}",
-          "fallback": "4. (x + 5) விவரங்களின் கூடுதல் (x³ + 125) எனில், விவரங்களின் சராசரியைக் காண்க.",
-          "display": true
-        }
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". ",
+        {
+          "latex": "\\left(x + 5\\right)",
+          "fallback": "(x + 5)"
+        },
+        " விவரங்களின் கூடுதல் ",
+        {
+          "latex": "\\left(x^{3} + 125\\right)",
+          "fallback": "(x³ + 125)"
+        },
+        " எனில், விவரங்களின் சராசரியைக் காண்க."
       ]
     },
     "answerMath": {
@@ -48392,17 +48862,57 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "(8x^4 - 2x^2 + 6x - 7) \\div (2x + 1)",
-          "fallback": "6. If the quotient obtained on dividing (8x⁴ − 2x² + 6x − 7) by (2x + 1) is (4x³ + px² − qx + 3), then find p, q and also the remainder.",
-          "display": true
-        }
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". If the quotient obtained on dividing ",
+        {
+          "latex": "\\left(8 x^{4} - 2 x^{2} + 6 x - 7\\right)",
+          "fallback": "(8x⁴ − 2x² + 6x − 7)"
+        },
+        " by ",
+        {
+          "latex": "\\left(2 x + 1\\right)",
+          "fallback": "(2x + 1)"
+        },
+        " is (4x³ + px² − qx + 3), then find ",
+        {
+          "latex": "p",
+          "fallback": "p"
+        },
+        ", ",
+        {
+          "latex": "q",
+          "fallback": "q"
+        },
+        " and also the remainder."
       ],
       "ta": [
         {
-          "latex": "(8x^4 - 2x^2 + 6x - 7) \\div (2x + 1)",
-          "fallback": "6. (8x⁴ − 2x² + 6x − 7)-ஐ (2x + 1)-ஆல் வகுக்கக் கிடைக்கும் ஈவு (4x³ + px² − qx + 3) எனில், p, q மற்றும் மீதியைக் காண்க.",
-          "display": true
-        }
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". ",
+        {
+          "latex": "\\left(8 x^{4} - 2 x^{2} + 6 x - 7\\right)",
+          "fallback": "(8x⁴ − 2x² + 6x − 7)"
+        },
+        "-ஐ ",
+        {
+          "latex": "\\left(2 x + 1\\right)",
+          "fallback": "(2x + 1)"
+        },
+        "-ஆல் வகுக்கக் கிடைக்கும் ஈவு (4x³ + px² − qx + 3) எனில், ",
+        {
+          "latex": "p",
+          "fallback": "p"
+        },
+        ", ",
+        {
+          "latex": "q",
+          "fallback": "q"
+        },
+        " மற்றும் மீதியைக் காண்க."
       ]
     },
     "answerMath": {
@@ -48532,17 +49042,57 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "(3x^3 + 11x^2 + 34x + 106) \\div (x - 3)",
-          "fallback": "7. If the quotient obtained on dividing 3x³ + 11x² + 34x + 106 by x − 3 is 3x² + ax + b, then find a, b and also the remainder.",
-          "display": true
-        }
+          "latex": "7",
+          "fallback": "7"
+        },
+        ". If the quotient obtained on dividing ",
+        {
+          "latex": "3 x^{3} + 11 x^{2} + 34 x + 106",
+          "fallback": "3x³ + 11x² + 34x + 106"
+        },
+        " by ",
+        {
+          "latex": "x - 3",
+          "fallback": "x − 3"
+        },
+        " is ",
+        {
+          "latex": "3 x^{2} + ax + b",
+          "fallback": "3x² + ax + b"
+        },
+        ", then find a, ",
+        {
+          "latex": "b",
+          "fallback": "b"
+        },
+        " and also the remainder."
       ],
       "ta": [
         {
-          "latex": "(3x^3 + 11x^2 + 34x + 106) \\div (x - 3)",
-          "fallback": "7. 3x³ + 11x² + 34x + 106-ஐ x − 3-ஆல் வகுக்கக் கிடைக்கும் ஈவு 3x² + ax + b எனில், a, b மற்றும் மீதி ஆகியவற்றைக் காண்க.",
-          "display": true
-        }
+          "latex": "7",
+          "fallback": "7"
+        },
+        ". ",
+        {
+          "latex": "3 x^{3} + 11 x^{2} + 34 x + 106",
+          "fallback": "3x³ + 11x² + 34x + 106"
+        },
+        "-ஐ ",
+        {
+          "latex": "x - 3",
+          "fallback": "x − 3"
+        },
+        "-ஆல் வகுக்கக் கிடைக்கும் ஈவு ",
+        {
+          "latex": "3 x^{2} + ax + b",
+          "fallback": "3x² + ax + b"
+        },
+        " எனில், a, ",
+        {
+          "latex": "b",
+          "fallback": "b"
+        },
+        " மற்றும் மீதி ஆகியவற்றைக் காண்க."
       ]
     },
     "answerMath": {
@@ -50865,17 +51415,42 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "x + y = 100;\\quad x - y = 50",
-          "fallback": "3. Two cars are 100 miles apart. If they drive towards each other they will meet in 1 hour. If they drive in the same direction they will meet in 2 hours. Find their speed by using graphical method.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". Two cars are ",
+        {
+          "latex": "100",
+          "fallback": "100"
+        },
+        " miles apart. If they drive towards each other they will meet in ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " hour. If they drive in the same direction they will meet in ",
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        " hours. Find their speed by using graphical method."
       ],
       "ta": [
         {
-          "latex": "x + y = 100;\\quad x - y = 50",
-          "fallback": "3. இரண்டு மகிழுந்துகளுக்கு இடைப்பட்ட தொலைவு 100 மைல்கள். இரண்டும் ஒன்றையொன்று நோக்கிப் பயணித்தால் ஒரு மணி நேரத்தில் சந்தித்துக்கொள்ளும். இரண்டும் ஒரே திசையில் செல்லும்போது 2 மணி நேரத்தில் ஓரிடத்தில் சந்தித்து ஒன்றாகப் பயணிக்குமெனில், இரண்டு மகிழுந்துகளின் வேகங்களைக் (வரைபட முறையில்) கணக்கிடுக.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". இரண்டு மகிழுந்துகளுக்கு இடைப்பட்ட தொலைவு ",
+        {
+          "latex": "100",
+          "fallback": "100"
+        },
+        " மைல்கள். இரண்டும் ஒன்றையொன்று நோக்கிப் பயணித்தால் ஒரு மணி நேரத்தில் சந்தித்துக்கொள்ளும். இரண்டும் ஒரே திசையில் செல்லும்போது ",
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        " மணி நேரத்தில் ஓரிடத்தில் சந்தித்து ஒன்றாகப் பயணிக்குமெனில், இரண்டு மகிழுந்துகளின் வேகங்களைக் (வரைபட முறையில்) கணக்கிடுக."
       ]
     },
     "answerMath": {
@@ -51375,17 +51950,22 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "x = 3y;\\quad x + 5 = 2(y + 10)",
-          "fallback": "2. Raman’s age is three times the sum of the ages of his two sons. After 5 years his age will be twice the sum of the ages of his two sons. Find the age of Raman.",
-          "display": true
-        }
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". Raman’s age is three times the sum of the ages of his two sons. After ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " years his age will be twice the sum of the ages of his two sons. Find the age of Raman."
       ],
       "ta": [
         {
-          "latex": "x = 3y;\\quad x + 5 = 2(y + 10)",
-          "fallback": "2. இராமனின் வயது அவருடைய இரு மகன்களுடைய வயதுகளின் கூடுதலைப் போல் மூன்று மடங்காகும். ஐந்தாண்டுகள் கழித்து அவரின் வயது தனது மகன்களுடைய வயதுகளின் கூடுதலைப் போல் இரு மடங்காகும் எனில், இராமனின் தற்போதைய வயதைக் காண்க.",
-          "display": true
-        }
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". இராமனின் வயது அவருடைய இரு மகன்களுடைய வயதுகளின் கூடுதலைப் போல் மூன்று மடங்காகும். ஐந்தாண்டுகள் கழித்து அவரின் வயது தனது மகன்களுடைய வயதுகளின் கூடுதலைப் போல் இரு மடங்காகும் எனில், இராமனின் தற்போதைய வயதைக் காண்க."
       ]
     },
     "answerMath": {
@@ -51484,17 +52064,57 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "x + y = 13;\\quad (100y + x) - (100x + y) = 495",
-          "fallback": "3. The middle digit of a number between 100 and 1000 is zero and the sum of the other digit is 13. If the digits are reversed, the number so formed exceeds the original number by 495. Find the number.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". The middle digit of a number between ",
+        {
+          "latex": "100",
+          "fallback": "100"
+        },
+        " and ",
+        {
+          "latex": "1000",
+          "fallback": "1000"
+        },
+        " is zero and the sum of the other digit is ",
+        {
+          "latex": "13",
+          "fallback": "13"
+        },
+        ". If the digits are reversed, the number so formed exceeds the original number by ",
+        {
+          "latex": "495",
+          "fallback": "495"
+        },
+        ". Find the number."
       ],
       "ta": [
         {
-          "latex": "x + y = 13;\\quad (100y + x) - (100x + y) = 495",
-          "fallback": "3. 100 மற்றும் 1000-க்கு இடையே அமையும் ஒரு மூன்றிலக்க எண்ணின் நடு இலக்கம் பூச்சியமாகவும் மற்ற இரு இலக்கங்களின் கூடுதல் 13 ஆகவும் இருக்கின்றன. இலக்கங்களை இடம் மாற்றி அமைக்கும்போது கிடைக்கும் எண்ணானது, அந்த எண்ணை விட 495 அதிகம் எனில், அந்த எண்ணைக் காண்க.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". ",
+        {
+          "latex": "100",
+          "fallback": "100"
+        },
+        " மற்றும் ",
+        {
+          "latex": "1000",
+          "fallback": "1000"
+        },
+        "-க்கு இடையே அமையும் ஒரு மூன்றிலக்க எண்ணின் நடு இலக்கம் பூச்சியமாகவும் மற்ற இரு இலக்கங்களின் கூடுதல் ",
+        {
+          "latex": "13",
+          "fallback": "13"
+        },
+        " ஆகவும் இருக்கின்றன. இலக்கங்களை இடம் மாற்றி அமைக்கும்போது கிடைக்கும் எண்ணானது, அந்த எண்ணை விட ",
+        {
+          "latex": "495",
+          "fallback": "495"
+        },
+        " அதிகம் எனில், அந்த எண்ணைக் காண்க."
       ]
     },
     "answerMath": {
@@ -52097,17 +52717,87 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "3x - 5y = 5000;\\quad 4x - 7y = 5000",
-          "fallback": "2. The monthly income of A and B are in the ratio 3:4 and their monthly expenditures are in the ratio 5:7. If each saves ₹5,000 per month, find the monthly income of each.",
-          "display": true
-        }
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". The monthly income of A and ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " are in the ratio ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        ":",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " and their monthly expenditures are in the ratio ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        ":",
+        {
+          "latex": "7",
+          "fallback": "7"
+        },
+        ". If each saves ₹",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        ",",
+        {
+          "latex": "000",
+          "fallback": "000"
+        },
+        " per month, find the monthly income of each."
       ],
       "ta": [
         {
-          "latex": "3x - 5y = 5000;\\quad 4x - 7y = 5000",
-          "fallback": "2. A மற்றும் B ஆகியோரது மாத வருமானங்களின் விகிதம் 3:4 ஆகவும் அவர்களுடைய செலவுகளின் விகிதம் 5:7 ஆகவும் இருக்கின்றன. ஒவ்வொருவரும் மாதம் ₹5,000 சேமிக்கிறார்கள் எனில், அவர்களுடைய மாத வருமானத்தைக் காண்க.",
-          "display": true
-        }
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". A மற்றும் ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " ஆகியோரது மாத வருமானங்களின் விகிதம் ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        ":",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " ஆகவும் அவர்களுடைய செலவுகளின் விகிதம் ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        ":",
+        {
+          "latex": "7",
+          "fallback": "7"
+        },
+        " ஆகவும் இருக்கின்றன. ஒவ்வொருவரும் மாதம் ₹",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        ",",
+        {
+          "latex": "000",
+          "fallback": "000"
+        },
+        " சேமிக்கிறார்கள் எனில், அவர்களுடைய மாத வருமானத்தைக் காண்க."
       ]
     },
     "answerMath": {
@@ -52197,17 +52887,37 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "x - 5 = 7(y - 5);\\quad x + 5 = 4(y + 5)",
-          "fallback": "3. Five years ago, a man was seven times as old as his son, while five year hence, the man will be four times as old as his son. Find their present age.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". Five years ago, a man was seven times as old as his son, while five year hence, the man will be four times as old as his son. Find their present age."
       ],
       "ta": [
         {
-          "latex": "x - 5 = 7(y - 5);\\quad x + 5 = 4(y + 5)",
-          "fallback": "3. 5 வருடங்களுக்கு முன்பு, ஒருவருடைய வயதானது அவருடைய மகனின் வயதைப் போல் 7 மடங்காகும். 5 வருடங்கள் கழித்து அவருடைய வயதானது மகனின் வயதைப் போல் 4 மடங்காக இருக்கும் எனில், அவர்களுடைய தற்போதைய வயது என்ன?",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " வருடங்களுக்கு முன்பு, ஒருவருடைய வயதானது அவருடைய மகனின் வயதைப் போல் ",
+        {
+          "latex": "7",
+          "fallback": "7"
+        },
+        " மடங்காகும். ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " வருடங்கள் கழித்து அவருடைய வயதானது மகனின் வயதைப் போல் ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " மடங்காக இருக்கும் எனில், அவர்களுடைய தற்போதைய வயது என்ன?"
       ]
     },
     "answerMath": {
@@ -52559,17 +53269,47 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "x + y - 80 = 0;\\quad 2x + 5y - 220 = 0",
-          "fallback": "2. Akshaya has 2 rupee coins and 5 rupee coins in her purse. If in all she has 80 coins totalling ₹220, how many coins of each kind does she have.",
-          "display": true
-        }
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". Akshaya has ",
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        " rupee coins and ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " rupee coins in her purse. If in all she has ",
+        {
+          "latex": "80",
+          "fallback": "80"
+        },
+        " coins totalling ₹",
+        {
+          "latex": "220",
+          "fallback": "220"
+        },
+        ", how many coins of each kind does she have."
       ],
       "ta": [
         {
-          "latex": "x + y - 80 = 0;\\quad 2x + 5y - 220 = 0",
-          "fallback": "2. அட்சயா தனது பணப்பையில் (purse) இரண்டு ரூபாய் நாணயங்களையும், ஐந்து ரூபாய் நாணயங்களையும் வைத்திருந்தாள். அவள் மொத்தமாக ₹220 மதிப்புடைய 80 நாணயங்களை வைத்திருந்தாள் எனில், ஒவ்வொன்றிலும் எத்தனை நாணயங்கள் வைத்திருந்தாள்.",
-          "display": true
-        }
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". அட்சயா தனது பணப்பையில் (purse) இரண்டு ரூபாய் நாணயங்களையும், ஐந்து ரூபாய் நாணயங்களையும் வைத்திருந்தாள். அவள் மொத்தமாக ₹",
+        {
+          "latex": "220",
+          "fallback": "220"
+        },
+        " மதிப்புடைய ",
+        {
+          "latex": "80",
+          "fallback": "80"
+        },
+        " நாணயங்களை வைத்திருந்தாள் எனில், ஒவ்வொன்றிலும் எத்தனை நாணயங்கள் வைத்திருந்தாள்."
       ]
     },
     "answerMath": {
@@ -52680,17 +53420,47 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "\\dfrac{24}{x} + \\dfrac{24}{y} = 1;\\quad \\dfrac{8}{x} + \\dfrac{18}{y} = \\dfrac{1}{2}",
-          "fallback": "3. It takes 24 hours to fill a swimming pool using two pipes. If the pipe of larger diameter is used for 8 hours and the pipe of the smaller diameter is used for 18 hours. Only half of the pool is filled. How long would each pipe take to fill the swimming pool.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". It takes ",
+        {
+          "latex": "24",
+          "fallback": "24"
+        },
+        " hours to fill a swimming pool using two pipes. If the pipe of larger diameter is used for ",
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        " hours and the pipe of the smaller diameter is used for ",
+        {
+          "latex": "18",
+          "fallback": "18"
+        },
+        " hours. Only half of the pool is filled. How long would each pipe take to fill the swimming pool."
       ],
       "ta": [
         {
-          "latex": "\\dfrac{24}{x} + \\dfrac{24}{y} = 1;\\quad \\dfrac{8}{x} + \\dfrac{18}{y} = \\dfrac{1}{2}",
-          "fallback": "3. இரு வெவ்வேறு அளவு விட்டமுடைய குழாய்கள் மூலம் ஒரு நீச்சல் குளத்தில் முழுமையாக நீர் நிரப்ப 24 மணி நேரம் ஆகும். அதிக விட்டமுடைய குழாயை 8 மணி நேரமும் குறைந்த விட்டமுடைய குழாயை 18 மணி நேரமும் பயன்படுத்தி நீர் நிரப்பினால் நீச்சல் குளத்தில் பாதி அளவு நீர் நிரம்பும் எனில், தனித்தனியாக அந்தக் குழாய்களைக் கொண்டு நீச்சல் குளம் முழுவதிலும் நீர் நிரப்ப ஆகும் கால அளவுகளைக் காண்க.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". இரு வெவ்வேறு அளவு விட்டமுடைய குழாய்கள் மூலம் ஒரு நீச்சல் குளத்தில் முழுமையாக நீர் நிரப்ப ",
+        {
+          "latex": "24",
+          "fallback": "24"
+        },
+        " மணி நேரம் ஆகும். அதிக விட்டமுடைய குழாயை ",
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        " மணி நேரமும் குறைந்த விட்டமுடைய குழாயை ",
+        {
+          "latex": "18",
+          "fallback": "18"
+        },
+        " மணி நேரமும் பயன்படுத்தி நீர் நிரப்பினால் நீச்சல் குளத்தில் பாதி அளவு நீர் நிரம்பும் எனில், தனித்தனியாக அந்தக் குழாய்களைக் கொண்டு நீச்சல் குளம் முழுவதிலும் நீர் நிரப்ப ஆகும் கால அளவுகளைக் காண்க."
       ]
     },
     "answerMath": {
@@ -52757,17 +53527,57 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "(10x+y)+(10y+x)=110;\\quad (10x+y)-10 = 5(x+y)+4",
-          "fallback": "1. The sum of a two digit number and the number formed by interchanging the digits is 110. If 10 is subtracted from the first number, the new number is 4 more than 5 times the sums of the digits of the first number. Find the first number.",
-          "display": true
-        }
+          "latex": "1",
+          "fallback": "1"
+        },
+        ". The sum of a two digit number and the number formed by interchanging the digits is ",
+        {
+          "latex": "110",
+          "fallback": "110"
+        },
+        ". If ",
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        " is subtracted from the first number, the new number is ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " more than ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " times the sums of the digits of the first number. Find the first number."
       ],
       "ta": [
         {
-          "latex": "(10x+y)+(10y+x)=110;\\quad (10x+y)-10 = 5(x+y)+4",
-          "fallback": "1. ஓர் ஈரிலக்க எண்ணையும் அதன் இலக்கங்களை மாற்றுவதால் கிடைக்கும் எண்ணையும் கூட்டினால் 110 கிடைக்கும். கொடுக்கப்பட்ட அந்த ஈரிலக்க எண்ணிலிருந்து 10-ஐக் கழித்தால் அது கொடுக்கப்பட்ட ஈரிலக்க எண்ணின் இலக்கங்களின் கூடுதலின் 5 மடங்கை விட 4 அதிகம் எனில், அந்த எண்ணைக் காண்க.",
-          "display": true
-        }
+          "latex": "1",
+          "fallback": "1"
+        },
+        ". ஓர் ஈரிலக்க எண்ணையும் அதன் இலக்கங்களை மாற்றுவதால் கிடைக்கும் எண்ணையும் கூட்டினால் ",
+        {
+          "latex": "110",
+          "fallback": "110"
+        },
+        " கிடைக்கும். கொடுக்கப்பட்ட அந்த ஈரிலக்க எண்ணிலிருந்து ",
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        "-ஐக் கழித்தால் அது கொடுக்கப்பட்ட ஈரிலக்க எண்ணின் இலக்கங்களின் கூடுதலின் ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " மடங்கை விட ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " அதிகம் எனில், அந்த எண்ணைக் காண்க."
       ]
     },
     "answerMath": {
@@ -52828,17 +53638,47 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "x + y = 12;\\quad \\dfrac{x}{y + 3} = \\dfrac{1}{2}",
-          "fallback": "2. The sum of the numerator and denominator of a fraction is 12. If the denominator is increased by 3, the fraction becomes 1/2. Find the fraction.",
-          "display": true
-        }
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". The sum of the numerator and denominator of a fraction is ",
+        {
+          "latex": "12",
+          "fallback": "12"
+        },
+        ". If the denominator is increased by ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        ", the fraction becomes ",
+        {
+          "latex": "\\displaystyle \\frac{1}{2}",
+          "fallback": "1/2"
+        },
+        ". Find the fraction."
       ],
       "ta": [
         {
-          "latex": "x + y = 12;\\quad \\dfrac{x}{y + 3} = \\dfrac{1}{2}",
-          "fallback": "2. ஒரு பின்னத்தின் பகுதி மற்றும் தொகுதியின் கூடுதல் 12. அப்பின்னத்தின் பகுதியுடன் 3-ஐக் கூட்டினால் அதன் மதிப்பு 1/2 ஆகும் எனில், அப்பின்னத்தைக் காண்க.",
-          "display": true
-        }
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". ஒரு பின்னத்தின் பகுதி மற்றும் தொகுதியின் கூடுதல் ",
+        {
+          "latex": "12",
+          "fallback": "12"
+        },
+        ". அப்பின்னத்தின் பகுதியுடன் ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        "-ஐக் கூட்டினால் அதன் மதிப்பு ",
+        {
+          "latex": "\\displaystyle \\frac{1}{2}",
+          "fallback": "1/2"
+        },
+        " ஆகும் எனில், அப்பின்னத்தைக் காண்க."
       ]
     },
     "answerMath": {
@@ -52902,17 +53742,57 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "\\angle A + \\angle C = 180^\\circ;\\quad \\angle B + \\angle D = 180^\\circ",
-          "fallback": "3. ABCD is a cyclic quadrilateral such that ∠A = (4y + 20)°, ∠B = (3y − 5)°, ∠C = (4x)° and ∠D = (7x + 5)°. Find the four angles.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". ABCD is a cyclic quadrilateral such that ∠",
+        {
+          "latex": "A = \\left(4 y + 20\\right)",
+          "fallback": "A = (4y + 20)"
+        },
+        "°, ∠",
+        {
+          "latex": "B = \\left(3 y - 5\\right)",
+          "fallback": "B = (3y − 5)"
+        },
+        "°, ∠",
+        {
+          "latex": "C = \\left(4 x\\right)",
+          "fallback": "C = (4x)"
+        },
+        "° and ∠",
+        {
+          "latex": "D = \\left(7 x + 5\\right)",
+          "fallback": "D = (7x + 5)"
+        },
+        "°. Find the four angles."
       ],
       "ta": [
         {
-          "latex": "\\angle A + \\angle C = 180^\\circ;\\quad \\angle B + \\angle D = 180^\\circ",
-          "fallback": "3. ABCD என்ற வட்ட நாற்கரத்தில் ∠A = (4y + 20)°, ∠B = (3y − 5)°, ∠C = (4x)° மற்றும் ∠D = (7x + 5)° எனில், நான்கு கோணங்களையும் காண்க.",
-          "display": true
-        }
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". ABCD என்ற வட்ட நாற்கரத்தில் ∠",
+        {
+          "latex": "A = \\left(4 y + 20\\right)",
+          "fallback": "A = (4y + 20)"
+        },
+        "°, ∠",
+        {
+          "latex": "B = \\left(3 y - 5\\right)",
+          "fallback": "B = (3y − 5)"
+        },
+        "°, ∠",
+        {
+          "latex": "C = \\left(4 x\\right)",
+          "fallback": "C = (4x)"
+        },
+        "° மற்றும் ∠",
+        {
+          "latex": "D = \\left(7 x + 5\\right)",
+          "fallback": "D = (7x + 5)"
+        },
+        "° எனில், நான்கு கோணங்களையும் காண்க."
       ]
     },
     "answerMath": {
@@ -53033,17 +53913,117 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "0.05x + 0.10y = 2000;\\quad 0.10x - 0.05y = 1500",
-          "fallback": "4. On selling a T.V. at 5% gain and a fridge at 10% gain, a shopkeeper gains ₹2000. But if he sells the T.V. at 10% gain and the fridge at 5% loss, he gains Rs.1500 on the transaction. Find the actual price of the T.V. and the fridge.",
-          "display": true
-        }
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". On selling ",
+        {
+          "latex": "a T",
+          "fallback": "a T"
+        },
+        ".",
+        {
+          "latex": "V",
+          "fallback": "V"
+        },
+        ". at ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        "% gain and a fridge at ",
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        "% gain, a shopkeeper gains ₹",
+        {
+          "latex": "2000",
+          "fallback": "2000"
+        },
+        ". But if he sells the ",
+        {
+          "latex": "T",
+          "fallback": "T"
+        },
+        ".",
+        {
+          "latex": "V",
+          "fallback": "V"
+        },
+        ". at ",
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        "% gain and the fridge at ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        "% loss, he gains Rs.",
+        {
+          "latex": "1500",
+          "fallback": "1500"
+        },
+        " on the transaction. Find the actual price of the ",
+        {
+          "latex": "T",
+          "fallback": "T"
+        },
+        ".",
+        {
+          "latex": "V",
+          "fallback": "V"
+        },
+        ". and the fridge."
       ],
       "ta": [
         {
-          "latex": "0.05x + 0.10y = 2000;\\quad 0.10x - 0.05y = 1500",
-          "fallback": "4. ஒரு தொலைக்காட்சிப் பெட்டியை 5% இலாபத்திற்கும், ஒரு குளிர்சாதனப் பெட்டியை 10% இலாபத்திற்கும் விற்பதால் கடைக்காரருக்கு நிகர இலாபம் ₹2,000 கிடைக்கிறது. ஆனால் அவர் ஒரு தொலைக்காட்சிப் பெட்டியை 10% இலாபத்திற்கும், ஒரு குளிர்சாதனப் பெட்டியை 5% நட்டத்திற்கும் விற்பதால் அவரின் நிகர இலாபம் ₹1,500 கிடைக்கிறது எனில், தொலைக்காட்சிப் பெட்டி மற்றும் குளிர்சாதனப் பெட்டியின் சரியான விலைகளைக் காண்க.",
-          "display": true
-        }
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". ஒரு தொலைக்காட்சிப் பெட்டியை ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        "% இலாபத்திற்கும், ஒரு குளிர்சாதனப் பெட்டியை ",
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        "% இலாபத்திற்கும் விற்பதால் கடைக்காரருக்கு நிகர இலாபம் ₹",
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        ",",
+        {
+          "latex": "000",
+          "fallback": "000"
+        },
+        " கிடைக்கிறது. ஆனால் அவர் ஒரு தொலைக்காட்சிப் பெட்டியை ",
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        "% இலாபத்திற்கும், ஒரு குளிர்சாதனப் பெட்டியை ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        "% நட்டத்திற்கும் விற்பதால் அவரின் நிகர இலாபம் ₹",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        ",",
+        {
+          "latex": "500",
+          "fallback": "500"
+        },
+        " கிடைக்கிறது எனில், தொலைக்காட்சிப் பெட்டி மற்றும் குளிர்சாதனப் பெட்டியின் சரியான விலைகளைக் காண்க."
       ]
     },
     "answerMath": {
@@ -53139,17 +54119,67 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "\\dfrac{x}{y} = \\dfrac{5}{6};\\quad \\dfrac{x - 8}{y - 8} = \\dfrac{4}{5}",
-          "fallback": "5. Two numbers are in the ratio 5 : 6. If 8 is subtracted from each of the numbers, the ratio becomes 4 : 5. Find the numbers.",
-          "display": true
-        }
+          "latex": "5",
+          "fallback": "5"
+        },
+        ". Two numbers are in the ratio ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " : ",
+        {
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". If ",
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        " is subtracted from each of the numbers, the ratio becomes ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " : ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        ". Find the numbers."
       ],
       "ta": [
         {
-          "latex": "\\dfrac{x}{y} = \\dfrac{5}{6};\\quad \\dfrac{x - 8}{y - 8} = \\dfrac{4}{5}",
-          "fallback": "5. இரு எண்கள் 5 : 6 என்ற விகிதத்தில் உள்ளன. அவை ஒவ்வொன்றிலிருந்தும் முறையே 8-ஐக் கழித்தால் அவற்றின் விகிதம் 4 : 5 என மாறும் எனில், அந்த எண்களைக் காண்க.",
-          "display": true
-        }
+          "latex": "5",
+          "fallback": "5"
+        },
+        ". இரு எண்கள் ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " : ",
+        {
+          "latex": "6",
+          "fallback": "6"
+        },
+        " என்ற விகிதத்தில் உள்ளன. அவை ஒவ்வொன்றிலிருந்தும் முறையே ",
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        "-ஐக் கழித்தால் அவற்றின் விகிதம் ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " : ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " என மாறும் எனில், அந்த எண்களைக் காண்க."
       ]
     },
     "answerMath": {
@@ -53214,17 +54244,87 @@ const records=[
     "questionMath": {
       "en": [
         {
-          "latex": "\\dfrac{4}{x} + \\dfrac{4}{y} = \\dfrac{1}{3};\\quad \\dfrac{2}{x} + \\dfrac{5}{y} = \\dfrac{1}{4}",
-          "fallback": "6. 4 Indians and 4 Chinese can do a piece of work in 3 days. While 2 Indians and 5 Chinese can finish it in 4 days. How long would it take for 1 Indian to do it? How long would it take for 1 Chinese to do it?",
-          "display": true
-        }
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " Indians and ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " Chinese can do a piece of work in ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        " days. While ",
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        " Indians and ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " Chinese can finish it in ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " days. How long would it take for ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " Indian to do it? How long would it take for ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " Chinese to do it?"
       ],
       "ta": [
         {
-          "latex": "\\dfrac{4}{x} + \\dfrac{4}{y} = \\dfrac{1}{3};\\quad \\dfrac{2}{x} + \\dfrac{5}{y} = \\dfrac{1}{4}",
-          "fallback": "6. 4 இந்தியர்கள் மற்றும் 4 சீனர்கள் சேர்ந்து 3 நாள்களில் ஒரு வேலையை முடிக்கிறார்கள். 2 இந்தியர்கள் மற்றும் 5 சீனர்கள் சேர்ந்து அதே வேலையை 4 நாள்களில் முடிக்கிறார்கள் எனில், இப்பணியைத் தனியாக ஒரு இந்தியர் எத்தனை நாள்களில் செய்வார்? ஒரு சீனர் தனியாக எத்தனை நாள்களில் செய்வார்?",
-          "display": true
-        }
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " இந்தியர்கள் மற்றும் ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " சீனர்கள் சேர்ந்து ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        " நாள்களில் ஒரு வேலையை முடிக்கிறார்கள். ",
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        " இந்தியர்கள் மற்றும் ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " சீனர்கள் சேர்ந்து அதே வேலையை ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " நாள்களில் முடிக்கிறார்கள் எனில், இப்பணியைத் தனியாக ஒரு இந்தியர் எத்தனை நாள்களில் செய்வார்? ஒரு சீனர் தனியாக எத்தனை நாள்களில் செய்வார்?"
       ]
     },
     "answerMath": {

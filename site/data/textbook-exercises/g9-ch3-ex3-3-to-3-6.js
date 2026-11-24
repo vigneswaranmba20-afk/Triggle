@@ -26,10 +26,10 @@
     questionMath: {
       en: qEn.includes('\n')
         ? [qEn.slice(0, qEn.indexOf('\n') + 1), tex(qTex, qEn.slice(qEn.indexOf('\n') + 1), true)]
-        : [tex(qTex, qEn, true)],
+        : null,
       ta: qTa.includes('\n')
         ? [qTa.slice(0, qTa.indexOf('\n') + 1), tex(qTex, qTa.slice(qTa.indexOf('\n') + 1), true)]
-        : [tex(qTex, qTa, true)]
+        : null
     },
     steps: steps.map(([eq, en, ta, mLatex]) => ({
       eq,

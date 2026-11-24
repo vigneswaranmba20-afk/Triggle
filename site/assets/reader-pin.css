@@ -53,6 +53,7 @@ body.textbook-reader .twd-worked-step:last-child .twd-part-solution{
   border-color:#cbe6d7;background:#eefaf3;
 }
 @media(max-width:800px){
+  body.textbook-reader{--reader-question-size:clamp(15px,3.9vw,17px)}
   html:has(body.textbook-reader){scroll-behavior:auto}
   body.textbook-reader{
     height:auto!important;min-height:100%!important;
@@ -114,7 +115,7 @@ body.textbook-reader .twd-worked-step:last-child .twd-part-solution{
   body.textbook-reader #lessonCard>#questionText{
     order:3!important;flex:none!important;height:auto!important;min-height:0!important;
     max-height:none!important;overflow:visible!important;white-space:pre-wrap!important;
-    overflow-wrap:anywhere!important;font-size:clamp(15px,3.9vw,17px)!important;
+    overflow-wrap:anywhere!important;font-size:var(--reader-question-size)!important;
     line-height:1.55!important;margin:9px 0 0!important;padding:12px 13px!important;
     scroll-margin-top:115px!important;
   }

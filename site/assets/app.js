@@ -424,7 +424,7 @@
   const li=document.createElement('li');li.className='worked-step';
   const number=document.createElement('span');number.className='step-circle';number.textContent=index+1;
   const body=document.createElement('div');const reason=document.createElement('div');reason.className='step-reason';
-  if(s.reasonMath)reason.innerHTML=math(s.reasonMath[lang]||s.reasonMath.en);else reason.textContent=tr(s);
+  if(s.reasonMath)reason.innerHTML=math(s.reasonMath[lang]||s[lang]||s.reasonMath.en);else reason.textContent=tr(s);
   if(englishInTamilReader(tr(s)))reason.lang='en';
   const equation=document.createElement('div');equation.className='step-equation';
   const fragments=String(s.eq||'').split(/\s+;\s+/);
@@ -619,6 +619,7 @@
   const list=activeList();const n=currentIndex(),position=n+1,chapter=chapterForItem(current)?.title||classes[grade].chapters[current.chapter]||current.topic;
    const questionChapter=chapterForItem(current);
    const isTextbookExercise=!!questionChapter&&textbookExerciseList(questionChapter).some(item=>item.id===current.id);
+   document.body.classList.toggle('exercise-reading-scale',isTextbookExercise&&(grade===9||(grade===10&&String(typographyChapter)==='2')));
    $('exerciseIndexLink').hidden=!isTextbookExercise;
    $('exerciseIndexLink').textContent=lang==='ta'?'← பயிற்சிகள்':'← Exercises';
    $('exerciseIndexLink').setAttribute('aria-label',lang==='ta'?'பயிற்சிகளின் பட்டியலுக்குத் திரும்பு':'Back to exercise list');
@@ -649,7 +650,7 @@
   const ex82TamilPrompt=lang==='ta'&&grade===10&&current.chapter==='8'&&current.exercise==='8.2'&&!!current.q?.ta;
   // Ex8.2's source-verified Tamil text takes precedence over its English-only
   // authored questionMath; equations in the worked solution remain unchanged.
-  $('questionText').innerHTML=ex82TamilPrompt?math(current.q.ta):(workedDisplay?.question||math(questionMath?.[lang]||questionMath?.en||tr(current.q)));
+  $('questionText').innerHTML=ex82TamilPrompt?math(current.q.ta):(workedDisplay?.question||math(questionMath?.[lang]||current.q?.[lang]||questionMath?.en||tr(current.q)));
   if(Array.isArray(current.choices)&&typeof current.correctIndex==='number'){
     const mcqWrap=document.createElement('div');mcqWrap.className='triggle-mcq-choices';mcqWrap.setAttribute('role','group');
     mcqWrap.setAttribute('aria-label',lang==='ta'?'விருப்பங்களைத் தேர்ந்தெடுக்கவும்':'Choose an option');

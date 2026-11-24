@@ -41,6 +41,38 @@ async function main() {
       const errors = [];
       page.on('pageerror', e => errors.push(e.message));
       try {
+        // Check text that is actually painted. The accessible fallback used to
+        // contain the entire question even when the student saw only equations.
+        const exercises = {
+          '3.3': [1,3,4,5,6,8,9,10,11,12], '3.4': [6,7,8,9,10,11,14],
+          '3.7': [2,3,4,6,7], '3.10': [3], '3.11': [2,3], '3.12': [2,3],
+          '3.13': [2,3], '3.14': [1,2,3,4,5,6]
+        };
+        await page.goto(base + '/index.html?class=9&question=g9-ch3-ex3.3-q1');
+        for (const [exercise, numbers] of Object.entries(exercises)) {
+          for (const number of numbers) {
+            const id = 'g9-ch3-ex' + exercise + '-q' + number;
+            await page.evaluate(id => {
+              history.pushState({}, '', '?class=9&question=' + id);
+              dispatchEvent(new PopStateEvent('popstate'));
+            }, id);
+            for (const lang of ['en', 'ta']) {
+              await page.locator(lang === 'en' ? '#langEn' : '#langTa').click();
+              const card = page.locator('#questionText');
+              assert(await card.isVisible(), id + ' visible prompt');
+              const visible = await card.innerText();
+              const source = await page.evaluate(({id, lang}) =>
+                window.TRIGGLE_CLASSES[9].items.find(item => item.id === id).q[lang], {id,lang});
+              const words = source.match(/[A-Za-z]{2,}|[\u0B80-\u0BFF]+/gu);
+              for (const word of words) assert(visible.includes(word), id + ' ' + lang + ' missing ' + word);
+              if (exercise === '3.13' && number === 2) {
+                for (const value of ['80','220','₹']) assert(visible.includes(value), id + ' missing ' + value);
+                assert((await page.locator('.step-equation .katex-html').first().innerText()).includes('220'));
+                assert(!visible.includes('x+y'), id + ' derived equations belong in the solution');
+              }
+            }
+          }
+        }
         // 1. Concept index (10 stages) + Practice this idea -> Exercise -> Understand this idea -> Concept
         await page.goto(base + '/index.html?class=9&chapter=g9-ch3&section=concepts&concept=4');
         await page.locator('.g9a-lab').waitFor({ state: 'visible' });
