@@ -4,6 +4,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
 const root=path.resolve(__dirname,'..');
+const geometry=require('../data/textbook-fidelity/g9-ch4-bilingual-20261124.json');
 const context={window:{}};
 const run=(f)=>vm.runInNewContext(fs.readFileSync(path.join(root,f),'utf8'),context,{filename:f});
 run('data/class-9.js');run('data/curriculum.js');
@@ -17,6 +18,16 @@ for(const q of items){assert.ok(q.q.en.length>40);assert.ok(q.answer.length>2);a
   assert.equal(q.kind,'textbook');
   assert.equal(q.sourceFidelity.status,'english-source-page-visual-checked');
   assert.equal(q.page,97);
+ }else if(geometry.records[q.id]){
+  const {en,ta}=geometry.records[q.id].pages;
+  assert.equal(q.kind,'reference');
+  assert.equal(q.sourceFidelity.status,'page-images-checked-en-ta');
+  assert.equal(q.sourceFidelity.tamilEditorial,'textbook-question-checked');
+  assert.equal(q.page,en.pdf);
+  assert.deepEqual([q.sourceFidelity.enPrintedPage,q.sourceFidelity.enPdfPage],[en.printed,en.pdf]);
+  assert.deepEqual([q.sourceFidelity.taPrintedPage,q.sourceFidelity.taPdfPage],[ta.printed,ta.pdf]);
+  assert.equal(new URL(q.source).pathname,'/file/d/'+geometry.sources.en.driveId+'/view');
+  assert.equal(new URL(q.sourceFidelity.taSource).pathname,'/file/d/'+geometry.sources.ta.driveId+'/view');
  }else{
   assert.equal(q.kind,'reference');
   assert.ok(q.sourceFidelity.status.includes('visual-pending'));
