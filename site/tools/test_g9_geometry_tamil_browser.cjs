@@ -7,7 +7,8 @@ const {load} = require('./build_g9_math.cjs');
 const {launchOptions, server} = require('./dashboard_test_support.cjs');
 const {records} = require('../data/textbook-fidelity/g9-ch4-bilingual-20261124.json');
 
-const phoneSizes = [[320, 740], [390, 844], [412, 915]];
+const phoneSizes = [[320, 740], [360, 800], [390, 844], [412, 915]];
+const figureIds = new Set(['g9-ch4-ex4.1-q4','g9-ch4-ex4.2-q3','g9-ch4-ex4.2-q4','g9-ch4-ex4.2-q6','g9-ch4-ex4.3-q1','g9-ch4-ex4.3-q2','g9-ch4-ex4.3-q4','g9-ch4-ex4.3-q6']);
 const fallback = /English.language question|Tamil (?:version not changed|unchanged)|English explanation/i;
 
 function normalize(text) {
@@ -93,6 +94,28 @@ async function checkPhone(browser, base, items, width, height) {
         assert(actual.typeset > 0, tag + ' typeset mathematics');
         assert.equal(actual.viewport, width, tag + ' mobile viewport');
         assert(actual.pageWidth <= width + 1, tag + ' page fits without horizontal scrolling');
+        // AUD12-02: the eight geometry illustrations must load in the student reader.
+        if (figureIds.has(item.id)) {
+          const figure = page.locator('#inlineFigure');
+          const image = figure.locator('#inlineFigureVisual img');
+          await image.waitFor({state: 'visible'});
+          await image.evaluate(img => img.decode());
+          const info = await image.evaluate(img => ({
+            src: new URL(img.src).pathname,
+            alt: img.alt,
+            width: img.getBoundingClientRect().width,
+            height: img.getBoundingClientRect().height,
+            naturalWidth: img.naturalWidth
+          }));
+          const file = item.id.replace('g9-ch4-', '').replace(/\./g, '-') + '.svg';
+          assert(info.src.endsWith('/assets/grade9-ch4/' + file), tag + ' correct figure');
+          assert(info.naturalWidth > 0 && info.width > 0 && info.width <= width + 1 && info.height > 0, tag + ' figure loaded and fits');
+          assert(info.alt.length > 0, tag + ' accessible figure');
+          if (lang === 'ta') assert.match(info.alt, /[\u0B80-\u0BFF]/u, tag + ' Tamil alt text');
+          const caption = await figure.locator('#inlineFigureCaption').innerText();
+          assert(caption.trim().length > 0, tag + ' figure caption');
+          if (lang === 'ta') assert.match(caption, /[\u0B80-\u0BFF]/u, tag + ' Tamil figure caption');
+        }
       }
     }
     assert.deepEqual(errors, [], width + 'px uncaught reader errors');
@@ -110,7 +133,7 @@ async function main() {
     if (!process.env.TRIGGLE_LIVE_BASE) app = await server();
     const base = process.env.TRIGGLE_LIVE_BASE || app.base;
     for (const [width, height] of phoneSizes) await checkPhone(browser, base, items, width, height);
-    console.log('PASS 66 Geometry reader views, 252 explanations and 252 equation comparisons');
+    console.log('PASS 88 Geometry reader views, 336 explanations, 336 equation comparisons and 64 bilingual figure views');
   } finally {
     await browser.close();
     if (app) await app.close();
