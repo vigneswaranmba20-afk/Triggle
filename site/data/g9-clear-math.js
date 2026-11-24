@@ -23479,16 +23479,37 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Using Heron’s formula, find the area of a triangle whose sides are\n(i) ",
+        "ஹெரான் சூத்திரத்தைப் பயன்படுத்திப் பின்வரும் பக்க அளவுகளைக் கொண்ட முக்கோணத்தின் பரப்பைக் காண்க.\n(i) ",
         {
-          "latex": "10\\,\\mathrm{cm}, 24\\,\\mathrm{cm}, 26\\,\\mathrm{cm}",
-          "fallback": "10 cm, 24 cm, 26 cm"
+          "latex": "10",
+          "fallback": "10"
         },
-        "         (ii) ",
+        " செமீ, ",
         {
-          "latex": "1.8\\,\\mathrm{m}, 8\\,\\mathrm{m}, 8.2\\,\\mathrm{m}",
-          "fallback": "1.8m, 8 m, 8.2 m"
-        }
+          "latex": "24",
+          "fallback": "24"
+        },
+        " செமீ, ",
+        {
+          "latex": "26",
+          "fallback": "26"
+        },
+        " செமீ     (ii) ",
+        {
+          "latex": "1.8",
+          "fallback": "1.8"
+        },
+        " மீ, ",
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        " மீ, ",
+        {
+          "latex": "8.2",
+          "fallback": "8.2"
+        },
+        " மீ"
       ]
     },
     "answerMath": [
@@ -23520,12 +23541,12 @@ const records=[
             " and Heron’s formula."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For both triangles use the semiperimeter ",
+            "இரண்டு முக்கோணங்களுக்கும் அரைச் சுற்றளவு ",
             {
               "latex": "s = \\dfrac{\\left(a + b + c\\right)}{2}",
               "fallback": "s=(a+b+c)/2"
             },
-            " and Heron’s formula."
+            " ஐக் கணக்கிட்டு, ஹெரான் சூத்திரத்தைப் பயன்படுத்துக."
           ]
         }
       },
@@ -23545,12 +23566,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Part (i): the semiperimeter is ",
+            "(i) மூன்று பக்கங்களின் கூடுதலில் பாதி ",
             {
-              "latex": "30\\,\\mathrm{cm}",
-              "fallback": "30 cm"
+              "latex": "30",
+              "fallback": "30"
             },
-            "."
+            " செமீ."
           ]
         }
       },
@@ -23562,7 +23583,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Substitute each side into Heron’s expression.",
-          "ta": "English explanation (Tamil version pending): Substitute each side into Heron’s expression."
+          "ta": "ஹெரான் சூத்திரத்தில் ஒவ்வொரு பக்கத்தின் அளவையும் பிரதியிடுக."
         }
       },
       {
@@ -23581,12 +23602,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Part (ii): the semiperimeter is ",
+            "(ii) இம்முக்கோணத்தின் அரைச் சுற்றளவு ",
             {
-              "latex": "9\\,\\mathrm{m}",
-              "fallback": "9 m"
+              "latex": "9",
+              "fallback": "9"
             },
-            "."
+            " மீ."
           ]
         }
       },
@@ -23598,7 +23619,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the second area and keep its unit in square metres.",
-          "ta": "English explanation (Tamil version pending): Find the second area and keep its unit in square metres."
+          "ta": "இரண்டாவது முக்கோணத்தின் பரப்பைக் கணக்கிட்டு, சதுர மீட்டரில் எழுதுக."
         }
       }
     ]
@@ -23630,41 +23651,55 @@ const records=[
         "."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The sides of the triangular ground are ",
+        "ஒரு முக்கோண வடிவ நிலத்தின் பக்கங்கள் முறையே ",
         {
-          "latex": "22\\,\\mathrm{m}, 120\\,\\mathrm{m}",
-          "fallback": "22 m, 120 m"
+          "latex": "22",
+          "fallback": "22"
         },
-        " and ",
+        " மீ, ",
         {
-          "latex": "122\\,\\mathrm{m}",
-          "fallback": "122 m"
+          "latex": "120",
+          "fallback": "120"
         },
-        ". Find the area and cost of levelling the ground at the rate of ₹ ",
+        " மீ மற்றும் ",
+        {
+          "latex": "122",
+          "fallback": "122"
+        },
+        " மீ எனில் வயலின் பரப்பளவைக் கணக்கிடுக. மேலும் வயலைச் சமப்படுத்த ஒரு சதுர மீட்டருக்கு ₹ ",
         {
           "latex": "20",
           "fallback": "20"
         },
-        " per ",
-        {
-          "latex": "\\mathrm{m}^{2}",
-          "fallback": "m²"
-        },
-        "."
+        " செலவாகும் எனில், வயலைச் சமப்படுத்த ஆகும் மொத்தச் செலவைக் கணக்கிடுக."
       ]
     },
-    "answerMath": [
-      {
-        "latex": "\\begin{aligned}&\\text{Area} = 1320\\,\\mathrm{m}^{2} \\\\ &\\text{cost}\\end{aligned}",
-        "fallback": "Area = 1320 m²; cost",
-        "display": true
-      },
-      " = ₹",
-      {
-        "latex": "26{,}400",
-        "fallback": "26,400"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        {
+          "latex": "\\begin{aligned}&\\text{Area} = 1320\\,\\mathrm{m}^{2} \\\\ &\\text{cost}\\end{aligned}",
+          "fallback": "Area = 1320 m²; cost",
+          "display": true
+        },
+        " = ₹",
+        {
+          "latex": "26{,}400",
+          "fallback": "26,400"
+        }
+      ],
+      "ta": [
+        "பரப்பு = ",
+        {
+          "latex": "1320\\,\\mathrm{m}^{2}",
+          "fallback": "1320 m²"
+        },
+        "; செலவு = ₹",
+        {
+          "latex": "26{,}400",
+          "fallback": "26,400"
+        }
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -23674,7 +23709,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the semiperimeter.",
-          "ta": "English explanation (Tamil version pending): Find the semiperimeter."
+          "ta": "மூன்று பக்கங்களின் கூடுதலில் பாதியைக் கண்டு அரைச் சுற்றளவைப் பெறுக."
         }
       },
       {
@@ -23685,7 +23720,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply Heron’s formula to the three side lengths.",
-          "ta": "English explanation (Tamil version pending): Apply Heron’s formula to the three side lengths."
+          "ta": "மூன்று பக்க அளவுகளையும் ஹெரான் சூத்திரத்தில் பிரதியிட்டுப் பரப்பைக் காண்க."
         }
       },
       {
@@ -23711,12 +23746,17 @@ const records=[
             " per square metre."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Multiply the area by ₹",
+            "ஒரு சதுர மீட்டருக்கான செலவு ₹",
             {
               "latex": "20",
               "fallback": "20"
             },
-            " per square metre."
+            ". பரப்பளவை ",
+            {
+              "latex": "20",
+              "fallback": "20"
+            },
+            " ஆல் பெருக்கி மொத்தச் செலவைக் காண்க."
           ]
         }
       }
@@ -23739,17 +23779,17 @@ const records=[
         ", then find the area of the plot."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The perimeter of a triangular plot is ",
+        "ஒரு முக்கோண வடிவிலான மனையின் சுற்றளவு ",
         {
-          "latex": "600\\,\\mathrm{m}",
-          "fallback": "600 m"
+          "latex": "600",
+          "fallback": "600"
         },
-        ". If the sides are in the ratio ",
+        " மீ. அதன் பக்கங்கள் ",
         {
           "latex": "5 : 12 : 13",
           "fallback": "5:12:13"
         },
-        ", then find the area of the plot."
+        " என்ற விகிதத்தில் உள்ளன எனில் அந்த மனையின் பரப்பளவைக் காண்க."
       ]
     },
     "answerMath": {
@@ -23778,17 +23818,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Set the three sides to ",
+            "பக்கங்களின் நீளங்களை ",
             {
-              "latex": "5 k, 12 k",
-              "fallback": "5k, 12k"
+              "latex": "5 k, 12 k, 13 k",
+              "fallback": "5k, 12k, 13k"
             },
-            " and ",
-            {
-              "latex": "13 k",
-              "fallback": "13k"
-            },
-            "."
+            " எனக் கொள்க."
           ]
         }
       },
@@ -23808,12 +23843,17 @@ const records=[
             " and actual side lengths."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Determine the scale ",
+            "மூன்று பக்கங்களின் கூடுதல் ",
+            {
+              "latex": "600",
+              "fallback": "600"
+            },
+            " மீ என்பதால் ",
             {
               "latex": "k",
               "fallback": "k"
             },
-            " and actual side lengths."
+            " இன் மதிப்பையும் பக்கங்களின் நீளங்களையும் காண்க."
           ]
         }
       },
@@ -23833,12 +23873,11 @@ const records=[
             ", the scaled triangle is right-angled."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Because ",
             {
               "latex": "5^{2} + 12^{2} = 13^{2}",
               "fallback": "5²+12²=13²"
             },
-            ", the scaled triangle is right-angled."
+            " என்பதால் இம்முக்கோணம் செங்கோண முக்கோணம். செங்கோணத்தை அமைக்கும் பக்கங்களைக் கொண்டு பரப்பைக் காண்க."
           ]
         }
       }
@@ -23856,12 +23895,11 @@ const records=[
         "."
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the area of an equilateral triangle whose perimeter is ",
         {
-          "latex": "180\\,\\mathrm{cm}",
-          "fallback": "180 cm"
+          "latex": "180",
+          "fallback": "180"
         },
-        "."
+        " செமீ சுற்றளவு கொண்ட ஒரு சமபக்க முக்கோணத்தின் பரப்பளவைக் காண்க."
       ]
     },
     "answerMath": {
@@ -23878,7 +23916,7 @@ const records=[
         },
         "reasonMath": {
           "en": "All three sides are equal; divide the perimeter by three.",
-          "ta": "English explanation (Tamil version pending): All three sides are equal; divide the perimeter by three."
+          "ta": "மூன்று பக்கங்களும் சமம். சுற்றளவை மூன்றால் வகுத்து ஒரு பக்கத்தின் நீளத்தைக் காண்க."
         }
       },
       {
@@ -23888,7 +23926,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use the equilateral triangle area formula.",
-          "ta": "English explanation (Tamil version pending): Use the equilateral triangle area formula."
+          "ta": "சமபக்க முக்கோணத்தின் பரப்பளவுக்கான சூத்திரத்தைப் பயன்படுத்துக."
         }
       },
       {
@@ -23907,12 +23945,12 @@ const records=[
             " and simplify."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Substitute ",
+            "பக்கத்தின் நீளம் ",
             {
-              "latex": "60\\,\\mathrm{cm}",
-              "fallback": "60 cm"
+              "latex": "60",
+              "fallback": "60"
             },
-            " and simplify."
+            " செமீ என்பதைப் பிரதியிட்டுச் சுருக்குக."
           ]
         }
       }
@@ -23940,22 +23978,22 @@ const records=[
         " per square metre."
       ],
       "ta": [
-        "English-language question; Tamil version pending. An advertisement board is in the form of an isosceles triangle with perimeter ",
+        "இரு சமபக்க முக்கோண வடிவிலுள்ள ஒரு விளம்பரப் பலகையின் சுற்றளவு ",
         {
-          "latex": "36\\,\\mathrm{m}",
-          "fallback": "36m"
+          "latex": "36",
+          "fallback": "36"
         },
-        " and each of the equal sides are ",
+        " மீ மற்றும் அதன் ஒவ்வொரு சமபக்கத்தின் நீளம் ",
         {
-          "latex": "13\\,\\mathrm{m}",
-          "fallback": "13 m"
+          "latex": "13",
+          "fallback": "13"
         },
-        ". Find the cost of painting it at ₹ ",
+        " மீ ஆகும். அதற்கு வண்ணம் பூச ஒரு சதுர மீட்டருக்கு ₹ ",
         {
           "latex": "17.50",
           "fallback": "17.50"
         },
-        " per square metre."
+        " வீதம் ஆகும் செலவைக் காண்க."
       ]
     },
     "answerMath": [
@@ -23974,7 +24012,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The remaining base is perimeter minus the two equal sides.",
-          "ta": "English explanation (Tamil version pending): The remaining base is perimeter minus the two equal sides."
+          "ta": "சுற்றளவிலிருந்து சமமான இரு பக்கங்களின் நீளங்களைக் கழித்து அடிப்பக்கத்தைக் காண்க."
         }
       },
       {
@@ -23985,7 +24023,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The altitude bisects the base: use Pythagoras in either right triangle.",
-          "ta": "English explanation (Tamil version pending): The altitude bisects the base: use Pythagoras in either right triangle."
+          "ta": "உச்சியிலிருந்து வரையப்படும் குத்துயரம் அடிப்பக்கத்தை இரு சம பாகங்களாகப் பிரிக்கிறது. ஒரு செங்கோண முக்கோணத்தில் பிதாகரஸ் தேற்றத்தைப் பயன்படுத்துக."
         }
       },
       {
@@ -23996,7 +24034,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Calculate the full triangular area.",
-          "ta": "English explanation (Tamil version pending): Calculate the full triangular area."
+          "ta": "முழு அடிப்பக்கத்தையும் குத்துயரத்தையும் கொண்டு முக்கோணத்தின் பரப்பைக் காண்க."
         }
       },
       {
@@ -24018,7 +24056,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Multiply area by the given paint rate.",
-          "ta": "English explanation (Tamil version pending): Multiply area by the given paint rate."
+          "ta": "பரப்பை ஒரு சதுர மீட்டருக்கான வண்ணம் பூசும் செலவால் பெருக்குக."
         }
       }
     ]
@@ -24027,7 +24065,7 @@ const records=[
     "id": "g9-ch7-ex7.1-q6",
     "questionMath": {
       "en": "Find the area of the unshaded region.",
-      "ta": "English-language question; Tamil version pending. Find the area of the unshaded region."
+      "ta": "படத்தில் நிழலிடப்படாத பகுதியின் பரப்பைக் காண்க."
     },
     "answerMath": {
       "latex": "240\\,\\mathrm{cm}^{2}",
@@ -24073,30 +24111,27 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Read the textbook diagram: ",
+            "படத்தில் ",
             {
-              "latex": "BC = 42\\,\\mathrm{cm}",
-              "fallback": "BC=42 cm"
+              "latex": "BC = 42",
+              "fallback": "BC=42"
             },
-            ",",
-            " ",
+            " செமீ, ",
             {
-              "latex": "CA = 34\\,\\mathrm{cm}",
-              "fallback": "CA=34 cm"
+              "latex": "CA = 34",
+              "fallback": "CA=34"
             },
-            ",",
-            " ",
+            " செமீ, ",
             {
-              "latex": "BD = 16\\,\\mathrm{cm}",
-              "fallback": "BD=16 cm"
+              "latex": "BD = 16",
+              "fallback": "BD=16"
             },
-            ",",
-            " ",
+            " செமீ, ",
             {
-              "latex": "AD = 12\\,\\mathrm{cm}",
-              "fallback": "AD=12 cm"
+              "latex": "AD = 12",
+              "fallback": "AD=12"
             },
-            ", with ",
+            " செமீ மற்றும் ",
             {
               "latex": "\\angle BDA = 90^{\\circ}",
               "fallback": "∠BDA=90°"
@@ -24126,17 +24161,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): First find ",
-            {
-              "latex": "AB",
-              "fallback": "AB"
-            },
-            " from right triangle ",
+            "முதலில் ",
             {
               "latex": "ADB",
               "fallback": "ADB"
             },
-            "."
+            " என்ற செங்கோண முக்கோணத்தில் ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " ஐக் காண்க."
           ]
         }
       },
@@ -24171,27 +24206,22 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Outer triangle ",
+            "வெளி முக்கோணம் ",
             {
               "latex": "ABC",
               "fallback": "ABC"
             },
-            " has ",
+            " இன் பக்கங்கள் ",
             {
-              "latex": "\\text{sides} 20, 34",
-              "fallback": "sides 20, 34"
+              "latex": "20, 34, 42",
+              "fallback": "20, 34, 42"
             },
-            " and ",
+            " செமீ. எனவே அதன் அரைச் சுற்றளவு ",
             {
-              "latex": "42\\,\\mathrm{cm}",
-              "fallback": "42 cm"
+              "latex": "48",
+              "fallback": "48"
             },
-            ", so ",
-            {
-              "latex": "s = 48\\,\\mathrm{cm}",
-              "fallback": "s=48 cm"
-            },
-            "."
+            " செமீ."
           ]
         }
       },
@@ -24203,7 +24233,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Calculate the outer triangle area using Heron’s formula.",
-          "ta": "English explanation (Tamil version pending): Calculate the outer triangle area using Heron’s formula."
+          "ta": "ஹெரான் சூத்திரத்தைப் பயன்படுத்தி வெளி முக்கோணத்தின் பரப்பைக் காண்க."
         }
       },
       {
@@ -24222,12 +24252,12 @@ const records=[
             " has area half its perpendicular-leg product."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The coloured triangle ",
+            "நிழலிடப்பட்ட ",
             {
               "latex": "ADB",
               "fallback": "ADB"
             },
-            " has area half its perpendicular-leg product."
+            " இன் பரப்பு, செங்குத்தாக உள்ள இரு பக்கங்களின் பெருக்கற்பலனில் பாதியாகும்."
           ]
         }
       },
@@ -24242,7 +24272,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Subtract the coloured region from the outer triangle.",
-          "ta": "English explanation (Tamil version pending): Subtract the coloured region from the outer triangle."
+          "ta": "வெளி முக்கோணத்தின் பரப்பிலிருந்து நிழலிடப்பட்ட பகுதியின் பரப்பைக் கழிக்கவும்."
         }
       }
     ]
@@ -24287,40 +24317,36 @@ const records=[
         "."
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the area of a quadrilateral ",
+        {
+          "latex": "AB = 13",
+          "fallback": "AB = 13"
+        },
+        " செமீ, ",
+        {
+          "latex": "BC = 12",
+          "fallback": "BC = 12"
+        },
+        " செமீ, ",
+        {
+          "latex": "CD = 9",
+          "fallback": "CD = 9"
+        },
+        " செமீ, ",
+        {
+          "latex": "AD = 14",
+          "fallback": "AD = 14"
+        },
+        " செமீ ஆகியவற்றைப் பக்கங்களாகவும் ",
+        {
+          "latex": "BD = 15",
+          "fallback": "BD = 15"
+        },
+        " செமீ ஐ மூலைவிட்டமாகவும் கொண்ட நாற்கரம் ",
         {
           "latex": "ABCD",
           "fallback": "ABCD"
         },
-        " whose sides are ",
-        {
-          "latex": "AB = 13\\,\\mathrm{cm}",
-          "fallback": "AB =13 cm"
-        },
-        ",",
-        " ",
-        {
-          "latex": "BC = 12\\,\\mathrm{cm}",
-          "fallback": "BC =12 cm"
-        },
-        ",",
-        " ",
-        {
-          "latex": "CD = 9\\,\\mathrm{cm}",
-          "fallback": "CD = 9 cm"
-        },
-        ",",
-        " ",
-        {
-          "latex": "AD = 14\\,\\mathrm{cm}",
-          "fallback": "AD =14 cm"
-        },
-        " and diagonal ",
-        {
-          "latex": "BD = 15\\,\\mathrm{cm}",
-          "fallback": "BD =15 cm"
-        },
-        "."
+        " இன் பரப்பைக் காண்க."
       ]
     },
     "answerMath": {
@@ -24353,22 +24379,21 @@ const records=[
             "; calculate each separately."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Diagonal ",
             {
               "latex": "BD",
               "fallback": "BD"
             },
-            " forms triangles ",
+            " என்ற மூலைவிட்டம் நாற்கரத்தை ",
             {
               "latex": "ABD",
               "fallback": "ABD"
             },
-            " and ",
+            ", ",
             {
               "latex": "BCD",
               "fallback": "BCD"
             },
-            "; calculate each separately."
+            " என்ற இரு முக்கோணங்களாகப் பிரிக்கிறது. அவற்றின் பரப்புகளைத் தனித்தனியாகக் காண்க."
           ]
         }
       },
@@ -24398,22 +24423,21 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For triangle ",
             {
               "latex": "ABD",
               "fallback": "ABD"
             },
-            ", sides are ",
+            " இன் பக்கங்கள் ",
             {
               "latex": "13, 14, 15",
-              "fallback": "13,14,15"
+              "fallback": "13, 14, 15"
             },
-            " and semiperimeter ",
+            " செமீ. அரைச் சுற்றளவு ",
             {
               "latex": "21",
               "fallback": "21"
             },
-            "."
+            " செமீ."
           ]
         }
       },
@@ -24443,22 +24467,21 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For triangle ",
             {
               "latex": "BCD",
               "fallback": "BCD"
             },
-            ", sides are ",
+            " இன் பக்கங்கள் ",
             {
               "latex": "12, 9, 15",
-              "fallback": "12,9,15"
+              "fallback": "12, 9, 15"
             },
-            " and semiperimeter ",
+            " செமீ. அரைச் சுற்றளவு ",
             {
               "latex": "18",
               "fallback": "18"
             },
-            "."
+            " செமீ."
           ]
         }
       },
@@ -24470,7 +24493,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the two triangular areas.",
-          "ta": "English explanation (Tamil version pending): Add the two triangular areas."
+          "ta": "இரு முக்கோணங்களின் பரப்புகளையும் கூட்டுக."
         }
       }
     ]
@@ -24492,17 +24515,27 @@ const records=[
         " and the angle between the first two sides is a right angle. Find the area of the park."
       ],
       "ta": [
-        "English-language question; Tamil version pending. A park is in the shape of a quadrilateral. The sides of the park are ",
+        "ஒரு பூங்காவானது நாற்கர வடிவிலுள்ளது. அந்தப் பூங்காவின் பக்க அளவுகள் முறையே ",
         {
-          "latex": "15\\,\\mathrm{m}, 20\\,\\mathrm{m}, 26\\,\\mathrm{m}",
-          "fallback": "15 m, 20 m, 26 m"
+          "latex": "15",
+          "fallback": "15"
         },
-        " and ",
+        " மீ, ",
         {
-          "latex": "17\\,\\mathrm{m}",
-          "fallback": "17 m"
+          "latex": "20",
+          "fallback": "20"
         },
-        " and the angle between the first two sides is a right angle. Find the area of the park."
+        " மீ, ",
+        {
+          "latex": "26",
+          "fallback": "26"
+        },
+        " மீ மற்றும் ",
+        {
+          "latex": "17",
+          "fallback": "17"
+        },
+        " மீ மற்றும் முதல் இரண்டு பக்கங்களுக்கு இடையேயுள்ள கோணம் செங்கோணம் எனில் பூங்காவின் பரப்பைக் காண்க."
       ]
     },
     "answerMath": {
@@ -24531,17 +24564,16 @@ const records=[
             " form a right triangle and a diagonal of the quadrilateral."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The two perpendicular ",
             {
-              "latex": "\\text{sides} 15",
-              "fallback": "sides 15"
+              "latex": "15",
+              "fallback": "15"
             },
-            " and ",
+            " மீ, ",
             {
-              "latex": "20\\,\\mathrm{m}",
-              "fallback": "20 m"
+              "latex": "20",
+              "fallback": "20"
             },
-            " form a right triangle and a diagonal of the quadrilateral."
+            " மீ பக்கங்கள் ஒன்றுக்கொன்று செங்குத்தானவை. நாற்கரத்தின் ஒரு மூலைவிட்டம் இவை அமைக்கும் செங்கோண முக்கோணத்தின் கர்ணமாகும்."
           ]
         }
       },
@@ -24553,7 +24585,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the right triangle area.",
-          "ta": "English explanation (Tamil version pending): Find the right triangle area."
+          "ta": "செங்கோண முக்கோணத்தின் பரப்பைக் காண்க."
         }
       },
       {
@@ -24577,17 +24609,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The other triangle has ",
+            "மற்ற முக்கோணத்தின் பக்கங்கள் ",
             {
-              "latex": "\\text{sides} 25, 26, 17\\,\\mathrm{m}",
-              "fallback": "sides 25,26,17 m"
+              "latex": "25, 26, 17",
+              "fallback": "25, 26, 17"
             },
-            " and semiperimeter ",
+            " மீ. அதன் அரைச் சுற்றளவு ",
             {
-              "latex": "34\\,\\mathrm{m}",
-              "fallback": "34 m"
+              "latex": "34",
+              "fallback": "34"
             },
-            "."
+            " மீ."
           ]
         }
       },
@@ -24599,7 +24631,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use Heron’s formula for its area.",
-          "ta": "English explanation (Tamil version pending): Use Heron’s formula for its area."
+          "ta": "ஹெரான் சூத்திரத்தைப் பயன்படுத்தி அதன் பரப்பைக் காண்க."
         }
       },
       {
@@ -24610,7 +24642,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the two parts of the park.",
-          "ta": "English explanation (Tamil version pending): Add the two parts of the park."
+          "ta": "பூங்காவின் இரு பகுதிகளின் பரப்புகளையும் கூட்டுக."
         }
       }
     ]
@@ -24632,17 +24664,17 @@ const records=[
         ". Find the area of the land."
       ],
       "ta": [
-        "English-language question; Tamil version pending. A land is in the shape of rhombus. The perimeter of the land is ",
+        "ஒரு நிலமானது சாய்சதுர வடிவில் உள்ளது. நிலத்தின் சுற்றளவு ",
         {
-          "latex": "160\\,\\mathrm{m}",
-          "fallback": "160 m"
+          "latex": "160",
+          "fallback": "160"
         },
-        " and one of the diagonal is ",
+        " மீ மற்றும் அதன் ஒரு மூலைவிட்டத்தின் அளவு ",
         {
-          "latex": "48\\,\\mathrm{m}",
-          "fallback": "48 m"
+          "latex": "48",
+          "fallback": "48"
         },
-        ". Find the area of the land."
+        " மீ எனில் அந்த நிலத்தின் பரப்பைக் காண்க."
       ]
     },
     "answerMath": {
@@ -24665,12 +24697,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Each of the four equal sides is ",
+            "நான்கு பக்கங்களும் சமம். ஒவ்வொரு பக்கத்தின் நீளமும் ",
             {
-              "latex": "\\dfrac{160}{4}\\,\\mathrm{m}",
-              "fallback": "160/4 m"
+              "latex": "160",
+              "fallback": "160"
             },
-            "."
+            " ஐ நான்கால் வகுத்தால் கிடைக்கும்."
           ]
         }
       },
@@ -24689,12 +24721,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Rhombus diagonals bisect at right angles, so half the known diagonal is ",
+            "சாய்சதுரத்தின் மூலைவிட்டங்கள் ஒன்றையொன்று செங்குத்தாக இரு சம பாகங்களாகப் பிரிக்கின்றன. கொடுக்கப்பட்ட மூலைவிட்டத்தின் பாதி ",
             {
-              "latex": "24\\,\\mathrm{m}",
-              "fallback": "24 m"
+              "latex": "24",
+              "fallback": "24"
             },
-            "."
+            " மீ."
           ]
         }
       },
@@ -24714,7 +24746,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Pythagoras gives half the second diagonal.",
-          "ta": "English explanation (Tamil version pending): Pythagoras gives half the second diagonal."
+          "ta": "பிதாகரஸ் தேற்றத்தைப் பயன்படுத்தி இரண்டாவது மூலைவிட்டத்தின் பாதி நீளத்தைக் காண்க."
         }
       },
       {
@@ -24725,7 +24757,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use half the product of diagonals.",
-          "ta": "English explanation (Tamil version pending): Use half the product of diagonals."
+          "ta": "இரு முழு மூலைவிட்டங்களின் பெருக்கற்பலனில் பாதியே சாய்சதுரத்தின் பரப்பு."
         }
       }
     ]
@@ -24747,17 +24779,22 @@ const records=[
         ". Find the area of parallelogram."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The adjacent sides of a parallelogram measures ",
+        "ஓர் இணைகரத்தின் அடுத்தடுத்த பக்கங்களின் அளவுகள் ",
         {
-          "latex": "34\\,\\mathrm{m}, 20\\,\\mathrm{m}",
-          "fallback": "34 m, 20 m"
+          "latex": "34",
+          "fallback": "34"
         },
-        " and the measure of one of the diagonal is ",
+        " மீ, ",
         {
-          "latex": "42\\,\\mathrm{m}",
-          "fallback": "42 m"
+          "latex": "20",
+          "fallback": "20"
         },
-        ". Find the area of parallelogram."
+        " மீ மற்றும் அதன் ஒரு மூலைவிட்டத்தின் அளவு ",
+        {
+          "latex": "42",
+          "fallback": "42"
+        },
+        " மீ எனில் அந்த இணைகரத்தின் பரப்பைக் காண்க."
       ]
     },
     "answerMath": {
@@ -24781,12 +24818,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): A diagonal divides the parallelogram into two congruent triangles with ",
+            "மூலைவிட்டம் இணைகரத்தை இரு சர்வசம முக்கோணங்களாகப் பிரிக்கிறது. ஒவ்வொன்றின் பக்கங்களும் ",
             {
-              "latex": "\\text{sides} 34, 20, 42",
-              "fallback": "sides 34,20,42"
+              "latex": "34, 20, 42",
+              "fallback": "34, 20, 42"
             },
-            "."
+            " மீ."
           ]
         }
       },
@@ -24801,7 +24838,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Use Heron’s formula for one triangle.",
-          "ta": "English explanation (Tamil version pending): Use Heron’s formula for one triangle."
+          "ta": "ஹெரான் சூத்திரத்தைப் பயன்படுத்தி ஒரு முக்கோணத்தின் பரப்பைக் காண்க."
         }
       },
       {
@@ -24814,7 +24851,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Double for the parallelogram.",
-          "ta": "English explanation (Tamil version pending): Double for the parallelogram."
+          "ta": "அந்தப் பரப்பை இரண்டால் பெருக்கி இணைகரத்தின் பரப்பைப் பெறுக."
         }
       }
     ]
@@ -24841,28 +24878,42 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the Total Surface Area and the Lateral Surface Area of a cuboid whose dimensions are: ",
+        "பின்வரும் அளவுகளைக் கொண்ட கனசெவ்வகத்தின் மொத்தப்பரப்பு மற்றும் பக்கப் பரப்பைக் காண்க.\n(i) நீளம் = ",
         {
-          "latex": "\\text{length} = 20\\,\\mathrm{cm}",
-          "fallback": "length = 20 cm"
+          "latex": "20",
+          "fallback": "20"
         },
-        ",",
-        " ",
+        " செமீ, அகலம் = ",
         {
-          "latex": "\\text{breadth} = 15\\,\\mathrm{cm}",
-          "fallback": "breadth = 15 cm"
+          "latex": "15",
+          "fallback": "15"
         },
-        " and ",
+        " செமீ மற்றும் உயரம் = ",
         {
-          "latex": "\\text{height} = 8\\,\\mathrm{cm}",
-          "fallback": "height = 8 cm"
-        }
+          "latex": "8",
+          "fallback": "8"
+        },
+        " செமீ"
       ]
     },
     "answerMath": {
-      "latex": "\\begin{aligned}&\\text{TSA} = 1160\\,\\mathrm{cm}^{2} \\\\ &\\text{LSA} = 560\\,\\mathrm{cm}^{2}\\end{aligned}",
-      "fallback": "TSA = 1160 cm²; LSA = 560 cm²",
-      "display": true
+      "en": {
+        "latex": "\\begin{aligned}&\\text{TSA} = 1160\\,\\mathrm{cm}^{2} \\\\ &\\text{LSA} = 560\\,\\mathrm{cm}^{2}\\end{aligned}",
+        "fallback": "TSA = 1160 cm²; LSA = 560 cm²",
+        "display": true
+      },
+      "ta": [
+        "மொத்தப்பரப்பு = ",
+        {
+          "latex": "1160\\,\\mathrm{cm}^{2}",
+          "fallback": "1160 cm²"
+        },
+        "; பக்கப்பரப்பு = ",
+        {
+          "latex": "560\\,\\mathrm{cm}^{2}",
+          "fallback": "560 cm²"
+        }
+      ]
     },
     "steps": [
       {
@@ -24891,22 +24942,22 @@ const records=[
             " centimetres and the total surface area formula."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Use ",
+            "நீளம் ",
             {
-              "latex": "l = 20",
-              "fallback": "l=20"
+              "latex": "20",
+              "fallback": "20"
             },
-            ",",
+            " செமீ, அகலம் ",
             {
-              "latex": "b = 15",
-              "fallback": "b=15"
+              "latex": "15",
+              "fallback": "15"
             },
-            ",",
+            " செமீ, உயரம் ",
             {
-              "latex": "h = 8",
-              "fallback": "h=8"
+              "latex": "8",
+              "fallback": "8"
             },
-            " centimetres and the total surface area formula."
+            " செமீ. கனசெவ்வகத்தின் மொத்தப்பரப்புக்கான சூத்திரத்தை எழுதுக."
           ]
         }
       },
@@ -24918,7 +24969,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Substitute the dimensions.",
-          "ta": "English explanation (Tamil version pending): Substitute the dimensions."
+          "ta": "கொடுக்கப்பட்ட அளவுகளைப் பிரதியிட்டு ஆறு முகங்களின் மொத்தப்பரப்பைக் காண்க."
         }
       },
       {
@@ -24929,7 +24980,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the four side faces without the top and bottom.",
-          "ta": "English explanation (Tamil version pending): Find the four side faces without the top and bottom."
+          "ta": "மேல் மற்றும் கீழ் முகங்களை நீக்கி, நான்கு பக்கவாட்டு முகங்களின் பரப்பைக் காண்க."
         }
       }
     ]
@@ -24966,32 +25017,32 @@ const records=[
         "."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The dimensions of a cuboidal box are ",
+        "ஒரு கனசெவ்வக வடிவப் பெட்டியின் அளவுகளானது ",
         {
-          "latex": "6\\,\\mathrm{m}",
-          "fallback": "6 m"
+          "latex": "6",
+          "fallback": "6"
         },
-        " ",
+        " மீ ",
         {
-          "latex": "\\times 400\\,\\mathrm{cm}",
-          "fallback": "× 400 cm"
+          "latex": "\\times 400",
+          "fallback": "× 400"
         },
-        " ",
+        " செமீ ",
         {
-          "latex": "\\times 1.5\\,\\mathrm{m}",
-          "fallback": "× 1.5 m"
+          "latex": "\\times 1.5",
+          "fallback": "× 1.5"
         },
-        ". Find the cost of painting its entire outer surface at the rate of ₹",
+        " மீ ஆகும். அப்பெட்டியின் வெளிப்புறம் முழுவதும் வண்ணம் பூசுவதற்கு ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " சதுர மீட்டருக்கு ₹",
         {
           "latex": "22",
           "fallback": "22"
         },
-        " per ",
-        {
-          "latex": "\\mathrm{m}^{2}",
-          "fallback": "m²"
-        },
-        "."
+        " வீதம் ஆகும் எனில், மொத்தச் செலவைக் காண்க."
       ]
     },
     "answerMath": [
@@ -25009,7 +25060,19 @@ const records=[
         },
         "reasonMath": {
           "en": "Convert all the dimensions to metres.",
-          "ta": "English explanation (Tamil version pending): Convert all the dimensions to metres."
+          "ta": [
+            "எல்லா அளவுகளையும் மீட்டரில் எழுதுக. ",
+            {
+              "latex": "400",
+              "fallback": "400"
+            },
+            " செமீ என்பது ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " மீ."
+          ]
         }
       },
       {
@@ -25020,7 +25083,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Painting the entire outer box means all six faces.",
-          "ta": "English explanation (Tamil version pending): Painting the entire outer box means all six faces."
+          "ta": "முழு வெளிப்புறத்திற்கும் வண்ணம் பூசுவதால் ஆறு முகங்களின் பரப்புகளையும் சேர்க்கவும்."
         }
       },
       {
@@ -25037,7 +25100,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Multiply by painting cost per square metre.",
-          "ta": "English explanation (Tamil version pending): Multiply by painting cost per square metre."
+          "ta": "அந்தப் பரப்பை ஒரு சதுர மீட்டருக்கான செலவால் பெருக்குக."
         }
       }
     ]
@@ -25074,32 +25137,27 @@ const records=[
         "."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The dimensions of a hall is ",
+        "ஒரு கூடத்தின் அளவு ",
         {
-          "latex": "10\\,\\mathrm{m}",
-          "fallback": "10 m"
+          "latex": "10",
+          "fallback": "10"
         },
-        " ",
+        " மீ ",
         {
-          "latex": "\\times 9\\,\\mathrm{m}",
-          "fallback": "× 9 m"
+          "latex": "\\times 9",
+          "fallback": "× 9"
         },
-        " ",
+        " மீ ",
         {
-          "latex": "\\times 8\\,\\mathrm{m}",
-          "fallback": "× 8 m"
+          "latex": "\\times 8",
+          "fallback": "× 8"
         },
-        ". Find the cost of white washing the walls and ceiling at the rate of ₹",
+        " மீ என்றவாறு உள்ளது. அக்கூடத்தின் சுவர்கள் மற்றும் மேற்கூரைக்கு வெள்ளையடிக்க ஒரு சதுர மீட்டருக்கு ₹",
         {
           "latex": "8.50",
           "fallback": "8.50"
         },
-        " per ",
-        {
-          "latex": "\\mathrm{m}^{2}",
-          "fallback": "m²"
-        },
-        "."
+        " வீதம் ஆகும் மொத்தச் செலவைக் காண்க."
       ]
     },
     "answerMath": [
@@ -25126,12 +25184,22 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The hall has ",
+            "கூடத்தின் நீளம் ",
             {
-              "latex": "\\text{length} 10\\,\\mathrm{m}, \\text{breadth} 9\\,\\mathrm{m}, \\text{height} 8\\,\\mathrm{m}",
-              "fallback": "length 10 m, breadth 9 m, height 8 m"
+              "latex": "10",
+              "fallback": "10"
             },
-            "."
+            " மீ, அகலம் ",
+            {
+              "latex": "9",
+              "fallback": "9"
+            },
+            " மீ, உயரம் ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " மீ."
           ]
         }
       },
@@ -25146,7 +25214,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Whitewash the four walls, excluding the floor.",
-          "ta": "English explanation (Tamil version pending): Whitewash the four walls, excluding the floor."
+          "ta": "தரையை விலக்கி நான்கு சுவர்களின் பரப்பைக் காண்க."
         }
       },
       {
@@ -25157,7 +25225,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the ceiling area once.",
-          "ta": "English explanation (Tamil version pending): Add the ceiling area once."
+          "ta": "மேற்கூரையின் பரப்பை ஒரு முறை கூட்டுக."
         }
       },
       {
@@ -25179,7 +25247,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Apply the prescribed rate.",
-          "ta": "English explanation (Tamil version pending): Apply the prescribed rate."
+          "ta": "மொத்தப் பரப்பை ஒரு சதுர மீட்டருக்கான வெள்ளையடிக்கும் செலவால் பெருக்குக."
         }
       }
     ]
@@ -25215,31 +25283,22 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the ",
+        "கீழ்க்காணும் பக்க அளவைக் கொண்ட கனசதுரங்களின் மொத்தப்பரப்பு மற்றும் பக்கப்பரப்பைக் காண்க. (i) ",
         {
-          "latex": "\\text{TSA}",
-          "fallback": "TSA"
+          "latex": "8",
+          "fallback": "8"
         },
-        " and ",
+        " மீ   (ii) ",
         {
-          "latex": "\\text{LSA}",
-          "fallback": "LSA"
+          "latex": "21",
+          "fallback": "21"
         },
-        " of the cube whose side is (i) ",
+        " செமீ   (iii) ",
         {
-          "latex": "8\\,\\mathrm{m}",
-          "fallback": "8 m"
+          "latex": "7.5",
+          "fallback": "7.5"
         },
-        " (ii) ",
-        {
-          "latex": "21\\,\\mathrm{cm}",
-          "fallback": "21 cm"
-        },
-        "  (iii) ",
-        {
-          "latex": "7.5\\,\\mathrm{cm}",
-          "fallback": "7.5 cm"
-        }
+        " செமீ"
       ]
     },
     "answerMath": [
@@ -25271,7 +25330,7 @@ const records=[
         },
         "reasonMath": {
           "en": "For a cube of side a, calculate all six faces and four lateral faces.",
-          "ta": "English explanation (Tamil version pending): For a cube of side a, calculate all six faces and four lateral faces."
+          "ta": "பக்க நீளம் a உள்ள கனசதுரத்தில் மொத்தப்பரப்புக்கு ஆறு முகங்களையும் பக்கப்பரப்புக்கு நான்கு முகங்களையும் எடுத்துக்கொள்க."
         }
       },
       {
@@ -25290,12 +25349,12 @@ const records=[
             " metres."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Part (i): ",
+            "(i) பக்க நீளம் ",
             {
-              "latex": "a = 8",
-              "fallback": "a=8"
+              "latex": "8",
+              "fallback": "8"
             },
-            " metres."
+            " மீ எனப் பிரதியிடுக."
           ]
         }
       },
@@ -25315,12 +25374,12 @@ const records=[
             " centimetres."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Part (ii): ",
+            "(ii) பக்க நீளம் ",
             {
-              "latex": "a = 21",
-              "fallback": "a=21"
+              "latex": "21",
+              "fallback": "21"
             },
-            " centimetres."
+            " செமீ எனப் பிரதியிடுக."
           ]
         }
       },
@@ -25340,12 +25399,12 @@ const records=[
             " centimetres."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Part (iii): ",
+            "(iii) பக்க நீளம் ",
             {
-              "latex": "a = 7.5",
-              "fallback": "a=7.5"
+              "latex": "7.5",
+              "fallback": "7.5"
             },
-            " centimetres."
+            " செமீ எனப் பிரதியிடுக."
           ]
         }
       }
@@ -25363,12 +25422,12 @@ const records=[
         " then, find its lateral surface area."
       ],
       "ta": [
-        "English-language question; Tamil version pending. If the total surface area of a cube is ",
+        "(i) ஒரு கனசதுரத்தின் மொத்தப்பரப்பு ",
         {
-          "latex": "2400\\,\\mathrm{cm}^{2}",
-          "fallback": "2400 cm²"
+          "latex": "2400",
+          "fallback": "2400"
         },
-        " then, find its lateral surface area."
+        " செமீ² எனில், அதன் பக்கப்பரப்பைக் காண்க."
       ]
     },
     "answerMath": {
@@ -25383,7 +25442,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The total area is six congruent square faces.",
-          "ta": "English explanation (Tamil version pending): The total area is six congruent square faces."
+          "ta": "மொத்தப்பரப்பு ஆறு சர்வசமச் சதுர முகங்களின் பரப்புகளின் கூடுதல்."
         }
       },
       {
@@ -25393,7 +25452,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide by six to find the area of one face.",
-          "ta": "English explanation (Tamil version pending): Divide by six to find the area of one face."
+          "ta": "ஆறால் வகுத்து ஒரு முகத்தின் பரப்பைக் காண்க."
         }
       },
       {
@@ -25404,7 +25463,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Lateral area comprises four such faces.",
-          "ta": "English explanation (Tamil version pending): Lateral area comprises four such faces."
+          "ta": "நான்கு முகங்களின் பரப்பே பக்கப்பரப்பு."
         }
       }
     ]
@@ -25431,36 +25490,49 @@ const records=[
         "."
       ],
       "ta": [
-        "English-language question; Tamil version pending. A cubical container of side ",
         {
-          "latex": "6.5\\,\\mathrm{m}",
-          "fallback": "6.5 m"
+          "latex": "6.5",
+          "fallback": "6.5"
         },
-        " is to be painted on the entire outer surface. Find the area to be painted and the total cost of painting it at the rate of ₹",
+        " மீ பக்க அளவுள்ள ஒரு கனசதுரக் கொள்கலனின் மேற்புறம் முழுவதும் வண்ணம் பூசப்படுகிறது. இதற்கு வண்ணம் பூச வேண்டிய பரப்பு மற்றும் ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " சதுர மீட்டருக்கு ₹",
         {
           "latex": "24",
           "fallback": "24"
         },
-        " per ",
-        {
-          "latex": "\\mathrm{m}^{2}",
-          "fallback": "m²"
-        },
-        "."
+        " வீதம் வண்ணம் பூச ஆகும் மொத்தச் செலவு ஆகியவற்றைக் காண்க."
       ]
     },
-    "answerMath": [
-      {
-        "latex": "\\begin{aligned}&\\text{Area} = 253.5\\,\\mathrm{m}^{2} \\\\ &\\text{cost}\\end{aligned}",
-        "fallback": "Area = 253.5 m²; cost",
-        "display": true
-      },
-      " = ₹",
-      {
-        "latex": "6084",
-        "fallback": "6084"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        {
+          "latex": "\\begin{aligned}&\\text{Area} = 253.5\\,\\mathrm{m}^{2} \\\\ &\\text{cost}\\end{aligned}",
+          "fallback": "Area = 253.5 m²; cost",
+          "display": true
+        },
+        " = ₹",
+        {
+          "latex": "6084",
+          "fallback": "6084"
+        }
+      ],
+      "ta": [
+        "பரப்பு = ",
+        {
+          "latex": "253.5\\,\\mathrm{m}^{2}",
+          "fallback": "253.5 m²"
+        },
+        "; செலவு = ₹",
+        {
+          "latex": "6084",
+          "fallback": "6084"
+        }
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -25469,7 +25541,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Outer surface of a cube includes six square faces.",
-          "ta": "English explanation (Tamil version pending): Outer surface of a cube includes six square faces."
+          "ta": "கனசதுரத்தின் வெளிப்பரப்பில் ஆறு சதுர முகங்களும் அடங்கும்."
         }
       },
       {
@@ -25488,12 +25560,12 @@ const records=[
             " metres."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Calculate painted area at ",
+            "பக்க நீளம் ",
             {
-              "latex": "a = 6.5",
-              "fallback": "a=6.5"
+              "latex": "6.5",
+              "fallback": "6.5"
             },
-            " metres."
+            " மீ எனப் பிரதியிட்டு வண்ணம் பூச வேண்டிய பரப்பைக் காண்க."
           ]
         }
       },
@@ -25520,12 +25592,12 @@ const records=[
             " rate."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Multiply by the ₹",
+            "பரப்பை ஒரு சதுர மீட்டருக்கான செலவான ₹",
             {
-              "latex": "\\dfrac{24}{\\mathrm{m}^{2}}",
-              "fallback": "24/m²"
+              "latex": "24",
+              "fallback": "24"
             },
-            " rate."
+            " ஆல் பெருக்குக."
           ]
         }
       }
@@ -25543,18 +25615,31 @@ const records=[
         " are joined end to end. Find the total surface area and lateral surface area of the new resulting cuboid."
       ],
       "ta": [
-        "English-language question; Tamil version pending. Three identical cubes of side ",
         {
-          "latex": "4\\,\\mathrm{cm}",
-          "fallback": "4 cm"
+          "latex": "4",
+          "fallback": "4"
         },
-        " are joined end to end. Find the total surface area and lateral surface area of the new resulting cuboid."
+        " செமீ பக்க அளவு உடைய ஒரே மாதிரியான மூன்று கனசதுரங்கள் ஒன்றோடு ஒன்று பக்கவாட்டில் இணைக்கப்படும்போது கிடைக்கும் புதிய கனசெவ்வகத்தின் மொத்தப் பரப்பு மற்றும் பக்கப் பரப்பு ஆகியவற்றைக் காண்க."
       ]
     },
     "answerMath": {
-      "latex": "\\begin{aligned}&\\text{TSA} = 224\\,\\mathrm{cm}^{2} \\\\ &\\text{LSA} = 128\\,\\mathrm{cm}^{2}\\end{aligned}",
-      "fallback": "TSA = 224 cm²; LSA = 128 cm²",
-      "display": true
+      "en": {
+        "latex": "\\begin{aligned}&\\text{TSA} = 224\\,\\mathrm{cm}^{2} \\\\ &\\text{LSA} = 128\\,\\mathrm{cm}^{2}\\end{aligned}",
+        "fallback": "TSA = 224 cm²; LSA = 128 cm²",
+        "display": true
+      },
+      "ta": [
+        "மொத்தப்பரப்பு = ",
+        {
+          "latex": "224\\,\\mathrm{cm}^{2}",
+          "fallback": "224 cm²"
+        },
+        "; பக்கப்பரப்பு = ",
+        {
+          "latex": "128\\,\\mathrm{cm}^{2}",
+          "fallback": "128 cm²"
+        }
+      ]
     },
     "steps": [
       {
@@ -25578,17 +25663,26 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Joining three ",
             {
-              "latex": "4\\,\\mathrm{cm}",
-              "fallback": "4 cm"
+              "latex": "4",
+              "fallback": "4"
             },
-            " cubes end to end makes dimensions ",
+            " செமீ பக்கமுள்ள மூன்று கனசதுரங்களை வரிசையாக இணைத்தால் நீளம் ",
             {
-              "latex": "12 \\times 4 \\times 4\\,\\mathrm{cm}",
-              "fallback": "12×4×4 cm"
+              "latex": "12",
+              "fallback": "12"
             },
-            "."
+            " செமீ, அகலம் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " செமீ, உயரம் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " செமீ."
           ]
         }
       },
@@ -25600,7 +25694,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Compute the surface area of all six outer faces.",
-          "ta": "English explanation (Tamil version pending): Compute the surface area of all six outer faces."
+          "ta": "ஆறு வெளி முகங்களின் மொத்தப்பரப்பைக் கணக்கிடுக."
         }
       },
       {
@@ -25611,7 +25705,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Compute the area of the four lateral faces of the resulting cuboid.",
-          "ta": "English explanation (Tamil version pending): Compute the area of the four lateral faces of the resulting cuboid."
+          "ta": "புதிய கனசெவ்வகத்தின் நான்கு பக்கவாட்டு முகங்களின் பரப்பைக் கணக்கிடுக."
         }
       }
     ]
@@ -25656,40 +25750,37 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the volume of a cuboid whose dimensions are\n(i) ",
+        "கீழ்க்காணும் அளவுகளைக் கொண்ட கனசெவ்வகத்தின் கன அளவைக் காண்க.\n(i) நீளம் = ",
         {
-          "latex": "\\text{length} = 12\\,\\mathrm{cm}",
-          "fallback": "length = 12 cm"
+          "latex": "12",
+          "fallback": "12"
         },
-        ",",
-        " ",
+        " செமீ, அகலம் = ",
         {
-          "latex": "\\text{breadth} = 8\\,\\mathrm{cm}",
-          "fallback": "breadth = 8 cm"
+          "latex": "8",
+          "fallback": "8"
         },
-        ",",
-        " ",
+        " செமீ, உயரம் = ",
         {
-          "latex": "\\text{height} = 6\\,\\mathrm{cm}",
-          "fallback": "height = 6 cm"
+          "latex": "6",
+          "fallback": "6"
         },
-        "\n(ii) ",
+        " செமீ\n(ii) நீளம் = ",
         {
-          "latex": "\\text{length} = 60\\,\\mathrm{m}",
-          "fallback": "length = 60 m"
+          "latex": "60",
+          "fallback": "60"
         },
-        ",",
-        " ",
+        " மீ, அகலம் = ",
         {
-          "latex": "\\text{breadth} = 25\\,\\mathrm{m}",
-          "fallback": "breadth = 25 m"
+          "latex": "25",
+          "fallback": "25"
         },
-        ",",
-        " ",
+        " மீ, உயரம் = ",
         {
-          "latex": "\\text{height} = 1.5\\,\\mathrm{m}",
-          "fallback": "height = 1.5 m"
-        }
+          "latex": "1.5",
+          "fallback": "1.5"
+        },
+        " மீ"
       ]
     },
     "answerMath": [
@@ -25720,14 +25811,7 @@ const records=[
             },
             "."
           ],
-          "ta": [
-            "English explanation (Tamil version pending): Use volume of a cuboid as ",
-            {
-              "latex": "\\text{length} \\times \\text{breadth} \\times \\text{height}",
-              "fallback": "length × breadth × height"
-            },
-            "."
-          ]
+          "ta": "கனசெவ்வகத்தின் கன அளவு அதன் நீளம், அகலம், உயரம் ஆகிய மூன்றின் பெருக்கற்பலன்."
         }
       },
       {
@@ -25738,7 +25822,7 @@ const records=[
         },
         "reasonMath": {
           "en": "For (i), multiply the three measurements in centimetres.",
-          "ta": "English explanation (Tamil version pending): For (i), multiply the three measurements in centimetres."
+          "ta": "(i) சென்டிமீட்டரில் உள்ள மூன்று அளவுகளையும் பெருக்குக."
         }
       },
       {
@@ -25749,7 +25833,7 @@ const records=[
         },
         "reasonMath": {
           "en": "For (ii), multiply the three measurements in metres.",
-          "ta": "English explanation (Tamil version pending): For (ii), multiply the three measurements in metres."
+          "ta": "(ii) மீட்டரில் உள்ள மூன்று அளவுகளையும் பெருக்குக."
         }
       }
     ]
@@ -25781,27 +25865,27 @@ const records=[
         " such match boxes."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The dimensions of a match box are ",
+        "ஒரு தீப்பெட்டியின் அளவுகள் ",
         {
-          "latex": "6\\,\\mathrm{cm}",
-          "fallback": "6 cm"
+          "latex": "6",
+          "fallback": "6"
         },
-        " ",
+        " செமீ ",
         {
-          "latex": "\\times 3.5\\,\\mathrm{cm}",
-          "fallback": "× 3.5 cm"
+          "latex": "\\times 3.5",
+          "fallback": "× 3.5"
         },
-        " ",
+        " செமீ ",
         {
-          "latex": "\\times 2.5\\,\\mathrm{cm}",
-          "fallback": "× 2.5 cm"
+          "latex": "\\times 2.5",
+          "fallback": "× 2.5"
         },
-        ". Find the volume of a packet containing ",
+        " செமீ என உள்ளது. இதே அளவுகளை உடைய ",
         {
           "latex": "12",
           "fallback": "12"
         },
-        " such match boxes."
+        " தீப்பெட்டிகள் கொண்ட ஒரு கட்டின் கனஅளவைக் காண்க."
       ]
     },
     "answerMath": {
@@ -25817,7 +25901,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the volume of one matchbox.",
-          "ta": "English explanation (Tamil version pending): Find the volume of one matchbox."
+          "ta": "ஒரு தீப்பெட்டியின் கன அளவைக் காண்க."
         }
       },
       {
@@ -25828,7 +25912,19 @@ const records=[
         },
         "reasonMath": {
           "en": "For twelve identical matchboxes, multiply by twelve; assume tightly packed with no extra space.",
-          "ta": "English explanation (Tamil version pending): For twelve identical matchboxes, multiply by twelve; assume tightly packed with no extra space."
+          "ta": [
+            "ஒரே அளவுள்ள ",
+            {
+              "latex": "12",
+              "fallback": "12"
+            },
+            " பெட்டிகளும் இடைவெளியின்றி அடுக்கப்பட்டுள்ளதால் ஒரு பெட்டியின் கன அளவை ",
+            {
+              "latex": "12",
+              "fallback": "12"
+            },
+            " ஆல் பெருக்குக."
+          ]
         }
       },
       {
@@ -25839,7 +25935,7 @@ const records=[
         },
         "reasonMath": {
           "en": "State the total volume in cubic centimetres.",
-          "ta": "English explanation (Tamil version pending): State the total volume in cubic centimetres."
+          "ta": "மொத்தக் கன அளவைக் கன சென்டிமீட்டரில் எழுதுக."
         }
       }
     ]
@@ -25865,21 +25961,17 @@ const records=[
         ", then find its dimensions."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The length, breadth and height of a chocolate box are in the ratio ",
+        "ஒரு சாக்லேட் பெட்டியின் நீளம், அகலம் மற்றும் உயரம் முறையே ",
         {
           "latex": "5 : 4 : 3",
           "fallback": "5:4:3"
         },
-        ". If its volume is ",
+        " என்ற விகிதத்தில் உள்ளது. அதன் கன அளவு ",
         {
-          "latex": "7500\\,\\mathrm{cm}",
-          "fallback": "7500 cm"
+          "latex": "7500",
+          "fallback": "7500"
         },
-        {
-          "latex": "3",
-          "fallback": "3"
-        },
-        ", then find its dimensions."
+        " செமீ³ எனில் அதன் பக்க அளவுகளைக் காண்க."
       ]
     },
     "answerMath": {
@@ -25909,17 +26001,12 @@ const records=[
             " centimetres."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Represent the dimensions as ",
+            "நீளம், அகலம், உயரம் ஆகியவற்றை முறையே ",
             {
-              "latex": "5 x, 4 x",
-              "fallback": "5x, 4x"
+              "latex": "5 x, 4 x, 3 x",
+              "fallback": "5x, 4x, 3x"
             },
-            " and ",
-            {
-              "latex": "3 x",
-              "fallback": "3x"
-            },
-            " centimetres."
+            " செமீ எனக் கொள்க."
           ]
         }
       },
@@ -25931,7 +26018,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Substitute them into the given volume.",
-          "ta": "English explanation (Tamil version pending): Substitute them into the given volume."
+          "ta": "கொடுக்கப்பட்ட கன அளவுக்கான சமன்பாட்டில் இவற்றைப் பிரதியிடுக."
         }
       },
       {
@@ -25942,7 +26029,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Solve for the positive scale factor.",
-          "ta": "English explanation (Tamil version pending): Solve for the positive scale factor."
+          "ta": [
+            "நீளம் நேர்மறை என்பதால் ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " இன் நேர்மறை மதிப்பைக் காண்க."
+          ]
         }
       },
       {
@@ -25953,7 +26047,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find all three dimensions and check their product.",
-          "ta": "English explanation (Tamil version pending): Find all three dimensions and check their product."
+          "ta": "மூன்று அளவுகளையும் கண்டுபிடித்து அவற்றின் பெருக்கற்பலனைச் சரிபார்க்கவும்."
         }
       }
     ]
@@ -25975,23 +26069,37 @@ const records=[
         " respectively. Find the capacity of the pond in litres."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The length, breadth and depth of a pond are ",
+        "ஒரு குளத்தின் நீளம், அகலம் மற்றும் ஆழம் முறையே ",
         {
-          "latex": "20.5\\,\\mathrm{m}, 16\\,\\mathrm{m}",
-          "fallback": "20.5 m, 16 m"
+          "latex": "20.5",
+          "fallback": "20.5"
         },
-        " and ",
+        " மீ, ",
         {
-          "latex": "8\\,\\mathrm{m}",
-          "fallback": "8 m"
+          "latex": "16",
+          "fallback": "16"
         },
-        " respectively. Find the capacity of the pond in litres."
+        " மீ மற்றும் ",
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        " மீ எனில், அந்தக் குளத்தின் கொள்ளளவை லிட்டரில் காண்க."
       ]
     },
     "answerMath": {
-      "latex": "2{,}624{,}000\\,\\mathrm{litres}",
-      "fallback": "2,624,000 litres",
-      "display": true
+      "en": {
+        "latex": "2{,}624{,}000\\,\\mathrm{litres}",
+        "fallback": "2,624,000 litres",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "2{,}624{,}000",
+          "fallback": "2,624,000"
+        },
+        " லிட்டர்"
+      ]
     },
     "steps": [
       {
@@ -26002,7 +26110,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the pond's capacity as a rectangular prism in cubic metres.",
-          "ta": "English explanation (Tamil version pending): Find the pond's capacity as a rectangular prism in cubic metres."
+          "ta": "குளத்தைக் கனசெவ்வகமாகக் கொண்டு அதன் கன அளவைக் கன மீட்டரில் காண்க."
         }
       },
       {
@@ -26013,7 +26121,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Convert cubic metres to litres.",
-          "ta": "English explanation (Tamil version pending): Convert cubic metres to litres."
+          "ta": "ஒரு கன மீட்டர் எத்தனை லிட்டர் என்பதைப் பயன்படுத்துக."
         }
       },
       {
@@ -26024,7 +26132,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Multiply to obtain capacity.",
-          "ta": "English explanation (Tamil version pending): Multiply to obtain capacity."
+          "ta": [
+            "கன மீட்டரில் கிடைத்த அளவை ",
+            {
+              "latex": "1000",
+              "fallback": "1000"
+            },
+            " ஆல் பெருக்கிக் கொள்ளளவை லிட்டரில் பெறுக."
+          ]
         }
       }
     ]
@@ -26066,46 +26181,55 @@ const records=[
         " height?"
       ],
       "ta": [
-        "English-language question; Tamil version pending. The dimensions of a brick are ",
+        "ஒரு செங்கல்லின் அளவுகள் ",
         {
-          "latex": "24\\,\\mathrm{cm}",
-          "fallback": "24 cm"
+          "latex": "24",
+          "fallback": "24"
         },
-        " ",
+        " செமீ ",
         {
-          "latex": "\\times 12\\,\\mathrm{cm}",
-          "fallback": "× 12 cm"
+          "latex": "\\times 12",
+          "fallback": "× 12"
         },
-        " ",
+        " செமீ ",
         {
-          "latex": "\\times 8\\,\\mathrm{cm}",
-          "fallback": "× 8 cm"
+          "latex": "\\times 8",
+          "fallback": "× 8"
         },
-        ". How many such bricks will be required to build a wall of ",
+        " செமீ ஆகும். ",
         {
-          "latex": "20\\,\\mathrm{m}",
-          "fallback": "20 m"
+          "latex": "20",
+          "fallback": "20"
         },
-        " ",
+        " மீ நீளம், ",
         {
-          "latex": "\\text{length}, 48\\,\\mathrm{cm}",
-          "fallback": "length, 48 cm"
+          "latex": "48",
+          "fallback": "48"
         },
-        " breadth and ",
+        " செமீ அகலம் மற்றும் ",
         {
-          "latex": "6\\,\\mathrm{m}",
-          "fallback": "6 m"
+          "latex": "6",
+          "fallback": "6"
         },
-        " height?"
+        " மீ உயரமுள்ள ஒரு சுவர் எழுப்புவதற்கு இது போன்ற எத்தனை செங்கற்கள் தேவை?"
       ]
     },
-    "answerMath": [
-      {
-        "latex": "25{,}000",
-        "fallback": "25,000"
-      },
-      " bricks"
-    ],
+    "answerMath": {
+      "en": [
+        {
+          "latex": "25{,}000",
+          "fallback": "25,000"
+        },
+        " bricks"
+      ],
+      "ta": [
+        {
+          "latex": "25{,}000",
+          "fallback": "25,000"
+        },
+        " செங்கற்கள்"
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -26115,7 +26239,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Convert the wall dimensions to centimetres so the units match the brick dimensions.",
-          "ta": "English explanation (Tamil version pending): Convert the wall dimensions to centimetres so the units match the brick dimensions."
+          "ta": "செங்கல்லின் அளவுகளுடன் பொருந்துமாறு சுவரின் எல்லா அளவுகளையும் சென்டிமீட்டருக்கு மாற்றுக."
         }
       },
       {
@@ -26126,7 +26250,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Compute the wall's volume.",
-          "ta": "English explanation (Tamil version pending): Compute the wall's volume."
+          "ta": "சுவரின் கன அளவைக் கணக்கிடுக."
         }
       },
       {
@@ -26137,7 +26261,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Compute the volume of one brick.",
-          "ta": "English explanation (Tamil version pending): Compute the volume of one brick."
+          "ta": "ஒரு செங்கல்லின் கன அளவைக் கணக்கிடுக."
         }
       },
       {
@@ -26148,7 +26272,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide the wall volume by one brick volume, ignoring mortar and gaps as in the textbook model.",
-          "ta": "English explanation (Tamil version pending): Divide the wall volume by one brick volume, ignoring mortar and gaps as in the textbook model."
+          "ta": "சாந்து மற்றும் இடைவெளியைப் புறக்கணித்து சுவரின் கன அளவை ஒரு செங்கல்லின் கன அளவால் வகுக்கவும்."
         }
       }
     ]
@@ -26179,26 +26303,22 @@ const records=[
         " respectively. Find its height."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The volume of a container is ",
+        "ஒரு கொள்கலனின் (container) கன அளவு ",
         {
-          "latex": "1440\\,\\mathrm{m}",
-          "fallback": "1440 m"
+          "latex": "1440",
+          "fallback": "1440"
         },
+        " மீ³. அதன் நீளம் மற்றும் அகலம் முறையே ",
         {
-          "latex": "3",
-          "fallback": "3"
+          "latex": "15",
+          "fallback": "15"
         },
-        ". The length and breadth of the container are ",
+        " மீ மற்றும் ",
         {
-          "latex": "15\\,\\mathrm{m}",
-          "fallback": "15 m"
+          "latex": "8",
+          "fallback": "8"
         },
-        " and ",
-        {
-          "latex": "8\\,\\mathrm{m}",
-          "fallback": "8 m"
-        },
-        " respectively. Find its height."
+        " மீ எனில் அதன் உயரத்தைக் காண்க."
       ]
     },
     "answerMath": {
@@ -26214,7 +26334,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Start with the cuboid-volume formula.",
-          "ta": "English explanation (Tamil version pending): Start with the cuboid-volume formula."
+          "ta": "கனசெவ்வகத்தின் கன அளவுக்கான சூத்திரத்தை எழுதுக."
         }
       },
       {
@@ -26225,7 +26345,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Rearrange it to solve for height.",
-          "ta": "English explanation (Tamil version pending): Rearrange it to solve for height."
+          "ta": "உயரத்தைத் தனியாகப் பெற, கன அளவை நீளம் மற்றும் அகலத்தின் பெருக்கற்பலனால் வகுக்கவும்."
         }
       },
       {
@@ -26236,7 +26356,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Substitute the given values.",
-          "ta": "English explanation (Tamil version pending): Substitute the given values."
+          "ta": "கொடுக்கப்பட்ட மதிப்புகளைப் பிரதியிடுக."
         }
       }
     ]
@@ -26262,21 +26382,22 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the volume of a cube each of whose side is (i) ",
+        "பின்வரும் பக்க அளவைக் கொண்ட கனசதுரத்தின் கனஅளவைக் காண்க.\n(i) ",
         {
-          "latex": "5\\,\\mathrm{cm}",
-          "fallback": "5 cm"
+          "latex": "5",
+          "fallback": "5"
         },
-        " (ii) ",
+        " செமீ   (ii) ",
         {
-          "latex": "3.5\\,\\mathrm{m}",
-          "fallback": "3.5 m"
+          "latex": "3.5",
+          "fallback": "3.5"
         },
-        " (iii) ",
+        " மீ   (iii) ",
         {
-          "latex": "21\\,\\mathrm{cm}",
-          "fallback": "21 cm"
-        }
+          "latex": "21",
+          "fallback": "21"
+        },
+        " செமீ"
       ]
     },
     "answerMath": [
@@ -26304,7 +26425,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The volume of a cube is the cube of its side length.",
-          "ta": "English explanation (Tamil version pending): The volume of a cube is the cube of its side length."
+          "ta": "கனசதுரத்தின் கன அளவு அதன் பக்க நீளத்தின் மும்மடி."
         }
       },
       {
@@ -26322,12 +26443,12 @@ const records=[
             " centimetres."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For (i), cube ",
+            "(i) ",
             {
               "latex": "5",
               "fallback": "5"
             },
-            " centimetres."
+            " செமீ இன் மும்மடியைக் காண்க."
           ]
         }
       },
@@ -26347,12 +26468,12 @@ const records=[
             " metres."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For (ii), cube ",
+            "(ii) ",
             {
               "latex": "3.5",
               "fallback": "3.5"
             },
-            " metres."
+            " மீ இன் மும்மடியைக் காண்க."
           ]
         }
       },
@@ -26372,12 +26493,12 @@ const records=[
             " centimetres."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For (iii), cube ",
+            "(iii) ",
             {
               "latex": "21",
               "fallback": "21"
             },
-            " centimetres."
+            " செமீ இன் மும்மடியைக் காண்க."
           ]
         }
       }
@@ -26395,12 +26516,12 @@ const records=[
         " of milk. Find the length of its side in metres."
       ],
       "ta": [
-        "English-language question; Tamil version pending. A cubical milk tank can hold ",
+        "ஒரு கனசதுர வடிவிலான பால் தொட்டியானது ",
         {
-          "latex": "125000\\,\\mathrm{litres}",
-          "fallback": "125000 litres"
+          "latex": "1, 25{,}000",
+          "fallback": "1,25,000"
         },
-        " of milk. Find the length of its side in metres."
+        " லிட்டர் கொள்ளளவைக் கொண்டுள்ளது. அத்தொட்டியின் பக்க நீளத்தை மீட்டரில் காண்க."
       ]
     },
     "answerMath": {
@@ -26416,7 +26537,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Convert litres into cubic metres.",
-          "ta": "English explanation (Tamil version pending): Convert litres into cubic metres."
+          "ta": "லிட்டரில் உள்ள கொள்ளளவைக் கன மீட்டருக்கு மாற்றுக."
         }
       },
       {
@@ -26434,7 +26555,7 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For a cube of side a, the volume is ",
+            "பக்க நீளம் a உள்ள கனசதுரத்தின் கன அளவு ",
             {
               "latex": "a^{3}",
               "fallback": "a³"
@@ -26451,7 +26572,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Take the positive cube root.",
-          "ta": "English explanation (Tamil version pending): Take the positive cube root."
+          "ta": "கன அளவின் நேர்மறைக் கனமூலத்தைக் கண்டு பக்க நீளத்தைப் பெறுக."
         }
       }
     ]
@@ -26478,22 +26599,21 @@ const records=[
         " respectively then find the breadth of the cuboid."
       ],
       "ta": [
-        "English-language question; Tamil version pending. A metallic cube with side ",
         {
-          "latex": "15\\,\\mathrm{cm}",
-          "fallback": "15 cm"
+          "latex": "15",
+          "fallback": "15"
         },
-        " is melted and formed into a cuboid. If the length and height of the cuboid is ",
+        " செமீ பக்க அளவுள்ள ஓர் உலோகத்தால் ஆன கனசதுரமானது உருக்கப்பட்டு ஒரு கனசெவ்வகமாக உருவாக்கப்படுகிறது. கனசெவ்வகத்தின் நீளம் மற்றும் உயரம் முறையே ",
         {
-          "latex": "25\\,\\mathrm{cm}",
-          "fallback": "25 cm"
+          "latex": "25",
+          "fallback": "25"
         },
-        " and ",
+        " செமீ மற்றும் ",
         {
-          "latex": "9\\,\\mathrm{cm}",
-          "fallback": "9 cm"
+          "latex": "9",
+          "fallback": "9"
         },
-        " respectively then find the breadth of the cuboid."
+        " செமீ எனில் அதன் அகலத்தைக் காண்க."
       ]
     },
     "answerMath": {
@@ -26509,7 +26629,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Melting and recasting preserve volume, assuming no loss of metal.",
-          "ta": "English explanation (Tamil version pending): Melting and recasting preserve volume, assuming no loss of metal."
+          "ta": "உலோக இழப்பு இல்லாமல் உருக்கி மறுவார்ப்பு செய்வதால் கன அளவு மாறாது."
         }
       },
       {
@@ -26528,12 +26648,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Express the new cuboid's volume using unknown breadth ",
+            "புதிய கனசெவ்வகத்தின் அகலத்தை ",
             {
               "latex": "b",
               "fallback": "b"
             },
-            "."
+            " எனக் கொண்டு அதன் கன அளவை எழுதுக."
           ]
         }
       },
@@ -26553,12 +26673,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Equate volumes and solve for ",
+            "இரு கன அளவுகளையும் சமப்படுத்தி ",
             {
               "latex": "b",
               "fallback": "b"
             },
-            "."
+            " இன் மதிப்பைக் காண்க."
           ]
         }
       },
@@ -26570,7 +26690,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Verify that the new volume equals the original volume.",
-          "ta": "English explanation (Tamil version pending): Verify that the new volume equals the original volume."
+          "ta": "புதிய கன அளவும் பழைய கன அளவும் சமமா எனச் சரிபார்க்கவும்."
         }
       }
     ]
@@ -26636,60 +26756,76 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The semi-perimeter of a triangle having ",
         {
-          "latex": "\\text{sides} 15\\,\\mathrm{cm}, 20\\,\\mathrm{cm}",
-          "fallback": "sides 15 cm, 20 cm"
+          "latex": "15",
+          "fallback": "15"
         },
-        " and ",
+        " செமீ, ",
         {
-          "latex": "25\\,\\mathrm{cm}",
-          "fallback": "25 cm"
+          "latex": "20",
+          "fallback": "20"
         },
-        " is\n",
+        " செமீ மற்றும் ",
+        {
+          "latex": "25",
+          "fallback": "25"
+        },
+        " செமீ பக்க அளவுகள் கொண்ட ஒரு முக்கோணத்தின் அரைச் சுற்றளவு\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            {
-              "latex": "60\\,\\mathrm{cm}",
-              "fallback": "60 cm"
-            }
+            [
+              {
+                "latex": "60",
+                "fallback": "60"
+              },
+              " செமீ"
+            ]
           ],
-          "fallback": "(1) 60 cm"
+          "fallback": "(1) 60 செமீ"
         },
         "   ",
         {
           "questionOption": [
             "(2) ",
-            {
-              "latex": "45\\,\\mathrm{cm}",
-              "fallback": "45 cm"
-            }
+            [
+              {
+                "latex": "45",
+                "fallback": "45"
+              },
+              " செமீ"
+            ]
           ],
-          "fallback": "(2) 45 cm"
+          "fallback": "(2) 45 செமீ"
         },
         "   ",
         {
           "questionOption": [
             "(3) ",
-            {
-              "latex": "30\\,\\mathrm{cm}",
-              "fallback": "30 cm"
-            }
+            [
+              {
+                "latex": "30",
+                "fallback": "30"
+              },
+              " செமீ"
+            ]
           ],
-          "fallback": "(3) 30 cm"
+          "fallback": "(3) 30 செமீ"
         },
         "   ",
         {
           "questionOption": [
             "(4) ",
-            {
-              "latex": "15\\,\\mathrm{cm}",
-              "fallback": "15 cm"
-            }
+            [
+              {
+                "latex": "15",
+                "fallback": "15"
+              },
+              " செமீ"
+            ]
           ],
-          "fallback": "(4) 15 cm"
+          "fallback": "(4) 15 செமீ"
         }
       ]
     },
@@ -26709,7 +26845,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the lengths of the three sides.",
-          "ta": "English explanation (Tamil version pending): Add the lengths of the three sides."
+          "ta": "மூன்று பக்கங்களின் நீளங்களைக் கூட்டுக."
         }
       },
       {
@@ -26719,7 +26855,7 @@ const records=[
         },
         "reasonMath": {
           "en": "A semiperimeter is half the perimeter.",
-          "ta": "English explanation (Tamil version pending): A semiperimeter is half the perimeter."
+          "ta": "சுற்றளவில் பாதியே அரைச் சுற்றளவு."
         }
       },
       {
@@ -26734,12 +26870,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Select the listed option equal to ",
             {
-              "latex": "30\\,\\mathrm{cm}",
-              "fallback": "30 cm"
+              "latex": "30",
+              "fallback": "30"
             },
-            "."
+            " செமீ உள்ள விடையைத் தேர்ந்தெடுக்கவும்."
           ]
         }
       }
@@ -26806,60 +26941,77 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. If the sides of a triangle are ",
+        "ஒரு முக்கோணத்தின் பக்க அளவுகள் ",
         {
-          "latex": "3\\,\\mathrm{cm}, 4\\,\\mathrm{cm}",
-          "fallback": "3 cm, 4 cm"
+          "latex": "3",
+          "fallback": "3"
         },
-        " and ",
+        " செமீ, ",
         {
-          "latex": "5\\,\\mathrm{cm}",
-          "fallback": "5 cm"
+          "latex": "4",
+          "fallback": "4"
         },
-        ", then the area is\n",
+        " செமீ மற்றும் ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " செமீ எனில் அதன் பரப்பளவு\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            {
-              "latex": "3\\,\\mathrm{cm}^{2}",
-              "fallback": "3 cm²"
-            }
+            [
+              {
+                "latex": "3",
+                "fallback": "3"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(1) 3 cm²"
+          "fallback": "(1) 3 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(2) ",
-            {
-              "latex": "6\\,\\mathrm{cm}^{2}",
-              "fallback": "6 cm²"
-            }
+            [
+              {
+                "latex": "6",
+                "fallback": "6"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(2) 6 cm²"
+          "fallback": "(2) 6 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(3) ",
-            {
-              "latex": "9\\,\\mathrm{cm}^{2}",
-              "fallback": "9 cm²"
-            }
+            [
+              {
+                "latex": "9",
+                "fallback": "9"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(3) 9 cm²"
+          "fallback": "(3) 9 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(4) ",
-            {
-              "latex": "12\\,\\mathrm{cm}^{2}",
-              "fallback": "12 cm²"
-            }
+            [
+              {
+                "latex": "12",
+                "fallback": "12"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(4) 12 cm²"
+          "fallback": "(4) 12 செமீ²"
         }
       ]
     },
@@ -26878,7 +27030,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Check whether the triangle is right-angled.",
-          "ta": "English explanation (Tamil version pending): Check whether the triangle is right-angled."
+          "ta": "பிதாகரஸ் தேற்றத்தின் மறுதலையைப் பயன்படுத்தி இது செங்கோண முக்கோணமா எனச் சரிபார்க்கவும்."
         }
       },
       {
@@ -26889,7 +27041,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Multiply the perpendicular legs and halve.",
-          "ta": "English explanation (Tamil version pending): Multiply the perpendicular legs and halve."
+          "ta": "செங்குத்தான பக்கங்களின் நீளங்களைப் பெருக்கி இரண்டால் வகுக்கவும்."
         }
       },
       {
@@ -26904,12 +27056,11 @@ const records=[
             " to the options."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Match ",
             {
-              "latex": "6\\,\\mathrm{cm}^{2}",
-              "fallback": "6 cm²"
+              "latex": "6",
+              "fallback": "6"
             },
-            " to the options."
+            " செமீ² உள்ள விடையைத் தேர்ந்தெடுக்கவும்."
           ]
         }
       }
@@ -26971,55 +27122,67 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The perimeter of an equilateral triangle is ",
+        "ஒரு சமபக்க முக்கோணத்தின் சுற்றளவு ",
         {
-          "latex": "30\\,\\mathrm{cm}",
-          "fallback": "30 cm"
+          "latex": "30",
+          "fallback": "30"
         },
-        ". The area is\n",
+        " செமீ எனில், அதன் பரப்பளவு\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            {
-              "latex": "10\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-              "fallback": "10√3 cm²"
-            }
+            [
+              {
+                "latex": "10\\,\\sqrt{3}",
+                "fallback": "10√3"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(1) 10√3 cm²"
+          "fallback": "(1) 10√3 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(2) ",
-            {
-              "latex": "12\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-              "fallback": "12√3 cm²"
-            }
+            [
+              {
+                "latex": "12\\,\\sqrt{3}",
+                "fallback": "12√3"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(2) 12√3 cm²"
+          "fallback": "(2) 12√3 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(3) ",
-            {
-              "latex": "15\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-              "fallback": "15√3 cm²"
-            }
+            [
+              {
+                "latex": "15\\,\\sqrt{3}",
+                "fallback": "15√3"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(3) 15√3 cm²"
+          "fallback": "(3) 15√3 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(4) ",
-            {
-              "latex": "25\\,\\sqrt{3}\\,\\mathrm{cm}^{2}",
-              "fallback": "25√3 cm²"
-            }
+            [
+              {
+                "latex": "25\\,\\sqrt{3}",
+                "fallback": "25√3"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(4) 25√3 cm²"
+          "fallback": "(4) 25√3 செமீ²"
         }
       ]
     },
@@ -27038,7 +27201,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide the perimeter by three to find the side.",
-          "ta": "English explanation (Tamil version pending): Divide the perimeter by three to find the side."
+          "ta": "சுற்றளவை மூன்றால் வகுத்து ஒரு பக்கத்தின் நீளத்தைக் காண்க."
         }
       },
       {
@@ -27048,7 +27211,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use the area formula for an equilateral triangle.",
-          "ta": "English explanation (Tamil version pending): Use the area formula for an equilateral triangle."
+          "ta": "சமபக்க முக்கோணத்தின் பரப்பளவுக்கான சூத்திரத்தைப் பயன்படுத்துக."
         }
       },
       {
@@ -27061,7 +27224,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Substitute the side length and match the answer.",
-          "ta": "English explanation (Tamil version pending): Substitute the side length and match the answer."
+          "ta": "பக்க நீளத்தைப் பிரதியிட்டுப் பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -27122,55 +27285,66 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The lateral surface area of a cube of side ",
         {
-          "latex": "12\\,\\mathrm{cm}",
-          "fallback": "12 cm"
+          "latex": "12",
+          "fallback": "12"
         },
-        " is\n",
+        " செமீ பக்க அளவுள்ள ஒரு கனசதுரத்தின் பக்கப்பரப்பு\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            {
-              "latex": "144\\,\\mathrm{cm}^{2}",
-              "fallback": "144 cm²"
-            }
+            [
+              {
+                "latex": "144",
+                "fallback": "144"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(1) 144 cm²"
+          "fallback": "(1) 144 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(2) ",
-            {
-              "latex": "196\\,\\mathrm{cm}^{2}",
-              "fallback": "196 cm²"
-            }
+            [
+              {
+                "latex": "196",
+                "fallback": "196"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(2) 196 cm²"
+          "fallback": "(2) 196 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(3) ",
-            {
-              "latex": "576\\,\\mathrm{cm}^{2}",
-              "fallback": "576 cm²"
-            }
+            [
+              {
+                "latex": "576",
+                "fallback": "576"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(3) 576 cm²"
+          "fallback": "(3) 576 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(4) ",
-            {
-              "latex": "664\\,\\mathrm{cm}^{2}",
-              "fallback": "664 cm²"
-            }
+            [
+              {
+                "latex": "664",
+                "fallback": "664"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(4) 664 cm²"
+          "fallback": "(4) 664 செமீ²"
         }
       ]
     },
@@ -27189,7 +27363,7 @@ const records=[
         },
         "reasonMath": {
           "en": "A cube has four lateral square faces.",
-          "ta": "English explanation (Tamil version pending): A cube has four lateral square faces."
+          "ta": "கனசதுரத்திற்கு நான்கு சதுரப் பக்கவாட்டு முகங்கள் உள்ளன."
         }
       },
       {
@@ -27208,12 +27382,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Substitute ",
+            "பக்க நீளம் ",
             {
-              "latex": "a = 12\\,\\mathrm{cm}",
-              "fallback": "a=12 cm"
+              "latex": "a = 12",
+              "fallback": "a = 12"
             },
-            "."
+            " செமீ எனப் பிரதியிடுக."
           ]
         }
       },
@@ -27221,7 +27395,7 @@ const records=[
         "math": "Correct option (3)",
         "reasonMath": {
           "en": "Choose the matching option.",
-          "ta": "English explanation (Tamil version pending): Choose the matching option."
+          "ta": "கிடைத்த பரப்புடன் பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -27282,55 +27456,67 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. If the lateral surface area of a cube is ",
+        "ஒரு கனசதுரத்தின் பக்கப்பரப்பு ",
         {
-          "latex": "600\\,\\mathrm{cm}^{2}",
-          "fallback": "600 cm²"
+          "latex": "600",
+          "fallback": "600"
         },
-        ", then the total surface area is\n",
+        " செமீ² எனில், அதன் மொத்தப்பரப்பு\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            {
-              "latex": "150\\,\\mathrm{cm}^{2}",
-              "fallback": "150 cm²"
-            }
+            [
+              {
+                "latex": "150",
+                "fallback": "150"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(1) 150 cm²"
+          "fallback": "(1) 150 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(2) ",
-            {
-              "latex": "400\\,\\mathrm{cm}^{2}",
-              "fallback": "400 cm²"
-            }
+            [
+              {
+                "latex": "400",
+                "fallback": "400"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(2) 400 cm²"
+          "fallback": "(2) 400 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(3) ",
-            {
-              "latex": "900\\,\\mathrm{cm}^{2}",
-              "fallback": "900 cm²"
-            }
+            [
+              {
+                "latex": "900",
+                "fallback": "900"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(3) 900 cm²"
+          "fallback": "(3) 900 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(4) ",
-            {
-              "latex": "1350\\,\\mathrm{cm}^{2}",
-              "fallback": "1350 cm²"
-            }
+            [
+              {
+                "latex": "1350",
+                "fallback": "1350"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(4) 1350 cm²"
+          "fallback": "(4) 1350 செமீ²"
         }
       ]
     },
@@ -27350,7 +27536,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide the lateral area by four to get one face area.",
-          "ta": "English explanation (Tamil version pending): Divide the lateral area by four to get one face area."
+          "ta": "பக்கப்பரப்பை நான்கால் வகுத்து ஒரு முகத்தின் பரப்பைப் பெறுக."
         }
       },
       {
@@ -27361,7 +27547,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The total surface area covers six faces.",
-          "ta": "English explanation (Tamil version pending): The total surface area covers six faces."
+          "ta": "மொத்தப்பரப்பு ஆறு முகங்களின் பரப்புகளின் கூடுதல்."
         }
       },
       {
@@ -27376,12 +27562,11 @@ const records=[
             " option."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Select the ",
             {
-              "latex": "900\\,\\mathrm{cm}^{2}",
-              "fallback": "900 cm²"
+              "latex": "900",
+              "fallback": "900"
             },
-            " option."
+            " செமீ² உள்ள விடையைத் தேர்ந்தெடுக்கவும்."
           ]
         }
       }
@@ -27453,65 +27638,76 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The total surface area of a cuboid with dimension ",
         {
-          "latex": "10\\,\\mathrm{cm}",
-          "fallback": "10 cm"
+          "latex": "10",
+          "fallback": "10"
         },
-        " ",
+        " செமீ ",
         {
-          "latex": "\\times 6\\,\\mathrm{cm}",
-          "fallback": "× 6 cm"
+          "latex": "\\times 6",
+          "fallback": "× 6"
         },
-        " ",
+        " செமீ ",
         {
-          "latex": "\\times 5\\,\\mathrm{cm}",
-          "fallback": "× 5 cm"
+          "latex": "\\times 5",
+          "fallback": "× 5"
         },
-        " is\n",
+        " செமீ அளவுள்ள ஒரு கனசெவ்வகப் பெட்டியின் மொத்தப்பரப்பு\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            {
-              "latex": "280\\,\\mathrm{cm}^{2}",
-              "fallback": "280 cm²"
-            }
+            [
+              {
+                "latex": "280",
+                "fallback": "280"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(1) 280 cm²"
+          "fallback": "(1) 280 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(2) ",
-            {
-              "latex": "300\\,\\mathrm{cm}^{2}",
-              "fallback": "300 cm²"
-            }
+            [
+              {
+                "latex": "300",
+                "fallback": "300"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(2) 300 cm²"
+          "fallback": "(2) 300 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(3) ",
-            {
-              "latex": "360\\,\\mathrm{cm}^{2}",
-              "fallback": "360 cm²"
-            }
+            [
+              {
+                "latex": "360",
+                "fallback": "360"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(3) 360 cm²"
+          "fallback": "(3) 360 செமீ²"
         },
         "   ",
         {
           "questionOption": [
             "(4) ",
-            {
-              "latex": "600\\,\\mathrm{cm}^{2}",
-              "fallback": "600 cm²"
-            }
+            [
+              {
+                "latex": "600",
+                "fallback": "600"
+              },
+              " செமீ²"
+            ]
           ],
-          "fallback": "(4) 600 cm²"
+          "fallback": "(4) 600 செமீ²"
         }
       ]
     },
@@ -27531,7 +27727,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use total surface area of a cuboid.",
-          "ta": "English explanation (Tamil version pending): Use total surface area of a cuboid."
+          "ta": "கனசெவ்வகத்தின் மொத்தப்பரப்புக்கான சூத்திரத்தை எழுதுக."
         }
       },
       {
@@ -27560,22 +27756,22 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Substitute ",
+            "நீளம் ",
             {
-              "latex": "l = 10",
-              "fallback": "l=10"
+              "latex": "10",
+              "fallback": "10"
             },
-            ",",
+            " செமீ, அகலம் ",
             {
-              "latex": "b = 6",
-              "fallback": "b=6"
+              "latex": "6",
+              "fallback": "6"
             },
-            ",",
+            " செமீ, உயரம் ",
             {
-              "latex": "h = 5",
-              "fallback": "h=5"
+              "latex": "5",
+              "fallback": "5"
             },
-            "."
+            " செமீ எனப் பிரதியிடுக."
           ]
         }
       },
@@ -27583,7 +27779,7 @@ const records=[
         "math": "Correct option (1)",
         "reasonMath": {
           "en": "Choose the matching option.",
-          "ta": "English explanation (Tamil version pending): Choose the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -27644,12 +27840,12 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. If the ratio of the sides of two cubes are ",
+        "இரு கனசதுரங்களின் பக்கங்களின் விகிதமானது ",
         {
           "latex": "2 : 3",
           "fallback": "2:3"
         },
-        ", then ratio of their surface areas will be\n",
+        " எனில் அதன் புறப்பரப்புகளின் விகிதங்கள்\n",
         "",
         {
           "questionOption": [
@@ -27718,7 +27914,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Cube surface area is proportional to the square of side length.",
-          "ta": "English explanation (Tamil version pending): Cube surface area is proportional to the square of side length."
+          "ta": "கனசதுரத்தின் புறப்பரப்பு அதன் பக்க நீளத்தின் வர்க்கத்திற்கு நேர்விகிதத்தில் உள்ளது."
         }
       },
       {
@@ -27736,12 +27932,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Square each term of the side ratio ",
+            "பக்க நீளங்களின் விகிதமான ",
             {
               "latex": "2 : 3",
               "fallback": "2:3"
             },
-            "."
+            " இன் ஒவ்வோர் உறுப்பையும் வர்க்கப்படுத்துக."
           ]
         }
       },
@@ -27749,7 +27945,7 @@ const records=[
         "math": "Correct option (2)",
         "reasonMath": {
           "en": "Match the resulting ratio to the choices.",
-          "ta": "English explanation (Tamil version pending): Match the resulting ratio to the choices."
+          "ta": "கிடைத்த விகிதத்துடன் பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -27815,60 +28011,72 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The volume of a cuboid is ",
+        "ஒரு கனசெவ்வகத்தின் கன அளவு ",
         {
-          "latex": "660\\,\\mathrm{cm}^{3}",
-          "fallback": "660 cm³"
+          "latex": "660",
+          "fallback": "660"
         },
-        " and the area of the base is ",
+        " செமீ³ மற்றும் அதன் அடிப்பரப்பு ",
         {
-          "latex": "33\\,\\mathrm{cm}^{2}",
-          "fallback": "33 cm²"
+          "latex": "33",
+          "fallback": "33"
         },
-        ". Its height is\n",
+        " செமீ² எனில் அதன் உயரம்\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            {
-              "latex": "10\\,\\mathrm{cm}",
-              "fallback": "10 cm"
-            }
+            [
+              {
+                "latex": "10",
+                "fallback": "10"
+              },
+              " செமீ"
+            ]
           ],
-          "fallback": "(1) 10 cm"
+          "fallback": "(1) 10 செமீ"
         },
         "   ",
         {
           "questionOption": [
             "(2) ",
-            {
-              "latex": "12\\,\\mathrm{cm}",
-              "fallback": "12 cm"
-            }
+            [
+              {
+                "latex": "12",
+                "fallback": "12"
+              },
+              " செமீ"
+            ]
           ],
-          "fallback": "(2) 12 cm"
+          "fallback": "(2) 12 செமீ"
         },
         "   ",
         {
           "questionOption": [
             "(3) ",
-            {
-              "latex": "20\\,\\mathrm{cm}",
-              "fallback": "20 cm"
-            }
+            [
+              {
+                "latex": "20",
+                "fallback": "20"
+              },
+              " செமீ"
+            ]
           ],
-          "fallback": "(3) 20 cm"
+          "fallback": "(3) 20 செமீ"
         },
         "   ",
         {
           "questionOption": [
             "(4) ",
-            {
-              "latex": "22\\,\\mathrm{cm}",
-              "fallback": "22 cm"
-            }
+            [
+              {
+                "latex": "22",
+                "fallback": "22"
+              },
+              " செமீ"
+            ]
           ],
-          "fallback": "(4) 22 cm"
+          "fallback": "(4) 22 செமீ"
         }
       ]
     },
@@ -27887,7 +28095,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Volume equals base area times height.",
-          "ta": "English explanation (Tamil version pending): Volume equals base area times height."
+          "ta": "கன அளவு என்பது அடிப்பரப்பையும் உயரத்தையும் பெருக்கினால் கிடைப்பது."
         }
       },
       {
@@ -27898,7 +28106,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide the given volume by base area.",
-          "ta": "English explanation (Tamil version pending): Divide the given volume by base area."
+          "ta": "கொடுக்கப்பட்ட கன அளவை அடிப்பரப்பால் வகுக்கவும்."
         }
       },
       {
@@ -27913,12 +28121,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Choose the answer matching ",
             {
-              "latex": "20\\,\\mathrm{cm}",
-              "fallback": "20 cm"
+              "latex": "20",
+              "fallback": "20"
             },
-            "."
+            " செமீ உள்ள விடையைத் தேர்ந்தெடுக்கவும்."
           ]
         }
       }
@@ -27990,75 +28197,96 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The capacity of a water tank of dimensions ",
         {
-          "latex": "10\\,\\mathrm{m}",
-          "fallback": "10 m"
+          "latex": "10",
+          "fallback": "10"
         },
-        " ",
+        " மீ ",
         {
-          "latex": "\\times 5\\,\\mathrm{m}",
-          "fallback": "× 5 m"
+          "latex": "\\times 5",
+          "fallback": "× 5"
         },
-        " ",
+        " மீ ",
         {
-          "latex": "\\times 1.5\\,\\mathrm{m}",
-          "fallback": "× 1.5 m"
+          "latex": "\\times 1.5",
+          "fallback": "× 1.5"
         },
-        " is\n",
+        " மீ அளவுள்ள ஒரு நீர்த் தொட்டியின் கொள்ளளவு\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            {
-              "latex": "75\\,\\mathrm{litres}",
-              "fallback": "75 litres"
-            }
+            [
+              {
+                "latex": "75",
+                "fallback": "75"
+              },
+              " லிட்டர்"
+            ]
           ],
-          "fallback": "(1) 75 litres"
+          "fallback": "(1) 75 லிட்டர்"
         },
         "   ",
         {
           "questionOption": [
             "(2) ",
-            {
-              "latex": "750\\,\\mathrm{litres}",
-              "fallback": "750 litres"
-            }
+            [
+              {
+                "latex": "750",
+                "fallback": "750"
+              },
+              " லிட்டர்"
+            ]
           ],
-          "fallback": "(2) 750 litres"
+          "fallback": "(2) 750 லிட்டர்"
         },
         "   ",
         {
           "questionOption": [
             "(3) ",
-            {
-              "latex": "7500\\,\\mathrm{litres}",
-              "fallback": "7500 litres"
-            }
+            [
+              {
+                "latex": "7500",
+                "fallback": "7500"
+              },
+              " லிட்டர்"
+            ]
           ],
-          "fallback": "(3) 7500 litres"
+          "fallback": "(3) 7500 லிட்டர்"
         },
         "   ",
         {
           "questionOption": [
             "(4) ",
-            {
-              "latex": "75000\\,\\mathrm{litres}",
-              "fallback": "75000 litres"
-            }
+            [
+              {
+                "latex": "75000",
+                "fallback": "75000"
+              },
+              " லிட்டர்"
+            ]
           ],
-          "fallback": "(4) 75000 litres"
+          "fallback": "(4) 75000 லிட்டர்"
         }
       ]
     },
-    "answerMath": [
-      "(4) ",
-      {
-        "latex": "75000\\,\\mathrm{litres}",
-        "fallback": "75000 litres"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        "(4) ",
+        {
+          "latex": "75000\\,\\mathrm{litres}",
+          "fallback": "75000 litres"
+        }
+      ],
+      "ta": [
+        "(4) ",
+        {
+          "latex": "75000",
+          "fallback": "75000"
+        },
+        " லிட்டர்"
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -28068,7 +28296,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Calculate cuboidal volume in cubic metres.",
-          "ta": "English explanation (Tamil version pending): Calculate cuboidal volume in cubic metres."
+          "ta": "கனசெவ்வக வடிவத் தொட்டியின் கன அளவைக் கன மீட்டரில் கணக்கிடுக."
         }
       },
       {
@@ -28079,14 +28307,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Convert cubic metres into litres.",
-          "ta": "English explanation (Tamil version pending): Convert cubic metres into litres."
+          "ta": "கன மீட்டரிலிருந்து லிட்டருக்கு மாற்றுக."
         }
       },
       {
         "math": "Correct option (4)",
         "reasonMath": {
           "en": "Choose the correct litre capacity.",
-          "ta": "English explanation (Tamil version pending): Choose the correct litre capacity."
+          "ta": "கிடைத்த கொள்ளளவுடன் பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -28172,37 +28400,36 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The number of bricks each measuring ",
         {
-          "latex": "50\\,\\mathrm{cm}",
-          "fallback": "50 cm"
+          "latex": "5",
+          "fallback": "5"
         },
-        " ",
+        " மீ ",
         {
-          "latex": "\\times 30\\,\\mathrm{cm}",
-          "fallback": "× 30 cm"
+          "latex": "\\times 3",
+          "fallback": "× 3"
         },
-        " ",
+        " மீ ",
         {
-          "latex": "\\times 20\\,\\mathrm{cm}",
-          "fallback": "× 20 cm"
+          "latex": "\\times 2",
+          "fallback": "× 2"
         },
-        " that will be required to build a wall whose dimensions are ",
+        " மீ அளவுள்ள ஒரு சுவர் எழுப்ப, ",
         {
-          "latex": "5\\,\\mathrm{m}",
-          "fallback": "5 m"
+          "latex": "50",
+          "fallback": "50"
         },
-        " ",
+        " செமீ ",
         {
-          "latex": "\\times 3\\,\\mathrm{m}",
-          "fallback": "× 3 m"
+          "latex": "\\times 30",
+          "fallback": "× 30"
         },
-        " ",
+        " செமீ ",
         {
-          "latex": "\\times 2\\,\\mathrm{m}",
-          "fallback": "× 2 m"
+          "latex": "\\times 20",
+          "fallback": "× 20"
         },
-        " is\n",
+        " செமீ அளவு கொண்ட செங்கற்கள் எத்தனை தேவை?\n",
         "",
         {
           "questionOption": [
@@ -28265,7 +28492,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Convert brick dimensions to metres.",
-          "ta": "English explanation (Tamil version pending): Convert brick dimensions to metres."
+          "ta": "செங்கல்லின் அளவுகளை மீட்டருக்கு மாற்றுக."
         }
       },
       {
@@ -28276,7 +28503,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Calculate brick and wall volumes.",
-          "ta": "English explanation (Tamil version pending): Calculate brick and wall volumes."
+          "ta": "ஒரு செங்கல்லின் கன அளவையும் சுவரின் கன அளவையும் கணக்கிடுக."
         }
       },
       {
@@ -28290,7 +28517,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Divide wall volume by brick volume, ignoring mortar as the textbook does.",
-          "ta": "English explanation (Tamil version pending): Divide wall volume by brick volume, ignoring mortar as the textbook does."
+          "ta": "சாந்தின் அளவைப் புறக்கணித்து சுவரின் கன அளவை ஒரு செங்கல்லின் கன அளவால் வகுக்கவும்."
         }
       }
     ]
