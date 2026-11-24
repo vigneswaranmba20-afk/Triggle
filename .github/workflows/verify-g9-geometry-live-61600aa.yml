@@ -1,0 +1,88 @@
+name: Verify published Grade 9 Geometry Tamil (read only)
+on:
+  push:
+    branches: [verify/g9-geometry-live-61600aa]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 61600aa96a662fdc02029cd56295baeb5f02b87f
+      - name: Compare five public release files byte for byte
+        shell: bash
+        run: |
+          set -euo pipefail
+          base=https://vigneswaranmba20-afk.github.io/Triggle/site
+          for file in assets/app.js data/g9-clear-math.js data/textbook-exercises/g9-ch4-ex4-1-q2-q4-en.js data/textbook-exercises/g9-ch4-ex4-2-en.js data/textbook-exercises/g9-ch4-ex4-3-en.js; do
+            curl --retry 2 -fsSL -H 'Cache-Control: no-cache' "$base/$file?verify=61600aa" -o /tmp/triggle-live-file
+            cmp "site/$file" /tmp/triggle-live-file
+            echo "PUBLIC EXACT MATCH: $file"
+            sha256sum "site/$file" /tmp/triggle-live-file
+          done
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify all 66 public reader views against merged reviewed records
+        env:
+          TRIGGLE_LIVE_BASE: https://vigneswaranmba20-afk.github.io/Triggle/site
+        run: node site/tools/test_g9_geometry_tamil_browser.cjs
+      - name: Inspect individual live Tamil question and question-specific figure
+        shell: bash
+        run: |
+          node <<'JS'
+          const assert = require('node:assert/strict');
+          const {chromium}=require('playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+            try{
+              const ctx=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,serviceWorkers:'block'});
+              const page=await ctx.newPage();
+              const base='https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=';
+              async function open(id){
+                const response=await page.goto(base+id,{waitUntil:'domcontentloaded'});
+                assert(response.ok());
+                await page.locator('#stepsList .final-answer-value').waitFor();
+                await page.locator('#langTa').tap();
+                await page.waitForFunction(()=>document.documentElement.lang==='ta');
+                assert.equal(new URL(page.url()).searchParams.get('question'),id);
+              }
+              await open('g9-ch4-ex4.1-q2');
+              const prompt=await page.locator('#questionText').innerText();
+              const reasons=await page.locator('#stepsList .step-reason').allTextContents();
+              const answer=await page.locator('#stepsList .final-answer-value').innerText();
+              assert(/[\u0B80-\u0BFF]/u.test(prompt));
+              assert(reasons.length && reasons.every(t=>/[\u0B80-\u0BFF]/u.test(t)));
+              console.log('PUBLIC TAMIL Q2',JSON.stringify({url:page.url(),prompt,reasons,answer}));
+              let verified=false;
+              for(const id of ['g9-ch4-ex4.3-q1','g9-ch4-ex4.2-q3','g9-ch4-ex4.3-q6','g9-ch4-ex4.2-q4']){
+                await open(id);
+                const button=page.locator('#figureBtn');
+                const inline=page.locator('#inlineFigureOpen');
+                if(await button.isVisible()) await button.tap();
+                else if(await inline.isVisible()) await inline.tap();
+                else continue;
+                const dialog=page.locator('#figureDialog');
+                await dialog.waitFor({state:'visible'});
+                const graphic=await page.locator('#diagramContent').evaluate(el=>({
+                  text:el.innerText,svg:[...el.querySelectorAll('svg')].map(s=>({viewBox:s.getAttribute('viewBox'),text:s.textContent,width:s.getBoundingClientRect().width})),
+                  images:[...el.querySelectorAll('img')].map(i=>({src:i.getAttribute('src'),alt:i.alt,loaded:i.complete&&i.naturalWidth>0}))
+                }));
+                assert(graphic.svg.some(s=>s.width>0)||graphic.images.some(i=>i.loaded),'Visible figure');
+                console.log('PUBLIC FIGURE',JSON.stringify({id,url:page.url(),graphic}));
+                await page.locator('#closeDiagram').tap();
+                await dialog.waitFor({state:'hidden'});
+                console.log('PUBLIC FIGURE CLOSE PASS',id);
+                verified=true;break;
+              }
+              assert(verified,'No repaired question-specific figure found');
+            }finally{await browser.close();}
+          })().catch(e=>{console.error(e);process.exitCode=1});
+          JS
