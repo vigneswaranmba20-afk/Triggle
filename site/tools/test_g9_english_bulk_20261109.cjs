@@ -48,3 +48,23 @@ for(const t of [-5,9])eq((t-1)**2+(t-3)**2,100);
 for(const [x,y] of [[0,9],[4,25],[-2,1]])eq((x-3)**2+(y-4)**2,(x+5)**2+(y-6)**2);
 for(const [x,y] of [[1,2],[3,-4],[5,-6]])eq((11-x)**2+(2-y)**2,100);
 console.log('PASS: 23 registered Grade 9 English questions, 6 modules, 60-exercise source index, unique IDs, mathematical invariants and offline/page load references');
+
+// AUD12-02: check actual coordinates, not just the presence of a diagram.
+{
+ const paths=["assets/grade9-ch4/ex4-1-q4.svg","assets/grade9-ch4/ex4-2-q3.svg","assets/grade9-ch4/ex4-2-q4.svg","assets/grade9-ch4/ex4-2-q6.svg","assets/grade9-ch4/ex4-3-q1.svg","assets/grade9-ch4/ex4-3-q2.svg","assets/grade9-ch4/ex4-3-q4.svg","assets/grade9-ch4/ex4-3-q6.svg"];
+ const figs=paths.map(f=>fs.readFileSync(path.join(root,f),'utf8'));
+ const near=(a,b)=>assert.ok(Math.abs(a-b)<0.01,a+' != '+b);
+ const pts=s=>s.match(/<polygon points="([^"]+)"/)[1].split(' ').map(p=>p.split(',').map(Number));
+ const angle=(h,w)=>Math.atan2(h,w)*180/Math.PI;
+ const [a,b,c]=pts(figs[0]);near(angle(b[1]-a[1],a[0]-b[0]),60);near(angle(c[1]-a[1],c[0]-a[0]),70);
+ const rc=figs[1].match(/<rect x="([\d.]+)" y="([\d.]+)" width="([\d.]+)" height="([\d.]+)"/).slice(1).map(Number);near(angle(rc[3],rc[2]),46);
+ const [u,v,w,z]=pts(figs[2]);near((v[0]-z[0])/(w[1]-u[1]),16/12);
+ assert.match(figs[3],/M174 164 H182 V172/);
+ for(const [i,R,h,half] of [[4,26,24,10],[5,17,8,15],[6,15,12,9]]){
+  const m=figs[i].match(/<line x1="([\d.]+)" y1="([\d.]+)" x2="([\d.]+)" y2="([\d.]+)"/).slice(1).map(Number);
+  near(m[1],m[3]);near(Math.hypot(m[0]-160,m[1]-103),78);near(Math.hypot(m[2]-160,m[3]-103),78);near((m[2]-m[0])/2,78*half/R);near(m[1]-103,78*h/R);assert.match(figs[i],/>M<\/text>/);assert.match(figs[i],/<path d="M160 /);
+ }
+ assert.match(figs[7],/M174 102 H166 V110/);near(Math.hypot(56,42),70);
+ for(const f of paths)assert.ok(sw.includes("'./"+f+"'"),f+' missing offline');
+ console.log('PASS: AUD12-02 geometry proportions and offline invariants');
+}
