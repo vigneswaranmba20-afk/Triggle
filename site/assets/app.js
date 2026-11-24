@@ -34,6 +34,16 @@
  let lang='en';try{const saved=localStorage.getItem('triggle-language');if(saved==='ta'||saved==='"ta"')lang='ta'}catch{}
  const url=new URL(location.href);
  if(restrictedRoute(url.searchParams)){history.replaceState(null,'',location.pathname);url.search='';}
+ // AUD25-02: preserve old bookmarks but open the matching 2025 textbook card.
+ const legacyTrigQuestionIds=new Map([["c10-6-6-1-1","c10-6-ex6-1-q1-i"],["c10-6-6-1-2","c10-6-ex6-1-q1-ii"],["c10-6-6-1-3","c10-6-ex6-1-q2-ii"],["c10-6-6-2-4","c10-6-ex6-2-q1"],["c10-6-6-2-5","c10-6-ex6-2-q2"],["c10-6-6-2-6","c10-6-ex6-2-q3"],["c10-6-6-3-7","c10-6-ex6-3-q1"],["c10-6-6-3-8","c10-6-ex6-3-q2"],["c10-6-6-3-9","c10-6-ex6-3-q4"],["c10-6-6-4-10","c10-6-ex6-4-q1"],["c10-6-6-4-11","c10-6-ex6-4-q2"],["c10-6-6-4-12","c10-6-ex6-4-q4"],["c10-6-6-5-13","c10-6-ex6-5-q1"],["c10-6-6-5-14","c10-6-ex6-5-q2"],["c10-6-6-5-15","c10-6-ex6-5-q6"],["c10-6-6-5-16","c10-6-ex6-5-q7"],["c10-6-6-unit-17","c10-6-unit-q1-ii"]]);
+ function canonicalizeTrigRoute(params){
+   if(Number(params.get('class'))!==10)return false;
+   const target=legacyTrigQuestionIds.get(params.get('question'));
+   if(!target||!classes[10]?.items.some(item=>item.id===target))return false;
+   params.set('question',target);
+   return true;
+ }
+ canonicalizeTrigRoute(url.searchParams);
  const requested=Number(url.searchParams.get('class'));
  let grade=publicGrade(requested)&&classes[requested]?requested:9;
  let current=classes[grade].items.find(x=>x.id===url.searchParams.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];
@@ -801,6 +811,6 @@
   if(e.target.matches('input,textarea,select,button')||e.target.closest('.triggle-tex[tabindex="0"]')||$('figureDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
   if(e.key==='ArrowRight'){e.preventDefault();navMove(1)}else if(e.key==='ArrowLeft'){e.preventDefault();navMove(-1)}
  });
- window.addEventListener('popstate',()=>{let p=new URL(location.href).searchParams;if(restrictedRoute(p)){history.replaceState(null,'',location.pathname);p=new URL(location.href).searchParams;}const g=Number(p.get('class'));grade=publicGrade(g)&&classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});
+ window.addEventListener('popstate',()=>{let p=new URL(location.href).searchParams;if(restrictedRoute(p)){history.replaceState(null,'',location.pathname);p=new URL(location.href).searchParams;}if(canonicalizeTrigRoute(p)){const redirected=new URL(location.href);redirected.search=p.toString();history.replaceState(history.state,'',redirected.pathname+redirected.search+redirected.hash);}const g=Number(p.get('class'));grade=publicGrade(g)&&classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});
  mobile.addEventListener('change',syncDrawer);remember();updateUrl(true);render();
 })();
