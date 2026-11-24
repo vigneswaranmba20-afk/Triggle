@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Shaded right triangle ABD inside triangle ABC (Fig. 7.8) for Exercise 7.1 Q6</title>
+  <desc id="desc">Outer triangle ABC with BC = 42 cm and CA = 34 cm, containing shaded right triangle ABD with AD = 12 cm, BD = 16 cm, right angle at D, and dashed side AB.</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <polygon points="62,178 134,54 274,178" fill="#E6EFEA" fill-opacity="0.35" stroke="#181B20" stroke-width="2.4" stroke-linejoin="round"/>
+  <polygon points="62,178 134,54 156,144" fill="#166353" fill-opacity="0.28" stroke="#166353" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="62" y1="178" x2="134" y2="54" stroke="#6E2933" stroke-width="2" stroke-dasharray="4 3"/>
+  <path d="M148.5,134.8 L142.3,124.2 L152.9,118.0" fill="none" stroke="#181B20" stroke-width="1.4"/>
+  <circle cx="62" cy="178" r="3" fill="#181B20"/>
+  <circle cx="134" cy="54" r="3" fill="#181B20"/>
+  <circle cx="274" cy="178" r="3" fill="#181B20"/>
+  <circle cx="156" cy="144" r="3" fill="#166353"/>
+  <text x="50" y="182" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="end" fill="#181B20">B</text>
+  <text x="134" y="42" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">A</text>
+  <text x="284" y="182" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="start" fill="#181B20">C</text>
+  <text x="166" y="142" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="start" fill="#166353">D</text>
+  <text x="168" y="196" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">BC = 42 cm</text>
+  <text x="220" y="106" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#181B20">CA = 34 cm</text>
+  <text x="155" y="96" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#166353">12 cm</text>
+  <text x="114" y="170" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#166353">16 cm</text>
+  <text x="86" y="108" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="end" fill="#6E2933">AB = ?</text>
+</svg>

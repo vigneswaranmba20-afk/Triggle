@@ -880,28 +880,29 @@
         const correct=new Set();
         const update=()=>{status.textContent=t.progress+': '+correct.size+' / '+stages.length;};
         stages.forEach((stage,index)=>{
+          const qItem=stage.quiz||stage;
           const article=document.createElement('article');article.className='hub-quiz-question';
-          const h=document.createElement('h4');h.innerHTML=e((index+1)+'. ')+chapterTypeset(text(stage.question));article.append(h);
-          if(stage.questionMath)h.insertAdjacentHTML('afterend',displayMath(stage.questionMath));
+          const h=document.createElement('h4');h.innerHTML=e((index+1)+'. ')+chapterTypeset(text(qItem.question));article.append(h);
+          if(qItem.questionMath)h.insertAdjacentHTML('afterend',displayMath(qItem.questionMath));
           const answers=document.createElement('div');answers.className='hub-quiz-answers';answers.setAttribute('role','group');
-          answers.setAttribute('aria-label',text(stage.question));
+          answers.setAttribute('aria-label',text(qItem.question));
           const feedback=document.createElement('p');feedback.setAttribute('aria-live','polite');feedback.className='hub-quiz-feedback';
-          const worked=document.createElement('div');worked.hidden=Boolean(stage.explainAfterAttempt);
-          worked.innerHTML='<p>'+chapterTypeset(text(stage.why))+'</p>'+(stage.whyMath?displayMath(stage.whyMath):'');
+          const worked=document.createElement('div');worked.hidden=true;
+          worked.innerHTML='<p>'+chapterTypeset(text(qItem.why))+'</p>'+(qItem.whyMath?displayMath(qItem.whyMath):'');
           let wrongAttempts=0;
-          stage.choices.forEach((choice,i)=>{
+          qItem.choices.forEach((choice,i)=>{
             const button=document.createElement('button');button.type='button';button.innerHTML=chapterTypeset(text(choice));if(grade===9)button.setAttribute('aria-label',text(choice));
             button.addEventListener('click',()=>{
               answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
               worked.hidden=false;
-              const right=i===stage.correct;
+              const right=i===qItem.correct;
               if(right){feedback.textContent=t.correct;correct.add(stage.id);update();}
-              else{wrongAttempts++;const clue=stage.incorrectFeedback?.[i]?text(stage.incorrectFeedback[i]):wrongAttempts===2?text(stage.hint):wrongAttempts>=3?text(stage.why):'';feedback.innerHTML=e(t.incorrect)+(clue?' '+chapterTypeset(clue):'');}
+              else{wrongAttempts++;const clue=qItem.incorrectFeedback?.[i]?text(qItem.incorrectFeedback[i]):wrongAttempts===2?text(qItem.hint):wrongAttempts>=3?text(qItem.why):'';feedback.innerHTML=e(t.incorrect)+(clue?' '+chapterTypeset(clue):'');}
             });
             answers.append(button);
           });
           const details=document.createElement('details');details.className='hub-quiz-help';
-          details.innerHTML='<summary>'+e(t.hint)+'</summary><p>'+chapterTypeset(text(stage.hint))+'</p>';
+          details.innerHTML='<summary>'+e(t.hint)+'</summary><p>'+chapterTypeset(text(qItem.hint))+'</p>';
           details.append(worked);
           article.append(answers,details,feedback);panel.append(article);
         });
