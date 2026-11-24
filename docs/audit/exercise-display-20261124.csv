@@ -508,13 +508,13 @@ Batch,Order,Question ID,Typography changed,Prompt restored,Tamil baseline flag,L
 6,507,c9-exercise-6-4-q4,1,,0,390,Baseline bilingual; layout checked,,pending
 6,508,c9-exercise-6-4-q5,1,,0,390,Baseline bilingual; layout checked,,pending
 6,509,c9-exercise-6-4-q6,1,,0,390,Baseline bilingual; layout checked,,pending
-6,510,c9-exercise-6-4-q2-i,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,511,c9-exercise-6-4-q2-ii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,512,c9-exercise-6-4-q2-iii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,513,c9-exercise-6-4-q2-iv,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,514,c9-exercise-6-4-q2-v,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,515,c9-exercise-6-4-q3-i,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,516,c9-exercise-6-4-q3-ii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
+6,510,c9-exercise-6-4-q2-i,1,,1,320 390 430,Tamil prompt sourced EN p239 / TA p253; three numbered reasons and final answer checked,,pending
+6,511,c9-exercise-6-4-q2-ii,1,,1,320 390 430,Tamil prompt sourced EN p239 / TA p253; three numbered reasons and final answer checked,,pending
+6,512,c9-exercise-6-4-q2-iii,1,,1,320 390 430,Tamil prompt sourced EN p239 / TA p253; three numbered reasons and final answer checked,,pending
+6,513,c9-exercise-6-4-q2-iv,1,,1,320 390 430,Tamil prompt sourced EN p239 / TA p253; three numbered reasons and final answer checked,,pending
+6,514,c9-exercise-6-4-q2-v,1,,1,320 390 430,Tamil prompt sourced EN p239 / TA p253; three numbered reasons and final answer checked,,pending
+6,515,c9-exercise-6-4-q3-i,1,,1,320 390 430,Tamil prompt sourced EN p239 / TA p253; three numbered reasons and final answer checked,,pending
+6,516,c9-exercise-6-4-q3-ii,1,,1,320 390 430,Tamil prompt sourced EN p239 / TA p253; three numbered reasons and final answer checked,,pending
 6,517,c9-exercise-6-5-q1,1,,0,390,Baseline bilingual; layout checked,,pending
 6,518,c9-exercise-6-5-q2,1,,0,390,Baseline bilingual; layout checked,,pending
 6,519,c9-exercise-6-5-q3,1,,0,390,Baseline bilingual; layout checked,,pending

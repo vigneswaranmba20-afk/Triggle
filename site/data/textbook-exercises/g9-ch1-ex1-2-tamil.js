@@ -364,12 +364,12 @@
     '1024 − 1 = 1023 proper subsets':[tex('1024-1=1023','1024 − 1 = 1023'),' தகு உட்கணங்கள்']
   };
   const previous = window.TriggleWhyStepG9;
-  const hints = {...previous.hints};
+  const hints = previous && {...previous.hints};
   for (const item of window.TRIGGLE_CLASSES[9].items) {
     const entry = translations[item.id];
     if (!entry) continue;
     if (entry.reasons.length !== item.steps.length) throw Error('Tamil step count: ' + item.id);
-    hints[item.id] = {...hints[item.id], ta:entry.hint};
+    if (hints) hints[item.id] = {...hints[item.id], ta:entry.hint};
     item.q.ta = entry.prompt;
     item.topic.ta = 'கண மொழி';
     item.label.ta = item.label.en.replace('Exercise', 'பயிற்சி').replace('Q', 'வினா ');
@@ -381,18 +381,18 @@
         const rule = tex('n[P(A)]=2^{n(A)}','n[P(A)] = 2^{n(A)}');
         const prose = step.ta + ' ';
         step.ta = prose + rule.fallback;
-        step.reasonMath.ta = [prose, rule];
+        step.reasonMath = {...step.reasonMath, ta:[prose, rule]};
       }
       if (equations[step.eq]) step.mathTa = equations[step.eq];
     });
     if (item.id === 'g9-ch1-ex1.2-q1-iii') {
       const [before, after] = entry.prompt.split('4/(3n)');
-      item.questionMath.ta = [before, {latex:'\\dfrac{4}{3n}', fallback:'4/(3n)'}, after];
+      item.questionMath = {...item.questionMath, ta:[before, {latex:'\\dfrac{4}{3n}', fallback:'4/(3n)'}, after]};
     }
     if (answers[item.answer]) {
       item.answerTa = answers[item.answer];
       item.answerMath = {en:item.answerMath, ta:item.answerTa};
     }
   }
-  window.TriggleWhyStepG9 = Object.freeze({...previous, hints:Object.freeze(hints)});
+  if (hints) window.TriggleWhyStepG9 = Object.freeze({...previous, hints:Object.freeze(hints)});
 })();

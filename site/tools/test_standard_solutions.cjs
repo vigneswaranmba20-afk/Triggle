@@ -393,12 +393,22 @@ for(const [grade,data] of Object.entries(classes)){
    assert.ok(item.answer&&item.answerTa,'Bilingual answer '+item.id);
   }else if(grade==='9'&&g9Ex64Release.records[item.id]){
    const proof=g9Ex64Release.records[item.id];
-   assert.equal(hash,proof.sha256,'Source-pinned four-figure-table release '+item.id);
+   const english=JSON.parse(JSON.stringify(item));
+   delete english.topic.ta;
+   delete english.title.ta;
+   delete english.answerTa;
+   delete english.answerMath;
+   delete english.q.ta;
+   english.label.ta=english.label.en+' (English only · Tamil review pending)';
+   for(const step of english.steps){ delete step.ta; delete step.mathTa; }
+   for(const key of ['taPdfPage','taPrintedPage','taDriveId','taPromptEvidence']) delete english.sourceFidelity[key];
+   assert.equal(crypto.createHash('sha256').update(JSON.stringify(english)).digest('hex'),proof.sha256,'Source-pinned four-figure-table release '+item.id);
    assert.equal(item.answer,proof.expectedFinalAnswer,'Official textbook table answer '+item.id);
    assert(item.q.en.includes(proof.sourcePart),'2025 source prompt '+item.id);
    assert.equal(item.translationReview,'pending');
    assert.equal(item.releaseStatus,'english-preview');
-   assert(!item.q.ta,'Do not invent Tamil explanation '+item.id);
+   assert.match(item.q.ta,/[\u0B80-\u0BFF]/u);
+   assert(item.steps.every(step=>step.ta));
   }else if(grade==='9'&&g9Ex32ById.has(item.id)){
    const approved=g9Ex32ById.get(item.id);
    assert.equal(crypto.createHash('sha256').update(JSON.stringify(m04EnglishProjection(item))).digest('hex'),

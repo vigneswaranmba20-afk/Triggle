@@ -56964,24 +56964,53 @@ const records=[
           "latex": "\\sin \\theta = 0.9975",
           "fallback": "sin θ = 0.9975"
         }
+      ],
+      "ta": [
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " இன் மதிப்பு காண்க.\n(i) ",
+        {
+          "latex": "\\sin \\theta = 0.9975",
+          "fallback": "sin θ = 0.9975"
+        }
       ]
     },
-    "answerMath": [
-      {
-        "latex": "85^{\\circ}\\,57'",
-        "fallback": "85°57′"
-      },
-      " or ",
-      {
-        "latex": "85^{\\circ}\\,58'",
-        "fallback": "85°58′"
-      },
-      " or ",
-      {
-        "latex": "85^{\\circ}\\,59'",
-        "fallback": "85°59′"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        {
+          "latex": "85^{\\circ}\\,57'",
+          "fallback": "85°57′"
+        },
+        " or ",
+        {
+          "latex": "85^{\\circ}\\,58'",
+          "fallback": "85°58′"
+        },
+        " or ",
+        {
+          "latex": "85^{\\circ}\\,59'",
+          "fallback": "85°59′"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "85^{\\circ}\\,57'",
+          "fallback": "85°57′"
+        },
+        " அல்லது ",
+        {
+          "latex": "85^{\\circ}\\,58'",
+          "fallback": "85°58′"
+        },
+        " அல்லது ",
+        {
+          "latex": "85^{\\circ}\\,59'",
+          "fallback": "85°59′"
+        }
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -56997,6 +57026,14 @@ const records=[
               "fallback": "0.9975"
             },
             " in the natural sines table rather than using an inverse-sine calculator."
+          ],
+          "ta": [
+            "சைன் அட்டவணையில் ",
+            {
+              "latex": "0.9975",
+              "fallback": "0.9975"
+            },
+            " என்ற மதிப்பைத் தேடி அதற்குரிய கோணத்தைக் காண்க."
           ]
         }
       },
@@ -57024,6 +57061,28 @@ const records=[
               "fallback": "85°54′"
             },
             ". The prescribed mean difference for the remaining minutes is ",
+            {
+              "latex": "0.0001",
+              "fallback": "0.0001"
+            },
+            "."
+          ],
+          "ta": [
+            {
+              "latex": "90^{\\circ}",
+              "fallback": "90°"
+            },
+            " அருகில் அடுத்தடுத்த கலைகளுக்கு ஒரே நான்கு இலக்க மதிப்பு கிடைக்கலாம். ",
+            {
+              "latex": "85^{\\circ}\\,54'",
+              "fallback": "85°54′"
+            },
+            " இல் அட்டவணை மதிப்பு ",
+            {
+              "latex": "0.9974",
+              "fallback": "0.9974"
+            },
+            ". மீதமுள்ள கலைகளுக்குரிய சராசரி வேறுபாடு ",
             {
               "latex": "0.0001",
               "fallback": "0.0001"
@@ -57062,6 +57121,14 @@ const records=[
               "fallback": "85°59′"
             },
             " are all accepted by the prescribed four-figure table and official key. Do not claim a single exact angle."
+          ],
+          "ta": [
+            "எனவே அட்டவணைப்படி ",
+            {
+              "latex": "85^{\\circ}\\,57', 85^{\\circ}\\,58', 85^{\\circ}\\,59'",
+              "fallback": "85°57′, 85°58′, 85°59′"
+            },
+            " ஆகிய மூன்றுமே ஏற்கத்தக்க விடைகள்."
           ]
         }
       }
@@ -57077,6 +57144,17 @@ const records=[
           "fallback": "θ"
         },
         " if\n(ii) ",
+        {
+          "latex": "\\cos \\theta = 0.6763",
+          "fallback": "cos θ = 0.6763"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " இன் மதிப்பு காண்க.\n(ii) ",
         {
           "latex": "\\cos \\theta = 0.6763",
           "fallback": "cos θ = 0.6763"
@@ -57102,6 +57180,19 @@ const records=[
               "fallback": "cos 47°24′"
             },
             " is tabulated as ",
+            {
+              "latex": "0.6769",
+              "fallback": "0.6769"
+            },
+            "."
+          ],
+          "ta": [
+            "கொசைன் அட்டவணையில் முந்தைய ஆறு கலை நிரலைப் பார்க்கவும். ",
+            {
+              "latex": "47^{\\circ}\\,24'",
+              "fallback": "47°24′"
+            },
+            " இல் மதிப்பு ",
             {
               "latex": "0.6769",
               "fallback": "0.6769"
@@ -57134,6 +57225,19 @@ const records=[
               "fallback": "0.6769 − 0.0006 = 0.6763"
             },
             "."
+          ],
+          "ta": [
+            "குறுங்கோணம் அதிகரிக்கும்போது கொசைன் குறையும். கூடுதல் மூன்று கலைகளுக்கான சராசரி வேறுபாடு ",
+            {
+              "latex": "0.0006",
+              "fallback": "0.0006"
+            },
+            " ஐக் கழித்தால் ",
+            {
+              "latex": "0.6763",
+              "fallback": "0.6763"
+            },
+            " கிடைக்கும்."
           ]
         }
       },
@@ -57148,6 +57252,14 @@ const records=[
             {
               "latex": "\\theta = 47^{\\circ}\\,27'",
               "fallback": "θ = 47°27′"
+            },
+            "."
+          ],
+          "ta": [
+            "அதனால் தேவையான கோணம் ",
+            {
+              "latex": "47^{\\circ}\\,27'",
+              "fallback": "47°27′"
             },
             "."
           ]
@@ -57165,6 +57277,17 @@ const records=[
           "fallback": "θ"
         },
         " if\n(iii) ",
+        {
+          "latex": "\\tan \\theta = 0.0720",
+          "fallback": "tan θ = 0.0720"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " இன் மதிப்பு காண்க.\n(iii) ",
         {
           "latex": "\\tan \\theta = 0.0720",
           "fallback": "tan θ = 0.0720"
@@ -57195,6 +57318,19 @@ const records=[
               "fallback": "0.0717"
             },
             "."
+          ],
+          "ta": [
+            "டேன்ஜென்ட் அட்டவணையில் ",
+            {
+              "latex": "4^{\\circ}\\,06'",
+              "fallback": "4°06′"
+            },
+            " இல் நான்கு இலக்க மதிப்பு ",
+            {
+              "latex": "0.0717",
+              "fallback": "0.0717"
+            },
+            "."
           ]
         }
       },
@@ -57212,6 +57348,19 @@ const records=[
               "fallback": "0.0003: 0.0717 + 0.0003 = 0.0720"
             },
             "."
+          ],
+          "ta": [
+            "மேலும் ஒரு கலைக்கான சராசரி வேறுபாடு ",
+            {
+              "latex": "0.0003",
+              "fallback": "0.0003"
+            },
+            ". இதைக் கூட்டினால் ",
+            {
+              "latex": "0.0720",
+              "fallback": "0.0720"
+            },
+            " கிடைக்கும்."
           ]
         }
       },
@@ -57233,6 +57382,14 @@ const records=[
               "fallback": "0.0720"
             },
             "."
+          ],
+          "ta": [
+            "எனவே கோணம் ",
+            {
+              "latex": "4^{\\circ}\\,7'",
+              "fallback": "4°7′"
+            },
+            ", அதாவது நான்கு பாகை ஏழு கலை."
           ]
         }
       }
@@ -57248,6 +57405,17 @@ const records=[
           "fallback": "θ"
         },
         " if\n(iv) ",
+        {
+          "latex": "\\cos \\theta = 0.0410",
+          "fallback": "cos θ = 0.0410"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " இன் மதிப்பு காண்க.\n(iv) ",
         {
           "latex": "\\cos \\theta = 0.0410",
           "fallback": "cos θ = 0.0410"
@@ -57283,6 +57451,24 @@ const records=[
               "fallback": "0.0419"
             },
             "."
+          ],
+          "ta": [
+            "நான்கு இலக்க கொசைன் அட்டவணையில் ",
+            {
+              "latex": "0.0410",
+              "fallback": "0.0410"
+            },
+            " ஐத் தேடுக. முந்தைய ஆறு கலை நிரலில் ",
+            {
+              "latex": "87^{\\circ}\\,36'",
+              "fallback": "87°36′"
+            },
+            " க்கு ",
+            {
+              "latex": "0.0419",
+              "fallback": "0.0419"
+            },
+            " உள்ளது."
           ]
         }
       },
@@ -57305,6 +57491,19 @@ const records=[
               "fallback": "0.0009: 0.0419 − 0.0009 = 0.0410"
             },
             "."
+          ],
+          "ta": [
+            "மீதமுள்ள மூன்று கலைகளுக்கான சராசரி வேறுபாடு ",
+            {
+              "latex": "0.0009",
+              "fallback": "0.0009"
+            },
+            " ஐக் கழித்தால் ",
+            {
+              "latex": "0.0410",
+              "fallback": "0.0410"
+            },
+            " கிடைக்கும்."
           ]
         }
       },
@@ -57326,6 +57525,14 @@ const records=[
               "fallback": "0.0410"
             },
             "."
+          ],
+          "ta": [
+            "எனவே தேவையான கொசைன் மதிப்புக்குரிய கோணம் ",
+            {
+              "latex": "87^{\\circ}\\,39'",
+              "fallback": "87°39′"
+            },
+            "."
           ]
         }
       }
@@ -57341,6 +57548,17 @@ const records=[
           "fallback": "θ"
         },
         " if\n(v) ",
+        {
+          "latex": "\\tan \\theta = 7.5958",
+          "fallback": "tan θ = 7.5958"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " இன் மதிப்பு காண்க.\n(v) ",
         {
           "latex": "\\tan \\theta = 7.5958",
           "fallback": "tan θ = 7.5958"
@@ -57366,6 +57584,14 @@ const records=[
               "fallback": "7.5958"
             },
             " directly in the natural tangents table."
+          ],
+          "ta": [
+            "டேன்ஜென்ட் அட்டவணையில் ",
+            {
+              "latex": "7.5958",
+              "fallback": "7.5958"
+            },
+            " ஐ நேரடியாகத் தேடுக."
           ]
         }
       },
@@ -57382,6 +57608,13 @@ const records=[
               "fallback": "82°30′"
             },
             ", exactly at a six-minute column. There is no leftover minute and no mean-difference adjustment."
+          ],
+          "ta": [
+            {
+              "latex": "82^{\\circ}\\,30'",
+              "fallback": "82°30′"
+            },
+            " என்ற ஆறு கலை நிரலிலேயே இம்மதிப்பு உள்ளது. மீதிக் கலை இல்லை என்பதால் சராசரி வேறுபாட்டுத் திருத்தம் தேவையில்லை."
           ]
         }
       },
@@ -57398,6 +57631,14 @@ const records=[
               "fallback": "θ = 82°30′"
             },
             ", read directly from the natural tangent table."
+          ],
+          "ta": [
+            "அட்டவணையிலிருந்து நேரடியாகக் கிடைக்கும் கோணம் ",
+            {
+              "latex": "82^{\\circ}\\,30'",
+              "fallback": "82°30′"
+            },
+            "."
           ]
         }
       }
@@ -57408,6 +57649,13 @@ const records=[
     "questionMath": {
       "en": [
         "Find the value of the following:\n(i) ",
+        {
+          "latex": "\\sin 65^{\\circ}\\,39' + \\cos 24^{\\circ}\\,57' + \\tan 10^{\\circ}\\,10'",
+          "fallback": "sin 65°39′ + cos 24°57′ + tan 10°10′"
+        }
+      ],
+      "ta": [
+        "கீழ்க்காண்பனவற்றின் மதிப்பு காண்க.\n(i) ",
         {
           "latex": "\\sin 65^{\\circ}\\,39' + \\cos 24^{\\circ}\\,57' + \\tan 10^{\\circ}\\,10'",
           "fallback": "sin 65°39′ + cos 24°57′ + tan 10°10′"
@@ -57426,7 +57674,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Read the prescribed four-figure trigonometric tables, including mean differences where the minutes are not an exact six-minute column."
+          "en": "Read the prescribed four-figure trigonometric tables, including mean differences where the minutes are not an exact six-minute column.",
+          "ta": "கொடுக்கப்பட்ட கோணங்களுக்கான முக்கோணவியல் விகிதங்களை நான்கு இலக்க அட்டவணையில் காண்க. ஆறு கலை நிரல்களுக்கு இடையே வரும் கோணங்களுக்குச் சராசரி வேறுபாட்டைப் பயன்படுத்துக."
         }
       },
       {
@@ -57448,6 +57697,24 @@ const records=[
               "fallback": "tan 10°10′ ≈ 0.1793"
             },
             "."
+          ],
+          "ta": [
+            "அட்டவணைப்படி சைன் மதிப்பு ",
+            {
+              "latex": "0.9111",
+              "fallback": "0.9111"
+            },
+            ", கொசைன் மதிப்பு ",
+            {
+              "latex": "0.9066",
+              "fallback": "0.9066"
+            },
+            ", டேன்ஜென்ட் மதிப்பு ",
+            {
+              "latex": "0.1793",
+              "fallback": "0.1793"
+            },
+            "."
           ]
         }
       },
@@ -57465,6 +57732,14 @@ const records=[
               "fallback": "0.9111 + 0.9066 + 0.1793 = 1.9970"
             },
             "."
+          ],
+          "ta": [
+            "மூன்று அட்டவணை மதிப்புகளையும் கூட்டினால் ",
+            {
+              "latex": "1.9970",
+              "fallback": "1.9970"
+            },
+            " கிடைக்கும்."
           ]
         }
       }
@@ -57475,6 +57750,13 @@ const records=[
     "questionMath": {
       "en": [
         "Find the value of the following:\n(ii) ",
+        {
+          "latex": "\\tan 70^{\\circ}\\,58' + \\cos 15^{\\circ}\\,26' - \\sin 84^{\\circ}\\,59'",
+          "fallback": "tan 70°58′ + cos 15°26′ − sin 84°59′"
+        }
+      ],
+      "ta": [
+        "கீழ்க்காண்பனவற்றின் மதிப்பு காண்க.\n(ii) ",
         {
           "latex": "\\tan 70^{\\circ}\\,58' + \\cos 15^{\\circ}\\,26' - \\sin 84^{\\circ}\\,59'",
           "fallback": "tan 70°58′ + cos 15°26′ − sin 84°59′"
@@ -57493,7 +57775,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Use the prescribed four-figure tables and mean differences; do not silently replace a textbook table entry with an unrounded scientific-calculator value."
+          "en": "Use the prescribed four-figure tables and mean differences; do not silently replace a textbook table entry with an unrounded scientific-calculator value.",
+          "ta": "நான்கு இலக்க அட்டவணையையும் சராசரி வேறுபாடுகளையும் பயன்படுத்தி ஒவ்வொரு விகிதத்தையும் காண்க."
         }
       },
       {
@@ -57515,6 +57798,24 @@ const records=[
               "fallback": "sin 84°59′ ≈ 0.9962"
             },
             "."
+          ],
+          "ta": [
+            "அட்டவணை முறையில் டேன்ஜென்ட் மதிப்பு ",
+            {
+              "latex": "2.8982",
+              "fallback": "2.8982"
+            },
+            ", கொசைன் மதிப்பு ",
+            {
+              "latex": "0.9639",
+              "fallback": "0.9639"
+            },
+            ", சைன் மதிப்பு ",
+            {
+              "latex": "0.9962",
+              "fallback": "0.9962"
+            },
+            "."
           ]
         }
       },
@@ -57532,6 +57833,24 @@ const records=[
               "fallback": "2.8982 + 0.9639 − 0.9962 = 3.8621 − 0.9962 = 2.8659"
             },
             ". This is the textbook's stated table-method answer; higher-precision calculator evaluation differs."
+          ],
+          "ta": [
+            "முதல் இரண்டைக் கூட்டி மூன்றாவதைக் கழிக்கவும். ",
+            {
+              "latex": "3.8621",
+              "fallback": "3.8621"
+            },
+            " இலிருந்து ",
+            {
+              "latex": "0.9962",
+              "fallback": "0.9962"
+            },
+            " ஐக் கழித்தால் பாடநூல் அட்டவணை முறையின்படி ",
+            {
+              "latex": "2.8659",
+              "fallback": "2.8659"
+            },
+            " கிடைக்கும்."
           ]
         }
       }
@@ -72516,6 +72835,13 @@ const texts={
     "latex": "2026 - 11 - 14 - g 9",
     "fallback": "2026-11-14-g9"
   },
+  "90° அருகில் சைன் மதிப்பு மிக மெதுவாக மாறுகிறது. நான்கு இலக்கங்களாக முழுமைப்படுத்தும்போது ஒரே மதிப்பு பல கோணங்களுக்குக் கிடைப்பதன் காரணம் இதுவே.": [
+    {
+      "latex": "90^{\\circ}",
+      "fallback": "90°"
+    },
+    " அருகில் சைன் மதிப்பு மிக மெதுவாக மாறுகிறது. நான்கு இலக்கங்களாக முழுமைப்படுத்தும்போது ஒரே மதிப்பு பல கோணங்களுக்குக் கிடைப்பதன் காரணம் இதுவே."
+  ],
   "Near 90°, several adjacent one-minute entries round to the same four-figure value.": [
     "Near ",
     {
@@ -72558,6 +72884,23 @@ const texts={
       "fallback": "0.0720"
     },
     "."
+  ],
+  "87°36′ ஐவிடப் பெரிய கோணத்திற்குக் கொசைன் குறைவாக இருக்கும். எனவே 0.0419 இல் இருந்து மூன்று கலைகளுக்குரிய 0.0009 ஐக் கழிக்க வேண்டும்.": [
+    {
+      "latex": "87^{\\circ}\\,36'",
+      "fallback": "87°36′"
+    },
+    " ஐவிடப் பெரிய கோணத்திற்குக் கொசைன் குறைவாக இருக்கும். எனவே ",
+    {
+      "latex": "0.0419",
+      "fallback": "0.0419"
+    },
+    " இல் இருந்து மூன்று கலைகளுக்குரிய ",
+    {
+      "latex": "0.0009",
+      "fallback": "0.0009"
+    },
+    " ஐக் கழிக்க வேண்டும்."
   ],
   "For the remaining 3′, subtract the cosine mean difference 0.0009": [
     "For the remaining ",
