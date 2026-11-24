@@ -1741,8 +1741,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-unit-q9.svg",
-    "figureAlt": { "en": "Building and statue on opposite sides of 35 m street; from building roof elevation to statue top is 24 degrees and depression to base is 34 degrees.", "ta": "கட்டிடம் மற்றும் கோபுரத்திற்கு இடையிலான ஏற்ற-இறக்கக்கோணப் படம்." },
-    "figureCaption": { "en": "Building and statue diagram for Unit Exercise 6 Q9", "ta": "கட்டிடமும் கோபுரமும் — ஏற்ற-இறக்கக்கோணப் படம்" },
+    "figureAlt": { "en": "Building of height h₁ and statue of height H are 35 m apart. From the building roof the elevation to the statue top is 24° and depression to its base is 34°.", "ta": "h₁ உயரமுள்ள கட்டடமும் H உயரமுள்ள சிலையும் 35 மீ இடைவெளியில் உள்ளன. கட்டடத்தின் உச்சியிலிருந்து சிலையின் உச்சிக்கு 24° ஏற்றக்கோணமும் அடிக்கு 34° இறக்கக்கோணமும் உள்ளன." },
+    "figureCaption": { "en": "Building and statue diagram for Unit Exercise 6 Q9", "ta": "கட்டடமும் சிலையும் — ஏற்ற-இறக்கக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",

@@ -543,7 +543,7 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-3-q5.svg",
-    "figureAlt": { "en": "Two ships on opposite sides of lighthouse height h viewed at 30 and 60 degrees depression.", "ta": "கலங்கரை விளக்கத்திலிருந்து இரு கப்பல்களுக்கான இறக்கக்கோணப் படம்." },
+    "figureAlt": { "en": "Two ships on opposite sides of a lighthouse of height h; the unknown horizontal distances d₁ and d₂ correspond to depression angles 30° and 60° respectively.", "ta": "h உயரமுள்ள கலங்கரை விளக்கத்தின் எதிரெதிர் பக்கங்களில் உள்ள கப்பல்களுக்கான 30°, 60° இறக்கக்கோணங்கள்; கிடைமட்டத் தொலைவுகள் d₁, d₂." },
     "figureCaption": { "en": "Lighthouse of height h observing ships on opposite sides at 30 and 60 degrees for Exercise 6.3 Q5", "ta": "கலங்கரை விளக்கமும் கப்பல்களும் — இறக்கக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
