@@ -39,7 +39,7 @@ async function checkTamil(page, index, lesson, result, width) {
  async function verifyView(correct) {
   assert.match(await lesson.locator('[data-stats-question]').innerText(), tamil);
   assert.match(await details.innerText(), /இது ஏன் சரியாகிறது/);
-  assert.match(await exercise.innerText(), /தொடர்புடைய பயிற்சி \d+\.\d+ · வினா \d+ \(ஆங்கிலத்தில்\)/);
+  assert.match(await exercise.innerText(), /தொடர்புடைய பயிற்சி \d+\.\d+ · வினா \d+$/);
   await answers.nth((correct + 1) % 3).tap();
   assert.match(await feedback.innerText(), /^மீண்டும் முயல்\. .+/);
   await answers.nth(correct).tap();
