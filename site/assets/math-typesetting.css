@@ -214,3 +214,13 @@ body.g9-math-first #chapterOverview .sp2-formula .triggle-tex { font-size: 18px;
     font-size:1.04em;
   }
 }
+
+/* Let Tamil table headings wrap inside the exercise reader's four columns. */
+@media (max-width: 430px) {
+  html[lang="ta"] .exercise-reading-scale .triggle-data-table {
+    table-layout: fixed;
+  }
+  html[lang="ta"] .exercise-reading-scale .triggle-data-table th {
+    overflow-wrap: anywhere;
+  }
+}

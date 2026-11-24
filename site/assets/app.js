@@ -681,7 +681,9 @@
         const [before='',after='']=rawQ.split(rx);
         const rawParts=questionMath?.[lang]||questionMath?.en;
         $('questionText').innerHTML=Array.isArray(rawParts)
-          ?math(rawParts).replace(/Type of maids[\s\S]*?(?=A family is selected)/i,tableHtml)
+          ?math(rawParts).replace(lang==='ta'&&current.dataTable.replaceRegexTa
+              ? /பணிப்பெண்கள் வகை[\s\S]*?(?=சமவாய்ப்பு முறையில்)/
+              : /Type of maids[\s\S]*?(?=A family is selected)/i,tableHtml)
           :math(before)+tableHtml+math(after);
       }else{$('questionText').innerHTML+=tableHtml;}
     }else{$('questionText').innerHTML+=tableHtml;}

@@ -450,6 +450,7 @@ for(const [grade,data] of Object.entries(classes)){
     original.label.ta=item.label.en+' (English only)';
     original.title.ta=item.title.en+' (English only)';
     for(const step of original.steps){step.ta='English explanation (Tamil version pending): '+step.en;delete step.mathTa;}
+    if(item.id==='g9-ch9-ex9.2-q5'){delete original.dataTable.ta;delete original.dataTable.replaceRegexTa;}
     if(item.exercise==='7.3'){
      original.sourceFidelity.taPdfPage=294;
      delete original.sourceFidelity.taDriveId;
