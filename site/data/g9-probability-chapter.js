@@ -274,6 +274,7 @@ const englishLessons = [
     conclusion: 'A probability closer to 1 means a greater chance. Even a very likely event can fail to happen.',
     mistake: 'A zero chance means the event is impossible in the setup. Zero is a valid probability.',
     question: 'A tide forecast says there is a 90% chance that a beach path will flood this evening. What can you conclude?',
+    hint: 'On the probability scale, certainty is 100%. Compare that with the forecast.',
     choices: ['Flooding is certain.', 'Flooding is likely, and the path could stay dry.', 'Flooding and staying dry have equal chances.'],
     correct: 1,
     feedback: [
@@ -295,6 +296,7 @@ const englishLessons = [
     conclusion: 'The robot can send four different signals. Exactly one blue matches two of them.',
     mistake: 'Red then blue and blue then red are different outcomes because the order of the flashes is recorded.',
     question: 'A game records a jump or a slide, then a bell rings or stays silent. Which list includes every outcome?',
+    hint: 'Start with the jump. Pair it with each of the two bell results, then repeat for the slide.',
     choices: ['Jump with bell, slide in silence', 'Jump, slide, bell, silence', 'Jump with bell, jump in silence, slide with bell, slide in silence'],
     correct: 2,
     feedback: [
@@ -314,6 +316,7 @@ const englishLessons = [
     conclusion: 'Count the matching faces for the top of the fraction. All six faces stay in the bottom, whichever rule you choose.',
     mistake: 'Two labels do not guarantee equal chances. On a spinner with one wide region and one narrow region, each colour is a label but the wider region can have a greater chance.',
     question: 'A bag holds three identical-size gold tokens and one silver token. One token is picked fairly. What is the probability of gold?',
+    hint: 'Count the individual tokens in the bag, then count the ones that match gold.',
     choices: ['One half', 'Three quarters', 'One quarter'],
     correct: 1,
     feedback: [
@@ -335,6 +338,7 @@ const englishLessons = [
     conclusion: 'Use the observed fraction to estimate the chance. Two runs of the same experiment can give different estimates.',
     mistake: 'Zero heads in a short run means no heads were observed. Heads are still possible on the next toss.',
     question: 'A seed tray has 20 seeds. After one week, 15 have sprouted. Which claim does this observation support?',
+    hint: 'Use the number of seeds that sprouted and the total number observed in this tray.',
     choices: ['Exactly 15 seeds must sprout in every tray of 20.', 'A new seed has a 100% chance of sprouting.', 'Three quarters of this tray sprouted. That can estimate the chance under similar conditions.'],
     correct: 2,
     feedback: [
@@ -356,6 +360,7 @@ const englishLessons = [
     conclusion: 'The complement gets whatever chance is left after accounting for the original event.',
     mistake: 'Ticket 1 and ticket 2 are mutually exclusive, but tickets 3 and 4 remain possible. For complements, the two groups must cover the whole sample space.',
     question: 'A bus arrives early, on time or late. Which event is the complement of “late”?',
+    hint: 'Check every arrival that does not satisfy “late”.',
     choices: ['Early only', 'On time only', 'Early or on time'],
     correct: 2,
     feedback: [
@@ -377,6 +382,7 @@ const tamilLessons = [
     conclusion: 'நிகழ்தகவு 1-க்கு நெருங்க நெருங்க, நிகழ்ச்சி நடக்கும் வாய்ப்பு அதிகரிக்கும். வாய்ப்பு மிக அதிகமாக இருந்தாலும் அது நடக்காமல் போகலாம்.',
     mistake: 'இந்தச் சூழலில் ஒரு நிகழ்ச்சியின் நிகழ்தகவு 0 எனில் அது நடக்க இயலாது. இயலாத நிகழ்ச்சிக்கு 0 எழுதுவது சரி.',
     question: 'இன்று மாலை கடற்கரைப் பாதை நீரில் மூழ்க 90% வாய்ப்பு உள்ளதாக முன்னறிவிப்பு கூறுகிறது. இதிலிருந்து என்ன முடிவு செய்யலாம்?',
+    hint: 'உறுதியாக நடைபெறும் நிகழ்ச்சிக்கு 100% வாய்ப்பு உண்டு. அதை முன்னறிவிப்பில் கூறிய வாய்ப்புடன் ஒப்பிடுங்கள்.',
     choices: ['பாதை உறுதியாக நீரில் மூழ்கும்.', 'மூழ்க அதிக வாய்ப்பு உள்ளது. பாதை வறண்டிருக்கவும் வாய்ப்புள்ளது.', 'பாதை மூழ்குவதற்கும் வறண்டிருப்பதற்கும் சம வாய்ப்பு உள்ளது.'],
     feedback: [
       'பாதை மூழ்குவது உறுதி என்று சொல்ல, வாய்ப்பு 100% ஆக இருக்க வேண்டும்.',
@@ -397,6 +403,7 @@ const tamilLessons = [
     conclusion: 'ரோபோ நான்கு விதமாக ஒளிரலாம். அவற்றில் இரண்டு முடிவுகளில் மட்டும் ஒரே ஒரு நீல ஒளி வருகிறது.',
     mistake: '“சிவப்பு, பிறகு நீலம்” என்பதும் “நீலம், பிறகு சிவப்பு” என்பதும் வெவ்வேறு முடிவுகள். ஒளிர்ந்த வரிசையையும் பதிவு செய்கிறோம்.',
     question: 'ஒரு விளையாட்டில் வீரர் தாவலாம் அல்லது சறுக்கலாம். அதன் பிறகு மணி ஒலிக்கலாம் அல்லது ஒலிக்காமல் இருக்கலாம். எந்தப் பட்டியலில் எல்லா முடிவுகளும் உள்ளன?',
+    hint: 'தாவுதலுடன் மணியின் இரு முடிவுகளையும் தனித்தனியாகச் சேருங்கள். சறுக்குதலுக்கும் அவ்வாறே செய்யுங்கள்.',
     choices: ['தாவுதல் — மணி ஒலிக்கும், சறுக்குதல் — மணி ஒலிக்காது', 'தாவுதல், சறுக்குதல், மணி ஒலிக்கும், மணி ஒலிக்காது', 'தாவுதல் — மணி ஒலிக்கும் அல்லது ஒலிக்காது. சறுக்குதல் — மணி ஒலிக்கும் அல்லது ஒலிக்காது.'],
     feedback: [
       'தாவிய பிறகும் மணி ஒலிக்காமல் இருக்கலாம். சறுக்கிய பிறகும் மணி ஒலிக்கலாம்.',
@@ -415,6 +422,7 @@ const tamilLessons = [
     conclusion: 'விதிக்குப் பொருந்தும் முகங்களின் எண்ணிக்கையைப் பின்னத்தின் தொகுதியில் எழுதுங்கள். எந்த விதியைத் தேர்ந்தெடுத்தாலும் பகுதி ஆறுதான்.',
     mistake: 'இரண்டு நிறங்கள் இருப்பதால் மட்டும் சம வாய்ப்பு கிடைக்காது. சுழற்றும் வட்டத்தில் ஒரு நிறத்தின் பகுதி அகலமாகவும் இன்னொன்று குறுகலாகவும் இருந்தால் அகலமான பகுதியில் முள் நிற்க அதிக வாய்ப்பு இருக்கலாம்.',
     question: 'ஒரு பையில் ஒரே அளவுள்ள மூன்று தங்க வில்லைகளும் ஒரு வெள்ளி வில்லையும் உள்ளன. அனைத்துக்கும் சம வாய்ப்பு இருக்கும்படி ஒரு வில்லையை எடுத்தால், அது தங்க வில்லையாக இருப்பதற்கான நிகழ்தகவு என்ன?',
+    hint: 'பையிலுள்ள வில்லைகள் அனைத்தையும் எண்ணுங்கள். அவற்றில் தங்க வில்லைகள் எத்தனை என்று பாருங்கள்.',
     choices: ['பாதி', 'முக்கால்', 'கால்'],
     feedback: [
       'இரண்டு நிறங்கள் உள்ளன. அவற்றின் வாய்ப்புகளைக் கணக்கிட, சம வாய்ப்புள்ள நான்கு வில்லைகளையும் எண்ணுங்கள்.',
@@ -435,6 +443,7 @@ const tamilLessons = [
     conclusion: 'சோதனையில் கிடைத்த பின்னத்தை வைத்து வாய்ப்பை மதிப்பிடுங்கள். அதே சோதனையை மீண்டும் செய்தால் வேறு மதிப்பு கிடைக்கலாம்.',
     mistake: 'சில முறை சுண்டியதில் தலை விழவில்லை என்றாலும், அடுத்த முறை தலை விழ இன்னும் வாய்ப்பு உண்டு.',
     question: 'ஒரு விதைத் தட்டில் இருந்த 20 விதைகளில் 15 விதைகள் ஒரு வாரத்தில் முளைத்தன. இதிலிருந்து என்ன கூறலாம்?',
+    hint: 'இந்தத் தட்டில் முளைத்த விதைகளின் எண்ணிக்கையையும் மொத்த விதைகளின் எண்ணிக்கையையும் பயன்படுத்துங்கள்.',
     choices: ['20 விதைகள் உள்ள ஒவ்வொரு தட்டிலும் சரியாக 15 விதைகள் முளைக்கும்.', 'புதிதாக விதைக்கும் ஒரு விதை முளைக்க 100% வாய்ப்பு உள்ளது.', 'இந்தத் தட்டில் முக்கால் பங்கு முளைத்தது. இதே போன்ற சூழலில் முளைக்கும் வாய்ப்பை இந்த அளவைக் கொண்டு மதிப்பிடலாம்.'],
     feedback: [
       'இந்தப் பின்னம் இந்தத் தட்டின் முடிவை மட்டும் காட்டுகிறது. வேறொரு தட்டில் வேறு எண்ணிக்கை கிடைக்கலாம்.',
@@ -455,6 +464,7 @@ const tamilLessons = [
     conclusion: '1-இலிருந்து ஒரு நிகழ்ச்சியின் நிகழ்தகவைக் கழித்தால் அதன் நிரப்பு நிகழ்ச்சியின் நிகழ்தகவு கிடைக்கும்.',
     mistake: 'சீட்டு 1 கிடைப்பதும் சீட்டு 2 கிடைப்பதும் ஒன்றையொன்று விலக்கும். ஆனாலும் 3, 4 ஆகிய சீட்டுகளும் கிடைக்கலாம். நிரப்பு நிகழ்ச்சிகளாக இருக்க, இரண்டு நிகழ்ச்சிகளும் சேர்ந்து கூறுவெளி முழுவதையும் உள்ளடக்க வேண்டும்.',
     question: 'ஒரு பேருந்து முன்னதாகவோ, சரியான நேரத்திலோ, தாமதமாகவோ வரலாம். “தாமதமாக வருதல்” என்ற நிகழ்ச்சியின் நிரப்பு நிகழ்ச்சி எது?',
+    hint: 'தாமதமாக வருதல் என்ற விதிக்குப் பொருந்தாத வருகைகள் அனைத்தையும் பாருங்கள்.',
     choices: ['முன்னதாக வருதல் மட்டும்', 'சரியான நேரத்தில் வருதல் மட்டும்', 'முன்னதாக அல்லது சரியான நேரத்தில் வருதல்'],
     feedback: [
       'பேருந்து சரியான நேரத்தில் வந்தாலும் அது தாமதமாக வரவில்லை.',

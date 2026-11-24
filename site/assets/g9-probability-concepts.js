@@ -7,9 +7,9 @@
   const percent = fraction => Number((fraction * 100).toFixed(1)) + '%';
   const copy = {
     en: {matches: 'matches', details: 'Understand the idea', practice: 'Try it yourself',
-      answers: 'Answer choices', correct: 'Correct.', retry: 'Try again.'},
+      answers: 'Answer choices', hint: 'Hint', correct: 'Correct.', retry: 'Try again.'},
     ta: {matches: 'பொருந்துகிறது', details: 'கருத்தைப் புரிந்துகொள்ளுங்கள்', practice: 'நீங்களே முயலுங்கள்',
-      answers: 'விடைத் தேர்வுகள்', correct: 'சரி.', retry: 'மீண்டும் முயலுங்கள்.'}
+      answers: 'விடைத் தேர்வுகள்', hint: 'குறிப்பு', correct: 'சரி.', retry: 'மீண்டும் முயலுங்கள்.'}
   };
 
   function outcomeGrid(labels) {
@@ -274,6 +274,7 @@
       '<section class="sp2-recall" aria-labelledby="probability-practice-title">' +
       '<h5 id="probability-practice-title"></h5><p data-probability-question></p>' +
       '<div class="probability-controls probability-answers" data-answers role="group"></div>' +
+      '<div class="probability-controls" data-probability-actions></div>' +
       '<div class="probability-feedback" role="status" aria-atomic="true"></div></section></div>';
     panel.querySelector('h4').textContent = section + ' ' + content.heading;
     panel.querySelector('.probability-lesson').lang = lang;
@@ -300,6 +301,9 @@
     const holder = panel.querySelector('.probability-answers');
     holder.setAttribute('aria-label', labels.answers);
     const feedback = panel.querySelector('.probability-feedback');
+    panel.querySelector('[data-probability-actions]').append(button(labels.hint, () => {
+      feedback.textContent = content.hint;
+    }));
     const choices = content.choices.map((choice, i) => {
       const control = button(choice, () => {
         choices.forEach(option => option.setAttribute('aria-pressed', String(option === control)));
