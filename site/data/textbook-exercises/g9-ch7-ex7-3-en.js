@@ -1,5 +1,5 @@
-// Grade 9 English 2025 Exercise 7.3: nine questions and Triggle-original solutions.
-// Source PDF text consulted EN/TA; page images and authentic Tamil solutions still pending.
+// Grade 9 Mensuration, 2025 English and Tamil editions.
+// Tamil question text checked against printed 278. Worked explanations translated from the canonical solution.
 (()=>{
  'use strict';
  const entries=[

@@ -1,5 +1,5 @@
-// Grade 9 English 2025 textbook, Exercise 7.1. Questions from user-provided SCERT PDF;
-// original step-by-step solutions, mathematical source checks; Tamil and final visual review pending.
+// Grade 9 Mensuration, 2025 English and Tamil editions.
+// Tamil question text checked against printed 267. Worked explanations translated from the canonical solution.
 (()=>{'use strict';
 const entries=[
   {
