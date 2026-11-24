@@ -426,7 +426,14 @@ for(const [grade,data] of Object.entries(classes)){
    const originalChoices=auditedG9SourceChoices.records[item.id];
    const bilingualGeometry=g9BilingualGeometry.records[item.id];
    assert.ok([trig,correction,extended,originalChoices,bilingualGeometry].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
-   if(bilingualGeometry){
+   const algebra=require('../data/textbook-fidelity/g9-ch3-ex3-1-q10-q12-bilingual.json').records[item.id];
+   if(algebra){
+    const original={...item,...algebra.originalFields,steps:item.steps.map((step,i)=>({...step,ta:algebra.originalTamilReasons[i]}))};
+    assert.equal(crypto.createHash('sha256').update(JSON.stringify(original)).digest('hex'),preserved.sha256[item.id]);
+    assert.equal(item.q.en,algebra.originalFields.q.en);
+    assert.equal(item.q.ta,algebra.prompt.ta);
+    assert.deepEqual(item.steps.map(step=>step.ta).join('\n'),algebra.reasons.join('\n'));
+   }else if(bilingualGeometry){
     assert.equal(grade,'9');
     assert.equal(bilingualGeometry.originalRecordSha256,preserved.sha256[item.id],'Original geometry baseline '+item.id);
     const englishDigest=crypto.createHash('sha256').update(JSON.stringify(m04EnglishProjection(item))).digest('hex');

@@ -72,6 +72,11 @@ const preservation=items.filter(q=>!newIds.has(q.id)).map(q=>{
   question={en:q.q.en};
   steps=steps.map(({ta,...original})=>original);
  }
+ const algebra=require('../data/textbook-fidelity/g9-ch3-ex3-1-q10-q12-bilingual.json').records[q.id];
+ if(algebra){
+  question=algebra.originalFields.q;
+  steps=steps.map((step,index)=>({...step,ta:algebra.originalTamilReasons[index]}));
+ }
  const answer=legacy?(legacy.originalFinalAnswer||legacy.unchangedFinalAnswer):q.answer;
  return [q.id,q.chapter,q.exercise,q.kind,question,answer,
   steps.filter((_,idx)=>!(q.id==='g9-ch9-ex9.2-q5'&&idx===3)).map(({en,ta,eq},index)=>revisedReasons[q.id]?.includes(index)?[null,null,eq]:[en,ta,eq])];

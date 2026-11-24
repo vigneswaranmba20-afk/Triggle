@@ -19727,37 +19727,37 @@ const records=[
         " find the amount paid by him."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. The cost of a chocolate is Rs. ",
+        "ஓர் இனிப்பின் விலை ₹",
         {
           "latex": "\\left(x + y\\right)",
           "fallback": "(x + y)"
         },
-        " and Amir bought ",
+        ". அமீர் ",
         {
           "latex": "\\left(x + y\\right)",
           "fallback": "(x + y)"
         },
-        " chocolates. Find the total amount paid by him in terms of ",
+        " இனிப்புகளை வாங்கினார். எனில் அவர் கொடுத்த மொத்தத் தொகையை ",
         {
           "latex": "x",
           "fallback": "x"
         },
-        " and ",
+        " மற்றும் ",
         {
           "latex": "y",
           "fallback": "y"
         },
-        ". If ",
+        " களில் காண்க. மேலும் ",
         {
           "latex": "x = 10",
-          "fallback": "x =10"
+          "fallback": "x = 10"
         },
         ", ",
         {
           "latex": "y = 5",
-          "fallback": "y =5"
+          "fallback": "y = 5"
         },
-        " find the amount paid by him."
+        " எனில் அவர் கொடுத்த தொகை எவ்வளவு?"
       ]
     },
     "answerMath": [
@@ -19780,7 +19780,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Total cost equals price per chocolate multiplied by the number purchased.",
-          "ta": "English explanation (Tamil unchanged): Total cost equals price per chocolate multiplied by the number purchased."
+          "ta": "ஓர் இனிப்பின் விலையை வாங்கிய இனிப்புகளின் எண்ணிக்கையால் பெருக்கினால் மொத்தத் தொகை கிடைக்கும்."
         }
       },
       {
@@ -19791,7 +19791,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Expand using the square-of-a-sum identity.",
-          "ta": "English explanation (Tamil unchanged): Expand using the square-of-a-sum identity."
+          "ta": "கூட்டலின் வர்க்க முற்றொருமையைப் பயன்படுத்தி விரிவாக்குக."
         }
       },
       {
@@ -19821,17 +19821,16 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Substitute the given prices ",
             {
               "latex": "x = 10",
-              "fallback": "x=10"
+              "fallback": "x = 10"
             },
-            " and ",
+            ", ",
             {
               "latex": "y = 5",
-              "fallback": "y=5"
+              "fallback": "y = 5"
             },
-            "."
+            " எனப் பிரதியிட்டுத் தொகையைக் காண்க."
           ]
         }
       }
@@ -19864,27 +19863,27 @@ const records=[
         " units."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. The length of a rectangle is ",
+        "ஒரு செவ்வகத்தின் நீளம் ",
         {
           "latex": "\\left(3 x + 2\\right)",
-          "fallback": "(3x+2)"
+          "fallback": "(3x + 2)"
         },
-        " units and it’s breadth is ",
+        " அலகுகள் மற்றும் அதன் அகலம் ",
         {
           "latex": "\\left(3 x - 2\\right)",
-          "fallback": "(3x–2)"
+          "fallback": "(3x − 2)"
         },
-        " units. Find its area in terms of ",
+        " அலகுகள் எனில் ",
         {
           "latex": "x",
           "fallback": "x"
         },
-        ". What will be the area if ",
+        " ஐப் பொருத்து அதன் பரப்பளவைக் காண்க. ",
         {
           "latex": "x = 20",
           "fallback": "x = 20"
         },
-        " units."
+        " எனில், அதன் பரப்பளவைக் காண்க."
       ]
     },
     "answerMath": [
@@ -19916,7 +19915,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The area of a rectangle is the product of its length and breadth.",
-          "ta": "English explanation (Tamil unchanged): The area of a rectangle is the product of its length and breadth."
+          "ta": "செவ்வகத்தின் நீளத்தையும் அகலத்தையும் பெருக்கினால் அதன் பரப்பளவு கிடைக்கும்."
         }
       },
       {
@@ -19927,7 +19926,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the difference-of-squares identity.",
-          "ta": "English explanation (Tamil unchanged): Apply the difference-of-squares identity."
+          "ta": "கூட்டுத்தொகையையும் வேறுபாட்டையும் பெருக்க, வர்க்கங்களின் வித்தியாச முற்றொருமையைப் பயன்படுத்துக."
         }
       },
       {
@@ -19946,12 +19945,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Simplify the expression for any valid ",
+            "கோவையைச் சுருக்கி ",
             {
               "latex": "x",
               "fallback": "x"
             },
-            "."
+            " ஐப் பொருத்துப் பரப்பளவை எழுதுக."
           ]
         }
       },
@@ -19974,12 +19973,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Evaluate it for ",
             {
               "latex": "x = 20",
-              "fallback": "x=20"
+              "fallback": "x = 20"
             },
-            "."
+            " எனப் பிரதியிட்டுப் பரப்பளவைக் கணக்கிடுக."
           ]
         }
       }
@@ -20016,32 +20014,31 @@ const records=[
         " is ?"
       ],
       "ta": [
-        "English-language question; Tamil version not changed. ",
         {
           "latex": "p \\left(x\\right)",
           "fallback": "p(x)"
         },
-        " is a polynomial of degree ",
+        " என்பது படி ",
         {
           "latex": "1",
           "fallback": "1"
         },
-        " and ",
+        "ஐக் கொண்ட ஒரு பல்லுறுப்புக் கோவை மற்றும் ",
         {
           "latex": "q \\left(x\\right)",
           "fallback": "q(x)"
         },
-        " is a polynomial of degree ",
+        " என்பது படி ",
         {
           "latex": "2",
           "fallback": "2"
         },
-        ". What kind of the polynomial ",
+        " ஐக் கொண்ட ஒரு பல்லுறுப்புக் கோவை எனில் ",
         {
           "latex": "p \\left(x\\right) \\times q \\left(x\\right)",
           "fallback": "p(x) × q(x)"
         },
-        " is ?"
+        " என்பது எவ்வகைப் பல்லுறுப்புக் கோவை?"
       ]
     },
     "answerMath": "A cubic polynomial (degree 3)",
@@ -20077,27 +20074,17 @@ const records=[
             " coefficient."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): A polynomial of degree ",
-            {
-              "latex": "1",
-              "fallback": "1"
-            },
-            " has a nonzero ",
+            "முதற்படிக் கோவையில் ",
             {
               "latex": "x",
               "fallback": "x"
             },
-            " coefficient, and one of degree ",
-            {
-              "latex": "2",
-              "fallback": "2"
-            },
-            " has a nonzero ",
+            " இன் கெழுவும், இரண்டாம்படிக் கோவையில் ",
             {
               "latex": "x^{2}",
               "fallback": "x²"
             },
-            " coefficient."
+            " இன் கெழுவும் பூச்சியமல்ல."
           ]
         }
       },
@@ -20109,7 +20096,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Multiplying their leading terms gives a nonzero cubic term.",
-          "ta": "English explanation (Tamil unchanged): Multiplying their leading terms gives a nonzero cubic term."
+          "ta": [
+            "உயர்ந்த படியுள்ள உறுப்புகளைப் பெருக்கும்போது பூச்சியமல்லாத ",
+            {
+              "latex": "x^{3}",
+              "fallback": "x³"
+            },
+            " உறுப்பு கிடைக்கும்."
+          ]
         }
       },
       {
@@ -20120,7 +20114,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Because ac is nonzero, the leading term cannot cancel.",
-          "ta": "English explanation (Tamil unchanged): Because ac is nonzero, the leading term cannot cancel."
+          "ta": [
+            "ac பூச்சியமல்ல. மற்ற உறுப்புகளின் படி மூன்றைவிடக் குறைவாக இருப்பதால் ",
+            {
+              "latex": "x^{3}",
+              "fallback": "x³"
+            },
+            " உறுப்பு நீங்காது. எனவே பெருக்கற்பலன் மூன்றாம்படிக் கோவை."
+          ]
         }
       }
     ]
@@ -40951,7 +40952,13 @@ const records=[
             },
             ", P(A) denotes the power set (the set of all subsets of A). Because n(A) = 2, set A has 2² = 4 subsets in total."
           ],
-          "ta": "ஒவ்வோர் உறுப்பையும் சேர்க்கலாம் அல்லது விடலாம். இரண்டு உறுப்புகளுக்கு மொத்தம் நான்கு உட்கணங்கள் கிடைக்கும்."
+          "ta": [
+            "ஒவ்வோர் உறுப்பையும் சேர்க்கலாம் அல்லது விடலாம். இரண்டு உறுப்புகளுக்கு மொத்தம் நான்கு உட்கணங்கள் கிடைக்கும். ",
+            {
+              "latex": "n[P(A)]=2^{n(A)}",
+              "fallback": "n[P(A)] = 2^{n(A)}"
+            }
+          ]
         }
       },
       {
@@ -41592,12 +41599,11 @@ const records=[
             " elements."
           ],
           "ta": [
-            "A இன் அனைத்து உட்கணங்களும் ",
+            "A இன் அனைத்து உட்கணங்களும் P(A) இன் உறுப்புகள். அவற்றின் எண்ணிக்கை இரண்டின் அடுக்காகக் கிடைக்கும். ",
             {
-              "latex": "P\\left(A\\right)",
-              "fallback": "P(A)"
-            },
-            " இன் உறுப்புகள். அவற்றின் எண்ணிக்கை இரண்டின் அடுக்காகக் கிடைக்கும்."
+              "latex": "n[P(A)]=2^{n(A)}",
+              "fallback": "n[P(A)] = 2^{n(A)}"
+            }
           ]
         }
       },
@@ -75471,6 +75477,24 @@ const texts={
     },
     " and the upper limit."
   ],
+  "முழு எண்களில் பூச்சியமும் அடங்கும். முதலில் அனுமதிக்கப்பட்ட n மதிப்புகளைத் தேர்ந்தெடுக்கவும். x < 15 என்பதால் 15 கிடைத்தால் அதைச் சேர்க்க முடியாது.": [
+    "முழு எண்களில் பூச்சியமும் அடங்கும். முதலில் அனுமதிக்கப்பட்ட ",
+    {
+      "latex": "n",
+      "fallback": "n"
+    },
+    " மதிப்புகளைத் தேர்ந்தெடுக்கவும். ",
+    {
+      "latex": "x < 15",
+      "fallback": "x < 15"
+    },
+    " என்பதால் ",
+    {
+      "latex": "15",
+      "fallback": "15"
+    },
+    " கிடைத்தால் அதைச் சேர்க்க முடியாது."
+  ],
   "The printed expression is four divided by the whole product 3n, not (4/3)n.": [
     "The printed expression is four divided by the whole product ",
     {
@@ -75484,6 +75508,24 @@ const texts={
     },
     "."
   ],
+  "பகுதியில் உள்ள 3 மற்றும் n இரண்டையும் முதலில் பெருக்க வேண்டும். அதன் பிறகே 4 ஐ அந்தப் பெருக்கற்பலனால் வகுக்க வேண்டும்.": [
+    "பகுதியில் உள்ள ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " மற்றும் ",
+    {
+      "latex": "n",
+      "fallback": "n"
+    },
+    " இரண்டையும் முதலில் பெருக்க வேண்டும். அதன் பிறகே ",
+    {
+      "latex": "4",
+      "fallback": "4"
+    },
+    " ஐ அந்தப் பெருக்கற்பலனால் வகுக்க வேண்டும்."
+  ],
   "The lower endpoint −5 is included, but the upper endpoint 5 is excluded.": [
     "The lower endpoint ",
     {
@@ -75496,6 +75538,31 @@ const texts={
       "fallback": "5"
     },
     " is excluded."
+  ],
+  "−5 அருகில் உள்ள சமக்குறியால் அந்த எல்லையைச் சேர்க்க வேண்டும். 5 அருகில் சமக்குறி இல்லாததால் அதற்கு முந்தைய முழுவில் நிறுத்த வேண்டும்.": [
+    {
+      "latex": "- 5",
+      "fallback": "−5"
+    },
+    " அருகில் உள்ள சமக்குறியால் அந்த எல்லையைச் சேர்க்க வேண்டும். ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " அருகில் சமக்குறி இல்லாததால் அதற்கு முந்தைய முழுவில் நிறுத்த வேண்டும்."
+  ],
+  "நான்கின் மடங்குகளில் நூற்றாண்டு ஆண்டுகளுக்குக் கூடுதல் விதி உண்டு. 1900 ஐ 400 ஆல் மீதியின்றி வகுக்க முடியாது.": [
+    "நான்கின் மடங்குகளில் நூற்றாண்டு ஆண்டுகளுக்குக் கூடுதல் விதி உண்டு. ",
+    {
+      "latex": "1900",
+      "fallback": "1900"
+    },
+    " ஐ ",
+    {
+      "latex": "400",
+      "fallback": "400"
+    },
+    " ஆல் மீதியின்றி வகுக்க முடியாது."
   ],
   "Each new direction (for example a different slope m) produces another line passing through P.": [
     "Each new direction (for example a different slope ",
@@ -75583,6 +75650,29 @@ const texts={
       "fallback": "30"
     },
     "."
+  ],
+  "ஒரே ஒரு பொது உறுப்பே வெட்டும் கணங்களுக்குப் போதுமானது. இங்கு 3, 6, 12, 24 ஒவ்வொன்றும் 24 இன் காரணியாகவும் 30 க்குக் குறைவான 3 இன் மடங்காகவும் உள்ளது.": [
+    "ஒரே ஒரு பொது உறுப்பே வெட்டும் கணங்களுக்குப் போதுமானது. இங்கு ",
+    {
+      "latex": "3, 6, 12, 24",
+      "fallback": "3, 6, 12, 24"
+    },
+    " ஒவ்வொன்றும் ",
+    {
+      "latex": "24",
+      "fallback": "24"
+    },
+    " இன் காரணியாகவும் ",
+    {
+      "latex": "30",
+      "fallback": "30"
+    },
+    " க்குக் குறைவான ",
+    {
+      "latex": "3",
+      "fallback": "3"
+    },
+    " இன் மடங்காகவும் உள்ளது."
   ],
   "The curly braces { } enclose the 5 shapes in the parent set S. Check which shapes in S have all 4 sides of equal length: both a square and a rhombus have 4 equal sides.": [
     "The curly braces { } enclose the ",
@@ -75681,6 +75771,28 @@ const texts={
     },
     " degrees for quadrilaterals."
   ],
+  "n பக்கங்களுள்ள பலகோணத்தின் உட்கோணக் கூடுதல் (n − 2) × 180°. மூன்று பக்கங்களுக்கு 180° கிடைக்கிறது. நான்கு பக்கங்களுக்கு 360° கிடைக்கிறது.": [
+    {
+      "latex": "n",
+      "fallback": "n"
+    },
+    " பக்கங்களுள்ள பலகோணத்தின் உட்கோணக் கூடுதல் ",
+    {
+      "latex": "\\left(n - 2\\right) \\times 180^{\\circ}",
+      "fallback": "(n − 2) × 180°"
+    },
+    ". மூன்று பக்கங்களுக்கு ",
+    {
+      "latex": "180^{\\circ}",
+      "fallback": "180°"
+    },
+    " கிடைக்கிறது. நான்கு பக்கங்களுக்கு ",
+    {
+      "latex": "360^{\\circ}",
+      "fallback": "360°"
+    },
+    " கிடைக்கிறது."
+  ],
   "When no element of S satisfies the condition, the subset is the empty (null) set, denoted by the symbol ∅ (or empty braces { }).": [
     "When no element of ",
     {
@@ -75711,6 +75823,23 @@ const texts={
       "fallback": "∅"
     },
     " inside braces would create a one-element set instead of an empty subset."
+  ],
+  "∅ என்பதை அடைப்புக்குறிக்குள் வைத்து {∅} என எழுதினால் ஓர் உறுப்பு உள்ள கணமாகிவிடும். எந்த வடிவமும் பொருந்தாதபோது ∅ என்று எழுதுக.": [
+    {
+      "latex": "\\varnothing",
+      "fallback": "∅"
+    },
+    " என்பதை அடைப்புக்குறிக்குள் வைத்து ",
+    {
+      "latex": "\\left\\{\\varnothing\\right\\}",
+      "fallback": "{∅}"
+    },
+    " என எழுதினால் ஓர் உறுப்பு உள்ள கணமாகிவிடும். எந்த வடிவமும் பொருந்தாதபோது ",
+    {
+      "latex": "\\varnothing",
+      "fallback": "∅"
+    },
+    " என்று எழுதுக."
   ],
   "Compare D with the given set C.": [
     "Compare ",
@@ -75753,6 +75882,33 @@ const texts={
     },
     "."
   ],
+  "D இன் வரையறையில் x < 5 என்பதால் 5 ஐச் சேர்க்க இயலாது. ஆனால் C இல் 5 உள்ளது. இந்த ஓர் உறுப்பே வேறுபாட்டைக் காட்டுகிறது.": [
+    {
+      "latex": "D",
+      "fallback": "D"
+    },
+    " இன் வரையறையில் ",
+    {
+      "latex": "x < 5",
+      "fallback": "x < 5"
+    },
+    " என்பதால் ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " ஐச் சேர்க்க இயலாது. ஆனால் ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " இல் ",
+    {
+      "latex": "5",
+      "fallback": "5"
+    },
+    " உள்ளது. இந்த ஓர் உறுப்பே வேறுபாட்டைக் காட்டுகிறது."
+  ],
   "Compare those members with Y; order does not matter in a set.": [
     "Compare those members with ",
     {
@@ -75773,6 +75929,14 @@ const texts={
       "fallback": "E"
     },
     ", so they are equal."
+  ],
+  "கணத்தில் உறுப்புகளை மாற்றிய வரிசையில் எழுதினாலும் கணம் மாறாது. L, I, F, E ஆகிய நான்கு எழுத்துகளும் இரண்டிலும் உள்ளன.": [
+    "கணத்தில் உறுப்புகளை மாற்றிய வரிசையில் எழுதினாலும் கணம் மாறாது. ",
+    {
+      "latex": "L, I, F, E",
+      "fallback": "L, I, F, E"
+    },
+    " ஆகிய நான்கு எழுத்துகளும் இரண்டிலும் உள்ளன."
   ],
   "List the positive divisors of 18.": [
     "List the positive divisors of ",
@@ -75813,6 +75977,19 @@ const texts={
     },
     ". Both endpoints are excluded by the strict signs, so the set has no elements."
   ],
+  "இருபுறமும் கண்டிப்பான சமனின்மை இருப்பதால் 1 அல்லது 2 ஐ எடுக்க இயலாது. அவற்றிற்கு இடையே வேறு இயல் எண்ணும் இல்லை.": [
+    "இருபுறமும் கண்டிப்பான சமனின்மை இருப்பதால் ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " அல்லது ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " ஐ எடுக்க இயலாது. அவற்றிற்கு இடையே வேறு இயல் எண்ணும் இல்லை."
+  ],
   "Even numbers are defined as multiples of 2. Requiring an even number that is not divisible by 2 is impossible.": [
     "Even numbers are defined as multiples of ",
     {
@@ -75826,6 +76003,18 @@ const texts={
     },
     " is impossible."
   ],
+  "2 இன் மடங்காக இருப்பதே இரட்டைப்படை எண்ணின் பண்பு. 2 ஆல் வகுபடாத ஓர் இரட்டைப்படை எண்ணைத் தேர்ந்தெடுக்க முடியாது.": [
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " இன் மடங்காக இருப்பதே இரட்டைப்படை எண்ணின் பண்பு. ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " ஆல் வகுபடாத ஓர் இரட்டைப்படை எண்ணைத் தேர்ந்தெடுக்க முடியாது."
+  ],
   "The braces enclose a genuine element, zero. The empty set has no elements, but {0} has exactly one element.": [
     "The braces enclose a genuine element, zero. The empty set has no elements, but ",
     {
@@ -75833,6 +76022,18 @@ const texts={
       "fallback": "{0}"
     },
     " has exactly one element."
+  ],
+  "{0} இல் பூச்சியமே ஓர் உறுப்பாக உள்ளது. ∅ இல் எந்த உறுப்பும் இல்லை. அடைப்புக்குறிக்குள் என்ன உள்ளது என்பதைக் கவனிக்கவும்.": [
+    {
+      "latex": "\\left\\{0\\right\\}",
+      "fallback": "{0}"
+    },
+    " இல் பூச்சியமே ஓர் உறுப்பாக உள்ளது. ",
+    {
+      "latex": "\\varnothing",
+      "fallback": "∅"
+    },
+    " இல் எந்த உறுப்பும் இல்லை. அடைப்புக்குறிக்குள் என்ன உள்ளது என்பதைக் கவனிக்கவும்."
   ],
   "Their common elements are a, f, and s.": [
     "Their common elements are ",
@@ -75859,6 +76060,14 @@ const texts={
       "fallback": "s"
     },
     " are in both; a nonempty intersection means overlapping."
+  ],
+  "வெட்டு வெற்றுக்கணமா எனப் பார்க்க அனைத்து உறுப்புகளும் சமமாக வேண்டியதில்லை. இங்கு a, f, s இரு கணங்களிலும் உள்ளன.": [
+    "வெட்டு வெற்றுக்கணமா எனப் பார்க்க அனைத்து உறுப்புகளும் சமமாக வேண்டியதில்லை. இங்கு ",
+    {
+      "latex": "a, f, s",
+      "fallback": "a, f, s"
+    },
+    " இரு கணங்களிலும் உள்ளன."
   ],
   "C contains only prime numbers greater than 2, so it excludes 2.": [
     {
@@ -75899,6 +76108,23 @@ const texts={
       "fallback": "2"
     },
     ", so the two sets cannot share an element."
+  ],
+  "2 ஐத் தவிர ஏனைய இரட்டைப்படை இயல் எண்கள் பகா எண்கள் அல்ல. C இன் நிபந்தனை 2 ஐ நீக்குவதால் பொது உறுப்பு கிடைக்காது.": [
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " ஐத் தவிர ஏனைய இரட்டைப்படை இயல் எண்கள் பகா எண்கள் அல்ல. ",
+    {
+      "latex": "C",
+      "fallback": "C"
+    },
+    " இன் நிபந்தனை ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " ஐ நீக்குவதால் பொது உறுப்பு கிடைக்காது."
   ],
   "In A = {a, {a, b}}, the outer curly braces { } enclose 2 elements: the single letter a and the entire inner set {a, b} treated as one object, so the cardinal number n(A) is 2.": [
     "In ",
@@ -75946,6 +76172,19 @@ const texts={
     },
     " as a separate element of A."
   ],
+  "உள் அடைப்புக்குறிகளிலுள்ள {a, b} முழுவதையும் ஒரே உறுப்பாகக் கருத வேண்டும். அதிலிருந்து b ஐ மட்டும் எடுத்து A இன் தனி உறுப்பாகப் பயன்படுத்த இயலாது.": [
+    "உள் அடைப்புக்குறிகளிலுள்ள ",
+    {
+      "latex": "\\left\\{a, b\\right\\}",
+      "fallback": "{a, b}"
+    },
+    " முழுவதையும் ஒரே உறுப்பாகக் கருத வேண்டும். அதிலிருந்து ",
+    {
+      "latex": "b",
+      "fallback": "b"
+    },
+    " ஐ மட்டும் எடுத்து A இன் தனி உறுப்பாகப் பயன்படுத்த இயலாது."
+  ],
   "The power set P(A) is the set whose elements are all the subsets of A, enclosed together inside outer curly braces { }.": [
     "The power set ",
     {
@@ -75971,6 +76210,14 @@ const texts={
       "fallback": "P(A)"
     },
     "."
+  ],
+  "அடுக்குக் கணத்தின் ஒவ்வோர் உறுப்பும் தானே ஒரு கணம். எனவே {a}, {b}, {a, b} ஆகியவற்றின் தனித்தனி அடைப்புக்குறிகளையும் வைத்திருக்க வேண்டும்.": [
+    "அடுக்குக் கணத்தின் ஒவ்வோர் உறுப்பும் தானே ஒரு கணம். எனவே ",
+    {
+      "latex": "\\left\\{a\\right\\}, \\left\\{b\\right\\}, \\left\\{a, b\\right\\}",
+      "fallback": "{a}, {b}, {a, b}"
+    },
+    " ஆகியவற்றின் தனித்தனி அடைப்புக்குறிகளையும் வைத்திருக்க வேண்டும்."
   ],
   "Group the subsets systematically by size: 1 empty subset (size 0), 3 singletons (size 1), 3 pairs (size 2), and 1 full set (size 3).": [
     "Group the subsets systematically by size: ",
@@ -76074,6 +76321,18 @@ const texts={
     },
     " distinct pairs cleanly."
   ],
+  "{p, q} மற்றும் {q, p} ஒரே உட்கணம். எழுத்து வரிசையில் முன்னோக்கிய இணைகளை மட்டும் எழுதினால் ஆறு வெவ்வேறு இணைகளும் கிடைக்கும்.": [
+    {
+      "latex": "\\left\\{p, q\\right\\}",
+      "fallback": "{p, q}"
+    },
+    " மற்றும் ",
+    {
+      "latex": "\\left\\{q, p\\right\\}",
+      "fallback": "{q, p}"
+    },
+    " ஒரே உட்கணம். எழுத்து வரிசையில் முன்னோக்கிய இணைகளை மட்டும் எழுதினால் ஆறு வெவ்வேறு இணைகளும் கிடைக்கும்."
+  ],
   "An empty set has no other subsets, so the power set P(E) contains exactly 1 element—namely ∅ inside curly braces {∅}.": [
     "An empty set has no other subsets, so the power set ",
     {
@@ -76125,6 +76384,19 @@ const texts={
     },
     " item (that empty box)."
   ],
+  "வெற்றுக்கணம் ∅ இல் உறுப்பு இல்லை. ஆனால் {∅} இல் வெற்றுக்கணமே ஓர் உறுப்பாக உள்ளது. இதுவே இங்கு அடுக்குக் கணம்.": [
+    "வெற்றுக்கணம் ",
+    {
+      "latex": "\\varnothing",
+      "fallback": "∅"
+    },
+    " இல் உறுப்பு இல்லை. ஆனால் ",
+    {
+      "latex": "\\left\\{\\varnothing\\right\\}",
+      "fallback": "{∅}"
+    },
+    " இல் வெற்றுக்கணமே ஓர் உறுப்பாக உள்ளது. இதுவே இங்கு அடுக்குக் கணம்."
+  ],
   "A proper subset of W is any subset except the full set W itself, so subtract 1 from the total number of subsets: 2³ − 1 = 8 − 1 = 7.": [
     "A proper subset of ",
     {
@@ -76165,6 +76437,14 @@ const texts={
       "fallback": "2^m − 1"
     },
     "."
+  ],
+  "அனைத்து உட்கணங்களிலும் முழுக் கணமான W மட்டுமே தகு உட்கணமாகாது. அதனால் மொத்தத்திலிருந்து ஒன்றைக் கழிக்க வேண்டும்.": [
+    "அனைத்து உட்கணங்களிலும் முழுக் கணமான ",
+    {
+      "latex": "W",
+      "fallback": "W"
+    },
+    " மட்டுமே தகு உட்கணமாகாது. அதனால் மொத்தத்திலிருந்து ஒன்றைக் கழிக்க வேண்டும்."
   ],
   "In X = {x² : x ∈ N, x² ≤ 100}, ∈ means “belongs to”, N is the set of natural numbers {1, 2, 3, …}, and ≤ means “less than or equal to”. The natural numbers whose squares are at most 100 are 1 through 10.": [
     "In ",
@@ -76251,6 +76531,34 @@ const texts={
       "fallback": "X"
     },
     "."
+  ],
+  "இயல் எண்கள் 1 இல் தொடங்கும். 10 இன் வர்க்கம் 100 என்பதால் அது சேரும். அடுத்த எண்ணான 11 இன் வர்க்கம் 121 என்பதால் அது சேராது.": [
+    "இயல் எண்கள் ",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    " இல் தொடங்கும். ",
+    {
+      "latex": "10",
+      "fallback": "10"
+    },
+    " இன் வர்க்கம் ",
+    {
+      "latex": "100",
+      "fallback": "100"
+    },
+    " என்பதால் அது சேரும். அடுத்த எண்ணான ",
+    {
+      "latex": "11",
+      "fallback": "11"
+    },
+    " இன் வர்க்கம் ",
+    {
+      "latex": "121",
+      "fallback": "121"
+    },
+    " என்பதால் அது சேராது."
   ],
   "If a finite set A has n(A) elements, then its power set P(A) (the set of all subsets of A) contains n[P(A)] = 2^{n(A)} elements.": [
     "If a finite set A has ",
@@ -76374,6 +76682,13 @@ const texts={
       "fallback": "8"
     },
     "."
+  ],
+  "256 ஐ இரண்டின் எட்டாம் அடுக்காக எழுதினால் இருபுறமும் அடிமானம் ஒன்றாகிறது. எனவே அவற்றின் அடுக்குக்குறிகளும் சமமாக வேண்டும்.": [
+    {
+      "latex": "256",
+      "fallback": "256"
+    },
+    " ஐ இரண்டின் எட்டாம் அடுக்காக எழுதினால் இருபுறமும் அடிமானம் ஒன்றாகிறது. எனவே அவற்றின் அடுக்குக்குறிகளும் சமமாக வேண்டும்."
   ],
   "Rewrite the reciprocal as a negative power; dividing by x squared is the same as multiplying by x to the power minus two, wherever x is nonzero.": [
     "Rewrite the reciprocal as a negative power; dividing by ",

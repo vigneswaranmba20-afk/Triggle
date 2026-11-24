@@ -85,13 +85,19 @@ async function sample(page, base, id, width) {
   }
 }
 
-async function checkEnglishExercise(page, base, id, verify) {
+async function checkExerciseLanguages(page, base, id, verify) {
   await load(page, base, id);
   try {
     for (const language of ['en', 'ta']) {
       await page.locator(language === 'en' ? '#langEn' : '#langTa').click();
       assert.equal(await page.locator('html').getAttribute('lang'), language);
-      if (language === 'ta') assert.equal(await page.locator('#questionText').getAttribute('lang'), 'en');
+      if (language === 'ta') {
+        const prompt = page.locator('#questionText');
+        if (id.startsWith('g9-ch1-ex1.2-')) {
+          assert.equal(await prompt.getAttribute('lang'), null);
+          assert.match(await prompt.innerText(), /\p{Script=Tamil}/u);
+        } else assert.equal(await prompt.getAttribute('lang'), 'en');
+      }
       assert.equal(await page.locator('[data-math-error]').count(), 0, id);
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), id + ' fits the page');
       await verify(`${id} in ${language} at ${page.viewportSize().width}px`);
@@ -154,7 +160,7 @@ async function coefficientConclusions(page, base) {
 
 async function setLanguageAndStatistics(page, base) {
   for (const id of ['g9-ch1-ex1.2-q7', 'g9-ch1-ex1.2-q10-i']) {
-    await checkEnglishExercise(page, base, id, async name => {
+    await checkExerciseLanguages(page, base, id, async name => {
       const exponent = page.locator('#stepsList .step-reason math msup').filter({ hasText: '2n(A)' });
       assert.equal(await exponent.count(), 1, name + ' typesets the power-set exponent in the explanation');
       const prose = await page.locator('#stepsList .step-reason').evaluateAll(nodes => nodes.flatMap(node =>
@@ -167,7 +173,7 @@ async function setLanguageAndStatistics(page, base) {
     ['g9-ch8-ex8.3-q5', 'The modal class is 20–30', 'The estimated mode is 24 marks', '24 marks', ['f_1', 'f_0', 'f_2']],
   ];
   for (const [id, interval, result, answer, symbols] of stats) {
-    await checkEnglishExercise(page, base, id, async name => {
+    await checkExerciseLanguages(page, base, id, async name => {
       const reasons = page.locator('#stepsList .step-reason');
       const prose = await reasons.evaluateAll(nodes => nodes.map(node => [...node.childNodes]
         .map(child => child.dataset?.mathFallback || child.textContent).join('')));

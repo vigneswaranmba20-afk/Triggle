@@ -25,7 +25,7 @@ for(const id of ids){
  assert(q.steps.every(step=>/[\u0B80-\u0BFF]/u.test(step.ta)),id+' Tamil explanations');
  assert(q.q.en&&q.answer&&q.steps.length>=2,'Complete English working '+id);
  const why=ctx.window.TriggleWhyStepG9.hints[id];
- assert(why&&why.en&&!why.ta,'English-only Why-step bridge '+id);
+ assert(why&&why.en&&why.ta,'Bilingual Why-step bridge '+id);
  assert(ctx.window.TriggleDifficulty.get(q)?.grade===9,'Difficulty metadata '+id);
 }
 assert.equal(new Set(items.map(x=>x.id)).size,items.length,'No duplicate Grade 9 IDs');
