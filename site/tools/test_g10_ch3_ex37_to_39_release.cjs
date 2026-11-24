@@ -48,7 +48,11 @@ const render=notation.window.TriggleNotation.render;
 for(const row of allEx37To39){
   assert.equal(row.edition,'2025',row.id+' edition');
   assert.equal(row.translationReview,'pending',row.id+' translationReview');
-  assert(!row.q.ta,row.id+' must not invent unreviewed Tamil text');
+  if(['3.7','3.8'].includes(row.exercise)){
+    assert(/[அ-ஹ]/.test(row.q.ta)&&row.steps.every(s=>/[அ-ஹ]/.test(s.ta)),row.id+' reviewed Tamil question and reasons');
+  }else{
+    assert(!row.q.ta,row.id+' no unreviewed Tamil question');
+  }
   assert(row.q.en.length>15,row.id+' question length');
   assert(row.steps.length>=2,row.id+' step count');
   assert(row.steps.every(s=>s.math?.latex&&s.math?.fallback===s.eq),row.id+' step math fallback matches eq');
@@ -56,9 +60,19 @@ for(const row of allEx37To39){
     const out=render(s.math);
     assert(!out.includes('data-math-error')&&out.includes('<math')&&out.includes('katex-html'),row.id+' valid step KaTeX');
   }
-  const ansOut=render(row.answerMath);
-  assert(!ansOut.includes('data-math-error')&&ansOut.includes('<math')&&ansOut.includes('katex-html'),row.id+' valid answer KaTeX');
-  assert.equal(row.answerMath.fallback,row.answer,row.id+' answerMath fallback matches answer');
+  const english=row.answerMath.en || row.answerMath;
+  const englishParts=Array.isArray(english)?english:[english];
+  const fallback=englishParts.map(part=>typeof part==='string'?part:part.fallback).join('');
+  assert.equal(fallback,row.answer,row.id+' English accessible answer matches the canonical answer');
+  for(const answer of [english,row.answerMath.ta].filter(Boolean)){
+    const parts=Array.isArray(answer)?answer:[answer];
+    assert(parts.length>0,row.id+' nonempty answer');
+    for(const part of parts){
+      if(typeof part==='string'){assert(part.trim(),row.id+' answer text');continue;}
+      const html=render(part);
+      assert(!html.includes('data-math-error')&&html.includes('<math')&&html.includes('katex-html'),row.id+' typeset answer');
+    }
+  }
   for(const seg of (row.questionMath?.en||[])){
     if(typeof seg==='object'&&seg){
       const qOut=render(seg);

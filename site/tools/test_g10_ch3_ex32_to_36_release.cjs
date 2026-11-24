@@ -58,9 +58,19 @@ for(const row of allEx32To36){
     const out=render(s.math);
     assert(!out.includes('data-math-error')&&out.includes('<math')&&out.includes('katex-html'),row.id+' valid step KaTeX');
   }
-  const ansOut=render(row.answerMath);
-  assert(!ansOut.includes('data-math-error')&&ansOut.includes('<math')&&ansOut.includes('katex-html'),row.id+' valid answer KaTeX');
-  assert.equal(row.answerMath.fallback,row.answer,row.id+' answerMath fallback matches answer');
+  const english=row.answerMath.en || row.answerMath;
+  const englishParts=Array.isArray(english)?english:[english];
+  const fallback=englishParts.map(part=>typeof part==='string'?part:part.fallback).join('');
+  assert.equal(fallback,row.answer,row.id+' English accessible answer matches the canonical answer');
+  for(const answer of [english,row.answerMath.ta].filter(Boolean)){
+    const parts=Array.isArray(answer)?answer:[answer];
+    assert(parts.length>0,row.id+' nonempty answer');
+    for(const part of parts){
+      if(typeof part==='string'){assert(part.trim(),row.id+' answer text');continue;}
+      const html=render(part);
+      assert(!html.includes('data-math-error')&&html.includes('<math')&&html.includes('katex-html'),row.id+' typeset answer');
+    }
+  }
   for(const seg of (row.questionMath?.en||[])){
     if(typeof seg==='object'&&seg){
       const qOut=render(seg);
