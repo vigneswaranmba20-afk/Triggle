@@ -28564,42 +28564,12 @@ const records=[
         "oC. Find the mean temperature of the week."
       ],
       "ta": [
-        "English-language question; Tamil version pending. In a week, temperature of a certain place is measured during winter are as follows ",
+        "ஓர் இடத்தின் ஒரு வாரக் குளிர்கால வெப்பநிலை ",
         {
-          "latex": "26",
-          "fallback": "26"
+          "latex": "26^{\\circ} C, 24^{\\circ} C, 28^{\\circ} C, 31^{\\circ} C, 30^{\\circ} C, 26^{\\circ} C, 24^{\\circ} C",
+          "fallback": "26°C, 24°C, 28°C, 31°C, 30°C, 26°C, 24°C"
         },
-        "oC, ",
-        {
-          "latex": "24",
-          "fallback": "24"
-        },
-        "oC, ",
-        {
-          "latex": "28",
-          "fallback": "28"
-        },
-        "oC, ",
-        {
-          "latex": "31",
-          "fallback": "31"
-        },
-        "oC, ",
-        {
-          "latex": "30",
-          "fallback": "30"
-        },
-        "oC, ",
-        {
-          "latex": "26",
-          "fallback": "26"
-        },
-        "oC, ",
-        {
-          "latex": "24",
-          "fallback": "24"
-        },
-        "oC. Find the mean temperature of the week."
+        " எனக் கண்டறியப்பட்டது. அந்த இடத்தின் அவ்வாரத்திற்கான சராசரி வெப்பநிலையைக் காண்க."
       ]
     },
     "answerMath": {
@@ -28615,7 +28585,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the seven daily temperatures.",
-          "ta": "English explanation (Tamil version pending): Add the seven daily temperatures."
+          "ta": "ஏழு நாள்களின் வெப்பநிலைகளையும் கூட்டுக."
         }
       },
       {
@@ -28626,7 +28596,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide by the seven observations.",
-          "ta": "English explanation (Tamil version pending): Divide by the seven observations."
+          "ta": "மொத்தத்தை ஏழால் வகுத்துச் சராசரியைக் காண்க."
         }
       },
       {
@@ -28636,7 +28606,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Include the correct temperature unit.",
-          "ta": "English explanation (Tamil version pending): Include the correct temperature unit."
+          "ta": [
+            "விடையுடன் வெப்பநிலையின் அலகான ",
+            {
+              "latex": "^{\\circ} C",
+              "fallback": "°C"
+            },
+            " ஐ எழுதுக."
+          ]
         }
       }
     ]
@@ -28668,27 +28645,32 @@ const records=[
         " respectively. Find the weight of the fourth member."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The mean weight of ",
+        "ஒரு குடும்பத்தில் உள்ள ",
         {
           "latex": "4",
           "fallback": "4"
         },
-        " members of a family is ",
+        " நபர்களின் எடைகளின் சராசரி ",
         {
-          "latex": "60\\,\\mathrm{kg}",
-          "fallback": "60kg"
+          "latex": "60",
+          "fallback": "60"
         },
-        ".Three of them have the weight ",
+        " கி.கி. அவர்களில் மூவரின் எடைகள் ",
         {
-          "latex": "56\\,\\mathrm{kg}, 68\\,\\mathrm{kg}",
-          "fallback": "56kg, 68kg"
+          "latex": "56",
+          "fallback": "56"
         },
-        " and ",
+        " கி.கி, ",
         {
-          "latex": "72\\,\\mathrm{kg}",
-          "fallback": "72kg"
+          "latex": "68",
+          "fallback": "68"
         },
-        " respectively. Find the weight of the fourth member."
+        " கி.கி மற்றும் ",
+        {
+          "latex": "72",
+          "fallback": "72"
+        },
+        " கி.கி எனில் நான்காமவரின் எடையைக் காண்க."
       ]
     },
     "answerMath": {
@@ -28704,7 +28686,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use mean × count to obtain total weight.",
-          "ta": "English explanation (Tamil version pending): Use mean × count to obtain total weight."
+          "ta": "சராசரி எடையை நபர்களின் எண்ணிக்கையால் பெருக்கி மொத்த எடையைக் காண்க."
         }
       },
       {
@@ -28715,7 +28697,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the weights of the three known members.",
-          "ta": "English explanation (Tamil version pending): Add the weights of the three known members."
+          "ta": "எடை தெரிந்த மூவரின் எடைகளையும் கூட்டுக."
         }
       },
       {
@@ -28726,7 +28708,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Subtract to obtain the fourth member's weight.",
-          "ta": "English explanation (Tamil version pending): Subtract to obtain the fourth member's weight."
+          "ta": "மொத்த எடையிலிருந்து அந்தக் கூட்டுத்தொகையைக் கழித்தால் நான்காமவரின் எடை கிடைக்கும்."
         }
       }
     ]
@@ -28778,62 +28760,77 @@ const records=[
         " marks. Find the mean of their score."
       ],
       "ta": [
-        "English-language question; Tamil version pending. In a class test in mathematics, ",
+        "ஒரு வகுப்பில் கணித அலகுத் தேர்வில், ",
         {
           "latex": "10",
           "fallback": "10"
         },
-        " students scored ",
+        " மாணவர்கள் ",
         {
           "latex": "75",
           "fallback": "75"
         },
-        " marks, ",
+        " மதிப்பெண், ",
         {
           "latex": "12",
           "fallback": "12"
         },
-        " students scored ",
+        " மாணவர்கள் ",
         {
           "latex": "60",
           "fallback": "60"
         },
-        " marks, ",
+        " மதிப்பெண், ",
         {
           "latex": "8",
           "fallback": "8"
         },
-        " students scored ",
+        " மாணவர்கள் ",
         {
           "latex": "40",
           "fallback": "40"
         },
-        " marks and ",
+        " மதிப்பெண் மற்றும் ",
         {
           "latex": "3",
           "fallback": "3"
         },
-        " students scored ",
+        " மாணவர்கள் ",
         {
           "latex": "30",
           "fallback": "30"
         },
-        " marks. Find the mean of their score."
+        " மதிப்பெண் பெற்றனர் எனில் மொத்தத்தில் சராசரி மதிப்பெண் என்ன?"
       ]
     },
-    "answerMath": [
-      {
-        "latex": "\\dfrac{1880}{33} \\approx 56.97",
-        "fallback": "[[1880|33]] ≈ 56.97",
-        "display": true
-      },
-      " marks (about ",
-      {
-        "latex": "57",
-        "fallback": "57"
-      },
-      ")"
-    ],
+    "answerMath": {
+      "en": [
+        {
+          "latex": "\\dfrac{1880}{33} \\approx 56.97",
+          "fallback": "[[1880|33]] ≈ 56.97",
+          "display": true
+        },
+        " marks (about ",
+        {
+          "latex": "57",
+          "fallback": "57"
+        },
+        ")"
+      ],
+      "ta": [
+        {
+          "latex": "\\dfrac{1880}{33} \\approx 56.97",
+          "fallback": "[[1880|33]] ≈ 56.97",
+          "display": true
+        },
+        " மதிப்பெண்கள் (தோராயமாக ",
+        {
+          "latex": "57",
+          "fallback": "57"
+        },
+        ")"
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -28843,7 +28840,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the frequencies of students.",
-          "ta": "English explanation (Tamil version pending): Add the frequencies of students."
+          "ta": "ஒவ்வொரு மதிப்பெண்ணையும் பெற்ற மாணவர்களின் எண்ணிக்கைகளைக் கூட்டுக."
         }
       },
       {
@@ -28854,7 +28851,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Multiply each score by its frequency and add.",
-          "ta": "English explanation (Tamil version pending): Multiply each score by its frequency and add."
+          "ta": "ஒவ்வொரு மதிப்பெண்ணையும் அதன் நிகழ்வெண்ணால் பெருக்கி, பெருக்கற்பலன்களைக் கூட்டுக."
         }
       },
       {
@@ -28873,7 +28870,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Divide total marks by total students.",
-          "ta": "English explanation (Tamil version pending): Divide total marks by total students."
+          "ta": "மொத்த மதிப்பெண்ணை மொத்த மாணவர் எண்ணிக்கையால் வகுக்கவும்."
         }
       },
       {
@@ -28899,17 +28896,22 @@ const records=[
             " is the correctly rounded two-decimal value."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The textbook answer key reports ",
+            "பாடநூல் விடையில் ",
             {
               "latex": "56.96",
               "fallback": "56.96"
             },
-            " or approximately ",
+            " அல்லது தோராயமாக ",
             {
-              "latex": "57;\\quad 56.97",
-              "fallback": "57; 56.97"
+              "latex": "57",
+              "fallback": "57"
             },
-            " is the correctly rounded two-decimal value."
+            " என உள்ளது. இரண்டு தசம இடங்களுக்குச் சரியாக முழுமைப்படுத்தினால் ",
+            {
+              "latex": "56.97",
+              "fallback": "56.97"
+            },
+            " கிடைக்கும்."
           ]
         }
       }
@@ -28962,12 +28964,17 @@ const records=[
         "\nFind the mean."
       ],
       "ta": [
-        "English-language question; Tamil version pending. In a research laboratory scientists treated ",
+        "ஓர் அறிவியல் ஆய்வகத்தில் நுரையீரல் புற்றுநோயால் பாதிக்கப்பட்ட ",
         {
           "latex": "6",
           "fallback": "6"
         },
-        " mice with lung cancer using natural medicine. Ten days later, they measured the volume of the tumor in each mouse and given the results in the table.\nMouse marking ",
+        " எல்களுக்கு இயற்கை மருந்துகளைக் கொடுத்து, ",
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        " நாள்களுக்குப் பிறகு அவற்றின் கட்டிகளின் கன அளவுகள் அளவிடப்பட்டன. சராசரி கன அளவைக் காண்க.\nஎலியின் எண்: ",
         {
           "latex": "1",
           "fallback": "1"
@@ -28997,12 +29004,36 @@ const records=[
           "latex": "6",
           "fallback": "6"
         },
-        "\nTumor ",
+        "\nகட்டியின் கன அளவு (மிமீ³): ",
         {
-          "latex": "\\text{Volume} \\left(\\mathrm{mm} 3\\right) 145 148 142 141 139 140",
-          "fallback": "Volume(mm3) 145 148 142 141 139 140"
+          "latex": "145",
+          "fallback": "145"
         },
-        "\nFind the mean."
+        " ",
+        {
+          "latex": "148",
+          "fallback": "148"
+        },
+        " ",
+        {
+          "latex": "142",
+          "fallback": "142"
+        },
+        " ",
+        {
+          "latex": "141",
+          "fallback": "141"
+        },
+        " ",
+        {
+          "latex": "139",
+          "fallback": "139"
+        },
+        " ",
+        {
+          "latex": "140",
+          "fallback": "140"
+        }
       ]
     },
     "answerMath": {
@@ -29018,7 +29049,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Read the six measurements in cubic millimetres.",
-          "ta": "English explanation (Tamil version pending): Read the six measurements in cubic millimetres."
+          "ta": "கன மில்லிமீட்டரில் கொடுக்கப்பட்ட ஆறு அளவுகளையும் படிக்கவும்."
         }
       },
       {
@@ -29029,7 +29060,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the values.",
-          "ta": "English explanation (Tamil version pending): Add the values."
+          "ta": "அந்த ஆறு அளவுகளையும் கூட்டுக."
         }
       },
       {
@@ -29040,7 +29071,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide by the six mice.",
-          "ta": "English explanation (Tamil version pending): Divide by the six mice."
+          "ta": "மொத்தத்தை எலிகளின் எண்ணிக்கையான ஆறால் வகுக்கவும்."
         }
       }
     ]
@@ -29096,17 +29127,17 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. If the mean of the following data is ",
+        "கீழ்க்காணும் பரவலின் சராசரி ",
         {
           "latex": "20.2",
           "fallback": "20.2"
         },
-        ", then find the value of ",
+        " எனில் ",
         {
           "latex": "p",
           "fallback": "p"
         },
-        "\nMarks ",
+        " இன் மதிப்பைக் காண்க.\nமதிப்பெண்கள்: ",
         {
           "latex": "10",
           "fallback": "10"
@@ -29131,7 +29162,7 @@ const records=[
           "latex": "30",
           "fallback": "30"
         },
-        "\nNo. of students ",
+        "\nமாணவர்களின் எண்ணிக்கை: ",
         {
           "latex": "6",
           "fallback": "6"
@@ -29156,7 +29187,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The total number of students is the sum of the frequencies.",
-          "ta": "English explanation (Tamil version pending): The total number of students is the sum of the frequencies."
+          "ta": "நிகழ்வெண்களின் கூடுதலே மொத்த மாணவர் எண்ணிக்கை."
         }
       },
       {
@@ -29167,7 +29198,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Compute the weighted total of marks.",
-          "ta": "English explanation (Tamil version pending): Compute the weighted total of marks."
+          "ta": "ஒவ்வொரு மதிப்பெண்ணையும் அதன் நிகழ்வெண்ணால் பெருக்கிக் கூட்டி மொத்த மதிப்பெண்ணைக் காண்க."
         }
       },
       {
@@ -29178,7 +29209,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use the given mean to set up an equation.",
-          "ta": "English explanation (Tamil version pending): Use the given mean to set up an equation."
+          "ta": "கொடுக்கப்பட்ட சராசரியைப் பயன்படுத்திச் சமன்பாடு அமைக்கவும்."
         }
       },
       {
@@ -29202,17 +29233,17 @@ const records=[
             " marks."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Cross-multiply and solve for the missing frequency. The result means ",
+            "குறுக்குப் பெருக்கல் செய்து தெரியாத நிகழ்வெண்ணைக் காண்க. கிடைக்கும் விடை ",
             {
               "latex": "20",
               "fallback": "20"
             },
-            " students scored ",
+            " மாணவர்கள் தலா ",
             {
               "latex": "20",
               "fallback": "20"
             },
-            " marks."
+            " மதிப்பெண் பெற்றதைக் குறிக்கிறது."
           ]
         }
       },
@@ -29224,7 +29255,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Verify by substitution.",
-          "ta": "English explanation (Tamil version pending): Verify by substitution."
+          "ta": "கிடைத்த மதிப்பைப் பிரதியிட்டுச் சரிபார்க்கவும்."
         }
       }
     ]
@@ -29295,37 +29326,37 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. In the class, weight of students is measured for the class records. Calculate mean weight of the class students using Direct method.\nWeight in ",
+        "வகுப்பில் உள்ள மாணவர்களின் எடை வகுப்பறை பதிவேட்டிற்காக எடுக்கப்பட்டது. அவ்வகுப்பின் சராசரி எடையை நேரடி முறையின் மூலம் காண்க.\nஎடை (கி.கி): ",
         {
-          "latex": "\\mathrm{kg} 15 - 25",
-          "fallback": "kg 15-25"
+          "latex": "15 - 25",
+          "fallback": "15–25"
         },
         " ",
         {
           "latex": "25 - 35",
-          "fallback": "25-35"
+          "fallback": "25–35"
         },
         " ",
         {
           "latex": "35 - 45",
-          "fallback": "35-45"
+          "fallback": "35–45"
         },
         " ",
         {
           "latex": "45 - 55",
-          "fallback": "45-55"
+          "fallback": "45–55"
         },
         " ",
         {
           "latex": "55 - 65",
-          "fallback": "55-65"
+          "fallback": "55–65"
         },
         " ",
         {
           "latex": "65 - 75",
-          "fallback": "65-75"
+          "fallback": "65–75"
         },
-        "\nNo. of students ",
+        "\nமாணவர்களின் எண்ணிக்கை: ",
         {
           "latex": "4",
           "fallback": "4"
@@ -29370,7 +29401,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the midpoints of the six weight classes.",
-          "ta": "English explanation (Tamil version pending): Find the midpoints of the six weight classes."
+          "ta": "ஆறு பிரிவுகளின் நடுமதிப்புகளைக் காண்க."
         }
       },
       {
@@ -29381,7 +29412,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add frequencies to find the total count.",
-          "ta": "English explanation (Tamil version pending): Add frequencies to find the total count."
+          "ta": "நிகழ்வெண்களைக் கூட்டி மொத்த மாணவர் எண்ணிக்கையைக் காண்க."
         }
       },
       {
@@ -29392,7 +29423,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Multiply frequency by midpoint and sum.",
-          "ta": "English explanation (Tamil version pending): Multiply frequency by midpoint and sum."
+          "ta": "ஒவ்வொரு நடுமதிப்பையும் அதன் நிகழ்வெண்ணால் பெருக்கி அவற்றைக் கூட்டுக."
         }
       },
       {
@@ -29403,7 +29434,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the direct mean formula.",
-          "ta": "English explanation (Tamil version pending): Apply the direct mean formula."
+          "ta": "நேரடி முறைச் சூத்திரத்தைப் பயன்படுத்திச் சராசரி எடையைக் காண்க."
         }
       }
     ]
@@ -29464,32 +29495,32 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Calculate the mean of the following distribution using Assumed Mean Method:\nClass Interval ",
+        "கீழ்க்காணும் பரவலின் சராசரியை ஊகச் சராசரி முறையில் காண்க.\nபிரிவு இடைவெளி: ",
         {
           "latex": "0 - 10",
-          "fallback": "0-10"
+          "fallback": "0–10"
         },
         " ",
         {
           "latex": "10 - 20",
-          "fallback": "10-20"
+          "fallback": "10–20"
         },
         " ",
         {
           "latex": "20 - 30",
-          "fallback": "20-30"
+          "fallback": "20–30"
         },
         " ",
         {
           "latex": "30 - 40",
-          "fallback": "30-40"
+          "fallback": "30–40"
         },
         " ",
         {
           "latex": "40 - 50",
-          "fallback": "40-50"
+          "fallback": "40–50"
         },
-        "\nFrequency ",
+        "\nநிகழ்வெண்: ",
         {
           "latex": "5",
           "fallback": "5"
@@ -29530,7 +29561,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the class midpoints and frequencies.",
-          "ta": "English explanation (Tamil version pending): Find the class midpoints and frequencies."
+          "ta": "ஒவ்வொரு பிரிவின் நடுமதிப்பையும் அதற்குரிய நிகழ்வெண்ணையும் எழுதுக."
         }
       },
       {
@@ -29554,17 +29585,16 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Choose ",
             {
               "latex": "25",
               "fallback": "25"
             },
-            " as the assumed mean. Each deviation tells how far a midpoint is above or below ",
+            " ஐ ஊகச் சராசரியாக எடுத்துக்கொள்க. ஒரு நடுமதிப்பு ",
             {
               "latex": "25",
               "fallback": "25"
             },
-            "."
+            " ஐவிட எவ்வளவு அதிகம் அல்லது குறைவு என்பதை விலக்கம் குறிக்கும்."
           ]
         }
       },
@@ -29576,7 +29606,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find total frequency and total weighted deviation.",
-          "ta": "English explanation (Tamil version pending): Find total frequency and total weighted deviation."
+          "ta": "நிகழ்வெண்களின் கூடுதலையும் நிகழ்வெண்ணால் பெருக்கிய விலக்கங்களின் கூடுதலையும் காண்க."
         }
       },
       {
@@ -29600,12 +29630,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Find the average deviation by dividing the weighted total by the total frequency. Add it to ",
+            "விலக்கங்களின் எடையிட்ட கூடுதலை மொத்த நிகழ்வெண்ணால் வகுத்து, அந்தச் சராசரி விலக்கத்தை ",
             {
               "latex": "25",
               "fallback": "25"
             },
-            " to get an estimated mean of ",
+            " உடன் கூட்டுக. தோராயச் சராசரி ",
             {
               "latex": "29.29",
               "fallback": "29.29"
@@ -29682,37 +29712,37 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the Arithmetic Mean of the following data using Step Deviation Method:\nAge ",
+        "கீழ்க்காணும் பரவலின் சராசரியைப் படி விலக்க முறையில் காண்க.\nவயது: ",
         {
           "latex": "15 - 19",
-          "fallback": "15-19"
+          "fallback": "15–19"
         },
         " ",
         {
           "latex": "20 - 24",
-          "fallback": "20-24"
+          "fallback": "20–24"
         },
         " ",
         {
           "latex": "25 - 29",
-          "fallback": "25-29"
+          "fallback": "25–29"
         },
         " ",
         {
           "latex": "30 - 34",
-          "fallback": "30-34"
+          "fallback": "30–34"
         },
         " ",
         {
           "latex": "35 - 39",
-          "fallback": "35-39"
+          "fallback": "35–39"
         },
         " ",
         {
           "latex": "40 - 44",
-          "fallback": "40-44"
+          "fallback": "40–44"
         },
-        "\nNo. of persons ",
+        "\nஆட்களின் எண்ணிக்கை: ",
         {
           "latex": "4",
           "fallback": "4"
@@ -29744,14 +29774,24 @@ const records=[
         }
       ]
     },
-    "answerMath": [
-      {
-        "latex": "\\dfrac{610}{21} \\approx 29.05",
-        "fallback": "[[610|21]] ≈ 29.05",
-        "display": true
-      },
-      " years"
-    ],
+    "answerMath": {
+      "en": [
+        {
+          "latex": "\\dfrac{610}{21} \\approx 29.05",
+          "fallback": "[[610|21]] ≈ 29.05",
+          "display": true
+        },
+        " years"
+      ],
+      "ta": [
+        {
+          "latex": "\\dfrac{610}{21} \\approx 29.05",
+          "fallback": "[[610|21]] ≈ 29.05",
+          "display": true
+        },
+        " ஆண்டுகள்"
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -29774,17 +29814,16 @@ const records=[
             " in signed steps of five years."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Choose ",
             {
               "latex": "27",
               "fallback": "27"
             },
-            " years as the assumed mean. Measure each midpoint’s deviation from ",
+            " ஆண்டுகளை ஊகச் சராசரியாகக் கொள்க. ஒவ்வொரு நடுமதிப்பிலிருந்தும் ",
             {
               "latex": "27",
               "fallback": "27"
             },
-            " in signed steps of five years."
+            " ஐக் கழித்து ஐந்தால் வகுத்து, குறியுடன் படி விலக்கத்தை எழுதுக."
           ]
         }
       },
@@ -29796,7 +29835,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find total count and weighted deviations.",
-          "ta": "English explanation (Tamil version pending): Find total count and weighted deviations."
+          "ta": "மொத்த நிகழ்வெண்ணையும் நிகழ்வெண்ணால் பெருக்கிய படி விலக்கங்களின் கூடுதலையும் காண்க."
         }
       },
       {
@@ -29823,17 +29862,17 @@ const records=[
             " years."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Multiply the average deviation by the five-year class width to convert it back to years. Add it to ",
+            "சராசரிப் படி விலக்கத்தைப் பிரிவு அகலமான ஐந்தால் பெருக்கி ஆண்டுகளாக மாற்றுக. அதை ",
             {
               "latex": "27",
               "fallback": "27"
             },
-            " to estimate the mean age at ",
+            " உடன் கூட்டினால் தோராயச் சராசரி வயது ",
             {
               "latex": "29.05",
               "fallback": "29.05"
             },
-            " years."
+            " ஆண்டுகள்."
           ]
         }
       },
@@ -29845,7 +29884,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Check using the direct weighted total.",
-          "ta": "English explanation (Tamil version pending): Check using the direct weighted total."
+          "ta": "நேரடி முறையில் எடையிட்ட கூடுதலைப் பயன்படுத்திச் சரிபார்க்கவும்."
         }
       }
     ]
@@ -29862,7 +29901,7 @@ const records=[
         "."
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the median of the given values : ",
+        "கீழ்க்காணும் தரவுகளுக்கு இடைநிலை அளவு காண்க. ",
         {
           "latex": "47, 53, 62, 71, 83, 21, 43, 47, 41",
           "fallback": "47, 53, 62, 71, 83, 21, 43, 47, 41"
@@ -29883,7 +29922,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Arrange all nine values in ascending order.",
-          "ta": "English explanation (Tamil version pending): Arrange all nine values in ascending order."
+          "ta": "ஒன்பது மதிப்புகளையும் ஏறு வரிசையில் எழுதுக."
         }
       },
       {
@@ -29897,7 +29936,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "For nine values, the median is the fifth value.",
-          "ta": "English explanation (Tamil version pending): For nine values, the median is the fifth value."
+          "ta": "ஒன்பது மதிப்புகளுக்கு நடுவிலுள்ள ஐந்தாவது மதிப்பே இடைநிலை அளவு."
         }
       },
       {
@@ -29907,7 +29946,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Read the fifth value.",
-          "ta": "English explanation (Tamil version pending): Read the fifth value."
+          "ta": "வரிசையில் ஐந்தாவது மதிப்பைக் காண்க."
         }
       }
     ]
@@ -29923,11 +29962,12 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the Median of the given data: ",
+        "கீழ்க்காணும் தரவுகளுக்கு இடைநிலை அளவு காண்க. ",
         {
           "latex": "36, 44, 86, 31, 37, 44, 86, 35, 60, 51",
           "fallback": "36, 44, 86, 31, 37, 44, 86, 35, 60, 51"
-        }
+        },
+        "."
       ]
     },
     "answerMath": {
@@ -29943,7 +29983,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Put the ten measurements in ascending order.",
-          "ta": "English explanation (Tamil version pending): Put the ten measurements in ascending order."
+          "ta": "பத்து மதிப்புகளையும் ஏறு வரிசையில் எழுதுக."
         }
       },
       {
@@ -29954,7 +29994,7 @@ const records=[
         },
         "reasonMath": {
           "en": "For an even count of ten, take the mean of the fifth and sixth values.",
-          "ta": "English explanation (Tamil version pending): For an even count of ten, take the mean of the fifth and sixth values."
+          "ta": "எண்ணிக்கை பத்து என்பதால் ஐந்தாவது மற்றும் ஆறாவது மதிப்புகளின் சராசரியை எடுக்கவும்."
         }
       },
       {
@@ -29973,7 +30013,7 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Both middle values equal ",
+            "நடுவிலுள்ள இரண்டு மதிப்புகளும் ",
             {
               "latex": "44",
               "fallback": "44"
@@ -30006,22 +30046,22 @@ const records=[
         "."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The median of observation ",
+        "ஏறு வரிசையில் அமைக்கப்பட்ட ",
         {
           "latex": "11, 12, 14, 18, x + 2, x + 4, 30, 32, 35, 41",
           "fallback": "11, 12, 14, 18, x+2, x+4, 30, 32, 35, 41"
         },
-        " arranged in ascending order is ",
+        " என்ற தரவுகளின் இடைநிலை அளவு ",
         {
           "latex": "24",
           "fallback": "24"
         },
-        ". Find the values of ",
+        " எனில் ",
         {
           "latex": "x",
           "fallback": "x"
         },
-        "."
+        " இன் மதிப்பைக் காண்க."
       ]
     },
     "answerMath": {
@@ -30036,7 +30076,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The data are already ascending and there are ten observations.",
-          "ta": "English explanation (Tamil version pending): The data are already ascending and there are ten observations."
+          "ta": "பத்து மதிப்புகளும் ஏற்கெனவே ஏறு வரிசையில் உள்ளன."
         }
       },
       {
@@ -30060,12 +30100,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Their two middle values are ",
+            "நடுவிலுள்ள இரண்டு மதிப்புகள் ",
             {
               "latex": "x + 2",
               "fallback": "x+2"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "x + 4",
               "fallback": "x+4"
@@ -30090,12 +30130,17 @@ const records=[
             " and solve."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Set the given median equal to ",
+            "அவற்றின் சராசரியை ",
             {
               "latex": "24",
               "fallback": "24"
             },
-            " and solve."
+            " க்குச் சமப்படுத்தி ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " ஐக் காண்க."
           ]
         }
       },
@@ -30107,7 +30152,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Check that the middle values remain in order.",
-          "ta": "English explanation (Tamil version pending): Check that the middle values remain in order."
+          "ta": "நடுவிலுள்ள மதிப்புகளும் ஏறு வரிசையில் உள்ளனவா எனச் சரிபார்க்கவும்."
         }
       }
     ]
@@ -30129,26 +30174,35 @@ const records=[
         ". Find the median time that mice spent in searching its food."
       ],
       "ta": [
-        "English-language question; Tamil version pending. A researcher studying the behavior of mice has recorded the time (in seconds) taken by each mouse to locate its food by considering ",
+        "ஓர் ஆராய்ச்சியாளர் ",
         {
           "latex": "13",
           "fallback": "13"
         },
-        " different mice as ",
+        " எலிகளின் உணவு தேடும் பழக்கத்தை ஆராய்ச்சி செய்து, அவை உணவு தேட எடுத்துக்கொள்ளும் நேரத்தை நொடிகளில் ",
         {
           "latex": "31, 33, 63, 33, 28, 29, 33, 27, 27, 34, 35, 28, 32",
           "fallback": "31, 33, 63, 33, 28, 29, 33, 27, 27, 34, 35, 28, 32"
         },
-        ". Find the median time that mice spent in searching its food."
+        " எனப் பட்டியலிட்டுள்ளார். எலிகள் உணவு தேட எடுத்துக்கொள்ளும் நேரத்தின் இடைநிலை அளவு காண்க."
       ]
     },
-    "answerMath": [
-      {
-        "latex": "32",
-        "fallback": "32"
-      },
-      " seconds"
-    ],
+    "answerMath": {
+      "en": [
+        {
+          "latex": "32",
+          "fallback": "32"
+        },
+        " seconds"
+      ],
+      "ta": [
+        {
+          "latex": "32",
+          "fallback": "32"
+        },
+        " நொடிகள்"
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -30158,7 +30212,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Sort the times, keeping repeated values.",
-          "ta": "English explanation (Tamil version pending): Sort the times, keeping repeated values."
+          "ta": "மீண்டும் வரும் மதிப்புகளையும் சேர்த்து நேரங்களை ஏறு வரிசையில் எழுதுக."
         }
       },
       {
@@ -30172,7 +30226,13 @@ const records=[
         ],
         "reasonMath": {
           "en": "There are thirteen observations, so the seventh is the median.",
-          "ta": "English explanation (Tamil version pending): There are thirteen observations, so the seventh is the median."
+          "ta": [
+            {
+              "latex": "13",
+              "fallback": "13"
+            },
+            " மதிப்புகள் இருப்பதால் ஏழாவது மதிப்பே இடைநிலை அளவு."
+          ]
         }
       },
       {
@@ -30185,7 +30245,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Read the seventh value.",
-          "ta": "English explanation (Tamil version pending): Read the seventh value."
+          "ta": "ஏழாவது மதிப்பைப் படித்து நேரத்தை நொடிகளில் எழுதுக."
         }
       }
     ]
@@ -30257,37 +30317,37 @@ const records=[
         "\nCalculate the median."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The following are the marks scored by the students in the Summative Assessment exam\nClass ",
+        "ஒரு வகுப்பில் தொகுத்தறி மதிப்பீட்டில் மாணவர்கள் எடுத்த மதிப்பெண்களுக்கு இடைநிலை அளவு காண்க.\nபிரிவு இடைவெளி: ",
         {
           "latex": "0 - 10",
-          "fallback": "0-10"
+          "fallback": "0–10"
         },
         " ",
         {
           "latex": "10 - 20",
-          "fallback": "10-20"
+          "fallback": "10–20"
         },
         " ",
         {
           "latex": "20 - 30",
-          "fallback": "20-30"
+          "fallback": "20–30"
         },
         " ",
         {
           "latex": "30 - 40",
-          "fallback": "30-40"
+          "fallback": "30–40"
         },
         " ",
         {
           "latex": "40 - 50",
-          "fallback": "40-50"
+          "fallback": "40–50"
         },
         " ",
         {
           "latex": "50 - 60",
-          "fallback": "50-60"
+          "fallback": "50–60"
         },
-        "\nNo. of Students ",
+        "\nமாணவர்களின் எண்ணிக்கை: ",
         {
           "latex": "2",
           "fallback": "2"
@@ -30316,8 +30376,7 @@ const records=[
         {
           "latex": "5",
           "fallback": "5"
-        },
-        "\nCalculate the median."
+        }
       ]
     },
     "answerMath": {
@@ -30333,7 +30392,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add frequencies to find the number of students.",
-          "ta": "English explanation (Tamil version pending): Add frequencies to find the number of students."
+          "ta": "நிகழ்வெண்களைக் கூட்டி மொத்த மாணவர் எண்ணிக்கையைக் காண்க."
         }
       },
       {
@@ -30344,7 +30403,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the frequencies in order. Each running total counts the students through that class.",
-          "ta": "English explanation (Tamil version pending): Add the frequencies in order. Each running total counts the students through that class."
+          "ta": "நிகழ்வெண்களை வரிசையாகக் கூட்டுக. ஒவ்வொரு குவிவு நிகழ்வெண்ணும் அந்தப் பிரிவு வரை உள்ள மாணவர்களின் எண்ணிக்கையைக் குறிக்கும்."
         }
       },
       {
@@ -30378,27 +30437,27 @@ const records=[
             " the width."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The halfway position 25 lies between the running totals 24 and 34, so 30–40 is the median class. Here ",
+            "பாதி எண்ணிக்கையான 25, குவிவு நிகழ்வெண்கள் 24 மற்றும் 34 க்கு இடையில் உள்ளது. எனவே 30–40 தான் இடைநிலைப் பிரிவு. ",
             {
               "latex": "L",
               "fallback": "L"
             },
-            " is the lower boundary, ",
+            " அதன் கீழ் எல்லை, ",
             {
               "latex": "\\text{cf}",
               "fallback": "cf"
             },
-            " the previous running total, ",
+            " முந்தைய குவிவு நிகழ்வெண், ",
             {
               "latex": "f",
               "fallback": "f"
             },
-            " the frequency, and ",
+            " இப்பிரிவின் நிகழ்வெண், ",
             {
               "latex": "h",
               "fallback": "h"
             },
-            " the width."
+            " பிரிவு அகலம்."
           ]
         }
       },
@@ -30423,17 +30482,27 @@ const records=[
             " marks."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The halfway position is one place into a class of ten students. Move one-tenth of the class width from the lower boundary of ",
+            "இப்பிரிவில் ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            " மாணவர்கள் உள்ளனர். ",
+            {
+              "latex": "25",
+              "fallback": "25"
+            },
+            " ஆம் இடம் இப்பிரிவில் ஓர் இடம் முன்னே உள்ளது. கீழ் எல்லையான ",
             {
               "latex": "30",
               "fallback": "30"
             },
-            " to estimate the median at ",
+            " உடன் பிரிவு அகலத்தின் பத்தில் ஒரு பங்கைச் சேர்த்தால் இடைநிலை அளவு ",
             {
               "latex": "31",
               "fallback": "31"
             },
-            " marks."
+            " மதிப்பெண்கள்."
           ]
         }
       }
@@ -30456,17 +30525,17 @@ const records=[
         ", then find the fifth integer."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The mean of five positive integers is twice their median. If four of the integers are ",
+        "ஐந்து மிகைமுழுக்களின் சராசரியானது அதன் இடைநிலை அளவைப்போல் இருமடங்கு. அதில் நான்கு முழுக்கள் ",
         {
           "latex": "3, 4, 6, 9",
           "fallback": "3, 4, 6, 9"
         },
-        " and median is ",
+        " மற்றும் அதன் இடைநிலை அளவு ",
         {
           "latex": "6",
           "fallback": "6"
         },
-        ", then find the fifth integer."
+        " எனில் ஐந்தாவது முழுவைக் காண்க."
       ]
     },
     "answerMath": {
@@ -30490,12 +30559,12 @@ const records=[
             " gives the mean."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Twice the ",
+            "இடைநிலை அளவான ",
             {
-              "latex": "\\text{median} 6",
-              "fallback": "median 6"
+              "latex": "6",
+              "fallback": "6"
             },
-            " gives the mean."
+            " ஐ இரட்டிப்பாக்கினால் சராசரி கிடைக்கும்."
           ]
         }
       },
@@ -30520,12 +30589,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Five integers with ",
+            "சராசரி ",
             {
-              "latex": "\\text{mean} 12",
-              "fallback": "mean 12"
+              "latex": "12",
+              "fallback": "12"
             },
-            " have a total of ",
+            " உள்ள ஐந்து முழுக்களின் கூடுதல் ",
             {
               "latex": "60",
               "fallback": "60"
@@ -30542,7 +30611,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the four known integers and subtract.",
-          "ta": "English explanation (Tamil version pending): Add the four known integers and subtract."
+          "ta": [
+            "தெரிந்த நான்கு முழுக்களின் கூடுதலை ",
+            {
+              "latex": "60",
+              "fallback": "60"
+            },
+            " இலிருந்து கழிக்கவும்."
+          ]
         }
       },
       {
@@ -30553,7 +30629,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Check the ascending data and median.",
-          "ta": "English explanation (Tamil version pending): Check the ascending data and median."
+          "ta": "எண்களை ஏறு வரிசையில் எழுதி இடைநிலை அளவைச் சரிபார்க்கவும்."
         }
       }
     ]
@@ -30620,82 +30696,100 @@ const records=[
         "\nFind the mean, median and mode."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The monthly salary of ",
         {
           "latex": "10",
           "fallback": "10"
         },
-        " employees in a factory are given below :\n`",
+        " தொழிலாளர்களின் மாத வருமானங்கள் முறையே ₹",
         {
           "latex": "5000",
           "fallback": "5000"
         },
-        ", `",
+        ", ₹",
         {
           "latex": "7000",
           "fallback": "7000"
         },
-        ", `",
+        ", ₹",
         {
           "latex": "5000",
           "fallback": "5000"
         },
-        ", `",
+        ", ₹",
         {
           "latex": "7000",
           "fallback": "7000"
         },
-        ", `",
+        ", ₹",
         {
           "latex": "8000",
           "fallback": "8000"
         },
-        ", `",
+        ", ₹",
         {
           "latex": "7000",
           "fallback": "7000"
         },
-        ", `",
+        ", ₹",
         {
           "latex": "7000",
           "fallback": "7000"
         },
-        ", `",
+        ", ₹",
         {
           "latex": "8000",
           "fallback": "8000"
         },
-        ", `",
+        ", ₹",
         {
           "latex": "7000",
           "fallback": "7000"
         },
-        ", `",
+        ", ₹",
         {
           "latex": "5000",
           "fallback": "5000"
         },
-        "\nFind the mean, median and mode."
+        " எனில் சராசரி, இடைநிலை அளவு, முகடு காண்க."
       ]
     },
-    "answerMath": [
-      "Mean ₹",
-      {
-        "latex": "\\begin{aligned}&6{,}600 \\\\ &\\text{Median}\\end{aligned}",
-        "fallback": "6,600; Median",
-        "display": true
-      },
-      " ₹",
-      {
-        "latex": "7{,}000;\\quad \\text{Mode}",
-        "fallback": "7,000; Mode"
-      },
-      " ₹",
-      {
-        "latex": "7{,}000",
-        "fallback": "7,000"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        "Mean ₹",
+        {
+          "latex": "\\begin{aligned}&6{,}600 \\\\ &\\text{Median}\\end{aligned}",
+          "fallback": "6,600; Median",
+          "display": true
+        },
+        " ₹",
+        {
+          "latex": "7{,}000;\\quad \\text{Mode}",
+          "fallback": "7,000; Mode"
+        },
+        " ₹",
+        {
+          "latex": "7{,}000",
+          "fallback": "7,000"
+        }
+      ],
+      "ta": [
+        "சராசரி ₹",
+        {
+          "latex": "6{,}600",
+          "fallback": "6,600"
+        },
+        "; இடைநிலை அளவு ₹",
+        {
+          "latex": "7{,}000",
+          "fallback": "7,000"
+        },
+        "; முகடு ₹",
+        {
+          "latex": "7{,}000",
+          "fallback": "7,000"
+        }
+      ]
+    },
     "steps": [
       {
         "math": [
@@ -30732,7 +30826,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Group the repeated salaries.",
-          "ta": "English explanation (Tamil version pending): Group the repeated salaries."
+          "ta": "ஒரே மாத வருமானம் பெறும் தொழிலாளர்களைத் தொகுக்கவும்."
         }
       },
       {
@@ -30750,7 +30844,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Compute the arithmetic mean.",
-          "ta": "English explanation (Tamil version pending): Compute the arithmetic mean."
+          "ta": "மொத்த வருமானத்தைப் பத்தால் வகுத்துச் சராசரியைக் காண்க."
         }
       },
       {
@@ -30776,7 +30870,7 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): In ascending order, the fifth and sixth values are both ₹",
+            "ஏறு வரிசையில் ஐந்தாவது மற்றும் ஆறாவது மதிப்புகள் இரண்டும் ₹",
             {
               "latex": "7000",
               "fallback": "7000"
@@ -30803,12 +30897,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The salary occurring most often is ₹",
+            "அதிக முறை வரும் வருமானம் ₹",
             {
               "latex": "7000",
               "fallback": "7000"
             },
-            "."
+            " என்பதால் அதுவே முகடு."
           ]
         }
       }
@@ -30825,24 +30919,38 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the mode of the given data : ",
+        "கொடுக்கப்பட்டுள்ள தரவுகளுக்கு முகடு காண்க. ",
         {
           "latex": "3.1, 3.2, 3.3, 2.1, 1.3, 3.3, 3.1",
           "fallback": "3.1, 3.2, 3.3, 2.1, 1.3, 3.3, 3.1"
+        },
+        "."
+      ]
+    },
+    "answerMath": {
+      "en": [
+        {
+          "latex": "3.1",
+          "fallback": "3.1"
+        },
+        " and ",
+        {
+          "latex": "3.3",
+          "fallback": "3.3"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "3.1",
+          "fallback": "3.1"
+        },
+        " மற்றும் ",
+        {
+          "latex": "3.3",
+          "fallback": "3.3"
         }
       ]
     },
-    "answerMath": [
-      {
-        "latex": "3.1",
-        "fallback": "3.1"
-      },
-      " and ",
-      {
-        "latex": "3.3",
-        "fallback": "3.3"
-      }
-    ],
     "steps": [
       {
         "math": {
@@ -30852,7 +30960,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Count occurrences of each measurement.",
-          "ta": "English explanation (Tamil version pending): Count occurrences of each measurement."
+          "ta": "ஒவ்வொரு மதிப்பும் எத்தனை முறை வருகிறது என எண்ணுக."
         }
       },
       {
@@ -30865,7 +30973,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Identify the largest frequency.",
-          "ta": "English explanation (Tamil version pending): Identify the largest frequency."
+          "ta": "மிகப் பெரிய நிகழ்வெண்ணைக் காண்க."
         }
       },
       {
@@ -30895,17 +31003,16 @@ const records=[
             " share it, so the distribution is bimodal."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Both ",
             {
               "latex": "3.1",
               "fallback": "3.1"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "3.3",
               "fallback": "3.3"
             },
-            " share it, so the distribution is bimodal."
+            " இரண்டுக்கும் ஒரே அதிகபட்ச நிகழ்வெண் உள்ளது. எனவே இரண்டு முகடுகள் உள்ளன."
           ]
         }
       }
@@ -30933,28 +31040,45 @@ const records=[
         ". Also find the mode of the data."
       ],
       "ta": [
-        "English-language question; Tamil version pending. For the data ",
         {
           "latex": "11, 15, 17, x + 1, 19, x - 2, 3",
-          "fallback": "11, 15, 17, x+1, 19, x–2, 3"
+          "fallback": "11, 15, 17, x+1, 19, x−2, 3"
         },
-        " if the mean is ",
+        " என்ற தரவுகளின் சராசரி ",
         {
           "latex": "14",
           "fallback": "14"
         },
-        " , find the value of ",
+        " எனில், ",
         {
           "latex": "x",
           "fallback": "x"
         },
-        ". Also find the mode of the data."
+        " இன் மதிப்பைக் காண்க. மேலும் ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " இன் மதிப்பைக் கொண்டு தரவுகளின் முகடு காண்க."
       ]
     },
     "answerMath": {
-      "latex": "\\begin{aligned}&x = 17 \\\\ &\\text{mode} = 15\\end{aligned}",
-      "fallback": "x = 17; mode = 15",
-      "display": true
+      "en": {
+        "latex": "\\begin{aligned}&x = 17 \\\\ &\\text{mode} = 15\\end{aligned}",
+        "fallback": "x = 17; mode = 15",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x = 17",
+          "fallback": "x = 17"
+        },
+        "; முகடு = ",
+        {
+          "latex": "15",
+          "fallback": "15"
+        }
+      ]
     },
     "steps": [
       {
@@ -30973,12 +31097,12 @@ const records=[
             " across seven numbers gives the total."
           ],
           "ta": [
-            "English explanation (Tamil version pending): A mean of ",
+            "ஏழு எண்களின் சராசரி ",
             {
               "latex": "14",
               "fallback": "14"
             },
-            " across seven numbers gives the total."
+            " என்பதால் மொத்தத்தைக் காண்க."
           ]
         }
       },
@@ -30998,12 +31122,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Add the terms and collect ",
+            "உறுப்புகளைக் கூட்டி ",
             {
               "latex": "x",
               "fallback": "x"
             },
-            "."
+            " உள்ள உறுப்புகளை ஒன்றுசேர்க்கவும்."
           ]
         }
       },
@@ -31015,7 +31139,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Solve the equation.",
-          "ta": "English explanation (Tamil version pending): Solve the equation."
+          "ta": [
+            "சமன்பாட்டைத் தீர்த்து ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " ஐக் காண்க."
+          ]
         }
       },
       {
@@ -31034,12 +31165,12 @@ const records=[
             " into the data and count repeats."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Substitute ",
+            "கிடைத்த ",
             {
               "latex": "x",
               "fallback": "x"
             },
-            " into the data and count repeats."
+            " மதிப்பைப் பிரதியிட்டு எந்த எண் அதிக முறை வருகிறது எனக் காண்க."
           ]
         }
       }
@@ -31132,7 +31263,7 @@ const records=[
         "\nWhich size is in greater demanded?"
       ],
       "ta": [
-        "English-language question; Tamil version pending. The demand of track suit of different sizes as obtained by a survey is given below:\nSize ",
+        "விளையாட்டுக் கால்சட்டைகளுக்கான தேவைப்பட்டியல் கீழே கொடுக்கப்பட்டுள்ளது. எந்த அளவு கால்சட்டைக்கு அதிகத் தேவை உள்ளது?\nஅளவு: ",
         {
           "latex": "38",
           "fallback": "38"
@@ -31172,7 +31303,7 @@ const records=[
           "latex": "45",
           "fallback": "45"
         },
-        "\nNo. of Persons ",
+        "\nஎண்ணிக்கை: ",
         {
           "latex": "36",
           "fallback": "36"
@@ -31211,17 +31342,25 @@ const records=[
         {
           "latex": "2",
           "fallback": "2"
-        },
-        "\nWhich size is in greater demanded?"
+        }
       ]
     },
-    "answerMath": [
-      "Size ",
-      {
-        "latex": "40",
-        "fallback": "40"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        "Size ",
+        {
+          "latex": "40",
+          "fallback": "40"
+        }
+      ],
+      "ta": [
+        "அளவு ",
+        {
+          "latex": "40",
+          "fallback": "40"
+        }
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -31231,7 +31370,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Compare frequencies for each track-suit size.",
-          "ta": "English explanation (Tamil version pending): Compare frequencies for each track-suit size."
+          "ta": "ஒவ்வொரு கால்சட்டை அளவுக்குரிய நிகழ்வெண்களையும் ஒப்பிடுக."
         }
       },
       {
@@ -31244,7 +31383,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Find the maximum frequency.",
-          "ta": "English explanation (Tamil version pending): Find the maximum frequency."
+          "ta": "அதிகபட்ச நிகழ்வெண்ணைக் காண்க."
         }
       },
       {
@@ -31265,12 +31404,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Read the size associated with ",
             {
               "latex": "37",
               "fallback": "37"
             },
-            "."
+            " என்ற நிகழ்வெண்ணுக்குரிய கால்சட்டை அளவைப் படிக்கவும்."
           ]
         }
       }
@@ -31332,32 +31470,32 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the mode of the following data:\nMarks ",
+        "தரவுகளின் முகடு காண்க.\nமதிப்பெண்: ",
         {
           "latex": "0 - 10",
-          "fallback": "0-10"
+          "fallback": "0–10"
         },
         " ",
         {
           "latex": "10 - 20",
-          "fallback": "10-20"
+          "fallback": "10–20"
         },
         " ",
         {
           "latex": "20 - 30",
-          "fallback": "20-30"
+          "fallback": "20–30"
         },
         " ",
         {
           "latex": "30 - 40",
-          "fallback": "30-40"
+          "fallback": "30–40"
         },
         " ",
         {
           "latex": "40 - 50",
-          "fallback": "40-50"
+          "fallback": "40–50"
         },
-        "\nNumber of students ",
+        "\nமாணவர்களின் எண்ணிக்கை: ",
         {
           "latex": "22",
           "fallback": "22"
@@ -31384,13 +31522,22 @@ const records=[
         }
       ]
     },
-    "answerMath": [
-      {
-        "latex": "24",
-        "fallback": "24"
-      },
-      " marks"
-    ],
+    "answerMath": {
+      "en": [
+        {
+          "latex": "24",
+          "fallback": "24"
+        },
+        " marks"
+      ],
+      "ta": [
+        {
+          "latex": "24",
+          "fallback": "24"
+        },
+        " மதிப்பெண்கள்"
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -31418,22 +31565,22 @@ const records=[
             " for the next class."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The modal class is 20–30 because it has the most students. The frequencies are ",
+            "அதிக மாணவர்கள் உள்ள 20–30 பிரிவே முகட்டுப் பிரிவு. இப்பிரிவின் நிகழ்வெண் ",
             {
               "latex": "f_1",
               "fallback": "f₁"
             },
-            " for this class, ",
+            ", முந்தைய பிரிவின் நிகழ்வெண் ",
             {
               "latex": "f_0",
               "fallback": "f₀"
             },
-            " for the previous class, and ",
+            ", அடுத்த பிரிவின் நிகழ்வெண் ",
             {
               "latex": "f_2",
               "fallback": "f₂"
             },
-            " for the next class."
+            "."
           ]
         }
       },
@@ -31445,7 +31592,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use the grouped-data mode formula.",
-          "ta": "English explanation (Tamil version pending): Use the grouped-data mode formula."
+          "ta": "தொகுக்கப்பட்ட தரவுகளுக்கான முகட்டுச் சூத்திரத்தைப் பயன்படுத்துக."
         }
       },
       {
@@ -31464,12 +31611,12 @@ const records=[
             " marks, a value inside the modal class."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Use the lower class boundary, class width, and three frequencies. The estimated mode is ",
+            "கீழ் எல்லை, பிரிவு அகலம், மூன்று நிகழ்வெண்கள் ஆகியவற்றைப் பிரதியிடுக. கிடைக்கும் முகடு ",
             {
               "latex": "24",
               "fallback": "24"
             },
-            " marks, a value inside the modal class."
+            " மதிப்பெண்கள். இது முகட்டுப் பிரிவிற்குள் உள்ளது."
           ]
         }
       }
@@ -31541,37 +31688,37 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Find the mode of the following distribution:\nWeight(in kgs) ",
+        "தரவுகளின் சராசரி, இடைநிலை அளவு, முகடு காண்க.\nஎடை (கி.கி): ",
         {
           "latex": "25 - 34",
-          "fallback": "25-34"
+          "fallback": "25–34"
         },
         " ",
         {
           "latex": "35 - 44",
-          "fallback": "35-44"
+          "fallback": "35–44"
         },
         " ",
         {
           "latex": "45 - 54",
-          "fallback": "45-54"
+          "fallback": "45–54"
         },
         " ",
         {
           "latex": "55 - 64",
-          "fallback": "55-64"
+          "fallback": "55–64"
         },
         " ",
         {
           "latex": "65 - 74",
-          "fallback": "65-74"
+          "fallback": "65–74"
         },
         " ",
         {
           "latex": "75 - 84",
-          "fallback": "75-84"
+          "fallback": "75–84"
         },
-        "\nNumber of students ",
+        "\nமாணவர்களின் எண்ணிக்கை: ",
         {
           "latex": "4",
           "fallback": "4"
@@ -31604,8 +31751,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "58.5\\,\\mathrm{kg}",
-      "fallback": "58.5 kg"
+      "en": {
+        "latex": "58.5\\,\\mathrm{kg}",
+        "fallback": "58.5 kg",
+        "display": true
+      },
+      "ta": "சராசரி 55.9 கி.கி, இடைநிலை அளவு சுமார் 56.64 கி.கி, முகடு 58.5 கி.கி"
     },
     "steps": [
       {
@@ -31634,17 +31785,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The modal class is 55–64 kg. Its frequency is ",
+            "பிரிவு நடுமதிப்புகள் 29.5, 39.5, 49.5, 59.5, 69.5, 79.5. ஒவ்வொன்றையும் அதற்குரிய நிகழ்வெண்ணால் பெருக்கிக் கூட்டுக. மொத்தத்தை 50 ஆல் வகுத்தால் சராசரி கிடைக்கும். அதிக நிகழ்வெண் உள்ள 55–64 தான் முகட்டுப் பிரிவு. அதன் நிகழ்வெண் ",
             {
               "latex": "f_1",
               "fallback": "f₁"
             },
-            ", the previous class has frequency ",
+            ", முந்தைய பிரிவின் நிகழ்வெண் ",
             {
               "latex": "f_0",
               "fallback": "f₀"
             },
-            ", and the next class has frequency ",
+            ", அடுத்த பிரிவின் நிகழ்வெண் ",
             {
               "latex": "f_2",
               "fallback": "f₂"
@@ -31673,17 +31824,17 @@ const records=[
             " is the class width."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Moving each endpoint by half a kilogram closes the gaps and gives boundaries from 54.5 to 64.5 kg. ",
+            "குவிவு நிகழ்வெண்கள் 4, 12, 22, 36, 44, 50. 25 ஆம் இடம் 55–64 பிரிவில் உள்ளது. தொடர்ச்சியான எல்லைகள் 54.5 மற்றும் 64.5. கீழ் எல்லை ",
             {
               "latex": "L",
               "fallback": "L"
             },
-            " is the lower boundary and ",
+            ", பிரிவு அகலம் ",
             {
               "latex": "h",
               "fallback": "h"
             },
-            " is the class width."
+            ". இவற்றைக் கொண்டு இடைநிலை அளவைக் காண்க."
           ]
         }
       },
@@ -31695,7 +31846,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use the grouped-data mode formula.",
-          "ta": "English explanation (Tamil version pending): Use the grouped-data mode formula."
+          "ta": "முகட்டுப் பிரிவின் கீழ் எல்லை, பிரிவு அகலம் மற்றும் மூன்று நிகழ்வெண்களைக் கொண்டு முகட்டுச் சூத்திரத்தை எழுதுக."
         }
       },
       {
@@ -31719,17 +31870,22 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Use the adjusted lower boundary of ",
+            "கீழ் எல்லை ",
             {
-              "latex": "54.5\\,\\mathrm{kg}",
-              "fallback": "54.5 kg"
+              "latex": "54.5",
+              "fallback": "54.5"
             },
-            " and the three frequencies. The estimated mode is ",
+            " கி.கி மற்றும் நிகழ்வெண்கள் ",
             {
-              "latex": "58.5\\,\\mathrm{kg}",
-              "fallback": "58.5 kg"
+              "latex": "14, 10, 8",
+              "fallback": "14, 10, 8"
             },
-            "."
+            " ஆகியவற்றைப் பிரதியிட்டால் முகடு ",
+            {
+              "latex": "58.5",
+              "fallback": "58.5"
+            },
+            " கி.கி."
           ]
         }
       }
@@ -31796,17 +31952,17 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Let ",
+        "மையப்புள்ளி ",
         {
           "latex": "m",
           "fallback": "m"
         },
-        " be the mid point and ",
+        ", தொடர் நிகழ்வெண் பரவலின் ஒரு பிரிவின் மேல் எல்லை ",
         {
           "latex": "b",
           "fallback": "b"
         },
-        " be the upper limit of a class in a continuous frequency distribution. The lower limit of the class is\n",
+        " எனில், அதன் கீழ் எல்லை\n",
         "",
         {
           "questionOption": [
@@ -31868,7 +32024,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The midpoint is half the sum of the class lower and upper limits.",
-          "ta": "English explanation (Tamil version pending): The midpoint is half the sum of the class lower and upper limits."
+          "ta": "ஒரு பிரிவின் கீழ் எல்லை மற்றும் மேல் எல்லையின் கூடுதலில் பாதியே அதன் மையப்புள்ளி."
         }
       },
       {
@@ -31879,7 +32035,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Solve for the lower limit a.",
-          "ta": "English explanation (Tamil version pending): Solve for the lower limit a."
+          "ta": "கீழ் எல்லை a ஐத் தனியாகப் பெறச் சமன்பாட்டை மாற்றியமைக்கவும்."
         }
       },
       {
@@ -31894,12 +32050,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Choose the formula ",
             {
               "latex": "2 m - b",
               "fallback": "2m−b"
             },
-            "."
+            " என்ற விடையைத் தேர்ந்தெடுக்கவும்."
           ]
         }
       }
@@ -31966,17 +32121,17 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The mean of a set of seven numbers is ",
+        "ஏழு மதிப்புகளின் சராசரி ",
         {
           "latex": "81",
           "fallback": "81"
         },
-        ". If one of the numbers is discarded , the mean of the remaining numbers is ",
+        ". அவற்றில் ஒரு மதிப்பு நீக்கப்படும் போது மற்ற மதிப்புகளின் சராசரி ",
         {
           "latex": "78",
           "fallback": "78"
         },
-        " . The value of discarded number is\n",
+        " ஆக அமைகிறது எனில் நீக்கப்பட்ட மதிப்பு எவ்வளவு?\n",
         "",
         {
           "questionOption": [
@@ -32051,15 +32206,15 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Seven observations with ",
+            "சராசரி ",
             {
-              "latex": "\\text{mean} 81",
-              "fallback": "mean 81"
+              "latex": "81",
+              "fallback": "81"
             },
-            " have ",
+            " உள்ள ஏழு மதிப்புகளின் மொத்தம் ",
             {
-              "latex": "\\text{total} 7 \\times 81",
-              "fallback": "total 7×81"
+              "latex": "7 \\times 81",
+              "fallback": "7×81"
             },
             "."
           ]
@@ -32080,10 +32235,10 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Six remaining observations with ",
+            "மீதமுள்ள ஆறு மதிப்புகளின் மொத்தம் ",
             {
-              "latex": "\\text{mean} 78 \\text{total} 6 \\times 78",
-              "fallback": "mean 78 total 6×78"
+              "latex": "6 \\times 78",
+              "fallback": "6×78"
             },
             "."
           ]
@@ -32099,7 +32254,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "The discarded value is the difference.",
-          "ta": "English explanation (Tamil version pending): The discarded value is the difference."
+          "ta": "இரு மொத்தங்களின் வேறுபாடே நீக்கப்பட்ட மதிப்பு."
         }
       }
     ]
@@ -32143,62 +32298,65 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. A particular observation which occurs maximum number of times in a given data is called its\n",
+        "ஒரு தரவில் அதிகமுறை இடம் பெற்றுள்ள உறுப்பின் மதிப்பு\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            "Frequency"
+            "நிகழ்வெண்"
           ],
-          "fallback": "(1) Frequency"
+          "fallback": "(1) நிகழ்வெண்"
         },
         "   ",
         {
           "questionOption": [
             "(2) ",
-            "range"
+            "வீச்சு"
           ],
-          "fallback": "(2) range"
+          "fallback": "(2) வீச்சு"
         },
         "   ",
         {
           "questionOption": [
             "(3) ",
-            "mode"
+            "முகடு"
           ],
-          "fallback": "(3) mode"
+          "fallback": "(3) முகடு"
         },
         "   ",
         {
           "questionOption": [
             "(4) ",
-            "Median"
+            "இடைநிலை அளவு"
           ],
-          "fallback": "(4) Median"
+          "fallback": "(4) இடைநிலை அளவு"
         }
       ]
     },
-    "answerMath": "(3) mode",
+    "answerMath": {
+      "en": "(3) mode",
+      "ta": "(3) முகடு"
+    },
     "steps": [
       {
         "math": "Frequency=value count",
         "reasonMath": {
           "en": "Frequency means the number of times an observation occurs.",
-          "ta": "English explanation (Tamil version pending): Frequency means the number of times an observation occurs."
+          "ta": "ஒரு மதிப்பு எத்தனை முறை வருகிறது என்பதை அதன் நிகழ்வெண் குறிக்கும்."
         }
       },
       {
         "math": "Mode = most frequent observation",
         "reasonMath": {
           "en": "The value with the highest frequency is the mode.",
-          "ta": "English explanation (Tamil version pending): The value with the highest frequency is the mode."
+          "ta": "அதிகபட்ச நிகழ்வெண்ணைக் கொண்ட மதிப்பே முகடு."
         }
       },
       {
         "math": "Correct option (3)",
         "reasonMath": {
           "en": "Select the correct statistical name.",
-          "ta": "English explanation (Tamil version pending): Select the correct statistical name."
+          "ta": "அதற்குரிய புள்ளியியல் பெயரைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -32254,7 +32412,7 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. For which set of numbers do the mean, median and mode all have the same values?\n",
+        "பின்வரும் எண் தொகுதிகளில் சராசரி, இடைநிலை அளவு மற்றும் முகடு ஒரே மதிப்பாக அமையும் தொகுதி எது?\n",
         "",
         {
           "questionOption": [
@@ -32316,7 +32474,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Consider the five values in option (2).",
-          "ta": "English explanation (Tamil version pending): Consider the five values in option (2)."
+          "ta": "இரண்டாவது விடையில் உள்ள ஐந்து மதிப்புகளை எடுத்துக்கொள்க."
         }
       },
       {
@@ -32339,12 +32497,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Their sum is ",
+            "அவற்றின் கூடுதல் ",
             {
               "latex": "15",
               "fallback": "15"
             },
-            ", giving a mean of ",
+            ". எனவே சராசரி ",
             {
               "latex": "3",
               "fallback": "3"
@@ -32372,7 +32530,7 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The middle sorted value and the most frequent value both equal ",
+            "ஏறு வரிசையிலுள்ள நடு மதிப்பும், அதிக முறை வரும் மதிப்பும் ",
             {
               "latex": "3",
               "fallback": "3"
@@ -32439,12 +32597,12 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The algebraic sum of the deviations of a set of ",
+        "சராசரியிலிருந்து அனைத்து ",
         {
           "latex": "n",
           "fallback": "n"
         },
-        " values from their mean is\n",
+        " உறுப்புகளின் விலக்கங்களின் கூட்டுத்தொகை\n",
         "",
         {
           "questionOption": [
@@ -32519,17 +32677,16 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Let the mean of the ",
             {
               "latex": "n",
               "fallback": "n"
             },
-            " values be ",
+            " மதிப்புகளின் சராசரியை ",
             {
               "latex": "\\bar{x}",
               "fallback": "x̄"
             },
-            "."
+            " எனக் கொள்க."
           ]
         }
       },
@@ -32549,12 +32706,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Add all deviations ",
+            "ஒவ்வொரு மதிப்பிற்கும் உரிய விலக்கம் ",
             {
               "latex": "x_{i} - \\bar{x}",
               "fallback": "xᵢ−x̄"
             },
-            "."
+            ". அவை அனைத்தையும் கூட்டுக."
           ]
         }
       },
@@ -32570,12 +32727,12 @@ const records=[
             "; the sum is zero."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Substitute ",
+            "மதிப்புகளின் கூடுதல் ",
             {
-              "latex": "\\sum x_{i} = n \\bar{x}",
-              "fallback": "Σxᵢ=n x̄"
+              "latex": "n \\bar{x}",
+              "fallback": "n x̄"
             },
-            "; the sum is zero."
+            " என்பதால் விலக்கங்களின் கூடுதல் பூச்சியம்."
           ]
         }
       }
@@ -32672,47 +32829,46 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The mean of ",
         {
           "latex": "a, b, c, d",
-          "fallback": "a,b,c,d"
+          "fallback": "a, b, c, d"
         },
-        " and ",
+        " மற்றும் ",
         {
           "latex": "e",
           "fallback": "e"
         },
-        " is ",
+        " இன் சராசரி ",
         {
           "latex": "28",
           "fallback": "28"
         },
-        " . If the mean of ",
+        ". ",
         {
           "latex": "a, c",
           "fallback": "a, c"
         },
-        " and ",
+        " மற்றும் ",
         {
           "latex": "e",
           "fallback": "e"
         },
-        " is ",
+        " இன் சராசரி ",
         {
           "latex": "24",
           "fallback": "24"
         },
-        " , then mean of ",
+        " எனில் ",
         {
           "latex": "b",
           "fallback": "b"
         },
-        " and ",
+        " மற்றும் ",
         {
           "latex": "d",
           "fallback": "d"
         },
-        " is\n",
+        " இன் சராசரி\n",
         "",
         {
           "questionOption": [
@@ -32788,15 +32944,10 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Five numbers with ",
+            "ஐந்து எண்களின் கூடுதல் ",
             {
-              "latex": "\\text{mean} 28",
-              "fallback": "mean 28"
-            },
-            " have ",
-            {
-              "latex": "\\text{total} 5 \\times 28",
-              "fallback": "total 5×28"
+              "latex": "5 \\times 28",
+              "fallback": "5×28"
             },
             "."
           ]
@@ -32827,20 +32978,14 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Three values ",
             {
               "latex": "a, c, e",
-              "fallback": "a,c,e"
+              "fallback": "a, c, e"
             },
-            " with ",
+            " என்ற மூன்று எண்களின் கூடுதல் ",
             {
-              "latex": "\\text{mean} 24",
-              "fallback": "mean 24"
-            },
-            " have ",
-            {
-              "latex": "\\text{total} 3 \\times 24",
-              "fallback": "total 3×24"
+              "latex": "3 \\times 24",
+              "fallback": "3×24"
             },
             "."
           ]
@@ -32865,12 +33010,12 @@ const records=[
             " and divide by two."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Subtract totals to get ",
+            "முதல் கூடுதலிலிருந்து இரண்டாவதைக் கழித்தால் ",
             {
               "latex": "b + d = 68",
               "fallback": "b+d=68"
             },
-            " and divide by two."
+            ". அதை இரண்டால் வகுத்துச் சராசரியைக் காண்க."
           ]
         }
       }
@@ -32937,17 +33082,16 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. If the mean of five observations ",
         {
           "latex": "x, x + 2, x + 4, x + 6, x + 8",
-          "fallback": "x, x+2 , x+4 , x+6 , x+8"
+          "fallback": "x, x+2, x+4, x+6, x+8"
         },
-        ", is ",
+        " என்ற தரவின் சராசரி ",
         {
           "latex": "11",
           "fallback": "11"
         },
-        ", then the mean of first three observations is\n",
+        " எனில் முதல் மூன்று தரவுகளின் கூட்டுச்சராசரி\n",
         "",
         {
           "questionOption": [
@@ -33017,7 +33161,7 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The mean of five equally spaced observations is the middle, ",
+            "சம இடைவெளியிலுள்ள ஐந்து மதிப்புகளின் சராசரி நடு மதிப்பான ",
             {
               "latex": "x + 4",
               "fallback": "x+4"
@@ -33041,12 +33185,17 @@ const records=[
             " and write the first three observations."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Solve for ",
+            "அதை ",
+            {
+              "latex": "11",
+              "fallback": "11"
+            },
+            " க்குச் சமப்படுத்தி ",
             {
               "latex": "x",
               "fallback": "x"
             },
-            " and write the first three observations."
+            " ஐக் கண்டு முதல் மூன்று மதிப்புகளை எழுதுக."
           ]
         }
       },
@@ -33060,7 +33209,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Average the first three values.",
-          "ta": "English explanation (Tamil version pending): Average the first three values."
+          "ta": "முதல் மூன்று மதிப்புகளின் சராசரியைக் காண்க."
         }
       }
     ]
@@ -33136,27 +33285,26 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The mean of ",
         {
           "latex": "5, 9, x, 17",
           "fallback": "5, 9, x, 17"
         },
-        " and ",
+        " மற்றும் ",
         {
           "latex": "21",
           "fallback": "21"
         },
-        " is ",
+        " இன் சராசரியானது ",
         {
           "latex": "13",
           "fallback": "13"
         },
-        ", then find the value of ",
+        " எனில், ",
         {
           "latex": "x",
           "fallback": "x"
         },
-        "\n",
+        " இன் மதிப்பு\n",
         "",
         {
           "questionOption": [
@@ -33219,7 +33367,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Multiply the mean by the number of observations.",
-          "ta": "English explanation (Tamil version pending): Multiply the mean by the number of observations."
+          "ta": "சராசரியை மதிப்புகளின் எண்ணிக்கையால் பெருக்குக."
         }
       },
       {
@@ -33229,7 +33377,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the four known values.",
-          "ta": "English explanation (Tamil version pending): Add the four known values."
+          "ta": "தெரிந்த நான்கு மதிப்புகளையும் கூட்டுக."
         }
       },
       {
@@ -33250,12 +33398,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Subtract to find ",
+            "மொத்தத்திலிருந்து அந்தக் கூடுதலைக் கழித்து ",
             {
               "latex": "x",
               "fallback": "x"
             },
-            "."
+            " ஐக் காண்க."
           ]
         }
       }
@@ -33317,12 +33465,12 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The mean of the square of first ",
+        "முதல் ",
         {
           "latex": "11",
           "fallback": "11"
         },
-        " natural numbers is\n",
+        " இயல் எண்களின் வர்க்கங்களின் சராசரி\n",
         "",
         {
           "questionOption": [
@@ -33398,17 +33546,16 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Use the sum-of-squares formula for ",
             {
               "latex": "1^{2}",
               "fallback": "1²"
             },
-            " through ",
+            " முதல் ",
             {
               "latex": "11^{2}",
               "fallback": "11²"
             },
-            "."
+            " வரையிலான வர்க்கங்களின் கூடுதலுக்கான சூத்திரத்தைப் பயன்படுத்துக."
           ]
         }
       },
@@ -33432,15 +33579,14 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For ",
             {
               "latex": "n = 11",
-              "fallback": "n=11"
+              "fallback": "n = 11"
             },
-            ", the total is ",
+            " எனில் கூடுதல் ",
             {
               "latex": "\\dfrac{11 \\times 12 \\times 23}{6} = 506",
-              "fallback": "11×12×23/6 =506"
+              "fallback": "11×12×23/6 = 506"
             },
             "."
           ]
@@ -33457,7 +33603,14 @@ const records=[
         ],
         "reasonMath": {
           "en": "Divide by eleven observations.",
-          "ta": "English explanation (Tamil version pending): Divide by eleven observations."
+          "ta": [
+            "கூடுதலை மதிப்புகளின் எண்ணிக்கையான ",
+            {
+              "latex": "11",
+              "fallback": "11"
+            },
+            " ஆல் வகுக்கவும்."
+          ]
         }
       }
     ]
@@ -33523,60 +33676,60 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The mean of a set of numbers is ",
+        "ஓர் எண் தொகுப்பின் சராசரி ",
         {
-          "latex": "X",
-          "fallback": "X"
+          "latex": "\\bar{X}",
+          "fallback": "X̄"
         },
-        " . If each number is multiplied by ",
+        ". எண் தொகுப்பின் ஒவ்வொரு மதிப்பும் ",
         {
           "latex": "z",
           "fallback": "z"
         },
-        ", the mean is\n",
+        " என்ற எண்ணால் பெருக்கப்படும் போது அதன் சராசரி\n",
         "",
         {
           "questionOption": [
             "(1) ",
             {
-              "latex": "X + z",
-              "fallback": "X +z"
+              "latex": "\\bar{X} + z",
+              "fallback": "X̄ +z"
             }
           ],
-          "fallback": "(1) X +z"
+          "fallback": "(1) X̄ +z"
         },
         "   ",
         {
           "questionOption": [
             "(2) ",
             {
-              "latex": "X - z",
-              "fallback": "X - z"
+              "latex": "\\bar{X} - z",
+              "fallback": "X̄ - z"
             }
           ],
-          "fallback": "(2) X - z"
+          "fallback": "(2) X̄ - z"
         },
         "   ",
         {
           "questionOption": [
             "(3) ",
             {
-              "latex": "z X",
-              "fallback": "z X"
+              "latex": "z \\bar{X}",
+              "fallback": "z X̄"
             }
           ],
-          "fallback": "(3) z X"
+          "fallback": "(3) z X̄"
         },
         "   ",
         {
           "questionOption": [
             "(4) ",
             {
-              "latex": "X",
-              "fallback": "X"
+              "latex": "\\bar{X}",
+              "fallback": "X̄"
             }
           ],
-          "fallback": "(4) X"
+          "fallback": "(4) X̄"
         }
       ]
     },
@@ -33603,12 +33756,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Write the original mean as the sum divided by ",
+            "தொடக்கச் சராசரியை மதிப்புகளின் கூடுதலை ",
             {
               "latex": "n",
               "fallback": "n"
             },
-            "."
+            " ஆல் வகுத்து எழுதுக."
           ]
         }
       },
@@ -33636,17 +33789,17 @@ const records=[
             " out of the sum."
           ],
           "ta": [
-            "English explanation (Tamil version pending): After multiplying every observation by ",
+            "ஒவ்வொரு மதிப்பையும் ",
             {
               "latex": "z",
               "fallback": "z"
             },
-            ", factor ",
+            " ஆல் பெருக்கிய பின், கூடுதலிலிருந்து ",
             {
               "latex": "z",
               "fallback": "z"
             },
-            " out of the sum."
+            " ஐப் பொதுக்காரணியாக வெளியே எடுக்கவும்."
           ]
         }
       },
@@ -33654,7 +33807,14 @@ const records=[
         "math": "Correct option (3)",
         "reasonMath": {
           "en": "Therefore the new mean is zX.",
-          "ta": "English explanation (Tamil version pending): Therefore the new mean is zX."
+          "ta": [
+            "எனவே புதிய சராசரி தொடக்கச் சராசரியின் ",
+            {
+              "latex": "z",
+              "fallback": "z"
+            },
+            " மடங்கு."
+          ]
         }
       }
     ]
@@ -33663,7 +33823,7 @@ const records=[
     "id": "g9-ch9-ex9.1-q1",
     "questionMath": {
       "en": "What is the probability of a person’s birthday will fall on a Sunday?",
-      "ta": "English-language question; Tamil version pending. What is the probability of a person’s birthday will fall on a Sunday?"
+      "ta": "ஒரு மனிதரின் பிறந்த நாள் ஞாயிற்றுக்கிழமையாக இருக்க நிகழ்தகவு என்ன?"
     },
     "answerMath": {
       "latex": "\\dfrac{1}{7}",
@@ -33680,7 +33840,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "For the textbook model, take the seven days of a week as equally likely.",
-          "ta": "English explanation (Tamil version pending): For the textbook model, take the seven days of a week as equally likely."
+          "ta": "இந்தக் கணக்கில் வாரத்தின் ஏழு நாள்களும் சமவாய்ப்புள்ளவை எனக் கொள்க."
         }
       },
       {
@@ -33693,7 +33853,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Only Sunday is favourable.",
-          "ta": "English explanation (Tamil version pending): Only Sunday is favourable."
+          "ta": "ஞாயிற்றுக்கிழமை மட்டுமே சாதகமான முடிவு."
         }
       },
       {
@@ -33704,7 +33864,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide favourable outcomes by all equally likely outcomes.",
-          "ta": "English explanation (Tamil version pending): Divide favourable outcomes by all equally likely outcomes."
+          "ta": "சாதகமான முடிவுகளின் எண்ணிக்கையை மொத்தச் சமவாய்ப்பு முடிவுகளின் எண்ணிக்கையால் வகுக்கவும்."
         }
       }
     ]
@@ -33726,17 +33886,16 @@ const records=[
         "?"
       ],
       "ta": [
-        "English-language question; Tamil version pending. What is the probability of getting a perfect square number from natural numbers ",
         {
           "latex": "1",
           "fallback": "1"
         },
-        " to ",
+        " முதல் ",
         {
           "latex": "13",
           "fallback": "13"
         },
-        "?"
+        " வரை உள்ள இயல் எண்களில், முழுவர்க்க எண்ணாக இருக்க நிகழ்தகவு என்ன?"
       ]
     },
     "answerMath": {
@@ -33769,22 +33928,21 @@ const records=[
             " equally likely choices."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The natural numbers from ",
             {
               "latex": "1",
               "fallback": "1"
             },
-            " through ",
+            " முதல் ",
             {
               "latex": "13",
               "fallback": "13"
             },
-            " give ",
+            " வரை ",
             {
               "latex": "13",
               "fallback": "13"
             },
-            " equally likely choices."
+            " சமவாய்ப்புள்ள தேர்வுகள் உள்ளன."
           ]
         }
       },
@@ -33796,7 +33954,7 @@ const records=[
         },
         "reasonMath": {
           "en": "List the perfect squares that lie in this range.",
-          "ta": "English explanation (Tamil version pending): List the perfect squares that lie in this range."
+          "ta": "இந்த வரம்பிற்குள் உள்ள முழுவர்க்க எண்களைப் பட்டியலிடுக."
         }
       },
       {
@@ -33807,7 +33965,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide the favourable choices by the total.",
-          "ta": "English explanation (Tamil version pending): Divide the favourable choices by the total."
+          "ta": "சாதகமான தேர்வுகளின் எண்ணிக்கையை மொத்தத் தேர்வுகளின் எண்ணிக்கையால் வகுக்கவும்."
         }
       }
     ]
@@ -33816,7 +33974,7 @@ const records=[
     "id": "g9-ch9-ex9.1-q3",
     "questionMath": {
       "en": "What is the probability of throwing an even number with a single standard dice of six faces?",
-      "ta": "English-language question; Tamil version pending. What is the probability of throwing an even number with a single standard dice of six faces?"
+      "ta": "ஒரு சீரான பகடையை உருட்டும்போது ஓர் இரட்டை எண் கிடைப்பதற்கான நிகழ்தகவு என்ன?"
     },
     "answerMath": {
       "latex": "\\dfrac{1}{2}",
@@ -33831,7 +33989,7 @@ const records=[
         },
         "reasonMath": {
           "en": "A fair standard die has six equally likely outcomes.",
-          "ta": "English explanation (Tamil version pending): A fair standard die has six equally likely outcomes."
+          "ta": "சீரான ஆறு முகப் பகடைக்கு ஆறு சமவாய்ப்புள்ள முடிவுகள் உள்ளன."
         }
       },
       {
@@ -33855,15 +34013,10 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The even outcomes are ",
+            "இரட்டை எண்கள் ",
             {
-              "latex": "2, 4",
-              "fallback": "2, 4"
-            },
-            " and ",
-            {
-              "latex": "6",
-              "fallback": "6"
+              "latex": "2, 4, 6",
+              "fallback": "2, 4, 6"
             },
             "."
           ]
@@ -33877,7 +34030,7 @@ const records=[
         },
         "reasonMath": {
           "en": "There are three favourable outcomes out of six.",
-          "ta": "English explanation (Tamil version pending): There are three favourable outcomes out of six."
+          "ta": "ஆறு முடிவுகளில் மூன்று சாதகமானவை."
         }
       }
     ]
@@ -33904,22 +34057,22 @@ const records=[
         " of them are Blue and the remaining are Green then, what is the probability of picking out (i) a Blue ball, (ii) a Red ball and (iii) a Green ball?"
       ],
       "ta": [
-        "English-language question; Tamil version pending. There are ",
+        "ஒரு பானையில் ",
         {
           "latex": "24",
           "fallback": "24"
         },
-        " balls in a pot. If ",
+        " பந்துகள் உள்ளன. அவற்றில் ",
         {
           "latex": "3",
           "fallback": "3"
         },
-        " of them are Red, ",
+        " சிவப்பு, ",
         {
           "latex": "5",
           "fallback": "5"
         },
-        " of them are Blue and the remaining are Green then, what is the probability of picking out (i) a Blue ball, (ii) a Red ball and (iii) a Green ball?"
+        " நீலம் மற்றும் மீதி இருப்பவை பச்சை நிறமுடையதாகும். அவற்றில் ஒன்றைத் தேர்ந்தெடுக்கும்போது அது (i) ஒரு நீல நிறப் பந்து (ii) ஒரு சிவப்பு நிறப் பந்து (iii) ஒரு பச்சை நிறப் பந்தாக இருக்க நிகழ்தகவு என்ன?"
       ]
     },
     "answerMath": [
@@ -33948,7 +34101,7 @@ const records=[
         },
         "reasonMath": {
           "en": "First find the number of green balls.",
-          "ta": "English explanation (Tamil version pending): First find the number of green balls."
+          "ta": "முதலில் பச்சைப் பந்துகளின் எண்ணிக்கையைக் காண்க."
         }
       },
       {
@@ -33967,12 +34120,17 @@ const records=[
             " balls are blue."
           ],
           "ta": [
-            "English explanation (Tamil version pending): (i) Five of the ",
+            "(i) ",
             {
               "latex": "24",
               "fallback": "24"
             },
-            " balls are blue."
+            " பந்துகளில் ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " நீல நிறப் பந்துகள்."
           ]
         }
       },
@@ -33992,12 +34150,17 @@ const records=[
             " balls are red."
           ],
           "ta": [
-            "English explanation (Tamil version pending): (ii) Three of the ",
+            "(ii) ",
             {
               "latex": "24",
               "fallback": "24"
             },
-            " balls are red."
+            " பந்துகளில் ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " சிவப்பு நிறப் பந்துகள்."
           ]
         }
       },
@@ -34017,12 +34180,17 @@ const records=[
             " balls are green."
           ],
           "ta": [
-            "English explanation (Tamil version pending): (iii) Sixteen of the ",
+            "(iii) ",
             {
               "latex": "24",
               "fallback": "24"
             },
-            " balls are green."
+            " பந்துகளில் ",
+            {
+              "latex": "16",
+              "fallback": "16"
+            },
+            " பச்சை நிறப் பந்துகள்."
           ]
         }
       },
@@ -34034,7 +34202,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Check: the three colour probabilities must add to one.",
-          "ta": "English explanation (Tamil version pending): Check: the three colour probabilities must add to one."
+          "ta": "மூன்று நிறங்களுக்குமான நிகழ்தகவுகளின் கூடுதல் ஒன்று என்பதைச் சரிபார்க்கவும்."
         }
       }
     ]
@@ -34043,7 +34211,7 @@ const records=[
     "id": "g9-ch9-ex9.1-q5",
     "questionMath": {
       "en": "When two coins are tossed, what is the probability that two heads are obtained?",
-      "ta": "English-language question; Tamil version pending. When two coins are tossed, what is the probability that two heads are obtained?"
+      "ta": "இரண்டு சீரான நாணயங்களை ஒரே நேரத்தில் சுண்டும்போது, இரு தலைகள் கிடைப்பதற்கான நிகழ்தகவு யாது?"
     },
     "answerMath": {
       "latex": "\\dfrac{1}{4}",
@@ -34058,7 +34226,7 @@ const records=[
         },
         "reasonMath": {
           "en": "List the equally likely ordered outcomes when both coins are fair.",
-          "ta": "English explanation (Tamil version pending): List the equally likely ordered outcomes when both coins are fair."
+          "ta": "இரண்டு சீரான நாணயங்களுக்கும் வரிசைப்படி கிடைக்கும் சமவாய்ப்பு முடிவுகளைப் பட்டியலிடுக."
         }
       },
       {
@@ -34075,14 +34243,7 @@ const records=[
             },
             " gives two heads."
           ],
-          "ta": [
-            "English explanation (Tamil version pending): Only ",
-            {
-              "latex": "HH",
-              "fallback": "HH"
-            },
-            " gives two heads."
-          ]
+          "ta": "இரண்டும் தலை என்ற முடிவில் மட்டுமே இரண்டு தலைகள் கிடைக்கும்."
         }
       },
       {
@@ -34093,7 +34254,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide one favourable outcome by the four possible outcomes.",
-          "ta": "English explanation (Tamil version pending): Divide one favourable outcome by the four possible outcomes."
+          "ta": "ஒரு சாதகமான முடிவை நான்கு சாத்தியமான முடிவுகளின் எண்ணிக்கையால் வகுக்கவும்."
         }
       }
     ]
@@ -34119,21 +34280,22 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Two dice are rolled, find the probability that the sum is i) equal to ",
+        "இரு பகடைகள் உருட்டப்படும்போது கிடைக்கும் எண்களின் கூடுதல் (i) ",
         {
           "latex": "1",
           "fallback": "1"
         },
-        " ii) equal to ",
+        " க்குச் சமமாக (ii) ",
         {
           "latex": "4",
           "fallback": "4"
         },
-        " iii) less than ",
+        " க்குச் சமமாக (iii) ",
         {
           "latex": "13",
           "fallback": "13"
-        }
+        },
+        " ஐ விடச் சிறியதாக இருப்பதற்கான நிகழ்தகவுகளைக் காண்க."
       ]
     },
     "answerMath": [
@@ -34162,7 +34324,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Two distinguishable fair dice have six possibilities each.",
-          "ta": "English explanation (Tamil version pending): Two distinguishable fair dice have six possibilities each."
+          "ta": "வேறுபடுத்தி அறியக்கூடிய இரண்டு சீரான பகடைகளில் ஒவ்வொன்றுக்கும் ஆறு முடிவுகள் உள்ளன."
         }
       },
       {
@@ -34186,17 +34348,17 @@ const records=[
             " is impossible."
           ],
           "ta": [
-            "English explanation (Tamil version pending): (i) The smallest possible sum is ",
+            "(i) மிகச் சிறிய கூடுதல் ",
             {
               "latex": "2",
               "fallback": "2"
             },
-            ", so a sum of ",
+            ". எனவே கூடுதல் ",
             {
               "latex": "1",
               "fallback": "1"
             },
-            " is impossible."
+            " ஆவது இயலாத நிகழ்ச்சி."
           ]
         }
       },
@@ -34226,20 +34388,15 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): (ii) A sum of ",
+            "(ii) ",
+            {
+              "latex": "\\left(1, 3\\right), \\left(2, 2\\right), \\left(3, 1\\right)",
+              "fallback": "(1,3), (2,2), (3,1)"
+            },
+            " ஆகிய முடிவுகளில் கூடுதல் ",
             {
               "latex": "4",
               "fallback": "4"
-            },
-            " occurs for ",
-            {
-              "latex": "\\left(1, 3\\right), \\left(2, 2\\right)",
-              "fallback": "(1,3), (2,2)"
-            },
-            " and ",
-            {
-              "latex": "\\left(3, 1\\right)",
-              "fallback": "(3,1)"
             },
             "."
           ]
@@ -34266,17 +34423,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): (iii) The largest possible sum is ",
+            "(iii) அதிகபட்சக் கூடுதல் ",
             {
               "latex": "12",
               "fallback": "12"
             },
-            ", so every outcome has a sum below ",
+            ". எனவே ஒவ்வொரு முடிவிலும் கூடுதல் ",
             {
               "latex": "13",
               "fallback": "13"
             },
-            "."
+            " ஐ விடச் சிறியது."
           ]
         }
       }
@@ -34299,17 +34456,17 @@ const records=[
         " of them were defective. If a LED light is selected at random, what is the probability that the selected LED light is a defective one."
       ],
       "ta": [
-        "English-language question; Tamil version pending. A manufacturer tested ",
+        "ஓர் உற்பத்தியாளர் ",
         {
           "latex": "7000",
           "fallback": "7000"
         },
-        " LED lights at random and found that ",
+        " ஒளி உமிழ் இருமுனைய விளக்குகளை (LED lights) சோதனை செய்ததில் அவற்றில் ",
         {
           "latex": "25",
           "fallback": "25"
         },
-        " of them were defective. If a LED light is selected at random, what is the probability that the selected LED light is a defective one."
+        " விளக்குகள் குறைபாடுடையதாகக் கண்டறியப்பட்டன. சமவாய்ப்பு முறையில் ஒரு விளக்கைத் தேர்ந்தெடுக்கும்போது அது குறைபாடுடையதாக இருக்க நிகழ்தகவு என்ன?"
       ]
     },
     "answerMath": {
@@ -34332,7 +34489,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Use the observed test results as a relative-frequency probability.",
-          "ta": "English explanation (Tamil version pending): Use the observed test results as a relative-frequency probability."
+          "ta": "சோதனையில் கண்ட ஒப்பீட்டு நிகழ்வெண்ணைப் பயன்படுத்தி நிகழ்தகவை மதிப்பிடுக."
         }
       },
       {
@@ -34343,7 +34500,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide the number of defective lights by the total number tested.",
-          "ta": "English explanation (Tamil version pending): Divide the number of defective lights by the total number tested."
+          "ta": "குறைபாடுள்ள விளக்குகளின் எண்ணிக்கையைச் சோதித்த விளக்குகளின் மொத்த எண்ணிக்கையால் வகுக்கவும்."
         }
       },
       {
@@ -34362,12 +34519,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Simplify the fraction by dividing numerator and denominator by ",
+            "தொகுதியையும் பகுதியையும் ",
             {
               "latex": "25",
               "fallback": "25"
             },
-            "."
+            " ஆல் வகுத்துப் பின்னத்தைச் சுருக்குக."
           ]
         }
       }
@@ -34390,17 +34547,17 @@ const records=[
         " attempts tried by a team. Find the probability that the opponent team can convert the attempt into a goal."
       ],
       "ta": [
-        "English-language question; Tamil version pending. In a football match, a goalkeeper of a team can stop the goal, ",
-        {
-          "latex": "32",
-          "fallback": "32"
-        },
-        " times out of ",
+        "ஒரு கால்பந்தாட்டத்தில் ஓர் இலக்குக் காப்பாளரால் ",
         {
           "latex": "40",
           "fallback": "40"
         },
-        " attempts tried by a team. Find the probability that the opponent team can convert the attempt into a goal."
+        " இல் ",
+        {
+          "latex": "32",
+          "fallback": "32"
+        },
+        " முயற்சிகளைத் தடுக்க இயலும் எனில், எதிரணியானது ஒரு முயற்சியை இலக்காக மாற்றுவதற்கான நிகழ்தகவு காண்க."
       ]
     },
     "answerMath": {
@@ -34436,17 +34593,16 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): There were ",
             {
               "latex": "40",
               "fallback": "40"
             },
-            " attempts, of which the goalkeeper stopped ",
+            " முயற்சிகளில் இலக்குக் காப்பாளர் ",
             {
               "latex": "32",
               "fallback": "32"
             },
-            "."
+            " முயற்சிகளைத் தடுத்தார்."
           ]
         }
       },
@@ -34458,7 +34614,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The remaining attempts resulted in goals in this simplified experiment.",
-          "ta": "English explanation (Tamil version pending): The remaining attempts resulted in goals in this simplified experiment."
+          "ta": "இந்தக் கணக்கில் தடுக்கப்படாத முயற்சிகள் இலக்குகளாக அமைந்தன. அவற்றின் எண்ணிக்கையைக் காண்க."
         }
       },
       {
@@ -34469,7 +34625,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide successful goals by total attempts.",
-          "ta": "English explanation (Tamil version pending): Divide successful goals by total attempts."
+          "ta": "இலக்குகளின் எண்ணிக்கையை மொத்த முயற்சிகளின் எண்ணிக்கையால் வகுக்கவும்."
         }
       }
     ]
@@ -36416,12 +36572,12 @@ const records=[
         "?"
       ],
       "ta": [
-        "English-language question; Tamil version pending. What is the probability that the spinner will not land on a multiple of ",
+        "கொடுக்கப்பட்ட சுழலட்டையின் முள் ",
         {
           "latex": "3",
           "fallback": "3"
         },
-        "?"
+        " இன் மடங்குகளில் நிலை கொள்ளாமல் இருப்பதற்கான நிகழ்தகவு என்ன?"
       ]
     },
     "answerMath": {
@@ -36450,17 +36606,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The textbook spinner has eight equal sections numbered ",
+            "படத்தில் ",
             {
               "latex": "1",
               "fallback": "1"
             },
-            " to ",
+            " முதல் ",
             {
               "latex": "8",
               "fallback": "8"
             },
-            "."
+            " வரை எண்களிட்ட எட்டு சமமான பகுதிகள் உள்ளன."
           ]
         }
       },
@@ -36493,22 +36649,22 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Among those eight, only ",
+            "இவற்றில் ",
             {
               "latex": "3",
               "fallback": "3"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "6",
               "fallback": "6"
             },
-            " are multiples of ",
+            " மட்டுமே ",
             {
               "latex": "3",
               "fallback": "3"
             },
-            "."
+            " இன் மடங்குகள்."
           ]
         }
       },
@@ -36533,17 +36689,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Count all outcomes that are ",
-            {
-              "latex": "NOT",
-              "fallback": "NOT"
-            },
-            " multiples of ",
             {
               "latex": "3",
               "fallback": "3"
             },
-            "."
+            " இன் மடங்குகளாக இல்லாத முடிவுகளை எண்ணுக."
           ]
         }
       },
@@ -36555,7 +36705,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide favourable outcomes by equally likely outcomes.",
-          "ta": "English explanation (Tamil version pending): Divide favourable outcomes by equally likely outcomes."
+          "ta": "சாதகமான முடிவுகளின் எண்ணிக்கையை மொத்தச் சமவாய்ப்பு முடிவுகளின் எண்ணிக்கையால் வகுக்கவும்."
         }
       }
     ]
@@ -36564,22 +36714,38 @@ const records=[
     "id": "g9-ch9-ex9.1-q10",
     "questionMath": {
       "en": "Frame two problems in calculating probability, based on the spinner shown here.",
-      "ta": "English-language question; Tamil version pending. Frame two problems in calculating probability, based on the spinner shown here."
+      "ta": "கொடுக்கப்பட்ட சுழலட்டையை அடிப்படையாகக் கொண்டு நிகழ்தகவைக் கணக்கிடுமாறு எவையேனும் இரு வினாக்களை உருவாக்குக."
     },
-    "answerMath": [
-      "Example questions: (1) ",
-      {
-        "latex": "P\\left(\\text{even}\\right) = \\dfrac{1}{2}",
-        "fallback": "P(even) = [[1|2]]",
-        "display": true
-      },
-      "; (2) ",
-      {
-        "latex": "P\\left(\\text{not prime}\\right) = \\dfrac{1}{2}",
-        "fallback": "P(not prime) = [[1|2]]",
-        "display": true
-      }
-    ],
+    "answerMath": {
+      "en": [
+        "Example questions: (1) ",
+        {
+          "latex": "P\\left(\\text{even}\\right) = \\dfrac{1}{2}",
+          "fallback": "P(even) = [[1|2]]",
+          "display": true
+        },
+        "; (2) ",
+        {
+          "latex": "P\\left(\\text{not prime}\\right) = \\dfrac{1}{2}",
+          "fallback": "P(not prime) = [[1|2]]",
+          "display": true
+        }
+      ],
+      "ta": [
+        "மாதிரி வினாக்கள்: (1) ",
+        {
+          "latex": "P\\left(\\text{இரட்டை எண்}\\right) = \\dfrac{1}{2}",
+          "fallback": "P(இரட்டை எண்) = [[1|2]]",
+          "display": true
+        },
+        "; (2) ",
+        {
+          "latex": "P\\left(\\text{பகா எண் அல்ல}\\right) = \\dfrac{1}{2}",
+          "fallback": "P(பகா எண் அல்ல) = [[1|2]]",
+          "display": true
+        }
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -36589,7 +36755,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use eight equally likely numbers shown on the spinner.",
-          "ta": "English explanation (Tamil version pending): Use eight equally likely numbers shown on the spinner."
+          "ta": "சுழலட்டையில் உள்ள எட்டு எண்களும் சமவாய்ப்புள்ளவை."
         }
       },
       {
@@ -36608,12 +36774,12 @@ const records=[
             ": What is the probability of landing on an even number? Four outcomes qualify."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Example question ",
+            "மாதிரி வினா ",
             {
               "latex": "1",
               "fallback": "1"
             },
-            ": What is the probability of landing on an even number? Four outcomes qualify."
+            ". இரட்டை எண்ணில் முள் நிற்பதற்கான நிகழ்தகவு என்ன? நான்கு எண்கள் சாதகமானவை."
           ]
         }
       },
@@ -36643,20 +36809,15 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Example question ",
+            "மாதிரி வினா ",
             {
               "latex": "2",
               "fallback": "2"
             },
-            ": What is the probability of ",
-            {
-              "latex": "NOT",
-              "fallback": "NOT"
-            },
-            " landing on a prime number? The primes are ",
+            ". பகா எண்ணாக இல்லாத ஓர் எண்ணில் முள் நிற்பதற்கான நிகழ்தகவு என்ன? பகா எண்கள் ",
             {
               "latex": "2, 3, 5, 7",
-              "fallback": "2,3,5,7"
+              "fallback": "2, 3, 5, 7"
             },
             "."
           ]
@@ -36677,7 +36838,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "These are two valid student-created questions. Other correct framed questions and answers are possible.",
-          "ta": "English explanation (Tamil version pending): These are two valid student-created questions. Other correct framed questions and answers are possible."
+          "ta": "இவை மாணவர்கள் உருவாக்கக்கூடிய இரு மாதிரி வினாக்கள். வேறு பொருத்தமான வினாக்களும் விடைகளும் சாத்தியம்."
         }
       }
     ]

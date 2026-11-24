@@ -24,7 +24,9 @@ for(let n=1;n<=8;n++){
  assert.equal(item.answer,expected[n-1],'Math answer mismatch at Q'+n);
  assert.ok(item.steps.length>=3,'Missing step-by-step explanation Q'+n);
  for(const step of item.steps)assert.ok(step.en&&step.eq&&step.en.trim());
- assert.match(item.q.ta,/Tamil version pending/, 'Do not represent untranslated English as Tamil');
+ assert.equal(item.sourceFidelity.taPdfPage,321);
+ assert.match(item.q.ta,/\p{Script=Tamil}/u);
+ assert(item.steps.every(step=>/\p{Script=Tamil}/u.test(step.ta)));
 }
 assert.equal(new Set(items.map(x=>x.id)).size,items.length,'No duplicate question IDs');
 assert.equal(chapter.textbookQuestionIds.length,8,'Chapter links missing');

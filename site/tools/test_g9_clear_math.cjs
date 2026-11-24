@@ -62,7 +62,7 @@ const preservation=items.filter(q=>!newIds.has(q.id)).map(q=>{
  if(bilingual)assert.equal(createHash('sha256').update(JSON.stringify(q)).digest('hex'),bilingual.reviewedRecordSha256,'Exact bilingual geometry '+q.id);
  let question=questionOriginal?.originalRecord?.q||q.q;
  let steps=legacy?.originalSteps||legacy?.originalRecord?.steps||q.steps;
- if(q.chapter==='7' && ['7.1','7.2','7.3','7.4'].includes(q.exercise)){
+ if(/^g9-ch(?:7-ex7\.[1-4]|8-ex8\.[1-4]|9-ex9\.1)-q\d+$/.test(q.id)){
   question={...q.q,ta:'English-language question; Tamil version pending. '+q.q.en};
   steps=q.steps.map(step=>({...step,ta:'English explanation (Tamil version pending): '+step.en}));
  }

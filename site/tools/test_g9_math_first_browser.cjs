@@ -93,14 +93,12 @@ async function checkExerciseLanguages(page, base, id, verify) {
       assert.equal(await page.locator('html').getAttribute('lang'), language);
       if (language === 'ta') {
         const prompt = page.locator('#questionText');
-        if (id.startsWith('g9-ch1-ex1.2-')) {
-          assert.equal(await prompt.getAttribute('lang'), null);
-          assert.match(await prompt.innerText(), /\p{Script=Tamil}/u);
-        } else assert.equal(await prompt.getAttribute('lang'), 'en');
+        assert.equal(await prompt.getAttribute('lang'), null);
+        assert.match(await prompt.innerText(), /\p{Script=Tamil}/u);
       }
       assert.equal(await page.locator('[data-math-error]').count(), 0, id);
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), id + ' fits the page');
-      await verify(`${id} in ${language} at ${page.viewportSize().width}px`);
+      await verify(`${id} in ${language} at ${page.viewportSize().width}px`, language);
     }
   } finally { await page.locator('#langEn').click(); }
 }
@@ -173,21 +171,24 @@ async function setLanguageAndStatistics(page, base) {
     ['g9-ch8-ex8.3-q5', 'The modal class is 20–30', 'The estimated mode is 24 marks', '24 marks', ['f_1', 'f_0', 'f_2']],
   ];
   for (const [id, interval, result, answer, symbols] of stats) {
-    await checkExerciseLanguages(page, base, id, async name => {
+    await checkExerciseLanguages(page, base, id, async (name, language) => {
       const reasons = page.locator('#stepsList .step-reason');
       const prose = await reasons.evaluateAll(nodes => nodes.map(node => [...node.childNodes]
         .map(child => child.dataset?.mathFallback || child.textContent).join('')));
-      for (const phrase of [interval, result]) {
+      const phrases = language === 'en' ? [interval,result] : id.includes('ex8.2')
+        ? ['30–40 தான் இடைநிலைப் பிரிவு','31 மதிப்பெண்கள்']
+        : ['20–30 பிரிவே முகட்டுப் பிரிவு','24 மதிப்பெண்கள்'];
+      for (const phrase of phrases) {
         const index = prose.findIndex(reason => reason.includes(phrase));
         assert(index >= 0 && await reasons.nth(index).isVisible(), name + ' explains ' + phrase);
       }
-      const math = await reasons.nth(prose.findIndex(reason => reason.includes(interval)))
+      const math = await reasons.nth(prose.findIndex(reason => reason.includes(phrases[0])))
         .locator('math annotation').allTextContents();
       assert.deepEqual(math, symbols, name + ' names the formula symbols using inline math');
       const final = page.locator('.final-answer-value');
       assert.equal(await final.evaluate(el => [...el.childNodes]
         .map(node => node.dataset?.mathFallback || node.textContent).join('')),
-        answer, name + ' preserves the final answer');
+        language === 'ta' ? answer.replace('marks','மதிப்பெண்கள்') : answer, name + ' preserves the final answer');
     });
   }
 }

@@ -35,7 +35,7 @@ for (const [exercise, [filename, pages]] of tamilPages) {
     assert.equal(evidence.taPdfPage, pdfPage, id);
     assert.equal(evidence.taPrintedPage, pdfPage - 6, id);
     assert.equal(evidence.tamilEditorial, 'pending', id);
-    assert.deepEqual(JSON.parse(JSON.stringify(question.sourceFidelity)), evidence, id);
+    assert.deepEqual(JSON.parse(JSON.stringify(question.sourceFidelity)), {...evidence, taDriveId:manifest.tamilSourceId}, id);
   }
 }
 
@@ -68,7 +68,7 @@ for (const [part, index, explanation, working, symbols] of reviewed) {
   assert.equal(question.sourceFidelity.status, 'english-source-page-visual-checked', id);
   assert.match(source.en, explanation, id);
   assert.match(source.eq, working, id);
-  assert.equal(source.ta, `English explanation (Tamil version pending): ${source.en}`, id);
+  assert.match(source.ta, /\p{Script=Tamil}/u, id);
   assert.equal(fallback(shown.math), source.eq, id);
   for (const language of ['en', 'ta']) {
     const reason = shown.reasonMath[language];
@@ -89,6 +89,12 @@ assert.equal(weightedMean([17, 22, 27, 32, 37, 42], [4, 20, 38, 24, 10, 9]), 610
 assert.equal(30 + ((50 / 2 - 24) / 10) * 10, 31);
 assert.equal(20 + (8 / (8 + 12)) * 10, 24);
 assert.equal(54.5 + (4 / (4 + 6)) * 10, 58.5);
+const groupedWeights=byId.get('g9-ch8-ex8.3-q6');
+const mean=weightedMean([29.5,39.5,49.5,59.5,69.5,79.5], [4,8,10,14,8,6]);
+const median=54.5+(25-22)*10/14;
+for(const value of [mean, median.toFixed(2), 58.5]) assert(groupedWeights.answerTa.includes(String(value)));
+assert.match(groupedWeights.q.ta,/சராசரி, இடைநிலை அளவு, முகடு/);
+
 
 console.log('PASS Grade 9 Statistics: 30 source locators, six worked explanations and answers, and rendered bilingual fallback parity.');
 

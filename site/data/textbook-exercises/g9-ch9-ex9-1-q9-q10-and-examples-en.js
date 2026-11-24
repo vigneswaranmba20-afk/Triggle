@@ -10,39 +10,50 @@ const entries=[
     "exercise": "9.1",
     "topic": {
       "en": "Probability",
-      "ta": "Probability (English version only)"
+      "ta": "நிகழ்தகவு"
     },
     "label": {
       "en": "Exercise 9.1 · Q9",
-      "ta": "Exercise 9.1 · Q9 (English only)"
+      "ta": "பயிற்சி 9.1 · வினா 9"
     },
     "title": {
       "en": "Spinner: not a multiple of 3",
-      "ta": "Spinner: not a multiple of 3 (English only)"
+      "ta": "மூன்றின் மடங்குகள்"
     },
     "q": {
       "en": "What is the probability that the spinner will not land on a multiple of 3?",
-      "ta": "English-language question; Tamil version pending. What is the probability that the spinner will not land on a multiple of 3?"
+      "ta": "கொடுக்கப்பட்ட சுழலட்டையின் முள் 3 இன் மடங்குகளில் நிலை கொள்ளாமல் இருப்பதற்கான நிகழ்தகவு என்ன?"
     },
     "steps": [
       {
         "en": "The textbook spinner has eight equal sections numbered 1 to 8.",
-        "ta": "English explanation (Tamil version pending): The textbook spinner has eight equal sections numbered 1 to 8.",
+        "ta": "படத்தில் 1 முதல் 8 வரை எண்களிட்ட எட்டு சமமான பகுதிகள் உள்ளன.",
         "eq": "S = {1,2,3,4,5,6,7,8}; n(S)=8"
       },
       {
         "en": "Among those eight, only 3 and 6 are multiples of 3.",
-        "ta": "English explanation (Tamil version pending): Among those eight, only 3 and 6 are multiples of 3.",
-        "eq": "Multiples of 3 = {3,6}; n=2"
+        "ta": "இவற்றில் 3 மற்றும் 6 மட்டுமே 3 இன் மடங்குகள்.",
+        "eq": "Multiples of 3 = {3,6}; n=2",
+        "mathTa": [
+          {
+            "latex": "3",
+            "fallback": "3"
+          },
+          " இன் மடங்குகள் = ",
+          {
+            "latex": "\\left\\{3, 6\\right\\};\\quad n = 2",
+            "fallback": "{3,6}; n=2"
+          }
+        ]
       },
       {
         "en": "Count all outcomes that are NOT multiples of 3.",
-        "ta": "English explanation (Tamil version pending): Count all outcomes that are NOT multiples of 3.",
+        "ta": "3 இன் மடங்குகளாக இல்லாத முடிவுகளை எண்ணுக.",
         "eq": "E = {1,2,4,5,7,8}; n(E)=6"
       },
       {
         "en": "Divide favourable outcomes by equally likely outcomes.",
-        "ta": "English explanation (Tamil version pending): Divide favourable outcomes by equally likely outcomes.",
+        "ta": "சாதகமான முடிவுகளின் எண்ணிக்கையை மொத்தச் சமவாய்ப்பு முடிவுகளின் எண்ணிக்கையால் வகுக்கவும்.",
         "eq": "P(E) = [[6|8]] = [[3|4]]"
       }
     ],
@@ -71,11 +82,12 @@ const entries=[
       "enPrintedPage": 299,
       "enPdfPage": 305,
       "taPrintedPage": 316,
-      "taPdfPage": 332,
+      "taPdfPage": 322,
       "tamilEditorial": "pending",
       "notes": [
         "Eight equal sectors 1–8 corroborated by older textbook spinner image; inspect 2025 original page image before marking exact visual fidelity."
-      ]
+      ],
+      "taDriveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
     }
   },
   {
@@ -85,40 +97,52 @@ const entries=[
     "exercise": "9.1",
     "topic": {
       "en": "Probability",
-      "ta": "Probability (English version only)"
+      "ta": "நிகழ்தகவு"
     },
     "label": {
       "en": "Exercise 9.1 · Q10",
-      "ta": "Exercise 9.1 · Q10 (English only)"
+      "ta": "பயிற்சி 9.1 · வினா 10"
     },
     "title": {
       "en": "Create two spinner probability problems",
-      "ta": "Create two spinner probability problems (English only)"
+      "ta": "சுழலட்டையை வைத்து வினா அமைத்தல்"
     },
     "q": {
       "en": "Frame two problems in calculating probability, based on the spinner shown here.",
-      "ta": "English-language question; Tamil version pending. Frame two problems in calculating probability, based on the spinner shown here."
+      "ta": "கொடுக்கப்பட்ட சுழலட்டையை அடிப்படையாகக் கொண்டு நிகழ்தகவைக் கணக்கிடுமாறு எவையேனும் இரு வினாக்களை உருவாக்குக."
     },
     "steps": [
       {
         "en": "Use eight equally likely numbers shown on the spinner.",
-        "ta": "English explanation (Tamil version pending): Use eight equally likely numbers shown on the spinner.",
+        "ta": "சுழலட்டையில் உள்ள எட்டு எண்களும் சமவாய்ப்புள்ளவை.",
         "eq": "S = {1,2,3,4,5,6,7,8}; n(S)=8"
       },
       {
         "en": "Example question 1: What is the probability of landing on an even number? Four outcomes qualify.",
-        "ta": "English explanation (Tamil version pending): Example question 1: What is the probability of landing on an even number? Four outcomes qualify.",
+        "ta": "மாதிரி வினா 1. இரட்டை எண்ணில் முள் நிற்பதற்கான நிகழ்தகவு என்ன? நான்கு எண்கள் சாதகமானவை.",
         "eq": "E₁ = {2,4,6,8}; P(E₁) = [[4|8]] = [[1|2]]"
       },
       {
         "en": "Example question 2: What is the probability of NOT landing on a prime number? The primes are 2,3,5,7.",
-        "ta": "English explanation (Tamil version pending): Example question 2: What is the probability of NOT landing on a prime number? The primes are 2,3,5,7.",
+        "ta": "மாதிரி வினா 2. பகா எண்ணாக இல்லாத ஓர் எண்ணில் முள் நிற்பதற்கான நிகழ்தகவு என்ன? பகா எண்கள் 2, 3, 5, 7.",
         "eq": "E₂ = {1,4,6,8}; P(E₂) = [[4|8]] = [[1|2]]"
       },
       {
         "en": "These are two valid student-created questions. Other correct framed questions and answers are possible.",
-        "ta": "English explanation (Tamil version pending): These are two valid student-created questions. Other correct framed questions and answers are possible.",
-        "eq": "Answers: [[1|2]] and [[1|2]]"
+        "ta": "இவை மாணவர்கள் உருவாக்கக்கூடிய இரு மாதிரி வினாக்கள். வேறு பொருத்தமான வினாக்களும் விடைகளும் சாத்தியம்.",
+        "eq": "Answers: [[1|2]] and [[1|2]]",
+        "mathTa": [
+          "விடைகள்: ",
+          {
+            "latex": "\\dfrac{1}{2}",
+            "fallback": "[[1|2]]"
+          },
+          " மற்றும் ",
+          {
+            "latex": "\\dfrac{1}{2}",
+            "fallback": "[[1|2]]"
+          }
+        ]
       }
     ],
     "answer": "Example questions: (1) P(even) = [[1|2]]; (2) P(not prime) = [[1|2]]",
@@ -146,11 +170,43 @@ const entries=[
       "enPrintedPage": 299,
       "enPdfPage": 305,
       "taPrintedPage": 316,
-      "taPdfPage": 332,
+      "taPdfPage": 322,
       "tamilEditorial": "pending",
       "notes": [
         "An open-ended textbook task. These are original sample questions, not official fixed answer wording.",
         "Eight equal sectors 1–8 corroborated by older textbook spinner image; source page image of 2025 pending."
+      ],
+      "taDriveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+    },
+    "answerTa": "மாதிரி வினாக்கள்: (1) P(இரட்டை எண்) = [[1|2]]; (2) P(பகா எண் அல்ல) = [[1|2]]",
+    "answerMath": {
+      "en": [
+        "Example questions: (1) ",
+        {
+          "latex": "P\\left(\\text{even}\\right) = \\dfrac{1}{2}",
+          "fallback": "P(even) = [[1|2]]",
+          "display": true
+        },
+        "; (2) ",
+        {
+          "latex": "P\\left(\\text{not prime}\\right) = \\dfrac{1}{2}",
+          "fallback": "P(not prime) = [[1|2]]",
+          "display": true
+        }
+      ],
+      "ta": [
+        "மாதிரி வினாக்கள்: (1) ",
+        {
+          "latex": "P\\left(\\text{இரட்டை எண்}\\right) = \\dfrac{1}{2}",
+          "fallback": "P(இரட்டை எண்) = [[1|2]]",
+          "display": true
+        },
+        "; (2) ",
+        {
+          "latex": "P\\left(\\text{பகா எண் அல்ல}\\right) = \\dfrac{1}{2}",
+          "fallback": "P(பகா எண் அல்ல) = [[1|2]]",
+          "display": true
+        }
       ]
     }
   },
