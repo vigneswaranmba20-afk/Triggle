@@ -1,0 +1,28 @@
+name: Exact Geometry project status verification
+on:
+  push:
+    branches: [verify/g9-geometry-status-b8489ed]
+permissions:
+  contents: read
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: b8489edc99dbcf0929c4c5b807359e0ca8360da5
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify exact generated status
+        run: |
+          git rev-parse HEAD
+          if ! npm run status:check; then
+            npm run status:build
+            git diff --stat
+            git diff -- site/data/project-status.json
+            exit 1
+          fi
