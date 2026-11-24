@@ -85,7 +85,7 @@ const TEXTBOOK_SPEC = [
   { chapter: 3, exercise: '3.12', enPdfPages: [122, 123], enPrintedPages: [116, 117], taPdfPages: [124, 125], questions: qRange(1, 9) },
   { chapter: 3, exercise: '3.13', enPdfPages: [125], enPrintedPages: [119], taPdfPages: [127], questions: qRange(1, 5, { 1: ['i', 'ii', 'iii', 'iv', 'v'], 2: ['i', 'ii'] }) },
   { chapter: 3, exercise: '3.14', enPdfPages: [128], enPrintedPages: [122], taPdfPages: [130], questions: qRange(1, 6, { 1: ['i', 'ii', 'iii', 'iv'], 2: ['i', 'ii', 'iii'], 3: ['i', 'ii', 'iii'] }) },
-  { chapter: 3, exercise: '3.15', enPdfPages: [135, 136], enPrintedPages: [129, 130], taPdfPages: [137], questions: qRange(1, 6, { 1: ['i', 'ii'], 2: ['i', 'ii'], 4: ['i', 'ii'], 5: ['i', 'ii'], 6: ['i', 'ii'] }) },
+  { chapter: 3, exercise: '3.15', enPdfPages: [135, 136], enPrintedPages: [129, 130], taPdfPages: [137], questions: qRange(1, 6, { 1: ['i', 'ii'], 2: ['i', 'ii'], 3: ['i', 'ii'], 4: ['i', 'ii'], 5: ['i', 'ii'], 6: ['i', 'ii'] }) },
   { chapter: 3, exercise: '3.16', enPdfPages: [143, 144], enPrintedPages: [137, 138], taPdfPages: [145], questions: qRange(1, 8, { 1: ['i', 'ii', 'iii', 'iv', 'v', 'vi'] }) },
   { chapter: 3, exercise: '3.17', enPdfPages: [150, 151], enPrintedPages: [144, 145], taPdfPages: [153], questions: qRange(1, 7, { 1: ['i', 'ii', 'iii'], 3: ['i', 'ii'], 7: ['i', 'ii', 'iii'] }) },
   { chapter: 3, exercise: '3.18', enPdfPages: [154, 155], enPrintedPages: [148, 149], taPdfPages: [157], questions: qRange(1, 8, { 1: ['i', 'ii'], 4: ['i', 'ii'], 5: ['i', 'ii'] }) },
