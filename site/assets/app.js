@@ -451,8 +451,58 @@
  }
  const prepareLessonMath=()=>window.TriggleNotation?.prepare?.($('lessonCard'));
  const lessonMathObserver=typeof ResizeObserver==='function'?new ResizeObserver(prepareLessonMath):null;
+ function renderExerciseSupplement(){
+  const host=$('p0SupplementHost');
+  const entry=window.TriggleP0Supplements?.get(current.id);
+  host.replaceChildren();
+  host.hidden=!entry;
+  if(!entry)return;
+  const title=tr(entry.title);
+  const heading=document.createElement('h4');
+  heading.textContent=title;
+  host.append(heading);
+  if(entry.note){
+   const note=document.createElement('p');
+   note.textContent=tr(entry.note);
+   host.append(note);
+  }
+  if(entry.table){
+   const data=entry.table;
+   const wrapper=document.createElement('div');
+   wrapper.className='p0-table-scroll';
+   wrapper.tabIndex=0;
+   wrapper.setAttribute('role','region');
+   wrapper.setAttribute('aria-label',title);
+   const table=document.createElement('table');
+   table.className='p0-freq-table';
+   table.setAttribute('aria-label',title);
+   const addRow=(section,cells,header=false)=>{
+    const row=section.insertRow();
+    cells.forEach((value,index)=>{
+     const cell=document.createElement(header||index===0?'th':'td');
+     if(header||index===0)cell.scope=header?'col':'row';
+     cell.textContent=value;
+     row.append(cell);
+    });
+   };
+   addRow(table.createTHead(),lang==='ta'?data.headersTa:data.headers,true);
+   const body=table.createTBody();
+   for(const cells of (lang==='ta'&&data.rowsTa)||data.rows)addRow(body,cells);
+   if(data.footer)addRow(table.createTFoot(),lang==='ta'?data.footerTa:data.footer);
+   wrapper.append(table);
+   host.append(wrapper);
+  }
+  if(entry.latex){
+   const equation=document.createElement('div');
+   equation.className='p0-supp-math';
+   const latex=(lang==='ta'&&entry.latexTa)||entry.latex;
+   equation.innerHTML=math({latex,fallback:entry.fallback?tr(entry.fallback):latex,display:true});
+   host.append(equation);
+  }
+ }
  function renderSteps(){
   lessonMathObserver?.disconnect();
+  renderExerciseSupplement();
   const authored=window.TriggleWorkedDisplay?.get(current,lang);
   $('lessonCard').classList.toggle('twd-lesson',!!authored);
   $('questionText').classList.toggle('twd-question',!!authored);
