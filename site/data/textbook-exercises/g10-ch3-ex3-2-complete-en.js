@@ -76,7 +76,12 @@ const entries=[
           "fallback": "x³ + x² − 5x + 3 = (x − 1)(x² + 2x − 3) + 0 ⇒ GCD = x² + 2x − 3",
           "display": true
         },
-        "ta": "g(x) ஐ x² + 2x − 3 ஆல் வகுக்கும்போது மீதி பூச்சியம். எனவே கடைசியாக வகுத்த x² + 2x − 3 தான் மீ.பெ.வ."
+        "ta": "g(x) ஐ x² + 2x − 3 ஆல் வகுக்கும்போது மீதி பூச்சியம். எனவே கடைசியாக வகுத்த x² + 2x − 3 தான் மீ.பெ.வ.",
+        "mathTa": {
+          "latex": "x^3+x^2-5x+3=(x-1)(x^2+2x-3)+0\\implies\\text{மீ.பெ.வ}=x^2+2x-3",
+          "fallback": "x³ + x² − 5x + 3 = (x − 1)(x² + 2x − 3) + 0 ⇒ மீ.பெ.வ = x² + 2x − 3",
+          "display": true
+        }
       }
     ],
     "answer": "x² + 2x − 3",
@@ -160,7 +165,12 @@ const entries=[
           "fallback": "x³ − 11x² + x − 11 = (x − 11)(x² + 1) + 0 ⇒ GCD = x² + 1",
           "display": true
         },
-        "ta": "g(x) ஐ x² + 1 ஆல் வகுத்தால் மீதி பூச்சியம். எனவே மீ.பெ.வ. x² + 1."
+        "ta": "g(x) ஐ x² + 1 ஆல் வகுத்தால் மீதி பூச்சியம். எனவே மீ.பெ.வ. x² + 1.",
+        "mathTa": {
+          "latex": "x^3-11x^2+x-11=(x-11)(x^2+1)+0\\implies\\text{மீ.பெ.வ}=x^2+1",
+          "fallback": "x³ − 11x² + x − 11 = (x − 11)(x² + 1) + 0 ⇒ மீ.பெ.வ = x² + 1",
+          "display": true
+        }
       }
     ],
     "answer": "x² + 1",
@@ -244,7 +254,12 @@ const entries=[
           "fallback": "x³ + 2x² − 4x − 8 = (x − 2)(x² + 4x + 4) + 0 ⇒ GCD = x(x² + 4x + 4)",
           "display": true
         },
-        "ta": "x³ + 2x² − 4x − 8 ஐ x² + 4x + 4 ஆல் வகுத்தால் மீதி பூச்சியம். எனவே இந்த மீ.பெ.வ. உடன் முன்பு கண்ட x ஐப் பெருக்கினால் x(x² + 4x + 4) கிடைக்கும்."
+        "ta": "x³ + 2x² − 4x − 8 ஐ x² + 4x + 4 ஆல் வகுத்தால் மீதி பூச்சியம். எனவே இந்த மீ.பெ.வ. உடன் முன்பு கண்ட x ஐப் பெருக்கினால் x(x² + 4x + 4) கிடைக்கும்.",
+        "mathTa": {
+          "latex": "x^3+2x^2-4x-8=(x-2)(x^2+4x+4)+0\\implies\\text{மீ.பெ.வ}=x(x^2+4x+4)",
+          "fallback": "x³ + 2x² − 4x − 8 = (x − 2)(x² + 4x + 4) + 0 ⇒ மீ.பெ.வ = x(x² + 4x + 4)",
+          "display": true
+        }
       }
     ],
     "answer": "x(x² + 4x + 4)",
@@ -328,7 +343,12 @@ const entries=[
           "fallback": "x³ + x² + x + 1 = (x + 1)(x² + 1) + 0 ⇒ GCD = 3(x² + 1)",
           "display": true
         },
-        "ta": "x³ + x² + x + 1 ஐ x² + 1 ஆல் வகுத்தால் மீதி பூச்சியம். x² + 1 ஐ 3 ஆல் பெருக்கினால் முழுக் கோவைகளின் மீ.பெ.வ. 3(x² + 1) கிடைக்கும்."
+        "ta": "x³ + x² + x + 1 ஐ x² + 1 ஆல் வகுத்தால் மீதி பூச்சியம். x² + 1 ஐ 3 ஆல் பெருக்கினால் முழுக் கோவைகளின் மீ.பெ.வ. 3(x² + 1) கிடைக்கும்.",
+        "mathTa": {
+          "latex": "x^3+x^2+x+1=(x+1)(x^2+1)+0\\implies\\text{மீ.பெ.வ}=3(x^2+1)",
+          "fallback": "x³ + x² + x + 1 = (x + 1)(x² + 1) + 0 ⇒ மீ.பெ.வ = 3(x² + 1)",
+          "display": true
+        }
       }
     ],
     "answer": "3(x² + 1)",
@@ -392,7 +412,12 @@ const entries=[
           "fallback": "LCM(4, 8) = 8",
           "display": true
         },
-        "ta": "எண் கெழுக்களான 4 மற்றும் 8 இன் மீ.சி.ம. 8."
+        "ta": "எண் கெழுக்களான 4 மற்றும் 8 இன் மீ.சி.ம. 8.",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}(4,8)=8",
+          "fallback": "மீ.சி.ம(4, 8) = 8",
+          "display": true
+        }
       },
       {
         "en": "For each variable, take the highest power present in either expression: between x² and x³ the highest power is x³, and between y¹ and y² the highest power is y².",
@@ -402,7 +427,12 @@ const entries=[
           "fallback": "LCM(x²y, x³y²) = x³y²",
           "display": true
         },
-        "ta": "ஒவ்வொரு மாறிக்கும் இரு உறுப்புகளிலும் உள்ள மிகப்பெரிய அடுக்கைத் தேர்ந்தெடுக்க. இங்கு அவை x³ மற்றும் y²."
+        "ta": "ஒவ்வொரு மாறிக்கும் இரு உறுப்புகளிலும் உள்ள மிகப்பெரிய அடுக்கைத் தேர்ந்தெடுக்க. இங்கு அவை x³ மற்றும் y².",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}(x^2y,\\,x^3y^2)=x^3y^2",
+          "fallback": "மீ.சி.ம(x²y, x³y²) = x³y²",
+          "display": true
+        }
       },
       {
         "en": "Multiply the numerical LCM by the variable LCM. Therefore, the LCM of 4x²y and 8x³y² is 8x³y².",
@@ -412,7 +442,12 @@ const entries=[
           "fallback": "LCM(4x²y, 8x³y²) = 8x³y²",
           "display": true
         },
-        "ta": "எண் கெழுவின் மீ.சி.ம. ஆகிய 8 ஐ x³y² ஆல் பெருக்கினால் 8x³y² கிடைக்கும்."
+        "ta": "எண் கெழுவின் மீ.சி.ம. ஆகிய 8 ஐ x³y² ஆல் பெருக்கினால் 8x³y² கிடைக்கும்.",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}(4x^2y,\\,8x^3y^2)=8x^3y^2",
+          "fallback": "மீ.சி.ம(4x²y, 8x³y²) = 8x³y²",
+          "display": true
+        }
       }
     ],
     "answer": "8x³y²",
@@ -476,7 +511,12 @@ const entries=[
           "fallback": "LCM(9, 12) = 36",
           "display": true
         },
-        "ta": "9 = 3², 12 = 2² × 3. எனவே கெழுக்களின் மீ.சி.ம. 2² × 3² = 36."
+        "ta": "9 = 3², 12 = 2² × 3. எனவே கெழுக்களின் மீ.சி.ம. 2² × 3² = 36.",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}(9,12)=36",
+          "fallback": "மீ.சி.ம(9, 12) = 36",
+          "display": true
+        }
       },
       {
         "en": "Select the highest power of each variable a, b, and c across both terms: a³ for a, b² for b, and c¹ for c.",
@@ -486,7 +526,12 @@ const entries=[
           "fallback": "LCM(a³b², a²b²c) = a³b²c",
           "display": true
         },
-        "ta": "ஒவ்வொரு மாறியின் மிகப்பெரிய அடுக்கையும் எடுக்க. அவை a³, b² மற்றும் c."
+        "ta": "ஒவ்வொரு மாறியின் மிகப்பெரிய அடுக்கையும் எடுக்க. அவை a³, b² மற்றும் c.",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}(a^3b^2,\\,a^2b^2c)=a^3b^2c",
+          "fallback": "மீ.சி.ம(a³b², a²b²c) = a³b²c",
+          "display": true
+        }
       },
       {
         "en": "Combine the coefficient and variable factors. Therefore, the LCM is 36a³b²c.",
@@ -496,7 +541,12 @@ const entries=[
           "fallback": "LCM(9a³b², 12a²b²c) = 36a³b²c",
           "display": true
         },
-        "ta": "36 ஐ a³b²c ஆல் பெருக்கினால் மீ.சி.ம. 36a³b²c கிடைக்கும்."
+        "ta": "36 ஐ a³b²c ஆல் பெருக்கினால் மீ.சி.ம. 36a³b²c கிடைக்கும்.",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}(9a^3b^2,\\,12a^2b^2c)=36a^3b^2c",
+          "fallback": "மீ.சி.ம(9a³b², 12a²b²c) = 36a³b²c",
+          "display": true
+        }
       }
     ],
     "answer": "36a³b²c",
@@ -560,7 +610,12 @@ const entries=[
           "fallback": "LCM(16, 12, 8) = 48",
           "display": true
         },
-        "ta": "16 = 2⁴, 12 = 2² × 3, 8 = 2³. எனவே கெழுக்களின் மீ.சி.ம. 2⁴ × 3 = 48."
+        "ta": "16 = 2⁴, 12 = 2² × 3, 8 = 2³. எனவே கெழுக்களின் மீ.சி.ம. 2⁴ × 3 = 48.",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}(16,12,8)=48",
+          "fallback": "மீ.சி.ம(16, 12, 8) = 48",
+          "display": true
+        }
       },
       {
         "en": "Take the highest power of each variable m and n across the three expressions: m² for m and n² for n.",
@@ -570,7 +625,12 @@ const entries=[
           "fallback": "LCM(m, m²n², n²) = m²n²",
           "display": true
         },
-        "ta": "மூன்று உறுப்புகளிலும் m மற்றும் n இன் மிகப்பெரிய அடுக்குகள் முறையே m² மற்றும் n²."
+        "ta": "மூன்று உறுப்புகளிலும் m மற்றும் n இன் மிகப்பெரிய அடுக்குகள் முறையே m² மற்றும் n².",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}(m,\\,m^2n^2,\\,n^2)=m^2n^2",
+          "fallback": "மீ.சி.ம(m, m²n², n²) = m²n²",
+          "display": true
+        }
       },
       {
         "en": "Multiply the numerical and variable parts together. Therefore, the LCM is 48m²n².",
@@ -580,7 +640,12 @@ const entries=[
           "fallback": "LCM(16m, 12m²n², 8n²) = 48m²n²",
           "display": true
         },
-        "ta": "48 ஐ m²n² ஆல் பெருக்கினால் மீ.சி.ம. 48m²n² கிடைக்கும்."
+        "ta": "48 ஐ m²n² ஆல் பெருக்கினால் மீ.சி.ம. 48m²n² கிடைக்கும்.",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}(16m,\\,12m^2n^2,\\,8n^2)=48m^2n^2",
+          "fallback": "மீ.சி.ம(16m, 12m²n², 8n²) = 48m²n²",
+          "display": true
+        }
       }
     ],
     "answer": "48m²n²",
@@ -664,7 +729,12 @@ const entries=[
           "fallback": "LCM = (p − 1)(p − 2)(p + 2)",
           "display": true
         },
-        "ta": "ஒவ்வொரு வேறுபட்ட காரணியையும் அதன் மிகப்பெரிய அடுக்குடன் எடுத்துப் பெருக்கினால் மீ.சி.ம. (p − 1)(p − 2)(p + 2)."
+        "ta": "ஒவ்வொரு வேறுபட்ட காரணியையும் அதன் மிகப்பெரிய அடுக்குடன் எடுத்துப் பெருக்கினால் மீ.சி.ம. (p − 1)(p − 2)(p + 2).",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}=(p-1)(p-2)(p+2)",
+          "fallback": "மீ.சி.ம = (p − 1)(p − 2)(p + 2)",
+          "display": true
+        }
       }
     ],
     "answer": "(p − 1)(p − 2)(p + 2)",
@@ -748,7 +818,12 @@ const entries=[
           "fallback": "LCM = 4(x + 3)(2x + 1)(x − 3)",
           "display": true
         },
-        "ta": "4 உடன் (x + 3), (2x + 1), (x − 3) ஆகிய மூன்று காரணிகளையும் பெருக்கி மீ.சி.ம. காண்க."
+        "ta": "4 உடன் (x + 3), (2x + 1), (x − 3) ஆகிய மூன்று காரணிகளையும் பெருக்கி மீ.சி.ம. காண்க.",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}=4(x+3)(2x+1)(x-3)",
+          "fallback": "மீ.சி.ம = 4(x + 3)(2x + 1)(x − 3)",
+          "display": true
+        }
       }
     ],
     "answer": "4(x + 3)(2x + 1)(x − 3)",
@@ -832,7 +907,12 @@ const entries=[
           "fallback": "LCM = 2³x²(2x − 3y)³(4x² + 6xy + 9y²)",
           "display": true
         },
-        "ta": "ஒவ்வொரு காரணியையும் அதன் மிகப்பெரிய அடுக்குடன் எடுக்க. 2³, x², (2x − 3y)³ மற்றும் 4x² + 6xy + 9y² ஆகியவற்றின் பெருக்கற்பலனே மீ.சி.ம."
+        "ta": "ஒவ்வொரு காரணியையும் அதன் மிகப்பெரிய அடுக்குடன் எடுக்க. 2³, x², (2x − 3y)³ மற்றும் 4x² + 6xy + 9y² ஆகியவற்றின் பெருக்கற்பலனே மீ.சி.ம.",
+        "mathTa": {
+          "latex": "\\text{மீ.சி.ம}=2^3x^2(2x-3y)^3(4x^2+6xy+9y^2)",
+          "fallback": "மீ.சி.ம = 2³x²(2x − 3y)³(4x² + 6xy + 9y²)",
+          "display": true
+        }
       }
     ],
     "answer": "2³x²(2x − 3y)³(4x² + 6xy + 9y²)",

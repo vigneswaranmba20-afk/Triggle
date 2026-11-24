@@ -19,7 +19,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    ['c10-3-ex3-8-q2-i','4x⁴ − 12x³ + 37x² + bx + a','a = 49, b = −42'],
    ['c10-3-ex3-8-q2-ii','ax⁴ + bx³ + 361x²','a = 144, b = 264'],
    ['c10-3-ex3-8-q3-i','36x⁴ − 60x³ + 61x² − mx + n','m = 30, n = 9'],
-   ['c10-3-ex3-8-q3-ii','x⁴ − 8x³ + mx² + nx + 16','m = 24, n = −32'],
+   ['c10-3-ex3-8-q3-ii','x⁴ − 8x³ + mx² + nx + 16','m = 24, n = −32 or m = 8, n = 32'],
    ['c10-3-ex3-9-q1-i','−9, 20','x² + 9x + 20 = 0'],
    ['c10-3-ex3-9-q1-ii','5/3, 4','3x² − 5x + 12 = 0'],
    ['c10-3-ex3-9-q1-iii','−3/2, −1','2x² + 3x − 2 = 0'],
@@ -69,6 +69,13 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert(check.qText.trim().length>=10,'Question rendered '+id+' @'+width);
     assert(check.ansText.trim().length>0&&!/loading/i.test(check.ansText),'Answer rendered '+id+' @'+width);
     assert(check.katexCount>=2,'KaTeX rendered in steps '+id);
+    if(id==='c10-3-ex3-8-q3-ii'){
+     for(const lang of ['Ta','En']){
+      await page.locator('#lang'+lang).click();
+      const pairs=await page.locator('.final-answer-value .katex-html').allInnerTexts();
+      assert.deepEqual(pairs.map(t=>t.replace(/\s/g,'')),['m=24,n=−32','m=8,n=32']);
+     }
+    }
     assert(check.hasFinal,'Final answer uses KaTeX '+id);
     assert.equal(check.stepsCount,check.expectedSteps,'All steps rendered '+id);
     assert.equal(check.missingFallback,0,'No missing fallback '+id);
