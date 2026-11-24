@@ -14,21 +14,32 @@ const entries=[
     "chapter": "3",
     "exercise": "3.10",
     "topic": {
-      "en": "Algebra — Solving Quadratic Equations by Factorization"
+      "en": "Algebra — Solving Quadratic Equations by Factorization",
+      "ta": "இயற்கணிதம்"
     },
     "label": {
       "en": "Exercise 3.10 · Q1(i)",
-      "ta": "Exercise 3.10 · Q1(i) (English source; Tamil review pending)"
+      "ta": "பயிற்சி 3.10 · வினா 1(i)"
     },
     "title": {
-      "en": "Solve 4x² − 7x − 2 = 0 by factorization method"
+      "en": "Solve 4x² − 7x − 2 = 0 by factorization method",
+      "ta": "காரணிப்படுத்தல் முறையில் இருபடிச் சமன்பாடுகள்"
     },
     "q": {
-      "en": "1. Solve the following quadratic equations by factorization method\n(i) 4x² − 7x − 2 = 0"
+      "en": "1. Solve the following quadratic equations by factorization method\n(i) 4x² − 7x − 2 = 0",
+      "ta": "காரணிப்படுத்தல் முறையைப் பயன்படுத்திப் பின்வரும் இருபடிச் சமன்பாடுகளைத் தீர்க்க. (i) 4x² − 7x − 2 = 0"
     },
     "questionMath": {
       "en": [
         "1. Solve the following quadratic equations by factorization method\n(i) ",
+        {
+          "latex": "4x^2-7x-2=0",
+          "fallback": "4x² − 7x − 2 = 0",
+          "display": false
+        }
+      ],
+      "ta": [
+        "காரணிப்படுத்தல் முறையைப் பயன்படுத்திப் பின்வரும் இருபடிச் சமன்பாடுகளைத் தீர்க்க. (i) ",
         {
           "latex": "4x^2-7x-2=0",
           "fallback": "4x² − 7x − 2 = 0",
@@ -44,7 +55,8 @@ const entries=[
           "latex": "a\\times c=4\\times(-2)=-8,\\qquad -8+1=-7",
           "fallback": "a × c = 4 × (−2) = −8; b = −7 = −8 + 1",
           "display": true
-        }
+        },
+        "ta": "முதல் கெழு 4, மாறிலி −2. அவற்றின் பெருக்கற்பலன் −8. பெருக்கற்பலன் −8 ஆகவும் கூட்டுத்தொகை −7 ஆகவும் உள்ள எண்கள் −8 மற்றும் 1."
       },
       {
         "en": "Split the middle term −7x into −8x + x, then group the first two terms and the last two terms. Factor 4x out of (4x² − 8x) and +1 out of (x − 2) so both groups share the common factor (x − 2).",
@@ -53,7 +65,8 @@ const entries=[
           "latex": "\\begin{aligned}4x^2-8x+x-2&=0\\\\4x(x-2)+1(x-2)&=0\\\\(4x+1)(x-2)&=0\\end{aligned}",
           "fallback": "4x² − 8x + x − 2 = 0 ⇒ 4x(x − 2) + 1(x − 2) = 0 ⇒ (4x + 1)(x − 2) = 0",
           "display": true
-        }
+        },
+        "ta": "நடு உறுப்பை −8x + x எனப் பிரிக்க. முதல் இரண்டு உறுப்புகளிலிருந்து 4x ஐ வெளியே எடுத்தால் இரு தொகுப்புகளிலும் x − 2 பொதுக்காரணியாகும்."
       },
       {
         "en": "By the zero-product property, a product equals zero when at least one factor is zero. Set 4x + 1 = 0 (subtract 1, then divide by 4) and x − 2 = 0 (add 2) to find both roots.",
@@ -62,7 +75,8 @@ const entries=[
           "latex": "\\begin{aligned}4x+1=0&\\implies x=-\\dfrac{1}{4}\\\\x-2=0&\\implies x=2\\end{aligned}",
           "fallback": "4x + 1 = 0 ⇒ x = −1/4; x − 2 = 0 ⇒ x = 2",
           "display": true
-        }
+        },
+        "ta": "பெருக்கற்பலன் பூச்சியம் என்பதால் 4x + 1 அல்லது x − 2 பூச்சியம். இரு நேரியல் சமன்பாடுகளையும் தீர்க்க."
       }
     ],
     "answer": "−1/4, 2",
@@ -76,7 +90,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "reference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q1(i); printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
     "translationReview": "pending",
-    "traceStatus": "source-image-checked; independently solved; Tamil editorial pending"
+    "traceStatus": "English and Tamil prompts checked against the 2025 exercise pages; numbered explanations reviewed"
   },
   {
     "id": "c10-3-ex3-10-q1-ii",
@@ -84,21 +98,32 @@ const entries=[
     "chapter": "3",
     "exercise": "3.10",
     "topic": {
-      "en": "Algebra — Solving Quadratic Equations by Factorization"
+      "en": "Algebra — Solving Quadratic Equations by Factorization",
+      "ta": "இயற்கணிதம்"
     },
     "label": {
       "en": "Exercise 3.10 · Q1(ii)",
-      "ta": "Exercise 3.10 · Q1(ii) (English source; Tamil review pending)"
+      "ta": "பயிற்சி 3.10 · வினா 1(ii)"
     },
     "title": {
-      "en": "Solve 3(p² − 6) = p(p + 5) by factorization method"
+      "en": "Solve 3(p² − 6) = p(p + 5) by factorization method",
+      "ta": "காரணிப்படுத்தல் முறையில் இருபடிச் சமன்பாடுகள்"
     },
     "q": {
-      "en": "1. Solve the following quadratic equations by factorization method\n(ii) 3(p² − 6) = p(p + 5)"
+      "en": "1. Solve the following quadratic equations by factorization method\n(ii) 3(p² − 6) = p(p + 5)",
+      "ta": "காரணிப்படுத்தல் முறையைப் பயன்படுத்திப் பின்வரும் இருபடிச் சமன்பாடுகளைத் தீர்க்க. (ii) 3(p² − 6) = p(p + 5)"
     },
     "questionMath": {
       "en": [
         "1. Solve the following quadratic equations by factorization method\n(ii) ",
+        {
+          "latex": "3(p^2-6)=p(p+5)",
+          "fallback": "3(p² − 6) = p(p + 5)",
+          "display": false
+        }
+      ],
+      "ta": [
+        "காரணிப்படுத்தல் முறையைப் பயன்படுத்திப் பின்வரும் இருபடிச் சமன்பாடுகளைத் தீர்க்க. (ii) ",
         {
           "latex": "3(p^2-6)=p(p+5)",
           "fallback": "3(p² − 6) = p(p + 5)",
@@ -114,7 +139,8 @@ const entries=[
           "latex": "\\begin{aligned}3p^2-18&=p^2+5p\\\\3p^2-p^2-5p-18&=0\\\\2p^2-5p-18&=0\\end{aligned}",
           "fallback": "3p² − 18 = p² + 5p ⇒ 3p² − p² − 5p − 18 = 0 ⇒ 2p² − 5p − 18 = 0",
           "display": true
-        }
+        },
+        "ta": "இருபுறமும் அடைப்புக்குறிகளை விரிவாக்குக. இருபுறத்திலிருந்தும் p² + 5p ஐக் கழித்து அனைத்தையும் இடப்பக்கத்தில் எழுதுக."
       },
       {
         "en": "In 2p² − 5p − 18 = 0, multiply a = 2 by c = −18 to get −36, and look for two numbers whose sum is b = −5: they are −9 and +4 (since −9 × 4 = −36 and −9 + 4 = −5). Split −5p as −9p + 4p (or +4p − 9p) and factor by grouping.",
@@ -123,7 +149,8 @@ const entries=[
           "latex": "\\begin{aligned}2p^2+4p-9p-18&=0\\\\2p(p+2)-9(p+2)&=0\\\\(2p-9)(p+2)&=0\\end{aligned}",
           "fallback": "2p² + 4p − 9p − 18 = 0 ⇒ 2p(p + 2) − 9(p + 2) = 0 ⇒ (2p − 9)(p + 2) = 0",
           "display": true
-        }
+        },
+        "ta": "முதல் கெழுவையும் மாறிலியையும் பெருக்கினால் −36. பெருக்கற்பலன் −36, கூடுதல் −5 கொண்ட எண்கள் −9, 4. அவற்றைப் பயன்படுத்தி நடு உறுப்பைப் பிரிக்க."
       },
       {
         "en": "When factoring −9p − 18, pulling out negative 9 flips the minus inside to plus: −9(p + 2). Equate each factor to zero to solve for p.",
@@ -132,7 +159,8 @@ const entries=[
           "latex": "\\begin{aligned}p+2=0&\\implies p=-2\\\\2p-9=0&\\implies p=\\dfrac{9}{2}\\end{aligned}",
           "fallback": "p + 2 = 0 ⇒ p = −2; 2p − 9 = 0 ⇒ p = 9/2",
           "display": true
-        }
+        },
+        "ta": "−9p − 18 இலிருந்து −9 ஐ வெளியே எடுத்தால் −9(p + 2). காரணிகள் ஒவ்வொன்றையும் பூச்சியத்திற்குச் சமப்படுத்தி p ஐக் காண்க."
       }
     ],
     "answer": "−2, 9/2",
@@ -146,7 +174,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "reference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q1(ii); printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
     "translationReview": "pending",
-    "traceStatus": "source-image-checked; independently solved; Tamil editorial pending"
+    "traceStatus": "English and Tamil prompts checked against the 2025 exercise pages; numbered explanations reviewed"
   },
   {
     "id": "c10-3-ex3-10-q1-iii",
@@ -154,21 +182,32 @@ const entries=[
     "chapter": "3",
     "exercise": "3.10",
     "topic": {
-      "en": "Algebra — Solving Quadratic Equations by Factorization"
+      "en": "Algebra — Solving Quadratic Equations by Factorization",
+      "ta": "இயற்கணிதம்"
     },
     "label": {
       "en": "Exercise 3.10 · Q1(iii)",
-      "ta": "Exercise 3.10 · Q1(iii) (English source; Tamil review pending)"
+      "ta": "பயிற்சி 3.10 · வினா 1(iii)"
     },
     "title": {
-      "en": "Solve √(a(a − 7)) = 3√2 by factorization method"
+      "en": "Solve √(a(a − 7)) = 3√2 by factorization method",
+      "ta": "காரணிப்படுத்தல் முறையில் இருபடிச் சமன்பாடுகள்"
     },
     "q": {
-      "en": "1. Solve the following quadratic equations by factorization method\n(iii) √(a(a − 7)) = 3√2"
+      "en": "1. Solve the following quadratic equations by factorization method\n(iii) √(a(a − 7)) = 3√2",
+      "ta": "காரணிப்படுத்தல் முறையைப் பயன்படுத்திப் பின்வரும் இருபடிச் சமன்பாடுகளைத் தீர்க்க. (iii) √(a(a − 7)) = 3√2"
     },
     "questionMath": {
       "en": [
         "1. Solve the following quadratic equations by factorization method\n(iii) ",
+        {
+          "latex": "\\sqrt{a(a-7)}=3\\sqrt{2}",
+          "fallback": "√(a(a − 7)) = 3√2",
+          "display": false
+        }
+      ],
+      "ta": [
+        "காரணிப்படுத்தல் முறையைப் பயன்படுத்திப் பின்வரும் இருபடிச் சமன்பாடுகளைத் தீர்க்க. (iii) ",
         {
           "latex": "\\sqrt{a(a-7)}=3\\sqrt{2}",
           "fallback": "√(a(a − 7)) = 3√2",
@@ -184,7 +223,8 @@ const entries=[
           "latex": "\\begin{aligned}a(a-7)&=(3\\sqrt{2})^2\\\\a^2-7a&=9\\times 2=18\\\\a^2-7a-18&=0\\end{aligned}",
           "fallback": "a(a − 7) = (3√2)² ⇒ a² − 7a = 18 ⇒ a² − 7a − 18 = 0",
           "display": true
-        }
+        },
+        "ta": "வர்க்கமூலம் மெய்யெண்ணாக இருக்க a(a − 7) ≥ 0. இருபுறமும் வர்க்கப்படுத்துக. வலப்பக்கத்தில் (3√2)² = 18."
       },
       {
         "en": "Find two numbers that multiply to −18 and add to −7: they are −9 and +2 (since −9 × 2 = −18 and −9 + 2 = −7). Factor a² − 7a − 18 = 0 directly.",
@@ -192,6 +232,12 @@ const entries=[
         "math": {
           "latex": "(a-9)(a+2)=0\\implies a=9\\text{ or }a=-2",
           "fallback": "(a − 9)(a + 2) = 0 ⇒ a = 9 or a = −2",
+          "display": true
+        },
+        "ta": "பெருக்கற்பலன் −18, கூடுதல் −7 கொண்ட எண்கள் −9 மற்றும் 2. இவற்றைப் பயன்படுத்தி a² − 7a − 18 ஐக் காரணிப்படுத்துக.",
+        "mathTa": {
+          "latex": "(a-9)(a+2)=0\\implies a=9\\text{ அல்லது }a=-2",
+          "fallback": "(a − 9)(a + 2) = 0 ⇒ a = 9 அல்லது a = −2",
           "display": true
         }
       },
@@ -202,7 +248,8 @@ const entries=[
           "latex": "\\begin{aligned}a=-2:\\;&\\sqrt{(-2)(-9)}=\\sqrt{18}=3\\sqrt{2}\\\\a=9:\\;&\\sqrt{9\\times 2}=\\sqrt{18}=3\\sqrt{2}\\end{aligned}",
           "fallback": "Check: a = −2 ⇒ √((−2)(−9)) = √18 = 3√2; a = 9 ⇒ √(9·2) = √18 = 3√2",
           "display": true
-        }
+        },
+        "ta": "a = −2, a = 9 ஆகிய இரண்டையும் மூலச் சமன்பாட்டில் சரிபார்க்க. இரண்டு மதிப்புகளுக்கும் வர்க்கமூலத்திற்குள் 18 கிடைப்பதால் இரண்டும் தீர்வுகள்."
       }
     ],
     "answer": "−2, 9",
@@ -216,7 +263,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "reference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q1(iii); printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
     "translationReview": "pending",
-    "traceStatus": "source-image-checked; independently solved; Tamil editorial pending"
+    "traceStatus": "English and Tamil prompts checked against the 2025 exercise pages; numbered explanations reviewed"
   },
   {
     "id": "c10-3-ex3-10-q1-iv",
@@ -224,21 +271,32 @@ const entries=[
     "chapter": "3",
     "exercise": "3.10",
     "topic": {
-      "en": "Algebra — Solving Quadratic Equations by Factorization"
+      "en": "Algebra — Solving Quadratic Equations by Factorization",
+      "ta": "இயற்கணிதம்"
     },
     "label": {
       "en": "Exercise 3.10 · Q1(iv)",
-      "ta": "Exercise 3.10 · Q1(iv) (English source; Tamil review pending)"
+      "ta": "பயிற்சி 3.10 · வினா 1(iv)"
     },
     "title": {
-      "en": "Solve √2 x² + 7x + 5√2 = 0 by factorization method"
+      "en": "Solve √2 x² + 7x + 5√2 = 0 by factorization method",
+      "ta": "காரணிப்படுத்தல் முறையில் இருபடிச் சமன்பாடுகள்"
     },
     "q": {
-      "en": "1. Solve the following quadratic equations by factorization method\n(iv) √2 x² + 7x + 5√2 = 0"
+      "en": "1. Solve the following quadratic equations by factorization method\n(iv) √2 x² + 7x + 5√2 = 0",
+      "ta": "காரணிப்படுத்தல் முறையைப் பயன்படுத்திப் பின்வரும் இருபடிச் சமன்பாடுகளைத் தீர்க்க. (iv) √2 x² + 7x + 5√2 = 0"
     },
     "questionMath": {
       "en": [
         "1. Solve the following quadratic equations by factorization method\n(iv) ",
+        {
+          "latex": "\\sqrt{2}\\,x^2+7x+5\\sqrt{2}=0",
+          "fallback": "√2 x² + 7x + 5√2 = 0",
+          "display": false
+        }
+      ],
+      "ta": [
+        "காரணிப்படுத்தல் முறையைப் பயன்படுத்திப் பின்வரும் இருபடிச் சமன்பாடுகளைத் தீர்க்க. (iv) ",
         {
           "latex": "\\sqrt{2}\\,x^2+7x+5\\sqrt{2}=0",
           "fallback": "√2 x² + 7x + 5√2 = 0",
@@ -254,7 +312,8 @@ const entries=[
           "latex": "a\\times c=\\sqrt{2}\\times 5\\sqrt{2}=5\\times 2=10,\\qquad 2+5=7",
           "fallback": "a × c = √2 × 5√2 = 5(2) = 10; 2 + 5 = 7",
           "display": true
-        }
+        },
+        "ta": "√2 மற்றும் 5√2 இன் பெருக்கற்பலன் 10. பெருக்கற்பலன் 10 ஆகவும் கூடுதல் 7 ஆகவும் உள்ள எண்கள் 2, 5."
       },
       {
         "en": "Split 7x into 2x + 5x. Rewrite 2 as (√2)(√2) so you can factor √2 x out of (√2 x² + 2x), leaving (x + √2). Factor 5 out of (5x + 5√2) to obtain the matching factor (x + √2).",
@@ -263,7 +322,8 @@ const entries=[
           "latex": "\\begin{aligned}\\sqrt{2}\\,x^2+2x+5x+5\\sqrt{2}&=0\\\\\\sqrt{2}\\,x(x+\\sqrt{2})+5(x+\\sqrt{2})&=0\\\\(\\sqrt{2}\\,x+5)(x+\\sqrt{2})&=0\\end{aligned}",
           "fallback": "√2 x² + 2x + 5x + 5√2 = 0 ⇒ √2 x(x + √2) + 5(x + √2) = 0 ⇒ (√2 x + 5)(x + √2) = 0",
           "display": true
-        }
+        },
+        "ta": "7x ஐ 2x + 5x எனப் பிரிக்க. முதல் தொகுப்பிலிருந்து √2 x ஐயும் இரண்டாவதிலிருந்து 5 ஐயும் வெளியே எடுத்தால் x + √2 பொதுக்காரணியாகும்."
       },
       {
         "en": "Equate each factor to zero and solve for x.",
@@ -272,7 +332,8 @@ const entries=[
           "latex": "\\begin{aligned}x+\\sqrt{2}=0&\\implies x=-\\sqrt{2}\\\\\\sqrt{2}\\,x+5=0&\\implies x=-\\dfrac{5}{\\sqrt{2}}\\end{aligned}",
           "fallback": "x + √2 = 0 ⇒ x = −√2; √2 x + 5 = 0 ⇒ x = −5/√2",
           "display": true
-        }
+        },
+        "ta": "ஒவ்வொரு காரணியையும் பூச்சியத்திற்குச் சமப்படுத்தி x இன் இரு மதிப்புகளைக் காண்க."
       }
     ],
     "answer": "−√2, −5/√2",
@@ -286,7 +347,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "reference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q1(iv); printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
     "translationReview": "pending",
-    "traceStatus": "source-image-checked; independently solved; Tamil editorial pending"
+    "traceStatus": "English and Tamil prompts checked against the 2025 exercise pages; numbered explanations reviewed"
   },
   {
     "id": "c10-3-ex3-10-q1-v",
@@ -294,21 +355,32 @@ const entries=[
     "chapter": "3",
     "exercise": "3.10",
     "topic": {
-      "en": "Algebra — Solving Quadratic Equations by Factorization"
+      "en": "Algebra — Solving Quadratic Equations by Factorization",
+      "ta": "இயற்கணிதம்"
     },
     "label": {
       "en": "Exercise 3.10 · Q1(v)",
-      "ta": "Exercise 3.10 · Q1(v) (English source; Tamil review pending)"
+      "ta": "பயிற்சி 3.10 · வினா 1(v)"
     },
     "title": {
-      "en": "Solve 2x² − x + 1/8 = 0 by factorization method"
+      "en": "Solve 2x² − x + 1/8 = 0 by factorization method",
+      "ta": "காரணிப்படுத்தல் முறையில் இருபடிச் சமன்பாடுகள்"
     },
     "q": {
-      "en": "1. Solve the following quadratic equations by factorization method\n(v) 2x² − x + 1/8 = 0"
+      "en": "1. Solve the following quadratic equations by factorization method\n(v) 2x² − x + 1/8 = 0",
+      "ta": "காரணிப்படுத்தல் முறையைப் பயன்படுத்திப் பின்வரும் இருபடிச் சமன்பாடுகளைத் தீர்க்க. (v) 2x² − x + 1/8 = 0"
     },
     "questionMath": {
       "en": [
         "1. Solve the following quadratic equations by factorization method\n(v) ",
+        {
+          "latex": "2x^2-x+\\dfrac{1}{8}=0",
+          "fallback": "2x² − x + 1/8 = 0",
+          "display": false
+        }
+      ],
+      "ta": [
+        "காரணிப்படுத்தல் முறையைப் பயன்படுத்திப் பின்வரும் இருபடிச் சமன்பாடுகளைத் தீர்க்க. (v) ",
         {
           "latex": "2x^2-x+\\dfrac{1}{8}=0",
           "fallback": "2x² − x + 1/8 = 0",
@@ -324,7 +396,8 @@ const entries=[
           "latex": "8\\left(2x^2-x+\\dfrac{1}{8}\\right)=8(0)\\implies 16x^2-8x+1=0",
           "fallback": "16x² − 8x + 1 = 0",
           "display": true
-        }
+        },
+        "ta": "1/8 என்ற பின்னத்தை நீக்க இருபுறமும் உள்ள எல்லா உறுப்புகளையும் 8 ஆல் பெருக்குக."
       },
       {
         "en": "Notice 16x² − 8x + 1 is a perfect square trinomial: (4x)² − 2(4x)(1) + 1² = (4x − 1)². Equivalently, a × c = 16 × 1 = 16 and −4 + (−4) = −8, giving (4x − 1)(4x − 1) = 0.",
@@ -333,7 +406,8 @@ const entries=[
           "latex": "\\begin{aligned}16x^2-4x-4x+1&=0\\\\4x(4x-1)-1(4x-1)&=0\\\\(4x-1)^2&=0\\end{aligned}",
           "fallback": "16x² − 4x − 4x + 1 = 0 ⇒ 4x(4x − 1) − 1(4x − 1) = 0 ⇒ (4x − 1)(4x − 1) = 0",
           "display": true
-        }
+        },
+        "ta": "16x² − 8x + 1 இன் முதல், கடைசி உறுப்புகள் வர்க்கங்கள். நடு உறுப்பு −2(4x)(1) என்பதால் (4x − 1)² = 0."
       },
       {
         "en": "Since both factors are (4x − 1), this quadratic has two equal real roots: x = 1/4, 1/4.",
@@ -342,7 +416,8 @@ const entries=[
           "latex": "4x-1=0\\implies x=\\dfrac{1}{4},\\;\\dfrac{1}{4}",
           "fallback": "4x − 1 = 0 ⇒ x = 1/4, 1/4",
           "display": true
-        }
+        },
+        "ta": "இரு காரணிகளும் 4x − 1 என்பதால் இரண்டு சமமான மூலங்கள் கிடைக்கும். இரண்டும் 1/4."
       }
     ],
     "answer": "1/4, 1/4",
@@ -356,7 +431,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "reference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q1(v); printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
     "translationReview": "pending",
-    "traceStatus": "source-image-checked; independently solved; Tamil editorial pending"
+    "traceStatus": "English and Tamil prompts checked against the 2025 exercise pages; numbered explanations reviewed"
   },
   {
     "id": "c10-3-ex3-10-q2",
@@ -364,17 +439,20 @@ const entries=[
     "chapter": "3",
     "exercise": "3.10",
     "topic": {
-      "en": "Algebra — Solving Quadratic Equations by Factorization"
+      "en": "Algebra — Solving Quadratic Equations by Factorization",
+      "ta": "இயற்கணிதம்"
     },
     "label": {
       "en": "Exercise 3.10 · Q2",
-      "ta": "Exercise 3.10 · Q2 (English source; Tamil review pending)"
+      "ta": "பயிற்சி 3.10 · வினா 2"
     },
     "title": {
-      "en": "Find the number of teams in a volleyball league scheduling 15 games"
+      "en": "Find the number of teams in a volleyball league scheduling 15 games",
+      "ta": "காரணிப்படுத்தல் முறையில் இருபடிச் சமன்பாடுகள்"
     },
     "q": {
-      "en": "2. The number of volleyball games that must be scheduled in a league with n teams is given by G(n) = (n² − n)/2 where each team plays with every other team exactly once. A league schedules 15 games. How many teams are in the league?"
+      "en": "2. The number of volleyball games that must be scheduled in a league with n teams is given by G(n) = (n² − n)/2 where each team plays with every other team exactly once. A league schedules 15 games. How many teams are in the league?",
+      "ta": "n அணிகள் பங்குபெறும் ஒரு கைப்பந்து விளையாட்டுப் போட்டியில் ஒவ்வோர் அணியும் மற்ற அனைத்து அணிகளோடும் ஒருமுறை விளையாட வேண்டும். 15 போட்டிகள் கொண்ட தொடரில் மொத்தப் போட்டிகளின் எண்ணிக்கை G(n) = (n² − n)/2 எனில், பங்கேற்கும் அணிகளின் எண்ணிக்கை எத்தனை?"
     },
     "questionMath": {
       "en": [
@@ -385,6 +463,15 @@ const entries=[
           "display": false
         },
         " where each team plays with every other team exactly once. A league schedules 15 games. How many teams are in the league?"
+      ],
+      "ta": [
+        "n அணிகள் பங்குபெறும் ஒரு கைப்பந்து விளையாட்டுப் போட்டியில் ஒவ்வோர் அணியும் மற்ற அனைத்து அணிகளோடும் ஒருமுறை விளையாட வேண்டும். 15 போட்டிகள் கொண்ட தொடரில் மொத்தப் போட்டிகளின் எண்ணிக்கை ",
+        {
+          "latex": "G(n)=\\dfrac{n^2-n}{2}",
+          "fallback": "G(n) = (n² − n)/2",
+          "display": false
+        },
+        " எனில், பங்கேற்கும் அணிகளின் எண்ணிக்கை எத்தனை?"
       ]
     },
     "steps": [
@@ -395,7 +482,8 @@ const entries=[
           "latex": "\\begin{aligned}\\dfrac{n^2-n}{2}&=15\\\\n^2-n&=30\\\\n^2-n-30&=0\\end{aligned}",
           "fallback": "(n² − n)/2 = 15 ⇒ n² − n = 30 ⇒ n² − n − 30 = 0",
           "display": true
-        }
+        },
+        "ta": "கொடுக்கப்பட்ட சூத்திரத்தில் G(n) = 15 எனப் பிரதியிடுக. இருபுறமும் 2 ஆல் பெருக்கி 30 ஐக் கழித்தால் இருபடிச் சமன்பாடு கிடைக்கும்."
       },
       {
         "en": "Find two numbers whose product is −30 and sum is −1: they are −6 and +5 (since −6 × 5 = −30 and −6 + 5 = −1). Factor n² − n − 30 = 0 and solve.",
@@ -403,6 +491,12 @@ const entries=[
         "math": {
           "latex": "(n-6)(n+5)=0\\implies n=6\\text{ or }n=-5",
           "fallback": "(n − 6)(n + 5) = 0 ⇒ n = 6 or n = −5",
+          "display": true
+        },
+        "ta": "பெருக்கற்பலன் −30, கூடுதல் −1 கொண்ட எண்கள் −6 மற்றும் 5. நடு உறுப்பைப் பிரித்துக் காரணிப்படுத்தி n ஐக் காண்க.",
+        "mathTa": {
+          "latex": "(n-6)(n+5)=0\\implies n=6\\text{ அல்லது }n=-5",
+          "fallback": "(n − 6)(n + 5) = 0 ⇒ n = 6 அல்லது n = −5",
           "display": true
         }
       },
@@ -412,6 +506,12 @@ const entries=[
         "math": {
           "latex": "n=6\\quad(\\text{reject }n=-5;\\;\\dfrac{6^2-6}{2}=15)",
           "fallback": "n = 6 (since n > 0; check: (36 − 6)/2 = 15)",
+          "display": true
+        },
+        "ta": "அணிகளின் எண்ணிக்கை எதிர்மறையாக இருக்க முடியாது. எனவே −5 ஐ விலக்குக. n = 6 எனில் ஆட்டங்களின் எண்ணிக்கை (36 − 6)/2 = 15. ஆகவே 6 அணிகள்.",
+        "mathTa": {
+          "latex": "n=6\\quad(\\text{விலக்குக }n=-5;\\;\\dfrac{6^2-6}{2}=15)",
+          "fallback": "n = 6 (ஏனெனில் n > 0; சரிபார்ப்பு: (36 − 6)/2 = 15)",
           "display": true
         }
       }
@@ -427,7 +527,7 @@ const entries=[
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "reference": "TN SCERT Standard Ten Mathematics revised 2025, English, Exercise 3.10 Q2; printed p. 111, PDF p. 117; Answer Appendix printed p. 338, PDF p. 344; source image checked.",
     "translationReview": "pending",
-    "traceStatus": "source-image-checked; independently solved; Tamil editorial pending"
+    "traceStatus": "English and Tamil prompts checked against the 2025 exercise pages; numbered explanations reviewed"
   }
 ];
 const seen=new Set((grade.items||[]).map(x=>x.id));

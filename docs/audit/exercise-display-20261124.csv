@@ -899,36 +899,36 @@ Batch,Order,Question ID,Typography changed,Prompt restored,Tamil baseline flag,L
 9,898,c10-3-ex3-8-q2-ii,0,,1,320 360 390,"TN 2025 Tamil PDF p114, printed p108; English PDF p112; division steps, coefficient comparisons and final answers checked",,pending,b9b1a071
 9,899,c10-3-ex3-8-q3-i,0,,1,320 360 390,"TN 2025 Tamil PDF p114, printed p108; English PDF p112; division steps, coefficient comparisons and final answers checked",,pending,b9b1a071
 9,900,c10-3-ex3-8-q3-ii,0,,1,320 360 390,"TN 2025 Tamil PDF p114, printed p108; English PDF p112; division steps, coefficient comparisons and final answers checked",,pending,b9b1a071
-10,901,c10-3-ex3-9-q1-i,0,,1,320 360 390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-10,902,c10-3-ex3-9-q1-ii,0,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-10,903,c10-3-ex3-9-q1-iii,0,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-10,904,c10-3-ex3-9-q1-iv,0,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-10,905,c10-3-ex3-9-q2-i,0,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-10,906,c10-3-ex3-9-q2-ii,0,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-10,907,c10-3-ex3-9-q2-iii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,908,c10-3-ex3-9-q2-iv,0,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-10,909,c10-3-ex3-10-q1-i,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,910,c10-3-ex3-10-q1-ii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,911,c10-3-ex3-10-q1-iii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,912,c10-3-ex3-10-q1-iv,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,913,c10-3-ex3-10-q1-v,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,914,c10-3-ex3-10-q2,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,915,c10-3-ex3-11-q1-i,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,916,c10-3-ex3-11-q1-ii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,917,c10-3-ex3-11-q2-i,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,918,c10-3-ex3-11-q2-ii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,919,c10-3-ex3-11-q2-iii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,920,c10-3-ex3-11-q2-iv,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,921,c10-3-ex3-11-q3,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-10,922,c10-3-ex3-12-q1,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-10,923,c10-3-ex3-12-q2,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-10,924,c10-3-ex3-12-q3,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-10,925,c10-3-ex3-12-q4,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-10,926,c10-3-ex3-12-q5,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-10,927,c10-3-ex3-12-q6,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-10,928,c10-3-ex3-12-q7,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-10,929,c10-3-ex3-12-q8,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-10,930,c10-3-ex3-12-q9,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
+10,901,c10-3-ex3-9-q1-i,0,,1,320 360 390,"TN 2025 Tamil PDF p117, printed p111; English PDF p115; root sums, products, signs and answers checked",,pending,b9b1a071
+10,902,c10-3-ex3-9-q1-ii,0,,1,320 360 390,"TN 2025 Tamil PDF p117, printed p111; English PDF p115; root sums, products, signs and answers checked",,pending,b9b1a071
+10,903,c10-3-ex3-9-q1-iii,0,,1,320 360 390,"TN 2025 Tamil PDF p117, printed p111; English PDF p115; root sums, products, signs and answers checked",,pending,b9b1a071
+10,904,c10-3-ex3-9-q1-iv,0,,1,320 360 390,"TN 2025 Tamil PDF p117, printed p111; English PDF p115; root sums, products, signs and answers checked",,pending,b9b1a071
+10,905,c10-3-ex3-9-q2-i,0,,1,320 360 390,"TN 2025 Tamil PDF p117, printed p111; English PDF p115; root sums, products, signs and answers checked",,pending,b9b1a071
+10,906,c10-3-ex3-9-q2-ii,0,,1,320 360 390,"TN 2025 Tamil PDF p117, printed p111; English PDF p115; root sums, products, signs and answers checked",,pending,b9b1a071
+10,907,c10-3-ex3-9-q2-iii,0,,1,320 360 390,"TN 2025 Tamil PDF p117, printed p111; English PDF p115; root sums, products, signs and answers checked",,pending,b9b1a071
+10,908,c10-3-ex3-9-q2-iv,0,,1,320 360 390,"TN 2025 Tamil PDF p117, printed p111; English PDF p115; root sums, products, signs and answers checked",,pending,b9b1a071
+10,909,c10-3-ex3-10-q1-i,0,,1,320 360 390,"TN 2025 Tamil PDF p119, printed p113; English PDF p117; factorization, roots and volleyball team count checked",,pending,b9b1a071
+10,910,c10-3-ex3-10-q1-ii,0,,1,320 360 390,"TN 2025 Tamil PDF p119, printed p113; English PDF p117; factorization, roots and volleyball team count checked",,pending,b9b1a071
+10,911,c10-3-ex3-10-q1-iii,0,,1,320 360 390,"TN 2025 Tamil PDF p119, printed p113; English PDF p117; factorization, roots and volleyball team count checked",,pending,b9b1a071
+10,912,c10-3-ex3-10-q1-iv,0,,1,320 360 390,"TN 2025 Tamil PDF p119, printed p113; English PDF p117; factorization, roots and volleyball team count checked",,pending,b9b1a071
+10,913,c10-3-ex3-10-q1-v,0,,1,320 360 390,"TN 2025 Tamil PDF p119, printed p113; English PDF p117; factorization, roots and volleyball team count checked",,pending,b9b1a071
+10,914,c10-3-ex3-10-q2,0,,1,320 360 390,"TN 2025 Tamil PDF p119, printed p113; English PDF p117; factorization, roots and volleyball team count checked",,pending,b9b1a071
+10,915,c10-3-ex3-11-q1-i,0,,1,320 360 390,"TN 2025 Tamil PDF p122, printed p116; English PDF p120; coefficients, methods, roots and elapsed time checked",,pending,b9b1a071
+10,916,c10-3-ex3-11-q1-ii,0,,1,320 360 390,"TN 2025 Tamil PDF p122, printed p116; English PDF p120; coefficients, methods, roots and elapsed time checked",,pending,b9b1a071
+10,917,c10-3-ex3-11-q2-i,0,,1,320 360 390,"TN 2025 Tamil PDF p122, printed p116; English PDF p120; coefficients, methods, roots and elapsed time checked",,pending,b9b1a071
+10,918,c10-3-ex3-11-q2-ii,0,,1,320 360 390,"TN 2025 Tamil PDF p122, printed p116; English PDF p120; coefficients, methods, roots and elapsed time checked",,pending,b9b1a071
+10,919,c10-3-ex3-11-q2-iii,0,,1,320 360 390,"TN 2025 Tamil PDF p122, printed p116; English PDF p120; coefficients, methods, roots and elapsed time checked",,pending,b9b1a071
+10,920,c10-3-ex3-11-q2-iv,0,,1,320 360 390,"TN 2025 Tamil PDF p122, printed p116; English PDF p120; coefficients, methods, roots and elapsed time checked",,pending,b9b1a071
+10,921,c10-3-ex3-11-q3,0,,1,320 360 390,"TN 2025 Tamil PDF p122, printed p116; English PDF p120; coefficients, methods, roots and elapsed time checked",,pending,b9b1a071
+10,922,c10-3-ex3-12-q1,0,,1,320 360 390,"TN 2025 Tamil PDF pp124–125, printed pp118–119; English PDF pp122–123; context, quantities, units and worked answers checked",,pending,b9b1a071
+10,923,c10-3-ex3-12-q2,0,,1,320 360 390,"TN 2025 Tamil PDF pp124–125, printed pp118–119; English PDF pp122–123; context, quantities, units and worked answers checked",,pending,b9b1a071
+10,924,c10-3-ex3-12-q3,0,,1,320 360 390,"TN 2025 Tamil PDF pp124–125, printed pp118–119; English PDF pp122–123; context, quantities, units and worked answers checked",,pending,b9b1a071
+10,925,c10-3-ex3-12-q4,0,,1,320 360 390,"TN 2025 Tamil PDF pp124–125, printed pp118–119; English PDF pp122–123; context, quantities, units and worked answers checked",,pending,b9b1a071
+10,926,c10-3-ex3-12-q5,0,,1,320 360 390,"TN 2025 Tamil PDF pp124–125, printed pp118–119; English PDF pp122–123; context, quantities, units and worked answers checked",,pending,b9b1a071
+10,927,c10-3-ex3-12-q6,0,,1,320 360 390,"TN 2025 Tamil PDF pp124–125, printed pp118–119; English PDF pp122–123; context, quantities, units and worked answers checked",,pending,b9b1a071
+10,928,c10-3-ex3-12-q7,0,,1,320 360 390,"TN 2025 Tamil PDF pp124–125, printed pp118–119; English PDF pp122–123; context, quantities, units and worked answers checked",,pending,b9b1a071
+10,929,c10-3-ex3-12-q8,0,,1,320 360 390,"TN 2025 Tamil PDF pp124–125, printed pp118–119; English PDF pp122–123; context, quantities, units and worked answers checked",,pending,b9b1a071
+10,930,c10-3-ex3-12-q9,0,,1,320 360 390,"TN 2025 Tamil PDF pp124–125, printed pp118–119; English PDF pp122–123; context, quantities, units and worked answers checked",,pending,b9b1a071
 10,931,c10-3-ex3-13-q1-i,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
 10,932,c10-3-ex3-13-q1-ii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
 10,933,c10-3-ex3-13-q1-iii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
