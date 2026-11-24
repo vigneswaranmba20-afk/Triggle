@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "dc8fe6f62bbe3bda084e8fca92835358db232617",
-  "updatedAt": "2026-11-24T07:14:30Z",
+  "sourceCommit": "a7d7a1fbb00b2cdbaddb80c76832e51fed26dca0",
+  "updatedAt": "2026-11-24T08:26:16Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -32,7 +32,7 @@
     "site/data/g10-ch6-concepts.js": "bfd7bb85a4607c4cb71467e006dc161b4679f9f6e081c5ce57176728583b74fd",
     "site/data/g9-algebra-chapter.js": "63bdd314c52b309eaa6952f57f70fb1587c611caedd94ff9bf592c9455974455",
     "site/data/g9-ch5-distance-concept.js": "3154c8e0da99f96c745327d9d7ffde5cf8f1a042d1952fdd0da5e9785f8833c7",
-    "site/data/g9-clear-math.js": "8f210846d227cdac8dc038f8f0a8c3a1bb6bce7958b5335c213ab2238444f6f3",
+    "site/data/g9-clear-math.js": "d147a59c7f3794133434a73a5966973535df816ddc5ee346717c2664024b9deb",
     "site/data/g9-mensuration-chapter.js": "0f227dbd9717a4df7f87430035ce6ee19cbf62f02a226547f9f9db42c27160ee",
     "site/data/g9-mensuration-remaining.js": "777095314f54cde92f5c6abc567bb4231842cf94c1b9459206e5dedd7cf9b7c8",
     "site/data/g9-probability-chapter.js": "c141f534ffa3b557a4d97a5bcd3b6057ac6c88967efc6856ca812a1e212a2dde",
@@ -124,9 +124,9 @@
     "site/data/textbook-exercises/g9-ch3-ex3-2-q4-en.js": "289a7a17bc6bbc5095c20450e16b3771a3b59ca35b7844a5147c27f648fbab4a",
     "site/data/textbook-exercises/g9-ch3-ex3-3-to-3-6.js": "67e793b6568138d16bb61d7a7ae3699c623298a64929d6e915ea98bea06cc32f",
     "site/data/textbook-exercises/g9-ch3-ex3-7-to-3-9.js": "941d244ab19a945a6dbeefe10260680380bea0231a026510ecb4bfd85423e395",
-    "site/data/textbook-exercises/g9-ch4-ex4-1-q2-q4-en.js": "8dd13609b698e2c220841c1d5165a2a42d466e13e6500b796849e9fa08d54d33",
-    "site/data/textbook-exercises/g9-ch4-ex4-2-en.js": "cb6c8505d5ac540d228f75a6095ca173be13935d1137d939a48630d05e826adf",
-    "site/data/textbook-exercises/g9-ch4-ex4-3-en.js": "50f1ab8b6f7845d322690cff0672d0ba38062b33bdc03150d6d1c8fb6cb30dde",
+    "site/data/textbook-exercises/g9-ch4-ex4-1-q2-q4-en.js": "fad449a3e47b1eb98ebd28873659173ceaf534182b4808a462d674d1573a6235",
+    "site/data/textbook-exercises/g9-ch4-ex4-2-en.js": "ccac217d0f7fa94f7475e6adecfd0fe503d83ac716b3d8c8a6344d2a23e68797",
+    "site/data/textbook-exercises/g9-ch4-ex4-3-en.js": "0e67bf16d321fdf84e621477e844715a5e9aad54ac7385ecee9dfcdcf8c0ba83",
     "site/data/textbook-exercises/g9-ch5-ex5-1.js": "acf33a777033ea412a550e5d6cb33d88d4f0637d1ab2687a59fbb8ecfd24a63d",
     "site/data/textbook-exercises/g9-ch5-ex5-2-en.js": "09433295d5890d199a8c9be6128fce5905f042ff695d46d4f0f3f507e2951df2",
     "site/data/textbook-exercises/g9-ch5-ex5-2.js": "9de170856952775a7b2dd8ecaff77257ce95b0a31c242f64f94abe65017fb182",
@@ -5020,7 +5020,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q2",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "f87a7f27622200bffa7e6ad590396e0cc81b5b3f0036f4d0fbe61de1fcb5d666",
+                  "recordSha256": "1aafbdfe24b50fd1f5faecb6c3d6fc04ecaa6033ab95f9bdd578bcf0efe8b6fe",
                   "verified": false
                 },
                 {
@@ -5029,7 +5029,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q4",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "03f980bb4bd7952da0c0517e50d4ea422321a0dd971be7eba2dea1be2e436145",
+                  "recordSha256": "daa7f1ff1446e66566b81c0cbd45e31d77eb30c3602e2cbb3373c683caa6351d",
                   "verified": false
                 }
               ],
@@ -5064,7 +5064,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q1",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "8231eeb138e7026a434214132861919d4069c88b11ce057cc9507d8cc359debd",
+                  "recordSha256": "f26031a66034344156a41468ce2dd5fbc74fbce5643f9d39bca87733fa5e99e5",
                   "verified": false
                 },
                 {
@@ -5073,7 +5073,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q2",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "2b645e83a87158dda254b98dc8bdaf88505ec55fc47045b182e2dc2cef7a6835",
+                  "recordSha256": "c659caaee232434e7ab4a9eb3126b2b7dd79eceb1d58a7e1fbc912f09737b927",
                   "verified": false
                 },
                 {
@@ -5082,7 +5082,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q3",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "39e1025641d867863e56dbb7fc56e96d977cde705306084f0fbd8ec12e8defb0",
+                  "recordSha256": "a97567a3a8d6c1fd935a2eb877daa8ffd0c9337c88795c4d4462db5cc8e43b18",
                   "verified": false
                 },
                 {
@@ -5091,7 +5091,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q4",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "28a9e315cb6449549f5520bde02998a3ef715ac2ea1d668676c370246ab34e07",
+                  "recordSha256": "a17c124646e51fb22ad2c41c746c3b29eb9f6c98e941f2a1f19c6682f9d8fd27",
                   "verified": false
                 },
                 {
@@ -5100,7 +5100,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q6",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "ba5623b51103de9837daa89da915e502a366c44dbec5be48e0d852c915175485",
+                  "recordSha256": "b20cea9fe13e66fb612c0cfd28c2125d7a409525439b8b4ff543d5fdcc2010c8",
                   "verified": false
                 }
               ],
@@ -5135,7 +5135,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q1",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "74f60616b7dee4c6d9e6ec0c6646ac994f54e5086e1e7d62e88275b77be0d078",
+                  "recordSha256": "8acaf63408292d8940617ca59d716627625873894524eacceb28057927d39d97",
                   "verified": false
                 },
                 {
@@ -5144,7 +5144,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q2",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "b9c6232776a59108ff7ecf2867c3b22c101934b86437824a6ce9c986d0756692",
+                  "recordSha256": "c5ecc39576ebc5899452bce9f60535d618cbbc1c6eca6ff4e526c4735422d744",
                   "verified": false
                 },
                 {
@@ -5153,7 +5153,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q4",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "bb711722f8527fd2a5025c23f9b4d525a5a594c905223b1bb7941d05790d03e7",
+                  "recordSha256": "079253ba8220b48d7c0c92f8bdbb9f448574f0b28ddfe43bff74a68cb1f89f2d",
                   "verified": false
                 },
                 {
@@ -5162,7 +5162,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q6",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "6d4fe3e847aa27e61e3d7ee73931e043532e0cbae1fb1b316f9411753334674f",
+                  "recordSha256": "8b8cb122eaab611d2b8babc4d715e6d181c0126f1611b40f3ec5e72390ad375e",
                   "verified": false
                 }
               ],
