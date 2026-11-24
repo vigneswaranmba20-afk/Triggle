@@ -172,4 +172,25 @@ for(const asset of ['data/g10-ch6-concepts.js','assets/g10-ch6-concepts.js']){
 }
 assert.match(sw,/const CACHE='triggle-[^']+-gpfola-v2-fa50e19c-g9ex32-aud14-02-tables-20261122-q46-20261122-aud14-03-choices-20261122(?:-[^']+)?'/,'Preserve GP Fola and G9 audit markers across later cache revisions');
 
+// AUD25-02: all old bookmarks resolve to the actual same-number textbook question.
+const routeSource=read('assets/app.js').match(/const legacyTrigQuestionIds=[\s\S]*?\n }(?=\n canonicalizeTrigRoute)/);
+assert(routeSource,'Missing canonical route implementation');
+const class10Items=loadRuntime().classes[10].items;
+const routeCtx=vm.createContext({classes:{10:{items:class10Items}}});
+const canonicalize=vm.runInContext(routeSource[0]+'\ncanonicalizeTrigRoute',routeCtx);
+const oldCards=class10Items.filter(i=>i.id.startsWith('c10-6-6-'));
+assert.equal(oldCards.length,17);
+for(const old of oldCards){
+  const candidates=class10Items.filter(i=>/^c10-6-(?:ex6-|unit-)/.test(i.id)&&i.label.en===old.label.en);
+  assert.equal(candidates.length,1,'Unique canonical question for '+old.id);
+  const params=new URLSearchParams({class:'10',question:old.id});
+  assert.equal(canonicalize(params),true);
+  assert.equal(params.get('question'),candidates[0].id);
+  assert.equal(canonicalize(params),false,'Canonical route is idempotent');
+}
+for(const [grade,id] of [['9','c10-6-6-1-1'],['12','c10-6-6-1-1'],['10','c10-6-6-unknown'],['10','constructor'],['10','c10-3-ex3-12-q7']]){
+  const params=new URLSearchParams({class:grade,question:id});
+  assert.equal(canonicalize(params),false);
+  assert.equal(params.get('question'),id);
+}
 console.log('PASS Grade 10 Chapter 6 Trigonometry Concepts: 10 bilingual 6-part stages, KaTeX, identities, heights/distances & offline checks');
