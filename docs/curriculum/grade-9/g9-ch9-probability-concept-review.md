@@ -2,17 +2,19 @@
 
 ## Textbook scope
 
-The connected Tamil Nadu State Board Mathematics PDFs were opened from Drive. Both imprints on PDF page 2 include the 2025 revision. The downloaded PDFs match the hashes in the repository source register. The chapter page images, headings and formulas were compared across both editions. Page numbers in the table give the section start. [English PDF](https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view) · [Tamil PDF](https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view)
+Both Tamil Nadu State Board PDFs were opened from the registered Google Drive files for this revision. Both imprints on PDF page 2 list the 2025 revision. Section headings, definitions and formulas were checked across the two editions. Printed page numbers are followed by the one-based PDF page numbers. [English PDF](https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view) · [Tamil PDF](https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view)
 
-| Section | English printed / PDF | Tamil printed / PDF | Teaching scope |
-| --- | --- | --- | --- |
-| 9.1 Introduction | 291 / 297 | 307 / 313 | Chance as a measure of uncertainty, including 0 and 1 |
-| 9.2 Basic Ideas | 292 / 298 | 309 / 315 | Random and deterministic experiments, trials, sample points, sample spaces and events |
-| 9.3 Classical Approach | 295 / 301 | 311 / 317 | Favourable and total counts, conditional on equally likely outcomes |
-| 9.4 Empirical Approach | 296 / 302 | 312 / 318 | Relative frequency, the probability range and variability across runs |
-| 9.5 Types of Events | 299 / 305 | 316 / 322 | Equally likely, sure, impossible, mutually exclusive, exhaustive and complementary events |
+| Section | English printed / PDF | Tamil printed / PDF | Teaching scope | Student route |
+| --- | --- | --- | --- | --- |
+| 9.1 Introduction | 291–292 / 297–298 | 307–308 / 313–314 | Measure uncertainty and interpret possible, impossible and sure outcomes. | [9.1](../../../site/index.html?class=9&chapter=g9-ch9&section=concepts&concept=0) |
+| 9.2 Basic Ideas | 292–294 / 298–300 | 309–311 / 315–317 | Distinguish random and deterministic experiments, trials, outcomes, sample points, sample spaces and events. Enumerate ordered outcomes. | [9.2](../../../site/index.html?class=9&chapter=g9-ch9&section=concepts&concept=1) |
+| 9.3 Classical Approach | 295 / 301 | 311–312 / 317–318 | Count favourable and total outcomes when the outcomes are equally likely. | [9.3](../../../site/index.html?class=9&chapter=g9-ch9&section=concepts&concept=2) |
+| 9.4 Empirical Approach | 296–297 / 302–303 | 312–314 / 318–320 | Use relative frequency as an estimate, compare observed and theoretical values, and interpret the probability range. | [9.4](../../../site/index.html?class=9&chapter=g9-ch9&section=concepts&concept=3) |
+| 9.5 Types of Events | 299–300 / 305–306 | 316–317 / 322–323 | Compare equally likely, sure, impossible, mutually exclusive, exhaustive and complementary events. Find the probability of a complement. | [9.5](../../../site/index.html?class=9&chapter=g9-ch9&section=concepts&concept=4) |
 
-Tamil headings and terms such as கூறுவெளி (sample space), நிகழ்ச்சி (event) and நிரப்பு நிகழ்ச்சி (complementary event) were checked against printed pages 309, 316 and 317. New concept copy is English with language markup and a pending Tamil editorial label. This review covers concept scope. Exercise records, archived worked examples and activities keep their existing review status.
+Five existing lessons gained Tamil teaching, outcome labels, controls, accessible descriptions, practice hints and corrective feedback. The chapter adds zero concept lessons. The Tamil copy uses the textbook’s terms, including கூறுவெளி, ஒப்பீட்டு நிகழ்வெண், நிறைவு செய் நிகழ்ச்சிகள் and நிரப்பு நிகழ்ச்சி. The archived quizzes, textbook activities and exercise records retain their own editorial status.
+
+The sample-space lesson states the equal-chance and independence assumptions before using the four ordered flash outcomes. The empirical lesson links to Exercise 9.1 Q7 and Q8, which estimate a probability from observed counts. In the ticket experiment, the complement example has no overlap and covers all four tickets. The overlap example has two tickets in each event, with ticket 4 counted once, so three tickets are in the union.
 
 ## Individual learning review
 

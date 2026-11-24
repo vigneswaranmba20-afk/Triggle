@@ -495,8 +495,7 @@
     let active=-1;
     stages.forEach((stage,i)=>{
       const button=document.createElement('button');button.type='button';button.className='sp2-nav-button';button.dataset.index=String(i);
-      if(probability)button.lang='en';
-      button.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+e(probability?probabilityLessons[i].heading:pick(stage.title))+
+      button.innerHTML='<span class="sp2-nav-number">'+(i+1)+'</span><span class="sp2-nav-name">'+e(probability?pick(probabilityLessons[i].heading):pick(stage.title))+
         '</span><span class="sp2-done-mark" aria-hidden="true"></span>';button.addEventListener('click',()=>show(i,true));nav.append(button);
     });
     function update(){
@@ -526,7 +525,7 @@
         algebraPilot.mount(panel,stage,lang,{onQuestion,chapterQuestions,index:i});
       }else if(probability){
         probability.mount(panel,stage.section,probabilityLessons[i],i,lang);
-        const pageParts=[stage.section?'Section '+stage.section:'',stage.page?.en?'EN p.'+stage.page.en:'',stage.page?.ta?'TA p.'+stage.page.ta:''].filter(Boolean);
+        const pageParts=[stage.section?(ta?'பகுதி ':'Section ')+stage.section:'',stage.page?.en?(ta?'ஆங்கிலப் பக்கம் ':'EN p.')+stage.page.en:'',stage.page?.ta?(ta?'தமிழ்ப் பக்கம் ':'TA p.')+stage.page.ta:''].filter(Boolean);
         if(pageParts.length){
           const cite=document.createElement('small');cite.className='sp2-stage-reference';
           cite.textContent=(ta?'பாடநூல் ஆதாரம்: ':'Textbook source: ')+pageParts.join(' · ');

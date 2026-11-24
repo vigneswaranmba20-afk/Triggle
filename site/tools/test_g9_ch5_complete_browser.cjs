@@ -106,7 +106,8 @@ function startServer() {
     const exBtns = await p.locator('.hub-exercise-link').count();
     assert.equal(exBtns, 6, 'Chapter 5 hub must list all 6 exercises (5.1-5.6)');
 
-    await p.goto(`${baseUrl}?class=9&chapter=g9-ch5&section=concepts`, { waitUntil: 'networkidle' });
+    await p.goto(`${baseUrl}?class=9&chapter=g9-ch5&section=concepts&concept=0`, { waitUntil: 'networkidle' });
+    await p.locator('.sp2-concept-video-button').click();
     const hasVideo = await p.evaluate(() => !!document.querySelector('video source, video[src]'));
     assert.equal(hasVideo, true, 'Distance Formula concept video element must remain present');
     await ctx.close();
