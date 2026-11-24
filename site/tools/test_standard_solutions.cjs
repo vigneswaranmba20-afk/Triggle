@@ -429,7 +429,7 @@ for(const [grade,data] of Object.entries(classes)){
     assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exact independently checked M04 bilingual record '+item.id);
     assert.equal(item.translationReview,'pending','Do not claim Tamil editorial signoff '+item.id);
     assert.equal(item.tamilWorkedSolutionReview,'pending','Do not claim Tamil solution signoff '+item.id);
-  }else if(grade==='10' && /^c10-1-1-(?:2-q[1-5]|3-q(?:[1-9]|10))$/.test(item.id)){
+  }else if(grade==='10' && /^c10-1-1-(?:2-q[1-5]|3-q(?:[1-9]|10)|4-q(?:[1-9]|1[0-2]))$/.test(item.id)){
    const original=JSON.parse(JSON.stringify(item));
    for(const field of ['q','topic','label','title']) delete original[field].ta;
    for(const step of original.steps){delete step.ta;delete step.mathTa;}
