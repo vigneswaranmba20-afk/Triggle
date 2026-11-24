@@ -472,10 +472,11 @@
     });
   }
 
-  const conceptChecksOnly=chapterId=>['g9-ch4','g9-ch6','g9-ch8'].includes(chapterId);
+  const conceptChecksOnly=chapterId=>['g9-ch4','g9-ch6','g9-ch8','g10-ch1'].includes(chapterId);
 
   function grade9Stages(chapterId){
     switch(chapterId){
+      case 'g10-ch1': return window.TriggleG9ConceptLessons && window.TRIGGLE_RELATIONS_LESSONS;
       case 'g9-ch3': return window.TRIGGLE_ALGEBRA_PATH?.stages;
       case 'g9-ch4': return window.TriggleG9ConceptLessons && window.TRIGGLE_GEOMETRY_LESSONS;
       case 'g9-ch5': {
