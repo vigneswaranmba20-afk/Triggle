@@ -57,6 +57,27 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert.equal(await control.evaluate(el=>el.open),false,'Close in place '+id);
    }
   }
+  // AUD29-02: actual bilingual disclosure interactions, representative of every exercise.
+  for(const width of [320,390,412]){
+   await page.setViewportSize({width,height:844});
+   for(const id of ['g9-ch5-ex5.1-q2','g9-ch5-ex5.2-q1','g9-ch5-ex5.3-q5','g9-ch5-ex5.4-q3','g9-ch5-ex5.5-q5','g9-ch5-ex5.6-q15']){
+    await page.goto(route(id),{waitUntil:'domcontentloaded'});
+    for(const lang of ['en','ta']){
+     await page.locator(lang==='ta'?'#langTa':'#langEn').click();
+     const detail=page.locator('#stepsList details.why-step-g9[data-question="'+id+'"]');
+     await detail.waitFor({timeout:12000});
+     assert.equal(await detail.evaluate(el=>el.open),false,'Collapsed '+id+' '+lang);
+     await detail.locator('summary').click();
+     const explanation=detail.locator('.why-step-panel p');
+     const plain=await explanation.evaluate(node=>{const clone=node.cloneNode(true);clone.querySelectorAll('.triggle-tex').forEach(el=>el.replaceWith(document.createTextNode(el.dataset.mathFallback)));return clone.textContent.trim();});
+     const expected=await page.evaluate(({id,lang})=>window.TriggleWhyStepG9.hints[id][lang],{id,lang});
+     assert.equal(plain,expected,'Conceptual bilingual explanation '+id+' '+lang);
+     assert.ok(!/correct option|correct answer|சரியான விடை/i.test(plain),'No spoiler '+id);
+     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No overflow '+id+' '+lang+' '+width);
+     await detail.locator('summary').click();
+    }
+   }
+  }
   // A relevant set-intersection question gets a conceptual Venn when authored.
   await page.setViewportSize({width:320,height:844});
   await page.goto(route('g9-ch1-ex1.1-q3-b-i'));
