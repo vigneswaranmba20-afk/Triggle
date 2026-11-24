@@ -489,6 +489,23 @@
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
   $('answerText').innerHTML=answerMath?math(answerMath):(canGrid?parts.map(v=>'<span class="answer-part">'+math(v)+'</span>').join(''):math(localizedAnswer));
   appendFinalStep(ul);
+  const existingSupp=$('p0SupplementHost');if(existingSupp)existingSupp.remove();
+  const supp=window.TriggleP0Supplements?.get?.(current.id);
+  if(supp){
+   const box=document.createElement('div');box.id='p0SupplementHost';box.className='p0-supplement-card';
+   let html='<h4>'+esc(tr(supp.title))+'</h4>';
+   if(supp.note)html+='<p>'+esc(tr(supp.note))+'</p>';
+   if(supp.table){
+    html+='<div class="p0-table-scroll"><table class="p0-freq-table"><thead><tr>'+supp.table.headers.map(h=>'<th>'+esc(h)+'</th>').join('')+'</tr></thead><tbody>';
+    html+=supp.table.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('');
+    html+='</tbody>';
+    if(supp.table.footer)html+='<tfoot><tr>'+supp.table.footer.map(c=>'<th>'+esc(c)+'</th>').join('')+'</tr></tfoot>';
+    html+='</table></div>';
+   }
+   if(supp.latex)html+='<div class="p0-supp-math">'+math({latex:supp.latex,fallback:supp.latex,display:true})+'</div>';
+   box.innerHTML=html;
+   ul.insertAdjacentElement('afterend',box);
+  }
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
   // Language switching and navigation replace formula nodes. Set Grade 9 keyboard state
