@@ -5294,7 +5294,19 @@ const metadata={
       "level": "medium",
       "basis": "Represent real roots as α and α², obtain α = 3 from α³ = 27, and evaluate k = −3(α + α²).",
       "review": "implementation-audit"
-    }
+    },
+    "c10-3-ex3-15-q1-i": {"grade":10,"level":"easy","basis":"Model 50% discount as y = x/2, plot linear graph, and read marked price from vertical discount axis.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q1-ii": {"grade":10,"level":"easy","basis":"Read discount on y-axis from marked price x = ₹2500 on the same y = x/2 line.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q2-i": {"grade":10,"level":"medium","basis":"Plot positive branch of rectangular hyperbola xy = 24 (x,y > 0) and read y at x = 3.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q2-ii": {"grade":10,"level":"medium","basis":"Read x from y = 6 on the positive branch of xy = 24.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q3-i": {"grade":10,"level":"easy","basis":"Graph y = (1/2)x, verify constant k = 1/2 from plotted points, and read y at x = 9.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q3-ii": {"grade":10,"level":"easy","basis":"Read x from y = 7.5 on the same y = (1/2)x graph.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q4-i": {"grade":10,"level":"medium","basis":"Identify inverse variation xy = 90 from table, plot whole-number pipe counts with guide curve, and read time for 5 pipes.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q4-ii": {"grade":10,"level":"medium","basis":"Read whole-number pipe count from time y = 9 minutes on the xy = 90 graph.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q5-i": {"grade":10,"level":"easy","basis":"Verify constant product xy = 360 across all columns of the prize-distribution table.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q5-ii": {"grade":10,"level":"medium","basis":"Graph whole-number participant counts for xy = 360 and read share at x = 12 participants.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q6-i": {"grade":10,"level":"medium","basis":"Verify constant ratio y/x = 15 (direct variation y = 15x), graph data, and read charge at 6 hours.","review":"2025-textbook-ex315-source-audit"},
+    "c10-3-ex3-15-q6-ii": {"grade":10,"level":"medium","basis":"Read parking duration at ₹150 from the direct variation graph y = 15x.","review":"2025-textbook-ex315-source-audit"}
 ,
     "c10-4-ex4-3-q1": {"grade":10,"level":"easy","basis":"Use perpendicular east/north distances as legs of a right triangle and take their hypotenuse.","review":"2025-textbook-ex43-source-audit"},
     "c10-4-ex4-3-q2": {"grade":10,"level":"easy","basis":"Compare the sum of the two perpendicular street lengths with their direct Pythagorean diagonal.","review":"2025-textbook-ex43-source-audit"},

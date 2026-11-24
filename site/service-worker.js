@@ -63,6 +63,7 @@ CORE.push('./data/textbook-exercises/g10-ch3-ex3-11-complete-en.js');
 CORE.push('./data/textbook-exercises/g10-ch3-ex3-12-complete-en.js');
 CORE.push('./data/textbook-exercises/g10-ch3-ex3-13-complete-en.js');
 CORE.push('./data/textbook-exercises/g10-ch3-ex3-14-complete-en.js');
+CORE.push('./data/textbook-exercises/g10-ch3-ex3-15-complete.js','./assets/grade10-ch3/ex3-15-q1-discount.svg','./assets/grade10-ch3/ex3-15-q2-hyperbola.svg','./assets/grade10-ch3/ex3-15-q3-linear.svg','./assets/grade10-ch3/ex3-15-q4-pipes.svg','./assets/grade10-ch3/ex3-15-q5-shares.svg','./assets/grade10-ch3/ex3-15-q6-parking.svg');
 CORE.push('./assets/grade10-ch3/ex3-12-q2-pathway.svg','./assets/grade10-ch3/ex3-12-q5-circle-gates.svg','./assets/grade10-ch3/ex3-12-q7-galleries.svg','./assets/grade10-ch3/ex3-12-q8-flowerbed.svg','./assets/grade10-ch3/ex3-12-q9-triangle.svg');
 CORE.push('./data/textbook-exercises/g9-ch3-ex3-1-q1-q2-en.js','./data/why-step-g9-ex3-1-q1-q2.js','./data/textbook-exercises/g9-ch3-ex3-1-q3-q9-en.js','./data/why-step-g9-ex3-1-q3-q9.js');
 CORE.push('./data/textbook-exercises/g9-ch1-ex1-2-q3-q5-batch1-en.js','./data/textbook-exercises/g9-ch1-ex1-2-q7-q10-en.js','./data/why-step-g9-ex1-2-q3-q5-batch1.js','./data/why-step-g9-ex1-2-q7-q10.js');

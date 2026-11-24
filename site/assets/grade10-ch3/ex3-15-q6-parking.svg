@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Direct variation line y = 15x (₹15/hr) for parking hours x and amount y. Guides show (i) 6 hr gives ₹90 and (ii) ₹150 gives 10 hr.">
+  <title>Ex 3.15 Q6: Parking Time vs Charge (y = 15x)</title>
+  <defs>
+    <marker id="arrow-axis" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-i" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrow-ii" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+  </defs>
+  <rect width="640" height="400" rx="14" fill="#f8fafc"/>
+  <text x="24" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1e293b">Ex 3.15 Q6: Parking Time vs Charge (y = 15x)</text>
+  <text x="616" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#475569" text-anchor="end">Direct variation: y/x = ₹15/hr</text>
+  <g stroke="#e2e8f0" stroke-width="1">
+    <line x1="76.0" y1="48" x2="76.0" y2="342"/>
+    <line x1="157.2" y1="48" x2="157.2" y2="342"/>
+    <line x1="238.5" y1="48" x2="238.5" y2="342"/>
+    <line x1="319.7" y1="48" x2="319.7" y2="342"/>
+    <line x1="400.9" y1="48" x2="400.9" y2="342"/>
+    <line x1="482.2" y1="48" x2="482.2" y2="342"/>
+    <line x1="563.4" y1="48" x2="563.4" y2="342"/>
+    <line x1="76" y1="342.0" x2="604" y2="342.0"/>
+    <line x1="76" y1="296.8" x2="604" y2="296.8"/>
+    <line x1="76" y1="251.5" x2="604" y2="251.5"/>
+    <line x1="76" y1="206.3" x2="604" y2="206.3"/>
+    <line x1="76" y1="161.1" x2="604" y2="161.1"/>
+    <line x1="76" y1="115.8" x2="604" y2="115.8"/>
+    <line x1="76" y1="70.6" x2="604" y2="70.6"/>
+  </g>
+  <g stroke="#334155" stroke-width="2">
+    <line x1="76" y1="342" x2="618" y2="342" marker-end="url(#arrow-axis)"/>
+    <line x1="76" y1="342" x2="76" y2="34" marker-end="url(#arrow-axis)"/>
+  </g>
+  <text x="66" y="358" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#334155" text-anchor="end">O</text>
+  <g font-family="system-ui, sans-serif" font-size="10.5" fill="#475569">
+    <line x1="157.2" y1="342" x2="157.2" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="157.2" y="360" text-anchor="middle">4</text>
+    <line x1="238.5" y1="342" x2="238.5" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="238.5" y="360" text-anchor="middle">8</text>
+    <line x1="319.7" y1="342" x2="319.7" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="319.7" y="360" text-anchor="middle">12</text>
+    <line x1="400.9" y1="342" x2="400.9" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="400.9" y="360" text-anchor="middle">16</text>
+    <line x1="482.2" y1="342" x2="482.2" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="482.2" y="360" text-anchor="middle">20</text>
+    <line x1="563.4" y1="342" x2="563.4" y2="347" stroke="#334155" stroke-width="1.5"/>
+    <text x="563.4" y="360" text-anchor="middle">24</text>
+    <line x1="71" y1="296.8" x2="76" y2="296.8" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="300.3" text-anchor="end">60</text>
+    <line x1="71" y1="251.5" x2="76" y2="251.5" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="255.0" text-anchor="end">120</text>
+    <line x1="71" y1="206.3" x2="76" y2="206.3" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="209.8" text-anchor="end">180</text>
+    <line x1="71" y1="161.1" x2="76" y2="161.1" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="164.6" text-anchor="end">240</text>
+    <line x1="71" y1="115.8" x2="76" y2="115.8" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="119.3" text-anchor="end">300</text>
+    <line x1="71" y1="70.6" x2="76" y2="70.6" stroke="#334155" stroke-width="1.5"/>
+    <text x="67" y="74.1" text-anchor="end">360</text>
+  </g>
+  <text x="340" y="388" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">Time x (hours)</text>
+  <text x="20" y="195" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle" transform="rotate(-90 20 195)">Amount Charged y (₹)</text>
+  <polyline fill="none" stroke="#4f46e5" stroke-width="2.6" points="76.0,342.0 583.7,59.3"/>
+  <line x1="197.8" y1="342" x2="197.8" y2="274.2" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arrow-i)"/>
+  <line x1="197.8" y1="274.2" x2="76" y2="274.2" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arrow-i)"/>
+  <circle cx="197.8" cy="274.2" r="5.5" fill="#dc2626" stroke="#fff" stroke-width="1.8"/>
+  <text x="189.8" y="266.2" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#dc2626" text-anchor="end">(i) (6, 90)</text>
+  <rect x="173.8" y="346" width="48" height="16" rx="4" fill="#dc2626"/>
+  <text x="197.8" y="357.5" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">6</text>
+  <rect x="24" y="266.2" width="48" height="16" rx="4" fill="#dc2626"/>
+  <text x="48" y="277.7" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">90</text>
+  <line x1="76" y1="228.9" x2="279.1" y2="228.9" stroke="#059669" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arrow-ii)"/>
+  <line x1="279.1" y1="228.9" x2="279.1" y2="342" stroke="#059669" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arrow-ii)"/>
+  <circle cx="279.1" cy="228.9" r="5.5" fill="#059669" stroke="#fff" stroke-width="1.8"/>
+  <text x="287.1" y="220.9" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#059669" text-anchor="start">(ii) (10, 150)</text>
+  <rect x="255.10000000000002" y="346" width="48" height="16" rx="4" fill="#059669"/>
+  <text x="279.1" y="357.5" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">10</text>
+  <rect x="24" y="220.9" width="48" height="16" rx="4" fill="#059669"/>
+  <text x="48" y="232.4" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">150</text>
+  <circle cx="157.2" cy="296.8" r="4.5" fill="#4f46e5" stroke="#fff" stroke-width="1.5"/>
+  <text x="165.2" y="306.8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="start">(4, 60)</text>
+  <circle cx="238.5" cy="251.5" r="4.5" fill="#4f46e5" stroke="#fff" stroke-width="1.5"/>
+  <text x="246.5" y="261.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="start">(8, 120)</text>
+  <circle cx="319.7" cy="206.3" r="4.5" fill="#4f46e5" stroke="#fff" stroke-width="1.5"/>
+  <text x="327.7" y="198.3" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="start">(12, 180)</text>
+  <circle cx="563.4" cy="70.6" r="4.5" fill="#4f46e5" stroke="#fff" stroke-width="1.5"/>
+  <text x="555.4" y="60.6" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="end">(24, 360)</text>
+</svg>
