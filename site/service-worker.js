@@ -84,6 +84,7 @@ CORE.push("./data/textbook-exercises/g10-seven-recovery-20261113-en.js");
 CORE.push("./data/textbook-exercises/g10-ch8-ex8-1-q5-q10-en.js");
 CORE.push("./data/textbook-exercises/g10-ch8-ex8-2-q1-q3-en.js");
 CORE.push("./data/textbook-exercises/g10-ch8-ex8-2-q4-q8-en.js");
+CORE.push("./data/textbook-exercises/g10-ch8-ex8-3-q1-q6.js","./data/textbook-exercises/g10-ch8-ex8-3-q7-q13.js","./assets/grade10-ch8/ex8-3-q1-tree.svg","./assets/grade10-ch8/ex8-3-q2-tree.svg","./assets/grade10-ch8/ex8-3-q11-target.svg");
 CORE.push("./data/textbook-exercises/g10-ch8-ex8-1-q11-q15-en.js");
 CORE.push("./assets/grade10-recovery/ex4-1-q1-i.svg","./assets/grade10-recovery/ex4-1-q1-ii.svg");
 CORE.push('./assets/g10-ch2-typography.css');
