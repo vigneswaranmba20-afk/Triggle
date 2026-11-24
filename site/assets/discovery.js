@@ -21,7 +21,7 @@
       featured:'Try the interactive Set Language lesson',
       featuredDesc:'Seven short ideas, a Venn-diagram lab, and step-by-step reasoning.',
       view:'Open chapter',empty:'No matching chapters. Try another word.',
-      board:'Tamil Nadu State Board',mathematics:'Mathematics',chapterCount:'chapters',
+      board:'Tamil Nadu State Board',homeChapterCount:'chapters',mathematics:'Mathematics',chapterCount:'chapters',
       yourClass:'Your class',pick:'Pick a chapter and start with what is available today.',
       back:'All classes',chooseClass:'Change class',allChapters:'All chapters in this class',
       tip:'You can always use the Chapters menu or the class numbers below.',
@@ -46,7 +46,7 @@
       featured:'செயல்வழிக் கண மொழிப் பாடத்தை முயலுங்கள்',
       featuredDesc:'ஏழு சிறு கருத்துகள், வென் பட ஆய்வகம், படிப்படியான காரண விளக்கம்.',
       view:'அத்தியாயத்தைத் திறக்கவும்',empty:'பொருந்தும் அத்தியாயம் இல்லை. வேறு சொல்லை முயலுங்கள்.',
-      board:'தமிழ்நாடு மாநிலப் பாடத்திட்டம்',mathematics:'கணிதம்',chapterCount:'அத்தியாயங்கள்',
+      board:'தமிழ்நாடு மாநிலப் பாடத்திட்டம்',homeChapterCount:'இயல்கள்',mathematics:'கணிதம்',chapterCount:'அத்தியாயங்கள்',
       yourClass:'உங்கள் வகுப்பு',pick:'இப்போது கிடைக்கும் பாடங்களிலிருந்து கற்க ஒரு அத்தியாயத்தைத் தேர்ந்தெடுக்கவும்.',
       back:'அனைத்து வகுப்புகள்',chooseClass:'வகுப்பை மாற்றுக',allChapters:'இந்த வகுப்பின் எல்லா அத்தியாயங்களும்',
       tip:'மேலுள்ள அத்தியாயப் பட்டியலையோ கீழுள்ள வகுப்பு எண்களையோ எப்போதும் பயன்படுத்தலாம்.',
@@ -95,7 +95,7 @@
     function gradeCard(g){
       return `<button type="button" data-grade="${g.grade}" class="discover-grade discover-grade-${g.grade}">
         <span class="home-grade-label">${escapeHtml(t.class)} <b>${g.grade}</b></span>
-        <span class="home-chapter-count">${g.chapters.length} ${escapeHtml(t.chapterCount)}</span>
+        <span class="home-chapter-count">${g.chapters.length} ${escapeHtml(t.homeChapterCount)}</span>
       </button>`;
     }
     let body='';

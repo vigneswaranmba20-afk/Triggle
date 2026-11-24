@@ -33,7 +33,7 @@ body.home-active {
   border: none;
   box-shadow: none;
 }
-.home-active #homeBtn .home-icon { display: none; }
+.home-active #homeBtn .home-icon { display: none !important; }
 .home-active #homeBtn [data-i18n=home] {
   position: absolute;
   width: 1px;
@@ -46,6 +46,7 @@ body.home-active {
 }
 .home-active #homeBtn .home-wordmark { display: inline-flex; align-items: center; gap: .48rem; }
 .home-wordmark img { display: block; border-radius: 24%; }
+.home-wordmark-dot { font-style: normal; color: #ab7934; }
 .home-wordmark b {
   font: 760 clamp(1.4rem, 2vw, 1.65rem)/1 system-ui, sans-serif;
   letter-spacing: -.075em;
@@ -100,16 +101,16 @@ body.home-active {
   overflow: hidden;
   border: 1px solid #cdd9cd;
   border-radius: clamp(1.1rem, 2.5vw, 2rem);
-  background: #e5eee1;
+  background: #eff3e8;
 }
 .home-studio-cover::before {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: 0;
-  background: linear-gradient(90deg, #eff3e8 5%, #eff3e8f2 28%, #eff3e895 43%, transparent 60%),
-              url("home-studio.webp") right 57% / auto 121% no-repeat,
-              #e5eee1;
+  inset: 0 0 0 auto;
+  width: 68%;
+  background: url("home-studio.webp") right 56% / cover no-repeat;
+  mask-image: linear-gradient(90deg, transparent, #000 32%);
 }
 .home-cover-type { padding: 2rem clamp(1.5rem, 4vw, 3.9rem); }
 .home-cover-type p {
@@ -248,14 +249,17 @@ html[lang=ta] .home-active .home-grade-label { font-size: clamp(1.25rem, 2.4vw, 
     overflow: hidden;
   }
   .home-active .lesson-container { width: 92%; }
-  .home-studio-cover { min-height: 0; height: clamp(13rem, 58vw, 19.8rem); align-items: start; }
+  .home-studio-cover { min-height: 0; height: clamp(13.5rem, 73vw, 21rem); align-items: start; }
   .home-studio-cover::before {
+    width: 100%;
+    mask-image: none;
     background: linear-gradient(180deg, #f0f3e8fa, #f0f3e8e8 23%, #f0f3e82a 48%, transparent 63%),
                 url("home-studio.webp") right 60% / cover no-repeat;
   }
   .home-cover-type { padding: clamp(.9rem, 4.4vw, 1.6rem); }
   .home-cover-type p { font-size: .72rem; margin-bottom: .22rem; letter-spacing: .1em; }
   .home-active .home-cover-type h1 { font-size: clamp(2.65rem, 9vw, 3.65rem) !important; }
+  .home-active .discover-grade-grid .discover-grade { padding-inline: clamp(.7rem, 4vw, 1.5rem); }
   .home-active .discover-grade::after { width: 8rem; height: 8rem; bottom: -4.9rem; right: -3.5rem; opacity: .24; }
   .home-active .discover-home-recent { grid-template-columns: 1fr; gap: .3rem; }
   .home-active .discover-resume-card { gap: .3rem .8rem; }
