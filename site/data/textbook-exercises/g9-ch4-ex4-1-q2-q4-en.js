@@ -104,9 +104,6 @@ const entries=[
       }
     ],
     "answer": "ΔABC ≅ ΔFDE (ASA)",
-    "figureSrc": "assets/grade9-ch4/ex4-1-q4.svg",
-    "figureAlt": { "en": "Two triangles ABC and FDE showing corresponding equal angles B=60 deg, C=70 deg and D=60 deg, E=70 deg with AB=DF.", "ta": "ΔABC ≅ ΔFDE (கோ-ப-கோ சர்வசமம்)" },
-    "figureCaption": { "en": "ΔABC ≅ ΔFDE (ASA congruence)", "ta": "ΔABC ≅ ΔFDE (கோ-ப-கோ சர்வசமம்)" },
     "kind": "reference",
     "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 4.1, Q4 · printed p. 144; mathematical solutions original to Triggle; page-image fidelity review pending.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
