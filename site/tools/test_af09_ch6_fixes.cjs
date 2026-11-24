@@ -94,3 +94,42 @@ for (let r = 1; r <= 7; r++) {
 assert.ok(auditLog.includes('USER-AF09-01') && auditLog.includes('USER-AF09-02'));
 
 console.log('PASS AF-09 Ch 6 fixes: Unit Q2 split cleanly (0 ∓), all 23 SVGs orientation-aware with halos, and 46-item audit log synced.');
+
+// AUD25-01: regression for steep-angle sectors, unknown distances and mirror symmetry.
+const figure = name => readSite('assets/grade10-ch6/' + name + '.svg');
+const pointLabel = (svg, label) => {
+  const tag = [...svg.matchAll(/<text\b([^>]*)>([^<]+)<\/text>/g)].find(m => m[2] === label);
+  assert.ok(tag, 'Missing figure label ' + label);
+  return ['x', 'y'].map(k => Number(tag[1].match(new RegExp('\\b' + k + '="([^"]+)"'))[1]));
+};
+const deg = (rise, run) => Math.atan2(rise, run) * 180 / Math.PI;
+for (const [name, ox, oy, shallowDx, shallowDy, steepDx, steepDy] of [
+  ['ex6-3-q3', 74, 42, 160, 66, 160, 148],
+  ['ex6-3-q4', 66, 44, 202, 142, 80, 142]
+]) {
+  const [x,y] = pointLabel(figure(name), '60°');
+  assert.ok(x > ox && y > oy + (x-ox)*shallowDy/shallowDx && y < oy + (x-ox)*steepDy/steepDx, name + ': steep label outside correct sector');
+}
+const ships = figure('ex6-3-q5');
+assert.doesNotMatch(ships, />h√3<|>h\/√3</);
+assert.ok(ships.includes('>d₁<') && ships.includes('>d₂<'));
+assert.match(ships, /x1="205" y1="90" x2="38\.72" y2="186"/);
+assert.match(ships, /x1="205" y1="90" x2="260\.43" y2="186"/);
+assert.ok(Math.abs(deg(96, 166.28)-30)<0.01 && Math.abs(deg(96, 55.43)-60)<0.01);
+const cloud = figure('ex6-4-q3');
+assert.match(cloud, /cy="30"/);
+assert.match(cloud, /cy="198"/);
+assert.match(cloud, /y1="114"[^>]*y2="114"/);
+assert.equal(114-30, 198-114);
+assert.ok(cloud.includes('>x<') && cloud.includes('>h + x<'));
+const statue = figure('ex6-unit-q9');
+assert.match(statue, /x1="82" y1="100" x2="210" y2="43"/);
+assert.match(statue, /x1="82" y1="100" x2="210" y2="186"/);
+assert.ok(Math.abs(deg(57,128)-24)<0.1 && Math.abs(deg(86,128)-34)<0.2);
+assert.ok(statue.includes('>h₁<') && statue.includes('>35 m<'));
+for (const [id, token] of [['c10-6-ex6-3-q5','d₁'],['c10-6-ex6-4-q3','h + x'],['c10-6-unit-q9','சிலை']]) {
+  const row = runtime.classes[10].items.find(r=>r.id===id);
+  assert.ok(row && row.figureAlt.en && row.figureAlt.ta && row.figureCaption.en && row.figureCaption.ta);
+  assert.ok(row.figureAlt.ta.includes(token), id + ': Tamil figure description must match corrected figure');
+}
+console.log('PASS AUD25-01 focused figure geometry, no-spoiler and bilingual metadata regressions.');
