@@ -1,0 +1,265 @@
+/* The home route shares the app's navigation and language controls. */
+.home-wordmark { display: none; }
+body.home-active {
+  --studio-ink: #163e36;
+  --studio-rule: #d9ddd4;
+  --studio-width: 76rem;
+}
+.home-active .app-shell { display: block; max-width: none; }
+.home-active .workspace { width: 100%; }
+.home-active .appbar {
+  display: grid;
+  grid-template: "brand menu language" auto / 1fr auto auto;
+  align-items: center;
+  height: auto;
+  min-height: 4.25rem;
+  gap: 1rem;
+  padding: .42rem max(5vw, calc((100vw - var(--studio-width)) / 2));
+  background: #fff;
+  border-bottom: 1px solid var(--studio-rule);
+}
+.home-active .appbar-actions { display: contents; }
+.home-active .brand-mobile { display: none; }
+.home-active #homeBtn {
+  grid-area: brand;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  width: auto;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+.home-active #homeBtn .home-icon { display: none; }
+.home-active #homeBtn [data-i18n=home] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.home-active #homeBtn .home-wordmark { display: inline-flex; align-items: center; gap: .48rem; }
+.home-wordmark img { display: block; border-radius: 24%; }
+.home-wordmark b {
+  font: 760 clamp(1.4rem, 2vw, 1.65rem)/1 system-ui, sans-serif;
+  letter-spacing: -.075em;
+  color: #1b352e;
+}
+.home-active #browseBtn {
+  grid-area: menu;
+  display: inline-flex;
+  justify-content: center;
+  width: auto;
+  min-height: 44px;
+  padding: .3rem .65rem;
+  border: 0;
+  font-size: .9rem;
+  font-weight: 630;
+}
+.home-active #browseChevron { display: none; }
+.home-active .lang-switch {
+  grid-area: language;
+  justify-self: end;
+  align-items: center;
+  width: auto;
+  border-radius: .8rem;
+  padding: 3px;
+}
+.home-active .lang-switch button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 .6rem;
+  border-radius: .65rem;
+  font: 680 .9rem/1.4 system-ui, "Triggle Noto Sans Tamil", sans-serif;
+}
+.home-active .lesson-container {
+  display: block;
+  width: min(90%, var(--studio-width));
+  max-width: none;
+  margin-inline: auto;
+  padding: clamp(1rem, 2.6vw, 2rem) 0 max(1rem, env(safe-area-inset-bottom)) !important;
+}
+.home-active .discover-home-minimal {
+  display: grid;
+  width: 100%;
+  max-width: none;
+  gap: 0;
+}
+.home-studio-cover {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  min-height: clamp(17rem, 30vw, 24rem);
+  overflow: hidden;
+  border: 1px solid #cdd9cd;
+  border-radius: clamp(1.1rem, 2.5vw, 2rem);
+  background: #e5eee1;
+}
+.home-studio-cover::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, #eff3e8 5%, #eff3e8f2 28%, #eff3e895 43%, transparent 60%),
+              url("home-studio.webp") right 57% / auto 121% no-repeat,
+              #e5eee1;
+}
+.home-cover-type { padding: 2rem clamp(1.5rem, 4vw, 3.9rem); }
+.home-cover-type p {
+  margin: 0 0 .6rem;
+  font: 720 .78rem/1.5 system-ui, "Triggle Noto Sans Tamil", sans-serif;
+  color: #345b4f;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.home-active .home-cover-type h1 {
+  margin: 0 !important;
+  color: var(--studio-ink) !important;
+  font: normal 400 clamp(3.6rem, 6.4vw, 6.4rem)/1.05 KaTeX_Main, Georgia, serif !important;
+  letter-spacing: -.065em;
+}
+.home-active .discover-home-classes { padding: clamp(1.3rem, 2.7vw, 2.4rem) 0 0; }
+.home-active .discover-home-classes h2 {
+  font: 720 clamp(1.2rem, 2vw, 1.65rem)/1.4 system-ui, "Triggle Noto Sans Tamil", sans-serif !important;
+  color: var(--studio-ink) !important;
+  margin: 0 0 .75rem !important;
+  letter-spacing: -.04em;
+}
+.home-active .discover-grade-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(.65rem, 1.7vw, 1.35rem); }
+.home-active .discover-grade-grid .discover-grade {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  gap: .2rem;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: clamp(6.4rem, 9.2vw, 8.3rem);
+  padding: .8rem clamp(1.1rem, 2.4vw, 2rem);
+  border: 1px solid #bdd4c5;
+  background: #e2eee4;
+  color: #153f33;
+  border-radius: 1.05rem;
+  box-shadow: none;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.home-active .discover-grade-grid .discover-grade-10 {
+  background: #f4e9d2;
+  border-color: #dfd0ab;
+  color: #523e16;
+}
+.home-active .discover-grade::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -2.8rem;
+  bottom: -5rem;
+  width: 12rem;
+  height: 12rem;
+  opacity: .29;
+  background: repeating-radial-gradient(circle, transparent 0 .71rem, currentColor .75rem .8rem, transparent .84rem 1.48rem);
+}
+.home-active .discover-grade-10::after {
+  border-radius: 0;
+  transform: rotate(-34deg);
+  background: repeating-linear-gradient(0deg, transparent 0 .72rem, currentColor .75rem .8rem, transparent .84rem 1.48rem);
+}
+.home-grade-label {
+  font: normal 400 clamp(1.8rem, 3.2vw, 3rem)/1.12 KaTeX_Main, Georgia, serif;
+  letter-spacing: -.045em;
+}
+.home-grade-label b { font: inherit; }
+.home-chapter-count { font: 550 .9rem/1.5 system-ui, "Triggle Noto Sans Tamil", sans-serif; }
+.home-active .discover-home-recent[hidden] { display: none; }
+.home-active .discover-home-recent {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding-top: 1.1rem;
+}
+.home-active .discover-home-recent h2 {
+  margin: 0 !important;
+  color: #4a5a51 !important;
+  font: 620 .9rem/1.5 system-ui, "Triggle Noto Sans Tamil", sans-serif !important;
+  letter-spacing: 0;
+}
+.home-active .discover-resume-card {
+  min-height: 48px;
+  padding: .45rem 1rem;
+  background: #fff;
+  border-color: #d3ddd4;
+  border-radius: .8rem;
+}
+.home-active .discover-resume-name { font-size: .95rem; color: #29483b; }
+.home-active .discover-resume-action { font-size: .85rem; color: #225c47; white-space: normal; }
+.home-copyright {
+  margin-top: clamp(1.25rem, 3vw, 2.5rem);
+  padding-top: .85rem;
+  border-top: 1px solid var(--studio-rule);
+  color: #536459;
+}
+.home-copyright small { font: 550 .83rem/1.6 system-ui, sans-serif; }
+.home-active :is(.discover-grade, .discover-resume-card, #browseBtn, #homeBtn, .lang-switch button):focus-visible {
+  outline: 3px solid #295b9c;
+  outline-offset: 3px;
+}
+html[lang=ta] .home-active :is(.home-cover-type h1, .home-grade-label) {
+  font-family: "Triggle Noto Sans Tamil", system-ui, sans-serif !important;
+  letter-spacing: 0;
+}
+html[lang=ta] .home-active .home-cover-type p { letter-spacing: 0; }
+html[lang=ta] .home-active .discover-home-classes h2 { letter-spacing: 0; }
+html[lang=ta] .home-active .home-grade-label { font-size: clamp(1.25rem, 2.4vw, 2rem); line-height: 1.55; }
+
+@media (min-width: 801px) {
+  .home-active .sidebar { display: none; }
+  .home-active.drawer-open .sidebar {
+    display: flex;
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(22rem, 90vw);
+    box-shadow: 12px 0 40px #172d2926;
+    z-index: 31;
+  }
+  .home-active.drawer-open .side-close { display: grid; place-items: center; min-width: 44px; min-height: 44px; }
+  .home-active.drawer-open .side-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .home-active.drawer-open .backdrop { display: block; position: fixed; inset: 0; z-index: 30; background: #142d2852; }
+}
+@media (hover:hover) {
+  .home-active .discover-grade-grid .discover-grade:hover { transform: translateY(-2px); box-shadow: 0 5px 15px #1c42301a; }
+  .home-active .discover-resume-card:hover { border-color: #829e8d; background: #f4f9f5; }
+}
+@media (max-width: 680px) {
+  .home-active .appbar { padding: .28rem 4vw; gap: .3rem; min-height: 3.7rem; }
+  .home-active #browseBtn { width: 44px; padding: 0; }
+  .home-active #browseBtn [data-i18n=browse] {
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .home-active .lesson-container { width: 92%; }
+  .home-studio-cover { min-height: 0; height: clamp(13rem, 58vw, 19.8rem); align-items: start; }
+  .home-studio-cover::before {
+    background: linear-gradient(180deg, #f0f3e8fa, #f0f3e8e8 23%, #f0f3e82a 48%, transparent 63%),
+                url("home-studio.webp") right 60% / cover no-repeat;
+  }
+  .home-cover-type { padding: clamp(.9rem, 4.4vw, 1.6rem); }
+  .home-cover-type p { font-size: .72rem; margin-bottom: .22rem; letter-spacing: .1em; }
+  .home-active .home-cover-type h1 { font-size: clamp(2.65rem, 9vw, 3.65rem) !important; }
+  .home-active .discover-grade::after { width: 8rem; height: 8rem; bottom: -4.9rem; right: -3.5rem; opacity: .24; }
+  .home-active .discover-home-recent { grid-template-columns: 1fr; gap: .3rem; }
+  .home-active .discover-resume-card { gap: .3rem .8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-active .discover-grade-grid .discover-grade { transition: none; transform: none; }
+}

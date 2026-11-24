@@ -21,7 +21,7 @@
       featured:'Try the interactive Set Language lesson',
       featuredDesc:'Seven short ideas, a Venn-diagram lab, and step-by-step reasoning.',
       view:'Open chapter',empty:'No matching chapters. Try another word.',
-      mathematics:'Mathematics',chapterCount:'chapters',
+      board:'Tamil Nadu State Board',mathematics:'Mathematics',chapterCount:'chapters',
       yourClass:'Your class',pick:'Pick a chapter and start with what is available today.',
       back:'All classes',chooseClass:'Change class',allChapters:'All chapters in this class',
       tip:'You can always use the Chapters menu or the class numbers below.',
@@ -46,7 +46,7 @@
       featured:'செயல்வழிக் கண மொழிப் பாடத்தை முயலுங்கள்',
       featuredDesc:'ஏழு சிறு கருத்துகள், வென் பட ஆய்வகம், படிப்படியான காரண விளக்கம்.',
       view:'அத்தியாயத்தைத் திறக்கவும்',empty:'பொருந்தும் அத்தியாயம் இல்லை. வேறு சொல்லை முயலுங்கள்.',
-      mathematics:'கணிதம்',chapterCount:'அத்தியாயங்கள்',
+      board:'தமிழ்நாடு மாநிலப் பாடத்திட்டம்',mathematics:'கணிதம்',chapterCount:'அத்தியாயங்கள்',
       yourClass:'உங்கள் வகுப்பு',pick:'இப்போது கிடைக்கும் பாடங்களிலிருந்து கற்க ஒரு அத்தியாயத்தைத் தேர்ந்தெடுக்கவும்.',
       back:'அனைத்து வகுப்புகள்',chooseClass:'வகுப்பை மாற்றுக',allChapters:'இந்த வகுப்பின் எல்லா அத்தியாயங்களும்',
       tip:'மேலுள்ள அத்தியாயப் பட்டியலையோ கீழுள்ள வகுப்பு எண்களையோ எப்போதும் பயன்படுத்தலாம்.',
@@ -93,10 +93,10 @@
         ).join('')+'</optgroup>').join('');
     }
     function gradeCard(g){
-      const n=g.chapters.length;
-      return '<button type="button" data-grade="'+g.grade+'" class="discover-grade discover-grade-'+g.grade+'">'+
-        '<span class="discover-grade-number">'+g.grade+'</span><span class="discover-grade-copy"><b>'+escapeHtml(t.class)+' '+g.grade+'</b></span>'+
-        '<span class="discover-grade-arrow" aria-hidden="true">→</span></button>';
+      return `<button type="button" data-grade="${g.grade}" class="discover-grade discover-grade-${g.grade}">
+        <span class="home-grade-label">${escapeHtml(t.class)} <b>${g.grade}</b></span>
+        <span class="home-chapter-count">${g.chapters.length} ${escapeHtml(t.chapterCount)}</span>
+      </button>`;
     }
     let body='';
     if(mode==='home'){
@@ -115,13 +115,23 @@
           escapeHtml(tr(recent.item.label))+'</span>'+
           '<span class="discover-resume-action">'+escapeHtml(t.continue)+' <span aria-hidden="true">→</span></span></button>'
         :'<p class="discover-no-recent">'+escapeHtml(t.noRecent)+'</p>';
-      body='<div class="discover-home-minimal">'+
-        '<section class="discover-home-recent" aria-labelledby="discover-recent-title">'+
-        '<h1 id="discover-recent-title">'+escapeHtml(t.continueLabel)+'</h1>'+recentCard+'</section>'+
-        '<section class="discover-home-classes" aria-labelledby="discover-classes-title">'+
-        '<h2 id="discover-classes-title">'+escapeHtml(t.classes)+'</h2>'+
-        '<div class="discover-grade-grid">'+visibleGrades.map(gradeCard).join('')+'</div></section>'+
-        '</div>';
+      body=`<div class="discover-home-minimal">
+        <header class="home-studio-cover">
+          <div class="home-cover-type">
+            <p>${escapeHtml(t.board)}</p>
+            <h1>${escapeHtml(t.mathematics)}</h1>
+          </div>
+        </header>
+        <section class="discover-home-classes" aria-labelledby="discover-classes-title">
+          <h2 id="discover-classes-title">${escapeHtml(t.classes)}</h2>
+          <div class="discover-grade-grid">${visibleGrades.map(gradeCard).join('')}</div>
+        </section>
+        <section class="discover-home-recent" aria-labelledby="discover-recent-title" ${recent?'':'hidden'}>
+          <h2 id="discover-recent-title">${escapeHtml(t.continueLabel)}</h2>
+          ${recentCard}
+        </section>
+        <footer class="home-copyright"><small>© 2026 Very Labs</small></footer>
+      </div>`;
     }else{
       const g=visibleGrades.find(x=>x.grade===grade)||visibleGrades[0];
       // Chapter-first directory: a single compact, interactive heading followed
