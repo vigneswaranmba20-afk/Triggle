@@ -625,47 +625,100 @@ const entries = [
     "classNum": 10,
     "chapter": "5",
     "exercise": "5.2",
-    "topic": { "en": "Coordinate Geometry — Trapezium Proof", "ta": "ஆயத்தொலை வடிவியல் — சரிவக நிரூபணம்" },
-    "label": { "en": "Exercise 5.2 · Q12", "ta": "பயிற்சி 5.2 · வினா 12 · ஆங்கிலத் தீர்வு" },
-    "title": { "en": "Show A(3, −4), B(9, −4), C(5, −7), D(7, −7) form a trapezium" },
+    "topic": {
+      "en": "Coordinate Geometry — Trapezium Proof",
+      "ta": "ஆயத்தொலை வடிவியல் — சரிவக நிரூபணம்"
+    },
+    "label": {
+      "en": "Exercise 5.2 · Q12",
+      "ta": "பயிற்சி 5.2 · வினா 12 · ஆங்கிலத் தீர்வு"
+    },
+    "title": {
+      "en": "Show A(3, −4), B(9, −4), C(5, −7), D(7, −7) form a trapezium"
+    },
     "q": {
       "en": "12. Let A(3, −4), B(9, −4), C(5, −7) and D(7, −7). Show that ABCD is a trapezium.",
       "ta": "12. A(3, −4), B(9, −4), C(5, −7) மற்றும் D(7, −7) ஆகிய புள்ளிகள் ABCD என்ற சரிவகத்தை அமைக்கும் எனக் காட்டுக."
     },
     "questionMath": {
-      "en": ["12. Let ", { "latex": "A(3,-4),\\; B(9,-4),\\; C(5,-7)\\text{ and }D(7,-7)", "fallback": "A(3, −4), B(9, −4), C(5, −7) and D(7, −7)", "display": false }, ". Show that ABCD is a trapezium."],
-      "ta": ["12. ", { "latex": "A(3,-4),\\; B(9,-4),\\; C(5,-7)\\text{ மற்றும் }D(7,-7)", "fallback": "A(3, −4), B(9, −4), C(5, −7) மற்றும் D(7, −7)", "display": false }, " ஆகிய புள்ளிகள் ABCD என்ற சரிவகத்தை அமைக்கும் எனக் காட்டுக."]
+      "en": [
+        "12. Let ",
+        {
+          "latex": "A(3,-4),\\; B(9,-4),\\; C(5,-7)\\text{ and }D(7,-7)",
+          "fallback": "A(3, −4), B(9, −4), C(5, −7) and D(7, −7)",
+          "display": false
+        },
+        ". Show that ABCD is a trapezium."
+      ],
+      "ta": [
+        "12. ",
+        {
+          "latex": "A(3,-4),\\; B(9,-4),\\; C(5,-7)\\text{ மற்றும் }D(7,-7)",
+          "fallback": "A(3, −4), B(9, −4), C(5, −7) மற்றும் D(7, −7)",
+          "display": false
+        },
+        " ஆகிய புள்ளிகள் ABCD என்ற சரிவகத்தை அமைக்கும் எனக் காட்டுக."
+      ]
     },
     "steps": [
       {
-        "en": "Quick Solution Plan: Show one pair of opposite sides is parallel (slope AB = slope CD = 0). On y = −7, C(5, −7) lies left of D(7, −7), so the convex trapezium boundary legs in the plot are AC and BD (m_AC = −3/2 ≠ m_BD = 3/2), while cyclic pairs BC and AD also have unequal slopes (3/4 ≠ −3/4).",
-        "eq": "m(AB) = m(CD) = 0; m(AC) = −3/2 ≠ m(BD) = 3/2 (and m(BC) = 3/4 ≠ m(AD) = −3/4)",
-        "math": { "latex": "m_{AB}=m_{CD}=0\\quad\\text{and}\\quad m_{AC}=-\\dfrac{3}{2}\\ne m_{BD}=\\dfrac{3}{2}", "fallback": "m(AB) = m(CD) = 0; m(AC) = −3/2 ≠ m(BD) = 3/2 (and m(BC) = 3/4 ≠ m(AD) = −3/4)", "display": true }
+        "en": "Quick Solution Plan: Compare the slopes of AB and CD; both are zero. The points form a simple trapezium in the boundary order A–B–D–C, not the crossing order A–B–C–D.",
+        "eq": "m(AB) = m(CD) = 0; m(AC) = −3/2 ≠ m(BD) = 3/2",
+        "math": {
+          "latex": "m_{AB}=m_{CD}=0\\quad\\text{and}\\quad m_{AC}=-\\dfrac{3}{2}\\ne m_{BD}=\\dfrac{3}{2}",
+          "fallback": "m(AB) = m(CD) = 0; m(AC) = −3/2 ≠ m(BD) = 3/2",
+          "display": true
+        },
+        "ta": "விரைவுத் தீர்வுத் திட்டம்: AB மற்றும் CD பக்கங்களின் சாய்வுகளை ஒப்பிடுக; இரண்டும் பூச்சியம். புள்ளிகளை A–B–D–C என்ற வரிசையில் இணைத்தால் சரிவகம் கிடைக்கும். A–B–C–D என்ற வரிசையில் இணைத்தால் கோடுகள் ஒன்றையொன்று வெட்டும்."
       },
       {
         "en": "Understand Deeply — Notice A(3, −4) and B(9, −4) both lie on horizontal line y = −4, while C(5, −7) and D(7, −7) both lie on horizontal line y = −7, making AB parallel to CD.",
         "eq": "m(AB) = (−4 − (−4))/(9 − 3) = 0/6 = 0; m(CD) = (−7 − (−7))/(7 − 5) = 0/2 = 0",
-        "math": { "latex": "m_{AB}=\\dfrac{-4-(-4)}{9-3}=0,\\qquad m_{CD}=\\dfrac{-7-(-7)}{7-5}=0", "fallback": "m(AB) = (−4 − (−4))/(9 − 3) = 0/6 = 0; m(CD) = (−7 − (−7))/(7 − 5) = 0/2 = 0", "display": true }
+        "math": {
+          "latex": "m_{AB}=\\dfrac{-4-(-4)}{9-3}=0,\\qquad m_{CD}=\\dfrac{-7-(-7)}{7-5}=0",
+          "fallback": "m(AB) = (−4 − (−4))/(9 − 3) = 0/6 = 0; m(CD) = (−7 − (−7))/(7 − 5) = 0/2 = 0",
+          "display": true
+        },
+        "ta": "ஆழமாகப் புரிந்துகொள்: A, B இரண்டும் y = −4 என்ற கிடைமட்டக் கோட்டிலும், C, D இரண்டும் y = −7 என்ற கிடைமட்டக் கோட்டிலும் உள்ளன. எனவே AB மற்றும் CD இணையானவை."
       },
       {
-        "en": "Check the non-parallel sides joining y = −4 to y = −7. Because C(5, −7) is left of D(7, −7), the convex boundary legs drawn in the figure are AC and BD (m_AC = −3/2 ≠ m_BD = 3/2), and the alphabetical cyclic segments BC and AD also have unequal slopes (3/4 ≠ −3/4). Since only one pair of sides is parallel, the figure is a trapezium.",
+        "en": "On y = −7, C is left of D. The solid boundary legs AC and BD have unequal slopes. The dashed segments BC and AD are the textbook alphabetical pair; they cross at (6, −5.5) and are not sides of the simple trapezium. Thus the points form trapezium ABDC with exactly one parallel pair. The printed ABCD ordering is ambiguous; we preserve the printed labels.",
         "eq": "m(AC) = (−7 − (−4))/(5 − 3) = −3/2, m(BD) = (−7 − (−4))/(7 − 9) = 3/2; m(BC) = 3/4 ≠ m(AD) = −3/4",
-        "math": { "latex": "\\begin{aligned}m_{AC}&=\\dfrac{-7-(-4)}{5-3}=-\\dfrac{3}{2},\\quad m_{BD}=\\dfrac{-7-(-4)}{7-9}=\\dfrac{3}{2}\\quad (m_{AC}\\ne m_{BD})\\\\ m_{BC}&=\\dfrac{-7-(-4)}{5-9}=\\dfrac{3}{4},\\quad m_{AD}=\\dfrac{-7-(-4)}{7-3}=-\\dfrac{3}{4}\\quad (m_{BC}\\ne m_{AD})\\end{aligned}", "fallback": "m(AC) = (−7 − (−4))/(5 − 3) = −3/2, m(BD) = (−7 − (−4))/(7 − 9) = 3/2; m(BC) = 3/4 ≠ m(AD) = −3/4", "display": true }
+        "math": {
+          "latex": "\\begin{aligned}m_{AC}&=\\dfrac{-7-(-4)}{5-3}=-\\dfrac{3}{2},\\quad m_{BD}=\\dfrac{-7-(-4)}{7-9}=\\dfrac{3}{2}\\quad (m_{AC}\\ne m_{BD})\\\\ m_{BC}&=\\dfrac{-7-(-4)}{5-9}=\\dfrac{3}{4},\\quad m_{AD}=\\dfrac{-7-(-4)}{7-3}=-\\dfrac{3}{4}\\quad (m_{BC}\\ne m_{AD})\\end{aligned}",
+          "fallback": "m(AC) = (−7 − (−4))/(5 − 3) = −3/2, m(BD) = (−7 − (−4))/(7 − 9) = 3/2; m(BC) = 3/4 ≠ m(AD) = −3/4",
+          "display": true
+        },
+        "ta": "y = −7 இல் C என்பது D இன் இடப்புறம் உள்ளது. சரிவகத்தின் தொடர்கோட்டுப் பக்கங்கள் AC, BD ஆகியவற்றின் சாய்வுகள் சமமல்ல. புள்ளிக்கோடுகளான BC, AD ஆகியவை பாடநூலின் எழுத்து வரிசையில் வரும் கோட்டுத்துண்டுகள்; அவை (6, −5.5) இல் வெட்டுகின்றன. அவை எளிய சரிவகத்தின் பக்கங்கள் அல்ல. ஆகவே ABDC என்ற சரிவகத்தில் ஒரே ஒரு சோடி எதிர்ப்பக்கங்கள் இணையாக உள்ளன."
       }
     ],
-    "answer": "Proved trapezium (AB ∥ CD with slope 0; non-parallel boundary legs AC, BD have slopes −3/2 ≠ 3/2 and cyclic pair BC, AD have 3/4 ≠ −3/4)",
-    "answerMath": { "latex": "\\text{Proved trapezium }(AB\\parallel CD,\\; m_{AC}=-\\dfrac{3}{2}\\ne m_{BD}=\\dfrac{3}{2})", "fallback": "Proved trapezium (AB ∥ CD with slope 0; non-parallel boundary legs AC, BD have slopes −3/2 ≠ 3/2 and cyclic pair BC, AD have 3/4 ≠ −3/4)", "display": true },
+    "answer": "The points form trapezium ABDC: AB ∥ CD; boundary slopes AC = −3/2 and BD = 3/2; dashed BC = 3/4 and AD = −3/4. ABCD in alphabetical order crosses itself.",
+    "answerMath": {
+      "latex": "\\begin{aligned}AB&\\parallel CD,\\quad m_{AB}=m_{CD}=0\\\\m_{AC}&=-\\frac32\\ne m_{BD}=\\frac32\\\\m_{BC}&=\\frac34\\ne m_{AD}=-\\frac34\\end{aligned}",
+      "fallback": "The points form trapezium ABDC: AB ∥ CD; boundary slopes AC = −3/2 and BD = 3/2; dashed BC = 3/4 and AD = −3/4. ABCD in alphabetical order crosses itself.",
+      "display": true
+    },
     "figureSrc": "assets/grade10-ch5/ex5-2-q12.svg",
     "figureAlt": {
-      "en": "Coordinate plot showing parallel horizontal bases A(3,-4)-B(9,-4) and C(5,-7)-D(7,-7) forming a trapezium.",
-      "ta": "இணைப் பக்கங்கள் AB, CD கொண்ட சரிவகம் வரைபடம்."
+      "en": "Simple trapezium ABDC with solid boundary AC and BD, horizontal bases AB and CD, and dashed crossing diagonals BC and AD.",
+      "ta": "AB, CD இணைப்பக்கங்களும் AC, BD தொடர்கோட்டுப் பக்கங்களும் BC, AD வெட்டும் புள்ளிக்கோடுகளும் கொண்ட ABDC சரிவகம்."
     },
-    "figureCaption": { "en": "Horizontal bases AB and CD have slope 0", "ta": "கிடைமட்டப் பக்கங்கள் AB, CD சாய்வு = 0" },
-    "kind": "textbook", "edition": "2025",
+    "figureCaption": {
+      "en": "Solid boundary: ABDC. Dashed BC and AD cross; they are not boundary sides.",
+      "ta": "தொடர்கோட்டு எல்லை: ABDC. புள்ளிக்கோடுகள் BC, AD வெட்டுகின்றன; அவை எல்லைப் பக்கங்கள் அல்ல."
+    },
+    "kind": "textbook",
+    "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
     "reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 5.2 Q12. EN printed p. 221 (PDF p. 227); TA printed p. 228 (PDF p. 234).",
     "translationReview": "pending",
-    "sourceFidelity": { "status": "page-visual-checked", "sourcePdfPage": { "en": 227, "ta": 234 } }
+    "sourceFidelity": {
+      "status": "page-visual-checked",
+      "sourcePdfPage": {
+        "en": 227,
+        "ta": 234
+      }
+    }
   },
   {
     "id": "c10-5-ex5-2-q13",
