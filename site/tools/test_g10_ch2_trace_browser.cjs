@@ -333,9 +333,9 @@ async function main(){
     assert.match(await page.locator('#questionText').innerText(),/35[\s\S]*56[\s\S]*91/,'Exercise 2.2 Q8 opens with authentic divisors');
     const answerQ8=await page.locator('#answerText').innerText();
     assert.match(answerQ8,/3647/,'Student sees the textbook appendix answer');
-    assert.match(answerQ8,/Literally,\s*7/,'Student is not told that the literal mathematical minimum is wrong');
+    assert.match(answerQ8,language==='ta'?/மிகச் சிறிய மிகை எண் 7/:/Literally,\s*7/,'Student is not told that the literal mathematical minimum is wrong');
     const stepsQ8=await page.locator('#stepsList').innerText();
-    assert(stepsQ8.includes('3640')&&stepsQ8.includes('35')&&stepsQ8.includes('zero'),'Student sees LCM reasoning and zero-quotient caveat');
+    assert(stepsQ8.includes('3640')&&stepsQ8.includes('35')&&stepsQ8.includes(language==='ta'?'பூச்சிய':'zero'),'Student sees LCM reasoning and zero-quotient caveat');
     assert.equal(new URL(page.url()).searchParams.get('question'),'c10-2-ex2-2-q8','Q8 remains deep-linkable');
     assert.equal(await page.locator('[data-math-error]').count(),0,'No malformed Q8 mathematical notation');
     // Re-enter concepts and exercise the weakest redesigned lessons in both languages.

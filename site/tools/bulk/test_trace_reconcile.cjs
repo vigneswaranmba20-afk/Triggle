@@ -17,7 +17,7 @@ test('runtime tracing leaves every final record and curriculum unchanged',()=>{
  const final=new Map();for(const r of registrations)if(r.change!=='removed')final.set(r.id,r);
  for(const [grade,g] of Object.entries(ordinary.classes))for(const r of g.items){assert.equal(final.get(r.id).recordSha256,bulk.hashRecord(r));assert.equal(final.get(r.id).grade,Number(grade));}
  assert.equal(registrations.find(r=>r.id==='c10-1-1-2-q1').module,'data/class-10-chapter-1.js');
- assert.equal(final.get('c10-1-1-2-q1').module,'data/textbook-exercises/g10-ch1-ex1-2-and-1-3-tamil.js');
+ assert.equal(final.get('c10-1-1-2-q1').module,'data/textbook-exercises/g10-ch1-relations-tamil.js');
  assert.equal(final.get('g12-ch1-ex1.1-q1-i').module,'data/textbook-exercises/g12-ch1-ex1-1-en.js');
 });
 test('pinned PR adapter reads data but never executes branch JavaScript',()=>{

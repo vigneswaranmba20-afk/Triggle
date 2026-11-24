@@ -19,6 +19,7 @@
    if(!classes[key]||!Array.isArray(classes[key].items))throw Error('Missing data for class '+key);
    classes[key].items=classes[key].items.filter(item=>!isWorkedExample(item));
  }
+ window.TriggleG10NumbersTamil?.(classes[10].items);
  const curriculum=window.TRIGGLE_CURRICULUM;
  if(!curriculum?.grades)throw Error('Missing curriculum metadata');
  const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];

@@ -72,6 +72,11 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
   for(const form of ['வரிசைச் சோடிகளின் கணம்','அட்டவணை','அம்புக்குறி படம்','வரைபடம்']){
    assert(representations.includes(form),'Exercise 1.4 Q2 visible Tamil prompt asks for '+form);
   }
+  await page.goto(app.base+'/index.html?class=10&question=c10-1-1-6-q7');
+  for(const locale of ['En','Ta']){
+    await page.locator('#lang'+locale).click();
+    assert.equal(await page.locator('#questionText .katex-html .msupsub').count(),4,locale+' choices retain all four superscripts');
+  }
   await page.goto(app.base+'/index.html?class=10&question=c10-1-ex1-1-q1-i');
   await page.locator('#langTa').click();
   assert.equal(await page.locator('html').getAttribute('lang'),'ta');
