@@ -21,6 +21,8 @@ async function checkConcepts(browser, base) {
  const shots = process.env.PROBABILITY_SCREENSHOTS;
  if (shots) await fs.mkdir(shots, {recursive: true});
  const practiceAnswers = [1, 2, 1, 2, 2];
+ const exerciseIds = ['9.1-q1', '9.1-q4', '9.2-q1', '9.1-q7', '9.2-q4'];
+ const tamil = /[஀-௿]/u;
  for (const width of [320, 360, 393, 430, 390, 412]) {
   const ctx = await browser.newContext({viewport: {width, height: 700}, hasTouch: true, isMobile: true});
   try {
@@ -47,13 +49,16 @@ async function checkConcepts(browser, base) {
    if (shots) await page.screenshot({path: path.join(shots, width + '-index.png')});
 
    for (const lang of ['en', 'ta']) {
+    const ta = lang === 'ta';
     for (let i = 0; i < 5; i++) {
-     await page.goto(route + '&concept=' + i);
-     await page.locator(lang === 'en' ? '#langEn' : '#langTa').click();
+     await page.goto(route);
+     await page.locator(ta ? '#langTa' : '#langEn').click();
+     const item = index.locator('button').nth(i);
+     assert.equal(tamil.test(await item.innerText()), ta, 'Concept menu follows the language setting');
+     await item.tap();
      await lesson.waitFor({state: 'visible'});
      assert.equal(await page.locator('html').getAttribute('lang'), lang);
-     assert.equal(await lesson.getAttribute('lang'), 'en');
-     assert.equal(await page.locator('.probability-language').isVisible(), lang === 'ta');
+     assert.equal(await lesson.getAttribute('lang'), lang);
      assert.equal(await index.isVisible(), false);
      assert.equal(await page.locator('.hub-back-menu').isVisible(), false);
      assert.equal(await page.locator('[data-back-index]').isVisible(), true);
@@ -62,8 +67,17 @@ async function checkConcepts(browser, base) {
      assert.equal(await page.locator('[data-adaptive-dock]').isVisible(), true);
      assert.match(await journey.locator('h4').innerText(), new RegExp('^9\\.' + (i + 1) + ' '));
 
+     assert.equal(tamil.test(await journey.locator('h4').innerText()), ta);
+     assert.equal(tamil.test(await lesson.locator('[data-probability-intro]').innerText()), ta);
+     assert.equal(tamil.test(await lesson.locator('[data-probability-question]').innerText()), ta);
+     if (ta) {
+      const ariaLabels = await lesson.locator('[aria-label]').evaluateAll(nodes => nodes.map(node => node.getAttribute('aria-label')));
+      assert.ok(ariaLabels.every(label => tamil.test(label)), 'Tamil accessibility labels at width ' + width);
+     }
+
      const controls = lesson.locator('.probability-demo button');
      assert.ok(await controls.count() >= 2);
+     assert.ok((await controls.allTextContents()).every(label => tamil.test(label) === ta));
      const lastControl = await controls.last().boundingBox();
      const visual = await lesson.locator('.probability-outcomes, .probability-comparison').boundingBox();
      assert.ok(lastControl.y + lastControl.height <= visual.y, 'Controls are above the visual');
@@ -77,31 +91,38 @@ async function checkConcepts(browser, base) {
       await controls.nth(1).focus();
       await page.keyboard.press('Enter');
       assert.equal(await lesson.locator('.probability-match').count(), 0);
-      assert.match(await result.innerText(), /sun is impossible/);
+      assert.match(await result.innerText(), ta ? /சூரியன் கிடைக்க இயலாது/ : /sun is impossible/);
       await controls.nth(2).tap();
       assert.equal(await lesson.locator('.probability-match').count(), 4);
+      assert.match(await result.innerText(), ta ? /கிடைப்பது உறுதி/ : /is certain/);
      } else if (i === 1) {
-      assert.deepEqual(await lesson.locator('.probability-outcomes li').allTextContents(), ['RR', 'RB', 'BR', 'BB']);
+      const outcomes = ta ? ['சிவப்பு, சிவப்பு (RR)', 'சிவப்பு, நீலம் (RB)', 'நீலம், சிவப்பு (BR)', 'நீலம், நீலம் (BB)'] : ['RR', 'RB', 'BR', 'BB'];
+      assert.deepEqual(await lesson.locator('.probability-outcomes li').allTextContents(), outcomes);
       await controls.nth(1).tap();
-      assert.deepEqual(await lesson.locator('.probability-match').allTextContents(), ['RB ✓', 'BR ✓']);
-      assert.match(await result.innerText(), /which flash is blue/);
+      assert.deepEqual(await lesson.locator('.probability-match').allTextContents(), outcomes.slice(1, 3).map(name => name + ' ✓'));
+      assert.match(await result.innerText(), ta ? /இரண்டாம் ஒளி நீலம்/ : /which flash is blue/);
+      await controls.nth(2).tap();
+      assert.equal(await lesson.locator('.probability-match').count(), 3);
+      assert.deepEqual(await result.locator('mfrac mn').allTextContents(), ['3', '4']);
      } else if (i === 2) {
       assert.equal(await lesson.locator('.probability-match').count(), 3);
       await controls.nth(1).tap();
       assert.deepEqual(await lesson.locator('.probability-match').allTextContents(), ['3 ✓', '6 ✓']);
-      assert.match(await result.innerText(), /one-third/);
+      assert.match(await result.innerText(), ta ? /மூன்றில் ஒன்று/ : /one-third/);
+      await controls.nth(2).tap();
+      assert.deepEqual(await lesson.locator('.probability-match').allTextContents(), ['2 ✓', '3 ✓', '5 ✓']);
      } else if (i === 3) {
       assert.equal(await result.locator('math').count(), 0, 'No fraction with zero trials');
       await controls.first().tap();
-      assert.match(await result.innerText(), /1 head in 1 toss, above/);
+      assert.match(await result.innerText(), ta ? /1 முறை தலை விழுந்தது.*விட அதிகம்/ : /1 head in 1 toss, above/);
       await controls.nth(1).tap();
-      assert.match(await result.innerText(), /1 head in 21 tosses, below/);
+      assert.match(await result.innerText(), ta ? /21 முறைகளில் 1 முறை தலை விழுந்தது.*விடக் குறைவு/ : /1 head in 21 tosses, below/);
       assert.equal(await lesson.locator('meter').last().evaluate(el => el.value), 1 / 21);
       await controls.last().tap();
-      assert.match(await result.innerText(), /start counting/);
+      assert.match(await result.innerText(), ta ? /நாணயத்தைச் சுண்டுங்கள்/ : /start counting/);
       assert.equal(await lesson.locator('meter').last().isVisible(), false);
       await controls.first().tap();
-      assert.match(await result.innerText(), /0 heads in 1 toss, below/);
+      assert.match(await result.innerText(), ta ? /பூ விழுந்தது.*0 முறை தலை விழுந்தது/ : /0 heads in 1 toss, below/);
      } else {
       const membership = lesson.locator('.probability-outcomes li');
       assert.deepEqual(await membership.allTextContents(), ['1 · A', '2 · A', '3 · A', '4 · A']);
@@ -109,10 +130,12 @@ async function checkConcepts(browser, base) {
       assert.equal(await lesson.locator('[data-matches="Neither"]').count(), 2);
       await controls.nth(2).tap();
       assert.equal(await lesson.locator('[data-matches="Neither"]').count(), 0);
-      assert.match(await result.innerText(), /exactly one rule/);
+      assert.match(await result.innerText(), ta ? /ஒரே ஒரு விதிக்குப் பொருந்தும்/ : /exactly one rule/);
+      assert.deepEqual(await result.locator('mfrac mn').allTextContents(), ['1', '4', '3', '4', '4', '4']);
       await controls.last().tap();
-      assert.match(await result.innerText(), /Ticket 4 matches both/);
-      assert.equal(await lesson.locator('[data-matches="A and B"]').innerText(), '4 · A and B');
+      assert.match(await result.innerText(), ta ? /சீட்டு 4 இரண்டுக்கும் பொருந்து/ : /Ticket 4 matches both/);
+      assert.equal(await lesson.locator('[data-matches="A and B"]').innerText(), ta ? '4 · A, B இரண்டும்' : '4 · A and B');
+      assert.deepEqual(await result.locator('mfrac mn').allTextContents(), ['2', '4', '2', '4', '3', '4', '2', '2', '4']);
      }
      const detail = lesson.locator('details');
      assert.equal(await detail.getAttribute('open'), null);
@@ -120,14 +143,26 @@ async function checkConcepts(browser, base) {
      const math = detail.locator('math');
      assert.equal(await math.count(), 1);
      assert.equal(await lesson.locator('.math-fallback').count(), 0);
+     assert.equal(tamil.test(await detail.locator('.triggle-tex').getAttribute('data-math-fallback')), ta);
      await page.evaluate(() => document.fonts.ready);
      assert.ok(await lesson.locator('.triggle-tex').evaluateAll(nodes => nodes.every(node => node.scrollWidth <= node.clientWidth + 1)), 'KaTeX fits at ' + width + ' for concept ' + (i + 1));
      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'Page fits at ' + width);
      const choices = lesson.locator('.probability-answers button');
      await choices.first().tap();
-     assert.match(await lesson.locator('.probability-feedback').innerText(), /^Try again/);
+     assert.match(await lesson.locator('.probability-feedback').innerText(), ta ? /^மீண்டும் முயலுங்கள்/ : /^Try again/);
      await choices.nth(practiceAnswers[i]).tap();
-     assert.match(await lesson.locator('.probability-feedback').innerText(), /^Correct/);
+     assert.match(await lesson.locator('.probability-feedback').innerText(), ta ? /^சரி/ : /^Correct/);
+     assert.equal(tamil.test(await lesson.locator('.probability-feedback p').innerText()), ta);
+     if (!ta) {
+      await page.locator('#langTa').click();
+      assert.equal(new URL(page.url()).searchParams.get('concept'), String(i), 'Switching language preserves the open concept');
+      assert.match(await journey.locator('h4').innerText(), tamil);
+      await page.locator('#langEn').click();
+     }
+     const related = journey.locator('.g10ch3-exercise-row button').first();
+     assert.equal(tamil.test(await related.innerText()), ta);
+     await related.tap();
+     assert.equal(new URL(page.url()).searchParams.get('question'), 'g9-ch9-ex' + exerciseIds[i]);
     }
    }
 
@@ -160,17 +195,18 @@ async function checkConcepts(browser, base) {
   const page = await ctx.newPage();
   await page.goto(route);
   await page.waitForFunction(() => navigator.serviceWorker.controller);
+  await page.locator('#langTa').click();
   await ctx.setOffline(true);
   await page.goto(route + '&concept=3');
   const lesson = page.locator('.probability-lesson');
   await lesson.locator('.probability-demo button').nth(1).click();
   assert.equal(await lesson.locator('.probability-result math mfrac').count(), 1);
   await page.locator('[data-footer-next]').click();
-  assert.match(await lesson.locator('.probability-result').innerText(), /sure.*impossible/);
+  assert.match(await lesson.locator('.probability-result').innerText(), /உறுதியான நிகழ்ச்சி.*இயலா நிகழ்ச்சி/);
  } finally {
   await ctx.close();
  }
- console.log('PASS: five Probability concept lessons, both language shells, mobile layouts, navigation, touch, keyboard, independent practice, KaTeX and offline use.');
+ console.log('PASS: five bilingual Probability concept lessons, mobile layouts, exercise links, touch, keyboard, independent practice, KaTeX and offline Tamil use.');
 }
 
 async function main(){

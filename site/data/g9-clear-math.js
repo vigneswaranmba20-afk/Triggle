@@ -65740,7 +65740,7 @@ const texts={
     },
     "."
   ],
-  "g9-ch9-ex9.1-q9": [
+  "g9-ch9-ex9.1-q7": [
     {
       "latex": "g 9",
       "fallback": "g9"
@@ -65752,11 +65752,11 @@ const texts={
     },
     "-ex",
     {
-      "latex": "9.1 - q 9",
-      "fallback": "9.1-q9"
+      "latex": "9.1 - q 7",
+      "fallback": "9.1-q7"
     }
   ],
-  "g9-ch9-ex9.1-q10": [
+  "g9-ch9-ex9.1-q8": [
     {
       "latex": "g 9",
       "fallback": "g9"
@@ -65768,8 +65768,8 @@ const texts={
     },
     "-ex",
     {
-      "latex": "9.1 - q 10",
-      "fallback": "9.1-q10"
+      "latex": "9.1 - q 8",
+      "fallback": "9.1-q8"
     }
   ],
   "probability-5": [
