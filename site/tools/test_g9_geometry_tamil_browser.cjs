@@ -84,8 +84,8 @@ async function checkPhone(browser, base, items, width, height) {
         assert.equal(actual.id, item.id, tag + ' route');
         assert.equal(actual.lang, lang, tag + ' active language');
         assert.equal(normalize(actual.prompt), normalize(records[item.id].prompt[lang]), tag + ' textbook prompt');
-        assert.deepEqual(actual.reasons.map(normalize), item.steps.map(step => normalize(step[lang])), tag + ' explanations');
-        assert.deepEqual(actual.equations.map(normalize), item.steps.map(step => normalize(equationText(step, lang))), tag + ' equations and labels');
+        assert.deepEqual(actual.reasons.map(normalize), Array.from(item.steps, step => normalize(step[lang])), tag + ' explanations');
+        assert.deepEqual(actual.equations.map(normalize), Array.from(item.steps, step => normalize(equationText(step, lang))), tag + ' equations and labels');
         assert.equal(normalize(actual.answer), normalize(lang === 'ta' ? item.answerTa : item.answer), tag + ' final answer');
         assert.doesNotMatch([actual.prompt, ...actual.reasons, actual.answer].join(' '), fallback, tag + ' language fallback');
         assert(actual.visible, tag + ' reader fields visible');
