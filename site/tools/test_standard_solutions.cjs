@@ -429,6 +429,21 @@ for(const [grade,data] of Object.entries(classes)){
     assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'Exact independently checked M04 bilingual record '+item.id);
     assert.equal(item.translationReview,'pending','Do not claim Tamil editorial signoff '+item.id);
     assert.equal(item.tamilWorkedSolutionReview,'pending','Do not claim Tamil solution signoff '+item.id);
+  }else if(grade==='10' && /^c10-1-1-(?:2-q[1-5]|3-q(?:[1-9]|10)|4-q(?:[1-9]|1[0-2]))$/.test(item.id)){
+   const original=JSON.parse(JSON.stringify(item));
+   for(const field of ['q','topic','label','title']) delete original[field].ta;
+   for(const step of original.steps){delete step.ta;delete step.mathTa;}
+   for(const field of ['questionMath','answerTa','answerMath']) delete original[field];
+   if(item.id==='c10-1-1-3-q10'){
+    assert.match(original.q.en,/\(iii\).+40 cm.+\(iv\).+53\.3 inches/);
+    assert.deepEqual(original.steps.slice(4).map(step=>step.eq),['y=0.9(40)+24.5=60.5 inches','x=(53.3−24.5)/0.9=32 cm']);
+    original.steps=original.steps.slice(0,4);
+    original.q.en=original.q.en.split(' (iii) Find the height')[0];
+    original.answer=original.answer.split('; (iii) 60.5 inches')[0];
+   }
+   assert.equal(crypto.createHash('sha256').update(JSON.stringify(original)).digest('hex'),preserved.sha256[item.id]);
+   assert.match(item.q.ta,/\p{Script=Tamil}/u);
+   assert(item.steps.every(step=>/\p{Script=Tamil}/u.test(step.ta)));
   }else if(Object.hasOwn(preserved.sha256,item.id)){
    const correction=auditedG9Proofs.records[item.id];
    const trig=auditedG9TrigTable.records[item.id];

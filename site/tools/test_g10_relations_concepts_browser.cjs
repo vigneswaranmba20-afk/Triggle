@@ -33,7 +33,8 @@ async function verify(page, base, lang, width) {
     await panel.locator('.g9-investigation-check .sp2-answers button').nth(correct).click();
     assert.ok((await panel.locator('[role=status]').innerText()).includes(lesson.check.options[correct].feedback[lang]));
     const exercise = panel.locator('.g10ch2-practice-link');
-    assert.equal((await exercise.innerText()).includes('ஆங்கிலத்தில் மட்டும்'), lang==='ta' && i!==2);
+    const hasTamilPrompt = await page.evaluate(id => Boolean(window.TRIGGLE_CLASSES[10].items.find(q=>q.id===id)?.q.ta), lesson.exercise);
+    assert.equal((await exercise.innerText()).includes('ஆங்கிலத்தில் மட்டும்'), lang==='ta' && !hasTamilPrompt);
     await exercise.click();
     assert.equal(new URL(page.url()).searchParams.get('question'), lesson.exercise);
     await page.goto(route);
