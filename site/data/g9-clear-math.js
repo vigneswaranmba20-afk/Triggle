@@ -38646,6 +38646,17 @@ const records=[
           "latex": "M=\\{p,q,r,s,t,u\\}",
           "fallback": "M = {p, q, r, s, t, u}"
         }
+      ],
+      "ta": [
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        ". பின்வரும் கணங்களின் ஆதி எண்ணைக் காண்க.\n(i) ",
+        {
+          "latex": "M = \\left\\{p, q, r, s, t, u\\right\\}",
+          "fallback": "M = {p, q, r, s, t, u}"
+        }
       ]
     },
     "answerMath": {
@@ -38661,7 +38672,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The cardinal number counts the distinct elements of a set."
+          "en": "The cardinal number counts the distinct elements of a set.",
+          "ta": "கணத்தில் உள்ள வெவ்வேறு உறுப்புகளின் எண்ணிக்கையே அதன் ஆதி எண்."
         }
       },
       {
@@ -38671,7 +38683,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "List the elements once; none is repeated."
+          "en": "List the elements once; none is repeated.",
+          "ta": "ஒவ்வோர் எழுத்தையும் ஒருமுறை பட்டியலிடுக. எந்த எழுத்தும் மீண்டும் வரவில்லை."
         }
       },
       {
@@ -38681,7 +38694,20 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "There are six elements, so the cardinal number is six."
+          "en": "There are six elements, so the cardinal number is six.",
+          "ta": [
+            "ஆறு உறுப்புகள் உள்ளதால் ",
+            {
+              "latex": "M",
+              "fallback": "M"
+            },
+            " இன் ஆதி எண் ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            "."
+          ]
         }
       }
     ]
@@ -38696,6 +38722,28 @@ const records=[
           "fallback": "P = {x : x = 3n+2, n∈W and x< 15}",
           "display": true
         }
+      ],
+      "ta": [
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        ". பின்வரும் கணங்களின் ஆதி எண்ணைக் காண்க.\n(ii) ",
+        {
+          "latex": "P",
+          "fallback": "P"
+        },
+        " = {",
+        {
+          "latex": "x : x = 3 n + 2, n \\in W",
+          "fallback": "x : x = 3n+2, n ∈ W"
+        },
+        " மற்றும் ",
+        {
+          "latex": "x < 15",
+          "fallback": "x < 15"
+        },
+        "}"
       ]
     },
     "answerMath": {
@@ -38718,6 +38766,19 @@ const records=[
               "fallback": "x=3n+2"
             },
             " and the upper limit."
+          ],
+          "ta": [
+            "முழு எண்கள் பூச்சியத்தில் தொடங்குகின்றன. ",
+            {
+              "latex": "x = 3 n + 2",
+              "fallback": "x = 3n + 2"
+            },
+            " என்ற தொடர்பில் ",
+            {
+              "latex": "x < 15",
+              "fallback": "x < 15"
+            },
+            " என்ற நிபந்தனையைப் பயன்படுத்துக."
           ]
         }
       },
@@ -38728,7 +38789,25 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The allowed whole numbers are 0 through 4."
+          "en": "The allowed whole numbers are 0 through 4.",
+          "ta": [
+            "இந்நிபந்தனையை நிறைவு செய்யும் ",
+            {
+              "latex": "n",
+              "fallback": "n"
+            },
+            " இன் மதிப்புகள் ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            " முதல் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " வரை."
+          ]
         }
       },
       {
@@ -38738,7 +38817,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute these five values and count the distinct results."
+          "en": "Substitute these five values and count the distinct results.",
+          "ta": "இந்த ஐந்து மதிப்புகளையும் பிரதியிட்டு, கிடைக்கும் வெவ்வேறு உறுப்புகளை எண்ணுக."
         }
       }
     ]
@@ -38753,6 +38833,14 @@ const records=[
           "fallback": "Q = {y : y = 4/(3n), n∈N and 2 < n ≤ 5}",
           "display": true
         }
+      ],
+      "ta": [
+        "1. பின்வரும் கணங்களின் ஆதி எண்ணைக் காண்க.\n(iii) Q = {y : y = ",
+        {
+          "latex": "\\dfrac{4}{3n}",
+          "fallback": "4/(3n)"
+        },
+        ", n ∈ N மற்றும் 2 < n ≤ 5}"
       ]
     },
     "answerMath": {
@@ -38775,6 +38863,29 @@ const records=[
               "fallback": "(4/3)n"
             },
             "."
+          ],
+          "ta": [
+            "பின்னத்தின் தொகுதி ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            ". அதன் பகுதி முழுவதும் ",
+            {
+              "latex": "3 n",
+              "fallback": "3n"
+            },
+            " என்பதால் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " ஐ ",
+            {
+              "latex": "3 n",
+              "fallback": "3n"
+            },
+            " ஆல் வகுக்க வேண்டும்."
           ]
         }
       },
@@ -38785,7 +38896,24 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Natural numbers strictly above 2 and at most 5 are 3, 4, and 5."
+          "en": "Natural numbers strictly above 2 and at most 5 are 3, 4, and 5.",
+          "ta": [
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " ஐ விடப் பெரியதும் ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " ஐ மிகாததுமான இயல் எண்கள் ",
+            {
+              "latex": "3, 4, 5",
+              "fallback": "3, 4, 5"
+            },
+            "."
+          ]
         }
       },
       {
@@ -38795,7 +38923,20 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Evaluate one fraction for each n and count the different values."
+          "en": "Evaluate one fraction for each n and count the different values.",
+          "ta": [
+            "ஒவ்வொரு ",
+            {
+              "latex": "n",
+              "fallback": "n"
+            },
+            " மதிப்புக்கும் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " ஐக் கணக்கிடுக. கிடைக்கும் வெவ்வேறு பின்னங்களை எண்ணுக."
+          ]
         }
       }
     ]
@@ -38808,6 +38949,33 @@ const records=[
         {
           "latex": "x\\in\\mathbb Z\\ \\text{and}\\ -5\\le x<5",
           "fallback": "x∈Z and −5 ≤ x < 5"
+        },
+        "}"
+      ],
+      "ta": [
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        ". பின்வரும் கணங்களின் ஆதி எண்ணைக் காண்க.\n(iv) ",
+        {
+          "latex": "R",
+          "fallback": "R"
+        },
+        " = {",
+        {
+          "latex": "x : x",
+          "fallback": "x : x"
+        },
+        " ஆனது முழுக்கள், ",
+        {
+          "latex": "x \\in Z",
+          "fallback": "x ∈ Z"
+        },
+        " மற்றும் ",
+        {
+          "latex": "- 5 \\le x < 5",
+          "fallback": "−5 ≤ x < 5"
         },
         "}"
       ]
@@ -38825,7 +38993,20 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The lower endpoint −5 is included, but the upper endpoint 5 is excluded."
+          "en": "The lower endpoint −5 is included, but the upper endpoint 5 is excluded.",
+          "ta": [
+            "கீழ் எல்லையான ",
+            {
+              "latex": "- 5",
+              "fallback": "−5"
+            },
+            " சேரும். மேல் எல்லையான ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " சேராது."
+          ]
         }
       },
       {
@@ -38835,7 +39016,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Write every integer in this interval."
+          "en": "Write every integer in this interval.",
+          "ta": "இடைவெளியிலுள்ள அனைத்து முழுக்களையும் வரிசையாக எழுதுக."
         }
       },
       {
@@ -38845,7 +39027,19 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Count from −5 through 4, inclusive."
+          "en": "Count from −5 through 4, inclusive.",
+          "ta": [
+            {
+              "latex": "- 5",
+              "fallback": "−5"
+            },
+            " முதல் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " வரை இரு முனைகளையும் சேர்த்து எண்ணுக."
+          ]
         }
       }
     ]
@@ -38853,7 +39047,24 @@ const records=[
   {
     "id": "g9-ch1-ex1.2-q1-v",
     "questionMath": {
-      "en": "1. Find the cardinal number of the following sets.\n(v) S = The set of all leap years between 1882 and 1906."
+      "en": "1. Find the cardinal number of the following sets.\n(v) S = The set of all leap years between 1882 and 1906.",
+      "ta": [
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        ". பின்வரும் கணங்களின் ஆதி எண்ணைக் காண்க.\n(v) ",
+        {
+          "latex": "S = 1882",
+          "fallback": "S = 1882"
+        },
+        " முதல் ",
+        {
+          "latex": "1906",
+          "fallback": "1906"
+        },
+        " வரை உள்ள அனைத்து நெட்டாண்டுகளின் (Leap year) கணம்."
+      ]
     },
     "answerMath": {
       "latex": "n(S)=5",
@@ -38868,7 +39079,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Check multiples of four between the stated years."
+          "en": "Check multiples of four between the stated years.",
+          "ta": [
+            "கொடுக்கப்பட்ட ஆண்டுகளுக்கு இடையில் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " ஆல் வகுபடும் ஆண்டுகளைப் பட்டியலிடுக."
+          ]
         }
       },
       {
@@ -38878,7 +39097,20 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A century year is a leap year only when divisible by 400. Exclude 1900."
+          "en": "A century year is a leap year only when divisible by 400. Exclude 1900.",
+          "ta": [
+            "நூற்றாண்டு ஆண்டுகள் ",
+            {
+              "latex": "400",
+              "fallback": "400"
+            },
+            " ஆல் வகுபட்டால் மட்டுமே நெட்டாண்டுகள். எனவே ",
+            {
+              "latex": "1900",
+              "fallback": "1900"
+            },
+            " ஐ நீக்குக."
+          ]
         }
       },
       {
@@ -38888,7 +39120,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Keep the five actual leap years and count them."
+          "en": "Keep the five actual leap years and count them.",
+          "ta": "மீதமுள்ள ஐந்து நெட்டாண்டுகளையும் எண்ணுக."
         }
       }
     ]
@@ -38896,12 +39129,27 @@ const records=[
   {
     "id": "g9-ch1-ex1.2-q2-i",
     "questionMath": {
-      "en": "2. Identify the following sets as finite or infinite.\n(i) X = The set of all districts in Tamilnadu."
+      "en": "2. Identify the following sets as finite or infinite.\n(i) X = The set of all districts in Tamilnadu.",
+      "ta": [
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". பின்வரும் கணங்களில் எவை முடிவுறு கணம், எவை முடிவுறாக் கணம் எனக் கூறுக.\n(i) ",
+        {
+          "latex": "X",
+          "fallback": "X"
+        },
+        " = தமிழகத்தில் உள்ள மாவட்டங்களின் கணம்."
+      ]
     },
     "answerMath": {
-      "latex": "\\text{Finite set}",
-      "fallback": "Finite",
-      "display": true
+      "en": {
+        "latex": "\\text{Finite set}",
+        "fallback": "Finite",
+        "display": true
+      },
+      "ta": "முடிவுறு கணம்"
     },
     "steps": [
       {
@@ -38911,7 +39159,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A finite set contains only a limited number of distinct members."
+          "en": "A finite set contains only a limited number of distinct members.",
+          "ta": "முடிவுறு கணத்தின் வெவ்வேறு உறுப்புகளை எண்ணி முடிக்கலாம்."
         }
       },
       {
@@ -38921,7 +39170,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Tamil Nadu has a countable administrative list of districts at any fixed time; its number may change, but never becomes unlimited."
+          "en": "Tamil Nadu has a countable administrative list of districts at any fixed time; its number may change, but never becomes unlimited.",
+          "ta": "ஒரு குறிப்பிட்ட நேரத்தில் தமிழக மாவட்டங்களின் பட்டியலை எண்ணி முடிக்கலாம். காலப்போக்கில் எண்ணிக்கை மாறலாம்."
         }
       },
       {
@@ -38938,6 +39188,14 @@ const records=[
               "fallback": "X"
             },
             " is a finite set. No particular district count is required."
+          ],
+          "ta": [
+            "ஆகவே ",
+            {
+              "latex": "X",
+              "fallback": "X"
+            },
+            " ஒரு முடிவுறு கணம். இதைத் தீர்மானிக்க மாவட்டங்களின் சரியான எண்ணிக்கை தேவையில்லை."
           ]
         }
       }
@@ -38946,12 +39204,27 @@ const records=[
   {
     "id": "g9-ch1-ex1.2-q2-ii",
     "questionMath": {
-      "en": "2. Identify the following sets as finite or infinite.\n(ii) Y = The set of all straight lines passing through a point."
+      "en": "2. Identify the following sets as finite or infinite.\n(ii) Y = The set of all straight lines passing through a point.",
+      "ta": [
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". பின்வரும் கணங்களில் எவை முடிவுறு கணம், எவை முடிவுறாக் கணம் எனக் கூறுக.\n(ii) ",
+        {
+          "latex": "Y",
+          "fallback": "Y"
+        },
+        " = ஒரு புள்ளி வழிச் செல்லும் நேர்க்கோடுகளின் கணம்."
+      ]
     },
     "answerMath": {
-      "latex": "\\text{Infinite set}",
-      "fallback": "Infinite",
-      "display": true
+      "en": {
+        "latex": "\\text{Infinite set}",
+        "fallback": "Infinite",
+        "display": true
+      },
+      "ta": "முடிவுறாக் கணம்"
     },
     "steps": [
       {
@@ -38973,6 +39246,14 @@ const records=[
               "fallback": "P"
             },
             " in different directions."
+          ],
+          "ta": [
+            "தளத்தில் ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " என்ற புள்ளியைக் குறித்துப் பல திசைகளில் அதன் வழியே நேர்க்கோடுகள் வரைக."
           ]
         }
       },
@@ -38995,6 +39276,14 @@ const records=[
               "fallback": "P"
             },
             "."
+          ],
+          "ta": [
+            "புதிய சாய்வைத் தேர்ந்தெடுக்கும்போதெல்லாம் ",
+            {
+              "latex": "P",
+              "fallback": "P"
+            },
+            " வழியே வேறொரு நேர்க்கோடு கிடைக்கும்."
           ]
         }
       },
@@ -39005,7 +39294,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "There is no largest number of possible directions; the lines continue without end."
+          "en": "There is no largest number of possible directions; the lines continue without end.",
+          "ta": [
+            "இவ்வாறு வரையக்கூடிய நேர்க்கோடுகளுக்கு முடிவில்லை. எனவே ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            " முடிவுறாக் கணம்."
+          ]
         }
       }
     ]
@@ -39020,12 +39317,32 @@ const records=[
           "fallback": "A = { x : x ∈ Z and x <5}",
           "display": true
         }
+      ],
+      "ta": [
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". பின்வரும் கணங்களில் எவை முடிவுறு கணம், எவை முடிவுறாக் கணம் எனக் கூறுக.\n(iii) A = {",
+        {
+          "latex": "x : x \\in Z",
+          "fallback": "x : x ∈ Z"
+        },
+        " மற்றும் ",
+        {
+          "latex": "x < 5",
+          "fallback": "x < 5"
+        },
+        "}"
       ]
     },
     "answerMath": {
-      "latex": "\\text{Infinite set}",
-      "fallback": "Infinite",
-      "display": true
+      "en": {
+        "latex": "\\text{Infinite set}",
+        "fallback": "Infinite",
+        "display": true
+      },
+      "ta": "முடிவுறாக் கணம்"
     },
     "steps": [
       {
@@ -39035,7 +39352,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The set A contains every integer strictly less than five."
+          "en": "The set A contains every integer strictly less than five.",
+          "ta": [
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " ஐ விடச் சிறிய அனைத்து முழுக்களும் A இன் உறுப்புகள்."
+          ]
         }
       },
       {
@@ -39052,6 +39376,13 @@ const records=[
               "fallback": "4, 3, 2, 1, 0, −1, −2"
             },
             ", and so on to the left."
+          ],
+          "ta": [
+            {
+              "latex": "4, 3, 2, 1, 0, - 1, - 2",
+              "fallback": "4, 3, 2, 1, 0, −1, −2"
+            },
+            " எனப் பட்டியல் இடப்புறமாகத் தொடரும்."
           ]
         }
       },
@@ -39074,6 +39405,28 @@ const records=[
               "fallback": "x−1"
             },
             " also lies below five."
+          ],
+          "ta": [
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " ஐ விடச் சிறிய எந்த முழு ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " ஐ எடுத்தாலும் ",
+            {
+              "latex": "x - 1",
+              "fallback": "x − 1"
+            },
+            " என்பதும் ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " ஐ விடச் சிறியது."
           ]
         }
       },
@@ -39084,7 +39437,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Therefore the list never ends and A is infinite."
+          "en": "Therefore the list never ends and A is infinite.",
+          "ta": "எனவே பட்டியல் முடிவடையாது. A ஒரு முடிவுறாக் கணம்."
         }
       }
     ]
@@ -39099,12 +39453,26 @@ const records=[
           "fallback": "B = { x : x²–5x+6 = 0, x ∈ N }",
           "display": true
         }
+      ],
+      "ta": [
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". பின்வரும் கணங்களில் எவை முடிவுறு கணம், எவை முடிவுறாக் கணம் எனக் கூறுக.\n(iv) ",
+        {
+          "latex": "B = \\left\\{x : x^{2} - 5 x + 6 = 0, x \\in N\\right\\}",
+          "fallback": "B = {x : x²−5x+6 = 0, x ∈ N}"
+        }
       ]
     },
     "answerMath": {
-      "latex": "\\text{Finite set}",
-      "fallback": "Finite",
-      "display": true
+      "en": {
+        "latex": "\\text{Finite set}",
+        "fallback": "Finite",
+        "display": true
+      },
+      "ta": "முடிவுறு கணம்"
     },
     "steps": [
       {
@@ -39121,6 +39489,14 @@ const records=[
               "fallback": "B"
             },
             "."
+          ],
+          "ta": [
+            "இருபடிச் சமன்பாட்டை நிறைவு செய்யும் இயல் எண்களே ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " இன் உறுப்புகள்."
           ]
         }
       },
@@ -39131,7 +39507,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Factor the quadratic expression into two linear factors."
+          "en": "Factor the quadratic expression into two linear factors.",
+          "ta": "இருபடிக் கோவையை இரு நேரியல் காரணிகளின் பெருக்கலாக எழுதுக."
         }
       },
       {
@@ -39141,7 +39518,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A product is zero when one factor is zero, giving exactly two natural-number solutions."
+          "en": "A product is zero when one factor is zero, giving exactly two natural-number solutions.",
+          "ta": "பெருக்கற்பலன் பூச்சியமாவதற்கு ஒரு காரணி பூச்சியமாக வேண்டும். இதனால் இரண்டு இயல் எண் தீர்வுகள் கிடைக்கின்றன."
         }
       },
       {
@@ -39151,7 +39529,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "List the two members and count them."
+          "en": "List the two members and count them.",
+          "ta": "இரண்டு உறுப்புகளையும் பட்டியலிட்டு எண்ணுக."
         }
       }
     ]
@@ -39166,12 +39545,57 @@ const records=[
           "fallback": "E = {x : x is a factor of 24} and F = {x : x is a multiple of 3, x < 30}",
           "display": true
         }
+      ],
+      "ta": [
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        ". கொடுக்கப்பட்ட கணச் சோடிகள் வெட்டும் கணங்களா? இல்லை வெட்டாக் கணங்களா?\n(iii) ",
+        {
+          "latex": "E",
+          "fallback": "E"
+        },
+        " = {",
+        {
+          "latex": "x : x",
+          "fallback": "x : x"
+        },
+        " என்பது ",
+        {
+          "latex": "24",
+          "fallback": "24"
+        },
+        " இன் காரணி} மற்றும் ",
+        {
+          "latex": "F",
+          "fallback": "F"
+        },
+        " = {",
+        {
+          "latex": "x : x",
+          "fallback": "x : x"
+        },
+        " ஆனது ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        "இன் மடங்கு, ",
+        {
+          "latex": "x < 30",
+          "fallback": "x < 30"
+        },
+        "}"
       ]
     },
     "answerMath": {
-      "latex": "\\text{Overlapping sets}",
-      "fallback": "Overlapping",
-      "display": true
+      "en": {
+        "latex": "\\text{Overlapping sets}",
+        "fallback": "Overlapping",
+        "display": true
+      },
+      "ta": "வெட்டும் கணங்கள்"
     },
     "steps": [
       {
@@ -39181,7 +39605,20 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "In set-builder notation {x : …}, the curly braces { } enclose a set and the colon : means “such that”. List every positive integer that divides 24 with remainder 0 to write set E."
+          "en": "In set-builder notation {x : …}, the curly braces { } enclose a set and the colon : means “such that”. List every positive integer that divides 24 with remainder 0 to write set E.",
+          "ta": [
+            "கணம் அமைக்கும் முறையில் முக்காற்புள்ளிக்குப் பின் உறுப்புக்கான நிபந்தனை வருகிறது. ",
+            {
+              "latex": "24",
+              "fallback": "24"
+            },
+            " ஐ மீதியின்றி வகுக்கும் நேர்ம எண்களை ",
+            {
+              "latex": "E",
+              "fallback": "E"
+            },
+            " இல் பட்டியலிடுக."
+          ]
         }
       },
       {
@@ -39191,7 +39628,29 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The symbol < means “is strictly less than”, so x < 30 excludes 30. List the positive multiples of 3 smaller than 30 to write set F."
+          "en": "The symbol < means “is strictly less than”, so x < 30 excludes 30. List the positive multiples of 3 smaller than 30 to write set F.",
+          "ta": [
+            {
+              "latex": "30",
+              "fallback": "30"
+            },
+            " சேராது என்பதால் ",
+            {
+              "latex": "30",
+              "fallback": "30"
+            },
+            " ஐ விடச் சிறிய ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " இன் நேர்ம மடங்குகளை ",
+            {
+              "latex": "F",
+              "fallback": "F"
+            },
+            " இல் எழுதுக."
+          ]
         }
       },
       {
@@ -39201,7 +39660,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The intersection symbol ∩ denotes elements belonging to both sets. Because E ∩ F contains the shared numbers 3, 6, 12, and 24 (not empty), sets E and F are overlapping."
+          "en": "The intersection symbol ∩ denotes elements belonging to both sets. Because E ∩ F contains the shared numbers 3, 6, 12, and 24 (not empty), sets E and F are overlapping.",
+          "ta": [
+            "வெட்டுக் கணத்தில் இரண்டிற்கும் பொதுவான ",
+            {
+              "latex": "3, 6, 12, 24",
+              "fallback": "3, 6, 12, 24"
+            },
+            " உள்ளன. எனவே இவை வெட்டும் கணங்கள்."
+          ]
         }
       }
     ]
@@ -39217,12 +39684,32 @@ const records=[
           "display": true
         },
         ", list the elements of the following subset of S.\n(i) The set of shapes which have 4 equal sides."
+      ],
+      "ta": [
+        {
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". ",
+        {
+          "latex": "S",
+          "fallback": "S"
+        },
+        " = {சதுரம், செவ்வகம், வட்டம், சாய்சதுரம், முக்கோணம்} எனில் பின்வரும், ",
+        {
+          "latex": "S",
+          "fallback": "S"
+        },
+        "இன் உட்கணங்களின் உறுப்புகளைப் பட்டியலிடுக.\n(i) நான்கு சம பக்கங்களை உடைய வடிவங்களின் கணம்."
       ]
     },
     "answerMath": {
-      "latex": "\\{\\text{square},\\ \\text{rhombus}\\}",
-      "fallback": "{square, rhombus}",
-      "display": true
+      "en": {
+        "latex": "\\{\\text{square},\\ \\text{rhombus}\\}",
+        "fallback": "{square, rhombus}",
+        "display": true
+      },
+      "ta": "{சதுரம், சாய்சதுரம்}"
     },
     "steps": [
       {
@@ -39232,7 +39719,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The curly braces { } enclose the 5 shapes in the parent set S. Check which shapes in S have all 4 sides of equal length: both a square and a rhombus have 4 equal sides."
+          "en": "The curly braces { } enclose the 5 shapes in the parent set S. Check which shapes in S have all 4 sides of equal length: both a square and a rhombus have 4 equal sides.",
+          "ta": [
+            {
+              "latex": "S",
+              "fallback": "S"
+            },
+            " இல் உள்ள ஐந்து வடிவங்களில் சதுரத்திற்கும் சாய்சதுரத்திற்கும் நான்கு பக்கங்களும் சம நீளமுடையவை."
+          ]
         }
       },
       {
@@ -39242,7 +39736,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Check the remaining shapes in S: a general rectangle has only opposite sides equal, a triangle has 3 sides, and a circle has a curved boundary."
+          "en": "Check the remaining shapes in S: a general rectangle has only opposite sides equal, a triangle has 3 sides, and a circle has a curved boundary.",
+          "ta": "பொதுவான செவ்வகத்திற்கு எதிர்ப்பக்கங்களே சமம். முக்கோணத்திற்கு மூன்று பக்கங்கள் உள்ளன. வட்டத்தின் எல்லை வளைவாகும்."
         }
       },
       {
@@ -39252,7 +39747,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A subset of S is a set formed by selecting only the matching elements from S and writing them inside curly braces { }."
+          "en": "A subset of S is a set formed by selecting only the matching elements from S and writing them inside curly braces { }.",
+          "ta": "பொருந்தும் வடிவங்களை மட்டும் சுருள் அடைப்புக்குறிக்குள் எழுதி உட்கணத்தை அமைக்கவும்."
         }
       }
     ]
@@ -39268,12 +39764,32 @@ const records=[
           "display": true
         },
         ", list the elements of the following subset of S.\n(ii) The set of shapes which have radius."
+      ],
+      "ta": [
+        {
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". ",
+        {
+          "latex": "S",
+          "fallback": "S"
+        },
+        " = {சதுரம், செவ்வகம், வட்டம், சாய்சதுரம், முக்கோணம்} எனில் பின்வரும், ",
+        {
+          "latex": "S",
+          "fallback": "S"
+        },
+        "இன் உட்கணங்களின் உறுப்புகளைப் பட்டியலிடுக.\n(ii) ஆரங்களை உடைய வடிவங்களின் கணம்."
       ]
     },
     "answerMath": {
-      "latex": "\\{\\text{circle}\\}",
-      "fallback": "{circle}",
-      "display": true
+      "en": {
+        "latex": "\\{\\text{circle}\\}",
+        "fallback": "{circle}",
+        "display": true
+      },
+      "ta": "{வட்டம்}"
     },
     "steps": [
       {
@@ -39283,7 +39799,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The radius r of a circle is the constant distance from its centre to any point on its curved boundary."
+          "en": "The radius r of a circle is the constant distance from its centre to any point on its curved boundary.",
+          "ta": "வட்டத்தின் மையத்திலிருந்து அதன் சுற்றளவிலுள்ள எந்தப் புள்ளிக்கும் உள்ள மாறாத தூரமே ஆரம்."
         }
       },
       {
@@ -39293,7 +39810,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Inspect the 5 shapes inside the curly braces { } of S: square, rectangle, rhombus, and triangle are polygons made of straight sides, so only the circle is defined by a radius."
+          "en": "Inspect the 5 shapes inside the curly braces { } of S: square, rectangle, rhombus, and triangle are polygons made of straight sides, so only the circle is defined by a radius.",
+          "ta": [
+            {
+              "latex": "S",
+              "fallback": "S"
+            },
+            " இன் மற்ற நான்கு வடிவங்களும் நேர்ப்பக்கங்களைக் கொண்ட பலகோணங்கள். இங்கு ஆரத்தால் வரையறுக்கப்படும் வடிவம் வட்டம்."
+          ]
         }
       },
       {
@@ -39303,7 +39827,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Write the single matching element from S inside curly braces { } to form the subset."
+          "en": "Write the single matching element from S inside curly braces { } to form the subset.",
+          "ta": "பொருந்தும் ஒரே வடிவத்தைச் சுருள் அடைப்புக்குறிக்குள் எழுதுக."
         }
       }
     ]
@@ -39324,12 +39849,37 @@ const records=[
           "fallback": "180°"
         },
         ". "
+      ],
+      "ta": [
+        {
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". ",
+        {
+          "latex": "S",
+          "fallback": "S"
+        },
+        " = {சதுரம், செவ்வகம், வட்டம், சாய்சதுரம், முக்கோணம்} எனில் பின்வரும், ",
+        {
+          "latex": "S",
+          "fallback": "S"
+        },
+        "இன் உட்கணங்களின் உறுப்புகளைப் பட்டியலிடுக.\n(iii) உட்கோணங்களின் கூடுதல் ",
+        {
+          "latex": "180^{\\circ}",
+          "fallback": "180°"
+        },
+        " ஆக உடைய வடிவங்களின் கணம்."
       ]
     },
     "answerMath": {
-      "latex": "\\{\\text{triangle}\\}",
-      "fallback": "{triangle}",
-      "display": true
+      "en": {
+        "latex": "\\{\\text{triangle}\\}",
+        "fallback": "{triangle}",
+        "display": true
+      },
+      "ta": "{முக்கோணம்}"
     },
     "steps": [
       {
@@ -39351,6 +39901,19 @@ const records=[
               "fallback": "180°"
             },
             "."
+          ],
+          "ta": [
+            "∠ என்பது கோணத்தையும் ",
+            {
+              "latex": "^{\\circ}",
+              "fallback": "°"
+            },
+            " என்பது பாகையையும் குறிக்கின்றன. முக்கோணத்தின் மூன்று உட்கோணங்களின் கூடுதல் ",
+            {
+              "latex": "180^{\\circ}",
+              "fallback": "180°"
+            },
+            "."
           ]
         }
       },
@@ -39368,6 +39931,14 @@ const records=[
               "fallback": "360°"
             },
             ", while a circle has no polygon vertex angles."
+          ],
+          "ta": [
+            "சதுரம், செவ்வகம், சாய்சதுரம் ஆகியவற்றின் உட்கோணங்களின் கூடுதல் ",
+            {
+              "latex": "360^{\\circ}",
+              "fallback": "360°"
+            },
+            ". வட்டத்திற்குப் பலகோணம் போன்ற உச்சிக் கோணங்கள் இல்லை."
           ]
         }
       },
@@ -39378,7 +39949,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Select the triangle from S and enclose it in curly braces { } to write the subset."
+          "en": "Select the triangle from S and enclose it in curly braces { } to write the subset.",
+          "ta": "முக்கோணத்தைத் தேர்ந்தெடுத்துச் சுருள் அடைப்புக்குறிக்குள் எழுதுக."
         }
       }
     ]
@@ -39394,6 +39966,28 @@ const records=[
           "display": true
         },
         ", list the elements of the following subset of S.\n(iv) The set of shapes which have 5 sides."
+      ],
+      "ta": [
+        {
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". ",
+        {
+          "latex": "S",
+          "fallback": "S"
+        },
+        " = {சதுரம், செவ்வகம், வட்டம், சாய்சதுரம், முக்கோணம்} எனில் பின்வரும், ",
+        {
+          "latex": "S",
+          "fallback": "S"
+        },
+        "இன் உட்கணங்களின் உறுப்புகளைப் பட்டியலிடுக.\n(iv) ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        " பக்கங்களை உடைய வடிவங்களின் கணம்."
       ]
     },
     "answerMath": {
@@ -39409,7 +40003,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A closed flat shape with 5 straight sides is a pentagon."
+          "en": "A closed flat shape with 5 straight sides is a pentagon.",
+          "ta": "ஐந்து நேர்ப்பக்கங்களால் மூடப்பட்ட தள வடிவம் ஐங்கோணம்."
         }
       },
       {
@@ -39419,7 +40014,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Count the sides of each shape in S: square (4), rectangle (4), rhombus (4), triangle (3), and circle (0 straight sides). None has 5 sides."
+          "en": "Count the sides of each shape in S: square (4), rectangle (4), rhombus (4), triangle (3), and circle (0 straight sides). None has 5 sides.",
+          "ta": "சதுரம், செவ்வகம், சாய்சதுரம் ஆகியவற்றிற்கு நான்கு பக்கங்கள். முக்கோணத்திற்கு மூன்று. வட்டத்திற்கு நேர்ப்பக்கம் இல்லை."
         }
       },
       {
@@ -39429,7 +40025,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "When no element of S satisfies the condition, the subset is the empty (null) set, denoted by the symbol ∅ (or empty braces { })."
+          "en": "When no element of S satisfies the condition, the subset is the empty (null) set, denoted by the symbol ∅ (or empty braces { }).",
+          "ta": [
+            "எந்த உறுப்பும் பொருந்தாததால் உட்கணம் வெற்றுக்கணம். இதை ",
+            {
+              "latex": "\\varnothing",
+              "fallback": "∅"
+            },
+            " அல்லது { } என எழுதலாம்."
+          ]
         }
       }
     ]
@@ -39437,12 +40041,27 @@ const records=[
   {
     "id": "g9-ch1-ex1.2-q3-i",
     "questionMath": {
-      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(i) A = The set of vowels in the English alphabets. B = The set of all letters in the word “VOWEL”."
+      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(i) A = The set of vowels in the English alphabets. B = The set of all letters in the word “VOWEL”.",
+      "ta": [
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". பின்வருவனவற்றில் எவை சமான கணங்கள் அல்லது சமமற்ற கணங்கள் அல்லது சம கணங்கள் எனக் கூறுக.\n(i) A = ஆங்கில உயிரெழுத்துகளின் கணம். ",
+        {
+          "latex": "B",
+          "fallback": "B"
+        },
+        " = VOWEL என்ற சொல்லில் உள்ள எழுத்துகளின் கணம்."
+      ]
     },
     "answerMath": {
-      "latex": "\\text{Equivalent sets}",
-      "fallback": "Equivalent sets",
-      "display": true
+      "en": {
+        "latex": "\\text{Equivalent sets}",
+        "fallback": "Equivalent sets",
+        "display": true
+      },
+      "ta": "சமான கணங்கள்"
     },
     "steps": [
       {
@@ -39452,7 +40071,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "List the distinct letters in each set."
+          "en": "List the distinct letters in each set.",
+          "ta": "ஒவ்வொரு கணத்திலும் உள்ள வெவ்வேறு எழுத்துகளைப் பட்டியலிடுக."
         }
       },
       {
@@ -39462,7 +40082,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Each set has five elements, but the members differ."
+          "en": "Each set has five elements, but the members differ.",
+          "ta": "இரண்டிலும் ஐந்து உறுப்புகள் உள்ளன. ஆனால் உறுப்புகள் வேறுபடுகின்றன."
         }
       },
       {
@@ -39472,7 +40093,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Same number of members means the sets are equivalent."
+          "en": "Same number of members means the sets are equivalent.",
+          "ta": "ஆதி எண்கள் சமமாக இருப்பதால் இவை சமான கணங்கள்."
         }
       }
     ]
@@ -39487,12 +40109,32 @@ const records=[
           "fallback": "C = {2,3,4,5} D = {x : x∈W, 1 < x < 5}",
           "display": true
         }
+      ],
+      "ta": [
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". பின்வருவனவற்றில் எவை சமான கணங்கள் அல்லது சமமற்ற கணங்கள் அல்லது சம கணங்கள் எனக் கூறுக.\n(ii) ",
+        {
+          "latex": "C = \\left\\{2, 3, 4, 5\\right\\}",
+          "fallback": "C = {2, 3, 4, 5}"
+        },
+        ",",
+        " ",
+        {
+          "latex": "D = \\left\\{x : x \\in W, 1 < x < 5\\right\\}",
+          "fallback": "D = {x : x ∈ W, 1 < x < 5}"
+        }
       ]
     },
     "answerMath": {
-      "latex": "\\text{Unequal sets}",
-      "fallback": "Unequal sets",
-      "display": true
+      "en": {
+        "latex": "\\text{Unequal sets}",
+        "fallback": "Unequal sets",
+        "display": true
+      },
+      "ta": "சமமற்ற கணங்கள்"
     },
     "steps": [
       {
@@ -39502,7 +40144,19 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "List the whole numbers strictly between 1 and 5."
+          "en": "List the whole numbers strictly between 1 and 5.",
+          "ta": [
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " க்கும் ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " க்கும் இடைப்பட்ட முழு எண்களை மட்டும் எழுதுக."
+          ]
         }
       },
       {
@@ -39512,7 +40166,20 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Compare D with the given set C."
+          "en": "Compare D with the given set C.",
+          "ta": [
+            "கிடைத்த ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " கணத்தை ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            " உடன் ஒப்பிடுக."
+          ]
         }
       },
       {
@@ -39522,7 +40189,24 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The element 5 is in C but not in D."
+          "en": "The element 5 is in C but not in D.",
+          "ta": [
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " என்பது ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            " இல் உள்ளது. ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " இல் இல்லை. எனவே இரண்டும் சமமற்ற கணங்கள்."
+          ]
         }
       }
     ]
@@ -39530,12 +40214,41 @@ const records=[
   {
     "id": "g9-ch1-ex1.2-q3-iii",
     "questionMath": {
-      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iii) X = {x : x is a letter in the word “LIFE”} Y = {F, I, L, E}"
+      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iii) X = {x : x is a letter in the word “LIFE”} Y = {F, I, L, E}",
+      "ta": [
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". பின்வருவனவற்றில் எவை சமான கணங்கள் அல்லது சமமற்ற கணங்கள் அல்லது சம கணங்கள் எனக் கூறுக.\n(iii) ",
+        {
+          "latex": "X",
+          "fallback": "X"
+        },
+        " = {",
+        {
+          "latex": "x : x",
+          "fallback": "x : x"
+        },
+        " என்பது ",
+        {
+          "latex": "LIFE",
+          "fallback": "LIFE"
+        },
+        " என்ற சொல்லில் உள்ள எழுத்துகளின் கணம்}, ",
+        {
+          "latex": "Y = \\left\\{F, I, L, E\\right\\}",
+          "fallback": "Y = {F, I, L, E}"
+        }
+      ]
     },
     "answerMath": {
-      "latex": "\\text{Equal sets}",
-      "fallback": "Equal sets",
-      "display": true
+      "en": {
+        "latex": "\\text{Equal sets}",
+        "fallback": "Equal sets",
+        "display": true
+      },
+      "ta": "சம கணங்கள்"
     },
     "steps": [
       {
@@ -39545,7 +40258,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Write the distinct letters appearing in LIFE."
+          "en": "Write the distinct letters appearing in LIFE.",
+          "ta": [
+            {
+              "latex": "LIFE",
+              "fallback": "LIFE"
+            },
+            " என்ற சொல்லிலுள்ள வெவ்வேறு எழுத்துகளை எழுதுக."
+          ]
         }
       },
       {
@@ -39555,7 +40275,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Compare those members with Y; order does not matter in a set."
+          "en": "Compare those members with Y; order does not matter in a set.",
+          "ta": [
+            "அவற்றை ",
+            {
+              "latex": "Y",
+              "fallback": "Y"
+            },
+            " இன் உறுப்புகளுடன் ஒப்பிடுக. கணத்தில் உறுப்புகளின் வரிசை பொருட்டல்ல."
+          ]
         }
       },
       {
@@ -39565,7 +40293,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Both sets contain exactly the same four elements."
+          "en": "Both sets contain exactly the same four elements.",
+          "ta": "இரண்டிலும் அதே நான்கு எழுத்துகளே உள்ளதால் அவை சம கணங்கள்."
         }
       }
     ]
@@ -39573,12 +40302,52 @@ const records=[
   {
     "id": "g9-ch1-ex1.2-q3-iv",
     "questionMath": {
-      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iv) G = {x : x is a prime number and 3 < x < 23} H = {x : x is a divisor of 18}"
+      "en": "3. Which of the following sets are equivalent or unequal or equal sets?\n(iv) G = {x : x is a prime number and 3 < x < 23} H = {x : x is a divisor of 18}",
+      "ta": [
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". பின்வருவனவற்றில் எவை சமான கணங்கள் அல்லது சமமற்ற கணங்கள் அல்லது சம கணங்கள் எனக் கூறுக.\n(iv) ",
+        {
+          "latex": "G",
+          "fallback": "G"
+        },
+        " = {",
+        {
+          "latex": "x : x",
+          "fallback": "x : x"
+        },
+        " ஒரு பகா எண், ",
+        {
+          "latex": "3 < x < 23",
+          "fallback": "3 < x < 23"
+        },
+        "}, ",
+        {
+          "latex": "H",
+          "fallback": "H"
+        },
+        " = {",
+        {
+          "latex": "x : x",
+          "fallback": "x : x"
+        },
+        " என்பது ",
+        {
+          "latex": "18",
+          "fallback": "18"
+        },
+        " இன் வகு எண்கள்}"
+      ]
     },
     "answerMath": {
-      "latex": "\\text{Equivalent sets}",
-      "fallback": "Equivalent sets",
-      "display": true
+      "en": {
+        "latex": "\\text{Equivalent sets}",
+        "fallback": "Equivalent sets",
+        "display": true
+      },
+      "ta": "சமான கணங்கள்"
     },
     "steps": [
       {
@@ -39588,7 +40357,19 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "List the primes strictly between 3 and 23."
+          "en": "List the primes strictly between 3 and 23.",
+          "ta": [
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            " க்கும் ",
+            {
+              "latex": "23",
+              "fallback": "23"
+            },
+            " க்கும் இடைப்பட்ட பகா எண்களை எழுதுக."
+          ]
         }
       },
       {
@@ -39598,7 +40379,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "List the positive divisors of 18."
+          "en": "List the positive divisors of 18.",
+          "ta": [
+            {
+              "latex": "18",
+              "fallback": "18"
+            },
+            " இன் நேர்ம வகு எண்களைப் பட்டியலிடுக."
+          ]
         }
       },
       {
@@ -39608,7 +40396,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Both sets contain six distinct members, but different values."
+          "en": "Both sets contain six distinct members, but different values.",
+          "ta": "உறுப்புகள் வெவ்வேறாக இருந்தாலும் இரு கணங்களிலும் ஆறு உறுப்புகள் உள்ளதால் அவை சமான கணங்கள்."
         }
       }
     ]
@@ -39623,12 +40412,26 @@ const records=[
           "fallback": "A = {x : x∈N, 1 < x < 2}",
           "display": true
         }
+      ],
+      "ta": [
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". பின்வருவனவற்றில் எவை வெற்றுக்கணம், எவை ஓருறுப்புக்கணம் எனக் காண்க.\n(i) ",
+        {
+          "latex": "A = \\left\\{x : x \\in N, 1 < x < 2\\right\\}",
+          "fallback": "A = {x : x ∈ N, 1 < x < 2}"
+        }
       ]
     },
     "answerMath": {
-      "latex": "\\text{Null set}",
-      "fallback": "Null set",
-      "display": true
+      "en": {
+        "latex": "\\text{Null set}",
+        "fallback": "Null set",
+        "display": true
+      },
+      "ta": "வெற்றுக்கணம்"
     },
     "steps": [
       {
@@ -39638,7 +40441,20 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "There is no natural number strictly between consecutive integers 1 and 2."
+          "en": "There is no natural number strictly between consecutive integers 1 and 2.",
+          "ta": [
+            "அடுத்தடுத்த இயல் எண்களான ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " க்கும் ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " க்கும் இடையில் வேறோர் இயல் எண் இல்லை."
+          ]
         }
       },
       {
@@ -39648,7 +40464,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "So the membership condition has no solution."
+          "en": "So the membership condition has no solution.",
+          "ta": "எனவே கொடுக்கப்பட்ட நிபந்தனையை எந்த இயல் எண்ணும் நிறைவு செய்யாது."
         }
       },
       {
@@ -39658,7 +40475,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A set without elements is called the null or empty set."
+          "en": "A set without elements is called the null or empty set.",
+          "ta": "உறுப்பே இல்லாத கணம் வெற்றுக்கணம்."
         }
       }
     ]
@@ -39666,12 +40484,27 @@ const records=[
   {
     "id": "g9-ch1-ex1.2-q4-ii",
     "questionMath": {
-      "en": "4. Identify the following sets as null set or singleton set.\n(ii) B = The set of all even natural numbers which are not divisible by 2"
+      "en": "4. Identify the following sets as null set or singleton set.\n(ii) B = The set of all even natural numbers which are not divisible by 2",
+      "ta": [
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". பின்வருவனவற்றில் எவை வெற்றுக்கணம், எவை ஓருறுப்புக்கணம் எனக் காண்க.\n(ii) ",
+        {
+          "latex": "B = 2",
+          "fallback": "B = 2"
+        },
+        " ஆல் வகுபடாத அனைத்து இரட்டைப்படை இயல் எண்களின் கணம்."
+      ]
     },
     "answerMath": {
-      "latex": "\\text{Null set}",
-      "fallback": "Null set",
-      "display": true
+      "en": {
+        "latex": "\\text{Null set}",
+        "fallback": "Null set",
+        "display": true
+      },
+      "ta": "வெற்றுக்கணம்"
     },
     "steps": [
       {
@@ -39681,7 +40514,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Every even natural number is divisible by two by definition."
+          "en": "Every even natural number is divisible by two by definition.",
+          "ta": [
+            "ஒவ்வோர் இரட்டைப்படை இயல் எண்ணும் ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " ஆல் வகுபடும்."
+          ]
         }
       },
       {
@@ -39691,7 +40532,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The question requires an even number that is not divisible by two."
+          "en": "The question requires an even number that is not divisible by two.",
+          "ta": [
+            "ஆனால் இங்கு ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " ஆல் வகுபடாத இரட்டைப்படை எண் தேவை."
+          ]
         }
       },
       {
@@ -39701,7 +40550,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Thus B has no members."
+          "en": "Thus B has no members.",
+          "ta": [
+            "இரு நிபந்தனைகளையும் நிறைவு செய்யும் எண் இல்லாததால் ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " வெற்றுக்கணம்."
+          ]
         }
       }
     ]
@@ -39716,12 +40573,27 @@ const records=[
           "fallback": "C = {0}",
           "display": true
         }
+      ],
+      "ta": [
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". பின்வருவனவற்றில் எவை வெற்றுக்கணம், எவை ஓருறுப்புக்கணம் எனக் காண்க.\n(iii) ",
+        {
+          "latex": "C = \\left\\{0\\right\\}",
+          "fallback": "C = {0}"
+        },
+        "."
       ]
     },
     "answerMath": {
-      "latex": "\\text{Singleton set}",
-      "fallback": "Singleton set",
-      "display": true
+      "en": {
+        "latex": "\\text{Singleton set}",
+        "fallback": "Singleton set",
+        "display": true
+      },
+      "ta": "ஓருறுப்புக் கணம்"
     },
     "steps": [
       {
@@ -39731,7 +40603,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The curly brackets contain the number zero as one element."
+          "en": "The curly brackets contain the number zero as one element.",
+          "ta": "சுருள் அடைப்புக்குறிக்குள் பூச்சியம் என்ற எண் ஓர் உறுப்பாக உள்ளது."
         }
       },
       {
@@ -39741,7 +40614,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "This is not the empty set: it contains one element."
+          "en": "This is not the empty set: it contains one element.",
+          "ta": [
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            " இல் ஓர் உறுப்பு இருப்பதால் அது வெற்றுக்கணம் ஆகாது."
+          ]
         }
       },
       {
@@ -39751,7 +40631,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A one-element set is a singleton."
+          "en": "A one-element set is a singleton.",
+          "ta": "ஒரே ஓர் உறுப்புள்ள கணம் ஓருறுப்புக்கணம்."
         }
       }
     ]
@@ -39759,12 +40640,27 @@ const records=[
   {
     "id": "g9-ch1-ex1.2-q4-iv",
     "questionMath": {
-      "en": "4. Identify the following sets as null set or singleton set.\n(iv) D = The set of all triangles having four sides."
+      "en": "4. Identify the following sets as null set or singleton set.\n(iv) D = The set of all triangles having four sides.",
+      "ta": [
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        ". பின்வருவனவற்றில் எவை வெற்றுக்கணம், எவை ஓருறுப்புக்கணம் எனக் காண்க.\n(iv) ",
+        {
+          "latex": "D",
+          "fallback": "D"
+        },
+        " = நான்கு பக்கங்களை உடைய முக்கோணங்களின் கணம்."
+      ]
     },
     "answerMath": {
-      "latex": "\\text{Null set}",
-      "fallback": "Null set",
-      "display": true
+      "en": {
+        "latex": "\\text{Null set}",
+        "fallback": "Null set",
+        "display": true
+      },
+      "ta": "வெற்றுக்கணம்"
     },
     "steps": [
       {
@@ -39774,7 +40670,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "By definition, every triangle has exactly three sides."
+          "en": "By definition, every triangle has exactly three sides.",
+          "ta": "முக்கோணத்திற்கு மூன்று பக்கங்கள் உண்டு."
         }
       },
       {
@@ -39784,7 +40681,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "No triangle has four sides."
+          "en": "No triangle has four sides.",
+          "ta": "நான்கு பக்கங்கள் கொண்ட முக்கோணம் எதுவும் இல்லை."
         }
       },
       {
@@ -39794,7 +40692,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Therefore D is the null set."
+          "en": "Therefore D is the null set.",
+          "ta": [
+            "எனவே ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " ஒரு வெற்றுக்கணம்."
+          ]
         }
       }
     ]
@@ -39809,12 +40715,31 @@ const records=[
           "fallback": "A = {f, i, a, s} and B = {a, n, f, h, s}",
           "display": true
         }
+      ],
+      "ta": [
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        ". கொடுக்கப்பட்ட கணச் சோடிகள் வெட்டும் கணங்களா? இல்லை வெட்டாக் கணங்களா?\n(i) ",
+        {
+          "latex": "A = \\left\\{f, i, a, s\\right\\}",
+          "fallback": "A = {f, i, a, s}"
+        },
+        " மற்றும் ",
+        {
+          "latex": "B = \\left\\{a, n, f, h, s\\right\\}",
+          "fallback": "B = {a, n, f, h, s}"
+        }
       ]
     },
     "answerMath": {
-      "latex": "\\text{Overlapping sets}",
-      "fallback": "Overlapping",
-      "display": true
+      "en": {
+        "latex": "\\text{Overlapping sets}",
+        "fallback": "Overlapping",
+        "display": true
+      },
+      "ta": "வெட்டும் கணங்கள்"
     },
     "steps": [
       {
@@ -39824,7 +40749,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Find the letters appearing in both sets."
+          "en": "Find the letters appearing in both sets.",
+          "ta": "இரு கணங்களிலும் உள்ள எழுத்துகளைக் கண்டறிக."
         }
       },
       {
@@ -39834,7 +40760,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Their common elements are a, f, and s."
+          "en": "Their common elements are a, f, and s.",
+          "ta": [
+            "பொது உறுப்புகள் ",
+            {
+              "latex": "a, f, s",
+              "fallback": "a, f, s"
+            },
+            "."
+          ]
         }
       },
       {
@@ -39844,7 +40778,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The intersection is nonempty, so the sets overlap."
+          "en": "The intersection is nonempty, so the sets overlap.",
+          "ta": "வெட்டு வெற்றுக்கணமாக இல்லாததால் இவை வெட்டும் கணங்கள்."
         }
       }
     ]
@@ -39852,12 +40787,47 @@ const records=[
   {
     "id": "g9-ch1-ex1.2-q5-ii",
     "questionMath": {
-      "en": "5. State which pairs of sets are disjoint or overlapping?\n(ii) C = {x : x is a prime number, x > 2} and D = {x : x is an even prime number}"
+      "en": "5. State which pairs of sets are disjoint or overlapping?\n(ii) C = {x : x is a prime number, x > 2} and D = {x : x is an even prime number}",
+      "ta": [
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        ". கொடுக்கப்பட்ட கணச் சோடிகள் வெட்டும் கணங்களா? இல்லை வெட்டாக் கணங்களா?\n(ii) ",
+        {
+          "latex": "C",
+          "fallback": "C"
+        },
+        " = {",
+        {
+          "latex": "x : x",
+          "fallback": "x : x"
+        },
+        " ஒரு பகா எண், ",
+        {
+          "latex": "x > 2",
+          "fallback": "x > 2"
+        },
+        "} மற்றும் ",
+        {
+          "latex": "D",
+          "fallback": "D"
+        },
+        " = {",
+        {
+          "latex": "x : x",
+          "fallback": "x : x"
+        },
+        " ஓர் இரட்டைப்படை பகா எண்}"
+      ]
     },
     "answerMath": {
-      "latex": "\\text{Disjoint sets}",
-      "fallback": "Disjoint",
-      "display": true
+      "en": {
+        "latex": "\\text{Disjoint sets}",
+        "fallback": "Disjoint",
+        "display": true
+      },
+      "ta": "வெட்டாக் கணங்கள்"
     },
     "steps": [
       {
@@ -39867,7 +40837,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The only even prime number is two."
+          "en": "The only even prime number is two.",
+          "ta": [
+            "ஒரே இரட்டைப்படை பகா எண் ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "."
+          ]
         }
       },
       {
@@ -39877,7 +40855,24 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "C contains only prime numbers greater than 2, so it excludes 2."
+          "en": "C contains only prime numbers greater than 2, so it excludes 2.",
+          "ta": [
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            " இல் உள்ள பகா எண்கள் அனைத்தும் ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " ஐ விடப் பெரியவை. எனவே ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " அதில் இல்லை."
+          ]
         }
       },
       {
@@ -39887,7 +40882,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "There is no common element."
+          "en": "There is no common element.",
+          "ta": "பொது உறுப்பு ஏதும் இல்லாததால் இவை வெட்டாக் கணங்கள்."
         }
       }
     ]
@@ -39902,6 +40898,18 @@ const records=[
           "fallback": "A = {a, {a, b}}"
         },
         ", write all the subsets of A."
+      ],
+      "ta": [
+        {
+          "latex": "7",
+          "fallback": "7"
+        },
+        ". ",
+        {
+          "latex": "A = \\left\\{a, \\left\\{a, b\\right\\}\\right\\}",
+          "fallback": "A = {a, {a, b}}"
+        },
+        " எனில், A–ன் எல்லா உட்கணங்களையும் எழுதுக."
       ]
     },
     "answerMath": {
@@ -39917,7 +40925,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "In A = {a, {a, b}}, the outer curly braces { } enclose 2 elements: the single letter a and the entire inner set {a, b} treated as one object, so the cardinal number n(A) is 2."
+          "en": "In A = {a, {a, b}}, the outer curly braces { } enclose 2 elements: the single letter a and the entire inner set {a, b} treated as one object, so the cardinal number n(A) is 2.",
+          "ta": [
+            "வெளி அடைப்புக்குறிகளுக்குள் a ஒன்று, உட்கணம் ",
+            {
+              "latex": "\\left\\{a, b\\right\\}",
+              "fallback": "{a, b}"
+            },
+            " முழுவதும் மற்றொன்று என இரண்டு உறுப்புகள் உள்ளன."
+          ]
         }
       },
       {
@@ -39934,7 +40950,8 @@ const records=[
               "fallback": "n[P(A)] = 2^{n(A)}"
             },
             ", P(A) denotes the power set (the set of all subsets of A). Because n(A) = 2, set A has 2² = 4 subsets in total."
-          ]
+          ],
+          "ta": "ஒவ்வோர் உறுப்பையும் சேர்க்கலாம் அல்லது விடலாம். இரண்டு உறுப்புகளுக்கு மொத்தம் நான்கு உட்கணங்கள் கிடைக்கும்."
         }
       },
       {
@@ -39944,7 +40961,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "List all 4 subsets of A: the empty set ∅ (0 elements), the two one-element subsets {a} and {{a, b}}, and the full set {a, {a, b}} itself."
+          "en": "List all 4 subsets of A: the empty set ∅ (0 elements), the two one-element subsets {a} and {{a, b}}, and the full set {a, {a, b}} itself.",
+          "ta": "வெற்றுக்கணம், இரண்டு ஓருறுப்புக் கணங்கள், முழுக் கணமான A ஆகிய நான்கையும் எழுதுக."
         }
       }
     ]
@@ -39956,6 +40974,17 @@ const records=[
         "8. Write down the power set of the following sets:\n(i) ",
         {
           "latex": "A=\\{a,b\\}",
+          "fallback": "A = {a, b}"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        ". பின்வருவனவற்றின் அடுக்குக் கணத்தைக் காண்க.\n(i) ",
+        {
+          "latex": "A = \\left\\{a, b\\right\\}",
           "fallback": "A = {a, b}"
         }
       ]
@@ -39973,7 +41002,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Set A = {a, b} contains 2 distinct elements inside its curly braces { }, so its cardinal number n(A) is 2 and it has 2² = 4 subsets."
+          "en": "Set A = {a, b} contains 2 distinct elements inside its curly braces { }, so its cardinal number n(A) is 2 and it has 2² = 4 subsets.",
+          "ta": "A இல் இரண்டு வெவ்வேறு உறுப்புகள் இருப்பதால் மொத்தம் நான்கு உட்கணங்கள் உள்ளன."
         }
       },
       {
@@ -39983,7 +41013,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Form every possible subset of A by choosing 0 elements (the empty set ∅), 1 element at a time ({a} and {b}), or both elements ({a, b})."
+          "en": "Form every possible subset of A by choosing 0 elements (the empty set ∅), 1 element at a time ({a} and {b}), or both elements ({a, b}).",
+          "ta": "உறுப்பே இல்லாமல், ஓர் உறுப்புடன் அல்லது இரு உறுப்புகளுடனும் அமைக்கக்கூடிய உட்கணங்களை எழுதுக."
         }
       },
       {
@@ -39993,7 +41024,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The power set P(A) is the set whose elements are all the subsets of A, enclosed together inside outer curly braces { }."
+          "en": "The power set P(A) is the set whose elements are all the subsets of A, enclosed together inside outer curly braces { }.",
+          "ta": [
+            "அனைத்து உட்கணங்களையும் உறுப்புகளாகக் கொண்டு அடுக்குக் கணம் ",
+            {
+              "latex": "P\\left(A\\right)",
+              "fallback": "P(A)"
+            },
+            " அமையும்."
+          ]
         }
       }
     ]
@@ -40005,6 +41044,17 @@ const records=[
         "8. Write down the power set of the following sets:\n(ii) ",
         {
           "latex": "B=\\{1,2,3\\}",
+          "fallback": "B = {1, 2, 3}"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        ". பின்வருவனவற்றின் அடுக்குக் கணத்தைக் காண்க.\n(ii) ",
+        {
+          "latex": "B = \\left\\{1, 2, 3\\right\\}",
           "fallback": "B = {1, 2, 3}"
         }
       ]
@@ -40022,7 +41072,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Each of the 3 distinct elements in B = {1, 2, 3} has 2 choices (either include it or omit it), giving 2³ = 8 subsets in total."
+          "en": "Each of the 3 distinct elements in B = {1, 2, 3} has 2 choices (either include it or omit it), giving 2³ = 8 subsets in total.",
+          "ta": "மூன்று உறுப்புகளில் ஒவ்வொன்றையும் சேர்க்கவோ விடவோ முடிவதால் எட்டு உட்கணங்கள் கிடைக்கும்."
         }
       },
       {
@@ -40032,7 +41083,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Group the subsets systematically by size: 1 empty subset (size 0), 3 singletons (size 1), 3 pairs (size 2), and 1 full set (size 3)."
+          "en": "Group the subsets systematically by size: 1 empty subset (size 0), 3 singletons (size 1), 3 pairs (size 2), and 1 full set (size 3).",
+          "ta": "உறுப்புகளின் எண்ணிக்கைப்படி வரிசைப்படுத்துக. ஒரு வெற்றுக்கணம், மூன்று ஓருறுப்புக் கணங்கள், மூன்று ஈருறுப்புக் கணங்கள், ஒரு முழுக்கணம் கிடைக்கும்."
         }
       },
       {
@@ -40042,7 +41094,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Enclose all 8 subsets—starting with the empty set ∅ and ending with {1, 2, 3}—inside outer curly braces { } to write the power set P(B)."
+          "en": "Enclose all 8 subsets—starting with the empty set ∅ and ending with {1, 2, 3}—inside outer curly braces { } to write the power set P(B).",
+          "ta": [
+            "வெற்றுக்கணம் முதல் ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " வரை எட்டு உட்கணங்களையும் வெளி அடைப்புக்குறிக்குள் எழுதுக."
+          ]
         }
       }
     ]
@@ -40054,6 +41114,17 @@ const records=[
         "8. Write down the power set of the following sets:\n(iii) ",
         {
           "latex": "D=\\{p,q,r,s\\}",
+          "fallback": "D = {p, q, r, s}"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        ". பின்வருவனவற்றின் அடுக்குக் கணத்தைக் காண்க.\n(iii) ",
+        {
+          "latex": "D = \\left\\{p, q, r, s\\right\\}",
           "fallback": "D = {p, q, r, s}"
         }
       ]
@@ -40071,7 +41142,19 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Set D = {p, q, r, s} has 4 distinct elements, so the number of elements in its power set P(D) is n[P(D)] = 2⁴ = 16 subsets."
+          "en": "Set D = {p, q, r, s} has 4 distinct elements, so the number of elements in its power set P(D) is n[P(D)] = 2⁴ = 16 subsets.",
+          "ta": [
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " இல் நான்கு வெவ்வேறு உறுப்புகள். எனவே அதன் அடுக்குக் கணத்தில் ",
+            {
+              "latex": "16",
+              "fallback": "16"
+            },
+            " உறுப்புகள்."
+          ]
         }
       },
       {
@@ -40081,7 +41164,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "First list the 0-element subset (the empty set ∅) and the 4 one-element (singleton) subsets."
+          "en": "First list the 0-element subset (the empty set ∅) and the 4 one-element (singleton) subsets.",
+          "ta": "முதலில் வெற்றுக்கணத்தையும் நான்கு ஓருறுப்புக் கணங்களையும் எழுதுக."
         }
       },
       {
@@ -40091,7 +41175,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Next list all 6 two-element subsets in alphabetical pair order so that no pair is missed or repeated."
+          "en": "Next list all 6 two-element subsets in alphabetical pair order so that no pair is missed or repeated.",
+          "ta": "எந்த இணையும் விடுபடவோ மீண்டும் வரவோ கூடாது. எழுத்து வரிசையில் ஆறு ஈருறுப்புக் கணங்களை எழுதுக."
         }
       },
       {
@@ -40101,7 +41186,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Then list the 4 three-element subsets (each formed by omitting one letter) together with the 1 four-element subset D itself."
+          "en": "Then list the 4 three-element subsets (each formed by omitting one letter) together with the 1 four-element subset D itself.",
+          "ta": [
+            "ஒவ்வோர் எழுத்தாக நீக்கி நான்கு மூவுறுப்புக் கணங்களை அமைக்கவும். இறுதியாக ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " ஐயும் சேர்க்கவும்."
+          ]
         }
       },
       {
@@ -40111,7 +41204,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Verify the total count across sizes 0, 1, 2, 3, and 4 (1 + 4 + 6 + 4 + 1 = 16) and enclose all 16 subsets in outer braces { } to form P(D)."
+          "en": "Verify the total count across sizes 0, 1, 2, 3, and 4 (1 + 4 + 6 + 4 + 1 = 16) and enclose all 16 subsets in outer braces { } to form P(D).",
+          "ta": [
+            "அளவு வாரியாக எண்ணினால் ",
+            {
+              "latex": "1 + 4 + 6 + 4 + 1 = 16",
+              "fallback": "1 + 4 + 6 + 4 + 1 = 16"
+            },
+            ". அனைத்தையும் வெளி அடைப்புக்குறிக்குள் எழுதுக."
+          ]
         }
       }
     ]
@@ -40123,6 +41224,17 @@ const records=[
         "8. Write down the power set of the following sets:\n(iv) ",
         {
           "latex": "E=\\varnothing",
+          "fallback": "E = ∅"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        ". பின்வருவனவற்றின் அடுக்குக் கணத்தைக் காண்க.\n(iv) ",
+        {
+          "latex": "E = \\varnothing",
           "fallback": "E = ∅"
         }
       ]
@@ -40140,7 +41252,19 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The symbol ∅ denotes the empty (or null) set, so set E = ∅ contains 0 elements."
+          "en": "The symbol ∅ denotes the empty (or null) set, so set E = ∅ contains 0 elements.",
+          "ta": [
+            {
+              "latex": "\\varnothing",
+              "fallback": "∅"
+            },
+            " என்பது வெற்றுக்கணத்தின் குறியீடு. ",
+            {
+              "latex": "E",
+              "fallback": "E"
+            },
+            " இல் உறுப்புகள் இல்லை."
+          ]
         }
       },
       {
@@ -40150,7 +41274,19 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "The symbol ⊆ means “is a subset of”. Because the empty set ∅ is a subset of every set, ∅ is a subset of E itself."
+          "en": "The symbol ⊆ means “is a subset of”. Because the empty set ∅ is a subset of every set, ∅ is a subset of E itself.",
+          "ta": [
+            {
+              "latex": "\\subseteq",
+              "fallback": "⊆"
+            },
+            " என்பது உட்கணத்தைக் குறிக்கிறது. வெற்றுக்கணம் எந்தக் கணத்திற்கும் உட்கணம் என்பதால் ",
+            {
+              "latex": "E",
+              "fallback": "E"
+            },
+            " க்கும் உட்கணம்."
+          ]
         }
       },
       {
@@ -40160,7 +41296,25 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "An empty set has no other subsets, so the power set P(E) contains exactly 1 element—namely ∅ inside curly braces {∅}."
+          "en": "An empty set has no other subsets, so the power set P(E) contains exactly 1 element—namely ∅ inside curly braces {∅}.",
+          "ta": [
+            "வேறு உட்கணம் இல்லாததால் ",
+            {
+              "latex": "P\\left(E\\right)",
+              "fallback": "P(E)"
+            },
+            " இல் ஒரே உறுப்பு ",
+            {
+              "latex": "\\varnothing",
+              "fallback": "∅"
+            },
+            ". எனவே ",
+            {
+              "latex": "P\\left(E\\right) = \\left\\{\\varnothing\\right\\}",
+              "fallback": "P(E) = {∅}"
+            },
+            "."
+          ]
         }
       }
     ]
@@ -40174,12 +41328,27 @@ const records=[
           "latex": "W=\\{\\text{red, blue, yellow}\\}",
           "fallback": "W = {red, blue, yellow}"
         }
+      ],
+      "ta": [
+        {
+          "latex": "9",
+          "fallback": "9"
+        },
+        ". பின்வரும் கணங்களின் உட்கணங்கள் மற்றும் தகு உட்கணங்களின் எண்ணிக்கையைக் காண்க.\n(i) ",
+        {
+          "latex": "W",
+          "fallback": "W"
+        },
+        " = {சிவப்பு, நீலம், மஞ்சள்}"
       ]
     },
     "answerMath": {
-      "latex": "\\text{8 subsets;\\quad 7 proper subsets}",
-      "fallback": "8 subsets; 7 proper subsets",
-      "display": true
+      "en": {
+        "latex": "\\text{8 subsets;\\quad 7 proper subsets}",
+        "fallback": "8 subsets; 7 proper subsets",
+        "display": true
+      },
+      "ta": "8 உட்கணங்கள்; 7 தகு உட்கணங்கள்"
     },
     "steps": [
       {
@@ -40189,7 +41358,19 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Count the distinct colour names inside the curly braces { } of W = {red, blue, yellow} to find its cardinal number n(W) = 3."
+          "en": "Count the distinct colour names inside the curly braces { } of W = {red, blue, yellow} to find its cardinal number n(W) = 3.",
+          "ta": [
+            {
+              "latex": "W",
+              "fallback": "W"
+            },
+            " இல் மூன்று வெவ்வேறு நிறங்கள் உள்ளன. எனவே அதன் ஆதி எண் ",
+            {
+              "latex": "3",
+              "fallback": "3"
+            },
+            "."
+          ]
         }
       },
       {
@@ -40206,7 +41387,8 @@ const records=[
               "fallback": "2^m"
             },
             " subsets in total. Substitute m = 3 to get 2³ = 2 × 2 × 2 = 8 subsets."
-          ]
+          ],
+          "ta": "ஒவ்வோர் உறுப்பிற்கும் இரண்டு தேர்வுகள் இருப்பதால் மூன்று உறுப்புகளுக்கு எட்டு உட்கணங்கள் உண்டு."
         }
       },
       {
@@ -40216,7 +41398,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "A proper subset of W is any subset except the full set W itself, so subtract 1 from the total number of subsets: 2³ − 1 = 8 − 1 = 7."
+          "en": "A proper subset of W is any subset except the full set W itself, so subtract 1 from the total number of subsets: 2³ − 1 = 8 − 1 = 7.",
+          "ta": [
+            "முழுக் கணமான ",
+            {
+              "latex": "W",
+              "fallback": "W"
+            },
+            " தவிர மற்றவை தகு உட்கணங்கள். எனவே எட்டிலிருந்து ஒன்றைக் கழிக்கவும்."
+          ]
         }
       }
     ]
@@ -40230,12 +41420,27 @@ const records=[
           "latex": "X=\\{x^2:x\\in\\mathbb{N},\\ x^2\\le 100\\}",
           "fallback": "X = {x² : x∈N, x² ≤ 100}"
         }
+      ],
+      "ta": [
+        {
+          "latex": "9",
+          "fallback": "9"
+        },
+        ". பின்வரும் கணங்களின் உட்கணங்கள் மற்றும் தகு உட்கணங்களின் எண்ணிக்கையைக் காண்க.\n(ii) ",
+        {
+          "latex": "X = \\left\\{x^{2} : x \\in N, x^{2} \\le 100\\right\\}",
+          "fallback": "X = {x² : x ∈ N, x² ≤ 100}"
+        },
+        "."
       ]
     },
     "answerMath": {
-      "latex": "\\begin{aligned}&\\text{1024 subsets;}\\\\&\\text{1023 proper subsets}\\end{aligned}",
-      "fallback": "1024 subsets; 1023 proper subsets",
-      "display": true
+      "en": {
+        "latex": "\\begin{aligned}&\\text{1024 subsets;}\\\\&\\text{1023 proper subsets}\\end{aligned}",
+        "fallback": "1024 subsets; 1023 proper subsets",
+        "display": true
+      },
+      "ta": "1024 உட்கணங்கள்; 1023 தகு உட்கணங்கள்"
     },
     "steps": [
       {
@@ -40245,7 +41450,34 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "In X = {x² : x ∈ N, x² ≤ 100}, ∈ means “belongs to”, N is the set of natural numbers {1, 2, 3, …}, and ≤ means “less than or equal to”. The natural numbers whose squares are at most 100 are 1 through 10."
+          "en": "In X = {x² : x ∈ N, x² ≤ 100}, ∈ means “belongs to”, N is the set of natural numbers {1, 2, 3, …}, and ≤ means “less than or equal to”. The natural numbers whose squares are at most 100 are 1 through 10.",
+          "ta": [
+            {
+              "latex": "\\in",
+              "fallback": "∈"
+            },
+            " என்பது உறுப்பு என்பதையும் ",
+            {
+              "latex": "N",
+              "fallback": "N"
+            },
+            " என்பது இயல் எண்களின் கணத்தையும் குறிக்கின்றன. வர்க்கம் ",
+            {
+              "latex": "100",
+              "fallback": "100"
+            },
+            " ஐ மிகாத இயல் எண்கள் ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " முதல் ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            " வரை."
+          ]
         }
       },
       {
@@ -40255,7 +41487,8 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Square each natural number from 1 to 10 to list the 10 distinct elements of set X, giving cardinal number n(X) = 10."
+          "en": "Square each natural number from 1 to 10 to list the 10 distinct elements of set X, giving cardinal number n(X) = 10.",
+          "ta": "அந்தப் பத்து எண்களின் வர்க்கங்களையும் எழுதுக. பத்து வெவ்வேறு உறுப்புகள் கிடைக்கும்."
         }
       },
       {
@@ -40272,6 +41505,14 @@ const records=[
               "fallback": "2^{n(X)}"
             },
             " with n(X) = 10 to find the total number of subsets: 2¹⁰ = 1024 subsets."
+          ],
+          "ta": [
+            "அடுக்குக் கணத்தின் ஆதி எண் விதிப்படி பத்து உறுப்புகளுக்கு ",
+            {
+              "latex": "1024",
+              "fallback": "1024"
+            },
+            " உட்கணங்கள் உண்டு."
           ]
         }
       },
@@ -40282,7 +41523,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Subtract 1 (to exclude the improper subset X itself) to find the number of proper subsets: 1024 − 1 = 1023 proper subsets."
+          "en": "Subtract 1 (to exclude the improper subset X itself) to find the number of proper subsets: 1024 − 1 = 1023 proper subsets.",
+          "ta": [
+            "முழுக் கணத்தை நீக்கினால் ",
+            {
+              "latex": "1024 - 1 = 1023",
+              "fallback": "1024 − 1 = 1023"
+            },
+            " தகு உட்கணங்கள் கிடைக்கும்."
+          ]
         }
       }
     ]
@@ -40302,6 +41551,23 @@ const records=[
           "fallback": "n[P(A)]"
         },
         "."
+      ],
+      "ta": [
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        ". (i) ",
+        {
+          "latex": "n \\left(A\\right) = 4",
+          "fallback": "n(A) = 4"
+        },
+        " எனில் ",
+        {
+          "latex": "n \\left[P\\left(A\\right)\\right]",
+          "fallback": "n[P(A)]"
+        },
+        " ஐக் காண்க."
       ]
     },
     "answerMath": {
@@ -40324,6 +41590,14 @@ const records=[
               "fallback": "n[P(A)] = 2^{n(A)}"
             },
             " elements."
+          ],
+          "ta": [
+            "A இன் அனைத்து உட்கணங்களும் ",
+            {
+              "latex": "P\\left(A\\right)",
+              "fallback": "P(A)"
+            },
+            " இன் உறுப்புகள். அவற்றின் எண்ணிக்கை இரண்டின் அடுக்காகக் கிடைக்கும்."
           ]
         }
       },
@@ -40334,7 +41608,15 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Substitute the given cardinal number n(A) = 4 into the exponent of 2."
+          "en": "Substitute the given cardinal number n(A) = 4 into the exponent of 2.",
+          "ta": [
+            "கொடுக்கப்பட்ட ஆதி எண் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " ஐ இரண்டின் அடுக்குக்குறியாக இடுக."
+          ]
         }
       },
       {
@@ -40344,7 +41626,14 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Multiply four factors of 2 (2 × 2 × 2 × 2) to evaluate 2⁴ = 16."
+          "en": "Multiply four factors of 2 (2 × 2 × 2 × 2) to evaluate 2⁴ = 16.",
+          "ta": [
+            {
+              "latex": "2 \\times 2 \\times 2 \\times 2 = 16",
+              "fallback": "2 × 2 × 2 × 2 = 16"
+            },
+            " எனக் கணக்கிடுக."
+          ]
         }
       }
     ]
@@ -40364,6 +41653,23 @@ const records=[
           "fallback": "n[P(A)]"
         },
         "."
+      ],
+      "ta": [
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        ". (ii) ",
+        {
+          "latex": "n \\left(A\\right) = 0",
+          "fallback": "n(A) = 0"
+        },
+        " எனில் ",
+        {
+          "latex": "n \\left[P\\left(A\\right)\\right]",
+          "fallback": "n[P(A)]"
+        },
+        " ஐக் காண்க."
       ]
     },
     "answerMath": {
@@ -40379,7 +41685,20 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "When n(A) = 0, set A is the empty set ∅. Its only subset is ∅ itself, so its power set is P(A) = {∅}."
+          "en": "When n(A) = 0, set A is the empty set ∅. Its only subset is ∅ itself, so its power set is P(A) = {∅}.",
+          "ta": [
+            "A இல் உறுப்புகள் இல்லையெனில் அது வெற்றுக்கணம். அதன் ஒரே உட்கணம் ",
+            {
+              "latex": "\\varnothing",
+              "fallback": "∅"
+            },
+            ". எனவே ",
+            {
+              "latex": "P\\left(A\\right) = \\left\\{\\varnothing\\right\\}",
+              "fallback": "P(A) = {∅}"
+            },
+            "."
+          ]
         }
       },
       {
@@ -40396,6 +41715,14 @@ const records=[
               "fallback": "n[P(A)] = 2^{n(A)}"
             },
             " with n(A) = 0."
+          ],
+          "ta": [
+            "அடுக்குக் கணத்தின் ஆதி எண் விதியில் ",
+            {
+              "latex": "n \\left(A\\right) = 0",
+              "fallback": "n(A) = 0"
+            },
+            " எனப் பிரதியிடுக."
           ]
         }
       },
@@ -40406,7 +41733,20 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Any nonzero number raised to the power 0 equals 1, so 2⁰ = 1."
+          "en": "Any nonzero number raised to the power 0 equals 1, so 2⁰ = 1.",
+          "ta": [
+            "பூச்சியமல்லாத எண்ணின் பூச்சிய அடுக்கு ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            ". ஆகவே விடை ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            "."
+          ]
         }
       }
     ]
@@ -40426,6 +41766,23 @@ const records=[
           "fallback": "n(A)"
         },
         "."
+      ],
+      "ta": [
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        ". (iii) ",
+        {
+          "latex": "n \\left[P\\left(A\\right)\\right] = 256",
+          "fallback": "n[P(A)] = 256"
+        },
+        " எனில் ",
+        {
+          "latex": "n \\left(A\\right)",
+          "fallback": "n(A)"
+        },
+        " ஐக் காண்க."
       ]
     },
     "answerMath": {
@@ -40448,6 +41805,19 @@ const records=[
               "fallback": "n[P(A)] = 2^{n(A)}"
             },
             " and set it equal to the given value 256."
+          ],
+          "ta": [
+            "அடுக்குக் கணத்தின் ஆதி எண் விதியில் ",
+            {
+              "latex": "P\\left(A\\right)",
+              "fallback": "P(A)"
+            },
+            " இன் உறுப்புகளின் எண்ணிக்கையை ",
+            {
+              "latex": "256",
+              "fallback": "256"
+            },
+            " என இடுக."
           ]
         }
       },
@@ -40458,7 +41828,20 @@ const records=[
           "display": true
         },
         "reasonMath": {
-          "en": "Express 256 as a power of 2 by repeated doubling (2¹ = 2, 2² = 4, 2³ = 8, 2⁴ = 16, 2⁵ = 32, 2⁶ = 64, 2⁷ = 128, 2⁸ = 256)."
+          "en": "Express 256 as a power of 2 by repeated doubling (2¹ = 2, 2² = 4, 2³ = 8, 2⁴ = 16, 2⁵ = 32, 2⁶ = 64, 2⁷ = 128, 2⁸ = 256).",
+          "ta": [
+            "இரண்டின் அடுத்தடுத்த அடுக்குகள் ",
+            {
+              "latex": "2, 4, 8, 16, 32, 64, 128, 256",
+              "fallback": "2, 4, 8, 16, 32, 64, 128, 256"
+            },
+            ". எட்டாவது அடுக்கு ",
+            {
+              "latex": "256",
+              "fallback": "256"
+            },
+            "."
+          ]
         }
       },
       {
@@ -40475,6 +41858,19 @@ const records=[
               "fallback": "2^{n(A)} = 2⁸"
             },
             " has the same base 2 on both sides, equate the exponents to get n(A) = 8."
+          ],
+          "ta": [
+            "இருபுறமும் அடிமானம் ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " என்பதால் அடுக்குக்குறிகள் சமம். எனவே ",
+            {
+              "latex": "n \\left(A\\right) = 8",
+              "fallback": "n(A) = 8"
+            },
+            "."
           ]
         }
       }

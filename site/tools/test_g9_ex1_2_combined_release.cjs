@@ -21,7 +21,8 @@ for(const id of ids){
  const all=items.filter(q=>q.id===id);assert.equal(all.length,1,'One student question '+id);
  assert.equal(menu.filter(x=>x===id).length,1,'One textbook navigation target '+id);
  const q=all[0];assert.equal(q.releaseStatus,'english-preview');
- assert.equal(q.translationReview,'pending');assert(!q.q.ta,'No invented Tamil '+id);
+ assert.equal(q.translationReview,'pending');assert.match(q.q.ta,/[\u0B80-\u0BFF]/u,id+' Tamil question');
+ assert(q.steps.every(step=>/[\u0B80-\u0BFF]/u.test(step.ta)),id+' Tamil explanations');
  assert(q.q.en&&q.answer&&q.steps.length>=2,'Complete English working '+id);
  const why=ctx.window.TriggleWhyStepG9.hints[id];
  assert(why&&why.en&&!why.ta,'English-only Why-step bridge '+id);

@@ -66,6 +66,12 @@ const preservation=items.filter(q=>!newIds.has(q.id)).map(q=>{
   question={...q.q,ta:'English-language question; Tamil version not changed. '+q.q.en};
   steps=q.steps.map(step=>({...step,ta:'English explanation (Tamil unchanged): '+step.en}));
  }
+ // The original Exercise 1.2 release was English-only. Compare the same
+ // projection here; the combined release test checks the new Tamil content.
+ if(q.chapter==='1'&&q.exercise==='1.2'){
+  question={en:q.q.en};
+  steps=steps.map(({ta,...original})=>original);
+ }
  const answer=legacy?(legacy.originalFinalAnswer||legacy.unchangedFinalAnswer):q.answer;
  return [q.id,q.chapter,q.exercise,q.kind,question,answer,
   steps.filter((_,idx)=>!(q.id==='g9-ch9-ex9.2-q5'&&idx===3)).map(({en,ta,eq},index)=>revisedReasons[q.id]?.includes(index)?[null,null,eq]:[en,ta,eq])];

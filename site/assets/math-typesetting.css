@@ -194,7 +194,7 @@ body.g9-math-first #chapterOverview .sp2-formula .triggle-tex { font-size: 18px;
 /* Match the pinned exercise reader. Scale the equation container so KaTeX
    retains its own relative sizes for scripts, fractions and nested radicals. */
 @media (max-width:800px) {
-  body.textbook-reader.exercise-reading-scale #lessonCard > #questionText {
+  body.textbook-reader.exercise-reading-scale #lessonCard.lesson-card > #questionText {
     font-size:var(--reader-question-size)!important;
     font-weight:600;
   }

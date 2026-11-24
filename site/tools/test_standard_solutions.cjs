@@ -516,7 +516,7 @@ for(const [grade,data] of Object.entries(classes)){
          assert.equal(item.steps[i].math?.fallback,item.steps[i].eq,'Q3-Q5 visible math fallback '+item.id);
        }
        assert.equal(item.releaseStatus,'english-preview');
-       assert(!item.q.ta,'Do not invent Tamil '+item.id);
+       assert(item.q.ta&&item.steps.every(step=>step.ta),'Tamil Exercise 1.2 prompt and explanations '+item.id);
      }else if(g9Ch3CompleteNewIds.includes(item.id)||g9Ch5CompleteNewIds.includes(item.id)){
        assert.ok(item.q?.en&&item.q?.ta,'G9 bilingual prompt '+item.id);
        assert.ok(item.steps.length>=1&&item.steps.every(s=>s.en&&s.ta&&s.math?.latex),'G9 bilingual steps '+item.id);
@@ -531,7 +531,7 @@ for(const [grade,data] of Object.entries(classes)){
        assert.ok(item.steps.length>=3,'No missing Grade 9 working '+item.id);
        for(const step of item.steps)assert.equal(step.math?.fallback,step.eq,'Full accessible KaTeX fallbacks: '+item.id);
        assert.equal(item.releaseStatus,'english-preview');
-       assert(!item.q.ta,'Do not invent Grade 9 Tamil questions');
+       assert(item.q.ta&&item.steps.every(step=>step.ta),'Tamil Exercise 1.2 prompt and explanations '+item.id);
      }
    }else{
      const trace=traceSourceGate.records.find(r=>r.id===item.id);
