@@ -190,3 +190,27 @@ body.g9-math-first #chapterOverview .sp2-formula .triggle-tex { font-size: 18px;
     scroll-margin-block: 108px var(--triggle-reader-dock-height, 70px);
   }
 }
+
+/* Match the pinned exercise reader. Scale the equation container so KaTeX
+   retains its own relative sizes for scripts, fractions and nested radicals. */
+@media (max-width:800px) {
+  body.textbook-reader.exercise-reading-scale #lessonCard.lesson-card > #questionText {
+    font-size:var(--reader-question-size)!important;
+    font-weight:600;
+  }
+  body.textbook-reader.exercise-reading-scale #lessonCard .worked-step .step-reason {
+    font-size:15px!important;
+    font-weight:400;
+  }
+  body.textbook-reader.exercise-reading-scale #lessonCard #questionHead {font-size:19px;font-weight:700}
+  body.textbook-reader.exercise-reading-scale #stepsList details > summary {font-size:12px}
+  body.textbook-reader.exercise-reading-scale #lessonCard .worked-step .structured-equation {
+    font-size:clamp(17px,4vw,20px)!important;
+  }
+  body.textbook-reader.exercise-reading-scale #lessonCard #stepsList .structured-equation .triggle-tex {
+    font-size:inherit;
+  }
+  body.textbook-reader.exercise-reading-scale #lessonCard #stepsList .structured-equation .triggle-tex .katex {
+    font-size:1.04em;
+  }
+}

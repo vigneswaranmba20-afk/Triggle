@@ -129,7 +129,7 @@ body.g10-ch2-type .crumb-link{
 }
 @media(max-width:430px){
   body.g10-ch2-type .lesson-card .question-text,
-  body.g10-ch2-type.textbook-reader #lessonCard>#questionText{font-size:16px!important;line-height:1.62!important}
+  body.g10-ch2-type.textbook-reader #lessonCard>#questionText{font-size:var(--reader-question-size,16px)!important;line-height:1.62!important}
   body.g10-ch2-type .lesson-card .worked-step .step-reason{font-size:15.5px!important}
   body.g10-ch2-type .lesson-card .worked-step .step-equation{font-size:18px!important;line-height:1.6}
   body.g10-ch2-type .lesson-card :is(.math-answer,.final-answer-value){font-size:18px!important}

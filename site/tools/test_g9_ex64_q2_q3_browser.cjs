@@ -2,7 +2,7 @@
 /*
  * Audit #346 premerge + production browser evidence:
  * seven 2025 English exercise parts, 2 interface languages, 3 phone widths.
- * English-only source is intentional; Tamil editorial remains pending.
+ * Tamil prompt and explanations are checked on each visible card.
  */
 const assert=require('node:assert/strict');
 const fs=require('node:fs/promises'),path=require('node:path');
@@ -71,7 +71,7 @@ const CASES=[
       }));
       assert.equal(state.language,lang,'Language toggle');
       assert(state.question.includes(sourceValue),'Textbook source numeric prompt '+id);
-      assert(state.title.includes(part.replace(/^q([23])-(.*)$/,'Q$1($2)')),'Displayed original question part '+id);
+      assert(state.title.includes(part.replace(/^q([23])-(.*)$/,lang==='ta'?'வினா $1($2)':'Q$1($2)')),'Displayed original question part '+id);
       // KaTeX may present minute primes as apostrophes. Check semantics, not Unicode glyph identity.
       if(part.startsWith('q3'))for(const fn of ['sin','cos','tan'])assert(state.question.includes(fn),'Three source trig terms '+fn+' '+id);
       assert(state.steps>=4,'Three mathematical explanations and final answer '+id);
@@ -80,11 +80,12 @@ const CASES=[
       assert.equal(state.mathErrors,0,'All Grade 9 mathematical notation rendered');
       assert(state.overflowPx<=3,'No horizontal viewport overflow '+id+' '+lang+' '+width+' '+state.overflowPx);
       const compact=state.answer.replace(/\s+/g,'');
+      if(part==='q2-i' && lang==='ta')assert(state.answer.includes('அல்லது'),'Three accepted angles joined in Tamil');
       const digits=part==='q2-i'?['85','57','58','59']:answer.match(/\d+/g)||[];
       for(const token of digits)assert(compact.includes(token),'Final answer token '+token+' for '+id);
       if(lang==='ta'){
-       assert(state.title.includes('English only'),'New source label must disclose English-only status');
-       assert(state.pendingBadge.includes('தமிழ் மொழிபெயர்ப்பு நிலுவையில்'),'Tamil translation must be visibly marked pending');
+       assert.match(state.question,/[\u0B80-\u0BFF]/u,'Tamil task is visible');
+       assert((await page.locator('.step-reason').allInnerTexts()).every(text=>/[\u0B80-\u0BFF]/u.test(text)),'Tamil worked instructions');
       }
       if(part==='q3-ii')assert(!compact.includes('2.8665'),'Do not replace the prescribed table answer with calculator value');
       row.passed=true;

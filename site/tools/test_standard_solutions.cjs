@@ -393,12 +393,22 @@ for(const [grade,data] of Object.entries(classes)){
    assert.ok(item.answer&&item.answerTa,'Bilingual answer '+item.id);
   }else if(grade==='9'&&g9Ex64Release.records[item.id]){
    const proof=g9Ex64Release.records[item.id];
-   assert.equal(hash,proof.sha256,'Source-pinned four-figure-table release '+item.id);
+   const english=JSON.parse(JSON.stringify(item));
+   delete english.topic.ta;
+   delete english.title.ta;
+   delete english.answerTa;
+   delete english.answerMath;
+   delete english.q.ta;
+   english.label.ta=english.label.en+' (English only · Tamil review pending)';
+   for(const step of english.steps){ delete step.ta; delete step.mathTa; }
+   for(const key of ['taPdfPage','taPrintedPage','taDriveId','taPromptEvidence']) delete english.sourceFidelity[key];
+   assert.equal(crypto.createHash('sha256').update(JSON.stringify(english)).digest('hex'),proof.sha256,'Source-pinned four-figure-table release '+item.id);
    assert.equal(item.answer,proof.expectedFinalAnswer,'Official textbook table answer '+item.id);
    assert(item.q.en.includes(proof.sourcePart),'2025 source prompt '+item.id);
    assert.equal(item.translationReview,'pending');
    assert.equal(item.releaseStatus,'english-preview');
-   assert(!item.q.ta,'Do not invent Tamil explanation '+item.id);
+   assert.match(item.q.ta,/[\u0B80-\u0BFF]/u);
+   assert(item.steps.every(step=>step.ta));
   }else if(grade==='9'&&g9Ex32ById.has(item.id)){
    const approved=g9Ex32ById.get(item.id);
    assert.equal(crypto.createHash('sha256').update(JSON.stringify(m04EnglishProjection(item))).digest('hex'),
@@ -426,7 +436,14 @@ for(const [grade,data] of Object.entries(classes)){
    const originalChoices=auditedG9SourceChoices.records[item.id];
    const bilingualGeometry=g9BilingualGeometry.records[item.id];
    assert.ok([trig,correction,extended,originalChoices,bilingualGeometry].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
-   if(bilingualGeometry){
+   const algebra=require('../data/textbook-fidelity/g9-ch3-ex3-1-q10-q12-bilingual.json').records[item.id];
+   if(algebra){
+    const original={...item,...algebra.originalFields,steps:item.steps.map((step,i)=>({...step,ta:algebra.originalTamilReasons[i]}))};
+    assert.equal(crypto.createHash('sha256').update(JSON.stringify(original)).digest('hex'),preserved.sha256[item.id]);
+    assert.equal(item.q.en,algebra.originalFields.q.en);
+    assert.equal(item.q.ta,algebra.prompt.ta);
+    assert.deepEqual(item.steps.map(step=>step.ta).join('\n'),algebra.reasons.join('\n'));
+   }else if(bilingualGeometry){
     assert.equal(grade,'9');
     assert.equal(bilingualGeometry.originalRecordSha256,preserved.sha256[item.id],'Original geometry baseline '+item.id);
     const englishDigest=crypto.createHash('sha256').update(JSON.stringify(m04EnglishProjection(item))).digest('hex');
@@ -516,7 +533,7 @@ for(const [grade,data] of Object.entries(classes)){
          assert.equal(item.steps[i].math?.fallback,item.steps[i].eq,'Q3-Q5 visible math fallback '+item.id);
        }
        assert.equal(item.releaseStatus,'english-preview');
-       assert(!item.q.ta,'Do not invent Tamil '+item.id);
+       assert(item.q.ta&&item.steps.every(step=>step.ta),'Tamil Exercise 1.2 prompt and explanations '+item.id);
      }else if(g9Ch3CompleteNewIds.includes(item.id)||g9Ch5CompleteNewIds.includes(item.id)){
        assert.ok(item.q?.en&&item.q?.ta,'G9 bilingual prompt '+item.id);
        assert.ok(item.steps.length>=1&&item.steps.every(s=>s.en&&s.ta&&s.math?.latex),'G9 bilingual steps '+item.id);
@@ -531,7 +548,7 @@ for(const [grade,data] of Object.entries(classes)){
        assert.ok(item.steps.length>=3,'No missing Grade 9 working '+item.id);
        for(const step of item.steps)assert.equal(step.math?.fallback,step.eq,'Full accessible KaTeX fallbacks: '+item.id);
        assert.equal(item.releaseStatus,'english-preview');
-       assert(!item.q.ta,'Do not invent Grade 9 Tamil questions');
+       assert(item.q.ta&&item.steps.every(step=>step.ta),'Tamil Exercise 1.2 prompt and explanations '+item.id);
      }
    }else{
      const trace=traceSourceGate.records.find(r=>r.id===item.id);

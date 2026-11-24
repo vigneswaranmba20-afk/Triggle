@@ -8,42 +8,49 @@
   },
   "hints": {
     "c9-exercise-6-4-q2-i": {
+      "ta": "90° அருகில் சைன் மதிப்பு மிக மெதுவாக மாறுகிறது. நான்கு இலக்கங்களாக முழுமைப்படுத்தும்போது ஒரே மதிப்பு பல கோணங்களுக்குக் கிடைப்பதன் காரணம் இதுவே.",
       "step": 1,
       "expected": "Near 90°, several adjacent one-minute entries round to the same four-figure value.",
       "en": "Near ninety degrees, sine changes very slowly. The school table can round several adjacent minute angles to the same four-figure value. Keep every angle accepted by the textbook answer key instead of choosing one calculator answer.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q2-ii": {
+      "ta": "இங்கு மூன்று கலைகளை கோணத்துடன் கூட்டுகிறோம். கொசைன் மதிப்பு குறைவதால் அட்டவணை மதிப்பிலிருந்து சராசரி வேறுபாட்டைக் கழிக்கிறோம்.",
       "step": 1,
       "expected": "Cosine decreases as the acute angle grows.",
       "en": "Natural cosines decrease as the angle increases between zero and ninety degrees. Start from the preceding six-minute column and subtract the mean difference for the three leftover minutes.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q2-iii": {
+      "ta": "குறுங்கோணம் அதிகரிக்கும்போது டேன்ஜென்ட் அதிகரிப்பதால் ஒரு கலைக்கான வேறுபாட்டை முந்தைய நிரலின் மதிப்புடன் கூட்ட வேண்டும்.",
       "step": 1,
       "expected": "One extra minute adds a mean difference 0.0003",
       "en": "The natural tangent grows as the acute angle increases. At 4 degrees 6 minutes the table reads 0.0717; adding the single-minute mean difference 0.0003 gives the requested 0.0720.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q2-iv": {
+      "ta": "87°36′ ஐவிடப் பெரிய கோணத்திற்குக் கொசைன் குறைவாக இருக்கும். எனவே 0.0419 இல் இருந்து மூன்று கலைகளுக்குரிய 0.0009 ஐக் கழிக்க வேண்டும்.",
       "step": 1,
       "expected": "For the remaining 3′, subtract the cosine mean difference 0.0009",
       "en": "To reverse this cosine entry, use 87 degrees 36 minutes as the preceding table column. Cosine decreases with angle, so subtract the three-minute difference 0.0009 to reach 0.0410.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q2-v": {
+      "ta": "தேடிய மதிப்பே அச்சிட்ட நிரலில் இருக்கும்போது அருகிலுள்ள நிரல்களுக்கு இடையே மதிப்பிட வேண்டியதில்லை.",
       "step": 1,
       "expected": "It occurs at 82°30′, exactly at a six-minute column.",
       "en": "If the target tangent is printed exactly at a six-minute column, no mean difference is necessary. Read the angle directly as 82 degrees 30 minutes, rather than estimating a nearby calculator angle.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q3-i": {
+      "ta": "முதலில் ஒவ்வொரு விகிதத்திற்கும் கலைகளுக்கான திருத்தத்தைச் செய்ய வேண்டும். பின்னர் நான்கு தசம இடங்களுடன் எழுதிய மூன்று மதிப்புகளையும் கூட்டலாம்.",
       "step": 1,
       "expected": "The tabulated values used in the textbook calculation are",
       "en": "Read each trigonometric value separately from the school's four-figure table, applying minute adjustments before adding. Keep four decimal places in each tabulated value so the final sum follows the textbook's method.",
       "concept": "trigRatio"
     },
     "c9-exercise-6-4-q3-ii": {
+      "ta": "கடைசி உறுப்புக்கு முன் கழித்தல் குறி உள்ளது. அட்டவணையின் நான்கு இலக்க மதிப்புகளைப் பயன்படுத்தும்போது கிடைக்கும் விடையும் அதிகத் துல்லியமுள்ள கணிப்பானின் விடையும் வேறுபடலாம்.",
       "step": 1,
       "expected": "The values in the school-table solution are",
       "en": "The expression contains one subtraction. Read all three prescribed four-figure table values, add tangent and cosine, then subtract sine. This gives the school answer 2.8659, which differs from rounding a high-precision calculator result.",

@@ -174,8 +174,8 @@ function build(){
   const overrides=authored[q.id];
   const compiler=['2','3'].includes(String(q.chapter))?rich:extended.rich;
   const compile=overrides?.variables?(value,options)=>compiler(value,{...options,variables:overrides.variables}):compiler;
-  const record={id:q.id,questionMath:q.questionMath||Object.fromEntries(Object.entries(q.q).map(([lang,text])=>[lang,compileQuestion(text,compile)])),
-   answerMath:q.answerMath||compile(q.answer,{display:true}),steps:q.steps.map(s=>({math:s.math||compile(s.eq,{display:true}),reasonMath:s.reasonMath||Object.fromEntries(['en','ta'].filter(lang=>s[lang]).map(lang=>[lang,compile(s[lang])]))}))};
+  const record={id:q.id,questionMath:Object.fromEntries(Object.entries(q.q).map(([lang,text])=>[lang,q.questionMath?.[lang]??compileQuestion(text,compile)])),
+   answerMath:q.answerMath||compile(q.answer,{display:true}),steps:q.steps.map(s=>({math:s.math||compile(s.eq,{display:true}),reasonMath:Object.fromEntries(['en','ta'].filter(lang=>s[lang]||s.reasonMath?.[lang]).map(lang=>[lang,s.reasonMath?.[lang]??compile(s[lang])]))}))};
   if(overrides){
    for(const [index,value] of Object.entries(overrides.steps||{})){
     if(q.steps[index]?.eq!==value.source)throw Error('Authored Grade 9 notation source mismatch: '+q.id+'/'+index);

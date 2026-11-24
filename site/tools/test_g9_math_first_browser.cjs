@@ -68,7 +68,10 @@ async function sample(page, base, id, width) {
   assert.equal(metrics.overflow, false, name + ' page width');
   assert.equal(metrics.viewport, width, name + ' mobile viewport width');
   assert.equal(metrics.failures, 0, name + ' renders');
-  assert(metrics.question >= 18 && metrics.reason >= 16, name + ' reading scale');
+  if (width <= 800) {
+    assert(Math.abs(metrics.question - Math.min(17, Math.max(15, width * .039))) < .01, name + ' responsive question size');
+    assert.equal(metrics.reason, 15, name + ' worked instruction size');
+  } else assert(metrics.question >= 18 && metrics.reason >= 16, name + ' desktop reading scale');
   assert.equal(metrics.answer, 1, name + ' visible final answer');
   for (const formula of metrics.details) {
     assert(formula.visible && formula.accessible, name + ' glyphs and MathML');
@@ -82,13 +85,19 @@ async function sample(page, base, id, width) {
   }
 }
 
-async function checkEnglishExercise(page, base, id, verify) {
+async function checkExerciseLanguages(page, base, id, verify) {
   await load(page, base, id);
   try {
     for (const language of ['en', 'ta']) {
       await page.locator(language === 'en' ? '#langEn' : '#langTa').click();
       assert.equal(await page.locator('html').getAttribute('lang'), language);
-      if (language === 'ta') assert.equal(await page.locator('#questionText').getAttribute('lang'), 'en');
+      if (language === 'ta') {
+        const prompt = page.locator('#questionText');
+        if (id.startsWith('g9-ch1-ex1.2-')) {
+          assert.equal(await prompt.getAttribute('lang'), null);
+          assert.match(await prompt.innerText(), /\p{Script=Tamil}/u);
+        } else assert.equal(await prompt.getAttribute('lang'), 'en');
+      }
       assert.equal(await page.locator('[data-math-error]').count(), 0, id);
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), id + ' fits the page');
       await verify(`${id} in ${language} at ${page.viewportSize().width}px`);
@@ -151,7 +160,7 @@ async function coefficientConclusions(page, base) {
 
 async function setLanguageAndStatistics(page, base) {
   for (const id of ['g9-ch1-ex1.2-q7', 'g9-ch1-ex1.2-q10-i']) {
-    await checkEnglishExercise(page, base, id, async name => {
+    await checkExerciseLanguages(page, base, id, async name => {
       const exponent = page.locator('#stepsList .step-reason math msup').filter({ hasText: '2n(A)' });
       assert.equal(await exponent.count(), 1, name + ' typesets the power-set exponent in the explanation');
       const prose = await page.locator('#stepsList .step-reason').evaluateAll(nodes => nodes.flatMap(node =>
@@ -164,7 +173,7 @@ async function setLanguageAndStatistics(page, base) {
     ['g9-ch8-ex8.3-q5', 'The modal class is 20–30', 'The estimated mode is 24 marks', '24 marks', ['f_1', 'f_0', 'f_2']],
   ];
   for (const [id, interval, result, answer, symbols] of stats) {
-    await checkEnglishExercise(page, base, id, async name => {
+    await checkExerciseLanguages(page, base, id, async name => {
       const reasons = page.locator('#stepsList .step-reason');
       const prose = await reasons.evaluateAll(nodes => nodes.map(node => [...node.childNodes]
         .map(child => child.dataset?.mathFallback || child.textContent).join('')));
@@ -250,12 +259,12 @@ async function glyphWidthReflow(page, base) {
   await load(page, base, coordinates);
   const formulas = page.locator(formulaSelector);
   const index = await formulas.evaluateAll(items => items.findIndex(el =>
-    el.clientWidth > 50 && !!el.querySelector('.katex-html')));
+    el.classList.contains('triggle-tex-display') && el.clientWidth > 50 && !!el.querySelector('.katex-html')));
   assert(index >= 0, 'A visible formula with KaTeX glyphs exists');
   const formula = formulas.nth(index);
   await formula.evaluate(el => {
     const glyphs = el.querySelector('.katex-html');
-    glyphs.style.minWidth = (el.clientWidth + 140) + 'px';
+    glyphs.style.minWidth = (innerWidth + 140) + 'px';
   });
   try {
     await page.waitForFunction(i => {

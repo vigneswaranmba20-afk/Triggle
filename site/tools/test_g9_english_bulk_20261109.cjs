@@ -18,6 +18,10 @@ for(const q of items){assert.ok(q.q.en.length>40);assert.ok(q.answer.length>2);a
   assert.equal(q.kind,'textbook');
   assert.equal(q.sourceFidelity.status,'english-source-page-visual-checked');
   assert.equal(q.page,97);
+ }else if(q.exercise==='3.1'&&q.chapter==='3'){
+  assert.equal(q.sourceFidelity.taPdfPage,101);
+  assert.equal(q.sourceFidelity.enPdfPage,94);
+  assert.match(q.q.ta,/[\u0B80-\u0BFF]/);
  }else if(geometry.records[q.id]){
   const {en,ta}=geometry.records[q.id].pages;
   assert.equal(q.kind,'reference');

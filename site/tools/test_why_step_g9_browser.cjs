@@ -31,7 +31,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert.equal(await control.count(),1,'Quiet one disclosure per authored exercise '+id);
     assert.equal(await control.evaluate(el=>el.open),false,'Collapsed by default '+id);
     assert.ok(await summary.evaluate(el=>el.offsetHeight>=44),'Readable touch target '+id+' @'+width);
-    assert.ok(await summary.evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=14),'Readable disclosure label '+id+' @'+width);
+    assert.ok(await summary.evaluate(el=>parseFloat(getComputedStyle(el).fontSize)===(innerWidth<=800?12:14)),'Readable disclosure label '+id+' @'+width);
     const before=await page.evaluate(()=>({
       q:document.querySelector('#questionText')?.innerHTML,
       steps:[...document.querySelectorAll('#stepsList li.worked-step:not(.final-answer-step)')].map(li=>li.querySelector('.step-equation')?.innerHTML),
