@@ -10,7 +10,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    ['c10-3-ex3-2-q1-iii','3x⁴ + 6x³','x(x² + 4x + 4)'],
    ['c10-3-ex3-2-q1-iv','3x³ + 3x² + 3x + 3','3(x² + 1)'],
    ['c10-3-ex3-2-q2-i','4x²y','8x³y²'],
-   ['c10-3-ex3-2-q2-ii','−9a³b²','36a³b²c'],
+   ['c10-3-ex3-2-q2-ii','9a³b²','36a³b²c'],
    ['c10-3-ex3-2-q2-iii','16m','48m²n²'],
    ['c10-3-ex3-2-q2-iv','p² − 3p + 2','(p − 1)(p − 2)(p + 2)'],
    ['c10-3-ex3-2-q2-v','2x² − 5x − 3','4(x + 3)(2x + 1)(x − 3)'],
@@ -73,6 +73,23 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert(qText.trim().length>=10,'Question text rendered '+id+' @'+width);
     const ansText=await page.locator('#answerText').innerText();
     assert(ansText.trim().length>0&&!/loading/i.test(ansText),'Answer text rendered '+id+' @'+width);
+    if(id.startsWith('c10-3-ex3-2-')){
+     for(const lang of ['Ta','En']){
+      await page.locator('#lang'+lang).click();
+      const prompt=await page.locator('#questionText').innerText();
+      const reasons=await page.locator('#stepsList .step-reason').allInnerTexts();
+      if(lang==='Ta'){
+       assert.match(prompt,/காண்க/);
+       assert(reasons.length>=3 && reasons.slice(0,3).every(t=>/[அ-ஹ]/.test(t)),id);
+      }
+      if(['c10-3-ex3-2-q2-ii','c10-3-ex3-2-q2-iii'].includes(id)){
+       const formula=await page.locator('#questionText .katex-html').innerText();
+       const answer=await page.locator('.final-answer-value .katex-html').innerText();
+       assert.doesNotMatch(formula+answer,/[−-]/);
+       assert.match(answer,id.endsWith('-ii')?/36/:/48/);
+      }
+     }
+    }
     assert((await page.locator('#stepsList .katex').count())>=1,'KaTeX rendered in steps '+id);
     assert((await page.locator('#stepsList li.worked-step').count())>=2,'At least 2 steps '+id);
     assert.equal(await page.locator('[data-math-error]').count(),0,'No KaTeX error '+id);
