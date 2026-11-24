@@ -148,6 +148,12 @@ async function checkConcepts(browser, base) {
      assert.ok(await lesson.locator('.triggle-tex').evaluateAll(nodes => nodes.every(node => node.scrollWidth <= node.clientWidth + 1)), 'KaTeX fits at ' + width + ' for concept ' + (i + 1));
      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'Page fits at ' + width);
      const choices = lesson.locator('.probability-answers button');
+     const hintButton = lesson.getByRole('button', {name: ta ? 'குறிப்பு' : 'Hint', exact: true});
+     assert.ok(await hintButton.evaluate(button => button.offsetHeight >= 44 && button.offsetWidth >= 44));
+     await hintButton.tap();
+     const hint = await lesson.locator('.probability-feedback').innerText();
+     assert.ok(hint.length > 20 && tamil.test(hint) === ta);
+     assert.equal(await lesson.locator('.probability-answers button[aria-pressed="true"]').count(), 0);
      await choices.first().tap();
      assert.match(await lesson.locator('.probability-feedback').innerText(), ta ? /^மீண்டும் முயலுங்கள்/ : /^Try again/);
      await choices.nth(practiceAnswers[i]).tap();
