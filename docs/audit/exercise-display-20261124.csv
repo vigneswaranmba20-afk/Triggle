@@ -523,42 +523,42 @@ Batch,Order,Question ID,Typography changed,Prompt restored,Tamil baseline flag,L
 6,522,c9-exercise-6-5-q8,1,,0,390,Baseline bilingual; layout checked,,pending
 6,523,c9-exercise-6-5-q9,1,,0,390,Baseline bilingual; layout checked,,pending
 6,524,c9-exercise-6-5-q10,1,,0,390,Baseline bilingual; layout checked,,pending
-6,525,g9-ch7-ex7.1-q1,1,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending
-6,526,g9-ch7-ex7.1-q2,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,527,g9-ch7-ex7.1-q3,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,528,g9-ch7-ex7.1-q4,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,529,g9-ch7-ex7.1-q5,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending
-6,530,g9-ch7-ex7.1-q6,1,,1,390,"Check prompt, reasons 1 2 3 4 5 6 against prescribed textbook",,pending
-6,531,g9-ch7-ex7.1-q7,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending
-6,532,g9-ch7-ex7.1-q8,1,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending
-6,533,g9-ch7-ex7.1-q9,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending
-6,534,g9-ch7-ex7.1-q10,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,535,g9-ch7-ex7.2-q1,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,536,g9-ch7-ex7.2-q2,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,537,g9-ch7-ex7.2-q3,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending
-6,538,g9-ch7-ex7.2-q4,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending
-6,539,g9-ch7-ex7.2-q5,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,540,g9-ch7-ex7.2-q6,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,541,g9-ch7-ex7.2-q7,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,542,g9-ch7-ex7.3-q1,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,543,g9-ch7-ex7.3-q2,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,544,g9-ch7-ex7.3-q3,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending
-6,545,g9-ch7-ex7.3-q4,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,546,g9-ch7-ex7.3-q5,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending
-6,547,g9-ch7-ex7.3-q6,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,548,g9-ch7-ex7.3-q7,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending
-6,549,g9-ch7-ex7.3-q8,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,550,g9-ch7-ex7.3-q9,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending
-6,551,g9-ch7-ex7.4-q1,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,552,g9-ch7-ex7.4-q2,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,553,g9-ch7-ex7.4-q3,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,554,g9-ch7-ex7.4-q4,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,555,g9-ch7-ex7.4-q5,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,556,g9-ch7-ex7.4-q6,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,557,g9-ch7-ex7.4-q7,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,558,g9-ch7-ex7.4-q8,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,559,g9-ch7-ex7.4-q9,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
-6,560,g9-ch7-ex7.4-q10,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
+6,525,g9-ch7-ex7.1-q1,1,,1,320 360 390,"Tamil textbook printed p267; prompt, numbered explanations and answer checked",,pending
+6,526,g9-ch7-ex7.1-q2,1,,1,320 360 390,"Tamil textbook printed p267; prompt, numbered explanations and answer checked",,pending
+6,527,g9-ch7-ex7.1-q3,1,,1,320 360 390,"Tamil textbook printed p267; prompt, numbered explanations and answer checked",,pending
+6,528,g9-ch7-ex7.1-q4,1,,1,320 360 390,"Tamil textbook printed p267; prompt, numbered explanations and answer checked",,pending
+6,529,g9-ch7-ex7.1-q5,1,,1,320 360 390,"Tamil textbook printed p267; prompt, numbered explanations and answer checked",,pending
+6,530,g9-ch7-ex7.1-q6,1,,1,320 360 390,"Tamil textbook printed p267; prompt, numbered explanations and answer checked",,pending
+6,531,g9-ch7-ex7.1-q7,1,,1,320 360 390,"Tamil textbook printed p267; prompt, numbered explanations and answer checked",,pending
+6,532,g9-ch7-ex7.1-q8,1,,1,320 360 390,"Tamil textbook printed p267; prompt, numbered explanations and answer checked",,pending
+6,533,g9-ch7-ex7.1-q9,1,,1,320 360 390,"Tamil textbook printed p267; prompt, numbered explanations and answer checked",,pending
+6,534,g9-ch7-ex7.1-q10,1,,1,320 360 390,"Tamil textbook printed p267; prompt, numbered explanations and answer checked",,pending
+6,535,g9-ch7-ex7.2-q1,1,,1,320 360 390,"Tamil textbook printed p272; prompt, numbered explanations and answer checked",,pending
+6,536,g9-ch7-ex7.2-q2,1,,1,320 360 390,"Tamil textbook printed p272; prompt, numbered explanations and answer checked",,pending
+6,537,g9-ch7-ex7.2-q3,1,,1,320 360 390,"Tamil textbook printed p272; prompt, numbered explanations and answer checked",,pending
+6,538,g9-ch7-ex7.2-q4,1,,1,320 360 390,"Tamil textbook printed p272; prompt, numbered explanations and answer checked",,pending
+6,539,g9-ch7-ex7.2-q5,1,,1,320 360 390,"Tamil textbook printed p272; prompt, numbered explanations and answer checked",,pending
+6,540,g9-ch7-ex7.2-q6,1,,1,320 360 390,"Tamil textbook printed p272; prompt, numbered explanations and answer checked",,pending
+6,541,g9-ch7-ex7.2-q7,1,,1,320 360 390,"Tamil textbook printed p272; prompt, numbered explanations and answer checked",,pending
+6,542,g9-ch7-ex7.3-q1,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,543,g9-ch7-ex7.3-q2,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,544,g9-ch7-ex7.3-q3,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,545,g9-ch7-ex7.3-q4,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,546,g9-ch7-ex7.3-q5,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,547,g9-ch7-ex7.3-q6,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,548,g9-ch7-ex7.3-q7,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,549,g9-ch7-ex7.3-q8,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,550,g9-ch7-ex7.3-q9,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,551,g9-ch7-ex7.4-q1,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,552,g9-ch7-ex7.4-q2,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,553,g9-ch7-ex7.4-q3,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,554,g9-ch7-ex7.4-q4,1,,1,320 360 390,"Tamil textbook printed p278; prompt, numbered explanations and answer checked",,pending
+6,555,g9-ch7-ex7.4-q5,1,,1,320 360 390,"Tamil textbook printed p279; prompt, numbered explanations and answer checked",,pending
+6,556,g9-ch7-ex7.4-q6,1,,1,320 360 390,"Tamil textbook printed p279; prompt, numbered explanations and answer checked",,pending
+6,557,g9-ch7-ex7.4-q7,1,,1,320 360 390,"Tamil textbook printed p279; prompt, numbered explanations and answer checked",,pending
+6,558,g9-ch7-ex7.4-q8,1,,1,320 360 390,"Tamil textbook printed p279; prompt, numbered explanations and answer checked",,pending
+6,559,g9-ch7-ex7.4-q9,1,,1,320 360 390,"Tamil textbook printed p279; prompt, numbered explanations and answer checked",,pending
+6,560,g9-ch7-ex7.4-q10,1,,1,320 360 390,"Tamil textbook printed p279; prompt, numbered explanations and answer checked",,pending
 6,561,g9-ch8-ex8.1-q1,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
 6,562,g9-ch8-ex8.1-q2,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending
 6,563,g9-ch8-ex8.1-q3,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending
