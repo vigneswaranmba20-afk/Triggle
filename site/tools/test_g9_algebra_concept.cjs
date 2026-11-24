@@ -33,7 +33,7 @@ for(const name of ['g9-algebra-chapter.js','g9-algebra-concepts.js','g9-algebra-
   assert.ok(sw.includes(name),'Missing offline asset: '+name);
 }
 assert.match(hub,/case 'g9-ch3': return window\.TRIGGLE_ALGEBRA_PATH\?\.stages/);
-assert.match(app,/window\.TriggleChapterHub\?\.grade9Stages\(chapter\.id\)/);
+assert.match(app,/window\.TriggleChapterHub\?\.grade9Stages\?\.\(chapter\.id\)/);
 const factorCheck=p.stages.find(stage=>stage.section==='3.3').transfers[1];
 assert.match(factorCheck.math,/x\^3 \+ 5x\^2 - 10x \+ 4/,'same polynomial in the transfer prompt and display');
 assert.match(js,/3x\^2\+2x\+5/);
