@@ -259,12 +259,12 @@ async function glyphWidthReflow(page, base) {
   await load(page, base, coordinates);
   const formulas = page.locator(formulaSelector);
   const index = await formulas.evaluateAll(items => items.findIndex(el =>
-    el.clientWidth > 50 && !!el.querySelector('.katex-html')));
+    el.classList.contains('triggle-tex-display') && el.clientWidth > 50 && !!el.querySelector('.katex-html')));
   assert(index >= 0, 'A visible formula with KaTeX glyphs exists');
   const formula = formulas.nth(index);
   await formula.evaluate(el => {
     const glyphs = el.querySelector('.katex-html');
-    glyphs.style.minWidth = (el.clientWidth + 140) + 'px';
+    glyphs.style.minWidth = (innerWidth + 140) + 'px';
   });
   try {
     await page.waitForFunction(i => {
