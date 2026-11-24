@@ -123,10 +123,12 @@ function practice(item,lang){const q=item.q.en;
   const b=`<circle cx="250" cy="176" r="107" fill="#fce0eea8" stroke="#d76e9d" stroke-width="4"/><circle cx="371" cy="176" r="107" fill="#dce6ff9e" stroke="#628ddd" stroke-width="4"/>`+text(199,176,'1, 2',23,'#ad4278')+text(307,176,'3',24,'#49408c')+text(415,176,'4',24,'#3476cb')+text(195,55,'A',23)+text(432,55,'B',23)+text(310,316,'A ∩ B = {3}',19,'#5c4daa');
   return pack(svg(b,'Set union and intersection of the given sets')+legend(['Union: {1,2,3,4}','Intersection: {3}']),lang==='ta'?'கொடுக்கப்பட்ட கணங்களின் வென் வரைபடம்.':'Venn diagram places each specified element into its proper region.');
  }
- if(/Two angles of a triangle are 55° and 65°/.test(q)){
-  const A=100,B=494,base=278,a=55*Math.PI/180,b=65*Math.PI/180,height=(B-A)/(1/Math.tan(a)+1/Math.tan(b)),cx=A+height/Math.tan(a),cy=base-height;
-  const body=`<path d="M${A} ${base} L${B} ${base} L${cx} ${cy} Z" fill="#fff2df" stroke="#d8a760" stroke-width="4"/>`+text(A+61,base-15,'55°',19)+text(B-55,base-15,'65°',19)+text(cx,cy+42,'60°',21,'#7355bb')+text(306,328,'55° + 65° + 60° = 180°',19,'#5e539f');
-  return pack(svg(body,'Triangle with correct angles 55 degrees, 65 degrees, 60 degrees'),lang==='ta'?'மூன்று கோணங்களும் 180° ஆகும்; தோற்றமும் உண்மையான கோண விகிதத்தில்.':'This triangle is constructed using the given angles, not drawn arbitrarily.');
+ if(item.id==='c9-4-4-practice-5'||/Two angles of a triangle are 55° and 65°/.test(q)){
+  // Fit the exact triangle and every angle label within the mobile figure.
+  const A=185,B=435,base=280,a=55*Math.PI/180,b=65*Math.PI/180,height=(B-A)/(1/Math.tan(a)+1/Math.tan(b)),cx=A+height/Math.tan(a),cy=base-height,r=37;
+  const arcs=`<path d="M${A+r} ${base} A${r} ${r} 0 0 0 ${A+r*Math.cos(a)} ${base-r*Math.sin(a)} M${B-r} ${base} A${r} ${r} 0 0 1 ${B-r*Math.cos(b)} ${base-r*Math.sin(b)} M${cx-r*Math.cos(a)} ${cy+r*Math.sin(a)} A${r} ${r} 0 0 0 ${cx+r*Math.cos(b)} ${cy+r*Math.sin(b)}" fill="none" stroke="#7355bb" stroke-width="3"/>`;
+  const body=`<path d="M${A} ${base} L${B} ${base} L${cx} ${cy} Z" fill="#fff2df" stroke="#d8a760" stroke-width="4"/>`+arcs+text(A+63,base-22,'55°',29)+text(B-62,base-22,'65°',29)+text(cx,cy+68,'x',30,'#7355bb')+text(310,329,'55° + 65° + x = 180°',25,'#5e539f');
+  return pack(svg(body,lang==='ta'?'55°, 65° மற்றும் தெரியாத கோணம் x கொண்ட முக்கோணம்':'Triangle with given angles 55° and 65° and unknown angle x'),lang==='ta'?'முக்கோணத்தின் உட்கோணங்களின் கூட்டுத்தொகை 180°.':'The interior angles of a triangle add to 180°.');
  }
  if(/distance between points \(0,0\) and \(3,4\)/.test(q)){
   const A=[94,275],B=[394,275],C=[394,65];let body=`<path d="M94 275L394 275L394 65Z" fill="#f2ebff" stroke="#a394d4" stroke-width="2"/>`+line(94,275,394,275,'#4c80dc',6)+line(394,275,394,65,'#e66a9b',6)+line(94,275,394,65,'#e1a74b',6)+text(243,298,'3',19)+text(420,169,'4',19)+text(225,152,'5',23,'#8c6528')+text(86,299,'(0,0)',15)+text(401,52,'(3,4)',15)+text(312,331,'3² + 4² = 5²',18,'#6255a5');

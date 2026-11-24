@@ -72,6 +72,26 @@ async function run(){
     await page.locator('#exerciseIndexLink').click();
     assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
    }
+
+   // AUD28-04: the real practice route, figure modal and both languages.
+   await page.goto(base+'/index.html?class=9&question=c9-4-4-practice-5');
+   for(const language of ['En','Ta']){
+    await page.locator('#lang'+language).click();
+    await page.locator('#figureBtn').click();
+    const picture=page.locator('#diagramContent svg').first();
+    assert(await picture.isVisible(),'Angle figure visible '+width+' '+language);
+    const evidence=await picture.evaluate(el=>{
+     const v=el.viewBox.baseVal, p=el.querySelector('path'), b=p.getBBox();
+     return {label:el.getAttribute('aria-label'),text:el.textContent,inside:b.x>=0&&b.y>=0&&b.x+b.width<=v.width&&b.y+b.height<=v.height,svgWidth:el.getBoundingClientRect().width,viewport:innerWidth};
+    });
+    assert(evidence.inside,'All triangle vertices within figure bounds');
+    assert(evidence.svgWidth<=evidence.viewport+1,'Figure fits viewport');
+    assert(/55°/.test(evidence.text)&&/65°/.test(evidence.text)&&/x/.test(evidence.text),'Correct angle labels');
+    assert(!/sin θ|cos θ|60°/.test(evidence.text),'No unrelated trig or solution in figure');
+    assert(language==='Ta'?/முக்கோணம்/.test(evidence.label):/unknown angle x/.test(evidence.label),'Localized figure description');
+    await page.locator('#closeDiagram').click();
+    assert(!(await page.locator('#figureDialog').isVisible()),'Figure can be closed');
+   }
    assert.deepEqual(errors,[], 'No browser JS errors at '+width);
    await ctx.close();
   }
