@@ -70,7 +70,9 @@ function safe(s){return s.replace(/[^a-z0-9-]+/gi,'-');}
      if(c.id==='AUD06-02'){
        await page.locator('.probability-demo button').last().click();
        const result=page.locator('.probability-result');
-       assert.match(await result.innerText(),lang==='ta'?/சீட்டு 4 இரண்டுக்கும் பொருந்து/:/Ticket 4 matches both/i);
+       // Pull requests audit the currently deployed lesson before a new release.
+       const lessonLanguage=await page.locator('.probability-lesson').getAttribute('lang');
+       assert.match(await result.innerText(),lessonLanguage==='ta'?/சீட்டு 4 இரண்டுக்கும் பொருந்து/:/Ticket 4 matches both/i);
        assert.deepEqual(await result.locator('mfrac mn').allTextContents(),['2','4','2','4','3','4','2','2','4']);
      }
      await page.screenshot({path:path.join(OUT,tag+'-top.png'),fullPage:true});
