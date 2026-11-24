@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "2f7f0aaeb855c3d45f2289bcef0b74857fc325c9",
-  "updatedAt": "2026-11-24T01:30:35Z",
+  "sourceCommit": "e759259e944c7a25b0eee63ddea17788b081a094",
+  "updatedAt": "2026-11-24T07:47:27+00:00",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -34,7 +34,7 @@
     "site/data/g9-ch5-distance-concept.js": "3154c8e0da99f96c745327d9d7ffde5cf8f1a042d1952fdd0da5e9785f8833c7",
     "site/data/g9-clear-math.js": "7e5944738dc320141c05bfad27a42c37bcfb4801a9c44d4427dcd50aec683ba9",
     "site/data/g9-mensuration-chapter.js": "0f227dbd9717a4df7f87430035ce6ee19cbf62f02a226547f9f9db42c27160ee",
-    "site/data/g9-mensuration-remaining.js": "777095314f54cde92f5c6abc567bb4231842cf94c1b9459206e5dedd7cf9b7c8",
+    "site/data/g9-mensuration-remaining.js": "35b2b5ee155f58d26a55c7fec9fc32b997b48d1ade425a9b9ac7ec76f926fa23",
     "site/data/g9-probability-chapter.js": "5b9ee457150461a7ce46f3b2e9ede7c7d1234dfa8e751b05ff71d22e4245ca79",
     "site/data/g9-textbook-activities.js": "0f701b4c04535d26cedbebace50820773b41dc78114baa0c9194d49217cde6b4",
     "site/data/math-layout/g10-ch1-chatgpt-20261113.js": "7f74a9d8f2f0503b21e696a51731efab927d3009464c5e3713e861801b9aefd7",

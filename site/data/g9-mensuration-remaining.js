@@ -94,6 +94,35 @@ const more = [
       "fallback": "One triangle 60 square centimetres; two triangles 120 square centimetres.",
       "display": true
     },
+    "quiz": {
+      "question": {
+        "en": "A rhombus has sides of 10 cm and one diagonal of 12 cm. What is its full area?",
+        "ta": "ஒரு சாய்சதுரத்தின் ஒவ்வொரு பக்கமும் 10 செ.மீ., ஒரு மூலைவிட்டம் 12 செ.மீ. எனில் அதன் மொத்தப் பரப்பளவு என்ன?"
+      },
+      "choices": [
+        {
+          "en": "48 cm²",
+          "ta": "48 செ.மீ²"
+        },
+        {
+          "en": "96 cm²",
+          "ta": "96 செ.மீ²"
+        },
+        {
+          "en": "120 cm²",
+          "ta": "120 செ.மீ²"
+        }
+      ],
+      "correct": 1,
+      "hint": {
+        "en": "Split the rhombus into two triangles with sides 10, 10 and 12 cm; apply Heron’s formula to each.",
+        "ta": "சாய்சதுரத்தை 10, 10, 12 செ.மீ. பக்கங்களுள்ள இரு முக்கோணங்களாகப் பிரித்து ஹெரான் சூத்திரத்தைப் பயன்படுத்துக."
+      },
+      "why": {
+        "en": "Each triangle has semiperimeter 16 cm and area √(16×6×6×4) = 48 cm²; the total is 96 cm².",
+        "ta": "ஒவ்வொரு முக்கோணத்தின் அரைச் சுற்றளவு 16 செ.மீ.; பரப்பளவு √(16×6×6×4) = 48 செ.மீ²; மொத்தம் 96 செ.மீ²."
+      }
+    },
     "practiceId": "g9-ch7-ex7.1-q7"
   },
   {
@@ -186,6 +215,35 @@ const more = [
       "fallback": "The four walls cover 36 square metres.",
       "display": true
     },
+    "quiz": {
+      "question": {
+        "en": "A room is 6 m long, 3 m broad and 4 m high. Find the area of its four walls.",
+        "ta": "6 மீ நீளம், 3 மீ அகலம், 4 மீ உயரம் கொண்ட அறையின் நான்கு சுவர்களின் பரப்பளவைக் காண்க."
+      },
+      "choices": [
+        {
+          "en": "72 m²",
+          "ta": "72 மீ²"
+        },
+        {
+          "en": "108 m²",
+          "ta": "108 மீ²"
+        },
+        {
+          "en": "36 m²",
+          "ta": "36 மீ²"
+        }
+      ],
+      "correct": 0,
+      "hint": {
+        "en": "Use lateral surface area 2h(l+b); exclude the floor and ceiling.",
+        "ta": "பக்கப்பரப்பு 2h(l+b) சூத்திரத்தைப் பயன்படுத்துக; தரை, கூரையைச் சேர்க்க வேண்டாம்."
+      },
+      "why": {
+        "en": "2×4×(6+3) = 72 m².",
+        "ta": "2×4×(6+3) = 72 மீ²."
+      }
+    },
     "practiceId": "g9-ch7-ex7.2-q1"
   },
   {
@@ -252,16 +310,16 @@ const more = [
     },
     "choices": [
       {
-        "en": "16 cm³",
-        "ta": "16 செ.மீ³"
+        "en": "25 cm³",
+        "ta": "25 செ.மீ³"
       },
       {
-        "en": "12 cm³",
-        "ta": "12 செ.மீ³"
+        "en": "15 cm³",
+        "ta": "15 செ.மீ³"
       },
       {
-        "en": "64 cm³",
-        "ta": "64 செ.மீ³"
+        "en": "125 cm³",
+        "ta": "125 செ.மீ³"
       }
     ],
     "correct": 2,
@@ -270,13 +328,42 @@ const more = [
       "ta": "கனசதுரத்திற்கு V = a³. 5 × 5 × 5 என பெருக்குக; 3 × 5 அல்ல."
     },
     "why": {
-      "en": "A cube with side 4 cm contains 4 rows, 4 columns and 4 layers of unit cubes: 4×4×4=64 cm³.",
-      "ta": "4 செ.மீ. பக்கமுள்ள கனசதுரத்தில் 4×4×4=64 அலகுக் கனங்கள் உள்ளன. கனஅளவு 64 கன செ.மீ."
+      "en": "A cube with side 5 cm contains 5 rows, 5 columns and 5 layers of unit cubes: 5×5×5=125 cm³.",
+      "ta": "5 செ.மீ. பக்கமுள்ள கனசதுரத்தில் 5×5×5=125 அலகுக் கனங்கள் உள்ளன. கனஅளவு 125 கன செ.மீ."
     },
     "whyMath": {
-      "latex": "V=a^{3}=4\\times4\\times4=64\\text{ cm}^{3}",
-      "fallback": "Four cubed is 64 cubic centimetres.",
+      "latex": "V=a^{3}=5\\times5\\times5=125\\text{ cm}^{3}",
+      "fallback": "Five cubed is 125 cubic centimetres.",
       "display": true
+    },
+    "quiz": {
+      "question": {
+        "en": "A solid cube has edge length 6 cm. What is its volume?",
+        "ta": "6 செ.மீ. விளிம்பு நீளம் கொண்ட கனசதுரத்தின் கனஅளவு என்ன?"
+      },
+      "choices": [
+        {
+          "en": "36 cm³",
+          "ta": "36 செ.மீ³"
+        },
+        {
+          "en": "108 cm³",
+          "ta": "108 செ.மீ³"
+        },
+        {
+          "en": "216 cm³",
+          "ta": "216 செ.மீ³"
+        }
+      ],
+      "correct": 2,
+      "hint": {
+        "en": "Multiply the edge length by itself three times.",
+        "ta": "விளிம்பு நீளத்தை மூன்று காரணிகளாகப் பெருக்குக."
+      },
+      "why": {
+        "en": "6×6×6 = 216 cm³.",
+        "ta": "6×6×6 = 216 செ.மீ³."
+      }
     },
     "practiceId": "g9-ch7-ex7.3-q1",
     "secondaryPracticeId": "g9-ch7-ex7.4-q1"
