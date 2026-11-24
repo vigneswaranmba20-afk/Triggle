@@ -5,7 +5,7 @@
   const previous = window.TriggleG9MensurationLabs;
   if (!previous || !window.TRIGGLE_MENSURATION_PATH) return;
   const n = value => Number.isInteger(value) ? String(value) : String(Number(value.toFixed(3)));
-  const button = (text, id, ta) => {
+  const button = (text, id) => {
     const b = document.createElement('button'); b.type = 'button'; b.dataset.id = id;
     b.textContent = text; b.setAttribute('aria-pressed', 'false');
     b.setAttribute('aria-label', text);
@@ -34,6 +34,7 @@
     const diagram=document.createElement('div');diagram.className='g9m-diagram';
     // Scaled construction: diagonal AC=8 (240 px); all four sides=5 (150 px).
     // B and D are 3 units above/below midpoint; A and C 4 units away.
+    const unit=ta?'செ.மீ.':'cm';
     diagram.innerHTML='<svg viewBox="0 0 340 222" class="g9m-quad-svg" role="img" aria-label="'+
       (ta?'நான்கு பக்கங்களும் 5 செ.மீ., மூலைவிட்டம் 8 செ.மீ. கொண்ட சாய்சதுரம்':
        'Rhombus with four 5 cm sides and an 8 cm diagonal')+'">'+
@@ -43,8 +44,8 @@
       '<line x1="45" y1="110" x2="285" y2="110" class="g9m-quad-diagonal"/>'+
       '<g class="g9m-quad-labels"><text x="34" y="113">A</text><text x="165" y="12">B</text>'+
       '<text x="300" y="113">C</text><text x="165" y="218">D</text>'+
-      '<text x="82" y="53">5 cm</text><text x="247" y="53">5 cm</text>'+
-      '<text x="165" y="103">8 cm</text><text x="84" y="181">5 cm</text><text x="245" y="181">5 cm</text></g></svg>';
+      '<text x="82" y="53">5 '+unit+'</text><text x="247" y="53">5 '+unit+'</text>'+
+      '<text x="165" y="103">8 '+unit+'</text><text x="84" y="181">5 '+unit+'</text><text x="245" y="181">5 '+unit+'</text></g></svg>';
     const result=output();
     const paint = id => {
       active(controls,id);

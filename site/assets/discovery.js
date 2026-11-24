@@ -66,7 +66,7 @@
     const chapters=visibleGrades.flatMap(g=>g.chapters.map(c=>({grade:g.grade,chapter:c})));
     // Only advertise a lab when both its lesson data and interactive viewer are loaded.
     const interactiveCount=id=>{
-      const stages=id==='g9-ch1'&&window.TriggleSetJourney?window.TRIGGLE_SET_PATH?.stages:
+      const stages=window.TriggleChapterHub?.grade9Stages?.(id)??(id==='g9-ch1'&&window.TriggleSetJourney?window.TRIGGLE_SET_PATH?.stages:
         id==='g9-ch2'&&window.TriggleRealJourney?window.TRIGGLE_REAL_PATH?.stages:
         id==='g9-ch9'&&window.TriggleProbabilityConcepts?window.TRIGGLE_PROB_PATH?.stages:
         id==='g10-ch2'?window.TRIGGLE_G10_CH2_PATH?.stages:
@@ -74,7 +74,7 @@
         id==='g10-ch4'&&window.TriggleG10Ch4Labs?window.TRIGGLE_G10_CH4_PATH?.stages:
         id==='g10-ch5'&&window.TriggleG10Ch5Labs?window.TRIGGLE_G10_CH5_PATH?.stages:
         id==='g10-ch6'&&window.TriggleG10Ch6Labs?window.TRIGGLE_G10_CH6_PATH?.stages:
-        id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:null;
+        id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:null);
       return Array.isArray(stages)?stages.length:0;
     };
     function chapterCard(entry){

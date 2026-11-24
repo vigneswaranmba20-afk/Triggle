@@ -46,7 +46,7 @@ assert(!file.includes('window.TriggleLab?.mount(target,chapter,lang)'),'The old 
 const hub=read('assets/chapter-hub.js');new vm.Script(hub);
 assert(hub.includes('window.TriggleTextbookActivities.mount(panel,chapter,lang)'));
 assert(hub.includes("section==='activities'"),'Thinking Corners are a dedicated chapter section');
-assert(hub.includes("[...baseKinds,'activities']"),'Activity menu is present only when chapter has tasks');
+assert(hub.includes("activityEntries.length?[...chapterKinds,'activities']:chapterKinds"),'Activity menu is present only when chapter has tasks');
 assert(!hub.includes('window.TriggleTextbookActivities.mount(panel,chapter,lang);\n        }'),'Thinking Corners are not appended to Concepts');
 assert(hub.includes('const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];')&&hub.includes("if(section==='activities'&&activityEntries.length"),'Future chapter activity registries mount dynamically, without hard-coded chapter IDs');
 assert(!hub.includes('window.TriggleLab?.mount(panel,chapter,lang)'),'Do not repeat Phase 2 by mounting a second lab');

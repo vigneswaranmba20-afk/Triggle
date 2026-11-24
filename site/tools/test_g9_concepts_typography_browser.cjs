@@ -77,7 +77,7 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
    assert.equal(await page.locator('[data-demo]').count(),1,'One mathematical activity per idea');
    await page.locator('.sp2-explanation summary').click();
    const beats=page.locator('.rnlab-foundation-tabs [data-foundation-step]');
-   const expected=[3,4,3,3,4,3,4,3][index];
+   const expected=[3,5,3,3,5,3,4,3][index];
    assert.equal(await beats.count(),expected,'Real Numbers learning beats '+index+' '+lang+' '+width);
    const active=page.locator('.rnlab-foundation-tabs [aria-pressed="true"]');
    assert.equal(await active.count(),1,'exactly one foundation step selected');

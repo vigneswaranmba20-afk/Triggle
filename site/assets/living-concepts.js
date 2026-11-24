@@ -12,7 +12,7 @@
     return node;
   };
   function decorate(stage,panel,language,math){
-    const t=words[language==='ta'?'ta':'en'];
+    const ta=language==='ta',t=words[ta?'ta':'en'];
     const lab=panel.querySelector('[data-demo]');
     if(!lab)return;
     lab.classList.add('lc-lab');
@@ -58,7 +58,7 @@
     }else if(stage.visual==='count'){
       const wrap=el('div','lc-count');
       wrap.innerHTML='<p class="lc-tag">'+t.groups+'</p>'+
-        '<svg viewBox="0 0 330 195" class="lc-scene" role="img" aria-label="Two overlapping groups, counts update with slider">'+
+        '<svg viewBox="0 0 330 195" class="lc-scene" role="img" aria-label="'+(ta?'மாணவர் குழுக்களின் வென் படம். பொதுவான மாணவர்களின் எண்ணிக்கையை மாற்றினால் படத்திலுள்ள எண்ணிக்கைகளும் மாறும்.':'Two overlapping groups, counts update with slider')+'">'+
         '<circle class="lc-count-a" cx="133" cy="94" r="71"/><circle class="lc-count-b" cx="200" cy="94" r="71"/>'+
         '<text class="lc-count-label" x="96" y="29">A</text><text class="lc-count-label" x="237" y="29">B</text>'+
         '<text class="lc-count-value" x="99" y="105" data-lc-only-a>8</text>'+
@@ -80,7 +80,7 @@
     }else if(stage.visual==='demorgan'){
       const wrap=el('div','lc-demorgan');
       wrap.innerHTML='<p class="lc-tag">'+t.regions+'</p>'+
-        '<svg viewBox="0 0 330 198" class="lc-scene" role="img" aria-label="Universe with Venn regions and highlighted members">'+
+        '<svg viewBox="0 0 330 198" class="lc-scene" role="img" aria-label="'+(ta?'அனைத்துக் கணத்தின் வென் படம். தேர்ந்தெடுத்த உறுப்புகள் தனியாகக் காட்டப்பட்டுள்ளன.':'Universe with Venn regions and highlighted members')+'">'+
         '<rect class="lc-universe" x="8" y="7" width="314" height="182" rx="13"/>'+
         '<circle class="lc-d-circle" cx="131" cy="90" r="62"/><circle class="lc-d-circle" cx="199" cy="90" r="62"/>'+
         '<text class="lc-count-label" x="25" y="30">U</text><text class="lc-count-label" x="93" y="44">A</text>'+

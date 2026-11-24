@@ -89,7 +89,10 @@
     block.append(make('h5', '', text('Practice this idea', 'இந்தக் கருத்துக்கான பயிற்சி', lang)));
     const row = make('div', 'g9a-practice-row');
     matched.forEach(qItem => {
-      const btn = make('button', 'g9a-practice-btn', (qItem.label?.[lang] || qItem.label?.en || qItem.id) + ' →');
+      const label = lang === 'ta' && !qItem.q?.ta
+        ? 'பயிற்சி ' + qItem.exercise + ' (ஆங்கிலத்தில்)'
+        : (qItem.label?.[lang] || qItem.label?.en || qItem.id);
+      const btn = make('button', 'g9a-practice-btn', label + ' →');
       btn.type = 'button';
       btn.addEventListener('click', () => onQuestion(qItem));
       row.append(btn);
@@ -165,7 +168,7 @@
       const tKey = demoKey + ':' + i;
       const row = make('div', 'g9a-transfer');
       const formula = make('div', 'g9a-transfer-math');
-      formula.innerHTML = latex(item.math, item.fallback, false);
+      formula.innerHTML = latex(ta ? (item.mathTa || item.math) : item.math, ta ? (item.promptTa || item.fallback) : item.fallback, false);
       const answers = make('div', 'g9a-answer-options');
       answers.setAttribute('role', 'group');
       answers.setAttribute('aria-label', text('Classify expression ' + (i + 1), 'கோவை ' + (i + 1) + '-ஐ வகைப்படுத்து', lang));
@@ -238,7 +241,7 @@
     }
     if (stage.math?.latex) {
       const ruleMath = make('div', 'g9a-rule-math');
-      ruleMath.innerHTML = latex(stage.math.latex, stage.math.fallback || '', true);
+      ruleMath.innerHTML = latex(ta ? (stage.math.latexTa || stage.math.latex) : stage.math.latex, ta ? stage.rule?.ta : stage.math.fallback || '', true);
       root.append(ruleMath);
     }
 
@@ -248,7 +251,7 @@
       group.setAttribute('role', 'group');
       group.setAttribute('aria-label', text('Choose an example', 'ஒரு எடுத்துக்காட்டைத் தேர்ந்தெடுக்கவும்', lang));
       const buttons = examples.map((ex, i) => {
-        const b = make('button', 'g9a-option', ex.label);
+        const b = make('button', 'g9a-option', ta ? (ex.labelTa || ex.label) : ex.label);
         b.type = 'button';
         b.setAttribute('aria-label', ta ? (ex.spokenTa || ex.label) : (ex.spoken || ex.label));
         b.addEventListener('click', () => { memory.demo[demoKey] = i; draw(); });
@@ -271,13 +274,13 @@
         const idx = memory.demo[demoKey] || 0;
         const ex = examples[idx];
         buttons.forEach((b, i) => b.setAttribute('aria-pressed', String(idx === i)));
-        expression.innerHTML = latex(ex.math, ex.label, true);
+        expression.innerHTML = latex(ta ? (ex.mathTa || ex.math) : ex.math, ta ? (ex.labelTa || ex.label) : ex.label, true);
         chipGroup.replaceChildren();
-        (ex.chips || []).forEach(([head, enTxt, taTxt, valid]) => {
+        (ex.chips || []).forEach(([head, enTxt, taTxt, valid, headTa]) => {
           const chip = make('span', 'g9a-chip ' + (valid ? 'g9a-valid' : 'g9a-invalid'));
           const icon = make('span', 'g9a-icon', valid ? '✓' : '✕');
           icon.setAttribute('aria-hidden', 'true');
-          chip.append(icon, document.createTextNode(head + ' · ' + (ta ? taTxt : enTxt)));
+          chip.append(icon, document.createTextNode((ta ? (headTa || head) : head) + ' · ' + (ta ? taTxt : enTxt)));
           chipGroup.append(chip);
         });
         verdict.textContent = ta ? ex.ta : ex.en;
@@ -297,7 +300,7 @@
           row.append(make('p', 'g9a-small', text(item.promptEn, item.promptTa, lang)));
         }
         const formula = make('div', 'g9a-transfer-math');
-        formula.innerHTML = latex(item.math, item.fallback, false);
+        formula.innerHTML = latex(ta ? (item.mathTa || item.math) : item.math, ta ? (item.promptTa || item.fallback) : item.fallback, false);
         const answers = make('div', 'g9a-answer-options');
         answers.setAttribute('role', 'group');
         answers.setAttribute('aria-label', text('Check ' + (i + 1), 'சரிபார்ப்பு ' + (i + 1), lang));

@@ -58,10 +58,10 @@ assert.equal(cuboid(5,4,2).lateral,36,'four-wall transfer check');
 assert.equal(4*4*4,64,'volume transfer check');
 
 const hub=load('assets/chapter-hub.js'),html=load('index.html'),sw=load('service-worker.js');
-assert.match(hub,/chapter\.id==='g9-ch7'\?\(window\.TRIGGLE_MENSURATION_PATH\?\.stages\|\|\[\]\)/);
+assert.match(hub,/case 'g9-ch7': return window\.TRIGGLE_MENSURATION_PATH\?\.stages/);
 assert.match(hub,/TriggleG9MensurationLabs\?\.mount\(stage,host,lang\)/);
-assert.match(hub,/chapter\.id==='g9-ch7'\|\|chapter\.id==='g9-ch9'/);
-assert.match(hub,/stageQuestions,chapter\.id==='g9-ch5'\|\|chapter\.id==='g9-ch7'/,'Ch5 addition must preserve Ch7 top Next control');
+assert.match(hub,/mountStageJourney\(panel,stages,lang,initialIndex,onConcept,onQuestion,stageQuestions,true,statistics\)/,
+  'The shared journey offers Mensuration top Next');
 for(const p of ['data/g9-mensuration-chapter.js','data/g9-mensuration-remaining.js','assets/g9-mensuration-remaining.js','assets/g9-mensuration-concepts.css']){
   assert.ok(html.includes(p),'missing HTML asset '+p);
   assert.ok(sw.includes('./'+p),'missing offline asset '+p);

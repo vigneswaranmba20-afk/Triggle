@@ -62,7 +62,7 @@
     }catch{return new Set();}
   }
   function save(done){try{localStorage.setItem(STORAGE,JSON.stringify([...done]))}catch{}}
-  function mount(container,chapter,language,onBack,initialConcept=null,onConcept=null){
+  function mount(container,chapter,language,onBack,initialConcept=null,onConcept=null,{onQuestion,chapterQuestions=[]}={}){
     if(!container||chapter?.id!=='g9-ch1')return false;
     const lang=language==='ta'?'ta':'en',t=words[lang],done=load();
     // Each visit to Concepts starts at an index. The URL's ?concept=N
@@ -156,16 +156,18 @@
         });
       }else if(stage.visual==='forms'){
         const options=lang==='ta'
-          ?[['விவரிப்பு வடிவம்','description'],['பட்டியல் வடிவம்','roster'],['கண அமைப்பு வடிவம்','builder']]
+          ?[['விவரித்தல் முறை','description'],['பட்டியல் முறை','roster'],['கணக்கட்டமைப்பு முறை','builder']]
           :[['Descriptive Form','description'],['Roster Form','roster'],['Set-Builder Form','builder']];
         const forms={
           description:lang==='ta'?'10-ஐ விடச் சிறிய நேர்ம இரட்டைப்படை முழு எண்களின் கணம்':'Positive even whole numbers less than 10',
           roster:{"latex": "E=\\{2,4,6,8\\}", "fallback": "E = {2, 4, 6, 8}"},
-          builder:{"latex": "\\begin{aligned}E=\\{x\\in\\mathbb{N}: {}&x<10,\\\\ &x\\text{ is even}\\}\\end{aligned}", "fallback": "E = {x ∈ ℕ : x < 10, x is even}"}
+          builder:lang==='ta'
+            ?{latex:'E=\\{2k:k\\in\\mathbb{N},\\ 2k<10\\}',fallback:'E = {2k : k ∈ ℕ, 2k < 10}'}
+            :{"latex": "\\begin{aligned}E=\\{x\\in\\mathbb{N}: {}&x<10,\\\\ &x\\text{ is even}\\}\\end{aligned}", "fallback": "E = {x ∈ ℕ : x < 10, x is even}"}
         };
         const symbols=document.createElement('p');
         symbols.className='sp2-venn-explain';
-        symbols.textContent=lang==='ta'?'ℕ என்பது இயல் எண்களின் கணம். ∈ என்பது «உறுப்பு». : என்பது «என்ற நிபந்தனைக்குட்பட்டு».':'ℕ is the set of natural numbers. ∈ means “belongs to”. The colon means “such that”.';
+        symbols.textContent=lang==='ta'?'ℕ என்பது இயல் எண்களின் கணம். k என்பது ஓர் இயல் எண். 2k என்பது இரட்டைப்படை எண். ∈ என்பது «உறுப்பு». : என்பது «என்ற நிபந்தனைக்குட்பட்டு».':'ℕ is the set of natural numbers. ∈ means “belongs to”. The colon means “such that”.';
         out.querySelector('[data-demo-output]').before(symbols);
         setDemo('roster',options,(key,update)=>{
           symbols.hidden=key!=='builder';
@@ -182,7 +184,7 @@
           infinite:{"latex": "N=\\{1,2,3,\\ldots\\}", "fallback": "N = {1, 2, 3, …}"},
           subset:{"latex": "\\begin{gathered}\\{1,3\\}\\subset\\{1,2,3\\}\\\\\\{1,2,3\\}\\subseteq\\{1,2,3\\}\\end{gathered}", "fallback": "{1, 3} ⊂ {1, 2, 3} ; {1, 2, 3} ⊆ {1, 2, 3}"},
           equivalent:lang==='ta'
-            ?'{a, b} ≠ {1, 2}; ஆதி எண் இரண்டிலும் 2. சமமான கணங்கள்; சம கணங்கள் அல்ல.'
+            ?'{a, b} ≠ {1, 2}; ஆதி எண் இரண்டிலும் 2. சமான கணங்கள்; சம கணங்கள் அல்ல.'
             :'{a, b} ≠ {1, 2}; both have 2 members (same size), but are not equal sets.'
         };
         setDemo('empty',options,(key,update)=>update(key,values[key]));
@@ -472,7 +474,7 @@
           ?pick(stage.example,lang).replace(lang==='ta'?'கீழுள்ள வென் ஆய்வகத்தில் ஆராய்க.':'Explore these same sets in the interactive Venn lab below.',
             lang==='ta'?'மேலுள்ள வென் படத்தை ஆராய்க.':'Explore the Venn diagram above.')
           :pick(stage.example,lang))+'</p>'+
-        '<div class="sp2-formula" role="group" aria-label="Mathematics expression">'+htmlMath(visibleRule)+'</div>'+threeSetBridge+'</div></details>'+
+        '<div class="sp2-formula" role="group" aria-label="'+esc(lang==='ta'?'கணிதக் கோவை':'Mathematics expression')+'">'+htmlMath(visibleRule)+'</div>'+threeSetBridge+'</div></details>'+
         '<div class="sp2-recall"><h5>'+esc(stage.visual==='membership'?t.detective:t.try)+'</h5>'+
         '<p class="sp2-concept-question"><span class="sp2-question-label">'+esc(t.questionLabel)+'</span>'+htmlMath(pick(stage.question,lang))+'</p>'+
         '<div class="sp2-answers" data-answers role="group" aria-label="'+esc(pick(stage.question,lang))+'"></div>'+
@@ -494,7 +496,7 @@
           answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
           const good=i===stage.correct;
           if(good){panel.querySelector('[data-feedback]').textContent=t.correct;done.add(stage.id);save(done);updateProgress();}
-          else{wrongAttempts++;const guidance=wrongAttempts===2?' '+pick(stage.hint,lang):wrongAttempts>=3?' '+pick(stage.why,lang):'';
+          else{wrongAttempts++;const guidance=' '+pick(wrongAttempts===1?stage.hint:stage.why,lang);
             panel.querySelector('[data-feedback]').innerHTML=htmlMath(t.retry+guidance);}
         });
         answers.append(button);
@@ -509,6 +511,17 @@
       window.TriggleLivingConcepts?.decorate(stage,panel,lang,htmlMath);
       extraPractice(stage);
       if(stage.id==='cardinality')hard();
+      const related=chapterQuestions.find(question=>question.id===stage.practiceId);
+      if(related&&typeof onQuestion==='function'){
+        const button=document.createElement('button');
+        button.type='button';button.className='g10ch2-practice-link';
+        const exerciseLabel=lang==='ta'&&!related.q?.ta
+          ?'பயிற்சி '+related.exercise+' (ஆங்கிலத்தில்)'
+          :pick(related.label,lang);
+        button.textContent=exerciseLabel+' →';
+        button.addEventListener('click',()=>onQuestion(related));
+        panel.append(button);
+      }
       updateProgress();
       if(focus){
         // Keep the single Back to concepts action visible when opening an idea.
