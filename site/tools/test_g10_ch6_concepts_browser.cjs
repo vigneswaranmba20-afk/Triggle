@@ -210,6 +210,27 @@ async function run(){
       await ctx.close();
     }
 
+    /* AUD25-02: direct legacy bookmarks and history navigation in both languages. */
+    for(const [width,lang] of [[320,'en'],[390,'ta']]){
+      const ctx=await browser.newContext({viewport:{width,height:844},serviceWorkers:'block'});
+      await ctx.addInitScript(language=>localStorage.setItem('triggle-language',language),lang);
+      const page=await ctx.newPage();
+      const errors=[];page.on('pageerror',error=>errors.push(error.message));
+      const pairs=[['c10-6-6-1-1','c10-6-ex6-1-q1-i'],['c10-6-6-3-9','c10-6-ex6-3-q4'],['c10-6-6-5-15','c10-6-ex6-5-q6'],['c10-6-6-unit-17','c10-6-unit-q1-ii']];
+      for(const [oldId,newId] of pairs){
+        await page.goto(base+'/index.html?class=10&question='+oldId,{waitUntil:'load'});
+        assert.equal(new URL(page.url()).searchParams.get('question'),newId);
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth),0);
+      }
+      // Simulate a pre-upgrade same-document history entry.
+      await page.evaluate(()=>{history.pushState(null,'','?class=10&question=c10-6-6-2-5');history.pushState(null,'','?class=10&question=c10-6-ex6-2-q3');});
+      await page.goBack();
+      await page.waitForURL(url=>url.searchParams.get('question')==='c10-6-ex6-2-q2');
+      assert.equal(new URL(page.url()).searchParams.get('question'),'c10-6-ex6-2-q2');
+      assert.deepEqual(errors,[]);
+      await ctx.close();
+    }
+
     /* 5. Real Service Worker offline reload */
     {
       const ctx=await browser.newContext({viewport:{width:390,height:844},serviceWorkers:'allow'});
