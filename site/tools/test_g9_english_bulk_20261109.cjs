@@ -64,7 +64,7 @@ console.log('PASS: 23 registered Grade 9 English questions, 6 modules, 60-exerci
   const m=figs[i].match(/<line x1="([\d.]+)" y1="([\d.]+)" x2="([\d.]+)" y2="([\d.]+)"/).slice(1).map(Number);
   near(m[1],m[3]);near(Math.hypot(m[0]-160,m[1]-103),78);near(Math.hypot(m[2]-160,m[3]-103),78);near((m[2]-m[0])/2,78*half/R);near(m[1]-103,78*h/R);assert.match(figs[i],/>M<\/text>/);assert.match(figs[i],/<path d="M160 /);
  }
- assert.match(figs[7],/M174 102 H182 V110/);near(Math.hypot(56,42),70);
+ assert.match(figs[7],/M174 102 H166 V110/);near(Math.hypot(56,42),70);
  for(const f of paths)assert.ok(sw.includes("'./"+f+"'"),f+' missing offline');
  console.log('PASS: AUD12-02 geometry proportions and offline invariants');
 }
